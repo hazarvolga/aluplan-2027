@@ -1,0 +1,192 @@
+Browser tab: 1, Title: "ALLPLAN Türkiye | Profesyonel BIM Yazılımları | Aluplan", URL: "https://aluplan.com.tr/".
+0 AXWebArea ALLPLAN Türkiye | Profesyonel BIM Yazılımları | Aluplan, URL: aluplan.com.tr/
+	1 link Description: İçeriğe geç, Value: aluplan.com.tr/#main
+	2 container
+		3 link Description: Facebook, Value: facebook.com/Allplan.Turkey
+		4 link Description: Twitter, Value: twitter.com/Allplan_Turkey
+		5 link Description: LinkedIn, Value: linkedin.com/company/allplan-turkey/
+		6 link Description: Instagram, Value: instagram.com/allplan_turkey/
+		7 link Description: YouTube, Value: youtube.com/c/AllplanTurkey
+		8 link Description: info@aluplan.com.tr, Value: mailto:info@aluplan.com.tr
+		9 link Description: Aluplan, Value: aluplan.com.tr/
+		10 button Çözümler
+		11 button Ürünler
+		12 link Description: Kaynaklar, Value: aluplan.com.tr/#professional-services
+		13 link Description: Referanslar, Value: aluplan.com.tr/references
+		14 link Description: Hakkımızda, Value: aluplan.com.tr/about
+		15 link Description: İletişim, Value: aluplan.com.tr/contact
+		16 button Arama
+		17 button Toggle theme
+		18 link Description: Ücretsiz Deneme, Value: allplan.com/trial-or-subscription/
+		19 link Description: Teklif Talep Formu, Value: forms.office.com/r/hXhnKAG912
+	20 container Description: Ana içerik, ID: main
+		21 container
+			22 container
+				23 container ALLPLAN BIM platform background video
+				24 text CLOUD NATIVE
+				25 text BIM LEVEL 3
+				26 text PARAMETRIC
+				27 text AUTOMATION
+				28 text INTEROPERABILITY
+				29 text AX3000
+				30 text PYTHONPARTS
+				31 text OPENBIM
+				32 text REAL-TIME
+				33 text PRECAST
+				34 text CIVIL
+				35 text BRIDGE
+				36 text @CONNECTION
+				37 text DATA_NODE
+			38 container
+				39 text / ALLPLAN 2026
+				40 heading DAHA İYİ BİR GELECEK İNŞA ETMEK İÇİN TASARLANDI, Value: 1
+					41 text DAHA İYİ BİR GELECEK
+					42 text İNŞA ETMEK İÇİN TASARLANDI
+				43 text Yenilikçi AEC iş akışları, otomasyon ve bulut tabanlı iş birliği ile daha başarılı projeler.
+			44 container ALLPLAN ürün ve eğitim bağlantıları
+				45 link Description: Yenilikleri İncele, Value: aluplan.com.tr/products/allplan-2026-yenilikler
+				46 link Description: ALLPLAN 2026 İncele, Value: aluplan.com.tr/products/allplan-2026
+				47 link Description: ALLPLAN CLOUD VE Genel Geliştirmeler, Value: aluplan.com.tr/solutions/allplan-bulut-hizmetleri
+				48 link Description: ALLPLAN CLOUD Hizmetleri, Value: aluplan.com.tr/products/allplan-cloud-services
+				49 link Description: Eğitim Videoları, Value: aluplan.com.tr/solutions-v2/training/video-library
+			50 container
+				51 text FLEXSOFT X ALUPLAN SATIŞ ORTAKLIĞI FlexSoft AR-GE x Aluplan
+				52 heading Allplan için BIM uyumlu yapı elemanları donatısı, Value: 2
+					53 text Allplan için BIM uyumlu yapı elemanları donatısı
+				54 text Donatı modellemesini saatlerden saniyelere indirin
+				55 container
+					56 text FlexSoft  tarafından geliştirilen  BIMFlex , satış ortaklığı kapsamında Aluplan tarafından da sunulabilecektir. Allplan içindeki kolon, kiriş, perde duvar ve döşemelerinizi BIM uyumlu gerçek donatı nesneleriyle otomatik donatılandırır.
+				57 link Description: BIMFlex detaylarını incele, Value: aluplan.com.tr/solutions/bimflex
+				58 container
+					59 image FlexSoft
+					60 text BIMFLEX
+					61 text Allplan eklenti paketi
+					62 image BIMFlex kolon donatısı modeli
+					63 image BIMFlex kiriş donatısı modeli
+					64 image BIMFlex döşeme boşluk donatısı modeli
+			65 container bento
+				66 heading TEK PLATFORM. TÜM DİSİPLİNLER., Value: 2
+					67 text TEK PLATFORM.
+					68 text TÜM DİSİPLİNLER.
+				69 text AEC endüstrisinin en kapsamlı ekosistemi. İhtiyacınız olan çözümü seçin.
+				70 link Value: aluplan.com.tr/solutions-v2/building-design, Description: BİNA TASARIMI MİMARİ & MÜHENDİSLİK BİNA TASARIMI Tasarım, Strüktürel Analiz, MEP ve Endüstriyel çözümler. Çözümleri İncele
+				71 link Value: aluplan.com.tr/solutions-v2/infrastructure, Description: ALTYAPI TASARIMI YOL & KÖPRÜ ALTYAPI TASARIMI Köprü, Tünel ve Yol projeleri için parametrik modelleme. Keşfet
+				72 link Value: aluplan.com.tr/solutions-v2/construction, Description: İNŞAAT PLANLAMASI PREKAST & ÇELİK İNŞAAT PLANLAMASI Üretimden şantiyeye kesintisiz veri akışı. Detaylar
+				73 link Description: EKLENTİLER ADD-ONS & TOOLS EKLENTİLER Özelleştirilmiş eklentiler ve araçlar. İncele, Value: aluplan.com.tr/solutions-v2/addons
+				74 link Description: DİĞER ÇÖZÜMLERİMİZ BİMPLUS & MORE DİĞER ÇÖZÜMLERİMİZ İşbirliği ve tamamlayıcı ürünler. Göz At, Value: aluplan.com.tr/solutions-v2/other
+			75 container
+				76 heading ROLÜNÜZÜ SEÇİN, Value: 2
+					77 text ROLÜNÜZÜ SEÇİN
+				78 text Size en uygun iş akışını ve ürün paketini keşfedin.
+				79 button MİMAR
+				80 button MÜHENDİS
+				81 button PREKAST
+				191 heading Akıllı Üretim, Value: 3
+					192 text Akıllı Üretim
+				193 text Modelden doğrudan fabrikaya veri aktarımı. Prekast ve çelik üretiminde maksimum verimlilik ve sıfır hata.
+				194 link Description: Bu Akışı Detaylı İncele, Value: aluplan.com.tr/products/precast
+				190 text CAM Veri Çıktısı Lojistik Planlama Stok Yönetimi Montaj Planları
+				87 link Description: ALLPLAN Basic Temel 2D/3D çizim ve modelleme çözümümüz., Value: aluplan.com.tr/products/allplan-basic
+				88 link Description: ALLPLAN Concept Konsept tasarım ve modelleme için ideal., Value: aluplan.com.tr/products/allplan-concept
+				89 link Description: ALLPLAN Professional Tam kapsamlı BIM modelleme ve dokümantasyon., Value: aluplan.com.tr/products/allplan-professional
+				90 link Description: ALLPLAN Ultimate Tüm disiplinler için en kapsamlı paketimiz. İncele, Value: aluplan.com.tr/products/allplan-ultimate
+				91 link Description: ALLPLAN Civil Altyapı, yol ve köprü projeleri için özel çözüm., Value: aluplan.com.tr/products/civil
+				92 link Description: ALLPLAN Precast Prekast üretimi ve detaylandırma otomasyonu. İncele, Value: aluplan.com.tr/products/precast
+			93 container
+				94 text YENİ SÜRÜM
+				95 heading ALLPLAN 2026 Yenilikleri, Value: 2
+					96 text ALLPLAN 2026  Yenilikleri
+				97 text Her disiplin için geliştirilen devrim niteliğindeki özellikleri keşfedin. Yapay zekadan dijital şantiye süreçlerine kadar en yeni teknolojiler.
+				98 link Description: Tüm Yenilikleri İncele, Value: aluplan.com.tr/products
+				99 heading AI Görselleştirme, Value: 3
+					100 text AI Görselleştirme
+				101 text ALLPLAN CONCEPT
+				102 text Yapay zeka destekli render araçları ile tasarımlarınızı saniyeler içinde hayata geçirin.
+				103 heading Donatıdan Şantiyeye, Value: 3
+					104 text Donatıdan Şantiyeye
+				105 text ALLPLAN PROFESSIONAL
+				106 text Tamamen dijital, çizimsiz şantiye iş akışları ile hatasız üretim ve montaj.
+				107 heading Birleşik Arazi Modeli, Value: 3
+					108 text Birleşik Arazi Modeli
+				109 text ALLPLAN ULTIMATE
+				110 text Büyük ölçekli altyapı projeleri için yeni nesil hassas arazi modelleme motoru.
+			111 container
+				112 text DETAYLI ANALİZ
+				113 heading TEKNİK ÖZELLİKLER, Value: 2
+					114 text TEKNİK  ÖZELLİKLER
+				115 text Hangi ALLPLAN paketi sizin için uygun? Paketler arasındaki farkları ve teknik özellikleri detaylı tablomuzda karşılaştırın.
+				116 link Description: Karşılaştırma Tablosunu İndir (PDF), Value: aluplan.com.tr/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf
+				117 link Description: ALLPLAN Basic Temel 2D/3D tasarım ve çizim araçları., Value: aluplan.com.tr/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf
+				118 link Description: ALLPLAN Concept Konsept tasarım, modelleme ve görselleştirme., Value: aluplan.com.tr/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf
+				119 link Description: ALLPLAN Professional Tam kapsamlı BIM, metraj ve işbirliği., Value: aluplan.com.tr/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf
+				120 link Description: ALLPLAN Ultimate Tüm disiplinler ve ileri seviye mühendislik., Value: aluplan.com.tr/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf
+				121 link Description: CIVIL Altyapı, yol ve köprü mühendisliği çözümleri., Value: aluplan.com.tr/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf
+				122 link Description: PRECAST Prefabrik üretim planlama ve detaylandırma., Value: aluplan.com.tr/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf
+			123 container professional-services
+				124 container
+					125 heading PROFESYONEL HİZMETLER, Value: 2
+						126 text PROFESYONEL  HİZMETLER
+					127 text Sadece yazılım değil, başarınız için kapsamlı bir ekosistem sunuyoruz.
+					128 tab group
+						129 tab (selectable, settable, boolean) Hizmetler, Value: 0, ID: radix-:R58jtqbkq:-trigger-services
+						130 tab (selectable, settable, boolean) Allplan Connect, Value: 0, ID: radix-:R58jtqbkq:-trigger-connect
+						131 tab (selected, settable, boolean) Bilgi Merkezi, Value: 1, ID: radix-:R58jtqbkq:-trigger-resources
+					195 container Description: Bilgi Merkezi, ID: radix-:R58jtqbkq:-content-resources
+						196 link Description: ALLPLAN FAQ Sıkça sorulan sorular ve çözüm veri tabanı. İncele, Value: aluplan.com.tr/solutions-v2/faq
+						197 link Description: Blog Global En son ALLPLAN haberleri, başarı hikayeleri ve sektör trendleri. Okumaya Başla, Value: allplan.com/blog/
+						198 link Description: Canlı Webinarlar Uzmanların sunumuyla canlı eğitimler ve ürün tanıtımları. Kayıt Ol, Value: allplan.com/events/events/?
+						199 link Description: BIM Rehberi BIM süreçleri ve uygulamaları için kapsamlı rehberler. İncele, Value: allplan.com/bim/bim-guides/
+						200 link Description: OPENBIM Açık standartlarla işbirliği, IFC ve veri değişimi hakkında her şey. Keşfet, Value: allplan.com/us_en/bim/openbim/
+						201 link Description: Sistem Gereksinimleri ALLPLAN performansı için önerilen donanım ve yazılım özellikleri. Kontrol Et, Value: allplan.com/us_en/system/system-requirements/
+						202 link Description: Sürüm Notları Her yeni güncelleme ile gelen, iyileştirmeler ve düzeltmeler. Oku, Value: allplan.com/tr/system/releasenotes/?no_cache=1
+						203 link Value: aluplan.com.tr/docs/ifc_aktarim_el_kitabi_ifc_4.0_ifc_4.3_2026.pdf, Description: IFC Export El Kitabı Sektör paydaşlarının birlikte çalışabilme potansiyelini artırmak, openBIM kültürünü tanıtmak ve yaygınlaştırmak amacıyla buildingSMART Türkiye tarafından hazırlanan IFC Aktarım El Kitabı. İndir
+						204 link Value: lc.codemeter.com/59885/depot/index.php, Description: CodeMeter WebDepot CodeMeter License Central WebDepot'a hoş geldiniz. Lisanslarınızı bu WebDepot'u kullanarak CmContainer'ınıza aktarabilirsiniz. Lisansları Aktar
+						205 link Value: aluplan.com.tr/solutions-v2/connect-license/activation, Description: Deklarasyon Formu Yeni Allplan lisansınızın etkinleştirilmesi için talep ve beyan formu. ALLPLAN 2023 ve ALLPLAN 2024 versiyonları için geçerlidir. Görüntüle
+	139 container
+		140 link Description: Aluplan, Value: aluplan.com.tr/
+		141 text 1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri.
+		142 link Description: Facebook, Value: facebook.com/Allplan.Turkey
+		143 link Description: Twitter, Value: twitter.com/Allplan_Turkey
+		144 link Description: LinkedIn, Value: linkedin.com/company/allplan-turkey/
+		145 link Description: Instagram, Value: instagram.com/allplan_turkey/
+		146 link Description: YouTube, Value: youtube.com/c/AllplanTurkey
+		147 heading ÜRÜNLER, Value: 3
+			148 text ÜRÜNLER
+		149 content list
+			150 link Description: ALLPLAN Basic, Value: aluplan.com.tr/products/allplan-basic
+			151 link Description: ALLPLAN Concept, Value: aluplan.com.tr/products/allplan-concept
+			152 link Description: ALLPLAN Professional, Value: aluplan.com.tr/products/allplan-professional
+			153 link Description: ALLPLAN Ultimate, Value: aluplan.com.tr/products/allplan-ultimate
+			154 link Description: CIVIL, Value: aluplan.com.tr/products/civil
+			155 link Description: PRECAST, Value: aluplan.com.tr/products/precast
+		156 heading ÇÖZÜMLER, Value: 3
+			157 text ÇÖZÜMLER
+		158 content list
+			159 link Description: BİNA TASARIMI, Value: aluplan.com.tr/solutions-v2/building-design
+			160 link Description: ALTYAPI TASARIMI, Value: aluplan.com.tr/solutions-v2/infrastructure
+			161 link Description: İNŞAAT PLANLAMASI, Value: aluplan.com.tr/solutions-v2/construction
+			162 link Description: EKLENTİLER, Value: aluplan.com.tr/solutions-v2/addons
+			163 link Description: DİĞER ÜRÜNLER, Value: aluplan.com.tr/solutions-v2/other
+		164 heading İLETİŞİM, Value: 3
+			165 text İLETİŞİM
+		166 content list
+			167 container
+				168 text Quick Tower – Workinton
+				169 text İçerenköy Mah. Topçu İbrahim Sok.
+				170 text 8/10D No: 5, 34752 Ataşehir / İstanbul
+			171 container
+				172 link Description: (+90) 216 225 84 41, Value: tel:+902162258441
+				173 link Description: (+90) 543 211 94 42, Value: tel:+905432119442
+				174 link Description: (+90) 549 499 73 79, Value: tel:+905494997379
+			175 link Description: info@aluplan.com.tr, Value: mailto:info@aluplan.com.tr
+		176 container
+			177 text ©  2026  Aluplan Program Sistemleri.
+		178 link Description: Gizlilik Politikası, Value: aluplan.com.tr/gizlilik-politikasi
+		179 link Description: Kullanım Şartları, Value: aluplan.com.tr/kullanim-sartlari
+		180 link Description: KVKK, Value: aluplan.com.tr/kvkk
+		181 container
+			182 text Design & Develop by
+			183 link Description: Hazar Volga Ekiz, Value: hazarvolga.com.tr/
+	185 button Sayfa başına dön
+
+The focused UI element is 131 tab (selected, settable, boolean) Bilgi Merkezi, Value: 1, ID: radix-:R58jtqbkq:-trigger-resources

@@ -1,0 +1,6 @@
+source,destination,source_setting,note
+/solutions/industry,/solutions/steel,permanent: true,existing Next.js redirect; not a new 301 proposal
+/solutions/extra-modules,/solutions/addons,permanent: true,existing Next.js redirect; not a new 301 proposal
+/solutions/PlanliAlanlar,/solutions/imar-yonetmeligi-bim-eklentisi,permanent: true,existing Next.js redirect; not a new 301 proposal
+/solutions/imar-yonetmliği-bim-eklentisi,/solutions/imar-yonetmeligi-bim-eklentisi,permanent: true,existing Next.js redirect; not a new 301 proposal
+/solutions/addons/drive-curvev,/solutions/addons/drive-curve,permanent: true,existing Next.js redirect; not a new 301 proposal

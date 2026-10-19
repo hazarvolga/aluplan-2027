@@ -1,0 +1,42 @@
+# Kullanıcı teyitleri ve açık kararlar
+
+19 Ekim 2026 — Bu sohbetin doğrudan kullanıcı yanıtları. Araştırma notları bağımsız doğrulama yerine geçmez.
+
+## Kaynak önceliği
+- Kullanıcı güncel yerel kök uygulama ile canlı siteyi biraz önce aynı sürüme güncellediğini teyit etti.
+- Esas: https://aluplan.com.tr. Yalnız yerelde bulunan içerik ayrıca kullanıcı onayına sunulur.
+- `live-versiyon/` eski kopyası ayrı kayıt tutulur; içeriği otomatik güncel siteye eklenmez.
+
+## Şirket, içerik ve varlık koruma
+- Aluplan Program Sistemleri distribütör/çözüm ortağı olarak anlatılır; yazılım üreticisi olarak anlatılmaz. Kullanıcı gözlemi: 1995'ten beri Allplan Türkiye distribütörü; İstanbul Ataşehir merkez, Türkiye geneli hizmet, hafta içi 09:00–18:00.
+- “29+ yıl”, “500+ aktif müşteri”, “50+ uzman kadro”, “10K+ proje” ifadelerini içerik olarak aynen koru; değiştirme/yeniden yorumlama. Korunması, bağımsız doğrulama yapıldığı anlamına gelmez.
+- MİMAR / MÜHENDİS / PREKAST segmentasyonunu koru ve geliştir.
+- Menü, sosyal medya, üç telefon, adres/harita, yasal sayfalar, hero videosu, PDF'ler korunur.
+- Footer “Design & Develop by Hazar Volga Ekiz” kredisi korunur.
+- ALLPLAN üretici logosu ve “A NEMETSCHEK COMPANY” ibaresi değiştirilmez, yeniden renklendirilmez.
+
+## Gözlemlenen kitle ve CTA'lar
+- Birincil kitle: mimarlık ofisleri, inşaat/yapı mühendisleri, mühendislik ofisleri, prekast/prefabrik üreticileri, yol/köprü/tünel proje ekipleri, müteahhitler ve büyük inşaat firmaları.
+- İkincil: belediyeler, üniversiteler. Mevcut kullanıcılar eğitim, destek, sertifika ve sürüm bilgisi için gelir.
+- Satış CTA'sı: Teklif Talep Formu → https://forms.office.com/r/hXhnKAG912.
+- Deneme CTA'sı: ALLPLAN deneme sayfası. Kullanıcı gözlemi 14 gün; bazı yerel içerikte 30 gün bulunması bir içerik çelişkisidir. Süreleri otomatik değiştirme; güncel üretici koşulunu doğrulayıp değişikliği ayrıca onaya sun.
+- Diğer hedefler: iletişim, eğitim takvimi/video, paket PDF, ürün/yenilik/bulut, BIMFlex.
+- Harici Teams, aluplan.net.tr, aluplan.info ve ALLPLAN partner bağlantıları korunur; kardeş proje dosyaları kapsam dışı kalır.
+
+## Marka kaynakları
+- Sonraki kullanıcı yönlendirmesiyle `docs/BRAND-GUIDELINES.md` okundu: v1.0 TASLAK / ONAY BEKLİYOR. Artık bir taslak mevcut; onaylı kılavuz henüz yok. Farklar: `docs/brand/current-identity.md`.
+- Kaynak logo SVG'leri ve mevcut tasarım varlıkları esas alınır.
+- Kaynak font/renk değerleri `existing-design-tokens.json` ve `existing-design-tokens.md` içinde belgelenir; yeni tasarım kararı değildir.
+- Kullanıcının Nemetschek/Roboto araştırma notu Aluplan için bağlayıcı değildir; yeni font kararı olarak kullanılmaz.
+
+## ONAY GEREKLİ — Faz 3 PRD açık sorularına taşınacak
+1. Ticari segmentlerin öncelik sırası ve karar vericiler kim?
+2. Tek bir birincil dönüşüm seçilecek mi; teklif mi deneme mi?
+3. Microsoft Forms aynen mi kalacak, özel altyapıya mı taşınacak? Şimdilik hedef aynen korunur.
+4. Yeni tasarımda mevcut Aluplan renk/font kimliği korunacak mı, yenilenecek mi?
+5. ALLPLAN distribütör marka kullanım dokümanı var mı?
+
+Bu sorular henüz cevaplanmış sayılmaz; envanter yapılmasını engellemez. PRD bu fazda yazılmadı.
+
+## Faz 2 için kullanıcı notları
+/about canonical ve OG alanlarını tüm sayfalarla karşılaştır; ALLPLAN/Allplan/Aluplan başlık tutarlılığını incele. Bu oturumun `content-inventory.json` kayıtları mevcut meta değerlerini içerir; SEO etkisi ve iyileştirme Faz 2'de değerlendirilir.

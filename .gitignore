@@ -1,0 +1,15 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+node_modules/
+.next/
+out/
+coverage/
+playwright-report/
+test-results/
+*.log
+*.pid
+.idea/
+.vscode/
+

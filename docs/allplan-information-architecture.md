@@ -121,9 +121,53 @@ flowchart LR
 
 Buradaki oklar “ilişkili içerik” anlamında; bire-bir ilişki veya veritabanı foreign key iddiası değildir. Menü ağacı ile içerik ilişki ağı farklı şeylerdir.
 
-### C. Aluplan için schema adayları — karar değil
+### C. Google kurallarıyla doğrulama — 19.10.2026
 
-İleride içerik modelinden SEO çıktısı üreten ayrı bir katman değerlendirilebilir. Organization/WebSite/WebPage/BreadcrumbList, gerçek yazılım kaydı için SoftwareApplication veya uygun ürün tanımı, hizmetler için Service, kaynak türüne göre Article/VideoObject/Event adaydır. Uygunluk, zorunlu alanlar ve arama motoru desteği uygulama fazında resmî dokümanlarla doğrulanmalıdır; bu liste uygulanmış veya doğrulanmış SEO kontratı değildir. Görünür içerikte bulunmayan fiyat, puan, stok, teklif veya müşteri sonucu üretilmemeli. Aluplan tüzel kişiliği ile üretici kimliği ayrı tutulmalı.
+Kullanılan skill: [schema / SKILL.md](skill://schema/SKILL.md), v2.0.0. Skill değerlendirme çerçevesi olarak kullanıldı; güncel Google belgeleriyle çelişen kısa tabloları aşağıda düzeltildi. Bu doğrulama dokümantasyon çalışmasıdır: uygulama kodu veya JSON-LD eklenmedi, Rich Results Test çalıştırılmış sayılmaz. A bölümündeki ALLPLAN HTML gözlemleri yeniden taranmadı ve kapsamları genişletilmedi.
+
+**Üç ayrı kontrol:** Schema.org sözlüğüne uygun bir kayıt, Google'ın desteklediği bir arama özelliği olmak zorunda değildir. Desteklenen türün bulunması da gerekli alanların ve içerik politikalarının sağlandığı anlamına gelmez. Teknik uygunluk sağlansa bile Google zengin sonuç gösterimini garanti etmez. JSON-LD önerilen formattır; Microdata ve RDFa da desteklenir. İşaretleme görünür ana içerikle örtüşmeli, güncel ve taranabilir olmalı; uydurma fiyat/yorum veya yanıltıcı kurum ilişkisi içermemeli. Kaynak: [Google genel kuralları](https://developers.google.com/search/docs/appearance/structured-data/sd-policies).
+
+#### Skillde düzeltilen güncellik ve alan özetleri
+
+| Skilldeki kısa ifade | Güncel doğrulama ve rapor kararı |
+|---|---|
+| FAQPage, FAQ zengin sonucu için genel aday | Google FAQ zengin sonuçlarını **7 Mayıs 2026** itibarıyla kaldırdı; dokümantasyon 15 Haziran'da kaldırıldı. Eski “yalnız sağlık/devlet sitelerine açık” kuralı da artık güncel sonuç değildir. Aluplan için Google FAQ zengin sonucu hedeflenmeyecek. [Google değişiklik kaydı](https://developers.google.com/search/updates#may-2026) |
+| HowTo eğitim sayfalarında zengin sonuç adayı | HowTo zengin sonuçları 13 Eylül 2023 itibarıyla kaldırıldı. Eğitim içeriği korunabilir; bu tür için Google görünüm kazanımı vaat edilmeyecek. [Google duyurusu](https://developers.google.com/search/blog/2023/08/howto-faq-changes) |
+| WebSite ana sayfa arama kutusu için | Sitelinks Search Box 21 Kasım 2024'ten itibaren kaldırıldı. WebSite hâlâ site adı için anlamlı; sırf arama kutusu kazanmak için SearchAction eklenmeyecek. [Google duyurusu](https://developers.google.com/search/blog/2024/10/sitelinks-search-box) |
+| Organization için name/url zorunlu | Google Organization rehberinde zorunlu alan yok; ilgili önerilen alanlar doldurulmalı. Bizim içerik kontratımız name/url şartı koyabilir, ancak buna Google zorunluluğu denmemeli. [Organization](https://developers.google.com/search/docs/appearance/structured-data/organization) |
+| Article headline/image/datePublished/author zorunlu | Google Article rehberi zorunlu alan tanımlamıyor; bunlar ilgili önerilen alanlar. Editöryal kalite için proje gereksinimi olarak tutulabilir. [Article](https://developers.google.com/search/docs/appearance/structured-data/article) |
+| SoftwareApplication için yalnız name/offers yeterli | Google uygulama zengin sonucu için name, offers.price ve aggregateRating veya review gerekiyor. Gerçek değerlendirme/fiyat yoksa bu görünüm hedefi karşılanmış sayılmaz. [SoftwareApplication](https://developers.google.com/search/docs/appearance/structured-data/software-app) |
+| Product için tek evrensel name/image/offers listesi | Product snippet ile merchant listing ayrı özelliklerdir. Snippet için name ve review/aggregateRating/offers alanlarından en az biri gerekir; seçilen alt türün kendi alanları da sağlanmalıdır. [Product snippet](https://developers.google.com/search/docs/appearance/structured-data/product-snippet) |
+| Yalnız Google'ın desteklediği türleri kullan | Google görünümü hedeflenirken desteklenen tür gerekir; Service/WebPage gibi geçerli semantik türler ayrıca kullanılabilir. Bunlara ayrı zengin sonuç desteği atfedilmemeli. [Arama galerisi](https://developers.google.com/search/docs/appearance/structured-data/search-gallery), [Service](https://schema.org/Service) |
+
+#### CMS'siz Next.js için tür seçim matrisi — uygulama öncesi adaylar
+
+| Öncelik / sayfa | Tür | Kullanım koşulu ve veri gereksinimi |
+|---|---|---|
+| Temel: ana sayfa/kurumsal kimlik | Organization | Aluplan'ın adı, canonical adresi, kendi logosu ve doğrulanmış iletişim/sosyal kimlikleri. ALLPLAN üreticisiyle farklı @id; distribütörlük, parentOrganization veya sameAs eşitliği gibi modellenmez. name/url/logo/contactPoint proje alanlarıdır; Google zorunlu listesi değildir. |
+| Temel: ana sayfa site adı | WebSite | Google site adı için name ve url zorunlu; url canonical ana sayfadır. alternateName ancak gerçek alternatif ad varsa. Tek tutarlı WebSite düğümü; her sayfada yeniden site adı bloğu oluşturmak gerekmez. [Site adları](https://developers.google.com/search/docs/appearance/site-names) |
+| Temel: anlamlı sayfa hiyerarşisi | BreadcrumbList | En az iki ListItem; position, name ve item URL'si, son öğe için item istisnası. Gerçek kullanıcı yolunu anlatmalı; URL parçalarını körlemesine bölmek yeterli değildir. [Breadcrumb](https://developers.google.com/search/docs/appearance/structured-data/breadcrumb) |
+| Semantik temel: sayfalar | WebPage; uygun yerde AboutPage/ContactPage/CollectionPage | name/url, isPartOf ve ilgili mainEntity/about ilişkileri içerikten üretilebilir. Bunlar kendi başına özel Google rich result vaadi değildir. [WebPage sözlüğü](https://schema.org/WebPage) |
+| Koşullu: tek yazılım/edition detay sayfası | SoftwareApplication | Yazılımı doğru anlatmak için semantik aday; category/operatingSystem yalnız doğrulanmış bilgiyle. Google uygulama görünümü için gerekli fiyat ve gerçek review/rating ayrıca bulunmalı. Teklif iste CTA'sı fiyat değildir. Süreli deneme, ücretli tam ürünün fiyatını 0 olarak göstermeye gerekçe değildir. |
+| Koşullu: tek ürünün ticari detay sayfası | Product | Gerçek tek ürün/edition odağı ve snippet alanları varsa değerlendir. Portföy listesi tek Product yapılmaz. Fiyat/review/rating eksikliği uydurularak tamamlanmaz; üreticinin yabancı ülke fiyatı Aluplan teklifi gibi gösterilmez. Merchant listing uygunluğu ayrı inceleme gerektirir. |
+| Semantik: eğitim/destek/danışmanlık | Service | provider Aluplan; serviceType ve areaServed yalnız mevcut hizmet kapsamıyla. Google arama galerisinde genel Service için bağımsız zengin sonuç tanımlanmıyor. [Service](https://schema.org/Service), [galeri](https://developers.google.com/search/docs/appearance/structured-data/search-gallery) |
+| Koşullu: blog/teknik makale | Article / BlogPosting | Gerçek makale için başlık, yazar, görsel ve gerçek yayın/güncelleme tarihleri önerilir. Ürün veya satış landing sayfası sırf daha çok schema için makale yapılmaz. |
+| Koşullu: video odaklı eğitim sayfası | VideoObject | name, thumbnailUrl, uploadDate zorunlu; contentUrl veya embedUrl önerilir. Video sayfada erişilebilir olmalı; tarih tahmin edilmemeli. Playlist için tek uydurma VideoObject oluşturulmaz, video bazlı kayıt gerekir. [Video](https://developers.google.com/search/docs/appearance/structured-data/video) |
+| Koşullu: tarihli fiziksel etkinlik | Event | Ayrı etkinlik URL'si, name/startDate/location ve geçerli yer bilgisi; herkese açık katılım ve diğer Google şartları kontrol edilmeli. **Tamamen sanal, fiziksel bileşeni olmayan webinar Google Event deneyiminde desteklenmiyor.** Schema.org Event ile anlatılabilmesi Google uygunluğu değildir. [Event](https://developers.google.com/search/docs/appearance/structured-data/event) |
+| Koşullu: doğrulanmış fiziksel işletme | LocalBusiness veya uygun alt tür | Ataşehir adresi tek başına seçim için yeterli değerlendirme değildir; işletme türü ve yerel ziyaretçi hizmeti doğrulanmalı. Google için name/address gerekli; telefon, saat ve konum gerçek veriden. Organization yerine/alt türü olarak tek tutarlı varlık kurulmalı. [LocalBusiness](https://developers.google.com/search/docs/appearance/structured-data/local-business) |
+| Google görünümü için öncelik dışı | FAQPage, HowTo, SearchAction arama kutusu | Kaldırılmış özellikler için yatırım yapılmaz. Geçerli sözlük kullanımı ayrıca anlam taşıyabilir; Google görünüm veya sıralama kazanımı vaat edilmez. |
+
+**Kimlik kararı adayı:** Aluplan şirket ve site varlığı; ALLPLAN ayrı üretici/marka varlığı; yazılım/edition ayrı ürün varlığı olmalı. Aluplan'ın kendi hizmetindeki provider ile üçüncü taraf yazılımının üreticisi/yayıncısı aynı kişi gibi gösterilmez. Gerçek ticari teklif oluşturulursa seller ilişkisi ayrıca kurulabilir. Bu model üretici izinleri veya ürün satma yetkisine ilişkin bağımsız doğrulama yerine geçmez.
+
+#### Next.js üretim ve doğrulama yaklaşımı — henüz uygulanmadı
+
+1. Aynı tip kontrollü içerik kaydı hem görünür sayfayı hem JSON-LD'yi besleyecek; schema için ikinci bir fiyat/metin kaynağı oluşturulmayacak. Tema tokenları bu katmandan bağımsız olacak.
+2. Kararlı, mutlak @id ve canonical URL'lerle kurum/site/sayfa/ürün ilişkileri kurulacak; farklı sayfalarda çelişen kurum tanımları önlenecek.
+3. Next.js rehberine göre JSON-LD page/layout içinde script olarak render edilebilir; CMS eklentisi gerekmez. İçerikten gelen veri güvenli serialize edilmeli: düz JSON.stringify tek başına HTML/script enjeksiyonuna karşı yeterli değildir; `<` karakterinin `\u003c` biçiminde kaçırılması veya uygun güvenli serializer değerlendirilecek. [Next.js resmî rehberi](https://nextjs.org/docs/app/guides/json-ld)
+4. Schema.org Validator sözlük/yapı kontrolü; Google Rich Results Test desteklenen özellik/alan kontrolü için kullanılacak. RRT'de Service veya genel WebPage rich result görünmemesi tek başına sözlük hatası değildir. Kritik hatalar giderilmeli; önerilen alan uyarıları gerçek veri varsa kapatılmalı, sırf sıfır uyarı için içerik uydurulmamalı.
+5. Yayın sonrası Google URL Inspection/render ve ilgili Search Console raporlarıyla erişim kontrol edilecek. Bu oturumda yayın, test sonucu veya indeksleme başarısı iddiası yok.
+
+**ALLPLAN gözleminin güncellenmiş yorumu:** İlk HTML'de schema bulunmaması bilgi mimarisinin yanlış olduğunu veya Google politikası ihlalini göstermez. Zengin sonuç kullanmak zorunlu değildir. Aluplan için seçim rakipte işaretleme bulunup bulunmamasına değil, sayfa türü + gerçek veri + güncel özellik desteğine dayanmalı. A bölümündeki yokluk bulgusu yalnız sınırlı HTML örneklemi olarak korunuyor.
 
 ## 7. TYPO3 ve CMS'siz Next.js ayrımı
 

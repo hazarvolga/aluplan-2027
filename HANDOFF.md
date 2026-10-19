@@ -60,6 +60,7 @@ Faz 0 içinde içerik/medya/form/link kapanış matrisini ve asset paritesini ta
 - İlk altı HTML örneğinde TYPO3 kaynak işareti doğrulandı. Aluplan CMS kullanmıyor; Next.js içerik, ilişkiler, navigasyon, tema ve SEO katmanları için dosya tabanlı model yalnız aday olarak belgelendi. CMS kurulumu kararlaştırılmadı.
 - Dokuz örneğin ilk HTML'sinde JSON-LD/itemtype bulunmadı; JS sonrası DOM, mağaza ve site geneli için yokluk iddiası yapılmadı. İç CMS veri modeli bilinmiyor.
 - Aluplan karşılaştırması henüz yapılmadı; referans araştırması faz geçişi veya tasarım/URL/içerik değişikliği onayı değildir.
+- Schema skillinin kullanıcı tarafından istenmesi üzerine `docs/allplan-information-architecture.md` bölüm 6.C, 19.10.2026 tarihinde Google Search Central ve Next.js resmî belgeleriyle doğrulandı. FAQ rich result'ın Mayıs 2026'da kaldırılması, HowTo/search-box desteğinin kaldırılması ve skilldeki zorunlu alan özetlerinin düzeltmeleri kaydedildi. CMS'siz Next.js için tür/uygunluk matrisi eklendi; kod veya JSON-LD uygulanmadı, ALLPLAN yeniden taranmadı, Rich Results Test çalıştırılmadı.
 
 ## Önemli dosyalar ve komutlar
 - Başlangıç sırası: `docs/MASTER-PROMPT.md` → `HANDOFF.md` → `docs/BRAND-GUIDELINES.md` → 3–5 satır özet ve kullanıcı onayı.

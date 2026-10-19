@@ -24,6 +24,7 @@
 - `existing-design-tokens.md/json`: mevcut font ve renkler kaynaktan çıkarıldı.
 - Kullanıcının `docs/BRAND-GUIDELINES.md` dosyası okundu; değiştirilmedi. `docs/brand/current-identity.md` mevcut/taslak farklarını ve açık kararları kaydeder.
 - `collect_inventory.py` salt-okunur envanter aracı gözden geçirildi; form değerleri/script içerikleri dışarıda bırakıldı, gövde sınırı işaretlendi, sitemap ve hassas içerik dışlama durumları görünür kaydedildi. Sentetik form ayrıştırma testi geçti. Bu uygulama testi değildir.
+- Canlı/yerel URL parite katmanı `scripts/url_parity.py` ve `tests/test_url_parity.py` ile yeniden üretilebilir hale getirildi. 131 gözlemlenen yol içinde 116 doğrudan 2xx, 4 başarılı 308 yönlendirme, 7 sitemap 404 ve 4 bağlantı kaynaklı 404 bulundu. 14 somut video URL'si dinamik şablon kaynak dosyasına bağlandı. Ayrıntı: `docs/00-inventory/url-parity.md/json/csv` ve yetkili migration tablosu `url-map.csv`.
 
 ## Alınan kararlar ve gerekçeleri
 - Kullanıcı: canlı ile yerel kökü biraz önce aynı sürüme güncelledi; canlı site esas, yalnız yerel içerik ayrı onaya sunulur. Çalışan SHA bağımsız doğrulanmadı.
@@ -31,6 +32,9 @@
 - Kılavuz v1.0 TASLAK / ONAY BEKLİYOR. Aluplan ayrı distribütör/çözüm ortağı kimliğiyle ele alınacak; yeni palet/font/slogan henüz uygulanmaz.
 - 29+/500+/50+/10K+ metinleri, mevcut CTA hedefleri, üretici logoları, hero video, PDF'ler ve geliştirici kredisi korunur. İnceleme notları değiştirme izni değildir.
 - Eski projede build/dev/install çalıştırılmadı, yazma yapılmadı. Kardeş projeler incelenmedi. `.env` içerikleri okunmadı/kopyalanmadı.
+- Kullanıcı hedef teknoloji olarak Next.js'i seçti. Kesin sürüm geliştirme başlangıcında güncel kararlı sürümden doğrulanıp kilitlenecek; mevcut fazda scaffold kurulmayacak.
+- İçerik, bileşen ve tema ayrı katmanlar olacak. Tüm görsel değerler semantik design token sözleşmesinden beslenecek; yalnız token seti değiştirilerek sitenin tamamı yeniden temalanabilir olacak. Bu gereksinim PRD ve Faz 4 kabul kriterlerine bağlanacak.
+- `../aluplan-2026` kaynak Git HEAD'i URL parite çalışması başında `d126e901b1f641b394a1725c50f031914da10307`, dalı `main` idi. Kaynakta izlenmeyen `AX3000_For Hazar/` klasörü bulundu; canlı/kök eşitliği iddiasına otomatik dahil edilmeyecek ve ayrı yerel içerik adayı olarak tutulacak.
 
 ## Açık sorular ve onay bekleyen konular
 - Segmentlerin ticari önceliği ve karar vericiler.
@@ -41,19 +45,21 @@
 
 ## Bilinen sorunlar ve riskler
 - Envanter **kısmi**: tüm alt sayfa dinamik durumları, harici form alanları, dış link/dosya erişimleri, fragmentler ve hashli medya eşlemesi henüz tam doğrulanmadı. Ayrıntılı kapanış listesi `docs/00-inventory/content-inventory.md` sonunda.
-- 308 yanıtları istemci tarafından takip edilmedi; kırık link sayılmaz. 11 adet 404 tek tarama anı kanıtıdır.
+- Güncel URL parite aracı aynı-origin 308 hedeflerini izler ve yalnız 2xx hedefe ulaşan yönlendirmeleri geçerli migration girdisi sayar. Harici hedefler otomatik GET edilmez. Bulgular tek tarama anı kanıtıdır.
+- URL keşfi sitemap, yerel rotalar, kaynak yönlendirmeleri ve HTML bağlantılarıyla; 8 tur/400 yol sınırıyla çalışır. Client-side yollar, form action, script içi URL ve sorgu varyantları için ayrı Faz 0 kapanış matrisi gereklidir; mevcut sayı eksiksizlik iddiası değildir.
 - /about canlı canonical ana sayfaya işaret ediyor; meta kayıtlarında kanıt var. Teknik etkisi Faz 2'de analiz edilecek.
 - Kaynakta bazı form akışları simülasyon; canlı gönderim/kalıcılık testi yapılmadı. Güvenlik ve çerez bulguları kod kanıtı, canlı/hukuki uygunluk kararı değil.
 - Asset basename eşlemeleri aday; kesin kullanım kanıtı değil. `live-versiyon` arşivi güncel içeriğe karıştırılmaz.
 - Marka kılavuzunun üretici izinleri hakkındaki ifadeleri resmî izin belgesi yerine geçmez; benzerlik kontrolü henüz yapılmadı.
 
 ## Sıradaki adım
-Faz 0 içinde kalan dinamik içerik, harici form ve dosya/link eşlemelerini tamamlayıp envanteri faz sonu onayına sun.
+Faz 0 içinde içerik/medya/form/link kapanış matrisini ve asset paritesini tamamla; ardından envanteri faz sonu onayına sun.
 
 ## Önemli dosyalar ve komutlar
 - Başlangıç sırası: `docs/MASTER-PROMPT.md` → `HANDOFF.md` → `docs/BRAND-GUIDELINES.md` → 3–5 satır özet ve kullanıcı onayı.
 - Kullanıcı kararları: `docs/00-inventory/user-decisions.md`.
 - Envanter: `docs/00-inventory/content-inventory.md`, `.json`, `url-map.csv`.
+- URL doğrulama: `python3 scripts/url_parity.py`; birim test: `python3 -m unittest tests/test_url_parity.py`.
 - Kaynak marka farkları: `docs/brand/current-identity.md`.
 - Envanter aracını yeniden çalıştırma: `python3 docs/00-inventory/collect_inventory.py` (canlı GET trafiği üretir; otomatik JSON/CSV'yi yeniler; elle eklenen public_url/live_pages_exact eşlemelerini yeniden eklemek gerekir).
 - Yeni uygulama kurulmadı: build/test/lint/dev komutları tanımlı değil. `design-system/` boş; `src/` geliştirme fazından önce oluşturulmadı.

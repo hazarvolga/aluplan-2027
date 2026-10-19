@@ -36,6 +36,15 @@
 4. Yeni tasarımda mevcut Aluplan renk/font kimliği korunacak mı, yenilenecek mi?
 5. ALLPLAN distribütör marka kullanım dokümanı var mı?
 
+## Mimari gereksinim — 19.10.2026
+- Hedef uygulama Next.js ile kurulacak. Kesin Next.js sürümü geliştirme başlangıcında güncel kararlı sürüm ve bağımlılık uyumluluğu doğrulanarak kilitlenecek.
+- İçerik, bileşen ve tema birbirinden ayrı katmanlar olacak.
+- İçerikler yapılandırılmış veri/modül katmanından beslenecek; sunum bileşenlerine uzun metin, URL veya ürün verisi gömülmeyecek.
+- Bileşenler yalnız semantik design token kullanacak. Renk, tipografi, boşluk, radius, gölge, breakpoint, grid ve motion değerleri bileşenlerde sabit yazılmayacak.
+- Tema/token seti değiştirildiğinde içerik ve bileşen yapısı değiştirilmeden tüm görsel sistem güncellenebilmeli.
+- Açık/koyu tema aynı semantik token sözleşmesini kullanacak; marka tokenları ile bileşen tokenları ayrı katmanlarda tutulacak.
+- Bu karar design system kurulum onayı değildir. Uygulama ayrıntıları PRD onayından sonra Faz 4'te üretilecek ve otomatik kontrollerle korunacak.
+
 Bu sorular henüz cevaplanmış sayılmaz; envanter yapılmasını engellemez. PRD bu fazda yazılmadı.
 
 ## Faz 2 için kullanıcı notları

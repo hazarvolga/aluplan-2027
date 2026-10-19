@@ -53,7 +53,13 @@
 - Marka kılavuzunun üretici izinleri hakkındaki ifadeleri resmî izin belgesi yerine geçmez; benzerlik kontrolü henüz yapılmadı.
 
 ## Sıradaki adım
-Faz 0 içinde içerik/medya/form/link kapanış matrisini ve asset paritesini tamamla; ardından envanteri faz sonu onayına sun.
+Faz 0 içinde içerik/medya/form/link kapanış matrisini ve asset paritesini tamamla; tamamlanan envanteri ALLPLAN referans analiziyle sonraki analiz aşamasında karşılaştır.
+
+## Kullanıcı isteğiyle bağımsız ALLPLAN referans araştırması
+- 19.10.2026: `docs/allplan-information-architecture.md` oluşturuldu. International görünümde ürün/çözüm/paket ayrımı, sayfa sunum desenleri, kullanıcı yolları ve dokuz sayfanın ilk HTML schema işaretleri incelendi; ABD bölgesel farkları ayrıca belirtildi.
+- İlk altı HTML örneğinde TYPO3 kaynak işareti doğrulandı. Aluplan CMS kullanmıyor; Next.js içerik, ilişkiler, navigasyon, tema ve SEO katmanları için dosya tabanlı model yalnız aday olarak belgelendi. CMS kurulumu kararlaştırılmadı.
+- Dokuz örneğin ilk HTML'sinde JSON-LD/itemtype bulunmadı; JS sonrası DOM, mağaza ve site geneli için yokluk iddiası yapılmadı. İç CMS veri modeli bilinmiyor.
+- Aluplan karşılaştırması henüz yapılmadı; referans araştırması faz geçişi veya tasarım/URL/içerik değişikliği onayı değildir.
 
 ## Önemli dosyalar ve komutlar
 - Başlangıç sırası: `docs/MASTER-PROMPT.md` → `HANDOFF.md` → `docs/BRAND-GUIDELINES.md` → 3–5 satır özet ve kullanıcı onayı.

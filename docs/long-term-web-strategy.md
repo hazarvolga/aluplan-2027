@@ -268,3 +268,8 @@ Bu oturumda validator, Rich Results Test veya canlı URL Inspection çalıştır
 [PDF/web karar tablosu](package-comparison-decisions.md) aynı 2026 sürümünde farklı katalog revizyonları ve lisans lejantları bulunduğunu doğruladı. Bölüm 10 kapsam modeli kaynak revizyonu ve lisans modeliyle genişletilmelidir; belge tarihi ticari yürürlük tarihi değildir. Ürün/paket/sürüm kararlı kimlikleri korunur; revizyon iddiası geçmişi ezmez. Bu bir dokümantasyon kararıdır, uygulama yapılmadı.
 
 Kullanıcı strateji kararlarında yetki üstleniyor: bilgi mimarisi, kavram ayrımı, tekrarların tek kaynaktan yönetilmesi ve müşteri akışı için proje ekibi gerekçeli karar oluşturabilir. Fiyat, üretici lisans hakkı, TR kapsamı ve hizmet taahhüdü doğrulanacak gerçeklerdir. Nihai sunum kanıt → problem → karar → ölçüm zincirini kullanacak; ölçülmemiş gelir/dönüşüm iddiası üretmeyecek.
+
+
+## 21.10.2026 sayfa görevleri ve hizalama kararı
+
+Kullanıcı üreticiye bilgi/kavram düzeyinde hizalanmayı kabul etti. [Sayfa görev tablosu](page-responsibilities.md) 23 mevcut URL için ALLPLAN referansı, Aluplan ek değeri ve içerik işlemini ayırır. Üretici kapsamı uluslararası kaynaktan TR'ye otomatik taşınmaz. Hizalama mevcut içeriği sessizce değiştirmek değildir: orijinal korunur, eski/dayanak/öneri farkı ayrıca değerlendirilir. Kod, site metni, CTA ve URL değişikliği yapılmadı.

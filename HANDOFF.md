@@ -37,6 +37,14 @@
 - PPTX yapı doğrulaması geçti, PDF13 sayfa ve PPTX13 not kontrol edildi. Sunum görsel dili marka onayı değildir; final sunum kullanıcı geri bildirimini bekliyor.
 - Sıradaki sunum adımı: kullanıcının hedef toplantı ve ton geri bildirimine göre taslağı sonlandırmak. Faz0 açıkları, ticari doğrulama ve design system incelemesi ayrı işlerdir.
 
+## Sayfa görevleri ve üreticiye hizalama — 21.10.2026
+- Kullanıcı sunum taslağını uygun buldu; uygulama izni verilmedi. Sonrasında sayfa görev tablosunu ve ALLPLAN referansı/Aluplan ek değeri ayrımını kabul etti.
+- `docs/page-responsibilities.md`: 23 mevcut URL için görev, ana kayıt, üretici referansı, yerel değer, sonraki adım ve koru/hizala/yerelleştir/tarihsel tut sınıfları.
+- Kararlar: kalıcı ALLPLAN girişi ile AEC iş akışı anlatımı; paket karşılaştırması ile belge indirme; kalıcı bulut hizmetleri ile 2026 bulut yenilikleri ayrı görevler. Yeni URL/canonical/redirect kararı yok.
+- Kaynaklar 19/21 Ekim araştırma kayıtlarıdır; bu tur canlı tarama yenilenmedi. Resmî sürüm notu satır eşliği ve TR ticari kapsamı açık.
+- İçerik koruma ile hizalama için eski metin/dayanak/öneri fark kaydı tanımlandı; site metni, kod ve schema çıktısı değiştirilmedi.
+- Bir sonraki öneri: kayıt şablonları ve iki gerçek içerik üzerinde fark kaydı. Faz0 tamamlandı sayılmaz.
+
 ## Bu oturumda yapılanlar
 - `AGENTS.md` oturum/koruma kuralları ve `docs/MASTER-PROMPT.md` eksiksiz başlangıç talimatı oluşturuldu.
 - `docs/00-inventory/content-inventory.md/json` ve `url-map.csv` üretildi: 103 yerel app rotası, 125 canlı URL, 112 HTTP 200 / 11 HTTP 404 / 2 HTTP 308.

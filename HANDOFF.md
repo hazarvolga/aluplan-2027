@@ -1,7 +1,7 @@
 # Oturum devri
 
 ## Güncelleme tarihi ve oturum no
-19.10.2026 — Oturum 1 (Europe/Istanbul).
+21.10.2026 — Uzun vadeli strateji çalışması (Europe/Istanbul).
 
 ## Faz durumu tablosu
 | Faz | Durum |
@@ -28,7 +28,7 @@
 
 ## Alınan kararlar ve gerekçeleri
 - Kullanıcı: canlı ile yerel kökü biraz önce aynı sürüme güncelledi; canlı site esas, yalnız yerel içerik ayrı onaya sunulur. Çalışan SHA bağımsız doğrulanmadı.
-- Yeni teknoloji/tasarım kararı yok. Kaynak Next.js 14/React 18/TypeScript/Tailwind 3 sürüm aralıkları içerir. Docker/Coolify belgesi mevcut; üretim sağlayıcısı bağımsız doğrulanmadı.
+- Hedef teknoloji Next.js; kesin sürüm ve tasarım kararları açık. Kaynak Next.js 14/React 18/TypeScript/Tailwind 3 sürüm aralıkları içerir. Docker/Coolify belgesi mevcut; üretim sağlayıcısı bağımsız doğrulanmadı.
 - Kılavuz v1.0 TASLAK / ONAY BEKLİYOR. Aluplan ayrı distribütör/çözüm ortağı kimliğiyle ele alınacak; yeni palet/font/slogan henüz uygulanmaz.
 - 29+/500+/50+/10K+ metinleri, mevcut CTA hedefleri, üretici logoları, hero video, PDF'ler ve geliştirici kredisi korunur. İnceleme notları değiştirme izni değildir.
 - Eski projede build/dev/install çalıştırılmadı, yazma yapılmadı. Kardeş projeler incelenmedi. `.env` içerikleri okunmadı/kopyalanmadı.
@@ -53,7 +53,14 @@
 - Marka kılavuzunun üretici izinleri hakkındaki ifadeleri resmî izin belgesi yerine geçmez; benzerlik kontrolü henüz yapılmadı.
 
 ## Sıradaki adım
-Faz 0 içinde içerik/medya/form/link kapanış matrisini ve asset paritesini tamamla; tamamlanan envanteri ALLPLAN referans analiziyle sonraki analiz aşamasında karşılaştır.
+Önce `docs/long-term-web-strategy.md` taslağını kullanıcıyla değerlendir. Yön onayının ardından Faz 0 içinde içerik/medya/form/link kapanış matrisini ve asset paritesini tamamla; tamamlanan envanteri ALLPLAN referans analiziyle sonraki analiz aşamasında karşılaştır. Tasarıma geçme.
+
+## Uzun vadeli web stratejisi — 21.10.2026
+- Kullanıcı yıllık yeniden yapım yükünü ve ürünlerin doğru anlatılmasını temel sorunlar olarak belirtti; kalıcı içerik, yıllık sürümler ve müşteri kazanımını birlikte planlamayı istedi.
+- `docs/long-term-web-strategy.md` v0.1 taslağı oluşturuldu: kalıcı ürün/çözüm kayıtları, ayrı paket/sürüm ilişkileri, yıllık yayın süreci, mevcut CTA'larla müşteri yolları, CMS'siz içerik işletimi ve ölçüm önerileri.
+- Tek devam eden kod tabanı ve içerik güncellemeleri önerildi. Ürün/segment pilotu, ticari hedefler, sorumlular ve sayısal başarı hedefleri kullanıcı değerlendirmesine açık.
+- Google'ın URL taşıma ve kullanıcı odaklı içerik belgeleri incelendi ve taslakta kaynak gösterildi. Canlı site yeniden taranmadı; envanter sayıları önceki tarihli gözlemlerdir.
+- Yalnız dokümantasyon değişti. Tasarım, uygulama, schema, içerik/URL değişikliği veya yayın yapılmadı; Faz 0 sürüyor.
 
 ## Kullanıcı isteğiyle bağımsız ALLPLAN referans araştırması
 - 19.10.2026: `docs/allplan-information-architecture.md` oluşturuldu. International görünümde ürün/çözüm/paket ayrımı, sayfa sunum desenleri, kullanıcı yolları ve dokuz sayfanın ilk HTML schema işaretleri incelendi; ABD bölgesel farkları ayrıca belirtildi.

@@ -49,3 +49,9 @@ Bu sorular henüz cevaplanmış sayılmaz; envanter yapılmasını engellemez. P
 
 ## Faz 2 için kullanıcı notları
 /about canonical ve OG alanlarını tüm sayfalarla karşılaştır; ALLPLAN/Allplan/Aluplan başlık tutarlılığını incele. Bu oturumun `content-inventory.json` kayıtları mevcut meta değerlerini içerir; SEO etkisi ve iyileştirme Faz 2'de değerlendirilir.
+
+## Stratejik öncelikler — 21.10.2026
+- Kullanıcının en önemli sorunları: her yıl siteyi yeniden yapma yükü ve ürünleri doğru anlatmak.
+- Önce uzun vadeli web stratejisi hazırlanacak; kalıcı içerik, yıllık sürüm güncellemeleri ve müşteri kazanımı birlikte ele alınacak. Henüz tasarıma geçilmeyecek.
+- `../long-term-web-strategy.md` v0.1 bu isteğe yanıt veren taslaktır. Tek devam eden kod tabanı, yayın işletimi, pilot ve ölçüm önerileri henüz kullanıcı tarafından onaylanmış kararlar değildir.
+- Segment, CTA, marka, form ve üretici izinleri hakkındaki açık sorular geçerliliğini korur.

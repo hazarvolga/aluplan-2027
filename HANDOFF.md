@@ -30,6 +30,13 @@
 - Canlı CTA14 gün; kaynakta kullanılmayan30 gün prop'u var. Q3 PDF doğru yazımı karsilastirme; önceki dokümanlardaki a/e aktarım hatası düzeltildi, URL değişikliği değil.
 - Kullanıcı stratejik kararları ekibin üstlenebileceğini belirtti. Karar yetkisi ve kanıt temelli ikna sunumu omurgası kaydedildi; final sunum henüz yok. Faz geçişi ve entegrasyon yapılmadı.
 
+## Yönetim sunumu taslağı — 21.10.2026
+- Kullanıcı kanıtları yetkililere sunulabilecek strateji taslağına dönüştürmeyi istedi; uygulama yok.
+- `docs/presentations/aluplan-strategy/aluplan-web-strategy-draft.pptx`: 13 düzenlenebilir slayt, her slaytta konuşmacı notu. PDF önizlemesi ve `companion.md` konuşmacı/kaynak rehberi birlikte hazırlandı.
+- Anlatı: gözlenen sorunlar → kaynak revizyonu → müşteri akışı → tek katalog → yıllık süreç → içerik/tema/schema → karar yetkisi → pilot ve ölçüm → toplantı kararları.
+- PPTX yapı doğrulaması geçti, PDF13 sayfa ve PPTX13 not kontrol edildi. Sunum görsel dili marka onayı değildir; final sunum kullanıcı geri bildirimini bekliyor.
+- Sıradaki sunum adımı: kullanıcının hedef toplantı ve ton geri bildirimine göre taslağı sonlandırmak. Faz0 açıkları, ticari doğrulama ve design system incelemesi ayrı işlerdir.
+
 ## Bu oturumda yapılanlar
 - `AGENTS.md` oturum/koruma kuralları ve `docs/MASTER-PROMPT.md` eksiksiz başlangıç talimatı oluşturuldu.
 - `docs/00-inventory/content-inventory.md/json` ve `url-map.csv` üretildi: 103 yerel app rotası, 125 canlı URL, 112 HTTP 200 / 11 HTTP 404 / 2 HTTP 308.

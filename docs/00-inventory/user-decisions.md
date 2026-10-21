@@ -70,3 +70,7 @@ Kullanıcı ana sayfanın Profesyonel Hizmetler sekmeli alanının Aluplan yetki
 ## 21.10.2026 — Eğitim hizmetinin sadeleştirilmesi
 
 Kullanıcı hizmet matrisini hazırlamayı kabul etti; ardından “Bireysel & Kurumsal Özel Eğitim sayfasını göz ardı et, Eğitim olarak sadeleştir” talimatı verdi. Konumlandırma tek Eğitim başlığıyla ilerleyecek. Özelleştirme ayrı hizmet/pazarlama dalı olarak sunulmayacak; ihtiyaç bağlamı olarak ele alınabilir. Bu tur mevcut sayfa/URL, içerik veya form değiştirme yok. Matris: `../service-positioning-matrix.md`.
+
+## 21.10.2026 — Destek adresi kullanıcı düzeltmesi
+
+Kullanıcı Teams üzerinden desteğin ve ayrı ticket sisteminin çalıştığını teyit etti. Ticket adresini **allplan.net.tr** olarak düzeltti; önceki kaynak/envanterde `aluplan.net.tr` bulunuyor. Kullanıcının bildirdiği adres planlama için esas alınır; eski gözlem kaydı silinmez. Bu tur bağlantı erişimi bağımsız doğrulanmadı ve site değiştirilmedi. Yeni destek altyapısı gerekmiyor; çalışma saati, SLA veya kanal sırası varsayılmıyor.

@@ -22,7 +22,7 @@ Bu matris mevcut içerik envanterinin yerine geçmez. Metinlerin tamamı envante
 |---|---|---|---|---|---|
 | **Eğitim** | Programı öğrenmek veya mevcut bilgiyi geliştirmek | S1 Eğitim kartı; S2 öğrenme kategorileri ve formatlar | Ana sayfada tek Eğitim girişi; eğitim sayfasında ihtiyaç/seviye ve format ayrımı; ilgili ürün sayfasından aynı kayda bağlantı önerisi | `/solutions-v2/training`; mevcut kategori eylemleri ayrı korunur | Gerçek sunulan konular, formatlar, tarihler, sorumlu, ücret ve katılım koşulları |
 | Teknik Destek | Kullanırken karşılaşılan teknik sorunu çözmek | S1 Teknik Destek kartı / Teams hedefi | Eğitimden ayrı sorun çözme yolu; mevcut müşterinin hızlı erişimi | Envanterde kayıtlı mevcut Teams hedefi | Kimler kullanabilir, görüşme düzeni, çalışma saatleri ve ticket ile ilişkisi |
-| Destek Platformu | Sorunu kayda geçirmek ve takibini yapmak | S1 Talep Oluştur / aluplan.net.tr | Ayrı satılabilir hizmet diye çoğaltmadan destek kanalı olarak modelle | `https://aluplan.net.tr` | Kayıt gereksinimi, takip imkânı ve operasyon sorumlusu |
+| Destek Platformu | Sorunu kayda geçirmek ve takibini yapmak | S1 Talep Oluştur / aluplan.net.tr | Ayrı satılabilir hizmet diye çoğaltmadan destek kanalı olarak modelle | Kullanıcının düzelttiği hedef: `https://allplan.net.tr`; kaynak farkı uygulamada ayrıca ele alınacak | Kayıt gereksinimi ve operasyon sorumlusu |
 | Danışmanlık | İş akışı veya proje ihtiyacını uzmanla değerlendirmek | S1 Danışmanlık / İletişim kartı | Eğitimden ayrımı görev ve teslimatla tanımlanmalı; kapsam henüz kesin değil | `/contact` | Sunulan somut iş, teslimat, sorumluluk sınırı, ücretlendirme |
 | Sertifika | Mevcut sertifikayı görüntülemek | S1 Sertifika / Görüntüle | Yeni hizmet satışı veya her eğitim için sertifika garantisi değil, mevcut işlem erişimi | `https://aluplan.info/` | Hangi eğitim/kurum belgeleri, sorgulama koşulları |
 | Partner | Üretici partner programını incelemek | S1 üreticinin başvuru bağlantısı | Aluplan hizmeti gibi anlatılmaz; sağlayıcısı belirtilen dış başvuru | `https://www.allplan.com/allplan-partner-solutions/` | Üreticinin güncel bölgesel uygunluk koşulları |
@@ -70,7 +70,7 @@ Gelecekte kısa eğitim talebi için önerilen bağlam: öğrenilmek istenen kon
 | İhtiyaç, seviye, format ayrımı | Taslak IA önerisi | Proje ekibi; kullanıcı görevi kontrolü |
 | Temel/ileri/özel/BIM eğitimlerinin fiili kapsamı | Doğrulama gerekli | Eğitim sorumlusu; güncel program |
 | Tarih, süre, ücret, kişi sınırı, eğitmen ve sertifika | Doğrulama gerekli | Eğitim/operasyon sorumlusu; onaylı hizmet bilgisi |
-| Teams ve ticket görev paylaşımı | Doğrulama gerekli | Destek sorumlusu; kanal işletim kuralı |
+| Teams ve ticket kanalları | Kullanıcı: Teams bağlantısı üzerinden destek ve ayrı çalışan ticket sistemi mevcut | Yeni altyapı gerekmiyor; randevu, SLA veya zorunlu kanal sırası belirtilmedi |
 | Eğitim–danışmanlık sınırı | Doğrulama gerekli | Hizmet sorumlusu; örnek teslimat ve kapsam |
 | Eğitim formunun gerçek teslimi | Kaynak riski; canlı test açık | Teknik ekip + operasyon; sonraki yetkili test |
 
@@ -85,3 +85,7 @@ Schema üretimi bu aşamada yok. Hizmet kapsamı, sağlayıcı ve program doğru
 ## Sonraki kabul adımı
 
 Kullanıcı matrisi değerlendirdikten sonra Eğitim için eksik işletim bilgileri tamamlanmalı ve destek kanallarının görev ayrımı netleştirilmeli. Tasarım, yeni sayfa, URL değişikliği ve uygulama ayrı faz onayına bağlıdır.
+
+## 21.10.2026 — Destek kanalı düzeltmesi
+
+Kullanıcı Teams bağlantısının mevcut destek kanalı olduğunu, ayrı ticket sisteminin de çalıştığını bildirdi ve adresi **allplan.net.tr** olarak düzeltti. S1/önceki envanterdeki `aluplan.net.tr` tarihsel kaynak bulgusu olarak korunur; planlamada kullanıcı tarafından bildirilen hedef `https://allplan.net.tr` olur. Erişim, protokol ve yönlendirme bu tur bağımsız doğrulanmadı; sitenin mevcut bağlantısı değiştirilmedi. Yeni destek sistemi kurulması önerilmiyor.

@@ -147,3 +147,7 @@ Paralel bekleyen iş: Claude kullanım sınırı sonrası kalan düzeltmeleri ta
 - Kaynak görseller/logolar değiştirilmeden yeni projeye kopyalandı. Fontlar yerel, lisans metinleri kayıtlı. Kapsam ve font formatı sınırı `docs/previews/README.md` içinde.
 - Tarayıcıda rol metni/URL değişimi ve tema geçişi doğrulandı; `docs/previews/preview.png` kaydedildi. Statik kod incelemesinde kritik/yüksek bulgu yok. Tam mobil/E2E veya içerik paritesi kabulü yapılmadı.
 - Tasarım örneği kullanıcı geri bildirimini bekler; PRD veya marka kılavuzu onayı verilmiş sayılmaz.
+
+## 21.10.2026 — Destek adresi kullanıcı düzeltmesi
+
+Kullanıcı Teams üzerinden desteğin ve ayrı ticket sisteminin çalıştığını teyit etti. Ticket adresini **allplan.net.tr** olarak düzeltti; önceki kaynak/envanterde `aluplan.net.tr` bulunuyor. Kullanıcının bildirdiği adres planlama için esas alınır; eski gözlem kaydı silinmez. Bu tur bağlantı erişimi bağımsız doğrulanmadı ve site değiştirilmedi. Yeni destek altyapısı gerekmiyor; çalışma saati, SLA veya kanal sırası varsayılmıyor.

@@ -85,3 +85,7 @@ Bu sorular henüz çalıştırılmış test değildir. Hizmetlerin ticari öncel
 ## 21.10.2026 — Kullanıcı sadeleştirme kararı
 
 Sonraki incelemede bireysel eğitim ayrıntı sayfası görüldü; kullanıcı bu sayfayı konumlandırmada göz ardı etmemizi ve **Eğitim** olarak sadeleştirmemizi istedi. Üstteki özelleştirme araştırması ayrı hizmet önerisi olarak ilerletilmeyecek. Tek Eğitim hizmeti ve ihtiyaç ayrıntıları [hizmet matrisinde](service-positioning-matrix.md) ele alındı. Sayfa silme/URL yönlendirme yapılmadı; önceki nottaki kapsam belirsizliği sayfanın bulunmadığı anlamına gelmez.
+
+## 21.10.2026 — Destek adresi kullanıcı düzeltmesi
+
+Kullanıcı Teams üzerinden desteğin ve ayrı ticket sisteminin çalıştığını teyit etti. Ticket adresini **allplan.net.tr** olarak düzeltti; önceki kaynak/envanterde `aluplan.net.tr` bulunuyor. Kullanıcının bildirdiği adres planlama için esas alınır; eski gözlem kaydı silinmez. Bu tur bağlantı erişimi bağımsız doğrulanmadı ve site değiştirilmedi. Yeni destek altyapısı gerekmiyor; çalışma saati, SLA veya kanal sırası varsayılmıyor.

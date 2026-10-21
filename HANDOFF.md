@@ -53,7 +53,14 @@
 - Marka kılavuzunun üretici izinleri hakkındaki ifadeleri resmî izin belgesi yerine geçmez; benzerlik kontrolü henüz yapılmadı.
 
 ## Sıradaki adım
-Kullanıcının design system hakkındaki sıradaki sorusunu bekle; uygulamaya geçme. `docs/long-term-web-strategy.md` v0.2 strateji/schema taslağı değerlendirmeye hazır. Yön onayının ardından Faz 0 içinde içerik/medya/form/link kapanış matrisini ve asset paritesini tamamla; tamamlanan envanteri ALLPLAN referans analiziyle sonraki analiz aşamasında karşılaştır.
+Claude Design düzeltme promptunu kullanıcıya sun; yeni paketi `docs/design-system-package-review.md` bulgularına göre yeniden kontrol et. Henüz entegrasyon yapma. Faz 0 kapanışı ve strateji/PRD onayları ayrıca bekliyor.
+
+## Claude Design paket incelemesi — 21.10.2026
+- Kullanıcı Claude Design taslağını oluşturmayı yönettirdi; ardından ZIP'i proje köküne indirip yenisiyle değiştirdi. Son ZIP SHA-256: `af116303f7cbfd7d0ec7a0e6bc6c74565efa98f518b37813fe1bf2ec2825b4c0`; açılmış klasör ZIP ile aynı.
+- Rapor: `docs/design-system-package-review.md`. Son key düzeltmeleri var. Node --check geçti, 188 kontrast kontrolünde eşik altı yok; iki yanlış sınıflandırılmış min-width uyarısı var.
+- Responsive token üretimi, sürüm/bölge kapsam modeli, görsel sabitler, ikon/logo token eşlemesi, Tabs kenar durumu, güncel sürüm varsayımı, font lisansları açık.
+- Yerel katalog 8768'de açıldı (server session 56227). Bir tema/mod geçişinde metin ve linkler korundu, font değişti. Tam E2E/Next build yapılmadı.
+- ZIP ve açılmış kaynaklar kullanıcı dosyalarıdır; değiştirilmedi, commit'e alınmadı. Yalnız inceleme dokümanları kaydedildi. Bu taslak Faz 4 veya site entegrasyonu onayı değildir.
 
 ## Schema stratejisi ve CMS kararı — 21.10.2026
 - CMS kullanıcı kararıyla şimdilik ertelendi. Sağlam design system gereksinimi yinelendi; henüz kurulum onayı yok.

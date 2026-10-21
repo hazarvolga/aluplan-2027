@@ -98,3 +98,8 @@ Bunlar test senaryosu taslağıdır; henüz çalıştırılmış kullanıcı tes
 Bu tablo sayfa görevlerini belirler; 23 URL'lik pilot yüzey tüm site değildir. Diğer çözüm/ürün sayfaları, tüm eğitim alt rotaları, kaynak bazında lisans izinleri ve dinamik içerik durumları Faz 0 içinde sürer. Öncelikli ticari boşluklar: SCIA, süreli Solibri hakkı, bulut lisans evreni, Civil/Precast ilişkisi ve yerel hizmet taahhütleri.
 
 Sıradaki önerilen çıktı: bu görev tablosundan türeyen ürün/paket/sürüm/kaynak/hizmet kayıt şablonları ve iki gerçek içerik parçası üzerinde eski→dayanak→öneri fark kaydı. Uygulama başlamadan bu şablonlar değerlendirilecek.
+
+
+## 21.10.2026 hizmet alanı ve şablon eki
+
+Kullanıcının öncelik notuyla ana sayfa Profesyonel Hizmetler alanı ayrı değerlendirilir: [konumlandırma notu](professional-services-positioning.md). Üç sekme ve 20 hedef korunur; bölüm yalnız ürün sayfası uzantısı değildir. [Kayıt sözleşmesi](content-record-contract.md) hizmet/portal/kaynak ayrımını; [iki gerçek örnek](content-change-examples.md) ticari doğrulama ve editoryal karar farkını gösterir. İçerik işlemleri uygulanmadı.

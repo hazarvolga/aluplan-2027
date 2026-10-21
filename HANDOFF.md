@@ -45,6 +45,13 @@
 - İçerik koruma ile hizalama için eski metin/dayanak/öneri fark kaydı tanımlandı; site metni, kod ve schema çıktısı değiştirilmedi.
 - Bir sonraki öneri: kayıt şablonları ve iki gerçek içerik üzerinde fark kaydı. Faz0 tamamlandı sayılmaz.
 
+## İçerik sözleşmesi ve hizmet alanı notu — 21.10.2026
+- Kullanıcı kayıt şablonları ve iki gerçek fark örneğini kabul etti. Ana sayfa Profesyonel Hizmetler sekmelerinin yetkililer için önemli, yıllar içinde geliştirilmiş ama iyileştirmeye açık olduğunu özellikle belirtti. Özelleştirilmiş eğitim/destek konumlandırması ayrı değerlendirme başlığıdır.
+- `docs/content-record-contract.md`: ürün, edition, release, kapsam iddiası, kaynak revizyonu, hizmet, kaynak/hedef ve sayfa kayıtları için kavramsal alanlar; uygulama şeması değildir.
+- `docs/content-change-examples.md`: Ultimate–SCIA ticari doğrulaması ve Eğitim Takvimi→Eğitimleri İncele CTA önerisi. Mevcut metinler/CTA'lar uygulanarak değiştirilmedi.
+- `docs/professional-services-positioning.md`: hizmet sekmeleri için ayrı kanıt/konumlandırma değerlendirmesi. Eğitim kartında ham /contact hedefi render koşuluyla /solutions-v2/training olur; taşımada gerçek hedef korunmalı.
+- Kaynak salt-okunur; bu tur yeni canlı tarama, schema üretimi, tasarım entegrasyonu veya uygulama yok. Faz0 ve hizmet alanının tam etkileşim kabulü açık.
+
 ## Bu oturumda yapılanlar
 - `AGENTS.md` oturum/koruma kuralları ve `docs/MASTER-PROMPT.md` eksiksiz başlangıç talimatı oluşturuldu.
 - `docs/00-inventory/content-inventory.md/json` ve `url-map.csv` üretildi: 103 yerel app rotası, 125 canlı URL, 112 HTTP 200 / 11 HTTP 404 / 2 HTTP 308.

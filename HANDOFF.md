@@ -14,6 +14,14 @@
 | 5 — Ana sayfa tasarımı | Başlanmadı |
 | 6 — Geliştirme | Başlanmadı |
 
+## Tasarım beklerken envanter ve içerik modeli — 21.10.2026
+- Kullanıcı envanter kapanışı, ALLPLAN içerik eşlemesi, müşteri yolları ve yıllık güncelleme planını kabul etti. Uygulama/entegrasyon izni değil, analiz kapsamıdır.
+- `docs/00-inventory/closure-review-2026-10-21.md`: 180 hedef HEAD kontrolü ve seçili GET kontrolleri; altı PDF'nin canlı/yerel SHA-256 eşliği doğrulandı. AX3000 klasöründeki dört PDF zaten canlı içerikle aynı; iki DOCX kullanım kararı açık.
+- `link-recheck-2026-10-21.json` ve `fragment-recheck-2026-10-21.json` yeni kanıtlardır; önceki tarama dosyaları üzerine yazılmadı. 112 HTML/123 fragment çiftinde 118 eşleşme, beş trailing-space adayı; tarayıcı davranışı ayrıca kontrol edilmeli.
+- Ana teklif formunun ALLPLAN dalı kişisel veri/gönderim olmadan incelendi; `form-observation-2026-10-21.md`. Kullanıcı form karmaşasının bilinen işletim sorunu olduğunu bildirdi. Niyete göre kısa girişler/tek operasyon merkezi önerisi kaydedildi; mevcut hedef korunur.
+- `docs/allplan-content-mapping.md`: gerçek URL'lerle ürün/paket/sürüm/dosya eşlemesi, müşteri yolları ve yıllık kontrol listesi. Üçlü/altılı paket listesi, sürüm/paket etiketi ve deneme süresi açık kararlar.
+- Faz 0 kısmi; tüm dinamik durumlar, diğer form dalları, medya ve paket kapsamı henüz kapanmadı. Kaynak ve indirilen design system paketleri değiştirilmedi.
+
 ## Bu oturumda yapılanlar
 - `AGENTS.md` oturum/koruma kuralları ve `docs/MASTER-PROMPT.md` eksiksiz başlangıç talimatı oluşturuldu.
 - `docs/00-inventory/content-inventory.md/json` ve `url-map.csv` üretildi: 103 yerel app rotası, 125 canlı URL, 112 HTTP 200 / 11 HTTP 404 / 2 HTTP 308.

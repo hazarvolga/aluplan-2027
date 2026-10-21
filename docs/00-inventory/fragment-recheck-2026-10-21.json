@@ -1,0 +1,1516 @@
+{
+  "scope": "initial HTML id/name only; missing is not proof of broken client UI anchor",
+  "results": [
+    {
+      "url": "https://aluplan.com.tr/",
+      "requested_fragments": [
+        "main",
+        "professional-services"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        },
+        {
+          "fragment": "professional-services",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/about",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/contact",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/gizlilik-politikasi",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/health",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/hero-3d",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/kullanim-sartlari",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/kvkk",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/package-overview",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/paket-karsilastirma",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/products",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/products/allplan",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/products/allplan-2026",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/products/allplan-2026-yenilikler",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/products/allplan-aec",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/products/allplan-basic",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/products/allplan-bimplus",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/products/allplan-cloud-services",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/products/allplan-concept",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/products/allplan-professional",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/products/allplan-ultimate",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/products/architecture",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/products/ax3000",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/products/ax3000/dokumanlar",
+      "requested_fragments": [
+        "brosurler",
+        "main",
+        "teknik-dokumanlar"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "brosurler",
+          "in_initial_html": true
+        },
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        },
+        {
+          "fragment": "teknik-dokumanlar",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/products/civil",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/products/precast",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/products/precast-detail",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/products/sds2-home",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/references",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/search",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/addons",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/building-design",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/connect-license",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/connect-license/activation",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/connect-license/how-to-assign",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/connect-login",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/construction",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/faq",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/infrastructure",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/other",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training/classroom",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training/e-learning",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training/events",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training/individual",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training/online",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training/quick-start",
+      "requested_fragments": [
+        "features-2026 ",
+        "interface ",
+        "introduction ",
+        "main",
+        "modules ",
+        "pro-tips "
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "features-2026 ",
+          "in_initial_html": false
+        },
+        {
+          "fragment": "interface ",
+          "in_initial_html": false
+        },
+        {
+          "fragment": "introduction ",
+          "in_initial_html": false
+        },
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        },
+        {
+          "fragment": "modules ",
+          "in_initial_html": false
+        },
+        {
+          "fragment": "pro-tips ",
+          "in_initial_html": false
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training/video-library",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training/video-library/addon-geometry",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training/video-library/allplan-reinforcement",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training/video-library/ax3000",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training/video-library/bridge-workflow-2022",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training/video-library/bridge-workflows",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training/video-library/campus-de",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training/video-library/campus-en",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training/video-library/campus-tutorials-2019-2022",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training/video-library/hello-allplan-2024",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training/video-library/konut-insaati",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training/video-library/otomatik-donati",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training/video-library/quickstart-buildings",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training/video-library/road-design",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training/video-library/sds2-intro",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training/webinar",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/addons",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/addons/2d-dwg-converter",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/addons/drive-curve",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/addons/geometry-tools",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/addons/graphical-text",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/addons/parametric-terrain",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/addons/ramp",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/addons/sketchup-converter",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/addons/steel-components",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/addons/three-dimensioning",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/allplan-bulut-hizmetleri",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/allplan-industry",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/architecture",
+      "requested_fragments": [
+        "main",
+        "mimari-is-akislari"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        },
+        {
+          "fragment": "mimari-is-akislari",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/ax3000",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/ax3000-mekanik-tesisat",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/ax3000-virtual-reality",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/ax3000-yapi-fizigi",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/ax3000/elektrik",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/ax3000/havalandirma",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/ax3000/isitma",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/ax3000/konut-havalandirma",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/ax3000/sihhi-tesisat",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/ax3000/sprinkler",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/bimflex",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/bimx5",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/bridge-design",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/cds-addon",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/features-allplan-bridge",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/imar-yonetmeligi-bim-eklentisi",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/infrastructure",
+      "requested_fragments": [
+        "altyapi-muhendisligi-is-akislari",
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "altyapi-muhendisligi-is-akislari",
+          "in_initial_html": true
+        },
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/mep",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/modeling-of-precast-girder-bridges",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/oska",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/poz-catalog",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/precast",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/pythonpart",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/rebar-engineering",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/road-railway",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/scalypso",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/scalypso/converter",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/scalypso/mobile",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/scalypso/modeler",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/scalypso/videos",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/scalypso/viewer",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/site-planning",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/steel",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/structural",
+      "requested_fragments": [
+        "insaat-muhendisligi-is-akislari",
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "insaat-muhendisligi-is-akislari",
+          "in_initial_html": true
+        },
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    },
+    {
+      "url": "https://aluplan.com.tr/test-webgl",
+      "requested_fragments": [
+        "main"
+      ],
+      "status": 200,
+      "fragments": [
+        {
+          "fragment": "main",
+          "in_initial_html": true
+        }
+      ]
+    }
+  ]
+}

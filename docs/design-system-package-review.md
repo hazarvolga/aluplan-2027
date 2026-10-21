@@ -109,3 +109,15 @@ Yeni teslimatta kaynaklar ve `_ds_bundle.js` aynı sürümden yeniden üretilmel
 ## İnceleme sınırları
 
 Kaynak okuma, paket eşliği, token build/check, bellekte token değişim deneyleri ve bir yerel katalog tema geçişi yapıldı. Tam Next build, tüm bileşen E2E, ekran okuyucu, tüm viewport matrisi ve Google schema testleri yapılmadı. Paket kaynakları değiştirilmedi; siteye entegrasyon yapılmadı.
+
+## Claude düzeltme durumu — 21.10.2026
+
+Claude Design sohbeti tarayıcıdan kontrol edildi. Son yanıt kullanım sınırına ulaşıldığını, işin kısmen tamamlandığını ve `Aluplan Design System-reviewed-v3.zip` dosyasının henüz oluşturulmadığını açıkça belirtiyor. Yeni paket indirilmedi; önceki yerel ZIP değiştirilmedi. Aşağıdakiler Claude beyanıdır, bağımsız kaynak/test doğrulaması değildir:
+
+- Responsive CSS üretimi, görsel sabitlerin tokenlaştırılması, ikon/logo token bağları ve validator düzeltildi; token testleri sandbox JavaScript ortamında 28/28 olarak bildirildi. Node doğrulaması bekliyor.
+- Paket × sürüm × bölge × yetenek modeli, kaynak/doğrulama alanları ve sentetik S1/S2 verileri eklendi; içerik testleri aynı ortamda 13/13 olarak bildirildi.
+- Orijinal SVG'nin bayt bayt korunduğu, ayrı beyaz varyanta yalnız `.cls-1{fill:#FFFFFF}` kuralı eklendiği ve UI kit header/footer'ın bunu kullandığı bildirildi. Dosya karşılaştırması ve görsel doğrulama bekliyor; BrandLogo varsayılanı, kartlar ve katalog henüz güncellenmemiş.
+- Font OFL metinleri eklendiği bildirildi.
+- Tabs kenar durumları, ReleaseTag güvenli varsayılanı, kararlı kimlikler/client sınırları, editöryal JSX kopyalarının kaldırılması, tarayıcı testleri ve doküman/CHANGELOG güncellemeleri tamamlanmamış.
+
+Yeni ZIP olmadığı için logo/token/içerik-schema ayrımı yeniden kabul edilmedi. Claude'un devam edip kaynak ve bundle tutarlılığını sağlayarak v3 ZIP'i üretmesinden sonra bağımsız yeniden inceleme yapılacak. Entegrasyon yapılmadı.

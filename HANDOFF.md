@@ -53,9 +53,11 @@
 - Marka kılavuzunun üretici izinleri hakkındaki ifadeleri resmî izin belgesi yerine geçmez; benzerlik kontrolü henüz yapılmadı.
 
 ## Sıradaki adım
-Claude Design düzeltme promptunu kullanıcıya sun; yeni paketi `docs/design-system-package-review.md` bulgularına göre yeniden kontrol et. Henüz entegrasyon yapma. Faz 0 kapanışı ve strateji/PRD onayları ayrıca bekliyor.
+Claude kullanım sınırı sonrası kalan düzeltmeleri tamamlayıp v3 ZIP'i ürettiğinde yeni paketi `docs/design-system-package-review.md` bulgularına göre yeniden kontrol et. Henüz entegrasyon yapma. Faz 0 kapanışı ve strateji/PRD onayları ayrıca bekliyor.
 
 ## Claude Design paket incelemesi — 21.10.2026
+- Son tarayıcı kontrolünde Claude kullanım sınırında durmuş; v3 ZIP henüz üretilmemiş. Yeni indirme veya yeniden paket kabulü yapılmadı. Kısmi düzeltme beyanları ve kalan işler inceleme raporunun son bölümünde kayıtlı; bunlar bağımsız doğrulama değildir.
+- Kullanıcı ayrı beyaz dolgulu logo varyantına açık onay verdi ve talimat Claude'a gönderildi: orijinal korunacak, geometri/oranlar değişmeyecek. Bu izin yeniden logo tasarımı veya site entegrasyonu değildir.
 - Kullanıcı Claude Design taslağını oluşturmayı yönettirdi; ardından ZIP'i proje köküne indirip yenisiyle değiştirdi. Son ZIP SHA-256: `af116303f7cbfd7d0ec7a0e6bc6c74565efa98f518b37813fe1bf2ec2825b4c0`; açılmış klasör ZIP ile aynı.
 - Rapor: `docs/design-system-package-review.md`. Son key düzeltmeleri var. Node --check geçti, 188 kontrast kontrolünde eşik altı yok; iki yanlış sınıflandırılmış min-width uyarısı var.
 - Responsive token üretimi, sürüm/bölge kapsam modeli, görsel sabitler, ikon/logo token eşlemesi, Tabs kenar durumu, güncel sürüm varsayımı, font lisansları açık.

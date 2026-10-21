@@ -22,6 +22,14 @@
 - `docs/allplan-content-mapping.md`: gerçek URL'lerle ürün/paket/sürüm/dosya eşlemesi, müşteri yolları ve yıllık kontrol listesi. Üçlü/altılı paket listesi, sürüm/paket etiketi ve deneme süresi açık kararlar.
 - Faz 0 kısmi; tüm dinamik durumlar, diğer form dalları, medya ve paket kapsamı henüz kapanmadı. Kaynak ve indirilen design system paketleri değiştirilmedi.
 
+## Paket PDF/web karşılaştırması — 21.10.2026
+- `docs/package-comparison-decisions.md`: iki tek sayfalı PDF görsel/koordinat incelemesi, güncel 10 web sayfası kanıtı, 14 karar satırı ve schema etkisi. Kanıt görselleri/metinleri `docs/00-inventory/pdf-evidence/` içinde.
+- Aynı 2026 için 23.10.2025 ve 1.7.2026 katalogları; 8→6 sütun, farklı lisans lejantı, SCIA/BIM²form satırlarının yokluğu ve TIM ön koşulu belge farkıdır, otomatik ticari kaldırılma değildir.
+- Resmî ALLPLAN 2026 genel/Civil/Precast HTML karşılaştırmaları bulundu. Güncel resmî karşılaştırma PDF'si doğrulanamadı; eski PDF güncel diye kullanılmadı.
+- Schema skilli ve güncel Google/Schema.org/Next.js belgeleri okundu. İç model sourceRevision ve licenseModel ile genişletildi; JSON-LD/kod yok.
+- Canlı CTA14 gün; kaynakta kullanılmayan30 gün prop'u var. Q3 PDF doğru yazımı karsilastirme; önceki dokümanlardaki a/e aktarım hatası düzeltildi, URL değişikliği değil.
+- Kullanıcı stratejik kararları ekibin üstlenebileceğini belirtti. Karar yetkisi ve kanıt temelli ikna sunumu omurgası kaydedildi; final sunum henüz yok. Faz geçişi ve entegrasyon yapılmadı.
+
 ## Bu oturumda yapılanlar
 - `AGENTS.md` oturum/koruma kuralları ve `docs/MASTER-PROMPT.md` eksiksiz başlangıç talimatı oluşturuldu.
 - `docs/00-inventory/content-inventory.md/json` ve `url-map.csv` üretildi: 103 yerel app rotası, 125 canlı URL, 112 HTTP 200 / 11 HTTP 404 / 2 HTTP 308.

@@ -61,3 +61,5 @@ Ana teklif formunun ALLPLAN dalı tarayıcıda 1→2→3→13 yolu ile incelendi
 - Paket PDF içeriğini, üçlü/altılı paket listelerini ve yıllık sürüm metinlerinin örtüşmesini ürün sorumlusuyla doğrulamak.
 
 Bu kalan maddeler kapanmadan Faz 1'e geçilmez. Tasarım paketi veya bu dokümanların varlığı üretim kabulü değildir.
+
+21.10.2026 ek doğrulama: Q3 PDF adındaki `karsilastirma` yazımı rapor aktarım hatasıydı; doğru `karsilastirme` hedefi 200, hatalı yazım 404. Canlı URL değişikliği değildir. Güncel paket/PDF ve canlı CTA değerlendirmesi: [karar tablosu](../package-comparison-decisions.md).

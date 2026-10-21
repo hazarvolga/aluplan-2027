@@ -261,3 +261,10 @@ Design system bu veriyi tüketen ayrı sunum katmanıdır. Renk, font, boşluk v
 - İşletim kontrolü: her yıllık yayında etkilenen kayıtlar ve Google kuralları yeniden incelenir; tema değişikliğinde içerik/SEO çıktısının anlamının korunduğu doğrulanır.
 
 Bu oturumda validator, Rich Results Test veya canlı URL Inspection çalıştırılmadı; henüz test edilecek uygulama yok. Kaynak doğrulama ve doküman kontrolü yapıldı. Sonraki PRD'de pilot sayfaların gerçek alanlarıyla nihai tür seçimi yapılacak.
+
+
+## 21.10.2026 paket kanıtıyla model güncellemesi
+
+[PDF/web karar tablosu](package-comparison-decisions.md) aynı 2026 sürümünde farklı katalog revizyonları ve lisans lejantları bulunduğunu doğruladı. Bölüm 10 kapsam modeli kaynak revizyonu ve lisans modeliyle genişletilmelidir; belge tarihi ticari yürürlük tarihi değildir. Ürün/paket/sürüm kararlı kimlikleri korunur; revizyon iddiası geçmişi ezmez. Bu bir dokümantasyon kararıdır, uygulama yapılmadı.
+
+Kullanıcı strateji kararlarında yetki üstleniyor: bilgi mimarisi, kavram ayrımı, tekrarların tek kaynaktan yönetilmesi ve müşteri akışı için proje ekibi gerekçeli karar oluşturabilir. Fiyat, üretici lisans hakkı, TR kapsamı ve hizmet taahhüdü doğrulanacak gerçeklerdir. Nihai sunum kanıt → problem → karar → ölçüm zincirini kullanacak; ölçülmemiş gelir/dönüşüm iddiası üretmeyecek.

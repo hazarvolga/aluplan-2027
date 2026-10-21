@@ -111,3 +111,5 @@ Bu çalışma Google kurallarını yeniden araştırmaz; [stratejinin 21.10.2026
 Tamamlanan: mevcut ALLPLAN sayfa/dosya/CTA yüzeyleri için ilk somut ilişki taslağı, tutarsızlık listesi ve yıllık yayın kontrol listesi. Henüz tamamlanmayan: tam paket özellik matrisi, PDF içerik doğrulaması, tüm dinamik sekmeler/medya, müşteri kullanılabilirlik testi ve tüm ilişkili içeriklerin eksiksiz eşlemesi.
 
 Kullanıcı/ürün sorumlusundan karar gerekenler: üçlü/altılı katalog farkı; Civil/Precast ticari sınıflaması; sayfaların örtüşen rollerinin nasıl açıklanacağı; sürüm/paket bağlantı etiketi; doğrulanmış deneme süresi; ürün doğruluğu onay sorumlusu; tek birincil CTA ve segment öncelikleri. Bu kararlar gelene kadar kaynak içerik ve hedefler korunur. Faz 0 kapanışı bu belgenin varlığıyla tamamlanmış sayılmaz.
+
+21.10.2026 ek doğrulama: Q3 PDF adındaki `karsilastirma` yazımı rapor aktarım hatasıydı; doğru `karsilastirme` hedefi 200, hatalı yazım 404. Canlı URL değişikliği değildir. Güncel paket/PDF ve canlı CTA değerlendirmesi: [karar tablosu](package-comparison-decisions.md).

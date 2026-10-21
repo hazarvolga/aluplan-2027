@@ -81,3 +81,7 @@ Bunlar içerik sınıflarıdır; üç mevcut sekmenin yeni adları veya zorunlu 
 - Tema değişiminde `professional-services` anchor'ı, 20 içerik kaydı, tam metinler ve hedefler korunuyor mu?
 
 Bu sorular henüz çalıştırılmış test değildir. Hizmetlerin ticari önceliği, sorumlusu, yanıt beklentisi ve gerçek kullanım verisi daha sonra değerlendirilir. Kullanıcının bu alanın önemine ilişkin notu içerik modeli ve PRD için açık bir gereksinimdir; bu aşamada kod, yeni kart, yeni URL veya yeni hizmet vaadi oluşturulmadı.
+
+## 21.10.2026 — Kullanıcı sadeleştirme kararı
+
+Sonraki incelemede bireysel eğitim ayrıntı sayfası görüldü; kullanıcı bu sayfayı konumlandırmada göz ardı etmemizi ve **Eğitim** olarak sadeleştirmemizi istedi. Üstteki özelleştirme araştırması ayrı hizmet önerisi olarak ilerletilmeyecek. Tek Eğitim hizmeti ve ihtiyaç ayrıntıları [hizmet matrisinde](service-positioning-matrix.md) ele alındı. Sayfa silme/URL yönlendirme yapılmadı; önceki nottaki kapsam belirsizliği sayfanın bulunmadığı anlamına gelmez.

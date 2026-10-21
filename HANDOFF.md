@@ -52,6 +52,13 @@
 - `docs/professional-services-positioning.md`: hizmet sekmeleri için ayrı kanıt/konumlandırma değerlendirmesi. Eğitim kartında ham /contact hedefi render koşuluyla /solutions-v2/training olur; taşımada gerçek hedef korunmalı.
 - Kaynak salt-okunur; bu tur yeni canlı tarama, schema üretimi, tasarım entegrasyonu veya uygulama yok. Faz0 ve hizmet alanının tam etkileşim kabulü açık.
 
+## Eğitim odaklı hizmet matrisi — 21.10.2026
+- `docs/service-positioning-matrix.md` oluşturuldu: Eğitim, destek kanalları, danışmanlık, sertifika ve partner için ihtiyaç/kanıt/konum/hedef/açık bilgi ayrımı.
+- Kullanıcı bireysel/kurumsal özel eğitim sayfasını konumlandırmada göz ardı edip tek **Eğitim** başlığıyla sadeleştirmeyi istedi. Bu planlama kararı; mevcut sayfa/URL silme veya değiştirme yok.
+- Eğitim sayfası kaynak kategorileri ve formatları ayrı boyutlar olarak ele alındı. Web aracı eğitim ana sayfasında üç hafta önceki tarama kaydını döndürdü; güncel etkileşim doğrulaması sayılmadı.
+- ContactModal kaynakta simülasyon/console kaydı sonrası başarı gösteriyor. Canlı teslim testi yapılmadı; satış Microsoft Forms akışına genellenmez.
+- Kod, schema, canlı site ve design ZIP değişmedi. Matris kullanıcı değerlendirmesini; hizmet koşulları işletim doğrulamasını bekliyor.
+
 ## Bu oturumda yapılanlar
 - `AGENTS.md` oturum/koruma kuralları ve `docs/MASTER-PROMPT.md` eksiksiz başlangıç talimatı oluşturuldu.
 - `docs/00-inventory/content-inventory.md/json` ve `url-map.csv` üretildi: 103 yerel app rotası, 125 canlı URL, 112 HTTP 200 / 11 HTTP 404 / 2 HTTP 308.
@@ -91,7 +98,9 @@
 - Marka kılavuzunun üretici izinleri hakkındaki ifadeleri resmî izin belgesi yerine geçmez; benzerlik kontrolü henüz yapılmadı.
 
 ## Sıradaki adım
-Claude kullanım sınırı sonrası kalan düzeltmeleri tamamlayıp v3 ZIP'i ürettiğinde yeni paketi `docs/design-system-package-review.md` bulgularına göre yeniden kontrol et. Henüz entegrasyon yapma. Faz 0 kapanışı ve strateji/PRD onayları ayrıca bekliyor.
+Hizmet matrisini kullanıcıyla değerlendir; Eğitim kapsamı ve destek kanallarının görev ayrımı için eksik işletim bilgilerini tamamla.
+
+Paralel bekleyen iş: Claude kullanım sınırı sonrası kalan düzeltmeleri tamamlayıp v3 ZIP'i ürettiğinde yeni paketi `docs/design-system-package-review.md` bulgularına göre yeniden kontrol et. Henüz entegrasyon yapma. Faz 0 kapanışı ve strateji/PRD onayları ayrıca bekliyor.
 
 ## Claude Design paket incelemesi — 21.10.2026
 - Son tarayıcı kontrolünde Claude kullanım sınırında durmuş; v3 ZIP henüz üretilmemiş. Yeni indirme veya yeniden paket kabulü yapılmadı. Kısmi düzeltme beyanları ve kalan işler inceleme raporunun son bölümünde kayıtlı; bunlar bağımsız doğrulama değildir.

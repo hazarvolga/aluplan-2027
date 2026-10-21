@@ -66,3 +66,7 @@ Bu sorular henüz cevaplanmış sayılmaz; envanter yapılmasını engellemez. P
 ## 21.10.2026 — Profesyonel Hizmetler önceliği
 
 Kullanıcı ana sayfanın Profesyonel Hizmetler sekmeli alanının Aluplan yetkilileri için önemli olduğunu, yapıyı yıllar içinde geliştirdiğini ve hâlâ optimum bulmadığını belirtti. Özelleştirilmiş eğitim, destek ve ilişkili hizmetler ayrı konumlandırma değerlendirmesinde ele alınacak. Bu not alanı kaldırma, sekmeleri değiştirme veya yeni hizmet taahhüdü üretme izni değildir. Kayıt şablonları/iki gerçek değişiklik örneği çalışması kabul edildi; uygulamaya geçilmedi.
+
+## 21.10.2026 — Eğitim hizmetinin sadeleştirilmesi
+
+Kullanıcı hizmet matrisini hazırlamayı kabul etti; ardından “Bireysel & Kurumsal Özel Eğitim sayfasını göz ardı et, Eğitim olarak sadeleştir” talimatı verdi. Konumlandırma tek Eğitim başlığıyla ilerleyecek. Özelleştirme ayrı hizmet/pazarlama dalı olarak sunulmayacak; ihtiyaç bağlamı olarak ele alınabilir. Bu tur mevcut sayfa/URL, içerik veya form değiştirme yok. Matris: `../service-positioning-matrix.md`.

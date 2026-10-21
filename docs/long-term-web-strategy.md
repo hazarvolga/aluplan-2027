@@ -1,6 +1,6 @@
 # Aluplan uzun vadeli web stratejisi
 
-Tarih: 21.10.2026 · Sürüm: 0.1 · Durum: kullanıcı değerlendirmesine sunulan strateji taslağı.
+Tarih: 21.10.2026 · Sürüm: 0.2 · Durum: kullanıcı değerlendirmesine sunulan strateji taslağı. CMS'nin şimdilik ertelenmesi kullanıcı kararıdır; aşağıdaki schema modeli uygulama öncesi plandır.
 
 Bu belge PRD, onaylı site haritası veya tasarım değildir. Kullanıcının kesinleştirdiği öncelikler: yıllık siteyi yeniden yapma yükünü azaltmak ve ürünleri doğru anlatmak. Kalıcı içerik, yıllık sürümler ve müşteri kazanımı birlikte planlanır. Aşağıdaki işletim modeli, önceliklendirme ve kabul ölçütleri öneridir; ticari segment sıralaması, tek birincil dönüşüm, marka ve form altyapısı kararları açık kalır.
 
@@ -181,8 +181,83 @@ Başlangıç kabul hedefi önerileri: onaysız içerik/URL kaybı olmaması; sta
 - Ürün bilgilerinin iş onayını verecek kişi; satış talebini takip edecek kişi.
 - Teklif/deneme önceliği ve nitelikli talep tanımı.
 - Erişilebilir ölçüm verisi, aylık bakım kapasitesi ve buna göre hedefler.
-- Özel form/CMS ihtiyacı: mevcut hedefler korunur; ihtiyaç kanıtlanmadan kapsam açılmaz.
+- Özel form ihtiyacı açık; mevcut hedefler korunur. CMS şimdilik ertelendi; yeniden değerlendirme koşulları bölüm 7'de.
 - Önceki sürüm sayfalarının görünür arşiv sunumu ve yeni sürüm rota düzeni.
 - Marka/üretici izinleri ve içerik değişikliği onayları mevcut açık kararlar olarak devam eder.
 
 Bu belgeyi onaylamak canlı yayın, URL değişikliği, içerik yeniden yazımı veya tasarım başlatma onayı değildir. Bir sonraki değerlendirme, önerilen işletim modelinin kullanıcının gerçek iş yüküne uygunluğudur.
+
+## 10. Schema ve kalıcı içerik ilişkileri
+
+Doğrulama tarihi: 21.10.2026. Kullanıcının istediği `schema` skilli okundu; Google uygunluğu için güncel Search Central belgeleri, alan anlamları için Schema.org, üretim yaklaşımı için Next.js resmî belgesi esas alındı. Bu bölüm kod veya yayınlanmış JSON-LD değildir. ALLPLAN sitesinin yeniden tarandığı anlamına gelmez.
+
+### 10.1 Üç ayrı sözleşme
+
+1. **İçerik modeli:** Ürün, paket, sürüm ve kaynak ilişkilerini bizim sistemimiz yönetir.
+2. **Schema.org sözlüğü:** Bu ilişkilerin yalnız uygun bölümünü makine tarafından anlaşılır biçimde dışarı verir.
+3. **Google zengin sonuç uygunluğu:** Belirli türler için ayrıca zorunlu alanlar ve içerik koşulları vardır. Geçerli Schema.org verisi otomatik uygunluk veya görünüm garantisi değildir. Görünür içeriği temsil etmeyen, yanıltıcı veya güncel olmayan işaretleme kullanılmaz. [Google genel kuralları](https://developers.google.com/search/docs/appearance/structured-data/sd-policies)
+
+Skilldeki kısa zorunlu alan tabloları birebir uygulanmayacak: Google `Organization` ve `Article` için zorunlu alan belirtmiyor; ilgili önerilen alanlar gerçek veriden doldurulur. `Product` ile `SoftwareApplication` koşulları da farklıdır. [Organization](https://developers.google.com/search/docs/appearance/structured-data/organization), [Article](https://developers.google.com/search/docs/appearance/structured-data/article)
+
+### 10.2 CMS'siz içerik modeli
+
+Kimlikler URL, tema ve dosya konumundan bağımsızdır. Aşağıdaki alan isimleri plan sözleşmesidir; henüz dosya şeması oluşturulmadı.
+
+| Kayıt | Kimlik / ilişkiler | Saklanan gerçek |
+|---|---|---|
+| Üretici | `manufacturerId` | Doğrulanmış üretici kimliği; Aluplan'dan ayrı |
+| Kalıcı ürün | `productId`, `manufacturerId` | Ürün ailesinin adı, amacı, kalıcı açıklaması |
+| Paket | `editionId`, `productId` | Paket kimliği; tüm yıllarda aynı kapsamı taşıdığı varsayılmaz |
+| Yıllık sürüm | `releaseId`, `productId`, `versionLabel` | Doğrulanmış sürüm, yenilikler, uyumluluk ve kaynak |
+| Paket–sürüm kapsamı | `editionId` + `releaseId` + `market` | O sürüm ve bölgedeki özellikler, seçenekler ve koşullar |
+| İçerik sayfası | `pageId`, mevcut `canonicalUrl`, ilgili kayıt kimlikleri | Sayfanın amacı ve görünür içeriği |
+| Dosya / kanıt | `assetId`, ilgili kayıt kimlikleri, kaynak ve doğrulama tarihi | PDF/video revizyonu ve hangi kapsama ait olduğu |
+
+Ürün birden çok paket ve sürüme bağlanabilir. Paket ile sürüm çoktan çoğa ilişkilidir: her paket her yılda var kabul edilmez. Kapsam, bu ikisinin birleşim kaydında tutulur. Aynı paket adıyla sunulan yeni kapsam eski kaydı ezmez. Başka markanın modeli bu hiyerarşiye uymuyorsa ayrı ilişki tanımlanır; sahte paket üretilmez.
+
+Örnek yalnız ilişki mantığıdır: ALLPLAN kalıcı kaydı → doğrulanmış paket kaydı ve 2026 sürüm kaydı → Türkiye için doğrulanmış paket–2026 kapsamı. Gelecek sürüm yayımlandığında yeni sürüm ve kapsam kayıtları eklenir. Gelecek yılın özellikleri, fiyatı veya paket eşleşmeleri şimdiden varsayılmaz.
+
+### 10.3 Sayfa ve Schema.org eşlemesi
+
+| Sayfa / varlık | Planlanan semantik eşleme | Sınır |
+|---|---|---|
+| Aluplan kimliği | Ayrı `Organization`; site `publisher` ilişkisi Aluplan'a | Distribütörlük, üreticiyle `sameAs` veya `parentOrganization` ilişkisi değildir |
+| Kalıcı yazılım ürün sayfası | `WebPage.mainEntity` → `SoftwareApplication` | Ürün ailesine tek bir yıllık `softwareVersion` zorla atanmaz |
+| Tek paket ayrıntısı | Gerçek bir yazılım edition'ıysa ayrı `SoftwareApplication`; ticari ürün olarak tanımlanması gerekiyorsa `Product` ayrıca değerlendirilir | Her pazarlama paketi otomatik ayrı uygulama değildir; salt hizmet/lisans bileşimi önce içerikten doğrulanır |
+| Sürüme özel yazılım ayrıntısı | Ayrı uygulama örneği kimliği, `SoftwareApplication.softwareVersion` | Alan yazılım sürümüdür; site yılı veya içerik güncelleme tarihi değildir |
+| Yenilik yazısı | Gerçek editöryal yazıysa `Article`/`BlogPosting`; `about` ilgili yazılım örneğine | Makale ve yazılım aynı varlık değildir; sırf URL'de yıl var diye Article seçilmez |
+| Paket karşılaştırması / sürüm dizini | `CollectionPage` ve gerekirse görünür listeyi yansıtan `ItemList` | Genel ürün karşılaştırmasına özel Google zengin sonuç garantisi yoktur |
+| Sayfa hiyerarşisi | Görünür gezinmeyle tutarlı `BreadcrumbList` | Ürün bağımlılık grafiği breadcrumb yerine kullanılmaz. [Google Breadcrumb](https://developers.google.com/search/docs/appearance/structured-data/breadcrumb) |
+
+`softwareVersion`, Schema.org'da `SoftwareApplication` alanıdır. Yazılımın sürüme veya edition'a özel örneği temel uygulamadan türemişse ve bu ilişki doğrulanmışsa `isBasedOn` ile temel kayda bağlanabilir; bu, Google'a özel bir sürüm özelliği değildir. Sadece paket üyeliğini göstermek için türeme ilişkisi uydurulmaz. İç modeldeki her ilişkiyi JSON-LD'ye birebir aktarmak zorunda değiliz. [softwareVersion](https://schema.org/softwareVersion), [isBasedOn](https://schema.org/isBasedOn)
+
+Sayfa kimliği ile anlattığı varlığın kimliği ayrı tutulur. `@id` için onaylı site adresi altında kararlı mutlak URI sözleşmesi PRD'de belirlenir; sayfa URL'si değişse bile varlık kimliğinin korunması hedeflenir. Bu karar yeni rota oluşturmaz. `WebPage.mainEntity` ve gerektiğinde ters `mainEntityOfPage` ilişkisiyle sayfa–varlık bağlanır. Aynı varlık başka sayfada anıldığında aynı kimlik kullanılır; yalnız sayfayla ilgili ve görünür gerçekler yayınlanır. `sameAs` yıllık sürümleri veya paketleri birbirine bağlamak için kullanılmaz.
+
+### 10.4 Google uygunluk kararları
+
+| Hedef | Güncel koşul / bizim kararımız |
+|---|---|
+| Yazılım zengin sonucu | `name`, `offers.price` ve `review` veya `aggregateRating` gerekir. Doğrulanmış görünür fiyat ve uygun değerlendirme yoksa bu hedefe uygunluk iddia edilmez. Sınırlı ücretsiz deneme, ücretli yazılımın fiyatını sıfır yazma gerekçesi değildir. [Google SoftwareApplication](https://developers.google.com/search/docs/appearance/structured-data/software-app) |
+| Ürün snippet'i | `name` ve `offers`, `review`, `aggregateRating` alanlarından en az biri gerekir; seçilen alanın kendi koşulları da sağlanmalıdır. Offer yolunda gerçek fiyat gerekir. Teklif formu fiyat verisi değildir. `AggregateOffer` paket listesi yerine kullanılamaz. [Google Product snippet](https://developers.google.com/search/docs/appearance/structured-data/product-snippet) |
+| Paket / yıllık sürüm varyantı | `ProductGroup` ve `hasVariant` otomatik kullanılmayacak. Google varyant yaklaşımı merchant listing bağlamında ek ürün/kimlik/varyant şartları taşır; yazılım edition'ı ve yılını bu modele uygun kabul etmiyoruz. İleride gerçek satış modeli ve Google'ın desteklediği boyutlar doğrulanırsa yeniden değerlendirilir. `isVariantOf`, genel amaçlı SoftwareApplication ilişkisi değildir. [Google ürün varyantları](https://developers.google.com/search/docs/appearance/structured-data/product-variants), [Schema.org isVariantOf](https://schema.org/isVariantOf) |
+| Fiyat/değerlendirme olmayan sayfa | Gerçekleri anlatan semantik kayıt tutulabilir; Google zengin sonuç eksikleri başarı gibi raporlanmaz. Uygulama öncesi sayfa bazında yalnız temel WebPage/Organization/Breadcrumb veya ek semantik yazılım kaydı seçimi belgelenir. |
+
+Aluplan sitenin yayıncısıdır; yazılımın üreticisi olarak işaretlenmez. Gerçek bir Offer yayınlanacaksa satıcı kimliği ayrıca doğrulanır. Bilinmeyen fiyat, puan, yorum, stok veya lisans kapsamı doldurulmaz. Mevcut diğer türler ve kaldırılan Google özellikleri için [ALLPLAN analizinin 6.C bölümü](allplan-information-architecture.md#c-google-kurallarıyla-doğrulama--19102026) önceki tarihli araştırma olarak korunur; bu çalışmanın yeniden doğruladığı kapsam yukarıdaki türlerdir.
+
+### 10.5 Next.js üretim planı ve design system sınırı
+
+Akış: **doğrulanmış dosya kayıtları → ilişki çözümleme → sayfa içerik modeli → görünür içerik + metadata + JSON-LD**. CMS şimdilik ertelendi. İleride bir CMS eklense bile kimlik ve ilişki sözleşmesi korunur; veri okuma katmanı değişebilir.
+
+JSON-LD, sunucuda sayfaya uygun üretilip ilgili `page`/`layout` çıktısında yer alacak; sayfa özelindeki ürün verisi global layout üzerinden her sayfaya basılmayacak. Script çıktısı güvenli serileştirilecek; yalnız `JSON.stringify` XSS önlemi sayılmayacak. Bu yaklaşım Next.js'in resmî rehberiyle uyumludur. [Next.js JSON-LD](https://nextjs.org/docs/app/guides/json-ld)
+
+Design system bu veriyi tüketen ayrı sunum katmanıdır. Renk, font, boşluk ve diğer görsel token değişiklikleri ürün kimliğini, paket kapsamını, URL'yi, CTA hedefini veya schema anlamını değiştirmemeli. Tema değişimi ve yeni sürüm ekleme ayrı doğrulama senaryoları olacak. Sağlam design system gereksinimi korunuyor; token sözleşmesi ve bileşen uygulaması bu çalışmada başlatılmadı.
+
+### 10.6 Uygulama öncesi ve yayın kabul listesi
+
+- İçerik kontrolü: benzersiz kimlikler; var olan ürün/paket/sürüm referansları; doğrulanmış bölgesel kapsam; kaynak ve onay durumu.
+- Sayfa kontrolü: görünür ürün adı, sürüm, paket kapsamı ve CTA ile JSON-LD tutarlılığı; eski sürümlere yeni kapsamın sızmaması.
+- Semantik kontrol: Schema.org Validator ile alan/tür ilişkileri; Google Rich Results Test ile yalnız hedeflenen destekli sonuçların uygunluğu. Bu iki test aynı şeyi ölçmez.
+- Teknik kontrol: güvenli serileştirme, yinelenen/çelişen varlıklar, canonical ve taranabilir HTML. Yayından sonra izinli Search Console URL Inspection ve ilgili raporlar.
+- İşletim kontrolü: her yıllık yayında etkilenen kayıtlar ve Google kuralları yeniden incelenir; tema değişikliğinde içerik/SEO çıktısının anlamının korunduğu doğrulanır.
+
+Bu oturumda validator, Rich Results Test veya canlı URL Inspection çalıştırılmadı; henüz test edilecek uygulama yok. Kaynak doğrulama ve doküman kontrolü yapıldı. Sonraki PRD'de pilot sayfaların gerçek alanlarıyla nihai tür seçimi yapılacak.

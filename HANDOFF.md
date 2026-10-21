@@ -53,7 +53,14 @@
 - Marka kılavuzunun üretici izinleri hakkındaki ifadeleri resmî izin belgesi yerine geçmez; benzerlik kontrolü henüz yapılmadı.
 
 ## Sıradaki adım
-Önce `docs/long-term-web-strategy.md` taslağını kullanıcıyla değerlendir. Yön onayının ardından Faz 0 içinde içerik/medya/form/link kapanış matrisini ve asset paritesini tamamla; tamamlanan envanteri ALLPLAN referans analiziyle sonraki analiz aşamasında karşılaştır. Tasarıma geçme.
+Kullanıcının design system hakkındaki sıradaki sorusunu bekle; uygulamaya geçme. `docs/long-term-web-strategy.md` v0.2 strateji/schema taslağı değerlendirmeye hazır. Yön onayının ardından Faz 0 içinde içerik/medya/form/link kapanış matrisini ve asset paritesini tamamla; tamamlanan envanteri ALLPLAN referans analiziyle sonraki analiz aşamasında karşılaştır.
+
+## Schema stratejisi ve CMS kararı — 21.10.2026
+- CMS kullanıcı kararıyla şimdilik ertelendi. Sağlam design system gereksinimi yinelendi; henüz kurulum onayı yok.
+- Schema skilli yeniden okundu; Google SoftwareApplication, Product snippet, Product variants, genel kurallar, Organization, Article ve Breadcrumb belgeleri; Schema.org alanları ve Next.js JSON-LD rehberi canlı doğrulandı.
+- Strateji bölüm 10: ürün/paket/sürüm ve bölgesel kapsam kayıtları, kararlı kimlikler, sayfa–varlık ayrımı, semantik türler ve zengin sonuç şartları eklendi. Yazılım paketleri/yılları otomatik ProductGroup varyantı sayılmaz; fiyat veya değerlendirme uydurulmaz.
+- Önceki ALLPLAN analizi yeniden tarama olarak sunulmadı; yeni plan o belgeye bağlandı. Önceki diğer türlerin araştırma tarihi korunur.
+- Yalnız dokümanlar değişti; kod, schema çıktısı, design system veya yayın yok. Uygulama testleri, Rich Results Test ve URL Inspection çalıştırılmadı.
 
 ## Uzun vadeli web stratejisi — 21.10.2026
 - Kullanıcı yıllık yeniden yapım yükünü ve ürünlerin doğru anlatılmasını temel sorunlar olarak belirtti; kalıcı içerik, yıllık sürümler ve müşteri kazanımını birlikte planlamayı istedi.

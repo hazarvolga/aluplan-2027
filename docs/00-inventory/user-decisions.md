@@ -55,3 +55,9 @@ Bu sorular henüz cevaplanmış sayılmaz; envanter yapılmasını engellemez. P
 - Önce uzun vadeli web stratejisi hazırlanacak; kalıcı içerik, yıllık sürüm güncellemeleri ve müşteri kazanımı birlikte ele alınacak. Henüz tasarıma geçilmeyecek.
 - `../long-term-web-strategy.md` v0.1 bu isteğe yanıt veren taslaktır. Tek devam eden kod tabanı, yayın işletimi, pilot ve ölçüm önerileri henüz kullanıcı tarafından onaylanmış kararlar değildir.
 - Segment, CTA, marka, form ve üretici izinleri hakkındaki açık sorular geçerliliğini korur.
+
+## CMS ve schema planı — 21.10.2026
+- Kullanıcı CMS eklemeyi şimdilik erteledi. İçerik modeli CMS'den bağımsız tasarlanacak; bu karar kalıcı CMS yasağı değildir.
+- Schema skilli ve güncel Google kurallarıyla ürün, paket ve yıllık sürüm ilişkilerinin stratejiye eklenmesi ve dokümanların commit edilmesi istendi; kod yazılması istenmedi.
+- `../long-term-web-strategy.md` bölüm 10 içerik ilişkilerini, tür seçimini, Google uygunluk sınırlarını ve gelecekteki doğrulamayı tanımlar; henüz JSON-LD uygulanmadı.
+- Kullanıcı sağlam design system gereksinimini yineledi; bu dokümantasyon tamamlandıktan sonra kendi sorusuyla konuyu açacak. Bu aşamada design system kurulumuna geçilmez.

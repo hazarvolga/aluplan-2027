@@ -114,3 +114,7 @@ Kullanıcının “ok go” yanıtı, bilgi mimarisi taslağından sayfa şablon
 ## 22.10.2026 — Ana sayfa yerleşiminin geçici kabulü
 
 Kullanıcı bağımsız ana sayfa önizlemesini “şu an için uygun” buldu; daha sonra değişiklik yapılabileceğini belirtti. `docs/previews/homepage-wireframe/` içindeki mevcut bölüm sırası ve sunum, sonraki çalışmalara geçici yerleşim referansıdır. Bu karar nihai görsel tasarım, tam içerik paritesi, ticari iddialar, form zorunluluğu, PRD/faz kapanışı veya üretim entegrasyonu onayı değildir. Bu tur önizleme değiştirilmedi. Sıradaki öneri: kabul edilen yerleşimin tasarım sistemi bileşenleriyle eşlemesini planlamak; yeni uygulama çalışması için kullanıcı yönlendirmesini beklemek.
+
+## 22.10.2026 — Tasarım sistemi bileşen eşlemesi
+
+Kullanıcı devam talebiyle kabul edilen yerleşimi tasarım sistemi bileşenlerine eşleme planı hazırlandı: `docs/design-system-component-mapping.md`. H01–H08, kabuk, token zinciri, veri/schema ayrımı ve uyarlama sırası kaydedildi. Kaynak incelemesi: RoleSelector kullanılabilir fakat demo ürün filtresi altı kartı koruyan homepage davranışıyla aynı değil; Header düz menü, çok seviyeli gezinme/arama/tema uyarlaması gerekiyor; demo içerik sözleşmesi proje sözleşmesinin yerine geçmez. Tabs/ReleaseTag eski bulguları güncel kaynakta düzelmiş; runtime kabulü ayrı. İndirilen paket, antrasit kopya, wireframe ve uygulama değiştirilmedi. Sıradaki öneri: ayrı görsel önizlemede header/hero/rol-ürün/hizmet bloklarını gerçek design system ile hazırlamak; entegrasyon yapılmadı.

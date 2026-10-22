@@ -295,3 +295,7 @@ Kullanıcı yönlendirmesiyle envanterde kaynak öncelikli kontrol kullanılır:
 ### 22.10.2026 — Form mimarisi kararının düzeltilmesi
 
 Kullanıcı yeni site için tek teklif formu kullanma kararının henüz verilmediğini açıkça belirtti. Tek form, niyete özel birden fazla form veya ortak veri/operasyon merkezine bağlı farklı girişler ayrıntılı olarak karşılaştırılıp planlanacak. Mevcut ana form ve yanlış CDS hedefleri envanter gerçeğidir; gelecekte aynı formu kullanma zorunluluğu değildir. Form sayısı, arayüz, altyapı, teslimat ve indirme öncesi lead zorunluluğu henüz açık. Uygulama veya hedef değişikliği yapılmadı.
+
+## 22.10.2026 — Üç kullanıcı yolunun yeniden planlanması
+
+[Teklif, deneme ve eğitim planı](customer-request-journeys.md) tek koşullu form, bağımsız kısa formlar ve ortak kayıt sözleşmesine bağlı niyet girişlerini karşılaştırır. Öneri: niyete özel kısa girişler, isteğe bağlı deneme yardımı, formsuz webinar arşivi ve özel eğitim talebi. Bunlar kullanıcı kararı değildir; form sayısı/araç/altyapı henüz seçilmedi. Alanlar, teslimat-hata davranışı, ölçüm sınırları ve schema ilişkileri belgelendi. Kullanıcı mevcut yapının doğruluğunu varsaymadan yeniden planlama istedi; bu hedefli UX çalışması bütün Faz1'in tamamlandığı anlamına gelmez. Kod/form/URL/schema uygulaması yok. Sıradaki adım önerilen üç akışın kullanıcı değerlendirmesi; ardından araç/maliyet ve hedef geçiş planı.

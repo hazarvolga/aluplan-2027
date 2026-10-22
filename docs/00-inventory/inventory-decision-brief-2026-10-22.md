@@ -22,3 +22,7 @@ Tek uzun form, niyete göre ayrı kısa formlar ve ortak operasyon merkezine ba�
 8/14bölüm içerikleri [yetkili form incelemesiyle](form-admin-2026-10-22.md) artık kayıtlı. Gönderim/teslimat testi yapılmadı. 404onarımı erteli;376medya yolu korunur. Teknik kontroller kullanıcıya tek tek devredilmez. Faz geçişi veya uygulama onayı yok.
 
 Kaynak: [kullanıcı kararları](user-decisions.md), [schema etkisi](../schema-inventory-impact-2026-10-22.md).
+
+## 22.10.2026 — Üç kullanıcı yolunun yeniden planlanması
+
+[Teklif, deneme ve eğitim planı](../customer-request-journeys.md) tek koşullu form, bağımsız kısa formlar ve ortak kayıt sözleşmesine bağlı niyet girişlerini karşılaştırır. Öneri: niyete özel kısa girişler, isteğe bağlı deneme yardımı, formsuz webinar arşivi ve özel eğitim talebi. Bunlar kullanıcı kararı değildir; form sayısı/araç/altyapı henüz seçilmedi. Alanlar, teslimat-hata davranışı, ölçüm sınırları ve schema ilişkileri belgelendi. Kullanıcı mevcut yapının doğruluğunu varsaymadan yeniden planlama istedi; bu hedefli UX çalışması bütün Faz1'in tamamlandığı anlamına gelmez. Kod/form/URL/schema uygulaması yok. Sıradaki adım önerilen üç akışın kullanıcı değerlendirmesi; ardından araç/maliyet ve hedef geçiş planı.

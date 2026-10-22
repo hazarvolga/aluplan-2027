@@ -1,5 +1,7 @@
 # Microsoft Forms veya Next.js formu
 
+> Güncel durum: Next.js kısa form yaklaşımı kullanıcıca kabul edildi. Aşağıdaki karşılaştırma tarihsel gerekçedir; güncel alan ve kapsam planı [sözleşmede](request-forms-contract.md). Kod/entegrasyon onayı değildir.
+
 22.10.2026 — Planlama karşılaştırması; altyapı seçimi ve uygulama onayı değildir. [Kullanıcı yolları](customer-request-journeys.md) temel alınır. Kullanıcı niyete özel kısa girişler ve ortak takibi mantıklı buldu; araç, alanlar ve zorunlu lead adımı kesinleşmedi.
 
 ## Sonuç önerisi
@@ -84,3 +86,7 @@ Bu kontroller tamamlanınca platform kararı ve ayrıntılı maliyet çıkarıl�
 - [Power Automate lisans türleri](https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/types): Microsoft365ile gelen sınırlı haklar ve ek yetenekler.
 - [Forms ile otomasyon senaryoları](https://learn.microsoft.com/power-automate/forms/popular-scenarios): yanıta göre bildirim ve iş akışları.
 - [Next.js form rehberi](https://nextjs.org/docs/app/guides/forms): Server Actions, sunucu tarafı işlem ve doğrulama. CRM, e-posta teslimatı veya kalıcı kayıt kendiliğinden sağlanmaz; bunlar mimari sorumluluk değerlendirmemizdir.
+
+## 22.10.2026 — Next.js yönü kabul edildi; seçenek kapsamı korunuyor
+
+Kullanıcı Next.js içinde kısa formlarla ilerlemeyi onayladı; henüz kod yazılmayacak. Önceki platform seçimi açık notları tarihsel olarak aşıldı. [Alan, takip ve schema sözleşmesi](request-forms-contract.md) güncel plandır. Kullanıcı mevcut formun üç kategorisi altında çok sayıda seçenek olduğunu hatırlattı: üç çekirdek niyet ürün/eklenti seçeneklerini azaltmaz veya ekran sayısını dondurmaz. Bölüm1–14kapsam eşlemesi eklendi; öğrenci lisansı ve mevcut müşteri eklenti temini ayrı alt yol olarak korunur. Çoklu ürün/modül ilgisi kaybolmaz. Deneme formunun zorunluluğu, gerçek takip hedefi/sorumluları ve hukuki metinler henüz açık; yeni CRM veya site/form/schema uygulaması yok.

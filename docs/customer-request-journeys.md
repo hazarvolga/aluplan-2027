@@ -1,5 +1,7 @@
 # Teklif, deneme ve eğitim kullanıcı yolları
 
+> Güncel durum: Next.js kısa form yaklaşımı kullanıcıca kabul edildi. Aşağıdaki karşılaştırma tarihsel gerekçedir; güncel alan ve kapsam planı [sözleşmede](request-forms-contract.md). Kod/entegrasyon onayı değildir.
+
 22.10.2026 — Karşılaştırma ve öneri; onaylanmış form mimarisi veya uygulama değildir. Kullanıcı bu yolları baştan planlamayı istedi. Mevcut içerik kanıt olarak korunur; mevcut formun doğruluğu varsayılmaz. Yeni URL, form, entegrasyon veya JSON-LD oluşturulmadı. Bu hedefli UX planı, tüm Faz 1 analizinin tamamlanması anlamına gelmez.
 
 ## Dayanak ve problem
@@ -118,3 +120,7 @@ Bu üç madde **öneridir**. Kullanıcı kabulü sonrası alanlar ve operasyon h
 ## 22.10.2026 — Form platformu karşılaştırması
 
 Kullanıcı niyete özel kısa girişler/ortak takibi mantıklı buldu ve Forms–Next.js karşılaştırmasını istedi. [Platform değerlendirmesi](form-platform-comparison.md) kurulum, lisans/altyapı, bakım, kayıt/teslimat, ölçüm ve schema etkisini aynı kapsamla karşılaştırır. Uzun vadeli aday Next.js + mevcut uygun operasyon hedefi; teknik bakım ayrılmayacaksa Forms daha sürdürülebilir alternatif. Bu bir seçim değildir. Tahmini iş yükleri planlama aralığıdır; mevcut Microsoft lisansı, connector hakları, takip hedefi ve kapasite bilinmeden kesin ücret yok. Yeni CRM/Forms'a gizli POST/uygulama kurulumu önerilmiyor. Sıradaki adım mevcut haklar, takip hedefi ve bakım sorumluluğuyla platform seçimini netleştirmek. Kod, canlı form veya JSON-LD değiştirilmedi.
+
+## 22.10.2026 — Next.js yönü kabul edildi; seçenek kapsamı korunuyor
+
+Kullanıcı Next.js içinde kısa formlarla ilerlemeyi onayladı; henüz kod yazılmayacak. Önceki platform seçimi açık notları tarihsel olarak aşıldı. [Alan, takip ve schema sözleşmesi](request-forms-contract.md) güncel plandır. Kullanıcı mevcut formun üç kategorisi altında çok sayıda seçenek olduğunu hatırlattı: üç çekirdek niyet ürün/eklenti seçeneklerini azaltmaz veya ekran sayısını dondurmaz. Bölüm1–14kapsam eşlemesi eklendi; öğrenci lisansı ve mevcut müşteri eklenti temini ayrı alt yol olarak korunur. Çoklu ürün/modül ilgisi kaybolmaz. Deneme formunun zorunluluğu, gerçek takip hedefi/sorumluları ve hukuki metinler henüz açık; yeni CRM veya site/form/schema uygulaması yok.

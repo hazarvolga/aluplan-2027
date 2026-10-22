@@ -98,3 +98,7 @@ Kullanıcı kalan envanter işlerini onayladı; sonunda tüm öğeleri kendisini
 ### 22.10.2026 — Form mimarisi kararının düzeltilmesi
 
 Kullanıcı yeni site için tek teklif formu kullanma kararının henüz verilmediğini açıkça belirtti. Tek form, niyete özel birden fazla form veya ortak veri/operasyon merkezine bağlı farklı girişler ayrıntılı olarak karşılaştırılıp planlanacak. Mevcut ana form ve yanlış CDS hedefleri envanter gerçeğidir; gelecekte aynı formu kullanma zorunluluğu değildir. Form sayısı, arayüz, altyapı, teslimat ve indirme öncesi lead zorunluluğu henüz açık. Uygulama veya hedef değişikliği yapılmadı.
+
+## 22.10.2026 — Next.js yönü kabul edildi; seçenek kapsamı korunuyor
+
+Kullanıcı Next.js içinde kısa formlarla ilerlemeyi onayladı; henüz kod yazılmayacak. Önceki platform seçimi açık notları tarihsel olarak aşıldı. [Alan, takip ve schema sözleşmesi](../request-forms-contract.md) güncel plandır. Kullanıcı mevcut formun üç kategorisi altında çok sayıda seçenek olduğunu hatırlattı: üç çekirdek niyet ürün/eklenti seçeneklerini azaltmaz veya ekran sayısını dondurmaz. Bölüm1–14kapsam eşlemesi eklendi; öğrenci lisansı ve mevcut müşteri eklenti temini ayrı alt yol olarak korunur. Çoklu ürün/modül ilgisi kaybolmaz. Deneme formunun zorunluluğu, gerçek takip hedefi/sorumluları ve hukuki metinler henüz açık; yeni CRM veya site/form/schema uygulaması yok.

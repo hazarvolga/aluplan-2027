@@ -1,0 +1,35 @@
+{
+  "sourceZip": "Aluplan Design System-reviewed-v3-refreshed.zip",
+  "sha256": "3bb9f401cfd4953bf5b8be0269169b59e3309295fef3aab83570a87a1664918f",
+  "changedFiles": [
+    "tokens/build/CONTRAST-REPORT.md",
+    "tokens/build/breakpoints.mjs",
+    "tokens/build/contrast-report.json",
+    "tokens/build/tokens.resolved.json",
+    "tokens/primitives.css",
+    "tokens/semantic.css",
+    "tokens/tokens.json"
+  ],
+  "unchangedLayers": [
+    "data",
+    "components JSX",
+    "ui_kits",
+    "logos",
+    "bundle"
+  ],
+  "node": "24.18.0",
+  "originalTokenTests": {
+    "passed": 27,
+    "failed": 1
+  },
+  "previewTokenTests": {
+    "passed": 28,
+    "failed": 0
+  },
+  "contentTests": {
+    "passed": 13,
+    "failed": 0
+  },
+  "contrastChecks": 188,
+  "contrastFailures": 0
+}

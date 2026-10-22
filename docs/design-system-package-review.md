@@ -121,3 +121,7 @@ Claude Design sohbeti tarayıcıdan kontrol edildi. Son yanıt kullanım sınır
 - Tabs kenar durumları, ReleaseTag güvenli varsayılanı, kararlı kimlikler/client sınırları, editöryal JSX kopyalarının kaldırılması, tarayıcı testleri ve doküman/CHANGELOG güncellemeleri tamamlanmamış.
 
 Yeni ZIP olmadığı için logo/token/içerik-schema ayrımı yeniden kabul edilmedi. Claude'un devam edip kaynak ve bundle tutarlılığını sağlayarak v3 ZIP'i üretmesinden sonra bağımsız yeniden inceleme yapılacak. Entegrasyon yapılmadı.
+
+## 22.10.2026 — Yenilenen v3 ve antrasit denemesi
+
+Yeni ZIP indirildi; bağımsız inceleme, paket drift bulgusu, logo eşlik sınırı ve antrasit tema sonucu [ayrı raporda](reviews/design-v3-review/README.md). Yalnız ayrı önizleme uygun bulundu; üretim kabulü veya entegrasyon yapılmadı.

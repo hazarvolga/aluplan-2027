@@ -151,3 +151,12 @@ Paralel bekleyen iş: Claude kullanım sınırı sonrası kalan düzeltmeleri ta
 ## 21.10.2026 — Destek adresi kullanıcı düzeltmesi
 
 Kullanıcı Teams üzerinden desteğin ve ayrı ticket sisteminin çalıştığını teyit etti. Ticket adresini **allplan.net.tr** olarak düzeltti; önceki kaynak/envanterde `aluplan.net.tr` bulunuyor. Kullanıcının bildirdiği adres planlama için esas alınır; eski gözlem kaydı silinmez. Bu tur bağlantı erişimi bağımsız doğrulanmadı ve site değiştirilmedi. Yeni destek altyapısı gerekmiyor; çalışma saati, SLA veya kanal sırası varsayılmıyor.
+
+## 22.10.2026 — V3 kontrolü ve antrasit önizleme
+
+- Claude tamamladı; eski bundle uyarısı nedeniyle ZIP yeniletildi ve `Aluplan Design System-reviewed-v3-refreshed.zip` indirildi.
+- Rapor: `docs/reviews/design-v3-review/README.md`; yeniden üretilebilir patch ve verification.json yanında.
+- Kullanıcı yalnız ana BG isteğini header/kartlar dahil tüm koyu yüzeylere genişletti. `docs/previews/anthracite-demo/` ayrı yerel kopyada aluplan/dark antrasit yapıldı; açık tema, içerik, bileşen ve logolar aynı.
+- Orijinal ZIP token drift nedeniyle 27/28; türetilmiş önizlemede üreticiyle giderildi, 28/28 token +13/13 içerik +188 kontrast başarılı. Logo paket içi eşliği var; kullanıcının güncel Documents SVG'siyle bayt eşliği yok.
+- Önizleme: http://127.0.0.1:8769/ui_kits/website/index.html?theme=aluplan&mode=dark#product — loopback sunucu, session 93934. Ekran görüntüsü docs/previews/anthracite-demo-preview.png.
+- ZIP/açılmış paketler yerel ve untracked; yalnız değişiklik patch'i, rapor ve ekran görüntüsü commit edilir. Kullanıcı görsel değerlendirmesi sıradaki adım; siteye entegrasyon yok.

@@ -202,3 +202,13 @@ Kullanıcı antrasit temayı uygun buldu; schema skilliyle ürün/paket/sürüm 
 ## 22.10.2026 — Kullanıcının Forms yönetici bağlantısı
 
 Kullanıcı düzenleme bağlantısını paylaştı; mevcut oturumla yalnız alanlar ve dallanma görüntülendi. docs/00-inventory/form-admin-2026-10-22.md/json14bölüm/24soruyu ve13dal gözlemini kaydeder. Önceki8/14içerik açığı kapandı:8Scalypso deneme onayı,14gizlilik/kullanım onayı. Scalypso seçimi8i atlayıp13e gidiyor. Yanıtlar okunmadı, form değiştirilmedi veya gönderilmedi. Yönetici URLsi rapora alınmadı. İçerik/schema/site kodu değişmedi. Önceki form yapısı bekleme adımı artık gerekli değil; sonraki adım kalan operasyon kararlarıyla faz kapanışını değerlendirmek. Faz geçişi otomatik değil.
+
+## 22.10.2026 — Kullanıcının form, eğitim ve deneme açıklaması
+
+- Teklif/ürün/eklenti taleplerinde esas hedef mevcut ana Aluplan Teklif & Talep Formu: `https://forms.office.com/r/hXhnKAG912`. Kullanıcı tüm sitede bu tek forma geçildiğini, Pythonpart/Scalypso'nun ayrı CDS formuna gitmesinin hatalı olduğunu teyit etti. Yanlış hedefler düzeltme listesinde; bu tur link değiştirilmedi. Destek ticket/Teams, üretici indirme ve mevcut lisans işlemleri bu açıklamayla satış formuna yönlendirilmez.
+- Eğitim fiilen dönemsel webinarlar ve YouTube üzerinden yayımlanan geçmiş webinar listesidir. Düzenli eğitim takvimi veya sürekli kurs kataloğu varsayılmayacak. Özel eğitim talepleri de alınabilmeli; tek Eğitim başlığı korunur, ayrı hizmet sayfası oluşturma kararı yok. Fiyat, sertifika, süre veya kesin program taahhüdü eklenmez.
+- Paket hakları ve deneme koşullarını Aluplan yetkilileri takip ediyor; belirli kişi adı bildirilmedi. Türkiye koşulları ve14/30gün çelişkisi bu sorumluluk açıklamasıyla doğrulanmış sayılmaz.
+- Deneme indirmesi Almanya/ALLPLAN'ın resmî sayfasında gerçekleşir. Türkiye'den yönlendirilen talepleri kısa bilgilendirme/lead formuyla toplamak ayrı ticari amaçtır; ana formun Bölüm11 Download Formları bu niyeti taşır. Lead kaydı indirme, lisans aktivasyonu veya satın alma tamamlandı anlamına gelmez.
+- Henüz açık uygulama tercihi: lead adımı indirme öncesinde zorunlu mu, isteğe bağlı mı olacak? Kullanıcı bu sırayı/zorunluluğu belirtmedi. Öneri: indirmeyi engellemeyen kısa bilgi/takip talebi; henüz kabul edilmiş karar değildir. Özel eğitim niyetinin ana formda nasıl kaydedileceği ve teslimat sorumlusu da uygulama sözleşmesinde belirlenir; mevcut formda özel eğitim alanı varmış gibi davranılmaz.
+
+Güncel kısa karar özeti: docs/00-inventory/inventory-decision-brief-2026-10-22.md. Önceki açık soruların tekrar sorulması yerine bu açıklama esas alınır. Uygulamaya geçilmedi.

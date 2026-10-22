@@ -57,3 +57,7 @@ Kırık linklerin yeniden yazılması/kaldırılması zaten ertelendi; tekrar ka
 ## Yetkili form görünümü eki
 
 [22 Ekim yönetici incelemesi](00-inventory/form-admin-2026-10-22.md) ile8ve14bölüm içerikleri artık biliniyor. Önceki bilinmeyen alan notu tarihsel olarak aşılmıştır. Scalypso deneme onayı ve gizlilik onayı, ürün hakkı/Offer veya tamamlanmış işlem schema kanıtı değildir. Gerçek gönderim denenmedi; mevcut semantik model korunur.
+
+## Kullanıcı açıklamasıyla ilişki güncellemesi — 22.10.2026
+
+Eğitim kaydı dönemsel webinar, geçmiş YouTube video arşivi ve özel eğitim talebi yollarını bir arada taşır; otomatik Course kataloğu oluşturulmaz. Resmî ALLPLAN indirme hedefi ile Aluplan lead formu farklı EntryPoint niyetleridir. Lead kaydı yazılım indirme/aktivasyon veya satın alma başarısı değildir. Bölüm11'in varlığı ücretsiz tam ürün Offer'ı oluşturmaz. Tek ana form hedefi farklı ürünleri tek Product/variant yapmaz. Pythonpart/Scalypso'nun ayrı CDS formuna gitmesi kullanıcıca hata olarak doğrulandı; uygulamada giderilecek. Önceki dört soru için güncel durum [karar özetindedir](00-inventory/inventory-decision-brief-2026-10-22.md). Bu ek kullanıcı işletim bilgisine dayanır; Google kuralları yeniden araştırılmadı ve JSON-LD uygulanmadı.

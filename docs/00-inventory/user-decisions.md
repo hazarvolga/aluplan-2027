@@ -86,3 +86,11 @@ Kullanıcı 404 ve eksik hedefleri liste olarak korumamızı, gerekli düzeltmel
 ## 22.10.2026 — Teknik kontrol sorumluluğu
 
 Kullanıcı kalan envanter işlerini onayladı; sonunda tüm öğeleri kendisinin tek tek denetlemek zorunda kalmamasını istedi. Teknik ekip kaynak/canlı eşlemesini, kanıt toplamayı ve doğrulamayı üstlenir; kullanıcıya yalnız gerçek tercih, kapsam ve ticari kararlar sunulur. Eksik teknik kanıt tamamlanmış gibi gösterilmez. Mevcut onarım erteleme ve faz sınırları korunur.
+
+## 22.10.2026 — Kullanıcının form, eğitim ve deneme açıklaması
+
+- Teklif/ürün/eklenti taleplerinde esas hedef mevcut ana Aluplan Teklif & Talep Formu: `https://forms.office.com/r/hXhnKAG912`. Kullanıcı tüm sitede bu tek forma geçildiğini, Pythonpart/Scalypso'nun ayrı CDS formuna gitmesinin hatalı olduğunu teyit etti. Yanlış hedefler düzeltme listesinde; bu tur link değiştirilmedi. Destek ticket/Teams, üretici indirme ve mevcut lisans işlemleri bu açıklamayla satış formuna yönlendirilmez.
+- Eğitim fiilen dönemsel webinarlar ve YouTube üzerinden yayımlanan geçmiş webinar listesidir. Düzenli eğitim takvimi veya sürekli kurs kataloğu varsayılmayacak. Özel eğitim talepleri de alınabilmeli; tek Eğitim başlığı korunur, ayrı hizmet sayfası oluşturma kararı yok. Fiyat, sertifika, süre veya kesin program taahhüdü eklenmez.
+- Paket hakları ve deneme koşullarını Aluplan yetkilileri takip ediyor; belirli kişi adı bildirilmedi. Türkiye koşulları ve14/30gün çelişkisi bu sorumluluk açıklamasıyla doğrulanmış sayılmaz.
+- Deneme indirmesi Almanya/ALLPLAN'ın resmî sayfasında gerçekleşir. Türkiye'den yönlendirilen talepleri kısa bilgilendirme/lead formuyla toplamak ayrı ticari amaçtır; ana formun Bölüm11 Download Formları bu niyeti taşır. Lead kaydı indirme, lisans aktivasyonu veya satın alma tamamlandı anlamına gelmez.
+- Henüz açık uygulama tercihi: lead adımı indirme öncesinde zorunlu mu, isteğe bağlı mı olacak? Kullanıcı bu sırayı/zorunluluğu belirtmedi. Öneri: indirmeyi engellemeyen kısa bilgi/takip talebi; henüz kabul edilmiş karar değildir. Özel eğitim niyetinin ana formda nasıl kaydedileceği ve teslimat sorumlusu da uygulama sözleşmesinde belirlenir; mevcut formda özel eğitim alanı varmış gibi davranılmaz.

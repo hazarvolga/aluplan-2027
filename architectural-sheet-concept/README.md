@@ -51,3 +51,46 @@ Turuncu yalnız CTA, focus, aktif sekme ve sınırlı kesit işaretlerinde kulla
 3. Ana sayfa ve ürün detay örneği: henüz uygulanmadı.
 
 Bu aşamada yayınlanan JS: 0 bayt; yalnız doküman üretildi. Client component: yok. İleride yalnız tabs, mobil menü ve gerekiyorsa hareket enhancement adacığı client olur; içerik Server Components içinde kalır. Kod yazılmadığı için Lighthouse, CWV, SSR, kontrast, reduced-motion ve Rich Results Test kabulü henüz ölçülmedi.
+
+## Aşama 2 — Bileşen sistemi hazır
+
+Kullanıcının `uyguun` onayıyla ayrı Next.js App Router/TypeScript strict örneği oluşturuldu. Bu aşamada `/` ana sayfa yerine bileşen kataloğudur. Ana sayfa ve ürün detayı aşama 3'te hazırlanacak.
+
+- Önizleme: http://127.0.0.1:8771/
+- Teknoloji: Next.js 16.4.2, React 19.3.1, pnpm kilit dosyası; sürümler kurulum anında registry'den doğrulandı.
+- Kaynak: `tokens/tokens.json`; primitive → semantic → component zinciri korunur. `tokens/provenance.json` önceki sistemin salt okunur kaynak hashlerini ve yerel farkları kaydeder.
+- Yeni `sheet` teması ayrı tutulur. Orange 500/400 koyu tema eylemleri, Orange 800 açık tema metin/buton kontrastı içindir. İlk Orange 700 açık tema adayının 3,79:1 sonucu yetersiz bulundu; 800'e düzeltildi. Durum/warning renkleri marka aksanına dönüştürülmedi.
+- `sheet.line.hairline/fine/outline`, pafta rail/title/drawing ölçüleri ve drawing/hatch opaklıkları gerekçeli yeni tokenlardır. Responsive CSS, mevcut 30/48/64/80 rem build-time breakpointlerinden üretilir.
+- Başlık/gövde mevcut Manrope ailesine, meta mevcut IBM Plex Mono'ya bağlandı. Yalnız bu iki ailenin Latin/Latin-ext dosyaları taşındı: toplam 58.728 bayt. IBM Plex Sans ek yükü alınmadı. Next yerel font değişkenleri html üzerinde primitive font adapter'ına bağlanır; bileşen CSS'i yalnız semantic fontları tüketir. Yeni font ailesi yok.
+- `components/sheet.tsx`: AxisGrid, DimensionLine, SectionMarker, DetailCallout, TitleBlock, HatchPattern, ScaleBar, NorthArrow ve kompozisyon yardımcıları. Hepsi Server Component; özel client bileşeni yok.
+- Katalog metni `content/specimen.ts` ve page içindeki teknik açıklamalardır; ürün içerik modeli/schema değiştirilmez. SVG çizim özgün, şematik ve dekoratif olarak işaretlidir. SVG id'si useId ile izole edilir.
+
+### Komutlar
+
+Bu klasörde:
+
+```sh
+pnpm install --frozen-lockfile
+pnpm tokens
+pnpm test
+pnpm typecheck
+pnpm build
+pnpm start
+```
+
+`pnpm dev` aynı 8771 portunda geliştirme sunucusu açar; çalışan production preview ile aynı anda başlatılmaz. `pnpm tokens:check` üretilmiş CSS drift'ini de doğrular. `public/fonts/` içinde OFL lisansları vardır.
+
+### Doğrulama ve açık kabul maddeleri
+
+- Testler 6/6, TypeScript ve üretim build geçti; rota statik önceden render edildi.
+- 282 kontrast çifti / 0 başarısız (3 tema × 2 mod; sheet için 94 çift). Bu yalnız kayıtlı token çiftlerini doğrular; tam WCAG denetimi değildir.
+- Masaüstü ve gerçek 390 CSS px görünümde yatay taşma 0. Test tarayıcısı %110 zoom kullandığı için cihaz genişliği ile CSS viewport ölçüsü ayrı denetlendi.
+- Tek h1; dekoratif SVG'ler aria-hidden. Native details, script execution kapalıyken AX tıklamasıyla açıldı ve içerik erişilebilirlik ağacında görüldü. Reduced-motion'da scroll auto, animation none.
+- Tarayıcıda semantic font override'ı başlık ailesini Next sans → monospace → Next sans değiştirdi. İncelemede ilk font bypass ve html/body scope hataları düzeltildi; ikinci kontrol onaylandı.
+- Console warning/error 0; ekran görüntüsü `evidence/components-preview.png`.
+- Framework dahil başlangıç harici script gzip toplamı **179.860 bayt**. Prompttaki <90.000 bayt hedefi **sağlanmadı**. Ölçüm soğuk önbellekte ilk HTML'nin script src kayıtlarını tek tek gzip eder; inline bootstrap/RSC dahil değildir. Gerçek network transfer ve toplam yürütme maliyetiyle eşit sayılmaz. Sıfır özel client component, sıfır framework JS demek değildir.
+- Lighthouse/CWV/INP ölçülmedi; hedefler kabul edilmiş sonuç sayılmıyor. Turuncu kaplama oranı %8 eşiği sayısal olarak ölçülmedi. Ana sayfa, ürün tabları, JSON-LD/Rich Results Test ve animasyon aşama 3 kapsamında; henüz tamamlandı işaretlenmez.
+
+Önceki önizleme korunur. Bu bileşen adımının ardından, kullanıcı değerlendirmesiyle gerçek Aluplan ana sayfa kompozisyonuna geçilir.
+
+Teknik kaynak: https://nextjs.org/docs/app/getting-started/installation (22.10.2026 erişimi).

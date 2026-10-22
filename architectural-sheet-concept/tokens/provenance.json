@@ -1,0 +1,16 @@
+{
+  "source": "docs/previews/anthracite-demo",
+  "date": "2026-10-22",
+  "kind": "isolated snapshot; existing preview remains untouched",
+  "baseHashes": {
+    "tokens/tokens.json": "670e249ca15bda6468fd99136b91d1fce3f642e7e231bc768529f59f2743802d",
+    "scripts/build-tokens.mjs": "2946187476adf7ceb2c95066fa4141afe2b524f0356ea3dc9105f12c9289adb3",
+    "assets/logo/aluplan-logo-white-filled.svg": "b09a9f0f0549c481d549dbe5867e38ce3d4ef215132a8db181d76725c63c4a98"
+  },
+  "changes": [
+    "new sheet theme derived from aluplan",
+    "orange primitives and sheet geometry semantic extensions",
+    "local Next font adapter, headings/body Manrope and metadata IBM Plex Mono",
+    "original token generator copied unchanged as scripts/token-engine.mjs"
+  ]
+}

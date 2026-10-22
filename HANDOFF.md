@@ -280,3 +280,11 @@ Bu tamamlanma yalnız görsel önizleme kapsamındadır. Türetilmiş paket Git 
 ## 22.10.2026 — Ayrı mimari pafta konsepti, aşama 1
 
 Kullanıcı mevcut önizlemenin korunmasını ve kökte ayrı klasörde ek prompta göre yeni örnek hazırlanmasını istedi. `architectural-sheet-concept/` oluşturuldu; özgün talimat `USER-PROMPT.md`, tasarım gerekçesi/kompozisyon/token önerisi `README.md` içinde. Prompt çalışma sırası 1 açıkça koddan önce onay beklemeyi istediği için bu adımda uygulama kurulmadı. Sonraki adım kompozisyon ve konsepte özel turuncu token eklerinin kullanıcı onayı; sonra token/pafta bileşenleri. Önceki önizleme değiştirilmedi. Public URL ve schema stratejisi korunur; prompttaki otomatik Türkçe rota ve toplu schema adayları uygulama kararı sayılmaz. Performans hedefleri ölçülmüş sonuç değildir.
+
+## 22.10.2026 — Mimari pafta konsepti aşama 2
+
+Kullanıcı aşama 1 kompozisyon/turuncu yönünü `uyguun` ile onayladı. Ayrı `architectural-sheet-concept/` içinde Next.js 16.4.2/React19.3.1/TypeScript strict temel, sheet token teması ve server-rendered pafta bileşen kataloğu oluşturuldu; önceki antrasit önizleme korunur. Yerel production preview http://127.0.0.1:8771/ (session 66247). Ana sayfa henüz yapılmadı; `/` bileşen kataloğu. Komutlar ve dosya ayrımı klasör README'sinde.
+
+Kontroller: 6/6 test, TypeScript/production build, 282 kontrast çiftinde 0 hata; fonts58.728bayt; masaüstü ve390CSSpx yatay taşma0; native details JS kapalı çalıştı; reduced-motion scroll auto/animation none; font semantic override runtime doğrulandı; konsol0hata/uyarı. Kod incelemesi semantic font bypass/root scope ve accessible heading/motion uyarılarını kapattı, onaylandı. Kanıt `architectural-sheet-concept/evidence/verification.json` ve `components-preview.png`.
+
+Açık performans kabulü: framework dahil ilk HTML'nin harici script gzip toplamı179.860bayt; <90KB hedefi sağlanmadı (inline hariç alt sınır, gerçek transfer ölçümü değildir). Lighthouse/CWV/INP ve turuncu oranı ölçülmedi. Ana sayfa/ürün detayı/tablar/schema henüz yok. Promptun her adım sonu değerlendirme kuralına göre sıradaki adım kullanıcı bileşen yönünü değerlendirdikten sonra aşama3 ana sayfa örneğidir. Mevcut ana site entegrasyonu veya yayın yapılmadı.

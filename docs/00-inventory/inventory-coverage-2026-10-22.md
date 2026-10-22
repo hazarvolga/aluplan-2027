@@ -132,3 +132,7 @@ Kullanıcı güncel kodun 2026 içinde olduğunu hatırlattı. Tekrarlı canlı 
 Önceki tabloda geçen her tekrarın dialogunu açma, mobil/cookie davranışını test etme ve tüm videoları oynatma işi içerik kayıt tamamlığıyla karıştırılmaz. Bunların runtime/erişilebilirlik kabulü baseline/uygulama/yayın aşamasında takip edilir. Harici form8/14 kaynak kodda yoktur ve görünmeyen içerik olarak açık kalır. Faz0 bitişi veya sonraki faz onayı verilmedi.
 
 [Karar özeti](inventory-decision-brief-2026-10-22.md) yalnız operasyon/ticari tercihleri ayırır; [schema etkisi](../schema-inventory-impact-2026-10-22.md) güncel resmî kaynaklarla planı tamamlar. Kod, URL, kaynak içerik veya JSON-LD değiştirilmedi.
+
+## Yönetici erişimiyle güncelleme — 22.10.2026
+
+[Form yönetici incelemesi](form-admin-2026-10-22.md) ile daha önce bilinmeyen8ve14bölüm içerikleri kaydedildi. Önceki erişim açığı notu artık tarihsel; gerçek gönderim/teslimat testi yapılmadı. Scalypso seçiminin8yerine13e yönlendiği doğrulandı; onarım uygulanmadı.

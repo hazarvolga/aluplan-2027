@@ -585,5 +585,7 @@
   "source_followup": "remaining-source-checks-2026-10-22.json",
   "module_browser_states": 31,
   "total_observation_records": 357,
-  "module_browser_evidence": "browser-modules-final-2026-10-22.json"
+  "module_browser_evidence": "browser-modules-final-2026-10-22.json",
+  "external_form_admin_evidence": "form-admin-2026-10-22.json",
+  "external_form_sections_8_14": "designer content observed; submission not tested"
 }

@@ -53,3 +53,7 @@ Teknik kabul listesine şu koşullar eklenir: çelişkili süre/fiyat yok; aynı
 4. **Pythonpart/Scalypso talep amacı:** CDS formu bilinçli ortak operasyon hedefi mi, yanlış yönlendirme mi? Öneri: ürün bağlamını koruyan ortak merkez; hedef değişikliği bu belgeyle onaylanmış sayılmaz.
 
 Kırık linklerin yeniden yazılması/kaldırılması zaten ertelendi; tekrar karar istenmez. Google alan seçimleri, medya doğrulama, kimlik tekilleştirme ve teknik güvenlik giderimi kullanıcıya kontrol işi olarak devredilmez.
+
+## Yetkili form görünümü eki
+
+[22 Ekim yönetici incelemesi](00-inventory/form-admin-2026-10-22.md) ile8ve14bölüm içerikleri artık biliniyor. Önceki bilinmeyen alan notu tarihsel olarak aşılmıştır. Scalypso deneme onayı ve gizlilik onayı, ürün hakkı/Offer veya tamamlanmış işlem schema kanıtı değildir. Gerçek gönderim denenmedi; mevcut semantik model korunur.

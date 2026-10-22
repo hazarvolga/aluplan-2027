@@ -16,3 +16,7 @@ Schema kimlikleri, üretici/hizmet sağlayıcı ayrımı, medya eşlemesi ve tek
 Kaynak incelemesi ile canlı gözlem ayrı tutulur. Aynı bileşenin bütün tekrarlarını canlıda tıklamak envanter şartı değildir; güncel kaynak/prop kayıtları kullanılır, canlı kontrol yayın farkı ve belirsiz hedeflere odaklanır. Runtime ve erişilebilirlik kabulü sonraki teknik aşamalarda ayrıca yapılır.
 
 Kanıtlar: [kaynak/medya incelemesi](remaining-source-checks-2026-10-22.md), [kapsam kaydı](inventory-coverage-2026-10-22.md), [form durumları](form-state-register-2026-10-22.md), [schema etkisi](../schema-inventory-impact-2026-10-22.md).
+
+## Yönetici erişimiyle güncelleme — 22.10.2026
+
+[Form yönetici incelemesi](form-admin-2026-10-22.md) ile daha önce bilinmeyen8ve14bölüm içerikleri kaydedildi. Önceki erişim açığı notu artık tarihsel; gerçek gönderim/teslimat testi yapılmadı. Scalypso seçiminin8yerine13e yönlendiği doğrulandı; onarım uygulanmadı.

@@ -293,3 +293,7 @@ Envanter mevcut davranışı kaydeder; alan silme, hedef değiştirme veya enteg
 ## Bağımsız kaynak güvenlik kontrolü
 
 22 Ekim ayrı inceleme kaynak bulgularını doğruladı: SMTP `rejectUnauthorized:false` ve kullanıcı adresine gönderim için route içinde görünen sınırlı doğrulama/rate-limit eksikliği yüksek; kaçışlanmamış mail HTML metni ve kısmi gönderim/webhook hata davranışı orta risk olarak değerlendirildi. Dış koruma katmanı ve canlı istismar incelenmedi. `secure:false` tek başına açık değildir; `ciphers:"SSLv3"` gerçek bağlantının SSLv3 kullandığının kanıtı değildir. Mail HTML enjeksiyonu doğrulanmış tarayıcı XSS diye sunulmaz. API kaynak kodu değiştirilmedi ve çağrılmadı. Bulgular kapanmadan2027'ye aynen taşıma/yayın güvenlik kabulü verilmez.
+
+## Yönetici erişimiyle güncelleme — 22.10.2026
+
+[Form yönetici incelemesi](form-admin-2026-10-22.md) ile daha önce bilinmeyen8ve14bölüm içerikleri kaydedildi. Önceki erişim açığı notu artık tarihsel; gerçek gönderim/teslimat testi yapılmadı. Scalypso seçiminin8yerine13e yönlendiği doğrulandı; onarım uygulanmadı.

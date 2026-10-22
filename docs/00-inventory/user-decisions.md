@@ -118,3 +118,7 @@ Kullanıcı bağımsız ana sayfa önizlemesini “şu an için uygun” buldu; 
 ## 22.10.2026 — Tasarım sistemi bileşen eşlemesi
 
 Kullanıcı devam talebiyle kabul edilen yerleşimi tasarım sistemi bileşenlerine eşleme planı hazırlandı: `docs/design-system-component-mapping.md`. H01–H08, kabuk, token zinciri, veri/schema ayrımı ve uyarlama sırası kaydedildi. Kaynak incelemesi: RoleSelector kullanılabilir fakat demo ürün filtresi altı kartı koruyan homepage davranışıyla aynı değil; Header düz menü, çok seviyeli gezinme/arama/tema uyarlaması gerekiyor; demo içerik sözleşmesi proje sözleşmesinin yerine geçmez. Tabs/ReleaseTag eski bulguları güncel kaynakta düzelmiş; runtime kabulü ayrı. İndirilen paket, antrasit kopya, wireframe ve uygulama değiştirilmedi. Sıradaki öneri: ayrı görsel önizlemede header/hero/rol-ürün/hizmet bloklarını gerçek design system ile hazırlamak; entegrasyon yapılmadı.
+
+## 22.10.2026 — Tasarım sistemi kesitine ilerleme
+
+Kullanıcının “ok go” yanıtı, geçici kabul edilen yerleşimin ayrı tasarım sistemi önizlemesinde header, hero, rol/ürün ve hizmet alanlarına uygulanması için ilerleme iznidir. Bu yanıt nihai görsel tasarım, mega menü davranışı, CTA önceliği, ürün iddiaları veya Next.js entegrasyonu kabulü değildir. Önizleme ve doğrulama kaydı: `../design-system-homepage-preview-review.md`.

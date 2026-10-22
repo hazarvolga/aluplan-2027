@@ -106,3 +106,7 @@ Kullanıcı Next.js içinde kısa formlarla ilerlemeyi onayladı; henüz kod yaz
 ## 22.10.2026 — Fiyat yayımlamama ve bilgi mimarisi çalışması
 
 Kullanıcı sitede hiç fiyat belirtilmediğini açıkladı. Yeni plan fiyat yayımlamayı veya schema için sıfır fiyat üretmeyi gerektirmez; paket karşılaştırması işlev/kapsam odaklı, fiyat bilgisi teklif sürecindedir. Kullanıcı menü/sayfa görevleri, URL eşlemesi ve müşteri yolları taslağının hazırlanmasını kabul etti. [Bilgi mimarisi](../site-information-architecture.md) öneridir; menü, sayfa, form, URL veya kod değişikliği onayı değildir.
+
+## 22.10.2026 — Sayfa şablonu/blok planına ilerleme
+
+Kullanıcının “ok go” yanıtı, bilgi mimarisi taslağından sayfa şablonları ve ana sayfa içerik blokları planına ilerleme izni olarak işlendi. Bu yanıt deneme lead zorunluluğu, ticari kapsam, yeni referans bloğu veya tüm menü ayrıntıları için ayrı kesin karar sayılmadı. Kod ve entegrasyon yapılmaz; sonraki çıktı plan değerlendirmesine sunulur.

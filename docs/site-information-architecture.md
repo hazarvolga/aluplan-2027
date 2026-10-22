@@ -120,3 +120,7 @@ Tema tokenları renk/boşluk/tipografiyi yönetir; ürün ilişkileri, URL'ler, 
 Kullanıcıdan şimdi gereken ana değerlendirme navigasyon ve üç yolun uygunluğudur. Teknik satırların tek tek kontrolü kullanıcıya bırakılmaz. Kabulden sonra sıradaki çıktı sayfa şablonları için içerik/blok gereksinimleri ve gerçek içerikle ana sayfa iskeleti planıdır; uygulamaya geçiş ayrıca onaylanır.
 
 Gelecek kabul ölçütleri: bütün eski içerik/CTA'ların hedef şablonu bulunmalı; her sayfa birincil görevini açıklamalı; eğitim/destek ana sayfa altına bağımlı kalmamalı; bilinmeyen paketle talep yolu tamamlanabilmeli; arşiv izlemek talep formuna bağlanmamalı; URL/schema ilişkileri tema değişiminden bağımsız olmalı. Bunlar henüz çalıştırılmış test sonuçları değildir.
+
+## 22.10.2026 — Şablon planı hazırlandı
+
+Kullanıcı sonraki planlama adımına geçmeyi kabul etti. [Şablon gereksinimleri](page-template-requirements.md) ve [kaynak ana sayfa blok planı](homepage-block-plan.md) bu belgenin devamıdır. Bölüm6'daki referans/kanıt alanı mevcut homepage bileşeni değildir; yeni öneri olarak ayrılmıştır. Gerçek sekiz bileşen ve20hizmet kayıtları eşlenmiştir; tam içerik paritesi uygulamada ayrıca doğrulanır.

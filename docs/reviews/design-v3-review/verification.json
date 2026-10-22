@@ -2,6 +2,7 @@
   "sourceZip": "Aluplan Design System-reviewed-v3-refreshed.zip",
   "sha256": "3bb9f401cfd4953bf5b8be0269169b59e3309295fef3aab83570a87a1664918f",
   "changedFiles": [
+    "scripts/homepage-preview-tests.mjs",
     "tokens/build/CONTRAST-REPORT.md",
     "tokens/build/breakpoints.mjs",
     "tokens/build/contrast-report.json",
@@ -11,14 +12,18 @@
     "tokens/tokens.json",
     "ui_kits/homepage/HomepagePreview.jsx",
     "ui_kits/homepage/README.md",
+    "ui_kits/homepage/assets/bimflex/doseme-bosluk-model.png",
+    "ui_kits/homepage/assets/bimflex/flexsoft-logo.png",
+    "ui_kits/homepage/assets/bimflex/kiris-model.png",
+    "ui_kits/homepage/assets/bimflex/kolon-model.png",
     "ui_kits/homepage/index.html",
     "ui_kits/homepage/preview.css"
   ],
   "unchangedLayers": [
-    "data",
+    "schema",
     "existing component JSX",
     "existing ui_kits outside homepage",
-    "logos",
+    "Aluplan logos",
     "bundle"
   ],
   "node": "24.18.0",
@@ -46,7 +51,19 @@
       228,
       228
     ],
-    "contentOrSchemaChanged": false
+    "contentLayerChanged": true,
+    "contentDataFile": "docs/previews/homepage-wireframe/data.js",
+    "schemaChanged": false,
+    "formsChanged": false,
+    "packagePdfLinks": 7,
+    "bimflexMedia": 4,
+    "innovationCards": 3,
+    "mobileWidth": 390,
+    "mobileHorizontalOverflow": 0
   },
-  "patchApplyCheck": "passed"
+  "patchApplyCheck": "passed",
+  "homepagePreviewTests": {
+    "passed": 9,
+    "failed": 0
+  }
 }

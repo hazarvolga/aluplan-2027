@@ -44,3 +44,17 @@ Değerler önizleme CSS'inde primitive tokenlarla sabitlenmedi; `tokens/tokens.j
 Görsel kanıt: `docs/previews/anthracite-homepage-cards-normalized.png`.
 
 Önizleme, önceki antrasit tasarım sistemi kopyasının içinde yerel değerlendirme çıktısı olarak tutulur. Bu türetilmiş paket daha önce alınan kararla Git dışında kalır; bu kontrol kaydı ve devir durumu commit edilir.
+
+## 22.10.2026 — H05, H07 ve H08 tamamlaması
+
+Kullanıcının keskin kart dilini kabul etmesinin ardından kalan üç kaynak bloğu aynı ayrı önizlemeye eklendi:
+
+- H05 `TEKNİK ÖZELLİKLER`: altı paket kartı ve bölüm eylemi mevcut `V2026_paket-karsilastirma-Q3-2026_R01.pdf` hedefine gider; fiyat veya yeni paket hakkı eklenmez.
+- H07 BIMFlex: FlexSoft tarafından geliştirilen çözüm ve Aluplan satış ortaklığı olarak gösterilir. Kaynaktaki koşullu `sunulabilecektir` anlatımı ve dört özgün medya varlığı korunur. ALLPLAN ürünü/paketi gibi sınıflandırılmaz.
+- H08 `ALLPLAN 2026 Yenilikleri`: üç kaynak kart ve mevcut `/products` hedefi korunur. 2026 etiketi kaynak sürümüdür; `current` statüsü atanmaz.
+
+İçerik kayıtları `docs/previews/homepage-wireframe/data.js`, görünüm `HomepagePreview.jsx` ve `preview.css` içindedir. Form, JSON-LD/schema, Next.js ve canlı site değiştirilmedi. `saatlerden saniyelere` ifadesi kaynak iddiası olarak aynen kaldı; yayın öncesi kanıt gerektirir. `/products` hedefinin yenilik CTA'sıyla zayıf eşleşmesi önceki URL karar listesinde kalır.
+
+Doğrulama: homepage sözleşmesi 9/9, token 28/28, içerik 13/13, kontrast 188/188. Tarayıcıda yedi PDF bağlantısı tek hedefte, dört BIMFlex görseli yüklenmiş, üç yenilik kartı görünür, tek `h1`, kart radius'u `0px` ve 390 px görünümde yatay taşma `0` olarak ölçüldü. Konsolda hata yok; yalnız React/Babel geliştirme önizlemesinin beklenen bilgi/uyarıları var. Bağımsız code review ilk turda tanımsız spacing tokenını yüksek öncelikli buldu; `--space-stack-xl` ile düzeltildi, CSS token sözleşmesi testine eklendi ve ikinci incelemede engel kapandı.
+
+Görsel kanıt: `docs/previews/anthracite-homepage-complete.png`. Türetilmiş paket Git dışında kalır; içerik veri dosyası, ikili varlıkları da taşıyan yeniden üretilebilir patch, doğrulama kaydı, bu rapor ve görsel kanıt commit kapsamındadır.

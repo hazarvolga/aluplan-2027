@@ -100,27 +100,33 @@ window.previewData = {
   "packages": [
     {
       "title": "ALLPLAN Basic",
-      "description": "Temel 2D/3D tasarım ve çizim araçları."
+      "description": "Temel 2D/3D tasarım ve çizim araçları.",
+      "id": "basic"
     },
     {
       "title": "ALLPLAN Concept",
-      "description": "Konsept tasarım, modelleme ve görselleştirme."
+      "description": "Konsept tasarım, modelleme ve görselleştirme.",
+      "id": "concept"
     },
     {
       "title": "ALLPLAN Professional",
-      "description": "Tam kapsamlı BIM, metraj ve işbirliği."
+      "description": "Tam kapsamlı BIM, metraj ve işbirliği.",
+      "id": "professional"
     },
     {
       "title": "ALLPLAN Ultimate",
-      "description": "Tüm disiplinler ve ileri seviye mühendislik."
+      "description": "Tüm disiplinler ve ileri seviye mühendislik.",
+      "id": "ultimate"
     },
     {
       "title": "CIVIL",
-      "description": "Altyapı, yol ve köprü mühendisliği çözümleri."
+      "description": "Altyapı, yol ve köprü mühendisliği çözümleri.",
+      "id": "civil"
     },
     {
       "title": "PRECAST",
-      "description": "Prefabrik üretim planlama ve detaylandırma."
+      "description": "Prefabrik üretim planlama ve detaylandırma.",
+      "id": "precast"
     }
   ],
   "solutions": [
@@ -164,17 +170,20 @@ window.previewData = {
     {
       "title": "AI Görselleştirme",
       "description": "Yapay zeka destekli render araçları ile tasarımlarınızı saniyeler içinde hayata geçirin.",
-      "badge": "ALLPLAN CONCEPT"
+      "badge": "ALLPLAN CONCEPT",
+      "id": "ai-visualization"
     },
     {
       "title": "Donatıdan Şantiyeye",
       "description": "Tamamen dijital, çizimsiz şantiye iş akışları ile hatasız üretim ve montaj.",
-      "badge": "ALLPLAN PROFESSIONAL"
+      "badge": "ALLPLAN PROFESSIONAL",
+      "id": "site-rebar"
     },
     {
       "title": "Birleşik Arazi Modeli",
       "description": "Büyük ölçekli altyapı projeleri için yeni nesil hassas arazi modelleme motoru.",
-      "badge": "ALLPLAN ULTIMATE"
+      "badge": "ALLPLAN ULTIMATE",
+      "id": "unified-terrain"
     }
   ],
   "services": [
@@ -340,5 +349,50 @@ window.previewData = {
       "Eğitim Videoları",
       "/solutions-v2/training/video-library"
     ]
-  ]
+  ],
+  "packageAccess": {
+    "eyebrow": "DETAYLI ANALİZ",
+    "title": "TEKNİK ÖZELLİKLER",
+    "description": "Hangi ALLPLAN paketi sizin için uygun? Paketler arasındaki farkları ve teknik özellikleri detaylı tablomuzda karşılaştırın.",
+    "cta": "Karşılaştırma Tablosunu İndir (PDF)",
+    "href": "/docs/V2026_paket-karsilastirma-Q3-2026_R01.pdf",
+    "fileName": "V2026_paket-karsilastirma-Q3-2026_R01.pdf"
+  },
+  "bimflex": {
+    "eyebrow": "FlexSoft x Aluplan satış ortaklığı",
+    "label": "FlexSoft AR-GE x Aluplan",
+    "title": "Allplan için BIM uyumlu yapı elemanları donatısı",
+    "claim": "Donatı modellemesini saatlerden saniyelere indirin",
+    "description": "FlexSoft tarafından geliştirilen BIMFlex, satış ortaklığı kapsamında Aluplan tarafından da sunulabilecektir. Allplan içindeki kolon, kiriş, perde duvar ve döşemelerinizi BIM uyumlu gerçek donatı nesneleriyle otomatik donatılandırır.",
+    "cta": "BIMFlex detaylarını incele",
+    "href": "/solutions/bimflex",
+    "relationship": "FlexSoft tarafından geliştirilen çözüm",
+    "logo": {
+      "src": "assets/bimflex/flexsoft-logo.png",
+      "alt": "FlexSoft"
+    },
+    "media": [
+      {
+        "src": "assets/bimflex/kolon-model.png",
+        "alt": "BIMFlex kolon donatısı modeli"
+      },
+      {
+        "src": "assets/bimflex/kiris-model.png",
+        "alt": "BIMFlex kiriş donatısı modeli"
+      },
+      {
+        "src": "assets/bimflex/doseme-bosluk-model.png",
+        "alt": "BIMFlex döşeme boşluk donatısı modeli"
+      }
+    ]
+  },
+  "innovationsMeta": {
+    "eyebrow": "YENİ SÜRÜM",
+    "version": "ALLPLAN 2026",
+    "title": "ALLPLAN 2026 Yenilikleri",
+    "description": "Her disiplin için geliştirilen devrim niteliğindeki özellikleri keşfedin. Yapay zekadan dijital şantiye süreçlerine kadar en yeni teknolojiler.",
+    "cta": "Tüm Yenilikleri İncele",
+    "href": "/products",
+    "status": "source-version-unverified"
+  }
 };

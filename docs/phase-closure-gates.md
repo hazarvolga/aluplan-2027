@@ -89,4 +89,10 @@ U05–U07 plan kararlarıdır; bu tablo JSON-LD üretmez. Güncel Google şartla
 
 ## Önerilen sıradaki çalışma
 
-D01 ve D02'nin kalan kontrol matrisiyle envantere devam edilir. D03 bilinen hataları ayrı karar listesinde tutulur; kullanıcı onarımı ertelemiştir. 57 durum, 88 medya dosyası ve seçili URL kontrolleri tüm Faz 0'ın kapanışı değildir. Faz geçişi ayrıca değerlendirilir; tasarım veya uygulamaya geçilmedi.
+Kaynak odaklı ek kontrol tamamlandı; [son kapsam eki](00-inventory/inventory-coverage-2026-10-22.md) ve [karar özeti](00-inventory/inventory-decision-brief-2026-10-22.md) esas alınır. Kaynakta kayıtlı her tekrarı canlıda yeniden açmak envanter şartı değildir. Harici formun görünmeyen8/14bölümleri için yetkili yapı kanıtı veya açık istisna kararı gerekir. D03onarımı ertelenmiştir. Faz geçişi ayrıca değerlendirilir; uygulamaya geçilmedi.
+
+## Son kontrol eki
+
+E14 — [Kaynak kalan kontrolü](00-inventory/remaining-source-checks-2026-10-22.md) ve [global durumlar](00-inventory/global-state-source-review-2026-10-22.md). D01/D02 kaynak kayıt kapsamı genişledi;376medya yolu sınıflandı ve korunuyor. Yukarıdaki ara durumların canlıda her koşulu tekrar açma beklentisi, kullanıcının kaynak odaklı yönlendirmesiyle değişti. Runtime kabulü ayrı kalır; dış Forms içeriği bilinmiyor.
+
+E15 — [Schema envanter etkisi](schema-inventory-impact-2026-10-22.md). Bu ek için Google kuralları yeniden doğrulandı; U05–U07/Y02 değerlendirmesinde önceki raporla birlikte kullanılır. Kod/schema uygulanmadı.

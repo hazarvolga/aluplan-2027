@@ -189,3 +189,12 @@ Kullanıcı antrasit temayı uygun buldu; schema skilliyle ürün/paket/sürüm 
 - Kalan iş: koşullu canlı durum/medya eşleşmeleri, harici formun erişilemeyen bölümleri ve ayrı yetkili teslim/runtime testleri. Faz0 kapanışı veya sonraki faz onayı yok. Kullanıcıya teknik listeyi elle doğrulama görevi verilmez.
 - Tarayıcıda iki toplu işlem zaman aşımına uğradı; diske kaydedilmeyen ara sonuçlar kabul sayılmadı. Üçüncü taraf YouTube frame alt içerikleri çıkarıldı; host içerik ve frame kimliği korundu.
 - Çıktılar doküman/kanıt kapsamındadır;2026kaynağa, canlıya, tasarım paketine, içerik/schema uygulamasına dokunulmadı. Untracked design paketleri/demo commit dışında kalır.
+
+## 22.10.2026 — Kaynak odaklı son envanter kontrolü
+
+- Kullanıcı tekrarlı canlı kontroller yerine güncel aluplan-2026 kodunun kullanılmasını istedi. Kalan içerik/durum/hedef çözümlemesi kaynak üzerinden; canlı yalnız yayın farkları ve belirsiz hedefler için. Kaynak kanıtı canlı çalışma kabulü değildir.
+- remaining-source-checks-2026-10-22.md/json:65aday rota sınıflandı,22gizli dal yok,1harici CTA,42etkileşimli.376medya yolu ayrıldı ve korunuyor; yayın/silme kararı verilmedi. global-state-source-review-2026-10-22.md ortak bileşen kaynak kayıtlarını tamamlar.
+- browser-final90 + browser-modules-final31 ek durum; önceki236ile357gözlem. Tekrarlı canlı tarama durduruldu, geçici sekmeler kapatıldı. Bu sayı başarılı test veya tam runtime kapsamı değildir.
+- schema skilliyle güncel resmî kurallar yeniden doğrulandı: docs/schema-inventory-impact-2026-10-22.md stratejiye bağlandı. Webinar Event rich result, video yayın tarihi/üretici ve formdan hak türetmeme sınırları eklendi. /products/allplan kaynağındaki30gün iddiası ortak çelişki kaydına bağlandı.
+- docs/00-inventory/inventory-decision-brief-2026-10-22.md yalnız dört operasyon/ticari kararı ayırır.404onarımı zaten erteli. Harici Forms8/14içeriği yetkili yapı olmadan hâlâ bilinmiyor; bunu kaynak kontrolüyle kapatmadık. Faz0tam kapanışı/sonraki faz/uygulama onayı yok.
+- Önce sonraki faza geçmeden dış form kanıtını veya açık istisna kararını ele al; sonra faz kapanışını sun. Teknik testleri kullanıcıya tek tek devretme. Kaynak/site/tasarım/schema uygulaması değişmedi; yalnız kanıt/doküman. İndirilen design paketleri/demo commit dışında korunur.

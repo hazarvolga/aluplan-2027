@@ -277,3 +277,9 @@ Kullanıcı üreticiye bilgi/kavram düzeyinde hizalanmayı kabul etti. [Sayfa g
 ## 22.10.2026 — Son schema kontrolü ve hizmet ilişkileri
 
 [Son kontrol raporu](schema-final-review-2026-10-22.md) bölüm 10 için güncel ek karardır. Tek Eğitim Service kaydı; tek Teknik Destek Service kaydı ve Teams/ticket ServiceChannel ilişkileri esas alınır. Ticket hedefi kullanıcı düzeltmesiyle allplan.net.tr; müşteri giriş yolu ayrıca doğrulanır. Eğitim sayfası Türkçe genel hizmet sunumudur; otomatik Course veya İngilizce Course list rich result hedefi değildir. İç modelin lisans/kaynak revizyonu boyutları ana tabloya işlendi. Antrasit tema kullanıcı tarafından uygun bulundu; içerik/schema ve site entegrasyonu için izin değildir. JSON-LD uygulanmadı.
+
+## 22.10.2026 — Kalan envanter bulguları ve schema etkisi
+
+[Envanter schema etkisi](schema-inventory-impact-2026-10-22.md) bu stratejinin güncel ekidir. Ürün/paket/sürüm ilişkileri korunur; form seçeneklerinden lisans hakkı çıkarılmaz. Eğitim tek hizmet, Destek tek hizmet ve iki kanaldır. Video katalogları otomatik Course değildir; VideoObject için gerçek yayın tarihi, görsel ve oynatıcı ilişkisi gerekir. Çevrim içi webinar için Google Event zengin sonucu vaat edilmez. 14/30 gün çelişkisi tercih değil doğrulanacak ticari iddiadır; kesinleşmeden Offer koşulu yapılmaz.
+
+Kullanıcı yönlendirmesiyle envanterde kaynak öncelikli kontrol kullanılır: güncel 2026 kodundan içerik/durum/hedef çıkarılır; canlı, yayın eşliği ve belirsiz hedefler için seçici kontrol edilir. Aynı bileşenin her tekrarı canlıda yeniden tıklanmaz. Kaynak kanıtı ile canlı gözlem birbirine dönüştürülmez; uygulama davranışı/erişilebilirlik ve teslimat kabulü ayrı takip edilir.

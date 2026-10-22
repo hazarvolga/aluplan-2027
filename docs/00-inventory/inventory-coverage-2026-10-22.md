@@ -1,6 +1,6 @@
 # Envanter kapsamı ve kabul durumu — 22.10.2026
 
-Bu kayıt kullanıcıya teknik kontrolleri devretmez. Kanıt toplama ve teknik kabul proje ekibinin sorumluluğundadır; kullanıcı yalnız içerik/ticari tercih ve faz kararlarını verir. **Faz 0 henüz tam kapanmış sayılmaz.**
+Bu kayıt kullanıcıya teknik kontrolleri devretmez. Kanıt toplama ve teknik kabul proje ekibinin sorumluluğundadır; kullanıcı yalnız içerik/ticari tercih ve faz kararlarını verir. **Faz 0 henüz tam kapanmış sayılmaz.** Son kaynak odaklı sonuç aşağıdaki 22 Ekim ekinde; önceki kalanlar tablosu tarihsel ara durumu gösterir.
 
 ## Tamamlanan sonlu kontroller
 
@@ -117,3 +117,18 @@ Sayılar yalnız bu iki JSONdaki kayıtlardır. Sıfır önceki homepage kanıt�
 ## Belge doğrulaması
 
 JSON dosyaları ayrıştırıldı;161kaynak snapshotının SHA eşliği yeniden doğrulandı. Bağımsız belge incelemesi sayıları ve kapsam sınırlarını; kaynak güvenlik incelemesi form bulgularını kontrol etti. Snapshotlarda mevcut kaynaktan gelen trailing whitespace/EOF boş satırları var: byte/hash eşliğini bozmamak için düzeltilmedi. Yeni yazılan raporlar ve JSONlar snapshot dizini hariç `git diff --check` ile kontrol edilir. Snapshotlar çalıştırılabilir yeni uygulama değil, tarihli kanıt kopyalarıdır. Uygulama build/test çalıştırılmadı.
+
+## 22 Ekim son ek — kaynak odaklı kalan kontrol
+
+Kullanıcı güncel kodun 2026 içinde olduğunu hatırlattı. Tekrarlı canlı tıklamalar durduruldu: içerik ve hedef envanteri kaynak/prop çözümlemesinden, yayın eşliği ise seçici canlı gözlemden kanıtlanır. Kaynaktan okunan hedefin çalıştığı varsayılmaz.
+
+- [Kalan kaynak matrisi](remaining-source-checks-2026-10-22.md): 65 adayın 22'sinde gizli içerik yok, biri harici CTA; 42 gerçek etkileşimli rota. Paket/sekme/modal hedefleri ve koşullu prop kayıtları korunuyor.
+- [Global durum incelemesi](global-state-source-review-2026-10-22.md): menü, ana sayfa, hizmetler, cookie ve ortak galeri durumlarının kaynak kaydı.
+- [Ek canlı kayıt](browser-final-2026-10-22.json): 90 durum. AEC28, BIMPLUS12 panel; 2026 altı video; Basic/Civil/Concept medya pencereleri ve Professional ilk altı medya penceresi. Kaynak matrisi Professional kalanlarını ve Ultimate hedeflerini içerir; canlıda açılmış gibi sayılmaz.
+- [Modül ek kaydı](browser-modules-final-2026-10-22.json): 31 durum. Önceki236 ile toplam357 gözlem kaydı; bu bir başarı/test/kapsama yüzdesi değildir.
+- 376 medya yolu tek tek ayrıldı; 345 referanssız, 26 basename yanlış eşleşmesi, 4 eski harici/metin referansı, 1 BRC eksik farklı yol. Arşivde korunmaları için kullanıcıya ayrı ayrı karar sorulmaz.
+- /products/allplan kaynağında da30gün iddiası var; deneme süresi çelişkisi yalnız contact sayfasında değil. Kaynak bilgisi, yeni canlı doğrulama iddiası değildir.
+
+Önceki tabloda geçen her tekrarın dialogunu açma, mobil/cookie davranışını test etme ve tüm videoları oynatma işi içerik kayıt tamamlığıyla karıştırılmaz. Bunların runtime/erişilebilirlik kabulü baseline/uygulama/yayın aşamasında takip edilir. Harici form8/14 kaynak kodda yoktur ve görünmeyen içerik olarak açık kalır. Faz0 bitişi veya sonraki faz onayı verilmedi.
+
+[Karar özeti](inventory-decision-brief-2026-10-22.md) yalnız operasyon/ticari tercihleri ayırır; [schema etkisi](../schema-inventory-impact-2026-10-22.md) güncel resmî kaynaklarla planı tamamlar. Kod, URL, kaynak içerik veya JSON-LD değiştirilmedi.

@@ -577,6 +577,13 @@
   "notes": [
     "No runtime coverage percentage inferred.",
     "0 means absent from these two JSON files, not never observed; previous homepage evidence remains separate.",
-    "Current user deferred missing-target repairs; no deletion authorized."
-  ]
+    "Current user deferred missing-target repairs; no deletion authorized.",
+    "22.10 user clarification: source-first inventory; repeated component instances need not all be live-clicked. Source registration is distinct from runtime acceptance. External form pages remain inaccessible."
+  ],
+  "supplemental_browser_evidence": "browser-final-2026-10-22.json",
+  "supplemental_browser_states": 90,
+  "source_followup": "remaining-source-checks-2026-10-22.json",
+  "module_browser_states": 31,
+  "total_observation_records": 357,
+  "module_browser_evidence": "browser-modules-final-2026-10-22.json"
 }

@@ -110,3 +110,7 @@ Kullanıcı sitede hiç fiyat belirtilmediğini açıkladı. Yeni plan fiyat yay
 ## 22.10.2026 — Sayfa şablonu/blok planına ilerleme
 
 Kullanıcının “ok go” yanıtı, bilgi mimarisi taslağından sayfa şablonları ve ana sayfa içerik blokları planına ilerleme izni olarak işlendi. Bu yanıt deneme lead zorunluluğu, ticari kapsam, yeni referans bloğu veya tüm menü ayrıntıları için ayrı kesin karar sayılmadı. Kod ve entegrasyon yapılmaz; sonraki çıktı plan değerlendirmesine sunulur.
+
+## 22.10.2026 — Ana sayfa yerleşiminin geçici kabulü
+
+Kullanıcı bağımsız ana sayfa önizlemesini “şu an için uygun” buldu; daha sonra değişiklik yapılabileceğini belirtti. `docs/previews/homepage-wireframe/` içindeki mevcut bölüm sırası ve sunum, sonraki çalışmalara geçici yerleşim referansıdır. Bu karar nihai görsel tasarım, tam içerik paritesi, ticari iddialar, form zorunluluğu, PRD/faz kapanışı veya üretim entegrasyonu onayı değildir. Bu tur önizleme değiştirilmedi. Sıradaki öneri: kabul edilen yerleşimin tasarım sistemi bileşenleriyle eşlemesini planlamak; yeni uygulama çalışması için kullanıcı yönlendirmesini beklemek.

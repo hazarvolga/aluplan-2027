@@ -114,3 +114,7 @@ Uygulama öncesi akış kabul örnekleri:
 3. Eğitim arşivini formsuz izleme; gerçek webinar duyurusu varsa kendi kayıt yolu; özel eğitim için kısa değerlendirme talebi.
 
 Bu üç madde **öneridir**. Kullanıcı kabulü sonrası alanlar ve operasyon hedefleri kesinleştirilip mevcut araçlarla uygulanabilirlik/maliyet karşılaştırılır. Sonra somut form/URL geçiş haritası hazırlanır; eski hedefler kendiliğinden kaldırılmaz. Kullanıcının yalnız bu planı istemesi uygulama izni değildir.
+
+## 22.10.2026 — Form platformu karşılaştırması
+
+Kullanıcı niyete özel kısa girişler/ortak takibi mantıklı buldu ve Forms–Next.js karşılaştırmasını istedi. [Platform değerlendirmesi](form-platform-comparison.md) kurulum, lisans/altyapı, bakım, kayıt/teslimat, ölçüm ve schema etkisini aynı kapsamla karşılaştırır. Uzun vadeli aday Next.js + mevcut uygun operasyon hedefi; teknik bakım ayrılmayacaksa Forms daha sürdürülebilir alternatif. Bu bir seçim değildir. Tahmini iş yükleri planlama aralığıdır; mevcut Microsoft lisansı, connector hakları, takip hedefi ve kapasite bilinmeden kesin ücret yok. Yeni CRM/Forms'a gizli POST/uygulama kurulumu önerilmiyor. Sıradaki adım mevcut haklar, takip hedefi ve bakım sorumluluğuyla platform seçimini netleştirmek. Kod, canlı form veya JSON-LD değiştirilmedi.

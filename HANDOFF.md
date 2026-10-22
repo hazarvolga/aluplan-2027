@@ -84,8 +84,8 @@
 ## Açık sorular ve onay bekleyen konular
 - Segmentlerin ticari önceliği ve karar vericiler.
 - Tek birincil dönüşüm: teklif/deneme; Microsoft Forms aynen mi kalacak? Şimdilik korunur.
-- Marka kılavuzu palet/font/logo/slogan onayı; ALLPLAN üretici kullanım kuralları ve dosya bazında izinler; title/hero/sosyal kimlik onayı.
-- Kullanıcı gözleminde 14 gün, kaynakta bazı yerlerde 30 gün deneme. İçerik değişmeden çelişki korunur, dayanak ve onay gerekir.
+- Antrasit koyu tema onaylı; marka kılavuzunun kalan açık tema/font/logo/slogan kararları; ALLPLAN üretici kullanım kuralları ve dosya bazında izinler; title/hero/sosyal kimlik onayı.
+- 21 Ekim kontrolünde canlı CTA 14 gün; kaynakta kullanılmayan 30 gün prop'u bulundu. Bu, canlıda 30 gün görüldüğü anlamına gelmez; taşıma ve yayın öncesi güncellik doğrulaması gerekir.
 - PRD henüz yazılmadı; bu sorular Faz 3 Açık Sorular bölümüne taşınacak. Yeni tasarımı bu cevaplar varsayılarak kurma.
 
 ## Bilinen sorunlar ve riskler
@@ -98,9 +98,9 @@
 - Marka kılavuzunun üretici izinleri hakkındaki ifadeleri resmî izin belgesi yerine geçmez; benzerlik kontrolü henüz yapılmadı.
 
 ## Sıradaki adım
-Hizmet matrisini kullanıcıyla değerlendir; Eğitim kapsamı ve destek kanallarının görev ayrımı için eksik işletim bilgilerini tamamla.
+`docs/phase-closure-gates.md` D01–D03 için hedefli envanter kapanış çalışmasını kullanıcıya sun; onaydan sonra kalan dinamik içerik, medya ve hedef farklarını tamamla. Faz geçişi yapma.
 
-Paralel bekleyen iş: Claude kullanım sınırı sonrası kalan düzeltmeleri tamamlayıp v3 ZIP'i ürettiğinde yeni paketi `docs/design-system-package-review.md` bulgularına göre yeniden kontrol et. Henüz entegrasyon yapma. Faz 0 kapanışı ve strateji/PRD onayları ayrıca bekliyor.
+Claude v3 indirildi ve ayrı antrasit önizleme kullanıcı tarafından uygun bulundu. Teknik entegrasyon kabulü değildir; aşağıdaki eski Claude durum kayıtları tarihsel notlardır.
 
 ## Claude Design paket incelemesi — 21.10.2026
 - Son tarayıcı kontrolünde Claude kullanım sınırında durmuş; v3 ZIP henüz üretilmemiş. Yeni indirme veya yeniden paket kabulü yapılmadı. Kısmi düzeltme beyanları ve kalan işler inceleme raporunun son bölümünde kayıtlı; bunlar bağımsız doğrulama değildir.
@@ -164,3 +164,7 @@ Kullanıcı Teams üzerinden desteğin ve ayrı ticket sisteminin çalıştığ�
 ## 22.10.2026 — Antrasit kabulü ve schema son kontrol
 
 Kullanıcı antrasit temayı uygun buldu; schema skilliyle ürün/paket/sürüm ve Eğitim/Destek ilişkilerinin son belge kontrolünü istedi. `docs/schema-final-review-2026-10-22.md` (proje köküne göre) güncel resmî kaynakları, karar matrisini ve eksikleri içerir. Tek Eğitim, tek destek hizmeti/iki kanal, Course list–Course Info ayrımı netleştirildi; eski ayrı özel eğitim aday notu kaldırıldı. Fiyat/yorum, TR lisans kapsamı, müşteri destek giriş URL'si ve hizmet koşulları açık. Kod/schema/site/tema değiştirilmedi; Rich Results Test ve URL Inspection yapılmadı. Sıradaki adım raporun kullanıcı değerlendirmesi ve uygulama öncesi kanıt açıklarının kapanmasıdır.
+
+## 22.10.2026 — Üç eşikli kapanış tablosu
+
+`docs/phase-closure-gates.md` tasarım (D01–D09), uygulama (U01–U08) ve yayın (Y01–Y07) öncesi açıkları kanıt, sorumlu rol, ekibin karar yetkisi ve kapanış ölçütleriyle toplar. Schema U05–U07/Y02 ve ticari kanıt Y05 içinde izlenir. Rol sahipleri öneridir, kişi ataması yapılmadı. Yeni tarama/test, kod, JSON-LD veya entegrasyon yok; Faz 0 tamamlandı sayılmaz. Eski sıradaki adım ve 14/30 gün notu güncel kanıtla düzeltildi.

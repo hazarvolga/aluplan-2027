@@ -288,3 +288,15 @@ Kullanıcı aşama 1 kompozisyon/turuncu yönünü `uyguun` ile onayladı. Ayrı
 Kontroller: 6/6 test, TypeScript/production build, 282 kontrast çiftinde 0 hata; fonts58.728bayt; masaüstü ve390CSSpx yatay taşma0; native details JS kapalı çalıştı; reduced-motion scroll auto/animation none; font semantic override runtime doğrulandı; konsol0hata/uyarı. Kod incelemesi semantic font bypass/root scope ve accessible heading/motion uyarılarını kapattı, onaylandı. Kanıt `architectural-sheet-concept/evidence/verification.json` ve `components-preview.png`.
 
 Açık performans kabulü: framework dahil ilk HTML'nin harici script gzip toplamı179.860bayt; <90KB hedefi sağlanmadı (inline hariç alt sınır, gerçek transfer ölçümü değildir). Lighthouse/CWV/INP ve turuncu oranı ölçülmedi. Ana sayfa/ürün detayı/tablar/schema henüz yok. Promptun her adım sonu değerlendirme kuralına göre sıradaki adım kullanıcı bileşen yönünü değerlendirdikten sonra aşama3 ana sayfa örneğidir. Mevcut ana site entegrasyonu veya yayın yapılmadı.
+
+## 22.10.2026 — Kullanıcı isteğiyle ara / tasarım değerlendirmesi açık
+
+**Güncel durum: çalışma duraklatıldı.** Kullanıcı mimari pafta önizlemesinin tasarım olarak içine sinmediğini, eksik bir şeyler hissettiğini belirtti ve ara verilmesini istedi. Bileşenlerin teknik kontrolü görsel tasarım kabulü değildir. Önceki kompozisyon onayı son render'ın kabul edildiği şeklinde yorumlanmaz. Ana sayfa/ürün detayına otomatik ilerleme.
+
+Son uygulama commit'i `0659d86` (mimari pafta bileşen sistemi); önceki antrasit ana sayfa `a1f0025`, yeni konsept brifi `a72876b`. İki alternatif de korunur: eski önizleme http://127.0.0.1:8770/docs/previews/anthracite-demo/ui_kits/homepage/?v=6 ; ayrı pafta kataloğu http://127.0.0.1:8771/ . Portlar yerel süreçlere bağlıdır; sonraki oturumda erişim yeniden doğrulanır. Uygulama kurulumu/komutları `architectural-sheet-concept/README.md` içindedir.
+
+Son doğrulama: 6/6 test, TypeScript ve build geçti; 282 kontrast çifti, mobil/JS kapalı/native details/reduced-motion kontrolleri kayıtlı. Bu ara turunda yalnız dokümantasyon değişti, testler yeniden çalıştırılmadı. Açık teknik konu: framework dahil ilk harici JS gzip179.860bayt,90KB hedefinin üstünde; Lighthouse/CWV ölçülmedi. Görsel yön kabul bekliyor; eksiklikler kullanıcı tarafından henüz tek tek tarif edilmedi.
+
+Git dışında kullanıcı ZIP'i, `Aluplan Design System/`, `docs/previews/anthracite-demo/`, `docs/reviews/design-v3-initial/` ve `docs/reviews/design-v3-refreshed/` korunur. Önceki karar gereği bu paketler commit'e eklenmedi; antrasit değişiklikleri yeniden üretilebilir patch'te, yeni pafta kodu ve varlıkları ise `0659d86` içinde takip edilir. Kaynak2026/canlı site değiştirilmedi; push veya deploy yapılmadı.
+
+**Güvenli devam sırası:** başlangıç belgelerini oku → Git ve mevcut önizlemeleri doğrula → kullanıcının tasarımda eksik bulduğu noktaları ve beğendiği referansları konuş → görsel yönü yeniden netleştir → ancak sonra yeni tasarım revizyonuna ilerle. Sıradaki adım kod yazmak değil, tasarım yönünü kullanıcıyla yeniden değerlendirmektir.

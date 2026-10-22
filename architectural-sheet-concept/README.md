@@ -94,3 +94,7 @@ pnpm start
 Önceki önizleme korunur. Bu bileşen adımının ardından, kullanıcı değerlendirmesiyle gerçek Aluplan ana sayfa kompozisyonuna geçilir.
 
 Teknik kaynak: https://nextjs.org/docs/app/getting-started/installation (22.10.2026 erişimi).
+
+## Ara kararı — 22.10.2026
+
+Kullanıcı son görsel tasarımın içine sinmediğini belirtti; çalışma isteğiyle duraklatıldı. Teknik bileşen kontrolü görsel kabul değildir. Ana sayfa ve ürün detayına geçilmez. Devamda önce eksik hissedilen görsel nitelikler ve referanslar konuşularak yön yeniden netleştirilir; mevcut örnek korunur.

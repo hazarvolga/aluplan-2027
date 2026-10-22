@@ -103,3 +103,7 @@ Sıradaki önerilen çıktı: bu görev tablosundan türeyen ürün/paket/sürü
 ## 21.10.2026 hizmet alanı ve şablon eki
 
 Kullanıcının öncelik notuyla ana sayfa Profesyonel Hizmetler alanı ayrı değerlendirilir: [konumlandırma notu](professional-services-positioning.md). Üç sekme ve 20 hedef korunur; bölüm yalnız ürün sayfası uzantısı değildir. [Kayıt sözleşmesi](content-record-contract.md) hizmet/portal/kaynak ayrımını; [iki gerçek örnek](content-change-examples.md) ticari doğrulama ve editoryal karar farkını gösterir. İçerik işlemleri uygulanmadı.
+
+## 22.10.2026 — Kalıcı bilgi mimarisi taslağı
+
+[Menü, sayfa görevleri ve kullanıcı yolları](site-information-architecture.md) hazırlandı. Öneri: altı ana menüyü koruyup Eğitim ve Destek için görünür yardımcı giriş; kalıcı ürün/paket ile yıllık yenilikleri ayırmak; fiyat yayımlamadan kapsam karşılaştırması ve teklif yolu. 131 satırlık route eşlemesi özgün URL kanıtını korur; eksik hedefler ertelenen karar listesinde kalır. Eğitim önceki “takvim” adaylarından farklı olarak dönemsel webinar, video arşivi ve eğitim talebi üzerinden planlanır. Bu hedefli analiz Faz0/1 kapanışı veya uygulama onayı değildir. Yeni canlı tarama, kod, JSON-LD ya da tasarım entegrasyonu yok. Sıradaki adım: navigasyon ve kullanıcı yollarını kullanıcı değerlendirmesine sunmak; onay sonrası sayfa şablonu/blok gereksinimlerini hazırlamak.

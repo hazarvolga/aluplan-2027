@@ -102,3 +102,7 @@ Kullanıcı yeni site için tek teklif formu kullanma kararının henüz verilme
 ## 22.10.2026 — Next.js yönü kabul edildi; seçenek kapsamı korunuyor
 
 Kullanıcı Next.js içinde kısa formlarla ilerlemeyi onayladı; henüz kod yazılmayacak. Önceki platform seçimi açık notları tarihsel olarak aşıldı. [Alan, takip ve schema sözleşmesi](../request-forms-contract.md) güncel plandır. Kullanıcı mevcut formun üç kategorisi altında çok sayıda seçenek olduğunu hatırlattı: üç çekirdek niyet ürün/eklenti seçeneklerini azaltmaz veya ekran sayısını dondurmaz. Bölüm1–14kapsam eşlemesi eklendi; öğrenci lisansı ve mevcut müşteri eklenti temini ayrı alt yol olarak korunur. Çoklu ürün/modül ilgisi kaybolmaz. Deneme formunun zorunluluğu, gerçek takip hedefi/sorumluları ve hukuki metinler henüz açık; yeni CRM veya site/form/schema uygulaması yok.
+
+## 22.10.2026 — Fiyat yayımlamama ve bilgi mimarisi çalışması
+
+Kullanıcı sitede hiç fiyat belirtilmediğini açıkladı. Yeni plan fiyat yayımlamayı veya schema için sıfır fiyat üretmeyi gerektirmez; paket karşılaştırması işlev/kapsam odaklı, fiyat bilgisi teklif sürecindedir. Kullanıcı menü/sayfa görevleri, URL eşlemesi ve müşteri yolları taslağının hazırlanmasını kabul etti. [Bilgi mimarisi](../site-information-architecture.md) öneridir; menü, sayfa, form, URL veya kod değişikliği onayı değildir.

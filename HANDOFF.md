@@ -232,3 +232,7 @@ Kullanıcı Next.js içinde kısa formlarla ilerlemeyi onayladı; henüz kod yaz
 ## 22.10.2026 — Yeni form sözleşmesi schema kontrolü
 
 Schema v2.0.0 skill okundu, Google ürün varyantları/yazılım/ürün snippet/kurs/genel kurallar ve softwareVersion yeniden doğrulandı. docs/form-schema-review-2026-10-22.md raporu: doğrudan ihlal yok; otomatik ProductGroup, kaynak sürümü–açık sürüm tercihi ve Eğitim hizmeti–arşiv sayfa amacı ayrımı netleştirildi. docs/request-forms-contract.md açıklamaları güncellendi. Fiyat/yorum olmadan rich result uygunluğu yok; semantik tür geçerliliği ayrı. Kod, schema veya canlı form değişmedi; Validator/RRT/Search Console çalıştırılmadı. Önceki operasyon kararları açık; bu inceleme yeni ticari karar gerektirmiyor.
+
+## 22.10.2026 — Kalıcı bilgi mimarisi taslağı
+
+[Menü, sayfa görevleri ve kullanıcı yolları](docs/site-information-architecture.md) hazırlandı. Öneri: altı ana menüyü koruyup Eğitim ve Destek için görünür yardımcı giriş; kalıcı ürün/paket ile yıllık yenilikleri ayırmak; fiyat yayımlamadan kapsam karşılaştırması ve teklif yolu. 131 satırlık route eşlemesi özgün URL kanıtını korur; eksik hedefler ertelenen karar listesinde kalır. Eğitim önceki “takvim” adaylarından farklı olarak dönemsel webinar, video arşivi ve eğitim talebi üzerinden planlanır. Bu hedefli analiz Faz0/1 kapanışı veya uygulama onayı değildir. Yeni canlı tarama, kod, JSON-LD ya da tasarım entegrasyonu yok. Sıradaki adım: navigasyon ve kullanıcı yollarını kullanıcı değerlendirmesine sunmak; onay sonrası sayfa şablonu/blok gereksinimlerini hazırlamak.

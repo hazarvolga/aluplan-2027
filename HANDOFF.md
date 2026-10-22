@@ -260,3 +260,9 @@ Kullanıcının “ok go” talebiyle `docs/previews/anthracite-demo/ui_kits/hom
 ## 22.10.2026 — Header eylemleri sadeleştirildi
 
 Kullanıcı `Teklif İste` etiketini kabul etti; teklif ve ücretsiz deneme zaten hero'da bulunduğu için ikisinin de header'dan kaldırılmasını istedi. Ayrı tasarım sistemi önizlemesi buna göre güncellendi: header gezinme odaklı, hero `Teklif İste` + `Ücretsiz Deneme`. Canlı site/Next.js/form hedefi değiştirilmedi. Sıradaki adım güncel önizlemenin görsel kontrolü ve kullanıcı değerlendirmesi.
+
+## 22.10.2026 — Keskin kart dili ve padding normalizasyonu
+
+Kullanıcı yuvarlatılmış kartları reddetti ve önceki keskin, ince çizgili kart dilini seçti. Önizlemede `aluplan` semantic tema tokenı `radius.surface = 0` yapıldı; ürün, çözüm, hizmet, rol ve hero medya panelleri 0 px köşe ve mevcut 1 px sınır tokenını kullanır. Kontroller 4 px, rozetler kendi pill anatomisinde kalır. Yoğunluk semantic tokenlardan 16 px kompakt / 24 px standart / 32 px büyük panel olarak üretilir; dar görünüm 16 px'tir. Ürün kartları aynı satırda eşit yüksekliğe bağlandı.
+
+İlk kod incelemesi primitive tokenların önizleme CSS'inde doğrudan kullanılmasını yüksek öncelikli buldu; değerler `tokens/tokens.json` içindeki tema semantic override'larına taşındı ve engel kapandı. Son incelemedeki 6/8 px uyarısı, kullanıcının daha sonraki açık 0 px tercihiyle geçersizdir. `build-tokens --check`, 28/28 token, 13/13 içerik ve 188/188 kontrast kontrolü geçti; patch temiz kaynakta `git apply --check` ile doğrulandı. Tarayıcıda 0/16, 0/24 ve 0/32 ölçüleri ile 228/228/228 ürün kartı yüksekliği doğrulandı. İçerik, URL, schema, form, canlı site ve Next.js değiştirilmedi. Sıradaki adım bu keskin kart dilinin kullanıcı görsel değerlendirmesi; kabul edilmeden H05/H07/H08 ayrıntılarına veya entegrasyona geçme.

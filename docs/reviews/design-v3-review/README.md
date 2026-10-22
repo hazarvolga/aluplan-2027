@@ -16,7 +16,7 @@ Kaynak kopya: `../design-v3-refreshed/Aluplan Design System/`.
 Önizleme: `../../previews/anthracite-demo/` (yerel türetilmiş paket).
 URL: http://127.0.0.1:8769/ui_kits/website/index.html?theme=aluplan&mode=dark#product
 
-Tam değişiklik `anthracite-preview.patch` içinde. Yeniden üretim: ZIP'i ayrı klasöre aç, kökünde `git apply` ile bu patch'i uygula; `node scripts/build-tokens.mjs --check`, `node scripts/token-tests.mjs`, `node scripts/content-tests.mjs` çalıştır. HTTP sunucusunu paket kökünde başlat. Prototip React/Babel CDN kaynaklarına ihtiyaç duyar; çevrimdışı/Next.js uygulaması değildir. Yerel ZIP ve açılmış paketler Git'e eklenmedi; delta ve kanıtlar commit edildi.
+Tam değişiklik `anthracite-preview.patch` içinde. Patch artık antrasit renk deltasına ek olarak kullanıcının onayladığı keskin `radius.surface = 0`, 16/24/32 px semantic yoğunluk düzenini ve ayrı ana sayfa önizleme dosyalarını içerir. Yeniden üretim: ZIP'i ayrı klasöre aç, kökünde `git apply` ile bu patch'i uygula; `node scripts/build-tokens.mjs`, `node scripts/build-tokens.mjs --check`, `node scripts/token-tests.mjs`, `node scripts/content-tests.mjs` çalıştır. HTTP sunucusunu proje kökünde başlat; ana sayfa önizlemesi proje içindeki `docs/previews/homepage-wireframe/data.js` verisini okur. Prototip React/Babel CDN kaynaklarına ihtiyaç duyar; çevrimdışı/Next.js uygulaması değildir. Yerel ZIP ve açılmış paketler Git'e eklenmedi; delta ve kanıtlar commit edildi.
 
 ## Logo
 
@@ -28,7 +28,7 @@ Paket içindeki uploads orijinali ve assets/logo/aluplan-logo-white.svg bayt eş
 
 ## Doğrulama ve sınırlar
 
-- Önizleme build/check: geçti, 0 hata.
+- Önizleme build/check: geçti, 0 hata; güncel patch temiz kaynak kopyasına `git apply --check` ile doğrulandı.
 - Token testleri: 28/28; içerik: 13/13; kontrast: 188 kontrol, 0 başarısız.
 - Ayrı kaynak incelemesi: kapsamla uyumlu, engelleyici bulgu yok.
 - IAB tarayıcı önizlemesi açıldı; koyu ana zemin, header, logo ve görünen kartlar görsel kontrol edildi. Görsel: `../../previews/anthracite-demo-preview.png`.

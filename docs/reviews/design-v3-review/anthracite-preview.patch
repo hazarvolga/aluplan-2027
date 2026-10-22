@@ -1,7 +1,9 @@
+diff --git a/tokens/build/CONTRAST-REPORT.md b/tokens/build/CONTRAST-REPORT.md
+index 7e65e24..7872b35 100644
 --- a/tokens/build/CONTRAST-REPORT.md
 +++ b/tokens/build/CONTRAST-REPORT.md
-@@ -58,53 +58,53 @@
- 
+@@ -58,53 +58,53 @@ Computed from tokens/tokens.json with the WCAG 2.x relative-luminance formula. A
+
  | Foreground | Background | Values | Ratio | Min | Result |
  |---|---|---|---|---|---|
 -| text.primary | surface.page | #F5F7FA / #0A0E27 | 17.71 | 4.5 | pass (measured) |
@@ -88,9 +90,11 @@
  | action.primary.bg | accent.bg | #2DD4BF / #0B2E2C | 7.83 | 3 | pass (measured) |
 -| text.primary | action.disabled.bg | #F5F7FA / #222B55 | 12.67 | — | info: informational |
 +| text.primary | action.disabled.bg | #F5F7FA / #303436 | 11.72 | — | info: informational |
- 
+
  ## field / light
- 
+
+diff --git a/tokens/build/breakpoints.mjs b/tokens/build/breakpoints.mjs
+index c4bd797..fc4ef06 100644
 --- a/tokens/build/breakpoints.mjs
 +++ b/tokens/build/breakpoints.mjs
 @@ -1,3 +1,3 @@
@@ -99,6 +103,8 @@
 -const mq = Object.fromEntries(Object.entries(breakpoint).map(([k, v]) => [k, `(min-width: ${v})`]));
 +export const breakpoint = {"sm":"30rem","md":"48rem","lg":"64rem","xl":"80rem"};
 +export const mq = Object.fromEntries(Object.entries(breakpoint).map(([k, v]) => [k, `(min-width: ${v})`]));
+diff --git a/tokens/build/contrast-report.json b/tokens/build/contrast-report.json
+index 16f8325..c5a2dbe 100644
 --- a/tokens/build/contrast-report.json
 +++ b/tokens/build/contrast-report.json
 @@ -616,9 +616,9 @@
@@ -585,8 +591,67 @@
    "min": 0,
    "pass": null,
    "note": "informational"
+diff --git a/tokens/build/tokens.resolved.json b/tokens/build/tokens.resolved.json
+index 4167cf7..f15e588 100644
 --- a/tokens/build/tokens.resolved.json
 +++ b/tokens/build/tokens.resolved.json
+@@ -35,8 +35,8 @@
+    "--type-mono-size": "0.75rem",
+    "--type-mono-line-height": "1.5",
+    "--space-inset-xs": "0.5rem",
+-   "--space-inset-sm": "0.75rem",
+-   "--space-inset-md": "1.25rem",
++   "--space-inset-sm": "1rem",
++   "--space-inset-md": "1.5rem",
+    "--space-inset-lg": "2rem",
+    "--space-stack-xs": "0.25rem",
+    "--space-stack-sm": "0.5rem",
+@@ -57,7 +57,7 @@
+    "--control-gap": "0.5rem",
+    "--target-min": "2.75rem",
+    "--radius-control": "4px",
+-   "--radius-surface": "6px",
++   "--radius-surface": "0",
+    "--radius-badge": "2px",
+    "--radius-dialog": "8px",
+    "--radius-round": "999px",
+@@ -191,13 +191,13 @@
+    "--input-border-hover": "#0A0E27",
+    "--input-border-invalid": "#B42318",
+    "--input-placeholder": "#566073",
+-   "--input-padding-x": "0.75rem",
++   "--input-padding-x": "1rem",
+    "--card-bg": "#FFFFFF",
+    "--card-border": "#D3D9E2",
+-   "--card-radius": "6px",
++   "--card-radius": "0",
+    "--card-shadow": "0 1px 2px rgba(10,14,39,0.08)",
+    "--card-shadow-hover": "0 1px 3px rgba(10,14,39,0.10), 0 1px 2px rgba(10,14,39,0.06)",
+-   "--card-padding": "1.25rem",
++   "--card-padding": "1.5rem",
+    "--badge-radius": "2px",
+    "--badge-font-family": "'IBM Plex Mono', ui-monospace, 'Cascadia Mono', monospace",
+    "--dialog-bg": "#FFFFFF",
+@@ -264,8 +264,8 @@
+    "--type-mono-size": "0.75rem",
+    "--type-mono-line-height": "1.5",
+    "--space-inset-xs": "0.5rem",
+-   "--space-inset-sm": "0.75rem",
+-   "--space-inset-md": "1.25rem",
++   "--space-inset-sm": "1rem",
++   "--space-inset-md": "1.5rem",
+    "--space-inset-lg": "2rem",
+    "--space-stack-xs": "0.25rem",
+    "--space-stack-sm": "0.5rem",
+@@ -286,7 +286,7 @@
+    "--control-gap": "0.5rem",
+    "--target-min": "2.75rem",
+    "--radius-control": "4px",
+-   "--radius-surface": "6px",
++   "--radius-surface": "0",
+    "--radius-badge": "2px",
+    "--radius-dialog": "8px",
+    "--radius-round": "999px",
 @@ -336,49 +336,49 @@
     "--layout-meta-column": "10rem",
     "--layout-tab-max": "20rem",
@@ -682,15 +747,18 @@
     "--input-border-hover": "#D3D9E2",
     "--input-border-invalid": "#FDA29B",
     "--input-placeholder": "#B8C0CC",
-    "--input-padding-x": "0.75rem",
+-   "--input-padding-x": "0.75rem",
 -   "--card-bg": "#131A3A",
 -   "--card-border": "#333D6B",
+-   "--card-radius": "6px",
++   "--input-padding-x": "1rem",
 +   "--card-bg": "#202324",
 +   "--card-border": "#414749",
-    "--card-radius": "6px",
++   "--card-radius": "0",
     "--card-shadow": "0 1px 2px rgba(10,14,39,0.08)",
     "--card-shadow-hover": "0 1px 3px rgba(10,14,39,0.10), 0 1px 2px rgba(10,14,39,0.06)",
-    "--card-padding": "1.25rem",
+-   "--card-padding": "1.25rem",
++   "--card-padding": "1.5rem",
     "--badge-radius": "2px",
     "--badge-font-family": "'IBM Plex Mono', ui-monospace, 'Cascadia Mono', monospace",
 -   "--dialog-bg": "#1A2247",
@@ -719,6 +787,8 @@
     "--comparison-table-min": "36rem",
     "--comparison-label-min": "11rem",
     "--comparison-label-max": "16rem",
+diff --git a/tokens/primitives.css b/tokens/primitives.css
+index f265b22..d5b9b01 100644
 --- a/tokens/primitives.css
 +++ b/tokens/primitives.css
 @@ -69,6 +69,12 @@
@@ -734,8 +804,50 @@
    --ref-font-family-manrope: 'Manrope', 'Segoe UI', system-ui, sans-serif;
    --ref-font-family-plex-sans: 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
    --ref-font-family-plex-mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', monospace;
+diff --git a/tokens/semantic.css b/tokens/semantic.css
+index 4baa738..cb5cd42 100644
 --- a/tokens/semantic.css
 +++ b/tokens/semantic.css
+@@ -35,8 +35,8 @@
+   --type-mono-size: var(--ref-font-size-75);
+   --type-mono-line-height: var(--ref-font-line-height-150); /* @kind other */
+   --space-inset-xs: var(--ref-space-2);
+-  --space-inset-sm: var(--ref-space-3);
+-  --space-inset-md: var(--ref-space-5);
++  --space-inset-sm: var(--ref-space-4);
++  --space-inset-md: var(--ref-space-6);
+   --space-inset-lg: var(--ref-space-8);
+   --space-stack-xs: var(--ref-space-1);
+   --space-stack-sm: var(--ref-space-2);
+@@ -57,7 +57,7 @@
+   --control-gap: var(--ref-space-2);
+   --target-min: var(--ref-size-11);
+   --radius-control: var(--ref-radius-4);
+-  --radius-surface: var(--ref-radius-6);
++  --radius-surface: var(--ref-radius-0);
+   --radius-badge: var(--ref-radius-2);
+   --radius-dialog: var(--ref-radius-8);
+   --radius-round: var(--ref-radius-full);
+@@ -199,8 +199,8 @@
+   --type-mono-size: var(--ref-font-size-75);
+   --type-mono-line-height: var(--ref-font-line-height-150); /* @kind other */
+   --space-inset-xs: var(--ref-space-2);
+-  --space-inset-sm: var(--ref-space-3);
+-  --space-inset-md: var(--ref-space-5);
++  --space-inset-sm: var(--ref-space-4);
++  --space-inset-md: var(--ref-space-6);
+   --space-inset-lg: var(--ref-space-8);
+   --space-stack-xs: var(--ref-space-1);
+   --space-stack-sm: var(--ref-space-2);
+@@ -221,7 +221,7 @@
+   --control-gap: var(--ref-space-2);
+   --target-min: var(--ref-size-11);
+   --radius-control: var(--ref-radius-4);
+-  --radius-surface: var(--ref-radius-6);
++  --radius-surface: var(--ref-radius-0);
+   --radius-badge: var(--ref-radius-2);
+   --radius-dialog: var(--ref-radius-8);
+   --radius-round: var(--ref-radius-full);
 @@ -331,49 +331,49 @@
    color-scheme: light;
  }
@@ -805,9 +917,11 @@
    --status-info-border: var(--ref-color-blueprint-400);
    --status-success-fg: var(--ref-color-green-300);
    --status-success-bg: var(--ref-color-green-900);
+diff --git a/tokens/tokens.json b/tokens/tokens.json
+index 9399321..5259924 100644
 --- a/tokens/tokens.json
 +++ b/tokens/tokens.json
-@@ -1,2468 +1,2488 @@
+@@ -1,2468 +1,2504 @@
  {
 - "$schema": "Aluplan token source. Single source of truth. Edit here, then run: node scripts/build-tokens.mjs",
 - "$meta": {
@@ -823,6 +937,236 @@
 -  "modes": [
 -   "light",
 -   "dark"
+-  ]
+- },
+- "primitive": {
+-  "color": {
+-   "white": {
+-    "$value": "#FFFFFF"
+-   },
+-   "ink": {
+-    "600": {
+-     "$value": "#4A5482"
+-    },
+-    "700": {
+-     "$value": "#333D6B"
+-    },
+-    "800": {
+-     "$value": "#222B55"
+-    },
+-    "850": {
+-     "$value": "#1A2247"
+-    },
+-    "900": {
+-     "$value": "#131A3A"
+-    },
+-    "950": {
+-     "$value": "#0A0E27"
+-    }
+-   },
+-   "silver": {
+-    "50": {
+-     "$value": "#F5F7FA"
+-    },
+-    "100": {
+-     "$value": "#E6EAF0"
+-    },
+-    "200": {
+-     "$value": "#D3D9E2"
+-    },
+-    "300": {
+-     "$value": "#B8C0CC"
+-    },
+-    "400": {
+-     "$value": "#8E97A6"
+-    },
+-    "500": {
+-     "$value": "#6B7588"
+-    },
+-    "600": {
+-     "$value": "#566073"
+-    },
+-    "700": {
+-     "$value": "#414A5C"
+-    }
+-   },
+-   "teal": {
+-    "50": {
+-     "$value": "#EEFBF8"
+-    },
+-    "300": {
+-     "$value": "#2DD4BF"
+-    },
+-    "400": {
+-     "$value": "#5EEAD4"
+-    },
+-    "700": {
+-     "$value": "#0F766E"
+-    },
+-    "800": {
+-     "$value": "#115E59"
+-    },
+-    "900": {
+-     "$value": "#0F4744"
+-    },
+-    "950": {
+-     "$value": "#0B2E2C"
+-    }
+-   },
+-   "blueprint": {
+-    "50": {
+-     "$value": "#EEF4FF"
+-    },
+-    "300": {
+-     "$value": "#93C5FD"
+-    },
+-    "400": {
+-     "$value": "#60A5FA"
+-    },
+-    "600": {
+-     "$value": "#2563EB"
+-    },
+-    "700": {
+-     "$value": "#1D4ED8"
+-    },
+-    "800": {
+-     "$value": "#1E40AF"
+-    }
+-   },
+-   "red": {
+-    "50": {
+-     "$value": "#FEF2F1"
+-    },
+-    "300": {
+-     "$value": "#FDA29B"
+-    },
+-    "700": {
+-     "$value": "#B42318"
+-    },
+-    "900": {
+-     "$value": "#4A140C"
+-    }
+-   },
+-   "amber": {
+-    "50": {
+-     "$value": "#FFFAEB"
+-    },
+-    "300": {
+-     "$value": "#FEC84B"
+-    },
+-    "700": {
+-     "$value": "#B54708"
+-    },
+-    "900": {
+-     "$value": "#3F1A07"
+-    }
+-   },
+-   "green": {
+-    "50": {
+-     "$value": "#ECFDF3"
+-    },
+-    "300": {
+-     "$value": "#75E0A7"
+-    },
+-    "700": {
+-     "$value": "#067647"
+-    },
+-    "900": {
+-     "$value": "#05301F"
+-    }
+-   },
+-   "stone": {
+-    "50": {
+-     "$value": "#FAF8F5"
+-    },
+-    "100": {
+-     "$value": "#F0EBE4"
+-    },
+-    "200": {
+-     "$value": "#E0D8CD"
+-    },
+-    "300": {
+-     "$value": "#C4BAAD"
+-    },
+-    "400": {
+-     "$value": "#A39A8E"
+-    },
+-    "500": {
+-     "$value": "#7D7468"
+-    },
+-    "600": {
+-     "$value": "#625A50"
+-    },
+-    "800": {
+-     "$value": "#2E2A25"
+-    },
+-    "900": {
+-     "$value": "#1F1C18"
+-    },
+-    "950": {
+-     "$value": "#151310"
+-    }
+-   },
+-   "moss": {
+-    "50": {
+-     "$value": "#EFF7F1"
+-    },
+-    "300": {
+-     "$value": "#86D19F"
+-    },
+-    "400": {
+-     "$value": "#A7E0B9"
+-    },
+-    "700": {
+-     "$value": "#2F6B45"
+-    },
+-    "800": {
+-     "$value": "#24553A"
+-    },
+-    "900": {
+-     "$value": "#1A3D2A"
+-    }
+-   },
+-   "rust": {
+-    "200": {
+-     "$value": "#F7C29B"
+-    },
+-    "300": {
+-     "$value": "#F2A36B"
+-    },
+-    "700": {
+-     "$value": "#A8461C"
+-    },
+-    "800": {
+-     "$value": "#8A3916"
+-    }
+-   },
+-   "alpha": {
+-    "ink06": {
+-     "$value": "rgba(10,14,39,0.06)"
+-    },
+-    "ink08": {
+-     "$value": "rgba(10,14,39,0.08)"
+-    },
+-    "ink10": {
+-     "$value": "rgba(10,14,39,0.10)"
+-    },
+-    "ink16": {
+-     "$value": "rgba(10,14,39,0.16)"
+-    },
+-    "ink24": {
+-     "$value": "rgba(10,14,39,0.24)"
+-    },
+-    "scrimLight": {
+-     "$value": "rgba(10,14,39,0.56)"
+-    },
+-    "scrimDark": {
+-     "$value": "rgba(0,0,0,0.72)"
+-    },
+-    "stoneScrim": {
+-     "$value": "rgba(21,19,16,0.6)"
+-    }
+-   }
 +  "$schema": "Aluplan token source. Single source of truth. Edit here, then run: node scripts/build-tokens.mjs",
 +  "$meta": {
 +    "name": "aluplan-design-system",
@@ -838,7 +1182,738 @@
 +      "light",
 +      "dark"
 +    ]
-+  },
+   },
+-  "font": {
+-   "family": {
+-    "manrope": {
+-     "$value": "'Manrope', 'Segoe UI', system-ui, sans-serif"
+-    },
+-    "plexSans": {
+-     "$value": "'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif"
+-    },
+-    "plexMono": {
+-     "$value": "'IBM Plex Mono', ui-monospace, 'Cascadia Mono', monospace"
+-    },
+-    "sourceSerif": {
+-     "$value": "'Source Serif 4', Georgia, 'Times New Roman', serif"
+-    },
+-    "publicSans": {
+-     "$value": "'Public Sans', 'Segoe UI', system-ui, sans-serif"
+-    }
+-   },
+-   "weight": {
+-    "400": {
+-     "$value": "400",
+-     "$kind": "other"
+-    },
+-    "500": {
+-     "$value": "500",
+-     "$kind": "other"
+-    },
+-    "600": {
+-     "$value": "600",
+-     "$kind": "other"
+-    },
+-    "700": {
+-     "$value": "700",
+-     "$kind": "other"
+-    },
+-    "800": {
+-     "$value": "800",
+-     "$kind": "other"
+-    }
+-   },
+-   "size": {
+-    "75": {
+-     "$value": "0.75rem"
+-    },
+-    "87": {
+-     "$value": "0.875rem"
+-    },
+-    "100": {
+-     "$value": "1rem"
+-    },
+-    "112": {
+-     "$value": "1.125rem"
+-    },
+-    "125": {
+-     "$value": "1.25rem"
+-    },
+-    "150": {
+-     "$value": "1.5rem"
+-    },
+-    "175": {
+-     "$value": "1.75rem"
+-    },
+-    "200": {
+-     "$value": "2rem"
+-    },
+-    "250": {
+-     "$value": "2.5rem"
+-    },
+-    "300": {
+-     "$value": "3rem"
+-    },
+-    "350": {
+-     "$value": "3.5rem"
+-    }
+-   },
+-   "lineHeight": {
+-    "110": {
+-     "$value": "1.1",
+-     "$kind": "other"
+-    },
+-    "120": {
+-     "$value": "1.2",
+-     "$kind": "other"
+-    },
+-    "130": {
+-     "$value": "1.3",
+-     "$kind": "other"
+-    },
+-    "150": {
+-     "$value": "1.5",
+-     "$kind": "other"
+-    },
+-    "160": {
+-     "$value": "1.6",
+-     "$kind": "other"
+-    }
+-   },
+-   "letterSpacing": {
+-    "tight": {
+-     "$value": "-0.02em"
+-    },
+-    "snug": {
+-     "$value": "-0.01em"
+-    },
+-    "normal": {
+-     "$value": "0em"
+-    },
+-    "wide": {
+-     "$value": "0.02em"
+-    }
+-   }
+-  },
+-  "space": {
+-   "0": {
+-    "$value": "0"
+-   },
+-   "1": {
+-    "$value": "0.25rem"
+-   },
+-   "2": {
+-    "$value": "0.5rem"
+-   },
+-   "3": {
+-    "$value": "0.75rem"
+-   },
+-   "4": {
+-    "$value": "1rem"
+-   },
+-   "5": {
+-    "$value": "1.25rem"
+-   },
+-   "6": {
+-    "$value": "1.5rem"
+-   },
+-   "8": {
+-    "$value": "2rem"
+-   },
+-   "10": {
+-    "$value": "2.5rem"
+-   },
+-   "12": {
+-    "$value": "3rem"
+-   },
+-   "16": {
+-    "$value": "4rem"
+-   },
+-   "20": {
+-    "$value": "5rem"
+-   }
+-  },
+-  "size": {
+-   "4": {
+-    "$value": "1rem"
+-   },
+-   "5": {
+-    "$value": "1.25rem"
+-   },
+-   "6": {
+-    "$value": "1.5rem"
+-   },
+-   "8": {
+-    "$value": "2rem"
+-   },
+-   "9": {
+-    "$value": "2.25rem"
+-   },
+-   "10": {
+-    "$value": "2.5rem"
+-   },
+-   "11": {
+-    "$value": "2.75rem"
+-   },
+-   "12": {
+-    "$value": "3rem"
+-   },
+-   "13": {
+-    "$value": "3.25rem"
+-   },
+-   "container640": {
+-    "$value": "40rem"
+-   },
+-   "container768": {
+-    "$value": "48rem"
+-   },
+-   "container1024": {
+-    "$value": "64rem"
+-   },
+-   "container1200": {
+-    "$value": "75rem"
+-   },
+-   "measure": {
+-    "10": {
+-     "$value": "10rem"
+-    },
+-    "11": {
+-     "$value": "11rem"
+-    },
+-    "12": {
+-     "$value": "12rem"
+-    },
+-    "13": {
+-     "$value": "13rem"
+-    },
+-    "14": {
+-     "$value": "14rem"
+-    },
+-    "16": {
+-     "$value": "16rem"
+-    },
+-    "20": {
+-     "$value": "20rem"
+-    },
+-    "24": {
+-     "$value": "24rem"
+-    },
+-    "32": {
+-     "$value": "32rem"
+-    },
+-    "36": {
+-     "$value": "36rem"
+-    }
+-   }
+-  },
+-  "radius": {
+-   "0": {
+-    "$value": "0"
+-   },
+-   "2": {
+-    "$value": "2px"
+-   },
+-   "4": {
+-    "$value": "4px"
+-   },
+-   "6": {
+-    "$value": "6px"
+-   },
+-   "8": {
+-    "$value": "8px"
+-   },
+-   "16": {
+-    "$value": "16px"
+-   },
+-   "20": {
+-    "$value": "20px"
+-   },
+-   "full": {
+-    "$value": "999px"
+-   }
+-  },
+-  "borderWidth": {
+-   "1": {
+-    "$value": "1px"
+-   },
+-   "2": {
+-    "$value": "2px"
+-   },
+-   "3": {
+-    "$value": "3px"
+-   }
+-  },
+-  "shadow": {
+-   "none": {
+-    "$value": "none"
+-   },
+-   "xs": {
+-    "$value": "0 1px 2px {primitive.color.alpha.ink08}"
+-   },
+-   "sm": {
+-    "$value": "0 1px 3px {primitive.color.alpha.ink10}, 0 1px 2px {primitive.color.alpha.ink06}"
+-   },
+-   "md": {
+-    "$value": "0 2px 4px {primitive.color.alpha.ink08}, 0 8px 20px {primitive.color.alpha.ink10}"
+-   },
+-   "lg": {
+-    "$value": "0 12px 32px {primitive.color.alpha.ink16}"
+-   },
+-   "xl": {
+-    "$value": "0 24px 56px {primitive.color.alpha.ink24}"
+-   }
+-  },
+-  "iconStroke": {
+-   "150": {
+-    "$value": "1.5",
+-    "$kind": "other"
+-   },
+-   "200": {
+-    "$value": "2",
+-    "$kind": "other"
+-   },
+-   "300": {
+-    "$value": "3",
+-    "$kind": "other"
+-   }
+-  },
+-  "duration": {
+-   "0": {
+-    "$value": "0ms",
+-    "$kind": "other"
+-   },
+-   "150": {
+-    "$value": "150ms",
+-    "$kind": "other"
+-   },
+-   "200": {
+-    "$value": "200ms",
+-    "$kind": "other"
+-   },
+-   "300": {
+-    "$value": "300ms",
+-    "$kind": "other"
+-   }
+-  },
+-  "easing": {
+-   "standard": {
+-    "$value": "cubic-bezier(0.2, 0, 0, 1)",
+-    "$kind": "other"
+-   },
+-   "decelerate": {
+-    "$value": "cubic-bezier(0, 0, 0, 1)",
+-    "$kind": "other"
+-   },
+-   "accelerate": {
+-    "$value": "cubic-bezier(0.3, 0, 1, 1)",
+-    "$kind": "other"
+-   }
+-  },
+-  "zIndex": {
+-   "0": {
+-    "$value": "0",
+-    "$kind": "other"
+-   },
+-   "100": {
+-    "$value": "100",
+-    "$kind": "other"
+-   },
+-   "200": {
+-    "$value": "200",
+-    "$kind": "other"
+-   },
+-   "300": {
+-    "$value": "300",
+-    "$kind": "other"
+-   },
+-   "400": {
+-    "$value": "400",
+-    "$kind": "other"
+-   }
+-  }
+- },
+- "semantic": {
+-  "font": {
+-   "heading": {
+-    "$value": "{primitive.font.family.manrope}"
+-   },
+-   "body": {
+-    "$value": "{primitive.font.family.plexSans}"
+-   },
+-   "mono": {
+-    "$value": "{primitive.font.family.plexMono}"
+-   },
+-   "weight": {
+-    "body": {
+-     "$value": "{primitive.font.weight.400}"
+-    },
+-    "label": {
+-     "$value": "{primitive.font.weight.500}"
+-    },
+-    "strong": {
+-     "$value": "{primitive.font.weight.600}"
+-    },
+-    "heading": {
+-     "$value": "{primitive.font.weight.700}"
+-    },
+-    "display": {
+-     "$value": "{primitive.font.weight.800}"
+-    }
+-   },
+-   "letterSpacing": {
+-    "heading": {
+-     "$value": "{primitive.font.letterSpacing.snug}"
+-    },
+-    "display": {
+-     "$value": "{primitive.font.letterSpacing.tight}"
+-    },
+-    "mono": {
+-     "$value": "{primitive.font.letterSpacing.normal}"
+-    }
+-   }
+-  },
+-  "type": {
+-   "display": {
+-    "size": {
+-     "$value": "clamp({primitive.font.size.250}, 1.6rem + 2.6vw, {primitive.font.size.350})",
+-     "$kind": "other"
+-    },
+-    "lineHeight": {
+-     "$value": "{primitive.font.lineHeight.110}",
+-     "$kind": "other"
+-    }
+-   },
+-   "h1": {
+-    "size": {
+-     "$value": "clamp({primitive.font.size.200}, 1.4rem + 1.8vw, {primitive.font.size.300})",
+-     "$kind": "other"
+-    },
+-    "lineHeight": {
+-     "$value": "{primitive.font.lineHeight.120}",
+-     "$kind": "other"
+-    }
+-   },
+-   "h2": {
+-    "size": {
+-     "$value": "clamp({primitive.font.size.150}, 1.2rem + 1.2vw, {primitive.font.size.200})",
+-     "$kind": "other"
+-    },
+-    "lineHeight": {
+-     "$value": "{primitive.font.lineHeight.120}",
+-     "$kind": "other"
+-    }
+-   },
+-   "h3": {
+-    "size": {
+-     "$value": "{primitive.font.size.125}"
+-    },
+-    "lineHeight": {
+-     "$value": "{primitive.font.lineHeight.130}",
+-     "$kind": "other"
+-    }
+-   },
+-   "h4": {
+-    "size": {
+-     "$value": "{primitive.font.size.112}"
+-    },
+-    "lineHeight": {
+-     "$value": "{primitive.font.lineHeight.130}",
+-     "$kind": "other"
+-    }
+-   },
+-   "bodyLg": {
+-    "size": {
+-     "$value": "{primitive.font.size.112}"
+-    },
+-    "lineHeight": {
+-     "$value": "{primitive.font.lineHeight.160}",
+-     "$kind": "other"
+-    }
+-   },
+-   "body": {
+-    "size": {
+-     "$value": "{primitive.font.size.100}"
+-    },
+-    "lineHeight": {
+-     "$value": "{primitive.font.lineHeight.160}",
+-     "$kind": "other"
+-    }
+-   },
+-   "bodySm": {
+-    "size": {
+-     "$value": "{primitive.font.size.87}"
+-    },
+-    "lineHeight": {
+-     "$value": "{primitive.font.lineHeight.150}",
+-     "$kind": "other"
+-    }
+-   },
+-   "label": {
+-    "size": {
+-     "$value": "{primitive.font.size.87}"
+-    },
+-    "lineHeight": {
+-     "$value": "{primitive.font.lineHeight.130}",
+-     "$kind": "other"
+-    }
+-   },
+-   "caption": {
+-    "size": {
+-     "$value": "{primitive.font.size.75}"
+-    },
+-    "lineHeight": {
+-     "$value": "{primitive.font.lineHeight.150}",
+-     "$kind": "other"
+-    }
+-   },
+-   "mono": {
+-    "size": {
+-     "$value": "{primitive.font.size.75}"
+-    },
+-    "lineHeight": {
+-     "$value": "{primitive.font.lineHeight.150}",
+-     "$kind": "other"
+-    }
+-   }
+-  },
+-  "space": {
+-   "inset": {
+-    "xs": {
+-     "$value": "{primitive.space.2}"
+-    },
+-    "sm": {
+-     "$value": "{primitive.space.3}"
+-    },
+-    "md": {
+-     "$value": "{primitive.space.5}"
+-    },
+-    "lg": {
+-     "$value": "{primitive.space.8}"
+-    }
+-   },
+-   "stack": {
+-    "xs": {
+-     "$value": "{primitive.space.1}"
+-    },
+-    "sm": {
+-     "$value": "{primitive.space.2}"
+-    },
+-    "md": {
+-     "$value": "{primitive.space.4}"
+-    },
+-    "lg": {
+-     "$value": "{primitive.space.6}"
+-    },
+-    "xl": {
+-     "$value": "{primitive.space.10}"
+-    }
+-   },
+-   "inline": {
+-    "xs": {
+-     "$value": "{primitive.space.1}"
+-    },
+-    "sm": {
+-     "$value": "{primitive.space.2}"
+-    },
+-    "md": {
+-     "$value": "{primitive.space.3}"
+-    },
+-    "lg": {
+-     "$value": "{primitive.space.5}"
+-    }
+-   },
+-   "section": {
+-    "$value": "{primitive.space.20}"
+-   }
+-  },
+-  "control": {
+-   "height": {
+-    "sm": {
+-     "$value": "{primitive.size.9}"
+-    },
+-    "md": {
+-     "$value": "{primitive.size.11}"
+-    },
+-    "lg": {
+-     "$value": "{primitive.size.13}"
+-    }
+-   },
+-   "paddingX": {
+-    "sm": {
+-     "$value": "{primitive.space.3}"
+-    },
+-    "md": {
+-     "$value": "{primitive.space.5}"
+-    },
+-    "lg": {
+-     "$value": "{primitive.space.6}"
+-    }
+-   },
+-   "gap": {
+-    "$value": "{primitive.space.2}"
+-   }
+-  },
+-  "target": {
+-   "min": {
+-    "$value": "{primitive.size.11}"
+-   }
+-  },
+-  "radius": {
+-   "control": {
+-    "$value": "{primitive.radius.4}"
+-   },
+-   "surface": {
+-    "$value": "{primitive.radius.6}"
+-   },
+-   "badge": {
+-    "$value": "{primitive.radius.2}"
+-   },
+-   "dialog": {
+-    "$value": "{primitive.radius.8}"
+-   },
+-   "round": {
+-    "$value": "{primitive.radius.full}"
+-   },
+-   "checkboxMax": {
+-    "$value": "{primitive.radius.4}",
+-    "$description": "Upper bound so checkboxes stay square in every theme (structural: must not read as radio)"
+-   }
+-  },
+-  "border": {
+-   "width": {
+-    "default": {
+-     "$value": "{primitive.borderWidth.1}"
+-    },
+-    "strong": {
+-     "$value": "{primitive.borderWidth.2}"
+-    }
+-   }
+-  },
+-  "elevation": {
+-   "flat": {
+-    "$value": "{primitive.shadow.none}"
+-   },
+-   "raised": {
+-    "$value": "{primitive.shadow.xs}"
+-   },
+-   "hover": {
+-    "$value": "{primitive.shadow.sm}"
+-   },
+-   "overlay": {
+-    "$value": "{primitive.shadow.lg}"
+-   }
+-  },
+-  "focus": {
+-   "width": {
+-    "$value": "{primitive.borderWidth.2}"
+-   },
+-   "offset": {
+-    "$value": "{primitive.borderWidth.2}"
+-   }
+-  },
+-  "icon": {
+-   "size": {
+-    "sm": {
+-     "$value": "{primitive.size.4}"
+-    },
+-    "md": {
+-     "$value": "{primitive.size.5}"
+-    },
+-    "lg": {
+-     "$value": "{primitive.size.6}"
+-    }
+-   },
+-   "stroke": {
+-    "$value": "{primitive.iconStroke.200}",
+-    "$kind": "other"
+-   },
+-   "strokeEmphasis": {
+-    "$value": "{primitive.iconStroke.300}",
+-    "$kind": "other",
+-    "$description": "Heavier stroke for small check marks inside filled controls"
+-   }
+-  },
+-  "motion": {
+-   "duration": {
+-    "fast": {
+-     "$value": "{primitive.duration.150}",
+-     "$kind": "other"
+-    },
+-    "base": {
+-     "$value": "{primitive.duration.200}",
+-     "$kind": "other"
+-    },
+-    "slow": {
+-     "$value": "{primitive.duration.300}",
+-     "$kind": "other"
+-    }
+-   },
+-   "easing": {
+-    "standard": {
+-     "$value": "{primitive.easing.standard}",
+-     "$kind": "other"
+-    },
+-    "enter": {
+-     "$value": "{primitive.easing.decelerate}",
+-     "$kind": "other"
+-    },
+-    "exit": {
+-     "$value": "{primitive.easing.accelerate}",
+-     "$kind": "other"
+-    }
+-   }
+-  },
+-  "z": {
+-   "base": {
+-    "$value": "{primitive.zIndex.0}",
+-    "$kind": "other"
+-   },
+-   "sticky": {
+-    "$value": "{primitive.zIndex.100}",
+-    "$kind": "other"
+-   },
+-   "dropdown": {
+-    "$value": "{primitive.zIndex.200}",
+-    "$kind": "other"
+-   },
+-   "overlay": {
+-    "$value": "{primitive.zIndex.300}",
+-    "$kind": "other"
+-   },
+-   "dialog": {
+-    "$value": "{primitive.zIndex.400}",
+-    "$kind": "other"
+-   }
+-  },
+-  "container": {
+-   "sm": {
+-    "$value": "{primitive.size.container640}"
+-   },
+-   "md": {
+-    "$value": "{primitive.size.container768}"
+-   },
+-   "lg": {
+-    "$value": "{primitive.size.container1024}"
+-   },
+-   "xl": {
+-    "$value": "{primitive.size.container1200}"
+-   },
+-   "prose": {
+-    "$value": "68ch"
+-   },
+-   "gutter": {
+-    "$value": "clamp({primitive.space.4}, 4vw, {primitive.space.8})"
+-   }
+-  },
+-  "grid": {
+-   "gap": {
+-    "$value": "{primitive.space.6}"
+-   }
+-  },
+-  "logo": {
+-   "height": {
+-    "sm": {
+-     "$value": "{primitive.size.6}"
 +  "primitive": {
 +    "color": {
 +      "white": {
@@ -1087,7 +2162,9 @@
 +          "$value": "#596164"
 +        }
 +      }
-+    },
+     },
+-    "md": {
+-     "$value": "{primitive.size.8}"
 +    "font": {
 +      "family": {
 +        "manrope": {
@@ -1199,44 +2276,145 @@
 +          "$value": "0.02em"
 +        }
 +      }
-+    },
+     },
+-    "lg": {
+-     "$value": "{primitive.size.12}"
+-    }
+-   }
+-  },
+-  "layout": {
+-   "cardMin": {
+-    "$value": "{primitive.size.measure.16}",
+-    "$description": "Minimum card width in auto-fill grids"
+-   },
+-   "columnMin": {
+-    "$value": "{primitive.size.measure.12}",
+-    "$description": "Minimum footer/link column width"
+-   },
+-   "optionMin": {
+-    "$value": "{primitive.size.measure.13}",
+-    "$description": "Minimum choice-card width (RoleSelector)"
+-   },
+-   "actionMin": {
+-    "$value": "{primitive.size.measure.14}",
+-    "$description": "Minimum width of a CTA item before wrapping"
+-   },
+-   "actionMax": {
+-    "$value": "{primitive.size.measure.24}",
+-    "$description": "Maximum width of a CTA item"
+-   },
+-   "labelMin": {
+-    "$value": "{primitive.size.measure.11}",
+-    "$description": "Minimum width of a table row-header column"
+-   },
+-   "labelMax": {
+-    "$value": "{primitive.size.measure.16}",
+-    "$description": "Maximum width of a table row-header column"
+-   },
+-   "tableMin": {
+-    "$value": "{primitive.size.measure.36}",
+-    "$description": "Minimum comparison table width before horizontal scroll"
+-   },
+-   "metaColumn": {
+-    "$value": "{primitive.size.measure.10}",
+-    "$description": "Fixed meta column (e.g. release note category) at md+"
+-   },
+-   "tabMax": {
+-    "$value": "{primitive.size.measure.20}",
+-    "$description": "Maximum single tab width before wrapping"
+-   },
+-   "dialogMax": {
+-    "$value": "{primitive.size.measure.32}",
+-    "$description": "Default dialog max width"
+-   }
+-  }
+- },
+- "themes": {
+-  "aluplan": {
+-   "$description": "Primary direction (draft). Ink / Silver / Teal / Blueprint. Manrope + IBM Plex.",
+-   "base": {},
+-   "modes": {
+-    "light": {
+-     "surface": {
+-      "page": {
+-       "$value": "{primitive.color.white}"
+-      },
+-      "default": {
+-       "$value": "{primitive.color.white}"
+-      },
+-      "subtle": {
+-       "$value": "{primitive.color.silver.50}"
+-      },
+-      "muted": {
+-       "$value": "{primitive.color.silver.100}"
 +    "space": {
 +      "0": {
 +        "$value": "0"
-+      },
+       },
+-      "raised": {
+-       "$value": "{primitive.color.white}"
 +      "1": {
 +        "$value": "0.25rem"
-+      },
+       },
+-      "brand": {
+-       "$value": "{primitive.color.ink.950}"
 +      "2": {
 +        "$value": "0.5rem"
-+      },
+       },
+-      "inverse": {
+-       "$value": "{primitive.color.ink.900}"
 +      "3": {
 +        "$value": "0.75rem"
-+      },
+       },
+-      "scrim": {
+-       "$value": "{primitive.color.alpha.scrimLight}"
+-      }
+-     },
+-     "text": {
+-      "primary": {
+-       "$value": "{primitive.color.ink.950}"
 +      "4": {
 +        "$value": "1rem"
-+      },
+       },
+-      "secondary": {
+-       "$value": "{primitive.color.silver.600}"
 +      "5": {
 +        "$value": "1.25rem"
-+      },
+       },
+-      "disabled": {
+-       "$value": "{primitive.color.silver.400}"
 +      "6": {
 +        "$value": "1.5rem"
-+      },
+       },
+-      "inverse": {
+-       "$value": "{primitive.color.silver.50}"
 +      "8": {
 +        "$value": "2rem"
-+      },
+       },
+-      "onBrand": {
+-       "$value": "{primitive.color.white}"
 +      "10": {
 +        "$value": "2.5rem"
-+      },
+       },
+-      "onBrandSecondary": {
+-       "$value": "{primitive.color.silver.300}"
 +      "12": {
 +        "$value": "3rem"
-+      },
+       },
+-      "link": {
+-       "$value": "{primitive.color.blueprint.600}"
 +      "16": {
 +        "$value": "4rem"
-+      },
+       },
+-      "linkHover": {
+-       "$value": "{primitive.color.blueprint.800}"
 +      "20": {
 +        "$value": "5rem"
-+      }
+       }
+-     },
+-     "border": {
+-      "subtle": {
+-       "$value": "{primitive.color.silver.100}"
 +    },
 +    "size": {
 +      "4": {
@@ -1314,119 +2492,427 @@
 +    "radius": {
 +      "0": {
 +        "$value": "0"
-+      },
+       },
+-      "default": {
+-       "$value": "{primitive.color.silver.200}"
 +      "2": {
 +        "$value": "2px"
-+      },
+       },
+-      "strong": {
+-       "$value": "{primitive.color.silver.500}"
 +      "4": {
 +        "$value": "4px"
-+      },
+       },
+-      "control": {
+-       "$value": "{primitive.color.silver.500}"
 +      "6": {
 +        "$value": "6px"
-+      },
+       },
+-      "controlHover": {
+-       "$value": "{primitive.color.ink.950}"
 +      "8": {
 +        "$value": "8px"
-+      },
+       },
+-      "onBrand": {
+-       "$value": "{primitive.color.ink.700}"
+-      }
+-     },
+-     "action": {
+-      "primary": {
+-       "bg": {
+-        "$value": "{primitive.color.teal.700}"
+-       },
+-       "bgHover": {
+-        "$value": "{primitive.color.teal.800}"
+-       },
+-       "bgActive": {
+-        "$value": "{primitive.color.teal.900}"
+-       },
+-       "fg": {
+-        "$value": "{primitive.color.white}"
+-       }
 +      "16": {
 +        "$value": "16px"
-+      },
+       },
+-      "secondary": {
+-       "fg": {
+-        "$value": "{primitive.color.ink.950}"
+-       },
+-       "border": {
+-        "$value": "{primitive.color.silver.500}"
+-       },
+-       "bgHover": {
+-        "$value": "{primitive.color.silver.50}"
+-       },
+-       "bgActive": {
+-        "$value": "{primitive.color.silver.100}"
+-       }
 +      "20": {
 +        "$value": "20px"
-+      },
+       },
+-      "ghost": {
+-       "fg": {
+-        "$value": "{primitive.color.ink.950}"
+-       },
+-       "bgHover": {
+-        "$value": "{primitive.color.silver.100}"
+-       },
+-       "bgActive": {
+-        "$value": "{primitive.color.silver.200}"
+-       }
+-      },
+-      "disabled": {
+-       "bg": {
+-        "$value": "{primitive.color.silver.100}"
+-       },
+-       "fg": {
+-        "$value": "{primitive.color.silver.500}"
+-       },
+-       "border": {
+-        "$value": "{primitive.color.silver.200}"
+-       }
+-      },
+-      "onBrand": {
+-       "fg": {
+-        "$value": "{primitive.color.white}"
+-       },
+-       "bgHover": {
+-        "$value": "{primitive.color.ink.800}"
+-       }
 +      "full": {
 +        "$value": "999px"
-+      }
+       }
+-     },
+-     "accent": {
+-      "fg": {
+-       "$value": "{primitive.color.teal.700}"
 +    },
 +    "borderWidth": {
 +      "1": {
 +        "$value": "1px"
-+      },
+       },
+-      "bg": {
+-       "$value": "{primitive.color.teal.50}"
 +      "2": {
 +        "$value": "2px"
-+      },
+       },
+-      "border": {
+-       "$value": "{primitive.color.teal.700}"
 +      "3": {
 +        "$value": "3px"
-+      }
-+    },
+       }
+-     },
+-     "status": {
+-      "info": {
+-       "fg": {
+-        "$value": "{primitive.color.blueprint.700}"
+-       },
+-       "bg": {
+-        "$value": "{primitive.color.blueprint.50}"
+-       },
+-       "border": {
+-        "$value": "{primitive.color.blueprint.600}"
+-       }
+-      },
+-      "success": {
+-       "fg": {
+-        "$value": "{primitive.color.green.700}"
+-       },
+-       "bg": {
+-        "$value": "{primitive.color.green.50}"
+-       },
+-       "border": {
+-        "$value": "{primitive.color.green.700}"
+-       }
+-      },
+-      "warning": {
+-       "fg": {
+-        "$value": "{primitive.color.amber.700}"
+-       },
+-       "bg": {
+-        "$value": "{primitive.color.amber.50}"
+-       },
+-       "border": {
+-        "$value": "{primitive.color.amber.700}"
+-       }
+-      },
+-      "danger": {
+-       "fg": {
+-        "$value": "{primitive.color.red.700}"
+-       },
+-       "bg": {
+-        "$value": "{primitive.color.red.50}"
+-       },
+-       "border": {
+-        "$value": "{primitive.color.red.700}"
+-       }
+-      }
+-     },
+-     "focus": {
+-      "ring": {
+-       "$value": "{primitive.color.blueprint.600}"
+-      },
+-      "ringOnBrand": {
+-       "$value": "{primitive.color.blueprint.400}"
+-      }
+-     }
+     },
+-    "dark": {
+-     "surface": {
+-      "page": {
+-       "$value": "{primitive.color.ink.950}"
+-      },
+-      "default": {
+-       "$value": "{primitive.color.ink.900}"
 +    "shadow": {
 +      "none": {
 +        "$value": "none"
-+      },
+       },
+-      "subtle": {
+-       "$value": "{primitive.color.ink.900}"
+-      },
+-      "muted": {
+-       "$value": "{primitive.color.ink.800}"
 +      "xs": {
 +        "$value": "0 1px 2px {primitive.color.alpha.ink08}"
-+      },
+       },
+-      "raised": {
+-       "$value": "{primitive.color.ink.850}"
 +      "sm": {
 +        "$value": "0 1px 3px {primitive.color.alpha.ink10}, 0 1px 2px {primitive.color.alpha.ink06}"
-+      },
+       },
+-      "brand": {
+-       "$value": "{primitive.color.ink.950}"
 +      "md": {
 +        "$value": "0 2px 4px {primitive.color.alpha.ink08}, 0 8px 20px {primitive.color.alpha.ink10}"
-+      },
+       },
+-      "inverse": {
+-       "$value": "{primitive.color.silver.50}"
 +      "lg": {
 +        "$value": "0 12px 32px {primitive.color.alpha.ink16}"
-+      },
+       },
+-      "scrim": {
+-       "$value": "{primitive.color.alpha.scrimDark}"
 +      "xl": {
 +        "$value": "0 24px 56px {primitive.color.alpha.ink24}"
-+      }
+       }
+-     },
+-     "text": {
+-      "primary": {
+-       "$value": "{primitive.color.silver.50}"
+-      },
+-      "secondary": {
+-       "$value": "{primitive.color.silver.300}"
+-      },
+-      "disabled": {
+-       "$value": "{primitive.color.silver.500}"
+-      },
+-      "inverse": {
+-       "$value": "{primitive.color.ink.950}"
+-      },
+-      "onBrand": {
+-       "$value": "{primitive.color.white}"
+-      },
+-      "onBrandSecondary": {
+-       "$value": "{primitive.color.silver.300}"
 +    },
 +    "iconStroke": {
 +      "150": {
 +        "$value": "1.5",
 +        "$kind": "other"
-+      },
+       },
+-      "link": {
+-       "$value": "{primitive.color.blueprint.400}"
 +      "200": {
 +        "$value": "2",
 +        "$kind": "other"
-+      },
+       },
+-      "linkHover": {
+-       "$value": "{primitive.color.blueprint.300}"
 +      "300": {
 +        "$value": "3",
 +        "$kind": "other"
-+      }
+       }
+-     },
+-     "border": {
+-      "subtle": {
+-       "$value": "{primitive.color.ink.800}"
+-      },
+-      "default": {
+-       "$value": "{primitive.color.ink.700}"
+-      },
+-      "strong": {
+-       "$value": "{primitive.color.silver.500}"
 +    },
 +    "duration": {
 +      "0": {
 +        "$value": "0ms",
 +        "$kind": "other"
-+      },
+       },
+-      "control": {
+-       "$value": "{primitive.color.silver.500}"
 +      "150": {
 +        "$value": "150ms",
 +        "$kind": "other"
-+      },
+       },
+-      "controlHover": {
+-       "$value": "{primitive.color.silver.200}"
 +      "200": {
 +        "$value": "200ms",
 +        "$kind": "other"
-+      },
+       },
+-      "onBrand": {
+-       "$value": "{primitive.color.ink.700}"
 +      "300": {
 +        "$value": "300ms",
 +        "$kind": "other"
-+      }
+       }
+-     },
+-     "action": {
+-      "primary": {
+-       "bg": {
+-        "$value": "{primitive.color.teal.300}"
+-       },
+-       "bgHover": {
+-        "$value": "{primitive.color.teal.400}"
+-       },
+-       "bgActive": {
+-        "$value": "{primitive.color.teal.400}"
+-       },
+-       "fg": {
+-        "$value": "{primitive.color.ink.950}"
+-       }
 +    },
 +    "easing": {
 +      "standard": {
 +        "$value": "cubic-bezier(0.2, 0, 0, 1)",
 +        "$kind": "other"
-+      },
+       },
+-      "secondary": {
+-       "fg": {
+-        "$value": "{primitive.color.silver.50}"
+-       },
+-       "border": {
+-        "$value": "{primitive.color.silver.500}"
+-       },
+-       "bgHover": {
+-        "$value": "{primitive.color.ink.800}"
+-       },
+-       "bgActive": {
+-        "$value": "{primitive.color.ink.700}"
+-       }
 +      "decelerate": {
 +        "$value": "cubic-bezier(0, 0, 0, 1)",
 +        "$kind": "other"
-+      },
+       },
+-      "ghost": {
+-       "fg": {
+-        "$value": "{primitive.color.silver.50}"
+-       },
+-       "bgHover": {
+-        "$value": "{primitive.color.ink.800}"
+-       },
+-       "bgActive": {
+-        "$value": "{primitive.color.ink.700}"
+-       }
+-      },
+-      "disabled": {
+-       "bg": {
+-        "$value": "{primitive.color.ink.800}"
+-       },
+-       "fg": {
+-        "$value": "{primitive.color.silver.400}"
+-       },
+-       "border": {
+-        "$value": "{primitive.color.ink.700}"
+-       }
+-      },
+-      "onBrand": {
+-       "fg": {
+-        "$value": "{primitive.color.white}"
+-       },
+-       "bgHover": {
+-        "$value": "{primitive.color.ink.800}"
+-       }
 +      "accelerate": {
 +        "$value": "cubic-bezier(0.3, 0, 1, 1)",
 +        "$kind": "other"
-+      }
+       }
+-     },
+-     "accent": {
+-      "fg": {
+-       "$value": "{primitive.color.teal.300}"
 +    },
 +    "zIndex": {
 +      "0": {
 +        "$value": "0",
 +        "$kind": "other"
-+      },
+       },
+-      "bg": {
+-       "$value": "{primitive.color.teal.950}"
 +      "100": {
 +        "$value": "100",
 +        "$kind": "other"
-+      },
+       },
+-      "border": {
+-       "$value": "{primitive.color.teal.300}"
+-      }
+-     },
+-     "status": {
+-      "info": {
+-       "fg": {
+-        "$value": "{primitive.color.blueprint.300}"
+-       },
+-       "bg": {
+-        "$value": "{primitive.color.ink.850}"
+-       },
+-       "border": {
+-        "$value": "{primitive.color.blueprint.400}"
+-       }
+-      },
+-      "success": {
+-       "fg": {
+-        "$value": "{primitive.color.green.300}"
+-       },
+-       "bg": {
+-        "$value": "{primitive.color.green.900}"
+-       },
+-       "border": {
+-        "$value": "{primitive.color.green.300}"
+-       }
+-      },
+-      "warning": {
+-       "fg": {
+-        "$value": "{primitive.color.amber.300}"
+-       },
+-       "bg": {
+-        "$value": "{primitive.color.amber.900}"
+-       },
+-       "border": {
+-        "$value": "{primitive.color.amber.300}"
+-       }
+-      },
+-      "danger": {
+-       "fg": {
+-        "$value": "{primitive.color.red.300}"
+-       },
+-       "bg": {
+-        "$value": "{primitive.color.red.900}"
+-       },
+-       "border": {
+-        "$value": "{primitive.color.red.300}"
+-       }
+-      }
+-     },
+-     "focus": {
+-      "ring": {
+-       "$value": "{primitive.color.blueprint.400}"
 +      "200": {
 +        "$value": "200",
 +        "$kind": "other"
-+      },
+       },
+-      "ringOnBrand": {
+-       "$value": "{primitive.color.blueprint.400}"
 +      "300": {
 +        "$value": "300",
 +        "$kind": "other"
@@ -1434,12 +2920,28 @@
 +      "400": {
 +        "$value": "400",
 +        "$kind": "other"
-+      }
-+    }
-+  },
+       }
+-     }
+     }
+-   }
+   },
+-  "field": {
+-   "$description": "Second TEST preset. Proves that color, font, density, radius and elevation can change without touching content, DOM or component source. Not a brand proposal.",
+-   "base": {
 +  "semantic": {
-+    "font": {
-+      "heading": {
+     "font": {
+-     "heading": {
+-      "$value": "{primitive.font.family.sourceSerif}"
+-     },
+-     "body": {
+-      "$value": "{primitive.font.family.publicSans}"
+-     },
+-     "weight": {
+       "heading": {
+-       "$value": "{primitive.font.weight.600}"
+-      },
+-      "display": {
+-       "$value": "{primitive.font.weight.700}"
 +        "$value": "{primitive.font.family.manrope}"
 +      },
 +      "body": {
@@ -1475,10 +2977,16 @@
 +        "mono": {
 +          "$value": "{primitive.font.letterSpacing.normal}"
 +        }
-+      }
+       }
+-     },
+-     "letterSpacing": {
+-      "heading": {
+-       "$value": "{primitive.font.letterSpacing.normal}"
+-      },
 +    },
 +    "type": {
-+      "display": {
+       "display": {
+-       "$value": "{primitive.font.letterSpacing.snug}"
 +        "size": {
 +          "$value": "clamp({primitive.font.size.250}, 1.6rem + 2.6vw, {primitive.font.size.350})",
 +          "$kind": "other"
@@ -1579,9 +3087,13 @@
 +          "$value": "{primitive.font.lineHeight.150}",
 +          "$kind": "other"
 +        }
-+      }
-+    },
-+    "space": {
+       }
+-     }
+     },
+     "space": {
+-     "inset": {
+-      "xs": {
+-       "$value": "{primitive.space.1}"
 +      "inset": {
 +        "xs": {
 +          "$value": "{primitive.space.2}"
@@ -1666,23 +3178,45 @@
 +    "radius": {
 +      "control": {
 +        "$value": "{primitive.radius.4}"
-+      },
+       },
+-      "sm": {
+-       "$value": "{primitive.space.2}"
 +      "surface": {
 +        "$value": "{primitive.radius.6}"
-+      },
+       },
+-      "md": {
+-       "$value": "{primitive.space.4}"
 +      "badge": {
 +        "$value": "{primitive.radius.2}"
-+      },
+       },
+-      "lg": {
+-       "$value": "{primitive.space.6}"
+-      }
+-     },
+-     "stack": {
+-      "md": {
+-       "$value": "{primitive.space.3}"
 +      "dialog": {
 +        "$value": "{primitive.radius.8}"
-+      },
+       },
+-      "lg": {
+-       "$value": "{primitive.space.5}"
 +      "round": {
 +        "$value": "{primitive.radius.full}"
-+      },
+       },
+-      "xl": {
+-       "$value": "{primitive.space.8}"
 +      "checkboxMax": {
 +        "$value": "{primitive.radius.4}",
 +        "$description": "Upper bound so checkboxes stay square in every theme (structural: must not read as radio)"
-+      }
+       }
+-     },
+-     "inline": {
+-      "md": {
+-       "$value": "{primitive.space.2}"
+-      },
+-      "lg": {
+-       "$value": "{primitive.space.4}"
 +    },
 +    "border": {
 +      "width": {
@@ -1692,31 +3226,87 @@
 +        "strong": {
 +          "$value": "{primitive.borderWidth.2}"
 +        }
-+      }
-+    },
+       }
+-     },
+-     "section": {
+-      "$value": "{primitive.space.16}"
+-     }
+     },
+-    "control": {
+-     "height": {
+-      "sm": {
+-       "$value": "{primitive.size.8}"
 +    "elevation": {
 +      "flat": {
 +        "$value": "{primitive.shadow.none}"
-+      },
+       },
+-      "md": {
+-       "$value": "{primitive.size.10}"
 +      "raised": {
 +        "$value": "{primitive.shadow.xs}"
-+      },
+       },
+-      "lg": {
+-       "$value": "{primitive.size.12}"
+-      }
+-     },
+-     "paddingX": {
+-      "md": {
+-       "$value": "{primitive.space.4}"
 +      "hover": {
 +        "$value": "{primitive.shadow.sm}"
-+      },
+       },
+-      "lg": {
+-       "$value": "{primitive.space.5}"
 +      "overlay": {
 +        "$value": "{primitive.shadow.lg}"
-+      }
-+    },
-+    "focus": {
+       }
+-     }
+-    },
+-    "target": {
+-     "min": {
+-      "$value": "{primitive.size.10}"
+-     }
+-    },
+-    "radius": {
+-     "control": {
+-      "$value": "{primitive.radius.full}"
+-     },
+-     "surface": {
+-      "$value": "{primitive.radius.16}"
+-     },
+-     "badge": {
+-      "$value": "{primitive.radius.full}"
+-     },
+-     "dialog": {
+-      "$value": "{primitive.radius.20}"
+-     }
+-    },
+-    "elevation": {
+-     "raised": {
+-      "$value": "{primitive.shadow.md}"
+-     },
+-     "hover": {
+-      "$value": "{primitive.shadow.lg}"
+-     },
+-     "overlay": {
+-      "$value": "{primitive.shadow.xl}"
+-     }
+     },
+     "focus": {
+-     "width": {
+-      "$value": "{primitive.borderWidth.3}"
+-     }
 +      "width": {
 +        "$value": "{primitive.borderWidth.2}"
 +      },
 +      "offset": {
 +        "$value": "{primitive.borderWidth.2}"
 +      }
-+    },
-+    "icon": {
+     },
+     "icon": {
+-     "stroke": {
+-      "$value": "{primitive.iconStroke.150}"
+-     }
 +      "size": {
 +        "sm": {
 +          "$value": "{primitive.size.4}"
@@ -1737,7 +3327,18 @@
 +        "$kind": "other",
 +        "$description": "Heavier stroke for small check marks inside filled controls"
 +      }
-+    },
+     },
+-    "grid": {
+-     "gap": {
+-      "$value": "{primitive.space.4}"
+-     }
+-    }
+-   },
+-   "modes": {
+-    "light": {
+-     "surface": {
+-      "page": {
+-       "$value": "{primitive.color.stone.50}"
 +    "motion": {
 +      "duration": {
 +        "fast": {
@@ -1772,19 +3373,27 @@
 +      "base": {
 +        "$value": "{primitive.zIndex.0}",
 +        "$kind": "other"
-+      },
+       },
+-      "default": {
+-       "$value": "{primitive.color.white}"
 +      "sticky": {
 +        "$value": "{primitive.zIndex.100}",
 +        "$kind": "other"
-+      },
+       },
+-      "subtle": {
+-       "$value": "{primitive.color.stone.100}"
 +      "dropdown": {
 +        "$value": "{primitive.zIndex.200}",
 +        "$kind": "other"
-+      },
+       },
+-      "muted": {
+-       "$value": "{primitive.color.stone.200}"
 +      "overlay": {
 +        "$value": "{primitive.zIndex.300}",
 +        "$kind": "other"
-+      },
+       },
+-      "raised": {
+-       "$value": "{primitive.color.white}"
 +      "dialog": {
 +        "$value": "{primitive.zIndex.400}",
 +        "$kind": "other"
@@ -1793,19 +3402,34 @@
 +    "container": {
 +      "sm": {
 +        "$value": "{primitive.size.container640}"
-+      },
+       },
+-      "brand": {
+-       "$value": "{primitive.color.stone.950}"
 +      "md": {
 +        "$value": "{primitive.size.container768}"
-+      },
+       },
+-      "inverse": {
+-       "$value": "{primitive.color.stone.900}"
 +      "lg": {
 +        "$value": "{primitive.size.container1024}"
-+      },
+       },
+-      "scrim": {
+-       "$value": "{primitive.color.alpha.stoneScrim}"
+-      }
+-     },
+-     "text": {
+-      "primary": {
+-       "$value": "{primitive.color.stone.950}"
 +      "xl": {
 +        "$value": "{primitive.size.container1200}"
-+      },
+       },
+-      "secondary": {
+-       "$value": "{primitive.color.stone.600}"
 +      "prose": {
 +        "$value": "68ch"
-+      },
+       },
+-      "disabled": {
+-       "$value": "{primitive.color.stone.400}"
 +      "gutter": {
 +        "$value": "clamp({primitive.space.4}, 4vw, {primitive.space.8})"
 +      }
@@ -1832,53 +3456,96 @@
 +      "cardMin": {
 +        "$value": "{primitive.size.measure.16}",
 +        "$description": "Minimum card width in auto-fill grids"
-+      },
+       },
+-      "inverse": {
+-       "$value": "{primitive.color.stone.50}"
 +      "columnMin": {
 +        "$value": "{primitive.size.measure.12}",
 +        "$description": "Minimum footer/link column width"
-+      },
+       },
+-      "onBrand": {
+-       "$value": "{primitive.color.white}"
 +      "optionMin": {
 +        "$value": "{primitive.size.measure.13}",
 +        "$description": "Minimum choice-card width (RoleSelector)"
-+      },
+       },
+-      "onBrandSecondary": {
+-       "$value": "{primitive.color.stone.300}"
 +      "actionMin": {
 +        "$value": "{primitive.size.measure.14}",
 +        "$description": "Minimum width of a CTA item before wrapping"
-+      },
+       },
+-      "link": {
+-       "$value": "{primitive.color.rust.700}"
 +      "actionMax": {
 +        "$value": "{primitive.size.measure.24}",
 +        "$description": "Maximum width of a CTA item"
-+      },
+       },
+-      "linkHover": {
+-       "$value": "{primitive.color.rust.800}"
+-      }
+-     },
+-     "border": {
+-      "subtle": {
+-       "$value": "{primitive.color.stone.100}"
 +      "labelMin": {
 +        "$value": "{primitive.size.measure.11}",
 +        "$description": "Minimum width of a table row-header column"
-+      },
+       },
+-      "default": {
+-       "$value": "{primitive.color.stone.200}"
 +      "labelMax": {
 +        "$value": "{primitive.size.measure.16}",
 +        "$description": "Maximum width of a table row-header column"
-+      },
+       },
+-      "strong": {
+-       "$value": "{primitive.color.stone.500}"
 +      "tableMin": {
 +        "$value": "{primitive.size.measure.36}",
 +        "$description": "Minimum comparison table width before horizontal scroll"
-+      },
+       },
+-      "control": {
+-       "$value": "{primitive.color.stone.500}"
 +      "metaColumn": {
 +        "$value": "{primitive.size.measure.10}",
 +        "$description": "Fixed meta column (e.g. release note category) at md+"
-+      },
+       },
+-      "controlHover": {
+-       "$value": "{primitive.color.stone.950}"
 +      "tabMax": {
 +        "$value": "{primitive.size.measure.20}",
 +        "$description": "Maximum single tab width before wrapping"
-+      },
+       },
+-      "onBrand": {
+-       "$value": "{primitive.color.stone.800}"
 +      "dialogMax": {
 +        "$value": "{primitive.size.measure.32}",
 +        "$description": "Default dialog max width"
-+      }
+       }
+-     },
+-     "action": {
 +    }
 +  },
 +  "themes": {
 +    "aluplan": {
 +      "$description": "Primary direction (draft). Ink / Silver / Teal / Blueprint. Manrope + IBM Plex.",
-+      "base": {},
++      "base": {
++        "space": {
++          "inset": {
++            "sm": {
++              "$value": "{primitive.space.4}"
++            },
++            "md": {
++              "$value": "{primitive.space.6}"
++            }
++          }
++        },
++        "radius": {
++          "surface": {
++            "$value": "{primitive.radius.0}"
++          }
++        }
++      },
 +      "modes": {
 +        "light": {
 +          "surface": {
@@ -2850,2095 +4517,7 @@
 +          "$value": "{semantic.control.paddingX.lg}"
 +        }
 +      },
-+      "primary": {
-+        "bg": {
-+          "$value": "{semantic.action.primary.bg}"
-+        },
-+        "bgHover": {
-+          "$value": "{semantic.action.primary.bgHover}"
-+        },
-+        "bgActive": {
-+          "$value": "{semantic.action.primary.bgActive}"
-+        },
-+        "fg": {
-+          "$value": "{semantic.action.primary.fg}"
-+        }
-+      },
-+      "secondary": {
-+        "fg": {
-+          "$value": "{semantic.action.secondary.fg}"
-+        },
-+        "border": {
-+          "$value": "{semantic.action.secondary.border}"
-+        },
-+        "bgHover": {
-+          "$value": "{semantic.action.secondary.bgHover}"
-+        },
-+        "bgActive": {
-+          "$value": "{semantic.action.secondary.bgActive}"
-+        }
-+      },
-+      "ghost": {
-+        "fg": {
-+          "$value": "{semantic.action.ghost.fg}"
-+        },
-+        "bgHover": {
-+          "$value": "{semantic.action.ghost.bgHover}"
-+        },
-+        "bgActive": {
-+          "$value": "{semantic.action.ghost.bgActive}"
-+        }
-+      }
-+    },
-+    "input": {
-+      "height": {
-+        "$value": "{semantic.control.height.md}"
-+      },
-+      "radius": {
-+        "$value": "{semantic.radius.control}"
-+      },
-+      "bg": {
-+        "$value": "{semantic.surface.default}"
-+      },
-+      "fg": {
-+        "$value": "{semantic.text.primary}"
-+      },
-+      "border": {
-+        "$value": "{semantic.border.control}"
-+      },
-+      "borderHover": {
-+        "$value": "{semantic.border.controlHover}"
-+      },
-+      "borderInvalid": {
-+        "$value": "{semantic.status.danger.border}"
-+      },
-+      "placeholder": {
-+        "$value": "{semantic.text.secondary}"
-+      },
-+      "paddingX": {
-+        "$value": "{semantic.space.inset.sm}"
-+      }
-+    },
-+    "card": {
-+      "bg": {
-+        "$value": "{semantic.surface.default}"
-+      },
-+      "border": {
-+        "$value": "{semantic.border.default}"
-+      },
-+      "radius": {
-+        "$value": "{semantic.radius.surface}"
-+      },
-+      "shadow": {
-+        "$value": "{semantic.elevation.raised}"
-+      },
-+      "shadowHover": {
-+        "$value": "{semantic.elevation.hover}"
-+      },
-+      "padding": {
-+        "$value": "{semantic.space.inset.md}"
-+      }
-+    },
-+    "badge": {
-+      "radius": {
-+        "$value": "{semantic.radius.badge}"
-+      },
-+      "fontFamily": {
-+        "$value": "{semantic.font.mono}"
-+      }
-+    },
-+    "dialog": {
-+      "bg": {
-+        "$value": "{semantic.surface.raised}"
-+      },
-+      "radius": {
-+        "$value": "{semantic.radius.dialog}"
-+      },
-+      "shadow": {
-+        "$value": "{semantic.elevation.overlay}"
-+      },
-+      "scrim": {
-+        "$value": "{semantic.surface.scrim}"
-+      },
-+      "maxWidth": {
-+        "$value": "{semantic.layout.dialogMax}"
-+      }
-+    },
-+    "siteHeader": {
-+      "bg": {
-+        "$value": "{semantic.surface.brand}"
-+      },
-+      "fg": {
-+        "$value": "{semantic.text.onBrand}"
-+      },
-+      "border": {
-+        "$value": "{semantic.border.onBrand}"
-+      }
-+    },
-+    "siteFooter": {
-+      "bg": {
-+        "$value": "{semantic.surface.brand}"
-+      },
-+      "fg": {
-+        "$value": "{semantic.text.onBrand}"
-+      },
-+      "fgSecondary": {
-+        "$value": "{semantic.text.onBrandSecondary}"
-+      },
-+      "border": {
-+        "$value": "{semantic.border.onBrand}"
-+      },
-+      "columnMin": {
-+        "$value": "{semantic.layout.columnMin}"
-+      }
-+    },
-+    "comparison": {
-+      "included": {
-+        "$value": "{semantic.status.success.fg}"
-+      },
-+      "excluded": {
-+        "$value": "{semantic.text.secondary}"
-+      },
-+      "unknown": {
-+        "$value": "{semantic.status.warning.fg}"
-+      },
-+      "headerBg": {
-+        "$value": "{semantic.surface.subtle}"
-+      },
-+      "tableMin": {
-+        "$value": "{semantic.layout.tableMin}"
-+      },
-+      "labelMin": {
-+        "$value": "{semantic.layout.labelMin}"
-+      },
-+      "labelMax": {
-+        "$value": "{semantic.layout.labelMax}"
-+      }
-+    },
-+    "grid": {
-+      "minItem": {
-+        "$value": "{semantic.layout.cardMin}"
-+      }
-+    },
-+    "tabs": {
-+      "tabMaxWidth": {
-+        "$value": "{semantic.layout.tabMax}"
-+      }
-+    },
-+    "roleSelector": {
-+      "optionMin": {
-+        "$value": "{semantic.layout.optionMin}"
-+      }
-+    },
-+    "releaseNotes": {
-+      "categoryWidth": {
-+        "$value": "{semantic.layout.metaColumn}"
-+      }
-+    },
-+    "ctaGroup": {
-+      "itemMin": {
-+        "$value": "{semantic.layout.actionMin}"
-+      },
-+      "itemMax": {
-+        "$value": "{semantic.layout.actionMax}"
-+      }
-+    },
-+    "checkbox": {
-+      "radius": {
-+        "$value": "min({semantic.radius.control}, {semantic.radius.checkboxMax})",
-+        "$description": "Structural cap; see TOKEN-CONTRACT exceptions"
-+      },
-+      "markStroke": {
-+        "$value": "{semantic.icon.strokeEmphasis}"
-+      }
-+    }
-+  },
-+  "buildTime": {
-+    "$description": "Values CSS custom properties cannot express (media queries are evaluated before var()). Consumed only by the build: tokens/build/breakpoints.* and components/responsive.generated.css (from components/responsive.template.css). gridColumns was removed: no component consumes a 4/8/12 layout grid.",
-+    "breakpoint": {
-+      "sm": {
-+        "$value": "30rem"
-+      },
-+      "md": {
-+        "$value": "48rem"
-+      },
-+      "lg": {
-+        "$value": "64rem"
-+      },
-+      "xl": {
-+        "$value": "80rem"
-+      }
-+    }
-+  },
-+  "$contrastChecks": [
-+    [
-+      "text.primary",
-+      "surface.page",
-+      4.5
-+    ],
-+    [
-+      "text.primary",
-+      "surface.default",
-+      4.5
-+    ],
-+    [
-+      "text.primary",
-+      "surface.subtle",
-+      4.5
-+    ],
-+    [
-+      "text.primary",
-+      "surface.muted",
-+      4.5
-+    ],
-+    [
-+      "text.secondary",
-+      "surface.page",
-+      4.5
-+    ],
-+    [
-+      "text.secondary",
-+      "surface.default",
-+      4.5
-+    ],
-+    [
-+      "text.secondary",
-+      "surface.subtle",
-+      4.5
-+    ],
-+    [
-+      "text.secondary",
-+      "surface.muted",
-+      4.5
-+    ],
-+    [
-+      "text.link",
-+      "surface.page",
-+      4.5
-+    ],
-+    [
-+      "text.link",
-+      "surface.default",
-+      4.5
-+    ],
-+    [
-+      "text.link",
-+      "surface.subtle",
-+      4.5
-+    ],
-+    [
-+      "text.linkHover",
-+      "surface.default",
-+      4.5
-+    ],
-+    [
-+      "text.onBrand",
-+      "surface.brand",
-+      4.5
-+    ],
-+    [
-+      "text.onBrandSecondary",
-+      "surface.brand",
-+      4.5
-+    ],
-+    [
-+      "action.primary.fg",
-+      "action.primary.bg",
-+      4.5
-+    ],
-+    [
-+      "action.primary.fg",
-+      "action.primary.bgHover",
-+      4.5
-+    ],
-+    [
-+      "action.primary.fg",
-+      "action.primary.bgActive",
-+      4.5
-+    ],
-+    [
-+      "action.secondary.fg",
-+      "surface.default",
-+      4.5
-+    ],
-+    [
-+      "action.secondary.fg",
-+      "action.secondary.bgHover",
-+      4.5
-+    ],
-+    [
-+      "action.ghost.fg",
-+      "action.ghost.bgHover",
-+      4.5
-+    ],
-+    [
-+      "accent.fg",
-+      "surface.default",
-+      4.5
-+    ],
-+    [
-+      "accent.fg",
-+      "accent.bg",
-+      4.5
-+    ],
-+    [
-+      "status.info.fg",
-+      "status.info.bg",
-+      4.5
-+    ],
-+    [
-+      "status.success.fg",
-+      "status.success.bg",
-+      4.5
-+    ],
-+    [
-+      "status.warning.fg",
-+      "status.warning.bg",
-+      4.5
-+    ],
-+    [
-+      "status.danger.fg",
-+      "status.danger.bg",
-+      4.5
-+    ],
-+    [
-+      "status.danger.fg",
-+      "surface.default",
-+      4.5
-+    ],
-+    [
-+      "status.success.fg",
-+      "surface.default",
-+      4.5
-+    ],
-+    [
-+      "status.warning.fg",
-+      "surface.default",
-+      4.5
-+    ],
-+    [
-+      "border.control",
-+      "surface.default",
-+      3
-+    ],
-+    [
-+      "border.control",
-+      "surface.page",
-+      3
-+    ],
-+    [
-+      "action.secondary.border",
-+      "surface.default",
-+      3
-+    ],
-+    [
-+      "action.primary.bg",
-+      "surface.default",
-+      3
-+    ],
-+    [
-+      "focus.ring",
-+      "surface.page",
-+      3
-+    ],
-+    [
-+      "focus.ring",
-+      "surface.default",
-+      3
-+    ],
-+    [
-+      "focus.ringOnBrand",
-+      "surface.brand",
-+      3
-+    ],
-+    [
-+      "status.danger.border",
-+      "surface.default",
-+      3
-+    ],
-+    [
-+      "text.disabled",
-+      "surface.default",
-+      0,
-+      "informational: disabled controls are exempt (WCAG 1.4.3); state also conveyed by cursor/aria-disabled"
-+    ],
-+    [
-+      "action.onBrand.fg",
-+      "action.onBrand.bgHover",
-+      4.5
-+    ],
-+    [
-+      "text.primary",
-+      "status.info.bg",
-+      4.5
-+    ],
-+    [
-+      "text.primary",
-+      "status.success.bg",
-+      4.5
-+    ],
-+    [
-+      "text.primary",
-+      "status.warning.bg",
-+      4.5
-+    ],
-+    [
-+      "text.primary",
-+      "status.danger.bg",
-+      4.5
-+    ],
-+    [
-+      "text.primary",
-+      "accent.bg",
-+      4.5
-+    ],
-+    [
-+      "text.secondary",
-+      "accent.bg",
-+      4.5
-+    ],
-+    [
-+      "action.primary.bg",
-+      "accent.bg",
-+      3
-+    ],
-+    [
-+      "text.primary",
-+      "action.disabled.bg",
-+      0,
-+      "informational"
-+    ]
-   ]
-- },
-- "primitive": {
--  "color": {
--   "white": {
--    "$value": "#FFFFFF"
--   },
--   "ink": {
--    "600": {
--     "$value": "#4A5482"
--    },
--    "700": {
--     "$value": "#333D6B"
--    },
--    "800": {
--     "$value": "#222B55"
--    },
--    "850": {
--     "$value": "#1A2247"
--    },
--    "900": {
--     "$value": "#131A3A"
--    },
--    "950": {
--     "$value": "#0A0E27"
--    }
--   },
--   "silver": {
--    "50": {
--     "$value": "#F5F7FA"
--    },
--    "100": {
--     "$value": "#E6EAF0"
--    },
--    "200": {
--     "$value": "#D3D9E2"
--    },
--    "300": {
--     "$value": "#B8C0CC"
--    },
--    "400": {
--     "$value": "#8E97A6"
--    },
--    "500": {
--     "$value": "#6B7588"
--    },
--    "600": {
--     "$value": "#566073"
--    },
--    "700": {
--     "$value": "#414A5C"
--    }
--   },
--   "teal": {
--    "50": {
--     "$value": "#EEFBF8"
--    },
--    "300": {
--     "$value": "#2DD4BF"
--    },
--    "400": {
--     "$value": "#5EEAD4"
--    },
--    "700": {
--     "$value": "#0F766E"
--    },
--    "800": {
--     "$value": "#115E59"
--    },
--    "900": {
--     "$value": "#0F4744"
--    },
--    "950": {
--     "$value": "#0B2E2C"
--    }
--   },
--   "blueprint": {
--    "50": {
--     "$value": "#EEF4FF"
--    },
--    "300": {
--     "$value": "#93C5FD"
--    },
--    "400": {
--     "$value": "#60A5FA"
--    },
--    "600": {
--     "$value": "#2563EB"
--    },
--    "700": {
--     "$value": "#1D4ED8"
--    },
--    "800": {
--     "$value": "#1E40AF"
--    }
--   },
--   "red": {
--    "50": {
--     "$value": "#FEF2F1"
--    },
--    "300": {
--     "$value": "#FDA29B"
--    },
--    "700": {
--     "$value": "#B42318"
--    },
--    "900": {
--     "$value": "#4A140C"
--    }
--   },
--   "amber": {
--    "50": {
--     "$value": "#FFFAEB"
--    },
--    "300": {
--     "$value": "#FEC84B"
--    },
--    "700": {
--     "$value": "#B54708"
--    },
--    "900": {
--     "$value": "#3F1A07"
--    }
--   },
--   "green": {
--    "50": {
--     "$value": "#ECFDF3"
--    },
--    "300": {
--     "$value": "#75E0A7"
--    },
--    "700": {
--     "$value": "#067647"
--    },
--    "900": {
--     "$value": "#05301F"
--    }
--   },
--   "stone": {
--    "50": {
--     "$value": "#FAF8F5"
--    },
--    "100": {
--     "$value": "#F0EBE4"
--    },
--    "200": {
--     "$value": "#E0D8CD"
--    },
--    "300": {
--     "$value": "#C4BAAD"
--    },
--    "400": {
--     "$value": "#A39A8E"
--    },
--    "500": {
--     "$value": "#7D7468"
--    },
--    "600": {
--     "$value": "#625A50"
--    },
--    "800": {
--     "$value": "#2E2A25"
--    },
--    "900": {
--     "$value": "#1F1C18"
--    },
--    "950": {
--     "$value": "#151310"
--    }
--   },
--   "moss": {
--    "50": {
--     "$value": "#EFF7F1"
--    },
--    "300": {
--     "$value": "#86D19F"
--    },
--    "400": {
--     "$value": "#A7E0B9"
--    },
--    "700": {
--     "$value": "#2F6B45"
--    },
--    "800": {
--     "$value": "#24553A"
--    },
--    "900": {
--     "$value": "#1A3D2A"
--    }
--   },
--   "rust": {
--    "200": {
--     "$value": "#F7C29B"
--    },
--    "300": {
--     "$value": "#F2A36B"
--    },
--    "700": {
--     "$value": "#A8461C"
--    },
--    "800": {
--     "$value": "#8A3916"
--    }
--   },
--   "alpha": {
--    "ink06": {
--     "$value": "rgba(10,14,39,0.06)"
--    },
--    "ink08": {
--     "$value": "rgba(10,14,39,0.08)"
--    },
--    "ink10": {
--     "$value": "rgba(10,14,39,0.10)"
--    },
--    "ink16": {
--     "$value": "rgba(10,14,39,0.16)"
--    },
--    "ink24": {
--     "$value": "rgba(10,14,39,0.24)"
--    },
--    "scrimLight": {
--     "$value": "rgba(10,14,39,0.56)"
--    },
--    "scrimDark": {
--     "$value": "rgba(0,0,0,0.72)"
--    },
--    "stoneScrim": {
--     "$value": "rgba(21,19,16,0.6)"
--    }
--   }
--  },
--  "font": {
--   "family": {
--    "manrope": {
--     "$value": "'Manrope', 'Segoe UI', system-ui, sans-serif"
--    },
--    "plexSans": {
--     "$value": "'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif"
--    },
--    "plexMono": {
--     "$value": "'IBM Plex Mono', ui-monospace, 'Cascadia Mono', monospace"
--    },
--    "sourceSerif": {
--     "$value": "'Source Serif 4', Georgia, 'Times New Roman', serif"
--    },
--    "publicSans": {
--     "$value": "'Public Sans', 'Segoe UI', system-ui, sans-serif"
--    }
--   },
--   "weight": {
--    "400": {
--     "$value": "400",
--     "$kind": "other"
--    },
--    "500": {
--     "$value": "500",
--     "$kind": "other"
--    },
--    "600": {
--     "$value": "600",
--     "$kind": "other"
--    },
--    "700": {
--     "$value": "700",
--     "$kind": "other"
--    },
--    "800": {
--     "$value": "800",
--     "$kind": "other"
--    }
--   },
--   "size": {
--    "75": {
--     "$value": "0.75rem"
--    },
--    "87": {
--     "$value": "0.875rem"
--    },
--    "100": {
--     "$value": "1rem"
--    },
--    "112": {
--     "$value": "1.125rem"
--    },
--    "125": {
--     "$value": "1.25rem"
--    },
--    "150": {
--     "$value": "1.5rem"
--    },
--    "175": {
--     "$value": "1.75rem"
--    },
--    "200": {
--     "$value": "2rem"
--    },
--    "250": {
--     "$value": "2.5rem"
--    },
--    "300": {
--     "$value": "3rem"
--    },
--    "350": {
--     "$value": "3.5rem"
--    }
--   },
--   "lineHeight": {
--    "110": {
--     "$value": "1.1",
--     "$kind": "other"
--    },
--    "120": {
--     "$value": "1.2",
--     "$kind": "other"
--    },
--    "130": {
--     "$value": "1.3",
--     "$kind": "other"
--    },
--    "150": {
--     "$value": "1.5",
--     "$kind": "other"
--    },
--    "160": {
--     "$value": "1.6",
--     "$kind": "other"
--    }
--   },
--   "letterSpacing": {
--    "tight": {
--     "$value": "-0.02em"
--    },
--    "snug": {
--     "$value": "-0.01em"
--    },
--    "normal": {
--     "$value": "0em"
--    },
--    "wide": {
--     "$value": "0.02em"
--    }
--   }
--  },
--  "space": {
--   "0": {
--    "$value": "0"
--   },
--   "1": {
--    "$value": "0.25rem"
--   },
--   "2": {
--    "$value": "0.5rem"
--   },
--   "3": {
--    "$value": "0.75rem"
--   },
--   "4": {
--    "$value": "1rem"
--   },
--   "5": {
--    "$value": "1.25rem"
--   },
--   "6": {
--    "$value": "1.5rem"
--   },
--   "8": {
--    "$value": "2rem"
--   },
--   "10": {
--    "$value": "2.5rem"
--   },
--   "12": {
--    "$value": "3rem"
--   },
--   "16": {
--    "$value": "4rem"
--   },
--   "20": {
--    "$value": "5rem"
--   }
--  },
--  "size": {
--   "4": {
--    "$value": "1rem"
--   },
--   "5": {
--    "$value": "1.25rem"
--   },
--   "6": {
--    "$value": "1.5rem"
--   },
--   "8": {
--    "$value": "2rem"
--   },
--   "9": {
--    "$value": "2.25rem"
--   },
--   "10": {
--    "$value": "2.5rem"
--   },
--   "11": {
--    "$value": "2.75rem"
--   },
--   "12": {
--    "$value": "3rem"
--   },
--   "13": {
--    "$value": "3.25rem"
--   },
--   "container640": {
--    "$value": "40rem"
--   },
--   "container768": {
--    "$value": "48rem"
--   },
--   "container1024": {
--    "$value": "64rem"
--   },
--   "container1200": {
--    "$value": "75rem"
--   },
--   "measure": {
--    "10": {
--     "$value": "10rem"
--    },
--    "11": {
--     "$value": "11rem"
--    },
--    "12": {
--     "$value": "12rem"
--    },
--    "13": {
--     "$value": "13rem"
--    },
--    "14": {
--     "$value": "14rem"
--    },
--    "16": {
--     "$value": "16rem"
--    },
--    "20": {
--     "$value": "20rem"
--    },
--    "24": {
--     "$value": "24rem"
--    },
--    "32": {
--     "$value": "32rem"
--    },
--    "36": {
--     "$value": "36rem"
--    }
--   }
--  },
--  "radius": {
--   "0": {
--    "$value": "0"
--   },
--   "2": {
--    "$value": "2px"
--   },
--   "4": {
--    "$value": "4px"
--   },
--   "6": {
--    "$value": "6px"
--   },
--   "8": {
--    "$value": "8px"
--   },
--   "16": {
--    "$value": "16px"
--   },
--   "20": {
--    "$value": "20px"
--   },
--   "full": {
--    "$value": "999px"
--   }
--  },
--  "borderWidth": {
--   "1": {
--    "$value": "1px"
--   },
--   "2": {
--    "$value": "2px"
--   },
--   "3": {
--    "$value": "3px"
--   }
--  },
--  "shadow": {
--   "none": {
--    "$value": "none"
--   },
--   "xs": {
--    "$value": "0 1px 2px {primitive.color.alpha.ink08}"
--   },
--   "sm": {
--    "$value": "0 1px 3px {primitive.color.alpha.ink10}, 0 1px 2px {primitive.color.alpha.ink06}"
--   },
--   "md": {
--    "$value": "0 2px 4px {primitive.color.alpha.ink08}, 0 8px 20px {primitive.color.alpha.ink10}"
--   },
--   "lg": {
--    "$value": "0 12px 32px {primitive.color.alpha.ink16}"
--   },
--   "xl": {
--    "$value": "0 24px 56px {primitive.color.alpha.ink24}"
--   }
--  },
--  "iconStroke": {
--   "150": {
--    "$value": "1.5",
--    "$kind": "other"
--   },
--   "200": {
--    "$value": "2",
--    "$kind": "other"
--   },
--   "300": {
--    "$value": "3",
--    "$kind": "other"
--   }
--  },
--  "duration": {
--   "0": {
--    "$value": "0ms",
--    "$kind": "other"
--   },
--   "150": {
--    "$value": "150ms",
--    "$kind": "other"
--   },
--   "200": {
--    "$value": "200ms",
--    "$kind": "other"
--   },
--   "300": {
--    "$value": "300ms",
--    "$kind": "other"
--   }
--  },
--  "easing": {
--   "standard": {
--    "$value": "cubic-bezier(0.2, 0, 0, 1)",
--    "$kind": "other"
--   },
--   "decelerate": {
--    "$value": "cubic-bezier(0, 0, 0, 1)",
--    "$kind": "other"
--   },
--   "accelerate": {
--    "$value": "cubic-bezier(0.3, 0, 1, 1)",
--    "$kind": "other"
--   }
--  },
--  "zIndex": {
--   "0": {
--    "$value": "0",
--    "$kind": "other"
--   },
--   "100": {
--    "$value": "100",
--    "$kind": "other"
--   },
--   "200": {
--    "$value": "200",
--    "$kind": "other"
--   },
--   "300": {
--    "$value": "300",
--    "$kind": "other"
--   },
--   "400": {
--    "$value": "400",
--    "$kind": "other"
--   }
--  }
-- },
-- "semantic": {
--  "font": {
--   "heading": {
--    "$value": "{primitive.font.family.manrope}"
--   },
--   "body": {
--    "$value": "{primitive.font.family.plexSans}"
--   },
--   "mono": {
--    "$value": "{primitive.font.family.plexMono}"
--   },
--   "weight": {
--    "body": {
--     "$value": "{primitive.font.weight.400}"
--    },
--    "label": {
--     "$value": "{primitive.font.weight.500}"
--    },
--    "strong": {
--     "$value": "{primitive.font.weight.600}"
--    },
--    "heading": {
--     "$value": "{primitive.font.weight.700}"
--    },
--    "display": {
--     "$value": "{primitive.font.weight.800}"
--    }
--   },
--   "letterSpacing": {
--    "heading": {
--     "$value": "{primitive.font.letterSpacing.snug}"
--    },
--    "display": {
--     "$value": "{primitive.font.letterSpacing.tight}"
--    },
--    "mono": {
--     "$value": "{primitive.font.letterSpacing.normal}"
--    }
--   }
--  },
--  "type": {
--   "display": {
--    "size": {
--     "$value": "clamp({primitive.font.size.250}, 1.6rem + 2.6vw, {primitive.font.size.350})",
--     "$kind": "other"
--    },
--    "lineHeight": {
--     "$value": "{primitive.font.lineHeight.110}",
--     "$kind": "other"
--    }
--   },
--   "h1": {
--    "size": {
--     "$value": "clamp({primitive.font.size.200}, 1.4rem + 1.8vw, {primitive.font.size.300})",
--     "$kind": "other"
--    },
--    "lineHeight": {
--     "$value": "{primitive.font.lineHeight.120}",
--     "$kind": "other"
--    }
--   },
--   "h2": {
--    "size": {
--     "$value": "clamp({primitive.font.size.150}, 1.2rem + 1.2vw, {primitive.font.size.200})",
--     "$kind": "other"
--    },
--    "lineHeight": {
--     "$value": "{primitive.font.lineHeight.120}",
--     "$kind": "other"
--    }
--   },
--   "h3": {
--    "size": {
--     "$value": "{primitive.font.size.125}"
--    },
--    "lineHeight": {
--     "$value": "{primitive.font.lineHeight.130}",
--     "$kind": "other"
--    }
--   },
--   "h4": {
--    "size": {
--     "$value": "{primitive.font.size.112}"
--    },
--    "lineHeight": {
--     "$value": "{primitive.font.lineHeight.130}",
--     "$kind": "other"
--    }
--   },
--   "bodyLg": {
--    "size": {
--     "$value": "{primitive.font.size.112}"
--    },
--    "lineHeight": {
--     "$value": "{primitive.font.lineHeight.160}",
--     "$kind": "other"
--    }
--   },
--   "body": {
--    "size": {
--     "$value": "{primitive.font.size.100}"
--    },
--    "lineHeight": {
--     "$value": "{primitive.font.lineHeight.160}",
--     "$kind": "other"
--    }
--   },
--   "bodySm": {
--    "size": {
--     "$value": "{primitive.font.size.87}"
--    },
--    "lineHeight": {
--     "$value": "{primitive.font.lineHeight.150}",
--     "$kind": "other"
--    }
--   },
--   "label": {
--    "size": {
--     "$value": "{primitive.font.size.87}"
--    },
--    "lineHeight": {
--     "$value": "{primitive.font.lineHeight.130}",
--     "$kind": "other"
--    }
--   },
--   "caption": {
--    "size": {
--     "$value": "{primitive.font.size.75}"
--    },
--    "lineHeight": {
--     "$value": "{primitive.font.lineHeight.150}",
--     "$kind": "other"
--    }
--   },
--   "mono": {
--    "size": {
--     "$value": "{primitive.font.size.75}"
--    },
--    "lineHeight": {
--     "$value": "{primitive.font.lineHeight.150}",
--     "$kind": "other"
--    }
--   }
--  },
--  "space": {
--   "inset": {
--    "xs": {
--     "$value": "{primitive.space.2}"
--    },
--    "sm": {
--     "$value": "{primitive.space.3}"
--    },
--    "md": {
--     "$value": "{primitive.space.5}"
--    },
--    "lg": {
--     "$value": "{primitive.space.8}"
--    }
--   },
--   "stack": {
--    "xs": {
--     "$value": "{primitive.space.1}"
--    },
--    "sm": {
--     "$value": "{primitive.space.2}"
--    },
--    "md": {
--     "$value": "{primitive.space.4}"
--    },
--    "lg": {
--     "$value": "{primitive.space.6}"
--    },
--    "xl": {
--     "$value": "{primitive.space.10}"
--    }
--   },
--   "inline": {
--    "xs": {
--     "$value": "{primitive.space.1}"
--    },
--    "sm": {
--     "$value": "{primitive.space.2}"
--    },
--    "md": {
--     "$value": "{primitive.space.3}"
--    },
--    "lg": {
--     "$value": "{primitive.space.5}"
--    }
--   },
--   "section": {
--    "$value": "{primitive.space.20}"
--   }
--  },
--  "control": {
--   "height": {
--    "sm": {
--     "$value": "{primitive.size.9}"
--    },
--    "md": {
--     "$value": "{primitive.size.11}"
--    },
--    "lg": {
--     "$value": "{primitive.size.13}"
--    }
--   },
--   "paddingX": {
--    "sm": {
--     "$value": "{primitive.space.3}"
--    },
--    "md": {
--     "$value": "{primitive.space.5}"
--    },
--    "lg": {
--     "$value": "{primitive.space.6}"
--    }
--   },
--   "gap": {
--    "$value": "{primitive.space.2}"
--   }
--  },
--  "target": {
--   "min": {
--    "$value": "{primitive.size.11}"
--   }
--  },
--  "radius": {
--   "control": {
--    "$value": "{primitive.radius.4}"
--   },
--   "surface": {
--    "$value": "{primitive.radius.6}"
--   },
--   "badge": {
--    "$value": "{primitive.radius.2}"
--   },
--   "dialog": {
--    "$value": "{primitive.radius.8}"
--   },
--   "round": {
--    "$value": "{primitive.radius.full}"
--   },
--   "checkboxMax": {
--    "$value": "{primitive.radius.4}",
--    "$description": "Upper bound so checkboxes stay square in every theme (structural: must not read as radio)"
--   }
--  },
--  "border": {
--   "width": {
--    "default": {
--     "$value": "{primitive.borderWidth.1}"
--    },
--    "strong": {
--     "$value": "{primitive.borderWidth.2}"
--    }
--   }
--  },
--  "elevation": {
--   "flat": {
--    "$value": "{primitive.shadow.none}"
--   },
--   "raised": {
--    "$value": "{primitive.shadow.xs}"
--   },
--   "hover": {
--    "$value": "{primitive.shadow.sm}"
--   },
--   "overlay": {
--    "$value": "{primitive.shadow.lg}"
--   }
--  },
--  "focus": {
--   "width": {
--    "$value": "{primitive.borderWidth.2}"
--   },
--   "offset": {
--    "$value": "{primitive.borderWidth.2}"
--   }
--  },
--  "icon": {
--   "size": {
--    "sm": {
--     "$value": "{primitive.size.4}"
--    },
--    "md": {
--     "$value": "{primitive.size.5}"
--    },
--    "lg": {
--     "$value": "{primitive.size.6}"
--    }
--   },
--   "stroke": {
--    "$value": "{primitive.iconStroke.200}",
--    "$kind": "other"
--   },
--   "strokeEmphasis": {
--    "$value": "{primitive.iconStroke.300}",
--    "$kind": "other",
--    "$description": "Heavier stroke for small check marks inside filled controls"
--   }
--  },
--  "motion": {
--   "duration": {
--    "fast": {
--     "$value": "{primitive.duration.150}",
--     "$kind": "other"
--    },
--    "base": {
--     "$value": "{primitive.duration.200}",
--     "$kind": "other"
--    },
--    "slow": {
--     "$value": "{primitive.duration.300}",
--     "$kind": "other"
--    }
--   },
--   "easing": {
--    "standard": {
--     "$value": "{primitive.easing.standard}",
--     "$kind": "other"
--    },
--    "enter": {
--     "$value": "{primitive.easing.decelerate}",
--     "$kind": "other"
--    },
--    "exit": {
--     "$value": "{primitive.easing.accelerate}",
--     "$kind": "other"
--    }
--   }
--  },
--  "z": {
--   "base": {
--    "$value": "{primitive.zIndex.0}",
--    "$kind": "other"
--   },
--   "sticky": {
--    "$value": "{primitive.zIndex.100}",
--    "$kind": "other"
--   },
--   "dropdown": {
--    "$value": "{primitive.zIndex.200}",
--    "$kind": "other"
--   },
--   "overlay": {
--    "$value": "{primitive.zIndex.300}",
--    "$kind": "other"
--   },
--   "dialog": {
--    "$value": "{primitive.zIndex.400}",
--    "$kind": "other"
--   }
--  },
--  "container": {
--   "sm": {
--    "$value": "{primitive.size.container640}"
--   },
--   "md": {
--    "$value": "{primitive.size.container768}"
--   },
--   "lg": {
--    "$value": "{primitive.size.container1024}"
--   },
--   "xl": {
--    "$value": "{primitive.size.container1200}"
--   },
--   "prose": {
--    "$value": "68ch"
--   },
--   "gutter": {
--    "$value": "clamp({primitive.space.4}, 4vw, {primitive.space.8})"
--   }
--  },
--  "grid": {
--   "gap": {
--    "$value": "{primitive.space.6}"
--   }
--  },
--  "logo": {
--   "height": {
--    "sm": {
--     "$value": "{primitive.size.6}"
--    },
--    "md": {
--     "$value": "{primitive.size.8}"
--    },
--    "lg": {
--     "$value": "{primitive.size.12}"
--    }
--   }
--  },
--  "layout": {
--   "cardMin": {
--    "$value": "{primitive.size.measure.16}",
--    "$description": "Minimum card width in auto-fill grids"
--   },
--   "columnMin": {
--    "$value": "{primitive.size.measure.12}",
--    "$description": "Minimum footer/link column width"
--   },
--   "optionMin": {
--    "$value": "{primitive.size.measure.13}",
--    "$description": "Minimum choice-card width (RoleSelector)"
--   },
--   "actionMin": {
--    "$value": "{primitive.size.measure.14}",
--    "$description": "Minimum width of a CTA item before wrapping"
--   },
--   "actionMax": {
--    "$value": "{primitive.size.measure.24}",
--    "$description": "Maximum width of a CTA item"
--   },
--   "labelMin": {
--    "$value": "{primitive.size.measure.11}",
--    "$description": "Minimum width of a table row-header column"
--   },
--   "labelMax": {
--    "$value": "{primitive.size.measure.16}",
--    "$description": "Maximum width of a table row-header column"
--   },
--   "tableMin": {
--    "$value": "{primitive.size.measure.36}",
--    "$description": "Minimum comparison table width before horizontal scroll"
--   },
--   "metaColumn": {
--    "$value": "{primitive.size.measure.10}",
--    "$description": "Fixed meta column (e.g. release note category) at md+"
--   },
--   "tabMax": {
--    "$value": "{primitive.size.measure.20}",
--    "$description": "Maximum single tab width before wrapping"
--   },
--   "dialogMax": {
--    "$value": "{primitive.size.measure.32}",
--    "$description": "Default dialog max width"
--   }
--  }
-- },
-- "themes": {
--  "aluplan": {
--   "$description": "Primary direction (draft). Ink / Silver / Teal / Blueprint. Manrope + IBM Plex.",
--   "base": {},
--   "modes": {
--    "light": {
--     "surface": {
--      "page": {
--       "$value": "{primitive.color.white}"
--      },
--      "default": {
--       "$value": "{primitive.color.white}"
--      },
--      "subtle": {
--       "$value": "{primitive.color.silver.50}"
--      },
--      "muted": {
--       "$value": "{primitive.color.silver.100}"
--      },
--      "raised": {
--       "$value": "{primitive.color.white}"
--      },
--      "brand": {
--       "$value": "{primitive.color.ink.950}"
--      },
--      "inverse": {
--       "$value": "{primitive.color.ink.900}"
--      },
--      "scrim": {
--       "$value": "{primitive.color.alpha.scrimLight}"
--      }
--     },
--     "text": {
--      "primary": {
--       "$value": "{primitive.color.ink.950}"
--      },
--      "secondary": {
--       "$value": "{primitive.color.silver.600}"
--      },
--      "disabled": {
--       "$value": "{primitive.color.silver.400}"
--      },
--      "inverse": {
--       "$value": "{primitive.color.silver.50}"
--      },
--      "onBrand": {
--       "$value": "{primitive.color.white}"
--      },
--      "onBrandSecondary": {
--       "$value": "{primitive.color.silver.300}"
--      },
--      "link": {
--       "$value": "{primitive.color.blueprint.600}"
--      },
--      "linkHover": {
--       "$value": "{primitive.color.blueprint.800}"
--      }
--     },
--     "border": {
--      "subtle": {
--       "$value": "{primitive.color.silver.100}"
--      },
--      "default": {
--       "$value": "{primitive.color.silver.200}"
--      },
--      "strong": {
--       "$value": "{primitive.color.silver.500}"
--      },
--      "control": {
--       "$value": "{primitive.color.silver.500}"
--      },
--      "controlHover": {
--       "$value": "{primitive.color.ink.950}"
--      },
--      "onBrand": {
--       "$value": "{primitive.color.ink.700}"
--      }
--     },
--     "action": {
--      "primary": {
--       "bg": {
--        "$value": "{primitive.color.teal.700}"
--       },
--       "bgHover": {
--        "$value": "{primitive.color.teal.800}"
--       },
--       "bgActive": {
--        "$value": "{primitive.color.teal.900}"
--       },
--       "fg": {
--        "$value": "{primitive.color.white}"
--       }
--      },
--      "secondary": {
--       "fg": {
--        "$value": "{primitive.color.ink.950}"
--       },
--       "border": {
--        "$value": "{primitive.color.silver.500}"
--       },
--       "bgHover": {
--        "$value": "{primitive.color.silver.50}"
--       },
--       "bgActive": {
--        "$value": "{primitive.color.silver.100}"
--       }
--      },
--      "ghost": {
--       "fg": {
--        "$value": "{primitive.color.ink.950}"
--       },
--       "bgHover": {
--        "$value": "{primitive.color.silver.100}"
--       },
--       "bgActive": {
--        "$value": "{primitive.color.silver.200}"
--       }
--      },
--      "disabled": {
--       "bg": {
--        "$value": "{primitive.color.silver.100}"
--       },
--       "fg": {
--        "$value": "{primitive.color.silver.500}"
--       },
--       "border": {
--        "$value": "{primitive.color.silver.200}"
--       }
--      },
--      "onBrand": {
--       "fg": {
--        "$value": "{primitive.color.white}"
--       },
--       "bgHover": {
--        "$value": "{primitive.color.ink.800}"
--       }
--      }
--     },
--     "accent": {
--      "fg": {
--       "$value": "{primitive.color.teal.700}"
--      },
--      "bg": {
--       "$value": "{primitive.color.teal.50}"
--      },
--      "border": {
--       "$value": "{primitive.color.teal.700}"
--      }
--     },
--     "status": {
--      "info": {
--       "fg": {
--        "$value": "{primitive.color.blueprint.700}"
--       },
--       "bg": {
--        "$value": "{primitive.color.blueprint.50}"
--       },
--       "border": {
--        "$value": "{primitive.color.blueprint.600}"
--       }
--      },
--      "success": {
--       "fg": {
--        "$value": "{primitive.color.green.700}"
--       },
--       "bg": {
--        "$value": "{primitive.color.green.50}"
--       },
--       "border": {
--        "$value": "{primitive.color.green.700}"
--       }
--      },
--      "warning": {
--       "fg": {
--        "$value": "{primitive.color.amber.700}"
--       },
--       "bg": {
--        "$value": "{primitive.color.amber.50}"
--       },
--       "border": {
--        "$value": "{primitive.color.amber.700}"
--       }
--      },
--      "danger": {
--       "fg": {
--        "$value": "{primitive.color.red.700}"
--       },
--       "bg": {
--        "$value": "{primitive.color.red.50}"
--       },
--       "border": {
--        "$value": "{primitive.color.red.700}"
--       }
--      }
--     },
--     "focus": {
--      "ring": {
--       "$value": "{primitive.color.blueprint.600}"
--      },
--      "ringOnBrand": {
--       "$value": "{primitive.color.blueprint.400}"
--      }
--     }
--    },
--    "dark": {
--     "surface": {
--      "page": {
--       "$value": "{primitive.color.ink.950}"
--      },
--      "default": {
--       "$value": "{primitive.color.ink.900}"
--      },
--      "subtle": {
--       "$value": "{primitive.color.ink.900}"
--      },
--      "muted": {
--       "$value": "{primitive.color.ink.800}"
--      },
--      "raised": {
--       "$value": "{primitive.color.ink.850}"
--      },
--      "brand": {
--       "$value": "{primitive.color.ink.950}"
--      },
--      "inverse": {
--       "$value": "{primitive.color.silver.50}"
--      },
--      "scrim": {
--       "$value": "{primitive.color.alpha.scrimDark}"
--      }
--     },
--     "text": {
--      "primary": {
--       "$value": "{primitive.color.silver.50}"
--      },
--      "secondary": {
--       "$value": "{primitive.color.silver.300}"
--      },
--      "disabled": {
--       "$value": "{primitive.color.silver.500}"
--      },
--      "inverse": {
--       "$value": "{primitive.color.ink.950}"
--      },
--      "onBrand": {
--       "$value": "{primitive.color.white}"
--      },
--      "onBrandSecondary": {
--       "$value": "{primitive.color.silver.300}"
--      },
--      "link": {
--       "$value": "{primitive.color.blueprint.400}"
--      },
--      "linkHover": {
--       "$value": "{primitive.color.blueprint.300}"
--      }
--     },
--     "border": {
--      "subtle": {
--       "$value": "{primitive.color.ink.800}"
--      },
--      "default": {
--       "$value": "{primitive.color.ink.700}"
--      },
--      "strong": {
--       "$value": "{primitive.color.silver.500}"
--      },
--      "control": {
--       "$value": "{primitive.color.silver.500}"
--      },
--      "controlHover": {
--       "$value": "{primitive.color.silver.200}"
--      },
--      "onBrand": {
--       "$value": "{primitive.color.ink.700}"
--      }
--     },
--     "action": {
--      "primary": {
--       "bg": {
--        "$value": "{primitive.color.teal.300}"
--       },
--       "bgHover": {
--        "$value": "{primitive.color.teal.400}"
--       },
--       "bgActive": {
--        "$value": "{primitive.color.teal.400}"
--       },
--       "fg": {
--        "$value": "{primitive.color.ink.950}"
--       }
--      },
--      "secondary": {
--       "fg": {
--        "$value": "{primitive.color.silver.50}"
--       },
--       "border": {
--        "$value": "{primitive.color.silver.500}"
--       },
--       "bgHover": {
--        "$value": "{primitive.color.ink.800}"
--       },
--       "bgActive": {
--        "$value": "{primitive.color.ink.700}"
--       }
--      },
--      "ghost": {
--       "fg": {
--        "$value": "{primitive.color.silver.50}"
--       },
--       "bgHover": {
--        "$value": "{primitive.color.ink.800}"
--       },
--       "bgActive": {
--        "$value": "{primitive.color.ink.700}"
--       }
--      },
--      "disabled": {
--       "bg": {
--        "$value": "{primitive.color.ink.800}"
--       },
--       "fg": {
--        "$value": "{primitive.color.silver.400}"
--       },
--       "border": {
--        "$value": "{primitive.color.ink.700}"
--       }
--      },
--      "onBrand": {
--       "fg": {
--        "$value": "{primitive.color.white}"
--       },
--       "bgHover": {
--        "$value": "{primitive.color.ink.800}"
--       }
--      }
--     },
--     "accent": {
--      "fg": {
--       "$value": "{primitive.color.teal.300}"
--      },
--      "bg": {
--       "$value": "{primitive.color.teal.950}"
--      },
--      "border": {
--       "$value": "{primitive.color.teal.300}"
--      }
--     },
--     "status": {
--      "info": {
--       "fg": {
--        "$value": "{primitive.color.blueprint.300}"
--       },
--       "bg": {
--        "$value": "{primitive.color.ink.850}"
--       },
--       "border": {
--        "$value": "{primitive.color.blueprint.400}"
--       }
--      },
--      "success": {
--       "fg": {
--        "$value": "{primitive.color.green.300}"
--       },
--       "bg": {
--        "$value": "{primitive.color.green.900}"
--       },
--       "border": {
--        "$value": "{primitive.color.green.300}"
--       }
--      },
--      "warning": {
--       "fg": {
--        "$value": "{primitive.color.amber.300}"
--       },
--       "bg": {
--        "$value": "{primitive.color.amber.900}"
--       },
--       "border": {
--        "$value": "{primitive.color.amber.300}"
--       }
--      },
--      "danger": {
--       "fg": {
--        "$value": "{primitive.color.red.300}"
--       },
--       "bg": {
--        "$value": "{primitive.color.red.900}"
--       },
--       "border": {
--        "$value": "{primitive.color.red.300}"
--       }
--      }
--     },
--     "focus": {
--      "ring": {
--       "$value": "{primitive.color.blueprint.400}"
--      },
--      "ringOnBrand": {
--       "$value": "{primitive.color.blueprint.400}"
--      }
--     }
--    }
--   }
--  },
--  "field": {
--   "$description": "Second TEST preset. Proves that color, font, density, radius and elevation can change without touching content, DOM or component source. Not a brand proposal.",
--   "base": {
--    "font": {
--     "heading": {
--      "$value": "{primitive.font.family.sourceSerif}"
--     },
--     "body": {
--      "$value": "{primitive.font.family.publicSans}"
--     },
--     "weight": {
--      "heading": {
--       "$value": "{primitive.font.weight.600}"
--      },
--      "display": {
--       "$value": "{primitive.font.weight.700}"
--      }
--     },
--     "letterSpacing": {
--      "heading": {
--       "$value": "{primitive.font.letterSpacing.normal}"
--      },
--      "display": {
--       "$value": "{primitive.font.letterSpacing.snug}"
--      }
--     }
--    },
--    "space": {
--     "inset": {
--      "xs": {
--       "$value": "{primitive.space.1}"
--      },
--      "sm": {
--       "$value": "{primitive.space.2}"
--      },
--      "md": {
--       "$value": "{primitive.space.4}"
--      },
--      "lg": {
--       "$value": "{primitive.space.6}"
--      }
--     },
--     "stack": {
--      "md": {
--       "$value": "{primitive.space.3}"
--      },
--      "lg": {
--       "$value": "{primitive.space.5}"
--      },
--      "xl": {
--       "$value": "{primitive.space.8}"
--      }
--     },
--     "inline": {
--      "md": {
--       "$value": "{primitive.space.2}"
--      },
--      "lg": {
--       "$value": "{primitive.space.4}"
--      }
--     },
--     "section": {
--      "$value": "{primitive.space.16}"
--     }
--    },
--    "control": {
--     "height": {
--      "sm": {
--       "$value": "{primitive.size.8}"
--      },
--      "md": {
--       "$value": "{primitive.size.10}"
--      },
--      "lg": {
--       "$value": "{primitive.size.12}"
--      }
--     },
--     "paddingX": {
--      "md": {
--       "$value": "{primitive.space.4}"
--      },
--      "lg": {
--       "$value": "{primitive.space.5}"
--      }
--     }
--    },
--    "target": {
--     "min": {
--      "$value": "{primitive.size.10}"
--     }
--    },
--    "radius": {
--     "control": {
--      "$value": "{primitive.radius.full}"
--     },
--     "surface": {
--      "$value": "{primitive.radius.16}"
--     },
--     "badge": {
--      "$value": "{primitive.radius.full}"
--     },
--     "dialog": {
--      "$value": "{primitive.radius.20}"
--     }
--    },
--    "elevation": {
--     "raised": {
--      "$value": "{primitive.shadow.md}"
--     },
--     "hover": {
--      "$value": "{primitive.shadow.lg}"
--     },
--     "overlay": {
--      "$value": "{primitive.shadow.xl}"
--     }
--    },
--    "focus": {
--     "width": {
--      "$value": "{primitive.borderWidth.3}"
--     }
--    },
--    "icon": {
--     "stroke": {
--      "$value": "{primitive.iconStroke.150}"
--     }
--    },
--    "grid": {
--     "gap": {
--      "$value": "{primitive.space.4}"
--     }
--    }
--   },
--   "modes": {
--    "light": {
--     "surface": {
--      "page": {
--       "$value": "{primitive.color.stone.50}"
--      },
--      "default": {
--       "$value": "{primitive.color.white}"
--      },
--      "subtle": {
--       "$value": "{primitive.color.stone.100}"
--      },
--      "muted": {
--       "$value": "{primitive.color.stone.200}"
--      },
--      "raised": {
--       "$value": "{primitive.color.white}"
--      },
--      "brand": {
--       "$value": "{primitive.color.stone.950}"
--      },
--      "inverse": {
--       "$value": "{primitive.color.stone.900}"
--      },
--      "scrim": {
--       "$value": "{primitive.color.alpha.stoneScrim}"
--      }
--     },
--     "text": {
--      "primary": {
--       "$value": "{primitive.color.stone.950}"
--      },
--      "secondary": {
--       "$value": "{primitive.color.stone.600}"
--      },
--      "disabled": {
--       "$value": "{primitive.color.stone.400}"
--      },
--      "inverse": {
--       "$value": "{primitive.color.stone.50}"
--      },
--      "onBrand": {
--       "$value": "{primitive.color.white}"
--      },
--      "onBrandSecondary": {
--       "$value": "{primitive.color.stone.300}"
--      },
--      "link": {
--       "$value": "{primitive.color.rust.700}"
--      },
--      "linkHover": {
--       "$value": "{primitive.color.rust.800}"
--      }
--     },
--     "border": {
--      "subtle": {
--       "$value": "{primitive.color.stone.100}"
--      },
--      "default": {
--       "$value": "{primitive.color.stone.200}"
--      },
--      "strong": {
--       "$value": "{primitive.color.stone.500}"
--      },
--      "control": {
--       "$value": "{primitive.color.stone.500}"
--      },
--      "controlHover": {
--       "$value": "{primitive.color.stone.950}"
--      },
--      "onBrand": {
--       "$value": "{primitive.color.stone.800}"
--      }
--     },
--     "action": {
--      "primary": {
+       "primary": {
 -       "bg": {
 -        "$value": "{primitive.color.moss.700}"
 -       },
@@ -4951,8 +4530,20 @@
 -       "fg": {
 -        "$value": "{primitive.color.white}"
 -       }
--      },
--      "secondary": {
++        "bg": {
++          "$value": "{semantic.action.primary.bg}"
++        },
++        "bgHover": {
++          "$value": "{semantic.action.primary.bgHover}"
++        },
++        "bgActive": {
++          "$value": "{semantic.action.primary.bgActive}"
++        },
++        "fg": {
++          "$value": "{semantic.action.primary.fg}"
++        }
+       },
+       "secondary": {
 -       "fg": {
 -        "$value": "{primitive.color.stone.950}"
 -       },
@@ -4965,8 +4556,20 @@
 -       "bgActive": {
 -        "$value": "{primitive.color.stone.200}"
 -       }
--      },
--      "ghost": {
++        "fg": {
++          "$value": "{semantic.action.secondary.fg}"
++        },
++        "border": {
++          "$value": "{semantic.action.secondary.border}"
++        },
++        "bgHover": {
++          "$value": "{semantic.action.secondary.bgHover}"
++        },
++        "bgActive": {
++          "$value": "{semantic.action.secondary.bgActive}"
++        }
+       },
+       "ghost": {
 -       "fg": {
 -        "$value": "{primitive.color.stone.950}"
 -       },
@@ -4995,16 +4598,36 @@
 -       "bgHover": {
 -        "$value": "{primitive.color.stone.800}"
 -       }
--      }
++        "fg": {
++          "$value": "{semantic.action.ghost.fg}"
++        },
++        "bgHover": {
++          "$value": "{semantic.action.ghost.bgHover}"
++        },
++        "bgActive": {
++          "$value": "{semantic.action.ghost.bgActive}"
++        }
+       }
 -     },
 -     "accent": {
 -      "fg": {
 -       "$value": "{primitive.color.moss.700}"
--      },
--      "bg": {
++    },
++    "input": {
++      "height": {
++        "$value": "{semantic.control.height.md}"
++      },
++      "radius": {
++        "$value": "{semantic.radius.control}"
+       },
+       "bg": {
 -       "$value": "{primitive.color.moss.50}"
--      },
--      "border": {
++        "$value": "{semantic.surface.default}"
++      },
++      "fg": {
++        "$value": "{semantic.text.primary}"
+       },
+       "border": {
 -       "$value": "{primitive.color.moss.700}"
 -      }
 -     },
@@ -5057,7 +4680,8 @@
 -     "focus": {
 -      "ring": {
 -       "$value": "{primitive.color.rust.700}"
--      },
++        "$value": "{semantic.border.control}"
+       },
 -      "ringOnBrand": {
 -       "$value": "{primitive.color.rust.300}"
 -      }
@@ -5067,54 +4691,106 @@
 -     "surface": {
 -      "page": {
 -       "$value": "{primitive.color.stone.950}"
--      },
++      "borderHover": {
++        "$value": "{semantic.border.controlHover}"
+       },
 -      "default": {
 -       "$value": "{primitive.color.stone.900}"
--      },
++      "borderInvalid": {
++        "$value": "{semantic.status.danger.border}"
+       },
 -      "subtle": {
 -       "$value": "{primitive.color.stone.900}"
--      },
++      "placeholder": {
++        "$value": "{semantic.text.secondary}"
+       },
 -      "muted": {
 -       "$value": "{primitive.color.stone.800}"
--      },
++      "paddingX": {
++        "$value": "{semantic.space.inset.sm}"
++      }
++    },
++    "card": {
++      "bg": {
++        "$value": "{semantic.surface.default}"
+       },
 -      "raised": {
 -       "$value": "{primitive.color.stone.800}"
--      },
++      "border": {
++        "$value": "{semantic.border.default}"
+       },
 -      "brand": {
 -       "$value": "{primitive.color.stone.950}"
--      },
++      "radius": {
++        "$value": "{semantic.radius.surface}"
+       },
 -      "inverse": {
 -       "$value": "{primitive.color.stone.50}"
--      },
++      "shadow": {
++        "$value": "{semantic.elevation.raised}"
+       },
 -      "scrim": {
 -       "$value": "{primitive.color.alpha.scrimDark}"
--      }
++      "shadowHover": {
++        "$value": "{semantic.elevation.hover}"
++      },
++      "padding": {
++        "$value": "{semantic.space.inset.md}"
+       }
 -     },
 -     "text": {
 -      "primary": {
 -       "$value": "{primitive.color.stone.50}"
--      },
++    },
++    "badge": {
++      "radius": {
++        "$value": "{semantic.radius.badge}"
+       },
 -      "secondary": {
 -       "$value": "{primitive.color.stone.300}"
--      },
++      "fontFamily": {
++        "$value": "{semantic.font.mono}"
++      }
++    },
++    "dialog": {
++      "bg": {
++        "$value": "{semantic.surface.raised}"
+       },
 -      "disabled": {
 -       "$value": "{primitive.color.stone.500}"
--      },
++      "radius": {
++        "$value": "{semantic.radius.dialog}"
+       },
 -      "inverse": {
 -       "$value": "{primitive.color.stone.950}"
--      },
++      "shadow": {
++        "$value": "{semantic.elevation.overlay}"
+       },
 -      "onBrand": {
 -       "$value": "{primitive.color.white}"
--      },
++      "scrim": {
++        "$value": "{semantic.surface.scrim}"
+       },
 -      "onBrandSecondary": {
 -       "$value": "{primitive.color.stone.300}"
--      },
++      "maxWidth": {
++        "$value": "{semantic.layout.dialogMax}"
++      }
++    },
++    "siteHeader": {
++      "bg": {
++        "$value": "{semantic.surface.brand}"
+       },
 -      "link": {
 -       "$value": "{primitive.color.rust.300}"
--      },
++      "fg": {
++        "$value": "{semantic.text.onBrand}"
+       },
 -      "linkHover": {
 -       "$value": "{primitive.color.rust.200}"
--      }
++      "border": {
++        "$value": "{semantic.border.onBrand}"
+       }
 -     },
 -     "border": {
 -      "subtle": {
@@ -5122,19 +4798,31 @@
 -      },
 -      "default": {
 -       "$value": "{primitive.color.stone.800}"
--      },
++    },
++    "siteFooter": {
++      "bg": {
++        "$value": "{semantic.surface.brand}"
+       },
 -      "strong": {
 -       "$value": "{primitive.color.stone.500}"
--      },
++      "fg": {
++        "$value": "{semantic.text.onBrand}"
+       },
 -      "control": {
 -       "$value": "{primitive.color.stone.500}"
--      },
++      "fgSecondary": {
++        "$value": "{semantic.text.onBrandSecondary}"
+       },
 -      "controlHover": {
 -       "$value": "{primitive.color.stone.200}"
--      },
++      "border": {
++        "$value": "{semantic.border.onBrand}"
+       },
 -      "onBrand": {
 -       "$value": "{primitive.color.stone.800}"
--      }
++      "columnMin": {
++        "$value": "{semantic.layout.columnMin}"
+       }
 -     },
 -     "action": {
 -      "primary": {
@@ -5150,7 +4838,11 @@
 -       "fg": {
 -        "$value": "{primitive.color.stone.950}"
 -       }
--      },
++    },
++    "comparison": {
++      "included": {
++        "$value": "{semantic.status.success.fg}"
+       },
 -      "secondary": {
 -       "fg": {
 -        "$value": "{primitive.color.stone.50}"
@@ -5164,7 +4856,9 @@
 -       "bgActive": {
 -        "$value": "{primitive.color.stone.800}"
 -       }
--      },
++      "excluded": {
++        "$value": "{semantic.text.secondary}"
+       },
 -      "ghost": {
 -       "fg": {
 -        "$value": "{primitive.color.stone.50}"
@@ -5199,10 +4893,14 @@
 -     "accent": {
 -      "fg": {
 -       "$value": "{primitive.color.moss.300}"
--      },
++      "unknown": {
++        "$value": "{semantic.status.warning.fg}"
+       },
 -      "bg": {
 -       "$value": "{primitive.color.moss.900}"
--      },
++      "headerBg": {
++        "$value": "{semantic.surface.subtle}"
+       },
 -      "border": {
 -       "$value": "{primitive.color.moss.300}"
 -      }
@@ -5256,10 +4954,17 @@
 -     "focus": {
 -      "ring": {
 -       "$value": "{primitive.color.rust.300}"
--      },
++      "tableMin": {
++        "$value": "{semantic.layout.tableMin}"
+       },
 -      "ringOnBrand": {
 -       "$value": "{primitive.color.rust.300}"
--      }
++      "labelMin": {
++        "$value": "{semantic.layout.labelMin}"
++      },
++      "labelMax": {
++        "$value": "{semantic.layout.labelMax}"
+       }
 -     }
 -    }
 -   }
@@ -5285,7 +4990,7 @@
 -    },
 -    "md": {
 -     "$value": "{semantic.control.height.md}"
--    },
+     },
 -    "lg": {
 -     "$value": "{semantic.control.height.lg}"
 -    }
@@ -5318,13 +5023,25 @@
 -   "secondary": {
 -    "fg": {
 -     "$value": "{semantic.action.secondary.fg}"
--    },
++    "grid": {
++      "minItem": {
++        "$value": "{semantic.layout.cardMin}"
++      }
+     },
 -    "border": {
 -     "$value": "{semantic.action.secondary.border}"
--    },
++    "tabs": {
++      "tabMaxWidth": {
++        "$value": "{semantic.layout.tabMax}"
++      }
+     },
 -    "bgHover": {
 -     "$value": "{semantic.action.secondary.bgHover}"
--    },
++    "roleSelector": {
++      "optionMin": {
++        "$value": "{semantic.layout.optionMin}"
++      }
+     },
 -    "bgActive": {
 -     "$value": "{semantic.action.secondary.bgActive}"
 -    }
@@ -5332,13 +5049,32 @@
 -   "ghost": {
 -    "fg": {
 -     "$value": "{semantic.action.ghost.fg}"
--    },
++    "releaseNotes": {
++      "categoryWidth": {
++        "$value": "{semantic.layout.metaColumn}"
++      }
+     },
 -    "bgHover": {
 -     "$value": "{semantic.action.ghost.bgHover}"
--    },
++    "ctaGroup": {
++      "itemMin": {
++        "$value": "{semantic.layout.actionMin}"
++      },
++      "itemMax": {
++        "$value": "{semantic.layout.actionMax}"
++      }
+     },
 -    "bgActive": {
 -     "$value": "{semantic.action.ghost.bgActive}"
--    }
++    "checkbox": {
++      "radius": {
++        "$value": "min({semantic.radius.control}, {semantic.radius.checkboxMax})",
++        "$description": "Structural cap; see TOKEN-CONTRACT exceptions"
++      },
++      "markStroke": {
++        "$value": "{semantic.icon.strokeEmphasis}"
++      }
+     }
 -   }
 -  },
 -  "input": {
@@ -5465,7 +5201,7 @@
 -   "labelMax": {
 -    "$value": "{semantic.layout.labelMax}"
 -   }
--  },
+   },
 -  "grid": {
 -   "minItem": {
 -    "$value": "{semantic.layout.cardMin}"
@@ -5493,7 +5229,23 @@
 -   "itemMax": {
 -    "$value": "{semantic.layout.actionMax}"
 -   }
--  },
++  "buildTime": {
++    "$description": "Values CSS custom properties cannot express (media queries are evaluated before var()). Consumed only by the build: tokens/build/breakpoints.* and components/responsive.generated.css (from components/responsive.template.css). gridColumns was removed: no component consumes a 4/8/12 layout grid.",
++    "breakpoint": {
++      "sm": {
++        "$value": "30rem"
++      },
++      "md": {
++        "$value": "48rem"
++      },
++      "lg": {
++        "$value": "64rem"
++      },
++      "xl": {
++        "$value": "80rem"
++      }
++    }
+   },
 -  "checkbox": {
 -   "radius": {
 -    "$value": "min({semantic.radius.control}, {semantic.radius.checkboxMax})",
@@ -5758,6 +5510,425 @@
 -   "action.disabled.bg",
 -   0,
 -   "informational"
--  ]
++  "$contrastChecks": [
++    [
++      "text.primary",
++      "surface.page",
++      4.5
++    ],
++    [
++      "text.primary",
++      "surface.default",
++      4.5
++    ],
++    [
++      "text.primary",
++      "surface.subtle",
++      4.5
++    ],
++    [
++      "text.primary",
++      "surface.muted",
++      4.5
++    ],
++    [
++      "text.secondary",
++      "surface.page",
++      4.5
++    ],
++    [
++      "text.secondary",
++      "surface.default",
++      4.5
++    ],
++    [
++      "text.secondary",
++      "surface.subtle",
++      4.5
++    ],
++    [
++      "text.secondary",
++      "surface.muted",
++      4.5
++    ],
++    [
++      "text.link",
++      "surface.page",
++      4.5
++    ],
++    [
++      "text.link",
++      "surface.default",
++      4.5
++    ],
++    [
++      "text.link",
++      "surface.subtle",
++      4.5
++    ],
++    [
++      "text.linkHover",
++      "surface.default",
++      4.5
++    ],
++    [
++      "text.onBrand",
++      "surface.brand",
++      4.5
++    ],
++    [
++      "text.onBrandSecondary",
++      "surface.brand",
++      4.5
++    ],
++    [
++      "action.primary.fg",
++      "action.primary.bg",
++      4.5
++    ],
++    [
++      "action.primary.fg",
++      "action.primary.bgHover",
++      4.5
++    ],
++    [
++      "action.primary.fg",
++      "action.primary.bgActive",
++      4.5
++    ],
++    [
++      "action.secondary.fg",
++      "surface.default",
++      4.5
++    ],
++    [
++      "action.secondary.fg",
++      "action.secondary.bgHover",
++      4.5
++    ],
++    [
++      "action.ghost.fg",
++      "action.ghost.bgHover",
++      4.5
++    ],
++    [
++      "accent.fg",
++      "surface.default",
++      4.5
++    ],
++    [
++      "accent.fg",
++      "accent.bg",
++      4.5
++    ],
++    [
++      "status.info.fg",
++      "status.info.bg",
++      4.5
++    ],
++    [
++      "status.success.fg",
++      "status.success.bg",
++      4.5
++    ],
++    [
++      "status.warning.fg",
++      "status.warning.bg",
++      4.5
++    ],
++    [
++      "status.danger.fg",
++      "status.danger.bg",
++      4.5
++    ],
++    [
++      "status.danger.fg",
++      "surface.default",
++      4.5
++    ],
++    [
++      "status.success.fg",
++      "surface.default",
++      4.5
++    ],
++    [
++      "status.warning.fg",
++      "surface.default",
++      4.5
++    ],
++    [
++      "border.control",
++      "surface.default",
++      3
++    ],
++    [
++      "border.control",
++      "surface.page",
++      3
++    ],
++    [
++      "action.secondary.border",
++      "surface.default",
++      3
++    ],
++    [
++      "action.primary.bg",
++      "surface.default",
++      3
++    ],
++    [
++      "focus.ring",
++      "surface.page",
++      3
++    ],
++    [
++      "focus.ring",
++      "surface.default",
++      3
++    ],
++    [
++      "focus.ringOnBrand",
++      "surface.brand",
++      3
++    ],
++    [
++      "status.danger.border",
++      "surface.default",
++      3
++    ],
++    [
++      "text.disabled",
++      "surface.default",
++      0,
++      "informational: disabled controls are exempt (WCAG 1.4.3); state also conveyed by cursor/aria-disabled"
++    ],
++    [
++      "action.onBrand.fg",
++      "action.onBrand.bgHover",
++      4.5
++    ],
++    [
++      "text.primary",
++      "status.info.bg",
++      4.5
++    ],
++    [
++      "text.primary",
++      "status.success.bg",
++      4.5
++    ],
++    [
++      "text.primary",
++      "status.warning.bg",
++      4.5
++    ],
++    [
++      "text.primary",
++      "status.danger.bg",
++      4.5
++    ],
++    [
++      "text.primary",
++      "accent.bg",
++      4.5
++    ],
++    [
++      "text.secondary",
++      "accent.bg",
++      4.5
++    ],
++    [
++      "action.primary.bg",
++      "accent.bg",
++      3
++    ],
++    [
++      "text.primary",
++      "action.disabled.bg",
++      0,
++      "informational"
++    ]
+   ]
 - ]
--}+}
+-}
+\ No newline at end of file
++}
+diff --git a/ui_kits/homepage/HomepagePreview.jsx b/ui_kits/homepage/HomepagePreview.jsx
+new file mode 100644
+index 0000000..533af99
+--- /dev/null
++++ b/ui_kits/homepage/HomepagePreview.jsx
+@@ -0,0 +1,90 @@
++const ALU = window.AluplanDesignSystem_84a18c;
++const data = window.previewData;
++const LOGO = '../../assets/logo/aluplan-logo-white-filled.svg';
++const live = (path) => /^https?:/.test(path) ? path : 'https://aluplan.com.tr' + path;
++const actions = [
++  { id: 'quote', kind: 'quote', label: 'Teklif İste', href: 'https://forms.office.com/r/hXhnKAG912', external: true },
++  { id: 'trial', kind: 'trial', label: 'Ücretsiz Deneme', href: 'https://www.allplan.com/trial-or-subscription/', external: true },
++];
++const nav = [
++  ['solutions','Çözümler','#solutions'], ['products','Ürünler','#products'], ['resources','Kaynaklar','#services'],
++  ['references','Referanslar','https://aluplan.com.tr/references'], ['about','Hakkımızda','https://aluplan.com.tr/about'],
++  ['contact','İletişim','https://aluplan.com.tr/contact'], ['support','Eğitim ve Destek','#services'],
++].map(([id,label,href]) => ({ id,label,href }));
++const groups = [
++  ['Öğren ve yardım al',['Danışmanlık','Sertifika']],
++  ['Yazılım ve lisans işlemleri',['Download','Connect: Giriş','Admin Lisans : Lisans Yöneticisi Bilgi Formu','CodeMeter WebDepot','Deklarasyon Formu']],
++  ['Bilgi ve güncellemeler',['ALLPLAN FAQ','Blog Global','Canlı Webinarlar','BIM Rehberi','OPENBIM','Sistem Gereksinimleri','Tüm Gereksinimler','Sürüm Notları','IFC Export El Kitabı']],
++  ['Partner erişimi',['Partner']],
++];
++
++function Section({ id, subtle=false, children }) {
++  return <section id={id} className={'preview-section' + (subtle ? ' preview-section--subtle' : '')}><ALU.Container size="xl"><ALU.Stack gap="lg">{children}</ALU.Stack></ALU.Container></section>;
++}
++function PreviewHeader() {
++  return <>
++    <div className="preview-ribbon"><ALU.Container size="xl" className="preview-ribbon__inner">
++      <ALU.Text as="span" variant="caption">Tasarım sistemi önizlemesi · Nihai tasarım veya entegrasyon değil</ALU.Text>
++      <ALU.Text as="span" variant="caption" tone="secondary">Mega menü, arama ve tema kontrolü bu kesitte uygulanmadı.</ALU.Text>
++    </ALU.Container></div>
++    <ALU.SiteHeader logoSrc={LOGO} homeHref="#top" navItems={nav} label="Ana menü önizlemesi" />
++  </>;
++}
++function Hero() {
++  return <section className="preview-hero" id="top"><ALU.Container size="xl"><div className="preview-hero__grid">
++    <ALU.Stack gap="lg">
++      <span className="preview-kicker">/ ALLPLAN 2026 · Giriş ve kimlik</span>
++      <ALU.Heading level={1} size="display" className="preview-hero__title">DAHA İYİ BİR GELECEK İNŞA ETMEK İÇİN TASARLANDI</ALU.Heading>
++      <ALU.Text variant="body-lg" tone="secondary" prose>Yenilikçi AEC iş akışları, otomasyon ve bulut tabanlı iş birliği ile daha başarılı projeler.</ALU.Text>
++      <ALU.CtaGroup actions={actions} priority="equal" showDestination={true} />
++    </ALU.Stack>
++    <div className="preview-hero__media" aria-label="Mevcut hero videosu için ayrılan alan">
++      <div className="preview-hero__mark" aria-hidden="true">⌜</div>
++      <ALU.Heading level={2} size="h4">Mevcut hero videosu</ALU.Heading>
++      <ALU.Text variant="body-sm" tone="secondary">hero-bim.mp4 / hero-poster.jpg · Bu kesitte medya alanı temsilidir.</ALU.Text>
++    </div>
++  </div></ALU.Container></section>;
++}
++function QuickLinks() {
++  return <ALU.Container size="xl"><nav className="preview-quicklinks" aria-label="Hızlı erişimler">
++    {data.quickLinks.map(([label,href])=><ALU.Link key={href} href={live(href)} external variant="standalone">{label}</ALU.Link>)}
++  </nav></ALU.Container>;
++}
++function RolesProducts() {
++  const [roleId,setRoleId]=React.useState(data.roles[0].id);
++  const role=data.roles.find(r=>r.id===roleId);
++  const related={architect:['basic','concept'],engineer:['professional','ultimate','civil'],precast:['precast']}[roleId]||[];
++  return <Section id="products" subtle>
++    <span className="preview-kicker">Rol ve ürün seçimi</span>
++    <ALU.Heading level={2}>Rolünüzü seçin</ALU.Heading>
++    <ALU.Text variant="body-lg" tone="secondary">Rol seçimi yönlendirmeyi değiştirir; altı ürün her seçimde görünür kalır.</ALU.Text>
++    <ALU.RoleSelector legend="Çalışma alanınız" roles={data.roles.map(r=>({id:r.id,label:r.label,description:r.title}))} value={roleId} onChange={setRoleId} name="homepage-role" />
++    <div className="preview-role-copy"><ALU.Stack gap="md">
++      <ALU.Heading level={3}>{role.title}</ALU.Heading><ALU.Text tone="secondary">{role.description}</ALU.Text>
++      <ALU.Link href={live(role.href)} external variant="standalone">Bu akışı detaylı incele</ALU.Link>
++    </ALU.Stack><ALU.Grid minItemWidth="13rem">{role.features.map(x=><ALU.Card key={x} variant="outlined" title={x} titleLevel={4} />)}</ALU.Grid></div>
++    <ALU.Grid minItemWidth="17rem" className="preview-products-grid">{data.products.map(p=><div key={p.id} className={'preview-product' + (related.includes(p.id)?' preview-product--related':'')}>
++      <ALU.ProductCard name={p.title} vendor="ALLPLAN" summary={p.description} href={live(p.href)} roles={related.includes(p.id)?['İlgili yol']:[]} linkLabel="canlı ürün sayfası" />
++    </div>)}</ALU.Grid>
++  </Section>;
++}
++function SolutionsLink() {
++  return <Section id="solutions">
++    <span className="preview-kicker">Çözüm alanları · Bu kesitte kompakt</span>
++    <ALU.Heading level={2}>Tek platform. Tüm disiplinler.</ALU.Heading>
++    <ALU.Grid minItemWidth="15rem">{data.solutions.map(s=><ALU.Card key={s.title} variant="outlined" title={s.title} eyebrow={<ALU.Text variant="mono" tone="secondary">{s.subtitle}</ALU.Text>} footer={<ALU.Link href={live(s.href)} external variant="standalone">{s.cta}</ALU.Link>}><ALU.Text variant="body-sm" tone="secondary">{s.description}</ALU.Text></ALU.Card>)}</ALU.Grid>
++  </Section>;
++}
++function service(name){return data.services.find(s=>s.title===name)}
++function serviceProps(s){return {title:s.title,description:s.description,actions:[{id:s.title,label:s.cta,href:live(s.href),external:true}]}}
++function Services(){const primary=['Eğitim','Teknik Destek','Destek Platformu'];return <Section id="services" subtle>
++  <span className="preview-kicker">Profesyonel hizmetler</span>
++  <ALU.Heading level={2}>Öğrenme, destek ve bilgi kaynakları</ALU.Heading>
++  <ALU.Text variant="body-lg" tone="secondary" prose>Eğitim, Teams desteği ve ticket platformu ilk görünümde; kalan kayıtlar görevlerine göre gruplanır.</ALU.Text>
++  <ALU.Grid columns={3} className="preview-services-primary">{primary.map(n=><ALU.SupportCard key={n} {...serviceProps(service(n))} icon={n==='Eğitim'?'graduation-cap':'life-buoy'} />)}</ALU.Grid>
++  <div>{groups.map(([title,names],i)=><details className="preview-service-group" key={title} open={i===0}><summary>{title}<ALU.Text as="span" variant="caption" tone="secondary">{names.length} kayıt</ALU.Text></summary><ALU.Grid minItemWidth="17rem">{names.map(n=><ALU.SupportCard key={n} {...serviceProps(service(n))} />)}</ALU.Grid></details>)}</div>
++  <div className="preview-note"><ALU.Text variant="body-sm" tone="secondary" className="preview-meta">Toplam 20 mevcut hizmet/kaynak kaydı korunur. Bu prototip form göndermez; hedefler canlı kaynağa yeni sekmede açılır.</ALU.Text></div>
++  </Section>}
++function Footer(){const columns=[{id:'products',heading:'Ürünler',links:data.products.map(p=>({id:p.id,label:p.title,href:live(p.href),external:true}))},{id:'company',heading:'Kurumsal',links:[['references','Referanslar','/references'],['about','Hakkımızda','/about'],['contact','İletişim','/contact']].map(([id,label,href])=>({id,label,href:live(href),external:true}))},{id:'legal',heading:'Yasal',links:[['privacy','Gizlilik Politikası','/gizlilik-politikasi'],['terms','Kullanım Şartları','/kullanim-sartlari'],['kvkk','KVKK','/kvkk']].map(([id,label,href])=>({id,label,href:live(href),external:true}))}];return <ALU.SiteFooter logoSrc={LOGO} homeHref="#top" columns={columns} legal="Aluplan ana sayfa tasarım sistemi önizlemesi · Yayın tasarımı değildir." />}
++function App(){if(!ALU||!data)return <p className="preview-loading">Bileşen veya içerik verisi yüklenemedi.</p>;return <div className="preview-shell"><a className="alu-skip-link" href="#main">İçeriğe geç</a><PreviewHeader/><main id="main"><Hero/><QuickLinks/><RolesProducts/><SolutionsLink/><Services/></main><Footer/></div>}
++ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+diff --git a/ui_kits/homepage/README.md b/ui_kits/homepage/README.md
+new file mode 100644
+index 0000000..dbd8196
+--- /dev/null
++++ b/ui_kits/homepage/README.md
+@@ -0,0 +1,9 @@
++# Tasarım sistemi ana sayfa kesiti
++
++22.10.2026 — Geçici kabul edilen ana sayfa yerleşiminin gerçek Aluplan Design System bileşenleriyle hazırlanmış bağımsız görsel kesitidir. Next.js entegrasyonu, nihai tasarım, içerik/schema değişikliği veya yayın değildir.
++
++Gösterilen alanlar: düz menü temsili, hero, beş hızlı bağlantı, üç rol ve her rolde görünür kalan altı ürün, beş çözüm bağlantısı, 20 hizmet/kaynak kaydı ve footer. Header paketinin düz menü sınırı nedeniyle mega menü, arama ve tema kontrolü uygulanmadı. Kullanıcı kararıyla header CTA içermez; `Teklif İste` ve `Ücretsiz Deneme` yalnız hero'dadır. Hero videosu temsilî alandır. Form yoktur; teklif/deneme yalnız mevcut dış hedef bağlantılarıdır.
++
++Tasarım sistemi `../../styles.css` ve `../../_ds_bundle.js` üzerinden, kabul edilen antrasit önizleme tokenlarıyla çalışır. İçerik `../../../homepage-wireframe/data.js` kaynak eşlemesini kullanır. UI kit React/Babel CDN prototipidir; üretim Next.js uygulamasına kopyala-çalıştır sayılmaz.
++
++Açılış: proje kökünden HTTP sunucusu çalışırken `/docs/previews/anthracite-demo/ui_kits/homepage/`.
+diff --git a/ui_kits/homepage/index.html b/ui_kits/homepage/index.html
+new file mode 100644
+index 0000000..41bb203
+--- /dev/null
++++ b/ui_kits/homepage/index.html
+@@ -0,0 +1,20 @@
++<!doctype html>
++<html lang="tr" data-theme="aluplan" data-mode="dark">
++<head>
++  <meta charset="utf-8">
++  <meta name="viewport" content="width=device-width,initial-scale=1">
++  <meta name="robots" content="noindex,nofollow">
++  <title>Aluplan ana sayfa · Tasarım sistemi önizlemesi</title>
++  <link rel="stylesheet" href="../../styles.css">
++  <link rel="stylesheet" href="preview.css">
++  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
++  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
++  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
++  <script src="../../_ds_bundle.js"></script>
++  <script src="../../../homepage-wireframe/data.js"></script>
++</head>
++<body>
++  <div id="root"><p class="alu-text preview-loading">Tasarım sistemi önizlemesi yükleniyor…</p></div>
++  <script type="text/babel" src="HomepagePreview.jsx"></script>
++</body>
++</html>
+diff --git a/ui_kits/homepage/preview.css b/ui_kits/homepage/preview.css
+new file mode 100644
+index 0000000..4af6681
+--- /dev/null
++++ b/ui_kits/homepage/preview.css
+@@ -0,0 +1,36 @@
++body{margin:0;background:var(--surface-page);color:var(--text-primary)}
++.preview-loading{padding:var(--space-inset-lg)}
++.preview-ribbon{background:var(--surface-muted);border-bottom:var(--border-width-default) solid var(--border-default);padding:var(--space-inset-xs) 0}
++.preview-ribbon__inner{display:flex;gap:var(--space-inline-md);justify-content:space-between;align-items:center}
++.preview-shell{
++  min-height:100vh;
++  background:var(--surface-page)
++}
++.preview-section{padding-block:var(--space-stack-2xl)}
++.preview-section--subtle{background:var(--surface-subtle);border-block:var(--border-width-default) solid var(--border-default)}
++.preview-kicker{font-family:var(--font-mono);font-size:var(--type-mono-size);letter-spacing:var(--font-letter-spacing-mono);color:var(--accent-fg);text-transform:uppercase}
++.preview-hero{position:relative;isolation:isolate;overflow:hidden;padding-block:clamp(4rem,8vw,8rem);border-bottom:var(--border-width-default) solid var(--border-default);background:linear-gradient(120deg,var(--surface-page) 0 58%,var(--surface-raised) 58% 100%)}
++.preview-hero::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.22;background-image:linear-gradient(var(--border-default) 1px,transparent 1px),linear-gradient(90deg,var(--border-default) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(90deg,#000,transparent 76%)}
++.preview-hero__grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(17rem,.75fr);gap:var(--space-stack-xl);align-items:end}
++.preview-hero__title{max-width:12ch}
++.preview-hero__media{min-height:22rem;padding:var(--space-inset-lg);border:var(--border-width-default) solid var(--border-strong);border-radius:var(--radius-surface);background:var(--surface-default);display:flex;flex-direction:column;justify-content:flex-end}
++.preview-hero__mark{font-family:var(--font-mono);font-size:clamp(3rem,8vw,7rem);line-height:.8;color:var(--accent-fg);opacity:.65}
++.preview-quicklinks{display:flex;flex-wrap:wrap;gap:var(--space-inline-md);padding-block:var(--space-stack-lg)}
++.preview-role-copy{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-stack-xl);align-items:start;padding:var(--space-inset-lg);background:var(--surface-raised);border:var(--border-width-default) solid var(--border-default);border-radius:var(--radius-surface)}
++.preview-role-copy .alu-card{padding:var(--space-inset-sm)}
++.preview-shell .alu-role{padding:var(--space-inset-sm) var(--space-inset-md)}
++.preview-shell .alu-card{gap:var(--space-stack-md)}
++.preview-shell .alu-card__footer{padding-top:var(--space-stack-md)}
++.preview-shell .alu-grid>.alu-card{height:100%;min-height:100%}
++.preview-product{display:flex;min-width:0}
++.preview-product>.alu-card{flex:1}
++.preview-product--related>.alu-card{border-color:var(--accent-border);box-shadow:inset 0 0 0 var(--border-width-default) var(--accent-border)}
++.preview-services-primary{margin-top:var(--space-stack-lg)}
++.preview-service-group{padding-block:var(--space-stack-md);border-top:var(--border-width-default) solid var(--border-default)}
++.preview-service-group summary{cursor:pointer;display:flex;justify-content:space-between;gap:var(--space-inline-md);font-family:var(--font-heading);font-weight:var(--font-weight-heading);font-size:var(--type-h4-size);color:var(--text-primary);padding-block:var(--space-inset-sm)}
++.preview-service-group summary::marker{color:var(--accent-fg)}
++.preview-meta{max-width:70ch}
++.preview-note{border-left:var(--border-width-strong) solid var(--accent-border);padding-left:var(--space-inset-md)}
++@media(max-width:64rem){.preview-hero{background:var(--surface-page)}.preview-hero__grid,.preview-role-copy{grid-template-columns:1fr}.preview-hero__media{min-height:16rem}.preview-ribbon__inner{align-items:flex-start;flex-direction:column}}
++@media(max-width:40rem){.preview-shell{--card-padding:var(--space-inset-sm)}.preview-hero__media,.preview-role-copy{padding:var(--space-inset-sm)}.preview-shell .alu-role{padding:var(--space-inset-sm)}}
++@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}

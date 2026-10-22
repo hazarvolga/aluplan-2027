@@ -29,4 +29,18 @@ Bu kontroller tam mobil, ekran okuyucu, performans, Next.js build veya içerik p
 
 Kullanıcı `Teklif İste` etiketini kabul etti ve teklif/deneme eylemleri hero'da bulunduğu için header'dan kaldırılmasını istedi. Önizlemede header yalnız gezinme taşır; hero'da `Teklif İste` birincil ve `Ücretsiz Deneme` ikincil eylem olarak kalır. Bu karar mevcut canlı siteyi veya Next.js uygulamasını değiştirmez.
 
+## 22.10.2026 — Kart geometrisi ve yoğunluk normalizasyonu
+
+Kullanıcı kararıyla ana sayfa önizlemesindeki kart ve panel yüzeyleri keskin köşeli, ince çizgili teknik dile döndürüldü. Bu son yön, önceki 6/8 px ara önerisini geçersiz kılar: `aluplan` tema katmanında `radius.surface = 0`; buton/kontrol radius'u ve pill rozet anatomisi ayrı kalır.
+
+- Küçük özellik kartı: 16 px iç boşluk.
+- Standart ürün/çözüm/hizmet kartı: 24 px iç boşluk.
+- Büyük rol anlatısı ve hero medya paneli: 32 px iç boşluk.
+- Dar görünümde kart/panel yoğunluğu 16 px'e iner.
+- Ürün kartı sarmalayıcıları aynı satırda eşit yüksekliğe bağlandı.
+
+Değerler önizleme CSS'inde primitive tokenlarla sabitlenmedi; `tokens/tokens.json` içindeki `aluplan` semantic tema override'larından üretilir. `build-tokens --check`, token testleri 28/28, içerik testleri 13/13 ve 188 kontrast kontrolü geçti. Masaüstü tarayıcı ölçümü standart kartlarda `radius: 0px / padding: 24px`, özellik kartlarında `0px / 16px`, büyük panelde `0px / 32px`; ilk ürün satırında üç kart da 228 px olarak doğrulandı. İçerik, URL, schema, form ve Next.js katmanları değiştirilmedi.
+
+Görsel kanıt: `docs/previews/anthracite-homepage-cards-normalized.png`.
+
 Önizleme, önceki antrasit tasarım sistemi kopyasının içinde yerel değerlendirme çıktısı olarak tutulur. Bu türetilmiş paket daha önce alınan kararla Git dışında kalır; bu kontrol kaydı ve devir durumu commit edilir.

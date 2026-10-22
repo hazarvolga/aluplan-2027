@@ -8,12 +8,16 @@
     "tokens/build/tokens.resolved.json",
     "tokens/primitives.css",
     "tokens/semantic.css",
-    "tokens/tokens.json"
+    "tokens/tokens.json",
+    "ui_kits/homepage/HomepagePreview.jsx",
+    "ui_kits/homepage/README.md",
+    "ui_kits/homepage/index.html",
+    "ui_kits/homepage/preview.css"
   ],
   "unchangedLayers": [
     "data",
-    "components JSX",
-    "ui_kits",
+    "existing component JSX",
+    "existing ui_kits outside homepage",
     "logos",
     "bundle"
   ],
@@ -31,5 +35,18 @@
     "failed": 0
   },
   "contrastChecks": 188,
-  "contrastFailures": 0
+  "contrastFailures": 0,
+  "homepageVisualContract": {
+    "surfaceRadius": "0px",
+    "compactPadding": "16px",
+    "standardPadding": "24px",
+    "featuredPadding": "32px",
+    "firstProductRowHeights": [
+      228,
+      228,
+      228
+    ],
+    "contentOrSchemaChanged": false
+  },
+  "patchApplyCheck": "passed"
 }

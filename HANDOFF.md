@@ -228,3 +228,7 @@ Kullanıcı niyete özel kısa girişler/ortak takibi mantıklı buldu ve Forms�
 ## 22.10.2026 — Next.js yönü kabul edildi; seçenek kapsamı korunuyor
 
 Kullanıcı Next.js içinde kısa formlarla ilerlemeyi onayladı; henüz kod yazılmayacak. Önceki platform seçimi açık notları tarihsel olarak aşıldı. [Alan, takip ve schema sözleşmesi](docs/request-forms-contract.md) güncel plandır. Kullanıcı mevcut formun üç kategorisi altında çok sayıda seçenek olduğunu hatırlattı: üç çekirdek niyet ürün/eklenti seçeneklerini azaltmaz veya ekran sayısını dondurmaz. Bölüm1–14kapsam eşlemesi eklendi; öğrenci lisansı ve mevcut müşteri eklenti temini ayrı alt yol olarak korunur. Çoklu ürün/modül ilgisi kaybolmaz. Deneme formunun zorunluluğu, gerçek takip hedefi/sorumluları ve hukuki metinler henüz açık; yeni CRM veya site/form/schema uygulaması yok.
+
+## 22.10.2026 — Yeni form sözleşmesi schema kontrolü
+
+Schema v2.0.0 skill okundu, Google ürün varyantları/yazılım/ürün snippet/kurs/genel kurallar ve softwareVersion yeniden doğrulandı. docs/form-schema-review-2026-10-22.md raporu: doğrudan ihlal yok; otomatik ProductGroup, kaynak sürümü–açık sürüm tercihi ve Eğitim hizmeti–arşiv sayfa amacı ayrımı netleştirildi. docs/request-forms-contract.md açıklamaları güncellendi. Fiyat/yorum olmadan rich result uygunluğu yok; semantik tür geçerliliği ayrı. Kod, schema veya canlı form değişmedi; Validator/RRT/Search Console çalıştırılmadı. Önceki operasyon kararları açık; bu inceleme yeni ticari karar gerektirmiyor.

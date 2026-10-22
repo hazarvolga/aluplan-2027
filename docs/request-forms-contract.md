@@ -100,8 +100,9 @@ Webinar arşivi → YouTube izleme yolu bu formdan bağımsızdır. Gerçek yakl
 | Grup | Alanlar | Güven sınırı |
 |---|---|---|
 | Kayıt kimliği | requestId, intent, formContractVersion, createdAt | Sunucu üretir/doğrular; saat istemciden alınmaz |
-| Açık tercih | primaryProductRef ve ürün başına selections (productRef, moduleRefs, editionRefs), forma özgü alanlar | Sunucuda katalog ve niyetle uyum kontrolü; bir ürünün paketi başka ürüne taşınmaz |
+| Açık tercih | primaryProductRef ve ürün başına selections (productRef, moduleRefs, editionRefs, gerektiğinde requestedReleaseRefs), forma özgü alanlar | Sunucuda katalog ve niyetle uyum kontrolü; bir ürünün paketi başka ürüne taşınmaz |
 | Geliş bağlamı | sourcePageRef, sourceProductRef, sourceReleaseRef | Kullanıcı tercihi değildir; geçerli yerel kayıt listesiyle doğrulanır |
+| Açık sürüm tercihi | Gereken alt yollarda requestedReleaseRefs; genel formda zorunlu değil | Kullanıcının açık seçimi; sourceReleaseRef ile karıştırılmaz |
 | Tarihsel iz | Seçimin o andaki adı, içerik revizyonu | Yıllık katalog değişiminde eski talep başka ürüne dönüşmez |
 | Operasyon | ownerTeam, assignee, status, nextFollowUpAt, outcome | Yalnız yetkili operasyon; istemci bunları belirleyemez |
 | Teslimat | notificationState, integrationState, attempts, lastErrorCode | Kişisel veri içermeyen hata kodları; talep durumundan ayrı |
@@ -149,7 +150,7 @@ Build/test henüz yok; bunlar ileride uygulanacak kabul senaryolarıdır. Hangi 
 | Ürün/paket/sürüm içinden teklif | Kaynak sayfanın mevcut mainEntity/about modeli korunur. Form ürün başına productRef/editionRefs ilişkisini iç kayıtta taşır | Yeni form yeni Product değildir; form alanı fiyat/Offer kanıtı değildir |
 | Genel talep sayfası varsa | Amacına uygun ContactPage veya WebPage; site/kuruluş ilişkileri | Yeni URL henüz yok; sırf form var diye tüm sayfalara ContactPage uygulanmaz |
 | Deneme yardımı | ALLPLAN yazılım kimliği ve üretici indirme hedefi ayrı; yerel yardım sağlayıcısı Aluplan | Form başarısı DownloadAction/PurchaseAction başarısı değil; ücretli ürüne fiyat0yazılmaz |
-| Eğitim sayfası | mainEntity→tek Eğitim Service; Service.provider→Aluplan; WebPage.about→ilgili ürün | Özel talep yeni Course, rezervasyon veya ayrı Service yaratmaz |
+| Eğitim hizmet tanıtım sayfası | mainEntity→tek Eğitim Service; Service.provider→Aluplan; WebPage.about→ilgili ürün | Özel talep yeni Course, rezervasyon veya ayrı Service yaratmaz |
 | Eğitim erişim kanalı | Service.availableChannel→ServiceChannel; providesService→aynı Eğitim Service; serviceUrl→gerçek onaylı form/hedef | Üç farklı niyet aynı erişim URL'sini kullansa bile hizmet/ürün kimlikleri birleştirilmez |
 | Webinar arşivi | Gerçek video kayıtları önceki metadata sözleşmesiyle ilişkilendirilir | Talep formu VideoObject/Course metadata kaynağı değildir |
 
@@ -164,3 +165,7 @@ Dayanak: aynı tarihli [schema kontrolü](schema-inventory-impact-2026-10-22.md)
 3. Aydınlatma, saklama ve ilgili erişim sorumluluğu kimde? Şimdi süre veya izin metni uydurulmayacak.
 
 Alanları ve teknik hata durumlarını kullanıcıya tek tek test ettirmek yerine ekip bu sözleşmeyle doğrulayacak. Mevcut Microsoft formu ve eski URL'ler yeni akış kabul edilip geçiş haritası hazırlanmadıkça kaldırılmayacak.
+
+## 22.10.2026 schema kontrolüyle netleştirme
+
+[Son inceleme](form-schema-review-2026-10-22.md): doğrudan Google ihlali yok; üç uygulama belirsizliği netleştirildi. Paket/yıl alanları otomatik ProductGroup/variesBy yapılmayacak; Google yazılım yılı/edition boyutunu destek listesinde saymıyor. requestedReleaseRefs açık kullanıcı tercihini, sourceReleaseRef geliş sayfasını anlatır; ikisi de iç alanlardır. softwareVersion yalnız gerçek yazılım sürümünü anlatır. Eğitim hizmet sayfasının Service ana varlığı, arşiv ve tek video sayfasına otomatik uygulanmaz. Genel arşiv CollectionPage/ItemList adayıdır; nihai seçim görünür içerikle yapılır. Form sayısı ürün veya hizmet sayısı değildir. Fiyat/değerlendirme kanıtı olmadan Google yazılım/ürün rich result uygunluğu ilan edilmez. Kod/JSON-LD üretilmedi.

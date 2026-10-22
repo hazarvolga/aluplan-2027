@@ -209,7 +209,7 @@ Kimlikler URL, tema ve dosya konumundan bağımsızdır. Aşağıdaki alan isiml
 | Kalıcı ürün | `productId`, `manufacturerId` | Ürün ailesinin adı, amacı, kalıcı açıklaması |
 | Paket | `editionId`, `productId` | Paket kimliği; tüm yıllarda aynı kapsamı taşıdığı varsayılmaz |
 | Yıllık sürüm | `releaseId`, `productId`, `versionLabel` | Doğrulanmış sürüm, yenilikler, uyumluluk ve kaynak |
-| Paket–sürüm kapsamı | `editionId` + `releaseId` + `market` | O sürüm ve bölgedeki özellikler, seçenekler ve koşullar |
+| Paket–sürüm kapsamı | `editionId` + `releaseId` + `market` + `licenseModel` + `sourceRevisionRef` + capability/relatedProduct | O bağlamdaki kaynak iddiası; çelişkili kayıtlar korunur |
 | İçerik sayfası | `pageId`, mevcut `canonicalUrl`, ilgili kayıt kimlikleri | Sayfanın amacı ve görünür içeriği |
 | Dosya / kanıt | `assetId`, ilgili kayıt kimlikleri, kaynak ve doğrulama tarihi | PDF/video revizyonu ve hangi kapsama ait olduğu |
 
@@ -273,3 +273,7 @@ Kullanıcı strateji kararlarında yetki üstleniyor: bilgi mimarisi, kavram ayr
 ## 21.10.2026 sayfa görevleri ve hizalama kararı
 
 Kullanıcı üreticiye bilgi/kavram düzeyinde hizalanmayı kabul etti. [Sayfa görev tablosu](page-responsibilities.md) 23 mevcut URL için ALLPLAN referansı, Aluplan ek değeri ve içerik işlemini ayırır. Üretici kapsamı uluslararası kaynaktan TR'ye otomatik taşınmaz. Hizalama mevcut içeriği sessizce değiştirmek değildir: orijinal korunur, eski/dayanak/öneri farkı ayrıca değerlendirilir. Kod, site metni, CTA ve URL değişikliği yapılmadı.
+
+## 22.10.2026 — Son schema kontrolü ve hizmet ilişkileri
+
+[Son kontrol raporu](schema-final-review-2026-10-22.md) bölüm 10 için güncel ek karardır. Tek Eğitim Service kaydı; tek Teknik Destek Service kaydı ve Teams/ticket ServiceChannel ilişkileri esas alınır. Ticket hedefi kullanıcı düzeltmesiyle allplan.net.tr; müşteri giriş yolu ayrıca doğrulanır. Eğitim sayfası Türkçe genel hizmet sunumudur; otomatik Course veya İngilizce Course list rich result hedefi değildir. İç modelin lisans/kaynak revizyonu boyutları ana tabloya işlendi. Antrasit tema kullanıcı tarafından uygun bulundu; içerik/schema ve site entegrasyonu için izin değildir. JSON-LD uygulanmadı.

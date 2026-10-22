@@ -28,7 +28,8 @@ Bilinmeyen değer açıkça unknown/null olarak tutulur; boş string, sıfır ve
 | Capability | id, displayName, originalDescription, sourceRefs | Özellik adının değişmesi otomatik yeni özellik demek değil; alias ve eski etiket korunur |
 | ScopeClaim | id, editionRef, releaseRef, capabilityRef veya relatedProductRef, market, licenseModel, sourceRevisionRef, rawCell, rawFootnote, claimState | Dahil / ücretli seçenek / ön koşullu / kaynakta belirtilmemiş ayrı. Aynı bağlamda çelişen kaynaklar birlikte saklanır; son kayıt eskisini ezmez |
 | SourceRevision / Asset | id, sourceUrl, originalFilename, sourceDate, observedAt, hash, locator, language, regionEvidence | Belge revizyonu ve erişim kaydı. Hash dosya eşliği kanıtlar, lisans hakkı veya güncellik değil |
-| Service | id, providerRef, serviceType, audience, originalDescription, entryPointRefs, termsStatus, sourceRefs | Aluplan eğitim/destek/danışmanlık taahhütleri yazılım özelliklerinden ayrı. SLA, süre, fiyat, sertifika kapsamı kanıt gerektirir |
+| Service | id, providerRef, serviceType, audience, originalDescription, entryPointRefs, relatedProductRefs, applicableReleaseRefs, channelRefs, termsStatus, sourceRefs | Aluplan eğitim/destek/danışmanlık taahhütleri yazılım özelliklerinden ayrı. SLA, süre, fiyat, sertifika kapsamı kanıt gerektirir |
+| ServiceChannel | id, serviceRef, channelType, customerEntryUrl, sourceRefs, verificationStatus | Teams ve ticket aynı Teknik Destek hizmetine erişim yolları; bu iç kayıt yalnız görünür/doğrulanmış alanlarıyla Schema.org ServiceChannel adayıdır |
 | Resource / ExternalDestination | id, resourceType, destination, providerStatus, language, applicableReleaseRefs, lastCheckedAt | Üretici portalı, lisans aracı, webinar, rehber ve dosya hizmet taahhüdü gibi modellenmez |
 | EntryPoint | id, label, destination, purpose, relatedRecordRef, originalLocation | Aynı hizmete birden fazla giriş olabilir. Mevcut CTA hedefi, kaynakta hesaplanan gerçek hedefle kaydedilir |
 | PageComposition | pageId, existingUrl, responsibility, recordRefs, originalBlockRefs | İçeriğin hangi sayfada gösterildiği. Tema tokenı, fiyat ve schema türü bu kaydın pazarlama metnine karıştırılmaz |
@@ -38,10 +39,10 @@ Bilinmeyen değer açıkça unknown/null olarak tutulur; boş string, sıfır ve
 1. ScopeClaim için edition + release + market + licenseModel + capability/relatedProduct + sourceRevision bağlamı saklanır. Ticari yürürlük ancak dayanak varsa eklenir.
 2. PDF'de boş hücre veya satır yokluğu “satılmıyor” kararına dönüştürülmez. Kaynak A ve B farklı iddialarsa disputed durumuyla görünür bir karar kaydı açılır.
 3. Hizmet sağlayıcı, portal sahibi ve ürün üreticisi farklı rollerdir. Teknik destek kanalı olması kesintisiz hizmet/SLA kanıtı değildir.
-4. Özelleştirilmiş eğitim ayrı service offering adayı olabilir; hedef kitle, konu, teslim biçimi ve koşullar doğrulanmadan yeni eğitim paketi icat edilmez.
+4. Kullanıcının 21.10.2026 kararıyla tek Eğitim hizmet kimliği kullanılır; özelleştirme talep bağlamıdır, ayrı hizmet değildir. Seviye/format etiketi otomatik Course oluşturmaz.
 5. Kaynakta href ile render edilen hedef farklıysa ikisi de saklanır; migration için kullanıcıya sunulan gerçek hedef esas alınır.
 6. Her kaynak dosyası ve metin korunur. Hizalama değişikliği eski→dayanak→öneri→karar zinciriyle değerlendirilir.
-7. Tema verisi bu alanları değiştirmez. Schema yalnız görünür, doğrulanmış içerikten ayrı üretim katmanında türetilir; her iç ilişki JSON-LD'ye çevrilmez. Bu tur Google araştırması/JSON-LD üretimi yapılmadı; mevcut schema planı geçerli referanstır.
+7. Tema verisi bu alanları değiştirmez. Schema yalnız görünür, doğrulanmış içerikten ayrı üretim katmanında türetilir; her iç ilişki JSON-LD'ye çevrilmez. İlk sözleşme hazırlanırken Google araştırması yapılmadı; 22.10.2026 doğrulaması bağlantılı son kontrol raporundadır. JSON-LD üretilmedi.
 
 ## Şablonun doğrulanacağı senaryolar
 
@@ -53,3 +54,5 @@ Bilinmeyen değer açıkça unknown/null olarak tutulur; boş string, sıfır ve
 - Yeni tema açıldığında metin, URL, kaynak ve schema kimlikleri değişmeden kalıyor mu?
 
 Bunlar kabul taslağıdır; çalışan yazılım testi değildir. Sonraki adım gerçek içeriklerin bu sözleşmeye tam ve kayıpsız eşlenmesidir.
+
+22.10.2026 son kontrol: [Schema eksik/karar raporu](schema-final-review-2026-10-22.md). İlişki alanları içerik sözleşmesidir; JSON-LD uygulaması değildir.

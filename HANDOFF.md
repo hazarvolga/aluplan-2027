@@ -160,3 +160,7 @@ Kullanıcı Teams üzerinden desteğin ve ayrı ticket sisteminin çalıştığ�
 - Orijinal ZIP token drift nedeniyle 27/28; türetilmiş önizlemede üreticiyle giderildi, 28/28 token +13/13 içerik +188 kontrast başarılı. Logo paket içi eşliği var; kullanıcının güncel Documents SVG'siyle bayt eşliği yok.
 - Önizleme: http://127.0.0.1:8769/ui_kits/website/index.html?theme=aluplan&mode=dark#product — loopback sunucu, session 93934. Ekran görüntüsü docs/previews/anthracite-demo-preview.png.
 - ZIP/açılmış paketler yerel ve untracked; yalnız değişiklik patch'i, rapor ve ekran görüntüsü commit edilir. Kullanıcı görsel değerlendirmesi sıradaki adım; siteye entegrasyon yok.
+
+## 22.10.2026 — Antrasit kabulü ve schema son kontrol
+
+Kullanıcı antrasit temayı uygun buldu; schema skilliyle ürün/paket/sürüm ve Eğitim/Destek ilişkilerinin son belge kontrolünü istedi. `docs/schema-final-review-2026-10-22.md` (proje köküne göre) güncel resmî kaynakları, karar matrisini ve eksikleri içerir. Tek Eğitim, tek destek hizmeti/iki kanal, Course list–Course Info ayrımı netleştirildi; eski ayrı özel eğitim aday notu kaldırıldı. Fiyat/yorum, TR lisans kapsamı, müşteri destek giriş URL'si ve hizmet koşulları açık. Kod/schema/site/tema değiştirilmedi; Rich Results Test ve URL Inspection yapılmadı. Sıradaki adım raporun kullanıcı değerlendirmesi ve uygulama öncesi kanıt açıklarının kapanmasıdır.

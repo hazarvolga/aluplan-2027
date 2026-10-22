@@ -1,0 +1,582 @@
+{
+  "date": "2026-10-22",
+  "phase0_complete": false,
+  "previous_browser_states": 57,
+  "new_browser_states": 179,
+  "observed_routes": {
+    "/solutions-v2/training": 11,
+    "/solutions-v2/faq": 25,
+    "/solutions-v2/training/quick-start": 9,
+    "/references": 10,
+    "/products/civil": 3,
+    "/products/allplan-ultimate": 3,
+    "/products/precast": 15,
+    "/solutions/architecture": 23,
+    "/solutions/structural": 15,
+    "/solutions/infrastructure": 15,
+    "/solutions/mep": 11,
+    "/solutions/road-railway": 10,
+    "/solutions/site-planning": 8,
+    "/products/precast-detail": 15,
+    "/products": 6,
+    "/products/allplan-2026-yenilikler": 4,
+    "/solutions/addons/drive-curve": 6,
+    "/solutions/addons/steel-components": 7,
+    "/solutions/addons/parametric-terrain": 1,
+    "/solutions/addons/sketchup-converter": 2,
+    "/solutions-v2/connect-license/how-to-assign": 3,
+    "/solutions-v2/training/video-library": 1,
+    "/solutions-v2/training/video-library/hello-allplan-2024": 2,
+    "/solutions-v2/training/video-library/addon-geometry": 1,
+    "/solutions-v2/training/video-library/ax3000": 1,
+    "/solutions-v2/training/video-library/road-design": 1,
+    "/solutions-v2/training/video-library/bridge-workflows": 1,
+    "/solutions-v2/training/video-library/campus-de": 1,
+    "/solutions-v2/training/video-library/campus-en": 1,
+    "/solutions-v2/training/video-library/sds2-intro": 1,
+    "/solutions-v2/training/video-library/konut-insaati": 1,
+    "/solutions-v2/training/video-library/bridge-workflow-2022": 1,
+    "/solutions-v2/training/video-library/otomatik-donati": 1,
+    "/solutions-v2/training/video-library/quickstart-buildings": 1,
+    "/solutions-v2/training/video-library/allplan-reinforcement": 1,
+    "/solutions-v2/training/video-library/campus-tutorials-2019-2022": 1,
+    "/solutions-v2/training/webinar": 3,
+    "/solutions-v2/training/online": 1,
+    "/solutions-v2/training/classroom": 1,
+    "/solutions-v2/training/events": 1,
+    "/solutions-v2/training/individual": 1,
+    "/solutions-v2/training/e-learning": 1,
+    "/search": 6,
+    "/solutions/addons/three-dimensioning": 1,
+    "/solutions/addons/ramp": 1,
+    "/solutions/ax3000-virtual-reality": 1,
+    "/solutions/ax3000-yapi-fizigi": 1
+  },
+  "routes": [
+    {
+      "route": "/",
+      "source_entry": "app/(public)/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/products/allplan-2026-yenilikler",
+      "source_entry": "app/products/allplan-2026-yenilikler/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 4,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/products/allplan-2026",
+      "source_entry": "app/products/allplan-2026/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/products/allplan-aec",
+      "source_entry": "app/products/allplan-aec/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/products/allplan-basic",
+      "source_entry": "app/products/allplan-basic/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/products/allplan-bimplus",
+      "source_entry": "app/products/allplan-bimplus/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/products/allplan-cloud-services",
+      "source_entry": "app/products/allplan-cloud-services/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/products/allplan-concept",
+      "source_entry": "app/products/allplan-concept/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/products/allplan-professional",
+      "source_entry": "app/products/allplan-professional/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/products/allplan-ultimate",
+      "source_entry": "app/products/allplan-ultimate/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 3,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/products/allplan",
+      "source_entry": "app/products/allplan/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/products/architecture",
+      "source_entry": "app/products/architecture/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/products/ax3000",
+      "source_entry": "app/products/ax3000/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/products/civil",
+      "source_entry": "app/products/civil/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 3,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/products",
+      "source_entry": "app/products/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 6,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/products/precast-detail",
+      "source_entry": "app/products/precast-detail/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 15,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/products/precast",
+      "source_entry": "app/products/precast/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 15,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/products/sds2-home",
+      "source_entry": "app/products/sds2-home/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/references",
+      "source_entry": "app/references/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 10,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/search",
+      "source_entry": "app/search/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 6,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions-v2/connect-license/activation",
+      "source_entry": "app/solutions-v2/connect-license/activation/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions-v2/connect-license/how-to-assign",
+      "source_entry": "app/solutions-v2/connect-license/how-to-assign/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 3,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions-v2/faq",
+      "source_entry": "app/solutions-v2/faq/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 25,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions-v2/training/classroom",
+      "source_entry": "app/solutions-v2/training/classroom/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 1,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions-v2/training/e-learning",
+      "source_entry": "app/solutions-v2/training/e-learning/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 1,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions-v2/training/events",
+      "source_entry": "app/solutions-v2/training/events/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 1,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions-v2/training/individual",
+      "source_entry": "app/solutions-v2/training/individual/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 1,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions-v2/training/online",
+      "source_entry": "app/solutions-v2/training/online/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 1,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions-v2/training",
+      "source_entry": "app/solutions-v2/training/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 11,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions-v2/training/quick-start",
+      "source_entry": "app/solutions-v2/training/quick-start/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 9,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions-v2/training/video-library/[playlistId]",
+      "source_entry": "app/solutions-v2/training/video-library/[playlistId]/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 15,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions-v2/training/webinar",
+      "source_entry": "app/solutions-v2/training/webinar/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 3,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/addons/drive-curve",
+      "source_entry": "app/solutions/addons/drive-curve/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 6,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/addons",
+      "source_entry": "app/solutions/addons/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/addons/parametric-terrain",
+      "source_entry": "app/solutions/addons/parametric-terrain/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 1,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/addons/ramp",
+      "source_entry": "app/solutions/addons/ramp/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 1,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/addons/sketchup-converter",
+      "source_entry": "app/solutions/addons/sketchup-converter/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 2,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/addons/steel-components",
+      "source_entry": "app/solutions/addons/steel-components/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 7,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/addons/three-dimensioning",
+      "source_entry": "app/solutions/addons/three-dimensioning/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 1,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/allplan-bulut-hizmetleri",
+      "source_entry": "app/solutions/allplan-bulut-hizmetleri/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/allplan-industry",
+      "source_entry": "app/solutions/allplan-industry/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/architecture",
+      "source_entry": "app/solutions/architecture/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 23,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/ax3000-virtual-reality",
+      "source_entry": "app/solutions/ax3000-virtual-reality/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 1,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/ax3000-yapi-fizigi",
+      "source_entry": "app/solutions/ax3000-yapi-fizigi/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 1,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/bimx5",
+      "source_entry": "app/solutions/bimx5/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/bridge-design",
+      "source_entry": "app/solutions/bridge-design/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/features-allplan-bridge",
+      "source_entry": "app/solutions/features-allplan-bridge/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/imar-yonetmeligi-bim-eklentisi",
+      "source_entry": "app/solutions/imar-yonetmeligi-bim-eklentisi/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/infrastructure",
+      "source_entry": "app/solutions/infrastructure/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 15,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/mep",
+      "source_entry": "app/solutions/mep/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 11,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/modeling-of-precast-girder-bridges",
+      "source_entry": "app/solutions/modeling-of-precast-girder-bridges/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/oska",
+      "source_entry": "app/solutions/oska/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/precast",
+      "source_entry": "app/solutions/precast/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/pythonpart",
+      "source_entry": "app/solutions/pythonpart/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/rebar-engineering",
+      "source_entry": "app/solutions/rebar-engineering/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/road-railway",
+      "source_entry": "app/solutions/road-railway/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 10,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/scalypso/converter",
+      "source_entry": "app/solutions/scalypso/converter/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/scalypso/mobile",
+      "source_entry": "app/solutions/scalypso/mobile/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/scalypso/modeler",
+      "source_entry": "app/solutions/scalypso/modeler/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/scalypso",
+      "source_entry": "app/solutions/scalypso/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/scalypso/videos",
+      "source_entry": "app/solutions/scalypso/videos/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/scalypso/viewer",
+      "source_entry": "app/solutions/scalypso/viewer/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/site-planning",
+      "source_entry": "app/solutions/site-planning/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 8,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/steel",
+      "source_entry": "app/solutions/steel/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 0,
+      "status": "source-only-this-pass",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    },
+    {
+      "route": "/solutions/structural",
+      "source_entry": "app/solutions/structural/page.tsx",
+      "source_evidence": "interaction-register-2026-10-22.json",
+      "browser_state_count": 15,
+      "status": "partial-live-observation",
+      "remaining": "Conditional branches, dialogs, playback and runtime equality require targeted acceptance; count is not full coverage."
+    }
+  ],
+  "notes": [
+    "No runtime coverage percentage inferred.",
+    "0 means absent from these two JSON files, not never observed; previous homepage evidence remains separate.",
+    "Current user deferred missing-target repairs; no deletion authorized."
+  ]
+}

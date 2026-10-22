@@ -82,3 +82,7 @@ Kullanıcı antrasit temayı uygun buldu; schema skilliyle ürün/paket/sürüm 
 ## 22.10.2026 — Eksik hedefleri kaydet, onarımı ertele
 
 Kullanıcı 404 ve eksik hedefleri liste olarak korumamızı, gerekli düzeltmeleri sonra ele almamızı istedi. İçeriği yeniden oluşturma veya tamamen iptal etme seçenekleri açık; satır bazında seçim yapılmadı. Liste: [URL kapanış kaydı](url-closure-2026-10-22.md). Şimdi URL, içerik, link veya schema değiştirilmez; bilinen onarım ihtiyacı envanter ilerlemesini durdurmaz. Yayın öncesi karar ve doğrulama gereklidir.
+
+## 22.10.2026 — Teknik kontrol sorumluluğu
+
+Kullanıcı kalan envanter işlerini onayladı; sonunda tüm öğeleri kendisinin tek tek denetlemek zorunda kalmamasını istedi. Teknik ekip kaynak/canlı eşlemesini, kanıt toplamayı ve doğrulamayı üstlenir; kullanıcıya yalnız gerçek tercih, kapsam ve ticari kararlar sunulur. Eksik teknik kanıt tamamlanmış gibi gösterilmez. Mevcut onarım erteleme ve faz sınırları korunur.

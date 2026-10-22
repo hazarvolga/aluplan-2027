@@ -1,0 +1,895 @@
+{
+  "date": "2026-10-22",
+  "scope": "Read-only source inventory plus saved22Oct live empty-form browser observations; no personal entry/submission/login; no environment/secrets.",
+  "forms": [
+    {
+      "id": "contact-modal",
+      "source": "components/layout-v2/ContactModal.tsx",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Ad Soyad",
+          "type": "text",
+          "required": true,
+          "readonly": false
+        },
+        {
+          "name": "company",
+          "label": "Firma",
+          "type": "text",
+          "required": false,
+          "readonly": false
+        },
+        {
+          "name": "email",
+          "label": "E-posta",
+          "type": "email",
+          "required": true,
+          "readonly": false
+        },
+        {
+          "name": "phone",
+          "label": "Telefon",
+          "type": "tel",
+          "required": false,
+          "readonly": false
+        },
+        {
+          "name": "jobTitle",
+          "label": "Meslek / Unvan",
+          "type": "text",
+          "required": false,
+          "readonly": false
+        },
+        {
+          "name": "sector",
+          "label": "Sektör",
+          "type": "text",
+          "required": false,
+          "readonly": false
+        },
+        {
+          "name": "subject",
+          "label": "Konu",
+          "type": "text",
+          "required": false,
+          "readonly": true
+        },
+        {
+          "name": "message",
+          "label": "Mesajınız",
+          "type": "textarea",
+          "required": true,
+          "readonly": false
+        }
+      ],
+      "destination": null,
+      "handler": "FormData -> console.log ->1000ms -> isSubmitted=true",
+      "success": "Teşekkürler! Mesajınız başarıyla alınmıştır. Ekibimiz sizinle en kısa sürede \"{defaultSubject}\" konusu hakkında iletişime geçecektir.",
+      "errors": "Native required/email validation only; no server/network error or pending state",
+      "consumers": [
+        "app/solutions-v2/training/page.tsx",
+        "components/templates/TrainingDetailTemplate.tsx"
+      ],
+      "template_consumers": [
+        "individual",
+        "online",
+        "classroom",
+        "events",
+        "webinar"
+      ],
+      "template_exception": {
+        "route": "/solutions-v2/training/e-learning",
+        "ctaLink": "https://learnnow.allplan.com/course/search.php",
+        "note": "template mounts modal but CTA opens external link"
+      }
+    },
+    {
+      "id": "license-manager-local",
+      "source": "components/layout-v2/LicenseManagerModal.tsx",
+      "fields": [
+        {
+          "id": "company",
+          "name": null,
+          "label": "Firma",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "phone",
+          "name": null,
+          "label": "Telefon No",
+          "type": "tel",
+          "required": true
+        },
+        {
+          "id": "managerName",
+          "name": null,
+          "label": "Lisans Yöneticisinin Adı Soyadı",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "managerEmail",
+          "name": null,
+          "label": "Lisans Yöneticisinin E-posta Adresi",
+          "type": "email",
+          "required": true
+        },
+        {
+          "id": "customerNo",
+          "name": null,
+          "label": "Müşteri No",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "consumers": [],
+      "reachability": "No import/render consumer found in app/components; do not call live form",
+      "destination": null,
+      "handler": "1500ms delay; isSubmitting then isSuccess; no data collection/transport",
+      "success": "Bilgileriniz Alındı! Lisans yönetici bilgileriniz sistemimize kaydedilmiştir. Teşekkür ederiz.",
+      "errors": "Native required/email validation only; no submit error",
+      "actual_route_cta": "https://forms.office.com/r/HSrhvAkYmb"
+    },
+    {
+      "id": "activation",
+      "source": "app/solutions-v2/connect-license/activation/ActivationWizard.tsx",
+      "consumer": "app/solutions-v2/connect-license/activation/ClientPage.tsx:26",
+      "fields": [
+        {
+          "state_key": "firstName",
+          "label": "Adınız",
+          "type": "text",
+          "required": "JS truthiness at step1; no required attribute"
+        },
+        {
+          "state_key": "lastName",
+          "label": "Soyadınız",
+          "type": "text",
+          "required": "JS truthiness at step1; no required attribute"
+        },
+        {
+          "state_key": "email",
+          "label": "E-posta Adresiniz",
+          "type": "email",
+          "required": "JS truthiness at step1; no required attribute"
+        },
+        {
+          "state_key": "agreed",
+          "label": "Declaration Allplan formu için onay verin / Okudum, anladım, onaylıyorum.",
+          "type": "checkbox",
+          "required": "step5 download gate only; not sent in POST"
+        }
+      ],
+      "destination": "POST /api/send-activation-email",
+      "payload": [
+        "firstName",
+        "lastName",
+        "email"
+      ],
+      "success": "Bilgileriniz başarıyla kaydedildi. -> step2",
+      "errors": [
+        "Lütfen tüm alanları doldurun.",
+        "Bir hata oluştu, lütfen tekrar deneyin.",
+        "Lütfen önce şartları onaylayın."
+      ],
+      "steps": [
+        "Kullanıcı Bilgileri (POST)",
+        "Lisans Numarası (instruction only)",
+        "Talep Nedeni (instruction only)",
+        "Dijital İmza (instruction only)",
+        "Tamamla (checkbox/download)"
+      ],
+      "download": "/docs/Declaration_Allplan_2021-06-01.pdf",
+      "support_handoff": "https://www.allplan.net.tr",
+      "server_source": "app/api/send-activation-email/route.ts",
+      "server_statuses": {
+        "400": "Eksik bilgi",
+        "200": "success:true,messageId",
+        "500": "E-posta gönderilemedi"
+      },
+      "server_effects": [
+        "optional configured webhook: firstName,lastName,email,date",
+        "nodemailer admin mail to info@aluplan.com.tr",
+        "nodemailer user mail to supplied email"
+      ],
+      "limitations": [
+        "no delivery test",
+        "no complete signed declaration capture",
+        "webhook HTTP status not checked",
+        "success does not prove durable storage"
+      ]
+    },
+    {
+      "id": "search",
+      "source": "app/search/SearchPageClient.tsx",
+      "fields": [
+        {
+          "state_key": "query",
+          "type": "text",
+          "required": false,
+          "name": null
+        }
+      ],
+      "destination": "router.push /search?q=encodeURIComponent(query)",
+      "handler": "local searchIndex filter",
+      "states": [
+        "Aramaya başlamak için bir kelime yazın.",
+        "{n} sonuç bulundu.",
+        "Sonuç bulunamadı",
+        "Yükleniyor..."
+      ],
+      "note": "search form, not sales/contact"
+    },
+    {
+      "id": "contact-page",
+      "source": "app/contact/ClientPage.tsx",
+      "fields": [],
+      "note": "No embedded form or ContactModal consumer",
+      "destinations": [
+        "https://www.allplan.com/trial-or-subscription/",
+        "https://forms.office.com/r/hXhnKAG912",
+        "https://allplan.net.tr/"
+      ]
+    }
+  ],
+  "external_forms": {
+    "https://forms.office.com/r/hXhnKAG912": {
+      "evidence": [
+        "form-observation-2026-10-21.md",
+        "browser-complete-2026-10-22/external-forms.json"
+      ],
+      "verified_scope": "21Oct page1 entry and ALLPLAN path;22Oct quote/download/addon visible branches, no personal entry/submission",
+      "unknown": [
+        "page8 not encountered",
+        "page14 not opened beyond required personal fields on13",
+        "unobserved conditional permutations",
+        "format validation",
+        "success/error",
+        "delivery/persistence"
+      ],
+      "branch_observations": [
+        {
+          "record_index": 2,
+          "state": "Download branch",
+          "page": 11,
+          "field_option_ax_lines": [
+            "7 heading Aluplan Teklif & Talep Formu, Value: 1",
+            "57 heading DOWNLOAD, Value: 2",
+            "62 heading 15 - Download Formları Required to answer, Value: 2",
+            "68 radio button (settable, integer) Description: Allplan Öğrenci Versiyonu, Value: 0",
+            "72 radio button (settable, integer) Description: https://info.allplan.com/en/demo-download/cad-software-v2.html, Value: 0"
+          ]
+        },
+        {
+          "record_index": 3,
+          "state": "Download student next",
+          "page": 12,
+          "field_option_ax_lines": [
+            "7 heading Aluplan Teklif & Talep Formu, Value: 1",
+            "78 heading Öğrenci Versiyonu Başvuru, Value: 2",
+            "86 heading 16 - Gerekli Belgeler Required to answer, Value: 2",
+            "109 radio button (settable, integer) Description: YÖK e-devlet, Value: 0",
+            "113 radio button (settable, integer) Description: Öğrencilik Durumu: Aktif Öğrenci (Güncel Tarihli ), Value: 0",
+            "119 heading 17 - Bölüm Required to answer, Value: 2",
+            "125 radio button (settable, integer) Description: Mimarlık, Value: 0",
+            "129 radio button (settable, integer) Description: İnşaat Mühendisliği, Value: 0",
+            "133 radio button (settable, integer) Description: Yapı İşletmesi, Value: 0",
+            "137 radio button (settable, integer) Description: İnşaat Teknolojisi, Value: 0",
+            "141 radio button (settable, integer) Description: İç Mimarlık, Value: 0"
+          ]
+        },
+        {
+          "record_index": 4,
+          "state": "Download demo next",
+          "page": 13,
+          "field_option_ax_lines": [
+            "7 heading Aluplan Teklif & Talep Formu, Value: 1",
+            "77 heading Demografik Bilgiler, Value: 2",
+            "82 heading Adınız Soyadınız, Value: 2",
+            "84 text field (settable) 3, Adınız Soyadınız Required to answer. Single line text.",
+            "88 heading E-Mail, Value: 2",
+            "90 text field (settable) 4, E-Mail Required to answer. Single line text.",
+            "94 heading GSM, Value: 2",
+            "96 text field (settable) 5, GSM Required to answer. Single line text.",
+            "100 heading Firma, Value: 2",
+            "102 text field (settable) 6, Firma Required to answer. Single line text.",
+            "106 heading Şehir, Value: 2",
+            "108 text field (settable) 7, Şehir Required to answer. Single line text.",
+            "112 heading Çalışma Alanı Required to answer, Value: 2",
+            "118 radio button (settable, integer) Description: Özel, Value: 0",
+            "122 radio button (settable, integer) Description: Kurum / Belediye, Value: 0",
+            "126 radio button (settable, integer) Description: Üniversite, Value: 0",
+            "130 radio button (settable, integer) Description: Öğrenci, Value: 0",
+            "136 heading Bizi nereden duydunuz Required to answer, Value: 2",
+            "142 checkbox (settable, integer) Description: Instagram, Value: 0",
+            "146 checkbox (settable, integer) Description: Facebook, Value: 0",
+            "150 checkbox (settable, integer) Description: Google, Value: 0",
+            "154 checkbox (settable, integer) Description: LinkedIn, Value: 0",
+            "158 checkbox (settable, integer) Description: Twitter, Value: 0",
+            "162 checkbox (settable, integer) Description: Referans, Value: 0",
+            "166 checkbox (settable, integer) Description: aluplan.com.tr, Value: 0",
+            "172 heading Notlar, Value: 2",
+            "174 text entry area (settable) 10, Notlar Multi Line Text."
+          ]
+        },
+        {
+          "record_index": 5,
+          "state": "Addon request branch",
+          "page": 6,
+          "field_option_ax_lines": [
+            "7 heading Aluplan Teklif & Talep Formu, Value: 1",
+            "56 heading Eklentiler, Value: 2",
+            "61 heading 08 - Eklenti Formları Required to answer, Value: 2",
+            "67 radio button (settable, integer) Description: Allto PythonPart Eklentisi, Value: 0",
+            "71 radio button (settable, integer) Description: Aluplan BIM Eklentisi, Value: 0",
+            "75 radio button (settable, integer) Description: Scalypso Eklentisi, Value: 0",
+            "79 radio button (settable, integer) Description: CDS Allplan Add On , Value: 0",
+            "83 radio button (settable, integer) Description: SDS2 Ultimate, Value: 0"
+          ]
+        },
+        {
+          "record_index": 6,
+          "state": "Addon Allto",
+          "page": 10,
+          "field_option_ax_lines": [
+            "7 heading Aluplan Teklif & Talep Formu, Value: 1",
+            "89 heading Allto PythonPart Eklentisi, Value: 2",
+            "112 heading 14 - Lütfen seçim yapın Required to answer, Value: 2",
+            "118 checkbox (settable, integer) Description: Wall Reinforcement, Value: 0",
+            "122 checkbox (settable, integer) Description: Wall Opening and Wall Edge Reinforcement, Value: 0",
+            "126 checkbox (settable, integer) Description: Beam Reinforcement, Value: 0",
+            "130 checkbox (settable, integer) Description: Column Reinforcement, Value: 0",
+            "134 checkbox (settable, integer) Description: Single Footing Reinforcement, Value: 0",
+            "138 checkbox (settable, integer) Description: Strip Footing Reinforcement, Value: 0",
+            "142 checkbox (settable, integer) Description: Detecting IFC Model Changes, Value: 0",
+            "146 checkbox (settable, integer) Description: Slab With Opening, Value: 0",
+            "150 checkbox (settable, integer) Description: Slab Main Rebar, Value: 0",
+            "154 checkbox (settable, integer) Description: Column dowels, Value: 0",
+            "158 checkbox (settable, integer) Description: Layout Service, Value: 0",
+            "162 checkbox (settable, integer) Description: 2D Axis Grid in ALLPLAN Engineering, Value: 0"
+          ]
+        },
+        {
+          "record_index": 7,
+          "state": "Addon Aluplan BIM Eklentisi",
+          "page": 9,
+          "field_option_ax_lines": [
+            "7 heading Aluplan Teklif & Talep Formu, Value: 1",
+            "89 heading Aluplan BIM Eklentisi, Value: 2",
+            "106 heading 11 - Lütfen seçim yapını Required to answer, Value: 2",
+            "112 checkbox (settable, integer) Description: Aluplan BIM Eklentisi 2023, Value: 0",
+            "116 checkbox (settable, integer) Description: Aluplan BIM Eklentisi 2024, Value: 0",
+            "122 heading 13 - Müşteri Numaranız:  , Value: 2",
+            "125 text field (settable) 4, 13 - Müşteri Numaranız:   Masaüstü > Allmenü 2024 > Bilgi > Müşteri Numarası  ( C300 000 000 0) Required to answer. Single line text."
+          ]
+        },
+        {
+          "record_index": 8,
+          "state": "Addon Scalypso Eklentisi",
+          "page": 13,
+          "field_option_ax_lines": [
+            "7 heading Aluplan Teklif & Talep Formu, Value: 1",
+            "88 heading Demografik Bilgiler, Value: 2",
+            "93 heading Adınız Soyadınız, Value: 2",
+            "95 text field (settable) 3, Adınız Soyadınız Required to answer. Single line text.",
+            "99 heading E-Mail, Value: 2",
+            "101 text field (settable) 4, E-Mail Required to answer. Single line text.",
+            "105 heading GSM, Value: 2",
+            "107 text field (settable) 5, GSM Required to answer. Single line text.",
+            "111 heading Firma, Value: 2",
+            "113 text field (settable) 6, Firma Required to answer. Single line text.",
+            "117 heading Şehir, Value: 2",
+            "119 text field (settable) 7, Şehir Required to answer. Single line text.",
+            "123 heading Çalışma Alanı Required to answer, Value: 2",
+            "129 radio button (settable, integer) Description: Özel, Value: 0",
+            "133 radio button (settable, integer) Description: Kurum / Belediye, Value: 0",
+            "137 radio button (settable, integer) Description: Üniversite, Value: 0",
+            "141 radio button (settable, integer) Description: Öğrenci, Value: 0",
+            "147 heading Bizi nereden duydunuz Required to answer, Value: 2",
+            "153 checkbox (settable, integer) Description: Instagram, Value: 0",
+            "157 checkbox (settable, integer) Description: Facebook, Value: 0",
+            "161 checkbox (settable, integer) Description: Google, Value: 0",
+            "165 checkbox (settable, integer) Description: LinkedIn, Value: 0",
+            "169 checkbox (settable, integer) Description: Twitter, Value: 0",
+            "173 checkbox (settable, integer) Description: Referans, Value: 0",
+            "177 checkbox (settable, integer) Description: aluplan.com.tr, Value: 0",
+            "183 heading Notlar, Value: 2",
+            "185 text entry area (settable) 10, Notlar Multi Line Text."
+          ]
+        },
+        {
+          "record_index": 9,
+          "state": "Addon CDS Allplan Add On",
+          "page": 7,
+          "field_option_ax_lines": [
+            "7 heading Aluplan Teklif & Talep Formu, Value: 1",
+            "89 heading CDS Allplan Add On, Value: 2",
+            "95 heading 09 - Lütfen ilgilendiğiniz ürünü belirtin. Required to answer, Value: 2",
+            "101 checkbox (settable, integer) Description: Sürüş Eğrisi, Value: 0",
+            "105 checkbox (settable, integer) Description: Rampa, Value: 0",
+            "109 checkbox (settable, integer) Description: Geometri Araçları, Value: 0",
+            "113 checkbox (settable, integer) Description: Parametrik Arazi, Value: 0",
+            "117 checkbox (settable, integer) Description: Çelik Profil Bileşenleri, Value: 0",
+            "121 checkbox (settable, integer) Description: 3B Ölçülendirme, Value: 0",
+            "125 checkbox (settable, integer) Description: 2B DWG Converter, Value: 0",
+            "129 checkbox (settable, integer) Description: SketchUp Dönüştürücü, Value: 0",
+            "133 checkbox (settable, integer) Description: Grafiksel Yazı, Value: 0"
+          ]
+        },
+        {
+          "record_index": 10,
+          "state": "Addon SDS2 Ultimate",
+          "page": 13,
+          "field_option_ax_lines": [
+            "7 heading Aluplan Teklif & Talep Formu, Value: 1",
+            "88 heading Demografik Bilgiler, Value: 2",
+            "93 heading Adınız Soyadınız, Value: 2",
+            "95 text field (settable) 3, Adınız Soyadınız Required to answer. Single line text.",
+            "99 heading E-Mail, Value: 2",
+            "101 text field (settable) 4, E-Mail Required to answer. Single line text.",
+            "105 heading GSM, Value: 2",
+            "107 text field (settable) 5, GSM Required to answer. Single line text.",
+            "111 heading Firma, Value: 2",
+            "113 text field (settable) 6, Firma Required to answer. Single line text.",
+            "117 heading Şehir, Value: 2",
+            "119 text field (settable) 7, Şehir Required to answer. Single line text.",
+            "123 heading Çalışma Alanı Required to answer, Value: 2",
+            "129 radio button (settable, integer) Description: Özel, Value: 0",
+            "133 radio button (settable, integer) Description: Kurum / Belediye, Value: 0",
+            "137 radio button (settable, integer) Description: Üniversite, Value: 0",
+            "141 radio button (settable, integer) Description: Öğrenci, Value: 0",
+            "147 heading Bizi nereden duydunuz Required to answer, Value: 2",
+            "153 checkbox (settable, integer) Description: Instagram, Value: 0",
+            "157 checkbox (settable, integer) Description: Facebook, Value: 0",
+            "161 checkbox (settable, integer) Description: Google, Value: 0",
+            "165 checkbox (settable, integer) Description: LinkedIn, Value: 0",
+            "169 checkbox (settable, integer) Description: Twitter, Value: 0",
+            "173 checkbox (settable, integer) Description: Referans, Value: 0",
+            "177 checkbox (settable, integer) Description: aluplan.com.tr, Value: 0",
+            "183 heading Notlar, Value: 2",
+            "185 text entry area (settable) 10, Notlar Multi Line Text."
+          ]
+        },
+        {
+          "record_index": 11,
+          "state": "Quote product choices",
+          "page": 2,
+          "field_option_ax_lines": [
+            "7 heading Aluplan Teklif & Talep Formu, Value: 1",
+            "56 heading Aluplan Ürünlerinden hangisi ile ilgileniyorsunuz?, Value: 2",
+            "61 heading 02- Ürünlerimizden hangisi ile ilgileniyorsunuz? Required to answer, Value: 2",
+            "67 radio button (settable, integer) Description: Allplan, Value: 0",
+            "71 radio button (settable, integer) Description: AX3000, Value: 0",
+            "75 radio button (settable, integer) Description: BIMX5, Value: 0",
+            "79 radio button (settable, integer) Description: Eklentiler, Value: 0"
+          ]
+        },
+        {
+          "record_index": 12,
+          "state": "Quote AX3000",
+          "page": 4,
+          "field_option_ax_lines": [
+            "7 heading Aluplan Teklif & Talep Formu, Value: 1",
+            "85 heading AX3000 MEP, Value: 2",
+            "91 heading 06- Ürün Seçimi  Required to answer, Value: 2",
+            "97 checkbox (settable, integer) Description: AX3000 MEP, Value: 0",
+            "101 checkbox (settable, integer) Description: Havalandırma (Akustik hesaplama & konut havalandırma dahil ), Value: 0",
+            "105 checkbox (settable, integer) Description: Isıtma ( Döşemeden ısıtma & TS825 ısı kaybı hesabı dahil ), Value: 0",
+            "109 checkbox (settable, integer) Description: Soğutma, Value: 0",
+            "113 checkbox (settable, integer) Description: Sıhhi Tesisat ( Sprinkler \"grafiksel\" & Yağmur suyu dahil ), Value: 0",
+            "117 checkbox (settable, integer) Description: Elektrik, Value: 0"
+          ]
+        },
+        {
+          "record_index": 13,
+          "state": "Quote BIMX5",
+          "page": 5,
+          "field_option_ax_lines": [
+            "7 heading Aluplan Teklif & Talep Formu, Value: 1",
+            "85 heading BIMX5 TEKLİF TALEP, Value: 2",
+            "90 heading 07 - Ürün Seçimi - Abonelik Required to answer, Value: 2",
+            "96 checkbox (settable, integer) Description: Oska e-Hakediş Pro, Value: 0",
+            "100 checkbox (settable, integer) Description: 2B DWG Converter, Value: 0",
+            "104 checkbox (settable, integer) Description: İmar Yönetmeliği Eklentisi, Value: 0",
+            "108 checkbox (settable, integer) Description: Kurumlar Raporları Eklentisi, Value: 0"
+          ]
+        },
+        {
+          "record_index": 14,
+          "state": "Quote Allplan",
+          "page": 3,
+          "field_option_ax_lines": [
+            "7 heading Aluplan Teklif & Talep Formu, Value: 1",
+            "85 heading ALLPLAN , Value: 2",
+            "91 heading 03- Allplan hakkında teklif almak istiyorum. Required to answer, Value: 2",
+            "97 checkbox (settable, integer) Description: Teknik Bilgi Talep Ediyorum, Value: 0",
+            "101 checkbox (settable, integer) Description: Fiyat Teklifi Talep Ediyorum, Value: 0",
+            "107 heading 05 - Allplan Ürün Seçimi - Abonelik Required to answer, Value: 2",
+            "113 checkbox (settable, integer) Description: ALLPLAN Basic, Value: 0",
+            "117 checkbox (settable, integer) Description: ALLPLAN Concept, Value: 0",
+            "121 checkbox (settable, integer) Description: ALLPLAN Professional, Value: 0",
+            "125 checkbox (settable, integer) Description: ALLPLAN Ultimate, Value: 0",
+            "129 checkbox (settable, integer) Description: ALLPLAN Civil, Value: 0",
+            "133 checkbox (settable, integer) Description: ALLPLAN Precast , Value: 0",
+            "137 checkbox (settable, integer) Description: ALLPLAN License Server, Value: 0",
+            "141 checkbox (settable, integer) Description: SDS2 | Steel Detailing Software, Value: 0",
+            "145 checkbox (settable, integer) Description: FRILO Editions , Value: 0",
+            "149 checkbox (settable, integer) Description: FRILO GEOTECHNICS, Value: 0",
+            "153 checkbox (settable, integer) Description: SCIA Engineer Editions , Value: 0"
+          ]
+        },
+        {
+          "record_index": 15,
+          "state": "Quote Addons",
+          "page": 6,
+          "field_option_ax_lines": [
+            "7 heading Aluplan Teklif & Talep Formu, Value: 1",
+            "84 heading Eklentiler, Value: 2",
+            "89 heading 08 - Eklenti Formları Required to answer, Value: 2",
+            "95 radio button (settable, integer) Description: Allto PythonPart Eklentisi, Value: 0",
+            "99 radio button (settable, integer) Description: Aluplan BIM Eklentisi, Value: 0",
+            "103 radio button (settable, integer) Description: Scalypso Eklentisi, Value: 0",
+            "107 radio button (settable, integer) Description: CDS Allplan Add On , Value: 0",
+            "111 radio button (settable, integer) Description: SDS2 Ultimate, Value: 1"
+          ]
+        }
+      ],
+      "branch_map": {
+        "quote": "1→2: Allplan3, AX30004, BIMX55, Eklentiler6",
+        "download": "1→11: student12, demo13",
+        "addons": "1→6: Allto10, Aluplan BIM9, CDS7, Scalypso13, SDS2 Ultimate13"
+      }
+    },
+    "https://forms.office.com/r/HSrhvAkYmb": {
+      "label": "Lisans Yöneticisi Bilgi Formu",
+      "evidence": "browser-complete-2026-10-22/external-forms.json",
+      "fields": [
+        {
+          "label": "Firma",
+          "type": "single-line text",
+          "required": true
+        },
+        {
+          "label": "Telefon No",
+          "type": "single-line text",
+          "required": true
+        },
+        {
+          "label": "Lisans Yöneticisinin Adı Soyadı",
+          "type": "single-line text",
+          "required": true
+        },
+        {
+          "label": "Lisans Yöneticisinin E-posta adresi",
+          "type": "single-line text",
+          "required": true
+        },
+        {
+          "label": "Müşteri No ( C300 ile başlayan )",
+          "type": "single-line text",
+          "required": false
+        }
+      ],
+      "state": "one visible page +Submit; no entry/submission",
+      "success": null,
+      "errors": null,
+      "note": "CustomerNo optional in live form, unlike unused local modal"
+    },
+    "https://forms.office.com/r/XLQm9JPTSR": {
+      "label": "CDS Allplan Add On Teklif Talep Formu",
+      "evidence": "browser-complete-2026-10-22/external-forms.json",
+      "fields": [
+        {
+          "label": "Bizi nereden duydunuz?",
+          "type": "multiple choice",
+          "required": true,
+          "options": [
+            "Instagram",
+            "Facebook",
+            "Linkedin",
+            "Google",
+            "Referans",
+            "Aluplan.com.tr"
+          ]
+        },
+        {
+          "label": "Eklenti Seçimi",
+          "type": "multiple choice",
+          "required": true,
+          "options": [
+            "Sürüş Eğrisi",
+            "Rampa",
+            "Geometri Araçları",
+            "Parametrik Arazi",
+            "Çelik Profil Bileşenleri",
+            "3B Ölçülendirme",
+            "2B DWG Converter",
+            "SketchUp Dönüştürücü",
+            "Grafiksel Yazı"
+          ]
+        },
+        {
+          "label": "Adınız Soyadınız",
+          "type": "single-line text",
+          "required": true,
+          "options": null
+        },
+        {
+          "label": "Email",
+          "type": "single-line text",
+          "required": true,
+          "options": null
+        },
+        {
+          "label": "GSM",
+          "type": "single-line text",
+          "required": true,
+          "options": null
+        },
+        {
+          "label": "Sektör",
+          "type": "single choice",
+          "required": true,
+          "options": [
+            "Özel Sektör",
+            "Kurum / Belediye",
+            "Üniversite",
+            "Öğrenci"
+          ]
+        },
+        {
+          "label": "Şehir",
+          "type": "single-line text",
+          "required": true,
+          "options": null
+        }
+      ],
+      "state": "one visible page +Submit; no entry/submission",
+      "success": null,
+      "errors": null,
+      "note": "Scalypso/Pythonpart entrypoints point to CDS addon form; intention needs review"
+    }
+  },
+  "external_source_references": {
+    "https://forms.office.com/r/hXhnKAG912": [
+      {
+        "source": "app/contact/ClientPage.tsx",
+        "line": 69,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/products/allplan-basic/page.tsx",
+        "line": 90,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/products/allplan-concept/page.tsx",
+        "line": 97,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/products/civil/page.tsx",
+        "line": 195,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/products/precast/page.tsx",
+        "line": 116,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/products/precast/page.tsx",
+        "line": 288,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/products/sds2-home/ClientPage.tsx",
+        "line": 152,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/products/allplan-professional/page.tsx",
+        "line": 121,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/products/allplan-ultimate/page.tsx",
+        "line": 58,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/products/allplan-ultimate/page.tsx",
+        "line": 197,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/imar-yonetmeligi-bim-eklentisi/ClientPage.tsx",
+        "line": 259,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/addons/graphical-text/ClientPage.tsx",
+        "line": 52,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/addons/geometry-tools/ClientPage.tsx",
+        "line": 270,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/addons/sketchup-converter/ClientPage.tsx",
+        "line": 110,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/addons/2d-dwg-converter/ClientPage.tsx",
+        "line": 144,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/addons/parametric-terrain/ClientPage.tsx",
+        "line": 326,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/addons/ramp/ClientPage.tsx",
+        "line": 101,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/addons/steel-components/ClientPage.tsx",
+        "line": 422,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/addons/three-dimensioning/ClientPage.tsx",
+        "line": 239,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/bridge-design/page.tsx",
+        "line": 63,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/architecture/page.tsx",
+        "line": 140,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/pythonpart/ClientPage.tsx",
+        "line": 453,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/ax3000/ClientPage.tsx",
+        "line": 59,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "components/sections/TrialCTA.tsx",
+        "line": 55,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "components/sections/CDSLicenseInfoSection.tsx",
+        "line": 33,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "components/homepage/HeroAlternative.tsx",
+        "line": 112,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "components/homepage/FinalCTA.tsx",
+        "line": 55,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "components/layout/Header.tsx",
+        "line": 251,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "components/layout/Header.tsx",
+        "line": 365,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "components/templates/EnhancedSolutionTemplate.tsx",
+        "line": 123,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "components/templates/ProductPageTemplate.tsx",
+        "line": 249,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "components/templates/ProductPageTemplate.tsx",
+        "line": 361,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      }
+    ],
+    "https://forms.office.com/r/XLQm9JPTSR": [
+      {
+        "source": "app/solutions/scalypso/ClientPage.tsx",
+        "line": 238,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/scalypso/ClientPage.tsx",
+        "line": 261,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/scalypso/converter/ClientPage.tsx",
+        "line": 34,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/scalypso/converter/ClientPage.tsx",
+        "line": 135,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/scalypso/modeler/ClientPage.tsx",
+        "line": 55,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/scalypso/modeler/ClientPage.tsx",
+        "line": 175,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/scalypso/videos/ClientPage.tsx",
+        "line": 22,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/scalypso/viewer/ClientPage.tsx",
+        "line": 23,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/scalypso/viewer/ClientPage.tsx",
+        "line": 82,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/scalypso/mobile/ClientPage.tsx",
+        "line": 35,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/scalypso/mobile/ClientPage.tsx",
+        "line": 147,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      },
+      {
+        "source": "app/solutions/pythonpart/ClientPage.tsx",
+        "line": 172,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      }
+    ],
+    "https://forms.office.com/r/HSrhvAkYmb": [
+      {
+        "source": "app/solutions-v2/connect-license/page.tsx",
+        "line": 304,
+        "note": "source reference; not necessarily rendered (precast line288 is false-guarded)"
+      }
+    ]
+  },
+  "live_contact_observations": {
+    "evidence": "browser-complete-2026-10-22/forms.json",
+    "records": 9,
+    "prior_bim_evidence": "dynamic-closure-2026-10-22.md",
+    "covered": "5 detail routes +4 training tabs including prior BIM +school/student",
+    "parity": "Eight fields, required name/email/message and readonly subject match source; no delivery test"
+  }
+}

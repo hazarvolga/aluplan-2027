@@ -177,3 +177,15 @@ Kullanıcı antrasit temayı uygun buldu; schema skilliyle ürün/paket/sürüm 
 - 11 benzersiz404, dört sağlam308, 2021 slash→404; beş fragment'ten yalnız interface hedefi eksik. Destek canlı/kaynak bağlantısı artık allplan.net.tr, root→/tr200; özel müşteri akışı denenmedi.
 - Kullanıcı eksik hedeflerin listelenmesini ve onarımın sonraya bırakılmasını istedi. Yeniden oluştur/uygun hedefe bağla/kaldır seçenekleri açık; satır bazında karar yok. Bu, toplu silme veya uygulama izni değil.
 - Kaynak, canlı, içerik/schema ve tasarım paketi değiştirilmedi. Eski snapshot'lar korunur. Faz0 sürüyor; uygulama build/test komutları henüz yok. İndirilen ZIP/açılmış paket ve ayrı antrasit demo untracked olarak korunuyor; yalnız yeni rapor/kanıt ve devir belgeleri commit kapsamındadır.
+
+## 22.10.2026 — Genişletilmiş içerik ve medya kontrolü
+
+- Kullanıcı kalan envanter işlerini onayladı ve teknik kontrolleri sonunda kendisinin tek tek yapmak zorunda kalmamasını istedi. Teknik kanıt/kabul sorumluluğu ekipte; kullanıcıya yalnız gerçek içerik/ticari/faz kararları sunulacak.
+- `docs/00-inventory/inventory-coverage-2026-10-22.md/json` güncel kapsam dizini. Önceki57+yen179=236 canlı durum;65kaynak aday rotası için kanıt durumu. Sayılar tam runtime kabulü değildir.
+- `media-complete-2026-10-22.md/json`:503bilinen hashli görselin tamamı200/SHA eşit;1364kaynak dosya yeniden hash edildi.31aday ve345referansı kanıtlanmayan yol korunur. Yeni218dış görselden217HTTP200, biri tekrarlananDNS hatası;404 olarak sayılmadı.
+- `interaction-register-2026-10-22.md/json` ve `interaction-source-evidence/`:100page girişi,65aday rota,161public kaynak snapshotı;14playlist/13koleksiyonun tüm216video kaydı saklandı (slug tekrarlarıyla242). Kaynak kaydı canlı eşlik kanıtı değildir.
+- `form-state-register-2026-10-22.md/json`:harici lisans/CDS formları, ana teklif dalları ve eğitim konu varyasyonları canlıda veri/gönderim olmadan incelendi. Ana form8gözlenmedi,14kişisel alanlardan dolayı açılmadı. Aktivasyon POST/teslim/simülasyon ve güvenlik açıkları belgeli.
+- Yeni hedef adayları: eğitim kütüphanesinin dört#kartı; yanlış niyetli CDS başvuru hedefleri; webinar placeholder iframe; DNS hatalı lisans görseli. Onarım ertelenmiş; hiçbir hedef değiştirilmedi.
+- Kalan iş: koşullu canlı durum/medya eşleşmeleri, harici formun erişilemeyen bölümleri ve ayrı yetkili teslim/runtime testleri. Faz0 kapanışı veya sonraki faz onayı yok. Kullanıcıya teknik listeyi elle doğrulama görevi verilmez.
+- Tarayıcıda iki toplu işlem zaman aşımına uğradı; diske kaydedilmeyen ara sonuçlar kabul sayılmadı. Üçüncü taraf YouTube frame alt içerikleri çıkarıldı; host içerik ve frame kimliği korundu.
+- Çıktılar doküman/kanıt kapsamındadır;2026kaynağa, canlıya, tasarım paketine, içerik/schema uygulamasına dokunulmadı. Untracked design paketleri/demo commit dışında kalır.

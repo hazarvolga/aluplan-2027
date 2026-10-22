@@ -1,0 +1,16 @@
+[
+  {
+    "route": "/products/allplan-2026-yenilikler",
+    "state": "dialog observed after interrupted batch; exact panel not attributed",
+    "frames": [
+      {
+        "src": "https://www.youtube.com/embed/60vUWS-MEdw",
+        "title": "/ GENEL BAKIŞ"
+      },
+      {
+        "src": "https://www.youtube.com/embed/rF3o_o8YEz0?autoplay=1",
+        "title": "Video player"
+      }
+    ]
+  }
+]

@@ -22,8 +22,8 @@ Durumlar: **Açık** = kapanış kanıtı yok; **Kısmi** = bazı kanıtlar var;
 
 | ID / durum | Eksik ve mevcut kanıt | Sorumlu | Bizim alabileceğimiz karar | Kapanış ölçütü |
 |---|---|---|---|---|
-| D01 Kısmi | Dinamik içerik envanteri eksik: 57 canlı durum kaydedildi; kalan şablon/panel/video ve form dalları kaynak matrisiyle listeli. [E1,E12] | Teknik ekip; içerik değerlendirmesi kullanıcı | Ekran/durum kontrol matrisi ve öncelikli inceleme sırası | Mevcut her sayfa/etkileşimin tam içerik ve hedef eşlemesi; erişilemeyenler gerekçeli ayrı karar. Faz 0 kapsamı gizlice daraltılmaz |
-| D02 Kısmi | Medya/import zincirleri ve eşlenmemiş varlıklar açık; altı PDF önceki kontrolde, iki DOCX ve 86 görsel yeni kontrolde eşleşti; kullanım grafiği hâlâ açık. [E1,E12] | Teknik ekip + kullanıcı; hak bilgisi Aluplan | Aynı dosyaları tek kayıtta izleme; arşivi güncel içerikten ayırma | Kullanılan dosya–sayfa eşleşmeleri ve yalnız yerel adayların kullanıcı kararı kayıtlı; silme yok |
+| D01 Kısmi | Dinamik içerik envanteri eksik: 236 canlı durum ve65kaynak aday rota kayıtlı; koşullu dal/video tam kabulü ve harici form8/14 açık. [E1,E12,E13] | Teknik ekip; içerik değerlendirmesi kullanıcı | Ekran/durum kontrol matrisi ve öncelikli inceleme sırası | Mevcut her sayfa/etkileşimin tam içerik ve hedef eşlemesi; erişilemeyenler gerekçeli ayrı karar. Faz 0 kapsamı gizlice daraltılmaz |
+| D02 Kısmi | Medya/import zincirleri ve eşlenmemiş varlıklar açık; altı PDF önceki kontrolde;503bilinen görsel ve iki DOCX eşleşti,1364dosya sınıflandırıldı. Dinamik kullanım eşliği hâlâ açık. [E1,E12,E13] | Teknik ekip + kullanıcı; hak bilgisi Aluplan | Aynı dosyaları tek kayıtta izleme; arşivi güncel içerikten ayırma | Kullanılan dosya–sayfa eşleşmeleri ve yalnız yerel adayların kullanıcı kararı kayıtlı; silme yok |
 | D03 Kısmi | 11 benzersiz 404 yol ve bir eksik #interface hedefi kayıtlı; dört fragment hedefi mevcut. Kullanıcı onarımı erteledi; hedef başına karar açık. [E12] | Teknik ekip + kullanıcı | Kaynak/hedef fark listesi; URL koruma planı | Bilinen hatalar ve karar seçenekleri listeli; onarımın ertelenmesi kayıtlı. Tüm hedef kapsamı ve satır bazında karar izlenir; düzeltme/yayın testi Y01'de |
 | D04 Kısmi | 23 URL görev matrisi var; karşılaştırma, PDF erişimi, yıllık yenilik ve kalıcı ürün görevleri ayrıldı. [E2,E3] | İçerik/UX ekibi + kullanıcı | Menüyü ve sayfa görevlerini gerekçelendirme; ALLPLAN'a kavramsal hizalama | Sayfa görev matrisi PRD'ye kabul edilmiş; üçlü/altılı listelerin seçki mi tam katalog mu olduğu açık; mevcut içerik kaybolmuyor |
 | D05 Açık | Ticari segment önceliği ve teklif/deneme ağırlığı kesin değil. Formun bir dalı incelendi, kullanıcı karmaşıklığı teyit etti. [E4,E5] | Kullanıcı + UX ekibi; ticari veri Aluplan | Sayfa niyetine göre CTA önceliği önerisi; mevcut Forms'u koruyarak yol sadeleştirme | Ana sayfa, ürün ve hizmet için birincil/ikincil sonraki adım kullanıcıca kabul; ticari öncelik varsayılmıyor |
@@ -84,6 +84,8 @@ U05–U07 plan kararlarıdır; bu tablo JSON-LD üretmez. Güncel Google şartla
 - E11 — [İçerik kayıt sözleşmesi](content-record-contract.md).
 
 - E12 — [22 Ekim hedefli kapanış özeti](00-inventory/closure-review-2026-10-22.md); dinamik durum, medya ve URL kanıtları.
+
+- E13 — [Genişletilmiş kapsam ve teknik sorumluluk](00-inventory/inventory-coverage-2026-10-22.md); tam kaynak snapshotları, medya ve form durum kayıtları.
 
 ## Önerilen sıradaki çalışma
 

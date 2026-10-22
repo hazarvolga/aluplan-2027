@@ -1,0 +1,460 @@
+[
+  {
+    "route": "/solutions-v2/training/webinar",
+    "fields": [
+      {
+        "name": "name",
+        "readOnly": false,
+        "required": true,
+        "type": null
+      },
+      {
+        "name": "company",
+        "readOnly": false,
+        "required": false,
+        "type": null
+      },
+      {
+        "name": "email",
+        "readOnly": false,
+        "required": true,
+        "type": "email"
+      },
+      {
+        "name": "phone",
+        "readOnly": false,
+        "required": false,
+        "type": "tel"
+      },
+      {
+        "name": "jobTitle",
+        "readOnly": false,
+        "required": false,
+        "type": null
+      },
+      {
+        "name": "sector",
+        "readOnly": false,
+        "required": false,
+        "type": null
+      },
+      {
+        "name": "subject",
+        "readOnly": true,
+        "required": false,
+        "type": null,
+        "value": "Webinar Bilgi Talebi"
+      },
+      {
+        "name": "message",
+        "readOnly": false,
+        "required": true,
+        "type": null
+      }
+    ]
+  },
+  {
+    "route": "/solutions-v2/training/online",
+    "fields": [
+      {
+        "name": "name",
+        "readOnly": false,
+        "required": true,
+        "type": null
+      },
+      {
+        "name": "company",
+        "readOnly": false,
+        "required": false,
+        "type": null
+      },
+      {
+        "name": "email",
+        "readOnly": false,
+        "required": true,
+        "type": "email"
+      },
+      {
+        "name": "phone",
+        "readOnly": false,
+        "required": false,
+        "type": "tel"
+      },
+      {
+        "name": "jobTitle",
+        "readOnly": false,
+        "required": false,
+        "type": null
+      },
+      {
+        "name": "sector",
+        "readOnly": false,
+        "required": false,
+        "type": null
+      },
+      {
+        "name": "subject",
+        "readOnly": true,
+        "required": false,
+        "type": null,
+        "value": "Online Eğitim Başvurusu"
+      },
+      {
+        "name": "message",
+        "readOnly": false,
+        "required": true,
+        "type": null
+      }
+    ]
+  },
+  {
+    "route": "/solutions-v2/training/classroom",
+    "fields": [
+      {
+        "name": "name",
+        "readOnly": false,
+        "required": true,
+        "type": null
+      },
+      {
+        "name": "company",
+        "readOnly": false,
+        "required": false,
+        "type": null
+      },
+      {
+        "name": "email",
+        "readOnly": false,
+        "required": true,
+        "type": "email"
+      },
+      {
+        "name": "phone",
+        "readOnly": false,
+        "required": false,
+        "type": "tel"
+      },
+      {
+        "name": "jobTitle",
+        "readOnly": false,
+        "required": false,
+        "type": null
+      },
+      {
+        "name": "sector",
+        "readOnly": false,
+        "required": false,
+        "type": null
+      },
+      {
+        "name": "subject",
+        "readOnly": true,
+        "required": false,
+        "type": null,
+        "value": "Sınıf İçi Eğitim Başvurusu"
+      },
+      {
+        "name": "message",
+        "readOnly": false,
+        "required": true,
+        "type": null
+      }
+    ]
+  },
+  {
+    "route": "/solutions-v2/training/events",
+    "fields": [
+      {
+        "name": "name",
+        "readOnly": false,
+        "required": true,
+        "type": null
+      },
+      {
+        "name": "company",
+        "readOnly": false,
+        "required": false,
+        "type": null
+      },
+      {
+        "name": "email",
+        "readOnly": false,
+        "required": true,
+        "type": "email"
+      },
+      {
+        "name": "phone",
+        "readOnly": false,
+        "required": false,
+        "type": "tel"
+      },
+      {
+        "name": "jobTitle",
+        "readOnly": false,
+        "required": false,
+        "type": null
+      },
+      {
+        "name": "sector",
+        "readOnly": false,
+        "required": false,
+        "type": null
+      },
+      {
+        "name": "subject",
+        "readOnly": true,
+        "required": false,
+        "type": null,
+        "value": "Etkinlik Bilgi Talebi"
+      },
+      {
+        "name": "message",
+        "readOnly": false,
+        "required": true,
+        "type": null
+      }
+    ]
+  },
+  {
+    "route": "/solutions-v2/training/individual",
+    "fields": [
+      {
+        "name": "name",
+        "readOnly": false,
+        "required": true,
+        "type": null
+      },
+      {
+        "name": "company",
+        "readOnly": false,
+        "required": false,
+        "type": null
+      },
+      {
+        "name": "email",
+        "readOnly": false,
+        "required": true,
+        "type": "email"
+      },
+      {
+        "name": "phone",
+        "readOnly": false,
+        "required": false,
+        "type": "tel"
+      },
+      {
+        "name": "jobTitle",
+        "readOnly": false,
+        "required": false,
+        "type": null
+      },
+      {
+        "name": "sector",
+        "readOnly": false,
+        "required": false,
+        "type": null
+      },
+      {
+        "name": "subject",
+        "readOnly": true,
+        "required": false,
+        "type": null,
+        "value": "Bireysel Eğitim Teklifi"
+      },
+      {
+        "name": "message",
+        "readOnly": false,
+        "required": true,
+        "type": null
+      }
+    ]
+  },
+  {
+    "route": "/solutions-v2/training",
+    "state": "Temel",
+    "fields": [
+      {
+        "name": "name",
+        "readOnly": false,
+        "required": true
+      },
+      {
+        "name": "company",
+        "readOnly": false,
+        "required": false
+      },
+      {
+        "name": "email",
+        "readOnly": false,
+        "required": true
+      },
+      {
+        "name": "phone",
+        "readOnly": false,
+        "required": false
+      },
+      {
+        "name": "jobTitle",
+        "readOnly": false,
+        "required": false
+      },
+      {
+        "name": "sector",
+        "readOnly": false,
+        "required": false
+      },
+      {
+        "name": "subject",
+        "readOnly": true,
+        "required": false,
+        "value": "Eğitim Teklifi: ALLPLAN Dünyasına Giriş!"
+      },
+      {
+        "name": "message",
+        "readOnly": false,
+        "required": true
+      }
+    ]
+  },
+  {
+    "route": "/solutions-v2/training",
+    "state": "İleri Seviye",
+    "fields": [
+      {
+        "name": "name",
+        "readOnly": false,
+        "required": true
+      },
+      {
+        "name": "company",
+        "readOnly": false,
+        "required": false
+      },
+      {
+        "name": "email",
+        "readOnly": false,
+        "required": true
+      },
+      {
+        "name": "phone",
+        "readOnly": false,
+        "required": false
+      },
+      {
+        "name": "jobTitle",
+        "readOnly": false,
+        "required": false
+      },
+      {
+        "name": "sector",
+        "readOnly": false,
+        "required": false
+      },
+      {
+        "name": "subject",
+        "readOnly": true,
+        "required": false,
+        "value": "Eğitim Teklifi: ALLPLAN Uzmanı Olma Yolunda!"
+      },
+      {
+        "name": "message",
+        "readOnly": false,
+        "required": true
+      }
+    ]
+  },
+  {
+    "route": "/solutions-v2/training",
+    "state": "Özel",
+    "fields": [
+      {
+        "name": "name",
+        "readOnly": false,
+        "required": true
+      },
+      {
+        "name": "company",
+        "readOnly": false,
+        "required": false
+      },
+      {
+        "name": "email",
+        "readOnly": false,
+        "required": true
+      },
+      {
+        "name": "phone",
+        "readOnly": false,
+        "required": false
+      },
+      {
+        "name": "jobTitle",
+        "readOnly": false,
+        "required": false
+      },
+      {
+        "name": "sector",
+        "readOnly": false,
+        "required": false
+      },
+      {
+        "name": "subject",
+        "readOnly": true,
+        "required": false,
+        "value": "Eğitim Teklifi: Özel Konularda Derin Bilgi!"
+      },
+      {
+        "name": "message",
+        "readOnly": false,
+        "required": true
+      }
+    ]
+  },
+  {
+    "route": "/solutions-v2/training",
+    "state": "school/student",
+    "fields": [
+      {
+        "name": "name",
+        "readOnly": false,
+        "required": true
+      },
+      {
+        "name": "company",
+        "readOnly": false,
+        "required": false
+      },
+      {
+        "name": "email",
+        "readOnly": false,
+        "required": true
+      },
+      {
+        "name": "phone",
+        "readOnly": false,
+        "required": false
+      },
+      {
+        "name": "jobTitle",
+        "readOnly": false,
+        "required": false
+      },
+      {
+        "name": "sector",
+        "readOnly": false,
+        "required": false
+      },
+      {
+        "name": "subject",
+        "readOnly": true,
+        "required": false,
+        "value": "Okul ve Öğrenciler İçin Teklif"
+      },
+      {
+        "name": "message",
+        "readOnly": false,
+        "required": true
+      }
+    ]
+  }
+]

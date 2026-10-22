@@ -1,0 +1,391 @@
+"use client"
+import { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { Menu, X, ChevronDown, Globe, Facebook, Twitter, Linkedin, Youtube, Instagram, Search } from "lucide-react";
+import MegaMenu from "./MegaMenu";
+import { solutionsMenu } from "@/data/solutionsMenu";
+import Image from "next/image";
+import logoWhite from "@/assets/aluplan-logo-white.svg";
+import logoBlack from "@/assets/aluplan-logo-black.svg";
+import { ThemeToggle } from "./ThemeToggle";
+import { AnimatePresence, motion } from "framer-motion";
+import { CommandMenu } from "@/components/search/CommandMenu";
+
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
+  const [expandedMobileMenu, setExpandedMobileMenu] = useState<string | null>(null);
+  const [language, setLanguage] = useState<"tr" | "en">("tr");
+
+  const socialLinks = [
+    { icon: Facebook, href: "https://www.facebook.com/Allplan.Turkey", label: "Facebook" },
+    { icon: Twitter, href: "https://twitter.com/Allplan_Turkey", label: "Twitter" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/allplan-turkey/", label: "LinkedIn" },
+    { icon: Instagram, href: "https://www.instagram.com/allplan_turkey/", label: "Instagram" },
+    { icon: Youtube, href: "https://www.youtube.com/c/AllplanTurkey", label: "YouTube" },
+  ];
+
+  const toggleLanguage = () => {
+    setLanguage(language === "tr" ? "en" : "tr");
+  };
+
+  const productsMenu = [
+    {
+      title: "ALLPLAN",
+      items: [
+        { name: "ALLPLAN Basic", href: "/products/allplan-basic" },
+        { name: "ALLPLAN Concept", href: "/products/allplan-concept" },
+        { name: "ALLPLAN Professional", href: "/products/allplan-professional" },
+        { name: "ALLPLAN Ultimate", href: "/products/allplan-ultimate" },
+        { name: "ALLPLAN Cloud Services", href: "/products/allplan-cloud-services" },
+        { name: "CIVIL", href: "/products/civil" },
+        { name: "PRECAST", href: "/products/precast" },
+      ],
+    },
+    {
+      title: "BİNA VE ALTYAPI",
+      items: [
+        { name: "Allplan - AEC Endüstrisi için BIM", href: "/products/allplan-aec" },
+        { name: "Allplan Bridge - Köprü Tasarımı", href: "/solutions/bridge-design" },
+        { name: "AX3000 - Enerji Simülasyonu", href: "/products/ax3000" },
+        { name: "AX3000 - Mekanik Tesisat", href: "/solutions/ax3000-mekanik-tesisat" },
+      ],
+    },
+    {
+      title: "İNŞAAT PLANLAMASI",
+      items: [
+        { name: "Allplan Precast - Prekast Detaylandırma", href: "/products/precast-detail" },
+        { name: "Tim - Prekast İş Planlaması", href: "https://www.allplan.com/products/tim/", external: true },
+        { name: "SDS2 - Çelik Detaylandırma ve İmalatı", href: "https://www.allplan.com/products/sds2-detailing-fabrication/", external: true },
+        { name: "SDS2 - Çelik Yük Planlaması", href: "https://www.allplan.com/products/sds2-load-planning/", external: true },
+        { name: "SDS2 - Aluplan", href: "/products/sds2-home" },
+      ],
+    },
+    {
+      title: "ORTAK ÇÖZÜMLER",
+      items: [
+        { name: "Allplan Ortak Çözümleri", href: "https://www.allplan.com/allplan-partner-solutions/", external: true },
+      ],
+    },
+    {
+      title: "İŞBİRLİĞİ YAZILIMI",
+      items: [
+        { name: "ALLPLAN BIMPLUS", href: "/products/allplan-bimplus" },
+      ],
+    },
+  ];
+
+  const pathname = usePathname();
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
+    if (!href.startsWith("/#")) return;
+
+    // Check if we are on the homepage
+    if (pathname === "/") {
+      e.preventDefault();
+      const targetId = href.replace("/#", "");
+      const elem = document.getElementById(targetId);
+
+      if (elem) {
+        // Custom smooth scroll with easing
+        const targetPosition = elem.getBoundingClientRect().top + window.pageYOffset;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        const duration = 1500; // 1.5s for slower/softer scroll
+        let start: number | null = null;
+
+        const animation = (currentTime: number) => {
+          if (start === null) start = currentTime;
+          const timeElapsed = currentTime - start;
+
+          // Easing function: easeInOutCubic
+          const ease = (t: number) => t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+
+          const run = ease(timeElapsed / duration) * distance + startPosition;
+          window.scrollTo(0, run);
+
+          if (timeElapsed < duration) requestAnimationFrame(animation);
+        };
+
+        requestAnimationFrame(animation);
+
+        // Also close menu if on mobile
+        setIsMenuOpen(false);
+      }
+    }
+  };
+
+  const navigation = [
+    {
+      name: language === "tr" ? "Çözümler" : "Solutions",
+      megaMenu: "solutions",
+    },
+    {
+      name: language === "tr" ? "Ürünler" : "Products",
+      megaMenu: "products",
+    },
+    { name: language === "tr" ? "Kaynaklar" : "Resources", href: "/#professional-services" },
+    { name: language === "tr" ? "Referanslar" : "References", href: "/references" },
+    { name: language === "tr" ? "Hakkımızda" : "About", href: "/about" },
+    { name: language === "tr" ? "İletişim" : "Contact", href: "/contact" },
+  ];
+
+  const handleMouseEnter = (menuName: string) => {
+    setActiveMegaMenu(menuName);
+  };
+
+  const handleMouseLeave = () => {
+    setActiveMegaMenu(null);
+  };
+
+  const closeMegaMenu = () => {
+    setActiveMegaMenu(null);
+  };
+
+  return (
+    <header
+      className="sticky top-0 z-[100] w-full border-b border-border/40 bg-background/80 backdrop-blur-md text-foreground transition-all duration-300"
+      onMouseLeave={handleMouseLeave}
+    >
+      <div className="absolute inset-0 opacity-[0.03] bg-technical-grid pointer-events-none" />
+
+      {/* Top Bar */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+        <div className="flex h-10 items-center justify-between">
+          <div className="flex items-center space-x-2">
+            {socialLinks.map((social, i) => {
+              const Icon = social.icon;
+              return (
+                <a
+                  key={i}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="h-7 w-7 rounded-sm bg-muted/50 border border-border/50 hover:bg-accent/10 hover:border-accent/50 hover:text-accent transition-all flex items-center justify-center text-muted-foreground"
+                >
+                  <Icon className="h-3.5 w-3.5" />
+                </a>
+              );
+            })}
+          </div>
+          <a href="mailto:info@aluplan.com.tr" className="text-xs font-mono text-muted-foreground hover:text-accent transition-colors">info@aluplan.com.tr</a>
+        </div>
+      </div>
+      <div className="h-px bg-border/20 w-full" />
+
+      <nav className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+        <div className="flex h-20 items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="flex items-center">
+            <Image src={logoWhite} alt="Aluplan" height={56} className="h-14 w-auto opacity-90 hover:opacity-100 transition-opacity hidden dark:block" priority />
+            <Image src={logoBlack} alt="Aluplan" height={56} className="h-14 w-auto opacity-90 hover:opacity-100 transition-opacity block dark:hidden" priority />
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex md:items-center md:space-x-8">
+            {navigation.map((item) => (
+              <div
+                key={item.name}
+                className="relative h-20 flex items-center"
+                onMouseEnter={() => item.megaMenu && handleMouseEnter(item.megaMenu)}
+              >
+                {item.href ? (
+                  <Link
+                    href={item.href}
+                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1 relative group"
+                    onClick={(e) => item.href && handleScroll(e, item.href)}
+                  >
+                    {item.name}
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
+                  </Link>
+                ) : (
+                  <button
+                    className={`text-sm font-medium transition-colors flex items-center gap-1 group ${activeMegaMenu === item.megaMenu ? "text-foreground" : "text-muted-foreground hover:text-foreground"}`}
+                  >
+                    {item.name}
+                    {item.megaMenu && (
+                      <ChevronDown className={`h-3 w-3 transition-transform duration-300 ${activeMegaMenu === item.megaMenu ? 'rotate-180 text-accent' : 'text-muted-foreground group-hover:text-foreground'}`} />
+                    )}
+                  </button>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Actions */}
+          <div className="flex items-center space-x-4">
+            {/* Language Toggle - Temporarily disabled */}
+            {/* <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleLanguage}
+              className="hidden sm:flex items-center gap-2 text-gray-400 hover:text-white hover:bg-white/5"
+            >
+              <Globe className="h-4 w-4" />
+              {language.toUpperCase()}
+            </Button> */}
+
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-muted-foreground hover:text-foreground"
+              onClick={() => setIsSearchOpen(true)}
+              aria-label="Arama"
+            >
+              <Search className="h-5 w-5" />
+            </Button>
+
+            <ThemeToggle />
+
+            <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex border-border/40 bg-muted/50 text-foreground hover:bg-muted hover:border-border">
+              <a href="https://www.allplan.com/trial-or-subscription/" target="_blank" rel="noopener noreferrer">
+                {language === "tr" ? "Ücretsiz Deneme" : "Free Trial"}
+              </a>
+            </Button>
+
+            <Button asChild className="hidden sm:inline-flex bg-primary hover:bg-primary/90 text-primary-foreground border-0" size="sm">
+              <a href="https://forms.office.com/r/hXhnKAG912" target="_blank" rel="noopener noreferrer">
+                {language === "tr" ? "Teklif Talep Formu" : "Get Quote"}
+              </a>
+            </Button>
+
+            {/* Mobile menu button */}
+            <button
+              type="button"
+              aria-label={isMenuOpen ? "Menüyü kapat" : "Menüyü aç"}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden p-2 text-muted-foreground hover:text-foreground"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <div className="md:hidden py-4 border-t border-border/10 animate-fade-in bg-background">
+              <div className="flex flex-col space-y-2 px-2">
+                {navigation.map((item) => (
+                  <div key={item.name}>
+                    {/* Top-level item */}
+                    {item.megaMenu ? (
+                      <button
+                        onClick={() => setExpandedMobileMenu(expandedMobileMenu === item.megaMenu ? null : item.megaMenu!)}
+                        className="w-full flex items-center justify-between text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 px-4 py-3 rounded-lg transition-colors"
+                      >
+                        <span>{item.name}</span>
+                        <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${expandedMobileMenu === item.megaMenu ? 'rotate-180 text-accent' : ''}`} />
+                      </button>
+                    ) : (
+                      <a
+                        href={item.href || "#"}
+                        className="text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 px-4 py-3 rounded-lg transition-colors block"
+                        onClick={(e) => {
+                          if (item.href) handleScroll(e, item.href);
+                          setIsMenuOpen(false);
+                        }}
+                      >
+                        {item.name}
+                      </a>
+                    )}
+
+                    {/* Sub-items (accordion content) */}
+                    <AnimatePresence>
+                      {item.megaMenu && expandedMobileMenu === item.megaMenu && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: 'easeInOut' }}
+                          className="overflow-hidden"
+                        >
+                          <div className="pl-4 pr-2 py-2 space-y-4">
+                            {item.megaMenu === 'products' && productsMenu.map((section, idx) => (
+                              <div key={idx} className="space-y-2">
+                                <h4 className="text-xs font-bold uppercase tracking-wider text-accent px-2 py-1">
+                                  {section.title}
+                                </h4>
+                                <div className="space-y-1">
+                                  {section.items.map((subItem, subIdx) => (
+                                    <Link
+                                      key={subIdx}
+                                      href={subItem.href}
+                                      className="block text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50 px-3 py-2 rounded-md transition-colors"
+                                      onClick={() => {
+                                        setIsMenuOpen(false);
+                                        setExpandedMobileMenu(null);
+                                      }}
+                                    >
+                                      {subItem.name}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            ))}
+                            {item.megaMenu === 'solutions' && solutionsMenu.map((section, idx) => (
+                              <div key={idx} className="space-y-2">
+                                <h4 className="text-xs font-bold uppercase tracking-wider text-accent px-2 py-1">
+                                  {section.title}
+                                </h4>
+                                <div className="space-y-1">
+                                  {section.items.map((subItem, subIdx) => (
+                                    <Link
+                                      key={subIdx}
+                                      href={subItem.href}
+                                      className="block text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50 px-3 py-2 rounded-md transition-colors"
+                                      onClick={() => {
+                                        setIsMenuOpen(false);
+                                        setExpandedMobileMenu(null);
+                                      }}
+                                    >
+                                      {subItem.name}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
+                <div className="pt-3 border-t border-border/10 flex flex-col space-y-3 px-2">
+                  <Button asChild variant="outline" className="w-full justify-start border-border/40 bg-muted/50 text-foreground hover:bg-muted">
+                    <a href="https://www.allplan.com/trial-or-subscription/" target="_blank" rel="noopener noreferrer">
+                      {language === "tr" ? "Ücretsiz Deneme" : "Free Trial"}
+                    </a>
+                  </Button>
+                  <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                    <a href="https://forms.office.com/r/hXhnKAG912" target="_blank" rel="noopener noreferrer">
+                      {language === "tr" ? "Teklif Talep Formu" : "Get Quote"}
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          )}
+        </AnimatePresence>
+      </nav>
+
+      {/* Mega Menus with AnimatePresence */}
+      <AnimatePresence>
+        {activeMegaMenu === "solutions" && (
+          <MegaMenu key="solutions" sections={solutionsMenu} onClose={closeMegaMenu} />
+        )}
+        {activeMegaMenu === "products" && (
+          <MegaMenu key="products" sections={productsMenu} onClose={closeMegaMenu} />
+        )}
+      </AnimatePresence>
+
+      <CommandMenu open={isSearchOpen} setOpen={setIsSearchOpen} />
+    </header>
+  );
+};
+
+export default Header;

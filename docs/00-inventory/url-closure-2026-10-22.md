@@ -80,3 +80,7 @@ Hiçbir kaynak, URL, içerik, tema veya schema kodu değiştirilmedi. Bu belge y
 - İlgili bağlantı/içerik ihtiyacını kaldırmak.
 
 Bu seçenekler toplu silme veya uygulama izni değildir. Teknik ekip kanıtı korur; Hazar satır bazında kararı verir. D03'ün bilinen hata listesi kayıt altındadır; onarım envanter çalışmasını durdurmaz. Yayın öncesinde karar ve uygulama doğrulanmalıdır. Sitemap, görünür bağlantı ve BreadcrumbList etkisi birlikte değerlendirilir. Schema'da 404 ara hedef bırakılması yayın kabulü değildir.
+
+## Aynı gün eklenen dinamik hedef bulguları
+
+[Envanter kapsam raporunda](inventory-coverage-2026-10-22.md) video kütüphanesindeki dört yalnız `#` kartı, niyet/form başlığı farkları, webinar placeholder iframe ve lisans görselinin DNS hatası ayrıca listelendi. Bunlar önceki11HTTP404+bir eksikfragment sayısına eklenip404 diye gösterilmez. Kullanıcının onarımı erteleme kararı bunlar için de korunur; hiçbir hedef değiştirilmedi.

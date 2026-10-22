@@ -1,0 +1,51 @@
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+
+type ChallengesSectionProps = {
+  items: string[];
+  id?: string;
+  theme?: "default" | "v2-dark";
+};
+
+const ChallengesSection = ({ items, id, theme = "default" }: ChallengesSectionProps) => {
+  const bgClass = "bg-muted/30";
+  const cardBg = "bg-card border-border";
+  const mutedText = "text-muted-foreground";
+  const textClass = "text-foreground";
+
+  if (!items || items.length === 0) return null;
+  return (
+    <section id={id} className={`py-16 ${bgClass}`}>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <span className="text-accent font-semibold tracking-wider uppercase mb-2 block">
+            ZORLU DURUMLAR
+          </span>
+          <h2 className={`font-display text-4xl md:text-5xl font-bold ${textClass}`}>
+            AŞAĞIDAKİ ZORLUKLARLA SÜREKLİ MÜCADELE EDİYOR MUSUNUZ?
+          </h2>
+        </div>
+        <div className="max-w-4xl mx-auto">
+          <Carousel opts={{ align: "start", loop: true }} className="w-full">
+            <CarouselContent className="-ml-4">
+              {items.map((text, index) => (
+                <CarouselItem key={index} className="pl-4 md:basis-1/2">
+                  <Card className={`${cardBg} h-full`}>
+                    <CardContent className="p-6 flex items-center justify-center min-h-[120px]">
+                      <p className={`${mutedText} text-center`}>{text}</p>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-12" />
+            <CarouselNext className="hidden md:flex -right-12" />
+          </Carousel>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ChallengesSection;

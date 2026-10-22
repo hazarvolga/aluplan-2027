@@ -122,3 +122,7 @@ Kullanıcı devam talebiyle kabul edilen yerleşimi tasarım sistemi bileşenler
 ## 22.10.2026 — Tasarım sistemi kesitine ilerleme
 
 Kullanıcının “ok go” yanıtı, geçici kabul edilen yerleşimin ayrı tasarım sistemi önizlemesinde header, hero, rol/ürün ve hizmet alanlarına uygulanması için ilerleme iznidir. Bu yanıt nihai görsel tasarım, mega menü davranışı, CTA önceliği, ürün iddiaları veya Next.js entegrasyonu kabulü değildir. Önizleme ve doğrulama kaydı: `../design-system-homepage-preview-review.md`.
+
+## 22.10.2026 — Header CTA kararı
+
+Kullanıcı CTA etiketini `Teklif İste` olarak kabul etti. Teklif ve ücretsiz deneme hero'da bulunduğundan header'da bu iki butona gerek olmadığına karar verdi. Planlama ve önizleme kuralı: header gezinme odaklı; ana sayfa hero'sunda `Teklif İste` ve `Ücretsiz Deneme` bulunur. Bu karar canlı link veya uygulama değişikliği değildir.

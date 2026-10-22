@@ -256,3 +256,7 @@ Kullanıcı devam talebiyle kabul edilen yerleşimi tasarım sistemi bileşenler
 ## 22.10.2026 — Gerçek tasarım sistemiyle ana sayfa kesiti
 
 Kullanıcının “ok go” talebiyle `docs/previews/anthracite-demo/ui_kits/homepage/` altında ayrı prototip hazırlandı; kontrol özeti `docs/design-system-homepage-preview-review.md`. Gerçek paket bileşenleri ve antrasit tokenlarıyla header temsili, hero, hızlı erişimler, rol/altı ürün, çözümler ve 20 hizmet gösterildi. Rol değişimi ve altı ürünün korunması tarayıcıda doğrulandı; console error yok. Code review kritik/yüksek bulgu vermedi. Mega menü/arama/tema bu kesitte yok; hero medya alanı temsilî. Form, backend, izleme, schema ve Next.js entegrasyonu yok. Türetilmiş antrasit paket önceki karar gereği Git dışında; rapor/devir commit kapsamındadır. Sıradaki adım kullanıcı görsel değerlendirmesi; kabul edilirse aynı dilin H05/H07/H08 ayrıntılarına genişletilmesi.
+
+## 22.10.2026 — Header eylemleri sadeleştirildi
+
+Kullanıcı `Teklif İste` etiketini kabul etti; teklif ve ücretsiz deneme zaten hero'da bulunduğu için ikisinin de header'dan kaldırılmasını istedi. Ayrı tasarım sistemi önizlemesi buna göre güncellendi: header gezinme odaklı, hero `Teklif İste` + `Ücretsiz Deneme`. Canlı site/Next.js/form hedefi değiştirilmedi. Sıradaki adım güncel önizlemenin görsel kontrolü ve kullanıcı değerlendirmesi.

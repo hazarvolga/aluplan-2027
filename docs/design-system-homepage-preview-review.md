@@ -25,4 +25,8 @@ Bu kontroller tam mobil, ekran okuyucu, performans, Next.js build veya içerik p
 
 Önizlemedeki hizmet bulma işlemi görünen başlığa dayanıyor. Üretim uyarlamasında başlık değişikliğinin sayfayı düşürmemesi için hizmetler kararlı `id` ile bulunmalı ve eksik kayıt açık hata durumuyla gösterilmelidir. Demo React/Babel/CDN yapısı Next.js'e kopyalanmaz.
 
+## 22.10.2026 — Header CTA kararı
+
+Kullanıcı `Teklif İste` etiketini kabul etti ve teklif/deneme eylemleri hero'da bulunduğu için header'dan kaldırılmasını istedi. Önizlemede header yalnız gezinme taşır; hero'da `Teklif İste` birincil ve `Ücretsiz Deneme` ikincil eylem olarak kalır. Bu karar mevcut canlı siteyi veya Next.js uygulamasını değiştirmez.
+
 Önizleme, önceki antrasit tasarım sistemi kopyasının içinde yerel değerlendirme çıktısı olarak tutulur. Bu türetilmiş paket daha önce alınan kararla Git dışında kalır; bu kontrol kaydı ve devir durumu commit edilir.

@@ -1,6 +1,6 @@
 # Tasarım, uygulama ve yayın öncesi kapanış tablosu
 
-22.10.2026 — Belge temelli durum değerlendirmesi. Faz 0 devam ediyor; bu tablo faz geçişi veya uygulama izni değildir. Tarihler kanıtların gözlem tarihidir; yeni canlı tarama/test yapılmadı.
+22.10.2026 — Belge temelli durum değerlendirmesi. Faz 0 devam ediyor; bu tablo faz geçişi veya uygulama izni değildir. Tarihler kanıtların gözlem tarihidir. D01–D03 için 22 Ekim hedefli kontroller eklendi; bütün site doğrulanmış değildir.
 
 ## Nasıl kullanılacak?
 
@@ -22,9 +22,9 @@ Durumlar: **Açık** = kapanış kanıtı yok; **Kısmi** = bazı kanıtlar var;
 
 | ID / durum | Eksik ve mevcut kanıt | Sorumlu | Bizim alabileceğimiz karar | Kapanış ölçütü |
 |---|---|---|---|---|
-| D01 Kısmi | Dinamik içerik envanteri eksik: alt sayfa sekme/akordeon/modal/video ve diğer form dalları. [E1] | Teknik ekip; içerik değerlendirmesi kullanıcı | Ekran/durum kontrol matrisi ve öncelikli inceleme sırası | Mevcut her sayfa/etkileşimin tam içerik ve hedef eşlemesi; erişilemeyenler gerekçeli ayrı karar. Faz 0 kapsamı gizlice daraltılmaz |
-| D02 Kısmi | Medya/import zincirleri, iki DOCX ve eşlenmemiş varlıklar açık; altı PDF bayt eşliği doğrulanmış. [E1] | Teknik ekip + kullanıcı; hak bilgisi Aluplan | Aynı dosyaları tek kayıtta izleme; arşivi güncel içerikten ayırma | Kullanılan dosya–sayfa eşleşmeleri ve yalnız yerel adayların kullanıcı kararı kayıtlı; silme yok |
-| D03 Kısmi | Dahili 404, eski redirect ve beş trailing-space fragment adayı var. 403/405 tek başına kırık link değil. [E1] | Teknik ekip + kullanıcı | Kaynak/hedef fark listesi; URL koruma planı | Render edilmiş hedef/anchor davranışı kontrol edilmiş; değişmesi gereken hedefler açık onaya sunulmuş. Yayın uygulama testi Y01'de |
+| D01 Kısmi | Dinamik içerik envanteri eksik: 57 canlı durum kaydedildi; kalan şablon/panel/video ve form dalları kaynak matrisiyle listeli. [E1,E12] | Teknik ekip; içerik değerlendirmesi kullanıcı | Ekran/durum kontrol matrisi ve öncelikli inceleme sırası | Mevcut her sayfa/etkileşimin tam içerik ve hedef eşlemesi; erişilemeyenler gerekçeli ayrı karar. Faz 0 kapsamı gizlice daraltılmaz |
+| D02 Kısmi | Medya/import zincirleri ve eşlenmemiş varlıklar açık; altı PDF önceki kontrolde, iki DOCX ve 86 görsel yeni kontrolde eşleşti; kullanım grafiği hâlâ açık. [E1,E12] | Teknik ekip + kullanıcı; hak bilgisi Aluplan | Aynı dosyaları tek kayıtta izleme; arşivi güncel içerikten ayırma | Kullanılan dosya–sayfa eşleşmeleri ve yalnız yerel adayların kullanıcı kararı kayıtlı; silme yok |
+| D03 Kısmi | 11 benzersiz 404 yol ve bir eksik #interface hedefi kayıtlı; dört fragment hedefi mevcut. Kullanıcı onarımı erteledi; hedef başına karar açık. [E12] | Teknik ekip + kullanıcı | Kaynak/hedef fark listesi; URL koruma planı | Bilinen hatalar ve karar seçenekleri listeli; onarımın ertelenmesi kayıtlı. Tüm hedef kapsamı ve satır bazında karar izlenir; düzeltme/yayın testi Y01'de |
 | D04 Kısmi | 23 URL görev matrisi var; karşılaştırma, PDF erişimi, yıllık yenilik ve kalıcı ürün görevleri ayrıldı. [E2,E3] | İçerik/UX ekibi + kullanıcı | Menüyü ve sayfa görevlerini gerekçelendirme; ALLPLAN'a kavramsal hizalama | Sayfa görev matrisi PRD'ye kabul edilmiş; üçlü/altılı listelerin seçki mi tam katalog mu olduğu açık; mevcut içerik kaybolmuyor |
 | D05 Açık | Ticari segment önceliği ve teklif/deneme ağırlığı kesin değil. Formun bir dalı incelendi, kullanıcı karmaşıklığı teyit etti. [E4,E5] | Kullanıcı + UX ekibi; ticari veri Aluplan | Sayfa niyetine göre CTA önceliği önerisi; mevcut Forms'u koruyarak yol sadeleştirme | Ana sayfa, ürün ve hizmet için birincil/ikincil sonraki adım kullanıcıca kabul; ticari öncelik varsayılmıyor |
 | D06 Kısmi | Eğitim tek başlık; Teams/ticket mevcut. Hizmet kapsamı ve başlık/hedef tutarlılığı açık. [E6] | İçerik ekibi + kullanıcı; hizmet sorumlusu Aluplan | Eğitim/destek/danışmanlık görev ayrımı; iki destek kanalı için açık etiketler | Hizmet girişlerinin görevleri/korunacak metinleri belirli; bilinmeyen kapsam U03'e taşınmış; ayrı özel eğitim hizmeti icat edilmiyor |
@@ -43,7 +43,7 @@ Durumlar: **Açık** = kapanış kanıtı yok; **Kısmi** = bazı kanıtlar var;
 | U03 Açık | Eğitim konusu/formatı/ücreti/sertifika ve destek SLA koşulları tam doğrulanmış değil. [E6] | Aluplan eğitim/destek sorumlusu; editoryal çerçeve biz | Bilinmeyen alanları boş/unknown tutma; mevcut kanalları kullanma | Hangi alanların yayınlanacağı ve veri kaynağı belirli; fiyat/süre/SLA zorunlu değil, doğrulanmamış vaat yayımlanmayacak |
 | U04 Kısmi | Eğitim ContactModal kaynağı gönderimi simüle ediyor; Forms satış formu ayrı. [E6] | Teknik ekip + Aluplan operasyon | Mevcut hedefi koruma veya alternatif form için somut seçenek ve maliyet önerisi | Her formun gerçek teslim hedefi, sorumlusu ve hata davranışı kabul edilmiş; URL değişikliği varsa kullanıcı kararı. Çalışan teslimat kanıtı Y03'te |
 | U05 Kısmi — schema | Entity @id ve sayfa bazında son tür seçimi henüz PRD'de değil. [E10,E11] | Teknik/içerik ekibi | Tek kimlik kayıt sistemi; sayfa–varlık ayrımı; ProductGroup'u otomatik kullanmama | Her pilot sayfa için mainEntity/about/provider ilişkisi ve schema alan kaynağı belirli; global layout'ta alakasız ürün verisi yok |
-| U06 Karar kayıtlı — schema | Tek Eğitim Service; tek Destek ve iki ServiceChannel. allplan.net.tr biliniyor, müşteri giriş yolu bağımsız doğrulanmadı. [E6,E10] | Teknik ekip + kullanıcı; kanal işleyişi Aluplan | İç relatedProductRefs/applicableReleaseRefs; gerçek kanal hedefini ilişkilendirme | Doğru müşteri URL'si kontrol edilmiş; özel ticket/CRM verisi schema'ya girmiyor; sürüm/hizmet hakkı varsayılmıyor |
+| U06 Karar kayıtlı — schema | Tek Eğitim Service; tek Destek ve iki ServiceChannel. allplan.net.tr → /tr herkese açık giriş sayfası doğrulandı; oturum açma ve müşteri akışı test edilmedi. [E6,E10,E12] | Teknik ekip + kullanıcı; kanal işleyişi Aluplan | İç relatedProductRefs/applicableReleaseRefs; gerçek kanal hedefini ilişkilendirme | Doğru müşteri URL'si kontrol edilmiş; özel ticket/CRM verisi schema'ya girmiyor; sürüm/hizmet hakkı varsayılmıyor |
 | U07 Kısmi — schema | Fiyat/review kanıtı yok; Google yazılım/ürün rich result koşulları sağlanmış sayılmaz. Türkçe Eğitim için Course list hedefi uygun değil. [E10] | Teknik/içerik ekibi; ticari veri Aluplan | Rich result hedefini bekletip doğrulanmış temel semantik model seçme | Her sayfa için hedeflenen/ertelenen Google sonucu ve eksik gerekçesi kayıtlı; sırf test geçsin diye fiyat=0/puan/kurs oluşturulmuyor |
 | U08 Açık | Ölçüm, dağıtım, bakım ve rollback planı PRD'ye bağlanmadı. [E5,E9] | Teknik ekip + kullanıcı; operasyon Aluplan | Düşük maliyetli deployment seçenekleri, olay sözlüğü, yıllık güncelleme takvimi | Ortamlar, yayın sorumlusu, içerik sahibi, ölçüm yöntemi ve geri alma planı kabul; sağlayıcı ve kişisel veri işleme varsayılmıyor |
 
@@ -83,6 +83,8 @@ U05–U07 plan kararlarıdır; bu tablo JSON-LD üretmez. Güncel Google şartla
 - E10 — [22 Ekim schema son kontrolü](schema-final-review-2026-10-22.md); resmî kaynak bağlantıları ve uygulama sınırları.
 - E11 — [İçerik kayıt sözleşmesi](content-record-contract.md).
 
+- E12 — [22 Ekim hedefli kapanış özeti](00-inventory/closure-review-2026-10-22.md); dinamik durum, medya ve URL kanıtları.
+
 ## Önerilen sıradaki çalışma
 
-Önce D01–D03'ü hedefli envanter kapanış oturumuyla tamamlayalım: kalan dinamik durumlar, medya eşlemesi ve hedef farkları. Mevcut kanıt tekrar üretilmez; yalnız eksikler kontrol edilir. Sonuç ve kullanıcı kararlarıyla Faz 0 kapanışı değerlendirilir; onaydan sonra UX/baseline, ardından PRD gelir. Bu doküman yalnız kapanış tablosudur; bu kontroller henüz yürütülmedi.
+D01 ve D02'nin kalan kontrol matrisiyle envantere devam edilir. D03 bilinen hataları ayrı karar listesinde tutulur; kullanıcı onarımı ertelemiştir. 57 durum, 88 medya dosyası ve seçili URL kontrolleri tüm Faz 0'ın kapanışı değildir. Faz geçişi ayrıca değerlendirilir; tasarım veya uygulamaya geçilmedi.

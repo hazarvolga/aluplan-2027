@@ -78,3 +78,7 @@ Kullanıcı Teams üzerinden desteğin ve ayrı ticket sisteminin çalıştığ�
 ## 22.10.2026 — Antrasit kabulü ve schema son kontrol
 
 Kullanıcı antrasit temayı uygun buldu; schema skilliyle ürün/paket/sürüm ve Eğitim/Destek ilişkilerinin son belge kontrolünü istedi. `docs/schema-final-review-2026-10-22.md` (proje köküne göre) güncel resmî kaynakları, karar matrisini ve eksikleri içerir. Tek Eğitim, tek destek hizmeti/iki kanal, Course list–Course Info ayrımı netleştirildi; eski ayrı özel eğitim aday notu kaldırıldı. Fiyat/yorum, TR lisans kapsamı, müşteri destek giriş URL'si ve hizmet koşulları açık. Kod/schema/site/tema değiştirilmedi; Rich Results Test ve URL Inspection yapılmadı. Sıradaki adım raporun kullanıcı değerlendirmesi ve uygulama öncesi kanıt açıklarının kapanmasıdır.
+
+## 22.10.2026 — Eksik hedefleri kaydet, onarımı ertele
+
+Kullanıcı 404 ve eksik hedefleri liste olarak korumamızı, gerekli düzeltmeleri sonra ele almamızı istedi. İçeriği yeniden oluşturma veya tamamen iptal etme seçenekleri açık; satır bazında seçim yapılmadı. Liste: [URL kapanış kaydı](url-closure-2026-10-22.md). Şimdi URL, içerik, link veya schema değiştirilmez; bilinen onarım ihtiyacı envanter ilerlemesini durdurmaz. Yayın öncesi karar ve doğrulama gereklidir.

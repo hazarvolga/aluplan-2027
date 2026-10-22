@@ -1,7 +1,7 @@
 # Oturum devri
 
 ## Güncelleme tarihi ve oturum no
-21.10.2026 — Uzun vadeli strateji çalışması (Europe/Istanbul).
+22.10.2026 — Hedefli envanter kapanış çalışması (Europe/Istanbul).
 
 ## Faz durumu tablosu
 | Faz | Durum |
@@ -98,7 +98,7 @@
 - Marka kılavuzunun üretici izinleri hakkındaki ifadeleri resmî izin belgesi yerine geçmez; benzerlik kontrolü henüz yapılmadı.
 
 ## Sıradaki adım
-`docs/phase-closure-gates.md` D01–D03 için hedefli envanter kapanış çalışmasını kullanıcıya sun; onaydan sonra kalan dinamik içerik, medya ve hedef farklarını tamamla. Faz geçişi yapma.
+D01/D02 kalan etkileşim ve medya matrisini tamamla; D03 eksik hedef listesini kullanıcı kararıyla sonraki onarıma bırak. Faz geçişi yapma.
 
 Claude v3 indirildi ve ayrı antrasit önizleme kullanıcı tarafından uygun bulundu. Teknik entegrasyon kabulü değildir; aşağıdaki eski Claude durum kayıtları tarihsel notlardır.
 
@@ -168,3 +168,12 @@ Kullanıcı antrasit temayı uygun buldu; schema skilliyle ürün/paket/sürüm 
 ## 22.10.2026 — Üç eşikli kapanış tablosu
 
 `docs/phase-closure-gates.md` tasarım (D01–D09), uygulama (U01–U08) ve yayın (Y01–Y07) öncesi açıkları kanıt, sorumlu rol, ekibin karar yetkisi ve kapanış ölçütleriyle toplar. Schema U05–U07/Y02 ve ticari kanıt Y05 içinde izlenir. Rol sahipleri öneridir, kişi ataması yapılmadı. Yeni tarama/test, kod, JSON-LD veya entegrasyon yok; Faz 0 tamamlandı sayılmaz. Eski sıradaki adım ve 14/30 gün notu güncel kanıtla düzeltildi.
+
+## 22.10.2026 — D01–D03 hedefli kanıt ve onarım erteleme kararı
+
+- `docs/00-inventory/closure-review-2026-10-22.md` sonuç dizini; dinamik, medya, URL raporları ve JSON kanıtları yanında.
+- Altı sayfada 57 canlı durum kaydedildi. Eğitim/SSS/Referanslar/rehber/Civil/Ultimate kapsamı raporda; kalan ortak şablonlar ve form/video dalları açık. Aktivasyon İleri gerçek POST yapıyor; gönderimsiz gözlem sınırı korunur.
+- İki AX3000 DOCX canlıda bulundu, kaynakla hash eşit; artık local-only aday değil. 86 görsel+2DOCX eşliği doğrulandı. Medya kullanım grafiği ve kalan dosyalar tamamlanmadı.
+- 11 benzersiz404, dört sağlam308, 2021 slash→404; beş fragment'ten yalnız interface hedefi eksik. Destek canlı/kaynak bağlantısı artık allplan.net.tr, root→/tr200; özel müşteri akışı denenmedi.
+- Kullanıcı eksik hedeflerin listelenmesini ve onarımın sonraya bırakılmasını istedi. Yeniden oluştur/uygun hedefe bağla/kaldır seçenekleri açık; satır bazında karar yok. Bu, toplu silme veya uygulama izni değil.
+- Kaynak, canlı, içerik/schema ve tasarım paketi değiştirilmedi. Eski snapshot'lar korunur. Faz0 sürüyor; uygulama build/test komutları henüz yok. İndirilen ZIP/açılmış paket ve ayrı antrasit demo untracked olarak korunuyor; yalnız yeni rapor/kanıt ve devir belgeleri commit kapsamındadır.

@@ -1,0 +1,537 @@
+{
+  "captured_at": "2026-10-22T07:34:58.114855+03:00",
+  "scope": "Targeted public GET; up to 5 same-allowlist hops, max4 concurrent,18s timeout; no authentication, form submission, Teams access, private data extraction or source mutation. Incoming pages are 19Oct snapshot, not re-crawled. Query values omitted.",
+  "results": [
+    {
+      "requested_url": "https://aluplan.com.tr/allplan-2021-features",
+      "checked_at": "2026-10-22T07:34:55.230166+03:00",
+      "hops": [
+        {
+          "url": "https://aluplan.com.tr/allplan-2021-features",
+          "status": 404,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "final_title": "Aluplan - Premium Mühendislik Çözümleri",
+      "initial_status": 404,
+      "final_status": 404,
+      "final_url": "https://aluplan.com.tr/allplan-2021-features",
+      "prior_classification": "live_error_or_missing",
+      "prior_initial_status": 404,
+      "incoming_pages_prior_snapshot": [
+        "/solutions/oska"
+      ]
+    },
+    {
+      "requested_url": "https://aluplan.com.tr/allplan-2026nin-ozellikleri",
+      "checked_at": "2026-10-22T07:34:55.222315+03:00",
+      "hops": [
+        {
+          "url": "https://aluplan.com.tr/allplan-2026nin-ozellikleri",
+          "status": 404,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "final_title": "Aluplan - Premium Mühendislik Çözümleri",
+      "initial_status": 404,
+      "final_status": 404,
+      "final_url": "https://aluplan.com.tr/allplan-2026nin-ozellikleri",
+      "prior_classification": "live_error_or_missing",
+      "prior_initial_status": 404,
+      "incoming_pages_prior_snapshot": [
+        "/solutions/allplan-bulut-hizmetleri"
+      ]
+    },
+    {
+      "requested_url": "https://aluplan.com.tr/products/bimplus-signup",
+      "checked_at": "2026-10-22T07:34:55.222495+03:00",
+      "hops": [
+        {
+          "url": "https://aluplan.com.tr/products/bimplus-signup",
+          "status": 404,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "final_title": "Aluplan - Premium Mühendislik Çözümleri",
+      "initial_status": 404,
+      "final_status": 404,
+      "final_url": "https://aluplan.com.tr/products/bimplus-signup",
+      "prior_classification": "sitemap_only_stale",
+      "prior_initial_status": 404,
+      "incoming_pages_prior_snapshot": []
+    },
+    {
+      "requested_url": "https://aluplan.com.tr/products/partner-solutions",
+      "checked_at": "2026-10-22T07:34:55.230623+03:00",
+      "hops": [
+        {
+          "url": "https://aluplan.com.tr/products/partner-solutions",
+          "status": 404,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "final_title": "Aluplan - Premium Mühendislik Çözümleri",
+      "initial_status": 404,
+      "final_status": 404,
+      "final_url": "https://aluplan.com.tr/products/partner-solutions",
+      "prior_classification": "sitemap_only_stale",
+      "prior_initial_status": 404,
+      "incoming_pages_prior_snapshot": []
+    },
+    {
+      "requested_url": "https://aluplan.com.tr/products/sds2-detail",
+      "checked_at": "2026-10-22T07:34:55.746055+03:00",
+      "hops": [
+        {
+          "url": "https://aluplan.com.tr/products/sds2-detail",
+          "status": 404,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "final_title": "Aluplan - Premium Mühendislik Çözümleri",
+      "initial_status": 404,
+      "final_status": 404,
+      "final_url": "https://aluplan.com.tr/products/sds2-detail",
+      "prior_classification": "sitemap_only_stale",
+      "prior_initial_status": 404,
+      "incoming_pages_prior_snapshot": []
+    },
+    {
+      "requested_url": "https://aluplan.com.tr/products/sds2-load",
+      "checked_at": "2026-10-22T07:34:55.621193+03:00",
+      "hops": [
+        {
+          "url": "https://aluplan.com.tr/products/sds2-load",
+          "status": 404,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "final_title": "Aluplan - Premium Mühendislik Çözümleri",
+      "initial_status": 404,
+      "final_status": 404,
+      "final_url": "https://aluplan.com.tr/products/sds2-load",
+      "prior_classification": "sitemap_only_stale",
+      "prior_initial_status": 404,
+      "incoming_pages_prior_snapshot": []
+    },
+    {
+      "requested_url": "https://aluplan.com.tr/products/tim",
+      "checked_at": "2026-10-22T07:34:55.745603+03:00",
+      "hops": [
+        {
+          "url": "https://aluplan.com.tr/products/tim",
+          "status": 404,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "final_title": "Aluplan - Premium Mühendislik Çözümleri",
+      "initial_status": 404,
+      "final_status": 404,
+      "final_url": "https://aluplan.com.tr/products/tim",
+      "prior_classification": "sitemap_only_stale",
+      "prior_initial_status": 404,
+      "incoming_pages_prior_snapshot": []
+    },
+    {
+      "requested_url": "https://aluplan.com.tr/solutions-v2",
+      "checked_at": "2026-10-22T07:34:55.737318+03:00",
+      "hops": [
+        {
+          "url": "https://aluplan.com.tr/solutions-v2",
+          "status": 404,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "final_title": "Aluplan - Premium Mühendislik Çözümleri",
+      "initial_status": 404,
+      "final_status": 404,
+      "final_url": "https://aluplan.com.tr/solutions-v2",
+      "prior_classification": "live_error_or_missing",
+      "prior_initial_status": 404,
+      "incoming_pages_prior_snapshot": [
+        "/solutions-v2/addons",
+        "/solutions-v2/building-design",
+        "/solutions-v2/connect-license",
+        "/solutions-v2/connect-license/activation",
+        "/solutions-v2/connect-license/how-to-assign",
+        "/solutions-v2/connect-login",
+        "/solutions-v2/construction",
+        "/solutions-v2/faq",
+        "/solutions-v2/infrastructure",
+        "/solutions-v2/other",
+        "/solutions-v2/training",
+        "/solutions-v2/training/classroom",
+        "/solutions-v2/training/e-learning",
+        "/solutions-v2/training/events",
+        "/solutions-v2/training/individual",
+        "/solutions-v2/training/online",
+        "/solutions-v2/training/quick-start",
+        "/solutions-v2/training/video-library",
+        "/solutions-v2/training/video-library/addon-geometry",
+        "/solutions-v2/training/video-library/allplan-reinforcement",
+        "/solutions-v2/training/video-library/ax3000",
+        "/solutions-v2/training/video-library/bridge-workflow-2022",
+        "/solutions-v2/training/video-library/bridge-workflows",
+        "/solutions-v2/training/video-library/campus-de",
+        "/solutions-v2/training/video-library/campus-en",
+        "/solutions-v2/training/video-library/campus-tutorials-2019-2022",
+        "/solutions-v2/training/video-library/hello-allplan-2024",
+        "/solutions-v2/training/video-library/konut-insaati",
+        "/solutions-v2/training/video-library/otomatik-donati",
+        "/solutions-v2/training/video-library/quickstart-buildings",
+        "/solutions-v2/training/video-library/road-design",
+        "/solutions-v2/training/video-library/sds2-intro",
+        "/solutions-v2/training/webinar"
+      ]
+    },
+    {
+      "requested_url": "https://aluplan.com.tr/solutions/PlanliAlanlar",
+      "checked_at": "2026-10-22T07:34:56.468351+03:00",
+      "hops": [
+        {
+          "url": "https://aluplan.com.tr/solutions/PlanliAlanlar",
+          "status": 308,
+          "content_type": "",
+          "location": "https://aluplan.com.tr/solutions/imar-yonetmeligi-bim-eklentisi"
+        },
+        {
+          "url": "https://aluplan.com.tr/solutions/imar-yonetmeligi-bim-eklentisi",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "final_title": "Aluplan - Premium Mühendislik Çözümleri",
+      "initial_status": 308,
+      "final_status": 200,
+      "final_url": "https://aluplan.com.tr/solutions/imar-yonetmeligi-bim-eklentisi",
+      "prior_classification": "redirect_to_valid_2xx",
+      "prior_initial_status": 308,
+      "incoming_pages_prior_snapshot": []
+    },
+    {
+      "requested_url": "https://aluplan.com.tr/solutions/addon-channel",
+      "checked_at": "2026-10-22T07:34:56.169214+03:00",
+      "hops": [
+        {
+          "url": "https://aluplan.com.tr/solutions/addon-channel",
+          "status": 404,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "final_title": "Aluplan - Premium Mühendislik Çözümleri",
+      "initial_status": 404,
+      "final_status": 404,
+      "final_url": "https://aluplan.com.tr/solutions/addon-channel",
+      "prior_classification": "sitemap_only_stale",
+      "prior_initial_status": 404,
+      "incoming_pages_prior_snapshot": []
+    },
+    {
+      "requested_url": "https://aluplan.com.tr/solutions/addons/drive-curvev",
+      "checked_at": "2026-10-22T07:34:56.682464+03:00",
+      "hops": [
+        {
+          "url": "https://aluplan.com.tr/solutions/addons/drive-curvev",
+          "status": 308,
+          "content_type": "",
+          "location": "https://aluplan.com.tr/solutions/addons/drive-curve"
+        },
+        {
+          "url": "https://aluplan.com.tr/solutions/addons/drive-curve",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "final_title": "Drive Curve - Aluplan | Aluplan",
+      "initial_status": 308,
+      "final_status": 200,
+      "final_url": "https://aluplan.com.tr/solutions/addons/drive-curve",
+      "prior_classification": "redirect_to_valid_2xx",
+      "prior_initial_status": 308,
+      "incoming_pages_prior_snapshot": []
+    },
+    {
+      "requested_url": "https://aluplan.com.tr/solutions/bimplus",
+      "checked_at": "2026-10-22T07:34:56.239741+03:00",
+      "hops": [
+        {
+          "url": "https://aluplan.com.tr/solutions/bimplus",
+          "status": 404,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "final_title": "Aluplan - Premium Mühendislik Çözümleri",
+      "initial_status": 404,
+      "final_status": 404,
+      "final_url": "https://aluplan.com.tr/solutions/bimplus",
+      "prior_classification": "sitemap_only_stale",
+      "prior_initial_status": 404,
+      "incoming_pages_prior_snapshot": [
+        "/solutions"
+      ]
+    },
+    {
+      "requested_url": "https://aluplan.com.tr/solutions/extra-modules",
+      "checked_at": "2026-10-22T07:34:57.198945+03:00",
+      "hops": [
+        {
+          "url": "https://aluplan.com.tr/solutions/extra-modules",
+          "status": 308,
+          "content_type": "",
+          "location": "https://aluplan.com.tr/solutions/addons"
+        },
+        {
+          "url": "https://aluplan.com.tr/solutions/addons",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "final_title": "Eklentiler - Aluplan | Aluplan",
+      "initial_status": 308,
+      "final_status": 200,
+      "final_url": "https://aluplan.com.tr/solutions/addons",
+      "prior_classification": "redirect_to_valid_2xx",
+      "prior_initial_status": 308,
+      "incoming_pages_prior_snapshot": []
+    },
+    {
+      "requested_url": "https://aluplan.com.tr/solutions/industry",
+      "checked_at": "2026-10-22T07:34:57.200118+03:00",
+      "hops": [
+        {
+          "url": "https://aluplan.com.tr/solutions/industry",
+          "status": 308,
+          "content_type": "",
+          "location": "https://aluplan.com.tr/solutions/steel"
+        },
+        {
+          "url": "https://aluplan.com.tr/solutions/steel",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "final_title": "Aluplan - Premium Mühendislik Çözümleri",
+      "initial_status": 308,
+      "final_status": 200,
+      "final_url": "https://aluplan.com.tr/solutions/steel",
+      "prior_classification": "redirect_to_valid_2xx",
+      "prior_initial_status": 308,
+      "incoming_pages_prior_snapshot": [
+        "/solutions"
+      ]
+    },
+    {
+      "requested_url": "https://aluplan.com.tr/try-free",
+      "checked_at": "2026-10-22T07:34:56.968530+03:00",
+      "hops": [
+        {
+          "url": "https://aluplan.com.tr/try-free",
+          "status": 404,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "final_title": "Aluplan - Premium Mühendislik Çözümleri",
+      "initial_status": 404,
+      "final_status": 404,
+      "final_url": "https://aluplan.com.tr/try-free",
+      "prior_classification": "live_error_or_missing",
+      "prior_initial_status": 404,
+      "incoming_pages_prior_snapshot": [
+        "/products/allplan-2026"
+      ]
+    },
+    {
+      "requested_url": "https://aluplan.com.tr/allplan-2021-features/",
+      "checked_at": "2026-10-22T07:34:57.520770+03:00",
+      "hops": [
+        {
+          "url": "https://aluplan.com.tr/allplan-2021-features/",
+          "status": 308,
+          "content_type": "",
+          "location": "https://aluplan.com.tr/allplan-2021-features"
+        },
+        {
+          "url": "https://aluplan.com.tr/allplan-2021-features",
+          "status": 404,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "final_title": "Aluplan - Premium Mühendislik Çözümleri",
+      "initial_status": 308,
+      "final_status": 404,
+      "final_url": "https://aluplan.com.tr/allplan-2021-features",
+      "prior_classification": "live_error_or_missing",
+      "prior_initial_status": 404,
+      "incoming_pages_prior_snapshot": [
+        "/solutions/oska"
+      ]
+    },
+    {
+      "requested_url": "https://allplan.net.tr/",
+      "checked_at": "2026-10-22T07:34:58.114294+03:00",
+      "hops": [
+        {
+          "url": "https://allplan.net.tr/",
+          "status": 307,
+          "content_type": "",
+          "location": "https://allplan.net.tr/tr"
+        },
+        {
+          "url": "https://allplan.net.tr/tr",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "final_title": "Aluplan Support Desk — Allplan Technical Hub",
+      "initial_status": 307,
+      "final_status": 200,
+      "final_url": "https://allplan.net.tr/tr"
+    }
+  ],
+  "current_incoming_references_selected_pages": [
+    {
+      "page": "https://aluplan.com.tr/",
+      "href": "https://allplan.net.tr/",
+      "label": "Destek PlatformuTicket sistemi üzerinden destek taleplerinizi oluşturun ve süreçlerinizi kolayca takip edin.Talep Oluştur",
+      "checked_at": "2026-10-22T07:36:01.391297+03:00"
+    },
+    {
+      "page": "https://aluplan.com.tr/solutions",
+      "href": "https://aluplan.com.tr/solutions/industry",
+      "label": "Detayları İncele ALLPLAN Endüstri ÇözümleriEndüstriyel tesisler ve özel yapılar için özelleştirilmiş, yüksek performanslı tasarım ve detaylandırma çözümleri.",
+      "checked_at": "2026-10-22T07:36:02.030689+03:00"
+    },
+    {
+      "page": "https://aluplan.com.tr/solutions",
+      "href": "https://aluplan.com.tr/solutions/bimplus",
+      "label": "Detayları İncele Allplan BIMPLUSBulut tabanlı BIM işbirliği platformu ile tüm proje paydaşlarını tek bir merkezde buluşturun.",
+      "checked_at": "2026-10-22T07:36:02.030839+03:00"
+    },
+    {
+      "page": "https://aluplan.com.tr/solutions/allplan-bulut-hizmetleri",
+      "href": "https://aluplan.com.tr/allplan-2026nin-ozellikleri",
+      "label": "ALLPLAN 2026 Özellikleri",
+      "checked_at": "2026-10-22T07:36:02.754367+03:00"
+    },
+    {
+      "page": "https://aluplan.com.tr/products/allplan-2026",
+      "href": "https://aluplan.com.tr/try-free",
+      "label": "Ücretsiz Deneyin",
+      "checked_at": "2026-10-22T07:36:03.315032+03:00"
+    },
+    {
+      "page": "https://aluplan.com.tr/solutions/oska",
+      "href": "https://aluplan.com.tr/allplan-2021-features/",
+      "label": "Yenilikleri incele",
+      "checked_at": "2026-10-22T07:36:03.754322+03:00"
+    },
+    {
+      "page": "https://aluplan.com.tr/solutions-v2/training",
+      "href": "https://aluplan.com.tr/solutions-v2",
+      "label": "Çözümler",
+      "checked_at": "2026-10-22T07:36:04.313813+03:00"
+    }
+  ],
+  "support_public_landing_observation": {
+    "url": "https://allplan.net.tr/tr",
+    "status": 200,
+    "visible_heading": "Aluplan Destek Platformuna Hoş Geldiniz",
+    "visible_action": "Giriş Yap",
+    "method": "unauthenticated HTML text parsing; no client button click/login",
+    "limitation": "Public landing/root confirmed; login destination and customer ticket operation not tested."
+  },
+  "current_incoming_reference_page_checks": [
+    {
+      "url": "https://aluplan.com.tr/",
+      "status": 200
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions",
+      "status": 200
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/allplan-bulut-hizmetleri",
+      "status": 200
+    },
+    {
+      "url": "https://aluplan.com.tr/products/allplan-2026",
+      "status": 200
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions/oska",
+      "status": 200
+    },
+    {
+      "url": "https://aluplan.com.tr/solutions-v2/training",
+      "status": 200
+    }
+  ],
+  "reference_collection_note": "Initial default urllib User-Agent attempts returned HTTPError; repeated once with same explicit audit User-Agent as endpoint checks. See final statuses; this is not browser interaction evidence.",
+  "current_readonly_source_references": [
+    {
+      "path": "/allplan-2021-features",
+      "source": "app/solutions/oska/ClientPage.tsx:61 (trailing slash href)"
+    },
+    {
+      "path": "/allplan-2026nin-ozellikleri",
+      "source": "components/solutions/AllplanBulutContent.tsx:460"
+    },
+    {
+      "path": "/products/bimplus-signup",
+      "source": "app/sitemap.ts:30"
+    },
+    {
+      "path": "/products/partner-solutions",
+      "source": "app/sitemap.ts:32"
+    },
+    {
+      "path": "/products/sds2-detail",
+      "source": "app/sitemap.ts:35"
+    },
+    {
+      "path": "/products/sds2-load",
+      "source": "app/sitemap.ts:37"
+    },
+    {
+      "path": "/products/tim",
+      "source": "app/sitemap.ts:38"
+    },
+    {
+      "path": "/solutions-v2",
+      "source": "components/ui/breadcrumb.tsx:39–48,82–84 (URL segments generate intermediate href/schema)"
+    },
+    {
+      "path": "/solutions/addon-channel",
+      "source": "app/sitemap.ts:58"
+    },
+    {
+      "path": "/solutions/bimplus",
+      "source": "app/solutions/page.tsx:156; app/sitemap.ts:57"
+    },
+    {
+      "path": "/try-free",
+      "source": "app/products/allplan-2026/page.tsx:155"
+    },
+    {
+      "path": "/solutions/industry",
+      "source": "next.config.js:123–125; app/solutions/page.tsx:53"
+    },
+    {
+      "path": "/solutions/extra-modules",
+      "source": "next.config.js:129–131"
+    },
+    {
+      "path": "/solutions/PlanliAlanlar",
+      "source": "next.config.js:134–136"
+    },
+    {
+      "path": "/solutions/addons/drive-curvev",
+      "source": "next.config.js:144–146"
+    }
+  ],
+  "support_source_reference": {
+    "path": "components/homepage-v2/ServicesV2.tsx:67",
+    "href": "https://allplan.net.tr/",
+    "note": "Current readonly source differs from prior aluplan.net.tr snapshot documentation; no source edit performed."
+  }
+}

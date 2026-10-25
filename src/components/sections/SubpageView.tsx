@@ -123,27 +123,35 @@ export function SubpageView({
       })
     : searchIndex;
 
-  // Deduplicate page images by src while preserving order
-  const uniqueImages = React.useMemo(() => {
+  // Separate high-resolution photos from small icon assets (52x52 / 128x128 PNGs)
+  const photoImages = React.useMemo(() => {
     const seen = new Set<string>();
     const list: { src: string; alt: string }[] = [];
     for (const img of page.images || []) {
-      if (!img.src || seen.has(img.src)) continue;
+      if (!img.src || img.isIcon || seen.has(img.src)) continue;
       seen.add(img.src);
       list.push(img);
     }
     return list;
   }, [page.images]);
 
-  const heroImage = !isLegalPage && uniqueImages.length > 0 ? uniqueImages[0] : null;
-  const contentImages = heroImage ? uniqueImages.slice(1) : uniqueImages;
+  const heroImage = !isLegalPage && photoImages.length > 0 ? photoImages[0] : null;
   const pageVideos = page.videos || [];
 
-  // Split sections into Featured Split Rows (up to 4 sections with matched images) and Spec Grid sections
-  const maxFeaturedRows = !isLegalPage ? Math.min(page.sections.length, contentImages.length, 4) : 0;
-  const featuredSections = page.sections.slice(0, maxFeaturedRows);
-  const gridSections = page.sections.slice(maxFeaturedRows);
-  const gridImages = contentImages.slice(maxFeaturedRows);
+  // Partition sections into:
+  // 1) Stat sections (with sec.statValue, e.g. 50% DAHA KESİN)
+  // 2) Photo-backed feature sections (with sec.image, rendered as Alternating Split Rows)
+  // 3) Benefit / Spec sections (with optional 48x48 sec.iconSrc badge or text specifications)
+  const statSections = page.sections.filter((s) => Boolean(s.statValue));
+  const featuredSections = !isLegalPage ? page.sections.filter((s) => Boolean(s.image) && !s.statValue) : [];
+  const specSections = page.sections.filter((s) => !s.statValue && (!s.image || isLegalPage));
+
+  const usedPhotoSrcs = new Set<string>();
+  if (heroImage) usedPhotoSrcs.add(heroImage.src);
+  for (const s of featuredSections) {
+    if (s.image?.src) usedPhotoSrcs.add(s.image.src);
+  }
+  const galleryImages = photoImages.filter((im) => !usedPhotoSrcs.has(im.src));
 
   const sectionBadgeLabel = SECTION_LABELS[page.section] || page.eyebrow;
 
@@ -248,6 +256,29 @@ export function SubpageView({
           )}
         </div>
       </section>
+
+      {/* Subpage Animated/Verified Metrics Bar (when statSections exist, e.g., 50% DAHA KESİN, 70% DAHA VERİMLİ, 30% DAHA ÜRETKEN) */}
+      {statSections.length > 0 && (
+        <section className="preview-section preview-section--subtle" aria-label="Performans ve Verimlilik Göstergeleri">
+          <div className="alu-container">
+            <div className="alu-hero-metrics" style={{ gridTemplateColumns: `repeat(${Math.min(statSections.length, 4)}, minmax(0, 1fr))` }}>
+              {statSections.map((st) => (
+                <div key={st.heading} className="alu-hero-metrics__item">
+                  <span className="alu-hero-metrics__value">{st.statValue}</span>
+                  <h2 className="alu-hero-metrics__label" style={{ margin: 0 }}>
+                    {st.heading}
+                  </h2>
+                  {st.items.map((desc, dIdx) => (
+                    <p key={dIdx} className="alu-body-sm" style={{ margin: '0.25rem 0 0 0' }}>
+                      {desc}
+                    </p>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Special Interactive View: Video Playlist (/solutions-v2/training/video-library/[playlistId]) */}
       {playlist && (
@@ -724,62 +755,29 @@ export function SubpageView({
         </section>
       )}
 
-      {/* Preserved Structured Content Sections — Alternating Split Showcases + Architectural Spec Grid */}
+      {/* Preserved Structured Content Sections — Benefit/Spec Grid + Alternating Photo Showcases */}
       <section className="preview-section" aria-label="Sayfa içeriği">
         <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
-          {/* Part A: Alternating Split Feature Rows (when images exist) */}
-          {featuredSections.length > 0 && (
-            <div className="alu-feature-rows">
-              {featuredSections.map((sec, idx) => {
-                const secImg = contentImages[idx];
-                const isReversed = idx % 2 === 1;
-                return (
-                  <article
-                    key={`feat-${sec.heading}-${idx}`}
-                    className={`alu-feature-row${isReversed ? ' alu-feature-row--reverse' : ''}`}
-                  >
-                    <div className="alu-feature-row__media">
-                      <img src={secImg.src} alt={secImg.alt || sec.heading} loading="lazy" />
-                      <span className="alu-feature-row__index">0{idx + 1}</span>
-                    </div>
-                    <div className="alu-feature-row__content">
-                      <span className="preview-kicker">0{idx + 1} · ÖNE ÇIKAN ÖZELLİK</span>
-                      {sec.level === 2 ? (
-                        <h2 className="alu-h2" style={{ margin: 0 }}>
-                          {sec.heading}
-                        </h2>
-                      ) : (
-                        <h3 className="alu-h2" style={{ margin: 0 }}>
-                          {sec.heading}
-                        </h3>
-                      )}
-                      <div className="alu-stack" style={{ gap: '0.75rem' }}>
-                        {sec.items.map((paragraph, pIdx) => (
-                          <p key={pIdx} className="alu-body" style={{ margin: 0 }}>
-                            {paragraph}
-                          </p>
-                        ))}
-                      </div>
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
-          )}
-
-          {/* Part B: Architectural Specification Grid (Remaining Sections) */}
-          {gridSections.length > 0 && (
+          {/* Part A: Benefit & Specification Cards (with native 48x48 icon badge when sec.iconSrc exists) */}
+          {specSections.length > 0 && (
             <div
               className="alu-spec-grid"
               style={isLegalPage ? { gridTemplateColumns: '1fr' } : undefined}
             >
-              {gridSections.map((sec, idx) => {
-                const globalIdx = maxFeaturedRows + idx + 1;
+              {specSections.map((sec, idx) => {
+                const globalIdx = idx + 1;
                 const numLabel = globalIdx < 10 ? `0${globalIdx}` : `${globalIdx}`;
                 return (
                   <article key={`spec-${sec.heading}-${idx}`} className="alu-spec-card">
                     <div className="alu-spec-card__header">
-                      <span className="alu-spec-card__num">{numLabel}</span>
+                      <div className="alu-cluster" style={{ gap: '0.75rem' }}>
+                        {sec.iconSrc && (
+                          <span className="alu-benefit-icon">
+                            <img src={sec.iconSrc} alt="" loading="lazy" />
+                          </span>
+                        )}
+                        <span className="alu-spec-card__num">{numLabel}</span>
+                      </div>
                       <span className="alu-card__eyebrow">{sectionBadgeLabel}</span>
                     </div>
                     {sec.level === 2 ? (
@@ -801,6 +799,46 @@ export function SubpageView({
                           {paragraph}
                         </p>
                       ))}
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          )}
+
+          {/* Part B: Alternating Split Feature Rows (ONLY for high-resolution photos, NEVER icons) */}
+          {featuredSections.length > 0 && (
+            <div className="alu-feature-rows">
+              {featuredSections.map((sec, idx) => {
+                const secImg = sec.image!;
+                const isReversed = idx % 2 === 1;
+                return (
+                  <article
+                    key={`feat-${sec.heading}-${idx}`}
+                    className={`alu-feature-row${isReversed ? ' alu-feature-row--reverse' : ''}`}
+                  >
+                    <div className="alu-feature-row__media">
+                      <img src={secImg.src} alt={secImg.alt || sec.heading} loading="lazy" />
+                      <span className="alu-feature-row__index">0{idx + 1}</span>
+                    </div>
+                    <div className="alu-feature-row__content">
+                      <span className="preview-kicker">0{idx + 1} · İŞ AKIŞI VE ÖZELLİK</span>
+                      {sec.level === 2 ? (
+                        <h2 className="alu-h2" style={{ margin: 0 }}>
+                          {sec.heading}
+                        </h2>
+                      ) : (
+                        <h3 className="alu-h2" style={{ margin: 0 }}>
+                          {sec.heading}
+                        </h3>
+                      )}
+                      <div className="alu-stack" style={{ gap: '0.75rem' }}>
+                        {sec.items.map((paragraph, pIdx) => (
+                          <p key={pIdx} className="alu-body" style={{ margin: 0 }}>
+                            {paragraph}
+                          </p>
+                        ))}
+                      </div>
                     </div>
                   </article>
                 );
@@ -857,15 +895,15 @@ export function SubpageView({
             </div>
           )}
 
-          {/* Remaining Visual Assets Gallery (ensuring 100% of page.images are displayed) */}
-          {!isLegalPage && gridImages.length > 0 && (
+          {/* Remaining High-Resolution Visual Assets Gallery (excluding small icons) */}
+          {!isLegalPage && galleryImages.length > 0 && (
             <div className="alu-stack" style={{ gap: 'var(--space-stack-lg)' }}>
               <div className="alu-stack">
-                <span className="preview-kicker">TEKNİK GÖRSEL GALERİ ({gridImages.length} GÖRSEL)</span>
+                <span className="preview-kicker">TEKNİK GÖRSEL GALERİ ({galleryImages.length} GÖRSEL)</span>
                 <h2 className="alu-h2">Modül, Ekran Görüntüleri ve Uygulama Detayları</h2>
               </div>
               <div className="alu-gallery-grid">
-                {gridImages.map((img, gIdx) => (
+                {galleryImages.map((img, gIdx) => (
                   <figure key={`${img.src}-${gIdx}`} className="alu-product-card alu-gallery-card">
                     <div className="alu-product-card__media">
                       <img src={img.src} alt={img.alt || page.h1} loading="lazy" />

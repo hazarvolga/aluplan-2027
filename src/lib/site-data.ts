@@ -23,6 +23,9 @@ export interface PageSection {
   heading: string;
   level: number;
   items: string[];
+  iconSrc?: string;
+  image?: ContentImage;
+  statValue?: string;
 }
 
 export interface ContentLink {
@@ -34,6 +37,7 @@ export interface ContentLink {
 export interface ContentImage {
   src: string;
   alt: string;
+  isIcon?: boolean;
 }
 
 export interface ContentVideo {

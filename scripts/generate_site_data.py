@@ -2,6 +2,7 @@
 import json
 import os
 import re
+import struct
 from pathlib import Path
 from urllib.parse import urlparse, parse_qs, unquote
 
@@ -100,6 +101,75 @@ def resolve_media_src(raw_src: str) -> str:
     if low_name in basename_to_public:
         return basename_to_public[low_name]
     return s
+
+
+def get_image_dimensions(src: str):
+    if not src or not src.startswith("/"):
+        return None
+    fp = PUBLIC_DIR / src.lstrip("/")
+    if not fp.is_file():
+        return None
+    try:
+        data = fp.read_bytes()
+        ext = fp.suffix.lower()
+        if ext == ".png" and data[:8] == b"\x89PNG\r\n\x1a\n":
+            w, h = struct.unpack(">II", data[16:24])
+            return (w, h)
+        if ext in {".jpg", ".jpeg"}:
+            i = 2
+            while i < len(data):
+                while i < len(data) and data[i] != 0xFF:
+                    i += 1
+                while i < len(data) and data[i] == 0xFF:
+                    i += 1
+                if i >= len(data):
+                    break
+                marker = data[i]
+                i += 1
+                if marker in (0xD8, 0xD9):
+                    continue
+                if i + 2 > len(data):
+                    break
+                length = struct.unpack(">H", data[i : i + 2])[0]
+                if marker in (0xC0, 0xC1, 0xC2, 0xC3):
+                    h, w = struct.unpack(">HH", data[i + 3 : i + 7])
+                    return (w, h)
+                i += length
+    except Exception:
+        return None
+    return None
+
+
+def is_icon_image(src: str) -> bool:
+    if not src:
+        return False
+    low = src.lower()
+    if low.endswith(".svg"):
+        return True
+    if any(seg in low for seg in ["/icons/", "/reasons/", "/benefits/", "/partners/", "logo", "1470399"]):
+        return True
+    dims = get_image_dimensions(src)
+    if dims and (dims[0] <= 260 or dims[1] <= 260):
+        return True
+    return False
+
+
+# Extract animated stats from source evidence so SSR '0' '%' placeholders are replaced with real values
+route_stats = {}
+ev_app_dir = ROOT / "docs/00-inventory/interaction-source-evidence/app"
+if ev_app_dir.exists():
+    for tsx_path in ev_app_dir.rglob("*.tsx"):
+        txt = tsx_path.read_text(encoding="utf-8", errors="ignore")
+        rel = "/" + str(tsx_path.parent.relative_to(ev_app_dir)).replace("\\", "/")
+        rel = rel.replace("/(public)", "") or "/"
+        matches = re.findall(
+            r"value:\s*[\"']([^\"']+)[\"']\s*,\s*label:\s*[\"']([^\"']+)[\"']",
+            txt,
+        )
+        if matches:
+            route_stats.setdefault(rel, {})
+            for val, lbl in matches:
+                route_stats[rel][lbl.strip().upper()] = val.strip()
 
 
 def safe_read_json(p: Path):
@@ -537,10 +607,14 @@ for raw_page in raw_200_pages:
     sections = []
     current_section = {"heading": h1_text, "level": 2, "items": []}
 
+    SSR_NOISE_NODES = {"0", "%", "Previous slide", "Next slide"}
+
     for node in body_nodes:
-        if node == h1_text:
+        if node == h1_text or node in SSR_NOISE_NODES:
             continue
         if node in heading_set:
+            if current_section["heading"] == node:
+                continue
             if current_section["items"] or not sections:
                 sections.append(current_section)
             matched_h = next((h for h in body_headings if h["text"] == node), None)
@@ -586,15 +660,39 @@ for raw_page in raw_200_pages:
 
     images = []
     seen_imgs = set()
+    img_by_alt = {}
     for img in raw_page.get("images", []):
         if img.get("location") in {"nav", "header", "footer"}:
             continue
         raw_src = (img.get("attributes") or {}).get("src", "")
         src = resolve_media_src(raw_src)
         alt = clean_text((img.get("attributes") or {}).get("alt") or h1_text)
-        if src and src not in seen_imgs:
+        if not src:
+            continue
+        im_obj = {
+            "src": src,
+            "alt": alt or h1_text,
+            "isIcon": is_icon_image(src),
+        }
+        norm_alt = re.sub(r"\s+", " ", (alt or h1_text).strip().upper())
+        img_by_alt.setdefault(norm_alt, im_obj)
+        if src not in seen_imgs:
             seen_imgs.add(src)
-            images.append({"src": src, "alt": alt or h1_text})
+            images.append(im_obj)
+
+    # Attach matched iconSrc, high-res image, and statValue to each section
+    page_stat_map = route_stats.get(route_path, {})
+
+    for sec in sections:
+        norm_h = re.sub(r"\s+", " ", sec["heading"].strip().upper())
+        if norm_h in page_stat_map:
+            sec["statValue"] = page_stat_map[norm_h]
+        matched_im = img_by_alt.get(norm_h)
+        if matched_im and norm_h != re.sub(r"\s+", " ", h1_text.strip().upper()):
+            if matched_im.get("isIcon"):
+                sec["iconSrc"] = matched_im["src"]
+            else:
+                sec["image"] = {"src": matched_im["src"], "alt": matched_im["alt"]}
 
     videos = []
     seen_vids = set()

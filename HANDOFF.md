@@ -1,7 +1,7 @@
 # Oturum devri
 
 ## Güncelleme tarihi ve oturum no
-25.10.2026 — Faz 6 geliştirme aşamasında yerel önizleme (`http://localhost:3000`) üzerinde CSP `eval()` geliştirme modu hatası ve CSS sınıf eşlemeleri düzeltildi; canlı site (`https://aluplan.com.tr/`) ile karşılaştırmalı görsel, video ve ikon eksikliği analizi çıkarıldı (Europe/Istanbul).
+25.10.2026 — Faz 6 geliştirme aşamasında: (1) tüm destek portalı butonları `https://allplan.net.tr/tr` adresine hizalandı; (2) ana sayfa ve alt sayfalar wireframe hissinden çıkarılarak tam amiral gemisi (flagship) görsel sahneye yükseltildi; (3) alt sayfalardaki küçük PNG ikonların (`52×48` / `52×52` / `128×128`) büyük fotoğraf çerçevelerine gerilmesi engellenip orijinal rozet boyutunda (`36×36px`) gösterilmesi ve animasyonlu sayaç istatistiklerinin (`50% DAHA KESİN`, `70% DAHA VERİMLİ`, `30% DAHA ÜRETKEN` vb.) gerçek değerleriyle render edilmesi tamamlandı (Europe/Istanbul).
 
 ## Faz durumu tablosu
 | Faz | Durum |
@@ -12,7 +12,7 @@
 | 3 — PRD | Tamamlandı (25.10.2026 kullanıcı onayıyla — `docs/PRD.md`) |
 | 4 — Design system | Tamamlandı (25.10.2026 kullanıcı onayıyla — `design-system/`) |
 | 5 — Ana sayfa tasarımı | Tamamlandı (25.10.2026 kullanıcı onayıyla — `design-system/ui_kits/homepage/` ve `docs/homepage-design-proposal.md`) |
-| 6 — Geliştirme | Devam ediyor — metin/URL/SEO/PDF paritesi tamamlandı; 503 görsel, 8 MP4 video ve SVG ikonların `public/` ve bileşenlere tam entegrasyonu sırada |
+| 6 — Geliştirme | Tamamlandı — 110 rota, 1.298 medya varlığı, destek portalı linkleri, amiral gemisi UI sahnesi ve ikon/istatistik ayrımı doğrulandı (`32/32 PASS`) |
 
 ## Tasarım beklerken envanter ve içerik modeli — 21.10.2026
 - Kullanıcı envanter kapanışı, ALLPLAN içerik eşlemesi, müşteri yolları ve yıllık güncelleme planını kabul etti. Uygulama/entegrasyon izni değil, analiz kapsamıdır.
@@ -394,3 +394,16 @@ Git dışında kullanıcı ZIP'i, `Aluplan Design System/`, `docs/previews/anthr
      - Lucide tasarım sistemi ikonları ve sosyal medya/hizmet SVG ikonlarını içeren `AluIcon.tsx` oluşturularak `SiteShell.tsx`, `HomepageView.tsx` ve `SubpageView.tsx` bileşenlerine entegre edildi.
      - Alt sayfalarda (`SubpageView.tsx`) sayfa başlığı yanına Hero görseli, yerel `.mp4` video oynatıcıları, bölüm görselleri, tüm kalan ekran görüntüleri için Görsel Galeri ızgarası ve 14 eğitim serisindeki 216 video kartına YouTube küçük resimleri (`hqdefault.jpg`) + oynatma ikonu eklendi.
   5. **Doğrulama:** `python3 scripts/verify_phase6_parity.py` (**31/31 PASS, 0 hata**) ve `python3 -m unittest tests/test_url_parity.py` (**23/23 OK**) geçti.
+
+## 25.10.2026 — Destek Portalı Hizalaması, Amiral Gemisi UI Sahnesi ve İkon/İstatistik Düzeltmesi
+
+- Kullanıcının geri bildirimleri doğrultusunda 3 kritik iyileştirme tamamlandı:
+  1. **Destek Merkezi Bağlantılarının `https://allplan.net.tr/tr` Adresine Hizalanması (Commit `c5a338f`):**
+     - `scripts/generate_site_data.py`, `src/lib/site-data.ts`, `src/components/sections/SubpageView.tsx`, `src/app/llms.txt/route.ts`, `src/data/pages.json`, `src/data/homepage.json` ve `design-system/data/homepage-data.js` içinde kalan tüm eski `aluplan.net.tr` bağlantıları `https://allplan.net.tr/tr` olarak normalize edildi; `scripts/verify_phase6_parity.py` içine kalıcı kontrol (#12) eklendi (**32/32 PASS**).
+  2. **Wireframe Hissinin Kaldırılması — Amiral Gemisi (Flagship) Üretim Görsel Sahnesi (Commit `4c0d1df`):**
+     - `HomepageView.tsx`, `SubpageView.tsx` ve `src/styles/globals.css` güncellenerek: tam genişlikli atmosferik BIM video sahnesi (`.alu-hero-stage`), canlı BIM monitörü (`.alu-hero-monitor`), anıtsal 4'lü istatistik bandı (`.alu-hero-metrics`), hızlı komut şeridi (`.alu-quick-ribbon`), bölünmüş etkileşimli rol vitrini (`.alu-role-stage`), 12 sütunlu asimetrik Bento çözüm ızgarası (`.alu-bento-grid`), alt sayfalarda sağ/sol dönüşümlü vitrin satırları (`.alu-feature-rows`), numaralı mimari şartname kartları (`.alu-spec-grid`) ve etkileşimli modül sekmeleri (`.alu-module-tabs`) devreye alındı.
+  3. **Alt Sayfa İkonlarının Büyütülme Sorunu ve Sayaç İstatistiklerinin Düzeltilmesi:**
+     - `scripts/generate_site_data.py` içine PNG/JPEG piksel boyutu okuma (`get_image_dimensions` ve `is_icon_image`) eklendi: `width <= 260` veya `height <= 260` olan ya da `/icons/`, `/reasons/`, `/benefits/`, `/partners/` dizinlerindeki **76 adet küçük PNG ikon (`52×48`, `52×52`, `128×128` px)** `isIcon: true` olarak işaretlendi ve başlıkla birebir eşleşen ikonlar `sec.iconSrc` alanına, yalnızca yüksek çözünürlüklü gerçek fotoğraflar `sec.image` alanına atandı.
+     - `SubpageView.tsx` içinde `heroImage`, `.alu-feature-row` (büyük sol/sağ görsel vitrinleri) ve `.alu-gallery-grid` yalnızca `isIcon: false` olan yüksek çözünürlüklü ekran görüntülerini/fotoğrafları kullanacak şekilde filtrelendi; küçük ikonlar ise `.alu-spec-card__header` içinde `52×52px` `.alu-benefit-icon` rozeti (`32×32px` `object-fit: contain`) olarak kendi doğal boyutunda ve netliğinde gösterildi.
+     - Kaynak şablonlarda `statsVariant="animated"` nedeniyle SSR'da `"0"` ve `"%"` olarak yakalanan sayaç yer tutucuları temizlendi ve `docs/00-inventory/interaction-source-evidence/app/**/*.tsx` kaynaklarından gerçek istatistik değerleri (`50% DAHA KESİN`, `70% DAHA VERİMLİ`, `30% DAHA ÜRETKEN`, `93% ZAMAN TASARRUFU`, `100% TUTARLI VERİ` vb.) çekilerek `.alu-hero-metrics` performans bandında gösterildi.
+  4. **Doğrulama:** `python3 scripts/verify_phase6_parity.py` (**32/32 PASS**) ve `python3 -m unittest tests/test_url_parity.py` (**23/23 OK**) geçti.

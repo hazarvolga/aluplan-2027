@@ -24,6 +24,13 @@ const HERO_TAGS = [
   'DATA_NODE'
 ];
 
+const HERO_METRICS = [
+  { value: '29+', label: 'Yıllık Tecrübe', note: '1995’ten Beri Türkiye Distribütörü' },
+  { value: '500+', label: 'Aktif Müşteri', note: 'Kamu, Kurumsal & Mühendislik Ofisleri' },
+  { value: '50+', label: 'Uzman Kadro', note: 'BIM Danışmanlığı & Teknik Destek' },
+  { value: '10K+', label: 'Tamamlanan Proje', note: 'Üstyapı, Köprü, Altyapı & Prekast' }
+];
+
 const SERVICE_GROUPS: [string, string[]][] = [
   ['Öğren ve yardım al', ['Eğitim', 'Teknik Destek', 'Destek Platformu', 'Danışmanlık', 'Sertifika']],
   [
@@ -79,114 +86,160 @@ const ROLE_ICONS: Record<string, AluIconName> = {
 export function HomepageView() {
   const [roleId, setRoleId] = useState<string>(data.roles[0].id);
   const [activeGroupIdx, setActiveGroupIdx] = useState<number>(0);
+  const [showAllServices, setShowAllServices] = useState<boolean>(false);
 
   const activeRole = data.roles.find((r) => r.id === roleId) || data.roles[0];
   const serviceByName = new Map(data.services.map((s) => [s.title, s]));
 
   return (
     <>
-      {/* H01: Hero */}
-      <section className="preview-hero" aria-labelledby="hero-title">
-        <div className="alu-container preview-hero__grid">
-          <div className="alu-stack" style={{ gap: 'var(--space-stack-lg)' }}>
-            <div className="alu-cluster">
-              <span className="alu-badge alu-badge--accent">/ ALLPLAN 2026 · Giriş ve kimlik</span>
-              <span className="alu-badge">1995&apos;ten beri Türkiye Distribütörü</span>
-            </div>
-            <h1 id="hero-title" className="alu-display preview-hero__title">
-              DAHA İYİ BİR GELECEK İNŞA ETMEK İÇİN TASARLANDI
-            </h1>
-            <p className="alu-body-lg">
-              Yenilikçi AEC iş akışları, otomasyon ve bulut tabanlı iş birliği ile daha başarılı projeler.
-            </p>
-            <div className="alu-cluster" role="group" aria-label="Ana eylemler">
-              <a
-                className="alu-button alu-button--primary alu-button--lg"
-                href={MAIN_QUOTE_FORM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>Teklif İste</span>
-                <AluIcon name="external-link" size="sm" />
-              </a>
-              <a
-                className="alu-button alu-button--secondary alu-button--lg"
-                href={TRIAL_CTA_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>Ücretsiz Deneme</span>
-                <AluIcon name="external-link" size="sm" />
-              </a>
-            </div>
-            <div className="alu-cluster" aria-label="Teknik yetenek etiketleri" style={{ gap: '0.375rem' }}>
-              {HERO_TAGS.map((tag) => (
-                <span key={tag} className="alu-badge">
-                  {tag}
+      {/* H01: Flagship Cinematic BIM Hero */}
+      <section className="alu-hero-stage" aria-labelledby="hero-title">
+        {data.heroVideo && (
+          <div className="alu-hero-stage__backdrop" aria-hidden="true">
+            <video
+              className="alu-hero-stage__bg-video"
+              src={data.heroVideo.src}
+              poster={data.heroVideo.poster}
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+            <div className="alu-hero-stage__scrim" />
+          </div>
+        )}
+
+        <div className="alu-container alu-hero-stage__inner">
+          <div className="alu-hero-stage__grid">
+            <div className="alu-stack" style={{ gap: 'var(--space-stack-lg)' }}>
+              <div className="alu-cluster" style={{ gap: '0.625rem' }}>
+                <span className="alu-badge alu-badge--accent">
+                  <AluIcon name="sparkles" size="sm" />
+                  <span>ALLPLAN 2026 · TÜRKİYE</span>
                 </span>
-              ))}
+                <span className="alu-badge">1995&apos;ten beri Yetkili Distribütör</span>
+              </div>
+
+              <h1 id="hero-title" className="alu-display alu-hero-stage__title">
+                DAHA İYİ BİR GELECEK İNŞA ETMEK İÇİN TASARLANDI
+              </h1>
+
+              <p className="alu-body-lg alu-hero-stage__lead">
+                Yenilikçi AEC iş akışları, parametrik donatı ve çelik otomasyonu ile bulut tabanlı OpenBIM iş birliği sayesinde tasarım aşamasından şantiyeye kadar hatasız projeler.
+              </p>
+
+              <div className="alu-cluster" role="group" aria-label="Ana eylemler" style={{ gap: '0.875rem' }}>
+                <a
+                  className="alu-button alu-button--primary alu-button--lg"
+                  href={MAIN_QUOTE_FORM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>Teklif İste</span>
+                  <AluIcon name="external-link" size="sm" />
+                </a>
+                <a
+                  className="alu-button alu-button--secondary alu-button--lg"
+                  href={TRIAL_CTA_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>Ücretsiz Deneme</span>
+                  <AluIcon name="external-link" size="sm" />
+                </a>
+              </div>
+
+              <div className="alu-hero-tags" aria-label="Teknik yetenek etiketleri">
+                {HERO_TAGS.map((tag) => (
+                  <span key={tag} className="alu-hero-tag">
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
+
+            <aside className="alu-hero-monitor" aria-label="ALLPLAN BIM Canlı Görünüm">
+              <div className="alu-hero-monitor__header">
+                <span className="alu-hero-monitor__status">
+                  <span className="alu-hero-monitor__dot" />
+                  <span>ALLPLAN 2026 · BIM ENGINE</span>
+                </span>
+                <span className="alu-caption">IFC 4.3 · OPENBIM</span>
+              </div>
+              {data.heroVideo && (
+                <div className="alu-hero-monitor__viewport">
+                  <video
+                    className="alu-hero-monitor__video"
+                    src={data.heroVideo.src}
+                    poster={data.heroVideo.poster}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  />
+                </div>
+              )}
+              <div className="alu-hero-monitor__footer">
+                <div>
+                  <p className="preview-kicker" style={{ margin: 0 }}>
+                    MİMARİ · MÜHENDİSLİK · ALTYAPI · PREKAST
+                  </p>
+                  <p className="alu-body-sm" style={{ margin: '0.25rem 0 0 0' }}>
+                    Disiplinler arası BIM koordinasyonu ve yerel mühendislik desteği için tek platform.
+                  </p>
+                </div>
+              </div>
+            </aside>
           </div>
 
-          <aside className="preview-hero__media" aria-label="Hero teknik özet ve BIM tanıtım videosu">
-            {data.heroVideo && (
-              <div className="preview-hero__video-wrap">
-                <video
-                  className="preview-hero__video"
-                  src={data.heroVideo.src}
-                  poster={data.heroVideo.poster}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                />
+          {/* Monumental Metrics Bar */}
+          <div className="alu-hero-metrics" aria-label="Aluplan kurumsal göstergeler">
+            {HERO_METRICS.map((m) => (
+              <div key={m.label} className="alu-hero-metrics__item">
+                <span className="alu-hero-metrics__value">{m.value}</span>
+                <span className="alu-hero-metrics__label">{m.label}</span>
+                <span className="alu-hero-metrics__note">{m.note}</span>
               </div>
-            )}
-            <div className="alu-stack" style={{ gap: 'var(--space-stack-sm)', position: 'relative', zIndex: 1 }}>
-              <p className="preview-kicker" style={{ margin: 0 }}>
-                Mimari · Mühendislik · İnşaat
-              </p>
-              <p className="alu-body-sm">
-                ALLPLAN platformu, disiplinler arası BIM iş akışları ve yerel teknik destek için tek giriş noktası.
-              </p>
-              <div className="alu-cluster" style={{ gap: '0.5rem' }}>
-                <span className="alu-badge">29+ Yıllık Tecrübe</span>
-                <span className="alu-badge">500+ Aktif Müşteri</span>
-                <span className="alu-badge">50+ Uzman Kadro</span>
-                <span className="alu-badge">10K+ Tamamlanan Proje</span>
-              </div>
-            </div>
-          </aside>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* H02: QuickLinks */}
-      <section className="preview-section--subtle" aria-label="Hızlı erişimler">
-        <div className="alu-container preview-quicklinks">
-          {data.quickLinks.map(([label, href]) => (
-            <Link key={href} className="alu-button alu-button--ghost alu-button--sm" href={href}>
-              <span>{label}</span>
+      {/* H02: QuickLinks Command Ribbon */}
+      <section className="alu-quick-ribbon" aria-label="Hızlı erişimler">
+        <div className="alu-container alu-quick-ribbon__grid">
+          {data.quickLinks.map(([label, href], idx) => (
+            <Link key={href} className="alu-quick-ribbon__item" href={href}>
+              <span className="alu-quick-ribbon__index">0{idx + 1}</span>
+              <span className="alu-quick-ribbon__label">{label}</span>
               <AluIcon name="arrow-right" size="sm" />
             </Link>
           ))}
         </div>
       </section>
 
-      {/* H03: RoleSelector + 6 Permanent Products */}
+      {/* H03: Interactive Role Stage + 6 Permanent Products */}
       <section id="products" className="preview-section" aria-labelledby="products-heading">
         <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
-          <div className="alu-stack">
-            <span className="preview-kicker">Rol ve ürün seçimi</span>
-            <h2 id="products-heading" className="alu-h1">
-              Rolünüzü seçin
-            </h2>
-            <p className="alu-body preview-meta">
-              Rol seçimi yönlendirmeyi değiştirir; altı ürün her seçimde görünür kalır.
-            </p>
+          <div className="preview-section-heading">
+            <div className="alu-stack">
+              <span className="preview-kicker">ROL VE ÜRÜN MİMARİSİ</span>
+              <h2 id="products-heading" className="alu-h1">
+                Disiplininize Özel BIM İş Akışı
+              </h2>
+              <p className="alu-body preview-meta">
+                Uzmanlık alanınızı seçerek size özel iş akışını inceleyin; tüm ALLPLAN paketleri aşağıda tam karşılaştırma için daima görünür kalır.
+              </p>
+            </div>
+            <Link className="alu-button alu-button--secondary alu-button--md" href="/products">
+              <span>Tüm Ürün Ailesi</span>
+              <AluIcon name="arrow-right" size="sm" />
+            </Link>
           </div>
 
           <div className="alu-role-selector" role="radiogroup" aria-label="Çalışma alanınız">
-            {data.roles.map((role) => {
+            {data.roles.map((role, rIdx) => {
               const isSelected = role.id === activeRole.id;
               const iconName = ROLE_ICONS[role.id] || 'layers';
               return (
@@ -199,15 +252,21 @@ export function HomepageView() {
                   onClick={() => setRoleId(role.id)}
                 >
                   <div className="alu-cluster" style={{ justifyContent: 'space-between', width: '100%' }}>
-                    <span className="alu-cluster" style={{ gap: '0.5rem' }}>
-                      <span className="alu-role__icon">
+                    <span className="alu-cluster" style={{ gap: '0.625rem' }}>
+                      <span className="alu-support-card__icon">
                         <AluIcon name={iconName} size="md" />
                       </span>
-                      <span className="alu-role__title">{role.label}</span>
+                      <span>
+                        <span className="alu-caption" style={{ display: 'block' }}>
+                          0{rIdx + 1} · DİSİPLİN
+                        </span>
+                        <span className="alu-role__title">{role.label}</span>
+                      </span>
                     </span>
                     {isSelected && (
                       <span className="alu-badge alu-badge--accent">
                         <AluIcon name="check" size="sm" />
+                        <span>Seçili</span>
                       </span>
                     )}
                   </div>
@@ -217,116 +276,144 @@ export function HomepageView() {
             })}
           </div>
 
-          <div className="preview-role-copy" aria-live="polite">
-            <div className="alu-stack">
-              <div className="alu-cluster">
+          {/* Interactive Role Stage */}
+          <div className="alu-role-stage" aria-live="polite">
+            <div className="alu-role-stage__visual">
+              {activeRole.image && (
+                <img src={activeRole.image} alt={activeRole.title} />
+              )}
+              <div className="alu-role-stage__overlay">
                 <span className="alu-badge alu-badge--accent">
                   <AluIcon name={ROLE_ICONS[activeRole.id] || 'layers'} size="sm" />
-                  <span>{activeRole.label}</span>
+                  <span>{activeRole.label} İŞ AKIŞI</span>
                 </span>
-              </div>
-              <h3 className="alu-h2">{activeRole.title}</h3>
-              <p className="alu-body">{activeRole.description}</p>
-              <div>
-                <Link className="alu-button alu-button--secondary alu-button--md" href={activeRole.href}>
-                  <span>Bu akışı detaylı incele</span>
-                  <AluIcon name="arrow-right" size="sm" />
-                </Link>
+                <p className="alu-caption" style={{ color: 'var(--text-on-brand)' }}>
+                  ALLPLAN 2026 · Parametrik Modelleme ve Otomasyon
+                </p>
               </div>
             </div>
-            <div className="alu-stack" style={{ gap: 'var(--space-stack-md)' }}>
-              {activeRole.image && (
-                <div className="alu-card__media alu-card__media--hero">
-                  <img src={activeRole.image} alt={activeRole.title} loading="lazy" />
-                </div>
-              )}
-              <div className="alu-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(11rem, 1fr))' }}>
-                {activeRole.features.map((feat) => (
-                  <article key={feat} className="alu-card">
-                    <div className="alu-cluster" style={{ gap: '0.5rem' }}>
-                      <span style={{ color: 'var(--accent-fg)' }}>
-                        <AluIcon name="check" size="sm" />
-                      </span>
-                      <h4 className="alu-card__title" style={{ fontSize: 'var(--type-body-size)' }}>
-                        {feat}
-                      </h4>
-                    </div>
-                  </article>
+
+            <div className="alu-role-stage__content">
+              <div className="alu-stack" style={{ gap: 'var(--space-stack-sm)' }}>
+                <span className="preview-kicker">{activeRole.label} ODAKLI ÇÖZÜM</span>
+                <h3 className="alu-h1">{activeRole.title}</h3>
+                <p className="alu-body-lg">{activeRole.description}</p>
+              </div>
+
+              <div className="alu-role-stage__features">
+                {activeRole.features.map((feat, fIdx) => (
+                  <div key={feat} className="alu-role-stage__feature">
+                    <span className="alu-role-stage__feature-num">0{fIdx + 1}</span>
+                    <span className="alu-role-stage__feature-text">{feat}</span>
+                  </div>
                 ))}
+              </div>
+
+              <div className="alu-cluster">
+                <Link className="alu-button alu-button--primary alu-button--md" href={activeRole.href}>
+                  <span>Bu Akışı Detaylı İncele</span>
+                  <AluIcon name="arrow-right" size="sm" />
+                </Link>
+                <a
+                  className="alu-button alu-button--secondary alu-button--md"
+                  href={TRIAL_CTA_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>Ücretsiz Dene</span>
+                  <AluIcon name="external-link" size="sm" />
+                </a>
               </div>
             </div>
           </div>
 
-          <div className="alu-grid">
-            {data.products.map((product) => {
+          {/* 6 Permanent Products Showcase */}
+          <div className="alu-products-showcase">
+            {data.products.map((product, pIdx) => {
               const isRelated = product.relatedRoles.includes(activeRole.id);
               return (
-                <div
+                <article
                   key={product.id}
-                  className={`preview-product${isRelated ? ' preview-product--related' : ''}`}
+                  className={`alu-product-card${isRelated ? ' alu-product-card--highlighted' : ''}`}
                 >
-                  <article className="alu-card">
-                    {product.image && (
-                      <div className="alu-card__media">
-                        <img src={product.image} alt={product.title} loading="lazy" />
-                      </div>
-                    )}
-                    <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
-                      <span className="alu-card__eyebrow">ALLPLAN</span>
+                  {product.image && (
+                    <Link href={product.href} className="alu-product-card__media" tabIndex={-1}>
+                      <img src={product.image} alt={product.title} loading="lazy" />
+                      <span className="alu-product-card__tier">0{pIdx + 1}</span>
                       {isRelated && (
-                        <span className="alu-badge alu-badge--accent">
+                        <span className="alu-product-card__recommended">
                           <AluIcon name="check" size="sm" />
-                          <span>İlgili yol</span>
+                          <span>Önerilen Paket</span>
                         </span>
                       )}
-                    </div>
-                    <div className="alu-card__body">
-                      <h3 className="alu-card__title">{product.title}</h3>
-                      <p className="alu-body-sm">{product.description}</p>
-                    </div>
-                    <div className="alu-card__footer">
-                      <Link className="alu-link alu-link--standalone" href={product.href}>
-                        <span>Ürünü İncele</span>
-                        <AluIcon name="arrow-right" size="sm" />
-                      </Link>
-                    </div>
-                  </article>
-                </div>
+                    </Link>
+                  )}
+                  <div className="alu-product-card__body">
+                    <span className="alu-card__eyebrow">ALLPLAN PAKETİ</span>
+                    <h3 className="alu-card__title">{product.title}</h3>
+                    <p className="alu-body-sm">{product.description}</p>
+                  </div>
+                  <div className="alu-product-card__footer">
+                    <Link className="alu-link alu-link--standalone" href={product.href}>
+                      <span>Paketi ve Özellikleri İncele</span>
+                      <AluIcon name="arrow-right" size="sm" />
+                    </Link>
+                  </div>
+                </article>
               );
             })}
           </div>
         </div>
       </section>
 
-      {/* H04: Solutions (Bento Grid with Visuals) */}
+      {/* H04: Solutions Asymmetric Bento Grid */}
       <section id="solutions" className="preview-section preview-section--subtle" aria-labelledby="solutions-heading">
         <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
-          <div className="alu-stack">
-            <span className="preview-kicker">Çözüm alanları</span>
-            <h2 id="solutions-heading" className="alu-h1">
-              Tek platform. Tüm disiplinler.
-            </h2>
+          <div className="preview-section-heading">
+            <div className="alu-stack">
+              <span className="preview-kicker">ÇÖZÜM EKOSİSTEMİ</span>
+              <h2 id="solutions-heading" className="alu-h1">
+                Tek Platform. Tüm Mühendislik Disiplinleri.
+              </h2>
+              <p className="alu-body preview-meta">
+                Bina tasarımından parametrik köprü ve altyapı mühendisliğine, prekast üretiminden yerel BIM eklentilerine kadar uçtan uca entegre çözümler.
+              </p>
+            </div>
+            <Link className="alu-button alu-button--secondary alu-button--md" href="/solutions">
+              <span>Tüm Çözümleri Keşfet</span>
+              <AluIcon name="arrow-right" size="sm" />
+            </Link>
           </div>
-          <div className="alu-grid">
-            {data.solutions.map((item) => (
-              <article key={item.href} className="alu-card">
+
+          <div className="alu-bento-grid">
+            {data.solutions.map((item, idx) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`alu-bento-card alu-bento-card--${idx + 1}`}
+              >
                 {item.image && (
-                  <div className="alu-card__media">
-                    <img src={item.image} alt={item.title} loading="lazy" />
-                  </div>
+                  <img
+                    className="alu-bento-card__bg"
+                    src={item.image}
+                    alt={item.title}
+                    loading="lazy"
+                  />
                 )}
-                <span className="alu-card__eyebrow">{item.subtitle}</span>
-                <div className="alu-card__body">
-                  <h3 className="alu-card__title">{item.title}</h3>
-                  <p className="alu-body-sm">{item.description}</p>
+                <div className="alu-bento-card__scrim" />
+                <div className="alu-bento-card__top">
+                  <span className="alu-badge alu-badge--accent">{item.subtitle}</span>
+                  <span className="alu-bento-card__index">0{idx + 1}</span>
                 </div>
-                <div className="alu-card__footer">
-                  <Link className="alu-link alu-link--standalone" href={item.href}>
+                <div className="alu-bento-card__bottom">
+                  <h3 className="alu-bento-card__title">{item.title}</h3>
+                  <p className="alu-bento-card__desc">{item.description}</p>
+                  <span className="alu-bento-card__cta">
                     <span>{item.cta}</span>
-                    <AluIcon name="arrow-right" size="sm" />
-                  </Link>
+                    <AluIcon name="arrow-up-right" size="sm" />
+                  </span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
@@ -334,52 +421,58 @@ export function HomepageView() {
 
       {/* H05: Package Comparison / TechSpecs */}
       <section id="package-comparison" className="preview-section" aria-labelledby="packages-heading">
-        <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
-          <div className="preview-section-heading">
-            <div className="alu-stack">
-              <span className="preview-kicker">{data.packageAccess.eyebrow}</span>
-              <h2 id="packages-heading" className="alu-h1">
-                {data.packageAccess.title}
-              </h2>
-              <p className="alu-body preview-meta">{data.packageAccess.description}</p>
+        <div className="alu-container">
+          <div className="alu-techspecs-banner">
+            <div className="alu-techspecs-banner__header">
+              <div className="alu-stack">
+                <span className="preview-kicker">{data.packageAccess.eyebrow} · Q3 2026 MATRİSİ</span>
+                <h2 id="packages-heading" className="alu-h1">
+                  {data.packageAccess.title}
+                </h2>
+                <p className="alu-body preview-meta">{data.packageAccess.description}</p>
+              </div>
+              <div className="alu-cluster">
+                <a
+                  className="alu-button alu-button--primary alu-button--lg"
+                  href={data.packageAccess.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AluIcon name="download" size="sm" />
+                  <span>{data.packageAccess.cta}</span>
+                </a>
+                <Link className="alu-button alu-button--secondary alu-button--lg" href="/paket-karsilastirma">
+                  <span>Karşılaştırma Sayfası</span>
+                  <AluIcon name="arrow-right" size="sm" />
+                </Link>
+              </div>
             </div>
-            <a
-              className="alu-button alu-button--secondary alu-button--md"
-              href={data.packageAccess.href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <AluIcon name="download" size="sm" />
-              <span>{data.packageAccess.cta}</span>
-            </a>
-          </div>
-          <div className="alu-grid preview-package-grid">
-            {data.packages.map((pkg) => (
-              <article key={pkg.id} className="alu-card">
-                <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
-                  <span className="alu-card__eyebrow">PDF · TR</span>
-                  <span className="alu-badge">
-                    <AluIcon name="file-text" size="sm" />
-                    <span>V2026</span>
-                  </span>
-                </div>
-                <div className="alu-card__body">
+
+            <div className="alu-techspecs-grid">
+              {data.packages.map((pkg, idx) => (
+                <a
+                  key={pkg.id}
+                  href={data.packageAccess.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="alu-techspec-item"
+                >
+                  <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
+                    <span className="alu-techspec-item__num">0{idx + 1}</span>
+                    <span className="alu-badge">
+                      <AluIcon name="file-text" size="sm" />
+                      <span>PDF · TR</span>
+                    </span>
+                  </div>
                   <h3 className="alu-card__title">{pkg.title}</h3>
                   <p className="alu-body-sm">{pkg.description}</p>
-                </div>
-                <div className="alu-card__footer">
-                  <a
-                    className="alu-link alu-link--standalone"
-                    href={data.packageAccess.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <span className="alu-link alu-link--standalone" style={{ marginTop: 'auto' }}>
                     <AluIcon name="download" size="sm" />
                     <span>Karşılaştırma Tablosunu İndir (PDF)</span>
-                  </a>
-                </div>
-              </article>
-            ))}
+                  </span>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -387,92 +480,106 @@ export function HomepageView() {
       {/* H06: Professional Services (20 items) */}
       <section id="professional-services" className="preview-section preview-section--subtle" aria-labelledby="services-heading">
         <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
-          <div className="alu-stack">
-            <span className="preview-kicker">Profesyonel hizmetler</span>
-            <h2 id="services-heading" className="alu-h1">
-              Öğrenme, destek ve bilgi kaynakları
-            </h2>
-            <p className="alu-body preview-meta">
-              Eğitim, Teams desteği ve ticket platformu ilk görünümde; tüm 20 hizmet ve kaynak kaydı görevlerine göre gruplanır.
-            </p>
+          <div className="preview-section-heading">
+            <div className="alu-stack">
+              <span className="preview-kicker">PROFESYONEL HİZMETLER VE DESTEK MERKEZİ</span>
+              <h2 id="services-heading" className="alu-h1">
+                Öğrenme, Teknik Destek ve Lisans Kaynakları
+              </h2>
+              <p className="alu-body preview-meta">
+                Eğitim, Microsoft Teams canlı bağlantı ve allplan.net.tr/tr ticket platformu dahil 20 profesyonel hizmet ve teknik kaynağa tek merkezden ulaşın.
+              </p>
+            </div>
+            <button
+              type="button"
+              className="alu-button alu-button--secondary alu-button--md"
+              onClick={() => setShowAllServices((prev) => !prev)}
+            >
+              <AluIcon name="layers" size="sm" />
+              <span>{showAllServices ? 'Kategori Görünümüne Dön' : 'Tüm 20 Kaynağı Tek Listede Aç'}</span>
+            </button>
           </div>
 
-          <div>
-            <div className="alu-tabs__list" role="tablist" aria-label="Hizmet kategorileri">
-              {SERVICE_GROUPS.map(([groupTitle], idx) => (
-                <button
-                  key={groupTitle}
-                  type="button"
-                  role="tab"
-                  aria-selected={activeGroupIdx === idx}
-                  className="alu-tabs__tab"
-                  onClick={() => setActiveGroupIdx(idx)}
-                >
-                  {groupTitle}
-                </button>
-              ))}
-            </div>
-            <div className="alu-tabs__panel">
-              <div className="alu-grid preview-services-primary">
-                {SERVICE_GROUPS[activeGroupIdx][1].map((serviceName) => {
-                  const item = serviceByName.get(serviceName);
-                  if (!item) return null;
-                  const isExt = item.href.startsWith('http');
-                  const iconName = SERVICE_ICONS[item.title] || 'layers';
-                  return (
-                    <article key={item.title} className="alu-card">
-                      <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
-                        <span className="alu-support-card__icon">
-                          <AluIcon name={iconName} size="md" />
-                        </span>
-                        <span className="alu-card__eyebrow">{SERVICE_GROUPS[activeGroupIdx][0]}</span>
-                      </div>
-                      <div className="alu-card__body">
-                        <h3 className="alu-card__title">{item.title}</h3>
-                        <p className="alu-body-sm">{item.description}</p>
-                      </div>
-                      <div className="alu-card__footer">
-                        {isExt ? (
-                          <a
-                            className="alu-link alu-link--standalone"
-                            href={item.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <span>{item.cta}</span>
-                            <AluIcon name="external-link" size="sm" />
-                          </a>
-                        ) : (
-                          <Link className="alu-link alu-link--standalone" href={item.href}>
-                            <span>{item.cta}</span>
-                            <AluIcon name="arrow-right" size="sm" />
-                          </Link>
-                        )}
-                      </div>
-                    </article>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          <div className="alu-stack">
-            <h3 className="alu-h3">Tüm Hizmet ve Kaynak Dizini (20/20)</h3>
+          <div className="alu-service-pills" role="tablist" aria-label="Hizmet kategorileri">
             {SERVICE_GROUPS.map(([groupTitle, names], idx) => (
-              <details key={groupTitle} className="preview-service-group" open={idx === 0}>
-                <summary>
-                  <span>{groupTitle}</span>
-                  <span className="alu-caption">{names.length} kayıt</span>
-                </summary>
-                <div className="alu-grid" style={{ marginTop: 'var(--space-stack-md)' }}>
+              <button
+                key={groupTitle}
+                type="button"
+                role="tab"
+                aria-selected={activeGroupIdx === idx}
+                className={`alu-service-pill${activeGroupIdx === idx ? ' alu-service-pill--active' : ''}`}
+                onClick={() => {
+                  setActiveGroupIdx(idx);
+                  setShowAllServices(false);
+                }}
+              >
+                <span>{groupTitle}</span>
+                <span className="alu-service-pill__count">{names.length}</span>
+              </button>
+            ))}
+          </div>
+
+          <div className="alu-tabs__panel">
+            <div className="alu-services-grid">
+              {SERVICE_GROUPS[activeGroupIdx][1].map((serviceName) => {
+                const item = serviceByName.get(serviceName);
+                if (!item) return null;
+                const isExt = item.href.startsWith('http');
+                const iconName = SERVICE_ICONS[item.title] || 'layers';
+                return (
+                  <article key={item.title} className="alu-service-card">
+                    <div className="alu-service-card__top">
+                      <span className="alu-support-card__icon">
+                        <AluIcon name={iconName} size="md" />
+                      </span>
+                      <span className="alu-card__eyebrow">{SERVICE_GROUPS[activeGroupIdx][0]}</span>
+                    </div>
+                    <div className="alu-card__body">
+                      <h3 className="alu-card__title">{item.title}</h3>
+                      <p className="alu-body-sm">{item.description}</p>
+                    </div>
+                    <div className="alu-card__footer">
+                      {isExt ? (
+                        <a
+                          className="alu-button alu-button--secondary alu-button--sm"
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <span>{item.cta}</span>
+                          <AluIcon name="external-link" size="sm" />
+                        </a>
+                      ) : (
+                        <Link className="alu-button alu-button--secondary alu-button--sm" href={item.href}>
+                          <span>{item.cta}</span>
+                          <AluIcon name="arrow-right" size="sm" />
+                        </Link>
+                      )}
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Complete 20/20 Directory (Accessible in DOM & toggleable) */}
+          <div className="alu-stack" style={{ display: showAllServices ? 'flex' : 'none' }}>
+            <h3 className="alu-h3">Tüm Hizmet ve Kaynak Dizini (20/20)</h3>
+            {SERVICE_GROUPS.map(([groupTitle, names]) => (
+              <div key={groupTitle} className="alu-stack" style={{ gap: 'var(--space-stack-md)', paddingTop: '1rem' }}>
+                <div className="alu-cluster" style={{ justifyContent: 'space-between', borderBottom: '1px solid var(--border-default)', paddingBottom: '0.5rem' }}>
+                  <span className="alu-h4">{groupTitle}</span>
+                  <span className="alu-badge">{names.length} kayıt</span>
+                </div>
+                <div className="alu-services-grid">
                   {names.map((name) => {
                     const item = serviceByName.get(name);
                     if (!item) return null;
                     const isExt = item.href.startsWith('http');
                     const iconName = SERVICE_ICONS[item.title] || 'layers';
                     return (
-                      <article key={`all-${item.title}`} className="alu-card">
-                        <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
+                      <article key={`all-${item.title}`} className="alu-service-card">
+                        <div className="alu-service-card__top">
                           <span className="alu-support-card__icon">
                             <AluIcon name={iconName} size="md" />
                           </span>
@@ -504,13 +611,13 @@ export function HomepageView() {
                     );
                   })}
                 </div>
-              </details>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* H07: BIMFlex */}
+      {/* H07: BIMFlex Spotlight */}
       <section id="bimflex" className="preview-section" aria-labelledby="bimflex-heading">
         <div className="alu-container">
           <div className="preview-bimflex">
@@ -527,14 +634,25 @@ export function HomepageView() {
               <h2 id="bimflex-heading" className="alu-h1">
                 {data.bimflex.title}
               </h2>
-              <h3 className="alu-h3">{data.bimflex.claim}</h3>
+              <h3 className="alu-h3" style={{ color: 'var(--accent-fg)' }}>
+                {data.bimflex.claim}
+              </h3>
               <p className="alu-body">{data.bimflex.description}</p>
               <p className="alu-caption">{data.bimflex.relationship}</p>
-              <div>
-                <Link className="alu-button alu-button--primary alu-button--md" href={data.bimflex.href}>
+              <div className="alu-cluster">
+                <Link className="alu-button alu-button--primary alu-button--lg" href={data.bimflex.href}>
                   <span>{data.bimflex.cta}</span>
                   <AluIcon name="arrow-right" size="sm" />
                 </Link>
+                <a
+                  className="alu-button alu-button--secondary alu-button--lg"
+                  href={MAIN_QUOTE_FORM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>BIMFlex Teklifi İste</span>
+                  <AluIcon name="external-link" size="sm" />
+                </a>
               </div>
             </div>
             <div className="preview-bimflex__media" aria-label="BIMFlex arayüz ve donatı görselleri">
@@ -552,7 +670,7 @@ export function HomepageView() {
         </div>
       </section>
 
-      {/* H08: ALLPLAN 2026 Innovations */}
+      {/* H08: ALLPLAN 2026 Innovations + OpenBIM Partner Ecosystem */}
       <section id="innovations" className="preview-section preview-section--subtle" aria-labelledby="innovations-heading">
         <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
           <div className="preview-section-heading">
@@ -565,28 +683,34 @@ export function HomepageView() {
               </h2>
               <p className="alu-body preview-meta">{data.innovationsMeta.description}</p>
             </div>
-            <Link className="alu-button alu-button--secondary alu-button--md" href={data.innovationsMeta.href}>
+            <Link className="alu-button alu-button--primary alu-button--md" href={data.innovationsMeta.href}>
               <span>{data.innovationsMeta.cta}</span>
               <AluIcon name="arrow-right" size="sm" />
             </Link>
           </div>
-          <div className="alu-grid preview-innovations-grid">
-            {data.innovations.map((card) => (
-              <article key={card.id} className="alu-card">
+
+          <div className="alu-innovations-showcase">
+            {data.innovations.map((card, idx) => (
+              <article key={card.id} className="alu-innovation-card">
                 {card.image && (
-                  <div className="alu-card__media">
+                  <div className="alu-innovation-card__media">
                     <img src={card.image} alt={card.title} loading="lazy" />
+                    <div className="alu-innovation-card__overlay">
+                      <span className="alu-badge alu-badge--accent">
+                        <AluIcon name="sparkles" size="sm" />
+                        <span>{card.badge}</span>
+                      </span>
+                      <span className="alu-innovation-card__num">0{idx + 1}</span>
+                    </div>
                   </div>
                 )}
-                <div className="alu-cluster">
-                  <span className="alu-badge alu-badge--accent">
-                    <AluIcon name="sparkles" size="sm" />
-                    <span>{card.badge}</span>
-                  </span>
-                </div>
-                <div className="alu-card__body">
+                <div className="alu-innovation-card__body">
                   <h3 className="alu-card__title">{card.title}</h3>
-                  <p className="alu-body-sm">{card.description}</p>
+                  <p className="alu-body">{card.description}</p>
+                  <Link className="alu-link alu-link--standalone" href="/products/allplan-2026-yenilikler" style={{ marginTop: 'auto' }}>
+                    <span>Özelliği İncele</span>
+                    <AluIcon name="arrow-right" size="sm" />
+                  </Link>
                 </div>
               </article>
             ))}
@@ -595,7 +719,10 @@ export function HomepageView() {
           {/* OpenBIM & Technology Partners Strip */}
           {data.partners && data.partners.length > 0 && (
             <div className="alu-partner-strip" aria-label="Teknoloji ve OpenBIM İş Ortakları">
-              <span className="preview-kicker">OPENBIM VE TEKNOLOJİ EKOSİSTEMİ</span>
+              <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
+                <span className="preview-kicker">OPENBIM VE TEKNOLOJİ EKOSİSTEMİ ENTEGRASYONLARI</span>
+                <span className="alu-caption">IFC 4.3 · BCF · Doğrudan Veri Değişimi</span>
+              </div>
               <div className="alu-partner-strip__grid">
                 {data.partners.map((partner) => (
                   <div key={partner.name} className="alu-partner-strip__item" title={partner.name}>

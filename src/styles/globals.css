@@ -1909,26 +1909,39 @@ button.alu-role[aria-checked="true"] {
 
 .alu-subpage-hero__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+  grid-template-columns: minmax(0, 1.15fr) minmax(20rem, 0.85fr);
   align-items: center;
 }
 .alu-subpage-hero__media {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.625rem;
   padding: var(--space-inset-sm);
-  background: var(--surface-default);
+  background: var(--surface-raised);
   border: var(--border-width-default) solid var(--border-strong);
+  border-top: 2px solid var(--accent-border);
   border-radius: var(--radius-surface);
-  box-shadow: var(--elevation-raised);
+  box-shadow: var(--elevation-overlay);
+}
+.alu-subpage-hero__media-frame {
+  overflow: hidden;
+  border-radius: var(--radius-control);
+  border: 1px solid var(--border-subtle);
 }
 .alu-subpage-hero__media img {
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
-  border-radius: var(--radius-control);
   display: block;
+}
+.alu-subpage-hero__caption {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--type-caption-size);
+  color: var(--text-secondary);
 }
 @media (max-width: 64rem) {
   .alu-subpage-hero__grid {
@@ -1938,10 +1951,895 @@ button.alu-role[aria-checked="true"] {
 
 .alu-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   gap: var(--space-inset-md);
 }
 .alu-gallery-card {
   margin: 0;
-  padding: var(--space-inset-sm);
+  padding: 0;
+}
+
+/* === Flagship Production Visual System (Aluplan 2027) === */
+
+/* Glassmorphic Sticky Header & MegaMenu */
+.alu-site-header {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+}
+.alu-megamenu {
+  border-top: 2px solid var(--accent-border);
+  background: var(--surface-raised);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+}
+.alu-megamenu__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.5rem;
+  border-radius: var(--radius-control);
+  transition:
+    background-color var(--motion-duration-fast) var(--motion-easing-standard),
+    color var(--motion-duration-fast) var(--motion-easing-standard),
+    transform var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.alu-megamenu__item:hover {
+  background: var(--surface-subtle);
+  color: var(--accent-fg);
+  text-decoration: none;
+  transform: translateX(3px);
+}
+
+/* H01: Flagship Cinematic BIM Hero Stage */
+.alu-hero-stage {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: clamp(3.5rem, 6vw, 6rem) clamp(2.5rem, 4vw, 4rem);
+  border-bottom: 1px solid var(--border-strong);
+  background: var(--surface-page);
+}
+.alu-hero-stage__backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+}
+.alu-hero-stage__bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.24;
+  filter: contrast(1.1) saturate(0.85);
+}
+[data-mode="light"] .alu-hero-stage__bg-video {
+  opacity: 0.1;
+}
+.alu-hero-stage__scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 80% 25%, rgba(208, 102, 58, 0.18), transparent 48%),
+    linear-gradient(95deg, var(--surface-page) 28%, rgba(20, 22, 26, 0.72) 72%, var(--surface-page) 100%),
+    linear-gradient(180deg, transparent 60%, var(--surface-page) 100%);
+}
+[data-mode="light"] .alu-hero-stage__scrim {
+  background:
+    radial-gradient(circle at 80% 25%, rgba(181, 77, 36, 0.12), transparent 48%),
+    linear-gradient(95deg, var(--surface-page) 45%, rgba(245, 244, 240, 0.85) 100%);
+}
+.alu-hero-stage__inner {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.5rem, 5vw, 4rem);
+}
+.alu-hero-stage__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(22rem, 0.85fr);
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: center;
+}
+.alu-hero-stage__title {
+  max-width: 14ch;
+  letter-spacing: -0.025em;
+}
+.alu-hero-stage__lead {
+  max-width: 58ch;
+  color: var(--text-primary);
+  opacity: 0.9;
+}
+.alu-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  padding-top: 0.5rem;
+}
+.alu-hero-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.55rem;
+  background: var(--surface-raised);
+  border: 1px solid var(--border-default);
+  color: var(--text-secondary);
+}
+
+/* Hero BIM Live Monitor */
+.alu-hero-monitor {
+  background: var(--surface-raised);
+  border: 1px solid var(--border-strong);
+  border-top: 2px solid var(--accent-border);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.42);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.alu-hero-monitor__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 1.125rem;
+  background: var(--surface-brand);
+  border-bottom: 1px solid var(--border-default);
+}
+.alu-hero-monitor__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--type-caption-size);
+  font-weight: var(--font-weight-strong);
+  color: var(--text-on-brand);
+}
+.alu-hero-monitor__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--accent-fg);
+  box-shadow: 0 0 10px var(--accent-fg);
+}
+.alu-hero-monitor__viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #0d0f12;
+  overflow: hidden;
+}
+.alu-hero-monitor__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.alu-hero-monitor__footer {
+  padding: 1rem 1.25rem;
+  background: var(--surface-default);
+  border-top: 1px solid var(--border-default);
+}
+
+/* Monumental Hero Metrics Bar */
+.alu-hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  background: var(--surface-raised);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--elevation-raised);
+}
+.alu-hero-metrics__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1.375rem 1.5rem;
+  border-right: 1px solid var(--border-default);
+  position: relative;
+}
+.alu-hero-metrics__item:last-child {
+  border-right: 0;
+}
+.alu-hero-metrics__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2px;
+  background: var(--accent-border);
+}
+.alu-hero-metrics__value {
+  font-family: var(--font-heading);
+  font-size: clamp(1.85rem, 3vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+}
+.alu-hero-metrics__label {
+  font-family: var(--font-heading);
+  font-size: var(--type-body-size);
+  font-weight: var(--font-weight-strong);
+  color: var(--accent-fg);
+}
+.alu-hero-metrics__note {
+  font-family: var(--font-mono);
+  font-size: var(--type-caption-size);
+  color: var(--text-secondary);
+}
+
+/* H02: QuickLinks Command Ribbon */
+.alu-quick-ribbon {
+  background: var(--surface-subtle);
+  border-bottom: 1px solid var(--border-default);
+}
+.alu-quick-ribbon__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+}
+.alu-quick-ribbon__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1.125rem 1.25rem;
+  border-right: 1px solid var(--border-default);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-label);
+  font-size: var(--type-body-sm-size);
+  transition:
+    background-color var(--motion-duration-fast) var(--motion-easing-standard),
+    color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.alu-quick-ribbon__item:last-child {
+  border-right: 0;
+}
+.alu-quick-ribbon__item:hover {
+  background: var(--surface-raised);
+  color: var(--accent-fg);
+  text-decoration: none;
+}
+.alu-quick-ribbon__index {
+  font-family: var(--font-mono);
+  font-size: var(--type-caption-size);
+  color: var(--accent-fg);
+  font-weight: 600;
+}
+.alu-quick-ribbon__label {
+  flex: 1;
+}
+
+/* H03: Interactive Role Stage & Products Showcase */
+.alu-role-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  background: var(--surface-raised);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--elevation-overlay);
+  overflow: hidden;
+}
+.alu-role-stage__visual {
+  position: relative;
+  min-height: 24rem;
+  background: #0e1014;
+  overflow: hidden;
+}
+.alu-role-stage__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 500ms ease;
+}
+.alu-role-stage:hover .alu-role-stage__visual img {
+  transform: scale(1.03);
+}
+.alu-role-stage__overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 1.5rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(12, 14, 18, 0.92) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.alu-role-stage__content {
+  padding: clamp(1.75rem, 3.5vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-stack-lg);
+}
+.alu-role-stage__features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+.alu-role-stage__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  background: var(--surface-default);
+  border: 1px solid var(--border-default);
+  border-left: 2px solid var(--accent-border);
+}
+.alu-role-stage__feature-num {
+  font-family: var(--font-mono);
+  font-size: var(--type-caption-size);
+  font-weight: 700;
+  color: var(--accent-fg);
+  line-height: 1.4;
+}
+.alu-role-stage__feature-text {
+  font-weight: var(--font-weight-label);
+  color: var(--text-primary);
+  font-size: var(--type-body-sm-size);
+}
+
+/* 6 Permanent Products Showcase */
+.alu-products-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
+  gap: var(--space-inset-md);
+}
+.alu-product-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-default);
+  border: 1px solid var(--border-default);
+  box-shadow: var(--elevation-raised);
+  overflow: hidden;
+  transition:
+    transform var(--motion-duration-base) var(--motion-easing-standard),
+    border-color var(--motion-duration-base) var(--motion-easing-standard),
+    box-shadow var(--motion-duration-base) var(--motion-easing-standard);
+}
+.alu-product-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-strong);
+  box-shadow: var(--elevation-overlay);
+}
+.alu-product-card--highlighted {
+  border-color: var(--accent-border);
+  border-top: 3px solid var(--accent-border);
+  background: var(--surface-raised);
+}
+.alu-product-card__media {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #101216;
+  border-bottom: 1px solid var(--border-default);
+}
+.alu-product-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 400ms ease;
+}
+.alu-product-card:hover .alu-product-card__media img {
+  transform: scale(1.04);
+}
+.alu-product-card__tier {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  background: rgba(15, 17, 21, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #f4f3ef;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+.alu-product-card__recommended {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.6rem;
+  background: var(--action-primary-bg);
+  color: var(--action-primary-fg);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+.alu-product-card__body {
+  padding: 1.375rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+.alu-product-card__footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+  background: var(--surface-subtle);
+  display: flex;
+  align-items: center;
+}
+
+/* H04: Asymmetric Bento Grid */
+.alu-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-rows: minmax(15.5rem, auto);
+  gap: 1.25rem;
+}
+.alu-bento-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.75rem;
+  border: 1px solid var(--border-strong);
+  background: #121418;
+  color: #f5f4f0;
+  text-decoration: none;
+  box-shadow: var(--elevation-raised);
+  transition:
+    border-color var(--motion-duration-base) var(--motion-easing-standard),
+    transform var(--motion-duration-base) var(--motion-easing-standard);
+}
+.alu-bento-card:hover {
+  border-color: var(--accent-border);
+  transform: translateY(-3px);
+  text-decoration: none;
+  color: #ffffff;
+}
+.alu-bento-card--1 {
+  grid-column: span 7;
+  grid-row: span 2;
+  min-height: 32rem;
+}
+.alu-bento-card--2 {
+  grid-column: span 5;
+}
+.alu-bento-card--3 {
+  grid-column: span 5;
+}
+.alu-bento-card--4 {
+  grid-column: span 6;
+}
+.alu-bento-card--5 {
+  grid-column: span 6;
+}
+.alu-bento-card__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 550ms ease, filter 550ms ease;
+  filter: brightness(0.75) contrast(1.08);
+}
+.alu-bento-card:hover .alu-bento-card__bg {
+  transform: scale(1.05);
+  filter: brightness(0.85) contrast(1.1);
+}
+.alu-bento-card__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(14, 16, 20, 0.25) 0%, rgba(14, 16, 20, 0.72) 55%, rgba(14, 16, 20, 0.96) 100%);
+}
+.alu-bento-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.alu-bento-card__index {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: rgba(245, 244, 240, 0.7);
+}
+.alu-bento-card__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 40ch;
+}
+.alu-bento-card__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+.alu-bento-card__desc {
+  margin: 0;
+  font-size: var(--type-body-sm-size);
+  color: rgba(245, 244, 240, 0.84);
+}
+.alu-bento-card__cta {
+  margin-top: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: var(--type-caption-size);
+  font-weight: 600;
+  color: var(--ref-color-rust-300);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* H05: Package Comparison Matrix Banner */
+.alu-techspecs-banner {
+  background: var(--surface-raised);
+  border: 1px solid var(--border-strong);
+  border-top: 3px solid var(--accent-border);
+  padding: clamp(1.75rem, 3.5vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-stack-xl);
+  box-shadow: var(--elevation-overlay);
+}
+.alu-techspecs-banner__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-stack-lg);
+  padding-bottom: var(--space-stack-lg);
+  border-bottom: 1px solid var(--border-default);
+}
+.alu-techspecs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 1rem;
+}
+.alu-techspec-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.375rem;
+  background: var(--surface-default);
+  border: 1px solid var(--border-default);
+  text-decoration: none;
+  color: var(--text-primary);
+  transition:
+    border-color var(--motion-duration-fast) var(--motion-easing-standard),
+    transform var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.alu-techspec-item:hover {
+  border-color: var(--accent-border);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+.alu-techspec-item__num {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-fg);
+}
+
+/* H06: Professional Services Command Hub */
+.alu-service-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+.alu-service-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 1.125rem;
+  background: var(--surface-default);
+  border: 1px solid var(--border-control);
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: var(--type-label-size);
+  font-weight: var(--font-weight-label);
+  cursor: pointer;
+  transition: all var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.alu-service-pill:hover {
+  border-color: var(--border-strong);
+  color: var(--text-primary);
+}
+.alu-service-pill--active {
+  background: var(--accent-bg);
+  border-color: var(--accent-border);
+  color: var(--text-primary);
+  font-weight: var(--font-weight-strong);
+}
+.alu-service-pill__count {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.1rem 0.45rem;
+  background: var(--surface-subtle);
+  border: 1px solid var(--border-default);
+  color: var(--accent-fg);
+}
+.alu-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+  gap: 1.125rem;
+}
+.alu-service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--surface-default);
+  border: 1px solid var(--border-default);
+  border-top: 2px solid var(--border-strong);
+  box-shadow: var(--elevation-raised);
+  transition:
+    border-color var(--motion-duration-fast) var(--motion-easing-standard),
+    transform var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.alu-service-card:hover {
+  border-color: var(--accent-border);
+  border-top-color: var(--accent-border);
+  transform: translateY(-2px);
+}
+.alu-service-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+/* H08: Innovations Showcase */
+.alu-innovations-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.25rem;
+}
+.alu-innovation-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-default);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--elevation-raised);
+  overflow: hidden;
+}
+.alu-innovation-card__media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #101216;
+}
+.alu-innovation-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 450ms ease;
+}
+.alu-innovation-card:hover .alu-innovation-card__media img {
+  transform: scale(1.05);
+}
+.alu-innovation-card__overlay {
+  position: absolute;
+  inset: 0;
+  padding: 1rem;
+  background: linear-gradient(180deg, rgba(12, 14, 18, 0.65) 0%, transparent 45%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.alu-innovation-card__num {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: #ffffff;
+  background: rgba(15, 17, 21, 0.75);
+  padding: 0.2rem 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.alu-innovation-card__body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+/* Subpage Atmospheric Hero & Alternating Split Showcases */
+.alu-subpage-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: clamp(3rem, 6vw, 5rem);
+  border-bottom: 1px solid var(--border-strong);
+  background: var(--surface-page);
+}
+.alu-subpage-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.14;
+  filter: blur(8px) saturate(0.8);
+  transform: scale(1.06);
+}
+.alu-subpage-hero__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 82% 20%, rgba(208, 102, 58, 0.15), transparent 50%),
+    linear-gradient(90deg, var(--surface-page) 35%, rgba(20, 22, 26, 0.78) 100%);
+}
+[data-mode="light"] .alu-subpage-hero__scrim {
+  background:
+    radial-gradient(circle at 82% 20%, rgba(181, 77, 36, 0.1), transparent 50%),
+    linear-gradient(90deg, var(--surface-page) 50%, rgba(245, 244, 240, 0.9) 100%);
+}
+
+/* Alternating Split Feature Rows on Subpages */
+.alu-feature-rows {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 4vw, 3.25rem);
+}
+.alu-feature-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  background: var(--surface-raised);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--elevation-raised);
+  overflow: hidden;
+}
+.alu-feature-row--reverse .alu-feature-row__media {
+  order: 2;
+}
+.alu-feature-row--reverse .alu-feature-row__content {
+  order: 1;
+}
+.alu-feature-row__media {
+  position: relative;
+  min-height: 20rem;
+  background: #101216;
+  overflow: hidden;
+}
+.alu-feature-row__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.alu-feature-row__index {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.25rem 0.65rem;
+  background: rgba(15, 17, 21, 0.85);
+  border: 1px solid var(--accent-border);
+  color: var(--ref-color-rust-300);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.alu-feature-row__content {
+  padding: clamp(1.75rem, 3.5vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Architectural Specification Grid */
+.alu-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+  gap: 1.25rem;
+}
+.alu-spec-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  padding: 1.625rem;
+  background: var(--surface-default);
+  border: 1px solid var(--border-default);
+  border-top: 2px solid var(--accent-border);
+  box-shadow: var(--elevation-raised);
+}
+.alu-spec-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-bottom: 0.625rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.alu-spec-card__num {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent-fg);
+}
+
+/* Interactive Module Tabs on Subpages */
+.alu-module-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-stack-lg);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  background: var(--surface-raised);
+  border: 1px solid var(--border-strong);
+}
+.alu-module-tabs__panel {
+  padding: 1.5rem;
+  background: var(--surface-default);
+  border: 1px solid var(--border-default);
+}
+
+/* Global Trial Callout Band */
+.alu-trial-banner {
+  padding-block: clamp(3rem, 6vw, 5rem);
+  background:
+    radial-gradient(circle at 85% 50%, rgba(208, 102, 58, 0.16), transparent 52%),
+    var(--surface-subtle);
+  border-top: 1px solid var(--border-strong);
+}
+.alu-trial-banner__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: center;
+  padding: clamp(1.75rem, 4vw, 3rem);
+  background: var(--surface-raised);
+  border: 1px solid var(--border-strong);
+  border-left: 4px solid var(--accent-border);
+  box-shadow: var(--elevation-overlay);
+}
+.alu-trial-banner__benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--surface-default);
+  border: 1px solid var(--border-default);
+}
+
+@media (max-width: 64rem) {
+  .alu-hero-stage__grid,
+  .alu-role-stage,
+  .alu-feature-row,
+  .alu-trial-banner__inner {
+    grid-template-columns: 1fr;
+  }
+  .alu-feature-row--reverse .alu-feature-row__media,
+  .alu-feature-row--reverse .alu-feature-row__content {
+    order: initial;
+  }
+  .alu-hero-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .alu-bento-card--1,
+  .alu-bento-card--2,
+  .alu-bento-card--3,
+  .alu-bento-card--4,
+  .alu-bento-card--5 {
+    grid-column: span 12;
+    grid-row: auto;
+    min-height: 18rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  .alu-hero-metrics,
+  .alu-role-stage__features {
+    grid-template-columns: 1fr;
+  }
+  .alu-hero-metrics__item {
+    border-right: 0;
+    border-bottom: 1px solid var(--border-default);
+  }
 }

@@ -1,13 +1,13 @@
 # Oturum devri
 
 ## Güncelleme tarihi ve oturum no
-22.10.2026 — Hedefli envanter kapanış çalışması (Europe/Istanbul).
+25.10.2026 — Faz 0 kapanışı ve Faz 1 (UI/UX Analizi — `docs/ux-audit.md`) tamamlandı, onay bekliyor (Europe/Istanbul).
 
 ## Faz durumu tablosu
 | Faz | Durum |
 |---|---|
-| 0 — İçerik envanteri | Devam ediyor |
-| 1 — UI/UX analizi | Başlanmadı |
+| 0 — İçerik envanteri | Tamamlandı (25.10.2026 kullanıcı onayıyla) |
+| 1 — UI/UX analizi | Onay bekliyor (`docs/ux-audit.md` üretildi) |
 | 2 — Teknik baseline | Başlanmadı |
 | 3 — PRD | Başlanmadı |
 | 4 — Design system | Başlanmadı |
@@ -83,22 +83,22 @@
 
 ## Açık sorular ve onay bekleyen konular
 - Segmentlerin ticari önceliği ve karar vericiler.
-- Tek birincil dönüşüm: teklif/deneme; Microsoft Forms aynen mi kalacak? Şimdilik korunur.
+- Tek birincil dönüşüm: teklif/deneme ağırlığı; teklif için Next.js kısa form sözleşmesi onaylandı (`docs/request-forms-contract.md`), gerçek teslimat/operasyon hedefi açık.
 - Antrasit koyu tema onaylı; marka kılavuzunun kalan açık tema/font/logo/slogan kararları; ALLPLAN üretici kullanım kuralları ve dosya bazında izinler; title/hero/sosyal kimlik onayı.
-- 21 Ekim kontrolünde canlı CTA 14 gün; kaynakta kullanılmayan 30 gün prop'u bulundu. Bu, canlıda 30 gün görüldüğü anlamına gelmez; taşıma ve yayın öncesi güncellik doğrulaması gerekir.
-- PRD henüz yazılmadı; bu sorular Faz 3 Açık Sorular bölümüne taşınacak. Yeni tasarımı bu cevaplar varsayılarak kurma.
+- **Kapatıldı (25.10.2026):** 14 gün / 30 gün ücretsiz deneme süresi çelişkisi kullanıcı kararıyla kapatıldı. Yeni sitede ücretsiz deneme bağlantıları doğrudan `https://www.allplan.com/trial-or-subscription/` adresine yönlendirilecek.
+- PRD henüz yazılmadı; kalan açık sorular Faz 3 Açık Sorular bölümüne taşınacak. Yeni tasarımı bu cevaplar varsayılarak kurma.
 
 ## Bilinen sorunlar ve riskler
-- Envanter **kısmi**: tüm alt sayfa dinamik durumları, harici form alanları, dış link/dosya erişimleri, fragmentler ve hashli medya eşlemesi henüz tam doğrulanmadı. Ayrıntılı kapanış listesi `docs/00-inventory/content-inventory.md` sonunda.
+- **Faz 0 Envanteri tamamlandı (25.10.2026):** Alt sayfa dinamik durumları, harici form alanları (14 bölüm/24 soru), dış link/dosya erişimleri, fragmentler ve hashli medya eşlemesi tamamlanıp `docs/00-inventory/content-inventory.md` ve `docs/00-inventory/inventory-coverage-2026-10-22.md` altında kapatıldı. 11 benzersiz 404 ve eksik hedeflerin onarımı (`url-closure-2026-10-22.md`) kullanıcı kararıyla uygulama/geçiş aşamasına ertelendi.
 - Güncel URL parite aracı aynı-origin 308 hedeflerini izler ve yalnız 2xx hedefe ulaşan yönlendirmeleri geçerli migration girdisi sayar. Harici hedefler otomatik GET edilmez. Bulgular tek tarama anı kanıtıdır.
-- URL keşfi sitemap, yerel rotalar, kaynak yönlendirmeleri ve HTML bağlantılarıyla; 8 tur/400 yol sınırıyla çalışır. Client-side yollar, form action, script içi URL ve sorgu varyantları için ayrı Faz 0 kapanış matrisi gereklidir; mevcut sayı eksiksizlik iddiası değildir.
+- URL keşfi sitemap, yerel rotalar, kaynak yönlendirmeleri ve HTML bağlantılarıyla; 8 tur/400 yol sınırıyla çalışır.
 - /about canlı canonical ana sayfaya işaret ediyor; meta kayıtlarında kanıt var. Teknik etkisi Faz 2'de analiz edilecek.
 - Kaynakta bazı form akışları simülasyon; canlı gönderim/kalıcılık testi yapılmadı. Güvenlik ve çerez bulguları kod kanıtı, canlı/hukuki uygunluk kararı değil.
 - Asset basename eşlemeleri aday; kesin kullanım kanıtı değil. `live-versiyon` arşivi güncel içeriğe karıştırılmaz.
 - Marka kılavuzunun üretici izinleri hakkındaki ifadeleri resmî izin belgesi yerine geçmez; benzerlik kontrolü henüz yapılmadı.
 
 ## Sıradaki adım
-D01/D02 kalan etkileşim ve medya matrisini tamamla; D03 eksik hedef listesini kullanıcı kararıyla sonraki onarıma bırak. Faz geçişi yapma.
+`docs/ux-audit.md` (Faz 1 — UI/UX Analizi) için kullanıcı onayını beklemek; onay sonrası **Faz 2 — Teknik Analiz (`docs/baseline-report.md`)** çalışmasına geçmek.
 
 Claude v3 indirildi ve ayrı antrasit önizleme kullanıcı tarafından uygun bulundu. Teknik entegrasyon kabulü değildir; aşağıdaki eski Claude durum kayıtları tarihsel notlardır.
 
@@ -300,3 +300,16 @@ Son doğrulama: 6/6 test, TypeScript ve build geçti; 282 kontrast çifti, mobil
 Git dışında kullanıcı ZIP'i, `Aluplan Design System/`, `docs/previews/anthracite-demo/`, `docs/reviews/design-v3-initial/` ve `docs/reviews/design-v3-refreshed/` korunur. Önceki karar gereği bu paketler commit'e eklenmedi; antrasit değişiklikleri yeniden üretilebilir patch'te, yeni pafta kodu ve varlıkları ise `0659d86` içinde takip edilir. Kaynak2026/canlı site değiştirilmedi; push veya deploy yapılmadı.
 
 **Güvenli devam sırası:** başlangıç belgelerini oku → Git ve mevcut önizlemeleri doğrula → kullanıcının tasarımda eksik bulduğu noktaları ve beğendiği referansları konuş → görsel yönü yeniden netleştir → ancak sonra yeni tasarım revizyonuna ilerle. Sıradaki adım kod yazmak değil, tasarım yönünü kullanıcıyla yeniden değerlendirmektir.
+
+## 25.10.2026 — Faz 0 (İçerik Envanteri) kapanışı ve ücretsiz deneme hedefi kararı
+
+- Kullanıcı **Faz 0 — İçerik Envanteri** aşamasının kapatılmasını onayladı.
+- Eski kaynaklarda yer alan **14 gün / 30 gün ücretsiz deneme süresi çelişkisi** kullanıcı kararıyla kapatıldı: Yeni sitede tüm ücretsiz deneme CTA'ları doğrudan ALLPLAN resmî sayfasına (**`https://www.allplan.com/trial-or-subscription/`**) yönlendirilecek ve süre/koşul üretici sayfasında yönetileceği için sitede çelişkili gün sayısı vaadi yer almayacak.
+- Güncellenen dosyalar: `HANDOFF.md`, `docs/00-inventory/user-decisions.md`, `docs/00-inventory/content-inventory.md`, `docs/00-inventory/inventory-coverage-2026-10-22.md`, `docs/00-inventory/inventory-decision-brief-2026-10-22.md`, `docs/phase-closure-gates.md`, `docs/request-forms-contract.md`, `docs/customer-request-journeys.md`.
+- **Sıradaki adım:** Faz 0 tamamlandığı için kullanıcı onayıyla **Faz 1 — UI/UX Analizi (`docs/ux-audit.md`)** aşamasına geçmek.
+
+## 25.10.2026 — Faz 1 (UI/UX Analizi) tamamlandı (`docs/ux-audit.md`)
+
+- Kullanıcı onayıyla Faz 1 çalışması yürütüldü ve `docs/ux-audit.md` oluşturuldu.
+- Rapor; bilgi mimarisi ve dönüşüm (`IA-01`..`IA-07`), görsel hiyerarşi ve marka algısı (`VH-01`..`VH-04`), mobil deneyim ve dokunma hedefleri (`MB-01`..`MB-04`), WCAG 2.2 AA erişilebilirlik borcu (`A11Y-01`..`A11Y-05`), mikro-metin ve durum yönetimi (`CR-01`..`CR-04`), 5 temel persona (`P1–P5`) ve ekran bazlı bulgu/öneri matrisini dosya/satır kanıtlarıyla kapsar.
+- **Sıradaki adım:** `docs/ux-audit.md` (Faz 1) için kullanıcı onayı; onaylandıktan sonra **Faz 2 — Teknik Analiz (`docs/baseline-report.md`)** aşamasına geçmek.

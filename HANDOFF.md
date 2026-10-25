@@ -1,15 +1,15 @@
 # Oturum devri
 
 ## Güncelleme tarihi ve oturum no
-25.10.2026 — Faz 1 onaylandı; Faz 2 (Teknik Baseline — `docs/baseline-report.md`) tamamlandı, onay bekliyor (Europe/Istanbul).
+25.10.2026 — Faz 2 onaylandı; Faz 3 (PRD Dokümanı — `docs/PRD.md`) tamamlandı, onay bekliyor (Europe/Istanbul).
 
 ## Faz durumu tablosu
 | Faz | Durum |
 |---|---|
 | 0 — İçerik envanteri | Tamamlandı (25.10.2026 kullanıcı onayıyla) |
 | 1 — UI/UX analizi | Tamamlandı (25.10.2026 kullanıcı onayıyla — `docs/ux-audit.md`) |
-| 2 — Teknik baseline | Onay bekliyor (`docs/baseline-report.md` üretildi) |
-| 3 — PRD | Başlanmadı |
+| 2 — Teknik baseline | Tamamlandı (25.10.2026 kullanıcı onayıyla — `docs/baseline-report.md`) |
+| 3 — PRD | Onay bekliyor (`docs/PRD.md` üretildi) |
 | 4 — Design system | Başlanmadı |
 | 5 — Ana sayfa tasarımı | Başlanmadı |
 | 6 — Geliştirme | Başlanmadı |
@@ -98,7 +98,7 @@
 - Marka kılavuzunun üretici izinleri hakkındaki ifadeleri resmî izin belgesi yerine geçmez; benzerlik kontrolü henüz yapılmadı.
 
 ## Sıradaki adım
-`docs/baseline-report.md` (Faz 2 — Teknik Analiz) için kullanıcı onayını beklemek; onay sonrası **Faz 3 — PRD Dokümanı (`docs/PRD.md`)** çalışmasına geçmek.
+`docs/PRD.md` (Faz 3 — PRD Dokümanı) için kullanıcı onayını beklemek; onay sonrası **Faz 4 — Design System (`design-system/`)** ve tasarım yönü adımına geçmek.
 
 Claude v3 indirildi ve ayrı antrasit önizleme kullanıcı tarafından uygun bulundu. Teknik entegrasyon kabulü değildir; aşağıdaki eski Claude durum kayıtları tarihsel notlardır.
 
@@ -324,3 +324,22 @@ Git dışında kullanıcı ZIP'i, `Aluplan Design System/`, `docs/previews/anthr
   - **GEO:** `/llms.txt` yok; 111 sayfada yalnız `BreadcrumbList` JSON-LD var (`Organization`, `WebSite`, `SoftwareApplication`, `Product`, `Service`, `VideoObject` 0 adet).
   - **Güvenlik & Uyumluluk:** `next.config.js` ve `middleware.ts` arasında çakışan çift CSP (`'unsafe-inline'` / `'unsafe-eval'`), `/api/send-activation-email` içinde HTML injection + `SSLv3` + `rejectUnauthorized: false` + rate-limit/CSRF eksikliği, açık kalan `/hero-3d` ve `/test-webgl` rotaları, rıza tercihini okumadan yüklenen Google Analytics (`GT-5TQ6VQ4` / `G-DQYT0D9MQ5`).
 - **Sıradaki adım:** `docs/baseline-report.md` (Faz 2) için kullanıcı onayı; onaylandıktan sonra **Faz 3 — PRD Dokümanı (`docs/PRD.md`)** aşamasına geçmek.
+
+## 25.10.2026 — Faz 2 onayı ve Faz 3 (`docs/PRD.md`) tamamlanması
+
+- Kullanıcı Faz 2 (`docs/baseline-report.md` — commit `b377f6c`) raporunu onayladı.
+- Faz 3 çalışması yürütülerek 13 bölümlü kapsamlı `docs/PRD.md` oluşturuldu:
+  1. Vizyon ve ölçülebilir KPI hedefleri (%100 içerik/URL paritesi, %100 doğru canonical/title, LCP < 2.5s, INP < 200ms, CLS < 0.1, TTFB < 200ms, Lighthouse 90+, WCAG 2.2 AA).
+  2. Kapsam içi / kapsam dışı sınırları.
+  3. 5 temel persona (`P1–P5`) ve kullanıcı senaryoları.
+  4. Bilgi mimarisi (131 rota, kalıcı ürün/paket/sürüm ayrımı, gezinme odaklı Header).
+  5. İçerik koruma, fark kaydı ilkesi ve 308/301 yönlendirme + 11 adet ertelenmiş 404 haritası.
+  6. Semantik token zinciri (`Primitive → Semantic → Component`), keskin kart dili (`radius.surface = 0px`), Antrasit koyu & açık tema ve yerel WOFF2 fontlar (`Manrope`, `IBM Plex Sans`, `IBM Plex Mono`).
+  7. Ana sayfa `H01–H08` blokları, `T01–T12` sayfa şablonları ve Next.js kısa talep formları + doğrudan `https://www.allplan.com/trial-or-subscription/` deneme hedefi.
+  8. NFR (Performans, WCAG 2.2 AA, SEO, GEO `/llms.txt` + `@id` JSON-LD, güvenlik ve KVKK rıza yönetimi).
+  9. Next.js (App Router, SSG öncelikli Server Components) teknoloji yığını ve alternatif karşılaştırması.
+  10. DevOps planı, CI/CD kalite kapıları, Docker/Coolify dağıtımı ve < 2 dk geri alma (rollback) planı.
+  11. Otomatik parite, SEO, kontrast, erişilebilirlik ve güvenlik test stratejisi.
+  12. Yayına geçiş (cutover) adımları ve SEO kaybını önleme kontrol listesi.
+  13. Faz kabul kriterleri, riskler ve açık kararların durumu.
+- **Sıradaki adım:** `docs/PRD.md` (Faz 3) için kullanıcı onayı; onaylandıktan sonra **Faz 4 — Design System (`design-system/`)** aşamasına geçmek.

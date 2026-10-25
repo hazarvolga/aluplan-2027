@@ -136,3 +136,7 @@ Kullanıcı güncel kodun 2026 içinde olduğunu hatırlattı. Tekrarlı canlı 
 ## Yönetici erişimiyle güncelleme — 22.10.2026
 
 [Form yönetici incelemesi](form-admin-2026-10-22.md) ile daha önce bilinmeyen8ve14bölüm içerikleri kaydedildi. Önceki erişim açığı notu artık tarihsel; gerçek gönderim/teslimat testi yapılmadı. Scalypso seçiminin8yerine13e yönlendiği doğrulandı; onarım uygulanmadı.
+
+## Faz 0 resmi kapanışı — 25.10.2026
+
+Kullanıcı onayıyla **Faz 0 — İçerik Envanteri** kapatılmıştır. Ücretsiz deneme süresi (14/30 gün) çelişkisi, yeni sitede tüm deneme CTA'larının doğrudan `https://www.allplan.com/trial-or-subscription/` adresine yönlendirilmesi kararıyla çözülmüştür. Runtime/teslimat testleri ve ertelenen 404/hedef onarımları (`url-closure-2026-10-22.md`) ilgili sonraki fazlarda (Faz 2/3/6) izlenecektir.

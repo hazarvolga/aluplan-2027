@@ -30,3 +30,8 @@ Kaynak: [kullanıcı kararları](user-decisions.md), [schema etkisi](../schema-i
 ## 22.10.2026 — Next.js yönü kabul edildi; seçenek kapsamı korunuyor
 
 Kullanıcı Next.js içinde kısa formlarla ilerlemeyi onayladı; henüz kod yazılmayacak. Önceki platform seçimi açık notları tarihsel olarak aşıldı. [Alan, takip ve schema sözleşmesi](../request-forms-contract.md) güncel plandır. Kullanıcı mevcut formun üç kategorisi altında çok sayıda seçenek olduğunu hatırlattı: üç çekirdek niyet ürün/eklenti seçeneklerini azaltmaz veya ekran sayısını dondurmaz. Bölüm1–14kapsam eşlemesi eklendi; öğrenci lisansı ve mevcut müşteri eklenti temini ayrı alt yol olarak korunur. Çoklu ürün/modül ilgisi kaybolmaz. Deneme formunun zorunluluğu, gerçek takip hedefi/sorumluları ve hukuki metinler henüz açık; yeni CRM veya site/form/schema uygulaması yok.
+
+## 25.10.2026 — Faz 0 kapanışı ve doğrudan deneme hedefi kararı
+
+- **Ücretsiz Deneme Hedefi:** Kullanıcı, yeni sitede ücretsiz deneme bağlantılarının doğrudan **`https://www.allplan.com/trial-or-subscription/`** adresine yönlendirileceğini belirtti. Böylece eski kaynaklarda yer alan 14 gün / 30 gün deneme süresi çelişkisi yeni sitede ortadan kaldırılmıştır.
+- **Faz 0 Kapanışı:** Envanter, kaynak etkileşim matrisi, medya SHA-256 doğrulaması, Microsoft Forms 14 bölüm incelemesi ve ertelenen 404/hedef listesiyle birlikte **Faz 0 — İçerik Envanteri** resmi olarak kapatılmıştır.

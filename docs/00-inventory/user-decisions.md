@@ -126,3 +126,8 @@ Kullanıcının “ok go” yanıtı, geçici kabul edilen yerleşimin ayrı tas
 ## 22.10.2026 — Header CTA kararı
 
 Kullanıcı CTA etiketini `Teklif İste` olarak kabul etti. Teklif ve ücretsiz deneme hero'da bulunduğundan header'da bu iki butona gerek olmadığına karar verdi. Planlama ve önizleme kuralı: header gezinme odaklı; ana sayfa hero'sunda `Teklif İste` ve `Ücretsiz Deneme` bulunur. Bu karar canlı link veya uygulama değişikliği değildir.
+
+## 25.10.2026 — Faz 0 kapanışı ve ücretsiz deneme hedefi kararı
+
+- **Faz 0 (İçerik ve Envanter Çıkarımı) Kapanışı:** Kullanıcı Faz 0 envanter çalışmasının kapatılmasını onayladı. Kaynak ve canlı site envanteri, medya/hash eşlemeleri, 161 kaynak snapshot'ı, Microsoft Forms 14 bölüm/24 soru yapısı ve ertelenen 404/hedef onarım listesi (`url-closure-2026-10-22.md`) Faz 0 kapanış kanıtı olarak kabul edildi.
+- **Ücretsiz Deneme (14/30 Gün) Çelişkisinin Kapatılması:** Kullanıcı, yeni sitede ücretsiz deneme bağlantılarının doğrudan ALLPLAN'ın resmî **`https://www.allplan.com/trial-or-subscription/`** adresine verileceğini kararlaştırdı. Deneme süresi ve koşulları doğrudan üretici sayfasında yönetildiği için eski kaynaklardaki 14 gün / 30 gün çelişkisi yeni sitede gün sayısı vaadi kullanılmadan doğrudan resmî hedefe yönlendirilerek kapatılır. (Eski 2026 kaynak dosyaları salt-okunur olarak değişmeden kalır.)

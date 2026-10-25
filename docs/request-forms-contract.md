@@ -169,3 +169,7 @@ Alanları ve teknik hata durumlarını kullanıcıya tek tek test ettirmek yerin
 ## 22.10.2026 schema kontrolüyle netleştirme
 
 [Son inceleme](form-schema-review-2026-10-22.md): doğrudan Google ihlali yok; üç uygulama belirsizliği netleştirildi. Paket/yıl alanları otomatik ProductGroup/variesBy yapılmayacak; Google yazılım yılı/edition boyutunu destek listesinde saymıyor. requestedReleaseRefs açık kullanıcı tercihini, sourceReleaseRef geliş sayfasını anlatır; ikisi de iç alanlardır. softwareVersion yalnız gerçek yazılım sürümünü anlatır. Eğitim hizmet sayfasının Service ana varlığı, arşiv ve tek video sayfasına otomatik uygulanmaz. Genel arşiv CollectionPage/ItemList adayıdır; nihai seçim görünür içerikle yapılır. Form sayısı ürün veya hizmet sayısı değildir. Fiyat/değerlendirme kanıtı olmadan Google yazılım/ürün rich result uygunluğu ilan edilmez. Kod/JSON-LD üretilmedi.
+
+## 25.10.2026 — Ücretsiz deneme hedefi kararı
+
+Kullanıcı kararıyla yeni sitede ücretsiz deneme bağlantıları doğrudan ALLPLAN'ın resmî **`https://www.allplan.com/trial-or-subscription/`** adresine yönlendirilecektir. Böylece 14 gün / 30 gün süre çelişkisi kapatılmıştır; doğrudan üretici deneme sayfasına geçiş engellenmez.

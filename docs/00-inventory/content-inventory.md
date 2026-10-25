@@ -210,12 +210,12 @@ Tam HTML metin düğümü eşitliğiyle tekrar grubu bulunmadı. Yakın anlamsal
 - Kaynakta 30 gün, kullanıcı gözleminde 14 gün deneme süresi var. Kaynak içerik değiştirilmedi; uyuşmazlık ayrı onaya sunulacak.
 - Hedef teknoloji ve yeni tasarım kararı verilmedi. Docker/Coolify belgeleri kurulum niyetinin kanıtıdır; çalışan sağlayıcı/container/SHA kanıtı değildir.
 
-## Eksiksizlik için kalan işler
+## Eksiksizlik için kalan işler (22–25.10.2026 itibarıyla tamamlandı)
 
-1. Tüm alt sayfalardaki sekme, akordeon, video modalı, arama ve mobil menü durumlarını tarayıcıyla tek tek dökmek; kaynak ifadelerini render edilmiş metinlerle eşlemek. Ana sayfanın örnek durumları tamamlandı, tüm site bitmedi.
-2. Harici Microsoft Forms alanlarını ve doğrulamalarını salt-okunur incelemek; gönderim yapılmaz.
-3. Hashli Next medya URL’leri ve import zincirlerini yerel dosyalarla kesin eşlemek. Basename eşleşmeleri yalnız adaydır; arşiv dosyasını yayındaki dosya sayma.
-4. Tüm harici link/dosya URL’leri, fragment hedefleri ve yönlendirme zincirlerini doğrulamak; 404 ile geçici erişim engelini ayırmak.
-5. Canlıda eşleşmeyen yerel varlıkların korunma/kullanım kararını kullanıcıya ayrı listeyle sunmak; semantik tekrar incelemesini tamamlamak.
+1. Alt sayfalardaki sekme, akordeon, video modalı, arama ve mobil menü durumları canlı (`browser-complete-2026-10-22/`, `browser-final-2026-10-22.json`) ve kaynak odaklı (`remaining-source-checks-2026-10-22.md`, `global-state-source-review-2026-10-22.md`) olarak envantere alındı.
+2. Harici Microsoft Forms alanları ve tüm 14 bölüm / 24 soru dallanmaları salt-okunur incelenip `form-admin-2026-10-22.md` içinde belgelendi.
+3. Hashli Next medya URL’leri (503 görsel), 6 PDF ve 2 AX3000 DOCX dosyasının SHA-256 eşliği `media-complete-2026-10-22.md` içinde doğrulandı; 376 referanssız/arşiv medya yolu koruma altında sınıflandırıldı.
+4. Tüm iç/dış linkler, yönlendirme zincirleri ve fragment hedefleri `url-closure-2026-10-22.md` ile doğrulandı; 11 benzersiz 404 ve eksik hedeflerin onarımı kullanıcı kararıyla uygulama/geçiş aşamasına ertelendi.
+5. Deneme süresi (14 gün / 30 gün) çelişkisi 25.10.2026 tarihli kullanıcı kararıyla kapatıldı: yeni sitede deneme CTA'ları doğrudan `https://www.allplan.com/trial-or-subscription/` adresine yönlendirilecek.
 
-**Faz 0 henüz eksiksiz tamamlandı sayılmaz. Kalan doğrulamalar Faz 0 içinde sürdürülmelidir; Faz 1’e geçilmez.**
+**Faz 0 (İçerik ve Envanter Çıkarımı) 25.10.2026 itibarıyla kullanıcı onayıyla tamamlanmış ve kapatılmıştır.**

@@ -1,14 +1,14 @@
 # Oturum devri
 
 ## Güncelleme tarihi ve oturum no
-25.10.2026 — Faz 0 kapanışı ve Faz 1 (UI/UX Analizi — `docs/ux-audit.md`) tamamlandı, onay bekliyor (Europe/Istanbul).
+25.10.2026 — Faz 1 onaylandı; Faz 2 (Teknik Baseline — `docs/baseline-report.md`) tamamlandı, onay bekliyor (Europe/Istanbul).
 
 ## Faz durumu tablosu
 | Faz | Durum |
 |---|---|
 | 0 — İçerik envanteri | Tamamlandı (25.10.2026 kullanıcı onayıyla) |
-| 1 — UI/UX analizi | Onay bekliyor (`docs/ux-audit.md` üretildi) |
-| 2 — Teknik baseline | Başlanmadı |
+| 1 — UI/UX analizi | Tamamlandı (25.10.2026 kullanıcı onayıyla — `docs/ux-audit.md`) |
+| 2 — Teknik baseline | Onay bekliyor (`docs/baseline-report.md` üretildi) |
 | 3 — PRD | Başlanmadı |
 | 4 — Design system | Başlanmadı |
 | 5 — Ana sayfa tasarımı | Başlanmadı |
@@ -98,7 +98,7 @@
 - Marka kılavuzunun üretici izinleri hakkındaki ifadeleri resmî izin belgesi yerine geçmez; benzerlik kontrolü henüz yapılmadı.
 
 ## Sıradaki adım
-`docs/ux-audit.md` (Faz 1 — UI/UX Analizi) için kullanıcı onayını beklemek; onay sonrası **Faz 2 — Teknik Analiz (`docs/baseline-report.md`)** çalışmasına geçmek.
+`docs/baseline-report.md` (Faz 2 — Teknik Analiz) için kullanıcı onayını beklemek; onay sonrası **Faz 3 — PRD Dokümanı (`docs/PRD.md`)** çalışmasına geçmek.
 
 Claude v3 indirildi ve ayrı antrasit önizleme kullanıcı tarafından uygun bulundu. Teknik entegrasyon kabulü değildir; aşağıdaki eski Claude durum kayıtları tarihsel notlardır.
 
@@ -313,3 +313,14 @@ Git dışında kullanıcı ZIP'i, `Aluplan Design System/`, `docs/previews/anthr
 - Kullanıcı onayıyla Faz 1 çalışması yürütüldü ve `docs/ux-audit.md` oluşturuldu.
 - Rapor; bilgi mimarisi ve dönüşüm (`IA-01`..`IA-07`), görsel hiyerarşi ve marka algısı (`VH-01`..`VH-04`), mobil deneyim ve dokunma hedefleri (`MB-01`..`MB-04`), WCAG 2.2 AA erişilebilirlik borcu (`A11Y-01`..`A11Y-05`), mikro-metin ve durum yönetimi (`CR-01`..`CR-04`), 5 temel persona (`P1–P5`) ve ekran bazlı bulgu/öneri matrisini dosya/satır kanıtlarıyla kapsar.
 - **Sıradaki adım:** `docs/ux-audit.md` (Faz 1) için kullanıcı onayı; onaylandıktan sonra **Faz 2 — Teknik Analiz (`docs/baseline-report.md`)** aşamasına geçmek.
+
+## 25.10.2026 — Faz 1 onayı, ayrı commitler ve Faz 2 (`docs/baseline-report.md`) tamamlanması
+
+- Kullanıcı Faz 1 (`docs/ux-audit.md`) raporunu onayladı ve her faz/bulgu adımının kaybolmaması için ayrı ayrı commitlenmesini istedi.
+- Commitler: `7daf574` (`docs: close phase 0 inventory and resolve trial CTA target`) ve `d3cf14e` (`docs: complete phase 1 ux audit report`).
+- Faz 2 çalışması yürütülerek `docs/baseline-report.md` üretildi:
+  - **Performans:** Medyan TTFB 541 ms (maks 869 ms), maks HTML 306 KB (`/references`), 19,81 MiB hero video (`hero-bim.mp4`), çift kopyalı 12,03 MiB MP4 varlıkları, 23 script chunk'ı, render-blocking Google Fonts CSS `@import`, gereksiz `three`/`r3f`/`gsap` bağımlılıkları.
+  - **SEO:** 112 HTTP 200 sayfasının yalnızca **4 tanesinde (%3,6)** self-referencing canonical doğru (92 sayfa `/` köküne, 16 ürün sayfası `/products`'a işaret ediyor); **58 sayfada (%51,8)** aynı varsayılan `<title>` ve **59 sayfada** aynı `<meta name="description">`; `sitemap.ts` içinde 7 adet 404 URL + `/health` varken `/references` ve `/solutions-v2/training` eksik; 14 video sayfasında çift `<h1>`, 4 sayfada `<h1>` yok.
+  - **GEO:** `/llms.txt` yok; 111 sayfada yalnız `BreadcrumbList` JSON-LD var (`Organization`, `WebSite`, `SoftwareApplication`, `Product`, `Service`, `VideoObject` 0 adet).
+  - **Güvenlik & Uyumluluk:** `next.config.js` ve `middleware.ts` arasında çakışan çift CSP (`'unsafe-inline'` / `'unsafe-eval'`), `/api/send-activation-email` içinde HTML injection + `SSLv3` + `rejectUnauthorized: false` + rate-limit/CSRF eksikliği, açık kalan `/hero-3d` ve `/test-webgl` rotaları, rıza tercihini okumadan yüklenen Google Analytics (`GT-5TQ6VQ4` / `G-DQYT0D9MQ5`).
+- **Sıradaki adım:** `docs/baseline-report.md` (Faz 2) için kullanıcı onayı; onaylandıktan sonra **Faz 3 — PRD Dokümanı (`docs/PRD.md`)** aşamasına geçmek.

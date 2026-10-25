@@ -7,7 +7,7 @@ import searchIndexJson from '@/data/search-index.json';
 export const SITE_ORIGIN = 'https://aluplan.com.tr';
 export const TRIAL_CTA_URL = 'https://www.allplan.com/trial-or-subscription/';
 export const MAIN_QUOTE_FORM_URL = 'https://forms.office.com/r/hXhnKAG912';
-export const SUPPORT_PORTAL_URL = 'https://allplan.net.tr';
+export const SUPPORT_PORTAL_URL = 'https://allplan.net.tr/tr';
 
 export interface BreadcrumbItem {
   label: string;

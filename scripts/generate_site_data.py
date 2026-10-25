@@ -115,6 +115,8 @@ def clean_text(val) -> str:
         return ""
     s = str(val)
     s = re.sub(r"\[email[\s\u00a0]*protected\]", "info@aluplan.com.tr", s, flags=re.IGNORECASE)
+    s = re.sub(r"https?://(?:www\.)?aluplan\.net\.tr/?", "https://allplan.net.tr/tr", s, flags=re.IGNORECASE)
+    s = re.sub(r"\baluplan\.net\.tr\b", "allplan.net.tr/tr", s, flags=re.IGNORECASE)
     s = s.replace("\u00a0", " ").strip()
     return s
 
@@ -427,6 +429,8 @@ def normalize_href(href: str) -> str:
     if not href:
         return "#"
     trimmed = str(href).strip()
+    if "aluplan.net.tr" in trimmed.lower() or "allplan.net.tr" in trimmed.lower():
+        return "https://allplan.net.tr/tr"
     if (
         trimmed == "/try-free"
         or "allplan.com/trial-or-subscription" in trimmed
@@ -941,6 +945,10 @@ homepage_data["partners"] = [
     {"name": "Trimble", "logo": "/images/partners/trimble.png"},
     {"name": "Twinmotion", "logo": "/images/partners/twinmotion.png"},
 ]
+
+for s in homepage_data.get("services", []):
+    if "aluplan.net.tr" in s.get("href", "").lower() or "allplan.net.tr" in s.get("href", "").lower():
+        s["href"] = "https://allplan.net.tr/tr"
 
 with open(data_dir / "homepage.json", "w", encoding="utf-8") as f:
     json.dump(homepage_data, f, ensure_ascii=False, indent=2)

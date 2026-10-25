@@ -10,7 +10,7 @@ const LLMS_TXT_CONTENT = `# Aluplan Program Sistemleri — ALLPLAN Türkiye
 - **Merkez Ofis:** Quick Tower – Workinton, İçerenköy Mah. Topçu İbrahim Sok. 8/10D No: 5, 34752 Ataşehir / İstanbul
 - **Telefonlar:** (+90) 216 225 84 41 | (+90) 543 211 94 42 | (+90) 549 499 73 79
 - **E-posta:** info@aluplan.com.tr
-- **Teknik Destek Portalı:** https://allplan.net.tr
+- **Teknik Destek Portalı:** https://allplan.net.tr/tr
 - **Resmî ALLPLAN Ücretsiz Deneme & Abonelik:** https://www.allplan.com/trial-or-subscription/
 - **Teklif & Talep Formu:** https://forms.office.com/r/hXhnKAG912
 

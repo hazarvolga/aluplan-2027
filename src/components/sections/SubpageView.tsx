@@ -494,8 +494,8 @@ export function SubpageView({
                 </li>
                 <li>
                   <AluIcon name="life-buoy" size="sm" /> <strong>Teknik Destek Portalı:</strong>{' '}
-                  <a className="alu-link" href="https://allplan.net.tr" target="_blank" rel="noopener noreferrer">
-                    allplan.net.tr ↗
+                  <a className="alu-link" href="https://allplan.net.tr/tr" target="_blank" rel="noopener noreferrer">
+                    allplan.net.tr/tr ↗
                   </a>
                 </li>
               </ul>

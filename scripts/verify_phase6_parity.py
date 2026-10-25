@@ -108,6 +108,20 @@ check("Zero /solutions-v2 (404) parent links in breadcrumbs", len(bad_breadcrumb
 check("Zero [email protected] obfuscation artifacts in bodyNodes", len(email_obfuscation_leaks) == 0, str(email_obfuscation_leaks))
 check("Zero /try-free (404) links; free trial normalized to allplan.com/trial-or-subscription/", len(bad_trial_links) == 0, str(bad_trial_links))
 
+bad_support_links = []
+for route_path, p in pages.items():
+    for lnk in p.get("contentLinks", []):
+        if "aluplan.net.tr" in lnk.get("href", "").lower():
+            bad_support_links.append((route_path, lnk.get("href")))
+for s in hp.get("services", []):
+    if "aluplan.net.tr" in s.get("href", "").lower():
+        bad_support_links.append(("homepage.services", s.get("href")))
+check(
+    "Zero legacy aluplan.net.tr links; all support portal buttons point to https://allplan.net.tr/tr",
+    len(bad_support_links) == 0 and any(s.get("href") == "https://allplan.net.tr/tr" for s in hp.get("services", [])),
+    str(bad_support_links),
+)
+
 # 3. Video Library & Playlists Parity
 total_playlist_entries = sum(len(pl.get("videos", [])) for pl in playlists.values())
 unique_video_ids = {v["id"] for pl in playlists.values() for v in pl.get("videos", [])}

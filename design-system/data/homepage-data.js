@@ -219,7 +219,7 @@ window.previewData = {
       "title": "Destek Platformu",
       "description": "Ticket sistemi üzerinden destek taleplerinizi oluşturun ve süreçlerinizi kolayca takip edin.",
       "status": "active",
-      "href": "https://allplan.net.tr/",
+      "href": "https://allplan.net.tr/tr",
       "cta": "Talep Oluştur"
     },
     {

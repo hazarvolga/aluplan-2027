@@ -13,7 +13,121 @@ import {
 import { AluIcon } from '@/components/ui/AluIcon';
 
 const allPlaylists = getAllPlaylists();
+const playlistByUrl = new Map(allPlaylists.map((p) => [p.url, p]));
 const searchIndex = getSearchIndex();
+
+const VIDEO_LIBRARY_ITEMS: { title: string; description: string; url: string }[] = [
+  {
+    title: 'Allplan 2026',
+    description: 'Allplan 2026 sürümü için hazırlanmış kapsamlı eğitim videoları ve yenilikler.',
+    url: 'https://youtube.com/playlist?list=PLowC-ZFUywGMotfHSyzqoNZCQYWl_6G1x&si=BSEJvgjsQWgbIwVe'
+  },
+  {
+    title: 'Youtube Allplan English',
+    description: 'Allplan global İngilizce içerikleri, uluslararası örnekler ve eğitimler.',
+    url: 'https://www.youtube.com/@ALLPLANEnglish'
+  },
+  {
+    title: 'Youtube Allplan Global',
+    description: 'Dünya genelinden Allplan kullanıcı hikayeleri ve küresel etkinlikler.',
+    url: 'https://www.youtube.com/@AllplanInternational'
+  },
+  {
+    title: 'Youtube Allplan Precast',
+    description: 'Prekast beton tasarımı ve üretimi üzerine özelleşmiş Almanca/İngilizce içerikler.',
+    url: 'https://www.youtube.com/c/AllplanPrecast'
+  },
+  {
+    title: 'Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları',
+    description: 'Allplan 2024 sürümü ile gelen tüm yeniliklerin Türkçe anlatımı.',
+    url: '/solutions-v2/training/video-library/hello-allplan-2024'
+  },
+  {
+    title: 'Allplan Add On Geometry Tools',
+    description: 'Topografik ve geometrik düzenleme araçları, arazi modelleme eğitimleri.',
+    url: '/solutions-v2/training/video-library/addon-geometry'
+  },
+  {
+    title: 'AX3000 - MEP & Enerji',
+    description: 'Mekanik, Elektrik, Tesisat ve Enerji Kimlik Belgesi (EKB) eğitimleri.',
+    url: '/solutions-v2/training/video-library/ax3000'
+  },
+  {
+    title: 'Youtube CDS Allplan Add-On',
+    description: 'CDS (Campus Delivery System) ve eklenti geliştirmeleri üzerine videolar.',
+    url: '#'
+  },
+  {
+    title: 'Allplan Road Design Workflow',
+    description: 'Yol tasarımı iş akışları ve yol modülü eğitim videoları.',
+    url: '/solutions-v2/training/video-library/road-design'
+  },
+  {
+    title: 'Allplan Bridge Workflows',
+    description: 'Köprü tasarımı süreçleri ve BIM entegrasyonu.',
+    url: '/solutions-v2/training/video-library/bridge-workflows'
+  },
+  {
+    title: 'Campus Tutorials (Deutsch)',
+    description: 'Öğrenciler için detaylı Almanca eğitim serisi.',
+    url: '/solutions-v2/training/video-library/campus-de'
+  },
+  {
+    title: 'Campus Tutorials (English)',
+    description: 'Öğrenciler için kapsamlı İngilizce eğitim serisi.',
+    url: '/solutions-v2/training/video-library/campus-en'
+  },
+  {
+    title: 'Allplan Bridge',
+    description: 'Allplan Bridge modülünün genel tanıtımı ve özellikleri.',
+    url: '#'
+  },
+  {
+    title: 'Allplan Bridge Tutorials',
+    description: 'Adım adım köprü modelleme ve analiz rehberleri.',
+    url: '#'
+  },
+  {
+    title: 'SDS2 Detaylandırma',
+    description: 'SDS2 ürün tanıtımı ve lansman videoları.',
+    url: '/solutions-v2/training/video-library/sds2-intro'
+  },
+  {
+    title: 'Konut İnşaatı İş Akışları',
+    description: 'Konut proje teslimi, tasarım ve şantiye planlama süreçleri.',
+    url: '/solutions-v2/training/video-library/konut-insaati'
+  },
+  {
+    title: 'Bridge Workflow 2022',
+    description: '2022 Köprü tasarımı ve iş akışları eğitim serisi.',
+    url: '/solutions-v2/training/video-library/bridge-workflow-2022'
+  },
+  {
+    title: 'Otomatik Donatı (PythonPart)',
+    description: 'Otomatik donatılandırma ve PythonPart araçları kullanımı.',
+    url: '/solutions-v2/training/video-library/otomatik-donati'
+  },
+  {
+    title: 'ALLPLAN QuickStart: Buildings',
+    description: 'Allplan ile bina modellemeye hızlı başlangıç rehberi (9 Ders).',
+    url: '/solutions-v2/training/video-library/quickstart-buildings'
+  },
+  {
+    title: 'ALLPLAN for Reinforcement',
+    description: 'Betonarme detaylandırma, donatı modelleme ve raporlama eğitimleri (18 Video).',
+    url: '/solutions-v2/training/video-library/allplan-reinforcement'
+  },
+  {
+    title: 'Allplan Campus Tutorials 2019-2022',
+    description: 'Öğrenciler için kapsamlı Almanca eğitim serisi (2019-2022).',
+    url: '/solutions-v2/training/video-library/campus-tutorials-2019-2022'
+  },
+  {
+    title: 'ALLPLAN Pythonparts Youtube Kanalı',
+    description: 'PythonParts ile parametrik obje geliştirme ve script örnekleri.',
+    url: '#'
+  }
+];
 
 const SECTION_LABELS: Record<string, string> = {
   products: 'ALLPLAN ÜRÜN AİLESİ',
@@ -110,6 +224,8 @@ export function SubpageView({
   };
 
   const isLegalPage = page.section === 'legal';
+  const isVideoLibraryHub = page.path === '/solutions-v2/training/video-library';
+  const isVideoPlaylistPage = Boolean(playlist);
   const filteredResults = searchQuery.trim()
     ? searchIndex.filter((item) => {
         const q = searchQuery.toLowerCase();
@@ -143,8 +259,14 @@ export function SubpageView({
   // 2) Photo-backed feature sections (with sec.image, rendered as Alternating Split Rows)
   // 3) Benefit / Spec sections (with optional 48x48 sec.iconSrc badge or text specifications)
   const statSections = page.sections.filter((s) => Boolean(s.statValue));
-  const featuredSections = !isLegalPage ? page.sections.filter((s) => Boolean(s.image) && !s.statValue) : [];
-  const specSections = page.sections.filter((s) => !s.statValue && (!s.image || isLegalPage));
+  const featuredSections =
+    !isLegalPage && !isVideoLibraryHub && !isVideoPlaylistPage
+      ? page.sections.filter((s) => Boolean(s.image) && !s.statValue)
+      : [];
+  const specSections =
+    !isVideoLibraryHub && !isVideoPlaylistPage
+      ? page.sections.filter((s) => !s.statValue && (!s.image || isLegalPage))
+      : [];
 
   const usedPhotoSrcs = new Set<string>();
   if (heroImage) usedPhotoSrcs.add(heroImage.src);
@@ -286,97 +408,125 @@ export function SubpageView({
           <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
             <div className="preview-section-heading">
               <div className="alu-stack">
-                <span className="preview-kicker">EĞİTİM OYNATMA LİSTESİ · {playlist.count} VİDEO</span>
+                <span className="preview-kicker">VİDEO EĞİTİM SERİSİ · {playlist.count} VİDEO</span>
                 <h2 id="playlist-heading" className="alu-h1">
                   {playlist.title}
                 </h2>
-                {playlist.subtitle && <p className="alu-body">{playlist.subtitle}</p>}
+                {playlist.subtitle && <p className="alu-body preview-meta">{playlist.subtitle}</p>}
               </div>
               <Link className="alu-button alu-button--secondary alu-button--md" href="/solutions-v2/training/video-library">
-                <span>Tüm Eğitim Serileri</span>
+                <span>Video Kütüphanesine Dön</span>
                 <AluIcon name="arrow-right" size="sm" />
               </Link>
             </div>
 
-            {activeVideoId && (
-              <div className="alu-hero-monitor" style={{ padding: 'var(--space-inset-md)' }}>
-                <div className="alu-hero-monitor__header">
-                  <span className="alu-hero-monitor__status">
-                    <span className="alu-hero-monitor__dot" />
-                    <span>ŞU AN OYNATILIYOR: {playlist.videos.find((v) => v.id === activeVideoId)?.title || playlist.title}</span>
-                  </span>
-                  <span className="alu-caption">ALLPLAN VİDEO AKADEMİ</span>
-                </div>
-                <div style={{ position: 'relative', aspectRatio: '16 / 9', width: '100%' }}>
-                  <iframe
-                    src={`https://www.youtube-nocookie.com/embed/${activeVideoId}`}
-                    title={playlist.videos.find((v) => v.id === activeVideoId)?.title || playlist.title}
-                    style={{ width: '100%', height: '100%', border: 0 }}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            )}
+            {(() => {
+              const currentVideo =
+                playlist.videos.find((v) => v.id === activeVideoId) || playlist.videos[0];
+              const currentIdx = Math.max(
+                0,
+                playlist.videos.findIndex((v) => v.id === currentVideo?.id)
+              );
 
-            <div className="alu-video-grid">
-              {playlist.videos.map((vid, idx) => {
-                const isSelected = vid.id === activeVideoId;
-                return (
-                  <article
-                    key={`${vid.id}-${idx}`}
-                    className={`alu-product-card${isSelected ? ' alu-product-card--highlighted' : ''}`}
-                  >
-                    <button
-                      type="button"
-                      className="alu-card__media alu-card__media--video"
-                      onClick={() => setActiveVideoId(vid.id)}
-                      aria-label={`${vid.title} videosunu oynat`}
-                      style={{ border: 0 }}
-                    >
-                      <img
-                        src={`https://i.ytimg.com/vi/${vid.id}/hqdefault.jpg`}
-                        alt={vid.title}
-                        loading="lazy"
-                      />
-                      <span className="alu-video-play-badge">
-                        <AluIcon name="play" size="md" />
-                      </span>
-                    </button>
-                    <div className="alu-product-card__body">
-                      <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
-                        <span className="alu-badge alu-badge--accent">Bölüm {idx + 1}</span>
-                        {vid.duration && <span className="alu-caption">{vid.duration}</span>}
+              return (
+                <div className="alu-playlist-stage">
+                  {/* Left (2/3): Main Video Player Area */}
+                  <div className="alu-playlist-stage__main">
+                    {currentVideo && (
+                      <div className="alu-playlist-player-card">
+                        <div className="alu-playlist-player-card__viewport">
+                          <iframe
+                            src={`https://www.youtube.com/embed/${currentVideo.id}`}
+                            title={currentVideo.title}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          />
+                        </div>
+                        <div className="alu-playlist-player-card__body">
+                          <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
+                            <span className="alu-badge alu-badge--accent">
+                              <AluIcon name="circle-play" size="sm" />
+                              <span>Bölüm {currentIdx + 1} / {playlist.videos.length}</span>
+                            </span>
+                            <a
+                              href={`https://www.youtube.com/watch?v=${currentVideo.id}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="alu-link alu-link--standalone"
+                            >
+                              <span>YouTube&apos;da Aç</span>
+                              <AluIcon name="external-link" size="sm" />
+                            </a>
+                          </div>
+                          <h3 className="alu-playlist-player-card__title">
+                            <span className="alu-playlist-player-card__icon">
+                              <AluIcon name="video" size="md" />
+                            </span>
+                            <span>{currentVideo.title}</span>
+                          </h3>
+                          <p className="alu-body" style={{ margin: 0, color: 'var(--text-secondary)' }}>
+                            {currentVideo.description ||
+                              `Bu eğitim videosunda ${currentVideo.title} konusu detaylı olarak incelenmektedir. Allplan eğitim serisinin sunduğu yenilikleri keşfedin.`}
+                          </p>
+                        </div>
                       </div>
-                      <h3 className="alu-card__title" style={{ fontSize: 'var(--type-h4-size)' }}>
-                        {vid.title}
-                      </h3>
-                      {vid.description && <p className="alu-body-sm">{vid.description}</p>}
+                    )}
+                  </div>
+
+                  {/* Right (1/3): Sticky Scrollable Playlist Sidebar */}
+                  <aside className="alu-playlist-sidebar" aria-label="Oynatma listesi videoları">
+                    <div className="alu-playlist-sidebar__header">
+                      <span className="alu-playlist-sidebar__title">
+                        <AluIcon name="video" size="sm" />
+                        <span>Oynatma Listesi</span>
+                      </span>
+                      <span className="alu-playlist-sidebar__counter">
+                        {currentIdx + 1} / {playlist.videos.length}
+                      </span>
                     </div>
-                    <div className="alu-product-card__footer" style={{ justifyContent: 'space-between' }}>
-                      <button
-                        type="button"
-                        className="alu-button alu-button--secondary alu-button--sm"
-                        onClick={() => setActiveVideoId(vid.id)}
-                      >
-                        <AluIcon name="play" size="sm" />
-                        <span>{isSelected ? 'Oynatılıyor' : 'Burada İzle'}</span>
-                      </button>
-                      <a
-                        href={`https://www.youtube.com/watch?v=${vid.id}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="alu-link alu-link--standalone"
-                      >
-                        <span>YouTube</span>
-                        <AluIcon name="external-link" size="sm" />
-                      </a>
+
+                    <div className="alu-playlist-sidebar__list">
+                      {playlist.videos.map((vid, idx) => {
+                        const isSelected = vid.id === currentVideo?.id;
+                        return (
+                          <button
+                            key={`${vid.id}-${idx}`}
+                            type="button"
+                            onClick={() => setActiveVideoId(vid.id)}
+                            className={`alu-playlist-item${
+                              isSelected ? ' alu-playlist-item--active' : ''
+                            }`}
+                          >
+                            <div className="alu-playlist-item__thumb">
+                              <img
+                                src={`https://img.youtube.com/vi/${vid.id}/mqdefault.jpg`}
+                                alt={vid.title}
+                                loading="lazy"
+                              />
+                              {isSelected && (
+                                <div className="alu-playlist-item__playing">
+                                  <span className="alu-playlist-item__playing-badge">
+                                    <AluIcon name="circle-play" size="sm" />
+                                  </span>
+                                </div>
+                              )}
+                            </div>
+                            <div className="alu-playlist-item__info">
+                              <span className="alu-playlist-item__name">
+                                {idx + 1}. {vid.title}
+                              </span>
+                              <span className="alu-playlist-item__meta">
+                                Video Ders{vid.duration ? ` · ${vid.duration}` : ''}
+                              </span>
+                            </div>
+                          </button>
+                        );
+                      })}
                     </div>
-                  </article>
-                );
-              })}
-            </div>
+                  </aside>
+                </div>
+              );
+            })()}
           </div>
         </section>
       )}
@@ -385,47 +535,104 @@ export function SubpageView({
       {page.path === '/solutions-v2/training/video-library' && (
         <section className="preview-section" aria-labelledby="all-playlists-heading">
           <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
-            <div className="alu-stack">
-              <span className="preview-kicker">14 EĞİTİM SERİSİ · 216 TEKNİK VİDEO</span>
+            <div className="alu-stack" style={{ gap: '0.5rem' }}>
+              <span className="preview-kicker">GÖRSEL EĞİTİM · VİDEO KÜTÜPHANESİ</span>
               <h2 id="all-playlists-heading" className="alu-h1">
-                Tüm Eğitim Oynatma Listeleri
+                Önerilen Oynatma Listeleri ve Kanallar
               </h2>
+              <p className="alu-body preview-meta" style={{ maxWidth: '58ch' }}>
+                Sizin için derlediğimiz en popüler ve faydalı video kaynak liste ve kanalları.
+              </p>
             </div>
-            <div className="alu-products-showcase">
-              {allPlaylists.map((pl, idx) => {
-                const firstVidId = pl.videos?.[0]?.id;
-                return (
-                  <article key={pl.id} className="alu-product-card">
-                    {firstVidId && (
-                      <Link href={pl.url} className="alu-product-card__media">
-                        <img
-                          src={`https://i.ytimg.com/vi/${firstVidId}/hqdefault.jpg`}
-                          alt={pl.title}
-                          loading="lazy"
-                        />
-                        <span className="alu-product-card__tier">0{idx + 1}</span>
-                        <span className="alu-video-play-badge">
-                          <AluIcon name="play" size="md" />
-                        </span>
-                      </Link>
-                    )}
-                    <div className="alu-product-card__body">
-                      <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
-                        <span className="alu-badge alu-badge--accent">
-                          <AluIcon name="video" size="sm" />
-                          <span>{pl.count} Video</span>
-                        </span>
+
+            {/* YouTube Subscribe Banner (1:1 with live site) */}
+            <div className="alu-yt-banner">
+              <div className="alu-yt-banner__watermark" aria-hidden="true">
+                <AluIcon name="youtube" size="lg" />
+              </div>
+              <div className="alu-yt-banner__content">
+                <div className="alu-yt-banner__badge">
+                  <span className="alu-yt-banner__badge-icon">
+                    <AluIcon name="youtube" size="sm" />
+                  </span>
+                  <span>Resmi Kanal</span>
+                </div>
+                <h3 className="alu-yt-banner__title">
+                  Allplan Türkiye YouTube Kanalına Abone Olun
+                </h3>
+                <p className="alu-yt-banner__desc">
+                  En yeni eğitim videoları, ipuçları, webinar kayıtları ve sektörel gelişmelerden anında haberdar olmak için kanalımıza abone olmayı unutmayın.
+                </p>
+              </div>
+              <div className="alu-yt-banner__action">
+                <a
+                  href="https://www.youtube.com/@AllplanTurkey?sub_confirmation=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="alu-yt-subscribe-btn"
+                >
+                  <AluIcon name="youtube" size="md" />
+                  <span>ABONE OL</span>
+                </a>
+              </div>
+            </div>
+
+            {/* 22 Playlist & Channel Cards Grid (1:1 with live site) */}
+            <div className="alu-yt-grid">
+              {VIDEO_LIBRARY_ITEMS.map((item, idx) => {
+                const isInternal = item.url.startsWith('/solutions-v2');
+                const isExternal = item.url.startsWith('http');
+                const matchedPlaylist = isInternal ? playlistByUrl.get(item.url) : undefined;
+                const cardClassName = `alu-yt-card${
+                  isInternal ? ' alu-yt-card--internal' : ''
+                }`;
+
+                const cardInner = (
+                  <>
+                    <div className="alu-yt-card__top">
+                      <div className="alu-yt-card__icon">
+                        <AluIcon name="youtube" size="lg" />
                       </div>
-                      <h3 className="alu-card__title">{pl.title}</h3>
-                      {pl.subtitle && <p className="alu-body-sm">{pl.subtitle}</p>}
+                      {matchedPlaylist && (
+                        <span className="alu-yt-card__count">
+                          {matchedPlaylist.count} Video
+                        </span>
+                      )}
                     </div>
-                    <div className="alu-product-card__footer">
-                      <Link className="alu-link alu-link--standalone" href={pl.url}>
-                        <span>Seriyi Aç ({pl.count} Video)</span>
-                        <AluIcon name="arrow-right" size="sm" />
-                      </Link>
+
+                    <h3 className="alu-yt-card__title">{item.title}</h3>
+
+                    <p className="alu-yt-card__desc">{item.description}</p>
+
+                    <div className="alu-yt-card__footer">
+                      <span>İzleme Listesini İncele</span>
+                      <AluIcon name="external-link" size="sm" />
                     </div>
-                  </article>
+
+                    <div className="alu-yt-card__watermark" aria-hidden="true">
+                      <AluIcon name="circle-play" size="lg" />
+                    </div>
+                  </>
+                );
+
+                if (isInternal) {
+                  return (
+                    <Link key={`${item.title}-${idx}`} href={item.url} className={cardClassName}>
+                      {cardInner}
+                    </Link>
+                  );
+                }
+
+                return (
+                  <a
+                    key={`${item.title}-${idx}`}
+                    href={item.url}
+                    target={isExternal ? '_blank' : undefined}
+                    rel={isExternal ? 'noopener noreferrer' : undefined}
+                    className={cardClassName}
+                  >
+                    {cardInner}
+                  </a>
                 );
               })}
             </div>
@@ -946,7 +1153,7 @@ export function SubpageView({
           )}
 
           {/* Preserved Page Links, Downloads & Actions */}
-          {page.contentLinks && page.contentLinks.length > 0 && (
+          {page.contentLinks && page.contentLinks.length > 0 && !isVideoLibraryHub && !isVideoPlaylistPage && (
             <div className="alu-techspecs-banner" style={{ padding: 'var(--space-inset-lg)' }}>
               <div className="alu-stack" style={{ gap: 'var(--space-stack-md)' }}>
                 <span className="preview-kicker">İLGİLİ BAĞLANTILAR, MODÜLLER VE DOKÜMANLAR</span>

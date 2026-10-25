@@ -1,7 +1,7 @@
 # Oturum devri
 
 ## Güncelleme tarihi ve oturum no
-25.10.2026 — Faz 2 onaylandı; Faz 3 (PRD Dokümanı — `docs/PRD.md`) tamamlandı, onay bekliyor (Europe/Istanbul).
+25.10.2026 — Faz 3 (PRD) onaylandı; Faz 4 (Antrasit Design System — `design-system/`) tamamlandı, onay bekliyor (Europe/Istanbul).
 
 ## Faz durumu tablosu
 | Faz | Durum |
@@ -9,9 +9,9 @@
 | 0 — İçerik envanteri | Tamamlandı (25.10.2026 kullanıcı onayıyla) |
 | 1 — UI/UX analizi | Tamamlandı (25.10.2026 kullanıcı onayıyla — `docs/ux-audit.md`) |
 | 2 — Teknik baseline | Tamamlandı (25.10.2026 kullanıcı onayıyla — `docs/baseline-report.md`) |
-| 3 — PRD | Onay bekliyor (`docs/PRD.md` üretildi) |
-| 4 — Design system | Başlanmadı |
-| 5 — Ana sayfa tasarımı | Başlanmadı |
+| 3 — PRD | Tamamlandı (25.10.2026 kullanıcı onayıyla — `docs/PRD.md`) |
+| 4 — Design system | Onay bekliyor (`design-system/` altında Antrasit tasarım sistemi kuruldu) |
+| 5 — Ana sayfa tasarımı | Başlanmadı (Sıradaki faz) |
 | 6 — Geliştirme | Başlanmadı |
 
 ## Tasarım beklerken envanter ve içerik modeli — 21.10.2026
@@ -98,7 +98,7 @@
 - Marka kılavuzunun üretici izinleri hakkındaki ifadeleri resmî izin belgesi yerine geçmez; benzerlik kontrolü henüz yapılmadı.
 
 ## Sıradaki adım
-`docs/PRD.md` (Faz 3 — PRD Dokümanı) için kullanıcı onayını beklemek; onay sonrası **Faz 4 — Design System (`design-system/`)** ve tasarım yönü adımına geçmek.
+`design-system/` (Faz 4 — Antrasit Design System) için kullanıcı onayını beklemek; onay sonrası **Faz 5 — Ana Sayfa Tasarımı** aşamasına geçmek.
 
 Claude v3 indirildi ve ayrı antrasit önizleme kullanıcı tarafından uygun bulundu. Teknik entegrasyon kabulü değildir; aşağıdaki eski Claude durum kayıtları tarihsel notlardır.
 
@@ -343,3 +343,15 @@ Git dışında kullanıcı ZIP'i, `Aluplan Design System/`, `docs/previews/anthr
   12. Yayına geçiş (cutover) adımları ve SEO kaybını önleme kontrol listesi.
   13. Faz kabul kriterleri, riskler ve açık kararların durumu.
 - **Sıradaki adım:** `docs/PRD.md` (Faz 3) için kullanıcı onayı; onaylandıktan sonra **Faz 4 — Design System (`design-system/`)** aşamasına geçmek.
+
+## 25.10.2026 — Faz 3 (PRD) onayı ve Faz 4 (`design-system/` — Antrasit Tasarım Sistemi) kurulumu
+
+- Kullanıcı Faz 3 (`docs/PRD.md` — commit `ffead59`) dokümanını onayladı ve **Antrasit tasarım sistemi** üzerinden ilerlenmesini kararlaştırdı.
+- `design-system/` dizini altında resmi Faz 4 çıktı yapısı oluşturuldu:
+  - `design-system/tokens/`: `tokens.json` (171 primitive, 161 semantic, 66 component alias token), üretilmiş `primitives.css`, `semantic.css`, `component-aliases.css`, `fonts.css` ve `tokens/build/` (`CONTRAST-REPORT.md` — 188/188 WCAG 2.2 AA kontrast doğrulaması, 0 hata; `breakpoints.json|mjs`).
+  - `design-system/components/`: Temel ve Aluplan kalıp bileşenleri (`actions`, `brand`, `disclosure`, `feedback`, `forms`, `layout`, `navigation`, `patterns`, `surfaces`, `typography`) + `base.css` ve `responsive.template.css` / `responsive.generated.css`.
+  - `design-system/assets/`: Yerel WOFF2 fontlar (`Manrope`, `IBM Plex Sans`, `IBM Plex Mono` + OFL lisansları), logolar (`aluplan-logo-white.svg`, `aluplan-logo-white-filled.svg`, `aluplan-logo-black.svg`) ve 31 ikonluk Lucide alt kümesi.
+  - `design-system/catalog/index.html`: Canlı etkileşimli stil rehberi.
+  - `design-system/ui_kits/homepage/index.html` + `design-system/data/homepage-data.js`: Keskin kart dili (`radius.surface = 0px`, `16/24/32 px` yoğunluk) ve `H01–H08` ana sayfa kesiti.
+  - Doğrulama: `node design-system/scripts/build-tokens.mjs --check` → `0 errors` (`contrastChecks: 188, contrastFails: 0`).
+- **Sıradaki adım:** `design-system/` (Faz 4) için kullanıcı onayı; onaylandıktan sonra **Faz 5 — Ana Sayfa Tasarımı** aşamasına geçmek.

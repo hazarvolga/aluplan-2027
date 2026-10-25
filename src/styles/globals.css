@@ -2208,108 +2208,354 @@ button.alu-role[aria-checked="true"] {
   flex: 1;
 }
 
-/* H03: Interactive Role Stage & Products Showcase */
-.alu-role-stage {
+/* H03: PathwayProductSystem — Interactive Role Tabs, Split Stage & Conditional Product Cards */
+@keyframes aluPathwaySlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes aluPathwayFeatureIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.alu-pathway-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.alu-pathway-glow {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52rem;
+  height: 52rem;
+  border-radius: 9999px;
+  background-color: var(--role-accent, #3B82F6);
+  filter: blur(130px);
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+  transition: background-color 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+[data-mode="light"] .alu-pathway-glow {
+  opacity: 0.06;
+}
+
+.alu-pathway-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+/* Role Tabs */
+.alu-pathway-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.alu-pathway-tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.875rem;
+  min-width: 14rem;
+  padding: 0.95rem 1.5rem;
+  background: var(--surface-default);
+  border: 1px solid var(--border-strong);
+  color: var(--text-secondary);
+  cursor: pointer;
+  text-align: left;
+  transition:
+    transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    color 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.alu-pathway-tab:hover {
+  border-color: var(--tab-accent, var(--accent-border));
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+.alu-pathway-tab--active {
+  background: var(--surface-raised);
+  border-color: var(--tab-accent, var(--accent-border));
+  color: var(--text-primary);
+  transform: scale(1.05);
+  box-shadow:
+    0 18px 40px -12px rgba(0, 0, 0, 0.5),
+    0 0 0 1px var(--tab-accent, var(--accent-border));
+}
+.alu-pathway-tab__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--surface-subtle);
+  border: 1px solid var(--border-default);
+  color: var(--text-secondary);
+  transition: all 350ms ease;
+}
+.alu-pathway-tab--active .alu-pathway-tab__icon {
+  background: color-mix(in srgb, var(--tab-accent, #3B82F6) 16%, transparent);
+  border-color: var(--tab-accent, #3B82F6);
+  color: var(--tab-accent, #3B82F6);
+}
+.alu-pathway-tab__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  flex: 1;
+}
+.alu-pathway-tab__kicker {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+.alu-pathway-tab__label {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+.alu-pathway-tab__dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: var(--border-strong);
+  transition: all 350ms ease;
+}
+.alu-pathway-tab--active .alu-pathway-tab__dot {
+  background: var(--tab-accent, #3B82F6);
+  box-shadow: 0 0 12px var(--tab-accent, #3B82F6);
+}
+
+/* Split Active Role Content */
+.alu-pathway-split {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: center;
+  padding: clamp(1.75rem, 3.5vw, 2.75rem);
   background: var(--surface-raised);
   border: 1px solid var(--border-strong);
+  border-top: 2px solid var(--role-accent, var(--accent-border));
   box-shadow: var(--elevation-overlay);
-  overflow: hidden;
+  transition: border-color 450ms ease;
 }
-.alu-role-stage__visual {
+.alu-pathway-split__left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+  animation: aluPathwaySlideIn 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.alu-pathway-role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.7rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--role-accent, #3B82F6);
+  background: color-mix(in srgb, var(--role-accent, #3B82F6) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--role-accent, #3B82F6) 45%, transparent);
+}
+.alu-pathway-split__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--role-accent, #3B82F6);
+  transition: color 400ms ease;
+}
+.alu-pathway-split__desc {
+  margin: 0;
+  font-size: clamp(1.05rem, 1.35vw, 1.22rem);
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 52ch;
+}
+.alu-pathway-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.85rem 1.5rem;
+  background: var(--surface-default);
+  border: 1px solid var(--role-accent, var(--accent-border));
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--type-label-size);
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background-color 300ms ease,
+    border-color 300ms ease,
+    transform 300ms ease,
+    box-shadow 300ms ease;
+}
+.alu-pathway-cta:hover {
+  background: color-mix(in srgb, var(--role-accent, #3B82F6) 18%, var(--surface-raised));
+  box-shadow: 0 10px 28px -8px color-mix(in srgb, var(--role-accent, #3B82F6) 45%, transparent);
+  text-decoration: none;
+}
+.alu-pathway-cta__arrow {
+  display: inline-flex;
+  transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.alu-pathway-cta:hover .alu-pathway-cta__arrow {
+  transform: translateX(5px);
+}
+
+.alu-pathway-split__right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+}
+.alu-pathway-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.875rem;
+}
+.alu-pathway-feature-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.125rem;
+  background: var(--surface-default);
+  border: 1px solid var(--border-default);
+  border-left: 3px solid var(--role-accent, var(--accent-border));
+  box-shadow: var(--elevation-raised);
+  animation: aluPathwayFeatureIn 380ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.alu-pathway-feature-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--role-accent, #3B82F6) 16%, transparent);
+  color: var(--role-accent, #3B82F6);
+  flex-shrink: 0;
+}
+.alu-pathway-feature-card__text {
+  font-size: var(--type-body-sm-size);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.alu-pathway-visual-frame {
   position: relative;
-  min-height: 24rem;
-  background: #0e1014;
+  aspect-ratio: 21 / 9;
   overflow: hidden;
+  border: 1px solid var(--border-strong);
+  background: #0d0f12;
+  animation: aluPathwayFeatureIn 460ms cubic-bezier(0.22, 1, 0.36, 1) 180ms both;
 }
-.alu-role-stage__visual img {
+.alu-pathway-visual-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 500ms ease;
+  transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
 }
-.alu-role-stage:hover .alu-role-stage__visual img {
-  transform: scale(1.03);
+.alu-pathway-split:hover .alu-pathway-visual-frame img {
+  transform: scale(1.04);
 }
-.alu-role-stage__overlay {
+.alu-pathway-visual-frame__caption {
   position: absolute;
   inset: auto 0 0 0;
-  padding: 1.5rem;
+  padding: 0.6rem 1rem;
   background: linear-gradient(180deg, transparent 0%, rgba(12, 14, 18, 0.92) 100%);
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-.alu-role-stage__content {
-  padding: clamp(1.75rem, 3.5vw, 3rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: var(--space-stack-lg);
-}
-.alu-role-stage__features {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
-}
-.alu-role-stage__feature {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  padding: 0.875rem 1rem;
-  background: var(--surface-default);
-  border: 1px solid var(--border-default);
-  border-left: 2px solid var(--accent-border);
-}
-.alu-role-stage__feature-num {
+  align-items: center;
+  justify-content: space-between;
   font-family: var(--font-mono);
-  font-size: var(--type-caption-size);
-  font-weight: 700;
-  color: var(--accent-fg);
-  line-height: 1.4;
-}
-.alu-role-stage__feature-text {
-  font-weight: var(--font-weight-label);
-  color: var(--text-primary);
-  font-size: var(--type-body-sm-size);
+  font-size: 0.72rem;
+  color: #f4f3ef;
 }
 
-/* 6 Permanent Products Showcase */
+/* 6 Permanent Products Showcase (Conditional Highlighting & Smooth Dimming) */
 .alu-products-showcase {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
-  gap: var(--space-inset-md);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
 }
 .alu-product-card {
   display: flex;
   flex-direction: column;
   background: var(--surface-default);
   border: 1px solid var(--border-default);
-  box-shadow: var(--elevation-raised);
+  text-decoration: none;
+  color: var(--text-primary);
   overflow: hidden;
   transition:
-    transform var(--motion-duration-base) var(--motion-easing-standard),
-    border-color var(--motion-duration-base) var(--motion-easing-standard),
-    box-shadow var(--motion-duration-base) var(--motion-easing-standard);
-}
-.alu-product-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--border-strong);
-  box-shadow: var(--elevation-overlay);
+    opacity 450ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 450ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 450ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 450ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 450ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 450ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 .alu-product-card--highlighted {
-  border-color: var(--accent-border);
-  border-top: 3px solid var(--accent-border);
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  filter: grayscale(0);
   background: var(--surface-raised);
+  border-color: color-mix(in srgb, var(--role-accent, #3B82F6) 55%, var(--border-strong));
+  border-top: 3px solid var(--role-accent, var(--accent-border));
+  box-shadow: 0 20px 44px -15px rgba(0, 0, 0, 0.45);
+}
+.alu-product-card--highlighted:hover {
+  transform: translateY(-4px);
+  border-color: var(--role-accent, var(--accent-border));
+  box-shadow:
+    0 24px 52px -12px rgba(0, 0, 0, 0.55),
+    0 0 24px -8px color-mix(in srgb, var(--role-accent, #3B82F6) 40%, transparent);
+  text-decoration: none;
+}
+.alu-product-card--dimmed {
+  opacity: 0.3;
+  transform: scale(0.975);
+  filter: grayscale(100%);
+  background: var(--surface-subtle);
+  border-color: var(--border-subtle);
+  box-shadow: none;
+}
+.alu-product-card--dimmed:hover {
+  opacity: 0.82;
+  transform: scale(0.99);
+  filter: grayscale(20%);
+  border-color: var(--border-strong);
+  text-decoration: none;
 }
 .alu-product-card__media {
   position: relative;
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   background: #101216;
   border-bottom: 1px solid var(--border-default);
@@ -2319,10 +2565,10 @@ button.alu-role[aria-checked="true"] {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 400ms ease;
+  transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 .alu-product-card:hover .alu-product-card__media img {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 .alu-product-card__tier {
   position: absolute;
@@ -2341,27 +2587,108 @@ button.alu-role[aria-checked="true"] {
   right: 0.75rem;
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  padding: 0.25rem 0.6rem;
-  background: var(--action-primary-bg);
-  color: var(--action-primary-fg);
+  gap: 0.4rem;
+  padding: 0.25rem 0.65rem;
+  background: rgba(15, 17, 21, 0.9);
+  border: 1px solid var(--role-accent, var(--accent-border));
+  color: #ffffff;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 600;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.alu-product-card__pulse-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: var(--role-accent, #3B82F6);
+  box-shadow: 0 0 8px var(--role-accent, #3B82F6);
 }
 .alu-product-card__body {
   padding: 1.375rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.55rem;
   flex: 1;
 }
+.alu-product-card__top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+.alu-product-card__box-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--surface-default);
+  border: 1px solid var(--border-default);
+  color: var(--text-secondary);
+  transition: all 300ms ease;
+}
+.alu-product-card--highlighted .alu-product-card__box-icon {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+.alu-product-card--highlighted:hover .alu-product-card__box-icon {
+  background: color-mix(in srgb, var(--role-accent, #3B82F6) 16%, transparent);
+  border-color: var(--role-accent, #3B82F6);
+  color: var(--role-accent, #3B82F6);
+}
+.alu-product-card__status-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: transparent;
+  transition: all 350ms ease;
+}
+.alu-product-card__status-dot--active {
+  background: var(--role-accent, #3B82F6);
+  box-shadow: 0 0 10px var(--role-accent, #3B82F6);
+}
+.alu-product-card__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  transition: color 300ms ease;
+}
+.alu-product-card--highlighted:hover .alu-product-card__title {
+  color: var(--role-accent, var(--accent-fg));
+}
+.alu-product-card__desc {
+  margin: 0;
+  font-size: var(--type-body-sm-size);
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
 .alu-product-card__footer {
-  padding: 1rem 1.5rem;
+  padding: 0.95rem 1.5rem;
   border-top: 1px solid var(--border-subtle);
   background: var(--surface-subtle);
   display: flex;
   align-items: center;
+}
+.alu-product-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: var(--type-caption-size);
+  font-weight: 700;
+  color: var(--role-accent, var(--accent-fg));
+  opacity: 0.78;
+  transform: translateY(2px);
+  transition:
+    opacity 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.alu-product-card:hover .alu-product-card__cta {
+  opacity: 1;
+  transform: translateY(0) translateX(3px);
 }
 
 /* H04: Asymmetric Bento Grid */
@@ -2830,10 +3157,13 @@ button.alu-role[aria-checked="true"] {
 
 @media (max-width: 64rem) {
   .alu-hero-stage__grid,
-  .alu-role-stage,
+  .alu-pathway-split,
   .alu-feature-row,
   .alu-trial-banner__inner {
     grid-template-columns: 1fr;
+  }
+  .alu-products-showcase {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .alu-feature-row--reverse .alu-feature-row__media,
   .alu-feature-row--reverse .alu-feature-row__content {
@@ -2855,11 +3185,23 @@ button.alu-role[aria-checked="true"] {
 
 @media (max-width: 40rem) {
   .alu-hero-metrics,
-  .alu-role-stage__features {
+  .alu-pathway-features-grid,
+  .alu-products-showcase {
     grid-template-columns: 1fr;
+  }
+  .alu-pathway-tab {
+    width: 100%;
   }
   .alu-hero-metrics__item {
     border-right: 0;
     border-bottom: 1px solid var(--border-default);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .alu-pathway-split__left,
+  .alu-pathway-feature-card,
+  .alu-pathway-visual-frame {
+    animation: none !important;
   }
 }

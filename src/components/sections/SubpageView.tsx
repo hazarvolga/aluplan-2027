@@ -10,6 +10,7 @@ import {
   TRIAL_CTA_URL,
   MAIN_QUOTE_FORM_URL
 } from '@/lib/site-data';
+import { AluIcon } from '@/components/ui/AluIcon';
 
 const allPlaylists = getAllPlaylists();
 const searchIndex = getSearchIndex();
@@ -110,70 +111,98 @@ export function SubpageView({
       })
     : searchIndex;
 
+  // Deduplicate page images by src while preserving order
+  const uniqueImages = React.useMemo(() => {
+    const seen = new Set<string>();
+    const list: { src: string; alt: string }[] = [];
+    for (const img of page.images || []) {
+      if (!img.src || seen.has(img.src)) continue;
+      seen.add(img.src);
+      list.push(img);
+    }
+    return list;
+  }, [page.images]);
+
+  const heroImage = !isLegalPage && uniqueImages.length > 0 ? uniqueImages[0] : null;
+  const contentImages = heroImage ? uniqueImages.slice(1) : uniqueImages;
+  const pageVideos = page.videos || [];
+
   return (
     <>
       {/* Subpage Hero */}
       <section className="alu-page-hero" aria-labelledby="page-h1">
-        <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-md)' }}>
-          <nav aria-label="Sayfa konumu (Breadcrumb)">
-            <ol className="alu-breadcrumb">
-              {page.breadcrumbs.map((crumb, idx) => (
-                <li key={crumb.href + idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
-                  {idx > 0 && <span aria-hidden="true">/</span>}
-                  {idx < page.breadcrumbs.length - 1 ? (
-                    <Link href={crumb.href}>{crumb.label}</Link>
-                  ) : (
-                    <span aria-current="page" style={{ color: 'var(--text-primary)' }}>
-                      {crumb.label}
-                    </span>
-                  )}
-                </li>
-              ))}
-            </ol>
-          </nav>
+        <div className={`alu-container ${heroImage ? 'alu-subpage-hero__grid' : 'alu-stack'}`} style={{ gap: 'var(--space-stack-lg)' }}>
+          <div className="alu-stack" style={{ gap: 'var(--space-stack-md)' }}>
+            <nav aria-label="Sayfa konumu (Breadcrumb)">
+              <ol className="alu-breadcrumb">
+                {page.breadcrumbs.map((crumb, idx) => (
+                  <li key={crumb.href + idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem' }}>
+                    {idx > 0 && <AluIcon name="chevron-right" size="sm" />}
+                    {idx < page.breadcrumbs.length - 1 ? (
+                      <Link href={crumb.href}>{crumb.label}</Link>
+                    ) : (
+                      <span aria-current="page" style={{ color: 'var(--text-primary)' }}>
+                        {crumb.label}
+                      </span>
+                    )}
+                  </li>
+                ))}
+              </ol>
+            </nav>
 
-          <div className="alu-cluster">
-            <span className="alu-badge alu-badge--accent">{page.eyebrow}</span>
-            <span className="alu-badge">{page.path}</span>
-          </div>
+            <div className="alu-cluster">
+              <span className="alu-badge alu-badge--accent">{page.eyebrow}</span>
+              <span className="alu-badge">{page.path}</span>
+            </div>
 
-          <h1 id="page-h1" className="alu-display" style={{ margin: 0 }}>
-            {page.h1}
-          </h1>
+            <h1 id="page-h1" className="alu-display" style={{ margin: 0 }}>
+              {page.h1}
+            </h1>
 
-          <p className="alu-body-lg preview-meta" style={{ margin: 0 }}>
-            {page.description}
-          </p>
+            <p className="alu-body-lg preview-meta" style={{ margin: 0 }}>
+              {page.description}
+            </p>
 
-          {!isLegalPage && (
-            <div className="alu-cluster" style={{ marginTop: 'var(--space-stack-sm)' }}>
-              <a
-                href={MAIN_QUOTE_FORM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="alu-button alu-button--primary alu-button--md"
-              >
-                Teklif Talep Formu ↗
-              </a>
-              <a
-                href={TRIAL_CTA_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="alu-button alu-button--secondary alu-button--md"
-              >
-                Ücretsiz Deneme ↗
-              </a>
-              {page.path.startsWith('/products') && (
+            {!isLegalPage && (
+              <div className="alu-cluster" style={{ marginTop: 'var(--space-stack-sm)' }}>
                 <a
-                  href="/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf"
+                  href={MAIN_QUOTE_FORM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="alu-button alu-button--ghost alu-button--md"
+                  className="alu-button alu-button--primary alu-button--md"
                 >
-                  Paket Karşılaştırma PDF ↗
+                  <span>Teklif Talep Formu</span>
+                  <AluIcon name="external-link" size="sm" />
                 </a>
-              )}
-            </div>
+                <a
+                  href={TRIAL_CTA_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="alu-button alu-button--secondary alu-button--md"
+                >
+                  <span>Ücretsiz Deneme</span>
+                  <AluIcon name="external-link" size="sm" />
+                </a>
+                {page.path.startsWith('/products') && (
+                  <a
+                    href="/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="alu-button alu-button--ghost alu-button--md"
+                  >
+                    <AluIcon name="file-text" size="sm" />
+                    <span>Paket Karşılaştırma PDF</span>
+                  </a>
+                )}
+              </div>
+            )}
+          </div>
+
+          {heroImage && (
+            <figure className="alu-subpage-hero__media">
+              <img src={heroImage.src} alt={heroImage.alt || page.h1} />
+              {heroImage.alt && <figcaption className="alu-caption">{heroImage.alt}</figcaption>}
+            </figure>
           )}
         </div>
       </section>
@@ -221,12 +250,29 @@ export function SubpageView({
                         : undefined
                     }
                   >
+                    <button
+                      type="button"
+                      className="alu-card__media alu-card__media--video"
+                      onClick={() => setActiveVideoId(vid.id)}
+                      aria-label={`${vid.title} videosunu oynat`}
+                    >
+                      <img
+                        src={`https://i.ytimg.com/vi/${vid.id}/hqdefault.jpg`}
+                        alt={vid.title}
+                        loading="lazy"
+                      />
+                      <span className="alu-video-play-badge">
+                        <AluIcon name="play" size="md" />
+                      </span>
+                    </button>
                     <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
                       <span className="alu-badge">Bölüm {idx + 1}</span>
                       {vid.duration && <span className="alu-caption">{vid.duration}</span>}
                     </div>
                     <div className="alu-card__body">
-                      <h3 className="alu-card__title">{vid.title}</h3>
+                      <h3 className="alu-card__title" style={{ fontSize: 'var(--type-h4-size)' }}>
+                        {vid.title}
+                      </h3>
                       {vid.description && <p className="alu-body-sm">{vid.description}</p>}
                     </div>
                     <div className="alu-card__footer alu-cluster" style={{ justifyContent: 'space-between' }}>
@@ -235,15 +281,17 @@ export function SubpageView({
                         className="alu-button alu-button--secondary alu-button--sm"
                         onClick={() => setActiveVideoId(vid.id)}
                       >
-                        {isSelected ? 'Oynatılıyor' : 'Burada İzle'}
+                        <AluIcon name="play" size="sm" />
+                        <span>{isSelected ? 'Oynatılıyor' : 'Burada İzle'}</span>
                       </button>
                       <a
                         href={`https://www.youtube.com/watch?v=${vid.id}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="alu-link"
+                        className="alu-link alu-link--standalone"
                       >
-                        YouTube ↗
+                        <span>YouTube</span>
+                        <AluIcon name="external-link" size="sm" />
                       </a>
                     </div>
                   </article>
@@ -265,23 +313,42 @@ export function SubpageView({
               </h2>
             </div>
             <div className="alu-grid">
-              {allPlaylists.map((pl) => (
-                <article key={pl.id} className="alu-card">
-                  <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
-                    <span className="alu-badge alu-badge--accent">{pl.count} Video</span>
-                    <span className="alu-caption">{pl.id}</span>
-                  </div>
-                  <div className="alu-card__body">
-                    <h3 className="alu-card__title">{pl.title}</h3>
-                    {pl.subtitle && <p className="alu-body-sm">{pl.subtitle}</p>}
-                  </div>
-                  <div className="alu-card__footer">
-                    <Link className="alu-link" href={pl.url}>
-                      Seriyi Aç ({pl.count} Video) →
-                    </Link>
-                  </div>
-                </article>
-              ))}
+              {allPlaylists.map((pl) => {
+                const firstVidId = pl.videos?.[0]?.id;
+                return (
+                  <article key={pl.id} className="alu-card">
+                    {firstVidId && (
+                      <Link href={pl.url} className="alu-card__media alu-card__media--video">
+                        <img
+                          src={`https://i.ytimg.com/vi/${firstVidId}/hqdefault.jpg`}
+                          alt={pl.title}
+                          loading="lazy"
+                        />
+                        <span className="alu-video-play-badge">
+                          <AluIcon name="play" size="md" />
+                        </span>
+                      </Link>
+                    )}
+                    <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
+                      <span className="alu-badge alu-badge--accent">
+                        <AluIcon name="video" size="sm" />
+                        <span>{pl.count} Video</span>
+                      </span>
+                      <span className="alu-caption">{pl.id}</span>
+                    </div>
+                    <div className="alu-card__body">
+                      <h3 className="alu-card__title">{pl.title}</h3>
+                      {pl.subtitle && <p className="alu-body-sm">{pl.subtitle}</p>}
+                    </div>
+                    <div className="alu-card__footer">
+                      <Link className="alu-link alu-link--standalone" href={pl.url}>
+                        <span>Seriyi Aç ({pl.count} Video)</span>
+                        <AluIcon name="arrow-right" size="sm" />
+                      </Link>
+                    </div>
+                  </article>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -310,8 +377,9 @@ export function SubpageView({
                     <p className="alu-body-sm">{item.description}</p>
                   </div>
                   <div className="alu-card__footer">
-                    <Link className="alu-link" href={item.path}>
-                      {item.path} →
+                    <Link className="alu-link alu-link--standalone" href={item.path}>
+                      <span>{item.path}</span>
+                      <AluIcon name="arrow-right" size="sm" />
                     </Link>
                   </div>
                 </article>
@@ -396,7 +464,8 @@ export function SubpageView({
                   </p>
                 )}
                 <button type="submit" className="alu-button alu-button--primary alu-button--md">
-                  Mesajı Gönder
+                  <span>Mesajı Gönder</span>
+                  <AluIcon name="arrow-right" size="sm" />
                 </button>
               </form>
             </div>
@@ -408,19 +477,23 @@ export function SubpageView({
               </p>
               <ul className="alu-stack" style={{ listStyle: 'none', padding: 0, margin: 0, gap: '0.5rem' }}>
                 <li>
-                  <strong>Telefon 1:</strong> <a className="alu-link" href="tel:+902162258441">(+90) 216 225 84 41</a>
+                  <AluIcon name="phone" size="sm" /> <strong>Telefon 1:</strong>{' '}
+                  <a className="alu-link" href="tel:+902162258441">(+90) 216 225 84 41</a>
                 </li>
                 <li>
-                  <strong>Telefon 2:</strong> <a className="alu-link" href="tel:+905432119442">(+90) 543 211 94 42</a>
+                  <AluIcon name="phone" size="sm" /> <strong>Telefon 2:</strong>{' '}
+                  <a className="alu-link" href="tel:+905432119442">(+90) 543 211 94 42</a>
                 </li>
                 <li>
-                  <strong>Telefon 3:</strong> <a className="alu-link" href="tel:+905494997379">(+90) 549 499 73 79</a>
+                  <AluIcon name="phone" size="sm" /> <strong>Telefon 3:</strong>{' '}
+                  <a className="alu-link" href="tel:+905494997379">(+90) 549 499 73 79</a>
                 </li>
                 <li>
-                  <strong>E-posta:</strong> <a className="alu-link" href="mailto:info@aluplan.com.tr">info@aluplan.com.tr</a>
+                  <AluIcon name="mail" size="sm" /> <strong>E-posta:</strong>{' '}
+                  <a className="alu-link" href="mailto:info@aluplan.com.tr">info@aluplan.com.tr</a>
                 </li>
                 <li>
-                  <strong>Teknik Destek Portalı:</strong>{' '}
+                  <AluIcon name="life-buoy" size="sm" /> <strong>Teknik Destek Portalı:</strong>{' '}
                   <a className="alu-link" href="https://allplan.net.tr" target="_blank" rel="noopener noreferrer">
                     allplan.net.tr ↗
                   </a>
@@ -520,7 +593,8 @@ export function SubpageView({
                 )}
                 <div className="alu-cluster">
                   <button type="submit" className="alu-button alu-button--primary alu-button--md">
-                    Deklarasyonu Gönder
+                    <span>Deklarasyonu Gönder</span>
+                    <AluIcon name="arrow-right" size="sm" />
                   </button>
                   <a
                     href="/docs/Declaration_Allplan_2021-06-01.pdf"
@@ -528,7 +602,8 @@ export function SubpageView({
                     rel="noopener noreferrer"
                     className="alu-button alu-button--secondary alu-button--md"
                   >
-                    Örnek Deklarasyon Belgesi (PDF) ↗
+                    <AluIcon name="file-text" size="sm" />
+                    <span>Örnek Deklarasyon Belgesi (PDF)</span>
                   </a>
                 </div>
               </form>
@@ -537,35 +612,98 @@ export function SubpageView({
         </section>
       )}
 
-      {/* Preserved Structured Content Sections (100% Content Parity) */}
+      {/* Preserved Native MP4 Videos (e.g., ALLPLAN Bridge 5 feature videos, Architecture & Steel header videos) */}
+      {pageVideos.length > 0 && (
+        <section className="preview-section preview-section--subtle" aria-label="Sayfa videoları">
+          <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-lg)' }}>
+            <div className="alu-stack">
+              <span className="preview-kicker">TEKNİK VİDEO GÖSTERİMLERİ</span>
+              <h2 className="alu-h2">Uygulama ve İş Akışı Videoları</h2>
+            </div>
+            <div className="alu-grid">
+              {pageVideos.map((vid, vIdx) => (
+                <article key={`${vid.src}-${vIdx}`} className="alu-card">
+                  <div className="alu-card__media">
+                    <video
+                      src={vid.src}
+                      poster={vid.poster || undefined}
+                      controls
+                      preload="metadata"
+                      playsInline
+                      style={{ width: '100%', display: 'block', borderRadius: 'var(--radius-control)' }}
+                    />
+                  </div>
+                  {vid.title && (
+                    <div className="alu-card__body">
+                      <h3 className="alu-card__title" style={{ fontSize: 'var(--type-h4-size)' }}>
+                        {vid.title}
+                      </h3>
+                    </div>
+                  )}
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Preserved Structured Content Sections (100% Content & Image Parity) */}
       <section className="preview-section" aria-label="Sayfa içeriği">
         <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
           <div className="alu-grid" style={{ gridTemplateColumns: isLegalPage ? '1fr' : 'repeat(auto-fit, minmax(21rem, 1fr))' }}>
-            {page.sections.map((sec, idx) => (
-              <article key={`${sec.heading}-${idx}`} className="alu-card alu-stack">
-                {sec.level === 2 ? (
-                  <h2 className="alu-h3" style={{ margin: 0 }}>
-                    {sec.heading}
-                  </h2>
-                ) : sec.level === 3 ? (
-                  <h3 className="alu-h4" style={{ margin: 0 }}>
-                    {sec.heading}
-                  </h3>
-                ) : (
-                  <h4 className="alu-h4" style={{ margin: 0 }}>
-                    {sec.heading}
-                  </h4>
-                )}
-                <div className="alu-stack" style={{ gap: '0.5rem' }}>
-                  {sec.items.map((paragraph, pIdx) => (
-                    <p key={pIdx} className="alu-body-sm" style={{ margin: 0 }}>
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              </article>
-            ))}
+            {page.sections.map((sec, idx) => {
+              const secImg = !isLegalPage && idx < contentImages.length ? contentImages[idx] : null;
+              return (
+                <article key={`${sec.heading}-${idx}`} className="alu-card alu-stack">
+                  {secImg && (
+                    <div className="alu-card__media">
+                      <img src={secImg.src} alt={secImg.alt || sec.heading} loading="lazy" />
+                    </div>
+                  )}
+                  {sec.level === 2 ? (
+                    <h2 className="alu-h3" style={{ margin: 0 }}>
+                      {sec.heading}
+                    </h2>
+                  ) : sec.level === 3 ? (
+                    <h3 className="alu-h4" style={{ margin: 0 }}>
+                      {sec.heading}
+                    </h3>
+                  ) : (
+                    <h4 className="alu-h4" style={{ margin: 0 }}>
+                      {sec.heading}
+                    </h4>
+                  )}
+                  <div className="alu-stack" style={{ gap: '0.5rem' }}>
+                    {sec.items.map((paragraph, pIdx) => (
+                      <p key={pIdx} className="alu-body-sm" style={{ margin: 0 }}>
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                </article>
+              );
+            })}
           </div>
+
+          {/* Remaining Visual Assets Gallery (ensuring 100% of page.images are displayed) */}
+          {!isLegalPage && contentImages.length > page.sections.length && (
+            <div className="alu-stack" style={{ gap: 'var(--space-stack-md)' }}>
+              <div className="alu-stack">
+                <span className="preview-kicker">GÖRSEL GALERİ</span>
+                <h2 className="alu-h2">Modül, Ekran Görüntüleri ve Teknik Görseller</h2>
+              </div>
+              <div className="alu-gallery-grid">
+                {contentImages.slice(page.sections.length).map((img, gIdx) => (
+                  <figure key={`${img.src}-${gIdx}`} className="alu-card alu-gallery-card">
+                    <div className="alu-card__media">
+                      <img src={img.src} alt={img.alt || page.h1} loading="lazy" />
+                    </div>
+                    {img.alt && <figcaption className="alu-caption">{img.alt}</figcaption>}
+                  </figure>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Interactive States / Tabs captured during Phase 0 dynamic audit */}
           {page.interactiveStates && page.interactiveStates.length > 0 && (
@@ -627,7 +765,8 @@ export function SubpageView({
                       rel="noopener noreferrer"
                       className="alu-button alu-button--secondary alu-button--sm"
                     >
-                      {lnk.text} ↗
+                      <span>{lnk.text}</span>
+                      <AluIcon name="external-link" size="sm" />
                     </a>
                   ) : (
                     <Link
@@ -635,7 +774,8 @@ export function SubpageView({
                       href={lnk.href}
                       className="alu-button alu-button--secondary alu-button--sm"
                     >
-                      {lnk.text} →
+                      <span>{lnk.text}</span>
+                      <AluIcon name="arrow-right" size="sm" />
                     </Link>
                   )
                 )}
@@ -665,7 +805,8 @@ export function SubpageView({
                     rel="noopener noreferrer"
                     className="alu-button alu-button--primary alu-button--md"
                   >
-                    Ücretsiz Deneme (ALLPLAN Resmî Sayfası) ↗
+                    <span>Ücretsiz Deneme (ALLPLAN Resmî Sayfası)</span>
+                    <AluIcon name="external-link" size="sm" />
                   </a>
                   <a
                     href={MAIN_QUOTE_FORM_URL}
@@ -673,7 +814,8 @@ export function SubpageView({
                     rel="noopener noreferrer"
                     className="alu-button alu-button--secondary alu-button--md"
                   >
-                    Teklif Talep Formu ↗
+                    <span>Teklif Talep Formu</span>
+                    <AluIcon name="external-link" size="sm" />
                   </a>
                 </div>
               </div>

@@ -11,7 +11,9 @@
         "Entegre Rendering",
         "AI Görselleştirme",
         "Konsept Tasarım"
-      ]
+      ],
+      "icon": "building-2",
+      "image": "/assets/solutions/architecture-hero.jpg"
     },
     {
       "id": "engineer",
@@ -24,7 +26,9 @@
         "FEM Analizi",
         "Çakışma Kontrolü",
         "Maliyet Hesabı"
-      ]
+      ],
+      "icon": "ruler",
+      "image": "/assets/product-engineering.jpg"
     },
     {
       "id": "fabricator",
@@ -37,7 +41,9 @@
         "Lojistik Planlama",
         "Stok Yönetimi",
         "Montaj Planları"
-      ]
+      ],
+      "icon": "layers",
+      "image": "/assets/solutions/architecture-hero.jpg"
     }
   ],
   "products": [
@@ -48,7 +54,8 @@
       "href": "/products/allplan-basic",
       "relatedRoles": [
         "architect"
-      ]
+      ],
+      "image": "/assets/products/allplan-basic/2d-drafting.jpg"
     },
     {
       "id": "concept",
@@ -57,7 +64,8 @@
       "href": "/products/allplan-concept",
       "relatedRoles": [
         "architect"
-      ]
+      ],
+      "image": "/assets/products/allplan-concept/clash-detection.jpg"
     },
     {
       "id": "professional",
@@ -66,7 +74,8 @@
       "href": "/products/allplan-professional",
       "relatedRoles": [
         "engineer"
-      ]
+      ],
+      "image": "/assets/products/allplan-professional/3d-modeling.jpg"
     },
     {
       "id": "ultimate",
@@ -76,7 +85,8 @@
       "relatedRoles": [
         "engineer",
         "fabricator"
-      ]
+      ],
+      "image": "/assets/allplan-ultimate/core/parametric-modeling.jpg"
     },
     {
       "id": "civil",
@@ -85,7 +95,8 @@
       "href": "/products/civil",
       "relatedRoles": [
         "engineer"
-      ]
+      ],
+      "image": "/assets/products/civil/3d-modeling.jpg"
     },
     {
       "id": "precast",
@@ -94,7 +105,8 @@
       "href": "/products/precast",
       "relatedRoles": [
         "fabricator"
-      ]
+      ],
+      "image": "/assets/allplan-ultimate/core/precast-design-and-detailing.jpg"
     }
   ],
   "packages": [
@@ -135,35 +147,40 @@
       "subtitle": "Mimari & Mühendislik",
       "description": "Tasarım, Strüktürel Analiz, MEP ve Endüstriyel çözümler.",
       "cta": "Çözümleri İncele",
-      "href": "/solutions-v2/building-design"
+      "href": "/solutions-v2/building-design",
+      "image": "/assets/solutions/architecture-hero.jpg"
     },
     {
       "title": "ALTYAPI TASARIMI",
       "subtitle": "Yol & Köprü",
       "description": "Köprü, Tünel ve Yol projeleri için parametrik modelleme.",
       "cta": "Keşfet",
-      "href": "/solutions-v2/infrastructure"
+      "href": "/solutions-v2/infrastructure",
+      "image": "/assets/solutions/infrastructure-hero.jpg"
     },
     {
       "title": "İNŞAAT PLANLAMASI",
       "subtitle": "Prekast & Çelik",
       "description": "Üretimden şantiyeye kesintisiz veri akışı.",
       "cta": "Detaylar",
-      "href": "/solutions-v2/construction"
+      "href": "/solutions-v2/construction",
+      "image": "/assets/solutions/precast-hero.jpg"
     },
     {
       "title": "EKLENTİLER",
       "subtitle": "Add-ons & Tools",
       "description": "Özelleştirilmiş eklentiler ve araçlar.",
       "cta": "İncele",
-      "href": "/solutions-v2/addons"
+      "href": "/solutions-v2/addons",
+      "image": "/assets/product-engineering.jpg"
     },
     {
       "title": "DİĞER ÇÖZÜMLERİMİZ",
       "subtitle": "Bimplus & More",
       "description": "İşbirliği ve tamamlayıcı ürünler.",
       "cta": "Göz At",
-      "href": "/solutions-v2/other"
+      "href": "/solutions-v2/other",
+      "image": "/assets/solutions/architecture-hero.jpg"
     }
   ],
   "innovations": [
@@ -171,19 +188,22 @@
       "title": "AI Görselleştirme",
       "description": "Yapay zeka destekli render araçları ile tasarımlarınızı saniyeler içinde hayata geçirin.",
       "badge": "ALLPLAN CONCEPT",
-      "id": "ai-visualization"
+      "id": "ai-visualization",
+      "image": "/assets/allplan-ultimate/core/ai-based-viz.jpg"
     },
     {
       "title": "Donatıdan Şantiyeye",
       "description": "Tamamen dijital, çizimsiz şantiye iş akışları ile hatasız üretim ve montaj.",
       "badge": "ALLPLAN PROFESSIONAL",
-      "id": "site-rebar"
+      "id": "site-rebar",
+      "image": "/assets/allplan-ultimate/core/ai-based-viz.jpg"
     },
     {
       "title": "Birleşik Arazi Modeli",
       "description": "Büyük ölçekli altyapı projeleri için yeni nesil hassas arazi modelleme motoru.",
       "badge": "ALLPLAN ULTIMATE",
-      "id": "unified-terrain"
+      "id": "unified-terrain",
+      "image": "/assets/allplan-ultimate/core/terrain-model.jpg"
     }
   ],
   "services": [
@@ -394,5 +414,47 @@
     "cta": "Tüm Yenilikleri İncele",
     "href": "/products",
     "status": "source-version-unverified"
-  }
+  },
+  "heroVideo": {
+    "src": "/videos/hero-bim.mp4",
+    "poster": "/images/hero-poster.jpg"
+  },
+  "partners": [
+    {
+      "name": "Bluebeam",
+      "logo": "/images/partners/bluebeam.jpg"
+    },
+    {
+      "name": "Enscape",
+      "logo": "/images/partners/enscape.png"
+    },
+    {
+      "name": "FRILO",
+      "logo": "/images/partners/frilo.png"
+    },
+    {
+      "name": "Lumion",
+      "logo": "/images/partners/lumion.png"
+    },
+    {
+      "name": "SCIA Engineer",
+      "logo": "/images/partners/scia.png"
+    },
+    {
+      "name": "Solibri",
+      "logo": "/images/partners/solibri.png"
+    },
+    {
+      "name": "Tekla",
+      "logo": "/images/partners/tekla.svg"
+    },
+    {
+      "name": "Trimble",
+      "logo": "/images/partners/trimble.png"
+    },
+    {
+      "name": "Twinmotion",
+      "logo": "/images/partners/twinmotion.png"
+    }
+  ]
 }

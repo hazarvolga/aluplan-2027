@@ -36,6 +36,14 @@ export interface ContentImage {
   alt: string;
 }
 
+export interface ContentVideo {
+  src: string;
+  poster?: string | null;
+  title?: string;
+  controls?: boolean;
+  autoplay?: boolean;
+}
+
 export interface ContentEmbed {
   src: string;
   title: string;
@@ -61,6 +69,7 @@ export interface PageRecord {
   contentLinks: ContentLink[];
   buttons: string[];
   images: ContentImage[];
+  videos?: ContentVideo[];
   embeds: ContentEmbed[];
   playlistId: string | null;
   interactiveStates: InteractiveState[];

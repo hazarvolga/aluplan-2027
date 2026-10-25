@@ -1,7 +1,7 @@
 # Oturum devri
 
 ## Güncelleme tarihi ve oturum no
-25.10.2026 — Faz 5 onaylandı (`f7c7a21`); Faz 6 (Geliştirme — `src/` Next.js uygulaması, SEO/GEO/Güvenlik/Performans iyileştirmeleri, 27/27 parite testi ve `docs/final-comparison-report.md`) tamamlandı, kullanıcı onayı bekliyor (Europe/Istanbul).
+25.10.2026 — Faz 6 geliştirme aşamasında yerel önizleme (`http://localhost:3000`) üzerinde CSP `eval()` geliştirme modu hatası ve CSS sınıf eşlemeleri düzeltildi; canlı site (`https://aluplan.com.tr/`) ile karşılaştırmalı görsel, video ve ikon eksikliği analizi çıkarıldı (Europe/Istanbul).
 
 ## Faz durumu tablosu
 | Faz | Durum |
@@ -12,7 +12,7 @@
 | 3 — PRD | Tamamlandı (25.10.2026 kullanıcı onayıyla — `docs/PRD.md`) |
 | 4 — Design system | Tamamlandı (25.10.2026 kullanıcı onayıyla — `design-system/`) |
 | 5 — Ana sayfa tasarımı | Tamamlandı (25.10.2026 kullanıcı onayıyla — `design-system/ui_kits/homepage/` ve `docs/homepage-design-proposal.md`) |
-| 6 — Geliştirme | Onay bekliyor (`src/` Next.js uygulaması ve `docs/final-comparison-report.md` tamamlandı) |
+| 6 — Geliştirme | Devam ediyor — metin/URL/SEO/PDF paritesi tamamlandı; 503 görsel, 8 MP4 video ve SVG ikonların `public/` ve bileşenlere tam entegrasyonu sırada |
 
 ## Tasarım beklerken envanter ve içerik modeli — 21.10.2026
 - Kullanıcı envanter kapanışı, ALLPLAN içerik eşlemesi, müşteri yolları ve yıllık güncelleme planını kabul etti. Uygulama/entegrasyon izni değil, analiz kapsamıdır.
@@ -378,3 +378,19 @@ Git dışında kullanıcı ZIP'i, `Aluplan Design System/`, `docs/previews/anthr
   - **Doğrulama:** `python3 scripts/verify_phase6_parity.py` (**27/27 PASS, 0 hata**) ve `python3 -m unittest tests/test_url_parity.py` (**5/5 OK**) geçti.
   - **Final Raporu:** `docs/final-comparison-report.md` içinde Faz 2 baseline ile Faz 6 son durumunun Önce/Sonra karşılaştırması belgelendi.
 - **Sıradaki adım:** Faz 6 çıktılarının ve `docs/final-comparison-report.md` raporunun kullanıcı tarafından son onayı.
+
+## 25.10.2026 — Faz 6 Görsel, Video, İkon ve CSP/CSS Tamamlaması
+
+- Kullanıcının yerel önizleme (`http://localhost:3000`) geri bildirimi üzerine:
+  1. **CSP `eval()` ve CSS/Font eşleme düzeltmesi (`next.config.mjs`, `src/styles/globals.css`):**
+     - `next.config.mjs` içinde `script-src` yalnız geliştirme ortamında (`NODE_ENV !== 'production'`) React/Turbopack hata yığını için `'unsafe-eval'` içerecek şekilde koşullandırıldı; üretim derlemesinde kapalı tutuldu.
+     - `src/styles/globals.css` içindeki WOFF2 `@font-face` dosya adları (`Manrope-400_800-normal-latin.woff2` vb.) ve `.alu-button`, `.alu-cluster`, `.alu-display`/`.alu-h1`..`.alu-h4`, `.alu-site-header__inner`, `.alu-site-nav__link`, `.alu-card__media` sınıfları eksiksiz eşlendi.
+  2. **Tüm Görsel ve Video Varlıklarının Aktarımı (`scripts/sync_media_assets.py` → `public/`):**
+     - `../aluplan-2026` klasörüne hiçbir şekilde yazma/değişiklik yapılmadan (salt-okunur kopyalama ile) **1.298 adet görsel ve video dosyası (159,74 MB)** `aluplan-2027/public/` altına aktarıldı (`/videos/hero-bim.mp4`, `/images/hero-poster.jpg`, 5 adet ALLPLAN Bridge `.mp4` özellik videosu, 2 adet `2024-header.mp4`, 9 adet OpenBIM partner logosu ve tüm ürün/çözüm/eklenti ekran görüntüleri).
+  3. **Veri Katmanı ve Görsel/Video Eşlemesi (`scripts/generate_site_data.py`, `src/data/`):**
+     - 110 sayfadaki **975 içerik görselinin tamamı (`0` eksik dosya)** ve **8 yerel `.mp4` videosu** `src/data/pages.json` içinde yerel `public/` yollarına çözümlendi.
+     - `src/data/homepage.json` içine Hero video/poster, 3 rol ikonu ve görseli, 6 ürün görseli, 5 Bento çözüm görseli, 3 yenilik görseli ve 9 OpenBIM partner logosu eklendi.
+  4. **Vektörel SVG İkon Sistemi (`src/components/ui/AluIcon.tsx`) ve Bileşen Entegrasyonu:**
+     - Lucide tasarım sistemi ikonları ve sosyal medya/hizmet SVG ikonlarını içeren `AluIcon.tsx` oluşturularak `SiteShell.tsx`, `HomepageView.tsx` ve `SubpageView.tsx` bileşenlerine entegre edildi.
+     - Alt sayfalarda (`SubpageView.tsx`) sayfa başlığı yanına Hero görseli, yerel `.mp4` video oynatıcıları, bölüm görselleri, tüm kalan ekran görüntüleri için Görsel Galeri ızgarası ve 14 eğitim serisindeki 216 video kartına YouTube küçük resimleri (`hqdefault.jpg`) + oynatma ikonu eklendi.
+  5. **Doğrulama:** `python3 scripts/verify_phase6_parity.py` (**31/31 PASS, 0 hata**) ve `python3 -m unittest tests/test_url_parity.py` (**23/23 OK**) geçti.

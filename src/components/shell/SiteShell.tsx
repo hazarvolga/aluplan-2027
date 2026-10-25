@@ -3,9 +3,20 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { getNavigationData, getSearchIndex, TRIAL_CTA_URL, MAIN_QUOTE_FORM_URL } from '@/lib/site-data';
+import { AluIcon, AluIconName } from '@/components/ui/AluIcon';
 
 const navData = getNavigationData();
 const searchIndex = getSearchIndex();
+
+function getSocialIconName(label: string): AluIconName {
+  const low = label.toLowerCase();
+  if (low.includes('facebook')) return 'facebook';
+  if (low.includes('twitter') || low.includes('x')) return 'twitter';
+  if (low.includes('linkedin')) return 'linkedin';
+  if (low.includes('instagram')) return 'instagram';
+  if (low.includes('youtube')) return 'youtube';
+  return 'globe';
+}
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
   const [mode, setMode] = useState<'dark' | 'light'>('dark');
@@ -151,13 +162,15 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 aria-label={soc.label}
                 className="alu-topbar__link"
               >
-                {soc.label}
+                <AluIcon name={getSocialIconName(soc.label)} size="sm" />
+                <span>{soc.label}</span>
               </a>
             ))}
           </div>
           <div className="alu-cluster" style={{ gap: '0.75rem' }}>
             <a href={`mailto:${navData.topBar.email}`} className="alu-topbar__link">
-              {navData.topBar.email}
+              <AluIcon name="mail" size="sm" />
+              <span>{navData.topBar.email}</span>
             </a>
             <button
               type="button"
@@ -169,7 +182,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 setRequestModalOpen(true);
               }}
             >
-              Hızlı Talep Oluştur
+              <span>Hızlı Talep Oluştur</span>
+              <AluIcon name="arrow-up-right" size="sm" />
             </button>
           </div>
         </div>
@@ -192,22 +206,24 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <button
               type="button"
               className="alu-site-nav__link"
-              style={{ background: 'transparent', border: 0, cursor: 'pointer' }}
+              style={{ background: 'transparent', border: 0, cursor: 'pointer', gap: '0.25rem' }}
               aria-expanded={openMenu === 'solutions'}
               onClick={() => setOpenMenu(openMenu === 'solutions' ? null : 'solutions')}
               onMouseEnter={() => setOpenMenu('solutions')}
             >
-              Çözümler ▾
+              <span>Çözümler</span>
+              <AluIcon name="chevron-down" size="sm" />
             </button>
             <button
               type="button"
               className="alu-site-nav__link"
-              style={{ background: 'transparent', border: 0, cursor: 'pointer' }}
+              style={{ background: 'transparent', border: 0, cursor: 'pointer', gap: '0.25rem' }}
               aria-expanded={openMenu === 'products'}
               onClick={() => setOpenMenu(openMenu === 'products' ? null : 'products')}
               onMouseEnter={() => setOpenMenu('products')}
             >
-              Ürünler ▾
+              <span>Ürünler</span>
+              <AluIcon name="chevron-down" size="sm" />
             </button>
             <Link className="alu-site-nav__link" href="/#professional-services">
               Kaynaklar
@@ -230,7 +246,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               aria-label="Site içi arama (Ctrl+K)"
               onClick={() => setSearchOpen(true)}
             >
-              Arama (Ctrl+K)
+              <AluIcon name="search" size="sm" />
+              <span>Arama (Ctrl+K)</span>
             </button>
             <button
               type="button"
@@ -238,7 +255,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               aria-label={mode === 'dark' ? 'Açık temaya geç' : 'Koyu temaya geç'}
               onClick={toggleMode}
             >
-              {mode === 'dark' ? 'Açık Mod' : 'Koyu Mod'}
+              <AluIcon name={mode === 'dark' ? 'sun' : 'moon'} size="sm" />
+              <span>{mode === 'dark' ? 'Açık Mod' : 'Koyu Mod'}</span>
             </button>
             <button
               type="button"
@@ -247,7 +265,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               aria-expanded={mobileMenuOpen}
               onClick={() => setMobileMenuOpen((prev) => !prev)}
             >
-              Menü
+              <AluIcon name={mobileMenuOpen ? 'x' : 'menu'} size="sm" />
+              <span>Menü</span>
             </button>
           </div>
         </div>
@@ -270,7 +289,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                             className="alu-megamenu__item"
                             onClick={() => setOpenMenu(null)}
                           >
-                            {item.name} ↗
+                            <span>{item.name}</span>
+                            <AluIcon name="arrow-up-right" size="sm" />
                           </a>
                         ) : (
                           <Link
@@ -278,7 +298,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                             className="alu-megamenu__item"
                             onClick={() => setOpenMenu(null)}
                           >
-                            {item.name}
+                            <AluIcon name="chevron-right" size="sm" />
+                            <span>{item.name}</span>
                           </Link>
                         )}
                       </li>
@@ -326,7 +347,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                             className="alu-megamenu__item"
                             onClick={() => setMobileMenuOpen(false)}
                           >
-                            {item.name}
+                            <AluIcon name="chevron-right" size="sm" />
+                            <span>{item.name}</span>
                           </Link>
                         </li>
                       ))}
@@ -358,12 +380,14 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               {navData.topBar.socialLinks.map((soc) => (
                 <a
                   key={soc.label}
-                  className="alu-site-footer__link"
+                  className="alu-topbar__link"
                   href={soc.href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={soc.label}
                 >
-                  {soc.label}
+                  <AluIcon name={getSocialIconName(soc.label)} size="sm" />
+                  <span>{soc.label}</span>
                 </a>
               ))}
             </div>
@@ -375,7 +399,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               {navData.footer.products.map((item) => (
                 <li key={item.href}>
                   <Link className="alu-site-footer__link" href={item.href}>
-                    {item.label}
+                    <AluIcon name="chevron-right" size="sm" />
+                    <span>{item.label}</span>
                   </Link>
                 </li>
               ))}
@@ -388,7 +413,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               {navData.footer.solutions.map((item) => (
                 <li key={item.href}>
                   <Link className="alu-site-footer__link" href={item.href}>
-                    {item.label}
+                    <AluIcon name="chevron-right" size="sm" />
+                    <span>{item.label}</span>
                   </Link>
                 </li>
               ))}
@@ -398,21 +424,24 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           <div>
             <h2 className="alu-site-footer__heading">İletişim</h2>
             <ul className="alu-site-footer__list">
-              {navData.footer.address.map((line) => (
-                <li key={line} className="alu-site-footer__link">
-                  {line}
+              {navData.footer.address.map((line, i) => (
+                <li key={line} className="alu-site-footer__link" style={{ display: 'flex', alignItems: 'center', gap: '0.375rem' }}>
+                  {i === 0 && <AluIcon name="map-pin" size="sm" />}
+                  <span>{line}</span>
                 </li>
               ))}
               {navData.footer.phones.map((phoneItem) => (
                 <li key={phoneItem}>
                   <a className="alu-site-footer__link" href={`tel:${phoneItem.replace(/[^+\d]/g, '')}`}>
-                    {phoneItem}
+                    <AluIcon name="phone" size="sm" />
+                    <span>{phoneItem}</span>
                   </a>
                 </li>
               ))}
               <li>
                 <a className="alu-site-footer__link" href={`mailto:${navData.footer.email}`}>
-                  {navData.footer.email}
+                  <AluIcon name="mail" size="sm" />
+                  <span>{navData.footer.email}</span>
                 </a>
               </li>
             </ul>
@@ -445,7 +474,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 className="alu-button alu-button--ghost alu-button--sm"
                 onClick={() => setSearchOpen(false)}
               >
-                Kapat (ESC)
+                <AluIcon name="x" size="sm" />
+                <span>Kapat (ESC)</span>
               </button>
             </div>
             <input
@@ -496,7 +526,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 className="alu-button alu-button--ghost alu-button--sm"
                 onClick={() => setRequestModalOpen(false)}
               >
-                Kapat
+                <AluIcon name="x" size="sm" />
+                <span>Kapat</span>
               </button>
             </div>
 
@@ -634,7 +665,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                     rel="noopener noreferrer"
                     className="alu-button alu-button--secondary alu-button--sm"
                   >
-                    Resmî deneme sayfasına git ↗
+                    <span>Resmî deneme sayfasına git</span>
+                    <AluIcon name="arrow-up-right" size="sm" />
                   </a>
                   <a
                     href={MAIN_QUOTE_FORM_URL}
@@ -642,7 +674,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                     rel="noopener noreferrer"
                     className="alu-button alu-button--ghost alu-button--sm"
                   >
-                    Kapsamlı Microsoft Formu ↗
+                    <span>Kapsamlı Microsoft Formu</span>
+                    <AluIcon name="arrow-up-right" size="sm" />
                   </a>
                 </div>
               </div>

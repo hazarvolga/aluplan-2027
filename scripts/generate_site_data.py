@@ -3,10 +3,13 @@ import json
 import os
 import re
 from pathlib import Path
+from urllib.parse import urlparse, parse_qs, unquote
 
 ROOT = Path(__file__).resolve().parent.parent
+PUBLIC_DIR = ROOT / "public"
 
 inv_path = ROOT / "docs/00-inventory/content-inventory.json"
+mc_path = ROOT / "docs/00-inventory/media-complete-2026-10-22.json"
 ir_path = ROOT / "docs/00-inventory/interaction-register-2026-10-22.json"
 closure_states_path = ROOT / "docs/00-inventory/browser-closure-2026-10-22/states.json"
 complete_states_path = ROOT / "docs/00-inventory/browser-complete-2026-10-22/states.json"
@@ -18,8 +21,85 @@ q4_text_path = ROOT / "docs/00-inventory/pdf-evidence/q4-2025.txt"
 with open(inv_path, "r", encoding="utf-8") as f:
     inv = json.load(f)
 
+with open(mc_path, "r", encoding="utf-8") as f:
+    mc = json.load(f)
+
 with open(ir_path, "r", encoding="utf-8") as f:
     ir = json.load(f)
+
+
+def to_public_url(rel_path: str) -> str:
+    if rel_path.startswith("public/"):
+        return "/" + rel_path[len("public/") :]
+    if rel_path.startswith("src/assets/"):
+        return "/" + rel_path[len("src/") :]
+    return "/" + rel_path.lstrip("/")
+
+
+url_to_public = {}
+for item in mc.get("image_results", []):
+    u = item["url"].replace("https://aluplan.com.tr", "")
+    matches = item.get("current_source_sha_matches") or item.get("inventory_sha_matches") or []
+    if matches:
+        preferred = sorted(
+            matches,
+            key=lambda p: (
+                0 if p.startswith("public/") else 1 if p.startswith("assets/") else 2 if p.startswith("src/assets/") else 3,
+                len(p),
+            ),
+        )[0]
+        url_to_public[u] = to_public_url(preferred)
+
+basename_to_public = {}
+for asset in mc.get("root_assets", []):
+    rel = asset["path"]
+    if rel.startswith(("public/", "assets/", "src/assets/")):
+        bname = Path(rel).name.lower()
+        basename_to_public.setdefault(bname, to_public_url(rel))
+
+WP_FALLBACKS = {
+    "2023-solutions-building-design-allplan-turkey-370x275.png": "/assets/solutions/architecture-hero.jpg",
+    "solutions-infrastructure-design-370x275.png": "/assets/solutions/infrastructure-hero.jpg",
+    "2023-prefabrication-product-allplan-turkey-370x270.png": "/assets/solutions/precast-hero.jpg",
+    "structural-engineering-allplan-turkey-work_way_want.png": "/assets/solutions/industry/reasons/work_way_want.png",
+    "structural-engineering-allplan-turkey-powerful_modeling.png": "/assets/solutions/industry/reasons/powerful_modeling.png",
+    "allplan-connect_logo.png": "/assets/logo/aluplan-logo-white-filled.svg",
+    "sifre-1-1024x570.jpg": "/images/client-id-sample.jpg",
+    "gelenmail-1024x642.jpg": "/images/allplan-lisans-numarasi.png",
+    "sifre-2-1024x666.jpg": "/images/Declaration_Allplan_2021-06-01.jpg",
+}
+
+
+def resolve_media_src(raw_src: str) -> str:
+    if not raw_src:
+        return ""
+    s = raw_src.strip()
+    if s.startswith("/_next/image"):
+        qs = parse_qs(urlparse(s).query)
+        if "url" in qs:
+            s = unquote(qs["url"][0])
+    if s.startswith("https://aluplan.com.tr"):
+        s = s.replace("https://aluplan.com.tr", "")
+    if "Lisans.jpg" in s or "lisans.jpg" in s:
+        return "/assets/solutions/cds/ramp/lisans.jpg"
+    if s.startswith(("http://", "https://")):
+        return s
+    if s in url_to_public:
+        return url_to_public[s]
+    if (PUBLIC_DIR / s.lstrip("/")).is_file():
+        return s
+    bname = Path(s).name
+    parts = bname.split(".")
+    if len(parts) >= 3 and len(parts[-2]) in (8, 16):
+        unhashed_name = ".".join(parts[:-2] + [parts[-1]]).lower()
+        if unhashed_name in basename_to_public:
+            return basename_to_public[unhashed_name]
+    low_name = bname.lower()
+    if low_name in WP_FALLBACKS:
+        return WP_FALLBACKS[low_name]
+    if low_name in basename_to_public:
+        return basename_to_public[low_name]
+    return s
 
 
 def safe_read_json(p: Path):
@@ -505,11 +585,68 @@ for raw_page in raw_200_pages:
     for img in raw_page.get("images", []):
         if img.get("location") in {"nav", "header", "footer"}:
             continue
-        src = (img.get("attributes") or {}).get("src", "")
+        raw_src = (img.get("attributes") or {}).get("src", "")
+        src = resolve_media_src(raw_src)
         alt = clean_text((img.get("attributes") or {}).get("alt") or h1_text)
         if src and src not in seen_imgs:
             seen_imgs.add(src)
             images.append({"src": src, "alt": alt or h1_text})
+
+    videos = []
+    seen_vids = set()
+    pending_poster = ""
+    pending_autoplay = False
+    for m in raw_page.get("media", []):
+        tag = m.get("tag")
+        attrs = m.get("attributes") or {}
+        if tag == "video":
+            if attrs.get("poster"):
+                pending_poster = resolve_media_src(attrs["poster"])
+            if "autoplay" in attrs:
+                pending_autoplay = True
+            if attrs.get("src"):
+                vsrc = resolve_media_src(attrs["src"])
+                if vsrc and vsrc not in seen_vids:
+                    seen_vids.add(vsrc)
+                    videos.append({
+                        "src": vsrc,
+                        "poster": pending_poster or None,
+                        "title": clean_text(attrs.get("aria-label") or Path(vsrc).stem.replace("_", " ")),
+                        "controls": "controls" in attrs,
+                        "autoplay": "autoplay" in attrs,
+                    })
+                    pending_poster = ""
+                    pending_autoplay = False
+        elif tag == "source" and attrs.get("src"):
+            vsrc = resolve_media_src(attrs["src"])
+            if vsrc and vsrc not in seen_vids:
+                seen_vids.add(vsrc)
+                videos.append({
+                    "src": vsrc,
+                    "poster": pending_poster or None,
+                    "title": h1_text,
+                    "controls": not pending_autoplay,
+                    "autoplay": pending_autoplay,
+                })
+                pending_poster = ""
+                pending_autoplay = False
+
+    if route_path == "/products/allplan-aec" and not videos:
+        videos.append({
+            "src": "/assets/products/allplan-aec/hero/2024-header.mp4",
+            "poster": "/assets/products/allplan-aec/hero-new.jpg",
+            "title": "ALLPLAN AEC Genel Bakış Videosu",
+            "controls": True,
+            "autoplay": False,
+        })
+    elif route_path == "/solutions/bridge-design" and not videos:
+        videos.append({
+            "src": "/assets/solutions/bridge/features/2024-header.mp4",
+            "poster": None,
+            "title": "ALLPLAN Bridge Parametrik Köprü Tasarımı Videosu",
+            "controls": True,
+            "autoplay": False,
+        })
 
     embeds = []
     for emb in raw_page.get("embeds", []):
@@ -574,6 +711,7 @@ for raw_page in raw_200_pages:
         "contentLinks": content_links,
         "buttons": buttons,
         "images": images,
+        "videos": videos,
         "embeds": embeds,
         "playlistId": pid,
         "interactiveStates": interactive_by_path.get(route_path, []),
@@ -747,6 +885,63 @@ if "bimflex" in homepage_data:
         homepage_data["bimflex"]["logo"]["src"] = "/" + homepage_data["bimflex"]["logo"]["src"].lstrip("/")
     for m in homepage_data["bimflex"].get("media", []):
         m["src"] = "/" + m["src"].lstrip("/")
+
+homepage_data["heroVideo"] = {
+    "src": "/videos/hero-bim.mp4",
+    "poster": "/images/hero-poster.jpg",
+}
+
+ROLE_ENRICH = {
+    "architect": {"icon": "building-2", "image": "/assets/solutions/architecture-hero.jpg"},
+    "engineer": {"icon": "ruler", "image": "/assets/product-engineering.jpg"},
+    "precast": {"icon": "boxes", "image": "/assets/solutions/precast-hero.jpg"},
+}
+for r in homepage_data.get("roles", []):
+    extra = ROLE_ENRICH.get(r["id"], {})
+    r["icon"] = extra.get("icon", "layers")
+    r["image"] = extra.get("image", "/assets/solutions/architecture-hero.jpg")
+
+PRODUCT_IMAGES = {
+    "basic": "/assets/products/allplan-basic/2d-drafting.jpg",
+    "concept": "/assets/products/allplan-concept/clash-detection.jpg",
+    "professional": "/assets/products/allplan-professional/3d-modeling.jpg",
+    "ultimate": "/assets/allplan-ultimate/core/parametric-modeling.jpg",
+    "civil": "/assets/products/civil/3d-modeling.jpg",
+    "precast": "/assets/allplan-ultimate/core/precast-design-and-detailing.jpg",
+}
+for p in homepage_data.get("products", []):
+    p["image"] = PRODUCT_IMAGES.get(p["id"], "/assets/products/allplan-professional/3d-modeling.jpg")
+
+SOLUTION_IMAGES = {
+    "/solutions-v2/building-design": "/assets/solutions/architecture-hero.jpg",
+    "/solutions-v2/infrastructure": "/assets/solutions/infrastructure-hero.jpg",
+    "/solutions-v2/construction": "/assets/solutions/precast-hero.jpg",
+    "/solutions-v2/addons": "/assets/product-engineering.jpg",
+    "/solutions-v2/other": "/assets/solutions/architecture-hero.jpg",
+}
+for s in homepage_data.get("solutions", []):
+    s["image"] = SOLUTION_IMAGES.get(s["href"], "/assets/solutions/architecture-hero.jpg")
+
+INNOVATION_IMAGES = {
+    "ai-visualization": "/assets/allplan-ultimate/core/ai-based-viz.jpg",
+    "rebar-to-site": "/assets/allplan-ultimate/core/reinforcement.jpg",
+    "unified-terrain": "/assets/allplan-ultimate/core/terrain-model.jpg",
+}
+for inv_card in homepage_data.get("innovations", []):
+    inv_card["image"] = INNOVATION_IMAGES.get(inv_card["id"], "/assets/allplan-ultimate/core/ai-based-viz.jpg")
+
+homepage_data["partners"] = [
+    {"name": "Bluebeam", "logo": "/images/partners/bluebeam.jpg"},
+    {"name": "Enscape", "logo": "/images/partners/enscape.png"},
+    {"name": "FRILO", "logo": "/images/partners/frilo.png"},
+    {"name": "Lumion", "logo": "/images/partners/lumion.png"},
+    {"name": "SCIA Engineer", "logo": "/images/partners/scia.png"},
+    {"name": "Solibri", "logo": "/images/partners/solibri.png"},
+    {"name": "Tekla", "logo": "/images/partners/tekla.svg"},
+    {"name": "Trimble", "logo": "/images/partners/trimble.png"},
+    {"name": "Twinmotion", "logo": "/images/partners/twinmotion.png"},
+]
+
 with open(data_dir / "homepage.json", "w", encoding="utf-8") as f:
     json.dump(homepage_data, f, ensure_ascii=False, indent=2)
 

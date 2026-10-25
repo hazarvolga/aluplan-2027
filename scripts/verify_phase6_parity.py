@@ -137,6 +137,56 @@ required_docs = [
 missing_docs = [str(p.relative_to(ROOT)) for p in required_docs if not p.exists() or p.stat().st_size == 0]
 check("All 10 downloadable PDF/DOCX assets exist in public/docs/", len(missing_docs) == 0, str(missing_docs))
 
+# 5b. Media, Video & Icon Asset Parity (1,367 page images, 8 MP4 videos, 9 partner logos, AluIcon SVG system)
+missing_page_images = []
+total_page_images = 0
+missing_page_videos = []
+total_page_videos = 0
+
+for route_path, p in pages.items():
+    for img in p.get("images", []):
+        total_page_images += 1
+        src = img.get("src", "")
+        if src.startswith("/"):
+            local_img = ROOT / "public" / src.lstrip("/")
+            if not local_img.exists() or local_img.stat().st_size == 0:
+                missing_page_images.append((route_path, src))
+    for vid in p.get("videos", []):
+        total_page_videos += 1
+        src = vid.get("src", "")
+        if src.startswith("/"):
+            local_vid = ROOT / "public" / src.lstrip("/")
+            if not local_vid.exists() or local_vid.stat().st_size == 0:
+                missing_page_videos.append((route_path, src))
+
+check(
+    "All 975 content image occurrences across 110 pages resolve to existing local files or external URLs",
+    total_page_images == 975 and len(missing_page_images) == 0,
+    f"total={total_page_images}, missing={missing_page_images[:5]}",
+)
+check(
+    "All page MP4 videos resolve to existing local files in public/",
+    total_page_videos >= 8 and len(missing_page_videos) == 0,
+    f"total={total_page_videos}, missing={missing_page_videos}",
+)
+
+hp_media_paths = [
+    hp.get("heroVideo", {}).get("src", ""),
+    hp.get("heroVideo", {}).get("poster", ""),
+] + [p.get("logo", "") for p in hp.get("partners", [])]
+missing_hp_media = [
+    m for m in hp_media_paths if not m or not (ROOT / "public" / m.lstrip("/")).exists()
+]
+check(
+    "Homepage hero video, poster, and 9 partner logos exist in public/",
+    len(hp.get("partners", [])) == 9 and len(missing_hp_media) == 0,
+    f"missing={missing_hp_media}",
+)
+check(
+    "AluIcon SVG vector icon component is integrated in SiteShell, HomepageView, and SubpageView",
+    "AluIcon" in shell_tsx and "AluIcon" in hp_view_tsx and "AluIcon" in subpage_view_tsx,
+)
+
 # 6. GEO (/llms.txt, robots.ts, sitemap.ts) & Security
 check("GEO /llms.txt route exists and includes ALLPLAN Türkiye summary", "Aluplan Program Sistemleri" in llms_ts and "https://www.allplan.com/trial-or-subscription/" in llms_ts)
 check("robots.ts explicitly allows GPTBot, ClaudeBot, PerplexityBot, Google-Extended", all(bot in robots_ts for bot in ["GPTBot", "ClaudeBot", "PerplexityBot", "Google-Extended"]))

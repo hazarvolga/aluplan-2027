@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { getHomepageData, TRIAL_CTA_URL, MAIN_QUOTE_FORM_URL } from '@/lib/site-data';
+import { AluIcon, AluIconName } from '@/components/ui/AluIcon';
 
 const data = getHomepageData();
 
@@ -46,6 +47,35 @@ const SERVICE_GROUPS: [string, string[]][] = [
   ['Partner erişimi', ['Partner']]
 ];
 
+const SERVICE_ICONS: Record<string, AluIconName> = {
+  Eğitim: 'graduation-cap',
+  'Teknik Destek': 'headset',
+  'Destek Platformu': 'life-buoy',
+  Danışmanlık: 'users',
+  Sertifika: 'award',
+  Download: 'download',
+  'Connect: Giriş': 'key',
+  'Admin Lisans : Lisans Yöneticisi Bilgi Formu': 'shield',
+  'CodeMeter WebDepot': 'key',
+  'Deklarasyon Formu': 'file-text',
+  'ALLPLAN FAQ': 'help-circle',
+  'Blog Global': 'globe',
+  'Canlı Webinarlar': 'video',
+  'BIM Rehberi': 'book-open',
+  OPENBIM: 'boxes',
+  'Sistem Gereksinimleri': 'cpu',
+  'Tüm Gereksinimler': 'layers',
+  'Sürüm Notları': 'sparkles',
+  'IFC Export El Kitabı': 'file-text',
+  Partner: 'users'
+};
+
+const ROLE_ICONS: Record<string, AluIconName> = {
+  architect: 'building-2',
+  engineer: 'ruler',
+  fabricator: 'boxes'
+};
+
 export function HomepageView() {
   const [roleId, setRoleId] = useState<string>(data.roles[0].id);
   const [activeGroupIdx, setActiveGroupIdx] = useState<number>(0);
@@ -76,7 +106,8 @@ export function HomepageView() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Teklif İste ↗
+                <span>Teklif İste</span>
+                <AluIcon name="external-link" size="sm" />
               </a>
               <a
                 className="alu-button alu-button--secondary alu-button--lg"
@@ -84,7 +115,8 @@ export function HomepageView() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Ücretsiz Deneme ↗
+                <span>Ücretsiz Deneme</span>
+                <AluIcon name="external-link" size="sm" />
               </a>
             </div>
             <div className="alu-cluster" aria-label="Teknik yetenek etiketleri" style={{ gap: '0.375rem' }}>
@@ -96,19 +128,33 @@ export function HomepageView() {
             </div>
           </div>
 
-          <aside className="preview-hero__media" aria-label="Hero teknik özet alanı">
-            <div className="preview-hero__mark" aria-hidden="true">
-              ⌜
-            </div>
-            <p className="preview-kicker">Mimari · Mühendislik · İnşaat</p>
-            <p className="alu-body-sm">
-              ALLPLAN platformu, disiplinler arası BIM iş akışları ve yerel teknik destek için tek giriş noktası.
-            </p>
-            <div className="alu-cluster">
-              <span className="alu-badge">29+ Yıllık Tecrübe</span>
-              <span className="alu-badge">500+ Aktif Müşteri</span>
-              <span className="alu-badge">50+ Uzman Kadro</span>
-              <span className="alu-badge">10K+ Tamamlanan Proje</span>
+          <aside className="preview-hero__media" aria-label="Hero teknik özet ve BIM tanıtım videosu">
+            {data.heroVideo && (
+              <div className="preview-hero__video-wrap">
+                <video
+                  className="preview-hero__video"
+                  src={data.heroVideo.src}
+                  poster={data.heroVideo.poster}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                />
+              </div>
+            )}
+            <div className="alu-stack" style={{ gap: 'var(--space-stack-sm)', position: 'relative', zIndex: 1 }}>
+              <p className="preview-kicker" style={{ margin: 0 }}>
+                Mimari · Mühendislik · İnşaat
+              </p>
+              <p className="alu-body-sm">
+                ALLPLAN platformu, disiplinler arası BIM iş akışları ve yerel teknik destek için tek giriş noktası.
+              </p>
+              <div className="alu-cluster" style={{ gap: '0.5rem' }}>
+                <span className="alu-badge">29+ Yıllık Tecrübe</span>
+                <span className="alu-badge">500+ Aktif Müşteri</span>
+                <span className="alu-badge">50+ Uzman Kadro</span>
+                <span className="alu-badge">10K+ Tamamlanan Proje</span>
+              </div>
             </div>
           </aside>
         </div>
@@ -119,7 +165,8 @@ export function HomepageView() {
         <div className="alu-container preview-quicklinks">
           {data.quickLinks.map(([label, href]) => (
             <Link key={href} className="alu-button alu-button--ghost alu-button--sm" href={href}>
-              {label} →
+              <span>{label}</span>
+              <AluIcon name="arrow-right" size="sm" />
             </Link>
           ))}
         </div>
@@ -139,40 +186,74 @@ export function HomepageView() {
           </div>
 
           <div className="alu-role-selector" role="radiogroup" aria-label="Çalışma alanınız">
-            {data.roles.map((role) => (
-              <button
-                key={role.id}
-                type="button"
-                role="radio"
-                aria-checked={role.id === activeRole.id}
-                className="alu-role"
-                onClick={() => setRoleId(role.id)}
-              >
-                <span className="alu-role__title">{role.label}</span>
-                <span className="alu-role__desc">{role.title}</span>
-              </button>
-            ))}
+            {data.roles.map((role) => {
+              const isSelected = role.id === activeRole.id;
+              const iconName = ROLE_ICONS[role.id] || 'layers';
+              return (
+                <button
+                  key={role.id}
+                  type="button"
+                  role="radio"
+                  aria-checked={isSelected}
+                  className="alu-role"
+                  onClick={() => setRoleId(role.id)}
+                >
+                  <div className="alu-cluster" style={{ justifyContent: 'space-between', width: '100%' }}>
+                    <span className="alu-cluster" style={{ gap: '0.5rem' }}>
+                      <span className="alu-role__icon">
+                        <AluIcon name={iconName} size="md" />
+                      </span>
+                      <span className="alu-role__title">{role.label}</span>
+                    </span>
+                    {isSelected && (
+                      <span className="alu-badge alu-badge--accent">
+                        <AluIcon name="check" size="sm" />
+                      </span>
+                    )}
+                  </div>
+                  <span className="alu-role__desc">{role.title}</span>
+                </button>
+              );
+            })}
           </div>
 
           <div className="preview-role-copy" aria-live="polite">
             <div className="alu-stack">
-              <span className="alu-badge alu-badge--accent">{activeRole.label}</span>
+              <div className="alu-cluster">
+                <span className="alu-badge alu-badge--accent">
+                  <AluIcon name={ROLE_ICONS[activeRole.id] || 'layers'} size="sm" />
+                  <span>{activeRole.label}</span>
+                </span>
+              </div>
               <h3 className="alu-h2">{activeRole.title}</h3>
               <p className="alu-body">{activeRole.description}</p>
               <div>
                 <Link className="alu-button alu-button--secondary alu-button--md" href={activeRole.href}>
-                  Bu akışı detaylı incele →
+                  <span>Bu akışı detaylı incele</span>
+                  <AluIcon name="arrow-right" size="sm" />
                 </Link>
               </div>
             </div>
-            <div className="alu-grid">
-              {activeRole.features.map((feat) => (
-                <article key={feat} className="alu-card">
-                  <div className="alu-card__body">
-                    <h4 className="alu-card__title">{feat}</h4>
-                  </div>
-                </article>
-              ))}
+            <div className="alu-stack" style={{ gap: 'var(--space-stack-md)' }}>
+              {activeRole.image && (
+                <div className="alu-card__media alu-card__media--hero">
+                  <img src={activeRole.image} alt={activeRole.title} loading="lazy" />
+                </div>
+              )}
+              <div className="alu-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(11rem, 1fr))' }}>
+                {activeRole.features.map((feat) => (
+                  <article key={feat} className="alu-card">
+                    <div className="alu-cluster" style={{ gap: '0.5rem' }}>
+                      <span style={{ color: 'var(--accent-fg)' }}>
+                        <AluIcon name="check" size="sm" />
+                      </span>
+                      <h4 className="alu-card__title" style={{ fontSize: 'var(--type-body-size)' }}>
+                        {feat}
+                      </h4>
+                    </div>
+                  </article>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -185,17 +266,28 @@ export function HomepageView() {
                   className={`preview-product${isRelated ? ' preview-product--related' : ''}`}
                 >
                   <article className="alu-card">
-                    <div className="alu-cluster">
+                    {product.image && (
+                      <div className="alu-card__media">
+                        <img src={product.image} alt={product.title} loading="lazy" />
+                      </div>
+                    )}
+                    <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
                       <span className="alu-card__eyebrow">ALLPLAN</span>
-                      {isRelated && <span className="alu-badge alu-badge--accent">İlgili yol</span>}
+                      {isRelated && (
+                        <span className="alu-badge alu-badge--accent">
+                          <AluIcon name="check" size="sm" />
+                          <span>İlgili yol</span>
+                        </span>
+                      )}
                     </div>
                     <div className="alu-card__body">
                       <h3 className="alu-card__title">{product.title}</h3>
                       <p className="alu-body-sm">{product.description}</p>
                     </div>
                     <div className="alu-card__footer">
-                      <Link className="alu-link" href={product.href}>
-                        Ürünü İncele →
+                      <Link className="alu-link alu-link--standalone" href={product.href}>
+                        <span>Ürünü İncele</span>
+                        <AluIcon name="arrow-right" size="sm" />
                       </Link>
                     </div>
                   </article>
@@ -206,7 +298,7 @@ export function HomepageView() {
         </div>
       </section>
 
-      {/* H04: Solutions */}
+      {/* H04: Solutions (Bento Grid with Visuals) */}
       <section id="solutions" className="preview-section preview-section--subtle" aria-labelledby="solutions-heading">
         <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
           <div className="alu-stack">
@@ -218,14 +310,20 @@ export function HomepageView() {
           <div className="alu-grid">
             {data.solutions.map((item) => (
               <article key={item.href} className="alu-card">
+                {item.image && (
+                  <div className="alu-card__media">
+                    <img src={item.image} alt={item.title} loading="lazy" />
+                  </div>
+                )}
                 <span className="alu-card__eyebrow">{item.subtitle}</span>
                 <div className="alu-card__body">
                   <h3 className="alu-card__title">{item.title}</h3>
                   <p className="alu-body-sm">{item.description}</p>
                 </div>
                 <div className="alu-card__footer">
-                  <Link className="alu-link" href={item.href}>
-                    {item.cta} →
+                  <Link className="alu-link alu-link--standalone" href={item.href}>
+                    <span>{item.cta}</span>
+                    <AluIcon name="arrow-right" size="sm" />
                   </Link>
                 </div>
               </article>
@@ -251,25 +349,33 @@ export function HomepageView() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {data.packageAccess.cta} ↗
+              <AluIcon name="download" size="sm" />
+              <span>{data.packageAccess.cta}</span>
             </a>
           </div>
           <div className="alu-grid preview-package-grid">
             {data.packages.map((pkg) => (
               <article key={pkg.id} className="alu-card">
-                <span className="alu-card__eyebrow">PDF · TR</span>
+                <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
+                  <span className="alu-card__eyebrow">PDF · TR</span>
+                  <span className="alu-badge">
+                    <AluIcon name="file-text" size="sm" />
+                    <span>V2026</span>
+                  </span>
+                </div>
                 <div className="alu-card__body">
                   <h3 className="alu-card__title">{pkg.title}</h3>
                   <p className="alu-body-sm">{pkg.description}</p>
                 </div>
                 <div className="alu-card__footer">
                   <a
-                    className="alu-link"
+                    className="alu-link alu-link--standalone"
                     href={data.packageAccess.href}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Karşılaştırma Tablosunu İndir (PDF) ↗
+                    <AluIcon name="download" size="sm" />
+                    <span>Karşılaştırma Tablosunu İndir (PDF)</span>
                   </a>
                 </div>
               </article>
@@ -312,9 +418,15 @@ export function HomepageView() {
                   const item = serviceByName.get(serviceName);
                   if (!item) return null;
                   const isExt = item.href.startsWith('http');
+                  const iconName = SERVICE_ICONS[item.title] || 'layers';
                   return (
                     <article key={item.title} className="alu-card">
-                      <span className="alu-card__eyebrow">{SERVICE_GROUPS[activeGroupIdx][0]}</span>
+                      <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
+                        <span className="alu-support-card__icon">
+                          <AluIcon name={iconName} size="md" />
+                        </span>
+                        <span className="alu-card__eyebrow">{SERVICE_GROUPS[activeGroupIdx][0]}</span>
+                      </div>
                       <div className="alu-card__body">
                         <h3 className="alu-card__title">{item.title}</h3>
                         <p className="alu-body-sm">{item.description}</p>
@@ -322,16 +434,18 @@ export function HomepageView() {
                       <div className="alu-card__footer">
                         {isExt ? (
                           <a
-                            className="alu-link"
+                            className="alu-link alu-link--standalone"
                             href={item.href}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            {item.cta} ↗
+                            <span>{item.cta}</span>
+                            <AluIcon name="external-link" size="sm" />
                           </a>
                         ) : (
-                          <Link className="alu-link" href={item.href}>
-                            {item.cta} →
+                          <Link className="alu-link alu-link--standalone" href={item.href}>
+                            <span>{item.cta}</span>
+                            <AluIcon name="arrow-right" size="sm" />
                           </Link>
                         )}
                       </div>
@@ -355,9 +469,15 @@ export function HomepageView() {
                     const item = serviceByName.get(name);
                     if (!item) return null;
                     const isExt = item.href.startsWith('http');
+                    const iconName = SERVICE_ICONS[item.title] || 'layers';
                     return (
                       <article key={`all-${item.title}`} className="alu-card">
-                        <span className="alu-card__eyebrow">{groupTitle}</span>
+                        <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
+                          <span className="alu-support-card__icon">
+                            <AluIcon name={iconName} size="md" />
+                          </span>
+                          <span className="alu-card__eyebrow">{groupTitle}</span>
+                        </div>
                         <div className="alu-card__body">
                           <h4 className="alu-card__title">{item.title}</h4>
                           <p className="alu-body-sm">{item.description}</p>
@@ -365,16 +485,18 @@ export function HomepageView() {
                         <div className="alu-card__footer">
                           {isExt ? (
                             <a
-                              className="alu-link"
+                              className="alu-link alu-link--standalone"
                               href={item.href}
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              {item.cta} ↗
+                              <span>{item.cta}</span>
+                              <AluIcon name="external-link" size="sm" />
                             </a>
                           ) : (
-                            <Link className="alu-link" href={item.href}>
-                              {item.cta} →
+                            <Link className="alu-link alu-link--standalone" href={item.href}>
+                              <span>{item.cta}</span>
+                              <AluIcon name="arrow-right" size="sm" />
                             </Link>
                           )}
                         </div>
@@ -410,7 +532,8 @@ export function HomepageView() {
               <p className="alu-caption">{data.bimflex.relationship}</p>
               <div>
                 <Link className="alu-button alu-button--primary alu-button--md" href={data.bimflex.href}>
-                  {data.bimflex.cta} →
+                  <span>{data.bimflex.cta}</span>
+                  <AluIcon name="arrow-right" size="sm" />
                 </Link>
               </div>
             </div>
@@ -443,13 +566,24 @@ export function HomepageView() {
               <p className="alu-body preview-meta">{data.innovationsMeta.description}</p>
             </div>
             <Link className="alu-button alu-button--secondary alu-button--md" href={data.innovationsMeta.href}>
-              {data.innovationsMeta.cta} →
+              <span>{data.innovationsMeta.cta}</span>
+              <AluIcon name="arrow-right" size="sm" />
             </Link>
           </div>
           <div className="alu-grid preview-innovations-grid">
             {data.innovations.map((card) => (
               <article key={card.id} className="alu-card">
-                <span className="alu-card__eyebrow">{card.badge}</span>
+                {card.image && (
+                  <div className="alu-card__media">
+                    <img src={card.image} alt={card.title} loading="lazy" />
+                  </div>
+                )}
+                <div className="alu-cluster">
+                  <span className="alu-badge alu-badge--accent">
+                    <AluIcon name="sparkles" size="sm" />
+                    <span>{card.badge}</span>
+                  </span>
+                </div>
                 <div className="alu-card__body">
                   <h3 className="alu-card__title">{card.title}</h3>
                   <p className="alu-body-sm">{card.description}</p>
@@ -457,6 +591,20 @@ export function HomepageView() {
               </article>
             ))}
           </div>
+
+          {/* OpenBIM & Technology Partners Strip */}
+          {data.partners && data.partners.length > 0 && (
+            <div className="alu-partner-strip" aria-label="Teknoloji ve OpenBIM İş Ortakları">
+              <span className="preview-kicker">OPENBIM VE TEKNOLOJİ EKOSİSTEMİ</span>
+              <div className="alu-partner-strip__grid">
+                {data.partners.map((partner) => (
+                  <div key={partner.name} className="alu-partner-strip__item" title={partner.name}>
+                    <img src={partner.logo} alt={partner.name} loading="lazy" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
     </>

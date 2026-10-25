@@ -1,10 +1,12 @@
 /** @type {import('next').NextConfig} */
+const isDev = process.env.NODE_ENV !== 'production';
+
 const securityHeaders = [
   {
     key: 'Content-Security-Policy',
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com",
+      `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''} https://www.googletagmanager.com https://www.google-analytics.com`,
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https://aluplan.com.tr https://*.allplan.com https://img.youtube.com https://i.ytimg.com",
       "font-src 'self' data:",
@@ -15,7 +17,7 @@ const securityHeaders = [
       "base-uri 'self'",
       "form-action 'self' https://forms.office.com",
       "frame-ancestors 'none'",
-      "upgrade-insecure-requests"
+      ...(isDev ? [] : ['upgrade-insecure-requests'])
     ].join('; ')
   },
   {

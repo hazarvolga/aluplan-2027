@@ -1,7 +1,7 @@
 # Oturum devri
 
 ## Güncelleme tarihi ve oturum no
-25.10.2026 — Faz 3 (PRD) onaylandı; Faz 4 (Antrasit Design System — `design-system/`) tamamlandı, onay bekliyor (Europe/Istanbul).
+25.10.2026 — Faz 4 (Antrasit Design System — `design-system/`) onaylandı; Faz 5 (Ana Sayfa Tasarımı — `design-system/ui_kits/homepage/` & `docs/homepage-design-proposal.md`) tamamlandı, onay bekliyor (Europe/Istanbul).
 
 ## Faz durumu tablosu
 | Faz | Durum |
@@ -10,9 +10,9 @@
 | 1 — UI/UX analizi | Tamamlandı (25.10.2026 kullanıcı onayıyla — `docs/ux-audit.md`) |
 | 2 — Teknik baseline | Tamamlandı (25.10.2026 kullanıcı onayıyla — `docs/baseline-report.md`) |
 | 3 — PRD | Tamamlandı (25.10.2026 kullanıcı onayıyla — `docs/PRD.md`) |
-| 4 — Design system | Onay bekliyor (`design-system/` altında Antrasit tasarım sistemi kuruldu) |
-| 5 — Ana sayfa tasarımı | Başlanmadı (Sıradaki faz) |
-| 6 — Geliştirme | Başlanmadı |
+| 4 — Design system | Tamamlandı (25.10.2026 kullanıcı onayıyla — `design-system/`) |
+| 5 — Ana sayfa tasarımı | Onay bekliyor (`design-system/ui_kits/homepage/` ve `docs/homepage-design-proposal.md` hazırlandı) |
+| 6 — Geliştirme | Başlanmadı (Sıradaki faz) |
 
 ## Tasarım beklerken envanter ve içerik modeli — 21.10.2026
 - Kullanıcı envanter kapanışı, ALLPLAN içerik eşlemesi, müşteri yolları ve yıllık güncelleme planını kabul etti. Uygulama/entegrasyon izni değil, analiz kapsamıdır.
@@ -98,7 +98,7 @@
 - Marka kılavuzunun üretici izinleri hakkındaki ifadeleri resmî izin belgesi yerine geçmez; benzerlik kontrolü henüz yapılmadı.
 
 ## Sıradaki adım
-`design-system/` (Faz 4 — Antrasit Design System) için kullanıcı onayını beklemek; onay sonrası **Faz 5 — Ana Sayfa Tasarımı** aşamasına geçmek.
+`design-system/ui_kits/homepage/` ve `docs/homepage-design-proposal.md` (Faz 5 — Ana Sayfa Tasarımı) için kullanıcı onayını beklemek; onay sonrası **Faz 6 — Geliştirme (`src/`)** aşamasına geçmek.
 
 Claude v3 indirildi ve ayrı antrasit önizleme kullanıcı tarafından uygun bulundu. Teknik entegrasyon kabulü değildir; aşağıdaki eski Claude durum kayıtları tarihsel notlardır.
 
@@ -355,3 +355,12 @@ Git dışında kullanıcı ZIP'i, `Aluplan Design System/`, `docs/previews/anthr
   - `design-system/ui_kits/homepage/index.html` + `design-system/data/homepage-data.js`: Keskin kart dili (`radius.surface = 0px`, `16/24/32 px` yoğunluk) ve `H01–H08` ana sayfa kesiti.
   - Doğrulama: `node design-system/scripts/build-tokens.mjs --check` → `0 errors` (`contrastChecks: 188, contrastFails: 0`).
 - **Sıradaki adım:** `design-system/` (Faz 4) için kullanıcı onayı; onaylandıktan sonra **Faz 5 — Ana Sayfa Tasarımı** aşamasına geçmek.
+
+## 25.10.2026 — Faz 4 onayı ve Faz 5 (Ana Sayfa Tasarımı) tamamlanması
+
+- Kullanıcı Faz 4 (`design-system/` — commit `bdcacda`) çalışmasını onayladı.
+- Faz 5 kapsamında:
+  - `design-system/ui_kits/homepage/HomepagePreview.jsx` ve `preview.css` üzerinde tam içerik paritesi tamamlandı: Hero 14 teknik etiketi, Koyu/Açık (`dark`/`light`) mod geçiş kontrolü, `H01–H08` sekiz ana sayfa bloğu, 20 profesyonel hizmet kaydı, 6 ürün ve 5 çözüm bağlantısı, Ataşehir/İstanbul adresi, 3 telefon numarası, `info@aluplan.com.tr`, 5 sosyal medya hesabı, 3 yasal sayfa bağlantısı ve `"Design & Develop by Hazar Volga Ekiz"` geliştirici kredisi eksiksiz yer alıyor.
+  - `docs/homepage-design-proposal.md` oluşturularak 3 ana sayfa tasarım yönü (*Yön 1: Keskin Hatlı Antrasit Mühendislik Sistemi [Seçilen]*, *Yön 2: Yapısal İndeks / Wireframe*, *Yön 3: Mimari Pafta Konsepti*) karşılaştırıldı ve `H01–H08` blok eşlemesi ile responsive kırılımlar belgelendi.
+  - Doğrulama: `homepage-preview-tests.mjs` (9/9), `token-tests.mjs` (28/28, 188/188 kontrast), `content-tests.mjs` (13/13) eksiksiz geçti.
+- **Sıradaki adım:** Faz 5 (`docs/homepage-design-proposal.md` ve `design-system/ui_kits/homepage/index.html`) için kullanıcı onayı; onaylandıktan sonra **Faz 6 — Geliştirme (`src/`)** aşamasına geçmek.

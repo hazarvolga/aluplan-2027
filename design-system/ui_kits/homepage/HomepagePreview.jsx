@@ -21,15 +21,25 @@ const groups = [
 function Section({ id, subtle=false, children }) {
   return <section id={id} className={'preview-section' + (subtle ? ' preview-section--subtle' : '')}><ALU.Container size="xl"><ALU.Stack gap="lg">{children}</ALU.Stack></ALU.Container></section>;
 }
-function PreviewHeader() {
+function PreviewHeader({ mode, onToggleMode }) {
   return <>
     <div className="preview-ribbon"><ALU.Container size="xl" className="preview-ribbon__inner">
-      <ALU.Text as="span" variant="caption">Tasarım sistemi önizlemesi · Nihai tasarım veya entegrasyon değil</ALU.Text>
-      <ALU.Text as="span" variant="caption" tone="secondary">Mega menü, arama ve tema kontrolü bu kesitte uygulanmadı.</ALU.Text>
+      <ALU.Text as="span" variant="caption">Tasarım sistemi önizlemesi · Antrasit ({mode === 'dark' ? 'Koyu' : 'Açık'} Mod)</ALU.Text>
+      <div className="preview-ribbon__controls">
+        <ALU.Text as="span" variant="caption" tone="secondary">Mega menü ve arama tam uygulama katmanında (Faz 6) bağlanır.</ALU.Text>
+        <ALU.Button variant="secondary" size="sm" onClick={onToggleMode}>
+          {mode === 'dark' ? 'Açık Modu Gör' : 'Koyu Modu Gör'}
+        </ALU.Button>
+      </div>
     </ALU.Container></div>
     <ALU.SiteHeader logoSrc={LOGO} homeHref="#top" navItems={nav} label="Ana menü önizlemesi" />
   </>;
 }
+const heroTags = [
+  'CLOUD NATIVE', 'BIM LEVEL 3', 'PARAMETRIC', 'AUTOMATION', 'INTEROPERABILITY',
+  'AX3000', 'PYTHONPARTS', 'OPENBIM', 'REAL-TIME', 'PRECAST', 'CIVIL', 'BRIDGE',
+  '@CONNECTION', 'DATA_NODE',
+];
 function Hero() {
   return <section className="preview-hero" id="top"><ALU.Container size="xl"><div className="preview-hero__grid">
     <ALU.Stack gap="lg">
@@ -37,6 +47,12 @@ function Hero() {
       <ALU.Heading level={1} size="display" className="preview-hero__title">DAHA İYİ BİR GELECEK İNŞA ETMEK İÇİN TASARLANDI</ALU.Heading>
       <ALU.Text variant="body-lg" tone="secondary" prose>Yenilikçi AEC iş akışları, otomasyon ve bulut tabanlı iş birliği ile daha başarılı projeler.</ALU.Text>
       <ALU.CtaGroup actions={actions} priority="equal" showDestination={true} />
+      <details className="preview-service-group">
+        <summary>Mevcut teknik etiketler <ALU.Text as="span" variant="caption" tone="secondary">14 kayıt</ALU.Text></summary>
+        <div className="preview-quicklinks">
+          {heroTags.map((tag) => <ALU.Badge key={tag} tone="neutral">{tag}</ALU.Badge>)}
+        </div>
+      </details>
     </ALU.Stack>
     <div className="preview-hero__media" aria-label="Mevcut hero videosu için ayrılan alan">
       <div className="preview-hero__mark" aria-hidden="true">⌜</div>
@@ -119,6 +135,63 @@ function Innovations(){const meta=data.innovationsMeta;return <Section id="innov
   </ALU.Stack><ALU.Button href={live(meta.href)} external variant="secondary">{meta.cta}</ALU.Button></div>
   <ALU.Grid columns={3} className="preview-innovations-grid">{data.innovations.map(item=><ALU.Card key={item.id} variant="outlined" title={item.title} titleLevel={3} eyebrow={<ALU.Badge tone="neutral">{item.badge}</ALU.Badge>}><ALU.Text tone="secondary">{item.description}</ALU.Text></ALU.Card>)}</ALU.Grid>
   </Section>}
-function Footer(){const columns=[{id:'products',heading:'Ürünler',links:data.products.map(p=>({id:p.id,label:p.title,href:live(p.href),external:true}))},{id:'company',heading:'Kurumsal',links:[['references','Referanslar','/references'],['about','Hakkımızda','/about'],['contact','İletişim','/contact']].map(([id,label,href])=>({id,label,href:live(href),external:true}))},{id:'legal',heading:'Yasal',links:[['privacy','Gizlilik Politikası','/gizlilik-politikasi'],['terms','Kullanım Şartları','/kullanim-sartlari'],['kvkk','KVKK','/kvkk']].map(([id,label,href])=>({id,label,href:live(href),external:true}))}];return <ALU.SiteFooter logoSrc={LOGO} homeHref="#top" columns={columns} legal="Aluplan ana sayfa tasarım sistemi önizlemesi · Yayın tasarımı değildir." />}
-function App(){if(!ALU||!data)return <p className="preview-loading">Bileşen veya içerik verisi yüklenemedi.</p>;return <div className="preview-shell"><a className="alu-skip-link" href="#main">İçeriğe geç</a><PreviewHeader/><main id="main"><Hero/><QuickLinks/><RolesProducts/><SolutionsLink/><Packages/><Services/><Bimflex/><Innovations/></main><Footer/></div>}
+function Footer() {
+  const columns = [
+    {
+      id: 'products',
+      heading: 'Ürünler',
+      links: data.products.map(p => ({ id: p.id, label: p.title, href: live(p.href), external: true })),
+    },
+    {
+      id: 'solutions',
+      heading: 'ÇÖZÜMLER',
+      links: [
+        ['building', 'BİNA TASARIMI', '/solutions-v2/building-design'],
+        ['infrastructure', 'ALTYAPI TASARIMI', '/solutions-v2/infrastructure'],
+        ['construction', 'İNŞAAT PLANLAMASI', '/solutions-v2/construction'],
+        ['addons', 'EKLENTİLER', '/solutions-v2/addons'],
+        ['other', 'DİĞER ÜRÜNLER', '/solutions-v2/other'],
+      ].map(([id, label, href]) => ({ id, label, href: live(href), external: true })),
+    },
+    {
+      id: 'contact',
+      heading: 'İletişim & Kurumsal',
+      links: [
+        ['address', 'Quick Tower – Workinton, İçerenköy Mah. Topçu İbrahim Sok. 8/10D No: 5, 34752 Ataşehir / İstanbul', 'https://aluplan.com.tr/contact', true],
+        ['tel1', '(+90) 216 225 84 41', 'tel:+902162258441', false],
+        ['tel2', '(+90) 543 211 94 42', 'tel:+905432119442', false],
+        ['tel3', '(+90) 549 499 73 79', 'tel:+905494997379', false],
+        ['mail', 'info@aluplan.com.tr', 'mailto:info@aluplan.com.tr', false],
+        ['references', 'Referanslar', 'https://aluplan.com.tr/references', true],
+        ['about', 'Hakkımızda', 'https://aluplan.com.tr/about', true],
+      ].map(([id, label, href, external]) => ({ id, label, href, external })),
+    },
+    {
+      id: 'legal-social',
+      heading: 'Yasal & Sosyal Medya',
+      links: [
+        ['privacy', 'Gizlilik Politikası', live('/gizlilik-politikasi'), true],
+        ['terms', 'Kullanım Şartları', live('/kullanim-sartlari'), true],
+        ['kvkk', 'KVKK', live('/kvkk'), true],
+        ['facebook', 'Facebook', 'https://www.facebook.com/Allplan.Turkey', true],
+        ['twitter', 'Twitter', 'https://twitter.com/Allplan_Turkey', true],
+        ['linkedin', 'LinkedIn', 'https://www.linkedin.com/company/allplan-turkey/', true],
+        ['instagram', 'Instagram', 'https://www.instagram.com/allplan_turkey/', true],
+        ['youtube', 'YouTube', 'https://www.youtube.com/c/AllplanTurkey', true],
+        ['credit', 'Design & Develop by Hazar Volga Ekiz', 'https://hazarvolga.com.tr', true],
+      ].map(([id, label, href, external]) => ({ id, label, href, external })),
+    },
+  ];
+  return <ALU.SiteFooter logoSrc={LOGO} homeHref="#top" columns={columns} legal="© 2026 Aluplan Program Sistemleri · 1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri. · Design & Develop by Hazar Volga Ekiz" />;
+}
+function App() {
+  const [mode, setMode] = React.useState('dark');
+  const toggleMode = () => {
+    const next = mode === 'dark' ? 'light' : 'dark';
+    setMode(next);
+    document.documentElement.setAttribute('data-mode', next);
+  };
+  if (!ALU || !data) return <p className="preview-loading">Bileşen veya içerik verisi yüklenemedi.</p>;
+  return <div className="preview-shell"><a className="alu-skip-link" href="#main">İçeriğe geç</a><PreviewHeader mode={mode} onToggleMode={toggleMode}/><main id="main"><Hero/><QuickLinks/><RolesProducts/><SolutionsLink/><Packages/><Services/><Bimflex/><Innovations/></main><Footer/></div>;
+}
 ReactDOM.createRoot(document.getElementById('root')).render(<App/>);

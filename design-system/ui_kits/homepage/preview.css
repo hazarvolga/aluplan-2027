@@ -2,6 +2,7 @@ body{margin:0;background:var(--surface-page);color:var(--text-primary)}
 .preview-loading{padding:var(--space-inset-lg)}
 .preview-ribbon{background:var(--surface-muted);border-bottom:var(--border-width-default) solid var(--border-default);padding:var(--space-inset-xs) 0}
 .preview-ribbon__inner{display:flex;gap:var(--space-inline-md);justify-content:space-between;align-items:center}
+.preview-ribbon__controls{display:flex;gap:var(--space-inline-md);align-items:center;flex-wrap:wrap}
 .preview-shell{
   min-height:100vh;
   background:var(--surface-page)

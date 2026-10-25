@@ -1,7 +1,7 @@
 # Oturum devri
 
 ## Güncelleme tarihi ve oturum no
-25.10.2026 — Faz 4 (Antrasit Design System — `design-system/`) onaylandı; Faz 5 (Ana Sayfa Tasarımı — `design-system/ui_kits/homepage/` & `docs/homepage-design-proposal.md`) tamamlandı, onay bekliyor (Europe/Istanbul).
+25.10.2026 — Faz 5 onaylandı (`f7c7a21`); Faz 6 (Geliştirme — `src/` Next.js uygulaması, SEO/GEO/Güvenlik/Performans iyileştirmeleri, 27/27 parite testi ve `docs/final-comparison-report.md`) tamamlandı, kullanıcı onayı bekliyor (Europe/Istanbul).
 
 ## Faz durumu tablosu
 | Faz | Durum |
@@ -11,8 +11,8 @@
 | 2 — Teknik baseline | Tamamlandı (25.10.2026 kullanıcı onayıyla — `docs/baseline-report.md`) |
 | 3 — PRD | Tamamlandı (25.10.2026 kullanıcı onayıyla — `docs/PRD.md`) |
 | 4 — Design system | Tamamlandı (25.10.2026 kullanıcı onayıyla — `design-system/`) |
-| 5 — Ana sayfa tasarımı | Onay bekliyor (`design-system/ui_kits/homepage/` ve `docs/homepage-design-proposal.md` hazırlandı) |
-| 6 — Geliştirme | Başlanmadı (Sıradaki faz) |
+| 5 — Ana sayfa tasarımı | Tamamlandı (25.10.2026 kullanıcı onayıyla — `design-system/ui_kits/homepage/` ve `docs/homepage-design-proposal.md`) |
+| 6 — Geliştirme | Onay bekliyor (`src/` Next.js uygulaması ve `docs/final-comparison-report.md` tamamlandı) |
 
 ## Tasarım beklerken envanter ve içerik modeli — 21.10.2026
 - Kullanıcı envanter kapanışı, ALLPLAN içerik eşlemesi, müşteri yolları ve yıllık güncelleme planını kabul etti. Uygulama/entegrasyon izni değil, analiz kapsamıdır.
@@ -364,3 +364,17 @@ Git dışında kullanıcı ZIP'i, `Aluplan Design System/`, `docs/previews/anthr
   - `docs/homepage-design-proposal.md` oluşturularak 3 ana sayfa tasarım yönü (*Yön 1: Keskin Hatlı Antrasit Mühendislik Sistemi [Seçilen]*, *Yön 2: Yapısal İndeks / Wireframe*, *Yön 3: Mimari Pafta Konsepti*) karşılaştırıldı ve `H01–H08` blok eşlemesi ile responsive kırılımlar belgelendi.
   - Doğrulama: `homepage-preview-tests.mjs` (9/9), `token-tests.mjs` (28/28, 188/188 kontrast), `content-tests.mjs` (13/13) eksiksiz geçti.
 - **Sıradaki adım:** Faz 5 (`docs/homepage-design-proposal.md` ve `design-system/ui_kits/homepage/index.html`) için kullanıcı onayı; onaylandıktan sonra **Faz 6 — Geliştirme (`src/`)** aşamasına geçmek.
+
+## 25.10.2026 — Faz 5 onayı ve Faz 6 (`src/` Next.js Uygulaması & `docs/final-comparison-report.md`) tamamlanması
+
+- Kullanıcı Faz 5 (`f7c7a21`) çalışmasını onayladı.
+- Faz 6 kapsamında (`../aluplan-2026` klasörüne hiçbir şekilde dokunulmadan ve yalnızca `aluplan-2027/docs/00-inventory/` içindeki yerel envanter kullanılarak):
+  - **Veri ve İçerik Katmanı (`src/data/` & `scripts/generate_site_data.py`):** 110 aktif HTTP 200 rotasının tamamı (`src/data/pages.json`), 14 eğitim video oynatma listesi / 216 tekil video (`src/data/playlists.json`), gezinme menüleri (`src/data/navigation.json`), `H01–H08` ana sayfa verisi (`src/data/homepage.json`), arama dizini (`src/data/search-index.json`) ve 10 indirilebilir PDF/DOCX belgesi (`public/docs/`) üretildi.
+  - **Next.js App Router Uygulaması (`src/app/`, `src/components/`, `src/lib/`):**
+    - Onaylı Antrasit tasarım sistemi (`src/styles/globals.css`, `radius.surface = 0px`, `1px` sınır, Koyu/Açık mod, yerel WOFF2 fontlar) entegre edildi.
+    - Gezinme odaklı Header (`MegaMenu`, `CommandMenu` arama `Ctrl+K`, Koyu/Açık mod geçişi), niyete özel kısa Next.js talep modalı (`quote` / `trial_assistance` / `training_request`), KVKK çerez rıza banner'ı (`CookieConsent`) ve `"Design & Develop by Hazar Volga Ekiz"` kredili Footer (`SiteShell.tsx`) kuruldu.
+    - Tüm 110 rotada %100 self-referencing canonical, %100 benzersiz `<title>` ve `<meta name="description">`, %100 tekil `<h1>`, `@id` bağlantılı JSON-LD (`Organization`, `WebSite`, `BreadcrumbList`, `SoftwareApplication`, `Service`, `FAQPage`, `VideoObject`), temiz `sitemap.ts`, AI bot uyumlu `robots.ts` ve GEO `/llms.txt` (`src/app/llms.txt/route.ts`) sağlandı.
+    - 4 kalıcı `308` yönlendirme ve `/solutions/imar-yonetmliği-bim-eklentisi` alias'ı `next.config.mjs` içine tanımlandı; `/api/request`, `/api/contact` ve `/api/send-activation-email` uç noktaları `escapeHtml()`, IP rate-limit ve `TLSv1.2+` ile güçlendirildi.
+  - **Doğrulama:** `python3 scripts/verify_phase6_parity.py` (**27/27 PASS, 0 hata**) ve `python3 -m unittest tests/test_url_parity.py` (**5/5 OK**) geçti.
+  - **Final Raporu:** `docs/final-comparison-report.md` içinde Faz 2 baseline ile Faz 6 son durumunun Önce/Sonra karşılaştırması belgelendi.
+- **Sıradaki adım:** Faz 6 çıktılarının ve `docs/final-comparison-report.md` raporunun kullanıcı tarafından son onayı.

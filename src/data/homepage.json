@@ -1,0 +1,398 @@
+{
+  "roles": [
+    {
+      "id": "architect",
+      "label": "MİMAR",
+      "title": "Özgür Tasarım",
+      "description": "Sınırsız modelleme yetenekleri ve entegre görselleştirme ile tasarım vizyonunuzu kısıtlamadan gerçeğe dönüştürün.",
+      "href": "/products/architecture",
+      "features": [
+        "Parametrik Modelleme",
+        "Entegre Rendering",
+        "AI Görselleştirme",
+        "Konsept Tasarım"
+      ]
+    },
+    {
+      "id": "engineer",
+      "label": "MÜHENDİS",
+      "title": "Hassas Analiz",
+      "description": "Tek model üzerinden yapısal analiz, donatı detaylandırma ve metraj. Hatasız projeler, optimize edilmiş maliyetler.",
+      "href": "/products/allplan-aec",
+      "features": [
+        "Otomatik Donatı",
+        "FEM Analizi",
+        "Çakışma Kontrolü",
+        "Maliyet Hesabı"
+      ]
+    },
+    {
+      "id": "fabricator",
+      "label": "PREKAST",
+      "title": "Akıllı Üretim",
+      "description": "Modelden doğrudan fabrikaya veri aktarımı. Prekast ve çelik üretiminde maksimum verimlilik ve sıfır hata.",
+      "href": "/products/precast",
+      "features": [
+        "CAM Veri Çıktısı",
+        "Lojistik Planlama",
+        "Stok Yönetimi",
+        "Montaj Planları"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "basic",
+      "title": "ALLPLAN Basic",
+      "description": "Temel 2D/3D çizim ve modelleme çözümümüz.",
+      "href": "/products/allplan-basic",
+      "relatedRoles": [
+        "architect"
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "ALLPLAN Concept",
+      "description": "Konsept tasarım ve modelleme için ideal.",
+      "href": "/products/allplan-concept",
+      "relatedRoles": [
+        "architect"
+      ]
+    },
+    {
+      "id": "professional",
+      "title": "ALLPLAN Professional",
+      "description": "Tam kapsamlı BIM modelleme ve dokümantasyon.",
+      "href": "/products/allplan-professional",
+      "relatedRoles": [
+        "engineer"
+      ]
+    },
+    {
+      "id": "ultimate",
+      "title": "ALLPLAN Ultimate",
+      "description": "Tüm disiplinler için en kapsamlı paketimiz.",
+      "href": "/products/allplan-ultimate",
+      "relatedRoles": [
+        "engineer",
+        "fabricator"
+      ]
+    },
+    {
+      "id": "civil",
+      "title": "ALLPLAN Civil",
+      "description": "Altyapı, yol ve köprü projeleri için özel çözüm.",
+      "href": "/products/civil",
+      "relatedRoles": [
+        "engineer"
+      ]
+    },
+    {
+      "id": "precast",
+      "title": "ALLPLAN Precast",
+      "description": "Prekast üretimi ve detaylandırma otomasyonu.",
+      "href": "/products/precast",
+      "relatedRoles": [
+        "fabricator"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "title": "ALLPLAN Basic",
+      "description": "Temel 2D/3D tasarım ve çizim araçları.",
+      "id": "basic"
+    },
+    {
+      "title": "ALLPLAN Concept",
+      "description": "Konsept tasarım, modelleme ve görselleştirme.",
+      "id": "concept"
+    },
+    {
+      "title": "ALLPLAN Professional",
+      "description": "Tam kapsamlı BIM, metraj ve işbirliği.",
+      "id": "professional"
+    },
+    {
+      "title": "ALLPLAN Ultimate",
+      "description": "Tüm disiplinler ve ileri seviye mühendislik.",
+      "id": "ultimate"
+    },
+    {
+      "title": "CIVIL",
+      "description": "Altyapı, yol ve köprü mühendisliği çözümleri.",
+      "id": "civil"
+    },
+    {
+      "title": "PRECAST",
+      "description": "Prefabrik üretim planlama ve detaylandırma.",
+      "id": "precast"
+    }
+  ],
+  "solutions": [
+    {
+      "title": "BİNA TASARIMI",
+      "subtitle": "Mimari & Mühendislik",
+      "description": "Tasarım, Strüktürel Analiz, MEP ve Endüstriyel çözümler.",
+      "cta": "Çözümleri İncele",
+      "href": "/solutions-v2/building-design"
+    },
+    {
+      "title": "ALTYAPI TASARIMI",
+      "subtitle": "Yol & Köprü",
+      "description": "Köprü, Tünel ve Yol projeleri için parametrik modelleme.",
+      "cta": "Keşfet",
+      "href": "/solutions-v2/infrastructure"
+    },
+    {
+      "title": "İNŞAAT PLANLAMASI",
+      "subtitle": "Prekast & Çelik",
+      "description": "Üretimden şantiyeye kesintisiz veri akışı.",
+      "cta": "Detaylar",
+      "href": "/solutions-v2/construction"
+    },
+    {
+      "title": "EKLENTİLER",
+      "subtitle": "Add-ons & Tools",
+      "description": "Özelleştirilmiş eklentiler ve araçlar.",
+      "cta": "İncele",
+      "href": "/solutions-v2/addons"
+    },
+    {
+      "title": "DİĞER ÇÖZÜMLERİMİZ",
+      "subtitle": "Bimplus & More",
+      "description": "İşbirliği ve tamamlayıcı ürünler.",
+      "cta": "Göz At",
+      "href": "/solutions-v2/other"
+    }
+  ],
+  "innovations": [
+    {
+      "title": "AI Görselleştirme",
+      "description": "Yapay zeka destekli render araçları ile tasarımlarınızı saniyeler içinde hayata geçirin.",
+      "badge": "ALLPLAN CONCEPT",
+      "id": "ai-visualization"
+    },
+    {
+      "title": "Donatıdan Şantiyeye",
+      "description": "Tamamen dijital, çizimsiz şantiye iş akışları ile hatasız üretim ve montaj.",
+      "badge": "ALLPLAN PROFESSIONAL",
+      "id": "site-rebar"
+    },
+    {
+      "title": "Birleşik Arazi Modeli",
+      "description": "Büyük ölçekli altyapı projeleri için yeni nesil hassas arazi modelleme motoru.",
+      "badge": "ALLPLAN ULTIMATE",
+      "id": "unified-terrain"
+    }
+  ],
+  "services": [
+    {
+      "title": "Eğitim",
+      "description": "Online ve yüz yüze profesyonel ALLPLAN eğitimleri ile uzmanlaşın.",
+      "status": "active",
+      "href": "/solutions-v2/training",
+      "cta": "Eğitim Takvimi"
+    },
+    {
+      "title": "Teknik Destek",
+      "description": "Microsoft Teams üzerinden uzaktan bağlantı ile kesintisiz teknik destek sağlıyoruz.",
+      "status": "active",
+      "href": "https://teams.microsoft.com/meet/39783115346098?p=wIo7WWYLZwqoHtjq3Y",
+      "cta": "Destek Al"
+    },
+    {
+      "title": "Danışmanlık",
+      "description": "Şirketinize özel BIM implementasyon ve süreç danışmanlığı.",
+      "status": "active",
+      "href": "/contact",
+      "cta": "İletişim"
+    },
+    {
+      "title": "Sertifika",
+      "description": "Uluslararası geçerliliği olan ALLPLAN Uzman sertifikası.",
+      "status": "active",
+      "href": "https://aluplan.info/",
+      "cta": "Görüntüle"
+    },
+    {
+      "title": "Destek Platformu",
+      "description": "Ticket sistemi üzerinden destek taleplerinizi oluşturun ve süreçlerinizi kolayca takip edin.",
+      "status": "active",
+      "href": "https://allplan.net.tr/",
+      "cta": "Talep Oluştur"
+    },
+    {
+      "title": "Partner",
+      "description": "ALLPLAN çözüm ortağı ağımıza katılın, birlikte büyüyelim.",
+      "status": "active",
+      "href": "https://www.allplan.com/allplan-partner-solutions/",
+      "cta": "Başvuru Yap"
+    },
+    {
+      "title": "Download",
+      "description": "Güncel yazılım sürümlerini ve deneme sürümlerini indirin.",
+      "status": "active",
+      "href": "https://connect2.allplan.com/",
+      "cta": "İndir"
+    },
+    {
+      "title": "ALLPLAN FAQ",
+      "description": "Sıkça sorulan sorular ve çözüm veri tabanı.",
+      "status": "active",
+      "href": "/solutions-v2/faq",
+      "cta": "İncele"
+    },
+    {
+      "title": "Connect: Giriş",
+      "description": "Allplan Connect portalına giriş yapın veya şifrenizi sıfırlayın.",
+      "status": "active",
+      "href": "/solutions-v2/connect-login",
+      "cta": "Giriş Yap"
+    },
+    {
+      "title": "Admin Lisans : Lisans Yöneticisi Bilgi Formu",
+      "description": "Lisanslarınızı yönetin, transfer edin veya güncelleyin.",
+      "status": "active",
+      "href": "/solutions-v2/connect-license",
+      "cta": "Yönet"
+    },
+    {
+      "title": "Blog Global",
+      "description": "En son ALLPLAN haberleri, başarı hikayeleri ve sektör trendleri.",
+      "status": "active",
+      "href": "https://www.allplan.com/blog/",
+      "cta": "Okumaya Başla"
+    },
+    {
+      "title": "Canlı Webinarlar",
+      "description": "Uzmanların sunumuyla canlı eğitimler ve ürün tanıtımları.",
+      "status": "active",
+      "href": "https://www.allplan.com/events/events/?",
+      "cta": "Kayıt Ol"
+    },
+    {
+      "title": "BIM Rehberi",
+      "description": "BIM süreçleri ve uygulamaları için kapsamlı rehberler.",
+      "status": "active",
+      "href": "https://www.allplan.com/bim/bim-guides/",
+      "cta": "İncele"
+    },
+    {
+      "title": "OPENBIM",
+      "description": "Açık standartlarla işbirliği, IFC ve veri değişimi hakkında her şey.",
+      "status": "active",
+      "href": "https://www.allplan.com/us_en/bim/openbim/",
+      "cta": "Keşfet"
+    },
+    {
+      "title": "Sistem Gereksinimleri",
+      "description": "ALLPLAN performansı için önerilen donanım ve yazılım özellikleri.",
+      "status": "active",
+      "href": "https://www.allplan.com/us_en/system/system-requirements/",
+      "cta": "Kontrol Et"
+    },
+    {
+      "title": "Tüm Gereksinimler",
+      "description": "Geçmişten günümüze tüm sürümler için detaylı sistem bilgileri.",
+      "status": "active",
+      "href": "https://connect.allplan.com/support/sysinfo/2025.html",
+      "cta": "Listele"
+    },
+    {
+      "title": "Sürüm Notları",
+      "description": "Her yeni güncelleme ile gelen, iyileştirmeler ve düzeltmeler.",
+      "status": "active",
+      "href": "https://www.allplan.com/tr/system/releasenotes/?no_cache=1",
+      "cta": "Oku"
+    },
+    {
+      "title": "IFC Export El Kitabı",
+      "description": "Sektör paydaşlarının birlikte çalışabilme potansiyelini artırmak, openBIM kültürünü tanıtmak ve yaygınlaştırmak amacıyla buildingSMART Türkiye tarafından hazırlanan IFC Aktarım El Kitabı.",
+      "status": "active",
+      "href": "/docs/ifc_aktarim_el_kitabi_ifc_4.0_ifc_4.3_2026.pdf",
+      "cta": "İndir"
+    },
+    {
+      "title": "CodeMeter WebDepot",
+      "description": "CodeMeter License Central WebDepot'a hoş geldiniz. Lisanslarınızı bu WebDepot'u kullanarak CmContainer'ınıza aktarabilirsiniz.",
+      "status": "active",
+      "href": "https://lc.codemeter.com/59885/depot/index.php",
+      "cta": "Lisansları Aktar"
+    },
+    {
+      "title": "Deklarasyon Formu",
+      "description": "Yeni Allplan lisansınızın etkinleştirilmesi için talep ve beyan formu. ALLPLAN 2023 ve ALLPLAN 2024 versiyonları için geçerlidir.",
+      "status": "active",
+      "href": "/solutions-v2/connect-license/activation",
+      "cta": "Görüntüle"
+    }
+  ],
+  "quickLinks": [
+    [
+      "Yenilikleri İncele",
+      "/products/allplan-2026-yenilikler"
+    ],
+    [
+      "ALLPLAN 2026 İncele",
+      "/products/allplan-2026"
+    ],
+    [
+      "ALLPLAN CLOUD VE Genel Geliştirmeler",
+      "/solutions/allplan-bulut-hizmetleri"
+    ],
+    [
+      "ALLPLAN CLOUD Hizmetleri",
+      "/products/allplan-cloud-services"
+    ],
+    [
+      "Eğitim Videoları",
+      "/solutions-v2/training/video-library"
+    ]
+  ],
+  "packageAccess": {
+    "eyebrow": "DETAYLI ANALİZ",
+    "title": "TEKNİK ÖZELLİKLER",
+    "description": "Hangi ALLPLAN paketi sizin için uygun? Paketler arasındaki farkları ve teknik özellikleri detaylı tablomuzda karşılaştırın.",
+    "cta": "Karşılaştırma Tablosunu İndir (PDF)",
+    "href": "/docs/V2026_paket-karsilastirma-Q3-2026_R01.pdf",
+    "fileName": "V2026_paket-karsilastirma-Q3-2026_R01.pdf"
+  },
+  "bimflex": {
+    "eyebrow": "FlexSoft x Aluplan satış ortaklığı",
+    "label": "FlexSoft AR-GE x Aluplan",
+    "title": "Allplan için BIM uyumlu yapı elemanları donatısı",
+    "claim": "Donatı modellemesini saatlerden saniyelere indirin",
+    "description": "FlexSoft tarafından geliştirilen BIMFlex, satış ortaklığı kapsamında Aluplan tarafından da sunulabilecektir. Allplan içindeki kolon, kiriş, perde duvar ve döşemelerinizi BIM uyumlu gerçek donatı nesneleriyle otomatik donatılandırır.",
+    "cta": "BIMFlex detaylarını incele",
+    "href": "/solutions/bimflex",
+    "relationship": "FlexSoft tarafından geliştirilen çözüm",
+    "logo": {
+      "src": "/assets/bimflex/flexsoft-logo.png",
+      "alt": "FlexSoft"
+    },
+    "media": [
+      {
+        "src": "/assets/bimflex/kolon-model.png",
+        "alt": "BIMFlex kolon donatısı modeli"
+      },
+      {
+        "src": "/assets/bimflex/kiris-model.png",
+        "alt": "BIMFlex kiriş donatısı modeli"
+      },
+      {
+        "src": "/assets/bimflex/doseme-bosluk-model.png",
+        "alt": "BIMFlex döşeme boşluk donatısı modeli"
+      }
+    ]
+  },
+  "innovationsMeta": {
+    "eyebrow": "YENİ SÜRÜM",
+    "version": "ALLPLAN 2026",
+    "title": "ALLPLAN 2026 Yenilikleri",
+    "description": "Her disiplin için geliştirilen devrim niteliğindeki özellikleri keşfedin. Yapay zekadan dijital şantiye süreçlerine kadar en yeni teknolojiler.",
+    "cta": "Tüm Yenilikleri İncele",
+    "href": "/products",
+    "status": "source-version-unverified"
+  }
+}

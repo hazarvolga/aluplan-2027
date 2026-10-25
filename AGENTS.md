@@ -27,4 +27,10 @@ Oturum bitmeden ve önemli bir adım tamamlanınca `HANDOFF.md` dosyasını gün
 - Segment önceliği, birincil dönüşüm, özel form altyapısı, palet/font/logo/slogan ve üretici izinleri açık karar olarak kalır.
 
 ## Komutlar
-Yeni uygulama kurulmadı. `build`, `test`, `lint`, `dev`: henüz tanımlı değil; geliştirme fazında doldur.
+- Veri üretimi (envanter → `src/data/`): `python3 scripts/generate_site_data.py` (veya `pnpm data:generate`)
+- Parite, SEO ve güvenlik doğrulaması: `python3 scripts/verify_phase6_parity.py` (veya `pnpm test:parity`)
+- URL parite birim testi: `python3 -m unittest tests/test_url_parity.py`
+- Token ve kontrast kontrolü: `node design-system/scripts/build-tokens.mjs --check` (`pnpm tokens:check`)
+- Tip kontrolü: `pnpm typecheck`
+- Geliştirme sunucusu: `pnpm dev`
+- Üretim derlemesi: `pnpm build` ve `pnpm start`

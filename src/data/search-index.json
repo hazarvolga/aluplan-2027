@@ -1,0 +1,882 @@
+[
+  {
+    "path": "/",
+    "title": "DAHA İYİ BİR GELECEKİNŞA ETMEK İÇİN TASARLANDI",
+    "seoTitle": "ALLPLAN Türkiye | Profesyonel BIM Yazılımları | Aluplan",
+    "section": "home",
+    "description": "Mimarlar, mühendisler ve müteahhitler için lider BIM çözümü. Tasarımdan üretime kesintisiz iş akışı.",
+    "keywords": "Allplan için BIM uyumlu yapı elemanları donatısı TEK PLATFORM.TÜM DİSİPLİNLER. BİNA TASARIMI ALTYAPI TASARIMI İNŞAAT PLANLAMASI EKLENTİLER DİĞER ÇÖZÜMLERİMİZ ROLÜNÜZÜ SEÇİN"
+  },
+  {
+    "path": "/about",
+    "title": "Türkiye'nin GüvenilirBIM Çözüm Ortağı",
+    "seoTitle": "Hakkımızda — Türkiye’nin Güvenilir BIM Çözüm Ortağı | Aluplan",
+    "section": "corporate",
+    "description": "Türkiye'nin GüvenilirBIM Çözüm Ortağı: Aluplan olarak, 1995 yılından bu yana Türkiye'de Allplan yazılımlarının distribütörlüğünü yapıyor, mimarlık ve mühendislik sektörüne profesyonel BIM çözüml",
+    "keywords": "Hikayemiz Değerlerimiz Misyonumuz Müşteri Odaklılık Kalite ve Uzmanlık Sürekli İnovasyon Ofisimiz Adres"
+  },
+  {
+    "path": "/contact",
+    "title": "Bizimle İletişime Geçin",
+    "seoTitle": "İletişim ve Teknik Danışmanlık — Aluplan | Aluplan",
+    "section": "corporate",
+    "description": "Bizimle İletişime Geçin: Sorularınız için buradayız. Size en uygun çözümü bulmak için yardımcı olalım. İçerenköy Mah. Topçu İbrahim Sok. No: 5, Ataşehir",
+    "keywords": "Telefon E-posta Adres Çalışma Saatleri Ücretsiz Deneme Teklif Talep Formu Teknik Destek"
+  },
+  {
+    "path": "/gizlilik-politikasi",
+    "title": "Gizlilik Politikası",
+    "seoTitle": "Gizlilik Politikası ve Veri Güvenliği | Aluplan",
+    "section": "legal",
+    "description": "Gizlilik Politikası: www.aluplan.com.tr ‘de form doldurarak bizimle paylaştığınız kişisel bilgilerinizi ve fikirlerinizi korumak bizim görevimizdir. Aşağıdaki ilkeler, bu kişis",
+    "keywords": "Kişisel Verilerin Korunması Hakkında Açıklama ve Gizlilik Politikası İnternet Sitesi Çerezlerin Kullanımı Kişisel Verilerin Güvenliği"
+  },
+  {
+    "path": "/health",
+    "title": "OK",
+    "seoTitle": "Sistem Durumu ve Servis Sağlığı (Health Check) | Aluplan",
+    "section": "utility",
+    "description": "OK — Aluplan Program Sistemleri tarafından Türkiye'de sunulan ALLPLAN BIM yazılım, eğitim ve mühendislik çözümü (/health).",
+    "keywords": ""
+  },
+  {
+    "path": "/kullanim-sartlari",
+    "title": "Kullanım Şartları",
+    "seoTitle": "İnternet Sitesi Kullanım Şartları | Aluplan",
+    "section": "legal",
+    "description": "Kullanım Şartları: ) ziyaret ederek ve kullanarak, aşağıda belirtilen Kullanım Şartları'nı kabul etmiş sayılırsınız. Eğer bu şartları kabul etmiyorsanız, lütfen sitemizi kull",
+    "keywords": "1. Genel Hükümler 2. Fikri Mülkiyet Hakları 3. Kullanım Kuralları 4. Sorumluluk Reddi 5. Uygulanacak Hukuk ve Yetkili Mahkeme"
+  },
+  {
+    "path": "/kvkk",
+    "title": "KVKK Aydınlatma Metni",
+    "seoTitle": "KVKK Kişisel Verilerin İşlenmesi Aydınlatma Metni | Aluplan",
+    "section": "legal",
+    "description": "KVKK Aydınlatma Metni: Kişisel Verilerin İşlenmesine İlişkin Aydınlatma Metni ALUPLAN BİLGİSAYAR PROGRAM SİSTEMLERİ SANAYİ VE TİCARET LTD. ŞTİ. (",
+    "keywords": "Veri Sorumlusu Kimliği Kişisel Verilerin Hangi Amaçla İşleneceği İşlenen Kişisel Verilerin Kimlere ve Hangi Amaçlar İle Aktarılabileceği Kişisel Veri Toplamanın Yöntemi ve Hukuki Sebebi Veri Sahibinin Hakları İletişim ve Başvuru İletişim Adresi İletişim Kanalları"
+  },
+  {
+    "path": "/package-overview",
+    "title": "Paket Karşılaştırması",
+    "seoTitle": "ALLPLAN Paket Genel Bakış ve Sürüm Rehberi | Aluplan",
+    "section": "corporate",
+    "description": "Paket Karşılaştırması: İhtiyacınıza en uygun Allplan paketini keşfedin.",
+    "keywords": ""
+  },
+  {
+    "path": "/paket-karsilastirma",
+    "title": "ALLPLAN Paket Karşılaştırması",
+    "seoTitle": "ALLPLAN 2026 Paket Karşılaştırma Rehberi (Q3 2026 PDF) | Aluplan",
+    "section": "corporate",
+    "description": "ALLPLAN Basic, Concept, Professional, Ultimate, Civil ve Precast paketlerinin en güncel teknik özellik karşılaştırma tablosunu PDF formatında indirin.",
+    "keywords": "ALLPLAN 2026 Detaylı Paket Karşılaştırma Dokümanı ALLPLAN Q3-2026 ALLPLAN Ürün Paketleri ALLPLAN Basic ALLPLAN Concept ALLPLAN Professional ALLPLAN Ultimate ALLPLAN Civil"
+  },
+  {
+    "path": "/products",
+    "title": "ALLPLAN Ürün Ailesi",
+    "seoTitle": "ALLPLAN Ürün Ailesi ve Mühendislik Yazılımları | Aluplan",
+    "section": "products",
+    "description": "ALLPLAN Ürün Ailesi: Projenizin ölçeği ne olursa olsun, ihtiyaçlarınıza uygun mükemmel ALLPLAN çözümünü keşfedin. Tasarımdan inşaata kesintisiz iş akışı. Mimarlar, mühendisler ",
+    "keywords": "ALLPLAN AEC ALLPLAN Ultimate ALLPLAN Civil ALLPLAN Professional ALLPLAN Concept ALLPLAN Precast ALLPLAN Basic Ürün Ailesindeki Yenilikler"
+  },
+  {
+    "path": "/products/allplan",
+    "title": "ALLPLAN",
+    "seoTitle": "ALLPLAN Platformu — Disiplinlerarası BIM Çözümü | Aluplan",
+    "section": "products",
+    "description": "ALLPLAN ana ürün: AEC için entegre BIM platformu",
+    "keywords": "Öne Çıkan Özellikler Paketler ALLPLAN Basic ALLPLAN Professional ALLPLAN Ultimate"
+  },
+  {
+    "path": "/products/allplan-2026",
+    "title": "DAHA İYİ BİR GELECEK İNŞA ETMEK İÇİN TASARLANDI",
+    "seoTitle": "ALLPLAN 2026 Sürümü — Geleceği İnşa Eden BIM Platformu | Aluplan",
+    "section": "products",
+    "description": "DAHA İYİ BİR GELECEK İNŞA ETMEK İÇİN TASARLANDI: Bilgi Modelleme, Yönetim, Birlikte Çalışabilirlik ve İş Birliği İş Akışları için Yeni Özellikler ALLPLAN 2026, BIM iş akışlarını optimize etmek ve disiplin",
+    "keywords": "YENİ ÖZELLİKLER BİLGİ MODELLEME VE YÖNETİMİ Georeferans Noktaları ile Kesin Konumlandırma Standartlaştırılmış verilerle sorunsuz BIM entegrasyonu BIM uyumluluğunu otomatikleştirin ve IDS kurallarıyla veri entegrasyonunu kolaylaştırın Daha akıllı ve hızlı proje yönetimi için kolay organizasyon ve kontrol BİRLİKTE ÇALIŞABİLİRLİK VE İŞ BİRLİĞİ İŞ AKIŞLARI Gelişmiş IFC ve Bulut Referanslama - Daha fazla esneklik, bulut entegrasyonu ve kolaylaştırılmış iş birliği"
+  },
+  {
+    "path": "/products/allplan-2026-yenilikler",
+    "title": "DAHA İYİ BİR GELECEK İNŞA ETMEK İÇİN TASARLANDI",
+    "seoTitle": "ALLPLAN 2026 Yenilikleri ve Öne Çıkan Özellikler | Aluplan",
+    "section": "products",
+    "description": "DAHA İYİ BİR GELECEK İNŞA ETMEK İÇİN TASARLANDI: Mimarlar, mühendisler, üreticiler ve inşaat profesyonelleri için verimlilik ve iş birliğini yeniden tanımlıyor. ALLPLAN 2026 ürün sürümleri, modernizasyon,",
+    "keywords": "/ GENEL BAKIŞ NEDEN ALLPLAN 2026? Mimarlar, mühendisler, üreticiler ve inşaat profesyonelleri için verimlilik ve iş birliğini yeniden tanımlıyor ANA FAYDALAR ALLPLAN 2026 – ANA ÖZELLİKLER VE GELİŞTİRMELER Geliştirilmiş Serbest Şekilli Merdiven Modelleyicisi Eşsiz, standartlara uygun merdivenleri benzersiz esneklik ve kolaylıkla tasarlayın Gelişmiş Çok Katmanlı Döşeme Yönetimi"
+  },
+  {
+    "path": "/products/allplan-aec",
+    "title": "ALLPLAN",
+    "seoTitle": "ALLPLAN AEC — Mimari, Mühendislik ve İnşaat için BIM | Aluplan",
+    "section": "products",
+    "description": "ALLPLAN: THE ULTIMATE BIM SOLUTION FOR AEC PROFESSIONALS FROM DESIGN TO BUILD ALLPLAN'in mimariye yönelik BIM çözümleri, verimli tasarım ve sorunsuz proje yönetimi ",
+    "keywords": "THE ULTIMATE BIM SOLUTION FOR AEC PROFESSIONALS FROM DESIGN TO BUILD ALLPLAN NEDİR? YÜKSEK PERFORMANS DAHA FAZLA HASSASİYET DAHA FAZLA PROJE KAZAN AŞAĞIDAKİ ZORLUKLARLA SÜREKLİ MÜCADELE EDİYOR MUSUNUZ? TEK YAZILIMLA TAM ÇÖZÜM İSTEDİĞİNİZ GİBİ ÇALIŞIN"
+  },
+  {
+    "path": "/products/allplan-basic",
+    "title": "TASARIM, GÖRÜNTÜLEME VE İŞ BİRLİĞİ İÇİN TEMEL ÇÖZÜM",
+    "seoTitle": "ALLPLAN Basic — 2B/3B Tasarım, Görüntüleme ve İş Birliği | Aluplan",
+    "section": "products",
+    "description": "TASARIM, GÖRÜNTÜLEME VE İŞ BİRLİĞİ İÇİN TEMEL ÇÖZÜM: TASARIM, GÖRÜNTÜLEME VE İŞ BİRLİĞİ İÇİN • Geniş kapsamlı 2D CAD ve temel 3D fonksiyonları",
+    "keywords": "ALLPLAN Basic nedir? ALLPLAN Basic'in Faydaları İstediğiniz Gibi Çalışın Güçlü & Sezgisel Modelleme Verimli İş Birliği ALLPLAN Basic Özellikleri Arayüzler 3D Modelleme"
+  },
+  {
+    "path": "/products/allplan-bimplus",
+    "title": "BIMPLUS projenizi işbirliği için paylaşın, koordine edin ve yönetin",
+    "seoTitle": "ALLPLAN Bimplus — Bulut Tabanlı OpenBIM İş Birliği Platformu | Aluplan",
+    "section": "products",
+    "description": "BIM işbirliği ve veri yönetimi",
+    "keywords": "BIMPLUS Nedir? 100% Koordine ve Tutarlı 100% Güncel 100% Şeffaf ve Etkili AŞAĞIDAKİ ZORLUKLARLA SÜREKLİ MÜCADELE EDİYOR MUSUNUZ? Proje Verilerini\nKoordine Edin Bilgi\nYönetimi Değişiklik\nYönetimi"
+  },
+  {
+    "path": "/products/allplan-cloud-services",
+    "title": "ALLPLAN Bulut Hizmetleri",
+    "seoTitle": "ALLPLAN Cloud Services — Bulut Tabanlı BIM İş Akışları | Aluplan",
+    "section": "products",
+    "description": "ALLPLAN Bulut Hizmetleri: İş birliğinizi bir üst seviyeye taşıyan araçlara anında erişimin keyfini çıkarın. Bağlantılı iş akışlarının gücünü keşfedin. ALLPLAN Cloud, ekiplerinizi, v",
+    "keywords": "İş birliğinizi bir üst seviyeye taşıyan araçlara anında erişimin keyfini çıkarın. ALLPLAN Cloud Nedir? Her tasarım aşamasında ALLPLAN Bulut Hizmetleri ALLPLAN Bulut Hizmetleri şunları içerir: Çizim ve Plan Dağıtımı Proje Ekip Çalışması Ofis İçi Ekip Çalışması ALLPLAN Model Görüntüleyici"
+  },
+  {
+    "path": "/products/allplan-concept",
+    "title": "MODELLEME VE TASARIM DOKÜMANTASYONU İÇİN BIM ÇÖZÜMÜ",
+    "seoTitle": "ALLPLAN Concept — 3B Modelleme, Dokümantasyon ve Metraj | Aluplan",
+    "section": "products",
+    "description": "MODELLEME VE TASARIM DOKÜMANTASYONU İÇİN BIM ÇÖZÜMÜ: MODELLEME VE TASARIM DOKÜMANTASYONU İÇİN Modelleme ve tasarım dokümantasyonu için BIM çözümüdür. Mimarlık ofisleri, çok disiplinli danışmanlık firmaları, k",
+    "keywords": "ALLPLAN Concept'in Faydaları İstediğiniz Gibi Çalışın Güçlü & Sezgisel Modelleme Verimli İş Birliği İkna Edici Görselleştirmeler Güvenilir Erken Maliyet Tahminleri Üstün Kalitede Çıktılar ALLPLAN Concept Özellikleri"
+  },
+  {
+    "path": "/products/allplan-professional",
+    "title": "DETAYLANDIRMA VE İLERİ DÜZEY OTOMASYON İÇİN BIM ÇÖZÜMÜ",
+    "seoTitle": "ALLPLAN Professional — Profesyonel BIM, Donatı ve Detaylandırma | Aluplan",
+    "section": "products",
+    "description": "DETAYLANDIRMA VE İLERİ DÜZEY OTOMASYON İÇİN BIM ÇÖZÜMÜ: DETAYLANDIRMA VE İLERİ DÜZEY OTOMASYON İÇİN ALLPLAN Concept plus'in tüm özelliklerini içerir ve ek olarak:",
+    "keywords": "ALLPLAN Professional'ın Faydaları İstediğiniz Gibi Çalışın Güçlü & Sezgisel Modelleme Verimli İş Birliği Kolayca Gereksinimleri Değiştirin Parametrik Yol Modelleme Birden Fazla Malzeme ile Planlama Hassas 3D Donatı"
+  },
+  {
+    "path": "/products/allplan-ultimate",
+    "title": "Tasarımdan inşaata kadar tam iş akışı için kapsamlı BIM çözümü.",
+    "seoTitle": "ALLPLAN Ultimate — Kapsamlı Çok Disiplinli BIM ve Mühendislik | Aluplan",
+    "section": "products",
+    "description": "Tasarımdan inşaata kadar tam iş akışı için kapsamlı BIM çözümü.: Tasarımdan inşaata kadar tam iş akışı için kapsamlı Allplan Ultimate, tasarımdan inşaata kadar tüm süreçleri destekleyen kapsamlı iş akışı için Allplan'ın ",
+    "keywords": "Allplan Ultimate, tasarımdan inşaata kadar tüm süreçleri destekleyen kapsamlı iş akışı için Allplan'ın nihai BIM çözümüdür. ALLPLAN Ultimate'in Faydaları Çalışın Sezgisel modelleme. AEC Tasarımı ile Planlama Yol Modelleme 3D Donatı"
+  },
+  {
+    "path": "/products/architecture",
+    "title": "Allplan Architecture",
+    "seoTitle": "ALLPLAN Architecture — Mimari BIM Tasarım Yazılımı | Aluplan",
+    "section": "products",
+    "description": "Mimari projeler için kapsamlı BIM çözümü",
+    "keywords": "Öne Çıkan Özellikler"
+  },
+  {
+    "path": "/products/ax3000",
+    "title": "AX3000 MEP",
+    "seoTitle": "AX3000 MEP & Enerji Simülasyonu Ürün Ailesi | Aluplan",
+    "section": "products",
+    "description": "Enerji ve tesisat mühendisliği yazılımları",
+    "keywords": "Bina Tesisatı Çözümü Türk Standartları Deneyim Kazandırır Tümleşik Kullanım Belirli Fonksiyonlar Çizim ve Bina Verisi İlişkili Pencereler Belirli Fonksiyonlar"
+  },
+  {
+    "path": "/products/ax3000/dokumanlar",
+    "title": "AX3000 Dokümanları",
+    "seoTitle": "AX3000 Teknik Broşürler ve Fonksiyon Dokümanları | Aluplan",
+    "section": "products",
+    "description": "AX3000 broşürlerini ve teknik fonksiyon açıklamalarını PDF ve Word formatında indirin. İngilizce ve Almanca dokümanlar.",
+    "keywords": "Broşürler ve teknik kaynaklar Broşürler AX3000 Genel Broşür AX3000 Genel Broşür AX3000 Genel Broşür — Alternatif Teknik Dokümanlar MEP Fonksiyon Açıklamaları MEP Fonksiyon Açıklamaları — Word"
+  },
+  {
+    "path": "/products/civil",
+    "title": "İleri Düzey Altyapı Tasarımından İnşa Akışlarına yönelik Çözüm.",
+    "seoTitle": "ALLPLAN Civil — Altyapı, Yol ve Köprü Mühendisliği Paketi | Aluplan",
+    "section": "products",
+    "description": "İleri Düzey Altyapı Tasarımından İnşa Akışlarına yönelik Çözüm.: ALLPLAN Civil, çok disiplinli ve inşaat mühendisliği danışmanlıkları için gelişmiş altyapı tasarımından inşa süreçlerine yönelik nihai çözümdür. ALLPLAN Ul",
+    "keywords": "ALLPLAN Civil, çok disiplinli ve inşaat mühendisliği danışmanlıkları için gelişmiş altyapı tasarımından inşa süreçlerine yönelik nihai çözümdür. TUTARLI VERİ DAHA FAZLA ZAMAN DAHA KESİN DAHA VERİMLİ AŞAĞIDAKİ ZORLUKLARLA SÜREKLİ MÜCADELE EDİYOR MUSUNUZ? ALLPLAN Civil'in Faydaları Yol Modelleme"
+  },
+  {
+    "path": "/products/precast",
+    "title": "PREKAST TASARIMI İÇİN EŞSİZ BIM ÇÖZÜMÜ",
+    "seoTitle": "ALLPLAN Precast — Prefabrik Beton Tasarım ve Üretim Paketi | Aluplan",
+    "section": "products",
+    "description": "PREKAST TASARIMI İÇİN EŞSİZ BIM ÇÖZÜMÜ: Allplan Precast, yapısal prefabrik elemanların, prefabrik duvarların ve döşemelerin yüksek düzeyde otomatik ve hassas tasarımını sağlar. Çözümümüz, prefabr",
+    "keywords": "AŞAĞIDAKİ ZORLUKLARLA SÜREKLİ MÜCADELE EDİYOR MUSUNUZ? Verimlilik Artışı Daha Yüksek Kalite Daha Hızlı Tasarım Daha Fazla Performans Allplan Precast'ın Faydaları Allplan Precast'ın Özellikleri Otomatik Prefabrik Tasarım"
+  },
+  {
+    "path": "/products/precast-detail",
+    "title": "ALLPLAN PRECAST – Prefabrik Elemanlar",
+    "seoTitle": "ALLPLAN Precast Detail — Prekast Detaylandırma ve İmalat | Aluplan",
+    "section": "products",
+    "description": "Advanced precast detailing solutions",
+    "keywords": "ALLPLAN PRECAST NEDİR? DAHA FAZLA ÜRETKENLİK DAHA YÜKSEK KALİTE DAHA HIZLI MEP TASARIMI DAHA FAZLA PERFORMANS AŞAĞIDAKİ ZORLUKLARLA SÜREKLİ MÜCADELE EDİYOR MUSUNUZ? ÜRETİM PAFTALARINI OTOMATİK OLUŞTURUN KENDİ ÇALIŞMA YÖNTEMİNİZİ SEÇİN"
+  },
+  {
+    "path": "/products/sds2-home",
+    "title": "Sizin İçin Tasarlanmış Detaylandırma Yazılımı",
+    "seoTitle": "SDS2 — Çelik Detaylandırma, Bağlantı Tasarımı ve İmalat | Aluplan",
+    "section": "products",
+    "description": "Automated steel detailing software",
+    "keywords": "/ SDS2 ULTIMATE SDS2 ULTIMATE NEDİR? Fonksiyonellik Hızlı Bakış / MODELLEME / PLANLAMA / BİRLİKTE ÇALIŞABİLİRLİK / TESLİMATLAR / EKLENTİLER"
+  },
+  {
+    "path": "/references",
+    "title": "BIM Odaklı İş Ortaklarımız ve  Referans Müşterilerimiz",
+    "seoTitle": "Referanslarımız ve BIM Odaklı İş Ortaklarımız | Aluplan",
+    "section": "corporate",
+    "description": "BIM Odaklı İş Ortaklarımız ve  Referans Müşterilerimiz: Mimarlık, mühendislik ve inşaat (AEC) sektöründe, BIM (Building Information Modeling) uzmanlığımızı tercih eden iş ortaklarımızdan bazıları. Dijital tasarı",
+    "keywords": ""
+  },
+  {
+    "path": "/search",
+    "title": "Site İçi Arama — Ürün, Çözüm ve Eğitim Kütüphanesi",
+    "seoTitle": "Site İçi Arama — Ürün, Çözüm ve Eğitim Kütüphanesi | Aluplan",
+    "section": "utility",
+    "description": "Site içi arama sonuçları",
+    "keywords": ""
+  },
+  {
+    "path": "/solutions",
+    "title": "Geleceği Tasarlayın",
+    "seoTitle": "ALLPLAN Mühendislik, Mimari ve İnşaat Çözümleri | Aluplan",
+    "section": "solutions",
+    "description": "ALLPLAN'ın bina tasarımı, altyapı mühendisliği, inşaat planlaması ve eklentiler dahil tüm BIM çözümlerini keşfedin.",
+    "keywords": "BİNA TASARIMI Mimari Strüktürel Mühendislik MEP ALLPLAN Endüstri Çözümleri ALTYAPI TASARIMI Altyapı Mühendisliği Yol ve Demiryolu Tasarımı"
+  },
+  {
+    "path": "/solutions-v2/addons",
+    "title": "EKLENTİLER",
+    "seoTitle": "ALLPLAN Eklenti Kataloğu ve Üretkenlik Modülleri | Aluplan",
+    "section": "solutions-v2",
+    "description": "EKLENTİLER: Projenize güç katan özel modüller ve araçlar.",
+    "keywords": "CDS Add-On Allto PytonPart Generator Allto PytonPart AX3000 MEP Scalypso"
+  },
+  {
+    "path": "/solutions-v2/building-design",
+    "title": "BİNA TASARIMI",
+    "seoTitle": "Bina Tasarımı Çözümleri — Mimari, Yapısal ve MEP BIM | Aluplan",
+    "section": "solutions-v2",
+    "description": "BİNA TASARIMI: Mimari, Strüktürel ve MEP disiplinleri için entegre tasarım araçları.",
+    "keywords": "Mimari Strüktürel Mühendislik MEP ALLPLAN ENDÜSTRİ ÇÖZÜMLERİ"
+  },
+  {
+    "path": "/solutions-v2/connect-license",
+    "title": "ALLPLAN 2026 & Yeni Lisanslama",
+    "seoTitle": "ALLPLAN Connect Lisans Yönetimi ve Kurulum Rehberi | Aluplan",
+    "section": "solutions-v2",
+    "description": "ALLPLAN 2026 & Yeni Lisanslama: Allplan Connect Lisans Yönetim Paneli ile lisanslarınızı tek merkezden yönetin. Allplan Connect Lisans Yönetim Paneli Nedir?",
+    "keywords": "Allplan Connect Lisans Yönetim Paneli Nedir? Allplan'da Yeni Dönem: 10Duke Bulut Tabanlı Lisanslama Sistemi Bu Yeni Sistem Size Hangi Kolaylıkları Sağlıyor? Donanım Kilidine Son (Kişiye Özel Lisans) Mekandan Bağımsız Çalışma Özgürlüğü Tek Şifre, Tam Erişim (Single Sign-On) Süreç Nasıl İşler? (3 Basit Adım) Davet"
+  },
+  {
+    "path": "/solutions-v2/connect-license/activation",
+    "title": "ALLPLAN Lisans Deklarasyon ve Aktivasyon Formu",
+    "seoTitle": "ALLPLAN Lisans Deklarasyon ve Aktivasyon Formu | Aluplan",
+    "section": "solutions-v2",
+    "description": "Yeni Allplan lisansınızın etkinleştirilmesi için talep ve beyan formu.",
+    "keywords": "Talep ve Beyan Yeni Allplan Lisansının Etkinleştirilmesi"
+  },
+  {
+    "path": "/solutions-v2/connect-license/how-to-assign",
+    "title": "Lisans Atama ve Yönetim Rehberi",
+    "seoTitle": "ALLPLAN Lisans Atama ve Kullanıcı Yetkilendirme Rehberi | Aluplan",
+    "section": "solutions-v2",
+    "description": "Lisans Atama ve Yönetim Rehberi: Allplan Connect 2.0 üzerinden ekip üyelerinize nasıl lisans atayacağınızı ve ALLPLAN ID süreçlerini öğrenin. Yeni nesil bulut tabanlı lisanslama sisteminde",
+    "keywords": "Sıkça Sorulan Sorular & İşlemler Ekip üyelerine nasıl lisans atanır? (Yönetici Adımları) Kullanıcıların ALLPLAN ID oluşturma adımları nelerdir? 10Duke sisteminde lisans iadesi adımları nelerdir? Desteğe mi ihtiyacınız var?"
+  },
+  {
+    "path": "/solutions-v2/connect-login",
+    "title": "Allplan Connect: Giriş Problemleri veya Parola Sıfırlama",
+    "seoTitle": "ALLPLAN Connect Portal Giriş ve Hesap Rehberi | Aluplan",
+    "section": "solutions-v2",
+    "description": "Allplan Connect: Giriş Problemleri veya Parola Sıfırlama: Hesabınıza yeniden erişim sağlamak için adım adım çözüm rehberi. Allplan Connect'e kaydolmaya çalıştınız ancak başarılı bir şekilde giriş yapamıyor veya pa",
+    "keywords": "Giriş Yapamıyor musunuz? Connect Sifre Sıfırlama Sayfasını Başlatın E-postanızı Kontrol Edin E-posta Gelmedi mi? Yeni Parola Belirleyin Hazır mısınız?"
+  },
+  {
+    "path": "/solutions-v2/construction",
+    "title": "İNŞAAT PLANLAMASI",
+    "seoTitle": "İnşaat Planlaması, Prekast, Çelik ve Şantiye Çözümleri | Aluplan",
+    "section": "solutions-v2",
+    "description": "İNŞAAT PLANLAMASI: Prekast ve çelik üretimi için detaylandırma ve şantiye yönetimi.",
+    "keywords": "Prekast Üretimi Çelik Detaylandırma & İmalat Şantiye Planlaması"
+  },
+  {
+    "path": "/solutions-v2/faq",
+    "title": "Sıkça Sorulan Sorular",
+    "seoTitle": "Sıkça Sorulan Sorular (SSS) ve Teknik Bilgi Bankası | Aluplan",
+    "section": "solutions-v2",
+    "description": "Sıkça Sorulan Sorular: Allplan lisanslama, teknik özellikler ve abonelik modelleri hakkında merak ettikleriniz. Allplan abonelik sistemi, ödeme seçenekleri ve iptal koşulları hak",
+    "keywords": "Genel Abonelik (Subscription) SSS Abonelik (Subscription) nedir? Abonelik ile neleri elde ederim? Abonelik süresi ne kadardır ve yenilemek istemezsem ne olur? Ödemeyi nasıl yapabilirim? Aboneliğimi iptal edersem ne olur? Yazılıma erişmek için başka seçeneğim var mı? Aboneliğin temel avantajları nelerdir?"
+  },
+  {
+    "path": "/solutions-v2/infrastructure",
+    "title": "ALTYAPI TASARIMI",
+    "seoTitle": "Altyapı Tasarımı — Köprü, Yol, Tünel ve Geoteknik BIM | Aluplan",
+    "section": "solutions-v2",
+    "description": "ALTYAPI TASARIMI: Yol, köprü ve tünel projeleri için parametrik modelleme çözümleri.",
+    "keywords": "Altyapı Mühendisliği Yol ve Demiryolu Tasarımı Köprü Tasarımı"
+  },
+  {
+    "path": "/solutions-v2/other",
+    "title": "DİĞER ÇÖZÜMLERİMİZ",
+    "seoTitle": "Tamamlayıcı BIM Çözümleri, Maliyet ve Eklenti Ailesi | Aluplan",
+    "section": "solutions-v2",
+    "description": "DİĞER ÇÖZÜMLERİMİZ: İşbirliği platformları ve tamamlayıcı mühendislik araçları.",
+    "keywords": "BIMFlex Donatı Mühendisliği İmar Yönetmeliği BIM Eklentisi BIMX5 Allplan Oska İşbirliği Allplan Poz Kataloğu"
+  },
+  {
+    "path": "/solutions-v2/training",
+    "title": "ALLPLAN Eğitimleri",
+    "seoTitle": "ALLPLAN Eğitim, Webinar ve Teknik Gelişim Merkezi | Aluplan",
+    "section": "training",
+    "description": "ALLPLAN Eğitimleri: Uzmanlığınızdan faydalanın ve profesyonel bilgi ve becerilerinizi bir üst seviyeye taşıyın! Akademik iş birliklerimiz ve yetkili eğitim merkezlerimiz.",
+    "keywords": "Eğitim İş Ortaklarımız Yıldız Teknik Üniversitesi İstanbul Aydın Üniversitesi Kastamonu MYO İstanbul Gelişim Üniversitesi Orta Doğu Teknik Üniversitesi IMO Ankara LGN Proje Akademi"
+  },
+  {
+    "path": "/solutions-v2/training/classroom",
+    "title": "Sınıf İçi Eğitim (Yüz Yüze)",
+    "seoTitle": "Sınıf İçi (Yüz Yüze) ALLPLAN BIM Eğitim Programları | Aluplan",
+    "section": "training",
+    "description": "Sınıf İçi Eğitim (Yüz Yüze): Tam odaklanma, birebir iletişim ve pratik uygulama. Modern eğitim merkezlerimizde gerçekleştirdiğimiz sınıf içi eğitimler, tamamen öğrenmeye odaklanabilece",
+    "keywords": "Genel Bakış Kazanımlarınız Tam Odaklanma Anında Müdahale Networking Hazır Altyapı Kimler İçin Uygun? Hazır mısınız?"
+  },
+  {
+    "path": "/solutions-v2/training/e-learning",
+    "title": "E-Learning & Video Eğitimler",
+    "seoTitle": "E-Learning — Kendi Hızınızda Çevrim İçi ALLPLAN Eğitimi | Aluplan",
+    "section": "training",
+    "description": "E-Learning & Video Eğitimler: Kendi hızınızda, istediğiniz zaman, istediğiniz yerde öğrenin. Allplan E-Learning platformu, yüzlerce video ders, adım adım rehberler ve sertifika programl",
+    "keywords": "Genel Bakış Kazanımlarınız Kendi Hızınızda Öğrenme Geniş İçerik Arşivi Maliyet Avantajı Sürekli Güncel Kimler İçin Uygun? Hazır mısınız?"
+  },
+  {
+    "path": "/solutions-v2/training/events",
+    "title": "Etkinlik ve Fuarlar",
+    "seoTitle": "ALLPLAN Etkinlikler, Seminerler ve Sektör Buluşmaları | Aluplan",
+    "section": "training",
+    "description": "Etkinlik ve Fuarlar: Sektörle buluşma, vizyon ve teknoloji şöleni. Allplan olarak katıldığımız veya düzenlediğimiz etkinlikler, sadece bir yazılım tanıtımı değil, inşaat sektör",
+    "keywords": "Genel Bakış Kazanımlarınız Teknoloji Deneyimi Sektör Liderleriyle Tanışma İlham Verici Sunumlar Özel Kampanyalar Kimler İçin Uygun? Hazır mısınız?"
+  },
+  {
+    "path": "/solutions-v2/training/individual",
+    "title": "Bireysel & Kurumsal Özel Eğitim",
+    "seoTitle": "Bireysel ve Kuruma Özel Özelleştirilmiş ALLPLAN Eğitimi | Aluplan",
+    "section": "training",
+    "description": "Bireysel & Kurumsal Özel Eğitim: Tamamen size ve projenize özel, terzi işi eğitim programı. Standart müfredatların dışına çıkın. Bireysel eğitimlerimiz, tamamen sizin ihtiyaçlarınıza, proj",
+    "keywords": "Genel Bakış Kazanımlarınız İhtiyaca Yönelik Müfredat Kendi Projeniz Üzerinde Çalışma Esnek Planlama Danışmanlık Yaklaşımı Kimler İçin Uygun? Hazır mısınız?"
+  },
+  {
+    "path": "/solutions-v2/training/online",
+    "title": "Online Eğitimler",
+    "seoTitle": "Canlı Online ALLPLAN Eğitimleri ve Uzaktan Atölyeler | Aluplan",
+    "section": "training",
+    "description": "Online Eğitimler: Mekandan bağımsız, etkileşimli ve profesyonel uzaktan eğitim deneyimi. Online eğitimlerimiz, fiziksel bir sınıfta olma zorunluluğu olmadan, tamamen canlı v",
+    "keywords": "Genel Bakış Kazanımlarınız Mekandan Bağımsız Canlı & İnteraktif Eğitim Kayıtları Küçük Gruplar Kimler İçin Uygun? Hazır mısınız?"
+  },
+  {
+    "path": "/solutions-v2/training/quick-start",
+    "title": "Allplan 2026 Kapsamlı Başlangıç Rehberi",
+    "seoTitle": "ALLPLAN Quick Start — 7 Adımda Hızlı Başlangıç Rehberi | Aluplan",
+    "section": "training",
+    "description": "Allplan 2026 Kapsamlı Başlangıç Rehberi: Bu kılavuz, Allplan BIM yazılımının profesyonel düzeydeki kullanımını, Open BIM iş akışlarını ve Allplan 2026 yeniliklerini derinlemesine ele alır. Mimarla",
+    "keywords": "İçindekiler Modüller ve Profesyonel İş Akışları Allplan Architecture Temel Özellikler Allplan 2026 ile Yeni Profesyonel İş Akışları Verimlilik ve Doğruluk Parametrik Tasarım"
+  },
+  {
+    "path": "/solutions-v2/training/video-library",
+    "title": "Video Kütüphanesi",
+    "seoTitle": "ALLPLAN Video Kütüphanesi ve Eğitim Oynatma Listeleri | Aluplan",
+    "section": "training",
+    "description": "Video Kütüphanesi: İhtiyacınız olan bilgiye görsel olarak ulaşın. Önerilen Oynatma Listeleri ve Kanallar",
+    "keywords": "Önerilen Oynatma Listeleri ve Kanallar Allplan Türkiye YouTube Kanalına Abone Olun Allplan 2026 Youtube Allplan English Youtube Allplan Global Youtube Allplan Precast Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları Allplan Add On Geometry Tools"
+  },
+  {
+    "path": "/solutions-v2/training/video-library/addon-geometry",
+    "title": "Allplan Add On Geometry Tools — Eğitim Video Serisi",
+    "seoTitle": "Allplan Add On Geometry Tools — Eğitim Video Serisi | Aluplan BIM Çözümleri",
+    "section": "video-library",
+    "description": "Allplan Add On Geometry Tools — Eğitim Video Serisi: Topografik ve geometrik düzenleme araçları eğitimi. ALLPLAN Add-On Geometry Tools V2 - OBJ Import Drohnenaufnahmen",
+    "keywords": "Allplan Add On Geometry Tools ALLPLAN Add-On Geometry Tools V2 - OBJ Import Drohnenaufnahmen Oynatma Listesi1 / 14"
+  },
+  {
+    "path": "/solutions-v2/training/video-library/allplan-reinforcement",
+    "title": "ALLPLAN for Reinforcement — Eğitim Video Serisi",
+    "seoTitle": "ALLPLAN for Reinforcement — Eğitim Video Serisi | Aluplan BIM Çözümleri",
+    "section": "video-library",
+    "description": "ALLPLAN for Reinforcement — Eğitim Video Serisi: Betonarme detaylandırma, donatı modelleme ve raporlama eğitimleri. Allplan Reinforcing Shorts; Retaining Wall",
+    "keywords": "ALLPLAN for Reinforcement Allplan Reinforcing Shorts; Retaining Wall Oynatma Listesi1 / 18"
+  },
+  {
+    "path": "/solutions-v2/training/video-library/ax3000",
+    "title": "AX3000 - MEP & Enerji — Eğitim Video Serisi",
+    "seoTitle": "AX3000 - MEP & Enerji — Eğitim Video Serisi | Aluplan BIM Çözümleri",
+    "section": "video-library",
+    "description": "AX3000 - MEP & Enerji — Eğitim Video Serisi: Mekanik, Elektrik, Tesisat ve Enerji Kimlik Belgesi (EKB) eğitimleri. konusu detaylı olarak incelenmektedir. Allplan 2024'ün sunduğu yenilikleri keşfedin.",
+    "keywords": "AX3000 - MEP & Enerji AX3000 MEP Sunum 1 Oynatma Listesi1 / 34"
+  },
+  {
+    "path": "/solutions-v2/training/video-library/bridge-workflow-2022",
+    "title": "Bridge Workflow 2022 — Eğitim Video Serisi",
+    "seoTitle": "Bridge Workflow 2022 — Eğitim Video Serisi | Aluplan BIM Çözümleri",
+    "section": "video-library",
+    "description": "Bridge Workflow 2022 — Eğitim Video Serisi: 2022 Köprü tasarımı ve iş akışları eğitim serisi. konusu detaylı olarak incelenmektedir. Allplan 2024'ün sunduğu yenilikleri keşfedin.",
+    "keywords": "Bridge Workflow 2022 1 - Aks Oluşturma Oynatma Listesi1 / 8"
+  },
+  {
+    "path": "/solutions-v2/training/video-library/bridge-workflows",
+    "title": "Allplan Bridge Workflows — Eğitim Video Serisi",
+    "seoTitle": "Allplan Bridge Workflows — Eğitim Video Serisi | Aluplan BIM Çözümleri",
+    "section": "video-library",
+    "description": "Allplan Bridge Workflows — Eğitim Video Serisi: Köprü tasarımı süreçleri ve BIM entegrasyonu. ALLPLAN Bridge Workflows l Alignment Definition",
+    "keywords": "Allplan Bridge Workflows ALLPLAN Bridge Workflows l Alignment Definition Oynatma Listesi1 / 15"
+  },
+  {
+    "path": "/solutions-v2/training/video-library/campus-de",
+    "title": "Campus Tutorials (Deutsch) — Eğitim Video Serisi",
+    "seoTitle": "Campus Tutorials (Deutsch) — Eğitim Video Serisi | Aluplan BIM Çözümleri",
+    "section": "video-library",
+    "description": "Campus Tutorials (Deutsch) — Eğitim Video Serisi: Öğrenciler için Almanca Allplan eğitim serisi. Neuinstallation von \"Allplan 2022\" | Eine detaillierte Anleitung",
+    "keywords": "Campus Tutorials (Deutsch) Neuinstallation von \"Allplan 2022\" | Eine detaillierte Anleitung Oynatma Listesi1 / 26"
+  },
+  {
+    "path": "/solutions-v2/training/video-library/campus-en",
+    "title": "Campus Tutorials (English) — Eğitim Video Serisi",
+    "seoTitle": "Campus Tutorials (English) — Eğitim Video Serisi | Aluplan BIM Çözümleri",
+    "section": "video-library",
+    "description": "Campus Tutorials (English) — Eğitim Video Serisi: Öğrenciler için İngilizce Allplan eğitim serisi. konusu detaylı olarak incelenmektedir. Allplan 2024'ün sunduğu yenilikleri keşfedin.",
+    "keywords": "Campus Tutorials (English) Actionbar Oynatma Listesi1 / 26"
+  },
+  {
+    "path": "/solutions-v2/training/video-library/campus-tutorials-2019-2022",
+    "title": "Allplan Campus Tutorials 2019-2022 — Eğitim Video Serisi",
+    "seoTitle": "Allplan Campus Tutorials 2019-2022 — Eğitim Video Serisi | Aluplan BIM Çözümleri",
+    "section": "video-library",
+    "description": "Allplan Campus Tutorials 2019-2022 — Eğitim Video Serisi: Öğrenciler için kapsamlı Almanca eğitim serisi (2019-2022). Neuinstallation von \"Allplan 2022\" | Eine detaillierte Anleitung",
+    "keywords": "Allplan Campus Tutorials 2019-2022 Neuinstallation von \"Allplan 2022\" | Eine detaillierte Anleitung Oynatma Listesi1 / 26"
+  },
+  {
+    "path": "/solutions-v2/training/video-library/hello-allplan-2024",
+    "title": "Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları — Eğitim Video Serisi",
+    "seoTitle": "Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları — Eğitim Video Serisi | Aluplan BIM Çözümleri",
+    "section": "video-library",
+    "description": "Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları — Eğitim Video Serisi: Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları Allplan 2024 ile gelen tüm yeni özellikler ve geliştirmeler.",
+    "keywords": "Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları Hello Allplan! 2024 - Bak ve Hisset Oynatma Listesi1 / 39"
+  },
+  {
+    "path": "/solutions-v2/training/video-library/konut-insaati",
+    "title": "Konut İnşaatı İş Akışları — Eğitim Video Serisi",
+    "seoTitle": "Konut İnşaatı İş Akışları — Eğitim Video Serisi | Aluplan BIM Çözümleri",
+    "section": "video-library",
+    "description": "Konut İnşaatı İş Akışları — Eğitim Video Serisi: Konut proje teslimi, tasarım ve şantiye planlama süreçleri. Konut İnşaatı İş Akışları | Konut Proje Teslimi | 01 - Satış Sunumlarınızı Artırın",
+    "keywords": "Konut İnşaatı İş Akışları Konut İnşaatı İş Akışları | Konut Proje Teslimi | 01 - Satış Sunumlarınızı Artırın Oynatma Listesi1 / 4"
+  },
+  {
+    "path": "/solutions-v2/training/video-library/otomatik-donati",
+    "title": "Otomatik Donatı (PythonPart) — Eğitim Video Serisi",
+    "seoTitle": "Otomatik Donatı (PythonPart) — Eğitim Video Serisi | Aluplan BIM Çözümleri",
+    "section": "video-library",
+    "description": "Otomatik Donatı (PythonPart) — Eğitim Video Serisi: Otomatik donatılandırma ve PythonPart araçları kullanımı. konusu detaylı olarak incelenmektedir. Allplan 2024'ün sunduğu yenilikleri keşfedin.",
+    "keywords": "Otomatik Donatı (PythonPart) Otomatik Donatı Kolon TRK Oynatma Listesi1 / 9"
+  },
+  {
+    "path": "/solutions-v2/training/video-library/quickstart-buildings",
+    "title": "ALLPLAN QuickStart: Buildings — Eğitim Video Serisi",
+    "seoTitle": "ALLPLAN QuickStart: Buildings — Eğitim Video Serisi | Aluplan BIM Çözümleri",
+    "section": "video-library",
+    "description": "ALLPLAN QuickStart: Buildings — Eğitim Video Serisi: Allplan ile bina modellemeye hızlı başlangıç rehberi. Allplan QuickStart: Buildings Lesson 1 - Allplan User Interface",
+    "keywords": "ALLPLAN QuickStart: Buildings Allplan QuickStart: Buildings Lesson 1 - Allplan User Interface Oynatma Listesi1 / 9"
+  },
+  {
+    "path": "/solutions-v2/training/video-library/road-design",
+    "title": "Allplan Road Design Workflow — Eğitim Video Serisi",
+    "seoTitle": "Allplan Road Design Workflow — Eğitim Video Serisi | Aluplan BIM Çözümleri",
+    "section": "video-library",
+    "description": "Allplan Road Design Workflow — Eğitim Video Serisi: Yol tasarımı iş akışları ve yol modülü eğitim videoları. konusu detaylı olarak incelenmektedir. Allplan 2024'ün sunduğu yenilikleri keşfedin.",
+    "keywords": "Allplan Road Design Workflow 1.1 | General - General Settings Oynatma Listesi1 / 12"
+  },
+  {
+    "path": "/solutions-v2/training/video-library/sds2-intro",
+    "title": "SDS2 Detaylandırma — Eğitim Video Serisi",
+    "seoTitle": "SDS2 Detaylandırma — Eğitim Video Serisi | Aluplan BIM Çözümleri",
+    "section": "video-library",
+    "description": "SDS2 Detaylandırma — Eğitim Video Serisi: SDS2 ürün tanıtımı ve lansman videoları. konusu detaylı olarak incelenmektedir. Allplan 2024'ün sunduğu yenilikleri keşfedin.",
+    "keywords": "SDS2 Detaylandırma SDS2 Product Video Oynatma Listesi1 / 2"
+  },
+  {
+    "path": "/solutions-v2/training/webinar",
+    "title": "Webinarlar",
+    "seoTitle": "ALLPLAN Teknik Webinarlar ve Canlı Kayıt Arşivi | Aluplan",
+    "section": "training",
+    "description": "Webinarlar: Kısa, odaklanmış ve bilgi dolu çevrimiçi seminerler. Webinarlarımız, belirli bir konu, yeni bir özellik veya sektörel bir gelişme hakkında hızlı ve yoğun b",
+    "keywords": "Genel Bakış Kazanımlarınız Zaman Verimliliği Güncel Konular Kolay Erişim Tekrar İzleme Kimler İçin Uygun? Hazır mısınız?"
+  },
+  {
+    "path": "/solutions/addons",
+    "title": "CDS Eklentiler",
+    "seoTitle": "ALLPLAN Eklentileri (Add-Ons) ve Gelişmiş Araçlar | Aluplan",
+    "section": "solutions",
+    "description": "Allplan için güçlü eklenti çözümleri",
+    "keywords": "Sürüş Eğrisi Çelik Profil Bileşenleri Parametrik Arazi Rampa Geometri Araçları 2B DWG Converter 3B Ölçülendirme Grafiksel Yazı"
+  },
+  {
+    "path": "/solutions/addons/2d-dwg-converter",
+    "title": "2B DWG Converter",
+    "seoTitle": "2B DWG Converter — Akıllı CAD/DWG Dönüştürme Eklentisi | Aluplan",
+    "section": "solutions",
+    "description": "DWG dosyalarını Allplan bileşenlerine dönüştürme",
+    "keywords": "2B elemanların hızlı dönüşümü 2B DWG Converter 2B elemanların hızlı dönüşümü İşlevsel Genel Bakış 2B DWG CONVERTER Polyline > Boyama Yüzey Elemanı > Polyline Polyline > Oda"
+  },
+  {
+    "path": "/solutions/addons/drive-curve",
+    "title": "Add On Sürüş Eğrisi",
+    "seoTitle": "Drive Curve — Araç Dönüş Yörüngesi ve Süpürme Analizi | Aluplan",
+    "section": "solutions",
+    "description": "Araç dönüş simülasyonu",
+    "keywords": "Sürüş eğrisini Allplan’da kontrol edin. Sürüş Eğrisi Garajlar ve Otoparklar Olağandışı Nakliyeler Olağandışı Yollar Dar Sokaklar Şehir Bölge Planlaması Alternatif Trafik Yönlendirme"
+  },
+  {
+    "path": "/solutions/addons/geometry-tools",
+    "title": "Geometri Araçları",
+    "seoTitle": "Geometry Tools — Gelişmiş 3B Geometri ve Arazi Araçları | Aluplan",
+    "section": "solutions",
+    "description": "Geometri düzenleme ve analiz araçları",
+    "keywords": "Gelişmiş 3B Fonksiyonlar Gelişmiş 3B Fonksiyonlar Geometri Araçları İşlevsel Genel Bakış Üçgen-Ağ Girişi Poligon Girişi Ara Obje Oluştur Voroni Oluştur"
+  },
+  {
+    "path": "/solutions/addons/graphical-text",
+    "title": "Grafiksel Yazı",
+    "seoTitle": "Graphical Text — 3B Vektörel ve Parametrik Yazı Eklentisi | Aluplan",
+    "section": "solutions",
+    "description": "Allplan için 3D metin oluşturma aracı",
+    "keywords": "Vektörleştirilmiş ve 3B metinler Vektörleştirilmiş metinlerin, 3 boyutlu metinlerin ve blok setlerinin oluşturulması. Tanıtım Videoları ALLPLAN Add-On GraphicText - Vektorisierte 2D/3D Texte ALLPLAN Add-On Graphic Text | Text an Kurve ausrichten Lisans ve Gereksinimler"
+  },
+  {
+    "path": "/solutions/addons/parametric-terrain",
+    "title": "Parametrik Arazi",
+    "seoTitle": "Parametric Terrain — Parametrik Arazi ve Kazı/Dolgu Modelleme | Aluplan",
+    "section": "solutions",
+    "description": "Parametrik arazi modelleme",
+    "keywords": "Kazıdan fazlası Bu parametrik Allplan eklentisinin işlevi, arazi kazısı oluşturmanın çok ötesine geçer. Versiyon 3 | Allplan 2021 – 2024 Kazı – Dolgu – Şantiye Planlaması VERSİYON 2 İkinci versiyonu on dakikada keşfedin… VERSİYON 1 Birinci versiyonu on dakikada keşfedin…"
+  },
+  {
+    "path": "/solutions/addons/ramp",
+    "title": "Rampa",
+    "seoTitle": "Ramp Add-On — Parametrik Helisel ve Doğrusal Rampa Tasarımı | Aluplan",
+    "section": "solutions",
+    "description": "Rampa modelleme ve analiz",
+    "keywords": "Ramp Add On - Rampa Herhangi bir parametreli rampanın kolay oluşturulması Fonksiyonların Genel Bakışı Özellikler Video Galerisi Video 1 Video 2"
+  },
+  {
+    "path": "/solutions/addons/sketchup-converter",
+    "title": "SketchUp Dönüştürücü",
+    "seoTitle": "SketchUp Converter — Çift Yönlü SKP/ALLPLAN Veri Aktarımı | Aluplan",
+    "section": "solutions",
+    "description": "SketchUp modellerini Allplan'a aktarma",
+    "keywords": "Dokularla Allplan import, Lumion export, vb. SketchUp dosyalarıyla optimize edilmiş veri alışverişi Tanıtım Videoları ALLPLAN Add-On SketchUpConverter - Export Allplan zu Lumion ALLPLAN Add-On SketchUpConverter - Import Allplan UV Texturen ALLPLAN Add-On SketchUpConverter - Import Allplan Lisans ve Gereksinimler"
+  },
+  {
+    "path": "/solutions/addons/steel-components",
+    "title": "Çelik Profil Bileşenler için Parametrik Allplan Eklentisi",
+    "seoTitle": "Steel Components — Parametrik Çelik Profil ve Birleşim Bileşenleri | Aluplan",
+    "section": "solutions",
+    "description": "Çelik bağlantı ve bileşen kütüphanesi",
+    "keywords": "Çelik konstrüksiyon – Bağlantılar – Profilli Levhalar – Sandviç Paneller Allplan Eklenti Profil Bileşenleri V2, versiyon 2021 – 2024 için ALLPLAN’DE PARAMETRİK ÇELİK PLANLAMASI Allplan Eklenti Profil Bileşenleri V2, versiyon 2021 – 2024 için İşlevsel genel bakış Profil Bileşenleri Profil Bileşeni Oluştur Profil Sacı Oluştur"
+  },
+  {
+    "path": "/solutions/addons/three-dimensioning",
+    "title": "3B Ölçülendirme",
+    "seoTitle": "3B Ölçülendirme (Three Dimensioning) — İzometrik ve 3B Ölçü | Aluplan",
+    "section": "solutions",
+    "description": "3D ölçülendirme ve notlandırma",
+    "keywords": "3D Bemassung 3B Ölçülendirme 3D Bemassung Fonksiyona genel bakış: Ölçü Çizgisi Oluştur Kot Ölçülendirme Oluştur Açı Ölçülendirme Oluştur Eğim Ölçülendirme Oluştur"
+  },
+  {
+    "path": "/solutions/allplan-bulut-hizmetleri",
+    "title": "DAHA İYİ BİR GELECEK İNŞA ETMEK İÇİN TASARLANDI",
+    "seoTitle": "ALLPLAN Bulut Hizmetleri — Ortak Veri Ortamı (CDE) ve Paylaşım | Aluplan",
+    "section": "solutions",
+    "description": "Plan paylaşımları, ekip çalışması ve model kontrolü için Allplan bulut hizmetleri.",
+    "keywords": "Genel Ana Özellikler ve Tüm Kullanıcılar için Geliştirmeler Çok Harfli Klavye Kısayolları Desteği Yeni Grafik Geçersiz Kılma Karanlık Mod Geliştirilmiş Çakışma Yönetimi Geliştirilmiş Bilgi Paleti Geliştirilmiş Yapısal Çerçeveleme Yapısal Çerçeveleme Montajları"
+  },
+  {
+    "path": "/solutions/allplan-industry",
+    "title": "ALLPLAN",
+    "seoTitle": "ALLPLAN Endüstriyel Tesis ve Fabrika Tasarım Çözümleri | Aluplan",
+    "section": "solutions",
+    "description": "ALLPLAN: TASARIMDAN İNŞAATA KESİNTİSİZ İŞ AKIŞLARI İÇİN EN KAPSAMLI BIM ÇÖZÜMÜ ALLPLAN; mimarlar, mühendisler ve inşaat profesyonelleri için tasarım ve inşaat süreç",
+    "keywords": "Sektörün En Kapsamlı BIM Çözümü AŞAĞIDAKİ ZORLUKLARLA SÜREKLİ MÜCADELE EDİYOR MUSUNUZ? YÜKSEK PERFORMANS DAHA FAZLA HASSASİYET DAHA FAZLA PROJE KAZAN ALLPLAN'I KEŞFEDİN BİNA TASARIMI ALTYAPI TASARIMI"
+  },
+  {
+    "path": "/solutions/architecture",
+    "title": "MİMARİ",
+    "seoTitle": "Mimari BIM Çözümleri — Konseptten Uygulama Projesine ALLPLAN | Aluplan",
+    "section": "solutions",
+    "description": "MİMARİ: DAHA FAZLASINI İSTEYEN MİMARLAR İÇİN. ALLPLAN'in mimariye yönelik BIM çözümleri, verimli tasarım ve sorunsuz proje yönetimi için tüm tasarımı inşa sürecine",
+    "keywords": "MİMARİ İÇİN ALLPLAN – BIM ÇÖZÜMLERİ DAHA KESİN DAHA VERİMLİ DAHA ÜRETKEN AŞAĞIDAKİ ZORLUKLARLA SÜREKLİ MÜCADELE EDİYOR MUSUNUZ? NEDEN ALLPLAN İSTEDİĞİNİZ GİBİ ÇALIŞIN GÜÇLÜ ve SEZGİSEL MODELLEME"
+  },
+  {
+    "path": "/solutions/ax3000",
+    "title": "AX3000 MEP",
+    "seoTitle": "AX3000 MEP — ALLPLAN Entegre Mekanik, Elektrik ve Enerji BIM | Aluplan",
+    "section": "solutions",
+    "description": "AX3000 MEP: ALLPLAN, AX3000 tüm modülleriyle Türkçe'dir ve Türk Standartlarına göre düzenlenmiştir. Isıtma Modülünde Kat, Yön ve İşletme Zamlarının Otomatik Hesabı",
+    "keywords": "Bina Tesisatı Çözümü Deneyİm Kazandırır Tümleşİk Kullanım Belirli Fonksiyonlar Çizim ve Bina Verisi İlişkili Pencereler Belirli Fonksiyonlar Görünümler"
+  },
+  {
+    "path": "/solutions/ax3000-mekanik-tesisat",
+    "title": "AX3000 Mekanik Tesisat",
+    "seoTitle": "AX3000 Mekanik Tesisat — HVAC, Sıhhi Tesisat ve Enerji | Aluplan",
+    "section": "solutions",
+    "description": "Mekanik tesisat tasarım ve analizi",
+    "keywords": "Tüm Tesisat için Tek Yazılım ALLPLAN, AX3000 tüm modülleriyle Türkçe'dir ve Türk Standartlarına göre düzenlenmiştir. Akıllı Çizim Elemanları Sayesinde Hızlı Hesaplama Belirli Fonksiyonlar Akıllı Çizim Elemanları Kontrol Edilebilirlik Parça Listeleri Otomatik Hesaplamalar"
+  },
+  {
+    "path": "/solutions/ax3000-virtual-reality",
+    "title": "AX3000 VIRTUAL REALITY",
+    "seoTitle": "AX3000 Virtual Reality (VR) — MEP ve Mimari Sanal Gerçeklik | Aluplan",
+    "section": "solutions",
+    "description": "Sanal gerçeklik ile proje görselleştirme",
+    "keywords": "Tek bir tıklama ile sınırsız 3B-Gerçeği yaşayın Virtual Reality: Tek bir tıklama ile sınırsız \n3B-Gerçeği yaşayın Galeri VR Slide 1 VR Slide 2 VR Slide 3 VR Slide 4 VR Slide 5"
+  },
+  {
+    "path": "/solutions/ax3000-yapi-fizigi",
+    "title": "AX3000 Yapı Fiziği",
+    "seoTitle": "AX3000 Yapı Fiziği ve Enerji Kimlik Belgesi Simülasyonu | Aluplan",
+    "section": "solutions",
+    "description": "Enerji performansı ve yapı fiziği analizleri",
+    "keywords": "Bina Enerji Simülasyonu AX3000 Yapı Fiziği Simülasyon Uzun Süreli ve Maliyetlidir AX3000 Enerji Kimlik Belgesi Bina Enerji Tasarımı ve Enerji Kimlik Belgesi EKB CAD çizimi, CAD'de bileşenlerin tanımlanması – TS 825"
+  },
+  {
+    "path": "/solutions/ax3000/elektrik",
+    "title": "AX3000 Elektrik Temel",
+    "seoTitle": "AX3000 Elektrik Tesisatı — BIM Tabanlı Kuvvetli ve Zayıf Akım | Aluplan",
+    "section": "solutions",
+    "description": "Elektrik sistemleri tasarımı",
+    "keywords": "3B Elektrik Planlamaya Ne Dersiniz? 3B Elektrik Planlamaya Ne Dersiniz? AX3000 Youtube Elektrik Elemanları Kütüphane Yönetimi Entegre Çizim Elemanları Duvara Doğru Otomatik Sembol Çevirme Fazladan Nitelik Ekleme İmkanı Olan Akıllı Semboller Ürün Veri Kütüphanesine Otomatik Erişim"
+  },
+  {
+    "path": "/solutions/ax3000/havalandirma",
+    "title": "AX3000 Havalandırma",
+    "seoTitle": "AX3000 Havalandırma — 3B Kanal Tasarımı ve Basınç Kaybı Hesabı | Aluplan",
+    "section": "solutions",
+    "description": "Havalandırma sistemleri tasarım ve analizi",
+    "keywords": "Tüm Tesisat için Tek Yazılım Havalandırma Kolay Koordine Edilemez Avantajlar AX3000 Youtube Havalandırma-Klima Planlaması Akıllı Çizim Elemanları (2B/3B Çizgi Konsepti) Değişkenler Hesabı ile Projelendirme Ürün Veri Kütüphanesine Otomatik Erişim"
+  },
+  {
+    "path": "/solutions/ax3000/isitma",
+    "title": "Isıtma Sistemleri Şantiyede Düzenlenir",
+    "seoTitle": "AX3000 Isıtma Tesisatı — Isı Yükü, Radyatör ve Yerden Isıtma | Aluplan",
+    "section": "solutions",
+    "description": "Isıtma sistemleri tasarım ve analizi",
+    "keywords": "Tüm Tesisat için Tek Yazılım Isıtma Temel ve Otomatik Hesaplar Kazan-/Santral Isıkaybı Hesabı ve Isı Konforu Isıtma Modüllü IsıtmaTesisatı için Borulama Hesabı Akıllı Çizim Elemanları (2B/3B Boru Hattı Konstrüksiyonu) Gidiş-Dönüş Konstrüksiyonu"
+  },
+  {
+    "path": "/solutions/ax3000/konut-havalandirma",
+    "title": "AX3000 Konut Havalandırma",
+    "seoTitle": "AX3000 Konut Havalandırma — Kontrollü Mekanik Havalandırma | Aluplan",
+    "section": "solutions",
+    "description": "Konut havalandırma sistemleri",
+    "keywords": "Konut Havalandırma Sistemleri Hızlı Planlanamaz Genel İmkanlar"
+  },
+  {
+    "path": "/solutions/ax3000/sihhi-tesisat",
+    "title": "AX3000 Sıhhi Tesisat",
+    "seoTitle": "AX3000 Sıhhi Tesisat — Temiz Su, Atık Su ve Yağmur Suyu BIM | Aluplan",
+    "section": "solutions",
+    "description": "Sıhhi tesisat sistemleri tasarımı",
+    "keywords": "Sıhhi Tesisat sistemleri 3 boyutlu tasarlanabilir mi? Genel İmkanlar AX3000 Youtube Sıhhi Tesisat ve Isıtma Sıhhi Tesisat için Borulama Hesabı Akıllı Çizim Elemanları (2B/3B Boru Hattı Konstrüksiyonu) Gidiş-Dönüş Konstrüksiyonu İki Borulu Sistem ve Tichelmann-sistemi"
+  },
+  {
+    "path": "/solutions/ax3000/sprinkler",
+    "title": "AX3000 Sprinkler",
+    "seoTitle": "AX3000 Sprinkler — Yangın Söndürme ve Hidrolik Hesap Çözümü | Aluplan",
+    "section": "solutions",
+    "description": "Sprinkler sistemleri tasarımı",
+    "keywords": "Tüm Tesisat için Tek Yazılım Sprinkler (Fıskiye) Sistemleri Özellikler - - - -"
+  },
+  {
+    "path": "/solutions/bimflex",
+    "title": "BIMFlex Allplan eklenti paketi",
+    "seoTitle": "BIMFlex Allplan Eklenti Paketi — Otomatik Betonarme Donatı | Aluplan",
+    "section": "solutions",
+    "description": "FlexSoft tarafından geliştirilen BIMFlex Allplan eklenti paketi ile kolon, kiriş, perde, döşeme ve boşluk donatılarını otomatik modelleyin.",
+    "keywords": "Yapı elemanı bazlı, revizyona dayanıklı donatı akışı. 7 modül, tek Allplan donatı otomasyonu ailesi. Kolon Donatısı Kiriş Donatısı Perde Duvar Donatısı Duvar Boşluk Kenarı Donatısı Döşeme Donatısı Döşeme Boşluk Kenarı Donatısı"
+  },
+  {
+    "path": "/solutions/bimx5",
+    "title": "Allplan’le BIM modellemesi ve metraj…",
+    "seoTitle": "BIMX5 — 5B Metraj, Keşif ve BIM Maliyet Yönetimi | Aluplan",
+    "section": "solutions",
+    "description": "Allplan’le BIM modellemesi ve metraj…: İhale, Metraj, Hakediş ve BIM modellemesi için nihai çözüm Allplan ve 2b dwg Converter hızıyla doğru ve kesin metraja yönelik BIM modellemesi",
+    "keywords": "Oska e-HakedişPro Aynı metrajları tekrar tekrar girme devri kapandı! e-HakedişPro ne iş yapar? e-HakedişPro kimler içindir? e-HakedişPro ne tür işlerde kullanılır? Kurum Raporları Eklentisi 2B dwg Converter İmar Yönetmeliği Akıllı BIM Eklentisi"
+  },
+  {
+    "path": "/solutions/bridge-design",
+    "title": "Köprü Mühendisliği",
+    "seoTitle": "ALLPLAN Bridge — Parametrik Köprü Modelleme ve Analiz | Aluplan",
+    "section": "solutions",
+    "description": "Köprü Mühendisliği: DAHA FAZLASINI TALEP EDEN KÖPRÜ MÜHENDİSLERİ İÇİN. ALLPLAN'ın köprü mühendisliğine yönelik BIM çözümü ile herhangi bir köprü tipinin disiplinler arası 4D m",
+    "keywords": "ALLPLAN – KÖPRÜ MÜHENDİSLİĞİ İÇİN BIM ÇÖZÜMLERİ TUTARLI VERİ DAHA FAZLA ZAMAN DAHA HASSAS DAHA VERİMLİ AŞAĞIDAKİ ZORLUKLARLA SÜREKLİ MÜCADELE EDİYOR MUSUNUZ? NEDEN ALLPLAN ARAZİ KOŞULLARINI BAŞTAN HESABA KATIN"
+  },
+  {
+    "path": "/solutions/cds-addon",
+    "title": "CDS ADD-ON",
+    "seoTitle": "CDS Add-On Paketi — İsviçre Mühendislik ve Üretkenlik Eklentileri | Aluplan",
+    "section": "solutions",
+    "description": "CDS ADD-ON: TÜRKİYE'YE ÖZEL BETONARME TASARIM EKLENTİSİ Türkiye Bina Deprem Yönetmeliği'ne (TBDY 2018) uyumlu betonarme tasarım eklentisi. Yerel standartlara göre yapı",
+    "keywords": "TÜRKİYE'YE ÖZEL BETONARME TASARIM EKLENTİSİ Sürüş Eğrisi Çelik Profil Bileşenleri Parametrik Arazi Rampa Geometri Araçları 2B DWG Converter 3B Ölçülendirme"
+  },
+  {
+    "path": "/solutions/features-allplan-bridge",
+    "title": "Allplan Bridge  Özellikleri",
+    "seoTitle": "ALLPLAN Bridge Özellikleri — 4B Köprü BIM ve Öngerme Analizi | Aluplan",
+    "section": "solutions",
+    "description": "Allplan Bridge  Özellikleri: Daha üretken, güçlü ve otomatikleştirilmiş köprü tasarımı iş akışlarıve. Genişletilmiş yapısal analiz sayesinde",
+    "keywords": "Allplan Bridge – Genel Bakış Parametrik referanslama ile arazi görselleştirmesi Allplan Cloud aracılığıyla dever verilerinin içe aktarılması Daha verimli tasarım çalışması Parametrik Donatı Bağlantısı Daha hızlı ve daha verimli detaylandırma Serbest Parametrik modelleme 2.0 Güçlü, esnek ve zaman kazandıran modelleme"
+  },
+  {
+    "path": "/solutions/imar-yonetmeligi-bim-eklentisi",
+    "title": "DENGELERİ DEĞİŞTİRİN",
+    "seoTitle": "Planlı Alanlar İmar Yönetmeliği BIM Denetim Eklentisi | Aluplan",
+    "section": "solutions",
+    "description": "DENGELERİ DEĞİŞTİRİN: Akıllı BIM Eklentisi ile Alanları Tanımla, Hemen Raporunu Al... 2018'de yürürlüğe giren Planlı Alanlar İmar Yönetmeliğini Allplan tanıyor, projenizi kolayc",
+    "keywords": "İmar Yönetmeliğine Allplan'den BIM Eklentisi! Planla ve Hesapla Allplan ile projelerinizi doğrudan 2018'de yürürlüğe giren Planlı Alanlar İmar Yönetmeliğine uyumlu üreteceksiniz. Metrekare Listesi Hazırlamak Modelleyin ve Raporlayın Destekleyenler Videolar Allplan ile Metrekare Cetveli Hazırlama"
+  },
+  {
+    "path": "/solutions/infrastructure",
+    "title": "ALT YAPI MÜHENDİSLİĞİ",
+    "seoTitle": "Altyapı Mühendisliği — Yol, Köprü, Tünel ve Arazi BIM Çözümü | Aluplan",
+    "section": "solutions",
+    "description": "ALT YAPI MÜHENDİSLİĞİ: DAHA FAZLASINI İSTEYEN MÜHENDİSLER VE TEKNİKERLER İÇİN. ALLPLAN'in altyapı mühendisliği için BIM çözümleri, tasarımdan inşa sürecine kadar tüm süreci kapsa",
+    "keywords": "ALTYAPI MÜHENDİSLİĞİ İÇİN ALLPLAN - BIM ÇÖZÜMLERİ DAHA KESİN DAHA VERİMLİ DAHA ÜRETKEN AŞAĞIDAKİ ZORLUKLARLA SÜREKLİ MÜCADELE EDİYOR MUSUNUZ? NEDEN ALLPLAN GÜÇLÜ SERBEST MODELLEME KOLAYCA TASARLA ve KARMAŞIK DONATILARI DETAYLANDIR"
+  },
+  {
+    "path": "/solutions/mep",
+    "title": "MEP ENGINEERING",
+    "seoTitle": "MEP Mühendisliği — Mekanik, Elektrik ve Tesisat BIM Koordinasyonu | Aluplan",
+    "section": "solutions",
+    "description": "MEP ENGINEERING: DAHA FAZLASINI İSTEYEN MÜHENDİSLER İÇİN. ALLPLAN'ın MEP ve bina hizmetleri mühendisliği için BIM çözümleri, tasarımdan inşaata kadar tüm süreci kapsar. All",
+    "keywords": "ALLPLAN – MEP MÜHENDİSLİĞİ İÇİN BIM ÇÖZÜMLERİ DAHA KESİN DAHA VERİMLİ DAHA ÜRETKEN AŞAĞIDAKİ ZORLUKLARLA SÜREKLİ MÜCADELE EDİYOR MUSUNUZ? NEDEN ALLPLAN ALLPLAN'LE DAHA HIZLI BAŞLANGIÇ GÜÇLÜ ve SEZGİSEL MODELLEME"
+  },
+  {
+    "path": "/solutions/modeling-of-precast-girder-bridges",
+    "title": "MODELING OF PRECAST GIRDER BRIDGES",
+    "seoTitle": "Prefabrik Kirişli Köprülerin Parametrik BIM Modellemesi | Aluplan",
+    "section": "solutions",
+    "description": "Prefabrik kirişli köprülerin modellenmesi için Allplan Bridge çözümleri.",
+    "keywords": "1. CREATING AXES 2. DEFINING A CROSS-SECTION 3. DESIGNING A TEMPLATE 4. BUILDING A SUBSTRUCTURE 5. ASSEMBLING GIRDERS 6. CONSTRUCTING A PLATE 7. COMPOSING THE HAUNCH 8. COMPLETING THE BRIDGE STRUCTURE"
+  },
+  {
+    "path": "/solutions/oska",
+    "title": "Performansın gücünün kilidi açılıyor",
+    "seoTitle": "ALLPLAN & Oska e-Hakediş Pro — Yaklaşık Maliyet ve İhale | Aluplan",
+    "section": "solutions",
+    "description": "Performansın gücünün kilidi açılıyor: Allplan ve e-Hakediş arasında metraj ve hakediş analizi entegrasyonu Allplan ve e-Hakediş arasında metraj ve hakediş analizi entegrasyonunu gerçekleştiren ",
+    "keywords": "Allplan Bimplus ve OskaBulut İhale, Metraj, Hakediş Allplan'le BIM Modellemesi ve metraj… ALLPLAN"
+  },
+  {
+    "path": "/solutions/poz-catalog",
+    "title": "ALLPLAN POZ KATALOĞU",
+    "seoTitle": "ALLPLAN Poz Kataloğu — Çevre ve Şehircilik Birim Fiyat Entegrasyonu | Aluplan",
+    "section": "solutions",
+    "description": "ALLPLAN POZ KATALOĞU: TÜRKİYE POZ BİRİM FİYAT ENTEGRASYONU Türkiye poz birim fiyat kataloğu entegrasyonu. Metraj ve maliyet hesaplamalarınızı otomatikleştirin, keşif belgelerini",
+    "keywords": "TÜRKİYE POZ BİRİM FİYAT ENTEGRASYONU"
+  },
+  {
+    "path": "/solutions/precast",
+    "title": "PREKAST İMALATI",
+    "seoTitle": "Prekast Beton Üretimi — Otomatik Pafta ve ERP/MES Entegrasyonu | Aluplan",
+    "section": "solutions",
+    "description": "PREKAST İMALATI: DAHA FAZLASINI İSTEYEN PREKAST TASARIMCILARI İÇİN Prekast, inşaat sektörünün en hızlı büyüyen segmentlerinden biridir. Bu nedenle ALLPLAN, prekast projeler",
+    "keywords": "ALLPLAN – PREFABRİKASYON İÇİN BIM ÇÖZÜMLERİ DAHA FAZLA ZAMAN DAHA AZ HATA DAHA ÜRETKEN AŞAĞIDAKİ ZORLUKLARLA SÜREKLİ MÜCADELE EDİYOR MUSUNUZ? ALLPLAN'I SEÇMELİSİNİZ TUTARLI ZAMAN VE MALİYET PLANLAMASI KARMAŞIK DONATIYI KOLAYCA TASARLAYIN VE DETAYLANDIRIN"
+  },
+  {
+    "path": "/solutions/pythonpart",
+    "title": "ALLTO PythonParts",
+    "seoTitle": "Allto PythonPart — Parametrik Betonarme Donatı Otomasyonu | Aluplan",
+    "section": "solutions",
+    "description": "ALLTO PythonParts: Allplan Ortak Çözümü olarak ALLTO, ALLPLAN yazılımıyla uyumlu profesyonel eklentiler geliştirir. Kullanıcılar ayrıca uzmanlığımızı ve bireysel ihtiyaçların",
+    "keywords": "Allplan Ortak Çözümü olarak ALLTO, ALLPLAN yazılımıyla uyumlu profesyonel eklentiler geliştirir. Bina PythonPartları şunları içerir: ALLTO PYTHONPARTS Sürüm 4.1 – Yeni Sürüm Ücretli PythonParts Duvar Donatısı Duvar Boşluğu Donatısı Duvar Kenar Donatısı Döşeme Donatısı"
+  },
+  {
+    "path": "/solutions/rebar-engineering",
+    "title": "Bu inovasyona inanamayacaksınız…",
+    "seoTitle": "Donatı Mühendisliği — 3B Betonarme Detaylandırma ve Metraj | Aluplan",
+    "section": "solutions",
+    "description": "Bu inovasyona inanamayacaksınız…: Duvar, kolon, döşeme ve zımbalama profili için otomatik donatılandırma Üstelik kesitler ve etiketler de otomatik oluşuyor. Metraj raporları ve lejantlar da",
+    "keywords": "Otomatik Donatı Tanıtım Videoları V2021-1-0: Otomatik Kiriş V2021-1-0: Otomatik Kolon V2021-1-0: Otomatik Zımbalama V2021-1-0: Otomatik Perde Duvar Otomatik Donatı Eğitim Videoları V2021-1-0: Otomatik Donatı Kolon V2021-1-0: Otomatik Donatı Kiriş"
+  },
+  {
+    "path": "/solutions/road-railway",
+    "title": "KARAYOLU VE DEMİRYOLU ALTYAPISI",
+    "seoTitle": "Yol ve Demiryolu Tasarımı — Parametrik Koridor ve Altyapı BIM | Aluplan",
+    "section": "solutions",
+    "description": "KARAYOLU VE DEMİRYOLU ALTYAPISI: DAHA FAZLASINI İSTEYEN ALTYAPI TASARIMCILARI İÇİN. ALLPLAN’in karayolu, demiryolu ve altyapı tasarımına yönelik BIM çözümleri, tasarımdan inşa sürecine kad",
+    "keywords": "YOL VE DEMİRYOLU İÇİN ALLPLAN - BIM ÇÖZÜMLERİ DAHA KESİN DAHA VERİMLİ DAHA ÜRETKEN AŞAĞIDAKİ ZORLUKLARLA SÜREKLİ MÜCADELE EDİYOR MUSUNUZ? NEDEN ALLPLAN GÜÇLÜ ŞANTİYE MODELLEME ARAÇLARI PARAMETRİK YOL MODELLEME"
+  },
+  {
+    "path": "/solutions/scalypso",
+    "title": "Scalypso",
+    "seoTitle": "Scalypso — 3B Lazer Tarama ve Nokta Bulutu (Point Cloud) BIM | Aluplan",
+    "section": "solutions",
+    "description": "Nokta bulutu işleme ve modelleme yazılımı",
+    "keywords": "Hakkında Dijital Avantaj Kazanın Modüler ve Genişletilebilir Sanattan Bilime İki Dünya Arasında Köprü Desteklenen Tarayıcılar Scalypso Modülleri CONVERTER"
+  },
+  {
+    "path": "/solutions/scalypso/converter",
+    "title": "Converter",
+    "seoTitle": "Scalypso Converter — Lazer Tarama Veri Formatı Dönüştürücü | Aluplan",
+    "section": "solutions",
+    "description": "Nokta bulutu dönüştürücü",
+    "keywords": "Birincil Hedef Desteklenen İçe Aktarma Formatları Desteklenen Dışa Aktarma Formatları Deneme Lisansı İste"
+  },
+  {
+    "path": "/solutions/scalypso/mobile",
+    "title": "Mobile",
+    "seoTitle": "Scalypso Mobile — Mobil Haritalama ve Nokta Bulutu İşleme | Aluplan",
+    "section": "solutions",
+    "description": "Mobil nokta bulutu uygulamaları",
+    "keywords": "Scalypso Mobile aşağıdaki sistemleri destekler: Scalypso Mobile Scalypso Mobile ile yapabilecekleriniz: Desteklenen Dosya Formatları Deneme Lisansı İste"
+  },
+  {
+    "path": "/solutions/scalypso/modeler",
+    "title": "Modeler",
+    "seoTitle": "Scalypso Modeler — Nokta Bulutundan Doğrudan 3B BIM Elemanı Üretimi | Aluplan",
+    "section": "solutions",
+    "description": "Nokta bulutundan 3D modelleme",
+    "keywords": "3B lazer veri tarama Pipe Module BIM Module Steel Module Ortho Module Deneme Lisansı İste"
+  },
+  {
+    "path": "/solutions/scalypso/videos",
+    "title": "Videolar",
+    "seoTitle": "Scalypso Eğitim Videoları ve Nokta Bulutu Uygulama Örnekleri | Aluplan",
+    "section": "solutions",
+    "description": "Scalypso kullanım videoları",
+    "keywords": "Scalypso [CONVERTER] Scalypso [PROJECT ORIENTATION] Scalypso [BASIC] Scalypso [ORTHOMODULE] Scalypso [LASERSCANDATA ANALYSING]"
+  },
+  {
+    "path": "/solutions/scalypso/viewer",
+    "title": "Viewer",
+    "seoTitle": "Scalypso Viewer — Yüksek Yoğunluklu Nokta Bulutu Görüntüleyici | Aluplan",
+    "section": "solutions",
+    "description": "Nokta bulutu görüntüleyici",
+    "keywords": "Scalypso Viewer Özellikler: Deneme Lisansı İste"
+  },
+  {
+    "path": "/solutions/site-planning",
+    "title": "ŞANTİYE PLANLAMASI",
+    "seoTitle": "Şantiye Planlaması — Vinç, İskele ve İş Güvenliği 4B BIM | Aluplan",
+    "section": "solutions",
+    "description": "ŞANTİYE PLANLAMASI: DAHA FAZLASINI İSTEYEN MÜTEAHHİTLER İÇİN ALLPLAN’in şantiye planlama ve inşaat yönetimine yönelik BIM çözümleri, verimli ve sorunsuz proje yürütme için tüm",
+    "keywords": "ŞANTİYE PLANLAMASI İÇİN ALLPLAN – BIM ÇÖZÜMLERİ DAHA KESİN DAHA VERİMLİ DAHA ÜRETKEN AŞAĞIDAKİ ZORLUKLARLA SÜREKLİ MÜCADELE EDİYOR MUSUNUZ? NEDEN ALLPLAN İSTEDİĞİNİZ GİBİ ÇALIŞIN GÜVENİLİR İHALE HAZIRLIĞI"
+  },
+  {
+    "path": "/solutions/steel",
+    "title": "ÇELİK DETAYLANDIRMA & İMALAT",
+    "seoTitle": "Çelik Detaylandırma ve İmalat — ALLPLAN & SDS2 Entegre İş Akışı | Aluplan",
+    "section": "solutions",
+    "description": "ÇELİK DETAYLANDIRMA & İMALAT: DAHA FAZLASINI İSTEYEN ÇELİK ÜRETİCİLERİ İÇİN ALLPLAN'deki SDS2, pazarın tek hepsi bir arada çelik detaylandırma ve bağlantı tasarımı BIM çözümünü sunar, i",
+    "keywords": "ALLPLAN SDS2 – ÇELİK ÜRETİMİ İÇİN BIM ÇÖZÜMLERİ ZAMAN TASARRUFU DAHA VERİMLİ DAHA ÜRETKEN AŞAĞIDAKİ ZORLUKLARLA SÜREKLİ MÜCADELE EDİYOR MUSUNUZ? NEDEN ALLPLAN SDS2 AKILLI İMALAT OTOMATİK BAĞLANTILAR"
+  },
+  {
+    "path": "/solutions/structural",
+    "title": "STRÜKTÜREL MÜHENDİSLİK",
+    "seoTitle": "Strüktürel Mühendislik — Betonarme, Çelik ve Analiz BIM Çözümü | Aluplan",
+    "section": "solutions",
+    "description": "STRÜKTÜREL MÜHENDİSLİK: DAHA FAZLASINI İSTEYEN MÜHENDİSLER VE TEKNİKERLER İÇİN. ALLPLAN'in strüktürel mühendisliğe yönelik BIM çözümleri, tasarımdan inşa sürecine kadar tüm süreci",
+    "keywords": "STRÜKTÜREL MÜHENDİSLİK İÇİN ALLPLAN - BIM ÇÖZÜMLERİ DAHA KESİN DAHA VERİMLİ DAHA ÜRETKEN AŞAĞIDAKİ ZORLUKLARLA SÜREKLİ MÜCADELE EDİYOR MUSUNUZ? NEDEN ALLPLAN ALLPLAN'LE DAHA HIZLI BAŞLANGIÇ GÜÇLÜ ve SEZGİSEL MODELLEME"
+  }
+]

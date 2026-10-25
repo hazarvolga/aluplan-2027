@@ -1,0 +1,343 @@
+{
+  "topBar": {
+    "email": "info@aluplan.com.tr",
+    "phones": [
+      "(+90) 216 225 84 41",
+      "(+90) 543 211 94 42",
+      "(+90) 549 499 73 79"
+    ],
+    "socialLinks": [
+      {
+        "label": "Facebook",
+        "href": "https://www.facebook.com/Allplan.Turkey"
+      },
+      {
+        "label": "Twitter",
+        "href": "https://twitter.com/Allplan_Turkey"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/company/allplan-turkey/"
+      },
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com/allplan_turkey/"
+      },
+      {
+        "label": "YouTube",
+        "href": "https://www.youtube.com/c/AllplanTurkey"
+      }
+    ]
+  },
+  "productsMenu": [
+    {
+      "title": "ALLPLAN",
+      "items": [
+        {
+          "name": "ALLPLAN Basic",
+          "href": "/products/allplan-basic"
+        },
+        {
+          "name": "ALLPLAN Concept",
+          "href": "/products/allplan-concept"
+        },
+        {
+          "name": "ALLPLAN Professional",
+          "href": "/products/allplan-professional"
+        },
+        {
+          "name": "ALLPLAN Ultimate",
+          "href": "/products/allplan-ultimate"
+        },
+        {
+          "name": "ALLPLAN Cloud Services",
+          "href": "/products/allplan-cloud-services"
+        },
+        {
+          "name": "CIVIL",
+          "href": "/products/civil"
+        },
+        {
+          "name": "PRECAST",
+          "href": "/products/precast"
+        }
+      ]
+    },
+    {
+      "title": "BİNA VE ALTYAPI",
+      "items": [
+        {
+          "name": "Allplan - AEC Endüstrisi için BIM",
+          "href": "/products/allplan-aec"
+        },
+        {
+          "name": "Allplan Bridge - Köprü Tasarımı",
+          "href": "/solutions/bridge-design"
+        },
+        {
+          "name": "AX3000 - Enerji Simülasyonu",
+          "href": "/products/ax3000"
+        },
+        {
+          "name": "AX3000 - Mekanik Tesisat",
+          "href": "/solutions/ax3000-mekanik-tesisat"
+        }
+      ]
+    },
+    {
+      "title": "İNŞAAT PLANLAMASI",
+      "items": [
+        {
+          "name": "Allplan Precast - Prekast Detaylandırma",
+          "href": "/products/precast-detail"
+        },
+        {
+          "name": "Tim - Prekast İş Planlaması",
+          "href": "https://www.allplan.com/products/tim/",
+          "external": true
+        },
+        {
+          "name": "SDS2 - Çelik Detaylandırma ve İmalatı",
+          "href": "https://www.allplan.com/products/sds2-detailing-fabrication/",
+          "external": true
+        },
+        {
+          "name": "SDS2 - Çelik Yük Planlaması",
+          "href": "https://www.allplan.com/products/sds2-load-planning/",
+          "external": true
+        },
+        {
+          "name": "SDS2 - Aluplan",
+          "href": "/products/sds2-home"
+        }
+      ]
+    },
+    {
+      "title": "ORTAK ÇÖZÜMLER",
+      "items": [
+        {
+          "name": "Allplan Ortak Çözümleri",
+          "href": "https://www.allplan.com/allplan-partner-solutions/",
+          "external": true
+        }
+      ]
+    },
+    {
+      "title": "İŞBİRLİĞİ YAZILIMI",
+      "items": [
+        {
+          "name": "ALLPLAN BIMPLUS",
+          "href": "/products/allplan-bimplus"
+        }
+      ]
+    }
+  ],
+  "solutionsMenu": [
+    {
+      "title": "BİNA TASARIMI",
+      "items": [
+        {
+          "name": "Mimari",
+          "href": "/solutions/architecture"
+        },
+        {
+          "name": "Strüktürel Mühendislik",
+          "href": "/solutions/structural"
+        },
+        {
+          "name": "MEP",
+          "href": "/solutions/mep"
+        },
+        {
+          "name": "ALLPLAN ENDÜSTRİ ÇÖZÜMLERİ",
+          "href": "/solutions/allplan-industry"
+        }
+      ]
+    },
+    {
+      "title": "ALTYAPI TASARIMI",
+      "items": [
+        {
+          "name": "Altyapı Mühendisliği",
+          "href": "/solutions/infrastructure"
+        },
+        {
+          "name": "Yol ve Demiryolu Tasarımı",
+          "href": "/solutions/road-railway"
+        },
+        {
+          "name": "Köprü Tasarımı",
+          "href": "/solutions/bridge-design"
+        }
+      ]
+    },
+    {
+      "title": "İNŞAAT PLANLAMASI",
+      "items": [
+        {
+          "name": "Prekast Üretimi",
+          "href": "/solutions/precast"
+        },
+        {
+          "name": "Çelik Detaylandırma & İmalat",
+          "href": "/solutions/steel"
+        },
+        {
+          "name": "Şantiye Planlaması",
+          "href": "/solutions/site-planning"
+        }
+      ]
+    },
+    {
+      "title": "EKLENTİLER",
+      "items": [
+        {
+          "name": "CDS Add-On",
+          "href": "/solutions/cds-addon"
+        },
+        {
+          "name": "Allto PytonPart Generator",
+          "href": "https://allplantools.com/",
+          "external": true
+        },
+        {
+          "name": "Allto PytonPart",
+          "href": "/solutions/pythonpart"
+        },
+        {
+          "name": "AX3000 MEP",
+          "href": "/solutions/ax3000"
+        },
+        {
+          "name": "Scalypso",
+          "href": "/solutions/scalypso"
+        }
+      ]
+    },
+    {
+      "title": "DİĞER ÜRÜNLER",
+      "items": [
+        {
+          "name": "BIMFlex",
+          "href": "/solutions/bimflex"
+        },
+        {
+          "name": "Donatı Mühendisliği",
+          "href": "/solutions/rebar-engineering"
+        },
+        {
+          "name": "İmar Yönetmeliği BIM Eklentisi",
+          "href": "/solutions/imar-yonetmeligi-bim-eklentisi"
+        },
+        {
+          "name": "BIMX5",
+          "href": "/solutions/bimx5"
+        },
+        {
+          "name": "Allplan Oska İşbirliği",
+          "href": "/solutions/oska"
+        },
+        {
+          "name": "Allplan Poz Kataloğu",
+          "href": "/solutions/poz-catalog"
+        }
+      ]
+    }
+  ],
+  "directLinks": [
+    {
+      "name": "Kaynaklar",
+      "href": "/#professional-services"
+    },
+    {
+      "name": "Referanslar",
+      "href": "/references"
+    },
+    {
+      "name": "Hakkımızda",
+      "href": "/about"
+    },
+    {
+      "name": "İletişim",
+      "href": "/contact"
+    }
+  ],
+  "footer": {
+    "description": "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri.",
+    "products": [
+      {
+        "label": "ALLPLAN Basic",
+        "href": "/products/allplan-basic"
+      },
+      {
+        "label": "ALLPLAN Concept",
+        "href": "/products/allplan-concept"
+      },
+      {
+        "label": "ALLPLAN Professional",
+        "href": "/products/allplan-professional"
+      },
+      {
+        "label": "ALLPLAN Ultimate",
+        "href": "/products/allplan-ultimate"
+      },
+      {
+        "label": "CIVIL",
+        "href": "/products/civil"
+      },
+      {
+        "label": "PRECAST",
+        "href": "/products/precast"
+      }
+    ],
+    "solutions": [
+      {
+        "label": "BİNA TASARIMI",
+        "href": "/solutions-v2/building-design"
+      },
+      {
+        "label": "ALTYAPI TASARIMI",
+        "href": "/solutions-v2/infrastructure"
+      },
+      {
+        "label": "İNŞAAT PLANLAMASI",
+        "href": "/solutions-v2/construction"
+      },
+      {
+        "label": "EKLENTİLER",
+        "href": "/solutions-v2/addons"
+      },
+      {
+        "label": "DİĞER ÜRÜNLER",
+        "href": "/solutions-v2/other"
+      }
+    ],
+    "address": [
+      "Quick Tower – Workinton",
+      "İçerenköy Mah. Topçu İbrahim Sok.",
+      "8/10D No: 5, 34752 Ataşehir / İstanbul"
+    ],
+    "phones": [
+      "(+90) 216 225 84 41",
+      "(+90) 543 211 94 42",
+      "(+90) 549 499 73 79"
+    ],
+    "email": "info@aluplan.com.tr",
+    "legal": [
+      {
+        "label": "Gizlilik Politikası",
+        "href": "/gizlilik-politikasi"
+      },
+      {
+        "label": "Kullanım Şartları",
+        "href": "/kullanim-sartlari"
+      },
+      {
+        "label": "KVKK",
+        "href": "/kvkk"
+      }
+    ],
+    "copyright": "© 2026 Aluplan Program Sistemleri.",
+    "credit": "Design & Develop by Hazar Volga Ekiz"
+  }
+}

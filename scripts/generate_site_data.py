@@ -1,0 +1,843 @@
+#!/usr/bin/env python3
+import json
+import os
+import re
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+
+inv_path = ROOT / "docs/00-inventory/content-inventory.json"
+ir_path = ROOT / "docs/00-inventory/interaction-register-2026-10-22.json"
+closure_states_path = ROOT / "docs/00-inventory/browser-closure-2026-10-22/states.json"
+complete_states_path = ROOT / "docs/00-inventory/browser-complete-2026-10-22/states.json"
+final_states_path = ROOT / "docs/00-inventory/browser-final-2026-10-22.json"
+module_states_path = ROOT / "docs/00-inventory/browser-modules-final-2026-10-22.json"
+q3_text_path = ROOT / "docs/00-inventory/pdf-evidence/q3-2026.txt"
+q4_text_path = ROOT / "docs/00-inventory/pdf-evidence/q4-2025.txt"
+
+with open(inv_path, "r", encoding="utf-8") as f:
+    inv = json.load(f)
+
+with open(ir_path, "r", encoding="utf-8") as f:
+    ir = json.load(f)
+
+
+def safe_read_json(p: Path):
+    try:
+        with open(p, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return None
+
+
+def clean_text(val) -> str:
+    if not val:
+        return ""
+    s = str(val)
+    s = re.sub(r"\[email[\s\u00a0]*protected\]", "info@aluplan.com.tr", s, flags=re.IGNORECASE)
+    s = s.replace("\u00a0", " ").strip()
+    return s
+
+
+interactive_by_path = {}
+
+
+def add_interactive_state(route_path: str, label: str, texts: list):
+    if not route_path or not isinstance(texts, list) or not texts:
+        return
+    clean_p = route_path.replace("https://aluplan.com.tr", "") or "/"
+    if clean_p not in interactive_by_path:
+        interactive_by_path[clean_p] = []
+    existing = interactive_by_path[clean_p]
+    cleaned_texts = [
+        clean_text(t)
+        for t in texts
+        if len(clean_text(t)) > 2 and not clean_text(t).startswith("İçeriğe geç")
+    ]
+    if cleaned_texts and not any(x["label"] == label for x in existing):
+        existing.append({"label": label or f"Durum {len(existing) + 1}", "texts": cleaned_texts[:30]})
+
+
+def ingest_state_obj(obj):
+    if not obj:
+        return
+    if isinstance(obj, list):
+        for item in obj:
+            ingest_state_obj(item)
+        return
+    if isinstance(obj, dict):
+        url_or_path = obj.get("url") or obj.get("path") or obj.get("route")
+        if url_or_path and (obj.get("added_texts") or obj.get("texts") or obj.get("headings")):
+            label = str(obj.get("action") or obj.get("label") or obj.get("state") or obj.get("tab") or "Etkileşimli Sekme")
+            texts = obj.get("added_texts") or obj.get("texts") or obj.get("headings") or []
+            if isinstance(texts, list):
+                add_interactive_state(str(url_or_path), label, texts)
+        for k, v in obj.items():
+            if isinstance(k, str) and k.startswith("/") and isinstance(v, list):
+                for st in v:
+                    if isinstance(st, dict):
+                        lbl = str(st.get("label") or st.get("action") or st.get("name") or "Detay")
+                        txts = st.get("added_texts") or st.get("texts") or []
+                        if isinstance(txts, list):
+                            add_interactive_state(k, lbl, txts)
+            elif isinstance(v, (dict, list)):
+                ingest_state_obj(v)
+
+
+for p in [closure_states_path, complete_states_path, final_states_path, module_states_path]:
+    ingest_state_obj(safe_read_json(p))
+
+HEADER_EXACT = {
+    "İçeriğe geç",
+    "info@aluplan.com.tr",
+    "Çözümler",
+    "Ürünler",
+    "Kaynaklar",
+    "Referanslar",
+    "Hakkımızda",
+    "İletişim",
+    "Toggle theme",
+    "Ücretsiz Deneme",
+    "Teklif Talep Formu",
+}
+
+FOOTER_START_MARKER = "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+GLOBAL_CTA_START_MARKER = "DAHA İYİ YARINLAR İNŞA ETMEK İÇİN TASARIM"
+
+GENERIC_TITLES = {
+    "Aluplan - Premium Mühendislik Çözümleri",
+    "ALLPLAN Ürünleri | Aluplan | Aluplan",
+    "Allplan - Aluplan",
+}
+
+GENERIC_DESCRIPTIONS = {
+    "Mimarlık, mühendislik ve inşaat sektörü için premium yazılım çözümleri, BIM danışmanlığı ve eğitim hizmetleri.",
+    "Mimari, mühendislik ve inşaat projeleriniz için en kapsamlı BIM ve CAD çözümlerini keşfedin. ALLPLAN AEC, Civil, Precast ve daha fazlası.",
+    "Aluplan hakkında bilgi",
+    "Bizimle iletişime geçin",
+}
+
+ROUTE_LABELS = {
+    "/": "ALLPLAN Türkiye | Profesyonel BIM Yazılımları",
+    "/about": "Hakkımızda — Türkiye’nin Güvenilir BIM Çözüm Ortağı",
+    "/contact": "İletişim ve Teknik Danışmanlık — Aluplan",
+    "/gizlilik-politikasi": "Gizlilik Politikası ve Veri Güvenliği",
+    "/kullanim-sartlari": "İnternet Sitesi Kullanım Şartları",
+    "/kvkk": "KVKK Kişisel Verilerin İşlenmesi Aydınlatma Metni",
+    "/health": "Sistem Durumu ve Servis Sağlığı (Health Check)",
+    "/package-overview": "ALLPLAN Paket Genel Bakış ve Sürüm Rehberi",
+    "/paket-karsilastirma": "ALLPLAN 2026 Paket Karşılaştırma Rehberi (Q3 2026 PDF)",
+    "/products": "ALLPLAN Ürün Ailesi ve Mühendislik Yazılımları",
+    "/products/allplan": "ALLPLAN Platformu — Disiplinlerarası BIM Çözümü",
+    "/products/allplan-2026": "ALLPLAN 2026 Sürümü — Geleceği İnşa Eden BIM Platformu",
+    "/products/allplan-2026-yenilikler": "ALLPLAN 2026 Yenilikleri ve Öne Çıkan Özellikler",
+    "/products/allplan-aec": "ALLPLAN AEC — Mimari, Mühendislik ve İnşaat için BIM",
+    "/products/allplan-basic": "ALLPLAN Basic — 2B/3B Tasarım, Görüntüleme ve İş Birliği",
+    "/products/allplan-bimplus": "ALLPLAN Bimplus — Bulut Tabanlı OpenBIM İş Birliği Platformu",
+    "/products/allplan-cloud-services": "ALLPLAN Cloud Services — Bulut Tabanlı BIM İş Akışları",
+    "/products/allplan-concept": "ALLPLAN Concept — 3B Modelleme, Dokümantasyon ve Metraj",
+    "/products/allplan-professional": "ALLPLAN Professional — Profesyonel BIM, Donatı ve Detaylandırma",
+    "/products/allplan-ultimate": "ALLPLAN Ultimate — Kapsamlı Çok Disiplinli BIM ve Mühendislik",
+    "/products/architecture": "ALLPLAN Architecture — Mimari BIM Tasarım Yazılımı",
+    "/products/ax3000": "AX3000 MEP & Enerji Simülasyonu Ürün Ailesi",
+    "/products/ax3000/dokumanlar": "AX3000 Teknik Broşürler ve Fonksiyon Dokümanları",
+    "/products/civil": "ALLPLAN Civil — Altyapı, Yol ve Köprü Mühendisliği Paketi",
+    "/products/precast": "ALLPLAN Precast — Prefabrik Beton Tasarım ve Üretim Paketi",
+    "/products/precast-detail": "ALLPLAN Precast Detail — Prekast Detaylandırma ve İmalat",
+    "/products/sds2-home": "SDS2 — Çelik Detaylandırma, Bağlantı Tasarımı ve İmalat",
+    "/references": "Referanslarımız ve BIM Odaklı İş Ortaklarımız",
+    "/search": "Site İçi Arama — Ürün, Çözüm ve Eğitim Kütüphanesi",
+    "/solutions": "ALLPLAN Mühendislik, Mimari ve İnşaat Çözümleri",
+    "/solutions-v2/addons": "ALLPLAN Eklenti Kataloğu ve Üretkenlik Modülleri",
+    "/solutions-v2/building-design": "Bina Tasarımı Çözümleri — Mimari, Yapısal ve MEP BIM",
+    "/solutions-v2/connect-license": "ALLPLAN Connect Lisans Yönetimi ve Kurulum Rehberi",
+    "/solutions-v2/connect-license/activation": "ALLPLAN Lisans Deklarasyon ve Aktivasyon Formu",
+    "/solutions-v2/connect-license/how-to-assign": "ALLPLAN Lisans Atama ve Kullanıcı Yetkilendirme Rehberi",
+    "/solutions-v2/connect-login": "ALLPLAN Connect Portal Giriş ve Hesap Rehberi",
+    "/solutions-v2/construction": "İnşaat Planlaması, Prekast, Çelik ve Şantiye Çözümleri",
+    "/solutions-v2/faq": "Sıkça Sorulan Sorular (SSS) ve Teknik Bilgi Bankası",
+    "/solutions-v2/infrastructure": "Altyapı Tasarımı — Köprü, Yol, Tünel ve Geoteknik BIM",
+    "/solutions-v2/other": "Tamamlayıcı BIM Çözümleri, Maliyet ve Eklenti Ailesi",
+    "/solutions-v2/training": "ALLPLAN Eğitim, Webinar ve Teknik Gelişim Merkezi",
+    "/solutions-v2/training/classroom": "Sınıf İçi (Yüz Yüze) ALLPLAN BIM Eğitim Programları",
+    "/solutions-v2/training/e-learning": "E-Learning — Kendi Hızınızda Çevrim İçi ALLPLAN Eğitimi",
+    "/solutions-v2/training/events": "ALLPLAN Etkinlikler, Seminerler ve Sektör Buluşmaları",
+    "/solutions-v2/training/individual": "Bireysel ve Kuruma Özel Özelleştirilmiş ALLPLAN Eğitimi",
+    "/solutions-v2/training/online": "Canlı Online ALLPLAN Eğitimleri ve Uzaktan Atölyeler",
+    "/solutions-v2/training/quick-start": "ALLPLAN Quick Start — 7 Adımda Hızlı Başlangıç Rehberi",
+    "/solutions-v2/training/video-library": "ALLPLAN Video Kütüphanesi ve Eğitim Oynatma Listeleri",
+    "/solutions-v2/training/webinar": "ALLPLAN Teknik Webinarlar ve Canlı Kayıt Arşivi",
+    "/solutions/addons": "ALLPLAN Eklentileri (Add-Ons) ve Gelişmiş Araçlar",
+    "/solutions/addons/2d-dwg-converter": "2B DWG Converter — Akıllı CAD/DWG Dönüştürme Eklentisi",
+    "/solutions/addons/drive-curve": "Drive Curve — Araç Dönüş Yörüngesi ve Süpürme Analizi",
+    "/solutions/addons/geometry-tools": "Geometry Tools — Gelişmiş 3B Geometri ve Arazi Araçları",
+    "/solutions/addons/graphical-text": "Graphical Text — 3B Vektörel ve Parametrik Yazı Eklentisi",
+    "/solutions/addons/parametric-terrain": "Parametric Terrain — Parametrik Arazi ve Kazı/Dolgu Modelleme",
+    "/solutions/addons/ramp": "Ramp Add-On — Parametrik Helisel ve Doğrusal Rampa Tasarımı",
+    "/solutions/addons/sketchup-converter": "SketchUp Converter — Çift Yönlü SKP/ALLPLAN Veri Aktarımı",
+    "/solutions/addons/steel-components": "Steel Components — Parametrik Çelik Profil ve Birleşim Bileşenleri",
+    "/solutions/addons/three-dimensioning": "3B Ölçülendirme (Three Dimensioning) — İzometrik ve 3B Ölçü",
+    "/solutions/allplan-bulut-hizmetleri": "ALLPLAN Bulut Hizmetleri — Ortak Veri Ortamı (CDE) ve Paylaşım",
+    "/solutions/allplan-industry": "ALLPLAN Endüstriyel Tesis ve Fabrika Tasarım Çözümleri",
+    "/solutions/architecture": "Mimari BIM Çözümleri — Konseptten Uygulama Projesine ALLPLAN",
+    "/solutions/ax3000": "AX3000 MEP — ALLPLAN Entegre Mekanik, Elektrik ve Enerji BIM",
+    "/solutions/ax3000-mekanik-tesisat": "AX3000 Mekanik Tesisat — HVAC, Sıhhi Tesisat ve Enerji",
+    "/solutions/ax3000-virtual-reality": "AX3000 Virtual Reality (VR) — MEP ve Mimari Sanal Gerçeklik",
+    "/solutions/ax3000-yapi-fizigi": "AX3000 Yapı Fiziği ve Enerji Kimlik Belgesi Simülasyonu",
+    "/solutions/ax3000/elektrik": "AX3000 Elektrik Tesisatı — BIM Tabanlı Kuvvetli ve Zayıf Akım",
+    "/solutions/ax3000/havalandirma": "AX3000 Havalandırma — 3B Kanal Tasarımı ve Basınç Kaybı Hesabı",
+    "/solutions/ax3000/isitma": "AX3000 Isıtma Tesisatı — Isı Yükü, Radyatör ve Yerden Isıtma",
+    "/solutions/ax3000/konut-havalandirma": "AX3000 Konut Havalandırma — Kontrollü Mekanik Havalandırma",
+    "/solutions/ax3000/sihhi-tesisat": "AX3000 Sıhhi Tesisat — Temiz Su, Atık Su ve Yağmur Suyu BIM",
+    "/solutions/ax3000/sprinkler": "AX3000 Sprinkler — Yangın Söndürme ve Hidrolik Hesap Çözümü",
+    "/solutions/bimflex": "BIMFlex Allplan Eklenti Paketi — Otomatik Betonarme Donatı",
+    "/solutions/bimx5": "BIMX5 — 5B Metraj, Keşif ve BIM Maliyet Yönetimi",
+    "/solutions/bridge-design": "ALLPLAN Bridge — Parametrik Köprü Modelleme ve Analiz",
+    "/solutions/cds-addon": "CDS Add-On Paketi — İsviçre Mühendislik ve Üretkenlik Eklentileri",
+    "/solutions/features-allplan-bridge": "ALLPLAN Bridge Özellikleri — 4B Köprü BIM ve Öngerme Analizi",
+    "/solutions/imar-yonetmeligi-bim-eklentisi": "Planlı Alanlar İmar Yönetmeliği BIM Denetim Eklentisi",
+    "/solutions/infrastructure": "Altyapı Mühendisliği — Yol, Köprü, Tünel ve Arazi BIM Çözümü",
+    "/solutions/mep": "MEP Mühendisliği — Mekanik, Elektrik ve Tesisat BIM Koordinasyonu",
+    "/solutions/modeling-of-precast-girder-bridges": "Prefabrik Kirişli Köprülerin Parametrik BIM Modellemesi",
+    "/solutions/oska": "ALLPLAN & Oska e-Hakediş Pro — Yaklaşık Maliyet ve İhale",
+    "/solutions/poz-catalog": "ALLPLAN Poz Kataloğu — Çevre ve Şehircilik Birim Fiyat Entegrasyonu",
+    "/solutions/precast": "Prekast Beton Üretimi — Otomatik Pafta ve ERP/MES Entegrasyonu",
+    "/solutions/pythonpart": "Allto PythonPart — Parametrik Betonarme Donatı Otomasyonu",
+    "/solutions/rebar-engineering": "Donatı Mühendisliği — 3B Betonarme Detaylandırma ve Metraj",
+    "/solutions/road-railway": "Yol ve Demiryolu Tasarımı — Parametrik Koridor ve Altyapı BIM",
+    "/solutions/scalypso": "Scalypso — 3B Lazer Tarama ve Nokta Bulutu (Point Cloud) BIM",
+    "/solutions/scalypso/converter": "Scalypso Converter — Lazer Tarama Veri Formatı Dönüştürücü",
+    "/solutions/scalypso/mobile": "Scalypso Mobile — Mobil Haritalama ve Nokta Bulutu İşleme",
+    "/solutions/scalypso/modeler": "Scalypso Modeler — Nokta Bulutundan Doğrudan 3B BIM Elemanı Üretimi",
+    "/solutions/scalypso/videos": "Scalypso Eğitim Videoları ve Nokta Bulutu Uygulama Örnekleri",
+    "/solutions/scalypso/viewer": "Scalypso Viewer — Yüksek Yoğunluklu Nokta Bulutu Görüntüleyici",
+    "/solutions/site-planning": "Şantiye Planlaması — Vinç, İskele ve İş Güvenliği 4B BIM",
+    "/solutions/steel": "Çelik Detaylandırma ve İmalat — ALLPLAN & SDS2 Entegre İş Akışı",
+    "/solutions/structural": "Strüktürel Mühendislik — Betonarme, Çelik ve Analiz BIM Çözümü",
+}
+
+playlist_by_id = {}
+for pm in ir.get("playlist_map", []):
+    pid = pm["slug"]
+    videos = pm.get("videos") or (ir.get("video_collections") or {}).get(pm.get("collection"), [])
+    playlist_by_id[pid] = {
+        "id": pid,
+        "url": f"/solutions-v2/training/video-library/{pid}",
+        "key": pm.get("collection") or pid,
+        "title": pm["title"],
+        "subtitle": pm.get("subtitle", ""),
+        "count": pm.get("video_count") or len(videos),
+        "videos": videos,
+    }
+
+
+def classify_section(route_path: str) -> str:
+    if route_path == "/":
+        return "home"
+    if route_path.startswith("/products"):
+        return "products"
+    if route_path.startswith("/solutions-v2/training/video-library/"):
+        return "video-library"
+    if route_path.startswith("/solutions-v2/training"):
+        return "training"
+    if route_path.startswith("/solutions-v2"):
+        return "solutions-v2"
+    if route_path.startswith("/solutions"):
+        return "solutions"
+    if route_path in {"/gizlilik-politikasi", "/kullanim-sartlari", "/kvkk"}:
+        return "legal"
+    if route_path in {"/about", "/contact", "/references", "/paket-karsilastirma", "/package-overview"}:
+        return "corporate"
+    return "utility"
+
+
+def build_breadcrumbs(route_path: str, page_h1: str) -> list:
+    if route_path == "/":
+        return [{"label": "Ana Sayfa", "href": "/"}]
+    crumbs = [{"label": "Ana Sayfa", "href": "/"}]
+    if route_path.startswith("/products/ax3000/"):
+        crumbs.extend([
+            {"label": "Ürünler", "href": "/products"},
+            {"label": "AX3000", "href": "/products/ax3000"},
+            {"label": page_h1, "href": route_path},
+        ])
+        return crumbs
+    if route_path.startswith("/products/"):
+        crumbs.extend([
+            {"label": "Ürünler", "href": "/products"},
+            {"label": page_h1, "href": route_path},
+        ])
+        return crumbs
+    if route_path.startswith("/solutions/addons/"):
+        crumbs.extend([
+            {"label": "Çözümler", "href": "/solutions"},
+            {"label": "Eklentiler", "href": "/solutions/addons"},
+            {"label": page_h1, "href": route_path},
+        ])
+        return crumbs
+    if route_path.startswith("/solutions/ax3000/"):
+        crumbs.extend([
+            {"label": "Çözümler", "href": "/solutions"},
+            {"label": "AX3000 MEP", "href": "/solutions/ax3000"},
+            {"label": page_h1, "href": route_path},
+        ])
+        return crumbs
+    if route_path.startswith("/solutions/scalypso/"):
+        crumbs.extend([
+            {"label": "Çözümler", "href": "/solutions"},
+            {"label": "Scalypso", "href": "/solutions/scalypso"},
+            {"label": page_h1, "href": route_path},
+        ])
+        return crumbs
+    if route_path.startswith("/solutions/"):
+        crumbs.extend([
+            {"label": "Çözümler", "href": "/solutions"},
+            {"label": page_h1, "href": route_path},
+        ])
+        return crumbs
+    if route_path.startswith("/solutions-v2/training/video-library/"):
+        crumbs.extend([
+            {"label": "Eğitim", "href": "/solutions-v2/training"},
+            {"label": "Video Kütüphanesi", "href": "/solutions-v2/training/video-library"},
+            {"label": page_h1, "href": route_path},
+        ])
+        return crumbs
+    if route_path.startswith("/solutions-v2/training/"):
+        crumbs.extend([
+            {"label": "Eğitim", "href": "/solutions-v2/training"},
+            {"label": page_h1, "href": route_path},
+        ])
+        return crumbs
+    if route_path.startswith("/solutions-v2/connect-license/"):
+        crumbs.extend([
+            {"label": "Çözümler", "href": "/solutions"},
+            {"label": "Lisans Yönetimi", "href": "/solutions-v2/connect-license"},
+            {"label": page_h1, "href": route_path},
+        ])
+        return crumbs
+    if route_path.startswith("/solutions-v2/"):
+        crumbs.extend([
+            {"label": "Çözümler", "href": "/solutions"},
+            {"label": page_h1, "href": route_path},
+        ])
+        return crumbs
+    crumbs.append({"label": page_h1, "href": route_path})
+    return crumbs
+
+
+def determine_schema_type(route_path: str) -> str:
+    if route_path == "/about":
+        return "AboutPage"
+    if route_path == "/contact":
+        return "ContactPage"
+    if route_path == "/solutions-v2/faq":
+        return "FAQPage"
+    if route_path.startswith("/solutions-v2/training/video-library"):
+        return "VideoGallery"
+    if route_path.startswith("/solutions-v2/training"):
+        return "Service"
+    if route_path in {"/products", "/solutions", "/solutions/addons", "/solutions-v2/addons"}:
+        return "CollectionPage"
+    if route_path.startswith("/products/") and route_path != "/products/ax3000/dokumanlar":
+        return "SoftwareApplication"
+    return "WebPage"
+
+
+def normalize_href(href: str) -> str:
+    if not href:
+        return "#"
+    trimmed = str(href).strip()
+    if (
+        trimmed == "/try-free"
+        or "allplan.com/trial-or-subscription" in trimmed
+        or trimmed == "https://www.allplan.com/tr/deneme-veya-abonelik/"
+    ):
+        return "https://www.allplan.com/trial-or-subscription/"
+    if trimmed.startswith("/cdn-cgi/l/email-protection"):
+        return "mailto:info@aluplan.com.tr"
+    if "assets/documents/ax3000/ax3000-brochure-de" in trimmed:
+        return "/docs/ax3000/ax3000-brochure-de.pdf"
+    if "assets/documents/ax3000/ax3000-brochure-en-alternative" in trimmed:
+        return "/docs/ax3000/ax3000-brochure-en-alternative.pdf"
+    if "assets/documents/ax3000/ax3000-brochure-en" in trimmed:
+        return "/docs/ax3000/ax3000-brochure-en.pdf"
+    if "assets/documents/ax3000/ax3000-functions-en" in trimmed and trimmed.endswith(".docx"):
+        return "/docs/ax3000/ax3000-functions-en.docx"
+    if "assets/documents/ax3000/ax3000-functions-en" in trimmed and trimmed.endswith(".pdf"):
+        return "/docs/ax3000/ax3000-functions-en.pdf"
+    if "assets/documents/ax3000/ax3000-functions-hexagon-en" in trimmed:
+        return "/docs/ax3000/ax3000-functions-hexagon-en.docx"
+    return trimmed
+
+
+EXCLUDED_DEV_PATHS = {"/hero-3d", "/test-webgl"}
+SKIP_HEADING_TEXTS = {
+    "Ürünler",
+    "ÇÖZÜMLER",
+    "İletişim",
+    "ALLPLAN'ı ücretsiz deneyin",
+    "DAHA İYİ YARINLAR İNŞA ETMEK İÇİN TASARIM",
+}
+
+pages_data = {}
+used_titles = set()
+used_descriptions = set()
+
+raw_200_pages = sorted(
+    [p for p in inv["pages"] if p.get("status") == 200],
+    key=lambda x: x["url"],
+)
+
+for raw_page in raw_200_pages:
+    route_path = raw_page["url"].replace("https://aluplan.com.tr", "") or "/"
+    if route_path in EXCLUDED_DEV_PATHS:
+        continue
+
+    raw_headings = [
+        {"level": int(h["level"]), "text": clean_text(h["text"])}
+        for h in raw_page.get("headings", [])
+        if clean_text(h.get("text")) and clean_text(h.get("text")) not in SKIP_HEADING_TEXTS
+    ]
+
+    h1_text = ""
+    body_headings = []
+
+    if route_path.startswith("/solutions-v2/training/video-library/") and route_path != "/solutions-v2/training/video-library":
+        pid = route_path.split("/")[-1]
+        pl = playlist_by_id.get(pid)
+        h1_text = f"{pl['title']} — Eğitim Video Serisi" if pl else ROUTE_LABELS.get(route_path, pid)
+        for h in raw_headings:
+            if h["text"] == "Video Kütüphanesi":
+                continue
+            body_headings.append({
+                "level": 2 if h["level"] == 1 else h["level"],
+                "text": h["text"],
+            })
+    else:
+        found_first_h1 = False
+        for h in raw_headings:
+            if h["level"] == 1 and not found_first_h1:
+                h1_text = h["text"]
+                found_first_h1 = True
+            else:
+                body_headings.append({
+                    "level": 2 if h["level"] == 1 else h["level"],
+                    "text": h["text"],
+                })
+        if not h1_text:
+            h1_text = ROUTE_LABELS.get(route_path) or (raw_headings[0]["text"] if raw_headings else "Aluplan Mühendislik ve BIM Çözümleri")
+
+    raw_nodes = [clean_text(t) for t in raw_page.get("text_nodes", []) if clean_text(t)]
+    start_idx = 0
+    while start_idx < min(len(raw_nodes), 14) and raw_nodes[start_idx] in HEADER_EXACT:
+        start_idx += 1
+    if start_idx < len(raw_nodes) and raw_nodes[start_idx] == "Ana Sayfa":
+        start_idx += 2
+        if start_idx < len(raw_nodes) and raw_nodes[start_idx] == "Ana Sayfaya Dön":
+            start_idx += 1
+
+    end_idx = len(raw_nodes)
+    for i in range(len(raw_nodes) - 1, -1, -1):
+        if raw_nodes[i] == FOOTER_START_MARKER:
+            end_idx = i
+            break
+    if route_path != "/":
+        for i in range(end_idx - 1, -1, -1):
+            if raw_nodes[i] == GLOBAL_CTA_START_MARKER:
+                end_idx = i - 1 if (i > 0 and raw_nodes[i - 1] == "ALLPLAN") else i
+                break
+
+    body_nodes = [n for n in raw_nodes[start_idx:end_idx] if n]
+
+    heading_set = {h["text"] for h in body_headings}
+    sections = []
+    current_section = {"heading": h1_text, "level": 2, "items": []}
+
+    for node in body_nodes:
+        if node == h1_text:
+            continue
+        if node in heading_set:
+            if current_section["items"] or not sections:
+                sections.append(current_section)
+            matched_h = next((h for h in body_headings if h["text"] == node), None)
+            current_section = {
+                "heading": node,
+                "level": matched_h["level"] if matched_h else 2,
+                "items": [],
+            }
+        else:
+            if not current_section["items"] or current_section["items"][-1] != node:
+                current_section["items"].append(node)
+    if current_section["items"] or not sections:
+        sections.append(current_section)
+
+    content_links = []
+    seen_links = set()
+    for l in raw_page.get("links", []):
+        if l.get("location") in {"header", "nav", "footer"}:
+            continue
+        raw_href = (l.get("attributes") or {}).get("href", "")
+        if not raw_href or raw_href in {"#main", "#main-content"}:
+            continue
+        href = normalize_href(raw_href)
+        text = clean_text(l.get("text") or (l.get("attributes") or {}).get("aria-label") or href)
+        key = f"{href}::{text}"
+        if key not in seen_links:
+            seen_links.add(key)
+            content_links.append({
+                "href": href,
+                "text": text or href,
+                "external": href.startswith("http") and not href.startswith("https://aluplan.com.tr"),
+            })
+
+    buttons = []
+    seen_btns = set()
+    for b in raw_page.get("buttons", []):
+        if b.get("location") in {"nav", "header", "footer"}:
+            continue
+        text = clean_text(b.get("text") or (b.get("attributes") or {}).get("aria-label") or "")
+        if text and text not in {"Çözümler", "Ürünler", "Arama", "Toggle theme"} and text not in seen_btns:
+            seen_btns.add(text)
+            buttons.append(text)
+
+    images = []
+    seen_imgs = set()
+    for img in raw_page.get("images", []):
+        if img.get("location") in {"nav", "header", "footer"}:
+            continue
+        src = (img.get("attributes") or {}).get("src", "")
+        alt = clean_text((img.get("attributes") or {}).get("alt") or h1_text)
+        if src and src not in seen_imgs:
+            seen_imgs.add(src)
+            images.append({"src": src, "alt": alt or h1_text})
+
+    embeds = []
+    for emb in raw_page.get("embeds", []):
+        src = (emb.get("attributes") or {}).get("src") or emb.get("src") or ""
+        if src:
+            embeds.append({
+                "src": src,
+                "title": clean_text((emb.get("attributes") or {}).get("title") or h1_text),
+            })
+
+    raw_title = clean_text(raw_page.get("title"))
+    if route_path == "/":
+        seo_title = "ALLPLAN Türkiye | Profesyonel BIM Yazılımları | Aluplan"
+    elif route_path in ROUTE_LABELS:
+        seo_title = f"{ROUTE_LABELS[route_path]} | Aluplan"
+    elif raw_title and raw_title not in GENERIC_TITLES:
+        seo_title = raw_title if raw_title.endswith("| Aluplan") else f"{raw_title} | Aluplan"
+    else:
+        seo_title = f"{h1_text} | Aluplan BIM Çözümleri"
+    if seo_title in used_titles:
+        seo_title = f"{h1_text} ({route_path}) | Aluplan"
+    used_titles.add(seo_title)
+
+    meta_desc_obj = next((m for m in raw_page.get("meta", []) if isinstance(m, dict) and m.get("name") == "description"), None)
+    raw_desc = clean_text(meta_desc_obj.get("content") if meta_desc_obj else "")
+    if raw_desc and raw_desc not in GENERIC_DESCRIPTIONS and raw_desc not in used_descriptions:
+        seo_description = raw_desc
+    else:
+        meaningful = [n for n in body_nodes if len(n) > 35 and n != h1_text]
+        snippet = " ".join(meaningful[:2])[:155]
+        if snippet:
+            seo_description = f"{h1_text}: {snippet}"
+        else:
+            seo_description = f"{h1_text} — Aluplan Program Sistemleri tarafından Türkiye'de sunulan ALLPLAN BIM yazılım, eğitim ve mühendislik çözümü ({route_path})."
+    if seo_description in used_descriptions:
+        seo_description = f"{seo_description} [{route_path}]"
+    used_descriptions.add(seo_description)
+
+    canonical = "https://aluplan.com.tr" if route_path == "/" else f"https://aluplan.com.tr{route_path}"
+    section_type = classify_section(route_path)
+    short_label = (ROUTE_LABELS.get(route_path, h1_text).split("—")[0]).strip()
+    breadcrumbs = build_breadcrumbs(route_path, short_label)
+    schema_type = determine_schema_type(route_path)
+    pid = (
+        route_path.split("/")[-1]
+        if route_path.startswith("/solutions-v2/training/video-library/") and route_path != "/solutions-v2/training/video-library"
+        else None
+    )
+
+    pages_data[route_path] = {
+        "path": route_path,
+        "section": section_type,
+        "title": seo_title,
+        "description": seo_description,
+        "canonical": canonical,
+        "h1": h1_text,
+        "eyebrow": section_type.upper(),
+        "breadcrumbs": breadcrumbs,
+        "headings": body_headings,
+        "bodyNodes": body_nodes,
+        "sections": sections,
+        "contentLinks": content_links,
+        "buttons": buttons,
+        "images": images,
+        "embeds": embeds,
+        "playlistId": pid,
+        "interactiveStates": interactive_by_path.get(route_path, []),
+        "schemaType": schema_type,
+    }
+
+data_dir = ROOT / "src/data"
+data_dir.mkdir(parents=True, exist_ok=True)
+
+with open(data_dir / "pages.json", "w", encoding="utf-8") as f:
+    json.dump(pages_data, f, ensure_ascii=False, indent=2)
+
+with open(data_dir / "playlists.json", "w", encoding="utf-8") as f:
+    json.dump(playlist_by_id, f, ensure_ascii=False, indent=2)
+
+navigation_data = {
+    "topBar": {
+        "email": "info@aluplan.com.tr",
+        "phones": ["(+90) 216 225 84 41", "(+90) 543 211 94 42", "(+90) 549 499 73 79"],
+        "socialLinks": [
+            {"label": "Facebook", "href": "https://www.facebook.com/Allplan.Turkey"},
+            {"label": "Twitter", "href": "https://twitter.com/Allplan_Turkey"},
+            {"label": "LinkedIn", "href": "https://www.linkedin.com/company/allplan-turkey/"},
+            {"label": "Instagram", "href": "https://www.instagram.com/allplan_turkey/"},
+            {"label": "YouTube", "href": "https://www.youtube.com/c/AllplanTurkey"},
+        ],
+    },
+    "productsMenu": [
+        {
+            "title": "ALLPLAN",
+            "items": [
+                {"name": "ALLPLAN Basic", "href": "/products/allplan-basic"},
+                {"name": "ALLPLAN Concept", "href": "/products/allplan-concept"},
+                {"name": "ALLPLAN Professional", "href": "/products/allplan-professional"},
+                {"name": "ALLPLAN Ultimate", "href": "/products/allplan-ultimate"},
+                {"name": "ALLPLAN Cloud Services", "href": "/products/allplan-cloud-services"},
+                {"name": "CIVIL", "href": "/products/civil"},
+                {"name": "PRECAST", "href": "/products/precast"},
+            ],
+        },
+        {
+            "title": "BİNA VE ALTYAPI",
+            "items": [
+                {"name": "Allplan - AEC Endüstrisi için BIM", "href": "/products/allplan-aec"},
+                {"name": "Allplan Bridge - Köprü Tasarımı", "href": "/solutions/bridge-design"},
+                {"name": "AX3000 - Enerji Simülasyonu", "href": "/products/ax3000"},
+                {"name": "AX3000 - Mekanik Tesisat", "href": "/solutions/ax3000-mekanik-tesisat"},
+            ],
+        },
+        {
+            "title": "İNŞAAT PLANLAMASI",
+            "items": [
+                {"name": "Allplan Precast - Prekast Detaylandırma", "href": "/products/precast-detail"},
+                {"name": "Tim - Prekast İş Planlaması", "href": "https://www.allplan.com/products/tim/", "external": True},
+                {"name": "SDS2 - Çelik Detaylandırma ve İmalatı", "href": "https://www.allplan.com/products/sds2-detailing-fabrication/", "external": True},
+                {"name": "SDS2 - Çelik Yük Planlaması", "href": "https://www.allplan.com/products/sds2-load-planning/", "external": True},
+                {"name": "SDS2 - Aluplan", "href": "/products/sds2-home"},
+            ],
+        },
+        {
+            "title": "ORTAK ÇÖZÜMLER",
+            "items": [
+                {"name": "Allplan Ortak Çözümleri", "href": "https://www.allplan.com/allplan-partner-solutions/", "external": True},
+            ],
+        },
+        {
+            "title": "İŞBİRLİĞİ YAZILIMI",
+            "items": [
+                {"name": "ALLPLAN BIMPLUS", "href": "/products/allplan-bimplus"},
+            ],
+        },
+    ],
+    "solutionsMenu": [
+        {
+            "title": "BİNA TASARIMI",
+            "items": [
+                {"name": "Mimari", "href": "/solutions/architecture"},
+                {"name": "Strüktürel Mühendislik", "href": "/solutions/structural"},
+                {"name": "MEP", "href": "/solutions/mep"},
+                {"name": "ALLPLAN ENDÜSTRİ ÇÖZÜMLERİ", "href": "/solutions/allplan-industry"},
+            ],
+        },
+        {
+            "title": "ALTYAPI TASARIMI",
+            "items": [
+                {"name": "Altyapı Mühendisliği", "href": "/solutions/infrastructure"},
+                {"name": "Yol ve Demiryolu Tasarımı", "href": "/solutions/road-railway"},
+                {"name": "Köprü Tasarımı", "href": "/solutions/bridge-design"},
+            ],
+        },
+        {
+            "title": "İNŞAAT PLANLAMASI",
+            "items": [
+                {"name": "Prekast Üretimi", "href": "/solutions/precast"},
+                {"name": "Çelik Detaylandırma & İmalat", "href": "/solutions/steel"},
+                {"name": "Şantiye Planlaması", "href": "/solutions/site-planning"},
+            ],
+        },
+        {
+            "title": "EKLENTİLER",
+            "items": [
+                {"name": "CDS Add-On", "href": "/solutions/cds-addon"},
+                {"name": "Allto PytonPart Generator", "href": "https://allplantools.com/", "external": True},
+                {"name": "Allto PytonPart", "href": "/solutions/pythonpart"},
+                {"name": "AX3000 MEP", "href": "/solutions/ax3000"},
+                {"name": "Scalypso", "href": "/solutions/scalypso"},
+            ],
+        },
+        {
+            "title": "DİĞER ÜRÜNLER",
+            "items": [
+                {"name": "BIMFlex", "href": "/solutions/bimflex"},
+                {"name": "Donatı Mühendisliği", "href": "/solutions/rebar-engineering"},
+                {"name": "İmar Yönetmeliği BIM Eklentisi", "href": "/solutions/imar-yonetmeligi-bim-eklentisi"},
+                {"name": "BIMX5", "href": "/solutions/bimx5"},
+                {"name": "Allplan Oska İşbirliği", "href": "/solutions/oska"},
+                {"name": "Allplan Poz Kataloğu", "href": "/solutions/poz-catalog"},
+            ],
+        },
+    ],
+    "directLinks": [
+        {"name": "Kaynaklar", "href": "/#professional-services"},
+        {"name": "Referanslar", "href": "/references"},
+        {"name": "Hakkımızda", "href": "/about"},
+        {"name": "İletişim", "href": "/contact"},
+    ],
+    "footer": {
+        "description": "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri.",
+        "products": [
+            {"label": "ALLPLAN Basic", "href": "/products/allplan-basic"},
+            {"label": "ALLPLAN Concept", "href": "/products/allplan-concept"},
+            {"label": "ALLPLAN Professional", "href": "/products/allplan-professional"},
+            {"label": "ALLPLAN Ultimate", "href": "/products/allplan-ultimate"},
+            {"label": "CIVIL", "href": "/products/civil"},
+            {"label": "PRECAST", "href": "/products/precast"},
+        ],
+        "solutions": [
+            {"label": "BİNA TASARIMI", "href": "/solutions-v2/building-design"},
+            {"label": "ALTYAPI TASARIMI", "href": "/solutions-v2/infrastructure"},
+            {"label": "İNŞAAT PLANLAMASI", "href": "/solutions-v2/construction"},
+            {"label": "EKLENTİLER", "href": "/solutions-v2/addons"},
+            {"label": "DİĞER ÜRÜNLER", "href": "/solutions-v2/other"},
+        ],
+        "address": [
+            "Quick Tower – Workinton",
+            "İçerenköy Mah. Topçu İbrahim Sok.",
+            "8/10D No: 5, 34752 Ataşehir / İstanbul",
+        ],
+        "phones": ["(+90) 216 225 84 41", "(+90) 543 211 94 42", "(+90) 549 499 73 79"],
+        "email": "info@aluplan.com.tr",
+        "legal": [
+            {"label": "Gizlilik Politikası", "href": "/gizlilik-politikasi"},
+            {"label": "Kullanım Şartları", "href": "/kullanim-sartlari"},
+            {"label": "KVKK", "href": "/kvkk"},
+        ],
+        "copyright": "© 2026 Aluplan Program Sistemleri.",
+        "credit": "Design & Develop by Hazar Volga Ekiz",
+    },
+}
+
+with open(data_dir / "navigation.json", "w", encoding="utf-8") as f:
+    json.dump(navigation_data, f, ensure_ascii=False, indent=2)
+
+# Parse docs/previews/homepage-wireframe/data.js into src/data/homepage.json
+hp_js = (ROOT / "docs/previews/homepage-wireframe/data.js").read_text(encoding="utf-8")
+json_start = hp_js.index("{")
+json_end = hp_js.rindex("}") + 1
+homepage_data = json.loads(hp_js[json_start:json_end])
+if "bimflex" in homepage_data:
+    if "logo" in homepage_data["bimflex"]:
+        homepage_data["bimflex"]["logo"]["src"] = "/" + homepage_data["bimflex"]["logo"]["src"].lstrip("/")
+    for m in homepage_data["bimflex"].get("media", []):
+        m["src"] = "/" + m["src"].lstrip("/")
+with open(data_dir / "homepage.json", "w", encoding="utf-8") as f:
+    json.dump(homepage_data, f, ensure_ascii=False, indent=2)
+
+# Build search-index.json
+search_entries = [
+    {
+        "path": p["path"],
+        "title": p["h1"],
+        "seoTitle": p["title"],
+        "section": p["section"],
+        "description": p["description"],
+        "keywords": " ".join(h["text"] for h in p["headings"][:8]),
+    }
+    for p in pages_data.values()
+]
+with open(data_dir / "search-index.json", "w", encoding="utf-8") as f:
+    json.dump(search_entries, f, ensure_ascii=False, indent=2)
+
+
+def create_minimal_pdf(title: str, body_text: str) -> bytes:
+    safe_title = re.sub(r"[()\\]", " ", title)
+    safe_title = re.sub(r"[^\x20-\x7E]", " ", safe_title)
+    lines = []
+    for raw_line in body_text.splitlines():
+        ascii_line = re.sub(r"[^\x20-\x7E]", " ", raw_line).strip()
+        if ascii_line:
+            lines.append(re.sub(r"[()\\]", " ", ascii_line[:90]))
+        if len(lines) >= 40:
+            break
+    stream_lines = ["BT", "/F1 12 Tf", "50 760 Td", f"({safe_title}) Tj", "/F1 9 Tf"]
+    for l in lines:
+        stream_lines.append(f"0 -14 Td ({l}) Tj")
+    stream_lines.append("ET")
+    content_stream = "\n".join(stream_lines)
+    stream_bytes = content_stream.encode("utf-8")
+
+    objects = [
+        b"1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n",
+        b"2 0 obj\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\nendobj\n",
+        b"3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>\nendobj\n",
+        b"4 0 obj\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>\nendobj\n",
+        f"5 0 obj\n<< /Length {len(stream_bytes)} >>\nstream\n".encode("utf-8") + stream_bytes + b"\nendstream\nendobj\n",
+    ]
+    pdf = bytearray(b"%PDF-1.4\n")
+    offsets = [0]
+    for obj in objects:
+        offsets.append(len(pdf))
+        pdf.extend(obj)
+    xref_start = len(pdf)
+    pdf.extend(f"xref\n0 {len(objects) + 1}\n0000000000 65535 f \n".encode("utf-8"))
+    for off in offsets[1:]:
+        pdf.extend(f"{off:010d} 00000 n \n".encode("utf-8"))
+    pdf.extend(f"trailer\n<< /Size {len(objects) + 1} /Root 1 0 R >>\nstartxref\n{xref_start}\n%%EOF\n".encode("utf-8"))
+    return bytes(pdf)
+
+
+q3_text = q3_text_path.read_text(encoding="utf-8") if q3_text_path.exists() else "ALLPLAN 2026 Q3 Paket Karsilastirma Tablosu"
+q4_text = q4_text_path.read_text(encoding="utf-8") if q4_text_path.exists() else "ALLPLAN 2026 Q4 Paket Karsilastirma Tablosu"
+
+docs_dir = ROOT / "public/docs"
+ax_docs_dir = ROOT / "public/docs/ax3000"
+docs_dir.mkdir(parents=True, exist_ok=True)
+ax_docs_dir.mkdir(parents=True, exist_ok=True)
+
+(docs_dir / "V2026_paket-karsilastirme-Q3-2026_R01.pdf").write_bytes(
+    create_minimal_pdf("ALLPLAN 2026 Paket Karsilastirma Rehberi (Q3-2026)", q3_text)
+)
+(docs_dir / "V2026_Paket_Karsilastirma-Q4-2025_R01.pdf").write_bytes(
+    create_minimal_pdf("ALLPLAN 2026 Paket Karsilastirma Rehberi (Q4-2025)", q4_text)
+)
+(docs_dir / "Declaration_Allplan_2021-06-01.pdf").write_bytes(
+    create_minimal_pdf("ALLPLAN Lisans Deklarasyon Formu", "ALLPLAN Connect Lisans Aktivasyon ve Deklarasyon Belgesi - Aluplan Program Sistemleri")
+)
+(docs_dir / "ifc_aktarim_el_kitabi_ifc_4.0_ifc_4.3_2026.pdf").write_bytes(
+    create_minimal_pdf("IFC 4.0 ve IFC 4.3 Aktarim El Kitabi 2026", "ALLPLAN 2026 OpenBIM IFC 4.0 ve IFC 4.3 Veri Degisimi Rehberi")
+)
+
+ax_files = [
+    ("ax3000-brochure-de.pdf", "AX3000 MEP Broschere (DE)"),
+    ("ax3000-brochure-en.pdf", "AX3000 MEP Brochure (EN)"),
+    ("ax3000-brochure-en-alternative.pdf", "AX3000 MEP Alternative Brochure (EN)"),
+    ("ax3000-functions-en.pdf", "AX3000 Functions Description (EN PDF)"),
+    ("ax3000-functions-en.docx", "AX3000 Functions Description (EN DOCX)"),
+    ("ax3000-functions-hexagon-en.docx", "AX3000 Functions Description Hexagon (EN DOCX)"),
+]
+for fname, title in ax_files:
+    (ax_docs_dir / fname).write_bytes(
+        create_minimal_pdf(title, f"{title} - ALLPLAN AX3000 MEP Technical Documentation - Aluplan Program Sistemleri")
+    )
+
+print(f"Generated {len(pages_data)} routes in src/data/pages.json")
+print(f"Generated {len(playlist_by_id)} playlists in src/data/playlists.json")
+print(f"Unique titles: {len(used_titles)} / {len(pages_data)}")
+print(f"Unique descriptions: {len(used_descriptions)} / {len(pages_data)}")

@@ -3,8 +3,14 @@ import json
 import os
 import re
 import struct
+import sys
 from pathlib import Path
 from urllib.parse import urlparse, parse_qs, unquote
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from extract_structured_pages import build_all_structured_pages
+
+STRUCTURED_LAYOUTS = build_all_structured_pages()
 
 ROOT = Path(__file__).resolve().parent.parent
 PUBLIC_DIR = ROOT / "public"
@@ -509,6 +515,16 @@ def normalize_href(href: str) -> str:
         return "https://www.allplan.com/trial-or-subscription/"
     if trimmed.startswith("/cdn-cgi/l/email-protection"):
         return "mailto:info@aluplan.com.tr"
+    if trimmed in {"/solutions/bimplus", "https://aluplan.com.tr/solutions/bimplus"}:
+        return "/products/allplan-bimplus"
+    if trimmed in {"/allplan-2026nin-ozellikleri", "https://aluplan.com.tr/allplan-2026nin-ozellikleri"}:
+        return "/products/allplan-2026-yenilikler"
+    if "allplan-2021-features" in trimmed:
+        return "/products/allplan-2026-yenilikler"
+    if trimmed in {"/solutions/industry", "https://aluplan.com.tr/solutions/industry"}:
+        return "/solutions/steel"
+    if "youtube.com/@AllplanInternational" in trimmed:
+        return "https://www.youtube.com/@ALLPLANglobal"
     if "assets/documents/ax3000/ax3000-brochure-de" in trimmed:
         return "/docs/ax3000/ax3000-brochure-de.pdf"
     if "assets/documents/ax3000/ax3000-brochure-en-alternative" in trimmed:
@@ -635,8 +651,10 @@ for raw_page in raw_200_pages:
         if l.get("location") in {"header", "nav", "footer"}:
             continue
         raw_href = (l.get("attributes") or {}).get("href", "")
-        if not raw_href or raw_href in {"#main", "#main-content"}:
+        if not raw_href or raw_href in {"#main", "#main-content"} or "cdn-ildjmbl.nitrocdn.com" in raw_href:
             continue
+        if route_path == "/products/precast-detail" and raw_href == "#":
+            raw_href = "https://info.allplan.com/en/precast/construction-trend.html"
         href = normalize_href(raw_href)
         text = clean_text(l.get("text") or (l.get("attributes") or {}).get("aria-label") or href)
         key = f"{href}::{text}"
@@ -818,6 +836,7 @@ for raw_page in raw_200_pages:
         "playlistId": pid,
         "interactiveStates": interactive_by_path.get(route_path, []),
         "schemaType": schema_type,
+        "structuredLayout": STRUCTURED_LAYOUTS.get(route_path),
     }
 
 data_dir = ROOT / "src/data"

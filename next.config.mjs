@@ -74,6 +74,26 @@ const nextConfig = {
         source: '/solutions/industry',
         destination: '/solutions/steel',
         permanent: true
+      },
+      {
+        source: '/solutions/bimplus',
+        destination: '/products/allplan-bimplus',
+        permanent: true
+      },
+      {
+        source: '/allplan-2026nin-ozellikleri',
+        destination: '/products/allplan-2026-yenilikler',
+        permanent: true
+      },
+      {
+        source: '/allplan-2021-features',
+        destination: '/products/allplan-2026-yenilikler',
+        permanent: true
+      },
+      {
+        source: '/try-free',
+        destination: 'https://www.allplan.com/trial-or-subscription/',
+        permanent: true
       }
     ];
   },

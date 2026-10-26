@@ -1,7 +1,7 @@
 # Oturum devri
 
 ## Güncelleme tarihi ve oturum no
-25.10.2026 — Faz 6 geliştirme aşamasında: (1) tüm destek portalı butonları `https://allplan.net.tr/tr` adresine hizalandı; (2) ana sayfa ve alt sayfalar wireframe hissinden çıkarılarak tam amiral gemisi (flagship) görsel sahneye yükseltildi; (3) alt sayfalardaki küçük PNG ikonların (`52×48` / `52×52` / `128×128`) büyük fotoğraf çerçevelerine gerilmesi engellenip orijinal rozet boyutunda (`36×36px`) gösterilmesi ve animasyonlu sayaç istatistiklerinin (`50% DAHA KESİN`, `70% DAHA VERİMLİ`, `30% DAHA ÜRETKEN` vb.) gerçek değerleriyle render edilmesi tamamlandı (Europe/Istanbul).
+26.10.2026 — Faz 6 geliştirme aşamasında: (1) tüm destek portalı butonları `https://allplan.net.tr/tr` adresine hizalandı; (2) ana sayfa ve alt sayfalar wireframe hissinden çıkarılarak tam amiral gemisi (flagship) görsel sahneye yükseltildi; (3) alt sayfalardaki küçük PNG ikonların (`52×48` / `52×52` / `128×128`) orijinal rozet boyutunda (`36×36px`) gösterilmesi tamamlandı; (4) 25 ürün ve çözüm sayfasındaki (`structuredLayout`) **92 pop-up YouTube videosu** (`VideoModal`), **162 ikonlu fayda/gerekçe kartı**, **179 çok sekmeli iş akışı alt sekmesi** ve **160+ görsel/video fonksiyonellik kartı** canlı sitedeki birebir bölüm mimarisiyle entegre edildi; (5) Faz 0/1 analizlerinde tespit edilen tüm kırık (404) buton ve link hedefleri (`/solutions/bimplus` → `/products/allplan-bimplus`, `/allplan-2026nin-ozellikleri` ve `/allplan-2021-features` → `/products/allplan-2026-yenilikler`, `@AllplanInternational` → `@ALLPLANglobal`, `/products/precast-detail` `#` → `construction-trend.html`, kırık NitroCDN linki) düzeltildi ve `next.config.mjs` kalıcı 308 yönlendirmeleriyle güvenceye alındı (`34/34 PASS`); (6) tüm değişiklikler DevOps / Conventional Commits standartlarına uygun atomik commit'ler halinde versiyonlandı (Europe/Istanbul).
 
 ## Faz durumu tablosu
 | Faz | Durum |
@@ -12,7 +12,7 @@
 | 3 — PRD | Tamamlandı (25.10.2026 kullanıcı onayıyla — `docs/PRD.md`) |
 | 4 — Design system | Tamamlandı (25.10.2026 kullanıcı onayıyla — `design-system/`) |
 | 5 — Ana sayfa tasarımı | Tamamlandı (25.10.2026 kullanıcı onayıyla — `design-system/ui_kits/homepage/` ve `docs/homepage-design-proposal.md`) |
-| 6 — Geliştirme | Tamamlandı — 110 rota, 1.298 medya varlığı, destek portalı linkleri, amiral gemisi UI sahnesi ve ikon/istatistik ayrımı doğrulandı (`32/32 PASS`) |
+| 6 — Geliştirme | Tamamlandı — 110 rota, 1.298 medya varlığı, 25 yapılandırılmış ürün/çözüm sayfası, 92 pop-up video modalı ve 404 link onarımları doğrulandı (`34/34 PASS`) |
 
 ## Tasarım beklerken envanter ve içerik modeli — 21.10.2026
 - Kullanıcı envanter kapanışı, ALLPLAN içerik eşlemesi, müşteri yolları ve yıllık güncelleme planını kabul etti. Uygulama/entegrasyon izni değil, analiz kapsamıdır.

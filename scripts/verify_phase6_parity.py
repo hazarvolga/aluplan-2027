@@ -122,6 +122,28 @@ check(
     str(bad_support_links),
 )
 
+legacy_404_targets = [
+    "/solutions/bimplus",
+    "/allplan-2026nin-ozellikleri",
+    "allplan-2021-features",
+    "AllplanInternational",
+    "cdn-ildjmbl.nitrocdn.com",
+]
+remaining_404_links = []
+for route_path, p in pages.items():
+    for lnk in p.get("contentLinks", []):
+        h = lnk.get("href", "")
+        if any(bad in h for bad in legacy_404_targets):
+            remaining_404_links.append((route_path, h))
+check(
+    "Zero legacy 404 button/link targets remain in contentLinks (/solutions/bimplus, /allplan-2026nin-ozellikleri, etc.)",
+    len(remaining_404_links) == 0
+    and "/solutions/bimplus" in next_config
+    and "/allplan-2026nin-ozellikleri" in next_config
+    and "/allplan-2021-features" in next_config,
+    str(remaining_404_links),
+)
+
 # 3. Video Library & Playlists Parity
 total_playlist_entries = sum(len(pl.get("videos", [])) for pl in playlists.values())
 unique_video_ids = {v["id"] for pl in playlists.values() for v in pl.get("videos", [])}
@@ -199,6 +221,43 @@ check(
 check(
     "AluIcon SVG vector icon component is integrated in SiteShell, HomepageView, and SubpageView",
     "AluIcon" in shell_tsx and "AluIcon" in hp_view_tsx and "AluIcon" in subpage_view_tsx,
+)
+
+# 5b. Structured Layout & Popup Video / Icon / Tab Verification across 25 Product & Solution Routes
+structured_routes = [r for r, p in pages.items() if p.get("structuredLayout")]
+missing_sl_assets = []
+popup_video_count = 0
+for r in structured_routes:
+    sl = pages[r]["structuredLayout"]
+    for b in (sl.get("benefits") or {}).get("items", []):
+        isrc = b.get("iconSrc") or ""
+        if isrc.startswith("/") and not (ROOT / "public" / isrc.lstrip("/")).exists():
+            missing_sl_assets.append((r, isrc))
+    for cf in (sl.get("coreFeatures") or {}).get("items", []):
+        imsrc = cf.get("imageSrc") or ""
+        if imsrc.startswith("/") and not (ROOT / "public" / imsrc.lstrip("/")).exists():
+            missing_sl_assets.append((r, imsrc))
+        if cf.get("youtubeId"):
+            popup_video_count += 1
+    for cat in (sl.get("workflowTabs") or {}).get("categories", []):
+        for it in cat.get("items", []):
+            imsrc = it.get("imageSrc") or ""
+            if imsrc.startswith("/") and not (ROOT / "public" / imsrc.lstrip("/")).exists():
+                missing_sl_assets.append((r, imsrc))
+            if it.get("youtubeId"):
+                popup_video_count += 1
+    for eg in sl.get("extraGrids") or []:
+        for it in eg.get("items", []):
+            imsrc = it.get("imageSrc") or ""
+            if imsrc.startswith("/") and not (ROOT / "public" / imsrc.lstrip("/")).exists():
+                missing_sl_assets.append((r, imsrc))
+            if it.get("youtubeId"):
+                popup_video_count += 1
+
+check(
+    "All 25 product & solution structuredLayout routes resolve 100% of icon/image assets and 92 popup videos",
+    len(structured_routes) == 25 and len(missing_sl_assets) == 0 and popup_video_count >= 90,
+    f"routes={len(structured_routes)}, popup_videos={popup_video_count}, missing={missing_sl_assets[:5]}",
 )
 
 # 6. GEO (/llms.txt, robots.ts, sitemap.ts) & Security

@@ -13,3 +13,11 @@ test-results/
 .idea/
 .vscode/
 
+# Design review archives & temporary preview scratch folders
+Aluplan Design System*.zip
+Aluplan Design System/
+architectural-sheet-concept/tokens/build/
+docs/previews/anthracite-demo/
+docs/reviews/
+
+

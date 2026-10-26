@@ -260,7 +260,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             </button>
             <button
               type="button"
-              className="alu-button alu-button--ghost alu-button--sm"
+              className="alu-button alu-button--ghost alu-button--sm alu-mobile-menu-toggle"
               aria-label={mobileMenuOpen ? 'Menüyü kapat' : 'Menüyü aç'}
               aria-expanded={mobileMenuOpen}
               onClick={() => setMobileMenuOpen((prev) => !prev)}
@@ -313,7 +313,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
         {/* Mobile Drawer */}
         {mobileMenuOpen && (
-          <div className="alu-megamenu" role="dialog" aria-label="Mobil Gezinme Menüsü">
+          <div className="alu-megamenu alu-mobile-drawer" role="dialog" aria-label="Mobil Gezinme Menüsü">
             <div className="alu-container alu-stack" style={{ gap: '1.25rem' }}>
               <div className="alu-cluster">
                 <Link className="alu-button alu-button--secondary alu-button--sm" href="/products" onClick={() => setMobileMenuOpen(false)}>

@@ -1523,6 +1523,22 @@ body{margin:0;background:var(--surface-page);color:var(--text-primary)}
   align-items: center;
   gap: var(--space-inline-xs);
 }
+.alu-mobile-menu-toggle {
+  display: none;
+}
+@media (max-width: 64rem) {
+  .alu-site-nav {
+    display: none;
+  }
+  .alu-mobile-menu-toggle {
+    display: inline-flex;
+  }
+}
+@media (min-width: 64.0625rem) {
+  .alu-mobile-drawer {
+    display: none;
+  }
+}
 .alu-site-nav__link {
   display: inline-flex;
   align-items: center;

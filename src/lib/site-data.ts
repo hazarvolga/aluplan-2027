@@ -124,8 +124,13 @@ export interface StructuredSplitCallout {
   title: string;
   lead?: string;
   subheading?: string;
-  description: string;
-  imageSrc: string;
+  description?: string;
+  paragraphs?: string[];
+  bullets?: string[];
+  imageSrc?: string;
+  youtubeId?: string | null;
+  videoSrc?: string | null;
+  reverse?: boolean;
   ctaText?: string;
   ctaHref?: string;
   external?: boolean;

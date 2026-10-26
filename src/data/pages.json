@@ -29098,7 +29098,267 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "splitCallouts": [
+        {
+          "kicker": "/ ALLPLAN ADD-ON · 2B DWG CONVERTER",
+          "title": "2B DWG Converter",
+          "subheading": "2B elemanların hızlı dönüşümü",
+          "paragraphs": [
+            "2B DWG/DXF içeriklerini Allplan standartlarına uyumlu hale getirin.",
+            "Katman ve stil eşleme, çizgi/metin tipleri uyarlama ve toplu dönüşüm olanakları ile hız kazanın.",
+            "2B ve 3B elemanların hız kazandıran dönüşümü.",
+            "Bu eklenti, farklı sayıda değerli fonksiyon sayesinde çok zaman kazandırır. Örneğin, basit bir içe aktarma işlemi için, tüm evleri ve sokakları sadece birkaç tıklama ile yüzey öğeleriyle doldurabilirsiniz. 5 saniyede 500 yüzey? Sorun değil! Ve ilk kullanımdan sonra diğer işlevlerden de vazgeçmek istemeyeceksiniz."
+          ],
+          "youtubeId": "JZI8p0aX7Kg",
+          "reverse": false
+        },
+        {
+          "kicker": "/ LİSANS VE GEREKSİNİMLER",
+          "title": "Lisans ve Gereksinimler",
+          "lead": "Tek kullanıcı lisansı, mevcut Allplan lisansına bağlıdır.",
+          "subheading": "Sistem Gereksinimleri: Allplan 2020 – 2024 · Diller: Almanca, İngilizce",
+          "description": "Eklentiyi yükledikten sonra deneme sürümünü 14 gün ücretsiz olarak kullanabilirsiniz.",
+          "imageSrc": "/assets/solutions/cds/license.jpg",
+          "ctaText": "Setup İndir",
+          "ctaHref": "https://cdssieber.sharepoint.com/:f:/g/Ev_G2db5WVVBvMEN-Adhz24Bk5f3rEvFCQu77iLTTCIynw?e=qkPdri",
+          "external": true,
+          "reverse": true
+        }
+      ],
+      "benefits": {
+        "kicker": "/ 30 DÖNÜŞÜM ARACI",
+        "title": "İşlevsel Genel Bakış",
+        "items": [
+          {
+            "subtitle": "FONKSİYON 01",
+            "title": "2B DWG CONVERTER",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert221d4ae9.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 02",
+            "title": "Polyline > Boyama",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert23817fe2.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 03",
+            "title": "Yüzey Elemanı > Polyline",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert24c6cece.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 04",
+            "title": "Polyline > Oda",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert25d96d15.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 05",
+            "title": "Yüzey Elemanı > 3B Yüzey",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert26b0d5cc.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 06",
+            "title": "Elemangrubu ( Çizgi / Yay ) > Boyama",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert277b21f6.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 07",
+            "title": "3B Polyline > 2B Polyline",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert29c32719.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 08",
+            "title": "2B Polyline > 2B Yay",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert2a984c5b.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 09",
+            "title": "Elemangrubu (3B Yüzey)  > 3B-Obje",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert2b6cae5d.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 10",
+            "title": "3B – Obje > 3B – Yüzey",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert2ce50265.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 11",
+            "title": "3B – Polyline > 3B – Yüzey",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert2db7966b.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 12",
+            "title": "Duvarları Yuvarla",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert2ea22f7e.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 13",
+            "title": "3B – Yüzey > 3B – Obje",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert2fbcdc85.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 14",
+            "title": "3B – Obje > Duvar",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert309430ba.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 15",
+            "title": "3B – Obje > Kolon",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert315445c8.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 16",
+            "title": "3B – Obje > Döşeme",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert3235b0dc.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 17",
+            "title": "Akıllı Sembol > 3B – Obje",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert32ff2b54.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 18",
+            "title": "Kiriş > Duvar",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert33e6ba65.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 19",
+            "title": "Duvar > Kiriş",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert35d20753.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 20",
+            "title": "3B – Obje > Boşluk (Kapı -Pencere)",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert370cd7cf.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 21",
+            "title": "3B – Obje > Döşeme Boşluğu",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert380c5784.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 22",
+            "title": "Pencere > Kapı",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert38e21c40.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 23",
+            "title": "Kapı > Pencere",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert39c75988.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 24",
+            "title": "İnce Yapı Alanları > Metraj Objesi",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert3b2e3a1e.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 25",
+            "title": "Boyama > Döşeme",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert3d277ea9.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 26",
+            "title": "Eşit Elemanlar > Akıllı Sembol",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert3e05d62b.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 27",
+            "title": "Boşluklar > Metraj Objesi",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert3f01e92c.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 28",
+            "title": "Sembol Nokta > Akıllı Sembol",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert65854a64.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 29",
+            "title": "Duvar > Kolon",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert667b9e55.webp"
+          },
+          {
+            "subtitle": "FONKSİYON 30",
+            "title": "Lisans Göster / Etkinleştir",
+            "description": "2B ve 3B DWG/DXF elemanlarının Allplan BIM bileşenlerine hızlı dönüşümü.",
+            "iconSrc": "/assets/solutions/cds/dwg-converter/elementor-convert6bcb4cac.webp"
+          }
+        ]
+      },
+      "extraGrids": [
+        {
+          "kicker": "/ UYGULAMA VİDEOLARI",
+          "title": "Video Galerisi",
+          "subtitle": "ALLPLAN Add-On ElementConverter (2B DWG Converter) iş akışı videoları.",
+          "columns": 3,
+          "items": [
+            {
+              "title": "ALLPLAN Add-On ElementConverter - 2B Veriler",
+              "subtitle": "ALLPLAN Add-On ElementConverter - 2D Daten",
+              "description": "2B çizgi ve poligon verilerinin yüzey ve mahallere hızlı dönüşümü.",
+              "youtubeId": "JZI8p0aX7Kg"
+            },
+            {
+              "title": "ALLPLAN Add-On ElementConverter - 3B Gövdeden Duvar veya Döşeme Boşluğuna",
+              "subtitle": "ALLPLAN Add-On ElementConverter - 3D Körper in Wand- oder Deckenöffnung",
+              "description": "3B gövdelerin duvar veya döşeme boşluklarına otomatik dönüştürülmesi.",
+              "youtubeId": "M83xHLG27og"
+            },
+            {
+              "title": "ALLPLAN Add-On ElementConverter - 3B Gövde ve Bileşenler",
+              "subtitle": "ALLPLAN Add-On ElementConverter - 3D Körper und Bauteile",
+              "description": "3B objelerin duvar, kolon ve döşeme bileşenlerine dönüştürülmesi.",
+              "youtubeId": "SPEzRSiqUh4"
+            },
+            {
+              "title": "ALLPLAN Add-On ElementConverter - İnce Yapı Alanlarından Metraj Objesine",
+              "subtitle": "ALLPLAN Add-On ElementConverter - Ausbauflächen in Mengenkörper",
+              "description": "İnce yapı alanlarının metraj objelerine dönüştürülmesi.",
+              "youtubeId": "BNMnaQ3dnxM"
+            },
+            {
+              "title": "ALLPLAN Add-On ElementConverter - Eşit Elemanlardan Makrolara",
+              "subtitle": "ALLPLAN Add-On ElementConverter - Gleiche Elemente in Makros",
+              "description": "Tekrarlayan eşit elemanların akıllı sembol ve makrolara dönüştürülmesi.",
+              "youtubeId": "PPoCPiL8cB4"
+            },
+            {
+              "title": "ALLPLAN Add-On ElementConverter - Sembol Noktalarını Makrolara Dönüştürme",
+              "subtitle": "ALLPLAN Add-On ElementConverter - Symbolpunkte in Makros wandeln",
+              "description": "Sembol noktalarının akıllı makrolara dönüştürülmesi.",
+              "youtubeId": "lSiSphI7I3o"
+            }
+          ]
+        }
+      ]
+    }
   },
   "/solutions/addons/drive-curve": {
     "path": "/solutions/addons/drive-curve",
@@ -29804,7 +30064,219 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "splitCallouts": [
+        {
+          "kicker": "/ ALLPLAN ADD-ON · SÜRÜŞ EĞRİSİ (DRIVE CURVE)",
+          "title": "Sürüş Eğrisi",
+          "subheading": "Sürüş eğrisini Allplan’da kontrol edin.",
+          "paragraphs": [
+            "Bir mimar, altyapı planlayıcısı, şehir plancısı, mühendis ve teknik ressam olarak sezgisel kullanımdan ve örneğin rotanın her an ayarlanabilmesinden yararlanabilirsiniz.",
+            "İleriye ve geriye doğru sürerek, gerekli araç kaplama eğrilerini ve dolayısıyla gerekli alanı kolayca belirleyebilirsiniz.",
+            "Trafiklenebilirliğin doğrulanması böylece doğrudan Allplan’da yapılabilir."
+          ],
+          "bullets": [
+            "Araç türleri: araba, kamyon, yarı römork, körüklü otobüs, çift körüklü tren ve inşaat araçları",
+            "Düzenlenebilir kulplu dinamik araba yolu ve etkileşimli önizleme ile rota hesaplama",
+            "Önceden tanımlanmış bir eksen/yol boyunca ileri ve geri sürüş",
+            "Araç ana hatları, lastikler, zarflar ve özel araçlar için araç editörü"
+          ],
+          "youtubeId": "IKXIq1So8jU",
+          "reverse": false
+        }
+      ],
+      "benefits": {
+        "kicker": "/ UYGULAMA ALANLARI & İŞLEVSEL BAKIŞ",
+        "title": "Uygulama Alanları ve Fonksiyonlar",
+        "items": [
+          {
+            "subtitle": "UYGULAMA ALANI",
+            "title": "Garajlar ve Otoparklar",
+            "description": "Boyutlandırma ve Doğrulama"
+          },
+          {
+            "subtitle": "UYGULAMA ALANI",
+            "title": "Olağandışı Nakliyeler",
+            "description": "Geçilebilirlik Kontrolü"
+          },
+          {
+            "subtitle": "UYGULAMA ALANI",
+            "title": "Olağandışı Yollar",
+            "description": "Özel düğüm geometrileri"
+          },
+          {
+            "subtitle": "UYGULAMA ALANI",
+            "title": "Dar Sokaklar",
+            "description": "Darboğaz Konsepti"
+          },
+          {
+            "subtitle": "UYGULAMA ALANI",
+            "title": "Şehir Bölge Planlaması",
+            "description": "Danışmanlık"
+          },
+          {
+            "subtitle": "UYGULAMA ALANI",
+            "title": "Alternatif Trafik Yönlendirme",
+            "description": "Geçici Trafik Yönlendirme"
+          },
+          {
+            "subtitle": "Fahrspur",
+            "title": "Sürüş İzi",
+            "description": "Araç hareket yolu",
+            "iconSrc": "/assets/solutions/cds/drive-curve/islevsel-genel-bakis/Fahrspur.webp"
+          },
+          {
+            "subtitle": "Fahrspur erzeugen",
+            "title": "Sürüş İzi Oluştur",
+            "description": "Yeni rota oluşturma",
+            "iconSrc": "/assets/solutions/cds/drive-curve/islevsel-genel-bakis/Fahrspur-erzeugen.webp"
+          },
+          {
+            "subtitle": "Fahrzeug-Editor",
+            "title": "Araç Editörü",
+            "description": "Araç özelleştirme",
+            "iconSrc": "/assets/solutions/cds/drive-curve/islevsel-genel-bakis/Fahrzeug-Editor.webp"
+          },
+          {
+            "subtitle": "Fahrspur ändern",
+            "title": "Sürüş İzini Değiştir",
+            "description": "Rota düzenleme",
+            "iconSrc": "/assets/solutions/cds/drive-curve/islevsel-genel-bakis/Fahrspur-andern.webp"
+          },
+          {
+            "subtitle": "Lizenz anzeigen",
+            "title": "Lisans Göster",
+            "description": "Lisans bilgisi",
+            "iconSrc": "/assets/solutions/cds/drive-curve/islevsel-genel-bakis/Lizenz-anzeigen.webp"
+          }
+        ]
+      },
+      "workflowTabs": {
+        "kicker": "/ ARAÇ KATALOĞU VE STANDARTLAR",
+        "title": "Araç Kataloğu",
+        "subtitle": "FGSV ve VSS standartlarına uygun araç kütüphaneleri ve özel araç editörü.",
+        "categories": [
+          {
+            "key": "arac-editoru",
+            "label": "Araç Editörü",
+            "items": [
+              {
+                "title": "Araç Editörü",
+                "description": "Özel araç boyutları, aks mesafeleri ve dönüş yarıçapları tanımlama.",
+                "imageSrc": "/assets/solutions/cds/drive-curve/gallery/Arac-Editoru.webp"
+              }
+            ]
+          },
+          {
+            "key": "arac-ornegi",
+            "label": "Araç Örneği",
+            "items": [
+              {
+                "title": "Araç Örneği",
+                "description": "Standart ve özel araç kaplama eğrisi şablonları.",
+                "imageSrc": "/assets/solutions/cds/drive-curve/gallery/Arac-Ornegi.jpg"
+              }
+            ]
+          },
+          {
+            "key": "fgsv-287-2020",
+            "label": "FGSV 287 2020",
+            "items": [
+              {
+                "title": "FGSV 287 (2020) Standart Araçları",
+                "description": "Alman FGSV 287 2020 yönergesine uygun araç tipleri.",
+                "imageSrc": "/assets/solutions/cds/drive-curve/gallery/FGSV-287-2020.jpg"
+              }
+            ]
+          },
+          {
+            "key": "fgsv-283-2005",
+            "label": "FGSV 283 2005",
+            "items": [
+              {
+                "title": "FGSV 283 (2005) Standart Araçları",
+                "description": "FGSV 283 2005 yönergesine uygun araç tipleri.",
+                "imageSrc": "/assets/solutions/cds/drive-curve/gallery/FGSV-283-2005.jpg"
+              }
+            ]
+          },
+          {
+            "key": "vss-40198a-2019",
+            "label": "VSS 40198a 2019",
+            "items": [
+              {
+                "title": "VSS 40198a (2019) İsviçre Standart Araçları",
+                "description": "İsviçre VSS 40198a 2019 normuna uygun araç tipleri.",
+                "imageSrc": "/assets/solutions/cds/drive-curve/gallery/VSS-40198a-2019.jpg"
+              }
+            ]
+          },
+          {
+            "key": "vss-sn-640271a-1990",
+            "label": "VSS SN 640271a 1990",
+            "items": [
+              {
+                "title": "VSS SN 640271a (1990) Standart Araçları",
+                "description": "VSS SN 640271a 1990 normuna uygun araç tipleri.",
+                "imageSrc": "/assets/solutions/cds/drive-curve/gallery/VSS-SN-640271a-1990.jpg"
+              }
+            ]
+          }
+        ]
+      },
+      "extraGrids": [
+        {
+          "kicker": "/ UYGULAMA VİDEOLARI",
+          "title": "Video Galerisi",
+          "subtitle": "Sürüş Eğrisi (Fahrspur) eklentisinin uygulama ve doğrulama videoları.",
+          "columns": 3,
+          "items": [
+            {
+              "title": "Versiyon 1 için İlk Genel Bakış",
+              "subtitle": "ALLPLAN Add-On Fahrspur - Erster Grobüberblick Version 1",
+              "description": "Sürüş Eğrisi eklentisinin temel yeteneklerine genel bakış.",
+              "youtubeId": "IKXIq1So8jU"
+            },
+            {
+              "title": "ALLPLAN Eklentileri – Çoklu Kurulum",
+              "subtitle": "ALLPLAN Add Ons Multi Setup",
+              "description": "CDS Allplan eklentilerinin kurulum kılavuzu.",
+              "youtubeId": "BWKDmZyIUo4"
+            },
+            {
+              "title": "Endüstriyel Uygulama Örneği",
+              "subtitle": "ALLPLAN Add-On Fahrspur - Praxisbeispiel Industrie",
+              "description": "Endüstriyel tesis sahasında tır ve kamyon manevra simülasyonu.",
+              "youtubeId": "AFmEuRCJ72c"
+            },
+            {
+              "title": "Rampa Üzerinde Kaplama Eğrisi Doğrulaması",
+              "subtitle": "ALLPLAN Add-On Fahrspur - Rampe mit Schleppkurve prüfen",
+              "description": "Otopark rampalarında sürüş izi ve geçilebilirlik kontrolü.",
+              "youtubeId": "c_4xJ0SVEfw"
+            },
+            {
+              "title": "Ön Sürüm (Geliştirme Aşaması)",
+              "subtitle": "ALLPLAN Add-On Fahrspur - Vorab Version",
+              "description": "Dinamik rota ve kaplama eğrisi hesaplama önizlemesi.",
+              "youtubeId": "k_3Rfi_RfCw"
+            },
+            {
+              "title": "EuroCombi | BOKraft Dönme Dairesi",
+              "subtitle": "ALLPLAN Add-On Fahrspur - EuroCombi | BOKraft-Kreis",
+              "description": "EuroCombi uzun araçlar ve BOKraft dönme dairesi doğrulaması.",
+              "youtubeId": "pq0I8dIF254"
+            },
+            {
+              "title": "Kaplama Eğrisi Şeması",
+              "subtitle": "ALLPLAN Add-On Fahrspur - Schleppkurven Schema",
+              "description": "Kaplama eğrisi şemalarının oluşturulması ve dokümantasyonu.",
+              "youtubeId": "xRhXqRkB6mk"
+            }
+          ]
+        }
+      ]
+    }
   },
   "/solutions/addons/geometry-tools": {
     "path": "/solutions/addons/geometry-tools",
@@ -30962,7 +31434,280 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "splitCallouts": [
+        {
+          "kicker": "/ ALLPLAN ADD-ON · GEOMETRİ ARAÇLARI",
+          "title": "Gelişmiş 3B Fonksiyonlar",
+          "subheading": "Geometri Araçları (Geometry Tools V1 & V2)",
+          "paragraphs": [
+            "Örneğin, arazi noktalarına dayalı 3B yüzeyler oluşturun ve ardından bunları Allplan'da düzlem olarak kullanın.",
+            "Yalnızca bunlar ve diğer işlevler, Eklenti Geometri Tools BIM sisteminizin değerli bir sistem haline getirir.",
+            "Ocak 2021'den itibaren Versiyon 2, 'Üçgen Ağı Basitleştirme' ve OBJ, XYZ, ESRI-Grid ve LandXML 2.0 formatları için birçok yeni arayüzle birlikte sunulacak.",
+            "Bu, Swisstopo'dan arazi verilerini içe aktarmayı ve 'BIM2Field' ölçme cihazları için yerleşim dosyaları oluşturmayı kolaylaştırır."
+          ],
+          "bullets": [
+            "V1: Üçgen-Ağ Girişi",
+            "V1: Poligon Girişi",
+            "V1: Ara Obje Oluştur",
+            "V1: Voroni Oluştur",
+            "V1: Delaunay Oluştur",
+            "V1: Düz İskelet Oluştur",
+            "V2: Üçgen-Ağı Basitleştir",
+            "V2: Yüzey Sil (UV Dokular Silinmez)",
+            "V2: OBJ İçeriye Aktar",
+            "V2: OBJ Dışarıya Aktar",
+            "V2: 3B-Yüzey Değiştir",
+            "V2: XYZ İçeriye Aktar (Arazi Noktaları)"
+          ],
+          "youtubeId": "WHPmmRcCdMQ",
+          "reverse": false
+        },
+        {
+          "kicker": "/ LİSANS VE GEREKSİNİMLER",
+          "title": "Lisans ve Gereksinimler",
+          "lead": "Tek kullanıcı lisansı, mevcut Allplan lisansına bağlıdır ve bir PC'den diğerine kolayca aktarılabilir.",
+          "subheading": "Sistem Gereksinimleri: Allplan 2020 – 2023 · Diller: Almanca, İngilizce ve İtalyanca",
+          "description": "Eklentiyi yükledikten sonra deneme sürümünü 14 gün ücretsiz olarak kullanabilirsiniz.",
+          "imageSrc": "/assets/solutions/cds/geometry-tools/license.jpg",
+          "ctaText": "Link zum Download Bereich (Setup)",
+          "ctaHref": "https://cdssieber.sharepoint.com/:f:/g/Ev_G2db5WVVBvMEN-Adhz24Bk5f3rEvFCQu77iLTTCIynw?e=qkPdri",
+          "external": true,
+          "reverse": true
+        }
+      ],
+      "benefits": {
+        "kicker": "/ 36 GEOMETRİ VE ARAZİ ARACI",
+        "title": "İşlevsel Genel Bakış",
+        "items": [
+          {
+            "subtitle": "ARAÇ 01",
+            "title": "Üçgen-Ağ Girişi",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543b9d8b381a.webp"
+          },
+          {
+            "subtitle": "ARAÇ 02",
+            "title": "Poligon Girişi",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543b9e866e33.webp"
+          },
+          {
+            "subtitle": "ARAÇ 03",
+            "title": "Ara Obje Oluştur",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543b9f3aee14.webp"
+          },
+          {
+            "subtitle": "ARAÇ 04",
+            "title": "Voroni Oluştur",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543ba044a531.webp"
+          },
+          {
+            "subtitle": "ARAÇ 05",
+            "title": "Delaunay Oluştur",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543ba10aa773.webp"
+          },
+          {
+            "subtitle": "ARAÇ 06",
+            "title": "Düz İskelet Oluştur",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543ba1f8183a.webp"
+          },
+          {
+            "subtitle": "ARAÇ 07",
+            "title": "OBJ İçeriye Aktar",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543ba2c34545.webp"
+          },
+          {
+            "subtitle": "ARAÇ 08",
+            "title": "OBJ Dışarıya Aktar",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543ba3731850.webp"
+          },
+          {
+            "subtitle": "ARAÇ 09",
+            "title": "LandXML İçeriye Aktar",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543ba42bb596.webp"
+          },
+          {
+            "subtitle": "ARAÇ 10",
+            "title": "LandXML Dışarıya Aktar",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543ba4f5d57a.webp"
+          },
+          {
+            "subtitle": "ARAÇ 11",
+            "title": "XYZ Noktaları İçeriye Aktar",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543ba5b0a119.webp"
+          },
+          {
+            "subtitle": "ARAÇ 12",
+            "title": "ESRI-Grid İçeriye Aktar",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543ba6759cd2.webp"
+          },
+          {
+            "subtitle": "ARAÇ 13",
+            "title": "Obje Değiştir",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543ba73ef294.webp"
+          },
+          {
+            "subtitle": "ARAÇ 14",
+            "title": "Obje İyileştir",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543ba82360f0.webp"
+          },
+          {
+            "subtitle": "ARAÇ 15",
+            "title": "Obje Kes",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543ba8dbe7e5.webp"
+          },
+          {
+            "subtitle": "ARAÇ 16",
+            "title": "Objeyi Kapat",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543ba9a60154.webp"
+          },
+          {
+            "subtitle": "ARAÇ 17",
+            "title": "Çaprazları Değiştir",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543baa787f64.webp"
+          },
+          {
+            "subtitle": "ARAÇ 18",
+            "title": "Noktaları Değiştir/Sil",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543bab2dc002.webp"
+          },
+          {
+            "subtitle": "ARAÇ 19",
+            "title": "3B-Çizgileri Birleştir",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543babf086fa.webp"
+          },
+          {
+            "subtitle": "ARAÇ 20",
+            "title": "3B-Çizgileri Böl",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543bac9f223f.webp"
+          },
+          {
+            "subtitle": "ARAÇ 21",
+            "title": "3B-Çizgileri İyileştir",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543bad532aa8.webp"
+          },
+          {
+            "subtitle": "ARAÇ 22",
+            "title": "Üçgenleştir",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543badf132a7.webp"
+          },
+          {
+            "subtitle": "ARAÇ 23",
+            "title": "Noktaları Yüzeye Yansıt",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543bae93140c.webp"
+          },
+          {
+            "subtitle": "ARAÇ 24",
+            "title": "Düşey ve Zemin Yüzeyler Ekle",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543baf362338.webp"
+          },
+          {
+            "subtitle": "ARAÇ 25",
+            "title": "Yüzeyleri Böl",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543bb03b5a75.webp"
+          },
+          {
+            "subtitle": "ARAÇ 26",
+            "title": "Üçgen-Ağı Basitleştir",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543bb118a297.webp"
+          },
+          {
+            "subtitle": "ARAÇ 27",
+            "title": "Yüzey Sil",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543bb1c6bd33.webp"
+          },
+          {
+            "subtitle": "ARAÇ 28",
+            "title": "3B-Yüzey Değiştir",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543bb2bca83a.webp"
+          },
+          {
+            "subtitle": "ARAÇ 29",
+            "title": "Sivri Üçgenleri Sil",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543bb3a3c858.webp"
+          },
+          {
+            "subtitle": "ARAÇ 30",
+            "title": "Akslar ve Enine Kesitler",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543bb4ca1dbd.webp"
+          },
+          {
+            "subtitle": "ARAÇ 31",
+            "title": "Plan Özellikleri",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543bb5b08957.webp"
+          },
+          {
+            "subtitle": "ARAÇ 32",
+            "title": "Parselleme",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543bb69399f3.webp"
+          },
+          {
+            "subtitle": "ARAÇ 33",
+            "title": "Kontur Çizgileri",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543bb74e18a5.webp"
+          },
+          {
+            "subtitle": "ARAÇ 34",
+            "title": "Arazi Modeli",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543bb825d1b0.webp"
+          },
+          {
+            "subtitle": "ARAÇ 35",
+            "title": "Hacim Hesaplama",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543bb95484c8.webp"
+          },
+          {
+            "subtitle": "ARAÇ 36",
+            "title": "Alan Hesaplama",
+            "description": "Allplan Geometry Tools 3B yüzey, ağ ve arazi işleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/geometry-tools/2000_6543bba430b98.webp"
+          }
+        ]
+      },
+      "extraGrids": [
+        {
+          "kicker": "/ UYGULAMA VİDEOLARI",
+          "title": "Video Galerisi",
+          "subtitle": "Geometry Tools eklentisinin 17 detaylı uygulama ve eğitim videosu.",
+          "columns": 3,
+          "items": []
+        }
+      ]
+    }
   },
   "/solutions/addons/graphical-text": {
     "path": "/solutions/addons/graphical-text",
@@ -31127,7 +31872,49 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "splitCallouts": [
+        {
+          "kicker": "/ ALLPLAN ADD-ON · GRAFİKSEL YAZI",
+          "title": "Vektörleştirilmiş metinlerin, 3 boyutlu metinlerin ve blok setlerinin oluşturulması.",
+          "description": "Tüm metinleri gerekçelendirilmiş cümleler olarak ayarlayın ve akıllı cümle ve hece ayrımı da dahil olmak üzere istediğiniz gibi çarpıtın. Veya vektör öğeleri (çizgiler, daireler, alanlar) olarak kenarlıklar, dolgular ve gölgeler içeren metinler oluşturabilir ve hatta bunları 3B olarak oluşturabilirsiniz.",
+          "youtubeId": "CMYuaD3e3rQ",
+          "reverse": false
+        },
+        {
+          "kicker": "/ LİSANS VE GEREKSİNİMLER",
+          "title": "Lisans ve Gereksinimler",
+          "lead": "Tek kullanıcı lisansı, mevcut Allplan lisansına bağlıdır.",
+          "subheading": "Sistem Gereksinimleri: Allplan 2020 – 2024 · Diller: Almanca, İngilizce",
+          "description": "Eklentiyi yükledikten sonra deneme sürümünü 14 gün ücretsiz olarak kullanabilirsiniz.",
+          "imageSrc": "/assets/solutions/cds/license.jpg",
+          "ctaText": "Setup İndir",
+          "ctaHref": "https://cdssieber.sharepoint.com/:f:/g/Ev_G2db5WVVBvMEN-Adhz24Bk5f3rEvFCQu77iLTTCIynw?e=qkPdri",
+          "external": true,
+          "reverse": true
+        }
+      ],
+      "extraGrids": [
+        {
+          "kicker": "/ TANITIM VİDEOLARI",
+          "title": "Tanıtım Videoları",
+          "subtitle": "Vektörleştirilmiş 2B/3B metinler ve eğri boyunca metin hizalama videoları.",
+          "columns": 2,
+          "items": [
+            {
+              "title": "ALLPLAN Add-On GraphicText - Vektorisierte 2D/3D Texte",
+              "description": "Allplan'da vektörleştirilmiş 2B ve 3B metinlerin oluşturulması.",
+              "youtubeId": "fs7Lfx9odB4"
+            },
+            {
+              "title": "ALLPLAN Add-On Graphic Text | Text an Kurve ausrichten",
+              "description": "Metinlerin eğriler boyunca hizalanması ve blok setleri.",
+              "youtubeId": "0rpJEH-JCvE"
+            }
+          ]
+        }
+      ]
+    }
   },
   "/solutions/addons/parametric-terrain": {
     "path": "/solutions/addons/parametric-terrain",
@@ -31848,7 +32635,91 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "splitCallouts": [
+        {
+          "kicker": "/ ALLPLAN ADD-ON · PARAMETRİK ARAZİ",
+          "title": "Bu parametrik Allplan eklentisinin işlevi, arazi kazısı oluşturmanın çok ötesine geçer.",
+          "paragraphs": [
+            "Kazı planı, arazi modeli ve sunum için etkileyici katman modellerine hızla ulaşın. Değişikliklerin basitçe tamamlanmasına büyük önem veriyoruz.",
+            "Tüm bunlar sorunsuz ve sezgisel kullanımla birleştiğinde eklentinin gücü ortaya çıkıyor."
+          ],
+          "youtubeId": "WHPmmRcCdMQ",
+          "reverse": false
+        },
+        {
+          "kicker": "/ VERSİYON 3 · ALLPLAN 2021 – 2024",
+          "title": "Versiyon 3 | Allplan 2021 – 2024",
+          "subheading": "Kazı – Dolgu – Şantiye Planlaması",
+          "bullets": [
+            "Allplan 2023 onayı & Yeni işlem kesme katmanı",
+            "Mimari bileşenler için referans yüzeyi & Yeni dolgu işlemi",
+            "Küresel Sınır & Optimizasyon alanı değiştirici",
+            "Üçgen ağları kapat & Aynı anda birden çok değiştiricinin sıralamasını özelleştirin",
+            "Desenler ve taramalar için iyileştirilmiş 2B renk gösterimi",
+            "Yüzeyler için renk ataması / kaydet ve yükle",
+            "Eğimli ve yatay yüzeyler için efsaneler ve özellikler",
+            "Kenarlık çokgenlerini sil, kenarlık çoklu çizgisini çıkar, yan ve alt yüzeyleri ekleyin",
+            "Tarama ile kesit görünüm"
+          ],
+          "youtubeId": "bTB43HH45uU",
+          "reverse": true
+        },
+        {
+          "kicker": "/ VERSİYON 2",
+          "title": "VERSİYON 2",
+          "subheading": "İkinci versiyonu on dakikada keşfedin…",
+          "bullets": [
+            "Noktaları araziye yansıtın & Katı model olmadan 3B kazı verisi aktarımı",
+            "GPS tarama sistemleri için üçgen kazı çukurları",
+            "Değişiklikleri sıralama (tamamen yukarı / tamamen aşağı)",
+            "Boru çukuru için eğimli bir çoklu çizginin girişi",
+            "Alan değiştirici ile daha fazla esneklik & Alt yüzeyleri çıkarma imkanı",
+            "Kontur çizgileri arasındaki mesafe en az 0.01m & Arazi modeli için kesit rengi",
+            "Çoklu düzenlemede iyileştirme & Sınıra kadar serbest eğim",
+            "Allplan 2020-1’de kesitlerde ve görünümlerde optimize edilmiş görünüm"
+          ],
+          "youtubeId": "UvORTOvHy-g",
+          "reverse": false
+        },
+        {
+          "kicker": "/ VERSİYON 1",
+          "title": "VERSİYON 1",
+          "subheading": "Birinci versiyonu on dakikada keşfedin…",
+          "bullets": [
+            "Sezgisel kullanım ve 4 saatten fazla video ile öğrenmesi kolay",
+            "Dinamik yükseklik, uygulama ve kaldırma, hacim ve değerlendirmeler oluşturma",
+            "Erken planlama aşamalarında bile basit maliyet analizi",
+            "Eğimli kazı zeminleri, banketler, boru hattı hendekleri, barajlar vb.",
+            "Görselleştirmeler için vardiya modellerinin oluşturulması",
+            "Çok katmanlı arazi (yüzey katmanı, buzultaşı, kaya, …)",
+            "Bina altı kazılmış zemin kabulü & Etkileşimli hacimler, alanlar ve nitelikler",
+            "Allplan Raporları ve Excel ile kullanılabilir"
+          ],
+          "youtubeId": "t59MHn23Eic",
+          "reverse": true
+        },
+        {
+          "kicker": "/ REFERANS PROJE DENEYİMİ",
+          "title": "Kullanıcı Raporu",
+          "description": "Rivage Bottighofen projesinde (TG) 9 blok ve yeraltı otoparkı içeren kapsamlı çalışma, makine verilerinin işlenmesinde yüksek verimlilik sağlamıştır. Şantiyede kontrol, kolay ve verimli şekilde gerçekleştirildi.",
+          "imageSrc": "/assets/solutions/cds/parametrik-arazi/user-report.jpg",
+          "reverse": false
+        },
+        {
+          "kicker": "/ LİSANS VE GEREKSİNİMLER",
+          "title": "Lisans ve Gereksinimler",
+          "lead": "Tek kullanıcı lisansı, mevcut Allplan lisansına bağlıdır.",
+          "subheading": "Sistem Gereksinimleri: Allplan 2020 – 2024 · Diller: Almanca, İngilizce, Fransızca ve İtalyanca",
+          "description": "Eklentiyi yükledikten sonra deneme sürümünü 14 gün ücretsiz olarak kullanabilirsiniz.",
+          "imageSrc": "/assets/solutions/cds/parametrik-arazi/license.jpg",
+          "ctaText": "Setup İndir",
+          "ctaHref": "https://cdssieber.sharepoint.com/:f:/g/Ev_G2db5WVVBvMEN-Adhz24Bk5f3rEvFCQu77iLTTCIynw?e=qkPdri",
+          "external": true,
+          "reverse": true
+        }
+      ]
+    }
   },
   "/solutions/addons/ramp": {
     "path": "/solutions/addons/ramp",
@@ -32148,7 +33019,76 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "splitCallouts": [
+        {
+          "kicker": "/ ALLPLAN ADD-ON · RAMPA",
+          "title": "Add On - Rampa",
+          "subheading": "Herhangi bir parametreli rampanın kolay oluşturulması",
+          "paragraphs": [
+            "Allplan Rampa Eklentisi ile herhangi bir rampa oluşturabilirsiniz.",
+            "Bir eksen, uzunluk profili ve sol ve sağ kenar için herhangi bir enine eğim kullanılarak dinamik bir referans yüzeyi oluşturulur.",
+            "Daha sonra döşeme ve duvarlar gibi mimari bileşenleri bu referans yüzeyine bağlayabilirsiniz."
+          ],
+          "youtubeId": "cfGmLbqXBJo",
+          "reverse": false
+        },
+        {
+          "kicker": "/ ÖZELLİKLER",
+          "title": "Fonksiyonların Genel Bakışı",
+          "subheading": "Parametrik Rampa Modelleme Özellikleri",
+          "bullets": [
+            "Çizgiler, daireler ve klotoidler ekseni ile eşleştirin",
+            "Herhangi bir uzunluk profili",
+            "Sol ve sağ için ayrı yatış dereceleri ve şerit genişlikleri",
+            "Rampanın sol ve sağ kenarı için sınır eksenleri",
+            "Rampa başlangıcı ve bitişi için eksendeki öteleme",
+            "Yükseklikler, enine eğimler ve yerleştirme ile kat planı gösterimi",
+            "Brep ve 3B yüzeyler olarak 3B temsil",
+            "Mimari bileşenler için otomatik referans yüzeyi ve eşit dağılımı"
+          ],
+          "youtubeId": "8PQ6jX3SrUo",
+          "reverse": true
+        },
+        {
+          "kicker": "/ LİSANS VE GEREKSİNİMLER",
+          "title": "Lisans ve Gereksinimler",
+          "lead": "Tek kullanıcı lisansı, mevcut Allplan lisansına bağlıdır.",
+          "subheading": "Sistem Gereksinimleri: Allplan 2020 – 2024 · Diller: Almanca, İngilizce",
+          "description": "Eklentiyi yükledikten sonra deneme sürümünü 14 gün ücretsiz olarak kullanabilirsiniz.",
+          "imageSrc": "/assets/solutions/cds/ramp/license.jpg",
+          "ctaText": "Setup İndir",
+          "ctaHref": "https://cdssieber.sharepoint.com/:f:/g/Ev_G2db5WVVBvMEN-Adhz24Bk5f3rEvFCQu77iLTTCIynw?e=qkPdri",
+          "external": true,
+          "reverse": false
+        }
+      ],
+      "extraGrids": [
+        {
+          "kicker": "/ UYGULAMA VİDEOLARI",
+          "title": "Video Galerisi",
+          "subtitle": "Allplan Rampa eklentisi uygulama videoları.",
+          "columns": 3,
+          "items": [
+            {
+              "title": "Rampa Modelleme - Video 1",
+              "description": "Eksen, profil ve enine eğimlerle parametrik rampa oluşturma.",
+              "youtubeId": "0fbk-egB7bg"
+            },
+            {
+              "title": "Rampa Modelleme - Video 2",
+              "description": "Mimari bileşenlerin dinamik rampa referans yüzeyine bağlanması.",
+              "youtubeId": "yTniFVJEZpE"
+            },
+            {
+              "title": "Rampa Modelleme - Video 3",
+              "description": "Rampa fonksiyonlarına genel bakış ve kesit/plan üretimi.",
+              "youtubeId": "8PQ6jX3SrUo"
+            }
+          ]
+        }
+      ]
+    }
   },
   "/solutions/addons/sketchup-converter": {
     "path": "/solutions/addons/sketchup-converter",
@@ -33560,7 +34500,206 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "splitCallouts": [
+        {
+          "kicker": "/ ALLPLAN ADD-ON · ÇELİK PROFİL BİLEŞENLERİ",
+          "title": "ALLPLAN’DE PARAMETRİK ÇELİK PLANLAMASI",
+          "subheading": "Allplan Eklenti Profil Bileşenleri V2, versiyon 2021 – 2024 için",
+          "paragraphs": [
+            "Bu Allplan eklentisinin fonksiyonları, mevcut temel fonksiyonların çok ötesindedir.",
+            "Genel planlar, endüstriyel modeller, etkileyici kirişler için parametrik çözüm.",
+            "Tüm parametrelerin basit bir şekilde değiştirilmesine büyük önem veriyoruz.",
+            "Profil tipleri, çelik ağırlıkları, yüzeyler vb. Özellikler istenildiği zaman etiketlenebilir ve değerlendirilebilir.",
+            "Tüm bunların sorunsuz ve sezgisel kullanımla birleştiğini düşünün."
+          ],
+          "youtubeId": "VC-y4IZ8580",
+          "ctaText": "Youtube Oynatma Listesi",
+          "ctaHref": "https://www.youtube.com/playlist?list=PLZeQ6A4Fw6kDcDfzyU82ZzWrNOwcb_Xch",
+          "external": true,
+          "reverse": false
+        },
+        {
+          "kicker": "/ LİSANS VE GEREKSİNİMLER",
+          "title": "Lisans ve Gereksinimler",
+          "lead": "Tek kullanıcı lisansı, mevcut Allplan lisansına bağlıdır.",
+          "subheading": "Sistem Gereksinimleri: Allplan 2020 – 2024 · Diller: Almanca, İngilizce",
+          "description": "Eklentiyi yükledikten sonra deneme sürümünü 14 gün ücretsiz olarak kullanabilirsiniz.",
+          "imageSrc": "/assets/solutions/cds/license.jpg",
+          "ctaText": "Setup İndir",
+          "ctaHref": "https://cdssieber.sharepoint.com/:f:/g/Ev_G2db5WVVBvMEN-Adhz24Bk5f3rEvFCQu77iLTTCIynw?e=qkPdri",
+          "external": true,
+          "reverse": true
+        }
+      ],
+      "benefits": {
+        "kicker": "/ İŞLEVSEL GENEL BAKIŞ",
+        "title": "İşlevsel Genel Bakış",
+        "items": [
+          {
+            "subtitle": "Profilbauteile",
+            "title": "Profil Bileşenleri",
+            "description": "16.900'den fazla standart ve serbest çelik profil kütüphanesi.",
+            "iconSrc": "/assets/solutions/cds/steel-components/islevsel-genel-bakis/2000_657c59af501ad.webp"
+          },
+          {
+            "subtitle": "Profilbauteil erzeugen",
+            "title": "Profil Bileşeni Oluştur",
+            "description": "Parametrik çelik kolon, kiriş ve gergi elemanları oluşturma.",
+            "iconSrc": "/assets/solutions/cds/steel-components/islevsel-genel-bakis/2000_657c59bc12245.webp"
+          },
+          {
+            "subtitle": "Profilblech erzeugen",
+            "title": "Profil Sacı Oluştur",
+            "description": "Trapez levhalar, oluklu saclar ve sandviç paneller oluşturma.",
+            "iconSrc": "/assets/solutions/cds/steel-components/islevsel-genel-bakis/2000_657c59c74042d.webp"
+          },
+          {
+            "subtitle": "Schraubverbindung erzeugen",
+            "title": "Vida Bağlantısı Oluştur",
+            "description": "Bulon setleri, pullar, somunlar ve bağlantı plakaları modelleme.",
+            "iconSrc": "/assets/solutions/cds/steel-components/islevsel-genel-bakis/2000_657c59d3edb11.webp"
+          },
+          {
+            "subtitle": "Lizenz anzeigen",
+            "title": "Lisansı Göster",
+            "description": "Eklenti lisans durumunu görüntüleme ve yönetme.",
+            "iconSrc": "/assets/solutions/cds/steel-components/islevsel-genel-bakis/2000_657c59e0d5de5.webp"
+          },
+          {
+            "subtitle": "Profilbauteile ändern",
+            "title": "Profil Bileşenlerini Değiştir",
+            "description": "Farklı profil bileşenleri üzerinde tüm parametrelerin çoklu düzenlenmesi.",
+            "iconSrc": "/assets/solutions/cds/steel-components/islevsel-genel-bakis/2000_657c59ec29c54.webp"
+          },
+          {
+            "subtitle": "Profilbauteil-Punkte modifizieren",
+            "title": "Profil Bileşen Noktalarını Değiştir",
+            "description": "Birkaç bileşen üzerinde kulplarla nokta ve eksen değişikliği.",
+            "iconSrc": "/assets/solutions/cds/steel-components/islevsel-genel-bakis/2000_657c59fc465cf.webp"
+          },
+          {
+            "subtitle": "Lizenz anzeigen",
+            "title": "Lisansı Göster",
+            "description": "Kullanıcı lisansı aktivasyon ve kontrol aracı.",
+            "iconSrc": "/assets/solutions/cds/steel-components/islevsel-genel-bakis/2000_657c5a0b2db57.webp"
+          }
+        ]
+      },
+      "workflowTabs": {
+        "kicker": "/ LOD 350 ÇELİK YAPI PLANLAMASI",
+        "title": "Allplan’da basit ve verimli çelik yapı planlaması",
+        "subtitle": "Basit parametrik profil bileşenleri, 3B çelik yapı planlamanızı LOD 350’ye kadar kolaylaştırır.",
+        "categories": [
+          {
+            "key": "profil-bilesenleri",
+            "label": "Profil bileşenleri",
+            "items": [
+              {
+                "title": "Profil bileşenleri",
+                "description": "16.900’den fazla profil ve bağlantı detaylarıyla kapsamlı çelik profil modellemesi:",
+                "bullets": [
+                  "Dinamik profil tiplerine sahip profil veri tabanı & 16.900’den fazla profil (I, U, Z, T, L, yuvarlak ve dikdörtgen profiller)",
+                  "Yerel ve uluslararası profiller (ör. HEA, IPE, UNP, ROR, FLA, HEBT) ve serbest formda profiller (Larssen, soğuk şekillendirilmiş kesitler)",
+                  "Profil dönüşü dahil boşlukta herhangi bir yön, dikdörtgen/N köşeli/yuvarlak delikler ve serbest girintiler",
+                  "Takviyeler, bağlantı flanşları, gerdirme kelepçeleri ve vidalı geçişler",
+                  "Serbest açılı bağlantılar, bağlantı ağları, sırtlar ve çentikler",
+                  "Hacim, ağırlık, yüzey, profil türü ve uzunluk değerlendirmeleri"
+                ],
+                "youtubeId": "Lfht6hJemew"
+              }
+            ]
+          },
+          {
+            "key": "vida-baglantisi",
+            "label": "Vida bağlantısı",
+            "items": [
+              {
+                "title": "Vida bağlantısı",
+                "description": "Parametrik bulon grupları ve bağlantı plakaları:",
+                "bullets": [
+                  "Vida seti, mil uzunluğu, pullar, kamalı pullar, sıkma uzunluğu somunu",
+                  "Dönme dahil boşlukta serbest yerleşim",
+                  "Kuvvet yönünde ve kuvvet yönüne dik delik ve kenar mesafesi",
+                  "Vidaları tek tek göster ve gizle & Ek plakalar",
+                  "Vida sayısı, vida tipi, hacim ve bağlantı plakaları dahil ağırlık değerlendirmesi"
+                ],
+                "youtubeId": "qXFoV3Xqkik"
+              }
+            ]
+          },
+          {
+            "key": "sac-profil",
+            "label": "Sac Profil",
+            "items": [
+              {
+                "title": "Sac Profil",
+                "description": "Çatı ve cephe kaplama profilleri:",
+                "bullets": [
+                  "Trapez levhalar ve oluklu levhalar",
+                  "Yüzeylerde girintiler",
+                  "Duvarlar ve çatılar için sandviç elemanlar",
+                  "Farklı LOD ekranı"
+                ],
+                "youtubeId": "iREJIfp1eoM"
+              }
+            ]
+          },
+          {
+            "key": "degisiklik",
+            "label": "Değişiklik",
+            "items": [
+              {
+                "title": "Değişiklik",
+                "description": "Hızlı revizyon ve çoklu düzenleme araçları:",
+                "bullets": [
+                  "Kulplu ayarlamalar (eksenler, açılar, mesafeler, vb.)",
+                  "Farklı profil bileşenleri üzerinde tüm parametrelerin çoklu düzenlenmesi",
+                  "Birkaç bileşen üzerinde nokta değişikliği",
+                  "Sık kullanılanları kaydedin, yükleyin ve eşleştirin"
+                ],
+                "youtubeId": "YVyOOvxhCFQ"
+              }
+            ]
+          }
+        ]
+      },
+      "extraGrids": [
+        {
+          "kicker": "/ VİDEO GENEL BAKIŞ",
+          "title": "Video Genel Bakış (V1 & V2)",
+          "subtitle": "Çelik Profil Bileşenleri V1 ve V2 sürümlerini 10–14 dakikada keşfedin.",
+          "columns": 3,
+          "items": [
+            {
+              "title": "GENEL BAKIŞ V1",
+              "subtitle": "12 dakika içinde keşfedin.",
+              "description": "Profil Bileşenleri V1 temel özellikleri ve çelik modelleme iş akışı.",
+              "youtubeId": "Lfht6hJemew"
+            },
+            {
+              "title": "GENEL BAKIŞ V2",
+              "subtitle": "10 dakika içinde keşfedin.",
+              "description": "Profil Bileşenleri V2 ile gelen yeni bulon, plaka ve profil yetenekleri.",
+              "youtubeId": "YVyOOvxhCFQ"
+            },
+            {
+              "title": "GENEL BAKIŞ V2 — Profil Bileşenlerine Dönüştür",
+              "subtitle": "14 dakika içinde keşfedin.",
+              "description": "14 dakika içinde yeni ‘Profil bileşenlerine dönüştür’ işlevine ilişkin ilk bilgileri edineceksiniz.",
+              "youtubeId": "7Cp16sh37MQ"
+            }
+          ]
+        },
+        {
+          "kicker": "/ UYGULAMA VİDEOLARI (26 VİDEO)",
+          "title": "Video Galerisi",
+          "subtitle": "Sütunlar, kirişler, birleşimler, trapez saclar, palplanş duvarlar ve IFC içe aktarımı videoları.",
+          "columns": 3,
+          "items": []
+        }
+      ]
+    }
   },
   "/solutions/addons/three-dimensioning": {
     "path": "/solutions/addons/three-dimensioning",
@@ -34295,7 +35434,187 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "splitCallouts": [
+        {
+          "kicker": "/ ALLPLAN ADD-ON · 3B ÖLÇÜLENDİRME",
+          "title": "3B Ölçülendirme",
+          "subheading": "3D Bemassung",
+          "paragraphs": [
+            "Allplan için 3B ölçülendirme eklentisi, modellerinizi veya perspektiflerinizi sunmak için ideal bir eklentidir. Objelerinizi doğrudan boş alanda ölçün.",
+            "3D ölçülendirme ile modeliniz hassasiyet ve netlik kazanır. Örneğin, gerçek uzunlukları, eğimleri, yükseklikleri, açıları veya koordinatları ölçülendirebilirsiniz. Bu, planlamanızı herkes için anlaşılır kılar ve aynı zamanda yanlış anlamaları önler."
+          ],
+          "bullets": [
+            "Sezgisel olarak öğrenilebilir & Uzayda 3B boyutlar",
+            "Dinamik önizlemeler & Favorileri kaydedin ve yükleyin",
+            "Ölçü çizgileri, seviyeler, açı, koordinat ve eğim boyutları",
+            "Yarıçap, çap ve yay boyutlarıyla daire boyutları & Koordinat listeleri oluşturun",
+            "Boyutlarla kesitler, görünümler ve perspektifler elde edin",
+            "3B PDF / IFC / BIMPLUS'u ölçülerle dışa aktarın"
+          ],
+          "youtubeId": "GlkCJ9hmqho",
+          "reverse": false
+        },
+        {
+          "kicker": "/ MÜŞTERİ ÖRNEKLERİ",
+          "title": "Müşteri Örnekleri — 300+ Allplan Kullanıcısı, 10 Dil",
+          "description": "3B ölçülendirme eklentisi şu anda 300 Allplan kullanıcısı tarafından kullanılmaktadır ve 10 dilde mevcuttur. Uygulama alanları, ofislerin farklı görevleri kadar çeşitlidir.",
+          "youtubeId": "Z8-aMd_TGBY",
+          "reverse": true
+        },
+        {
+          "kicker": "/ LİSANS VE GEREKSİNİMLER",
+          "title": "Lisans ve Gereksinimler",
+          "lead": "Tek kullanıcı lisansı, mevcut Allplan lisansına bağlıdır ve bir PC'den diğerine kolayca aktarılabilir.",
+          "subheading": "Sistem Gereksinimleri: Allplan 2020 – 2023 · Diller: Almanca, İngilizce ve İtalyanca",
+          "description": "Eklentiyi yükledikten sonra deneme sürümünü 14 gün ücretsiz olarak kullanabilirsiniz.",
+          "imageSrc": "/assets/solutions/cds/license.jpg",
+          "ctaText": "Link zum Download Bereich (Setup)",
+          "ctaHref": "https://cdssieber.sharepoint.com/:f:/g/Ev_G2db5WVVBvMEN-Adhz24Bk5f3rEvFCQu77iLTTCIynw?e=qkPdri",
+          "external": true,
+          "reverse": false
+        }
+      ],
+      "benefits": {
+        "kicker": "/ 18 ÖLÇÜLENDİRME ARACI",
+        "title": "Fonksiyona Genel Bakış",
+        "items": [
+          {
+            "subtitle": "Masslinie erzeugen",
+            "title": "Ölçü Çizgisi Oluştur",
+            "description": "Uzayda doğrudan 3B ölçülendirme ve etiketleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/3d-dimensioning/2000_657fe45eef64a.webp"
+          },
+          {
+            "subtitle": "Kotenbemassung erzeugen",
+            "title": "Kot Ölçülendirme Oluştur",
+            "description": "Uzayda doğrudan 3B ölçülendirme ve etiketleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/3d-dimensioning/2000_657fe469ce9c8.webp"
+          },
+          {
+            "subtitle": "Winkelbemassung erzeugen",
+            "title": "Açı Ölçülendirme Oluştur",
+            "description": "Uzayda doğrudan 3B ölçülendirme ve etiketleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/3d-dimensioning/2000_657fe47aac073.webp"
+          },
+          {
+            "subtitle": "Gefällebemassung erzeugen",
+            "title": "Eğim Ölçülendirme Oluştur",
+            "description": "Uzayda doğrudan 3B ölçülendirme ve etiketleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/3d-dimensioning/2000_657fe4877d960.webp"
+          },
+          {
+            "subtitle": "Höhenkote erzeugen",
+            "title": "Yükseklik Kotu Oluştur",
+            "description": "Uzayda doğrudan 3B ölçülendirme ve etiketleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/3d-dimensioning/2000_657fe4927f31b.webp"
+          },
+          {
+            "subtitle": "Kreisbemassung erzeugen",
+            "title": "Daire Ölçülendirme Oluştur",
+            "description": "Uzayda doğrudan 3B ölçülendirme ve etiketleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/3d-dimensioning/2000_657fe49e2393a.webp"
+          },
+          {
+            "subtitle": "Textzeiger erzeugen",
+            "title": "Metin Göstergesi Oluştur",
+            "description": "Uzayda doğrudan 3B ölçülendirme ve etiketleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/3d-dimensioning/2000_657fe4a901f53.webp"
+          },
+          {
+            "subtitle": "Referenz-Punkt hinzufügen",
+            "title": "Referans Noktası Ekle",
+            "description": "Uzayda doğrudan 3B ölçülendirme ve etiketleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/3d-dimensioning/2000_657fe4b334de6.webp"
+          },
+          {
+            "subtitle": "Referenz-Punkt löschen",
+            "title": "Referans Noktası Sil",
+            "description": "Uzayda doğrudan 3B ölçülendirme ve etiketleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/3d-dimensioning/2000_657fe4bd36cf3.webp"
+          },
+          {
+            "subtitle": "Referenz-Punkt verschieben",
+            "title": "Referans Noktası Taşı",
+            "description": "Uzayda doğrudan 3B ölçülendirme ve etiketleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/3d-dimensioning/2000_657fe4d4f1bbd.webp"
+          },
+          {
+            "subtitle": "Masslinie verschieben",
+            "title": "Ölçü Çizgisi Taşı",
+            "description": "Uzayda doğrudan 3B ölçülendirme ve etiketleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/3d-dimensioning/2000_657fe4e04d054.webp"
+          },
+          {
+            "subtitle": "Text verschieben",
+            "title": "Metni Taşı",
+            "description": "Uzayda doğrudan 3B ölçülendirme ve etiketleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/3d-dimensioning/2000_657fe4ebeb9e4.webp"
+          },
+          {
+            "subtitle": "Textposition zurücksetzen",
+            "title": "Metin Konumunu Sıfırla",
+            "description": "Uzayda doğrudan 3B ölçülendirme ve etiketleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/3d-dimensioning/2000_657fe4f91f064.webp"
+          },
+          {
+            "subtitle": "Symbol modifizieren",
+            "title": "Sembolü Düzenle",
+            "description": "Uzayda doğrudan 3B ölçülendirme ve etiketleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/3d-dimensioning/2000_657fe5038f02b.webp"
+          },
+          {
+            "subtitle": "Masslinie aktualisieren",
+            "title": "Ölçü Çizgisini Güncelle",
+            "description": "Uzayda doğrudan 3B ölçülendirme ve etiketleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/3d-dimensioning/2000_657fe50e5014f.webp"
+          },
+          {
+            "subtitle": "Eigenschaften übertragen",
+            "title": "Özellikleri Aktar",
+            "description": "Uzayda doğrudan 3B ölçülendirme ve etiketleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/3d-dimensioning/2000_657fe52022a45.webp"
+          },
+          {
+            "subtitle": "Masslinie modifizieren",
+            "title": "Ölçü Çizgisini Düzenle",
+            "description": "Uzayda doğrudan 3B ölçülendirme ve etiketleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/3d-dimensioning/2000_657fe52a9766b.webp"
+          },
+          {
+            "subtitle": "Bemassung löschen",
+            "title": "Ölçülendirmeyi Sil",
+            "description": "Uzayda doğrudan 3B ölçülendirme ve etiketleme fonksiyonu.",
+            "iconSrc": "/assets/solutions/cds/3d-dimensioning/2000_657fe5349e15b.webp"
+          }
+        ]
+      },
+      "extraGrids": [
+        {
+          "kicker": "/ UYGULAMA VİDEOLARI",
+          "title": "Video Galerisi",
+          "subtitle": "3B Ölçülendirme (3D Bemassung) tanıtım ve uygulama videoları.",
+          "columns": 3,
+          "items": [
+            {
+              "title": "3B Ölçülendirme - Video 1",
+              "description": "Uzayda doğrudan 3B uzunluk, kot, açı ve eğim ölçülendirme.",
+              "youtubeId": "GlkCJ9hmqho"
+            },
+            {
+              "title": "3B Ölçülendirme - Video 2",
+              "description": "Dinamik önizlemeler, koordinat listeleri ve görünüm/kesit üretimi.",
+              "youtubeId": "IR6TsiCpPJI"
+            },
+            {
+              "title": "3B Ölçülendirme - Video 3 (Müşteri Örnekleri)",
+              "description": "3B PDF, IFC ve Bimplus dışa aktarımı ile gerçek proje örnekleri.",
+              "youtubeId": "Z8-aMd_TGBY"
+            }
+          ]
+        }
+      ]
+    }
   },
   "/solutions/allplan-bulut-hizmetleri": {
     "path": "/solutions/allplan-bulut-hizmetleri",
@@ -35656,7 +36975,70 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "intro": {
+        "kicker": "/ ALLPLAN NEDİR? · ENDÜSTRİ ÇÖZÜMLERİ",
+        "title": "Sektörün En Kapsamlı BIM Çözümü",
+        "bullets": [
+          "Mimari ve iç mimariden, yapısal ve MEP mühendisliğine, altyapı ve köprü mühendisliğinden, betonarme ve prekast detaylandırmaya ve şantiye planlamasına kadar.",
+          "Konsept tasarımdan detaylı uygulama çıktılarına kadar tüm disiplinlerde verimli iş akışlarını destekleyen güçlü araçlar.",
+          "Daha başarılı projelerin teslimi, koordinasyonu ve verimli işbirliği için entegre bulut teknolojisi."
+        ],
+        "videoEmbedUrl": "https://www.youtube.com/embed/tFnwOyX7ncI"
+      },
+      "stats": [
+        {
+          "value": "45%",
+          "label": "YÜKSEK PERFORMANS",
+          "description": "Paydaş onayı ve zamanında inşaat için fikirlerden en yüksek ayrıntı seviyelerine daha hızlı geçiş."
+        },
+        {
+          "value": "65%",
+          "label": "DAHA FAZLA HASSASİYET",
+          "description": "Daha erken bir aşamada daha hassas verilerin verimli üretimi, güvenilir maliyet kontrolü sağlar."
+        },
+        {
+          "value": "35%",
+          "label": "DAHA FAZLA PROJE KAZAN",
+          "description": "Tasarım verimliliğini artırır, zamanında teslimatı destekler, daha yüksek kalitede, daha fazla proje."
+        }
+      ],
+      "challenges": [
+        "Tasarım, planlama ve inşaat için artan karmaşıklık ve işbirliği gereksinimleri.",
+        "Çok fazla zaman alan, kaliteyi etkileyen ve risk oluşturan sürekli proje değişiklikleri.",
+        "Proje maliyetleriniz hakkında devam eden endişeler ve kontrolden çıkan zaman gecikmeleri."
+      ],
+      "benefits": {
+        "kicker": "/ ÖZELLİKLER",
+        "title": "ÖNE ÇIKAN ÖZELLİKLER",
+        "items": [
+          {
+            "title": "TEK YAZILIMLA TAM ÇÖZÜM",
+            "description": "Küçükten son derece karmaşık olana kadar her tür inşaat için uygundur, büyük model verilerini hızlı ve güvenli işler."
+          },
+          {
+            "title": "İSTEDİĞİNİZ GİBİ ÇALIŞIN",
+            "description": "2B, 2.5B ve 3B'de esnek iş akışlarının yanı sıra tam obje yönelimli BIM çalışma metodolojisi."
+          },
+          {
+            "title": "ÜRETKEN İŞBİRLİĞİ",
+            "description": "Çok kullanıcılı gerçek zamanlı çalışma için entegre bulut teknolojisinin yanı sıra iş ortaklarıyla model ve proje işbirliği."
+          },
+          {
+            "title": "İKNA EDİCİ GÖRSELLEŞTİRMELER",
+            "description": "Müşterilere ve paydaşlara tasarımları anında açıklayan hızlı ve yüksek kaliteli sunumlar."
+          },
+          {
+            "title": "GEREKSİNİMLERİ KOLAYCA DEĞİŞTİRİN",
+            "description": "Planları sıfırdan yeniden modellemek zorunda kalmadan uyarlayın ve değiştirin, zamandan tasarruf edin."
+          },
+          {
+            "title": "ÜSTÜN KALİTELİ TESLİMATLAR",
+            "description": "Doğrudan 3B modelden hızlı ve doğru planlar, çizimler ve raporlar oluşturun."
+          }
+        ]
+      }
+    }
   },
   "/solutions/architecture": {
     "path": "/solutions/architecture",
@@ -36880,7 +38262,68 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "splitCallouts": [
+        {
+          "kicker": "/ BİNA TESİSATI ÇÖZÜMÜ · TÜRK STANDARTLARINA UYUMLU",
+          "title": "Deneyim Kazandırır",
+          "description": "AX3000'in Bina Tesisatı çözümünde lider konuma gelmesi CAD pazarındaki 25 yıllık deneyimin sonucudur. AX-3000 Mekanik ve Tesisat ile ilgili ihtiyaçlarınız için geliştirilmiş ilk CAD yazılımıdır ve işinizde projelendirmeden konstrüksiyona ve uygulamaya kadar tüm ihtiyaçlarınızı karşılar.",
+          "bullets": [
+            "TS 825 Bileşen Arayüzü",
+            "Isıtma Modülünde Kat, Yön ve İşletme Zamlarının Otomatik Hesabı",
+            "Türkiye İklim Verileri",
+            "EKB yazılımı BEP Yönetmeliğine göre",
+            "Soğutma Hesabı Türkiye İklim Verilerine göre"
+          ],
+          "youtubeId": "fHYDP36DcjA",
+          "reverse": false
+        },
+        {
+          "kicker": "/ MODÜLER MEP YAPISI",
+          "title": "Tümleşik Kullanım",
+          "description": "AX3000'deki modüler yapı sayesinde Sıhhi Tesisat, Isıtma, Havalandırma, Soğutma, EKB ve Elektrik tesisatı için çok seçenekli özel çözümler üretebilirsiniz. Siz bir kere yazılımda çalışmaya başlayın, tümleşik kullanım sayesinde ileri safhalara kolayca geleceksiniz.",
+          "imageSrc": "/assets/solutions/ax3000/simulason.jpg",
+          "reverse": true
+        },
+        {
+          "kicker": "/ VERİ YÖNETİMİ",
+          "title": "Optimum Veri Yönetimi",
+          "description": "AX-3000 yerleşim plan içindeki verileri en uygun ve anlaşılır şekilde sıralayarak projenizi yönetmenizi kolaylaştırır.",
+          "imageSrc": "/assets/solutions/ax3000/Untitled-3.png",
+          "reverse": false
+        }
+      ],
+      "extraGrids": [
+        {
+          "kicker": "/ AX3000 UZMANLIK MODÜLLERİ",
+          "title": "AX3000 Çözüm Ailesi",
+          "columns": 3,
+          "items": [
+            {
+              "title": "AX3000 Virtual Reality",
+              "description": "Şimdi hazır! Müşterileriniz çok daha memnun kalacaklar çünkü isteklerine daha iyi cevap verebilirsiniz.",
+              "imageSrc": "/assets/solutions/ax3000/slide-vr-1.jpg",
+              "href": "/solutions/ax3000-virtual-reality",
+              "ctaText": "Devamını oku"
+            },
+            {
+              "title": "AX3000 Yapı Fiziği",
+              "description": "Saatlik hava durumu verilerine dayanan dinamik simülasyonlar - dünya çapında!",
+              "imageSrc": "/assets/solutions/ax3000/sanitation.jpg",
+              "href": "/solutions/ax3000-yapi-fizigi",
+              "ctaText": "Devamını oku"
+            },
+            {
+              "title": "AX3000 Mekanik Tesisat",
+              "description": "Tümleşik kullanım, akıllı çizim elemanları ve çok seçenekli otomatik hesaplama sayesinde planlama zamanınızı en verimli şekilde kullanmanızı sağlar.",
+              "imageSrc": "/assets/solutions/ax3000/ventilation.jpg",
+              "href": "/solutions/ax3000-mekanik-tesisat",
+              "ctaText": "Devamını oku"
+            }
+          ]
+        }
+      ]
+    }
   },
   "/solutions/ax3000-mekanik-tesisat": {
     "path": "/solutions/ax3000-mekanik-tesisat",
@@ -37659,7 +39102,37 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "splitCallouts": [
+        {
+          "kicker": "/ AX3000 VIRTUAL REALITY · OPEN BIM & BIMPLUS",
+          "title": "Virtual Reality: Tek bir tıklama ile sınırsız 3B-Gerçeği yaşayın",
+          "paragraphs": [
+            "Şimdi hazır! Müşterileriniz çok daha memnun kalacaklar çünkü isteklerine daha iyi cevap verebilirsiniz. Ofisinizde toplantı esnasında planladığınız yapının etrafında ve içinde gezindirebileceksiniz.",
+            "Bunu kullanırken teknolojinin desteklediği bir 3B-Gözlük (Örneğin: Oculus Rift, VIVE VR), Game-Engine ve AX3000 Plugin planlama araçtan verileri okumaktadır. Gerçek mekanların izlenimi, orantıyı, aydınlatma durumunu ve renk/malzeme seçimlerinizi farklı yıllık ve günlük saat dilimlerine veya hava koşullarına göre sunabilirsiniz.",
+            "Bimplus: Virtual-Reality-Çözümü Tüm Planlama Yazılımları İçin. Bu merkezi Open-BIM platformu ile yapılarınız ve planlarınızla her planlama yazılımı üzerinden sanal gezinti hazırlayabilir ve müşterilerinize sunabilirsiniz."
+          ],
+          "bullets": [
+            "Firma ESS Bimplus platformu için geliştirdiği merkezi OPEN BIM platformu mal sahipleri için bir Allplan servisidir.",
+            "Sistem bağımsız platform olduğundan bina modelini hangi yazılımda ürettiğiniz fark etmez.",
+            "Virtual Reality'de 3B modelde karmaşık yapılar daha iyi anlaşılır.",
+            "Planlama hataları bina uygulamadan önce belli olur."
+          ],
+          "youtubeId": "fHYDP36DcjA",
+          "ctaText": "Demo Test",
+          "ctaHref": "https://vr.ax3000-group.de/",
+          "external": true,
+          "reverse": false
+        },
+        {
+          "kicker": "/ VR İLETİŞİM DEVRİMİ",
+          "title": "Virtuelle Realität – 3B-Videodan Fazlası",
+          "description": "AX3000 VR normal planlama yazılımınız için bir eklentidir. İstediğiniz zaman şu anki planlama durumundan sadece tek bir tıklama ile gerçek zamanlı VR çevresini yükleyebilir, duvarın taşınması veya pencerenin büyümesi gibi her değişikliği anında sunabilirsiniz.",
+          "imageSrc": "/assets/solutions/ax3000/virtual-reality/banner_vr.jpg",
+          "reverse": true
+        }
+      ]
+    }
   },
   "/solutions/ax3000-yapi-fizigi": {
     "path": "/solutions/ax3000-yapi-fizigi",
@@ -37864,7 +39337,48 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "splitCallouts": [
+        {
+          "kicker": "/ BİNA ENERJİ SİMÜLASYONU",
+          "title": "AX3000 Yapı Fiziği",
+          "description": "AX-3000, Sıhhi Tesisat, Isıtma, Havalandırma, Soğutma, Elektrik Tesisatı ve Bina Enerji Tasarımı (EKB) ile ilgili tüm hesap ve planlama ihtiyaçları için zaman kazandıran entegre bir çözümdür. Tümleşik kullanım, akıllı çizim elemanları ve çok seçenekli otomatik hesaplama sayesinde planlama zamanınızı en verimli şekilde kullanmanızı sağlar.",
+          "imageSrc": "/assets/solutions/ax3000/yapi-fizigi/ax-bg-1.jpg",
+          "reverse": false
+        },
+        {
+          "kicker": "/ ENERJİ KİMLİK BELGESİ (EKB) & SİMÜLASYON",
+          "title": "AX3000 Enerji Kimlik Belgesi",
+          "subheading": "Saatlik Dinamik Simülasyon – Otomatik Zon ve Sistem Tanımlaması",
+          "bullets": [
+            "DWG'den otomatik geometri algılaması",
+            "Optimizasyon için değişkenlerin karşılaştırması",
+            "Kolay zonlama imkânı",
+            "BEP yönetmeliğine göre konut ve konut dışı hesaplama yöntemi",
+            "Esnek raporlar ve belgeler: Word, Excel, PDF, XML",
+            "Ülkeye bağlı elektronik veri aktarımı"
+          ],
+          "imageSrc": "/assets/solutions/ax3000/yapi-fizigi/ekb.jpg",
+          "reverse": true
+        },
+        {
+          "kicker": "/ BİNA ENERJİ TASARIMI · TS 825 & BEP",
+          "title": "CAD çizimi, CAD'de bileşenlerin tanımlanması – TS 825",
+          "subheading": "AX3000 EKB BEP yönetmeliğine göre uyarlanmış çizimden hesap yapan tek çözümdür.",
+          "bullets": [
+            "Bina modelinden yapı elemanı oluşturma ve mahal listesi",
+            "U-değeri girişi, odalara göre alan & CAD'de bileşenlerin ve alanların grafiksel kontrolü",
+            "Kısa zamanda ZON tanımlaması & Zon değişikliği 10 saniyede",
+            "Bileşen değişikliği dinamik olarak algılanır (alan ve hacim için)",
+            "Sistemlerin Atanması: Isıtma – Soğutma – Sıhhi Sıcak Su – Havalandırma – Aydınlatma",
+            "Otomatik zon planlaması, Tek tıkla Referans Binanın oluşturulması",
+            "Tadilat seçeneği, değişkenlerin karşılaştırılması & Ekonomik verimlilik değerlendirmesi"
+          ],
+          "youtubeId": "fHYDP36DcjA",
+          "reverse": false
+        }
+      ]
+    }
   },
   "/solutions/ax3000/elektrik": {
     "path": "/solutions/ax3000/elektrik",
@@ -39773,7 +41287,154 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "benefits": {
+        "kicker": "/ NEDEN BIMFLEX?",
+        "title": "Yapı elemanı bazlı, revizyona dayanıklı donatı akışı.",
+        "items": [
+          {
+            "subtitle": "01 · ENTEGRE BIM",
+            "title": "Allplan İçi Doğrudan Çalışma",
+            "description": "Allplan içinde çalışan BIM uyumlu yapı elemanları donatısı."
+          },
+          {
+            "subtitle": "02 · DİNAMİK REVİZYON",
+            "title": "Otomatik Model Güncelleme",
+            "description": "Geometri değiştiğinde kendini güncelleyen modül yaklaşımı."
+          },
+          {
+            "subtitle": "03 · YÜKSEK HIZ",
+            "title": "Saatlerden Saniyelere",
+            "description": "Donatı modelleme ve detay hazırlığını saatlerden saniyelere indiren otomasyon."
+          }
+        ]
+      },
+      "coreFeatures": {
+        "kicker": "/ YAPI ELEMANLARI PAKETİ",
+        "title": "7 modül, tek Allplan donatı otomasyonu ailesi.",
+        "subtitle": "FlexSoft tarafından geliştirilen BIMFlex Allplan eklenti paketi ile kolon, kiriş, perde, döşeme ve boşluk donatılarını otomatik modelleyin.",
+        "columns": 3,
+        "items": [
+          {
+            "title": "Kolon Donatısı",
+            "badge": "Modül 01",
+            "description": "Kolon elemanlarının boyuna donatı yerleşimini ve etriye sıklaştırma bölgelerini otomatik modeller.",
+            "bullets": [
+              "Şaşırtmalı donatı yerleşimi",
+              "Katı modellerde çalışma",
+              "Revizyon sonrası otomatik güncelleme"
+            ],
+            "imageSrc": "/assets/solutions/bimflex/kolon-model.png"
+          },
+          {
+            "title": "Kiriş Donatısı",
+            "badge": "Modül 02",
+            "description": "Kiriş elemanlarının açıklık, mesnet, etriye ve büküm detaylarını Allplan içinde hızlıca hazırlar.",
+            "bullets": [
+              "Açıklık ve mesnet donatıları",
+              "Etriye ve büküm detayları",
+              "Kesit etiketleme akışı"
+            ],
+            "imageSrc": "/assets/solutions/bimflex/kiris-model.png"
+          },
+          {
+            "title": "Perde Duvar Donatısı",
+            "badge": "Modül 03",
+            "description": "Perde duvarlarda düşey, yatay, çiroz ve başlık bölgesi donatılarını tek akışta düzenler.",
+            "bullets": [
+              "Düşey ve yatay donatı",
+              "Çiroz ve başlık bölgeleri",
+              "Temel filizi hazırlığı"
+            ],
+            "imageSrc": "/assets/solutions/bimflex/perde-duvar-video.jpg"
+          },
+          {
+            "title": "Duvar Boşluk Kenarı Donatısı",
+            "badge": "Modül 04",
+            "description": "Kapı ve pencere boşluklarını algılayarak U, kapalı etriye, köşe çaprazı ve ilave donatıları modeller.",
+            "bullets": [
+              "Boşluk bazlı seçim",
+              "Dar ayaklarda otomatik etriye",
+              "Boşluk taşınınca güncelleme"
+            ],
+            "imageSrc": "/assets/solutions/bimflex/duvar-bosluk-model.png"
+          },
+          {
+            "title": "Döşeme Donatısı",
+            "badge": "Modül 05",
+            "description": "Döşeme plakalarında üst mesnet ve dağıtım donatılarını komşu döşemelerle hizalı çalışacak şekilde oluşturur.",
+            "bullets": [
+              "Üst ve dağıtım donatısı",
+              "Komşu döşemelerle hizalama",
+              "Stok boyuna göre bölme"
+            ],
+            "imageSrc": "/assets/solutions/bimflex/doseme-video.jpg"
+          },
+          {
+            "title": "Döşeme Boşluk Kenarı Donatısı",
+            "badge": "Modül 06",
+            "description": "Merdiven, asansör ve tesisat boşlukları çevresindeki kritik takviye donatılarını otomatik ekler.",
+            "bullets": [
+              "Boşluk boyutuna göre ayar",
+              "Köşe takviyeleri",
+              "Revizyona dayanıklı yerleşim"
+            ],
+            "imageSrc": "/assets/solutions/bimflex/doseme-bosluk-model.png"
+          },
+          {
+            "title": "Karmaşık Şekil Donatısı",
+            "badge": "Modül 07",
+            "description": "Standart kalıba girmeyen betonarme yüzeyler için U, L veya düz profilli donatıları otomatik oluşturur.",
+            "bullets": [
+              "Yüzeye göre otomatik profil",
+              "Eğik ve çapraz yüzeyler",
+              "Boşluk ve kesimleri dikkate alma"
+            ],
+            "imageSrc": "/assets/solutions/bimflex/karmasik-sekil-video.jpg"
+          }
+        ]
+      },
+      "extraGrids": [
+        {
+          "kicker": "/ UYGULAMA VİDEOLARI",
+          "title": "BIMFlex Allplan Donatı Otomasyonu Videoları",
+          "subtitle": "Kolon, kiriş, perde duvar, döşeme ve karmaşık şekil donatılarının Allplan içinde otomatik modellenmesini izleyin.",
+          "columns": 3,
+          "items": [
+            {
+              "title": "BIMFlex Allplan Column Reinforcement",
+              "description": "Kolon elemanlarında boyuna donatı yerleşimi ve etriye sıklaştırma bölgelerinin Allplan içinde nasıl otomatik modellendiğini izleyin.",
+              "youtubeId": "1yQ_nxoQuWE"
+            },
+            {
+              "title": "BIMFlex Allplan Beam Reinforcement",
+              "description": "Kirişlerde açıklık ve mesnet donatıları, etriyeler ve büküm detaylarının geometri değişikliklerine uyumlu hazırlanışını görün.",
+              "youtubeId": "eBVa_yAQJFo"
+            },
+            {
+              "title": "BIMFlex Allplan Wall Reinforcement",
+              "description": "Perde duvarlarda düşey, yatay, çiroz ve başlık bölgesi donatılarının tek akışta modellenmesini adım adım inceleyin.",
+              "youtubeId": "Qyy_hRNkOtY"
+            },
+            {
+              "title": "BIMFlex Allplan Slab Reinforcement",
+              "description": "Döşeme plakalarında üst mesnet ve dağıtım donatılarının komşu döşemelerle hizalı ve revizyona dayanıklı oluşturulmasını izleyin.",
+              "youtubeId": "ZFjW2ArzdsE"
+            },
+            {
+              "title": "BIMFlex Allplan Slab Opening Edge Reinforcement",
+              "description": "Merdiven, asansör ve tesisat boşlukları çevresindeki köşe takviye donatılarının otomatik eklenme sürecini görün.",
+              "youtubeId": "4LlhiiWdHpg"
+            },
+            {
+              "title": "BIMFlex Allplan Complex Shape Reinforcement",
+              "description": "Standart kalıba girmeyen karmaşık betonarme yüzeylerde U, L veya düz profilli donatı üretim akışını keşfedin.",
+              "youtubeId": "gwgVeTrtcM8"
+            }
+          ]
+        }
+      ]
+    }
   },
   "/solutions/bimx5": {
     "path": "/solutions/bimx5",
@@ -39971,7 +41632,62 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "splitCallouts": [
+        {
+          "kicker": "/ E-HAKEDİŞ & METRAJ ENTEGRASYONU",
+          "title": "Oska e-HakedişPro",
+          "lead": "Aynı metrajları tekrar tekrar girme devri kapandı!",
+          "subheading": "Bir pozun metrajı, bir veya birden çok poz içeriyorsa, pozlara birer köprü yeter. Köprülenmiş metraj cetvelinde yapılan değişiklikler anında her yere yansır.",
+          "description": "e-HakedişPro, derin bir yaklaşık maliyet, analiz ve hakediş bilgisini gerektirmeyen tasarım özellikleri ve kullanıcı dostu arayüzleri sayesinde yapı sektöründeki teknik elemanların yapı yaklaşık maliyeti ve hakediş hesaplamadaki tüm zorluklarını ortadan kaldırır.",
+          "youtubeId": "sAR1LFIe12k",
+          "reverse": false
+        }
+      ],
+      "benefits": {
+        "kicker": "/ KAMU İHALE KANUNU UYUMLU ÇÖZÜM",
+        "title": "Oska e-HakedişPro Avantajları",
+        "items": [
+          {
+            "title": "e-HakedişPro ne iş yapar?",
+            "description": "4734 sayılı Kanuna uygun olarak, Yaklaşık Maliyet, Hakediş ve Kesin Hesap işlemlerini hızlı, kolay ve hatasız yapar."
+          },
+          {
+            "title": "e-HakedişPro kimler içindir?",
+            "description": "Bayındırlık, MSB, MEB, Sağlık, Kültür ve diğer bakanlıklar ile TCK, DSİ, Belediyeler… kısaca 4734 sayılı Kamu İhale Kanunu kapsamına giren tüm kurumlar ve bunlara iş yapan yükleniciler içindir."
+          },
+          {
+            "title": "e-HakedişPro ne tür işlerde kullanılır?",
+            "description": "Kamu İhale Kanunu’na göre ihale edilen, Anahtar Teslimi Götürü Bedel ve Birim Fiyat Teklif türündeki yapım işlerinde kullanılır."
+          }
+        ]
+      },
+      "extraGrids": [
+        {
+          "kicker": "/ UYGULAMA VİDEOLARI",
+          "title": "BIM Modellemesi, Metraj ve Eklenti Videoları",
+          "subtitle": "Kurum Raporları Eklentisi, 2B DWG Converter ve İmar Yönetmeliği BIM Eklentisi iş akışları.",
+          "columns": 3,
+          "items": [
+            {
+              "title": "Kurum Raporları Eklentisi",
+              "description": "Allplan ve Oska e-HakedişPro ile birlikte ve entegre çalışan bir eklentidir. Yıllardır süregelen kurumların metraj listesi istek ve ihtiyaçları doğrultusunda deneyimlenmiş bir istisnai çözümdür. İstediğiniz tüm metraj bilgilerini ister Resmi Pozlar ile üretilmiş olsun ister Özel Firma Pozları veya belirlenmiş Bütçe Kodları ile üretilmiş olsun Metraj sayfalarını icmalleri ile birlikte çıkartabilecek ve Yaklaşık Maliyet tablolarını oluşturabileceksiniz",
+              "youtubeId": "7H74u2fz81w"
+            },
+            {
+              "title": "2B dwg Converter",
+              "description": "İhaleye teklif vereceksiniz Allplan’de modelleme yapmaya zamanınız yok, 2B dwg dönüştürücü ile tek tuşla çoklu çizgileri mahallere, çizgileri duvara, kirişe, odaların etrafını duvarlara dönüştürün, BIM modellemede büyük hız kazanın.",
+              "youtubeId": "z_5snW0K-nU"
+            },
+            {
+              "title": "İmar Yönetmeliği Akıllı BIM Eklentisi",
+              "description": "Allplan ile projelerinizi doğrudan 2018’de yürürlüğe giren Planlı Alanlar İmar Yönetmeliğine uyumlu üreteceksiniz. Saatlerinizi ve hatta günlerinizi vererek yaptığınız hesaplar Allplan’e entegre akıllı yönetmelik eklentisi ile kolayca yapılabiliyor.",
+              "youtubeId": "0W6k7W5KtzE"
+            }
+          ]
+        }
+      ]
+    }
   },
   "/solutions/bridge-design": {
     "path": "/solutions/bridge-design",
@@ -41238,7 +42954,150 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "splitCallouts": [
+        {
+          "kicker": "ALLPLAN BRIDGE · GENEL BAKIŞ",
+          "title": "Allplan Bridge – Genel Bakış",
+          "description": "Yeni Allplan Bridge versiyonu parametrik köprü tasarımını tamamen yeni bir seviyeye çıkarıyor. Güçlü ve otomatikleştirilmiş modelleme ve detaylandırma araçlarını, genişletilmiş yapısal analiz yeteneklerini ve kolaylaştırılmış dijital tasarım iş akışlarını kullanarak görevleri daha önce hiç bu kadar hızlı tamamlayamamıştınız. Köprü mühendislerine tasarımlarını optimize etme, projeleri daha erken teslim etme, müşterileri için değeri en üst düzeye çıkarma ve daha iyi köprüler inşa etme fırsatı vermek.",
+          "youtubeId": "q9r0WUmNZEA",
+          "reverse": false
+        },
+        {
+          "kicker": "ÖZELLİK 01 · ALLPLAN BRIDGE",
+          "title": "Parametrik referanslama ile arazi görselleştirmesi",
+          "subheading": null,
+          "paragraphs": [
+            "Yeni bir köprüyü bir ortama yerleştirirken büyük dikkat gerektiren başlıca hususlar köprünün işlevselliği, güvenliği ve estetik çekiciliğidir.",
+            "Tasarım sürecinde yerel topoğrafya, su, toprak bileşimi, doğal ve insan yapımı engellerin varlığı gibi birçok faktörün araştırılması gerekmektedir. Doğrudan Allplan Bridge'de arazi görselleştirmesi ile tasarım süreci artık önemli ölçüde daha akıcı hale geldi.",
+            "Yalnızca görselleştirme amacıyla değil, arazi aynı zamanda modelleme ve açıklıkların kontrol edilmesi için de kullanılabilir. Örneğin, otomatik olarak oluşturulan bir arazi aksını kullanarak bir iskele veya kazık gibi altyapıyı araziye göre referans almak mümkündür. Bu sadece modelleme için değil, aynı zamanda değişiklikler uygulandığında da kullanışlıdır - çünkü tam tanım parametrik olduğundan, örneğin kiriş yüksekliği gibi bir değişiklik uygulandığında iskele yüksekliği otomatik olarak ayarlanır."
+          ],
+          "imageSrc": "",
+          "videoSrc": "/assets/solutions/bridge/features/01_Terrain_visualization_with_parametric_referencing_Video.mp4",
+          "reverse": true
+        },
+        {
+          "kicker": "ÖZELLİK 02 · ALLPLAN BRIDGE",
+          "title": "Allplan Cloud aracılığıyla dever verilerinin içe aktarılması",
+          "subheading": "Daha verimli tasarım çalışması",
+          "paragraphs": [
+            "Aks ve kaplama geometrisi (kesit) normalde yol mühendisi tarafından tanımlanır. Aks, plan ve yükseklik geometrisi tarafından tanımlanır ve kaplama, bir veya daha fazla çapraz eğim ve aks boyunca değişen karşılık gelen genişlikler tarafından tanımlanır. Köprüleri modellerken tüm bunların dikkate alınması gerekir. Bu verinin tekrar girilmesini atlamak olmasa da en aza indirmek için, Allplan Bridge'de artık yalnızca aks geometrisini değil, aynı zamanda çapraz eğimin karşılık gelen tanımını/tanımlarını da içe aktarmak mümkün."
+          ],
+          "imageSrc": "/assets/solutions/bridge/features/csm_02_Import_of_super-elevation_data_via_Allplan_Cloud_1c567fda80-768x431.jpg",
+          "videoSrc": null,
+          "reverse": false
+        },
+        {
+          "kicker": "ÖZELLİK 03 · ALLPLAN BRIDGE",
+          "title": "Parametrik Donatı Bağlantısı",
+          "subheading": "Daha hızlı ve daha verimli detaylandırma",
+          "paragraphs": [
+            "Tatmin edici bir marjı korurken, makul bir zaman dilimi içinde gerekli kalite standartlarında BIM donatılandırma modellerini ve detay çizimlerini üretmek her zaman bir zorluktur. Üretkenliğe ve kârlılığa zarar vermeden kaliteyi sağlamak, proje türü ve konumu ne olursa olsun, her donatılandırma projesi için mühendislik ve detaylandırma şirketleri için sürekli bir zorluktur. ALLPLAN bunu anlıyor ve bu nedenle Allplan, yaygın donatı detaylandırma sorunlarının üstesinden gelmek için özel olarak geliştirildi.",
+            "Allplan Bridge ile bir sonraki büyük adım atılıyor. İki parametrik teknoloji, parametrik tasarımdan inşaya çözüm sağlamak için birleştirildi; Allplan Bridge ve Allplan'daki PythonParts'ın parametrik modelleme çözümü. Allplan Köprü donatı setleri öncelikle donatı tasarımı ve kod kontrolü için tanımlanır ve bu donatı setleri artık Allplan'daki PythonPart teknolojisine parametrik olarak bağlanmıştır. Sadece boyuna, kesme ve burulma donatısının geometrisi değil, aynı zamanda çubukların konumu, çubuk sayısı ve çubuk çapları gibi diğer tüm bilgiler de Allplan'a aktarılır. Sonuç olarak, tasarımdan üretime tamamen parametrik bir iş akışı mümkün oluyor; bu da işin daha hızlı ve daha az hataya açık olmasını sağlıyor ve aynı zamanda daha yüksek kalite, üretkenlik ve karlılık sağlıyor."
+          ],
+          "imageSrc": "",
+          "videoSrc": "/assets/solutions/bridge/features/03_Parametric_Reinforcement_Connection_Video.mp4",
+          "reverse": true
+        },
+        {
+          "kicker": "ÖZELLİK 04 · ALLPLAN BRIDGE",
+          "title": "Serbest Parametrik modelleme 2.0",
+          "subheading": "Güçlü, esnek ve zaman kazandıran modelleme",
+          "paragraphs": [
+            "Allplan Bridge'de üç ana modelleme yöntemi vardır. İlk yaklaşım, tam bir geometri oluşturmak amacıyla bir kesitin ekstrüzyonu için aksın 3 boyutlu formunu kullanır. Bununla birlikte, köprü yapılarında, prefabrik kirişler gibi aksı takip etmeyen elemanların sıklıkla bulunması nedeniyle, bu köprü elemanları için özel olarak uyarlanmış başka bir modelleme yaklaşımı gerekliydi ve önceki versiyonlardan birinde uygulandı.",
+            "2023 sürümünde üçüncü bir modelleme yaklaşımı yayınlandı: Serbest Parametrik modelleme. Versiyon 2024 ile bu modelleme yaklaşımı önemli ölçüde geliştirildi ve daha da güçlü hale geliyor çünkü Allplan Bridge'deki kiriş, iskele, bağlantı kirişi veya tabliye gibi herhangi bir modelleme elemanı bir 3B gövdeye dönüştürülür ve serbestçe kullanılır. Çıkarılan gövde herhangi bir değişikliğe kusursuz bir şekilde uyum sağladığı için model tamamen parametrik kalıyor. Ayrıca, çıkarılan gövde Boolean işlemleri için kullanılabilir, şablon olarak kullanılabilir ve modelleme alanı içinde serbestçe hareket ettirilebilir.",
+            "Serbest parametrik modellemeye ilişkin bir başka gelişme, bir prizma şablonunda daha fazla prizma elemanının kullanılması ve bunların Boolean işlemleri kullanılarak birleştirilmesidir. Bu, bir köprü modeline birden çok kez kolayca yerleştirilip konumlandırılabilen ve kolaylıkla dışa aktarılıp diğer projelerde kullanılabilen şablonlar gibi abutmentler gibi daha karmaşık objelerin oluşturulmasına olanak sağlar.",
+            "Gövde Konteynerleri bir başka güçlü gelişmedir. Kendi yerel koordinat sistemi içerisinde çalışan yeni bir obje türüdür. Bu sistem içerisinde kullanıcılar, 3B gövdelerin yerleştirilmesine olanak tanıyan konteyner orijini ile değişen ilişkilere sahip 3B yerleştirme noktalarını konumlandırabilirler. Gövde Konteynerleri, birden fazla gövde grubunu barındırma kapasitesine sahip olup, modelleme iş akışını daha da geliştirir ve daha karmaşık objelerin dahil edilmesini kolaylaştırır."
+          ],
+          "imageSrc": "/assets/solutions/bridge/features/csm_04_Free_Parametric_modeling_2.0_a03a10dd38-768x431.jpg",
+          "videoSrc": null,
+          "reverse": false
+        },
+        {
+          "kicker": "ÖZELLİK 05 · ALLPLAN BRIDGE",
+          "title": "Otomatik olarak türetilen hesaplama eylemleri",
+          "subheading": "Konsol yapım yöntemi için özel yükler",
+          "paragraphs": [
+            "Dengeli konsol yapım yöntemi, köprü yapımında sıklıkla kullanılan bir tekniktir. Bir iskeleden başlayarak, bireysel bölümler (prefabrik veya yerinde dökülmüş), simetrik veya simetrik olmayan bir sırayla her iki tarafta adım adım monte edilir. Form gezginleri, segmentleri oluşturmak için kullanılır ve aşamadan aşamaya ilerletilir. Bu döngü sırasında, köprüye, doğru yapısal ve zamana bağlı davranışı yansıtabilmek için uygun konum ve zaman noktasında dikkate alınması gereken çeşitli tipte yükler etkimektedir.",
+            "Allplan Bridge'teki yeni dengeli konsol görevi, yalnızca form gezgininin geometrik verilerinin obje odaklı girdisini ve ayrıca belirli inşaat adımlarının zaman çizelgesini gerektirir. Tüm bu veriler net bir şekilde düzenlenmiş tek bir giriş penceresinde sağlanırken, kopçanın uygulanması/hareket ettirilmesi, segmentin dökülmesi/montajı, kendi ağırlığının uygulanması, tendonların ön gerilmesi gibi çok sayıda hesaplama işleminin otomatik olarak gerçekleştirilmesiyle sonuçlanacaktır. ve değişen tüm yük uygulamaları sırasında sünme ve büzülmenin uygun şekilde dikkate alınması."
+          ],
+          "imageSrc": "",
+          "videoSrc": "/assets/solutions/bridge/features/05_Specialized_loads_for_cantilever_construction_method_Video.mp4",
+          "reverse": true
+        },
+        {
+          "kicker": "ÖZELLİK 06 · ALLPLAN BRIDGE",
+          "title": "EN'nin diğer ulusal ekleri",
+          "subheading": "Temel ulusal standartlara göre kolayca tasarlayın",
+          "paragraphs": [
+            "Allplan Bridge'in kod tabanlı tasarım modülündeki en son versiyonunun geliştirilmesi, üç yeni ulusal ekin ve bunların özelliklerinin tanıtılmasına odaklandı. Ulusal eklerin en son geçerli versiyonunun uygulanması artık Almanya (DIN EN), Fransa (NF EN), İspanya (UNE EN), Birleşik Krallık (BS EN), Avusturya (ÖNORM EN) ve Polonya (PN EN) için mevcuttur. ). Tüm sınır durumları artık eke özgü sınır değerleri veya yöntemleri kapsamındadır ve raporlarda da bunlara atıfta bulunulmaktadır."
+          ],
+          "imageSrc": "/assets/solutions/bridge/features/csm_06_Easily_design_to_key_national_standards_04aad0ab45-768x431.png",
+          "videoSrc": null,
+          "reverse": false
+        },
+        {
+          "kicker": "ÖZELLİK 07 · ALLPLAN BRIDGE",
+          "title": "Allplan Bridge Raporlama Aracı",
+          "subheading": "Raporlama sürecinde devrim yaratın",
+          "paragraphs": [
+            "Allplan Bridge iki dünyayı tek bir dünyada birleştiriyor ve bu sayede verimliliği, doğruluğu ve görsel etkiyi artıran bir dizi güçlü özellik sunarak raporlama sürecinde devrim yaratıyor. Tablolar, görüntüler, 2B ve 3B diyagramlar ve çok daha fazlası biçimindeki köprü tasarımı ve analiz verileri, kolayca bağlantılandırılabilir ve doğrudan MS Word belgelerine yerleştirilebilir. Bu, manuel veri girişi ve güncelleme ihtiyacını ortadan kaldırarak zamandan tasarruf sağlar ve hata riskini azaltır.",
+            "Sürükle ve bırak sistemi, verilerin kullanıcı tanımlı raporlara kusursuz şekilde entegre edilmesini sağlar. Kurulan bağlantı tüm verilerin güncel olmasını sağlar. Bir Allplan Bridge projesinde yapılan, tasarım elemanlarında, hesaplamalarda, diyagramlarda, resimlerde, tablolarda ve tasarım parçalarında yapılan değişiklikler gibi değişiklikler otomatik olarak yapısal rapora yansıtılır. Bu gerçek zamanlı güncelleme özelliği, manuel güncelleme ihtiyacını ortadan kaldırarak doğruluk sağlar ve değerli zamandan tasarruf sağlar. Ayrıca, kullanıcıların ilgili sonuçları saklamasına ve filtrelemesine olanak tanıyan bir gönderi veritabanı da sağlanmaktadır. Bu, önemli verilere hızlı erişim ve analiz yapılmasına olanak tanır. Özel sorgular oluşturmak, filtreler uygulamak ve özel tablolar oluşturmak için kapsamlı verileri sıralamak mümkündür.",
+            "Raporlama Aracının temel avantajları:",
+            "MS Word AddIn - herkesin çalışmaya alışık olduğu aracı kullanma Dinamik Veri Bağlantısı (Parametrik) Gerçek Zamanlı Güncelleme Veritabanı sonrası kullanılarak özelleştirilebilir tablolar Görseller için kapsamlı destek"
+          ],
+          "imageSrc": "/assets/solutions/bridge/features/csm_07_Allplan_Bridge_Reporting_Tool_b57ea20487-768x431.jpg",
+          "videoSrc": null,
+          "reverse": true
+        },
+        {
+          "kicker": "ÖZELLİK 08 · ALLPLAN BRIDGE",
+          "title": "Özet raporu",
+          "subheading": "Tasarımın otomatik özeti ve kod kontrolü",
+          "paragraphs": [
+            "Donatı tasarımı ve kod kontrol prosedürlerinin kapsamlı çıktı yetenekleri, yeni bir türle genişletildi. \"Özet Rapor\" olarak adlandırılan rapor, kod tasarımı ve kontrollerin ana sonuçlarına genel bir bakış sunar. Allplan Bridge kod kontrollerini uygun sonuç adlarıyla çalıştırır. Her bölüm için sonuçlar kaydedilir ve ardından, yönetim sonuçları, tüm sonuç adları ve tüm bölümler için bir döngüde filtrelenir. Daha sonra yönetim bölümleri ve sonuçları sıralanır, uç noktalar bulunur, genel bakış tabloları oluşturulur ve ayrıntılı sonuçlar özet rapora yerleştirilir."
+          ],
+          "imageSrc": "/assets/solutions/bridge/features/csm_08_Automatic_summary_of_the_design_and_code_checking_4d3bcb9f58-768x431.png",
+          "videoSrc": null,
+          "reverse": false
+        },
+        {
+          "kicker": "ÖZELLİK 09 · ALLPLAN BRIDGE",
+          "title": "Kompozit köprülerin yapısal analizi",
+          "subheading": "Teknik önizleme: Kompozit köprüler için yeni analiz yetenekleri",
+          "paragraphs": [
+            "Kompozit yapılar, köprüler için tipik olarak çelik kirişler ve beton tabliye gibi farklı malzeme türlerinin yanı sıra, yerinde dökme betonarme tabliyeli prefabrik beton kirişler gibi farklı zamanlarda birleştirilen aynı türdeki malzemeleri birleştiren gelişmiş mühendislik çözümleridir. Ayrıca bu çözüm köprü rehabilitasyonunun hesaplanmasında da kullanılabilir.",
+            "Allplan Bridge'in küresel yapısal analiz yetenekleri, kompozit yapıların davranışını doğru şekilde dikkate alacak şekilde geliştirildi. Örneğin, inşaat sırası hesaplaması yalnızca yeni eklenen yapısal bileşenleri değil aynı zamanda halihazırda etkinleştirilmiş kesit bileşenlerini de dikkate alır. Bu, sertlikte temel bir değişikliğe neden olur. Kompozit kesitler için, kompozit ünite için tipik ideal malzeme kullanılarak dönüştürülmüş kesit değerlerinin hesaplanmasına dayanmaktadır. Ayrıca çözüm, farklı kısmi elemanların sünme ve büzülme davranışlarındaki farklılığı doğru bir şekilde dikkate alır ve bu da kısmi elemanlarda fazla mesai içsel kuvvetlere (gerilmelere) neden olur. Çözüm, tüm kalıcı yüklerin yanı sıra kullanıcıların trafik veya deprem gibi tüm değişken yükleri de dikkate almasına olanak tanır. Bu yükler için kompozit elemanlar yüklenir ve hesaplanan kuvvetler otomatik olarak bölünür ve tasarım fonksiyonları için uygun şekilde kısmi elemanlara atanır."
+          ],
+          "imageSrc": "",
+          "videoSrc": "/assets/solutions/bridge/features/09_Structural_analysis_of_Composite_bridges.mp4",
+          "reverse": true
+        },
+        {
+          "kicker": "ÖZELLİK 10 · ALLPLAN BRIDGE",
+          "title": "Yeni kod tabanlı tasarım özellikleri",
+          "subheading": "Kompozit bölümler için Tasarım ve Kontrol prosedürlerinin genişletilmesi",
+          "paragraphs": [
+            "Kompozit yapıların genel analizine ek olarak tasarım modülü, kompozit betondan betona kesitlerin kod değerlendirmesiyle de geliştirildi. Kesit, sonradan gerilmiş bir yapısal ünite ve inşaatın daha sonraki bir aşamasında dökülen bir beton levhadan oluşabilir. Enine kesitin herhangi bir gerilim durumu, inşaat ve hizmet aşamalarında analiz edilebilir. Bunun üzerinde nihai ve kullanılabilirlik durumlarının kontrolleri geçerli standartlara uygun olarak yapılabilir. Değerlendirme aynı zamanda eski ve yeni beton arasındaki arayüzdeki gerilimlerin değerlendirilmesini ve derzdeki donatı kapasitesinin kontrolünü de içerir."
+          ],
+          "imageSrc": "/assets/solutions/bridge/features/2D-Diagrams-768x432.jpg",
+          "videoSrc": null,
+          "reverse": false
+        },
+        {
+          "kicker": "ÖZELLİK 11 · ALLPLAN BRIDGE",
+          "title": "Daha fazla yeni özellik ve iyileştirme",
+          "subheading": null,
+          "paragraphs": [
+            "Bir dizi yeni özellik ve iyileştirme daha mevcuttur. Örneğin, eşlik eden çokgen aks, gürültü bariyerleri veya Jersey benzeri beton bariyerler gibi uzunlamasına doğrusal altyapı objelerinin modellenmesine olanak tanır. Aks geometrisinin çıktısının iyileştirilmesi veya yapısal bir elemana atanmış bir kesitte tanımlanan referans noktalarının kullanıldığı aplikasyon raporu gibi birçok yeni raporlama ve çıktı işlevselliği ilavesi yapılmıştır.",
+            "İki parametrik inşaat çizgisinin kesişimine bir dış sınır referansı verilmesi, modelleme sürecini iyileştirecek ve inşaat sırası tanımındaki yük görselleştirmesi, yapısal analiz iş akışını iyileştirecek ve 2024 sürümü için bir başka ürün iyileştirmesini temsil edecektir."
+          ],
+          "imageSrc": "",
+          "videoSrc": "/assets/solutions/bridge/features/11_Further_new_features_and_improvements.mp4",
+          "reverse": true
+        }
+      ]
+    }
   },
   "/solutions/imar-yonetmeligi-bim-eklentisi": {
     "path": "/solutions/imar-yonetmeligi-bim-eklentisi",
@@ -41533,7 +43392,122 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "stats": [
+        {
+          "value": "100%",
+          "label": "Zamandan Tasarruf",
+          "description": "Saatler ve günler süren imar yönetmeliği hesaplarını otomatikleştirin."
+        },
+        {
+          "value": "100%",
+          "label": "Hatasız Hesaplama",
+          "description": "Blok, kat ve bağımsız bölüm bazında net ve brüt alanları hatasız raporlayın."
+        },
+        {
+          "value": "100%",
+          "label": "Hızlı Kontrol ve Onay",
+          "description": "Ruhsat süreçlerinde kurum ve müellif kontrolünü BIM modeli üzerinden hızlandırın."
+        }
+      ],
+      "splitCallouts": [
+        {
+          "kicker": "/ PLANLI ALANLAR İMAR YÖNETMELİĞİ",
+          "title": "Planla ve Hesapla",
+          "subheading": "Allplan ile projelerinizi doğrudan 2018'de yürürlüğe giren Planlı Alanlar İmar Yönetmeliğine uyumlu üreteceksiniz.",
+          "paragraphs": [
+            "Saatlerinizi ve hatta günlerinizi vererek yaptığınız hesaplar Allplan'e entegre akıllı yönetmelik eklentisi ile kolayca yapılabiliyor.",
+            "Çizimin her aşamasında yönetmeliğe uygunluğu raporlamanız mümkün. Metrekare cetvellerinizi otomatik oluşturabilir, projenizde değişiklik yaptığınızda bu hesabı anında güncelleyebilirsiniz.",
+            "Taks/kaks hesabı, Emsal hesabı, Otopark hesabı, Su deposu hesabı, Mahallerin minimum ölçüleri, Sığınak hesabı, vb., birçok hesabı kolayca raporlayarak projenizin imar yönetmeliğinin gerekliliklerini karşıladığını kontrol eder, sorunlu bölümleri tespit edip kolayca gerekli düzeltmeleri yaparsınız.",
+            "İmar yönetmeliğinin bir BIM yazılımı kapsımında ilk kez kullanıldığı çalışmamızda, yönetmeliğe göre blok, kat, daire bazında brüt alan, toplam brüt alan, ortak alanlar, toplam inşaat alanı ve dairelerin net alanını doğru ve hızlı şekilde hesaplayabileceğiniz bir yazılım Allplan'e entegre edilmiştir."
+          ],
+          "imageSrc": "/assets/solutions/planli-alanlar/planla-hesapla.png",
+          "reverse": false
+        },
+        {
+          "kicker": "/ OTOMATİK METREKARE CETVELİ",
+          "title": "Metrekare Listesi Hazırlamak",
+          "description": "Allplan ile çizimini yaptığınız projelerin metrekare listesini planlı alanlar imar yönetmeliğine uygun bir formatta kolayca oluşturmanız mümkündür. Çok katlı ve bağımsız bölüm sayısı fazla olan projelerde hızlı ve çabuk bir şekilde listenizi oluşturabilirsiniz. Üstelik projenizde yaptığınız değişikliklerden sonra listenizi kolayca yeni duruma göre güncelleyebilirsiniz.",
+          "imageSrc": "/assets/solutions/planli-alanlar/metrekare-cetveli.jpg",
+          "reverse": true
+        },
+        {
+          "kicker": "/ BIM MODELİ ÜZERİNDEN DENETİM",
+          "title": "Modelleyin ve Raporlayın",
+          "description": "Projelerinizin yönetmelik esasları doğrultusunda gerekli kısasları sağlayıp sağlamadığı veya eksik kalmış, unutulan, gözden kaçan kısımlarını kolayca tespit edebilir; gerekli düzeltmeleri yapabilirsiniz. Örneğin Allplan size projenizdeki bağımsız bölümlerin nitelikleri ve sayısına göre yönetmelikte öngörülen hesaba uygun şekilde gerekli su deposu hesabını söyler ve yaptığınız depo miktarının yeterli olup olmadığının kontrolünü sağlar. Ayrıca emsal,taks /kaks ve emsal harici %30 alan hesaplarının kontrolü, min. ve maks. oda mahal ölçüleri, pencere ve kapı genişlikleri-uygunlukları, merdiven rıht yükseklik ve genişliklerinin kontrolü, otopark hesabı gibi birçok yönetmelik maddesinin kontrolünü sağlayabilirsiniz. Böylece BIM kapsamında üretmiş olduğunuz projenizin hem sizin tarafınızdan hem de ilgili kurum tarafından BIM modeliniz üzerinden kontrol edilebilmesi hızlı ve kolay bir şekilde gerçekleşir, onay aşamalarınızı kolaylaştırır. Projelerinizde revizyon olması durumunda ise tüm bu raporları hızla güncelleyebilirsiniz.",
+          "bullets": [
+            "Su deposu hesabı ve kontrolü",
+            "Emsal, TAKS/KAKS hesapları",
+            "Emsal harici %30 alan hesapları",
+            "Minimum ve maksimum oda/mahal ölçüleri",
+            "Pencere ve kapı genişlikleri kontrolü",
+            "Merdiven rıht yükseklik ve genişlik kontrolü",
+            "Otopark hesabı",
+            "Bağımsız bölüm nitelikleri ve sayıları"
+          ],
+          "imageSrc": "/assets/solutions/planli-alanlar/emsal-hesabi.jpg",
+          "reverse": false
+        }
+      ],
+      "extraGrids": [
+        {
+          "kicker": "/ UYGULAMA VE EĞİTİM FİLMLERİ",
+          "title": "Videolar",
+          "subtitle": "Allplan ile imar yönetmeliğine uyumlu proje oluşturulması ile ilgili filmleri izleyin.",
+          "columns": 3,
+          "items": [
+            {
+              "title": "Allplan ile İmar Yönetmeliği — Genel Bakış",
+              "badge": "Ana Tanıtım",
+              "description": "2018'de yürürlüğe giren Planlı Alanlar İmar Yönetmeliğini Allplan tanıyor, projenizi kolayca denetleyin, ruhsatınızı alın.",
+              "youtubeId": "0W6k7W5KtzE"
+            },
+            {
+              "title": "Allplan ile Metrekare Cetveli Hazırlama",
+              "badge": "Bölüm 01",
+              "description": "Allplan ile Metrekare Cetveli Hazırlama — Planlı Alanlar İmar Yönetmeliği uyumlu otomatik kontrol ve raporlama iş akışı.",
+              "youtubeId": "LkYK3_zHd_0"
+            },
+            {
+              "title": "Allplan ile Emsal Taks Kaks Hesabı",
+              "badge": "Bölüm 02",
+              "description": "Allplan ile Emsal Taks Kaks Hesabı — Planlı Alanlar İmar Yönetmeliği uyumlu otomatik kontrol ve raporlama iş akışı.",
+              "youtubeId": "TBgIVllmBJc"
+            },
+            {
+              "title": "Allplan ile %30 Emsal Harici Alan ve Otopark Hesabı",
+              "badge": "Bölüm 03",
+              "description": "Allplan ile %30 Emsal Harici Alan ve Otopark Hesabı — Planlı Alanlar İmar Yönetmeliği uyumlu otomatik kontrol ve raporlama iş akışı.",
+              "youtubeId": "0d2aHi-vsW4"
+            },
+            {
+              "title": "Allplan Su Deposu Hesabı",
+              "badge": "Bölüm 04",
+              "description": "Allplan Su Deposu Hesabı — Planlı Alanlar İmar Yönetmeliği uyumlu otomatik kontrol ve raporlama iş akışı.",
+              "youtubeId": "fmdPz60pMAg"
+            },
+            {
+              "title": "Allplan ile Merdiven Kontrolü",
+              "badge": "Bölüm 05",
+              "description": "Allplan ile Merdiven Kontrolü — Planlı Alanlar İmar Yönetmeliği uyumlu otomatik kontrol ve raporlama iş akışı.",
+              "youtubeId": "NQX_mNJgu4s"
+            },
+            {
+              "title": "Allplan ile Mahal Kontrolü",
+              "badge": "Bölüm 06",
+              "description": "Allplan ile Mahal Kontrolü — Planlı Alanlar İmar Yönetmeliği uyumlu otomatik kontrol ve raporlama iş akışı.",
+              "youtubeId": "_xcCl7_EoDk"
+            },
+            {
+              "title": "Allplan ile Pencere Kontrolü",
+              "badge": "Bölüm 07",
+              "description": "Allplan ile Pencere Kontrolü — Planlı Alanlar İmar Yönetmeliği uyumlu otomatik kontrol ve raporlama iş akışı.",
+              "youtubeId": "A2xBskDp45A"
+            }
+          ]
+        }
+      ]
+    }
   },
   "/solutions/infrastructure": {
     "path": "/solutions/infrastructure",
@@ -43105,7 +45079,74 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "intro": {
+        "kicker": "/ BRIDGE ENGINEERING · PRECAST GIRDER WORKFLOW",
+        "title": "Allplan Bridge – Dedicated workflow for precast girder bridges",
+        "bullets": [
+          "The geometry of precast girders is governed by the geometry of the substructure and their position along the axis. Thus, a further modeling approach is available in Allplan Bridge that enables users to create an exact geometry of precast girder bridges easily and quickly.",
+          "The modeling process is optimized even further by using parametric 3D templates. In this way repetitive bridge elements, such as straight precast girders, have to be defined only once and then placed parametrically as many times as necessary."
+        ]
+      },
+      "splitCallouts": [
+        {
+          "kicker": "ADIM 01 · BRIDGE WORKFLOW",
+          "title": "1. CREATING AXES",
+          "description": "Every bridge construction project starts with one or more axes – with Allplan Bridge, you can adopt the data from an existing design (using LandXML data format) or define it manually. In both cases, the alignment is parametrically saved.",
+          "youtubeId": "2uFnK6J2GsU",
+          "reverse": false
+        },
+        {
+          "kicker": "ADIM 02 · BRIDGE WORKFLOW",
+          "title": "2. DEFINING A CROSS-SECTION",
+          "description": "You can define any cross-section and determine the geometry with its dependencies and variables. These parametric cross-sections can be adapted at any time and can be saved as a template and reused.",
+          "youtubeId": "dwnGswjBZBg",
+          "reverse": true
+        },
+        {
+          "kicker": "ADIM 03 · BRIDGE WORKFLOW",
+          "title": "3. DESIGNING A TEMPLATE",
+          "description": "Any geometry of a pier, foundation and precast girder can be defined as a template. Previously defined cross-section(s) including constant and variable parameters are used. You can set which parts should be fixed and which should adjust when using it in the 3D model.",
+          "youtubeId": "ZRqoMOCb11U",
+          "reverse": false
+        },
+        {
+          "kicker": "ADIM 04 · BRIDGE WORKFLOW",
+          "title": "4. BUILDING A SUBSTRUCTURE",
+          "description": "The substructure, with or without foundations, can be defined relative to one axis or relative to two axes – for example terrain axis at the bottom and road axis at the top. It can be defined directly or by usage of templates.",
+          "youtubeId": "LBIEi0bhOeQ",
+          "reverse": true
+        },
+        {
+          "kicker": "ADIM 05 · BRIDGE WORKFLOW",
+          "title": "5. ASSEMBLING GIRDERS",
+          "description": "For generating the plate geometry, the original workflow of Allplan Bridge is used – extruding the geometry along the axis. Variations can be used and the cross-section, and with this also the 3D model, can be equipped with all the details by using boundaries or placing python parts.",
+          "youtubeId": "LFTDg95kvH4",
+          "reverse": false
+        },
+        {
+          "kicker": "ADIM 06 · BRIDGE WORKFLOW",
+          "title": "6. CONSTRUCTING A PLATE",
+          "description": "Extrude the geometry along the axis to construct the plate. Any variations can be applied and the cross-section, and with this also the 3D model, can be equipped with details, either by using boundaries or by placing python parts.",
+          "youtubeId": "rqv66ghmUpk",
+          "reverse": true
+        },
+        {
+          "kicker": "ADIM 07 · BRIDGE WORKFLOW",
+          "title": "7. COMPOSING THE HAUNCH",
+          "description": "In precast girder bridges the shape of the girders is governed by the geometry of the substructure, whereas the geometry of the plate is governed by the axis. Allplan Bridge 3D Boolean operations automatically fill the space between the girder and plate using the haunch shape defined in the girder cross-section.",
+          "youtubeId": "oqLafh87vYI",
+          "reverse": false
+        },
+        {
+          "kicker": "ADIM 08 · BRIDGE WORKFLOW",
+          "title": "8. COMPLETING THE BRIDGE STRUCTURE",
+          "description": "Once the main bridge elements are finished, further elements and details like tendons, diaphragms, bearings and many more can be generated by modeling them or by placing parametric elements – python parts.",
+          "imageSrc": "/assets/solutions/structural/workflows/modeling/parametric-modeling.jpg",
+          "reverse": true
+        }
+      ]
+    }
   },
   "/solutions/oska": {
     "path": "/solutions/oska",
@@ -43346,7 +45387,17 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "splitCallouts": [
+        {
+          "kicker": "/ TÜRKİYE POZ BİRİM FİYAT ENTEGRASYONU",
+          "title": "ALLPLAN POZ KATALOĞU",
+          "description": "Türkiye poz birim fiyat kataloğu entegrasyonu. Metraj ve maliyet hesaplamalarınızı otomatikleştirin, keşif belgelerinizi hızlıca hazırlayın.",
+          "youtubeId": "nRntReFS1jY",
+          "reverse": false
+        }
+      ]
+    }
   },
   "/solutions/precast": {
     "path": "/solutions/precast",
@@ -44533,7 +46584,196 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "intro": {
+        "kicker": "/ ALLPLAN ORTAK ÇÖZÜMÜ · ALLTO PYTHONPARTS SÜRÜM 4.1",
+        "title": "Allplan Ortak Çözümü olarak ALLTO, ALLPLAN yazılımıyla uyumlu profesyonel eklentiler geliştirir.",
+        "bullets": [
+          "Wall Reinforcement & Wall Opening / Wall Edge Reinforcement",
+          "Beam Reinforcement & T-Beam Reinforcement",
+          "Column Reinforcement, Column Dowels & Column Coupler",
+          "Single Footing & Strip Footing Reinforcement",
+          "Slab Main Rebar & Slab With Opening",
+          "Detecting IFC Model Changes & Exporting IFC files faster",
+          "2D Axis Grid in ALLPLAN Engineering & Layout Service",
+          "Converting from 2D lines/polylines to architecture components",
+          "ALLPLAN Backup Files – Drawing Recovery & Add custom attribute in ALLPLAN"
+        ],
+        "videoEmbedUrl": "https://www.youtube.com/embed/GaRVQHkXf4o"
+      },
+      "coreFeatures": {
+        "kicker": "/ DONATI VE MODELLEME OTOMASYONU",
+        "title": "Ücretli PythonParts",
+        "subtitle": "ALLTO PYTHONPARTS Sürüm 4.1 – Daha kolay, daha hızlı ve hataları azaltın.",
+        "columns": 3,
+        "items": [
+          {
+            "title": "Duvar Donatısı",
+            "subtitle": "Wall Reinforcement",
+            "description": "ALLPLAN için geliştirdiğimiz PythonParts ile basit veya karmaşık duvar donatılarını, hatta eğimli duvarları bile kolayca oluşturabilir, güncelleyebilir ve düzenleyebilirsiniz. Duvar panelinin şeklini otomatik olarak tanır ve ana donatıları ile duvar boşlukları için ek donatıları dağıtır.",
+            "youtubeId": "4HwnYYnZ_D0"
+          },
+          {
+            "title": "Duvar Boşluğu Donatısı",
+            "subtitle": "Wall Opening Reinforcement",
+            "description": "Taşıyıcı duvarlarda kapı, pencere, boru ve havalandırma kanalları için çeşitli boyut ve şekillerde boşluklar açılması kaçınılmazdır. Donatının doğru yerleştirilmesi, boşluklar etrafındaki betonun yapısal yükler veya rötre nedeniyle çatlamasını önler.",
+            "youtubeId": "LMjsurG742M"
+          },
+          {
+            "title": "Duvar Kenar Donatısı",
+            "subtitle": "Wall Edge Reinforcement",
+            "description": "Kenar Donatısı python parçası, ALLPLAN'da iki duvarı birbirine bağlayarak duvarların detaylandırılması için kullanılır. Duvardan duvara bağlantı şekilleri: Doğrusal duvar birleşimi, L-şeklinde duvar birleşimi, T-şeklinde duvar birleşimi, Kesişen duvar birleşimi.",
+            "youtubeId": "M0Qem-GkLEI"
+          },
+          {
+            "title": "Döşeme Donatısı",
+            "subtitle": "Slab Reinforcement",
+            "description": "Döşeme donatısı detaylandırması, mesnet koşullarına göre yapılır. Döşeme duvarlar, kirişler veya kolonlar üzerinde mesnetlenebilir.",
+            "youtubeId": "IOkyu5ab23w"
+          },
+          {
+            "title": "Döşeme Boşluğu Donatısı",
+            "subtitle": "Slab Opening Reinforcement",
+            "description": "Her mühendis döşemelerdeki boşluklara aşinadır. Havalandırma kanalları ve klima gibi birçok farklı uygulama için döşemelerde boşluklar gereklidir. Artık yapı mühendisleri, ALLTO tarafından geliştirilen ALLPLAN PythonParts ile bu işi kolayca yapabilir.",
+            "youtubeId": "70dz16RYs84"
+          },
+          {
+            "title": "Tekil Temel Donatısı",
+            "subtitle": "Single Footings Reinforcement",
+            "description": "Tekil temeller, en basit ve yaygın temel türlerinden biridir. Binanın yükünün kolonlar tarafından taşındığı durumlarda kullanılır. Genellikle her kolonun kendi temeli vardır. Temel, kolonun üzerine oturduğu kare veya dikdörtgen bir beton bloğudur. Artık mühendisler, ALLTO tarafından geliştirilen ALLPLAN PythonParts ile bu işi kolayca yapabilir.",
+            "youtubeId": "EjxMvMhFKj4"
+          },
+          {
+            "title": "Kiriş Donatısı",
+            "subtitle": "Beam Reinforcement",
+            "description": "Donatı, betonarme kirişin temel bir parçasıdır. Çekme kuvvetlerine karşı koyar, basınç kapasitesini artırır, sünekliği geliştirir ve betondaki uzun vadeli sehimleri azaltır. Ayrıca donatı, kesme gerilmeleri, rötre ve sıcaklık gerilmeleri nedeniyle betonun çatlamasını önler.",
+            "youtubeId": "cyOw-XGQ7c0"
+          },
+          {
+            "title": "T-Kiriş Donatısı",
+            "subtitle": "T-Beam Reinforcement",
+            "description": "İnşaatta kullanılan T-kiriş, T-şeklinde bir kesit alanına sahip betonarme, ahşap veya metal yük taşıyıcı bir yapıdır. T-şeklindeki kesit alanının üst kısmı, basınç gerilmelerine karşı koymak için başlık veya basınç elemanı görevi görür.",
+            "youtubeId": "yosKNaS5jew"
+          },
+          {
+            "title": "Şerit Temel Donatısı",
+            "subtitle": "Strip Footings Reinforcement",
+            "description": "Şerit temeller, duvar gibi doğrusal bir yapıya veya merkezi olarak üzerine inşa edilmiş yakın aralıklı kolon sıralarına sürekli, düz (veya bazen basamaklı) bir destek şeridi sağlamak için kullanılan bir sığ temel türüdür. ALLTO kullanıcı dostu bir arayüz oluşturmuştur ve tek yapmanız gereken şerit temeli oluşturmak için verileri girmektir.",
+            "youtubeId": "15aE6UyalJ4"
+          },
+          {
+            "title": "Kolon Donatısı",
+            "subtitle": "Column Reinforcement",
+            "description": "ALLPLAN'da boşluklu duvarlardaki donatı modellemesini otomatikleştiren ALLPLAN Pythonparts'ı yayınladık. Bu ilk sürümde ana donatıları, etriyeleri ve daha fazlasını yerleştirebilirsiniz. ALLPLAN'da kolonların donatılandırılması iş akışını görün.",
+            "youtubeId": "k76NIUdxs6o"
+          },
+          {
+            "title": "Kolon Bindirme Donatısı",
+            "subtitle": "Column Dowels",
+            "description": "Bindirme donatıları genellikle kolonlar veya duvarlar ile temeller arasında ara donatı olarak kullanılır. Bindirmeler, temel betonu dökülmeden önce temele yerleştirilir ve daha sonra kolon veya duvardaki boyuna donatılara eklenir.",
+            "youtubeId": "-0mJEDyXC7k"
+          },
+          {
+            "title": "Kolon Manşon Donatısı",
+            "subtitle": "Column Coupler",
+            "description": "Mühendislerin iş akışını yönetmek için ALLPLAN PYTHONPARTS geliştiriyoruz. Bunun, görevlerini daha kolay, daha hızlı tamamlamalarına ve hataları azaltmalarına yardımcı olacağına inanıyoruz.",
+            "youtubeId": "blho_BO-xp4"
+          }
+        ]
+      },
+      "extraGrids": [
+        {
+          "kicker": "/ TÜRKİYE DEPREM YÖNETMELİĞİ UYUMLU",
+          "title": "Türkçe Eklentiler ve Araçlar",
+          "subtitle": "Türkiye Deprem Yönetmeliği'ne uygun parametrik kiriş donatısı ve 2B CAD'den 3B BIM'e otomatik dönüşüm araçları.",
+          "columns": 3,
+          "items": [
+            {
+              "title": "Allto Kiriş PythonPart Eklentisi",
+              "subtitle": "Allto Beam PythonPart Plugin",
+              "description": "Allto Kiriş PythonPart Eklentisi ile Türkiye Deprem Yönetmeliği'ne uygun betonarme kiriş donatılarınızı parametrik olarak hızlı ve kolay bir şekilde modelleyebilirsiniz. Mesnet ve açıklık bindirme şartlarından, etriye sarılma bölgesi ayarlarına kadar tüm düzenlemelerinizi yapabilir, ilave donatılar ekleyebilirsiniz. Kiriş boy ve en kesitlerini otomatik alarak tek tuşla metraj tablosu oluşturabilirsiniz. Allto Kiriş PythonPart Eklentisi size daha az zamanda daha çok iş yapma imkanının yanında güvenilir kiriş donatı metrajı almanızı da sağlar.",
+              "youtubeId": "hONolEqk24Y"
+            },
+            {
+              "title": "Allto Kiriş PythonPart Eklentisi - Çok Açıklıklı Kirişler",
+              "subtitle": "Allto Beam PythonPart Plugin - Multi-Span Beams",
+              "description": "Allto Kiriş PythonPart Eklentisi kullanarak sadece birkaç tıklama ile ister tek açıklıklı ister çok açıklıklı kirişlerinizin donatılarını hızlı bir şekilde oluşturabilir, kesitlerinizi alabilir ve metrajınızı oluşturabilirsiniz.",
+              "youtubeId": "I0wD7ksE7r4"
+            },
+            {
+              "title": "Otomatik Kolon-Kiriş-Duvar Modelleme",
+              "subtitle": "Automatic Column-Beam-Wall Modeling",
+              "description": "Ücretsiz olan Otomatik Kolon-Kiriş-Duvar Modelleme eklentisini kullanarak daha önce CAD ortamında yapılmış olan iki boyutlu çizimlerinizi sadece birkaç tıklama ile üç boyutlu BIM modeline dönüştürebilirsiniz. Ürettiğiniz BIM modelinizin güvenilir Kalıp ve Donatı metrajını alabilirisiniz.",
+              "youtubeId": "ieZb81IM8Qc"
+            }
+          ]
+        },
+        {
+          "kicker": "/ ÜCRETSİZ VERİMLİLİK ARAÇLARI",
+          "title": "Ücretsiz PythonParts",
+          "subtitle": "Çizim kurtarma, IFC model değişikliklerini algılama ve 2B çizgilerden mimari bileşenlere dönüştürme araçları.",
+          "columns": 3,
+          "items": [
+            {
+              "title": "ALLPLAN Yedekleme Dosyaları - Çizim Kurtarma",
+              "subtitle": "ALLPLAN Backup Files - Drawing Recovery",
+              "description": "Hiç kaydetmeyi unuttuğunuz veya yazılım çökmesi nedeniyle kaydedemediğiniz bir çizim dosyasını kaybettiniz mi? ALLTO, ALLPLAN'da yedekleme dosyaları geliştirdi ve çizim verilerinizin güvenliğini sağlamaya yardımcı olur. Çalışmanızı sık sık kaydederek, sisteminiz herhangi bir nedenle arızalanursa minimum veri kaybı sağlayabilirsiniz.",
+              "youtubeId": "LXwICpjeZpo"
+            },
+            {
+              "title": "IFC Model Değişikliklerini Algılama",
+              "subtitle": "Detect IFC Model Changes",
+              "description": "Bu python parçası, Allplan Yazılımında iki IFC dosyası arasındaki geometrik farkları algılar ve yalnızca değişiklikleri (yeni, silinmiş ve değiştirilmiş elemanlar) mevcut çizim dosyasına birleştirir. Değişiklikler hem 2D hem de 3D görünümlerde görüntülenebilir ve yönetilebilir.",
+              "youtubeId": "SYx4kZYsmzc"
+            },
+            {
+              "title": "2D Çizgilerden Mimari Bileşenlere Dönüştürme",
+              "subtitle": "Converting from 2D lines/polylines to architecture components",
+              "description": "ALLPLAN, 3D tasarım alanında yenilikçi bir öncü olmuştur; 3D modellemeden bileşen odaklı, BIM tasarım yönteminin temeli olan dijital bina modellerine kadar. ALLTO PythonParts ile, doğru araçlarla sadece birkaç adımda 2D çizgilerden/poliçizgilerden mimari bileşenlere dönüştürmenin ne kadar kolay olduğunu görün.",
+              "youtubeId": "AdsiUeBRwxM"
+            }
+          ]
+        },
+        {
+          "kicker": "/ EK İŞ AKIŞI ARAÇLARI",
+          "title": "Diğer Araçlar",
+          "subtitle": "Toplu IFC dışa aktarma, özel öznitelik tanımlama ve yardımcı mühendislik araçları.",
+          "columns": 3,
+          "items": [
+            {
+              "title": "ALLPLAN'da IFC Dosyalarını Daha Hızlı Dışa Aktarma",
+              "subtitle": "Exporting IFC files in ALLPLAN faster with ALLTO PythonParts",
+              "description": "Bu araç, birden fazla çizim dosyasını aynı anda dışa aktarabilir. IFC sürümünü, çizim dosyalarını, dosya yolunu seçebilirsiniz. Ayrıca tüm çizimleri tek bir IFC dosyasına da aktarabilirsiniz.",
+              "youtubeId": "J-N5gEba5P0"
+            },
+            {
+              "title": "ALLPLAN Duvar Boşluğu Donatısı",
+              "subtitle": "ALLPLAN Wall Opening Reinforcement PythonParts",
+              "description": "Duvarlardaki boşluk türleri, parçaları ve duvarın stabilitesi ve mukavemeti açısından boşluklar için lento ve kemer türleri tartışılır. Boşluk başlığı ve söveleri gibi duvar boşluklarının farklı kısımları ve duvarın stabilitesini ve mukavemetini korumak için sınırlamaları... ALLPLAN'daki PythonParts'ımız duvar panelinin şeklini tanır ve duvar boşlukları için ana donatı ve ek donatıyı dağıtır.",
+              "youtubeId": "LMjsurG742M"
+            },
+            {
+              "title": "ALLPLAN Yedekleme Dosyaları - Çizim Kurtarma",
+              "subtitle": "ALLPLAN Backup Files - Drawing Recovery",
+              "description": "Hiç kaydetmeyi unuttuğunuz veya yazılım çökmesi nedeniyle kaydedemediğiniz bir çizim dosyasını kaybettiniz mi? ALLTO, ALLPLAN'da yedekleme dosyaları geliştirdi ve çizim verilerinizin güvenliğini sağlamaya yardımcı olur. Çalışmanızı sık sık kaydederek, sisteminiz herhangi bir nedenle arızalanursa minimum veri kaybı sağlayabilirsiniz. Bir sorun oluşursa, bir çizim yedekleme dosyasını geri yükleyebilirsiniz.",
+              "youtubeId": "LXwICpjeZpo"
+            },
+            {
+              "title": "ALLPLAN'da Özel Öznitelik Ekleme",
+              "subtitle": "Add custom attribute in ALLPLAN",
+              "description": "ALLTO PythonParts, yeni bir özel özniteliği kolayca tanımlamanıza veya değiştirmenize yardımcı olacak araçlar geliştirdi. Bir seferde 5 özniteliğe kadar ekleyebilirsiniz.",
+              "youtubeId": "wEo1vleU7JM"
+            },
+            {
+              "title": "2D Çizgilerden Mimari Bileşenlere Dönüştürme",
+              "subtitle": "Converting from 2D lines/polylines to architecture components",
+              "description": "ALLPLAN, 3D tasarım alanında yenilikçi bir öncü olmuştur; 3D modellemeden bileşen odaklı, BIM tasarım yönteminin temeli olan dijital bina modellerine kadar. 3D tasarım hata riskini azaltır ve daha fazla verimlilik sağlar. ALLTO PythonParts ile, doğru araçlarla sadece birkaç adımda 2D çizgilerden/poliçizgilerden mimari bileşenlere dönüştürmenin ne kadar kolay olduğunu görün.",
+              "youtubeId": "AdsiUeBRwxM"
+            }
+          ]
+        }
+      ]
+    }
   },
   "/solutions/rebar-engineering": {
     "path": "/solutions/rebar-engineering",
@@ -44682,7 +46922,66 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "extraGrids": [
+        {
+          "kicker": "/ TANITIM VİDEOLARI",
+          "title": "Otomatik Donatı Tanıtım Videoları",
+          "subtitle": "Duvar, kolon, kiriş, döşeme ve zımbalama profili için otomatik donatılandırma tanıtım videoları.",
+          "columns": 2,
+          "items": [
+            {
+              "title": "V2021-1-0: Otomatik Kiriş",
+              "description": "Kiriş elemanlarında kesit, etiket ve metrajlarla birlikte otomatik donatılandırma.",
+              "youtubeId": "DIL1xbeFgO8"
+            },
+            {
+              "title": "V2021-1-0: Otomatik Kolon",
+              "description": "Kolon elemanlarında parametrik boyuna donatı ve etriye sıklaştırma otomasyonu.",
+              "youtubeId": "zIGjAqKPrqU"
+            },
+            {
+              "title": "V2021-1-0: Otomatik Zımbalama",
+              "description": "Döşeme-kolon birleşimlerinde otomatik zımbalama donatısı modelleme.",
+              "youtubeId": "5fQG72LZE2Q"
+            },
+            {
+              "title": "V2021-1-0: Otomatik Perde Duvar",
+              "description": "Perde duvarlarda başlık bölgesi, yatay/düşey donatı ve otomatik kesit üretimi.",
+              "youtubeId": "0g8oo8XBcZQ"
+            }
+          ]
+        },
+        {
+          "kicker": "/ EĞİTİM VİDEOLARI",
+          "title": "Otomatik Donatı Eğitim Videoları",
+          "subtitle": "Adım adım otomatik donatı PythonPart araçlarının kullanımı ve detaylandırma eğitimleri.",
+          "columns": 2,
+          "items": [
+            {
+              "title": "V2021-1-0: Otomatik Donatı Kolon",
+              "description": "Kolon donatısı PythonPart aracının adım adım parametre ve uygulama eğitimi.",
+              "youtubeId": "pbrLQHEgmbE"
+            },
+            {
+              "title": "V2021-1-0: Otomatik Donatı Kiriş",
+              "description": "Kiriş donatısı PythonPart aracının adım adım parametre ve uygulama eğitimi.",
+              "youtubeId": "EjmED4ZgU8s"
+            },
+            {
+              "title": "V2021-1-0: Otomatik Donatı Perde Duvar",
+              "description": "Perde duvar donatısı PythonPart aracının adım adım parametre ve uygulama eğitimi.",
+              "youtubeId": "QRmoL3mZHTU"
+            },
+            {
+              "title": "V2021-1-0: Otomatik Zımbalama Profili",
+              "description": "Zımbalama profili PythonPart aracının adım adım parametre ve uygulama eğitimi.",
+              "youtubeId": "B5d0xQT_Qzc"
+            }
+          ]
+        }
+      ]
+    }
   },
   "/solutions/road-railway": {
     "path": "/solutions/road-railway",
@@ -46006,7 +48305,43 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "splitCallouts": [
+        {
+          "kicker": "/ SCALYPSO CONVERTER · NOKTA BULUTU DÖNÜŞTÜRÜCÜ",
+          "title": "Birincil Hedef: Tüm 3B Lazer Tarayıcılarla Tek İş Akışı",
+          "paragraphs": [
+            "Scalypso'nun birincil hedefi, çok çeşitli karasal 3B lazer tarama cihazlarını desteklemektir. Böylece her proje için en uygun cihazı seçebilir ve yine aynı yazılım iş akışını kullanabilirsiniz.",
+            "Her Scalypso projesinin ilk adımı olarak, Scalypso Converter, belirli bir satıcıdan gelen tarama verilerini, tüm yazılım uygulamalarımız tarafından kullanılabilen tek tip bir Scalypso nokta bulutu dosya formatına çevirir."
+          ],
+          "youtubeId": "1wU4GIILS-s",
+          "ctaText": "Deneme Lisansı İste",
+          "ctaHref": "https://forms.office.com/r/XLQm9JPTSR",
+          "external": true,
+          "reverse": false
+        },
+        {
+          "kicker": "/ DESTEKLENEN FORMATLAR",
+          "title": "Desteklenen İçe ve Dışa Aktarma Formatları",
+          "description": "Desteklenen formatların ve cihazların sayısı sürekli artıyor, bu nedenle bu liste sürekli güncelleniyor.",
+          "bullets": [
+            "İçe Aktarma: ASCII Files (*.xyz, *.pts, …)",
+            "İçe Aktarma: Faro (*.fls, *.fws, *.lsproj)",
+            "İçe Aktarma: Leica (*.ptg, *.ptx, *.e57)",
+            "İçe Aktarma: Riegl (*.rxp, *.rsp)",
+            "İçe Aktarma: Topcon (*.cl3, *clr)",
+            "İçe Aktarma: Trimble (*.cmf, *.lms)",
+            "İçe Aktarma: Zoller & Fröhlich (*.zfs, *.zfproj)",
+            "İçe Aktarma: E57, ASTM (*.e57), 3D lazer tarama verileri için değişim formatı",
+            "Dışa Aktarma: Scalypso (*.syo)",
+            "Dışa Aktarma: ASCII Files (*.xyz, *.pts, …)",
+            "Dışa Aktarma: E57, ASTM (*.e57), 3D lazer tarama verileri için değişim formatı"
+          ],
+          "imageSrc": "/assets/solutions/scalypso/converter-202004-en.jpg",
+          "reverse": true
+        }
+      ]
+    }
   },
   "/solutions/scalypso/mobile": {
     "path": "/solutions/scalypso/mobile",
@@ -46639,7 +48974,43 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "extraGrids": [
+        {
+          "kicker": "/ SCALYPSO EĞİTİM VE UYGULAMA SERİSİ",
+          "title": "Scalypso Modül Videoları",
+          "subtitle": "Scalypso modüllerinin kullanımını anlatan eğitim videoları.",
+          "columns": 3,
+          "items": [
+            {
+              "title": "Scalypso [CONVERTER]",
+              "description": "Farklı tarayıcı markalarından gelen 3B lazer tarama verilerini tek tip Scalypso formatına dönüştürme.",
+              "youtubeId": "1wU4GIILS-s"
+            },
+            {
+              "title": "Scalypso [PROJECT ORIENTATION]",
+              "description": "Nokta bulutu projelerinin koordinatlandırma ve proje yönlendirme iş akışı.",
+              "youtubeId": "3Y6zSbIT_kw"
+            },
+            {
+              "title": "Scalypso [BASIC]",
+              "description": "Scalypso temel nokta bulutu görüntüleme, kesit alma ve ölçüm araçları.",
+              "youtubeId": "Su8_5M_hJPI"
+            },
+            {
+              "title": "Scalypso [ORTHOMODULE]",
+              "description": "Nokta bulutu verilerinden yüksek çözünürlüklü ortofoto ve cephe görünüşü üretimi.",
+              "youtubeId": "LbgxDf3Ovtg"
+            },
+            {
+              "title": "Scalypso [LASERSCANDATA ANALYSING]",
+              "description": "Karasal lazer tarama verilerinin analizi ve 3B CAD/BIM ortamına aktarımı.",
+              "youtubeId": "X4LYiQa4o4Q"
+            }
+          ]
+        }
+      ]
+    }
   },
   "/solutions/scalypso/viewer": {
     "path": "/solutions/scalypso/viewer",

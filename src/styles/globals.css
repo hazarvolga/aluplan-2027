@@ -1324,6 +1324,18 @@ body{margin:0;background:var(--surface-page);color:var(--text-primary)}
 
 
 /* === Aluplan 2027 Application Extensions === */
+:root,
+[data-theme],
+[data-mode] {
+  --font-display: var(--font-heading);
+  --font-sans: var(--font-body);
+  --accent-primary: var(--action-primary-bg);
+  --accent-subtle: var(--accent-bg);
+  --accent-soft: var(--accent-bg);
+  --text-muted: var(--text-secondary);
+  --surface-overlay: var(--surface-raised);
+}
+
 .alu-container {
   max-width: var(--container-xl);
 }
@@ -1523,6 +1535,7 @@ body{margin:0;background:var(--surface-page);color:var(--text-primary)}
   align-items: center;
   gap: var(--space-inline-xs);
 }
+.alu-button.alu-mobile-menu-toggle,
 .alu-mobile-menu-toggle {
   display: none;
 }
@@ -1530,13 +1543,16 @@ body{margin:0;background:var(--surface-page);color:var(--text-primary)}
   .alu-site-nav {
     display: none;
   }
+  .alu-button.alu-mobile-menu-toggle,
   .alu-mobile-menu-toggle {
     display: inline-flex;
   }
 }
 @media (min-width: 64.0625rem) {
+  .alu-button.alu-mobile-menu-toggle,
+  .alu-mobile-menu-toggle,
   .alu-mobile-drawer {
-    display: none;
+    display: none !important;
   }
 }
 .alu-site-nav__link {
@@ -4185,7 +4201,7 @@ button.alu-role[aria-checked="true"] {
   letter-spacing: 0.06em;
 }
 
-/* 7. Split Callout Section (SCIA Engineer Concept Sürümü) */
+/* 7. Split Callout Section (SCIA Engineer Concept Sürümü & InfoMediaTwoColumn) */
 .alu-scia-callout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
@@ -4197,18 +4213,40 @@ button.alu-role[aria-checked="true"] {
   border-left: 4px solid var(--action-primary-bg);
   box-shadow: var(--elevation-overlay);
 }
+.alu-scia-callout--reverse .alu-scia-callout__media {
+  order: 2;
+}
+.alu-scia-callout--reverse .alu-scia-callout__content {
+  order: 1;
+}
 .alu-scia-callout__media {
   position: relative;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid var(--border-default);
   background: #0d1015;
 }
-.alu-scia-callout__media img {
+.alu-scia-callout__media--interactive {
+  cursor: pointer;
+}
+.alu-scia-callout__media img,
+.alu-scia-callout__media video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.alu-scia-callout__media--interactive:hover img,
+.alu-scia-callout__media--interactive:hover video {
+  transform: scale(1.04);
+}
+.alu-scia-callout__media--interactive:hover .alu-media-card__play-circle {
+  transform: scale(1.12);
+  background: var(--action-primary-bg);
+}
+.alu-scia-callout__media--interactive:hover .alu-media-card__zoom-hint {
+  opacity: 1;
 }
 .alu-scia-callout__content {
   display: flex;
@@ -4404,7 +4442,9 @@ button.alu-role[aria-checked="true"] {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .alu-feature-row--reverse .alu-feature-row__media,
-  .alu-feature-row--reverse .alu-feature-row__content {
+  .alu-feature-row--reverse .alu-feature-row__content,
+  .alu-scia-callout--reverse .alu-scia-callout__media,
+  .alu-scia-callout--reverse .alu-scia-callout__content {
     order: initial;
   }
   .alu-hero-metrics {
@@ -4875,22 +4915,24 @@ button.alu-role[aria-checked="true"] {
 .alu-about-values {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  border-top: 1px solid var(--border-default);
-  border-left: 1px solid var(--border-default);
-  background: var(--surface-default);
+  gap: 1.5rem;
 }
 
 .alu-about-value-item {
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
-  padding: clamp(1.75rem, 3vw, 2.5rem);
-  border-right: 1px solid var(--border-default);
-  border-bottom: 1px solid var(--border-default);
-  transition: background-color 200ms ease;
+  padding: clamp(1.75rem, 3vw, 2.25rem);
+  background: var(--surface-default);
+  border: 1px solid var(--border-default);
+  border-top: 3px solid var(--accent-border);
+  box-shadow: var(--elevation-raised);
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), border-color 220ms ease, background-color 200ms ease;
 }
 
 .alu-about-value-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-border);
   background: var(--surface-raised);
 }
 

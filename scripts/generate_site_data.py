@@ -9,6 +9,7 @@ from urllib.parse import urlparse, parse_qs, unquote
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from extract_structured_pages import build_all_structured_pages
+from document_assets import prepare_documents, sync_documents, write_manifest
 
 STRUCTURED_LAYOUTS = build_all_structured_pages()
 
@@ -22,8 +23,9 @@ closure_states_path = ROOT / "docs/00-inventory/browser-closure-2026-10-22/state
 complete_states_path = ROOT / "docs/00-inventory/browser-complete-2026-10-22/states.json"
 final_states_path = ROOT / "docs/00-inventory/browser-final-2026-10-22.json"
 module_states_path = ROOT / "docs/00-inventory/browser-modules-final-2026-10-22.json"
-q3_text_path = ROOT / "docs/00-inventory/pdf-evidence/q3-2026.txt"
-q4_text_path = ROOT / "docs/00-inventory/pdf-evidence/q4-2025.txt"
+# Fail before producing data if any original download is missing or invalid.
+SOURCE_ROOT = ROOT.parent / "aluplan-2026"
+prepare_documents(ROOT, SOURCE_ROOT)
 
 with open(inv_path, "r", encoding="utf-8") as f:
     inv = json.load(f)
@@ -1087,76 +1089,8 @@ with open(data_dir / "search-index.json", "w", encoding="utf-8") as f:
     json.dump(search_entries, f, ensure_ascii=False, indent=2)
 
 
-def create_minimal_pdf(title: str, body_text: str) -> bytes:
-    safe_title = re.sub(r"[()\\]", " ", title)
-    safe_title = re.sub(r"[^\x20-\x7E]", " ", safe_title)
-    lines = []
-    for raw_line in body_text.splitlines():
-        ascii_line = re.sub(r"[^\x20-\x7E]", " ", raw_line).strip()
-        if ascii_line:
-            lines.append(re.sub(r"[()\\]", " ", ascii_line[:90]))
-        if len(lines) >= 40:
-            break
-    stream_lines = ["BT", "/F1 12 Tf", "50 760 Td", f"({safe_title}) Tj", "/F1 9 Tf"]
-    for l in lines:
-        stream_lines.append(f"0 -14 Td ({l}) Tj")
-    stream_lines.append("ET")
-    content_stream = "\n".join(stream_lines)
-    stream_bytes = content_stream.encode("utf-8")
-
-    objects = [
-        b"1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n",
-        b"2 0 obj\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\nendobj\n",
-        b"3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>\nendobj\n",
-        b"4 0 obj\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>\nendobj\n",
-        f"5 0 obj\n<< /Length {len(stream_bytes)} >>\nstream\n".encode("utf-8") + stream_bytes + b"\nendstream\nendobj\n",
-    ]
-    pdf = bytearray(b"%PDF-1.4\n")
-    offsets = [0]
-    for obj in objects:
-        offsets.append(len(pdf))
-        pdf.extend(obj)
-    xref_start = len(pdf)
-    pdf.extend(f"xref\n0 {len(objects) + 1}\n0000000000 65535 f \n".encode("utf-8"))
-    for off in offsets[1:]:
-        pdf.extend(f"{off:010d} 00000 n \n".encode("utf-8"))
-    pdf.extend(f"trailer\n<< /Size {len(objects) + 1} /Root 1 0 R >>\nstartxref\n{xref_start}\n%%EOF\n".encode("utf-8"))
-    return bytes(pdf)
-
-
-q3_text = q3_text_path.read_text(encoding="utf-8") if q3_text_path.exists() else "ALLPLAN 2026 Q3 Paket Karsilastirma Tablosu"
-q4_text = q4_text_path.read_text(encoding="utf-8") if q4_text_path.exists() else "ALLPLAN 2026 Q4 Paket Karsilastirma Tablosu"
-
-docs_dir = ROOT / "public/docs"
-ax_docs_dir = ROOT / "public/docs/ax3000"
-docs_dir.mkdir(parents=True, exist_ok=True)
-ax_docs_dir.mkdir(parents=True, exist_ok=True)
-
-(docs_dir / "V2026_paket-karsilastirme-Q3-2026_R01.pdf").write_bytes(
-    create_minimal_pdf("ALLPLAN 2026 Paket Karsilastirma Rehberi (Q3-2026)", q3_text)
-)
-(docs_dir / "V2026_Paket_Karsilastirma-Q4-2025_R01.pdf").write_bytes(
-    create_minimal_pdf("ALLPLAN 2026 Paket Karsilastirma Rehberi (Q4-2025)", q4_text)
-)
-(docs_dir / "Declaration_Allplan_2021-06-01.pdf").write_bytes(
-    create_minimal_pdf("ALLPLAN Lisans Deklarasyon Formu", "ALLPLAN Connect Lisans Aktivasyon ve Deklarasyon Belgesi - Aluplan Program Sistemleri")
-)
-(docs_dir / "ifc_aktarim_el_kitabi_ifc_4.0_ifc_4.3_2026.pdf").write_bytes(
-    create_minimal_pdf("IFC 4.0 ve IFC 4.3 Aktarim El Kitabi 2026", "ALLPLAN 2026 OpenBIM IFC 4.0 ve IFC 4.3 Veri Degisimi Rehberi")
-)
-
-ax_files = [
-    ("ax3000-brochure-de.pdf", "AX3000 MEP Broschere (DE)"),
-    ("ax3000-brochure-en.pdf", "AX3000 MEP Brochure (EN)"),
-    ("ax3000-brochure-en-alternative.pdf", "AX3000 MEP Alternative Brochure (EN)"),
-    ("ax3000-functions-en.pdf", "AX3000 Functions Description (EN PDF)"),
-    ("ax3000-functions-en.docx", "AX3000 Functions Description (EN DOCX)"),
-    ("ax3000-functions-hexagon-en.docx", "AX3000 Functions Description Hexagon (EN DOCX)"),
-]
-for fname, title in ax_files:
-    (ax_docs_dir / fname).write_bytes(
-        create_minimal_pdf(title, f"{title} - ALLPLAN AX3000 MEP Technical Documentation - Aluplan Program Sistemleri")
-    )
+# Original binary documents only; never manufacture PDFs or DOCX placeholders.
+write_manifest(ROOT, sync_documents(ROOT, SOURCE_ROOT))
 
 print(f"Generated {len(pages_data)} routes in src/data/pages.json")
 print(f"Generated {len(playlist_by_id)} playlists in src/data/playlists.json")

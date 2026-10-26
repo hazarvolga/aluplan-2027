@@ -1,0 +1,203 @@
+{
+  "date": "2026-10-26",
+  "scope": "S02/S03 local original downloads and deterministic pipeline",
+  "dataUnchangedFromS01": true,
+  "repeatGenerationIdentical": true,
+  "unitTests": 34,
+  "parityChecks": 36,
+  "documents": [
+    {
+      "source": "public/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf",
+      "target": "public/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf",
+      "sha256": "567ce14a65f8012cb1f69b1e97dfff2badf089504a4b23a72e1a3f81a0147405",
+      "bytes": 276653,
+      "localUrl": "http://127.0.0.1:3000/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "httpSha256": "567ce14a65f8012cb1f69b1e97dfff2badf089504a4b23a72e1a3f81a0147405",
+      "sourceHashEqual": true
+    },
+    {
+      "source": "public/docs/V2026_Paket_Karsilastirma-Q4-2025_R01.pdf",
+      "target": "public/docs/V2026_Paket_Karsilastirma-Q4-2025_R01.pdf",
+      "sha256": "a5dae7878a9e6e889d3a46b5b0adf2b979aff84e969465935cf453611408a333",
+      "bytes": 209001,
+      "localUrl": "http://127.0.0.1:3000/docs/V2026_Paket_Karsilastirma-Q4-2025_R01.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "httpSha256": "a5dae7878a9e6e889d3a46b5b0adf2b979aff84e969465935cf453611408a333",
+      "sourceHashEqual": true
+    },
+    {
+      "source": "public/docs/Declaration_Allplan_2021-06-01.pdf",
+      "target": "public/docs/Declaration_Allplan_2021-06-01.pdf",
+      "sha256": "0786f1584638b18ea68f25bb66dce9a31aa7db0b436a59778798f7037980fd76",
+      "bytes": 177087,
+      "localUrl": "http://127.0.0.1:3000/docs/Declaration_Allplan_2021-06-01.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "httpSha256": "0786f1584638b18ea68f25bb66dce9a31aa7db0b436a59778798f7037980fd76",
+      "sourceHashEqual": true
+    },
+    {
+      "source": "public/docs/ifc_aktarim_el_kitabi_ifc_4.0_ifc_4.3_2026.pdf",
+      "target": "public/docs/ifc_aktarim_el_kitabi_ifc_4.0_ifc_4.3_2026.pdf",
+      "sha256": "f64c61679745f7189b37105f370474ab8ee12a3b7369c70691443a9155cd1820",
+      "bytes": 20975364,
+      "localUrl": "http://127.0.0.1:3000/docs/ifc_aktarim_el_kitabi_ifc_4.0_ifc_4.3_2026.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "httpSha256": "f64c61679745f7189b37105f370474ab8ee12a3b7369c70691443a9155cd1820",
+      "sourceHashEqual": true
+    },
+    {
+      "source": "assets/documents/ax3000/ax3000-brochure-de.pdf",
+      "target": "public/docs/ax3000/ax3000-brochure-de.pdf",
+      "sha256": "185dafe2ce9fd51119848e3a6361ac079566dbaddc1fac86c818e62cfbb0ae19",
+      "bytes": 4454666,
+      "localUrl": "http://127.0.0.1:3000/docs/ax3000/ax3000-brochure-de.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "httpSha256": "185dafe2ce9fd51119848e3a6361ac079566dbaddc1fac86c818e62cfbb0ae19",
+      "sourceHashEqual": true
+    },
+    {
+      "source": "assets/documents/ax3000/ax3000-brochure-en.pdf",
+      "target": "public/docs/ax3000/ax3000-brochure-en.pdf",
+      "sha256": "d767459671e7c4b1c444912576bad65225c0ddd94db2b16501c3c23cb65e192b",
+      "bytes": 5752710,
+      "localUrl": "http://127.0.0.1:3000/docs/ax3000/ax3000-brochure-en.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "httpSha256": "d767459671e7c4b1c444912576bad65225c0ddd94db2b16501c3c23cb65e192b",
+      "sourceHashEqual": true
+    },
+    {
+      "source": "assets/documents/ax3000/ax3000-brochure-en-alternative.pdf",
+      "target": "public/docs/ax3000/ax3000-brochure-en-alternative.pdf",
+      "sha256": "4f1cf36906cb61ed8128df43bf9c40466c675be093938effe5e2317d5b512297",
+      "bytes": 5730787,
+      "localUrl": "http://127.0.0.1:3000/docs/ax3000/ax3000-brochure-en-alternative.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "httpSha256": "4f1cf36906cb61ed8128df43bf9c40466c675be093938effe5e2317d5b512297",
+      "sourceHashEqual": true
+    },
+    {
+      "source": "assets/documents/ax3000/ax3000-functions-en.pdf",
+      "target": "public/docs/ax3000/ax3000-functions-en.pdf",
+      "sha256": "e1a59752798f433b633ce642067fb67b5f02f6ed663a674e1a49f2ef9e6cbb3d",
+      "bytes": 923994,
+      "localUrl": "http://127.0.0.1:3000/docs/ax3000/ax3000-functions-en.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "httpSha256": "e1a59752798f433b633ce642067fb67b5f02f6ed663a674e1a49f2ef9e6cbb3d",
+      "sourceHashEqual": true
+    },
+    {
+      "source": "assets/documents/ax3000/ax3000-functions-en.docx",
+      "target": "public/docs/ax3000/ax3000-functions-en.docx",
+      "sha256": "33650e8dfe037cfbd3167243140016e9244009d5bc1154aa4f76e2fa6abb815a",
+      "bytes": 2257537,
+      "localUrl": "http://127.0.0.1:3000/docs/ax3000/ax3000-functions-en.docx",
+      "status": 200,
+      "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "httpSha256": "33650e8dfe037cfbd3167243140016e9244009d5bc1154aa4f76e2fa6abb815a",
+      "sourceHashEqual": true
+    },
+    {
+      "source": "assets/documents/ax3000/ax3000-functions-hexagon-en.docx",
+      "target": "public/docs/ax3000/ax3000-functions-hexagon-en.docx",
+      "sha256": "3f62a3b0bb0462b649d7040ac10bbb3d421e97af6a38ae3488c66ab2059f20cc",
+      "bytes": 2261592,
+      "localUrl": "http://127.0.0.1:3000/docs/ax3000/ax3000-functions-hexagon-en.docx",
+      "status": 200,
+      "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "httpSha256": "3f62a3b0bb0462b649d7040ac10bbb3d421e97af6a38ae3488c66ab2059f20cc",
+      "sourceHashEqual": true
+    },
+    {
+      "source": "public/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf",
+      "target": "public/docs/V2026_paket-karsilastirma-Q3-2026_R01.pdf",
+      "sha256": "567ce14a65f8012cb1f69b1e97dfff2badf089504a4b23a72e1a3f81a0147405",
+      "bytes": 276653,
+      "localUrl": "http://127.0.0.1:3000/docs/V2026_paket-karsilastirma-Q3-2026_R01.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "httpSha256": "567ce14a65f8012cb1f69b1e97dfff2badf089504a4b23a72e1a3f81a0147405",
+      "sourceHashEqual": true
+    }
+  ],
+  "sourceSnapshotsUnchanged": true,
+  "build": "passed production SSG 110 data routes",
+  "productionHttp": [
+    {
+      "url": "http://127.0.0.1:3001/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "sha256": "567ce14a65f8012cb1f69b1e97dfff2badf089504a4b23a72e1a3f81a0147405"
+    },
+    {
+      "url": "http://127.0.0.1:3001/docs/V2026_Paket_Karsilastirma-Q4-2025_R01.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "sha256": "a5dae7878a9e6e889d3a46b5b0adf2b979aff84e969465935cf453611408a333"
+    },
+    {
+      "url": "http://127.0.0.1:3001/docs/Declaration_Allplan_2021-06-01.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "sha256": "0786f1584638b18ea68f25bb66dce9a31aa7db0b436a59778798f7037980fd76"
+    },
+    {
+      "url": "http://127.0.0.1:3001/docs/ifc_aktarim_el_kitabi_ifc_4.0_ifc_4.3_2026.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "sha256": "f64c61679745f7189b37105f370474ab8ee12a3b7369c70691443a9155cd1820"
+    },
+    {
+      "url": "http://127.0.0.1:3001/docs/ax3000/ax3000-brochure-de.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "sha256": "185dafe2ce9fd51119848e3a6361ac079566dbaddc1fac86c818e62cfbb0ae19"
+    },
+    {
+      "url": "http://127.0.0.1:3001/docs/ax3000/ax3000-brochure-en.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "sha256": "d767459671e7c4b1c444912576bad65225c0ddd94db2b16501c3c23cb65e192b"
+    },
+    {
+      "url": "http://127.0.0.1:3001/docs/ax3000/ax3000-brochure-en-alternative.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "sha256": "4f1cf36906cb61ed8128df43bf9c40466c675be093938effe5e2317d5b512297"
+    },
+    {
+      "url": "http://127.0.0.1:3001/docs/ax3000/ax3000-functions-en.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "sha256": "e1a59752798f433b633ce642067fb67b5f02f6ed663a674e1a49f2ef9e6cbb3d"
+    },
+    {
+      "url": "http://127.0.0.1:3001/docs/ax3000/ax3000-functions-en.docx",
+      "status": 200,
+      "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "sha256": "33650e8dfe037cfbd3167243140016e9244009d5bc1154aa4f76e2fa6abb815a"
+    },
+    {
+      "url": "http://127.0.0.1:3001/docs/ax3000/ax3000-functions-hexagon-en.docx",
+      "status": 200,
+      "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "sha256": "3f62a3b0bb0462b649d7040ac10bbb3d421e97af6a38ae3488c66ab2059f20cc"
+    },
+    {
+      "url": "http://127.0.0.1:3001/docs/V2026_paket-karsilastirma-Q3-2026_R01.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "sha256": "567ce14a65f8012cb1f69b1e97dfff2badf089504a4b23a72e1a3f81a0147405"
+    }
+  ],
+  "uniqueInternalDownloadLinksChecked": 10,
+  "productionInternalDownloadLinksPass": true
+}

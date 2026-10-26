@@ -18,8 +18,8 @@ Kullanıcı aşağıdaki yol haritasını onayladı ve önce kayda alınıp çal
 | Adım | Kapsam | Kabul ölçütü | Durum |
 |---|---|---|---|
 | S01 | Güvenli başlangıç kaydı ve pazarlama klasörünü hariç tutma | HEAD, üretilmiş veri, gerçek dosya türleri, belge hashleri ve kaynak snapshot eşliği kayıtlı; materyal klasörü ignored | Tamamlandı |
-| S02 | Tek yetkili veri üretim hattı | Güncel Python hattı tek giriş; pnpm komutları doğru; eski JS üretici devre dışı; tekrar üretim deterministik, veri kaybı yok | Bekliyor |
-| S03 | PDF/DOCX kaynak paritesi | Temsili PDF üretimi kaldırılır; orijinal belgeler kaynak/URL eşlemesi, SHA-256 ve tür kontrolüyle korunur | Bekliyor |
+| S02 | Tek yetkili veri üretim hattı | Güncel Python hattı tek giriş; pnpm komutları doğru; eski JS üretici devre dışı; tekrar üretim deterministik, veri kaybı yok | Tamamlandı |
+| S03 | PDF/DOCX kaynak paritesi | Temsili PDF üretimi kaldırılır; orijinal belgeler kaynak/URL eşlemesi, SHA-256 ve tür kontrolüyle korunur | Tamamlandı |
 | S04 | Microsoft Forms yönlendirmesi | Talep CTA'ları ortak forma bağlı; sahte yerel başarı yok; destek/deneme/özel lisans görevleri karıştırılmaz | Bekliyor |
 | S05 | İçerik/etkileşim paritesi | Kaynak→veri→render bazında eksik/fazla/değişmiş/yanlış eşleşmiş kayıtlar; hedefli canlı doğrulama | Bekliyor |
 | S06 | Token ve bileşen sağlamlaştırma | Sabit görsel kararlar tokenlara taşınır; büyük bileşenler ayrılır; görsel karşılaştırma görünümü korur | Bekliyor |
@@ -473,3 +473,12 @@ Git dışında kullanıcı ZIP'i, `Aluplan Design System/`, `docs/previews/anthr
 Plan önce `91f6da7` ile commit edildi. `docs/verification/stabilization-2026-10-26/baseline.json` beş üretilmiş JSON'un ve10belgenin SHA-256/boyut/tür kaydını içerir.10/10orijinal belge 2026kaynağında bulundu; mevcut hedeflerde0/10hash eşliği ve ikiDOCX'tePDF imzası doğrulandı.161TSX snapshotının güncel2026kaynağıyla161/161bayt eşliği var; önceki snapshot eskimesi şüphesi bu kümede giderildi. Tüm kaynak/render/canlı paritesi henüz kanıtlanmadı.
 
 `/Allplan 2027 Marketing Materials/` .gitignore'a eklendi, git check-ignore ile doğrulandı; klasör içeriği açılmadı/değiştirilmedi. Kaynak/veri/belgeler değiştirilmedi, üreticiler çalıştırılmadı. S01 yalnız doküman/Git ignore adımıdır; uygulama testleri tekrarlanmadı. Sıradaki adım S02 tek veri üreticisi ve komut sözleşmesi; belge yazma güvenliği sağlanmadan üreticiyi çalıştırma. Bu aşama sonunda kullanıcıya kanıt özeti sunulur.
+
+
+## 26.10.2026 — S02/S03 tek veri hattı ve gerçek belge kopyaları tamamlandı
+
+Kullanıcı PDF/diğer dosyaların mutlaka2027'ye kopyalanmasını ve kırık link kabul edilmemesini istedi. `scripts/generate_site_data.py` tek üretici yapıldı; pnpm veri/test komutları düzeltildi, eski JS üretici aynı Python girişine yönlendiren sarmalayıcıya dönüştürüldü. Temsili PDF üretimi kaldırıldı; `scripts/document_assets.py` 10özgün PDF/DOCX'i salt-okunur2026kaynağından2027public/docs'a kopyalıyor. Ana sayfanın yazım farklı PDF hedefini koruyan11.adres de aynı özgün dosyayı sunar. Kaynak/hedef/tür/SHAmanifesti `src/data/documents-manifest.json` içinde; parite artık dosya varlığı yerine tür/boyut/hash kontrol eder. Eksik/bozuk kaynak ve path/symlink kaçışları önkontrolde durdurulur.
+
+34birim testi +36parite kontrolü, typecheck/build ve188kontrast çifti geçti.11/11belge URL'si yerel productionHTTP200 ve orijinal gövde hash eşliğiyle doğrulandı. Veri içindeki10benzersiz yerel indirme hedefi geçerli dosya döndürdü. Beş mevcut içerikJSON'u S01ile aynı; altıJSON tekrarlı üretimde aynı.161kaynak snapshotı değişmedi. İnceleme kritik/yüksek bulgu vermedi; manifest şekil kontrolü önerisi testle kapandı. Kanıt/komutlar `docs/verification/stabilization-2026-10-26/README.md` ve `documents-after.json` içinde.
+
+Bu adım form/tasarım/schema içeriğini değiştirmedi, canlıya yayın yapılmadı. Kaynak2026salt-okunur kaldı, pazarlama materyalleri ignored. Sıradaki adım S04Microsoft Forms tek talep kanalı ve sahte yerel başarı akışlarının kaldırılması; özel lisans/iletişim akışını satış formuna otomatik karıştırma. S05tam içerik/etkileşim paritesi veS06token refaktörü hâlâ açıktır.

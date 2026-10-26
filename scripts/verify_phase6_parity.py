@@ -2,6 +2,7 @@
 import csv
 import json
 import sys
+from document_assets import verify_documents
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -158,20 +159,8 @@ check("Footer preserves developer credit 'Design & Develop by Hazar Volga Ekiz'"
 check("Footer preserves all 3 phone numbers and Atasehir address", len(nav["footer"]["phones"]) == 3 and len(nav["footer"]["address"]) == 3)
 
 # 5. Downloadable Documents & Static Assets
-required_docs = [
-    ROOT / "public/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf",
-    ROOT / "public/docs/V2026_Paket_Karsilastirma-Q4-2025_R01.pdf",
-    ROOT / "public/docs/Declaration_Allplan_2021-06-01.pdf",
-    ROOT / "public/docs/ifc_aktarim_el_kitabi_ifc_4.0_ifc_4.3_2026.pdf",
-    ROOT / "public/docs/ax3000/ax3000-brochure-de.pdf",
-    ROOT / "public/docs/ax3000/ax3000-brochure-en.pdf",
-    ROOT / "public/docs/ax3000/ax3000-brochure-en-alternative.pdf",
-    ROOT / "public/docs/ax3000/ax3000-functions-en.pdf",
-    ROOT / "public/docs/ax3000/ax3000-functions-en.docx",
-    ROOT / "public/docs/ax3000/ax3000-functions-hexagon-en.docx",
-]
-missing_docs = [str(p.relative_to(ROOT)) for p in required_docs if not p.exists() or p.stat().st_size == 0]
-check("All 10 downloadable PDF/DOCX assets exist in public/docs/", len(missing_docs) == 0, str(missing_docs))
+document_errors = verify_documents(ROOT)
+check("All original PDF/DOCX downloads match committed hashes and correct file types", not document_errors, str(document_errors))
 
 # 5b. Media, Video & Icon Asset Parity (1,367 page images, 8 MP4 videos, 9 partner logos, AluIcon SVG system)
 missing_page_images = []

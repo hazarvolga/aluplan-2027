@@ -1,3 +1,5 @@
+> **26.10.2026 güncel karar:** Aşağıdaki Next.js kısa form sözleşmesi gelecek aday plandır ve şimdilik ertelenmiştir. Kullanıcı mevcut tek Microsoft Forms ile devam etmeyi seçti. Uygulamada ortak talep hedefi `https://forms.office.com/r/hXhnKAG912`; yerel talep modalı kaldırılmış, sahte başarı veren POST adresleri 410 ile emekliye ayrılmıştır. Lisans yöneticisi formu, deklarasyon PDF'si, destek ve resmî deneme indirmesi ayrı görevlerdir. S04 kanıtı: `docs/verification/stabilization-2026-10-26/forms-after.json`.
+
 # Next.js kısa formlar: alan ve takip sözleşmesi
 
 22.10.2026 — Kullanıcı **Next.js içinde niyete özel kısa formlarla ilerlemeyi onayladı**. Bu belge bu yön için planlanan alanları, kayıt akışını ve schema sınırlarını netleştirir. Kod yazma, mevcut formu değiştirme, CRM seçme veya yayın izni değildir. Önceki [platform karşılaştırması](form-platform-comparison.md) tarihsel gerekçedir; araç seçimi artık açık soru değildir.

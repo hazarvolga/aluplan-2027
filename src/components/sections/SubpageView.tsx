@@ -9,7 +9,8 @@ import {
   getAllPlaylists,
   getSearchIndex,
   TRIAL_CTA_URL,
-  MAIN_QUOTE_FORM_URL
+  MAIN_QUOTE_FORM_URL,
+  SUPPORT_PORTAL_URL
 } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
 
@@ -329,76 +330,6 @@ export function SubpageView({
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
   }, []);
-
-  // Contact form state (/contact)
-  const [contactName, setContactName] = useState('');
-  const [contactEmail, setContactEmail] = useState('');
-  const [contactPhone, setContactPhone] = useState('');
-  const [contactSubject, setContactSubject] = useState('');
-  const [contactMessage, setContactMessage] = useState('');
-  const [contactStatus, setContactStatus] = useState<{ type: 'idle' | 'ok' | 'err'; msg?: string }>({ type: 'idle' });
-
-  // Activation wizard state (/solutions-v2/connect-license/activation)
-  const [actCustomerNo, setActCustomerNo] = useState('');
-  const [actCompany, setActCompany] = useState('');
-  const [actFullName, setActFullName] = useState('');
-  const [actEmail, setActEmail] = useState('');
-  const [actPhone, setActPhone] = useState('');
-  const [actLicenseKey, setActLicenseKey] = useState('');
-  const [actStatus, setActStatus] = useState<{ type: 'idle' | 'ok' | 'err'; msg?: string }>({ type: 'idle' });
-
-  const handleContactSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setContactStatus({ type: 'idle' });
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          fullName: contactName,
-          email: contactEmail,
-          phone: contactPhone,
-          subject: contactSubject,
-          message: contactMessage
-        })
-      });
-      const data = await res.json();
-      if (!res.ok) {
-        setContactStatus({ type: 'err', msg: data.error || 'Mesaj gönderilemedi.' });
-      } else {
-        setContactStatus({ type: 'ok', msg: `Mesajınız alındı. Kayıt no: ${data.referenceId}` });
-      }
-    } catch {
-      setContactStatus({ type: 'err', msg: 'Sunucu bağlantı hatası oluştu.' });
-    }
-  };
-
-  const handleActivationSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setActStatus({ type: 'idle' });
-    try {
-      const res = await fetch('/api/send-activation-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          customerNumber: actCustomerNo,
-          companyName: actCompany,
-          fullName: actFullName,
-          email: actEmail,
-          phone: actPhone,
-          productKey: actLicenseKey
-        })
-      });
-      const data = await res.json();
-      if (!res.ok) {
-        setActStatus({ type: 'err', msg: data.error || 'Deklarasyon formu gönderilemedi.' });
-      } else {
-        setActStatus({ type: 'ok', msg: `Deklarasyon kaydınız alındı. Referans: ${data.referenceId}` });
-      }
-    } catch {
-      setActStatus({ type: 'err', msg: 'Sunucu bağlantı hatası oluştu.' });
-    }
-  };
 
   const isLegalPage = page.section === 'legal';
   const isVideoLibraryHub = page.path === '/solutions-v2/training/video-library';
@@ -852,86 +783,39 @@ export function SubpageView({
         </section>
       )}
 
-      {/* Special Interactive View: Contact Form (/contact) */}
+      {page.path === '/solutions-v2/training' && (
+        <section className="preview-section preview-section--subtle" aria-labelledby="training-request-heading">
+          <div className="alu-container alu-stack">
+            <h2 id="training-request-heading" className="alu-h2">Eğitim Talebi</h2>
+            <p className="alu-body">Eğitim ihtiyacınızı mevcut talep formumuz üzerinden paylaşabilirsiniz.</p>
+            <div className="alu-cluster">
+              <a href={MAIN_QUOTE_FORM_URL} target="_blank" rel="noopener noreferrer" className="alu-button alu-button--primary alu-button--md">
+                <span>Eğitim Talep Formunu Aç</span>
+                <AluIcon name="external-link" size="sm" />
+              </a>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Contact requests use the shared Microsoft form; direct channels stay available */}
       {page.path === '/contact' && (
         <section className="preview-section preview-section--subtle" aria-labelledby="contact-form-heading">
           <div className="alu-container alu-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(22rem, 1fr))' }}>
             <div className="alu-service-card alu-stack">
               <span className="preview-kicker">DOĞRUDAN İLETİŞİM</span>
               <h2 id="contact-form-heading" className="alu-h2">
-                İletişim ve Danışmanlık Formu
+                İletişim ve Danışmanlık Talepleri
               </h2>
-              <form className="alu-stack" onSubmit={handleContactSubmit}>
-                <label className="alu-stack" style={{ gap: '0.25rem' }}>
-                  <span className="alu-label">Adınız Soyadınız *</span>
-                  <input
-                    type="text"
-                    required
-                    maxLength={120}
-                    className="alu-input"
-                    value={contactName}
-                    onChange={(e) => setContactName(e.target.value)}
-                  />
-                </label>
-                <label className="alu-stack" style={{ gap: '0.25rem' }}>
-                  <span className="alu-label">E-posta Adresiniz *</span>
-                  <input
-                    type="email"
-                    required
-                    maxLength={254}
-                    className="alu-input"
-                    value={contactEmail}
-                    onChange={(e) => setContactEmail(e.target.value)}
-                  />
-                </label>
-                <label className="alu-stack" style={{ gap: '0.25rem' }}>
-                  <span className="alu-label">Telefon Numaranız</span>
-                  <input
-                    type="tel"
-                    maxLength={40}
-                    className="alu-input"
-                    value={contactPhone}
-                    onChange={(e) => setContactPhone(e.target.value)}
-                  />
-                </label>
-                <label className="alu-stack" style={{ gap: '0.25rem' }}>
-                  <span className="alu-label">Konu *</span>
-                  <input
-                    type="text"
-                    required
-                    maxLength={160}
-                    className="alu-input"
-                    value={contactSubject}
-                    onChange={(e) => setContactSubject(e.target.value)}
-                  />
-                </label>
-                <label className="alu-stack" style={{ gap: '0.25rem' }}>
-                  <span className="alu-label">Mesajınız *</span>
-                  <textarea
-                    rows={4}
-                    required
-                    maxLength={2000}
-                    className="alu-input"
-                    style={{ height: 'auto', paddingBlock: '0.5rem' }}
-                    value={contactMessage}
-                    onChange={(e) => setContactMessage(e.target.value)}
-                  />
-                </label>
-                {contactStatus.type === 'ok' && (
-                  <p className="alu-badge alu-badge--accent" role="status">
-                    {contactStatus.msg}
-                  </p>
-                )}
-                {contactStatus.type === 'err' && (
-                  <p className="alu-caption" role="alert" style={{ color: 'var(--status-danger-fg)' }}>
-                    {contactStatus.msg}
-                  </p>
-                )}
-                <button type="submit" className="alu-button alu-button--primary alu-button--lg">
-                  <span>Mesajı Gönder</span>
-                  <AluIcon name="arrow-right" size="sm" />
-                </button>
-              </form>
+              <p className="alu-body">
+                Teklif, ürün bilgisi ve eğitim taleplerinizi ortak Microsoft Forms üzerinden iletebilirsiniz.
+                Doğrudan iletişim için e-posta ve telefon kanallarımızı kullanabilirsiniz.
+              </p>
+              <a href={MAIN_QUOTE_FORM_URL} target="_blank" rel="noopener noreferrer" className="alu-button alu-button--primary alu-button--lg">
+                <span>Talep Formunu Aç</span>
+                <AluIcon name="external-link" size="sm" />
+              </a>
+              <a href="mailto:info@aluplan.com.tr" className="alu-link">info@aluplan.com.tr</a>
             </div>
 
             <div className="alu-service-card alu-stack">
@@ -1232,110 +1116,30 @@ export function SubpageView({
         );
       })()}
 
-      {/* Special Interactive View: License Activation Wizard (/solutions-v2/connect-license/activation) */}
+      {/* License declarations remain separate from sales requests */}
       {page.path === '/solutions-v2/connect-license/activation' && (
         <section className="preview-section preview-section--subtle" aria-labelledby="activation-form-heading">
           <div className="alu-container">
             <div className="alu-service-card alu-stack">
-              <span className="preview-kicker">LİSANS AKTİVASYON SİHİRBAZI</span>
+              <span className="preview-kicker">LİSANS AKTİVASYONU</span>
               <h2 id="activation-form-heading" className="alu-h2">
-                ALLPLAN Lisans Deklarasyon ve Aktivasyon Formu
+                ALLPLAN Lisans Deklarasyon ve Aktivasyon
               </h2>
-              <form className="alu-stack" onSubmit={handleActivationSubmit}>
-                <div className="alu-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(15rem, 1fr))' }}>
-                  <label className="alu-stack" style={{ gap: '0.25rem' }}>
-                    <span className="alu-label">Müşteri Numarası *</span>
-                    <input
-                      type="text"
-                      required
-                      maxLength={64}
-                      className="alu-input"
-                      value={actCustomerNo}
-                      onChange={(e) => setActCustomerNo(e.target.value)}
-                    />
-                  </label>
-                  <label className="alu-stack" style={{ gap: '0.25rem' }}>
-                    <span className="alu-label">Firma / Kurum Adı *</span>
-                    <input
-                      type="text"
-                      required
-                      maxLength={160}
-                      className="alu-input"
-                      value={actCompany}
-                      onChange={(e) => setActCompany(e.target.value)}
-                    />
-                  </label>
-                  <label className="alu-stack" style={{ gap: '0.25rem' }}>
-                    <span className="alu-label">Yetkili Ad Soyad *</span>
-                    <input
-                      type="text"
-                      required
-                      maxLength={120}
-                      className="alu-input"
-                      value={actFullName}
-                      onChange={(e) => setActFullName(e.target.value)}
-                    />
-                  </label>
-                  <label className="alu-stack" style={{ gap: '0.25rem' }}>
-                    <span className="alu-label">Kurumsal E-posta *</span>
-                    <input
-                      type="email"
-                      required
-                      maxLength={254}
-                      className="alu-input"
-                      value={actEmail}
-                      onChange={(e) => setActEmail(e.target.value)}
-                    />
-                  </label>
-                  <label className="alu-stack" style={{ gap: '0.25rem' }}>
-                    <span className="alu-label">Telefon *</span>
-                    <input
-                      type="tel"
-                      required
-                      maxLength={40}
-                      className="alu-input"
-                      value={actPhone}
-                      onChange={(e) => setActPhone(e.target.value)}
-                    />
-                  </label>
-                  <label className="alu-stack" style={{ gap: '0.25rem' }}>
-                    <span className="alu-label">Lisans / Ürün Anahtarı (Product Key) *</span>
-                    <input
-                      type="text"
-                      required
-                      maxLength={128}
-                      className="alu-input"
-                      value={actLicenseKey}
-                      onChange={(e) => setActLicenseKey(e.target.value)}
-                    />
-                  </label>
-                </div>
-                {actStatus.type === 'ok' && (
-                  <p className="alu-badge alu-badge--accent" role="status">
-                    {actStatus.msg}
-                  </p>
-                )}
-                {actStatus.type === 'err' && (
-                  <p className="alu-caption" role="alert" style={{ color: 'var(--status-danger-fg)' }}>
-                    {actStatus.msg}
-                  </p>
-                )}
-                <div className="alu-cluster">
-                  <button type="submit" className="alu-button alu-button--primary alu-button--md">
-                    <span>Deklarasyonu Gönder</span>
-                    <AluIcon name="arrow-right" size="sm" />
-                  </button>
-                  <a
-                    href="/docs/Declaration_Allplan_2021-06-01.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="alu-button alu-button--secondary alu-button--md"
-                  >
-                    <AluIcon name="file-text" size="sm" />
-                    <span>Örnek Deklarasyon Belgesi (PDF)</span>
-                  </a>
-                </div>
-              </form>
+              <p className="alu-body">
+                Bu sayfadan çevrimiçi deklarasyon gönderimi yapılmamaktadır.
+                Lisans aktivasyonu ve deklarasyon işlemleri için Aluplan ile iletişime geçebilirsiniz.
+              </p>
+              <div className="alu-cluster">
+                <a href="/docs/Declaration_Allplan_2021-06-01.pdf" target="_blank" rel="noopener noreferrer" className="alu-button alu-button--secondary alu-button--md">
+                  <AluIcon name="file-text" size="sm" />
+                  <span>Örnek Deklarasyon Belgesi (PDF)</span>
+                </a>
+                <a href={SUPPORT_PORTAL_URL} target="_blank" rel="noopener noreferrer" className="alu-button alu-button--primary alu-button--md">
+                  <span>Destek Merkezine Git</span>
+                  <AluIcon name="external-link" size="sm" />
+                </a>
+                <a href="mailto:info@aluplan.com.tr" className="alu-link">info@aluplan.com.tr</a>
+              </div>
             </div>
           </div>
         </section>

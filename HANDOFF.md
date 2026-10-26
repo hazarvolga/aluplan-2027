@@ -20,7 +20,7 @@ Kullanıcı aşağıdaki yol haritasını onayladı ve önce kayda alınıp çal
 | S01 | Güvenli başlangıç kaydı ve pazarlama klasörünü hariç tutma | HEAD, üretilmiş veri, gerçek dosya türleri, belge hashleri ve kaynak snapshot eşliği kayıtlı; materyal klasörü ignored | Tamamlandı |
 | S02 | Tek yetkili veri üretim hattı | Güncel Python hattı tek giriş; pnpm komutları doğru; eski JS üretici devre dışı; tekrar üretim deterministik, veri kaybı yok | Tamamlandı |
 | S03 | PDF/DOCX kaynak paritesi | Temsili PDF üretimi kaldırılır; orijinal belgeler kaynak/URL eşlemesi, SHA-256 ve tür kontrolüyle korunur | Tamamlandı |
-| S04 | Microsoft Forms yönlendirmesi | Talep CTA'ları ortak forma bağlı; sahte yerel başarı yok; destek/deneme/özel lisans görevleri karıştırılmaz | Bekliyor |
+| S04 | Microsoft Forms yönlendirmesi | Talep CTA'ları ortak forma bağlı; sahte yerel başarı yok; destek/deneme/özel lisans görevleri karıştırılmaz | Tamamlandı |
 | S05 | İçerik/etkileşim paritesi | Kaynak→veri→render bazında eksik/fazla/değişmiş/yanlış eşleşmiş kayıtlar; hedefli canlı doğrulama | Bekliyor |
 | S06 | Token ve bileşen sağlamlaştırma | Sabit görsel kararlar tokenlara taşınır; büyük bileşenler ayrılır; görsel karşılaştırma görünümü korur | Bekliyor |
 | S07 | Yayın öncesi kabul | Çalışan test komutları, typecheck/build, tarayıcı etkileşimleri, schema/performance doğrulaması ve açık riskler | Bekliyor |
@@ -482,3 +482,14 @@ Kullanıcı PDF/diğer dosyaların mutlaka2027'ye kopyalanmasını ve kırık li
 34birim testi +36parite kontrolü, typecheck/build ve188kontrast çifti geçti.11/11belge URL'si yerel productionHTTP200 ve orijinal gövde hash eşliğiyle doğrulandı. Veri içindeki10benzersiz yerel indirme hedefi geçerli dosya döndürdü. Beş mevcut içerikJSON'u S01ile aynı; altıJSON tekrarlı üretimde aynı.161kaynak snapshotı değişmedi. İnceleme kritik/yüksek bulgu vermedi; manifest şekil kontrolü önerisi testle kapandı. Kanıt/komutlar `docs/verification/stabilization-2026-10-26/README.md` ve `documents-after.json` içinde.
 
 Bu adım form/tasarım/schema içeriğini değiştirmedi, canlıya yayın yapılmadı. Kaynak2026salt-okunur kaldı, pazarlama materyalleri ignored. Sıradaki adım S04Microsoft Forms tek talep kanalı ve sahte yerel başarı akışlarının kaldırılması; özel lisans/iletişim akışını satış formuna otomatik karıştırma. S05tam içerik/etkileşim paritesi veS06token refaktörü hâlâ açıktır.
+
+
+## 26.10.2026 — S04 mevcut Microsoft Forms talep kanalı tamamlandı
+
+`SiteShell` yerel kısa form modalı ve /api/request çağrısı kaldırıldı; Hızlı Talep Oluştur gerçek harici link olarak ortak `https://forms.office.com/r/hXhnKAG912` hedefini açar. İletişimde ortak talep formu + mevcut e-posta/telefon, Eğitim ana sayfasında doğrudan eğitim talep linki sunuldu. PythonPart/Scalypso ailesindeki kullanıcı tarafından hatalı olduğu teyit edilen XLQm9JPTSR CDS hedefi yalnız tam URL eşleşmesiyle içerik ve structuredLayout katmanında ortak forma hizalandı. HSrhvAkYmb lisans yöneticisi formu, Teams/ticket ve resmî deneme URL'si korunur.
+
+Lisans aktivasyonu bölümünde çalışmayan ürün anahtarı/kişisel veri toplama alanları yerine çevrimiçi gönderim yapılmadığı açıklandı; özgün deklarasyon PDF'si, ticket ve info e-postası korunur. Lisans işlemi satış formuna bağlanmadı. Üç eski POST endpoint'i gövdeyi okumadan, saklamadan veya yönlendirmeden410/error/no-store döndürür; sahte başarı/başvuru no üretilmez. Bu, gerçek bir SMTP/aktivasyon teslimatı kurulduğu anlamına gelmez; mevcut uygulamada bu teslimat desteklenmiyor. Eski alanlar kaynak snapshotlarında korunur, yeni çalışan form varmış gibi sunulmaz.
+
+43birim testi +36parite, typecheck ve production build geçti; yerel üretim tarayıcısında iletişimde0form, güvenli ortak form linki; eğitim talep hedefi doğru; aktivasyon bölümünde0kişisel alan ve yalnız PDF/ticket/mail doğrulandı. ÜçPOST'a bozukJSON ile yerel test410döndürdü; gerçek form gönderimi/kişisel veri iletimi yapılmadı. Kod ve güvenlik incelemelerinde kritik/yüksek bulgu yok. Kanıt `forms-after.json` / `forms-contact.png`; `docs/request-forms-contract.md` başına erteleme kararı eklendi. Form testleri mevcut URL politikası ve sahte başarı regresyonunu kapsar; tüm uygulama kabulü değildir.
+
+S05notu: tarayıcıda /contact kaynak gövdesinde hâlâ30gün deneme ifadesi var. Önceki rapordaki süre çelişkisinin tamamen kapandığı iddiası doğrulanmıyor; içerik denetiminde kanıt/karar farkı olarak ele alınacak, bu tur metin değiştirilmedi. Sıradaki adım S05kaynak→veri→render içerik/etkileşim karşılaştırması. Canlı siteye deploy/push yok,2026kaynağı değişmedi,2027materyalleri ignored.

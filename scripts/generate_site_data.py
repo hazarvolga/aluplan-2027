@@ -10,6 +10,7 @@ from urllib.parse import urlparse, parse_qs, unquote
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from extract_structured_pages import build_all_structured_pages
 from document_assets import prepare_documents, sync_documents, write_manifest
+from request_links import normalize_request_links
 
 STRUCTURED_LAYOUTS = build_all_structured_pages()
 
@@ -841,6 +842,10 @@ for raw_page in raw_200_pages:
         "schemaType": schema_type,
         "structuredLayout": STRUCTURED_LAYOUTS.get(route_path),
     }
+
+# Only the retired CDS/PythonPart/Scalypso demand form is remapped.
+# License manager forms, support and official trial destinations remain distinct.
+pages_data = normalize_request_links(pages_data)
 
 data_dir = ROOT / "src/data"
 data_dir.mkdir(parents=True, exist_ok=True)

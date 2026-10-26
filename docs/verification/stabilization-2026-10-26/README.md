@@ -35,3 +35,11 @@ Doğrulamalar:
 - Bağımsız kod incelemesi kritik/yüksek bulgu vermedi; önerilen manifest tür doğrulaması da testle eklendi.
 
 Kanıt: `documents-after.json`. S04 Microsoft Forms geçişi sıradaki ayrı adımdır; mevcut form kodu bu adımda değiştirilmedi. S05 kapsamlı içerik/etkileşim kabulü ve S06token/bileşen sağlamlaştırma hâlâ açıktır.
+
+## S04 — Microsoft Forms tek talep kanalı (26.10.2026)
+
+Ortak teklif/ürün/deneme desteği/eğitim talepleri mevcut Microsoft Forms hedefini kullanır. Topbar yerel modalı, iletişim formu ve çalışmayan lisans gönderim alanları kaldırıldı; lisans görevi PDF/ticket/mail üzerinden ayrı tutulur. Üç eski POST adresi gövdeyi okumadan410verir; form verisini POST redirect ile Microsoft'a taşımaz. Eski CDS talep URL'si tam eşleşmeyle ortak forma hizalanır; lisans yöneticisi Forms'u korunur. `request_links.py` taze veri ağacı üretir; tarihsel kanıt veya kaynak snapshotlarına yazmaz.
+
+43birim testi,36parite kontrolü, TypeScript/production build geçti; tarayıcıda contact/training/activation kontrol edildi. Microsoft formuna gönderim yapılmadı. Üç API'ye bozukJSON ile localPOST410sonucu, güvenli link nitelikleri ve kanal ayrımı `forms-after.json` içindedir. `forms-contact.png` üretim tarayıcı kanıtıdır. İncelemeler kritik/yüksek bulgu vermedi.
+
+Açık içerik bulgusu: /contact gövdesindeki30gün deneme metni S05'e taşındı; form geçişi bunu çözmez. S04sonrasında kapsamlı içerik/etkileşim paritesi, token refaktörü ve yayın kabulü henüz açıktır.

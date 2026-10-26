@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { getNavigationData, getSearchIndex, TRIAL_CTA_URL, MAIN_QUOTE_FORM_URL } from '@/lib/site-data';
+import { getNavigationData, getSearchIndex, MAIN_QUOTE_FORM_URL } from '@/lib/site-data';
 import { AluIcon, AluIconName } from '@/components/ui/AluIcon';
 
 const navData = getNavigationData();
@@ -24,21 +24,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [requestModalOpen, setRequestModalOpen] = useState(false);
-  const [requestIntent, setRequestIntent] = useState<'quote' | 'trial_assistance' | 'training_request'>('quote');
   const [cookieConsent, setCookieConsent] = useState<'accepted' | 'rejected' | null>(null);
   const [consentLoaded, setConsentLoaded] = useState(false);
-
-  // Form states for short Next.js request modal
-  const [fullName, setFullName] = useState('');
-  const [email, setEmail] = useState('');
-  const [company, setCompany] = useState('');
-  const [phone, setPhone] = useState('');
-  const [productSelection, setProductSelection] = useState('ALLPLAN');
-  const [message, setMessage] = useState('');
-  const [submitState, setSubmitState] = useState<{ status: 'idle' | 'submitting' | 'success' | 'error'; text?: string }>({
-    status: 'idle'
-  });
 
   useEffect(() => {
     try {
@@ -67,7 +54,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       } else if (e.key === 'Escape') {
         setOpenMenu(null);
         setSearchOpen(false);
-        setRequestModalOpen(false);
       }
     };
     window.addEventListener('keydown', onKeyDown);
@@ -109,38 +95,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         .slice(0, 12)
     : searchIndex.slice(0, 8);
 
-  const handleRequestSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitState({ status: 'submitting' });
-    try {
-      const res = await fetch('/api/request', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          intent: requestIntent,
-          fullName,
-          email,
-          company,
-          phone,
-          productSelection,
-          message,
-          sourcePageRef: typeof window !== 'undefined' ? window.location.pathname : '/'
-        })
-      });
-      const data = await res.json();
-      if (!res.ok) {
-        setSubmitState({ status: 'error', text: data.error || 'Gönderim sırasında bir hata oluştu.' });
-      } else {
-        setSubmitState({
-          status: 'success',
-          text: `Talebiniz kaydedildi. Başvuru numaranız: ${data.requestId}`
-        });
-      }
-    } catch {
-      setSubmitState({ status: 'error', text: 'Bağlantı hatası oluştu. Lütfen tekrar deneyin.' });
-    }
-  };
-
   const logoSrc = mode === 'dark' ? '/assets/logo/aluplan-logo-white-filled.svg' : '/assets/logo/aluplan-logo-black.svg';
 
   return (
@@ -172,19 +126,15 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               <AluIcon name="mail" size="sm" />
               <span>{navData.topBar.email}</span>
             </a>
-            <button
-              type="button"
+            <a
               className="alu-topbar__link"
-              style={{ background: 'transparent', cursor: 'pointer' }}
-              onClick={() => {
-                setRequestIntent('quote');
-                setSubmitState({ status: 'idle' });
-                setRequestModalOpen(true);
-              }}
+              href={MAIN_QUOTE_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <span>Hızlı Talep Oluştur</span>
               <AluIcon name="arrow-up-right" size="sm" />
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -505,192 +455,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 </Link>
               ))}
             </div>
-          </div>
-        </div>
-      )}
-
-      {/* Short Next.js Request Modal (per docs/request-forms-contract.md) */}
-      {requestModalOpen && (
-        <div className="alu-modal-backdrop" role="dialog" aria-modal="true" aria-label="Hızlı Talep Formu">
-          <div className="alu-modal alu-stack">
-            <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
-              <h2 className="alu-h3" style={{ margin: 0 }}>
-                {requestIntent === 'quote'
-                  ? 'Teklif veya ürün seçimi için bize ulaşın'
-                  : requestIntent === 'trial_assistance'
-                    ? 'ALLPLAN denemesi için bilgi veya yardım isteyin'
-                    : 'Eğitim ihtiyacınızı paylaşın'}
-              </h2>
-              <button
-                type="button"
-                className="alu-button alu-button--ghost alu-button--sm"
-                onClick={() => setRequestModalOpen(false)}
-              >
-                <AluIcon name="x" size="sm" />
-                <span>Kapat</span>
-              </button>
-            </div>
-
-            <div className="alu-cluster" role="tablist" aria-label="Talep türü seçimi">
-              <button
-                type="button"
-                className={`alu-button alu-button--sm ${requestIntent === 'quote' ? 'alu-button--primary' : 'alu-button--secondary'}`}
-                onClick={() => setRequestIntent('quote')}
-              >
-                Teklif / Ürün Seçimi
-              </button>
-              <button
-                type="button"
-                className={`alu-button alu-button--sm ${requestIntent === 'trial_assistance' ? 'alu-button--primary' : 'alu-button--secondary'}`}
-                onClick={() => setRequestIntent('trial_assistance')}
-              >
-                Deneme Yardımı
-              </button>
-              <button
-                type="button"
-                className={`alu-button alu-button--sm ${requestIntent === 'training_request' ? 'alu-button--primary' : 'alu-button--secondary'}`}
-                onClick={() => setRequestIntent('training_request')}
-              >
-                Özel Eğitim Talebi
-              </button>
-            </div>
-
-            <form className="alu-stack" onSubmit={handleRequestSubmit}>
-              <label className="alu-stack" style={{ gap: '0.25rem' }}>
-                <span className="alu-label">Ad Soyad *</span>
-                <input
-                  type="text"
-                  required
-                  maxLength={120}
-                  className="alu-input"
-                  value={fullName}
-                  onChange={(e) => setFullName(e.target.value)}
-                />
-              </label>
-              <label className="alu-stack" style={{ gap: '0.25rem' }}>
-                <span className="alu-label">E-posta *</span>
-                <input
-                  type="email"
-                  required
-                  maxLength={254}
-                  className="alu-input"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </label>
-              <div className="alu-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(12rem, 1fr))' }}>
-                <label className="alu-stack" style={{ gap: '0.25rem' }}>
-                  <span className="alu-label">Firma / Kurum</span>
-                  <input
-                    type="text"
-                    maxLength={160}
-                    className="alu-input"
-                    value={company}
-                    onChange={(e) => setCompany(e.target.value)}
-                  />
-                </label>
-                <label className="alu-stack" style={{ gap: '0.25rem' }}>
-                  <span className="alu-label">Telefon</span>
-                  <input
-                    type="tel"
-                    maxLength={40}
-                    className="alu-input"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                  />
-                </label>
-              </div>
-              <label className="alu-stack" style={{ gap: '0.25rem' }}>
-                <span className="alu-label">İlgili Ürün / Çözüm</span>
-                <select
-                  className="alu-input"
-                  value={productSelection}
-                  onChange={(e) => setProductSelection(e.target.value)}
-                >
-                  <option value="ALLPLAN">ALLPLAN (Basic / Concept / Professional / Ultimate)</option>
-                  <option value="ALLPLAN Civil">ALLPLAN Civil & Bridge</option>
-                  <option value="ALLPLAN Precast">ALLPLAN Precast & TIM</option>
-                  <option value="AX3000">AX3000 MEP & Enerji Simülasyonu</option>
-                  <option value="BIMFlex">BIMFlex Donatı Otomasyonu</option>
-                  <option value="SDS2">SDS2 Çelik Detaylandırma</option>
-                  <option value="CDS / PythonPart / Scalypso">CDS Add-On / Allto PythonPart / Scalypso</option>
-                  <option value="BIMX5 / Oska / İmar">BIMX5 / Oska e-Hakediş / İmar Eklentisi</option>
-                  <option value="Henüz bilmiyorum">Henüz bilmiyorum — yönlendirme istiyorum</option>
-                </select>
-              </label>
-              <label className="alu-stack" style={{ gap: '0.25rem' }}>
-                <span className="alu-label">
-                  {requestIntent === 'training_request' ? 'Eğitim İhtiyacınız *' : 'Ek Açıklama'}
-                </span>
-                <textarea
-                  rows={3}
-                  required={requestIntent === 'training_request'}
-                  maxLength={2000}
-                  className="alu-input"
-                  style={{ height: 'auto', paddingBlock: '0.5rem' }}
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                />
-              </label>
-
-              {submitState.status === 'success' && (
-                <p className="alu-badge alu-badge--accent" role="status">
-                  {submitState.text}
-                </p>
-              )}
-              {submitState.status === 'error' && (
-                <p className="alu-caption" role="alert" style={{ color: 'var(--status-danger-fg)' }}>
-                  {submitState.text}
-                </p>
-              )}
-
-              <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
-                <button
-                  type="submit"
-                  className="alu-button alu-button--primary alu-button--md"
-                  disabled={submitState.status === 'submitting'}
-                >
-                  {submitState.status === 'submitting'
-                    ? 'Gönderiliyor...'
-                    : requestIntent === 'quote'
-                      ? 'Talebimi gönder'
-                      : requestIntent === 'trial_assistance'
-                        ? 'Yardım talebimi gönder'
-                        : 'Eğitim talebimi gönder'}
-                </button>
-                <div className="alu-cluster" style={{ gap: '0.5rem' }}>
-                  <a
-                    href={TRIAL_CTA_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="alu-button alu-button--secondary alu-button--sm"
-                  >
-                    <span>Resmî deneme sayfasına git</span>
-                    <AluIcon name="arrow-up-right" size="sm" />
-                  </a>
-                  <a
-                    href={MAIN_QUOTE_FORM_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="alu-button alu-button--ghost alu-button--sm"
-                  >
-                    <span>Kapsamlı Microsoft Formu</span>
-                    <AluIcon name="arrow-up-right" size="sm" />
-                  </a>
-                </div>
-              </div>
-              <p className="alu-caption">
-                Kişisel verileriniz{' '}
-                <Link href="/kvkk" className="alu-link">
-                  KVKK Aydınlatma Metni
-                </Link>{' '}
-                ve{' '}
-                <Link href="/gizlilik-politikasi" className="alu-link">
-                  Gizlilik Politikası
-                </Link>{' '}
-                kapsamında işlenmektedir.
-              </p>
-            </form>
           </div>
         </div>
       )}

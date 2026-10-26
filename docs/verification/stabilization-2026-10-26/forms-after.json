@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-26",
+  "scope": "S04 local production; no external form submission",
+  "unitTests": 43,
+  "parityChecks": 36,
+  "typecheck": "passed",
+  "build": "passed",
+  "retiredPostEndpoints": [
+    {
+      "path": "/api/request",
+      "status": 410,
+      "cacheControl": "no-store",
+      "invalidBodyRejectedWithoutParsing": true
+    },
+    {
+      "path": "/api/contact",
+      "status": 410,
+      "cacheControl": "no-store",
+      "invalidBodyRejectedWithoutParsing": true
+    },
+    {
+      "path": "/api/send-activation-email",
+      "status": 410,
+      "cacheControl": "no-store",
+      "invalidBodyRejectedWithoutParsing": true
+    }
+  ],
+  "browser": {
+    "contact": {
+      "forms": 0,
+      "topbarHref": "https://forms.office.com/r/hXhnKAG912",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "trainingRequestHref": "https://forms.office.com/r/hXhnKAG912",
+    "activation": {
+      "forms": 0,
+      "personalFields": 0,
+      "links": [
+        "/docs/Declaration_Allplan_2021-06-01.pdf",
+        "https://allplan.net.tr/tr",
+        "mailto:info@aluplan.com.tr"
+      ]
+    }
+  },
+  "followUp": [
+    "S05: /contact source body still mentions 30-day trial; previous duration conflict not resolved by form routing. Preserve until content evidence decision."
+  ],
+  "retiredCdsTargetsRemaining": 0,
+  "licenseManagerFormPreserved": true
+}

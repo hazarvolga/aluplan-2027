@@ -10,7 +10,7 @@ const securityHeaders = [
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https://aluplan.com.tr https://*.allplan.com https://img.youtube.com https://i.ytimg.com",
       "font-src 'self' data:",
-      "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://forms.office.com",
+      "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://forms.office.com https://www.google.com https://maps.google.com",
       "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com",
       "media-src 'self' blob: data:",
       "object-src 'none'",

@@ -336,8 +336,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 </Link>
               </div>
               <div className="alu-megamenu__grid">
-                {[...navData.productsMenu, ...navData.solutionsMenu].map((sec) => (
-                  <div key={sec.title}>
+                {[...navData.productsMenu, ...navData.solutionsMenu].map((sec, sIdx) => (
+                  <div key={`${sec.title}-${sIdx}`}>
                     <h3 className="alu-megamenu__title">{sec.title}</h3>
                     <ul className="alu-megamenu__list">
                       {sec.items.map((item) => (

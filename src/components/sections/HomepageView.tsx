@@ -49,7 +49,7 @@ const SERVICE_GROUPS: [string, string[]][] = [
 
 const SERVICE_ICONS: Record<string, AluIconName> = {
   Eğitim: 'graduation-cap',
-  'Teknik Destek': 'headset',
+  'Teknik Destek': 'life-buoy',
   'Destek Platformu': 'life-buoy',
   Danışmanlık: 'users',
   Sertifika: 'award',
@@ -58,7 +58,7 @@ const SERVICE_ICONS: Record<string, AluIconName> = {
   'Admin Lisans : Lisans Yöneticisi Bilgi Formu': 'shield',
   'CodeMeter WebDepot': 'key',
   'Deklarasyon Formu': 'file-text',
-  'ALLPLAN FAQ': 'help-circle',
+  'ALLPLAN FAQ': 'circle-help',
   'Blog Global': 'globe',
   'Canlı Webinarlar': 'video',
   'BIM Rehberi': 'book-open',

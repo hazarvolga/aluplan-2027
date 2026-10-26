@@ -1173,6 +1173,651 @@ def parse_webinar_page():
     }
 
 
+def parse_references_page():
+    txt = (EV_DIR / "app/references/page.tsx").read_text(encoding="utf-8")
+    ref_objs = split_top_level_objects(find_const_array(txt, "references"))
+    cat_objs = split_top_level_objects(find_const_array(txt, "categories"))
+
+    category_icon_map = {
+        "Mimari Ofis": "building",
+        "Mühendislik Ofisi (Alt Yapı)": "hardhat",
+        "Mühendislik Ofisi (Üst Yapı)": "hardhat",
+        "İnşaat Şirketleri": "building-2",
+        "Müteahhit": "hardhat",
+        "Kamu Kurumları": "landmark",
+        "Meslek Odaları": "users",
+        "Prefabrik": "building-2",
+        "Universite": "graduation-cap",
+    }
+
+    items = []
+    for o in ref_objs:
+        name = get_prop_str(o, "name")
+        cat = get_prop_str(o, "category")
+        if name and cat:
+            items.append({
+                "name": name,
+                "category": cat,
+                "iconName": category_icon_map.get(cat, "building"),
+            })
+
+    categories = []
+    for o in cat_objs:
+        cid = get_prop_str(o, "id")
+        label = get_prop_str(o, "label")
+        if not cid:
+            continue
+        count = len(items) if cid == "all" else sum(1 for item in items if item["category"] == cid)
+        categories.append({
+            "id": cid,
+            "label": label,
+            "iconName": "layers" if cid == "all" else category_icon_map.get(cid, "building"),
+            "count": count,
+        })
+
+    return {
+        "referencesDirectory": {
+            "kicker": "/ REFERANS PORTFÖYÜ · 9 SEKTÖREL KATEGORİ",
+            "title": "BIM Odaklı İş Ortaklarımız ve Referans Müşterilerimiz",
+            "subtitle": "Mimarlık, mühendislik ve inşaat (AEC) sektöründe, BIM (Building Information Modeling) uzmanlığımızı tercih eden iş ortaklarımızdan bazıları. Dijital tasarım, model tabanlı çalışma ve veri odaklı süreçlerde birlikte değer yarattığımız referans müşterilerimizi inceleyin.",
+            "categories": categories,
+            "items": items,
+        }
+    }
+
+
+def parse_faq_page():
+    return {
+        "faqDirectory": {
+            "kicker": "/ YARDIM MERKEZİ · SIKÇA SORULAN SORULAR",
+            "title": "Lisanslama, Cloud ve Ürün Yaşam Döngüsü Rehberi",
+            "subtitle": "Sekmeler arasında geçiş yaparak Allplan abonelik sistemi, ALLPLAN Cloud hizmetleri, Serviceplus dönüşümü, Workgroup işbirliği ve ürün yaşam döngüsü politikalarını inceleyin.",
+            "categories": [
+                {
+                    "id": "subscription",
+                    "label": "Genel & Abonelik",
+                    "iconName": "help-circle",
+                    "title": "Genel Abonelik (Subscription) SSS",
+                    "subtitle": "Allplan abonelik sistemi, ödeme seçenekleri ve iptal koşulları hakkında bilgiler.",
+                    "items": [
+                        {
+                            "question": "Abonelik (Subscription) nedir?",
+                            "answer": "Abonelik, yazılım ve hizmetlere belirli bir süre için (aylık, yıllık veya 3 yıllık) erişim sağladığınız bir sözleşme türüdür.",
+                        },
+                        {
+                            "question": "Abonelik ile neleri elde ederim?",
+                            "answer": "Abonelik süresince aşağıdakilere erişim sağlarsınız:",
+                            "bullets": [
+                                "Satın alınan süre boyunca seçilen yazılım sürümüne erişim",
+                                "BIMPLUS dahil ALLPLAN Cloud hizmetleri",
+                                "Verimli ofis içi takım çalışması araçları",
+                                "Ağ ve şirket sınırları ötesinde takım çalışması",
+                                "Çizim ve planların yönetimi ve dağıtımı",
+                                "Pazar lideri ürün entegrasyonları (Solibri Inside, AutoConverter)",
+                                "Teknik Destek ekiplerine erişim",
+                                "Online eğitim kaynakları",
+                                "Yeni yazılım sürümlerine anında erişim",
+                            ],
+                        },
+                        {
+                            "question": "Abonelik süresi ne kadardır ve yenilemek istemezsem ne olur?",
+                            "answer": "Abonelik süreleri ve iptal bildirim koşulları:",
+                            "bullets": [
+                                "Abonelik Süreleri: Aylık abonelik, Yıllık abonelik, 3 Yıllık abonelik",
+                                "İptal Bildirimi (Aylık): 1 ay önceden bildirim",
+                                "İptal Bildirimi (Yıllık / 3 Yıllık): 3 ay önceden bildirim",
+                                "Tüm abonelikler, başlangıç süresine göre otomatik olarak yenilenir.",
+                            ],
+                        },
+                        {
+                            "question": "Ödemeyi nasıl yapabilirim?",
+                            "answer": "Ödemeler 1 yıllık veya 3 yıllık dönemler halinde yapılabilir. Ödeme yöntemleri ülkeye göre değişmekle birlikte genellikle Kredi Kartı veya Havale/EFT (SEPA) şeklindedir. Ödeme, tüm abonelik süresi için peşin alınır.",
+                        },
+                        {
+                            "question": "Aboneliğimi iptal edersem ne olur?",
+                            "answer": "Aboneliğiniz iptal edilene kadar devam eder. Süre sonunda, yazılıma ve hizmetlere erişiminiz otomatik olarak sona erer.",
+                        },
+                        {
+                            "question": "Yazılıma erişmek için başka seçeneğim var mı?",
+                            "answer": "Evet, belirli ürünler için Kalıcı Lisans (Perpetual License) seçeneği mevcuttur:",
+                            "bullets": [
+                                "ALLPLAN Ultimate",
+                                "ALLPLAN Civil",
+                                "ALLPLAN Precast",
+                            ],
+                            "note": "Not: İlk yıl zorunlu Serviceplus sözleşmesi gereklidir. Bu lisanslar ALLPLAN Cloud erişimini içermez.",
+                        },
+                        {
+                            "question": "Aboneliğin temel avantajları nelerdir?",
+                            "answer": "ALLPLAN Abonelik modelinin öne çıkan avantajları:",
+                            "bullets": [
+                                "Esneklik",
+                                "Düşük başlangıç maliyeti",
+                                "Her zaman en son yazılım sürümüne erişim",
+                                "ALLPLAN Cloud hizmetlerinin dahil olması",
+                                "Teknik destek uzmanlığına erişim",
+                            ],
+                        },
+                    ],
+                },
+                {
+                    "id": "cloud",
+                    "label": "Cloud Hizmetleri",
+                    "iconName": "cloud",
+                    "title": "ALLPLAN Cloud SSS",
+                    "subtitle": "Bulut depolama, Bimplus ve entegre hizmetler hakkında detaylar.",
+                    "items": [
+                        {
+                            "question": "Abonelikle birlikte ne kadar Cloud depolama alanı alırım?",
+                            "answer": "ALLPLAN Cloud ile birlikte 10 GB depolama alanı dahildir. İsterseniz ek 100 GB depolama alanı satın alabilirsiniz.",
+                        },
+                        {
+                            "question": "Hangi ALLPLAN Cloud hizmetleri dahildir?",
+                            "answer": "Temel Hizmetler ve Entegrasyonlar:",
+                            "bullets": [
+                                "BIMPLUS ile model görüntüleme/yönetimi",
+                                "ALLPLAN Workgroup Manager (ofis içi takım çalışması)",
+                                "ALLPLAN Share (ağlar arası/şirketler arası takım çalışması)",
+                                "ALLPLAN Exchange (çizim/plan yönetimi ve dağıtımı)",
+                                "Entegrasyon: Solibri Inside (model kontrolü)",
+                                "Entegrasyon: AutoConverter (yapısal analiz araçları entegrasyonu)",
+                            ],
+                        },
+                        {
+                            "question": "Cloud hizmetlerini kullanmak zorunda mıyım?",
+                            "answer": "Hayır. Cloud hizmetleri abonelikle birlikte sunulur ancak kullanımı tamamen isteğe bağlıdır.",
+                        },
+                        {
+                            "question": "Workgroup Manager, Allplan Cloud hizmetlerine dahil mi?",
+                            "answer": "Evet, dahildir.",
+                        },
+                        {
+                            "question": "BIMPLUS aboneliğe nasıl uygulanır?",
+                            "answer": "BIMPLUS, abonelik lisansınıza zaten dahildir. Ayrıca bağımsız bir ürün olarak da kullanılmaya devam edecektir.",
+                        },
+                    ],
+                },
+                {
+                    "id": "conversion",
+                    "label": "Lisans Dönüşümü",
+                    "iconName": "refresh-cw",
+                    "title": "Serviceplus'tan Aboneliğe Geçiş",
+                    "subtitle": "Mevcut kalıcı lisansınızı abonelik modeline dönüştürme süreci.",
+                    "items": [
+                        {
+                            "question": "ALLPLAN Aboneliğine geçtiğimde ne olur?",
+                            "answer": "Serviceplus lisansınızı aboneliğe dönüştürdüğünüzde:",
+                            "bullets": [
+                                "Mevcut lisansınız ALLPLAN Abonelik lisansına dönüştürülür.",
+                                "Tüm ALLPLAN Cloud Hizmetlerine tam erişim kazanırsınız.",
+                                "Teknik Destek ve Online Eğitim kaynaklarına erişiminiz devam eder.",
+                                "Yeni sürümlere anında erişirsiniz.",
+                            ],
+                        },
+                        {
+                            "question": "Kalıcı lisansımı kaybeder miyim?",
+                            "answer": "Evet. ALLPLAN Aboneliğine geçtiğinizde, kalıcı lisans üzerindeki haklarınız ve erişiminiz sona erer; bunun yerine güncel ve kapsamlı abonelik avantajlarına sahip olursunuz.",
+                        },
+                        {
+                            "question": "Abonelik taahhüt süresi nedir?",
+                            "answer": "Mevcut Serviceplus müşterileri için 12 aylık abonelik sözleşmesi yapılır. Ayrıca, abonelik yenileme fiyatınız 2 yıl boyunca sabitlenir.",
+                        },
+                        {
+                            "question": "Desteklenmeyen eski sürümleri kullanmanın riskleri nelerdir?",
+                            "answer": "Teknik olarak mümkün olsa da, desteklenmeyen yazılım kullanmak şu riskleri taşır:",
+                            "bullets": [
+                                "Güvenlik açıkları",
+                                "Stabilite sorunları",
+                                "Performans problemleri",
+                                "Veri uyumluluğu sorunları",
+                            ],
+                        },
+                    ],
+                },
+                {
+                    "id": "workgroup",
+                    "label": "Workgroup & İşbirliği",
+                    "iconName": "users",
+                    "title": "Workgroup Manager & Gelecek",
+                    "subtitle": "İşbirliği araçlarının geleceği ve uyumluluk süreçleri.",
+                    "items": [
+                        {
+                            "question": "Workgroup Manager, Share ve Exchange yeni lisanslar için nasıl sunulacak?",
+                            "answer": "1 Ekim 2023 itibariyle, bu hizmetler sadece Abonelik (Subscription) ile sunulmaktadır. Yeni kalıcı lisanslarda bu özellikler mevcut değildir.",
+                        },
+                        {
+                            "question": "Kalıcı lisansım ile mevcut Workgroup Manager'ı kullanmaya devam edebilir miyim?",
+                            "answer": "Mevcut kalıcı lisanslar için uyumluluk ve bakım takvimi:",
+                            "bullets": [
+                                "Workgroup Manager: ALLPLAN 2027 sürümüne kadar uyumludur. Ekim 2027'de bakımı ve desteği sona erecektir.",
+                                "Exchange & Share: Ekim 2026'da bakımı ve desteği sona erecektir.",
+                            ],
+                            "note": "Not: Gelecek özellikler ve entegrasyonlar sadece Abonelik modelinde geliştirilmeye devam edecektir.",
+                        },
+                        {
+                            "question": "Mevcut Workgroup Manager iş akışlarımızın geleceği ne olacak?",
+                            "answer": "İşbirliği, proje teslimi için hayati önem taşır. Yerel (LAN) ve global (WAN) işbirliği çözümleri gelişmeye devam edecektir:",
+                            "bullets": [
+                                "Workgroup Manager 2027'ye kadar bağımsız ürün olarak kalacaktır.",
+                                "LAN çözümünün sürekli iyileştirilmesi devam edecektir.",
+                                "Share (WAN) ve BIMPLUS entegrasyonları ile \"Allplan Cloud\" çatısı altında daha kapsamlı ve güvenli bir işbirliği platformu hedeflenmektedir.",
+                            ],
+                        },
+                    ],
+                },
+                {
+                    "id": "lifecycle",
+                    "label": "Ürün Yaşam Döngüsü",
+                    "iconName": "shield",
+                    "title": "Ürün Yaşam Döngüsü (Product Lifecycle)",
+                    "subtitle": "Versiyon onayı, bakım aşamaları ve teknik destek kapsamı politikaları. (13 Ocak 2025'ten itibaren geçerlidir)",
+                    "ctaText": "Learn more: ALLPLAN product lifecycle policy",
+                    "ctaHref": "https://www.allplan.com/product-lifecycle/",
+                    "items": [
+                        {
+                            "question": "Bu ürün yaşam döngüsü politikasının kapsamı nedir?",
+                            "answer": "Bu politika 13 Ocak 2025 tarihi itibariyle geçerlidir ve ALLPLAN'ın masaüstü ürünlerini (ALLPLAN, FRILO, DC-Software), SCIA ve SDS2 ürünlerinin şimdiki ve gelecek versiyonlarını kapsar. ALLPLAN 2024 ve önceki sürümleri kapsayan eski politikaların yerini alır.",
+                        },
+                        {
+                            "question": "Ürün Bakımı (Product Maintenance) ve Sürüm Desteği (Version Support) arasındaki fark nedir?",
+                            "answer": "İki kavram farklı hizmet katmanlarını ifade eder:",
+                            "bullets": [
+                                "Ürün Bakımı: Belirli bir sürümün bulunduğu bakım aşamasına bağlı olarak kullanıcının bekleyebileceği yazılım güncelleme türlerini tanımlar.",
+                                "Sürüm Desteği: Teknik Destek ile iletişim kurma yollarını ve sağlanan hizmetleri tanımlar.",
+                            ],
+                        },
+                        {
+                            "question": "Hangi bakım hizmetleri hangi aşamaya dahildir?",
+                            "answer": "Ürün Bakım Hizmetleri aşama karşılaştırma tablosu:",
+                            "table": {
+                                "headers": ["Ürün Bakım Hizmetleri", "Current (Güncel)", "Supported (Desteklenen)", "Retired (Emekli)"],
+                                "rows": [
+                                    ["Yeni özellikler", "✓", "-", "-"],
+                                    ["İyileştirmeler", "✓", "-", "-"],
+                                    ["Bakım düzeltmeleri*", "✓", "✓", "-"],
+                                    ["Yeni ortamları sertifikalandırma", "✓", "-", "-"],
+                                    ["ALLPLAN Cloud Bağlantısı (Direct Interface)", "✓", "✓", "-"],
+                                ],
+                            },
+                            "note": "* ALLPLAN, hataların ve eksikliklerin düzeltilmesini, kullanıcılar üzerindeki etkilerini ve diğer kriterleri göz önünde bulundurarak kendi takdirine bağlı olarak önceliklendirir.",
+                        },
+                        {
+                            "question": "Hangi teknik destek hizmetleri hangi aşamaya dahildir?",
+                            "answer": "Teknik Destek Hizmetleri aşama karşılaştırma tablosu:",
+                            "table": {
+                                "headers": ["Teknik Destek Hizmetleri", "Current (Güncel)", "Supported (Desteklenen)", "Retired (Emekli)"],
+                                "rows": [
+                                    ["Destek kaynakları (online)", "✓", "✓", "-"],
+                                    ["Eğitim materyalleri (online)", "✓", "✓", "-"],
+                                    ["Olay bildirimi (Telefon, mail, ticket)", "✓", "✓", "-"],
+                                    ["Hizmet talepleri (Service requests)", "✓", "✓", "-"],
+                                    ["İndirmeler (Downloads)", "✓", "✓", "-"],
+                                ],
+                            },
+                        },
+                        {
+                            "question": "Ana Sürüm (Major Version) nedir? Ne sıklıkla yayınlanır?",
+                            "answer": "Yeni (büyük) özellikler, geliştirmeler veya değişiklikler içeren sürümdür. Sürüm numarasının en solundaki rakam değiştiğinde anlaşılır (Örn. ALLPLAN 2025'ten ALLPLAN 2026'ya geçiş). Yayınlanma sıklığı: Genellikle yılda bir kez.",
+                        },
+                        {
+                            "question": "Ara Sürüm (Minor Version) nedir? Ne sıklıkla yayınlanır?",
+                            "answer": "Küçük özellikler, stabilite, performans veya güvenlik iyileştirmeleri içeren sürümdür. Sürüm numarasının sağındaki rakamlar değiştiğinde anlaşılır (Örn. 2025-0-1 veya 2025-1-0). Yayınlanma sıklığı: Genellikle yılda birkaç kez (ürün hattına göre değişir).",
+                        },
+                    ],
+                },
+            ],
+        }
+    }
+
+
+def parse_how_to_assign_page():
+    return {
+        "faqDirectory": {
+            "kicker": "/ REHBER & DESTEK · CONNECT 2.0 LİSANSLAMA",
+            "title": "Sıkça Sorulan Sorular & İşlemler",
+            "subtitle": "Yeni nesil bulut tabanlı lisanslama sisteminde en çok ihtiyaç duyulan yönetim adımları.",
+            "categories": [
+                {
+                    "id": "assign",
+                    "label": "Lisans Atama & İade Adımları",
+                    "iconName": "key",
+                    "title": "Allplan Connect 2.0 Lisans Yönetim Rehberi",
+                    "subtitle": "Yönetici lisans atama, ALLPLAN ID oluşturma ve 10Duke lisans iade süreçleri.",
+                    "items": [
+                        {
+                            "question": "Ekip üyelerine nasıl lisans atanır? (Yönetici Adımları)",
+                            "answer": "Yönetici olarak ekip üyelerine lisans atamak oldukça basittir:",
+                            "bullets": [
+                                "1. Giriş Yapın: Yönetici (Admin) hesabınızla Allplan Connect portalına (connect.allplan.com) giriş yapın.",
+                                "2. Davet Edin: Menüden \"Ekip Üyeleri\" (Team members) bölümüne giderek lisans vereceğiniz kişileri e-posta adresleriyle kurum ağınıza (Company Network) davet edin.",
+                                "3. Panoyu Açın: Menüdeki \"Admin\" sekmesi altından \"Lisanslama Panosu\" (Licensing Dashboard) alanına tıklayın.",
+                                "4. Lisansı Atayın: Panoda listelenen kullanıcıların yanındaki kutucuğu işaretleyerek havuzdaki boş lisanslarınızı tek tıkla atayın.",
+                            ],
+                        },
+                        {
+                            "question": "Kullanıcıların ALLPLAN ID oluşturma adımları nelerdir?",
+                            "answer": "Kullanıcıların ALLPLAN ID (Allplan Connect/Bimplus hesabı) oluşturmaları için şu 3 basit adımı izlemesi yeterlidir:",
+                            "bullets": [
+                                "01. Daveti Yanıtlayın veya Kayıt Olun: Kurum yöneticinizden gelen davet e-postasındaki bağlantıya tıklayın ya da doğrudan Allplan Connect sayfasına giderek \"Kayıt Ol\" (Register) seçeneğini seçin.",
+                                "02. Bilgileri Doldurun: Kurumsal e-posta adresinizi (bu e-posta sizin kalıcı ALLPLAN ID'niz olacaktır) ve belirlediğiniz şifreyi girerek kayıt formunu eksiksiz doldurun.",
+                                "03. Hesabı Doğrulayın: Kayıt işleminden hemen sonra e-posta adresinize gönderilen doğrulama bağlantısına 24 saat içinde tıklayarak hesabınızı aktifleştirin.",
+                            ],
+                        },
+                        {
+                            "question": "10Duke sisteminde lisans iadesi adımları nelerdir?",
+                            "answer": "Bir lisansı kullanıcıdan geri alarak şirket havuzuna iade etmek için:",
+                            "bullets": [
+                                "1. Yönetici hesabınızla Allplan Connect portalına giriş yapın.",
+                                "2. Admin sekmesi altından \"Lisanslama Panosu\"na (Licensing Dashboard) gidin.",
+                                "3. Lisansını geri almak istediğiniz kullanıcının yanındaki onay kutucuğunun işaretini (tik) kaldırın.",
+                            ],
+                            "note": "Bilgi: 10Duke bulut lisanslama sisteminde eski yöntemlerdeki gibi bilgisayar başından yapılan fiziksel bir \"iade\" işlemi yoktur; süreç tamamen yöneticiler tarafından merkezden anlık olarak yönetilir. İşlemi yaptığınız anda lisans şirketinizin boş lisans havuzuna geri döner.",
+                        },
+                    ],
+                }
+            ],
+        }
+    }
+
+
+def parse_sketchup_converter_page():
+    return {
+        "intro": {
+            "kicker": "/ EKLENTİ GENEL BAKIŞ · SKETCHUP & LUMION ENTEGRASYONU",
+            "title": "SketchUp dosyalarıyla optimize edilmiş veri alışverişi",
+            "bullets": [
+                "SketchUp Converter eklentisi ile, dokular dahil bir 3B modeli Allplan’a kolayca aktarabilirsiniz. Bu şekilde, örneğin SketchUp Deposundan tüm yüzeyleri içeren bitkileri, insanları, mobilyaları, araçları vb. Allplan’a aktarabilir ve bunları görselleştirmeniz için kullanabilirsiniz.",
+                "Mevcut SketchUp sürümleri desteklenmektedir. SketchUp dışa aktarımı, Lumion görselleştirme yazılımıyla optimum bir iş akışı için uyarlanmıştır. Basit Allplan makrolarını ayrıntılı Lumion nesneleriyle (ağaçlar, arabalar, ışıklar, vb.) değiştirebilirsiniz.",
+            ],
+            "videoEmbedUrl": "https://www.youtube.com/embed/dsFgV9-aAyI",
+        },
+        "workflowTabs": {
+            "kicker": "/ VERİ ALIŞVERİŞİ ÖZELLİKLERİ",
+            "title": "SketchUp Export & Import Yetenekleri",
+            "subtitle": "Dışa aktarma (Export) ve içe aktarma (Import) iş akışlarının teknik detayları.",
+            "categories": [
+                {
+                    "key": "export",
+                    "label": "SketchUp Export",
+                    "items": [
+                        {
+                            "title": "SketchUp ve Lumion Dışa Aktarım (Export)",
+                            "description": "Allplan modellerini bileşen ve grup hiyerarşisini koruyarak SketchUp ve Lumion ortamına aktarın:",
+                            "bullets": [
+                                "• Makro tanımları SketchUp bileşenleri olarak, makro yer değiştirmeleri SketchUp örnekleri olarak dışa aktarılır",
+                                "• SketchUp sürüm 2019’a kadar dışa aktarın (Allplan sadece 2017 / 2018’e kadar)",
+                                "• Önceden seçilmiş elemanların dışa aktarımı",
+                                "• Dışa aktarılan skp dosyasının otomatik hata kontrolü ve düzeltilmesi; bu, Lumion’a anında aktarılabileceği anlamına gelir",
+                                "• Allplan’dan 3B katılar isteğe bağlı olarak SketchUp grupları olarak birleştirilebilir",
+                            ],
+                            "imageSrc": "",
+                            "youtubeId": "XcIPUX2nF4c",
+                        }
+                    ],
+                },
+                {
+                    "key": "import",
+                    "label": "SketchUp Import",
+                    "items": [
+                        {
+                            "title": "Dokular ve Katı Gövdelerle İçe Aktarım (Import)",
+                            "description": "SketchUp 3D Warehouse modellerini UV dokuları ve katı geometrileriyle Allplan'a aktarın:",
+                            "bullets": [
+                                "• SketchUp sürümlerinin 2016, 2017, 2018, 2019 içe aktarımı Allplan 2018, 2019’da da mümkündür",
+                                "• Yüzeyler her zaman üçgenleştirilmez, üçgenleme isteğe bağlı olarak ayarlanabilir",
+                                "• Gövdeler yüzey grupları olarak değil, katı gövdeler olarak içe aktarılır",
+                                "• Dokular, .surf dosyaları olarak içe aktarılır ve oluşturulur (UV koordinatlı olanlar dahil)",
+                            ],
+                            "imageSrc": "",
+                            "youtubeId": "xIDepYtmsIw",
+                        }
+                    ],
+                },
+            ],
+        },
+        "extraGrids": [
+            {
+                "kicker": "/ UYGULAMA VİDEOLARI",
+                "title": "Tanıtım Videoları",
+                "subtitle": "SketchUp Converter eklentisinin Allplan ve Lumion iş akışı videoları.",
+                "columns": 3,
+                "items": [
+                    {
+                        "title": "ALLPLAN Add-On SketchUpConverter - Export Allplan zu Lumion",
+                        "description": "Allplan makrolarının SketchUp üzerinden Lumion bileşenlerine dönüştürülmesi.",
+                        "imageSrc": "",
+                        "youtubeId": "XcIPUX2nF4c",
+                    },
+                    {
+                        "title": "ALLPLAN Add-On SketchUpConverter - Import Allplan UV Texturen",
+                        "description": "UV koordinatlı dokuların .surf dosyaları olarak Allplan'a aktarılması.",
+                        "imageSrc": "",
+                        "youtubeId": "xIDepYtmsIw",
+                    },
+                    {
+                        "title": "ALLPLAN Add-On SketchUpConverter - Import Allplan",
+                        "description": "SketchUp 3B katı modellerinin Allplan ortamına doğrudan aktarımı.",
+                        "imageSrc": "",
+                        "youtubeId": "QUTYgmyfu3o",
+                    },
+                ],
+            }
+        ],
+        "splitCallouts": [
+            {
+                "kicker": "/ LİSANS VE GEREKSİNİMLER",
+                "title": "Lisans ve Gereksinimler",
+                "lead": "Tek kullanıcı lisansı, mevcut Allplan lisansına bağlıdır.",
+                "subheading": "Sistem Gereksinimleri: Allplan 2020 – 2024 · Diller: Almanca, İngilizce",
+                "description": "Eklentiyi yükledikten sonra deneme sürümünü 14 gün ücretsiz olarak kullanabilirsiniz.",
+                "imageSrc": "/assets/solutions/cds/license.jpg",
+                "ctaText": "Setup İndir",
+                "ctaHref": "https://cdssieber.sharepoint.com/:f:/g/Ev_G2db5WVVBvMEN-Adhz24Bk5f3rEvFCQu77iLTTCIynw?e=qkPdri",
+                "external": True,
+            }
+        ],
+    }
+
+
+def parse_quick_start_page():
+    return {
+        "intro": {
+            "kicker": "/ HIZLI BAŞLANGIÇ REHBERİ · OPEN BIM & AI DESTEKLİ",
+            "title": "Allplan 2026 Kapsamlı Başlangıç Rehberi",
+            "bullets": [
+                "Bu kılavuz, Allplan BIM yazılımının profesyonel düzeydeki kullanımını, Open BIM iş akışlarını ve Allplan 2026 yeniliklerini derinlemesine ele alır.",
+                "Mimarlar, mühendisler ve inşaat profesyonelleri için tasarımdan inşaya (Design to Build) bütünleşik bir süreç sunar.",
+                "Open BIM Uyumlu (IFC 4.3, BCF, IDS) ve AI Destekli iş akışları.",
+            ],
+        },
+        "workflowTabs": {
+            "kicker": "/ DİSİPLİN REHBERİ · 4 ANA MODÜL",
+            "title": "Modüller ve Profesyonel İş Akışları",
+            "subtitle": "Disiplinlere özel yetenekler, Allplan 2026 yenilikleri ve en iyi uygulama yöntemleri.",
+            "categories": [
+                {
+                    "key": "architecture",
+                    "label": "Mimari",
+                    "items": [
+                        {
+                            "title": "Allplan Architecture — Tasarım Özgürlüğü ve Hassas Dokümantasyon",
+                            "badge": "Mimari BIM",
+                            "description": "Üstün modelleme yetenekleri ile karmaşık geometrileri kolayca oluşturun. Tutarlı şablonlar ile projeleri hızla görselleştirin ve hataları en aza indirin.",
+                            "bullets": [
+                                "• Temel Özellikler: Çok katmanlı duvar ve bitiş modelleme, akıllı oda filtreleri ve metraj",
+                                "• Allplan 2026 ile Yeni: Çok katmanlı dikey bitişler, gerçekçi geometri, kural tabanlı dağıtım ve 3D süpürgelik modellemesi",
+                                "• Verimlilik ve Doğruluk: 3D modelleme ile teslimatlarda %50 daha fazla doğruluk, %30 daha fazla üretkenlik ve %70 daha verimli metraj/maliyetlendirme",
+                                "• Parametrik Tasarım: Parametrik nesneler ve Visual Scripting ile tekrarlayan görevlerin otomasyonu",
+                                "• Open BIM Entegrasyonu: IFC veri alışverişi ve BCF tabanlı çakışma yönetimi ile disiplinler arası sorunsuz işbirliği",
+                            ],
+                            "imageSrc": "",
+                        }
+                    ],
+                },
+                {
+                    "key": "engineering",
+                    "label": "Mühendislik",
+                    "items": [
+                        {
+                            "title": "Allplan Engineering — Yapısal Analiz, Donatı ve Çelik Detaylandırma",
+                            "badge": "Yapısal BIM",
+                            "description": "Dökme yerinde beton, prekast, çelik ve ahşap dahil olmak üzere tüm malzemeleri optimize edin. Donatı ve çelik yapıların hızlı tasarımı için otomatik çözümler kullanın.",
+                            "bullets": [
+                                "• Otomatik Donatı: Kolon donatı PythonPart'ı gibi araçlarla tekrarlayan elemanları saniyeler içinde donatın; çap, aralık ve bindirme boylarını parametrik yönetin",
+                                "• Gelişmiş Veri Değişimi: 50'den fazla dosya formatı desteği, SCIA AutoConverter ve SAF formatı ile yapısal analiz yazılımlarına kayıpsız aktarım",
+                                "• Çelik Yapı Detaylandırma (SDS2): SDS2 entegrasyonu ile çelik yapıların modellemesinden imalatına uçtan uca akıllı bağlantı tasarımı",
+                            ],
+                            "imageSrc": "",
+                        }
+                    ],
+                },
+                {
+                    "key": "infrastructure",
+                    "label": "Altyapı",
+                    "items": [
+                        {
+                            "title": "Infrastructure & Civil — Yol, Köprü ve Tünel Projeleri İçin Parametrik Modelleme",
+                            "badge": "Altyapı & Civil",
+                            "description": "Case Study — Porto Metro \"Ruby Line\": Karmaşık tünel kesitleri (NATM ve Aç-Kapa) için LandXML aks verileri Bimplus üzerinden içe aktarılarak modellendi. Tünel duvarlarındaki kazıklar (piles) PythonParts kullanılarak otomatikleştirildi.",
+                            "bullets": [
+                                "• \"Etkileşimleri 3D model olmadan görselleştirmek inanılmaz derecede zor olurdu.\" — QUADRANTE",
+                                "• Arazi Etüdü & Point Cloud: Scalypso gibi entegre araçlarla saha nokta bulutu (Point Cloud) verilerini işleyin ve mevcut durumun hassas envanterini (As-built) oluşturun",
+                                "• Şantiye Planlama: Kule vinç gibi şantiye ekipmanlarını yerleştirin, çarpışma tespiti yapın ve basit kaldırma analizleri gerçekleştirin",
+                            ],
+                            "imageSrc": "",
+                        }
+                    ],
+                },
+                {
+                    "key": "precast",
+                    "label": "Prekast",
+                    "items": [
+                        {
+                            "title": "Allplan Precast — Otomatik Prekast Detaylandırma ve Üretim (CAM) Verisi",
+                            "badge": "Prekast & Üretim",
+                            "description": "Vaka Çalışması — BFU (Rütihof): Önceden kağıt planlar (2D) ve manuel kontrollerle yürüyen süreç, Allplan IFC-Assistant ile tamamen dijitalleşti. BFU, sadece 9 ayda 10.000m² döşeme ve 1.100m² duvar elemanını detaylandırıp üretti.",
+                            "bullets": [
+                                "• Hata oranında ciddi düşüş ve üretime hazır otomatik shop drawingler",
+                                "• Otomatik Atölye Çizimleri: Donatı, armatür ve boyutlandırma dahil yüksek düzeyde otomatik kalıp planları oluşturun",
+                                "• Üretim Entegrasyonu: Duvar ve döşemeleri fabrika kapasitesine göre otomatik bölün ve CAM verilerini gönderin",
+                            ],
+                            "imageSrc": "",
+                        }
+                    ],
+                },
+            ],
+        },
+        "extraGrids": [
+            {
+                "kicker": "/ OPEN BIM VE İŞBİRLİĞİ · BIMPLUS & BCF",
+                "title": "Adım Adım Çakışma Çözümü (Clash Resolution) & IFC Güvenliği",
+                "subtitle": "Proje paydaşları arasında verimsiz e-posta trafiği yerine Bimplus entegrasyonu ile merkezi koordinasyon.",
+                "columns": 3,
+                "items": [
+                    {
+                        "title": "1. Çakışma Tespiti & 2. BCF Sorunu Oluşturma",
+                        "badge": "Adım 01–02",
+                        "description": "Modelde Check > Clash Detection komutunu çalıştırın. Tespit edilen çakışmayı seçin, Issue Manager üzerinden konum, ekran görüntüsü ve sorumlu ekleyerek BCF sorunu oluşturun.",
+                        "imageSrc": "",
+                    },
+                    {
+                        "title": "3. Bimplus Senkronizasyonu & 4. Çözüm Doğrulama",
+                        "badge": "Adım 03–04",
+                        "description": "Sorunu buluta gönderin; diğer disiplinler (ör: MEP mühendisi) kendi yazılımlarında anında görür. Çözüldüğünde Bimplus'ta \"Resolved\" olarak işaretlenir ve Allplan'da kapatılır.",
+                        "imageSrc": "",
+                    },
+                    {
+                        "title": "IFC Veri Güvenliği & Partner Entegrasyonları",
+                        "badge": "Open BIM",
+                        "description": "Nitelik Eşleme (Mapping) ile Allplan niteliklerini IFC Pset'lerine doğru eşleyin ve IDS ile otomatik kontrol edin.",
+                        "bullets": [
+                            "• Partner Entegrasyonları: SCIA Engineer, Frilo, Bluebeam, SDS2, Redshift",
+                        ],
+                        "imageSrc": "",
+                    },
+                ],
+            },
+            {
+                "kicker": "/ PROFESYONEL İPUÇLARI",
+                "title": "5 Profesyonel İpucu",
+                "subtitle": "Allplan projelerinde veri kalitesini ve modelleme hızını artıran temel prensipler.",
+                "columns": 3,
+                "items": [
+                    {
+                        "title": "1. Veri Kaybını Önleyin",
+                        "badge": "İpucu 01",
+                        "description": "IFC dışa aktarımda \"Attribute Mapping\" ve \"Yalnızca Atanan Nitelikleri Aktar\" seçeneklerini kullanın.",
+                        "imageSrc": "",
+                    },
+                    {
+                        "title": "2. Otomasyon Kullanın",
+                        "badge": "İpucu 02",
+                        "description": "Tekrarlayan işler için PythonParts veya Visual Scripting scriptlerini devreye sokun.",
+                        "imageSrc": "",
+                    },
+                    {
+                        "title": "3. Parametrik Yönetim",
+                        "badge": "İpucu 03",
+                        "description": "Revizyonları hızlandırmak için yol ve altyapı projelerinde parametrik modellemeyi tercih edin.",
+                        "imageSrc": "",
+                    },
+                    {
+                        "title": "4. BCF ile Koordinasyon",
+                        "badge": "İpucu 04",
+                        "description": "Bimplus entegrasyonu ile çakışmaları e-posta yerine BCF üzerinden yönetin.",
+                        "imageSrc": "",
+                    },
+                    {
+                        "title": "5. Entegre Analiz",
+                        "badge": "İpucu 05",
+                        "description": "SCIA AutoConverter kullanarak modelinizi analiz yazılımlarına tek tıkla aktarın.",
+                        "imageSrc": "",
+                    },
+                ],
+            },
+            {
+                "kicker": "/ VAKA ÇALIŞMALARI & YENİLİKLER",
+                "title": "Gerçek Hayat Senaryoları ve Allplan 2026 Yenilikleri",
+                "subtitle": "Uluslararası referans projeler ve Allplan 2026'nın öne çıkan mimari/yapısal yetenekleri.",
+                "columns": 3,
+                "items": [
+                    {
+                        "title": "Zürih \"The Circle\"",
+                        "badge": "Architecture",
+                        "description": "1 Milyar İsviçre frangı yatırım ve 180.000 m² alan. Allplan ile tamamen BIM olarak planlanan devasa kompleks; büyük model verilerinin yönetimi ve disiplinler arası koordinasyon başarısı.",
+                        "imageSrc": "",
+                    },
+                    {
+                        "title": "Porto Metro \"Ruby Line\"",
+                        "badge": "Infrastructure",
+                        "description": "Tünel, viyadük ve istasyonların karmaşık etkileşimi. LandXML entegrasyonu ve 3D görselleştirme sayesinde çakışmasız tasarım ve parametrik revizyon imkanı.",
+                        "imageSrc": "",
+                    },
+                    {
+                        "title": "Rütihof (BFU)",
+                        "badge": "Precast",
+                        "description": "Manuel 2D süreçlerden tam otomatik BIM'e geçiş. 10.000m² döşeme sadece 9 ayda üretildi; kağıt paftalar yerine dijital ve hatasız üretim.",
+                        "imageSrc": "",
+                    },
+                    {
+                        "title": "Öncelik Tabanlı Bağlantılar (PBC)",
+                        "badge": "Allplan 2026",
+                        "description": "Özel bileşenler ile yapı elemanları arasında otomatik ve akıllı birleşimler.",
+                        "imageSrc": "",
+                    },
+                    {
+                        "title": "Gelişmiş Bitiş Modellemesi",
+                        "badge": "Allplan 2026",
+                        "description": "Gerçekçi geometriye sahip çok katmanlı dikey bitişler ve süpürgelikler.",
+                        "imageSrc": "",
+                    },
+                ],
+            },
+        ],
+    }
+
+
+
 def build_all_structured_pages() -> dict:
     structured = {}
 
@@ -1234,6 +1879,11 @@ def build_all_structured_pages() -> dict:
         "/solutions/steel", "app/solutions/steel/page.tsx", ""
     )
     structured["/solutions-v2/training/webinar"] = parse_webinar_page()
+    structured["/references"] = parse_references_page()
+    structured["/solutions-v2/faq"] = parse_faq_page()
+    structured["/solutions-v2/connect-license/how-to-assign"] = parse_how_to_assign_page()
+    structured["/solutions/addons/sketchup-converter"] = parse_sketchup_converter_page()
+    structured["/solutions-v2/training/quick-start"] = parse_quick_start_page()
 
     return structured
 

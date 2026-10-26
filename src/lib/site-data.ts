@@ -134,6 +134,51 @@ export interface StructuredSplitCallout {
 export interface StructuredFaqItem {
   question: string;
   answer: string;
+  bullets?: string[];
+  note?: string;
+  table?: {
+    headers: string[];
+    rows: string[][];
+  };
+}
+
+export interface StructuredFaqCategory {
+  id: string;
+  label: string;
+  iconName?: string;
+  title: string;
+  subtitle?: string;
+  ctaText?: string;
+  ctaHref?: string;
+  items: StructuredFaqItem[];
+}
+
+export interface StructuredFaqDirectory {
+  kicker?: string;
+  title: string;
+  subtitle?: string;
+  categories: StructuredFaqCategory[];
+}
+
+export interface StructuredReferenceCategory {
+  id: string;
+  label: string;
+  iconName: string;
+  count: number;
+}
+
+export interface StructuredReferenceItem {
+  name: string;
+  category: string;
+  iconName: string;
+}
+
+export interface StructuredReferencesDirectory {
+  kicker?: string;
+  title: string;
+  subtitle?: string;
+  categories: StructuredReferenceCategory[];
+  items: StructuredReferenceItem[];
 }
 
 export interface StructuredPageLayout {
@@ -154,6 +199,8 @@ export interface StructuredPageLayout {
     title: string;
     items: StructuredFaqItem[];
   } | null;
+  referencesDirectory?: StructuredReferencesDirectory;
+  faqDirectory?: StructuredFaqDirectory;
 }
 
 export interface PageRecord {

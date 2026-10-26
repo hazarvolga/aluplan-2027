@@ -255,9 +255,22 @@ for r in structured_routes:
                 popup_video_count += 1
 
 check(
-    "All 25 product & solution structuredLayout routes resolve 100% of icon/image assets and 92 popup videos",
-    len(structured_routes) == 25 and len(missing_sl_assets) == 0 and popup_video_count >= 90,
+    "All structuredLayout routes resolve 100% of icon/image assets and popup videos",
+    len(structured_routes) >= 30 and len(missing_sl_assets) == 0 and popup_video_count >= 95,
     f"routes={len(structured_routes)}, popup_videos={popup_video_count}, missing={missing_sl_assets[:5]}",
+)
+
+ref_dir = (pages["/references"].get("structuredLayout") or {}).get("referencesDirectory") or {}
+check(
+    "/references preserves all 228 reference companies across 10 category tabs",
+    len(ref_dir.get("items", [])) == 228 and len(ref_dir.get("categories", [])) == 10,
+    f"items={len(ref_dir.get('items', []))}, categories={len(ref_dir.get('categories', []))}",
+)
+
+faq_dir = (pages["/solutions-v2/faq"].get("structuredLayout") or {}).get("faqDirectory") or {}
+check(
+    "/solutions-v2/faq preserves all 5 interactive FAQ category tabs and 25 Q&A items",
+    len(faq_dir.get("categories", [])) == 5 and sum(len(c.get("items", [])) for c in faq_dir.get("categories", [])) == 25,
 )
 
 # 6. GEO (/llms.txt, robots.ts, sitemap.ts) & Security

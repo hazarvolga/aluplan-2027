@@ -15857,7 +15857,1217 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "referencesDirectory": {
+        "kicker": "/ REFERANS PORTFÖYÜ · 9 SEKTÖREL KATEGORİ",
+        "title": "BIM Odaklı İş Ortaklarımız ve Referans Müşterilerimiz",
+        "subtitle": "Mimarlık, mühendislik ve inşaat (AEC) sektöründe, BIM (Building Information Modeling) uzmanlığımızı tercih eden iş ortaklarımızdan bazıları. Dijital tasarım, model tabanlı çalışma ve veri odaklı süreçlerde birlikte değer yarattığımız referans müşterilerimizi inceleyin.",
+        "categories": [
+          {
+            "id": "all",
+            "label": "Tümü",
+            "iconName": "layers",
+            "count": 228
+          },
+          {
+            "id": "Mimari Ofis",
+            "label": "Mimari Ofis",
+            "iconName": "building",
+            "count": 59
+          },
+          {
+            "id": "Mühendislik Ofisi (Alt Yapı)",
+            "label": "Mühendislik (Alt Yapı)",
+            "iconName": "hardhat",
+            "count": 13
+          },
+          {
+            "id": "Mühendislik Ofisi (Üst Yapı)",
+            "label": "Mühendislik (Üst Yapı)",
+            "iconName": "hardhat",
+            "count": 32
+          },
+          {
+            "id": "İnşaat Şirketleri",
+            "label": "İnşaat Şirketleri",
+            "iconName": "building-2",
+            "count": 29
+          },
+          {
+            "id": "Müteahhit",
+            "label": "Müteahhit",
+            "iconName": "hardhat",
+            "count": 24
+          },
+          {
+            "id": "Kamu Kurumları",
+            "label": "Kamu Kurumları",
+            "iconName": "landmark",
+            "count": 52
+          },
+          {
+            "id": "Meslek Odaları",
+            "label": "Meslek Odaları",
+            "iconName": "users",
+            "count": 3
+          },
+          {
+            "id": "Prefabrik",
+            "label": "Prefabrik",
+            "iconName": "building-2",
+            "count": 9
+          },
+          {
+            "id": "Universite",
+            "label": "Üniversite",
+            "iconName": "graduation-cap",
+            "count": 7
+          }
+        ],
+        "items": [
+          {
+            "name": "Akgün Seramik",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Akyükselen Inşaat",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Albayrak Turizm Seyhat Inşaat",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Aluform Pekintas Aluminyum San. Ve Tic. As. Tayyar Okur",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Aluform Pekintaş A.Ş.",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Assan Yapı",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Balcı Mühendislik",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Baytec Mühendislik",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Bimbir Mühendislik Inşaat",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Burhan Kılınç",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Dergan Çarpar Mimarlık San. Ltd. Şti.",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Doğa İnşaat",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Doğuş Otomotiv Servis Ve Tic. A.Ş.",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Er-Nur Mimarlık",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Gintek Inşaat",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Hartek Harita",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Hget Mimarlık",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Iga Mimarlık - I-Design Tasarım Atölyesi",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Kemikoğlu Inşaat",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Koba Mühendislik",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Mega Müh. San. Tic. Ltd. Şti.",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Ninova Mühendislik Mimarlık",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Orient Resaerch Mühendislik",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Polimeks Inşaat Türkiye",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Selimoğlu Group",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Taşyapı Inşaat Taah. San. Ve Tic. A.Ş.",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "TGM İnşaat ve Dan. Ltd. Şti.",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Türk Ytong",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Akhisar Belediyesi Fen Işleri",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Alanya Belediyesi Imar Işleri Müdürlüğü",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Amasya Çevre ve Şehircilik Müd.",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Amasya Il Özel Idaresi",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Ankara Büyükşehir Belediyesi",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Antakya Belediyesi Fen Işleri Müdürlüğü",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Arnavutköy Belediyesi",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Avcılar Belediye Başkanlığı",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Bağcılar Belediye Başkanlığı",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Bahçelievler Belediyesi",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Başakşehir Belediyesi",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Beşiktaş Belediyesi",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Bilecik Belediyesi",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Bursa Il Özel Idaresi Imar Ve Yapı Işleri",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Denizli Belediyesi Etüt Proje Müdürlüğü",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Eyüp Belediye Başkanlığ Planlama Müdürlüğü",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Igdaş Istanbul Gaz",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Il Özel Idaresi Gaziantep",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Il Özel Idaresi Hakkari",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Il Özel Idaresi Ordu",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Il Özel Idaresi Uşak (Çevre Ve Şehircilik Il Müd.)",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Il Özel Idaresi Yozgat",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Il Sağlık Müdürlüğü Istanbul",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Istanbul Büyükşehir Belediyesi Projeler Daire Baş.",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Istanbul Halk Sağlık Müd.",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Kahramanmaraş Büyükşehir Belediyesi",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Karaman Çevre ve Şehircilik Il Müdürlüğü",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Karaman Il Özel Idaresi Plan Ve Proje Müdürlüğü",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Karşıyaka Belediyesi  Plan Proje Müdürlüğü",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Kayseri Il Halk Sağlığı",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Kırşehir Il Özel Idaresi Bayındırlık Müdürlüğü",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Kiptaş Istanbul",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Manisa Belediyesi .",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Muratpaşa Belediyesi Yapı Kontrol Müd.",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Niksar Belediyesi Tokat",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Odunpazarı Belediyesi",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Osmangazi Belediyesi",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Osmaniye Il Sağlık Müdürlüğü",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Pendik Belediyesi Etüd Proje Şefliği",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Sağlık Bakanlığı Inşaat Onarım",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Siirt Belediyesi Fen Işler Müdürlüğü",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Sivas Röleve ve Anıtlar Müdürlüğü",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Süleyman Demirel Üniv. Park Ve Bahçeler Şube Müdürlüğü",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Süleymanpaşa Belediyesi",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Şanlı Urfa Il Özel Dairesi (Allplan)",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Tokat Bayındırlık Ve Iskan Müdürlüğü",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Tokat Belediyesi Gider Müdürlüğü",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Toki - Toplu Konut Idaresi",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Uluderbent Belediye Başkanlığı",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Yozgat Belediyesi Park Ve Bahçeler Müdürlüğü",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Zonguldak Belediyesi",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "Zonguldak Il Özel Idaresi",
+            "category": "Kamu Kurumları",
+            "iconName": "landmark"
+          },
+          {
+            "name": "IMO İstanbul Mimarlar",
+            "category": "Meslek Odaları",
+            "iconName": "users"
+          },
+          {
+            "name": "İMO Ankara Inşaat",
+            "category": "Meslek Odaları",
+            "iconName": "users"
+          },
+          {
+            "name": "İMO İzmir İnşaat",
+            "category": "Meslek Odaları",
+            "iconName": "users"
+          },
+          {
+            "name": "3D Mimari Tasarım",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Ahmet Tahir Gül Mimarlık",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "AK-DA Mimarlık",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Alaturka Mimarlık Ltd. Şti.",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Alp Mimarlık",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Anna Fresko Mobilya Mağazası",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Autograph Mimarlık Dekorasyon",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Aydın Proje",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Ayhan Bülbüller",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Bandırma Özbek Inşaat Ltd. Şti.",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Belekoma Mimarlık Inşaat Turizm",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Biriz Inşaat Taah. Tic. San. Tic. Ltd. Şti.",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Cengiz Ulus Mimarlık",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Cephe Mimarlık",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Çağlar Çölgeçen Arkista Mimarlık",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "DND Mimarlık",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Erol Sermet Caliskan Mimarlik",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Esim Mimarlık",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "ESM Proje Inşaat Taah.Tic.Ltd.Şti.",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "F. Selcuk Evci Ortakligi Tüge Öncel",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Form Yapı Okay Inşaat",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Gürol Biber",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Güven Çabuk Mimarlık",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Hasan Değerbilir",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Hasan Safa Al",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Helvacıoğlu Mimarlık",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "İÇS Mimarlık Dekorasyon Gıda İnşaat",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "İdea Yapı Ürünleri ve Tic. A.Ş.",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Kagir Ahşap Yapı",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Karem Mimarlık",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "KHG Tekstil Mimarlık",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Koray Sapmaz",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Krea Mimarlık Ve Tic. Ltd. Şti.",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Külkedisi Mimarlık",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "LA Mimarlik",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Laborteks San. Tic. Ltd. Şti.",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Lotus Bina İnşaat Müh. ve Mimarlık Ltd. Şti.",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Matt International",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Mazeron Mimarlık Dekorasyon",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Mertun Mimarlık",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Mesut Tanyel",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Mimarca Tasarım Ve Uygulama",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Mustafa Ülkü Mimarlık A.Ş",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Nhl Mimarlık Hizmetleri Ltd. Şti.",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Oda Tasarım",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "On Dizayn Mimarlık",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Ömer Melih Güveniş",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Öner Serkan Şimşek - CER Atölyesi",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Özlem Tarkan Çamurcu Mimarlık Bürosu",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Pamir Mimarlık",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "SVG Mimarlık Mühendislik",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Şanlılar Mimarlık",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Şule Uyar Mimarlık",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Tekin Inşaat",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Tolkim Dış Ticaret",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Tözün Mimarlık",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Yağmur Mimarlık",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Yardımlı Yapı Malzeme",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Yıldız Mimarlık",
+            "category": "Mimari Ofis",
+            "iconName": "building"
+          },
+          {
+            "name": "Çalık Enerji",
+            "category": "Mühendislik Ofisi (Alt Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Doğuş İnşaat Mersin Projesi",
+            "category": "Mühendislik Ofisi (Alt Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Emay Uluslararası Mühendisik",
+            "category": "Mühendislik Ofisi (Alt Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Fab Teknik",
+            "category": "Mühendislik Ofisi (Alt Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Freysaş Freyssinet",
+            "category": "Mühendislik Ofisi (Alt Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Hidro Dizayn",
+            "category": "Mühendislik Ofisi (Alt Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Makyol Inşaat",
+            "category": "Mühendislik Ofisi (Alt Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Mega Mühendislik",
+            "category": "Mühendislik Ofisi (Alt Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Proyapı Mühendislik",
+            "category": "Mühendislik Ofisi (Alt Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Sepa Mühendislik",
+            "category": "Mühendislik Ofisi (Alt Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Su Yapı Mühendislik",
+            "category": "Mühendislik Ofisi (Alt Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Temelsu Uluslararası Mühendislik A.Ş.",
+            "category": "Mühendislik Ofisi (Alt Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Yüksel Proje A.Ş.",
+            "category": "Mühendislik Ofisi (Alt Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Ağırman Mimarlık Mühendsilik",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "AKZ Mühendislik",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Anda Müşavirlik Mühendislik Ltd. Şti.",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "ATAK Mühendislik İnşaat San. ve Tic. A. Ş.",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Aydın Pelin-Can Binzet Müş. Müh. A.Ş (Rönesans)",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Betis Mühendislik",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Blue Projects Proje",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Dolsar Mühendislik A.Ş.",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Doruk Müh. Prefabrik Beton San. Ve Tic.Ltd.Şti.",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Edita Engineers Mimarlık Ve Müh. Ltd. Şti.",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "EFK Mühendislik",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Egim Grup",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Genser Mühendislik",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Lun Yapı Inşaat",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Modern Mühendislik",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Murat Bayrak Engineers",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Nis Mühendislik",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Orion Ağır Çelik Yapı Müh. Inşaat San. Ve Tic. Ltdi Şti.",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Orion Müşavirlik Mühendislik Ve Proje Ltd. Şti.",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Ömer Akyıldız Mühendislik A.Ş.",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Özgen Müh. San. ve Tic. Ltd. Şti.",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Plan & Projektbau Istanbul",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Promer Müsavirlik Mühendislik Ltd. Sti",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Sedat Okutan",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Seza Müh. Mimarlık",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Sigma Mühendislik Hizmetleri",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Stas Mühendislik",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Tesem Yapı A.Ş.",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Türk Teknik Mc Mert Inşaat",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Türkiye Jokey Kulübü İnş. ve Yapı Destek Müd.",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Werner Sobek Istanbul",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Z Dizayn Mühendislik",
+            "category": "Mühendislik Ofisi (Üst Yapı)",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Ahes Inşaat",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Atış Yapı",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Avinal Yazılım",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Bek-Ay Mimarlık",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Byk Danışmanlık",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Dap & Eltes Ortak Girişim",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Dost Inşaat",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Ege Yapı A.Ş.",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Enka Inşaat ve San.  A.Ş.",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Gelişim Müh. İnş. Mad.",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Genkon Mühendislik Müşavirlik A.Ş.",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Güryapı Taah. Inş. Turz. San. Ve Tic. Ltd",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Güryapı Taahüt",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Habaş A.Ş.",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Iga Havalimanları",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Iskenderun Demir ve Çelik A.Ş.",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "KÇS Kahramanmaraş Çimento A.Ş.",
+            "category": "İnşaat Şirketleri",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Nodus Mühendislik",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Öner Grup Yapı İnş. San. ve Tic. A.Ş.",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Rec Uluslararası Inşaat",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "REN TAAHHÜT İNŞAAT SANAYİ A.Ş.",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Rönesans Proje",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Sertepe Inşaat",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Türkerler Gama",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "ZNR İnşaat ve Tah. A.Ş.",
+            "category": "Müteahhit",
+            "iconName": "hardhat"
+          },
+          {
+            "name": "Akat Prefabrik",
+            "category": "Prefabrik",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Alacalı Inşaat Sanayi Ve Ticaret Aş.",
+            "category": "Prefabrik",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Betaş Beton ve Prefabrike",
+            "category": "Prefabrik",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Betonel Prefabrik Beton Elemanları Sanayi Ticaret A.Ş.",
+            "category": "Prefabrik",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Elit Prefabrike Beton Inşaat",
+            "category": "Prefabrik",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Ete Beton",
+            "category": "Prefabrik",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Kam Ankara Beton Sanayi A.Ş.",
+            "category": "Prefabrik",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Preton Prefabrik Yapı Elemanları  San. Ve Tic.A.Ş.",
+            "category": "Prefabrik",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Sayın Prefabrik Inşaat",
+            "category": "Prefabrik",
+            "iconName": "building-2"
+          },
+          {
+            "name": "Abant Izzet Baysal Üniv.Yapı Işleri ve Tek. Daire Bşk.",
+            "category": "Universite",
+            "iconName": "graduation-cap"
+          },
+          {
+            "name": "Istanbul Gelişim Üniversitesi",
+            "category": "Universite",
+            "iconName": "graduation-cap"
+          },
+          {
+            "name": "Istanbul Kültür Üniversitesi",
+            "category": "Universite",
+            "iconName": "graduation-cap"
+          },
+          {
+            "name": "Kastamonu Meslek Yüksek Okulu",
+            "category": "Universite",
+            "iconName": "graduation-cap"
+          },
+          {
+            "name": "ODTU İnşaat Mühendisliği Bölümü",
+            "category": "Universite",
+            "iconName": "graduation-cap"
+          },
+          {
+            "name": "Türk Alman Üniversitesi",
+            "category": "Universite",
+            "iconName": "graduation-cap"
+          },
+          {
+            "name": "Yıldız Teknik Üniversitesi Inşaat Müh. Bölümü",
+            "category": "Universite",
+            "iconName": "graduation-cap"
+          }
+        ]
+      }
+    }
   },
   "/search": {
     "path": "/search",
@@ -17491,7 +18701,53 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "faqDirectory": {
+        "kicker": "/ REHBER & DESTEK · CONNECT 2.0 LİSANSLAMA",
+        "title": "Sıkça Sorulan Sorular & İşlemler",
+        "subtitle": "Yeni nesil bulut tabanlı lisanslama sisteminde en çok ihtiyaç duyulan yönetim adımları.",
+        "categories": [
+          {
+            "id": "assign",
+            "label": "Lisans Atama & İade Adımları",
+            "iconName": "key",
+            "title": "Allplan Connect 2.0 Lisans Yönetim Rehberi",
+            "subtitle": "Yönetici lisans atama, ALLPLAN ID oluşturma ve 10Duke lisans iade süreçleri.",
+            "items": [
+              {
+                "question": "Ekip üyelerine nasıl lisans atanır? (Yönetici Adımları)",
+                "answer": "Yönetici olarak ekip üyelerine lisans atamak oldukça basittir:",
+                "bullets": [
+                  "1. Giriş Yapın: Yönetici (Admin) hesabınızla Allplan Connect portalına (connect.allplan.com) giriş yapın.",
+                  "2. Davet Edin: Menüden \"Ekip Üyeleri\" (Team members) bölümüne giderek lisans vereceğiniz kişileri e-posta adresleriyle kurum ağınıza (Company Network) davet edin.",
+                  "3. Panoyu Açın: Menüdeki \"Admin\" sekmesi altından \"Lisanslama Panosu\" (Licensing Dashboard) alanına tıklayın.",
+                  "4. Lisansı Atayın: Panoda listelenen kullanıcıların yanındaki kutucuğu işaretleyerek havuzdaki boş lisanslarınızı tek tıkla atayın."
+                ]
+              },
+              {
+                "question": "Kullanıcıların ALLPLAN ID oluşturma adımları nelerdir?",
+                "answer": "Kullanıcıların ALLPLAN ID (Allplan Connect/Bimplus hesabı) oluşturmaları için şu 3 basit adımı izlemesi yeterlidir:",
+                "bullets": [
+                  "01. Daveti Yanıtlayın veya Kayıt Olun: Kurum yöneticinizden gelen davet e-postasındaki bağlantıya tıklayın ya da doğrudan Allplan Connect sayfasına giderek \"Kayıt Ol\" (Register) seçeneğini seçin.",
+                  "02. Bilgileri Doldurun: Kurumsal e-posta adresinizi (bu e-posta sizin kalıcı ALLPLAN ID'niz olacaktır) ve belirlediğiniz şifreyi girerek kayıt formunu eksiksiz doldurun.",
+                  "03. Hesabı Doğrulayın: Kayıt işleminden hemen sonra e-posta adresinize gönderilen doğrulama bağlantısına 24 saat içinde tıklayarak hesabınızı aktifleştirin."
+                ]
+              },
+              {
+                "question": "10Duke sisteminde lisans iadesi adımları nelerdir?",
+                "answer": "Bir lisansı kullanıcıdan geri alarak şirket havuzuna iade etmek için:",
+                "bullets": [
+                  "1. Yönetici hesabınızla Allplan Connect portalına giriş yapın.",
+                  "2. Admin sekmesi altından \"Lisanslama Panosu\"na (Licensing Dashboard) gidin.",
+                  "3. Lisansını geri almak istediğiniz kullanıcının yanındaki onay kutucuğunun işaretini (tik) kaldırın."
+                ],
+                "note": "Bilgi: 10Duke bulut lisanslama sisteminde eski yöntemlerdeki gibi bilgisayar başından yapılan fiziksel bir \"iade\" işlemi yoktur; süreç tamamen yöneticiler tarafından merkezden anlık olarak yönetilir. İşlemi yaptığınız anda lisans şirketinizin boş lisans havuzuna geri döner."
+              }
+            ]
+          }
+        ]
+      }
+    }
   },
   "/solutions-v2/connect-login": {
     "path": "/solutions-v2/connect-login",
@@ -17953,7 +19209,307 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "FAQPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "faqDirectory": {
+        "kicker": "/ YARDIM MERKEZİ · SIKÇA SORULAN SORULAR",
+        "title": "Lisanslama, Cloud ve Ürün Yaşam Döngüsü Rehberi",
+        "subtitle": "Sekmeler arasında geçiş yaparak Allplan abonelik sistemi, ALLPLAN Cloud hizmetleri, Serviceplus dönüşümü, Workgroup işbirliği ve ürün yaşam döngüsü politikalarını inceleyin.",
+        "categories": [
+          {
+            "id": "subscription",
+            "label": "Genel & Abonelik",
+            "iconName": "help-circle",
+            "title": "Genel Abonelik (Subscription) SSS",
+            "subtitle": "Allplan abonelik sistemi, ödeme seçenekleri ve iptal koşulları hakkında bilgiler.",
+            "items": [
+              {
+                "question": "Abonelik (Subscription) nedir?",
+                "answer": "Abonelik, yazılım ve hizmetlere belirli bir süre için (aylık, yıllık veya 3 yıllık) erişim sağladığınız bir sözleşme türüdür."
+              },
+              {
+                "question": "Abonelik ile neleri elde ederim?",
+                "answer": "Abonelik süresince aşağıdakilere erişim sağlarsınız:",
+                "bullets": [
+                  "Satın alınan süre boyunca seçilen yazılım sürümüne erişim",
+                  "BIMPLUS dahil ALLPLAN Cloud hizmetleri",
+                  "Verimli ofis içi takım çalışması araçları",
+                  "Ağ ve şirket sınırları ötesinde takım çalışması",
+                  "Çizim ve planların yönetimi ve dağıtımı",
+                  "Pazar lideri ürün entegrasyonları (Solibri Inside, AutoConverter)",
+                  "Teknik Destek ekiplerine erişim",
+                  "Online eğitim kaynakları",
+                  "Yeni yazılım sürümlerine anında erişim"
+                ]
+              },
+              {
+                "question": "Abonelik süresi ne kadardır ve yenilemek istemezsem ne olur?",
+                "answer": "Abonelik süreleri ve iptal bildirim koşulları:",
+                "bullets": [
+                  "Abonelik Süreleri: Aylık abonelik, Yıllık abonelik, 3 Yıllık abonelik",
+                  "İptal Bildirimi (Aylık): 1 ay önceden bildirim",
+                  "İptal Bildirimi (Yıllık / 3 Yıllık): 3 ay önceden bildirim",
+                  "Tüm abonelikler, başlangıç süresine göre otomatik olarak yenilenir."
+                ]
+              },
+              {
+                "question": "Ödemeyi nasıl yapabilirim?",
+                "answer": "Ödemeler 1 yıllık veya 3 yıllık dönemler halinde yapılabilir. Ödeme yöntemleri ülkeye göre değişmekle birlikte genellikle Kredi Kartı veya Havale/EFT (SEPA) şeklindedir. Ödeme, tüm abonelik süresi için peşin alınır."
+              },
+              {
+                "question": "Aboneliğimi iptal edersem ne olur?",
+                "answer": "Aboneliğiniz iptal edilene kadar devam eder. Süre sonunda, yazılıma ve hizmetlere erişiminiz otomatik olarak sona erer."
+              },
+              {
+                "question": "Yazılıma erişmek için başka seçeneğim var mı?",
+                "answer": "Evet, belirli ürünler için Kalıcı Lisans (Perpetual License) seçeneği mevcuttur:",
+                "bullets": [
+                  "ALLPLAN Ultimate",
+                  "ALLPLAN Civil",
+                  "ALLPLAN Precast"
+                ],
+                "note": "Not: İlk yıl zorunlu Serviceplus sözleşmesi gereklidir. Bu lisanslar ALLPLAN Cloud erişimini içermez."
+              },
+              {
+                "question": "Aboneliğin temel avantajları nelerdir?",
+                "answer": "ALLPLAN Abonelik modelinin öne çıkan avantajları:",
+                "bullets": [
+                  "Esneklik",
+                  "Düşük başlangıç maliyeti",
+                  "Her zaman en son yazılım sürümüne erişim",
+                  "ALLPLAN Cloud hizmetlerinin dahil olması",
+                  "Teknik destek uzmanlığına erişim"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cloud",
+            "label": "Cloud Hizmetleri",
+            "iconName": "cloud",
+            "title": "ALLPLAN Cloud SSS",
+            "subtitle": "Bulut depolama, Bimplus ve entegre hizmetler hakkında detaylar.",
+            "items": [
+              {
+                "question": "Abonelikle birlikte ne kadar Cloud depolama alanı alırım?",
+                "answer": "ALLPLAN Cloud ile birlikte 10 GB depolama alanı dahildir. İsterseniz ek 100 GB depolama alanı satın alabilirsiniz."
+              },
+              {
+                "question": "Hangi ALLPLAN Cloud hizmetleri dahildir?",
+                "answer": "Temel Hizmetler ve Entegrasyonlar:",
+                "bullets": [
+                  "BIMPLUS ile model görüntüleme/yönetimi",
+                  "ALLPLAN Workgroup Manager (ofis içi takım çalışması)",
+                  "ALLPLAN Share (ağlar arası/şirketler arası takım çalışması)",
+                  "ALLPLAN Exchange (çizim/plan yönetimi ve dağıtımı)",
+                  "Entegrasyon: Solibri Inside (model kontrolü)",
+                  "Entegrasyon: AutoConverter (yapısal analiz araçları entegrasyonu)"
+                ]
+              },
+              {
+                "question": "Cloud hizmetlerini kullanmak zorunda mıyım?",
+                "answer": "Hayır. Cloud hizmetleri abonelikle birlikte sunulur ancak kullanımı tamamen isteğe bağlıdır."
+              },
+              {
+                "question": "Workgroup Manager, Allplan Cloud hizmetlerine dahil mi?",
+                "answer": "Evet, dahildir."
+              },
+              {
+                "question": "BIMPLUS aboneliğe nasıl uygulanır?",
+                "answer": "BIMPLUS, abonelik lisansınıza zaten dahildir. Ayrıca bağımsız bir ürün olarak da kullanılmaya devam edecektir."
+              }
+            ]
+          },
+          {
+            "id": "conversion",
+            "label": "Lisans Dönüşümü",
+            "iconName": "refresh-cw",
+            "title": "Serviceplus'tan Aboneliğe Geçiş",
+            "subtitle": "Mevcut kalıcı lisansınızı abonelik modeline dönüştürme süreci.",
+            "items": [
+              {
+                "question": "ALLPLAN Aboneliğine geçtiğimde ne olur?",
+                "answer": "Serviceplus lisansınızı aboneliğe dönüştürdüğünüzde:",
+                "bullets": [
+                  "Mevcut lisansınız ALLPLAN Abonelik lisansına dönüştürülür.",
+                  "Tüm ALLPLAN Cloud Hizmetlerine tam erişim kazanırsınız.",
+                  "Teknik Destek ve Online Eğitim kaynaklarına erişiminiz devam eder.",
+                  "Yeni sürümlere anında erişirsiniz."
+                ]
+              },
+              {
+                "question": "Kalıcı lisansımı kaybeder miyim?",
+                "answer": "Evet. ALLPLAN Aboneliğine geçtiğinizde, kalıcı lisans üzerindeki haklarınız ve erişiminiz sona erer; bunun yerine güncel ve kapsamlı abonelik avantajlarına sahip olursunuz."
+              },
+              {
+                "question": "Abonelik taahhüt süresi nedir?",
+                "answer": "Mevcut Serviceplus müşterileri için 12 aylık abonelik sözleşmesi yapılır. Ayrıca, abonelik yenileme fiyatınız 2 yıl boyunca sabitlenir."
+              },
+              {
+                "question": "Desteklenmeyen eski sürümleri kullanmanın riskleri nelerdir?",
+                "answer": "Teknik olarak mümkün olsa da, desteklenmeyen yazılım kullanmak şu riskleri taşır:",
+                "bullets": [
+                  "Güvenlik açıkları",
+                  "Stabilite sorunları",
+                  "Performans problemleri",
+                  "Veri uyumluluğu sorunları"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "workgroup",
+            "label": "Workgroup & İşbirliği",
+            "iconName": "users",
+            "title": "Workgroup Manager & Gelecek",
+            "subtitle": "İşbirliği araçlarının geleceği ve uyumluluk süreçleri.",
+            "items": [
+              {
+                "question": "Workgroup Manager, Share ve Exchange yeni lisanslar için nasıl sunulacak?",
+                "answer": "1 Ekim 2023 itibariyle, bu hizmetler sadece Abonelik (Subscription) ile sunulmaktadır. Yeni kalıcı lisanslarda bu özellikler mevcut değildir."
+              },
+              {
+                "question": "Kalıcı lisansım ile mevcut Workgroup Manager'ı kullanmaya devam edebilir miyim?",
+                "answer": "Mevcut kalıcı lisanslar için uyumluluk ve bakım takvimi:",
+                "bullets": [
+                  "Workgroup Manager: ALLPLAN 2027 sürümüne kadar uyumludur. Ekim 2027'de bakımı ve desteği sona erecektir.",
+                  "Exchange & Share: Ekim 2026'da bakımı ve desteği sona erecektir."
+                ],
+                "note": "Not: Gelecek özellikler ve entegrasyonlar sadece Abonelik modelinde geliştirilmeye devam edecektir."
+              },
+              {
+                "question": "Mevcut Workgroup Manager iş akışlarımızın geleceği ne olacak?",
+                "answer": "İşbirliği, proje teslimi için hayati önem taşır. Yerel (LAN) ve global (WAN) işbirliği çözümleri gelişmeye devam edecektir:",
+                "bullets": [
+                  "Workgroup Manager 2027'ye kadar bağımsız ürün olarak kalacaktır.",
+                  "LAN çözümünün sürekli iyileştirilmesi devam edecektir.",
+                  "Share (WAN) ve BIMPLUS entegrasyonları ile \"Allplan Cloud\" çatısı altında daha kapsamlı ve güvenli bir işbirliği platformu hedeflenmektedir."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "lifecycle",
+            "label": "Ürün Yaşam Döngüsü",
+            "iconName": "shield",
+            "title": "Ürün Yaşam Döngüsü (Product Lifecycle)",
+            "subtitle": "Versiyon onayı, bakım aşamaları ve teknik destek kapsamı politikaları. (13 Ocak 2025'ten itibaren geçerlidir)",
+            "ctaText": "Learn more: ALLPLAN product lifecycle policy",
+            "ctaHref": "https://www.allplan.com/product-lifecycle/",
+            "items": [
+              {
+                "question": "Bu ürün yaşam döngüsü politikasının kapsamı nedir?",
+                "answer": "Bu politika 13 Ocak 2025 tarihi itibariyle geçerlidir ve ALLPLAN'ın masaüstü ürünlerini (ALLPLAN, FRILO, DC-Software), SCIA ve SDS2 ürünlerinin şimdiki ve gelecek versiyonlarını kapsar. ALLPLAN 2024 ve önceki sürümleri kapsayan eski politikaların yerini alır."
+              },
+              {
+                "question": "Ürün Bakımı (Product Maintenance) ve Sürüm Desteği (Version Support) arasındaki fark nedir?",
+                "answer": "İki kavram farklı hizmet katmanlarını ifade eder:",
+                "bullets": [
+                  "Ürün Bakımı: Belirli bir sürümün bulunduğu bakım aşamasına bağlı olarak kullanıcının bekleyebileceği yazılım güncelleme türlerini tanımlar.",
+                  "Sürüm Desteği: Teknik Destek ile iletişim kurma yollarını ve sağlanan hizmetleri tanımlar."
+                ]
+              },
+              {
+                "question": "Hangi bakım hizmetleri hangi aşamaya dahildir?",
+                "answer": "Ürün Bakım Hizmetleri aşama karşılaştırma tablosu:",
+                "table": {
+                  "headers": [
+                    "Ürün Bakım Hizmetleri",
+                    "Current (Güncel)",
+                    "Supported (Desteklenen)",
+                    "Retired (Emekli)"
+                  ],
+                  "rows": [
+                    [
+                      "Yeni özellikler",
+                      "✓",
+                      "-",
+                      "-"
+                    ],
+                    [
+                      "İyileştirmeler",
+                      "✓",
+                      "-",
+                      "-"
+                    ],
+                    [
+                      "Bakım düzeltmeleri*",
+                      "✓",
+                      "✓",
+                      "-"
+                    ],
+                    [
+                      "Yeni ortamları sertifikalandırma",
+                      "✓",
+                      "-",
+                      "-"
+                    ],
+                    [
+                      "ALLPLAN Cloud Bağlantısı (Direct Interface)",
+                      "✓",
+                      "✓",
+                      "-"
+                    ]
+                  ]
+                },
+                "note": "* ALLPLAN, hataların ve eksikliklerin düzeltilmesini, kullanıcılar üzerindeki etkilerini ve diğer kriterleri göz önünde bulundurarak kendi takdirine bağlı olarak önceliklendirir."
+              },
+              {
+                "question": "Hangi teknik destek hizmetleri hangi aşamaya dahildir?",
+                "answer": "Teknik Destek Hizmetleri aşama karşılaştırma tablosu:",
+                "table": {
+                  "headers": [
+                    "Teknik Destek Hizmetleri",
+                    "Current (Güncel)",
+                    "Supported (Desteklenen)",
+                    "Retired (Emekli)"
+                  ],
+                  "rows": [
+                    [
+                      "Destek kaynakları (online)",
+                      "✓",
+                      "✓",
+                      "-"
+                    ],
+                    [
+                      "Eğitim materyalleri (online)",
+                      "✓",
+                      "✓",
+                      "-"
+                    ],
+                    [
+                      "Olay bildirimi (Telefon, mail, ticket)",
+                      "✓",
+                      "✓",
+                      "-"
+                    ],
+                    [
+                      "Hizmet talepleri (Service requests)",
+                      "✓",
+                      "✓",
+                      "-"
+                    ],
+                    [
+                      "İndirmeler (Downloads)",
+                      "✓",
+                      "✓",
+                      "-"
+                    ]
+                  ]
+                }
+              },
+              {
+                "question": "Ana Sürüm (Major Version) nedir? Ne sıklıkla yayınlanır?",
+                "answer": "Yeni (büyük) özellikler, geliştirmeler veya değişiklikler içeren sürümdür. Sürüm numarasının en solundaki rakam değiştiğinde anlaşılır (Örn. ALLPLAN 2025'ten ALLPLAN 2026'ya geçiş). Yayınlanma sıklığı: Genellikle yılda bir kez."
+              },
+              {
+                "question": "Ara Sürüm (Minor Version) nedir? Ne sıklıkla yayınlanır?",
+                "answer": "Küçük özellikler, stabilite, performans veya güvenlik iyileştirmeleri içeren sürümdür. Sürüm numarasının sağındaki rakamlar değiştiğinde anlaşılır (Örn. 2025-0-1 veya 2025-1-0). Yayınlanma sıklığı: Genellikle yılda birkaç kez (ürün hattına göre değişir)."
+              }
+            ]
+          }
+        ]
+      }
+    }
   },
   "/solutions-v2/infrastructure": {
     "path": "/solutions-v2/infrastructure",
@@ -20133,7 +21689,201 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "Service",
-    "structuredLayout": null
+    "structuredLayout": {
+      "intro": {
+        "kicker": "/ HIZLI BAŞLANGIÇ REHBERİ · OPEN BIM & AI DESTEKLİ",
+        "title": "Allplan 2026 Kapsamlı Başlangıç Rehberi",
+        "bullets": [
+          "Bu kılavuz, Allplan BIM yazılımının profesyonel düzeydeki kullanımını, Open BIM iş akışlarını ve Allplan 2026 yeniliklerini derinlemesine ele alır.",
+          "Mimarlar, mühendisler ve inşaat profesyonelleri için tasarımdan inşaya (Design to Build) bütünleşik bir süreç sunar.",
+          "Open BIM Uyumlu (IFC 4.3, BCF, IDS) ve AI Destekli iş akışları."
+        ]
+      },
+      "workflowTabs": {
+        "kicker": "/ DİSİPLİN REHBERİ · 4 ANA MODÜL",
+        "title": "Modüller ve Profesyonel İş Akışları",
+        "subtitle": "Disiplinlere özel yetenekler, Allplan 2026 yenilikleri ve en iyi uygulama yöntemleri.",
+        "categories": [
+          {
+            "key": "architecture",
+            "label": "Mimari",
+            "items": [
+              {
+                "title": "Allplan Architecture — Tasarım Özgürlüğü ve Hassas Dokümantasyon",
+                "badge": "Mimari BIM",
+                "description": "Üstün modelleme yetenekleri ile karmaşık geometrileri kolayca oluşturun. Tutarlı şablonlar ile projeleri hızla görselleştirin ve hataları en aza indirin.",
+                "bullets": [
+                  "• Temel Özellikler: Çok katmanlı duvar ve bitiş modelleme, akıllı oda filtreleri ve metraj",
+                  "• Allplan 2026 ile Yeni: Çok katmanlı dikey bitişler, gerçekçi geometri, kural tabanlı dağıtım ve 3D süpürgelik modellemesi",
+                  "• Verimlilik ve Doğruluk: 3D modelleme ile teslimatlarda %50 daha fazla doğruluk, %30 daha fazla üretkenlik ve %70 daha verimli metraj/maliyetlendirme",
+                  "• Parametrik Tasarım: Parametrik nesneler ve Visual Scripting ile tekrarlayan görevlerin otomasyonu",
+                  "• Open BIM Entegrasyonu: IFC veri alışverişi ve BCF tabanlı çakışma yönetimi ile disiplinler arası sorunsuz işbirliği"
+                ],
+                "imageSrc": ""
+              }
+            ]
+          },
+          {
+            "key": "engineering",
+            "label": "Mühendislik",
+            "items": [
+              {
+                "title": "Allplan Engineering — Yapısal Analiz, Donatı ve Çelik Detaylandırma",
+                "badge": "Yapısal BIM",
+                "description": "Dökme yerinde beton, prekast, çelik ve ahşap dahil olmak üzere tüm malzemeleri optimize edin. Donatı ve çelik yapıların hızlı tasarımı için otomatik çözümler kullanın.",
+                "bullets": [
+                  "• Otomatik Donatı: Kolon donatı PythonPart'ı gibi araçlarla tekrarlayan elemanları saniyeler içinde donatın; çap, aralık ve bindirme boylarını parametrik yönetin",
+                  "• Gelişmiş Veri Değişimi: 50'den fazla dosya formatı desteği, SCIA AutoConverter ve SAF formatı ile yapısal analiz yazılımlarına kayıpsız aktarım",
+                  "• Çelik Yapı Detaylandırma (SDS2): SDS2 entegrasyonu ile çelik yapıların modellemesinden imalatına uçtan uca akıllı bağlantı tasarımı"
+                ],
+                "imageSrc": ""
+              }
+            ]
+          },
+          {
+            "key": "infrastructure",
+            "label": "Altyapı",
+            "items": [
+              {
+                "title": "Infrastructure & Civil — Yol, Köprü ve Tünel Projeleri İçin Parametrik Modelleme",
+                "badge": "Altyapı & Civil",
+                "description": "Case Study — Porto Metro \"Ruby Line\": Karmaşık tünel kesitleri (NATM ve Aç-Kapa) için LandXML aks verileri Bimplus üzerinden içe aktarılarak modellendi. Tünel duvarlarındaki kazıklar (piles) PythonParts kullanılarak otomatikleştirildi.",
+                "bullets": [
+                  "• \"Etkileşimleri 3D model olmadan görselleştirmek inanılmaz derecede zor olurdu.\" — QUADRANTE",
+                  "• Arazi Etüdü & Point Cloud: Scalypso gibi entegre araçlarla saha nokta bulutu (Point Cloud) verilerini işleyin ve mevcut durumun hassas envanterini (As-built) oluşturun",
+                  "• Şantiye Planlama: Kule vinç gibi şantiye ekipmanlarını yerleştirin, çarpışma tespiti yapın ve basit kaldırma analizleri gerçekleştirin"
+                ],
+                "imageSrc": ""
+              }
+            ]
+          },
+          {
+            "key": "precast",
+            "label": "Prekast",
+            "items": [
+              {
+                "title": "Allplan Precast — Otomatik Prekast Detaylandırma ve Üretim (CAM) Verisi",
+                "badge": "Prekast & Üretim",
+                "description": "Vaka Çalışması — BFU (Rütihof): Önceden kağıt planlar (2D) ve manuel kontrollerle yürüyen süreç, Allplan IFC-Assistant ile tamamen dijitalleşti. BFU, sadece 9 ayda 10.000m² döşeme ve 1.100m² duvar elemanını detaylandırıp üretti.",
+                "bullets": [
+                  "• Hata oranında ciddi düşüş ve üretime hazır otomatik shop drawingler",
+                  "• Otomatik Atölye Çizimleri: Donatı, armatür ve boyutlandırma dahil yüksek düzeyde otomatik kalıp planları oluşturun",
+                  "• Üretim Entegrasyonu: Duvar ve döşemeleri fabrika kapasitesine göre otomatik bölün ve CAM verilerini gönderin"
+                ],
+                "imageSrc": ""
+              }
+            ]
+          }
+        ]
+      },
+      "extraGrids": [
+        {
+          "kicker": "/ OPEN BIM VE İŞBİRLİĞİ · BIMPLUS & BCF",
+          "title": "Adım Adım Çakışma Çözümü (Clash Resolution) & IFC Güvenliği",
+          "subtitle": "Proje paydaşları arasında verimsiz e-posta trafiği yerine Bimplus entegrasyonu ile merkezi koordinasyon.",
+          "columns": 3,
+          "items": [
+            {
+              "title": "1. Çakışma Tespiti & 2. BCF Sorunu Oluşturma",
+              "badge": "Adım 01–02",
+              "description": "Modelde Check > Clash Detection komutunu çalıştırın. Tespit edilen çakışmayı seçin, Issue Manager üzerinden konum, ekran görüntüsü ve sorumlu ekleyerek BCF sorunu oluşturun.",
+              "imageSrc": ""
+            },
+            {
+              "title": "3. Bimplus Senkronizasyonu & 4. Çözüm Doğrulama",
+              "badge": "Adım 03–04",
+              "description": "Sorunu buluta gönderin; diğer disiplinler (ör: MEP mühendisi) kendi yazılımlarında anında görür. Çözüldüğünde Bimplus'ta \"Resolved\" olarak işaretlenir ve Allplan'da kapatılır.",
+              "imageSrc": ""
+            },
+            {
+              "title": "IFC Veri Güvenliği & Partner Entegrasyonları",
+              "badge": "Open BIM",
+              "description": "Nitelik Eşleme (Mapping) ile Allplan niteliklerini IFC Pset'lerine doğru eşleyin ve IDS ile otomatik kontrol edin.",
+              "bullets": [
+                "• Partner Entegrasyonları: SCIA Engineer, Frilo, Bluebeam, SDS2, Redshift"
+              ],
+              "imageSrc": ""
+            }
+          ]
+        },
+        {
+          "kicker": "/ PROFESYONEL İPUÇLARI",
+          "title": "5 Profesyonel İpucu",
+          "subtitle": "Allplan projelerinde veri kalitesini ve modelleme hızını artıran temel prensipler.",
+          "columns": 3,
+          "items": [
+            {
+              "title": "1. Veri Kaybını Önleyin",
+              "badge": "İpucu 01",
+              "description": "IFC dışa aktarımda \"Attribute Mapping\" ve \"Yalnızca Atanan Nitelikleri Aktar\" seçeneklerini kullanın.",
+              "imageSrc": ""
+            },
+            {
+              "title": "2. Otomasyon Kullanın",
+              "badge": "İpucu 02",
+              "description": "Tekrarlayan işler için PythonParts veya Visual Scripting scriptlerini devreye sokun.",
+              "imageSrc": ""
+            },
+            {
+              "title": "3. Parametrik Yönetim",
+              "badge": "İpucu 03",
+              "description": "Revizyonları hızlandırmak için yol ve altyapı projelerinde parametrik modellemeyi tercih edin.",
+              "imageSrc": ""
+            },
+            {
+              "title": "4. BCF ile Koordinasyon",
+              "badge": "İpucu 04",
+              "description": "Bimplus entegrasyonu ile çakışmaları e-posta yerine BCF üzerinden yönetin.",
+              "imageSrc": ""
+            },
+            {
+              "title": "5. Entegre Analiz",
+              "badge": "İpucu 05",
+              "description": "SCIA AutoConverter kullanarak modelinizi analiz yazılımlarına tek tıkla aktarın.",
+              "imageSrc": ""
+            }
+          ]
+        },
+        {
+          "kicker": "/ VAKA ÇALIŞMALARI & YENİLİKLER",
+          "title": "Gerçek Hayat Senaryoları ve Allplan 2026 Yenilikleri",
+          "subtitle": "Uluslararası referans projeler ve Allplan 2026'nın öne çıkan mimari/yapısal yetenekleri.",
+          "columns": 3,
+          "items": [
+            {
+              "title": "Zürih \"The Circle\"",
+              "badge": "Architecture",
+              "description": "1 Milyar İsviçre frangı yatırım ve 180.000 m² alan. Allplan ile tamamen BIM olarak planlanan devasa kompleks; büyük model verilerinin yönetimi ve disiplinler arası koordinasyon başarısı.",
+              "imageSrc": ""
+            },
+            {
+              "title": "Porto Metro \"Ruby Line\"",
+              "badge": "Infrastructure",
+              "description": "Tünel, viyadük ve istasyonların karmaşık etkileşimi. LandXML entegrasyonu ve 3D görselleştirme sayesinde çakışmasız tasarım ve parametrik revizyon imkanı.",
+              "imageSrc": ""
+            },
+            {
+              "title": "Rütihof (BFU)",
+              "badge": "Precast",
+              "description": "Manuel 2D süreçlerden tam otomatik BIM'e geçiş. 10.000m² döşeme sadece 9 ayda üretildi; kağıt paftalar yerine dijital ve hatasız üretim.",
+              "imageSrc": ""
+            },
+            {
+              "title": "Öncelik Tabanlı Bağlantılar (PBC)",
+              "badge": "Allplan 2026",
+              "description": "Özel bileşenler ile yapı elemanları arasında otomatik ve akıllı birleşimler.",
+              "imageSrc": ""
+            },
+            {
+              "title": "Gelişmiş Bitiş Modellemesi",
+              "badge": "Allplan 2026",
+              "description": "Gerçekçi geometriye sahip çok katmanlı dikey bitişler ve süpürgelikler.",
+              "imageSrc": ""
+            }
+          ]
+        }
+      ]
+    }
   },
   "/solutions-v2/training/video-library": {
     "path": "/solutions-v2/training/video-library",
@@ -30599,7 +32349,102 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": {
+      "intro": {
+        "kicker": "/ EKLENTİ GENEL BAKIŞ · SKETCHUP & LUMION ENTEGRASYONU",
+        "title": "SketchUp dosyalarıyla optimize edilmiş veri alışverişi",
+        "bullets": [
+          "SketchUp Converter eklentisi ile, dokular dahil bir 3B modeli Allplan’a kolayca aktarabilirsiniz. Bu şekilde, örneğin SketchUp Deposundan tüm yüzeyleri içeren bitkileri, insanları, mobilyaları, araçları vb. Allplan’a aktarabilir ve bunları görselleştirmeniz için kullanabilirsiniz.",
+          "Mevcut SketchUp sürümleri desteklenmektedir. SketchUp dışa aktarımı, Lumion görselleştirme yazılımıyla optimum bir iş akışı için uyarlanmıştır. Basit Allplan makrolarını ayrıntılı Lumion nesneleriyle (ağaçlar, arabalar, ışıklar, vb.) değiştirebilirsiniz."
+        ],
+        "videoEmbedUrl": "https://www.youtube.com/embed/dsFgV9-aAyI"
+      },
+      "workflowTabs": {
+        "kicker": "/ VERİ ALIŞVERİŞİ ÖZELLİKLERİ",
+        "title": "SketchUp Export & Import Yetenekleri",
+        "subtitle": "Dışa aktarma (Export) ve içe aktarma (Import) iş akışlarının teknik detayları.",
+        "categories": [
+          {
+            "key": "export",
+            "label": "SketchUp Export",
+            "items": [
+              {
+                "title": "SketchUp ve Lumion Dışa Aktarım (Export)",
+                "description": "Allplan modellerini bileşen ve grup hiyerarşisini koruyarak SketchUp ve Lumion ortamına aktarın:",
+                "bullets": [
+                  "• Makro tanımları SketchUp bileşenleri olarak, makro yer değiştirmeleri SketchUp örnekleri olarak dışa aktarılır",
+                  "• SketchUp sürüm 2019’a kadar dışa aktarın (Allplan sadece 2017 / 2018’e kadar)",
+                  "• Önceden seçilmiş elemanların dışa aktarımı",
+                  "• Dışa aktarılan skp dosyasının otomatik hata kontrolü ve düzeltilmesi; bu, Lumion’a anında aktarılabileceği anlamına gelir",
+                  "• Allplan’dan 3B katılar isteğe bağlı olarak SketchUp grupları olarak birleştirilebilir"
+                ],
+                "imageSrc": "",
+                "youtubeId": "XcIPUX2nF4c"
+              }
+            ]
+          },
+          {
+            "key": "import",
+            "label": "SketchUp Import",
+            "items": [
+              {
+                "title": "Dokular ve Katı Gövdelerle İçe Aktarım (Import)",
+                "description": "SketchUp 3D Warehouse modellerini UV dokuları ve katı geometrileriyle Allplan'a aktarın:",
+                "bullets": [
+                  "• SketchUp sürümlerinin 2016, 2017, 2018, 2019 içe aktarımı Allplan 2018, 2019’da da mümkündür",
+                  "• Yüzeyler her zaman üçgenleştirilmez, üçgenleme isteğe bağlı olarak ayarlanabilir",
+                  "• Gövdeler yüzey grupları olarak değil, katı gövdeler olarak içe aktarılır",
+                  "• Dokular, .surf dosyaları olarak içe aktarılır ve oluşturulur (UV koordinatlı olanlar dahil)"
+                ],
+                "imageSrc": "",
+                "youtubeId": "xIDepYtmsIw"
+              }
+            ]
+          }
+        ]
+      },
+      "extraGrids": [
+        {
+          "kicker": "/ UYGULAMA VİDEOLARI",
+          "title": "Tanıtım Videoları",
+          "subtitle": "SketchUp Converter eklentisinin Allplan ve Lumion iş akışı videoları.",
+          "columns": 3,
+          "items": [
+            {
+              "title": "ALLPLAN Add-On SketchUpConverter - Export Allplan zu Lumion",
+              "description": "Allplan makrolarının SketchUp üzerinden Lumion bileşenlerine dönüştürülmesi.",
+              "imageSrc": "",
+              "youtubeId": "XcIPUX2nF4c"
+            },
+            {
+              "title": "ALLPLAN Add-On SketchUpConverter - Import Allplan UV Texturen",
+              "description": "UV koordinatlı dokuların .surf dosyaları olarak Allplan'a aktarılması.",
+              "imageSrc": "",
+              "youtubeId": "xIDepYtmsIw"
+            },
+            {
+              "title": "ALLPLAN Add-On SketchUpConverter - Import Allplan",
+              "description": "SketchUp 3B katı modellerinin Allplan ortamına doğrudan aktarımı.",
+              "imageSrc": "",
+              "youtubeId": "QUTYgmyfu3o"
+            }
+          ]
+        }
+      ],
+      "splitCallouts": [
+        {
+          "kicker": "/ LİSANS VE GEREKSİNİMLER",
+          "title": "Lisans ve Gereksinimler",
+          "lead": "Tek kullanıcı lisansı, mevcut Allplan lisansına bağlıdır.",
+          "subheading": "Sistem Gereksinimleri: Allplan 2020 – 2024 · Diller: Almanca, İngilizce",
+          "description": "Eklentiyi yükledikten sonra deneme sürümünü 14 gün ücretsiz olarak kullanabilirsiniz.",
+          "imageSrc": "/assets/solutions/cds/license.jpg",
+          "ctaText": "Setup İndir",
+          "ctaHref": "https://cdssieber.sharepoint.com/:f:/g/Ev_G2db5WVVBvMEN-Adhz24Bk5f3rEvFCQu77iLTTCIynw?e=qkPdri",
+          "external": true
+        }
+      ]
+    }
   },
   "/solutions/addons/steel-components": {
     "path": "/solutions/addons/steel-components",

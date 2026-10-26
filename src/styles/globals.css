@@ -4384,6 +4384,304 @@ button.alu-role[aria-checked="true"] {
   }
 }
 
+/* ============================================================================
+   10. REFERENCES DIRECTORY (/references — 10-Tab Category Filter + 3-Col Grid)
+   & MULTI-CATEGORY FAQ DIRECTORY (/solutions-v2/faq)
+   ============================================================================ */
+
+.alu-ref-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  background: var(--surface-default);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--elevation-raised);
+  position: sticky;
+  top: 4.5rem;
+  z-index: 20;
+}
+
+.alu-ref-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.alu-ref-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: var(--surface-raised);
+  border: 1px solid var(--border-default);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.alu-ref-tab:hover {
+  color: var(--text-primary);
+  border-color: var(--accent-border);
+  background: var(--surface-overlay);
+}
+
+.alu-ref-tab--active {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(208, 102, 58, 0.28);
+}
+
+.alu-ref-tab--active:hover {
+  background: var(--accent-primary);
+  color: #ffffff;
+}
+
+.alu-ref-tab__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.85;
+}
+
+.alu-ref-tab--active .alu-ref-tab__icon {
+  opacity: 1;
+}
+
+.alu-ref-tab__count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.65rem;
+  height: 1.35rem;
+  padding-inline: 0.4rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.alu-ref-tab--active .alu-ref-tab__count {
+  background: rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+}
+
+.alu-ref-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.875rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.alu-ref-search {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  flex: 1 1 20rem;
+  max-width: 32rem;
+  padding: 0.5rem 0.875rem;
+  background: var(--surface-raised);
+  border: 1px solid var(--border-default);
+  color: var(--text-muted);
+}
+
+.alu-ref-search:focus-within {
+  border-color: var(--accent-border);
+  color: var(--text-primary);
+}
+
+.alu-ref-search__input {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.alu-ref-search__clear {
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0.15rem 0.35rem;
+}
+
+.alu-ref-status {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.alu-ref-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.alu-ref-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.35rem;
+  background: var(--surface-default);
+  border: 1px solid var(--border-default);
+  box-shadow: var(--elevation-raised);
+  transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 200ms ease,
+    background-color 200ms ease;
+}
+
+.alu-ref-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-border);
+  background: var(--surface-raised);
+}
+
+.alu-ref-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  background: var(--surface-raised);
+  border: 1px solid var(--border-default);
+  color: var(--accent-fg);
+  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+.alu-ref-card:hover .alu-ref-card__icon {
+  background: var(--accent-subtle);
+  border-color: var(--accent-border);
+  color: var(--accent-primary);
+}
+
+.alu-ref-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.alu-ref-card__name {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text-primary);
+}
+
+.alu-ref-card__cat {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Multi-Category FAQ Stage & Tables */
+.alu-faq-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 62rem;
+  margin-inline: auto;
+  width: 100%;
+}
+
+.alu-faq-stage__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 1.75rem;
+  background: var(--surface-default);
+  border: 1px solid var(--border-strong);
+  border-left: 3px solid var(--accent-primary);
+}
+
+.alu-faq-table-wrap {
+  overflow-x: auto;
+  margin-top: 0.75rem;
+  border: 1px solid var(--border-default);
+  background: var(--surface-raised);
+}
+
+.alu-faq-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.alu-faq-table th,
+.alu-faq-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  text-align: center;
+}
+
+.alu-faq-table th:first-child,
+.alu-faq-table td:first-child {
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.alu-faq-table th {
+  background: var(--surface-overlay);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.alu-faq-table__yes {
+  color: var(--status-success-fg, #2fc48d);
+  font-weight: 700;
+}
+
+.alu-faq-table__no {
+  color: var(--text-muted);
+}
+
+.alu-faq-note {
+  margin: 0.75rem 0 0 0;
+  padding: 0.75rem 1rem;
+  background: var(--accent-subtle);
+  border-left: 3px solid var(--accent-primary);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 64rem) {
+  .alu-ref-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .alu-ref-controls {
+    position: static;
+  }
+}
+
+@media (max-width: 40rem) {
+  .alu-ref-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .alu-pathway-split__left,
   .alu-pathway-feature-card,

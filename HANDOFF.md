@@ -504,3 +504,8 @@ Dört somut açık: Basic/Concept/Professional/Civil bulut kartları; Eğitim'in
 Kanıt ve sorumlular `docs/verification/stabilization-2026-10-26/S05-content-findings.md`, `render-audit.json`, `historical-text-candidates.json`, `targeted-live-check.json` içindedir. Yeni tarama aracı yalnız loopback HTTP(S) adreslerine izin verir, dış yönlendirmeyi reddeder, erişim/parse hatasında başarısız çıkar; script/style/RSC içeriğini gösterilen metin saymaz. Kod incelemesinin iki orta önerisi (yönlendirme sınırı ve hata özeti) eklendi. Bu tur app/veri/schema/tasarım değiştirilmedi; kaynak2026salt-okunur, canlıya push/deploy yok. S05tamamlandı işaretlenmedi. Sıradaki adım rapordaki C01–C04 kaynak sadakati düzeltmeleri ve etkileşimlerin genişletilmiş doğrulaması; S06henüz başlamadı.
 
 S05 denetim aracının 5 testi dahil toplam48 birim testi ve36 mevcut parite kontrolü geçti; bu başarı rapordaki içerik açıklarını kapatmaz. Uygulama değişmediği için build tekrarlanmadı; S04 başarılı üretim derlemesi denetlendi. Geçici3001 sunucusu ve denetim sekmesi kapatıldı.
+
+
+## 26.10.2026 — Deneme süresi kararı kapandı
+
+Kullanıcı geçerli ALLPLAN ücretsiz deneme süresini14gün olarak kesinleştirdi ve resmî https://www.allplan.com/trial-or-subscription/ kaynağını verdi. Aynı gün sayfada “14 DAY FREE TRIAL” / “Limited to 14 days only.” doğrulandı. S05 C05 için ek firma onayı beklenmez; Contact'taki30gün ifadesi2027üretim/gösterim hattında14güne düzeltilecek, kaynak2026ve tarihsel kanıtlar korunacak. user-decisions.md ve S05raporu güncellendi; bu commit doküman kararıdır, uygulama değişmedi. Sıradaki adım C01–C04 içerik geri kazanımı ile C05 süre düzeltmesini test ederek tamamlamak.

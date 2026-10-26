@@ -131,3 +131,8 @@ Kullanıcı CTA etiketini `Teklif İste` olarak kabul etti. Teklif ve ücretsiz 
 
 - **Faz 0 (İçerik ve Envanter Çıkarımı) Kapanışı:** Kullanıcı Faz 0 envanter çalışmasının kapatılmasını onayladı. Kaynak ve canlı site envanteri, medya/hash eşlemeleri, 161 kaynak snapshot'ı, Microsoft Forms 14 bölüm/24 soru yapısı ve ertelenen 404/hedef onarım listesi (`url-closure-2026-10-22.md`) Faz 0 kapanış kanıtı olarak kabul edildi.
 - **Ücretsiz Deneme (14/30 Gün) Çelişkisinin Kapatılması:** Kullanıcı, yeni sitede ücretsiz deneme bağlantılarının doğrudan ALLPLAN'ın resmî **`https://www.allplan.com/trial-or-subscription/`** adresine verileceğini kararlaştırdı. Deneme süresi ve koşulları doğrudan üretici sayfasında yönetildiği için eski kaynaklardaki 14 gün / 30 gün çelişkisi yeni sitede gün sayısı vaadi kullanılmadan doğrudan resmî hedefe yönlendirilerek kapatılır. (Eski 2026 kaynak dosyaları salt-okunur olarak değişmeden kalır.)
+
+
+## 26.10.2026 — ALLPLAN deneme süresi doğrulandı
+
+Kullanıcı ALLPLAN ücretsiz deneme süresini **14 gün** olarak kesinleştirdi. Resmî kaynak: https://www.allplan.com/trial-or-subscription/ (26.10.2026 kontrolü: “14 DAY FREE TRIAL” ve “Limited to 14 days only.”). Önceki 14/30 gün açık sorusu bu kararla kapanmıştır; Contact'taki 30 gün ifadesi güncel koşula aykırıdır ve 2027 veri üretim/gösterim hattında 14 güne düzeltilecektir. Kaynak 2026 ve tarihsel kanıtlar değiştirilmez. Bu karar diğer üreticilerin/eklentilerin deneme koşullarına otomatik uygulanmaz. Resmî deneme hedefi ve mevcut Microsoft Forms talep kanalı korunur. Bu kayıt yalnız kararı kesinleştirir; uygulama düzeltmesi ve doğrulaması sonraki S05 adımındadır.

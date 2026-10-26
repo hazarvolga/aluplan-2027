@@ -20,7 +20,7 @@ Kaynak yolları aksi belirtilmedikçe `docs/00-inventory/interaction-source-evid
 | C02 / yüksek | `app/solutions-v2/training/page.tsx:67`–125 varsayılan dışı Temel, İleri Seviye, Özel ve BIM sekmelerini içerir. ALLPLAN Dünyasına Giriş!, ALLPLAN Uzmanı Olma Yolunda!, Özel Konularda Derin Bilgi!, BIM Üzerine Uzmanlık! başlık/açıklamaları güncel veride yok. interactiveStates boş, structuredLayout null. | Tüm kaynak sekmelerini çıkar; gösterimini ve hedeflerini doğrula. Teknik ekip. | Kullanıcının onayladığı ana ad Eğitim korunur; yeni ücretli eğitim/takvim vaadi üretilmez. |
 | C03 / orta | Yenilikler kaynak `app/products/allplan-2026-yenilikler/page.tsx:736`–740 iki uzun genel bakış paragrafı içerir. Flat sections içinde var, structured intro'da yok; structured gösterim genel sections'ı atlar. `src/components/sections/SubpageView.tsx` intro gösterimi açıklamaları basmıyor. Hero SEO açıklaması modernizasyon, noktasında kesiliyor. | Genel bakış paragraflarını yapılandırılmış veriye ve gösterime birebir taşı; SEO açıklamasını gövde yerine kullanma sorununu ayrıca çöz. Teknik ekip. | İçeriği kısaltmadan geri yükle. |
 | C04 / orta | BIMFlex kaynak `app/solutions/bimflex/page.tsx:191`–194 Aluplan satış ortaklığı cümlesi flat veride korunmuş; parse_bimflex_page yapısal veriye taşımıyor. Hero description da bu cümleyi içermiyor. | Ortaklık cümlesini kaynak konumuna uygun gösterime geri koy. Teknik ekip. | Üretici/distribütör ayrımı korunur; yeni ortaklık iddiası eklenmez. |
-| C05 / içerik kararı | Canlı Contact aynı sayfada hem 30 hem 14 gün deneme ifadesi taşıyor; Professional 14 gün içeriyor. Yerelde Contact kaynak gövdesi 30 gün. Canlıda bulunması doğruluğunu kanıtlamaz. | Güncel Türkiye koşulunu Aluplan ürün/satış yetkilisi doğrulasın; sonrasında ilgili tüm metinler birlikte güncellensin. | Kullanıcı/Aluplan doğrulaması gerekli; bu tur süre değiştirilmedi. |
+| C05 / içerik kararı | Canlı Contact aynı sayfada hem 30 hem 14 gün deneme ifadesi taşıyor; Professional 14 gün içeriyor. Yerelde Contact kaynak gövdesi 30 gün. Canlıda bulunması doğruluğunu kanıtlamaz. | Güncel Türkiye koşulunu Aluplan ürün/satış yetkilisi doğrulasın; sonrasında ilgili tüm metinler birlikte güncellensin. | 26.10.2026 kullanıcı onayı + resmî kaynak: 14 gün. Karar kapandı; 2027 metin düzeltmesi ve regresyon kontrolü bekliyor. |
 
 C01–C04 düzeltildikten sonra kalan rotalar ve etkileşimler incelenmeli; bu tablo başka kayıp bulunmadığı garantisi değildir. Eğitim'deki kaynak Özel sekmesini geri kazanmak, eski ayrı Bireysel & Kurumsal Özel Eğitim sayfasını yeniden oluşturma kararı değildir.
 
@@ -43,3 +43,8 @@ python3 scripts/audit_render_parity.py --base-url http://127.0.0.1:3001 --output
 ```
 
 Önce C01–C04 kaynak sadakati düzeltmeleri, ardından tüm sekme/medya/hedeflerin sistematik kontrolü; en son S05 kabulü. S06 tasarım token refaktörüne henüz geçilmedi. Canlıya push/deploy yapılmadı; pazarlama materyalleri kullanılmadı.
+
+
+### C05 karar güncellemesi — 26.10.2026
+
+Kullanıcı geçerli deneme süresinin14gün olduğunu teyit etti. https://www.allplan.com/trial-or-subscription/ aynı gün kontrol edildi; sayfa14gün ücretsiz denemeyi açıkça belirtiyor. Dolayısıyla firma yanıtı bekleme şartı kalktı. Önceki tabloda ve kanıtlardaki14/30çelişkisi tarihsel bulgu olarak korunur; yalnız2027uygulama metinleri sonraki düzeltme adımında14güne hizalanır. Schema'ya yeni süre/Offer eklenmedi; fiyat varsayımı yapılmadı.

@@ -17,7 +17,7 @@ Kullanıcı aşağıdaki yol haritasını onayladı ve önce kayda alınıp çal
 ### Sıralı yol haritası
 | Adım | Kapsam | Kabul ölçütü | Durum |
 |---|---|---|---|
-| S01 | Güvenli başlangıç kaydı ve pazarlama klasörünü hariç tutma | HEAD, üretilmiş veri, gerçek dosya türleri, belge hashleri ve kaynak snapshot eşliği kayıtlı; materyal klasörü ignored | Başlandı |
+| S01 | Güvenli başlangıç kaydı ve pazarlama klasörünü hariç tutma | HEAD, üretilmiş veri, gerçek dosya türleri, belge hashleri ve kaynak snapshot eşliği kayıtlı; materyal klasörü ignored | Tamamlandı |
 | S02 | Tek yetkili veri üretim hattı | Güncel Python hattı tek giriş; pnpm komutları doğru; eski JS üretici devre dışı; tekrar üretim deterministik, veri kaybı yok | Bekliyor |
 | S03 | PDF/DOCX kaynak paritesi | Temsili PDF üretimi kaldırılır; orijinal belgeler kaynak/URL eşlemesi, SHA-256 ve tür kontrolüyle korunur | Bekliyor |
 | S04 | Microsoft Forms yönlendirmesi | Talep CTA'ları ortak forma bağlı; sahte yerel başarı yok; destek/deneme/özel lisans görevleri karıştırılmaz | Bekliyor |
@@ -466,3 +466,10 @@ Git dışında kullanıcı ZIP'i, `Aluplan Design System/`, `docs/previews/anthr
   8. **`/solutions/modeling-of-precast-girder-bridges` ve 21 Çözüm/Eklenti Sayfasında Eşleştirilmiş Metin + Popup Video Modal Mimarisi (`4c53d2b`):**
      - Canlı sitedeki `InfoMediaTwoColumn` (metin ve ilgili videonun yan yana eşleştiği iki sütunlu yapı) ve video kartı şablonları taranarak `/solutions/modeling-of-precast-girder-bridges` (8 YouTube videosu: 3 akış + 5 teknik özellik adımı), `/solutions/features-allplan-bridge` (7 YouTube + 5 yerel `.mp4` videosu), `/solutions/bimx5`, `/solutions/imar-yonetmeligi-bim-eklentisi`, `/solutions/rebar-engineering`, `/solutions/pythonpart`, `/solutions/bimflex`, `/solutions/poz-catalog`, `/solutions/scalypso/videos`, `/solutions/scalypso/converter`, 8 adet CDS eklenti sayfası (`/solutions/addons/2d-dwg-converter`, `drive-curve`, `geometry-tools`, `graphical-text`, `parametric-terrain`, `ramp`, `steel-components`, `three-dimensioning`), 3 adet AX3000 çözüm sayfası ve `/solutions/allplan-industry` dahil toplam **52 yapısal rota** `structuredLayout` şemasına bağlandı.
      - Tüm videolar (hem YouTube hem yerel `.mp4` videoları) kendi başlık ve açıklamalarının tam yanında konumlandırıldı ve tıklandığında **Sinema Video Popup Modal (`.alu-video-modal`)** içinde otomatik oynatılacak şekilde entegre edildi.
+
+
+## 26.10.2026 — S01 başlangıç kaydı tamamlandı
+
+Plan önce `91f6da7` ile commit edildi. `docs/verification/stabilization-2026-10-26/baseline.json` beş üretilmiş JSON'un ve10belgenin SHA-256/boyut/tür kaydını içerir.10/10orijinal belge 2026kaynağında bulundu; mevcut hedeflerde0/10hash eşliği ve ikiDOCX'tePDF imzası doğrulandı.161TSX snapshotının güncel2026kaynağıyla161/161bayt eşliği var; önceki snapshot eskimesi şüphesi bu kümede giderildi. Tüm kaynak/render/canlı paritesi henüz kanıtlanmadı.
+
+`/Allplan 2027 Marketing Materials/` .gitignore'a eklendi, git check-ignore ile doğrulandı; klasör içeriği açılmadı/değiştirilmedi. Kaynak/veri/belgeler değiştirilmedi, üreticiler çalıştırılmadı. S01 yalnız doküman/Git ignore adımıdır; uygulama testleri tekrarlanmadı. Sıradaki adım S02 tek veri üreticisi ve komut sözleşmesi; belge yazma güvenliği sağlanmadan üreticiyi çalıştırma. Bu aşama sonunda kullanıcıya kanıt özeti sunulur.

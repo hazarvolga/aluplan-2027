@@ -1,0 +1,1334 @@
+{
+  "date": "2026-10-26",
+  "headBeforeS01": "91f6da796029aaf97ded717c4edc952537a60636",
+  "mode": "local read-only comparison; no generator or live scan executed",
+  "marketingMaterials": "excluded from source scan and Git tracking",
+  "generatedData": {
+    "src/data/homepage.json": {
+      "bytes": 15186,
+      "sha256": "76fc3ed8ad2fa8bd3482dd5c474d5032aca4da74422f1a667f13a6e9411ee108",
+      "signature": "other"
+    },
+    "src/data/navigation.json": {
+      "bytes": 8163,
+      "sha256": "d90433615a109447e58d0d16280e44926af5fef50e69ceaf49f1c0526bf8609d",
+      "signature": "other"
+    },
+    "src/data/pages.json": {
+      "bytes": 1987617,
+      "sha256": "5b1b132b2c9cec342f79dc40af2425d65d128f2bcc54aedd0bdca3b1d91f376a",
+      "signature": "other"
+    },
+    "src/data/playlists.json": {
+      "bytes": 29423,
+      "sha256": "02dcf81fb8d6b9ffb9d9067e3e253c6466f9c036a64856d46c389e2546bc330d",
+      "signature": "other"
+    },
+    "src/data/search-index.json": {
+      "bytes": 64060,
+      "sha256": "e2b13716e75d59a1f74d8dac1296406bcc28cd6c53299e38d77d90beac5757da",
+      "signature": "other"
+    }
+  },
+  "documents": [
+    {
+      "target": "public/docs/Declaration_Allplan_2021-06-01.pdf",
+      "current": {
+        "bytes": 717,
+        "sha256": "b0207c058af83b99ddc7e1931bd4a2bdd3411af9b9c061550b81ab6607fdccbd",
+        "signature": "PDF"
+      },
+      "source": "public/docs/Declaration_Allplan_2021-06-01.pdf",
+      "sourceExists": true,
+      "original": {
+        "bytes": 177087,
+        "sha256": "0786f1584638b18ea68f25bb66dce9a31aa7db0b436a59778798f7037980fd76",
+        "signature": "PDF"
+      },
+      "hashEqual": false
+    },
+    {
+      "target": "public/docs/V2026_Paket_Karsilastirma-Q4-2025_R01.pdf",
+      "current": {
+        "bytes": 4653,
+        "sha256": "50ca1d5d05f102a65da0cb58b80b24ebb96c9193ffbee491a9065cf26ae36851",
+        "signature": "PDF"
+      },
+      "source": "public/docs/V2026_Paket_Karsilastirma-Q4-2025_R01.pdf",
+      "sourceExists": true,
+      "original": {
+        "bytes": 209001,
+        "sha256": "a5dae7878a9e6e889d3a46b5b0adf2b979aff84e969465935cf453611408a333",
+        "signature": "PDF"
+      },
+      "hashEqual": false
+    },
+    {
+      "target": "public/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf",
+      "current": {
+        "bytes": 4529,
+        "sha256": "08b893ba6b8325f753a19ad4edbcd4450e9bbb4629bcc1c8139e8024613a99f8",
+        "signature": "PDF"
+      },
+      "source": "public/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf",
+      "sourceExists": true,
+      "original": {
+        "bytes": 276653,
+        "sha256": "567ce14a65f8012cb1f69b1e97dfff2badf089504a4b23a72e1a3f81a0147405",
+        "signature": "PDF"
+      },
+      "hashEqual": false
+    },
+    {
+      "target": "public/docs/ax3000/ax3000-brochure-de.pdf",
+      "current": {
+        "bytes": 715,
+        "sha256": "630f2f9f127fdc2b956280ee3ffad16c5f6849d52144050c4b53c396b83de8ed",
+        "signature": "PDF"
+      },
+      "source": "assets/documents/ax3000/ax3000-brochure-de.pdf",
+      "sourceExists": true,
+      "original": {
+        "bytes": 4454666,
+        "sha256": "185dafe2ce9fd51119848e3a6361ac079566dbaddc1fac86c818e62cfbb0ae19",
+        "signature": "PDF"
+      },
+      "hashEqual": false
+    },
+    {
+      "target": "public/docs/ax3000/ax3000-brochure-en-alternative.pdf",
+      "current": {
+        "bytes": 726,
+        "sha256": "a691d74d3f7ebd51e893316c441c41874b4be2dd5f73635bddce12d4e15321b2",
+        "signature": "PDF"
+      },
+      "source": "assets/documents/ax3000/ax3000-brochure-en-alternative.pdf",
+      "sourceExists": true,
+      "original": {
+        "bytes": 5730787,
+        "sha256": "4f1cf36906cb61ed8128df43bf9c40466c675be093938effe5e2317d5b512297",
+        "signature": "PDF"
+      },
+      "hashEqual": false
+    },
+    {
+      "target": "public/docs/ax3000/ax3000-brochure-en.pdf",
+      "current": {
+        "bytes": 714,
+        "sha256": "1f1cf65de36b16d27ed3e58792e431176341d903b01294eb3b2d295472b80689",
+        "signature": "PDF"
+      },
+      "source": "assets/documents/ax3000/ax3000-brochure-en.pdf",
+      "sourceExists": true,
+      "original": {
+        "bytes": 5752710,
+        "sha256": "d767459671e7c4b1c444912576bad65225c0ddd94db2b16501c3c23cb65e192b",
+        "signature": "PDF"
+      },
+      "hashEqual": false
+    },
+    {
+      "target": "public/docs/ax3000/ax3000-functions-en.docx",
+      "current": {
+        "bytes": 728,
+        "sha256": "f9f6d95b1e7643fd0671266fd599340d50cf07249945254cce7cb2e5fb4ded99",
+        "signature": "PDF"
+      },
+      "source": "assets/documents/ax3000/ax3000-functions-en.docx",
+      "sourceExists": true,
+      "original": {
+        "bytes": 2257537,
+        "sha256": "33650e8dfe037cfbd3167243140016e9244009d5bc1154aa4f76e2fa6abb815a",
+        "signature": "ZIP/OOXML"
+      },
+      "hashEqual": false
+    },
+    {
+      "target": "public/docs/ax3000/ax3000-functions-en.pdf",
+      "current": {
+        "bytes": 727,
+        "sha256": "b13dbdaf6541c955efd387e97a6074ce8f0968908bd5ed4243cc67b7aa32d358",
+        "signature": "PDF"
+      },
+      "source": "assets/documents/ax3000/ax3000-functions-en.pdf",
+      "sourceExists": true,
+      "original": {
+        "bytes": 923994,
+        "sha256": "e1a59752798f433b633ce642067fb67b5f02f6ed663a674e1a49f2ef9e6cbb3d",
+        "signature": "PDF"
+      },
+      "hashEqual": false
+    },
+    {
+      "target": "public/docs/ax3000/ax3000-functions-hexagon-en.docx",
+      "current": {
+        "bytes": 736,
+        "sha256": "e2316637eb9d8a5f567d4df727cfe3587e288369400a0307e5f0b3d1699947ec",
+        "signature": "PDF"
+      },
+      "source": "assets/documents/ax3000/ax3000-functions-hexagon-en.docx",
+      "sourceExists": true,
+      "original": {
+        "bytes": 2261592,
+        "sha256": "3f62a3b0bb0462b649d7040ac10bbb3d421e97af6a38ae3488c66ab2059f20cc",
+        "signature": "ZIP/OOXML"
+      },
+      "hashEqual": false
+    },
+    {
+      "target": "public/docs/ifc_aktarim_el_kitabi_ifc_4.0_ifc_4.3_2026.pdf",
+      "current": {
+        "bytes": 702,
+        "sha256": "1f3a2a660ee82a278b2603d11e2185ddf1041b057d4a00d21e622e6dbf244347",
+        "signature": "PDF"
+      },
+      "source": "public/docs/ifc_aktarim_el_kitabi_ifc_4.0_ifc_4.3_2026.pdf",
+      "sourceExists": true,
+      "original": {
+        "bytes": 20975364,
+        "sha256": "f64c61679745f7189b37105f370474ab8ee12a3b7369c70691443a9155cd1820",
+        "signature": "PDF"
+      },
+      "hashEqual": false
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "path": "app/(public)/page.tsx",
+      "snapshotSha256": "efe83356363f594f7cd29733835397088f758c003569617aef08eae12a1fbdf0",
+      "sourceExists": true,
+      "sourceSha256": "efe83356363f594f7cd29733835397088f758c003569617aef08eae12a1fbdf0",
+      "hashEqual": true
+    },
+    {
+      "path": "app/layout.tsx",
+      "snapshotSha256": "66cd5b58e93e97a623b0cb2e0387d43faf083ff9d0b4161b21afbaad59a033d4",
+      "sourceExists": true,
+      "sourceSha256": "66cd5b58e93e97a623b0cb2e0387d43faf083ff9d0b4161b21afbaad59a033d4",
+      "hashEqual": true
+    },
+    {
+      "path": "app/products/allplan/page.tsx",
+      "snapshotSha256": "6948d8a2f17527bbaefd2bff1724815369e6373de191e5bc99ebea333842cd6e",
+      "sourceExists": true,
+      "sourceSha256": "6948d8a2f17527bbaefd2bff1724815369e6373de191e5bc99ebea333842cd6e",
+      "hashEqual": true
+    },
+    {
+      "path": "app/products/allplan-2026/page.tsx",
+      "snapshotSha256": "01ee5ec0cab433f0879158225b4d327e816dd43cbad8e2cfd1545affbe35decd",
+      "sourceExists": true,
+      "sourceSha256": "01ee5ec0cab433f0879158225b4d327e816dd43cbad8e2cfd1545affbe35decd",
+      "hashEqual": true
+    },
+    {
+      "path": "app/products/allplan-2026-yenilikler/page.tsx",
+      "snapshotSha256": "313e717602f76d3521c2313c847c3f9e4a5c19a1951739399aa2763f227c3681",
+      "sourceExists": true,
+      "sourceSha256": "313e717602f76d3521c2313c847c3f9e4a5c19a1951739399aa2763f227c3681",
+      "hashEqual": true
+    },
+    {
+      "path": "app/products/allplan-aec/page.tsx",
+      "snapshotSha256": "97cba1af0868bf2d31bd210aea6584686c0314a5edad4378588081cf7ba202ba",
+      "sourceExists": true,
+      "sourceSha256": "97cba1af0868bf2d31bd210aea6584686c0314a5edad4378588081cf7ba202ba",
+      "hashEqual": true
+    },
+    {
+      "path": "app/products/allplan-basic/page.tsx",
+      "snapshotSha256": "6b5f6bf090137191faf3090846a936c7b300901b5a186e497982a3c3c0f0bb4c",
+      "sourceExists": true,
+      "sourceSha256": "6b5f6bf090137191faf3090846a936c7b300901b5a186e497982a3c3c0f0bb4c",
+      "hashEqual": true
+    },
+    {
+      "path": "app/products/allplan-bimplus/ClientPage.tsx",
+      "snapshotSha256": "351213c206e776836a37185ea52f5b259db864c8b0767868beff724ffd15ef01",
+      "sourceExists": true,
+      "sourceSha256": "351213c206e776836a37185ea52f5b259db864c8b0767868beff724ffd15ef01",
+      "hashEqual": true
+    },
+    {
+      "path": "app/products/allplan-bimplus/page.tsx",
+      "snapshotSha256": "f44ff008f6feeadf93e2574c497b7485ccf99f9cf977facfdb77b763cc605c63",
+      "sourceExists": true,
+      "sourceSha256": "f44ff008f6feeadf93e2574c497b7485ccf99f9cf977facfdb77b763cc605c63",
+      "hashEqual": true
+    },
+    {
+      "path": "app/products/allplan-cloud-services/page.tsx",
+      "snapshotSha256": "95c84f7c34cc99b4feb042fa058c16f3e8ec849add8b9a044345704ecb1c9e0b",
+      "sourceExists": true,
+      "sourceSha256": "95c84f7c34cc99b4feb042fa058c16f3e8ec849add8b9a044345704ecb1c9e0b",
+      "hashEqual": true
+    },
+    {
+      "path": "app/products/allplan-concept/page.tsx",
+      "snapshotSha256": "43e257c19a435c1f571c0732a158487c6e3cbffea2be03845e75bddbf68858d6",
+      "sourceExists": true,
+      "sourceSha256": "43e257c19a435c1f571c0732a158487c6e3cbffea2be03845e75bddbf68858d6",
+      "hashEqual": true
+    },
+    {
+      "path": "app/products/allplan-professional/page.tsx",
+      "snapshotSha256": "9df48837e472eefd96bc8c88bc558e6457ac0d5f5def207546afb68a746f4a4e",
+      "sourceExists": true,
+      "sourceSha256": "9df48837e472eefd96bc8c88bc558e6457ac0d5f5def207546afb68a746f4a4e",
+      "hashEqual": true
+    },
+    {
+      "path": "app/products/allplan-ultimate/page.tsx",
+      "snapshotSha256": "9d7f658c4d5358aab1ab297fc29d6996f701dc016d0bd71ea89178a9ba0c9af1",
+      "sourceExists": true,
+      "sourceSha256": "9d7f658c4d5358aab1ab297fc29d6996f701dc016d0bd71ea89178a9ba0c9af1",
+      "hashEqual": true
+    },
+    {
+      "path": "app/products/architecture/page.tsx",
+      "snapshotSha256": "58a1594cd31fda669ae1db7877d0f3bdc764647352d1f592fe36843b9e0e28ae",
+      "sourceExists": true,
+      "sourceSha256": "58a1594cd31fda669ae1db7877d0f3bdc764647352d1f592fe36843b9e0e28ae",
+      "hashEqual": true
+    },
+    {
+      "path": "app/products/ax3000/ClientPage.tsx",
+      "snapshotSha256": "11f0eaec7ec0fb2b995d760284501960655a7a0b9e3d82ac4512a1154982589a",
+      "sourceExists": true,
+      "sourceSha256": "11f0eaec7ec0fb2b995d760284501960655a7a0b9e3d82ac4512a1154982589a",
+      "hashEqual": true
+    },
+    {
+      "path": "app/products/ax3000/page.tsx",
+      "snapshotSha256": "7a79b7a25208dd627eee89d64bb2810e4a0d99a7526aadaeb8925cb39e0c631f",
+      "sourceExists": true,
+      "sourceSha256": "7a79b7a25208dd627eee89d64bb2810e4a0d99a7526aadaeb8925cb39e0c631f",
+      "hashEqual": true
+    },
+    {
+      "path": "app/products/civil/page.tsx",
+      "snapshotSha256": "864ceb047dc974ab6dd2b4b7c40f19036b6fcc7e4d2d078cf900fef387aa12a6",
+      "sourceExists": true,
+      "sourceSha256": "864ceb047dc974ab6dd2b4b7c40f19036b6fcc7e4d2d078cf900fef387aa12a6",
+      "hashEqual": true
+    },
+    {
+      "path": "app/products/page.tsx",
+      "snapshotSha256": "53d89402f626c2994b1ec12685e8f723825a152fc97962202c26e221e7357113",
+      "sourceExists": true,
+      "sourceSha256": "53d89402f626c2994b1ec12685e8f723825a152fc97962202c26e221e7357113",
+      "hashEqual": true
+    },
+    {
+      "path": "app/products/precast/page.tsx",
+      "snapshotSha256": "f97eed1eb255ffabfc42a83a98a09c16d05f90b4c264a41a0f5afae270cae12b",
+      "sourceExists": true,
+      "sourceSha256": "f97eed1eb255ffabfc42a83a98a09c16d05f90b4c264a41a0f5afae270cae12b",
+      "hashEqual": true
+    },
+    {
+      "path": "app/products/precast-detail/ClientPage.tsx",
+      "snapshotSha256": "55c5baec701e7b237360ffb31198d5ce2b6efcfce2624dfac1255651b525a3b2",
+      "sourceExists": true,
+      "sourceSha256": "55c5baec701e7b237360ffb31198d5ce2b6efcfce2624dfac1255651b525a3b2",
+      "hashEqual": true
+    },
+    {
+      "path": "app/products/precast-detail/page.tsx",
+      "snapshotSha256": "0a3c6260205193a7497d347534f22a2c48fe680cc2a17006f890280be064ba91",
+      "sourceExists": true,
+      "sourceSha256": "0a3c6260205193a7497d347534f22a2c48fe680cc2a17006f890280be064ba91",
+      "hashEqual": true
+    },
+    {
+      "path": "app/products/sds2-home/ClientPage.tsx",
+      "snapshotSha256": "64218e6a074fe17d6a29a90deef5beb20705029eec6a84a08894d03c8f93f76a",
+      "sourceExists": true,
+      "sourceSha256": "64218e6a074fe17d6a29a90deef5beb20705029eec6a84a08894d03c8f93f76a",
+      "hashEqual": true
+    },
+    {
+      "path": "app/products/sds2-home/page.tsx",
+      "snapshotSha256": "f4edc100e115dbded11e268dd88e4dc3b706526300a165e03766bf1ce24ce9b0",
+      "sourceExists": true,
+      "sourceSha256": "f4edc100e115dbded11e268dd88e4dc3b706526300a165e03766bf1ce24ce9b0",
+      "hashEqual": true
+    },
+    {
+      "path": "app/references/page.tsx",
+      "snapshotSha256": "3d5d6ba71a1b95f7bb355e7f1846cb414f6b774ce7edc9b996cfa61914abd4c4",
+      "sourceExists": true,
+      "sourceSha256": "3d5d6ba71a1b95f7bb355e7f1846cb414f6b774ce7edc9b996cfa61914abd4c4",
+      "hashEqual": true
+    },
+    {
+      "path": "app/search/SearchPageClient.tsx",
+      "snapshotSha256": "8c91a4a8a5136e15e15cb1ccd1c7f2c77f758eb8028fa849e38778a1bffdfb4a",
+      "sourceExists": true,
+      "sourceSha256": "8c91a4a8a5136e15e15cb1ccd1c7f2c77f758eb8028fa849e38778a1bffdfb4a",
+      "hashEqual": true
+    },
+    {
+      "path": "app/search/page.tsx",
+      "snapshotSha256": "5372ee0a29e7d0342f74b31799ae60f1b3e1efd1ebc90b2978f002f8eff25dcf",
+      "sourceExists": true,
+      "sourceSha256": "5372ee0a29e7d0342f74b31799ae60f1b3e1efd1ebc90b2978f002f8eff25dcf",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/addons/2d-dwg-converter/ClientPage.tsx",
+      "snapshotSha256": "b53de7fdf85166cb7a56bc6332b9dbc907a73d867ac6ecf6aa36a4c0c9adb83f",
+      "sourceExists": true,
+      "sourceSha256": "b53de7fdf85166cb7a56bc6332b9dbc907a73d867ac6ecf6aa36a4c0c9adb83f",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/addons/ClientPage.tsx",
+      "snapshotSha256": "06c830ccd699b0588821f2af1d7a948053637e705497f13eac40926d7492e400",
+      "sourceExists": true,
+      "sourceSha256": "06c830ccd699b0588821f2af1d7a948053637e705497f13eac40926d7492e400",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/addons/drive-curve/ClientPage.tsx",
+      "snapshotSha256": "48baded34764953c374176dbe2daffddfbd0da9c7e8bb84f102463ac4fcb38ce",
+      "sourceExists": true,
+      "sourceSha256": "48baded34764953c374176dbe2daffddfbd0da9c7e8bb84f102463ac4fcb38ce",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/addons/drive-curve/page.tsx",
+      "snapshotSha256": "7fe1e7ed8026c6b9e51d4c89aa961b4bdca3c5fe708cadae44c9610634618e39",
+      "sourceExists": true,
+      "sourceSha256": "7fe1e7ed8026c6b9e51d4c89aa961b4bdca3c5fe708cadae44c9610634618e39",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/addons/geometry-tools/ClientPage.tsx",
+      "snapshotSha256": "7cb7f2abfc05139c10d52bd9f17e48c1d3a9300710ecabe2cc0ec15227c183e4",
+      "sourceExists": true,
+      "sourceSha256": "7cb7f2abfc05139c10d52bd9f17e48c1d3a9300710ecabe2cc0ec15227c183e4",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/addons/page.tsx",
+      "snapshotSha256": "3ff77b67ac8d38cf8c92ffdc9845cc868c06a557d3948a9b64f8325b4892c83f",
+      "sourceExists": true,
+      "sourceSha256": "3ff77b67ac8d38cf8c92ffdc9845cc868c06a557d3948a9b64f8325b4892c83f",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/addons/parametric-terrain/ClientPage.tsx",
+      "snapshotSha256": "6ed6da621d2bd34675e8b20e30340a0eacf2020e53a9bca94ca8eb17aaa2ec9a",
+      "sourceExists": true,
+      "sourceSha256": "6ed6da621d2bd34675e8b20e30340a0eacf2020e53a9bca94ca8eb17aaa2ec9a",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/addons/parametric-terrain/page.tsx",
+      "snapshotSha256": "eedc5563b48fba39a352d7a6a79bff17189187151137d9fdb82787c057167fdd",
+      "sourceExists": true,
+      "sourceSha256": "eedc5563b48fba39a352d7a6a79bff17189187151137d9fdb82787c057167fdd",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/addons/ramp/ClientPage.tsx",
+      "snapshotSha256": "125f27587b11ef6269af4d3225ad23e0fe2109ce3007243fdebce787e0c6ab55",
+      "sourceExists": true,
+      "sourceSha256": "125f27587b11ef6269af4d3225ad23e0fe2109ce3007243fdebce787e0c6ab55",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/addons/ramp/page.tsx",
+      "snapshotSha256": "51e0b848d2897ae42c7b3923e527d10e9a7a1a6aaa407b12b3ac702c343d38d5",
+      "sourceExists": true,
+      "sourceSha256": "51e0b848d2897ae42c7b3923e527d10e9a7a1a6aaa407b12b3ac702c343d38d5",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/addons/sketchup-converter/ClientPage.tsx",
+      "snapshotSha256": "70eccbb3c3e96dfb2112f9acf20bbb6ad80e3d8bea5c73607b37ae21071beef8",
+      "sourceExists": true,
+      "sourceSha256": "70eccbb3c3e96dfb2112f9acf20bbb6ad80e3d8bea5c73607b37ae21071beef8",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/addons/sketchup-converter/page.tsx",
+      "snapshotSha256": "531f945152265c3981fa8fe9e703e35bc871a7bbd5dc771fb369e91a6dbe8346",
+      "sourceExists": true,
+      "sourceSha256": "531f945152265c3981fa8fe9e703e35bc871a7bbd5dc771fb369e91a6dbe8346",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/addons/steel-components/ClientPage.tsx",
+      "snapshotSha256": "5e50d2fb16c8678d986cd36ae4e38f2988d58615a3f674011c424a06f85aabf2",
+      "sourceExists": true,
+      "sourceSha256": "5e50d2fb16c8678d986cd36ae4e38f2988d58615a3f674011c424a06f85aabf2",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/addons/steel-components/page.tsx",
+      "snapshotSha256": "cb643c02fe4621480f15f6059b486a9a41220ac59b2cba506ad073de0ccc438f",
+      "sourceExists": true,
+      "sourceSha256": "cb643c02fe4621480f15f6059b486a9a41220ac59b2cba506ad073de0ccc438f",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/addons/three-dimensioning/ClientPage.tsx",
+      "snapshotSha256": "75fa935601312ad0ad2de739c418ddb7044dd8d5f9b5e70ac56ba25b0bcd9b30",
+      "sourceExists": true,
+      "sourceSha256": "75fa935601312ad0ad2de739c418ddb7044dd8d5f9b5e70ac56ba25b0bcd9b30",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/addons/three-dimensioning/page.tsx",
+      "snapshotSha256": "6f4d7612b9e5e0ee64be9922ea35192001000a75e752c996de45bdc9795fd894",
+      "sourceExists": true,
+      "sourceSha256": "6f4d7612b9e5e0ee64be9922ea35192001000a75e752c996de45bdc9795fd894",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/allplan-bulut-hizmetleri/page.tsx",
+      "snapshotSha256": "9009fda0266bf726d2bc9fcb2977ee4782581d89ad405aee73c18f24caca2247",
+      "sourceExists": true,
+      "sourceSha256": "9009fda0266bf726d2bc9fcb2977ee4782581d89ad405aee73c18f24caca2247",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/allplan-industry/page.tsx",
+      "snapshotSha256": "49c888293fa76754f9f4e5aca4b3fd3dee57676061c0dfae978f94d11e7a6706",
+      "sourceExists": true,
+      "sourceSha256": "49c888293fa76754f9f4e5aca4b3fd3dee57676061c0dfae978f94d11e7a6706",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/architecture/page.tsx",
+      "snapshotSha256": "04d8ffc1cb632594018ebbf435f4fd5f6181678136a5e8aa88280c0d2b265538",
+      "sourceExists": true,
+      "sourceSha256": "04d8ffc1cb632594018ebbf435f4fd5f6181678136a5e8aa88280c0d2b265538",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/ax3000/ClientPage.tsx",
+      "snapshotSha256": "8ec3ba8bc443bbc8a51f318f4359237f3f66acb6f8383276771bd3e38be12011",
+      "sourceExists": true,
+      "sourceSha256": "8ec3ba8bc443bbc8a51f318f4359237f3f66acb6f8383276771bd3e38be12011",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/ax3000/page.tsx",
+      "snapshotSha256": "9cadd568ed2dd546ed5230498f4064ebd093fff00be526dfc672c6dc0caa75e1",
+      "sourceExists": true,
+      "sourceSha256": "9cadd568ed2dd546ed5230498f4064ebd093fff00be526dfc672c6dc0caa75e1",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/ax3000-virtual-reality/ClientPage.tsx",
+      "snapshotSha256": "ecc0e4a3cbc578b9cf026510cf55d30e4577c0fa9e799fd26c5d3320f47dfc4a",
+      "sourceExists": true,
+      "sourceSha256": "ecc0e4a3cbc578b9cf026510cf55d30e4577c0fa9e799fd26c5d3320f47dfc4a",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/ax3000-virtual-reality/page.tsx",
+      "snapshotSha256": "7a8138a7ab6a23c3fcb35bfc1ae27380ffc05f3ad8258aff9b9abe44cb3e1b79",
+      "sourceExists": true,
+      "sourceSha256": "7a8138a7ab6a23c3fcb35bfc1ae27380ffc05f3ad8258aff9b9abe44cb3e1b79",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/ax3000-yapi-fizigi/ClientPage.tsx",
+      "snapshotSha256": "60a12f51986e77ac22ee7af738bccdf43d4be2f5ba95e9217f95a4722fa012ec",
+      "sourceExists": true,
+      "sourceSha256": "60a12f51986e77ac22ee7af738bccdf43d4be2f5ba95e9217f95a4722fa012ec",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/ax3000-yapi-fizigi/page.tsx",
+      "snapshotSha256": "b2421301eb26adc820961536a96733768bd0784cb70c19a9d3e5ee208dff9e8d",
+      "sourceExists": true,
+      "sourceSha256": "b2421301eb26adc820961536a96733768bd0784cb70c19a9d3e5ee208dff9e8d",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/bimflex/page.tsx",
+      "snapshotSha256": "8f3ae69ff2371de5b6f6326e02232fdddda1eede1fa7dcd611ae93e604ff01f0",
+      "sourceExists": true,
+      "sourceSha256": "8f3ae69ff2371de5b6f6326e02232fdddda1eede1fa7dcd611ae93e604ff01f0",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/bimx5/page.tsx",
+      "snapshotSha256": "128c55ab49638ebd0d464fe15580da6a99f0bcd0611cab631e7af90496e6bac0",
+      "sourceExists": true,
+      "sourceSha256": "128c55ab49638ebd0d464fe15580da6a99f0bcd0611cab631e7af90496e6bac0",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/bridge-design/page.tsx",
+      "snapshotSha256": "8993ac896c77a58dbd1fad723dc6399f67eaf7c9cfb282d81b3b78416bdf8937",
+      "sourceExists": true,
+      "sourceSha256": "8993ac896c77a58dbd1fad723dc6399f67eaf7c9cfb282d81b3b78416bdf8937",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/features-allplan-bridge/page.tsx",
+      "snapshotSha256": "2acb4109cd9c6fcabdb729065e1adc3949f246661d10f3d44caf2bfc307be8f6",
+      "sourceExists": true,
+      "sourceSha256": "2acb4109cd9c6fcabdb729065e1adc3949f246661d10f3d44caf2bfc307be8f6",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/imar-yonetmeligi-bim-eklentisi/ClientPage.tsx",
+      "snapshotSha256": "1b1c691c08ea6e3235037747b38e825a2d06dae3985b1832167dba328a66dd63",
+      "sourceExists": true,
+      "sourceSha256": "1b1c691c08ea6e3235037747b38e825a2d06dae3985b1832167dba328a66dd63",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/imar-yonetmeligi-bim-eklentisi/page.tsx",
+      "snapshotSha256": "9cadd568ed2dd546ed5230498f4064ebd093fff00be526dfc672c6dc0caa75e1",
+      "sourceExists": true,
+      "sourceSha256": "9cadd568ed2dd546ed5230498f4064ebd093fff00be526dfc672c6dc0caa75e1",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/infrastructure/page.tsx",
+      "snapshotSha256": "b2a59841ca2af3d45a064223b8a9d1b1acb43a95f4ddaa6bb858432dd6ee47b8",
+      "sourceExists": true,
+      "sourceSha256": "b2a59841ca2af3d45a064223b8a9d1b1acb43a95f4ddaa6bb858432dd6ee47b8",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/mep/page.tsx",
+      "snapshotSha256": "b0b93edeabcf3e18b6e049624d3bb9779051e3d491be9763badd3db1fc2cf7f9",
+      "sourceExists": true,
+      "sourceSha256": "b0b93edeabcf3e18b6e049624d3bb9779051e3d491be9763badd3db1fc2cf7f9",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/modeling-of-precast-girder-bridges/ClientPage.tsx",
+      "snapshotSha256": "9ac48c40a97e884682778b498ed9b1be60a9b993fde61939fc793e18ccb09a52",
+      "sourceExists": true,
+      "sourceSha256": "9ac48c40a97e884682778b498ed9b1be60a9b993fde61939fc793e18ccb09a52",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/modeling-of-precast-girder-bridges/page.tsx",
+      "snapshotSha256": "2e9c7a3f49cd6f00cd9d4b9b111ac1b2caeb53bd7e8aec116757dd52267a2fc2",
+      "sourceExists": true,
+      "sourceSha256": "2e9c7a3f49cd6f00cd9d4b9b111ac1b2caeb53bd7e8aec116757dd52267a2fc2",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/oska/ClientPage.tsx",
+      "snapshotSha256": "ed4480f54cad3f9ec889e53bb3519b8f61dfb434587d481e7b75a03f607f1f1f",
+      "sourceExists": true,
+      "sourceSha256": "ed4480f54cad3f9ec889e53bb3519b8f61dfb434587d481e7b75a03f607f1f1f",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/oska/page.tsx",
+      "snapshotSha256": "9cadd568ed2dd546ed5230498f4064ebd093fff00be526dfc672c6dc0caa75e1",
+      "sourceExists": true,
+      "sourceSha256": "9cadd568ed2dd546ed5230498f4064ebd093fff00be526dfc672c6dc0caa75e1",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/precast/ClientPage.tsx",
+      "snapshotSha256": "75b35cc60406d6146669307cf64b44c2c898d3dc4533a4bdb05fb249e24eda2b",
+      "sourceExists": true,
+      "sourceSha256": "75b35cc60406d6146669307cf64b44c2c898d3dc4533a4bdb05fb249e24eda2b",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/precast/page.tsx",
+      "snapshotSha256": "9cadd568ed2dd546ed5230498f4064ebd093fff00be526dfc672c6dc0caa75e1",
+      "sourceExists": true,
+      "sourceSha256": "9cadd568ed2dd546ed5230498f4064ebd093fff00be526dfc672c6dc0caa75e1",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/pythonpart/ClientPage.tsx",
+      "snapshotSha256": "80ffa92a893d5c81ad23ecd3a69435451691bb4e6d6af4dc812f1776b640c082",
+      "sourceExists": true,
+      "sourceSha256": "80ffa92a893d5c81ad23ecd3a69435451691bb4e6d6af4dc812f1776b640c082",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/pythonpart/page.tsx",
+      "snapshotSha256": "9cadd568ed2dd546ed5230498f4064ebd093fff00be526dfc672c6dc0caa75e1",
+      "sourceExists": true,
+      "sourceSha256": "9cadd568ed2dd546ed5230498f4064ebd093fff00be526dfc672c6dc0caa75e1",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/rebar-engineering/page.tsx",
+      "snapshotSha256": "883088134645d44b1df1edd450ff5bd0f7912fab301326e3f327ced9c3a12954",
+      "sourceExists": true,
+      "sourceSha256": "883088134645d44b1df1edd450ff5bd0f7912fab301326e3f327ced9c3a12954",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/road-railway/page.tsx",
+      "snapshotSha256": "03c58e59f19dc332b5edca6de9cc4c3a89e592c7b3eac0e230934eafcf2877f2",
+      "sourceExists": true,
+      "sourceSha256": "03c58e59f19dc332b5edca6de9cc4c3a89e592c7b3eac0e230934eafcf2877f2",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/scalypso/ClientPage.tsx",
+      "snapshotSha256": "cb83c035c630de604b49cc06f53d3819aef809374a7391b75911674ee81deba8",
+      "sourceExists": true,
+      "sourceSha256": "cb83c035c630de604b49cc06f53d3819aef809374a7391b75911674ee81deba8",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/scalypso/converter/ClientPage.tsx",
+      "snapshotSha256": "d1ae5474fd6e04fb06142bf122cffd04281f45ad55cd347f29b9db59051688dc",
+      "sourceExists": true,
+      "sourceSha256": "d1ae5474fd6e04fb06142bf122cffd04281f45ad55cd347f29b9db59051688dc",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/scalypso/converter/page.tsx",
+      "snapshotSha256": "304ecc696b54993dc020b88b6f61d8e9c975606782c651fe7d7fab525f299e9d",
+      "sourceExists": true,
+      "sourceSha256": "304ecc696b54993dc020b88b6f61d8e9c975606782c651fe7d7fab525f299e9d",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/scalypso/mobile/ClientPage.tsx",
+      "snapshotSha256": "bbb9e77d737f6415b1c067ce96fd07cf9f8ee6c8be7636041006857dba20e993",
+      "sourceExists": true,
+      "sourceSha256": "bbb9e77d737f6415b1c067ce96fd07cf9f8ee6c8be7636041006857dba20e993",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/scalypso/mobile/page.tsx",
+      "snapshotSha256": "3816e8f2fd2de305d330044e2a7e2ed2f97960202e760686269b3ee54a0663c5",
+      "sourceExists": true,
+      "sourceSha256": "3816e8f2fd2de305d330044e2a7e2ed2f97960202e760686269b3ee54a0663c5",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/scalypso/modeler/ClientPage.tsx",
+      "snapshotSha256": "911e1856102d9af98258f97ed947271050ad332e3efb0745bf0eacb7d254eb8b",
+      "sourceExists": true,
+      "sourceSha256": "911e1856102d9af98258f97ed947271050ad332e3efb0745bf0eacb7d254eb8b",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/scalypso/modeler/page.tsx",
+      "snapshotSha256": "bf97db249f6cfdf47e0da5f682af92b285c18c562a4b9bc38b16b6a737f98884",
+      "sourceExists": true,
+      "sourceSha256": "bf97db249f6cfdf47e0da5f682af92b285c18c562a4b9bc38b16b6a737f98884",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/scalypso/page.tsx",
+      "snapshotSha256": "1d49de2c8d1d9aae1e6151571c29099e66e2b4eeda43bf8f69acf6bbde36c58f",
+      "sourceExists": true,
+      "sourceSha256": "1d49de2c8d1d9aae1e6151571c29099e66e2b4eeda43bf8f69acf6bbde36c58f",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/scalypso/videos/ClientPage.tsx",
+      "snapshotSha256": "64a5bb53abd9a05a29a6131cfd89dc2a268836c45bf43e7111c2b1d80fd90b7a",
+      "sourceExists": true,
+      "sourceSha256": "64a5bb53abd9a05a29a6131cfd89dc2a268836c45bf43e7111c2b1d80fd90b7a",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/scalypso/videos/page.tsx",
+      "snapshotSha256": "4a5a26a40bad924bcf4407b39a5ebbf2eec2ba843c4eeb22122fb82d45a75c05",
+      "sourceExists": true,
+      "sourceSha256": "4a5a26a40bad924bcf4407b39a5ebbf2eec2ba843c4eeb22122fb82d45a75c05",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/scalypso/viewer/ClientPage.tsx",
+      "snapshotSha256": "dc1ef90ea108fc5a8e78565214b116b6c325ba3c3eb2e92fa98a443a52e312dd",
+      "sourceExists": true,
+      "sourceSha256": "dc1ef90ea108fc5a8e78565214b116b6c325ba3c3eb2e92fa98a443a52e312dd",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/scalypso/viewer/page.tsx",
+      "snapshotSha256": "110b1bb50260026b490ea9bba85508e6fb74e5ff53682c78363cee30a9de97c0",
+      "sourceExists": true,
+      "sourceSha256": "110b1bb50260026b490ea9bba85508e6fb74e5ff53682c78363cee30a9de97c0",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/site-planning/page.tsx",
+      "snapshotSha256": "e6db0339d7538b58ebcc42ab8790d0e87e5565aeda40eda49db7ea188b85cad1",
+      "sourceExists": true,
+      "sourceSha256": "e6db0339d7538b58ebcc42ab8790d0e87e5565aeda40eda49db7ea188b85cad1",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/steel/page.tsx",
+      "snapshotSha256": "8e4c277631a5dbe6a39d24a022a02f80c3b3b2cedaaf079aea6e060ed3706e90",
+      "sourceExists": true,
+      "sourceSha256": "8e4c277631a5dbe6a39d24a022a02f80c3b3b2cedaaf079aea6e060ed3706e90",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions/structural/page.tsx",
+      "snapshotSha256": "06281f66c278e1fdbf6c75931fc84fa9c3caf18f147de647901a34aba03e6699",
+      "sourceExists": true,
+      "sourceSha256": "06281f66c278e1fdbf6c75931fc84fa9c3caf18f147de647901a34aba03e6699",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions-v2/connect-license/activation/ActivationWizard.tsx",
+      "snapshotSha256": "38d760663178ba1907350902bd0921f5c6341f0d841a68cbee1a5a55bc7a33f2",
+      "sourceExists": true,
+      "sourceSha256": "38d760663178ba1907350902bd0921f5c6341f0d841a68cbee1a5a55bc7a33f2",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions-v2/connect-license/activation/ClientPage.tsx",
+      "snapshotSha256": "c8af52cff95b90095533c3fcacc40fb3108d4175170845255802ec56b212495f",
+      "sourceExists": true,
+      "sourceSha256": "c8af52cff95b90095533c3fcacc40fb3108d4175170845255802ec56b212495f",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions-v2/connect-license/activation/page.tsx",
+      "snapshotSha256": "aa1fc00ce7ac6abda265c5c4dda5283ea68c223a4861cd2634fc95e9cd6025dc",
+      "sourceExists": true,
+      "sourceSha256": "aa1fc00ce7ac6abda265c5c4dda5283ea68c223a4861cd2634fc95e9cd6025dc",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions-v2/connect-license/how-to-assign/page.tsx",
+      "snapshotSha256": "422b8c1ffde80ed95d31539ed4f63ac2985c377f7cd9a13cf49778c2a4bd4a90",
+      "sourceExists": true,
+      "sourceSha256": "422b8c1ffde80ed95d31539ed4f63ac2985c377f7cd9a13cf49778c2a4bd4a90",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions-v2/faq/page.tsx",
+      "snapshotSha256": "4cd6a6d0cacce0b945e85c0ca9337da5225bdbc726a6e449f2daaa09fe87310b",
+      "sourceExists": true,
+      "sourceSha256": "4cd6a6d0cacce0b945e85c0ca9337da5225bdbc726a6e449f2daaa09fe87310b",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions-v2/training/classroom/page.tsx",
+      "snapshotSha256": "651c6b9d537cc9b58416684034112d164ad9319a103cf26db472196120ddb829",
+      "sourceExists": true,
+      "sourceSha256": "651c6b9d537cc9b58416684034112d164ad9319a103cf26db472196120ddb829",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions-v2/training/e-learning/page.tsx",
+      "snapshotSha256": "441b22ed23b5c8e3d7b92631e8352b42cddbb41a4a11f4dd18556413a4bf887b",
+      "sourceExists": true,
+      "sourceSha256": "441b22ed23b5c8e3d7b92631e8352b42cddbb41a4a11f4dd18556413a4bf887b",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions-v2/training/events/page.tsx",
+      "snapshotSha256": "a22c796efb3b84dd979cb45d3771f35a179a2c662f2a58db8496f095dbcefbd5",
+      "sourceExists": true,
+      "sourceSha256": "a22c796efb3b84dd979cb45d3771f35a179a2c662f2a58db8496f095dbcefbd5",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions-v2/training/individual/page.tsx",
+      "snapshotSha256": "3910afb658ad91f9ec1c6c60084857fa2a13d9feba604b477d9ae8dc8d69054c",
+      "sourceExists": true,
+      "sourceSha256": "3910afb658ad91f9ec1c6c60084857fa2a13d9feba604b477d9ae8dc8d69054c",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions-v2/training/online/page.tsx",
+      "snapshotSha256": "1e8a799937b20d74d884ce215bb4d54697be339e78418ff74c4fdeb731717d52",
+      "sourceExists": true,
+      "sourceSha256": "1e8a799937b20d74d884ce215bb4d54697be339e78418ff74c4fdeb731717d52",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions-v2/training/page.tsx",
+      "snapshotSha256": "f5e14c039ffbdbff120359768c246203556c8b88ee442fb51a54bd255fbb37ee",
+      "sourceExists": true,
+      "sourceSha256": "f5e14c039ffbdbff120359768c246203556c8b88ee442fb51a54bd255fbb37ee",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions-v2/training/quick-start/page.tsx",
+      "snapshotSha256": "ba9d07e20a1b15a7eb2fb11ff83b03929920062ca2e65d6e834f92cd1f86bc10",
+      "sourceExists": true,
+      "sourceSha256": "ba9d07e20a1b15a7eb2fb11ff83b03929920062ca2e65d6e834f92cd1f86bc10",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions-v2/training/video-library/[playlistId]/page.tsx",
+      "snapshotSha256": "186b00860d29e339fc4074568b437fa088516962f5082333cbf931637d13d891",
+      "sourceExists": true,
+      "sourceSha256": "186b00860d29e339fc4074568b437fa088516962f5082333cbf931637d13d891",
+      "hashEqual": true
+    },
+    {
+      "path": "app/solutions-v2/training/webinar/page.tsx",
+      "snapshotSha256": "00775755c7d676ac68d314fb0595117de91b9266b09c40722f3befc690220bf8",
+      "sourceExists": true,
+      "sourceSha256": "00775755c7d676ac68d314fb0595117de91b9266b09c40722f3befc690220bf8",
+      "hashEqual": true
+    },
+    {
+      "path": "components/homepage-v2/BentoGrid.tsx",
+      "snapshotSha256": "4848818458c1b06e374b31977cc8616ba56b0ef60720b43ecfcab335c44cd27c",
+      "sourceExists": true,
+      "sourceSha256": "4848818458c1b06e374b31977cc8616ba56b0ef60720b43ecfcab335c44cd27c",
+      "hashEqual": true
+    },
+    {
+      "path": "components/homepage-v2/BimflexAnnouncement.tsx",
+      "snapshotSha256": "0aa6fe9c224e32527783dc96f24567cac2b1e458a95dca88423c3716b9f46b61",
+      "sourceExists": true,
+      "sourceSha256": "0aa6fe9c224e32527783dc96f24567cac2b1e458a95dca88423c3716b9f46b61",
+      "hashEqual": true
+    },
+    {
+      "path": "components/homepage-v2/HeroQuickLinks.tsx",
+      "snapshotSha256": "fbbbd6dbda32615c84dd7cfc8542b7de706e857695dc21811656e77f606b1fe1",
+      "sourceExists": true,
+      "sourceSha256": "fbbbd6dbda32615c84dd7cfc8542b7de706e857695dc21811656e77f606b1fe1",
+      "hashEqual": true
+    },
+    {
+      "path": "components/homepage-v2/HeroV2.tsx",
+      "snapshotSha256": "933ddab7f8fcbe726c589ae11450825c3489f9dc0348b4b7bc556bbfdf0d5abd",
+      "sourceExists": true,
+      "sourceSha256": "933ddab7f8fcbe726c589ae11450825c3489f9dc0348b4b7bc556bbfdf0d5abd",
+      "hashEqual": true
+    },
+    {
+      "path": "components/homepage-v2/InnovationsTeaser.tsx",
+      "snapshotSha256": "74e0ed2a0eb10719b132cabe946106a53c0d48a87095c77f3fe35e7c4ce54b4f",
+      "sourceExists": true,
+      "sourceSha256": "74e0ed2a0eb10719b132cabe946106a53c0d48a87095c77f3fe35e7c4ce54b4f",
+      "hashEqual": true
+    },
+    {
+      "path": "components/homepage-v2/PathwayProductSystem.tsx",
+      "snapshotSha256": "0d33e5b91717d84d8efea95628e40a9a687ab37a53e4e84f0213f36243e45ce0",
+      "sourceExists": true,
+      "sourceSha256": "0d33e5b91717d84d8efea95628e40a9a687ab37a53e4e84f0213f36243e45ce0",
+      "hashEqual": true
+    },
+    {
+      "path": "components/homepage-v2/ServicesV2.tsx",
+      "snapshotSha256": "98e3eb984f0cc3c05c9ce27f47579e6337f6fcbce5dcceb0fc38cb354d03a333",
+      "sourceExists": true,
+      "sourceSha256": "98e3eb984f0cc3c05c9ce27f47579e6337f6fcbce5dcceb0fc38cb354d03a333",
+      "hashEqual": true
+    },
+    {
+      "path": "components/homepage-v2/TechSpecsTable.tsx",
+      "snapshotSha256": "0bf53c66a3a596295686983cc062b053d85c68280a79715589d7308aaa2446ee",
+      "sourceExists": true,
+      "sourceSha256": "0bf53c66a3a596295686983cc062b053d85c68280a79715589d7308aaa2446ee",
+      "hashEqual": true
+    },
+    {
+      "path": "components/layout/CookieConsent.tsx",
+      "snapshotSha256": "b041c83fedc8a8cc933b521b8f363e7e671ae5d6ae447202384056818fd86454",
+      "sourceExists": true,
+      "sourceSha256": "b041c83fedc8a8cc933b521b8f363e7e671ae5d6ae447202384056818fd86454",
+      "hashEqual": true
+    },
+    {
+      "path": "components/layout/Footer.tsx",
+      "snapshotSha256": "13b3918983978734f8bd34c32fbf35c273090a1053b1f82f806d37c76f07666d",
+      "sourceExists": true,
+      "sourceSha256": "13b3918983978734f8bd34c32fbf35c273090a1053b1f82f806d37c76f07666d",
+      "hashEqual": true
+    },
+    {
+      "path": "components/layout/Header.tsx",
+      "snapshotSha256": "3342ce6ff12a82e02b0a450371fe9dd8046869a3ba39b203e0e0612b9985d6ca",
+      "sourceExists": true,
+      "sourceSha256": "3342ce6ff12a82e02b0a450371fe9dd8046869a3ba39b203e0e0612b9985d6ca",
+      "hashEqual": true
+    },
+    {
+      "path": "components/layout/MegaMenu.tsx",
+      "snapshotSha256": "6d794c86ef11182a552fd300961ca079637137cb0039821af4414a058f22cfff",
+      "sourceExists": true,
+      "sourceSha256": "6d794c86ef11182a552fd300961ca079637137cb0039821af4414a058f22cfff",
+      "hashEqual": true
+    },
+    {
+      "path": "components/layout/ScrollToTopButton.tsx",
+      "snapshotSha256": "5198fb56abcd941c35a508d786d204cf027c5e54490e238c977e01d6e3d38e45",
+      "sourceExists": true,
+      "sourceSha256": "5198fb56abcd941c35a508d786d204cf027c5e54490e238c977e01d6e3d38e45",
+      "hashEqual": true
+    },
+    {
+      "path": "components/layout/ThemeToggle.tsx",
+      "snapshotSha256": "495d3ccba6341f6bd2dc761fbc489c123c91bd9ffaef44bca4fa835d56f5d98a",
+      "sourceExists": true,
+      "sourceSha256": "495d3ccba6341f6bd2dc761fbc489c123c91bd9ffaef44bca4fa835d56f5d98a",
+      "hashEqual": true
+    },
+    {
+      "path": "components/layout/theme-provider.tsx",
+      "snapshotSha256": "9b5ee09c50684db807c6474b0ff5e925e92adfb42d724778c0480ed8ac88c504",
+      "sourceExists": true,
+      "sourceSha256": "9b5ee09c50684db807c6474b0ff5e925e92adfb42d724778c0480ed8ac88c504",
+      "hashEqual": true
+    },
+    {
+      "path": "components/layout-v2/CardV2.tsx",
+      "snapshotSha256": "d7818404379d6220af583801507474870ee5c1e3a117d057bb13a52053630bcd",
+      "sourceExists": true,
+      "sourceSha256": "d7818404379d6220af583801507474870ee5c1e3a117d057bb13a52053630bcd",
+      "hashEqual": true
+    },
+    {
+      "path": "components/layout-v2/ContactModal.tsx",
+      "snapshotSha256": "27bc2dcae7db3850be068cf8867350845b5674591607bf663757d15a050792cf",
+      "sourceExists": true,
+      "sourceSha256": "27bc2dcae7db3850be068cf8867350845b5674591607bf663757d15a050792cf",
+      "hashEqual": true
+    },
+    {
+      "path": "components/layout-v2/HeroInternal.tsx",
+      "snapshotSha256": "051c9463222f4ae5a74b7ef5c1fa41b22cc0fb38464b2834de8e867afad09de4",
+      "sourceExists": true,
+      "sourceSha256": "051c9463222f4ae5a74b7ef5c1fa41b22cc0fb38464b2834de8e867afad09de4",
+      "hashEqual": true
+    },
+    {
+      "path": "components/layout-v2/PageWrapper.tsx",
+      "snapshotSha256": "c4d4d10dc17965d9ee5dbc4dc207e1f9cbc87eaf39336b11f20a6cc900439d18",
+      "sourceExists": true,
+      "sourceSha256": "c4d4d10dc17965d9ee5dbc4dc207e1f9cbc87eaf39336b11f20a6cc900439d18",
+      "hashEqual": true
+    },
+    {
+      "path": "components/search/CommandMenu.tsx",
+      "snapshotSha256": "23b5d015870ccdb8eadb8690332c1bfe264fc9e9b7511521d4d1944db85c5419",
+      "sourceExists": true,
+      "sourceSha256": "23b5d015870ccdb8eadb8690332c1bfe264fc9e9b7511521d4d1944db85c5419",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/ApplicationAreas.tsx",
+      "snapshotSha256": "0fcf41ae4d2b0d60174b575d1b889b3a651d01c6bafbda26332f00bb9b100c15",
+      "sourceExists": true,
+      "sourceSha256": "0fcf41ae4d2b0d60174b575d1b889b3a651d01c6bafbda26332f00bb9b100c15",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/BenefitsGrid.tsx",
+      "snapshotSha256": "caa1ba0debd6d2181ea47a2d08050aa7b17a66f138cb7835340639dff0c9ff4e",
+      "sourceExists": true,
+      "sourceSha256": "caa1ba0debd6d2181ea47a2d08050aa7b17a66f138cb7835340639dff0c9ff4e",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/CDSLicenseInfoSection.tsx",
+      "snapshotSha256": "2154c5bbcb3761045b795879c45a134724e3b62e80801b5c33a5ee5cbb372899",
+      "sourceExists": true,
+      "sourceSha256": "2154c5bbcb3761045b795879c45a134724e3b62e80801b5c33a5ee5cbb372899",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/ChallengesSection.tsx",
+      "snapshotSha256": "4212f828d73ec565243bea8eabfcfa242898f51f33bde0abe217c7b640e81515",
+      "sourceExists": true,
+      "sourceSha256": "4212f828d73ec565243bea8eabfcfa242898f51f33bde0abe217c7b640e81515",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/CloudServicesSection.tsx",
+      "snapshotSha256": "7c5445990256eaaff23b7af95a3339e52c277a2788e516075abc1233a2e7fb60",
+      "sourceExists": true,
+      "sourceSha256": "7c5445990256eaaff23b7af95a3339e52c277a2788e516075abc1233a2e7fb60",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/CopyProtection.tsx",
+      "snapshotSha256": "341fdced4ef50fe56f46e972dfa7096f0b8330d5af57422fa02b4b2d81a6ace4",
+      "sourceExists": true,
+      "sourceSha256": "341fdced4ef50fe56f46e972dfa7096f0b8330d5af57422fa02b4b2d81a6ace4",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/FeatureGrid.tsx",
+      "snapshotSha256": "4ceacd4f2f2d49807db05a83396e5fb9212424b2b10c8f63b4bce5c02c247d1a",
+      "sourceExists": true,
+      "sourceSha256": "4ceacd4f2f2d49807db05a83396e5fb9212424b2b10c8f63b4bce5c02c247d1a",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/GlobalTrialCTA.tsx",
+      "snapshotSha256": "da347545ad7b5d802edb9d5bcdb855a8d8f8ad493f7095a0e88d706c63d98b48",
+      "sourceExists": true,
+      "sourceSha256": "da347545ad7b5d802edb9d5bcdb855a8d8f8ad493f7095a0e88d706c63d98b48",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/InfoMediaTwoColumn.tsx",
+      "snapshotSha256": "ecc1731b8f5616b8c77af6ada259ba653fa77d1c06e029b760b1556643abf36a",
+      "sourceExists": true,
+      "sourceSha256": "ecc1731b8f5616b8c77af6ada259ba653fa77d1c06e029b760b1556643abf36a",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/PostHeroSection.tsx",
+      "snapshotSha256": "f492292c0555c3ea82e95e458851409d764598264a97379f5cdffddfe886a134",
+      "sourceExists": true,
+      "sourceSha256": "f492292c0555c3ea82e95e458851409d764598264a97379f5cdffddfe886a134",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/PremiumFeatureSection.tsx",
+      "snapshotSha256": "0fba1e7a8df9b4f3b87a2251752410ec1572dd49b14c8e9d4b278ccc8c9cf998",
+      "sourceExists": true,
+      "sourceSha256": "0fba1e7a8df9b4f3b87a2251752410ec1572dd49b14c8e9d4b278ccc8c9cf998",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/PremiumModuleGrid.tsx",
+      "snapshotSha256": "6c329d31870bf4a19c9162894277ad0f26a2fbd2be016dbe636acb724fe92fd8",
+      "sourceExists": true,
+      "sourceSha256": "6c329d31870bf4a19c9162894277ad0f26a2fbd2be016dbe636acb724fe92fd8",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/ProductInnovations.tsx",
+      "snapshotSha256": "05a32571195d4641af599e23b672897d964490746ea8dd589e9673fd11b42349",
+      "sourceExists": true,
+      "sourceSha256": "05a32571195d4641af599e23b672897d964490746ea8dd589e9673fd11b42349",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/QuickActionsSection.tsx",
+      "snapshotSha256": "051a43dbc226a782da2115cb3b4e8bda788dd142a51a7fc30c06ae10b49c6059",
+      "sourceExists": true,
+      "sourceSha256": "051a43dbc226a782da2115cb3b4e8bda788dd142a51a7fc30c06ae10b49c6059",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/ReasonsSection.tsx",
+      "snapshotSha256": "74c8be53dd2ceb8b2f14741bbdc5912d0a93c0baaf76aa38d08a86f1a57fa63b",
+      "sourceExists": true,
+      "sourceSha256": "74c8be53dd2ceb8b2f14741bbdc5912d0a93c0baaf76aa38d08a86f1a57fa63b",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/RegulaTabs.tsx",
+      "snapshotSha256": "9e4a9627232ff26226031f02d0da8579546427f29a3c2a890e962c446d5c5898",
+      "sourceExists": true,
+      "sourceSha256": "9e4a9627232ff26226031f02d0da8579546427f29a3c2a890e962c446d5c5898",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/SectionHeader.tsx",
+      "snapshotSha256": "e5877918f5ede7b3a117c8d46998c9517c0c145ab2679992f431c5df919940e8",
+      "sourceExists": true,
+      "sourceSha256": "e5877918f5ede7b3a117c8d46998c9517c0c145ab2679992f431c5df919940e8",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/SideImageSection.tsx",
+      "snapshotSha256": "d41acf886a6cfbbe743fc9f0cc09a704b761bff5bced53a8bf6647b7ae75aa29",
+      "sourceExists": true,
+      "sourceSha256": "d41acf886a6cfbbe743fc9f0cc09a704b761bff5bced53a8bf6647b7ae75aa29",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/SolutionHero.tsx",
+      "snapshotSha256": "7d762ee08637e1afd153e6f702239668f8b9af40b1776a3e28531947d5018aa2",
+      "sourceExists": true,
+      "sourceSha256": "7d762ee08637e1afd153e6f702239668f8b9af40b1776a3e28531947d5018aa2",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/SpecificationTables.tsx",
+      "snapshotSha256": "7a0a4cc617e8240df12896e1eb04f0e64ea03ce7b8888f19a5d9ad669ba1337c",
+      "sourceExists": true,
+      "sourceSha256": "7a0a4cc617e8240df12896e1eb04f0e64ea03ce7b8888f19a5d9ad669ba1337c",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/StatsSection.tsx",
+      "snapshotSha256": "e9492fa53ef65a8d0d4465e4f4d8ae56a55002ee489a0943f07e61c94434fd72",
+      "sourceExists": true,
+      "sourceSha256": "e9492fa53ef65a8d0d4465e4f4d8ae56a55002ee489a0943f07e61c94434fd72",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/SupportedSoftwareList.tsx",
+      "snapshotSha256": "8b5d776617d132c80379b0b92f16679fe53677d8ad3efe53859047e7a00879e3",
+      "sourceExists": true,
+      "sourceSha256": "8b5d776617d132c80379b0b92f16679fe53677d8ad3efe53859047e7a00879e3",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/TrialCTA.tsx",
+      "snapshotSha256": "dae68b31d93a4ec9e25ed55de0cad6c33bc93d0c88fc8b31ee3f2ef4bcb5d39b",
+      "sourceExists": true,
+      "sourceSha256": "dae68b31d93a4ec9e25ed55de0cad6c33bc93d0c88fc8b31ee3f2ef4bcb5d39b",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/VideoGridSection.tsx",
+      "snapshotSha256": "703e1c6e39bc7e8782345b0fde2bdcf9f2bd72d21f2cfb8b121aebe230fd92ef",
+      "sourceExists": true,
+      "sourceSha256": "703e1c6e39bc7e8782345b0fde2bdcf9f2bd72d21f2cfb8b121aebe230fd92ef",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/VideoTwoColumn.tsx",
+      "snapshotSha256": "369ee38bf725d7d71639ac6072358db0036ed7019b9c4e45819d0c081efa6895",
+      "sourceExists": true,
+      "sourceSha256": "369ee38bf725d7d71639ac6072358db0036ed7019b9c4e45819d0c081efa6895",
+      "hashEqual": true
+    },
+    {
+      "path": "components/sections/WorkflowLinksSection.tsx",
+      "snapshotSha256": "e21806c8468171566bcd8da922f2d4a43e6889ffa6c7133b6181ac6c4c27154d",
+      "sourceExists": true,
+      "sourceSha256": "e21806c8468171566bcd8da922f2d4a43e6889ffa6c7133b6181ac6c4c27154d",
+      "hashEqual": true
+    },
+    {
+      "path": "components/solutions/AllplanBulutContent.tsx",
+      "snapshotSha256": "4d1f8cbae63dab71f07e900958b4d4a5efdd4a596a4c804ef62ecb70910dd017",
+      "sourceExists": true,
+      "sourceSha256": "4d1f8cbae63dab71f07e900958b4d4a5efdd4a596a4c804ef62ecb70910dd017",
+      "hashEqual": true
+    },
+    {
+      "path": "components/specialized-ui/AnimatedCounter.tsx",
+      "snapshotSha256": "149c5a3189c291f52941b1503a8eee66440a0262da93269bf21e1b86ed133f45",
+      "sourceExists": true,
+      "sourceSha256": "149c5a3189c291f52941b1503a8eee66440a0262da93269bf21e1b86ed133f45",
+      "hashEqual": true
+    },
+    {
+      "path": "components/specialized-ui/ImageGallery.tsx",
+      "snapshotSha256": "abff19308f940416fae379149eadc300dae38c8d3d6c6639470340d6519d4280",
+      "sourceExists": true,
+      "sourceSha256": "abff19308f940416fae379149eadc300dae38c8d3d6c6639470340d6519d4280",
+      "hashEqual": true
+    },
+    {
+      "path": "components/specialized-ui/MasonryVideoGrid.tsx",
+      "snapshotSha256": "abdceae3f427a35e822deb725fbe23f43b7e4d9575fdf8a21296195e00bfb4f9",
+      "sourceExists": true,
+      "sourceSha256": "abdceae3f427a35e822deb725fbe23f43b7e4d9575fdf8a21296195e00bfb4f9",
+      "hashEqual": true
+    },
+    {
+      "path": "components/specialized-ui/ModuleCard.tsx",
+      "snapshotSha256": "c92e2c27d570c9e80d1492607336e27f598ca084fda1b0e302d8148a168ae01e",
+      "sourceExists": true,
+      "sourceSha256": "c92e2c27d570c9e80d1492607336e27f598ca084fda1b0e302d8148a168ae01e",
+      "hashEqual": true
+    },
+    {
+      "path": "components/specialized-ui/ResourceCardGrid.tsx",
+      "snapshotSha256": "370c7775c0e99d183c6c0624b4338c5d065cb55ecb5d7006007f06ffe969ae43",
+      "sourceExists": true,
+      "sourceSha256": "370c7775c0e99d183c6c0624b4338c5d065cb55ecb5d7006007f06ffe969ae43",
+      "hashEqual": true
+    },
+    {
+      "path": "components/specialized-ui/SystemRequirementsCard.tsx",
+      "snapshotSha256": "7889fb4c96178f09c59fe9d860b489c2b3dfd248b6528f6a42efd11aa98faf65",
+      "sourceExists": true,
+      "sourceSha256": "7889fb4c96178f09c59fe9d860b489c2b3dfd248b6528f6a42efd11aa98faf65",
+      "hashEqual": true
+    },
+    {
+      "path": "components/specialized-ui/VideoGrid.tsx",
+      "snapshotSha256": "b130d592fe848dc7e5f6603b447487fb6aa104354def8c29f3f76e7422779fbe",
+      "sourceExists": true,
+      "sourceSha256": "b130d592fe848dc7e5f6603b447487fb6aa104354def8c29f3f76e7422779fbe",
+      "hashEqual": true
+    },
+    {
+      "path": "components/specialized-ui/VideoModal.tsx",
+      "snapshotSha256": "b35d1696e792fe4c2dcdfff2d20b1154bf00a0c5e6e63fa4f6d8ae029b2a0668",
+      "sourceExists": true,
+      "sourceSha256": "b35d1696e792fe4c2dcdfff2d20b1154bf00a0c5e6e63fa4f6d8ae029b2a0668",
+      "hashEqual": true
+    },
+    {
+      "path": "components/templates/AddonDetailTemplate.tsx",
+      "snapshotSha256": "0174e5a43d06cc0726fd75d41bb47c86b82a5b1a5f23308f8c56bed1f6613630",
+      "sourceExists": true,
+      "sourceSha256": "0174e5a43d06cc0726fd75d41bb47c86b82a5b1a5f23308f8c56bed1f6613630",
+      "hashEqual": true
+    },
+    {
+      "path": "components/templates/EnhancedSolutionTemplate.tsx",
+      "snapshotSha256": "1d84e3158e9f2fd5cd0c2c533ccc4e2b56d1dc7a83999bdccd613a7e78803575",
+      "sourceExists": true,
+      "sourceSha256": "1d84e3158e9f2fd5cd0c2c533ccc4e2b56d1dc7a83999bdccd613a7e78803575",
+      "hashEqual": true
+    },
+    {
+      "path": "components/templates/ProductPageTemplate.tsx",
+      "snapshotSha256": "334010bc8dba57cb003c1c60a90b030e60df8e4b1414a4e52daa088cbc322f01",
+      "sourceExists": true,
+      "sourceSha256": "334010bc8dba57cb003c1c60a90b030e60df8e4b1414a4e52daa088cbc322f01",
+      "hashEqual": true
+    },
+    {
+      "path": "components/templates/StatsTemplate.tsx",
+      "snapshotSha256": "caaa253225d55fd0f808c0c8dadc004281727187f5e252d2fdee9519ae8d0f34",
+      "sourceExists": true,
+      "sourceSha256": "caaa253225d55fd0f808c0c8dadc004281727187f5e252d2fdee9519ae8d0f34",
+      "hashEqual": true
+    },
+    {
+      "path": "components/templates/TrainingDetailTemplate.tsx",
+      "snapshotSha256": "dea7df34ea323c898dbe80b3c6287cb7a9f1967f0d1a38c8ade7cc8635f54b73",
+      "sourceExists": true,
+      "sourceSha256": "dea7df34ea323c898dbe80b3c6287cb7a9f1967f0d1a38c8ade7cc8635f54b73",
+      "hashEqual": true
+    },
+    {
+      "path": "components/templates/WorkflowTabsTemplate.tsx",
+      "snapshotSha256": "fc36bde1d22f411550115f01da4bd4020905d390e2ec83add635e55791e00681",
+      "sourceExists": true,
+      "sourceSha256": "fc36bde1d22f411550115f01da4bd4020905d390e2ec83add635e55791e00681",
+      "hashEqual": true
+    },
+    {
+      "path": "components/training/GuideContent.tsx",
+      "snapshotSha256": "9be02f081f06763b71726f7c9fbfce5c520c9ac37133328777c3d89415c9b95b",
+      "sourceExists": true,
+      "sourceSha256": "9be02f081f06763b71726f7c9fbfce5c520c9ac37133328777c3d89415c9b95b",
+      "hashEqual": true
+    },
+    {
+      "path": "components/training/QuickStartNav.tsx",
+      "snapshotSha256": "97d376f593bb6e767214a2c4f1285d76c53d095d931dee5fbe2990225b4010a6",
+      "sourceExists": true,
+      "sourceSha256": "97d376f593bb6e767214a2c4f1285d76c53d095d931dee5fbe2990225b4010a6",
+      "hashEqual": true
+    }
+  ],
+  "summary": {
+    "generatedDataFiles": 5,
+    "documents": 10,
+    "documentHashesEqual": 0,
+    "documentTypeMismatches": 2,
+    "snapshots": 161,
+    "snapshotsEqual": 161,
+    "snapshotsChanged": 0,
+    "snapshotsMissingSource": 0
+  }
+}

@@ -257,6 +257,28 @@ function DirectoryCategoryIcon({ name }: { name?: string }) {
           <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
         </svg>
       );
+    case 'target':
+      return (
+        <svg {...props}>
+          <circle cx="12" cy="12" r="10" />
+          <circle cx="12" cy="12" r="6" />
+          <circle cx="12" cy="12" r="2" />
+        </svg>
+      );
+    case 'award':
+      return (
+        <svg {...props}>
+          <circle cx="12" cy="8" r="6" />
+          <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+        </svg>
+      );
+    case 'trending-up':
+      return (
+        <svg {...props}>
+          <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+          <polyline points="16 7 22 7 22 13" />
+        </svg>
+      );
     default:
       return (
         <svg {...props}>
@@ -970,6 +992,244 @@ export function SubpageView({
           </div>
         </section>
       )}
+
+      {/* Special Corporate Editorial Profile View (/about) */}
+      {page.path === '/about' && (() => {
+        const storySection = page.sections.find((s) => s.heading === 'Hikayemiz');
+        const storyParagraphs = storySection?.items ?? [
+          "Aluplan Program Sistemleri, 1995 yılından bu yana Türkiye'de ALLPLAN yazılımlarının tek yetkili distribütörü olarak hizmet vermektedir. Kurulduğumuz günden bu yana, mimari, mühendislik ve inşaat sektörünün dijital dönüşümüne öncülük ediyoruz.",
+          "ALLPLAN'ın güçlü BIM çözümlerini Türkiye pazarına sunarak, binlerce projenin başarıyla tamamlanmasına katkıda bulunduk. Mimari tasarımdan yapısal analize, köprü mühendisliğinden prekast üretime kadar geniş bir yelpazede profesyonel yazılım çözümleri ve danışmanlık hizmetleri sunuyoruz.",
+          "Deneyimli ve sertifikalı uzman kadromuzla, müşterilerimize sadece yazılım tedarik etmekle kalmıyor, aynı zamanda kapsamlı eğitim, teknik destek ve proje danışmanlığı hizmetleriyle yanlarında oluyoruz. İstanbul Ataşehir'deki merkez ofisimizden Türkiye genelindeki kamu kurumlarına, üniversitelere, mimarlık ve mühendislik ofislerine, inşaat firmalarına hizmet veriyoruz."
+        ];
+
+        const corporateMetrics = [
+          { value: '29+', label: 'Yıllık Tecrübe', meta: '1995’ten Beri Türkiye Distribütörü' },
+          { value: '500+', label: 'Aktif Müşteri', meta: 'Kamu, Kurumsal & Mühendislik Ofisleri' },
+          { value: '50+', label: 'Uzman Kadro', meta: 'BIM Danışmanlığı & Teknik Destek' },
+          { value: '10K+', label: 'Tamamlanan Proje', meta: 'Üstyapı, Köprü, Altyapı & Prekast' }
+        ];
+
+        const corporateValues = [
+          {
+            num: 'I',
+            icon: 'target',
+            title: 'Misyonumuz',
+            description:
+              page.sections.find((s) => s.heading === 'Misyonumuz')?.items[0] ??
+              "Türkiye'de BIM teknolojilerinin yaygınlaşması ve mimari/mühendislik projelerinin dijital dönüşümüne öncülük etmek."
+          },
+          {
+            num: 'II',
+            icon: 'users',
+            title: 'Müşteri Odaklılık',
+            description:
+              page.sections.find((s) => s.heading === 'Müşteri Odaklılık')?.items[0] ??
+              'Müşterilerimizin başarısı bizim başarımızdır. Profesyonel destek ve danışmanlık hizmetimizle her zaman yanınızdayız.'
+          },
+          {
+            num: 'III',
+            icon: 'award',
+            title: 'Kalite ve Uzmanlık',
+            description:
+              page.sections.find((s) => s.heading === 'Kalite ve Uzmanlık')?.items[0] ??
+              'Sertifikalı uzman kadromuz ve sürekli eğitimlerimizle sektörün en kaliteli hizmetini sunuyoruz.'
+          },
+          {
+            num: 'IV',
+            icon: 'trending-up',
+            title: 'Sürekli İnovasyon',
+            description:
+              page.sections.find((s) => s.heading === 'Sürekli İnovasyon')?.items[0] ??
+              'Teknolojinin nabzını tutarak, en güncel çözümleri müşterilerimize sunmak için çalışıyoruz.'
+          }
+        ];
+
+        const mapEmbed = page.embeds?.[0];
+
+        return (
+          <div className="alu-about-editorial">
+            {/* 1. Corporate Key Metrics Ledger */}
+            <section className="alu-about-metrics-band" aria-label="Kurumsal Göstergeler">
+              <div className="alu-container">
+                <div className="alu-about-metrics">
+                  {corporateMetrics.map((m) => (
+                    <div key={m.label} className="alu-about-metric">
+                      <span className="alu-about-metric__value">{m.value}</span>
+                      <span className="alu-about-metric__label">{m.label}</span>
+                      <span className="alu-about-metric__meta">{m.meta}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* 2. Asymmetric Editorial Story ("Hikayemiz") */}
+            <section className="preview-section" aria-labelledby="about-story-heading">
+              <div className="alu-container">
+                <div className="alu-about-story">
+                  <aside className="alu-about-story__aside">
+                    <span className="preview-kicker">KURUMSAL PROFİL · 1995’TEN BUGÜNE</span>
+                    <h2 id="about-story-heading" className="alu-h1" style={{ margin: 0 }}>
+                      Hikayemiz
+                    </h2>
+                    <blockquote className="alu-about-quote">
+                      “Türkiye’de mimari, mühendislik ve altyapı projelerinin BIM tabanlı dijital dönüşümüne 1995 yılından bu yana kesintisiz liderlik ediyoruz.”
+                    </blockquote>
+
+                    <dl className="alu-about-chronicle">
+                      <div className="alu-about-chronicle__item">
+                        <dt>1995</dt>
+                        <dd>Aluplan Program Sistemleri kuruldu ve ALLPLAN Türkiye yetkili distribütörlüğü başladı.</dd>
+                      </div>
+                      <div className="alu-about-chronicle__item">
+                        <dt>AEC &amp; INFRA</dt>
+                        <dd>Mimari, yapısal mühendislik, köprü ve prekast disiplinlerinde uçtan uca BIM ekosistemi.</dd>
+                      </div>
+                      <div className="alu-about-chronicle__item">
+                        <dt>ATAŞEHİR HQ</dt>
+                        <dd>İstanbul merkez ofisimizden kamu kurumları, üniversiteler ve mühendislik ofislerine ulusal destek.</dd>
+                      </div>
+                    </dl>
+                  </aside>
+
+                  <div className="alu-about-story__prose">
+                    {storyParagraphs.map((para, idx) => (
+                      <p
+                        key={idx}
+                        className={idx === 0 ? 'alu-about-story__lead' : 'alu-about-story__paragraph'}
+                      >
+                        {para}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* 3. Corporate Values Manifesto ("Değerlerimiz") */}
+            <section className="preview-section preview-section--subtle" aria-labelledby="about-values-heading">
+              <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
+                <div className="alu-about-section-head">
+                  <div>
+                    <span className="preview-kicker">KURUMSAL İLKELER</span>
+                    <h2 id="about-values-heading" className="alu-h1" style={{ margin: '0.35rem 0 0 0' }}>
+                      Değerlerimiz
+                    </h2>
+                  </div>
+                  <p className="alu-body preview-meta" style={{ margin: 0, maxWidth: '42ch' }}>
+                    Çalışmalarımızı şekillendiren temel ilkelerimiz
+                  </p>
+                </div>
+
+                <div className="alu-about-values">
+                  {corporateValues.map((val) => (
+                    <article key={val.title} className="alu-about-value-item">
+                      <div className="alu-about-value-item__top">
+                        <span className="alu-about-value-item__roman">{val.num}</span>
+                        <span className="alu-about-value-item__icon" aria-hidden="true">
+                          <DirectoryCategoryIcon name={val.icon} />
+                        </span>
+                      </div>
+                      <h3 className="alu-about-value-item__title">{val.title}</h3>
+                      <p className="alu-about-value-item__desc">{val.description}</p>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* 4. Headquarters & Interactive Map ("Ofisimiz") */}
+            <section className="preview-section" aria-labelledby="about-office-heading">
+              <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
+                <div className="alu-about-section-head">
+                  <div>
+                    <span className="preview-kicker">MERKEZ OFİS &amp; LOKASYON</span>
+                    <h2 id="about-office-heading" className="alu-h1" style={{ margin: '0.35rem 0 0 0' }}>
+                      Ofisimiz
+                    </h2>
+                  </div>
+                  <p className="alu-body preview-meta" style={{ margin: 0, maxWidth: '48ch' }}>
+                    İstanbul Ataşehir&apos;deki modern ofisimizden Türkiye geneline hizmet veriyoruz
+                  </p>
+                </div>
+
+                <div className="alu-about-office">
+                  <div className="alu-about-office__info">
+                    <div className="alu-about-office__block">
+                      <span className="alu-about-office__eyebrow">ADRES</span>
+                      <h3 className="alu-h3" style={{ margin: '0.25rem 0 0.5rem 0' }}>
+                        Adres
+                      </h3>
+                      <p className="alu-body" style={{ margin: 0, lineHeight: 1.65 }}>
+                        Quick Tower – Workinton
+                        <br />
+                        İçerenköy Mah. Topçu İbrahim Sok.
+                        <br />
+                        8/10D No: 5
+                        <br />
+                        34752 Ataşehir / İstanbul
+                      </p>
+                    </div>
+
+                    <div className="alu-about-office__divider" />
+
+                    <div className="alu-about-office__block">
+                      <span className="alu-about-office__eyebrow">DOĞRUDAN ERİŞİM</span>
+                      <h3 className="alu-h3" style={{ margin: '0.25rem 0 0.75rem 0' }}>
+                        İletişim
+                      </h3>
+                      <dl className="alu-about-office__contact-list">
+                        <div>
+                          <dt>Telefon:</dt>
+                          <dd>
+                            <a className="alu-link" href="tel:+902162258441">
+                              (+90) 216 225 84 41
+                            </a>
+                          </dd>
+                        </div>
+                        <div>
+                          <dt>Email:</dt>
+                          <dd>
+                            <a className="alu-link" href="mailto:info@aluplan.com.tr">
+                              info@aluplan.com.tr
+                            </a>
+                          </dd>
+                        </div>
+                        <div>
+                          <dt>Çalışma Saatleri:</dt>
+                          <dd>Pazartesi - Cuma: 09:00 - 18:00</dd>
+                        </div>
+                      </dl>
+                    </div>
+
+                    <div className="alu-cluster" style={{ gap: '0.75rem', marginTop: 'auto', paddingTop: '0.5rem' }}>
+                      <Link className="alu-button alu-button--primary alu-button--sm" href="/contact">
+                        <span>İletişim Sayfasına Git</span>
+                        <AluIcon name="arrow-right" size="sm" />
+                      </Link>
+                      <Link className="alu-button alu-button--secondary alu-button--sm" href="/references">
+                        <span>Referanslarımızı İncele</span>
+                      </Link>
+                    </div>
+                  </div>
+
+                  {mapEmbed && (
+                    <div className="alu-about-office__map">
+                      <iframe
+                        src={mapEmbed.src}
+                        title={mapEmbed.title || 'Aluplan Ofis Konumu'}
+                        loading="lazy"
+                        allowFullScreen
+                        referrerPolicy="no-referrer-when-downgrade"
+                      />
+                    </div>
+                  )}
+                </div>
+              </div>
+            </section>
+          </div>
+        );
+      })()}
 
       {/* Special Interactive View: License Activation Wizard (/solutions-v2/connect-license/activation) */}
       {page.path === '/solutions-v2/connect-license/activation' && (
@@ -2120,7 +2380,7 @@ export function SubpageView({
             );
           })()}
         </div>
-      ) : (
+      ) : page.path === '/about' ? null : (
         /* Preserved Structured Content Sections — Benefit/Spec Grid + Alternating Photo Showcases */
         <section className="preview-section" aria-label="Sayfa içeriği">
           <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>

@@ -193,6 +193,7 @@ def clean_text(val) -> str:
     s = re.sub(r"\[email[\s\u00a0]*protected\]", "info@aluplan.com.tr", s, flags=re.IGNORECASE)
     s = re.sub(r"https?://(?:www\.)?aluplan\.net\.tr/?", "https://allplan.net.tr/tr", s, flags=re.IGNORECASE)
     s = re.sub(r"\baluplan\.net\.tr\b", "allplan.net.tr/tr", s, flags=re.IGNORECASE)
+    s = s.replace("GüvenilirBIM", "Güvenilir BIM")
     s = s.replace("\u00a0", " ").strip()
     return s
 

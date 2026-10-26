@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import {
   PageRecord,
   PlaylistRecord,
+  StructuredMediaGridSection,
   getAllPlaylists,
   getSearchIndex,
   TRIAL_CTA_URL,
@@ -30,7 +31,7 @@ const VIDEO_LIBRARY_ITEMS: { title: string; description: string; url: string }[]
   {
     title: 'Youtube Allplan Global',
     description: 'Dünya genelinden Allplan kullanıcı hikayeleri ve küresel etkinlikler.',
-    url: 'https://www.youtube.com/@AllplanInternational'
+    url: 'https://www.youtube.com/@ALLPLANglobal'
   },
   {
     title: 'Youtube Allplan Precast',
@@ -152,6 +153,29 @@ export function SubpageView({
   );
   const [searchQuery, setSearchQuery] = useState('');
   const [activeTabIdx, setActiveTabIdx] = useState<number>(0);
+
+  // Structured Layout interactive states (Popup VideoModal, Image Lightbox, Workflow Tabs)
+  const [activeModalVideo, setActiveModalVideo] = useState<{
+    youtubeId: string;
+    title: string;
+  } | null>(null);
+  const [activeLightboxImage, setActiveLightboxImage] = useState<{
+    src: string;
+    title: string;
+  } | null>(null);
+  const [activeWfCatIdx, setActiveWfCatIdx] = useState<number>(0);
+  const [activeWfItemIdx, setActiveWfItemIdx] = useState<number>(0);
+
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setActiveModalVideo(null);
+        setActiveLightboxImage(null);
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, []);
 
   // Contact form state (/contact)
   const [contactName, setContactName] = useState('');
@@ -379,8 +403,8 @@ export function SubpageView({
         </div>
       </section>
 
-      {/* Subpage Animated/Verified Metrics Bar (when statSections exist, e.g., 50% DAHA KESİN, 70% DAHA VERİMLİ, 30% DAHA ÜRETKEN) */}
-      {statSections.length > 0 && (
+      {/* Subpage Animated/Verified Metrics Bar (when statSections exist on non-structuredLayout pages) */}
+      {!page.structuredLayout && statSections.length > 0 && (
         <section className="preview-section preview-section--subtle" aria-label="Performans ve Verimlilik Göstergeleri">
           <div className="alu-container">
             <div className="alu-hero-metrics" style={{ gridTemplateColumns: `repeat(${Math.min(statSections.length, 4)}, minmax(0, 1fr))` }}>
@@ -962,234 +986,997 @@ export function SubpageView({
         </section>
       )}
 
-      {/* Preserved Structured Content Sections — Benefit/Spec Grid + Alternating Photo Showcases */}
-      <section className="preview-section" aria-label="Sayfa içeriği">
-        <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
-          {/* Part A: Benefit & Specification Cards (with native 48x48 icon badge when sec.iconSrc exists) */}
-          {specSections.length > 0 && (
-            <div
-              className="alu-spec-grid"
-              style={isLegalPage ? { gridTemplateColumns: '1fr' } : undefined}
-            >
-              {specSections.map((sec, idx) => {
-                const globalIdx = idx + 1;
-                const numLabel = globalIdx < 10 ? `0${globalIdx}` : `${globalIdx}`;
-                return (
-                  <article key={`spec-${sec.heading}-${idx}`} className="alu-spec-card">
-                    <div className="alu-spec-card__header">
-                      <div className="alu-cluster" style={{ gap: '0.75rem' }}>
-                        {sec.iconSrc && (
-                          <span className="alu-benefit-icon">
-                            <img src={sec.iconSrc} alt="" loading="lazy" />
-                          </span>
-                        )}
-                        <span className="alu-spec-card__num">{numLabel}</span>
-                      </div>
-                      <span className="alu-card__eyebrow">{sectionBadgeLabel}</span>
-                    </div>
-                    {sec.level === 2 ? (
-                      <h2 className="alu-h3" style={{ margin: 0 }}>
-                        {sec.heading}
-                      </h2>
-                    ) : sec.level === 3 ? (
-                      <h3 className="alu-h4" style={{ margin: 0 }}>
-                        {sec.heading}
-                      </h3>
-                    ) : (
-                      <h4 className="alu-h4" style={{ margin: 0 }}>
-                        {sec.heading}
-                      </h4>
-                    )}
-                    <div className="alu-stack" style={{ gap: '0.625rem' }}>
-                      {sec.items.map((paragraph, pIdx) => (
-                        <p key={pIdx} className="alu-body-sm" style={{ margin: 0 }}>
-                          {paragraph}
-                        </p>
-                      ))}
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
-          )}
+      {/* Structured Page Layout (Live-Site 1:1 Section Architecture for Product & Solution Pages) */}
+      {page.structuredLayout ? (
+        <div className="alu-structured-page">
+          {(() => {
+            const sl = page.structuredLayout!;
 
-          {/* Part B: Alternating Split Feature Rows (ONLY for high-resolution photos, NEVER icons) */}
-          {featuredSections.length > 0 && (
-            <div className="alu-feature-rows">
-              {featuredSections.map((sec, idx) => {
-                const secImg = sec.image!;
-                const isReversed = idx % 2 === 1;
-                return (
-                  <article
-                    key={`feat-${sec.heading}-${idx}`}
-                    className={`alu-feature-row${isReversed ? ' alu-feature-row--reverse' : ''}`}
-                  >
-                    <div className="alu-feature-row__media">
-                      <img src={secImg.src} alt={secImg.alt || sec.heading} loading="lazy" />
-                      <span className="alu-feature-row__index">0{idx + 1}</span>
+            const renderMediaGrid = (grid: StructuredMediaGridSection, keyPrefix: string) => {
+              const cols = grid.columns || 3;
+              return (
+                <section key={keyPrefix} className="preview-section" aria-label={grid.title}>
+                  <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
+                    <div className="alu-section-header-center">
+                      {grid.kicker && <span className="preview-kicker">{grid.kicker}</span>}
+                      <h2 className="alu-h1" style={{ margin: 0 }}>
+                        {grid.title}
+                      </h2>
+                      {grid.subtitle && (
+                        <p className="alu-body preview-meta" style={{ margin: 0, maxWidth: '68ch' }}>
+                          {grid.subtitle}
+                        </p>
+                      )}
                     </div>
-                    <div className="alu-feature-row__content">
-                      <span className="preview-kicker">0{idx + 1} · İŞ AKIŞI VE ÖZELLİK</span>
+
+                    <div className={`alu-media-grid alu-media-grid--cols-${cols}`}>
+                      {grid.items.map((item, idx) => {
+                        const hasVideo = Boolean(item.youtubeId);
+                        const hasImage = Boolean(item.imageSrc);
+                        return (
+                          <article
+                            key={`${keyPrefix}-${item.title}-${idx}`}
+                            className={`alu-media-card${hasVideo ? ' alu-media-card--video' : ''}`}
+                          >
+                            {hasImage && (
+                              <div
+                                className="alu-media-card__thumb"
+                                role={hasVideo || hasImage ? 'button' : undefined}
+                                tabIndex={hasVideo || hasImage ? 0 : undefined}
+                                aria-label={
+                                  hasVideo
+                                    ? `${item.title} videosunu pop-up pencerede oynat`
+                                    : `${item.title} görselini büyüt`
+                                }
+                                onClick={() => {
+                                  if (item.youtubeId) {
+                                    setActiveModalVideo({ youtubeId: item.youtubeId, title: item.title });
+                                  } else if (item.imageSrc) {
+                                    setActiveLightboxImage({ src: item.imageSrc, title: item.title });
+                                  }
+                                }}
+                                onKeyDown={(e) => {
+                                  if (e.key === 'Enter' || e.key === ' ') {
+                                    e.preventDefault();
+                                    if (item.youtubeId) {
+                                      setActiveModalVideo({ youtubeId: item.youtubeId, title: item.title });
+                                    } else if (item.imageSrc) {
+                                      setActiveLightboxImage({ src: item.imageSrc, title: item.title });
+                                    }
+                                  }
+                                }}
+                              >
+                                <img src={item.imageSrc!} alt={item.title} loading="lazy" />
+                                <div className="alu-media-card__scrim" aria-hidden="true" />
+                                {hasVideo ? (
+                                  <>
+                                    <span className="alu-media-card__video-badge">
+                                      <AluIcon name="video" size="sm" />
+                                      <span>VİDEO</span>
+                                    </span>
+                                    <span className="alu-media-card__play" aria-hidden="true">
+                                      <span className="alu-media-card__play-circle">
+                                        <AluIcon name="circle-play" size="lg" />
+                                      </span>
+                                    </span>
+                                  </>
+                                ) : (
+                                  <span className="alu-media-card__zoom-hint" aria-hidden="true">
+                                    <AluIcon name="sparkles" size="sm" />
+                                  </span>
+                                )}
+                              </div>
+                            )}
+
+                            <div className="alu-media-card__body">
+                              {(item.badge || item.subtitle) && (
+                                <div className="alu-media-card__meta">
+                                  {item.badge && (
+                                    <span className="alu-badge alu-badge--accent">{item.badge}</span>
+                                  )}
+                                  {item.subtitle && (
+                                    <span className="alu-media-card__subtitle">{item.subtitle}</span>
+                                  )}
+                                </div>
+                              )}
+
+                              <h3 className="alu-media-card__title">{item.title}</h3>
+
+                              {item.description && (
+                                <p className="alu-media-card__desc">{item.description}</p>
+                              )}
+
+                              {item.bullets && item.bullets.length > 0 && (
+                                <ul className="alu-media-card__bullets">
+                                  {item.bullets.map((b, bIdx) => (
+                                    <li key={bIdx}>
+                                      <AluIcon name="check" size="sm" />
+                                      <span>{b.replace(/^•\s*/, '')}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+
+                              {(hasVideo || item.href) && (
+                                <div className="alu-media-card__footer">
+                                  {hasVideo ? (
+                                    <button
+                                      type="button"
+                                      className="alu-media-card__video-btn"
+                                      onClick={() =>
+                                        setActiveModalVideo({
+                                          youtubeId: item.youtubeId!,
+                                          title: item.title
+                                        })
+                                      }
+                                    >
+                                      <AluIcon name="circle-play" size="sm" />
+                                      <span>{item.ctaText || 'Videoyu İzle'}</span>
+                                    </button>
+                                  ) : item.href ? (
+                                    item.external ? (
+                                      <a
+                                        href={item.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="alu-link alu-link--standalone"
+                                      >
+                                        <span>{item.ctaText || 'Detayları İncele'}</span>
+                                        <AluIcon name="external-link" size="sm" />
+                                      </a>
+                                    ) : (
+                                      <Link href={item.href} className="alu-link alu-link--standalone">
+                                        <span>{item.ctaText || 'Detayları İncele'}</span>
+                                        <AluIcon name="arrow-right" size="sm" />
+                                      </Link>
+                                    )
+                                  ) : null}
+                                </div>
+                              )}
+                            </div>
+                          </article>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </section>
+              );
+            };
+
+            const wfTabs = sl.workflowTabs;
+            const safeCatIdx =
+              wfTabs && wfTabs.categories.length > 0
+                ? Math.min(activeWfCatIdx, wfTabs.categories.length - 1)
+                : 0;
+            const currentWfCat = wfTabs?.categories?.[safeCatIdx];
+            const safeItemIdx =
+              currentWfCat && currentWfCat.items.length > 0
+                ? Math.min(activeWfItemIdx, currentWfCat.items.length - 1)
+                : 0;
+            const currentWfItem = currentWfCat?.items?.[safeItemIdx];
+
+            return (
+              <>
+                {/* 1. Post-Hero Intro + Embedded Video (e.g., "ALLPLAN Ultimate Nedir?" + YouTube Video) */}
+                {sl.intro && (
+                  <section className="preview-section" aria-label={sl.intro.title}>
+                    <div className="alu-container">
+                      <div
+                        className={`alu-intro-split${
+                          sl.intro.videoEmbedUrl ? '' : ' alu-intro-split--single'
+                        }`}
+                      >
+                        <div className="alu-intro-split__content">
+                          {sl.intro.kicker && (
+                            <span className="preview-kicker">{sl.intro.kicker}</span>
+                          )}
+                          <h2 className="alu-h1" style={{ margin: 0 }}>
+                            {sl.intro.title}
+                          </h2>
+                          {sl.intro.bullets.length > 0 && (
+                            <ul className="alu-intro-split__bullets">
+                              {sl.intro.bullets.map((b, bIdx) => (
+                                <li key={bIdx} className="alu-intro-split__bullet">
+                                  <span className="alu-intro-split__bullet-icon">
+                                    <AluIcon name="check" size="sm" />
+                                  </span>
+                                  <span>{b}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+
+                        {sl.intro.videoEmbedUrl && (
+                          <div className="alu-intro-split__media">
+                            <div className="alu-intro-split__video-frame">
+                              <iframe
+                                src={sl.intro.videoEmbedUrl}
+                                title={sl.intro.title}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                              />
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </section>
+                )}
+
+                {/* 2. Workflow Links Ribbon (Sürümleri Görüntüle, Tasarım için İş Akışları, etc.) */}
+                {sl.workflowLinks && sl.workflowLinks.length > 0 && (
+                  <section className="alu-workflow-ribbon-section" aria-label="Hızlı İş Akışı Bağlantıları">
+                    <div className="alu-container">
+                      <div className="alu-workflow-ribbon">
+                        {sl.workflowLinks.map((wlink, wIdx) => {
+                          const pillContent = (
+                            <>
+                              <span
+                                className="alu-workflow-pill__dot"
+                                style={{ background: wlink.color || 'var(--accent-primary)' }}
+                              />
+                              <span className="alu-workflow-pill__text">{wlink.text}</span>
+                              <span className="alu-workflow-pill__arrow">
+                                <AluIcon name="arrow-right" size="sm" />
+                              </span>
+                            </>
+                          );
+                          return wlink.external ? (
+                            <a
+                              key={`${wlink.href}-${wIdx}`}
+                              href={wlink.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="alu-workflow-pill"
+                            >
+                              {pillContent}
+                            </a>
+                          ) : (
+                            <Link
+                              key={`${wlink.href}-${wIdx}`}
+                              href={wlink.href}
+                              className="alu-workflow-pill"
+                            >
+                              {pillContent}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </section>
+                )}
+
+                {/* 3. Solution Performance Stats & Challenges (when present on solution pages) */}
+                {sl.stats && sl.stats.length > 0 && (
+                  <section className="preview-section preview-section--subtle" aria-label="Performans Göstergeleri">
+                    <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
+                      <div
+                        className="alu-hero-metrics"
+                        style={{
+                          gridTemplateColumns: `repeat(${Math.min(sl.stats.length, 4)}, minmax(0, 1fr))`
+                        }}
+                      >
+                        {sl.stats.map((st, idx) => (
+                          <div key={`${st.label}-${idx}`} className="alu-hero-metrics__item">
+                            <span className="alu-hero-metrics__value">{st.value}</span>
+                            <h3 className="alu-hero-metrics__label" style={{ margin: 0 }}>
+                              {st.label}
+                            </h3>
+                            <p className="alu-body-sm" style={{ margin: '0.25rem 0 0 0' }}>
+                              {st.description}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+
+                      {sl.challenges && sl.challenges.length > 0 && (
+                        <div className="alu-challenges-band">
+                          <div className="alu-challenges-band__header">
+                            <span className="preview-kicker">/ SEKTÖREL ZORLUKLAR</span>
+                            <h3 className="alu-h3" style={{ margin: 0 }}>
+                              Günümüz Projelerinde Karşılaşılan Temel Zorluklar
+                            </h3>
+                          </div>
+                          <div className="alu-challenges-grid">
+                            {sl.challenges.map((ch, cIdx) => (
+                              <div key={cIdx} className="alu-challenge-card">
+                                <span className="alu-challenge-card__num">0{cIdx + 1}</span>
+                                <p className="alu-body-sm" style={{ margin: 0 }}>
+                                  {ch}
+                                </p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </section>
+                )}
+
+                {/* 4. Benefits / Reasons Icon Card Grid (e.g., "ALLPLAN Ultimate'in Faydaları" — 12 icon cards) */}
+                {sl.benefits && sl.benefits.items.length > 0 && (
+                  <section className="preview-section preview-section--subtle" aria-label={sl.benefits.title}>
+                    <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
+                      <div className="alu-section-header-center">
+                        {sl.benefits.kicker && (
+                          <span className="preview-kicker">{sl.benefits.kicker}</span>
+                        )}
+                        <h2 className="alu-h1" style={{ margin: 0 }}>
+                          {sl.benefits.title}
+                        </h2>
+                      </div>
+
+                      <div
+                        className={`alu-benefits-grid${
+                          sl.benefits.items.length >= 12 || sl.benefits.items.length === 8
+                            ? ' alu-benefits-grid--cols-4'
+                            : ' alu-benefits-grid--cols-3'
+                        }`}
+                      >
+                        {sl.benefits.items.map((bItem, bIdx) => (
+                          <article key={`${bItem.title}-${bIdx}`} className="alu-benefit-card">
+                            <div className="alu-benefit-card__top">
+                              <div className="alu-benefit-card__titles">
+                                {bItem.subtitle && (
+                                  <span className="alu-benefit-card__subtitle">{bItem.subtitle}</span>
+                                )}
+                                <h3 className="alu-benefit-card__title">{bItem.title}</h3>
+                              </div>
+                              {bItem.iconSrc && (
+                                <span className="alu-benefit-icon" aria-hidden="true">
+                                  <img src={bItem.iconSrc} alt="" loading="lazy" />
+                                </span>
+                              )}
+                            </div>
+                            <p className="alu-benefit-card__desc">{bItem.description}</p>
+                          </article>
+                        ))}
+                      </div>
+                    </div>
+                  </section>
+                )}
+
+                {/* 5. Core Features Image & Popup Video Grid ("Fonksiyonellik Hızlı Bakış") */}
+                {sl.coreFeatures &&
+                  sl.coreFeatures.items.length > 0 &&
+                  renderMediaGrid(sl.coreFeatures, 'core-features')}
+
+                {/* 6. Interactive Multi-Tab Workflows (WorkflowTabsTemplate / RegulaTabs) */}
+                {wfTabs && wfTabs.categories.length > 0 && currentWfCat && (
+                  <section className="preview-section preview-section--subtle" aria-label={wfTabs.title}>
+                    <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
+                      <div className="alu-section-header-center">
+                        {wfTabs.kicker && <span className="preview-kicker">{wfTabs.kicker}</span>}
+                        <h2 className="alu-h1" style={{ margin: 0 }}>
+                          {wfTabs.title}
+                        </h2>
+                        {wfTabs.subtitle && (
+                          <p className="alu-body preview-meta" style={{ margin: 0, maxWidth: '68ch' }}>
+                            {wfTabs.subtitle}
+                          </p>
+                        )}
+                      </div>
+
+                      {/* Category Tabs Bar */}
+                      <div className="alu-wf-cats" role="tablist" aria-label={wfTabs.title}>
+                        {wfTabs.categories.map((cat, cIdx) => {
+                          const isCatActive = cIdx === safeCatIdx;
+                          return (
+                            <button
+                              key={cat.key || cIdx}
+                              type="button"
+                              role="tab"
+                              aria-selected={isCatActive}
+                              className={`alu-wf-cat-btn${isCatActive ? ' alu-wf-cat-btn--active' : ''}`}
+                              onClick={() => {
+                                setActiveWfCatIdx(cIdx);
+                                setActiveWfItemIdx(0);
+                              }}
+                            >
+                              <span className="alu-wf-cat-btn__num">0{cIdx + 1}</span>
+                              <span>{cat.label}</span>
+                              <span className="alu-wf-cat-btn__count">{cat.items.length}</span>
+                            </button>
+                          );
+                        })}
+                      </div>
+
+                      {/* Active Category Split Stage: Left Sub-Tab List + Right Showcase Card */}
+                      <div className="alu-wf-stage">
+                        <div className="alu-wf-sublist" role="tablist" aria-label={currentWfCat.label}>
+                          {currentWfCat.items.map((subItem, sIdx) => {
+                            const isSubActive = sIdx === safeItemIdx;
+                            return (
+                              <button
+                                key={`${subItem.title}-${sIdx}`}
+                                type="button"
+                                role="tab"
+                                aria-selected={isSubActive}
+                                className={`alu-wf-subbtn${isSubActive ? ' alu-wf-subbtn--active' : ''}`}
+                                onClick={() => setActiveWfItemIdx(sIdx)}
+                              >
+                                <span className="alu-wf-subbtn__num">
+                                  {sIdx + 1 < 10 ? `0${sIdx + 1}` : sIdx + 1}
+                                </span>
+                                <span className="alu-wf-subbtn__title">{subItem.title}</span>
+                                {subItem.youtubeId && (
+                                  <span className="alu-wf-subbtn__video-dot" title="Video içerir">
+                                    <AluIcon name="circle-play" size="sm" />
+                                  </span>
+                                )}
+                              </button>
+                            );
+                          })}
+                        </div>
+
+                        {currentWfItem && (
+                          <article className="alu-wf-detail" key={`${safeCatIdx}-${safeItemIdx}`}>
+                            {currentWfItem.imageSrc && (
+                              <div
+                                className="alu-wf-detail__media"
+                                role="button"
+                                tabIndex={0}
+                                aria-label={
+                                  currentWfItem.youtubeId
+                                    ? `${currentWfItem.title} videosunu oynat`
+                                    : `${currentWfItem.title} görselini büyüt`
+                                }
+                                onClick={() => {
+                                  if (currentWfItem.youtubeId) {
+                                    setActiveModalVideo({
+                                      youtubeId: currentWfItem.youtubeId,
+                                      title: currentWfItem.title
+                                    });
+                                  } else if (currentWfItem.imageSrc) {
+                                    setActiveLightboxImage({
+                                      src: currentWfItem.imageSrc,
+                                      title: currentWfItem.title
+                                    });
+                                  }
+                                }}
+                                onKeyDown={(e) => {
+                                  if (e.key === 'Enter' || e.key === ' ') {
+                                    e.preventDefault();
+                                    if (currentWfItem.youtubeId) {
+                                      setActiveModalVideo({
+                                        youtubeId: currentWfItem.youtubeId,
+                                        title: currentWfItem.title
+                                      });
+                                    } else if (currentWfItem.imageSrc) {
+                                      setActiveLightboxImage({
+                                        src: currentWfItem.imageSrc,
+                                        title: currentWfItem.title
+                                      });
+                                    }
+                                  }
+                                }}
+                              >
+                                <img
+                                  src={currentWfItem.imageSrc}
+                                  alt={currentWfItem.title}
+                                  loading="lazy"
+                                />
+                                {currentWfItem.youtubeId && (
+                                  <span className="alu-media-card__play" aria-hidden="true">
+                                    <span className="alu-media-card__play-circle">
+                                      <AluIcon name="circle-play" size="lg" />
+                                    </span>
+                                  </span>
+                                )}
+                              </div>
+                            )}
+
+                            <div className="alu-wf-detail__body">
+                              <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
+                                <span className="preview-kicker">
+                                  {currentWfCat.label.toUpperCase()} · {safeItemIdx + 1} /{' '}
+                                  {currentWfCat.items.length}
+                                </span>
+                                {currentWfItem.badge && (
+                                  <span className="alu-badge alu-badge--accent">
+                                    {currentWfItem.badge}
+                                  </span>
+                                )}
+                              </div>
+
+                              {currentWfItem.subtitle && (
+                                <p className="alu-wf-detail__subtitle">{currentWfItem.subtitle}</p>
+                              )}
+
+                              <h3 className="alu-h2" style={{ margin: 0 }}>
+                                {currentWfItem.title}
+                              </h3>
+
+                              <p className="alu-body" style={{ margin: 0 }}>
+                                {currentWfItem.description}
+                              </p>
+
+                              {currentWfItem.bullets && currentWfItem.bullets.length > 0 && (
+                                <ul className="alu-media-card__bullets">
+                                  {currentWfItem.bullets.map((b, bIdx) => (
+                                    <li key={bIdx}>
+                                      <AluIcon name="check" size="sm" />
+                                      <span>{b.replace(/^•\s*/, '')}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+
+                              {currentWfItem.youtubeId && (
+                                <div style={{ marginTop: '0.5rem' }}>
+                                  <button
+                                    type="button"
+                                    className="alu-button alu-button--primary alu-button--md"
+                                    onClick={() =>
+                                      setActiveModalVideo({
+                                        youtubeId: currentWfItem.youtubeId!,
+                                        title: currentWfItem.title
+                                      })
+                                    }
+                                  >
+                                    <AluIcon name="circle-play" size="sm" />
+                                    <span>Videoyu Görüntüle</span>
+                                  </button>
+                                </div>
+                              )}
+                            </div>
+                          </article>
+                        )}
+                      </div>
+                    </div>
+                  </section>
+                )}
+
+                {/* 7. Split Callout Sections (e.g., SCIA Engineer Concept Sürümü on Ultimate & Civil) */}
+                {sl.splitCallouts &&
+                  sl.splitCallouts.map((callout, cIdx) => (
+                    <section
+                      key={`callout-${callout.title}-${cIdx}`}
+                      className="preview-section preview-section--subtle"
+                      aria-label={callout.title}
+                    >
+                      <div className="alu-container">
+                        <div className="alu-scia-callout">
+                          <div className="alu-scia-callout__media">
+                            <img src={callout.imageSrc} alt={callout.title} loading="lazy" />
+                          </div>
+                          <div className="alu-scia-callout__content">
+                            {callout.kicker && (
+                              <span className="preview-kicker">{callout.kicker}</span>
+                            )}
+                            <h2 className="alu-h1" style={{ margin: 0 }}>
+                              {callout.title}
+                            </h2>
+                            {callout.lead && (
+                              <p className="alu-scia-callout__lead">{callout.lead}</p>
+                            )}
+                            {callout.subheading && (
+                              <h3 className="alu-h4" style={{ margin: 0 }}>
+                                {callout.subheading}
+                              </h3>
+                            )}
+                            <p className="alu-body" style={{ margin: 0 }}>
+                              {callout.description}
+                            </p>
+                            {callout.ctaHref && (
+                              <div style={{ marginTop: '0.5rem' }}>
+                                <a
+                                  href={callout.ctaHref}
+                                  target={callout.external ? '_blank' : undefined}
+                                  rel={callout.external ? 'noopener noreferrer' : undefined}
+                                  className="alu-button alu-button--secondary alu-button--md"
+                                >
+                                  <span>{callout.ctaText || 'Detayları İnceleyin'}</span>
+                                  <AluIcon name="external-link" size="sm" />
+                                </a>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  ))}
+
+                {/* 8. Extra Media Grids (ALLPLAN Bulut Hizmetleri, Satın Alınabilir Seçenekler, Kaydedilmiş Webinarlar, etc.) */}
+                {sl.extraGrids &&
+                  sl.extraGrids.map((eGrid, gIdx) =>
+                    renderMediaGrid(eGrid, `extra-grid-${gIdx}`)
+                  )}
+
+                {/* 9. FAQ Accordion (SSS - ALLPLAN Ultimate / SSS - ALLPLAN Civil) */}
+                {sl.faq && sl.faq.items.length > 0 && (
+                  <section className="preview-section preview-section--subtle" aria-label={sl.faq.title}>
+                    <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
+                      <div className="alu-section-header-center">
+                        <span className="preview-kicker">/ SIKÇA SORULAN SORULAR</span>
+                        <h2 className="alu-h1" style={{ margin: 0 }}>
+                          {sl.faq.title}
+                        </h2>
+                      </div>
+                      <div className="alu-faq-list">
+                        {sl.faq.items.map((fItem, fIdx) => (
+                          <details
+                            key={`${fItem.question}-${fIdx}`}
+                            className="alu-faq-item"
+                            open={fIdx === 0}
+                          >
+                            <summary className="alu-faq-item__summary">
+                              <span>{fItem.question}</span>
+                              <span className="alu-faq-item__chevron" aria-hidden="true">
+                                <AluIcon name="chevron-down" size="sm" />
+                              </span>
+                            </summary>
+                            <div className="alu-faq-item__answer">
+                              {fItem.answer.split('\n\n').map((para, pIdx) => (
+                                <p key={pIdx}>{para}</p>
+                              ))}
+                            </div>
+                          </details>
+                        ))}
+                      </div>
+                    </div>
+                  </section>
+                )}
+
+                {/* Preserved Page Links, Downloads & Actions */}
+                {page.contentLinks && page.contentLinks.length > 0 && (
+                  <section className="preview-section" aria-label="İlgili Bağlantılar ve Dokümanlar">
+                    <div className="alu-container">
+                      <div className="alu-techspecs-banner" style={{ padding: 'var(--space-inset-lg)' }}>
+                        <div className="alu-stack" style={{ gap: 'var(--space-stack-md)' }}>
+                          <span className="preview-kicker">İLGİLİ BAĞLANTILAR, MODÜLLER VE DOKÜMANLAR</span>
+                          <h2 className="alu-h3" style={{ margin: 0 }}>
+                            Bu Sayfayla İlgili Hızlı Geçişler ve İndirmeler
+                          </h2>
+                          <div className="alu-cluster" style={{ gap: '0.625rem' }}>
+                            {page.contentLinks.map((lnk, lIdx) =>
+                              lnk.external ? (
+                                <a
+                                  key={`${lnk.href}-${lIdx}`}
+                                  href={lnk.href}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="alu-button alu-button--secondary alu-button--sm"
+                                >
+                                  <span>{lnk.text}</span>
+                                  <AluIcon name="external-link" size="sm" />
+                                </a>
+                              ) : (
+                                <Link
+                                  key={`${lnk.href}-${lIdx}`}
+                                  href={lnk.href}
+                                  className="alu-button alu-button--secondary alu-button--sm"
+                                >
+                                  <span>{lnk.text}</span>
+                                  <AluIcon name="arrow-right" size="sm" />
+                                </Link>
+                              )
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                )}
+              </>
+            );
+          })()}
+        </div>
+      ) : (
+        /* Preserved Structured Content Sections — Benefit/Spec Grid + Alternating Photo Showcases */
+        <section className="preview-section" aria-label="Sayfa içeriği">
+          <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
+            {/* Part A: Benefit & Specification Cards (with native 48x48 icon badge when sec.iconSrc exists) */}
+            {specSections.length > 0 && (
+              <div
+                className="alu-spec-grid"
+                style={isLegalPage ? { gridTemplateColumns: '1fr' } : undefined}
+              >
+                {specSections.map((sec, idx) => {
+                  const globalIdx = idx + 1;
+                  const numLabel = globalIdx < 10 ? `0${globalIdx}` : `${globalIdx}`;
+                  return (
+                    <article key={`spec-${sec.heading}-${idx}`} className="alu-spec-card">
+                      <div className="alu-spec-card__header">
+                        <div className="alu-cluster" style={{ gap: '0.75rem' }}>
+                          {sec.iconSrc && (
+                            <span className="alu-benefit-icon">
+                              <img src={sec.iconSrc} alt="" loading="lazy" />
+                            </span>
+                          )}
+                          <span className="alu-spec-card__num">{numLabel}</span>
+                        </div>
+                        <span className="alu-card__eyebrow">{sectionBadgeLabel}</span>
+                      </div>
                       {sec.level === 2 ? (
-                        <h2 className="alu-h2" style={{ margin: 0 }}>
+                        <h2 className="alu-h3" style={{ margin: 0 }}>
                           {sec.heading}
                         </h2>
-                      ) : (
-                        <h3 className="alu-h2" style={{ margin: 0 }}>
+                      ) : sec.level === 3 ? (
+                        <h3 className="alu-h4" style={{ margin: 0 }}>
                           {sec.heading}
                         </h3>
+                      ) : (
+                        <h4 className="alu-h4" style={{ margin: 0 }}>
+                          {sec.heading}
+                        </h4>
                       )}
-                      <div className="alu-stack" style={{ gap: '0.75rem' }}>
+                      <div className="alu-stack" style={{ gap: '0.625rem' }}>
                         {sec.items.map((paragraph, pIdx) => (
-                          <p key={pIdx} className="alu-body" style={{ margin: 0 }}>
+                          <p key={pIdx} className="alu-body-sm" style={{ margin: 0 }}>
                             {paragraph}
                           </p>
                         ))}
                       </div>
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
-          )}
-
-          {/* Interactive States / Tabs captured during Phase 0 dynamic audit */}
-          {page.interactiveStates && page.interactiveStates.length > 0 && (
-            <div className="alu-module-tabs" aria-label="Detaylı Modül ve Sekme İçerikleri">
-              <div className="alu-stack">
-                <span className="preview-kicker">ETKİLEŞİMLİ TEKNİK DETAYLAR</span>
-                <h2 className="alu-h2">Detaylı Modül ve İş Akışı Sekmeleri</h2>
+                    </article>
+                  );
+                })}
               </div>
+            )}
 
-              <div className="alu-service-pills" role="tablist">
-                {page.interactiveStates.map((st, sIdx) => (
-                  <button
-                    key={`${st.label}-${sIdx}`}
-                    type="button"
-                    role="tab"
-                    aria-selected={activeTabIdx === sIdx}
-                    className={`alu-service-pill${activeTabIdx === sIdx ? ' alu-service-pill--active' : ''}`}
-                    onClick={() => setActiveTabIdx(sIdx)}
-                  >
-                    <span>{st.label}</span>
-                    <span className="alu-service-pill__count">{st.texts.length}</span>
-                  </button>
-                ))}
-              </div>
-
-              {page.interactiveStates[activeTabIdx] && (
-                <div className="alu-module-tabs__panel">
-                  <div className="alu-cluster" style={{ justifyContent: 'space-between', marginBottom: '1rem' }}>
-                    <h3 className="alu-h3">{page.interactiveStates[activeTabIdx].label}</h3>
-                    <span className="alu-badge alu-badge--accent">
-                      {page.interactiveStates[activeTabIdx].texts.length} Teknik Madde
-                    </span>
-                  </div>
-                  <div className="alu-spec-grid">
-                    {page.interactiveStates[activeTabIdx].texts.map((txt, tIdx) => (
-                      <div key={tIdx} className="alu-role-stage__feature">
-                        <span className="alu-role-stage__feature-num">
-                          {tIdx + 1 < 10 ? `0${tIdx + 1}` : tIdx + 1}
-                        </span>
-                        <p className="alu-body-sm" style={{ margin: 0, color: 'var(--text-primary)' }}>
-                          {txt}
-                        </p>
+            {/* Part B: Alternating Split Feature Rows (ONLY for high-resolution photos, NEVER icons) */}
+            {featuredSections.length > 0 && (
+              <div className="alu-feature-rows">
+                {featuredSections.map((sec, idx) => {
+                  const secImg = sec.image!;
+                  const isReversed = idx % 2 === 1;
+                  return (
+                    <article
+                      key={`feat-${sec.heading}-${idx}`}
+                      className={`alu-feature-row${isReversed ? ' alu-feature-row--reverse' : ''}`}
+                    >
+                      <div className="alu-feature-row__media">
+                        <img src={secImg.src} alt={secImg.alt || sec.heading} loading="lazy" />
+                        <span className="alu-feature-row__index">0{idx + 1}</span>
                       </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* Remaining High-Resolution Visual Assets Gallery (excluding small icons) */}
-          {!isLegalPage && galleryImages.length > 0 && (
-            <div className="alu-stack" style={{ gap: 'var(--space-stack-lg)' }}>
-              <div className="alu-stack">
-                <span className="preview-kicker">TEKNİK GÖRSEL GALERİ ({galleryImages.length} GÖRSEL)</span>
-                <h2 className="alu-h2">Modül, Ekran Görüntüleri ve Uygulama Detayları</h2>
+                      <div className="alu-feature-row__content">
+                        <span className="preview-kicker">0{idx + 1} · İŞ AKIŞI VE ÖZELLİK</span>
+                        {sec.level === 2 ? (
+                          <h2 className="alu-h2" style={{ margin: 0 }}>
+                            {sec.heading}
+                          </h2>
+                        ) : (
+                          <h3 className="alu-h2" style={{ margin: 0 }}>
+                            {sec.heading}
+                          </h3>
+                        )}
+                        <div className="alu-stack" style={{ gap: '0.75rem' }}>
+                          {sec.items.map((paragraph, pIdx) => (
+                            <p key={pIdx} className="alu-body" style={{ margin: 0 }}>
+                              {paragraph}
+                            </p>
+                          ))}
+                        </div>
+                      </div>
+                    </article>
+                  );
+                })}
               </div>
-              <div className="alu-gallery-grid">
-                {galleryImages.map((img, gIdx) => (
-                  <figure key={`${img.src}-${gIdx}`} className="alu-product-card alu-gallery-card">
-                    <div className="alu-product-card__media">
-                      <img src={img.src} alt={img.alt || page.h1} loading="lazy" />
-                      <span className="alu-product-card__tier">
-                        {gIdx + 1 < 10 ? `0${gIdx + 1}` : gIdx + 1}
+            )}
+
+            {/* Interactive States / Tabs captured during Phase 0 dynamic audit */}
+            {page.interactiveStates && page.interactiveStates.length > 0 && (
+              <div className="alu-module-tabs" aria-label="Detaylı Modül ve Sekme İçerikleri">
+                <div className="alu-stack">
+                  <span className="preview-kicker">ETKİLEŞİMLİ TEKNİK DETAYLAR</span>
+                  <h2 className="alu-h2">Detaylı Modül ve İş Akışı Sekmeleri</h2>
+                </div>
+
+                <div className="alu-service-pills" role="tablist">
+                  {page.interactiveStates.map((st, sIdx) => (
+                    <button
+                      key={`${st.label}-${sIdx}`}
+                      type="button"
+                      role="tab"
+                      aria-selected={activeTabIdx === sIdx}
+                      className={`alu-service-pill${activeTabIdx === sIdx ? ' alu-service-pill--active' : ''}`}
+                      onClick={() => setActiveTabIdx(sIdx)}
+                    >
+                      <span>{st.label}</span>
+                      <span className="alu-service-pill__count">{st.texts.length}</span>
+                    </button>
+                  ))}
+                </div>
+
+                {page.interactiveStates[activeTabIdx] && (
+                  <div className="alu-module-tabs__panel">
+                    <div className="alu-cluster" style={{ justifyContent: 'space-between', marginBottom: '1rem' }}>
+                      <h3 className="alu-h3">{page.interactiveStates[activeTabIdx].label}</h3>
+                      <span className="alu-badge alu-badge--accent">
+                        {page.interactiveStates[activeTabIdx].texts.length} Teknik Madde
                       </span>
                     </div>
-                    {img.alt && (
-                      <figcaption className="alu-caption" style={{ padding: '0.75rem 1rem' }}>
-                        {img.alt}
-                      </figcaption>
-                    )}
-                  </figure>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Preserved Embedded Media */}
-          {page.embeds && page.embeds.length > 0 && !playlist && (
-            <div className="alu-stack" style={{ gap: 'var(--space-stack-md)' }}>
-              <span className="preview-kicker">MULTİMEDYA VE VİDEO</span>
-              <h2 className="alu-h2">Video ve Sunum Kayıtları</h2>
-              <div className="alu-grid">
-                {page.embeds.map((emb, eIdx) => (
-                  <div key={`${emb.src}-${eIdx}`} className="alu-hero-monitor" style={{ padding: 'var(--space-inset-sm)' }}>
-                    <div style={{ position: 'relative', aspectRatio: '16 / 9', width: '100%' }}>
-                      <iframe
-                        src={emb.src}
-                        title={emb.title || page.h1}
-                        style={{ width: '100%', height: '100%', border: 0 }}
-                        loading="lazy"
-                        allowFullScreen
-                      />
+                    <div className="alu-spec-grid">
+                      {page.interactiveStates[activeTabIdx].texts.map((txt, tIdx) => (
+                        <div key={tIdx} className="alu-role-stage__feature">
+                          <span className="alu-role-stage__feature-num">
+                            {tIdx + 1 < 10 ? `0${tIdx + 1}` : tIdx + 1}
+                          </span>
+                          <p className="alu-body-sm" style={{ margin: 0, color: 'var(--text-primary)' }}>
+                            {txt}
+                          </p>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                ))}
+                )}
               </div>
-            </div>
-          )}
+            )}
 
-          {/* Preserved Page Links, Downloads & Actions */}
-          {page.contentLinks && page.contentLinks.length > 0 && !isVideoLibraryHub && !isVideoPlaylistPage && (
-            <div className="alu-techspecs-banner" style={{ padding: 'var(--space-inset-lg)' }}>
-              <div className="alu-stack" style={{ gap: 'var(--space-stack-md)' }}>
-                <span className="preview-kicker">İLGİLİ BAĞLANTILAR, MODÜLLER VE DOKÜMANLAR</span>
-                <h2 className="alu-h3" style={{ margin: 0 }}>
-                  Bu Sayfayla İlgili Hızlı Geçişler ve İndirmeler
-                </h2>
-                <div className="alu-cluster" style={{ gap: '0.625rem' }}>
-                  {page.contentLinks.map((lnk, lIdx) =>
-                    lnk.external ? (
-                      <a
-                        key={`${lnk.href}-${lIdx}`}
-                        href={lnk.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="alu-button alu-button--secondary alu-button--sm"
-                      >
-                        <span>{lnk.text}</span>
-                        <AluIcon name="external-link" size="sm" />
-                      </a>
-                    ) : (
-                      <Link
-                        key={`${lnk.href}-${lIdx}`}
-                        href={lnk.href}
-                        className="alu-button alu-button--secondary alu-button--sm"
-                      >
-                        <span>{lnk.text}</span>
-                        <AluIcon name="arrow-right" size="sm" />
-                      </Link>
-                    )
-                  )}
+            {/* Remaining High-Resolution Visual Assets Gallery (excluding small icons) */}
+            {!isLegalPage && galleryImages.length > 0 && (
+              <div className="alu-stack" style={{ gap: 'var(--space-stack-lg)' }}>
+                <div className="alu-stack">
+                  <span className="preview-kicker">TEKNİK GÖRSEL GALERİ ({galleryImages.length} GÖRSEL)</span>
+                  <h2 className="alu-h2">Modül, Ekran Görüntüleri ve Uygulama Detayları</h2>
+                </div>
+                <div className="alu-gallery-grid">
+                  {galleryImages.map((img, gIdx) => (
+                    <figure key={`${img.src}-${gIdx}`} className="alu-product-card alu-gallery-card">
+                      <div className="alu-product-card__media">
+                        <img src={img.src} alt={img.alt || page.h1} loading="lazy" />
+                        <span className="alu-product-card__tier">
+                          {gIdx + 1 < 10 ? `0${gIdx + 1}` : gIdx + 1}
+                        </span>
+                      </div>
+                      {img.alt && (
+                        <figcaption className="alu-caption" style={{ padding: '0.75rem 1rem' }}>
+                          {img.alt}
+                        </figcaption>
+                      )}
+                    </figure>
+                  ))}
                 </div>
               </div>
+            )}
+
+            {/* Preserved Embedded Media */}
+            {page.embeds && page.embeds.length > 0 && !playlist && (
+              <div className="alu-stack" style={{ gap: 'var(--space-stack-md)' }}>
+                <span className="preview-kicker">MULTİMEDYA VE VİDEO</span>
+                <h2 className="alu-h2">Video ve Sunum Kayıtları</h2>
+                <div className="alu-grid">
+                  {page.embeds.map((emb, eIdx) => (
+                    <div key={`${emb.src}-${eIdx}`} className="alu-hero-monitor" style={{ padding: 'var(--space-inset-sm)' }}>
+                      <div style={{ position: 'relative', aspectRatio: '16 / 9', width: '100%' }}>
+                        <iframe
+                          src={emb.src}
+                          title={emb.title || page.h1}
+                          style={{ width: '100%', height: '100%', border: 0 }}
+                          loading="lazy"
+                          allowFullScreen
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Preserved Page Links, Downloads & Actions */}
+            {page.contentLinks && page.contentLinks.length > 0 && !isVideoLibraryHub && !isVideoPlaylistPage && (
+              <div className="alu-techspecs-banner" style={{ padding: 'var(--space-inset-lg)' }}>
+                <div className="alu-stack" style={{ gap: 'var(--space-stack-md)' }}>
+                  <span className="preview-kicker">İLGİLİ BAĞLANTILAR, MODÜLLER VE DOKÜMANLAR</span>
+                  <h2 className="alu-h3" style={{ margin: 0 }}>
+                    Bu Sayfayla İlgili Hızlı Geçişler ve İndirmeler
+                  </h2>
+                  <div className="alu-cluster" style={{ gap: '0.625rem' }}>
+                    {page.contentLinks.map((lnk, lIdx) =>
+                      lnk.external ? (
+                        <a
+                          key={`${lnk.href}-${lIdx}`}
+                          href={lnk.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="alu-button alu-button--secondary alu-button--sm"
+                        >
+                          <span>{lnk.text}</span>
+                          <AluIcon name="external-link" size="sm" />
+                        </a>
+                      ) : (
+                        <Link
+                          key={`${lnk.href}-${lIdx}`}
+                          href={lnk.href}
+                          className="alu-button alu-button--secondary alu-button--sm"
+                        >
+                          <span>{lnk.text}</span>
+                          <AluIcon name="arrow-right" size="sm" />
+                        </Link>
+                      )
+                    )}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* Global Video Popup Modal (Cinema Overlay for 91+ Product & Solution Video Cards) */}
+      {activeModalVideo && (
+        <div
+          className="alu-video-modal"
+          role="dialog"
+          aria-modal="true"
+          aria-label={activeModalVideo.title}
+          onClick={() => setActiveModalVideo(null)}
+        >
+          <div
+            className="alu-video-modal__dialog"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="alu-video-modal__header">
+              <div className="alu-cluster" style={{ gap: '0.625rem' }}>
+                <span className="alu-badge alu-badge--accent">
+                  <AluIcon name="circle-play" size="sm" />
+                  <span>VİDEO ÖNİZLEME</span>
+                </span>
+                <h3 className="alu-video-modal__title">{activeModalVideo.title}</h3>
+              </div>
+              <div className="alu-cluster" style={{ gap: '0.5rem' }}>
+                <a
+                  href={`https://www.youtube.com/watch?v=${activeModalVideo.youtubeId}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="alu-button alu-button--secondary alu-button--sm"
+                >
+                  <span>YouTube&apos;da Aç</span>
+                  <AluIcon name="external-link" size="sm" />
+                </a>
+                <button
+                  type="button"
+                  className="alu-video-modal__close"
+                  aria-label="Videoyu kapat"
+                  onClick={() => setActiveModalVideo(null)}
+                >
+                  ✕
+                </button>
+              </div>
             </div>
-          )}
+            <div className="alu-video-modal__viewport">
+              <iframe
+                src={`https://www.youtube.com/embed/${activeModalVideo.youtubeId}?autoplay=1`}
+                title={activeModalVideo.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
         </div>
-      </section>
+      )}
+
+      {/* Global Image Lightbox Modal (Full-Resolution Screenshot Inspector) */}
+      {activeLightboxImage && (
+        <div
+          className="alu-video-modal"
+          role="dialog"
+          aria-modal="true"
+          aria-label={activeLightboxImage.title}
+          onClick={() => setActiveLightboxImage(null)}
+        >
+          <div
+            className="alu-video-modal__dialog alu-video-modal__dialog--image"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="alu-video-modal__header">
+              <h3 className="alu-video-modal__title">{activeLightboxImage.title}</h3>
+              <button
+                type="button"
+                className="alu-video-modal__close"
+                aria-label="Görseli kapat"
+                onClick={() => setActiveLightboxImage(null)}
+              >
+                ✕
+              </button>
+            </div>
+            <div className="alu-video-modal__image-viewport">
+              <img src={activeLightboxImage.src} alt={activeLightboxImage.title} />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Global Trial Callout Band (Aligned with 25.10.2026 User Decision: Direct to allplan.com/trial-or-subscription/) */}
       {!isLegalPage && (

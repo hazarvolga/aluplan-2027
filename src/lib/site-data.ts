@@ -58,6 +58,104 @@ export interface InteractiveState {
   texts: string[];
 }
 
+export interface StructuredIntro {
+  kicker?: string;
+  title: string;
+  bullets: string[];
+  videoEmbedUrl?: string | null;
+}
+
+export interface StructuredWorkflowLink {
+  text: string;
+  href: string;
+  external?: boolean;
+  color?: string;
+}
+
+export interface StructuredStatItem {
+  value: string;
+  label: string;
+  description: string;
+}
+
+export interface StructuredBenefitItem {
+  iconSrc?: string;
+  subtitle?: string | null;
+  title: string;
+  description: string;
+}
+
+export interface StructuredMediaCardItem {
+  title: string;
+  subtitle?: string | null;
+  badge?: string | null;
+  description: string;
+  bullets?: string[];
+  imageSrc?: string | null;
+  youtubeId?: string | null;
+  href?: string | null;
+  ctaText?: string | null;
+  external?: boolean;
+}
+
+export interface StructuredMediaGridSection {
+  kicker?: string;
+  title: string;
+  subtitle?: string;
+  columns?: number;
+  items: StructuredMediaCardItem[];
+}
+
+export interface StructuredWorkflowTabCategory {
+  key: string;
+  label: string;
+  items: StructuredMediaCardItem[];
+}
+
+export interface StructuredWorkflowTabsSection {
+  kicker?: string;
+  title: string;
+  subtitle?: string;
+  categories: StructuredWorkflowTabCategory[];
+}
+
+export interface StructuredSplitCallout {
+  kicker?: string;
+  title: string;
+  lead?: string;
+  subheading?: string;
+  description: string;
+  imageSrc: string;
+  ctaText?: string;
+  ctaHref?: string;
+  external?: boolean;
+}
+
+export interface StructuredFaqItem {
+  question: string;
+  answer: string;
+}
+
+export interface StructuredPageLayout {
+  intro?: StructuredIntro;
+  workflowLinks?: StructuredWorkflowLink[] | null;
+  stats?: StructuredStatItem[];
+  challenges?: string[];
+  benefits?: {
+    kicker?: string;
+    title: string;
+    items: StructuredBenefitItem[];
+  };
+  coreFeatures?: StructuredMediaGridSection;
+  workflowTabs?: StructuredWorkflowTabsSection;
+  splitCallouts?: StructuredSplitCallout[];
+  extraGrids?: StructuredMediaGridSection[];
+  faq?: {
+    title: string;
+    items: StructuredFaqItem[];
+  } | null;
+}
+
 export interface PageRecord {
   path: string;
   section: string;
@@ -78,6 +176,7 @@ export interface PageRecord {
   playlistId: string | null;
   interactiveStates: InteractiveState[];
   schemaType: string;
+  structuredLayout?: StructuredPageLayout | null;
 }
 
 export interface PlaylistVideo {

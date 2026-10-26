@@ -223,8 +223,8 @@ def _load_cloud_services():
         return items
 
     return {
-        "default": parse_cs_array("defaultServices"),
-        "civil": parse_cs_array("civilServices"),
+        "default": parse_cs_array("defaultCloudServices"),
+        "civil": parse_cs_array("civilCloudServices"),
     }
 
 
@@ -694,6 +694,43 @@ def parse_allplan_2026():
     }
 
 
+def source_paragraphs_after(txt: str, marker: str, count: int) -> list:
+    """Read plain JSX paragraphs after an exact source heading, preserving prose."""
+    start = txt.index(marker)
+    blocks = re.findall(r"<p(?:\s[^>]*)?>(.*?)</p>", txt[start:], re.DOTALL)[:count]
+    paragraphs = [re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", block)).strip() for block in blocks]
+    if len(paragraphs) != count or not all(paragraphs):
+        raise ValueError(f"Expected {count} source paragraphs after {marker}")
+    return paragraphs
+
+
+def parse_training_page():
+    txt = (EV_DIR / "app/solutions-v2/training/page.tsx").read_text(encoding="utf-8")
+    tabs = []
+    for obj in split_top_level_objects(find_const_array(txt, "trainingCategories")):
+        raw_image = get_prop_str(obj, "image")
+        resolved_image = resolve_asset(raw_image)
+        available_image = (PUBLIC_DIR / resolved_image.lstrip("/")).is_file()
+        tabs.append({
+            "key": get_prop_str(obj, "value"),
+            "label": get_prop_str(obj, "label"),
+            "title": get_prop_str(obj, "title"),
+            "paragraphs": [get_prop_str(obj, "description")],
+            "features": split_top_level_strings(extract_balanced_block(obj, obj.index("features:"))),
+            "href": ("https://forms.office.com/r/hXhnKAG912" if get_prop_str(obj, "action") == "modal"
+                     else get_prop_str(obj, "link")),
+            "linkLabel": get_prop_str(obj, "cta"),
+            "imageSrc": resolved_image if available_image else None,
+            "sourceImageSrc": raw_image,
+        })
+    if len(tabs) != 6:
+        raise ValueError("Expected all six source training categories")
+    return {"trainingTabs": {
+        "title": "Genişletilmiş Eğitim ve Webinar Teklifimizi Keşfedin",
+        "tabs": tabs,
+    }}
+
+
 def parse_allplan_2026_yenilikler():
     txt = (EV_DIR / "app/products/allplan-2026-yenilikler/page.tsx").read_text(encoding="utf-8")
     imp = parse_imports(txt)
@@ -770,6 +807,7 @@ def parse_allplan_2026_yenilikler():
         "intro": {
             "kicker": "/ GENEL BAKIŞ · NEDEN ALLPLAN 2026?",
             "title": "Mimarlar, mühendisler, üreticiler ve inşaat profesyonelleri için verimlilik ve iş birliğini yeniden tanımlıyor",
+            "paragraphs": source_paragraphs_after(txt, "Mimarlar, mühendisler, üreticiler ve inşaat profesyonelleri için verimlilik ve iş birliğini yeniden tanımlıyor", 2),
             "bullets": [
                 "Akıllı bulut tabanlı iş birliği ile tüm proje yaşam döngüsü boyunca koordinasyon",
                 "Disiplinler arası üstün birlikte çalışabilirlik, tasarımdan mühendislik iş akışlarına kesintisiz entegrasyon",
@@ -2217,6 +2255,11 @@ def parse_bimflex_page():
         )
 
     return {
+        "intro": {
+            "title": "BIMFlex Allplan eklenti paketi",
+            "bullets": [],
+            "paragraphs": source_paragraphs_after(txt, "BIMFlex Allplan eklenti paketi", 1),
+        },
         "benefits": {
             "kicker": "/ NEDEN BIMFLEX?",
             "title": "Yapı elemanı bazlı, revizyona dayanıklı donatı akışı.",
@@ -2492,7 +2535,7 @@ def parse_cds_geometry_tools():
             }
         )
 
-    vid_objs = split_top_level_objects(extract_balanced_block(txt, txt.find("MasonryVideoGrid"), "[", "]"))
+    vid_objs = split_top_level_objects(extract_balanced_block(txt, txt.find("<MasonryVideoGrid"), "[", "]"))
     vid_items = []
     for vo in vid_objs:
         t_tr = get_prop_str(vo, "titleTR")
@@ -2753,7 +2796,7 @@ def parse_cds_steel_components():
     txt = fpath.read_text(encoding="utf-8")
     imp = parse_imports(txt)
 
-    vid_objs = split_top_level_objects(extract_balanced_block(txt, txt.find("MasonryVideoGrid"), "[", "]"))
+    vid_objs = split_top_level_objects(extract_balanced_block(txt, txt.find("<MasonryVideoGrid"), "[", "]"))
     vid_items = []
     for vo in vid_objs:
         t_tr = get_prop_str(vo, "titleTR")
@@ -3227,6 +3270,7 @@ def build_all_structured_pages() -> dict:
     structured["/solutions/steel"] = parse_solution_page_with_tabs_and_reasons(
         "/solutions/steel", "app/solutions/steel/page.tsx", ""
     )
+    structured["/solutions-v2/training"] = parse_training_page()
     structured["/solutions-v2/training/webinar"] = parse_webinar_page()
     structured["/references"] = parse_references_page()
     structured["/solutions-v2/faq"] = parse_faq_page()

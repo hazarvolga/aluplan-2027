@@ -1,0 +1,112 @@
+{
+  "method": "Local production HTTP HTML; scripts/styles excluded. Not a hydrated browser interaction test.",
+  "browserStatus": "Local browser use is disabled in Work settings; visual/keyboard interaction acceptance remains pending.",
+  "routes": [
+    {
+      "route": "/contact",
+      "checks": {
+        "currentTrial": true,
+        "obsoleteTrialAbsent": true
+      },
+      "htmlSha256": "9a03be2fe37fc5ba3619bd342cb4a9d008f6a5f95e9e8f163f0e67d2aa7f30dc"
+    },
+    {
+      "route": "/solutions-v2/training",
+      "checks": {
+        "allTabTitlesInHtml": true,
+        "panelCount": 6,
+        "tabCount": 6,
+        "missingImagesNotRendered": true
+      },
+      "htmlSha256": "e3d0aa222268bcbb46688f0560d1c7029880380f3f70f7cbddda68692a253057"
+    },
+    {
+      "route": "/products/allplan-basic",
+      "checks": {
+        "introParagraphsInHtml": true,
+        "ALLPLAN Bulut Hizmetleri": {
+          "count": 9,
+          "allTitlesInHtml": true
+        }
+      },
+      "htmlSha256": "847c39d787c004947ee49086c9845902693b2ed68e2a77b343663e41db6d4839"
+    },
+    {
+      "route": "/products/allplan-concept",
+      "checks": {
+        "introParagraphsInHtml": true,
+        "ALLPLAN Bulut Hizmetleri": {
+          "count": 9,
+          "allTitlesInHtml": true
+        }
+      },
+      "htmlSha256": "2a02e9fb87995ec79a33f9e05dea59f53f98aba5dd456b82110f229b813d581a"
+    },
+    {
+      "route": "/products/allplan-professional",
+      "checks": {
+        "introParagraphsInHtml": true,
+        "ALLPLAN Bulut Hizmetleri": {
+          "count": 9,
+          "allTitlesInHtml": true
+        }
+      },
+      "htmlSha256": "ebf077cc179e32fa0c8aafa99390231f202b5c0e72cf9d4434494b9fa4904619"
+    },
+    {
+      "route": "/products/civil",
+      "checks": {
+        "introParagraphsInHtml": true,
+        "ALLPLAN Bulut Hizmetleri": {
+          "count": 9,
+          "allTitlesInHtml": true
+        }
+      },
+      "htmlSha256": "78748a19e779a1e2ff8d864a517d2330c7b5ea040b98b7874f45057c6671f7e0"
+    },
+    {
+      "route": "/products/allplan-2026-yenilikler",
+      "checks": {
+        "introParagraphsInHtml": true
+      },
+      "htmlSha256": "447bf87e3b59ed277df1d111dd54bf448f5c6c200ed384bc25253780f3c12817"
+    },
+    {
+      "route": "/solutions/bimflex",
+      "checks": {
+        "introParagraphsInHtml": true
+      },
+      "htmlSha256": "2a19faf3bc6ac76d5dabc4baf5eca23be9d06719b1abea60cc235491a834942b"
+    },
+    {
+      "route": "/solutions/addons/geometry-tools",
+      "checks": {
+        "Video Galerisi": {
+          "count": 17,
+          "allTitlesInHtml": true
+        }
+      },
+      "htmlSha256": "7c49285b349ad4a8e61f1962790b096c4fd599c6018a115a574db941ed6850d0"
+    },
+    {
+      "route": "/solutions/addons/steel-components",
+      "checks": {
+        "Video Galerisi": {
+          "count": 26,
+          "allTitlesInHtml": true
+        }
+      },
+      "htmlSha256": "e411e6f687debc40f09b1d06a94b9052894b54fe796b65808ca1cb61cdf70bcd"
+    },
+    {
+      "route": "/products/allplan-ultimate",
+      "checks": {
+        "ALLPLAN Bulut Hizmetleri": {
+          "count": 10,
+          "allTitlesInHtml": true
+        }
+      },
+      "htmlSha256": "e1e8c51dc9244e2a61c487a3264c929af59e29489ee644cec10a0777b06673ce"
+    }
+  ]
+}

@@ -48,3 +48,14 @@ python3 scripts/audit_render_parity.py --base-url http://127.0.0.1:3001 --output
 ### C05 karar güncellemesi — 26.10.2026
 
 Kullanıcı geçerli deneme süresinin14gün olduğunu teyit etti. https://www.allplan.com/trial-or-subscription/ aynı gün kontrol edildi; sayfa14gün ücretsiz denemeyi açıkça belirtiyor. Dolayısıyla firma yanıtı bekleme şartı kalktı. Önceki tabloda ve kanıtlardaki14/30çelişkisi tarihsel bulgu olarak korunur; yalnız2027uygulama metinleri sonraki düzeltme adımında14güne hizalanır. Schema'ya yeni süre/Offer eklenmedi; fiyat varsayımı yapılmadı.
+
+
+## S05 düzeltme sonucu — 26.10.2026
+
+C01–C05 uygulandı; ayrıca iki boş galeri C06 olarak kaynakta doğrulandı ve düzeltildi. Geometry Tools17, Steel Components26video başlığı/kimliği geri kazanıldı. Dört ürünün bulut listesi9'ar kart; Eğitim6kaynak sekmesi; Yenilikler2genel bakış paragrafı; BIMFlex1ortaklık paragrafı artık üretilen veride ve yerel üretim HTML'sinde bulunur. Contact'ın tam eski deneme cümlesi yalnız bu rota için onaylı14güne çevrilir; politika veri üretimine bağlı ve ilgisiz eklenti süreleri değişmez. Kaynak2026ve tarihsel kanıtlar korunur.
+
+Yeni Eğitim sekmeleri bütün panelleri SSR HTML'de tutar; tab/panel ilişkileri ve ok/Home/End klavye işleyicileri eklenmiştir. Genel Eğitim gövdesi ve Forms talep alanı korunmuştur. Kaynakta tanımlı5training görseli2026public ve2027public altında bulunamadı; orijinal yollar sourceImageSrc içinde korunur, imageSrc null olduğu için kırık görsel isteği üretilmez. Bu5varlık hâlâ eksiktir, yeni görsel uydurulmadı.
+
+`render-after-s05.json`:110/110HTTP200/tekH1,0boş yapısal bölüm. Önceki16rota/303ilkHTML adayı hâlâ vardır; bunlar bu düzeltmelerden bağımsız etkileşim kabulü bekler. `s05-targeted-after.json`:11etkilenen rotada hedefli HTML kanıtı. Yerel tarayıcı kullanımı Work ayarlarında kapalı olduğu için yeni görsel/klavye etkileşim kabulü gerçekleştirilemedi. Önceki tarayıcı örnekleri bu yeni sürümün kabulü sayılmaz. Kırpılmış Yenilikler SEO/hero açıklaması ve diğer sekmelerin erişilebilirlik kontrolü ayrıca açıktır. Tam S05 kabulü verilmedi; S06başlamadı.
+
+Ek kapsam doğrulaması: ortak bulut düzeltmesi Ultimate rotasına da yansır; mevcut ek kartıyla10bulut kartı korunur. Böylece5ürün rotası etkilenir. Son bağımsız kod incelemesi yeniden denendi ve tamamlandı: kritik/yüksek/orta bulgu yok; kaynak eşliği ve genel Eğitim gövdesinin korunması doğrulandı. Önceki kullanım limiti nedeniyle eksik inceleme notu bu sonuçla aşılmıştır.

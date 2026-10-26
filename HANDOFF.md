@@ -509,3 +509,16 @@ S05 denetim aracının 5 testi dahil toplam48 birim testi ve36 mevcut parite kon
 ## 26.10.2026 — Deneme süresi kararı kapandı
 
 Kullanıcı geçerli ALLPLAN ücretsiz deneme süresini14gün olarak kesinleştirdi ve resmî https://www.allplan.com/trial-or-subscription/ kaynağını verdi. Aynı gün sayfada “14 DAY FREE TRIAL” / “Limited to 14 days only.” doğrulandı. S05 C05 için ek firma onayı beklenmez; Contact'taki30gün ifadesi2027üretim/gösterim hattında14güne düzeltilecek, kaynak2026ve tarihsel kanıtlar korunacak. user-decisions.md ve S05raporu güncellendi; bu commit doküman kararıdır, uygulama değişmedi. Sıradaki adım C01–C04 içerik geri kazanımı ile C05 süre düzeltmesini test ederek tamamlamak.
+
+
+## 26.10.2026 — S05 kaynak sadakati düzeltmeleri uygulandı
+
+Kullanıcı onayıyla C01–C05ve ek C06kapandı: dört ürünün9'ar bulut kartı, Eğitim6sekmesi, Yenilikler2paragrafı, BIMFlex ortaklık paragrafı, Geometry Tools17/Steel Components26video galerisi geri yüklendi. Contact30gün cümlesi yalnız bu rota/tam metin için üretim politikasında14güne çevrildi; tarihsel veri ve kaynak2026değişmedi. Schema/fiyat/deneme hedefi değiştirilmedi. Eğitim modal talepleri mevcut ortakMSForms'a gider; genel eğitim gövdesi korunur.
+
+56birim testi +36parite kontrolü; typecheck/build ve188kontrast kontrolü geçti. ProductionHTML110/110HTTP200/tekH1,0boş yapısal bölüm;11hedefli rota testi geri yüklenen metin/kart/video başlıklarını doğruladı. Yeni Eğitim6tab/6panelSSR'de mevcut. Kanıt render-after-s05.json/s05-targeted-after.json. Tarayıcı Work ayarlarında kapalı: yeni görsel/klavye kabulü bekliyor. Kod inceleme ajanı politika değişikliğinde sorun bulmadı; bütün diffin son ajan incelemesi kullanım limitiyle tamamlanamadı, ana ajan diffi ayrıca inceledi; tam bağımsız inceleme iddiası yok.
+
+Kalanlar: kaynakta da olmayan5traininggörseli (sourceImageSrc kaydı, imageSrc:null; kırık istek yok),16rotadaki303ilkHTML adayının etkileşim denetimi, kırpılmış Yenilikler SEO/hero açıklaması ve diğer sekmelerin panel erişilebilirliği. Bunlar kapanmadan S05tamamlandı sayılmayacak. S06henüz başlamadı. Push/deploy yok. Sonraki oturumda tarayıcı erişimi varsa yeni Eğitim sekmelerini gerçek etkileşimle doğrula; kalan adayları kaynak eşliğiyle ayır.
+
+Ek kapsam doğrulaması: ortak bulut düzeltmesi Ultimate rotasına da yansır; mevcut ek kartıyla10bulut kartı korunur. Böylece5ürün rotası etkilenir. Son bağımsız kod incelemesi yeniden denendi ve tamamlandı: kritik/yüksek/orta bulgu yok; kaynak eşliği ve genel Eğitim gövdesinin korunması doğrulandı. Önceki kullanım limiti nedeniyle eksik inceleme notu bu sonuçla aşılmıştır.
+
+Geçici3001üretim sunucusu kapatıldı; kullanıcının mevcut geliştirme sunucusuna müdahale edilmedi.

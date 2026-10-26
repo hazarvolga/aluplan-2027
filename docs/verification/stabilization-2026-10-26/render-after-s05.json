@@ -1,0 +1,2683 @@
+{
+  "date": "2026-10-26",
+  "baseUrl": "http://127.0.0.1:3001",
+  "method": "All local data routes fetched; script/style excluded; normalized long structured text compared against initial HTML. No hydration/tab clicks in this scan.",
+  "limitations": [
+    "Missing HTML text may be available after interaction; not automatically lost content.",
+    "Text presence does not establish correct order, media pairing, visibility or full content parity.",
+    "Local links without a data record may be intentional redirects; separate HTTP check required.",
+    "Empty extracted sections require original source confirmation; may be optional/inactive.",
+    "No live-site crawl, source execution or form submission."
+  ],
+  "summary": {
+    "routes": 110,
+    "analyzedRoutes": 110,
+    "fetchErrors": 0,
+    "redirectedRoutes": 0,
+    "http200": 110,
+    "singleH1": 110,
+    "routesWithStructuredTextAbsentFromHtml": 16,
+    "structuredTextsAbsentFromHtml": 303,
+    "emptyStructuredSections": 0
+  },
+  "routes": [
+    {
+      "route": "/",
+      "requestedUrl": "http://127.0.0.1:3001/",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/",
+      "redirected": false,
+      "htmlSha256": "d14dfbaff1797d41d5ec52e99516084b6d126cbf528fe18cedf5b0f7c36f07c2",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/about",
+      "requestedUrl": "http://127.0.0.1:3001/about",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/about",
+      "redirected": false,
+      "htmlSha256": "6604a54e19115fd6e4f22f7ef994230a9d5d07df500c137c7a70dabb3e96ff07",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/contact",
+      "requestedUrl": "http://127.0.0.1:3001/contact",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/contact",
+      "redirected": false,
+      "htmlSha256": "9a03be2fe37fc5ba3619bd342cb4a9d008f6a5f95e9e8f163f0e67d2aa7f30dc",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/gizlilik-politikasi",
+      "requestedUrl": "http://127.0.0.1:3001/gizlilik-politikasi",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/gizlilik-politikasi",
+      "redirected": false,
+      "htmlSha256": "6f7d614350ff94401facf37b2cde96e1ed49ad3b5259bfcc5fe67e3665ce0265",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/health",
+      "requestedUrl": "http://127.0.0.1:3001/health",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/health",
+      "redirected": false,
+      "htmlSha256": "d6b48d98fe8e413e6d713d62902b999cc2c8416d5251609dd3850d56bc9bba66",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/kullanim-sartlari",
+      "requestedUrl": "http://127.0.0.1:3001/kullanim-sartlari",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/kullanim-sartlari",
+      "redirected": false,
+      "htmlSha256": "85e557da213d11146dd261035f51e2972985278e225632450da3dbbe58d886af",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/kvkk",
+      "requestedUrl": "http://127.0.0.1:3001/kvkk",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/kvkk",
+      "redirected": false,
+      "htmlSha256": "8878cbab28c8c9fc60ed97cc45418b4a54ad3f241125c7e7ebc325a75d0c7f54",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/package-overview",
+      "requestedUrl": "http://127.0.0.1:3001/package-overview",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/package-overview",
+      "redirected": false,
+      "htmlSha256": "aa7e0a1b7fdd43f1b1926cca10014626997f257728c61469e97fd593e60f6ee7",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/paket-karsilastirma",
+      "requestedUrl": "http://127.0.0.1:3001/paket-karsilastirma",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/paket-karsilastirma",
+      "redirected": false,
+      "htmlSha256": "1144557e31a8a0abb3afc8d71bb0c8b5545c63da5e863a3990ac14d8829064eb",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/products",
+      "requestedUrl": "http://127.0.0.1:3001/products",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/products",
+      "redirected": false,
+      "htmlSha256": "c75eb6ac2133920d9c98800c7b557ef01bcdb21228461deb5bd13a3c2633ad28",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/products/allplan",
+      "requestedUrl": "http://127.0.0.1:3001/products/allplan",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/products/allplan",
+      "redirected": false,
+      "htmlSha256": "fdf109d0832aa69799ef0605a4ec51273836451167237a6d3558c19f47338af2",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/products/allplan-2026",
+      "requestedUrl": "http://127.0.0.1:3001/products/allplan-2026",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/products/allplan-2026",
+      "redirected": false,
+      "htmlSha256": "9ca0ffb706ec4c20aa2ba924b674bceff0517ac58ff21dd16f3823fbba5ee893",
+      "h1Count": 1,
+      "structuredTextCandidates": 22,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/products/allplan-2026-yenilikler",
+      "requestedUrl": "http://127.0.0.1:3001/products/allplan-2026-yenilikler",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/products/allplan-2026-yenilikler",
+      "redirected": false,
+      "htmlSha256": "447bf87e3b59ed277df1d111dd54bf448f5c6c200ed384bc25253780f3c12817",
+      "h1Count": 1,
+      "structuredTextCandidates": 82,
+      "notInInitialHtml": [
+        {
+          "pointer": "/workflowTabs/categories/0/items/1/subtitle",
+          "text": "Modern ve sürdürülebilir yapı tasarımı için daha fazla esneklik ve hassasiyet"
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/1/description",
+          "text": "AEC (Mimarlık-Mühendislik-İnşaat) sektörü, modern ve sürdürülebilir binalar için çok katmanlı bileşenleri tasarlayıp yönetmenin verimli yollarına ihtiyaç duyar ve proje standartlarını her aşamada karşılamalıdır. ALLPLAN 2025, döşemeler için çok katmanlı destek ve detaylandırma ile uygulama planlama araçlarını tanıttı. ALLPLAN 2026 ile çok katmanlı döşeme ve temel döşemelerini tasarlamak artık her zamankinden daha sezgisel ve verimli. Son güncellemeler, mimar ve mühendislerin döşeme katmanlarının uzatma yönünü hassas şekilde kontrol etmesini ve yeni etkileşimli önizleme ile değişiklikleri anında görmesini sağlar. Temel döşemeler, zemin katmanları veya alt tabaka katmanları gibi karmaşık bileşenlerin modellenmesi artık kolay ve son derece hassastır. Bu geliştirmeler, proje iş akışlarını hızlandırır, hata olasılığını azaltır ve planlamadan inşa aşamasına kadar tutarlı, detaylı sonuçlar elde edilmesini sağlar."
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/2/description",
+          "text": "ALLPLAN 2026, kaplama modelleme için esnek, doğru ve verimli bir iş akışı sunarak BIM planlamasını önemli ölçüde geliştirir. Öne çıkan özellikler şunlardır: kural tabanlı dağıtımla birlikte gerçekçi geometriye sahip çok katmanlı dikey kaplamalar, ilişkili oda kaplamalarını organize etmek veya alternatif tasarımları desteklemek için yeni oda filtreleri, duvar gibi dikey kaplamaların plan görünümü, 3B süpürgelik modelleme ve katman yönetimi için geliştirilmiş bir arayüz. Bu iyileştirmeler, mimarların doğru 2D ve 3D planlar oluşturmasına, kaplamaları yönetmenin basitleşmesine, hata oranının azalmasına ve çeşitli proje tiplerine uyum sağlamasına yardımcı olur. Ayrıca optimize edilmiş hesaplama süreci, tasarım değişiklikleri yaparken ve karmaşık projeleri güncellerken zamandan tasarruf sağlar."
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/3/subtitle",
+          "text": "Daha akıllı ve kaliteli BIM modelleri için kesintisiz etkileşim ve otomasyon"
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/3/description",
+          "text": "ALLPLAN 2026, BIM modelinde öncelik tabanlı bağlantılara (PBC) sahip geliştirilmiş Özel Bileşen özelliğini tanıtır. Bu geliştirme, özel model öğeleri ile duvar, kolon, döşeme gibi yerel yapı bileşenleri veya diğer özel objeler arasında kesintisiz etkileşim sağlar. Planlamacılar artık karmaşık şekilleri daha doğru modelleyebilir, otomatik etkileşimler manuel çalışmayı azaltır ve hata riskini minimize eder. Bu geliştirmeler, iş akışlarını hızlandırır, daha kaliteli BIM modelleri sunar ve zorlu projelerde bile başarılı proje teslimini destekler."
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/4/subtitle",
+          "text": "Çerçeve paftalarını hızla modelleyin ve güncelleyin"
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/4/description",
+          "text": "Yeni kiriş ve kiriş sistemlerini yerleştirme araçları, binaları daha hızlı modellemenizi ve çatı geometrisi değiştikçe çerçeve paftalarını uyarlamanızı sağlar. Geliştirilmiş yakalama seçenekleri, çelik elemanların ilk seferde doğru yerleştirilmesini sağlar ve bağlantı hatalarını azaltır."
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/5/subtitle",
+          "text": "Bağlantıları doğru şekilde koruyun, otomatik olarak"
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/5/description",
+          "text": "Bağlantı hatalarını düzeltmek için zaman kaybetmeyin—ALLPLAN 2026'daki yeni işlevsellikle, bağlantılar otomatik olarak uygulanır ve güncellenir, böylece çelik montajlar tasarım değişikliklerinde bile doğru ve geçerli kalır."
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/6/subtitle",
+          "text": "Modern, birleşik arayüz ile duvar tasarımını basitleştirin"
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/6/description",
+          "text": "ALLPLAN 2026, geometrik özellikler de dahil olmak üzere duvar oluşturma ve düzenleme için modern ve birleşik bir özellik paleti sunar. Bu tutarlı ve sezgisel arayüz, yeni kullanıcıların başlamasını kolaylaştırırken, deneyimli kullanıcılar farklı nesne türlerinde verimliliği artırır ve sorunsuz iş akışları sağlar. Sonuç, her proje için üretkenliği ve kullanıcı memnuniyetini artıran, düzenli bir duvar tasarım sürecidir."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/0/title",
+          "text": "Geliştirilmiş Donatı Detaylandırması"
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/0/subtitle",
+          "text": "Otomatik Kolon Donatısı Tasarımı"
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/0/description",
+          "text": "Donatı detaylandırmasında, farklı kolon yüzeylerine farklı donatı çapları atayabilmek veya donatıyı kolon köşelerinde yoğunlaştırabilmek kritik öneme sahiptir. ALLPLAN 2026 ile kullanıcılar artık tasarım kriterlerine çok daha yakın sonuçlar elde edebiliyor: kare veya dikdörtgen kolonlarda boyuna donatılara farklı çaplar atanabiliyor ve eksenel aralıklar tanımlanabiliyor — ister köşelerde yoğunlaştırılmış, ister kullanıcı tanımlı aralıklarla. Bu sayede otomatik kolon donatı tasarımından sonra manuel düzeltme ihtiyacı büyük ölçüde azalıyor, tasarım süreci hızlanıyor ve güvenilirliği artıyor."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/1/title",
+          "text": "Otomatik Donatı Detaylandırması"
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/1/subtitle",
+          "text": "Duvar Donatısı İş Akışlarını Hızlandıran İyileştirmeler"
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/1/description",
+          "text": "Donatı detaylandırmasının otomatikleştirilmesi, kullanıcıların zamandan tasarruf etmesini, iş akışlarını hızlandırmasını ve daha güvenilir şekilde çalışmasını sağlar. ALLPLAN 2026, otomatik duvar donatı iş akışını daha akıcı, hatasız ve kullanıcı dostu hale getirir. Artık yatay veya dikey donatı önceliği tek tıkla belirlenebilir; her donatı tipi gerektiğinde kolayca aktif veya pasif hale getirilebilir."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/2/title",
+          "text": "Donatıdan Şantiyeye (Reinforcement to Field)"
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/2/subtitle",
+          "text": "Dijital Odaklı İnşaat Süreçleri"
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/2/description",
+          "text": "ALLPLAN 2026, donatının modellenmesi ve yönetilmesinde devrim yaratan bir \"Reinforcement to Field\" (Donatıdan Şantiyeye) iş akışı sunar. Bu yeni sistem, donatılı beton yapıların tamamen dijital, çizimsiz iş akışlarıyla yönetilmesini sağlar."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/0/title",
+          "text": "Birleşik DAM (Dijital Arazi Modeli) – Yeni Nesil Arazi Modellemesi"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/0/subtitle",
+          "text": "Hassas düzenlemeler, gelişmiş şekillendirme ve büyük ölçekli hafriyatlar için tek motor"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/0/description",
+          "text": "Yeni Birleşik DAM (Dijital Arazi Modeli), eski sistemi modern, yüksek performanslı bir motorla değiştirerek arazi modelleme iş akışlarını daha hassas, güvenilir ve detaylı hale getiriyor."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/1/title",
+          "text": "Gelişmiş 3B Yol Kavşağı Detaylandırması"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/1/subtitle",
+          "text": "Daha hassas düşey kontrol ve yumuşak geçişlerle düşük revizyonlu kavşak tasarımı"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/1/description",
+          "text": "Yeni sürüm, parametrik yol kavşağı modellemesini daha fazla esneklik ve hassasiyetle geliştiriyor."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/2/title",
+          "text": "Tünel Modellemesi – Parametrik Hassasiyet"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/2/subtitle",
+          "text": "Tünel projeleri için optimize edilmiş, verimli modelleme çözümü"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/2/description",
+          "text": "Tünellerin üç boyutlu modellenmesi, yeraltı inşaatlarının ölçeği, karmaşıklığı ve riskleri nedeniyle modern altyapı projelerinin temel bileşenidir."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/3/title",
+          "text": "Altyapı Projeleri için Yapı Strüktürü (Building Structure)"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/3/subtitle",
+          "text": "Daha hızlı, doğru ve tam koordine openBIM teslimi için merkezi proje yönetimi"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/3/description",
+          "text": "ALLPLAN’ın Yapı Strüktürü sistemi artık yalnızca bina projelerinde değil, altyapı projelerinde de kullanılabiliyor."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/4/subtitle",
+          "text": "Disiplinler arası bulut tabanlı iş akışları için anında yükleme"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/4/description",
+          "text": "ALLPLAN Civil artık 3B geometrik modelleri doğrudan ALLPLAN Cloud’a yüklemeyi destekliyor."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/5/subtitle",
+          "text": "Karmaşık 3B modelleri üstün hassasiyetle düzenleyin, kontrol edin ve yönetin"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/5/description",
+          "text": "ALLPLAN Civil 2026, 3B modeller için gelişmiş katman yönetimi sunuyor. Bu sayede altyapı profesyonelleri, model organizasyonunu, görünürlüğü ve verimliliği çok daha etkin şekilde kontrol edebiliyor."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/6/title",
+          "text": "Gelişmiş Parametrik Kesit Modellemesi"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/6/subtitle",
+          "text": "Daha hızlı, daha doğru ve tam koordine altyapı tasarımı için geliştirilmiş araçlar"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/6/description",
+          "text": "ALLPLAN Civil’deki 2B parametrik kesitler, akıllı ve veri odaklı modellerin temelini oluşturur."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/7/title",
+          "text": "FEM – Hacim Elemanları – Teknik Önizleme"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/7/subtitle",
+          "text": "Daha yüksek hassasiyet ve esneklik için 3B hacim elemanlarıyla genişletilmiş analiz"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/7/description",
+          "text": "ALLPLAN Civil’in entegre yapısal analiz modülü artık kiriş ve ızgara modellerinin ötesine geçerek hacim elemanlarını (volume elements) destekliyor."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/8/title",
+          "text": "Prefabrik Kirişli Köprü İş Akışının Genişletilmesi"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/8/subtitle",
+          "text": "Parametrik köprü tasarımında daha fazla güvenlik, hassasiyet ve otomasyon"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/8/description",
+          "text": "ALLPLAN’ın prefabrik kirişli köprü çözümü, parametrik modelleme, gelişmiş yapısal analiz ve EN / AASHTO LRFD 9 standartlarına uygun detaylandırmayı birleştirerek tasarımdan inşaata kadar süreci %70’e varan oranda hızlandırır."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/0/title",
+          "text": "Temel İşleri İyileştirmeleri"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/0/subtitle",
+          "text": "Karmaşık inşaat modelleri için daha akıllı yönetim"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/0/description",
+          "text": "Planlamadan teslimata kadar, karmaşık inşaat modellerinin yönetimi her proje aşamasında kritik öneme sahiptir. Kazı çukuru modelleri ve istinat duvarları gibi temel unsurlar doğruluk ve güvenilir sonuçlar açısından hayati rol oynar. Ancak projeler büyüdükçe, manuel iş akışları ilerlemeyi yavaşlatabilir ve hata riskini artırabilir."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/1/title",
+          "text": "Kural Tabanlı Ölçülendirme (Rule-based Dimensioning)"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/1/subtitle",
+          "text": "Kural tabanlı ölçülerle daha hızlı çizim üretimi"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/1/description",
+          "text": "Her görünümü tek tek elle ölçülendirmekten sıkıldınız mı? ALLPLAN 2026 artık üretim standartlarına dayalı ölçülendirmeyi otomatikleştiriyor — böylece her prefabrik eleman tam olarak gereken ölçülere anında ve tutarlı biçimde sahip oluyor."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/2/title",
+          "text": "Yerel Görünümler için Otomatik Ölçülendirme (Automated Dimensioning for Local Views)"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/2/subtitle",
+          "text": "Yerel görünümler için mükemmel netlik ve kararlılık"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/2/description",
+          "text": "Doğru temsil, değişikliklere rağmen tutarlılık ve otomatik ya da kullanıcı kontrollü referanslama kabiliyeti — bunlar dokümantasyon ve görselleştirmede netlik ve hassasiyet için esastır. Bu özellikler hataları azaltırken esnekliği ve kontrolü korur."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/3/title",
+          "text": "Yeni Bağlantı Paleti Güncellemesi (New Connection Palette Update)"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/3/subtitle",
+          "text": "Daha hızlı ve hassas prefabrik iş akışları için üretime hazır, sadeleştirilmiş araç"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/3/description",
+          "text": "ALLPLAN 2026’daki güncellenmiş Bağlantı Paleti (Connection Palette), prefabrik üretim süreçlerini önemli ölçüde hızlandırır. ALLPLAN’in özellik yönetim altyapısı (property framework) ile tam entegrasyon sayesinde, tüm prefabrik bileşenlerde daha yüksek performans ve tutarlı bir kullanıcı deneyimi sunar. Duvar elemanlarından ayrıştırılması sayesinde gereksiz gezinme adımları ortadan kalkar, bağlantı ayarlarına erişim ve düzenleme işlemleri çok daha kolay hale gelir."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/4/title",
+          "text": "Filigran Döşemeler için Ortak Çözüm (Common Solution for Filigree Slabs)"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/4/subtitle",
+          "text": "Üretime optimize edilmiş döşeme tasarımlarını otomatikleştirin"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/4/description",
+          "text": "ALLPLAN artık filigran (yarı prefabrik) döşemelerdeki donatı ve bağlantı elemanlarını otomatik olarak yerleştirir ve günceller — böylece tasarımınızda her değişiklik yaptığınızda düzeni baştan oluşturmanız gerekmez."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/5/title",
+          "text": "Gizli Donatıda Görselleştirme (Reinforcement in Hidden)"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/5/subtitle",
+          "text": "Son derece net donatı planları oluşturun"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/5/description",
+          "text": "ALLPLAN 2026, plan oluşturma sırasında gizli donatı kategorilerini tamamen devre dışı bırakmaya olanak tanıyan yeni bir otomatik işlev sunar."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/6/title",
+          "text": "Özelleştirilebilir Metraj (Customizable Quantity Take-off)"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/6/subtitle",
+          "text": "Doğru malzeme metrajlarını anında oluşturun"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/6/description",
+          "text": "İhtiyacınız olan verileri, ERP sisteminizin veya müşterinizin istediği formatta tam olarak dışa aktarın. Kurallarınızı bir kez tanımlayın ve her projede tutarlı, güvenilir miktar verileri elde edin — artık çift veri girişi ya da karmaşık geçici çözümler gerekmez."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/7/title",
+          "text": "Parça Numaralandırma (Mark Numbering)"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/7/subtitle",
+          "text": "Parça numaralarını anında atayın, doğrulayın ve toplu olarak yönetin"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/7/description",
+          "text": "Tek bir entegre sistemle, geometri, donatı veya bağlantı elemanları açısından eşleşen elemanları hızla tanımlayın. Bu hassasiyet, daha verimli gruplama, kalıp israfının azaltılması ve tüm prefabrik üretim sürecinizin daha akıcı hale gelmesi için büyük kolaylık sağlar."
+        }
+      ],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/products/allplan-aec",
+      "requestedUrl": "http://127.0.0.1:3001/products/allplan-aec",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/products/allplan-aec",
+      "redirected": false,
+      "htmlSha256": "673893b11ac02179be4ff123b261d3266b731d2c152a51a6a7764772ea452ee3",
+      "h1Count": 1,
+      "structuredTextCandidates": 52,
+      "notInInitialHtml": [
+        {
+          "pointer": "/workflowTabs/categories/0/items/1/description",
+          "text": "Kolayca herhangi bir şekle sahip objeler oluşturun ve yaratıcılığınızı ve hayal gücünüzü özgürce ifade edin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/2/description",
+          "text": "Modelinizi güvenilir bir şekilde hesaplayın, proje gelişiminizi belgeleyin, satış sunumları oluşturun ve ayrıntılı listeleri kullanarak ihaleye hazırlanın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/3/description",
+          "text": "Gerçek Zamanlı Render, 3B PDF’ler, Lumion Live-Sync ve eskizler ile planlanan projeyi daha iyi anlamak için görselleştirin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/4/description",
+          "text": "Müşteriler ve yükleniciler için hızlı ve kolay bir şekilde planlar, çizimler ve sunumlar oluşturun."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/0/description",
+          "text": "Duvarlar, döşemeler ve kolonlar gibi parametrik standart elemanlarla zahmetsizce modelleyin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/1/title",
+          "text": "Ölçülü Görünümler ve Kesitler"
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/1/description",
+          "text": "Tüm teslimatlar genelinde otomatik değişikliklerle zamandan tasarruf edin; modelde veya teknik resimlerde düzenleyin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/2/description",
+          "text": "Yapı elemanlarına yönelik otomatik çözümlerle donatılandırma gereksinimlerini kolay ve hızlı şekilde detaylandırın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/3/title",
+          "text": "Hızlı Prekast Detaylandırma"
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/3/description",
+          "text": "Prekast elemanlar için üretime hazır detaylandırmayı hızla oluşturun."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/4/description",
+          "text": "Merdivenler, korkuluklar ve karmaşık geometri dahil olmak üzere çeşitli çelik elemanları hızlı ve doğru bir şekilde modellemek için otomatik araçlar."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/0/description",
+          "text": "Her tür karmaşık obje için güçlü serbest biçimli modelleme araçları."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/1/description",
+          "text": "Arazileri doğru ve hızlı şekilde modelleyin, sahayı güvenilir şekilde tasarlayın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/2/title",
+          "text": "Parametrik Yol Modellemesi"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/2/description",
+          "text": "Yol elemanlarını tamamen parametrik yerleştirin ve uyarlayın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/3/description",
+          "text": "Şantiye ve altyapı planlamasını destekleyen kapsamlı yardımcı araçlar."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/4/title",
+          "text": "Karmaşık Donatı Detaylandırma"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/4/description",
+          "text": "Zor geometri ve değişken kesitlerde donatı detaylandırmayı hassas ve hızlı yapın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/0/title",
+          "text": "Otomatik Prefabrik Tasarım"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/0/description",
+          "text": "Prekast elemanları otomatik ve doğru şekilde tasarlayın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/1/description",
+          "text": "Harici BIM modellerini kolayca içe aktarın ve entegre edin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/2/title",
+          "text": "Parametrik Giriş ve Serbest Biçimli Modelleme"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/2/description",
+          "text": "Parametrik tanımlar ve serbest biçimli modellemeyi birlikte kullanın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/3/title",
+          "text": "Yüksek Düzeyde Otomatik Üretime Yönelik Araçlar"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/3/description",
+          "text": "Üretim için yüksek otomasyon düzeyine sahip araçlarla verimi arttırın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/4/items/0/description",
+          "text": "2B’den 3B’ye hızlı geçiş ile planları model tabanına taşıyın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/4/items/1/title",
+          "text": "İhale Modellerinin Hazırlanması"
+        },
+        {
+          "pointer": "/workflowTabs/categories/4/items/1/description",
+          "text": "İhale süreçleri için model tabanlı hazırlık ve planlama."
+        },
+        {
+          "pointer": "/workflowTabs/categories/4/items/2/description",
+          "text": "Şantiye yerleşimi ve ekipman planlaması için araçlar."
+        },
+        {
+          "pointer": "/workflowTabs/categories/4/items/3/description",
+          "text": "Model tabanlı zaman planlama ve görsel akış."
+        },
+        {
+          "pointer": "/workflowTabs/categories/4/items/4/description",
+          "text": "Sahada modelle bağlantılı çalışma."
+        },
+        {
+          "pointer": "/workflowTabs/categories/5/items/0/description",
+          "text": "Projelerde görev ve konu yönetimiyle koordinasyon sağlayın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/5/items/1/description",
+          "text": "Plan dağıtımı ve belge yönetimini merkezileştirin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/5/items/2/description",
+          "text": "Seamless entegrasyon ile model koordinasyonu gerçekleştirin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/5/items/3/title",
+          "text": "Birlikte Çalışın – Her Yerde, Her Zaman"
+        },
+        {
+          "pointer": "/workflowTabs/categories/5/items/3/description",
+          "text": "Bulut depolama ve kaynaklarla her zaman beraber çalışın."
+        }
+      ],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/products/allplan-basic",
+      "requestedUrl": "http://127.0.0.1:3001/products/allplan-basic",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/products/allplan-basic",
+      "redirected": false,
+      "htmlSha256": "847c39d787c004947ee49086c9845902693b2ed68e2a77b343663e41db6d4839",
+      "h1Count": 1,
+      "structuredTextCandidates": 29,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/products/allplan-bimplus",
+      "requestedUrl": "http://127.0.0.1:3001/products/allplan-bimplus",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/products/allplan-bimplus",
+      "redirected": false,
+      "htmlSha256": "b97812781503d359d5d7c829295cf9987fc5912098ec8bbe4ffb3c17e9e69a64",
+      "h1Count": 1,
+      "structuredTextCandidates": 45,
+      "notInInitialHtml": [
+        {
+          "pointer": "/workflowTabs/categories/0/items/1/description",
+          "text": "Farklı disiplinlerden modelleri koordine edin, görüntüleyin ve yönetin, tam şeffaflık sağlayın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/0/description",
+          "text": "Farklı inşaat ürünlerinden modelleri tarafsız bir ortamda toplayın ve güçlü bir görüntüleyicide görselleştirin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/1/description",
+          "text": "Çakışma kontrolleri yapmak için modelleri kullanarak nitelikler ve diğer nesne bilgilerini atayın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/2/description",
+          "text": "Nesne bilgilerine dayalı simülasyonlar çalıştırmak için modelleri kullanın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/0/title",
+          "text": "Modelleri Kolayca Yükleyin"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/0/description",
+          "text": "Ortak bir değişim ortamında çeşitli formatlardaki birden fazla kaynaktan bilgileri yönetin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/1/description",
+          "text": "Dokümanların ve modellerin birden fazla revizyonunu saklayın ve yönetin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/1/description",
+          "text": "Görevleri iletin, değişiklikleri merkezi olarak ve proje ekipleri içinde daha etkili bir şekilde yönetin ve belgeleyin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/4/items/0/description",
+          "text": "BIMPLUS'ta ve/veya yazma araçlarında doğrudan görevler oluşturun, görselleştirin, atayın, görüntüleyin, yönetin ve onaylayın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/4/items/1/description",
+          "text": "Proje sunumları için slayt gösterileri oluşturun, görevleri yönetmeye yardımcı olmak için slaytlar ekleyin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/4/items/2/description",
+          "text": "BIMPLUS'ı doğrudan MS Excel ile senkronize edin, MS Excel'de düzenleyin ve BIMPLUS'a geri senkronize edin."
+        }
+      ],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/products/allplan-cloud-services",
+      "requestedUrl": "http://127.0.0.1:3001/products/allplan-cloud-services",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/products/allplan-cloud-services",
+      "redirected": false,
+      "htmlSha256": "bebf359e5edd190aae9cf0b975e118cf542047afd63762bfde330e1669151b90",
+      "h1Count": 1,
+      "structuredTextCandidates": 16,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/products/allplan-concept",
+      "requestedUrl": "http://127.0.0.1:3001/products/allplan-concept",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/products/allplan-concept",
+      "redirected": false,
+      "htmlSha256": "2a02e9fb87995ec79a33f9e05dea59f53f98aba5dd456b82110f229b813d581a",
+      "h1Count": 1,
+      "structuredTextCandidates": 42,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/products/allplan-professional",
+      "requestedUrl": "http://127.0.0.1:3001/products/allplan-professional",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/products/allplan-professional",
+      "redirected": false,
+      "htmlSha256": "ebf077cc179e32fa0c8aafa99390231f202b5c0e72cf9d4434494b9fa4904619",
+      "h1Count": 1,
+      "structuredTextCandidates": 54,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/products/allplan-ultimate",
+      "requestedUrl": "http://127.0.0.1:3001/products/allplan-ultimate",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/products/allplan-ultimate",
+      "redirected": false,
+      "htmlSha256": "e1e8c51dc9244e2a61c487a3264c929af59e29489ee644cec10a0777b06673ce",
+      "h1Count": 1,
+      "structuredTextCandidates": 71,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/products/architecture",
+      "requestedUrl": "http://127.0.0.1:3001/products/architecture",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/products/architecture",
+      "redirected": false,
+      "htmlSha256": "a644549fd66389c5fcffe861e69c580f3ba72acc9949e54a5db81a6dcdda9e3f",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/products/ax3000",
+      "requestedUrl": "http://127.0.0.1:3001/products/ax3000",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/products/ax3000",
+      "redirected": false,
+      "htmlSha256": "27235a4821b3a6c7aeb698142285722387811f42b854ae28444e7bce282bbbdf",
+      "h1Count": 1,
+      "structuredTextCandidates": 18,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/products/ax3000/dokumanlar",
+      "requestedUrl": "http://127.0.0.1:3001/products/ax3000/dokumanlar",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/products/ax3000/dokumanlar",
+      "redirected": false,
+      "htmlSha256": "1fe435134eea5f66c763d00edac3473beb3f5222b8427d8ef8b545853f477d8e",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/products/civil",
+      "requestedUrl": "http://127.0.0.1:3001/products/civil",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/products/civil",
+      "redirected": false,
+      "htmlSha256": "78748a19e779a1e2ff8d864a517d2330c7b5ea040b98b7874f45057c6671f7e0",
+      "h1Count": 1,
+      "structuredTextCandidates": 70,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/products/precast",
+      "requestedUrl": "http://127.0.0.1:3001/products/precast",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/products/precast",
+      "redirected": false,
+      "htmlSha256": "0439d76a0edef91c6c87e7838f3e6c038ebfe07bf13fb1ca4709b6445f04567c",
+      "h1Count": 1,
+      "structuredTextCandidates": 38,
+      "notInInitialHtml": [
+        {
+          "pointer": "/workflowTabs/categories/0/items/1/description",
+          "text": "Donatı, fikstür ve ölçülendirme dahil olmak üzere yüksek düzeyde otomatikleştirilmiş üretim paftalarını hızlı bir şekilde oluşturun."
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/2/description",
+          "text": "Mimari modellerin yanı sıra MEP objelerini de hızla içe aktarın ve bunları prefabrik tasarımınız için yeniden kullanın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/3/description",
+          "text": "Prefabrik elemanları parametrik girdiyle oluşturun veya bunları tamamen özgürce modelleyin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/4/description",
+          "text": "Özel Allplan Prekast çözümümüz, duvarların ve döşemelerin yüksek düzeyde otomatik tasarım ve detaylandırılmasını sağlar."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/0/title",
+          "text": "Yüksek Düzeyde Otomatik Duvar Tasarımı"
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/0/description",
+          "text": "Katı, çift, sandviç, tuğla ve termal duvarları her zamankinden daha hızlı ve daha doğru bir şekilde modelleyin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/1/description",
+          "text": "Allplan Prefabrik Duvarlar, bireysel üretim tesislerinize göre duvarları akıllıca üretilebilir ve teslim edilebilir duvar elemanlarına ayırır."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/2/description",
+          "text": "Allplan Prefabrik Duvarlar, özel üretim yeteneklerinize mükemmel şekilde uyum sağlayan donatı verilerini otomatik olarak üretir."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/3/description",
+          "text": "Stok durumuna ve ağırlığa bağlı olarak eğimli destekler için kaldırma ankrajları veya manşonlar gibi fikstürleri otomatik olarak hesaplayın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/4/description",
+          "text": "Ticari ve üretimle ilgili verilerin sağlanmasında mutlak hassasiyete güvenin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/0/title",
+          "text": "Yüksek Düzeyde Otomatik Döşeme Tasarımı"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/0/description",
+          "text": "Allplan Prekast Döşemeler, eleman döşemeleri, masif döşemeler ve boşluklu döşemeler tasarlarken büyük miktarda zaman tasarrufu yapmanızı sağlar."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/1/description",
+          "text": "Allplan Prefabrik Döşemeler, bireysel üretim tesislerinize göre döşemeleri akıllı bir şekilde üretilebilir ve teslim edilebilir döşeme elemanlarına ayırır."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/2/description",
+          "text": "Allplan Prefabrik Döşemeler, özel üretim yeteneklerinize mükemmel şekilde uyum sağlayan donatı verilerini otomatik olarak üretir."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/3/description",
+          "text": "Allplan Prefabrik Döşemeler kompozit girintileri otomatik olarak yerleştirir ve birleşimli sistemler için maksimum esneklik sunar. Yazılım, filigran döşemeler için kesme kuvveti ve bağ kontrolü gerçekleştirir ve gerekirse gerekli kafes kirişlerini kurar."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/4/description",
+          "text": "Ticari ve üretimle ilgili verilerin sağlanmasında mutlak hassasiyete güvenin."
+        }
+      ],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/products/precast-detail",
+      "requestedUrl": "http://127.0.0.1:3001/products/precast-detail",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/products/precast-detail",
+      "redirected": false,
+      "htmlSha256": "3117cb06a186aba3a5c10715d809a3a5fc426c2f7d356b7dcdcb3eeb4fceead5",
+      "h1Count": 1,
+      "structuredTextCandidates": 36,
+      "notInInitialHtml": [
+        {
+          "pointer": "/workflowTabs/categories/0/items/1/description",
+          "text": "Donatı, fikstür ve ölçülendirme dahil olmak üzere yüksek düzeyde otomatikleştirilmiş üretim paftalarını hızlı bir şekilde oluşturun."
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/2/description",
+          "text": "Mimari modellerin yanı sıra MEP objelerini de hızla içe aktarın ve bunları prefabrik tasarımınız için yeniden kullanın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/3/description",
+          "text": "Prefabrik elemanları parametrik girdiyle oluşturun veya bunları tamamen özgürce modelleyin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/4/description",
+          "text": "Özel Allplan Prekast çözümümüz, duvarların ve döşemelerin yüksek düzeyde otomatik tasarım ve detaylandırılmasını sağlar."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/0/title",
+          "text": "Yüksek Düzeyde Otomatik Duvar Tasarımı"
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/0/description",
+          "text": "Katı, çift, sandviç, tuğla ve termal duvarları her zamankinden daha hızlı ve daha doğru bir şekilde modelleyin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/1/description",
+          "text": "Allplan Prefabrik Duvarlar, bireysel üretim tesislerinize göre duvarları akıllıca üretilebilir ve teslim edilebilir duvar elemanlarına ayırır."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/2/description",
+          "text": "Allplan Prefabrik Duvarlar, özel üretim yeteneklerinize mükemmel şekilde uyum sağlayan donatı verilerini otomatik olarak üretir."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/3/description",
+          "text": "Stok durumuna ve ağırlığa bağlı olarak eğimli destekler için kaldırma ankrajları veya manşonlar gibi fikstürleri otomatik olarak hesaplayın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/4/description",
+          "text": "Güvenilir ve doğru üretim verileri elde edin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/0/description",
+          "text": "Allplan Prekast Döşemeler, eleman döşemeleri, masif döşemeler ve boşluklu döşemeler tasarlarken büyük miktarda zaman tasarrufu yapmanızı sağlar."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/1/description",
+          "text": "Allplan Prefabrik Döşemeler, bireysel üretim tesislerinize göre döşemeleri akıllı bir şekilde üretilebilir ve teslim edilebilir döşeme elemanlarına ayırır."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/2/description",
+          "text": "Allplan Prefabrik Döşemeler, özel üretim yeteneklerinize mükemmel şekilde uyum sağlayan donatı verilerini otomatik olarak üretir."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/3/description",
+          "text": "Fikstürler, stok durumuna ve ağırlığa bağlı olarak otomatik hesaplanır."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/4/description",
+          "text": "Güvenilir ve doğru üretim verileri elde edin."
+        }
+      ],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/products/sds2-home",
+      "requestedUrl": "http://127.0.0.1:3001/products/sds2-home",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/products/sds2-home",
+      "redirected": false,
+      "htmlSha256": "d3891e66b8fb6a910ebda8b2c10ce9ad0f747584d36c34a674a478aa6b9106d1",
+      "h1Count": 1,
+      "structuredTextCandidates": 5,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/references",
+      "requestedUrl": "http://127.0.0.1:3001/references",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/references",
+      "redirected": false,
+      "htmlSha256": "8170de7f8d1857418cb304cbb2b4378eb93b35bde1c4df3db7228c536a12debe",
+      "h1Count": 1,
+      "structuredTextCandidates": 2,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/search",
+      "requestedUrl": "http://127.0.0.1:3001/search",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/search",
+      "redirected": false,
+      "htmlSha256": "585e319ff2703bd8e0a9cd03dbf27ae90fc6f3aa45e2e77cf62a3edc747ba8f7",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions",
+      "requestedUrl": "http://127.0.0.1:3001/solutions",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions",
+      "redirected": false,
+      "htmlSha256": "cbc69720b1286bcaefb5cfb9252ebd63ea756f9263326c0fe5fa06c595ff3f9b",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/addons",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/addons",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/addons",
+      "redirected": false,
+      "htmlSha256": "53d8f63e555e902b5b95a2845c3cbe296c48b07958a033b1daf241268a0ed172",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/building-design",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/building-design",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/building-design",
+      "redirected": false,
+      "htmlSha256": "4d4fb315988dc44a140a27bb3c5b111d1eaf636782783e581630cdc71b33ece7",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/connect-license",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/connect-license",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/connect-license",
+      "redirected": false,
+      "htmlSha256": "0aee8532dee787c60b7661bef823d7e51973d0823af586e1553d40e6fcd6b736",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/connect-license/activation",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/connect-license/activation",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/connect-license/activation",
+      "redirected": false,
+      "htmlSha256": "f939d0cf84d85d793e57935ee16ef4c98e0677392bef6960fabe7c8890e6938c",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/connect-license/how-to-assign",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/connect-license/how-to-assign",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/connect-license/how-to-assign",
+      "redirected": false,
+      "htmlSha256": "edfaa7cee38105b5932116d00bebd20b38cedac74f5bd1980eadb45d168356c5",
+      "h1Count": 1,
+      "structuredTextCandidates": 10,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/connect-login",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/connect-login",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/connect-login",
+      "redirected": false,
+      "htmlSha256": "d4d50bad56c459607c33f3bae3b12f09da86259547b26ce01282dee574f203a2",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/construction",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/construction",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/construction",
+      "redirected": false,
+      "htmlSha256": "971d6ed5a1bc1d35e6b166cec35ce69c97218970d5b01a88dcd0a3f7f680dd75",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/faq",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/faq",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/faq",
+      "redirected": false,
+      "htmlSha256": "d6a72f81a07ad9d16e912344e7d4119db25b75257949574f55b705a3940cf1ed",
+      "h1Count": 1,
+      "structuredTextCandidates": 58,
+      "notInInitialHtml": [
+        {
+          "pointer": "/faqDirectory/categories/1/subtitle",
+          "text": "Bulut depolama, Bimplus ve entegre hizmetler hakkında detaylar."
+        },
+        {
+          "pointer": "/faqDirectory/categories/1/items/0/question",
+          "text": "Abonelikle birlikte ne kadar Cloud depolama alanı alırım?"
+        },
+        {
+          "pointer": "/faqDirectory/categories/1/items/0/answer",
+          "text": "ALLPLAN Cloud ile birlikte 10 GB depolama alanı dahildir. İsterseniz ek 100 GB depolama alanı satın alabilirsiniz."
+        },
+        {
+          "pointer": "/faqDirectory/categories/1/items/1/question",
+          "text": "Hangi ALLPLAN Cloud hizmetleri dahildir?"
+        },
+        {
+          "pointer": "/faqDirectory/categories/1/items/1/answer",
+          "text": "Temel Hizmetler ve Entegrasyonlar:"
+        },
+        {
+          "pointer": "/faqDirectory/categories/1/items/2/question",
+          "text": "Cloud hizmetlerini kullanmak zorunda mıyım?"
+        },
+        {
+          "pointer": "/faqDirectory/categories/1/items/2/answer",
+          "text": "Hayır. Cloud hizmetleri abonelikle birlikte sunulur ancak kullanımı tamamen isteğe bağlıdır."
+        },
+        {
+          "pointer": "/faqDirectory/categories/1/items/3/question",
+          "text": "Workgroup Manager, Allplan Cloud hizmetlerine dahil mi?"
+        },
+        {
+          "pointer": "/faqDirectory/categories/1/items/4/question",
+          "text": "BIMPLUS aboneliğe nasıl uygulanır?"
+        },
+        {
+          "pointer": "/faqDirectory/categories/1/items/4/answer",
+          "text": "BIMPLUS, abonelik lisansınıza zaten dahildir. Ayrıca bağımsız bir ürün olarak da kullanılmaya devam edecektir."
+        },
+        {
+          "pointer": "/faqDirectory/categories/2/title",
+          "text": "Serviceplus'tan Aboneliğe Geçiş"
+        },
+        {
+          "pointer": "/faqDirectory/categories/2/subtitle",
+          "text": "Mevcut kalıcı lisansınızı abonelik modeline dönüştürme süreci."
+        },
+        {
+          "pointer": "/faqDirectory/categories/2/items/0/question",
+          "text": "ALLPLAN Aboneliğine geçtiğimde ne olur?"
+        },
+        {
+          "pointer": "/faqDirectory/categories/2/items/0/answer",
+          "text": "Serviceplus lisansınızı aboneliğe dönüştürdüğünüzde:"
+        },
+        {
+          "pointer": "/faqDirectory/categories/2/items/1/question",
+          "text": "Kalıcı lisansımı kaybeder miyim?"
+        },
+        {
+          "pointer": "/faqDirectory/categories/2/items/1/answer",
+          "text": "Evet. ALLPLAN Aboneliğine geçtiğinizde, kalıcı lisans üzerindeki haklarınız ve erişiminiz sona erer; bunun yerine güncel ve kapsamlı abonelik avantajlarına sahip olursunuz."
+        },
+        {
+          "pointer": "/faqDirectory/categories/2/items/2/question",
+          "text": "Abonelik taahhüt süresi nedir?"
+        },
+        {
+          "pointer": "/faqDirectory/categories/2/items/2/answer",
+          "text": "Mevcut Serviceplus müşterileri için 12 aylık abonelik sözleşmesi yapılır. Ayrıca, abonelik yenileme fiyatınız 2 yıl boyunca sabitlenir."
+        },
+        {
+          "pointer": "/faqDirectory/categories/2/items/3/question",
+          "text": "Desteklenmeyen eski sürümleri kullanmanın riskleri nelerdir?"
+        },
+        {
+          "pointer": "/faqDirectory/categories/2/items/3/answer",
+          "text": "Teknik olarak mümkün olsa da, desteklenmeyen yazılım kullanmak şu riskleri taşır:"
+        },
+        {
+          "pointer": "/faqDirectory/categories/3/subtitle",
+          "text": "İşbirliği araçlarının geleceği ve uyumluluk süreçleri."
+        },
+        {
+          "pointer": "/faqDirectory/categories/3/items/0/question",
+          "text": "Workgroup Manager, Share ve Exchange yeni lisanslar için nasıl sunulacak?"
+        },
+        {
+          "pointer": "/faqDirectory/categories/3/items/0/answer",
+          "text": "1 Ekim 2023 itibariyle, bu hizmetler sadece Abonelik (Subscription) ile sunulmaktadır. Yeni kalıcı lisanslarda bu özellikler mevcut değildir."
+        },
+        {
+          "pointer": "/faqDirectory/categories/3/items/1/question",
+          "text": "Kalıcı lisansım ile mevcut Workgroup Manager'ı kullanmaya devam edebilir miyim?"
+        },
+        {
+          "pointer": "/faqDirectory/categories/3/items/1/answer",
+          "text": "Mevcut kalıcı lisanslar için uyumluluk ve bakım takvimi:"
+        },
+        {
+          "pointer": "/faqDirectory/categories/3/items/2/question",
+          "text": "Mevcut Workgroup Manager iş akışlarımızın geleceği ne olacak?"
+        },
+        {
+          "pointer": "/faqDirectory/categories/3/items/2/answer",
+          "text": "İşbirliği, proje teslimi için hayati önem taşır. Yerel (LAN) ve global (WAN) işbirliği çözümleri gelişmeye devam edecektir:"
+        },
+        {
+          "pointer": "/faqDirectory/categories/4/title",
+          "text": "Ürün Yaşam Döngüsü (Product Lifecycle)"
+        },
+        {
+          "pointer": "/faqDirectory/categories/4/subtitle",
+          "text": "Versiyon onayı, bakım aşamaları ve teknik destek kapsamı politikaları. (13 Ocak 2025'ten itibaren geçerlidir)"
+        },
+        {
+          "pointer": "/faqDirectory/categories/4/items/0/question",
+          "text": "Bu ürün yaşam döngüsü politikasının kapsamı nedir?"
+        },
+        {
+          "pointer": "/faqDirectory/categories/4/items/0/answer",
+          "text": "Bu politika 13 Ocak 2025 tarihi itibariyle geçerlidir ve ALLPLAN'ın masaüstü ürünlerini (ALLPLAN, FRILO, DC-Software), SCIA ve SDS2 ürünlerinin şimdiki ve gelecek versiyonlarını kapsar. ALLPLAN 2024 ve önceki sürümleri kapsayan eski politikaların yerini alır."
+        },
+        {
+          "pointer": "/faqDirectory/categories/4/items/1/question",
+          "text": "Ürün Bakımı (Product Maintenance) ve Sürüm Desteği (Version Support) arasındaki fark nedir?"
+        },
+        {
+          "pointer": "/faqDirectory/categories/4/items/1/answer",
+          "text": "İki kavram farklı hizmet katmanlarını ifade eder:"
+        },
+        {
+          "pointer": "/faqDirectory/categories/4/items/2/question",
+          "text": "Hangi bakım hizmetleri hangi aşamaya dahildir?"
+        },
+        {
+          "pointer": "/faqDirectory/categories/4/items/2/answer",
+          "text": "Ürün Bakım Hizmetleri aşama karşılaştırma tablosu:"
+        },
+        {
+          "pointer": "/faqDirectory/categories/4/items/3/question",
+          "text": "Hangi teknik destek hizmetleri hangi aşamaya dahildir?"
+        },
+        {
+          "pointer": "/faqDirectory/categories/4/items/3/answer",
+          "text": "Teknik Destek Hizmetleri aşama karşılaştırma tablosu:"
+        },
+        {
+          "pointer": "/faqDirectory/categories/4/items/4/question",
+          "text": "Ana Sürüm (Major Version) nedir? Ne sıklıkla yayınlanır?"
+        },
+        {
+          "pointer": "/faqDirectory/categories/4/items/4/answer",
+          "text": "Yeni (büyük) özellikler, geliştirmeler veya değişiklikler içeren sürümdür. Sürüm numarasının en solundaki rakam değiştiğinde anlaşılır (Örn. ALLPLAN 2025'ten ALLPLAN 2026'ya geçiş). Yayınlanma sıklığı: Genellikle yılda bir kez."
+        },
+        {
+          "pointer": "/faqDirectory/categories/4/items/5/question",
+          "text": "Ara Sürüm (Minor Version) nedir? Ne sıklıkla yayınlanır?"
+        },
+        {
+          "pointer": "/faqDirectory/categories/4/items/5/answer",
+          "text": "Küçük özellikler, stabilite, performans veya güvenlik iyileştirmeleri içeren sürümdür. Sürüm numarasının sağındaki rakamlar değiştiğinde anlaşılır (Örn. 2025-0-1 veya 2025-1-0). Yayınlanma sıklığı: Genellikle yılda birkaç kez (ürün hattına göre değişir)."
+        }
+      ],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/infrastructure",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/infrastructure",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/infrastructure",
+      "redirected": false,
+      "htmlSha256": "5edae55e25d3d23251936b319b49a53ffe9db65394ce204388db0f747a1b310f",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/other",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/other",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/other",
+      "redirected": false,
+      "htmlSha256": "b30218345a5bbdc0b84d7c1ac8b8475702813f0ea9153530f7192a75dbfcbfb0",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training",
+      "redirected": false,
+      "htmlSha256": "e3d0aa222268bcbb46688f0560d1c7029880380f3f70f7cbddda68692a253057",
+      "h1Count": 1,
+      "structuredTextCandidates": 2,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training/classroom",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training/classroom",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training/classroom",
+      "redirected": false,
+      "htmlSha256": "d5cdb3381468b480a9ca0e38d9675b3ef72d34747620706eec859a731b24f96f",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training/e-learning",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training/e-learning",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training/e-learning",
+      "redirected": false,
+      "htmlSha256": "08905c444d112cf1f435d237164cb3a94509a5ea0ed3f69dcf0fd53e5cc9c27f",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training/events",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training/events",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training/events",
+      "redirected": false,
+      "htmlSha256": "0e9fd7defa3a250a5c41253f85164578038ee2bc806f8c4d74c1af90556010a4",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training/individual",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training/individual",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training/individual",
+      "redirected": false,
+      "htmlSha256": "0170bb0ccf0056ff0b950811cf80ddca175be14bbf08c20689b61783c7085288",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training/online",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training/online",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training/online",
+      "redirected": false,
+      "htmlSha256": "edcad3a5ed1c93c8b9e6ffb9a11f4430ea3dfc6127312e2641b6d718a0ab04ff",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training/quick-start",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training/quick-start",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training/quick-start",
+      "redirected": false,
+      "htmlSha256": "cc372de3f046ac731c60500bc2423b277ba4659f00480d23a6194d93d3cf3152",
+      "h1Count": 1,
+      "structuredTextCandidates": 34,
+      "notInInitialHtml": [
+        {
+          "pointer": "/workflowTabs/categories/1/items/0/title",
+          "text": "Allplan Engineering — Yapısal Analiz, Donatı ve Çelik Detaylandırma"
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/0/description",
+          "text": "Dökme yerinde beton, prekast, çelik ve ahşap dahil olmak üzere tüm malzemeleri optimize edin. Donatı ve çelik yapıların hızlı tasarımı için otomatik çözümler kullanın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/0/title",
+          "text": "Infrastructure & Civil — Yol, Köprü ve Tünel Projeleri İçin Parametrik Modelleme"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/0/description",
+          "text": "Case Study — Porto Metro \"Ruby Line\": Karmaşık tünel kesitleri (NATM ve Aç-Kapa) için LandXML aks verileri Bimplus üzerinden içe aktarılarak modellendi. Tünel duvarlarındaki kazıklar (piles) PythonParts kullanılarak otomatikleştirildi."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/0/title",
+          "text": "Allplan Precast — Otomatik Prekast Detaylandırma ve Üretim (CAM) Verisi"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/0/description",
+          "text": "Vaka Çalışması — BFU (Rütihof): Önceden kağıt planlar (2D) ve manuel kontrollerle yürüyen süreç, Allplan IFC-Assistant ile tamamen dijitalleşti. BFU, sadece 9 ayda 10.000m² döşeme ve 1.100m² duvar elemanını detaylandırıp üretti."
+        }
+      ],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training/video-library",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library",
+      "redirected": false,
+      "htmlSha256": "8f32fb9775d9123450a66f36c9c3f3e90ddb7b1425317d876e1e06f483dabbf3",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training/video-library/addon-geometry",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/addon-geometry",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/addon-geometry",
+      "redirected": false,
+      "htmlSha256": "c7743fa273a5c0aa20cf6c63cf45d16ddcd13a62003f1327ce93a4694cd2acc9",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training/video-library/allplan-reinforcement",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/allplan-reinforcement",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/allplan-reinforcement",
+      "redirected": false,
+      "htmlSha256": "1e03d83655f6ecfd758e9ef6f7305c3764d638197ba438d35ce587cf8d7e9ee0",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training/video-library/ax3000",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/ax3000",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/ax3000",
+      "redirected": false,
+      "htmlSha256": "cc50805546eee7fc2a98b155aa7411f0e2ce968651043333de782aa25bcb84b5",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training/video-library/bridge-workflow-2022",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/bridge-workflow-2022",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/bridge-workflow-2022",
+      "redirected": false,
+      "htmlSha256": "3bd52c7d324bdf971549faf14121632c4ec00d00f8711e7862648901f8f9946a",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training/video-library/bridge-workflows",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/bridge-workflows",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/bridge-workflows",
+      "redirected": false,
+      "htmlSha256": "c92e990cab06a7b6da932fbccdf66cc26156b3e42357d6ba75c686b358100a03",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training/video-library/campus-de",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/campus-de",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/campus-de",
+      "redirected": false,
+      "htmlSha256": "52e8dc063280e24adbc4b95e07ba18c7bf7e8c810f3a00d7d4b36a988a0666fd",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training/video-library/campus-en",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/campus-en",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/campus-en",
+      "redirected": false,
+      "htmlSha256": "edfdff2470517717ff8ad2192afea3be7a1fd53cd791b10452c0c1672c938060",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training/video-library/campus-tutorials-2019-2022",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/campus-tutorials-2019-2022",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/campus-tutorials-2019-2022",
+      "redirected": false,
+      "htmlSha256": "baee1fae788743f692362e482abc1182fe5480436cc84e98bb654453562c3f25",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training/video-library/hello-allplan-2024",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/hello-allplan-2024",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/hello-allplan-2024",
+      "redirected": false,
+      "htmlSha256": "788d75c4370e80c3be883dfa7407ab0d888f8589c3d7ac405864f87434eabd38",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training/video-library/konut-insaati",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/konut-insaati",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/konut-insaati",
+      "redirected": false,
+      "htmlSha256": "37198fec7f81c2c42f3a3f9b5de4bd8c88343f7b9ef42fcf72dafa24dd97f953",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training/video-library/otomatik-donati",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/otomatik-donati",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/otomatik-donati",
+      "redirected": false,
+      "htmlSha256": "a17aa54678b2a32ba3dd2f84b4fcb7e5c50a88c30852c7a159e959bb7204bb5c",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training/video-library/quickstart-buildings",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/quickstart-buildings",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/quickstart-buildings",
+      "redirected": false,
+      "htmlSha256": "fcc2017f58302d27b8f27db2f20622f697c4c34c97e7c0a76f979c7689e36ad3",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training/video-library/road-design",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/road-design",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/road-design",
+      "redirected": false,
+      "htmlSha256": "171e6cbeddd2373bdc388e9a8c698ccc39b205b60c4a25122f44ee734f760ff1",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training/video-library/sds2-intro",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/sds2-intro",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training/video-library/sds2-intro",
+      "redirected": false,
+      "htmlSha256": "f702dea04e84c0cfb162a64234a4f676c4c9eec04702c18ea2f327fad250059f",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions-v2/training/webinar",
+      "requestedUrl": "http://127.0.0.1:3001/solutions-v2/training/webinar",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions-v2/training/webinar",
+      "redirected": false,
+      "htmlSha256": "75862811b9c9d7eb56f0c7c93ca66ef838ac104392b3d3fc3c75e51b8f1c0c46",
+      "h1Count": 1,
+      "structuredTextCandidates": 23,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/addons",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/addons",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/addons",
+      "redirected": false,
+      "htmlSha256": "394e6798d15b14039b949f08ff9a1cc722e47fc2c94a85991fc8fdeeddf217ef",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/addons/2d-dwg-converter",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/addons/2d-dwg-converter",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/addons/2d-dwg-converter",
+      "redirected": false,
+      "htmlSha256": "22d3b49f12e849e0e6d08a848f6961fc249697cc72fabbc667030b9ac0adf728",
+      "h1Count": 1,
+      "structuredTextCandidates": 54,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/addons/drive-curve",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/addons/drive-curve",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/addons/drive-curve",
+      "redirected": false,
+      "htmlSha256": "00a5ff24b0dd418a2ab5467820053a1a62c709e4024d850ca273c6b161e2400c",
+      "h1Count": 1,
+      "structuredTextCandidates": 34,
+      "notInInitialHtml": [
+        {
+          "pointer": "/workflowTabs/categories/1/items/0/description",
+          "text": "Standart ve özel araç kaplama eğrisi şablonları."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/0/title",
+          "text": "FGSV 287 (2020) Standart Araçları"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/0/description",
+          "text": "Alman FGSV 287 2020 yönergesine uygun araç tipleri."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/0/title",
+          "text": "FGSV 283 (2005) Standart Araçları"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/0/description",
+          "text": "FGSV 283 2005 yönergesine uygun araç tipleri."
+        },
+        {
+          "pointer": "/workflowTabs/categories/4/items/0/title",
+          "text": "VSS 40198a (2019) İsviçre Standart Araçları"
+        },
+        {
+          "pointer": "/workflowTabs/categories/4/items/0/description",
+          "text": "İsviçre VSS 40198a 2019 normuna uygun araç tipleri."
+        },
+        {
+          "pointer": "/workflowTabs/categories/5/items/0/title",
+          "text": "VSS SN 640271a (1990) Standart Araçları"
+        },
+        {
+          "pointer": "/workflowTabs/categories/5/items/0/description",
+          "text": "VSS SN 640271a 1990 normuna uygun araç tipleri."
+        }
+      ],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/addons/geometry-tools",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/addons/geometry-tools",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/addons/geometry-tools",
+      "redirected": false,
+      "htmlSha256": "7c49285b349ad4a8e61f1962790b096c4fd599c6018a115a574db941ed6850d0",
+      "h1Count": 1,
+      "structuredTextCandidates": 62,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/addons/graphical-text",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/addons/graphical-text",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/addons/graphical-text",
+      "redirected": false,
+      "htmlSha256": "79a474f1d311bc4f7fe608c4aa89577240d759c26adb6bc06aac1a14089b804d",
+      "h1Count": 1,
+      "structuredTextCandidates": 8,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/addons/parametric-terrain",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/addons/parametric-terrain",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/addons/parametric-terrain",
+      "redirected": false,
+      "htmlSha256": "1b0d097790d593e616a07af66689915ef85ffe69e48ab93e68e0105ba3e49163",
+      "h1Count": 1,
+      "structuredTextCandidates": 4,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/addons/ramp",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/addons/ramp",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/addons/ramp",
+      "redirected": false,
+      "htmlSha256": "893d26609295c36d256b84b9b44d2897016ba208be06951791a457d9c415a85f",
+      "h1Count": 1,
+      "structuredTextCandidates": 6,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/addons/sketchup-converter",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/addons/sketchup-converter",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/addons/sketchup-converter",
+      "redirected": false,
+      "htmlSha256": "01b5aea0bde2a8983d8ace09acfae8adba0de9bc5e80033946e95f07d6f91630",
+      "h1Count": 1,
+      "structuredTextCandidates": 15,
+      "notInInitialHtml": [
+        {
+          "pointer": "/workflowTabs/categories/1/items/0/title",
+          "text": "Dokular ve Katı Gövdelerle İçe Aktarım (Import)"
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/0/description",
+          "text": "SketchUp 3D Warehouse modellerini UV dokuları ve katı geometrileriyle Allplan'a aktarın:"
+        }
+      ],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/addons/steel-components",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/addons/steel-components",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/addons/steel-components",
+      "redirected": false,
+      "htmlSha256": "e411e6f687debc40f09b1d06a94b9052894b54fe796b65808ca1cb61cdf70bcd",
+      "h1Count": 1,
+      "structuredTextCandidates": 82,
+      "notInInitialHtml": [
+        {
+          "pointer": "/workflowTabs/categories/1/items/0/description",
+          "text": "Parametrik bulon grupları ve bağlantı plakaları:"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/0/description",
+          "text": "Çatı ve cephe kaplama profilleri:"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/0/description",
+          "text": "Hızlı revizyon ve çoklu düzenleme araçları:"
+        }
+      ],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/addons/three-dimensioning",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/addons/three-dimensioning",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/addons/three-dimensioning",
+      "redirected": false,
+      "htmlSha256": "0fef04208ed791afab1271aa4b6ea902f23f351394eaf1fdef78846fb2b45731",
+      "h1Count": 1,
+      "structuredTextCandidates": 30,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/allplan-bulut-hizmetleri",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/allplan-bulut-hizmetleri",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/allplan-bulut-hizmetleri",
+      "redirected": false,
+      "htmlSha256": "b90a45b20d0c792e2f1505f2b37614dbc3832f9518b96ce8c3ee1df465021935",
+      "h1Count": 1,
+      "structuredTextCandidates": 34,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/allplan-industry",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/allplan-industry",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/allplan-industry",
+      "redirected": false,
+      "htmlSha256": "7286ad73d8f62f36663c6ecfb33ad7a2e00f11609152ee97dce7c83e8f427181",
+      "h1Count": 1,
+      "structuredTextCandidates": 13,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/architecture",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/architecture",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/architecture",
+      "redirected": false,
+      "htmlSha256": "2f245011f80fdf2589eba8ce8285a2d079a9f67b9b9683e9016527aaa20776cc",
+      "h1Count": 1,
+      "structuredTextCandidates": 69,
+      "notInInitialHtml": [
+        {
+          "pointer": "/workflowTabs/categories/0/items/1/description",
+          "text": "Dijital eskiz kağıdının etkisi, Allplan'da verilerin çizim dosyaları halinde yapılandırılmasıyla elde edilir. As-built verileri planlama için temel olarak kullanılabilir ve alttaki zeminler takip edenler için başlangıç noktası olarak hizmet edebilir."
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/2/description",
+          "text": "Mevcut şantiye özelliklerini zahmetsizce birleştirin. Konturlar veya noktalar biçimindeki saha bilgilerini hızla gerçekçi ve hassas dijital arazi modellerine dönüştürün. Daha iyi bir tasarım kalitesi için çevrenizi görselleştirin, anlayın ve şantiyedeki gerçek koşulları değerlendirin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/3/description",
+          "text": "2B planları kolayca görselleştirin, ayrı ayrı tasarlayın ve tasarımınızın şantiye planı içindeki temsilini optimize etmek için gölgeler gibi özellikleri hızla ekleyin. Tasarımınızın kalitesini artırmak için gerçekçi yönler sunarak saha planı çıktılarını geliştirin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/4/description",
+          "text": "Tasarım fikirlerinizi ve vizyonunuzu hızla hayata geçirmek için güçlü ve esnek araçlarla konseptinizi hayata geçirin. 3B modelin aynı anda oluşturulacağı şekilde ayak iziniz üzerinde 2B olarak çalışmanın veya doğrudan 3B olarak çalışmanın avantajından yararlanın. 2B çalışma görünümlerinden yararlanırken 3B çalışmaya güvenle geçin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/0/title",
+          "text": "Hacimden Bileşen Modeline Geçiş"
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/0/description",
+          "text": "Otomatik araçlarla konseptinizden gelişmiş bir tasarıma hızla geçin. Hacim konseptinden kolayca bileşen tabanlı bir model oluşturun. Tasarımınızı hızla geliştirebilmek için gerçekçi ve akıllı bileşenler kullanarak tasarım çalışmalarını hızlandırın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/1/title",
+          "text": "Taslaktan Detaya Sorunsuz Bir Şekilde Geliştirin"
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/1/description",
+          "text": "Allplan'da çalışırken mevcut veriler en iyi şekilde kullanılır; böylece inşa edilen model her proje aşamasında gelişmeye devam eder. Mevcut veriler, modelleme veya bilgi derinliği açısından rafine edilir ve zenginleştirilir."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/2/title",
+          "text": "Farklı Değişkenleri Kolayca Değerlendirin"
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/2/description",
+          "text": "Farklı varyasyonlara ve bunların avantajlarına rahatça odaklanın; Çatı tasarım seçeneklerini kolayca değerlendirin ve standartlara uygunluğu sağlayın. Hızlı değişiklikler veya negatif eğimler gibi çeşitli çatı modelleme seçeneklerinden yararlanın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/3/title",
+          "text": "Görünümler ve Kesitler için Güçlü Araçlar"
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/3/description",
+          "text": "Planlarınızı ve paftalarınızı doğru bir şekilde üretmek için ihtiyaç duyduğunuz görünümlere ve kesitlere kolayca erişin ve bunları hazırlayın. Tasarımlarınızı görselleştirin ve sunun, inşa edilebilirliğini kontrol edin ve kat planlarını dikey tasarım boyutunda bir araya getirin. Gerekli stil ve formatta çizimleri hızla üretmek için güçlü araçlardan yararlanın. Modelde yapılan değişiklikler görünümlerinizde ve kesitlerinizde otomatik olarak güncellendiğinden zamandan tasarruf edin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/4/title",
+          "text": "Fikirleri ve Tasarımları Sunun ve Görselleştirin"
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/4/description",
+          "text": "Allplan, ilk konseptlerden detaylı izlenecek yollara kadar fikirlerinizi sunmak ve görselleştirmek için çeşitli araçlar sunar. Müşterilerin binayı anlamasını sağlamak, Render araçlarıyla veya LUMION arayüzü aracılığıyla ikna edici görselleştirmeler oluşturmak ve Bimplus’taki inşaat toplantılarında projelerinizi koordine etmek ve tartışmak için modelleri kolayca erişilebilen bir 3B PDF’e aktarın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/0/title",
+          "text": "Başlangıç Maliyetlerini Değerlendirin"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/0/description",
+          "text": "Kapı listeleri, pencereler, kaplamalar, işçilikler, inşaat malzemeleri vb. raporlara dayalı olarak maliyet tahminlerini hızla modelleyin. Anında kullanabileceğiniz veya ihtiyacınız olan formata veya paftaya aktarabileceğiniz raporlardan yararlanın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/1/title",
+          "text": "Parametrik Boşluk Tasarımlarını Kolayca Detaylandırın"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/1/description",
+          "text": "Uygulamaları planlamak ve inşa edilebilirlik kontrolleri için ayrıntıları tasarımınıza uygulayın. Pencereleri, kapıları vb. tasarlamak için güçlü parametrik araçlardan yararlanın. Belirli standartlara göre bireysel tasarımlar oluşturun."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/2/title",
+          "text": "Akıllı Oda Kaplamalarını Tasarlayın ve Yönetin"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/2/description",
+          "text": "Sezgisel programlamanın avantajlarından yararlanın. Oda kaplamaları, odalara tek tek elemanlar olarak değil, bütünüyle akıllıca uygulanır. Bu, kaplama işlemlerinin merkezi olarak yönetilmesini sağlar."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/3/title",
+          "text": "Gerçekçi İç Mekanlar Yaratın"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/3/description",
+          "text": "Tasarımlarınızı döşemek için gerçekçi unsurlar uygulayın. Oda iç mekanlarını hızlı bir şekilde tasarlamak, projeniz genelinde kolayca çoğaltmak ve her oda için anında envanter çıkarmak için kütüphane elemanlarını kolayca uygulayın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/4/title",
+          "text": "Tasarım Değişikliklerini Yönet"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/4/description",
+          "text": "Objelerin akıllı parametrik ayarlamasıyla tasarımlarınızdaki değişiklikleri yönetin. Tasarım değişikliklerini saniyeler içinde uygulamak için değişiklikleri evrensel olarak uygulayın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/5/title",
+          "text": "Odaları ve Birimleri Yönetin"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/5/description",
+          "text": "Kat alanını anında gözden geçirmek için tek tek odaları veya kat gibi oda gruplarını kolayca analiz edin. Yatırım amaçlı alanı veya odalara tahsis edilen envanter unsurlarını hesaplayın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/6/title",
+          "text": "Yasal Gereksinimleri Doğrulayın"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/6/description",
+          "text": "Bina uygulamanıza yönelik özel hesaplamaların otomatik olarak oluşturulması için, mümkün olduğunda, Alman DIN 277 gibi ilgili bölgesel normları uygulayın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/7/title",
+          "text": "Nihai Uygulama Çiziminin Derlenmesi"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/7/description",
+          "text": "Şematik tasarım, sunum çizimleri, inşaat veya uygulama planları gibi tüm ihtiyaçlara uygun sunum tarzında çizimlerinizi kolaylıkla üretin. Üstün gösterim sunmak için hızlı ve sezgisel araçlardan yararlanın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/0/title",
+          "text": "Prefabrik Beton Gibi Çeşitli Malzemelerle Tasarım"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/0/description",
+          "text": "Prefabrik beton bireysel, canlı ve renkli olabilir; eğimli prekast duvarlar, yaratıcı cephe tasarımı için yapısal matrisler veya renkli beton, mimari vizyonların gerçekleştirilmesi için bol miktarda özgürlük sunar. Şimdi Allplan'daki entegre prefabrik fonksiyonları keşfedin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/1/title",
+          "text": "Gerekli Detaylara Sahip Çizimlerin Güvenilir Bir Şekilde Çıkarılması"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/1/description",
+          "text": "Allplan'da çizim oluşturmak, onları 3 boyutlu modelden çıkarmak kadar basittir. Bu, günlük iş akışını son derece kolaylaştırır. İlk yerleşimden sonra, modelin kendisinde veya özel çizim ekranında birçok değişiklik yapılabilir."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/2/title",
+          "text": "Proje Verilerini Organize Edin, Zenginleştirin ve Analiz Edin"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/2/description",
+          "text": "Allplan'daki verilerin çizim dosyası sistemi aracılığıyla etkin ve mantıksal yönetimi, yalnızca uygulamadaki performansı artırmakla kalmaz, aynı zamanda kullanıcının bireysel model alanlarını düzenlerken kendi performansını da artırır."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/3/title",
+          "text": "Proje Ortaklarıyla İşbirliği ve Koordinasyon Yapın"
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/3/description",
+          "text": "Senkronize Allplan ve Bimplus Konu Yönetimi ile görevlerin koordinasyonu, özellikle BIM yönetimi ve BIM koordinasyonunda gerçek bir avantajdır. Model kontrolü ve kalite kontrolü için Bimplus'tan Solibri'ye bir arayüz geliştirildi."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/4/description",
+          "text": "Bimplus, yapı mühendisleriyle çalışırken (SCIA) AutoConverter aracılığıyla avantaj sunar. Yapısal tasarımcılarla geliştirilmiş ve hızlandırılmış iletişim, daha hızlı inceleme ve karar üzerinde doğrudan etkiye sahiptir."
+        }
+      ],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/ax3000",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/ax3000",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/ax3000",
+      "redirected": false,
+      "htmlSha256": "1584e4c739e21f46dbd231b69e15d6ff98b18326fa22411b2a2b8d91d374d393",
+      "h1Count": 1,
+      "structuredTextCandidates": 6,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/ax3000-mekanik-tesisat",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/ax3000-mekanik-tesisat",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/ax3000-mekanik-tesisat",
+      "redirected": false,
+      "htmlSha256": "ff01380d2bc9e6abed6fd38d619b95b01a4b45377f8a00750418ac68873e374a",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/ax3000-virtual-reality",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/ax3000-virtual-reality",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/ax3000-virtual-reality",
+      "redirected": false,
+      "htmlSha256": "96057fcdd3ecc5a22185b074c0901b0d532485b48210138a76855e7712a365c7",
+      "h1Count": 1,
+      "structuredTextCandidates": 3,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/ax3000-yapi-fizigi",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/ax3000-yapi-fizigi",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/ax3000-yapi-fizigi",
+      "redirected": false,
+      "htmlSha256": "7a74164f18939fafa7d9e248dcb1b31a87d6f070e1cf08ecfe0c9244579acdc7",
+      "h1Count": 1,
+      "structuredTextCandidates": 3,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/ax3000/elektrik",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/ax3000/elektrik",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/ax3000/elektrik",
+      "redirected": false,
+      "htmlSha256": "4f37548bcacc96f3e8c6db3219b72ed7b46a86847e164f7646c2714c31f3eea4",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/ax3000/havalandirma",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/ax3000/havalandirma",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/ax3000/havalandirma",
+      "redirected": false,
+      "htmlSha256": "694e30275cb13f95fd0f73362b49a07b3bf135fe1e6b3295e9085c303eb67d56",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/ax3000/isitma",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/ax3000/isitma",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/ax3000/isitma",
+      "redirected": false,
+      "htmlSha256": "d89f699db559438374cacbeaa5b23651a4a4f3ddef6c0371a58a48212ad50221",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/ax3000/konut-havalandirma",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/ax3000/konut-havalandirma",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/ax3000/konut-havalandirma",
+      "redirected": false,
+      "htmlSha256": "73b06c0f0a287f93c18fbb16b024dd73ce6e5185c0f250f7a8ef9916397be0c5",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/ax3000/sihhi-tesisat",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/ax3000/sihhi-tesisat",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/ax3000/sihhi-tesisat",
+      "redirected": false,
+      "htmlSha256": "b435db9e21fad341f1afa4262419e860eaf30439d510cab8c8596cabec1b4401",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/ax3000/sprinkler",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/ax3000/sprinkler",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/ax3000/sprinkler",
+      "redirected": false,
+      "htmlSha256": "385af087728e56cf7107270e798789522399dcafd1a96bd5127a6dead6a5d40b",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/bimflex",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/bimflex",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/bimflex",
+      "redirected": false,
+      "htmlSha256": "2a19faf3bc6ac76d5dabc4baf5eca23be9d06719b1abea60cc235491a834942b",
+      "h1Count": 1,
+      "structuredTextCandidates": 31,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/bimx5",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/bimx5",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/bimx5",
+      "redirected": false,
+      "htmlSha256": "be4add524b08b883763e79a28d06c05e14b2578f9d68b6222ae4cf1046013efd",
+      "h1Count": 1,
+      "structuredTextCandidates": 13,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/bridge-design",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/bridge-design",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/bridge-design",
+      "redirected": false,
+      "htmlSha256": "fa1405dd3606d0ae9396e87978408e889a40abf665127eb401f8670c017cdc61",
+      "h1Count": 1,
+      "structuredTextCandidates": 25,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/cds-addon",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/cds-addon",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/cds-addon",
+      "redirected": false,
+      "htmlSha256": "60aa80ae0fb8aad364d2c2d4f70f9ce5f604f02a191eab72268e14219ce22684",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/features-allplan-bridge",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/features-allplan-bridge",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/features-allplan-bridge",
+      "redirected": false,
+      "htmlSha256": "b179f9a30757806163a4a5c815ce982a688902de4da369560e84e7420bf337f7",
+      "h1Count": 1,
+      "structuredTextCandidates": 10,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/imar-yonetmeligi-bim-eklentisi",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/imar-yonetmeligi-bim-eklentisi",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/imar-yonetmeligi-bim-eklentisi",
+      "redirected": false,
+      "htmlSha256": "56a257e92782231eda4974aa3122d712feed3ced3f33da5441576ff36262f855",
+      "h1Count": 1,
+      "structuredTextCandidates": 21,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/infrastructure",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/infrastructure",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/infrastructure",
+      "redirected": false,
+      "htmlSha256": "7395b1f66d47d4bad06c2a512cf075fe73c3f7b6ac7f9492c01a3e13a5c656ee",
+      "h1Count": 1,
+      "structuredTextCandidates": 41,
+      "notInInitialHtml": [
+        {
+          "pointer": "/workflowTabs/categories/0/items/1/description",
+          "text": "Herhangi bir proje planlamasına başlamadan önce kesin bir envanter önemlidir. Kat planları veya kadastral planlar gibi nihai belgeler, PDF veya görüntü dosyaları olarak Allplan içerisinde dönüşümlerin veya yeni binaların planlanması için bir temel olarak kullanılabilir. Hızlı değerlendirme sürelerini mümkün kılmak için Scalypso, saha nokta bulutu araştırmaları için bir dizi araç sağlar ve yeniden oluşturulan 3B elemanların gerçek zamanlı bir arayüz aracılığıyla Allplan’a aktarılmasına olanak tanır."
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/2/description",
+          "text": "Görevlerin senkronize Allplan ve Bimplus Konu Yönetimi ile koordinasyonu gerçek bir avantajdır. Allplan’ın yerel arayüzünde veri aktarımı verimli bir şekilde çalışır. Bimplus Konu Yönetimi açıktır ve IFC ve BCF’yi (her ikisi de OPEN BIM standardı) yönetebilir. İlgili tüm taraflar aynı düzeyde bilgiye erişir. Önemli kararlar daha erken alınabilir. İnşaat süreci daha hızlı ve sorunsuz ilerler."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/0/description",
+          "text": "Proje ne kadar karmaşık olursa olsun, Allplan ile her türlü 3D eleman oluşturulabilir. Herhangi bir serbest biçimli geometri, Allplan’ın bunları bileşen olarak tanıyacağı ve örneğin metraj alımında dikkate alacağı şekilde modellenebilir ve dönüştürülebilir. Serbest biçimli modelleyici, çok çeşitli karmaşık şekiller oluşturmayı kolaylaştırır. En karmaşık şekiller için bile hassas uygulama planlaması mümkündür."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/1/description",
+          "text": "Rögarlar, kanalizasyon ve servis hatları gibi yol gövdesinin yardımcı unsurları duruma tamamen parametrik olarak yerleştirilebilir ve yolun gidişatına göre uyarlanabilir. Hat ve rögar profilleri bir kütüphaneden seçilir ve daha sonra kolayca uyarlanabilir."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/2/description",
+          "text": "Görselleştirme, proje katılımcıları arasındaki işbirliğini ve iletişimi kolaylaştırır. Ayrıntılar, iyileştirmeler vb. için tüm disiplinler modeli birlikte analiz edebilir. Yapısal elemanların görsel temsili aynı zamanda geri bildirimi de kolaylaştırır. Allplan’ın mükemmel görselleştirme kalitesi sayesinde, donatı detay seviyesi gibi yapısal özellikler gerçek zamanlı olarak kontrol edilebilir ve farklılıklar hızlı bir şekilde çözülebilir."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/0/description",
+          "text": "Çizim dosyası sistemi sayesinde farklı model varyasyonlarının incelenmesi özellikle kolaydır. Bireysel model alanlarını düzenlerken programdaki performansın yanı sıra kullanıcı performansı da çizim dosyası sistemi tarafından büyük ölçüde iyileştirilir. Allplan, verilerin anlaşılır şekilde yapılandırılması nedeniyle özellikle büyük, karmaşık projeler için uygundur."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/1/description",
+          "text": "Allplan ile şantiye yerleşimini de planlayabilirsiniz. Her şantiye farklıdır ve bu nedenle bireysel, hassas planlama gerektirir. Bu zorlu mücadelede sizi desteklemek için Allplan, çakışma algılamalı ve basit kaldırma değerlendirmeli kule vinci gibi objeler sunar. Bunların özelleştirilmesi özellikle kolaydır ve ayrıca belirli üretici verilerine de bağlanabilir. İşbirliği işlevselliği ve güçlü araçlar, varyantların hızlı bir şekilde detaylandırılmasına olanak tanıyarak değişikliklerin etkili bir şekilde yönetilmesine ve doğru saha ve bina gereksinimlerinin hızlı bir şekilde oluşturulmasına olanak tanır."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/2/description",
+          "text": "Varyant çalışması ve yapısal analiz sonrasında modelde değişikliklerin olması oldukça normaldir. Bimplus sayesinde bu değişiklikler rahatlıkla belgelenebilir, bu da inşaat projesinin baştan sona sorunsuz ilerlemesini kolaylaştırır. Bimplus ile modelleri kolaylıkla karşılaştırılabilen, ayarlanabilen ve yönetilebilen varyantlar ve revizyonlar olarak temsil edebilirsiniz. Oluşturulması kolay slayt gösterilerinin yardımıyla sunumlar ve inşaat toplantılarında karar verme için mükemmel bir temele sahip olursunuz."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/0/description",
+          "text": "Genel düzenleme çizimleri yapının tek bir planda tam bir temsilini sağlar. İlk adım, 3B modeli ve içerdiği bilgileri uygun araçları kullanarak analiz etmektir. Allplan’ın kullanımı kolay ilişkili görünümleri ve kesitleri ile böyle bir planı hızlı bir şekilde oluşturabilir ve böylece tüm yapıyı kapsamlı bir şekilde görselleştirebilirsiniz. Daha sonra modelde yapılan değişiklikler kolaylıkla anlaşılabilecek ve müteakip proje aşamalarında bireysel elemanların konumu daha net bir şekilde tanınabilecektir."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/1/description",
+          "text": "İlk adımda, yapısal çizimler beton elemanların veya yapısal çelik elemanların tam geometrisi ve boyutları hakkında genel bir bakış sağlamalıdır. Bu temelde, bireysel elemanların şekli belirlenecek şekilde yapısal çizim gerçekleştirilir. İnşaat aşamasında her şeyin sorunsuz ilerlemesi için burada en yüksek hassasiyet gereklidir. Allplan ile betonarme yapılar için detaylı yapısal çizimler oluşturabilirsiniz. Kesitler ve görünümler gösterimlerine hızlı ve kolay bir şekilde uyarlanabilir. Bu, çizim oluşturma işlemini büyük ölçüde hızlandırır."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/2/description",
+          "text": "Allplan’da donatı 3 boyutlu model olarak oluşturulur. Sonuç olarak zamandan tasarruf edersiniz ve tasarım dökümanları için güvenilir bir temel oluşturursunuz. Konumlandırma yalnızca bir kez oluşturulur ve ondan türetilen tüm kesitlere otomatik olarak uyarlanır. Bu, çakışmaların görsel olarak tespit edilmesini veya çakışma kontrolü yoluyla otomatik olarak tanımlanmasını özellikle kolaylaştırır. Son olarak, akıllı Allplan raporları aracılığıyla tek bir düğmeye basılarak hassas çelik listeleri elde edilir. Allplan’daki kesitler aynı zamanda donatı yerleştirmede özellikle yararlı bir araçtır."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/3/description",
+          "text": "Şantiye yerleşim planı Allplan ile çok kolay bir şekilde görüntülenebilmektedir. 3B elemanlar ve kesitlerin ve kat planlarının birbirine bağlanması sayesinde değişiklikler otomatik olarak benimsendiği için artık önemli bir çaba gerektirmiyor."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/4/description",
+          "text": "Allplan mümkün olan en kısa sürede hassas donatı planlamasına olanak sağlar. 3B donatılandırma sayesinde planlama sürecindeki hatalar en aza indirilebilir. Yalnızca birkaç tıklamayla modelinizde çakışma olup olmadığını kontrol edebilir ve ardından belirli prefabrik elemanlarla ilgili üretim günleri için bile çelik listeleri oluşturabilirsiniz."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/5/description",
+          "text": "Bimplus sayesinde şantiyede meydana gelen öngörülemeyen değişiklikler çok kısa sürede Allplan modeline uyarlanıp dahil edilebilmektedir."
+        }
+      ],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/mep",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/mep",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/mep",
+      "redirected": false,
+      "htmlSha256": "e0819df42e6b4ef10db2a380289f0e51112eb861cc2ad82004f30e567d6c0f12",
+      "h1Count": 1,
+      "structuredTextCandidates": 38,
+      "notInInitialHtml": [
+        {
+          "pointer": "/workflowTabs/categories/1/items/0/description",
+          "text": "Allplan ve AX3000 – Sıhhi Tesisat modülü ile drenaj tasarımında değerli zaman kazanırsınız. Eksiksiz 3B kütüphaneler ve üretici veritabanları, sıhhi objeler için otomatik bağlantı fonksiyonları ve kapsamlı hesaplamalar ve çıktı seçenekleriyle boru ağlarının planlamasını 3B olarak optimize edin."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/1/description",
+          "text": "AX3000’nin gelişmiş tasarım yardımları sayesinde sprinkler sistemlerini hızlı ve zahmetsizce planlayın. Mevcut Allplan CAD fonksiyonlarıyla rahatlıkla çalışabilirsiniz. Easyline’ı kullanarak sprinkler sistemini zorlu inşaat koşullarında bile güvenli ve hızlı bir şekilde boyutlandırabilirsiniz. Sürekli olarak güncellenen sprinkler bileşenleri kütüphanesi sayesinde, kaplinler ve kılavuz manşonlarıyla bile sistemi en başından itibaren hatasız ve mantıksal olarak tasarlayabilirsiniz. Elbette kendi sprinkler türlerinizi de oluşturabilir ve böylece bireysel bir çözüm geliştirebilirsiniz."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/2/description",
+          "text": "Allplan ve AX3000’in Elektrik modülü ile, elektrik planlamasının tüm alanları için kullanımı rahat ve etkili bir araca sahip olursunuz: boş kablo kanalı ve güzergah planlamasından elektrik tabanının inşasına ve devrelerin kontrolüne, tamamlanmış değerlendirmelere ve Microsoft Excel listelerine kadar."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/3/title",
+          "text": "Konut Havalandırma Tasarımı"
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/3/description",
+          "text": "Konut havalandırma alanında Allplan ve AX3000 çözümleriyle gerçekleştirilebilecek görev yelpazesi, AX3000 Oda Kitabı kullanılarak havalandırma konseptinin oluşturulmasından, hava hacimlerinin belirlenmesine ve tüm bileşenlerle ve parça listeleriyle birlikte 3B olarak otomatik, ayrıntılı planlamaya kadar uzanır."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/4/description",
+          "text": "AX3000’nin ısıtma modülü, ısıtma planlamasına yönelik en modern ve kapsamlı çözümlerden biridir. Allplan ve ısıtma modülünün birleşimiyle karmaşık ısıtma sistemlerini bile hızlı, hatasız ve az çalışmayla oluşturabilirsiniz. Bunun nedeni, yazılımın entegre malzeme veritabanları, çok sayıda otomasyon fonksiyonu ve etkileşimli çizim fonksiyonları sayesinde birçok işi elinizden almasıdır."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/5/description",
+          "text": "AX3000 Sanal Gerçeklik eklentisi, mimarların, mühendislerin, müteahhitlerin ve inşaat sürecine dahil olan diğer kişilerin, temel atma töreninden önce bile bir binayı gerçekçi bir şekilde görüntülemelerine olanak tanır. Bunun önkoşulu, ALLPLAN’ın açık BIM platformu Bimplus’taki dijital bina modeli ve ideal olarak HTC VIVE® VR gözlükleridir. VR modeli oluşturulduktan sonra bina modeli, verilerin daha fazla hazırlanmasına gerek kalmadan hemen sanal olarak incelenebilir. Bina çevresel bir senaryo da dahil olmak üzere görselleştirilebilir. Dokuların ayarlanması gibi güneşin seyrinin simülasyonu da mümkündür. Binadaki hareket klavye veya isteğe bağlı bir gamepad aracılığıyla yapılır."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/0/description",
+          "text": "AX3000 Enerji Modülü ile bina geometrisine dayalı değişken karşılaştırmaları da dahil olmak üzere kapsamlı değerlendirmeler oluşturabilirsiniz. Enerji kazanç ve kayıplarının grafiksel gösterimine ek olarak, durum raporu, KfW çevrimiçi aracına aktarım ve DiBT’nin baskı uygulama modülüne aktarım yer alır. Böylece ilgili tüm standartların karşılandığından emin olursunuz."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/1/title",
+          "text": "Havalandırma ve Soğutma Yükü Hesabı"
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/1/description",
+          "text": "Allplan ve AX3000 Havalandırma modülü ile ayrıntılı uygulama ve kurulum planları oluşturmak için etkili bir araca sahip olursunuz. Hızlı Easyline boyutlandırmayla başlayın ve tanıdık Allplan çizim fonksiyonlarını kullanın. AX3000 otomatik etiketleme, otomatik kesit bağlantıları, ara uzunluk hesaplamaları ve isteğe göre kesit görünümleri ile net 3B gösterim sunar; basınç düşüşü, ses ve sıcaklık düşüşü gibi kapsamlı kanal sistemi hesaplamaları sağlar."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/2/description",
+          "text": "Allplan bina modelinde ısıtma tasarımı yapıldıktan sonra AX3000 Oda Kitabı ile ısı kaybı hesaplaması yapılır."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/3/description",
+          "text": "AX3000 Sıcaklık Simülasyon modülü, bir binanın dinamik termal simülasyonu için ideal bir araçtır. Bölge ve sistem tanımları enerji sertifikasından otomatik olarak alınabilir veya serbestçe tanımlanabilir. İç ve dış etkileyici faktörleri belirleyin ve saatlik ısıtma ve soğutma yükünün seyrini otomatik olarak hesaplayın."
+        }
+      ],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/modeling-of-precast-girder-bridges",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/modeling-of-precast-girder-bridges",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/modeling-of-precast-girder-bridges",
+      "redirected": false,
+      "htmlSha256": "ee958e0fd640811f5443e8882ae364e4bb677275e7308cd5b57ee60ec6cf35c4",
+      "h1Count": 1,
+      "structuredTextCandidates": 10,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/oska",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/oska",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/oska",
+      "redirected": false,
+      "htmlSha256": "efe6c9cef0b8aebe8cc359cb64b4d9d86d4b23f3cfde5d8c16c2fcb14282f833",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/poz-catalog",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/poz-catalog",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/poz-catalog",
+      "redirected": false,
+      "htmlSha256": "6c7217f8a9c995e37be28dac5d1cdfcfb1b820749de08a3dd8396e6ff8686071",
+      "h1Count": 1,
+      "structuredTextCandidates": 1,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/precast",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/precast",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/precast",
+      "redirected": false,
+      "htmlSha256": "c1562b3d5ed26b8050da31eab977f99f22bd0b277abecdf2ef905050bca38288",
+      "h1Count": 1,
+      "structuredTextCandidates": 22,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/pythonpart",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/pythonpart",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/pythonpart",
+      "redirected": false,
+      "htmlSha256": "7a2f5a2f85c0175581e873ee2f8f1e7c27ed3c591c376389c3276423c27abf40",
+      "h1Count": 1,
+      "structuredTextCandidates": 54,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/rebar-engineering",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/rebar-engineering",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/rebar-engineering",
+      "redirected": false,
+      "htmlSha256": "3a57c2696ca5322b4938a83445776525dcd1a6399b58dd9718687b12c9f1704c",
+      "h1Count": 1,
+      "structuredTextCandidates": 18,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/road-railway",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/road-railway",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/road-railway",
+      "redirected": false,
+      "htmlSha256": "184facb746643ef7736e5603a1485d92226457a6ced7a218f69c0f9ea6a1dc0c",
+      "h1Count": 1,
+      "structuredTextCandidates": 31,
+      "notInInitialHtml": [
+        {
+          "pointer": "/workflowTabs/categories/0/items/1/description",
+          "text": "Parsel sınırları, taşkın alanları, yol ağları ve kritik zonlar."
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/2/description",
+          "text": "IFC 4.3'e uygun yol elemanları ve mantıksal bölümler."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/0/description",
+          "text": "Tutarlı parametrik kavramla her zaman geometrik uyarlamalar."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/1/description",
+          "text": "Serbest profillerin ekstrüzyonu ile ray, bariyer ve destekler."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/2/description",
+          "text": "Disiplinler arası analiz ve iletişimi kolaylaştırır."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/0/description",
+          "text": "Farklı hizalamaları hızla kaydedin ve karşılaştırın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/1/description",
+          "text": "Drone verisiyle saha durumunu modele karşılaştırın."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/0/description",
+          "text": "Kesit, boyuna kesit ve saha planı; modelle senkron."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/1/description",
+          "text": "Kazık noktaları, mesafeler, hacimler ve veri aktarımı."
+        }
+      ],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/scalypso",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/scalypso",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/scalypso",
+      "redirected": false,
+      "htmlSha256": "c718628ae7053f61ebbb1646876ee3cd8d182bdc5ab547fbd0bf78193ec11075",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/scalypso/converter",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/scalypso/converter",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/scalypso/converter",
+      "redirected": false,
+      "htmlSha256": "cc79ae2876c1e2d09b5862259e855f358432f5fd051b98160674375ed6399905",
+      "h1Count": 1,
+      "structuredTextCandidates": 3,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/scalypso/mobile",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/scalypso/mobile",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/scalypso/mobile",
+      "redirected": false,
+      "htmlSha256": "8eca5fb9a72623ddb0438b9d2ba59498268f7528a654e3c8681a2fbf2e5086e4",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/scalypso/modeler",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/scalypso/modeler",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/scalypso/modeler",
+      "redirected": false,
+      "htmlSha256": "195606ddb8436c0837c665ec71126623c4b8ea9866edcd6e6be87e42f384f223",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/scalypso/videos",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/scalypso/videos",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/scalypso/videos",
+      "redirected": false,
+      "htmlSha256": "1b91ef5f584a790c44430cd49e2715a4fa4a01f1a214223421d48698973cf549",
+      "h1Count": 1,
+      "structuredTextCandidates": 8,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/scalypso/viewer",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/scalypso/viewer",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/scalypso/viewer",
+      "redirected": false,
+      "htmlSha256": "4d842b59d571fa3c27779df3d87e40d2ffc102c09820bfe4716ff4086d7104ce",
+      "h1Count": 1,
+      "structuredTextCandidates": 0,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/site-planning",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/site-planning",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/site-planning",
+      "redirected": false,
+      "htmlSha256": "8d52d7ac11dd85cbae652c64146f6ea46b8b7e39cb8f6e3e4ff406e2258fc288",
+      "h1Count": 1,
+      "structuredTextCandidates": 26,
+      "notInInitialHtml": [
+        {
+          "pointer": "/workflowTabs/categories/0/items/1/description",
+          "text": "Basit 3B model ve çok formatlı içe aktarım; 50+ format desteği."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/0/description",
+          "text": "Parametrik yatay/dikey aks tanımı; plan ve rapor üretimi."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/1/description",
+          "text": "Rögar ve hatların parametrik yerleşimi; kolay uyarlama."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/2/description",
+          "text": "Vinç, çit, ofis ve konteyner objeleri esnek uyarlama."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/3/description",
+          "text": "Fore kazık, palplanş ve ankraj fonksiyonları parametrik."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/0/description",
+          "text": "Çakışmaları önleyerek en uygun vinç konumu ve kapasite kontrolü."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/1/description",
+          "text": "Bimplus ile varyant ve revizyon yönetimi; karar desteği."
+        }
+      ],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/steel",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/steel",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/steel",
+      "redirected": false,
+      "htmlSha256": "baca27b6e64c131b29102cfda2c1620723bbb773bdf22821042f92cbfaaea922",
+      "h1Count": 1,
+      "structuredTextCandidates": 18,
+      "notInInitialHtml": [],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    },
+    {
+      "route": "/solutions/structural",
+      "requestedUrl": "http://127.0.0.1:3001/solutions/structural",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:3001/solutions/structural",
+      "redirected": false,
+      "htmlSha256": "4e3e02cc8324aa5d45af98754ae2130efb1bd1ace4db2a298190f0d793a45a25",
+      "h1Count": 1,
+      "structuredTextCandidates": 37,
+      "notInInitialHtml": [
+        {
+          "pointer": "/workflowTabs/categories/0/items/1/description",
+          "text": "PDF ve görüntü tabanlı planlar ile temel oluşturun; nokta bulutları Scalypso ile Allplan’a aktarılır."
+        },
+        {
+          "pointer": "/workflowTabs/categories/0/items/2/description",
+          "text": "Allplan ve Bimplus Konu Yönetimi ile senkronizasyon; IFC/BCF desteği ve net karar süreçleri."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/0/description",
+          "text": "Her türlü 3D eleman; obje olarak tanıma ve metraj uyumu."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/1/description",
+          "text": "Yol gövdesi yardımcı unsurlar parametrik yerleşim ve uyarlama."
+        },
+        {
+          "pointer": "/workflowTabs/categories/1/items/2/description",
+          "text": "Disiplinler arası analiz ve geri bildirim için yüksek kalite görselleştirme."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/0/description",
+          "text": "Çizim dosyası sistemi ile performans ve düzen artırımı; büyük projelere uygun yapılandırma."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/1/description",
+          "text": "Vinç ve ekipman objeleri ile yerleşim; çakışma algılama ve hızlı varyant detaylandırma."
+        },
+        {
+          "pointer": "/workflowTabs/categories/2/items/2/description",
+          "text": "Bimplus ile varyant ve revizyon karşılaştırma; toplantılarda karar desteği."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/0/description",
+          "text": "İlişkili görünüm ve kesitlerle hızlı plan üretimi; değişikliklerin anlaşılabilirliği."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/1/description",
+          "text": "Beton/çelik elemanların hassas çizimleri; gösterimlere hızlı uyarlama."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/2/description",
+          "text": "3B donatı ve otomatik kesit uyarlama; çakışma kontrolü ve çelik listeleri."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/3/description",
+          "text": "Elemanlar ve kesitlerin bağlanması ile otomatik değişiklik benimseme."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/4/description",
+          "text": "Hataları minimize eden 3B donatılandırma ve hızlı liste üretimi."
+        },
+        {
+          "pointer": "/workflowTabs/categories/3/items/5/description",
+          "text": "Şantiye değişikliklerinin modele hızla uyarlanması."
+        }
+      ],
+      "emptyStructuredSections": [],
+      "localPageLinksWithoutRecord": []
+    }
+  ]
+}

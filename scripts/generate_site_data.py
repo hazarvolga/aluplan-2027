@@ -11,6 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from extract_structured_pages import build_all_structured_pages
 from document_assets import prepare_documents, sync_documents, write_manifest
 from request_links import normalize_request_links
+from content_policy import apply_approved_content_policy
 
 STRUCTURED_LAYOUTS = build_all_structured_pages()
 
@@ -845,7 +846,7 @@ for raw_page in raw_200_pages:
 
 # Only the retired CDS/PythonPart/Scalypso demand form is remapped.
 # License manager forms, support and official trial destinations remain distinct.
-pages_data = normalize_request_links(pages_data)
+pages_data = apply_approved_content_policy(normalize_request_links(pages_data))
 
 data_dir = ROOT / "src/data"
 data_dir.mkdir(parents=True, exist_ok=True)

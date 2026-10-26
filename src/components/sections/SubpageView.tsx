@@ -13,6 +13,7 @@ import {
   SUPPORT_PORTAL_URL
 } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
+import { TrainingTabs } from './TrainingTabs';
 
 const allPlaylists = getAllPlaylists();
 const playlistByUrl = new Map(allPlaylists.map((p) => [p.url, p]));
@@ -783,6 +784,10 @@ export function SubpageView({
         </section>
       )}
 
+      {page.path === '/solutions-v2/training' && page.structuredLayout?.trainingTabs && (
+        <TrainingTabs content={page.structuredLayout.trainingTabs} />
+      )}
+
       {page.path === '/solutions-v2/training' && (
         <section className="preview-section preview-section--subtle" aria-labelledby="training-request-heading">
           <div className="alu-container alu-stack">
@@ -1182,7 +1187,7 @@ export function SubpageView({
       )}
 
       {/* Structured Page Layout (Live-Site 1:1 Section Architecture for Product & Solution Pages) */}
-      {page.structuredLayout ? (
+      {page.structuredLayout && !page.structuredLayout.trainingTabs ? (
         <div className="alu-structured-page">
           {(() => {
             const sl = page.structuredLayout!;
@@ -1371,6 +1376,9 @@ export function SubpageView({
                           <h2 className="alu-h1" style={{ margin: 0 }}>
                             {sl.intro.title}
                           </h2>
+                          {sl.intro.paragraphs?.map((paragraph, paragraphIndex) => (
+                            <p key={paragraphIndex} className="alu-body">{paragraph}</p>
+                          ))}
                           {sl.intro.bullets.length > 0 && (
                             <ul className="alu-intro-split__bullets">
                               {sl.intro.bullets.map((b, bIdx) => (

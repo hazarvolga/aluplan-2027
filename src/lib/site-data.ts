@@ -59,6 +59,7 @@ export interface InteractiveState {
 }
 
 export interface StructuredIntro {
+  paragraphs?: string[];
   kicker?: string;
   title: string;
   bullets: string[];
@@ -186,7 +187,22 @@ export interface StructuredReferencesDirectory {
   items: StructuredReferenceItem[];
 }
 
+export interface StructuredTrainingTabs {
+  title: string;
+  tabs: {
+    key: string;
+    label: string;
+    title: string;
+    paragraphs: string[];
+    features: string[];
+    href: string;
+    linkLabel: string;
+    imageSrc?: string;
+  }[];
+}
+
 export interface StructuredPageLayout {
+  trainingTabs?: StructuredTrainingTabs;
   intro?: StructuredIntro;
   workflowLinks?: StructuredWorkflowLink[] | null;
   stats?: StructuredStatItem[];

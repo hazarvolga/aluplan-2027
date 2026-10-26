@@ -1113,7 +1113,7 @@
       "Çalışma Saatleri",
       "Pazartesi - Cuma: 09:00 - 18:00",
       "Ücretsiz Deneme",
-      "30 gün boyunca Allplan'ı ücretsiz deneyin. Kredi kartı bilgisi gerekmez.",
+      "14 gün boyunca Allplan'ı ücretsiz deneyin. Kredi kartı bilgisi gerekmez.",
       "Deneme Başlat",
       "Teklif Talep Formu",
       "İhtiyaçlarınıza özel fiyat teklifi için satış ekibimizle görüşün.",
@@ -1165,7 +1165,7 @@
         "heading": "Ücretsiz Deneme",
         "level": 3,
         "items": [
-          "30 gün boyunca Allplan'ı ücretsiz deneyin. Kredi kartı bilgisi gerekmez.",
+          "14 gün boyunca Allplan'ı ücretsiz deneyin. Kredi kartı bilgisi gerekmez.",
           "Deneme Başlat"
         ]
       },
@@ -3577,6 +3577,10 @@
       "intro": {
         "kicker": "/ GENEL BAKIŞ · NEDEN ALLPLAN 2026?",
         "title": "Mimarlar, mühendisler, üreticiler ve inşaat profesyonelleri için verimlilik ve iş birliğini yeniden tanımlıyor",
+        "paragraphs": [
+          "ALLPLAN 2026 ürün sürümleri, modernizasyon, otomasyon ve entegrasyon odaklı yaklaşımıyla, AEC (Mimarlık, Mühendislik ve İnşaat) sektörünün değişen ihtiyaçlarına güçlü yanıtlar veriyor. Bu yeni sürümler; gelişmiş araçlar, kesintisiz süreçler ve ileri düzey birlikte çalışabilirlik sunarak üretkenliği yeni bir seviyeye taşıyor.",
+          "ALLPLAN çözümleri, bina ve altyapı modelleme, tasarım, detaylandırma ve üretimden inşaata kadar uçtan uca iş birliğine dayalı bir çalışma akışı sağlıyor. Yeni geliştirmeler; projelerinizi hızlandırır, doğruluğu artırır, yenilik ve sürdürülebilirliği teşvik eder ve ekiplerin tüm proje yaşam döngüsü boyunca çevik ve uyumlu çalışmasını güvence altına alır."
+        ],
         "bullets": [
           "Akıllı bulut tabanlı iş birliği ile tüm proje yaşam döngüsü boyunca koordinasyon",
           "Disiplinler arası üstün birlikte çalışabilirlik, tasarımdan mühendislik iş akışlarına kesintisiz entegrasyon",
@@ -5306,7 +5310,62 @@
           "title": "ALLPLAN Bulut Hizmetleri",
           "subtitle": "Bulut tabanlı iş birliği, model görüntüleme, pafta dağıtımı ve yapay zeka destekli görselleştirme araçları.",
           "columns": 3,
-          "items": []
+          "items": [
+            {
+              "title": "Bulut Tabanlı İşbirliği",
+              "description": "Bimplus Pro, bulut tabanlı BIM işbirliği platformu.",
+              "imageSrc": "/assets/products/allplan-concept/remote/cloud/cloud_based_collaboration.jpg",
+              "youtubeId": "7xzpEhLQhEI"
+            },
+            {
+              "title": "Proje Takım Çalışması",
+              "description": "ALLPLAN Share, bir şirket ağı üzerinden ekip çalışmasını sağlar; uzaktan çalışan ekip üyeleri için de idealdir.",
+              "imageSrc": "/assets/products/allplan-professional/project-teamwork.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "Çizim ve Plan Dağıtımı",
+              "description": "Çeşitli plan formatlarının oluşturulmasını ve dağıtımını yönetmek için özel olarak tasarlanmış web tabanlı plan dağıtım aracı ALLPLAN Exchange, ayrıca e-posta grupları aracılığıyla otomatik değişiklik bildirimleri sağlar.",
+              "imageSrc": "/assets/products/allplan-professional/plan-distribution.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "Analitik Model Üretimi",
+              "description": "AutoConverter aracılığıyla geometrik modellerin, Frilo Statics, Scia Engineer gibi yapısal analiz çözümleri tarafından doğrudan kullanılabilen analitik modellere akıllı bir şekilde dönüştürülmesi.",
+              "imageSrc": "/assets/products/allplan-professional/analytical-model.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "Tasarım Kontrolü",
+              "description": "Solibri Inside, kullanıcı istediği zaman ALLPLAN modellerinde kontroller gerçekleştirebilir; bu, ALLPLAN içindeki BIM Explorer'dan palet benzeri bir işlevsellik kullanarak yapılır. (ALLPLAN Abonelik lisansı ile birlikte 12 aylık Solibri Inside aboneliği dahildir.)",
+              "imageSrc": "/assets/products/allplan-professional/clash-detection.jpg",
+              "youtubeId": "t4axrE0TWO4"
+            },
+            {
+              "title": "Ofis Ekip Çalışması",
+              "description": "ALLPLAN Çalışma Grubu Yöneticisi aracılığıyla yerel bir şirket ağı içinde verimli ekip çalışmasını kolaylaştırın.",
+              "imageSrc": "/assets/products/allplan-professional/workgroup-manager.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "Bulut Destekli Proje Kaynakları",
+              "description": "Bulut ofis kaynakları, ALLPLAN proje kaynaklarının tamamen bulut tabanlı dağıtımını sağlar.",
+              "imageSrc": "/assets/products/allplan-professional/cloud-resources.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "ALLPLAN Model Viewer",
+              "description": "Yeni bir dosyayı hızlıca önizlemek, IFC modellerini görsel olarak görüntülemek ve tam olarak yüklemeden önce kontrol etmek için kullanılır. (Sadece ALLPLAN Aboneliği veya Bimplus Professional satın alımı ile kullanılabilir.)",
+              "imageSrc": "/assets/products/allplan-professional/model-viewer.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "ALLPLAN - Bluebeam Bağlantısı",
+              "description": "Geliştirilmiş iş akışları – dijital teslim sürecine yardımcı olmak için Bluebeam ile bağlantı kuracağız. Kullanıcılar, Bluebeam Studio Proje ortamından ALLPLAN iş akışlarına 2D belgeleri kolayca aktarabilecekler.",
+              "imageSrc": "/assets/products/allplan-professional/bimplus-pro.jpg",
+              "youtubeId": "u4GZUL7WdQU"
+            }
+          ]
         },
         {
           "kicker": "/ OPSİYONEL EKLENTİ VE LİSANSLAR",
@@ -7804,7 +7863,62 @@
           "title": "ALLPLAN Bulut Hizmetleri",
           "subtitle": "Bulut tabanlı iş birliği, model görüntüleme, pafta dağıtımı ve yapay zeka destekli görselleştirme araçları.",
           "columns": 3,
-          "items": []
+          "items": [
+            {
+              "title": "Bulut Tabanlı İşbirliği",
+              "description": "Bimplus Pro, bulut tabanlı BIM işbirliği platformu.",
+              "imageSrc": "/assets/products/allplan-concept/remote/cloud/cloud_based_collaboration.jpg",
+              "youtubeId": "7xzpEhLQhEI"
+            },
+            {
+              "title": "Proje Takım Çalışması",
+              "description": "ALLPLAN Share, bir şirket ağı üzerinden ekip çalışmasını sağlar; uzaktan çalışan ekip üyeleri için de idealdir.",
+              "imageSrc": "/assets/products/allplan-professional/project-teamwork.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "Çizim ve Plan Dağıtımı",
+              "description": "Çeşitli plan formatlarının oluşturulmasını ve dağıtımını yönetmek için özel olarak tasarlanmış web tabanlı plan dağıtım aracı ALLPLAN Exchange, ayrıca e-posta grupları aracılığıyla otomatik değişiklik bildirimleri sağlar.",
+              "imageSrc": "/assets/products/allplan-professional/plan-distribution.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "Analitik Model Üretimi",
+              "description": "AutoConverter aracılığıyla geometrik modellerin, Frilo Statics, Scia Engineer gibi yapısal analiz çözümleri tarafından doğrudan kullanılabilen analitik modellere akıllı bir şekilde dönüştürülmesi.",
+              "imageSrc": "/assets/products/allplan-professional/analytical-model.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "Tasarım Kontrolü",
+              "description": "Solibri Inside, kullanıcı istediği zaman ALLPLAN modellerinde kontroller gerçekleştirebilir; bu, ALLPLAN içindeki BIM Explorer'dan palet benzeri bir işlevsellik kullanarak yapılır. (ALLPLAN Abonelik lisansı ile birlikte 12 aylık Solibri Inside aboneliği dahildir.)",
+              "imageSrc": "/assets/products/allplan-professional/clash-detection.jpg",
+              "youtubeId": "t4axrE0TWO4"
+            },
+            {
+              "title": "Ofis Ekip Çalışması",
+              "description": "ALLPLAN Çalışma Grubu Yöneticisi aracılığıyla yerel bir şirket ağı içinde verimli ekip çalışmasını kolaylaştırın.",
+              "imageSrc": "/assets/products/allplan-professional/workgroup-manager.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "Bulut Destekli Proje Kaynakları",
+              "description": "Bulut ofis kaynakları, ALLPLAN proje kaynaklarının tamamen bulut tabanlı dağıtımını sağlar.",
+              "imageSrc": "/assets/products/allplan-professional/cloud-resources.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "ALLPLAN Model Viewer",
+              "description": "Yeni bir dosyayı hızlıca önizlemek, IFC modellerini görsel olarak görüntülemek ve tam olarak yüklemeden önce kontrol etmek için kullanılır. (Sadece ALLPLAN Aboneliği veya Bimplus Professional satın alımı ile kullanılabilir.)",
+              "imageSrc": "/assets/products/allplan-professional/model-viewer.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "ALLPLAN - Bluebeam Bağlantısı",
+              "description": "Geliştirilmiş iş akışları – dijital teslim sürecine yardımcı olmak için Bluebeam ile bağlantı kuracağız. Kullanıcılar, Bluebeam Studio Proje ortamından ALLPLAN iş akışlarına 2D belgeleri kolayca aktarabilecekler.",
+              "imageSrc": "/assets/products/allplan-professional/bimplus-pro.jpg",
+              "youtubeId": "u4GZUL7WdQU"
+            }
+          ]
         },
         {
           "kicker": "/ OPSİYONEL EKLENTİ VE LİSANSLAR",
@@ -9056,7 +9170,62 @@
           "title": "ALLPLAN Bulut Hizmetleri",
           "subtitle": "Bulut tabanlı iş birliği, model görüntüleme, pafta dağıtımı ve yapay zeka destekli görselleştirme araçları.",
           "columns": 3,
-          "items": []
+          "items": [
+            {
+              "title": "Bulut Tabanlı İşbirliği",
+              "description": "Bimplus Pro, bulut tabanlı BIM işbirliği platformu.",
+              "imageSrc": "/assets/products/allplan-concept/remote/cloud/cloud_based_collaboration.jpg",
+              "youtubeId": "7xzpEhLQhEI"
+            },
+            {
+              "title": "Proje Takım Çalışması",
+              "description": "ALLPLAN Share, bir şirket ağı üzerinden ekip çalışmasını sağlar; uzaktan çalışan ekip üyeleri için de idealdir.",
+              "imageSrc": "/assets/products/allplan-professional/project-teamwork.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "Çizim ve Plan Dağıtımı",
+              "description": "Çeşitli plan formatlarının oluşturulmasını ve dağıtımını yönetmek için özel olarak tasarlanmış web tabanlı plan dağıtım aracı ALLPLAN Exchange, ayrıca e-posta grupları aracılığıyla otomatik değişiklik bildirimleri sağlar.",
+              "imageSrc": "/assets/products/allplan-professional/plan-distribution.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "Analitik Model Üretimi",
+              "description": "AutoConverter aracılığıyla geometrik modellerin, Frilo Statics, Scia Engineer gibi yapısal analiz çözümleri tarafından doğrudan kullanılabilen analitik modellere akıllı bir şekilde dönüştürülmesi.",
+              "imageSrc": "/assets/products/allplan-professional/analytical-model.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "Tasarım Kontrolü",
+              "description": "Solibri Inside, kullanıcı istediği zaman ALLPLAN modellerinde kontroller gerçekleştirebilir; bu, ALLPLAN içindeki BIM Explorer'dan palet benzeri bir işlevsellik kullanarak yapılır. (ALLPLAN Abonelik lisansı ile birlikte 12 aylık Solibri Inside aboneliği dahildir.)",
+              "imageSrc": "/assets/products/allplan-professional/clash-detection.jpg",
+              "youtubeId": "t4axrE0TWO4"
+            },
+            {
+              "title": "Ofis Ekip Çalışması",
+              "description": "ALLPLAN Çalışma Grubu Yöneticisi aracılığıyla yerel bir şirket ağı içinde verimli ekip çalışmasını kolaylaştırın.",
+              "imageSrc": "/assets/products/allplan-professional/workgroup-manager.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "Bulut Destekli Proje Kaynakları",
+              "description": "Bulut ofis kaynakları, ALLPLAN proje kaynaklarının tamamen bulut tabanlı dağıtımını sağlar.",
+              "imageSrc": "/assets/products/allplan-professional/cloud-resources.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "ALLPLAN Model Viewer",
+              "description": "Yeni bir dosyayı hızlıca önizlemek, IFC modellerini görsel olarak görüntülemek ve tam olarak yüklemeden önce kontrol etmek için kullanılır. (Sadece ALLPLAN Aboneliği veya Bimplus Professional satın alımı ile kullanılabilir.)",
+              "imageSrc": "/assets/products/allplan-professional/model-viewer.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "ALLPLAN - Bluebeam Bağlantısı",
+              "description": "Geliştirilmiş iş akışları – dijital teslim sürecine yardımcı olmak için Bluebeam ile bağlantı kuracağız. Kullanıcılar, Bluebeam Studio Proje ortamından ALLPLAN iş akışlarına 2D belgeleri kolayca aktarabilecekler.",
+              "imageSrc": "/assets/products/allplan-professional/bimplus-pro.jpg",
+              "youtubeId": "u4GZUL7WdQU"
+            }
+          ]
         },
         {
           "kicker": "/ OPSİYONEL EKLENTİ VE LİSANSLAR",
@@ -10725,6 +10894,60 @@
           "subtitle": "Bulut tabanlı iş birliği, model görüntüleme, pafta dağıtımı ve yapay zeka destekli görselleştirme araçları.",
           "columns": 3,
           "items": [
+            {
+              "title": "Bulut Tabanlı İşbirliği",
+              "description": "Bimplus Pro, bulut tabanlı BIM işbirliği platformu.",
+              "imageSrc": "/assets/products/allplan-concept/remote/cloud/cloud_based_collaboration.jpg",
+              "youtubeId": "7xzpEhLQhEI"
+            },
+            {
+              "title": "Proje Takım Çalışması",
+              "description": "ALLPLAN Share, bir şirket ağı üzerinden ekip çalışmasını sağlar; uzaktan çalışan ekip üyeleri için de idealdir.",
+              "imageSrc": "/assets/products/allplan-professional/project-teamwork.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "Çizim ve Plan Dağıtımı",
+              "description": "Çeşitli plan formatlarının oluşturulmasını ve dağıtımını yönetmek için özel olarak tasarlanmış web tabanlı plan dağıtım aracı ALLPLAN Exchange, ayrıca e-posta grupları aracılığıyla otomatik değişiklik bildirimleri sağlar.",
+              "imageSrc": "/assets/products/allplan-professional/plan-distribution.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "Analitik Model Üretimi",
+              "description": "AutoConverter aracılığıyla geometrik modellerin, Frilo Statics, Scia Engineer gibi yapısal analiz çözümleri tarafından doğrudan kullanılabilen analitik modellere akıllı bir şekilde dönüştürülmesi.",
+              "imageSrc": "/assets/products/allplan-professional/analytical-model.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "Tasarım Kontrolü",
+              "description": "Solibri Inside, kullanıcı istediği zaman ALLPLAN modellerinde kontroller gerçekleştirebilir; bu, ALLPLAN içindeki BIM Explorer'dan palet benzeri bir işlevsellik kullanarak yapılır. (ALLPLAN Abonelik lisansı ile birlikte 12 aylık Solibri Inside aboneliği dahildir.)",
+              "imageSrc": "/assets/products/allplan-professional/clash-detection.jpg",
+              "youtubeId": "t4axrE0TWO4"
+            },
+            {
+              "title": "Ofis Ekip Çalışması",
+              "description": "ALLPLAN Çalışma Grubu Yöneticisi aracılığıyla yerel bir şirket ağı içinde verimli ekip çalışmasını kolaylaştırın.",
+              "imageSrc": "/assets/products/allplan-professional/workgroup-manager.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "Bulut Destekli Proje Kaynakları",
+              "description": "Bulut ofis kaynakları, ALLPLAN proje kaynaklarının tamamen bulut tabanlı dağıtımını sağlar.",
+              "imageSrc": "/assets/products/allplan-professional/cloud-resources.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "ALLPLAN Model Viewer",
+              "description": "Yeni bir dosyayı hızlıca önizlemek, IFC modellerini görsel olarak görüntülemek ve tam olarak yüklemeden önce kontrol etmek için kullanılır. (Sadece ALLPLAN Aboneliği veya Bimplus Professional satın alımı ile kullanılabilir.)",
+              "imageSrc": "/assets/products/allplan-professional/model-viewer.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "ALLPLAN - Bluebeam Bağlantısı",
+              "description": "Geliştirilmiş iş akışları – dijital teslim sürecine yardımcı olmak için Bluebeam ile bağlantı kuracağız. Kullanıcılar, Bluebeam Studio Proje ortamından ALLPLAN iş akışlarına 2D belgeleri kolayca aktarabilecekler.",
+              "imageSrc": "/assets/products/allplan-professional/bimplus-pro.jpg",
+              "youtubeId": "u4GZUL7WdQU"
+            },
             {
               "title": "Bağlantı Tasarım Aracı - Connexis",
               "description": "Çelik bağlantılar için bulut tabanlı görüntüleme ve iş birliği aracı.",
@@ -13596,7 +13819,62 @@
           "title": "ALLPLAN Bulut Hizmetleri",
           "subtitle": "Bulut tabanlı iş birliği, model görüntüleme, pafta dağıtımı ve yapay zeka destekli görselleştirme araçları.",
           "columns": 3,
-          "items": []
+          "items": [
+            {
+              "title": "Bulut Tabanlı İşbirliği",
+              "description": "Bimplus Pro, bulut tabanlı BIM işbirliği platformu.",
+              "imageSrc": "/assets/products/allplan-concept/remote/cloud/cloud_based_collaboration.jpg",
+              "youtubeId": "7xzpEhLQhEI"
+            },
+            {
+              "title": "Proje Takım Çalışması",
+              "description": "ALLPLAN Share, bir şirket ağı üzerinden ekip çalışmasını sağlar; uzaktan çalışan ekip üyeleri için de idealdir.",
+              "imageSrc": "/assets/products/allplan-professional/project-teamwork.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "Çizim ve Plan Dağıtımı",
+              "description": "Çeşitli plan formatlarının oluşturulmasını ve dağıtımını yönetmek için özel olarak tasarlanmış web tabanlı plan dağıtım aracı ALLPLAN Exchange, ayrıca e-posta grupları aracılığıyla otomatik değişiklik bildirimleri sağlar.",
+              "imageSrc": "/assets/products/allplan-professional/plan-distribution.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "Analitik Model Üretimi",
+              "description": "AutoConverter aracılığıyla geometrik modellerin, Frilo Statics, Scia Engineer gibi yapısal analiz çözümleri tarafından doğrudan kullanılabilen analitik modellere akıllı bir şekilde dönüştürülmesi.",
+              "imageSrc": "/assets/products/allplan-professional/analytical-model.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "Ofis Ekip Çalışması",
+              "description": "ALLPLAN Çalışma Grubu Yöneticisi aracılığıyla yerel bir şirket ağı içinde verimli ekip çalışmasını kolaylaştırın.",
+              "imageSrc": "/assets/products/allplan-professional/workgroup-manager.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "Bulut Destekli Proje Kaynakları",
+              "description": "Bulut ofis kaynakları, ALLPLAN proje kaynaklarının tamamen bulut tabanlı dağıtımını sağlar.",
+              "imageSrc": "/assets/products/allplan-professional/cloud-resources.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "ALLPLAN Model Viewer",
+              "description": "Yeni bir dosyayı hızlıca önizlemek, IFC modellerini görsel olarak görüntülemek ve tam olarak yüklemeden önce kontrol etmek için kullanılır. (Sadece ALLPLAN Aboneliği veya Bimplus Professional satın alımı ile kullanılabilir.)",
+              "imageSrc": "/assets/products/allplan-professional/model-viewer.jpg",
+              "youtubeId": null
+            },
+            {
+              "title": "ALLPLAN - Bluebeam Bağlantısı",
+              "description": "Geliştirilmiş iş akışları – dijital teslim sürecine yardımcı olmak için Bluebeam ile bağlantı kuracağız. Kullanıcılar, Bluebeam Studio Proje ortamından ALLPLAN iş akışlarına 2D belgeleri kolayca aktarabilecekler.",
+              "imageSrc": "/assets/products/allplan-professional/bimplus-pro.jpg",
+              "youtubeId": "u4GZUL7WdQU"
+            },
+            {
+              "title": "AI Tabanlı Görselleştirme",
+              "description": "İlham verici, ayrıntılı AI destekli görselleştirmeler oluşturmak için bağlantılar. Nemetschek AI Visualizer ve EvolveLab'ın Veras AI Visualizer ile entegrasyonu içerir.",
+              "imageSrc": "/assets/products/allplan-ultimate/ai-visualization.jpg",
+              "youtubeId": "ldc4IjJDlwc"
+            }
+          ]
         },
         {
           "kicker": "/ OPSİYONEL EKLENTİ VE LİSANSLAR",
@@ -20273,7 +20551,115 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "Service",
-    "structuredLayout": null
+    "structuredLayout": {
+      "trainingTabs": {
+        "title": "Genişletilmiş Eğitim ve Webinar Teklifimizi Keşfedin",
+        "tabs": [
+          {
+            "key": "interest",
+            "label": "İlgi Duyanlar",
+            "title": "Herkes İçin ALLPLAN!",
+            "paragraphs": [
+              "Disipline özgü giriş eğitimlerimizle, ALLPLAN CAD programına, yazılımın temel konseptine ve çalışma alanınız için sunduğumuz araçlara genel bir bakış elde edin."
+            ],
+            "features": [
+              "Genel Bakış",
+              "Temel Konseptler",
+              "Sektörel Araçlar"
+            ],
+            "href": "/solutions-v2/training/quick-start",
+            "linkLabel": "Hızlı Başlangıç",
+            "imageSrc": null,
+            "sourceImageSrc": "/images/training-interest.jpg"
+          },
+          {
+            "key": "video-library",
+            "label": "Video Kütüphanesi",
+            "title": "İzleyin ve Öğrenin!",
+            "paragraphs": [
+              "Geniş video arşivimizde Allplan özelliklerini, ipuçlarını, iş akışlarını ve 'Nasıl Yapılır?' rehberlerini bulabilirsiniz."
+            ],
+            "features": [
+              "Youtube Oynatma Listeleri",
+              "Özellik Tanıtımları",
+              "Versiyon Yenilikleri"
+            ],
+            "href": "/solutions-v2/training/video-library",
+            "linkLabel": "Videolara Göz Atın",
+            "imageSrc": "/assets/images/webinars/bimx5-youtube.jpeg",
+            "sourceImageSrc": "/images/webinars/bimx5-youtube.jpeg"
+          },
+          {
+            "key": "basic",
+            "label": "Temel",
+            "title": "ALLPLAN Dünyasına Giriş!",
+            "paragraphs": [
+              "Birkaç gün süren temel eğitimlerimizde, mesleki alanınız ne olursa olsun, ALLPLAN ile etkili çalışmak ve programın tam potansiyelini kullanmak için gerekli tüm bilgi ve becerileri sağlıyoruz."
+            ],
+            "features": [
+              "Kapsamlı Temel Bilgiler",
+              "Etkili Çalışma Yöntemleri",
+              "Program Potansiyeli"
+            ],
+            "href": "https://forms.office.com/r/hXhnKAG912",
+            "linkLabel": "İletişim Formu",
+            "imageSrc": null,
+            "sourceImageSrc": "/images/training-basic.jpg"
+          },
+          {
+            "key": "advanced",
+            "label": "İleri Seviye",
+            "title": "ALLPLAN Uzmanı Olma Yolunda!",
+            "paragraphs": [
+              "Temel eğitimlerin üzerine inşa edilen, alanınıza özel olarak tasarlanmış ileri seviye seminerlerle bilginizi derinleştirin ve yazılım fonksiyonlarını tam kapasiteyle kullanın."
+            ],
+            "features": [
+              "İleri Modül Bilgisi",
+              "Sektörel Derinleşme",
+              "Uzmanlık Seviyesi"
+            ],
+            "href": "https://forms.office.com/r/hXhnKAG912",
+            "linkLabel": "İletişim Formu",
+            "imageSrc": null,
+            "sourceImageSrc": "/images/training-advanced.jpg"
+          },
+          {
+            "key": "special",
+            "label": "Özel",
+            "title": "Özel Konularda Derin Bilgi!",
+            "paragraphs": [
+              "Mevcut kapsamlı ALLPLAN bilginizin üzerine, özel eğitimlerimiz belirli bir program alanına veya özel bir konunun ALLPLAN ile uygulanmasına dair derinlemesine içgörü sağlar."
+            ],
+            "features": [
+              "Spesifik Konular",
+              "Derinlemesine İçgörü",
+              "Uygulama Pratikleri"
+            ],
+            "href": "https://forms.office.com/r/hXhnKAG912",
+            "linkLabel": "İletişim Formu",
+            "imageSrc": null,
+            "sourceImageSrc": "/images/training-special.jpg"
+          },
+          {
+            "key": "bim",
+            "label": "BIM",
+            "title": "BIM Üzerine Uzmanlık!",
+            "paragraphs": [
+              "BIM odaklı eğitimlerimizde, Yapı Bilgi Modellemesi (BIM) konusunda yazılımlar arası teori veya pratik ALLPLAN uygulamalarını öğrenin. Sertifika alma imkanı sunar."
+            ],
+            "features": [
+              "BIM Teorisi",
+              "Pratik Uygulama",
+              "Sertifikasyon İmkanı"
+            ],
+            "href": "https://forms.office.com/r/hXhnKAG912",
+            "linkLabel": "İletişim Formu",
+            "imageSrc": null,
+            "sourceImageSrc": "/images/training-bim.jpg"
+          }
+        ]
+      }
+    }
   },
   "/solutions-v2/training/classroom": {
     "path": "/solutions-v2/training/classroom",
@@ -31704,7 +32090,110 @@
           "title": "Video Galerisi",
           "subtitle": "Geometry Tools eklentisinin 17 detaylı uygulama ve eğitim videosu.",
           "columns": 3,
-          "items": []
+          "items": [
+            {
+              "title": "Eğim Planlama",
+              "subtitle": "Gefälle Planen",
+              "description": "Eğim Planlama — Geometry Tools uygulama videosu.",
+              "youtubeId": "WHPmmRcCdMQ"
+            },
+            {
+              "title": "Yeraltı Otoparkı",
+              "subtitle": "Tiefgarage",
+              "description": "Yeraltı Otoparkı — Geometry Tools uygulama videosu.",
+              "youtubeId": "QOz-08Ujjno"
+            },
+            {
+              "title": "3B Noktaları Yansıtma",
+              "subtitle": "3D Punkte projizieren",
+              "description": "3B Noktaları Yansıtma — Geometry Tools uygulama videosu.",
+              "youtubeId": "UJ8pb5Mp72I"
+            },
+            {
+              "title": "3B Çizgileri Basitleştirme",
+              "subtitle": "3D Linien vereinfachen",
+              "description": "3B Çizgileri Basitleştirme — Geometry Tools uygulama videosu.",
+              "youtubeId": "CMYuaD3e3rQ"
+            },
+            {
+              "title": "Üçgen Ağı Basitleştirme",
+              "subtitle": "Dreiecks-Netz vereinfachen",
+              "description": "Üçgen Ağı Basitleştirme — Geometry Tools uygulama videosu.",
+              "youtubeId": "SIFKuSZTdtc"
+            },
+            {
+              "title": "Poligon Azaltma Galerisi",
+              "subtitle": "Polygon Reduktion Galerie",
+              "description": "Poligon Azaltma Galerisi — Geometry Tools uygulama videosu.",
+              "youtubeId": "IDvIZk1uGr4"
+            },
+            {
+              "title": "OBJ İçe Aktarma - İlk Adımlar",
+              "subtitle": "OBJ Import erste Schritte",
+              "description": "OBJ İçe Aktarma - İlk Adımlar — Geometry Tools uygulama videosu.",
+              "youtubeId": "_o-xyt2mDZU"
+            },
+            {
+              "title": "OBJ İçe Aktarma - Drone Uçuşu",
+              "subtitle": "OBJ Import Drohnenflug",
+              "description": "OBJ İçe Aktarma - Drone Uçuşu — Geometry Tools uygulama videosu.",
+              "youtubeId": "krrdOMuHAPo"
+            },
+            {
+              "title": "3B Gövde Değiştirme",
+              "subtitle": "3D-Körper modifizieren",
+              "description": "3B Gövde Değiştirme — Geometry Tools uygulama videosu.",
+              "youtubeId": "S8XcI23U5_o"
+            },
+            {
+              "title": "LandXML İçe / Dışa Aktarma",
+              "subtitle": "LandXML Import / Export",
+              "description": "LandXML İçe / Dışa Aktarma — Geometry Tools uygulama videosu.",
+              "youtubeId": "6XWh3npkMf0"
+            },
+            {
+              "title": "XYZ Noktaları İçe Aktarma",
+              "subtitle": "XYZ-Punkte Import",
+              "description": "XYZ Noktaları İçe Aktarma — Geometry Tools uygulama videosu.",
+              "youtubeId": "n3XKpExBhMA"
+            },
+            {
+              "title": "Yüzeyleri Kesme",
+              "subtitle": "Flächen zerschneiden",
+              "description": "Yüzeyleri Kesme — Geometry Tools uygulama videosu.",
+              "youtubeId": "BS-GxwK5PMA"
+            },
+            {
+              "title": "Voronoi Diyagramı Oluşturma",
+              "subtitle": "Voronoi Diagramm erzeugen",
+              "description": "Voronoi Diyagramı Oluşturma — Geometry Tools uygulama videosu.",
+              "youtubeId": "Fa9lAEVZo14"
+            },
+            {
+              "title": "Delaunay Üçgenlemesi",
+              "subtitle": "Delaunay Triangulierung",
+              "description": "Delaunay Üçgenlemesi — Geometry Tools uygulama videosu.",
+              "youtubeId": "C0jVimKJvRQ"
+            },
+            {
+              "title": "Düz İskelet (Straight Skeleton)",
+              "subtitle": "Straight Skeleton",
+              "description": "Düz İskelet (Straight Skeleton) — Geometry Tools uygulama videosu.",
+              "youtubeId": "57E8rPcynUQ"
+            },
+            {
+              "title": "Ara Gövde Oluşturma",
+              "subtitle": "Zwischen-Körper erzeugen",
+              "description": "Ara Gövde Oluşturma — Geometry Tools uygulama videosu.",
+              "youtubeId": "omnrciLvkLg"
+            },
+            {
+              "title": "Çoklu Kurulum ile Kurulum Kılavuzu",
+              "subtitle": null,
+              "description": "Çoklu Kurulum ile Kurulum Kılavuzu — Geometry Tools uygulama videosu.",
+              "youtubeId": "BWKDmZyIUo4"
+            }
+          ]
         }
       ]
     }
@@ -34696,7 +35185,164 @@
           "title": "Video Galerisi",
           "subtitle": "Sütunlar, kirişler, birleşimler, trapez saclar, palplanş duvarlar ve IFC içe aktarımı videoları.",
           "columns": 3,
-          "items": []
+          "items": [
+            {
+              "title": "Sütunlar ve Kirişler - Bağlantılar - Profil Sacları - Sandviç Paneller",
+              "subtitle": "Stahlbau - Verbindungen - Profilbleche - Sandwichelemente",
+              "description": "Sütunlar ve Kirişler - Bağlantılar - Profil Sacları - Sandviç Paneller — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "VC-y4IZ8580"
+            },
+            {
+              "title": "Sütunlar ve Kirişler Temel Fonksiyonlar",
+              "subtitle": "Stützen und Träger Basisfunktionen",
+              "description": "Sütunlar ve Kirişler Temel Fonksiyonlar — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "hddDSLEviFI"
+            },
+            {
+              "title": "Sütunlar ve Kirişler Değerlendirme",
+              "subtitle": "Stützen und Träger Auswertung",
+              "description": "Sütunlar ve Kirişler Değerlendirme — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "6Un1qXjEviI"
+            },
+            {
+              "title": "Freie Profilequerschnitte",
+              "subtitle": "Freie Profilequerschnitte",
+              "description": "Freie Profilequerschnitte — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "c9YiuninRIs"
+            },
+            {
+              "title": "Bağlantı Flanşları ve Gergi Çubukları",
+              "subtitle": "Anschlussflansche und Zugstäbe",
+              "description": "Bağlantı Flanşları ve Gergi Çubukları — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "LVEMciTGJvI"
+            },
+            {
+              "title": "Girintili Sütunlar ve Kirişler",
+              "subtitle": "Stützen und Träger mit Aussparungen",
+              "description": "Girintili Sütunlar ve Kirişler — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "fx3jTNe_jRM"
+            },
+            {
+              "title": "Vida Bağlantıları",
+              "subtitle": "Schraubverbindungen",
+              "description": "Vida Bağlantıları — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "qXFoV3Xqkik"
+            },
+            {
+              "title": "Trapez Saclar ve Çatı Panelleri",
+              "subtitle": "Trapezbleche und Dachpaneelen",
+              "description": "Trapez Saclar ve Çatı Panelleri — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "iREJIfp1eoM"
+            },
+            {
+              "title": "Genel Nesne Raporu",
+              "subtitle": "Report Gesamtobjekt",
+              "description": "Genel Nesne Raporu — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "qD_qbXu7Nuw"
+            },
+            {
+              "title": "Çerçeve Köşesi",
+              "subtitle": "Rahmenecke",
+              "description": "Çerçeve Köşesi — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "glMc3oGNr7w"
+            },
+            {
+              "title": "Rahmenecke mit 3eck-Voute",
+              "subtitle": "Rahmenecke mit 3eck-Voute",
+              "description": "Rahmenecke mit 3eck-Voute — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "-2NQD8PdDRc"
+            },
+            {
+              "title": "Bağlantıyı Devral",
+              "subtitle": "Anschluss übernehmen",
+              "description": "Bağlantıyı Devral — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "Wil-msep0P4"
+            },
+            {
+              "title": "İşleme İçin Kesitler",
+              "subtitle": "Schnitte für die Bearbeitung",
+              "description": "İşleme İçin Kesitler — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "LJYQYonAEhw"
+            },
+            {
+              "title": "Kesimli Sütunlar ve Kirişler",
+              "subtitle": "Stützen und Träger mit Zuschnitt",
+              "description": "Kesimli Sütunlar ve Kirişler — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "_wo95it5KDk"
+            },
+            {
+              "title": "Malzemeler",
+              "subtitle": "Materialien",
+              "description": "Malzemeler — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "AlnXYXMSTUk"
+            },
+            {
+              "title": "Arcelor Mittal Palplanş Duvarları",
+              "subtitle": "Arcelor Mittal Spundwände",
+              "description": "Arcelor Mittal Palplanş Duvarları — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "vSwt-UVWaSw"
+            },
+            {
+              "title": "Sertleştiriciler ve Bağlantı Flanşları",
+              "subtitle": "Steifen und Anschlussflansche",
+              "description": "Sertleştiriciler ve Bağlantı Flanşları — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "L6ycb2QyO0s"
+            },
+            {
+              "title": "Serbest İçi Boş Profiller",
+              "subtitle": "Freie Hohlprofile",
+              "description": "Serbest İçi Boş Profiller — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "oLdikDKUVwM"
+            },
+            {
+              "title": "Serbest Dikdörtgen ve Yuvarlak Profiller",
+              "subtitle": "Freie Rechteck  und Rundprofile",
+              "description": "Serbest Dikdörtgen ve Yuvarlak Profiller — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "A8SivUorKsM"
+            },
+            {
+              "title": "Yeni Vida Başları, Ankrajlar ve Ahşap Vidalar",
+              "subtitle": "Neue Schraubenköpfe, Anker und Holzbauschrauben",
+              "description": "Yeni Vida Başları, Ankrajlar ve Ahşap Vidalar — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "vb83HICWNjc"
+            },
+            {
+              "title": "Bağlantı İyileştirmeleri",
+              "subtitle": "Verbesserungen Anschlüsse",
+              "description": "Bağlantı İyileştirmeleri — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "O5gn01tJ7ic"
+            },
+            {
+              "title": "Ekleri Ayır",
+              "subtitle": "Anbauteile Trennen",
+              "description": "Ekleri Ayır — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "Lfht6hJemew"
+            },
+            {
+              "title": "Yuvarlak ve Eliptik Plakalar",
+              "subtitle": "Runde und elliptische Platten",
+              "description": "Yuvarlak ve Eliptik Plakalar — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "n-lPIeedKyE"
+            },
+            {
+              "title": "Yeni Özellik Paleti",
+              "subtitle": "Neue Attributpalette",
+              "description": "Yeni Özellik Paleti — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "tv_jGKrl2CQ"
+            },
+            {
+              "title": "Profil Bileşenlerine Dönüştür",
+              "subtitle": "In Profilbauteile konvertieren",
+              "description": "Profil Bileşenlerine Dönüştür — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "YVyOOvxhCFQ"
+            },
+            {
+              "title": "Cubus Statik IFC İçe Aktarımı",
+              "subtitle": "Cubus Statik IFC Import",
+              "description": "Cubus Statik IFC İçe Aktarımı — Çelik Profil Bileşenleri uygulama videosu.",
+              "youtubeId": "7Cp16sh37MQ"
+            }
+          ]
         }
       ]
     }
@@ -41288,6 +41934,13 @@
     "interactiveStates": [],
     "schemaType": "WebPage",
     "structuredLayout": {
+      "intro": {
+        "title": "BIMFlex Allplan eklenti paketi",
+        "bullets": [],
+        "paragraphs": [
+          "Allplan için BIM uyumlu yapı elemanları donatısı. FlexSoft tarafından geliştirilen BIMFlex donatı otomasyonu ürün ailesi, satış ortaklığı kapsamında Aluplan tarafından da kullanıcılara sunulabilecektir."
+        ]
+      },
       "benefits": {
         "kicker": "/ NEDEN BIMFLEX?",
         "title": "Yapı elemanı bazlı, revizyona dayanıklı donatı akışı.",

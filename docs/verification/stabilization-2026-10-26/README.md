@@ -48,3 +48,6 @@ Açık içerik bulgusu: /contact gövdesindeki30gün deneme metni S05'e taşınd
 ## S05 — İlk içerik denetimi (kabul açık)
 
 Ayrıntılı bulgular: [S05-content-findings.md](S05-content-findings.md). 110/110 yerel rota HTTP200/tekH1; 0erişim hatası/0yönlendirme. 16rotada303ilkHTML metin adayı, altıboş bölüm bulundu; bunlar topluca kayıp kararı değildir. Dört kaynak/gösterim açığı doğrulandı; uygulamaya düzeltme henüz yapılmadı. CanlıProfessional/Contact hedefli kontrolü `targeted-live-check.json`; kaynak literal adayları `historical-text-candidates.json`; yeniden çalıştırılabilir yerel tarama `render-audit.json`. S05tam parite kabulü veS06hâlâ açıktır.
+
+
+S05 düzeltmeleri uygulandı: C01–C05ve kaynakta ayrıca doğrulanan iki video galerisi (C06). Güncel sonuçlar `render-after-s05.json`, `s05-targeted-after.json` ve bulgu raporunun son bölümünde.56birim testi/36parite/typecheck/build geçti. Tam görsel/etkileşim kabulü,5eksik kaynak görseli ve diğer ilkHTML adayları açık; S05tamamlandı değildir.

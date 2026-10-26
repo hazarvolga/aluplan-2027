@@ -1,0 +1,21 @@
+[
+  {
+    "url": "https://aluplan.com.tr/products/allplan-professional",
+    "status": 200,
+    "sha256": "4321941013fa588845a4ac157aa362c00dd3faef9b0ef2664f589b8f7761b563",
+    "cloudHeading": true,
+    "trial30": false,
+    "trial14": true,
+    "method": "direct HTTP GET on2026-10-26, no browser interaction or submission",
+    "cloudSectionExcerpt": "ALLPLAN Bulut Hizmetleri Bulut Tabanlı İşbirliği Bimplus Pro, bulut tabanlı BIM işbirliği platformu. Proje Takım Çalışması ALLPLAN Share, bir şirket ağı üzerinden ekip çalışmasını sağlar; uzaktan çalışan ekip üyeleri için de idealdir. Çizim ve Plan Dağıtımı Çeşitli plan formatlarının oluşturulmasını ve dağıtımını yönetmek için özel olarak tasarlanmış web tabanlı plan dağıtım aracı ALLPLAN Exchange, ayrıca e-posta grupları aracılığıyla otomatik değişiklik bildirimleri sağlar. Analitik Model Üretimi AutoConverter aracılığıyla geometrik modellerin, Frilo Statics, Scia Engineer gibi yapısal analiz çözümleri tarafından doğrudan kullanılabilen analitik modellere akıllı bir şekilde dönüştürülmesi. Tasarım Kontrolü Solibri Inside, kullanıcı istediği zaman ALLPLAN modellerinde kontroller gerçekleştirebilir; bu, ALLPLAN içindeki BIM Explorer'dan palet benzeri bir işlevsellik kullanarak yapılır. (ALLPLAN Abonelik lisansı ile birlikte 12 aylık Solibri Inside aboneliği dahildir.) Ofis Ekip Çalışması ALLPLAN Çalışma Grubu Yöneticisi aracılığıyla yerel bir şirket ağı içinde verimli ekip çalışmasını kolaylaştırın. Bulut Destekli Proje Kaynakları Bulut ofis kaynakları, ALLPLAN proje kaynaklarının t"
+  },
+  {
+    "url": "https://aluplan.com.tr/contact",
+    "status": 200,
+    "sha256": "b065e7ed906f73d33dfa0cd6a997e50794538569b8019a8c9032bf5ead01a8a7",
+    "cloudHeading": false,
+    "trial30": true,
+    "trial14": true,
+    "method": "direct HTTP GET on2026-10-26, no browser interaction or submission"
+  }
+]

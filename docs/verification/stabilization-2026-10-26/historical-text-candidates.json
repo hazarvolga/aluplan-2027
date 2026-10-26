@@ -1,0 +1,883 @@
+{
+  "date": "2026-10-26",
+  "method": "19/22 October inventory text nodes vs current page data, long literal substring candidates only; homepage separate data and shared shell not merged; rewritten/split paragraphs may mismatch; no automatic missing-content verdict",
+  "routes": [
+    {
+      "route": "/",
+      "historicalCandidates": 13,
+      "notExactSubstringOfPageData": [
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/about",
+      "historicalCandidates": 11,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/contact",
+      "historicalCandidates": 4,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/gizlilik-politikasi",
+      "historicalCandidates": 14,
+      "notExactSubstringOfPageData": [
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/health",
+      "historicalCandidates": 2,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/kullanim-sartlari",
+      "historicalCandidates": 11,
+      "notExactSubstringOfPageData": [
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/kvkk",
+      "historicalCandidates": 17,
+      "notExactSubstringOfPageData": [
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/package-overview",
+      "historicalCandidates": 2,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/paket-karsilastirma",
+      "historicalCandidates": 5,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/products",
+      "historicalCandidates": 15,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/products/allplan",
+      "historicalCandidates": 3,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/products/allplan-2026",
+      "historicalCandidates": 44,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/products/allplan-2026-yenilikler",
+      "historicalCandidates": 20,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/products/allplan-aec",
+      "historicalCandidates": 20,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/products/allplan-basic",
+      "historicalCandidates": 14,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/products/allplan-bimplus",
+      "historicalCandidates": 23,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/products/allplan-cloud-services",
+      "historicalCandidates": 18,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/products/allplan-concept",
+      "historicalCandidates": 24,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/products/allplan-professional",
+      "historicalCandidates": 36,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/products/allplan-ultimate",
+      "historicalCandidates": 37,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/products/architecture",
+      "historicalCandidates": 3,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/products/ax3000",
+      "historicalCandidates": 13,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/products/ax3000/dokumanlar",
+      "historicalCandidates": 10,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/products/civil",
+      "historicalCandidates": 55,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/products/precast",
+      "historicalCandidates": 8,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/products/precast-detail",
+      "historicalCandidates": 18,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/products/sds2-home",
+      "historicalCandidates": 4,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/references",
+      "historicalCandidates": 3,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/search",
+      "historicalCandidates": 2,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions",
+      "historicalCandidates": 25,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/addons",
+      "historicalCandidates": 2,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/building-design",
+      "historicalCandidates": 2,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/connect-license",
+      "historicalCandidates": 19,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/connect-license/activation",
+      "historicalCandidates": 3,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/connect-license/how-to-assign",
+      "historicalCandidates": 5,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/connect-login",
+      "historicalCandidates": 9,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/construction",
+      "historicalCandidates": 2,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/faq",
+      "historicalCandidates": 4,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/infrastructure",
+      "historicalCandidates": 2,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/other",
+      "historicalCandidates": 2,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training",
+      "historicalCandidates": 12,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/classroom",
+      "historicalCandidates": 8,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/e-learning",
+      "historicalCandidates": 6,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/events",
+      "historicalCandidates": 8,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/individual",
+      "historicalCandidates": 8,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/online",
+      "historicalCandidates": 9,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/quick-start",
+      "historicalCandidates": 20,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library",
+      "historicalCandidates": 11,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/webinar",
+      "historicalCandidates": 17,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/addons",
+      "historicalCandidates": 3,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/addons/2d-dwg-converter",
+      "historicalCandidates": 8,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/addons/drive-curve",
+      "historicalCandidates": 6,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/addons/geometry-tools",
+      "historicalCandidates": 12,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/addons/graphical-text",
+      "historicalCandidates": 5,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/addons/parametric-terrain",
+      "historicalCandidates": 11,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/addons/ramp",
+      "historicalCandidates": 6,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/addons/sketchup-converter",
+      "historicalCandidates": 8,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/addons/steel-components",
+      "historicalCandidates": 16,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/addons/three-dimensioning",
+      "historicalCandidates": 8,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/allplan-bulut-hizmetleri",
+      "historicalCandidates": 47,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/allplan-industry",
+      "historicalCandidates": 21,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/architecture",
+      "historicalCandidates": 24,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/ax3000",
+      "historicalCandidates": 12,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/ax3000-mekanik-tesisat",
+      "historicalCandidates": 17,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/ax3000-virtual-reality",
+      "historicalCandidates": 11,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/ax3000-yapi-fizigi",
+      "historicalCandidates": 7,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/ax3000/elektrik",
+      "historicalCandidates": 6,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/ax3000/havalandirma",
+      "historicalCandidates": 7,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/ax3000/isitma",
+      "historicalCandidates": 7,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/ax3000/konut-havalandirma",
+      "historicalCandidates": 3,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/ax3000/sihhi-tesisat",
+      "historicalCandidates": 5,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/ax3000/sprinkler",
+      "historicalCandidates": 2,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/bimflex",
+      "historicalCandidates": 19,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/bimx5",
+      "historicalCandidates": 11,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/bridge-design",
+      "historicalCandidates": 10,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/cds-addon",
+      "historicalCandidates": 3,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/features-allplan-bridge",
+      "historicalCandidates": 27,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/imar-yonetmeligi-bim-eklentisi",
+      "historicalCandidates": 13,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/infrastructure",
+      "historicalCandidates": 24,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/mep",
+      "historicalCandidates": 25,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/modeling-of-precast-girder-bridges",
+      "historicalCandidates": 11,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/oska",
+      "historicalCandidates": 7,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/poz-catalog",
+      "historicalCandidates": 4,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/precast",
+      "historicalCandidates": 22,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/pythonpart",
+      "historicalCandidates": 30,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/rebar-engineering",
+      "historicalCandidates": 4,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/road-railway",
+      "historicalCandidates": 13,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN’in karayolu, demiryolu ve altyapı tasarımına yönelik BIM çözümleri, tasarımdan inşa sürecine kadar tüm süreci kapsar. Allplan, proje tasarımı ve teslimatı için daha fazla üretkenliği destekleyen işbirlikçi iş akışlarıyla köprüler dahil olmak üzere diğer inşaat mühendisliği disiplini tasarım gereksinimleriyle sorunsuz entegrasyon sağlar. Karayolu, demiryolu ve altyapı planlama yazılımınızdan daha fazlasını bekleyin!\nÜSTÜN İNŞAAT İÇİN ÇOK MALZEMELİ ÇÖZÜM",
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/scalypso",
+      "historicalCandidates": 17,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/scalypso/converter",
+      "historicalCandidates": 7,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/scalypso/mobile",
+      "historicalCandidates": 11,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/scalypso/modeler",
+      "historicalCandidates": 9,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/scalypso/videos",
+      "historicalCandidates": 2,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/scalypso/viewer",
+      "historicalCandidates": 6,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/site-planning",
+      "historicalCandidates": 10,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/steel",
+      "historicalCandidates": 20,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions/structural",
+      "historicalCandidates": 15,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/addon-geometry",
+      "historicalCandidates": 3,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/allplan-reinforcement",
+      "historicalCandidates": 7,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/ax3000",
+      "historicalCandidates": 3,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/bridge-workflow-2022",
+      "historicalCandidates": 3,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/bridge-workflows",
+      "historicalCandidates": 4,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/campus-de",
+      "historicalCandidates": 3,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/campus-en",
+      "historicalCandidates": 3,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/campus-tutorials-2019-2022",
+      "historicalCandidates": 3,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/hello-allplan-2024",
+      "historicalCandidates": 3,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/konut-insaati",
+      "historicalCandidates": 9,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/otomatik-donati",
+      "historicalCandidates": 3,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/quickstart-buildings",
+      "historicalCandidates": 6,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/road-design",
+      "historicalCandidates": 3,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/sds2-intro",
+      "historicalCandidates": 3,
+      "notExactSubstringOfPageData": [
+        "ALLPLAN'ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.",
+        "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri."
+      ]
+    }
+  ]
+}

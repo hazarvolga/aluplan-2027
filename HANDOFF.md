@@ -21,7 +21,7 @@ Kullanıcı aşağıdaki yol haritasını onayladı ve önce kayda alınıp çal
 | S02 | Tek yetkili veri üretim hattı | Güncel Python hattı tek giriş; pnpm komutları doğru; eski JS üretici devre dışı; tekrar üretim deterministik, veri kaybı yok | Tamamlandı |
 | S03 | PDF/DOCX kaynak paritesi | Temsili PDF üretimi kaldırılır; orijinal belgeler kaynak/URL eşlemesi, SHA-256 ve tür kontrolüyle korunur | Tamamlandı |
 | S04 | Microsoft Forms yönlendirmesi | Talep CTA'ları ortak forma bağlı; sahte yerel başarı yok; destek/deneme/özel lisans görevleri karıştırılmaz | Tamamlandı |
-| S05 | İçerik/etkileşim paritesi | Kaynak→veri→render bazında eksik/fazla/değişmiş/yanlış eşleşmiş kayıtlar; hedefli canlı doğrulama | Bekliyor |
+| S05 | İçerik/etkileşim paritesi | Kaynak→veri→render bazında eksik/fazla/değişmiş/yanlış eşleşmiş kayıtlar; hedefli canlı doğrulama | Devam ediyor — ilk rapor hazır, düzeltmeler açık |
 | S06 | Token ve bileşen sağlamlaştırma | Sabit görsel kararlar tokenlara taşınır; büyük bileşenler ayrılır; görsel karşılaştırma görünümü korur | Bekliyor |
 | S07 | Yayın öncesi kabul | Çalışan test komutları, typecheck/build, tarayıcı etkileşimleri, schema/performance doğrulaması ve açık riskler | Bekliyor |
 
@@ -493,3 +493,14 @@ Lisans aktivasyonu bölümünde çalışmayan ürün anahtarı/kişisel veri top
 43birim testi +36parite, typecheck ve production build geçti; yerel üretim tarayıcısında iletişimde0form, güvenli ortak form linki; eğitim talep hedefi doğru; aktivasyon bölümünde0kişisel alan ve yalnız PDF/ticket/mail doğrulandı. ÜçPOST'a bozukJSON ile yerel test410döndürdü; gerçek form gönderimi/kişisel veri iletimi yapılmadı. Kod ve güvenlik incelemelerinde kritik/yüksek bulgu yok. Kanıt `forms-after.json` / `forms-contact.png`; `docs/request-forms-contract.md` başına erteleme kararı eklendi. Form testleri mevcut URL politikası ve sahte başarı regresyonunu kapsar; tüm uygulama kabulü değildir.
 
 S05notu: tarayıcıda /contact kaynak gövdesinde hâlâ30gün deneme ifadesi var. Önceki rapordaki süre çelişkisinin tamamen kapandığı iddiası doğrulanmıyor; içerik denetiminde kanıt/karar farkı olarak ele alınacak, bu tur metin değiştirilmedi. Sıradaki adım S05kaynak→veri→render içerik/etkileşim karşılaştırması. Canlı siteye deploy/push yok,2026kaynağı değişmedi,2027materyalleri ignored.
+
+
+## 26.10.2026 — S05 ilk içerik denetimi; kabul henüz açık
+
+110 yerel üretim rotası HTTP200/tekH1; erişim hatası ve yönlendirme yok. Bu kontrol tam içerik paritesi değildir. 16 rotadaki303 uzun yapısal kayıt ilk HTML'de yok; iki Yenilikler sekmesi tarayıcıda açıldığında metinleri görüldü. Aday kayıtlar otomatik kayıp sayılmaz. Altı boş bölümün dört bulut listesinde yanlış kaynak değişkeni nedeniyle gerçek çıkarım hatası bulundu; iki video galerisi ayrıca teyit bekliyor.
+
+Dört somut açık: Basic/Concept/Professional/Civil bulut kartları; Eğitim'in varsayılan dışı sekme metinleri; Yenilikler genel bakış paragrafları; BIMFlex Aluplan ortaklık cümlesi. Son iki metin flat veride var fakat structured gösterimde yok. Canlı Contact doğrudan kontrolünde14/30gün çelişkisi doğrulandı; süreyi Aluplan ürün/satış yetkilisi doğrulamadan değiştirme. Yenilikler sekmelerinde panel rolü eksikliği uygulama kabulüne not edildi.
+
+Kanıt ve sorumlular `docs/verification/stabilization-2026-10-26/S05-content-findings.md`, `render-audit.json`, `historical-text-candidates.json`, `targeted-live-check.json` içindedir. Yeni tarama aracı yalnız loopback HTTP(S) adreslerine izin verir, dış yönlendirmeyi reddeder, erişim/parse hatasında başarısız çıkar; script/style/RSC içeriğini gösterilen metin saymaz. Kod incelemesinin iki orta önerisi (yönlendirme sınırı ve hata özeti) eklendi. Bu tur app/veri/schema/tasarım değiştirilmedi; kaynak2026salt-okunur, canlıya push/deploy yok. S05tamamlandı işaretlenmedi. Sıradaki adım rapordaki C01–C04 kaynak sadakati düzeltmeleri ve etkileşimlerin genişletilmiş doğrulaması; S06henüz başlamadı.
+
+S05 denetim aracının 5 testi dahil toplam48 birim testi ve36 mevcut parite kontrolü geçti; bu başarı rapordaki içerik açıklarını kapatmaz. Uygulama değişmediği için build tekrarlanmadı; S04 başarılı üretim derlemesi denetlendi. Geçici3001 sunucusu ve denetim sekmesi kapatıldı.

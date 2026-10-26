@@ -43,3 +43,8 @@ Ortak teklif/ürün/deneme desteği/eğitim talepleri mevcut Microsoft Forms hed
 43birim testi,36parite kontrolü, TypeScript/production build geçti; tarayıcıda contact/training/activation kontrol edildi. Microsoft formuna gönderim yapılmadı. Üç API'ye bozukJSON ile localPOST410sonucu, güvenli link nitelikleri ve kanal ayrımı `forms-after.json` içindedir. `forms-contact.png` üretim tarayıcı kanıtıdır. İncelemeler kritik/yüksek bulgu vermedi.
 
 Açık içerik bulgusu: /contact gövdesindeki30gün deneme metni S05'e taşındı; form geçişi bunu çözmez. S04sonrasında kapsamlı içerik/etkileşim paritesi, token refaktörü ve yayın kabulü henüz açıktır.
+
+
+## S05 — İlk içerik denetimi (kabul açık)
+
+Ayrıntılı bulgular: [S05-content-findings.md](S05-content-findings.md). 110/110 yerel rota HTTP200/tekH1; 0erişim hatası/0yönlendirme. 16rotada303ilkHTML metin adayı, altıboş bölüm bulundu; bunlar topluca kayıp kararı değildir. Dört kaynak/gösterim açığı doğrulandı; uygulamaya düzeltme henüz yapılmadı. CanlıProfessional/Contact hedefli kontrolü `targeted-live-check.json`; kaynak literal adayları `historical-text-candidates.json`; yeniden çalıştırılabilir yerel tarama `render-audit.json`. S05tam parite kabulü veS06hâlâ açıktır.

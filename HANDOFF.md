@@ -3,6 +3,30 @@
 ## Güncelleme tarihi ve oturum no
 26.10.2026 — Faz 6 geliştirme aşamasında: (1) tüm destek portalı butonları `https://allplan.net.tr/tr` adresine hizalandı; (2) ana sayfa ve alt sayfalar wireframe hissinden çıkarılarak tam amiral gemisi (flagship) görsel sahneye yükseltildi; (3) alt sayfalardaki küçük PNG ikonların (`52×48` / `52×52` / `128×128`) orijinal rozet boyutunda (`36×36px`) gösterilmesi tamamlandı; (4) **52 ürün, çözüm, eklenti ve destek sayfasındaki (`structuredLayout`)** tüm eşleştirilmiş metin + pop-up videolar (`InfoMediaTwoColumn` ve `VideoModal` — YouTube + yerel `.mp4`), ikonlu fayda/gerekçe kartları, çok sekmeli iş akışı şablonları, `/references` (10 kategori sekmesi + 228 referans firma kartı), `/solutions-v2/faq` (5 kategori sekmesi + 25 SSS) ve `/about` kurumsal editöryal profil sayfası canlı sitedeki birebir bölüm mimarisiyle entegre edildi; (5) açık temada (Light Mode) Header, Topbar, MegaMenu ve Footer yüzeyleri ve logoları tam uyumlu hale getirildi, masaüstünde mükerrer mobil hamburger menü gizlendi; (6) Faz 0/1 analizlerinde tespit edilen tüm kırık (404) buton ve link hedefleri düzeltildi ve `next.config.mjs` kalıcı 308 yönlendirmeleriyle güvenceye alındı (`36/36 PASS`); (7) tüm değişiklikler DevOps / Conventional Commits standartlarına uygun atomik commit'ler halinde versiyonlandı (Europe/Istanbul).
 
+## Güncel öncelik — 26.10.2026 sağlamlaştırma planı
+
+Kullanıcı aşağıdaki yol haritasını onayladı ve önce kayda alınıp çalışmaya başlanmasını istedi. Önceki “Faz 6 tamamlandı / %100 parite” ifadeleri geliştirme kaydıdır; yayın kabulü değildir. Form teslimatı, gerçek belge paritesi, üretim hattı ve token bütünlüğü açık olduğu için güncel durum **Faz 6 — sağlamlaştırma ve kabul doğrulaması devam ediyor** olarak ele alınır.
+
+### Kabul edilen kararlar
+- `Allplan 2027 Marketing Materials/` Git'e alınmaz; sonraki yıl içerik çalışmasına ayrılır, bu denetimin kaynak kümesine karıştırılmaz.
+- Şimdilik talepler mevcut tek Microsoft Forms (`https://forms.office.com/r/hXhnKAG912`) üzerinden alınır. Niyete özel Next.js form geliştirme planı ertelenmiştir; sahte kayıt/teslim başarısı gösteren yerel akış korunmaz.
+- Deneme indirme hedefi ALLPLAN resmî sayfasıdır; destek Teams/ticket kanalları korunur. İletişim ve lisans deklarasyonu satış formuna otomatik bağlanmaz; mevcut görev/hedef eşlemesi ayrıca doğrulanır.
+- Görünüm korunarak token bütünlüğü ve büyük bileşenlerin bakım yapısı düzeltilebilir. Yeni görsel tasarım veya ticari iddia üretimi bu çalışma kapsamında değildir.
+- Kaynak odaklı denetim: güncel `../aluplan-2026` salt-okunur içerik/etkileşim kaynağı, yerel 2027 render doğrulama hedefi; canlı site yayın farkı/gerçek URL/hedef doğrulaması için kullanılır. Çelişkide canlı esas. Snapshot eşliği doğrulanmadan güncel kaynak diye kabul edilmez.
+
+### Sıralı yol haritası
+| Adım | Kapsam | Kabul ölçütü | Durum |
+|---|---|---|---|
+| S01 | Güvenli başlangıç kaydı ve pazarlama klasörünü hariç tutma | HEAD, üretilmiş veri, gerçek dosya türleri, belge hashleri ve kaynak snapshot eşliği kayıtlı; materyal klasörü ignored | Başlandı |
+| S02 | Tek yetkili veri üretim hattı | Güncel Python hattı tek giriş; pnpm komutları doğru; eski JS üretici devre dışı; tekrar üretim deterministik, veri kaybı yok | Bekliyor |
+| S03 | PDF/DOCX kaynak paritesi | Temsili PDF üretimi kaldırılır; orijinal belgeler kaynak/URL eşlemesi, SHA-256 ve tür kontrolüyle korunur | Bekliyor |
+| S04 | Microsoft Forms yönlendirmesi | Talep CTA'ları ortak forma bağlı; sahte yerel başarı yok; destek/deneme/özel lisans görevleri karıştırılmaz | Bekliyor |
+| S05 | İçerik/etkileşim paritesi | Kaynak→veri→render bazında eksik/fazla/değişmiş/yanlış eşleşmiş kayıtlar; hedefli canlı doğrulama | Bekliyor |
+| S06 | Token ve bileşen sağlamlaştırma | Sabit görsel kararlar tokenlara taşınır; büyük bileşenler ayrılır; görsel karşılaştırma görünümü korur | Bekliyor |
+| S07 | Yayın öncesi kabul | Çalışan test komutları, typecheck/build, tarayıcı etkileşimleri, schema/performance doğrulaması ve açık riskler | Bekliyor |
+
+S02 ve S03 bağımlıdır: iki mevcut üretici de gerçek belge adlarına temsili PDF yazar. Başlangıç kaydı alınmadan üretici çalıştırma. Tekleştirme sırasında belge yazma güvenliği sağlanmadan yeni üretim komutunu kullanım için serbest bırakma. Her adım dar kapsamlı commit ve devir kaydıyla kapanır; faz geçişinde kullanıcı onayı beklenir. Push/deploy/canlı değişikliği yetkisi verilmedi.
+
 ## Faz durumu tablosu
 | Faz | Durum |
 |---|---|
@@ -12,7 +36,7 @@
 | 3 — PRD | Tamamlandı (25.10.2026 kullanıcı onayıyla — `docs/PRD.md`) |
 | 4 — Design system | Tamamlandı (25.10.2026 kullanıcı onayıyla — `design-system/`) |
 | 5 — Ana sayfa tasarımı | Tamamlandı (25.10.2026 kullanıcı onayıyla — `design-system/ui_kits/homepage/` ve `docs/homepage-design-proposal.md`) |
-| 6 — Geliştirme | Tamamlandı — 110 rota, 1.298 medya varlığı, 52 yapılandırılmış ürün/çözüm/eklenti sayfası, eşleştirilmiş pop-up video modalları, `/references` (228 firma), `/about` kurumsal profil ve 404 link onarımları doğrulandı (`36/36 PASS`) |
+| 6 — Geliştirme | Sağlamlaştırma/kabul doğrulaması devam ediyor — önceki aktarım kaydı: 110 rota, 1.298 medya varlığı, 52 yapılandırılmış ürün/çözüm/eklenti sayfası, eşleştirilmiş pop-up video modalları, `/references` (228 firma), `/about` kurumsal profil ve 404 link onarımları doğrulandı (`36/36 PASS`) |
 
 ## Tasarım beklerken envanter ve içerik modeli — 21.10.2026
 - Kullanıcı envanter kapanışı, ALLPLAN içerik eşlemesi, müşteri yolları ve yıllık güncelleme planını kabul etti. Uygulama/entegrasyon izni değil, analiz kapsamıdır.

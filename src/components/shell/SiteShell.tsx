@@ -370,7 +370,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           <div className="alu-stack" style={{ gap: '0.75rem' }}>
             <img
               className="alu-logo alu-logo--sm"
-              src="/assets/logo/aluplan-logo-white-filled.svg"
+              src={logoSrc}
               alt="Aluplan"
               width={132}
               height={26}

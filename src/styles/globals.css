@@ -1972,6 +1972,50 @@ button.alu-role[aria-checked="true"] {
   background: var(--surface-raised);
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
 }
+
+/* Light Mode Header, Topbar, MegaMenu & Footer Adaptation */
+[data-mode="light"],
+[data-theme="aluplan"][data-mode="light"] {
+  --site-header-bg: rgba(255, 255, 255, 0.94);
+  --site-header-fg: var(--text-primary);
+  --site-header-border: var(--border-default);
+  --site-footer-bg: var(--surface-subtle);
+  --site-footer-fg: var(--text-primary);
+  --site-footer-fg-secondary: var(--text-secondary);
+  --site-footer-border: var(--border-default);
+  --action-on-brand-bg-hover: var(--surface-muted);
+}
+
+[data-mode="light"] .alu-topbar {
+  background: var(--surface-subtle);
+  color: var(--text-secondary);
+  border-bottom-color: var(--border-default);
+}
+
+[data-mode="light"] .alu-site-header {
+  background: var(--site-header-bg);
+  color: var(--site-header-fg);
+  border-bottom-color: var(--site-header-border);
+  box-shadow: 0 4px 20px rgba(10, 14, 39, 0.06);
+}
+
+[data-mode="light"] .alu-megamenu {
+  box-shadow: 0 18px 42px rgba(10, 14, 39, 0.12);
+}
+
+[data-mode="light"] .alu-site-footer {
+  background: var(--site-footer-bg);
+  color: var(--site-footer-fg);
+  border-top-color: var(--site-footer-border);
+}
+
+[data-mode="light"] .alu-hero-monitor__header {
+  background: var(--surface-subtle);
+}
+
+[data-mode="light"] .alu-hero-monitor__status {
+  color: var(--text-primary);
+}
 .alu-megamenu__item {
   display: inline-flex;
   align-items: center;

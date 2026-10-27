@@ -522,3 +522,11 @@ Kalanlar: kaynakta da olmayan5traininggörseli (sourceImageSrc kaydı, imageSrc:
 Ek kapsam doğrulaması: ortak bulut düzeltmesi Ultimate rotasına da yansır; mevcut ek kartıyla10bulut kartı korunur. Böylece5ürün rotası etkilenir. Son bağımsız kod incelemesi yeniden denendi ve tamamlandı: kritik/yüksek/orta bulgu yok; kaynak eşliği ve genel Eğitim gövdesinin korunması doğrulandı. Önceki kullanım limiti nedeniyle eksik inceleme notu bu sonuçla aşılmıştır.
 
 Geçici3001üretim sunucusu kapatıldı; kullanıcının mevcut geliştirme sunucusuna müdahale edilmedi.
+
+## 27.10.2026 — S05 kalan303aday ve tarayıcı kontrolü
+
+Tarayıcı erişimi yeniden çalıştı.303ilkHTMLadayı statik incelemede35workflowaltöğe+227workflowkategori+41FAQkategori olarak sınıflandırıldı; hiç render edilmeyen alan bulunmadı. Tarayıcıda15rotanın195workflowdurumu veFAQ5kategori/25yanıtı seçilerek metin eşliği doğrulandı,0hata. Eğitim6sekmesi veHome/Endkontrolü geçti. Workflow/FAQklavye, rovingtabIndex, aria-controls/tabpanels eklendi; yeni buildsonrası YeniliklerEnd/FAQHomekontrolü geçti. Yeni panel değişikliği içerik veya görsel karar değiştirmiyor.
+
+YeniliklerSEO/hero'nun kesilmiş açıklaması, kaynak genel bakış paragrafının ilk tam cümlesine hizalandı; yalnız bu rota ve arama kaydı değişti.57birim testi+36parite, productionbuild/tip/188kontrast kontrolü geçti; bağımsız kod incelemesi önemli bulgu vermedi. Dar Eğitimekranında gözlenen354CSSpx genişlikte yatay taşma yok; screenshot ve browser-checks.json kanıtları docs/verification/s05-closure-2026-10-27/ altında.
+
+303aday için etkileşim doğrulaması kapandı. S05genel kabulü hâlâ açık: kaynakta olmayan5traininggörseli temin/nihai görselsiz kabul bekliyor; uzaktanvideo/galerimodal akışlarının tümü ve sitegeneli görsel kabul tamamlanmadı. Seçili olmayanworkflow/FAQiçeriğinin ilkHTMLerişimi SEOyayın kabulünde ayrıca değerlendirilecek. S06başlamadı. Kaynak2026salt-okunur kaldı, pazarlama klasörü kullanılmadı, push/deploy yok. Sıradaki adım eksikvarlık ve medyamodal/görsel kabul tablosunu kapatmak; tokenrefaktörüne atlama.

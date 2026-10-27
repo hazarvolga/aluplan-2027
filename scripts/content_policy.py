@@ -16,5 +16,14 @@ def apply_approved_content_policy(pages):
 
     Scope is the exact obsolete Contact sentence; addon trial terms are untouched.
     """
-    return {route: _replace_contact_trial(page) if route == '/contact' else page
-            for route, page in pages.items()}
+    result = {route: _replace_contact_trial(page) if route == '/contact' else page
+              for route, page in pages.items()}
+    route = '/products/allplan-2026-yenilikler'
+    page = result.get(route)
+    if page:
+        paragraphs = (page.get('structuredLayout') or {}).get('intro', {}).get('paragraphs', [])
+        if paragraphs:
+            # Exact complete source sentence; never a character-sliced SEO fragment.
+            sentence = paragraphs[0].split('. ', 1)[0]
+            result = {**result, route: {**page, 'description': sentence if sentence.endswith('.') else sentence + '.'}}
+    return result

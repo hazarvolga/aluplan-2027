@@ -1,0 +1,160 @@
+{
+  "date": "2026-10-27",
+  "baseUrl": "http://127.0.0.1:3001",
+  "training": [
+    {
+      "label": "İlgi Duyanlar",
+      "selected": "true",
+      "panel": "Herkes İçin ALLPLAN!\n\nDisipline özgü giriş eğitimlerimizle, ALLPLAN CAD programına, yazılımın temel konseptine ve çalışma alanınız için sunduğumuz araçlara genel bir bakış elde edin.\n\nGenel Bakış\nTemel Konseptler\nSektörel Araçlar\nHızlı Başlangıç"
+    },
+    {
+      "label": "Video Kütüphanesi",
+      "selected": "true",
+      "panel": "İzleyin ve Öğrenin!\n\nGeniş video arşivimizde Allplan özelliklerini, ipuçlarını, iş akışlarını ve 'Nasıl Yapılır?' rehberlerini bulabilirsiniz.\n\nYoutube Oynatma Listeleri\nÖzellik Tanıtımları\nVersiyon Yenilikleri\nVideolara Göz Atın"
+    },
+    {
+      "label": "Temel",
+      "selected": "true",
+      "panel": "ALLPLAN Dünyasına Giriş!\n\nBirkaç gün süren temel eğitimlerimizde, mesleki alanınız ne olursa olsun, ALLPLAN ile etkili çalışmak ve programın tam potansiyelini kullanmak için gerekli tüm bilgi ve becerileri sağlıyoruz.\n\nKapsamlı Temel Bilgiler\nEtkili Çalışma Yöntemleri\nProgram Potansiyeli\nİletişim Formu"
+    },
+    {
+      "label": "İleri Seviye",
+      "selected": "true",
+      "panel": "ALLPLAN Uzmanı Olma Yolunda!\n\nTemel eğitimlerin üzerine inşa edilen, alanınıza özel olarak tasarlanmış ileri seviye seminerlerle bilginizi derinleştirin ve yazılım fonksiyonlarını tam kapasiteyle kullanın.\n\nİleri Modül Bilgisi\nSektörel Derinleşme\nUzmanlık Seviyesi\nİletişim Formu"
+    },
+    {
+      "label": "Özel",
+      "selected": "true",
+      "panel": "Özel Konularda Derin Bilgi!\n\nMevcut kapsamlı ALLPLAN bilginizin üzerine, özel eğitimlerimiz belirli bir program alanına veya özel bir konunun ALLPLAN ile uygulanmasına dair derinlemesine içgörü sağlar.\n\nSpesifik Konular\nDerinlemesine İçgörü\nUygulama Pratikleri\nİletişim Formu"
+    },
+    {
+      "label": "BIM",
+      "selected": "true",
+      "panel": "BIM Üzerine Uzmanlık!\n\nBIM odaklı eğitimlerimizde, Yapı Bilgi Modellemesi (BIM) konusunda yazılımlar arası teori veya pratik ALLPLAN uygulamalarını öğrenin. Sertifika alma imkanı sunar.\n\nBIM Teorisi\nPratik Uygulama\nSertifikasyon İmkanı\nİletişim Formu"
+    }
+  ],
+  "workflow": [
+    {
+      "route": "/products/allplan-aec",
+      "states": 28,
+      "failed": []
+    },
+    {
+      "route": "/products/allplan-bimplus",
+      "states": 12,
+      "failed": []
+    },
+    {
+      "route": "/products/precast",
+      "states": 15,
+      "failed": []
+    },
+    {
+      "route": "/products/precast-detail",
+      "states": 15,
+      "failed": []
+    },
+    {
+      "route": "/products/allplan-2026-yenilikler",
+      "states": 27,
+      "failed": []
+    },
+    {
+      "route": "/solutions-v2/training/quick-start",
+      "states": 4,
+      "failed": []
+    },
+    {
+      "route": "/solutions/addons/drive-curve",
+      "states": 6,
+      "failed": []
+    },
+    {
+      "route": "/solutions/addons/sketchup-converter",
+      "states": 2,
+      "failed": []
+    },
+    {
+      "route": "/solutions/addons/steel-components",
+      "states": 4,
+      "failed": []
+    },
+    {
+      "route": "/solutions/architecture",
+      "states": 23,
+      "failed": []
+    },
+    {
+      "route": "/solutions/infrastructure",
+      "states": 15,
+      "failed": []
+    },
+    {
+      "route": "/solutions/mep",
+      "states": 11,
+      "failed": []
+    },
+    {
+      "route": "/solutions/road-railway",
+      "states": 10,
+      "failed": []
+    },
+    {
+      "route": "/solutions/site-planning",
+      "states": 8,
+      "failed": []
+    },
+    {
+      "route": "/solutions/structural",
+      "states": 15,
+      "failed": []
+    }
+  ],
+  "faq": [
+    {
+      "category": "Genel & Abonelik",
+      "items": 7,
+      "failed": []
+    },
+    {
+      "category": "Cloud Hizmetleri",
+      "items": 5,
+      "failed": []
+    },
+    {
+      "category": "Lisans Dönüşümü",
+      "items": 4,
+      "failed": []
+    },
+    {
+      "category": "Workgroup & İşbirliği",
+      "items": 3,
+      "failed": []
+    },
+    {
+      "category": "Ürün Yaşam Döngüsü",
+      "items": 6,
+      "failed": []
+    }
+  ],
+  "keyboard": {
+    "trainingHomeEnd": true,
+    "workflowCategoryEnd": true,
+    "workflowItemEnd": true,
+    "faqHome": true
+  },
+  "mobile": {
+    "requestedViewport": {
+      "width": 390,
+      "height": 844
+    },
+    "observedCssWidth": 354,
+    "documentWidth": 354,
+    "trainingPanelVisible": true
+  },
+  "limitations": [
+    "Workflow state sweep used prior507ec8d production build; content and click behavior unchanged in later accessibility build. New keyboard/panel relations explicitly retested on rebuilt Yenilikler and FAQ.",
+    "No remote video playback, full-site visual acceptance or production deployment.",
+    "CSS uppercase subtitles compared using DOM textContent to preserve source Turkish characters."
+  ]
+}

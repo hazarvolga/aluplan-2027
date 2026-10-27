@@ -28,3 +28,10 @@ class ContentPolicyTests(unittest.TestCase):
         contact = json.dumps(pages['/contact'], ensure_ascii=False)
         self.assertNotIn(policy.OLD_TRIAL_SENTENCE, contact)
         self.assertIn(policy.CURRENT_TRIAL_SENTENCE, contact)
+
+    def test_innovation_description_uses_complete_source_sentence(self):
+        source = 'ALLPLAN 2026 ürün sürümleri, modernizasyon, otomasyon ve entegrasyon odaklı yaklaşımıyla, AEC sektörünün değişen ihtiyaçlarına güçlü yanıtlar veriyor. İkinci cümle.'
+        page = {'description': 'modernizasyon,', 'structuredLayout': {'intro': {'paragraphs': [source]}}}
+        result = policy.apply_approved_content_policy({'/products/allplan-2026-yenilikler': page})
+        self.assertEqual(result['/products/allplan-2026-yenilikler']['description'], source.split('. ')[0] + '.')
+        self.assertEqual(page['description'], 'modernizasyon,')

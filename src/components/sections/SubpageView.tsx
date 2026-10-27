@@ -15,6 +15,28 @@ import {
 import { AluIcon } from '@/components/ui/AluIcon';
 import { TrainingTabs } from './TrainingTabs';
 
+/** Automatic-activation keyboard behavior shared by the two structured tab families. */
+function handleStructuredTabKey(
+  event: React.KeyboardEvent<HTMLButtonElement>,
+  index: number,
+  count: number,
+  select: (index: number) => void,
+  vertical = false
+) {
+  const nextKey = vertical ? 'ArrowDown' : 'ArrowRight';
+  const previousKey = vertical ? 'ArrowUp' : 'ArrowLeft';
+  const nextIndex = event.key === 'Home' ? 0
+    : event.key === 'End' ? count - 1
+    : event.key === nextKey ? (index + 1) % count
+    : event.key === previousKey ? (index - 1 + count) % count
+    : null;
+  if (nextIndex === null || count === 0) return;
+  event.preventDefault();
+  const tabs = event.currentTarget.parentElement?.querySelectorAll<HTMLButtonElement>('[role="tab"]');
+  select(nextIndex);
+  tabs?.[nextIndex]?.focus();
+}
+
 const allPlaylists = getAllPlaylists();
 const playlistByUrl = new Map(allPlaylists.map((p) => [p.url, p]));
 const searchIndex = getSearchIndex();
@@ -1767,7 +1789,14 @@ export function SubpageView({
                               key={cat.key || cIdx}
                               type="button"
                               role="tab"
+                              id={`workflow-category-tab-${cIdx}`}
+                              aria-controls="workflow-category-panel"
                               aria-selected={isCatActive}
+                              tabIndex={isCatActive ? 0 : -1}
+                              onKeyDown={(event) => handleStructuredTabKey(event, cIdx, wfTabs.categories.length, (nextIndex) => {
+                                setActiveWfCatIdx(nextIndex);
+                                setActiveWfItemIdx(0);
+                              })}
                               className={`alu-wf-cat-btn${isCatActive ? ' alu-wf-cat-btn--active' : ''}`}
                               onClick={() => {
                                 setActiveWfCatIdx(cIdx);
@@ -1783,8 +1812,14 @@ export function SubpageView({
                       </div>
 
                       {/* Active Category Split Stage: Left Sub-Tab List + Right Showcase Card */}
-                      <div className="alu-wf-stage">
-                        <div className="alu-wf-sublist" role="tablist" aria-label={currentWfCat.label}>
+                      <div
+                        className="alu-wf-stage"
+                        id="workflow-category-panel"
+                        role="tabpanel"
+                        aria-labelledby={`workflow-category-tab-${safeCatIdx}`}
+                        tabIndex={0}
+                      >
+                        <div className="alu-wf-sublist" role="tablist" aria-label={currentWfCat.label} aria-orientation="vertical">
                           {currentWfCat.items.map((subItem, sIdx) => {
                             const isSubActive = sIdx === safeItemIdx;
                             return (
@@ -1792,7 +1827,11 @@ export function SubpageView({
                                 key={`${subItem.title}-${sIdx}`}
                                 type="button"
                                 role="tab"
+                                id={`workflow-item-tab-${safeCatIdx}-${sIdx}`}
+                                aria-controls="workflow-item-panel"
                                 aria-selected={isSubActive}
+                                tabIndex={isSubActive ? 0 : -1}
+                                onKeyDown={(event) => handleStructuredTabKey(event, sIdx, currentWfCat.items.length, setActiveWfItemIdx, true)}
                                 className={`alu-wf-subbtn${isSubActive ? ' alu-wf-subbtn--active' : ''}`}
                                 onClick={() => setActiveWfItemIdx(sIdx)}
                               >
@@ -1811,7 +1850,14 @@ export function SubpageView({
                         </div>
 
                         {currentWfItem && (
-                          <article className="alu-wf-detail" key={`${safeCatIdx}-${safeItemIdx}`}>
+                          <article
+                            className="alu-wf-detail"
+                            key={`${safeCatIdx}-${safeItemIdx}`}
+                            id="workflow-item-panel"
+                            role="tabpanel"
+                            aria-labelledby={`workflow-item-tab-${safeCatIdx}-${safeItemIdx}`}
+                            tabIndex={0}
+                          >
                             {currentWfItem.imageSrc && (
                               <div
                                 className="alu-wf-detail__media"
@@ -2361,7 +2407,11 @@ export function SubpageView({
                                   key={cat.id}
                                   type="button"
                                   role="tab"
+                                  id={`faq-category-tab-${cIdx}`}
+                                  aria-controls="faq-category-panel"
                                   aria-selected={isActive}
+                                  tabIndex={isActive ? 0 : -1}
+                                  onKeyDown={(event) => handleStructuredTabKey(event, cIdx, faqDir.categories.length, setActiveFaqCatIdx)}
                                   className={`alu-wf-cat-btn${
                                     isActive ? ' alu-wf-cat-btn--active' : ''
                                   }`}
@@ -2378,7 +2428,15 @@ export function SubpageView({
                           </div>
                         )}
 
-                        <div className="alu-faq-stage" key={currentFaqCat.id}>
+                        <div
+                          className="alu-faq-stage"
+                          key={currentFaqCat.id}
+                          id="faq-category-panel"
+                          role={faqDir.categories.length > 1 ? 'tabpanel' : 'region'}
+                          aria-labelledby={faqDir.categories.length > 1 ? `faq-category-tab-${safeFaqIdx}` : undefined}
+                          aria-label={faqDir.categories.length > 1 ? undefined : currentFaqCat.title}
+                          tabIndex={0}
+                        >
                           <div className="alu-faq-stage__header">
                             <div className="alu-cluster" style={{ gap: '0.75rem' }}>
                               <span className="alu-ref-card__icon">

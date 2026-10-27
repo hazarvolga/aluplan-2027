@@ -20,6 +20,7 @@ import { MediaGridSection } from './MediaGridSection';
 import { SplitCalloutSection } from './SplitCalloutSection';
 import { VideoLibraryHubSection } from './VideoLibraryHubSection';
 import { ReferencesDirectorySection } from './ReferencesDirectorySection';
+import { VideoPlaylistSection } from './VideoPlaylistSection';
 import { handleStructuredTabKey } from './structured-tab-key';
 import { MediaDialog } from '@/components/ui/MediaDialog';
 
@@ -244,131 +245,11 @@ export function SubpageView({
 
       {/* Special Interactive View: Video Playlist (/solutions-v2/training/video-library/[playlistId]) */}
       {playlist && (
-        <section className="preview-section" aria-labelledby="playlist-heading">
-          <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
-            <div className="preview-section-heading">
-              <div className="alu-stack">
-                <span className="preview-kicker">VİDEO EĞİTİM SERİSİ · {playlist.count} VİDEO</span>
-                <h2 id="playlist-heading" className="alu-h1">
-                  {playlist.title}
-                </h2>
-                {playlist.subtitle && <p className="alu-body preview-meta">{playlist.subtitle}</p>}
-              </div>
-              <Link className="alu-button alu-button--secondary alu-button--md" href="/solutions-v2/training/video-library">
-                <span>Video Kütüphanesine Dön</span>
-                <AluIcon name="arrow-right" size="sm" />
-              </Link>
-            </div>
-
-            {(() => {
-              const currentVideo =
-                playlist.videos.find((v) => v.id === activeVideoId) || playlist.videos[0];
-              const currentIdx = Math.max(
-                0,
-                playlist.videos.findIndex((v) => v.id === currentVideo?.id)
-              );
-
-              return (
-                <div className="alu-playlist-stage">
-                  {/* Left (2/3): Main Video Player Area */}
-                  <div className="alu-playlist-stage__main">
-                    {currentVideo && (
-                      <div className="alu-playlist-player-card">
-                        <div className="alu-playlist-player-card__viewport">
-                          <iframe
-                            src={`https://www.youtube.com/embed/${currentVideo.id}`}
-                            title={currentVideo.title}
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                          />
-                        </div>
-                        <div className="alu-playlist-player-card__body">
-                          <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
-                            <span className="alu-badge alu-badge--accent">
-                              <AluIcon name="circle-play" size="sm" />
-                              <span>Bölüm {currentIdx + 1} / {playlist.videos.length}</span>
-                            </span>
-                            <a
-                              href={`https://www.youtube.com/watch?v=${currentVideo.id}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="alu-link alu-link--standalone"
-                            >
-                              <span>YouTube&apos;da Aç</span>
-                              <AluIcon name="external-link" size="sm" />
-                            </a>
-                          </div>
-                          <h3 className="alu-playlist-player-card__title">
-                            <span className="alu-playlist-player-card__icon">
-                              <AluIcon name="video" size="md" />
-                            </span>
-                            <span>{currentVideo.title}</span>
-                          </h3>
-                          <p className="alu-body" style={{ margin: 0, color: 'var(--text-secondary)' }}>
-                            {currentVideo.description ||
-                              `Bu eğitim videosunda ${currentVideo.title} konusu detaylı olarak incelenmektedir. Allplan eğitim serisinin sunduğu yenilikleri keşfedin.`}
-                          </p>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Right (1/3): Sticky Scrollable Playlist Sidebar */}
-                  <aside className="alu-playlist-sidebar" aria-label="Oynatma listesi videoları">
-                    <div className="alu-playlist-sidebar__header">
-                      <span className="alu-playlist-sidebar__title">
-                        <AluIcon name="video" size="sm" />
-                        <span>Oynatma Listesi</span>
-                      </span>
-                      <span className="alu-playlist-sidebar__counter">
-                        {currentIdx + 1} / {playlist.videos.length}
-                      </span>
-                    </div>
-
-                    <div className="alu-playlist-sidebar__list">
-                      {playlist.videos.map((vid, idx) => {
-                        const isSelected = vid.id === currentVideo?.id;
-                        return (
-                          <button
-                            key={`${vid.id}-${idx}`}
-                            type="button"
-                            onClick={() => setActiveVideoId(vid.id)}
-                            className={`alu-playlist-item${
-                              isSelected ? ' alu-playlist-item--active' : ''
-                            }`}
-                          >
-                            <div className="alu-playlist-item__thumb">
-                              <img
-                                src={`https://img.youtube.com/vi/${vid.id}/mqdefault.jpg`}
-                                alt={vid.title}
-                                loading="lazy"
-                              />
-                              {isSelected && (
-                                <div className="alu-playlist-item__playing">
-                                  <span className="alu-playlist-item__playing-badge">
-                                    <AluIcon name="circle-play" size="sm" />
-                                  </span>
-                                </div>
-                              )}
-                            </div>
-                            <div className="alu-playlist-item__info">
-                              <span className="alu-playlist-item__name">
-                                {idx + 1}. {vid.title}
-                              </span>
-                              <span className="alu-playlist-item__meta">
-                                Video Ders{vid.duration ? ` · ${vid.duration}` : ''}
-                              </span>
-                            </div>
-                          </button>
-                        );
-                      })}
-                    </div>
-                  </aside>
-                </div>
-              );
-            })()}
-          </div>
-        </section>
+        <VideoPlaylistSection
+          playlist={playlist}
+          activeVideoId={activeVideoId}
+          onVideoChange={setActiveVideoId}
+        />
       )}
 
       {/* Special Interactive View: Video Library Hub (/solutions-v2/training/video-library) */}

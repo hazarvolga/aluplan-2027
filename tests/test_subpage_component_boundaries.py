@@ -151,6 +151,86 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
         }
         self.assertEqual(actual_counts, expected_counts)
 
+    def test_video_playlist_has_a_dedicated_controlled_render_boundary(self):
+        component = read("src/components/sections/VideoPlaylistSection.tsx")
+        parent = read("src/components/sections/SubpageView.tsx")
+
+        self.assertTrue(component.startswith("'use client';"))
+        self.assertIn("import type { PlaylistRecord }", component)
+        for marker in [
+            "playlist: PlaylistRecord",
+            "activeVideoId: string",
+            "onVideoChange: (videoId: string) => void",
+            "playlist.videos.find",
+            "playlist.videos[0]",
+            "Math.max(",
+            "playlist.videos.findIndex",
+            "onClick={() => onVideoChange(video.id)}",
+            "https://www.youtube.com/embed/",
+            "https://www.youtube.com/watch?v=",
+            "https://img.youtube.com/vi/",
+            "alu-playlist-item--active",
+            "Bölüm {currentIdx + 1} / {playlist.videos.length}",
+            "Video Kütüphanesine Dön",
+            'target="_blank"',
+            'rel="noopener noreferrer"',
+            'loading="lazy"',
+        ]:
+            with self.subTest(marker=marker):
+                self.assertIn(marker, component)
+
+        self.assertIn("import { VideoPlaylistSection } from './VideoPlaylistSection';", parent)
+        self.assertIn("playlist={playlist}", parent)
+        self.assertIn("activeVideoId={activeVideoId}", parent)
+        self.assertIn("onVideoChange={setActiveVideoId}", parent)
+        self.assertIn("playlist?.videos?.[0]?.id || ''", parent)
+        self.assertNotIn("alu-playlist-", parent)
+
+    def test_video_playlist_data_preserves_routes_counts_and_first_video_order(self):
+        playlists = json.loads(read("src/data/playlists.json"))
+        pages = json.loads(read("src/data/pages.json"))
+        playlist_records = list(playlists.values())
+        expected_counts = [39, 12, 15, 26, 26, 14, 34, 2, 4, 8, 9, 9, 18, 26]
+        expected_first_video_ids = [
+            "oMTdIgee5zk",
+            "dNGuW4DfGXQ",
+            "tM2ECw1jAoQ",
+            "HcbHXEc6R4o",
+            "iG-e7_fjbc8",
+            "krrdOMuHAPo",
+            "vqLnGDJpJOA",
+            "ZMy00xdK_Zw",
+            "yRZUdIfqqTg",
+            "qrWbcV0WUJI",
+            "pbrLQHEgmbE",
+            "DnR6gPrkykw",
+            "qhAwHkMm2yU",
+            "HcbHXEc6R4o",
+        ]
+
+        self.assertEqual(len(playlist_records), 14)
+        self.assertEqual([record["count"] for record in playlist_records], expected_counts)
+        self.assertEqual(
+            [record["videos"][0]["id"] for record in playlist_records],
+            expected_first_video_ids,
+        )
+        self.assertEqual(sum(len(record["videos"]) for record in playlist_records), 242)
+        self.assertEqual(
+            len({video["id"] for record in playlist_records for video in record["videos"]}),
+            216,
+        )
+
+        for playlist_id, record in playlists.items():
+            with self.subTest(playlist_id=playlist_id):
+                self.assertEqual(record["id"], playlist_id)
+                self.assertTrue(record["videos"])
+                self.assertEqual(record["count"], len(record["videos"]))
+                self.assertEqual(
+                    len({video["id"] for video in record["videos"]}),
+                    len(record["videos"]),
+                )
+                self.assertEqual(pages[record["url"]]["playlistId"], playlist_id)
+
     def test_about_editorial_has_a_dedicated_render_boundary(self):
         component = read("src/components/sections/AboutEditorialSection.tsx")
         parent = read("src/components/sections/SubpageView.tsx")

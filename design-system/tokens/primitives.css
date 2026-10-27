@@ -247,6 +247,10 @@
   --ref-space-application-card-inset: 0.875rem;
   --ref-space-application-panel-dense-inset: 0.95rem;
   --ref-space-application-micro: 0.1rem;
+  --ref-space-application-media-control-inset: 0.65rem;
+  --ref-space-application-playlist-sticky-offset: 5.5rem;
+  --ref-space-application-references-sticky-offset: 4.5rem;
+  --ref-space-application-story-sticky-offset: 6.5rem;
   --ref-space-application-pathway-split-padding: clamp(1.75rem, 3.5vw, 2.75rem); /* @kind other */
   --ref-space-application-label-gap: 0.45rem;
   --ref-space-application-compact-inset: 0.3rem;

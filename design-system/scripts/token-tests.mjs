@@ -189,6 +189,22 @@ export function runTokenTests({ build = buildTokens, lint = lintComponentCss, T,
     }
     return true;
   });
+  test('application inset and sticky-offset tokens preserve their original positions', () => {
+    const expected = {
+      '--space-application-media-control-inset': '0.65rem',
+      '--space-application-playlist-sticky-offset': '5.5rem',
+      '--space-application-references-sticky-offset': '4.5rem',
+      '--space-application-story-sticky-offset': '6.5rem',
+      '--space-application-jsx-comfortable': '0.75rem',
+      '--space-application-jsx-section-wide': '1.25rem',
+      '--space-application-jsx-section': '1rem',
+      '--space-application-jsx-section-inset': '1.5rem'
+    };
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      for (const [name, value] of Object.entries(expected)) if (values[name] !== value) return `${theme}/${mode} ${name}: expected ${value}, got ${values[name]}`;
+    }
+    return true;
+  });
   return { results, passed: results.filter(r => r.pass).length, failed: results.filter(r => !r.pass).length };
 }
 

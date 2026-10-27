@@ -136,3 +136,21 @@ class AppStylesTests(unittest.TestCase):
                 with self.subTest(declaration=declaration), self.assertRaisesRegex(ValueError, 'Raw application metric'):
                     styles.sync_styles(root)
                 self.assertEqual((root / styles.OUTPUT).read_bytes(), before)
+
+    def test_fixed_application_offsets_must_use_tokens(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            self.fixture(root)
+            app = root / 'src/styles/application.css'
+            app.write_text('.card {top:var(--space-inset-sm);left:42%;bottom:0}')
+            styles.sync_styles(root)
+            before = (root / styles.OUTPUT).read_bytes()
+            for selector, declaration in [('.card', 'top:1rem'), ('.card', 'right:-0.75rem'),
+                                          ('.card', 'bottom:12px'), ('.card', 'left:2em'),
+                                          ('.other', 'left:-9999px')]:
+                app.write_text(selector + ' {' + declaration + '}')
+                with self.subTest(declaration=declaration), self.assertRaisesRegex(ValueError, 'Raw application metric'):
+                    styles.sync_styles(root)
+                self.assertEqual((root / styles.OUTPUT).read_bytes(), before)
+            app.write_text('.alu-skip-link {left:-9999px}')
+            self.assertTrue(styles.sync_styles(root))

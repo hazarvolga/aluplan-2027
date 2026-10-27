@@ -147,6 +147,10 @@
   --space-application-about-story-gap: var(--ref-space-application-about-story-gap); /* @kind other */
   --space-application-about-value-item-padding: var(--ref-space-application-about-value-item-padding); /* @kind other */
   --space-application-about-office-info-padding: var(--ref-space-application-about-office-info-padding); /* @kind other */
+  --space-application-media-control-inset: var(--ref-space-application-media-control-inset);
+  --space-application-playlist-sticky-offset: var(--ref-space-application-playlist-sticky-offset);
+  --space-application-references-sticky-offset: var(--ref-space-application-references-sticky-offset);
+  --space-application-story-sticky-offset: var(--ref-space-application-story-sticky-offset);
   --space-application-jsx-tight: var(--ref-space-1);
   --space-application-jsx-compact: var(--ref-space-application-dense-gap);
   --space-application-jsx-regular: var(--ref-space-2);
@@ -534,6 +538,10 @@
   --space-application-about-story-gap: var(--ref-space-application-about-story-gap); /* @kind other */
   --space-application-about-value-item-padding: var(--ref-space-application-about-value-item-padding); /* @kind other */
   --space-application-about-office-info-padding: var(--ref-space-application-about-office-info-padding); /* @kind other */
+  --space-application-media-control-inset: var(--ref-space-application-media-control-inset);
+  --space-application-playlist-sticky-offset: var(--ref-space-application-playlist-sticky-offset);
+  --space-application-references-sticky-offset: var(--ref-space-application-references-sticky-offset);
+  --space-application-story-sticky-offset: var(--ref-space-application-story-sticky-offset);
   --space-application-jsx-tight: var(--ref-space-1);
   --space-application-jsx-compact: var(--ref-space-application-dense-gap);
   --space-application-jsx-regular: var(--ref-space-2);
@@ -1057,6 +1065,10 @@
   --space-application-about-story-gap: var(--ref-space-application-about-story-gap); /* @kind other */
   --space-application-about-value-item-padding: var(--ref-space-application-about-value-item-padding); /* @kind other */
   --space-application-about-office-info-padding: var(--ref-space-application-about-office-info-padding); /* @kind other */
+  --space-application-media-control-inset: var(--ref-space-application-media-control-inset);
+  --space-application-playlist-sticky-offset: var(--ref-space-application-playlist-sticky-offset);
+  --space-application-references-sticky-offset: var(--ref-space-application-references-sticky-offset);
+  --space-application-story-sticky-offset: var(--ref-space-application-story-sticky-offset);
   --space-application-jsx-tight: var(--ref-space-1);
   --space-application-jsx-compact: var(--ref-space-application-dense-gap);
   --space-application-jsx-regular: var(--ref-space-2);

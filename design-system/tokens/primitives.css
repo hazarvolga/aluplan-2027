@@ -164,15 +164,62 @@
   --ref-font-size-250: 2.5rem;
   --ref-font-size-300: 3rem;
   --ref-font-size-350: 3.5rem;
+  --ref-font-size-application-micro-label: 0.72rem;
+  --ref-font-size-application-hero-metrics-value: clamp(1.85rem, 3vw, 2.5rem); /* @kind other */
+  --ref-font-size-application-micro-compact: 0.68rem;
+  --ref-font-size-application-small-body: 0.95rem;
+  --ref-font-size-application-pathway-split-title: clamp(2.25rem, 4vw, 3.5rem); /* @kind other */
+  --ref-font-size-application-pathway-split-desc: clamp(1.05rem, 1.35vw, 1.22rem); /* @kind other */
+  --ref-font-size-application-caption-compact: 0.8rem;
+  --ref-font-size-application-bento-card-title: clamp(1.35rem, 2.2vw, 1.85rem); /* @kind other */
+  --ref-font-size-application-body-lead: 1.1rem;
+  --ref-font-size-application-metadata: 0.85rem;
+  --ref-font-size-application-overline: 0.78rem;
+  --ref-font-size-application-yt-banner-title: clamp(1.65rem, 3vw, 2.35rem); /* @kind other */
+  --ref-font-size-application-yt-banner-desc: clamp(1rem, 1.2vw, 1.125rem); /* @kind other */
+  --ref-font-size-application-body-emphasis: 1.05rem;
+  --ref-font-size-application-card-title: 1.2rem;
+  --ref-font-size-application-playlist-player-card-title: clamp(1.4rem, 2.2vw, 1.85rem); /* @kind other */
+  --ref-font-size-application-small-body-relaxed: 0.975rem;
+  --ref-font-size-application-micro: 0.7rem;
+  --ref-font-size-application-body-intro: 1.08rem;
+  --ref-font-size-application-metadata-compact: 0.84rem;
+  --ref-font-size-application-caption-reading: 0.82rem;
+  --ref-font-size-application-small-body-compact: 0.9rem;
+  --ref-font-size-application-body-compact: 0.98rem;
+  --ref-font-size-application-about-metric-value: clamp(2.25rem, 3.8vw, 3.25rem); /* @kind other */
+  --ref-font-size-application-fine-print: 0.76rem;
+  --ref-font-size-application-metadata-reading: 0.86rem;
+  --ref-font-size-application-about-story-lead: clamp(1.12rem, 1.5vw, 1.28rem); /* @kind other */
+  --ref-font-size-application-body-reading: 1.02rem;
+  --ref-font-size-application-feature-title: 1.35rem;
   --ref-font-line-height-110: 1.1; /* @kind other */
   --ref-font-line-height-120: 1.2; /* @kind other */
   --ref-font-line-height-130: 1.3; /* @kind other */
   --ref-font-line-height-150: 1.5; /* @kind other */
   --ref-font-line-height-160: 1.6; /* @kind other */
+  --ref-font-line-height-application-display-compact: 1.05; /* @kind other */
+  --ref-font-line-height-application-display-relaxed: 1.08; /* @kind other */
+  --ref-font-line-height-application-body-relaxed: 1.65; /* @kind other */
+  --ref-font-line-height-application-body-compact: 1.55; /* @kind other */
+  --ref-font-line-height-application-title-relaxed: 1.35; /* @kind other */
+  --ref-font-line-height-application-body-reading: 1.62; /* @kind other */
+  --ref-font-line-height-application-title-reading: 1.32; /* @kind other */
+  --ref-font-line-height-application-editorial: 1.75; /* @kind other */
+  --ref-font-line-height-application-editorial-spacious: 1.8; /* @kind other */
+  --ref-font-line-height-application-body-spacious: 1.7; /* @kind other */
   --ref-font-letter-spacing-tight: -0.02em;
   --ref-font-letter-spacing-snug: -0.01em;
   --ref-font-letter-spacing-normal: 0em;
   --ref-font-letter-spacing-wide: 0.02em;
+  --ref-font-letter-spacing-application-display-tight: -0.025em;
+  --ref-font-letter-spacing-application-kicker: 0.06em;
+  --ref-font-letter-spacing-application-display-compressed: -0.03em;
+  --ref-font-letter-spacing-application-technical: 0.08em;
+  --ref-font-letter-spacing-application-label: 0.04em;
+  --ref-font-letter-spacing-application-overline: 0.05em;
+  --ref-font-letter-spacing-application-label-subtle: 0.03em;
+  --ref-font-letter-spacing-application-technical-wide: 0.1em;
   --ref-space-0: 0;
   --ref-space-1: 0.25rem;
   --ref-space-2: 0.5rem;
@@ -185,6 +232,49 @@
   --ref-space-12: 3rem;
   --ref-space-16: 4rem;
   --ref-space-20: 5rem;
+  --ref-space-application-dense-gap: 0.375rem;
+  --ref-space-application-hairline: 0.125rem;
+  --ref-space-application-page-hero-padding: clamp(2.5rem, 5vw, 4.5rem); /* @kind other */
+  --ref-space-application-control-comfortable-gap: 0.625rem;
+  --ref-space-application-hero-stage-padding: clamp(3.5rem, 6vw, 6rem); /* @kind other */
+  --ref-space-application-hero-stage-padding-end: clamp(2.5rem, 4vw, 4rem); /* @kind other */
+  --ref-space-application-hero-stage-inner-gap: clamp(2.5rem, 5vw, 4rem); /* @kind other */
+  --ref-space-application-hero-stage-grid-gap: clamp(2rem, 4vw, 3.5rem); /* @kind other */
+  --ref-space-application-control-dense-gap: 0.55rem;
+  --ref-space-application-panel-gap: 1.125rem;
+  --ref-space-application-section-gap: 1.375rem;
+  --ref-space-application-card-inset: 0.875rem;
+  --ref-space-application-panel-dense-inset: 0.95rem;
+  --ref-space-application-micro: 0.1rem;
+  --ref-space-application-pathway-split-padding: clamp(1.75rem, 3.5vw, 2.75rem); /* @kind other */
+  --ref-space-application-label-gap: 0.45rem;
+  --ref-space-application-compact-inset: 0.3rem;
+  --ref-space-application-card-compact-inset: 0.7rem;
+  --ref-space-application-card-comfortable-gap: 0.85rem;
+  --ref-space-application-control-gap: 0.6rem;
+  --ref-space-application-micro-inset: 0.2rem;
+  --ref-space-application-label-inset: 0.4rem;
+  --ref-space-application-card-dense-gap: 0.65rem;
+  --ref-space-application-section-wide-inset: 1.75rem;
+  --ref-space-application-techspecs-banner-padding: clamp(1.75rem, 3.5vw, 3rem); /* @kind other */
+  --ref-space-application-subpage-hero-padding: clamp(3rem, 6vw, 5rem); /* @kind other */
+  --ref-space-application-feature-rows-gap: clamp(2rem, 4vw, 3.25rem); /* @kind other */
+  --ref-space-application-section-comfortable-inset: 1.625rem;
+  --ref-space-application-module-tabs-padding: clamp(1.5rem, 3vw, 2.5rem); /* @kind other */
+  --ref-space-application-trial-banner-inner-padding: clamp(1.75rem, 4vw, 3rem); /* @kind other */
+  --ref-space-application-yt-banner-padding: clamp(2rem, 4vw, 3rem); /* @kind other */
+  --ref-space-application-playlist-player-card-body-padding: clamp(1.5rem, 3vw, 2.25rem); /* @kind other */
+  --ref-space-application-card-gap: 0.8rem;
+  --ref-space-application-card-comfortable-inset: 0.9rem;
+  --ref-space-application-panel-wide-inset: 1.15rem;
+  --ref-space-application-compact-gap: 0.35rem;
+  --ref-space-application-panel-comfortable-inset: 1.1rem;
+  --ref-space-application-section-compact-gap: 1.35rem;
+  --ref-space-application-video-modal-padding: clamp(1rem, 3vw, 2.5rem); /* @kind other */
+  --ref-space-application-detail: 0.15rem;
+  --ref-space-application-about-story-gap: clamp(2.5rem, 5vw, 5rem); /* @kind other */
+  --ref-space-application-about-value-item-padding: clamp(1.75rem, 3vw, 2.25rem); /* @kind other */
+  --ref-space-application-about-office-info-padding: clamp(1.75rem, 3vw, 2.75rem); /* @kind other */
   --ref-size-4: 1rem;
   --ref-size-5: 1.25rem;
   --ref-size-6: 1.5rem;
@@ -216,6 +306,7 @@
   --ref-radius-16: 16px;
   --ref-radius-20: 20px;
   --ref-radius-full: 999px;
+  --ref-radius-application-pill-extended: 9999px;
   --ref-border-width-1: 1px;
   --ref-border-width-2: 2px;
   --ref-border-width-3: 3px;
@@ -232,9 +323,28 @@
   --ref-duration-150: 150ms; /* @kind other */
   --ref-duration-200: 200ms; /* @kind other */
   --ref-duration-300: 300ms; /* @kind other */
+  --ref-duration-application-ambient: 700ms; /* @kind other */
+  --ref-duration-application-interactive: 350ms; /* @kind other */
+  --ref-duration-application-emphasis: 450ms; /* @kind other */
+  --ref-duration-application-slide: 420ms; /* @kind other */
+  --ref-duration-application-color: 400ms; /* @kind other */
+  --ref-duration-application-media: 280ms; /* @kind other */
+  --ref-duration-application-feature: 380ms; /* @kind other */
+  --ref-duration-application-feature-delayed: 460ms; /* @kind other */
+  --ref-duration-application-stagger-short: 180ms; /* @kind other */
+  --ref-duration-application-reveal: 600ms; /* @kind other */
+  --ref-duration-application-image: 550ms; /* @kind other */
+  --ref-duration-application-detail: 250ms; /* @kind other */
+  --ref-duration-application-control: 240ms; /* @kind other */
+  --ref-duration-application-responsive: 220ms; /* @kind other */
+  --ref-duration-application-panel: 260ms; /* @kind other */
+  --ref-duration-application-showcase: 520ms; /* @kind other */
+  --ref-duration-application-gentle: 320ms; /* @kind other */
   --ref-easing-standard: cubic-bezier(0.2, 0, 0, 1); /* @kind other */
   --ref-easing-decelerate: cubic-bezier(0, 0, 0, 1); /* @kind other */
   --ref-easing-accelerate: cubic-bezier(0.3, 0, 1, 1); /* @kind other */
+  --ref-easing-application-expressive: cubic-bezier(0.22, 1, 0.36, 1); /* @kind other */
+  --ref-easing-application-default: ease; /* @kind other */
   --ref-z-index-0: 0; /* @kind other */
   --ref-z-index-100: 100; /* @kind other */
   --ref-z-index-200: 200; /* @kind other */

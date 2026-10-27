@@ -374,7 +374,7 @@ button.alu-role[aria-checked="true"] {
   border-bottom: var(--border-width-default) solid var(--border-default);
   font-size: var(--type-caption-size);
   color: var(--text-secondary);
-  padding-block: 0.375rem;
+  padding-block: var(--space-application-dense-gap);
 }
 .alu-topbar__inner {
   display: flex;
@@ -394,7 +394,7 @@ button.alu-role[aria-checked="true"] {
   text-decoration: none;
   font-family: var(--font-mono);
   font-size: var(--type-mono-size);
-  padding: 0.125rem 0.375rem;
+  padding: var(--space-application-hairline) var(--space-application-dense-gap);
   border: var(--border-width-default) solid var(--border-default);
 }
 .alu-topbar__link:hover {
@@ -429,13 +429,13 @@ button.alu-role[aria-checked="true"] {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.375rem;
+  gap: var(--space-application-dense-gap);
 }
 .alu-megamenu__item {
   color: var(--text-secondary);
   text-decoration: none;
   font-size: var(--type-body-sm-size);
-  padding: 0.25rem 0;
+  padding: var(--space-stack-xs) 0;
   display: inline-block;
 }
 .alu-megamenu__item:hover {
@@ -446,12 +446,12 @@ button.alu-role[aria-checked="true"] {
 .alu-page-hero {
   background: linear-gradient(120deg, var(--surface-page) 0 62%, var(--surface-raised) 62% 100%);
   border-bottom: var(--border-width-default) solid var(--border-default);
-  padding-block: clamp(2.5rem, 5vw, 4.5rem);
+  padding-block: var(--space-application-page-hero-padding);
 }
 .alu-breadcrumb {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: var(--space-stack-sm);
   align-items: center;
   list-style: none;
   padding: 0;
@@ -602,7 +602,7 @@ button.alu-role[aria-checked="true"] {
   align-items: center;
   justify-content: center;
   height: 3.25rem;
-  padding: 0.5rem 0.75rem;
+  padding: var(--space-stack-sm) var(--space-application-card-compact-gap);
   background: var(--surface-subtle);
   border: var(--border-width-default) solid var(--border-subtle);
   border-radius: var(--radius-control);
@@ -623,7 +623,7 @@ button.alu-role[aria-checked="true"] {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.625rem;
+  gap: var(--space-application-control-comfortable-gap);
   padding: var(--space-inset-sm);
   background: var(--surface-raised);
   border: var(--border-width-default) solid var(--border-strong);
@@ -645,7 +645,7 @@ button.alu-role[aria-checked="true"] {
 .alu-subpage-hero__caption {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--space-stack-sm);
   font-family: var(--font-mono);
   font-size: var(--type-caption-size);
   color: var(--text-secondary);
@@ -725,8 +725,8 @@ button.alu-role[aria-checked="true"] {
 .alu-megamenu__item {
   display: inline-flex;
   align-items: center;
-  gap: 0.375rem;
-  padding: 0.375rem 0.5rem;
+  gap: var(--space-application-dense-gap);
+  padding: var(--space-application-dense-gap) var(--space-stack-sm);
   border-radius: var(--radius-control);
   transition:
     background-color var(--motion-duration-fast) var(--motion-easing-standard),
@@ -745,7 +745,7 @@ button.alu-role[aria-checked="true"] {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding-block: clamp(3.5rem, 6vw, 6rem) clamp(2.5rem, 4vw, 4rem);
+  padding-block: var(--space-application-hero-stage-padding) var(--space-application-hero-stage-padding-end);
   border-bottom: 1px solid var(--border-strong);
   background: var(--surface-page);
 }
@@ -781,17 +781,17 @@ button.alu-role[aria-checked="true"] {
 .alu-hero-stage__inner {
   display: flex;
   flex-direction: column;
-  gap: clamp(2.5rem, 5vw, 4rem);
+  gap: var(--space-application-hero-stage-inner-gap);
 }
 .alu-hero-stage__grid {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(22rem, 0.85fr);
-  gap: clamp(2rem, 4vw, 3.5rem);
+  gap: var(--space-application-hero-stage-grid-gap);
   align-items: center;
 }
 .alu-hero-stage__title {
   max-width: 14ch;
-  letter-spacing: -0.025em;
+  letter-spacing: var(--font-letter-spacing-application-display-tight);
 }
 .alu-hero-stage__lead {
   max-width: 58ch;
@@ -801,14 +801,14 @@ button.alu-role[aria-checked="true"] {
 .alu-hero-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.375rem;
-  padding-top: 0.5rem;
+  gap: var(--space-application-dense-gap);
+  padding-top: var(--space-stack-sm);
 }
 .alu-hero-tag {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
-  padding: 0.25rem 0.55rem;
+  font-size: var(--type-application-micro-label-size);
+  letter-spacing: var(--font-letter-spacing-application-kicker);
+  padding: var(--space-stack-xs) var(--space-application-control-dense-gap);
   background: var(--surface-raised);
   border: 1px solid var(--border-default);
   color: var(--text-secondary);
@@ -828,15 +828,15 @@ button.alu-role[aria-checked="true"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
-  padding: 0.75rem 1.125rem;
+  gap: var(--space-application-card-compact-gap);
+  padding: var(--space-application-card-compact-gap) var(--space-application-panel-gap);
   background: var(--surface-brand);
   border-bottom: 1px solid var(--border-default);
 }
 .alu-hero-monitor__status {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--space-stack-sm);
   font-family: var(--font-mono);
   font-size: var(--type-caption-size);
   font-weight: var(--font-weight-strong);
@@ -845,7 +845,7 @@ button.alu-role[aria-checked="true"] {
 .alu-hero-monitor__dot {
   width: 0.5rem;
   height: 0.5rem;
-  border-radius: 999px;
+  border-radius: var(--radius-round);
   background: var(--accent-fg);
   box-shadow: 0 0 10px var(--accent-fg);
 }
@@ -863,7 +863,7 @@ button.alu-role[aria-checked="true"] {
   display: block;
 }
 .alu-hero-monitor__footer {
-  padding: 1rem 1.25rem;
+  padding: var(--space-application-panel-inset) var(--space-application-section-dense-gap);
   background: var(--surface-default);
   border-top: 1px solid var(--border-default);
 }
@@ -879,8 +879,8 @@ button.alu-role[aria-checked="true"] {
 .alu-hero-metrics__item {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  padding: 1.375rem 1.5rem;
+  gap: var(--space-stack-xs);
+  padding: var(--space-application-section-gap) var(--space-application-section-inset);
   border-right: 1px solid var(--border-default);
   position: relative;
 }
@@ -898,11 +898,11 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-hero-metrics__value {
   font-family: var(--font-heading);
-  font-size: clamp(1.85rem, 3vw, 2.5rem);
-  font-weight: 800;
-  line-height: 1.05;
+  font-size: var(--type-application-hero-metrics-value-size);
+  font-weight: var(--font-weight-application-hero-metrics-value);
+  line-height: var(--type-application-display-compact-line-height);
   color: var(--text-primary);
-  letter-spacing: -0.03em;
+  letter-spacing: var(--font-letter-spacing-application-display-compressed);
 }
 .alu-hero-metrics__label {
   font-family: var(--font-heading);
@@ -929,8 +929,8 @@ button.alu-role[aria-checked="true"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
-  padding: 1.125rem 1.25rem;
+  gap: var(--space-application-card-compact-gap);
+  padding: var(--space-application-panel-gap) var(--space-application-section-dense-gap);
   border-right: 1px solid var(--border-default);
   color: var(--text-primary);
   text-decoration: none;
@@ -952,7 +952,7 @@ button.alu-role[aria-checked="true"] {
   font-family: var(--font-mono);
   font-size: var(--type-caption-size);
   color: var(--accent-fg);
-  font-weight: 600;
+  font-weight: var(--font-weight-strong);
 }
 .alu-quick-ribbon__label {
   flex: 1;
@@ -993,13 +993,13 @@ button.alu-role[aria-checked="true"] {
   transform: translate(-50%, -50%);
   width: 52rem;
   height: 52rem;
-  border-radius: 9999px;
+  border-radius: var(--radius-application-pill-extended);
   background-color: var(--role-accent, var(--role-architect));
   filter: blur(130px);
   opacity: 0.08;
   pointer-events: none;
   z-index: 0;
-  transition: background-color 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: background-color var(--motion-duration-ambient) var(--motion-easing-expressive);
 }
 [data-mode="light"] .alu-pathway-glow {
   opacity: 0.06;
@@ -1010,7 +1010,7 @@ button.alu-role[aria-checked="true"] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.625rem;
+  gap: var(--space-application-control-comfortable-gap);
 }
 
 /* Role Tabs */
@@ -1018,26 +1018,26 @@ button.alu-role[aria-checked="true"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: var(--space-application-panel-inset);
 }
 .alu-pathway-tab {
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 0.875rem;
+  gap: var(--space-application-card-inset);
   min-width: 14rem;
-  padding: 0.95rem 1.5rem;
+  padding: var(--space-application-panel-dense-inset) var(--space-application-section-inset);
   background: var(--surface-default);
   border: 1px solid var(--border-strong);
   color: var(--text-secondary);
   cursor: pointer;
   text-align: left;
   transition:
-    transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
-    background-color 350ms cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 350ms cubic-bezier(0.22, 1, 0.36, 1),
-    color 350ms cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 350ms cubic-bezier(0.22, 1, 0.36, 1);
+    transform var(--motion-duration-interactive) var(--motion-easing-expressive),
+    background-color var(--motion-duration-interactive) var(--motion-easing-expressive),
+    border-color var(--motion-duration-interactive) var(--motion-easing-expressive),
+    color var(--motion-duration-interactive) var(--motion-easing-expressive),
+    box-shadow var(--motion-duration-interactive) var(--motion-easing-expressive);
 }
 .alu-pathway-tab:hover {
   border-color: var(--tab-accent, var(--accent-border));
@@ -1062,7 +1062,7 @@ button.alu-role[aria-checked="true"] {
   background: var(--surface-subtle);
   border: 1px solid var(--border-default);
   color: var(--text-secondary);
-  transition: all 350ms ease;
+  transition: all var(--motion-duration-interactive) var(--motion-easing-default);
 }
 .alu-pathway-tab--active .alu-pathway-tab__icon {
   background: color-mix(in srgb, var(--tab-accent, var(--role-architect)) 16%, transparent);
@@ -1072,27 +1072,27 @@ button.alu-role[aria-checked="true"] {
 .alu-pathway-tab__text {
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
+  gap: var(--space-application-micro);
   flex: 1;
 }
 .alu-pathway-tab__kicker {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
+  font-size: var(--type-application-micro-compact-size);
+  letter-spacing: var(--font-letter-spacing-application-technical);
   color: var(--text-muted);
 }
 .alu-pathway-tab__label {
   font-family: var(--font-heading);
-  font-size: 0.95rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  font-size: var(--type-application-small-body-size);
+  font-weight: var(--font-weight-application-hero-metrics-value);
+  letter-spacing: var(--font-letter-spacing-application-technical);
 }
 .alu-pathway-tab__dot {
   width: 0.55rem;
   height: 0.55rem;
-  border-radius: 999px;
+  border-radius: var(--radius-round);
   background: var(--border-strong);
-  transition: all 350ms ease;
+  transition: all var(--motion-duration-interactive) var(--motion-easing-default);
 }
 .alu-pathway-tab--active .alu-pathway-tab__dot {
   background: var(--tab-accent, var(--role-architect));
@@ -1103,30 +1103,30 @@ button.alu-role[aria-checked="true"] {
 .alu-pathway-split {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-  gap: clamp(2rem, 4vw, 3.5rem);
+  gap: var(--space-application-hero-stage-grid-gap);
   align-items: center;
-  padding: clamp(1.75rem, 3.5vw, 2.75rem);
+  padding: var(--space-application-pathway-split-padding);
   background: var(--surface-raised);
   border: 1px solid var(--border-strong);
   border-top: 2px solid var(--role-accent, var(--accent-border));
   box-shadow: var(--elevation-overlay);
-  transition: border-color 450ms ease;
+  transition: border-color var(--motion-duration-emphasis) var(--motion-easing-default);
 }
 .alu-pathway-split__left {
   display: flex;
   flex-direction: column;
-  gap: 1.125rem;
-  animation: aluPathwaySlideIn 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  gap: var(--space-application-panel-gap);
+  animation: aluPathwaySlideIn var(--motion-duration-slide) var(--motion-easing-expressive) both;
 }
 .alu-pathway-role-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  padding: 0.3rem 0.7rem;
+  gap: var(--space-application-label-gap);
+  padding: var(--space-application-compact-inset) var(--space-application-card-compact-inset);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  font-size: var(--type-caption-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
+  letter-spacing: var(--font-letter-spacing-application-kicker);
   color: var(--role-accent, var(--role-architect));
   background: color-mix(in srgb, var(--role-accent, var(--role-architect)) 14%, transparent);
   border: 1px solid color-mix(in srgb, var(--role-accent, var(--role-architect)) 45%, transparent);
@@ -1134,37 +1134,37 @@ button.alu-role[aria-checked="true"] {
 .alu-pathway-split__title {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: clamp(2.25rem, 4vw, 3.5rem);
-  font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -0.03em;
+  font-size: var(--type-application-pathway-split-title-size);
+  font-weight: var(--font-weight-application-hero-metrics-value);
+  line-height: var(--type-application-display-relaxed-line-height);
+  letter-spacing: var(--font-letter-spacing-application-display-compressed);
   color: var(--role-accent, var(--role-architect));
-  transition: color 400ms ease;
+  transition: color var(--motion-duration-color) var(--motion-easing-default);
 }
 .alu-pathway-split__desc {
   margin: 0;
-  font-size: clamp(1.05rem, 1.35vw, 1.22rem);
-  line-height: 1.65;
+  font-size: var(--type-application-pathway-split-desc-size);
+  line-height: var(--type-application-body-relaxed-line-height);
   color: var(--text-secondary);
   max-width: 52ch;
 }
 .alu-pathway-cta {
   display: inline-flex;
   align-items: center;
-  gap: 0.625rem;
-  padding: 0.85rem 1.5rem;
+  gap: var(--space-application-control-comfortable-gap);
+  padding: var(--space-application-card-comfortable-gap) var(--space-application-section-inset);
   background: var(--surface-default);
   border: 1px solid var(--role-accent, var(--accent-border));
   color: var(--text-primary);
   font-family: var(--font-body);
   font-size: var(--type-label-size);
-  font-weight: 700;
+  font-weight: var(--font-weight-application-pathway-role-badge);
   text-decoration: none;
   transition:
-    background-color 300ms ease,
-    border-color 300ms ease,
-    transform 300ms ease,
-    box-shadow 300ms ease;
+    background-color var(--motion-duration-slow) var(--motion-easing-default),
+    border-color var(--motion-duration-slow) var(--motion-easing-default),
+    transform var(--motion-duration-slow) var(--motion-easing-default),
+    box-shadow var(--motion-duration-slow) var(--motion-easing-default);
 }
 .alu-pathway-cta:hover {
   background: color-mix(in srgb, var(--role-accent, var(--role-architect)) 18%, var(--surface-raised));
@@ -1173,7 +1173,7 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-pathway-cta__arrow {
   display: inline-flex;
-  transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform var(--motion-duration-media) var(--motion-easing-expressive);
 }
 .alu-pathway-cta:hover .alu-pathway-cta__arrow {
   transform: translateX(5px);
@@ -1182,23 +1182,23 @@ button.alu-role[aria-checked="true"] {
 .alu-pathway-split__right {
   display: flex;
   flex-direction: column;
-  gap: 1.125rem;
+  gap: var(--space-application-panel-gap);
 }
 .alu-pathway-features-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.875rem;
+  gap: var(--space-application-card-inset);
 }
 .alu-pathway-feature-card {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 1rem 1.125rem;
+  gap: var(--space-application-card-compact-gap);
+  padding: var(--space-application-panel-inset) var(--space-application-panel-gap);
   background: var(--surface-default);
   border: 1px solid var(--border-default);
   border-left: 3px solid var(--role-accent, var(--accent-border));
   box-shadow: var(--elevation-raised);
-  animation: aluPathwayFeatureIn 380ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: aluPathwayFeatureIn var(--motion-duration-feature) var(--motion-easing-expressive) both;
 }
 .alu-pathway-feature-card__icon {
   display: inline-flex;
@@ -1206,14 +1206,14 @@ button.alu-role[aria-checked="true"] {
   justify-content: center;
   width: 1.75rem;
   height: 1.75rem;
-  border-radius: 999px;
+  border-radius: var(--radius-round);
   background: color-mix(in srgb, var(--role-accent, var(--role-architect)) 16%, transparent);
   color: var(--role-accent, var(--role-architect));
   flex-shrink: 0;
 }
 .alu-pathway-feature-card__text {
   font-size: var(--type-body-sm-size);
-  font-weight: 700;
+  font-weight: var(--font-weight-application-pathway-role-badge);
   color: var(--text-primary);
 }
 .alu-pathway-visual-frame {
@@ -1222,14 +1222,14 @@ button.alu-role[aria-checked="true"] {
   overflow: hidden;
   border: 1px solid var(--border-strong);
   background: var(--visual-monitor-surface);
-  animation: aluPathwayFeatureIn 460ms cubic-bezier(0.22, 1, 0.36, 1) 180ms both;
+  animation: aluPathwayFeatureIn var(--motion-duration-feature-delayed) var(--motion-easing-expressive) var(--motion-duration-stagger-short) both;
 }
 .alu-pathway-visual-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform var(--motion-duration-reveal) var(--motion-easing-expressive);
 }
 .alu-pathway-split:hover .alu-pathway-visual-frame img {
   transform: scale(1.04);
@@ -1237,13 +1237,13 @@ button.alu-role[aria-checked="true"] {
 .alu-pathway-visual-frame__caption {
   position: absolute;
   inset: auto 0 0 0;
-  padding: 0.6rem 1rem;
+  padding: var(--space-application-control-gap) var(--space-application-panel-inset);
   background: linear-gradient(180deg, transparent 0%, var(--visual-product-image-scrim) 100%);
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--type-application-micro-label-size);
   color: var(--visual-media-text);
 }
 
@@ -1251,7 +1251,7 @@ button.alu-role[aria-checked="true"] {
 .alu-products-showcase {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.25rem;
+  gap: var(--space-application-section-dense-gap);
 }
 .alu-product-card {
   display: flex;
@@ -1262,12 +1262,12 @@ button.alu-role[aria-checked="true"] {
   color: var(--text-primary);
   overflow: hidden;
   transition:
-    opacity 450ms cubic-bezier(0.22, 1, 0.36, 1),
-    transform 450ms cubic-bezier(0.22, 1, 0.36, 1),
-    filter 450ms cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 450ms cubic-bezier(0.22, 1, 0.36, 1),
-    background-color 450ms cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 450ms cubic-bezier(0.22, 1, 0.36, 1);
+    opacity var(--motion-duration-emphasis) var(--motion-easing-expressive),
+    transform var(--motion-duration-emphasis) var(--motion-easing-expressive),
+    filter var(--motion-duration-emphasis) var(--motion-easing-expressive),
+    border-color var(--motion-duration-emphasis) var(--motion-easing-expressive),
+    background-color var(--motion-duration-emphasis) var(--motion-easing-expressive),
+    box-shadow var(--motion-duration-emphasis) var(--motion-easing-expressive);
 }
 .alu-product-card--highlighted {
   opacity: 1;
@@ -1315,7 +1315,7 @@ button.alu-role[aria-checked="true"] {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform var(--motion-duration-emphasis) var(--motion-easing-expressive);
 }
 .alu-product-card:hover .alu-product-card__media img {
   transform: scale(1.05);
@@ -1324,12 +1324,12 @@ button.alu-role[aria-checked="true"] {
   position: absolute;
   top: 0.75rem;
   left: 0.75rem;
-  padding: 0.2rem 0.5rem;
+  padding: var(--space-application-micro-inset) var(--space-stack-sm);
   background: var(--visual-media-caption-surface);
   border: 1px solid var(--visual-media-border-subtle);
   color: var(--visual-media-text);
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--type-application-micro-label-size);
 }
 .alu-product-card__recommended {
   position: absolute;
@@ -1337,28 +1337,28 @@ button.alu-role[aria-checked="true"] {
   right: 0.75rem;
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.25rem 0.65rem;
+  gap: var(--space-application-label-inset);
+  padding: var(--space-stack-xs) var(--space-application-card-dense-gap);
   background: var(--visual-media-tag-surface);
   border: 1px solid var(--role-accent, var(--accent-border));
   color: var(--visual-on-emphasis);
   font-family: var(--font-mono);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-size: var(--type-application-micro-compact-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
+  letter-spacing: var(--font-letter-spacing-application-label);
 }
 .alu-product-card__pulse-dot {
   width: 0.45rem;
   height: 0.45rem;
-  border-radius: 999px;
+  border-radius: var(--radius-round);
   background: var(--role-accent, var(--role-architect));
   box-shadow: 0 0 8px var(--role-accent, var(--role-architect));
 }
 .alu-product-card__body {
-  padding: 1.375rem 1.5rem;
+  padding: var(--space-application-section-gap) var(--space-application-section-inset);
   display: flex;
   flex-direction: column;
-  gap: 0.55rem;
+  gap: var(--space-application-control-dense-gap);
   flex: 1;
 }
 .alu-product-card__top-row {
@@ -1376,7 +1376,7 @@ button.alu-role[aria-checked="true"] {
   background: var(--surface-default);
   border: 1px solid var(--border-default);
   color: var(--text-secondary);
-  transition: all 300ms ease;
+  transition: all var(--motion-duration-slow) var(--motion-easing-default);
 }
 .alu-product-card--highlighted .alu-product-card__box-icon {
   color: var(--text-primary);
@@ -1390,9 +1390,9 @@ button.alu-role[aria-checked="true"] {
 .alu-product-card__status-dot {
   width: 0.55rem;
   height: 0.55rem;
-  border-radius: 999px;
+  border-radius: var(--radius-round);
   background: transparent;
-  transition: all 350ms ease;
+  transition: all var(--motion-duration-interactive) var(--motion-easing-default);
 }
 .alu-product-card__status-dot--active {
   background: var(--role-accent, var(--role-architect));
@@ -1401,10 +1401,10 @@ button.alu-role[aria-checked="true"] {
 .alu-product-card__title {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 800;
+  font-size: var(--type-h3-size);
+  font-weight: var(--font-weight-application-hero-metrics-value);
   color: var(--text-primary);
-  transition: color 300ms ease;
+  transition: color var(--motion-duration-slow) var(--motion-easing-default);
 }
 .alu-product-card--highlighted:hover .alu-product-card__title {
   color: var(--role-accent, var(--accent-fg));
@@ -1413,10 +1413,10 @@ button.alu-role[aria-checked="true"] {
   margin: 0;
   font-size: var(--type-body-sm-size);
   color: var(--text-secondary);
-  line-height: 1.55;
+  line-height: var(--type-application-body-compact-line-height);
 }
 .alu-product-card__footer {
-  padding: 0.95rem 1.5rem;
+  padding: var(--space-application-panel-dense-inset) var(--space-application-section-inset);
   border-top: 1px solid var(--border-subtle);
   background: var(--surface-subtle);
   display: flex;
@@ -1425,16 +1425,16 @@ button.alu-role[aria-checked="true"] {
 .alu-product-card__cta {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: var(--space-application-label-gap);
   font-family: var(--font-mono);
   font-size: var(--type-caption-size);
-  font-weight: 700;
+  font-weight: var(--font-weight-application-pathway-role-badge);
   color: var(--role-accent, var(--accent-fg));
   opacity: 0.78;
   transform: translateY(2px);
   transition:
-    opacity 300ms cubic-bezier(0.22, 1, 0.36, 1),
-    transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+    opacity var(--motion-duration-slow) var(--motion-easing-expressive),
+    transform var(--motion-duration-slow) var(--motion-easing-expressive);
 }
 .alu-product-card:hover .alu-product-card__cta {
   opacity: 1;
@@ -1446,7 +1446,7 @@ button.alu-role[aria-checked="true"] {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-auto-rows: minmax(15.5rem, auto);
-  gap: 1.25rem;
+  gap: var(--space-application-section-dense-gap);
 }
 .alu-bento-card {
   position: relative;
@@ -1455,7 +1455,7 @@ button.alu-role[aria-checked="true"] {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.75rem;
+  padding: var(--space-application-section-wide-inset);
   border: 1px solid var(--border-strong);
   background: var(--visual-trial-surface);
   color: var(--visual-trial-text);
@@ -1495,7 +1495,7 @@ button.alu-role[aria-checked="true"] {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 550ms ease, filter 550ms ease;
+  transition: transform var(--motion-duration-image) var(--motion-easing-default), filter var(--motion-duration-image) var(--motion-easing-default);
   filter: brightness(0.75) contrast(1.08);
 }
 .alu-bento-card:hover .alu-bento-card__bg {
@@ -1513,26 +1513,26 @@ button.alu-role[aria-checked="true"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
+  gap: var(--space-application-card-compact-gap);
 }
 .alu-bento-card__index {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: var(--type-application-caption-compact-size);
   color: var(--visual-trial-text-muted);
 }
 .alu-bento-card__bottom {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--space-stack-sm);
   max-width: 40ch;
 }
 .alu-bento-card__title {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
-  font-weight: 800;
+  font-size: var(--type-application-bento-card-title-size);
+  font-weight: var(--font-weight-application-hero-metrics-value);
   color: var(--visual-on-emphasis);
-  letter-spacing: -0.02em;
+  letter-spacing: var(--font-letter-spacing-application-bento-card-title);
 }
 .alu-bento-card__desc {
   margin: 0;
@@ -1543,13 +1543,13 @@ button.alu-role[aria-checked="true"] {
   margin-top: 0.5rem;
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: var(--space-application-label-inset);
   font-family: var(--font-mono);
   font-size: var(--type-caption-size);
-  font-weight: 600;
+  font-weight: var(--font-weight-strong);
   color: var(--ref-color-rust-300);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: var(--font-letter-spacing-application-overline);
 }
 
 /* H05: Package Comparison Matrix Banner */
@@ -1557,7 +1557,7 @@ button.alu-role[aria-checked="true"] {
   background: var(--surface-raised);
   border: 1px solid var(--border-strong);
   border-top: 3px solid var(--accent-border);
-  padding: clamp(1.75rem, 3.5vw, 3rem);
+  padding: var(--space-application-techspecs-banner-padding);
   display: flex;
   flex-direction: column;
   gap: var(--space-stack-xl);
@@ -1575,13 +1575,13 @@ button.alu-role[aria-checked="true"] {
 .alu-techspecs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-  gap: 1rem;
+  gap: var(--space-application-panel-inset);
 }
 .alu-techspec-item {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  padding: 1.375rem;
+  gap: var(--space-application-card-compact-gap);
+  padding: var(--space-application-section-gap);
   background: var(--surface-default);
   border: 1px solid var(--border-default);
   text-decoration: none;
@@ -1597,8 +1597,8 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-techspec-item__num {
   font-family: var(--font-mono);
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: var(--type-application-body-lead-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
   color: var(--accent-fg);
 }
 
@@ -1606,14 +1606,14 @@ button.alu-role[aria-checked="true"] {
 .alu-service-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.625rem;
+  gap: var(--space-application-control-comfortable-gap);
 }
 .alu-service-pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.625rem;
+  gap: var(--space-application-control-comfortable-gap);
   min-height: 2.75rem;
-  padding: 0.5rem 1.125rem;
+  padding: var(--space-stack-sm) var(--space-application-panel-gap);
   background: var(--surface-default);
   border: 1px solid var(--border-control);
   color: var(--text-secondary);
@@ -1635,8 +1635,8 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-service-pill__count {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  padding: 0.1rem 0.45rem;
+  font-size: var(--type-application-micro-label-size);
+  padding: var(--space-application-micro) var(--space-application-label-gap);
   background: var(--surface-subtle);
   border: 1px solid var(--border-default);
   color: var(--accent-fg);
@@ -1644,13 +1644,13 @@ button.alu-role[aria-checked="true"] {
 .alu-services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
-  gap: 1.125rem;
+  gap: var(--space-application-panel-gap);
 }
 .alu-service-card {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 1.5rem;
+  gap: var(--space-application-panel-inset);
+  padding: var(--space-application-section-inset);
   background: var(--surface-default);
   border: 1px solid var(--border-default);
   border-top: 2px solid var(--border-strong);
@@ -1668,14 +1668,14 @@ button.alu-role[aria-checked="true"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
+  gap: var(--space-application-card-compact-gap);
 }
 
 /* H08: Innovations Showcase */
 .alu-innovations-showcase {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 1.25rem;
+  gap: var(--space-application-section-dense-gap);
 }
 .alu-innovation-card {
   display: flex;
@@ -1696,7 +1696,7 @@ button.alu-role[aria-checked="true"] {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 450ms ease;
+  transition: transform var(--motion-duration-emphasis) var(--motion-easing-default);
 }
 .alu-innovation-card:hover .alu-innovation-card__media img {
   transform: scale(1.05);
@@ -1704,7 +1704,7 @@ button.alu-role[aria-checked="true"] {
 .alu-innovation-card__overlay {
   position: absolute;
   inset: 0;
-  padding: 1rem;
+  padding: var(--space-application-panel-inset);
   background: linear-gradient(180deg, var(--visual-subpage-media-scrim) 0%, transparent 45%);
   display: flex;
   align-items: flex-start;
@@ -1712,17 +1712,17 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-innovation-card__num {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: var(--type-application-metadata-size);
   color: var(--visual-on-emphasis);
   background: var(--visual-subpage-media-caption);
-  padding: 0.2rem 0.5rem;
+  padding: var(--space-application-micro-inset) var(--space-stack-sm);
   border: 1px solid var(--visual-media-border-strong);
 }
 .alu-innovation-card__body {
-  padding: 1.5rem;
+  padding: var(--space-application-section-inset);
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: var(--space-application-card-compact-gap);
   flex: 1;
 }
 
@@ -1731,7 +1731,7 @@ button.alu-role[aria-checked="true"] {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding-block: clamp(3rem, 6vw, 5rem);
+  padding-block: var(--space-application-subpage-hero-padding);
   border-bottom: 1px solid var(--border-strong);
   background: var(--surface-page);
 }
@@ -1763,7 +1763,7 @@ button.alu-role[aria-checked="true"] {
 .alu-feature-rows {
   display: flex;
   flex-direction: column;
-  gap: clamp(2rem, 4vw, 3.25rem);
+  gap: var(--space-application-feature-rows-gap);
 }
 .alu-feature-row {
   display: grid;
@@ -1795,33 +1795,33 @@ button.alu-role[aria-checked="true"] {
   position: absolute;
   top: 1rem;
   left: 1rem;
-  padding: 0.25rem 0.65rem;
+  padding: var(--space-stack-xs) var(--space-application-card-dense-gap);
   background: var(--visual-media-caption-surface);
   border: 1px solid var(--accent-border);
   color: var(--ref-color-rust-300);
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: var(--type-application-caption-compact-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
 }
 .alu-feature-row__content {
-  padding: clamp(1.75rem, 3.5vw, 3rem);
+  padding: var(--space-application-techspecs-banner-padding);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
+  gap: var(--space-application-panel-inset);
 }
 
 /* Architectural Specification Grid */
 .alu-spec-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
-  gap: 1.25rem;
+  gap: var(--space-application-section-dense-gap);
 }
 .alu-spec-card {
   display: flex;
   flex-direction: column;
-  gap: 0.875rem;
-  padding: 1.625rem;
+  gap: var(--space-application-card-inset);
+  padding: var(--space-application-section-comfortable-inset);
   background: var(--surface-default);
   border: 1px solid var(--border-default);
   border-top: 2px solid var(--accent-border);
@@ -1831,14 +1831,14 @@ button.alu-role[aria-checked="true"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
-  padding-bottom: 0.625rem;
+  gap: var(--space-application-card-compact-gap);
+  padding-bottom: var(--space-application-control-comfortable-gap);
   border-bottom: 1px solid var(--border-subtle);
 }
 .alu-spec-card__num {
   font-family: var(--font-mono);
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: var(--type-application-small-body-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
   color: var(--accent-fg);
 }
 .alu-benefit-icon {
@@ -1847,7 +1847,7 @@ button.alu-role[aria-checked="true"] {
   justify-content: center;
   width: 3.25rem;
   height: 3.25rem;
-  padding: 0.5rem;
+  padding: var(--space-stack-sm);
   background: var(--surface-raised);
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-control);
@@ -1867,19 +1867,19 @@ button.alu-role[aria-checked="true"] {
   display: flex;
   flex-direction: column;
   gap: var(--space-stack-lg);
-  padding: clamp(1.5rem, 3vw, 2.5rem);
+  padding: var(--space-application-module-tabs-padding);
   background: var(--surface-raised);
   border: 1px solid var(--border-strong);
 }
 .alu-module-tabs__panel {
-  padding: 1.5rem;
+  padding: var(--space-application-section-inset);
   background: var(--surface-default);
   border: 1px solid var(--border-default);
 }
 
 /* Global Trial Callout Band */
 .alu-trial-banner {
-  padding-block: clamp(3rem, 6vw, 5rem);
+  padding-block: var(--space-application-subpage-hero-padding);
   background:
     radial-gradient(circle at 85% 50%, var(--visual-trial-accent-glow), transparent 52%),
     var(--surface-subtle);
@@ -1888,9 +1888,9 @@ button.alu-role[aria-checked="true"] {
 .alu-trial-banner__inner {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
-  gap: clamp(2rem, 4vw, 3.5rem);
+  gap: var(--space-application-hero-stage-grid-gap);
   align-items: center;
-  padding: clamp(1.75rem, 4vw, 3rem);
+  padding: var(--space-application-trial-banner-inner-padding);
   background: var(--surface-raised);
   border: 1px solid var(--border-strong);
   border-left: 4px solid var(--accent-border);
@@ -1899,8 +1899,8 @@ button.alu-role[aria-checked="true"] {
 .alu-trial-banner__benefits {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 1.5rem;
+  gap: var(--space-application-panel-inset);
+  padding: var(--space-application-section-inset);
   background: var(--surface-default);
   border: 1px solid var(--border-default);
 }
@@ -1913,8 +1913,8 @@ button.alu-role[aria-checked="true"] {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
-  padding: clamp(2rem, 4vw, 3rem);
+  gap: var(--space-application-section-wide-gap);
+  padding: var(--space-application-yt-banner-padding);
   background: linear-gradient(90deg, var(--visual-youtube-banner-glow) 0%, var(--visual-youtube-banner-surface) 100%);
   border: 1px solid var(--visual-youtube-banner-border);
   border-left: 4px solid var(--visual-youtube-action);
@@ -1936,17 +1936,17 @@ button.alu-role[aria-checked="true"] {
   max-width: 44rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: var(--space-application-card-compact-gap);
 }
 .alu-yt-banner__badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: var(--space-application-control-gap);
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 700;
+  font-size: var(--type-application-overline-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: var(--font-letter-spacing-application-technical);
   color: var(--visual-youtube-accent);
 }
 .alu-yt-banner__badge-icon {
@@ -1961,15 +1961,15 @@ button.alu-role[aria-checked="true"] {
 .alu-yt-banner__title {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: clamp(1.65rem, 3vw, 2.35rem);
-  font-weight: 800;
+  font-size: var(--type-application-yt-banner-title-size);
+  font-weight: var(--font-weight-application-hero-metrics-value);
   color: var(--visual-on-emphasis);
-  letter-spacing: -0.02em;
+  letter-spacing: var(--font-letter-spacing-application-bento-card-title);
 }
 .alu-yt-banner__desc {
   margin: 0;
-  font-size: clamp(1rem, 1.2vw, 1.125rem);
-  line-height: 1.65;
+  font-size: var(--type-application-yt-banner-desc-size);
+  line-height: var(--type-application-body-relaxed-line-height);
   color: var(--visual-hero-light-scrim);
 }
 .alu-yt-banner__action {
@@ -1980,20 +1980,20 @@ button.alu-role[aria-checked="true"] {
 .alu-yt-subscribe-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 1rem 2rem;
+  gap: var(--space-application-card-compact-gap);
+  padding: var(--space-application-panel-inset) var(--space-application-section-wide-gap);
   background: var(--visual-youtube-action);
   color: var(--visual-on-emphasis);
   font-family: var(--font-heading);
-  font-size: 1.05rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
+  font-size: var(--type-application-body-emphasis-size);
+  font-weight: var(--font-weight-application-hero-metrics-value);
+  letter-spacing: var(--font-letter-spacing-application-label);
   text-decoration: none;
   box-shadow: 0 14px 32px -8px var(--visual-youtube-action-shadow);
   transition:
-    background-color 250ms ease,
-    transform 250ms ease,
-    box-shadow 250ms ease;
+    background-color var(--motion-duration-detail) var(--motion-easing-default),
+    transform var(--motion-duration-detail) var(--motion-easing-default),
+    box-shadow var(--motion-duration-detail) var(--motion-easing-default);
 }
 .alu-yt-subscribe-btn:hover {
   background: var(--visual-youtube-action-hover);
@@ -2006,24 +2006,24 @@ button.alu-role[aria-checked="true"] {
 .alu-yt-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.375rem;
+  gap: var(--space-application-section-gap);
 }
 .alu-yt-card {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 1.625rem;
+  padding: var(--space-application-section-comfortable-inset);
   background: var(--surface-default);
   border: 1px solid var(--border-default);
   color: var(--text-primary);
   text-decoration: none;
   overflow: hidden;
   transition:
-    background-color 300ms ease,
-    border-color 300ms ease,
-    transform 300ms ease,
-    box-shadow 300ms ease;
+    background-color var(--motion-duration-slow) var(--motion-easing-default),
+    border-color var(--motion-duration-slow) var(--motion-easing-default),
+    transform var(--motion-duration-slow) var(--motion-easing-default),
+    box-shadow var(--motion-duration-slow) var(--motion-easing-default);
 }
 .alu-yt-card--internal {
   border-color: var(--visual-youtube-card-internal-border);
@@ -2051,8 +2051,8 @@ button.alu-role[aria-checked="true"] {
   background: var(--visual-youtube-card-icon-surface);
   color: var(--visual-youtube-accent);
   transition:
-    background-color 300ms ease,
-    color 300ms ease;
+    background-color var(--motion-duration-slow) var(--motion-easing-default),
+    color var(--motion-duration-slow) var(--motion-easing-default);
 }
 .alu-yt-card:hover .alu-yt-card__icon {
   background: var(--visual-youtube-action);
@@ -2060,22 +2060,22 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-yt-card__count {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 0.25rem 0.55rem;
+  font-size: var(--type-application-micro-label-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
+  padding: var(--space-stack-xs) var(--space-application-control-dense-gap);
   background: var(--visual-youtube-count-surface);
   border: 1px solid var(--visual-youtube-count-border);
   color: var(--visual-youtube-count-text);
 }
 .alu-yt-card__title {
   margin: 0 0 0.5rem 0;
-  padding-right: 2rem;
+  padding-right: var(--space-application-section-wide-gap);
   font-family: var(--font-heading);
-  font-size: 1.2rem;
-  font-weight: 800;
-  line-height: 1.3;
+  font-size: var(--type-application-card-title-size);
+  font-weight: var(--font-weight-application-hero-metrics-value);
+  line-height: var(--type-h3-line-height);
   color: var(--text-primary);
-  transition: color 250ms ease;
+  transition: color var(--motion-duration-detail) var(--motion-easing-default);
 }
 .alu-yt-card:hover .alu-yt-card__title {
   color: var(--visual-youtube-accent);
@@ -2083,19 +2083,19 @@ button.alu-role[aria-checked="true"] {
 .alu-yt-card__desc {
   margin: 0 0 1.5rem 0;
   font-size: var(--type-body-sm-size);
-  line-height: 1.55;
+  line-height: var(--type-application-body-compact-line-height);
   color: var(--text-secondary);
 }
 .alu-yt-card__footer {
   margin-top: auto;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--space-stack-sm);
   font-family: var(--font-body);
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: var(--type-body-sm-size);
+  font-weight: var(--font-weight-strong);
   color: var(--text-muted);
-  transition: color 250ms ease;
+  transition: color var(--motion-duration-detail) var(--motion-easing-default);
 }
 .alu-yt-card:hover .alu-yt-card__footer {
   color: var(--text-primary);
@@ -2108,7 +2108,7 @@ button.alu-role[aria-checked="true"] {
   color: var(--visual-media-border-subtle);
   transform: scale(1.6);
   pointer-events: none;
-  transition: opacity 300ms ease;
+  transition: opacity var(--motion-duration-slow) var(--motion-easing-default);
 }
 .alu-yt-card:hover .alu-yt-card__watermark {
   opacity: 1;
@@ -2118,7 +2118,7 @@ button.alu-role[aria-checked="true"] {
 .alu-playlist-stage {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(20rem, 1fr);
-  gap: 2rem;
+  gap: var(--space-application-section-wide-gap);
   align-items: start;
 }
 .alu-playlist-player-card {
@@ -2141,19 +2141,19 @@ button.alu-role[aria-checked="true"] {
   display: block;
 }
 .alu-playlist-player-card__body {
-  padding: clamp(1.5rem, 3vw, 2.25rem);
+  padding: var(--space-application-playlist-player-card-body-padding);
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--space-application-panel-inset);
 }
 .alu-playlist-player-card__title {
   margin: 0;
   display: flex;
   align-items: flex-start;
-  gap: 0.875rem;
+  gap: var(--space-application-card-inset);
   font-family: var(--font-heading);
-  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
-  font-weight: 800;
+  font-size: var(--type-application-playlist-player-card-title-size);
+  font-weight: var(--font-weight-application-hero-metrics-value);
   color: var(--text-primary);
 }
 .alu-playlist-player-card__icon {
@@ -2177,23 +2177,23 @@ button.alu-role[aria-checked="true"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.125rem 1.375rem;
+  padding: var(--space-application-panel-gap) var(--space-application-section-gap);
   background: var(--surface-default);
   border-bottom: 1px solid var(--border-default);
 }
 .alu-playlist-sidebar__title {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: var(--space-application-control-dense-gap);
   font-family: var(--font-heading);
-  font-size: 1.05rem;
-  font-weight: 800;
+  font-size: var(--type-application-body-emphasis-size);
+  font-weight: var(--font-weight-application-hero-metrics-value);
   color: var(--text-primary);
 }
 .alu-playlist-sidebar__counter {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  padding: 0.2rem 0.55rem;
+  font-size: var(--type-caption-size);
+  padding: var(--space-application-micro-inset) var(--space-application-control-dense-gap);
   background: var(--surface-subtle);
   border: 1px solid var(--border-default);
   color: var(--text-secondary);
@@ -2201,23 +2201,23 @@ button.alu-role[aria-checked="true"] {
 .alu-playlist-sidebar__list {
   flex: 1;
   overflow-y: auto;
-  padding: 0.5rem;
+  padding: var(--space-stack-sm);
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: var(--space-stack-xs);
 }
 .alu-playlist-item {
   width: 100%;
   display: flex;
   align-items: flex-start;
-  gap: 0.875rem;
-  padding: 0.75rem;
+  gap: var(--space-application-card-inset);
+  padding: var(--space-application-card-compact-gap);
   background: transparent;
   border: 1px solid transparent;
   text-align: left;
   cursor: pointer;
   color: var(--text-secondary);
-  transition: all 200ms ease;
+  transition: all var(--motion-duration-base) var(--motion-easing-default);
 }
 .alu-playlist-item:hover {
   background: var(--surface-default);
@@ -2243,7 +2243,7 @@ button.alu-role[aria-checked="true"] {
   object-fit: cover;
   display: block;
   opacity: 0.75;
-  transition: opacity 200ms ease;
+  transition: opacity var(--motion-duration-base) var(--motion-easing-default);
 }
 .alu-playlist-item:hover .alu-playlist-item__thumb img,
 .alu-playlist-item--active .alu-playlist-item__thumb img {
@@ -2260,7 +2260,7 @@ button.alu-role[aria-checked="true"] {
 .alu-playlist-item__playing-badge {
   width: 2rem;
   height: 2rem;
-  border-radius: 999px;
+  border-radius: var(--radius-round);
   background: var(--action-primary-bg);
   color: var(--action-primary-fg);
   display: grid;
@@ -2269,14 +2269,14 @@ button.alu-role[aria-checked="true"] {
 .alu-playlist-item__info {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: var(--space-stack-xs);
   min-width: 0;
 }
 .alu-playlist-item__name {
   font-family: var(--font-body);
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.35;
+  font-size: var(--type-body-sm-size);
+  font-weight: var(--font-weight-strong);
+  line-height: var(--type-application-title-relaxed-line-height);
   color: inherit;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -2288,7 +2288,7 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-playlist-item__meta {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--type-application-micro-label-size);
   color: var(--text-muted);
 }
 
@@ -2301,14 +2301,14 @@ button.alu-role[aria-checked="true"] {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 0.65rem;
+  gap: var(--space-application-card-dense-gap);
 }
 
 /* 1. Post-Hero Intro + Embedded Video Split */
 .alu-intro-split {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-  gap: clamp(2rem, 4vw, 3.5rem);
+  gap: var(--space-application-hero-stage-grid-gap);
   align-items: center;
 }
 .alu-intro-split--single {
@@ -2318,7 +2318,7 @@ button.alu-role[aria-checked="true"] {
 .alu-intro-split__content {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: var(--space-application-section-dense-gap);
 }
 .alu-intro-split__bullets {
   list-style: none;
@@ -2326,20 +2326,20 @@ button.alu-role[aria-checked="true"] {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: var(--space-application-card-gap);
 }
 .alu-intro-split__bullet {
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
-  font-size: 0.975rem;
-  line-height: 1.6;
+  gap: var(--space-application-card-compact-gap);
+  font-size: var(--type-application-small-body-relaxed-size);
+  line-height: var(--type-body-lg-line-height);
   color: var(--text-secondary);
 }
 .alu-intro-split__bullet-icon {
   width: 1.5rem;
   height: 1.5rem;
-  border-radius: 999px;
+  border-radius: var(--radius-round);
   background: var(--accent-soft);
   border: 1px solid var(--accent-border);
   color: var(--accent-fg);
@@ -2370,32 +2370,32 @@ button.alu-role[aria-checked="true"] {
 
 /* 2. Workflow Links Ribbon */
 .alu-workflow-ribbon-section {
-  padding-block: 1.5rem;
+  padding-block: var(--space-application-section-inset);
   background: var(--surface-subtle);
   border-block: 1px solid var(--border-default);
 }
 .alu-workflow-ribbon {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.875rem;
+  gap: var(--space-application-card-inset);
 }
 .alu-workflow-pill {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.9rem 1.15rem;
+  gap: var(--space-application-card-compact-gap);
+  padding: var(--space-application-card-comfortable-inset) var(--space-application-panel-wide-inset);
   background: var(--surface-default);
   border: 1px solid var(--border-default);
   color: var(--text-primary);
   text-decoration: none;
   font-family: var(--font-body);
-  font-size: 0.875rem;
-  font-weight: 700;
+  font-size: var(--type-body-sm-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
   transition:
-    transform 240ms ease,
-    border-color 240ms ease,
-    background-color 240ms ease,
-    box-shadow 240ms ease;
+    transform var(--motion-duration-control) var(--motion-easing-default),
+    border-color var(--motion-duration-control) var(--motion-easing-default),
+    background-color var(--motion-duration-control) var(--motion-easing-default),
+    box-shadow var(--motion-duration-control) var(--motion-easing-default);
 }
 .alu-workflow-pill:hover {
   transform: translateY(-2px);
@@ -2407,17 +2407,17 @@ button.alu-role[aria-checked="true"] {
 .alu-workflow-pill__dot {
   width: 0.6rem;
   height: 0.6rem;
-  border-radius: 999px;
+  border-radius: var(--radius-round);
   flex-shrink: 0;
 }
 .alu-workflow-pill__text {
   flex: 1;
-  line-height: 1.3;
+  line-height: var(--type-h3-line-height);
 }
 .alu-workflow-pill__arrow {
   color: var(--text-muted);
   display: inline-flex;
-  transition: transform 220ms ease, color 220ms ease;
+  transition: transform var(--motion-duration-responsive) var(--motion-easing-default), color var(--motion-duration-responsive) var(--motion-easing-default);
 }
 .alu-workflow-pill:hover .alu-workflow-pill__arrow {
   transform: translateX(3px);
@@ -2428,36 +2428,36 @@ button.alu-role[aria-checked="true"] {
 .alu-challenges-band {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  padding: 1.5rem;
+  gap: var(--space-application-section-dense-gap);
+  padding: var(--space-application-section-inset);
   background: var(--surface-default);
   border: 1px solid var(--border-default);
 }
 .alu-challenges-band__header {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: var(--space-application-compact-gap);
 }
 .alu-challenges-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  gap: var(--space-application-panel-inset);
 }
 .alu-challenge-card {
   display: flex;
   align-items: flex-start;
-  gap: 0.85rem;
-  padding: 1.1rem;
+  gap: var(--space-application-card-comfortable-gap);
+  padding: var(--space-application-panel-comfortable-inset);
   background: var(--surface-subtle);
   border: 1px solid var(--border-subtle);
   border-left: 3px solid var(--accent-border);
 }
 .alu-challenge-card__num {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 700;
+  font-size: var(--type-application-overline-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
   color: var(--accent-fg);
-  padding: 0.2rem 0.45rem;
+  padding: var(--space-application-micro-inset) var(--space-application-label-gap);
   background: var(--accent-soft);
   border: 1px solid var(--accent-border);
   flex-shrink: 0;
@@ -2466,7 +2466,7 @@ button.alu-role[aria-checked="true"] {
 /* 4. Benefits / Reasons Icon Card Grid */
 .alu-benefits-grid {
   display: grid;
-  gap: 1.25rem;
+  gap: var(--space-application-section-dense-gap);
 }
 .alu-benefits-grid--cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2477,15 +2477,15 @@ button.alu-role[aria-checked="true"] {
 .alu-benefit-card {
   display: flex;
   flex-direction: column;
-  gap: 0.875rem;
-  padding: 1.5rem;
+  gap: var(--space-application-card-inset);
+  padding: var(--space-application-section-inset);
   background: var(--surface-default);
   border: 1px solid var(--border-default);
   box-shadow: var(--elevation-raised);
   transition:
-    transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 260ms ease,
-    box-shadow 260ms ease;
+    transform var(--motion-duration-panel) var(--motion-easing-expressive),
+    border-color var(--motion-duration-panel) var(--motion-easing-default),
+    box-shadow var(--motion-duration-panel) var(--motion-easing-default);
 }
 .alu-benefit-card:hover {
   transform: translateY(-4px);
@@ -2496,41 +2496,41 @@ button.alu-role[aria-checked="true"] {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 0.875rem;
+  gap: var(--space-application-card-inset);
 }
 .alu-benefit-card__titles {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: var(--space-application-compact-gap);
   min-width: 0;
 }
 .alu-benefit-card__subtitle {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-size: var(--type-application-micro-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
+  letter-spacing: var(--font-letter-spacing-application-technical);
   text-transform: uppercase;
   color: var(--accent-fg);
 }
 .alu-benefit-card__title {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: 1.08rem;
-  font-weight: 700;
-  line-height: 1.3;
+  font-size: var(--type-application-body-intro-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
+  line-height: var(--type-h3-line-height);
   color: var(--text-primary);
 }
 .alu-benefit-card__desc {
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.62;
+  font-size: var(--type-body-sm-size);
+  line-height: var(--type-application-body-reading-line-height);
   color: var(--text-secondary);
 }
 
 /* 5. Core Features & Extra Media Card Grids (Image + Popup Video Cards) */
 .alu-media-grid {
   display: grid;
-  gap: 1.35rem;
+  gap: var(--space-application-section-compact-gap);
 }
 .alu-media-grid--cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2549,9 +2549,9 @@ button.alu-role[aria-checked="true"] {
   box-shadow: var(--elevation-raised);
   overflow: hidden;
   transition:
-    transform 280ms cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 280ms ease,
-    box-shadow 280ms ease;
+    transform var(--motion-duration-media) var(--motion-easing-expressive),
+    border-color var(--motion-duration-media) var(--motion-easing-default),
+    box-shadow var(--motion-duration-media) var(--motion-easing-default);
 }
 .alu-media-card:hover {
   transform: translateY(-4px);
@@ -2572,7 +2572,7 @@ button.alu-role[aria-checked="true"] {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform var(--motion-duration-showcase) var(--motion-easing-expressive);
 }
 .alu-media-card:hover .alu-media-card__thumb img {
   transform: scale(1.06);
@@ -2590,16 +2590,16 @@ button.alu-role[aria-checked="true"] {
   z-index: 2;
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  padding: 0.25rem 0.6rem;
+  gap: var(--space-application-compact-gap);
+  padding: var(--space-stack-xs) var(--space-application-control-gap);
   background: var(--visual-media-badge-surface);
   backdrop-filter: blur(6px);
   border: 1px solid var(--accent-border);
   color: var(--accent-fg);
   font-family: var(--font-mono);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  font-size: var(--type-application-micro-compact-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
+  letter-spacing: var(--font-letter-spacing-application-kicker);
 }
 .alu-media-card__play {
   position: absolute;
@@ -2613,14 +2613,14 @@ button.alu-role[aria-checked="true"] {
 .alu-media-card__play-circle {
   width: 3.5rem;
   height: 3.5rem;
-  border-radius: 999px;
+  border-radius: var(--radius-round);
   background: var(--visual-media-play-surface);
   border: 2px solid var(--visual-media-play-border);
   color: var(--visual-on-emphasis);
   display: grid;
   place-items: center;
   box-shadow: 0 12px 28px var(--visual-shadow-media);
-  transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1), background-color 260ms ease;
+  transition: transform var(--motion-duration-panel) var(--motion-easing-expressive), background-color var(--motion-duration-panel) var(--motion-easing-default);
 }
 .alu-media-card:hover .alu-media-card__play-circle,
 .alu-wf-detail__media:hover .alu-media-card__play-circle {
@@ -2634,51 +2634,51 @@ button.alu-role[aria-checked="true"] {
   z-index: 2;
   width: 2rem;
   height: 2rem;
-  border-radius: 999px;
+  border-radius: var(--radius-round);
   background: var(--visual-media-zoom-surface);
   border: 1px solid var(--visual-media-border-strong);
   color: var(--visual-media-text);
   display: grid;
   place-items: center;
   opacity: 0;
-  transition: opacity 220ms ease;
+  transition: opacity var(--motion-duration-responsive) var(--motion-easing-default);
 }
 .alu-media-card:hover .alu-media-card__zoom-hint {
   opacity: 1;
 }
 .alu-media-card__body {
-  padding: 1.35rem;
+  padding: var(--space-application-section-compact-gap);
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: var(--space-application-card-dense-gap);
   flex: 1;
 }
 .alu-media-card__meta {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--space-stack-sm);
 }
 .alu-media-card__subtitle {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  font-size: var(--type-application-micro-label-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
+  letter-spacing: var(--font-letter-spacing-application-overline);
   text-transform: uppercase;
   color: var(--accent-fg);
 }
 .alu-media-card__title {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: 1.08rem;
-  font-weight: 700;
-  line-height: 1.32;
+  font-size: var(--type-application-body-intro-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
+  line-height: var(--type-application-title-reading-line-height);
   color: var(--text-primary);
 }
 .alu-media-card__desc {
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.62;
+  font-size: var(--type-body-sm-size);
+  line-height: var(--type-application-body-reading-line-height);
   color: var(--text-secondary);
 }
 .alu-media-card__bullets {
@@ -2687,14 +2687,14 @@ button.alu-role[aria-checked="true"] {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
+  gap: var(--space-application-label-gap);
 }
 .alu-media-card__bullets li {
   display: flex;
   align-items: flex-start;
-  gap: 0.5rem;
-  font-size: 0.84rem;
-  line-height: 1.5;
+  gap: var(--space-stack-sm);
+  font-size: var(--type-application-metadata-compact-size);
+  line-height: var(--type-body-sm-line-height);
   color: var(--text-secondary);
 }
 .alu-media-card__bullets li svg {
@@ -2704,7 +2704,7 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-media-card__footer {
   margin-top: auto;
-  padding-top: 0.75rem;
+  padding-top: var(--space-application-card-compact-gap);
   border-top: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
@@ -2712,16 +2712,16 @@ button.alu-role[aria-checked="true"] {
 .alu-media-card__video-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.45rem 0.85rem;
+  gap: var(--space-stack-sm);
+  padding: var(--space-application-label-gap) var(--space-application-card-comfortable-gap);
   background: var(--accent-soft);
   border: 1px solid var(--accent-border);
   color: var(--accent-fg);
   font-family: var(--font-body);
-  font-size: 0.82rem;
-  font-weight: 700;
+  font-size: var(--type-application-caption-reading-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
   cursor: pointer;
-  transition: background-color 200ms ease, color 200ms ease;
+  transition: background-color var(--motion-duration-base) var(--motion-easing-default), color var(--motion-duration-base) var(--motion-easing-default);
 }
 .alu-media-card__video-btn:hover {
   background: var(--action-primary-bg);
@@ -2733,25 +2733,25 @@ button.alu-role[aria-checked="true"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.65rem;
+  gap: var(--space-application-card-dense-gap);
 }
 .alu-wf-cat-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.75rem 1.25rem;
+  gap: var(--space-application-control-gap);
+  padding: var(--space-application-card-compact-gap) var(--space-application-section-dense-gap);
   background: var(--surface-default);
   border: 1px solid var(--border-default);
   color: var(--text-secondary);
   font-family: var(--font-body);
-  font-size: 0.9rem;
-  font-weight: 700;
+  font-size: var(--type-application-small-body-compact-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
   cursor: pointer;
   transition:
-    background-color 220ms ease,
-    border-color 220ms ease,
-    color 220ms ease,
-    transform 220ms ease;
+    background-color var(--motion-duration-responsive) var(--motion-easing-default),
+    border-color var(--motion-duration-responsive) var(--motion-easing-default),
+    color var(--motion-duration-responsive) var(--motion-easing-default),
+    transform var(--motion-duration-responsive) var(--motion-easing-default);
 }
 .alu-wf-cat-btn:hover {
   border-color: var(--border-strong);
@@ -2766,13 +2766,13 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-wf-cat-btn__num {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: var(--type-application-micro-label-size);
   color: var(--accent-fg);
 }
 .alu-wf-cat-btn__count {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  padding: 0.1rem 0.4rem;
+  font-size: var(--type-application-micro-size);
+  padding: var(--space-application-micro) var(--space-application-label-inset);
   background: var(--surface-subtle);
   border: 1px solid var(--border-subtle);
   color: var(--text-muted);
@@ -2781,33 +2781,33 @@ button.alu-role[aria-checked="true"] {
 .alu-wf-stage {
   display: grid;
   grid-template-columns: minmax(17rem, 0.85fr) minmax(0, 1.55fr);
-  gap: 1.5rem;
+  gap: var(--space-application-section-inset);
   align-items: start;
 }
 .alu-wf-sublist {
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
+  gap: var(--space-application-label-gap);
 }
 .alu-wf-subbtn {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: var(--space-application-card-compact-gap);
   width: 100%;
-  padding: 0.9rem 1.1rem;
+  padding: var(--space-application-card-comfortable-inset) var(--space-application-panel-comfortable-inset);
   background: var(--surface-default);
   border: 1px solid var(--border-default);
   border-left: 3px solid transparent;
   color: var(--text-secondary);
   text-align: left;
   font-family: var(--font-body);
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: var(--type-application-small-body-compact-size);
+  font-weight: var(--font-weight-strong);
   cursor: pointer;
   transition:
-    background-color 200ms ease,
-    border-color 200ms ease,
-    color 200ms ease;
+    background-color var(--motion-duration-base) var(--motion-easing-default),
+    border-color var(--motion-duration-base) var(--motion-easing-default),
+    color var(--motion-duration-base) var(--motion-easing-default);
 }
 .alu-wf-subbtn:hover {
   background: var(--surface-raised);
@@ -2822,14 +2822,14 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-wf-subbtn__num {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-size: var(--type-caption-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
   color: var(--accent-fg);
   flex-shrink: 0;
 }
 .alu-wf-subbtn__title {
   flex: 1;
-  line-height: 1.35;
+  line-height: var(--type-application-title-relaxed-line-height);
 }
 .alu-wf-subbtn__video-dot {
   color: var(--accent-fg);
@@ -2842,7 +2842,7 @@ button.alu-role[aria-checked="true"] {
   border: 1px solid var(--border-strong);
   box-shadow: var(--elevation-overlay);
   overflow: hidden;
-  animation: aluPathwayFeatureIn 320ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: aluPathwayFeatureIn var(--motion-duration-gentle) var(--motion-easing-expressive) both;
 }
 .alu-wf-detail__media {
   position: relative;
@@ -2860,28 +2860,28 @@ button.alu-role[aria-checked="true"] {
   display: block;
 }
 .alu-wf-detail__body {
-  padding: clamp(1.5rem, 3vw, 2.25rem);
+  padding: var(--space-application-playlist-player-card-body-padding);
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  gap: var(--space-application-card-comfortable-inset);
 }
 .alu-wf-detail__subtitle {
   margin: 0;
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 700;
+  font-size: var(--type-application-overline-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
   color: var(--accent-fg);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: var(--font-letter-spacing-application-kicker);
 }
 
 /* 7. Split Callout Section (SCIA Engineer Concept Sürümü & InfoMediaTwoColumn) */
 .alu-scia-callout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
-  gap: clamp(1.75rem, 3.5vw, 3rem);
+  gap: var(--space-application-techspecs-banner-padding);
   align-items: center;
-  padding: clamp(1.5rem, 3vw, 2.5rem);
+  padding: var(--space-application-module-tabs-padding);
   background: var(--surface-default);
   border: 1px solid var(--border-strong);
   border-left: 4px solid var(--action-primary-bg);
@@ -2909,7 +2909,7 @@ button.alu-role[aria-checked="true"] {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform var(--motion-duration-showcase) var(--motion-easing-expressive);
 }
 .alu-scia-callout__media--interactive:hover img,
 .alu-scia-callout__media--interactive:hover video {
@@ -2925,15 +2925,15 @@ button.alu-role[aria-checked="true"] {
 .alu-scia-callout__content {
   display: flex;
   flex-direction: column;
-  gap: 0.875rem;
+  gap: var(--space-application-card-inset);
 }
 .alu-scia-callout__lead {
   margin: 0;
   font-family: var(--font-mono);
-  font-size: 0.82rem;
-  font-weight: 700;
+  font-size: var(--type-application-caption-reading-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
   color: var(--accent-fg);
-  padding: 0.35rem 0.75rem;
+  padding: var(--space-application-compact-gap) var(--space-application-card-compact-gap);
   background: var(--accent-soft);
   border: 1px solid var(--accent-border);
   width: fit-content;
@@ -2943,7 +2943,7 @@ button.alu-role[aria-checked="true"] {
 .alu-faq-list {
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
+  gap: var(--space-application-card-comfortable-gap);
   max-width: 58rem;
   margin-inline: auto;
   width: 100%;
@@ -2951,7 +2951,7 @@ button.alu-role[aria-checked="true"] {
 .alu-faq-item {
   background: var(--surface-default);
   border: 1px solid var(--border-default);
-  transition: border-color 200ms ease;
+  transition: border-color var(--motion-duration-base) var(--motion-easing-default);
 }
 .alu-faq-item[open] {
   border-color: var(--accent-border);
@@ -2962,11 +2962,11 @@ button.alu-role[aria-checked="true"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  padding: 1.25rem 1.5rem;
+  gap: var(--space-application-panel-inset);
+  padding: var(--space-application-section-dense-gap) var(--space-application-section-inset);
   font-family: var(--font-heading);
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-size: var(--type-application-body-emphasis-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
   color: var(--text-primary);
   cursor: pointer;
 }
@@ -2975,23 +2975,23 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-faq-item__chevron {
   color: var(--accent-fg);
-  transition: transform 240ms ease;
+  transition: transform var(--motion-duration-control) var(--motion-easing-default);
   display: inline-flex;
 }
 .alu-faq-item[open] .alu-faq-item__chevron {
   transform: rotate(180deg);
 }
 .alu-faq-item__answer {
-  padding: 0 1.5rem 1.35rem 1.5rem;
+  padding: 0 var(--space-application-section-inset) var(--space-application-section-compact-gap) var(--space-application-section-inset);
   border-top: 1px solid var(--border-subtle);
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: var(--space-application-card-compact-gap);
 }
 .alu-faq-item__answer p {
   margin: 0.75rem 0 0 0;
-  font-size: 0.95rem;
-  line-height: 1.65;
+  font-size: var(--type-application-small-body-size);
+  line-height: var(--type-application-body-relaxed-line-height);
   color: var(--text-secondary);
 }
 
@@ -3023,8 +3023,8 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(1rem, 3vw, 2.5rem);
-  animation: aluModalFadeIn 200ms ease both;
+  padding: var(--space-application-video-modal-padding);
+  animation: aluModalFadeIn var(--motion-duration-base) var(--motion-easing-default) both;
 }
 .alu-video-modal:not([open]) { display: none; }
 .alu-video-modal::backdrop { background: transparent; }
@@ -3052,8 +3052,8 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  padding: 0.9rem 1.25rem;
+  gap: var(--space-application-panel-inset);
+  padding: var(--space-application-card-comfortable-inset) var(--space-application-section-dense-gap);
   background: var(--surface-default);
   border-bottom: 1px solid var(--border-default);
 }
@@ -3062,8 +3062,8 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   min-width: 0;
   overflow-wrap: anywhere;
   font-family: var(--font-heading);
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: var(--type-body-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
   color: var(--text-primary);
 }
 .alu-video-modal__close {
@@ -3073,12 +3073,12 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   background: var(--surface-subtle);
   border: 1px solid var(--border-default);
   color: var(--text-primary);
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: var(--type-body-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
   cursor: pointer;
   display: grid;
   place-items: center;
-  transition: background-color 180ms ease, border-color 180ms ease;
+  transition: background-color var(--motion-duration-quick) var(--motion-easing-default), border-color var(--motion-duration-quick) var(--motion-easing-default);
 }
 .alu-video-modal__close:hover {
   background: var(--status-danger-bg);
@@ -3191,8 +3191,8 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 .alu-ref-controls {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  padding: 1.25rem;
+  gap: var(--space-application-section-dense-gap);
+  padding: var(--space-application-section-dense-gap);
   background: var(--surface-default);
   border: 1px solid var(--border-strong);
   box-shadow: var(--elevation-raised);
@@ -3204,22 +3204,22 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 .alu-ref-tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: var(--space-stack-sm);
 }
 
 .alu-ref-tab {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1rem;
+  gap: var(--space-stack-sm);
+  padding: var(--space-application-control-gap) var(--space-application-panel-inset);
   background: var(--surface-raised);
   border: 1px solid var(--border-default);
   color: var(--text-secondary);
   font-family: var(--font-sans);
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: var(--type-body-sm-size);
+  font-weight: var(--font-weight-strong);
   cursor: pointer;
-  transition: all 180ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: all var(--motion-duration-quick) var(--motion-easing-expressive);
 }
 
 .alu-ref-tab:hover {
@@ -3257,12 +3257,12 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   justify-content: center;
   min-width: 1.65rem;
   height: 1.35rem;
-  padding-inline: 0.4rem;
+  padding-inline: var(--space-application-label-inset);
   background: var(--visual-reference-count-surface);
-  border-radius: 2px;
+  border-radius: var(--radius-application-media-badge);
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 700;
+  font-size: var(--type-application-micro-label-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
 }
 
 .alu-ref-tab--active .alu-ref-tab__count {
@@ -3275,18 +3275,18 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  padding-top: 0.875rem;
+  gap: var(--space-application-panel-inset);
+  padding-top: var(--space-application-card-inset);
   border-top: 1px solid var(--border-subtle);
 }
 
 .alu-ref-search {
   display: flex;
   align-items: center;
-  gap: 0.625rem;
+  gap: var(--space-application-control-comfortable-gap);
   flex: 1 1 20rem;
   max-width: 32rem;
-  padding: 0.5rem 0.875rem;
+  padding: var(--space-stack-sm) var(--space-application-card-inset);
   background: var(--surface-raised);
   border: 1px solid var(--border-default);
   color: var(--text-muted);
@@ -3303,7 +3303,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   background: transparent;
   color: var(--text-primary);
   font-family: var(--font-sans);
-  font-size: 0.9rem;
+  font-size: var(--type-application-small-body-compact-size);
   outline: none;
 }
 
@@ -3312,33 +3312,33 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   background: transparent;
   color: var(--text-muted);
   cursor: pointer;
-  font-size: 0.85rem;
-  padding: 0.15rem 0.35rem;
+  font-size: var(--type-application-metadata-size);
+  padding: var(--space-application-detail) var(--space-application-compact-gap);
 }
 
 .alu-ref-status {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: var(--space-application-card-compact-gap);
 }
 
 .alu-ref-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  gap: var(--space-application-panel-inset);
 }
 
 .alu-ref-card {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 1.25rem 1.35rem;
+  gap: var(--space-application-panel-inset);
+  padding: var(--space-application-section-dense-gap) var(--space-application-section-compact-gap);
   background: var(--surface-default);
   border: 1px solid var(--border-default);
   box-shadow: var(--elevation-raised);
-  transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 200ms ease,
-    background-color 200ms ease;
+  transition: transform var(--motion-duration-base) var(--motion-easing-expressive),
+    border-color var(--motion-duration-base) var(--motion-easing-default),
+    background-color var(--motion-duration-base) var(--motion-easing-default);
 }
 
 .alu-ref-card:hover {
@@ -3357,7 +3357,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   background: var(--surface-raised);
   border: 1px solid var(--border-default);
   color: var(--accent-fg);
-  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+  transition: background-color var(--motion-duration-base) var(--motion-easing-default), color var(--motion-duration-base) var(--motion-easing-default), border-color var(--motion-duration-base) var(--motion-easing-default);
 }
 
 .alu-ref-card:hover .alu-ref-card__icon {
@@ -3369,23 +3369,23 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 .alu-ref-card__body {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: var(--space-stack-xs);
   min-width: 0;
 }
 
 .alu-ref-card__name {
   margin: 0;
   font-family: var(--font-sans);
-  font-size: 0.98rem;
-  font-weight: 600;
-  line-height: 1.35;
+  font-size: var(--type-application-body-compact-size);
+  font-weight: var(--font-weight-strong);
+  line-height: var(--type-application-title-relaxed-line-height);
   color: var(--text-primary);
 }
 
 .alu-ref-card__cat {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
+  font-size: var(--type-application-micro-label-size);
+  letter-spacing: var(--font-letter-spacing-application-label);
   text-transform: uppercase;
   color: var(--text-muted);
 }
@@ -3394,7 +3394,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 .alu-faq-stage {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: var(--space-application-section-inset);
   max-width: 62rem;
   margin-inline: auto;
   width: 100%;
@@ -3405,8 +3405,8 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  padding: 1.5rem 1.75rem;
+  gap: var(--space-application-panel-inset);
+  padding: var(--space-application-section-inset) var(--space-application-section-wide-inset);
   background: var(--surface-default);
   border: 1px solid var(--border-strong);
   border-left: 3px solid var(--accent-primary);
@@ -3422,12 +3422,12 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 .alu-faq-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.875rem;
+  font-size: var(--type-body-sm-size);
 }
 
 .alu-faq-table th,
 .alu-faq-table td {
-  padding: 0.75rem 1rem;
+  padding: var(--space-application-card-compact-gap) var(--space-application-panel-inset);
   border-bottom: 1px solid var(--border-subtle);
   text-align: center;
 }
@@ -3435,7 +3435,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 .alu-faq-table th:first-child,
 .alu-faq-table td:first-child {
   text-align: left;
-  font-weight: 600;
+  font-weight: var(--font-weight-strong);
   color: var(--text-primary);
 }
 
@@ -3443,14 +3443,14 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   background: var(--surface-overlay);
   color: var(--text-primary);
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
+  font-size: var(--type-application-overline-size);
+  letter-spacing: var(--font-letter-spacing-application-label);
   text-transform: uppercase;
 }
 
 .alu-faq-table__yes {
   color: var(--status-success-fg, var(--visual-comparison-success-fallback));
-  font-weight: 700;
+  font-weight: var(--font-weight-application-pathway-role-badge);
 }
 
 .alu-faq-table__no {
@@ -3459,10 +3459,10 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 
 .alu-faq-note {
   margin: 0.75rem 0 0 0;
-  padding: 0.75rem 1rem;
+  padding: var(--space-application-card-compact-gap) var(--space-application-panel-inset);
   background: var(--accent-subtle);
   border-left: 3px solid var(--accent-primary);
-  font-size: 0.85rem;
+  font-size: var(--type-application-metadata-size);
   color: var(--text-secondary);
 }
 
@@ -3477,7 +3477,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 .alu-about-metrics-band {
   background: var(--surface-default);
   border-bottom: 1px solid var(--border-strong);
-  padding-block: clamp(2rem, 4vw, 3.25rem);
+  padding-block: var(--space-application-feature-rows-gap);
 }
 
 .alu-about-metrics {
@@ -3489,57 +3489,57 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 .alu-about-metric {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
-  padding: 0.75rem 1.75rem;
+  gap: var(--space-application-compact-gap);
+  padding: var(--space-application-card-compact-gap) var(--space-application-section-wide-inset);
   border-right: 1px solid var(--border-default);
 }
 
 .alu-about-metric__value {
   font-family: var(--font-display);
-  font-size: clamp(2.25rem, 3.8vw, 3.25rem);
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
+  font-size: var(--type-application-about-metric-value-size);
+  font-weight: var(--font-weight-application-hero-metrics-value);
+  line-height: var(--type-application-display-compact-line-height);
+  letter-spacing: var(--font-letter-spacing-application-display-compressed);
   color: var(--accent-fg);
 }
 
 .alu-about-metric__label {
   font-family: var(--font-sans);
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-size: var(--type-application-body-emphasis-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
   color: var(--text-primary);
 }
 
 .alu-about-metric__meta {
   font-family: var(--font-mono);
-  font-size: 0.76rem;
-  letter-spacing: 0.03em;
+  font-size: var(--type-application-fine-print-size);
+  letter-spacing: var(--font-letter-spacing-application-label-subtle);
   color: var(--text-muted);
 }
 
 .alu-about-story {
   display: grid;
   grid-template-columns: minmax(18rem, 0.9fr) minmax(0, 1.35fr);
-  gap: clamp(2.5rem, 5vw, 5rem);
+  gap: var(--space-application-about-story-gap);
   align-items: start;
 }
 
 .alu-about-story__aside {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: var(--space-application-section-dense-gap);
   position: sticky;
   top: 6.5rem;
 }
 
 .alu-about-quote {
   margin: 0.25rem 0 0 0;
-  padding: 0.25rem 0 0.25rem 1.25rem;
+  padding: var(--space-stack-xs) 0 var(--space-stack-xs) var(--space-application-section-dense-gap);
   border-left: 3px solid var(--accent-primary);
   font-family: var(--font-display);
-  font-size: 1.08rem;
-  font-weight: 600;
-  line-height: 1.55;
+  font-size: var(--type-application-body-intro-size);
+  font-weight: var(--font-weight-strong);
+  line-height: var(--type-application-body-compact-line-height);
   color: var(--text-primary);
 }
 
@@ -3553,32 +3553,32 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 .alu-about-chronicle__item {
   display: grid;
   grid-template-columns: 7.5rem minmax(0, 1fr);
-  gap: 1rem;
-  padding-block: 0.9rem;
+  gap: var(--space-application-panel-inset);
+  padding-block: var(--space-application-card-comfortable-inset);
   border-bottom: 1px solid var(--border-subtle);
   align-items: baseline;
 }
 
 .alu-about-chronicle__item dt {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  font-size: var(--type-caption-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
+  letter-spacing: var(--font-letter-spacing-application-kicker);
   color: var(--accent-fg);
 }
 
 .alu-about-chronicle__item dd {
   margin: 0;
-  font-size: 0.86rem;
-  line-height: 1.5;
+  font-size: var(--type-application-metadata-reading-size);
+  line-height: var(--type-body-sm-line-height);
   color: var(--text-secondary);
 }
 
 .alu-about-story__prose {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding: clamp(1.75rem, 3.5vw, 3rem);
+  gap: var(--space-application-section-inset);
+  padding: var(--space-application-techspecs-banner-padding);
   background: var(--surface-default);
   border: 1px solid var(--border-default);
   border-top: 3px solid var(--accent-primary);
@@ -3587,17 +3587,17 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 .alu-about-story__lead {
   margin: 0;
   font-family: var(--font-sans);
-  font-size: clamp(1.12rem, 1.5vw, 1.28rem);
-  font-weight: 500;
-  line-height: 1.75;
+  font-size: var(--type-application-about-story-lead-size);
+  font-weight: var(--font-weight-label);
+  line-height: var(--type-application-editorial-line-height);
   color: var(--text-primary);
 }
 
 .alu-about-story__paragraph {
   margin: 0;
   font-family: var(--font-sans);
-  font-size: 1.02rem;
-  line-height: 1.8;
+  font-size: var(--type-application-body-reading-size);
+  line-height: var(--type-application-editorial-spacious-line-height);
   color: var(--text-secondary);
 }
 
@@ -3606,27 +3606,27 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 1.5rem;
-  padding-bottom: 1.25rem;
+  gap: var(--space-application-section-inset);
+  padding-bottom: var(--space-application-section-dense-gap);
   border-bottom: 1px solid var(--border-strong);
 }
 
 .alu-about-values {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
+  gap: var(--space-application-section-inset);
 }
 
 .alu-about-value-item {
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
-  padding: clamp(1.75rem, 3vw, 2.25rem);
+  gap: var(--space-application-card-comfortable-gap);
+  padding: var(--space-application-about-value-item-padding);
   background: var(--surface-default);
   border: 1px solid var(--border-default);
   border-top: 3px solid var(--accent-border);
   box-shadow: var(--elevation-raised);
-  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), border-color 220ms ease, background-color 200ms ease;
+  transition: transform var(--motion-duration-responsive) var(--motion-easing-expressive), border-color var(--motion-duration-responsive) var(--motion-easing-default), background-color var(--motion-duration-base) var(--motion-easing-default);
 }
 
 .alu-about-value-item:hover {
@@ -3644,9 +3644,9 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 
 .alu-about-value-item__roman {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  font-size: var(--type-application-metadata-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
+  letter-spacing: var(--font-letter-spacing-application-technical-wide);
   color: var(--accent-fg);
 }
 
@@ -3664,15 +3664,15 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 .alu-about-value-item__title {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-size: var(--type-application-feature-title-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
   color: var(--text-primary);
 }
 
 .alu-about-value-item__desc {
   margin: 0;
-  font-size: 0.98rem;
-  line-height: 1.7;
+  font-size: var(--type-application-body-compact-size);
+  line-height: var(--type-application-body-spacious-line-height);
   color: var(--text-secondary);
 }
 
@@ -3687,16 +3687,16 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 .alu-about-office__info {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding: clamp(1.75rem, 3vw, 2.75rem);
+  gap: var(--space-application-section-inset);
+  padding: var(--space-application-about-office-info-padding);
   border-right: 1px solid var(--border-default);
 }
 
 .alu-about-office__eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-size: var(--type-application-micro-label-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
+  letter-spacing: var(--font-letter-spacing-application-technical);
   color: var(--accent-fg);
 }
 
@@ -3709,19 +3709,19 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: var(--space-application-card-dense-gap);
 }
 
 .alu-about-office__contact-list > div {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 0.5rem;
-  font-size: 0.95rem;
+  gap: var(--space-stack-sm);
+  font-size: var(--type-application-small-body-size);
 }
 
 .alu-about-office__contact-list dt {
-  font-weight: 700;
+  font-weight: var(--font-weight-application-pathway-role-badge);
   color: var(--text-primary);
   min-width: 8.5rem;
 }
@@ -3758,7 +3758,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   }
   .alu-about-metric {
     border-bottom: 1px solid var(--border-default);
-    padding: 1.25rem;
+    padding: var(--space-application-section-dense-gap);
   }
   .alu-about-story,
   .alu-about-office {

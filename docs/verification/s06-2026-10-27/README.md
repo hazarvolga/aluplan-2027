@@ -58,3 +58,21 @@ Kanıt `color-migration.json`:99kaynakrenkkaydının literal→semanticrole→pr
 66Pythonbirimtesti,36parite,30token testi, styles:check, productionbuild/TypeScript ve188kontrast kontrolü geçti. Son HTTPtarama110/110200/tekH1,0boşyapısalbölüm; ilkHTML16rota/303aday aynı. Yeni kaynakveri/schema/TSXdeğişikliği yok. Tarayıcı erişimi Workayarlarında kapalıydı; yeni görsel kabul yapılmadı. İnceleme önemli bulgu vermedi; büyükharfcolorfonksiyonkoruması önerisi testle eklendi.
 
 S06-Brenkadımı tamamlandı. S06tamamlanmadı: sabit spacing/size/radius/type/motion değerlerinin anlamlıtokenlara taşınması ve büyükbileşen ayrımı sürüyor. Önceki S06-Akalanlar listesindeki99renk ve açıktema header/footer maddeleri bu adımla aşılmıştır. Hoverkontrast riski ve tarayıcıgörselkabulü açık kalır. Push/deploy yok.
+
+## S06-C — Tipografi, boşluk, köşe ve hareket ölçüleri
+
+27.10.2026.445uygulamaCSSdeklarasyonu semantic tokenlara taşındı;120yeni semanticmetrik rolü eklendi. Hedefler: font-size/font-weight/line-height/letter-spacing/border-radius, gap/padding aileleri, transition/animation süre/gecikme/easingdeğerleri. Hedeflenen ham metrikler445→0. Yapısal0/yüzde/gridoranı/mediaquerysınırı rastgele tokenlaştırılmadı. Sabitgenişlik/yükseklik/margin/transform ölçüleri veTSXinline ölçüler bu adımın tamamlanmış kapsamı değildir.
+
+Mevcutsemantic tokenlar yalnız dört tema/modda da eski literal değeri sağlıyorsa tekrar kullanıldı; fieldtemasının farklı spacing/radius değerleri korunur. Yeni roller type.application.*, space.application.*, font.letterSpacing.application*, radius.application*, motion.duration.* ve motion.easing.* altında. Süre ve animasyonstaggergecikmeleri semantic.motion.duration altında bulunduğu için derleyici reduced-motionüretiminde hepsini0msyapar. Normalhareket değerleri aynı; reduced-motionkullanıcıları için önceden sabitkalan süre/gecikmelerin kapanması kasıtlı erişilebilirlik iyileştirmesidir.
+
+metrics-migration.json her deklarasyonun önceki/sonraki değerini ve tokenını listeler. Dört tema/modda445/445eşleşme,0fark; tersCSSnormalizehash eşliği. Bu tarayıcı/pikselkabulü değildir. Modeizolasyonve reduced-motion testleri eklendi. Compositor hedeflenmişhammetriklerin geri gelmesini reddeder; hata halinde mevcutçıktıya yazmaz. Bu kontrol tamCSSparserdeğildir.
+
+67Pythonbirimtesti,36parite,32token testi, styles:check, pnpmtypecheck, productionbuild ve188kontrast kontrolü geçti. SonHTTP110/110200/tekH1/0boşyapısalbölüm;16rota/303ilkHTMLadayı değişmedi. Bağımsız inceleme445deklarasyonun dört kapsam çözümünü tekrar kontrol etti; önemli bulgu yok. BrowserWorkayarlarında kapalı: yeni görsel ve gerçek etkileşim kabulü bekler. İçerik/schema/data/TSXbuadımda değişmedi.
+
+### Git ve kullanıcı dosyaları
+
+GitHubrepo https://github.com/hazarvolga/aluplan-2027 kullanıcı tarafından bildirildi. GitHubconnectorüzerinden public/defaultbranchmain/size0 doğrulandı; gitls-remoteheads0sonuç verdi. Yerelorigin buadrese eklendi. Yeni çalışma branch'i codex/s06-metrics-tokens; mainüzerine yeni geliştirme commiti yapılmadı.
+
+Kullanıcı önce kurallarıAGENTS.md'ye ekledi, sonra kendisi eskiAGENTS.md'ye dönüp aynıworkflow'u kökte DEVOPS MASTER WORKFLOW.md konumuna taşıdı. SonAGENTS46satır/HEADileaynı; yeni1131satırworkflowdosyası kullanıcıyaait ve buS06commitinden ayrı/untrackedkorunur. Yeniworkflowokundu;43.bölüm açıkpush/merge/deploy talebinin ayrıca ele alınabileceğini belirtir. Öncekipush/deployyok sınırı korunur: push/PR/CI/merge buadımda yapılmadı, localbaşarıremote başarı değildir. Repo adresinin paylaşılmasıpublicilkpush teslimatı yapıldığı anlamına gelmez.
+
+S06devam ediyor. SıradaTSXinline tasarımölçülerinin ve geriyekalanlayoutölçülerinin elealınması, büyükbileşen ayrımı ve tarayıcıaçıldığındagörselkarşılaştırma var. S07'yegeçilmedi. Kaynak2026ve pazarlamaklasörü kullanılmadı/değişmedi; hiçbircanlıortam değiştirilmedi.

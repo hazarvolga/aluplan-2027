@@ -1,0 +1,3490 @@
+{
+  "baselineCommit": "86eca7329fd054cd876ca3bc498270216219d0d5",
+  "targetProperties": [
+    "animation",
+    "animation-delay",
+    "animation-duration",
+    "animation-timing-function",
+    "border-radius",
+    "column-gap",
+    "font-size",
+    "font-weight",
+    "gap",
+    "letter-spacing",
+    "line-height",
+    "padding",
+    "padding-block",
+    "padding-block-end",
+    "padding-block-start",
+    "padding-bottom",
+    "padding-inline",
+    "padding-inline-end",
+    "padding-inline-start",
+    "padding-left",
+    "padding-right",
+    "padding-top",
+    "row-gap",
+    "transition",
+    "transition-delay",
+    "transition-duration",
+    "transition-timing-function"
+  ],
+  "migratedDeclarations": 445,
+  "newSemanticMetrics": 120,
+  "records": [
+    {
+      "sourceLine": 377,
+      "property": "padding-block",
+      "before": "0.375rem",
+      "after": "var(--space-application-dense-gap)"
+    },
+    {
+      "sourceLine": 397,
+      "property": "padding",
+      "before": "0.125rem 0.375rem",
+      "after": "var(--space-application-hairline) var(--space-application-dense-gap)"
+    },
+    {
+      "sourceLine": 432,
+      "property": "gap",
+      "before": "0.375rem",
+      "after": "var(--space-application-dense-gap)"
+    },
+    {
+      "sourceLine": 438,
+      "property": "padding",
+      "before": "0.25rem 0",
+      "after": "var(--space-stack-xs) 0"
+    },
+    {
+      "sourceLine": 449,
+      "property": "padding-block",
+      "before": "clamp(2.5rem, 5vw, 4.5rem)",
+      "after": "var(--space-application-page-hero-padding)"
+    },
+    {
+      "sourceLine": 454,
+      "property": "gap",
+      "before": "0.5rem",
+      "after": "var(--space-stack-sm)"
+    },
+    {
+      "sourceLine": 605,
+      "property": "padding",
+      "before": "0.5rem 0.75rem",
+      "after": "var(--space-stack-sm) var(--space-application-card-compact-gap)"
+    },
+    {
+      "sourceLine": 626,
+      "property": "gap",
+      "before": "0.625rem",
+      "after": "var(--space-application-control-comfortable-gap)"
+    },
+    {
+      "sourceLine": 648,
+      "property": "gap",
+      "before": "0.5rem",
+      "after": "var(--space-stack-sm)"
+    },
+    {
+      "sourceLine": 728,
+      "property": "gap",
+      "before": "0.375rem",
+      "after": "var(--space-application-dense-gap)"
+    },
+    {
+      "sourceLine": 729,
+      "property": "padding",
+      "before": "0.375rem 0.5rem",
+      "after": "var(--space-application-dense-gap) var(--space-stack-sm)"
+    },
+    {
+      "sourceLine": 748,
+      "property": "padding-block",
+      "before": "clamp(3.5rem, 6vw, 6rem) clamp(2.5rem, 4vw, 4rem)",
+      "after": "var(--space-application-hero-stage-padding) var(--space-application-hero-stage-padding-end)"
+    },
+    {
+      "sourceLine": 784,
+      "property": "gap",
+      "before": "clamp(2.5rem, 5vw, 4rem)",
+      "after": "var(--space-application-hero-stage-inner-gap)"
+    },
+    {
+      "sourceLine": 789,
+      "property": "gap",
+      "before": "clamp(2rem, 4vw, 3.5rem)",
+      "after": "var(--space-application-hero-stage-grid-gap)"
+    },
+    {
+      "sourceLine": 794,
+      "property": "letter-spacing",
+      "before": "-0.025em",
+      "after": "var(--font-letter-spacing-application-display-tight)"
+    },
+    {
+      "sourceLine": 804,
+      "property": "gap",
+      "before": "0.375rem",
+      "after": "var(--space-application-dense-gap)"
+    },
+    {
+      "sourceLine": 805,
+      "property": "padding-top",
+      "before": "0.5rem",
+      "after": "var(--space-stack-sm)"
+    },
+    {
+      "sourceLine": 809,
+      "property": "font-size",
+      "before": "0.72rem",
+      "after": "var(--type-application-micro-label-size)"
+    },
+    {
+      "sourceLine": 810,
+      "property": "letter-spacing",
+      "before": "0.06em",
+      "after": "var(--font-letter-spacing-application-kicker)"
+    },
+    {
+      "sourceLine": 811,
+      "property": "padding",
+      "before": "0.25rem 0.55rem",
+      "after": "var(--space-stack-xs) var(--space-application-control-dense-gap)"
+    },
+    {
+      "sourceLine": 831,
+      "property": "gap",
+      "before": "0.75rem",
+      "after": "var(--space-application-card-compact-gap)"
+    },
+    {
+      "sourceLine": 832,
+      "property": "padding",
+      "before": "0.75rem 1.125rem",
+      "after": "var(--space-application-card-compact-gap) var(--space-application-panel-gap)"
+    },
+    {
+      "sourceLine": 839,
+      "property": "gap",
+      "before": "0.5rem",
+      "after": "var(--space-stack-sm)"
+    },
+    {
+      "sourceLine": 848,
+      "property": "border-radius",
+      "before": "999px",
+      "after": "var(--radius-round)"
+    },
+    {
+      "sourceLine": 866,
+      "property": "padding",
+      "before": "1rem 1.25rem",
+      "after": "var(--space-application-panel-inset) var(--space-application-section-dense-gap)"
+    },
+    {
+      "sourceLine": 882,
+      "property": "gap",
+      "before": "0.25rem",
+      "after": "var(--space-stack-xs)"
+    },
+    {
+      "sourceLine": 883,
+      "property": "padding",
+      "before": "1.375rem 1.5rem",
+      "after": "var(--space-application-section-gap) var(--space-application-section-inset)"
+    },
+    {
+      "sourceLine": 901,
+      "property": "font-size",
+      "before": "clamp(1.85rem, 3vw, 2.5rem)",
+      "after": "var(--type-application-hero-metrics-value-size)"
+    },
+    {
+      "sourceLine": 902,
+      "property": "font-weight",
+      "before": "800",
+      "after": "var(--font-weight-application-hero-metrics-value)"
+    },
+    {
+      "sourceLine": 903,
+      "property": "line-height",
+      "before": "1.05",
+      "after": "var(--type-application-display-compact-line-height)"
+    },
+    {
+      "sourceLine": 905,
+      "property": "letter-spacing",
+      "before": "-0.03em",
+      "after": "var(--font-letter-spacing-application-display-compressed)"
+    },
+    {
+      "sourceLine": 932,
+      "property": "gap",
+      "before": "0.75rem",
+      "after": "var(--space-application-card-compact-gap)"
+    },
+    {
+      "sourceLine": 933,
+      "property": "padding",
+      "before": "1.125rem 1.25rem",
+      "after": "var(--space-application-panel-gap) var(--space-application-section-dense-gap)"
+    },
+    {
+      "sourceLine": 955,
+      "property": "font-weight",
+      "before": "600",
+      "after": "var(--font-weight-strong)"
+    },
+    {
+      "sourceLine": 996,
+      "property": "border-radius",
+      "before": "9999px",
+      "after": "var(--radius-application-pill-extended)"
+    },
+    {
+      "sourceLine": 1002,
+      "property": "transition",
+      "before": "background-color 700ms cubic-bezier(0.22, 1, 0.36, 1)",
+      "after": "background-color var(--motion-duration-ambient) var(--motion-easing-expressive)"
+    },
+    {
+      "sourceLine": 1013,
+      "property": "gap",
+      "before": "0.625rem",
+      "after": "var(--space-application-control-comfortable-gap)"
+    },
+    {
+      "sourceLine": 1021,
+      "property": "gap",
+      "before": "1rem",
+      "after": "var(--space-application-panel-inset)"
+    },
+    {
+      "sourceLine": 1027,
+      "property": "gap",
+      "before": "0.875rem",
+      "after": "var(--space-application-card-inset)"
+    },
+    {
+      "sourceLine": 1029,
+      "property": "padding",
+      "before": "0.95rem 1.5rem",
+      "after": "var(--space-application-panel-dense-inset) var(--space-application-section-inset)"
+    },
+    {
+      "sourceLine": 1035,
+      "property": "transition",
+      "before": "transform 350ms cubic-bezier(0.22, 1, 0.36, 1),\n    background-color 350ms cubic-bezier(0.22, 1, 0.36, 1),\n    border-color 350ms cubic-bezier(0.22, 1, 0.36, 1),\n    color 350ms cubic-bezier(0.22, 1, 0.36, 1),\n    box-shadow 350ms cubic-bezier(0.22, 1, 0.36, 1)",
+      "after": "transform var(--motion-duration-interactive) var(--motion-easing-expressive),\n    background-color var(--motion-duration-interactive) var(--motion-easing-expressive),\n    border-color var(--motion-duration-interactive) var(--motion-easing-expressive),\n    color var(--motion-duration-interactive) var(--motion-easing-expressive),\n    box-shadow var(--motion-duration-interactive) var(--motion-easing-expressive)"
+    },
+    {
+      "sourceLine": 1065,
+      "property": "transition",
+      "before": "all 350ms ease",
+      "after": "all var(--motion-duration-interactive) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 1075,
+      "property": "gap",
+      "before": "0.1rem",
+      "after": "var(--space-application-micro)"
+    },
+    {
+      "sourceLine": 1080,
+      "property": "font-size",
+      "before": "0.68rem",
+      "after": "var(--type-application-micro-compact-size)"
+    },
+    {
+      "sourceLine": 1081,
+      "property": "letter-spacing",
+      "before": "0.08em",
+      "after": "var(--font-letter-spacing-application-technical)"
+    },
+    {
+      "sourceLine": 1086,
+      "property": "font-size",
+      "before": "0.95rem",
+      "after": "var(--type-application-small-body-size)"
+    },
+    {
+      "sourceLine": 1087,
+      "property": "font-weight",
+      "before": "800",
+      "after": "var(--font-weight-application-hero-metrics-value)"
+    },
+    {
+      "sourceLine": 1088,
+      "property": "letter-spacing",
+      "before": "0.08em",
+      "after": "var(--font-letter-spacing-application-technical)"
+    },
+    {
+      "sourceLine": 1093,
+      "property": "border-radius",
+      "before": "999px",
+      "after": "var(--radius-round)"
+    },
+    {
+      "sourceLine": 1095,
+      "property": "transition",
+      "before": "all 350ms ease",
+      "after": "all var(--motion-duration-interactive) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 1106,
+      "property": "gap",
+      "before": "clamp(2rem, 4vw, 3.5rem)",
+      "after": "var(--space-application-hero-stage-grid-gap)"
+    },
+    {
+      "sourceLine": 1108,
+      "property": "padding",
+      "before": "clamp(1.75rem, 3.5vw, 2.75rem)",
+      "after": "var(--space-application-pathway-split-padding)"
+    },
+    {
+      "sourceLine": 1113,
+      "property": "transition",
+      "before": "border-color 450ms ease",
+      "after": "border-color var(--motion-duration-emphasis) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 1118,
+      "property": "gap",
+      "before": "1.125rem",
+      "after": "var(--space-application-panel-gap)"
+    },
+    {
+      "sourceLine": 1119,
+      "property": "animation",
+      "before": "aluPathwaySlideIn 420ms cubic-bezier(0.22, 1, 0.36, 1) both",
+      "after": "aluPathwaySlideIn var(--motion-duration-slide) var(--motion-easing-expressive) both"
+    },
+    {
+      "sourceLine": 1124,
+      "property": "gap",
+      "before": "0.45rem",
+      "after": "var(--space-application-label-gap)"
+    },
+    {
+      "sourceLine": 1125,
+      "property": "padding",
+      "before": "0.3rem 0.7rem",
+      "after": "var(--space-application-compact-inset) var(--space-application-card-compact-inset)"
+    },
+    {
+      "sourceLine": 1127,
+      "property": "font-size",
+      "before": "0.75rem",
+      "after": "var(--type-caption-size)"
+    },
+    {
+      "sourceLine": 1128,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 1129,
+      "property": "letter-spacing",
+      "before": "0.06em",
+      "after": "var(--font-letter-spacing-application-kicker)"
+    },
+    {
+      "sourceLine": 1137,
+      "property": "font-size",
+      "before": "clamp(2.25rem, 4vw, 3.5rem)",
+      "after": "var(--type-application-pathway-split-title-size)"
+    },
+    {
+      "sourceLine": 1138,
+      "property": "font-weight",
+      "before": "800",
+      "after": "var(--font-weight-application-hero-metrics-value)"
+    },
+    {
+      "sourceLine": 1139,
+      "property": "line-height",
+      "before": "1.08",
+      "after": "var(--type-application-display-relaxed-line-height)"
+    },
+    {
+      "sourceLine": 1140,
+      "property": "letter-spacing",
+      "before": "-0.03em",
+      "after": "var(--font-letter-spacing-application-display-compressed)"
+    },
+    {
+      "sourceLine": 1142,
+      "property": "transition",
+      "before": "color 400ms ease",
+      "after": "color var(--motion-duration-color) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 1146,
+      "property": "font-size",
+      "before": "clamp(1.05rem, 1.35vw, 1.22rem)",
+      "after": "var(--type-application-pathway-split-desc-size)"
+    },
+    {
+      "sourceLine": 1147,
+      "property": "line-height",
+      "before": "1.65",
+      "after": "var(--type-application-body-relaxed-line-height)"
+    },
+    {
+      "sourceLine": 1154,
+      "property": "gap",
+      "before": "0.625rem",
+      "after": "var(--space-application-control-comfortable-gap)"
+    },
+    {
+      "sourceLine": 1155,
+      "property": "padding",
+      "before": "0.85rem 1.5rem",
+      "after": "var(--space-application-card-comfortable-gap) var(--space-application-section-inset)"
+    },
+    {
+      "sourceLine": 1161,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 1163,
+      "property": "transition",
+      "before": "background-color 300ms ease,\n    border-color 300ms ease,\n    transform 300ms ease,\n    box-shadow 300ms ease",
+      "after": "background-color var(--motion-duration-slow) var(--motion-easing-default),\n    border-color var(--motion-duration-slow) var(--motion-easing-default),\n    transform var(--motion-duration-slow) var(--motion-easing-default),\n    box-shadow var(--motion-duration-slow) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 1176,
+      "property": "transition",
+      "before": "transform 280ms cubic-bezier(0.22, 1, 0.36, 1)",
+      "after": "transform var(--motion-duration-media) var(--motion-easing-expressive)"
+    },
+    {
+      "sourceLine": 1185,
+      "property": "gap",
+      "before": "1.125rem",
+      "after": "var(--space-application-panel-gap)"
+    },
+    {
+      "sourceLine": 1190,
+      "property": "gap",
+      "before": "0.875rem",
+      "after": "var(--space-application-card-inset)"
+    },
+    {
+      "sourceLine": 1195,
+      "property": "gap",
+      "before": "0.75rem",
+      "after": "var(--space-application-card-compact-gap)"
+    },
+    {
+      "sourceLine": 1196,
+      "property": "padding",
+      "before": "1rem 1.125rem",
+      "after": "var(--space-application-panel-inset) var(--space-application-panel-gap)"
+    },
+    {
+      "sourceLine": 1201,
+      "property": "animation",
+      "before": "aluPathwayFeatureIn 380ms cubic-bezier(0.22, 1, 0.36, 1) both",
+      "after": "aluPathwayFeatureIn var(--motion-duration-feature) var(--motion-easing-expressive) both"
+    },
+    {
+      "sourceLine": 1209,
+      "property": "border-radius",
+      "before": "999px",
+      "after": "var(--radius-round)"
+    },
+    {
+      "sourceLine": 1216,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 1225,
+      "property": "animation",
+      "before": "aluPathwayFeatureIn 460ms cubic-bezier(0.22, 1, 0.36, 1) 180ms both",
+      "after": "aluPathwayFeatureIn var(--motion-duration-feature-delayed) var(--motion-easing-expressive) var(--motion-duration-stagger-short) both"
+    },
+    {
+      "sourceLine": 1232,
+      "property": "transition",
+      "before": "transform 600ms cubic-bezier(0.22, 1, 0.36, 1)",
+      "after": "transform var(--motion-duration-reveal) var(--motion-easing-expressive)"
+    },
+    {
+      "sourceLine": 1240,
+      "property": "padding",
+      "before": "0.6rem 1rem",
+      "after": "var(--space-application-control-gap) var(--space-application-panel-inset)"
+    },
+    {
+      "sourceLine": 1246,
+      "property": "font-size",
+      "before": "0.72rem",
+      "after": "var(--type-application-micro-label-size)"
+    },
+    {
+      "sourceLine": 1254,
+      "property": "gap",
+      "before": "1.25rem",
+      "after": "var(--space-application-section-dense-gap)"
+    },
+    {
+      "sourceLine": 1264,
+      "property": "transition",
+      "before": "opacity 450ms cubic-bezier(0.22, 1, 0.36, 1),\n    transform 450ms cubic-bezier(0.22, 1, 0.36, 1),\n    filter 450ms cubic-bezier(0.22, 1, 0.36, 1),\n    border-color 450ms cubic-bezier(0.22, 1, 0.36, 1),\n    background-color 450ms cubic-bezier(0.22, 1, 0.36, 1),\n    box-shadow 450ms cubic-bezier(0.22, 1, 0.36, 1)",
+      "after": "opacity var(--motion-duration-emphasis) var(--motion-easing-expressive),\n    transform var(--motion-duration-emphasis) var(--motion-easing-expressive),\n    filter var(--motion-duration-emphasis) var(--motion-easing-expressive),\n    border-color var(--motion-duration-emphasis) var(--motion-easing-expressive),\n    background-color var(--motion-duration-emphasis) var(--motion-easing-expressive),\n    box-shadow var(--motion-duration-emphasis) var(--motion-easing-expressive)"
+    },
+    {
+      "sourceLine": 1318,
+      "property": "transition",
+      "before": "transform 450ms cubic-bezier(0.22, 1, 0.36, 1)",
+      "after": "transform var(--motion-duration-emphasis) var(--motion-easing-expressive)"
+    },
+    {
+      "sourceLine": 1327,
+      "property": "padding",
+      "before": "0.2rem 0.5rem",
+      "after": "var(--space-application-micro-inset) var(--space-stack-sm)"
+    },
+    {
+      "sourceLine": 1332,
+      "property": "font-size",
+      "before": "0.72rem",
+      "after": "var(--type-application-micro-label-size)"
+    },
+    {
+      "sourceLine": 1340,
+      "property": "gap",
+      "before": "0.4rem",
+      "after": "var(--space-application-label-inset)"
+    },
+    {
+      "sourceLine": 1341,
+      "property": "padding",
+      "before": "0.25rem 0.65rem",
+      "after": "var(--space-stack-xs) var(--space-application-card-dense-gap)"
+    },
+    {
+      "sourceLine": 1346,
+      "property": "font-size",
+      "before": "0.68rem",
+      "after": "var(--type-application-micro-compact-size)"
+    },
+    {
+      "sourceLine": 1347,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 1348,
+      "property": "letter-spacing",
+      "before": "0.04em",
+      "after": "var(--font-letter-spacing-application-label)"
+    },
+    {
+      "sourceLine": 1353,
+      "property": "border-radius",
+      "before": "999px",
+      "after": "var(--radius-round)"
+    },
+    {
+      "sourceLine": 1358,
+      "property": "padding",
+      "before": "1.375rem 1.5rem",
+      "after": "var(--space-application-section-gap) var(--space-application-section-inset)"
+    },
+    {
+      "sourceLine": 1361,
+      "property": "gap",
+      "before": "0.55rem",
+      "after": "var(--space-application-control-dense-gap)"
+    },
+    {
+      "sourceLine": 1379,
+      "property": "transition",
+      "before": "all 300ms ease",
+      "after": "all var(--motion-duration-slow) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 1393,
+      "property": "border-radius",
+      "before": "999px",
+      "after": "var(--radius-round)"
+    },
+    {
+      "sourceLine": 1395,
+      "property": "transition",
+      "before": "all 350ms ease",
+      "after": "all var(--motion-duration-interactive) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 1404,
+      "property": "font-size",
+      "before": "1.25rem",
+      "after": "var(--type-h3-size)"
+    },
+    {
+      "sourceLine": 1405,
+      "property": "font-weight",
+      "before": "800",
+      "after": "var(--font-weight-application-hero-metrics-value)"
+    },
+    {
+      "sourceLine": 1407,
+      "property": "transition",
+      "before": "color 300ms ease",
+      "after": "color var(--motion-duration-slow) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 1416,
+      "property": "line-height",
+      "before": "1.55",
+      "after": "var(--type-application-body-compact-line-height)"
+    },
+    {
+      "sourceLine": 1419,
+      "property": "padding",
+      "before": "0.95rem 1.5rem",
+      "after": "var(--space-application-panel-dense-inset) var(--space-application-section-inset)"
+    },
+    {
+      "sourceLine": 1428,
+      "property": "gap",
+      "before": "0.45rem",
+      "after": "var(--space-application-label-gap)"
+    },
+    {
+      "sourceLine": 1431,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 1435,
+      "property": "transition",
+      "before": "opacity 300ms cubic-bezier(0.22, 1, 0.36, 1),\n    transform 300ms cubic-bezier(0.22, 1, 0.36, 1)",
+      "after": "opacity var(--motion-duration-slow) var(--motion-easing-expressive),\n    transform var(--motion-duration-slow) var(--motion-easing-expressive)"
+    },
+    {
+      "sourceLine": 1449,
+      "property": "gap",
+      "before": "1.25rem",
+      "after": "var(--space-application-section-dense-gap)"
+    },
+    {
+      "sourceLine": 1458,
+      "property": "padding",
+      "before": "1.75rem",
+      "after": "var(--space-application-section-wide-inset)"
+    },
+    {
+      "sourceLine": 1498,
+      "property": "transition",
+      "before": "transform 550ms ease, filter 550ms ease",
+      "after": "transform var(--motion-duration-image) var(--motion-easing-default), filter var(--motion-duration-image) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 1516,
+      "property": "gap",
+      "before": "0.75rem",
+      "after": "var(--space-application-card-compact-gap)"
+    },
+    {
+      "sourceLine": 1520,
+      "property": "font-size",
+      "before": "0.8rem",
+      "after": "var(--type-application-caption-compact-size)"
+    },
+    {
+      "sourceLine": 1526,
+      "property": "gap",
+      "before": "0.5rem",
+      "after": "var(--space-stack-sm)"
+    },
+    {
+      "sourceLine": 1532,
+      "property": "font-size",
+      "before": "clamp(1.35rem, 2.2vw, 1.85rem)",
+      "after": "var(--type-application-bento-card-title-size)"
+    },
+    {
+      "sourceLine": 1533,
+      "property": "font-weight",
+      "before": "800",
+      "after": "var(--font-weight-application-hero-metrics-value)"
+    },
+    {
+      "sourceLine": 1535,
+      "property": "letter-spacing",
+      "before": "-0.02em",
+      "after": "var(--font-letter-spacing-application-bento-card-title)"
+    },
+    {
+      "sourceLine": 1546,
+      "property": "gap",
+      "before": "0.4rem",
+      "after": "var(--space-application-label-inset)"
+    },
+    {
+      "sourceLine": 1549,
+      "property": "font-weight",
+      "before": "600",
+      "after": "var(--font-weight-strong)"
+    },
+    {
+      "sourceLine": 1552,
+      "property": "letter-spacing",
+      "before": "0.05em",
+      "after": "var(--font-letter-spacing-application-overline)"
+    },
+    {
+      "sourceLine": 1560,
+      "property": "padding",
+      "before": "clamp(1.75rem, 3.5vw, 3rem)",
+      "after": "var(--space-application-techspecs-banner-padding)"
+    },
+    {
+      "sourceLine": 1578,
+      "property": "gap",
+      "before": "1rem",
+      "after": "var(--space-application-panel-inset)"
+    },
+    {
+      "sourceLine": 1583,
+      "property": "gap",
+      "before": "0.75rem",
+      "after": "var(--space-application-card-compact-gap)"
+    },
+    {
+      "sourceLine": 1584,
+      "property": "padding",
+      "before": "1.375rem",
+      "after": "var(--space-application-section-gap)"
+    },
+    {
+      "sourceLine": 1600,
+      "property": "font-size",
+      "before": "1.1rem",
+      "after": "var(--type-application-body-lead-size)"
+    },
+    {
+      "sourceLine": 1601,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 1609,
+      "property": "gap",
+      "before": "0.625rem",
+      "after": "var(--space-application-control-comfortable-gap)"
+    },
+    {
+      "sourceLine": 1614,
+      "property": "gap",
+      "before": "0.625rem",
+      "after": "var(--space-application-control-comfortable-gap)"
+    },
+    {
+      "sourceLine": 1616,
+      "property": "padding",
+      "before": "0.5rem 1.125rem",
+      "after": "var(--space-stack-sm) var(--space-application-panel-gap)"
+    },
+    {
+      "sourceLine": 1638,
+      "property": "font-size",
+      "before": "0.72rem",
+      "after": "var(--type-application-micro-label-size)"
+    },
+    {
+      "sourceLine": 1639,
+      "property": "padding",
+      "before": "0.1rem 0.45rem",
+      "after": "var(--space-application-micro) var(--space-application-label-gap)"
+    },
+    {
+      "sourceLine": 1647,
+      "property": "gap",
+      "before": "1.125rem",
+      "after": "var(--space-application-panel-gap)"
+    },
+    {
+      "sourceLine": 1652,
+      "property": "gap",
+      "before": "1rem",
+      "after": "var(--space-application-panel-inset)"
+    },
+    {
+      "sourceLine": 1653,
+      "property": "padding",
+      "before": "1.5rem",
+      "after": "var(--space-application-section-inset)"
+    },
+    {
+      "sourceLine": 1671,
+      "property": "gap",
+      "before": "0.75rem",
+      "after": "var(--space-application-card-compact-gap)"
+    },
+    {
+      "sourceLine": 1678,
+      "property": "gap",
+      "before": "1.25rem",
+      "after": "var(--space-application-section-dense-gap)"
+    },
+    {
+      "sourceLine": 1699,
+      "property": "transition",
+      "before": "transform 450ms ease",
+      "after": "transform var(--motion-duration-emphasis) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 1707,
+      "property": "padding",
+      "before": "1rem",
+      "after": "var(--space-application-panel-inset)"
+    },
+    {
+      "sourceLine": 1715,
+      "property": "font-size",
+      "before": "0.85rem",
+      "after": "var(--type-application-metadata-size)"
+    },
+    {
+      "sourceLine": 1718,
+      "property": "padding",
+      "before": "0.2rem 0.5rem",
+      "after": "var(--space-application-micro-inset) var(--space-stack-sm)"
+    },
+    {
+      "sourceLine": 1722,
+      "property": "padding",
+      "before": "1.5rem",
+      "after": "var(--space-application-section-inset)"
+    },
+    {
+      "sourceLine": 1725,
+      "property": "gap",
+      "before": "0.75rem",
+      "after": "var(--space-application-card-compact-gap)"
+    },
+    {
+      "sourceLine": 1734,
+      "property": "padding-block",
+      "before": "clamp(3rem, 6vw, 5rem)",
+      "after": "var(--space-application-subpage-hero-padding)"
+    },
+    {
+      "sourceLine": 1766,
+      "property": "gap",
+      "before": "clamp(2rem, 4vw, 3.25rem)",
+      "after": "var(--space-application-feature-rows-gap)"
+    },
+    {
+      "sourceLine": 1798,
+      "property": "padding",
+      "before": "0.25rem 0.65rem",
+      "after": "var(--space-stack-xs) var(--space-application-card-dense-gap)"
+    },
+    {
+      "sourceLine": 1803,
+      "property": "font-size",
+      "before": "0.8rem",
+      "after": "var(--type-application-caption-compact-size)"
+    },
+    {
+      "sourceLine": 1804,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 1807,
+      "property": "padding",
+      "before": "clamp(1.75rem, 3.5vw, 3rem)",
+      "after": "var(--space-application-techspecs-banner-padding)"
+    },
+    {
+      "sourceLine": 1811,
+      "property": "gap",
+      "before": "1rem",
+      "after": "var(--space-application-panel-inset)"
+    },
+    {
+      "sourceLine": 1818,
+      "property": "gap",
+      "before": "1.25rem",
+      "after": "var(--space-application-section-dense-gap)"
+    },
+    {
+      "sourceLine": 1823,
+      "property": "gap",
+      "before": "0.875rem",
+      "after": "var(--space-application-card-inset)"
+    },
+    {
+      "sourceLine": 1824,
+      "property": "padding",
+      "before": "1.625rem",
+      "after": "var(--space-application-section-comfortable-inset)"
+    },
+    {
+      "sourceLine": 1834,
+      "property": "gap",
+      "before": "0.75rem",
+      "after": "var(--space-application-card-compact-gap)"
+    },
+    {
+      "sourceLine": 1835,
+      "property": "padding-bottom",
+      "before": "0.625rem",
+      "after": "var(--space-application-control-comfortable-gap)"
+    },
+    {
+      "sourceLine": 1840,
+      "property": "font-size",
+      "before": "0.95rem",
+      "after": "var(--type-application-small-body-size)"
+    },
+    {
+      "sourceLine": 1841,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 1850,
+      "property": "padding",
+      "before": "0.5rem",
+      "after": "var(--space-stack-sm)"
+    },
+    {
+      "sourceLine": 1870,
+      "property": "padding",
+      "before": "clamp(1.5rem, 3vw, 2.5rem)",
+      "after": "var(--space-application-module-tabs-padding)"
+    },
+    {
+      "sourceLine": 1875,
+      "property": "padding",
+      "before": "1.5rem",
+      "after": "var(--space-application-section-inset)"
+    },
+    {
+      "sourceLine": 1882,
+      "property": "padding-block",
+      "before": "clamp(3rem, 6vw, 5rem)",
+      "after": "var(--space-application-subpage-hero-padding)"
+    },
+    {
+      "sourceLine": 1891,
+      "property": "gap",
+      "before": "clamp(2rem, 4vw, 3.5rem)",
+      "after": "var(--space-application-hero-stage-grid-gap)"
+    },
+    {
+      "sourceLine": 1893,
+      "property": "padding",
+      "before": "clamp(1.75rem, 4vw, 3rem)",
+      "after": "var(--space-application-trial-banner-inner-padding)"
+    },
+    {
+      "sourceLine": 1902,
+      "property": "gap",
+      "before": "1rem",
+      "after": "var(--space-application-panel-inset)"
+    },
+    {
+      "sourceLine": 1903,
+      "property": "padding",
+      "before": "1.5rem",
+      "after": "var(--space-application-section-inset)"
+    },
+    {
+      "sourceLine": 1916,
+      "property": "gap",
+      "before": "2rem",
+      "after": "var(--space-application-section-wide-gap)"
+    },
+    {
+      "sourceLine": 1917,
+      "property": "padding",
+      "before": "clamp(2rem, 4vw, 3rem)",
+      "after": "var(--space-application-yt-banner-padding)"
+    },
+    {
+      "sourceLine": 1939,
+      "property": "gap",
+      "before": "0.75rem",
+      "after": "var(--space-application-card-compact-gap)"
+    },
+    {
+      "sourceLine": 1944,
+      "property": "gap",
+      "before": "0.6rem",
+      "after": "var(--space-application-control-gap)"
+    },
+    {
+      "sourceLine": 1946,
+      "property": "font-size",
+      "before": "0.78rem",
+      "after": "var(--type-application-overline-size)"
+    },
+    {
+      "sourceLine": 1947,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 1949,
+      "property": "letter-spacing",
+      "before": "0.08em",
+      "after": "var(--font-letter-spacing-application-technical)"
+    },
+    {
+      "sourceLine": 1964,
+      "property": "font-size",
+      "before": "clamp(1.65rem, 3vw, 2.35rem)",
+      "after": "var(--type-application-yt-banner-title-size)"
+    },
+    {
+      "sourceLine": 1965,
+      "property": "font-weight",
+      "before": "800",
+      "after": "var(--font-weight-application-hero-metrics-value)"
+    },
+    {
+      "sourceLine": 1967,
+      "property": "letter-spacing",
+      "before": "-0.02em",
+      "after": "var(--font-letter-spacing-application-bento-card-title)"
+    },
+    {
+      "sourceLine": 1971,
+      "property": "font-size",
+      "before": "clamp(1rem, 1.2vw, 1.125rem)",
+      "after": "var(--type-application-yt-banner-desc-size)"
+    },
+    {
+      "sourceLine": 1972,
+      "property": "line-height",
+      "before": "1.65",
+      "after": "var(--type-application-body-relaxed-line-height)"
+    },
+    {
+      "sourceLine": 1983,
+      "property": "gap",
+      "before": "0.75rem",
+      "after": "var(--space-application-card-compact-gap)"
+    },
+    {
+      "sourceLine": 1984,
+      "property": "padding",
+      "before": "1rem 2rem",
+      "after": "var(--space-application-panel-inset) var(--space-application-section-wide-gap)"
+    },
+    {
+      "sourceLine": 1988,
+      "property": "font-size",
+      "before": "1.05rem",
+      "after": "var(--type-application-body-emphasis-size)"
+    },
+    {
+      "sourceLine": 1989,
+      "property": "font-weight",
+      "before": "800",
+      "after": "var(--font-weight-application-hero-metrics-value)"
+    },
+    {
+      "sourceLine": 1990,
+      "property": "letter-spacing",
+      "before": "0.04em",
+      "after": "var(--font-letter-spacing-application-label)"
+    },
+    {
+      "sourceLine": 1993,
+      "property": "transition",
+      "before": "background-color 250ms ease,\n    transform 250ms ease,\n    box-shadow 250ms ease",
+      "after": "background-color var(--motion-duration-detail) var(--motion-easing-default),\n    transform var(--motion-duration-detail) var(--motion-easing-default),\n    box-shadow var(--motion-duration-detail) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 2009,
+      "property": "gap",
+      "before": "1.375rem",
+      "after": "var(--space-application-section-gap)"
+    },
+    {
+      "sourceLine": 2016,
+      "property": "padding",
+      "before": "1.625rem",
+      "after": "var(--space-application-section-comfortable-inset)"
+    },
+    {
+      "sourceLine": 2022,
+      "property": "transition",
+      "before": "background-color 300ms ease,\n    border-color 300ms ease,\n    transform 300ms ease,\n    box-shadow 300ms ease",
+      "after": "background-color var(--motion-duration-slow) var(--motion-easing-default),\n    border-color var(--motion-duration-slow) var(--motion-easing-default),\n    transform var(--motion-duration-slow) var(--motion-easing-default),\n    box-shadow var(--motion-duration-slow) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 2053,
+      "property": "transition",
+      "before": "background-color 300ms ease,\n    color 300ms ease",
+      "after": "background-color var(--motion-duration-slow) var(--motion-easing-default),\n    color var(--motion-duration-slow) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 2063,
+      "property": "font-size",
+      "before": "0.72rem",
+      "after": "var(--type-application-micro-label-size)"
+    },
+    {
+      "sourceLine": 2064,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 2065,
+      "property": "padding",
+      "before": "0.25rem 0.55rem",
+      "after": "var(--space-stack-xs) var(--space-application-control-dense-gap)"
+    },
+    {
+      "sourceLine": 2072,
+      "property": "padding-right",
+      "before": "2rem",
+      "after": "var(--space-application-section-wide-gap)"
+    },
+    {
+      "sourceLine": 2074,
+      "property": "font-size",
+      "before": "1.2rem",
+      "after": "var(--type-application-card-title-size)"
+    },
+    {
+      "sourceLine": 2075,
+      "property": "font-weight",
+      "before": "800",
+      "after": "var(--font-weight-application-hero-metrics-value)"
+    },
+    {
+      "sourceLine": 2076,
+      "property": "line-height",
+      "before": "1.3",
+      "after": "var(--type-h3-line-height)"
+    },
+    {
+      "sourceLine": 2078,
+      "property": "transition",
+      "before": "color 250ms ease",
+      "after": "color var(--motion-duration-detail) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 2086,
+      "property": "line-height",
+      "before": "1.55",
+      "after": "var(--type-application-body-compact-line-height)"
+    },
+    {
+      "sourceLine": 2093,
+      "property": "gap",
+      "before": "0.5rem",
+      "after": "var(--space-stack-sm)"
+    },
+    {
+      "sourceLine": 2095,
+      "property": "font-size",
+      "before": "0.875rem",
+      "after": "var(--type-body-sm-size)"
+    },
+    {
+      "sourceLine": 2096,
+      "property": "font-weight",
+      "before": "600",
+      "after": "var(--font-weight-strong)"
+    },
+    {
+      "sourceLine": 2098,
+      "property": "transition",
+      "before": "color 250ms ease",
+      "after": "color var(--motion-duration-detail) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 2111,
+      "property": "transition",
+      "before": "opacity 300ms ease",
+      "after": "opacity var(--motion-duration-slow) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 2121,
+      "property": "gap",
+      "before": "2rem",
+      "after": "var(--space-application-section-wide-gap)"
+    },
+    {
+      "sourceLine": 2144,
+      "property": "padding",
+      "before": "clamp(1.5rem, 3vw, 2.25rem)",
+      "after": "var(--space-application-playlist-player-card-body-padding)"
+    },
+    {
+      "sourceLine": 2147,
+      "property": "gap",
+      "before": "1rem",
+      "after": "var(--space-application-panel-inset)"
+    },
+    {
+      "sourceLine": 2153,
+      "property": "gap",
+      "before": "0.875rem",
+      "after": "var(--space-application-card-inset)"
+    },
+    {
+      "sourceLine": 2155,
+      "property": "font-size",
+      "before": "clamp(1.4rem, 2.2vw, 1.85rem)",
+      "after": "var(--type-application-playlist-player-card-title-size)"
+    },
+    {
+      "sourceLine": 2156,
+      "property": "font-weight",
+      "before": "800",
+      "after": "var(--font-weight-application-hero-metrics-value)"
+    },
+    {
+      "sourceLine": 2180,
+      "property": "padding",
+      "before": "1.125rem 1.375rem",
+      "after": "var(--space-application-panel-gap) var(--space-application-section-gap)"
+    },
+    {
+      "sourceLine": 2187,
+      "property": "gap",
+      "before": "0.55rem",
+      "after": "var(--space-application-control-dense-gap)"
+    },
+    {
+      "sourceLine": 2189,
+      "property": "font-size",
+      "before": "1.05rem",
+      "after": "var(--type-application-body-emphasis-size)"
+    },
+    {
+      "sourceLine": 2190,
+      "property": "font-weight",
+      "before": "800",
+      "after": "var(--font-weight-application-hero-metrics-value)"
+    },
+    {
+      "sourceLine": 2195,
+      "property": "font-size",
+      "before": "0.75rem",
+      "after": "var(--type-caption-size)"
+    },
+    {
+      "sourceLine": 2196,
+      "property": "padding",
+      "before": "0.2rem 0.55rem",
+      "after": "var(--space-application-micro-inset) var(--space-application-control-dense-gap)"
+    },
+    {
+      "sourceLine": 2204,
+      "property": "padding",
+      "before": "0.5rem",
+      "after": "var(--space-stack-sm)"
+    },
+    {
+      "sourceLine": 2207,
+      "property": "gap",
+      "before": "0.25rem",
+      "after": "var(--space-stack-xs)"
+    },
+    {
+      "sourceLine": 2213,
+      "property": "gap",
+      "before": "0.875rem",
+      "after": "var(--space-application-card-inset)"
+    },
+    {
+      "sourceLine": 2214,
+      "property": "padding",
+      "before": "0.75rem",
+      "after": "var(--space-application-card-compact-gap)"
+    },
+    {
+      "sourceLine": 2220,
+      "property": "transition",
+      "before": "all 200ms ease",
+      "after": "all var(--motion-duration-base) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 2246,
+      "property": "transition",
+      "before": "opacity 200ms ease",
+      "after": "opacity var(--motion-duration-base) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 2263,
+      "property": "border-radius",
+      "before": "999px",
+      "after": "var(--radius-round)"
+    },
+    {
+      "sourceLine": 2272,
+      "property": "gap",
+      "before": "0.25rem",
+      "after": "var(--space-stack-xs)"
+    },
+    {
+      "sourceLine": 2277,
+      "property": "font-size",
+      "before": "0.875rem",
+      "after": "var(--type-body-sm-size)"
+    },
+    {
+      "sourceLine": 2278,
+      "property": "font-weight",
+      "before": "600",
+      "after": "var(--font-weight-strong)"
+    },
+    {
+      "sourceLine": 2279,
+      "property": "line-height",
+      "before": "1.35",
+      "after": "var(--type-application-title-relaxed-line-height)"
+    },
+    {
+      "sourceLine": 2291,
+      "property": "font-size",
+      "before": "0.72rem",
+      "after": "var(--type-application-micro-label-size)"
+    },
+    {
+      "sourceLine": 2304,
+      "property": "gap",
+      "before": "0.65rem",
+      "after": "var(--space-application-card-dense-gap)"
+    },
+    {
+      "sourceLine": 2311,
+      "property": "gap",
+      "before": "clamp(2rem, 4vw, 3.5rem)",
+      "after": "var(--space-application-hero-stage-grid-gap)"
+    },
+    {
+      "sourceLine": 2321,
+      "property": "gap",
+      "before": "1.25rem",
+      "after": "var(--space-application-section-dense-gap)"
+    },
+    {
+      "sourceLine": 2329,
+      "property": "gap",
+      "before": "0.8rem",
+      "after": "var(--space-application-card-gap)"
+    },
+    {
+      "sourceLine": 2334,
+      "property": "gap",
+      "before": "0.75rem",
+      "after": "var(--space-application-card-compact-gap)"
+    },
+    {
+      "sourceLine": 2335,
+      "property": "font-size",
+      "before": "0.975rem",
+      "after": "var(--type-application-small-body-relaxed-size)"
+    },
+    {
+      "sourceLine": 2336,
+      "property": "line-height",
+      "before": "1.6",
+      "after": "var(--type-body-lg-line-height)"
+    },
+    {
+      "sourceLine": 2342,
+      "property": "border-radius",
+      "before": "999px",
+      "after": "var(--radius-round)"
+    },
+    {
+      "sourceLine": 2373,
+      "property": "padding-block",
+      "before": "1.5rem",
+      "after": "var(--space-application-section-inset)"
+    },
+    {
+      "sourceLine": 2380,
+      "property": "gap",
+      "before": "0.875rem",
+      "after": "var(--space-application-card-inset)"
+    },
+    {
+      "sourceLine": 2385,
+      "property": "gap",
+      "before": "0.75rem",
+      "after": "var(--space-application-card-compact-gap)"
+    },
+    {
+      "sourceLine": 2386,
+      "property": "padding",
+      "before": "0.9rem 1.15rem",
+      "after": "var(--space-application-card-comfortable-inset) var(--space-application-panel-wide-inset)"
+    },
+    {
+      "sourceLine": 2392,
+      "property": "font-size",
+      "before": "0.875rem",
+      "after": "var(--type-body-sm-size)"
+    },
+    {
+      "sourceLine": 2393,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 2394,
+      "property": "transition",
+      "before": "transform 240ms ease,\n    border-color 240ms ease,\n    background-color 240ms ease,\n    box-shadow 240ms ease",
+      "after": "transform var(--motion-duration-control) var(--motion-easing-default),\n    border-color var(--motion-duration-control) var(--motion-easing-default),\n    background-color var(--motion-duration-control) var(--motion-easing-default),\n    box-shadow var(--motion-duration-control) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 2410,
+      "property": "border-radius",
+      "before": "999px",
+      "after": "var(--radius-round)"
+    },
+    {
+      "sourceLine": 2415,
+      "property": "line-height",
+      "before": "1.3",
+      "after": "var(--type-h3-line-height)"
+    },
+    {
+      "sourceLine": 2420,
+      "property": "transition",
+      "before": "transform 220ms ease, color 220ms ease",
+      "after": "transform var(--motion-duration-responsive) var(--motion-easing-default), color var(--motion-duration-responsive) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 2431,
+      "property": "gap",
+      "before": "1.25rem",
+      "after": "var(--space-application-section-dense-gap)"
+    },
+    {
+      "sourceLine": 2432,
+      "property": "padding",
+      "before": "1.5rem",
+      "after": "var(--space-application-section-inset)"
+    },
+    {
+      "sourceLine": 2439,
+      "property": "gap",
+      "before": "0.35rem",
+      "after": "var(--space-application-compact-gap)"
+    },
+    {
+      "sourceLine": 2444,
+      "property": "gap",
+      "before": "1rem",
+      "after": "var(--space-application-panel-inset)"
+    },
+    {
+      "sourceLine": 2449,
+      "property": "gap",
+      "before": "0.85rem",
+      "after": "var(--space-application-card-comfortable-gap)"
+    },
+    {
+      "sourceLine": 2450,
+      "property": "padding",
+      "before": "1.1rem",
+      "after": "var(--space-application-panel-comfortable-inset)"
+    },
+    {
+      "sourceLine": 2457,
+      "property": "font-size",
+      "before": "0.78rem",
+      "after": "var(--type-application-overline-size)"
+    },
+    {
+      "sourceLine": 2458,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 2460,
+      "property": "padding",
+      "before": "0.2rem 0.45rem",
+      "after": "var(--space-application-micro-inset) var(--space-application-label-gap)"
+    },
+    {
+      "sourceLine": 2469,
+      "property": "gap",
+      "before": "1.25rem",
+      "after": "var(--space-application-section-dense-gap)"
+    },
+    {
+      "sourceLine": 2480,
+      "property": "gap",
+      "before": "0.875rem",
+      "after": "var(--space-application-card-inset)"
+    },
+    {
+      "sourceLine": 2481,
+      "property": "padding",
+      "before": "1.5rem",
+      "after": "var(--space-application-section-inset)"
+    },
+    {
+      "sourceLine": 2485,
+      "property": "transition",
+      "before": "transform 260ms cubic-bezier(0.22, 1, 0.36, 1),\n    border-color 260ms ease,\n    box-shadow 260ms ease",
+      "after": "transform var(--motion-duration-panel) var(--motion-easing-expressive),\n    border-color var(--motion-duration-panel) var(--motion-easing-default),\n    box-shadow var(--motion-duration-panel) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 2499,
+      "property": "gap",
+      "before": "0.875rem",
+      "after": "var(--space-application-card-inset)"
+    },
+    {
+      "sourceLine": 2504,
+      "property": "gap",
+      "before": "0.35rem",
+      "after": "var(--space-application-compact-gap)"
+    },
+    {
+      "sourceLine": 2509,
+      "property": "font-size",
+      "before": "0.7rem",
+      "after": "var(--type-application-micro-size)"
+    },
+    {
+      "sourceLine": 2510,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 2511,
+      "property": "letter-spacing",
+      "before": "0.08em",
+      "after": "var(--font-letter-spacing-application-technical)"
+    },
+    {
+      "sourceLine": 2518,
+      "property": "font-size",
+      "before": "1.08rem",
+      "after": "var(--type-application-body-intro-size)"
+    },
+    {
+      "sourceLine": 2519,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 2520,
+      "property": "line-height",
+      "before": "1.3",
+      "after": "var(--type-h3-line-height)"
+    },
+    {
+      "sourceLine": 2525,
+      "property": "font-size",
+      "before": "0.875rem",
+      "after": "var(--type-body-sm-size)"
+    },
+    {
+      "sourceLine": 2526,
+      "property": "line-height",
+      "before": "1.62",
+      "after": "var(--type-application-body-reading-line-height)"
+    },
+    {
+      "sourceLine": 2533,
+      "property": "gap",
+      "before": "1.35rem",
+      "after": "var(--space-application-section-compact-gap)"
+    },
+    {
+      "sourceLine": 2551,
+      "property": "transition",
+      "before": "transform 280ms cubic-bezier(0.22, 1, 0.36, 1),\n    border-color 280ms ease,\n    box-shadow 280ms ease",
+      "after": "transform var(--motion-duration-media) var(--motion-easing-expressive),\n    border-color var(--motion-duration-media) var(--motion-easing-default),\n    box-shadow var(--motion-duration-media) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 2575,
+      "property": "transition",
+      "before": "transform 520ms cubic-bezier(0.22, 1, 0.36, 1)",
+      "after": "transform var(--motion-duration-showcase) var(--motion-easing-expressive)"
+    },
+    {
+      "sourceLine": 2593,
+      "property": "gap",
+      "before": "0.35rem",
+      "after": "var(--space-application-compact-gap)"
+    },
+    {
+      "sourceLine": 2594,
+      "property": "padding",
+      "before": "0.25rem 0.6rem",
+      "after": "var(--space-stack-xs) var(--space-application-control-gap)"
+    },
+    {
+      "sourceLine": 2600,
+      "property": "font-size",
+      "before": "0.68rem",
+      "after": "var(--type-application-micro-compact-size)"
+    },
+    {
+      "sourceLine": 2601,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 2602,
+      "property": "letter-spacing",
+      "before": "0.06em",
+      "after": "var(--font-letter-spacing-application-kicker)"
+    },
+    {
+      "sourceLine": 2616,
+      "property": "border-radius",
+      "before": "999px",
+      "after": "var(--radius-round)"
+    },
+    {
+      "sourceLine": 2623,
+      "property": "transition",
+      "before": "transform 260ms cubic-bezier(0.22, 1, 0.36, 1), background-color 260ms ease",
+      "after": "transform var(--motion-duration-panel) var(--motion-easing-expressive), background-color var(--motion-duration-panel) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 2637,
+      "property": "border-radius",
+      "before": "999px",
+      "after": "var(--radius-round)"
+    },
+    {
+      "sourceLine": 2644,
+      "property": "transition",
+      "before": "opacity 220ms ease",
+      "after": "opacity var(--motion-duration-responsive) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 2650,
+      "property": "padding",
+      "before": "1.35rem",
+      "after": "var(--space-application-section-compact-gap)"
+    },
+    {
+      "sourceLine": 2653,
+      "property": "gap",
+      "before": "0.65rem",
+      "after": "var(--space-application-card-dense-gap)"
+    },
+    {
+      "sourceLine": 2660,
+      "property": "gap",
+      "before": "0.5rem",
+      "after": "var(--space-stack-sm)"
+    },
+    {
+      "sourceLine": 2664,
+      "property": "font-size",
+      "before": "0.72rem",
+      "after": "var(--type-application-micro-label-size)"
+    },
+    {
+      "sourceLine": 2665,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 2666,
+      "property": "letter-spacing",
+      "before": "0.05em",
+      "after": "var(--font-letter-spacing-application-overline)"
+    },
+    {
+      "sourceLine": 2673,
+      "property": "font-size",
+      "before": "1.08rem",
+      "after": "var(--type-application-body-intro-size)"
+    },
+    {
+      "sourceLine": 2674,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 2675,
+      "property": "line-height",
+      "before": "1.32",
+      "after": "var(--type-application-title-reading-line-height)"
+    },
+    {
+      "sourceLine": 2680,
+      "property": "font-size",
+      "before": "0.875rem",
+      "after": "var(--type-body-sm-size)"
+    },
+    {
+      "sourceLine": 2681,
+      "property": "line-height",
+      "before": "1.62",
+      "after": "var(--type-application-body-reading-line-height)"
+    },
+    {
+      "sourceLine": 2690,
+      "property": "gap",
+      "before": "0.45rem",
+      "after": "var(--space-application-label-gap)"
+    },
+    {
+      "sourceLine": 2695,
+      "property": "gap",
+      "before": "0.5rem",
+      "after": "var(--space-stack-sm)"
+    },
+    {
+      "sourceLine": 2696,
+      "property": "font-size",
+      "before": "0.84rem",
+      "after": "var(--type-application-metadata-compact-size)"
+    },
+    {
+      "sourceLine": 2697,
+      "property": "line-height",
+      "before": "1.5",
+      "after": "var(--type-body-sm-line-height)"
+    },
+    {
+      "sourceLine": 2707,
+      "property": "padding-top",
+      "before": "0.75rem",
+      "after": "var(--space-application-card-compact-gap)"
+    },
+    {
+      "sourceLine": 2715,
+      "property": "gap",
+      "before": "0.5rem",
+      "after": "var(--space-stack-sm)"
+    },
+    {
+      "sourceLine": 2716,
+      "property": "padding",
+      "before": "0.45rem 0.85rem",
+      "after": "var(--space-application-label-gap) var(--space-application-card-comfortable-gap)"
+    },
+    {
+      "sourceLine": 2721,
+      "property": "font-size",
+      "before": "0.82rem",
+      "after": "var(--type-application-caption-reading-size)"
+    },
+    {
+      "sourceLine": 2722,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 2724,
+      "property": "transition",
+      "before": "background-color 200ms ease, color 200ms ease",
+      "after": "background-color var(--motion-duration-base) var(--motion-easing-default), color var(--motion-duration-base) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 2736,
+      "property": "gap",
+      "before": "0.65rem",
+      "after": "var(--space-application-card-dense-gap)"
+    },
+    {
+      "sourceLine": 2741,
+      "property": "gap",
+      "before": "0.6rem",
+      "after": "var(--space-application-control-gap)"
+    },
+    {
+      "sourceLine": 2742,
+      "property": "padding",
+      "before": "0.75rem 1.25rem",
+      "after": "var(--space-application-card-compact-gap) var(--space-application-section-dense-gap)"
+    },
+    {
+      "sourceLine": 2747,
+      "property": "font-size",
+      "before": "0.9rem",
+      "after": "var(--type-application-small-body-compact-size)"
+    },
+    {
+      "sourceLine": 2748,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 2750,
+      "property": "transition",
+      "before": "background-color 220ms ease,\n    border-color 220ms ease,\n    color 220ms ease,\n    transform 220ms ease",
+      "after": "background-color var(--motion-duration-responsive) var(--motion-easing-default),\n    border-color var(--motion-duration-responsive) var(--motion-easing-default),\n    color var(--motion-duration-responsive) var(--motion-easing-default),\n    transform var(--motion-duration-responsive) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 2769,
+      "property": "font-size",
+      "before": "0.72rem",
+      "after": "var(--type-application-micro-label-size)"
+    },
+    {
+      "sourceLine": 2774,
+      "property": "font-size",
+      "before": "0.7rem",
+      "after": "var(--type-application-micro-size)"
+    },
+    {
+      "sourceLine": 2775,
+      "property": "padding",
+      "before": "0.1rem 0.4rem",
+      "after": "var(--space-application-micro) var(--space-application-label-inset)"
+    },
+    {
+      "sourceLine": 2784,
+      "property": "gap",
+      "before": "1.5rem",
+      "after": "var(--space-application-section-inset)"
+    },
+    {
+      "sourceLine": 2790,
+      "property": "gap",
+      "before": "0.45rem",
+      "after": "var(--space-application-label-gap)"
+    },
+    {
+      "sourceLine": 2795,
+      "property": "gap",
+      "before": "0.75rem",
+      "after": "var(--space-application-card-compact-gap)"
+    },
+    {
+      "sourceLine": 2797,
+      "property": "padding",
+      "before": "0.9rem 1.1rem",
+      "after": "var(--space-application-card-comfortable-inset) var(--space-application-panel-comfortable-inset)"
+    },
+    {
+      "sourceLine": 2804,
+      "property": "font-size",
+      "before": "0.9rem",
+      "after": "var(--type-application-small-body-compact-size)"
+    },
+    {
+      "sourceLine": 2805,
+      "property": "font-weight",
+      "before": "600",
+      "after": "var(--font-weight-strong)"
+    },
+    {
+      "sourceLine": 2807,
+      "property": "transition",
+      "before": "background-color 200ms ease,\n    border-color 200ms ease,\n    color 200ms ease",
+      "after": "background-color var(--motion-duration-base) var(--motion-easing-default),\n    border-color var(--motion-duration-base) var(--motion-easing-default),\n    color var(--motion-duration-base) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 2825,
+      "property": "font-size",
+      "before": "0.75rem",
+      "after": "var(--type-caption-size)"
+    },
+    {
+      "sourceLine": 2826,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 2832,
+      "property": "line-height",
+      "before": "1.35",
+      "after": "var(--type-application-title-relaxed-line-height)"
+    },
+    {
+      "sourceLine": 2845,
+      "property": "animation",
+      "before": "aluPathwayFeatureIn 320ms cubic-bezier(0.22, 1, 0.36, 1) both",
+      "after": "aluPathwayFeatureIn var(--motion-duration-gentle) var(--motion-easing-expressive) both"
+    },
+    {
+      "sourceLine": 2863,
+      "property": "padding",
+      "before": "clamp(1.5rem, 3vw, 2.25rem)",
+      "after": "var(--space-application-playlist-player-card-body-padding)"
+    },
+    {
+      "sourceLine": 2866,
+      "property": "gap",
+      "before": "0.9rem",
+      "after": "var(--space-application-card-comfortable-inset)"
+    },
+    {
+      "sourceLine": 2871,
+      "property": "font-size",
+      "before": "0.78rem",
+      "after": "var(--type-application-overline-size)"
+    },
+    {
+      "sourceLine": 2872,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 2875,
+      "property": "letter-spacing",
+      "before": "0.06em",
+      "after": "var(--font-letter-spacing-application-kicker)"
+    },
+    {
+      "sourceLine": 2882,
+      "property": "gap",
+      "before": "clamp(1.75rem, 3.5vw, 3rem)",
+      "after": "var(--space-application-techspecs-banner-padding)"
+    },
+    {
+      "sourceLine": 2884,
+      "property": "padding",
+      "before": "clamp(1.5rem, 3vw, 2.5rem)",
+      "after": "var(--space-application-module-tabs-padding)"
+    },
+    {
+      "sourceLine": 2912,
+      "property": "transition",
+      "before": "transform 520ms cubic-bezier(0.22, 1, 0.36, 1)",
+      "after": "transform var(--motion-duration-showcase) var(--motion-easing-expressive)"
+    },
+    {
+      "sourceLine": 2928,
+      "property": "gap",
+      "before": "0.875rem",
+      "after": "var(--space-application-card-inset)"
+    },
+    {
+      "sourceLine": 2933,
+      "property": "font-size",
+      "before": "0.82rem",
+      "after": "var(--type-application-caption-reading-size)"
+    },
+    {
+      "sourceLine": 2934,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 2936,
+      "property": "padding",
+      "before": "0.35rem 0.75rem",
+      "after": "var(--space-application-compact-gap) var(--space-application-card-compact-gap)"
+    },
+    {
+      "sourceLine": 2946,
+      "property": "gap",
+      "before": "0.85rem",
+      "after": "var(--space-application-card-comfortable-gap)"
+    },
+    {
+      "sourceLine": 2954,
+      "property": "transition",
+      "before": "border-color 200ms ease",
+      "after": "border-color var(--motion-duration-base) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 2965,
+      "property": "gap",
+      "before": "1rem",
+      "after": "var(--space-application-panel-inset)"
+    },
+    {
+      "sourceLine": 2966,
+      "property": "padding",
+      "before": "1.25rem 1.5rem",
+      "after": "var(--space-application-section-dense-gap) var(--space-application-section-inset)"
+    },
+    {
+      "sourceLine": 2968,
+      "property": "font-size",
+      "before": "1.05rem",
+      "after": "var(--type-application-body-emphasis-size)"
+    },
+    {
+      "sourceLine": 2969,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 2978,
+      "property": "transition",
+      "before": "transform 240ms ease",
+      "after": "transform var(--motion-duration-control) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 2985,
+      "property": "padding",
+      "before": "0 1.5rem 1.35rem 1.5rem",
+      "after": "0 var(--space-application-section-inset) var(--space-application-section-compact-gap) var(--space-application-section-inset)"
+    },
+    {
+      "sourceLine": 2989,
+      "property": "gap",
+      "before": "0.75rem",
+      "after": "var(--space-application-card-compact-gap)"
+    },
+    {
+      "sourceLine": 2993,
+      "property": "font-size",
+      "before": "0.95rem",
+      "after": "var(--type-application-small-body-size)"
+    },
+    {
+      "sourceLine": 2994,
+      "property": "line-height",
+      "before": "1.65",
+      "after": "var(--type-application-body-relaxed-line-height)"
+    },
+    {
+      "sourceLine": 3026,
+      "property": "padding",
+      "before": "clamp(1rem, 3vw, 2.5rem)",
+      "after": "var(--space-application-video-modal-padding)"
+    },
+    {
+      "sourceLine": 3027,
+      "property": "animation",
+      "before": "aluModalFadeIn 200ms ease both",
+      "after": "aluModalFadeIn var(--motion-duration-base) var(--motion-easing-default) both"
+    },
+    {
+      "sourceLine": 3055,
+      "property": "gap",
+      "before": "1rem",
+      "after": "var(--space-application-panel-inset)"
+    },
+    {
+      "sourceLine": 3056,
+      "property": "padding",
+      "before": "0.9rem 1.25rem",
+      "after": "var(--space-application-card-comfortable-inset) var(--space-application-section-dense-gap)"
+    },
+    {
+      "sourceLine": 3065,
+      "property": "font-size",
+      "before": "1rem",
+      "after": "var(--type-body-size)"
+    },
+    {
+      "sourceLine": 3066,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 3076,
+      "property": "font-size",
+      "before": "1rem",
+      "after": "var(--type-body-size)"
+    },
+    {
+      "sourceLine": 3077,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 3081,
+      "property": "transition",
+      "before": "background-color 180ms ease, border-color 180ms ease",
+      "after": "background-color var(--motion-duration-quick) var(--motion-easing-default), border-color var(--motion-duration-quick) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 3194,
+      "property": "gap",
+      "before": "1.25rem",
+      "after": "var(--space-application-section-dense-gap)"
+    },
+    {
+      "sourceLine": 3195,
+      "property": "padding",
+      "before": "1.25rem",
+      "after": "var(--space-application-section-dense-gap)"
+    },
+    {
+      "sourceLine": 3207,
+      "property": "gap",
+      "before": "0.5rem",
+      "after": "var(--space-stack-sm)"
+    },
+    {
+      "sourceLine": 3213,
+      "property": "gap",
+      "before": "0.5rem",
+      "after": "var(--space-stack-sm)"
+    },
+    {
+      "sourceLine": 3214,
+      "property": "padding",
+      "before": "0.6rem 1rem",
+      "after": "var(--space-application-control-gap) var(--space-application-panel-inset)"
+    },
+    {
+      "sourceLine": 3219,
+      "property": "font-size",
+      "before": "0.875rem",
+      "after": "var(--type-body-sm-size)"
+    },
+    {
+      "sourceLine": 3220,
+      "property": "font-weight",
+      "before": "600",
+      "after": "var(--font-weight-strong)"
+    },
+    {
+      "sourceLine": 3222,
+      "property": "transition",
+      "before": "all 180ms cubic-bezier(0.22, 1, 0.36, 1)",
+      "after": "all var(--motion-duration-quick) var(--motion-easing-expressive)"
+    },
+    {
+      "sourceLine": 3260,
+      "property": "padding-inline",
+      "before": "0.4rem",
+      "after": "var(--space-application-label-inset)"
+    },
+    {
+      "sourceLine": 3262,
+      "property": "border-radius",
+      "before": "2px",
+      "after": "var(--radius-application-media-badge)"
+    },
+    {
+      "sourceLine": 3264,
+      "property": "font-size",
+      "before": "0.72rem",
+      "after": "var(--type-application-micro-label-size)"
+    },
+    {
+      "sourceLine": 3265,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 3278,
+      "property": "gap",
+      "before": "1rem",
+      "after": "var(--space-application-panel-inset)"
+    },
+    {
+      "sourceLine": 3279,
+      "property": "padding-top",
+      "before": "0.875rem",
+      "after": "var(--space-application-card-inset)"
+    },
+    {
+      "sourceLine": 3286,
+      "property": "gap",
+      "before": "0.625rem",
+      "after": "var(--space-application-control-comfortable-gap)"
+    },
+    {
+      "sourceLine": 3289,
+      "property": "padding",
+      "before": "0.5rem 0.875rem",
+      "after": "var(--space-stack-sm) var(--space-application-card-inset)"
+    },
+    {
+      "sourceLine": 3306,
+      "property": "font-size",
+      "before": "0.9rem",
+      "after": "var(--type-application-small-body-compact-size)"
+    },
+    {
+      "sourceLine": 3315,
+      "property": "font-size",
+      "before": "0.85rem",
+      "after": "var(--type-application-metadata-size)"
+    },
+    {
+      "sourceLine": 3316,
+      "property": "padding",
+      "before": "0.15rem 0.35rem",
+      "after": "var(--space-application-detail) var(--space-application-compact-gap)"
+    },
+    {
+      "sourceLine": 3322,
+      "property": "gap",
+      "before": "0.75rem",
+      "after": "var(--space-application-card-compact-gap)"
+    },
+    {
+      "sourceLine": 3328,
+      "property": "gap",
+      "before": "1rem",
+      "after": "var(--space-application-panel-inset)"
+    },
+    {
+      "sourceLine": 3334,
+      "property": "gap",
+      "before": "1rem",
+      "after": "var(--space-application-panel-inset)"
+    },
+    {
+      "sourceLine": 3335,
+      "property": "padding",
+      "before": "1.25rem 1.35rem",
+      "after": "var(--space-application-section-dense-gap) var(--space-application-section-compact-gap)"
+    },
+    {
+      "sourceLine": 3339,
+      "property": "transition",
+      "before": "transform 200ms cubic-bezier(0.22, 1, 0.36, 1),\n    border-color 200ms ease,\n    background-color 200ms ease",
+      "after": "transform var(--motion-duration-base) var(--motion-easing-expressive),\n    border-color var(--motion-duration-base) var(--motion-easing-default),\n    background-color var(--motion-duration-base) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 3360,
+      "property": "transition",
+      "before": "background-color 200ms ease, color 200ms ease, border-color 200ms ease",
+      "after": "background-color var(--motion-duration-base) var(--motion-easing-default), color var(--motion-duration-base) var(--motion-easing-default), border-color var(--motion-duration-base) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 3372,
+      "property": "gap",
+      "before": "0.25rem",
+      "after": "var(--space-stack-xs)"
+    },
+    {
+      "sourceLine": 3379,
+      "property": "font-size",
+      "before": "0.98rem",
+      "after": "var(--type-application-body-compact-size)"
+    },
+    {
+      "sourceLine": 3380,
+      "property": "font-weight",
+      "before": "600",
+      "after": "var(--font-weight-strong)"
+    },
+    {
+      "sourceLine": 3381,
+      "property": "line-height",
+      "before": "1.35",
+      "after": "var(--type-application-title-relaxed-line-height)"
+    },
+    {
+      "sourceLine": 3387,
+      "property": "font-size",
+      "before": "0.72rem",
+      "after": "var(--type-application-micro-label-size)"
+    },
+    {
+      "sourceLine": 3388,
+      "property": "letter-spacing",
+      "before": "0.04em",
+      "after": "var(--font-letter-spacing-application-label)"
+    },
+    {
+      "sourceLine": 3397,
+      "property": "gap",
+      "before": "1.5rem",
+      "after": "var(--space-application-section-inset)"
+    },
+    {
+      "sourceLine": 3408,
+      "property": "gap",
+      "before": "1rem",
+      "after": "var(--space-application-panel-inset)"
+    },
+    {
+      "sourceLine": 3409,
+      "property": "padding",
+      "before": "1.5rem 1.75rem",
+      "after": "var(--space-application-section-inset) var(--space-application-section-wide-inset)"
+    },
+    {
+      "sourceLine": 3425,
+      "property": "font-size",
+      "before": "0.875rem",
+      "after": "var(--type-body-sm-size)"
+    },
+    {
+      "sourceLine": 3430,
+      "property": "padding",
+      "before": "0.75rem 1rem",
+      "after": "var(--space-application-card-compact-gap) var(--space-application-panel-inset)"
+    },
+    {
+      "sourceLine": 3438,
+      "property": "font-weight",
+      "before": "600",
+      "after": "var(--font-weight-strong)"
+    },
+    {
+      "sourceLine": 3446,
+      "property": "font-size",
+      "before": "0.78rem",
+      "after": "var(--type-application-overline-size)"
+    },
+    {
+      "sourceLine": 3447,
+      "property": "letter-spacing",
+      "before": "0.04em",
+      "after": "var(--font-letter-spacing-application-label)"
+    },
+    {
+      "sourceLine": 3453,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 3462,
+      "property": "padding",
+      "before": "0.75rem 1rem",
+      "after": "var(--space-application-card-compact-gap) var(--space-application-panel-inset)"
+    },
+    {
+      "sourceLine": 3465,
+      "property": "font-size",
+      "before": "0.85rem",
+      "after": "var(--type-application-metadata-size)"
+    },
+    {
+      "sourceLine": 3480,
+      "property": "padding-block",
+      "before": "clamp(2rem, 4vw, 3.25rem)",
+      "after": "var(--space-application-feature-rows-gap)"
+    },
+    {
+      "sourceLine": 3492,
+      "property": "gap",
+      "before": "0.35rem",
+      "after": "var(--space-application-compact-gap)"
+    },
+    {
+      "sourceLine": 3493,
+      "property": "padding",
+      "before": "0.75rem 1.75rem",
+      "after": "var(--space-application-card-compact-gap) var(--space-application-section-wide-inset)"
+    },
+    {
+      "sourceLine": 3499,
+      "property": "font-size",
+      "before": "clamp(2.25rem, 3.8vw, 3.25rem)",
+      "after": "var(--type-application-about-metric-value-size)"
+    },
+    {
+      "sourceLine": 3500,
+      "property": "font-weight",
+      "before": "800",
+      "after": "var(--font-weight-application-hero-metrics-value)"
+    },
+    {
+      "sourceLine": 3501,
+      "property": "line-height",
+      "before": "1.05",
+      "after": "var(--type-application-display-compact-line-height)"
+    },
+    {
+      "sourceLine": 3502,
+      "property": "letter-spacing",
+      "before": "-0.03em",
+      "after": "var(--font-letter-spacing-application-display-compressed)"
+    },
+    {
+      "sourceLine": 3508,
+      "property": "font-size",
+      "before": "1.05rem",
+      "after": "var(--type-application-body-emphasis-size)"
+    },
+    {
+      "sourceLine": 3509,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 3515,
+      "property": "font-size",
+      "before": "0.76rem",
+      "after": "var(--type-application-fine-print-size)"
+    },
+    {
+      "sourceLine": 3516,
+      "property": "letter-spacing",
+      "before": "0.03em",
+      "after": "var(--font-letter-spacing-application-label-subtle)"
+    },
+    {
+      "sourceLine": 3523,
+      "property": "gap",
+      "before": "clamp(2.5rem, 5vw, 5rem)",
+      "after": "var(--space-application-about-story-gap)"
+    },
+    {
+      "sourceLine": 3530,
+      "property": "gap",
+      "before": "1.25rem",
+      "after": "var(--space-application-section-dense-gap)"
+    },
+    {
+      "sourceLine": 3537,
+      "property": "padding",
+      "before": "0.25rem 0 0.25rem 1.25rem",
+      "after": "var(--space-stack-xs) 0 var(--space-stack-xs) var(--space-application-section-dense-gap)"
+    },
+    {
+      "sourceLine": 3540,
+      "property": "font-size",
+      "before": "1.08rem",
+      "after": "var(--type-application-body-intro-size)"
+    },
+    {
+      "sourceLine": 3541,
+      "property": "font-weight",
+      "before": "600",
+      "after": "var(--font-weight-strong)"
+    },
+    {
+      "sourceLine": 3542,
+      "property": "line-height",
+      "before": "1.55",
+      "after": "var(--type-application-body-compact-line-height)"
+    },
+    {
+      "sourceLine": 3556,
+      "property": "gap",
+      "before": "1rem",
+      "after": "var(--space-application-panel-inset)"
+    },
+    {
+      "sourceLine": 3557,
+      "property": "padding-block",
+      "before": "0.9rem",
+      "after": "var(--space-application-card-comfortable-inset)"
+    },
+    {
+      "sourceLine": 3564,
+      "property": "font-size",
+      "before": "0.75rem",
+      "after": "var(--type-caption-size)"
+    },
+    {
+      "sourceLine": 3565,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 3566,
+      "property": "letter-spacing",
+      "before": "0.06em",
+      "after": "var(--font-letter-spacing-application-kicker)"
+    },
+    {
+      "sourceLine": 3572,
+      "property": "font-size",
+      "before": "0.86rem",
+      "after": "var(--type-application-metadata-reading-size)"
+    },
+    {
+      "sourceLine": 3573,
+      "property": "line-height",
+      "before": "1.5",
+      "after": "var(--type-body-sm-line-height)"
+    },
+    {
+      "sourceLine": 3580,
+      "property": "gap",
+      "before": "1.5rem",
+      "after": "var(--space-application-section-inset)"
+    },
+    {
+      "sourceLine": 3581,
+      "property": "padding",
+      "before": "clamp(1.75rem, 3.5vw, 3rem)",
+      "after": "var(--space-application-techspecs-banner-padding)"
+    },
+    {
+      "sourceLine": 3590,
+      "property": "font-size",
+      "before": "clamp(1.12rem, 1.5vw, 1.28rem)",
+      "after": "var(--type-application-about-story-lead-size)"
+    },
+    {
+      "sourceLine": 3591,
+      "property": "font-weight",
+      "before": "500",
+      "after": "var(--font-weight-label)"
+    },
+    {
+      "sourceLine": 3592,
+      "property": "line-height",
+      "before": "1.75",
+      "after": "var(--type-application-editorial-line-height)"
+    },
+    {
+      "sourceLine": 3599,
+      "property": "font-size",
+      "before": "1.02rem",
+      "after": "var(--type-application-body-reading-size)"
+    },
+    {
+      "sourceLine": 3600,
+      "property": "line-height",
+      "before": "1.8",
+      "after": "var(--type-application-editorial-spacious-line-height)"
+    },
+    {
+      "sourceLine": 3609,
+      "property": "gap",
+      "before": "1.5rem",
+      "after": "var(--space-application-section-inset)"
+    },
+    {
+      "sourceLine": 3610,
+      "property": "padding-bottom",
+      "before": "1.25rem",
+      "after": "var(--space-application-section-dense-gap)"
+    },
+    {
+      "sourceLine": 3617,
+      "property": "gap",
+      "before": "1.5rem",
+      "after": "var(--space-application-section-inset)"
+    },
+    {
+      "sourceLine": 3623,
+      "property": "gap",
+      "before": "0.85rem",
+      "after": "var(--space-application-card-comfortable-gap)"
+    },
+    {
+      "sourceLine": 3624,
+      "property": "padding",
+      "before": "clamp(1.75rem, 3vw, 2.25rem)",
+      "after": "var(--space-application-about-value-item-padding)"
+    },
+    {
+      "sourceLine": 3629,
+      "property": "transition",
+      "before": "transform 220ms cubic-bezier(0.22, 1, 0.36, 1), border-color 220ms ease, background-color 200ms ease",
+      "after": "transform var(--motion-duration-responsive) var(--motion-easing-expressive), border-color var(--motion-duration-responsive) var(--motion-easing-default), background-color var(--motion-duration-base) var(--motion-easing-default)"
+    },
+    {
+      "sourceLine": 3647,
+      "property": "font-size",
+      "before": "0.85rem",
+      "after": "var(--type-application-metadata-size)"
+    },
+    {
+      "sourceLine": 3648,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 3649,
+      "property": "letter-spacing",
+      "before": "0.1em",
+      "after": "var(--font-letter-spacing-application-technical-wide)"
+    },
+    {
+      "sourceLine": 3667,
+      "property": "font-size",
+      "before": "1.35rem",
+      "after": "var(--type-application-feature-title-size)"
+    },
+    {
+      "sourceLine": 3668,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 3674,
+      "property": "font-size",
+      "before": "0.98rem",
+      "after": "var(--type-application-body-compact-size)"
+    },
+    {
+      "sourceLine": 3675,
+      "property": "line-height",
+      "before": "1.7",
+      "after": "var(--type-application-body-spacious-line-height)"
+    },
+    {
+      "sourceLine": 3690,
+      "property": "gap",
+      "before": "1.5rem",
+      "after": "var(--space-application-section-inset)"
+    },
+    {
+      "sourceLine": 3691,
+      "property": "padding",
+      "before": "clamp(1.75rem, 3vw, 2.75rem)",
+      "after": "var(--space-application-about-office-info-padding)"
+    },
+    {
+      "sourceLine": 3697,
+      "property": "font-size",
+      "before": "0.72rem",
+      "after": "var(--type-application-micro-label-size)"
+    },
+    {
+      "sourceLine": 3698,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 3699,
+      "property": "letter-spacing",
+      "before": "0.08em",
+      "after": "var(--font-letter-spacing-application-technical)"
+    },
+    {
+      "sourceLine": 3712,
+      "property": "gap",
+      "before": "0.65rem",
+      "after": "var(--space-application-card-dense-gap)"
+    },
+    {
+      "sourceLine": 3719,
+      "property": "gap",
+      "before": "0.5rem",
+      "after": "var(--space-stack-sm)"
+    },
+    {
+      "sourceLine": 3720,
+      "property": "font-size",
+      "before": "0.95rem",
+      "after": "var(--type-application-small-body-size)"
+    },
+    {
+      "sourceLine": 3724,
+      "property": "font-weight",
+      "before": "700",
+      "after": "var(--font-weight-application-pathway-role-badge)"
+    },
+    {
+      "sourceLine": 3761,
+      "property": "padding",
+      "before": "1.25rem",
+      "after": "var(--space-application-section-dense-gap)"
+    }
+  ],
+  "tokens": [
+    {
+      "semantic": "semantic.space.application.denseGap",
+      "cssVariable": "--space-application-dense-gap",
+      "primitive": "primitive.space.applicationDenseGap",
+      "value": "0.375rem"
+    },
+    {
+      "semantic": "semantic.space.application.hairline",
+      "cssVariable": "--space-application-hairline",
+      "primitive": "primitive.space.applicationHairline",
+      "value": "0.125rem"
+    },
+    {
+      "semantic": "semantic.space.application.pageHeroPadding",
+      "cssVariable": "--space-application-page-hero-padding",
+      "primitive": "primitive.space.applicationPageHeroPadding",
+      "value": "clamp(2.5rem, 5vw, 4.5rem)"
+    },
+    {
+      "semantic": "semantic.space.application.cardCompactGap",
+      "cssVariable": "--space-application-card-compact-gap",
+      "primitive": "primitive.space.3",
+      "value": "0.75rem"
+    },
+    {
+      "semantic": "semantic.space.application.controlComfortableGap",
+      "cssVariable": "--space-application-control-comfortable-gap",
+      "primitive": "primitive.space.applicationControlComfortableGap",
+      "value": "0.625rem"
+    },
+    {
+      "semantic": "semantic.space.application.heroStagePadding",
+      "cssVariable": "--space-application-hero-stage-padding",
+      "primitive": "primitive.space.applicationHeroStagePadding",
+      "value": "clamp(3.5rem, 6vw, 6rem)"
+    },
+    {
+      "semantic": "semantic.space.application.heroStagePaddingEnd",
+      "cssVariable": "--space-application-hero-stage-padding-end",
+      "primitive": "primitive.space.applicationHeroStagePaddingEnd",
+      "value": "clamp(2.5rem, 4vw, 4rem)"
+    },
+    {
+      "semantic": "semantic.space.application.heroStageInnerGap",
+      "cssVariable": "--space-application-hero-stage-inner-gap",
+      "primitive": "primitive.space.applicationHeroStageInnerGap",
+      "value": "clamp(2.5rem, 5vw, 4rem)"
+    },
+    {
+      "semantic": "semantic.space.application.heroStageGridGap",
+      "cssVariable": "--space-application-hero-stage-grid-gap",
+      "primitive": "primitive.space.applicationHeroStageGridGap",
+      "value": "clamp(2rem, 4vw, 3.5rem)"
+    },
+    {
+      "semantic": "semantic.font.letterSpacing.applicationDisplayTight",
+      "cssVariable": "--font-letter-spacing-application-display-tight",
+      "primitive": "primitive.font.letterSpacing.applicationDisplayTight",
+      "value": "-0.025em"
+    },
+    {
+      "semantic": "semantic.type.application.microLabel.size",
+      "cssVariable": "--type-application-micro-label-size",
+      "primitive": "primitive.font.size.applicationMicroLabel",
+      "value": "0.72rem"
+    },
+    {
+      "semantic": "semantic.font.letterSpacing.applicationKicker",
+      "cssVariable": "--font-letter-spacing-application-kicker",
+      "primitive": "primitive.font.letterSpacing.applicationKicker",
+      "value": "0.06em"
+    },
+    {
+      "semantic": "semantic.space.application.controlDenseGap",
+      "cssVariable": "--space-application-control-dense-gap",
+      "primitive": "primitive.space.applicationControlDenseGap",
+      "value": "0.55rem"
+    },
+    {
+      "semantic": "semantic.space.application.panelGap",
+      "cssVariable": "--space-application-panel-gap",
+      "primitive": "primitive.space.applicationPanelGap",
+      "value": "1.125rem"
+    },
+    {
+      "semantic": "semantic.space.application.panelInset",
+      "cssVariable": "--space-application-panel-inset",
+      "primitive": "primitive.space.4",
+      "value": "1rem"
+    },
+    {
+      "semantic": "semantic.space.application.sectionDenseGap",
+      "cssVariable": "--space-application-section-dense-gap",
+      "primitive": "primitive.space.5",
+      "value": "1.25rem"
+    },
+    {
+      "semantic": "semantic.space.application.sectionGap",
+      "cssVariable": "--space-application-section-gap",
+      "primitive": "primitive.space.applicationSectionGap",
+      "value": "1.375rem"
+    },
+    {
+      "semantic": "semantic.space.application.sectionInset",
+      "cssVariable": "--space-application-section-inset",
+      "primitive": "primitive.space.6",
+      "value": "1.5rem"
+    },
+    {
+      "semantic": "semantic.type.application.heroMetricsValue.size",
+      "cssVariable": "--type-application-hero-metrics-value-size",
+      "primitive": "primitive.font.size.applicationHeroMetricsValue",
+      "value": "clamp(1.85rem, 3vw, 2.5rem)"
+    },
+    {
+      "semantic": "semantic.font.weight.applicationHeroMetricsValue",
+      "cssVariable": "--font-weight-application-hero-metrics-value",
+      "primitive": "primitive.font.weight.800",
+      "value": "800"
+    },
+    {
+      "semantic": "semantic.type.application.displayCompact.lineHeight",
+      "cssVariable": "--type-application-display-compact-line-height",
+      "primitive": "primitive.font.lineHeight.applicationDisplayCompact",
+      "value": "1.05"
+    },
+    {
+      "semantic": "semantic.font.letterSpacing.applicationDisplayCompressed",
+      "cssVariable": "--font-letter-spacing-application-display-compressed",
+      "primitive": "primitive.font.letterSpacing.applicationDisplayCompressed",
+      "value": "-0.03em"
+    },
+    {
+      "semantic": "semantic.radius.applicationPillExtended",
+      "cssVariable": "--radius-application-pill-extended",
+      "primitive": "primitive.radius.applicationPillExtended",
+      "value": "9999px"
+    },
+    {
+      "semantic": "semantic.motion.duration.ambient",
+      "cssVariable": "--motion-duration-ambient",
+      "primitive": "primitive.duration.applicationAmbient",
+      "value": "700ms"
+    },
+    {
+      "semantic": "semantic.motion.easing.expressive",
+      "cssVariable": "--motion-easing-expressive",
+      "primitive": "primitive.easing.applicationExpressive",
+      "value": "cubic-bezier(0.22, 1, 0.36, 1)"
+    },
+    {
+      "semantic": "semantic.space.application.cardInset",
+      "cssVariable": "--space-application-card-inset",
+      "primitive": "primitive.space.applicationCardInset",
+      "value": "0.875rem"
+    },
+    {
+      "semantic": "semantic.space.application.panelDenseInset",
+      "cssVariable": "--space-application-panel-dense-inset",
+      "primitive": "primitive.space.applicationPanelDenseInset",
+      "value": "0.95rem"
+    },
+    {
+      "semantic": "semantic.motion.duration.interactive",
+      "cssVariable": "--motion-duration-interactive",
+      "primitive": "primitive.duration.applicationInteractive",
+      "value": "350ms"
+    },
+    {
+      "semantic": "semantic.motion.easing.default",
+      "cssVariable": "--motion-easing-default",
+      "primitive": "primitive.easing.applicationDefault",
+      "value": "ease"
+    },
+    {
+      "semantic": "semantic.space.application.micro",
+      "cssVariable": "--space-application-micro",
+      "primitive": "primitive.space.applicationMicro",
+      "value": "0.1rem"
+    },
+    {
+      "semantic": "semantic.type.application.microCompact.size",
+      "cssVariable": "--type-application-micro-compact-size",
+      "primitive": "primitive.font.size.applicationMicroCompact",
+      "value": "0.68rem"
+    },
+    {
+      "semantic": "semantic.font.letterSpacing.applicationTechnical",
+      "cssVariable": "--font-letter-spacing-application-technical",
+      "primitive": "primitive.font.letterSpacing.applicationTechnical",
+      "value": "0.08em"
+    },
+    {
+      "semantic": "semantic.type.application.smallBody.size",
+      "cssVariable": "--type-application-small-body-size",
+      "primitive": "primitive.font.size.applicationSmallBody",
+      "value": "0.95rem"
+    },
+    {
+      "semantic": "semantic.space.application.pathwaySplitPadding",
+      "cssVariable": "--space-application-pathway-split-padding",
+      "primitive": "primitive.space.applicationPathwaySplitPadding",
+      "value": "clamp(1.75rem, 3.5vw, 2.75rem)"
+    },
+    {
+      "semantic": "semantic.motion.duration.emphasis",
+      "cssVariable": "--motion-duration-emphasis",
+      "primitive": "primitive.duration.applicationEmphasis",
+      "value": "450ms"
+    },
+    {
+      "semantic": "semantic.motion.duration.slide",
+      "cssVariable": "--motion-duration-slide",
+      "primitive": "primitive.duration.applicationSlide",
+      "value": "420ms"
+    },
+    {
+      "semantic": "semantic.space.application.labelGap",
+      "cssVariable": "--space-application-label-gap",
+      "primitive": "primitive.space.applicationLabelGap",
+      "value": "0.45rem"
+    },
+    {
+      "semantic": "semantic.space.application.compactInset",
+      "cssVariable": "--space-application-compact-inset",
+      "primitive": "primitive.space.applicationCompactInset",
+      "value": "0.3rem"
+    },
+    {
+      "semantic": "semantic.space.application.cardCompactInset",
+      "cssVariable": "--space-application-card-compact-inset",
+      "primitive": "primitive.space.applicationCardCompactInset",
+      "value": "0.7rem"
+    },
+    {
+      "semantic": "semantic.font.weight.applicationPathwayRoleBadge",
+      "cssVariable": "--font-weight-application-pathway-role-badge",
+      "primitive": "primitive.font.weight.700",
+      "value": "700"
+    },
+    {
+      "semantic": "semantic.type.application.pathwaySplitTitle.size",
+      "cssVariable": "--type-application-pathway-split-title-size",
+      "primitive": "primitive.font.size.applicationPathwaySplitTitle",
+      "value": "clamp(2.25rem, 4vw, 3.5rem)"
+    },
+    {
+      "semantic": "semantic.type.application.displayRelaxed.lineHeight",
+      "cssVariable": "--type-application-display-relaxed-line-height",
+      "primitive": "primitive.font.lineHeight.applicationDisplayRelaxed",
+      "value": "1.08"
+    },
+    {
+      "semantic": "semantic.motion.duration.color",
+      "cssVariable": "--motion-duration-color",
+      "primitive": "primitive.duration.applicationColor",
+      "value": "400ms"
+    },
+    {
+      "semantic": "semantic.type.application.pathwaySplitDesc.size",
+      "cssVariable": "--type-application-pathway-split-desc-size",
+      "primitive": "primitive.font.size.applicationPathwaySplitDesc",
+      "value": "clamp(1.05rem, 1.35vw, 1.22rem)"
+    },
+    {
+      "semantic": "semantic.type.application.bodyRelaxed.lineHeight",
+      "cssVariable": "--type-application-body-relaxed-line-height",
+      "primitive": "primitive.font.lineHeight.applicationBodyRelaxed",
+      "value": "1.65"
+    },
+    {
+      "semantic": "semantic.space.application.cardComfortableGap",
+      "cssVariable": "--space-application-card-comfortable-gap",
+      "primitive": "primitive.space.applicationCardComfortableGap",
+      "value": "0.85rem"
+    },
+    {
+      "semantic": "semantic.motion.duration.media",
+      "cssVariable": "--motion-duration-media",
+      "primitive": "primitive.duration.applicationMedia",
+      "value": "280ms"
+    },
+    {
+      "semantic": "semantic.motion.duration.feature",
+      "cssVariable": "--motion-duration-feature",
+      "primitive": "primitive.duration.applicationFeature",
+      "value": "380ms"
+    },
+    {
+      "semantic": "semantic.motion.duration.featureDelayed",
+      "cssVariable": "--motion-duration-feature-delayed",
+      "primitive": "primitive.duration.applicationFeatureDelayed",
+      "value": "460ms"
+    },
+    {
+      "semantic": "semantic.motion.duration.staggerShort",
+      "cssVariable": "--motion-duration-stagger-short",
+      "primitive": "primitive.duration.applicationStaggerShort",
+      "value": "180ms"
+    },
+    {
+      "semantic": "semantic.motion.duration.reveal",
+      "cssVariable": "--motion-duration-reveal",
+      "primitive": "primitive.duration.applicationReveal",
+      "value": "600ms"
+    },
+    {
+      "semantic": "semantic.space.application.controlGap",
+      "cssVariable": "--space-application-control-gap",
+      "primitive": "primitive.space.applicationControlGap",
+      "value": "0.6rem"
+    },
+    {
+      "semantic": "semantic.space.application.microInset",
+      "cssVariable": "--space-application-micro-inset",
+      "primitive": "primitive.space.applicationMicroInset",
+      "value": "0.2rem"
+    },
+    {
+      "semantic": "semantic.space.application.labelInset",
+      "cssVariable": "--space-application-label-inset",
+      "primitive": "primitive.space.applicationLabelInset",
+      "value": "0.4rem"
+    },
+    {
+      "semantic": "semantic.space.application.cardDenseGap",
+      "cssVariable": "--space-application-card-dense-gap",
+      "primitive": "primitive.space.applicationCardDenseGap",
+      "value": "0.65rem"
+    },
+    {
+      "semantic": "semantic.font.letterSpacing.applicationLabel",
+      "cssVariable": "--font-letter-spacing-application-label",
+      "primitive": "primitive.font.letterSpacing.applicationLabel",
+      "value": "0.04em"
+    },
+    {
+      "semantic": "semantic.type.application.bodyCompact.lineHeight",
+      "cssVariable": "--type-application-body-compact-line-height",
+      "primitive": "primitive.font.lineHeight.applicationBodyCompact",
+      "value": "1.55"
+    },
+    {
+      "semantic": "semantic.space.application.sectionWideInset",
+      "cssVariable": "--space-application-section-wide-inset",
+      "primitive": "primitive.space.applicationSectionWideInset",
+      "value": "1.75rem"
+    },
+    {
+      "semantic": "semantic.motion.duration.image",
+      "cssVariable": "--motion-duration-image",
+      "primitive": "primitive.duration.applicationImage",
+      "value": "550ms"
+    },
+    {
+      "semantic": "semantic.type.application.captionCompact.size",
+      "cssVariable": "--type-application-caption-compact-size",
+      "primitive": "primitive.font.size.applicationCaptionCompact",
+      "value": "0.8rem"
+    },
+    {
+      "semantic": "semantic.type.application.bentoCardTitle.size",
+      "cssVariable": "--type-application-bento-card-title-size",
+      "primitive": "primitive.font.size.applicationBentoCardTitle",
+      "value": "clamp(1.35rem, 2.2vw, 1.85rem)"
+    },
+    {
+      "semantic": "semantic.font.letterSpacing.applicationBentoCardTitle",
+      "cssVariable": "--font-letter-spacing-application-bento-card-title",
+      "primitive": "primitive.font.letterSpacing.tight",
+      "value": "-0.02em"
+    },
+    {
+      "semantic": "semantic.font.letterSpacing.applicationOverline",
+      "cssVariable": "--font-letter-spacing-application-overline",
+      "primitive": "primitive.font.letterSpacing.applicationOverline",
+      "value": "0.05em"
+    },
+    {
+      "semantic": "semantic.space.application.techspecsBannerPadding",
+      "cssVariable": "--space-application-techspecs-banner-padding",
+      "primitive": "primitive.space.applicationTechspecsBannerPadding",
+      "value": "clamp(1.75rem, 3.5vw, 3rem)"
+    },
+    {
+      "semantic": "semantic.type.application.bodyLead.size",
+      "cssVariable": "--type-application-body-lead-size",
+      "primitive": "primitive.font.size.applicationBodyLead",
+      "value": "1.1rem"
+    },
+    {
+      "semantic": "semantic.type.application.metadata.size",
+      "cssVariable": "--type-application-metadata-size",
+      "primitive": "primitive.font.size.applicationMetadata",
+      "value": "0.85rem"
+    },
+    {
+      "semantic": "semantic.space.application.subpageHeroPadding",
+      "cssVariable": "--space-application-subpage-hero-padding",
+      "primitive": "primitive.space.applicationSubpageHeroPadding",
+      "value": "clamp(3rem, 6vw, 5rem)"
+    },
+    {
+      "semantic": "semantic.space.application.featureRowsGap",
+      "cssVariable": "--space-application-feature-rows-gap",
+      "primitive": "primitive.space.applicationFeatureRowsGap",
+      "value": "clamp(2rem, 4vw, 3.25rem)"
+    },
+    {
+      "semantic": "semantic.space.application.sectionComfortableInset",
+      "cssVariable": "--space-application-section-comfortable-inset",
+      "primitive": "primitive.space.applicationSectionComfortableInset",
+      "value": "1.625rem"
+    },
+    {
+      "semantic": "semantic.space.application.moduleTabsPadding",
+      "cssVariable": "--space-application-module-tabs-padding",
+      "primitive": "primitive.space.applicationModuleTabsPadding",
+      "value": "clamp(1.5rem, 3vw, 2.5rem)"
+    },
+    {
+      "semantic": "semantic.space.application.trialBannerInnerPadding",
+      "cssVariable": "--space-application-trial-banner-inner-padding",
+      "primitive": "primitive.space.applicationTrialBannerInnerPadding",
+      "value": "clamp(1.75rem, 4vw, 3rem)"
+    },
+    {
+      "semantic": "semantic.space.application.sectionWideGap",
+      "cssVariable": "--space-application-section-wide-gap",
+      "primitive": "primitive.space.8",
+      "value": "2rem"
+    },
+    {
+      "semantic": "semantic.space.application.ytBannerPadding",
+      "cssVariable": "--space-application-yt-banner-padding",
+      "primitive": "primitive.space.applicationYtBannerPadding",
+      "value": "clamp(2rem, 4vw, 3rem)"
+    },
+    {
+      "semantic": "semantic.type.application.overline.size",
+      "cssVariable": "--type-application-overline-size",
+      "primitive": "primitive.font.size.applicationOverline",
+      "value": "0.78rem"
+    },
+    {
+      "semantic": "semantic.type.application.ytBannerTitle.size",
+      "cssVariable": "--type-application-yt-banner-title-size",
+      "primitive": "primitive.font.size.applicationYtBannerTitle",
+      "value": "clamp(1.65rem, 3vw, 2.35rem)"
+    },
+    {
+      "semantic": "semantic.type.application.ytBannerDesc.size",
+      "cssVariable": "--type-application-yt-banner-desc-size",
+      "primitive": "primitive.font.size.applicationYtBannerDesc",
+      "value": "clamp(1rem, 1.2vw, 1.125rem)"
+    },
+    {
+      "semantic": "semantic.type.application.bodyEmphasis.size",
+      "cssVariable": "--type-application-body-emphasis-size",
+      "primitive": "primitive.font.size.applicationBodyEmphasis",
+      "value": "1.05rem"
+    },
+    {
+      "semantic": "semantic.motion.duration.detail",
+      "cssVariable": "--motion-duration-detail",
+      "primitive": "primitive.duration.applicationDetail",
+      "value": "250ms"
+    },
+    {
+      "semantic": "semantic.type.application.cardTitle.size",
+      "cssVariable": "--type-application-card-title-size",
+      "primitive": "primitive.font.size.applicationCardTitle",
+      "value": "1.2rem"
+    },
+    {
+      "semantic": "semantic.space.application.playlistPlayerCardBodyPadding",
+      "cssVariable": "--space-application-playlist-player-card-body-padding",
+      "primitive": "primitive.space.applicationPlaylistPlayerCardBodyPadding",
+      "value": "clamp(1.5rem, 3vw, 2.25rem)"
+    },
+    {
+      "semantic": "semantic.type.application.playlistPlayerCardTitle.size",
+      "cssVariable": "--type-application-playlist-player-card-title-size",
+      "primitive": "primitive.font.size.applicationPlaylistPlayerCardTitle",
+      "value": "clamp(1.4rem, 2.2vw, 1.85rem)"
+    },
+    {
+      "semantic": "semantic.type.application.titleRelaxed.lineHeight",
+      "cssVariable": "--type-application-title-relaxed-line-height",
+      "primitive": "primitive.font.lineHeight.applicationTitleRelaxed",
+      "value": "1.35"
+    },
+    {
+      "semantic": "semantic.space.application.cardGap",
+      "cssVariable": "--space-application-card-gap",
+      "primitive": "primitive.space.applicationCardGap",
+      "value": "0.8rem"
+    },
+    {
+      "semantic": "semantic.type.application.smallBodyRelaxed.size",
+      "cssVariable": "--type-application-small-body-relaxed-size",
+      "primitive": "primitive.font.size.applicationSmallBodyRelaxed",
+      "value": "0.975rem"
+    },
+    {
+      "semantic": "semantic.space.application.cardComfortableInset",
+      "cssVariable": "--space-application-card-comfortable-inset",
+      "primitive": "primitive.space.applicationCardComfortableInset",
+      "value": "0.9rem"
+    },
+    {
+      "semantic": "semantic.space.application.panelWideInset",
+      "cssVariable": "--space-application-panel-wide-inset",
+      "primitive": "primitive.space.applicationPanelWideInset",
+      "value": "1.15rem"
+    },
+    {
+      "semantic": "semantic.motion.duration.control",
+      "cssVariable": "--motion-duration-control",
+      "primitive": "primitive.duration.applicationControl",
+      "value": "240ms"
+    },
+    {
+      "semantic": "semantic.motion.duration.responsive",
+      "cssVariable": "--motion-duration-responsive",
+      "primitive": "primitive.duration.applicationResponsive",
+      "value": "220ms"
+    },
+    {
+      "semantic": "semantic.space.application.compactGap",
+      "cssVariable": "--space-application-compact-gap",
+      "primitive": "primitive.space.applicationCompactGap",
+      "value": "0.35rem"
+    },
+    {
+      "semantic": "semantic.space.application.panelComfortableInset",
+      "cssVariable": "--space-application-panel-comfortable-inset",
+      "primitive": "primitive.space.applicationPanelComfortableInset",
+      "value": "1.1rem"
+    },
+    {
+      "semantic": "semantic.motion.duration.panel",
+      "cssVariable": "--motion-duration-panel",
+      "primitive": "primitive.duration.applicationPanel",
+      "value": "260ms"
+    },
+    {
+      "semantic": "semantic.type.application.micro.size",
+      "cssVariable": "--type-application-micro-size",
+      "primitive": "primitive.font.size.applicationMicro",
+      "value": "0.7rem"
+    },
+    {
+      "semantic": "semantic.type.application.bodyIntro.size",
+      "cssVariable": "--type-application-body-intro-size",
+      "primitive": "primitive.font.size.applicationBodyIntro",
+      "value": "1.08rem"
+    },
+    {
+      "semantic": "semantic.type.application.bodyReading.lineHeight",
+      "cssVariable": "--type-application-body-reading-line-height",
+      "primitive": "primitive.font.lineHeight.applicationBodyReading",
+      "value": "1.62"
+    },
+    {
+      "semantic": "semantic.space.application.sectionCompactGap",
+      "cssVariable": "--space-application-section-compact-gap",
+      "primitive": "primitive.space.applicationSectionCompactGap",
+      "value": "1.35rem"
+    },
+    {
+      "semantic": "semantic.motion.duration.showcase",
+      "cssVariable": "--motion-duration-showcase",
+      "primitive": "primitive.duration.applicationShowcase",
+      "value": "520ms"
+    },
+    {
+      "semantic": "semantic.type.application.titleReading.lineHeight",
+      "cssVariable": "--type-application-title-reading-line-height",
+      "primitive": "primitive.font.lineHeight.applicationTitleReading",
+      "value": "1.32"
+    },
+    {
+      "semantic": "semantic.type.application.metadataCompact.size",
+      "cssVariable": "--type-application-metadata-compact-size",
+      "primitive": "primitive.font.size.applicationMetadataCompact",
+      "value": "0.84rem"
+    },
+    {
+      "semantic": "semantic.type.application.captionReading.size",
+      "cssVariable": "--type-application-caption-reading-size",
+      "primitive": "primitive.font.size.applicationCaptionReading",
+      "value": "0.82rem"
+    },
+    {
+      "semantic": "semantic.type.application.smallBodyCompact.size",
+      "cssVariable": "--type-application-small-body-compact-size",
+      "primitive": "primitive.font.size.applicationSmallBodyCompact",
+      "value": "0.9rem"
+    },
+    {
+      "semantic": "semantic.motion.duration.gentle",
+      "cssVariable": "--motion-duration-gentle",
+      "primitive": "primitive.duration.applicationGentle",
+      "value": "320ms"
+    },
+    {
+      "semantic": "semantic.space.application.videoModalPadding",
+      "cssVariable": "--space-application-video-modal-padding",
+      "primitive": "primitive.space.applicationVideoModalPadding",
+      "value": "clamp(1rem, 3vw, 2.5rem)"
+    },
+    {
+      "semantic": "semantic.radius.applicationMediaBadge",
+      "cssVariable": "--radius-application-media-badge",
+      "primitive": "primitive.radius.2",
+      "value": "2px"
+    },
+    {
+      "semantic": "semantic.space.application.detail",
+      "cssVariable": "--space-application-detail",
+      "primitive": "primitive.space.applicationDetail",
+      "value": "0.15rem"
+    },
+    {
+      "semantic": "semantic.type.application.bodyCompact.size",
+      "cssVariable": "--type-application-body-compact-size",
+      "primitive": "primitive.font.size.applicationBodyCompact",
+      "value": "0.98rem"
+    },
+    {
+      "semantic": "semantic.type.application.aboutMetricValue.size",
+      "cssVariable": "--type-application-about-metric-value-size",
+      "primitive": "primitive.font.size.applicationAboutMetricValue",
+      "value": "clamp(2.25rem, 3.8vw, 3.25rem)"
+    },
+    {
+      "semantic": "semantic.type.application.finePrint.size",
+      "cssVariable": "--type-application-fine-print-size",
+      "primitive": "primitive.font.size.applicationFinePrint",
+      "value": "0.76rem"
+    },
+    {
+      "semantic": "semantic.font.letterSpacing.applicationLabelSubtle",
+      "cssVariable": "--font-letter-spacing-application-label-subtle",
+      "primitive": "primitive.font.letterSpacing.applicationLabelSubtle",
+      "value": "0.03em"
+    },
+    {
+      "semantic": "semantic.space.application.aboutStoryGap",
+      "cssVariable": "--space-application-about-story-gap",
+      "primitive": "primitive.space.applicationAboutStoryGap",
+      "value": "clamp(2.5rem, 5vw, 5rem)"
+    },
+    {
+      "semantic": "semantic.type.application.metadataReading.size",
+      "cssVariable": "--type-application-metadata-reading-size",
+      "primitive": "primitive.font.size.applicationMetadataReading",
+      "value": "0.86rem"
+    },
+    {
+      "semantic": "semantic.type.application.aboutStoryLead.size",
+      "cssVariable": "--type-application-about-story-lead-size",
+      "primitive": "primitive.font.size.applicationAboutStoryLead",
+      "value": "clamp(1.12rem, 1.5vw, 1.28rem)"
+    },
+    {
+      "semantic": "semantic.type.application.editorial.lineHeight",
+      "cssVariable": "--type-application-editorial-line-height",
+      "primitive": "primitive.font.lineHeight.applicationEditorial",
+      "value": "1.75"
+    },
+    {
+      "semantic": "semantic.type.application.bodyReading.size",
+      "cssVariable": "--type-application-body-reading-size",
+      "primitive": "primitive.font.size.applicationBodyReading",
+      "value": "1.02rem"
+    },
+    {
+      "semantic": "semantic.type.application.editorialSpacious.lineHeight",
+      "cssVariable": "--type-application-editorial-spacious-line-height",
+      "primitive": "primitive.font.lineHeight.applicationEditorialSpacious",
+      "value": "1.8"
+    },
+    {
+      "semantic": "semantic.space.application.aboutValueItemPadding",
+      "cssVariable": "--space-application-about-value-item-padding",
+      "primitive": "primitive.space.applicationAboutValueItemPadding",
+      "value": "clamp(1.75rem, 3vw, 2.25rem)"
+    },
+    {
+      "semantic": "semantic.font.letterSpacing.applicationTechnicalWide",
+      "cssVariable": "--font-letter-spacing-application-technical-wide",
+      "primitive": "primitive.font.letterSpacing.applicationTechnicalWide",
+      "value": "0.1em"
+    },
+    {
+      "semantic": "semantic.type.application.featureTitle.size",
+      "cssVariable": "--type-application-feature-title-size",
+      "primitive": "primitive.font.size.applicationFeatureTitle",
+      "value": "1.35rem"
+    },
+    {
+      "semantic": "semantic.type.application.bodySpacious.lineHeight",
+      "cssVariable": "--type-application-body-spacious-line-height",
+      "primitive": "primitive.font.lineHeight.applicationBodySpacious",
+      "value": "1.7"
+    },
+    {
+      "semantic": "semantic.space.application.aboutOfficeInfoPadding",
+      "cssVariable": "--space-application-about-office-info-padding",
+      "primitive": "primitive.space.applicationAboutOfficeInfoPadding",
+      "value": "clamp(1.75rem, 3vw, 2.75rem)"
+    },
+    {
+      "semantic": "semantic.motion.duration.quick",
+      "cssVariable": "--motion-duration-quick",
+      "primitive": "primitive.duration.applicationStaggerShort",
+      "value": "180ms"
+    }
+  ],
+  "reverseMigrationNormalizedEqual": true,
+  "beforeNormalizedSha256": "077b9da6354a05f37828495e83ac5674951faad836179353171f44871f32fb7f",
+  "reverseNormalizedSha256": "077b9da6354a05f37828495e83ac5674951faad836179353171f44871f32fb7f",
+  "notes": [
+    "Raw structural zero, percentages, grid ratios and media-query boundaries were not indiscriminately tokenized.",
+    "Existing semantic aliases reused only if all four theme/mode values equal the prior literal.",
+    "Motion durations and animation stagger delay live below semantic.motion.duration for generated reduced-motion collapse.",
+    "Source/cascade evidence only; no browser visual acceptance.",
+    "Normal-motion values/cascade are preserved; reduced-motion users now also receive zero duration for previously raw motion durations/delay. This is an intentional accessibility improvement, not a claim of pixel equality for all preferences."
+  ],
+  "scopeChecks": [
+    {
+      "theme": "aluplan",
+      "mode": "light",
+      "declarationsCompared": 445,
+      "differences": []
+    },
+    {
+      "theme": "aluplan",
+      "mode": "dark",
+      "declarationsCompared": 445,
+      "differences": []
+    },
+    {
+      "theme": "field",
+      "mode": "light",
+      "declarationsCompared": 445,
+      "differences": []
+    },
+    {
+      "theme": "field",
+      "mode": "dark",
+      "declarationsCompared": 445,
+      "differences": []
+    }
+  ],
+  "rawMetricDeclarations": {
+    "scope": "Nonzero metric literals and literal motion durations/easing functions guarded by scripts/build_app_styles.py; structural zero excluded",
+    "before": {
+      "total": 445,
+      "byProperty": {
+        "padding-block": 8,
+        "padding": 77,
+        "gap": 116,
+        "letter-spacing": 24,
+        "padding-top": 3,
+        "font-size": 75,
+        "border-radius": 12,
+        "font-weight": 54,
+        "line-height": 24,
+        "transition": 43,
+        "animation": 5,
+        "padding-bottom": 2,
+        "padding-right": 1,
+        "padding-inline": 1
+      }
+    },
+    "after": {
+      "total": 0,
+      "byProperty": {}
+    }
+  }
+}

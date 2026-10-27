@@ -111,6 +111,29 @@ export function runTokenTests({ build = buildTokens, lint = lintComponentCss, T,
       changed.resolved.aluplan.dark['--site-header-bg'] === base.resolved.aluplan.dark['--site-header-bg'] &&
       changed.resolved.field.light['--site-header-bg'] === base.resolved.field.light['--site-header-bg']) || 'application theme scope leaked';
   });
+  test('application spacing and radius support theme-local overrides', () => {
+    const t = clone();
+    t.themes.field.base.space.application = {
+      ...(t.themes.field.base.space.application || {}),
+      panelInset: { $value: '{primitive.space.8}' }
+    };
+    t.themes.aluplan.base.radius.applicationMediaBadge = { $value: '{primitive.radius.8}' };
+    const changed = run(t);
+    if (changed.errors.length) return changed.errors.join(' | ');
+    return (changed.resolved.field.dark['--space-application-panel-inset'] !== base.resolved.field.dark['--space-application-panel-inset'] &&
+      changed.resolved.aluplan.dark['--space-application-panel-inset'] === base.resolved.aluplan.dark['--space-application-panel-inset'] &&
+      changed.resolved.aluplan.light['--radius-application-media-badge'] !== base.resolved.aluplan.light['--radius-application-media-badge'] &&
+      changed.resolved.field.light['--radius-application-media-badge'] === base.resolved.field.light['--radius-application-media-badge']) || 'metric theme scope leaked';
+  });
+  test('all application motion durations and delays collapse under reduced motion', () => {
+    const css = base.files['tokens/semantic.css'];
+    const reduced = css.slice(css.indexOf('@media (prefers-reduced-motion: reduce)'));
+    for (const key of Object.keys(T.semantic.motion.duration)) {
+      const name = key.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+      if (!reduced.includes('--motion-duration-' + name + ': 0ms;')) return 'missing reduced-motion duration: ' + key;
+    }
+    return true;
+  });
   return { results, passed: results.filter(r => r.pass).length, failed: results.filter(r => !r.pass).length };
 }
 

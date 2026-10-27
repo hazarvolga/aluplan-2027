@@ -22,7 +22,7 @@ Kullanıcı aşağıdaki yol haritasını onayladı ve önce kayda alınıp çal
 | S03 | PDF/DOCX kaynak paritesi | Temsili PDF üretimi kaldırılır; orijinal belgeler kaynak/URL eşlemesi, SHA-256 ve tür kontrolüyle korunur | Tamamlandı |
 | S04 | Microsoft Forms yönlendirmesi | Talep CTA'ları ortak forma bağlı; sahte yerel başarı yok; destek/deneme/özel lisans görevleri karıştırılmaz | Tamamlandı |
 | S05 | İçerik/etkileşim paritesi | Kaynak→veri→render bazında eksik/fazla/değişmiş/yanlış eşleşmiş kayıtlar; hedefli canlı doğrulama | Yerel teknik kontrol tamamlandı; kayıtlı istisnalar ve nihai görsel kabul ayrı |
-| S06 | Token ve bileşen sağlamlaştırma | Sabit görsel kararlar tokenlara taşınır; büyük bileşenler ayrılır; görsel karşılaştırma görünümü korur | Devam ediyor — S06-A/B stil hattı ve renk katmanı tamamlandı |
+| S06 | Token ve bileşen sağlamlaştırma | Sabit görsel kararlar tokenlara taşınır; büyük bileşenler ayrılır; görsel karşılaştırma görünümü korur | Devam ediyor — S06-A/B/C stil, renk ve ilk metrik katmanı tamamlandı |
 | S07 | Yayın öncesi kabul | Çalışan test komutları, typecheck/build, tarayıcı etkileşimleri, schema/performance doğrulaması ve açık riskler | Bekliyor |
 
 S02 ve S03 bağımlıdır: iki mevcut üretici de gerçek belge adlarına temsili PDF yazar. Başlangıç kaydı alınmadan üretici çalıştırma. Tekleştirme sırasında belge yazma güvenliği sağlanmadan yeni üretim komutunu kullanım için serbest bırakma. Her adım dar kapsamlı commit ve devir kaydıyla kapanır; faz geçişinde kullanıcı onayı beklenir. Push/deploy/canlı değişikliği yetkisi verilmedi.
@@ -561,3 +561,16 @@ Kullanıcıdevam onayıyla application.css99hamrenk0'a indirildi.65visualrolü+8
 Üretim application.css içindeki doğrudanHEX/RGB/HSL/HWB/Lab/LCH/OKLab/OKLCH/color()yazımını büyük/küçükharf bağımsız reddeder; negatif testler mevcutçıktının hatahalinde korunmasını doğrular. Overlay/header modeizolasyonu mutationtesti eklendi.66Python+36parite+30token testi, stylescheck, build/TypeScript/188kontrast geçti.110HTTProta200/tekH1/0boşyapısalbölüm;303aday değişmedi. color-migration.json65×4visual+8×4chrome eşliği ve tersCSSnormalizehash eşliğini kayıtlar. Kodincelemesi önemli bulguvermedi; case-insensitiveguardönerisi kapatıldı.
 
 TarayıcıWorkayarında kapalı; yeni görsel/piksel kabulü yok. İçerik/schema/data/TSXdeğişmedi, kaynak2026saltokunur, pazarlamaklasörü kullanılmadı, push/deploy yok. Geçici3001sunucusu kapatıldı. S06devam ediyor: ölçü/boşluk/köşe/tipografi/hareket değerleri ve büyükbileşen ayrımı sıradakiadım; tarayıcıerişimi açıldığında yeni temakatmanı görselkontrolü yapılmalı. S07'yegeçilmedi.
+
+
+## 27.10.2026 — GitHub repo ve workflow konumu
+
+Kullanıcıboşrepo https://github.com/hazarvolga/aluplan-2027 adresini bildirdi. Connectorpublic/defaultmain/size0vegitls-remoteheadsboşsonuç doğruladı. Önceorigin yoktu, yereloriginbuHTTPSadreseeklendi. AGENTSkurallarıyenidenokunup mainüzerindeçalışmayıengelleyen yeniworkflowgereği codex/s06-metrics-tokensbranch'iaçıldı. KullanıcısonraAGENTS'eskihalinegetirdi; yenikurallar kökte DEVOPS MASTER WORKFLOW.md(1131satır)dosyasında. Bu dosyayı sonrakioturumlardaAGENTSilebirlikteoku. Dosya kullanıcıyaait, değiştirilmedi veS06commitinedahiledilmedi; untrackedkorunuyor. AGENTSşuanki46satırlıkhaliHEADileaynı. Push/PR/CI/mergeyapılmadı; canlıyayınzatenyasak. KullanıcıaçıkuzakteslimtalebivermedenyerelbaşarıyıGitHubbaşarısıdiyeanlatma.
+
+## 27.10.2026 — S06-C445metrikdeklarasyonu
+
+445applicationCSSdeklarasyonu semanticmetriklerebağlandı;120yenirol, dört tema/moddanormalharekette445/445eşlik ve0fark. Hedefhammetrik445→0:font-size/weight/line-height/letter-spacing/radius/gap/paddingve transition/animation süre/gecikme/easing. Varolanscalereuseyalnız4kapsamdaeşiolduğunda; fielddeğerlerikorundu. motion.durationaltındakiyenisüre/gecikmelerreducedmotionüretiminde0msolur; buöncedenrawsürelerikapanmayanreducekullanıcılarıiçinkasıtlıiyileştirme, tümpreferencespikseleşliğideğil.
+
+Compositormetrikguard/negatiftestler eklendi.32token testi tema-yerelmetrikoverride ve reducedmotionsüre/gecikme kapanmasınıtesteder.67Python+36parite+32token, stylescheck, typecheck/build/188kontrastgeçti.110yerelrota200/tekH1,0boşyapısalbölüm,303adaydeğişmedi. Kodincelemesibağımsız4scopeçözümüteyitetti, önemlibulguyok. Kanıtmetrics-migration.json/render-after-metrics.jsonvedocs/verification/s06-2026-10-27/README.md. TarayıcıWorkayarlarındakapalı; yenigörsel/etkileşimkabulüyok. İçerik/schema/data/TSXdeğişmedi. Geçici3001sunucusukapatıldı.
+
+S06tamamlanmadı: TSXinlineölçüler, diğerwidth/height/margin/transformtasarımdeğerleri ve büyükbileşenayrımıdevamedecek. S07'yeatlama. Kaynak2026saltokunurkaldı; push/deploy/remoteCIyok. Lint: DS/tokenlintPASS; ESLintkomuturepodayok(N/A). Gitdurumundakullanıcıworkflowdosyasınınuntrackedolmasıbeklenir; workingtreetümüylenettemizdiyeiddiaetme.

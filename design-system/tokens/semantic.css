@@ -9,9 +9,20 @@
   --font-weight-strong: var(--ref-font-weight-600);
   --font-weight-heading: var(--ref-font-weight-700);
   --font-weight-display: var(--ref-font-weight-800);
+  --font-weight-application-hero-metrics-value: var(--ref-font-weight-800); /* @kind other */
+  --font-weight-application-pathway-role-badge: var(--ref-font-weight-700); /* @kind other */
   --font-letter-spacing-heading: var(--ref-font-letter-spacing-snug);
   --font-letter-spacing-display: var(--ref-font-letter-spacing-tight);
   --font-letter-spacing-mono: var(--ref-font-letter-spacing-normal);
+  --font-letter-spacing-application-display-tight: var(--ref-font-letter-spacing-application-display-tight);
+  --font-letter-spacing-application-kicker: var(--ref-font-letter-spacing-application-kicker);
+  --font-letter-spacing-application-display-compressed: var(--ref-font-letter-spacing-application-display-compressed);
+  --font-letter-spacing-application-technical: var(--ref-font-letter-spacing-application-technical);
+  --font-letter-spacing-application-label: var(--ref-font-letter-spacing-application-label);
+  --font-letter-spacing-application-bento-card-title: var(--ref-font-letter-spacing-tight);
+  --font-letter-spacing-application-overline: var(--ref-font-letter-spacing-application-overline);
+  --font-letter-spacing-application-label-subtle: var(--ref-font-letter-spacing-application-label-subtle);
+  --font-letter-spacing-application-technical-wide: var(--ref-font-letter-spacing-application-technical-wide);
   --type-display-size: clamp(var(--ref-font-size-250), 1.6rem + 2.6vw, var(--ref-font-size-350)); /* @kind other */
   --type-display-line-height: var(--ref-font-line-height-110); /* @kind other */
   --type-h1-size: clamp(var(--ref-font-size-200), 1.4rem + 1.8vw, var(--ref-font-size-300)); /* @kind other */
@@ -34,6 +45,45 @@
   --type-caption-line-height: var(--ref-font-line-height-150); /* @kind other */
   --type-mono-size: var(--ref-font-size-75);
   --type-mono-line-height: var(--ref-font-line-height-150); /* @kind other */
+  --type-application-micro-label-size: var(--ref-font-size-application-micro-label);
+  --type-application-hero-metrics-value-size: var(--ref-font-size-application-hero-metrics-value); /* @kind other */
+  --type-application-display-compact-line-height: var(--ref-font-line-height-application-display-compact); /* @kind other */
+  --type-application-micro-compact-size: var(--ref-font-size-application-micro-compact);
+  --type-application-small-body-size: var(--ref-font-size-application-small-body);
+  --type-application-pathway-split-title-size: var(--ref-font-size-application-pathway-split-title); /* @kind other */
+  --type-application-display-relaxed-line-height: var(--ref-font-line-height-application-display-relaxed); /* @kind other */
+  --type-application-pathway-split-desc-size: var(--ref-font-size-application-pathway-split-desc); /* @kind other */
+  --type-application-body-relaxed-line-height: var(--ref-font-line-height-application-body-relaxed); /* @kind other */
+  --type-application-body-compact-line-height: var(--ref-font-line-height-application-body-compact); /* @kind other */
+  --type-application-body-compact-size: var(--ref-font-size-application-body-compact);
+  --type-application-caption-compact-size: var(--ref-font-size-application-caption-compact);
+  --type-application-bento-card-title-size: var(--ref-font-size-application-bento-card-title); /* @kind other */
+  --type-application-body-lead-size: var(--ref-font-size-application-body-lead);
+  --type-application-metadata-size: var(--ref-font-size-application-metadata);
+  --type-application-overline-size: var(--ref-font-size-application-overline);
+  --type-application-yt-banner-title-size: var(--ref-font-size-application-yt-banner-title); /* @kind other */
+  --type-application-yt-banner-desc-size: var(--ref-font-size-application-yt-banner-desc); /* @kind other */
+  --type-application-body-emphasis-size: var(--ref-font-size-application-body-emphasis);
+  --type-application-card-title-size: var(--ref-font-size-application-card-title);
+  --type-application-playlist-player-card-title-size: var(--ref-font-size-application-playlist-player-card-title); /* @kind other */
+  --type-application-title-relaxed-line-height: var(--ref-font-line-height-application-title-relaxed); /* @kind other */
+  --type-application-small-body-relaxed-size: var(--ref-font-size-application-small-body-relaxed);
+  --type-application-micro-size: var(--ref-font-size-application-micro);
+  --type-application-body-intro-size: var(--ref-font-size-application-body-intro);
+  --type-application-body-reading-line-height: var(--ref-font-line-height-application-body-reading); /* @kind other */
+  --type-application-body-reading-size: var(--ref-font-size-application-body-reading);
+  --type-application-title-reading-line-height: var(--ref-font-line-height-application-title-reading); /* @kind other */
+  --type-application-metadata-compact-size: var(--ref-font-size-application-metadata-compact);
+  --type-application-caption-reading-size: var(--ref-font-size-application-caption-reading);
+  --type-application-small-body-compact-size: var(--ref-font-size-application-small-body-compact);
+  --type-application-about-metric-value-size: var(--ref-font-size-application-about-metric-value); /* @kind other */
+  --type-application-fine-print-size: var(--ref-font-size-application-fine-print);
+  --type-application-metadata-reading-size: var(--ref-font-size-application-metadata-reading);
+  --type-application-about-story-lead-size: var(--ref-font-size-application-about-story-lead); /* @kind other */
+  --type-application-editorial-line-height: var(--ref-font-line-height-application-editorial); /* @kind other */
+  --type-application-editorial-spacious-line-height: var(--ref-font-line-height-application-editorial-spacious); /* @kind other */
+  --type-application-feature-title-size: var(--ref-font-size-application-feature-title);
+  --type-application-body-spacious-line-height: var(--ref-font-line-height-application-body-spacious); /* @kind other */
   --space-inset-xs: var(--ref-space-2);
   --space-inset-sm: var(--ref-space-4);
   --space-inset-md: var(--ref-space-6);
@@ -48,6 +98,54 @@
   --space-inline-md: var(--ref-space-3);
   --space-inline-lg: var(--ref-space-5);
   --space-section: var(--ref-space-20);
+  --space-application-dense-gap: var(--ref-space-application-dense-gap);
+  --space-application-hairline: var(--ref-space-application-hairline);
+  --space-application-page-hero-padding: var(--ref-space-application-page-hero-padding); /* @kind other */
+  --space-application-card-compact-gap: var(--ref-space-3);
+  --space-application-control-comfortable-gap: var(--ref-space-application-control-comfortable-gap);
+  --space-application-hero-stage-padding: var(--ref-space-application-hero-stage-padding); /* @kind other */
+  --space-application-hero-stage-padding-end: var(--ref-space-application-hero-stage-padding-end); /* @kind other */
+  --space-application-hero-stage-inner-gap: var(--ref-space-application-hero-stage-inner-gap); /* @kind other */
+  --space-application-hero-stage-grid-gap: var(--ref-space-application-hero-stage-grid-gap); /* @kind other */
+  --space-application-control-dense-gap: var(--ref-space-application-control-dense-gap);
+  --space-application-panel-gap: var(--ref-space-application-panel-gap);
+  --space-application-panel-inset: var(--ref-space-4);
+  --space-application-section-dense-gap: var(--ref-space-5);
+  --space-application-section-gap: var(--ref-space-application-section-gap);
+  --space-application-section-inset: var(--ref-space-6);
+  --space-application-card-inset: var(--ref-space-application-card-inset);
+  --space-application-panel-dense-inset: var(--ref-space-application-panel-dense-inset);
+  --space-application-micro: var(--ref-space-application-micro);
+  --space-application-pathway-split-padding: var(--ref-space-application-pathway-split-padding); /* @kind other */
+  --space-application-label-gap: var(--ref-space-application-label-gap);
+  --space-application-compact-inset: var(--ref-space-application-compact-inset);
+  --space-application-card-compact-inset: var(--ref-space-application-card-compact-inset);
+  --space-application-card-comfortable-gap: var(--ref-space-application-card-comfortable-gap);
+  --space-application-control-gap: var(--ref-space-application-control-gap);
+  --space-application-micro-inset: var(--ref-space-application-micro-inset);
+  --space-application-label-inset: var(--ref-space-application-label-inset);
+  --space-application-card-dense-gap: var(--ref-space-application-card-dense-gap);
+  --space-application-section-wide-inset: var(--ref-space-application-section-wide-inset);
+  --space-application-techspecs-banner-padding: var(--ref-space-application-techspecs-banner-padding); /* @kind other */
+  --space-application-subpage-hero-padding: var(--ref-space-application-subpage-hero-padding); /* @kind other */
+  --space-application-feature-rows-gap: var(--ref-space-application-feature-rows-gap); /* @kind other */
+  --space-application-section-comfortable-inset: var(--ref-space-application-section-comfortable-inset);
+  --space-application-module-tabs-padding: var(--ref-space-application-module-tabs-padding); /* @kind other */
+  --space-application-trial-banner-inner-padding: var(--ref-space-application-trial-banner-inner-padding); /* @kind other */
+  --space-application-section-wide-gap: var(--ref-space-8);
+  --space-application-yt-banner-padding: var(--ref-space-application-yt-banner-padding); /* @kind other */
+  --space-application-playlist-player-card-body-padding: var(--ref-space-application-playlist-player-card-body-padding); /* @kind other */
+  --space-application-card-gap: var(--ref-space-application-card-gap);
+  --space-application-card-comfortable-inset: var(--ref-space-application-card-comfortable-inset);
+  --space-application-panel-wide-inset: var(--ref-space-application-panel-wide-inset);
+  --space-application-compact-gap: var(--ref-space-application-compact-gap);
+  --space-application-panel-comfortable-inset: var(--ref-space-application-panel-comfortable-inset);
+  --space-application-section-compact-gap: var(--ref-space-application-section-compact-gap);
+  --space-application-video-modal-padding: var(--ref-space-application-video-modal-padding); /* @kind other */
+  --space-application-detail: var(--ref-space-application-detail);
+  --space-application-about-story-gap: var(--ref-space-application-about-story-gap); /* @kind other */
+  --space-application-about-value-item-padding: var(--ref-space-application-about-value-item-padding); /* @kind other */
+  --space-application-about-office-info-padding: var(--ref-space-application-about-office-info-padding); /* @kind other */
   --control-height-sm: var(--ref-size-9);
   --control-height-md: var(--ref-size-11);
   --control-height-lg: var(--ref-size-13);
@@ -62,6 +160,8 @@
   --radius-dialog: var(--ref-radius-8);
   --radius-round: var(--ref-radius-full);
   --radius-checkbox-max: var(--ref-radius-4);
+  --radius-application-pill-extended: var(--ref-radius-application-pill-extended);
+  --radius-application-media-badge: var(--ref-radius-2);
   --border-width-default: var(--ref-border-width-1);
   --border-width-strong: var(--ref-border-width-2);
   --elevation-flat: var(--ref-shadow-none);
@@ -78,9 +178,29 @@
   --motion-duration-fast: var(--ref-duration-150); /* @kind other */
   --motion-duration-base: var(--ref-duration-200); /* @kind other */
   --motion-duration-slow: var(--ref-duration-300); /* @kind other */
+  --motion-duration-ambient: var(--ref-duration-application-ambient); /* @kind other */
+  --motion-duration-interactive: var(--ref-duration-application-interactive); /* @kind other */
+  --motion-duration-emphasis: var(--ref-duration-application-emphasis); /* @kind other */
+  --motion-duration-slide: var(--ref-duration-application-slide); /* @kind other */
+  --motion-duration-color: var(--ref-duration-application-color); /* @kind other */
+  --motion-duration-media: var(--ref-duration-application-media); /* @kind other */
+  --motion-duration-feature: var(--ref-duration-application-feature); /* @kind other */
+  --motion-duration-feature-delayed: var(--ref-duration-application-feature-delayed); /* @kind other */
+  --motion-duration-stagger-short: var(--ref-duration-application-stagger-short); /* @kind other */
+  --motion-duration-reveal: var(--ref-duration-application-reveal); /* @kind other */
+  --motion-duration-image: var(--ref-duration-application-image); /* @kind other */
+  --motion-duration-detail: var(--ref-duration-application-detail); /* @kind other */
+  --motion-duration-control: var(--ref-duration-application-control); /* @kind other */
+  --motion-duration-responsive: var(--ref-duration-application-responsive); /* @kind other */
+  --motion-duration-panel: var(--ref-duration-application-panel); /* @kind other */
+  --motion-duration-showcase: var(--ref-duration-application-showcase); /* @kind other */
+  --motion-duration-gentle: var(--ref-duration-application-gentle); /* @kind other */
+  --motion-duration-quick: var(--ref-duration-application-stagger-short); /* @kind other */
   --motion-easing-standard: var(--ref-easing-standard); /* @kind other */
   --motion-easing-enter: var(--ref-easing-decelerate); /* @kind other */
   --motion-easing-exit: var(--ref-easing-accelerate); /* @kind other */
+  --motion-easing-expressive: var(--ref-easing-application-expressive); /* @kind other */
+  --motion-easing-default: var(--ref-easing-application-default); /* @kind other */
   --z-base: var(--ref-z-index-0); /* @kind other */
   --z-sticky: var(--ref-z-index-100); /* @kind other */
   --z-dropdown: var(--ref-z-index-200); /* @kind other */
@@ -249,9 +369,20 @@
   --font-weight-strong: var(--ref-font-weight-600);
   --font-weight-heading: var(--ref-font-weight-700);
   --font-weight-display: var(--ref-font-weight-800);
+  --font-weight-application-hero-metrics-value: var(--ref-font-weight-800); /* @kind other */
+  --font-weight-application-pathway-role-badge: var(--ref-font-weight-700); /* @kind other */
   --font-letter-spacing-heading: var(--ref-font-letter-spacing-snug);
   --font-letter-spacing-display: var(--ref-font-letter-spacing-tight);
   --font-letter-spacing-mono: var(--ref-font-letter-spacing-normal);
+  --font-letter-spacing-application-display-tight: var(--ref-font-letter-spacing-application-display-tight);
+  --font-letter-spacing-application-kicker: var(--ref-font-letter-spacing-application-kicker);
+  --font-letter-spacing-application-display-compressed: var(--ref-font-letter-spacing-application-display-compressed);
+  --font-letter-spacing-application-technical: var(--ref-font-letter-spacing-application-technical);
+  --font-letter-spacing-application-label: var(--ref-font-letter-spacing-application-label);
+  --font-letter-spacing-application-bento-card-title: var(--ref-font-letter-spacing-tight);
+  --font-letter-spacing-application-overline: var(--ref-font-letter-spacing-application-overline);
+  --font-letter-spacing-application-label-subtle: var(--ref-font-letter-spacing-application-label-subtle);
+  --font-letter-spacing-application-technical-wide: var(--ref-font-letter-spacing-application-technical-wide);
   --type-display-size: clamp(var(--ref-font-size-250), 1.6rem + 2.6vw, var(--ref-font-size-350)); /* @kind other */
   --type-display-line-height: var(--ref-font-line-height-110); /* @kind other */
   --type-h1-size: clamp(var(--ref-font-size-200), 1.4rem + 1.8vw, var(--ref-font-size-300)); /* @kind other */
@@ -274,6 +405,45 @@
   --type-caption-line-height: var(--ref-font-line-height-150); /* @kind other */
   --type-mono-size: var(--ref-font-size-75);
   --type-mono-line-height: var(--ref-font-line-height-150); /* @kind other */
+  --type-application-micro-label-size: var(--ref-font-size-application-micro-label);
+  --type-application-hero-metrics-value-size: var(--ref-font-size-application-hero-metrics-value); /* @kind other */
+  --type-application-display-compact-line-height: var(--ref-font-line-height-application-display-compact); /* @kind other */
+  --type-application-micro-compact-size: var(--ref-font-size-application-micro-compact);
+  --type-application-small-body-size: var(--ref-font-size-application-small-body);
+  --type-application-pathway-split-title-size: var(--ref-font-size-application-pathway-split-title); /* @kind other */
+  --type-application-display-relaxed-line-height: var(--ref-font-line-height-application-display-relaxed); /* @kind other */
+  --type-application-pathway-split-desc-size: var(--ref-font-size-application-pathway-split-desc); /* @kind other */
+  --type-application-body-relaxed-line-height: var(--ref-font-line-height-application-body-relaxed); /* @kind other */
+  --type-application-body-compact-line-height: var(--ref-font-line-height-application-body-compact); /* @kind other */
+  --type-application-body-compact-size: var(--ref-font-size-application-body-compact);
+  --type-application-caption-compact-size: var(--ref-font-size-application-caption-compact);
+  --type-application-bento-card-title-size: var(--ref-font-size-application-bento-card-title); /* @kind other */
+  --type-application-body-lead-size: var(--ref-font-size-application-body-lead);
+  --type-application-metadata-size: var(--ref-font-size-application-metadata);
+  --type-application-overline-size: var(--ref-font-size-application-overline);
+  --type-application-yt-banner-title-size: var(--ref-font-size-application-yt-banner-title); /* @kind other */
+  --type-application-yt-banner-desc-size: var(--ref-font-size-application-yt-banner-desc); /* @kind other */
+  --type-application-body-emphasis-size: var(--ref-font-size-application-body-emphasis);
+  --type-application-card-title-size: var(--ref-font-size-application-card-title);
+  --type-application-playlist-player-card-title-size: var(--ref-font-size-application-playlist-player-card-title); /* @kind other */
+  --type-application-title-relaxed-line-height: var(--ref-font-line-height-application-title-relaxed); /* @kind other */
+  --type-application-small-body-relaxed-size: var(--ref-font-size-application-small-body-relaxed);
+  --type-application-micro-size: var(--ref-font-size-application-micro);
+  --type-application-body-intro-size: var(--ref-font-size-application-body-intro);
+  --type-application-body-reading-line-height: var(--ref-font-line-height-application-body-reading); /* @kind other */
+  --type-application-body-reading-size: var(--ref-font-size-application-body-reading);
+  --type-application-title-reading-line-height: var(--ref-font-line-height-application-title-reading); /* @kind other */
+  --type-application-metadata-compact-size: var(--ref-font-size-application-metadata-compact);
+  --type-application-caption-reading-size: var(--ref-font-size-application-caption-reading);
+  --type-application-small-body-compact-size: var(--ref-font-size-application-small-body-compact);
+  --type-application-about-metric-value-size: var(--ref-font-size-application-about-metric-value); /* @kind other */
+  --type-application-fine-print-size: var(--ref-font-size-application-fine-print);
+  --type-application-metadata-reading-size: var(--ref-font-size-application-metadata-reading);
+  --type-application-about-story-lead-size: var(--ref-font-size-application-about-story-lead); /* @kind other */
+  --type-application-editorial-line-height: var(--ref-font-line-height-application-editorial); /* @kind other */
+  --type-application-editorial-spacious-line-height: var(--ref-font-line-height-application-editorial-spacious); /* @kind other */
+  --type-application-feature-title-size: var(--ref-font-size-application-feature-title);
+  --type-application-body-spacious-line-height: var(--ref-font-line-height-application-body-spacious); /* @kind other */
   --space-inset-xs: var(--ref-space-2);
   --space-inset-sm: var(--ref-space-4);
   --space-inset-md: var(--ref-space-6);
@@ -288,6 +458,54 @@
   --space-inline-md: var(--ref-space-3);
   --space-inline-lg: var(--ref-space-5);
   --space-section: var(--ref-space-20);
+  --space-application-dense-gap: var(--ref-space-application-dense-gap);
+  --space-application-hairline: var(--ref-space-application-hairline);
+  --space-application-page-hero-padding: var(--ref-space-application-page-hero-padding); /* @kind other */
+  --space-application-card-compact-gap: var(--ref-space-3);
+  --space-application-control-comfortable-gap: var(--ref-space-application-control-comfortable-gap);
+  --space-application-hero-stage-padding: var(--ref-space-application-hero-stage-padding); /* @kind other */
+  --space-application-hero-stage-padding-end: var(--ref-space-application-hero-stage-padding-end); /* @kind other */
+  --space-application-hero-stage-inner-gap: var(--ref-space-application-hero-stage-inner-gap); /* @kind other */
+  --space-application-hero-stage-grid-gap: var(--ref-space-application-hero-stage-grid-gap); /* @kind other */
+  --space-application-control-dense-gap: var(--ref-space-application-control-dense-gap);
+  --space-application-panel-gap: var(--ref-space-application-panel-gap);
+  --space-application-panel-inset: var(--ref-space-4);
+  --space-application-section-dense-gap: var(--ref-space-5);
+  --space-application-section-gap: var(--ref-space-application-section-gap);
+  --space-application-section-inset: var(--ref-space-6);
+  --space-application-card-inset: var(--ref-space-application-card-inset);
+  --space-application-panel-dense-inset: var(--ref-space-application-panel-dense-inset);
+  --space-application-micro: var(--ref-space-application-micro);
+  --space-application-pathway-split-padding: var(--ref-space-application-pathway-split-padding); /* @kind other */
+  --space-application-label-gap: var(--ref-space-application-label-gap);
+  --space-application-compact-inset: var(--ref-space-application-compact-inset);
+  --space-application-card-compact-inset: var(--ref-space-application-card-compact-inset);
+  --space-application-card-comfortable-gap: var(--ref-space-application-card-comfortable-gap);
+  --space-application-control-gap: var(--ref-space-application-control-gap);
+  --space-application-micro-inset: var(--ref-space-application-micro-inset);
+  --space-application-label-inset: var(--ref-space-application-label-inset);
+  --space-application-card-dense-gap: var(--ref-space-application-card-dense-gap);
+  --space-application-section-wide-inset: var(--ref-space-application-section-wide-inset);
+  --space-application-techspecs-banner-padding: var(--ref-space-application-techspecs-banner-padding); /* @kind other */
+  --space-application-subpage-hero-padding: var(--ref-space-application-subpage-hero-padding); /* @kind other */
+  --space-application-feature-rows-gap: var(--ref-space-application-feature-rows-gap); /* @kind other */
+  --space-application-section-comfortable-inset: var(--ref-space-application-section-comfortable-inset);
+  --space-application-module-tabs-padding: var(--ref-space-application-module-tabs-padding); /* @kind other */
+  --space-application-trial-banner-inner-padding: var(--ref-space-application-trial-banner-inner-padding); /* @kind other */
+  --space-application-section-wide-gap: var(--ref-space-8);
+  --space-application-yt-banner-padding: var(--ref-space-application-yt-banner-padding); /* @kind other */
+  --space-application-playlist-player-card-body-padding: var(--ref-space-application-playlist-player-card-body-padding); /* @kind other */
+  --space-application-card-gap: var(--ref-space-application-card-gap);
+  --space-application-card-comfortable-inset: var(--ref-space-application-card-comfortable-inset);
+  --space-application-panel-wide-inset: var(--ref-space-application-panel-wide-inset);
+  --space-application-compact-gap: var(--ref-space-application-compact-gap);
+  --space-application-panel-comfortable-inset: var(--ref-space-application-panel-comfortable-inset);
+  --space-application-section-compact-gap: var(--ref-space-application-section-compact-gap);
+  --space-application-video-modal-padding: var(--ref-space-application-video-modal-padding); /* @kind other */
+  --space-application-detail: var(--ref-space-application-detail);
+  --space-application-about-story-gap: var(--ref-space-application-about-story-gap); /* @kind other */
+  --space-application-about-value-item-padding: var(--ref-space-application-about-value-item-padding); /* @kind other */
+  --space-application-about-office-info-padding: var(--ref-space-application-about-office-info-padding); /* @kind other */
   --control-height-sm: var(--ref-size-9);
   --control-height-md: var(--ref-size-11);
   --control-height-lg: var(--ref-size-13);
@@ -302,6 +520,8 @@
   --radius-dialog: var(--ref-radius-8);
   --radius-round: var(--ref-radius-full);
   --radius-checkbox-max: var(--ref-radius-4);
+  --radius-application-pill-extended: var(--ref-radius-application-pill-extended);
+  --radius-application-media-badge: var(--ref-radius-2);
   --border-width-default: var(--ref-border-width-1);
   --border-width-strong: var(--ref-border-width-2);
   --elevation-flat: var(--ref-shadow-none);
@@ -318,9 +538,29 @@
   --motion-duration-fast: var(--ref-duration-150); /* @kind other */
   --motion-duration-base: var(--ref-duration-200); /* @kind other */
   --motion-duration-slow: var(--ref-duration-300); /* @kind other */
+  --motion-duration-ambient: var(--ref-duration-application-ambient); /* @kind other */
+  --motion-duration-interactive: var(--ref-duration-application-interactive); /* @kind other */
+  --motion-duration-emphasis: var(--ref-duration-application-emphasis); /* @kind other */
+  --motion-duration-slide: var(--ref-duration-application-slide); /* @kind other */
+  --motion-duration-color: var(--ref-duration-application-color); /* @kind other */
+  --motion-duration-media: var(--ref-duration-application-media); /* @kind other */
+  --motion-duration-feature: var(--ref-duration-application-feature); /* @kind other */
+  --motion-duration-feature-delayed: var(--ref-duration-application-feature-delayed); /* @kind other */
+  --motion-duration-stagger-short: var(--ref-duration-application-stagger-short); /* @kind other */
+  --motion-duration-reveal: var(--ref-duration-application-reveal); /* @kind other */
+  --motion-duration-image: var(--ref-duration-application-image); /* @kind other */
+  --motion-duration-detail: var(--ref-duration-application-detail); /* @kind other */
+  --motion-duration-control: var(--ref-duration-application-control); /* @kind other */
+  --motion-duration-responsive: var(--ref-duration-application-responsive); /* @kind other */
+  --motion-duration-panel: var(--ref-duration-application-panel); /* @kind other */
+  --motion-duration-showcase: var(--ref-duration-application-showcase); /* @kind other */
+  --motion-duration-gentle: var(--ref-duration-application-gentle); /* @kind other */
+  --motion-duration-quick: var(--ref-duration-application-stagger-short); /* @kind other */
   --motion-easing-standard: var(--ref-easing-standard); /* @kind other */
   --motion-easing-enter: var(--ref-easing-decelerate); /* @kind other */
   --motion-easing-exit: var(--ref-easing-accelerate); /* @kind other */
+  --motion-easing-expressive: var(--ref-easing-application-expressive); /* @kind other */
+  --motion-easing-default: var(--ref-easing-application-default); /* @kind other */
   --z-base: var(--ref-z-index-0); /* @kind other */
   --z-sticky: var(--ref-z-index-100); /* @kind other */
   --z-dropdown: var(--ref-z-index-200); /* @kind other */
@@ -625,9 +865,20 @@
   --font-weight-strong: var(--ref-font-weight-600);
   --font-weight-heading: var(--ref-font-weight-600);
   --font-weight-display: var(--ref-font-weight-700);
+  --font-weight-application-hero-metrics-value: var(--ref-font-weight-800); /* @kind other */
+  --font-weight-application-pathway-role-badge: var(--ref-font-weight-700); /* @kind other */
   --font-letter-spacing-heading: var(--ref-font-letter-spacing-normal);
   --font-letter-spacing-display: var(--ref-font-letter-spacing-snug);
   --font-letter-spacing-mono: var(--ref-font-letter-spacing-normal);
+  --font-letter-spacing-application-display-tight: var(--ref-font-letter-spacing-application-display-tight);
+  --font-letter-spacing-application-kicker: var(--ref-font-letter-spacing-application-kicker);
+  --font-letter-spacing-application-display-compressed: var(--ref-font-letter-spacing-application-display-compressed);
+  --font-letter-spacing-application-technical: var(--ref-font-letter-spacing-application-technical);
+  --font-letter-spacing-application-label: var(--ref-font-letter-spacing-application-label);
+  --font-letter-spacing-application-bento-card-title: var(--ref-font-letter-spacing-tight);
+  --font-letter-spacing-application-overline: var(--ref-font-letter-spacing-application-overline);
+  --font-letter-spacing-application-label-subtle: var(--ref-font-letter-spacing-application-label-subtle);
+  --font-letter-spacing-application-technical-wide: var(--ref-font-letter-spacing-application-technical-wide);
   --type-display-size: clamp(var(--ref-font-size-250), 1.6rem + 2.6vw, var(--ref-font-size-350)); /* @kind other */
   --type-display-line-height: var(--ref-font-line-height-110); /* @kind other */
   --type-h1-size: clamp(var(--ref-font-size-200), 1.4rem + 1.8vw, var(--ref-font-size-300)); /* @kind other */
@@ -650,6 +901,45 @@
   --type-caption-line-height: var(--ref-font-line-height-150); /* @kind other */
   --type-mono-size: var(--ref-font-size-75);
   --type-mono-line-height: var(--ref-font-line-height-150); /* @kind other */
+  --type-application-micro-label-size: var(--ref-font-size-application-micro-label);
+  --type-application-hero-metrics-value-size: var(--ref-font-size-application-hero-metrics-value); /* @kind other */
+  --type-application-display-compact-line-height: var(--ref-font-line-height-application-display-compact); /* @kind other */
+  --type-application-micro-compact-size: var(--ref-font-size-application-micro-compact);
+  --type-application-small-body-size: var(--ref-font-size-application-small-body);
+  --type-application-pathway-split-title-size: var(--ref-font-size-application-pathway-split-title); /* @kind other */
+  --type-application-display-relaxed-line-height: var(--ref-font-line-height-application-display-relaxed); /* @kind other */
+  --type-application-pathway-split-desc-size: var(--ref-font-size-application-pathway-split-desc); /* @kind other */
+  --type-application-body-relaxed-line-height: var(--ref-font-line-height-application-body-relaxed); /* @kind other */
+  --type-application-body-compact-line-height: var(--ref-font-line-height-application-body-compact); /* @kind other */
+  --type-application-body-compact-size: var(--ref-font-size-application-body-compact);
+  --type-application-caption-compact-size: var(--ref-font-size-application-caption-compact);
+  --type-application-bento-card-title-size: var(--ref-font-size-application-bento-card-title); /* @kind other */
+  --type-application-body-lead-size: var(--ref-font-size-application-body-lead);
+  --type-application-metadata-size: var(--ref-font-size-application-metadata);
+  --type-application-overline-size: var(--ref-font-size-application-overline);
+  --type-application-yt-banner-title-size: var(--ref-font-size-application-yt-banner-title); /* @kind other */
+  --type-application-yt-banner-desc-size: var(--ref-font-size-application-yt-banner-desc); /* @kind other */
+  --type-application-body-emphasis-size: var(--ref-font-size-application-body-emphasis);
+  --type-application-card-title-size: var(--ref-font-size-application-card-title);
+  --type-application-playlist-player-card-title-size: var(--ref-font-size-application-playlist-player-card-title); /* @kind other */
+  --type-application-title-relaxed-line-height: var(--ref-font-line-height-application-title-relaxed); /* @kind other */
+  --type-application-small-body-relaxed-size: var(--ref-font-size-application-small-body-relaxed);
+  --type-application-micro-size: var(--ref-font-size-application-micro);
+  --type-application-body-intro-size: var(--ref-font-size-application-body-intro);
+  --type-application-body-reading-line-height: var(--ref-font-line-height-application-body-reading); /* @kind other */
+  --type-application-body-reading-size: var(--ref-font-size-application-body-reading);
+  --type-application-title-reading-line-height: var(--ref-font-line-height-application-title-reading); /* @kind other */
+  --type-application-metadata-compact-size: var(--ref-font-size-application-metadata-compact);
+  --type-application-caption-reading-size: var(--ref-font-size-application-caption-reading);
+  --type-application-small-body-compact-size: var(--ref-font-size-application-small-body-compact);
+  --type-application-about-metric-value-size: var(--ref-font-size-application-about-metric-value); /* @kind other */
+  --type-application-fine-print-size: var(--ref-font-size-application-fine-print);
+  --type-application-metadata-reading-size: var(--ref-font-size-application-metadata-reading);
+  --type-application-about-story-lead-size: var(--ref-font-size-application-about-story-lead); /* @kind other */
+  --type-application-editorial-line-height: var(--ref-font-line-height-application-editorial); /* @kind other */
+  --type-application-editorial-spacious-line-height: var(--ref-font-line-height-application-editorial-spacious); /* @kind other */
+  --type-application-feature-title-size: var(--ref-font-size-application-feature-title);
+  --type-application-body-spacious-line-height: var(--ref-font-line-height-application-body-spacious); /* @kind other */
   --space-inset-xs: var(--ref-space-1);
   --space-inset-sm: var(--ref-space-2);
   --space-inset-md: var(--ref-space-4);
@@ -664,6 +954,54 @@
   --space-inline-md: var(--ref-space-2);
   --space-inline-lg: var(--ref-space-4);
   --space-section: var(--ref-space-16);
+  --space-application-dense-gap: var(--ref-space-application-dense-gap);
+  --space-application-hairline: var(--ref-space-application-hairline);
+  --space-application-page-hero-padding: var(--ref-space-application-page-hero-padding); /* @kind other */
+  --space-application-card-compact-gap: var(--ref-space-3);
+  --space-application-control-comfortable-gap: var(--ref-space-application-control-comfortable-gap);
+  --space-application-hero-stage-padding: var(--ref-space-application-hero-stage-padding); /* @kind other */
+  --space-application-hero-stage-padding-end: var(--ref-space-application-hero-stage-padding-end); /* @kind other */
+  --space-application-hero-stage-inner-gap: var(--ref-space-application-hero-stage-inner-gap); /* @kind other */
+  --space-application-hero-stage-grid-gap: var(--ref-space-application-hero-stage-grid-gap); /* @kind other */
+  --space-application-control-dense-gap: var(--ref-space-application-control-dense-gap);
+  --space-application-panel-gap: var(--ref-space-application-panel-gap);
+  --space-application-panel-inset: var(--ref-space-4);
+  --space-application-section-dense-gap: var(--ref-space-5);
+  --space-application-section-gap: var(--ref-space-application-section-gap);
+  --space-application-section-inset: var(--ref-space-6);
+  --space-application-card-inset: var(--ref-space-application-card-inset);
+  --space-application-panel-dense-inset: var(--ref-space-application-panel-dense-inset);
+  --space-application-micro: var(--ref-space-application-micro);
+  --space-application-pathway-split-padding: var(--ref-space-application-pathway-split-padding); /* @kind other */
+  --space-application-label-gap: var(--ref-space-application-label-gap);
+  --space-application-compact-inset: var(--ref-space-application-compact-inset);
+  --space-application-card-compact-inset: var(--ref-space-application-card-compact-inset);
+  --space-application-card-comfortable-gap: var(--ref-space-application-card-comfortable-gap);
+  --space-application-control-gap: var(--ref-space-application-control-gap);
+  --space-application-micro-inset: var(--ref-space-application-micro-inset);
+  --space-application-label-inset: var(--ref-space-application-label-inset);
+  --space-application-card-dense-gap: var(--ref-space-application-card-dense-gap);
+  --space-application-section-wide-inset: var(--ref-space-application-section-wide-inset);
+  --space-application-techspecs-banner-padding: var(--ref-space-application-techspecs-banner-padding); /* @kind other */
+  --space-application-subpage-hero-padding: var(--ref-space-application-subpage-hero-padding); /* @kind other */
+  --space-application-feature-rows-gap: var(--ref-space-application-feature-rows-gap); /* @kind other */
+  --space-application-section-comfortable-inset: var(--ref-space-application-section-comfortable-inset);
+  --space-application-module-tabs-padding: var(--ref-space-application-module-tabs-padding); /* @kind other */
+  --space-application-trial-banner-inner-padding: var(--ref-space-application-trial-banner-inner-padding); /* @kind other */
+  --space-application-section-wide-gap: var(--ref-space-8);
+  --space-application-yt-banner-padding: var(--ref-space-application-yt-banner-padding); /* @kind other */
+  --space-application-playlist-player-card-body-padding: var(--ref-space-application-playlist-player-card-body-padding); /* @kind other */
+  --space-application-card-gap: var(--ref-space-application-card-gap);
+  --space-application-card-comfortable-inset: var(--ref-space-application-card-comfortable-inset);
+  --space-application-panel-wide-inset: var(--ref-space-application-panel-wide-inset);
+  --space-application-compact-gap: var(--ref-space-application-compact-gap);
+  --space-application-panel-comfortable-inset: var(--ref-space-application-panel-comfortable-inset);
+  --space-application-section-compact-gap: var(--ref-space-application-section-compact-gap);
+  --space-application-video-modal-padding: var(--ref-space-application-video-modal-padding); /* @kind other */
+  --space-application-detail: var(--ref-space-application-detail);
+  --space-application-about-story-gap: var(--ref-space-application-about-story-gap); /* @kind other */
+  --space-application-about-value-item-padding: var(--ref-space-application-about-value-item-padding); /* @kind other */
+  --space-application-about-office-info-padding: var(--ref-space-application-about-office-info-padding); /* @kind other */
   --control-height-sm: var(--ref-size-8);
   --control-height-md: var(--ref-size-10);
   --control-height-lg: var(--ref-size-12);
@@ -678,6 +1016,8 @@
   --radius-dialog: var(--ref-radius-20);
   --radius-round: var(--ref-radius-full);
   --radius-checkbox-max: var(--ref-radius-4);
+  --radius-application-pill-extended: var(--ref-radius-application-pill-extended);
+  --radius-application-media-badge: var(--ref-radius-2);
   --border-width-default: var(--ref-border-width-1);
   --border-width-strong: var(--ref-border-width-2);
   --elevation-flat: var(--ref-shadow-none);
@@ -694,9 +1034,29 @@
   --motion-duration-fast: var(--ref-duration-150); /* @kind other */
   --motion-duration-base: var(--ref-duration-200); /* @kind other */
   --motion-duration-slow: var(--ref-duration-300); /* @kind other */
+  --motion-duration-ambient: var(--ref-duration-application-ambient); /* @kind other */
+  --motion-duration-interactive: var(--ref-duration-application-interactive); /* @kind other */
+  --motion-duration-emphasis: var(--ref-duration-application-emphasis); /* @kind other */
+  --motion-duration-slide: var(--ref-duration-application-slide); /* @kind other */
+  --motion-duration-color: var(--ref-duration-application-color); /* @kind other */
+  --motion-duration-media: var(--ref-duration-application-media); /* @kind other */
+  --motion-duration-feature: var(--ref-duration-application-feature); /* @kind other */
+  --motion-duration-feature-delayed: var(--ref-duration-application-feature-delayed); /* @kind other */
+  --motion-duration-stagger-short: var(--ref-duration-application-stagger-short); /* @kind other */
+  --motion-duration-reveal: var(--ref-duration-application-reveal); /* @kind other */
+  --motion-duration-image: var(--ref-duration-application-image); /* @kind other */
+  --motion-duration-detail: var(--ref-duration-application-detail); /* @kind other */
+  --motion-duration-control: var(--ref-duration-application-control); /* @kind other */
+  --motion-duration-responsive: var(--ref-duration-application-responsive); /* @kind other */
+  --motion-duration-panel: var(--ref-duration-application-panel); /* @kind other */
+  --motion-duration-showcase: var(--ref-duration-application-showcase); /* @kind other */
+  --motion-duration-gentle: var(--ref-duration-application-gentle); /* @kind other */
+  --motion-duration-quick: var(--ref-duration-application-stagger-short); /* @kind other */
   --motion-easing-standard: var(--ref-easing-standard); /* @kind other */
   --motion-easing-enter: var(--ref-easing-decelerate); /* @kind other */
   --motion-easing-exit: var(--ref-easing-accelerate); /* @kind other */
+  --motion-easing-expressive: var(--ref-easing-application-expressive); /* @kind other */
+  --motion-easing-default: var(--ref-easing-application-default); /* @kind other */
   --z-base: var(--ref-z-index-0); /* @kind other */
   --z-sticky: var(--ref-z-index-100); /* @kind other */
   --z-dropdown: var(--ref-z-index-200); /* @kind other */
@@ -998,5 +1358,23 @@
     --motion-duration-fast: 0ms; /* @kind other */
     --motion-duration-base: 0ms; /* @kind other */
     --motion-duration-slow: 0ms; /* @kind other */
+    --motion-duration-ambient: 0ms; /* @kind other */
+    --motion-duration-interactive: 0ms; /* @kind other */
+    --motion-duration-emphasis: 0ms; /* @kind other */
+    --motion-duration-slide: 0ms; /* @kind other */
+    --motion-duration-color: 0ms; /* @kind other */
+    --motion-duration-media: 0ms; /* @kind other */
+    --motion-duration-feature: 0ms; /* @kind other */
+    --motion-duration-feature-delayed: 0ms; /* @kind other */
+    --motion-duration-stagger-short: 0ms; /* @kind other */
+    --motion-duration-reveal: 0ms; /* @kind other */
+    --motion-duration-image: 0ms; /* @kind other */
+    --motion-duration-detail: 0ms; /* @kind other */
+    --motion-duration-control: 0ms; /* @kind other */
+    --motion-duration-responsive: 0ms; /* @kind other */
+    --motion-duration-panel: 0ms; /* @kind other */
+    --motion-duration-showcase: 0ms; /* @kind other */
+    --motion-duration-gentle: 0ms; /* @kind other */
+    --motion-duration-quick: 0ms; /* @kind other */
   }
 }

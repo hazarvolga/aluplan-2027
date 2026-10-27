@@ -97,3 +97,19 @@ class AppStylesTests(unittest.TestCase):
                 app.write_text('.card {background:' + raw + '}')
                 with self.subTest(raw=raw), self.assertRaises(ValueError):
                     styles.sync_styles(root)
+
+    def test_application_design_metrics_must_use_tokens(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            self.fixture(root)
+            app = root / 'src/styles/application.css'
+            app.write_text('.card {padding:0;gap:var(--space-stack-sm);font-size:var(--type-body-size)}')
+            styles.sync_styles(root)
+            before = (root / styles.OUTPUT).read_bytes()
+            for declaration in ['font-size:1rem', 'font-weight:700', 'line-height:1.5',
+                                'letter-spacing:.02em', 'border-radius:4px', 'gap:clamp(1rem,2vw,3rem)',
+                                'padding:0 1rem', 'transition:opacity 200ms ease']:
+                app.write_text('.card {' + declaration + ';}')
+                with self.subTest(declaration=declaration), self.assertRaisesRegex(ValueError, 'Raw application metric'):
+                    styles.sync_styles(root)
+                self.assertEqual((root / styles.OUTPUT).read_bytes(), before)

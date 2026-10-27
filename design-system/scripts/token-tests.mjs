@@ -192,6 +192,8 @@ export function runTokenTests({ build = buildTokens, lint = lintComponentCss, T,
   test('application inset and sticky-offset tokens preserve their original positions', () => {
     const expected = {
       '--space-application-media-control-inset': '0.65rem',
+      '--space-application-icon-optical-offset': '0.2rem',
+      '--space-application-small-optical-offset': '0.15rem',
       '--space-application-playlist-sticky-offset': '5.5rem',
       '--space-application-references-sticky-offset': '4.5rem',
       '--space-application-story-sticky-offset': '6.5rem',

@@ -248,6 +248,8 @@
   --ref-space-application-panel-dense-inset: 0.95rem;
   --ref-space-application-micro: 0.1rem;
   --ref-space-application-media-control-inset: 0.65rem;
+  --ref-space-application-icon-optical-offset: 0.2rem;
+  --ref-space-application-small-optical-offset: 0.15rem;
   --ref-space-application-playlist-sticky-offset: 5.5rem;
   --ref-space-application-references-sticky-offset: 4.5rem;
   --ref-space-application-story-sticky-offset: 6.5rem;

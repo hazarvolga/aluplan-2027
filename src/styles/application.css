@@ -1377,7 +1377,7 @@ button.alu-role[aria-checked="true"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--space-application-jsx-tight);
 }
 .alu-product-card__box-icon {
   display: inline-flex;
@@ -1552,7 +1552,7 @@ button.alu-role[aria-checked="true"] {
   color: var(--visual-trial-text-secondary);
 }
 .alu-bento-card__cta {
-  margin-top: 0.5rem;
+  margin-top: var(--space-application-jsx-regular);
   display: inline-flex;
   align-items: center;
   gap: var(--space-application-label-inset);
@@ -2052,7 +2052,7 @@ button.alu-role[aria-checked="true"] {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 1.25rem;
+  margin-bottom: var(--space-application-jsx-section-wide);
 }
 .alu-yt-card__icon {
   display: inline-flex;
@@ -2080,7 +2080,7 @@ button.alu-role[aria-checked="true"] {
   color: var(--visual-youtube-count-text);
 }
 .alu-yt-card__title {
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 var(--space-application-jsx-regular) 0;
   padding-right: var(--space-application-section-wide-gap);
   font-family: var(--font-heading);
   font-size: var(--type-application-card-title-size);
@@ -2093,7 +2093,7 @@ button.alu-role[aria-checked="true"] {
   color: var(--visual-youtube-accent);
 }
 .alu-yt-card__desc {
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 var(--space-application-jsx-section-inset) 0;
   font-size: var(--type-body-sm-size);
   line-height: var(--type-application-body-compact-line-height);
   color: var(--text-secondary);
@@ -2171,7 +2171,7 @@ button.alu-role[aria-checked="true"] {
 .alu-playlist-player-card__icon {
   color: var(--accent-fg);
   flex-shrink: 0;
-  margin-top: 0.2rem;
+  margin-top: var(--space-application-icon-optical-offset);
 }
 
 .alu-playlist-sidebar {
@@ -2358,7 +2358,7 @@ button.alu-role[aria-checked="true"] {
   display: grid;
   place-items: center;
   flex-shrink: 0;
-  margin-top: 0.15rem;
+  margin-top: var(--space-application-small-optical-offset);
 }
 .alu-intro-split__media {
   width: 100%;
@@ -2695,7 +2695,7 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-media-card__bullets {
   list-style: none;
-  margin: 0.25rem 0 0 0;
+  margin: var(--space-application-jsx-tight) 0 0 0;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -2712,7 +2712,7 @@ button.alu-role[aria-checked="true"] {
 .alu-media-card__bullets li svg {
   color: var(--accent-fg);
   flex-shrink: 0;
-  margin-top: 0.15rem;
+  margin-top: var(--space-application-small-optical-offset);
 }
 .alu-media-card__footer {
   margin-top: auto;
@@ -3001,7 +3001,7 @@ button.alu-role[aria-checked="true"] {
   gap: var(--space-application-card-compact-gap);
 }
 .alu-faq-item__answer p {
-  margin: 0.75rem 0 0 0;
+  margin: var(--space-application-jsx-comfortable) 0 0 0;
   font-size: var(--type-application-small-body-size);
   line-height: var(--type-application-body-relaxed-line-height);
   color: var(--text-secondary);
@@ -3426,7 +3426,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 
 .alu-faq-table-wrap {
   overflow-x: auto;
-  margin-top: 0.75rem;
+  margin-top: var(--space-application-jsx-comfortable);
   border: var(--border-width-default) solid var(--border-default);
   background: var(--surface-raised);
 }
@@ -3470,7 +3470,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 }
 
 .alu-faq-note {
-  margin: 0.75rem 0 0 0;
+  margin: var(--space-application-jsx-comfortable) 0 0 0;
   padding: var(--space-application-card-compact-gap) var(--space-application-panel-inset);
   background: var(--accent-subtle);
   border-left: var(--border-width-accent) solid var(--accent-primary);
@@ -3545,7 +3545,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 }
 
 .alu-about-quote {
-  margin: 0.25rem 0 0 0;
+  margin: var(--space-application-jsx-tight) 0 0 0;
   padding: var(--space-stack-xs) 0 var(--space-stack-xs) var(--space-application-section-dense-gap);
   border-left: var(--border-width-accent) solid var(--accent-primary);
   font-family: var(--font-display);
@@ -3556,7 +3556,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 }
 
 .alu-about-chronicle {
-  margin: 0.75rem 0 0 0;
+  margin: var(--space-application-jsx-comfortable) 0 0 0;
   display: flex;
   flex-direction: column;
   border-top: var(--border-width-default) solid var(--border-default);
@@ -3651,7 +3651,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--space-application-jsx-tight);
 }
 
 .alu-about-value-item__roman {

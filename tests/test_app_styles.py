@@ -154,3 +154,17 @@ class AppStylesTests(unittest.TestCase):
                 self.assertEqual((root / styles.OUTPUT).read_bytes(), before)
             app.write_text('.alu-skip-link {left:-9999px}')
             self.assertTrue(styles.sync_styles(root))
+
+    def test_application_margins_must_use_tokens(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            self.fixture(root)
+            app = root / 'src/styles/application.css'
+            app.write_text('.card {margin:0 auto;margin-top:var(--space-application-jsx-tight);margin-left:10%}')
+            styles.sync_styles(root)
+            before = (root / styles.OUTPUT).read_bytes()
+            for declaration in ['margin:0 0 0.75rem 0', 'margin-top:1rem', 'margin-inline-start:-4px']:
+                app.write_text('.card {' + declaration + '}')
+                with self.subTest(declaration=declaration), self.assertRaisesRegex(ValueError, 'Raw application metric'):
+                    styles.sync_styles(root)
+                self.assertEqual((root / styles.OUTPUT).read_bytes(), before)

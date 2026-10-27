@@ -147,6 +147,8 @@
   --space-application-about-story-gap: var(--ref-space-application-about-story-gap); /* @kind other */
   --space-application-about-value-item-padding: var(--ref-space-application-about-value-item-padding); /* @kind other */
   --space-application-about-office-info-padding: var(--ref-space-application-about-office-info-padding); /* @kind other */
+  --space-application-icon-optical-offset: var(--ref-space-application-icon-optical-offset);
+  --space-application-small-optical-offset: var(--ref-space-application-small-optical-offset);
   --space-application-media-control-inset: var(--ref-space-application-media-control-inset);
   --space-application-playlist-sticky-offset: var(--ref-space-application-playlist-sticky-offset);
   --space-application-references-sticky-offset: var(--ref-space-application-references-sticky-offset);
@@ -538,6 +540,8 @@
   --space-application-about-story-gap: var(--ref-space-application-about-story-gap); /* @kind other */
   --space-application-about-value-item-padding: var(--ref-space-application-about-value-item-padding); /* @kind other */
   --space-application-about-office-info-padding: var(--ref-space-application-about-office-info-padding); /* @kind other */
+  --space-application-icon-optical-offset: var(--ref-space-application-icon-optical-offset);
+  --space-application-small-optical-offset: var(--ref-space-application-small-optical-offset);
   --space-application-media-control-inset: var(--ref-space-application-media-control-inset);
   --space-application-playlist-sticky-offset: var(--ref-space-application-playlist-sticky-offset);
   --space-application-references-sticky-offset: var(--ref-space-application-references-sticky-offset);
@@ -1065,6 +1069,8 @@
   --space-application-about-story-gap: var(--ref-space-application-about-story-gap); /* @kind other */
   --space-application-about-value-item-padding: var(--ref-space-application-about-value-item-padding); /* @kind other */
   --space-application-about-office-info-padding: var(--ref-space-application-about-office-info-padding); /* @kind other */
+  --space-application-icon-optical-offset: var(--ref-space-application-icon-optical-offset);
+  --space-application-small-optical-offset: var(--ref-space-application-small-optical-offset);
   --space-application-media-control-inset: var(--ref-space-application-media-control-inset);
   --space-application-playlist-sticky-offset: var(--ref-space-application-playlist-sticky-offset);
   --space-application-references-sticky-offset: var(--ref-space-application-references-sticky-offset);

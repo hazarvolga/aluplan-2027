@@ -1,0 +1,7 @@
+{
+  "baselineCommit": "63f899bad1405fd960d3f8f141700cf90a78d824",
+  "normalizedCssEqualExceptDeclaredRoleTokensAndEquivalentFallbacks": true,
+  "baselineSha256": "257e12e8a610dcb46db29133c47d29ffb1695c152beea4ca4b282d542e2c9e0f",
+  "reverseMigratedSha256": "257e12e8a610dcb46db29133c47d29ffb1695c152beea4ca4b282d542e2c9e0f",
+  "excluded": "Comments/whitespace; added role declarations removed and fallback rolevar reversed to originalblue. This is source/cascade evidence, not browser screenshot acceptance."
+}

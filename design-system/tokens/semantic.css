@@ -162,6 +162,9 @@
   --status-danger-border: var(--ref-color-red-700);
   --focus-ring: var(--ref-color-blueprint-600);
   --focus-ring-on-brand: var(--ref-color-blueprint-400);
+  --role-architect: var(--ref-color-role-architect);
+  --role-engineer: var(--ref-color-role-engineer);
+  --role-fabricator: var(--ref-color-role-fabricator);
   color-scheme: light;
 }
 [data-theme="aluplan"]{
@@ -328,6 +331,9 @@
   --status-danger-border: var(--ref-color-red-700);
   --focus-ring: var(--ref-color-blueprint-600);
   --focus-ring-on-brand: var(--ref-color-blueprint-400);
+  --role-architect: var(--ref-color-role-architect);
+  --role-engineer: var(--ref-color-role-engineer);
+  --role-fabricator: var(--ref-color-role-fabricator);
   color-scheme: light;
 }
 [data-theme="aluplan"][data-mode="dark"]{
@@ -386,6 +392,9 @@
   --status-danger-border: var(--ref-color-red-300);
   --focus-ring: var(--ref-color-blueprint-400);
   --focus-ring-on-brand: var(--ref-color-blueprint-400);
+  --role-architect: var(--ref-color-role-architect);
+  --role-engineer: var(--ref-color-role-engineer);
+  --role-fabricator: var(--ref-color-role-fabricator);
   color-scheme: dark;
 }
 [data-theme="field"]{
@@ -552,6 +561,9 @@
   --status-danger-border: var(--ref-color-red-700);
   --focus-ring: var(--ref-color-rust-700);
   --focus-ring-on-brand: var(--ref-color-rust-300);
+  --role-architect: var(--ref-color-role-architect);
+  --role-engineer: var(--ref-color-role-engineer);
+  --role-fabricator: var(--ref-color-role-fabricator);
   color-scheme: light;
 }
 [data-theme="field"][data-mode="dark"]{
@@ -610,6 +622,9 @@
   --status-danger-border: var(--ref-color-red-300);
   --focus-ring: var(--ref-color-rust-300);
   --focus-ring-on-brand: var(--ref-color-rust-300);
+  --role-architect: var(--ref-color-role-architect);
+  --role-engineer: var(--ref-color-role-engineer);
+  --role-fabricator: var(--ref-color-role-fabricator);
   color-scheme: dark;
 }
 /* Runtime: reduced motion collapses all durations. */

@@ -1,0 +1,7 @@
+{
+  "baselineCommit": "63f899bad1405fd960d3f8f141700cf90a78d824",
+  "workflowJsxEqualIgnoringWhitespaceAndCallbackRename": true,
+  "sourceLinesBefore": 2972,
+  "sourceLinesAfter": 2738,
+  "limitations": "Parent owns video/image state; workflow owns selection state after extraction. Browser testing unavailable this turn."
+}

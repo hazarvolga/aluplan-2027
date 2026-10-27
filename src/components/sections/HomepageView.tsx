@@ -77,9 +77,9 @@ const ROLE_ICONS: Record<string, AluIconName> = {
 };
 
 const ROLE_ACCENTS: Record<string, string> = {
-  architect: '#3B82F6', // MİMAR — Blue
-  engineer: '#10B981',  // MÜHENDİS — Emerald
-  fabricator: '#F59E0B' // PREKAST — Amber
+  architect: 'var(--role-architect)', // MİMAR — Blue
+  engineer: 'var(--role-engineer)',  // MÜHENDİS — Emerald
+  fabricator: 'var(--role-fabricator)' // PREKAST — Amber
 };
 
 export function HomepageView() {
@@ -214,7 +214,7 @@ export function HomepageView() {
         aria-labelledby="products-heading"
         style={
           {
-            '--role-accent': ROLE_ACCENTS[activeRole.id] || '#3B82F6'
+            '--role-accent': ROLE_ACCENTS[activeRole.id] || 'var(--role-architect)'
           } as React.CSSProperties
         }
       >
@@ -237,7 +237,7 @@ export function HomepageView() {
             {data.roles.map((role, rIdx) => {
               const isSelected = role.id === activeRole.id;
               const iconName = ROLE_ICONS[role.id] || 'layers';
-              const roleColor = ROLE_ACCENTS[role.id] || '#3B82F6';
+              const roleColor = ROLE_ACCENTS[role.id] || 'var(--role-architect)';
               return (
                 <button
                   key={role.id}

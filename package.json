@@ -9,10 +9,13 @@
     "data:generate": "python3 scripts/generate_site_data.py",
     "typecheck": "tsc --noEmit",
     "test:parity": "python3 scripts/verify_phase6_parity.py",
-    "test": "python3 -m unittest discover -s tests && python3 scripts/verify_phase6_parity.py",
-    "build": "node design-system/scripts/build-tokens.mjs --check && next build",
+    "test": "python3 -m unittest discover -s tests && python3 scripts/verify_phase6_parity.py && pnpm styles:check && pnpm test:tokens",
+    "build": "pnpm styles:check && next build",
     "start": "next start --hostname 127.0.0.1 --port 3000",
-    "docs:sync": "python3 scripts/document_assets.py"
+    "docs:sync": "python3 scripts/document_assets.py",
+    "styles:generate": "node design-system/scripts/build-tokens.mjs && python3 scripts/build_app_styles.py",
+    "styles:check": "node design-system/scripts/build-tokens.mjs --check && python3 scripts/build_app_styles.py --check",
+    "test:tokens": "node design-system/scripts/token-tests.mjs"
   },
   "dependencies": {
     "next": "16.4.2",

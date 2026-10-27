@@ -22,7 +22,7 @@ Kullanıcı aşağıdaki yol haritasını onayladı ve önce kayda alınıp çal
 | S03 | PDF/DOCX kaynak paritesi | Temsili PDF üretimi kaldırılır; orijinal belgeler kaynak/URL eşlemesi, SHA-256 ve tür kontrolüyle korunur | Tamamlandı |
 | S04 | Microsoft Forms yönlendirmesi | Talep CTA'ları ortak forma bağlı; sahte yerel başarı yok; destek/deneme/özel lisans görevleri karıştırılmaz | Tamamlandı |
 | S05 | İçerik/etkileşim paritesi | Kaynak→veri→render bazında eksik/fazla/değişmiş/yanlış eşleşmiş kayıtlar; hedefli canlı doğrulama | Yerel teknik kontrol tamamlandı; kayıtlı istisnalar ve nihai görsel kabul ayrı |
-| S06 | Token ve bileşen sağlamlaştırma | Sabit görsel kararlar tokenlara taşınır; büyük bileşenler ayrılır; görsel karşılaştırma görünümü korur | Bekliyor |
+| S06 | Token ve bileşen sağlamlaştırma | Sabit görsel kararlar tokenlara taşınır; büyük bileşenler ayrılır; görsel karşılaştırma görünümü korur | Devam ediyor — S06-A temel hat tamamlandı |
 | S07 | Yayın öncesi kabul | Çalışan test komutları, typecheck/build, tarayıcı etkileşimleri, schema/performance doğrulaması ve açık riskler | Bekliyor |
 
 S02 ve S03 bağımlıdır: iki mevcut üretici de gerçek belge adlarına temsili PDF yazar. Başlangıç kaydı alınmadan üretici çalıştırma. Tekleştirme sırasında belge yazma güvenliği sağlanmadan yeni üretim komutunu kullanım için serbest bırakma. Her adım dar kapsamlı commit ve devir kaydıyla kapanır; faz geçişinde kullanıcı onayı beklenir. Push/deploy/canlı değişikliği yetkisi verilmedi.
@@ -543,3 +543,12 @@ Kullanıcı açıkça canlıya alınmayacağını belirtti; tüm çalışma yere
 Beş kaynakTraininggörseli hâlâ fiziksel olarak yoktur; mevcut çalışma kararı görselsizpanelleri kullanmaktır. Metin/CTA'lar tam, sourceImageSrcizleri kayıtlı, kırıkistek yok. Eksikdosyaları geri kazanmış gibi sunma. Kaynaktemini ileride yapılabilir; bu durum yerel teknik çalışmayı durdurmaz. S05yerel teknik adımı bu sınırlı kapsam ve açıkistisnalarla tamamlandı; tüm kaynak içeriğin yüzde100paritesi, tümharicivideoların kullanılabilirliği veya nihai tasarımkabulü iddia edilmez. SSR/SEOsekmeleri ve genel görsel kabul sonrakiS06/S07çalışmasında ele alınır. S06token/bileşen sağlamlaştırma henüz başlamadı; fazonayı olmadan atlama. Push/deploy yok.
 
 Son bağımsız inceleme de tamamlandı: önemli bulgu yok. Yerel media/iframe odaktayken özel Tab sarması uygulanmaz; tarayıcının oynatıcı iç kontrol sırası korunur. Bu son değişiklik sonrası production build ve TypeScript tekrar geçti.
+
+
+## 27.10.2026 — S06-A kanonik stil hattı ve ilk ayrım
+
+Kullanıcı S06devamını onayladı. globals.css içindeki kanonikDSkopyaları scripts/build_app_styles.py ile17girdiden üretilen tekçıktı yapıldı; uygulamaözelkuralları src/styles/application.css içinde. pnpm styles:generate önce tokenlarısonraCSS'yi üretir; styles:check saltokunurdrift kontrolüdür, test/buildiçinde zorunlu. globals.csselle değiştirilmez. KanonikfontsCSS'si publicURL'lere dönüştürülür. Mimar/mühendis/prekast3renk tokena taşındı; önceki değerler aynı, JSXrenksabitleri ve23fallback kaldırıldı. Palettestleri gelecekteki geçerli tokeneditlerini kilitlemez; pertheme/mode mutationtesti eklendi.
+
+WorkflowSection ve structured-tab-key parenttan çıkarıldı; SubpageView2972→2738satır. JSXnormalize eşliği/callbacks aynı.64Python+36parite+29token testi, build/TypeScript/188kontrast geçti.110yerelrota200/tekH1,0boşyapısalbölüm;303aday değişmedi. CSSnormalize(rol eklerini geri çevirerek)HEADile aynı. Kanıt docs/verification/s06-2026-10-27/ altında. Yeni kod incelemesi önemli bulgu vermedi; ilk paletkilitleme önerisi düzeltildi.
+
+Tarayıcı bu tur Workayarlarında kapalı: yeni görsel/etkileşim kabulü yapılmadı. HTTPvekaynak eşliği bunu ikame etmez. BuS06-Atemeladımıdır, S06tamamlanmadı. Sonraki adım application.css99hamrenkkullanımının anlamlıtema tokenlarına taşınması, lightheader/footer overrideların tokenkatmanına alınması; ölçü/tipografi/hareket ve büyükbileşen ayrımı devamı. İçerik/schema/dataJSONdeğişmedi, kaynak2026saltokunur, pazarlamaklasörü kullanılmadı, push/deploy yok. S07'ye atlama.

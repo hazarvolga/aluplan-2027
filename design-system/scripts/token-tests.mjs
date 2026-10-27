@@ -90,6 +90,16 @@ export function runTokenTests({ build = buildTokens, lint = lintComponentCss, T,
       return generatedList.some(p => tampered[p] !== base.files[p]) || 'not detected';
     });
   }
+  test('role palette can vary in one theme without changing another theme or shipped tokens', () => {
+    const t = clone();
+    t.themes.aluplan.modes.dark.role.architect.$value = '{primitive.color.role.engineer}';
+    const changed = run(t);
+    if (changed.errors.length) return changed.errors.join(' | ');
+    return (changed.resolved.aluplan.dark['--role-architect'] === base.resolved.aluplan.dark['--role-engineer'] &&
+      changed.resolved.aluplan.light['--role-architect'] === base.resolved.aluplan.light['--role-architect'] &&
+      changed.resolved.field.dark['--role-architect'] === base.resolved.field.dark['--role-architect'] &&
+      T.themes.aluplan.modes.dark.role.architect.$value !== t.themes.aluplan.modes.dark.role.architect.$value) || 'theme scope leaked';
+  });
   return { results, passed: results.filter(r => r.pass).length, failed: results.filter(r => !r.pass).length };
 }
 

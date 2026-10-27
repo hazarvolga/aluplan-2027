@@ -75,6 +75,9 @@
   --ref-color-anthracite-850: #272A2C;
   --ref-color-anthracite-900: #202324;
   --ref-color-anthracite-950: #181A1B;
+  --ref-color-role-architect: #3B82F6;
+  --ref-color-role-engineer: #10B981;
+  --ref-color-role-fabricator: #F59E0B;
   --ref-font-family-manrope: 'Manrope', 'Segoe UI', system-ui, sans-serif;
   --ref-font-family-plex-sans: 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
   --ref-font-family-plex-mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', monospace;

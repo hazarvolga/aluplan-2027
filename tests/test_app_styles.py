@@ -229,3 +229,59 @@ class AppStylesTests(unittest.TestCase):
             self.assertIsNotNone(match, selector)
             with self.subTest(selector=selector):
                 self.assertRegex(match.group(1), rf'(?m)^\s*{re.escape(prop)}\s*:\s*{re.escape(value)};')
+
+    def test_structural_layout_dimensions_use_semantic_tokens(self):
+        source = (ROOT / 'src/styles/application.css').read_text(encoding='utf-8')
+
+        def assert_property_values(blocks, prop, expected_value):
+            values = [value.strip() for block in blocks for value in re.findall(
+                rf'(?m)^\s*{re.escape(prop)}\s*:\s*([^;]+);', block
+            )]
+            self.assertEqual(values, [expected_value])
+
+        expected = {
+            '.alu-site-header__inner': ('min-height', '--layout-application-header-min-height'),
+            '.alu-modal': ('max-height', '--layout-application-modal-max-height'),
+            '.alu-bento-card--1': ('min-height', '--layout-application-bento-feature-min-height'),
+            '.alu-service-pill': ('min-height', '--layout-application-service-pill-min-height'),
+            '.alu-feature-row__media': ('min-height', '--layout-application-feature-media-min-height'),
+            '.alu-video-modal__dialog': ('max-height', '--layout-application-video-dialog-max-height'),
+            '.alu-video-modal__image-viewport': ('max-height', '--layout-application-image-viewport-max-height'),
+            '.alu-video-modal__image-viewport img': ('max-height', '--layout-application-image-max-height'),
+            '.alu-about-office__map': ('min-height', '--layout-application-map-min-height'),
+        }
+        for selector, (prop, token) in expected.items():
+            matches = re.findall(re.escape(selector) + r'\s*\{([^{}]*)\}', source)
+            self.assertTrue(matches, selector)
+            with self.subTest(selector=selector):
+                pattern = rf'(?m)^\s*{re.escape(prop)}\s*:\s*var\({re.escape(token)}\);'
+                self.assertTrue(any(re.search(pattern, declarations) for declarations in matches), f'{selector}: {prop} -> {token}')
+                assert_property_values(matches, prop, f'var({token})')
+
+        media_end = source.index('@media (max-width: 40rem) {')
+        media_start = source.rindex('@media (max-width: 64rem) {', 0, media_end)
+        desktop_source = source[:media_start]
+        compact_source = source[media_start:media_end]
+        desktop_playlist = re.search(r'\.alu-playlist-sidebar\s*\{([^{}]*)\}', desktop_source)
+        compact_playlist = re.search(r'\.alu-playlist-sidebar\s*\{([^{}]*)\}', compact_source)
+        self.assertIsNotNone(desktop_playlist)
+        self.assertIsNotNone(compact_playlist)
+        self.assertRegex(desktop_playlist.group(1), r'(?m)^\s*height\s*:\s*var\(--layout-application-playlist-height\);')
+        self.assertRegex(compact_playlist.group(1), r'(?m)^\s*height\s*:\s*var\(--layout-application-playlist-height-compact\);')
+        assert_property_values([desktop_playlist.group(1)], 'height', 'var(--layout-application-playlist-height)')
+        assert_property_values([compact_playlist.group(1)], 'height', 'var(--layout-application-playlist-height-compact)')
+
+        bento_group = re.search(
+            r'\.alu-bento-card--1,\s*\.alu-bento-card--2,\s*\.alu-bento-card--3,\s*'
+            r'\.alu-bento-card--4,\s*\.alu-bento-card--5\s*\{([^{}]*)\}', compact_source
+        )
+        self.assertIsNotNone(bento_group)
+        self.assertRegex(bento_group.group(1), r'(?m)^\s*min-height\s*:\s*var\(--layout-application-bento-responsive-min-height\);')
+        assert_property_values([bento_group.group(1)], 'min-height', 'var(--layout-application-bento-responsive-min-height)')
+
+        count_rule = re.search(r'\.alu-ref-tab__count\s*\{([^{}]*)\}', source)
+        self.assertIsNotNone(count_rule)
+        self.assertRegex(count_rule.group(1), r'(?m)^\s*min-width\s*:\s*var\(--layout-application-reference-count-min-width\);')
+        self.assertRegex(count_rule.group(1), r'(?m)^\s*height\s*:\s*var\(--layout-application-reference-count-height\);')
+        assert_property_values([count_rule.group(1)], 'min-width', 'var(--layout-application-reference-count-min-width)')
+        assert_property_values([count_rule.group(1)], 'height', 'var(--layout-application-reference-count-height)')

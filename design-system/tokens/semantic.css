@@ -295,6 +295,20 @@
   --layout-meta-column: var(--ref-size-measure-10);
   --layout-tab-max: var(--ref-size-measure-20);
   --layout-dialog-max: var(--ref-size-measure-32);
+  --layout-application-header-min-height: var(--ref-size-measure-4-5);
+  --layout-application-modal-max-height: 90vh;
+  --layout-application-bento-feature-min-height: var(--ref-size-measure-32);
+  --layout-application-service-pill-min-height: var(--ref-size-11);
+  --layout-application-feature-media-min-height: var(--ref-size-measure-20);
+  --layout-application-playlist-height: var(--ref-size-measure-46);
+  --layout-application-playlist-height-compact: var(--ref-size-measure-32);
+  --layout-application-video-dialog-max-height: calc(100dvh - 2 * clamp(1rem, 3vw, 2.5rem)); /* @kind other */
+  --layout-application-image-viewport-max-height: 80vh;
+  --layout-application-image-max-height: 78vh;
+  --layout-application-bento-responsive-min-height: var(--ref-size-measure-18);
+  --layout-application-reference-count-min-width: 1.65rem;
+  --layout-application-reference-count-height: 1.35rem;
+  --layout-application-map-min-height: var(--ref-size-measure-26);
   --layout-application-training-image-max-width: var(--ref-size-application-training-image-max-width);
   --layout-application-utility-panel-max-height: var(--ref-size-application-utility-panel-max-height);
   --layout-application-content-column-min-width: var(--ref-size-application-content-column-min-width);
@@ -726,6 +740,20 @@
   --layout-meta-column: var(--ref-size-measure-10);
   --layout-tab-max: var(--ref-size-measure-20);
   --layout-dialog-max: var(--ref-size-measure-32);
+  --layout-application-header-min-height: var(--ref-size-measure-4-5);
+  --layout-application-modal-max-height: 90vh;
+  --layout-application-bento-feature-min-height: var(--ref-size-measure-32);
+  --layout-application-service-pill-min-height: var(--ref-size-11);
+  --layout-application-feature-media-min-height: var(--ref-size-measure-20);
+  --layout-application-playlist-height: var(--ref-size-measure-46);
+  --layout-application-playlist-height-compact: var(--ref-size-measure-32);
+  --layout-application-video-dialog-max-height: calc(100dvh - 2 * clamp(1rem, 3vw, 2.5rem)); /* @kind other */
+  --layout-application-image-viewport-max-height: 80vh;
+  --layout-application-image-max-height: 78vh;
+  --layout-application-bento-responsive-min-height: var(--ref-size-measure-18);
+  --layout-application-reference-count-min-width: 1.65rem;
+  --layout-application-reference-count-height: 1.35rem;
+  --layout-application-map-min-height: var(--ref-size-measure-26);
   --layout-application-training-image-max-width: var(--ref-size-application-training-image-max-width);
   --layout-application-utility-panel-max-height: var(--ref-size-application-utility-panel-max-height);
   --layout-application-content-column-min-width: var(--ref-size-application-content-column-min-width);
@@ -1293,6 +1321,20 @@
   --layout-meta-column: var(--ref-size-measure-10);
   --layout-tab-max: var(--ref-size-measure-20);
   --layout-dialog-max: var(--ref-size-measure-32);
+  --layout-application-header-min-height: var(--ref-size-measure-4-5);
+  --layout-application-modal-max-height: 90vh;
+  --layout-application-bento-feature-min-height: var(--ref-size-measure-32);
+  --layout-application-service-pill-min-height: var(--ref-size-11);
+  --layout-application-feature-media-min-height: var(--ref-size-measure-20);
+  --layout-application-playlist-height: var(--ref-size-measure-46);
+  --layout-application-playlist-height-compact: var(--ref-size-measure-32);
+  --layout-application-video-dialog-max-height: calc(100dvh - 2 * clamp(1rem, 3vw, 2.5rem)); /* @kind other */
+  --layout-application-image-viewport-max-height: 80vh;
+  --layout-application-image-max-height: 78vh;
+  --layout-application-bento-responsive-min-height: var(--ref-size-measure-18);
+  --layout-application-reference-count-min-width: 1.65rem;
+  --layout-application-reference-count-height: 1.35rem;
+  --layout-application-map-min-height: var(--ref-size-measure-26);
   --layout-application-training-image-max-width: var(--ref-size-application-training-image-max-width);
   --layout-application-utility-panel-max-height: var(--ref-size-application-utility-panel-max-height);
   --layout-application-content-column-min-width: var(--ref-size-application-content-column-min-width);

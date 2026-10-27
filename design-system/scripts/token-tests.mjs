@@ -261,6 +261,28 @@ export function runTokenTests({ build = buildTokens, lint = lintComponentCss, T,
     }
     return true;
   });
+  test('application structural-layout tokens preserve desktop and responsive dimensions', () => {
+    const expected = {
+      '--layout-application-header-min-height': '4.5rem',
+      '--layout-application-modal-max-height': '90vh',
+      '--layout-application-bento-feature-min-height': '32rem',
+      '--layout-application-service-pill-min-height': '2.75rem',
+      '--layout-application-feature-media-min-height': '20rem',
+      '--layout-application-playlist-height': '46rem',
+      '--layout-application-playlist-height-compact': '32rem',
+      '--layout-application-video-dialog-max-height': 'calc(100dvh - 2 * clamp(1rem, 3vw, 2.5rem))',
+      '--layout-application-image-viewport-max-height': '80vh',
+      '--layout-application-image-max-height': '78vh',
+      '--layout-application-bento-responsive-min-height': '18rem',
+      '--layout-application-reference-count-min-width': '1.65rem',
+      '--layout-application-reference-count-height': '1.35rem',
+      '--layout-application-map-min-height': '26rem'
+    };
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      for (const [name, value] of Object.entries(expected)) if (values[name] !== value) return `${theme}/${mode} ${name}: expected ${value}, got ${values[name]}`;
+    }
+    return true;
+  });
   return { results, passed: results.filter(r => r.pass).length, failed: results.filter(r => !r.pass).length };
 }
 

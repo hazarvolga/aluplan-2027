@@ -177,7 +177,7 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-inline-lg);
-  min-height: 4.5rem;
+  min-height: var(--layout-application-header-min-height);
   max-width: var(--container-xl);
   margin-inline: auto;
   padding: var(--space-inset-xs) var(--container-gutter);
@@ -481,7 +481,7 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-modal {
   width: min(100%, var(--container-application-modal));
-  max-height: 90vh;
+  max-height: var(--layout-application-modal-max-height);
   overflow-y: auto;
   background: var(--surface-raised);
   border: var(--border-width-default) solid var(--border-strong);
@@ -1486,7 +1486,7 @@ button.alu-role[aria-checked="true"] {
 .alu-bento-card--1 {
   grid-column: span 7;
   grid-row: span 2;
-  min-height: 32rem;
+  min-height: var(--layout-application-bento-feature-min-height);
 }
 .alu-bento-card--2 {
   grid-column: span 5;
@@ -1624,7 +1624,7 @@ button.alu-role[aria-checked="true"] {
   display: inline-flex;
   align-items: center;
   gap: var(--space-application-control-comfortable-gap);
-  min-height: 2.75rem;
+  min-height: var(--layout-application-service-pill-min-height);
   padding: var(--space-stack-sm) var(--space-application-panel-gap);
   background: var(--surface-default);
   border: var(--border-width-default) solid var(--border-control);
@@ -1793,7 +1793,7 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-feature-row__media {
   position: relative;
-  min-height: 20rem;
+  min-height: var(--layout-application-feature-media-min-height);
   background: var(--visual-media-surface);
   overflow: hidden;
 }
@@ -2179,7 +2179,7 @@ button.alu-role[aria-checked="true"] {
   top: var(--space-application-playlist-sticky-offset);
   display: flex;
   flex-direction: column;
-  height: 46rem;
+  height: var(--layout-application-playlist-height);
   background: var(--surface-raised);
   border: var(--border-width-default) solid var(--border-strong);
   box-shadow: var(--elevation-raised);
@@ -3050,7 +3050,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 }
 .alu-video-modal__dialog {
   width: min(100%, var(--container-application-video-dialog));
-  max-height: calc(100dvh - 2 * clamp(1rem, 3vw, 2.5rem));
+  max-height: var(--layout-application-video-dialog-max-height);
   overflow-y: auto;
   background: var(--surface-raised);
   border: var(--border-width-default) solid var(--border-strong);
@@ -3115,12 +3115,12 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   display: flex;
   align-items: center;
   justify-content: center;
-  max-height: 80vh;
+  max-height: var(--layout-application-image-viewport-max-height);
   overflow: auto;
 }
 .alu-video-modal__image-viewport img {
   max-width: 100%;
-  max-height: 78vh;
+  max-height: var(--layout-application-image-max-height);
   object-fit: contain;
   display: block;
 }
@@ -3146,7 +3146,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   }
   .alu-playlist-sidebar {
     position: static;
-    height: 32rem;
+    height: var(--layout-application-playlist-height-compact);
   }
   .alu-products-showcase,
   .alu-yt-grid {
@@ -3168,7 +3168,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   .alu-bento-card--5 {
     grid-column: span 12;
     grid-row: auto;
-    min-height: 18rem;
+    min-height: var(--layout-application-bento-responsive-min-height);
   }
 }
 
@@ -3267,8 +3267,8 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 1.65rem;
-  height: 1.35rem;
+  min-width: var(--layout-application-reference-count-min-width);
+  height: var(--layout-application-reference-count-height);
   padding-inline: var(--space-application-label-inset);
   background: var(--visual-reference-count-surface);
   border-radius: var(--radius-application-media-badge);
@@ -3745,7 +3745,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 
 .alu-about-office__map {
   position: relative;
-  min-height: 26rem;
+  min-height: var(--layout-application-map-min-height);
   background: var(--surface-subtle);
 }
 

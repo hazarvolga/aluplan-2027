@@ -18,6 +18,7 @@ import { WorkflowSection } from './WorkflowSection';
 import { DirectoryCategoryIcon } from './DirectoryCategoryIcon';
 import { FAQSection } from './FAQSection';
 import { AboutEditorialSection } from './AboutEditorialSection';
+import { BenefitsSection } from './BenefitsSection';
 import { handleStructuredTabKey } from './structured-tab-key';
 import { MediaDialog } from '@/components/ui/MediaDialog';
 
@@ -1293,45 +1294,7 @@ export function SubpageView({
 
                 {/* 4. Benefits / Reasons Icon Card Grid (e.g., "ALLPLAN Ultimate'in Faydaları" — 12 icon cards) */}
                 {sl.benefits && sl.benefits.items.length > 0 && (
-                  <section className="preview-section preview-section--subtle" aria-label={sl.benefits.title}>
-                    <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
-                      <div className="alu-section-header-center">
-                        {sl.benefits.kicker && (
-                          <span className="preview-kicker">{sl.benefits.kicker}</span>
-                        )}
-                        <h2 className="alu-h1" style={{ margin: 0 }}>
-                          {sl.benefits.title}
-                        </h2>
-                      </div>
-
-                      <div
-                        className={`alu-benefits-grid${
-                          sl.benefits.items.length >= 12 || sl.benefits.items.length === 8
-                            ? ' alu-benefits-grid--cols-4'
-                            : ' alu-benefits-grid--cols-3'
-                        }`}
-                      >
-                        {sl.benefits.items.map((bItem, bIdx) => (
-                          <article key={`${bItem.title}-${bIdx}`} className="alu-benefit-card">
-                            <div className="alu-benefit-card__top">
-                              <div className="alu-benefit-card__titles">
-                                {bItem.subtitle && (
-                                  <span className="alu-benefit-card__subtitle">{bItem.subtitle}</span>
-                                )}
-                                <h3 className="alu-benefit-card__title">{bItem.title}</h3>
-                              </div>
-                              {bItem.iconSrc && (
-                                <span className="alu-benefit-icon" aria-hidden="true">
-                                  <img src={bItem.iconSrc} alt="" loading="lazy" />
-                                </span>
-                              )}
-                            </div>
-                            <p className="alu-benefit-card__desc">{bItem.description}</p>
-                          </article>
-                        ))}
-                      </div>
-                    </div>
-                  </section>
+                  <BenefitsSection benefits={sl.benefits} />
                 )}
 
                 {/* 5. Core Features Image & Popup Video Grid ("Fonksiyonellik Hızlı Bakış") */}

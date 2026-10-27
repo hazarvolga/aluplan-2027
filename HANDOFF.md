@@ -727,3 +727,9 @@ Kullanıcının ara onay beklemeden kalan yerel adımları tamamlama talebiyle `
 - Kaynak 2026 salt-okunur kaldı; marketing materials, canlı sistem ve remote değiştirilmedi. Push/PR/merge/deploy yok. Kullanıcıya ait izlenmeyen `DEVOPS MASTER WORKFLOW.md` korunur.
 
 Sıradaki güvenli adım: browser erişimi açıldığında S07 gerçek etkileşim + responsive + theme/console kabulü; ardından kullanıcı kararıyla branch push/PR veya yerel merge. Canlı yayın ayrıca açık onay gerektirir.
+
+## 27.10.2026 — GitHub teslim hazırlığı
+
+Kullanıcı boş `hazarvolga/aluplan-2027` remote'una tam GitHub teslim zincirini uygulama onayı verdi. Kök `DEVOPS MASTER WORKFLOW.md` takip altına alındı (`27df463`). PR ve `main` pushlarında generated-data drift, 117 test, 36 parite, 45 token testi, typecheck, production build ve production dependency audit çalıştıran minimum `contents: read` yetkili CI eklendi (`82fb801`). Action bağımlılıkları tam commit SHA ile sabittir; Node `20.20.2`, pnpm `10.24.0` kullanılır. Yerel doğrulama ve bağımsız code review başarılıdır.
+
+Push yapılmadan önce public-repo güvenlik incelemesi durdurma kapısı açtı: ana `public/` ağacındaki ALLPLAN/AX3000 medya ve dokümanları için dosya bazlı izin kaydı yoktur; public push üçüncü taraf varlıkları kalıcı olarak yayımlar. Ayrıca henüz yayınlanmamış commit geçmişi `.local` cihaz adını içeren author e-postası ve altı dokümanda mutlak kullanıcı yolu taşır. Remote hâlâ boştur; hiçbir ref gönderilmedi. Güvenli öneri repository'yi private yapmak, ardından noreply author/path temizliği ile push→PR→CI→merge→post-merge verification zincirini tamamlamaktır. Public kalacaksa varlık yayın yetkisi açıkça onaylanmalıdır. Canlı deploy yoktur.

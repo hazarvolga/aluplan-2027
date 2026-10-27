@@ -78,6 +78,7 @@
   --ref-color-role-architect: #3B82F6;
   --ref-color-role-engineer: #10B981;
   --ref-color-role-fabricator: #F59E0B;
+  --ref-color-workflow-package: #8B5CF6;
   --ref-color-visual-shadow-header: rgba(0, 0, 0, 0.28);
   --ref-color-visual-shadow-strong: rgba(0, 0, 0, 0.45);
   --ref-color-visual-header-light-surface: rgba(255, 255, 255, 0.94);
@@ -435,8 +436,14 @@
   --ref-filter-application-backdrop-media-badge: blur(6px); /* @kind other */
   --ref-filter-application-backdrop-modal: blur(10px); /* @kind other */
   --ref-z-index-0: 0; /* @kind other */
+  --ref-z-index-1: 1; /* @kind other */
+  --ref-z-index-2: 2; /* @kind other */
+  --ref-z-index-20: 20; /* @kind other */
   --ref-z-index-100: 100; /* @kind other */
   --ref-z-index-200: 200; /* @kind other */
   --ref-z-index-300: 300; /* @kind other */
   --ref-z-index-400: 400; /* @kind other */
+  --ref-z-index-9999: 9999; /* @kind other */
+  --ref-z-index-minus2: -2; /* @kind other */
+  --ref-z-index-minus1: -1; /* @kind other */
 }

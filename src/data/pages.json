@@ -5214,25 +5214,25 @@
           "text": "Sürümleri Görüntüle",
           "href": "/package-overview",
           "external": false,
-          "color": "#8B5CF6"
+          "accentKey": "package"
         },
         {
           "text": "Tasarım için İş Akışları",
           "href": "/solutions/architecture#mimari-is-akislari",
           "external": false,
-          "color": "#3B82F6"
+          "accentKey": "architect"
         },
         {
           "text": "İnşaat Mühendisliği için İş Akışları",
           "href": "/solutions/structural#insaat-muhendisligi-is-akislari",
           "external": false,
-          "color": "#10B981"
+          "accentKey": "engineer"
         },
         {
           "text": "Altyapı Mühendisliği için İş Akışları",
           "href": "/solutions/infrastructure#altyapi-muhendisligi-is-akislari",
           "external": false,
-          "color": "#F59E0B"
+          "accentKey": "fabricator"
         }
       ],
       "benefits": {
@@ -7713,25 +7713,25 @@
           "text": "Sürümleri Görüntüle",
           "href": "/package-overview",
           "external": false,
-          "color": "#8B5CF6"
+          "accentKey": "package"
         },
         {
           "text": "Tasarım için İş Akışları",
           "href": "/solutions/architecture#mimari-is-akislari",
           "external": false,
-          "color": "#3B82F6"
+          "accentKey": "architect"
         },
         {
           "text": "İnşaat Mühendisliği için İş Akışları",
           "href": "/solutions/structural#insaat-muhendisligi-is-akislari",
           "external": false,
-          "color": "#10B981"
+          "accentKey": "engineer"
         },
         {
           "text": "Altyapı Mühendisliği için İş Akışları",
           "href": "/solutions/infrastructure#altyapi-muhendisligi-is-akislari",
           "external": false,
-          "color": "#F59E0B"
+          "accentKey": "fabricator"
         }
       ],
       "benefits": {
@@ -8966,25 +8966,25 @@
           "text": "Sürümleri Görüntüle",
           "href": "/package-overview",
           "external": false,
-          "color": "#8B5CF6"
+          "accentKey": "package"
         },
         {
           "text": "Tasarım için İş Akışları",
           "href": "/solutions/architecture#mimari-is-akislari",
           "external": false,
-          "color": "#3B82F6"
+          "accentKey": "architect"
         },
         {
           "text": "İnşaat Mühendisliği için İş Akışları",
           "href": "/solutions/structural#insaat-muhendisligi-is-akislari",
           "external": false,
-          "color": "#10B981"
+          "accentKey": "engineer"
         },
         {
           "text": "Altyapı Mühendisliği için İş Akışları",
           "href": "/solutions/infrastructure#altyapi-muhendisligi-is-akislari",
           "external": false,
-          "color": "#F59E0B"
+          "accentKey": "fabricator"
         }
       ],
       "benefits": {
@@ -10623,25 +10623,25 @@
           "text": "Sürümleri Görüntüle",
           "href": "/package-overview",
           "external": false,
-          "color": "#8B5CF6"
+          "accentKey": "package"
         },
         {
           "text": "Tasarım için İş Akışları",
           "href": "/solutions/architecture#mimari-is-akislari",
           "external": false,
-          "color": "#3B82F6"
+          "accentKey": "architect"
         },
         {
           "text": "İnşaat Mühendisliği için İş Akışları",
           "href": "/solutions/structural#insaat-muhendisligi-is-akislari",
           "external": false,
-          "color": "#10B981"
+          "accentKey": "engineer"
         },
         {
           "text": "Altyapı Mühendisliği için İş Akışları",
           "href": "/solutions/infrastructure#altyapi-muhendisligi-is-akislari",
           "external": false,
-          "color": "#F59E0B"
+          "accentKey": "fabricator"
         }
       ],
       "benefits": {
@@ -13545,25 +13545,25 @@
           "text": "Sürümleri Görüntüle",
           "href": "/package-overview",
           "external": false,
-          "color": "#8B5CF6"
+          "accentKey": "package"
         },
         {
           "text": "Tasarım için İş Akışları",
           "href": "/solutions/architecture#mimari-is-akislari",
           "external": false,
-          "color": "#3B82F6"
+          "accentKey": "architect"
         },
         {
           "text": "İnşaat Mühendisliği için İş Akışları",
           "href": "/solutions/structural#insaat-muhendisligi-is-akislari",
           "external": false,
-          "color": "#10B981"
+          "accentKey": "engineer"
         },
         {
           "text": "Altyapı Mühendisliği için İş Akışları",
           "href": "/solutions/infrastructure#altyapi-muhendisligi-is-akislari",
           "external": false,
-          "color": "#F59E0B"
+          "accentKey": "fabricator"
         }
       ],
       "benefits": {
@@ -14376,25 +14376,25 @@
           "text": "Sürümleri Görüntüle",
           "href": "/package-overview",
           "external": false,
-          "color": "#8B5CF6"
+          "accentKey": "package"
         },
         {
           "text": "Tasarım için İş Akışları",
           "href": "/solutions/architecture#mimari-is-akislari",
           "external": false,
-          "color": "#3B82F6"
+          "accentKey": "architect"
         },
         {
           "text": "İnşaat Mühendisliği için İş Akışları",
           "href": "/solutions/structural#insaat-muhendisligi-is-akislari",
           "external": false,
-          "color": "#10B981"
+          "accentKey": "engineer"
         },
         {
           "text": "Altyapı Mühendisliği için İş Akışları",
           "href": "/solutions/infrastructure#altyapi-muhendisligi-is-akislari",
           "external": false,
-          "color": "#F59E0B"
+          "accentKey": "fabricator"
         }
       ],
       "benefits": {

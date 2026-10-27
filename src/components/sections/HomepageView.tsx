@@ -160,7 +160,7 @@ export function HomepageView() {
         {/* Dynamic Ambient Glow based on Active Role */}
         <div className="alu-pathway-glow" aria-hidden="true" />
 
-        <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)', position: 'relative', zIndex: 2 }}>
+        <div className="alu-container alu-stack alu-pathway-content" style={{ gap: 'var(--space-stack-xl)' }}>
           <div className="alu-pathway-header">
             <span className="preview-kicker">ROLÜNÜZÜ SEÇİN · ROL VE ÜRÜN MİMARİSİ</span>
             <h2 id="products-heading" className="alu-h1">

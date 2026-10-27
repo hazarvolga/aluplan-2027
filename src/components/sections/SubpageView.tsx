@@ -5,6 +5,7 @@ import Link from 'next/link';
 import {
   PageRecord,
   PlaylistRecord,
+  StructuredWorkflowLink,
   TRIAL_CTA_URL,
   MAIN_QUOTE_FORM_URL,
   SUPPORT_PORTAL_URL,
@@ -41,6 +42,12 @@ const SECTION_LABELS: Record<string, string> = {
 const siteIdentity = getSiteIdentity();
 const homepageData = getHomepageData();
 const trialReleaseLabel = `${homepageData.releaseLabel} DENEME VE ABONELİK`;
+const WORKFLOW_ACCENTS: Record<StructuredWorkflowLink['accentKey'], string> = {
+  package: 'var(--workflow-package)',
+  architect: 'var(--role-architect)',
+  engineer: 'var(--role-engineer)',
+  fabricator: 'var(--role-fabricator)'
+};
 
 export function SubpageView({
   page,
@@ -396,7 +403,7 @@ export function SubpageView({
                             <>
                               <span
                                 className="alu-workflow-pill__dot"
-                                style={{ background: wlink.color || 'var(--accent-primary)' }}
+                                style={{ background: WORKFLOW_ACCENTS[wlink.accentKey] }}
                               />
                               <span className="alu-workflow-pill__text">{wlink.text}</span>
                               <span className="alu-workflow-pill__arrow">

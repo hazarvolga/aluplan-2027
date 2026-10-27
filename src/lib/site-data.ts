@@ -71,7 +71,7 @@ export interface StructuredWorkflowLink {
   text: string;
   href: string;
   external?: boolean;
-  color?: string;
+  accentKey: 'package' | 'architect' | 'engineer' | 'fabricator';
 }
 
 export interface StructuredStatItem {

@@ -752,7 +752,7 @@ button.alu-role[aria-checked="true"] {
 .alu-hero-stage__backdrop {
   position: absolute;
   inset: 0;
-  z-index: -2;
+  z-index: var(--z-background);
   overflow: hidden;
 }
 .alu-hero-stage__bg-video {
@@ -986,6 +986,10 @@ button.alu-role[aria-checked="true"] {
   overflow: hidden;
   isolation: isolate;
 }
+.alu-pathway-content {
+  position: relative;
+  z-index: var(--z-content);
+}
 .alu-pathway-glow {
   position: absolute;
   top: 42%;
@@ -998,7 +1002,7 @@ button.alu-role[aria-checked="true"] {
   filter: var(--filter-application-pathway-glow);
   opacity: 0.08;
   pointer-events: none;
-  z-index: 0;
+  z-index: var(--z-base);
   transition: background-color var(--motion-duration-ambient) var(--motion-easing-expressive);
 }
 [data-mode="light"] .alu-pathway-glow {
@@ -1499,7 +1503,7 @@ button.alu-role[aria-checked="true"] {
 .alu-bento-card__bg {
   position: absolute;
   inset: 0;
-  z-index: -2;
+  z-index: var(--z-background);
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1513,7 +1517,7 @@ button.alu-role[aria-checked="true"] {
 .alu-bento-card__scrim {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: var(--z-scrim);
   background:
     linear-gradient(180deg, var(--visual-trial-scrim-start) 0%, var(--visual-trial-scrim-middle) 55%, var(--visual-trial-scrim-end) 100%);
 }
@@ -1746,7 +1750,7 @@ button.alu-role[aria-checked="true"] {
 .alu-subpage-hero__bg {
   position: absolute;
   inset: 0;
-  z-index: -2;
+  z-index: var(--z-background);
   background-size: cover;
   background-position: center;
   opacity: 0.14;
@@ -1756,7 +1760,7 @@ button.alu-role[aria-checked="true"] {
 .alu-subpage-hero__scrim {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: var(--z-scrim);
   background:
     radial-gradient(circle at 82% 20%, var(--visual-subpage-hero-accent-glow), transparent 50%),
     linear-gradient(90deg, var(--surface-page) 35%, var(--visual-subpage-hero-dark-scrim) 100%);
@@ -1940,7 +1944,7 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-yt-banner__content {
   position: relative;
-  z-index: 1;
+  z-index: var(--z-foreground);
   max-width: var(--container-application-youtube-banner);
   display: flex;
   flex-direction: column;
@@ -1982,7 +1986,7 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-yt-banner__action {
   position: relative;
-  z-index: 1;
+  z-index: var(--z-foreground);
   flex-shrink: 0;
 }
 .alu-yt-subscribe-btn {
@@ -2595,7 +2599,7 @@ button.alu-role[aria-checked="true"] {
   position: absolute;
   top: var(--space-application-jsx-comfortable);
   right: var(--space-application-jsx-comfortable);
-  z-index: 2;
+  z-index: var(--z-content);
   display: inline-flex;
   align-items: center;
   gap: var(--space-application-compact-gap);
@@ -2612,7 +2616,7 @@ button.alu-role[aria-checked="true"] {
 .alu-media-card__play {
   position: absolute;
   inset: 0;
-  z-index: 2;
+  z-index: var(--z-content);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2639,7 +2643,7 @@ button.alu-role[aria-checked="true"] {
   position: absolute;
   bottom: var(--space-application-media-control-inset);
   right: var(--space-application-media-control-inset);
-  z-index: 2;
+  z-index: var(--z-content);
   width: var(--size-application-media-zoom-control);
   height: var(--size-application-media-zoom-control);
   border-radius: var(--radius-round);
@@ -3025,7 +3029,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   color: var(--text-primary);
   position: fixed;
   inset: 0;
-  z-index: 9999;
+  z-index: var(--z-dialog-top);
   background: var(--visual-modal-backdrop);
   backdrop-filter: var(--filter-backdrop-modal);
   display: flex;
@@ -3206,7 +3210,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   box-shadow: var(--elevation-raised);
   position: sticky;
   top: var(--space-application-references-sticky-offset);
-  z-index: 20;
+  z-index: var(--z-sticky-context);
 }
 
 .alu-ref-tabs {

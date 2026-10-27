@@ -316,6 +316,12 @@
   --ref-size-11: 2.75rem;
   --ref-size-12: 3rem;
   --ref-size-13: 3.25rem;
+  --ref-size-application-pulse-dot: 0.45rem;
+  --ref-size-application-monitor-dot: 0.5rem;
+  --ref-size-application-status-dot: 0.55rem;
+  --ref-size-application-workflow-dot: 0.6rem;
+  --ref-size-application-feature-icon: 1.75rem;
+  --ref-size-application-media-control: 3.5rem;
   --ref-size-container640: 40rem;
   --ref-size-container768: 48rem;
   --ref-size-container1024: 64rem;
@@ -568,6 +574,28 @@
   --control-padding-x-lg: var(--ref-space-6);
   --control-gap: var(--ref-space-2);
   --target-min: var(--ref-size-11);
+  --size-application-video-play-badge: var(--ref-size-12);
+  --size-application-partner-item-height: var(--ref-size-13);
+  --size-application-partner-logo-max-height: var(--ref-size-8);
+  --size-application-monitor-dot: var(--ref-size-application-monitor-dot);
+  --size-application-pathway-tab-icon: var(--ref-size-10);
+  --size-application-pathway-dot: var(--ref-size-application-status-dot);
+  --size-application-pathway-feature-icon: var(--ref-size-application-feature-icon);
+  --size-application-product-pulse-dot: var(--ref-size-application-pulse-dot);
+  --size-application-product-box-icon: var(--ref-size-10);
+  --size-application-product-status-dot: var(--ref-size-application-status-dot);
+  --size-application-benefit-icon: var(--ref-size-13);
+  --size-application-benefit-image: var(--ref-size-8);
+  --size-application-youtube-banner-icon: var(--ref-size-8);
+  --size-application-youtube-card-icon: var(--ref-size-application-media-control);
+  --size-application-playlist-playing-badge: var(--ref-size-8);
+  --size-application-bullet-icon: var(--ref-size-6);
+  --size-application-workflow-dot: var(--ref-size-application-workflow-dot);
+  --size-application-media-play-control: var(--ref-size-application-media-control);
+  --size-application-media-zoom-control: var(--ref-size-8);
+  --size-application-modal-close-control: var(--ref-size-9);
+  --size-application-reference-icon: var(--ref-size-11);
+  --size-application-about-value-icon: var(--ref-size-10);
   --radius-control: var(--ref-radius-4);
   --radius-surface: var(--ref-radius-0);
   --radius-badge: var(--ref-radius-2);
@@ -961,6 +989,28 @@
   --control-padding-x-lg: var(--ref-space-6);
   --control-gap: var(--ref-space-2);
   --target-min: var(--ref-size-11);
+  --size-application-video-play-badge: var(--ref-size-12);
+  --size-application-partner-item-height: var(--ref-size-13);
+  --size-application-partner-logo-max-height: var(--ref-size-8);
+  --size-application-monitor-dot: var(--ref-size-application-monitor-dot);
+  --size-application-pathway-tab-icon: var(--ref-size-10);
+  --size-application-pathway-dot: var(--ref-size-application-status-dot);
+  --size-application-pathway-feature-icon: var(--ref-size-application-feature-icon);
+  --size-application-product-pulse-dot: var(--ref-size-application-pulse-dot);
+  --size-application-product-box-icon: var(--ref-size-10);
+  --size-application-product-status-dot: var(--ref-size-application-status-dot);
+  --size-application-benefit-icon: var(--ref-size-13);
+  --size-application-benefit-image: var(--ref-size-8);
+  --size-application-youtube-banner-icon: var(--ref-size-8);
+  --size-application-youtube-card-icon: var(--ref-size-application-media-control);
+  --size-application-playlist-playing-badge: var(--ref-size-8);
+  --size-application-bullet-icon: var(--ref-size-6);
+  --size-application-workflow-dot: var(--ref-size-application-workflow-dot);
+  --size-application-media-play-control: var(--ref-size-application-media-control);
+  --size-application-media-zoom-control: var(--ref-size-8);
+  --size-application-modal-close-control: var(--ref-size-9);
+  --size-application-reference-icon: var(--ref-size-11);
+  --size-application-about-value-icon: var(--ref-size-10);
   --radius-control: var(--ref-radius-4);
   --radius-surface: var(--ref-radius-0);
   --radius-badge: var(--ref-radius-2);
@@ -1490,6 +1540,28 @@
   --control-padding-x-lg: var(--ref-space-5);
   --control-gap: var(--ref-space-2);
   --target-min: var(--ref-size-10);
+  --size-application-video-play-badge: var(--ref-size-12);
+  --size-application-partner-item-height: var(--ref-size-13);
+  --size-application-partner-logo-max-height: var(--ref-size-8);
+  --size-application-monitor-dot: var(--ref-size-application-monitor-dot);
+  --size-application-pathway-tab-icon: var(--ref-size-10);
+  --size-application-pathway-dot: var(--ref-size-application-status-dot);
+  --size-application-pathway-feature-icon: var(--ref-size-application-feature-icon);
+  --size-application-product-pulse-dot: var(--ref-size-application-pulse-dot);
+  --size-application-product-box-icon: var(--ref-size-10);
+  --size-application-product-status-dot: var(--ref-size-application-status-dot);
+  --size-application-benefit-icon: var(--ref-size-13);
+  --size-application-benefit-image: var(--ref-size-8);
+  --size-application-youtube-banner-icon: var(--ref-size-8);
+  --size-application-youtube-card-icon: var(--ref-size-application-media-control);
+  --size-application-playlist-playing-badge: var(--ref-size-8);
+  --size-application-bullet-icon: var(--ref-size-6);
+  --size-application-workflow-dot: var(--ref-size-application-workflow-dot);
+  --size-application-media-play-control: var(--ref-size-application-media-control);
+  --size-application-media-zoom-control: var(--ref-size-8);
+  --size-application-modal-close-control: var(--ref-size-9);
+  --size-application-reference-icon: var(--ref-size-11);
+  --size-application-about-value-icon: var(--ref-size-10);
   --radius-control: var(--ref-radius-full);
   --radius-surface: var(--ref-radius-16);
   --radius-badge: var(--ref-radius-full);
@@ -2951,8 +3023,8 @@ button.alu-role[aria-checked="true"] {
   position: absolute;
   inset: 0;
   margin: auto;
-  width: 3rem;
-  height: 3rem;
+  width: var(--size-application-video-play-badge);
+  height: var(--size-application-video-play-badge);
   border-radius: var(--radius-round);
   background: var(--action-primary-bg);
   color: var(--action-primary-fg);
@@ -2986,14 +3058,14 @@ button.alu-role[aria-checked="true"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 3.25rem;
+  height: var(--size-application-partner-item-height);
   padding: var(--space-stack-sm) var(--space-application-card-compact-gap);
   background: var(--surface-subtle);
   border: var(--border-width-default) solid var(--border-subtle);
   border-radius: var(--radius-control);
 }
 .alu-partner-strip__item img {
-  max-height: 2rem;
+  max-height: var(--size-application-partner-logo-max-height);
   max-width: 100%;
   width: auto;
   object-fit: contain;
@@ -3228,8 +3300,8 @@ button.alu-role[aria-checked="true"] {
   color: var(--text-on-brand);
 }
 .alu-hero-monitor__dot {
-  width: 0.5rem;
-  height: 0.5rem;
+  width: var(--size-application-monitor-dot);
+  height: var(--size-application-monitor-dot);
   border-radius: var(--radius-round);
   background: var(--accent-fg);
   box-shadow: 0 0 10px var(--accent-fg);
@@ -3442,8 +3514,8 @@ button.alu-role[aria-checked="true"] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: var(--size-application-pathway-tab-icon);
+  height: var(--size-application-pathway-tab-icon);
   background: var(--surface-subtle);
   border: var(--border-width-default) solid var(--border-default);
   color: var(--text-secondary);
@@ -3473,8 +3545,8 @@ button.alu-role[aria-checked="true"] {
   letter-spacing: var(--font-letter-spacing-application-technical);
 }
 .alu-pathway-tab__dot {
-  width: 0.55rem;
-  height: 0.55rem;
+  width: var(--size-application-pathway-dot);
+  height: var(--size-application-pathway-dot);
   border-radius: var(--radius-round);
   background: var(--border-strong);
   transition: all var(--motion-duration-interactive) var(--motion-easing-default);
@@ -3601,8 +3673,8 @@ button.alu-role[aria-checked="true"] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.75rem;
-  height: 1.75rem;
+  width: var(--size-application-pathway-feature-icon);
+  height: var(--size-application-pathway-feature-icon);
   border-radius: var(--radius-round);
   background: color-mix(in srgb, var(--role-accent, var(--role-architect)) 16%, transparent);
   color: var(--role-accent, var(--role-architect));
@@ -3745,8 +3817,8 @@ button.alu-role[aria-checked="true"] {
   letter-spacing: var(--font-letter-spacing-application-label);
 }
 .alu-product-card__pulse-dot {
-  width: 0.45rem;
-  height: 0.45rem;
+  width: var(--size-application-product-pulse-dot);
+  height: var(--size-application-product-pulse-dot);
   border-radius: var(--radius-round);
   background: var(--role-accent, var(--role-architect));
   box-shadow: 0 0 8px var(--role-accent, var(--role-architect));
@@ -3768,8 +3840,8 @@ button.alu-role[aria-checked="true"] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: var(--size-application-product-box-icon);
+  height: var(--size-application-product-box-icon);
   background: var(--surface-default);
   border: var(--border-width-default) solid var(--border-default);
   color: var(--text-secondary);
@@ -3785,8 +3857,8 @@ button.alu-role[aria-checked="true"] {
   color: var(--role-accent, var(--role-architect));
 }
 .alu-product-card__status-dot {
-  width: 0.55rem;
-  height: 0.55rem;
+  width: var(--size-application-product-status-dot);
+  height: var(--size-application-product-status-dot);
   border-radius: var(--radius-round);
   background: transparent;
   transition: all var(--motion-duration-interactive) var(--motion-easing-default);
@@ -4242,8 +4314,8 @@ button.alu-role[aria-checked="true"] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 3.25rem;
-  height: 3.25rem;
+  width: var(--size-application-benefit-icon);
+  height: var(--size-application-benefit-icon);
   padding: var(--space-stack-sm);
   background: var(--surface-raised);
   border: var(--border-width-default) solid var(--border-strong);
@@ -4251,8 +4323,8 @@ button.alu-role[aria-checked="true"] {
   flex-shrink: 0;
 }
 .alu-benefit-icon img {
-  width: 2rem;
-  height: 2rem;
+  width: var(--size-application-benefit-image);
+  height: var(--size-application-benefit-image);
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
@@ -4350,8 +4422,8 @@ button.alu-role[aria-checked="true"] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2rem;
-  height: 2rem;
+  width: var(--size-application-youtube-banner-icon);
+  height: var(--size-application-youtube-banner-icon);
   background: var(--visual-youtube-badge-surface);
   color: var(--visual-youtube-accent);
 }
@@ -4443,8 +4515,8 @@ button.alu-role[aria-checked="true"] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: var(--size-application-youtube-card-icon);
+  height: var(--size-application-youtube-card-icon);
   background: var(--visual-youtube-card-icon-surface);
   color: var(--visual-youtube-accent);
   transition:
@@ -4655,8 +4727,8 @@ button.alu-role[aria-checked="true"] {
   justify-content: center;
 }
 .alu-playlist-item__playing-badge {
-  width: 2rem;
-  height: 2rem;
+  width: var(--size-application-playlist-playing-badge);
+  height: var(--size-application-playlist-playing-badge);
   border-radius: var(--radius-round);
   background: var(--action-primary-bg);
   color: var(--action-primary-fg);
@@ -4734,8 +4806,8 @@ button.alu-role[aria-checked="true"] {
   color: var(--text-secondary);
 }
 .alu-intro-split__bullet-icon {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: var(--size-application-bullet-icon);
+  height: var(--size-application-bullet-icon);
   border-radius: var(--radius-round);
   background: var(--accent-soft);
   border: var(--border-width-default) solid var(--accent-border);
@@ -4802,8 +4874,8 @@ button.alu-role[aria-checked="true"] {
   text-decoration: none;
 }
 .alu-workflow-pill__dot {
-  width: 0.6rem;
-  height: 0.6rem;
+  width: var(--size-application-workflow-dot);
+  height: var(--size-application-workflow-dot);
   border-radius: var(--radius-round);
   flex-shrink: 0;
 }
@@ -5008,8 +5080,8 @@ button.alu-role[aria-checked="true"] {
   pointer-events: none;
 }
 .alu-media-card__play-circle {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: var(--size-application-media-play-control);
+  height: var(--size-application-media-play-control);
   border-radius: var(--radius-round);
   background: var(--visual-media-play-surface);
   border: var(--border-width-strong) solid var(--visual-media-play-border);
@@ -5029,8 +5101,8 @@ button.alu-role[aria-checked="true"] {
   bottom: var(--space-application-media-control-inset);
   right: var(--space-application-media-control-inset);
   z-index: 2;
-  width: 2rem;
-  height: 2rem;
+  width: var(--size-application-media-zoom-control);
+  height: var(--size-application-media-zoom-control);
   border-radius: var(--radius-round);
   background: var(--visual-media-zoom-surface);
   border: var(--border-width-default) solid var(--visual-media-border-strong);
@@ -5465,8 +5537,8 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 }
 .alu-video-modal__close {
   flex-shrink: 0;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: var(--size-application-modal-close-control);
+  height: var(--size-application-modal-close-control);
   background: var(--surface-subtle);
   border: var(--border-width-default) solid var(--border-default);
   color: var(--text-primary);
@@ -5748,8 +5820,8 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.75rem;
-  height: 2.75rem;
+  width: var(--size-application-reference-icon);
+  height: var(--size-application-reference-icon);
   flex-shrink: 0;
   background: var(--surface-raised);
   border: var(--border-width-default) solid var(--border-default);
@@ -6051,8 +6123,8 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: var(--size-application-about-value-icon);
+  height: var(--size-application-about-value-icon);
   color: var(--accent-fg);
   background: var(--accent-subtle);
   border: var(--border-width-default) solid var(--accent-border);

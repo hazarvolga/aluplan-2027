@@ -295,6 +295,12 @@
   --ref-size-11: 2.75rem;
   --ref-size-12: 3rem;
   --ref-size-13: 3.25rem;
+  --ref-size-application-pulse-dot: 0.45rem;
+  --ref-size-application-monitor-dot: 0.5rem;
+  --ref-size-application-status-dot: 0.55rem;
+  --ref-size-application-workflow-dot: 0.6rem;
+  --ref-size-application-feature-icon: 1.75rem;
+  --ref-size-application-media-control: 3.5rem;
   --ref-size-container640: 40rem;
   --ref-size-container768: 48rem;
   --ref-size-container1024: 64rem;

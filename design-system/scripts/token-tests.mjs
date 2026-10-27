@@ -207,6 +207,36 @@ export function runTokenTests({ build = buildTokens, lint = lintComponentCss, T,
     }
     return true;
   });
+  test('application component-size tokens preserve their original dimensions', () => {
+    const expected = {
+      '--size-application-video-play-badge': '3rem',
+      '--size-application-partner-item-height': '3.25rem',
+      '--size-application-partner-logo-max-height': '2rem',
+      '--size-application-monitor-dot': '0.5rem',
+      '--size-application-pathway-tab-icon': '2.5rem',
+      '--size-application-pathway-dot': '0.55rem',
+      '--size-application-pathway-feature-icon': '1.75rem',
+      '--size-application-product-pulse-dot': '0.45rem',
+      '--size-application-product-box-icon': '2.5rem',
+      '--size-application-product-status-dot': '0.55rem',
+      '--size-application-benefit-icon': '3.25rem',
+      '--size-application-benefit-image': '2rem',
+      '--size-application-youtube-banner-icon': '2rem',
+      '--size-application-youtube-card-icon': '3.5rem',
+      '--size-application-playlist-playing-badge': '2rem',
+      '--size-application-bullet-icon': '1.5rem',
+      '--size-application-workflow-dot': '0.6rem',
+      '--size-application-media-play-control': '3.5rem',
+      '--size-application-media-zoom-control': '2rem',
+      '--size-application-modal-close-control': '2.25rem',
+      '--size-application-reference-icon': '2.75rem',
+      '--size-application-about-value-icon': '2.5rem'
+    };
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      for (const [name, value] of Object.entries(expected)) if (values[name] !== value) return `${theme}/${mode} ${name}: expected ${value}, got ${values[name]}`;
+    }
+    return true;
+  });
   return { results, passed: results.filter(r => r.pass).length, failed: results.filter(r => !r.pass).length };
 }
 

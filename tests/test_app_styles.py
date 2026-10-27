@@ -1,6 +1,7 @@
 """The app stylesheet must follow canonical DS sources in an explicit cascade order."""
 import importlib.util
 from pathlib import Path
+import re
 import tempfile
 import unittest
 
@@ -168,3 +169,37 @@ class AppStylesTests(unittest.TestCase):
                 with self.subTest(declaration=declaration), self.assertRaisesRegex(ValueError, 'Raw application metric'):
                     styles.sync_styles(root)
                 self.assertEqual((root / styles.OUTPUT).read_bytes(), before)
+
+    def test_tokenized_component_sizes_have_no_raw_dimensions(self):
+        source = (ROOT / 'src/styles/application.css').read_text(encoding='utf-8')
+        expected = {
+            '.alu-video-play-badge': {'width': '--size-application-video-play-badge', 'height': '--size-application-video-play-badge'},
+            '.alu-partner-strip__item': {'height': '--size-application-partner-item-height'},
+            '.alu-partner-strip__item img': {'max-height': '--size-application-partner-logo-max-height'},
+            '.alu-hero-monitor__dot': {'width': '--size-application-monitor-dot', 'height': '--size-application-monitor-dot'},
+            '.alu-pathway-tab__icon': {'width': '--size-application-pathway-tab-icon', 'height': '--size-application-pathway-tab-icon'},
+            '.alu-pathway-tab__dot': {'width': '--size-application-pathway-dot', 'height': '--size-application-pathway-dot'},
+            '.alu-pathway-feature-card__icon': {'width': '--size-application-pathway-feature-icon', 'height': '--size-application-pathway-feature-icon'},
+            '.alu-product-card__pulse-dot': {'width': '--size-application-product-pulse-dot', 'height': '--size-application-product-pulse-dot'},
+            '.alu-product-card__box-icon': {'width': '--size-application-product-box-icon', 'height': '--size-application-product-box-icon'},
+            '.alu-product-card__status-dot': {'width': '--size-application-product-status-dot', 'height': '--size-application-product-status-dot'},
+            '.alu-benefit-icon': {'width': '--size-application-benefit-icon', 'height': '--size-application-benefit-icon'},
+            '.alu-benefit-icon img': {'width': '--size-application-benefit-image', 'height': '--size-application-benefit-image'},
+            '.alu-yt-banner__badge-icon': {'width': '--size-application-youtube-banner-icon', 'height': '--size-application-youtube-banner-icon'},
+            '.alu-yt-card__icon': {'width': '--size-application-youtube-card-icon', 'height': '--size-application-youtube-card-icon'},
+            '.alu-playlist-item__playing-badge': {'width': '--size-application-playlist-playing-badge', 'height': '--size-application-playlist-playing-badge'},
+            '.alu-intro-split__bullet-icon': {'width': '--size-application-bullet-icon', 'height': '--size-application-bullet-icon'},
+            '.alu-workflow-pill__dot': {'width': '--size-application-workflow-dot', 'height': '--size-application-workflow-dot'},
+            '.alu-media-card__play-circle': {'width': '--size-application-media-play-control', 'height': '--size-application-media-play-control'},
+            '.alu-media-card__zoom-hint': {'width': '--size-application-media-zoom-control', 'height': '--size-application-media-zoom-control'},
+            '.alu-video-modal__close': {'width': '--size-application-modal-close-control', 'height': '--size-application-modal-close-control'},
+            '.alu-ref-card__icon': {'width': '--size-application-reference-icon', 'height': '--size-application-reference-icon'},
+            '.alu-about-value-item__icon': {'width': '--size-application-about-value-icon', 'height': '--size-application-about-value-icon'},
+        }
+        for selector, properties in expected.items():
+            match = re.search(re.escape(selector) + r'\s*\{([^{}]*)\}', source)
+            self.assertIsNotNone(match, selector)
+            declarations = match.group(1)
+            with self.subTest(selector=selector):
+                for prop, token in properties.items():
+                    self.assertRegex(declarations, rf'(?m)^\s*{re.escape(prop)}\s*:\s*var\({re.escape(token)}\);')

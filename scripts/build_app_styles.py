@@ -67,8 +67,10 @@ def validate_application_transforms(source):
             raise ValueError('Raw application transform: functional literal moved outside its selector contract')
 
 
-def validate_application_metrics(source):
+def validate_application_metrics(source, defined_vars=None):
     """Guard migrated design properties; structural zeros and layout rules remain valid."""
+    source = re.sub(r'/\*[\s\S]*?\*/', '', source)
+    defined_vars = defined_vars or set()
     skip_link_rule = re.compile(r'(^|})\s*\.alu-skip-link\s*\{([^{}]*)\}', re.M)
     source = skip_link_rule.sub(lambda match: match.group(1) + '.alu-skip-link {' + re.sub(
         r'(?<![\w-])left\s*:\s*-9999px\s*;?', '', match.group(2), flags=re.I
@@ -78,6 +80,11 @@ def validate_application_metrics(source):
         if prop.lower() in {'filter', 'backdrop-filter', '-webkit-backdrop-filter'}:
             if not re.fullmatch(r'var\(--filter-[\w-]+\)', value.strip()):
                 raise ValueError('Raw application filter: use a semantic filter token')
+            continue
+        if prop.lower() == 'box-shadow':
+            token = re.fullmatch(r'var\((--(?:shadow|elevation)-[\w-]+)\)', value.strip())
+            if not token or token.group(1) not in defined_vars:
+                raise ValueError('Raw application shadow: use a semantic shadow or elevation token')
             continue
         if BORDER_PROPERTY.fullmatch(prop.lower()):
             unit_pattern = r'[a-zA-Z]+\b|%' if prop.lower() == 'border-image-width' else r'[a-zA-Z]+\b'
@@ -108,14 +115,17 @@ def validate_application_metrics(source):
 def build_styles(root=ROOT):
     """Read all inputs before writing; the tuple order is the app cascade contract."""
     parts = []
+    canonical_vars = set()
     for label, relative in SOURCES:
         content = (root / relative).read_text(encoding='utf-8')
+        if label in {'semantic.css', 'component-aliases.css'}:
+            canonical_vars.update(re.findall(r'(--[\w-]+)\s*:', content))
         if label == 'application.css':
             source = re.sub(r'/\*[\s\S]*?\*/', '', content)
             if re.search(r'#[0-9a-fA-F]{3,8}\b|\b(?:rgba?|hsla?|hwb|lab|lch|oklab|oklch|color)\(', source, re.IGNORECASE):
                 raise ValueError('Raw application color: use a semantic token from tokens.json')
             validate_application_transforms(source)
-            validate_application_metrics(source)
+            validate_application_metrics(source, canonical_vars)
         if label == 'fonts.css':
             content = content.replace('../assets/fonts/', '/assets/fonts/')
         parts.append(f'/* === {label} === */\n{content.rstrip()}\n')

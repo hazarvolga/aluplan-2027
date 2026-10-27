@@ -354,6 +354,34 @@ export function runTokenTests({ build = buildTokens, lint = lintComponentCss, T,
     }
     return true;
   });
+  test('application shadow tokens preserve their original compositions', () => {
+    const expected = {
+      '--shadow-application-role-selected-ring': 'inset 0 0 0 1px var(--accent-border)',
+      '--shadow-application-header': '0 8px 32px var(--visual-shadow-header)',
+      '--shadow-application-mega-menu': '0 24px 64px var(--visual-shadow-strong)',
+      '--shadow-application-header-light': '0 4px 20px var(--visual-shadow-header-light)',
+      '--shadow-application-mega-menu-light': '0 18px 42px var(--visual-shadow-menu-light)',
+      '--shadow-application-hero-monitor': '0 24px 64px var(--visual-shadow-monitor)',
+      '--shadow-application-monitor-status-glow': '0 0 10px var(--accent-fg)',
+      '--shadow-application-pathway-tab-active': '0 18px 40px -12px var(--visual-shadow-media), 0 0 0 1px var(--tab-accent, var(--accent-border))',
+      '--shadow-application-pathway-dot-glow': '0 0 12px var(--tab-accent, var(--role-architect))',
+      '--shadow-application-pathway-cta-hover': '0 10px 28px -8px color-mix(in srgb, var(--role-accent, var(--role-architect)) 45%, transparent)',
+      '--shadow-application-product-highlighted': '0 20px 44px -15px var(--visual-shadow-strong)',
+      '--shadow-application-product-highlighted-hover': '0 24px 52px -12px var(--visual-shadow-product-hover), 0 0 24px -8px color-mix(in srgb, var(--role-accent, var(--role-architect)) 40%, transparent)',
+      '--shadow-application-product-dimmed': 'none',
+      '--shadow-application-product-pulse-glow': '0 0 8px var(--role-accent, var(--role-architect))',
+      '--shadow-application-product-status-glow': '0 0 10px var(--role-accent, var(--role-architect))',
+      '--shadow-application-youtube-subscribe': '0 14px 32px -8px var(--visual-youtube-action-shadow)',
+      '--shadow-application-youtube-subscribe-hover': '0 18px 38px -8px var(--visual-youtube-action-hover-shadow)',
+      '--shadow-application-media-play-control': '0 12px 28px var(--visual-shadow-media)',
+      '--shadow-application-modal-dialog': '0 32px 80px var(--visual-shadow-modal)',
+      '--shadow-application-reference-tab-active': '0 4px 16px var(--visual-reference-active-shadow)'
+    };
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      for (const [name, value] of Object.entries(expected)) if (values[name] !== value) return `${theme}/${mode} ${name}: expected ${value}, got ${values[name]}`;
+    }
+    return true;
+  });
   return { results, passed: results.filter(r => r.pass).length, failed: results.filter(r => !r.pass).length };
 }
 

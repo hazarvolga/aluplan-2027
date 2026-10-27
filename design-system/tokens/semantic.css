@@ -288,6 +288,26 @@
   --filter-backdrop-header: var(--ref-filter-application-backdrop-header); /* @kind other */
   --filter-backdrop-media-badge: var(--ref-filter-application-backdrop-media-badge); /* @kind other */
   --filter-backdrop-modal: var(--ref-filter-application-backdrop-modal); /* @kind other */
+  --shadow-application-role-selected-ring: inset 0 0 0 var(--ref-border-width-1) var(--accent-border); /* @kind other */
+  --shadow-application-header: var(--ref-shadow-geometry-header) var(--visual-shadow-header); /* @kind other */
+  --shadow-application-mega-menu: var(--ref-shadow-geometry-deep-panel) var(--visual-shadow-strong); /* @kind other */
+  --shadow-application-header-light: var(--ref-shadow-geometry-header-light) var(--visual-shadow-header-light); /* @kind other */
+  --shadow-application-mega-menu-light: var(--ref-shadow-geometry-mega-menu-light) var(--visual-shadow-menu-light); /* @kind other */
+  --shadow-application-hero-monitor: var(--ref-shadow-geometry-deep-panel) var(--visual-shadow-monitor); /* @kind other */
+  --shadow-application-monitor-status-glow: var(--ref-shadow-geometry-glow10) var(--accent-fg); /* @kind other */
+  --shadow-application-pathway-tab-active: var(--ref-shadow-geometry-pathway-tab) var(--visual-shadow-media), var(--ref-shadow-geometry-flat-ring) var(--tab-accent, var(--accent-border)); /* @kind other */
+  --shadow-application-pathway-dot-glow: var(--ref-shadow-geometry-glow12) var(--tab-accent, var(--role-architect)); /* @kind other */
+  --shadow-application-pathway-cta-hover: var(--ref-shadow-geometry-pathway-cta) color-mix(in srgb, var(--role-accent, var(--role-architect)) 45%, transparent); /* @kind other */
+  --shadow-application-product-highlighted: var(--ref-shadow-geometry-product-highlighted) var(--visual-shadow-strong); /* @kind other */
+  --shadow-application-product-highlighted-hover: var(--ref-shadow-geometry-product-hover) var(--visual-shadow-product-hover), var(--ref-shadow-geometry-product-hover-glow) color-mix(in srgb, var(--role-accent, var(--role-architect)) 40%, transparent); /* @kind other */
+  --shadow-application-product-dimmed: var(--ref-shadow-none); /* @kind other */
+  --shadow-application-product-pulse-glow: var(--ref-shadow-geometry-glow8) var(--role-accent, var(--role-architect)); /* @kind other */
+  --shadow-application-product-status-glow: var(--ref-shadow-geometry-glow10) var(--role-accent, var(--role-architect)); /* @kind other */
+  --shadow-application-youtube-subscribe: var(--ref-shadow-geometry-youtube-subscribe) var(--visual-youtube-action-shadow); /* @kind other */
+  --shadow-application-youtube-subscribe-hover: var(--ref-shadow-geometry-youtube-subscribe-hover) var(--visual-youtube-action-hover-shadow); /* @kind other */
+  --shadow-application-media-play-control: var(--ref-shadow-geometry-media-play) var(--visual-shadow-media); /* @kind other */
+  --shadow-application-modal-dialog: var(--ref-shadow-geometry-modal) var(--visual-shadow-modal); /* @kind other */
+  --shadow-application-reference-tab-active: var(--ref-shadow-geometry-reference-active) var(--visual-reference-active-shadow); /* @kind other */
   --z-base: var(--ref-z-index-0); /* @kind other */
   --z-sticky: var(--ref-z-index-100); /* @kind other */
   --z-dropdown: var(--ref-z-index-200); /* @kind other */
@@ -772,6 +792,26 @@
   --filter-backdrop-header: var(--ref-filter-application-backdrop-header); /* @kind other */
   --filter-backdrop-media-badge: var(--ref-filter-application-backdrop-media-badge); /* @kind other */
   --filter-backdrop-modal: var(--ref-filter-application-backdrop-modal); /* @kind other */
+  --shadow-application-role-selected-ring: inset 0 0 0 var(--ref-border-width-1) var(--accent-border); /* @kind other */
+  --shadow-application-header: var(--ref-shadow-geometry-header) var(--visual-shadow-header); /* @kind other */
+  --shadow-application-mega-menu: var(--ref-shadow-geometry-deep-panel) var(--visual-shadow-strong); /* @kind other */
+  --shadow-application-header-light: var(--ref-shadow-geometry-header-light) var(--visual-shadow-header-light); /* @kind other */
+  --shadow-application-mega-menu-light: var(--ref-shadow-geometry-mega-menu-light) var(--visual-shadow-menu-light); /* @kind other */
+  --shadow-application-hero-monitor: var(--ref-shadow-geometry-deep-panel) var(--visual-shadow-monitor); /* @kind other */
+  --shadow-application-monitor-status-glow: var(--ref-shadow-geometry-glow10) var(--accent-fg); /* @kind other */
+  --shadow-application-pathway-tab-active: var(--ref-shadow-geometry-pathway-tab) var(--visual-shadow-media), var(--ref-shadow-geometry-flat-ring) var(--tab-accent, var(--accent-border)); /* @kind other */
+  --shadow-application-pathway-dot-glow: var(--ref-shadow-geometry-glow12) var(--tab-accent, var(--role-architect)); /* @kind other */
+  --shadow-application-pathway-cta-hover: var(--ref-shadow-geometry-pathway-cta) color-mix(in srgb, var(--role-accent, var(--role-architect)) 45%, transparent); /* @kind other */
+  --shadow-application-product-highlighted: var(--ref-shadow-geometry-product-highlighted) var(--visual-shadow-strong); /* @kind other */
+  --shadow-application-product-highlighted-hover: var(--ref-shadow-geometry-product-hover) var(--visual-shadow-product-hover), var(--ref-shadow-geometry-product-hover-glow) color-mix(in srgb, var(--role-accent, var(--role-architect)) 40%, transparent); /* @kind other */
+  --shadow-application-product-dimmed: var(--ref-shadow-none); /* @kind other */
+  --shadow-application-product-pulse-glow: var(--ref-shadow-geometry-glow8) var(--role-accent, var(--role-architect)); /* @kind other */
+  --shadow-application-product-status-glow: var(--ref-shadow-geometry-glow10) var(--role-accent, var(--role-architect)); /* @kind other */
+  --shadow-application-youtube-subscribe: var(--ref-shadow-geometry-youtube-subscribe) var(--visual-youtube-action-shadow); /* @kind other */
+  --shadow-application-youtube-subscribe-hover: var(--ref-shadow-geometry-youtube-subscribe-hover) var(--visual-youtube-action-hover-shadow); /* @kind other */
+  --shadow-application-media-play-control: var(--ref-shadow-geometry-media-play) var(--visual-shadow-media); /* @kind other */
+  --shadow-application-modal-dialog: var(--ref-shadow-geometry-modal) var(--visual-shadow-modal); /* @kind other */
+  --shadow-application-reference-tab-active: var(--ref-shadow-geometry-reference-active) var(--visual-reference-active-shadow); /* @kind other */
   --z-base: var(--ref-z-index-0); /* @kind other */
   --z-sticky: var(--ref-z-index-100); /* @kind other */
   --z-dropdown: var(--ref-z-index-200); /* @kind other */
@@ -1392,6 +1432,26 @@
   --filter-backdrop-header: var(--ref-filter-application-backdrop-header); /* @kind other */
   --filter-backdrop-media-badge: var(--ref-filter-application-backdrop-media-badge); /* @kind other */
   --filter-backdrop-modal: var(--ref-filter-application-backdrop-modal); /* @kind other */
+  --shadow-application-role-selected-ring: inset 0 0 0 var(--ref-border-width-1) var(--accent-border); /* @kind other */
+  --shadow-application-header: var(--ref-shadow-geometry-header) var(--visual-shadow-header); /* @kind other */
+  --shadow-application-mega-menu: var(--ref-shadow-geometry-deep-panel) var(--visual-shadow-strong); /* @kind other */
+  --shadow-application-header-light: var(--ref-shadow-geometry-header-light) var(--visual-shadow-header-light); /* @kind other */
+  --shadow-application-mega-menu-light: var(--ref-shadow-geometry-mega-menu-light) var(--visual-shadow-menu-light); /* @kind other */
+  --shadow-application-hero-monitor: var(--ref-shadow-geometry-deep-panel) var(--visual-shadow-monitor); /* @kind other */
+  --shadow-application-monitor-status-glow: var(--ref-shadow-geometry-glow10) var(--accent-fg); /* @kind other */
+  --shadow-application-pathway-tab-active: var(--ref-shadow-geometry-pathway-tab) var(--visual-shadow-media), var(--ref-shadow-geometry-flat-ring) var(--tab-accent, var(--accent-border)); /* @kind other */
+  --shadow-application-pathway-dot-glow: var(--ref-shadow-geometry-glow12) var(--tab-accent, var(--role-architect)); /* @kind other */
+  --shadow-application-pathway-cta-hover: var(--ref-shadow-geometry-pathway-cta) color-mix(in srgb, var(--role-accent, var(--role-architect)) 45%, transparent); /* @kind other */
+  --shadow-application-product-highlighted: var(--ref-shadow-geometry-product-highlighted) var(--visual-shadow-strong); /* @kind other */
+  --shadow-application-product-highlighted-hover: var(--ref-shadow-geometry-product-hover) var(--visual-shadow-product-hover), var(--ref-shadow-geometry-product-hover-glow) color-mix(in srgb, var(--role-accent, var(--role-architect)) 40%, transparent); /* @kind other */
+  --shadow-application-product-dimmed: var(--ref-shadow-none); /* @kind other */
+  --shadow-application-product-pulse-glow: var(--ref-shadow-geometry-glow8) var(--role-accent, var(--role-architect)); /* @kind other */
+  --shadow-application-product-status-glow: var(--ref-shadow-geometry-glow10) var(--role-accent, var(--role-architect)); /* @kind other */
+  --shadow-application-youtube-subscribe: var(--ref-shadow-geometry-youtube-subscribe) var(--visual-youtube-action-shadow); /* @kind other */
+  --shadow-application-youtube-subscribe-hover: var(--ref-shadow-geometry-youtube-subscribe-hover) var(--visual-youtube-action-hover-shadow); /* @kind other */
+  --shadow-application-media-play-control: var(--ref-shadow-geometry-media-play) var(--visual-shadow-media); /* @kind other */
+  --shadow-application-modal-dialog: var(--ref-shadow-geometry-modal) var(--visual-shadow-modal); /* @kind other */
+  --shadow-application-reference-tab-active: var(--ref-shadow-geometry-reference-active) var(--visual-reference-active-shadow); /* @kind other */
   --z-base: var(--ref-z-index-0); /* @kind other */
   --z-sticky: var(--ref-z-index-100); /* @kind other */
   --z-dropdown: var(--ref-z-index-200); /* @kind other */

@@ -19,6 +19,8 @@ class AppStylesTests(unittest.TestCase):
             content = f'.source-{index} {{ color: var(--text-primary); }}\n'
             if label == 'fonts.css':
                 content = "@font-face { src: url('../assets/fonts/test.woff2'); }\n"
+            if label == 'semantic.css':
+                content = ':root { --shadow-application-header: none; --elevation-raised: none; }\n'
             target.write_text(content)
 
     def test_canonical_sources_and_app_rules_keep_the_explicit_cascade_order(self):
@@ -487,3 +489,64 @@ class AppStylesTests(unittest.TestCase):
                     app.write_text(f'.card {{{prop}:{value}}}')
                     with self.subTest(prop=prop, value=value), self.assertRaisesRegex(ValueError, 'Raw application filter'):
                         styles.sync_styles(root)
+
+    def test_application_shadows_use_semantic_tokens(self):
+        source = (ROOT / 'src/styles/application.css').read_text(encoding='utf-8')
+        expected = {
+            'button.alu-role[aria-checked="true"]': '--shadow-application-role-selected-ring',
+            '.alu-site-header': '--shadow-application-header',
+            '.alu-megamenu': '--shadow-application-mega-menu',
+            '[data-mode="light"] .alu-site-header': '--shadow-application-header-light',
+            '[data-mode="light"] .alu-megamenu': '--shadow-application-mega-menu-light',
+            '.alu-hero-monitor': '--shadow-application-hero-monitor',
+            '.alu-hero-monitor__dot': '--shadow-application-monitor-status-glow',
+            '.alu-pathway-tab--active': '--shadow-application-pathway-tab-active',
+            '.alu-pathway-tab--active .alu-pathway-tab__dot': '--shadow-application-pathway-dot-glow',
+            '.alu-pathway-cta:hover': '--shadow-application-pathway-cta-hover',
+            '.alu-product-card--highlighted': '--shadow-application-product-highlighted',
+            '.alu-product-card--highlighted:hover': '--shadow-application-product-highlighted-hover',
+            '.alu-product-card--dimmed': '--shadow-application-product-dimmed',
+            '.alu-product-card__pulse-dot': '--shadow-application-product-pulse-glow',
+            '.alu-product-card__status-dot--active': '--shadow-application-product-status-glow',
+            '.alu-yt-subscribe-btn': '--shadow-application-youtube-subscribe',
+            '.alu-yt-subscribe-btn:hover': '--shadow-application-youtube-subscribe-hover',
+            '.alu-media-card__play-circle': '--shadow-application-media-play-control',
+            '.alu-video-modal__dialog': '--shadow-application-modal-dialog',
+            '.alu-ref-tab--active': '--shadow-application-reference-tab-active',
+        }
+        for selector, token in expected.items():
+            blocks = re.findall(rf'(?m)^[\t ]*{re.escape(selector)}[\t ]*\{{([^{{}}]*)\}}', source)
+            self.assertTrue(blocks, selector)
+            values = [re.sub(r'\s+', ' ', value).strip() for block in blocks for value in re.findall(
+                r'(?ms)^\s*box-shadow\s*:\s*(.*?);', block
+            )]
+            with self.subTest(selector=selector):
+                self.assertEqual(values.count(f'var({token})'), 1)
+                self.assertEqual(values[-1], f'var({token})')
+
+        raw = [value for value in re.findall(r'(?ms)^\s*box-shadow\s*:\s*(.*?);', source)
+               if not re.fullmatch(r'var\(--(?:shadow|elevation)-[\w-]+\)', value.strip())]
+        self.assertEqual(raw, [])
+
+    def test_application_shadow_guard_rejects_raw_wrong_namespace_and_mixed_values(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            self.fixture(root)
+            app = root / 'src/styles/application.css'
+            for value in ['var(--shadow-application-header)', 'var(--elevation-raised)']:
+                app.write_text(f'.card {{box-shadow:{value}}}')
+                styles.sync_styles(root)
+            for value in ['0 1px 2px black', 'none', 'var(--text-primary)',
+                          'var(--shadow-application-header) 0 1px 2px black',
+                          'var(--shadow-does-not-exist)', 'var(--elevation-does-not-exist)']:
+                app.write_text(f'.card {{box-shadow:{value}}}')
+                with self.subTest(value=value), self.assertRaisesRegex(ValueError, 'Raw application shadow'):
+                    styles.sync_styles(root)
+            app.write_text('.card { /* note */ box-shadow: var(--shadow-application-header) 0 1px 2px black; }')
+            with self.assertRaisesRegex(ValueError, 'Raw application shadow'):
+                styles.sync_styles(root)
+            component = root / 'design-system/components/base.css'
+            component.write_text('.only-inside-component { --shadow-local-only: none; }')
+            app.write_text('.card {box-shadow:var(--shadow-local-only)}')
+            with self.assertRaisesRegex(ValueError, 'Raw application shadow'):
+                styles.sync_styles(root)

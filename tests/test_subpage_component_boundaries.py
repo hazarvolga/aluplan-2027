@@ -162,6 +162,90 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
         self.assertEqual(extra_grid_count, 46)
         self.assertEqual(card_count, 362)
 
+    def test_split_callouts_have_a_shared_interactive_render_boundary(self):
+        component = read("src/components/sections/SplitCalloutSection.tsx")
+        parent = read("src/components/sections/SubpageView.tsx")
+
+        self.assertTrue(component.startswith("'use client';"))
+        self.assertIn("import type { StructuredSplitCallout }", component)
+        for marker in [
+            "callouts.map",
+            "itemKeyPrefix",
+            "callout.reverse ?? index % 2 === 1",
+            "https://img.youtube.com/vi/",
+            "callout.videoSrc",
+            "poster={callout.imageSrc || undefined}",
+            "muted",
+            "playsInline",
+            'preload="metadata"',
+            "role={hasVideo || thumbSrc ? 'button' : undefined}",
+            "event.key === 'Enter' || event.key === ' '",
+            "event.preventDefault()",
+            "youtubeId: callout.youtubeId",
+            "videoSrc: callout.videoSrc",
+            "src: thumbSrc",
+            "callout.paragraphs && callout.paragraphs.length > 0",
+            "callout.description",
+            "bullet.replace(/^•\\s*/, '')",
+            "POPUP VİDEO",
+            "target={callout.external ? '_blank' : undefined}",
+            "rel={callout.external ? 'noopener noreferrer' : undefined}",
+        ]:
+            with self.subTest(marker=marker):
+                self.assertIn(marker, component)
+
+        self.assertIn("import { SplitCalloutSection } from './SplitCalloutSection';", parent)
+        self.assertIn('itemKeyPrefix="callout-top"', parent)
+        self.assertIn('itemKeyPrefix="callout-bottom"', parent)
+        self.assertIn("callout.title !== 'Lisans ve Gereksinimler'", parent)
+        self.assertIn("callout.title === 'Lisans ve Gereksinimler'", parent)
+        self.assertNotIn("alu-scia-callout", parent)
+        self.assertNotIn("callout.youtubeId", parent)
+        self.assertNotIn("callout.videoSrc", parent)
+
+    def test_structured_split_callout_data_is_complete_and_assets_exist(self):
+        pages = json.loads(read("src/data/pages.json"))
+        callout_routes = set()
+        totals = {
+            "all": 0,
+            "primary": 0,
+            "bottom": 0,
+            "youtube": 0,
+            "mp4": 0,
+            "image": 0,
+        }
+
+        for route, page in pages.items():
+            callouts = (page.get("structuredLayout") or {}).get("splitCallouts") or []
+            if callouts:
+                callout_routes.add(route)
+
+            for callout in callouts:
+                totals["all"] += 1
+                self.assertTrue(callout.get("title"), route)
+                is_bottom = (
+                    callout["title"] == "Lisans ve Gereksinimler"
+                    or "SCIA Engineer" in callout["title"]
+                )
+                totals["bottom" if is_bottom else "primary"] += 1
+                totals["youtube"] += bool(callout.get("youtubeId"))
+                totals["mp4"] += bool(callout.get("videoSrc"))
+                totals["image"] += bool(callout.get("imageSrc"))
+
+                for field in ["imageSrc", "videoSrc"]:
+                    media_path = callout.get(field)
+                    if media_path and media_path.startswith("/"):
+                        self.assertTrue(
+                            (ROOT / "public" / media_path.lstrip("/")).is_file(),
+                            media_path,
+                        )
+
+        self.assertEqual(len(callout_routes), 22)
+        self.assertEqual(
+            totals,
+            {"all": 62, "primary": 52, "bottom": 10, "youtube": 27, "mp4": 5, "image": 30},
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

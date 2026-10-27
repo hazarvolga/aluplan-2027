@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { getHomepageData } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
 import type { AluIconName } from '@/components/ui/AluIcon';
+import { handleStructuredTabKey } from './structured-tab-key';
 
 const data = getHomepageData();
 const services = data.services;
@@ -48,13 +49,25 @@ export function ProfessionalServicesSection() {
             <button
               key={group.title}
               type="button"
+              id={`services-tab-${idx}`}
               role="tab"
               aria-selected={activeGroupIdx === idx}
+              aria-controls="services-panel"
+              tabIndex={activeGroupIdx === idx ? 0 : -1}
               className={`alu-service-pill${activeGroupIdx === idx ? ' alu-service-pill--active' : ''}`}
               onClick={() => {
                 setActiveGroupIdx(idx);
                 setShowAllServices(false);
               }}
+              onKeyDown={(event) => handleStructuredTabKey(
+                event,
+                idx,
+                serviceGroups.length,
+                (nextIndex) => {
+                  setActiveGroupIdx(nextIndex);
+                  setShowAllServices(false);
+                }
+              )}
             >
               <span>{group.title}</span>
               <span className="alu-service-pill__count">{group.serviceTitles.length}</span>
@@ -62,7 +75,12 @@ export function ProfessionalServicesSection() {
           ))}
         </div>
 
-        <div className="alu-tabs__panel">
+        <div
+          id="services-panel"
+          className="alu-tabs__panel"
+          role="tabpanel"
+          aria-labelledby={`services-tab-${activeGroupIdx}`}
+        >
           <div className="alu-services-grid">
             {serviceGroups[activeGroupIdx].serviceTitles.map((serviceName) => {
               const item = serviceByName.get(serviceName);

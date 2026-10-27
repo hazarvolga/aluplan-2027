@@ -6,6 +6,7 @@ import { getHomepageData, TRIAL_CTA_URL, MAIN_QUOTE_FORM_URL } from '@/lib/site-
 import { AluIcon } from '@/components/ui/AluIcon';
 import type { AluIconName } from '@/components/ui/AluIcon';
 import { ProfessionalServicesSection } from './ProfessionalServicesSection';
+import { handleStructuredTabKey } from './structured-tab-key';
 
 const data = getHomepageData();
 const releaseCountryLabel = `${data.releaseLabel} · TÜRKİYE`;
@@ -184,10 +185,17 @@ export function HomepageView() {
                   type="button"
                   role="tab"
                   aria-selected={isSelected}
-                  aria-controls={`pathway-panel-${role.id}`}
+                  aria-controls="pathway-panel"
+                  tabIndex={isSelected ? 0 : -1}
                   className={`alu-pathway-tab${isSelected ? ' alu-pathway-tab--active' : ''}`}
                   style={{ '--tab-accent': roleColor } as React.CSSProperties}
                   onClick={() => setRoleId(role.id)}
+                  onKeyDown={(event) => handleStructuredTabKey(
+                    event,
+                    rIdx,
+                    data.roles.length,
+                    (nextIndex) => setRoleId(data.roles[nextIndex].id)
+                  )}
                 >
                   <span className="alu-pathway-tab__icon">
                     <AluIcon name={iconName} size="md" />
@@ -204,7 +212,7 @@ export function HomepageView() {
 
           {/* Active Role Content (Split View with Smooth Keyed Entrance & Staggered Features) */}
           <div
-            id={`pathway-panel-${activeRole.id}`}
+            id="pathway-panel"
             role="tabpanel"
             aria-labelledby={`pathway-tab-${activeRole.id}`}
             className="alu-pathway-split"

@@ -4,6 +4,7 @@ import type { ReactElement } from 'react';
 import type { StructuredReferencesDirectory } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { DirectoryCategoryIcon } from './DirectoryCategoryIcon';
+import { handleStructuredTabKey } from './structured-tab-key';
 
 interface ReferencesDirectorySectionProps {
   directory: StructuredReferencesDirectory;
@@ -33,6 +34,10 @@ export function ReferencesDirectorySection({
   const activeCatObj =
     directory.categories.find((category) => category.id === activeCategoryId) ||
     directory.categories[0];
+  const activeCategoryIndex = Math.max(
+    directory.categories.findIndex((category) => category.id === activeCategoryId),
+    0
+  );
 
   return (
     <section className="preview-section" aria-label={directory.title}>
@@ -63,18 +68,27 @@ export function ReferencesDirectorySection({
             role="tablist"
             aria-label="Referans Kategorileri"
           >
-            {directory.categories.map((category) => {
+            {directory.categories.map((category, categoryIndex) => {
               const isActive = category.id === activeCategoryId;
               return (
                 <button
                   key={category.id}
                   type="button"
+                  id={`references-tab-${categoryIndex}`}
                   role="tab"
                   aria-selected={isActive}
+                  aria-controls="references-panel"
+                  tabIndex={isActive ? 0 : -1}
                   className={`alu-ref-tab${
                     isActive ? ' alu-ref-tab--active' : ''
                   }`}
                   onClick={() => onCategoryChange(category.id)}
+                  onKeyDown={(event) => handleStructuredTabKey(
+                    event,
+                    categoryIndex,
+                    directory.categories.length,
+                    (nextIndex) => onCategoryChange(directory.categories[nextIndex].id)
+                  )}
                 >
                   <span className="alu-ref-tab__icon">
                     <DirectoryCategoryIcon name={category.iconName} />
@@ -121,7 +135,12 @@ export function ReferencesDirectorySection({
         </div>
 
         {filteredRefs.length > 0 ? (
-          <div className="alu-ref-grid" role="tabpanel">
+          <div
+            id="references-panel"
+            className="alu-ref-grid"
+            role="tabpanel"
+            aria-labelledby={`references-tab-${activeCategoryIndex}`}
+          >
             {filteredRefs.map((item, referenceIndex) => (
               <article
                 key={`${item.category}-${item.name}-${referenceIndex}`}
@@ -138,7 +157,13 @@ export function ReferencesDirectorySection({
             ))}
           </div>
         ) : (
-          <div className="alu-service-card alu-stack" style={{ textAlign: 'center', padding: 'var(--space-application-jsx-empty-state-block) var(--space-application-jsx-section-inset)' }}>
+          <div
+            id="references-panel"
+            className="alu-service-card alu-stack"
+            role="tabpanel"
+            aria-labelledby={`references-tab-${activeCategoryIndex}`}
+            style={{ textAlign: 'center', padding: 'var(--space-application-jsx-empty-state-block) var(--space-application-jsx-section-inset)' }}
+          >
             <p className="alu-h3" style={{ margin: 0 }}>
               Arama kriterlerinize uygun referans bulunamadı.
             </p>

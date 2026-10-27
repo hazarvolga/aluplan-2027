@@ -39,6 +39,7 @@ export function SearchPageSection({
         <input
           type="search"
           className="alu-input"
+          aria-label="Site içeriğinde ara"
           placeholder={`Anahtar kelime girin (örn. ${homepageData.releaseLabel}, AX3000, BIMFlex, Köprü, Prekast)...`}
           value={query}
           onChange={(event) => onQueryChange(event.target.value)}

@@ -439,10 +439,19 @@ export function SubpageView({
                     <button
                       key={`${st.label}-${sIdx}`}
                       type="button"
+                      id={`module-tab-${sIdx}`}
                       role="tab"
                       aria-selected={activeTabIdx === sIdx}
+                      aria-controls="module-panel"
+                      tabIndex={activeTabIdx === sIdx ? 0 : -1}
                       className={`alu-service-pill${activeTabIdx === sIdx ? ' alu-service-pill--active' : ''}`}
                       onClick={() => setActiveTabIdx(sIdx)}
+                      onKeyDown={(event) => handleStructuredTabKey(
+                        event,
+                        sIdx,
+                        page.interactiveStates!.length,
+                        setActiveTabIdx
+                      )}
                     >
                       <span>{st.label}</span>
                       <span className="alu-service-pill__count">{st.texts.length}</span>
@@ -451,7 +460,12 @@ export function SubpageView({
                 </div>
 
                 {page.interactiveStates[activeTabIdx] && (
-                  <div className="alu-module-tabs__panel">
+                  <div
+                    id="module-panel"
+                    className="alu-module-tabs__panel"
+                    role="tabpanel"
+                    aria-labelledby={`module-tab-${activeTabIdx}`}
+                  >
                     <div className="alu-cluster" style={{ justifyContent: 'space-between', marginBottom: 'var(--space-application-jsx-section)' }}>
                       <h3 className="alu-h3">{page.interactiveStates[activeTabIdx].label}</h3>
                       <span className="alu-badge alu-badge--accent">

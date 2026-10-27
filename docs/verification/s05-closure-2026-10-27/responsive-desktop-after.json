@@ -1,0 +1,772 @@
+[
+  {
+    "route": "/",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/about",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/contact",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/gizlilik-politikasi",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/health",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/kullanim-sartlari",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/kvkk",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/package-overview",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/paket-karsilastirma",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/products",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/products/allplan",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/products/allplan-2026",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/products/allplan-2026-yenilikler",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/products/allplan-aec",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/products/allplan-basic",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/products/allplan-bimplus",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/products/allplan-cloud-services",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/products/allplan-concept",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/products/allplan-professional",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/products/allplan-ultimate",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/products/architecture",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/products/ax3000",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/products/ax3000/dokumanlar",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/products/civil",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/products/precast",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/products/precast-detail",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/products/sds2-home",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/references",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/search",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/addons",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/building-design",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/connect-license",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/connect-license/activation",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/connect-license/how-to-assign",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/connect-login",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/construction",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/faq",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/infrastructure",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/other",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training/classroom",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training/e-learning",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training/events",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training/individual",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training/online",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training/quick-start",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training/video-library",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training/video-library/addon-geometry",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training/video-library/allplan-reinforcement",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training/video-library/ax3000",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training/video-library/bridge-workflow-2022",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training/video-library/bridge-workflows",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training/video-library/campus-de",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training/video-library/campus-en",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training/video-library/campus-tutorials-2019-2022",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training/video-library/hello-allplan-2024",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training/video-library/konut-insaati",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training/video-library/otomatik-donati",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training/video-library/quickstart-buildings",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training/video-library/road-design",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training/video-library/sds2-intro",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions-v2/training/webinar",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/addons",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/addons/2d-dwg-converter",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/addons/drive-curve",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/addons/geometry-tools",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/addons/graphical-text",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/addons/parametric-terrain",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/addons/ramp",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/addons/sketchup-converter",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/addons/steel-components",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/addons/three-dimensioning",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/allplan-bulut-hizmetleri",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/allplan-industry",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/architecture",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/ax3000",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/ax3000-mekanik-tesisat",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/ax3000-virtual-reality",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/ax3000-yapi-fizigi",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/ax3000/elektrik",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/ax3000/havalandirma",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/ax3000/isitma",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/ax3000/konut-havalandirma",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/ax3000/sihhi-tesisat",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/ax3000/sprinkler",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/bimflex",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/bimx5",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/bridge-design",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/cds-addon",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/features-allplan-bridge",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/imar-yonetmeligi-bim-eklentisi",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/infrastructure",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/mep",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/modeling-of-precast-girder-bridges",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/oska",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/poz-catalog",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/precast",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/pythonpart",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/rebar-engineering",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/road-railway",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/scalypso",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/scalypso/converter",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/scalypso/mobile",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/scalypso/modeler",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/scalypso/videos",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/scalypso/viewer",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/site-planning",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/steel",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  },
+  {
+    "route": "/solutions/structural",
+    "brokenLoadedImages": [],
+    "h1": 1,
+    "scrollWidth": 1163,
+    "width": 1163
+  }
+]

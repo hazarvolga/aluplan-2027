@@ -31,3 +31,23 @@ sourceImageSrc yolları veride korunur; imageSrc:null panelleri görselsiz göst
 Seçili olmayan workflow/FAQiçeriği ilkHTML'de tutulmuyor; tarayıcı etkileşiminde erişilebilir. SSR/SEOstratejisi yayın öncesi ayrı kabul maddesidir. Uzaktan video oynatımı, tüm kart/galeri modal akışları ve tüm sitenin görsel kabulü bu tarama kapsamında tamamlanmış değildir. Referans gibi diğer sekme aileleri için genel erişilebilirlik kabulü iddia edilmez. S05adaymetin taraması kapandı; bütün S05kabulü açık varlık/medya/görsel maddeleri nedeniyle hâlâ açıktır. S06başlamadı, push/deploy yapılmadı.
 
 Makine okunur kanıt: browser-checks.json. Geçici üretim sunucusu3001kapatıldı; kullanıcının sunucusuna dokunulmadı.
+
+## Yerel medya ve responsive kontrolü — 27.10.2026 devamı
+
+Kullanıcı canlıya alınmayacağını açıkça belirtti. Tüm işlemler2027yerel checkout'ta kaldı; deploy/push yapılmadı.
+
+Masaüstü110ve dar ekran110rotası tarayıcıda açıldı. Son taramalarda yatay taşma0, tekH1sayısı110/110; o anda yüklenmiş görsellerde hata0. Bu, tüm lazy görsellerin yüklendiği veya her sayfanın editöryal tasarım kabulü değildir. İlk mobil taramada Contact354pxekranda368pxgenişliyordu; gridmin22rem ekranı aşıyordu. minmax(min(100%,22rem),1fr) ile düzeltilip son110rota taramasında taşma0doğrulandı. Kanıt responsive-desktop-after.json, responsive-mobile-after.json ve contact-mobile-after.png.
+
+53yapısal rota ziyaret edildi; mevcut medyatürlerinden rota başına en fazla1video+1görsel seçilerek69modal örneği açıldı/kapatıldı. Seçili örneklerin tümü medyaURL'si ve bodykaydırma kilidi sağladı. Bu69örnek bütün kartları/sekme durumlarını veya tüm YouTubevideolarının oynatılabilirliğini test etmez. media-route-samples.json her rotanın mevcut tetikleyici sayısını ve seçili örneklerini ayırır. İki uzun toplu çağrı süre aşımına ulaştı; tamamlanmış rota sonuçları dosyaya artımlı kaydedildi, eksik rotalar küçük gruplarla tamamlandı.
+
+Video ve görsel modalları, site aramasıyla birlikte paylaşılan MediaDialog native dialog bileşenine taşındı. showModalarka planı etkileşime kapatır; açılışodağı kapatma düğmesine (aramada input), kapanışodağı tetikleyiciye döner, bodyoverflow önceki değeriyle geri yüklenir. Escape ve kapatma kontrol edildi. Medya açıkkenCtrlKikinci arama diyaloğu açıyordu; koruma eklendi ve1modal kaldığı doğrulandı. AramadanBIMFlexnavigasyonu sonrası0dialog/normaloverflow doğrulandı. Uzun başlıklar sarılır, modal ekran yüksekliğiyle sınırlanıp gerektiğinde kendi içinde kayar; yatay mobil örnekte kapatma kontrolü ekran içindeydi. Native tekdüğmeliTabodağının tarayıcı araç çubuğuna gitmesini önlemek için ayrıca açıkTabdöngüsü eklendi. Cross-originiframe içindeki tuş olaylarının React'e yayılacağı iddia edilmez.
+
+YerelMP4örneği readyState4/pausedfalse/currentTime7.69sile oynadı; local-video-check.json/video-modal-after.png. HariciYouTubehedefleri modaliframe'e doğru bağlandı; her harici videonun erişimi/yaş-bölge sınırlaması doğrulanmış değildir. KaynakURL'ler korunur.
+
+Beş eksik Eğitim görseli için çalışma kararı: kaynak dosya bulunana kadar görselsiz, metinveCTA'ları tam paneller korunur. Bu bir kayıp dosyayı geri getirme iddiası değildir; sourceImageSrcdenetim izi korunur. Bu beş varlık gelecekte temin edilebilir; mevcut yerel kullanımda kırık istek üretmedikleri doğrulandı. Uydurma/başka ürün görseli kullanılmadı.
+
+Yerel S05tekniği bu kapsam ve istisnalarla doğrulandı; tüm sitenin nihai tasarım kabulü ve seçili olmayanworkflow/FAQiçeriğininSSR/SEOkararı sonraki tasarım/yayın öncesi kontrol kapsamındadır. Canlı yayın planlanmıyor. S06token/bileşen sağlamlaştırma henüz başlamadı.
+
+Son doğrulama: Tab ve Shift+Tab son build üzerinde tek kapatma düğmesinde kaldı; modal-behavior.json önceki hatayı ve düzeltme sonucunu birlikte saklar. 57 birim testi, 36 parite kontrolü ve üretim derlemesi geçti.
+
+İnceleme düzeltmesi: Yerel video/ses kontrollerinin kendi Tab sırasını atlamamak için aktif öğe video/audio/iframe olduğunda açık sarma uygulanmaz; native dialog izolasyonu korunur. Tek DOM kapatma düğmesi için açık sarma aktiftir. Her tarayıcının tüm yerel medya kontrol sırası test edildiği iddia edilmez.

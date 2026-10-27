@@ -21,7 +21,7 @@ Kullanıcı aşağıdaki yol haritasını onayladı ve önce kayda alınıp çal
 | S02 | Tek yetkili veri üretim hattı | Güncel Python hattı tek giriş; pnpm komutları doğru; eski JS üretici devre dışı; tekrar üretim deterministik, veri kaybı yok | Tamamlandı |
 | S03 | PDF/DOCX kaynak paritesi | Temsili PDF üretimi kaldırılır; orijinal belgeler kaynak/URL eşlemesi, SHA-256 ve tür kontrolüyle korunur | Tamamlandı |
 | S04 | Microsoft Forms yönlendirmesi | Talep CTA'ları ortak forma bağlı; sahte yerel başarı yok; destek/deneme/özel lisans görevleri karıştırılmaz | Tamamlandı |
-| S05 | İçerik/etkileşim paritesi | Kaynak→veri→render bazında eksik/fazla/değişmiş/yanlış eşleşmiş kayıtlar; hedefli canlı doğrulama | Devam ediyor — ilk rapor hazır, düzeltmeler açık |
+| S05 | İçerik/etkileşim paritesi | Kaynak→veri→render bazında eksik/fazla/değişmiş/yanlış eşleşmiş kayıtlar; hedefli canlı doğrulama | Yerel teknik kontrol tamamlandı; kayıtlı istisnalar ve nihai görsel kabul ayrı |
 | S06 | Token ve bileşen sağlamlaştırma | Sabit görsel kararlar tokenlara taşınır; büyük bileşenler ayrılır; görsel karşılaştırma görünümü korur | Bekliyor |
 | S07 | Yayın öncesi kabul | Çalışan test komutları, typecheck/build, tarayıcı etkileşimleri, schema/performance doğrulaması ve açık riskler | Bekliyor |
 
@@ -530,3 +530,16 @@ Tarayıcı erişimi yeniden çalıştı.303ilkHTMLadayı statik incelemede35work
 YeniliklerSEO/hero'nun kesilmiş açıklaması, kaynak genel bakış paragrafının ilk tam cümlesine hizalandı; yalnız bu rota ve arama kaydı değişti.57birim testi+36parite, productionbuild/tip/188kontrast kontrolü geçti; bağımsız kod incelemesi önemli bulgu vermedi. Dar Eğitimekranında gözlenen354CSSpx genişlikte yatay taşma yok; screenshot ve browser-checks.json kanıtları docs/verification/s05-closure-2026-10-27/ altında.
 
 303aday için etkileşim doğrulaması kapandı. S05genel kabulü hâlâ açık: kaynakta olmayan5traininggörseli temin/nihai görselsiz kabul bekliyor; uzaktanvideo/galerimodal akışlarının tümü ve sitegeneli görsel kabul tamamlanmadı. Seçili olmayanworkflow/FAQiçeriğinin ilkHTMLerişimi SEOyayın kabulünde ayrıca değerlendirilecek. S06başlamadı. Kaynak2026salt-okunur kaldı, pazarlama klasörü kullanılmadı, push/deploy yok. Sıradaki adım eksikvarlık ve medyamodal/görsel kabul tablosunu kapatmak; tokenrefaktörüne atlama.
+
+
+## 27.10.2026 — Yayınsız yerel medya ve responsive kapanışı
+
+Kullanıcı açıkça canlıya alınmayacağını belirtti; tüm çalışma yerel2027'de kaldı. S05kalan yerel kontroller tamamlandı:110masaüstü+110dar ekranrotası tarayıcıda açıldı; son durumda yataytaşma0, o anda yüklenen görselhatası0. Contactgridindeki22remminimumun354CSSpxekranda368pxtaşırdığı tespit edilip min(100%,22rem)ile düzeltildi. Bu mekanik kontrol bütün lazygörsellerin yüklendiği veya editöryal görsel tasarımın kabul edildiği anlamına gelmez.
+
+53yapısalrotada69video/görselmodal örneği açılıp kapandı; hepsinde medyaURL'si ve scrollkilidi doğrulandı. Her rotanın varsa1video+1görsel türü seçildi; tüm kartların ve hariciYouTubeoynatımının tektek testi değildir. YerelMP4örneği readyState4/pausedfalse/time7.69sile oynadı. MediaDialog native showModalile medya ve arama odağı/arka plan izolasyonu/scrollkilidi/geri dönüşünü ortaklaştırır. MedyaCtrlK ikinciarama çakışması engellendi. TekdüğmeliTab/ShiftTabkenarında odak dışarı gittiği tarayıcıda yakalandı, açıkTabdöngüsü eklenip iki yöndeodak içeride kaldığı doğrulandı. AramadanBIMFlexnavigasyonu0dialog/normaloverflowile geçti. Uzunbaşlık/yataymobil örneğinde kapatma düğmesi ekran içindeydi.
+
+57birimtesti+36parite, productionbuild/TypeScript ve188kontrast kontrolü geçti. Bağımsız kod incelemesi tamamlandı; sonTabdöngüsü ekince yeniden inceleme istendi. Kanıtlar docs/verification/s05-closure-2026-10-27/ altındaki responsive-*-after.json, media-route-samples.json, modal-behavior.json, local-video-check.json ve screenshotlar. Geçici3001sunucusu kapatıldı, kullanıcının sunucusuna dokunulmadı.
+
+Beş kaynakTraininggörseli hâlâ fiziksel olarak yoktur; mevcut çalışma kararı görselsizpanelleri kullanmaktır. Metin/CTA'lar tam, sourceImageSrcizleri kayıtlı, kırıkistek yok. Eksikdosyaları geri kazanmış gibi sunma. Kaynaktemini ileride yapılabilir; bu durum yerel teknik çalışmayı durdurmaz. S05yerel teknik adımı bu sınırlı kapsam ve açıkistisnalarla tamamlandı; tüm kaynak içeriğin yüzde100paritesi, tümharicivideoların kullanılabilirliği veya nihai tasarımkabulü iddia edilmez. SSR/SEOsekmeleri ve genel görsel kabul sonrakiS06/S07çalışmasında ele alınır. S06token/bileşen sağlamlaştırma henüz başlamadı; fazonayı olmadan atlama. Push/deploy yok.
+
+Son bağımsız inceleme de tamamlandı: önemli bulgu yok. Yerel media/iframe odaktayken özel Tab sarması uygulanmaz; tarayıcının oynatıcı iç kontrol sırası korunur. Bu son değişiklik sonrası production build ve TypeScript tekrar geçti.

@@ -4322,7 +4322,25 @@ button.alu-role[aria-checked="true"] {
 }
 
 /* 10. Global Video Popup Modal & Image Lightbox Modal */
+dialog.alu-modal-backdrop {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  color: var(--text-primary);
+}
+dialog.alu-modal-backdrop:not([open]) { display: none; }
+dialog.alu-modal-backdrop::backdrop { background: transparent; }
 .alu-video-modal {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  color: var(--text-primary);
   position: fixed;
   inset: 0;
   z-index: 9999;
@@ -4334,6 +4352,8 @@ button.alu-role[aria-checked="true"] {
   padding: clamp(1rem, 3vw, 2.5rem);
   animation: aluModalFadeIn 200ms ease both;
 }
+.alu-video-modal:not([open]) { display: none; }
+.alu-video-modal::backdrop { background: transparent; }
 @keyframes aluModalFadeIn {
   from {
     opacity: 0;
@@ -4344,16 +4364,18 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-video-modal__dialog {
   width: min(100%, 64rem);
+  max-height: calc(100dvh - 2 * clamp(1rem, 3vw, 2.5rem));
+  overflow-y: auto;
   background: var(--surface-raised);
   border: 1px solid var(--border-strong);
   box-shadow: 0 32px 80px rgba(0, 0, 0, 0.75);
-  overflow: hidden;
 }
 .alu-video-modal__dialog--image {
   width: min(100%, 72rem);
 }
 .alu-video-modal__header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
@@ -4363,12 +4385,15 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-video-modal__title {
   margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
   font-family: var(--font-heading);
   font-size: 1rem;
   font-weight: 700;
   color: var(--text-primary);
 }
 .alu-video-modal__close {
+  flex-shrink: 0;
   width: 2.25rem;
   height: 2.25rem;
   background: var(--surface-subtle);

@@ -1,0 +1,793 @@
+[
+  {
+    "route": "/products/allplan-2026",
+    "availableControls": 7,
+    "checks": [
+      {
+        "label": "Georeferans Noktaları ile Kesin Konumlandırma videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/L84OwVTOQFE?autoplay=1",
+        "title": "Georeferans Noktaları ile Kesin Konumlandırma"
+      },
+      {
+        "label": "Daha akıllı ve hızlı proje yönetimi için kolay organizasyon ve kontrol görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/products/allplan-2026/info-palette.jpg",
+        "title": "Daha akıllı ve hızlı proje yönetimi için kolay organizasyon ve kontrol"
+      }
+    ]
+  },
+  {
+    "route": "/products/allplan-2026-yenilikler",
+    "availableControls": 1,
+    "checks": [
+      {
+        "label": "Geliştirilmiş Serbest Şekilli Merdiven Modelleyicisi videosunu oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/HqhDQELnHms?autoplay=1",
+        "title": "Geliştirilmiş Serbest Şekilli Merdiven Modelleyicisi"
+      }
+    ]
+  },
+  {
+    "route": "/products/allplan-aec",
+    "availableControls": 1,
+    "checks": [
+      {
+        "label": "Gelişmiş Yapı Bileşenleri görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/products/allplan-aec/features/architectural/csm_01_AdvancedBuildingComp_01bcb8c1e3.png",
+        "title": "Gelişmiş Yapı Bileşenleri"
+      }
+    ]
+  },
+  {
+    "route": "/products/allplan-basic",
+    "availableControls": 18,
+    "checks": [
+      {
+        "label": "3D Modelleme videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/kxDkWW01hRY?autoplay=1",
+        "title": "3D Modelleme"
+      },
+      {
+        "label": "Arayüzler görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/products/allplan-basic/interfaces.jpg",
+        "title": "Arayüzler"
+      }
+    ]
+  },
+  {
+    "route": "/products/allplan-bimplus",
+    "availableControls": 16,
+    "checks": [
+      {
+        "label": "Yeni bir proje oluşturun videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/OVbBhD-5UQY?autoplay=1",
+        "title": "Yeni bir proje oluşturun"
+      },
+      {
+        "label": "Disiplin Grupları Oluşturun görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/products/bimplus/workflows/discipline-groups.png",
+        "title": "Disiplin Grupları Oluşturun"
+      }
+    ]
+  },
+  {
+    "route": "/products/allplan-cloud-services",
+    "availableControls": 10,
+    "checks": [
+      {
+        "label": "Autoconverter (Otomatik Dönüştürücü) videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/twQPsbxq3QY?autoplay=1",
+        "title": "Autoconverter (Otomatik Dönüştürücü)"
+      },
+      {
+        "label": "Her tasarım aşamasında ALLPLAN Bulut Hizmetleri görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/products/allplan-cloud-services/cloud-service-map.jpg",
+        "title": "Her tasarım aşamasında ALLPLAN Bulut Hizmetleri"
+      }
+    ]
+  },
+  {
+    "route": "/products/allplan-concept",
+    "availableControls": 24,
+    "checks": [
+      {
+        "label": "Dış Veri Kaynakları videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/LF6p7dQASR8?autoplay=1",
+        "title": "Dış Veri Kaynakları"
+      },
+      {
+        "label": "Arayüzler görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/products/allplan-concept/remote/01_interfaces.jpg",
+        "title": "Arayüzler"
+      }
+    ]
+  },
+  {
+    "route": "/products/allplan-professional",
+    "availableControls": 30,
+    "checks": [
+      {
+        "label": "Donatı videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/SB-ULI92gKY?autoplay=1",
+        "title": "Donatı"
+      },
+      {
+        "label": "Şantiye Hazırlığı görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/products/allplan-professional/construction-site.jpg",
+        "title": "Şantiye Hazırlığı"
+      }
+    ]
+  },
+  {
+    "route": "/products/allplan-ultimate",
+    "availableControls": 39,
+    "checks": [
+      {
+        "label": "Harici Veri Kaynakları videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/LF6p7dQASR8?autoplay=1",
+        "title": "Harici Veri Kaynakları"
+      },
+      {
+        "label": "Arayüzler görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/products/allplan-ultimate/interfaces.jpg",
+        "title": "Arayüzler"
+      }
+    ]
+  },
+  {
+    "route": "/products/ax3000",
+    "availableControls": 5,
+    "checks": [
+      {
+        "label": "Deneyim Kazandırır & Tümleşik Kullanım görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/ax3000/simulason.jpg",
+        "title": "Deneyim Kazandırır & Tümleşik Kullanım"
+      }
+    ]
+  },
+  {
+    "route": "/products/civil",
+    "availableControls": 42,
+    "checks": [
+      {
+        "label": "Harici Veri Kaynakları videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/LF6p7dQASR8?autoplay=1",
+        "title": "Harici Veri Kaynakları"
+      },
+      {
+        "label": "Parametrik Modelleme görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/products/civil/parametric-modeling.jpg",
+        "title": "Parametrik Modelleme"
+      }
+    ]
+  },
+  {
+    "route": "/products/precast",
+    "availableControls": 4,
+    "checks": [
+      {
+        "label": "Otomatik Prefabrik Tasarım görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/products/precast/automated-precast-design.jpg",
+        "title": "Otomatik Prefabrik Tasarım"
+      }
+    ]
+  },
+  {
+    "route": "/products/precast-detail",
+    "availableControls": 4,
+    "checks": [
+      {
+        "label": "Otomatik Prefabrik Tasarım görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/products/precast/features/structural-precast/automated-precast-design.jpg",
+        "title": "Otomatik Prefabrik Tasarım"
+      }
+    ]
+  },
+  {
+    "route": "/products/sds2-home",
+    "availableControls": 0,
+    "checks": []
+  },
+  {
+    "route": "/references",
+    "availableControls": 0,
+    "checks": []
+  },
+  {
+    "route": "/solutions-v2/connect-license/how-to-assign",
+    "availableControls": 0,
+    "checks": []
+  },
+  {
+    "route": "/solutions-v2/faq",
+    "availableControls": 0,
+    "checks": []
+  },
+  {
+    "route": "/solutions-v2/training",
+    "availableControls": 0,
+    "checks": []
+  },
+  {
+    "route": "/solutions-v2/training/quick-start",
+    "availableControls": 0,
+    "checks": []
+  },
+  {
+    "route": "/solutions-v2/training/webinar",
+    "availableControls": 13,
+    "checks": [
+      {
+        "label": "IMO / ALLPLAN BRIDGE 2022 WEBİNAR görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/images/webinars/allplan-bridge-2022.png",
+        "title": "IMO / ALLPLAN BRIDGE 2022 WEBİNAR"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/addons/2d-dwg-converter",
+    "availableControls": 8,
+    "checks": [
+      {
+        "label": "2B DWG Converter videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/JZI8p0aX7Kg?autoplay=1",
+        "title": "2B DWG Converter"
+      },
+      {
+        "label": "Lisans ve Gereksinimler görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/cds/license.jpg",
+        "title": "Lisans ve Gereksinimler"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/addons/drive-curve",
+    "availableControls": 9,
+    "checks": [
+      {
+        "label": "Sürüş Eğrisi videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/IKXIq1So8jU?autoplay=1",
+        "title": "Sürüş Eğrisi"
+      },
+      {
+        "label": "Araç Editörü görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/cds/drive-curve/gallery/Arac-Editoru.webp",
+        "title": "Araç Editörü"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/addons/geometry-tools",
+    "availableControls": 19,
+    "checks": [
+      {
+        "label": "Gelişmiş 3B Fonksiyonlar videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/WHPmmRcCdMQ?autoplay=1",
+        "title": "Gelişmiş 3B Fonksiyonlar"
+      },
+      {
+        "label": "Lisans ve Gereksinimler görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/cds/geometry-tools/license.jpg",
+        "title": "Lisans ve Gereksinimler"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/addons/graphical-text",
+    "availableControls": 4,
+    "checks": [
+      {
+        "label": "Vektörleştirilmiş metinlerin, 3 boyutlu metinlerin ve blok setlerinin oluşturulması. videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/CMYuaD3e3rQ?autoplay=1",
+        "title": "Vektörleştirilmiş metinlerin, 3 boyutlu metinlerin ve blok setlerinin oluşturulması."
+      },
+      {
+        "label": "Lisans ve Gereksinimler görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/cds/license.jpg",
+        "title": "Lisans ve Gereksinimler"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/addons/parametric-terrain",
+    "availableControls": 6,
+    "checks": [
+      {
+        "label": "Bu parametrik Allplan eklentisinin işlevi, arazi kazısı oluşturmanın çok ötesine geçer. videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/WHPmmRcCdMQ?autoplay=1",
+        "title": "Bu parametrik Allplan eklentisinin işlevi, arazi kazısı oluşturmanın çok ötesine geçer."
+      },
+      {
+        "label": "Kullanıcı Raporu görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/cds/parametrik-arazi/user-report.jpg",
+        "title": "Kullanıcı Raporu"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/addons/ramp",
+    "availableControls": 6,
+    "checks": [
+      {
+        "label": "Add On - Rampa videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/cfGmLbqXBJo?autoplay=1",
+        "title": "Add On - Rampa"
+      },
+      {
+        "label": "Lisans ve Gereksinimler görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/cds/ramp/license.jpg",
+        "title": "Lisans ve Gereksinimler"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/addons/sketchup-converter",
+    "availableControls": 4,
+    "checks": [
+      {
+        "label": "ALLPLAN Add-On SketchUpConverter - Export Allplan zu Lumion videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/XcIPUX2nF4c?autoplay=1",
+        "title": "ALLPLAN Add-On SketchUpConverter - Export Allplan zu Lumion"
+      },
+      {
+        "label": "Lisans ve Gereksinimler görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/cds/license.jpg",
+        "title": "Lisans ve Gereksinimler"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/addons/steel-components",
+    "availableControls": 31,
+    "checks": [
+      {
+        "label": "ALLPLAN’DE PARAMETRİK ÇELİK PLANLAMASI videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/VC-y4IZ8580?autoplay=1",
+        "title": "ALLPLAN’DE PARAMETRİK ÇELİK PLANLAMASI"
+      },
+      {
+        "label": "Lisans ve Gereksinimler görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/cds/license.jpg",
+        "title": "Lisans ve Gereksinimler"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/addons/three-dimensioning",
+    "availableControls": 6,
+    "checks": [
+      {
+        "label": "3B Ölçülendirme videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/GlkCJ9hmqho?autoplay=1",
+        "title": "3B Ölçülendirme"
+      },
+      {
+        "label": "Lisans ve Gereksinimler görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/cds/license.jpg",
+        "title": "Lisans ve Gereksinimler"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/allplan-bulut-hizmetleri",
+    "availableControls": 12,
+    "checks": [
+      {
+        "label": "Çok Harfli Klavye Kısayolları Desteği videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/enipvHFcRNU?autoplay=1",
+        "title": "Çok Harfli Klavye Kısayolları Desteği"
+      },
+      {
+        "label": "Yeni Grafik Geçersiz Kılma görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/allplan-bulut-hizmetleri/graphic-override.jpg",
+        "title": "Yeni Grafik Geçersiz Kılma"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/allplan-industry",
+    "availableControls": 0,
+    "checks": []
+  },
+  {
+    "route": "/solutions/architecture",
+    "availableControls": 1,
+    "checks": [
+      {
+        "label": "Hızlıca Başlayın görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/architecture/workflows/concept/quickly-get-started.png",
+        "title": "Hızlıca Başlayın"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/ax3000",
+    "availableControls": 6,
+    "checks": [
+      {
+        "label": "Deneyim Kazandırır videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/fHYDP36DcjA?autoplay=1",
+        "title": "Deneyim Kazandırır"
+      },
+      {
+        "label": "Tümleşik Kullanım görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/ax3000/simulason.jpg",
+        "title": "Tümleşik Kullanım"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/ax3000-virtual-reality",
+    "availableControls": 2,
+    "checks": [
+      {
+        "label": "Virtual Reality: Tek bir tıklama ile sınırsız 3B-Gerçeği yaşayın videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/fHYDP36DcjA?autoplay=1",
+        "title": "Virtual Reality: Tek bir tıklama ile sınırsız 3B-Gerçeği yaşayın"
+      },
+      {
+        "label": "Virtuelle Realität – 3B-Videodan Fazlası görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/ax3000/virtual-reality/banner_vr.jpg",
+        "title": "Virtuelle Realität – 3B-Videodan Fazlası"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/ax3000-yapi-fizigi",
+    "availableControls": 3,
+    "checks": [
+      {
+        "label": "CAD çizimi, CAD'de bileşenlerin tanımlanması – TS 825 videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/fHYDP36DcjA?autoplay=1",
+        "title": "CAD çizimi, CAD'de bileşenlerin tanımlanması – TS 825"
+      },
+      {
+        "label": "AX3000 Yapı Fiziği görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/ax3000/yapi-fizigi/ax-bg-1.jpg",
+        "title": "AX3000 Yapı Fiziği"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/bimflex",
+    "availableControls": 13,
+    "checks": [
+      {
+        "label": "BIMFlex Allplan Column Reinforcement videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/1yQ_nxoQuWE?autoplay=1",
+        "title": "BIMFlex Allplan Column Reinforcement"
+      },
+      {
+        "label": "Kolon Donatısı görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/bimflex/kolon-model.png",
+        "title": "Kolon Donatısı"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/bimx5",
+    "availableControls": 4,
+    "checks": [
+      {
+        "label": "Oska e-HakedişPro videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/sAR1LFIe12k?autoplay=1",
+        "title": "Oska e-HakedişPro"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/bridge-design",
+    "availableControls": 0,
+    "checks": []
+  },
+  {
+    "route": "/solutions/features-allplan-bridge",
+    "availableControls": 12,
+    "checks": [
+      {
+        "label": "Allplan Bridge – Genel Bakış videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/q9r0WUmNZEA?autoplay=1",
+        "title": "Allplan Bridge – Genel Bakış"
+      },
+      {
+        "label": "Allplan Cloud aracılığıyla dever verilerinin içe aktarılması görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/bridge/features/csm_02_Import_of_super-elevation_data_via_Allplan_Cloud_1c567fda80-768x431.jpg",
+        "title": "Allplan Cloud aracılığıyla dever verilerinin içe aktarılması"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/imar-yonetmeligi-bim-eklentisi",
+    "availableControls": 11,
+    "checks": [
+      {
+        "label": "Allplan ile İmar Yönetmeliği — Genel Bakış videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/0W6k7W5KtzE?autoplay=1",
+        "title": "Allplan ile İmar Yönetmeliği — Genel Bakış"
+      },
+      {
+        "label": "Planla ve Hesapla görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/planli-alanlar/planla-hesapla.png",
+        "title": "Planla ve Hesapla"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/infrastructure",
+    "availableControls": 1,
+    "checks": [
+      {
+        "label": "Veri Değişimi görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/infrastructure/workflows/site-analysis/data-exchange.jpg",
+        "title": "Veri Değişimi"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/mep",
+    "availableControls": 1,
+    "checks": [
+      {
+        "label": "Proje koordinasyonu görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/mep/workflows/mep-proje-koordinasyonu.jpg",
+        "title": "Proje koordinasyonu"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/modeling-of-precast-girder-bridges",
+    "availableControls": 8,
+    "checks": [
+      {
+        "label": "1. CREATING AXES videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/2uFnK6J2GsU?autoplay=1",
+        "title": "1. CREATING AXES"
+      },
+      {
+        "label": "8. COMPLETING THE BRIDGE STRUCTURE görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/structural/workflows/modeling/parametric-modeling.jpg",
+        "title": "8. COMPLETING THE BRIDGE STRUCTURE"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/poz-catalog",
+    "availableControls": 1,
+    "checks": [
+      {
+        "label": "ALLPLAN POZ KATALOĞU videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/nRntReFS1jY?autoplay=1",
+        "title": "ALLPLAN POZ KATALOĞU"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/precast",
+    "availableControls": 0,
+    "checks": []
+  },
+  {
+    "route": "/solutions/pythonpart",
+    "availableControls": 21,
+    "checks": [
+      {
+        "label": "Duvar Donatısı videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/4HwnYYnZ_D0?autoplay=1",
+        "title": "Duvar Donatısı"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/rebar-engineering",
+    "availableControls": 8,
+    "checks": [
+      {
+        "label": "V2021-1-0: Otomatik Kiriş videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/DIL1xbeFgO8?autoplay=1",
+        "title": "V2021-1-0: Otomatik Kiriş"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/road-railway",
+    "availableControls": 1,
+    "checks": [
+      {
+        "label": "Arazi Ölçümü görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/road-railway/workflow-survey.jpg",
+        "title": "Arazi Ölçümü"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/scalypso/converter",
+    "availableControls": 2,
+    "checks": [
+      {
+        "label": "Birincil Hedef: Tüm 3B Lazer Tarayıcılarla Tek İş Akışı videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/1wU4GIILS-s?autoplay=1",
+        "title": "Birincil Hedef: Tüm 3B Lazer Tarayıcılarla Tek İş Akışı"
+      },
+      {
+        "label": "Desteklenen İçe ve Dışa Aktarma Formatları görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/scalypso/converter-202004-en.jpg",
+        "title": "Desteklenen İçe ve Dışa Aktarma Formatları"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/scalypso/videos",
+    "availableControls": 5,
+    "checks": [
+      {
+        "label": "Scalypso [CONVERTER] videosunu pop-up pencerede oynat",
+        "focus": "Videoyu kapat",
+        "locked": true,
+        "src": "https://www.youtube.com/embed/1wU4GIILS-s?autoplay=1",
+        "title": "Scalypso [CONVERTER]"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/site-planning",
+    "availableControls": 1,
+    "checks": [
+      {
+        "label": "Arazi Etüdü görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/site-planning/workflows/csm_01_Gelaendeaufnahme_1428675f69.jpg",
+        "title": "Arazi Etüdü"
+      }
+    ]
+  },
+  {
+    "route": "/solutions/steel",
+    "availableControls": 0,
+    "checks": []
+  },
+  {
+    "route": "/solutions/structural",
+    "availableControls": 1,
+    "checks": [
+      {
+        "label": "Veri Değişimi görselini büyüt",
+        "focus": "Görseli kapat",
+        "locked": true,
+        "src": "/assets/solutions/structural/workflows/site-analysis/data-exchange.jpg",
+        "title": "Veri Değişimi"
+      }
+    ]
+  }
+]

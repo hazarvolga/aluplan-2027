@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-27",
+  "trap": {
+    "focus": "Görseli kapat",
+    "focusedInside": true,
+    "nativeModal": true,
+    "overflow": "hidden"
+  },
+  "afterImageClose": {
+    "focus": "Şantiye Hazırlığı görselini büyüt",
+    "overflow": ""
+  },
+  "video": {
+    "initialFocus": "Videoyu kapat",
+    "escapeCloses": true,
+    "focusReturnsToTrigger": true
+  },
+  "search": {
+    "initialFocus": "Site içinde ara",
+    "bimflexNavigation": true,
+    "closedOnNavigation": true,
+    "overflowRestored": true
+  },
+  "ctrlKWhileMediaOpen": {
+    "modalCount": 1
+  },
+  "landscape": {
+    "observedWidth": 767,
+    "observedHeight": 354,
+    "closeButtonBounds": {
+      "top": 38.32,
+      "bottom": 74.32,
+      "left": 687.35,
+      "right": 723.35
+    },
+    "dialogWithinViewport": true
+  },
+  "trapBeforeFix": {
+    "focusedInside": false,
+    "nativeModal": true,
+    "overflow": "hidden"
+  },
+  "reverseTrap": {
+    "focus": "Görseli kapat",
+    "focusedInside": true
+  }
+}

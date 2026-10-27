@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { getNavigationData, getSearchIndex, MAIN_QUOTE_FORM_URL } from '@/lib/site-data';
 import { AluIcon, AluIconName } from '@/components/ui/AluIcon';
+import { MediaDialog } from '@/components/ui/MediaDialog';
 
 const navData = getNavigationData();
 const searchIndex = getSearchIndex();
@@ -50,6 +51,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
     const onKeyDown = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
         e.preventDefault();
+        // Keep a single modal owner for focus and body scroll restoration.
+        if (document.querySelector('dialog.alu-video-modal:modal')) return;
         setSearchOpen((prev) => !prev);
       } else if (e.key === 'Escape') {
         setOpenMenu(null);
@@ -413,7 +416,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
       {/* Search Command Modal */}
       {searchOpen && (
-        <div className="alu-modal-backdrop" role="dialog" aria-modal="true" aria-label="Site içi arama">
+        <MediaDialog className="alu-modal-backdrop" label="Site içi arama" onClose={() => setSearchOpen(false)}>
           <div className="alu-modal alu-stack">
             <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
               <h2 className="alu-h3" style={{ margin: 0 }}>
@@ -434,7 +437,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               placeholder="ALLPLAN, AX3000, BIMFlex, Köprü, Prekast, Video ara..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              autoFocus
+              aria-label="Site içinde ara"
+              data-media-dialog-initial-focus
             />
             <div className="alu-stack" style={{ gap: '0.5rem', maxHeight: '22rem', overflowY: 'auto' }}>
               {filteredSearch.map((item) => (
@@ -456,7 +460,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               ))}
             </div>
           </div>
-        </div>
+        </MediaDialog>
       )}
 
       {/* KVKK Cookie Consent Banner (gates Google Analytics until accepted) */}

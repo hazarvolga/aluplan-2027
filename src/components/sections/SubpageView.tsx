@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import {
   PageRecord,
@@ -14,6 +14,7 @@ import {
 } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { TrainingTabs } from './TrainingTabs';
+import { MediaDialog } from '@/components/ui/MediaDialog';
 
 /** Automatic-activation keyboard behavior shared by the two structured tab families. */
 function handleStructuredTabKey(
@@ -343,16 +344,6 @@ export function SubpageView({
   const [refSearchQuery, setRefSearchQuery] = useState<string>('');
   const [activeFaqCatIdx, setActiveFaqCatIdx] = useState<number>(0);
 
-  useEffect(() => {
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        setActiveModalVideo(null);
-        setActiveLightboxImage(null);
-      }
-    };
-    window.addEventListener('keydown', onKeyDown);
-    return () => window.removeEventListener('keydown', onKeyDown);
-  }, []);
 
   const isLegalPage = page.section === 'legal';
   const isVideoLibraryHub = page.path === '/solutions-v2/training/video-library';
@@ -828,7 +819,7 @@ export function SubpageView({
       {/* Contact requests use the shared Microsoft form; direct channels stay available */}
       {page.path === '/contact' && (
         <section className="preview-section preview-section--subtle" aria-labelledby="contact-form-heading">
-          <div className="alu-container alu-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(22rem, 1fr))' }}>
+          <div className="alu-container alu-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 22rem), 1fr))' }}>
             <div className="alu-service-card alu-stack">
               <span className="preview-kicker">DOĞRUDAN İLETİŞİM</span>
               <h2 id="contact-form-heading" className="alu-h2">
@@ -2825,13 +2816,7 @@ export function SubpageView({
 
       {/* Global Video Popup Modal (Cinema Overlay for 91+ Product & Solution Video Cards) */}
       {activeModalVideo && (
-        <div
-          className="alu-video-modal"
-          role="dialog"
-          aria-modal="true"
-          aria-label={activeModalVideo.title}
-          onClick={() => setActiveModalVideo(null)}
-        >
+        <MediaDialog label={activeModalVideo.title} onClose={() => setActiveModalVideo(null)}>
           <div
             className="alu-video-modal__dialog"
             onClick={(e) => e.stopPropagation()}
@@ -2859,6 +2844,7 @@ export function SubpageView({
                 <button
                   type="button"
                   className="alu-video-modal__close"
+                  data-media-dialog-close
                   aria-label="Videoyu kapat"
                   onClick={() => setActiveModalVideo(null)}
                 >
@@ -2885,18 +2871,12 @@ export function SubpageView({
               )}
             </div>
           </div>
-        </div>
+        </MediaDialog>
       )}
 
       {/* Global Image Lightbox Modal (Full-Resolution Screenshot Inspector) */}
       {activeLightboxImage && (
-        <div
-          className="alu-video-modal"
-          role="dialog"
-          aria-modal="true"
-          aria-label={activeLightboxImage.title}
-          onClick={() => setActiveLightboxImage(null)}
-        >
+        <MediaDialog label={activeLightboxImage.title} onClose={() => setActiveLightboxImage(null)}>
           <div
             className="alu-video-modal__dialog alu-video-modal__dialog--image"
             onClick={(e) => e.stopPropagation()}
@@ -2906,6 +2886,7 @@ export function SubpageView({
               <button
                 type="button"
                 className="alu-video-modal__close"
+                data-media-dialog-close
                 aria-label="Görseli kapat"
                 onClick={() => setActiveLightboxImage(null)}
               >
@@ -2916,7 +2897,7 @@ export function SubpageView({
               <img src={activeLightboxImage.src} alt={activeLightboxImage.title} />
             </div>
           </div>
-        </div>
+        </MediaDialog>
       )}
 
       {/* Global Trial Callout Band (Aligned with 25.10.2026 User Decision: Direct to allplan.com/trial-or-subscription/) */}

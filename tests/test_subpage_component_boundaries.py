@@ -75,6 +75,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
     def test_references_directory_has_a_dedicated_interactive_render_boundary(self):
         component = read("src/components/sections/ReferencesDirectorySection.tsx")
         parent = read("src/components/sections/SubpageView.tsx")
+        layout_component = read("src/components/sections/StructuredPageLayoutSection.tsx")
 
         self.assertTrue(component.startswith("'use client';"))
         self.assertIn("import type { StructuredReferencesDirectory }", component)
@@ -99,12 +100,16 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
             with self.subTest(marker=marker):
                 self.assertIn(marker, component)
 
-        self.assertIn("import { ReferencesDirectorySection } from './ReferencesDirectorySection';", parent)
-        self.assertIn("directory={sl.referencesDirectory}", parent)
-        self.assertIn("activeCategoryId={activeRefCatId}", parent)
-        self.assertIn("searchQuery={refSearchQuery}", parent)
-        self.assertIn("onCategoryChange={setActiveRefCatId}", parent)
-        self.assertIn("onSearchQueryChange={setRefSearchQuery}", parent)
+        self.assertIn("import { ReferencesDirectorySection } from './ReferencesDirectorySection';", layout_component)
+        self.assertIn("directory={layout.referencesDirectory}", layout_component)
+        self.assertIn("activeCategoryId={activeReferenceCategoryId}", layout_component)
+        self.assertIn("searchQuery={referenceSearchQuery}", layout_component)
+        self.assertIn("onCategoryChange={onReferenceCategoryChange}", layout_component)
+        self.assertIn("onSearchQueryChange={onReferenceSearchQueryChange}", layout_component)
+        self.assertIn("activeReferenceCategoryId={activeRefCatId}", parent)
+        self.assertIn("referenceSearchQuery={refSearchQuery}", parent)
+        self.assertIn("onReferenceCategoryChange={setActiveRefCatId}", parent)
+        self.assertIn("onReferenceSearchQueryChange={setRefSearchQuery}", parent)
         self.assertIn("useState<string>('all')", parent)
         self.assertIn("useState<string>('')", parent)
         self.assertNotIn("alu-ref-", parent)
@@ -415,7 +420,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
 
     def test_structured_benefits_have_a_dedicated_render_boundary(self):
         component = read("src/components/sections/BenefitsSection.tsx")
-        parent = read("src/components/sections/SubpageView.tsx")
+        parent = read("src/components/sections/StructuredPageLayoutSection.tsx")
 
         self.assertIn("import type { StructuredPageLayout }", component)
         self.assertNotIn("'use client'", component)
@@ -436,7 +441,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
                 self.assertIn(marker, component)
 
         self.assertIn("import { BenefitsSection } from './BenefitsSection';", parent)
-        self.assertIn("<BenefitsSection benefits={sl.benefits} />", parent)
+        self.assertIn("<BenefitsSection benefits={layout.benefits} />", parent)
         self.assertNotIn("alu-benefits-grid", parent)
         self.assertNotIn("alu-benefit-card", parent)
 
@@ -463,7 +468,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
 
     def test_media_grids_have_a_dedicated_interactive_render_boundary(self):
         component = read("src/components/sections/MediaGridSection.tsx")
-        parent = read("src/components/sections/SubpageView.tsx")
+        parent = read("src/components/sections/StructuredPageLayoutSection.tsx")
 
         self.assertTrue(component.startswith("'use client';"))
         self.assertIn("import type { StructuredMediaGridSection }", component)
@@ -535,7 +540,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
 
     def test_split_callouts_have_a_shared_interactive_render_boundary(self):
         component = read("src/components/sections/SplitCalloutSection.tsx")
-        parent = read("src/components/sections/SubpageView.tsx")
+        parent = read("src/components/sections/StructuredPageLayoutSection.tsx")
 
         self.assertTrue(component.startswith("'use client';"))
         self.assertIn("import type { StructuredSplitCallout }", component)

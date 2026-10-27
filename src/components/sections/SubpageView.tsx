@@ -5,7 +5,6 @@ import Link from 'next/link';
 import {
   PageRecord,
   PlaylistRecord,
-  StructuredWorkflowLink,
   TRIAL_CTA_URL,
   MAIN_QUOTE_FORM_URL,
   SUPPORT_PORTAL_URL,
@@ -14,17 +13,12 @@ import {
 } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { TrainingTabs } from './TrainingTabs';
-import { WorkflowSection } from './WorkflowSection';
-import { FAQSection } from './FAQSection';
 import { AboutEditorialSection } from './AboutEditorialSection';
-import { BenefitsSection } from './BenefitsSection';
-import { MediaGridSection } from './MediaGridSection';
-import { SplitCalloutSection } from './SplitCalloutSection';
 import { VideoLibraryHubSection } from './VideoLibraryHubSection';
-import { ReferencesDirectorySection } from './ReferencesDirectorySection';
 import { VideoPlaylistSection } from './VideoPlaylistSection';
 import { SearchPageSection } from './SearchPageSection';
 import { SubpageHeroSection } from './SubpageHeroSection';
+import { StructuredPageLayoutSection } from './StructuredPageLayoutSection';
 import { handleStructuredTabKey } from './structured-tab-key';
 import { MediaDialog } from '@/components/ui/MediaDialog';
 
@@ -42,13 +36,6 @@ const SECTION_LABELS: Record<string, string> = {
 const siteIdentity = getSiteIdentity();
 const homepageData = getHomepageData();
 const trialReleaseLabel = `${homepageData.releaseLabel} DENEME VE ABONELİK`;
-const WORKFLOW_ACCENTS: Record<StructuredWorkflowLink['accentKey'], string> = {
-  package: 'var(--workflow-package)',
-  architect: 'var(--role-architect)',
-  engineer: 'var(--role-engineer)',
-  fabricator: 'var(--role-fabricator)'
-};
-
 export function SubpageView({
   page,
   playlist
@@ -337,306 +324,16 @@ export function SubpageView({
 
       {/* Structured Page Layout (Live-Site 1:1 Section Architecture for Product & Solution Pages) */}
       {page.structuredLayout && !page.structuredLayout.trainingTabs ? (
-        <div className="alu-structured-page">
-          {(() => {
-            const sl = page.structuredLayout!;
-
-            return (
-              <>
-                {/* 1. Post-Hero Intro + Embedded Video (e.g., "ALLPLAN Ultimate Nedir?" + YouTube Video) */}
-                {sl.intro && (
-                  <section className="preview-section" aria-label={sl.intro.title}>
-                    <div className="alu-container">
-                      <div
-                        className={`alu-intro-split${
-                          sl.intro.videoEmbedUrl ? '' : ' alu-intro-split--single'
-                        }`}
-                      >
-                        <div className="alu-intro-split__content">
-                          {sl.intro.kicker && (
-                            <span className="preview-kicker">{sl.intro.kicker}</span>
-                          )}
-                          <h2 className="alu-h1" style={{ margin: 0 }}>
-                            {sl.intro.title}
-                          </h2>
-                          {sl.intro.paragraphs?.map((paragraph, paragraphIndex) => (
-                            <p key={paragraphIndex} className="alu-body">{paragraph}</p>
-                          ))}
-                          {sl.intro.bullets.length > 0 && (
-                            <ul className="alu-intro-split__bullets">
-                              {sl.intro.bullets.map((b, bIdx) => (
-                                <li key={bIdx} className="alu-intro-split__bullet">
-                                  <span className="alu-intro-split__bullet-icon">
-                                    <AluIcon name="check" size="sm" />
-                                  </span>
-                                  <span>{b}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          )}
-                        </div>
-
-                        {sl.intro.videoEmbedUrl && (
-                          <div className="alu-intro-split__media">
-                            <div className="alu-intro-split__video-frame">
-                              <iframe
-                                src={sl.intro.videoEmbedUrl}
-                                title={sl.intro.title}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                              />
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  </section>
-                )}
-
-                {/* 2. Workflow Links Ribbon (Sürümleri Görüntüle, Tasarım için İş Akışları, etc.) */}
-                {sl.workflowLinks && sl.workflowLinks.length > 0 && (
-                  <section className="alu-workflow-ribbon-section" aria-label="Hızlı İş Akışı Bağlantıları">
-                    <div className="alu-container">
-                      <div className="alu-workflow-ribbon">
-                        {sl.workflowLinks.map((wlink, wIdx) => {
-                          const pillContent = (
-                            <>
-                              <span
-                                className="alu-workflow-pill__dot"
-                                style={{ background: WORKFLOW_ACCENTS[wlink.accentKey] }}
-                              />
-                              <span className="alu-workflow-pill__text">{wlink.text}</span>
-                              <span className="alu-workflow-pill__arrow">
-                                <AluIcon name="arrow-right" size="sm" />
-                              </span>
-                            </>
-                          );
-                          return wlink.external ? (
-                            <a
-                              key={`${wlink.href}-${wIdx}`}
-                              href={wlink.href}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="alu-workflow-pill"
-                            >
-                              {pillContent}
-                            </a>
-                          ) : (
-                            <Link
-                              key={`${wlink.href}-${wIdx}`}
-                              href={wlink.href}
-                              className="alu-workflow-pill"
-                            >
-                              {pillContent}
-                            </Link>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </section>
-                )}
-
-                {/* 3. Solution Performance Stats & Challenges (when present on solution pages) */}
-                {sl.stats && sl.stats.length > 0 && (
-                  <section className="preview-section preview-section--subtle" aria-label="Performans Göstergeleri">
-                    <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
-                      <div
-                        className="alu-hero-metrics"
-                        style={{
-                          gridTemplateColumns: `repeat(${Math.min(sl.stats.length, 4)}, minmax(0, 1fr))`
-                        }}
-                      >
-                        {sl.stats.map((st, idx) => (
-                          <div key={`${st.label}-${idx}`} className="alu-hero-metrics__item">
-                            <span className="alu-hero-metrics__value">{st.value}</span>
-                            <h3 className="alu-hero-metrics__label" style={{ margin: 0 }}>
-                              {st.label}
-                            </h3>
-                            <p className="alu-body-sm" style={{ margin: 'var(--space-application-jsx-tight) 0 0 0' }}>
-                              {st.description}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-
-                      {sl.challenges && sl.challenges.length > 0 && (
-                        <div className="alu-challenges-band">
-                          <div className="alu-challenges-band__header">
-                            <span className="preview-kicker">/ SEKTÖREL ZORLUKLAR</span>
-                            <h3 className="alu-h3" style={{ margin: 0 }}>
-                              Günümüz Projelerinde Karşılaşılan Temel Zorluklar
-                            </h3>
-                          </div>
-                          <div className="alu-challenges-grid">
-                            {sl.challenges.map((ch, cIdx) => (
-                              <div key={cIdx} className="alu-challenge-card">
-                                <span className="alu-challenge-card__num">0{cIdx + 1}</span>
-                                <p className="alu-body-sm" style={{ margin: 0 }}>
-                                  {ch}
-                                </p>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  </section>
-                )}
-
-                {/* 3b. Primary Split Callouts / InfoMediaTwoColumn Paired Text + Video/Image Sections */}
-                {sl.splitCallouts && (
-                  <SplitCalloutSection
-                    callouts={sl.splitCallouts.filter(
-                      (callout) =>
-                        callout.title !== 'Lisans ve Gereksinimler' &&
-                        !callout.title.includes('SCIA Engineer')
-                    )}
-                    itemKeyPrefix="callout-top"
-                    onVideo={setActiveModalVideo}
-                    onImage={setActiveLightboxImage}
-                  />
-                )}
-                {/* 4. Benefits / Reasons Icon Card Grid (e.g., "ALLPLAN Ultimate'in Faydaları" — 12 icon cards) */}
-                {sl.benefits && sl.benefits.items.length > 0 && (
-                  <BenefitsSection benefits={sl.benefits} />
-                )}
-
-                {/* 5. Core Features Image & Popup Video Grid ("Fonksiyonellik Hızlı Bakış") */}
-                {sl.coreFeatures && sl.coreFeatures.items.length > 0 && (
-                  <MediaGridSection
-                    grid={sl.coreFeatures}
-                    itemKeyPrefix="core-features"
-                    onVideo={setActiveModalVideo}
-                    onImage={setActiveLightboxImage}
-                  />
-                )}
-
-                {/* 6. Interactive Multi-Tab Workflows (WorkflowTabsTemplate / RegulaTabs) */}
-                {sl.workflowTabs && (
-                  <WorkflowSection
-                    content={sl.workflowTabs}
-                    onVideo={setActiveModalVideo}
-                    onImage={setActiveLightboxImage}
-                  />
-                )}
-
-                {/* 7. Extra Media Grids (ALLPLAN Bulut Hizmetleri, Satın Alınabilir Seçenekler, Kaydedilmiş Webinarlar, etc.) */}
-                {sl.extraGrids &&
-                  sl.extraGrids.map((grid, gridIndex) => (
-                    <MediaGridSection
-                      key={`extra-grid-${gridIndex}`}
-                      grid={grid}
-                      itemKeyPrefix={`extra-grid-${gridIndex}`}
-                      onVideo={setActiveModalVideo}
-                      onImage={setActiveLightboxImage}
-                    />
-                  ))}
-
-                {/* 8. Bottom Split Callouts (Lisans ve Gereksinimler / SCIA Engineer Concept Sürümü) */}
-                {sl.splitCallouts && (
-                  <SplitCalloutSection
-                    callouts={sl.splitCallouts.filter(
-                      (callout) =>
-                        callout.title === 'Lisans ve Gereksinimler' ||
-                        callout.title.includes('SCIA Engineer')
-                    )}
-                    itemKeyPrefix="callout-bottom"
-                    onVideo={setActiveModalVideo}
-                    onImage={setActiveLightboxImage}
-                  />
-                )}
-                {/* 9. FAQ Accordion (SSS - ALLPLAN Ultimate / SSS - ALLPLAN Civil) */}
-                {sl.faq && sl.faq.items.length > 0 && (
-                  <section className="preview-section preview-section--subtle" aria-label={sl.faq.title}>
-                    <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
-                      <div className="alu-section-header-center">
-                        <span className="preview-kicker">/ SIKÇA SORULAN SORULAR</span>
-                        <h2 className="alu-h1" style={{ margin: 0 }}>
-                          {sl.faq.title}
-                        </h2>
-                      </div>
-                      <div className="alu-faq-list">
-                        {sl.faq.items.map((fItem, fIdx) => (
-                          <details
-                            key={`${fItem.question}-${fIdx}`}
-                            className="alu-faq-item"
-                            open={fIdx === 0}
-                          >
-                            <summary className="alu-faq-item__summary">
-                              <span>{fItem.question}</span>
-                              <span className="alu-faq-item__chevron" aria-hidden="true">
-                                <AluIcon name="chevron-down" size="sm" />
-                              </span>
-                            </summary>
-                            <div className="alu-faq-item__answer">
-                              {fItem.answer.split('\n\n').map((para, pIdx) => (
-                                <p key={pIdx}>{para}</p>
-                              ))}
-                            </div>
-                          </details>
-                        ))}
-                      </div>
-                    </div>
-                  </section>
-                )}
-
-                {/* 10. Interactive References Directory (/references — 10-Tab Category Filter + 3-Col Reference Card Grid) */}
-                {sl.referencesDirectory && (
-                  <ReferencesDirectorySection
-                    directory={sl.referencesDirectory}
-                    activeCategoryId={activeRefCatId}
-                    searchQuery={refSearchQuery}
-                    onCategoryChange={setActiveRefCatId}
-                    onSearchQueryChange={setRefSearchQuery}
-                  />
-                )}
-
-                <FAQSection faqDirectory={sl.faqDirectory} />
-
-                {/* Preserved Page Links, Downloads & Actions */}
-                {page.contentLinks && page.contentLinks.length > 0 && (
-                  <section className="preview-section" aria-label="İlgili Bağlantılar ve Dokümanlar">
-                    <div className="alu-container">
-                      <div className="alu-techspecs-banner" style={{ padding: 'var(--space-inset-lg)' }}>
-                        <div className="alu-stack" style={{ gap: 'var(--space-stack-md)' }}>
-                          <span className="preview-kicker">İLGİLİ BAĞLANTILAR, MODÜLLER VE DOKÜMANLAR</span>
-                          <h2 className="alu-h3" style={{ margin: 0 }}>
-                            Bu Sayfayla İlgili Hızlı Geçişler ve İndirmeler
-                          </h2>
-                          <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-dense)' }}>
-                            {page.contentLinks.map((lnk, lIdx) =>
-                              lnk.external ? (
-                                <a
-                                  key={`${lnk.href}-${lIdx}`}
-                                  href={lnk.href}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="alu-button alu-button--secondary alu-button--sm"
-                                >
-                                  <span>{lnk.text}</span>
-                                  <AluIcon name="external-link" size="sm" />
-                                </a>
-                              ) : (
-                                <Link
-                                  key={`${lnk.href}-${lIdx}`}
-                                  href={lnk.href}
-                                  className="alu-button alu-button--secondary alu-button--sm"
-                                >
-                                  <span>{lnk.text}</span>
-                                  <AluIcon name="arrow-right" size="sm" />
-                                </Link>
-                              )
-                            )}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                )}
-              </>
-            );
-          })()}
-        </div>
+        <StructuredPageLayoutSection
+          layout={page.structuredLayout}
+          contentLinks={page.contentLinks}
+          activeReferenceCategoryId={activeRefCatId}
+          referenceSearchQuery={refSearchQuery}
+          onReferenceCategoryChange={setActiveRefCatId}
+          onReferenceSearchQueryChange={setRefSearchQuery}
+          onVideo={setActiveModalVideo}
+          onImage={setActiveLightboxImage}
+        />
       ) : page.path === '/about' ? null : (
         /* Preserved Structured Content Sections — Benefit/Spec Grid + Alternating Photo Showcases */
         <section className="preview-section" aria-label="Sayfa içeriği">

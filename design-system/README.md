@@ -12,6 +12,8 @@ Kök uygulama, kanonik design-system dosyalarını `scripts/build_app_styles.py`
 
 Tema kapsamlarında `data-theme` ve `data-mode` birlikte verilir. İçerik ve schema katmanları tema değerlerinden bağımsızdır. Yeni bir etkileşim veya bilgi mimarisi değişikliği token değişikliği değildir.
 
+Uygulama JSX'inde sabit görünüm ölçülerini doğrudan sayı olarak yazmayın; gap/inset, metin genişliği, özel içerik genişliği, satır yüksekliği ve ikon çizgisi gibi roller için `tokens/tokens.json` içindeki semantik tokenları kullanın. Yüzde, `auto`, aspect ratio ve veri/indekse bağlı stiller yapısal/dinamik olabilir; bunları sabit görünüm değeri gibi tokenlaştırmayın. Inline ölçü geçişinin dört tema/mod eşliği `docs/verification/s06-2026-10-27/inline-style-migration.json` altında kanıtlanmıştır.
+
 ## Kaynaklar
 
 - `assets/logo/aluplan-logo-white.svg`, `assets/logo/aluplan-logo-white-filled.svg` (koyu yüzeyler için kök `fill="#FFFFFF"` eklenmiş varyant) ve `assets/logo/aluplan-logo-black.svg` (açık yüzeyler için kaynak siyah logo).

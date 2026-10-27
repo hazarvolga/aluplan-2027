@@ -112,7 +112,7 @@ export function HomepageView() {
         <div className="alu-container alu-hero-stage__inner">
           <div className="alu-hero-stage__grid">
             <div className="alu-stack" style={{ gap: 'var(--space-stack-lg)' }}>
-              <div className="alu-cluster" style={{ gap: '0.625rem' }}>
+              <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-dense)' }}>
                 <span className="alu-badge alu-badge--accent">
                   <AluIcon name="sparkles" size="sm" />
                   <span>ALLPLAN 2026 · TÜRKİYE</span>
@@ -128,7 +128,7 @@ export function HomepageView() {
                 Yenilikçi AEC iş akışları, parametrik donatı ve çelik otomasyonu ile bulut tabanlı OpenBIM iş birliği sayesinde tasarım aşamasından şantiyeye kadar hatasız projeler.
               </p>
 
-              <div className="alu-cluster" role="group" aria-label="Ana eylemler" style={{ gap: '0.875rem' }}>
+              <div className="alu-cluster" role="group" aria-label="Ana eylemler" style={{ gap: 'var(--space-application-jsx-wide)' }}>
                 <a
                   className="alu-button alu-button--primary alu-button--lg"
                   href={MAIN_QUOTE_FORM_URL}
@@ -184,7 +184,7 @@ export function HomepageView() {
                   <p className="preview-kicker" style={{ margin: 0 }}>
                     MİMARİ · MÜHENDİSLİK · ALTYAPI · PREKAST
                   </p>
-                  <p className="alu-body-sm" style={{ margin: '0.25rem 0 0 0' }}>
+                  <p className="alu-body-sm" style={{ margin: 'var(--space-application-jsx-tight) 0 0 0' }}>
                     Disiplinler arası BIM koordinasyonu ve yerel mühendislik desteği için tek platform.
                   </p>
                 </div>
@@ -227,7 +227,7 @@ export function HomepageView() {
             <h2 id="products-heading" className="alu-h1">
               Disiplininize Özel BIM İş Akışı
             </h2>
-            <p className="alu-body preview-meta" style={{ maxWidth: '58ch', marginInline: 'auto' }}>
+            <p className="alu-body preview-meta" style={{ maxWidth: 'var(--container-application-meta)', marginInline: 'auto' }}>
               Size en uygun iş akışını ve ürün paketini keşfedin. Seçtiğiniz disipline göre önerilen ALLPLAN paketleri aşağıda otomatik olarak öne çıkar.
             </p>
           </div>
@@ -273,7 +273,7 @@ export function HomepageView() {
           >
             {/* Left: Animated Role Title, Description & CTA */}
             <div key={activeRole.id + '-text'} className="alu-pathway-split__left">
-              <div className="alu-cluster" style={{ gap: '0.625rem' }}>
+              <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-dense)' }}>
                 <span className="alu-pathway-role-badge">
                   <AluIcon name={ROLE_ICONS[activeRole.id] || 'layers'} size="sm" />
                   <span>{activeRole.label} İŞ AKIŞI</span>
@@ -285,7 +285,7 @@ export function HomepageView() {
 
               <p className="alu-pathway-split__desc">{activeRole.description}</p>
 
-              <div className="alu-cluster" style={{ gap: '0.875rem', paddingTop: '0.5rem' }}>
+              <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-wide)', paddingTop: 'var(--space-application-jsx-regular)' }}>
                 <Link className="alu-pathway-cta" href={activeRole.href}>
                   <span>Bu Akışı Detaylı İncele</span>
                   <span className="alu-pathway-cta__arrow">
@@ -311,7 +311,6 @@ export function HomepageView() {
                   <div
                     key={activeRole.id + '-feature-' + fIdx}
                     className="alu-pathway-feature-card"
-                    style={{ animationDelay: `${fIdx * 85}ms` }}
                   >
                     <span className="alu-pathway-feature-card__icon" aria-hidden="true">
                       <AluIcon name="check" size="sm" />
@@ -597,8 +596,8 @@ export function HomepageView() {
           <div className="alu-stack" style={{ display: showAllServices ? 'flex' : 'none' }}>
             <h3 className="alu-h3">Tüm Hizmet ve Kaynak Dizini (20/20)</h3>
             {SERVICE_GROUPS.map(([groupTitle, names]) => (
-              <div key={groupTitle} className="alu-stack" style={{ gap: 'var(--space-stack-md)', paddingTop: '1rem' }}>
-                <div className="alu-cluster" style={{ justifyContent: 'space-between', borderBottom: '1px solid var(--border-default)', paddingBottom: '0.5rem' }}>
+              <div key={groupTitle} className="alu-stack" style={{ gap: 'var(--space-stack-md)', paddingTop: 'var(--space-application-jsx-section)' }}>
+                <div className="alu-cluster" style={{ justifyContent: 'space-between', borderBottom: 'var(--border-width-default) solid var(--border-default)', paddingBottom: 'var(--space-application-jsx-regular)' }}>
                   <span className="alu-h4">{groupTitle}</span>
                   <span className="alu-badge">{names.length} kayıt</span>
                 </div>

@@ -68,7 +68,7 @@ export function TrainingTabs({ content }: { content: StructuredTrainingTabs }) {
                 </ul>
               )}
               {tab.imageSrc && (
-                <img src={tab.imageSrc} alt="" loading="lazy" style={{ width: '100%', maxWidth: '32rem', height: 'auto' }} />
+                <img src={tab.imageSrc} alt="" loading="lazy" style={{ width: '100%', maxWidth: 'var(--layout-application-training-image-max-width)', height: 'auto' }} />
               )}
               <div className="alu-cluster">
                 {tab.href.startsWith('/') ? (

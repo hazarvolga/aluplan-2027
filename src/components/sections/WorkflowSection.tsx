@@ -35,7 +35,7 @@ export function WorkflowSection({
                 {wfTabs.title}
               </h2>
               {wfTabs.subtitle && (
-                <p className="alu-body preview-meta" style={{ margin: 0, maxWidth: '68ch' }}>
+                <p className="alu-body preview-meta" style={{ margin: 0, maxWidth: 'var(--container-prose)' }}>
                   {wfTabs.subtitle}
                 </p>
               )}
@@ -211,7 +211,7 @@ export function WorkflowSection({
                     )}
 
                     {currentWfItem.youtubeId && (
-                      <div style={{ marginTop: '0.5rem' }}>
+                      <div style={{ marginTop: 'var(--space-application-jsx-regular)' }}>
                         <button
                           type="button"
                           className="alu-button alu-button--primary alu-button--md"

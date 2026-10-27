@@ -125,12 +125,55 @@ export function runTokenTests({ build = buildTokens, lint = lintComponentCss, T,
       changed.resolved.aluplan.light['--radius-application-media-badge'] !== base.resolved.aluplan.light['--radius-application-media-badge'] &&
       changed.resolved.field.light['--radius-application-media-badge'] === base.resolved.field.light['--radius-application-media-badge']) || 'metric theme scope leaked';
   });
+  test('application JSX sizing tokens preserve their four-mode baseline values', () => {
+    const expected = {
+      '--space-application-jsx-tight': '0.25rem',
+      '--space-application-jsx-offset': '0.35rem',
+      '--space-application-jsx-compact': '0.375rem',
+      '--space-application-jsx-regular': '0.5rem',
+      '--space-application-jsx-dense': '0.625rem',
+      '--space-application-jsx-comfortable': '0.75rem',
+      '--space-application-jsx-wide': '0.875rem',
+      '--space-application-jsx-section': '1rem',
+      '--space-application-jsx-section-wide': '1.25rem',
+      '--space-application-jsx-section-inset': '1.5rem',
+      '--space-application-jsx-empty-state-block': '3rem',
+      '--container-application-prose-narrow': '42ch',
+      '--container-application-prose-compact': '48ch',
+      '--container-application-meta': '58ch',
+      '--container-prose': '68ch',
+      '--container-application-prose-wide': '72ch',
+      '--layout-application-utility-panel-max-height': '22rem',
+      '--layout-application-content-column-min-width': '22rem',
+      '--layout-application-training-image-max-width': '32rem',
+      '--type-application-about-editorial': '1.65',
+      '--icon-directory-category': '1.85',
+      '--icon-directory-category-size': '18px'
+    };
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      for (const [name, value] of Object.entries(expected)) if (values[name] !== value) return `${theme}/${mode} ${name}: expected ${value}, got ${values[name]}`;
+    }
+    return true;
+  });
   test('all application motion durations and delays collapse under reduced motion', () => {
     const css = base.files['tokens/semantic.css'];
     const reduced = css.slice(css.indexOf('@media (prefers-reduced-motion: reduce)'));
     for (const key of Object.keys(T.semantic.motion.duration)) {
       const name = key.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
       if (!reduced.includes('--motion-duration-' + name + ': 0ms;')) return 'missing reduced-motion duration: ' + key;
+    }
+    return true;
+  });
+  test('homepage feature stagger tokens preserve the four original 85ms steps', () => {
+    const expected = ['0ms', '85ms', '170ms', '255ms'];
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      const actual = ['first', 'second', 'third', 'fourth'].map(step => values[`--motion-duration-feature-stagger-${step}`]);
+      if (JSON.stringify(actual) !== JSON.stringify(expected)) return `${theme}/${mode}: ${JSON.stringify(actual)}`;
+    }
+    const css = base.files['tokens/semantic.css'];
+    const reduced = css.slice(css.indexOf('@media (prefers-reduced-motion: reduce)'));
+    for (const step of ['first', 'second', 'third', 'fourth']) {
+      if (!reduced.includes(`--motion-duration-feature-stagger-${step}: 0ms;`)) return `reduced motion missing ${step} stagger`;
     }
     return true;
   });

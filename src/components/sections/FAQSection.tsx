@@ -41,7 +41,7 @@ export function FAQSection({ faqDirectory }: FAQSectionProps) {
           {faqDir.subtitle && (
             <p
               className="alu-body preview-meta"
-              style={{ margin: 0, maxWidth: '68ch' }}
+              style={{ margin: 0, maxWidth: 'var(--container-prose)' }}
             >
               {faqDir.subtitle}
             </p>
@@ -92,7 +92,7 @@ export function FAQSection({ faqDirectory }: FAQSectionProps) {
           tabIndex={0}
         >
           <div className="alu-faq-stage__header">
-            <div className="alu-cluster" style={{ gap: '0.75rem' }}>
+            <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-comfortable)' }}>
               <span className="alu-ref-card__icon">
                 <DirectoryCategoryIcon name={currentFaqCat.iconName} />
               </span>
@@ -101,7 +101,7 @@ export function FAQSection({ faqDirectory }: FAQSectionProps) {
                   {currentFaqCat.title}
                 </h3>
                 {currentFaqCat.subtitle && (
-                  <p className="alu-body-sm preview-meta" style={{ margin: '0.25rem 0 0 0' }}>
+                  <p className="alu-body-sm preview-meta" style={{ margin: 'var(--space-application-jsx-tight) 0 0 0' }}>
                     {currentFaqCat.subtitle}
                   </p>
                 )}
@@ -131,7 +131,7 @@ export function FAQSection({ faqDirectory }: FAQSectionProps) {
                   ))}
 
                   {fItem.bullets && fItem.bullets.length > 0 && (
-                    <ul className="alu-media-card__bullets" style={{ marginTop: '0.5rem' }}>
+                    <ul className="alu-media-card__bullets" style={{ marginTop: 'var(--space-application-jsx-regular)' }}>
                       {fItem.bullets.map((b, bIdx) => (
                         <li key={bIdx}>
                           <AluIcon name="check" size="sm" />
@@ -184,7 +184,7 @@ export function FAQSection({ faqDirectory }: FAQSectionProps) {
           </div>
 
           {currentFaqCat.ctaHref && (
-            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: 'var(--space-application-jsx-section)' }}>
               <a
                 href={currentFaqCat.ctaHref}
                 target="_blank"

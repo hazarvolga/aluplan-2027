@@ -208,6 +208,7 @@
   --ref-font-line-height-application-editorial: 1.75; /* @kind other */
   --ref-font-line-height-application-editorial-spacious: 1.8; /* @kind other */
   --ref-font-line-height-application-body-spacious: 1.7; /* @kind other */
+  --ref-font-line-height-application-about-editorial: 1.65;
   --ref-font-letter-spacing-tight: -0.02em;
   --ref-font-letter-spacing-snug: -0.01em;
   --ref-font-letter-spacing-normal: 0em;
@@ -275,6 +276,10 @@
   --ref-space-application-about-story-gap: clamp(2.5rem, 5vw, 5rem); /* @kind other */
   --ref-space-application-about-value-item-padding: clamp(1.75rem, 3vw, 2.25rem); /* @kind other */
   --ref-space-application-about-office-info-padding: clamp(1.75rem, 3vw, 2.75rem); /* @kind other */
+  --ref-space-application-inline-dense: 0.625rem;
+  --ref-space-application-inline-wide: 0.875rem;
+  --ref-space-application-inline-empty-state: 3rem;
+  --ref-space-application-inline-offset: 0.35rem;
   --ref-size-4: 1rem;
   --ref-size-5: 1.25rem;
   --ref-size-6: 1.5rem;
@@ -298,6 +303,10 @@
   --ref-size-measure-24: 24rem;
   --ref-size-measure-32: 32rem;
   --ref-size-measure-36: 36rem;
+  --ref-size-application-utility-panel-max-height: 22rem;
+  --ref-size-application-training-image-max-width: 32rem;
+  --ref-size-application-content-column-min-width: 22rem;
+  --ref-size-application-directory-icon-size: 18px;
   --ref-radius-0: 0;
   --ref-radius-2: 2px;
   --ref-radius-4: 4px;
@@ -319,6 +328,7 @@
   --ref-icon-stroke-150: 1.5; /* @kind other */
   --ref-icon-stroke-200: 2; /* @kind other */
   --ref-icon-stroke-300: 3; /* @kind other */
+  --ref-icon-stroke-application-directory-category: 1.85; /* @kind other */
   --ref-duration-0: 0ms; /* @kind other */
   --ref-duration-150: 150ms; /* @kind other */
   --ref-duration-200: 200ms; /* @kind other */
@@ -340,6 +350,9 @@
   --ref-duration-application-panel: 260ms; /* @kind other */
   --ref-duration-application-showcase: 520ms; /* @kind other */
   --ref-duration-application-gentle: 320ms; /* @kind other */
+  --ref-duration-application-feature-stagger-second: 85ms; /* @kind other */
+  --ref-duration-application-feature-stagger-third: 170ms; /* @kind other */
+  --ref-duration-application-feature-stagger-fourth: 255ms; /* @kind other */
   --ref-easing-standard: cubic-bezier(0.2, 0, 0, 1); /* @kind other */
   --ref-easing-decelerate: cubic-bezier(0, 0, 0, 1); /* @kind other */
   --ref-easing-accelerate: cubic-bezier(0.3, 0, 1, 1); /* @kind other */

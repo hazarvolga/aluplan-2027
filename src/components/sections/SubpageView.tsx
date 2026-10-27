@@ -251,7 +251,7 @@ export function SubpageView({
             <nav aria-label="Sayfa konumu (Breadcrumb)">
               <ol className="alu-breadcrumb">
                 {page.breadcrumbs.map((crumb, idx) => (
-                  <li key={crumb.href + idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem' }}>
+                  <li key={crumb.href + idx} style={{ display: 'inline-flex', alignItems: 'center', gap: 'var(--space-application-jsx-compact)' }}>
                     {idx > 0 && <AluIcon name="chevron-right" size="sm" />}
                     {idx < page.breadcrumbs.length - 1 ? (
                       <Link href={crumb.href}>{crumb.label}</Link>
@@ -344,7 +344,7 @@ export function SubpageView({
                     {st.heading}
                   </h2>
                   {st.items.map((desc, dIdx) => (
-                    <p key={dIdx} className="alu-body-sm" style={{ margin: '0.25rem 0 0 0' }}>
+                    <p key={dIdx} className="alu-body-sm" style={{ margin: 'var(--space-application-jsx-tight) 0 0 0' }}>
                       {desc}
                     </p>
                   ))}
@@ -488,12 +488,12 @@ export function SubpageView({
       {page.path === '/solutions-v2/training/video-library' && (
         <section className="preview-section" aria-labelledby="all-playlists-heading">
           <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
-            <div className="alu-stack" style={{ gap: '0.5rem' }}>
+            <div className="alu-stack" style={{ gap: 'var(--space-application-jsx-regular)' }}>
               <span className="preview-kicker">GÖRSEL EĞİTİM · VİDEO KÜTÜPHANESİ</span>
               <h2 id="all-playlists-heading" className="alu-h1">
                 Önerilen Oynatma Listeleri ve Kanallar
               </h2>
-              <p className="alu-body preview-meta" style={{ maxWidth: '58ch' }}>
+              <p className="alu-body preview-meta" style={{ maxWidth: 'var(--container-application-meta)' }}>
                 Sizin için derlediğimiz en popüler ve faydalı video kaynak liste ve kanalları.
               </p>
             </div>
@@ -650,7 +650,7 @@ export function SubpageView({
       {/* Contact requests use the shared Microsoft form; direct channels stay available */}
       {page.path === '/contact' && (
         <section className="preview-section preview-section--subtle" aria-labelledby="contact-form-heading">
-          <div className="alu-container alu-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 22rem), 1fr))' }}>
+          <div className="alu-container alu-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, var(--layout-application-content-column-min-width)), 1fr))' }}>
             <div className="alu-service-card alu-stack">
               <span className="preview-kicker">DOĞRUDAN İLETİŞİM</span>
               <h2 id="contact-form-heading" className="alu-h2">
@@ -673,7 +673,7 @@ export function SubpageView({
               <p className="alu-body">
                 Quick Tower – Workinton, İçerenköy Mah. Topçu İbrahim Sok. 8/10D No: 5, 34752 Ataşehir / İstanbul
               </p>
-              <ul className="alu-stack" style={{ listStyle: 'none', padding: 0, margin: 0, gap: '0.75rem' }}>
+              <ul className="alu-stack" style={{ listStyle: 'none', padding: 0, margin: 0, gap: 'var(--space-application-jsx-comfortable)' }}>
                 <li className="alu-cluster">
                   <span className="alu-support-card__icon">
                     <AluIcon name="phone" size="sm" />
@@ -846,11 +846,11 @@ export function SubpageView({
                 <div className="alu-about-section-head">
                   <div>
                     <span className="preview-kicker">KURUMSAL İLKELER</span>
-                    <h2 id="about-values-heading" className="alu-h1" style={{ margin: '0.35rem 0 0 0' }}>
+                    <h2 id="about-values-heading" className="alu-h1" style={{ margin: 'var(--space-application-jsx-offset) 0 0 0' }}>
                       Değerlerimiz
                     </h2>
                   </div>
-                  <p className="alu-body preview-meta" style={{ margin: 0, maxWidth: '42ch' }}>
+                  <p className="alu-body preview-meta" style={{ margin: 0, maxWidth: 'var(--container-application-prose-narrow)' }}>
                     Çalışmalarımızı şekillendiren temel ilkelerimiz
                   </p>
                 </div>
@@ -878,11 +878,11 @@ export function SubpageView({
                 <div className="alu-about-section-head">
                   <div>
                     <span className="preview-kicker">MERKEZ OFİS &amp; LOKASYON</span>
-                    <h2 id="about-office-heading" className="alu-h1" style={{ margin: '0.35rem 0 0 0' }}>
+                    <h2 id="about-office-heading" className="alu-h1" style={{ margin: 'var(--space-application-jsx-offset) 0 0 0' }}>
                       Ofisimiz
                     </h2>
                   </div>
-                  <p className="alu-body preview-meta" style={{ margin: 0, maxWidth: '48ch' }}>
+                  <p className="alu-body preview-meta" style={{ margin: 0, maxWidth: 'var(--container-application-prose-compact)' }}>
                     İstanbul Ataşehir&apos;deki modern ofisimizden Türkiye geneline hizmet veriyoruz
                   </p>
                 </div>
@@ -891,10 +891,10 @@ export function SubpageView({
                   <div className="alu-about-office__info">
                     <div className="alu-about-office__block">
                       <span className="alu-about-office__eyebrow">ADRES</span>
-                      <h3 className="alu-h3" style={{ margin: '0.25rem 0 0.5rem 0' }}>
+                      <h3 className="alu-h3" style={{ margin: 'var(--space-application-jsx-tight) 0 var(--space-application-jsx-regular) 0' }}>
                         Adres
                       </h3>
-                      <p className="alu-body" style={{ margin: 0, lineHeight: 1.65 }}>
+                      <p className="alu-body" style={{ margin: 0, lineHeight: 'var(--type-application-about-editorial)' }}>
                         Quick Tower – Workinton
                         <br />
                         İçerenköy Mah. Topçu İbrahim Sok.
@@ -909,7 +909,7 @@ export function SubpageView({
 
                     <div className="alu-about-office__block">
                       <span className="alu-about-office__eyebrow">DOĞRUDAN ERİŞİM</span>
-                      <h3 className="alu-h3" style={{ margin: '0.25rem 0 0.75rem 0' }}>
+                      <h3 className="alu-h3" style={{ margin: 'var(--space-application-jsx-tight) 0 var(--space-application-jsx-comfortable) 0' }}>
                         İletişim
                       </h3>
                       <dl className="alu-about-office__contact-list">
@@ -936,7 +936,7 @@ export function SubpageView({
                       </dl>
                     </div>
 
-                    <div className="alu-cluster" style={{ gap: '0.75rem', marginTop: 'auto', paddingTop: '0.5rem' }}>
+                    <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-comfortable)', marginTop: 'auto', paddingTop: 'var(--space-application-jsx-regular)' }}>
                       <Link className="alu-button alu-button--primary alu-button--sm" href="/contact">
                         <span>İletişim Sayfasına Git</span>
                         <AluIcon name="arrow-right" size="sm" />
@@ -1047,7 +1047,7 @@ export function SubpageView({
                         {grid.title}
                       </h2>
                       {grid.subtitle && (
-                        <p className="alu-body preview-meta" style={{ margin: 0, maxWidth: '68ch' }}>
+                        <p className="alu-body preview-meta" style={{ margin: 0, maxWidth: 'var(--container-prose)' }}>
                           {grid.subtitle}
                         </p>
                       )}
@@ -1301,7 +1301,7 @@ export function SubpageView({
                             <h3 className="alu-hero-metrics__label" style={{ margin: 0 }}>
                               {st.label}
                             </h3>
-                            <p className="alu-body-sm" style={{ margin: '0.25rem 0 0 0' }}>
+                            <p className="alu-body-sm" style={{ margin: 'var(--space-application-jsx-tight) 0 0 0' }}>
                               {st.description}
                             </p>
                           </div>
@@ -1475,7 +1475,7 @@ export function SubpageView({
                                   </p>
                                 ))}
                                 {callout.bullets && callout.bullets.length > 0 && (
-                                  <ul className="alu-media-card__bullets" style={{ marginTop: '0.25rem' }}>
+                                  <ul className="alu-media-card__bullets" style={{ marginTop: 'var(--space-application-jsx-tight)' }}>
                                     {callout.bullets.map((b, bIdx) => (
                                       <li key={bIdx}>
                                         <AluIcon name="check" size="sm" />
@@ -1484,7 +1484,7 @@ export function SubpageView({
                                     ))}
                                   </ul>
                                 )}
-                                <div className="alu-cluster" style={{ marginTop: '0.5rem' }}>
+                                <div className="alu-cluster" style={{ marginTop: 'var(--space-application-jsx-regular)' }}>
                                   {hasVideo && (
                                     <button
                                       type="button"
@@ -1732,7 +1732,7 @@ export function SubpageView({
                                   </p>
                                 ))}
                                 {callout.bullets && callout.bullets.length > 0 && (
-                                  <ul className="alu-media-card__bullets" style={{ marginTop: '0.25rem' }}>
+                                  <ul className="alu-media-card__bullets" style={{ marginTop: 'var(--space-application-jsx-tight)' }}>
                                     {callout.bullets.map((b, bIdx) => (
                                       <li key={bIdx}>
                                         <AluIcon name="check" size="sm" />
@@ -1741,7 +1741,7 @@ export function SubpageView({
                                     ))}
                                   </ul>
                                 )}
-                                <div className="alu-cluster" style={{ marginTop: '0.5rem' }}>
+                                <div className="alu-cluster" style={{ marginTop: 'var(--space-application-jsx-regular)' }}>
                                   {hasVideo && (
                                     <button
                                       type="button"
@@ -1854,7 +1854,7 @@ export function SubpageView({
                           {refDir.subtitle && (
                             <p
                               className="alu-body preview-meta"
-                              style={{ margin: 0, maxWidth: '72ch' }}
+                              style={{ margin: 0, maxWidth: 'var(--container-application-prose-wide)' }}
                             >
                               {refDir.subtitle}
                             </p>
@@ -1944,7 +1944,7 @@ export function SubpageView({
                             ))}
                           </div>
                         ) : (
-                          <div className="alu-service-card alu-stack" style={{ textAlign: 'center', padding: '3rem 1.5rem' }}>
+                          <div className="alu-service-card alu-stack" style={{ textAlign: 'center', padding: 'var(--space-application-jsx-empty-state-block) var(--space-application-jsx-section-inset)' }}>
                             <p className="alu-h3" style={{ margin: 0 }}>
                               Arama kriterlerinize uygun referans bulunamadı.
                             </p>
@@ -1979,7 +1979,7 @@ export function SubpageView({
                           <h2 className="alu-h3" style={{ margin: 0 }}>
                             Bu Sayfayla İlgili Hızlı Geçişler ve İndirmeler
                           </h2>
-                          <div className="alu-cluster" style={{ gap: '0.625rem' }}>
+                          <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-dense)' }}>
                             {page.contentLinks.map((lnk, lIdx) =>
                               lnk.external ? (
                                 <a
@@ -2029,7 +2029,7 @@ export function SubpageView({
                   return (
                     <article key={`spec-${sec.heading}-${idx}`} className="alu-spec-card">
                       <div className="alu-spec-card__header">
-                        <div className="alu-cluster" style={{ gap: '0.75rem' }}>
+                        <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-comfortable)' }}>
                           {sec.iconSrc && (
                             <span className="alu-benefit-icon">
                               <img src={sec.iconSrc} alt="" loading="lazy" />
@@ -2052,7 +2052,7 @@ export function SubpageView({
                           {sec.heading}
                         </h4>
                       )}
-                      <div className="alu-stack" style={{ gap: '0.625rem' }}>
+                      <div className="alu-stack" style={{ gap: 'var(--space-application-jsx-dense)' }}>
                         {sec.items.map((paragraph, pIdx) => (
                           <p key={pIdx} className="alu-body-sm" style={{ margin: 0 }}>
                             {paragraph}
@@ -2091,7 +2091,7 @@ export function SubpageView({
                             {sec.heading}
                           </h3>
                         )}
-                        <div className="alu-stack" style={{ gap: '0.75rem' }}>
+                        <div className="alu-stack" style={{ gap: 'var(--space-application-jsx-comfortable)' }}>
                           {sec.items.map((paragraph, pIdx) => (
                             <p key={pIdx} className="alu-body" style={{ margin: 0 }}>
                               {paragraph}
@@ -2131,7 +2131,7 @@ export function SubpageView({
 
                 {page.interactiveStates[activeTabIdx] && (
                   <div className="alu-module-tabs__panel">
-                    <div className="alu-cluster" style={{ justifyContent: 'space-between', marginBottom: '1rem' }}>
+                    <div className="alu-cluster" style={{ justifyContent: 'space-between', marginBottom: 'var(--space-application-jsx-section)' }}>
                       <h3 className="alu-h3">{page.interactiveStates[activeTabIdx].label}</h3>
                       <span className="alu-badge alu-badge--accent">
                         {page.interactiveStates[activeTabIdx].texts.length} Teknik Madde
@@ -2171,7 +2171,7 @@ export function SubpageView({
                         </span>
                       </div>
                       {img.alt && (
-                        <figcaption className="alu-caption" style={{ padding: '0.75rem 1rem' }}>
+                        <figcaption className="alu-caption" style={{ padding: 'var(--space-application-jsx-comfortable) var(--space-application-jsx-section)' }}>
                           {img.alt}
                         </figcaption>
                       )}
@@ -2212,7 +2212,7 @@ export function SubpageView({
                   <h2 className="alu-h3" style={{ margin: 0 }}>
                     Bu Sayfayla İlgili Hızlı Geçişler ve İndirmeler
                   </h2>
-                  <div className="alu-cluster" style={{ gap: '0.625rem' }}>
+                  <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-dense)' }}>
                     {page.contentLinks.map((lnk, lIdx) =>
                       lnk.external ? (
                         <a
@@ -2252,14 +2252,14 @@ export function SubpageView({
             onClick={(e) => e.stopPropagation()}
           >
             <div className="alu-video-modal__header">
-              <div className="alu-cluster" style={{ gap: '0.625rem' }}>
+              <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-dense)' }}>
                 <span className="alu-badge alu-badge--accent">
                   <AluIcon name="circle-play" size="sm" />
                   <span>VİDEO ÖNİZLEME</span>
                 </span>
                 <h3 className="alu-video-modal__title">{activeModalVideo.title}</h3>
               </div>
-              <div className="alu-cluster" style={{ gap: '0.5rem' }}>
+              <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-regular)' }}>
                 {activeModalVideo.youtubeId && (
                   <a
                     href={`https://www.youtube.com/watch?v=${activeModalVideo.youtubeId}`}
@@ -2372,7 +2372,7 @@ export function SubpageView({
 
               <div className="alu-trial-banner__benefits">
                 <h3 className="alu-h3">ALLPLAN&apos;ı ücretsiz deneyin</h3>
-                <div className="alu-stack" style={{ gap: '0.75rem' }}>
+                <div className="alu-stack" style={{ gap: 'var(--space-application-jsx-comfortable)' }}>
                   <div className="alu-role-stage__feature">
                     <span className="alu-role-stage__feature-num">01</span>
                     <span className="alu-role-stage__feature-text">

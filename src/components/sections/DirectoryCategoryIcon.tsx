@@ -2,12 +2,12 @@ import React from 'react';
 
 export function DirectoryCategoryIcon({ name }: { name?: string }) {
   const props = {
-    width: 18,
-    height: 18,
+    width: 'var(--icon-directory-category-size)',
+    height: 'var(--icon-directory-category-size)',
     viewBox: '0 0 24 24',
     fill: 'none',
     stroke: 'currentColor',
-    strokeWidth: 1.85,
+    strokeWidth: 'var(--icon-directory-category)',
     strokeLinecap: 'round' as const,
     strokeLinejoin: 'round' as const,
     'aria-hidden': true as const

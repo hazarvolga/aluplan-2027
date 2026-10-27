@@ -84,6 +84,7 @@
   --type-application-editorial-spacious-line-height: var(--ref-font-line-height-application-editorial-spacious); /* @kind other */
   --type-application-feature-title-size: var(--ref-font-size-application-feature-title);
   --type-application-body-spacious-line-height: var(--ref-font-line-height-application-body-spacious); /* @kind other */
+  --type-application-about-editorial: var(--ref-font-line-height-application-about-editorial); /* @kind other */
   --space-inset-xs: var(--ref-space-2);
   --space-inset-sm: var(--ref-space-4);
   --space-inset-md: var(--ref-space-6);
@@ -146,6 +147,17 @@
   --space-application-about-story-gap: var(--ref-space-application-about-story-gap); /* @kind other */
   --space-application-about-value-item-padding: var(--ref-space-application-about-value-item-padding); /* @kind other */
   --space-application-about-office-info-padding: var(--ref-space-application-about-office-info-padding); /* @kind other */
+  --space-application-jsx-tight: var(--ref-space-1);
+  --space-application-jsx-compact: var(--ref-space-application-dense-gap);
+  --space-application-jsx-regular: var(--ref-space-2);
+  --space-application-jsx-dense: var(--ref-space-application-inline-dense);
+  --space-application-jsx-comfortable: var(--ref-space-3);
+  --space-application-jsx-wide: var(--ref-space-application-inline-wide);
+  --space-application-jsx-section: var(--ref-space-4);
+  --space-application-jsx-section-wide: var(--ref-space-5);
+  --space-application-jsx-empty-state-block: var(--ref-space-application-inline-empty-state);
+  --space-application-jsx-section-inset: var(--ref-space-6);
+  --space-application-jsx-offset: var(--ref-space-application-inline-offset);
   --control-height-sm: var(--ref-size-9);
   --control-height-md: var(--ref-size-11);
   --control-height-lg: var(--ref-size-13);
@@ -175,6 +187,8 @@
   --icon-size-lg: var(--ref-size-6);
   --icon-stroke: var(--ref-icon-stroke-200); /* @kind other */
   --icon-stroke-emphasis: var(--ref-icon-stroke-300); /* @kind other */
+  --icon-directory-category: var(--ref-icon-stroke-application-directory-category); /* @kind other */
+  --icon-directory-category-size: var(--ref-size-application-directory-icon-size); /* @kind other */
   --motion-duration-fast: var(--ref-duration-150); /* @kind other */
   --motion-duration-base: var(--ref-duration-200); /* @kind other */
   --motion-duration-slow: var(--ref-duration-300); /* @kind other */
@@ -186,6 +200,10 @@
   --motion-duration-media: var(--ref-duration-application-media); /* @kind other */
   --motion-duration-feature: var(--ref-duration-application-feature); /* @kind other */
   --motion-duration-feature-delayed: var(--ref-duration-application-feature-delayed); /* @kind other */
+  --motion-duration-feature-stagger-first: var(--ref-duration-0); /* @kind other */
+  --motion-duration-feature-stagger-second: var(--ref-duration-application-feature-stagger-second); /* @kind other */
+  --motion-duration-feature-stagger-third: var(--ref-duration-application-feature-stagger-third); /* @kind other */
+  --motion-duration-feature-stagger-fourth: var(--ref-duration-application-feature-stagger-fourth); /* @kind other */
   --motion-duration-stagger-short: var(--ref-duration-application-stagger-short); /* @kind other */
   --motion-duration-reveal: var(--ref-duration-application-reveal); /* @kind other */
   --motion-duration-image: var(--ref-duration-application-image); /* @kind other */
@@ -212,6 +230,10 @@
   --container-xl: var(--ref-size-container1200);
   --container-prose: 68ch;
   --container-gutter: clamp(var(--ref-space-4), 4vw, var(--ref-space-8));
+  --container-application-prose-narrow: 42ch;
+  --container-application-prose-compact: 48ch;
+  --container-application-meta: 58ch;
+  --container-application-prose-wide: 72ch;
   --grid-gap: var(--ref-space-6);
   --logo-height-sm: var(--ref-size-6);
   --logo-height-md: var(--ref-size-8);
@@ -227,6 +249,9 @@
   --layout-meta-column: var(--ref-size-measure-10);
   --layout-tab-max: var(--ref-size-measure-20);
   --layout-dialog-max: var(--ref-size-measure-32);
+  --layout-application-training-image-max-width: var(--ref-size-application-training-image-max-width);
+  --layout-application-utility-panel-max-height: var(--ref-size-application-utility-panel-max-height);
+  --layout-application-content-column-min-width: var(--ref-size-application-content-column-min-width);
   --surface-page: var(--ref-color-white);
   --surface-default: var(--ref-color-white);
   --surface-subtle: var(--ref-color-silver-50);
@@ -444,6 +469,7 @@
   --type-application-editorial-spacious-line-height: var(--ref-font-line-height-application-editorial-spacious); /* @kind other */
   --type-application-feature-title-size: var(--ref-font-size-application-feature-title);
   --type-application-body-spacious-line-height: var(--ref-font-line-height-application-body-spacious); /* @kind other */
+  --type-application-about-editorial: var(--ref-font-line-height-application-about-editorial); /* @kind other */
   --space-inset-xs: var(--ref-space-2);
   --space-inset-sm: var(--ref-space-4);
   --space-inset-md: var(--ref-space-6);
@@ -506,6 +532,17 @@
   --space-application-about-story-gap: var(--ref-space-application-about-story-gap); /* @kind other */
   --space-application-about-value-item-padding: var(--ref-space-application-about-value-item-padding); /* @kind other */
   --space-application-about-office-info-padding: var(--ref-space-application-about-office-info-padding); /* @kind other */
+  --space-application-jsx-tight: var(--ref-space-1);
+  --space-application-jsx-compact: var(--ref-space-application-dense-gap);
+  --space-application-jsx-regular: var(--ref-space-2);
+  --space-application-jsx-dense: var(--ref-space-application-inline-dense);
+  --space-application-jsx-comfortable: var(--ref-space-3);
+  --space-application-jsx-wide: var(--ref-space-application-inline-wide);
+  --space-application-jsx-section: var(--ref-space-4);
+  --space-application-jsx-section-wide: var(--ref-space-5);
+  --space-application-jsx-empty-state-block: var(--ref-space-application-inline-empty-state);
+  --space-application-jsx-section-inset: var(--ref-space-6);
+  --space-application-jsx-offset: var(--ref-space-application-inline-offset);
   --control-height-sm: var(--ref-size-9);
   --control-height-md: var(--ref-size-11);
   --control-height-lg: var(--ref-size-13);
@@ -535,6 +572,8 @@
   --icon-size-lg: var(--ref-size-6);
   --icon-stroke: var(--ref-icon-stroke-200); /* @kind other */
   --icon-stroke-emphasis: var(--ref-icon-stroke-300); /* @kind other */
+  --icon-directory-category: var(--ref-icon-stroke-application-directory-category); /* @kind other */
+  --icon-directory-category-size: var(--ref-size-application-directory-icon-size); /* @kind other */
   --motion-duration-fast: var(--ref-duration-150); /* @kind other */
   --motion-duration-base: var(--ref-duration-200); /* @kind other */
   --motion-duration-slow: var(--ref-duration-300); /* @kind other */
@@ -546,6 +585,10 @@
   --motion-duration-media: var(--ref-duration-application-media); /* @kind other */
   --motion-duration-feature: var(--ref-duration-application-feature); /* @kind other */
   --motion-duration-feature-delayed: var(--ref-duration-application-feature-delayed); /* @kind other */
+  --motion-duration-feature-stagger-first: var(--ref-duration-0); /* @kind other */
+  --motion-duration-feature-stagger-second: var(--ref-duration-application-feature-stagger-second); /* @kind other */
+  --motion-duration-feature-stagger-third: var(--ref-duration-application-feature-stagger-third); /* @kind other */
+  --motion-duration-feature-stagger-fourth: var(--ref-duration-application-feature-stagger-fourth); /* @kind other */
   --motion-duration-stagger-short: var(--ref-duration-application-stagger-short); /* @kind other */
   --motion-duration-reveal: var(--ref-duration-application-reveal); /* @kind other */
   --motion-duration-image: var(--ref-duration-application-image); /* @kind other */
@@ -572,6 +615,10 @@
   --container-xl: var(--ref-size-container1200);
   --container-prose: 68ch;
   --container-gutter: clamp(var(--ref-space-4), 4vw, var(--ref-space-8));
+  --container-application-prose-narrow: 42ch;
+  --container-application-prose-compact: 48ch;
+  --container-application-meta: 58ch;
+  --container-application-prose-wide: 72ch;
   --grid-gap: var(--ref-space-6);
   --logo-height-sm: var(--ref-size-6);
   --logo-height-md: var(--ref-size-8);
@@ -587,6 +634,9 @@
   --layout-meta-column: var(--ref-size-measure-10);
   --layout-tab-max: var(--ref-size-measure-20);
   --layout-dialog-max: var(--ref-size-measure-32);
+  --layout-application-training-image-max-width: var(--ref-size-application-training-image-max-width);
+  --layout-application-utility-panel-max-height: var(--ref-size-application-utility-panel-max-height);
+  --layout-application-content-column-min-width: var(--ref-size-application-content-column-min-width);
 }
 [data-theme="aluplan"][data-mode="light"]{
   --surface-page: var(--ref-color-white);
@@ -940,6 +990,7 @@
   --type-application-editorial-spacious-line-height: var(--ref-font-line-height-application-editorial-spacious); /* @kind other */
   --type-application-feature-title-size: var(--ref-font-size-application-feature-title);
   --type-application-body-spacious-line-height: var(--ref-font-line-height-application-body-spacious); /* @kind other */
+  --type-application-about-editorial: var(--ref-font-line-height-application-about-editorial); /* @kind other */
   --space-inset-xs: var(--ref-space-1);
   --space-inset-sm: var(--ref-space-2);
   --space-inset-md: var(--ref-space-4);
@@ -1002,6 +1053,17 @@
   --space-application-about-story-gap: var(--ref-space-application-about-story-gap); /* @kind other */
   --space-application-about-value-item-padding: var(--ref-space-application-about-value-item-padding); /* @kind other */
   --space-application-about-office-info-padding: var(--ref-space-application-about-office-info-padding); /* @kind other */
+  --space-application-jsx-tight: var(--ref-space-1);
+  --space-application-jsx-compact: var(--ref-space-application-dense-gap);
+  --space-application-jsx-regular: var(--ref-space-2);
+  --space-application-jsx-dense: var(--ref-space-application-inline-dense);
+  --space-application-jsx-comfortable: var(--ref-space-3);
+  --space-application-jsx-wide: var(--ref-space-application-inline-wide);
+  --space-application-jsx-section: var(--ref-space-4);
+  --space-application-jsx-section-wide: var(--ref-space-5);
+  --space-application-jsx-empty-state-block: var(--ref-space-application-inline-empty-state);
+  --space-application-jsx-section-inset: var(--ref-space-6);
+  --space-application-jsx-offset: var(--ref-space-application-inline-offset);
   --control-height-sm: var(--ref-size-8);
   --control-height-md: var(--ref-size-10);
   --control-height-lg: var(--ref-size-12);
@@ -1031,6 +1093,8 @@
   --icon-size-lg: var(--ref-size-6);
   --icon-stroke: var(--ref-icon-stroke-150);
   --icon-stroke-emphasis: var(--ref-icon-stroke-300); /* @kind other */
+  --icon-directory-category: var(--ref-icon-stroke-application-directory-category); /* @kind other */
+  --icon-directory-category-size: var(--ref-size-application-directory-icon-size); /* @kind other */
   --motion-duration-fast: var(--ref-duration-150); /* @kind other */
   --motion-duration-base: var(--ref-duration-200); /* @kind other */
   --motion-duration-slow: var(--ref-duration-300); /* @kind other */
@@ -1042,6 +1106,10 @@
   --motion-duration-media: var(--ref-duration-application-media); /* @kind other */
   --motion-duration-feature: var(--ref-duration-application-feature); /* @kind other */
   --motion-duration-feature-delayed: var(--ref-duration-application-feature-delayed); /* @kind other */
+  --motion-duration-feature-stagger-first: var(--ref-duration-0); /* @kind other */
+  --motion-duration-feature-stagger-second: var(--ref-duration-application-feature-stagger-second); /* @kind other */
+  --motion-duration-feature-stagger-third: var(--ref-duration-application-feature-stagger-third); /* @kind other */
+  --motion-duration-feature-stagger-fourth: var(--ref-duration-application-feature-stagger-fourth); /* @kind other */
   --motion-duration-stagger-short: var(--ref-duration-application-stagger-short); /* @kind other */
   --motion-duration-reveal: var(--ref-duration-application-reveal); /* @kind other */
   --motion-duration-image: var(--ref-duration-application-image); /* @kind other */
@@ -1068,6 +1136,10 @@
   --container-xl: var(--ref-size-container1200);
   --container-prose: 68ch;
   --container-gutter: clamp(var(--ref-space-4), 4vw, var(--ref-space-8));
+  --container-application-prose-narrow: 42ch;
+  --container-application-prose-compact: 48ch;
+  --container-application-meta: 58ch;
+  --container-application-prose-wide: 72ch;
   --grid-gap: var(--ref-space-4);
   --logo-height-sm: var(--ref-size-6);
   --logo-height-md: var(--ref-size-8);
@@ -1083,6 +1155,9 @@
   --layout-meta-column: var(--ref-size-measure-10);
   --layout-tab-max: var(--ref-size-measure-20);
   --layout-dialog-max: var(--ref-size-measure-32);
+  --layout-application-training-image-max-width: var(--ref-size-application-training-image-max-width);
+  --layout-application-utility-panel-max-height: var(--ref-size-application-utility-panel-max-height);
+  --layout-application-content-column-min-width: var(--ref-size-application-content-column-min-width);
 }
 [data-theme="field"][data-mode="light"]{
   --surface-page: var(--ref-color-stone-50);
@@ -1366,6 +1441,10 @@
     --motion-duration-media: 0ms; /* @kind other */
     --motion-duration-feature: 0ms; /* @kind other */
     --motion-duration-feature-delayed: 0ms; /* @kind other */
+    --motion-duration-feature-stagger-first: 0ms; /* @kind other */
+    --motion-duration-feature-stagger-second: 0ms; /* @kind other */
+    --motion-duration-feature-stagger-third: 0ms; /* @kind other */
+    --motion-duration-feature-stagger-fourth: 0ms; /* @kind other */
     --motion-duration-stagger-short: 0ms; /* @kind other */
     --motion-duration-reveal: 0ms; /* @kind other */
     --motion-duration-image: 0ms; /* @kind other */

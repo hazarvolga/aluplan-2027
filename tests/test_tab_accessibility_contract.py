@@ -97,6 +97,18 @@ class TabAccessibilityContractTests(unittest.TestCase):
         self.assertIn('aria-label="Site içinde ara"', site_shell)
         self.assertEqual(references.count('id="references-panel"'), 2)
 
+    def test_social_links_are_icon_only_but_keep_accessible_names(self):
+        site_shell = read("src/components/shell/SiteShell.tsx")
+
+        self.assertEqual(site_shell.count("aria-label={soc.label}"), 2)
+        self.assertEqual(
+            site_shell.count(
+                '<AluIcon name={getSocialIconName(soc.label)} size="sm" />'
+            ),
+            2,
+        )
+        self.assertNotIn("<span>{soc.label}</span>", site_shell)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -4737,6 +4737,44 @@ button.alu-role[aria-checked="true"] {
   border-top: var(--border-width-strong) solid var(--accent-border);
   box-shadow: var(--elevation-raised);
 }
+.alu-solution-card {
+  color: inherit;
+  text-decoration: none;
+  transition:
+    border-color var(--motion-duration-fast) var(--motion-easing-standard),
+    background-color var(--motion-duration-fast) var(--motion-easing-standard),
+    transform var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.alu-solution-card__media {
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: var(--border-width-default) solid var(--border-subtle);
+  background: var(--surface-subtle);
+}
+.alu-solution-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.alu-solution-card:hover {
+  background: var(--surface-raised);
+  border-color: var(--accent-border);
+  transform: var(--motion-transform-lift-subtle);
+}
+.alu-solution-card__action {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-application-control-comfortable-gap);
+  margin-top: auto;
+  padding-top: var(--space-application-control-comfortable-gap);
+  border-top: var(--border-width-default) solid var(--border-subtle);
+  color: var(--accent-fg);
+  font-family: var(--font-mono);
+  font-size: var(--type-application-small-body-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
+}
 .alu-spec-card__header {
   display: flex;
   align-items: center;

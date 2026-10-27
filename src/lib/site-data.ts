@@ -35,6 +35,30 @@ export interface ContentLink {
   external: boolean;
 }
 
+export interface SolutionDirectoryItem {
+  title: string;
+  href: string;
+  description: string;
+  external: boolean;
+  image?: ContentImage;
+}
+
+export interface SolutionDirectoryGroup {
+  title: string;
+  hubPath: string;
+  hubItems: SolutionDirectoryItem[];
+  catalogItems: SolutionDirectoryItem[];
+}
+
+export interface SolutionDirectory {
+  catalogIntro: {
+    kicker: string;
+    title: string;
+    description: string;
+  };
+  groups: SolutionDirectoryGroup[];
+}
+
 export interface ContentImage {
   src: string;
   alt: string;
@@ -298,6 +322,7 @@ export interface SiteIdentity {
 
 interface NavigationData {
   siteIdentity: SiteIdentity;
+  solutionDirectory: SolutionDirectory;
   [key: string]: unknown;
 }
 
@@ -337,6 +362,19 @@ export function getAllPlaylists(): PlaylistRecord[] {
 
 export function getNavigationData() {
   return navigationJson;
+}
+
+export function getSolutionDirectory(): SolutionDirectory {
+  return navigationData.solutionDirectory;
+}
+
+export function getSolutionHub(pathname: string): SolutionDirectoryGroup | null {
+  const key = normalizeLookupPath(pathname);
+  return navigationData.solutionDirectory.groups.find((group) => group.hubPath === key) || null;
+}
+
+export function getSolutionCatalog(): SolutionDirectory {
+  return navigationData.solutionDirectory;
 }
 
 export function getSiteIdentity(): SiteIdentity {

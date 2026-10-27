@@ -1,7 +1,18 @@
 # Oturum devri
 
 ## Güncelleme tarihi ve oturum no
-27.10.2026 — Faz 6 sağlamlaştırma: sayfa sonu dönüşüm bileşeni yerel olarak doğrulandı. Çözüm katalog/hub kartlarında kaynak paritesi navigasyon regresyonu tespit edildi; kod düzeltmesi yapılmadan yarınki ilk iş olarak kayıt altına alındı. Canlıya alınmadı.
+28.10.2026 — Faz 6 sağlamlaştırma: çözüm katalog/hub navigasyon regresyonu test-first giderildi; kaynak giriş içeriği ve kart görselleri korunarak yerel kabul paketi tamamlandı. Canlıya alınmadı.
+
+## 28.10.2026 — Çözüm katalog/hub navigasyonu düzeltmesi
+
+- Beş footer hub'ı ile header mega menüsünü aynı açık tipli `solutionDirectory` sözleşmesi besliyor. Hub'larda 21/21 kanonik detay hedefi; `/solutions` kataloğunda kaynakta bulunan 22 kart ve iki bilinçli hedef istisnası (BIMPLUS, AX3000) korunuyor.
+- Generic `sections + contentLinks` metin benzerliği eşleştirmesi yapılmadı. `SolutionHubSection`, `SolutionCatalogSection` ve tam kartı tek bağlantı yapan `SolutionDirectoryCard` eklendi; iç hedefler Next.js `Link`, tek harici AllplanTools hedefi güvenli yeni sekme davranışını kullanıyor.
+- Kod incelemesinde özel katalog render yolunun kaynak giriş bloğunu ve görselleri atladığı HIGH bulgusu yakalandı. Generator artık `/solutions` kaynak `sections` verisinden giriş metnini, kart açıklamalarını ve 22 kart görselini sözleşmeye taşıyor; ikinci `catalogDescription` içerik otoritesi kaldırıldı.
+- Related-links alanı geri getirilmedi. Sayfa ailesine göre çalışan tek sayfa-sonu dönüşüm bandı korundu; schema üretimi, canonical/URL sözleşmesi ve CTA hedefleri değiştirilmedi.
+- TDD: `tests/test_solution_directory.py` beş hub'ın 21 kartını, katalogdaki 22 kartı, header/footer türetimini, kaynak metin-görsel paritesini, iç hedef varlığını ve harici link güvenliğini doğruluyor.
+- Yerel kapılar geçti: 138 unit test, 36 parite kontrolü, 188 kontrast kontrolü, 45 token testi, `pnpm typecheck`, `pnpm build` (118 statik rota) ve production audit (bilinen güvenlik açığı yok). `next-env.d.ts` build sonrası zorunlu `.next/dev/types` biçimine geri alındı.
+- Gerçek tarayıcı kabulü: `/solutions` üzerinde 22 kart/22 görsel, kaynak giriş paragrafı, tek dönüşüm bandı ve sıfır related-links; beş hub'da sırasıyla 4/3/3/5/6 kart ve tek dönüşüm bandı doğrulandı. 390×844 emülasyonda yatay taşma yok (`scrollWidth = clientWidth = 390`); konsol warning/error kaydı yok.
+- Push, merge, deploy veya canlı değişikliği yapılmadı.
 
 ## 27.10.2026 — Sayfa sonu dönüşüm alanı
 
@@ -16,9 +27,9 @@
 - Mobil Chrome 390×844 emülasyonunda ürün ve eğitim bantları yatay taşmasız (`documentWidth = viewportWidth = 390`) ve CTA'lar viewport içinde doğrulandı. Klavye Tab kontrolünde CTA `:focus-visible` halkası solid olarak göründü.
 - Yerel önizleme `http://127.0.0.1:3001/` üzerinde açık bırakıldı. Push, merge, deploy veya canlı değişikliği yapılmadı.
 
-## 27.10.2026 — Çözüm katalog/hub navigasyonu regresyonu
+## 27.10.2026 — Çözüm katalog/hub navigasyonu regresyonu (tarihsel tespit kaydı)
 
-- **Durum:** Analiz tamamlandı; uygulama kodu değiştirilmedi. Düzeltme yarın ilk iş olarak ele alınacak. Çalışma dalı `codex/page-end-conversion-design`; bu kayıt öncesinde çalışma ağacı temizdi. Push, merge, deploy veya canlı değişikliği yapılmadı.
+- **Durum:** Bu bölüm 27.10.2026 tarihli tespit kaydıdır. Regresyon 28.10.2026 tarihinde üstteki kabul paketiyle giderildi. Çalışma dalı `codex/page-end-conversion-design`; push, merge, deploy veya canlı değişikliği yapılmadı.
 - **Belirti ve bilgi mimarisi:** Header mega menüsü 21 doğrudan `/solutions/*` detayına, footer ise beş `/solutions-v2/*` kategori hub'ına gidiyor. Bu farklı rol uygundur; hata, `/solutions` kataloğu ile hub kartlarının hedef detay URL'lerine bağlı olmamasıdır.
 - **Doğrulanmış kapsam:** `/solutions`, `/solutions-v2/building-design`, `/solutions-v2/infrastructure`, `/solutions-v2/construction`, `/solutions-v2/addons` ve `/solutions-v2/other`.
 - **Veri kanıtı:** Beş hub'da tanımlı toplam 21 hedef, header `solutionsMenu` içindeki 21 hedefle 21/21 eşleşiyor. Yirmi yerel hedef mevcut; bir hedef `https://allplantools.com/`. URL veya içerik eksik değil, render ilişkisi eksik.
@@ -40,7 +51,7 @@
 6. Generated data deterministik kalır; içerik, schema, URL ve görünür metinler değiştirilmez.
 7. Unit/parite testleri, typecheck ve build yanında gerçek tarayıcıda masaüstü/mobil tıklama, klavye ve console/hydration kabulü tamamlanır.
 
-**Yarınki ilk güvenli adım:** Test-first olarak kanonik, açık tipli hub/katalog veri kontratını yaz; ardından özel render bileşenleriyle kart bağlantılarını geri getir ve yukarıdaki kabul paketini çalıştır.
+**Tamamlanan güvenli adım (28.10.2026):** Kanonik, açık tipli hub/katalog veri kontratı test-first yazıldı; özel render bileşenleriyle kart bağlantıları geri getirildi ve yukarıdaki kabul paketi çalıştırıldı.
 
 ## Güncel öncelik — 26.10.2026 sağlamlaştırma planı
 

@@ -6,7 +6,9 @@ import {
   PlaylistRecord,
   MAIN_QUOTE_FORM_URL,
   SUPPORT_PORTAL_URL,
-  getSiteIdentity
+  getSiteIdentity,
+  getSolutionCatalog,
+  getSolutionHub
 } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { TrainingTabs } from './TrainingTabs';
@@ -16,6 +18,8 @@ import { VideoPlaylistSection } from './VideoPlaylistSection';
 import { SearchPageSection } from './SearchPageSection';
 import { SubpageHeroSection } from './SubpageHeroSection';
 import { StructuredPageLayoutSection } from './StructuredPageLayoutSection';
+import { SolutionHubSection } from './SolutionHubSection';
+import { SolutionCatalogSection } from './SolutionCatalogSection';
 import { PageEndConversion } from './PageEndConversion';
 import { getPageEndConversion } from './page-end-conversion-policy';
 import { handleStructuredTabKey } from './structured-tab-key';
@@ -62,6 +66,8 @@ export function SubpageView({
   const isLegalPage = page.section === 'legal';
   const isVideoLibraryHub = page.path === '/solutions-v2/training/video-library';
   const isVideoPlaylistPage = Boolean(playlist);
+  const solutionHub = getSolutionHub(page.path);
+  const solutionCatalog = page.path === '/solutions' ? getSolutionCatalog() : null;
   const pageEndConversion = getPageEndConversion(page);
   // Separate high-resolution photos from small icon assets (52x52 / 128x128 PNGs)
   const photoImages = React.useMemo(() => {
@@ -88,7 +94,7 @@ export function SubpageView({
       ? page.sections.filter((s) => Boolean(s.image) && !s.statValue)
       : [];
   const specSections =
-    !isVideoLibraryHub && !isVideoPlaylistPage
+    !isVideoLibraryHub && !isVideoPlaylistPage && !solutionHub && !solutionCatalog
       ? page.sections.filter((s) => !s.statValue && (!s.image || isLegalPage))
       : [];
 
@@ -305,8 +311,12 @@ export function SubpageView({
         </section>
       )}
 
-      {/* Structured Page Layout (Live-Site 1:1 Section Architecture for Product & Solution Pages) */}
-      {page.structuredLayout && !page.structuredLayout.trainingTabs ? (
+      {/* Solution catalog and category hubs use their explicit typed navigation contract. */}
+      {solutionCatalog ? (
+        <SolutionCatalogSection directory={solutionCatalog} />
+      ) : solutionHub ? (
+        <SolutionHubSection hub={solutionHub} />
+      ) : page.structuredLayout && !page.structuredLayout.trainingTabs ? (
         <StructuredPageLayoutSection
           layout={page.structuredLayout}
           activeReferenceCategoryId={activeRefCatId}

@@ -30,6 +30,10 @@ export function runTokenTests({ build = buildTokens, lint = lintComponentCss, T,
     const css = run(t).files['components/responsive.generated.css'];
     return (css.includes('(min-width: 50rem)') && css.includes('(min-width: 64rem)') && !css.includes('(min-width: 48rem)')) || css;
   });
+  test('max breakpoint placeholders compile from build-time tokens', () => {
+    const css = run(T, '@media (--max-lg){.x{display:none}}\n@media (--max-preview-compact){.y{display:none}}').files['components/responsive.generated.css'];
+    return (css.includes('@media (max-width: 64rem)') && css.includes('@media (max-width: 40rem)')) || css;
+  });
   test('negative: unknown custom media in template is an error', () => has(run(T, template + '\n@media (--huge){.x{display:none}}').errors, /unknown custom media --huge/) || 'not detected');
   test('negative: literal width media query in template is an error', () => has(run(T, template + '\n@media (min-width: 40rem){.x{display:none}}').errors, /literal min\/max-width/) || 'not detected');
 
@@ -110,6 +114,277 @@ export function runTokenTests({ build = buildTokens, lint = lintComponentCss, T,
       changed.resolved.aluplan.light['--site-header-bg'] === base.resolved.aluplan.light['--role-architect'] &&
       changed.resolved.aluplan.dark['--site-header-bg'] === base.resolved.aluplan.dark['--site-header-bg'] &&
       changed.resolved.field.light['--site-header-bg'] === base.resolved.field.light['--site-header-bg']) || 'application theme scope leaked';
+  });
+  test('application spacing and radius support theme-local overrides', () => {
+    const t = clone();
+    t.themes.field.base.space.application = {
+      ...(t.themes.field.base.space.application || {}),
+      panelInset: { $value: '{primitive.space.8}' }
+    };
+    t.themes.aluplan.base.radius.applicationMediaBadge = { $value: '{primitive.radius.8}' };
+    const changed = run(t);
+    if (changed.errors.length) return changed.errors.join(' | ');
+    return (changed.resolved.field.dark['--space-application-panel-inset'] !== base.resolved.field.dark['--space-application-panel-inset'] &&
+      changed.resolved.aluplan.dark['--space-application-panel-inset'] === base.resolved.aluplan.dark['--space-application-panel-inset'] &&
+      changed.resolved.aluplan.light['--radius-application-media-badge'] !== base.resolved.aluplan.light['--radius-application-media-badge'] &&
+      changed.resolved.field.light['--radius-application-media-badge'] === base.resolved.field.light['--radius-application-media-badge']) || 'metric theme scope leaked';
+  });
+  test('application JSX sizing tokens preserve their four-mode baseline values', () => {
+    const expected = {
+      '--space-application-jsx-tight': '0.25rem',
+      '--space-application-jsx-offset': '0.35rem',
+      '--space-application-jsx-compact': '0.375rem',
+      '--space-application-jsx-regular': '0.5rem',
+      '--space-application-jsx-dense': '0.625rem',
+      '--space-application-jsx-comfortable': '0.75rem',
+      '--space-application-jsx-wide': '0.875rem',
+      '--space-application-jsx-section': '1rem',
+      '--space-application-jsx-section-wide': '1.25rem',
+      '--space-application-jsx-section-inset': '1.5rem',
+      '--space-application-jsx-empty-state-block': '3rem',
+      '--container-application-prose-narrow': '42ch',
+      '--container-application-prose-compact': '48ch',
+      '--container-application-meta': '58ch',
+      '--container-prose': '68ch',
+      '--container-application-prose-wide': '72ch',
+      '--layout-application-utility-panel-max-height': '22rem',
+      '--layout-application-content-column-min-width': '22rem',
+      '--layout-application-training-image-max-width': '32rem',
+      '--type-application-about-editorial': '1.65',
+      '--icon-directory-category': '1.85',
+      '--icon-directory-category-size': '18px'
+    };
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      for (const [name, value] of Object.entries(expected)) if (values[name] !== value) return `${theme}/${mode} ${name}: expected ${value}, got ${values[name]}`;
+    }
+    return true;
+  });
+  test('all application motion durations and delays collapse under reduced motion', () => {
+    const css = base.files['tokens/semantic.css'];
+    const reduced = css.slice(css.indexOf('@media (prefers-reduced-motion: reduce)'));
+    for (const key of Object.keys(T.semantic.motion.duration)) {
+      const name = key.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+      if (!reduced.includes('--motion-duration-' + name + ': 0ms;')) return 'missing reduced-motion duration: ' + key;
+    }
+    return true;
+  });
+  test('homepage feature stagger tokens preserve the four original 85ms steps', () => {
+    const expected = ['0ms', '85ms', '170ms', '255ms'];
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      const actual = ['first', 'second', 'third', 'fourth'].map(step => values[`--motion-duration-feature-stagger-${step}`]);
+      if (JSON.stringify(actual) !== JSON.stringify(expected)) return `${theme}/${mode}: ${JSON.stringify(actual)}`;
+    }
+    const css = base.files['tokens/semantic.css'];
+    const reduced = css.slice(css.indexOf('@media (prefers-reduced-motion: reduce)'));
+    for (const step of ['first', 'second', 'third', 'fourth']) {
+      if (!reduced.includes(`--motion-duration-feature-stagger-${step}: 0ms;`)) return `reduced motion missing ${step} stagger`;
+    }
+    return true;
+  });
+  test('application border-width tokens preserve the four original weights', () => {
+    const expected = {
+      '--border-width-default': '1px',
+      '--border-width-strong': '2px',
+      '--border-width-accent': '3px',
+      '--border-width-heavy': '4px'
+    };
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      for (const [name, value] of Object.entries(expected)) if (values[name] !== value) return `${theme}/${mode} ${name}: expected ${value}, got ${values[name]}`;
+    }
+    return true;
+  });
+  test('application inset and sticky-offset tokens preserve their original positions', () => {
+    const expected = {
+      '--space-application-media-control-inset': '0.65rem',
+      '--space-application-icon-optical-offset': '0.2rem',
+      '--space-application-small-optical-offset': '0.15rem',
+      '--space-application-playlist-sticky-offset': '5.5rem',
+      '--space-application-references-sticky-offset': '4.5rem',
+      '--space-application-story-sticky-offset': '6.5rem',
+      '--space-application-jsx-comfortable': '0.75rem',
+      '--space-application-jsx-section-wide': '1.25rem',
+      '--space-application-jsx-section': '1rem',
+      '--space-application-jsx-section-inset': '1.5rem'
+    };
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      for (const [name, value] of Object.entries(expected)) if (values[name] !== value) return `${theme}/${mode} ${name}: expected ${value}, got ${values[name]}`;
+    }
+    return true;
+  });
+  test('application component-size tokens preserve their original dimensions', () => {
+    const expected = {
+      '--size-application-video-play-badge': '3rem',
+      '--size-application-partner-item-height': '3.25rem',
+      '--size-application-partner-logo-max-height': '2rem',
+      '--size-application-monitor-dot': '0.5rem',
+      '--size-application-pathway-tab-icon': '2.5rem',
+      '--size-application-pathway-dot': '0.55rem',
+      '--size-application-pathway-feature-icon': '1.75rem',
+      '--size-application-product-pulse-dot': '0.45rem',
+      '--size-application-product-box-icon': '2.5rem',
+      '--size-application-product-status-dot': '0.55rem',
+      '--size-application-benefit-icon': '3.25rem',
+      '--size-application-benefit-image': '2rem',
+      '--size-application-youtube-banner-icon': '2rem',
+      '--size-application-youtube-card-icon': '3.5rem',
+      '--size-application-playlist-playing-badge': '2rem',
+      '--size-application-bullet-icon': '1.5rem',
+      '--size-application-workflow-dot': '0.6rem',
+      '--size-application-media-play-control': '3.5rem',
+      '--size-application-media-zoom-control': '2rem',
+      '--size-application-modal-close-control': '2.25rem',
+      '--size-application-reference-icon': '2.75rem',
+      '--size-application-about-value-icon': '2.5rem'
+    };
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      for (const [name, value] of Object.entries(expected)) if (values[name] !== value) return `${theme}/${mode} ${name}: expected ${value}, got ${values[name]}`;
+    }
+    return true;
+  });
+  test('application content-width tokens preserve their original measures', () => {
+    const expected = {
+      '--container-application-modal': '42rem',
+      '--container-application-cookie-banner': '44rem',
+      '--container-application-youtube-banner': '44rem',
+      '--container-application-hero-title': '14ch',
+      '--container-application-hero-lead': '58ch',
+      '--container-application-pathway-description': '52ch',
+      '--container-application-bento-copy': '40ch',
+      '--container-application-pathway-tab': '14rem',
+      '--container-application-playlist-thumbnail': '7.5rem',
+      '--container-application-intro-single': '58rem',
+      '--container-application-faq-list': '58rem',
+      '--container-application-video-dialog': '64rem',
+      '--container-application-image-dialog': '72rem',
+      '--container-application-reference-search': '32rem',
+      '--container-application-faq-stage': '62rem',
+      '--container-application-contact-label': '8.5rem'
+    };
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      for (const [name, value] of Object.entries(expected)) if (values[name] !== value) return `${theme}/${mode} ${name}: expected ${value}, got ${values[name]}`;
+    }
+    return true;
+  });
+  test('application structural-layout tokens preserve desktop and responsive dimensions', () => {
+    const expected = {
+      '--layout-application-header-min-height': '4.5rem',
+      '--layout-application-modal-max-height': '90vh',
+      '--layout-application-bento-feature-min-height': '32rem',
+      '--layout-application-service-pill-min-height': '2.75rem',
+      '--layout-application-feature-media-min-height': '20rem',
+      '--layout-application-playlist-height': '46rem',
+      '--layout-application-playlist-height-compact': '32rem',
+      '--layout-application-video-dialog-max-height': 'calc(100dvh - 2 * clamp(1rem, 3vw, 2.5rem))',
+      '--layout-application-image-viewport-max-height': '80vh',
+      '--layout-application-image-max-height': '78vh',
+      '--layout-application-bento-responsive-min-height': '18rem',
+      '--layout-application-reference-count-min-width': '1.65rem',
+      '--layout-application-reference-count-height': '1.35rem',
+      '--layout-application-map-min-height': '26rem'
+    };
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      for (const [name, value] of Object.entries(expected)) if (values[name] !== value) return `${theme}/${mode} ${name}: expected ${value}, got ${values[name]}`;
+    }
+    return true;
+  });
+  test('application decorative-size tokens preserve their original dimensions', () => {
+    const expected = {
+      '--size-application-metric-rule-width': '2.5rem',
+      '--size-application-metric-rule-height': '2px',
+      '--size-application-pathway-glow': '52rem',
+      '--size-application-office-divider': '1px'
+    };
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      for (const [name, value] of Object.entries(expected)) if (values[name] !== value) return `${theme}/${mode} ${name}: expected ${value}, got ${values[name]}`;
+    }
+    return true;
+  });
+  test('application interaction-transform tokens preserve the original lift and nudge values', () => {
+    const expected = {
+      '--motion-transform-lift-subtle': 'translateY(-2px)',
+      '--motion-transform-lift-moderate': 'translateY(-3px)',
+      '--motion-transform-lift-strong': 'translateY(-4px)',
+      '--motion-transform-nudge-subtle': 'translateX(3px)',
+      '--motion-transform-nudge-strong': 'translateX(5px)'
+    };
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      for (const [name, value] of Object.entries(expected)) if (values[name] !== value) return `${theme}/${mode} ${name}: expected ${value}, got ${values[name]}`;
+    }
+    return true;
+  });
+  test('application state, media, keyframe and decorative transforms preserve their original values', () => {
+    const expected = {
+      '--motion-transform-media-generic-zoom': 'scale(1.02)',
+      '--motion-transform-media-detail-zoom': 'scale(1.04)',
+      '--motion-transform-card-media-zoom': 'scale(1.05)',
+      '--motion-transform-media-showcase-zoom': 'scale(1.06)',
+      '--motion-transform-video-badge-zoom': 'scale(1.08)',
+      '--motion-transform-play-control-zoom': 'scale(1.12)',
+      '--motion-transform-pathway-tab-active': 'scale(1.05)',
+      '--motion-transform-product-highlighted': 'scale(1) translateY(0)',
+      '--motion-transform-product-dimmed': 'scale(0.975)',
+      '--motion-transform-product-dimmed-hover': 'scale(0.99)',
+      '--motion-transform-product-cta-rest': 'translateY(2px)',
+      '--motion-transform-product-cta-hover': 'translateY(0) translateX(3px)',
+      '--motion-transform-pathway-slide-from': 'translateX(-22px)',
+      '--motion-transform-pathway-slide-to': 'translateX(0)',
+      '--motion-transform-pathway-feature-from': 'scale(0.92) translateY(10px)',
+      '--motion-transform-pathway-feature-to': 'scale(1) translateY(0)',
+      '--transform-decorative-subpage-hero-overscan': 'scale(1.06)',
+      '--transform-decorative-youtube-banner-watermark': 'scale(6.5)',
+      '--transform-decorative-youtube-card-watermark': 'scale(1.6)'
+    };
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      for (const [name, value] of Object.entries(expected)) if (values[name] !== value) return `${theme}/${mode} ${name}: expected ${value}, got ${values[name]}`;
+    }
+    return true;
+  });
+  test('application filter and backdrop-filter tokens preserve their original values', () => {
+    const expected = {
+      '--filter-application-hero-video': 'contrast(1.1) saturate(0.85)',
+      '--filter-application-pathway-glow': 'blur(130px)',
+      '--filter-application-product-highlighted': 'grayscale(0)',
+      '--filter-application-product-dimmed': 'grayscale(100%)',
+      '--filter-application-product-dimmed-hover': 'grayscale(20%)',
+      '--filter-application-bento-media-default': 'brightness(0.75) contrast(1.08)',
+      '--filter-application-bento-media-hover': 'brightness(0.85) contrast(1.1)',
+      '--filter-application-subpage-hero-background': 'blur(8px) saturate(0.8)',
+      '--filter-backdrop-header': 'blur(16px)',
+      '--filter-backdrop-media-badge': 'blur(6px)',
+      '--filter-backdrop-modal': 'blur(10px)'
+    };
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      for (const [name, value] of Object.entries(expected)) if (values[name] !== value) return `${theme}/${mode} ${name}: expected ${value}, got ${values[name]}`;
+    }
+    return true;
+  });
+  test('application shadow tokens preserve their original compositions', () => {
+    const expected = {
+      '--shadow-application-role-selected-ring': 'inset 0 0 0 1px var(--accent-border)',
+      '--shadow-application-header': '0 8px 32px var(--visual-shadow-header)',
+      '--shadow-application-mega-menu': '0 24px 64px var(--visual-shadow-strong)',
+      '--shadow-application-header-light': '0 4px 20px var(--visual-shadow-header-light)',
+      '--shadow-application-mega-menu-light': '0 18px 42px var(--visual-shadow-menu-light)',
+      '--shadow-application-hero-monitor': '0 24px 64px var(--visual-shadow-monitor)',
+      '--shadow-application-monitor-status-glow': '0 0 10px var(--accent-fg)',
+      '--shadow-application-pathway-tab-active': '0 18px 40px -12px var(--visual-shadow-media), 0 0 0 1px var(--tab-accent, var(--accent-border))',
+      '--shadow-application-pathway-dot-glow': '0 0 12px var(--tab-accent, var(--role-architect))',
+      '--shadow-application-pathway-cta-hover': '0 10px 28px -8px color-mix(in srgb, var(--role-accent, var(--role-architect)) 45%, transparent)',
+      '--shadow-application-product-highlighted': '0 20px 44px -15px var(--visual-shadow-strong)',
+      '--shadow-application-product-highlighted-hover': '0 24px 52px -12px var(--visual-shadow-product-hover), 0 0 24px -8px color-mix(in srgb, var(--role-accent, var(--role-architect)) 40%, transparent)',
+      '--shadow-application-product-dimmed': 'none',
+      '--shadow-application-product-pulse-glow': '0 0 8px var(--role-accent, var(--role-architect))',
+      '--shadow-application-product-status-glow': '0 0 10px var(--role-accent, var(--role-architect))',
+      '--shadow-application-youtube-subscribe': '0 14px 32px -8px var(--visual-youtube-action-shadow)',
+      '--shadow-application-youtube-subscribe-hover': '0 18px 38px -8px var(--visual-youtube-action-hover-shadow)',
+      '--shadow-application-media-play-control': '0 12px 28px var(--visual-shadow-media)',
+      '--shadow-application-modal-dialog': '0 32px 80px var(--visual-shadow-modal)',
+      '--shadow-application-reference-tab-active': '0 4px 16px var(--visual-reference-active-shadow)'
+    };
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      for (const [name, value] of Object.entries(expected)) if (values[name] !== value) return `${theme}/${mode} ${name}: expected ${value}, got ${values[name]}`;
+    }
+    return true;
   });
   return { results, passed: results.filter(r => r.pass).length, failed: results.filter(r => !r.pass).length };
 }

@@ -20,6 +20,12 @@ architectural-sheet-concept/tokens/build/
 docs/previews/anthracite-demo/
 docs/reviews/
 
+# Keep source-faithful web assets even when a developer's global macOS
+# ignore rule such as `Icon?` matches directories named `icons`.
+!public/assets/**/icons/
+public/assets/**/icons/*
+!public/assets/**/icons/*.png
+
 
 # Deferred 2027 product content; intentionally not versioned
 /Allplan 2027 Marketing Materials/

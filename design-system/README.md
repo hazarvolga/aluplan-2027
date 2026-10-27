@@ -6,6 +6,14 @@ Aluplan için Türkçe B2B web tasarım sistemi (`design-system/`). Aluplan, ALL
 
 **Hedef:** CMS'siz Next.js / React / TypeScript. Bu paket semantik tasarım tokenlarını, temel/kalıp bileşenleri, canlı stil rehberini (`catalog/index.html`) ve ana sayfa kesitini (`ui_kits/homepage/index.html`) içerir.
 
+## Güncel Next.js uygulama hattı
+
+Kök uygulama, kanonik design-system dosyalarını `scripts/build_app_styles.py` üzerinden birleştirir. `src/styles/globals.css` üretilmiş çıktıdır; elle değiştirmeyin. Uygulamaya özel kurallar `src/styles/application.css` içindedir. Token değişikliği sonrası kökte `pnpm styles:generate`, doğrulama için `pnpm styles:check` çalıştırın. Test ve build kaynak–çıktı sapmasını reddeder. Bu bölüm önceki “uygulamaya kopyalanır” taşıma notlarının güncel uygulama davranışını açıklar; bağımsız katalog kaynakları korunur.
+
+Tema kapsamlarında `data-theme` ve `data-mode` birlikte verilir. İçerik ve schema katmanları tema değerlerinden bağımsızdır. Yeni bir etkileşim veya bilgi mimarisi değişikliği token değişikliği değildir.
+
+Uygulama JSX'inde sabit görünüm ölçülerini doğrudan sayı olarak yazmayın; gap/inset, metin genişliği, özel içerik genişliği, satır yüksekliği ve ikon çizgisi gibi roller için `tokens/tokens.json` içindeki semantik tokenları kullanın. Yüzde, `auto`, aspect ratio ve veri/indekse bağlı stiller yapısal/dinamik olabilir; bunları sabit görünüm değeri gibi tokenlaştırmayın. Inline ölçü geçişinin dört tema/mod eşliği `docs/verification/s06-2026-10-27/inline-style-migration.json` altında kanıtlanmıştır.
+
 ## Kaynaklar
 
 - `assets/logo/aluplan-logo-white.svg`, `assets/logo/aluplan-logo-white-filled.svg` (koyu yüzeyler için kök `fill="#FFFFFF"` eklenmiş varyant) ve `assets/logo/aluplan-logo-black.svg` (açık yüzeyler için kaynak siyah logo).
@@ -42,7 +50,7 @@ Bu paket bir Next.js uygulaması değildir; aşağıdakiler taşıma kuralıdır
 ## Testler
 
 - `node scripts/build-tokens.mjs --check` — doğrulama + lint + drift.
-- `node scripts/token-tests.mjs` — 28 token testi. `node scripts/content-tests.mjs` — 13 içerik sözleşmesi testi.
+- `node scripts/token-tests.mjs` — token sözleşmesi ve negatif/mutation testleri. `node scripts/content-tests.mjs` — 13 içerik sözleşmesi testi.
 - `tests/index.html` — aynı token/içerik testleri + Tabs/ReleaseTag/Dialog/key/logo davranış testleri (bileşenler güncel kaynaktan derlenir). `tests/ui-kit.html` — tema değişmezliği ve 360/768px × %100/%200 taşma testleri (yavaş).
 - Sonuçlar ve hangi motorda çalıştığı: `CHANGELOG.md`.
 

@@ -212,140 +212,160 @@
       "description": "Online ve yüz yüze profesyonel ALLPLAN eğitimleri ile uzmanlaşın.",
       "status": "active",
       "href": "/solutions-v2/training",
-      "cta": "Eğitim Takvimi"
+      "cta": "Eğitim Takvimi",
+      "icon": "graduation-cap"
     },
     {
       "title": "Teknik Destek",
       "description": "Microsoft Teams üzerinden uzaktan bağlantı ile kesintisiz teknik destek sağlıyoruz.",
       "status": "active",
       "href": "https://teams.microsoft.com/meet/39783115346098?p=wIo7WWYLZwqoHtjq3Y",
-      "cta": "Destek Al"
+      "cta": "Destek Al",
+      "icon": "life-buoy"
     },
     {
       "title": "Danışmanlık",
       "description": "Şirketinize özel BIM implementasyon ve süreç danışmanlığı.",
       "status": "active",
       "href": "/contact",
-      "cta": "İletişim"
+      "cta": "İletişim",
+      "icon": "users"
     },
     {
       "title": "Sertifika",
       "description": "Uluslararası geçerliliği olan ALLPLAN Uzman sertifikası.",
       "status": "active",
       "href": "https://aluplan.info/",
-      "cta": "Görüntüle"
+      "cta": "Görüntüle",
+      "icon": "award"
     },
     {
       "title": "Destek Platformu",
       "description": "Ticket sistemi üzerinden destek taleplerinizi oluşturun ve süreçlerinizi kolayca takip edin.",
       "status": "active",
       "href": "https://allplan.net.tr/tr",
-      "cta": "Talep Oluştur"
+      "cta": "Talep Oluştur",
+      "icon": "life-buoy"
     },
     {
       "title": "Partner",
       "description": "ALLPLAN çözüm ortağı ağımıza katılın, birlikte büyüyelim.",
       "status": "active",
       "href": "https://www.allplan.com/allplan-partner-solutions/",
-      "cta": "Başvuru Yap"
+      "cta": "Başvuru Yap",
+      "icon": "users"
     },
     {
       "title": "Download",
       "description": "Güncel yazılım sürümlerini ve deneme sürümlerini indirin.",
       "status": "active",
       "href": "https://connect2.allplan.com/",
-      "cta": "İndir"
+      "cta": "İndir",
+      "icon": "download"
     },
     {
       "title": "ALLPLAN FAQ",
       "description": "Sıkça sorulan sorular ve çözüm veri tabanı.",
       "status": "active",
       "href": "/solutions-v2/faq",
-      "cta": "İncele"
+      "cta": "İncele",
+      "icon": "circle-help"
     },
     {
       "title": "Connect: Giriş",
       "description": "Allplan Connect portalına giriş yapın veya şifrenizi sıfırlayın.",
       "status": "active",
       "href": "/solutions-v2/connect-login",
-      "cta": "Giriş Yap"
+      "cta": "Giriş Yap",
+      "icon": "key"
     },
     {
       "title": "Admin Lisans : Lisans Yöneticisi Bilgi Formu",
       "description": "Lisanslarınızı yönetin, transfer edin veya güncelleyin.",
       "status": "active",
       "href": "/solutions-v2/connect-license",
-      "cta": "Yönet"
+      "cta": "Yönet",
+      "icon": "shield"
     },
     {
       "title": "Blog Global",
       "description": "En son ALLPLAN haberleri, başarı hikayeleri ve sektör trendleri.",
       "status": "active",
       "href": "https://www.allplan.com/blog/",
-      "cta": "Okumaya Başla"
+      "cta": "Okumaya Başla",
+      "icon": "globe"
     },
     {
       "title": "Canlı Webinarlar",
       "description": "Uzmanların sunumuyla canlı eğitimler ve ürün tanıtımları.",
       "status": "active",
       "href": "https://www.allplan.com/events/events/?",
-      "cta": "Kayıt Ol"
+      "cta": "Kayıt Ol",
+      "icon": "video"
     },
     {
       "title": "BIM Rehberi",
       "description": "BIM süreçleri ve uygulamaları için kapsamlı rehberler.",
       "status": "active",
       "href": "https://www.allplan.com/bim/bim-guides/",
-      "cta": "İncele"
+      "cta": "İncele",
+      "icon": "book-open"
     },
     {
       "title": "OPENBIM",
       "description": "Açık standartlarla işbirliği, IFC ve veri değişimi hakkında her şey.",
       "status": "active",
       "href": "https://www.allplan.com/us_en/bim/openbim/",
-      "cta": "Keşfet"
+      "cta": "Keşfet",
+      "icon": "boxes"
     },
     {
       "title": "Sistem Gereksinimleri",
       "description": "ALLPLAN performansı için önerilen donanım ve yazılım özellikleri.",
       "status": "active",
       "href": "https://www.allplan.com/us_en/system/system-requirements/",
-      "cta": "Kontrol Et"
+      "cta": "Kontrol Et",
+      "icon": "cpu"
     },
     {
       "title": "Tüm Gereksinimler",
       "description": "Geçmişten günümüze tüm sürümler için detaylı sistem bilgileri.",
       "status": "active",
       "href": "https://connect.allplan.com/support/sysinfo/2025.html",
-      "cta": "Listele"
+      "cta": "Listele",
+      "icon": "layers"
     },
     {
       "title": "Sürüm Notları",
       "description": "Her yeni güncelleme ile gelen, iyileştirmeler ve düzeltmeler.",
       "status": "active",
       "href": "https://www.allplan.com/tr/system/releasenotes/?no_cache=1",
-      "cta": "Oku"
+      "cta": "Oku",
+      "icon": "sparkles"
     },
     {
       "title": "IFC Export El Kitabı",
       "description": "Sektör paydaşlarının birlikte çalışabilme potansiyelini artırmak, openBIM kültürünü tanıtmak ve yaygınlaştırmak amacıyla buildingSMART Türkiye tarafından hazırlanan IFC Aktarım El Kitabı.",
       "status": "active",
       "href": "/docs/ifc_aktarim_el_kitabi_ifc_4.0_ifc_4.3_2026.pdf",
-      "cta": "İndir"
+      "cta": "İndir",
+      "icon": "file-text"
     },
     {
       "title": "CodeMeter WebDepot",
       "description": "CodeMeter License Central WebDepot'a hoş geldiniz. Lisanslarınızı bu WebDepot'u kullanarak CmContainer'ınıza aktarabilirsiniz.",
       "status": "active",
       "href": "https://lc.codemeter.com/59885/depot/index.php",
-      "cta": "Lisansları Aktar"
+      "cta": "Lisansları Aktar",
+      "icon": "key"
     },
     {
       "title": "Deklarasyon Formu",
       "description": "Yeni Allplan lisansınızın etkinleştirilmesi için talep ve beyan formu. ALLPLAN 2023 ve ALLPLAN 2024 versiyonları için geçerlidir.",
       "status": "active",
       "href": "/solutions-v2/connect-license/activation",
-      "cta": "Görüntüle"
+      "cta": "Görüntüle",
+      "icon": "file-text"
     }
   ],
   "quickLinks": [
@@ -419,6 +439,33 @@
     "src": "/videos/hero-bim.mp4",
     "poster": "/images/hero-poster.jpg"
   },
+  "releaseLabel": "ALLPLAN 2026",
+  "packageMatrixLabel": "Q3 2026 MATRİSİ",
+  "heroContent": {
+    "distributorLabel": "1995'ten beri Yetkili Distribütör",
+    "title": "DAHA İYİ BİR GELECEK İNŞA ETMEK İÇİN TASARLANDI",
+    "description": "Yenilikçi AEC iş akışları, parametrik donatı ve çelik otomasyonu ile bulut tabanlı OpenBIM iş birliği sayesinde tasarım aşamasından şantiyeye kadar hatasız projeler.",
+    "tags": [
+      "CLOUD NATIVE",
+      "BIM LEVEL 3",
+      "PARAMETRIC",
+      "AUTOMATION",
+      "INTEROPERABILITY",
+      "AX3000",
+      "PYTHONPARTS",
+      "OPENBIM",
+      "REAL-TIME",
+      "PRECAST",
+      "CIVIL",
+      "BRIDGE",
+      "@CONNECTION",
+      "DATA_NODE"
+    ],
+    "monitorLabel": "BIM ENGINE",
+    "monitorProtocol": "IFC 4.3 · OPENBIM",
+    "monitorDisciplines": "MİMARİ · MÜHENDİSLİK · ALTYAPI · PREKAST",
+    "monitorDescription": "Disiplinler arası BIM koordinasyonu ve yerel mühendislik desteği için tek platform."
+  },
   "partners": [
     {
       "name": "Bluebeam",
@@ -455,6 +502,48 @@
     {
       "name": "Twinmotion",
       "logo": "/images/partners/twinmotion.png"
+    }
+  ],
+  "serviceGroups": [
+    {
+      "title": "Öğren ve yardım al",
+      "serviceTitles": [
+        "Eğitim",
+        "Teknik Destek",
+        "Destek Platformu",
+        "Danışmanlık",
+        "Sertifika"
+      ]
+    },
+    {
+      "title": "Yazılım ve lisans işlemleri",
+      "serviceTitles": [
+        "Download",
+        "Connect: Giriş",
+        "Admin Lisans : Lisans Yöneticisi Bilgi Formu",
+        "CodeMeter WebDepot",
+        "Deklarasyon Formu"
+      ]
+    },
+    {
+      "title": "Bilgi ve güncellemeler",
+      "serviceTitles": [
+        "ALLPLAN FAQ",
+        "Blog Global",
+        "Canlı Webinarlar",
+        "BIM Rehberi",
+        "OPENBIM",
+        "Sistem Gereksinimleri",
+        "Tüm Gereksinimler",
+        "Sürüm Notları",
+        "IFC Export El Kitabı"
+      ]
+    },
+    {
+      "title": "Partner erişimi",
+      "serviceTitles": [
+        "Partner"
+      ]
     }
   ]
 }

@@ -1,5 +1,5 @@
 /* SOURCE for every width-based responsive rule in the design system.
-   (--sm|--md|--lg|--xl) are replaced at build time with min-width values from tokens.json buildTime.breakpoint.
+   (--name) and (--max-name) are replaced at build time from tokens.json buildTime.breakpoint.
    Output: components/responsive.generated.css (imported last from styles.css). Component CSS files must not contain width media queries. */
 @media (--md){
 .alu-grid--cols-2,.alu-grid--cols-3,.alu-grid--cols-4{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -12,4 +12,21 @@
 .alu-site-header__actions{display:flex}
 .alu-site-header__toggle,.alu-site-header__menu,.alu-site-header__menu:not([hidden]){display:none}
 .alu-comparison__hint{display:none}
+}
+@media (--max-lg){
+.preview-hero{background:var(--surface-page)}
+.preview-hero__grid,.preview-role-copy,.preview-bimflex{grid-template-columns:1fr}
+.preview-section-heading{grid-template-columns:1fr;align-items:start}
+.preview-section-heading>.alu-button{justify-self:start}
+.preview-hero__media{min-height:var(--size-preview-hero-media-compact)}
+.preview-ribbon__inner{align-items:flex-start;flex-direction:column}
+}
+@media (--max-preview-compact){
+.preview-shell{--card-padding:var(--space-inset-sm)}
+.preview-hero__media,.preview-role-copy,.preview-bimflex{padding:var(--space-inset-sm)}
+.preview-shell .alu-role{padding:var(--space-inset-sm)}
+.preview-bimflex__media{grid-template-columns:1fr;grid-template-rows:none}
+.preview-bimflex__figure--1{grid-row:auto}
+.preview-bimflex__figure img{aspect-ratio:16/10}
+.preview-section-heading>.alu-button{width:100%}
 }

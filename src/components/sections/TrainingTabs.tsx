@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import type { StructuredTrainingTabs } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
+import { handleStructuredTabKey } from './structured-tab-key';
 
 /** Keep every source panel in HTML; selection only controls its visibility. */
 export function TrainingTabs({ content }: { content: StructuredTrainingTabs }) {
@@ -26,18 +27,12 @@ export function TrainingTabs({ content }: { content: StructuredTrainingTabs }) {
               tabIndex={selectedKey === tab.key ? 0 : -1}
               className={`alu-wf-cat-btn${selectedKey === tab.key ? ' alu-wf-cat-btn--active' : ''}`}
               onClick={() => setSelectedKey(tab.key)}
-              onKeyDown={(event) => {
-                const nextIndex = event.key === 'Home' ? 0
-                  : event.key === 'End' ? content.tabs.length - 1
-                  : event.key === 'ArrowRight' ? (index + 1) % content.tabs.length
-                  : event.key === 'ArrowLeft' ? (index - 1 + content.tabs.length) % content.tabs.length
-                  : null;
-                if (nextIndex === null) return;
-                event.preventDefault();
-                const next = content.tabs[nextIndex];
-                setSelectedKey(next.key);
-                document.getElementById(`training-tab-${next.key}`)?.focus();
-              }}
+              onKeyDown={(event) => handleStructuredTabKey(
+                event,
+                index,
+                content.tabs.length,
+                (nextIndex) => setSelectedKey(content.tabs[nextIndex].key)
+              )}
             >
               {tab.label}
             </button>
@@ -68,7 +63,7 @@ export function TrainingTabs({ content }: { content: StructuredTrainingTabs }) {
                 </ul>
               )}
               {tab.imageSrc && (
-                <img src={tab.imageSrc} alt="" loading="lazy" style={{ width: '100%', maxWidth: '32rem', height: 'auto' }} />
+                <img src={tab.imageSrc} alt="" loading="lazy" style={{ width: '100%', maxWidth: 'var(--layout-application-training-image-max-width)', height: 'auto' }} />
               )}
               <div className="alu-cluster">
                 {tab.href.startsWith('/') ? (

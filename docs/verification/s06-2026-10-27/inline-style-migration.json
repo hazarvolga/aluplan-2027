@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-27",
+  "baselineCommit": "8f50d5e31e6970725abde512831343c2d688c381",
+  "comparison": "TypeScript JSX AST style declarations; CSS var() references resolved from current generated tokens; formatting excluded",
+  "files": [
+    "src/components/sections/HomepageView.tsx",
+    "src/components/sections/WorkflowSection.tsx",
+    "src/components/sections/TrainingTabs.tsx",
+    "src/components/sections/SubpageView.tsx",
+    "src/components/sections/FAQSection.tsx",
+    "src/components/sections/DirectoryCategoryIcon.tsx",
+    "src/components/shell/SiteShell.tsx"
+  ],
+  "themeModeCount": 4,
+  "styleObjectsPerThemeMode": 162,
+  "applicationException": "Homepage feature-card animationDelay moved from fIdx * 85ms inline arithmetic to nth-child selectors backed by semantic motion tokens.",
+  "featureStaggerDelayByIndex": {
+    "0": "0ms",
+    "1": "85ms",
+    "2": "170ms",
+    "3": "255ms"
+  },
+  "allMatches": true,
+  "modes": {
+    "aluplan/light": {
+      "declarations": 162,
+      "baselineSha256": "0ac07e74d24ae32635e63a62a6e18f00b62421d11ca6ac6aaccd1060249f508d",
+      "currentSha256": "0ac07e74d24ae32635e63a62a6e18f00b62421d11ca6ac6aaccd1060249f508d",
+      "match": true
+    },
+    "aluplan/dark": {
+      "declarations": 162,
+      "baselineSha256": "76c5e89601067d010b4e89b574cc22e6c856329b55a728d802b40bc56f738de6",
+      "currentSha256": "76c5e89601067d010b4e89b574cc22e6c856329b55a728d802b40bc56f738de6",
+      "match": true
+    },
+    "field/light": {
+      "declarations": 162,
+      "baselineSha256": "6b9960db78b26d8327605f811401ce955db51e6b83a0c58258aec3c2f68d92cb",
+      "currentSha256": "6b9960db78b26d8327605f811401ce955db51e6b83a0c58258aec3c2f68d92cb",
+      "match": true
+    },
+    "field/dark": {
+      "declarations": 162,
+      "baselineSha256": "ff24cd24caf7faae9c323d97d5f185cebc9a95618cee7596bccc4dc89b203822",
+      "currentSha256": "ff24cd24caf7faae9c323d97d5f185cebc9a95618cee7596bccc4dc89b203822",
+      "match": true
+    }
+  }
+}

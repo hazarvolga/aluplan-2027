@@ -122,6 +122,18 @@ def verify_documents(root: Path) -> list[str]:
     return errors
 
 
+def preflight_documents(root: Path, source_root: Path) -> bool:
+    """Validate source documents locally or committed copies in standalone builds."""
+    if source_root.is_dir():
+        prepare_documents(root, source_root)
+        return True
+
+    errors = verify_documents(root)
+    if errors:
+        raise ValueError('Committed document verification failed: ' + '; '.join(errors))
+    return False
+
+
 if __name__ == '__main__':
     records = sync_documents(ROOT, ROOT.parent / 'aluplan-2026')
     write_manifest(ROOT, records)

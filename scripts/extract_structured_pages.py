@@ -231,10 +231,10 @@ def _load_cloud_services():
 CLOUD_SERVICES_MAP = _load_cloud_services()
 
 DEFAULT_WORKFLOW_LINKS = [
-    {"text": "Sürümleri Görüntüle", "href": "/package-overview", "external": False, "color": "#8B5CF6"},
-    {"text": "Tasarım için İş Akışları", "href": "/solutions/architecture#mimari-is-akislari", "external": False, "color": "#3B82F6"},
-    {"text": "İnşaat Mühendisliği için İş Akışları", "href": "/solutions/structural#insaat-muhendisligi-is-akislari", "external": False, "color": "#10B981"},
-    {"text": "Altyapı Mühendisliği için İş Akışları", "href": "/solutions/infrastructure#altyapi-muhendisligi-is-akislari", "external": False, "color": "#F59E0B"},
+    {"text": "Sürümleri Görüntüle", "href": "/package-overview", "external": False, "accentKey": "package"},
+    {"text": "Tasarım için İş Akışları", "href": "/solutions/architecture#mimari-is-akislari", "external": False, "accentKey": "architect"},
+    {"text": "İnşaat Mühendisliği için İş Akışları", "href": "/solutions/structural#insaat-muhendisligi-is-akislari", "external": False, "accentKey": "engineer"},
+    {"text": "Altyapı Mühendisliği için İş Akışları", "href": "/solutions/infrastructure#altyapi-muhendisligi-is-akislari", "external": False, "accentKey": "fabricator"},
 ]
 
 

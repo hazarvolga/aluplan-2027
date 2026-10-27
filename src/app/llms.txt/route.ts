@@ -1,4 +1,8 @@
 import { NextResponse } from 'next/server';
+import { getHomepageData } from '@/lib/site-data';
+
+const homepageData = getHomepageData();
+const packageMatrixPeriod = homepageData.packageMatrixLabel.replace(' MATRİSİ', '');
 
 const LLMS_TXT_CONTENT = `# Aluplan Program Sistemleri — ALLPLAN Türkiye
 
@@ -25,7 +29,7 @@ const LLMS_TXT_CONTENT = `# Aluplan Program Sistemleri — ALLPLAN Türkiye
 - [ALLPLAN Cloud Services & Bimplus](https://aluplan.com.tr/products/allplan-cloud-services): Bulut tabanlı OpenBIM (IFC 4.3, BCF) ortak veri ortamı.
 - [AX3000 MEP & Enerji](https://aluplan.com.tr/products/ax3000): ALLPLAN entegre mekanik tesisat (HVAC, sıhhi tesisat, ısıtma, elektrik, sprinkler) ve yapı fiziği/enerji simülasyonu.
 - [SDS2 Çelik Detaylandırma](https://aluplan.com.tr/products/sds2-home): Çelik yapı detaylandırma, otomatik birleşim hesabı ve CNC/imalat.
-- [Paket Karşılaştırma Rehberi (Q3 2026 PDF)](https://aluplan.com.tr/paket-karsilastirma): Paketlerin teknik özellik karşılaştırması.
+- [Paket Karşılaştırma Rehberi (${packageMatrixPeriod} PDF)](https://aluplan.com.tr/paket-karsilastirma): Paketlerin teknik özellik karşılaştırması.
 
 ## Uzmanlık Çözümleri ve Eklentiler (/solutions)
 - [Bina Tasarımı](https://aluplan.com.tr/solutions-v2/building-design): Mimari (/solutions/architecture), Strüktürel (/solutions/structural), MEP (/solutions/mep) ve Endüstriyel tesis (/solutions/allplan-industry).

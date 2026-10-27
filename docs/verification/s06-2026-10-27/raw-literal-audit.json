@@ -1,0 +1,74 @@
+{
+  "auditDate": "2026-10-27",
+  "scope": [
+    "src/components/**/*.tsx",
+    "src/styles/application.css",
+    "design-system/ui_kits/homepage/preview.css",
+    "src/data/pages.json",
+    "design-system/tokens/tokens.json"
+  ],
+  "policy": {
+    "tokenize": [
+      "brand and semantic colors",
+      "z-index layers",
+      "spacing, sizing, radius, shadow, motion and typography decisions"
+    ],
+    "retainAsStructuralSyntax": [
+      "zero values that reset browser defaults",
+      "percentages and fr units used by layout algorithms",
+      "CSS keywords such as auto, none and transparent",
+      "media aspect ratios and grid span counts",
+      "transform function arguments already wrapped by semantic transform tokens"
+    ]
+  },
+  "migrations": [
+    {
+      "source": "structuredLayout.workflowLinks[].color",
+      "replacement": "structuredLayout.workflowLinks[].accentKey",
+      "allowedValues": ["package", "architect", "engineer", "fabricator"],
+      "renderTokens": [
+        "--workflow-package",
+        "--role-architect",
+        "--role-engineer",
+        "--role-fabricator"
+      ],
+      "occurrences": 24
+    },
+    {
+      "source": "numeric z-index declarations",
+      "replacement": "semantic --z-* tokens",
+      "renderTokens": [
+        "--z-background",
+        "--z-scrim",
+        "--z-base",
+        "--z-foreground",
+        "--z-content",
+        "--z-sticky-context",
+        "--z-dialog-top"
+      ],
+      "occurrences": 14
+    },
+    {
+      "source": "design-system/ui_kits/homepage/preview.css design literals",
+      "replacement": "semantic preview tokens and build-time responsive placeholders",
+      "renderTokens": [
+        "--space-preview-hero-padding",
+        "--size-preview-*",
+        "--type-preview-hero-mark-*",
+        "--opacity-preview-*",
+        "--z-scrim"
+      ],
+      "buildTimeBreakpoints": ["preview-compact", "lg"],
+      "occurrences": 20
+    }
+  ],
+  "automatedGuards": [
+    "generated workflow links contain no raw CSS colors",
+    "component inline styles contain no numeric zIndex values",
+    "application CSS contains no numeric z-index declarations",
+    "homepage preview CSS rejects raw colors, lengths, z-index values and width media queries",
+    "token builder rejects raw component colors and undefined variables",
+    "generated token files must match tokens.json"
+  ],
+  "result": "pass"
+}

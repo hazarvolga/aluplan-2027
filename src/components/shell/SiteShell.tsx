@@ -124,7 +124,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               </a>
             ))}
           </div>
-          <div className="alu-cluster" style={{ gap: '0.75rem' }}>
+          <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-comfortable)' }}>
             <a href={`mailto:${navData.topBar.email}`} className="alu-topbar__link">
               <AluIcon name="mail" size="sm" />
               <span>{navData.topBar.email}</span>
@@ -159,7 +159,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <button
               type="button"
               className="alu-site-nav__link"
-              style={{ background: 'transparent', border: 0, cursor: 'pointer', gap: '0.25rem' }}
+              style={{ background: 'transparent', border: 0, cursor: 'pointer', gap: 'var(--space-application-jsx-tight)' }}
               aria-expanded={openMenu === 'solutions'}
               onClick={() => setOpenMenu(openMenu === 'solutions' ? null : 'solutions')}
               onMouseEnter={() => setOpenMenu('solutions')}
@@ -170,7 +170,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <button
               type="button"
               className="alu-site-nav__link"
-              style={{ background: 'transparent', border: 0, cursor: 'pointer', gap: '0.25rem' }}
+              style={{ background: 'transparent', border: 0, cursor: 'pointer', gap: 'var(--space-application-jsx-tight)' }}
               aria-expanded={openMenu === 'products'}
               onClick={() => setOpenMenu(openMenu === 'products' ? null : 'products')}
               onMouseEnter={() => setOpenMenu('products')}
@@ -192,7 +192,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             </Link>
           </nav>
 
-          <div className="alu-cluster" style={{ gap: '0.5rem' }}>
+          <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-regular)' }}>
             <button
               type="button"
               className="alu-button alu-button--ghost alu-button--sm"
@@ -267,7 +267,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         {/* Mobile Drawer */}
         {mobileMenuOpen && (
           <div className="alu-megamenu alu-mobile-drawer" role="dialog" aria-label="Mobil Gezinme Menüsü">
-            <div className="alu-container alu-stack" style={{ gap: '1.25rem' }}>
+            <div className="alu-container alu-stack" style={{ gap: 'var(--space-application-jsx-section-wide)' }}>
               <div className="alu-cluster">
                 <Link className="alu-button alu-button--secondary alu-button--sm" href="/products" onClick={() => setMobileMenuOpen(false)}>
                   Tüm Ürünler
@@ -320,7 +320,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       {/* Footer */}
       <footer className="alu-site-footer">
         <div className="alu-site-footer__grid">
-          <div className="alu-stack" style={{ gap: '0.75rem' }}>
+          <div className="alu-stack" style={{ gap: 'var(--space-application-jsx-comfortable)' }}>
             <img
               className="alu-logo alu-logo--sm"
               src={logoSrc}
@@ -329,7 +329,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               height={26}
             />
             <p className="alu-site-footer__link">{navData.footer.description}</p>
-            <div className="alu-cluster" style={{ gap: '0.5rem' }}>
+            <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-regular)' }}>
               {navData.topBar.socialLinks.map((soc) => (
                 <a
                   key={soc.label}
@@ -378,7 +378,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <h2 className="alu-site-footer__heading">İletişim</h2>
             <ul className="alu-site-footer__list">
               {navData.footer.address.map((line, i) => (
-                <li key={line} className="alu-site-footer__link" style={{ display: 'flex', alignItems: 'center', gap: '0.375rem' }}>
+                <li key={line} className="alu-site-footer__link" style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-application-jsx-compact)' }}>
                   {i === 0 && <AluIcon name="map-pin" size="sm" />}
                   <span>{line}</span>
                 </li>
@@ -440,20 +440,20 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               aria-label="Site içinde ara"
               data-media-dialog-initial-focus
             />
-            <div className="alu-stack" style={{ gap: '0.5rem', maxHeight: '22rem', overflowY: 'auto' }}>
+            <div className="alu-stack" style={{ gap: 'var(--space-application-jsx-regular)', maxHeight: 'var(--layout-application-utility-panel-max-height)', overflowY: 'auto' }}>
               {filteredSearch.map((item) => (
                 <Link
                   key={item.path}
                   href={item.path}
                   className="alu-card"
-                  style={{ padding: '0.75rem 1rem', textDecoration: 'none' }}
+                  style={{ padding: 'var(--space-application-jsx-comfortable) var(--space-application-jsx-section)', textDecoration: 'none' }}
                   onClick={() => setSearchOpen(false)}
                 >
                   <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
                     <strong style={{ color: 'var(--text-primary)' }}>{item.title}</strong>
                     <span className="alu-badge">{item.section.toUpperCase()}</span>
                   </div>
-                  <p className="alu-caption" style={{ margin: '0.25rem 0 0 0' }}>
+                  <p className="alu-caption" style={{ margin: 'var(--space-application-jsx-tight) 0 0 0' }}>
                     {item.description}
                   </p>
                 </Link>
@@ -466,7 +466,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       {/* KVKK Cookie Consent Banner (gates Google Analytics until accepted) */}
       {consentLoaded && cookieConsent === null && (
         <aside className="alu-cookie-banner" aria-label="Çerez Tercihleri">
-          <div className="alu-stack" style={{ gap: '0.75rem' }}>
+          <div className="alu-stack" style={{ gap: 'var(--space-application-jsx-comfortable)' }}>
             <p className="alu-body-sm" style={{ margin: 0 }}>
               Deneyiminizi iyileştirmek ve site trafiğini analiz etmek için çerezleri kullanıyoruz. Analitik çerezler yalnızca açık onayınızla etkinleştirilir. Detaylı bilgi için{' '}
               <Link href="/gizlilik-politikasi" className="alu-link">

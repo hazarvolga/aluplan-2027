@@ -1,33 +1,32 @@
-import { SITE_ORIGIN, PageRecord, PlaylistRecord } from './site-data';
+import { getSiteIdentity, SITE_ORIGIN } from './site-data';
+import type { PageRecord, PlaylistRecord, StructuredFaqItem } from './site-data';
+
+function faqAnswerText(item: StructuredFaqItem): string {
+  return [
+    item.answer,
+    ...(item.bullets || []),
+    ...(item.table?.headers || []),
+    ...(item.table?.rows.flat() || []),
+    item.note
+  ].filter(Boolean).join(' ');
+}
 
 export function buildPageJsonLd(page: PageRecord, playlist?: PlaylistRecord | null) {
   const pageUrl = page.canonical;
+  const siteIdentity = getSiteIdentity();
   const graph: Record<string, unknown>[] = [
     {
       '@type': 'Organization',
       '@id': `${SITE_ORIGIN}/#organization`,
-      name: 'Aluplan Program Sistemleri',
-      alternateName: 'Aluplan Türkiye',
+      name: siteIdentity.name,
+      alternateName: siteIdentity.alternateName,
       url: SITE_ORIGIN,
-      foundingDate: '1995',
-      description: "1995'ten beri Türkiye'nin güvenilir ALLPLAN distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri.",
-      email: 'info@aluplan.com.tr',
-      telephone: '+90-216-225-84-41',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Quick Tower – Workinton, İçerenköy Mah. Topçu İbrahim Sok. 8/10D No: 5',
-        addressLocality: 'Ataşehir',
-        addressRegion: 'İstanbul',
-        postalCode: '34752',
-        addressCountry: 'TR'
-      },
-      sameAs: [
-        'https://www.facebook.com/Allplan.Turkey',
-        'https://twitter.com/Allplan_Turkey',
-        'https://www.linkedin.com/company/allplan-turkey/',
-        'https://www.instagram.com/allplan_turkey/',
-        'https://www.youtube.com/c/AllplanTurkey'
-      ]
+      foundingDate: siteIdentity.foundingDate,
+      description: siteIdentity.description,
+      email: siteIdentity.email,
+      telephone: siteIdentity.telephone,
+      address: siteIdentity.address,
+      sameAs: siteIdentity.sameAs
     },
     {
       '@type': 'WebSite',
@@ -93,7 +92,7 @@ export function buildPageJsonLd(page: PageRecord, playlist?: PlaylistRecord | nu
       }
     });
   } else if (page.schemaType === 'Service') {
-    const serviceId = `${SITE_ORIGIN}/solutions-v2/training#service`;
+    const serviceId = `${pageUrl}#service`;
     baseWebPage.mainEntity = { '@id': serviceId };
     graph.push(baseWebPage);
     graph.push({
@@ -111,15 +110,15 @@ export function buildPageJsonLd(page: PageRecord, playlist?: PlaylistRecord | nu
       }
     });
   } else if (page.schemaType === 'FAQPage') {
-    const faqEntries = page.sections
-      .filter((sec) => sec.heading.includes('?') || sec.items.length > 0)
-      .slice(0, 12)
-      .map((sec) => ({
+    const visibleFaqItems = page.structuredLayout?.faqDirectory?.categories.flatMap(
+      (category) => category.items
+    ) || page.structuredLayout?.faq?.items || [];
+    const faqEntries = visibleFaqItems.map((item) => ({
         '@type': 'Question',
-        name: sec.heading,
+        name: item.question,
         acceptedAnswer: {
           '@type': 'Answer',
-          text: sec.items.join(' ') || page.description
+          text: faqAnswerText(item)
         }
       }));
     graph.push({

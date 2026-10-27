@@ -9,7 +9,7 @@ from urllib.parse import urlparse, parse_qs, unquote
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from extract_structured_pages import build_all_structured_pages
-from document_assets import prepare_documents, sync_documents, write_manifest
+from document_assets import preflight_documents, sync_documents, write_manifest
 from request_links import normalize_request_links
 from content_policy import apply_approved_content_policy
 
@@ -27,7 +27,7 @@ final_states_path = ROOT / "docs/00-inventory/browser-final-2026-10-22.json"
 module_states_path = ROOT / "docs/00-inventory/browser-modules-final-2026-10-22.json"
 # Fail before producing data if any original download is missing or invalid.
 SOURCE_ROOT = ROOT.parent / "aluplan-2026"
-prepare_documents(ROOT, SOURCE_ROOT)
+SOURCE_AVAILABLE = preflight_documents(ROOT, SOURCE_ROOT)
 
 with open(inv_path, "r", encoding="utf-8") as f:
     inv = json.load(f)
@@ -857,16 +857,44 @@ with open(data_dir / "pages.json", "w", encoding="utf-8") as f:
 with open(data_dir / "playlists.json", "w", encoding="utf-8") as f:
     json.dump(playlist_by_id, f, ensure_ascii=False, indent=2)
 
+site_identity = {
+    "name": "Aluplan Program Sistemleri",
+    "alternateName": "Aluplan Türkiye",
+    "description": "1995'ten beri Türkiye'nin güvenilir ALLPLAN distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri.",
+    "foundingDate": "1995",
+    "email": "info@aluplan.com.tr",
+    "telephone": "+90-216-225-84-41",
+    "displayPhones": ["(+90) 216 225 84 41", "(+90) 543 211 94 42", "(+90) 549 499 73 79"],
+    "phoneLinks": ["+902162258441", "+905432119442", "+905494997379"],
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Quick Tower – Workinton, İçerenköy Mah. Topçu İbrahim Sok. 8/10D No: 5",
+        "addressLocality": "Ataşehir",
+        "addressRegion": "İstanbul",
+        "postalCode": "34752",
+        "addressCountry": "TR",
+    },
+    "displayAddress": "Quick Tower – Workinton, İçerenköy Mah. Topçu İbrahim Sok. 8/10D No: 5, 34752 Ataşehir / İstanbul",
+    "sameAs": [
+        "https://www.facebook.com/Allplan.Turkey",
+        "https://twitter.com/Allplan_Turkey",
+        "https://www.linkedin.com/company/allplan-turkey/",
+        "https://www.instagram.com/allplan_turkey/",
+        "https://www.youtube.com/c/AllplanTurkey",
+    ],
+}
+
 navigation_data = {
+    "siteIdentity": site_identity,
     "topBar": {
-        "email": "info@aluplan.com.tr",
-        "phones": ["(+90) 216 225 84 41", "(+90) 543 211 94 42", "(+90) 549 499 73 79"],
+        "email": site_identity["email"],
+        "phones": site_identity["displayPhones"],
         "socialLinks": [
-            {"label": "Facebook", "href": "https://www.facebook.com/Allplan.Turkey"},
-            {"label": "Twitter", "href": "https://twitter.com/Allplan_Turkey"},
-            {"label": "LinkedIn", "href": "https://www.linkedin.com/company/allplan-turkey/"},
-            {"label": "Instagram", "href": "https://www.instagram.com/allplan_turkey/"},
-            {"label": "YouTube", "href": "https://www.youtube.com/c/AllplanTurkey"},
+            {"label": label, "href": href}
+            for label, href in zip(
+                ["Facebook", "Twitter", "LinkedIn", "Instagram", "YouTube"],
+                site_identity["sameAs"],
+            )
         ],
     },
     "productsMenu": [
@@ -990,8 +1018,8 @@ navigation_data = {
             "İçerenköy Mah. Topçu İbrahim Sok.",
             "8/10D No: 5, 34752 Ataşehir / İstanbul",
         ],
-        "phones": ["(+90) 216 225 84 41", "(+90) 543 211 94 42", "(+90) 549 499 73 79"],
-        "email": "info@aluplan.com.tr",
+        "phones": site_identity["displayPhones"],
+        "email": site_identity["email"],
         "legal": [
             {"label": "Gizlilik Politikası", "href": "/gizlilik-politikasi"},
             {"label": "Kullanım Şartları", "href": "/kullanim-sartlari"},
@@ -1019,6 +1047,22 @@ if "bimflex" in homepage_data:
 homepage_data["heroVideo"] = {
     "src": "/videos/hero-bim.mp4",
     "poster": "/images/hero-poster.jpg",
+}
+homepage_data["releaseLabel"] = "ALLPLAN 2026"
+homepage_data["packageMatrixLabel"] = "Q3 2026 MATRİSİ"
+homepage_data["heroContent"] = {
+    "distributorLabel": "1995'ten beri Yetkili Distribütör",
+    "title": "DAHA İYİ BİR GELECEK İNŞA ETMEK İÇİN TASARLANDI",
+    "description": "Yenilikçi AEC iş akışları, parametrik donatı ve çelik otomasyonu ile bulut tabanlı OpenBIM iş birliği sayesinde tasarım aşamasından şantiyeye kadar hatasız projeler.",
+    "tags": [
+        "CLOUD NATIVE", "BIM LEVEL 3", "PARAMETRIC", "AUTOMATION",
+        "INTEROPERABILITY", "AX3000", "PYTHONPARTS", "OPENBIM",
+        "REAL-TIME", "PRECAST", "CIVIL", "BRIDGE", "@CONNECTION", "DATA_NODE",
+    ],
+    "monitorLabel": "BIM ENGINE",
+    "monitorProtocol": "IFC 4.3 · OPENBIM",
+    "monitorDisciplines": "MİMARİ · MÜHENDİSLİK · ALTYAPI · PREKAST",
+    "monitorDescription": "Disiplinler arası BIM koordinasyonu ve yerel mühendislik desteği için tek platform.",
 }
 
 ROLE_ENRICH = {
@@ -1076,8 +1120,66 @@ for s in homepage_data.get("services", []):
     if "aluplan.net.tr" in s.get("href", "").lower() or "allplan.net.tr" in s.get("href", "").lower():
         s["href"] = "https://allplan.net.tr/tr"
 
+SERVICE_ICONS = {
+    "Eğitim": "graduation-cap", "Teknik Destek": "life-buoy", "Destek Platformu": "life-buoy",
+    "Danışmanlık": "users", "Sertifika": "award", "Download": "download", "Connect: Giriş": "key",
+    "Admin Lisans : Lisans Yöneticisi Bilgi Formu": "shield", "CodeMeter WebDepot": "key",
+    "Deklarasyon Formu": "file-text", "ALLPLAN FAQ": "circle-help", "Blog Global": "globe",
+    "Canlı Webinarlar": "video", "BIM Rehberi": "book-open", "OPENBIM": "boxes",
+    "Sistem Gereksinimleri": "cpu", "Tüm Gereksinimler": "layers", "Sürüm Notları": "sparkles",
+    "IFC Export El Kitabı": "file-text", "Partner": "users",
+}
+for service in homepage_data.get("services", []):
+    service["icon"] = SERVICE_ICONS.get(service["title"], "layers")
+
+homepage_data["serviceGroups"] = [
+    {"title": "Öğren ve yardım al", "serviceTitles": ["Eğitim", "Teknik Destek", "Destek Platformu", "Danışmanlık", "Sertifika"]},
+    {"title": "Yazılım ve lisans işlemleri", "serviceTitles": ["Download", "Connect: Giriş", "Admin Lisans : Lisans Yöneticisi Bilgi Formu", "CodeMeter WebDepot", "Deklarasyon Formu"]},
+    {"title": "Bilgi ve güncellemeler", "serviceTitles": ["ALLPLAN FAQ", "Blog Global", "Canlı Webinarlar", "BIM Rehberi", "OPENBIM", "Sistem Gereksinimleri", "Tüm Gereksinimler", "Sürüm Notları", "IFC Export El Kitabı"]},
+    {"title": "Partner erişimi", "serviceTitles": ["Partner"]},
+]
+
 with open(data_dir / "homepage.json", "w", encoding="utf-8") as f:
     json.dump(homepage_data, f, ensure_ascii=False, indent=2)
+
+video_library_data = {
+    "kicker": "GÖRSEL EĞİTİM · VİDEO KÜTÜPHANESİ",
+    "title": "Önerilen Oynatma Listeleri ve Kanallar",
+    "description": "Sizin için derlediğimiz en popüler ve faydalı video kaynak liste ve kanalları.",
+    "subscribe": {
+        "badge": "Resmi Kanal",
+        "title": "Allplan Türkiye YouTube Kanalına Abone Olun",
+        "description": "En yeni eğitim videoları, ipuçları, webinar kayıtları ve sektörel gelişmelerden anında haberdar olmak için kanalımıza abone olmayı unutmayın.",
+        "href": "https://www.youtube.com/@AllplanTurkey?sub_confirmation=1",
+        "label": "ABONE OL",
+    },
+    "items": [
+        {"title": "Allplan 2026", "description": "Allplan 2026 sürümü için hazırlanmış kapsamlı eğitim videoları ve yenilikler.", "url": "https://youtube.com/playlist?list=PLowC-ZFUywGMotfHSyzqoNZCQYWl_6G1x&si=BSEJvgjsQWgbIwVe"},
+        {"title": "Youtube Allplan English", "description": "Allplan global İngilizce içerikleri, uluslararası örnekler ve eğitimler.", "url": "https://www.youtube.com/@ALLPLANEnglish"},
+        {"title": "Youtube Allplan Global", "description": "Dünya genelinden Allplan kullanıcı hikayeleri ve küresel etkinlikler.", "url": "https://www.youtube.com/@ALLPLANglobal"},
+        {"title": "Youtube Allplan Precast", "description": "Prekast beton tasarımı ve üretimi üzerine özelleşmiş Almanca/İngilizce içerikler.", "url": "https://www.youtube.com/c/AllplanPrecast"},
+        {"title": "Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları", "description": "Allplan 2024 sürümü ile gelen tüm yeniliklerin Türkçe anlatımı.", "url": "/solutions-v2/training/video-library/hello-allplan-2024"},
+        {"title": "Allplan Add On Geometry Tools", "description": "Topografik ve geometrik düzenleme araçları, arazi modelleme eğitimleri.", "url": "/solutions-v2/training/video-library/addon-geometry"},
+        {"title": "AX3000 - MEP & Enerji", "description": "Mekanik, Elektrik, Tesisat ve Enerji Kimlik Belgesi (EKB) eğitimleri.", "url": "/solutions-v2/training/video-library/ax3000"},
+        {"title": "Youtube CDS Allplan Add-On", "description": "CDS (Campus Delivery System) ve eklenti geliştirmeleri üzerine videolar.", "url": "#"},
+        {"title": "Allplan Road Design Workflow", "description": "Yol tasarımı iş akışları ve yol modülü eğitim videoları.", "url": "/solutions-v2/training/video-library/road-design"},
+        {"title": "Allplan Bridge Workflows", "description": "Köprü tasarımı süreçleri ve BIM entegrasyonu.", "url": "/solutions-v2/training/video-library/bridge-workflows"},
+        {"title": "Campus Tutorials (Deutsch)", "description": "Öğrenciler için detaylı Almanca eğitim serisi.", "url": "/solutions-v2/training/video-library/campus-de"},
+        {"title": "Campus Tutorials (English)", "description": "Öğrenciler için kapsamlı İngilizce eğitim serisi.", "url": "/solutions-v2/training/video-library/campus-en"},
+        {"title": "Allplan Bridge", "description": "Allplan Bridge modülünün genel tanıtımı ve özellikleri.", "url": "#"},
+        {"title": "Allplan Bridge Tutorials", "description": "Adım adım köprü modelleme ve analiz rehberleri.", "url": "#"},
+        {"title": "SDS2 Detaylandırma", "description": "SDS2 ürün tanıtımı ve lansman videoları.", "url": "/solutions-v2/training/video-library/sds2-intro"},
+        {"title": "Konut İnşaatı İş Akışları", "description": "Konut proje teslimi, tasarım ve şantiye planlama süreçleri.", "url": "/solutions-v2/training/video-library/konut-insaati"},
+        {"title": "Bridge Workflow 2022", "description": "2022 Köprü tasarımı ve iş akışları eğitim serisi.", "url": "/solutions-v2/training/video-library/bridge-workflow-2022"},
+        {"title": "Otomatik Donatı (PythonPart)", "description": "Otomatik donatılandırma ve PythonPart araçları kullanımı.", "url": "/solutions-v2/training/video-library/otomatik-donati"},
+        {"title": "ALLPLAN QuickStart: Buildings", "description": "Allplan ile bina modellemeye hızlı başlangıç rehberi (9 Ders).", "url": "/solutions-v2/training/video-library/quickstart-buildings"},
+        {"title": "ALLPLAN for Reinforcement", "description": "Betonarme detaylandırma, donatı modelleme ve raporlama eğitimleri (18 Video).", "url": "/solutions-v2/training/video-library/allplan-reinforcement"},
+        {"title": "Allplan Campus Tutorials 2019-2022", "description": "Öğrenciler için kapsamlı Almanca eğitim serisi (2019-2022).", "url": "/solutions-v2/training/video-library/campus-tutorials-2019-2022"},
+        {"title": "ALLPLAN Pythonparts Youtube Kanalı", "description": "PythonParts ile parametrik obje geliştirme ve script örnekleri.", "url": "#"},
+    ],
+}
+with open(data_dir / "video-library.json", "w", encoding="utf-8") as f:
+    json.dump(video_library_data, f, ensure_ascii=False, indent=2)
 
 # Build search-index.json
 search_entries = [
@@ -1096,7 +1198,9 @@ with open(data_dir / "search-index.json", "w", encoding="utf-8") as f:
 
 
 # Original binary documents only; never manufacture PDFs or DOCX placeholders.
-write_manifest(ROOT, sync_documents(ROOT, SOURCE_ROOT))
+# CI and fresh clones verify the committed copies without requiring the read-only source checkout.
+if SOURCE_AVAILABLE:
+    write_manifest(ROOT, sync_documents(ROOT, SOURCE_ROOT))
 
 print(f"Generated {len(pages_data)} routes in src/data/pages.json")
 print(f"Generated {len(playlist_by_id)} playlists in src/data/playlists.json")

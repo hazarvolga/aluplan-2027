@@ -3,6 +3,7 @@ import playlistsJson from '@/data/playlists.json';
 import navigationJson from '@/data/navigation.json';
 import homepageJson from '@/data/homepage.json';
 import searchIndexJson from '@/data/search-index.json';
+import videoLibraryJson from '@/data/video-library.json';
 
 export const SITE_ORIGIN = 'https://aluplan.com.tr';
 export const TRIAL_CTA_URL = 'https://www.allplan.com/trial-or-subscription/';
@@ -70,7 +71,7 @@ export interface StructuredWorkflowLink {
   text: string;
   href: string;
   external?: boolean;
-  color?: string;
+  accentKey: 'package' | 'architect' | 'engineer' | 'fabricator';
 }
 
 export interface StructuredStatItem {
@@ -274,8 +275,35 @@ export interface SearchEntry {
   keywords: string;
 }
 
+export interface SiteIdentity {
+  name: string;
+  alternateName: string;
+  description: string;
+  foundingDate: string;
+  email: string;
+  telephone: string;
+  displayPhones: string[];
+  phoneLinks: string[];
+  address: {
+    '@type': 'PostalAddress';
+    streetAddress: string;
+    addressLocality: string;
+    addressRegion: string;
+    postalCode: string;
+    addressCountry: string;
+  };
+  displayAddress: string;
+  sameAs: string[];
+}
+
+interface NavigationData {
+  siteIdentity: SiteIdentity;
+  [key: string]: unknown;
+}
+
 const pagesMap = pagesJson as unknown as Record<string, PageRecord>;
 const playlistsMap = playlistsJson as unknown as Record<string, PlaylistRecord>;
+const navigationData = navigationJson as unknown as NavigationData;
 
 export function normalizeLookupPath(pathname: string): string {
   if (!pathname || pathname === '/') return '/';
@@ -311,8 +339,16 @@ export function getNavigationData() {
   return navigationJson;
 }
 
+export function getSiteIdentity(): SiteIdentity {
+  return navigationData.siteIdentity;
+}
+
 export function getHomepageData() {
   return homepageJson;
+}
+
+export function getVideoLibraryData() {
+  return videoLibraryJson;
 }
 
 export function getSearchIndex(): SearchEntry[] {

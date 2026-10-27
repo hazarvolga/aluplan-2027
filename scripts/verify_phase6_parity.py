@@ -154,7 +154,11 @@ check("All 216 unique videos / 242 playlist entries preserved", len(unique_video
 # 4. Homepage H01-H08 & Footer Content Parity
 check("Homepage preserves 3 roles, 6 products, 5 solutions, 20 services", len(hp["roles"]) == 3 and len(hp["products"]) == 6 and len(hp["solutions"]) == 5 and len(hp["services"]) == 20)
 check("Homepage preserves 6 package PDF items, BIMFlex visuals, 3 innovation cards", len(hp["packages"]) == 6 and len(hp["bimflex"]["media"]) == 3 and "logo" in hp["bimflex"] and len(hp["innovations"]) == 3)
-check("HomepageView includes all 14 Hero technical tags and direct trial URL", "HERO_TAGS" in hp_view_tsx and "TRIAL_CTA_URL" in hp_view_tsx)
+check(
+    "HomepageView includes all 14 Hero technical tags and direct trial URL",
+    len(hp.get("heroContent", {}).get("tags", [])) == 14
+    and "TRIAL_CTA_URL" in hp_view_tsx,
+)
 check("Footer preserves developer credit 'Design & Develop by Hazar Volga Ekiz'", nav["footer"]["credit"] == "Design & Develop by Hazar Volga Ekiz")
 check("Footer preserves all 3 phone numbers and Atasehir address", len(nav["footer"]["phones"]) == 3 and len(nav["footer"]["address"]) == 3)
 

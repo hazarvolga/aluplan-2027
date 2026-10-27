@@ -34,6 +34,7 @@ const jsonModules = new Map([
   ['@/data/navigation.json', loadJson('src/data/navigation.json')],
   ['@/data/homepage.json', loadJson('src/data/homepage.json')],
   ['@/data/search-index.json', loadJson('src/data/search-index.json')],
+  ['@/data/video-library.json', loadJson('src/data/video-library.json')],
 ]);
 
 const siteData = evaluateCommonJs(

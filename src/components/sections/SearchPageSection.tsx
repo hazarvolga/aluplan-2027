@@ -2,10 +2,11 @@
 
 import Link from 'next/link';
 import type { ReactElement } from 'react';
-import { getSearchIndex } from '@/lib/site-data';
+import { getHomepageData, getSearchIndex } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
 
 const searchIndex = getSearchIndex();
+const homepageData = getHomepageData();
 
 interface SearchPageSectionProps {
   query: string;
@@ -38,7 +39,7 @@ export function SearchPageSection({
         <input
           type="search"
           className="alu-input"
-          placeholder="Anahtar kelime girin (örn. ALLPLAN 2026, AX3000, BIMFlex, Köprü, Prekast)..."
+          placeholder={`Anahtar kelime girin (örn. ${homepageData.releaseLabel}, AX3000, BIMFlex, Köprü, Prekast)...`}
           value={query}
           onChange={(event) => onQueryChange(event.target.value)}
         />

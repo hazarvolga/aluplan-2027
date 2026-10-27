@@ -8,6 +8,7 @@ import {
   TRIAL_CTA_URL,
   MAIN_QUOTE_FORM_URL,
   SUPPORT_PORTAL_URL,
+  getHomepageData,
   getSiteIdentity
 } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
@@ -38,6 +39,8 @@ const SECTION_LABELS: Record<string, string> = {
 };
 
 const siteIdentity = getSiteIdentity();
+const homepageData = getHomepageData();
+const trialReleaseLabel = `${homepageData.releaseLabel} DENEME VE ABONELİK`;
 
 export function SubpageView({
   page,
@@ -953,7 +956,7 @@ export function SubpageView({
                 <div className="alu-cluster">
                   <span className="alu-badge alu-badge--accent">
                     <AluIcon name="sparkles" size="sm" />
-                    <span>ALLPLAN 2026 DENEME VE ABONELİK</span>
+                    <span>{trialReleaseLabel}</span>
                   </span>
                 </div>
                 <h2 id="global-trial-heading" className="alu-h1">

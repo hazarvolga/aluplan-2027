@@ -1048,6 +1048,22 @@ homepage_data["heroVideo"] = {
     "src": "/videos/hero-bim.mp4",
     "poster": "/images/hero-poster.jpg",
 }
+homepage_data["releaseLabel"] = "ALLPLAN 2026"
+homepage_data["packageMatrixLabel"] = "Q3 2026 MATRİSİ"
+homepage_data["heroContent"] = {
+    "distributorLabel": "1995'ten beri Yetkili Distribütör",
+    "title": "DAHA İYİ BİR GELECEK İNŞA ETMEK İÇİN TASARLANDI",
+    "description": "Yenilikçi AEC iş akışları, parametrik donatı ve çelik otomasyonu ile bulut tabanlı OpenBIM iş birliği sayesinde tasarım aşamasından şantiyeye kadar hatasız projeler.",
+    "tags": [
+        "CLOUD NATIVE", "BIM LEVEL 3", "PARAMETRIC", "AUTOMATION",
+        "INTEROPERABILITY", "AX3000", "PYTHONPARTS", "OPENBIM",
+        "REAL-TIME", "PRECAST", "CIVIL", "BRIDGE", "@CONNECTION", "DATA_NODE",
+    ],
+    "monitorLabel": "BIM ENGINE",
+    "monitorProtocol": "IFC 4.3 · OPENBIM",
+    "monitorDisciplines": "MİMARİ · MÜHENDİSLİK · ALTYAPI · PREKAST",
+    "monitorDescription": "Disiplinler arası BIM koordinasyonu ve yerel mühendislik desteği için tek platform.",
+}
 
 ROLE_ENRICH = {
     "architect": {"icon": "building-2", "image": "/assets/solutions/architecture-hero.jpg"},
@@ -1104,8 +1120,66 @@ for s in homepage_data.get("services", []):
     if "aluplan.net.tr" in s.get("href", "").lower() or "allplan.net.tr" in s.get("href", "").lower():
         s["href"] = "https://allplan.net.tr/tr"
 
+SERVICE_ICONS = {
+    "Eğitim": "graduation-cap", "Teknik Destek": "life-buoy", "Destek Platformu": "life-buoy",
+    "Danışmanlık": "users", "Sertifika": "award", "Download": "download", "Connect: Giriş": "key",
+    "Admin Lisans : Lisans Yöneticisi Bilgi Formu": "shield", "CodeMeter WebDepot": "key",
+    "Deklarasyon Formu": "file-text", "ALLPLAN FAQ": "circle-help", "Blog Global": "globe",
+    "Canlı Webinarlar": "video", "BIM Rehberi": "book-open", "OPENBIM": "boxes",
+    "Sistem Gereksinimleri": "cpu", "Tüm Gereksinimler": "layers", "Sürüm Notları": "sparkles",
+    "IFC Export El Kitabı": "file-text", "Partner": "users",
+}
+for service in homepage_data.get("services", []):
+    service["icon"] = SERVICE_ICONS.get(service["title"], "layers")
+
+homepage_data["serviceGroups"] = [
+    {"title": "Öğren ve yardım al", "serviceTitles": ["Eğitim", "Teknik Destek", "Destek Platformu", "Danışmanlık", "Sertifika"]},
+    {"title": "Yazılım ve lisans işlemleri", "serviceTitles": ["Download", "Connect: Giriş", "Admin Lisans : Lisans Yöneticisi Bilgi Formu", "CodeMeter WebDepot", "Deklarasyon Formu"]},
+    {"title": "Bilgi ve güncellemeler", "serviceTitles": ["ALLPLAN FAQ", "Blog Global", "Canlı Webinarlar", "BIM Rehberi", "OPENBIM", "Sistem Gereksinimleri", "Tüm Gereksinimler", "Sürüm Notları", "IFC Export El Kitabı"]},
+    {"title": "Partner erişimi", "serviceTitles": ["Partner"]},
+]
+
 with open(data_dir / "homepage.json", "w", encoding="utf-8") as f:
     json.dump(homepage_data, f, ensure_ascii=False, indent=2)
+
+video_library_data = {
+    "kicker": "GÖRSEL EĞİTİM · VİDEO KÜTÜPHANESİ",
+    "title": "Önerilen Oynatma Listeleri ve Kanallar",
+    "description": "Sizin için derlediğimiz en popüler ve faydalı video kaynak liste ve kanalları.",
+    "subscribe": {
+        "badge": "Resmi Kanal",
+        "title": "Allplan Türkiye YouTube Kanalına Abone Olun",
+        "description": "En yeni eğitim videoları, ipuçları, webinar kayıtları ve sektörel gelişmelerden anında haberdar olmak için kanalımıza abone olmayı unutmayın.",
+        "href": "https://www.youtube.com/@AllplanTurkey?sub_confirmation=1",
+        "label": "ABONE OL",
+    },
+    "items": [
+        {"title": "Allplan 2026", "description": "Allplan 2026 sürümü için hazırlanmış kapsamlı eğitim videoları ve yenilikler.", "url": "https://youtube.com/playlist?list=PLowC-ZFUywGMotfHSyzqoNZCQYWl_6G1x&si=BSEJvgjsQWgbIwVe"},
+        {"title": "Youtube Allplan English", "description": "Allplan global İngilizce içerikleri, uluslararası örnekler ve eğitimler.", "url": "https://www.youtube.com/@ALLPLANEnglish"},
+        {"title": "Youtube Allplan Global", "description": "Dünya genelinden Allplan kullanıcı hikayeleri ve küresel etkinlikler.", "url": "https://www.youtube.com/@ALLPLANglobal"},
+        {"title": "Youtube Allplan Precast", "description": "Prekast beton tasarımı ve üretimi üzerine özelleşmiş Almanca/İngilizce içerikler.", "url": "https://www.youtube.com/c/AllplanPrecast"},
+        {"title": "Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları", "description": "Allplan 2024 sürümü ile gelen tüm yeniliklerin Türkçe anlatımı.", "url": "/solutions-v2/training/video-library/hello-allplan-2024"},
+        {"title": "Allplan Add On Geometry Tools", "description": "Topografik ve geometrik düzenleme araçları, arazi modelleme eğitimleri.", "url": "/solutions-v2/training/video-library/addon-geometry"},
+        {"title": "AX3000 - MEP & Enerji", "description": "Mekanik, Elektrik, Tesisat ve Enerji Kimlik Belgesi (EKB) eğitimleri.", "url": "/solutions-v2/training/video-library/ax3000"},
+        {"title": "Youtube CDS Allplan Add-On", "description": "CDS (Campus Delivery System) ve eklenti geliştirmeleri üzerine videolar.", "url": "#"},
+        {"title": "Allplan Road Design Workflow", "description": "Yol tasarımı iş akışları ve yol modülü eğitim videoları.", "url": "/solutions-v2/training/video-library/road-design"},
+        {"title": "Allplan Bridge Workflows", "description": "Köprü tasarımı süreçleri ve BIM entegrasyonu.", "url": "/solutions-v2/training/video-library/bridge-workflows"},
+        {"title": "Campus Tutorials (Deutsch)", "description": "Öğrenciler için detaylı Almanca eğitim serisi.", "url": "/solutions-v2/training/video-library/campus-de"},
+        {"title": "Campus Tutorials (English)", "description": "Öğrenciler için kapsamlı İngilizce eğitim serisi.", "url": "/solutions-v2/training/video-library/campus-en"},
+        {"title": "Allplan Bridge", "description": "Allplan Bridge modülünün genel tanıtımı ve özellikleri.", "url": "#"},
+        {"title": "Allplan Bridge Tutorials", "description": "Adım adım köprü modelleme ve analiz rehberleri.", "url": "#"},
+        {"title": "SDS2 Detaylandırma", "description": "SDS2 ürün tanıtımı ve lansman videoları.", "url": "/solutions-v2/training/video-library/sds2-intro"},
+        {"title": "Konut İnşaatı İş Akışları", "description": "Konut proje teslimi, tasarım ve şantiye planlama süreçleri.", "url": "/solutions-v2/training/video-library/konut-insaati"},
+        {"title": "Bridge Workflow 2022", "description": "2022 Köprü tasarımı ve iş akışları eğitim serisi.", "url": "/solutions-v2/training/video-library/bridge-workflow-2022"},
+        {"title": "Otomatik Donatı (PythonPart)", "description": "Otomatik donatılandırma ve PythonPart araçları kullanımı.", "url": "/solutions-v2/training/video-library/otomatik-donati"},
+        {"title": "ALLPLAN QuickStart: Buildings", "description": "Allplan ile bina modellemeye hızlı başlangıç rehberi (9 Ders).", "url": "/solutions-v2/training/video-library/quickstart-buildings"},
+        {"title": "ALLPLAN for Reinforcement", "description": "Betonarme detaylandırma, donatı modelleme ve raporlama eğitimleri (18 Video).", "url": "/solutions-v2/training/video-library/allplan-reinforcement"},
+        {"title": "Allplan Campus Tutorials 2019-2022", "description": "Öğrenciler için kapsamlı Almanca eğitim serisi (2019-2022).", "url": "/solutions-v2/training/video-library/campus-tutorials-2019-2022"},
+        {"title": "ALLPLAN Pythonparts Youtube Kanalı", "description": "PythonParts ile parametrik obje geliştirme ve script örnekleri.", "url": "#"},
+    ],
+}
+with open(data_dir / "video-library.json", "w", encoding="utf-8") as f:
+    json.dump(video_library_data, f, ensure_ascii=False, indent=2)
 
 # Build search-index.json
 search_entries = [

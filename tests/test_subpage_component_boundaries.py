@@ -19,16 +19,16 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
         parent = read("src/components/sections/SubpageView.tsx")
 
         self.assertNotIn("'use client'", component)
-        self.assertIn("import { getAllPlaylists }", component)
+        self.assertIn("import { getAllPlaylists, getVideoLibraryData }", component)
         for marker in [
-            "const VIDEO_LIBRARY_ITEMS",
+            "const videoLibrary = getVideoLibraryData()",
             "const playlistByUrl",
-            "VIDEO_LIBRARY_ITEMS.map",
+            "videoLibrary.items.map",
             "alu-yt-banner",
             "alu-yt-grid",
             "alu-yt-card--internal",
             "matchedPlaylist.count",
-            "Allplan Türkiye YouTube Kanalına Abone Olun",
+            "videoLibrary.subscribe.title",
             'target={isExternal ? \'_blank\' : undefined}',
             "rel={isExternal ? 'noopener noreferrer' : undefined}",
         ]:
@@ -43,13 +43,8 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
         self.assertNotIn("alu-yt-grid", parent)
 
     def test_video_library_hub_preserves_all_22_source_targets(self):
-        component = read("src/components/sections/VideoLibraryHubSection.tsx")
-        items_source = component.split("const VIDEO_LIBRARY_ITEMS", 1)[1].split("];", 1)[0]
-        pairs = re.findall(
-            r"\{\s+title: '([^']+)',\s+description: '.*?',\s+url: '([^']*)'\s+\}",
-            items_source,
-            flags=re.DOTALL,
-        )
+        catalog = json.loads(read("src/data/video-library.json"))
+        pairs = [(item["title"], item["url"]) for item in catalog["items"]]
         expected_pairs = [
             ("Allplan 2026", "https://youtube.com/playlist?list=PLowC-ZFUywGMotfHSyzqoNZCQYWl_6G1x&si=BSEJvgjsQWgbIwVe"),
             ("Youtube Allplan English", "https://www.youtube.com/@ALLPLANEnglish"),
@@ -236,7 +231,10 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
         parent = read("src/components/sections/SubpageView.tsx")
 
         self.assertTrue(component.startswith("'use client';"))
-        self.assertIn("import { getSearchIndex }", component)
+        self.assertRegex(
+            component,
+            r"import \{[^}]*\bgetHomepageData\b[^}]*\bgetSearchIndex\b[^}]*\}",
+        )
         for marker in [
             "query: string",
             "onQueryChange: (query: string) => void",

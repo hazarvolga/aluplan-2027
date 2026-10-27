@@ -3,72 +3,14 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { getHomepageData, TRIAL_CTA_URL, MAIN_QUOTE_FORM_URL } from '@/lib/site-data';
-import { AluIcon, AluIconName } from '@/components/ui/AluIcon';
+import { AluIcon } from '@/components/ui/AluIcon';
+import type { AluIconName } from '@/components/ui/AluIcon';
+import { ProfessionalServicesSection } from './ProfessionalServicesSection';
 
 const data = getHomepageData();
-
-const HERO_TAGS = [
-  'CLOUD NATIVE',
-  'BIM LEVEL 3',
-  'PARAMETRIC',
-  'AUTOMATION',
-  'INTEROPERABILITY',
-  'AX3000',
-  'PYTHONPARTS',
-  'OPENBIM',
-  'REAL-TIME',
-  'PRECAST',
-  'CIVIL',
-  'BRIDGE',
-  '@CONNECTION',
-  'DATA_NODE'
-];
-
-const SERVICE_GROUPS: [string, string[]][] = [
-  ['Öğren ve yardım al', ['Eğitim', 'Teknik Destek', 'Destek Platformu', 'Danışmanlık', 'Sertifika']],
-  [
-    'Yazılım ve lisans işlemleri',
-    ['Download', 'Connect: Giriş', 'Admin Lisans : Lisans Yöneticisi Bilgi Formu', 'CodeMeter WebDepot', 'Deklarasyon Formu']
-  ],
-  [
-    'Bilgi ve güncellemeler',
-    [
-      'ALLPLAN FAQ',
-      'Blog Global',
-      'Canlı Webinarlar',
-      'BIM Rehberi',
-      'OPENBIM',
-      'Sistem Gereksinimleri',
-      'Tüm Gereksinimler',
-      'Sürüm Notları',
-      'IFC Export El Kitabı'
-    ]
-  ],
-  ['Partner erişimi', ['Partner']]
-];
-
-const SERVICE_ICONS: Record<string, AluIconName> = {
-  Eğitim: 'graduation-cap',
-  'Teknik Destek': 'life-buoy',
-  'Destek Platformu': 'life-buoy',
-  Danışmanlık: 'users',
-  Sertifika: 'award',
-  Download: 'download',
-  'Connect: Giriş': 'key',
-  'Admin Lisans : Lisans Yöneticisi Bilgi Formu': 'shield',
-  'CodeMeter WebDepot': 'key',
-  'Deklarasyon Formu': 'file-text',
-  'ALLPLAN FAQ': 'circle-help',
-  'Blog Global': 'globe',
-  'Canlı Webinarlar': 'video',
-  'BIM Rehberi': 'book-open',
-  OPENBIM: 'boxes',
-  'Sistem Gereksinimleri': 'cpu',
-  'Tüm Gereksinimler': 'layers',
-  'Sürüm Notları': 'sparkles',
-  'IFC Export El Kitabı': 'file-text',
-  Partner: 'users'
-};
+const releaseCountryLabel = `${data.releaseLabel} · TÜRKİYE`;
+const releaseMonitorLabel = `${data.releaseLabel} · ${data.heroContent.monitorLabel}`;
+const packageMatrixSuffix = ` · ${data.packageMatrixLabel}`;
 
 const ROLE_ICONS: Record<string, AluIconName> = {
   architect: 'building-2',
@@ -84,11 +26,8 @@ const ROLE_ACCENTS: Record<string, string> = {
 
 export function HomepageView() {
   const [roleId, setRoleId] = useState<string>(data.roles[0].id);
-  const [activeGroupIdx, setActiveGroupIdx] = useState<number>(0);
-  const [showAllServices, setShowAllServices] = useState<boolean>(false);
 
   const activeRole = data.roles.find((r) => r.id === roleId) || data.roles[0];
-  const serviceByName = new Map(data.services.map((s) => [s.title, s]));
 
   return (
     <>
@@ -115,17 +54,17 @@ export function HomepageView() {
               <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-dense)' }}>
                 <span className="alu-badge alu-badge--accent">
                   <AluIcon name="sparkles" size="sm" />
-                  <span>ALLPLAN 2026 · TÜRKİYE</span>
+                  <span>{releaseCountryLabel}</span>
                 </span>
-                <span className="alu-badge">1995&apos;ten beri Yetkili Distribütör</span>
+                <span className="alu-badge">{data.heroContent.distributorLabel}</span>
               </div>
 
               <h1 id="hero-title" className="alu-display alu-hero-stage__title">
-                DAHA İYİ BİR GELECEK İNŞA ETMEK İÇİN TASARLANDI
+                {data.heroContent.title}
               </h1>
 
               <p className="alu-body-lg alu-hero-stage__lead">
-                Yenilikçi AEC iş akışları, parametrik donatı ve çelik otomasyonu ile bulut tabanlı OpenBIM iş birliği sayesinde tasarım aşamasından şantiyeye kadar hatasız projeler.
+                {data.heroContent.description}
               </p>
 
               <div className="alu-cluster" role="group" aria-label="Ana eylemler" style={{ gap: 'var(--space-application-jsx-wide)' }}>
@@ -150,7 +89,7 @@ export function HomepageView() {
               </div>
 
               <div className="alu-hero-tags" aria-label="Teknik yetenek etiketleri">
-                {HERO_TAGS.map((tag) => (
+                {data.heroContent.tags.map((tag) => (
                   <span key={tag} className="alu-hero-tag">
                     {tag}
                   </span>
@@ -162,9 +101,9 @@ export function HomepageView() {
               <div className="alu-hero-monitor__header">
                 <span className="alu-hero-monitor__status">
                   <span className="alu-hero-monitor__dot" />
-                  <span>ALLPLAN 2026 · BIM ENGINE</span>
+                  <span>{releaseMonitorLabel}</span>
                 </span>
-                <span className="alu-caption">IFC 4.3 · OPENBIM</span>
+                <span className="alu-caption">{data.heroContent.monitorProtocol}</span>
               </div>
               {data.heroVideo && (
                 <div className="alu-hero-monitor__viewport">
@@ -182,10 +121,10 @@ export function HomepageView() {
               <div className="alu-hero-monitor__footer">
                 <div>
                   <p className="preview-kicker" style={{ margin: 0 }}>
-                    MİMARİ · MÜHENDİSLİK · ALTYAPI · PREKAST
+                    {data.heroContent.monitorDisciplines}
                   </p>
                   <p className="alu-body-sm" style={{ margin: 'var(--space-application-jsx-tight) 0 0 0' }}>
-                    Disiplinler arası BIM koordinasyonu ve yerel mühendislik desteği için tek platform.
+                    {data.heroContent.monitorDescription}
                   </p>
                 </div>
               </div>
@@ -278,7 +217,7 @@ export function HomepageView() {
                   <AluIcon name={ROLE_ICONS[activeRole.id] || 'layers'} size="sm" />
                   <span>{activeRole.label} İŞ AKIŞI</span>
                 </span>
-                <span className="alu-caption">ALLPLAN 2026</span>
+                <span className="alu-caption">{data.releaseLabel}</span>
               </div>
 
               <h3 className="alu-pathway-split__title">{activeRole.title}</h3>
@@ -455,7 +394,7 @@ export function HomepageView() {
           <div className="alu-techspecs-banner">
             <div className="alu-techspecs-banner__header">
               <div className="alu-stack">
-                <span className="preview-kicker">{data.packageAccess.eyebrow} · Q3 2026 MATRİSİ</span>
+                <span className="preview-kicker">{data.packageAccess.eyebrow}{packageMatrixSuffix}</span>
                 <h2 id="packages-heading" className="alu-h1">
                   {data.packageAccess.title}
                 </h2>
@@ -507,145 +446,8 @@ export function HomepageView() {
         </div>
       </section>
 
-      {/* H06: Professional Services (20 items) */}
-      <section id="professional-services" className="preview-section preview-section--subtle" aria-labelledby="services-heading">
-        <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
-          <div className="preview-section-heading">
-            <div className="alu-stack">
-              <span className="preview-kicker">PROFESYONEL HİZMETLER VE DESTEK MERKEZİ</span>
-              <h2 id="services-heading" className="alu-h1">
-                Öğrenme, Teknik Destek ve Lisans Kaynakları
-              </h2>
-              <p className="alu-body preview-meta">
-                Eğitim, Microsoft Teams canlı bağlantı ve allplan.net.tr/tr ticket platformu dahil 20 profesyonel hizmet ve teknik kaynağa tek merkezden ulaşın.
-              </p>
-            </div>
-            <button
-              type="button"
-              className="alu-button alu-button--secondary alu-button--md"
-              onClick={() => setShowAllServices((prev) => !prev)}
-            >
-              <AluIcon name="layers" size="sm" />
-              <span>{showAllServices ? 'Kategori Görünümüne Dön' : 'Tüm 20 Kaynağı Tek Listede Aç'}</span>
-            </button>
-          </div>
-
-          <div className="alu-service-pills" role="tablist" aria-label="Hizmet kategorileri">
-            {SERVICE_GROUPS.map(([groupTitle, names], idx) => (
-              <button
-                key={groupTitle}
-                type="button"
-                role="tab"
-                aria-selected={activeGroupIdx === idx}
-                className={`alu-service-pill${activeGroupIdx === idx ? ' alu-service-pill--active' : ''}`}
-                onClick={() => {
-                  setActiveGroupIdx(idx);
-                  setShowAllServices(false);
-                }}
-              >
-                <span>{groupTitle}</span>
-                <span className="alu-service-pill__count">{names.length}</span>
-              </button>
-            ))}
-          </div>
-
-          <div className="alu-tabs__panel">
-            <div className="alu-services-grid">
-              {SERVICE_GROUPS[activeGroupIdx][1].map((serviceName) => {
-                const item = serviceByName.get(serviceName);
-                if (!item) return null;
-                const isExt = item.href.startsWith('http');
-                const iconName = SERVICE_ICONS[item.title] || 'layers';
-                return (
-                  <article key={item.title} className="alu-service-card">
-                    <div className="alu-service-card__top">
-                      <span className="alu-support-card__icon">
-                        <AluIcon name={iconName} size="md" />
-                      </span>
-                      <span className="alu-card__eyebrow">{SERVICE_GROUPS[activeGroupIdx][0]}</span>
-                    </div>
-                    <div className="alu-card__body">
-                      <h3 className="alu-card__title">{item.title}</h3>
-                      <p className="alu-body-sm">{item.description}</p>
-                    </div>
-                    <div className="alu-card__footer">
-                      {isExt ? (
-                        <a
-                          className="alu-button alu-button--secondary alu-button--sm"
-                          href={item.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <span>{item.cta}</span>
-                          <AluIcon name="external-link" size="sm" />
-                        </a>
-                      ) : (
-                        <Link className="alu-button alu-button--secondary alu-button--sm" href={item.href}>
-                          <span>{item.cta}</span>
-                          <AluIcon name="arrow-right" size="sm" />
-                        </Link>
-                      )}
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Complete 20/20 Directory (Accessible in DOM & toggleable) */}
-          <div className="alu-stack" style={{ display: showAllServices ? 'flex' : 'none' }}>
-            <h3 className="alu-h3">Tüm Hizmet ve Kaynak Dizini (20/20)</h3>
-            {SERVICE_GROUPS.map(([groupTitle, names]) => (
-              <div key={groupTitle} className="alu-stack" style={{ gap: 'var(--space-stack-md)', paddingTop: 'var(--space-application-jsx-section)' }}>
-                <div className="alu-cluster" style={{ justifyContent: 'space-between', borderBottom: 'var(--border-width-default) solid var(--border-default)', paddingBottom: 'var(--space-application-jsx-regular)' }}>
-                  <span className="alu-h4">{groupTitle}</span>
-                  <span className="alu-badge">{names.length} kayıt</span>
-                </div>
-                <div className="alu-services-grid">
-                  {names.map((name) => {
-                    const item = serviceByName.get(name);
-                    if (!item) return null;
-                    const isExt = item.href.startsWith('http');
-                    const iconName = SERVICE_ICONS[item.title] || 'layers';
-                    return (
-                      <article key={`all-${item.title}`} className="alu-service-card">
-                        <div className="alu-service-card__top">
-                          <span className="alu-support-card__icon">
-                            <AluIcon name={iconName} size="md" />
-                          </span>
-                          <span className="alu-card__eyebrow">{groupTitle}</span>
-                        </div>
-                        <div className="alu-card__body">
-                          <h4 className="alu-card__title">{item.title}</h4>
-                          <p className="alu-body-sm">{item.description}</p>
-                        </div>
-                        <div className="alu-card__footer">
-                          {isExt ? (
-                            <a
-                              className="alu-link alu-link--standalone"
-                              href={item.href}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <span>{item.cta}</span>
-                              <AluIcon name="external-link" size="sm" />
-                            </a>
-                          ) : (
-                            <Link className="alu-link alu-link--standalone" href={item.href}>
-                              <span>{item.cta}</span>
-                              <AluIcon name="arrow-right" size="sm" />
-                            </Link>
-                          )}
-                        </div>
-                      </article>
-                    );
-                  })}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* H06: Professional Services */}
+      <ProfessionalServicesSection />
 
       {/* H07: BIMFlex Spotlight */}
       <section id="bimflex" className="preview-section" aria-labelledby="bimflex-heading">

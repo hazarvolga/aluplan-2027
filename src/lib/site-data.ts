@@ -3,6 +3,7 @@ import playlistsJson from '@/data/playlists.json';
 import navigationJson from '@/data/navigation.json';
 import homepageJson from '@/data/homepage.json';
 import searchIndexJson from '@/data/search-index.json';
+import videoLibraryJson from '@/data/video-library.json';
 
 export const SITE_ORIGIN = 'https://aluplan.com.tr';
 export const TRIAL_CTA_URL = 'https://www.allplan.com/trial-or-subscription/';
@@ -344,6 +345,10 @@ export function getSiteIdentity(): SiteIdentity {
 
 export function getHomepageData() {
   return homepageJson;
+}
+
+export function getVideoLibraryData() {
+  return videoLibraryJson;
 }
 
 export function getSearchIndex(): SearchEntry[] {

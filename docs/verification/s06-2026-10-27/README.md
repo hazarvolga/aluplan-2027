@@ -164,3 +164,35 @@ Yerel `/search` `<main>` çıktısı önce ve sonra 86.909 bayt; iki SHA-256 de�
 RED aşamasında component dosyası bulunmadığı için boundary testi kırıldı; 109 alt sayfa, 69 hero görselli rota, `/about` + 3 legal CTA istisnası, 18 ürün/PDF dalı ve fiziksel PDF dosyası kontratı geçti. İlk render karşılaştırması ürün PDF hedefinde tek karakterlik bir sapma yakaladı: projede hem `karsilastirma` hem `karsilastirme` adlı dosya bulunduğundan yeni bileşen yanlışlıkla diğer geçerli dosyaya yönelmişti. Kaynak hero hedefi `/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf` aynen geri getirildi ve test doğru yazımı kilitler.
 
 Son parity beş rota için hero `outerHTML` byte/hash eşliği sağlar: `/products/allplan-ultimate` 4595 bayt `22e42b3e...`, `/about` 1796 bayt `d14b2706...`, `/gizlilik-politikasi` 1788 bayt `78d9adad...`, `/search` 2645 bayt `30a72db0...`, `hello-allplan-2024` 4529 bayt `7aa212d7...`. Breadcrumb/CTA href-target-rel sırası, görsel varlığı ve legal/about istisnaları aynıdır. `pnpm test` 98 Python testi, 36 faz parite kontrolü ve 44 token testini geçti; `pnpm typecheck` ve `pnpm build` başarılı, 118 rota/188 kontrast doğrulandı. Build'in `next-env.d.ts` değişikliği geri alındı. Work tarayıcı ayarı kapalı olduğundan responsive screenshot ve console/hydration kabulü açıktır. İçerik/schema/veri/URL, kaynak 2026 ve canlı sistem değiştirilmedi.
+
+## S06-T — Yerel teknik kapanış
+
+27.10.2026. `closure-plan.md` içindeki altı kapanış görevi tamamlandı. Bu kayıt yalnız yerel kod ve doğrulama durumunu kapatır; canlı yayın, push, PR, merge veya production kabulü değildir.
+
+### Kapatılan sözleşmeler
+
+- Görünür 25 SSS kaydı gerçek `FAQPage.mainEntity` çıktısına, sekiz eğitim hizmeti canonical rota bazlı benzersiz `Service.@id` değerlerine bağlandı. Organization schema ile `/contact` görünümü aynı generated `siteIdentity` kaydını tüketir.
+- Homepage hero/sürüm/paket matrisi/hizmet taksonomisi ve 22 kayıtlı video kütüphanesi kataloğu presentation bileşenlerinden generated veri katmanına taşındı. Search placeholder ve `llms.txt` yıllık etiketleri de aynı kaynaktan gelir.
+- 24 workflow linkindeki ham renkler `accentKey` sözleşmesine; bütün application z-index kararları semantic `--z-*` tokenlarına taşındı. Üretime eklenen homepage `preview.css` de aynı sözleşmeye alındı: renk, ölçü, z-index ve width media query kararları semantic/build-time tokenlara bağlıdır. `raw-literal-audit.json` kapsamı ve negatif guard'ları kaydeder.
+- 52 yapılandırılmış ürün/çözüm rotası `StructuredPageLayoutSection` sınırına ayrıldı. Modal ve referans state'i controlled olarak parentta kaldı; `SubpageView` 723 satırdır.
+- Homepage rol, Profesyonel Hizmetler, Referanslar, Eğitim ve legacy modül sekmeleri ortak Arrow/Home/End klavye davranışı, roving `tabIndex` ve kalıcı tab–panel ilişkileri kullanır. `/search` input'u programatik ada sahiptir.
+
+### Yerel kabul kanıtı
+
+- `pnpm test`, `pnpm typecheck`, `pnpm build` ve `pnpm styles:check` kapanış ağacında geçer.
+- Son tam koşuda 117 Python birim testi, 36/36 faz paritesi ve 45/45 token testi geçti; 188 kontrast çifti hatasızdır. Production build 118 rota üretir.
+- `render-final.json`: 110/110 veri rotası HTTP 200, 110/110 tek H1, 0 fetch hatası, 0 redirect, 0 bozuk yerel link hedefi ve 0 boş structured section.
+- İlk HTML'de bulunmayan 303 uzun structured metin adayı 16 etkileşimli rotadadır; sayı önceki baseline ile aynıdır. Bu tarama hydration/tıklama yapmadığından otomatik içerik kaybı olarak sınıflandırılmaz.
+- 11 korunmuş document URL'si 10 kaynak dosyayla hash/dosya türü kontrolünden geçer. Temsilî Ultimate `<main>` ağacı, yalnız önceki raw-color→semantic-token dönüşümü normalize edildiğinde extraction öncesi ağaca eşittir.
+- Her görev RED→GREEN, tam paket ve bağımsız code-reviewer kontrolünden geçti. Whole-branch review'ın bulduğu tek HIGH — `preview.css` token kapsamı — test-first kapatıldı; son delta incelemesi Critical/High/Medium bulgu olmadan onaylandı. Ayrı güvenlik incelemesi de önemli bulgu vermedi.
+
+### Dış kabul kapısı
+
+Codex Work ayarı son kontrolde `Browsers: Error: Local browser use is disabled in Work settings` döndürdü. Bu nedenle gerçek browser click/type akışları, hydration/console, responsive screenshot ve dört tema/mod görsel kabulü yapılmış sayılmaz. Bu ürün koduyla giderilemeyen S07/operator kapısıdır; bütün yerel kod-kontrollü S06 kapıları tamamlanmıştır.
+
+### Korunan sınırlar ve açık kararlar
+
+- `../aluplan-2026`, canlı site ve `Allplan 2027 Marketing Materials/` değiştirilmedi/kullanılmadı.
+- Dört kaynak `#` hedefi yeni üretilmedi; mevcut karar envanterinde kalır.
+- Microsoft Forms tek-form hedefi, 14 günlük resmî deneme URL'si, içerik/URL/doküman ve üretici varlıkları korunur.
+- Remote'a push/PR/merge ve canlıya deploy yapılmadı. Kullanıcıya ait izlenmeyen `DEVOPS MASTER WORKFLOW.md` commitlere alınmadı.

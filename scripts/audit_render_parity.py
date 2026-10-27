@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Read-only S05 local HTML/data comparison. Candidate gaps are not automatic losses."""
 import argparse
+from datetime import date
 import hashlib
 from html.parser import HTMLParser
 import json
@@ -13,6 +14,10 @@ from urllib.request import HTTPRedirectHandler, build_opener
 
 ROOT = Path(__file__).resolve().parents[1]
 TEXT_KEYS = {'title', 'heading', 'description', 'subtitle', 'text', 'question', 'answer', 'label'}
+
+
+def audit_date():
+    return date.today().isoformat()
 
 
 def normalize(value):
@@ -110,7 +115,7 @@ def audit(base_url):
         except Exception as exc:
             record['error'] = f'{type(exc).__name__}: {exc}'
         results.append(record)
-    return {'date': '2026-10-26', 'baseUrl': base_url,
+    return {'date': audit_date(), 'baseUrl': base_url,
             'method': 'All local data routes fetched; script/style excluded; normalized long structured text compared against initial HTML. No hydration/tab clicks in this scan.',
             'limitations': [
                 'Missing HTML text may be available after interaction; not automatically lost content.',

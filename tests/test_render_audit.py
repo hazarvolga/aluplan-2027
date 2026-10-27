@@ -1,4 +1,5 @@
 import importlib.util
+from datetime import date
 from pathlib import Path
 import unittest
 
@@ -8,6 +9,9 @@ SPEC.loader.exec_module(audit)
 
 
 class RenderAuditTests(unittest.TestCase):
+    def test_audit_date_is_generated_at_runtime(self):
+        self.assertEqual(audit.audit_date(), date.today().isoformat())
+
     def test_rsc_and_script_payload_are_not_counted_as_visible_content(self):
         parser = audit.PageText()
         parser.feed('<h1>Başlık</h1><script>kayıp panel metni</script><style>.test{}</style><p>Görünen içerik</p>')

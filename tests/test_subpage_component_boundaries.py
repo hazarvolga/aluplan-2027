@@ -14,6 +14,41 @@ def read(relative: str) -> str:
 
 
 class SubpageComponentBoundaryTests(unittest.TestCase):
+    def test_page_end_conversion_has_one_shared_render_boundary(self):
+        parent = read("src/components/sections/SubpageView.tsx")
+        structured = read("src/components/sections/StructuredPageLayoutSection.tsx")
+
+        self.assertIn(
+            "import { PageEndConversion } from './PageEndConversion';",
+            parent,
+        )
+        self.assertIn(
+            "import { getPageEndConversion } from './page-end-conversion-policy';",
+            parent,
+        )
+        self.assertIn("const pageEndConversion = getPageEndConversion(page)", parent)
+        self.assertIn(
+            "{pageEndConversion && <PageEndConversion model={pageEndConversion} />}",
+            parent,
+        )
+        self.assertEqual(parent.count("<PageEndConversion "), 1)
+
+        removed_markers = [
+            "global-trial-heading",
+            "training-request-heading",
+            "page.contentLinks.map",
+            "İLGİLİ BAĞLANTILAR, MODÜLLER VE DOKÜMANLAR",
+            "Bu Sayfayla İlgili Hızlı Geçişler ve İndirmeler",
+        ]
+        for marker in removed_markers:
+            with self.subTest(file="SubpageView.tsx", marker=marker):
+                self.assertNotIn(marker, parent)
+            with self.subTest(file="StructuredPageLayoutSection.tsx", marker=marker):
+                self.assertNotIn(marker, structured)
+
+        self.assertNotIn("ContentLink", structured)
+        self.assertNotIn("contentLinks:", structured)
+        self.assertNotIn("contentLinks={page.contentLinks}", parent)
     def test_video_library_hub_has_a_dedicated_render_boundary(self):
         component = read("src/components/sections/VideoLibraryHubSection.tsx")
         parent = read("src/components/sections/SubpageView.tsx")

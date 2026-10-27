@@ -1,14 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
 import {
   PageRecord,
   PlaylistRecord,
-  TRIAL_CTA_URL,
   MAIN_QUOTE_FORM_URL,
   SUPPORT_PORTAL_URL,
-  getHomepageData,
   getSiteIdentity
 } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
@@ -19,6 +16,8 @@ import { VideoPlaylistSection } from './VideoPlaylistSection';
 import { SearchPageSection } from './SearchPageSection';
 import { SubpageHeroSection } from './SubpageHeroSection';
 import { StructuredPageLayoutSection } from './StructuredPageLayoutSection';
+import { PageEndConversion } from './PageEndConversion';
+import { getPageEndConversion } from './page-end-conversion-policy';
 import { handleStructuredTabKey } from './structured-tab-key';
 import { MediaDialog } from '@/components/ui/MediaDialog';
 
@@ -34,8 +33,6 @@ const SECTION_LABELS: Record<string, string> = {
 };
 
 const siteIdentity = getSiteIdentity();
-const homepageData = getHomepageData();
-const trialReleaseLabel = `${homepageData.releaseLabel} DENEME VE ABONELİK`;
 export function SubpageView({
   page,
   playlist
@@ -65,6 +62,7 @@ export function SubpageView({
   const isLegalPage = page.section === 'legal';
   const isVideoLibraryHub = page.path === '/solutions-v2/training/video-library';
   const isVideoPlaylistPage = Boolean(playlist);
+  const pageEndConversion = getPageEndConversion(page);
   // Separate high-resolution photos from small icon assets (52x52 / 128x128 PNGs)
   const photoImages = React.useMemo(() => {
     const seen = new Set<string>();
@@ -158,21 +156,6 @@ export function SubpageView({
 
       {page.path === '/solutions-v2/training' && page.structuredLayout?.trainingTabs && (
         <TrainingTabs content={page.structuredLayout.trainingTabs} />
-      )}
-
-      {page.path === '/solutions-v2/training' && (
-        <section className="preview-section preview-section--subtle" aria-labelledby="training-request-heading">
-          <div className="alu-container alu-stack">
-            <h2 id="training-request-heading" className="alu-h2">Eğitim Talebi</h2>
-            <p className="alu-body">Eğitim ihtiyacınızı mevcut talep formumuz üzerinden paylaşabilirsiniz.</p>
-            <div className="alu-cluster">
-              <a href={MAIN_QUOTE_FORM_URL} target="_blank" rel="noopener noreferrer" className="alu-button alu-button--primary alu-button--md">
-                <span>Eğitim Talep Formunu Aç</span>
-                <AluIcon name="external-link" size="sm" />
-              </a>
-            </div>
-          </div>
-        </section>
       )}
 
       {/* Contact requests use the shared Microsoft form; direct channels stay available */}
@@ -326,7 +309,6 @@ export function SubpageView({
       {page.structuredLayout && !page.structuredLayout.trainingTabs ? (
         <StructuredPageLayoutSection
           layout={page.structuredLayout}
-          contentLinks={page.contentLinks}
           activeReferenceCategoryId={activeRefCatId}
           referenceSearchQuery={refSearchQuery}
           onReferenceCategoryChange={setActiveRefCatId}
@@ -539,45 +521,11 @@ export function SubpageView({
               </div>
             )}
 
-            {/* Preserved Page Links, Downloads & Actions */}
-            {page.contentLinks && page.contentLinks.length > 0 && !isVideoLibraryHub && !isVideoPlaylistPage && (
-              <div className="alu-techspecs-banner" style={{ padding: 'var(--space-inset-lg)' }}>
-                <div className="alu-stack" style={{ gap: 'var(--space-stack-md)' }}>
-                  <span className="preview-kicker">İLGİLİ BAĞLANTILAR, MODÜLLER VE DOKÜMANLAR</span>
-                  <h2 className="alu-h3" style={{ margin: 0 }}>
-                    Bu Sayfayla İlgili Hızlı Geçişler ve İndirmeler
-                  </h2>
-                  <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-dense)' }}>
-                    {page.contentLinks.map((lnk, lIdx) =>
-                      lnk.external ? (
-                        <a
-                          key={`${lnk.href}-${lIdx}`}
-                          href={lnk.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="alu-button alu-button--secondary alu-button--sm"
-                        >
-                          <span>{lnk.text}</span>
-                          <AluIcon name="external-link" size="sm" />
-                        </a>
-                      ) : (
-                        <Link
-                          key={`${lnk.href}-${lIdx}`}
-                          href={lnk.href}
-                          className="alu-button alu-button--secondary alu-button--sm"
-                        >
-                          <span>{lnk.text}</span>
-                          <AluIcon name="arrow-right" size="sm" />
-                        </Link>
-                      )
-                    )}
-                  </div>
-                </div>
-              </div>
-            )}
           </div>
         </section>
       )}
+
+      {pageEndConversion && <PageEndConversion model={pageEndConversion} />}
 
       {/* Global Video Popup Modal (Cinema Overlay for 91+ Product & Solution Video Cards) */}
       {activeModalVideo && (
@@ -665,73 +613,6 @@ export function SubpageView({
         </MediaDialog>
       )}
 
-      {/* Global Trial Callout Band (Aligned with 25.10.2026 User Decision: Direct to allplan.com/trial-or-subscription/) */}
-      {!isLegalPage && (
-        <section className="alu-trial-banner" aria-labelledby="global-trial-heading">
-          <div className="alu-container">
-            <div className="alu-trial-banner__inner">
-              <div className="alu-stack" style={{ gap: 'var(--space-stack-md)' }}>
-                <div className="alu-cluster">
-                  <span className="alu-badge alu-badge--accent">
-                    <AluIcon name="sparkles" size="sm" />
-                    <span>{trialReleaseLabel}</span>
-                  </span>
-                </div>
-                <h2 id="global-trial-heading" className="alu-h1">
-                  DAHA İYİ YARINLAR İNŞA ETMEK İÇİN TASARIM
-                </h2>
-                <p className="alu-body-lg">
-                  ALLPLAN&apos;ın tam sürümünü ALLPLAN resmî deneme ve abonelik sayfası üzerinden ücretsiz ve yükümlülük altına girmeden test edin. Yazılımı indirin ve tüm avantajları deneyimleyin.
-                </p>
-                <div className="alu-cluster">
-                  <a
-                    href={TRIAL_CTA_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="alu-button alu-button--primary alu-button--lg"
-                  >
-                    <span>Ücretsiz Deneme (ALLPLAN Resmî Sayfası)</span>
-                    <AluIcon name="external-link" size="sm" />
-                  </a>
-                  <a
-                    href={MAIN_QUOTE_FORM_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="alu-button alu-button--secondary alu-button--lg"
-                  >
-                    <span>Teklif Talep Formu</span>
-                    <AluIcon name="external-link" size="sm" />
-                  </a>
-                </div>
-              </div>
-
-              <div className="alu-trial-banner__benefits">
-                <h3 className="alu-h3">ALLPLAN&apos;ı ücretsiz deneyin</h3>
-                <div className="alu-stack" style={{ gap: 'var(--space-application-jsx-comfortable)' }}>
-                  <div className="alu-role-stage__feature">
-                    <span className="alu-role-stage__feature-num">01</span>
-                    <span className="alu-role-stage__feature-text">
-                      Tek bir platformda disiplinler arası AEC ekip çalışması
-                    </span>
-                  </div>
-                  <div className="alu-role-stage__feature">
-                    <span className="alu-role-stage__feature-num">02</span>
-                    <span className="alu-role-stage__feature-text">
-                      Malzeme ve inşaat yöntemlerinin üstün koordinasyonu
-                    </span>
-                  </div>
-                  <div className="alu-role-stage__feature">
-                    <span className="alu-role-stage__feature-num">03</span>
-                    <span className="alu-role-stage__feature-text">
-                      Gelişmiş BIM iş akışları ve gerçek zamanlı bulut iş birliği
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
     </>
   );
 }

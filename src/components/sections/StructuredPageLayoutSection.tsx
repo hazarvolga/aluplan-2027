@@ -4,7 +4,6 @@ import Link from 'next/link';
 import type { ReactElement } from 'react';
 
 import type {
-  ContentLink,
   StructuredPageLayout,
   StructuredWorkflowLink
 } from '@/lib/site-data';
@@ -29,7 +28,6 @@ interface StructuredImageRequest {
 
 interface StructuredPageLayoutSectionProps {
   layout: StructuredPageLayout;
-  contentLinks: ContentLink[];
   activeReferenceCategoryId: string;
   referenceSearchQuery: string;
   onReferenceCategoryChange: (categoryId: string) => void;
@@ -47,7 +45,6 @@ const WORKFLOW_ACCENTS: Record<StructuredWorkflowLink['accentKey'], string> = {
 
 export function StructuredPageLayoutSection({
   layout,
-  contentLinks,
   activeReferenceCategoryId,
   referenceSearchQuery,
   onReferenceCategoryChange,
@@ -297,46 +294,6 @@ export function StructuredPageLayoutSection({
       )}
 
       <FAQSection faqDirectory={layout.faqDirectory} />
-
-      {contentLinks.length > 0 && (
-        <section className="preview-section" aria-label="İlgili Bağlantılar ve Dokümanlar">
-          <div className="alu-container">
-            <div className="alu-techspecs-banner" style={{ padding: 'var(--space-inset-lg)' }}>
-              <div className="alu-stack" style={{ gap: 'var(--space-stack-md)' }}>
-                <span className="preview-kicker">İLGİLİ BAĞLANTILAR, MODÜLLER VE DOKÜMANLAR</span>
-                <h2 className="alu-h3" style={{ margin: 0 }}>
-                  Bu Sayfayla İlgili Hızlı Geçişler ve İndirmeler
-                </h2>
-                <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-dense)' }}>
-                  {contentLinks.map((contentLink, linkIndex) =>
-                    contentLink.external ? (
-                      <a
-                        key={`${contentLink.href}-${linkIndex}`}
-                        href={contentLink.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="alu-button alu-button--secondary alu-button--sm"
-                      >
-                        <span>{contentLink.text}</span>
-                        <AluIcon name="external-link" size="sm" />
-                      </a>
-                    ) : (
-                      <Link
-                        key={`${contentLink.href}-${linkIndex}`}
-                        href={contentLink.href}
-                        className="alu-button alu-button--secondary alu-button--sm"
-                      >
-                        <span>{contentLink.text}</span>
-                        <AluIcon name="arrow-right" size="sm" />
-                      </Link>
-                    )
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
     </div>
   );
 }

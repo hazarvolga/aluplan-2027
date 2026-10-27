@@ -55,6 +55,10 @@ def render_policy() -> dict:
     return json.loads(completed.stdout)
 
 
+def read(relative: str) -> str:
+    return (ROOT / relative).read_text(encoding="utf-8")
+
+
 class PageEndConversionPolicyTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -116,6 +120,33 @@ class PageEndConversionPolicyTests(unittest.TestCase):
         }
         self.assertTrue(rendered_urls)
         self.assertTrue(rendered_urls.issubset(self.approved_urls))
+
+
+class PageEndConversionComponentTests(unittest.TestCase):
+    def test_component_renders_the_model_with_secure_external_actions(self):
+        component = read("src/components/sections/PageEndConversion.tsx")
+
+        self.assertIn(
+            "export function PageEndConversion({ model }: { model: PageEndConversionModel })",
+            component,
+        )
+        for marker in [
+            "data-page-end-conversion={model.kind}",
+            "{model.kicker}",
+            "{model.title}",
+            "{model.description}",
+            "model.actions.map",
+            "action.emphasis === 'primary'",
+            'target="_blank"',
+            'rel="noopener noreferrer"',
+        ]:
+            with self.subTest(marker=marker):
+                self.assertIn(marker, component)
+
+        self.assertIn("alu-trial-banner", component)
+        self.assertIn("alu-trial-banner__inner", component)
+        self.assertIn("alu-button--primary", component)
+        self.assertIn("alu-button--secondary", component)
 
 
 if __name__ == "__main__":

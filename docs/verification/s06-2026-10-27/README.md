@@ -42,3 +42,19 @@ WorkflowSection, SubpageView içinden mevcutJSX ve seçimstate'iyle çıkarıld�
 4. Açık/koyu tema ve mobildesktop gerçek tarayıcı kontrolü erişim olduğunda yapılmalı; kontrollütema değişiminin uygulamada yayılması gösterilmeli. Mutation testi bu görsel kabulün yerini tutmaz.
 
 S07'ye geçilmedi, push/deploy yok. Pazarlamamateryalleri kullanılmadı. Kaynak2026'ya dokunulmadı.
+
+## S06-B — Uygulama renklerinin merkezileştirilmesi
+
+27.10.2026. `application.css` içindeki99hamHEX/RGBrenk kullanımı0'a indirildi. Mevcut renklerin65semantikvisualrolü ve8chrome(header/footer/hover)rolü tokens.json'a taşındı. Palet üretici logolarına veya medya dosyalarına uygulanmaz; dosyalar değişmedi.
+
+- Yüzey/gölge/scrim/modal/YouTubevurgu/kenarlık renkleri artık `--visual-*` değişkenleri kullanır.
+- Header/footercomponentalias'ları `semantic.chrome` üzerinden dört tema/moda göre çözülür; yedi eski açık-tema yerel alias değeri kaldırıldı.
+- Eski `--action-on-brand-bg-hover` davranışı için yalnız modebağımsız token→tokenuyumlulukalias'ı kaldı. Gerçek renk değeri `chrome.onBrandHover` içinde. Selector-specificity, theme+mode semantic tanımını aşacak şekilde korunur. Bu aliasın önceki açık-temada beyazfgile kullanılma ihtimalindeki düşük kontrast riski çözülmedi; görünüm korunurken kanonik actionkontrast kontrolü gevşetilmedi.188tokençiftinin geçmesi bu uyumlulukaliasının her render kombinasyonunu kapsamaz.
+- `build_app_styles.py` uygulamaCSS'sine HEX/RGB/HSL/HWB/Lab/LCH/OKLab/OKLCH/color() literal yazılmasını reddeder; karşılaştırma büyük/küçük harf bağımsızdır. `color-mix()` içindeki tokenreferansları korunur. Bu kontrol tam birCSSparser/linter değildir; namedcolorve yapısal transparent/currentColor kuralları için geniş kabul iddia edilmez.
+- Yeni in-memory mutationtesti modaloverlay ve headerbgtokenlarını farklı modlarda değiştirerek componentaliasın doğru kapsama aktığını ve diğer tema/modların değişmediğini doğrular. Kalıcı testler belirli paleti kilitlemez.
+
+Kanıt `color-migration.json`:99kaynakrenkkaydının literal→semanticrole→primitive çözümü; dört kapsamın her birinde65visualdeğer ve8chromealias eski etkin değerlerle eşit. Eski açık-tema override bloğu tersine eklendiğinde uygulamaCSS'sinin normalize hashleri eşittir. Bu kaynak/resolution/cascade kanıtıdır, tarayıcı/piksel kabulü değildir.
+
+66Pythonbirimtesti,36parite,30token testi, styles:check, productionbuild/TypeScript ve188kontrast kontrolü geçti. Son HTTPtarama110/110200/tekH1,0boşyapısalbölüm; ilkHTML16rota/303aday aynı. Yeni kaynakveri/schema/TSXdeğişikliği yok. Tarayıcı erişimi Workayarlarında kapalıydı; yeni görsel kabul yapılmadı. İnceleme önemli bulgu vermedi; büyükharfcolorfonksiyonkoruması önerisi testle eklendi.
+
+S06-Brenkadımı tamamlandı. S06tamamlanmadı: sabit spacing/size/radius/type/motion değerlerinin anlamlıtokenlara taşınması ve büyükbileşen ayrımı sürüyor. Önceki S06-Akalanlar listesindeki99renk ve açıktema header/footer maddeleri bu adımla aşılmıştır. Hoverkontrast riski ve tarayıcıgörselkabulü açık kalır. Push/deploy yok.

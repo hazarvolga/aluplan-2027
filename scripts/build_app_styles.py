@@ -6,6 +6,7 @@ cascade order and rewrites only self-hosted font URLs for Next.js public assets.
 """
 import argparse
 from pathlib import Path
+import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -37,6 +38,10 @@ def build_styles(root=ROOT):
     parts = []
     for label, relative in SOURCES:
         content = (root / relative).read_text(encoding='utf-8')
+        if label == 'application.css':
+            source = re.sub(r'/\*[\s\S]*?\*/', '', content)
+            if re.search(r'#[0-9a-fA-F]{3,8}\b|\b(?:rgba?|hsla?|hwb|lab|lch|oklab|oklch|color)\(', source, re.IGNORECASE):
+                raise ValueError('Raw application color: use a semantic token from tokens.json')
         if label == 'fonts.css':
             content = content.replace('../assets/fonts/', '/assets/fonts/')
         parts.append(f'/* === {label} === */\n{content.rstrip()}\n')
@@ -62,7 +67,7 @@ def main():
     args = parser.parse_args()
     try:
         matches = sync_styles(check=args.check)
-    except (OSError, UnicodeError) as error:
+    except (OSError, UnicodeError, ValueError) as error:
         parser.exit(1, f'App styles failed: {error}\n')
     if not matches:
         parser.exit(1, 'App styles drift: regenerate with pnpm styles:generate\n')

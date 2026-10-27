@@ -22,7 +22,7 @@ Kullanıcı aşağıdaki yol haritasını onayladı ve önce kayda alınıp çal
 | S03 | PDF/DOCX kaynak paritesi | Temsili PDF üretimi kaldırılır; orijinal belgeler kaynak/URL eşlemesi, SHA-256 ve tür kontrolüyle korunur | Tamamlandı |
 | S04 | Microsoft Forms yönlendirmesi | Talep CTA'ları ortak forma bağlı; sahte yerel başarı yok; destek/deneme/özel lisans görevleri karıştırılmaz | Tamamlandı |
 | S05 | İçerik/etkileşim paritesi | Kaynak→veri→render bazında eksik/fazla/değişmiş/yanlış eşleşmiş kayıtlar; hedefli canlı doğrulama | Yerel teknik kontrol tamamlandı; kayıtlı istisnalar ve nihai görsel kabul ayrı |
-| S06 | Token ve bileşen sağlamlaştırma | Sabit görsel kararlar tokenlara taşınır; büyük bileşenler ayrılır; görsel karşılaştırma görünümü korur | Devam ediyor — S06-A temel hat tamamlandı |
+| S06 | Token ve bileşen sağlamlaştırma | Sabit görsel kararlar tokenlara taşınır; büyük bileşenler ayrılır; görsel karşılaştırma görünümü korur | Devam ediyor — S06-A/B stil hattı ve renk katmanı tamamlandı |
 | S07 | Yayın öncesi kabul | Çalışan test komutları, typecheck/build, tarayıcı etkileşimleri, schema/performance doğrulaması ve açık riskler | Bekliyor |
 
 S02 ve S03 bağımlıdır: iki mevcut üretici de gerçek belge adlarına temsili PDF yazar. Başlangıç kaydı alınmadan üretici çalıştırma. Tekleştirme sırasında belge yazma güvenliği sağlanmadan yeni üretim komutunu kullanım için serbest bırakma. Her adım dar kapsamlı commit ve devir kaydıyla kapanır; faz geçişinde kullanıcı onayı beklenir. Push/deploy/canlı değişikliği yetkisi verilmedi.
@@ -552,3 +552,12 @@ Kullanıcı S06devamını onayladı. globals.css içindeki kanonikDSkopyaları s
 WorkflowSection ve structured-tab-key parenttan çıkarıldı; SubpageView2972→2738satır. JSXnormalize eşliği/callbacks aynı.64Python+36parite+29token testi, build/TypeScript/188kontrast geçti.110yerelrota200/tekH1,0boşyapısalbölüm;303aday değişmedi. CSSnormalize(rol eklerini geri çevirerek)HEADile aynı. Kanıt docs/verification/s06-2026-10-27/ altında. Yeni kod incelemesi önemli bulgu vermedi; ilk paletkilitleme önerisi düzeltildi.
 
 Tarayıcı bu tur Workayarlarında kapalı: yeni görsel/etkileşim kabulü yapılmadı. HTTPvekaynak eşliği bunu ikame etmez. BuS06-Atemeladımıdır, S06tamamlanmadı. Sonraki adım application.css99hamrenkkullanımının anlamlıtema tokenlarına taşınması, lightheader/footer overrideların tokenkatmanına alınması; ölçü/tipografi/hareket ve büyükbileşen ayrımı devamı. İçerik/schema/dataJSONdeğişmedi, kaynak2026saltokunur, pazarlamaklasörü kullanılmadı, push/deploy yok. S07'ye atlama.
+
+
+## 27.10.2026 — S06-B renk ve tema override katmanı
+
+Kullanıcıdevam onayıyla application.css99hamrenk0'a indirildi.65visualrolü+8chrome değeri tokens.json'a taşındı; dört tema/modda önceki değerler korunur. Header/footer7alias artık component→semanticchrome; hover için yalnız modebağımsıztoken→tokencompatibilityalias kaldı. Renk değeri CSS'de değil tokens.json'dadır. Eski lightonbrandhover/beyazfg kombinasyonunun olası düşük kontrastı korunup riskolarak kaydedildi;188kanoniktokenkontrastını geçmesi bu renderaliasını doğrulamaz. Yeni tasarım/renkdeğişikliği yapılmadı.
+
+Üretim application.css içindeki doğrudanHEX/RGB/HSL/HWB/Lab/LCH/OKLab/OKLCH/color()yazımını büyük/küçükharf bağımsız reddeder; negatif testler mevcutçıktının hatahalinde korunmasını doğrular. Overlay/header modeizolasyonu mutationtesti eklendi.66Python+36parite+30token testi, stylescheck, build/TypeScript/188kontrast geçti.110HTTProta200/tekH1/0boşyapısalbölüm;303aday değişmedi. color-migration.json65×4visual+8×4chrome eşliği ve tersCSSnormalizehash eşliğini kayıtlar. Kodincelemesi önemli bulguvermedi; case-insensitiveguardönerisi kapatıldı.
+
+TarayıcıWorkayarında kapalı; yeni görsel/piksel kabulü yok. İçerik/schema/data/TSXdeğişmedi, kaynak2026saltokunur, pazarlamaklasörü kullanılmadı, push/deploy yok. Geçici3001sunucusu kapatıldı. S06devam ediyor: ölçü/boşluk/köşe/tipografi/hareket değerleri ve büyükbileşen ayrımı sıradakiadım; tarayıcıerişimi açıldığında yeni temakatmanı görselkontrolü yapılmalı. S07'yegeçilmedi.

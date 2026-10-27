@@ -73,3 +73,27 @@ class AppStylesTests(unittest.TestCase):
 
     def test_repository_generated_styles_have_no_drift(self):
         self.assertTrue(styles.sync_styles(ROOT, check=True))
+
+    def test_application_literal_color_is_rejected_before_output_changes(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            self.fixture(root)
+            styles.sync_styles(root)
+            output = root / styles.OUTPUT
+            before = output.read_bytes()
+            (root / 'src/styles/application.css').write_text('.card { color: #123456; }')
+            with self.assertRaisesRegex(ValueError, 'Raw application color'):
+                styles.sync_styles(root)
+            self.assertEqual(output.read_bytes(), before)
+
+    def test_application_color_guard_ignores_comments_but_rejects_color_functions(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            self.fixture(root)
+            app = root / 'src/styles/application.css'
+            app.write_text('/* Historical #123456 */ .card {color:var(--text-primary)}')
+            styles.sync_styles(root)
+            for raw in ['rgba(0,0,0,.5)', 'hsl(0 0% 0%)', 'oklch(0.2 0 0)', 'color(display-p3 1 0 0)', 'hwb(0 0% 0%)', 'RGB(12, 23, 34)', 'HSL(0 0% 0%)']:
+                app.write_text('.card {background:' + raw + '}')
+                with self.subTest(raw=raw), self.assertRaises(ValueError):
+                    styles.sync_styles(root)

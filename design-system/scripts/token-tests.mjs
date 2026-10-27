@@ -100,6 +100,17 @@ export function runTokenTests({ build = buildTokens, lint = lintComponentCss, T,
       changed.resolved.field.dark['--role-architect'] === base.resolved.field.dark['--role-architect'] &&
       T.themes.aluplan.modes.dark.role.architect.$value !== t.themes.aluplan.modes.dark.role.architect.$value) || 'theme scope leaked';
   });
+  test('application overlay and chrome tokens support isolated mode edits', () => {
+    const t = clone();
+    t.themes.aluplan.modes.dark.visual.modalBackdrop.$value = '{primitive.color.role.engineer}';
+    t.themes.aluplan.modes.light.chrome.headerBg.$value = '{primitive.color.role.architect}';
+    const changed = run(t);
+    if (changed.errors.length) return changed.errors.join(' | ');
+    return (changed.resolved.aluplan.dark['--visual-modal-backdrop'] === base.resolved.aluplan.dark['--role-engineer'] &&
+      changed.resolved.aluplan.light['--site-header-bg'] === base.resolved.aluplan.light['--role-architect'] &&
+      changed.resolved.aluplan.dark['--site-header-bg'] === base.resolved.aluplan.dark['--site-header-bg'] &&
+      changed.resolved.field.light['--site-header-bg'] === base.resolved.field.light['--site-header-bg']) || 'application theme scope leaked';
+  });
   return { results, passed: results.filter(r => r.pass).length, failed: results.filter(r => !r.pass).length };
 }
 

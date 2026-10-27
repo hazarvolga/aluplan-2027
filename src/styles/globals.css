@@ -99,6 +99,71 @@
   --ref-color-role-architect: #3B82F6;
   --ref-color-role-engineer: #10B981;
   --ref-color-role-fabricator: #F59E0B;
+  --ref-color-visual-shadow-header: rgba(0, 0, 0, 0.28);
+  --ref-color-visual-shadow-strong: rgba(0, 0, 0, 0.45);
+  --ref-color-visual-header-light-surface: rgba(255, 255, 255, 0.94);
+  --ref-color-visual-shadow-header-light: rgba(10, 14, 39, 0.06);
+  --ref-color-visual-shadow-menu-light: rgba(10, 14, 39, 0.12);
+  --ref-color-visual-hero-accent-glow: rgba(208, 102, 58, 0.18);
+  --ref-color-visual-hero-dark-scrim: rgba(20, 22, 26, 0.72);
+  --ref-color-visual-hero-light-accent-glow: rgba(181, 77, 36, 0.12);
+  --ref-color-visual-hero-light-scrim: rgba(245, 244, 240, 0.85);
+  --ref-color-visual-shadow-monitor: rgba(0, 0, 0, 0.42);
+  --ref-color-visual-monitor-surface: #0d0f12;
+  --ref-color-visual-shadow-media: rgba(0, 0, 0, 0.5);
+  --ref-color-visual-product-image-scrim: rgba(12, 14, 18, 0.92);
+  --ref-color-visual-media-text: #f4f3ef;
+  --ref-color-visual-shadow-product-hover: rgba(0, 0, 0, 0.55);
+  --ref-color-visual-media-surface: #101216;
+  --ref-color-visual-media-caption-surface: rgba(15, 17, 21, 0.85);
+  --ref-color-visual-media-border-subtle: rgba(255, 255, 255, 0.16);
+  --ref-color-visual-media-tag-surface: rgba(15, 17, 21, 0.9);
+  --ref-color-visual-on-emphasis: #ffffff;
+  --ref-color-visual-trial-surface: #121418;
+  --ref-color-visual-trial-text: #f5f4f0;
+  --ref-color-visual-trial-scrim-start: rgba(14, 16, 20, 0.25);
+  --ref-color-visual-trial-scrim-middle: rgba(14, 16, 20, 0.72);
+  --ref-color-visual-trial-scrim-end: rgba(14, 16, 20, 0.96);
+  --ref-color-visual-trial-text-muted: rgba(245, 244, 240, 0.7);
+  --ref-color-visual-trial-text-secondary: rgba(245, 244, 240, 0.84);
+  --ref-color-visual-subpage-media-scrim: rgba(12, 14, 18, 0.65);
+  --ref-color-visual-subpage-media-caption: rgba(15, 17, 21, 0.75);
+  --ref-color-visual-media-border-strong: rgba(255, 255, 255, 0.2);
+  --ref-color-visual-subpage-hero-accent-glow: rgba(208, 102, 58, 0.15);
+  --ref-color-visual-subpage-hero-dark-scrim: rgba(20, 22, 26, 0.78);
+  --ref-color-visual-subpage-hero-light-accent-glow: rgba(181, 77, 36, 0.1);
+  --ref-color-visual-subpage-hero-light-scrim: rgba(245, 244, 240, 0.9);
+  --ref-color-visual-trial-accent-glow: rgba(208, 102, 58, 0.16);
+  --ref-color-visual-youtube-banner-glow: rgba(127, 29, 29, 0.42);
+  --ref-color-visual-youtube-banner-surface: #0a0b0e;
+  --ref-color-visual-youtube-banner-border: rgba(185, 28, 28, 0.38);
+  --ref-color-visual-youtube-action: #dc2626;
+  --ref-color-visual-youtube-accent: #ef4444;
+  --ref-color-visual-youtube-badge-surface: rgba(220, 38, 38, 0.2);
+  --ref-color-visual-youtube-action-shadow: rgba(220, 38, 38, 0.5);
+  --ref-color-visual-youtube-action-hover: #b91c1c;
+  --ref-color-visual-youtube-action-hover-shadow: rgba(220, 38, 38, 0.68);
+  --ref-color-visual-youtube-card-internal-border: rgba(153, 27, 27, 0.65);
+  --ref-color-visual-youtube-card-hover-border: rgba(239, 68, 68, 0.6);
+  --ref-color-visual-youtube-card-icon-surface: rgba(220, 38, 38, 0.12);
+  --ref-color-visual-youtube-count-surface: rgba(220, 38, 38, 0.14);
+  --ref-color-visual-youtube-count-border: rgba(220, 38, 38, 0.35);
+  --ref-color-visual-youtube-count-text: #f87171;
+  --ref-color-visual-player-surface: #000000;
+  --ref-color-visual-media-thumbnail-scrim-start: rgba(10, 12, 16, 0.12);
+  --ref-color-visual-media-thumbnail-scrim-end: rgba(10, 12, 16, 0.55);
+  --ref-color-visual-media-badge-surface: rgba(12, 14, 18, 0.86);
+  --ref-color-visual-media-play-surface: rgba(14, 165, 233, 0.88);
+  --ref-color-visual-media-play-border: rgba(255, 255, 255, 0.85);
+  --ref-color-visual-media-zoom-surface: rgba(12, 14, 18, 0.72);
+  --ref-color-visual-media-grid-surface: #0d1015;
+  --ref-color-visual-modal-backdrop: rgba(6, 8, 12, 0.86);
+  --ref-color-visual-shadow-modal: rgba(0, 0, 0, 0.75);
+  --ref-color-visual-modal-image-surface: #080a0e;
+  --ref-color-visual-reference-active-shadow: rgba(208, 102, 58, 0.28);
+  --ref-color-visual-reference-count-surface: rgba(255, 255, 255, 0.08);
+  --ref-color-visual-reference-active-count-surface: rgba(0, 0, 0, 0.25);
+  --ref-color-visual-comparison-success-fallback: #2fc48d;
   --ref-font-family-manrope: 'Manrope', 'Segoe UI', system-ui, sans-serif;
   --ref-font-family-plex-sans: 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
   --ref-font-family-plex-mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', monospace;
@@ -366,6 +431,79 @@
   --role-architect: var(--ref-color-role-architect);
   --role-engineer: var(--ref-color-role-engineer);
   --role-fabricator: var(--ref-color-role-fabricator);
+  --visual-shadow-header: var(--ref-color-visual-shadow-header);
+  --visual-shadow-strong: var(--ref-color-visual-shadow-strong);
+  --visual-header-light-surface: var(--ref-color-visual-header-light-surface);
+  --visual-shadow-header-light: var(--ref-color-visual-shadow-header-light);
+  --visual-shadow-menu-light: var(--ref-color-visual-shadow-menu-light);
+  --visual-hero-accent-glow: var(--ref-color-visual-hero-accent-glow);
+  --visual-hero-dark-scrim: var(--ref-color-visual-hero-dark-scrim);
+  --visual-hero-light-accent-glow: var(--ref-color-visual-hero-light-accent-glow);
+  --visual-hero-light-scrim: var(--ref-color-visual-hero-light-scrim);
+  --visual-shadow-monitor: var(--ref-color-visual-shadow-monitor);
+  --visual-monitor-surface: var(--ref-color-visual-monitor-surface);
+  --visual-shadow-media: var(--ref-color-visual-shadow-media);
+  --visual-product-image-scrim: var(--ref-color-visual-product-image-scrim);
+  --visual-media-text: var(--ref-color-visual-media-text);
+  --visual-shadow-product-hover: var(--ref-color-visual-shadow-product-hover);
+  --visual-media-surface: var(--ref-color-visual-media-surface);
+  --visual-media-caption-surface: var(--ref-color-visual-media-caption-surface);
+  --visual-media-border-subtle: var(--ref-color-visual-media-border-subtle);
+  --visual-media-tag-surface: var(--ref-color-visual-media-tag-surface);
+  --visual-on-emphasis: var(--ref-color-visual-on-emphasis);
+  --visual-trial-surface: var(--ref-color-visual-trial-surface);
+  --visual-trial-text: var(--ref-color-visual-trial-text);
+  --visual-trial-scrim-start: var(--ref-color-visual-trial-scrim-start);
+  --visual-trial-scrim-middle: var(--ref-color-visual-trial-scrim-middle);
+  --visual-trial-scrim-end: var(--ref-color-visual-trial-scrim-end);
+  --visual-trial-text-muted: var(--ref-color-visual-trial-text-muted);
+  --visual-trial-text-secondary: var(--ref-color-visual-trial-text-secondary);
+  --visual-subpage-media-scrim: var(--ref-color-visual-subpage-media-scrim);
+  --visual-subpage-media-caption: var(--ref-color-visual-subpage-media-caption);
+  --visual-media-border-strong: var(--ref-color-visual-media-border-strong);
+  --visual-subpage-hero-accent-glow: var(--ref-color-visual-subpage-hero-accent-glow);
+  --visual-subpage-hero-dark-scrim: var(--ref-color-visual-subpage-hero-dark-scrim);
+  --visual-subpage-hero-light-accent-glow: var(--ref-color-visual-subpage-hero-light-accent-glow);
+  --visual-subpage-hero-light-scrim: var(--ref-color-visual-subpage-hero-light-scrim);
+  --visual-trial-accent-glow: var(--ref-color-visual-trial-accent-glow);
+  --visual-youtube-banner-glow: var(--ref-color-visual-youtube-banner-glow);
+  --visual-youtube-banner-surface: var(--ref-color-visual-youtube-banner-surface);
+  --visual-youtube-banner-border: var(--ref-color-visual-youtube-banner-border);
+  --visual-youtube-action: var(--ref-color-visual-youtube-action);
+  --visual-youtube-accent: var(--ref-color-visual-youtube-accent);
+  --visual-youtube-badge-surface: var(--ref-color-visual-youtube-badge-surface);
+  --visual-youtube-action-shadow: var(--ref-color-visual-youtube-action-shadow);
+  --visual-youtube-action-hover: var(--ref-color-visual-youtube-action-hover);
+  --visual-youtube-action-hover-shadow: var(--ref-color-visual-youtube-action-hover-shadow);
+  --visual-youtube-card-internal-border: var(--ref-color-visual-youtube-card-internal-border);
+  --visual-youtube-card-hover-border: var(--ref-color-visual-youtube-card-hover-border);
+  --visual-youtube-card-icon-surface: var(--ref-color-visual-youtube-card-icon-surface);
+  --visual-youtube-count-surface: var(--ref-color-visual-youtube-count-surface);
+  --visual-youtube-count-border: var(--ref-color-visual-youtube-count-border);
+  --visual-youtube-count-text: var(--ref-color-visual-youtube-count-text);
+  --visual-player-surface: var(--ref-color-visual-player-surface);
+  --visual-media-thumbnail-scrim-start: var(--ref-color-visual-media-thumbnail-scrim-start);
+  --visual-media-thumbnail-scrim-end: var(--ref-color-visual-media-thumbnail-scrim-end);
+  --visual-media-badge-surface: var(--ref-color-visual-media-badge-surface);
+  --visual-media-play-surface: var(--ref-color-visual-media-play-surface);
+  --visual-media-play-border: var(--ref-color-visual-media-play-border);
+  --visual-media-zoom-surface: var(--ref-color-visual-media-zoom-surface);
+  --visual-media-grid-surface: var(--ref-color-visual-media-grid-surface);
+  --visual-modal-backdrop: var(--ref-color-visual-modal-backdrop);
+  --visual-shadow-modal: var(--ref-color-visual-shadow-modal);
+  --visual-modal-image-surface: var(--ref-color-visual-modal-image-surface);
+  --visual-reference-active-shadow: var(--ref-color-visual-reference-active-shadow);
+  --visual-reference-count-surface: var(--ref-color-visual-reference-count-surface);
+  --visual-reference-active-count-surface: var(--ref-color-visual-reference-active-count-surface);
+  --visual-comparison-success-fallback: var(--ref-color-visual-comparison-success-fallback);
+  --chrome-header-bg: var(--ref-color-visual-header-light-surface);
+  --chrome-header-fg: var(--ref-color-ink-950);
+  --chrome-header-border: var(--ref-color-silver-200);
+  --chrome-footer-bg: var(--ref-color-silver-50);
+  --chrome-footer-fg: var(--ref-color-ink-950);
+  --chrome-footer-fg-secondary: var(--ref-color-silver-600);
+  --chrome-footer-border: var(--ref-color-silver-200);
+  --chrome-on-brand-hover: var(--ref-color-silver-100);
   color-scheme: light;
 }
 [data-theme="aluplan"]{
@@ -535,6 +673,79 @@
   --role-architect: var(--ref-color-role-architect);
   --role-engineer: var(--ref-color-role-engineer);
   --role-fabricator: var(--ref-color-role-fabricator);
+  --visual-shadow-header: var(--ref-color-visual-shadow-header);
+  --visual-shadow-strong: var(--ref-color-visual-shadow-strong);
+  --visual-header-light-surface: var(--ref-color-visual-header-light-surface);
+  --visual-shadow-header-light: var(--ref-color-visual-shadow-header-light);
+  --visual-shadow-menu-light: var(--ref-color-visual-shadow-menu-light);
+  --visual-hero-accent-glow: var(--ref-color-visual-hero-accent-glow);
+  --visual-hero-dark-scrim: var(--ref-color-visual-hero-dark-scrim);
+  --visual-hero-light-accent-glow: var(--ref-color-visual-hero-light-accent-glow);
+  --visual-hero-light-scrim: var(--ref-color-visual-hero-light-scrim);
+  --visual-shadow-monitor: var(--ref-color-visual-shadow-monitor);
+  --visual-monitor-surface: var(--ref-color-visual-monitor-surface);
+  --visual-shadow-media: var(--ref-color-visual-shadow-media);
+  --visual-product-image-scrim: var(--ref-color-visual-product-image-scrim);
+  --visual-media-text: var(--ref-color-visual-media-text);
+  --visual-shadow-product-hover: var(--ref-color-visual-shadow-product-hover);
+  --visual-media-surface: var(--ref-color-visual-media-surface);
+  --visual-media-caption-surface: var(--ref-color-visual-media-caption-surface);
+  --visual-media-border-subtle: var(--ref-color-visual-media-border-subtle);
+  --visual-media-tag-surface: var(--ref-color-visual-media-tag-surface);
+  --visual-on-emphasis: var(--ref-color-visual-on-emphasis);
+  --visual-trial-surface: var(--ref-color-visual-trial-surface);
+  --visual-trial-text: var(--ref-color-visual-trial-text);
+  --visual-trial-scrim-start: var(--ref-color-visual-trial-scrim-start);
+  --visual-trial-scrim-middle: var(--ref-color-visual-trial-scrim-middle);
+  --visual-trial-scrim-end: var(--ref-color-visual-trial-scrim-end);
+  --visual-trial-text-muted: var(--ref-color-visual-trial-text-muted);
+  --visual-trial-text-secondary: var(--ref-color-visual-trial-text-secondary);
+  --visual-subpage-media-scrim: var(--ref-color-visual-subpage-media-scrim);
+  --visual-subpage-media-caption: var(--ref-color-visual-subpage-media-caption);
+  --visual-media-border-strong: var(--ref-color-visual-media-border-strong);
+  --visual-subpage-hero-accent-glow: var(--ref-color-visual-subpage-hero-accent-glow);
+  --visual-subpage-hero-dark-scrim: var(--ref-color-visual-subpage-hero-dark-scrim);
+  --visual-subpage-hero-light-accent-glow: var(--ref-color-visual-subpage-hero-light-accent-glow);
+  --visual-subpage-hero-light-scrim: var(--ref-color-visual-subpage-hero-light-scrim);
+  --visual-trial-accent-glow: var(--ref-color-visual-trial-accent-glow);
+  --visual-youtube-banner-glow: var(--ref-color-visual-youtube-banner-glow);
+  --visual-youtube-banner-surface: var(--ref-color-visual-youtube-banner-surface);
+  --visual-youtube-banner-border: var(--ref-color-visual-youtube-banner-border);
+  --visual-youtube-action: var(--ref-color-visual-youtube-action);
+  --visual-youtube-accent: var(--ref-color-visual-youtube-accent);
+  --visual-youtube-badge-surface: var(--ref-color-visual-youtube-badge-surface);
+  --visual-youtube-action-shadow: var(--ref-color-visual-youtube-action-shadow);
+  --visual-youtube-action-hover: var(--ref-color-visual-youtube-action-hover);
+  --visual-youtube-action-hover-shadow: var(--ref-color-visual-youtube-action-hover-shadow);
+  --visual-youtube-card-internal-border: var(--ref-color-visual-youtube-card-internal-border);
+  --visual-youtube-card-hover-border: var(--ref-color-visual-youtube-card-hover-border);
+  --visual-youtube-card-icon-surface: var(--ref-color-visual-youtube-card-icon-surface);
+  --visual-youtube-count-surface: var(--ref-color-visual-youtube-count-surface);
+  --visual-youtube-count-border: var(--ref-color-visual-youtube-count-border);
+  --visual-youtube-count-text: var(--ref-color-visual-youtube-count-text);
+  --visual-player-surface: var(--ref-color-visual-player-surface);
+  --visual-media-thumbnail-scrim-start: var(--ref-color-visual-media-thumbnail-scrim-start);
+  --visual-media-thumbnail-scrim-end: var(--ref-color-visual-media-thumbnail-scrim-end);
+  --visual-media-badge-surface: var(--ref-color-visual-media-badge-surface);
+  --visual-media-play-surface: var(--ref-color-visual-media-play-surface);
+  --visual-media-play-border: var(--ref-color-visual-media-play-border);
+  --visual-media-zoom-surface: var(--ref-color-visual-media-zoom-surface);
+  --visual-media-grid-surface: var(--ref-color-visual-media-grid-surface);
+  --visual-modal-backdrop: var(--ref-color-visual-modal-backdrop);
+  --visual-shadow-modal: var(--ref-color-visual-shadow-modal);
+  --visual-modal-image-surface: var(--ref-color-visual-modal-image-surface);
+  --visual-reference-active-shadow: var(--ref-color-visual-reference-active-shadow);
+  --visual-reference-count-surface: var(--ref-color-visual-reference-count-surface);
+  --visual-reference-active-count-surface: var(--ref-color-visual-reference-active-count-surface);
+  --visual-comparison-success-fallback: var(--ref-color-visual-comparison-success-fallback);
+  --chrome-header-bg: var(--ref-color-visual-header-light-surface);
+  --chrome-header-fg: var(--ref-color-ink-950);
+  --chrome-header-border: var(--ref-color-silver-200);
+  --chrome-footer-bg: var(--ref-color-silver-50);
+  --chrome-footer-fg: var(--ref-color-ink-950);
+  --chrome-footer-fg-secondary: var(--ref-color-silver-600);
+  --chrome-footer-border: var(--ref-color-silver-200);
+  --chrome-on-brand-hover: var(--ref-color-silver-100);
   color-scheme: light;
 }
 [data-theme="aluplan"][data-mode="dark"]{
@@ -596,6 +807,79 @@
   --role-architect: var(--ref-color-role-architect);
   --role-engineer: var(--ref-color-role-engineer);
   --role-fabricator: var(--ref-color-role-fabricator);
+  --visual-shadow-header: var(--ref-color-visual-shadow-header);
+  --visual-shadow-strong: var(--ref-color-visual-shadow-strong);
+  --visual-header-light-surface: var(--ref-color-visual-header-light-surface);
+  --visual-shadow-header-light: var(--ref-color-visual-shadow-header-light);
+  --visual-shadow-menu-light: var(--ref-color-visual-shadow-menu-light);
+  --visual-hero-accent-glow: var(--ref-color-visual-hero-accent-glow);
+  --visual-hero-dark-scrim: var(--ref-color-visual-hero-dark-scrim);
+  --visual-hero-light-accent-glow: var(--ref-color-visual-hero-light-accent-glow);
+  --visual-hero-light-scrim: var(--ref-color-visual-hero-light-scrim);
+  --visual-shadow-monitor: var(--ref-color-visual-shadow-monitor);
+  --visual-monitor-surface: var(--ref-color-visual-monitor-surface);
+  --visual-shadow-media: var(--ref-color-visual-shadow-media);
+  --visual-product-image-scrim: var(--ref-color-visual-product-image-scrim);
+  --visual-media-text: var(--ref-color-visual-media-text);
+  --visual-shadow-product-hover: var(--ref-color-visual-shadow-product-hover);
+  --visual-media-surface: var(--ref-color-visual-media-surface);
+  --visual-media-caption-surface: var(--ref-color-visual-media-caption-surface);
+  --visual-media-border-subtle: var(--ref-color-visual-media-border-subtle);
+  --visual-media-tag-surface: var(--ref-color-visual-media-tag-surface);
+  --visual-on-emphasis: var(--ref-color-visual-on-emphasis);
+  --visual-trial-surface: var(--ref-color-visual-trial-surface);
+  --visual-trial-text: var(--ref-color-visual-trial-text);
+  --visual-trial-scrim-start: var(--ref-color-visual-trial-scrim-start);
+  --visual-trial-scrim-middle: var(--ref-color-visual-trial-scrim-middle);
+  --visual-trial-scrim-end: var(--ref-color-visual-trial-scrim-end);
+  --visual-trial-text-muted: var(--ref-color-visual-trial-text-muted);
+  --visual-trial-text-secondary: var(--ref-color-visual-trial-text-secondary);
+  --visual-subpage-media-scrim: var(--ref-color-visual-subpage-media-scrim);
+  --visual-subpage-media-caption: var(--ref-color-visual-subpage-media-caption);
+  --visual-media-border-strong: var(--ref-color-visual-media-border-strong);
+  --visual-subpage-hero-accent-glow: var(--ref-color-visual-subpage-hero-accent-glow);
+  --visual-subpage-hero-dark-scrim: var(--ref-color-visual-subpage-hero-dark-scrim);
+  --visual-subpage-hero-light-accent-glow: var(--ref-color-visual-subpage-hero-light-accent-glow);
+  --visual-subpage-hero-light-scrim: var(--ref-color-visual-subpage-hero-light-scrim);
+  --visual-trial-accent-glow: var(--ref-color-visual-trial-accent-glow);
+  --visual-youtube-banner-glow: var(--ref-color-visual-youtube-banner-glow);
+  --visual-youtube-banner-surface: var(--ref-color-visual-youtube-banner-surface);
+  --visual-youtube-banner-border: var(--ref-color-visual-youtube-banner-border);
+  --visual-youtube-action: var(--ref-color-visual-youtube-action);
+  --visual-youtube-accent: var(--ref-color-visual-youtube-accent);
+  --visual-youtube-badge-surface: var(--ref-color-visual-youtube-badge-surface);
+  --visual-youtube-action-shadow: var(--ref-color-visual-youtube-action-shadow);
+  --visual-youtube-action-hover: var(--ref-color-visual-youtube-action-hover);
+  --visual-youtube-action-hover-shadow: var(--ref-color-visual-youtube-action-hover-shadow);
+  --visual-youtube-card-internal-border: var(--ref-color-visual-youtube-card-internal-border);
+  --visual-youtube-card-hover-border: var(--ref-color-visual-youtube-card-hover-border);
+  --visual-youtube-card-icon-surface: var(--ref-color-visual-youtube-card-icon-surface);
+  --visual-youtube-count-surface: var(--ref-color-visual-youtube-count-surface);
+  --visual-youtube-count-border: var(--ref-color-visual-youtube-count-border);
+  --visual-youtube-count-text: var(--ref-color-visual-youtube-count-text);
+  --visual-player-surface: var(--ref-color-visual-player-surface);
+  --visual-media-thumbnail-scrim-start: var(--ref-color-visual-media-thumbnail-scrim-start);
+  --visual-media-thumbnail-scrim-end: var(--ref-color-visual-media-thumbnail-scrim-end);
+  --visual-media-badge-surface: var(--ref-color-visual-media-badge-surface);
+  --visual-media-play-surface: var(--ref-color-visual-media-play-surface);
+  --visual-media-play-border: var(--ref-color-visual-media-play-border);
+  --visual-media-zoom-surface: var(--ref-color-visual-media-zoom-surface);
+  --visual-media-grid-surface: var(--ref-color-visual-media-grid-surface);
+  --visual-modal-backdrop: var(--ref-color-visual-modal-backdrop);
+  --visual-shadow-modal: var(--ref-color-visual-shadow-modal);
+  --visual-modal-image-surface: var(--ref-color-visual-modal-image-surface);
+  --visual-reference-active-shadow: var(--ref-color-visual-reference-active-shadow);
+  --visual-reference-count-surface: var(--ref-color-visual-reference-count-surface);
+  --visual-reference-active-count-surface: var(--ref-color-visual-reference-active-count-surface);
+  --visual-comparison-success-fallback: var(--ref-color-visual-comparison-success-fallback);
+  --chrome-header-bg: var(--ref-color-anthracite-950);
+  --chrome-header-fg: var(--ref-color-white);
+  --chrome-header-border: var(--ref-color-anthracite-700);
+  --chrome-footer-bg: var(--ref-color-anthracite-950);
+  --chrome-footer-fg: var(--ref-color-white);
+  --chrome-footer-fg-secondary: var(--ref-color-silver-300);
+  --chrome-footer-border: var(--ref-color-anthracite-700);
+  --chrome-on-brand-hover: var(--ref-color-anthracite-800);
   color-scheme: dark;
 }
 [data-theme="field"]{
@@ -765,6 +1049,79 @@
   --role-architect: var(--ref-color-role-architect);
   --role-engineer: var(--ref-color-role-engineer);
   --role-fabricator: var(--ref-color-role-fabricator);
+  --visual-shadow-header: var(--ref-color-visual-shadow-header);
+  --visual-shadow-strong: var(--ref-color-visual-shadow-strong);
+  --visual-header-light-surface: var(--ref-color-visual-header-light-surface);
+  --visual-shadow-header-light: var(--ref-color-visual-shadow-header-light);
+  --visual-shadow-menu-light: var(--ref-color-visual-shadow-menu-light);
+  --visual-hero-accent-glow: var(--ref-color-visual-hero-accent-glow);
+  --visual-hero-dark-scrim: var(--ref-color-visual-hero-dark-scrim);
+  --visual-hero-light-accent-glow: var(--ref-color-visual-hero-light-accent-glow);
+  --visual-hero-light-scrim: var(--ref-color-visual-hero-light-scrim);
+  --visual-shadow-monitor: var(--ref-color-visual-shadow-monitor);
+  --visual-monitor-surface: var(--ref-color-visual-monitor-surface);
+  --visual-shadow-media: var(--ref-color-visual-shadow-media);
+  --visual-product-image-scrim: var(--ref-color-visual-product-image-scrim);
+  --visual-media-text: var(--ref-color-visual-media-text);
+  --visual-shadow-product-hover: var(--ref-color-visual-shadow-product-hover);
+  --visual-media-surface: var(--ref-color-visual-media-surface);
+  --visual-media-caption-surface: var(--ref-color-visual-media-caption-surface);
+  --visual-media-border-subtle: var(--ref-color-visual-media-border-subtle);
+  --visual-media-tag-surface: var(--ref-color-visual-media-tag-surface);
+  --visual-on-emphasis: var(--ref-color-visual-on-emphasis);
+  --visual-trial-surface: var(--ref-color-visual-trial-surface);
+  --visual-trial-text: var(--ref-color-visual-trial-text);
+  --visual-trial-scrim-start: var(--ref-color-visual-trial-scrim-start);
+  --visual-trial-scrim-middle: var(--ref-color-visual-trial-scrim-middle);
+  --visual-trial-scrim-end: var(--ref-color-visual-trial-scrim-end);
+  --visual-trial-text-muted: var(--ref-color-visual-trial-text-muted);
+  --visual-trial-text-secondary: var(--ref-color-visual-trial-text-secondary);
+  --visual-subpage-media-scrim: var(--ref-color-visual-subpage-media-scrim);
+  --visual-subpage-media-caption: var(--ref-color-visual-subpage-media-caption);
+  --visual-media-border-strong: var(--ref-color-visual-media-border-strong);
+  --visual-subpage-hero-accent-glow: var(--ref-color-visual-subpage-hero-accent-glow);
+  --visual-subpage-hero-dark-scrim: var(--ref-color-visual-subpage-hero-dark-scrim);
+  --visual-subpage-hero-light-accent-glow: var(--ref-color-visual-subpage-hero-light-accent-glow);
+  --visual-subpage-hero-light-scrim: var(--ref-color-visual-subpage-hero-light-scrim);
+  --visual-trial-accent-glow: var(--ref-color-visual-trial-accent-glow);
+  --visual-youtube-banner-glow: var(--ref-color-visual-youtube-banner-glow);
+  --visual-youtube-banner-surface: var(--ref-color-visual-youtube-banner-surface);
+  --visual-youtube-banner-border: var(--ref-color-visual-youtube-banner-border);
+  --visual-youtube-action: var(--ref-color-visual-youtube-action);
+  --visual-youtube-accent: var(--ref-color-visual-youtube-accent);
+  --visual-youtube-badge-surface: var(--ref-color-visual-youtube-badge-surface);
+  --visual-youtube-action-shadow: var(--ref-color-visual-youtube-action-shadow);
+  --visual-youtube-action-hover: var(--ref-color-visual-youtube-action-hover);
+  --visual-youtube-action-hover-shadow: var(--ref-color-visual-youtube-action-hover-shadow);
+  --visual-youtube-card-internal-border: var(--ref-color-visual-youtube-card-internal-border);
+  --visual-youtube-card-hover-border: var(--ref-color-visual-youtube-card-hover-border);
+  --visual-youtube-card-icon-surface: var(--ref-color-visual-youtube-card-icon-surface);
+  --visual-youtube-count-surface: var(--ref-color-visual-youtube-count-surface);
+  --visual-youtube-count-border: var(--ref-color-visual-youtube-count-border);
+  --visual-youtube-count-text: var(--ref-color-visual-youtube-count-text);
+  --visual-player-surface: var(--ref-color-visual-player-surface);
+  --visual-media-thumbnail-scrim-start: var(--ref-color-visual-media-thumbnail-scrim-start);
+  --visual-media-thumbnail-scrim-end: var(--ref-color-visual-media-thumbnail-scrim-end);
+  --visual-media-badge-surface: var(--ref-color-visual-media-badge-surface);
+  --visual-media-play-surface: var(--ref-color-visual-media-play-surface);
+  --visual-media-play-border: var(--ref-color-visual-media-play-border);
+  --visual-media-zoom-surface: var(--ref-color-visual-media-zoom-surface);
+  --visual-media-grid-surface: var(--ref-color-visual-media-grid-surface);
+  --visual-modal-backdrop: var(--ref-color-visual-modal-backdrop);
+  --visual-shadow-modal: var(--ref-color-visual-shadow-modal);
+  --visual-modal-image-surface: var(--ref-color-visual-modal-image-surface);
+  --visual-reference-active-shadow: var(--ref-color-visual-reference-active-shadow);
+  --visual-reference-count-surface: var(--ref-color-visual-reference-count-surface);
+  --visual-reference-active-count-surface: var(--ref-color-visual-reference-active-count-surface);
+  --visual-comparison-success-fallback: var(--ref-color-visual-comparison-success-fallback);
+  --chrome-header-bg: var(--ref-color-visual-header-light-surface);
+  --chrome-header-fg: var(--ref-color-stone-950);
+  --chrome-header-border: var(--ref-color-stone-200);
+  --chrome-footer-bg: var(--ref-color-stone-100);
+  --chrome-footer-fg: var(--ref-color-stone-950);
+  --chrome-footer-fg-secondary: var(--ref-color-stone-600);
+  --chrome-footer-border: var(--ref-color-stone-200);
+  --chrome-on-brand-hover: var(--ref-color-stone-200);
   color-scheme: light;
 }
 [data-theme="field"][data-mode="dark"]{
@@ -826,6 +1183,79 @@
   --role-architect: var(--ref-color-role-architect);
   --role-engineer: var(--ref-color-role-engineer);
   --role-fabricator: var(--ref-color-role-fabricator);
+  --visual-shadow-header: var(--ref-color-visual-shadow-header);
+  --visual-shadow-strong: var(--ref-color-visual-shadow-strong);
+  --visual-header-light-surface: var(--ref-color-visual-header-light-surface);
+  --visual-shadow-header-light: var(--ref-color-visual-shadow-header-light);
+  --visual-shadow-menu-light: var(--ref-color-visual-shadow-menu-light);
+  --visual-hero-accent-glow: var(--ref-color-visual-hero-accent-glow);
+  --visual-hero-dark-scrim: var(--ref-color-visual-hero-dark-scrim);
+  --visual-hero-light-accent-glow: var(--ref-color-visual-hero-light-accent-glow);
+  --visual-hero-light-scrim: var(--ref-color-visual-hero-light-scrim);
+  --visual-shadow-monitor: var(--ref-color-visual-shadow-monitor);
+  --visual-monitor-surface: var(--ref-color-visual-monitor-surface);
+  --visual-shadow-media: var(--ref-color-visual-shadow-media);
+  --visual-product-image-scrim: var(--ref-color-visual-product-image-scrim);
+  --visual-media-text: var(--ref-color-visual-media-text);
+  --visual-shadow-product-hover: var(--ref-color-visual-shadow-product-hover);
+  --visual-media-surface: var(--ref-color-visual-media-surface);
+  --visual-media-caption-surface: var(--ref-color-visual-media-caption-surface);
+  --visual-media-border-subtle: var(--ref-color-visual-media-border-subtle);
+  --visual-media-tag-surface: var(--ref-color-visual-media-tag-surface);
+  --visual-on-emphasis: var(--ref-color-visual-on-emphasis);
+  --visual-trial-surface: var(--ref-color-visual-trial-surface);
+  --visual-trial-text: var(--ref-color-visual-trial-text);
+  --visual-trial-scrim-start: var(--ref-color-visual-trial-scrim-start);
+  --visual-trial-scrim-middle: var(--ref-color-visual-trial-scrim-middle);
+  --visual-trial-scrim-end: var(--ref-color-visual-trial-scrim-end);
+  --visual-trial-text-muted: var(--ref-color-visual-trial-text-muted);
+  --visual-trial-text-secondary: var(--ref-color-visual-trial-text-secondary);
+  --visual-subpage-media-scrim: var(--ref-color-visual-subpage-media-scrim);
+  --visual-subpage-media-caption: var(--ref-color-visual-subpage-media-caption);
+  --visual-media-border-strong: var(--ref-color-visual-media-border-strong);
+  --visual-subpage-hero-accent-glow: var(--ref-color-visual-subpage-hero-accent-glow);
+  --visual-subpage-hero-dark-scrim: var(--ref-color-visual-subpage-hero-dark-scrim);
+  --visual-subpage-hero-light-accent-glow: var(--ref-color-visual-subpage-hero-light-accent-glow);
+  --visual-subpage-hero-light-scrim: var(--ref-color-visual-subpage-hero-light-scrim);
+  --visual-trial-accent-glow: var(--ref-color-visual-trial-accent-glow);
+  --visual-youtube-banner-glow: var(--ref-color-visual-youtube-banner-glow);
+  --visual-youtube-banner-surface: var(--ref-color-visual-youtube-banner-surface);
+  --visual-youtube-banner-border: var(--ref-color-visual-youtube-banner-border);
+  --visual-youtube-action: var(--ref-color-visual-youtube-action);
+  --visual-youtube-accent: var(--ref-color-visual-youtube-accent);
+  --visual-youtube-badge-surface: var(--ref-color-visual-youtube-badge-surface);
+  --visual-youtube-action-shadow: var(--ref-color-visual-youtube-action-shadow);
+  --visual-youtube-action-hover: var(--ref-color-visual-youtube-action-hover);
+  --visual-youtube-action-hover-shadow: var(--ref-color-visual-youtube-action-hover-shadow);
+  --visual-youtube-card-internal-border: var(--ref-color-visual-youtube-card-internal-border);
+  --visual-youtube-card-hover-border: var(--ref-color-visual-youtube-card-hover-border);
+  --visual-youtube-card-icon-surface: var(--ref-color-visual-youtube-card-icon-surface);
+  --visual-youtube-count-surface: var(--ref-color-visual-youtube-count-surface);
+  --visual-youtube-count-border: var(--ref-color-visual-youtube-count-border);
+  --visual-youtube-count-text: var(--ref-color-visual-youtube-count-text);
+  --visual-player-surface: var(--ref-color-visual-player-surface);
+  --visual-media-thumbnail-scrim-start: var(--ref-color-visual-media-thumbnail-scrim-start);
+  --visual-media-thumbnail-scrim-end: var(--ref-color-visual-media-thumbnail-scrim-end);
+  --visual-media-badge-surface: var(--ref-color-visual-media-badge-surface);
+  --visual-media-play-surface: var(--ref-color-visual-media-play-surface);
+  --visual-media-play-border: var(--ref-color-visual-media-play-border);
+  --visual-media-zoom-surface: var(--ref-color-visual-media-zoom-surface);
+  --visual-media-grid-surface: var(--ref-color-visual-media-grid-surface);
+  --visual-modal-backdrop: var(--ref-color-visual-modal-backdrop);
+  --visual-shadow-modal: var(--ref-color-visual-shadow-modal);
+  --visual-modal-image-surface: var(--ref-color-visual-modal-image-surface);
+  --visual-reference-active-shadow: var(--ref-color-visual-reference-active-shadow);
+  --visual-reference-count-surface: var(--ref-color-visual-reference-count-surface);
+  --visual-reference-active-count-surface: var(--ref-color-visual-reference-active-count-surface);
+  --visual-comparison-success-fallback: var(--ref-color-visual-comparison-success-fallback);
+  --chrome-header-bg: var(--ref-color-stone-950);
+  --chrome-header-fg: var(--ref-color-white);
+  --chrome-header-border: var(--ref-color-stone-800);
+  --chrome-footer-bg: var(--ref-color-stone-950);
+  --chrome-footer-fg: var(--ref-color-white);
+  --chrome-footer-fg-secondary: var(--ref-color-stone-300);
+  --chrome-footer-border: var(--ref-color-stone-800);
+  --chrome-on-brand-hover: var(--ref-color-stone-800);
   color-scheme: dark;
 }
 /* Runtime: reduced motion collapses all durations. */
@@ -884,13 +1314,13 @@
   --dialog-shadow: var(--elevation-overlay);
   --dialog-scrim: var(--surface-scrim);
   --dialog-max-width: var(--layout-dialog-max);
-  --site-header-bg: var(--surface-brand);
-  --site-header-fg: var(--text-on-brand);
-  --site-header-border: var(--border-on-brand);
-  --site-footer-bg: var(--surface-brand);
-  --site-footer-fg: var(--text-on-brand);
-  --site-footer-fg-secondary: var(--text-on-brand-secondary);
-  --site-footer-border: var(--border-on-brand);
+  --site-header-bg: var(--chrome-header-bg);
+  --site-header-fg: var(--chrome-header-fg);
+  --site-header-border: var(--chrome-header-border);
+  --site-footer-bg: var(--chrome-footer-bg);
+  --site-footer-fg: var(--chrome-footer-fg);
+  --site-footer-fg-secondary: var(--chrome-footer-fg-secondary);
+  --site-footer-border: var(--chrome-footer-border);
   --site-footer-column-min: var(--layout-column-min);
   --comparison-included: var(--status-success-fg);
   --comparison-excluded: var(--text-secondary);
@@ -952,13 +1382,13 @@
   --dialog-shadow: var(--elevation-overlay);
   --dialog-scrim: var(--surface-scrim);
   --dialog-max-width: var(--layout-dialog-max);
-  --site-header-bg: var(--surface-brand);
-  --site-header-fg: var(--text-on-brand);
-  --site-header-border: var(--border-on-brand);
-  --site-footer-bg: var(--surface-brand);
-  --site-footer-fg: var(--text-on-brand);
-  --site-footer-fg-secondary: var(--text-on-brand-secondary);
-  --site-footer-border: var(--border-on-brand);
+  --site-header-bg: var(--chrome-header-bg);
+  --site-header-fg: var(--chrome-header-fg);
+  --site-header-border: var(--chrome-header-border);
+  --site-footer-bg: var(--chrome-footer-bg);
+  --site-footer-fg: var(--chrome-footer-fg);
+  --site-footer-fg-secondary: var(--chrome-footer-fg-secondary);
+  --site-footer-border: var(--chrome-footer-border);
   --site-footer-column-min: var(--layout-column-min);
   --comparison-included: var(--status-success-fg);
   --comparison-excluded: var(--text-secondary);
@@ -2016,25 +2446,24 @@ button.alu-role[aria-checked="true"] {
 .alu-site-header {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 8px 32px var(--visual-shadow-header);
 }
 .alu-megamenu {
   border-top: 2px solid var(--accent-border);
   background: var(--surface-raised);
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 24px 64px var(--visual-shadow-strong);
 }
 
 /* Light Mode Header, Topbar, MegaMenu & Footer Adaptation */
-[data-mode="light"],
-[data-theme="aluplan"][data-mode="light"] {
-  --site-header-bg: rgba(255, 255, 255, 0.94);
-  --site-header-fg: var(--text-primary);
-  --site-header-border: var(--border-default);
-  --site-footer-bg: var(--surface-subtle);
-  --site-footer-fg: var(--text-primary);
-  --site-footer-fg-secondary: var(--text-secondary);
-  --site-footer-border: var(--border-default);
-  --action-on-brand-bg-hover: var(--surface-muted);
+/* Header/footer and hover palette values are generated from tokens.json.
+ * This compatibility alias preserves the existing rendered hover value without
+ * changing the separately validated canonical action token. Match mode selector
+ * specificity so the semantic declaration cannot shadow this alias. */
+:root,
+[data-theme],
+[data-mode],
+[data-theme][data-mode] {
+  --action-on-brand-bg-hover: var(--chrome-on-brand-hover);
 }
 
 [data-mode="light"] .alu-topbar {
@@ -2047,11 +2476,11 @@ button.alu-role[aria-checked="true"] {
   background: var(--site-header-bg);
   color: var(--site-header-fg);
   border-bottom-color: var(--site-header-border);
-  box-shadow: 0 4px 20px rgba(10, 14, 39, 0.06);
+  box-shadow: 0 4px 20px var(--visual-shadow-header-light);
 }
 
 [data-mode="light"] .alu-megamenu {
-  box-shadow: 0 18px 42px rgba(10, 14, 39, 0.12);
+  box-shadow: 0 18px 42px var(--visual-shadow-menu-light);
 }
 
 [data-mode="light"] .alu-site-footer {
@@ -2114,14 +2543,14 @@ button.alu-role[aria-checked="true"] {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 80% 25%, rgba(208, 102, 58, 0.18), transparent 48%),
-    linear-gradient(95deg, var(--surface-page) 28%, rgba(20, 22, 26, 0.72) 72%, var(--surface-page) 100%),
+    radial-gradient(circle at 80% 25%, var(--visual-hero-accent-glow), transparent 48%),
+    linear-gradient(95deg, var(--surface-page) 28%, var(--visual-hero-dark-scrim) 72%, var(--surface-page) 100%),
     linear-gradient(180deg, transparent 60%, var(--surface-page) 100%);
 }
 [data-mode="light"] .alu-hero-stage__scrim {
   background:
-    radial-gradient(circle at 80% 25%, rgba(181, 77, 36, 0.12), transparent 48%),
-    linear-gradient(95deg, var(--surface-page) 45%, rgba(245, 244, 240, 0.85) 100%);
+    radial-gradient(circle at 80% 25%, var(--visual-hero-light-accent-glow), transparent 48%),
+    linear-gradient(95deg, var(--surface-page) 45%, var(--visual-hero-light-scrim) 100%);
 }
 .alu-hero-stage__inner {
   display: flex;
@@ -2164,7 +2593,7 @@ button.alu-role[aria-checked="true"] {
   background: var(--surface-raised);
   border: 1px solid var(--border-strong);
   border-top: 2px solid var(--accent-border);
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.42);
+  box-shadow: 0 24px 64px var(--visual-shadow-monitor);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -2198,7 +2627,7 @@ button.alu-role[aria-checked="true"] {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: #0d0f12;
+  background: var(--visual-monitor-surface);
   overflow: hidden;
 }
 .alu-hero-monitor__video {
@@ -2395,7 +2824,7 @@ button.alu-role[aria-checked="true"] {
   color: var(--text-primary);
   transform: scale(1.05);
   box-shadow:
-    0 18px 40px -12px rgba(0, 0, 0, 0.5),
+    0 18px 40px -12px var(--visual-shadow-media),
     0 0 0 1px var(--tab-accent, var(--accent-border));
 }
 .alu-pathway-tab__icon {
@@ -2566,7 +2995,7 @@ button.alu-role[aria-checked="true"] {
   aspect-ratio: 21 / 9;
   overflow: hidden;
   border: 1px solid var(--border-strong);
-  background: #0d0f12;
+  background: var(--visual-monitor-surface);
   animation: aluPathwayFeatureIn 460ms cubic-bezier(0.22, 1, 0.36, 1) 180ms both;
 }
 .alu-pathway-visual-frame img {
@@ -2583,13 +3012,13 @@ button.alu-role[aria-checked="true"] {
   position: absolute;
   inset: auto 0 0 0;
   padding: 0.6rem 1rem;
-  background: linear-gradient(180deg, transparent 0%, rgba(12, 14, 18, 0.92) 100%);
+  background: linear-gradient(180deg, transparent 0%, var(--visual-product-image-scrim) 100%);
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: #f4f3ef;
+  color: var(--visual-media-text);
 }
 
 /* 6 Permanent Products Showcase (Conditional Highlighting & Smooth Dimming) */
@@ -2621,13 +3050,13 @@ button.alu-role[aria-checked="true"] {
   background: var(--surface-raised);
   border-color: color-mix(in srgb, var(--role-accent, var(--role-architect)) 55%, var(--border-strong));
   border-top: 3px solid var(--role-accent, var(--accent-border));
-  box-shadow: 0 20px 44px -15px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 20px 44px -15px var(--visual-shadow-strong);
 }
 .alu-product-card--highlighted:hover {
   transform: translateY(-4px);
   border-color: var(--role-accent, var(--accent-border));
   box-shadow:
-    0 24px 52px -12px rgba(0, 0, 0, 0.55),
+    0 24px 52px -12px var(--visual-shadow-product-hover),
     0 0 24px -8px color-mix(in srgb, var(--role-accent, var(--role-architect)) 40%, transparent);
   text-decoration: none;
 }
@@ -2652,7 +3081,7 @@ button.alu-role[aria-checked="true"] {
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  background: #101216;
+  background: var(--visual-media-surface);
   border-bottom: 1px solid var(--border-default);
 }
 .alu-product-card__media img {
@@ -2670,9 +3099,9 @@ button.alu-role[aria-checked="true"] {
   top: 0.75rem;
   left: 0.75rem;
   padding: 0.2rem 0.5rem;
-  background: rgba(15, 17, 21, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  color: #f4f3ef;
+  background: var(--visual-media-caption-surface);
+  border: 1px solid var(--visual-media-border-subtle);
+  color: var(--visual-media-text);
   font-family: var(--font-mono);
   font-size: 0.72rem;
 }
@@ -2684,9 +3113,9 @@ button.alu-role[aria-checked="true"] {
   align-items: center;
   gap: 0.4rem;
   padding: 0.25rem 0.65rem;
-  background: rgba(15, 17, 21, 0.9);
+  background: var(--visual-media-tag-surface);
   border: 1px solid var(--role-accent, var(--accent-border));
-  color: #ffffff;
+  color: var(--visual-on-emphasis);
   font-family: var(--font-mono);
   font-size: 0.68rem;
   font-weight: 700;
@@ -2802,8 +3231,8 @@ button.alu-role[aria-checked="true"] {
   justify-content: space-between;
   padding: 1.75rem;
   border: 1px solid var(--border-strong);
-  background: #121418;
-  color: #f5f4f0;
+  background: var(--visual-trial-surface);
+  color: var(--visual-trial-text);
   text-decoration: none;
   box-shadow: var(--elevation-raised);
   transition:
@@ -2814,7 +3243,7 @@ button.alu-role[aria-checked="true"] {
   border-color: var(--accent-border);
   transform: translateY(-3px);
   text-decoration: none;
-  color: #ffffff;
+  color: var(--visual-on-emphasis);
 }
 .alu-bento-card--1 {
   grid-column: span 7;
@@ -2852,7 +3281,7 @@ button.alu-role[aria-checked="true"] {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(180deg, rgba(14, 16, 20, 0.25) 0%, rgba(14, 16, 20, 0.72) 55%, rgba(14, 16, 20, 0.96) 100%);
+    linear-gradient(180deg, var(--visual-trial-scrim-start) 0%, var(--visual-trial-scrim-middle) 55%, var(--visual-trial-scrim-end) 100%);
 }
 .alu-bento-card__top {
   display: flex;
@@ -2863,7 +3292,7 @@ button.alu-role[aria-checked="true"] {
 .alu-bento-card__index {
   font-family: var(--font-mono);
   font-size: 0.8rem;
-  color: rgba(245, 244, 240, 0.7);
+  color: var(--visual-trial-text-muted);
 }
 .alu-bento-card__bottom {
   display: flex;
@@ -2876,13 +3305,13 @@ button.alu-role[aria-checked="true"] {
   font-family: var(--font-heading);
   font-size: clamp(1.35rem, 2.2vw, 1.85rem);
   font-weight: 800;
-  color: #ffffff;
+  color: var(--visual-on-emphasis);
   letter-spacing: -0.02em;
 }
 .alu-bento-card__desc {
   margin: 0;
   font-size: var(--type-body-sm-size);
-  color: rgba(245, 244, 240, 0.84);
+  color: var(--visual-trial-text-secondary);
 }
 .alu-bento-card__cta {
   margin-top: 0.5rem;
@@ -3034,7 +3463,7 @@ button.alu-role[aria-checked="true"] {
   position: relative;
   aspect-ratio: 16 / 10;
   overflow: hidden;
-  background: #101216;
+  background: var(--visual-media-surface);
 }
 .alu-innovation-card__media img {
   width: 100%;
@@ -3050,7 +3479,7 @@ button.alu-role[aria-checked="true"] {
   position: absolute;
   inset: 0;
   padding: 1rem;
-  background: linear-gradient(180deg, rgba(12, 14, 18, 0.65) 0%, transparent 45%);
+  background: linear-gradient(180deg, var(--visual-subpage-media-scrim) 0%, transparent 45%);
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -3058,10 +3487,10 @@ button.alu-role[aria-checked="true"] {
 .alu-innovation-card__num {
   font-family: var(--font-mono);
   font-size: 0.85rem;
-  color: #ffffff;
-  background: rgba(15, 17, 21, 0.75);
+  color: var(--visual-on-emphasis);
+  background: var(--visual-subpage-media-caption);
   padding: 0.2rem 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--visual-media-border-strong);
 }
 .alu-innovation-card__body {
   padding: 1.5rem;
@@ -3095,13 +3524,13 @@ button.alu-role[aria-checked="true"] {
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(circle at 82% 20%, rgba(208, 102, 58, 0.15), transparent 50%),
-    linear-gradient(90deg, var(--surface-page) 35%, rgba(20, 22, 26, 0.78) 100%);
+    radial-gradient(circle at 82% 20%, var(--visual-subpage-hero-accent-glow), transparent 50%),
+    linear-gradient(90deg, var(--surface-page) 35%, var(--visual-subpage-hero-dark-scrim) 100%);
 }
 [data-mode="light"] .alu-subpage-hero__scrim {
   background:
-    radial-gradient(circle at 82% 20%, rgba(181, 77, 36, 0.1), transparent 50%),
-    linear-gradient(90deg, var(--surface-page) 50%, rgba(245, 244, 240, 0.9) 100%);
+    radial-gradient(circle at 82% 20%, var(--visual-subpage-hero-light-accent-glow), transparent 50%),
+    linear-gradient(90deg, var(--surface-page) 50%, var(--visual-subpage-hero-light-scrim) 100%);
 }
 
 /* Alternating Split Feature Rows on Subpages */
@@ -3127,7 +3556,7 @@ button.alu-role[aria-checked="true"] {
 .alu-feature-row__media {
   position: relative;
   min-height: 20rem;
-  background: #101216;
+  background: var(--visual-media-surface);
   overflow: hidden;
 }
 .alu-feature-row__media img {
@@ -3141,7 +3570,7 @@ button.alu-role[aria-checked="true"] {
   top: 1rem;
   left: 1rem;
   padding: 0.25rem 0.65rem;
-  background: rgba(15, 17, 21, 0.85);
+  background: var(--visual-media-caption-surface);
   border: 1px solid var(--accent-border);
   color: var(--ref-color-rust-300);
   font-family: var(--font-mono);
@@ -3226,7 +3655,7 @@ button.alu-role[aria-checked="true"] {
 .alu-trial-banner {
   padding-block: clamp(3rem, 6vw, 5rem);
   background:
-    radial-gradient(circle at 85% 50%, rgba(208, 102, 58, 0.16), transparent 52%),
+    radial-gradient(circle at 85% 50%, var(--visual-trial-accent-glow), transparent 52%),
     var(--surface-subtle);
   border-top: 1px solid var(--border-strong);
 }
@@ -3260,9 +3689,9 @@ button.alu-role[aria-checked="true"] {
   justify-content: space-between;
   gap: 2rem;
   padding: clamp(2rem, 4vw, 3rem);
-  background: linear-gradient(90deg, rgba(127, 29, 29, 0.42) 0%, #0a0b0e 100%);
-  border: 1px solid rgba(185, 28, 28, 0.38);
-  border-left: 4px solid #dc2626;
+  background: linear-gradient(90deg, var(--visual-youtube-banner-glow) 0%, var(--visual-youtube-banner-surface) 100%);
+  border: 1px solid var(--visual-youtube-banner-border);
+  border-left: 4px solid var(--visual-youtube-action);
   box-shadow: var(--elevation-overlay);
 }
 .alu-yt-banner__watermark {
@@ -3271,7 +3700,7 @@ button.alu-role[aria-checked="true"] {
   right: 1.5rem;
   opacity: 0.08;
   pointer-events: none;
-  color: #dc2626;
+  color: var(--visual-youtube-action);
   transform: scale(6.5);
   transform-origin: top right;
 }
@@ -3292,7 +3721,7 @@ button.alu-role[aria-checked="true"] {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #ef4444;
+  color: var(--visual-youtube-accent);
 }
 .alu-yt-banner__badge-icon {
   display: inline-flex;
@@ -3300,22 +3729,22 @@ button.alu-role[aria-checked="true"] {
   justify-content: center;
   width: 2rem;
   height: 2rem;
-  background: rgba(220, 38, 38, 0.2);
-  color: #ef4444;
+  background: var(--visual-youtube-badge-surface);
+  color: var(--visual-youtube-accent);
 }
 .alu-yt-banner__title {
   margin: 0;
   font-family: var(--font-heading);
   font-size: clamp(1.65rem, 3vw, 2.35rem);
   font-weight: 800;
-  color: #ffffff;
+  color: var(--visual-on-emphasis);
   letter-spacing: -0.02em;
 }
 .alu-yt-banner__desc {
   margin: 0;
   font-size: clamp(1rem, 1.2vw, 1.125rem);
   line-height: 1.65;
-  color: rgba(245, 244, 240, 0.85);
+  color: var(--visual-hero-light-scrim);
 }
 .alu-yt-banner__action {
   position: relative;
@@ -3327,25 +3756,25 @@ button.alu-role[aria-checked="true"] {
   align-items: center;
   gap: 0.75rem;
   padding: 1rem 2rem;
-  background: #dc2626;
-  color: #ffffff;
+  background: var(--visual-youtube-action);
+  color: var(--visual-on-emphasis);
   font-family: var(--font-heading);
   font-size: 1.05rem;
   font-weight: 800;
   letter-spacing: 0.04em;
   text-decoration: none;
-  box-shadow: 0 14px 32px -8px rgba(220, 38, 38, 0.5);
+  box-shadow: 0 14px 32px -8px var(--visual-youtube-action-shadow);
   transition:
     background-color 250ms ease,
     transform 250ms ease,
     box-shadow 250ms ease;
 }
 .alu-yt-subscribe-btn:hover {
-  background: #b91c1c;
-  color: #ffffff;
+  background: var(--visual-youtube-action-hover);
+  color: var(--visual-on-emphasis);
   text-decoration: none;
   transform: translateY(-2px);
-  box-shadow: 0 18px 38px -8px rgba(220, 38, 38, 0.68);
+  box-shadow: 0 18px 38px -8px var(--visual-youtube-action-hover-shadow);
 }
 
 .alu-yt-grid {
@@ -3371,11 +3800,11 @@ button.alu-role[aria-checked="true"] {
     box-shadow 300ms ease;
 }
 .alu-yt-card--internal {
-  border-color: rgba(153, 27, 27, 0.65);
+  border-color: var(--visual-youtube-card-internal-border);
 }
 .alu-yt-card:hover {
   background: var(--surface-raised);
-  border-color: rgba(239, 68, 68, 0.6);
+  border-color: var(--visual-youtube-card-hover-border);
   transform: translateY(-3px);
   box-shadow: var(--elevation-overlay);
   text-decoration: none;
@@ -3393,24 +3822,24 @@ button.alu-role[aria-checked="true"] {
   justify-content: center;
   width: 3.5rem;
   height: 3.5rem;
-  background: rgba(220, 38, 38, 0.12);
-  color: #ef4444;
+  background: var(--visual-youtube-card-icon-surface);
+  color: var(--visual-youtube-accent);
   transition:
     background-color 300ms ease,
     color 300ms ease;
 }
 .alu-yt-card:hover .alu-yt-card__icon {
-  background: #dc2626;
-  color: #ffffff;
+  background: var(--visual-youtube-action);
+  color: var(--visual-on-emphasis);
 }
 .alu-yt-card__count {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 700;
   padding: 0.25rem 0.55rem;
-  background: rgba(220, 38, 38, 0.14);
-  border: 1px solid rgba(220, 38, 38, 0.35);
-  color: #f87171;
+  background: var(--visual-youtube-count-surface);
+  border: 1px solid var(--visual-youtube-count-border);
+  color: var(--visual-youtube-count-text);
 }
 .alu-yt-card__title {
   margin: 0 0 0.5rem 0;
@@ -3423,7 +3852,7 @@ button.alu-role[aria-checked="true"] {
   transition: color 250ms ease;
 }
 .alu-yt-card:hover .alu-yt-card__title {
-  color: #ef4444;
+  color: var(--visual-youtube-accent);
 }
 .alu-yt-card__desc {
   margin: 0 0 1.5rem 0;
@@ -3450,7 +3879,7 @@ button.alu-role[aria-checked="true"] {
   top: 1.25rem;
   right: 1.25rem;
   opacity: 0;
-  color: rgba(255, 255, 255, 0.16);
+  color: var(--visual-media-border-subtle);
   transform: scale(1.6);
   pointer-events: none;
   transition: opacity 300ms ease;
@@ -3477,7 +3906,7 @@ button.alu-role[aria-checked="true"] {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: #000000;
+  background: var(--visual-player-surface);
 }
 .alu-playlist-player-card__viewport iframe {
   width: 100%;
@@ -3577,7 +4006,7 @@ button.alu-role[aria-checked="true"] {
   position: relative;
   width: 7.5rem;
   aspect-ratio: 16 / 9;
-  background: #000000;
+  background: var(--visual-player-surface);
   overflow: hidden;
   flex-shrink: 0;
   border: 1px solid var(--border-subtle);
@@ -3597,7 +4026,7 @@ button.alu-role[aria-checked="true"] {
 .alu-playlist-item__playing {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: var(--visual-shadow-strong);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3700,7 +4129,7 @@ button.alu-role[aria-checked="true"] {
   position: relative;
   aspect-ratio: 16 / 9;
   width: 100%;
-  background: #000000;
+  background: var(--visual-player-surface);
   border: 1px solid var(--border-strong);
   box-shadow: var(--elevation-overlay);
   overflow: hidden;
@@ -3907,7 +4336,7 @@ button.alu-role[aria-checked="true"] {
   position: relative;
   aspect-ratio: 16 / 9;
   width: 100%;
-  background: #0d1015;
+  background: var(--visual-media-grid-surface);
   overflow: hidden;
   cursor: pointer;
   border-bottom: 1px solid var(--border-subtle);
@@ -3925,7 +4354,7 @@ button.alu-role[aria-checked="true"] {
 .alu-media-card__scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(10, 12, 16, 0.12) 0%, rgba(10, 12, 16, 0.55) 100%);
+  background: linear-gradient(180deg, var(--visual-media-thumbnail-scrim-start) 0%, var(--visual-media-thumbnail-scrim-end) 100%);
   pointer-events: none;
 }
 .alu-media-card__video-badge {
@@ -3937,7 +4366,7 @@ button.alu-role[aria-checked="true"] {
   align-items: center;
   gap: 0.35rem;
   padding: 0.25rem 0.6rem;
-  background: rgba(12, 14, 18, 0.86);
+  background: var(--visual-media-badge-surface);
   backdrop-filter: blur(6px);
   border: 1px solid var(--accent-border);
   color: var(--accent-fg);
@@ -3959,12 +4388,12 @@ button.alu-role[aria-checked="true"] {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 999px;
-  background: rgba(14, 165, 233, 0.88);
-  border: 2px solid rgba(255, 255, 255, 0.85);
-  color: #ffffff;
+  background: var(--visual-media-play-surface);
+  border: 2px solid var(--visual-media-play-border);
+  color: var(--visual-on-emphasis);
   display: grid;
   place-items: center;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 12px 28px var(--visual-shadow-media);
   transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1), background-color 260ms ease;
 }
 .alu-media-card:hover .alu-media-card__play-circle,
@@ -3980,9 +4409,9 @@ button.alu-role[aria-checked="true"] {
   width: 2rem;
   height: 2rem;
   border-radius: 999px;
-  background: rgba(12, 14, 18, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #f4f3ef;
+  background: var(--visual-media-zoom-surface);
+  border: 1px solid var(--visual-media-border-strong);
+  color: var(--visual-media-text);
   display: grid;
   place-items: center;
   opacity: 0;
@@ -4193,7 +4622,7 @@ button.alu-role[aria-checked="true"] {
   position: relative;
   aspect-ratio: 16 / 9;
   width: 100%;
-  background: #0d1015;
+  background: var(--visual-media-grid-surface);
   overflow: hidden;
   cursor: pointer;
   border-bottom: 1px solid var(--border-default);
@@ -4243,7 +4672,7 @@ button.alu-role[aria-checked="true"] {
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid var(--border-default);
-  background: #0d1015;
+  background: var(--visual-media-grid-surface);
 }
 .alu-scia-callout__media--interactive {
   cursor: pointer;
@@ -4363,7 +4792,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: rgba(6, 8, 12, 0.86);
+  background: var(--visual-modal-backdrop);
   backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
@@ -4387,7 +4816,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   overflow-y: auto;
   background: var(--surface-raised);
   border: 1px solid var(--border-strong);
-  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 32px 80px var(--visual-shadow-modal);
 }
 .alu-video-modal__dialog--image {
   width: min(100%, 72rem);
@@ -4434,7 +4863,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   position: relative;
   aspect-ratio: 16 / 9;
   width: 100%;
-  background: #000000;
+  background: var(--visual-player-surface);
 }
 .alu-video-modal__viewport iframe {
   position: absolute;
@@ -4444,7 +4873,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   border: 0;
 }
 .alu-video-modal__image-viewport {
-  background: #080a0e;
+  background: var(--visual-modal-image-surface);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4576,13 +5005,13 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 .alu-ref-tab--active {
   background: var(--accent-primary);
   border-color: var(--accent-primary);
-  color: #ffffff;
-  box-shadow: 0 4px 16px rgba(208, 102, 58, 0.28);
+  color: var(--visual-on-emphasis);
+  box-shadow: 0 4px 16px var(--visual-reference-active-shadow);
 }
 
 .alu-ref-tab--active:hover {
   background: var(--accent-primary);
-  color: #ffffff;
+  color: var(--visual-on-emphasis);
 }
 
 .alu-ref-tab__icon {
@@ -4603,7 +5032,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   min-width: 1.65rem;
   height: 1.35rem;
   padding-inline: 0.4rem;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--visual-reference-count-surface);
   border-radius: 2px;
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -4611,8 +5040,8 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 }
 
 .alu-ref-tab--active .alu-ref-tab__count {
-  background: rgba(0, 0, 0, 0.25);
-  color: #ffffff;
+  background: var(--visual-reference-active-count-surface);
+  color: var(--visual-on-emphasis);
 }
 
 .alu-ref-toolbar {
@@ -4794,7 +5223,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 }
 
 .alu-faq-table__yes {
-  color: var(--status-success-fg, #2fc48d);
+  color: var(--status-success-fg, var(--visual-comparison-success-fallback));
   font-weight: 700;
 }
 

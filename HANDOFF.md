@@ -1,7 +1,7 @@
 # Oturum devri
 
 ## Güncelleme tarihi ve oturum no
-27.10.2026 — Faz 6 sağlamlaştırma: sayfa sonundaki otomatik related-links ve genel deneme bandı kaldırıldı; sayfa ailesine göre tek, ortak dönüşüm bileşeni yerel olarak uygulandı ve doğrulandı. Canlıya alınmadı.
+27.10.2026 — Faz 6 sağlamlaştırma: sayfa sonu dönüşüm bileşeni yerel olarak doğrulandı. Çözüm katalog/hub kartlarında kaynak paritesi navigasyon regresyonu tespit edildi; kod düzeltmesi yapılmadan yarınki ilk iş olarak kayıt altına alındı. Canlıya alınmadı.
 
 ## 27.10.2026 — Sayfa sonu dönüşüm alanı
 
@@ -15,6 +15,32 @@
 - Gerçek tarayıcı kabulü: sekiz temsilî rota (`/products/allplan-professional`, `/solutions/road-railway`, eğitim kökü ve playlist, `/solutions-v2/connect-license`, `/about`, `/contact`, `/kvkk`) doğru 0/1 bant, CTA sırası/hedefi, related-links yokluğu ve footer komşuluğu açısından geçti. Konsol/hydration hatası görülmedi.
 - Mobil Chrome 390×844 emülasyonunda ürün ve eğitim bantları yatay taşmasız (`documentWidth = viewportWidth = 390`) ve CTA'lar viewport içinde doğrulandı. Klavye Tab kontrolünde CTA `:focus-visible` halkası solid olarak göründü.
 - Yerel önizleme `http://127.0.0.1:3001/` üzerinde açık bırakıldı. Push, merge, deploy veya canlı değişikliği yapılmadı.
+
+## 27.10.2026 — Çözüm katalog/hub navigasyonu regresyonu
+
+- **Durum:** Analiz tamamlandı; uygulama kodu değiştirilmedi. Düzeltme yarın ilk iş olarak ele alınacak. Çalışma dalı `codex/page-end-conversion-design`; bu kayıt öncesinde çalışma ağacı temizdi. Push, merge, deploy veya canlı değişikliği yapılmadı.
+- **Belirti ve bilgi mimarisi:** Header mega menüsü 21 doğrudan `/solutions/*` detayına, footer ise beş `/solutions-v2/*` kategori hub'ına gidiyor. Bu farklı rol uygundur; hata, `/solutions` kataloğu ile hub kartlarının hedef detay URL'lerine bağlı olmamasıdır.
+- **Doğrulanmış kapsam:** `/solutions`, `/solutions-v2/building-design`, `/solutions-v2/infrastructure`, `/solutions-v2/construction`, `/solutions-v2/addons` ve `/solutions-v2/other`.
+- **Veri kanıtı:** Beş hub'da tanımlı toplam 21 hedef, header `solutionsMenu` içindeki 21 hedefle 21/21 eşleşiyor. Yirmi yerel hedef mevcut; bir hedef `https://allplantools.com/`. URL veya içerik eksik değil, render ilişkisi eksik.
+- **Runtime kanıtı:** Yerel `/solutions-v2/other` sayfasındaki çözüm kartlarında bağlantı sayısı `0`; `/solutions` kataloğunda `/solutions/*` ayrıntı bağlantısı yok. Bu yerel tarayıcı kanıtıdır, canlı davranış iddiası değildir.
+- **Kök neden:** `scripts/generate_site_data.py` kart metinlerini `sections`, hedefleri ayrı `contentLinks` koleksiyonunda üretir. Generic `src/components/sections/SubpageView.tsx`, `specSections` öğelerini bağlantısız `<article>` olarak render eder ve bu iki veri koleksiyonunu ilişkilendirmez.
+- **Kaynak paritesi:** Salt-okunur 2026 kaynağındaki `app/solutions-v2/construction/page.tsx`, `solutionsMenu` öğelerini `CardV2 href={item.href}` ile üretir; `components/layout-v2/CardV2.tsx` kartın tamamını `Link` ile sarar. Mevcut 2027 davranışı kaynak paritesi regresyonudur.
+- **Son değişiklik ilişkisi:** Related-links alanının kaldırılması kart bağlantısı kusurunu oluşturmadı; önceden var olan kusurun sayfa sonundaki dolaylı/yedek hedef görünümünü kaldırdı. Kullanıcının kaldırma kararı korunacak; generic related-links alanı geri getirilmeyecek.
+- **Risk:** UX/bilgi mimarisi riski yüksek, SEO bağlamsal iç bağlantı riski orta. Hedef URL'ler kırık değil; navigasyon ilişkileri eksik.
+- **Onaylanan çözüm yönü:** Tek kanonik `solutionsMenu` kaynağından açık tipli `solutionHub.items` veya eşdeğer `directoryItems` üretilecek. Beş hub için özel `SolutionHubSection`, genel katalog için `SolutionCatalogSection` kullanılacak. Metin benzerliğiyle `sections + contentLinks` heuristic join yapılmayacak.
+- **Ayrı IA kararı:** Masaüstü header'a “Tüm Çözümler” bağlantısı eklenmesi otomatik düzeltme kapsamına alınmayacak; ayrıca değerlendirilecek.
+
+### Yarınki düzeltmenin kabul ölçütleri
+
+1. Beş hub'daki 21 kart hedefi header `solutionsMenu` ile 21/21 eşleşir.
+2. `/solutions` kataloğundaki çözüm kartları gerçek detay hedeflerine bağlanır.
+3. Her kart tek, erişilebilir bağlantıdır; klavye odağı ve `:focus-visible` durumu doğrulanır.
+4. İç hedefler Next.js `Link`; harici hedef `target="_blank"` ve `rel="noopener noreferrer"` kullanır.
+5. Related-links alanı geri dönmez; sayfa sonu dönüşüm bandı ve sayfa ailesi politikası korunur.
+6. Generated data deterministik kalır; içerik, schema, URL ve görünür metinler değiştirilmez.
+7. Unit/parite testleri, typecheck ve build yanında gerçek tarayıcıda masaüstü/mobil tıklama, klavye ve console/hydration kabulü tamamlanır.
+
+**Yarınki ilk güvenli adım:** Test-first olarak kanonik, açık tipli hub/katalog veri kontratını yaz; ardından özel render bileşenleriyle kart bağlantılarını geri getir ve yukarıdaki kabul paketini çalıştır.
 
 ## Güncel öncelik — 26.10.2026 sağlamlaştırma planı
 

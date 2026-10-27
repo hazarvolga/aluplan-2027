@@ -2,6 +2,7 @@
 
 from pathlib import Path
 import json
+import re
 import unittest
 
 
@@ -13,6 +14,69 @@ def read(relative: str) -> str:
 
 
 class SubpageComponentBoundaryTests(unittest.TestCase):
+    def test_video_library_hub_has_a_dedicated_render_boundary(self):
+        component = read("src/components/sections/VideoLibraryHubSection.tsx")
+        parent = read("src/components/sections/SubpageView.tsx")
+
+        self.assertNotIn("'use client'", component)
+        self.assertIn("import { getAllPlaylists }", component)
+        for marker in [
+            "const VIDEO_LIBRARY_ITEMS",
+            "const playlistByUrl",
+            "VIDEO_LIBRARY_ITEMS.map",
+            "alu-yt-banner",
+            "alu-yt-grid",
+            "alu-yt-card--internal",
+            "matchedPlaylist.count",
+            "Allplan Türkiye YouTube Kanalına Abone Olun",
+            'target={isExternal ? \'_blank\' : undefined}',
+            "rel={isExternal ? 'noopener noreferrer' : undefined}",
+        ]:
+            with self.subTest(marker=marker):
+                self.assertIn(marker, component)
+
+        self.assertIn("import { VideoLibraryHubSection } from './VideoLibraryHubSection';", parent)
+        self.assertIn("isVideoLibraryHub && <VideoLibraryHubSection />", parent)
+        self.assertNotIn("VIDEO_LIBRARY_ITEMS", parent)
+        self.assertNotIn("playlistByUrl", parent)
+        self.assertNotIn("alu-yt-banner", parent)
+        self.assertNotIn("alu-yt-grid", parent)
+
+    def test_video_library_hub_preserves_all_22_source_targets(self):
+        component = read("src/components/sections/VideoLibraryHubSection.tsx")
+        items_source = component.split("const VIDEO_LIBRARY_ITEMS", 1)[1].split("];", 1)[0]
+        pairs = re.findall(
+            r"\{\s+title: '([^']+)',\s+description: '.*?',\s+url: '([^']*)'\s+\}",
+            items_source,
+            flags=re.DOTALL,
+        )
+        expected_pairs = [
+            ("Allplan 2026", "https://youtube.com/playlist?list=PLowC-ZFUywGMotfHSyzqoNZCQYWl_6G1x&si=BSEJvgjsQWgbIwVe"),
+            ("Youtube Allplan English", "https://www.youtube.com/@ALLPLANEnglish"),
+            ("Youtube Allplan Global", "https://www.youtube.com/@ALLPLANglobal"),
+            ("Youtube Allplan Precast", "https://www.youtube.com/c/AllplanPrecast"),
+            ("Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları", "/solutions-v2/training/video-library/hello-allplan-2024"),
+            ("Allplan Add On Geometry Tools", "/solutions-v2/training/video-library/addon-geometry"),
+            ("AX3000 - MEP & Enerji", "/solutions-v2/training/video-library/ax3000"),
+            ("Youtube CDS Allplan Add-On", "#"),
+            ("Allplan Road Design Workflow", "/solutions-v2/training/video-library/road-design"),
+            ("Allplan Bridge Workflows", "/solutions-v2/training/video-library/bridge-workflows"),
+            ("Campus Tutorials (Deutsch)", "/solutions-v2/training/video-library/campus-de"),
+            ("Campus Tutorials (English)", "/solutions-v2/training/video-library/campus-en"),
+            ("Allplan Bridge", "#"),
+            ("Allplan Bridge Tutorials", "#"),
+            ("SDS2 Detaylandırma", "/solutions-v2/training/video-library/sds2-intro"),
+            ("Konut İnşaatı İş Akışları", "/solutions-v2/training/video-library/konut-insaati"),
+            ("Bridge Workflow 2022", "/solutions-v2/training/video-library/bridge-workflow-2022"),
+            ("Otomatik Donatı (PythonPart)", "/solutions-v2/training/video-library/otomatik-donati"),
+            ("ALLPLAN QuickStart: Buildings", "/solutions-v2/training/video-library/quickstart-buildings"),
+            ("ALLPLAN for Reinforcement", "/solutions-v2/training/video-library/allplan-reinforcement"),
+            ("Allplan Campus Tutorials 2019-2022", "/solutions-v2/training/video-library/campus-tutorials-2019-2022"),
+            ("ALLPLAN Pythonparts Youtube Kanalı", "#"),
+        ]
+
+        self.assertEqual(pairs, expected_pairs)
+
     def test_about_editorial_has_a_dedicated_render_boundary(self):
         component = read("src/components/sections/AboutEditorialSection.tsx")
         parent = read("src/components/sections/SubpageView.tsx")

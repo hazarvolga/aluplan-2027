@@ -39,6 +39,34 @@ MARGIN_PROPERTY = re.compile(r'^margin(?:-(?:top|right|bottom|left|block|inline)
 METRIC_PROPERTY = re.compile(r'^(?:font-size|font-weight|line-height|letter-spacing|border-radius|border-width|(?:row-|column-)?gap|padding(?:-(?:top|right|bottom|left|block|inline)(?:-start|-end)?)?)$')
 
 
+def validate_application_transforms(source):
+    """Allow semantic transform variables plus two selector-bound functional literals."""
+    raw = []
+    for match in re.finditer(r'(?:^|[;{}])\s*transform\s*:\s*([^;{}]+)', source, re.I):
+        value = match.group(1).strip()
+        if re.fullmatch(r'var\(--[\w-]+\)', value):
+            continue
+        raw.append(value)
+
+    expected = ['rotate(180deg)', 'translate(-50%, -50%)']
+    if not raw:
+        return
+    if sorted(raw) != expected:
+        raise ValueError('Raw application transform: use a semantic token')
+
+    contracts = {
+        '.alu-pathway-glow': 'translate(-50%, -50%)',
+        '.alu-faq-item[open] .alu-faq-item__chevron': 'rotate(180deg)',
+    }
+    for selector, expected_value in contracts.items():
+        blocks = re.findall(rf'(?m)^[\t ]*{re.escape(selector)}[\t ]*\{{([^{{}}]*)\}}', source)
+        values = [value.strip() for block in blocks for value in re.findall(
+            r'(?m)^\s*transform\s*:\s*([^;]+);', block
+        )]
+        if values != [expected_value]:
+            raise ValueError('Raw application transform: functional literal moved outside its selector contract')
+
+
 def validate_application_metrics(source):
     """Guard migrated design properties; structural zeros and layout rules remain valid."""
     skip_link_rule = re.compile(r'(^|})\s*\.alu-skip-link\s*\{([^{}]*)\}', re.M)
@@ -82,6 +110,7 @@ def build_styles(root=ROOT):
             source = re.sub(r'/\*[\s\S]*?\*/', '', content)
             if re.search(r'#[0-9a-fA-F]{3,8}\b|\b(?:rgba?|hsla?|hwb|lab|lch|oklab|oklch|color)\(', source, re.IGNORECASE):
                 raise ValueError('Raw application color: use a semantic token from tokens.json')
+            validate_application_transforms(source)
             validate_application_metrics(source)
         if label == 'fonts.css':
             content = content.replace('../assets/fonts/', '/assets/fonts/')

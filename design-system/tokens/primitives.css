@@ -388,6 +388,23 @@
   --ref-transform-application-lift-strong: translateY(-4px); /* @kind other */
   --ref-transform-application-nudge-subtle: translateX(3px); /* @kind other */
   --ref-transform-application-nudge-strong: translateX(5px); /* @kind other */
+  --ref-transform-application-scale102: scale(1.02); /* @kind other */
+  --ref-transform-application-scale104: scale(1.04); /* @kind other */
+  --ref-transform-application-scale105: scale(1.05); /* @kind other */
+  --ref-transform-application-scale106: scale(1.06); /* @kind other */
+  --ref-transform-application-scale108: scale(1.08); /* @kind other */
+  --ref-transform-application-scale112: scale(1.12); /* @kind other */
+  --ref-transform-application-product-highlighted: scale(1) translateY(0); /* @kind other */
+  --ref-transform-application-product-dimmed: scale(0.975); /* @kind other */
+  --ref-transform-application-product-dimmed-hover: scale(0.99); /* @kind other */
+  --ref-transform-application-product-cta-rest: translateY(2px); /* @kind other */
+  --ref-transform-application-product-cta-hover: translateY(0) translateX(3px); /* @kind other */
+  --ref-transform-application-pathway-slide-from: translateX(-22px); /* @kind other */
+  --ref-transform-application-pathway-slide-to: translateX(0); /* @kind other */
+  --ref-transform-application-pathway-feature-from: scale(0.92) translateY(10px); /* @kind other */
+  --ref-transform-application-pathway-feature-to: scale(1) translateY(0); /* @kind other */
+  --ref-transform-application-youtube-banner-watermark: scale(6.5); /* @kind other */
+  --ref-transform-application-youtube-card-watermark: scale(1.6); /* @kind other */
   --ref-z-index-0: 0; /* @kind other */
   --ref-z-index-100: 100; /* @kind other */
   --ref-z-index-200: 200; /* @kind other */

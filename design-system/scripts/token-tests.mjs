@@ -308,6 +308,33 @@ export function runTokenTests({ build = buildTokens, lint = lintComponentCss, T,
     }
     return true;
   });
+  test('application state, media, keyframe and decorative transforms preserve their original values', () => {
+    const expected = {
+      '--motion-transform-media-generic-zoom': 'scale(1.02)',
+      '--motion-transform-media-detail-zoom': 'scale(1.04)',
+      '--motion-transform-card-media-zoom': 'scale(1.05)',
+      '--motion-transform-media-showcase-zoom': 'scale(1.06)',
+      '--motion-transform-video-badge-zoom': 'scale(1.08)',
+      '--motion-transform-play-control-zoom': 'scale(1.12)',
+      '--motion-transform-pathway-tab-active': 'scale(1.05)',
+      '--motion-transform-product-highlighted': 'scale(1) translateY(0)',
+      '--motion-transform-product-dimmed': 'scale(0.975)',
+      '--motion-transform-product-dimmed-hover': 'scale(0.99)',
+      '--motion-transform-product-cta-rest': 'translateY(2px)',
+      '--motion-transform-product-cta-hover': 'translateY(0) translateX(3px)',
+      '--motion-transform-pathway-slide-from': 'translateX(-22px)',
+      '--motion-transform-pathway-slide-to': 'translateX(0)',
+      '--motion-transform-pathway-feature-from': 'scale(0.92) translateY(10px)',
+      '--motion-transform-pathway-feature-to': 'scale(1) translateY(0)',
+      '--transform-decorative-subpage-hero-overscan': 'scale(1.06)',
+      '--transform-decorative-youtube-banner-watermark': 'scale(6.5)',
+      '--transform-decorative-youtube-card-watermark': 'scale(1.6)'
+    };
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      for (const [name, value] of Object.entries(expected)) if (values[name] !== value) return `${theme}/${mode} ${name}: expected ${value}, got ${values[name]}`;
+    }
+    return true;
+  });
   return { results, passed: results.filter(r => r.pass).length, failed: results.filter(r => !r.pass).length };
 }
 

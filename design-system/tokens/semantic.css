@@ -258,6 +258,25 @@
   --motion-transform-lift-strong: var(--ref-transform-application-lift-strong); /* @kind other */
   --motion-transform-nudge-subtle: var(--ref-transform-application-nudge-subtle); /* @kind other */
   --motion-transform-nudge-strong: var(--ref-transform-application-nudge-strong); /* @kind other */
+  --motion-transform-media-generic-zoom: var(--ref-transform-application-scale102); /* @kind other */
+  --motion-transform-media-detail-zoom: var(--ref-transform-application-scale104); /* @kind other */
+  --motion-transform-card-media-zoom: var(--ref-transform-application-scale105); /* @kind other */
+  --motion-transform-media-showcase-zoom: var(--ref-transform-application-scale106); /* @kind other */
+  --motion-transform-video-badge-zoom: var(--ref-transform-application-scale108); /* @kind other */
+  --motion-transform-play-control-zoom: var(--ref-transform-application-scale112); /* @kind other */
+  --motion-transform-pathway-tab-active: var(--ref-transform-application-scale105); /* @kind other */
+  --motion-transform-product-highlighted: var(--ref-transform-application-product-highlighted); /* @kind other */
+  --motion-transform-product-dimmed: var(--ref-transform-application-product-dimmed); /* @kind other */
+  --motion-transform-product-dimmed-hover: var(--ref-transform-application-product-dimmed-hover); /* @kind other */
+  --motion-transform-product-cta-rest: var(--ref-transform-application-product-cta-rest); /* @kind other */
+  --motion-transform-product-cta-hover: var(--ref-transform-application-product-cta-hover); /* @kind other */
+  --motion-transform-pathway-slide-from: var(--ref-transform-application-pathway-slide-from); /* @kind other */
+  --motion-transform-pathway-slide-to: var(--ref-transform-application-pathway-slide-to); /* @kind other */
+  --motion-transform-pathway-feature-from: var(--ref-transform-application-pathway-feature-from); /* @kind other */
+  --motion-transform-pathway-feature-to: var(--ref-transform-application-pathway-feature-to); /* @kind other */
+  --transform-decorative-subpage-hero-overscan: var(--ref-transform-application-scale106); /* @kind other */
+  --transform-decorative-youtube-banner-watermark: var(--ref-transform-application-youtube-banner-watermark); /* @kind other */
+  --transform-decorative-youtube-card-watermark: var(--ref-transform-application-youtube-card-watermark); /* @kind other */
   --z-base: var(--ref-z-index-0); /* @kind other */
   --z-sticky: var(--ref-z-index-100); /* @kind other */
   --z-dropdown: var(--ref-z-index-200); /* @kind other */
@@ -712,6 +731,25 @@
   --motion-transform-lift-strong: var(--ref-transform-application-lift-strong); /* @kind other */
   --motion-transform-nudge-subtle: var(--ref-transform-application-nudge-subtle); /* @kind other */
   --motion-transform-nudge-strong: var(--ref-transform-application-nudge-strong); /* @kind other */
+  --motion-transform-media-generic-zoom: var(--ref-transform-application-scale102); /* @kind other */
+  --motion-transform-media-detail-zoom: var(--ref-transform-application-scale104); /* @kind other */
+  --motion-transform-card-media-zoom: var(--ref-transform-application-scale105); /* @kind other */
+  --motion-transform-media-showcase-zoom: var(--ref-transform-application-scale106); /* @kind other */
+  --motion-transform-video-badge-zoom: var(--ref-transform-application-scale108); /* @kind other */
+  --motion-transform-play-control-zoom: var(--ref-transform-application-scale112); /* @kind other */
+  --motion-transform-pathway-tab-active: var(--ref-transform-application-scale105); /* @kind other */
+  --motion-transform-product-highlighted: var(--ref-transform-application-product-highlighted); /* @kind other */
+  --motion-transform-product-dimmed: var(--ref-transform-application-product-dimmed); /* @kind other */
+  --motion-transform-product-dimmed-hover: var(--ref-transform-application-product-dimmed-hover); /* @kind other */
+  --motion-transform-product-cta-rest: var(--ref-transform-application-product-cta-rest); /* @kind other */
+  --motion-transform-product-cta-hover: var(--ref-transform-application-product-cta-hover); /* @kind other */
+  --motion-transform-pathway-slide-from: var(--ref-transform-application-pathway-slide-from); /* @kind other */
+  --motion-transform-pathway-slide-to: var(--ref-transform-application-pathway-slide-to); /* @kind other */
+  --motion-transform-pathway-feature-from: var(--ref-transform-application-pathway-feature-from); /* @kind other */
+  --motion-transform-pathway-feature-to: var(--ref-transform-application-pathway-feature-to); /* @kind other */
+  --transform-decorative-subpage-hero-overscan: var(--ref-transform-application-scale106); /* @kind other */
+  --transform-decorative-youtube-banner-watermark: var(--ref-transform-application-youtube-banner-watermark); /* @kind other */
+  --transform-decorative-youtube-card-watermark: var(--ref-transform-application-youtube-card-watermark); /* @kind other */
   --z-base: var(--ref-z-index-0); /* @kind other */
   --z-sticky: var(--ref-z-index-100); /* @kind other */
   --z-dropdown: var(--ref-z-index-200); /* @kind other */
@@ -1302,6 +1340,25 @@
   --motion-transform-lift-strong: var(--ref-transform-application-lift-strong); /* @kind other */
   --motion-transform-nudge-subtle: var(--ref-transform-application-nudge-subtle); /* @kind other */
   --motion-transform-nudge-strong: var(--ref-transform-application-nudge-strong); /* @kind other */
+  --motion-transform-media-generic-zoom: var(--ref-transform-application-scale102); /* @kind other */
+  --motion-transform-media-detail-zoom: var(--ref-transform-application-scale104); /* @kind other */
+  --motion-transform-card-media-zoom: var(--ref-transform-application-scale105); /* @kind other */
+  --motion-transform-media-showcase-zoom: var(--ref-transform-application-scale106); /* @kind other */
+  --motion-transform-video-badge-zoom: var(--ref-transform-application-scale108); /* @kind other */
+  --motion-transform-play-control-zoom: var(--ref-transform-application-scale112); /* @kind other */
+  --motion-transform-pathway-tab-active: var(--ref-transform-application-scale105); /* @kind other */
+  --motion-transform-product-highlighted: var(--ref-transform-application-product-highlighted); /* @kind other */
+  --motion-transform-product-dimmed: var(--ref-transform-application-product-dimmed); /* @kind other */
+  --motion-transform-product-dimmed-hover: var(--ref-transform-application-product-dimmed-hover); /* @kind other */
+  --motion-transform-product-cta-rest: var(--ref-transform-application-product-cta-rest); /* @kind other */
+  --motion-transform-product-cta-hover: var(--ref-transform-application-product-cta-hover); /* @kind other */
+  --motion-transform-pathway-slide-from: var(--ref-transform-application-pathway-slide-from); /* @kind other */
+  --motion-transform-pathway-slide-to: var(--ref-transform-application-pathway-slide-to); /* @kind other */
+  --motion-transform-pathway-feature-from: var(--ref-transform-application-pathway-feature-from); /* @kind other */
+  --motion-transform-pathway-feature-to: var(--ref-transform-application-pathway-feature-to); /* @kind other */
+  --transform-decorative-subpage-hero-overscan: var(--ref-transform-application-scale106); /* @kind other */
+  --transform-decorative-youtube-banner-watermark: var(--ref-transform-application-youtube-banner-watermark); /* @kind other */
+  --transform-decorative-youtube-card-watermark: var(--ref-transform-application-youtube-card-watermark); /* @kind other */
   --z-base: var(--ref-z-index-0); /* @kind other */
   --z-sticky: var(--ref-z-index-100); /* @kind other */
   --z-dropdown: var(--ref-z-index-200); /* @kind other */

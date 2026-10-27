@@ -347,3 +347,93 @@ class AppStylesTests(unittest.TestCase):
             )]
             with self.subTest(selector=selector):
                 self.assertEqual(values, [f'var({token})'])
+
+    def test_remaining_visual_transforms_use_role_specific_tokens(self):
+        source = (ROOT / 'src/styles/application.css').read_text(encoding='utf-8')
+        expected = {
+            '.alu-card:hover .alu-card__media img': '--motion-transform-media-generic-zoom',
+            '.alu-card__media--video:hover .alu-video-play-badge': '--motion-transform-video-badge-zoom',
+            '.alu-pathway-tab--active': '--motion-transform-pathway-tab-active',
+            '.alu-pathway-split:hover .alu-pathway-visual-frame img': '--motion-transform-media-detail-zoom',
+            '.alu-product-card--highlighted': '--motion-transform-product-highlighted',
+            '.alu-product-card--dimmed': '--motion-transform-product-dimmed',
+            '.alu-product-card--dimmed:hover': '--motion-transform-product-dimmed-hover',
+            '.alu-product-card:hover .alu-product-card__media img': '--motion-transform-card-media-zoom',
+            '.alu-product-card__cta': '--motion-transform-product-cta-rest',
+            '.alu-product-card:hover .alu-product-card__cta': '--motion-transform-product-cta-hover',
+            '.alu-bento-card:hover .alu-bento-card__bg': '--motion-transform-card-media-zoom',
+            '.alu-innovation-card:hover .alu-innovation-card__media img': '--motion-transform-card-media-zoom',
+            '.alu-subpage-hero__bg': '--transform-decorative-subpage-hero-overscan',
+            '.alu-yt-banner__watermark': '--transform-decorative-youtube-banner-watermark',
+            '.alu-yt-card__watermark': '--transform-decorative-youtube-card-watermark',
+            '.alu-media-card:hover .alu-media-card__thumb img': '--motion-transform-media-showcase-zoom',
+            '.alu-scia-callout__media--interactive:hover img,\n.alu-scia-callout__media--interactive:hover video': '--motion-transform-media-detail-zoom',
+            '.alu-scia-callout__media--interactive:hover .alu-media-card__play-circle': '--motion-transform-play-control-zoom',
+        }
+        for selector, token in expected.items():
+            matches = re.findall(rf'(?m)^[\t ]*{re.escape(selector)}[\t ]*\{{([^{{}}]*)\}}', source)
+            self.assertTrue(matches, selector)
+            values = [value for declarations in matches for value in re.findall(
+                r'(?m)^\s*transform\s*:\s*([^;]+);', declarations
+            )]
+            with self.subTest(selector=selector):
+                self.assertEqual(values, [f'var({token})'])
+
+        play_group = re.search(
+            r'(?m)^\.alu-media-card:hover \.alu-media-card__play-circle,\n'
+            r'\.alu-wf-detail__media:hover \.alu-media-card__play-circle\s*\{([^{}]*)\}', source
+        )
+        self.assertIsNotNone(play_group)
+        self.assertEqual(
+            re.findall(r'(?m)^\s*transform\s*:\s*([^;]+);', play_group.group(1)),
+            ['var(--motion-transform-play-control-zoom)'],
+        )
+
+        keyframes = {
+            'aluPathwaySlideIn': {
+                'from': '--motion-transform-pathway-slide-from',
+                'to': '--motion-transform-pathway-slide-to',
+            },
+            'aluPathwayFeatureIn': {
+                'from': '--motion-transform-pathway-feature-from',
+                'to': '--motion-transform-pathway-feature-to',
+            },
+        }
+        for name, steps in keyframes.items():
+            match = re.search(rf'@keyframes {name}\s*\{{(.*?)\n\}}', source, re.S)
+            self.assertIsNotNone(match, name)
+            for step, token in steps.items():
+                block = re.search(rf'\b{step}\s*\{{([^{{}}]*)\}}', match.group(1))
+                self.assertIsNotNone(block, f'{name}:{step}')
+                self.assertEqual(
+                    re.findall(r'(?m)^\s*transform\s*:\s*([^;]+);', block.group(1)),
+                    [f'var({token})'],
+                )
+
+        raw = [value.strip() for value in re.findall(
+            r'(?m)^\s*transform\s*:\s*([^;]+);', source
+        ) if not value.strip().startswith('var(')]
+        self.assertEqual(sorted(raw), ['rotate(180deg)', 'translate(-50%, -50%)'])
+        literal_contracts = {
+            '.alu-pathway-glow': 'translate(-50%, -50%)',
+            '.alu-faq-item[open] .alu-faq-item__chevron': 'rotate(180deg)',
+        }
+        for selector, expected_value in literal_contracts.items():
+            blocks = re.findall(rf'(?m)^[\t ]*{re.escape(selector)}[\t ]*\{{([^{{}}]*)\}}', source)
+            values = [value.strip() for block in blocks for value in re.findall(
+                r'(?m)^\s*transform\s*:\s*([^;]+);', block
+            )]
+            self.assertEqual(values, [expected_value], selector)
+
+    def test_application_transform_guard_rejects_new_raw_visual_values(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            self.fixture(root)
+            app = root / 'src/styles/application.css'
+            app.write_text('.card {transform:var(--motion-transform-card-media-zoom)}')
+            styles.sync_styles(root)
+            for value in ['scale(1.02)', 'translateY(-2px)', 'rotate(90deg)',
+                          'translateX(2px) rotate(var(--angle))', 'rotate(180deg)']:
+                app.write_text(f'.card {{transform:{value}}}')
+                with self.subTest(value=value), self.assertRaisesRegex(ValueError, 'Raw application transform'):
+                    styles.sync_styles(root)

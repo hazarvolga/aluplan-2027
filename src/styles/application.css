@@ -560,7 +560,7 @@ button.alu-role[aria-checked="true"] {
   transition: transform var(--motion-duration-base) var(--motion-easing-standard);
 }
 .alu-card:hover .alu-card__media img {
-  transform: scale(1.02);
+  transform: var(--motion-transform-media-generic-zoom);
 }
 .alu-video-play-badge {
   position: absolute;
@@ -577,7 +577,7 @@ button.alu-role[aria-checked="true"] {
   transition: transform var(--motion-duration-fast) var(--motion-easing-standard);
 }
 .alu-card__media--video:hover .alu-video-play-badge {
-  transform: scale(1.08);
+  transform: var(--motion-transform-video-badge-zoom);
   background: var(--action-primary-bg-hover);
 }
 
@@ -962,22 +962,22 @@ button.alu-role[aria-checked="true"] {
 @keyframes aluPathwaySlideIn {
   from {
     opacity: 0;
-    transform: translateX(-22px);
+    transform: var(--motion-transform-pathway-slide-from);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: var(--motion-transform-pathway-slide-to);
   }
 }
 
 @keyframes aluPathwayFeatureIn {
   from {
     opacity: 0;
-    transform: scale(0.92) translateY(10px);
+    transform: var(--motion-transform-pathway-feature-from);
   }
   to {
     opacity: 1;
-    transform: scale(1) translateY(0);
+    transform: var(--motion-transform-pathway-feature-to);
   }
 }
 
@@ -1048,7 +1048,7 @@ button.alu-role[aria-checked="true"] {
   background: var(--surface-raised);
   border-color: var(--tab-accent, var(--accent-border));
   color: var(--text-primary);
-  transform: scale(1.05);
+  transform: var(--motion-transform-pathway-tab-active);
   box-shadow:
     0 18px 40px -12px var(--visual-shadow-media),
     0 0 0 1px var(--tab-accent, var(--accent-border));
@@ -1244,7 +1244,7 @@ button.alu-role[aria-checked="true"] {
   transition: transform var(--motion-duration-reveal) var(--motion-easing-expressive);
 }
 .alu-pathway-split:hover .alu-pathway-visual-frame img {
-  transform: scale(1.04);
+  transform: var(--motion-transform-media-detail-zoom);
 }
 .alu-pathway-visual-frame__caption {
   position: absolute;
@@ -1283,7 +1283,7 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-product-card--highlighted {
   opacity: 1;
-  transform: scale(1) translateY(0);
+  transform: var(--motion-transform-product-highlighted);
   filter: grayscale(0);
   background: var(--surface-raised);
   border-color: color-mix(in srgb, var(--role-accent, var(--role-architect)) 55%, var(--border-strong));
@@ -1300,7 +1300,7 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-product-card--dimmed {
   opacity: 0.3;
-  transform: scale(0.975);
+  transform: var(--motion-transform-product-dimmed);
   filter: grayscale(100%);
   background: var(--surface-subtle);
   border-color: var(--border-subtle);
@@ -1308,7 +1308,7 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-product-card--dimmed:hover {
   opacity: 0.82;
-  transform: scale(0.99);
+  transform: var(--motion-transform-product-dimmed-hover);
   filter: grayscale(20%);
   border-color: var(--border-strong);
   text-decoration: none;
@@ -1330,7 +1330,7 @@ button.alu-role[aria-checked="true"] {
   transition: transform var(--motion-duration-emphasis) var(--motion-easing-expressive);
 }
 .alu-product-card:hover .alu-product-card__media img {
-  transform: scale(1.05);
+  transform: var(--motion-transform-card-media-zoom);
 }
 .alu-product-card__tier {
   position: absolute;
@@ -1443,14 +1443,14 @@ button.alu-role[aria-checked="true"] {
   font-weight: var(--font-weight-application-pathway-role-badge);
   color: var(--role-accent, var(--accent-fg));
   opacity: 0.78;
-  transform: translateY(2px);
+  transform: var(--motion-transform-product-cta-rest);
   transition:
     opacity var(--motion-duration-slow) var(--motion-easing-expressive),
     transform var(--motion-duration-slow) var(--motion-easing-expressive);
 }
 .alu-product-card:hover .alu-product-card__cta {
   opacity: 1;
-  transform: translateY(0) translateX(3px);
+  transform: var(--motion-transform-product-cta-hover);
 }
 
 /* H04: Asymmetric Bento Grid */
@@ -1511,7 +1511,7 @@ button.alu-role[aria-checked="true"] {
   filter: brightness(0.75) contrast(1.08);
 }
 .alu-bento-card:hover .alu-bento-card__bg {
-  transform: scale(1.05);
+  transform: var(--motion-transform-card-media-zoom);
   filter: brightness(0.85) contrast(1.1);
 }
 .alu-bento-card__scrim {
@@ -1711,7 +1711,7 @@ button.alu-role[aria-checked="true"] {
   transition: transform var(--motion-duration-emphasis) var(--motion-easing-default);
 }
 .alu-innovation-card:hover .alu-innovation-card__media img {
-  transform: scale(1.05);
+  transform: var(--motion-transform-card-media-zoom);
 }
 .alu-innovation-card__overlay {
   position: absolute;
@@ -1755,7 +1755,7 @@ button.alu-role[aria-checked="true"] {
   background-position: center;
   opacity: 0.14;
   filter: blur(8px) saturate(0.8);
-  transform: scale(1.06);
+  transform: var(--transform-decorative-subpage-hero-overscan);
 }
 .alu-subpage-hero__scrim {
   position: absolute;
@@ -1939,7 +1939,7 @@ button.alu-role[aria-checked="true"] {
   opacity: 0.08;
   pointer-events: none;
   color: var(--visual-youtube-action);
-  transform: scale(6.5);
+  transform: var(--transform-decorative-youtube-banner-watermark);
   transform-origin: top right;
 }
 .alu-yt-banner__content {
@@ -2118,7 +2118,7 @@ button.alu-role[aria-checked="true"] {
   right: var(--space-application-jsx-section-wide);
   opacity: 0;
   color: var(--visual-media-border-subtle);
-  transform: scale(1.6);
+  transform: var(--transform-decorative-youtube-card-watermark);
   pointer-events: none;
   transition: opacity var(--motion-duration-slow) var(--motion-easing-default);
 }
@@ -2587,7 +2587,7 @@ button.alu-role[aria-checked="true"] {
   transition: transform var(--motion-duration-showcase) var(--motion-easing-expressive);
 }
 .alu-media-card:hover .alu-media-card__thumb img {
-  transform: scale(1.06);
+  transform: var(--motion-transform-media-showcase-zoom);
 }
 .alu-media-card__scrim {
   position: absolute;
@@ -2636,7 +2636,7 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-media-card:hover .alu-media-card__play-circle,
 .alu-wf-detail__media:hover .alu-media-card__play-circle {
-  transform: scale(1.12);
+  transform: var(--motion-transform-play-control-zoom);
   background: var(--action-primary-bg);
 }
 .alu-media-card__zoom-hint {
@@ -2925,10 +2925,10 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-scia-callout__media--interactive:hover img,
 .alu-scia-callout__media--interactive:hover video {
-  transform: scale(1.04);
+  transform: var(--motion-transform-media-detail-zoom);
 }
 .alu-scia-callout__media--interactive:hover .alu-media-card__play-circle {
-  transform: scale(1.12);
+  transform: var(--motion-transform-play-control-zoom);
   background: var(--action-primary-bg);
 }
 .alu-scia-callout__media--interactive:hover .alu-media-card__zoom-hint {

@@ -5,7 +5,6 @@ import Link from 'next/link';
 import {
   PageRecord,
   PlaylistRecord,
-  getSearchIndex,
   TRIAL_CTA_URL,
   MAIN_QUOTE_FORM_URL,
   SUPPORT_PORTAL_URL
@@ -21,11 +20,9 @@ import { SplitCalloutSection } from './SplitCalloutSection';
 import { VideoLibraryHubSection } from './VideoLibraryHubSection';
 import { ReferencesDirectorySection } from './ReferencesDirectorySection';
 import { VideoPlaylistSection } from './VideoPlaylistSection';
+import { SearchPageSection } from './SearchPageSection';
 import { handleStructuredTabKey } from './structured-tab-key';
 import { MediaDialog } from '@/components/ui/MediaDialog';
-
-
-const searchIndex = getSearchIndex();
 
 const SECTION_LABELS: Record<string, string> = {
   products: 'ALLPLAN ÜRÜN AİLESİ',
@@ -67,19 +64,6 @@ export function SubpageView({
   const isLegalPage = page.section === 'legal';
   const isVideoLibraryHub = page.path === '/solutions-v2/training/video-library';
   const isVideoPlaylistPage = Boolean(playlist);
-  const filteredResults = searchQuery.trim()
-    ? searchIndex.filter((item) => {
-        const q = searchQuery.toLowerCase();
-        return (
-          item.title.toLowerCase().includes(q) ||
-          item.seoTitle.toLowerCase().includes(q) ||
-          item.description.toLowerCase().includes(q) ||
-          item.path.toLowerCase().includes(q) ||
-          item.keywords.toLowerCase().includes(q)
-        );
-      })
-    : searchIndex;
-
   // Separate high-resolution photos from small icon assets (52x52 / 128x128 PNGs)
   const photoImages = React.useMemo(() => {
     const seen = new Set<string>();
@@ -257,37 +241,10 @@ export function SubpageView({
 
       {/* Special Interactive View: Search Page (/search) */}
       {page.path === '/search' && (
-        <section className="preview-section" aria-labelledby="search-page-heading">
-          <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-lg)' }}>
-            <h2 id="search-page-heading" className="alu-h2">
-              Tüm Sayfa, Ürün ve Çözümlerde Ara ({filteredResults.length} sonuç)
-            </h2>
-            <input
-              type="search"
-              className="alu-input"
-              placeholder="Anahtar kelime girin (örn. ALLPLAN 2026, AX3000, BIMFlex, Köprü, Prekast)..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-            <div className="alu-services-grid">
-              {filteredResults.map((item) => (
-                <article key={item.path} className="alu-service-card">
-                  <span className="alu-card__eyebrow">{item.section.toUpperCase()}</span>
-                  <div className="alu-card__body">
-                    <h3 className="alu-card__title">{item.title}</h3>
-                    <p className="alu-body-sm">{item.description}</p>
-                  </div>
-                  <div className="alu-card__footer">
-                    <Link className="alu-link alu-link--standalone" href={item.path}>
-                      <span>Sayfaya Git</span>
-                      <AluIcon name="arrow-right" size="sm" />
-                    </Link>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
+        <SearchPageSection
+          query={searchQuery}
+          onQueryChange={setSearchQuery}
+        />
       )}
 
       {page.path === '/solutions-v2/training' && page.structuredLayout?.trainingTabs && (

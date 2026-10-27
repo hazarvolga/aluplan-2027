@@ -231,6 +231,90 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
                 )
                 self.assertEqual(pages[record["url"]]["playlistId"], playlist_id)
 
+    def test_search_page_has_a_dedicated_controlled_render_boundary(self):
+        component = read("src/components/sections/SearchPageSection.tsx")
+        parent = read("src/components/sections/SubpageView.tsx")
+
+        self.assertTrue(component.startswith("'use client';"))
+        self.assertIn("import { getSearchIndex }", component)
+        for marker in [
+            "query: string",
+            "onQueryChange: (query: string) => void",
+            "const searchIndex = getSearchIndex()",
+            "query.trim()",
+            "const normalizedQuery = query.toLowerCase()",
+            "item.title.toLowerCase().includes(normalizedQuery)",
+            "item.seoTitle.toLowerCase().includes(normalizedQuery)",
+            "item.description.toLowerCase().includes(normalizedQuery)",
+            "item.path.toLowerCase().includes(normalizedQuery)",
+            "item.keywords.toLowerCase().includes(normalizedQuery)",
+            "Tüm Sayfa, Ürün ve Çözümlerde Ara",
+            "filteredResults.map",
+            "item.section.toUpperCase()",
+            "Sayfaya Git",
+        ]:
+            with self.subTest(marker=marker):
+                self.assertIn(marker, component)
+
+        self.assertIn("import { SearchPageSection } from './SearchPageSection';", parent)
+        self.assertIn("page.path === '/search'", parent)
+        self.assertIn("query={searchQuery}", parent)
+        self.assertIn("onQueryChange={setSearchQuery}", parent)
+        self.assertIn("const [searchQuery, setSearchQuery] = useState('')", parent)
+        self.assertNotIn("getSearchIndex", parent)
+        self.assertNotIn("filteredResults", parent)
+        self.assertNotIn("alu-services-grid", parent)
+
+    def test_search_index_preserves_all_page_records_and_order(self):
+        search_index = json.loads(read("src/data/search-index.json"))
+        pages = json.loads(read("src/data/pages.json"))
+
+        def filter_paths(query: str):
+            if not query.strip():
+                return [item["path"] for item in search_index]
+            normalized_query = query.lower()
+            return [
+                item["path"]
+                for item in search_index
+                if any(
+                    normalized_query in item[field].lower()
+                    for field in ["title", "seoTitle", "description", "path", "keywords"]
+                )
+            ]
+
+        self.assertEqual(len(search_index), 110)
+        self.assertEqual(len({item["path"] for item in search_index}), 110)
+        self.assertEqual(
+            [item["path"] for item in search_index],
+            list(pages.keys()),
+        )
+        self.assertEqual(search_index[0]["path"], "/")
+        self.assertEqual(search_index[-1]["path"], "/solutions/structural")
+        self.assertEqual(
+            {item["path"] for item in search_index if not item["keywords"]},
+            {"/health", "/package-overview", "/references", "/search"},
+        )
+        for item in search_index:
+            with self.subTest(path=item["path"]):
+                self.assertIn(item["path"], pages)
+                page = pages[item["path"]]
+                self.assertEqual(item["title"], page["h1"])
+                self.assertEqual(item["seoTitle"], page["title"])
+                self.assertEqual(item["section"], page["section"])
+                self.assertEqual(item["description"], page["description"])
+
+        self.assertEqual(len(filter_paths("")), 110)
+        self.assertEqual(len(filter_paths(" ")), 110)
+        self.assertEqual(len(filter_paths("allplan")), 79)
+        self.assertEqual(
+            filter_paths("BIMFlex"),
+            ["/solutions-v2/other", "/solutions/bimflex"],
+        )
+        self.assertEqual(len(filter_paths("Köprü")), 9)
+        self.assertEqual(len(filter_paths("Prekast")), 4)
+        self.assertEqual(filter_paths("__none__"), [])
+        self.assertEqual(filter_paths(" bimflex "), ["/solutions/bimflex"])
+
     def test_about_editorial_has_a_dedicated_render_boundary(self):
         component = read("src/components/sections/AboutEditorialSection.tsx")
         parent = read("src/components/sections/SubpageView.tsx")

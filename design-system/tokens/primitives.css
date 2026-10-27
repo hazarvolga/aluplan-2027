@@ -319,6 +319,7 @@
   --ref-border-width-1: 1px;
   --ref-border-width-2: 2px;
   --ref-border-width-3: 3px;
+  --ref-border-width-4: 4px;
   --ref-shadow-none: none;
   --ref-shadow-xs: 0 1px 2px var(--ref-color-alpha-ink08);
   --ref-shadow-sm: 0 1px 3px var(--ref-color-alpha-ink10), 0 1px 2px var(--ref-color-alpha-ink06);

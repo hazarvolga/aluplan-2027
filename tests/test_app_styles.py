@@ -113,3 +113,26 @@ class AppStylesTests(unittest.TestCase):
                 with self.subTest(declaration=declaration), self.assertRaisesRegex(ValueError, 'Raw application metric'):
                     styles.sync_styles(root)
                 self.assertEqual((root / styles.OUTPUT).read_bytes(), before)
+
+    def test_application_border_widths_must_use_tokens(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            self.fixture(root)
+            app = root / 'src/styles/application.css'
+            app.write_text('.card {border:var(--border-width-default) solid var(--border-default)}')
+            styles.sync_styles(root)
+            before = (root / styles.OUTPUT).read_bytes()
+            for declaration in ['border:1px solid var(--border-default)',
+                                'border:solid 1px var(--border-default)',
+                                'border-top:2px solid var(--border-strong)',
+                                'border-left:3px solid var(--accent-border)',
+                                'border-left:4px solid var(--accent-border)',
+                                'border-block-start:solid 2px var(--border-strong)',
+                                'border-inline-start-width:1px',
+                                'border-image-width:1px',
+                                'border-image-width:10%',
+                                'border:1pt solid var(--border-default)']:
+                app.write_text('.card {' + declaration + '}')
+                with self.subTest(declaration=declaration), self.assertRaisesRegex(ValueError, 'Raw application metric'):
+                    styles.sync_styles(root)
+                self.assertEqual((root / styles.OUTPUT).read_bytes(), before)

@@ -176,6 +176,8 @@
   --radius-application-media-badge: var(--ref-radius-2);
   --border-width-default: var(--ref-border-width-1);
   --border-width-strong: var(--ref-border-width-2);
+  --border-width-accent: var(--ref-border-width-3);
+  --border-width-heavy: var(--ref-border-width-4);
   --elevation-flat: var(--ref-shadow-none);
   --elevation-raised: var(--ref-shadow-xs);
   --elevation-hover: var(--ref-shadow-sm);
@@ -561,6 +563,8 @@
   --radius-application-media-badge: var(--ref-radius-2);
   --border-width-default: var(--ref-border-width-1);
   --border-width-strong: var(--ref-border-width-2);
+  --border-width-accent: var(--ref-border-width-3);
+  --border-width-heavy: var(--ref-border-width-4);
   --elevation-flat: var(--ref-shadow-none);
   --elevation-raised: var(--ref-shadow-xs);
   --elevation-hover: var(--ref-shadow-sm);
@@ -1082,6 +1086,8 @@
   --radius-application-media-badge: var(--ref-radius-2);
   --border-width-default: var(--ref-border-width-1);
   --border-width-strong: var(--ref-border-width-2);
+  --border-width-accent: var(--ref-border-width-3);
+  --border-width-heavy: var(--ref-border-width-4);
   --elevation-flat: var(--ref-shadow-none);
   --elevation-raised: var(--ref-shadow-md);
   --elevation-hover: var(--ref-shadow-lg);

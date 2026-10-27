@@ -315,6 +315,77 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
         self.assertEqual(filter_paths("__none__"), [])
         self.assertEqual(filter_paths(" bimflex "), ["/solutions/bimflex"])
 
+    def test_subpage_hero_has_a_dedicated_stateless_render_boundary(self):
+        component = read("src/components/sections/SubpageHeroSection.tsx")
+        parent = read("src/components/sections/SubpageView.tsx")
+
+        self.assertNotIn("'use client'", component)
+        self.assertIn("import type { ContentImage, PageRecord }", component)
+        for marker in [
+            "page: PageRecord",
+            "heroImage: ContentImage | null",
+            "sectionBadgeLabel: string",
+            "isLegalPage: boolean",
+            "alu-subpage-hero",
+            'aria-labelledby="page-h1"',
+            "page.breadcrumbs.map",
+            'aria-current="page"',
+            "sectionBadgeLabel",
+            "page.h1",
+            "page.description",
+            "!isLegalPage && page.path !== '/about'",
+            "href={MAIN_QUOTE_FORM_URL}",
+            "href={TRIAL_CTA_URL}",
+            "page.path.startsWith('/products')",
+            'href="/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf"',
+            "backgroundImage: `url(${heroImage.src})`",
+            "alt={heroImage.alt || page.h1}",
+            "heroImage.alt &&",
+        ]:
+            with self.subTest(marker=marker):
+                self.assertIn(marker, component)
+
+        self.assertIn("import { SubpageHeroSection } from './SubpageHeroSection';", parent)
+        for marker in [
+            "const isLegalPage = page.section === 'legal'",
+            "const heroImage = !isLegalPage && photoImages.length > 0 ? photoImages[0] : null",
+            "const sectionBadgeLabel = SECTION_LABELS[page.section] || page.eyebrow",
+            "<SubpageHeroSection",
+            "page={page}",
+            "heroImage={heroImage}",
+            "sectionBadgeLabel={sectionBadgeLabel}",
+            "isLegalPage={isLegalPage}",
+        ]:
+            with self.subTest(marker=marker):
+                self.assertIn(marker, parent)
+        self.assertNotIn("alu-subpage-hero", parent)
+        self.assertNotIn("alu-breadcrumb", parent)
+
+    def test_subpage_hero_data_preserves_route_specific_branches_and_pdf(self):
+        pages = json.loads(read("src/data/pages.json"))
+        subpages = [page for path, page in pages.items() if path != "/"]
+
+        hero_image_routes = [
+            page["path"]
+            for page in subpages
+            if page["section"] != "legal"
+            and any(image.get("src") and not image.get("isIcon") for image in page.get("images") or [])
+        ]
+        no_cta_routes = [
+            page["path"]
+            for page in subpages
+            if page["section"] == "legal" or page["path"] == "/about"
+        ]
+        product_routes = [page["path"] for page in subpages if page["path"].startswith("/products")]
+
+        self.assertEqual(len(subpages), 109)
+        self.assertEqual(len(hero_image_routes), 69)
+        self.assertEqual(no_cta_routes, ["/about", "/gizlilik-politikasi", "/kullanim-sartlari", "/kvkk"])
+        self.assertEqual(len(product_routes), 18)
+        self.assertTrue(
+            (ROOT / "public/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf").is_file()
+        )
+
     def test_about_editorial_has_a_dedicated_render_boundary(self):
         component = read("src/components/sections/AboutEditorialSection.tsx")
         parent = read("src/components/sections/SubpageView.tsx")

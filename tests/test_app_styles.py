@@ -203,3 +203,29 @@ class AppStylesTests(unittest.TestCase):
             with self.subTest(selector=selector):
                 for prop, token in properties.items():
                     self.assertRegex(declarations, rf'(?m)^\s*{re.escape(prop)}\s*:\s*var\({re.escape(token)}\);')
+
+    def test_content_widths_use_their_semantic_tokens(self):
+        source = (ROOT / 'src/styles/application.css').read_text(encoding='utf-8')
+        expected = {
+            '.alu-modal': ('width', 'min(100%, var(--container-application-modal))'),
+            '.alu-cookie-banner': ('max-width', 'var(--container-application-cookie-banner)'),
+            '.alu-hero-stage__title': ('max-width', 'var(--container-application-hero-title)'),
+            '.alu-hero-stage__lead': ('max-width', 'var(--container-application-hero-lead)'),
+            '.alu-pathway-tab': ('min-width', 'var(--container-application-pathway-tab)'),
+            '.alu-pathway-split__desc': ('max-width', 'var(--container-application-pathway-description)'),
+            '.alu-bento-card__bottom': ('max-width', 'var(--container-application-bento-copy)'),
+            '.alu-yt-banner__content': ('max-width', 'var(--container-application-youtube-banner)'),
+            '.alu-playlist-item__thumb': ('width', 'var(--container-application-playlist-thumbnail)'),
+            '.alu-intro-split--single': ('max-width', 'var(--container-application-intro-single)'),
+            '.alu-faq-list': ('max-width', 'var(--container-application-faq-list)'),
+            '.alu-video-modal__dialog': ('width', 'min(100%, var(--container-application-video-dialog))'),
+            '.alu-video-modal__dialog--image': ('width', 'min(100%, var(--container-application-image-dialog))'),
+            '.alu-ref-search': ('max-width', 'var(--container-application-reference-search)'),
+            '.alu-faq-stage': ('max-width', 'var(--container-application-faq-stage)'),
+            '.alu-about-office__contact-list dt': ('min-width', 'var(--container-application-contact-label)'),
+        }
+        for selector, (prop, value) in expected.items():
+            match = re.search(re.escape(selector) + r'\s*\{([^{}]*)\}', source)
+            self.assertIsNotNone(match, selector)
+            with self.subTest(selector=selector):
+                self.assertRegex(match.group(1), rf'(?m)^\s*{re.escape(prop)}\s*:\s*{re.escape(value)};')

@@ -336,6 +336,13 @@
   --ref-size-measure-24: 24rem;
   --ref-size-measure-32: 32rem;
   --ref-size-measure-36: 36rem;
+  --ref-size-measure-42: 42rem;
+  --ref-size-measure-44: 44rem;
+  --ref-size-measure-58: 58rem;
+  --ref-size-measure-62: 62rem;
+  --ref-size-measure-72: 72rem;
+  --ref-size-measure-7-5: 7.5rem;
+  --ref-size-measure-8-5: 8.5rem;
   --ref-size-application-utility-panel-max-height: 22rem;
   --ref-size-application-training-image-max-width: 32rem;
   --ref-size-application-content-column-min-width: 22rem;
@@ -662,6 +669,22 @@
   --container-xl: var(--ref-size-container1200);
   --container-prose: 68ch;
   --container-gutter: clamp(var(--ref-space-4), 4vw, var(--ref-space-8));
+  --container-application-modal: var(--ref-size-measure-42);
+  --container-application-cookie-banner: var(--ref-size-measure-44);
+  --container-application-youtube-banner: var(--ref-size-measure-44);
+  --container-application-hero-title: 14ch;
+  --container-application-hero-lead: 58ch;
+  --container-application-pathway-description: 52ch;
+  --container-application-bento-copy: 40ch;
+  --container-application-pathway-tab: var(--ref-size-measure-14);
+  --container-application-playlist-thumbnail: var(--ref-size-measure-7-5);
+  --container-application-intro-single: var(--ref-size-measure-58);
+  --container-application-faq-list: var(--ref-size-measure-58);
+  --container-application-video-dialog: var(--ref-size-container1024);
+  --container-application-image-dialog: var(--ref-size-measure-72);
+  --container-application-reference-search: var(--ref-size-measure-32);
+  --container-application-faq-stage: var(--ref-size-measure-62);
+  --container-application-contact-label: var(--ref-size-measure-8-5);
   --container-application-prose-narrow: 42ch;
   --container-application-prose-compact: 48ch;
   --container-application-meta: 58ch;
@@ -1077,6 +1100,22 @@
   --container-xl: var(--ref-size-container1200);
   --container-prose: 68ch;
   --container-gutter: clamp(var(--ref-space-4), 4vw, var(--ref-space-8));
+  --container-application-modal: var(--ref-size-measure-42);
+  --container-application-cookie-banner: var(--ref-size-measure-44);
+  --container-application-youtube-banner: var(--ref-size-measure-44);
+  --container-application-hero-title: 14ch;
+  --container-application-hero-lead: 58ch;
+  --container-application-pathway-description: 52ch;
+  --container-application-bento-copy: 40ch;
+  --container-application-pathway-tab: var(--ref-size-measure-14);
+  --container-application-playlist-thumbnail: var(--ref-size-measure-7-5);
+  --container-application-intro-single: var(--ref-size-measure-58);
+  --container-application-faq-list: var(--ref-size-measure-58);
+  --container-application-video-dialog: var(--ref-size-container1024);
+  --container-application-image-dialog: var(--ref-size-measure-72);
+  --container-application-reference-search: var(--ref-size-measure-32);
+  --container-application-faq-stage: var(--ref-size-measure-62);
+  --container-application-contact-label: var(--ref-size-measure-8-5);
   --container-application-prose-narrow: 42ch;
   --container-application-prose-compact: 48ch;
   --container-application-meta: 58ch;
@@ -1628,6 +1667,22 @@
   --container-xl: var(--ref-size-container1200);
   --container-prose: 68ch;
   --container-gutter: clamp(var(--ref-space-4), 4vw, var(--ref-space-8));
+  --container-application-modal: var(--ref-size-measure-42);
+  --container-application-cookie-banner: var(--ref-size-measure-44);
+  --container-application-youtube-banner: var(--ref-size-measure-44);
+  --container-application-hero-title: 14ch;
+  --container-application-hero-lead: 58ch;
+  --container-application-pathway-description: 52ch;
+  --container-application-bento-copy: 40ch;
+  --container-application-pathway-tab: var(--ref-size-measure-14);
+  --container-application-playlist-thumbnail: var(--ref-size-measure-7-5);
+  --container-application-intro-single: var(--ref-size-measure-58);
+  --container-application-faq-list: var(--ref-size-measure-58);
+  --container-application-video-dialog: var(--ref-size-container1024);
+  --container-application-image-dialog: var(--ref-size-measure-72);
+  --container-application-reference-search: var(--ref-size-measure-32);
+  --container-application-faq-stage: var(--ref-size-measure-62);
+  --container-application-contact-label: var(--ref-size-measure-8-5);
   --container-application-prose-narrow: 42ch;
   --container-application-prose-compact: 48ch;
   --container-application-meta: 58ch;
@@ -2937,7 +2992,7 @@ button.alu-role[aria-checked="true"] {
   padding: var(--space-inset-md);
 }
 .alu-modal {
-  width: min(100%, 42rem);
+  width: min(100%, var(--container-application-modal));
   max-height: 90vh;
   overflow-y: auto;
   background: var(--surface-raised);
@@ -2952,7 +3007,7 @@ button.alu-role[aria-checked="true"] {
   bottom: var(--space-inset-md);
   right: var(--space-inset-md);
   left: var(--space-inset-md);
-  max-width: 44rem;
+  max-width: var(--container-application-cookie-banner);
   margin-inline: auto;
   z-index: var(--z-overlay);
   background: var(--surface-raised);
@@ -3247,11 +3302,11 @@ button.alu-role[aria-checked="true"] {
   align-items: center;
 }
 .alu-hero-stage__title {
-  max-width: 14ch;
+  max-width: var(--container-application-hero-title);
   letter-spacing: var(--font-letter-spacing-application-display-tight);
 }
 .alu-hero-stage__lead {
-  max-width: 58ch;
+  max-width: var(--container-application-hero-lead);
   color: var(--text-primary);
   opacity: 0.9;
 }
@@ -3482,7 +3537,7 @@ button.alu-role[aria-checked="true"] {
   display: inline-flex;
   align-items: center;
   gap: var(--space-application-card-inset);
-  min-width: 14rem;
+  min-width: var(--container-application-pathway-tab);
   padding: var(--space-application-panel-dense-inset) var(--space-application-section-inset);
   background: var(--surface-default);
   border: var(--border-width-default) solid var(--border-strong);
@@ -3603,7 +3658,7 @@ button.alu-role[aria-checked="true"] {
   font-size: var(--type-application-pathway-split-desc-size);
   line-height: var(--type-application-body-relaxed-line-height);
   color: var(--text-secondary);
-  max-width: 52ch;
+  max-width: var(--container-application-pathway-description);
 }
 .alu-pathway-cta {
   display: inline-flex;
@@ -3993,7 +4048,7 @@ button.alu-role[aria-checked="true"] {
   display: flex;
   flex-direction: column;
   gap: var(--space-stack-sm);
-  max-width: 40ch;
+  max-width: var(--container-application-bento-copy);
 }
 .alu-bento-card__title {
   margin: 0;
@@ -4402,7 +4457,7 @@ button.alu-role[aria-checked="true"] {
 .alu-yt-banner__content {
   position: relative;
   z-index: 1;
-  max-width: 44rem;
+  max-width: var(--container-application-youtube-banner);
   display: flex;
   flex-direction: column;
   gap: var(--space-application-card-compact-gap);
@@ -4699,7 +4754,7 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-playlist-item__thumb {
   position: relative;
-  width: 7.5rem;
+  width: var(--container-application-playlist-thumbnail);
   aspect-ratio: 16 / 9;
   background: var(--visual-player-surface);
   overflow: hidden;
@@ -4782,7 +4837,7 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-intro-split--single {
   grid-template-columns: 1fr;
-  max-width: 58rem;
+  max-width: var(--container-application-intro-single);
 }
 .alu-intro-split__content {
   display: flex;
@@ -5413,7 +5468,7 @@ button.alu-role[aria-checked="true"] {
   display: flex;
   flex-direction: column;
   gap: var(--space-application-card-comfortable-gap);
-  max-width: 58rem;
+  max-width: var(--container-application-faq-list);
   margin-inline: auto;
   width: 100%;
 }
@@ -5506,7 +5561,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   }
 }
 .alu-video-modal__dialog {
-  width: min(100%, 64rem);
+  width: min(100%, var(--container-application-video-dialog));
   max-height: calc(100dvh - 2 * clamp(1rem, 3vw, 2.5rem));
   overflow-y: auto;
   background: var(--surface-raised);
@@ -5514,7 +5569,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   box-shadow: 0 32px 80px var(--visual-shadow-modal);
 }
 .alu-video-modal__dialog--image {
-  width: min(100%, 72rem);
+  width: min(100%, var(--container-application-image-dialog));
 }
 .alu-video-modal__header {
   display: flex;
@@ -5754,7 +5809,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   align-items: center;
   gap: var(--space-application-control-comfortable-gap);
   flex: 1 1 20rem;
-  max-width: 32rem;
+  max-width: var(--container-application-reference-search);
   padding: var(--space-stack-sm) var(--space-application-card-inset);
   background: var(--surface-raised);
   border: var(--border-width-default) solid var(--border-default);
@@ -5864,7 +5919,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   display: flex;
   flex-direction: column;
   gap: var(--space-application-section-inset);
-  max-width: 62rem;
+  max-width: var(--container-application-faq-stage);
   margin-inline: auto;
   width: 100%;
 }
@@ -6192,7 +6247,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 .alu-about-office__contact-list dt {
   font-weight: var(--font-weight-application-pathway-role-badge);
   color: var(--text-primary);
-  min-width: 8.5rem;
+  min-width: var(--container-application-contact-label);
 }
 
 .alu-about-office__contact-list dd {

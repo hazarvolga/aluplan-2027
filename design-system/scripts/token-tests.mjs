@@ -237,6 +237,30 @@ export function runTokenTests({ build = buildTokens, lint = lintComponentCss, T,
     }
     return true;
   });
+  test('application content-width tokens preserve their original measures', () => {
+    const expected = {
+      '--container-application-modal': '42rem',
+      '--container-application-cookie-banner': '44rem',
+      '--container-application-youtube-banner': '44rem',
+      '--container-application-hero-title': '14ch',
+      '--container-application-hero-lead': '58ch',
+      '--container-application-pathway-description': '52ch',
+      '--container-application-bento-copy': '40ch',
+      '--container-application-pathway-tab': '14rem',
+      '--container-application-playlist-thumbnail': '7.5rem',
+      '--container-application-intro-single': '58rem',
+      '--container-application-faq-list': '58rem',
+      '--container-application-video-dialog': '64rem',
+      '--container-application-image-dialog': '72rem',
+      '--container-application-reference-search': '32rem',
+      '--container-application-faq-stage': '62rem',
+      '--container-application-contact-label': '8.5rem'
+    };
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      for (const [name, value] of Object.entries(expected)) if (values[name] !== value) return `${theme}/${mode} ${name}: expected ${value}, got ${values[name]}`;
+    }
+    return true;
+  });
   return { results, passed: results.filter(r => r.pass).length, failed: results.filter(r => !r.pass).length };
 }
 

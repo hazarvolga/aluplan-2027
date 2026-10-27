@@ -5,7 +5,6 @@ import Link from 'next/link';
 import {
   PageRecord,
   PlaylistRecord,
-  StructuredMediaGridSection,
   getAllPlaylists,
   getSearchIndex,
   TRIAL_CTA_URL,
@@ -19,6 +18,7 @@ import { DirectoryCategoryIcon } from './DirectoryCategoryIcon';
 import { FAQSection } from './FAQSection';
 import { AboutEditorialSection } from './AboutEditorialSection';
 import { BenefitsSection } from './BenefitsSection';
+import { MediaGridSection } from './MediaGridSection';
 import { handleStructuredTabKey } from './structured-tab-key';
 import { MediaDialog } from '@/components/ui/MediaDialog';
 
@@ -802,160 +802,6 @@ export function SubpageView({
           {(() => {
             const sl = page.structuredLayout!;
 
-            const renderMediaGrid = (grid: StructuredMediaGridSection, keyPrefix: string) => {
-              const cols = grid.columns || 3;
-              return (
-                <section key={keyPrefix} className="preview-section" aria-label={grid.title}>
-                  <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
-                    <div className="alu-section-header-center">
-                      {grid.kicker && <span className="preview-kicker">{grid.kicker}</span>}
-                      <h2 className="alu-h1" style={{ margin: 0 }}>
-                        {grid.title}
-                      </h2>
-                      {grid.subtitle && (
-                        <p className="alu-body preview-meta" style={{ margin: 0, maxWidth: 'var(--container-prose)' }}>
-                          {grid.subtitle}
-                        </p>
-                      )}
-                    </div>
-
-                    <div className={`alu-media-grid alu-media-grid--cols-${cols}`}>
-                      {grid.items.map((item, idx) => {
-                        const hasVideo = Boolean(item.youtubeId);
-                        const resolvedThumbSrc =
-                          item.imageSrc ||
-                          (item.youtubeId ? `https://img.youtube.com/vi/${item.youtubeId}/hqdefault.jpg` : '');
-                        const hasImage = Boolean(resolvedThumbSrc);
-                        return (
-                          <article
-                            key={`${keyPrefix}-${item.title}-${idx}`}
-                            className={`alu-media-card${hasVideo ? ' alu-media-card--video' : ''}`}
-                          >
-                            {hasImage && (
-                              <div
-                                className="alu-media-card__thumb"
-                                role={hasVideo || hasImage ? 'button' : undefined}
-                                tabIndex={hasVideo || hasImage ? 0 : undefined}
-                                aria-label={
-                                  hasVideo
-                                    ? `${item.title} videosunu pop-up pencerede oynat`
-                                    : `${item.title} görselini büyüt`
-                                }
-                                onClick={() => {
-                                  if (item.youtubeId) {
-                                    setActiveModalVideo({ youtubeId: item.youtubeId, title: item.title });
-                                  } else if (resolvedThumbSrc) {
-                                    setActiveLightboxImage({ src: resolvedThumbSrc, title: item.title });
-                                  }
-                                }}
-                                onKeyDown={(e) => {
-                                  if (e.key === 'Enter' || e.key === ' ') {
-                                    e.preventDefault();
-                                    if (item.youtubeId) {
-                                      setActiveModalVideo({ youtubeId: item.youtubeId, title: item.title });
-                                    } else if (resolvedThumbSrc) {
-                                      setActiveLightboxImage({ src: resolvedThumbSrc, title: item.title });
-                                    }
-                                  }
-                                }}
-                              >
-                                <img src={resolvedThumbSrc} alt={item.title} loading="lazy" />
-                                <div className="alu-media-card__scrim" aria-hidden="true" />
-                                {hasVideo ? (
-                                  <>
-                                    <span className="alu-media-card__video-badge">
-                                      <AluIcon name="video" size="sm" />
-                                      <span>VİDEO</span>
-                                    </span>
-                                    <span className="alu-media-card__play" aria-hidden="true">
-                                      <span className="alu-media-card__play-circle">
-                                        <AluIcon name="circle-play" size="lg" />
-                                      </span>
-                                    </span>
-                                  </>
-                                ) : (
-                                  <span className="alu-media-card__zoom-hint" aria-hidden="true">
-                                    <AluIcon name="sparkles" size="sm" />
-                                  </span>
-                                )}
-                              </div>
-                            )}
-
-                            <div className="alu-media-card__body">
-                              {(item.badge || item.subtitle) && (
-                                <div className="alu-media-card__meta">
-                                  {item.badge && (
-                                    <span className="alu-badge alu-badge--accent">{item.badge}</span>
-                                  )}
-                                  {item.subtitle && (
-                                    <span className="alu-media-card__subtitle">{item.subtitle}</span>
-                                  )}
-                                </div>
-                              )}
-
-                              <h3 className="alu-media-card__title">{item.title}</h3>
-
-                              {item.description && (
-                                <p className="alu-media-card__desc">{item.description}</p>
-                              )}
-
-                              {item.bullets && item.bullets.length > 0 && (
-                                <ul className="alu-media-card__bullets">
-                                  {item.bullets.map((b, bIdx) => (
-                                    <li key={bIdx}>
-                                      <AluIcon name="check" size="sm" />
-                                      <span>{b.replace(/^•\s*/, '')}</span>
-                                    </li>
-                                  ))}
-                                </ul>
-                              )}
-
-                              {(hasVideo || item.href) && (
-                                <div className="alu-media-card__footer">
-                                  {hasVideo ? (
-                                    <button
-                                      type="button"
-                                      className="alu-media-card__video-btn"
-                                      onClick={() =>
-                                        setActiveModalVideo({
-                                          youtubeId: item.youtubeId!,
-                                          title: item.title
-                                        })
-                                      }
-                                    >
-                                      <AluIcon name="circle-play" size="sm" />
-                                      <span>{item.ctaText || 'Videoyu İzle'}</span>
-                                    </button>
-                                  ) : item.href ? (
-                                    item.external ? (
-                                      <a
-                                        href={item.href}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="alu-link alu-link--standalone"
-                                      >
-                                        <span>{item.ctaText || 'Detayları İncele'}</span>
-                                        <AluIcon name="external-link" size="sm" />
-                                      </a>
-                                    ) : (
-                                      <Link href={item.href} className="alu-link alu-link--standalone">
-                                        <span>{item.ctaText || 'Detayları İncele'}</span>
-                                        <AluIcon name="arrow-right" size="sm" />
-                                      </Link>
-                                    )
-                                  ) : null}
-                                </div>
-                              )}
-                            </div>
-                          </article>
-                        );
-                      })}
-                    </div>
-                  </div>
-                </section>
-              );
-            };
-
             return (
               <>
                 {/* 1. Post-Hero Intro + Embedded Video (e.g., "ALLPLAN Ultimate Nedir?" + YouTube Video) */}
@@ -1298,9 +1144,14 @@ export function SubpageView({
                 )}
 
                 {/* 5. Core Features Image & Popup Video Grid ("Fonksiyonellik Hızlı Bakış") */}
-                {sl.coreFeatures &&
-                  sl.coreFeatures.items.length > 0 &&
-                  renderMediaGrid(sl.coreFeatures, 'core-features')}
+                {sl.coreFeatures && sl.coreFeatures.items.length > 0 && (
+                  <MediaGridSection
+                    grid={sl.coreFeatures}
+                    itemKeyPrefix="core-features"
+                    onVideo={setActiveModalVideo}
+                    onImage={setActiveLightboxImage}
+                  />
+                )}
 
                 {/* 6. Interactive Multi-Tab Workflows (WorkflowTabsTemplate / RegulaTabs) */}
                 {sl.workflowTabs && (
@@ -1313,9 +1164,15 @@ export function SubpageView({
 
                 {/* 7. Extra Media Grids (ALLPLAN Bulut Hizmetleri, Satın Alınabilir Seçenekler, Kaydedilmiş Webinarlar, etc.) */}
                 {sl.extraGrids &&
-                  sl.extraGrids.map((eGrid, gIdx) =>
-                    renderMediaGrid(eGrid, `extra-grid-${gIdx}`)
-                  )}
+                  sl.extraGrids.map((grid, gridIndex) => (
+                    <MediaGridSection
+                      key={`extra-grid-${gridIndex}`}
+                      grid={grid}
+                      itemKeyPrefix={`extra-grid-${gridIndex}`}
+                      onVideo={setActiveModalVideo}
+                      onImage={setActiveLightboxImage}
+                    />
+                  ))}
 
                 {/* 8. Bottom Split Callouts (Lisans ve Gereksinimler / SCIA Engineer Concept Sürümü) */}
                 {sl.splitCallouts &&

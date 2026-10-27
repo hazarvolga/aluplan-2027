@@ -112,3 +112,9 @@ Yeni kaynak-sözleşme testi önce dosya olmadığı için RED, extraction sonra
 27.10.2026. Yapılandırılmış sayfalardaki ortak benefits kart alanı stateless `BenefitsSection` bileşenine çıkarıldı. Parent veri koruması ve 8/12+ öğe için dört kolon, diğerleri için üç kolon mantığı değişmedi. Tip doğrudan `StructuredPageLayout['benefits']` sözleşmesinden türetilir; yeni client boundary yoktur. `SubpageView` 2167→2130 satıra indi.
 
 Extraction testi RED→GREEN çalıştı. Veri testi benefits içeren 28 rotada bölüm/öğe metinlerini ve yerel ikon varlığını doğrular. `/products/allplan-ultimate` için önce/sonra sabit HTML ağacı birebir eşit; 12 kart ve kart başlığı aynı sıradadır. `pnpm test` (84 Python + 36 parite + 44 token), `pnpm typecheck`, `pnpm build`, 118 rota ve 188 kontrast kontrolü geçti. Bağımsız review önemli bulgu vermedi. Gerçek tarayıcı görsel/console kabulü Work ayarı nedeniyle açık kalır; içerik/schema/veri/URL ve canlı sistem değişmedi.
+
+## S06-M — Media grid bileşen ayrımı
+
+27.10.2026. Ortak media grid renderer etkileşimli `MediaGridSection` bileşenine çıkarıldı. Grid ve kart key kimlikleri ayrı korunur; kolon, thumbnail, video/görsel modal callbackleri, klavye, aria, internal/external link ve lazy image davranışı değiştirilmedi. Explicit client sınırı parentın mevcut sınırını genişletmez; lazy/Suspense eklenmedi. `SubpageView` 2130→1987 satıra indi.
+
+Extraction testi RED→GREEN çalıştı. Veri testi 29 rota, 54 grid ve 362 kart ile yerel görselleri doğrular. `/products/allplan-ultimate` sabit HTML'i önce/sonra birebir eşit; 3 grid, 38 kart ve 38 etkileşimli thumbnail sözleşmesi korunur. `pnpm test` (86 Python + 36 parite + 44 token), `pnpm typecheck`, `pnpm build`, 118 rota ve 188 kontrast kontrolü geçti. Bağımsız review önemli bulgu vermedi. Gerçek tarayıcı etkileşim/görsel/console kabulü Work ayarı nedeniyle açık kalır; içerik/schema/veri/URL ve canlı sistem değişmedi.

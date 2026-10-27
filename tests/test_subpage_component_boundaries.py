@@ -90,6 +90,78 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
 
         self.assertEqual(len(benefit_routes), 28)
 
+    def test_media_grids_have_a_dedicated_interactive_render_boundary(self):
+        component = read("src/components/sections/MediaGridSection.tsx")
+        parent = read("src/components/sections/SubpageView.tsx")
+
+        self.assertTrue(component.startswith("'use client';"))
+        self.assertIn("import type { StructuredMediaGridSection }", component)
+        for marker in [
+            "grid.columns || 3",
+            "grid.items.map",
+            "itemKeyPrefix",
+            "onVideo",
+            "onImage",
+            "https://img.youtube.com/vi/",
+            'role="button"',
+            "tabIndex={0}",
+            "event.key === 'Enter' || event.key === ' '",
+            "event.preventDefault()",
+            "youtubeId: item.youtubeId",
+            "src: resolvedThumbSrc",
+            'loading="lazy"',
+            "b.replace(/^•\\s*/, '')",
+            'target="_blank"',
+            'rel="noopener noreferrer"',
+        ]:
+            with self.subTest(marker=marker):
+                self.assertIn(marker, component)
+
+        self.assertIn("import { MediaGridSection } from './MediaGridSection';", parent)
+        self.assertIn('itemKeyPrefix="core-features"', parent)
+        self.assertIn("key={`extra-grid-${gridIndex}`}", parent)
+        self.assertIn("itemKeyPrefix={`extra-grid-${gridIndex}`}", parent)
+        self.assertNotIn("renderMediaGrid", parent)
+        self.assertNotIn("alu-media-grid", parent)
+        self.assertNotIn("StructuredMediaGridSection", parent)
+
+    def test_structured_media_grid_data_is_complete_and_assets_exist(self):
+        pages = json.loads(read("src/data/pages.json"))
+        media_routes = set()
+        core_grid_count = 0
+        extra_grid_count = 0
+        card_count = 0
+
+        for route, page in pages.items():
+            structured = page.get("structuredLayout") or {}
+            grids = []
+            core_grid = structured.get("coreFeatures")
+            if core_grid and core_grid.get("items"):
+                core_grid_count += 1
+                grids.append(core_grid)
+            for extra_grid in structured.get("extraGrids") or []:
+                if extra_grid.get("items"):
+                    extra_grid_count += 1
+                    grids.append(extra_grid)
+
+            if grids:
+                media_routes.add(route)
+            for grid in grids:
+                self.assertTrue(grid.get("title"), route)
+                self.assertTrue(grid.get("items"), route)
+                for item in grid["items"]:
+                    card_count += 1
+                    self.assertTrue(item.get("title"), route)
+                    self.assertTrue(item.get("description"), route)
+                    image_src = item.get("imageSrc")
+                    if image_src and image_src.startswith("/"):
+                        self.assertTrue((ROOT / "public" / image_src.lstrip("/")).is_file(), image_src)
+
+        self.assertEqual(len(media_routes), 29)
+        self.assertEqual(core_grid_count, 8)
+        self.assertEqual(extra_grid_count, 46)
+        self.assertEqual(card_count, 362)
+
 
 if __name__ == "__main__":
     unittest.main()

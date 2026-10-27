@@ -77,6 +77,80 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
 
         self.assertEqual(pairs, expected_pairs)
 
+    def test_references_directory_has_a_dedicated_interactive_render_boundary(self):
+        component = read("src/components/sections/ReferencesDirectorySection.tsx")
+        parent = read("src/components/sections/SubpageView.tsx")
+
+        self.assertTrue(component.startswith("'use client';"))
+        self.assertIn("import type { StructuredReferencesDirectory }", component)
+        for marker in [
+            "activeCategoryId: string",
+            "searchQuery: string",
+            "onCategoryChange: (categoryId: string) => void",
+            "onSearchQueryChange: (query: string) => void",
+            "const q = searchQuery.trim().toLowerCase()",
+            "item.name.toLowerCase().includes(q)",
+            "item.category.toLowerCase().includes(q)",
+            "matchesCategory && matchesSearch",
+            'role="tablist"',
+            'role="tab"',
+            "aria-selected={isActive}",
+            'role="tabpanel"',
+            "onSearchQueryChange('')",
+            "onCategoryChange('all')",
+            "Tüm Referansları Göster",
+            "DirectoryCategoryIcon",
+        ]:
+            with self.subTest(marker=marker):
+                self.assertIn(marker, component)
+
+        self.assertIn("import { ReferencesDirectorySection } from './ReferencesDirectorySection';", parent)
+        self.assertIn("directory={sl.referencesDirectory}", parent)
+        self.assertIn("activeCategoryId={activeRefCatId}", parent)
+        self.assertIn("searchQuery={refSearchQuery}", parent)
+        self.assertIn("onCategoryChange={setActiveRefCatId}", parent)
+        self.assertIn("onSearchQueryChange={setRefSearchQuery}", parent)
+        self.assertIn("useState<string>('all')", parent)
+        self.assertIn("useState<string>('')", parent)
+        self.assertNotIn("alu-ref-", parent)
+        self.assertNotIn("DirectoryCategoryIcon", parent)
+
+    def test_references_directory_data_preserves_categories_and_counts(self):
+        pages = json.loads(read("src/data/pages.json"))
+        directory = pages["/references"]["structuredLayout"]["referencesDirectory"]
+        expected_counts = {
+            "all": 228,
+            "Mimari Ofis": 59,
+            "Mühendislik Ofisi (Alt Yapı)": 13,
+            "Mühendislik Ofisi (Üst Yapı)": 32,
+            "İnşaat Şirketleri": 29,
+            "Müteahhit": 24,
+            "Kamu Kurumları": 52,
+            "Meslek Odaları": 3,
+            "Prefabrik": 9,
+            "Universite": 7,
+        }
+
+        self.assertEqual(len(directory["categories"]), 10)
+        self.assertEqual(len(directory["items"]), 228)
+        self.assertEqual(
+            len({(item["category"], item["name"]) for item in directory["items"]}),
+            228,
+        )
+        self.assertEqual(
+            {category["id"]: category["count"] for category in directory["categories"]},
+            expected_counts,
+        )
+        actual_counts = {
+            category_id: (
+                len(directory["items"])
+                if category_id == "all"
+                else sum(item["category"] == category_id for item in directory["items"])
+            )
+            for category_id in expected_counts
+        }
+        self.assertEqual(actual_counts, expected_counts)
+
     def test_about_editorial_has_a_dedicated_render_boundary(self):
         component = read("src/components/sections/AboutEditorialSection.tsx")
         parent = read("src/components/sections/SubpageView.tsx")

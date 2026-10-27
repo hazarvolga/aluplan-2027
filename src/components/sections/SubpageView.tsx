@@ -13,13 +13,13 @@ import {
 import { AluIcon } from '@/components/ui/AluIcon';
 import { TrainingTabs } from './TrainingTabs';
 import { WorkflowSection } from './WorkflowSection';
-import { DirectoryCategoryIcon } from './DirectoryCategoryIcon';
 import { FAQSection } from './FAQSection';
 import { AboutEditorialSection } from './AboutEditorialSection';
 import { BenefitsSection } from './BenefitsSection';
 import { MediaGridSection } from './MediaGridSection';
 import { SplitCalloutSection } from './SplitCalloutSection';
 import { VideoLibraryHubSection } from './VideoLibraryHubSection';
+import { ReferencesDirectorySection } from './ReferencesDirectorySection';
 import { handleStructuredTabKey } from './structured-tab-key';
 import { MediaDialog } from '@/components/ui/MediaDialog';
 
@@ -62,7 +62,6 @@ export function SubpageView({
   } | null>(null);
   const [activeRefCatId, setActiveRefCatId] = useState<string>('all');
   const [refSearchQuery, setRefSearchQuery] = useState<string>('');
-
 
   const isLegalPage = page.section === 'legal';
   const isVideoLibraryHub = page.path === '/solutions-v2/training/video-library';
@@ -822,153 +821,15 @@ export function SubpageView({
                 )}
 
                 {/* 10. Interactive References Directory (/references — 10-Tab Category Filter + 3-Col Reference Card Grid) */}
-                {sl.referencesDirectory && (() => {
-                  const refDir = sl.referencesDirectory!;
-                  const q = refSearchQuery.trim().toLowerCase();
-                  const filteredRefs = refDir.items.filter((item) => {
-                    const matchesCategory =
-                      activeRefCatId === 'all' || item.category === activeRefCatId;
-                    const matchesSearch =
-                      !q ||
-                      item.name.toLowerCase().includes(q) ||
-                      item.category.toLowerCase().includes(q);
-                    return matchesCategory && matchesSearch;
-                  });
-                  const activeCatObj =
-                    refDir.categories.find((c) => c.id === activeRefCatId) ||
-                    refDir.categories[0];
-
-                  return (
-                    <section
-                      className="preview-section"
-                      aria-label={refDir.title}
-                    >
-                      <div
-                        className="alu-container alu-stack"
-                        style={{ gap: 'var(--space-stack-xl)' }}
-                      >
-                        <div className="alu-section-header-center">
-                          {refDir.kicker && (
-                            <span className="preview-kicker">{refDir.kicker}</span>
-                          )}
-                          <h2 className="alu-h1" style={{ margin: 0 }}>
-                            {refDir.title}
-                          </h2>
-                          {refDir.subtitle && (
-                            <p
-                              className="alu-body preview-meta"
-                              style={{ margin: 0, maxWidth: 'var(--container-application-prose-wide)' }}
-                            >
-                              {refDir.subtitle}
-                            </p>
-                          )}
-                        </div>
-
-                        {/* Sticky 10-Tab Category Filter Bar + Live Search */}
-                        <div className="alu-ref-controls">
-                          <div
-                            className="alu-ref-tabs"
-                            role="tablist"
-                            aria-label="Referans Kategorileri"
-                          >
-                            {refDir.categories.map((cat) => {
-                              const isActive = cat.id === activeRefCatId;
-                              return (
-                                <button
-                                  key={cat.id}
-                                  type="button"
-                                  role="tab"
-                                  aria-selected={isActive}
-                                  className={`alu-ref-tab${
-                                    isActive ? ' alu-ref-tab--active' : ''
-                                  }`}
-                                  onClick={() => setActiveRefCatId(cat.id)}
-                                >
-                                  <span className="alu-ref-tab__icon">
-                                    <DirectoryCategoryIcon name={cat.iconName} />
-                                  </span>
-                                  <span className="alu-ref-tab__label">{cat.label}</span>
-                                  <span className="alu-ref-tab__count">{cat.count}</span>
-                                </button>
-                              );
-                            })}
-                          </div>
-
-                          <div className="alu-ref-toolbar">
-                            <div className="alu-ref-search">
-                              <AluIcon name="search" size="sm" />
-                              <input
-                                type="search"
-                                value={refSearchQuery}
-                                onChange={(e) => setRefSearchQuery(e.target.value)}
-                                placeholder="Referans kurum, firma veya üniversite ara..."
-                                aria-label="Referans kurum ara"
-                                className="alu-ref-search__input"
-                              />
-                              {refSearchQuery && (
-                                <button
-                                  type="button"
-                                  className="alu-ref-search__clear"
-                                  onClick={() => setRefSearchQuery('')}
-                                  aria-label="Aramayı temizle"
-                                >
-                                  ✕
-                                </button>
-                              )}
-                            </div>
-
-                            <div className="alu-ref-status">
-                              <span className="alu-badge alu-badge--accent">
-                                {activeCatObj?.label || 'Tümü'}
-                              </span>
-                              <span className="alu-caption">
-                                Toplam <strong>{filteredRefs.length}</strong> referans gösteriliyor
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* 3-Column Reference Company Card Grid */}
-                        {filteredRefs.length > 0 ? (
-                          <div className="alu-ref-grid" role="tabpanel">
-                            {filteredRefs.map((item, rIdx) => (
-                              <article
-                                key={`${item.category}-${item.name}-${rIdx}`}
-                                className="alu-ref-card"
-                              >
-                                <div className="alu-ref-card__icon" aria-hidden="true">
-                                  <DirectoryCategoryIcon name={item.iconName} />
-                                </div>
-                                <div className="alu-ref-card__body">
-                                  <h3 className="alu-ref-card__name">{item.name}</h3>
-                                  <span className="alu-ref-card__cat">{item.category}</span>
-                                </div>
-                              </article>
-                            ))}
-                          </div>
-                        ) : (
-                          <div className="alu-service-card alu-stack" style={{ textAlign: 'center', padding: 'var(--space-application-jsx-empty-state-block) var(--space-application-jsx-section-inset)' }}>
-                            <p className="alu-h3" style={{ margin: 0 }}>
-                              Arama kriterlerinize uygun referans bulunamadı.
-                            </p>
-                            <div>
-                              <button
-                                type="button"
-                                className="alu-button alu-button--secondary alu-button--sm"
-                                onClick={() => {
-                                  setActiveRefCatId('all');
-                                  setRefSearchQuery('');
-                                }}
-                              >
-                                Tüm Referansları Göster ({refDir.items.length})
-                              </button>
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    </section>
-                  );
-                })()}
+                {sl.referencesDirectory && (
+                  <ReferencesDirectorySection
+                    directory={sl.referencesDirectory}
+                    activeCategoryId={activeRefCatId}
+                    searchQuery={refSearchQuery}
+                    onCategoryChange={setActiveRefCatId}
+                    onSearchQueryChange={setRefSearchQuery}
+                  />
+                )}
 
                 <FAQSection faqDirectory={sl.faqDirectory} />
 

@@ -405,6 +405,17 @@
   --ref-transform-application-pathway-feature-to: scale(1) translateY(0); /* @kind other */
   --ref-transform-application-youtube-banner-watermark: scale(6.5); /* @kind other */
   --ref-transform-application-youtube-card-watermark: scale(1.6); /* @kind other */
+  --ref-filter-application-hero-video: contrast(1.1) saturate(0.85); /* @kind other */
+  --ref-filter-application-pathway-glow: blur(130px); /* @kind other */
+  --ref-filter-application-product-highlighted: grayscale(0); /* @kind other */
+  --ref-filter-application-product-dimmed: grayscale(100%); /* @kind other */
+  --ref-filter-application-product-dimmed-hover: grayscale(20%); /* @kind other */
+  --ref-filter-application-bento-media-default: brightness(0.75) contrast(1.08); /* @kind other */
+  --ref-filter-application-bento-media-hover: brightness(0.85) contrast(1.1); /* @kind other */
+  --ref-filter-application-subpage-hero-background: blur(8px) saturate(0.8); /* @kind other */
+  --ref-filter-application-backdrop-header: blur(16px); /* @kind other */
+  --ref-filter-application-backdrop-media-badge: blur(6px); /* @kind other */
+  --ref-filter-application-backdrop-modal: blur(10px); /* @kind other */
   --ref-z-index-0: 0; /* @kind other */
   --ref-z-index-100: 100; /* @kind other */
   --ref-z-index-200: 200; /* @kind other */

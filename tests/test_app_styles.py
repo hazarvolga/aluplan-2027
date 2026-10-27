@@ -437,3 +437,53 @@ class AppStylesTests(unittest.TestCase):
                 app.write_text(f'.card {{transform:{value}}}')
                 with self.subTest(value=value), self.assertRaisesRegex(ValueError, 'Raw application transform'):
                     styles.sync_styles(root)
+
+    def test_filter_and_backdrop_filter_values_use_semantic_tokens(self):
+        source = (ROOT / 'src/styles/application.css').read_text(encoding='utf-8')
+        expected = {
+            '.alu-site-header': {
+                'backdrop-filter': '--filter-backdrop-header',
+                '-webkit-backdrop-filter': '--filter-backdrop-header',
+            },
+            '.alu-hero-stage__bg-video': {'filter': '--filter-application-hero-video'},
+            '.alu-pathway-glow': {'filter': '--filter-application-pathway-glow'},
+            '.alu-product-card--highlighted': {'filter': '--filter-application-product-highlighted'},
+            '.alu-product-card--dimmed': {'filter': '--filter-application-product-dimmed'},
+            '.alu-product-card--dimmed:hover': {'filter': '--filter-application-product-dimmed-hover'},
+            '.alu-bento-card__bg': {'filter': '--filter-application-bento-media-default'},
+            '.alu-bento-card:hover .alu-bento-card__bg': {'filter': '--filter-application-bento-media-hover'},
+            '.alu-subpage-hero__bg': {'filter': '--filter-application-subpage-hero-background'},
+            '.alu-media-card__video-badge': {'backdrop-filter': '--filter-backdrop-media-badge'},
+            '.alu-video-modal': {'backdrop-filter': '--filter-backdrop-modal'},
+        }
+        for selector, properties in expected.items():
+            blocks = re.findall(rf'(?m)^[\t ]*{re.escape(selector)}[\t ]*\{{([^{{}}]*)\}}', source)
+            self.assertTrue(blocks, selector)
+            for prop, token in properties.items():
+                values = [value.strip() for block in blocks for value in re.findall(
+                    rf'(?m)^\s*{re.escape(prop)}\s*:\s*([^;]+);', block
+                )]
+                with self.subTest(selector=selector, prop=prop):
+                    self.assertEqual(values, [f'var({token})'])
+
+        raw = []
+        for prop, value in re.findall(
+            r'(?m)^\s*((?:-webkit-)?backdrop-filter|filter)\s*:\s*([^;]+);', source
+        ):
+            if not value.strip().startswith('var('):
+                raw.append((prop, value.strip()))
+        self.assertEqual(raw, [])
+
+    def test_application_filter_guard_rejects_raw_and_mixed_values(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            self.fixture(root)
+            app = root / 'src/styles/application.css'
+            for prop in ['filter', 'backdrop-filter', '-webkit-backdrop-filter']:
+                app.write_text(f'.card {{{prop}:var(--filter-backdrop-header)}}')
+                styles.sync_styles(root)
+                for value in ['blur(2px)', 'blur(2px) var(--filter-backdrop-header)',
+                              'var(--filter-backdrop-header) blur(2px)', 'var(--text-primary)']:
+                    app.write_text(f'.card {{{prop}:{value}}}')
+                    with self.subTest(prop=prop, value=value), self.assertRaisesRegex(ValueError, 'Raw application filter'):
+                        styles.sync_styles(root)

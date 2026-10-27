@@ -277,6 +277,17 @@
   --transform-decorative-subpage-hero-overscan: var(--ref-transform-application-scale106); /* @kind other */
   --transform-decorative-youtube-banner-watermark: var(--ref-transform-application-youtube-banner-watermark); /* @kind other */
   --transform-decorative-youtube-card-watermark: var(--ref-transform-application-youtube-card-watermark); /* @kind other */
+  --filter-application-hero-video: var(--ref-filter-application-hero-video); /* @kind other */
+  --filter-application-pathway-glow: var(--ref-filter-application-pathway-glow); /* @kind other */
+  --filter-application-product-highlighted: var(--ref-filter-application-product-highlighted); /* @kind other */
+  --filter-application-product-dimmed: var(--ref-filter-application-product-dimmed); /* @kind other */
+  --filter-application-product-dimmed-hover: var(--ref-filter-application-product-dimmed-hover); /* @kind other */
+  --filter-application-bento-media-default: var(--ref-filter-application-bento-media-default); /* @kind other */
+  --filter-application-bento-media-hover: var(--ref-filter-application-bento-media-hover); /* @kind other */
+  --filter-application-subpage-hero-background: var(--ref-filter-application-subpage-hero-background); /* @kind other */
+  --filter-backdrop-header: var(--ref-filter-application-backdrop-header); /* @kind other */
+  --filter-backdrop-media-badge: var(--ref-filter-application-backdrop-media-badge); /* @kind other */
+  --filter-backdrop-modal: var(--ref-filter-application-backdrop-modal); /* @kind other */
   --z-base: var(--ref-z-index-0); /* @kind other */
   --z-sticky: var(--ref-z-index-100); /* @kind other */
   --z-dropdown: var(--ref-z-index-200); /* @kind other */
@@ -750,6 +761,17 @@
   --transform-decorative-subpage-hero-overscan: var(--ref-transform-application-scale106); /* @kind other */
   --transform-decorative-youtube-banner-watermark: var(--ref-transform-application-youtube-banner-watermark); /* @kind other */
   --transform-decorative-youtube-card-watermark: var(--ref-transform-application-youtube-card-watermark); /* @kind other */
+  --filter-application-hero-video: var(--ref-filter-application-hero-video); /* @kind other */
+  --filter-application-pathway-glow: var(--ref-filter-application-pathway-glow); /* @kind other */
+  --filter-application-product-highlighted: var(--ref-filter-application-product-highlighted); /* @kind other */
+  --filter-application-product-dimmed: var(--ref-filter-application-product-dimmed); /* @kind other */
+  --filter-application-product-dimmed-hover: var(--ref-filter-application-product-dimmed-hover); /* @kind other */
+  --filter-application-bento-media-default: var(--ref-filter-application-bento-media-default); /* @kind other */
+  --filter-application-bento-media-hover: var(--ref-filter-application-bento-media-hover); /* @kind other */
+  --filter-application-subpage-hero-background: var(--ref-filter-application-subpage-hero-background); /* @kind other */
+  --filter-backdrop-header: var(--ref-filter-application-backdrop-header); /* @kind other */
+  --filter-backdrop-media-badge: var(--ref-filter-application-backdrop-media-badge); /* @kind other */
+  --filter-backdrop-modal: var(--ref-filter-application-backdrop-modal); /* @kind other */
   --z-base: var(--ref-z-index-0); /* @kind other */
   --z-sticky: var(--ref-z-index-100); /* @kind other */
   --z-dropdown: var(--ref-z-index-200); /* @kind other */
@@ -1359,6 +1381,17 @@
   --transform-decorative-subpage-hero-overscan: var(--ref-transform-application-scale106); /* @kind other */
   --transform-decorative-youtube-banner-watermark: var(--ref-transform-application-youtube-banner-watermark); /* @kind other */
   --transform-decorative-youtube-card-watermark: var(--ref-transform-application-youtube-card-watermark); /* @kind other */
+  --filter-application-hero-video: var(--ref-filter-application-hero-video); /* @kind other */
+  --filter-application-pathway-glow: var(--ref-filter-application-pathway-glow); /* @kind other */
+  --filter-application-product-highlighted: var(--ref-filter-application-product-highlighted); /* @kind other */
+  --filter-application-product-dimmed: var(--ref-filter-application-product-dimmed); /* @kind other */
+  --filter-application-product-dimmed-hover: var(--ref-filter-application-product-dimmed-hover); /* @kind other */
+  --filter-application-bento-media-default: var(--ref-filter-application-bento-media-default); /* @kind other */
+  --filter-application-bento-media-hover: var(--ref-filter-application-bento-media-hover); /* @kind other */
+  --filter-application-subpage-hero-background: var(--ref-filter-application-subpage-hero-background); /* @kind other */
+  --filter-backdrop-header: var(--ref-filter-application-backdrop-header); /* @kind other */
+  --filter-backdrop-media-badge: var(--ref-filter-application-backdrop-media-badge); /* @kind other */
+  --filter-backdrop-modal: var(--ref-filter-application-backdrop-modal); /* @kind other */
   --z-base: var(--ref-z-index-0); /* @kind other */
   --z-sticky: var(--ref-z-index-100); /* @kind other */
   --z-dropdown: var(--ref-z-index-200); /* @kind other */

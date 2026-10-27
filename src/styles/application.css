@@ -670,8 +670,8 @@ button.alu-role[aria-checked="true"] {
 
 /* Glassmorphic Sticky Header & MegaMenu */
 .alu-site-header {
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: var(--filter-backdrop-header);
+  -webkit-backdrop-filter: var(--filter-backdrop-header);
   box-shadow: 0 8px 32px var(--visual-shadow-header);
 }
 .alu-megamenu {
@@ -760,7 +760,7 @@ button.alu-role[aria-checked="true"] {
   height: 100%;
   object-fit: cover;
   opacity: 0.24;
-  filter: contrast(1.1) saturate(0.85);
+  filter: var(--filter-application-hero-video);
 }
 [data-mode="light"] .alu-hero-stage__bg-video {
   opacity: 0.1;
@@ -995,7 +995,7 @@ button.alu-role[aria-checked="true"] {
   height: var(--size-application-pathway-glow);
   border-radius: var(--radius-application-pill-extended);
   background-color: var(--role-accent, var(--role-architect));
-  filter: blur(130px);
+  filter: var(--filter-application-pathway-glow);
   opacity: 0.08;
   pointer-events: none;
   z-index: 0;
@@ -1284,7 +1284,7 @@ button.alu-role[aria-checked="true"] {
 .alu-product-card--highlighted {
   opacity: 1;
   transform: var(--motion-transform-product-highlighted);
-  filter: grayscale(0);
+  filter: var(--filter-application-product-highlighted);
   background: var(--surface-raised);
   border-color: color-mix(in srgb, var(--role-accent, var(--role-architect)) 55%, var(--border-strong));
   border-top: var(--border-width-accent) solid var(--role-accent, var(--accent-border));
@@ -1301,7 +1301,7 @@ button.alu-role[aria-checked="true"] {
 .alu-product-card--dimmed {
   opacity: 0.3;
   transform: var(--motion-transform-product-dimmed);
-  filter: grayscale(100%);
+  filter: var(--filter-application-product-dimmed);
   background: var(--surface-subtle);
   border-color: var(--border-subtle);
   box-shadow: none;
@@ -1309,7 +1309,7 @@ button.alu-role[aria-checked="true"] {
 .alu-product-card--dimmed:hover {
   opacity: 0.82;
   transform: var(--motion-transform-product-dimmed-hover);
-  filter: grayscale(20%);
+  filter: var(--filter-application-product-dimmed-hover);
   border-color: var(--border-strong);
   text-decoration: none;
 }
@@ -1508,11 +1508,11 @@ button.alu-role[aria-checked="true"] {
   height: 100%;
   object-fit: cover;
   transition: transform var(--motion-duration-image) var(--motion-easing-default), filter var(--motion-duration-image) var(--motion-easing-default);
-  filter: brightness(0.75) contrast(1.08);
+  filter: var(--filter-application-bento-media-default);
 }
 .alu-bento-card:hover .alu-bento-card__bg {
   transform: var(--motion-transform-card-media-zoom);
-  filter: brightness(0.85) contrast(1.1);
+  filter: var(--filter-application-bento-media-hover);
 }
 .alu-bento-card__scrim {
   position: absolute;
@@ -1754,7 +1754,7 @@ button.alu-role[aria-checked="true"] {
   background-size: cover;
   background-position: center;
   opacity: 0.14;
-  filter: blur(8px) saturate(0.8);
+  filter: var(--filter-application-subpage-hero-background);
   transform: var(--transform-decorative-subpage-hero-overscan);
 }
 .alu-subpage-hero__scrim {
@@ -2605,7 +2605,7 @@ button.alu-role[aria-checked="true"] {
   gap: var(--space-application-compact-gap);
   padding: var(--space-stack-xs) var(--space-application-control-gap);
   background: var(--visual-media-badge-surface);
-  backdrop-filter: blur(6px);
+  backdrop-filter: var(--filter-backdrop-media-badge);
   border: var(--border-width-default) solid var(--accent-border);
   color: var(--accent-fg);
   font-family: var(--font-mono);
@@ -3031,7 +3031,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   inset: 0;
   z-index: 9999;
   background: var(--visual-modal-backdrop);
-  backdrop-filter: blur(10px);
+  backdrop-filter: var(--filter-backdrop-modal);
   display: flex;
   align-items: center;
   justify-content: center;

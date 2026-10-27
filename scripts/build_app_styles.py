@@ -75,6 +75,10 @@ def validate_application_metrics(source):
     ) + '}', source)
     for match in re.finditer(r'(?:^|[;{}])\s*([a-z-]+)\s*:\s*([^;{}]+)', source, re.I):
         prop, value = match.groups()
+        if prop.lower() in {'filter', 'backdrop-filter', '-webkit-backdrop-filter'}:
+            if not re.fullmatch(r'var\(--filter-[\w-]+\)', value.strip()):
+                raise ValueError('Raw application filter: use a semantic filter token')
+            continue
         if BORDER_PROPERTY.fullmatch(prop.lower()):
             unit_pattern = r'[a-zA-Z]+\b|%' if prop.lower() == 'border-image-width' else r'[a-zA-Z]+\b'
             widths = re.findall(r'(?<![\w.-])(-?(?:\d*\.)?\d+)(?:' + unit_pattern + r')', value, re.I)

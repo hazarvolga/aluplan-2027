@@ -335,6 +335,25 @@ export function runTokenTests({ build = buildTokens, lint = lintComponentCss, T,
     }
     return true;
   });
+  test('application filter and backdrop-filter tokens preserve their original values', () => {
+    const expected = {
+      '--filter-application-hero-video': 'contrast(1.1) saturate(0.85)',
+      '--filter-application-pathway-glow': 'blur(130px)',
+      '--filter-application-product-highlighted': 'grayscale(0)',
+      '--filter-application-product-dimmed': 'grayscale(100%)',
+      '--filter-application-product-dimmed-hover': 'grayscale(20%)',
+      '--filter-application-bento-media-default': 'brightness(0.75) contrast(1.08)',
+      '--filter-application-bento-media-hover': 'brightness(0.85) contrast(1.1)',
+      '--filter-application-subpage-hero-background': 'blur(8px) saturate(0.8)',
+      '--filter-backdrop-header': 'blur(16px)',
+      '--filter-backdrop-media-badge': 'blur(6px)',
+      '--filter-backdrop-modal': 'blur(10px)'
+    };
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      for (const [name, value] of Object.entries(expected)) if (values[name] !== value) return `${theme}/${mode} ${name}: expected ${value}, got ${values[name]}`;
+    }
+    return true;
+  });
   return { results, passed: results.filter(r => r.pass).length, failed: results.filter(r => !r.pass).length };
 }
 

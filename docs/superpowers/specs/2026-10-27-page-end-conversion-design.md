@@ -1,7 +1,7 @@
 # Sayfa Sonu Dönüşüm Alanı — Kısa Tasarım
 
 Tarih: 27 Ekim 2026
-Durum: Kullanıcı onayı bekliyor
+Durum: Kullanıcı onaylı; yerel uygulama ve kabul doğrulaması tamamlandı, yayınlanmadı
 Restore point: `restore/pre-page-end-conversion-20261027` → `862ebb15e328c6eee47755d6070f8d333a4125b9`
 
 ## Amaç ve gerekçe

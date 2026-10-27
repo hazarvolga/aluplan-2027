@@ -1,7 +1,20 @@
 # Oturum devri
 
 ## Güncelleme tarihi ve oturum no
-26.10.2026 — Faz 6 geliştirme aşamasında: (1) tüm destek portalı butonları `https://allplan.net.tr/tr` adresine hizalandı; (2) ana sayfa ve alt sayfalar wireframe hissinden çıkarılarak tam amiral gemisi (flagship) görsel sahneye yükseltildi; (3) alt sayfalardaki küçük PNG ikonların (`52×48` / `52×52` / `128×128`) orijinal rozet boyutunda (`36×36px`) gösterilmesi tamamlandı; (4) **52 ürün, çözüm, eklenti ve destek sayfasındaki (`structuredLayout`)** tüm eşleştirilmiş metin + pop-up videolar (`InfoMediaTwoColumn` ve `VideoModal` — YouTube + yerel `.mp4`), ikonlu fayda/gerekçe kartları, çok sekmeli iş akışı şablonları, `/references` (10 kategori sekmesi + 228 referans firma kartı), `/solutions-v2/faq` (5 kategori sekmesi + 25 SSS) ve `/about` kurumsal editöryal profil sayfası canlı sitedeki birebir bölüm mimarisiyle entegre edildi; (5) açık temada (Light Mode) Header, Topbar, MegaMenu ve Footer yüzeyleri ve logoları tam uyumlu hale getirildi, masaüstünde mükerrer mobil hamburger menü gizlendi; (6) Faz 0/1 analizlerinde tespit edilen tüm kırık (404) buton ve link hedefleri düzeltildi ve `next.config.mjs` kalıcı 308 yönlendirmeleriyle güvenceye alındı (`36/36 PASS`); (7) tüm değişiklikler DevOps / Conventional Commits standartlarına uygun atomik commit'ler halinde versiyonlandı (Europe/Istanbul).
+27.10.2026 — Faz 6 sağlamlaştırma: sayfa sonundaki otomatik related-links ve genel deneme bandı kaldırıldı; sayfa ailesine göre tek, ortak dönüşüm bileşeni yerel olarak uygulandı ve doğrulandı. Canlıya alınmadı.
+
+## 27.10.2026 — Sayfa sonu dönüşüm alanı
+
+- Restore point: `restore/pre-page-end-conversion-20261027` → `862ebb15e328c6eee47755d6070f8d333a4125b9`.
+- Tasarım ve plan: `docs/superpowers/specs/2026-10-27-page-end-conversion-design.md` ve `docs/superpowers/plans/2026-10-27-page-end-conversion.md` kullanıcı tarafından onaylandı.
+- Politika commit'i: `d68ac09` (`feat: define page-end conversion policy`). Bileşen commit'i: `81847a1` (`feat: add contextual page-end conversion`).
+- Yeni tek sınır `PageEndConversion`: ürün/paket/ticari çözüm sayfalarında **Teklif İste + Ücretsiz Deneme**; eğitim/webinar/video kütüphanesinde **Eğitim Talebi + Teklif İste**; lisans/destek/SSS sayfalarında **Destek Platformuna Git**; Hakkımızda/Referanslar'da **Teklif İste**. Ana sayfa, İletişim, Arama, Sağlık ve yasal sayfalarda ek bant yok.
+- `contentLinks` kaynak verisi ve schema üretimi korunuyor; yalnız otomatik UI render yolları kaldırıldı. Eski iki related-links bölümü, eğitim kökündeki mükerrer talep bölümü ve genel deneme bandı artık render edilmiyor.
+- Tam yerel kapı: `pnpm data:generate` ile 110 rota/14 playlist deterministik; `src/data` değişmedi. `pnpm test`: 128 unit test, 36 parite kontrolü, 188 kontrast kontrolü ve 45 token testi geçti. `pnpm typecheck`, `pnpm build` ve `pnpm audit --prod --audit-level high` geçti; bilinen güvenlik açığı yok.
+- `next-env.d.ts` build sonrası proje kuralındaki iki `.next/dev/types` importuna geri alındı ve diff temizliği doğrulandı.
+- Gerçek tarayıcı kabulü: sekiz temsilî rota (`/products/allplan-professional`, `/solutions/road-railway`, eğitim kökü ve playlist, `/solutions-v2/connect-license`, `/about`, `/contact`, `/kvkk`) doğru 0/1 bant, CTA sırası/hedefi, related-links yokluğu ve footer komşuluğu açısından geçti. Konsol/hydration hatası görülmedi.
+- Mobil Chrome 390×844 emülasyonunda ürün ve eğitim bantları yatay taşmasız (`documentWidth = viewportWidth = 390`) ve CTA'lar viewport içinde doğrulandı. Klavye Tab kontrolünde CTA `:focus-visible` halkası solid olarak göründü.
+- Yerel önizleme `http://127.0.0.1:3001/` üzerinde açık bırakıldı. Push, merge, deploy veya canlı değişikliği yapılmadı.
 
 ## Güncel öncelik — 26.10.2026 sağlamlaştırma planı
 

@@ -285,3 +285,37 @@ class AppStylesTests(unittest.TestCase):
         self.assertRegex(count_rule.group(1), r'(?m)^\s*height\s*:\s*var\(--layout-application-reference-count-height\);')
         assert_property_values([count_rule.group(1)], 'min-width', 'var(--layout-application-reference-count-min-width)')
         assert_property_values([count_rule.group(1)], 'height', 'var(--layout-application-reference-count-height)')
+
+    def test_decorative_dimensions_use_semantic_tokens(self):
+        source = (ROOT / 'src/styles/application.css').read_text(encoding='utf-8')
+        expected = {
+            '.alu-hero-metrics__item::before': {
+                'width': '--size-application-metric-rule-width',
+                'height': '--size-application-metric-rule-height',
+            },
+            '.alu-pathway-glow': {
+                'width': '--size-application-pathway-glow',
+                'height': '--size-application-pathway-glow',
+            },
+            '.alu-about-office__divider': {
+                'height': '--size-application-office-divider',
+            },
+        }
+        for selector, properties in expected.items():
+            matches = re.findall(rf'(?m)^[\t ]*{re.escape(selector)}[\t ]*\{{([^{{}}]*)\}}', source)
+            self.assertEqual(len(matches), 1, selector)
+            for prop, token in properties.items():
+                with self.subTest(selector=selector, prop=prop):
+                    values = re.findall(rf'(?m)^\s*{re.escape(prop)}\s*:\s*([^;]+);', matches[0])
+                    self.assertEqual(values, [f'var({token})'])
+
+        # Percentages, zero and auto remain structural; any alphabetic CSS length unit is a raw literal.
+        raw_dimension_pattern = re.compile(
+            r'^\s*(?:min-|max-)?(?:width|height)\s*:\s*[^;]*(?<![\w.-])-?(?:\d*\.)?\d+[a-z]+\b',
+            re.I | re.M,
+        )
+        raw_dimensions = raw_dimension_pattern.findall(source)
+        self.assertEqual(raw_dimensions, [])
+        for raw in ['width:2svw;', 'height:2dvw;', 'width:2vmin;', 'height:2lh;', 'width:2pt;', 'height:2REM;']:
+            with self.subTest(raw=raw):
+                self.assertRegex(raw, raw_dimension_pattern)

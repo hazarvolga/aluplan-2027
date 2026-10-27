@@ -283,6 +283,18 @@ export function runTokenTests({ build = buildTokens, lint = lintComponentCss, T,
     }
     return true;
   });
+  test('application decorative-size tokens preserve their original dimensions', () => {
+    const expected = {
+      '--size-application-metric-rule-width': '2.5rem',
+      '--size-application-metric-rule-height': '2px',
+      '--size-application-pathway-glow': '52rem',
+      '--size-application-office-divider': '1px'
+    };
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      for (const [name, value] of Object.entries(expected)) if (values[name] !== value) return `${theme}/${mode} ${name}: expected ${value}, got ${values[name]}`;
+    }
+    return true;
+  });
   return { results, passed: results.filter(r => r.pass).length, failed: results.filter(r => !r.pass).length };
 }
 

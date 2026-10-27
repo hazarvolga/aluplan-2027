@@ -341,6 +341,7 @@
   --ref-size-measure-42: 42rem;
   --ref-size-measure-44: 44rem;
   --ref-size-measure-46: 46rem;
+  --ref-size-measure-52: 52rem;
   --ref-size-measure-58: 58rem;
   --ref-size-measure-62: 62rem;
   --ref-size-measure-72: 72rem;
@@ -607,6 +608,10 @@
   --size-application-modal-close-control: var(--ref-size-9);
   --size-application-reference-icon: var(--ref-size-11);
   --size-application-about-value-icon: var(--ref-size-10);
+  --size-application-metric-rule-width: var(--ref-size-10);
+  --size-application-metric-rule-height: var(--ref-border-width-2);
+  --size-application-pathway-glow: var(--ref-size-measure-52);
+  --size-application-office-divider: var(--ref-border-width-1);
   --radius-control: var(--ref-radius-4);
   --radius-surface: var(--ref-radius-0);
   --radius-badge: var(--ref-radius-2);
@@ -1052,6 +1057,10 @@
   --size-application-modal-close-control: var(--ref-size-9);
   --size-application-reference-icon: var(--ref-size-11);
   --size-application-about-value-icon: var(--ref-size-10);
+  --size-application-metric-rule-width: var(--ref-size-10);
+  --size-application-metric-rule-height: var(--ref-border-width-2);
+  --size-application-pathway-glow: var(--ref-size-measure-52);
+  --size-application-office-divider: var(--ref-border-width-1);
   --radius-control: var(--ref-radius-4);
   --radius-surface: var(--ref-radius-0);
   --radius-badge: var(--ref-radius-2);
@@ -1633,6 +1642,10 @@
   --size-application-modal-close-control: var(--ref-size-9);
   --size-application-reference-icon: var(--ref-size-11);
   --size-application-about-value-icon: var(--ref-size-10);
+  --size-application-metric-rule-width: var(--ref-size-10);
+  --size-application-metric-rule-height: var(--ref-border-width-2);
+  --size-application-pathway-glow: var(--ref-size-measure-52);
+  --size-application-office-divider: var(--ref-border-width-1);
   --radius-control: var(--ref-radius-full);
   --radius-surface: var(--ref-radius-16);
   --radius-badge: var(--ref-radius-full);
@@ -3450,8 +3463,8 @@ button.alu-role[aria-checked="true"] {
   position: absolute;
   top: 0;
   left: 0;
-  width: 2.5rem;
-  height: 2px;
+  width: var(--size-application-metric-rule-width);
+  height: var(--size-application-metric-rule-height);
   background: var(--accent-border);
 }
 .alu-hero-metrics__value {
@@ -3549,8 +3562,8 @@ button.alu-role[aria-checked="true"] {
   top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 52rem;
-  height: 52rem;
+  width: var(--size-application-pathway-glow);
+  height: var(--size-application-pathway-glow);
   border-radius: var(--radius-application-pill-extended);
   background-color: var(--role-accent, var(--role-architect));
   filter: blur(130px);
@@ -6271,7 +6284,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 }
 
 .alu-about-office__divider {
-  height: 1px;
+  height: var(--size-application-office-divider);
   background: var(--border-subtle);
 }
 

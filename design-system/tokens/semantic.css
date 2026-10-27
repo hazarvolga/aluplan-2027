@@ -194,6 +194,10 @@
   --size-application-modal-close-control: var(--ref-size-9);
   --size-application-reference-icon: var(--ref-size-11);
   --size-application-about-value-icon: var(--ref-size-10);
+  --size-application-metric-rule-width: var(--ref-size-10);
+  --size-application-metric-rule-height: var(--ref-border-width-2);
+  --size-application-pathway-glow: var(--ref-size-measure-52);
+  --size-application-office-divider: var(--ref-border-width-1);
   --radius-control: var(--ref-radius-4);
   --radius-surface: var(--ref-radius-0);
   --radius-badge: var(--ref-radius-2);
@@ -639,6 +643,10 @@
   --size-application-modal-close-control: var(--ref-size-9);
   --size-application-reference-icon: var(--ref-size-11);
   --size-application-about-value-icon: var(--ref-size-10);
+  --size-application-metric-rule-width: var(--ref-size-10);
+  --size-application-metric-rule-height: var(--ref-border-width-2);
+  --size-application-pathway-glow: var(--ref-size-measure-52);
+  --size-application-office-divider: var(--ref-border-width-1);
   --radius-control: var(--ref-radius-4);
   --radius-surface: var(--ref-radius-0);
   --radius-badge: var(--ref-radius-2);
@@ -1220,6 +1228,10 @@
   --size-application-modal-close-control: var(--ref-size-9);
   --size-application-reference-icon: var(--ref-size-11);
   --size-application-about-value-icon: var(--ref-size-10);
+  --size-application-metric-rule-width: var(--ref-size-10);
+  --size-application-metric-rule-height: var(--ref-border-width-2);
+  --size-application-pathway-glow: var(--ref-size-measure-52);
+  --size-application-office-divider: var(--ref-border-width-1);
   --radius-control: var(--ref-radius-full);
   --radius-surface: var(--ref-radius-16);
   --radius-badge: var(--ref-radius-full);

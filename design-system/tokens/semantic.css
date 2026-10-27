@@ -2,6 +2,8 @@
 /* Layer 2: semantic tokens. :root = default theme + mode. Each [data-theme] block re-declares the full set so nested scopes work. */
 :root{
   --workflow-package: var(--ref-color-workflow-package);
+  --opacity-preview-grid: var(--ref-opacity-preview-grid); /* @kind other */
+  --opacity-preview-hero-mark: var(--ref-opacity-preview-hero-mark); /* @kind other */
   --font-heading: var(--ref-font-family-manrope);
   --font-body: var(--ref-font-family-plex-sans);
   --font-mono: var(--ref-font-family-plex-mono);
@@ -86,6 +88,8 @@
   --type-application-feature-title-size: var(--ref-font-size-application-feature-title);
   --type-application-body-spacious-line-height: var(--ref-font-line-height-application-body-spacious); /* @kind other */
   --type-application-about-editorial: var(--ref-font-line-height-application-about-editorial); /* @kind other */
+  --type-preview-hero-mark-size: var(--ref-font-size-preview-hero-mark); /* @kind other */
+  --type-preview-hero-mark-line-height: var(--ref-font-line-height-preview-hero-mark); /* @kind other */
   --space-inset-xs: var(--ref-space-2);
   --space-inset-sm: var(--ref-space-4);
   --space-inset-md: var(--ref-space-6);
@@ -165,6 +169,7 @@
   --space-application-jsx-empty-state-block: var(--ref-space-application-inline-empty-state);
   --space-application-jsx-section-inset: var(--ref-space-6);
   --space-application-jsx-offset: var(--ref-space-application-inline-offset);
+  --space-preview-hero-padding: var(--ref-space-preview-hero-padding); /* @kind other */
   --control-height-sm: var(--ref-size-9);
   --control-height-md: var(--ref-size-11);
   --control-height-lg: var(--ref-size-13);
@@ -199,6 +204,18 @@
   --size-application-metric-rule-height: var(--ref-border-width-2);
   --size-application-pathway-glow: var(--ref-size-measure-52);
   --size-application-office-divider: var(--ref-border-width-1);
+  --size-preview-shell-min-height: var(--ref-size-preview-shell-min-height);
+  --size-preview-grid-pattern: var(--ref-size-preview-grid-pattern);
+  --size-preview-hero-sidebar-min: var(--ref-size-preview-hero-sidebar-min);
+  --size-preview-hero-title-measure: var(--ref-size-preview-hero-title-measure);
+  --size-preview-hero-media: var(--ref-size-preview-hero-media-min-height);
+  --size-preview-hero-media-compact: var(--ref-size-preview-hero-media-compact-min-height);
+  --size-preview-section-heading-measure: var(--ref-size-preview-section-heading-measure);
+  --size-preview-meta-measure: var(--ref-size-preview-meta-measure);
+  --size-preview-bimflex-media-min: var(--ref-size-preview-bimflex-media-min);
+  --size-preview-bimflex-logo-width: var(--ref-size-preview-bimflex-logo-width);
+  --size-preview-bimflex-tile-min-height: var(--ref-size-preview-bimflex-tile-min-height);
+  --size-preview-innovation-card-min-height: var(--ref-size-preview-innovation-card-min-height);
   --radius-control: var(--ref-radius-4);
   --radius-surface: var(--ref-radius-0);
   --radius-badge: var(--ref-radius-2);
@@ -513,6 +530,8 @@
 }
 [data-theme="aluplan"]{
   --workflow-package: var(--ref-color-workflow-package);
+  --opacity-preview-grid: var(--ref-opacity-preview-grid); /* @kind other */
+  --opacity-preview-hero-mark: var(--ref-opacity-preview-hero-mark); /* @kind other */
   --font-heading: var(--ref-font-family-manrope);
   --font-body: var(--ref-font-family-plex-sans);
   --font-mono: var(--ref-font-family-plex-mono);
@@ -597,6 +616,8 @@
   --type-application-feature-title-size: var(--ref-font-size-application-feature-title);
   --type-application-body-spacious-line-height: var(--ref-font-line-height-application-body-spacious); /* @kind other */
   --type-application-about-editorial: var(--ref-font-line-height-application-about-editorial); /* @kind other */
+  --type-preview-hero-mark-size: var(--ref-font-size-preview-hero-mark); /* @kind other */
+  --type-preview-hero-mark-line-height: var(--ref-font-line-height-preview-hero-mark); /* @kind other */
   --space-inset-xs: var(--ref-space-2);
   --space-inset-sm: var(--ref-space-4);
   --space-inset-md: var(--ref-space-6);
@@ -676,6 +697,7 @@
   --space-application-jsx-empty-state-block: var(--ref-space-application-inline-empty-state);
   --space-application-jsx-section-inset: var(--ref-space-6);
   --space-application-jsx-offset: var(--ref-space-application-inline-offset);
+  --space-preview-hero-padding: var(--ref-space-preview-hero-padding); /* @kind other */
   --control-height-sm: var(--ref-size-9);
   --control-height-md: var(--ref-size-11);
   --control-height-lg: var(--ref-size-13);
@@ -710,6 +732,18 @@
   --size-application-metric-rule-height: var(--ref-border-width-2);
   --size-application-pathway-glow: var(--ref-size-measure-52);
   --size-application-office-divider: var(--ref-border-width-1);
+  --size-preview-shell-min-height: var(--ref-size-preview-shell-min-height);
+  --size-preview-grid-pattern: var(--ref-size-preview-grid-pattern);
+  --size-preview-hero-sidebar-min: var(--ref-size-preview-hero-sidebar-min);
+  --size-preview-hero-title-measure: var(--ref-size-preview-hero-title-measure);
+  --size-preview-hero-media: var(--ref-size-preview-hero-media-min-height);
+  --size-preview-hero-media-compact: var(--ref-size-preview-hero-media-compact-min-height);
+  --size-preview-section-heading-measure: var(--ref-size-preview-section-heading-measure);
+  --size-preview-meta-measure: var(--ref-size-preview-meta-measure);
+  --size-preview-bimflex-media-min: var(--ref-size-preview-bimflex-media-min);
+  --size-preview-bimflex-logo-width: var(--ref-size-preview-bimflex-logo-width);
+  --size-preview-bimflex-tile-min-height: var(--ref-size-preview-bimflex-tile-min-height);
+  --size-preview-innovation-card-min-height: var(--ref-size-preview-innovation-card-min-height);
   --radius-control: var(--ref-radius-4);
   --radius-surface: var(--ref-radius-0);
   --radius-badge: var(--ref-radius-2);
@@ -1160,6 +1194,8 @@
 }
 [data-theme="field"]{
   --workflow-package: var(--ref-color-workflow-package);
+  --opacity-preview-grid: var(--ref-opacity-preview-grid); /* @kind other */
+  --opacity-preview-hero-mark: var(--ref-opacity-preview-hero-mark); /* @kind other */
   --font-heading: var(--ref-font-family-source-serif);
   --font-body: var(--ref-font-family-public-sans);
   --font-mono: var(--ref-font-family-plex-mono);
@@ -1244,6 +1280,8 @@
   --type-application-feature-title-size: var(--ref-font-size-application-feature-title);
   --type-application-body-spacious-line-height: var(--ref-font-line-height-application-body-spacious); /* @kind other */
   --type-application-about-editorial: var(--ref-font-line-height-application-about-editorial); /* @kind other */
+  --type-preview-hero-mark-size: var(--ref-font-size-preview-hero-mark); /* @kind other */
+  --type-preview-hero-mark-line-height: var(--ref-font-line-height-preview-hero-mark); /* @kind other */
   --space-inset-xs: var(--ref-space-1);
   --space-inset-sm: var(--ref-space-2);
   --space-inset-md: var(--ref-space-4);
@@ -1323,6 +1361,7 @@
   --space-application-jsx-empty-state-block: var(--ref-space-application-inline-empty-state);
   --space-application-jsx-section-inset: var(--ref-space-6);
   --space-application-jsx-offset: var(--ref-space-application-inline-offset);
+  --space-preview-hero-padding: var(--ref-space-preview-hero-padding); /* @kind other */
   --control-height-sm: var(--ref-size-8);
   --control-height-md: var(--ref-size-10);
   --control-height-lg: var(--ref-size-12);
@@ -1357,6 +1396,18 @@
   --size-application-metric-rule-height: var(--ref-border-width-2);
   --size-application-pathway-glow: var(--ref-size-measure-52);
   --size-application-office-divider: var(--ref-border-width-1);
+  --size-preview-shell-min-height: var(--ref-size-preview-shell-min-height);
+  --size-preview-grid-pattern: var(--ref-size-preview-grid-pattern);
+  --size-preview-hero-sidebar-min: var(--ref-size-preview-hero-sidebar-min);
+  --size-preview-hero-title-measure: var(--ref-size-preview-hero-title-measure);
+  --size-preview-hero-media: var(--ref-size-preview-hero-media-min-height);
+  --size-preview-hero-media-compact: var(--ref-size-preview-hero-media-compact-min-height);
+  --size-preview-section-heading-measure: var(--ref-size-preview-section-heading-measure);
+  --size-preview-meta-measure: var(--ref-size-preview-meta-measure);
+  --size-preview-bimflex-media-min: var(--ref-size-preview-bimflex-media-min);
+  --size-preview-bimflex-logo-width: var(--ref-size-preview-bimflex-logo-width);
+  --size-preview-bimflex-tile-min-height: var(--ref-size-preview-bimflex-tile-min-height);
+  --size-preview-innovation-card-min-height: var(--ref-size-preview-innovation-card-min-height);
   --radius-control: var(--ref-radius-full);
   --radius-surface: var(--ref-radius-16);
   --radius-badge: var(--ref-radius-full);

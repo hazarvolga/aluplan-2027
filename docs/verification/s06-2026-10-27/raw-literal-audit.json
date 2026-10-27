@@ -3,6 +3,7 @@
   "scope": [
     "src/components/**/*.tsx",
     "src/styles/application.css",
+    "design-system/ui_kits/homepage/preview.css",
     "src/data/pages.json",
     "design-system/tokens/tokens.json"
   ],
@@ -46,12 +47,26 @@
         "--z-dialog-top"
       ],
       "occurrences": 14
+    },
+    {
+      "source": "design-system/ui_kits/homepage/preview.css design literals",
+      "replacement": "semantic preview tokens and build-time responsive placeholders",
+      "renderTokens": [
+        "--space-preview-hero-padding",
+        "--size-preview-*",
+        "--type-preview-hero-mark-*",
+        "--opacity-preview-*",
+        "--z-scrim"
+      ],
+      "buildTimeBreakpoints": ["preview-compact", "lg"],
+      "occurrences": 20
     }
   ],
   "automatedGuards": [
     "generated workflow links contain no raw CSS colors",
     "component inline styles contain no numeric zIndex values",
     "application CSS contains no numeric z-index declarations",
+    "homepage preview CSS rejects raw colors, lengths, z-index values and width media queries",
     "token builder rejects raw component colors and undefined variables",
     "generated token files must match tokens.json"
   ],

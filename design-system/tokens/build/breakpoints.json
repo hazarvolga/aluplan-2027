@@ -1,6 +1,7 @@
 {
   "breakpoint": {
     "sm": "30rem",
+    "preview-compact": "40rem",
     "md": "48rem",
     "lg": "64rem",
     "xl": "80rem"

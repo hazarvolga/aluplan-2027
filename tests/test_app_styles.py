@@ -89,6 +89,35 @@ class AppStylesTests(unittest.TestCase):
                 styles.sync_styles(root)
             self.assertEqual(output.read_bytes(), before)
 
+    def test_preview_design_literals_are_rejected_before_output_changes(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            self.fixture(root)
+            styles.sync_styles(root)
+            output = root / styles.OUTPUT
+            before = output.read_bytes()
+            preview = root / 'design-system/ui_kits/homepage/preview.css'
+            for declaration in [
+                'color:#123456',
+                'z-index:-1',
+                'padding:4rem',
+                'min-height:22rem',
+                'background-size:48px',
+            ]:
+                preview.write_text('.preview {' + declaration + ';}')
+                with self.subTest(declaration=declaration), self.assertRaises(ValueError):
+                    styles.sync_styles(root)
+                self.assertEqual(output.read_bytes(), before)
+
+    def test_preview_literal_width_media_query_is_rejected(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            self.fixture(root)
+            preview = root / 'design-system/ui_kits/homepage/preview.css'
+            preview.write_text('@media(max-width:64rem){.preview{display:block}}')
+            with self.assertRaisesRegex(ValueError, 'width media query'):
+                styles.sync_styles(root)
+
     def test_application_color_guard_ignores_comments_but_rejects_color_functions(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

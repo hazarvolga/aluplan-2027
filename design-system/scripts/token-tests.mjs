@@ -30,6 +30,10 @@ export function runTokenTests({ build = buildTokens, lint = lintComponentCss, T,
     const css = run(t).files['components/responsive.generated.css'];
     return (css.includes('(min-width: 50rem)') && css.includes('(min-width: 64rem)') && !css.includes('(min-width: 48rem)')) || css;
   });
+  test('max breakpoint placeholders compile from build-time tokens', () => {
+    const css = run(T, '@media (--max-lg){.x{display:none}}\n@media (--max-preview-compact){.y{display:none}}').files['components/responsive.generated.css'];
+    return (css.includes('@media (max-width: 64rem)') && css.includes('@media (max-width: 40rem)')) || css;
+  });
   test('negative: unknown custom media in template is an error', () => has(run(T, template + '\n@media (--huge){.x{display:none}}').errors, /unknown custom media --huge/) || 'not detected');
   test('negative: literal width media query in template is an error', () => has(run(T, template + '\n@media (min-width: 40rem){.x{display:none}}').errors, /literal min\/max-width/) || 'not detected');
 

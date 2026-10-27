@@ -60,6 +60,33 @@ class DesignLiteralContractTests(unittest.TestCase):
             with self.subTest(token=token):
                 self.assertIn(f"z-index: var({token})", application_css)
 
+    def test_preview_css_is_inside_the_token_contract(self):
+        preview_css = read("design-system/ui_kits/homepage/preview.css")
+        audit = json.loads(read("docs/verification/s06-2026-10-27/raw-literal-audit.json"))
+
+        self.assertIn(
+            "design-system/ui_kits/homepage/preview.css",
+            audit["scope"],
+        )
+        self.assertNotRegex(
+            preview_css,
+            r"#[0-9a-fA-F]{3,8}\b|\b(?:rgba?|hsla?|hwb|lab|lch|oklab|oklch|color)\(",
+        )
+        self.assertNotRegex(preview_css, r"\bz-index\s*:\s*-?\d+")
+        self.assertNotRegex(
+            preview_css,
+            r"@media[^\{]*\b(?:min|max)-width\s*:\s*[\d.]",
+        )
+        for token in [
+            "--space-preview-hero-padding",
+            "--size-preview-grid-pattern",
+            "--size-preview-hero-media",
+            "--type-preview-hero-mark-size",
+            "--z-scrim",
+        ]:
+            with self.subTest(token=token):
+                self.assertIn(f"var({token})", preview_css)
+
 
 if __name__ == "__main__":
     unittest.main()

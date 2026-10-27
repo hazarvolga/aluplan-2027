@@ -96,6 +96,28 @@ class DocumentPipelineTests(unittest.TestCase):
         self.assertEqual(snapshot(self.root), after_first)
         self.assertEqual(unrelated.read_bytes(), b"unrelated user file")
 
+    def test_preflight_uses_committed_documents_when_source_checkout_is_absent(self):
+        records = document_assets.sync_documents(self.root, self.source)
+        document_assets.write_manifest(self.root, records)
+
+        source_available = document_assets.preflight_documents(
+            self.root,
+            Path(self.temp.name) / "unavailable-source",
+        )
+
+        self.assertFalse(source_available)
+
+    def test_preflight_rejects_invalid_committed_documents_without_source_checkout(self):
+        records = document_assets.sync_documents(self.root, self.source)
+        document_assets.write_manifest(self.root, records)
+        (self.root / records[0]["target"]).write_bytes(b"tampered")
+
+        with self.assertRaises(ValueError):
+            document_assets.preflight_documents(
+                self.root,
+                Path(self.temp.name) / "unavailable-source",
+            )
+
     def test_missing_source_fails_before_overwriting_any_target(self):
         before = self.seed_targets()
         (self.source / ORIGINALS[-1]).unlink()

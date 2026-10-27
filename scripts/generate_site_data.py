@@ -9,7 +9,7 @@ from urllib.parse import urlparse, parse_qs, unquote
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from extract_structured_pages import build_all_structured_pages
-from document_assets import prepare_documents, sync_documents, write_manifest
+from document_assets import preflight_documents, sync_documents, write_manifest
 from request_links import normalize_request_links
 from content_policy import apply_approved_content_policy
 
@@ -27,7 +27,7 @@ final_states_path = ROOT / "docs/00-inventory/browser-final-2026-10-22.json"
 module_states_path = ROOT / "docs/00-inventory/browser-modules-final-2026-10-22.json"
 # Fail before producing data if any original download is missing or invalid.
 SOURCE_ROOT = ROOT.parent / "aluplan-2026"
-prepare_documents(ROOT, SOURCE_ROOT)
+SOURCE_AVAILABLE = preflight_documents(ROOT, SOURCE_ROOT)
 
 with open(inv_path, "r", encoding="utf-8") as f:
     inv = json.load(f)
@@ -1198,7 +1198,9 @@ with open(data_dir / "search-index.json", "w", encoding="utf-8") as f:
 
 
 # Original binary documents only; never manufacture PDFs or DOCX placeholders.
-write_manifest(ROOT, sync_documents(ROOT, SOURCE_ROOT))
+# CI and fresh clones verify the committed copies without requiring the read-only source checkout.
+if SOURCE_AVAILABLE:
+    write_manifest(ROOT, sync_documents(ROOT, SOURCE_ROOT))
 
 print(f"Generated {len(pages_data)} routes in src/data/pages.json")
 print(f"Generated {len(playlist_by_id)} playlists in src/data/playlists.json")

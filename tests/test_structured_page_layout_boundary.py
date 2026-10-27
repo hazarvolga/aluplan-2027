@@ -23,7 +23,7 @@ class StructuredPageLayoutBoundaryTests(unittest.TestCase):
         ]
 
         self.assertEqual(len(layouts), 52)
-        self.assertEqual(sum(bool(layout.get("intro")) for layout in layouts), 28)
+        self.assertEqual(sum(bool(layout.get("intro")) for layout in layouts), 29)
         self.assertEqual(sum(bool(layout.get("workflowLinks")) for layout in layouts), 6)
         self.assertEqual(
             sum(len(layout.get("workflowLinks") or []) for layout in layouts), 24

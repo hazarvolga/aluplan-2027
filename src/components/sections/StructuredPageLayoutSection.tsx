@@ -13,6 +13,7 @@ import { FAQSection } from './FAQSection';
 import { MediaGridSection } from './MediaGridSection';
 import { ReferencesDirectorySection } from './ReferencesDirectorySection';
 import { SplitCalloutSection } from './SplitCalloutSection';
+import { StructuredContentBlocks } from './StructuredContentBlocks';
 import { WorkflowSection } from './WorkflowSection';
 
 interface StructuredVideoRequest {
@@ -52,6 +53,19 @@ export function StructuredPageLayoutSection({
   onVideo,
   onImage
 }: StructuredPageLayoutSectionProps): ReactElement {
+  if (layout.contentBlocks && layout.contentBlocks.length > 0) {
+    return (
+      <div className="alu-structured-page">
+        <StructuredContentBlocks
+          blocks={layout.contentBlocks}
+          onVideo={onVideo}
+          onImage={onImage}
+        />
+        <FAQSection faqDirectory={layout.faqDirectory} />
+      </div>
+    );
+  }
+
   return (
     <div className="alu-structured-page">
       {layout.intro && (

@@ -83,12 +83,22 @@ export interface InteractiveState {
   texts: string[];
 }
 
+export interface StructuredAction {
+  sourceId: string;
+  text: string;
+  href: string;
+  external?: boolean;
+}
+
 export interface StructuredIntro {
   paragraphs?: string[];
   kicker?: string;
-  title: string;
+  title?: string;
   bullets: string[];
   videoEmbedUrl?: string | null;
+  imageSrc?: string | null;
+  imageAlt?: string | null;
+  actions?: StructuredAction[];
 }
 
 export interface StructuredWorkflowLink {
@@ -105,6 +115,7 @@ export interface StructuredStatItem {
 }
 
 export interface StructuredBenefitItem {
+  sourceId?: string;
   iconSrc?: string;
   subtitle?: string | null;
   title: string;
@@ -112,6 +123,7 @@ export interface StructuredBenefitItem {
 }
 
 export interface StructuredMediaCardItem {
+  sourceId?: string;
   title: string;
   subtitle?: string | null;
   badge?: string | null;
@@ -146,6 +158,7 @@ export interface StructuredWorkflowTabsSection {
 }
 
 export interface StructuredSplitCallout {
+  sourceId?: string;
   kicker?: string;
   title: string;
   lead?: string;
@@ -161,6 +174,42 @@ export interface StructuredSplitCallout {
   ctaHref?: string;
   external?: boolean;
 }
+
+export interface StructuredBenefitsSection {
+  kicker?: string;
+  title: string;
+  items: StructuredBenefitItem[];
+}
+
+export interface StructuredLinkGroupItem {
+  text: string;
+  href: string;
+  external?: boolean;
+}
+
+export interface StructuredLinkGroupCard {
+  sourceId: string;
+  title: string;
+  imageSrc: string;
+  links: StructuredLinkGroupItem[];
+}
+
+export interface StructuredLinkGroupGridSection {
+  kicker?: string;
+  title: string;
+  subtitle?: string;
+  columns?: number;
+  items: StructuredLinkGroupCard[];
+}
+
+export type StructuredContentBlock =
+  | { sourceId: string; kind: 'intro'; content: StructuredIntro }
+  | { sourceId: string; kind: 'challenges'; items: string[]; title?: string }
+  | { sourceId: string; kind: 'stats'; items: StructuredStatItem[] }
+  | { sourceId: string; kind: 'linkGroupGrid'; content: StructuredLinkGroupGridSection }
+  | { sourceId: string; kind: 'benefits'; content: StructuredBenefitsSection }
+  | { sourceId: string; kind: 'mediaGrid'; content: StructuredMediaGridSection }
+  | { sourceId: string; kind: 'splitCallouts'; items: StructuredSplitCallout[] };
 
 export interface StructuredFaqItem {
   question: string;
@@ -227,16 +276,13 @@ export interface StructuredTrainingTabs {
 }
 
 export interface StructuredPageLayout {
+  contentBlocks?: StructuredContentBlock[];
   trainingTabs?: StructuredTrainingTabs;
   intro?: StructuredIntro;
   workflowLinks?: StructuredWorkflowLink[] | null;
   stats?: StructuredStatItem[];
   challenges?: string[];
-  benefits?: {
-    kicker?: string;
-    title: string;
-    items: StructuredBenefitItem[];
-  };
+  benefits?: StructuredBenefitsSection;
   coreFeatures?: StructuredMediaGridSection;
   workflowTabs?: StructuredWorkflowTabsSection;
   splitCallouts?: StructuredSplitCallout[];

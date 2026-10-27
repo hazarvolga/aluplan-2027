@@ -56,8 +56,9 @@ export function MediaGridSection({
 
             return (
               <article
-                key={`${itemKeyPrefix}-${item.title}-${index}`}
+                key={item.sourceId || `${itemKeyPrefix}-${item.title}-${index}`}
                 className={`alu-media-card${hasVideo ? ' alu-media-card--video' : ''}`}
+                data-source-id={item.sourceId}
               >
                 {hasImage && (
                   <div

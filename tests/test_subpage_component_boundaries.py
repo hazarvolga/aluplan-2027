@@ -494,12 +494,15 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
             self.assertTrue(benefits.get("items"), route)
             for item in benefits["items"]:
                 self.assertTrue(item.get("title"), route)
-                self.assertTrue(item.get("description"), route)
+                if item.get("sourceId") == "ax-product-feature-plan-preview":
+                    self.assertEqual(item.get("description"), "", route)
+                else:
+                    self.assertTrue(item.get("description"), route)
                 icon_src = item.get("iconSrc")
                 if icon_src and icon_src.startswith("/"):
                     self.assertTrue((ROOT / "public" / icon_src.lstrip("/")).is_file(), icon_src)
 
-        self.assertEqual(len(benefit_routes), 28)
+        self.assertEqual(len(benefit_routes), 29)
 
     def test_media_grids_have_a_dedicated_interactive_render_boundary(self):
         component = read("src/components/sections/MediaGridSection.tsx")
@@ -563,15 +566,18 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
                 for item in grid["items"]:
                     card_count += 1
                     self.assertTrue(item.get("title"), route)
-                    self.assertTrue(item.get("description"), route)
+                    if str(item.get("sourceId", "")).startswith("ax-vr-slide-"):
+                        self.assertEqual(item.get("description"), "", route)
+                    else:
+                        self.assertTrue(item.get("description"), route)
                     image_src = item.get("imageSrc")
                     if image_src and image_src.startswith("/"):
                         self.assertTrue((ROOT / "public" / image_src.lstrip("/")).is_file(), image_src)
 
-        self.assertEqual(len(media_routes), 29)
+        self.assertEqual(len(media_routes), 31)
         self.assertEqual(core_grid_count, 8)
-        self.assertEqual(extra_grid_count, 46)
-        self.assertEqual(card_count, 362)
+        self.assertEqual(extra_grid_count, 48)
+        self.assertEqual(card_count, 374)
 
     def test_split_callouts_have_a_shared_interactive_render_boundary(self):
         component = read("src/components/sections/SplitCalloutSection.tsx")
@@ -651,10 +657,10 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
                             media_path,
                         )
 
-        self.assertEqual(len(callout_routes), 22)
+        self.assertEqual(len(callout_routes), 23)
         self.assertEqual(
             totals,
-            {"all": 62, "primary": 52, "bottom": 10, "youtube": 27, "mp4": 5, "image": 30},
+            {"all": 67, "primary": 57, "bottom": 10, "youtube": 27, "mp4": 5, "image": 31},
         )
 
 

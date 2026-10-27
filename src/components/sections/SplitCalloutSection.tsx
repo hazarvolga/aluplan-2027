@@ -41,6 +41,7 @@ export function SplitCalloutSection({
             ? `https://img.youtube.com/vi/${callout.youtubeId}/hqdefault.jpg`
             : '');
         const isReversed = callout.reverse ?? index % 2 === 1;
+        const hasMedia = hasVideo || Boolean(thumbSrc);
         const paragraphs =
           callout.paragraphs && callout.paragraphs.length > 0
             ? callout.paragraphs
@@ -50,17 +51,18 @@ export function SplitCalloutSection({
 
         return (
           <section
-            key={`${itemKeyPrefix}-${callout.title}-${index}`}
+            key={callout.sourceId || `${itemKeyPrefix}-${callout.title}-${index}`}
             className="preview-section preview-section--subtle"
             aria-label={callout.title}
+            data-source-id={callout.sourceId}
           >
             <div className="alu-container">
               <div
                 className={`alu-scia-callout${
                   isReversed ? ' alu-scia-callout--reverse' : ''
-                }`}
+                }${hasMedia ? '' : ' alu-scia-callout--content-only'}`}
               >
-                <div
+                {hasMedia && <div
                   className={`alu-scia-callout__media${
                     hasVideo || thumbSrc ? ' alu-scia-callout__media--interactive' : ''
                   }`}
@@ -143,7 +145,7 @@ export function SplitCalloutSection({
                       <AluIcon name="sparkles" size="sm" />
                     </span>
                   )}
-                </div>
+                </div>}
 
                 <div className="alu-scia-callout__content">
                   {callout.kicker && (

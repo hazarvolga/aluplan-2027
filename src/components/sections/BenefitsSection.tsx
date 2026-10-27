@@ -27,7 +27,11 @@ export function BenefitsSection({ benefits }: BenefitsSectionProps): ReactElemen
 
         <div className={gridClassName}>
           {benefits.items.map((benefit, index) => (
-            <article key={`${benefit.title}-${index}`} className="alu-benefit-card">
+            <article
+              key={benefit.sourceId || `${benefit.title}-${index}`}
+              className="alu-benefit-card"
+              data-source-id={benefit.sourceId}
+            >
               <div className="alu-benefit-card__top">
                 <div className="alu-benefit-card__titles">
                   {benefit.subtitle && (

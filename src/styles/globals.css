@@ -5299,6 +5299,14 @@ button.alu-role[aria-checked="true"] {
 .alu-intro-split__media {
   width: 100%;
 }
+.alu-intro-split__media > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: var(--border-width-default) solid var(--border-strong);
+  box-shadow: var(--elevation-overlay);
+}
 .alu-intro-split__video-frame {
   position: relative;
   aspect-ratio: 16 / 9;
@@ -5834,6 +5842,9 @@ button.alu-role[aria-checked="true"] {
   border: var(--border-width-default) solid var(--border-strong);
   border-left: var(--border-width-heavy) solid var(--action-primary-bg);
   box-shadow: var(--elevation-overlay);
+}
+.alu-scia-callout--content-only {
+  grid-template-columns: minmax(0, 1fr);
 }
 .alu-scia-callout--reverse .alu-scia-callout__media {
   order: 2;

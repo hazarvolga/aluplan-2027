@@ -319,3 +319,31 @@ class AppStylesTests(unittest.TestCase):
         for raw in ['width:2svw;', 'height:2dvw;', 'width:2vmin;', 'height:2lh;', 'width:2pt;', 'height:2REM;']:
             with self.subTest(raw=raw):
                 self.assertRegex(raw, raw_dimension_pattern)
+
+    def test_repeated_interaction_transforms_use_semantic_tokens(self):
+        source = (ROOT / 'src/styles/application.css').read_text(encoding='utf-8')
+        expected = {
+            '.alu-pathway-tab:hover': '--motion-transform-lift-subtle',
+            '.alu-techspec-item:hover': '--motion-transform-lift-subtle',
+            '.alu-service-card:hover': '--motion-transform-lift-subtle',
+            '.alu-yt-subscribe-btn:hover': '--motion-transform-lift-subtle',
+            '.alu-workflow-pill:hover': '--motion-transform-lift-subtle',
+            '.alu-ref-card:hover': '--motion-transform-lift-subtle',
+            '.alu-bento-card:hover': '--motion-transform-lift-moderate',
+            '.alu-yt-card:hover': '--motion-transform-lift-moderate',
+            '.alu-about-value-item:hover': '--motion-transform-lift-moderate',
+            '.alu-product-card--highlighted:hover': '--motion-transform-lift-strong',
+            '.alu-benefit-card:hover': '--motion-transform-lift-strong',
+            '.alu-media-card:hover': '--motion-transform-lift-strong',
+            '.alu-megamenu__item:hover': '--motion-transform-nudge-subtle',
+            '.alu-workflow-pill:hover .alu-workflow-pill__arrow': '--motion-transform-nudge-subtle',
+            '.alu-pathway-cta:hover .alu-pathway-cta__arrow': '--motion-transform-nudge-strong',
+        }
+        for selector, token in expected.items():
+            matches = re.findall(rf'(?m)^[\t ]*{re.escape(selector)}[\t ]*\{{([^{{}}]*)\}}', source)
+            self.assertTrue(matches, selector)
+            values = [value for declarations in matches for value in re.findall(
+                r'(?m)^\s*transform\s*:\s*([^;]+);', declarations
+            )]
+            with self.subTest(selector=selector):
+                self.assertEqual(values, [f'var({token})'])

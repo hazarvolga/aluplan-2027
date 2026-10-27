@@ -253,6 +253,11 @@
   --motion-easing-exit: var(--ref-easing-accelerate); /* @kind other */
   --motion-easing-expressive: var(--ref-easing-application-expressive); /* @kind other */
   --motion-easing-default: var(--ref-easing-application-default); /* @kind other */
+  --motion-transform-lift-subtle: var(--ref-transform-application-lift-subtle); /* @kind other */
+  --motion-transform-lift-moderate: var(--ref-transform-application-lift-moderate); /* @kind other */
+  --motion-transform-lift-strong: var(--ref-transform-application-lift-strong); /* @kind other */
+  --motion-transform-nudge-subtle: var(--ref-transform-application-nudge-subtle); /* @kind other */
+  --motion-transform-nudge-strong: var(--ref-transform-application-nudge-strong); /* @kind other */
   --z-base: var(--ref-z-index-0); /* @kind other */
   --z-sticky: var(--ref-z-index-100); /* @kind other */
   --z-dropdown: var(--ref-z-index-200); /* @kind other */
@@ -702,6 +707,11 @@
   --motion-easing-exit: var(--ref-easing-accelerate); /* @kind other */
   --motion-easing-expressive: var(--ref-easing-application-expressive); /* @kind other */
   --motion-easing-default: var(--ref-easing-application-default); /* @kind other */
+  --motion-transform-lift-subtle: var(--ref-transform-application-lift-subtle); /* @kind other */
+  --motion-transform-lift-moderate: var(--ref-transform-application-lift-moderate); /* @kind other */
+  --motion-transform-lift-strong: var(--ref-transform-application-lift-strong); /* @kind other */
+  --motion-transform-nudge-subtle: var(--ref-transform-application-nudge-subtle); /* @kind other */
+  --motion-transform-nudge-strong: var(--ref-transform-application-nudge-strong); /* @kind other */
   --z-base: var(--ref-z-index-0); /* @kind other */
   --z-sticky: var(--ref-z-index-100); /* @kind other */
   --z-dropdown: var(--ref-z-index-200); /* @kind other */
@@ -1287,6 +1297,11 @@
   --motion-easing-exit: var(--ref-easing-accelerate); /* @kind other */
   --motion-easing-expressive: var(--ref-easing-application-expressive); /* @kind other */
   --motion-easing-default: var(--ref-easing-application-default); /* @kind other */
+  --motion-transform-lift-subtle: var(--ref-transform-application-lift-subtle); /* @kind other */
+  --motion-transform-lift-moderate: var(--ref-transform-application-lift-moderate); /* @kind other */
+  --motion-transform-lift-strong: var(--ref-transform-application-lift-strong); /* @kind other */
+  --motion-transform-nudge-subtle: var(--ref-transform-application-nudge-subtle); /* @kind other */
+  --motion-transform-nudge-strong: var(--ref-transform-application-nudge-strong); /* @kind other */
   --z-base: var(--ref-z-index-0); /* @kind other */
   --z-sticky: var(--ref-z-index-100); /* @kind other */
   --z-dropdown: var(--ref-z-index-200); /* @kind other */

@@ -295,6 +295,19 @@ export function runTokenTests({ build = buildTokens, lint = lintComponentCss, T,
     }
     return true;
   });
+  test('application interaction-transform tokens preserve the original lift and nudge values', () => {
+    const expected = {
+      '--motion-transform-lift-subtle': 'translateY(-2px)',
+      '--motion-transform-lift-moderate': 'translateY(-3px)',
+      '--motion-transform-lift-strong': 'translateY(-4px)',
+      '--motion-transform-nudge-subtle': 'translateX(3px)',
+      '--motion-transform-nudge-strong': 'translateX(5px)'
+    };
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      for (const [name, value] of Object.entries(expected)) if (values[name] !== value) return `${theme}/${mode} ${name}: expected ${value}, got ${values[name]}`;
+    }
+    return true;
+  });
   return { results, passed: results.filter(r => r.pass).length, failed: results.filter(r => !r.pass).length };
 }
 

@@ -404,6 +404,11 @@
   --ref-easing-accelerate: cubic-bezier(0.3, 0, 1, 1); /* @kind other */
   --ref-easing-application-expressive: cubic-bezier(0.22, 1, 0.36, 1); /* @kind other */
   --ref-easing-application-default: ease; /* @kind other */
+  --ref-transform-application-lift-subtle: translateY(-2px); /* @kind other */
+  --ref-transform-application-lift-moderate: translateY(-3px); /* @kind other */
+  --ref-transform-application-lift-strong: translateY(-4px); /* @kind other */
+  --ref-transform-application-nudge-subtle: translateX(3px); /* @kind other */
+  --ref-transform-application-nudge-strong: translateX(5px); /* @kind other */
   --ref-z-index-0: 0; /* @kind other */
   --ref-z-index-100: 100; /* @kind other */
   --ref-z-index-200: 200; /* @kind other */
@@ -667,6 +672,11 @@
   --motion-easing-exit: var(--ref-easing-accelerate); /* @kind other */
   --motion-easing-expressive: var(--ref-easing-application-expressive); /* @kind other */
   --motion-easing-default: var(--ref-easing-application-default); /* @kind other */
+  --motion-transform-lift-subtle: var(--ref-transform-application-lift-subtle); /* @kind other */
+  --motion-transform-lift-moderate: var(--ref-transform-application-lift-moderate); /* @kind other */
+  --motion-transform-lift-strong: var(--ref-transform-application-lift-strong); /* @kind other */
+  --motion-transform-nudge-subtle: var(--ref-transform-application-nudge-subtle); /* @kind other */
+  --motion-transform-nudge-strong: var(--ref-transform-application-nudge-strong); /* @kind other */
   --z-base: var(--ref-z-index-0); /* @kind other */
   --z-sticky: var(--ref-z-index-100); /* @kind other */
   --z-dropdown: var(--ref-z-index-200); /* @kind other */
@@ -1116,6 +1126,11 @@
   --motion-easing-exit: var(--ref-easing-accelerate); /* @kind other */
   --motion-easing-expressive: var(--ref-easing-application-expressive); /* @kind other */
   --motion-easing-default: var(--ref-easing-application-default); /* @kind other */
+  --motion-transform-lift-subtle: var(--ref-transform-application-lift-subtle); /* @kind other */
+  --motion-transform-lift-moderate: var(--ref-transform-application-lift-moderate); /* @kind other */
+  --motion-transform-lift-strong: var(--ref-transform-application-lift-strong); /* @kind other */
+  --motion-transform-nudge-subtle: var(--ref-transform-application-nudge-subtle); /* @kind other */
+  --motion-transform-nudge-strong: var(--ref-transform-application-nudge-strong); /* @kind other */
   --z-base: var(--ref-z-index-0); /* @kind other */
   --z-sticky: var(--ref-z-index-100); /* @kind other */
   --z-dropdown: var(--ref-z-index-200); /* @kind other */
@@ -1701,6 +1716,11 @@
   --motion-easing-exit: var(--ref-easing-accelerate); /* @kind other */
   --motion-easing-expressive: var(--ref-easing-application-expressive); /* @kind other */
   --motion-easing-default: var(--ref-easing-application-default); /* @kind other */
+  --motion-transform-lift-subtle: var(--ref-transform-application-lift-subtle); /* @kind other */
+  --motion-transform-lift-moderate: var(--ref-transform-application-lift-moderate); /* @kind other */
+  --motion-transform-lift-strong: var(--ref-transform-application-lift-strong); /* @kind other */
+  --motion-transform-nudge-subtle: var(--ref-transform-application-nudge-subtle); /* @kind other */
+  --motion-transform-nudge-strong: var(--ref-transform-application-nudge-strong); /* @kind other */
   --z-base: var(--ref-z-index-0); /* @kind other */
   --z-sticky: var(--ref-z-index-100); /* @kind other */
   --z-dropdown: var(--ref-z-index-200); /* @kind other */
@@ -3308,7 +3328,7 @@ button.alu-role[aria-checked="true"] {
   background: var(--surface-subtle);
   color: var(--accent-fg);
   text-decoration: none;
-  transform: translateX(3px);
+  transform: var(--motion-transform-nudge-subtle);
 }
 
 /* H01: Flagship Cinematic BIM Hero Stage */
@@ -3613,7 +3633,7 @@ button.alu-role[aria-checked="true"] {
 .alu-pathway-tab:hover {
   border-color: var(--tab-accent, var(--accent-border));
   color: var(--text-primary);
-  transform: translateY(-2px);
+  transform: var(--motion-transform-lift-subtle);
 }
 .alu-pathway-tab--active {
   background: var(--surface-raised);
@@ -3747,7 +3767,7 @@ button.alu-role[aria-checked="true"] {
   transition: transform var(--motion-duration-media) var(--motion-easing-expressive);
 }
 .alu-pathway-cta:hover .alu-pathway-cta__arrow {
-  transform: translateX(5px);
+  transform: var(--motion-transform-nudge-strong);
 }
 
 .alu-pathway-split__right {
@@ -3862,7 +3882,7 @@ button.alu-role[aria-checked="true"] {
   box-shadow: 0 20px 44px -15px var(--visual-shadow-strong);
 }
 .alu-product-card--highlighted:hover {
-  transform: translateY(-4px);
+  transform: var(--motion-transform-lift-strong);
   border-color: var(--role-accent, var(--accent-border));
   box-shadow:
     0 24px 52px -12px var(--visual-shadow-product-hover),
@@ -4050,7 +4070,7 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-bento-card:hover {
   border-color: var(--accent-border);
-  transform: translateY(-3px);
+  transform: var(--motion-transform-lift-moderate);
   text-decoration: none;
   color: var(--visual-on-emphasis);
 }
@@ -4175,7 +4195,7 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-techspec-item:hover {
   border-color: var(--accent-border);
-  transform: translateY(-2px);
+  transform: var(--motion-transform-lift-subtle);
   text-decoration: none;
 }
 .alu-techspec-item__num {
@@ -4245,7 +4265,7 @@ button.alu-role[aria-checked="true"] {
 .alu-service-card:hover {
   border-color: var(--accent-border);
   border-top-color: var(--accent-border);
-  transform: translateY(-2px);
+  transform: var(--motion-transform-lift-subtle);
 }
 .alu-service-card__top {
   display: flex;
@@ -4582,7 +4602,7 @@ button.alu-role[aria-checked="true"] {
   background: var(--visual-youtube-action-hover);
   color: var(--visual-on-emphasis);
   text-decoration: none;
-  transform: translateY(-2px);
+  transform: var(--motion-transform-lift-subtle);
   box-shadow: 0 18px 38px -8px var(--visual-youtube-action-hover-shadow);
 }
 
@@ -4614,7 +4634,7 @@ button.alu-role[aria-checked="true"] {
 .alu-yt-card:hover {
   background: var(--surface-raised);
   border-color: var(--visual-youtube-card-hover-border);
-  transform: translateY(-3px);
+  transform: var(--motion-transform-lift-moderate);
   box-shadow: var(--elevation-overlay);
   text-decoration: none;
 }
@@ -4981,7 +5001,7 @@ button.alu-role[aria-checked="true"] {
     box-shadow var(--motion-duration-control) var(--motion-easing-default);
 }
 .alu-workflow-pill:hover {
-  transform: translateY(-2px);
+  transform: var(--motion-transform-lift-subtle);
   border-color: var(--accent-border);
   background: var(--surface-raised);
   box-shadow: var(--elevation-raised);
@@ -5003,7 +5023,7 @@ button.alu-role[aria-checked="true"] {
   transition: transform var(--motion-duration-responsive) var(--motion-easing-default), color var(--motion-duration-responsive) var(--motion-easing-default);
 }
 .alu-workflow-pill:hover .alu-workflow-pill__arrow {
-  transform: translateX(3px);
+  transform: var(--motion-transform-nudge-subtle);
   color: var(--accent-fg);
 }
 
@@ -5071,7 +5091,7 @@ button.alu-role[aria-checked="true"] {
     box-shadow var(--motion-duration-panel) var(--motion-easing-default);
 }
 .alu-benefit-card:hover {
-  transform: translateY(-4px);
+  transform: var(--motion-transform-lift-strong);
   border-color: var(--accent-border);
   box-shadow: var(--elevation-overlay);
 }
@@ -5137,7 +5157,7 @@ button.alu-role[aria-checked="true"] {
     box-shadow var(--motion-duration-media) var(--motion-easing-default);
 }
 .alu-media-card:hover {
-  transform: translateY(-4px);
+  transform: var(--motion-transform-lift-strong);
   border-color: var(--accent-border);
   box-shadow: var(--elevation-overlay);
 }
@@ -5925,7 +5945,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 }
 
 .alu-ref-card:hover {
-  transform: translateY(-2px);
+  transform: var(--motion-transform-lift-subtle);
   border-color: var(--accent-border);
   background: var(--surface-raised);
 }
@@ -6213,7 +6233,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 }
 
 .alu-about-value-item:hover {
-  transform: translateY(-3px);
+  transform: var(--motion-transform-lift-moderate);
   border-color: var(--accent-border);
   background: var(--surface-raised);
 }

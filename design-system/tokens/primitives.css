@@ -383,6 +383,11 @@
   --ref-easing-accelerate: cubic-bezier(0.3, 0, 1, 1); /* @kind other */
   --ref-easing-application-expressive: cubic-bezier(0.22, 1, 0.36, 1); /* @kind other */
   --ref-easing-application-default: ease; /* @kind other */
+  --ref-transform-application-lift-subtle: translateY(-2px); /* @kind other */
+  --ref-transform-application-lift-moderate: translateY(-3px); /* @kind other */
+  --ref-transform-application-lift-strong: translateY(-4px); /* @kind other */
+  --ref-transform-application-nudge-subtle: translateX(3px); /* @kind other */
+  --ref-transform-application-nudge-strong: translateX(5px); /* @kind other */
   --ref-z-index-0: 0; /* @kind other */
   --ref-z-index-100: 100; /* @kind other */
   --ref-z-index-200: 200; /* @kind other */

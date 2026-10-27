@@ -857,16 +857,44 @@ with open(data_dir / "pages.json", "w", encoding="utf-8") as f:
 with open(data_dir / "playlists.json", "w", encoding="utf-8") as f:
     json.dump(playlist_by_id, f, ensure_ascii=False, indent=2)
 
+site_identity = {
+    "name": "Aluplan Program Sistemleri",
+    "alternateName": "Aluplan Türkiye",
+    "description": "1995'ten beri Türkiye'nin güvenilir ALLPLAN distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri.",
+    "foundingDate": "1995",
+    "email": "info@aluplan.com.tr",
+    "telephone": "+90-216-225-84-41",
+    "displayPhones": ["(+90) 216 225 84 41", "(+90) 543 211 94 42", "(+90) 549 499 73 79"],
+    "phoneLinks": ["+902162258441", "+905432119442", "+905494997379"],
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Quick Tower – Workinton, İçerenköy Mah. Topçu İbrahim Sok. 8/10D No: 5",
+        "addressLocality": "Ataşehir",
+        "addressRegion": "İstanbul",
+        "postalCode": "34752",
+        "addressCountry": "TR",
+    },
+    "displayAddress": "Quick Tower – Workinton, İçerenköy Mah. Topçu İbrahim Sok. 8/10D No: 5, 34752 Ataşehir / İstanbul",
+    "sameAs": [
+        "https://www.facebook.com/Allplan.Turkey",
+        "https://twitter.com/Allplan_Turkey",
+        "https://www.linkedin.com/company/allplan-turkey/",
+        "https://www.instagram.com/allplan_turkey/",
+        "https://www.youtube.com/c/AllplanTurkey",
+    ],
+}
+
 navigation_data = {
+    "siteIdentity": site_identity,
     "topBar": {
-        "email": "info@aluplan.com.tr",
-        "phones": ["(+90) 216 225 84 41", "(+90) 543 211 94 42", "(+90) 549 499 73 79"],
+        "email": site_identity["email"],
+        "phones": site_identity["displayPhones"],
         "socialLinks": [
-            {"label": "Facebook", "href": "https://www.facebook.com/Allplan.Turkey"},
-            {"label": "Twitter", "href": "https://twitter.com/Allplan_Turkey"},
-            {"label": "LinkedIn", "href": "https://www.linkedin.com/company/allplan-turkey/"},
-            {"label": "Instagram", "href": "https://www.instagram.com/allplan_turkey/"},
-            {"label": "YouTube", "href": "https://www.youtube.com/c/AllplanTurkey"},
+            {"label": label, "href": href}
+            for label, href in zip(
+                ["Facebook", "Twitter", "LinkedIn", "Instagram", "YouTube"],
+                site_identity["sameAs"],
+            )
         ],
     },
     "productsMenu": [
@@ -990,8 +1018,8 @@ navigation_data = {
             "İçerenköy Mah. Topçu İbrahim Sok.",
             "8/10D No: 5, 34752 Ataşehir / İstanbul",
         ],
-        "phones": ["(+90) 216 225 84 41", "(+90) 543 211 94 42", "(+90) 549 499 73 79"],
-        "email": "info@aluplan.com.tr",
+        "phones": site_identity["displayPhones"],
+        "email": site_identity["email"],
         "legal": [
             {"label": "Gizlilik Politikası", "href": "/gizlilik-politikasi"},
             {"label": "Kullanım Şartları", "href": "/kullanim-sartlari"},

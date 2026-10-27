@@ -1,4 +1,38 @@
 {
+  "siteIdentity": {
+    "name": "Aluplan Program Sistemleri",
+    "alternateName": "Aluplan Türkiye",
+    "description": "1995'ten beri Türkiye'nin güvenilir ALLPLAN distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri.",
+    "foundingDate": "1995",
+    "email": "info@aluplan.com.tr",
+    "telephone": "+90-216-225-84-41",
+    "displayPhones": [
+      "(+90) 216 225 84 41",
+      "(+90) 543 211 94 42",
+      "(+90) 549 499 73 79"
+    ],
+    "phoneLinks": [
+      "+902162258441",
+      "+905432119442",
+      "+905494997379"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Quick Tower – Workinton, İçerenköy Mah. Topçu İbrahim Sok. 8/10D No: 5",
+      "addressLocality": "Ataşehir",
+      "addressRegion": "İstanbul",
+      "postalCode": "34752",
+      "addressCountry": "TR"
+    },
+    "displayAddress": "Quick Tower – Workinton, İçerenköy Mah. Topçu İbrahim Sok. 8/10D No: 5, 34752 Ataşehir / İstanbul",
+    "sameAs": [
+      "https://www.facebook.com/Allplan.Turkey",
+      "https://twitter.com/Allplan_Turkey",
+      "https://www.linkedin.com/company/allplan-turkey/",
+      "https://www.instagram.com/allplan_turkey/",
+      "https://www.youtube.com/c/AllplanTurkey"
+    ]
+  },
   "topBar": {
     "email": "info@aluplan.com.tr",
     "phones": [

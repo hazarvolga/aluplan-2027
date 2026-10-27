@@ -7,7 +7,8 @@ import {
   PlaylistRecord,
   TRIAL_CTA_URL,
   MAIN_QUOTE_FORM_URL,
-  SUPPORT_PORTAL_URL
+  SUPPORT_PORTAL_URL,
+  getSiteIdentity
 } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { TrainingTabs } from './TrainingTabs';
@@ -35,6 +36,8 @@ const SECTION_LABELS: Record<string, string> = {
   legal: 'YASAL BİLGİLENDİRME VE POLİTİKALAR',
   utility: 'SİSTEM VE ARAMA'
 };
+
+const siteIdentity = getSiteIdentity();
 
 export function SubpageView({
   page,
@@ -192,14 +195,14 @@ export function SubpageView({
                 <span>Talep Formunu Aç</span>
                 <AluIcon name="external-link" size="sm" />
               </a>
-              <a href="mailto:info@aluplan.com.tr" className="alu-link">info@aluplan.com.tr</a>
+              <a href={`mailto:${siteIdentity.email}`} className="alu-link">{siteIdentity.email}</a>
             </div>
 
             <div className="alu-service-card alu-stack">
               <span className="preview-kicker">MERKEZ OFİS & DESTEK</span>
               <h2 className="alu-h2">Merkez Ofis ve Doğrudan Erişim</h2>
               <p className="alu-body">
-                Quick Tower – Workinton, İçerenköy Mah. Topçu İbrahim Sok. 8/10D No: 5, 34752 Ataşehir / İstanbul
+                {siteIdentity.displayAddress}
               </p>
               <ul className="alu-stack" style={{ listStyle: 'none', padding: 0, margin: 0, gap: 'var(--space-application-jsx-comfortable)' }}>
                 <li className="alu-cluster">
@@ -208,7 +211,7 @@ export function SubpageView({
                   </span>
                   <div>
                     <span className="alu-caption" style={{ display: 'block' }}>Santral / Ofis</span>
-                    <a className="alu-link" href="tel:+902162258441">(+90) 216 225 84 41</a>
+                    <a className="alu-link" href={`tel:${siteIdentity.phoneLinks[0]}`}>{siteIdentity.displayPhones[0]}</a>
                   </div>
                 </li>
                 <li className="alu-cluster">
@@ -217,7 +220,7 @@ export function SubpageView({
                   </span>
                   <div>
                     <span className="alu-caption" style={{ display: 'block' }}>Satış & Danışmanlık 1</span>
-                    <a className="alu-link" href="tel:+905432119442">(+90) 543 211 94 42</a>
+                    <a className="alu-link" href={`tel:${siteIdentity.phoneLinks[1]}`}>{siteIdentity.displayPhones[1]}</a>
                   </div>
                 </li>
                 <li className="alu-cluster">
@@ -226,7 +229,7 @@ export function SubpageView({
                   </span>
                   <div>
                     <span className="alu-caption" style={{ display: 'block' }}>Satış & Danışmanlık 2</span>
-                    <a className="alu-link" href="tel:+905494997379">(+90) 549 499 73 79</a>
+                    <a className="alu-link" href={`tel:${siteIdentity.phoneLinks[2]}`}>{siteIdentity.displayPhones[2]}</a>
                   </div>
                 </li>
                 <li className="alu-cluster">
@@ -235,7 +238,7 @@ export function SubpageView({
                   </span>
                   <div>
                     <span className="alu-caption" style={{ display: 'block' }}>Kurumsal E-posta</span>
-                    <a className="alu-link" href="mailto:info@aluplan.com.tr">info@aluplan.com.tr</a>
+                    <a className="alu-link" href={`mailto:${siteIdentity.email}`}>{siteIdentity.email}</a>
                   </div>
                 </li>
                 <li className="alu-cluster">

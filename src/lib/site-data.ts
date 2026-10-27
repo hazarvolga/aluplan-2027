@@ -274,8 +274,35 @@ export interface SearchEntry {
   keywords: string;
 }
 
+export interface SiteIdentity {
+  name: string;
+  alternateName: string;
+  description: string;
+  foundingDate: string;
+  email: string;
+  telephone: string;
+  displayPhones: string[];
+  phoneLinks: string[];
+  address: {
+    '@type': 'PostalAddress';
+    streetAddress: string;
+    addressLocality: string;
+    addressRegion: string;
+    postalCode: string;
+    addressCountry: string;
+  };
+  displayAddress: string;
+  sameAs: string[];
+}
+
+interface NavigationData {
+  siteIdentity: SiteIdentity;
+  [key: string]: unknown;
+}
+
 const pagesMap = pagesJson as unknown as Record<string, PageRecord>;
 const playlistsMap = playlistsJson as unknown as Record<string, PlaylistRecord>;
+const navigationData = navigationJson as unknown as NavigationData;
 
 export function normalizeLookupPath(pathname: string): string {
   if (!pathname || pathname === '/') return '/';
@@ -309,6 +336,10 @@ export function getAllPlaylists(): PlaylistRecord[] {
 
 export function getNavigationData() {
   return navigationJson;
+}
+
+export function getSiteIdentity(): SiteIdentity {
+  return navigationData.siteIdentity;
 }
 
 export function getHomepageData() {

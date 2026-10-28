@@ -1,7 +1,64 @@
 # Oturum devri
 
+## 28.10.2026 — 2027 içerik envanteri, Aşama C (web içeriği envanteri + TR taslak)
+
+- **Kapsam:** tüm kök klasörlerden 10 hedef sayfa × 394 içerik birimi; her kayıt `slug#bN` blok adresi + birebir EN metin + ayrı TR **taslak** kolonu. Kişisel veri, görüntü kredisi ve maskeli satırlar envantere girmedi.
+- **Yeni betikler:** `scripts/source_blocks.py` (Stage B yüzeyinden blok adresleri üretir; 20 belge / 775 blok), `scripts/build_web_inventory.py` (satır çözümü, Markdown render, `--check` kapsama/TR/ID denetimi), `scripts/inventory_units/` (sayfa bazlı içerik birimi modülleri: allplan, allplan-parametric, allplan-rebar, allplan-max, allplan-civil, frilo, scia, sds2).
+- **Çıktılar:** `docs/content-2027/02-inventory/pages/*.md` (10 dosya), `README.md`, `routes.md` (110 mevcut rota + 5 yeni rota önerisi), `open-decisions.md` (15 açık karar), `source-coverage.md` (13 web docx / 761 blok kapsama tablosu).
+- **Bire birlik garantisi:** EN hücresi elle yazılmaz; betik Stage B çıktısındaki bloktan kopyalar. Tekrar eden metinler (FRILO/SCIA özellikleri, sürüm `VERSION 2027` etiketleri, Max anket etiketi) bir kez tanımlanıp `ref()` ile referanslanır; `--check` aynı metnin ikinci tekrarını kapsamış sayar.
+- **Denetim:** `build_web_inventory.py --check` → "Sorun yok. 10 sayfa, 394 içerik birimi". Kapsam kuralı: web sayfası olmayan belgeler (7 sales PDF/cheat sheet web sürümü) kapsam dışı; NON_CONTENT desenleri satış notlarını saymaz.
+- **Açık sorunlar 02-inventory/open-decisions.md içinde:** FRILO/SCIA rota yapısı, Max ile sürüm sayfaları çakışması, Parametric/Rebar yeni rotaların kararı, sayısal iddia yayın izinleri, SDS2/Max ana görselleri, Bimplus değişiklik hedefi ve kaynak metin hataları (Max pillar-2 tekrarı, FRILO Geotechnics Ultimate başlığı).
+- **Bekleyen girdiler:** B3 (14 İngilizce messaging brief, SharePoint indirilmesi) ve B4 (pptx kapsam kararı). Aşama D (makine okunur `content-records.json`) onay sonrası.
+- Push/merge/deploy/canlı değişiklik yapılmadı.
+
 ## Güncelleme tarihi ve oturum no
-28.10.2026 — Faz 6 sağlamlaştırma: çözüm katalog/hub navigasyon regresyonu test-first giderildi; kaynak giriş içeriği ve kart görselleri korunarak yerel kabul paketi tamamlandı. Canlıya alınmadı.
+28.10.2026 — 2027 içerik envanteri Aşama A, B1–B2, B5, B6 ve C tamamlandı: 10 hedef sayfa / 394 içerik birimi envanteri, `--check` temiz. B3 (İngilizce brief indirme) ve B4 (pptx kapsamı) karar bekliyor; Aşama D onay bekliyor.
+
+## 28.10.2026 — Header/footer sosyal bağlantıları ikon-only
+
+- Header topbar ve footer sosyal bağlantılarındaki görünür kanal adları kaldırıldı; Facebook, Twitter/X, LinkedIn, Instagram ve YouTube yalnız ikonla gösteriliyor.
+- `aria-label`, hedef URL, yeni sekme davranışı ve `noopener noreferrer` korundu. DOM kabulünde 10 bağlantının görünür metni boş, erişilebilir adı ve tek ikonu mevcut.
+- Erişilebilirlik regresyon testi eklendi; `pnpm test` toplam 147 birim testi, 36 parite ve 45 token testiyle geçti. Push/deploy/canlı değişikliği yapılmadı.
+
+## Güncelleme tarihi ve oturum no
+28.10.2026 — 2027 içerik envanteri Aşama B1–B2: 13 web sayfası docx ve 18 edition giriş metni birebir çıkarıldı. B3 (İngilizce brief indirme) ve B4 (pptx kapsamı) karar bekliyor.
+
+## 28.10.2026 — 2027 içerik envanteri, Aşama B1–B2 (metin çıkarımı)
+
+- **Yeni betik:** `scripts/extract_source_text.py`. Yalnız `docs/content-2027/01-source-text/` altına yazar, stdlib dışında bağımlılık yok, deterministik (iki çalıştırmada bayt-eş çıktı doğrulandı).
+- **Çıktı:** 13 dosya `01-source-text/web-pages/`, 1 dosya `01-source-text/editions/editions-2027.md`, indeks `01-source-text/README.md`. Toplam 49.070 karakter kaynak metin.
+- **Birebirlik kanıtı:** her docx için `verify_docx()` kaynaktaki her paragrafın çıktıda aynen bulunduğunu doğrular — 13/13 dosyada kayıp paragraf 0. Edition sayfasında kaynak `# characters:` kolonu gerçek uzunlukla karşılaştırılır — 18/18 eşleşiyor.
+- **Biçim kararı:** 2027 docx'lerinde başlık stili yok (yalnız `Normal`); yapı doğrudan kalın biçimlendirmeyle taşınıyor. Bu yüzden tamamen kalın paragraflar `**…**` olarak yazılır. `Home Page Slides`, `FRILO Edition Pages` gibi başlık stili olan dosyalarda `#`/`##`/`###` kullanılır.
+- **Düzeltilen varsayım:** üç `Launch 2027 - Intro text edition pages shop EN*.xlsx` **bayt düzeyinde farklı** (Office metadata) ama **içerik birebir aynı**. Eşitlik SHA-256 ile değil, çıkarılan hücrelerle karşılaştırılır. Kanonik kaynak: FRILO kopyası (`Copy1` işareti olmayan ilk dosya).
+- **Yeni bulgular:**
+  1. `Allplan Max Web Page.docx` tablosunda 9 özellik satırının görsel adı **`XXXXX`** — yer tutucu, yayına çıkmadan çözülmeli.
+  2. FRILO ve Civil docx'lerinde yazar notları metnin içinde: `<237 characters>`, `<image – GEO / CLT preferably>` (toplam 42 not). Bunlar kaynakta korunur, sitede yayımlanmaz.
+  3. `Allplan Max Web Page` 9 AI özelliğini tek tabloda veriyor: Feature Builder (MCP), Workflow Builder (MCP), AI Formula Writer, AI BIM Analyst, AI Structural Analyst, AI Drafter, AI BIM Modeler (Beta), AI Visualizer, AI Coach.
+  4. **3 maskeleme yapıldı** (kişisel veri kuralı): SDS2 home page'de referans proje adı ve müşteri firma adı (2), Civil home page slide'da görsel kredisi — mimar firma + fotoğrafçı adı (1). Maskelenen değerler repoya yazılmadı; yayın öncesi ayrı onay gerekiyor.
+- **Yapılmayanlar:** messaging brief çıkarımı (B3, İngilizce kaynak yok), pptx metni (B4, kapsam kararı bekliyor), PDF metni, proof points, TR çeviri, rota/URL önerisi. Push/merge/deploy yok.
+
+## 28.10.2026 — 2027 içerik envanteri, Aşama A (dosya envanteri)
+
+- **Kapsam kararı (kullanıcı):** envanter yalnız pazarlama paketini değil **tüm kök klasörleri** kapsar; belgelerden **tam metin** çıkarılır; içerik **EN kaynak aynen + ayrı TR taslak** kolonuyla tutulur.
+- **Yeni betik:** `scripts/build_content_inventory.py`. Yalnız `docs/content-2027/00-census/` altına yazar, üçüncü parti bağımlılık yok, deterministik. Çalıştırma: `python3 scripts/build_content_inventory.py`.
+- **Çıktılar:** `root-folder-census.md` (klasör/tür/dil/otorite özeti), `file-index.csv` (3.965 satır; yol, tür, boyut, SHA-256, ürün, dil, rol, otorite), `duplicates.md` (birebir kopya, çevrilmemiş dil varyantı, dil/sürüm grupları), `authority-map.md` (sınıflandırma + çakışma kararları + eksik kaynak listesi). Kapsam ve ilkeler: `docs/content-2027/README.md`.
+- **Doğrulanan sayılar:** pazarlama paketi 916 dosya / 8,0 GB (Git dışı); 232 içerik belgesi (84 docx, 138 pptx, 5 xlsx, 8 pdf); 496 görsel, 174 video/gif. Depo toplamı 3.965 dosya / 8,3 GB.
+- **Kritik bulgular:**
+  1. İngilizce messaging brief'ler ve `ALLPLAN Edition Table - ALL FEATURES.xlsx` yalnız SharePoint `.url` kısayolu (14 dosya); yerel kaynak yok.
+  2. FRILO (cs/es/fr/it), SDS2 (de/es/fr) ve SCIA (de/it) messaging brief'leri birebir aynı dosya — çevrilmemiş, yalnız yeniden adlandırılmış.
+  3. `Aluplan Design System/` klasörü `design-system/`'in ikinci kopyası; 24 dosyada fark var. Otorite `design-system/`.
+  4. `Proof Points and Usable Quotes.xlsx` kişisel veri ve `Consent: None` satırları içeriyor; envantere yalnız anonim yüzdeler alınacak.
+  5. 2027'de yeni ürünler var ve mevcut IA'da rota yok: ALLPLAN Parametric, ALLPLAN Rebar, Allplan Max.
+- **Yapılmayanlar:** metin çıkarımı, TR çeviri, yeni rota/URL önerisi, `HANDOFF.md` dışında mevcut doküman değişikliği. Push/merge/deploy yok.
+
+## 28.10.2026 — Yapılandırılmış sayfa kaynak/render paritesi
+
+- **Kök neden:** eski düz veri alanları sayfa içindeki kaynak sırasını ve iç içe bağlantı gruplarını temsil edemiyordu; bu nedenle canlıda bulunan kartlar veri üretiminde kayboluyor veya render edilmeden kalıyordu.
+- **Çözüm:** sıralı ve tipli `contentBlocks` modeli ile tek renderer eklendi. Eski rotalar için geriye uyumlu fallback korunurken `/solutions/allplan-industry`, `/solutions/ax3000`, `/products/ax3000` ve `/solutions/ax3000-virtual-reality` kaynak blok düzenine geçirildi.
+- **Geri yüklenen kritik içerik:** Endüstri sayfasında 3 keşif kartı / 10 alt bağlantı, 6 özellik kartı, Design-to-Build bölümü ve 6 ürün kartı; AX3000 giriş/özellik/modül ilişkileri; VR sayfasında kaynak metinleri, 5 avantaj ve 6 galeri görseli. Endüstri kartlarındaki 9 eski ve artık 404 dönen WordPress görsel URL'si, depoda bulunan semantik yerel asset karşılıklarıyla değiştirildi ve regresyon testiyle korumaya alındı.
+- **Otomatik koruma:** kaynak dosya hash'i, tam `contentBlocks` hash'i, blok sırası, kaynak birim kimlikleri ve render edilmiş metin/link/görseller için sözleşme fixture'ı ve doğrulayıcı eklendi. `pnpm test` bu sözleşmeyi zorunlu olarak çalıştırır.
+- **Doğrulama:** 145 birim testi, 4 rota kaynak sözleşmesi, 36 Faz 6 parite kontrolü, 45 token testi, 188 kontrast kontrolü, tip kontrolü, 118 sayfalık production build ve loopback production HTML denetimi geçti. Dört rota 390 px mobilde yatay taşma ve console/hydration hatası olmadan doğrulandı.
+- **Sınır:** yalnız bu dört yüksek riskli rota sıralı modele taşındı; diğer rotalar mevcut fallback ile çalışıyor. Push/deploy/canlı değişikliği yapılmadı.
 
 ## 28.10.2026 — Çözüm katalog/hub navigasyonu düzeltmesi
 

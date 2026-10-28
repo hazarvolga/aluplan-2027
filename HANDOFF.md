@@ -1,5 +1,15 @@
 # Oturum devri
 
+## 28.10.2026 — Aşama C onayı ve Aşama D tamamlandı (makine okunur içerik katmanı)
+
+- **Onay:** kullanıcı Aşama C çıktılarını onayladı; FRILO/SCIA/Max rota yapısı, sayısal iddia yayın izinleri ve görsel atamaları hâlâ `02-inventory/open-decisions.md`'de bekliyor.
+- **Yeni betik:** `scripts/build_content_records.py`. Envanter birimlerini aynı çözümleyici ile makine okunur kayıtlara döker ve `docs/content-2027/03-data/content-records.json` yazır. Deterministik (`--check` bayt eşliği doğrular), üçüncü parti bağımlılık yok.
+- **Çıktı:** 394 kayıt / 10 sayfa; alanlar `id`, `page`, `role*`, `sourceFile`, `sourceLocator` (`slug#bN[@part]`), `sourceHash` (SHA-256), `bodyEn` (birebir), `bodyTr` (taslak), `trStatus: draft`, `note`. Sözleşme: `03-data/README.md`.
+- **Commitler:** Aşama A/B/C çıktıları ve hattın betikleri farklı commitlerde kayıt altına alındı; push/merge/deploy yok.
+
+## Güncelleme tarihi ve oturum no
+28.10.2026 — 2027 içerik envanteri Aşama A–C, B5, B6 ve D tamamlandı: 10 sayfa / 394 içerik birimi, `content-records.json` üretildi ve check temiz. B3 (İngilizce brief indirme) ve B4 (pptx kapsamı) karar bekliyor.
+
 ## 28.10.2026 — 2027 içerik envanteri, Aşama C (web içeriği envanteri + TR taslak)
 
 - **Kapsam:** tüm kök klasörlerden 10 hedef sayfa × 394 içerik birimi; her kayıt `slug#bN` blok adresi + birebir EN metin + ayrı TR **taslak** kolonu. Kişisel veri, görüntü kredisi ve maskeli satırlar envantere girmedi.
@@ -11,17 +21,11 @@
 - **Bekleyen girdiler:** B3 (14 İngilizce messaging brief, SharePoint indirilmesi) ve B4 (pptx kapsam kararı). Aşama D (makine okunur `content-records.json`) onay sonrası.
 - Push/merge/deploy/canlı değişiklik yapılmadı.
 
-## Güncelleme tarihi ve oturum no
-28.10.2026 — 2027 içerik envanteri Aşama A, B1–B2, B5, B6 ve C tamamlandı: 10 hedef sayfa / 394 içerik birimi envanteri, `--check` temiz. B3 (İngilizce brief indirme) ve B4 (pptx kapsamı) karar bekliyor; Aşama D onay bekliyor.
-
 ## 28.10.2026 — Header/footer sosyal bağlantıları ikon-only
 
 - Header topbar ve footer sosyal bağlantılarındaki görünür kanal adları kaldırıldı; Facebook, Twitter/X, LinkedIn, Instagram ve YouTube yalnız ikonla gösteriliyor.
 - `aria-label`, hedef URL, yeni sekme davranışı ve `noopener noreferrer` korundu. DOM kabulünde 10 bağlantının görünür metni boş, erişilebilir adı ve tek ikonu mevcut.
 - Erişilebilirlik regresyon testi eklendi; `pnpm test` toplam 147 birim testi, 36 parite ve 45 token testiyle geçti. Push/deploy/canlı değişikliği yapılmadı.
-
-## Güncelleme tarihi ve oturum no
-28.10.2026 — 2027 içerik envanteri Aşama B1–B2: 13 web sayfası docx ve 18 edition giriş metni birebir çıkarıldı. B3 (İngilizce brief indirme) ve B4 (pptx kapsamı) karar bekliyor.
 
 ## 28.10.2026 — 2027 içerik envanteri, Aşama B1–B2 (metin çıkarımı)
 

@@ -17,7 +17,7 @@ geldiği gösterilebilir.
 | B5 | PDF metin katmanı (7 belge) | Tamamlandı |
 | B6 | Proof points (anonim yüzdeler) | Tamamlandı |
 | C | Web içeriği envanteri (10 sayfa, 394 birim, TR taslak) | Tamamlandı |
-| D | Makine okunur veri katmanı (`content-records.json`) | Bekliyor |
+| D | Makine okunur veri katmanı (`content-records.json`) | Tamamlandı |
 
 ## İlkeler
 
@@ -49,6 +49,8 @@ python3 scripts/extract_source_text.py       # Aşama B — 01-source-text/
 python3 scripts/source_blocks.py             # Aşama B — blok haritası girdisi
 python3 scripts/build_web_inventory.py       # Aşama C — 02-inventory/
 python3 scripts/build_web_inventory.py --check   # Aşama C — kapsam denetimi
+python3 scripts/build_content_records.py     # Aşama D — 03-data/content-records.json
+python3 scripts/build_content_records.py --check  # Aşama D — bayta eşlik denetimi
 ```
 
 Betikler yalnızca `docs/content-2027/` altına yazar, üçüncü parti bağımlılık

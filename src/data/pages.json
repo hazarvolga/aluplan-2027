@@ -4315,15 +4315,7 @@
         "isIcon": false
       }
     ],
-    "videos": [
-      {
-        "src": "/assets/products/allplan-aec/hero/2024-header.mp4",
-        "poster": "/assets/products/allplan-aec/hero-new.jpg",
-        "title": "ALLPLAN AEC Genel Bakış Videosu",
-        "controls": true,
-        "autoplay": false
-      }
-    ],
+    "videos": [],
     "embeds": [
       {
         "src": "https://www.youtube.com/embed/tFnwOyX7ncI",
@@ -43815,15 +43807,7 @@
         "isIcon": true
       }
     ],
-    "videos": [
-      {
-        "src": "/assets/solutions/bridge/features/2024-header.mp4",
-        "poster": null,
-        "title": "ALLPLAN Bridge Parametrik Köprü Tasarımı Videosu",
-        "controls": true,
-        "autoplay": false
-      }
-    ],
+    "videos": [],
     "embeds": [
       {
         "src": "https://www.youtube.com/embed/SeA6ncaqUhY",

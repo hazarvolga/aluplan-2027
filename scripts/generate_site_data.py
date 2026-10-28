@@ -1038,23 +1038,6 @@ for raw_page in raw_200_pages:
                 pending_poster = ""
                 pending_autoplay = False
 
-    if route_path == "/products/allplan-aec" and not videos:
-        videos.append({
-            "src": "/assets/products/allplan-aec/hero/2024-header.mp4",
-            "poster": "/assets/products/allplan-aec/hero-new.jpg",
-            "title": "ALLPLAN AEC Genel Bakış Videosu",
-            "controls": True,
-            "autoplay": False,
-        })
-    elif route_path == "/solutions/bridge-design" and not videos:
-        videos.append({
-            "src": "/assets/solutions/bridge/features/2024-header.mp4",
-            "poster": None,
-            "title": "ALLPLAN Bridge Parametrik Köprü Tasarımı Videosu",
-            "controls": True,
-            "autoplay": False,
-        })
-
     embeds = []
     for emb in raw_page.get("embeds", []):
         src = (emb.get("attributes") or {}).get("src") or emb.get("src") or ""

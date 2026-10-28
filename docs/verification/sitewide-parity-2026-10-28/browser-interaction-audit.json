@@ -1,0 +1,84 @@
+{
+  "audit": "representative-browser-interactions",
+  "date": "2026-10-28",
+  "baseUrl": "http://127.0.0.1:3001",
+  "summary": {
+    "checks": 8,
+    "passed": 8,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "id": "structural-workflow-keyboard",
+      "route": "/solutions/structural",
+      "viewport": "desktop",
+      "action": "Focus the selected workflow category and press ArrowLeft, then select the Varyant Çalışmaları item.",
+      "expected": "The selected workflow category and visible workflow panel update without navigation.",
+      "actual": "Selection changed from Model Analysis to Modelleme; the visible panel updated and Varyant Çalışmaları became selected.",
+      "passed": true
+    },
+    {
+      "id": "mobile-primary-navigation",
+      "route": "/solutions/structural",
+      "viewport": "390x844",
+      "action": "Activate the mobile navigation toggle.",
+      "expected": "The toggle reports an expanded state and the primary navigation becomes visible.",
+      "actual": "aria-expanded changed to true and six primary navigation links were visible.",
+      "passed": true
+    },
+    {
+      "id": "theme-toggle",
+      "route": "/solutions/structural",
+      "viewport": "desktop",
+      "action": "Activate the theme toggle from light mode.",
+      "expected": "The document switches to dark mode without changing the selected Aluplan theme.",
+      "actual": "Mode changed from light to dark; the Aluplan theme remained selected.",
+      "passed": true
+    },
+    {
+      "id": "media-lightbox",
+      "route": "/solutions/structural",
+      "viewport": "desktop",
+      "action": "Open the Serbest Biçimli Modelleme media item, then activate the close control.",
+      "expected": "A titled dialog opens and closes cleanly.",
+      "actual": "The Serbest Biçimli Modelleme dialog opened; after close, the document contained zero open dialogs.",
+      "passed": true
+    },
+    {
+      "id": "faq-category-and-accordion",
+      "route": "/solutions-v2/faq",
+      "viewport": "desktop",
+      "action": "Select the Cloud Hizmetleri category and expand Hangi ALLPLAN Cloud hizmetleri dahildir?.",
+      "expected": "The category panel changes and the selected answer becomes visible.",
+      "actual": "Cloud Hizmetleri became selected; its panel content and the requested accordion answer were visible.",
+      "passed": true
+    },
+    {
+      "id": "training-tab",
+      "route": "/solutions-v2/training",
+      "viewport": "desktop",
+      "action": "Select the Video Kütüphanesi tab.",
+      "expected": "Only the video library tab panel is exposed.",
+      "actual": "Video Kütüphanesi became selected; training-panel-video-library was visible and the other training panels remained hidden.",
+      "passed": true
+    },
+    {
+      "id": "references-filter-search",
+      "route": "/references",
+      "viewport": "desktop",
+      "action": "Select Prefabrik and search for Akat.",
+      "expected": "The combined category and text filters reduce the directory to the matching company.",
+      "actual": "One result remained: Akat Prefabrik.",
+      "passed": true
+    },
+    {
+      "id": "playlist-video-selection",
+      "route": "/solutions-v2/training/video-library/addon-geometry",
+      "viewport": "desktop",
+      "action": "Select the second playlist item.",
+      "expected": "The active video, iframe source, title and counter update together.",
+      "actual": "The iframe changed from krrdOMuHAPo to WHPmmRcCdMQ; the title updated and the counter displayed 2 / 14.",
+      "passed": true
+    }
+  ]
+}

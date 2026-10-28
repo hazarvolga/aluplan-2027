@@ -1,5 +1,15 @@
 # Oturum devri
 
+## 28.10.2026 — Sitewide kaynak/veri/render ve tarayıcı paritesi kapandı
+
+- Bridge ve AEC sayfalarına kaynakta bulunmadığı halde eklenen genel MP4 fallback kaldırıldı; Bridge `SeA6ncaqUhY`, AEC `tFnwOyX7ncI` üretici YouTube içeriği korundu (`83ec79e`). `/solutions/allplan-industry` içindeki altı ürün kartı, Professional ve Ultimate dahil, ana içerikte doğrulandı.
+- Kaynak → generated data sözleşmesi 110/110 route için başlık, metin, link, görsel rolü/SHA-256, video/embed ve yerel dosya paritesini doğruluyor; onaysız fark yok (`2396e88`).
+- Generated data → yalnız `<main>` render sözleşmesi 110/110 HTTP 200, 110/110 tek H1, 94 tam geçiş, 16 exact-policy etkileşim farkı ve `0` failure verdi (`0d806e4`). 16 fark, varsayılan olmayan tab/FAQ kategorilerindeki 303 metindir; route + sayı + pointer/metin digest değişirse denetim fail olur.
+- Gerçek headless browser kabulünde 110 route × masaüstü/mobil = 220 kontrol yapıldı: navigasyon, H1, yatay taşma ve yüklenemeyen görünür görsel hatalarının tümü `0`. Workflow klavye seçimi, mobil menü, tema, lightbox, FAQ, eğitim tabı, referans filtre/arama ve playlist seçimi ayrıca gerçek tarayıcıda çalıştı; sekiz sonucun rota/eylem/beklenen/gözlenen kaydı `browser-interaction-audit.json` içinde tutulur.
+- Tam doğrulama: `pnpm test` 170 test, 36 faz paritesi, 45 token, 188 kontrast; `pnpm typecheck`; 118 route production build; production dependency audit bulgusuz. Bağımsız code ve security review Critical/High/Medium bulgu vermedi.
+- Kanıtlar `docs/verification/sitewide-parity-2026-10-28/` altındadır. Otomatik kontroller statik içerik/kart/medya/link kaybı için sayfa sayfa manuel karşılaştırma gereksinimini ortadan kaldırır. Etkileşim kabulü sekiz temsilî akışla sınırlıdır; tüm etkileşimlerin editoryal, görsel ve davranışsal son onayı insan kontrolüdür.
+- Canlı sistem, kaynak 2026 ve deploy durumu değiştirilmedi; push/deploy yapılmadı. Yerel `:3001` geliştirme sunucusu kullanıcı incelemesi için açık bırakıldı.
+
 ## 28.10.2026 — Aşama C onayı ve Aşama D tamamlandı (makine okunur içerik katmanı)
 
 - **Onay:** kullanıcı Aşama C çıktılarını onayladı; FRILO/SCIA/Max rota yapısı, sayısal iddia yayın izinleri ve görsel atamaları hâlâ `02-inventory/open-decisions.md`'de bekliyor.

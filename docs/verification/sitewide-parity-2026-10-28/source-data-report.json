@@ -1,0 +1,2540 @@
+{
+  "summary": {
+    "sourceRoutes": 110,
+    "generatedRoutes": 110,
+    "failures": 0
+  },
+  "findings": [],
+  "routeResults": [
+    {
+      "route": "/",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:0",
+          "reason": "Approved support-platform canonical target",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/about",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "exactOverrides:0",
+          "reason": "Corrected missing whitespace in the live rendered heading",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/contact",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:0",
+          "reason": "Approved support-platform canonical target",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "textReplacements:0",
+          "reason": "User-confirmed current ALLPLAN trial duration",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/gizlilik-politikasi",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/health",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/kullanim-sartlari",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/kvkk",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/package-overview",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/paket-karsilastirma",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/products",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/products/allplan",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/products/allplan-2026",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:2",
+          "reason": "Official ALLPLAN trial target",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/products/allplan-2026-yenilikler",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/products/allplan-aec",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/products/allplan-basic",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/products/allplan-bimplus",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/products/allplan-cloud-services",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/products/allplan-concept",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/products/allplan-professional",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/products/allplan-ultimate",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/products/architecture",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/products/ax3000",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/products/ax3000/dokumanlar",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:12",
+          "reason": "Copied AX3000 document uses a stable public URL",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:13",
+          "reason": "Copied AX3000 document uses a stable public URL",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:14",
+          "reason": "Copied AX3000 document uses a stable public URL",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:15",
+          "reason": "Copied AX3000 document uses a stable public URL",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:16",
+          "reason": "Copied AX3000 document uses a stable public URL",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:17",
+          "reason": "Copied AX3000 document uses a stable public URL",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/products/civil",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "exactOverrides:3",
+          "reason": "Civil introduction video is preserved from the 2026 source implementation",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/products/precast",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/products/precast-detail",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:11",
+          "reason": "Source placeholder repaired with the card's official ALLPLAN target",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/products/sds2-home",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/references",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/search",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "exactOverrides:1",
+          "reason": "Source search shell has no server-rendered H1; generated accessible route label",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:5",
+          "reason": "Approved canonical product route",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:8",
+          "reason": "Approved canonical solution route",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/addons",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/building-design",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/connect-license",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/connect-license/activation",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "exactOverrides:2",
+          "reason": "Source form shell has no server-rendered H1; generated accessible route label",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/connect-license/how-to-assign",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/connect-login",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/construction",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/faq",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "exactOverrides:4",
+          "reason": "Official product lifecycle CTA is preserved from the 2026 source implementation",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/infrastructure",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/other",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/classroom",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/e-learning",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/events",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/individual",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/online",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/quick-start",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "exactOverrides:5",
+          "reason": "H1 is promoted before the in-page table of contents for semantic heading order",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:9",
+          "reason": "Current official ALLPLAN channel",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/addon-geometry",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "exactOverrides:7",
+          "reason": "Approved playlist detail title pattern",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/allplan-reinforcement",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "exactOverrides:8",
+          "reason": "Approved playlist detail title pattern",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/ax3000",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "exactOverrides:9",
+          "reason": "Approved playlist detail title pattern",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/bridge-workflow-2022",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "exactOverrides:10",
+          "reason": "Approved playlist detail title pattern",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/bridge-workflows",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "exactOverrides:11",
+          "reason": "Approved playlist detail title pattern",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/campus-de",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "exactOverrides:12",
+          "reason": "Approved playlist detail title pattern",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/campus-en",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "exactOverrides:13",
+          "reason": "Approved playlist detail title pattern",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/campus-tutorials-2019-2022",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "exactOverrides:14",
+          "reason": "Approved playlist detail title pattern",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/hello-allplan-2024",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "exactOverrides:15",
+          "reason": "Approved playlist detail title pattern",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/konut-insaati",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "exactOverrides:16",
+          "reason": "Approved playlist detail title pattern",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/otomatik-donati",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "exactOverrides:17",
+          "reason": "Approved playlist detail title pattern",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/quickstart-buildings",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "exactOverrides:18",
+          "reason": "Approved playlist detail title pattern",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/road-design",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "exactOverrides:19",
+          "reason": "Approved playlist detail title pattern",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/video-library/sds2-intro",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "exactOverrides:20",
+          "reason": "Approved playlist detail title pattern",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions-v2/training/webinar",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/addons",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/addons/2d-dwg-converter",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/addons/drive-curve",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/addons/geometry-tools",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/addons/graphical-text",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/addons/parametric-terrain",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/addons/ramp",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/addons/sketchup-converter",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/addons/steel-components",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/addons/three-dimensioning",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/allplan-bulut-hizmetleri",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:6",
+          "reason": "Approved canonical release route",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/allplan-industry",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/architecture",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/ax3000",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/ax3000-mekanik-tesisat",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/ax3000-virtual-reality",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/ax3000-yapi-fizigi",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/ax3000/elektrik",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/ax3000/havalandirma",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/ax3000/isitma",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/ax3000/konut-havalandirma",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/ax3000/sihhi-tesisat",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/ax3000/sprinkler",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/bimflex",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/bimx5",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/bridge-design",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/cds-addon",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/features-allplan-bridge",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/imar-yonetmeligi-bim-eklentisi",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/infrastructure",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/mep",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/modeling-of-precast-girder-bridges",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/oska",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "exactOverrides:6",
+          "reason": "Late source H1 is promoted before preceding H2 headings for semantic heading order",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:7",
+          "reason": "Approved canonical current release route",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/poz-catalog",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/precast",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/pythonpart",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:10",
+          "reason": "Approved unified demand form",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/rebar-engineering",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/road-railway",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/scalypso",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:10",
+          "reason": "Approved unified demand form",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/scalypso/converter",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:10",
+          "reason": "Approved unified demand form",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/scalypso/mobile",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:10",
+          "reason": "Approved unified demand form",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/scalypso/modeler",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:10",
+          "reason": "Approved unified demand form",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/scalypso/videos",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:10",
+          "reason": "Approved unified demand form",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/scalypso/viewer",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        },
+        {
+          "id": "linkReplacements:10",
+          "reason": "Approved unified demand form",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/site-planning",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/steel",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    },
+    {
+      "route": "/solutions/structural",
+      "checkedDimensions": [
+        "h1",
+        "headings",
+        "bodyText",
+        "links",
+        "images",
+        "videos",
+        "embeds",
+        "localAssets"
+      ],
+      "status": "approved_difference",
+      "appliedPolicies": [
+        {
+          "id": "linkReplacements:4",
+          "reason": "Cloudflare-obfuscated address restored",
+          "evidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence"
+        }
+      ]
+    }
+  ]
+}

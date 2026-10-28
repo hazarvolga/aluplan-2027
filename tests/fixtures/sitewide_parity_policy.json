@@ -1,0 +1,83 @@
+{
+  "defaultEvidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence",
+  "excludedRoutes": [
+    {
+      "route": "/hero-3d",
+      "reason": "Source-only development demo, not a public generated route",
+      "evidence": "docs/00-inventory/content-inventory.json"
+    },
+    {
+      "route": "/test-webgl",
+      "reason": "Source-only development demo, not a public generated route",
+      "evidence": "docs/00-inventory/content-inventory.json"
+    }
+  ],
+  "linkReplacements": [
+    {"source": "https://aluplan.net.tr", "generated": "https://allplan.net.tr/tr", "reason": "Approved support-platform canonical target"},
+    {"source": "https://allplan.net.tr", "generated": "https://allplan.net.tr/tr", "reason": "Approved support-platform canonical target"},
+    {"source": "/try-free", "generated": "https://www.allplan.com/trial-or-subscription/", "reason": "Official ALLPLAN trial target"},
+    {"source": "https://www.allplan.com/tr/deneme-veya-abonelik/", "generated": "https://www.allplan.com/trial-or-subscription/", "reason": "Official ALLPLAN trial target"},
+    {"source": "/cdn-cgi/l/email-protection", "generated": "mailto:info@aluplan.com.tr", "reason": "Cloudflare-obfuscated address restored"},
+    {"source": "/solutions/bimplus", "generated": "/products/allplan-bimplus", "reason": "Approved canonical product route"},
+    {"source": "/allplan-2026nin-ozellikleri", "generated": "/products/allplan-2026-yenilikler", "reason": "Approved canonical release route"},
+    {"source": "/allplan-2021-features/", "generated": "/products/allplan-2026-yenilikler", "reason": "Approved canonical current release route"},
+    {"source": "/solutions/industry", "generated": "/solutions/steel", "reason": "Approved canonical solution route"},
+    {"source": "https://www.youtube.com/@AllplanInternational", "generated": "https://www.youtube.com/@ALLPLANglobal", "reason": "Current official ALLPLAN channel"},
+    {"source": "https://forms.office.com/r/XLQm9JPTSR", "generated": "https://forms.office.com/r/hXhnKAG912", "reason": "Approved unified demand form"},
+    {"route": "/products/precast-detail", "source": "#", "generated": "https://info.allplan.com/en/precast/construction-trend.html", "reason": "Source placeholder repaired with the card's official ALLPLAN target"},
+    {"source": "/_next/static/chunks/assets/documents/ax3000/ax3000-brochure-de.5f748fe63a5c679e.pdf", "generated": "/docs/ax3000/ax3000-brochure-de.pdf", "reason": "Copied AX3000 document uses a stable public URL"},
+    {"source": "/_next/static/chunks/assets/documents/ax3000/ax3000-brochure-en-alternative.dab3f649b381368a.pdf", "generated": "/docs/ax3000/ax3000-brochure-en-alternative.pdf", "reason": "Copied AX3000 document uses a stable public URL"},
+    {"source": "/_next/static/chunks/assets/documents/ax3000/ax3000-brochure-en.420859721fdafde3.pdf", "generated": "/docs/ax3000/ax3000-brochure-en.pdf", "reason": "Copied AX3000 document uses a stable public URL"},
+    {"source": "/_next/static/chunks/assets/documents/ax3000/ax3000-functions-en.508479409f5423ec.docx", "generated": "/docs/ax3000/ax3000-functions-en.docx", "reason": "Copied AX3000 document uses a stable public URL"},
+    {"source": "/_next/static/chunks/assets/documents/ax3000/ax3000-functions-en.d5ba23a790680e61.pdf", "generated": "/docs/ax3000/ax3000-functions-en.pdf", "reason": "Copied AX3000 document uses a stable public URL"},
+    {"source": "/_next/static/chunks/assets/documents/ax3000/ax3000-functions-hexagon-en.7fafa1bd61a37026.docx", "generated": "/docs/ax3000/ax3000-functions-hexagon-en.docx", "reason": "Copied AX3000 document uses a stable public URL"}
+  ],
+  "imageReplacements": [
+    {"source": "https://aluplan.com.tr/wp-content/uploads/2025/04/ALLPLAN-Connect_Logo.png", "generated": "/assets/logo/aluplan-logo-white-filled.svg", "reason": "Local verified copy used for the retired WordPress asset"},
+    {"source": "https://aluplan.com.tr/wp-content/uploads/2025/05/sifre-1-1024x570.jpg", "generated": "/images/client-id-sample.jpg", "reason": "Local verified copy used for the retired WordPress asset"},
+    {"source": "https://aluplan.com.tr/wp-content/uploads/2025/05/gelenmail-1024x642.jpg", "generated": "/images/allplan-lisans-numarasi.png", "reason": "Local verified copy used for the retired WordPress asset"},
+    {"source": "https://aluplan.com.tr/wp-content/uploads/2025/05/sifre-2-1024x666.jpg", "generated": "/images/Declaration_Allplan_2021-06-01.jpg", "reason": "Local verified copy used for the retired WordPress asset"},
+    {"source": "https://addon.aluplan.com.tr/wp-content/uploads/2023/02/Lisans.jpg", "generated": "/assets/solutions/cds/ramp/lisans.jpg", "reason": "Local verified copy used for the legacy add-on license image"},
+    {"source": "https://cdn-ildjmdd.nitrocdn.com/tcdVFlIBFQtnSTNLgsIOcKKpRMOOdqtW/assets/images/optimized/rev-0504ba4/addon.aluplan.com.tr/wp-content/uploads/2023/02/Lisans.jpg", "generated": "/assets/solutions/cds/ramp/lisans.jpg", "reason": "Local verified copy used for the NitroCDN add-on license image"},
+    {"source": "https://aluplan.com.tr/wp-content/uploads/2022/09/2023-solutions-building-Design-allplan-turkey-370x275.png", "generated": "/assets/solutions/architecture-hero.jpg", "reason": "Local verified copy used for the legacy WordPress card image"},
+    {"source": "https://aluplan.com.tr/wp-content/uploads/2022/09/solutions-Infrastructure-Design-370x275.png", "generated": "/assets/solutions/infrastructure-hero.jpg", "reason": "Local verified copy used for the legacy WordPress card image"},
+    {"source": "https://aluplan.com.tr/wp-content/uploads/2022/09/2023-prefabrication-product-allplan-turkey-370x270.png", "generated": "/assets/solutions/precast-hero.jpg", "reason": "Local verified copy used for the legacy WordPress card image"},
+    {"source": "https://aluplan.com.tr/wp-content/uploads/2022/10/structural-engineering-allplan-turkey-work_way_want.png", "generated": "/assets/solutions/industry/reasons/work_way_want.png", "reason": "Local verified copy used for the legacy WordPress icon"},
+    {"source": "https://aluplan.com.tr/wp-content/uploads/2022/10/structural-engineering-allplan-turkey-powerful_modeling.png", "generated": "/assets/solutions/industry/reasons/powerful_modeling.png", "reason": "Local verified copy used for the legacy WordPress icon"},
+    {"source": "https://aluplan.com.tr/wp-content/uploads/2022/10/productive_collab-1.png", "generated": "/assets/solutions/steel/icons/productive_collab-1.png", "reason": "Local verified copy used for the legacy WordPress icon"},
+    {"source": "https://aluplan.com.tr/wp-content/uploads/2022/10/convincing_visualizations.png", "generated": "/assets/products/precast/reasons/convincing_visualizations.png", "reason": "Local verified copy used for the legacy WordPress icon"},
+    {"source": "https://aluplan.com.tr/wp-content/uploads/2022/10/easyliy_modify_requirements-1.png", "generated": "/assets/solutions/steel/icons/easyliy_modify_requirements-1.png", "reason": "Local verified copy used for the legacy WordPress icon"},
+    {"source": "https://aluplan.com.tr/wp-content/uploads/2022/10/more_accurate_deliverables-2.png", "generated": "/assets/solutions/bridge/reasons/more_accurate_deliverables-2.png", "reason": "Local verified copy used for the legacy WordPress icon"}
+  ],
+  "textReplacements": [
+    {
+      "route": "/contact",
+      "source": "30 gün boyunca Allplan'ı ücretsiz deneyin. Kredi kartı bilgisi gerekmez.",
+      "generated": "14 gün boyunca Allplan'ı ücretsiz deneyin. Kredi kartı bilgisi gerekmez.",
+      "reason": "User-confirmed current ALLPLAN trial duration"
+    }
+  ],
+  "exactOverrides": [
+    {"route": "/about", "dimension": "h1", "source": "Türkiye'nin GüvenilirBIM Çözüm Ortağı", "generated": "Türkiye'nin Güvenilir BIM Çözüm Ortağı", "reason": "Corrected missing whitespace in the live rendered heading"},
+    {"route": "/search", "dimension": "h1", "source": "", "generated": "Site İçi Arama — Ürün, Çözüm ve Eğitim Kütüphanesi", "reason": "Source search shell has no server-rendered H1; generated accessible route label"},
+    {"route": "/solutions-v2/connect-license/activation", "dimension": "h1", "source": "", "generated": "ALLPLAN Lisans Deklarasyon ve Aktivasyon Formu", "reason": "Source form shell has no server-rendered H1; generated accessible route label"},
+    {"route": "/products/civil", "dimension": "structuredUrl", "source": "", "generated": "https://www.youtube.com/embed/DTSdM7tSBlU", "reason": "Civil introduction video is preserved from the 2026 source implementation"},
+    {"route": "/solutions-v2/faq", "dimension": "structuredUrl", "source": "", "generated": "https://www.allplan.com/product-lifecycle/", "reason": "Official product lifecycle CTA is preserved from the 2026 source implementation"},
+    {"route": "/solutions-v2/training/quick-start", "dimension": "headings", "source": ["İçindekiler", "Allplan 2026 Kapsamlı Başlangıç Rehberi", "Modüller ve Profesyonel İş Akışları", "Allplan Architecture", "Temel Özellikler", "Allplan 2026 ile Yeni", "Profesyonel İş Akışları", "Verimlilik ve Doğruluk", "Parametrik Tasarım", "Open BIM Entegrasyonu", "Open BIM ve İşbirliği", "Adım Adım Çakışma Çözümü (Clash Resolution)", "IFC Veri Güvenliği", "Partner Entegrasyonları", "5 Profesyonel İpucu", "Veri Kaybını Önleyin", "Otomasyon Kullanın", "Parametrik Yönetim", "BCF ile Koordinasyon", "Entegre Analiz", "Gerçek Hayat Senaryoları", "Zürih \"The Circle\"", "Porto Metro \"Ruby Line\"", "Rütihof (BFU)", "Allplan 2026 Yenilikleri", "Öncelik Tabanlı Bağlantılar (PBC)", "Gelişmiş Bitiş Modellemesi"], "generated": ["Allplan 2026 Kapsamlı Başlangıç Rehberi", "İçindekiler", "Modüller ve Profesyonel İş Akışları", "Allplan Architecture", "Temel Özellikler", "Allplan 2026 ile Yeni", "Profesyonel İş Akışları", "Verimlilik ve Doğruluk", "Parametrik Tasarım", "Open BIM Entegrasyonu", "Open BIM ve İşbirliği", "Adım Adım Çakışma Çözümü (Clash Resolution)", "IFC Veri Güvenliği", "Partner Entegrasyonları", "5 Profesyonel İpucu", "Veri Kaybını Önleyin", "Otomasyon Kullanın", "Parametrik Yönetim", "BCF ile Koordinasyon", "Entegre Analiz", "Gerçek Hayat Senaryoları", "Zürih \"The Circle\"", "Porto Metro \"Ruby Line\"", "Rütihof (BFU)", "Allplan 2026 Yenilikleri", "Öncelik Tabanlı Bağlantılar (PBC)", "Gelişmiş Bitiş Modellemesi"], "reason": "H1 is promoted before the in-page table of contents for semantic heading order"},
+    {"route": "/solutions/oska", "dimension": "headings", "source": ["Allplan Bimplus ve OskaBulut", "İhale, Metraj, Hakediş", "Allplan'le BIM Modellemesi ve metraj…", "ALLPLAN", "Performansın gücünün kilidi açılıyor"], "generated": ["Performansın gücünün kilidi açılıyor", "Allplan Bimplus ve OskaBulut", "İhale, Metraj, Hakediş", "Allplan'le BIM Modellemesi ve metraj…", "ALLPLAN"], "reason": "Late source H1 is promoted before preceding H2 headings for semantic heading order"},
+    {"route": "/solutions-v2/training/video-library/addon-geometry", "dimension": "h1", "source": "Allplan Add On Geometry Tools", "generated": "Allplan Add On Geometry Tools — Eğitim Video Serisi", "reason": "Approved playlist detail title pattern"},
+    {"route": "/solutions-v2/training/video-library/allplan-reinforcement", "dimension": "h1", "source": "ALLPLAN for Reinforcement", "generated": "ALLPLAN for Reinforcement — Eğitim Video Serisi", "reason": "Approved playlist detail title pattern"},
+    {"route": "/solutions-v2/training/video-library/ax3000", "dimension": "h1", "source": "AX3000 - MEP & Enerji", "generated": "AX3000 - MEP & Enerji — Eğitim Video Serisi", "reason": "Approved playlist detail title pattern"},
+    {"route": "/solutions-v2/training/video-library/bridge-workflow-2022", "dimension": "h1", "source": "Bridge Workflow 2022", "generated": "Bridge Workflow 2022 — Eğitim Video Serisi", "reason": "Approved playlist detail title pattern"},
+    {"route": "/solutions-v2/training/video-library/bridge-workflows", "dimension": "h1", "source": "Allplan Bridge Workflows", "generated": "Allplan Bridge Workflows — Eğitim Video Serisi", "reason": "Approved playlist detail title pattern"},
+    {"route": "/solutions-v2/training/video-library/campus-de", "dimension": "h1", "source": "Campus Tutorials (Deutsch)", "generated": "Campus Tutorials (Deutsch) — Eğitim Video Serisi", "reason": "Approved playlist detail title pattern"},
+    {"route": "/solutions-v2/training/video-library/campus-en", "dimension": "h1", "source": "Campus Tutorials (English)", "generated": "Campus Tutorials (English) — Eğitim Video Serisi", "reason": "Approved playlist detail title pattern"},
+    {"route": "/solutions-v2/training/video-library/campus-tutorials-2019-2022", "dimension": "h1", "source": "Allplan Campus Tutorials 2019-2022", "generated": "Allplan Campus Tutorials 2019-2022 — Eğitim Video Serisi", "reason": "Approved playlist detail title pattern"},
+    {"route": "/solutions-v2/training/video-library/hello-allplan-2024", "dimension": "h1", "source": "Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları", "generated": "Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları — Eğitim Video Serisi", "reason": "Approved playlist detail title pattern"},
+    {"route": "/solutions-v2/training/video-library/konut-insaati", "dimension": "h1", "source": "Konut İnşaatı İş Akışları", "generated": "Konut İnşaatı İş Akışları — Eğitim Video Serisi", "reason": "Approved playlist detail title pattern"},
+    {"route": "/solutions-v2/training/video-library/otomatik-donati", "dimension": "h1", "source": "Otomatik Donatı (PythonPart)", "generated": "Otomatik Donatı (PythonPart) — Eğitim Video Serisi", "reason": "Approved playlist detail title pattern"},
+    {"route": "/solutions-v2/training/video-library/quickstart-buildings", "dimension": "h1", "source": "ALLPLAN QuickStart: Buildings", "generated": "ALLPLAN QuickStart: Buildings — Eğitim Video Serisi", "reason": "Approved playlist detail title pattern"},
+    {"route": "/solutions-v2/training/video-library/road-design", "dimension": "h1", "source": "Allplan Road Design Workflow", "generated": "Allplan Road Design Workflow — Eğitim Video Serisi", "reason": "Approved playlist detail title pattern"},
+    {"route": "/solutions-v2/training/video-library/sds2-intro", "dimension": "h1", "source": "SDS2 Detaylandırma", "generated": "SDS2 Detaylandırma — Eğitim Video Serisi", "reason": "Approved playlist detail title pattern"}
+  ]
+}

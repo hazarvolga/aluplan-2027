@@ -822,6 +822,11 @@
         "src": "/assets/product-engineering.jpg",
         "alt": "EKLENTİLER",
         "isIcon": false
+      },
+      {
+        "src": "/assets/solutions/architecture-hero.jpg",
+        "alt": "DİĞER ÇÖZÜMLERİMİZ",
+        "isIcon": false
       }
     ],
     "videos": [
@@ -5114,6 +5119,11 @@
         "isIcon": false
       },
       {
+        "src": "/assets/products/civil/3d-modeling.jpg",
+        "alt": "Görselleştirme",
+        "isIcon": false
+      },
+      {
         "src": "/assets/products/allplan-basic/clash-detection.jpg",
         "alt": "Çarpışma Tespiti",
         "isIcon": false
@@ -5171,6 +5181,11 @@
       {
         "src": "/assets/products/allplan-basic/license-server.jpg",
         "alt": "Lisans Server",
+        "isIcon": false
+      },
+      {
+        "src": "/assets/products/allplan-basic/bimplus-pro.jpg",
+        "alt": "BIMPLUS Pro",
         "isIcon": false
       },
       {
@@ -7672,6 +7687,11 @@
         "isIcon": false
       },
       {
+        "src": "/assets/products/allplan-basic/bimplus-pro.jpg",
+        "alt": "BIMPLUS Pro",
+        "isIcon": false
+      },
+      {
         "src": "/assets/products/allplan-basic/cloud-storage.jpg",
         "alt": "ALLPLAN Bulut Depolama",
         "isIcon": false
@@ -8774,6 +8794,11 @@
         "isIcon": true
       },
       {
+        "src": "/assets/products/allplan-concept/powerful-modeling.png",
+        "alt": "Parametrik Yol Modelleme",
+        "isIcon": true
+      },
+      {
         "src": "/assets/products/allplan-professional/multi-materials.png",
         "alt": "Birden Fazla Malzeme ile Planlama",
         "isIcon": true
@@ -8781,6 +8806,11 @@
       {
         "src": "/assets/products/allplan-ultimate/precise-3d-reinforcement.png",
         "alt": "Hassas 3D Donatı",
+        "isIcon": true
+      },
+      {
+        "src": "/assets/products/allplan-concept/powerful-modeling.png",
+        "alt": "Analiz Çözümleri ile Sorunsuz Entegrasyon",
         "isIcon": true
       },
       {
@@ -8899,6 +8929,11 @@
         "isIcon": false
       },
       {
+        "src": "/assets/products/allplan-professional/clash-detection.jpg",
+        "alt": "Tasarım Kontrolü",
+        "isIcon": false
+      },
+      {
         "src": "/assets/products/civil/workgroup-manager.jpg",
         "alt": "Ofis Ekip Çalışması",
         "isIcon": false
@@ -8921,6 +8956,11 @@
       {
         "src": "/assets/products/allplan-basic/license-server.jpg",
         "alt": "Lisans Server",
+        "isIcon": false
+      },
+      {
+        "src": "/assets/products/allplan-basic/bimplus-pro.jpg",
+        "alt": "BIMPLUS Pro",
         "isIcon": false
       },
       {
@@ -10364,6 +10404,11 @@
         "isIcon": true
       },
       {
+        "src": "/assets/products/allplan-concept/powerful-modeling.png",
+        "alt": "Yol Modelleme",
+        "isIcon": true
+      },
+      {
         "src": "/assets/products/allplan-ultimate/precise-3d-reinforcement.png",
         "alt": "3D Donatı",
         "isIcon": true
@@ -10576,6 +10621,11 @@
       {
         "src": "/assets/products/allplan-basic/license-server.jpg",
         "alt": "Lisans Server",
+        "isIcon": false
+      },
+      {
+        "src": "/assets/products/allplan-basic/bimplus-pro.jpg",
+        "alt": "BIMPLUS Pro",
         "isIcon": false
       },
       {
@@ -11537,6 +11587,11 @@
         "isIcon": false
       },
       {
+        "src": "/assets/solutions/ax3000/ax-bg-1.jpg",
+        "alt": "Deneyim Kazandırır",
+        "isIcon": false
+      },
+      {
         "src": "/assets/solutions/ax3000/simulason.jpg",
         "alt": "Tümleşik Kullanım",
         "isIcon": false
@@ -11577,8 +11632,23 @@
         "isIcon": false
       },
       {
+        "src": "/assets/solutions/ax3000/features/1470399662_Marketing.png",
+        "alt": "Plan Öngörünümü",
+        "isIcon": true
+      },
+      {
         "src": "/assets/solutions/ax3000/features/1470399614_Social_Media.png",
         "alt": "Veri Alışverişi",
+        "isIcon": true
+      },
+      {
+        "src": "/assets/solutions/ax3000/mekanik-tesisat/icons/app-dev.png",
+        "alt": "Tesisat Düzeni",
+        "isIcon": true
+      },
+      {
+        "src": "/assets/solutions/ax3000/features/1470399667_Newsletter.png",
+        "alt": "Tutarlı Veri Bilgisi",
         "isIcon": true
       },
       {
@@ -12269,6 +12339,11 @@
       {
         "src": "/assets/documents/ax3000/ax3000-brochure-de-cover.jpg",
         "alt": "AX3000 Genel Broşür — Almanca kapak önizlemesi",
+        "isIcon": false
+      },
+      {
+        "src": "/assets/documents/ax3000/ax3000-brochure-en-cover.jpg",
+        "alt": "AX3000 Genel Broşür — Alternatif — İngilizce kapak önizlemesi",
         "isIcon": false
       },
       {
@@ -13529,6 +13604,11 @@
         "isIcon": false
       },
       {
+        "src": "/assets/products/civil/parametric-modeling.jpg",
+        "alt": "Parametrik Modelleme",
+        "isIcon": false
+      },
+      {
         "src": "/assets/products/civil/parametric-prestressing.jpg",
         "alt": "Parametrik Ön Germe",
         "isIcon": false
@@ -13706,6 +13786,11 @@
       {
         "src": "/assets/products/allplan-basic/license-server.jpg",
         "alt": "Lisans Server",
+        "isIcon": false
+      },
+      {
+        "src": "/assets/products/allplan-basic/bimplus-pro.jpg",
+        "alt": "BIMPLUS Pro",
         "isIcon": false
       },
       {
@@ -18250,6 +18335,11 @@
         "isIcon": false
       },
       {
+        "src": "/assets/solutions/architecture-hero.jpg",
+        "alt": "ALLPLAN Endüstri Çözümleri",
+        "isIcon": false
+      },
+      {
         "src": "/assets/solutions/infrastructure-hero.jpg",
         "alt": "Altyapı Mühendisliği",
         "isIcon": false
@@ -18280,13 +18370,48 @@
         "isIcon": false
       },
       {
+        "src": "/assets/solutions/mep-hero.jpg",
+        "alt": "CDS Add-On",
+        "isIcon": false
+      },
+      {
+        "src": "/assets/solutions/architecture-hero.jpg",
+        "alt": "Allto PythonPart Generator",
+        "isIcon": false
+      },
+      {
+        "src": "/assets/solutions/architecture-hero.jpg",
+        "alt": "Allto PythonPart",
+        "isIcon": false
+      },
+      {
+        "src": "/assets/solutions/mep-hero.jpg",
+        "alt": "AX3000 MEP",
+        "isIcon": false
+      },
+      {
+        "src": "/assets/solutions/site-planning-hero.jpg",
+        "alt": "Scalypso",
+        "isIcon": false
+      },
+      {
         "src": "/assets/solutions/bimflex/kolon-model.png",
         "alt": "BIMFlex",
         "isIcon": false
       },
       {
+        "src": "/assets/solutions/architecture-hero.jpg",
+        "alt": "Allplan BIMPLUS",
+        "isIcon": false
+      },
+      {
         "src": "/assets/solutions/oska/bimx5-section.jpg",
         "alt": "BIMX5",
+        "isIcon": false
+      },
+      {
+        "src": "/assets/solutions/structural-hero.jpg",
+        "alt": "Donatı Mühendisliği",
         "isIcon": false
       },
       {
@@ -18297,6 +18422,11 @@
       {
         "src": "/assets/solutions/oska/hero-banner.jpg",
         "alt": "Allplan Oska İşbirliği",
+        "isIcon": false
+      },
+      {
+        "src": "/assets/solutions/architecture-hero.jpg",
+        "alt": "Allplan Poz Kataloğu",
         "isIcon": false
       }
     ],
@@ -28672,6 +28802,16 @@
         "isIcon": false
       },
       {
+        "src": "/assets/images/webinars/bimx5.jpg",
+        "alt": "BIMX5 Online Webinar - Genel",
+        "isIcon": false
+      },
+      {
+        "src": "/assets/images/webinars/bimx5.jpg",
+        "alt": "BIMX5 Online Webinar - 2B DWG Converter",
+        "isIcon": false
+      },
+      {
         "src": "/assets/images/webinars/qa-seminar.jpg",
         "alt": "Bimplus Online Webinar: BIM İşbirliği",
         "isIcon": false
@@ -28684,6 +28824,21 @@
       {
         "src": "/assets/images/webinars/allplan-precast.jpg",
         "alt": "ALLPLAN PRECAST SEVİYENİZİ YÜKSELTİN",
+        "isIcon": false
+      },
+      {
+        "src": "/assets/images/webinars/qa-seminar.jpg",
+        "alt": "Soru Cevap Semineri",
+        "isIcon": false
+      },
+      {
+        "src": "/assets/images/webinars/qa-seminar.jpg",
+        "alt": "Allplan Engineering 2021 ve Yenilikler",
+        "isIcon": false
+      },
+      {
+        "src": "/assets/images/webinars/qa-seminar.jpg",
+        "alt": "Allplan 2018-2021: İpuçları",
         "isIcon": false
       },
       {
@@ -30589,6 +30744,11 @@
       {
         "src": "/assets/solutions/cds/drive-curve/gallery/Arac-Ornegi.jpg",
         "alt": "Sürüş Eğrisi 19",
+        "isIcon": false
+      },
+      {
+        "src": "/assets/solutions/cds/drive-curve/gallery/Arac-Editoru.webp",
+        "alt": "Sürüş Eğrisi 20",
         "isIcon": false
       },
       {
@@ -37801,6 +37961,16 @@
         "isIcon": false
       },
       {
+        "src": "/assets/product-architecture.jpg",
+        "alt": "ALLPLAN Professional",
+        "isIcon": false
+      },
+      {
+        "src": "/assets/product-engineering.jpg",
+        "alt": "ALLPLAN Ultimate",
+        "isIcon": false
+      },
+      {
         "src": "/assets/product-bridge.jpg",
         "alt": "CIVIL",
         "isIcon": false
@@ -38688,6 +38858,11 @@
         "isIcon": true
       },
       {
+        "src": "/assets/solutions/architecture/reasons/excel_across_design_phases.png",
+        "alt": "TÜM TASARIM AŞAMALARINDA EXCEL",
+        "isIcon": true
+      },
+      {
         "src": "/assets/solutions/road-railway/cost-estimates.png",
         "alt": "GÜVENİLİR ERKEN MALİYET TAHMİNLERİ",
         "isIcon": true
@@ -39419,8 +39594,23 @@
         "isIcon": false
       },
       {
+        "src": "/assets/solutions/ax3000/features/1470399662_Marketing.png",
+        "alt": "Plan Öngörünümü",
+        "isIcon": true
+      },
+      {
         "src": "/assets/solutions/ax3000/features/1470399614_Social_Media.png",
         "alt": "Veri Alışverişi",
+        "isIcon": true
+      },
+      {
+        "src": "/assets/solutions/ax3000/mekanik-tesisat/icons/app-dev.png",
+        "alt": "Tesisat Düzeni",
+        "isIcon": true
+      },
+      {
+        "src": "/assets/solutions/ax3000/features/1470399667_Newsletter.png",
+        "alt": "Tutarlı Veri Bilgisi",
         "isIcon": true
       },
       {
@@ -40344,6 +40534,11 @@
         "isIcon": true
       },
       {
+        "src": "/assets/solutions/ax3000/mekanik-tesisat/icons/ecommerce.png",
+        "alt": "Merkezi Değiştirme Özelliği",
+        "isIcon": true
+      },
+      {
         "src": "/assets/solutions/ax3000/features/1470399667_Newsletter.png",
         "alt": "Adet Listesi",
         "isIcon": true
@@ -40351,6 +40546,41 @@
       {
         "src": "/assets/solutions/ax3000/features/1470399656_Branding.png",
         "alt": "Gelişmiş Konstrüksiyon Araçları",
+        "isIcon": true
+      },
+      {
+        "src": "/assets/solutions/ax3000/features/1470399656_Branding.png",
+        "alt": "Şartname Uyumluluğu",
+        "isIcon": true
+      },
+      {
+        "src": "/assets/solutions/ax3000/features/1470399656_Branding.png",
+        "alt": "Basınç Kaybı Hesabı",
+        "isIcon": true
+      },
+      {
+        "src": "/assets/solutions/ax3000/features/1470399662_Marketing.png",
+        "alt": "Veri Transferi",
+        "isIcon": true
+      },
+      {
+        "src": "/assets/solutions/ax3000/features/1470399671_SEO-1.png",
+        "alt": "Üretici Firma Arayüzü",
+        "isIcon": true
+      },
+      {
+        "src": "/assets/solutions/ax3000/mekanik-tesisat/icons/ecommerce.png",
+        "alt": "Lockformer, Klimax",
+        "isIcon": true
+      },
+      {
+        "src": "/assets/solutions/ax3000/mekanik-tesisat/icons/ecommerce.png",
+        "alt": "Akıllı ve Verimli Arayüz",
+        "isIcon": true
+      },
+      {
+        "src": "/assets/solutions/ax3000/features/1470399667_Newsletter.png",
+        "alt": "Uyumluluk",
         "isIcon": true
       }
     ],
@@ -40555,6 +40785,11 @@
       {
         "src": "/assets/solutions/ax3000/virtual-reality/vr_slide3.jpg",
         "alt": "VR Slide 3",
+        "isIcon": false
+      },
+      {
+        "src": "/assets/solutions/ax3000/virtual-reality/vr_slide3.jpg",
+        "alt": "VR Slide 4",
         "isIcon": false
       },
       {
@@ -40963,6 +41198,11 @@
       {
         "src": "/assets/solutions/ax3000/yapi-fizigi/ekb.jpg",
         "alt": "Simülasyon Uzun Süreli ve Maliyetlidir",
+        "isIcon": true
+      },
+      {
+        "src": "/assets/solutions/ax3000/yapi-fizigi/ekb.jpg",
+        "alt": "AX3000 Enerji Kimlik Belgesi",
         "isIcon": true
       },
       {
@@ -42898,6 +43138,11 @@
       {
         "src": "/assets/solutions/bimflex/kolon-model.png",
         "alt": "BIMFlex Allplan kolon donatısı modeli",
+        "isIcon": false
+      },
+      {
+        "src": "/assets/solutions/bimflex/kolon-model.png",
+        "alt": "BIMFlex Kolon Donatısı",
         "isIcon": false
       },
       {
@@ -49111,6 +49356,11 @@
         "isIcon": true
       },
       {
+        "src": "/assets/solutions/road-railway/bim2field.png",
+        "alt": "BIM 2FIELD",
+        "isIcon": true
+      },
+      {
         "src": "/assets/solutions/road-railway/workflow-survey.jpg",
         "alt": "Arazi Ölçümü",
         "isIcon": false
@@ -49768,6 +50018,11 @@
         "isIcon": false
       },
       {
+        "src": "/assets/solutions/scalypso/modeler_color_01.jpg",
+        "alt": "MODELER",
+        "isIcon": false
+      },
+      {
         "src": "/assets/solutions/scalypso/industry_1900_600.jpg",
         "alt": "MOBILE",
         "isIcon": false
@@ -49785,6 +50040,21 @@
       {
         "src": "/assets/solutions/scalypso/architecture_1900_600.jpg",
         "alt": "Mimarlık",
+        "isIcon": false
+      },
+      {
+        "src": "/assets/solutions/scalypso/bridge_1900x600.jpg",
+        "alt": "Köprü ve Altyapı",
+        "isIcon": false
+      },
+      {
+        "src": "/assets/solutions/scalypso/industry_1900_600.jpg",
+        "alt": "Endüstri",
+        "isIcon": false
+      },
+      {
+        "src": "/assets/solutions/scalypso/ship_1900_600.jpg",
+        "alt": "Gemi İnşası",
         "isIcon": false
       },
       {
@@ -51261,6 +51531,11 @@
       {
         "src": "/assets/solutions/road-railway/quality-deliverables.png",
         "alt": "ÜSTÜN TESLİMATLAR",
+        "isIcon": true
+      },
+      {
+        "src": "/assets/solutions/road-railway/bim2field.png",
+        "alt": "BIMPLUS",
         "isIcon": true
       },
       {

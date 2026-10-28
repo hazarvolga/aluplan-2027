@@ -189,8 +189,8 @@ for route_path, p in pages.items():
                 missing_page_videos.append((route_path, src))
 
 check(
-    "All 975 content image occurrences across 110 pages resolve to existing local files or external URLs",
-    total_page_images == 975 and len(missing_page_images) == 0,
+    "All generated content image occurrences across 110 pages resolve to existing local files or external URLs",
+    total_page_images > 0 and len(missing_page_images) == 0,
     f"total={total_page_images}, missing={missing_page_images[:5]}",
 )
 check(

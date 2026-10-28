@@ -981,8 +981,12 @@ for raw_page in raw_200_pages:
         }
         norm_alt = re.sub(r"\s+", " ", (alt or h1_text).strip().upper())
         img_by_alt.setdefault(norm_alt, im_obj)
-        if src not in seen_imgs:
-            seen_imgs.add(src)
+        # Preserve distinct source image roles even when cards reuse one asset.
+        # Rendering may de-duplicate gallery photos by src, but the data layer
+        # must retain each source alt/role for semantic parity.
+        image_identity = (src, alt or h1_text)
+        if image_identity not in seen_imgs:
+            seen_imgs.add(image_identity)
             images.append(im_obj)
 
     # Attach matched iconSrc, high-res image, and statValue to each section

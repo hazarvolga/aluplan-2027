@@ -7,6 +7,13 @@
 - **Çıktı:** 394 kayıt / 10 sayfa; alanlar `id`, `page`, `role*`, `sourceFile`, `sourceLocator` (`slug#bN[@part]`), `sourceHash` (SHA-256), `bodyEn` (birebir), `bodyTr` (taslak), `trStatus: draft`, `note`. Sözleşme: `03-data/README.md`.
 - **Commitler:** Aşama A/B/C çıktıları ve hattın betikleri farklı commitlerde kayıt altına alındı; push/merge/deploy yok.
 
+## Oturum kapanışı — 28.10.2026
+
+- Kullanıcı: "böylece kalsın sonra devam ederiz". Genel durum: Aşama A–D tamamlandı ve commit'li; statik durum/to-do sayfası `docs/content-2027/status.html` yayında önizlenebilir (Review pane).
+- **Sıradaki oturum açılışı:** `docs/MASTER-PROMPT.md` → bu dosyanın üst kayıtları → `docs/content-2027/02-inventory/open-decisions.md` (15 açık karar) → kullanıcı kararları.
+- **Bekleyen:** B3 (14 İngilizce brief indirme, kullanıcı), B4 (pptx kapsam kararı, kullanıcı), TR taslak editör turu, FRILO/SCIA/Max/Parametric/Rebar rota kararları, görsel atamaları, yayın izinleri.
+- Push/merge/deploy yok; çalışmada önceki oturuma ait parite dosyaları (sitewide parity) bilinçli olarak dokunulmadan bırakıldı.
+
 ## Güncelleme tarihi ve oturum no
 28.10.2026 — 2027 içerik envanteri Aşama A–C, B5, B6 ve D tamamlandı: 10 sayfa / 394 içerik birimi, `content-records.json` üretildi ve check temiz. B3 (İngilizce brief indirme) ve B4 (pptx kapsamı) karar bekliyor.
 

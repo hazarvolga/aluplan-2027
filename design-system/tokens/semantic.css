@@ -4,6 +4,7 @@
   --workflow-package: var(--ref-color-workflow-package);
   --opacity-preview-grid: var(--ref-opacity-preview-grid); /* @kind other */
   --opacity-preview-hero-mark: var(--ref-opacity-preview-hero-mark); /* @kind other */
+  --opacity-subpage-hero-background-only: var(--ref-opacity-subpage-hero-background-only); /* @kind other */
   --font-heading: var(--ref-font-family-manrope);
   --font-body: var(--ref-font-family-plex-sans);
   --font-mono: var(--ref-font-family-plex-mono);
@@ -303,6 +304,7 @@
   --filter-application-bento-media-default: var(--ref-filter-application-bento-media-default); /* @kind other */
   --filter-application-bento-media-hover: var(--ref-filter-application-bento-media-hover); /* @kind other */
   --filter-application-subpage-hero-background: var(--ref-filter-application-subpage-hero-background); /* @kind other */
+  --filter-application-subpage-hero-background-only: var(--ref-filter-application-subpage-hero-background-only); /* @kind other */
   --filter-backdrop-header: var(--ref-filter-application-backdrop-header); /* @kind other */
   --filter-backdrop-media-badge: var(--ref-filter-application-backdrop-media-badge); /* @kind other */
   --filter-backdrop-modal: var(--ref-filter-application-backdrop-modal); /* @kind other */
@@ -532,6 +534,7 @@
   --workflow-package: var(--ref-color-workflow-package);
   --opacity-preview-grid: var(--ref-opacity-preview-grid); /* @kind other */
   --opacity-preview-hero-mark: var(--ref-opacity-preview-hero-mark); /* @kind other */
+  --opacity-subpage-hero-background-only: var(--ref-opacity-subpage-hero-background-only); /* @kind other */
   --font-heading: var(--ref-font-family-manrope);
   --font-body: var(--ref-font-family-plex-sans);
   --font-mono: var(--ref-font-family-plex-mono);
@@ -831,6 +834,7 @@
   --filter-application-bento-media-default: var(--ref-filter-application-bento-media-default); /* @kind other */
   --filter-application-bento-media-hover: var(--ref-filter-application-bento-media-hover); /* @kind other */
   --filter-application-subpage-hero-background: var(--ref-filter-application-subpage-hero-background); /* @kind other */
+  --filter-application-subpage-hero-background-only: var(--ref-filter-application-subpage-hero-background-only); /* @kind other */
   --filter-backdrop-header: var(--ref-filter-application-backdrop-header); /* @kind other */
   --filter-backdrop-media-badge: var(--ref-filter-application-backdrop-media-badge); /* @kind other */
   --filter-backdrop-modal: var(--ref-filter-application-backdrop-modal); /* @kind other */
@@ -1196,6 +1200,7 @@
   --workflow-package: var(--ref-color-workflow-package);
   --opacity-preview-grid: var(--ref-opacity-preview-grid); /* @kind other */
   --opacity-preview-hero-mark: var(--ref-opacity-preview-hero-mark); /* @kind other */
+  --opacity-subpage-hero-background-only: var(--ref-opacity-subpage-hero-background-only); /* @kind other */
   --font-heading: var(--ref-font-family-source-serif);
   --font-body: var(--ref-font-family-public-sans);
   --font-mono: var(--ref-font-family-plex-mono);
@@ -1495,6 +1500,7 @@
   --filter-application-bento-media-default: var(--ref-filter-application-bento-media-default); /* @kind other */
   --filter-application-bento-media-hover: var(--ref-filter-application-bento-media-hover); /* @kind other */
   --filter-application-subpage-hero-background: var(--ref-filter-application-subpage-hero-background); /* @kind other */
+  --filter-application-subpage-hero-background-only: var(--ref-filter-application-subpage-hero-background-only); /* @kind other */
   --filter-backdrop-header: var(--ref-filter-application-backdrop-header); /* @kind other */
   --filter-backdrop-media-badge: var(--ref-filter-application-backdrop-media-badge); /* @kind other */
   --filter-backdrop-modal: var(--ref-filter-application-backdrop-modal); /* @kind other */

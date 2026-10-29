@@ -17,6 +17,7 @@ import { VideoLibraryHubSection } from './VideoLibraryHubSection';
 import { VideoPlaylistSection } from './VideoPlaylistSection';
 import { SearchPageSection } from './SearchPageSection';
 import { SubpageHeroSection } from './SubpageHeroSection';
+import { getSubpageHeroPresentation } from './subpage-hero-presentation';
 import { StructuredPageLayoutSection } from './StructuredPageLayoutSection';
 import { SolutionHubSection } from './SolutionHubSection';
 import { SolutionCatalogSection } from './SolutionCatalogSection';
@@ -82,6 +83,7 @@ export function SubpageView({
   }, [page.images]);
 
   const heroImage = !isLegalPage && photoImages.length > 0 ? photoImages[0] : null;
+  const heroPresentation = getSubpageHeroPresentation(page.path, heroImage?.src || null);
   const pageVideos = page.videos || [];
 
   // Partition sections into:
@@ -113,6 +115,8 @@ export function SubpageView({
       <SubpageHeroSection
         page={page}
         heroImage={heroImage}
+        presentation={heroPresentation.presentation}
+        backgroundSrc={heroPresentation.backgroundSrc}
         sectionBadgeLabel={sectionBadgeLabel}
         isLegalPage={isLegalPage}
       />

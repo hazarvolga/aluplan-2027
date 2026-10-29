@@ -1,5 +1,23 @@
 # Oturum devri
 
+## 29.10.2026 — Hero görsel aile planı
+
+- Kullanıcı, her route için ayrı görsel yerine üst çözüm ve ürün aileleri altında ortak hero görselleri kullanılmasını onayladı. Plan `docs/hero-visual-family-plan.md` dosyasına kaydedildi.
+- Güncel `src/data/pages.json` içinde `section` değeri `products`, `solutions`, `solutions-v2`, `training` veya `video-library` olan rotaların **99/99** adedi ortak görsel ailesine açıkça atandı; eksik rota `0`.
+- İlk varlık kapsamı sekiz ortak görsel ailesidir: ekosistem, bina tasarımı, altyapı/Civil, inşaat/imalat, eklentiler/teknik araçlar, tamamlayıcı/bulut hizmetleri, eğitim/destek ve ALLPLAN ürün platformu. Bina tasarımı için onaylı prototip hazırdır; bu nedenle **1 mevcut + 7 yeni üretim** planlanır. Yıllık sürüm ailesi resmî/onaylı 2027 materyali gelene kadar mevcut kaynak medyayı korur.
+- Bridge, AX3000, Scalypso ve benzeri rotalar başlangıçta üst aile görselini kullanır; yalnız semantik temsil, responsive kırpma, erişilebilirlik veya dönüşüm gerekçesi kanıtlanırsa özel görsel istisnası açılır.
+- Video playlist rotaları da varsayılan Eğitim/Destek ailesine dahildir; gövde içindeki playlist thumbnail'ları korunur, özel hero kararı otomatik verilmez.
+- Hero aile planının onayından sonra yedi eksik aile için henüz üretim yapılmadı; mevcut onaylı `VF-01` mimari prototipi başlangıç varlığıdır. Rota eşleme kodu henüz yazılmadı. Sıradaki adım yedi eksik aile için ortak sanat yönetimiyle prompt brieflerini hazırlayıp görsel üretimine geçmektir.
+
+## 29.10.2026 — Mimari hero background-only prototipi
+
+- Kullanıcı isteğiyle yalnız `/solutions/architecture` rotasında sağdaki tekrarlı hero görsel kartı kaldırıldı; diğer rotalar `framed` sunumu korur. Sunum kararı içerik/schema katmanından ayrı `subpage-hero-presentation.ts` politikasındadır.
+- Yeni hero, `Architecture & Space` stil kütüphanesiyle built-in `image_gen` üzerinden üretildi. Web türevi `/assets/solutions/architecture-hero-v2.jpg`; 1672×941 yüksek çözünürlüklü PNG orijinali ve tam promptu `assets/source/generated/heroes/` altında arşivlendi.
+- Kullanıcı görsel geri bildirimiyle metin alanındaki çizgi, arka plan ve padding tamamen kaldırıldı. Görsel `contain`, sağ-orta konum ve tekrarsız sunumla küçültülerek mimari/dijital ikiz anlatımı okunur hale getirildi. İlk maskenin gerçek görsel başlangıcında kısa kalması üzerine rota kapsamlı geçiş hero genişliğinin `%28–%82` aralığına yayıldı; sol taraf transparanlaşarak antrasit zeminle yumuşak birleşiyor, sağdaki mimari odak tam görünür kalıyor.
+- H1, breadcrumb, açıklama, CTA hedefleri, schema ve generated content değişmedi. Mimari hero’da görünür media kartı `0`; kontrol rotası `/solutions/structural` kartlı düzeni `1` olarak koruyor.
+- Yeni dosya sözleşmesi JPEG/PNG imzası, boyut, 1672×941 kaynak ölçüsü ve Git takibini test eder. Son doğrulama: 172 test, 36 faz paritesi, 45 token, 188 kontrast, typecheck ve 110 rota render audit; hata `0`. Code/security review Critical/High/Medium bulgu olmadan onaylandı.
+- Bu prototip diğer hero rotalarına yayılmadı. Site geneline uygulama, kullanıcı görsel onayından sonra ayrı fazdır. Push/deploy/canlı değişiklik yoktur.
+
 ## 29.10.2026 — Üç ürün sayfasının canlı envanteri (features / civil / SDS2) tamamlandı
 
 - **Yeni envanter dosyaları** (`docs/content-2027/allplan-canlı/`): `allplan-2027-features.md` (121 görünür + 55 gizli karusel bloğu), `allplan-civil.md` (203 blok + zorluk/müşteri sözü/başarı hikâyesi kartları), `allplan-sds2-detailing-fabrication.md` (hero "SOLUTIONFOR" dahil tüm bantlar; VERSION 2027 üç yenilik; 3 söz; Deloitte/Dow/Winter Olympic hikâyeleri; explore/training/partner). EN birebir (kaynak hatalı birleşik yazımlar "Kaynak notları"nda), TR taslak.

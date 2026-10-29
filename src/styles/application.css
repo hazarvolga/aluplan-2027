@@ -1770,6 +1770,29 @@ button.alu-role[aria-checked="true"] {
     radial-gradient(circle at 82% 20%, var(--visual-subpage-hero-light-accent-glow), transparent 50%),
     linear-gradient(90deg, var(--surface-page) 50%, var(--visual-subpage-hero-light-scrim) 100%);
 }
+.alu-subpage-hero--background-only .alu-subpage-hero__content-panel {
+  align-self: flex-start;
+  max-width: var(--container-md);
+}
+.alu-subpage-hero--background-only .alu-subpage-hero__bg {
+  background-position: center right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 28%, var(--surface-page) 82%, var(--surface-page) 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, transparent 28%, var(--surface-page) 82%, var(--surface-page) 100%);
+  opacity: var(--opacity-subpage-hero-background-only);
+  filter: var(--filter-application-subpage-hero-background-only);
+}
+.alu-subpage-hero--background-only .alu-subpage-hero__scrim {
+  background:
+    radial-gradient(circle at 82% 20%, var(--visual-subpage-hero-accent-glow), transparent 52%),
+    linear-gradient(90deg, var(--surface-page) 0%, var(--visual-subpage-hero-dark-scrim) 56%, transparent 100%);
+}
+[data-mode="light"] .alu-subpage-hero--background-only .alu-subpage-hero__scrim {
+  background:
+    radial-gradient(circle at 82% 20%, var(--visual-subpage-hero-light-accent-glow), transparent 52%),
+    linear-gradient(90deg, var(--surface-page) 0%, var(--visual-subpage-hero-light-scrim) 58%, transparent 100%);
+}
 
 /* Alternating Split Feature Rows on Subpages */
 .alu-feature-rows {

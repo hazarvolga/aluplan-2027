@@ -3,6 +3,8 @@
 from pathlib import Path
 import json
 import re
+import struct
+import subprocess
 import unittest
 
 
@@ -376,7 +378,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
             "href={TRIAL_CTA_URL}",
             "page.path.startsWith('/products')",
             'href="/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf"',
-            "backgroundImage: `url(${heroImage.src})`",
+            "backgroundImage: `url(${backgroundSrc})`",
             "alt={heroImage.alt || page.h1}",
             "heroImage.alt &&",
         ]:
@@ -398,6 +400,102 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
                 self.assertIn(marker, parent)
         self.assertNotIn("alu-subpage-hero", parent)
         self.assertNotIn("alu-breadcrumb", parent)
+
+    def test_architecture_hero_uses_route_scoped_background_presentation(self):
+        policy = read("src/components/sections/subpage-hero-presentation.ts")
+        component = read("src/components/sections/SubpageHeroSection.tsx")
+        parent = read("src/components/sections/SubpageView.tsx")
+        styles = read("src/styles/application.css")
+
+        for marker in [
+            "export type SubpageHeroPresentation = 'framed' | 'background-only'",
+            "'/solutions/architecture'",
+            "presentation: 'background-only'",
+            "backgroundSrc: '/assets/solutions/architecture-hero-v2.jpg'",
+            "presentation: 'framed'",
+        ]:
+            with self.subTest(policy_marker=marker):
+                self.assertIn(marker, policy)
+
+        for marker in [
+            "presentation: SubpageHeroPresentation",
+            "backgroundSrc: string | null",
+            "const showFramedMedia = Boolean(heroImage) && presentation === 'framed'",
+            "alu-subpage-hero--background-only",
+            "backgroundImage: `url(${backgroundSrc})`",
+            "showFramedMedia &&",
+            "alu-subpage-hero__content-panel",
+            "className=\"alu-visually-hidden\"",
+        ]:
+            with self.subTest(component_marker=marker):
+                self.assertIn(marker, component)
+
+        for marker in [
+            "getSubpageHeroPresentation(page.path, heroImage?.src || null)",
+            "presentation={heroPresentation.presentation}",
+            "backgroundSrc={heroPresentation.backgroundSrc}",
+        ]:
+            with self.subTest(parent_marker=marker):
+                self.assertIn(marker, parent)
+
+        self.assertIn(".alu-subpage-hero--background-only", styles)
+        self.assertIn(".alu-subpage-hero--background-only .alu-subpage-hero__bg", styles)
+        self.assertIn(".alu-subpage-hero--background-only .alu-subpage-hero__scrim", styles)
+        self.assertIn(
+            ".alu-subpage-hero--background-only .alu-subpage-hero__content-panel",
+            styles,
+        )
+        self.assertIn("background-size: contain", styles)
+        self.assertIn("background-repeat: no-repeat", styles)
+        mask_value = re.escape(
+            "linear-gradient(90deg, transparent 0%, transparent 28%, "
+            "var(--surface-page) 82%, var(--surface-page) 100%)"
+        )
+        self.assertRegex(styles, rf"(?m)^\s*mask-image: {mask_value};$")
+        self.assertRegex(styles, rf"(?m)^\s*-webkit-mask-image: {mask_value};$")
+        panel_rule = re.search(
+            r"\.alu-subpage-hero--background-only \.alu-subpage-hero__content-panel \{([^}]*)\}",
+            styles,
+            re.DOTALL,
+        )
+        self.assertIsNotNone(panel_rule)
+        self.assertNotIn("background:", panel_rule.group(1))
+        self.assertNotIn("padding:", panel_rule.group(1))
+
+    def test_architecture_hero_generated_assets_are_valid_and_tracked(self):
+        web_relative = Path("public/assets/solutions/architecture-hero-v2.jpg")
+        source_relative = Path(
+            "assets/source/generated/heroes/architecture-hero-v2-original.png"
+        )
+        web_asset = ROOT / web_relative
+        source_asset = ROOT / source_relative
+
+        self.assertTrue(web_asset.is_file())
+        self.assertTrue(source_asset.is_file())
+        self.assertGreater(web_asset.stat().st_size, 100_000)
+        self.assertLess(web_asset.stat().st_size, 1_000_000)
+        self.assertGreater(source_asset.stat().st_size, web_asset.stat().st_size)
+
+        web_bytes = web_asset.read_bytes()
+        self.assertTrue(web_bytes.startswith(b"\xff\xd8"))
+        self.assertTrue(web_bytes.endswith(b"\xff\xd9"))
+
+        source_bytes = source_asset.read_bytes()
+        self.assertEqual(source_bytes[:8], b"\x89PNG\r\n\x1a\n")
+        self.assertEqual(source_bytes[12:16], b"IHDR")
+        width, height = struct.unpack(">II", source_bytes[16:24])
+        self.assertEqual((width, height), (1672, 941))
+
+        for relative in (web_relative, source_relative):
+            with self.subTest(tracked=str(relative)):
+                tracked = subprocess.run(
+                    ["git", "ls-files", "--error-unmatch", str(relative)],
+                    cwd=ROOT,
+                    capture_output=True,
+                    text=True,
+                    check=False,
+                )
+                self.assertEqual(tracked.returncode, 0, tracked.stderr)
 
     def test_subpage_hero_data_preserves_route_specific_branches_and_pdf(self):
         pages = json.loads(read("src/data/pages.json"))

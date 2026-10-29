@@ -468,11 +468,13 @@
   --ref-filter-application-bento-media-default: brightness(0.75) contrast(1.08); /* @kind other */
   --ref-filter-application-bento-media-hover: brightness(0.85) contrast(1.1); /* @kind other */
   --ref-filter-application-subpage-hero-background: blur(8px) saturate(0.8); /* @kind other */
+  --ref-filter-application-subpage-hero-background-only: contrast(1.05) saturate(0.9); /* @kind other */
   --ref-filter-application-backdrop-header: blur(16px); /* @kind other */
   --ref-filter-application-backdrop-media-badge: blur(6px); /* @kind other */
   --ref-filter-application-backdrop-modal: blur(10px); /* @kind other */
   --ref-opacity-preview-grid: 0.22; /* @kind other */
   --ref-opacity-preview-hero-mark: 0.65; /* @kind other */
+  --ref-opacity-subpage-hero-background-only: 0.82; /* @kind other */
   --ref-z-index-0: 0; /* @kind other */
   --ref-z-index-1: 1; /* @kind other */
   --ref-z-index-2: 2; /* @kind other */
@@ -493,6 +495,7 @@
   --workflow-package: var(--ref-color-workflow-package);
   --opacity-preview-grid: var(--ref-opacity-preview-grid); /* @kind other */
   --opacity-preview-hero-mark: var(--ref-opacity-preview-hero-mark); /* @kind other */
+  --opacity-subpage-hero-background-only: var(--ref-opacity-subpage-hero-background-only); /* @kind other */
   --font-heading: var(--ref-font-family-manrope);
   --font-body: var(--ref-font-family-plex-sans);
   --font-mono: var(--ref-font-family-plex-mono);
@@ -792,6 +795,7 @@
   --filter-application-bento-media-default: var(--ref-filter-application-bento-media-default); /* @kind other */
   --filter-application-bento-media-hover: var(--ref-filter-application-bento-media-hover); /* @kind other */
   --filter-application-subpage-hero-background: var(--ref-filter-application-subpage-hero-background); /* @kind other */
+  --filter-application-subpage-hero-background-only: var(--ref-filter-application-subpage-hero-background-only); /* @kind other */
   --filter-backdrop-header: var(--ref-filter-application-backdrop-header); /* @kind other */
   --filter-backdrop-media-badge: var(--ref-filter-application-backdrop-media-badge); /* @kind other */
   --filter-backdrop-modal: var(--ref-filter-application-backdrop-modal); /* @kind other */
@@ -1021,6 +1025,7 @@
   --workflow-package: var(--ref-color-workflow-package);
   --opacity-preview-grid: var(--ref-opacity-preview-grid); /* @kind other */
   --opacity-preview-hero-mark: var(--ref-opacity-preview-hero-mark); /* @kind other */
+  --opacity-subpage-hero-background-only: var(--ref-opacity-subpage-hero-background-only); /* @kind other */
   --font-heading: var(--ref-font-family-manrope);
   --font-body: var(--ref-font-family-plex-sans);
   --font-mono: var(--ref-font-family-plex-mono);
@@ -1320,6 +1325,7 @@
   --filter-application-bento-media-default: var(--ref-filter-application-bento-media-default); /* @kind other */
   --filter-application-bento-media-hover: var(--ref-filter-application-bento-media-hover); /* @kind other */
   --filter-application-subpage-hero-background: var(--ref-filter-application-subpage-hero-background); /* @kind other */
+  --filter-application-subpage-hero-background-only: var(--ref-filter-application-subpage-hero-background-only); /* @kind other */
   --filter-backdrop-header: var(--ref-filter-application-backdrop-header); /* @kind other */
   --filter-backdrop-media-badge: var(--ref-filter-application-backdrop-media-badge); /* @kind other */
   --filter-backdrop-modal: var(--ref-filter-application-backdrop-modal); /* @kind other */
@@ -1685,6 +1691,7 @@
   --workflow-package: var(--ref-color-workflow-package);
   --opacity-preview-grid: var(--ref-opacity-preview-grid); /* @kind other */
   --opacity-preview-hero-mark: var(--ref-opacity-preview-hero-mark); /* @kind other */
+  --opacity-subpage-hero-background-only: var(--ref-opacity-subpage-hero-background-only); /* @kind other */
   --font-heading: var(--ref-font-family-source-serif);
   --font-body: var(--ref-font-family-public-sans);
   --font-mono: var(--ref-font-family-plex-mono);
@@ -1984,6 +1991,7 @@
   --filter-application-bento-media-default: var(--ref-filter-application-bento-media-default); /* @kind other */
   --filter-application-bento-media-hover: var(--ref-filter-application-bento-media-hover); /* @kind other */
   --filter-application-subpage-hero-background: var(--ref-filter-application-subpage-hero-background); /* @kind other */
+  --filter-application-subpage-hero-background-only: var(--ref-filter-application-subpage-hero-background-only); /* @kind other */
   --filter-backdrop-header: var(--ref-filter-application-backdrop-header); /* @kind other */
   --filter-backdrop-media-badge: var(--ref-filter-application-backdrop-media-badge); /* @kind other */
   --filter-backdrop-modal: var(--ref-filter-application-backdrop-modal); /* @kind other */
@@ -4667,6 +4675,29 @@ button.alu-role[aria-checked="true"] {
   background:
     radial-gradient(circle at 82% 20%, var(--visual-subpage-hero-light-accent-glow), transparent 50%),
     linear-gradient(90deg, var(--surface-page) 50%, var(--visual-subpage-hero-light-scrim) 100%);
+}
+.alu-subpage-hero--background-only .alu-subpage-hero__content-panel {
+  align-self: flex-start;
+  max-width: var(--container-md);
+}
+.alu-subpage-hero--background-only .alu-subpage-hero__bg {
+  background-position: center right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 28%, var(--surface-page) 82%, var(--surface-page) 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, transparent 28%, var(--surface-page) 82%, var(--surface-page) 100%);
+  opacity: var(--opacity-subpage-hero-background-only);
+  filter: var(--filter-application-subpage-hero-background-only);
+}
+.alu-subpage-hero--background-only .alu-subpage-hero__scrim {
+  background:
+    radial-gradient(circle at 82% 20%, var(--visual-subpage-hero-accent-glow), transparent 52%),
+    linear-gradient(90deg, var(--surface-page) 0%, var(--visual-subpage-hero-dark-scrim) 56%, transparent 100%);
+}
+[data-mode="light"] .alu-subpage-hero--background-only .alu-subpage-hero__scrim {
+  background:
+    radial-gradient(circle at 82% 20%, var(--visual-subpage-hero-light-accent-glow), transparent 52%),
+    linear-gradient(90deg, var(--surface-page) 0%, var(--visual-subpage-hero-light-scrim) 58%, transparent 100%);
 }
 
 /* Alternating Split Feature Rows on Subpages */

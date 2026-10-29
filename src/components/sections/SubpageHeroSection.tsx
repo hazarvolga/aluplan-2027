@@ -3,10 +3,13 @@ import type { ReactElement } from 'react';
 import type { ContentImage, PageRecord } from '@/lib/site-data';
 import { MAIN_QUOTE_FORM_URL, TRIAL_CTA_URL } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
+import type { SubpageHeroPresentation } from './subpage-hero-presentation';
 
 interface SubpageHeroSectionProps {
   page: PageRecord;
   heroImage: ContentImage | null;
+  presentation: SubpageHeroPresentation;
+  backgroundSrc: string | null;
   sectionBadgeLabel: string;
   isLegalPage: boolean;
 }
@@ -14,25 +17,35 @@ interface SubpageHeroSectionProps {
 export function SubpageHeroSection({
   page,
   heroImage,
+  presentation,
+  backgroundSrc,
   sectionBadgeLabel,
   isLegalPage
 }: SubpageHeroSectionProps): ReactElement {
+  const showFramedMedia = Boolean(heroImage) && presentation === 'framed';
+
   return (
-    <section className="alu-subpage-hero" aria-labelledby="page-h1">
-      {heroImage && (
+    <section
+      className={`alu-subpage-hero ${presentation === 'background-only' ? 'alu-subpage-hero--background-only' : ''}`}
+      aria-labelledby="page-h1"
+    >
+      {backgroundSrc && (
         <div
           className="alu-subpage-hero__bg"
-          style={{ backgroundImage: `url(${heroImage.src})` }}
+          style={{ backgroundImage: `url(${backgroundSrc})` }}
           aria-hidden="true"
         />
       )}
       <div className="alu-subpage-hero__scrim" aria-hidden="true" />
 
       <div
-        className={`alu-container alu-subpage-hero__inner ${heroImage ? 'alu-subpage-hero__grid' : 'alu-stack'}`}
+        className={`alu-container alu-subpage-hero__inner ${showFramedMedia ? 'alu-subpage-hero__grid' : 'alu-stack'}`}
         style={{ gap: 'var(--space-stack-xl)' }}
       >
-        <div className="alu-stack" style={{ gap: 'var(--space-stack-md)' }}>
+        <div
+          className="alu-stack alu-subpage-hero__content-panel"
+          style={{ gap: 'var(--space-stack-md)' }}
+        >
           <nav aria-label="Sayfa konumu (Breadcrumb)">
             <ol className="alu-breadcrumb">
               {page.breadcrumbs.map((crumb, idx) => (
@@ -101,7 +114,7 @@ export function SubpageHeroSection({
           )}
         </div>
 
-        {heroImage && (
+        {showFramedMedia && heroImage && (
           <figure className="alu-subpage-hero__media">
             <div className="alu-subpage-hero__media-frame">
               <img src={heroImage.src} alt={heroImage.alt || page.h1} />
@@ -113,6 +126,14 @@ export function SubpageHeroSection({
               </figcaption>
             )}
           </figure>
+        )}
+
+        {!showFramedMedia && heroImage && (
+          <img
+            className="alu-visually-hidden"
+            src={heroImage.src}
+            alt={heroImage.alt || page.h1}
+          />
         )}
       </div>
     </section>

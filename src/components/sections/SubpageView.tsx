@@ -116,7 +116,9 @@ export function SubpageView({
         page={page}
         heroImage={heroImage}
         presentation={heroPresentation.presentation}
-        backgroundSrc={heroPresentation.backgroundSrc}
+        background={heroPresentation.background}
+        familyId={heroPresentation.familyId}
+        assetKind={heroPresentation.assetKind}
         sectionBadgeLabel={sectionBadgeLabel}
         isLegalPage={isLegalPage}
       />

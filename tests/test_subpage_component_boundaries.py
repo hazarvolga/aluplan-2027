@@ -378,7 +378,12 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
             "href={TRIAL_CTA_URL}",
             "page.path.startsWith('/products')",
             'href="/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf"',
-            "backgroundImage: `url(${backgroundSrc})`",
+            '<picture className="alu-subpage-hero__bg" aria-hidden="true">',
+            "import { getImageProps } from 'next/image'",
+            '<source media="(max-width: 40rem)" srcSet={responsiveBackground.mobileSrcSet}',
+            'srcSet={responsiveBackground.desktopSrcSet}',
+            "loading: 'eager'",
+            'fetchPriority="high"',
             "alt={heroImage.alt || page.h1}",
             "heroImage.alt &&",
         ]:
@@ -401,7 +406,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
         self.assertNotIn("alu-subpage-hero", parent)
         self.assertNotIn("alu-breadcrumb", parent)
 
-    def test_architecture_hero_uses_route_scoped_background_presentation(self):
+    def test_subpage_hero_uses_sitewide_family_background_presentation(self):
         policy = read("src/components/sections/subpage-hero-presentation.ts")
         component = read("src/components/sections/SubpageHeroSection.tsx")
         parent = read("src/components/sections/SubpageView.tsx")
@@ -409,9 +414,13 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
 
         for marker in [
             "export type SubpageHeroPresentation = 'framed' | 'background-only'",
+            "'VF-00': 'vf-00-ecosystem-overview'",
+            "'VF-07': 'vf-07-allplan-product-platform'",
             "'/solutions/architecture'",
+            "'/products/allplan-2026'",
             "presentation: 'background-only'",
-            "backgroundSrc: '/assets/solutions/architecture-hero-v2.jpg'",
+            "assetKind: 'family'",
+            "assetKind: 'official-release'",
             "presentation: 'framed'",
         ]:
             with self.subTest(policy_marker=marker):
@@ -419,21 +428,30 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
 
         for marker in [
             "presentation: SubpageHeroPresentation",
-            "backgroundSrc: string | null",
+            "background: HeroBackgroundSources | null",
+            "familyId: HeroVisualFamilyId | null",
+            "assetKind: HeroVisualAssetKind",
             "const showFramedMedia = Boolean(heroImage) && presentation === 'framed'",
             "alu-subpage-hero--background-only",
-            "backgroundImage: `url(${backgroundSrc})`",
+            '<picture className="alu-subpage-hero__bg" aria-hidden="true">',
+            "getImageProps({",
+            '<source media="(max-width: 40rem)" srcSet={responsiveBackground.mobileSrcSet}',
+            'srcSet={responsiveBackground.desktopSrcSet}',
+            'data-hero-family={familyId || undefined}',
+            'data-hero-source={assetKind}',
             "showFramedMedia &&",
             "alu-subpage-hero__content-panel",
-            "className=\"alu-visually-hidden\"",
         ]:
             with self.subTest(component_marker=marker):
                 self.assertIn(marker, component)
+        self.assertNotIn('className="alu-visually-hidden"', component)
 
         for marker in [
             "getSubpageHeroPresentation(page.path, heroImage?.src || null)",
             "presentation={heroPresentation.presentation}",
-            "backgroundSrc={heroPresentation.backgroundSrc}",
+            "background={heroPresentation.background}",
+            "familyId={heroPresentation.familyId}",
+            "assetKind={heroPresentation.assetKind}",
         ]:
             with self.subTest(parent_marker=marker):
                 self.assertIn(marker, parent)
@@ -445,8 +463,10 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
             ".alu-subpage-hero--background-only .alu-subpage-hero__content-panel",
             styles,
         )
-        self.assertIn("background-size: contain", styles)
-        self.assertIn("background-repeat: no-repeat", styles)
+        self.assertIn(".alu-subpage-hero__bg img", styles)
+        self.assertIn("object-fit: contain", styles)
+        self.assertIn("object-position: center right", styles)
+        self.assertIn("object-fit: cover", styles)
         mask_value = re.escape(
             "linear-gradient(90deg, transparent 0%, transparent 28%, "
             "var(--surface-page) 82%, var(--surface-page) 100%)"

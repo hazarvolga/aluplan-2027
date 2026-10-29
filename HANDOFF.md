@@ -1,5 +1,15 @@
 # Oturum devri
 
+## 29.10.2026 — Hero aileleri 99 route üzerinde yerel olarak entegre edildi
+
+- Kullanıcının temas sayfasında onayladığı `VF-00`–`VF-08` görsel ailesi, içerik ve schema katmanlarından bağımsız `src/components/sections/subpage-hero-presentation.ts` politikasıyla uygulandı. Kapsamdaki **99/99** route açıkça eşlenir; yinelenen route modül yüklenirken hata verir ve bağımsız fixture uygulamadaki route haritasıyla birebir karşılaştırılır.
+- `VF-00`–`VF-07` için masaüstü ve mobil türevler responsive `<picture>` ile seçilir. `VF-08` yıllık sürüm rotaları mevcut resmî/kaynak görsellerini korur. Kapsam dışındaki Hakkımızda ve yasal sayfalar framed fallback sunumunu sürdürür.
+- Hero bileşeninde yalnız sunum değişti; H1, breadcrumb, açıklama, CTA hedefleri, kaynak içerik kaydı, URL ve JSON-LD/schema verisi değiştirilmedi. Eski kaynak hero, background-only rotalarda ikinci ağ isteği oluşturmaması için DOM'a gizli `<img>` olarak basılmaz; parite veri/test katmanında korunur. Responsive aile görselleri Next.js `getImageProps()` ile optimize `srcSet` üretir.
+- Yerel CDP taraması 99 masaüstü + 99 mobil görünümde aile kimliği, doğru `currentSrc`, tek H1, kırık görsel yokluğu ve yatay taşma yokluğunu doğruladı; hata `0`. Temsilî masaüstü görsel kontrolü Mimari, Altyapı, Diğer Çözümler ve Eğitim rotalarında; mobil kontrol Mimari rotasında yapıldı. Kanıt: `docs/verification/hero-family-browser-audit-2026-10-29.json`.
+- Tam kapılar: 182 unit test, 4 kaynak sözleşmesi, 36/36 faz paritesi, 45 token testi, 188 kontrast kontrolü, typecheck ve 118 sayfalık production build geçti. Build canlıya alınmadı; push/deploy/canlı değişikliği yoktur.
+- Code/security re-review blocking bulgu vermedi. Non-blocking bakım notu: interaktif 99×2 CDP kabul döngüsünü ileride repo-owned script haline getirmek ve uzun route dizilerini yalnız okunabilirlik amacıyla çok satırlı biçime taşımak.
+- Sıradaki insan kabulü, yerel sitede aile bazlı görsel dilin son kontrolüdür. Yeni istisna görsel yalnız semantik temsil, responsive kırpma, erişilebilirlik veya dönüşüm gerekçesi belgelenirse açılmalıdır.
+
 ## 29.10.2026 — Hero aile görselleri üretildi; rota entegrasyonu onay bekliyor
 
 - Onaylanan aile planındaki yedi eksik görsel (`VF-00`, `VF-02`–`VF-07`) built-in `image_gen` ile aile başına tek çağrıda üretildi. Mevcut onaylı mimari prototip `VF-01` olarak aynı arşiv yapısına kopyalandı; toplam sekiz aile adayı hazırdır.

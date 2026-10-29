@@ -1751,11 +1751,18 @@ button.alu-role[aria-checked="true"] {
   position: absolute;
   inset: 0;
   z-index: var(--z-background);
-  background-size: cover;
-  background-position: center;
+  display: block;
+  overflow: hidden;
   opacity: 0.14;
   filter: var(--filter-application-subpage-hero-background);
   transform: var(--transform-decorative-subpage-hero-overscan);
+}
+.alu-subpage-hero__bg img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 .alu-subpage-hero__scrim {
   position: absolute;
@@ -1775,13 +1782,14 @@ button.alu-role[aria-checked="true"] {
   max-width: var(--container-md);
 }
 .alu-subpage-hero--background-only .alu-subpage-hero__bg {
-  background-position: center right;
-  background-size: contain;
-  background-repeat: no-repeat;
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 28%, var(--surface-page) 82%, var(--surface-page) 100%);
   mask-image: linear-gradient(90deg, transparent 0%, transparent 28%, var(--surface-page) 82%, var(--surface-page) 100%);
   opacity: var(--opacity-subpage-hero-background-only);
   filter: var(--filter-application-subpage-hero-background-only);
+}
+.alu-subpage-hero--background-only .alu-subpage-hero__bg img {
+  object-fit: contain;
+  object-position: center right;
 }
 .alu-subpage-hero--background-only .alu-subpage-hero__scrim {
   background:
@@ -3198,6 +3206,10 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 }
 
 @media (max-width: 64rem) {
+  .alu-subpage-hero--background-only .alu-subpage-hero__bg img {
+    object-fit: cover;
+    object-position: 82% center;
+  }
   .alu-hero-stage__grid,
   .alu-pathway-split,
   .alu-feature-row,
@@ -3245,6 +3257,19 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 }
 
 @media (max-width: 40rem) {
+  .alu-subpage-hero--background-only .alu-subpage-hero__bg {
+    -webkit-mask-image: linear-gradient(180deg, var(--surface-page) 0%, var(--surface-page) 46%, transparent 88%, transparent 100%);
+    mask-image: linear-gradient(180deg, var(--surface-page) 0%, var(--surface-page) 46%, transparent 88%, transparent 100%);
+  }
+  .alu-subpage-hero--background-only .alu-subpage-hero__bg img {
+    object-position: center top;
+  }
+  .alu-subpage-hero--background-only .alu-subpage-hero__scrim {
+    background: linear-gradient(180deg, transparent 0%, var(--visual-subpage-hero-dark-scrim) 52%, var(--surface-page) 100%);
+  }
+  [data-mode="light"] .alu-subpage-hero--background-only .alu-subpage-hero__scrim {
+    background: linear-gradient(180deg, transparent 0%, var(--visual-subpage-hero-light-scrim) 52%, var(--surface-page) 100%);
+  }
   .alu-hero-metrics,
   .alu-pathway-features-grid,
   .alu-products-showcase,

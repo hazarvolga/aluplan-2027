@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-29",
+  "environment": {
+    "baseUrl": "http://127.0.0.1:3001",
+    "mode": "local Next.js development server",
+    "liveOrDeploymentEvidence": false
+  },
+  "scope": {
+    "fixture": "tests/fixtures/hero_visual_family_routes.json",
+    "routes": 99,
+    "viewports": {
+      "desktop": 99,
+      "mobile": 99
+    },
+    "totalRouteViewportChecks": 198
+  },
+  "automatedChecks": [
+    "expected data-hero-family",
+    "expected desktop or mobile source inside optimized currentSrc",
+    "Next.js /_next/image optimization path",
+    "VF-08 official-release source preservation",
+    "background-only presentation without framed hero media",
+    "no hidden legacy hero image",
+    "exactly one H1",
+    "zero broken images",
+    "no horizontal overflow"
+  ],
+  "errors": [],
+  "representativeVisualChecks": {
+    "desktop": [
+      "/solutions/architecture",
+      "/solutions/infrastructure",
+      "/solutions-v2/other",
+      "/solutions-v2/training"
+    ],
+    "mobile": [
+      "/solutions/architecture"
+    ]
+  },
+  "limitations": [
+    "This is local rendering evidence only.",
+    "The CDP acceptance loop was run interactively and is not yet a repository-owned regression script.",
+    "It does not prove live publication, CDN behavior or production performance.",
+    "Final editorial and art-direction acceptance remains a human decision."
+  ]
+}

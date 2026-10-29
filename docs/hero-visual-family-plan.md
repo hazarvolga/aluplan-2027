@@ -2,7 +2,7 @@
 
 **Date:** 29.10.2026
 
-**Status:** Family strategy approved and route table reviewed. The `VF-01` prototype is implemented only on the reference route; seven-family production and sitewide family mapping have not started.
+**Status:** Family strategy, eight visual candidates and sitewide route mapping are implemented locally. All 99 routes in scope use the approved family policy; `VF-08` preserves each page's official release media. Local technical and browser verification is complete; live publication is not in scope.
 
 **Scope:** Routes in `src/data/pages.json` whose `section` is `products`, `solutions`, `solutions-v2`, `training` or `video-library`, plus the corresponding navigation families in `src/data/navigation.json`.
 
@@ -19,7 +19,7 @@ This policy changes presentation only. Page content, schema, URLs, CTA targets a
 - Reference route: `/solutions/architecture`
 - Presentation: full hero background, right-aligned focal subject, left-to-right transparency mask, no framed media card.
 - The high-resolution source and web derivative remain separate.
-- This baseline is currently implemented only on the reference route. The routes below are planning assignments, not active code mappings.
+- This baseline is implemented through one shared hero component and a presentation-only route policy. The routes below are active local mappings.
 
 ## Visual families
 
@@ -95,11 +95,11 @@ Product name alone is not sufficient reason for a unique image.
 
 ## Target asset and implementation contract
 
-- At sitewide rollout, high-resolution originals: `assets/source/generated/heroes/families/`
-- At sitewide rollout, web derivatives: `public/assets/heroes/families/`
+- High-resolution originals: `assets/source/generated/heroes/families/`
+- Responsive web derivatives: `public/assets/heroes/families/`
 - Every family asset records prompt, model, dimensions and SHA-256 in a local manifest.
-- Before sitewide rollout, the approved `VF-01` prototype is moved from its current prototype paths into the family asset structure and its references are updated atomically. The current files are not moved during planning.
-- A route-to-family policy module will own presentation mapping; content records and schema will not contain visual-theme decisions.
+- The approved `VF-01` prototype is archived in the same family asset structure as the seven generated candidates.
+- `src/components/sections/subpage-hero-presentation.ts` owns route-to-family presentation mapping; content records and schema do not contain visual-theme decisions.
 - Hero layout remains one shared component. Route policy supplies only family ID and asset path.
 - Mobile crops, dark/light modes, reduced motion, contrast and loading behavior are verified before family-wide rollout.
 - No route receives the family visual until its contact-sheet preview is approved.
@@ -110,9 +110,11 @@ Product name alone is not sufficient reason for a unique image.
 2. Generate one high-resolution candidate for each of the seven missing families.
 3. Build a contact-sheet preview with desktop and mobile hero crops.
 4. Obtain visual approval or mark a family for one revision.
-5. Implement the central route-to-family policy.
-6. Run route coverage, render parity and browser checks across all assigned routes.
+5. Implement the central route-to-family policy. **Complete locally.**
+6. Run route coverage, render parity and browser checks across all assigned routes. **Complete locally: 99 desktop + 99 mobile route checks, no errors.**
 
 ## Current state
 
-The approved family strategy and its 99-route table have passed technical review. **No new family image generation, route mapping code or sitewide hero change has been performed by this document update.** The next phase is prompt-brief preparation for the seven missing family assets.
+The approved family strategy is active locally across all **99/99** in-scope routes. `VF-00`–`VF-07` use shared desktop/mobile family assets; `VF-08` keeps the page's official/source release image. Routes outside this scope, including About and legal pages, preserve the framed fallback presentation.
+
+The responsive component uses `<picture>` with a dedicated mobile derivative, while the original content image remains in the source/parity model. The exact route set is independently fixture-tested, and presentation tokens do not enter `pages.json`, navigation data, homepage data or schema code. Local browser evidence is recorded in `docs/verification/hero-family-browser-audit-2026-10-29.json`. No push, deploy or live-site change was made.

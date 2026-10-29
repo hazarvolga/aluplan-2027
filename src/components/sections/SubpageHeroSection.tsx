@@ -1,15 +1,23 @@
 import Link from 'next/link';
+import { getImageProps } from 'next/image';
 import type { ReactElement } from 'react';
 import type { ContentImage, PageRecord } from '@/lib/site-data';
 import { MAIN_QUOTE_FORM_URL, TRIAL_CTA_URL } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
-import type { SubpageHeroPresentation } from './subpage-hero-presentation';
+import type {
+  HeroBackgroundSources,
+  HeroVisualAssetKind,
+  HeroVisualFamilyId,
+  SubpageHeroPresentation
+} from './subpage-hero-presentation';
 
 interface SubpageHeroSectionProps {
   page: PageRecord;
   heroImage: ContentImage | null;
   presentation: SubpageHeroPresentation;
-  backgroundSrc: string | null;
+  background: HeroBackgroundSources | null;
+  familyId: HeroVisualFamilyId | null;
+  assetKind: HeroVisualAssetKind;
   sectionBadgeLabel: string;
   isLegalPage: boolean;
 }
@@ -18,23 +26,43 @@ export function SubpageHeroSection({
   page,
   heroImage,
   presentation,
-  backgroundSrc,
+  background,
+  familyId,
+  assetKind,
   sectionBadgeLabel,
   isLegalPage
 }: SubpageHeroSectionProps): ReactElement {
   const showFramedMedia = Boolean(heroImage) && presentation === 'framed';
+  const responsiveBackground = background ? (() => {
+    const common = { alt: '', fill: true, sizes: '100vw', loading: 'eager' } as const;
+    const { props: { srcSet: desktopSrcSet, ...desktopImageProps } } = getImageProps({
+      ...common,
+      src: background.desktopSrc
+    });
+    const { props: { srcSet: mobileSrcSet } } = getImageProps({
+      ...common,
+      src: background.mobileSrc
+    });
+
+    return { desktopImageProps, desktopSrcSet, mobileSrcSet };
+  })() : null;
 
   return (
     <section
       className={`alu-subpage-hero ${presentation === 'background-only' ? 'alu-subpage-hero--background-only' : ''}`}
       aria-labelledby="page-h1"
+      data-hero-family={familyId || undefined}
+      data-hero-source={assetKind}
     >
-      {backgroundSrc && (
-        <div
-          className="alu-subpage-hero__bg"
-          style={{ backgroundImage: `url(${backgroundSrc})` }}
-          aria-hidden="true"
-        />
+      {responsiveBackground && (
+        <picture className="alu-subpage-hero__bg" aria-hidden="true">
+          <source media="(max-width: 40rem)" srcSet={responsiveBackground.mobileSrcSet} />
+          <img
+            {...responsiveBackground.desktopImageProps}
+            srcSet={responsiveBackground.desktopSrcSet}
+            fetchPriority="high"
+          />
+        </picture>
       )}
       <div className="alu-subpage-hero__scrim" aria-hidden="true" />
 
@@ -126,14 +154,6 @@ export function SubpageHeroSection({
               </figcaption>
             )}
           </figure>
-        )}
-
-        {!showFramedMedia && heroImage && (
-          <img
-            className="alu-visually-hidden"
-            src={heroImage.src}
-            alt={heroImage.alt || page.h1}
-          />
         )}
       </div>
     </section>

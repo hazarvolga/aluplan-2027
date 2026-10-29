@@ -1,5 +1,16 @@
 # Oturum devri
 
+## 29.10.2026 — Yedi hero ailesi için prompt briefleri
+
+- Kullanıcı route–görsel ailesi tablosunu onayladı; sonraki adım olarak yalnız prompt-brief fazına geçildi. `imagegen` skillinin prompt sözleşmesine göre `docs/hero-visual-prompt-briefs.md` hazırlandı.
+- Ortak sanat yönetimi: 16:9 geniş kadraj, solda %45 sakin/koyu metin güvenli alanı, sağda ana konu, antrasit/graphite temel, kontrollü teal-cyan teknik vurgu, gerçekçi AEC malzemeleri ve sahte UI/logo/metin yasağı.
+- Art-direction review sonrası responsive sözleşme somutlaştırıldı: masaüstü `1440×520` mevcut `contain/right` sunumu ve `0/28/82/100%` maskeyi; tablet `1024×520` focal-X kontrollü `cover` sunumunu; mobil `390×640` ise aynı orijinalden tam yükseklik ve sağa yaslı `x=55–100%, y=0–100%` kırpma ile üretilen deterministik `4:5` türevi ve CSS-owned dikey fade'i test eder. Mobil türev başarısızsa ayrı üretim otomatik yapılmaz, yeniden onay gerekir.
+- Her yedi prompt bloğu artık tek başına çalışacak şekilde logo/trademark/UI/metin ve baked gradient/scrim/vignette yasağını tekrarlar. Fade yalnız CSS katmanında üretilir.
+- Marka kılavuzundaki kaynak/lisans izi için `docs/brand/assets-license-log.md` oluşturuldu ve mevcut `VF-01` prototipi ilk kayıt olarak işlendi; kaynak/provider alanlarından ayrı hak/lisans dayanağı ve doğrulama durumu tutulur. Yeni ailelerde manifest ile birlikte bu kayıt zorunludur.
+- Yedi eksik aile için ayrı üretim promptu ve kabul sinyali tanımlandı: `VF-00`, `VF-02`, `VF-03`, `VF-04`, `VF-05`, `VF-06`, `VF-07`. Mevcut onaylı `VF-01` görsel kalite ve kompozisyon referansıdır.
+- Üretim sırası maliyet ve tekrar azaltacak şekilde aile başına tek built-in `image_gen` çağrısıdır; başarısız aile yalnız hedefli tek değişiklikle yeniden denenir. CLI/API fallback planlanmadı.
+- Henüz yeni görsel üretilmedi, asset taşınmadı ve site geneli route eşleme kodu yazılmadı. Sıradaki karar prompt setinin görsel üretim için onayıdır.
+
 ## 29.10.2026 — Hero görsel aile planı
 
 - Kullanıcı, her route için ayrı görsel yerine üst çözüm ve ürün aileleri altında ortak hero görselleri kullanılmasını onayladı. Plan `docs/hero-visual-family-plan.md` dosyasına kaydedildi.

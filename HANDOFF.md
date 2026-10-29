@@ -1,5 +1,14 @@
 # Oturum devri
 
+## 29.10.2026 — Canlı Allplan Max sayfa envanteri ve medya arşivi (allplan-canlı/)
+
+- **Yeni klasör:** `docs/content-2027/allplan-canlı/`. Canlı `https://www.allplan.com/allplan-max/` sayfasının render edilmiş DOM'undan içerik envanteri çıkarıldı: görsel sıra (y konumu) ile tüm metin blokları; EN **birebir** (kaynaktaki yazım hataları dahil, "Kaynak notları" bölümlerinde belgelendi), ayrı TR **taslak** kolonu.
+- **Medya:** `media/` altına 13 varlık indirildi — 9 görsel (~1,4 MB) + 4 video (~37 MB: hero tanıtım 25,4 MB ve 3 özellik videosu). `media/manifest.md` SHA-256, boyut ve canlı konum içerir. Takip istekleri (bat.bing, adsct) indirilmedi; 7 YouTube gömesi yalnız referans olarak envanterde kayıtlı (`[in Beta]` AI BIM Modeler dahil).
+- **Yöntem notu:** Akamai bot koruması, curl'a gezgin başlık seti (UA, Accept, Accept-Language, Referer, Sec-Fetch-*) + sayfa çerezleri verilerek aşıldı; çerez dosyası geçici, DOM'dan yeniden üretilebilir.
+- **Canlı–docx farkları ve 5 açık soru** envanterin sonunda kayıtlı (alıntı öznitelikleri boş, "Video ansehen" Almanca kaçışı, AI BIM Modeler eksik `Included in` etiketi, %18/%21/%24 yayın izni, kaynak metin tekrarları).
+- **Kullanıcı kararı:** canlı envanter Aşama C/D makine katmanına (`content-records.json`) bağlanmadı; üretici referansı olarak ayrı durur.
+- **Commit:** canlı envanter klasörü tek committe kayıt altına alındı; push/merge/deploy yok.
+
 ## 28.10.2026 — Sitewide kaynak/veri/render ve tarayıcı paritesi kapandı
 
 - Bridge ve AEC sayfalarına kaynakta bulunmadığı halde eklenen genel MP4 fallback kaldırıldı; Bridge `SeA6ncaqUhY`, AEC `tFnwOyX7ncI` üretici YouTube içeriği korundu (`83ec79e`). `/solutions/allplan-industry` içindeki altı ürün kartı, Professional ve Ultimate dahil, ana içerikte doğrulandı.

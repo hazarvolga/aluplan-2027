@@ -8,7 +8,8 @@
 - **Video/embed politikası:** YouTube gömeleri yalnız referans (civil 18 benzersiz göme, features hiç yok, sds2 hiç yok); civil müşteri sözü videoları `event.allplanplus.com` oturum bağlantıları (base64 encoded) olarak kayıtlı. Takip pikselleri (bat.bing/adsct) indirilmedi.
 - **Kaynak quirks envanterde belgelendi:** SDS2 İtalalyan URL'leri (`/it/soluzioni-per-settore/…`, "Steel Fabrication" `it/it` çift kodu), Civil `7xzpEhLQhEI??rel=0` çift soru işareti, "Success StoriesCUSTOMER", "Midlands, Michigan" (doğrusu Midland), "View all training" href artık `?`, boşluksuz stat/benefit etiketleri, sözlerde ad/unvan yok.
 - **Commit:** `7f1a69d` — 99 dosya (3 envanter + manifest + README tablosu + 94 görsel). Push/merge/deploy yok.
-- **Sıradaki adım:** kullanıcı onayıyla dört canlı envanter Rekorlar Aşama C'ye (02-inventory sayfaları) işlenecek; öncelikle features sayfasındaki gizli karusel içeriklerinin C katmanına nasıl bağlanacağı kararı.
+- **Sıradaki adım:** kullanıcı onayıyla dört canlı envanter Aşama C'ye (02-inventory sayfaları) işlenecek; öncelikle features sayfasındaki gizli karusel içeriklerinin C katmanına nasıl bağlanacağı kararı.
+- **Kullanıcı kararı (29.10.2026):** canlı envanter ve üretim yalnız **EN + TR**; SDS2 İtalyan URL'leri gibi diğer dil kaçışları envanterde kayıtlı kalır ama üretimde EN/TR karşılıklarıyla çözülür (`docs/00-inventory/user-decisions.md` eki).
 - **Geçici çınlar:** `/tmp/acookies.txt`, `/tmp/dl_urls.txt` vs. envanter dalında kalıcı değildir; DOM'dan yeniden üretilebilir.
 
 ## 29.10.2026 — Canlı Allplan Max sayfa envanteri ve medya arşivi (allplan-canlı/)

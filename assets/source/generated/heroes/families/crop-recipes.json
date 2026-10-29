@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "tool": "macOS sips",
+  "jpegQuality": 84,
+  "coordinateSpace": "source pixels; origin top-left",
+  "families": {
+    "VF-00": {"desktop": {"x": 573, "y": 0, "width": 1410, "height": 793}, "mobile": {"x": 1349, "y": 0, "width": 634, "height": 793}},
+    "VF-01": {"desktop": {"x": 0, "y": 0, "width": 1672, "height": 941}, "mobile": {"x": 919, "y": 0, "width": 753, "height": 941}},
+    "VF-02": {"desktop": {"x": 0, "y": 0, "width": 1672, "height": 941}, "mobile": {"x": 919, "y": 0, "width": 753, "height": 941}},
+    "VF-03": {"desktop": {"x": 0, "y": 0, "width": 1672, "height": 941}, "mobile": {"x": 919, "y": 0, "width": 753, "height": 941}},
+    "VF-04": {"desktop": {"x": 0, "y": 0, "width": 1672, "height": 941}, "mobile": {"x": 919, "y": 0, "width": 753, "height": 941}},
+    "VF-05": {"desktop": {"x": 573, "y": 0, "width": 1410, "height": 793}, "mobile": {"x": 1349, "y": 0, "width": 634, "height": 793}},
+    "VF-06": {"desktop": {"x": 0, "y": 0, "width": 1672, "height": 941}, "mobile": {"x": 919, "y": 0, "width": 753, "height": 941}},
+    "VF-07": {"desktop": {"x": 0, "y": 0, "width": 1672, "height": 941}, "mobile": {"x": 919, "y": 0, "width": 753, "height": 941}}
+  }
+}

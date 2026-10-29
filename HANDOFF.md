@@ -1,5 +1,15 @@
 # Oturum devri
 
+## 29.10.2026 — Hero aile görselleri üretildi; rota entegrasyonu onay bekliyor
+
+- Onaylanan aile planındaki yedi eksik görsel (`VF-00`, `VF-02`–`VF-07`) built-in `image_gen` ile aile başına tek çağrıda üretildi. Mevcut onaylı mimari prototip `VF-01` olarak aynı arşiv yapısına kopyalandı; toplam sekiz aile adayı hazırdır.
+- Yüksek çözünürlüklü PNG orijinaller `assets/source/generated/heroes/families/`, masaüstü ve deterministik sağa yaslı `4:5` mobil JPEG türevleri `public/assets/heroes/families/` altında saklanır. Orijinaller başka işlerde yeniden üretim gerektirmeden kullanılabilir.
+- Boyut, dosya büyüklüğü ve SHA-256 kayıtları `assets/source/generated/heroes/families/manifest.md`; sağlayıcı, kullanım amacı, hak/lisans dayanağı ve yayın durumu `docs/brand/assets-license-log.md` içinde tutulur. Hak/şart doğrulaması ve site geneli yayın onayı beklemededir.
+- Karşılaştırmalı masaüstü/mobil önizleme `docs/previews/hero-family-contact-sheet/index.html` altında hazırlandı. `VF-05` teknik olarak geçerli olmakla birlikte bina-merkezli kompozisyonu nedeniyle `VF-07` ile görsel ayrışma kontrolüne açık bırakıldı; otomatik ikinci üretim yapılmadı.
+- Asset sözleşmesi sekiz PNG orijinali, on altı JPEG türevi, dosya imzalarını, responsive en-boy oranlarını, manifest hash eşliğini, temas sayfası kapsamını ve Git takibini doğrular (`tests/test_hero_family_assets.py`).
+- Makine-okunur `crop-recipes.json`, her türevin kaynak-piksel koordinatını ve JPEG kalite ayarını kaydeder; test mobil kırpmaların tam yükseklik ve sağa yaslı olduğunu doğrular. Son kontrol: 177 unit test, 36 faz paritesi, 45 token testi, 188 kontrast kontrolü ve typecheck geçti. Code/security re-review Critical/High/Medium bulgu vermedi.
+- Bu fazda route eşleme, içerik, schema veya hero bileşeni değiştirilmedi. Sıradaki karar temas sayfasındaki sekiz ailenin görsel onayıdır; onaydan sonra aile–route sunum politikası ayrı fazda uygulanacaktır.
+
 ## 29.10.2026 — Yedi hero ailesi için prompt briefleri
 
 - Kullanıcı route–görsel ailesi tablosunu onayladı; sonraki adım olarak yalnız prompt-brief fazına geçildi. `imagegen` skillinin prompt sözleşmesine göre `docs/hero-visual-prompt-briefs.md` hazırlandı.

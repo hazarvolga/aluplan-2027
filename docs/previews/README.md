@@ -10,3 +10,10 @@
 - Manrope 700 ve IBM Plex Sans 400/600 Google Fonts'tan indirilip yerel sunuluyor; OFL metinleri assets içinde. Tarayıcı font CDN'ine bağlanmaz. Bu örnekte TTF kullanıldı; üretim WOFF2/latin-ext optimizasyonu sonraki onaylı fazın işidir.
 - `preview.png`: kontrol edilen masaüstü görünümü.
 - Mevcut logo aynen kullanıldı. Teal/Ink taslak yönü ve yeni fontlar henüz onaylanmış marka kararı değildir.
+
+## Özel sunucu kökü kullanan önizlemeler
+
+- `hero-family-contact-sheet/` canonical web türevlerini `public/` altından tekrar
+  kullanır. Bu önizleme `docs/previews` köküyle değil, proje kökünde
+  `python3 -m http.server 8772 --bind 127.0.0.1` komutuyla açılır. Ayrıntılı URL
+  ve gerekçe alt klasördeki `README.md` dosyasındadır.

@@ -19,6 +19,10 @@ içermez; TR kolonu yalnızca taslaktır.
 | Dosya | Sayfa | URL |
 |---|---|---|
 | [`allplan-max.md`](allplan-max.md) | Allplan Max (canlı) | `https://www.allplan.com/allplan-max/` |
+| [`allplan-2027-features.md`](allplan-2027-features.md) | Features Allplan 2027 (canlı) | `https://www.allplan.com/products/allplan-2027-features/` |
+| [`allplan-civil.md`](allplan-civil.md) | ALLPLAN Civil (canlı) | `https://www.allplan.com/products/allplan-civil/` |
+| [`allplan-sds2-detailing-fabrication.md`](allplan-sds2-detailing-fabrication.md) | SDS2 by ALLPLAN (canlı) | `https://www.allplan.com/products/sds2-detailing-fabrication/` |
+| [`media/manifest.md`](media/manifest.md) | Medya bildirimi (SHA-256, boyut, konum) | — |
 
 ## Kapsam dışı
 

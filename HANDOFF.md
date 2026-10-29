@@ -1,5 +1,16 @@
 # Oturum devri
 
+## 29.10.2026 — Üç ürün sayfasının canlı envanteri (features / civil / SDS2) tamamlandı
+
+- **Yeni envanter dosyaları** (`docs/content-2027/allplan-canlı/`): `allplan-2027-features.md` (121 görünür + 55 gizli karusel bloğu), `allplan-civil.md` (203 blok + zorluk/müşteri sözü/başarı hikâyesi kartları), `allplan-sds2-detailing-fabrication.md` (hero "SOLUTIONFOR" dahil tüm bantlar; VERSION 2027 üç yenilik; 3 söz; Deloitte/Dow/Winter Olympic hikâyeleri; explore/training/partner). EN birebir (kaynak hatalı birleşik yazımlar "Kaynak notları"nda), TR taslak.
+- **Medya:** her sayfaya ayrı klasör, toplam **94 görsel (~9,8 MB)** indirildi ve `file` tipi denetimi temiz: features 16 (2,8 MB), civil 58 (~3,7 MB), sds2 20 (~3,3 MB). `media/manifest.md` artık dört sayfayı kapsar (SHA-256 ilk 16 hane + boyut + görev).
+- **Bozuk kaynak:** features sayfasındaki gizli Civil slayt videosu `Editable_Stationing.mp4` canlı sunucuda **HTTP 404** — image ve video başlıklarıyla iki kez denendi, indirilemedi; manifest ve envanterde notlu.
+- **Video/embed politikası:** YouTube gömeleri yalnız referans (civil 18 benzersiz göme, features hiç yok, sds2 hiç yok); civil müşteri sözü videoları `event.allplanplus.com` oturum bağlantıları (base64 encoded) olarak kayıtlı. Takip pikselleri (bat.bing/adsct) indirilmedi.
+- **Kaynak quirks envanterde belgelendi:** SDS2 İtalalyan URL'leri (`/it/soluzioni-per-settore/…`, "Steel Fabrication" `it/it` çift kodu), Civil `7xzpEhLQhEI??rel=0` çift soru işareti, "Success StoriesCUSTOMER", "Midlands, Michigan" (doğrusu Midland), "View all training" href artık `?`, boşluksuz stat/benefit etiketleri, sözlerde ad/unvan yok.
+- **Commit:** `7f1a69d` — 99 dosya (3 envanter + manifest + README tablosu + 94 görsel). Push/merge/deploy yok.
+- **Sıradaki adım:** kullanıcı onayıyla dört canlı envanter Rekorlar Aşama C'ye (02-inventory sayfaları) işlenecek; öncelikle features sayfasındaki gizli karusel içeriklerinin C katmanına nasıl bağlanacağı kararı.
+- **Geçici çınlar:** `/tmp/acookies.txt`, `/tmp/dl_urls.txt` vs. envanter dalında kalıcı değildir; DOM'dan yeniden üretilebilir.
+
 ## 29.10.2026 — Canlı Allplan Max sayfa envanteri ve medya arşivi (allplan-canlı/)
 
 - **Yeni klasör:** `docs/content-2027/allplan-canlı/`. Canlı `https://www.allplan.com/allplan-max/` sayfasının render edilmiş DOM'undan içerik envanteri çıkarıldı: görsel sıra (y konumu) ile tüm metin blokları; EN **birebir** (kaynaktaki yazım hataları dahil, "Kaynak notları" bölümlerinde belgelendi), ayrı TR **taslak** kolonu.

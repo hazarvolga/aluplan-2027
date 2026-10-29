@@ -1,5 +1,15 @@
 # Oturum devri
 
+## 29.10.2026 — Yerel 2027 ana sayfa önizleme rotası
+
+- Mevcut `/` ana sayfası değiştirilmeden restore ref oluşturuldu: `restore/pre-home-2027-preview-20261029` → `77bfccf`.
+- Yeni yerel önizleme rotası `src/app/preview/home-2027/page.tsx` altında kuruldu. Rota, sonraki 2027 değişikliklerini public görünümden ayıran `Homepage2027PreviewView` giriş noktasını kullanır; bu sınır şimdilik mevcut `HomepageView` bileşenini ve mevcut tek veri kaynağını yeniden kullanır. JSX, homepage verisi veya JSON-LD kopyası üretmez.
+- `/preview/home-2027` geliştirme ortamında ana sayfayla aynı 8 bölüm, aynı H1 ve aynı 97 bağlantıyı render eder. Metadata `noindex, nofollow, nocache`; rota navigation, `pages.json` ve sitemap dışında tutulur.
+- Production ortamında rota `notFound()` ile içerik sunmaz. Yerel production server kabulünde `/` → HTTP 200, `/preview/home-2027` → HTTP 404 ve preview HTML içinde ana sayfa H1'i yoktur.
+- TDD sözleşmesi `tests/test_home_2027_preview.py`: önizleme izolasyonu, noindex/production guard, sitemap/navigation/data dışılığı ve ana `/` otoritesinin korunmasını doğrular.
+- Tam kapılar: 186 unit test, 4 kaynak sözleşmesi, 36/36 faz paritesi, 45 token testi, 188 kontrast kontrolü, typecheck ve 119 sayfalık production build geçti. In-app browser Work ayarlarında devre dışı olduğundan görsel tarayıcı otomasyonu kullanılamadı; çalışan dev HTML paritesi gerçek HTTP yanıtları üzerinden doğrulandı.
+- Önizleme adresi: `http://127.0.0.1:3001/preview/home-2027`. Kullanıcı değişiklik listesini iletene kadar içerik, bölüm sırası ve tasarım değiştirilmemiştir. Push/deploy/canlı değişikliği yoktur.
+
 ## 29.10.2026 — Hero aileleri 99 route üzerinde yerel olarak entegre edildi
 
 - Kullanıcının temas sayfasında onayladığı `VF-00`–`VF-08` görsel ailesi, içerik ve schema katmanlarından bağımsız `src/components/sections/subpage-hero-presentation.ts` politikasıyla uygulandı. Kapsamdaki **99/99** route açıkça eşlenir; yinelenen route modül yüklenirken hata verir ve bağımsız fixture uygulamadaki route haritasıyla birebir karşılaştırılır.

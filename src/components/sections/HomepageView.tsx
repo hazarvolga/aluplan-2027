@@ -9,6 +9,7 @@ import { ProfessionalServicesSection } from './ProfessionalServicesSection';
 import { handleStructuredTabKey } from './structured-tab-key';
 import { HomepageMaxPreviewHero } from './HomepageMaxPreviewHero';
 import { HomepageProductPreviewTabs } from './HomepageProductPreviewTabs';
+import { Homepage2026Links } from './Homepage2026Links';
 
 const data = getHomepageData();
 const releaseCountryLabel = `${data.releaseLabel} · TÜRKİYE`;
@@ -148,6 +149,8 @@ export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: bool
           ))}
         </div>
       </section>}
+
+      {previewMaxHero && <Homepage2026Links />}
 
       {/* H03: Interactive Role Stage + 6 Permanent Products (PathwayProductSystem) */}
       <section
@@ -512,70 +515,6 @@ export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: bool
         </div>
       </section>
 
-      {/* H08: ALLPLAN 2026 Innovations + OpenBIM Partner Ecosystem */}
-      <section id="innovations" className="preview-section preview-section--subtle" aria-labelledby="innovations-heading">
-        <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
-          <div className="preview-section-heading">
-            <div className="alu-stack">
-              <span className="preview-kicker">
-                {data.innovationsMeta.eyebrow} · {data.innovationsMeta.version}
-              </span>
-              <h2 id="innovations-heading" className="alu-h1">
-                {data.innovationsMeta.title}
-              </h2>
-              <p className="alu-body preview-meta">{data.innovationsMeta.description}</p>
-            </div>
-            <Link className="alu-button alu-button--primary alu-button--md" href={data.innovationsMeta.href}>
-              <span>{data.innovationsMeta.cta}</span>
-              <AluIcon name="arrow-right" size="sm" />
-            </Link>
-          </div>
-
-          <div className="alu-innovations-showcase">
-            {data.innovations.map((card, idx) => (
-              <article key={card.id} className="alu-innovation-card">
-                {card.image && (
-                  <div className="alu-innovation-card__media">
-                    <img src={card.image} alt={card.title} loading="lazy" />
-                    <div className="alu-innovation-card__overlay">
-                      <span className="alu-badge alu-badge--accent">
-                        <AluIcon name="sparkles" size="sm" />
-                        <span>{card.badge}</span>
-                      </span>
-                      <span className="alu-innovation-card__num">0{idx + 1}</span>
-                    </div>
-                  </div>
-                )}
-                <div className="alu-innovation-card__body">
-                  <h3 className="alu-card__title">{card.title}</h3>
-                  <p className="alu-body">{card.description}</p>
-                  <Link className="alu-link alu-link--standalone" href="/products/allplan-2026-yenilikler" style={{ marginTop: 'auto' }}>
-                    <span>Özelliği İncele</span>
-                    <AluIcon name="arrow-right" size="sm" />
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          {/* OpenBIM & Technology Partners Strip */}
-          {data.partners && data.partners.length > 0 && (
-            <div className="alu-partner-strip" aria-label="Teknoloji ve OpenBIM İş Ortakları">
-              <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
-                <span className="preview-kicker">OPENBIM VE TEKNOLOJİ EKOSİSTEMİ ENTEGRASYONLARI</span>
-                <span className="alu-caption">IFC 4.3 · BCF · Doğrudan Veri Değişimi</span>
-              </div>
-              <div className="alu-partner-strip__grid">
-                {data.partners.map((partner) => (
-                  <div key={partner.name} className="alu-partner-strip__item" title={partner.name}>
-                    <img src={partner.logo} alt={partner.name} loading="lazy" />
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-      </section>
     </>
   );
 }

@@ -1170,3 +1170,43 @@ Kullanıcı 2027 ana sayfasını şimdilik yeterli bulup ALLPLAN Max sayfasını
 ### Devam durumu
 - 2026 bağlantı bandı ürün sekmeleri sonrasına taşındı, yüzeyi hafifçe ayrıldı; BIMFlex medya boyutları küçültülüp dış kartın arka planı ve çerçevesi kaldırıldı. Typecheck ve styles:check geçti.
 - Açık işler: disiplin iş akışı bölümünü ortak ve kompakt bileşene dönüştürme isteği önceki oturumda kesildi; tamamlanmadı. `/products` sayfasını canlı kaynakla karşılaştırıp eksikleri giderme isteği de bekliyor. Önceki incelemedeki bağlantı kayıpları ile test başarısızlıkları çözülmedi.
+
+- Disipline özel BIM iş akışı `DisciplineWorkflowSection` ortak bileşenine taşındı; rol sekmeleri ve ürün bağlantıları korunarak kompakt sekme, şeffaf kart ve yüzey düzeni uygulandı. Typecheck, rol geçişi, klavye ve 390 px taşma yerel tarayıcıda kontrol edildi.
+
+- Disiplin iş akışı özellikleri kullanıcı isteğiyle kartlardan kompakt semantik listeye dönüştürüldü; rol değişimi ve mobil taşma tarayıcıda, typecheck doğrulandı.
+
+- Disiplin iş akışı bölümünün başlığı ve açıklaması diğer sayfa başlıklarıyla uyumlu biçimde sola hizalandı; tarayıcı hizası ve typecheck doğrulandı.
+
+- Disiplin seçimi butonları başlığın sağına dikey üç satır olarak taşındı; mobilde başlığın altında sıralanır. Dikey klavye gezinmesi, masaüstü konumu, mobil taşma ve typecheck doğrulandı.
+
+- Disiplin iş akışı başlık ve rol seçimi satırına üst boşluk eklendi.
+
+- Disiplin iş akışı ürün kartlarının görselleri kaldırıldı; rol seçimine göre vurgu ve önerilen etiketi korundu. Tarayıcıda farklı rol seçimi ve typecheck kontrol edildi.
+
+- Disiplin seçimi ürün kartları yalnız seçili role ait ürünleri gösterir; masaüstünde aynı satırda, dar ekranda uyarlanır. Üç rol ve 390px tarayıcıda, typecheck kontrol edildi.
+
+- Mimar, mühendis ve prekast iş akışları için AI ile üç yeni illüstratif görsel üretildi; orijinal PNG dosyaları `public/assets/previews/workflow/` altında saklandı ve yalnız 2027 ana sayfa önizlemesine bağlandı. Üç rol için görsel yüklenmesi ve typecheck doğrulandı.
+
+- Kullanıcı isteğiyle “Sürümleri Görüntüle” bağlantıları ALLPLAN sürüm notlarına (`https://www.allplan.com/system/releasenotes/`) yönlendirildi; veri üretim kuralı da güncellendi. İlgili altı ürün sayfası ve typecheck kontrol edildi.
+
+- Çözüm ekosisteminin beş kartı için konuya uygun AI görselleri üretildi; orijinal PNG'ler `public/assets/previews/solutions/` altında saklandı ve 2027 ana sayfa önizlemesine bağlandı. 110 sayfalık veri envanterinde “Sürümleri Görüntüle” bağlantıları tarandı; eşleşmeler altı ürün sayfasında sürüm notlarını gösteriyor. Typecheck, görsel yükleme ve mobil taşma kontrol edildi.
+
+- Ürün hero alanındaki “Paket Karşılaştırma PDF” bağlantısı geliştirme görünümünde “Paketleri karşılaştırın” etiketiyle `/2027/compare` sayfasına bağlandı. Karşılaştırma rotası production'da kapalı olduğundan üretim görünümünde mevcut PDF bağlantısı korunur; rota yayınlandığında geçiş tamamlanmalı. PDF ve diğer doğrudan indirme bağlantıları saklandı. Typecheck ve üç ürün hero kontrol edildi.
+
+- Ortak `PageEndConversion` bölümü tüm kullanım yerleri için kompakt, çerçevesiz yerleşime dönüştürüldü; ticari, eğitim, destek ve kurumsal içerik/eylem politikası korundu. Typecheck ve 7 dönüşüm testi geçti; ticari, destek ve eğitim sayfaları ve mobil taşma tarayıcıda kontrol edildi.
+
+- İletişim sayfasındaki Google Maps gömüsü video alanından ayrılarak `ContactMap` ile tam konteyner genişliğinde ve kompakt yükseklikte sunuldu; mevcut Google Maps adresi korundu. Typecheck, boyut ve 390 px taşma kontrol edildi.
+
+- Scalypso ana sayfası canlı kaynaktaki başlık sırası, beş modül bağlantısı, beş uygulama alanı ve 11 görselle yeniden düzenlendi. Önceden onaylanmış form yönlendirme politikası gereği yerel başvuru bağlantısı ana talep formunu kullanır; canlı kaynak eski formu kullanmaktadır. Typecheck, başlık/bağlantı/görsel sayısı ve 390px taşma kontrol edildi.
+
+- Scalypso Modeler/Mobile/Viewer alt sayfaları kaynak sıralamasına yaklaştırıldı; Scalypso ana sayfa ve Microsoft Forms başvuru bağlantıları, Modeler'ın dört modül bağlantısı gösterildi. Converter ve videolar sayfalarına da aynı gezinme/form bağlantıları eklendi. Beş rota ve 390px taşma, typecheck kontrol edildi; önceden onaylı ana talep formu kullanılır.
+
+- Scalypso Modeler sayfası kompakt hero, iki sütunlu giriş, CAD listesi ve dört modül kartıyla yeniden düzenlendi. Kaynak metinler, modül bağlantıları ve onaylı Microsoft Forms hedefi korundu. Tarayıcı ve 390px taşma, typecheck kontrol edildi.
+
+- Referanslar sayfasında tekrarlanan ve kesilmiş genel hero kaldırıldı; tam başlık ve açıklama referans dizininde tek H1 olarak korundu. 228 referans listesi ve filtreler korunur; typecheck ve tarayıcı kontrolü yapıldı.
+
+### Ara verme durumu — 31.10.2026
+- Dal `codex/page-end-conversion-design`; 494f6dc sonrasındaki işler konu bazlı ayrı yerel commitlere ayrıldı: 4f89ade yaşam döngüsü, 1a0fe62 ana sayfa bağlantıları, a4cee39 BIMFlex, f43f21c kapanış, 567843c sürüm notları, d93e2a4 karşılaştırma linki, 81a6c9e ana sayfa iş akışı/görseller, 77bebc5 harita, 9eefe41 Scalypso, 7cf65e8 referanslar. Bu commitler henüz push edilmedi.
+- Doğrulama: `pnpm typecheck`, `pnpm styles:check` ve `python3 -m unittest tests/test_page_end_conversion.py` geçti. `pnpm test` 189 testte 11 başarısızlıkla duruyor: token ölçümleri, kaynak link/içerik paritesi, sayfa sonu render sınırı, benefits sınırı, taşınan rol sekmesi sözleşmesi ve tema kontratı. Tam test yeşil değil; failures test beklentisi veya gerçek regresyon açısından ayrı ayrı incelenmeli.
+- Açık işler: `/products` sayfası canlı kaynakla eksik içerik karşılaştırması; Scalypso video oynatımının doğrulanması; önceden raporlanan connect-login ve SketchUp Converter bağlantı kayıpları; 2027 sayfalarının üretim rotaları/noindex/sitemap kararı. Karşılaştırma bağlantısı yalnız geliştirmede 2027 tablosuna gider; üretimde PDF korunur. Yayın yapılmadı.
+- `.claude/launch.json` yerel, izlenmeyen geliştirme ayarı olarak bırakıldı. Mevcut eski siteden ve geçmişteki onaylı form yönlendirmesinden sapmalar ayrıca incelenmeli.

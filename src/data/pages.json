@@ -15518,9 +15518,9 @@
     "path": "/products/sds2-home",
     "section": "products",
     "title": "SDS2 — Çelik Detaylandırma, Bağlantı Tasarımı ve İmalat | Aluplan",
-    "description": "Automated steel detailing software",
+    "description": "Otomatik çelik detaylandırma yazılımı",
     "canonical": "https://aluplan.com.tr/products/sds2-home",
-    "h1": "Sizin İçin Tasarlanmış Detaylandırma Yazılımı",
+    "h1": "Çelik detaylandırma ve imalat için kapsamlı BIM çözümü",
     "eyebrow": "PRODUCTS",
     "breadcrumbs": [
       {
@@ -15825,12 +15825,15 @@
     "schemaType": "SoftwareApplication",
     "structuredLayout": {
       "intro": {
-        "kicker": "/ SDS2 ULTIMATE",
-        "title": "SDS2 ULTIMATE NEDİR?",
+        "kicker": "/ SDS2 BY ALLPLAN",
+        "title": "SDS2 BY ALLPLAN NEDİR?",
+        "paragraphs": [
+          "SDS2 by ALLPLAN, otomatik ve çakışmasız birleşimlerle gelişmiş çelik modelleme sağlayan, piyasadaki tek bütünleşik çelik detaylandırma ve birleşim tasarımı çözümüdür. İmalathaneden şantiyeye kadar daha doğru ve uygulanabilir tasarımlar sunmanıza yardımcı olur."
+        ],
         "bullets": [
-          "SDS2 Ultimate, günlük projelerinde hassasiyet ve verimlilik arayan detaylandırıcılar için geliştirilen, sektör lideri çelik detaylandırma yazılımıdır.",
-          "Otomatik bağlantı tasarımı, kapsamlı 3B modelleme ve BIM ile CNC sistemleriyle sorunsuz entegrasyon.",
-          "İş akışlarını optimize eder, maliyetli hataları azaltır ve üretime hazır, doğru çizimler sunar."
+          "Birleşimleri tasarlamak, çizim doğruluğunu artırmak ve birleşimin tamamını daha az manuel işlemle kontrol etmek için akıllı otomasyon.",
+          "İmalat tercihlerine göre özelleştirilmiş tasarım otomasyonu.",
+          "Sektörün önde gelen BIM ve imalat yönetimi çözümleriyle tam birlikte çalışabilirlik."
         ],
         "videoEmbedUrl": "https://www.youtube.com/embed/oKqf6wjm9tg"
       },

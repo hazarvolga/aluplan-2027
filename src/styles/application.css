@@ -125,6 +125,10 @@
   padding-inline: var(--button-padding-x-lg);
   font-size: var(--type-body-size);
 }
+/* Buttons have a shared square shape; inputs and decorative circles remain independent. */
+:is(button, input[type="button"], input[type="submit"], input[type="reset"], [role="button"]) {
+  border-radius: var(--button-radius) !important;
+}
 .alu-button--primary {
   background: var(--button-primary-bg);
   color: var(--button-primary-fg);
@@ -265,7 +269,7 @@
 }
 .alu-site-footer__link:hover {
   color: var(--site-footer-fg);
-  text-decoration: underline;
+  text-decoration: none;
 }
 .alu-site-footer__legal {
   display: flex;
@@ -440,7 +444,7 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-megamenu__item:hover {
   color: var(--text-primary);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .alu-page-hero {
@@ -466,7 +470,7 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-breadcrumb a:hover {
   color: var(--accent-fg);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .alu-modal-backdrop {
@@ -568,7 +572,7 @@ button.alu-role[aria-checked="true"] {
   margin: auto;
   width: var(--size-application-video-play-badge);
   height: var(--size-application-video-play-badge);
-  border-radius: var(--radius-round);
+  border-radius: var(--button-radius);
   background: var(--action-primary-bg);
   color: var(--action-primary-fg);
   display: grid;
@@ -755,6 +759,40 @@ button.alu-role[aria-checked="true"] {
   z-index: var(--z-background);
   overflow: hidden;
 }
+.alu-max-preview-hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right center;
+}
+.alu-max-preview-hero .alu-hero-stage__backdrop {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 28%, var(--surface-page) 82%, var(--surface-page) 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, transparent 28%, var(--surface-page) 82%, var(--surface-page) 100%);
+}
+.alu-max-preview-hero__eyebrow {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--type-h3-size);
+  line-height: var(--type-h3-line-height);
+  color: var(--accent-fg);
+}
+.alu-max-preview-hero .alu-button {
+  min-height: var(--target-min);
+  padding-inline: var(--space-inline-md);
+  border-radius: 0;
+}
+.alu-max-preview-hero .alu-hero-stage__scrim {
+  pointer-events: none;
+  z-index: var(--z-scrim);
+  background: linear-gradient(90deg, var(--surface-page) 0%, var(--visual-subpage-hero-dark-scrim) 56%, transparent 100%);
+}
+[data-mode="light"] .alu-max-preview-hero .alu-hero-stage__scrim {
+  background: linear-gradient(90deg, var(--surface-page) 0%, var(--visual-subpage-hero-light-scrim) 58%, transparent 100%);
+}
+.alu-max-preview-hero .alu-hero-stage__inner {
+  position: relative;
+  z-index: var(--z-content);
+}
 .alu-hero-stage__bg-video {
   width: 100%;
   height: 100%;
@@ -792,6 +830,9 @@ button.alu-role[aria-checked="true"] {
 .alu-hero-stage__title {
   max-width: var(--container-application-hero-title);
   letter-spacing: var(--font-letter-spacing-application-display-tight);
+}
+.alu-max-preview-hero__title {
+  max-width: var(--container-application-hero-lead);
 }
 .alu-hero-stage__lead {
   max-width: var(--container-application-hero-lead);
@@ -956,6 +997,66 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-quick-ribbon__label {
   flex: 1;
+}
+.alu-preview-product-ribbon .alu-quick-ribbon__grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.alu-preview-product-ribbon__item:nth-child(3n) {
+  border-right: 0;
+}
+.alu-preview-product-ribbon__item:nth-child(-n + 3) {
+  border-top: var(--border-width-default) solid var(--border-default);
+}
+@media (max-width: 480px) {
+  .alu-preview-product-ribbon .alu-quick-ribbon__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .alu-preview-product-ribbon__item:nth-child(3) {
+    border-top: 0;
+  }
+  .alu-preview-product-ribbon__item:nth-child(3n) {
+    border-right: var(--border-width-default) solid var(--border-default);
+  }
+  .alu-preview-product-ribbon__item:nth-child(2n) {
+    border-right: 0;
+  }
+}
+.alu-preview-product-ribbon__text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-stack-xs);
+}
+.alu-preview-product-ribbon__description {
+  color: var(--text-secondary);
+  font-size: var(--type-caption-size);
+  font-weight: var(--font-weight-body);
+}
+.alu-preview-product-ribbon__item {
+  background: transparent;
+  border: 0;
+  border-right: var(--border-width-default) solid var(--border-default);
+  border-bottom: var(--border-width-default) solid transparent;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+.alu-preview-product-ribbon__item[aria-selected="true"] {
+  border-bottom-color: var(--accent-fg);
+  color: var(--accent-fg);
+  background: var(--surface-raised);
+}
+.alu-preview-product-panel {
+  padding-block: var(--space-stack-xl);
+  border-top: var(--border-width-default) solid var(--border-default);
+}
+.alu-preview-product-panel__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-stack-md);
+  max-width: var(--container-application-hero-lead);
+  animation: aluPathwaySlideIn var(--motion-duration-base) var(--motion-easing-expressive) both;
 }
 
 /* H03: PathwayProductSystem — Interactive Role Tabs, Split Stage & Conditional Product Cards */
@@ -2702,7 +2803,7 @@ button.alu-role[aria-checked="true"] {
 .alu-media-card__play-circle {
   width: var(--size-application-media-play-control);
   height: var(--size-application-media-play-control);
-  border-radius: var(--radius-round);
+  border-radius: var(--button-radius);
   background: var(--visual-media-play-surface);
   border: var(--border-width-strong) solid var(--visual-media-play-border);
   color: var(--visual-on-emphasis);
@@ -2723,7 +2824,7 @@ button.alu-role[aria-checked="true"] {
   z-index: var(--z-content);
   width: var(--size-application-media-zoom-control);
   height: var(--size-application-media-zoom-control);
-  border-radius: var(--radius-round);
+  border-radius: var(--button-radius);
   background: var(--visual-media-zoom-surface);
   border: var(--border-width-default) solid var(--visual-media-border-strong);
   color: var(--visual-media-text);
@@ -3206,6 +3307,10 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 }
 
 @media (max-width: 64rem) {
+  .alu-max-preview-hero__image {
+    object-fit: cover;
+    object-position: 82% center;
+  }
   .alu-subpage-hero--background-only .alu-subpage-hero__bg img {
     object-fit: cover;
     object-position: 82% center;
@@ -3257,6 +3362,16 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 }
 
 @media (max-width: 40rem) {
+  .alu-max-preview-hero .alu-hero-stage__backdrop {
+    -webkit-mask-image: linear-gradient(180deg, var(--surface-page) 0%, var(--surface-page) 46%, transparent 88%, transparent 100%);
+    mask-image: linear-gradient(180deg, var(--surface-page) 0%, var(--surface-page) 46%, transparent 88%, transparent 100%);
+  }
+  .alu-max-preview-hero .alu-hero-stage__scrim {
+    background: linear-gradient(180deg, transparent 0%, var(--visual-subpage-hero-dark-scrim) 52%, var(--surface-page) 100%);
+  }
+  [data-mode="light"] .alu-max-preview-hero .alu-hero-stage__scrim {
+    background: linear-gradient(180deg, transparent 0%, var(--visual-subpage-hero-light-scrim) 52%, var(--surface-page) 100%);
+  }
   .alu-subpage-hero--background-only .alu-subpage-hero__bg {
     -webkit-mask-image: linear-gradient(180deg, var(--surface-page) 0%, var(--surface-page) 46%, transparent 88%, transparent 100%);
     mask-image: linear-gradient(180deg, var(--surface-page) 0%, var(--surface-page) 46%, transparent 88%, transparent 100%);
@@ -3891,6 +4006,9 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .alu-preview-product-panel__content {
+    animation: none;
+  }
   .alu-pathway-split__left,
   .alu-pathway-feature-card,
   .alu-pathway-visual-frame {

@@ -325,6 +325,7 @@ export function SubpageView({
       ) : page.structuredLayout && !page.structuredLayout.trainingTabs ? (
         <StructuredPageLayoutSection
           layout={page.structuredLayout}
+          pagePath={page.path}
           activeReferenceCategoryId={activeRefCatId}
           referenceSearchQuery={refSearchQuery}
           onReferenceCategoryChange={setActiveRefCatId}

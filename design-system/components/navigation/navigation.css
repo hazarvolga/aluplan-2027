@@ -11,7 +11,7 @@
 .alu-site-header__list{display:flex;flex-wrap:wrap;gap:var(--space-inline-xs);margin:0;padding:0;list-style:none}
 .alu-nav-link{display:inline-flex;align-items:center;min-height:var(--target-min);padding-inline:var(--space-inline-md);border-radius:var(--radius-control);color:var(--site-header-fg);text-decoration:none;font-size:var(--type-label-size);font-weight:var(--font-weight-label)}
 .alu-nav-link:hover{color:var(--site-header-fg);background:var(--action-on-brand-bg-hover)}
-.alu-nav-link[aria-current="page"]{text-decoration:underline;text-decoration-thickness:var(--border-width-strong);text-underline-offset:0.35em}
+.alu-nav-link[aria-current="page"]{text-decoration:none;background:var(--action-on-brand-bg-hover)}
 .alu-site-header__actions{display:none;gap:var(--space-inline-sm);align-items:center}
 .alu-site-header__toggle{margin-inline-start:auto}
 .alu-site-header__menu{border-top:var(--border-width-default) solid var(--site-header-border);padding-block:var(--space-inset-sm) var(--space-inset-md)}
@@ -26,6 +26,6 @@
 .alu-site-footer__heading{margin:0 0 var(--space-stack-sm);font-family:var(--font-mono);font-size:var(--type-mono-size);line-height:var(--type-mono-line-height);font-weight:var(--font-weight-label);color:var(--site-footer-fg-secondary)}
 .alu-site-footer__list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:var(--space-stack-xs)}
 .alu-site-footer__list a{display:inline-flex;align-items:center;gap:var(--space-inline-xs);min-height:var(--icon-size-lg);color:var(--site-footer-fg);text-decoration:none;font-size:var(--type-body-sm-size)}
-.alu-site-footer__list a:hover{text-decoration:underline;color:var(--site-footer-fg)}
+.alu-site-footer__list a:hover{text-decoration:none;color:var(--site-footer-fg);background:var(--surface-subtle)}
 .alu-site-footer__bottom{display:flex;min-width:0;flex-wrap:wrap;gap:var(--space-stack-md);align-items:center;justify-content:space-between;margin-top:var(--space-stack-xl);padding-top:var(--space-inset-md);border-top:var(--border-width-default) solid var(--site-footer-border);color:var(--site-footer-fg-secondary);font-size:var(--type-body-sm-size)}
 .alu-site-footer__bottom p{margin:0}

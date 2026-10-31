@@ -51,12 +51,12 @@ class TabAccessibilityContractTests(unittest.TestCase):
             ],
             "src/components/sections/ProfessionalServicesSection.tsx": [
                 "handleStructuredTabKey",
-                "tabIndex={activeGroupIdx === idx ? 0 : -1}",
+                "tabIndex={safeGroupIdx === idx ? 0 : -1}",
                 'aria-controls="services-panel"',
                 "onKeyDown={(event) => handleStructuredTabKey",
                 'role="tabpanel"',
                 'id="services-panel"',
-                "aria-labelledby={`services-tab-${activeGroupIdx}`}",
+                "aria-labelledby={`services-tab-${safeGroupIdx}`}",
             ],
             "src/components/sections/ReferencesDirectorySection.tsx": [
                 "handleStructuredTabKey",

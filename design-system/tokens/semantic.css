@@ -217,6 +217,7 @@
   --size-preview-bimflex-logo-width: var(--ref-size-preview-bimflex-logo-width);
   --size-preview-bimflex-tile-min-height: var(--ref-size-preview-bimflex-tile-min-height);
   --size-preview-innovation-card-min-height: var(--ref-size-preview-innovation-card-min-height);
+  --radius-button: var(--ref-radius-0);
   --radius-control: var(--ref-radius-4);
   --radius-surface: var(--ref-radius-0);
   --radius-badge: var(--ref-radius-2);
@@ -747,6 +748,7 @@
   --size-preview-bimflex-logo-width: var(--ref-size-preview-bimflex-logo-width);
   --size-preview-bimflex-tile-min-height: var(--ref-size-preview-bimflex-tile-min-height);
   --size-preview-innovation-card-min-height: var(--ref-size-preview-innovation-card-min-height);
+  --radius-button: var(--ref-radius-0);
   --radius-control: var(--ref-radius-4);
   --radius-surface: var(--ref-radius-0);
   --radius-badge: var(--ref-radius-2);
@@ -1413,6 +1415,7 @@
   --size-preview-bimflex-logo-width: var(--ref-size-preview-bimflex-logo-width);
   --size-preview-bimflex-tile-min-height: var(--ref-size-preview-bimflex-tile-min-height);
   --size-preview-innovation-card-min-height: var(--ref-size-preview-innovation-card-min-height);
+  --radius-button: var(--ref-radius-0);
   --radius-control: var(--ref-radius-full);
   --radius-surface: var(--ref-radius-16);
   --radius-badge: var(--ref-radius-full);

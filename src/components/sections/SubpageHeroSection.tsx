@@ -94,7 +94,7 @@ export function SubpageHeroSection({
           <div className="alu-cluster">
             <span className="alu-badge alu-badge--accent">
               <AluIcon name="layers" size="sm" />
-              <span>{sectionBadgeLabel}</span>
+              <span>{page.path === '/products/sds2-home' ? 'SDS2 by ALLPLAN' : sectionBadgeLabel}</span>
             </span>
             <span className="alu-badge">ALLPLAN TÜRKİYE</span>
           </div>

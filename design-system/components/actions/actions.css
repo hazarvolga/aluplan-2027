@@ -16,10 +16,10 @@
 .alu-btn--ghost:disabled,.alu-btn--ghost[aria-disabled="true"]{background:transparent;border-color:transparent}
 .alu-btn[aria-busy="true"]{cursor:progress}
 .alu-btn__label{min-width:0}
-.alu-link{color:var(--text-link);text-decoration-line:underline;text-decoration-thickness:var(--border-width-default);text-underline-offset:0.2em;border-radius:var(--radius-badge)}
-.alu-link:hover{color:var(--text-link-hover);text-decoration-thickness:var(--border-width-strong)}
+.alu-link{color:var(--text-link);text-decoration:none;border-radius:var(--radius-badge)}
+.alu-link:hover{color:var(--text-link-hover);text-decoration:none}
 .alu-link--standalone{display:inline-flex;align-items:center;gap:var(--space-inline-xs);font-weight:var(--font-weight-strong);text-decoration-line:none}
-.alu-link--standalone:hover{text-decoration-line:underline}
+.alu-link--standalone:hover{text-decoration:none}
 .alu-link .alu-icon{width:1em;height:1em}
 .alu-on-brand .alu-link{color:var(--text-on-brand)}
 .alu-icon-btn{display:inline-flex;align-items:center;justify-content:center;flex:none;width:var(--target-min);height:var(--target-min);padding:0;border:var(--border-width-default) solid transparent;border-radius:var(--button-radius);background:transparent;color:var(--button-ghost-fg);cursor:pointer;transition:background-color var(--motion-duration-fast) var(--motion-easing-standard)}

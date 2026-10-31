@@ -1,5 +1,26 @@
 # Oturum devri
 
+## 29.10.2026 — ALLPLAN Max hero önizleme taslağı
+
+- Partner kategorisi kaldırılırken hot reload ile eski seçili sekme indeksi korunabildiği için oluşan `serviceTitles` runtime hatası giderildi: geçersiz seçim ilk görünür gruba güvenle düşer ve boş grup durumu kontrol edilir.
+- Kullanıcı isteğiyle Profesyonel Hizmetler alanında Partner erişimi kategorisi ve tek listedeki Partner kaydı yalnız 2027 önizlemesinde kaldırıldı; kalan 19 kaynağın sayacı güncellendi, mevcut ana sayfa korunur.
+- Kullanıcının isteğiyle 2027 ana sayfa önizlemesindeki “Teknik Özellikler / Q3 2026 Matrisi” bölümü gizlendi. Mevcut ana sayfadaki bölüm, kaynak veriler ve PDF dosyası korunuyor.
+- Kullanıcı yuvarlatılmış buton istemediğini tüm site için netleştirdi. `semantic.radius.button` sıfır değerli bağımsız token olarak tanımlandı; ortak buton aliası ve uygulamadaki buton kontrolleri bunu kullanır. Form input radiusu ve dekoratif noktalar ayrı kalır.
+- Kullanıcı isteğiyle 2027 hero butonları daha kompakt ölçüye alındı, köşeleri sıfırlandı; asgari etkileşim hedefi korunur. Değişiklik yalnız önizleme hero'sunu etkiler.
+- Kullanıcının isteğiyle 2027 hero'nun en üstündeki “2027 YENİLİKLERİ” ve “ALLPLAN 2027” kutulu etiketleri kaldırıldı; üst başlık ve ana başlık korunur.
+- Kullanıcı tekrarlanan MAX odağı yerine genel ALLPLAN 2027 yeniliklerinin hero'da anlatılmasını onayladı. Başlık ve açıklama `allplan-2027-features.md` giriş bandındaki TR taslaktan alınarak önizlemeye taşındı; FRILO kullanıcı kapsamı gereği çıkarıldı. MAX alt sekmede varsayılan açık kalır; yenilikler CTA'sı yerel sayfa hazır olana kadar kullanıcının verdiği üretici URL'sine yönlenir.
+- Hero altındaki beş ürün bandı sekmelere dönüştürüldü; ALLPLAN Max varsayılan açık, panel içinde envanter kaynak ID'li açıklamalar ve geçerli keşif bağlantıları bulunur. Klavye ile sekme geçişi ve hareket azaltma desteği eklenmiştir. Yalnız önizleme varyantında çalışır.
+- Kullanıcının verdiği ALLPLAN hero altı bant örneği, FRILO hariç beş ürün ve Türkçe açıklamalarıyla yalnız önizlemede uygulandı. ALLPLAN, Civil ve SDS2 mevcut yerel rotalara; Max ve SCIA yerel sayfaları hazır olana kadar mevcut resmî üretici adreslerine gider. Ürün rota/IA kararları hâlen açıktır.
+- MAX önizleme başlığı daha küçük `--type-h2-size` ölçeğine alındı ve mevcut hero'nun 14ch genişlik sınırı önizlemede genişletildi; masaüstünde iki satır hedeflenir, dar ekranlarda metin doğal kırılır.
+- Kullanıcı ilk üretilen görseli yoğun buldu; daha sade bina/dijital ikiz görseli üretildi. Yeni orijinal `assets/source/generated/heroes/max/allplan-max-hero-v2-original.png`, web türevi `public/assets/previews/home-2027/allplan-max-generated-v2.jpg`. Hero sağa yaslanıp sola maskeyle karışır; üst satır büyütüldü, H1 küçültülüp iki satıra ayrıldı. İlk görsel korunuyor, görsel/mobil kabul bekliyor.
+- Kullanıcı hero metnini ikiye ayırdı: üst satır “Mühendislik için yapay zekâ”, H1 “Sadece otomatikleştirmeyin, yenilik geliştirin”. Önizlemeye özel yeni köprü/dijital ikiz görseli built-in imagegen ile üretildi; yüksek çözünürlüklü orijinal `assets/source/generated/heroes/max/allplan-max-hero-v1-original.png`, web türevi `public/assets/previews/home-2027/allplan-max-generated-v1.jpg`. Önceki üretici dosyaları silinmedi. Görsel tasarım onayı bekler; AI görseli gerçek proje veya mühendislik doğruluğu iddiası değildir.
+- Kullanıcının 29.10.2026'da paylaştığı ALLPLAN ana sayfa MAX hero ekran görüntüsündeki başlık ve açıklama, mühendislik terminolojisiyle Türkçeye çevrilerek önizlemeye işlendi. Kaynak, ürün detay sayfasındaki hero metninden farklıdır; CTA hedefleri korunmuştur.
+- Kullanıcı, 2027 ana sayfasında altı slayt yerine tek Allplan Max hero yönünü seçti. Başlık ve açıklama `docs/content-2027/allplan-canlı/allplan-max.md` dosyasındaki `live.max.hero.*` TR taslak satırlarından alınarak `src/data/homepage-2027-preview.json` içinde tutuldu.
+- `Homepage2027PreviewView` yalnız önizlemeye özel hero varyantını açar; ana `/` mevcut hero'yu korur. MAX keşif CTA'sı yerel ürün sayfası hazır olana kadar üreticinin `https://www.allplan.com/allplan-max/` sayfasına, teklif CTA'sı mevcut Microsoft Forms hedefine gider.
+- Üretici envanterindeki masaüstü ve mobil hero görselleri yerel önizlemede kullanıldı; SHA-256 ve izin durumu `docs/brand/assets-license-log.md` içinde kayıtlı. Yayın izni doğrulanmadı. "Her 2027 ürününe dahildir" üreticinin envanterdeki iddiasıdır; Türkiye'deki ticari kapsam yayın öncesi doğrulanmalıdır.
+- Kullanıcının tespit ettiği hero katman sorunu, önizleme içeriği `--z-content` ve dekoratif karartma `--z-scrim` seviyesine açıkça yerleştirilerek düzeltildi; karartma işaretçi olaylarını da almıyor.
+- Sıradaki adım kullanıcıyla yerel hero görseli ve metnini gözden geçirmek; MAX detay sayfası henüz oluşturulmadı.
+
 ## 29.10.2026 — Yerel 2027 ana sayfa önizleme rotası
 
 - Mevcut `/` ana sayfası değiştirilmeden restore ref oluşturuldu: `restore/pre-home-2027-preview-20261029` → `77bfccf`.
@@ -951,3 +972,185 @@ Teslim kapandı: [PR #1](https://github.com/hazarvolga/aluplan-2027/pull/1) baş
 ## 27.10.2026 — Sayfa sonu dönüşüm alanı tasarım kararı
 
 Kullanıcı otomatik “İlgili Bağlantılar, Modüller ve Dokümanlar” bölümünün sayfa mesajını böldüğünü belirtti; sayfa sonunun önceliğini teklif/deneme dönüşümü olarak seçti. Mevcut temiz `main` (`862ebb15e328c6eee47755d6070f8d333a4125b9`) için `restore/pre-page-end-conversion-20261027` annotated tag'i oluşturulup GitHub'a gönderildi. Seçilen yaklaşım tek bileşenin sayfa ailesine göre CTA üretmesidir: ürün/çözüm teklif + deneme, eğitim eğitim talebi + teklif, destek destek platformu, legal hiçbir band. Kısa tasarım `docs/superpowers/specs/2026-10-27-page-end-conversion-design.md` ile onaylandı; test-first uygulama planı `docs/superpowers/plans/2026-10-27-page-end-conversion.md` içinde son kullanıcı kontrolünü bekler. Ürün kodu, veri, schema ve canlı site henüz değiştirilmedi.
+
+## 29.10.2026 — ALLPLAN Max yerel önizleme
+
+Kullanıcı 2027 ana sayfasını şimdilik yeterli bulup ALLPLAN Max sayfasını istedi. `/preview/allplan-max` yalnız geliştirmede çalışan, noindex yerel taslaktır; ana sayfa 2027 önizlemesindeki MAX bağlantısı buraya gider. İçerik `docs/content-2027/allplan-canlı/allplan-max.md` envanterinden EN/TR veri olarak ayrıldı; kaynak video ve özellik görselleri yerel preview varlıklarına kopyalandı. Üretim URL'si, schema, sitemap ve yayın güncellenmedi. Typecheck ve HTTP 200/noindex kontrolü geçti; tarayıcıda görsel ve etkileşim kabulü henüz yapılmadı. Üretici medyasının yayın kullanım izni, 2027 ürün kapsamı, 2026 sınırsız kullanım ifadesinin geçerliliği ve anket iddialarının kullanım koşulları yayın öncesi doğrulanmalı. YouTube iframe'leri kapalı details içinde de oluşturuluyor; etkileşim öncesi ağ isteği kontrolü ve gerekiyorsa tıklamayla yükleme tamamlanmalı. Çalışma ağacındaki önceki taslaklar korunmuştur; commit/push/deploy yapılmadı.
+
+29.10.2026: Kullanıcı isteğiyle ALLPLAN Max anket bandı, Mimari sayfasındaki ortak `alu-hero-metrics` kart düzenine uyarlandı; üç anket metni ve değerleri korundu. Typecheck ve yerel sayfada üç kartın render kontrolü yapıldı. Taslak için kullanıcı görsel değerlendirmesi bekleniyor.
+
+29.10.2026: ALLPLAN Max video düğmeleri mevcut MediaDialog ile açılan pencerelere taşındı; iframe yalnız pencere açıldığında yüklenir ve kapanınca kaldırılır. ALLPLAN canlı sayfası yeniden kontrol edilerek dokuz güncel video ID'si kullanıldı; Formula Writer ve BIM Modeler video bağlantıları eklendi. Typecheck ve Feature Builder modal açma/Escape/odak dönüşü tarayıcıda doğrulandı; video oynatma ve diğer sekiz modal ayrı ayrı doğrulanmadı. Ana özellik satırlarının görsel düzeni kullanıcı incelemesine açıktır. Yayın ve commit yapılmadı.
+
+29.10.2026: ALLPLAN Max canlı sayfası tekrar incelendi; önceki envanter ile son gözlem farkları `docs/content-2027/allplan-canlı/allplan-max.md` sonuna tarihsel kayıt korunarak eklendi. Preview'da AI BIM Modeler Allplan kapsamı ve üç görüşün canlıda görülen isim/meslekleri gösteriliyor; dokuz video hedefinin veri kayıtları canlı gözleme hizalandı. Farkların üretici güncellemesi veya önceki DOM görünürlüğünden hangisi nedeniyle oluştuğu bilinmiyor. Diğer üretici dokümanları bu turda yeniden incelenmedi. Typecheck ve sayfa HTML içerik kontrolü yapıldı; ticari koşullar ve medya kullanım izni yayın öncesi açık.
+
+29.10.2026: Kullanıcının bildirdiği ALLPLAN Max video görünümü incelendi. Marketing Materials içindeki dosya ile preview varlığının SHA-256 değerleri aynı; dosya zaten yerel asset altında mevcut. `preload="none"` ve ayrılmış en-boy oranı bulunmaması nedeniyle oynatıcı başlangıçta ince, boş şerit halinde görünüyordu. Önizlemede metadata ön yükleme ve 16:9 alan eklendi. Tarayıcıda video 1920×1080, 60,01 sn olarak yüklendi ve oynatma doğrulandı; typecheck geçti. Canlıya yayın yapılmadı.
+
+29.10.2026: ALLPLAN Max ana özelliklerinin canlı sayfadaki sunumu yeniden incelendi: üç bölümde açıklama yanında sessiz döngülü kaynak klip, metinde tam videoyu modal açan bağlantı bulunuyor. Preview'a üç yerel üretici klibi ve dönüşümlü iki sütun düzeni eklendi; bağlantı modal açıyor, reduced-motion seçeneği ve mobil düzen dikkate alındı. Typecheck, yerel medya yüklemesi ve Feature Builder modal açma/Escape doğrulandı; üç klibin eşzamanlı yükleme maliyeti ve üretici medya izni yayın öncesi değerlendirilmeli.
+
+29.10.2026: ALLPLAN Max diğer özellikler kartlarında ürün kapsamı metinleri token tabanlı şerit olarak düzenlendi. Kullanıcının Marketing Materials klasörüne indirdiği Feature Builder, Workflow Builder ve BIM Analyst önizleme klipleri ile mevcut preview assetleri SHA-256 bakımından birebir eşleşiyor; tekrarlı kopya oluşturulmadı. Typecheck ve önizleme içerik kontrolü yapıldı.
+
+29.10.2026: Kullanıcı isteğiyle ALLPLAN Max diğer özellik kartlarında video bağlantıları kapsam şeridinin üstüne taşındı, şeritler flex düzeniyle kartların altına hizalandı. Typecheck geçti; tarayıcıda altı şeridin kart altına aynı uzaklıkta olduğu doğrulandı.
+
+29.10.2026: Kullanıcı, video izleme gibi metin biçimindeki bağlantılarda alt çizgi istemediğini belirtti. ALLPLAN Max önizlemesindeki ortak video tetikleyicisinin normal ve hover durumlarından alt çizgi kaldırıldı; klavye odağı göstergesi korunuyor. Bu tercih benzer bağlantı tasarımlarında da dikkate alınacak.
+
+29.10.2026: ALLPLAN Max müşteri görüşleri kullanıcı isteğiyle daha kompakt, ince ayraçlı bir düzene alındı; yorum, isim, meslek ve kaynak bilgisi ayrıştırıldı. Geniş ekranda başlığın tek satır olduğu ve üç atfın render edildiği yerel tarayıcıda kontrol edildi; typecheck geçti. Kullanıcı görsel değerlendirmesi bekleniyor.
+
+29.10.2026: Kullanıcı isteğiyle ALLPLAN Max giriş alanı ayrı, kompakt ince çizgili bölüme dönüştürüldü ve yorum başlığı yanındaki ALLPLAN etiketi kaldırıldı. Site genelinde URL bağlantılarının normal ve hover alt çizgileri kaynak stillerden kaldırıldı; görünür klavye odağı korundu, paragraf içi bağlantılar kalınlıkla ayrıştırıldı. Link design-system notu güncellendi. Typecheck, stil üretimi ve 188 kontrast kontrolü geçti; tüm sayfalarda görsel/erişilebilirlik kabulü henüz yapılmadı.
+
+29.10.2026: ALLPLAN Max ana video bölümünde görünür kaynak etiketi kullanıcı isteğiyle kaldırıldı ve üst/alt padding sıfırlandı; kaynak bilgisi envanterde korunuyor. Typecheck ve tarayıcıda hesaplanan padding değerleri doğrulandı.
+
+29.10.2026: ALLPLAN Max kapanış CTA alanı kullanıcının isteğiyle daha kompakt ve ince ayraçlı iki sütun olarak yeniden düzenlendi; demo ve deneme bağlantıları ve içerik korundu. Typecheck ve yerel tarayıcıda tek satırlı başlık ile CTA içerikleri kontrol edildi; kullanıcı görsel değerlendirmesi bekleniyor.
+
+29.10.2026: Kullanıcı ALLPLAN 2027 yenilikler sayfasının önceki envantere dayanılmadan doğrudan canlı üretici sayfasından hazırlanmasını istedi. `/preview/allplan-2027-features` geliştirme-only noindex taslağı beş ürün grubu, 15 ana özellik ve 34 detay (31 ALLPLAN + 3 SCIA) içerir; kaynak görsellerinin 14 yerel kopyası ile Civil videosu eklendi. Ana sayfa 2027 önizlemesinin yenilikler CTA'sı bu taslağa bağlandı. Kaynakta sekmeler vardır; taslakta bölüm içi bağlantılar kullanıldı, tasarım kabulü açık. FRILO yalnız ana sayfa bandından çıkarıldığı için kaynak sayfa kapsamında tutuldu. Üreticinin Buy Now CTA'sı Türkiye satış hedefi kararı olmadığı için kullanılmadı; mevcut teklif ve deneme bağlantıları korundu. IFC4 için buildingSMART sertifikasyonunun incelemede olduğu bilgisi korunur. Typecheck, dört homepage preview testi, noindex/HTTP ve DOM'da kapsam/IFC açılır açıklaması doğrulandı. Ana özelliklerin İngilizce kaynak metninin veri katmanında kaydı, teknik çeviri/editoryal inceleme, medya hakları ve mobil/video kabulü açık; canlı yayın yok.
+
+29.10.2026: Kullanıcı ALLPLAN 2027 yeniliklerinin uzun tek liste halinde incelenmesinin zor olduğunu belirtti; önizleme beş ürün sekmesine çevrildi. Varsayılan ALLPLAN, diğer paneller seçildiğinde yalnız seçilen içerik render edilir; mevcut klavye helper'ı ve mobil yatay kaydırma kullanılır. Typecheck ve HTTP/SSR kontrolünde beş tab/panel ve tek seçili tab doğrulandı. Work tarayıcı erişimi bu turda kapalı olduğundan etkileşim ve mobil görsel kontrolü yapılamadı.
+
+29.10.2026: ALLPLAN 2027 önizleme özellik satırları kullanıcı isteğiyle kompakt, ince çizgili, kapsam şeritli ve dönüşümlü görselli düzene güncellendi. İçerikler ve sekmeler korundu; tip kontrolü ve HTTP 200 geçti. Görsel/mobil kullanıcı kabulü bekleniyor.
+
+29.10.2026: ALLPLAN 2027 önizlemesindeki diğer iyileştirmeler akordiyonları ince çizgili kompakt satırlara dönüştürüldü; açık/kapalı göstergesi ve klavye odak stili eklendi, içerikler ile native details/summary korundu. Typecheck ve HTTP 200 kontrolü geçti; mobil ve tarayıcı etkileşim incelemesi açık.
+
+29.10.2026: ALLPLAN 2027 önizlemesindeki sekme paneli ve akordiyonlara mevcut motion tokenlarıyla hafif giriş/geçiş efektleri eklendi; reduced-motion tercihinde animasyon kapalı. Native details korundu; akordiyon yüksekliği/kapanışı animasyonlu değildir. Typecheck ve HTTP geçti, tarayıcı görsel/azaltılmış hareket testi açık. Site geneline yaygınlaştırma bu turda yapılmadı; önizleme kullanıcı değerlendirmesinde.
+
+29.10.2026: 2027 yenilikler kapanış alanı kompakt ince çizgili düzene taşındı. İki önizlemenin daha önce ayrı kapanış markup'ı `PreviewClosingSection` sunum bileşeninde birleştirildi; içerik ve CTA hedefleri ayrı veriliyor. Mevcut üretim `PageEndConversion` ve politikası değiştirilmedi. Typecheck, iki önizlemede HTTP 200 ve code review geçti; mobil/görsel kabul açık.
+
+29.10.2026 — Tasarım kararı: Kullanıcı kompakt, ince çizgili, keskin köşeli ve ortak şablon kullanan tasarım dilinin yeni sayfalarda varsayılan uygulanmasını onayladı. Önceden oluşturulan sayfalardaki tekrarlanan ortak alanlar da sonradan aynı dilde değerlendirilecek; kapsam/sayfa ve görsel kabul ayrı takip edilecek, bu not toplu değişikliğin tamamlandığı anlamına gelmez.
+
+29.10.2026: Kullanıcı kompakt tasarımın yeni sayfalarda varsayılan olması ve eski ortak alanların daha sonra değerlendirilmesi kararını verdi. `/preview/allplan-civil-2027` yalnız geliştirmede/noindex yerel taslak açıldı; güncel https://www.allplan.com/products/allplan-civil/ kaynak alındı. 28 özellik, 9 cloud, 4 opsiyon, 2 SSS, 3 uzman/3 referans, kaynak video hedefleri ve kapanış CTA yer alıyor. Üç kapsam ve üç referans görseli dosya adı eşleştirilerek eklendi (uzak dosya hash doğrulaması yok); hero, katalog ve diğer kaynak görselleri eksik. Bazı çeviriler kısaltılmış/parafraz; kaynakla eksiksiz eşleşme iddia edilmez ve satır bazlı editoryal inceleme gereklidir. Abonelik/ref bağlantıları ve üst video eklendi. Türkiye paket koşulları, nicel iddialar ve medya hakları doğrulanmalı. Typecheck, HTTP 200 ve noindex kontrolü geçti; tarayıcı/mobil/video oynatma kabulü yapılmadı, yayın yok.
+
+29.10.2026: ALLPLAN Civil metrikleri, diğer sayfalarda kullanılan ortak alu-hero-metrics düzenine geçirildi; dört değer ve açıklamaları korundu. Typecheck ve sunulan HTML'de dört metrik doğrulandı; tarayıcı erişimi devre dışı olduğundan görsel/mobil kabul açık.
+
+29.10.2026: Civil önizleme hero'su kullanıcı isteğiyle yeni üretilen altyapı/köprü görseli ve sola doğru yüzey rengine karışan arka planla güncellendi. Yüksek çözünürlüklü orijinal assets/source/generated/heroes/civil/allplan-civil-hero-original.png, web kopyası public/assets/previews/allplan-civil-2027/civil-hero.jpg. Typecheck ve görsel HTTP 200 geçti; tarayıcıda açık/koyu ve mobil görsel kabul henüz yapılmadı.
+
+29.10.2026: Kullanıcı Civil sayfasının tümünde kompakt tasarımın tutarlı uygulanmasını ve hero metninin görselle çakışmamasını istedi. Civil preview CSS'de hero başlığı sınırlandırıldı, görsele soldan maske eklendi; zorluklar, katalog, kapsam, referans ve SSS alanları token tabanlı ince çizgili kompakt düzene taşındı. Metrikler mevcut alu-hero-metrics ve kapanış PreviewClosingSection kullanıyor; diğer kataloglar henüz ortak React bileşenlerine taşınmadı. Typecheck ve HTTP 200 başarılı; tarayıcı/mobil/tema görsel kontrolü açık. Kaynak içerik ve medya eksikleri önceki notlarda devam ediyor.
+
+29.10.2026: Kullanıcı Mimari sayfasındaki giriş ve sektörel zorluk düzenlerini Civil için örnek gösterdi. Civil girişinde metin ve kapsam solda, video sağda olacak biçimde ortak alu-intro-split sınıfları kullanıldı. Dört zorluk ortak alu-challenges-band/grid/card stillerine geçirildi; Civil içeriği ve bağlantıları korundu. Typecheck ve HTTP 200 doğrulandı; tarayıcıda görsel ve responsive kabul açık.
+
+29.10.2026: Kullanıcı site genelinde tasarım tutarlılığı ve ortak bileşen envanteri istedi; Civil avantajları önceki yetkili düzeltme olarak BenefitsSection'a taşındı (8 metin ve bağlantılar korundu). Statik rota/bileşen denetimi docs/verification/design-consistency-audit-2026-10-29.md içinde; 110 veri kaydı/53 structuredLayout incelendi, tüm rotalarda görsel tarayıcı kabulü yapılmadı. Özellikler için MediaGridSection ile Civil Catalogue farkı ve eksik kaynak görselleri, ortaklaştırma planının ilk maddesidir. Analiz aşamasında site genelinde toplu tasarım değişikliğine gidilmedi.
+
+29.10.2026: Kullanıcının onayıyla Civil özellik kataloğu için kaynak–yerel medya fark kaydı docs/verification/civil-feature-media-audit-2026-10-29.md oluşturuldu. Preview'da CivilFeatureGrid adaptörü mevcut MediaGridSection'ı ve MediaDialog'u kullanıyor: 28 kart ve 14 video düğmesi HTML'de doğrulandı, typecheck ve HTTP 200 geçti. Videolu kartların küçük görseli YouTube kaynağından otomatik gelir; kaynağın özgün görsel eşleşmesi değildir. Kaynak görselleri, bazı kısaltılmış Türkçe metinler, medya izinleri ve 14 videonun gerçek oynatımı açık; tarayıcı etkileşim/mobil kabul yapılmadı. Shared production MediaGridSection değiştirilmedi.
+
+30.10.2026: Civil önizlemesinde sekiz avantaj ikonu ve 28 özellik görseli, mevcut ALLPLAN Civil medya envanterindeki yerel dosyalardan asset dizinine alınıp ortak bileşenlere bağlandı. Görselsiz/video olmayan kartlar için görsel modalı eklendi, videolu kartlarda mevcut video modalı korunuyor; dört sütun kullanıldı. Kaynak URL/dosya hash karşılaştırması ve görsel uygunluğu tüm 28 öğede henüz doğrulanmadı; kaynak medya yayın izinleri açık. Typecheck ve yerel asset dosya kontrolü yapıldı; tarayıcı etkileşim/mobil kabul açık.
+
+30.10.2026: Civil satın alınabilir seçenekler alanı mevcut MediaGridSection ve CivilFeatureGrid adaptörünün options varyantıyla dört sütunlu medya kartlarına geçirildi; dört metin, BIM²form video hedefi ve yerel envanter görselleri korundu. Typecheck ve HTTP kontrolü geçti. Üretici medya hakları, bölgesel ticari uygunluk ve tarayıcıda etkileşim/görsel kabul açık.
+
+30.10.2026: Civil uzman görüşleri alanı kullanıcı isteğiyle ALLPLAN Max yorum bölümünün mevcut CSS düzenini kullanacak şekilde yenilendi; üç uzman adı, görevi, alıntısı ve video URL'si korundu. Typecheck ve HTTP 200 geçti; görsel/mobil tarayıcı kabulü açık. Paylaşılan React bileşeni değil, ortak CSS modülü kullanılıyor.
+
+30.10.2026: Civil uzmanlar bölümü ALLPLAN Max yorum düzeninin CSS modülüyle; Cloud Services ise mevcut MediaGridSection adaptörüyle yeniden düzenlendi. Dokuz hizmetin metinleri, video hedefleri ve yerel envanter görselleri ile Cloud Services bağlantısı korundu. Typecheck ve HTTP 200 geçti; tarayıcıda görsel/etkileşim kabulü ve medya hakları açık.
+
+30.10.2026: Kullanıcı firma geri bildirimiyle FRILO'nun kapsamda olduğunu bildirdi; önceki ana sayfa bandından dışlama kararı güncellenmeli. Üreticinin https://www.allplan.com/shop/products/frilo sayfasından /preview/frilo dev-only noindex ilk taslak oluşturuldu. Beş paket ve temel özellikler özet düzeydedir; kaynak sayfadaki tüm paket detayları, capability, referans, SSS ve görseller henüz aktarılmadı. Türkiye ürün/paket koşulları ve 14 gün FRILO denemesi için bölgesel geçerlilik doğrulanmalı; FRILO deneme CTA üreticiye işaret eder. Ana sayfa bandına FRILO henüz eklenmedi. Typecheck/HTTP 200 doğrulandı; yayın ve görsel kabul yapılmadı.
+
+30.10.2026: Kullanıcı FRILO sayfasında fiyat gösterilmeyeceğini teyit etti. /preview/frilo taslağına canlı üretici sayfasındaki beş yetenek, iki proje ve beş SSS'nin Türkçe özetleri eklendi; fiyat eklenmedi. Typecheck ve HTTP 200 geçti. Sayfa hâlâ eksik: beş paketin tüm ayrıntılı maddeleri ve kaynak proje bağlantıları/görselleri aktarılmadı, 2027 ana sayfa bandında FRILO yok, tüm çeviriler ve Türkiye kapsam koşulları doğrulanmadı; bu durum tamamlanmış kaynak paritesi sayılmaz.
+
+30.10.2026: FRILO preview için yapı mühendisliği temalı üretilmiş hero eklendi. Orijinal assets/source/generated/heroes/frilo/frilo-hero-original.png; optimize web kopyası public/assets/previews/frilo/frilo-hero.jpg. Metin solda, görsel sağda ve soldan maskeli. Typecheck/HTTP 200 geçti; açık/koyu ve mobil görsel kabul yapılmadı. FRILO içerik eksikleri önceki notta açık.
+
+30.10.2026: Kullanıcı gelecek sayfalarda ortak bileşen ve kompakt tasarım denetimini istedi. FRILO preview hero dışındaki gereksiz kapsayıcı boşluğu kaldırıldı, metin genişliği sınırlandı, yinelenen FRILO ile çalışın alanı kaldırıldı, beş sürüm duyarlı ızgaraya alındı ve iki gerçek ALLPLAN proje bağlantısı eklendi; kapanış ortak bileşeni tam genişliğe taşındı. Typecheck ve HTTP 200 geçti. Bu bir kısmi iyileştirmedir: paketlerin ayrıntılı kaynak maddeleri, proje görselleri, SSS ortaklaştırması, mobil/tema görsel kontrolü ve içerik/medya hakları doğrulaması açık. Yeni sayfada başlamadan tasarım bileşeni, içerik/URL/medya paritesi, mobil ve erişilebilirlik kontrolü yapılmalıdır.
+
+### 30.10.2026 — FRILO kaynak sayfası içerik kontrolü
+- Kaynak: https://www.allplan.com/shop/products/frilo ; yerel hedef `/preview/frilo`. Beş sürümün her birindeki beş kapsam maddesi Türkçe olarak eklendi; genel bakış, beş yetenek açıklaması, proje ve 14 günlük deneme koşulları kaynakla karşılaştırılarak genişletildi. Fiyat ve sepet eklenmedi.
+- Kaynak sayfadaki bölüm gezinmesi, ürün/kabiliyet ve proje görselleri ile pakete özel detay sayfası bağlantıları henüz uygulanmadı; paket bağlantıları fiyat gösteren mağazaya gider. Kaynakta pazara özgü satış/ödeme ve destek vaatleri Türkiye için doğrulanmadan aktarılmadı. Kaynak metin web aracıyla görüldü; kaynak görsel ve etkileşimlerinin tarayıcı doğrulaması yapılamadı.
+- `pnpm typecheck` başarılı; yerel önizleme HTTP 200 ve seçili içerik sunucu çıktısında doğrulandı. Görsel kabul ve teknik terimlerin nihai kontrolü açık.
+
+- FRILO önizlemesine dört sekmeli gezinme eklendi: Genel bakış, Yetenekler, Başarı hikâyeleri ve Sık sorulan sorular. Mevcut klavye sekme yardımcısı kullanıldı; `pnpm typecheck` ve sunucu çıktısında 4 sekme/4 panel kontrolü başarılı. Tarayıcı erişimi olmadığından tıklama, klavye ve görsel davranış henüz tarayıcıda doğrulanmadı.
+
+- FRILO gezinmesi kullanıcı düzeltmesine göre gizleyen sekmelerden dört sayfa içi bağlantıya dönüştürüldü; tüm bölümler görünür. Sürüm kartları yeniden kullanılabilir EditionCards bileşenine taşındı ve FAQ kompakt akordeon stiline uyarlandı. Typecheck ve dört bağlantı hedefinin sunucu çıktısı doğrulandı; tarayıcıda görsel/etkileşim kontrolü henüz yapılmadı.
+
+- FRILO önizlemesinde sürüm kartları, FRILO’ya genel bakış ve sayfa içi gezinme ayrı bölümlere ayrıldı. Mevcut metinler ve bağlantı hedefleri korundu. Typecheck ve yerel HTTP 200 / bölüm sıralaması doğrulandı; tarayıcıda görsel kontrol yapılmadı.
+
+- FRILO preview 30.10.2026: yetenekler kompakt numaralı satırlara, başlıklar token tabanlı dile güncellendi; kullanıcının kaynak ekranında görülen FRILO Connections, CLT+ ve AI Coach 2027 özetleri eklendi; mevcut 2027 önizleme envanterindeki üç ilgili görsel yeniden kullanıldı. Kaynak web aracı önbelleği eski metin döndürüyor; doğrudan ALLPLAN kaynak ve görsel isteği HTTP 403. Bu yüzden istenen özgün FRILO overview/yetenek/proje görselleri indirilemedi; tüm güncel içeriğin eksiksizliği ve medya hakları doğrulanmadı. Fiyat eklenmedi. `pnpm typecheck` ve HTTP 200 başarılı; görsel/etkileşim tarayıcı kabulü açık.
+
+
+### 30.10.2026 — FRILO kaynak envanteri (Ego Lite)
+- Kullanıcı isteğiyle ALLPLAN FRILO mağaza sayfası Ego Lite üzerinden incelendi. Ana içerik metni, DOM metni, 22 başlık, 18 bağlantı ve 10 görsel kaynağı `docs/content-2027/allplan-canlı/frilo-shop-source-2026-10-30.json` dosyasına kaydedildi. Kaynak uluslararası/ABD mağaza görünümüdür; fiyatlar yalnız kaynak kaydındadır ve Türkiye fiyatı değildir.
+- Sayfadaki 10 görsel `docs/content-2027/allplan-canlı/media/frilo-shop/images/` içine indirildi; kaynak adresleri ve SHA-256 değerleri aynı dizindeki `manifest.json` dosyasında. Yayın/kullanım izinleri doğrulanmadı.
+- Bu bir kaynak envanteridir; FRILO önizlemesine içerik veya görsel aktarımı yapılmadı. Dinamik varyantlar ve bağlantılı ürün detay sayfaları bu tek sayfa kaydının kapsamı dışındadır.
+
+- FRILO kaynak kontrolü genişletildi: `docs/content-2027/allplan-canlı/frilo-shop-structured-2026-10-30.json` sayfa sıralı 150 öğe ve tüm 5 yetenek + 5 SSS akordeonunun tam metnini içerir; 10 yanıtın boş olmadığı kontrol edildi. Tam sayfa ekran görüntüsü `docs/content-2027/allplan-canlı/media/frilo-shop/frilo-source-full-page.png`. Bu kayıt ABD/uluslararası görünümün o andaki durumudur; diğer ülke/süre varyantları ve bağlantılı sayfalar incelenmedi. Görsel hakları ve Türkiye ticari şartları açık; önizleme güncellenmedi.
+
+
+### 30.10.2026 — FRILO önizleme içerik ve tasarım güncellemesi
+- Kaynak genel bakış, dört hero faydası, beş yetenek ve beş SSS açıklaması genişletildi; genel bakış, beş yetenek ve iki proje için kaynak görselleri eklendi. Proje anlatımları genişletildi, Connections raporlama bilgisi eklendi. Çeviri ve ticari kapsam doğrulaması açık.
+- Ortak `EditionCards` ve `PreviewClosingSection` korundu. Görsel/metin düzeni, sade proje kartları ve azaltılmış hareket tercihine saygılı hover geçişleri uygulandı. Fiyat ve sepet yok; fiyat gösteren kaynak sürüm detay bağlantıları eklenmedi.
+- `python3 -m unittest tests/test_frilo_preview.py`, `pnpm typecheck` geçti. Ego Lite ile masaüstü ve 390px yatay taşma kontrolü, dört bölüm hedefi, iki proje görselinin yüklenmesi ve SSS klavye açılması doğrulandı. Kullanıcı görsel kabulü, diğer tema ve kapsamlı erişilebilirlik kontrolleri açık. Medya izni doğrulanmadı; yalnız dev önizleme.
+
+- Kullanıcı geri bildirimiyle FRILO sayfa içi gezinmesi genel bakış bölümünün önüne taşındı. İçerik ve bağlantı hedefleri korundu; typecheck ve tarayıcıda bölüm sırası kontrolü geçti.
+
+
+### 30.10.2026 — Yerel 2027 site gezintisi
+- Kullanıcının isteğiyle geliştirme ortamında `/` 2027 ana sayfasını gösterir; üretimde önceki ana sayfa ve metadata/schema korunur. Eski ana sayfa geliştirme ortamında `/archive/home` rotasında, noindex olarak erişilebilir.
+- Ana ürün bandına FRILO eklendi; Max, Civil, FRILO ve 2027 yenilikleri sırasıyla `/2027/max`, `/2027/civil`, `/2027/frilo`, `/2027/features` üzerinden bağlandı. Eski preview rotaları uyumluluk için duruyor. Bu yeni rotalar üretimde 404 ve noindex; canlı dağıtım yapılmadı. Mevcut `/products/civil` değiştirilmedi.
+- Typecheck ve 7 ilgili birim kontrolü geçti. Ego Lite ile ana sayfadan üç ürün sekmesi, 2027 yenilikleri ve arşiv kontrol edildi. Teknik matris ve Partner erişimi yeni ana sayfa varyantında gizli; içerik, URL, lisans ve Türkiye koşullarının yayın onayı açık. Production build ve HTTP kabulü bu adımda çalıştırılmadı.
+
+- Kullanıcı isteğiyle 2027 ana sayfasındaki altı ürün sekmesi üç sütun ve iki satır olarak düzenlendi; diğer hızlı bağlantı alanları etkilenmedi. Stil kaynakları yeniden üretildi; `pnpm styles:check` ve Ego Lite üzerinden masaüstü/390 px üç sütun, iki satır ve yatay taşma kontrolü geçti.
+- Mobil okunabilirlik için 480 px ve altında ürün bandı iki sütuna geçer; masaüstünde üçe üç düzen korunur. 320 px kontrolde ürün bandı taşmaz; sayfanın mevcut yenilik kartlarında bağımsız 16 px yatay taşma gözlendi.
+
+- ALLPLAN Max giriş bölümü yeniden kullanılabilir `src/components/sections/IntroSplitSection.tsx` bileşenine taşındı; içerik ve stil korunarak başlık, açıklama, bilgi satırları ve isteğe bağlı bağlantı parametreleştirildi. Typecheck ve Ego Lite masaüstü/390 px bölüm yerleşimi doğrulandı.
+
+- ALLPLAN Max müşteri yorumları `CustomerTestimonials`, hero bölümü `ProductHero` ortak bileşenlerine taşındı. İçerik ve bağlantılar korundu; typecheck ve tarayıcıda başlık, üç yorum ve iki hero bağlantısı doğrulandı. Civil mevcut yorum stillerini kullanmaya devam ediyor.
+
+- Ana sayfa ürün sekmeleri veriyle beslenen `ProductTabs` ortak bileşenine ayrıldı; ana sayfa adaptörü mevcut içeriği sağlar. Varsayılan Max seçimi, FRILO bağlantısı ve sekme-panel ilişkisi tarayıcıda; tip kontrolü pnpm ile doğrulandı.
+
+- FRILO sayfa içi bağlantılarına yumuşak kaydırma eklendi; azaltılmış hareket tercihinde normal kaydırma korunur. Tarayıcıda smooth/auto ve bağlantı hedefi, typecheck doğrulandı.
+
+- SCIA için `/2027/scia` dev-only noindex ilk taslak oluşturuldu; ana sayfa SCIA sekmesi yerel sayfaya bağlandı. Üç sürüm, dört yetenek, altı proje bağlantısı ve dört SSS eklendi. Kaynak envanteri `docs/content-2027/allplan-canlı/scia-shop-source.json`. Kaynak görselleri, hero fayda maddeleri, bölüm navigasyonu ve tam çeviri/kaynak paritesi açık; hero geçici FRILO görseli kullanır. Türkiye deneme koşulları ve medya hakları doğrulanmadı. Typecheck, tarayıcıda ana sayfa bağlantısı ve 390 px taşma kontrolü geçti.
+
+- SCIA sayfasına FRILO ile aynı sayfa içi gezinme düzeni eklendi: Yetenekler, Başarı hikâyeleri, SSS. Bağlantılar yumuşak kaydırır ve azaltılmış hareket tercihine uyar; üç hedef ve 390 px genişlik tarayıcıda, typecheck doğrulandı. Kaynak görselleri ve tam içerik paritesi hâlâ açık.
+
+- SCIA sayfa içi gezinmenin başına kullanıcı düzeltmesiyle SCIA bağlantısı eklendi; sayfa girişine kaydırır. Typecheck ve tarayıcıda hedef doğrulandı.
+
+- SCIA yetenekleri kullanıcı düzeltmesiyle ortak `CapabilityAccordion` bileşenine taşındı: solda tek açık açıklama, sağda seçime bağlı dört kaynak görseli. Kaynak adresleri `docs/content-2027/allplan-canlı/scia-capability-media.json`; yayın izinleri doğrulanmadı. Typecheck, seçim/görsel değişimi ve 390 px taşma kontrolü geçti.
+
+- SCIA proje alanı tam genişlikte, altı görselli ve manuel kontrollü ortak `ProjectCarousel` bileşenine taşındı. Altı görsel kaynak ve SHA-256 kaydı `docs/content-2027/allplan-canlı/scia-story-media.json` içinde; yayın izni doğrulanmadı. Typecheck, önceki/sonraki ve gösterge seçimi, görsel yükleme ve 390 px taşma kontrolü yapıldı.
+
+- ProjectCarousel yüksekliği azaltıldı; görseller oranlarını koruyan contain ile gösterilir. Proje değişiminde fade uygulanır, azaltılmış hareket tercihinde animasyon kapalıdır. Typecheck ve tarayıcıda seçim/animasyon kontrolleri geçti.
+
+- ProjectCarousel daha kompakt yapıldı; görseller üst üste kalıcı katmanlarla 600 ms opacity geçişi yapar, reduced-motion kapatır. Önceki hydration uyarısı eski istemci ve yeni sunucu rol metinlerinin uyuşmazlığına işaret ediyor; yeni oturumda davranış kontrol edildi, mevcut metinler sabit. Typecheck ve geçiş/reduced-motion tarayıcı kontrolü geçti.
+
+- ProjectCarousel görselleri oranları korunarak sağa hizalandı; tarayıcıda object-position doğrulandı.
+
+- ProjectCarousel görsel alanı bölümün içerik genişliği içine alındı; masaüstünde sağa hizalı %65 genişlikte, mobilde tam genişlikte. Tarayıcı ve typecheck kontrolü geçti.
+
+- ProjectCarousel bilgi kartı kullanıcı isteğiyle sağa genişletildi; masaüstünde görselin üzerine taşar, metin genişliği sınırlandı. 390 px yatay taşma kontrolü ve typecheck geçti.
+
+- Kullanıcının verdiği 2027 SDS2 metni Türkçeye çevrilerek giriş paragrafı ve üç madde olarak veri üretim kaynağına işlendi; hero etiketi SDS2 by ALLPLAN ve başlığı çelik detaylandırma/imalat BIM çözümü olarak güncellendi. Eski içerik envanteri korunur. Üretici kaynaklı “piyasadaki tek” iddiası yayın öncesi doğrulanmalı. Typecheck, structured source contract ve tarayıcı metin kontrolü yapıldı.
+
+- SDS2 hero açıklamasındaki İngilizce kaynak meta metni, kullanıcı geri bildirimiyle “Otomatik çelik detaylandırma yazılımı” olarak çevrildi; veri üretimi, typecheck ve tarayıcı kontrolü geçti.
+
+- SDS2 girişinden sonra üretici 2027 kaynağındaki üç zorluk Türkçe taslakla eklendi; mimari sayfasındaki zorluk kartları `ChallengesBand` ortak bileşenine taşındı. Tarayıcıda SDS2 bölüm sırası ve mimari sayfasında üç kart, typecheck doğrulandı.
+
+- SDS2 zorlukların ardından 2021 SDS2 ROI anketindeki %93/%86/%71 bulguları, tam kaynak notuyla eklendi. Mimari istatistik kartı `MetricCards` ortak bileşenine ayrıldı; bölüm sırası, 390 px ve typecheck kontrol edildi. Üretici anket iddiaları bağımsız doğrulanmadı.
+
+- SDS2 istatistik başlığı etiket, h2 ölçeği ve kartlardan ayrılan boşlukla güçlendirildi; masaüstü ve 390 px kontrolü ile typecheck geçti.
+
+- SDS2 istatistik bandının altına üretici 2027 envanterindeki altı fayda, `BenefitsSection` ve eşleşen kaynak ikonlarla eklendi. Kaynak ikonların yayın izni doğrulanmadı; çeviriler taslaktır. Typecheck, sıralama, altı ikon ve 390 px taşma kontrolü geçti.
+
+- SDS2 fayda kartları incelemesi tamamlandı; “tam doğrulanmış” ifadesi düzeltildi, altı ikon için kaynak/SHA-256 ve izin durumu kaydedildi. Typecheck geçti. Bu bölüm mevcut SDS2 rotasında üretim derlemesine dahil olur; yayın izni doğrulanmadan dağıtılmadı.
+
+- Kullanıcı 30.10.2026 tarihinde altı SDS2 fayda ikonunun kullanım iznini teyit etti. Dosyalar `public/assets/previews/sds2/icons/` altında projede bulunuyor; kaynak ve SHA-256 envanteri güncellendi.
+
+- SDS2 fayda ikonlarında koyu tema kontrastı ve opak beyaz zeminli `icon-02.png` için tema uyumlu gösterim düzeltildi; kaynak dosyaları korunur. Açık/koyu CSS davranışı, styles:check ve typecheck doğrulandı.
+
+- SDS2 Fonksiyonellik Hızlı Bakış kartlarında ikonlar ve yinelenen beyaz başlıklar kaldırıldı; turkuaz kategori başlıkları korundu, içerikler semantik liste olarak gösterildi. Ortak BenefitsSection için SDS2’ye özel varyant kullanıldı; typecheck ve beş kart/listenin tarayıcı kontrolü geçti.
+
+- SDS2 hero hemen altına 2027 kaynağındaki üç yenilik, ortak MediaGridSection ile eklendi; envanterdeki metin ve daha önce yerel olan görseller kullanıldı. Typecheck, bölüm sırası ve 390px taşma kontrolü geçti. 5 kat ve %20–50 iddiaları üretici kaynaklı, bağımsız doğrulanmadı; medya izinleri yayın öncesi kontrol edilmeli.
+
+- Kullanıcı isteğiyle SDS2 2027 yenilikleri hero altından SDS2 tanıtımının hemen sonrasına taşındı; tarayıcıda bölüm sırası ve typecheck doğrulandı.
+
+
+### 31.10.2026 — ALLPLAN 2027 sürüm karşılaştırma taslağı
+- Kullanıcı isteğiyle `/2027/compare` dev-only noindex sayfası hazırlandı; Basic, Concept, Professional, Ultimate için üreticinin uluslararası sayfasındaki 48 özellik/seçenek satırı ve durumları Türkçeye çevrildi. Kaynak: https://www.allplan.com/package-overview/compare-allplan-features-2027/ (31.10.2026 tarayıcı karşılaştırması). Türkiye ticari kapsamı doğrulanmadı.
+- Üretici özellik bilgi balonlarının açıklamaları henüz aktarılmadı; mevcut yerel ürün sayfaları 2027 kapsamını doğrulamaz. Sayfa paritesi tamamlanmış sayılmaz, yayın yapılmadı. Typecheck ve kullanıcı arayüzü tarayıcıda kontrol edildi; mobil yatay kaydırma alanı doğrulandı.
+
+- ALLPLAN 2027 karşılaştırmasında 48 özellik için üretici data-hover açıklamaları Türkçeye çevrilerek klavye/tıklama ile açılan bilgi alanlarına eklendi; 48 alan ve boş açıklama yokluğu, klavye açma ve 390 px kontrolü doğrulandı. Çeviriler ve Türkiye paket kapsamı yayın öncesi gözden geçirilmeli.
+
+- Karşılaştırma bilgi ikonları 18 px görsel/44 px etkileşim alanına alındı; aynı grupta tek açık açıklama ve azaltılmış hareket tercihini gözeten 220 ms fade eklendi. Tarayıcıda iki ardışık seçim, ikon alanı ve reduced-motion doğrulandı.
+
+- 2027 karşılaştırmada bilgi ikonlarına fareyle gelince açıklama görünür; tıklama/klavye ve dokunmatik kullanım korunur. Başka açık bilgi üzerine hover durumunda yalnız ilgili balon görünür; fade reduced-motion ile uyumludur. Tarayıcıda hover doğrulandı.
+
+- Karşılaştırma bilgi ikonu projenin ortak AluIcon info SVG’siyle değiştirildi; tablo satırları sıklaştırıldı. Masaüstü 49 px satır/16 px ikon, mobil 44 px hedef ve hover tarayıcıda doğrulandı; typecheck geçti.
+
+- Karşılaştırma bilgi alanı React durumu ile gerçek hover, klavye ve dokunmaya uyarlandı; aynı anda tek açıklama, fade ve Escape desteği var. Ego tarayıcısında hover, başka ikona geçiş, açıklamanın üzerine gelme, Escape ve 390 px dokunmatik aç/kapat doğrulandı; typecheck geçti. Çeviri ve paket kapsamı yayın öncesi gözden geçirilmeli.
+
+### Yayına hazırlık — rota değerlendirmesi (31.10.2026)
+- `/2027/max`, `/2027/civil`, `/2027/frilo`, `/2027/scia`, `/2027/features`, `/2027/compare` üretimde kapalı ve noindex. Ana sayfa geliştirmede yeni, üretimde mevcut eski görünümü kullanıyor.
+- `/products/civil`, `/products/sds2-home` ve `/paket-karsilastirma` mevcut URL'lerdir; eski adresleri koruma ve yeni slug/olası 301 eşlemeleri kullanıcı onayı gerektirir. SDS2 değişiklikleri mevcut üretim rotasındadır.
+- Yayına geçişte rota kararlarının yanında üretim korumaları, dahili bağlantılar, canonical metadata, sitemap ve mevcut URL paritesi birlikte ele alınmalı; içerik/çeviri, medya ve Türkiye paket kapsamı doğrulanmalı. Kirli çalışma ağacının yayın kapsamı belirlenmeli; derleme ve üretim modunda kontrol ile tarayıcı kabulü tamamlanmadan yayın hazır sayılmaz. Canlıya dağıtım yapılmadı.

@@ -186,3 +186,14 @@ Canlı sayfa, Stage B'deki `allplan-max--allplan-max-web-page.docx` ile
 3. **Canlıda farklı:** pillar başlıkları canlıda `<p>` öğesi olarak
    yayımlanıyor (başlık öğesi değil); docx'te başlık olarak listeleniyor.
 4. **Canlıda eksik:** AI BIM Modeler'ın dahil etiketi.
+
+## Yeniden canlı kontrol — 29.10.2026 (sonraki gözlem)
+
+Kaynak: https://www.allplan.com/allplan-max/ , tarayıcıda render edilen sayfa ve video bağlantıları. Bu ek kayıt yukarıdaki önceki envanteri tarihsel gözlem olarak korur. Farklar üretici güncellemesinden veya ilk envanterde görünmeyen DOM/etkileşim durumundan kaynaklanabilir; nedeni doğrulanmamıştır.
+
+- AI BIM Modeler kartında `Included in Allplan` ve video bağlantısı görünür; beta etiketi devam ediyor.
+- AI Formula Writer kartında video bağlantısı görünür.
+- Müşteri görüşleri carousel içinde isim ve meslekle birlikte gözlemlendi: Formula Writer — F. B., surveyor; BIM Modeler — N. Naryshkin, architectural drafter; BIM Analyst — L. Burtscher, planner. İsimler birebir, mesleklerin Türkçesi taslak çeviridir.
+- Video hedefleri, yukarıdaki önceki yedi değerden farklı gözlemlendi: Feature Builder `ARHTE2-CaWk`; Workflow Builder `8ROtkolkemM`; AI BIM Analyst `RSwNnc8XvbQ`; AI Formula Writer `L2YcuH3PQWw`; AI Structural Analyst `CIgKvrD7QhQ`; AI Drafter `zQDWJh9rCsA`; AI BIM Modeler `kNxP71mPnFM`; AI Visualizer `ypS7tjRB6rs`; AI Coach `vFk7oUru2bg`. Her biri `https://www.youtube.com/embed/` altında; oynatma uygunluğu ayrıca test edilmelidir.
+- 2026'da sınırsız kullanım ifadesi hâlâ kaynakta yer alıyor; 2027 ve Türkiye için geçerliliği doğrulanmış değildir. Anket verisi yöntem ve kullanım izni de açık kalır.
+- Bu gözlem sadece ALLPLAN Max canlı sayfası içindir; gönderilmiş diğer belgelerin güncellenip güncellenmediği incelenmedi.

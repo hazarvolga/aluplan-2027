@@ -7,6 +7,8 @@ import { AluIcon } from '@/components/ui/AluIcon';
 import type { AluIconName } from '@/components/ui/AluIcon';
 import { ProfessionalServicesSection } from './ProfessionalServicesSection';
 import { handleStructuredTabKey } from './structured-tab-key';
+import { HomepageMaxPreviewHero } from './HomepageMaxPreviewHero';
+import { HomepageProductPreviewTabs } from './HomepageProductPreviewTabs';
 
 const data = getHomepageData();
 const releaseCountryLabel = `${data.releaseLabel} · TÜRKİYE`;
@@ -25,7 +27,7 @@ const ROLE_ACCENTS: Record<string, string> = {
   fabricator: 'var(--role-fabricator)' // PREKAST — Amber
 };
 
-export function HomepageView() {
+export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: boolean }) {
   const [roleId, setRoleId] = useState<string>(data.roles[0].id);
 
   const activeRole = data.roles.find((r) => r.id === roleId) || data.roles[0];
@@ -33,7 +35,7 @@ export function HomepageView() {
   return (
     <>
       {/* H01: Flagship Cinematic BIM Hero */}
-      <section className="alu-hero-stage" aria-labelledby="hero-title">
+      {previewMaxHero ? <HomepageMaxPreviewHero /> : <section className="alu-hero-stage" aria-labelledby="hero-title">
         {data.heroVideo && (
           <div className="alu-hero-stage__backdrop" aria-hidden="true">
             <video
@@ -132,10 +134,10 @@ export function HomepageView() {
             </aside>
           </div>
         </div>
-      </section>
+      </section>}
 
       {/* H02: QuickLinks Command Ribbon */}
-      <section className="alu-quick-ribbon" aria-label="Hızlı erişimler">
+      {previewMaxHero ? <HomepageProductPreviewTabs /> : <section className="alu-quick-ribbon" aria-label="Hızlı erişimler">
         <div className="alu-container alu-quick-ribbon__grid">
           {data.quickLinks.map(([label, href], idx) => (
             <Link key={href} className="alu-quick-ribbon__item" href={href}>
@@ -145,7 +147,7 @@ export function HomepageView() {
             </Link>
           ))}
         </div>
-      </section>
+      </section>}
 
       {/* H03: Interactive Role Stage + 6 Permanent Products (PathwayProductSystem) */}
       <section
@@ -397,7 +399,7 @@ export function HomepageView() {
       </section>
 
       {/* H05: Package Comparison / TechSpecs */}
-      <section id="package-comparison" className="preview-section" aria-labelledby="packages-heading">
+      {!previewMaxHero && <section id="package-comparison" className="preview-section" aria-labelledby="packages-heading">
         <div className="alu-container">
           <div className="alu-techspecs-banner">
             <div className="alu-techspecs-banner__header">
@@ -452,10 +454,10 @@ export function HomepageView() {
             </div>
           </div>
         </div>
-      </section>
+      </section>}
 
       {/* H06: Professional Services */}
-      <ProfessionalServicesSection />
+      {previewMaxHero ? <ProfessionalServicesSection hidePartnerAccess /> : <ProfessionalServicesSection />}
 
       {/* H07: BIMFlex Spotlight */}
       <section id="bimflex" className="preview-section" aria-labelledby="bimflex-heading">

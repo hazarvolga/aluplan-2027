@@ -5,6 +5,8 @@ import type { ReactElement } from 'react';
 
 import type { StructuredContentBlock } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
+import { MetricCards } from './MetricCards';
+import { ChallengesBand } from './ChallengesBand';
 import { BenefitsSection } from './BenefitsSection';
 import { LinkGroupGridSection } from './LinkGroupGridSection';
 import { MediaGridSection } from './MediaGridSection';
@@ -116,22 +118,7 @@ function renderBlock(
       return (
         <section className="preview-section preview-section--subtle" aria-label={block.title || 'Sektörel Zorluklar'}>
           <div className="alu-container">
-            <div className="alu-challenges-band">
-              <div className="alu-challenges-band__header">
-                <span className="preview-kicker">/ SEKTÖREL ZORLUKLAR</span>
-                <h2 className="alu-h3" style={{ margin: 0 }}>
-                  {block.title || 'Günümüz Projelerinde Karşılaşılan Temel Zorluklar'}
-                </h2>
-              </div>
-              <div className="alu-challenges-grid">
-                {block.items.map((challenge, index) => (
-                  <div key={index} className="alu-challenge-card">
-                    <span className="alu-challenge-card__num">0{index + 1}</span>
-                    <p className="alu-body-sm" style={{ margin: 0 }}>{challenge}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <ChallengesBand title={block.title || 'Günümüz Projelerinde Karşılaşılan Temel Zorluklar'} items={block.items} />
           </div>
         </section>
       );
@@ -139,15 +126,7 @@ function renderBlock(
       return (
         <section className="preview-section" aria-label="Performans Göstergeleri">
           <div className="alu-container">
-            <div className="alu-hero-metrics" style={{ gridTemplateColumns: `repeat(${Math.min(block.items.length, 4)}, minmax(0, 1fr))` }}>
-              {block.items.map((stat, index) => (
-                <div key={`${stat.label}-${index}`} className="alu-hero-metrics__item">
-                  <span className="alu-hero-metrics__value">{stat.value}</span>
-                  <h3 className="alu-hero-metrics__label" style={{ margin: 0 }}>{stat.label}</h3>
-                  <p className="alu-body-sm" style={{ margin: 'var(--space-application-jsx-tight) 0 0 0' }}>{stat.description}</p>
-                </div>
-              ))}
-            </div>
+            <MetricCards items={block.items} />
           </div>
         </section>
       );

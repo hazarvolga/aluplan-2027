@@ -1,0 +1,5 @@
+.section :global([data-source-id^="live.sds.ben."]) :global(.alu-benefit-icon) img[src$="icon-02.png"]{mix-blend-mode:multiply}
+:global([data-mode="dark"]) .section :global([data-source-id^="live.sds.ben."]) :global(.alu-benefit-icon) img{filter:invert(1)}
+:global([data-mode="dark"]) .section :global([data-source-id^="live.sds.ben."]) :global(.alu-benefit-icon) img[src$="icon-02.png"]{mix-blend-mode:screen}
+.list{margin:var(--space-stack-md) 0 0;padding-inline-start:var(--space-inset-md);color:var(--text-secondary);font-size:var(--type-body-sm-size);line-height:var(--type-body-line-height)}
+.list li+li{margin-top:var(--space-stack-xs)}

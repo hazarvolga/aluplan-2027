@@ -18,7 +18,7 @@ class Home2027PreviewContractTests(unittest.TestCase):
         self.assertIn("<Homepage2027PreviewView />", route_source)
         self.assertNotIn("HomepageView", route_source)
         self.assertIn("import { HomepageView }", view_source)
-        self.assertIn("<HomepageView />", view_source)
+        self.assertIn("<HomepageView previewMaxHero />", view_source)
         self.assertNotIn("getHomepageData", route_source + view_source)
         self.assertNotIn("buildPageJsonLd", route_source + view_source)
 

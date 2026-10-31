@@ -1,0 +1,541 @@
+{
+  "url": "https://www.allplan.com/shop/products/scia",
+  "text": "Home\nProducts\nSCIA - Structural Analysis and Design\nSCIA\nSCIA - Structural Analysis and Design\n\nSCIA delivers powerful structural analysis and design capabilities for engineers working on buildings, infrastructure, and complex structural systems. Explore the SCIA editions to find the solution that fits your engineering workflows and level of structural complexity.\n\nAdvanced structural analysis and code-based design.\nMulti-material engineering workflows.\nBIM-integrated structural modeling.\nSeamless collaboration with design and detailing tools.\nMORE INFORMATION\nCHOOSE YOUR SCIA EDITION\nFind the SCIA solution designed for you\n1 month\n12 months\n36 months\nSCIA Concept\n$298.00\n\nper user per month\n\nTotal $3,576.00 (excl. VAT) billed yearly\n\nADD TO CART\n\nWhat's included:\n\nStructural modeling and analysis\nCore concrete, steel, and timber design workflows\nStability and dynamic analysis tools\nBIM-ready model exchange\nAdvanced nonlinear analysis\nView Edition\nSCIA Professional\n$508.00\n\nper user per month\n\nTotal $6,096.00 (excl. VAT) billed yearly\n\nADD TO CART\n\nWhat's included:\n\nMulti-material design workflows\nParametric modeling tools\nAdvanced load generation\nSoil-structure interaction analysis\nExtended BIM integrations\nView Edition\nSCIA Ultimate\n$827.00\n\nper user per month\n\nTotal $9,924.00 (excl. VAT) billed yearly\n\nADD TO CART\n\nWhat's included:\n\nAdvanced nonlinear structural analysis\nSmart meshing and high-performance analysis\nConstruction stage simulation\nOptimization tools for structural design\nExtended engineering integrations\nView Edition\nLock in the price for 3 years\nBuy with flexibility and security\nChoose your payment method\nTechnical Support included\nNeed Help Choosing the Right SCIA Edition?\n\nTalk with an SCIA expert to find the best solution for your projects, workflows, and team.\n\nREQUEST DEMO\nTRUSTED BY GLOBAL AEC LEADERS\nSCIA\nCAPABILITIES\nSUCCESS STORIES\nFAQ\nREQUEST DEMO\nPRICING\nCAPABILITIES\nCompare Key Capabilities\nAccurate Structural Models\nAccurate Structural Models Create structural analysis models directly or convert BIM models into analysis-ready geometry. Engineers can define frames, surfaces, and structural systems that reflect real-world structural behavior.\nReliable Engineering Analysis\nAutomated Project Deliverables\nDesign Across Multiple Materials\nSUCCESS STORIES\nSCIA makes it possible\nSky Park Residence\n\nBratislava, Slovakia\n\nRead More\nPedestrian Bridge over the Railway Yard\n\nCzechia\n\nRead More\nThe Glass Dome at Albert Square\n\nBelgium\n\nRead More\nPalais Garnier\n\nFrance\n\nRead More\nRopeway Lattice Tower\n\nAustria\n\nRead More\nMulti-functional Sports Hall\n\nCzechia\n\nRead More\nFAQ\nFrequently Asked Questions\nWhat is the difference between SCIA Concept, Professional, and Ultimate?\nSCIA Concept focuses on core structural modeling and analysis for everyday engineering projects. SCIA Professional adds advanced engineering workflows, multi-material design, and expanded analysis capabilities. SCIA Ultimate provides the most comprehensive analysis tools for complex structures and advanced structural engineering challenges.\nDoes SCIA support BIM workflows?\nWhich industries use SCIA?\nCan I upgrade between SCIA editions later?\nTalk to an Expert\n\nGet personalized guidance from SCIA experts to find the right edition for your workflows, projects, and team. Book a free 1-hour consultation with no pressure, just clarity.\n\nREQUEST DEMO\nTry SCIA Free\n\nExplore SCIA for 30 days at no cost. For evaluation and non-commercial use. No cancellation required.\n\nGET FREE TRIAL",
+  "blocks": [
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_768,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fheader%2Fheader-hero_scia_800x800_new.jpg%3Fv%3Dv1",
+      "alt": ""
+    },
+    {
+      "tag": "LI",
+      "text": "SCIA - Structural Analysis and Design"
+    },
+    {
+      "tag": "LI",
+      "text": "Home"
+    },
+    {
+      "tag": "A",
+      "text": "Home",
+      "href": "https://www.allplan.com/us_en"
+    },
+    {
+      "tag": "LI",
+      "text": ""
+    },
+    {
+      "tag": "LI",
+      "text": "Products"
+    },
+    {
+      "tag": "A",
+      "text": "Products",
+      "href": "https://www.allplan.com/en-US/shop/products"
+    },
+    {
+      "tag": "LI",
+      "text": ""
+    },
+    {
+      "tag": "LI",
+      "text": "SCIA - Structural Analysis and Design"
+    },
+    {
+      "tag": "H1",
+      "text": "SCIA - Structural Analysis and Design"
+    },
+    {
+      "tag": "P",
+      "text": "SCIA delivers powerful structural analysis and design capabilities for engineers working on buildings, infrastructure, and complex structural systems. Explore the SCIA editions to find the solution that fits your engineering workflows and level of structural complexity."
+    },
+    {
+      "tag": "A",
+      "text": "More information",
+      "href": "https://www.allplan.com/shop/products/scia#clp-products"
+    },
+    {
+      "tag": "H3",
+      "text": "Find the SCIA solution designed for you"
+    },
+    {
+      "tag": "H4",
+      "text": "SCIA Concept"
+    },
+    {
+      "tag": "H4",
+      "text": "$298.00"
+    },
+    {
+      "tag": "P",
+      "text": "per user per month"
+    },
+    {
+      "tag": "P",
+      "text": "Total $3,576.00 (excl. VAT) billed yearly"
+    },
+    {
+      "tag": "P",
+      "text": "What's included:"
+    },
+    {
+      "tag": "LI",
+      "text": "Structural modeling and analysis"
+    },
+    {
+      "tag": "LI",
+      "text": "Core concrete, steel, and timber design workflows"
+    },
+    {
+      "tag": "LI",
+      "text": "Stability and dynamic analysis tools"
+    },
+    {
+      "tag": "LI",
+      "text": "BIM-ready model exchange"
+    },
+    {
+      "tag": "LI",
+      "text": "Advanced nonlinear analysis"
+    },
+    {
+      "tag": "A",
+      "text": "View Edition",
+      "href": "https://www.allplan.com/en-US/shop/products/scia/scia-concept"
+    },
+    {
+      "tag": "H4",
+      "text": "SCIA Professional"
+    },
+    {
+      "tag": "H4",
+      "text": "$508.00"
+    },
+    {
+      "tag": "P",
+      "text": "per user per month"
+    },
+    {
+      "tag": "P",
+      "text": "Total $6,096.00 (excl. VAT) billed yearly"
+    },
+    {
+      "tag": "P",
+      "text": "What's included:"
+    },
+    {
+      "tag": "LI",
+      "text": "Multi-material design workflows"
+    },
+    {
+      "tag": "LI",
+      "text": "Parametric modeling tools"
+    },
+    {
+      "tag": "LI",
+      "text": "Advanced load generation"
+    },
+    {
+      "tag": "LI",
+      "text": "Soil-structure interaction analysis"
+    },
+    {
+      "tag": "LI",
+      "text": "Extended BIM integrations"
+    },
+    {
+      "tag": "A",
+      "text": "View Edition",
+      "href": "https://www.allplan.com/en-US/shop/products/scia/scia-professional"
+    },
+    {
+      "tag": "H4",
+      "text": "SCIA Ultimate"
+    },
+    {
+      "tag": "H4",
+      "text": "$827.00"
+    },
+    {
+      "tag": "P",
+      "text": "per user per month"
+    },
+    {
+      "tag": "P",
+      "text": "Total $9,924.00 (excl. VAT) billed yearly"
+    },
+    {
+      "tag": "P",
+      "text": "What's included:"
+    },
+    {
+      "tag": "LI",
+      "text": "Advanced nonlinear structural analysis"
+    },
+    {
+      "tag": "LI",
+      "text": "Smart meshing and high-performance analysis"
+    },
+    {
+      "tag": "LI",
+      "text": "Construction stage simulation"
+    },
+    {
+      "tag": "LI",
+      "text": "Optimization tools for structural design"
+    },
+    {
+      "tag": "LI",
+      "text": "Extended engineering integrations"
+    },
+    {
+      "tag": "A",
+      "text": "View Edition",
+      "href": "https://www.allplan.com/en-US/shop/products/scia/scia-ultimate"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_768,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fmisc%2FImage-Demo_800x480_new.jpg%3Fv%3Dv1",
+      "alt": ""
+    },
+    {
+      "tag": "H3",
+      "text": "Need Help Choosing the Right SCIA Edition?"
+    },
+    {
+      "tag": "P",
+      "text": "Talk with an SCIA expert to find the best solution for your projects, workflows, and team."
+    },
+    {
+      "tag": "A",
+      "text": "Request Demo",
+      "href": "https://www.allplan.com/personal-demo/"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_640,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Flogos%2Fscia%2Fclient_300x160_Aecom.png%3Fv%3Dv1",
+      "alt": "Aecom"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_640,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Flogos%2Fscia%2Fclient_300x160_Contruss.png%3Fv%3Dv1",
+      "alt": "Contruss"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_640,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Flogos%2Fscia%2Fclient_300x160_LaingORourke.png%3Fv%3Dv1",
+      "alt": "Laing O Rouke"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_640,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Flogos%2Fscia%2Fclient_300x160_Losinger.png%3Fv%3Dv1",
+      "alt": "Losinger"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_640,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Flogos%2Fscia%2Fclient_300x160_Movares.png%3Fv%3Dv1",
+      "alt": "Movares"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_640,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Flogos%2Fscia%2Fclient_300x160_PatrickParsons.png%3Fv%3Dv1",
+      "alt": "Patrick Parsons"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_640,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Flogos%2Fscia%2Fclient_300x160_SBE.png%3Fv%3Dv1",
+      "alt": "SBE"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_640,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Flogos%2Fscia%2Fclient_300x160_WillRudd.png%3Fv%3Dv1",
+      "alt": "Will Rudd"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_640,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Flogos%2Fscia%2Fclient_300x160_Aecom.png%3Fv%3Dv1",
+      "alt": "Aecom"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_640,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Flogos%2Fscia%2Fclient_300x160_Contruss.png%3Fv%3Dv1",
+      "alt": "Contruss"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_640,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Flogos%2Fscia%2Fclient_300x160_LaingORourke.png%3Fv%3Dv1",
+      "alt": "Laing O Rouke"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_640,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Flogos%2Fscia%2Fclient_300x160_Losinger.png%3Fv%3Dv1",
+      "alt": "Losinger"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_640,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Flogos%2Fscia%2Fclient_300x160_Movares.png%3Fv%3Dv1",
+      "alt": "Movares"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_640,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Flogos%2Fscia%2Fclient_300x160_PatrickParsons.png%3Fv%3Dv1",
+      "alt": "Patrick Parsons"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_640,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Flogos%2Fscia%2Fclient_300x160_SBE.png%3Fv%3Dv1",
+      "alt": "SBE"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_640,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Flogos%2Fscia%2Fclient_300x160_WillRudd.png%3Fv%3Dv1",
+      "alt": "Will Rudd"
+    },
+    {
+      "tag": "A",
+      "text": "Request demo",
+      "href": "https://www.scia.net/en/forms/request-free-demo"
+    },
+    {
+      "tag": "A",
+      "text": "Pricing",
+      "href": "https://www.allplan.com/shop/products/scia#clp-products"
+    },
+    {
+      "tag": "A",
+      "text": "Request demo",
+      "href": "https://www.scia.net/en/forms/request-free-demo"
+    },
+    {
+      "tag": "A",
+      "text": "Pricing",
+      "href": "https://www.allplan.com/shop/products/scia#clp-products"
+    },
+    {
+      "tag": "H3",
+      "text": "Compare Key Capabilities"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_640,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fbenefits%2Fcapabilities_scia-element-1_16x9_new.jpg%3Fv%3Dv1",
+      "alt": ""
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fbenefits%2Fcapabilities_scia-element-2_16x9_new.jpg%3Fv%3Dv1",
+      "alt": ""
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fbenefits%2Fcapabilities_scia-element-3_16x9_new.jpg%3Fv%3Dv1",
+      "alt": ""
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fbenefits%2Fcapabilities_scia-element-4_16x9_new.jpg%3Fv%3Dv1",
+      "alt": ""
+    },
+    {
+      "tag": "DETAILS",
+      "text": "Accurate Structural ModelsAccurate Structural Models Create structural analysis models directly or convert BIM models into analysis-ready geometry. Engineers can define frames, surfaces, and structural systems that reflect real-world structural behavior."
+    },
+    {
+      "tag": "DETAILS",
+      "text": "Reliable Engineering AnalysisReliable Engineering Analysis Evaluate structural performance using linear, nonlinear, stability, and dynamic analysis tools to understand how structures respond to loads and design conditions."
+    },
+    {
+      "tag": "DETAILS",
+      "text": "Automated Project DeliverablesCode-Compliant Engineering Design Design reinforced concrete, steel, timber, and other structural materials using integrated design checks and calculation tools aligned with international engineering standards."
+    },
+    {
+      "tag": "DETAILS",
+      "text": "Design Across Multiple MaterialsDesign Across Multiple Materials Analyze and design concrete, steel, timber, aluminum, masonry, and composite structures within one engineering environment, allowing teams to evaluate multiple structural systems efficiently."
+    },
+    {
+      "tag": "H3",
+      "text": "SCIA makes it possible"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2F_processed_%2F2%2Ff%2Fcsm_skyresidence_prodis_web9_ee424ac75c.jpg%3Fv%3Dv1",
+      "alt": "Sky Park Residence"
+    },
+    {
+      "tag": "H4",
+      "text": "Sky Park Residence"
+    },
+    {
+      "tag": "P",
+      "text": "Bratislava, Slovakia"
+    },
+    {
+      "tag": "A",
+      "text": "Read More",
+      "href": "https://www.scia.net/en/user-stories/sky-park-residence"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2F_processed_%2F9%2Fc%2Fcsm_strasky_bridge_web5_05cafa204e.jpg%3Fv%3Dv1",
+      "alt": "Pedestrian Bridge over the Railway Yard"
+    },
+    {
+      "tag": "H4",
+      "text": "Pedestrian Bridge over the Railway Yard"
+    },
+    {
+      "tag": "P",
+      "text": "Czechia"
+    },
+    {
+      "tag": "A",
+      "text": "Read More",
+      "href": "https://www.scia.net/en/user-stories/pedestrian-bridge-over-railway-yard"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2F_processed_%2F6%2Fa%2Fcsm_thedome_picture_1200x800_0_976e9b3edf.jpg%3Fv%3Dv1",
+      "alt": "The Glass Dome at Albert Square"
+    },
+    {
+      "tag": "H4",
+      "text": "The Glass Dome at Albert Square"
+    },
+    {
+      "tag": "P",
+      "text": "Belgium"
+    },
+    {
+      "tag": "A",
+      "text": "Read More",
+      "href": "https://www.scia.net/en/user-stories/showcase-project-glass-dome-albert-square-knokke"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2F_processed_%2Fe%2Fe%2Fcsm_OperaParis_0_d36b3eb629.jpg%3Fv%3Dv1",
+      "alt": "Palais Garnier"
+    },
+    {
+      "tag": "H4",
+      "text": "Palais Garnier"
+    },
+    {
+      "tag": "P",
+      "text": "France"
+    },
+    {
+      "tag": "A",
+      "text": "Read More",
+      "href": "https://www.scia.net/en/user-stories/palais-garnier-where-culture-and-technology-meet"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2F_processed_%2Fb%2F3%2Fcsm_header_ropeway-lattice-tower_1920x745-flip_02628afac8.jpg%3Fv%3Dv1",
+      "alt": "Ropeway Lattice Tower"
+    },
+    {
+      "tag": "H4",
+      "text": "Ropeway Lattice Tower"
+    },
+    {
+      "tag": "P",
+      "text": "Austria"
+    },
+    {
+      "tag": "A",
+      "text": "Read More",
+      "href": "https://www.scia.net/en/user-stories/ropeway-lattice-tower"
+    },
+    {
+      "tag": "IMG",
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2F_processed_%2F2%2Fd%2Fcsm_Artstat_sporthall_1920x745_9a5877d00a.jpg%3Fv%3Dv1",
+      "alt": "Multi-functional Sports Hall"
+    },
+    {
+      "tag": "H4",
+      "text": "Multi-functional Sports Hall"
+    },
+    {
+      "tag": "P",
+      "text": "Czechia"
+    },
+    {
+      "tag": "A",
+      "text": "Read More",
+      "href": "https://www.scia.net/en/user-stories/multi-functional-sports-hall"
+    },
+    {
+      "tag": "H3",
+      "text": "Frequently Asked Questions"
+    },
+    {
+      "tag": "DETAILS",
+      "text": "What is the difference between SCIA Concept, Professional, and Ultimate?SCIA Concept focuses on core structural modeling and analysis for everyday engineering projects. SCIA Professional adds advanced engineering workflows, multi-material design, and expanded analysis capabilities. SCIA Ultimate provides the most comprehensive analysis tools for complex structures and advanced structural engineering challenges."
+    },
+    {
+      "tag": "DETAILS",
+      "text": "Does SCIA support BIM workflows?Yes. SCIA supports Open BIM workflows and integrates with leading design and detailing platforms such as Allplan, SDS2, Revit, and Tekla. Engineers can exchange models using IFC and SAF formats for efficient collaboration across disciplines."
+    },
+    {
+      "tag": "DETAILS",
+      "text": "Which industries use SCIA?SCIA is widely used by structural engineering firms, infrastructure designers, industrial engineering teams, and multidisciplinary AEC practices working on buildings, bridges, industrial facilities, and complex structural projects."
+    },
+    {
+      "tag": "DETAILS",
+      "text": "Can I upgrade between SCIA editions later?Yes. SCIA editions are designed to scale with your engineering needs. Teams can upgrade to higher editions as projects become more complex or require advanced structural analysis capabilities."
+    },
+    {
+      "tag": "H3",
+      "text": "Talk to an Expert"
+    },
+    {
+      "tag": "P",
+      "text": "Get personalized guidance from SCIA experts to find the right edition for your workflows, projects, and team. Book a free 1-hour consultation with no pressure, just clarity."
+    },
+    {
+      "tag": "A",
+      "text": "Request Demo",
+      "href": "https://www.allplan.com/personal-demo/"
+    },
+    {
+      "tag": "H3",
+      "text": "Try SCIA Free"
+    },
+    {
+      "tag": "P",
+      "text": "Explore SCIA for 30 days at no cost. For evaluation and non-commercial use. No cancellation required."
+    },
+    {
+      "tag": "A",
+      "text": "Get Free Trial",
+      "href": "https://www.scia.net/en/forms/scia-engineer-trial-request"
+    }
+  ]
+}

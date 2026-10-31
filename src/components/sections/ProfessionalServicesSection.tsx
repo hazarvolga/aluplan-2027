@@ -12,10 +12,13 @@ const services = data.services;
 const serviceGroups = data.serviceGroups;
 const serviceByName = new Map(services.map((service) => [service.title, service]));
 
-export function ProfessionalServicesSection() {
+export function ProfessionalServicesSection({ hidePartnerAccess = false }: { hidePartnerAccess?: boolean }) {
   const [activeGroupIdx, setActiveGroupIdx] = useState<number>(0);
   const [showAllServices, setShowAllServices] = useState<boolean>(false);
-  const serviceCount = services.length;
+  const visibleGroups = hidePartnerAccess ? serviceGroups.filter((group) => group.title !== 'Partner erişimi') : serviceGroups;
+  const serviceCount = hidePartnerAccess ? services.filter((service) => service.title !== 'Partner').length : services.length;
+  const safeGroupIdx = activeGroupIdx < visibleGroups.length ? activeGroupIdx : 0;
+  const activeGroup = visibleGroups[safeGroupIdx];
   const allResourcesButtonLabel = showAllServices
     ? 'Kategori Görünümüne Dön'
     : `Tüm ${serviceCount} Kaynağı Tek Listede Aç`;
@@ -45,16 +48,16 @@ export function ProfessionalServicesSection() {
         </div>
 
         <div className="alu-service-pills" role="tablist" aria-label="Hizmet kategorileri">
-          {serviceGroups.map((group, idx) => (
+          {visibleGroups.map((group, idx) => (
             <button
               key={group.title}
               type="button"
               id={`services-tab-${idx}`}
               role="tab"
-              aria-selected={activeGroupIdx === idx}
+              aria-selected={safeGroupIdx === idx}
               aria-controls="services-panel"
-              tabIndex={activeGroupIdx === idx ? 0 : -1}
-              className={`alu-service-pill${activeGroupIdx === idx ? ' alu-service-pill--active' : ''}`}
+              tabIndex={safeGroupIdx === idx ? 0 : -1}
+              className={`alu-service-pill${safeGroupIdx === idx ? ' alu-service-pill--active' : ''}`}
               onClick={() => {
                 setActiveGroupIdx(idx);
                 setShowAllServices(false);
@@ -62,7 +65,7 @@ export function ProfessionalServicesSection() {
               onKeyDown={(event) => handleStructuredTabKey(
                 event,
                 idx,
-                serviceGroups.length,
+                visibleGroups.length,
                 (nextIndex) => {
                   setActiveGroupIdx(nextIndex);
                   setShowAllServices(false);
@@ -79,10 +82,10 @@ export function ProfessionalServicesSection() {
           id="services-panel"
           className="alu-tabs__panel"
           role="tabpanel"
-          aria-labelledby={`services-tab-${activeGroupIdx}`}
+          aria-labelledby={`services-tab-${safeGroupIdx}`}
         >
           <div className="alu-services-grid">
-            {serviceGroups[activeGroupIdx].serviceTitles.map((serviceName) => {
+            {activeGroup?.serviceTitles.map((serviceName) => {
               const item = serviceByName.get(serviceName);
               if (!item) return null;
               const isExternal = item.href.startsWith('http');
@@ -92,7 +95,7 @@ export function ProfessionalServicesSection() {
                     <span className="alu-support-card__icon">
                       <AluIcon name={item.icon as AluIconName} size="md" />
                     </span>
-                    <span className="alu-card__eyebrow">{serviceGroups[activeGroupIdx].title}</span>
+                    <span className="alu-card__eyebrow">{activeGroup.title}</span>
                   </div>
                   <div className="alu-card__body">
                     <h3 className="alu-card__title">{item.title}</h3>
@@ -124,7 +127,7 @@ export function ProfessionalServicesSection() {
 
         <div className="alu-stack" style={{ display: showAllServices ? 'flex' : 'none' }}>
           <h3 className="alu-h3">{allResourcesHeading}</h3>
-          {serviceGroups.map((group) => (
+          {visibleGroups.map((group) => (
             <div key={group.title} className="alu-stack" style={{ gap: 'var(--space-stack-md)', paddingTop: 'var(--space-application-jsx-section)' }}>
               <div className="alu-cluster" style={{ justifyContent: 'space-between', borderBottom: 'var(--border-width-default) solid var(--border-default)', paddingBottom: 'var(--space-application-jsx-regular)' }}>
                 <span className="alu-h4">{group.title}</span>

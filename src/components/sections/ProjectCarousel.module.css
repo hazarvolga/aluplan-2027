@@ -1,0 +1,23 @@
+.section{scroll-margin-top:8rem;padding-block:var(--space-inset-lg);background:var(--surface-page)}
+.header{display:flex;justify-content:space-between;align-items:end;gap:var(--space-inset-md);padding-bottom:var(--space-inset-lg)}
+.eyebrow{margin:0 0 var(--space-stack-xs);color:var(--accent-fg);font-size:var(--type-caption-size);font-weight:var(--font-weight-strong)}
+.header h2{margin:0;font-family:var(--font-heading);font-size:var(--type-h2-size)}
+.controls{display:flex;gap:var(--space-stack-xs)}
+.controls button,.dots button{cursor:pointer;border:0;background:transparent;color:var(--text-primary);min-width:var(--target-min);min-height:var(--target-min);font:inherit}
+.controls button:hover{background:var(--surface-raised);color:var(--accent-fg)}
+.controls button:focus-visible,.dots button:focus-visible,.card a:focus-visible{outline:var(--focus-width) solid var(--focus-ring);outline-offset:2px}
+.slide{position:relative;min-height:clamp(16rem,24vw,25rem);display:flex;align-items:end;overflow:hidden;background:var(--surface-subtle)}
+.image{position:absolute;inset:0 0 0 auto;width:65%;height:100%;object-fit:contain;object-position:right center;opacity:0}
+.imageActive{opacity:1}
+.overlay{position:relative;width:100%;padding-block:var(--space-inset-lg)}
+.card{width:min(34rem, 100%);background:var(--surface-default);color:var(--text-primary);padding:var(--space-inset-lg);border:var(--border-width-default) solid var(--border-default)}
+.card h3,.card p{max-width:26rem}
+.card h3{font-family:var(--font-heading);font-size:var(--type-h3-size);line-height:var(--type-h3-line-height);margin:0 0 var(--space-stack-sm)}
+.card p{color:var(--text-secondary);margin:0 0 var(--space-stack-md)}.card .count{font-size:var(--type-caption-size);color:var(--accent-fg)}
+.card a{color:var(--accent-fg);font-weight:var(--font-weight-strong);text-decoration:none}.card a:hover{text-decoration:underline}
+.dots{display:flex;gap:var(--space-stack-xs);overflow-x:auto}.dots button{flex:1 0 var(--target-min);padding:0}.dots span{display:block;height:3px;background:var(--border-default)}.dots button[aria-current] span{background:var(--accent-fg)}
+@media(max-width:767px){.image{width:100%;opacity:0}.imageActive{opacity:1}.slide{min-height:17rem}.card{padding:var(--space-inset-md)}.dots{gap:0}}
+
+@media (prefers-reduced-motion: no-preference){
+  .image{transition:opacity 600ms ease-in-out}
+}

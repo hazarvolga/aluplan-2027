@@ -1154,3 +1154,19 @@ Kullanıcı 2027 ana sayfasını şimdilik yeterli bulup ALLPLAN Max sayfasını
 - `/2027/max`, `/2027/civil`, `/2027/frilo`, `/2027/scia`, `/2027/features`, `/2027/compare` üretimde kapalı ve noindex. Ana sayfa geliştirmede yeni, üretimde mevcut eski görünümü kullanıyor.
 - `/products/civil`, `/products/sds2-home` ve `/paket-karsilastirma` mevcut URL'lerdir; eski adresleri koruma ve yeni slug/olası 301 eşlemeleri kullanıcı onayı gerektirir. SDS2 değişiklikleri mevcut üretim rotasındadır.
 - Yayına geçişte rota kararlarının yanında üretim korumaları, dahili bağlantılar, canonical metadata, sitemap ve mevcut URL paritesi birlikte ele alınmalı; içerik/çeviri, medya ve Türkiye paket kapsamı doğrulanmalı. Kirli çalışma ağacının yayın kapsamı belirlenmeli; derleme ve üretim modunda kontrol ile tarayıcı kabulü tamamlanmadan yayın hazır sayılmaz. Canlıya dağıtım yapılmadı.
+
+### 31.10.2026 — Ürün yaşam döngüsü önizlemesi
+- Kullanıcı isteğiyle ALLPLAN ürün yaşam döngüsü politikası `/preview/product-lifecycle` altında Türkçe yerel önizleme olarak hazırlandı. Kaynak: https://www.allplan.com/product-lifecycle/ (31.10.2026). Politika kapsamı, bakım/sürüm aşamaları, Kasım 2024 örneği, tarih tablosu ve sekiz SSS ile hizmet tabloları içerilir. Kaynağın tarihli örneği güncel sürüm tablosu olarak sunulmaz.
+- Rota production'da kapalı ve noindex; kaynak hero ve grafik görselleri izin teyidi olmadığından alınmadı. Yerel tarayıcıda SSS ve 390 px taşma kontrolü, typecheck ve içerik incelemesi yapıldı. Türkçe metinler ve güncel üretici politikası yayımlamadan önce doğrulanmalı; kalıcı URL ve navigasyon onayı bekler.
+
+- Kullanıcı isteğiyle ana sayfadaki OpenBIM ve teknoloji iş ortakları şeridi kaldırıldı; 2027 ana sayfa önizlemesinin footer öncesine ürün yaşam döngüsü önizleme bağlantısı eklendi. Typecheck, bağlantı hedefi ve 390 px taşma tarayıcıda doğrulandı. Bağlantı üretimde kapalı önizlemeye gittiğinden yalnız geliştirme görünümünde yer alır.
+
+- Kullanıcı açıklamasıyla, 2027 ana sayfa önizlemesinde footer öncesine mevcut `/products/allplan-2026-yenilikler` sayfasına ayrı bir butonlu bölüm eklendi; `/products/allplan-2026` farklı sayfa olarak korundu. Yerel tarayıcıda hedef ve 390 px taşma kontrolü ile typecheck geçti.
+
+- Ana sayfa önizlemesindeki 2026 yenilikler bölümüne kullanıcı isteğiyle `/products/allplan-2026` için ayrı buton eklendi; mevcut yenilikler bağlantısı korundu. Tarayıcıda hedef ve mobil taşma, typecheck ile kontrol edildi.
+
+- Ana sayfadaki eski `#innovations` kart bölümü kullanıcı isteğiyle gösterimden kaldırıldı; tasarımı ve kart yapısı yeniden kullanılabilir `InnovationsSection` bileşenine aktarıldı. İçerik verisi ve stiller korundu; 2026 sayfalarına footer öncesindeki ayrı bağlantılar yerinde. Typecheck ve ana sayfa kontrolü yapıldı.
+
+### Devam durumu
+- 2026 bağlantı bandı ürün sekmeleri sonrasına taşındı, yüzeyi hafifçe ayrıldı; BIMFlex medya boyutları küçültülüp dış kartın arka planı ve çerçevesi kaldırıldı. Typecheck ve styles:check geçti.
+- Açık işler: disiplin iş akışı bölümünü ortak ve kompakt bileşene dönüştürme isteği önceki oturumda kesildi; tamamlanmadı. `/products` sayfasını canlı kaynakla karşılaştırıp eksikleri giderme isteği de bekliyor. Önceki incelemedeki bağlantı kayıpları ile test başarısızlıkları çözülmedi.

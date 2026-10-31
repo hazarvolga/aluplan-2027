@@ -6925,3 +6925,37 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
     animation: none !important;
   }
 }
+
+/* Compact BIMFlex spotlight: preserve each image while limiting the media area. */
+.preview-bimflex {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr);
+  gap: var(--space-stack-lg);
+  align-items: center;
+}
+.preview-bimflex__content { row-gap: var(--space-stack-sm) !important; }
+.preview-bimflex__content h2 { font-size: var(--type-h2-size); line-height: var(--type-h2-line-height); }
+.preview-bimflex__logo { width: min(5rem, 35%); }
+.preview-bimflex__media {
+  width: 100%;
+  max-width: 28rem;
+  height: 20rem;
+  justify-self: end;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+.preview-bimflex__figure img { min-height: 0; }
+@media (max-width: 767px) {
+  .preview-bimflex { grid-template-columns: minmax(0, 1fr); }
+  .preview-bimflex__media {
+    justify-self: stretch;
+    max-width: none;
+    height: auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto;
+  }
+  .preview-bimflex__figure--1 { grid-row: auto; }
+  .preview-bimflex__figure img { height: auto; aspect-ratio: 1 / 1; }
+  .preview-bimflex__figure figcaption { position: static; overflow-wrap: anywhere; }
+}

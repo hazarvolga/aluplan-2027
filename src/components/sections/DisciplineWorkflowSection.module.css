@@ -1,0 +1,29 @@
+.section{background:var(--surface-page);padding-block:var(--space-application-section-inset)}
+.section :global(.alu-pathway-content){gap:var(--space-stack-lg)!important}
+.section :global(.alu-pathway-tabs){gap:var(--space-stack-xs)}
+.section :global(.alu-pathway-tab){min-height:44px;padding:var(--space-inset-xs) var(--space-inset-md);background:transparent;box-shadow:none}
+.section :global(.alu-pathway-tab__icon){width:2rem;height:2rem;background:transparent}
+.section :global(.alu-pathway-tab__kicker){display:none}
+.section :global(.alu-pathway-tab__dot){box-shadow:none}
+.section :global(.alu-pathway-split){background:transparent;box-shadow:none;padding:var(--space-inset-md);gap:var(--space-stack-md)}
+.section :global(.alu-pathway-split__title){font-size:var(--type-h2-size);margin-block:var(--space-stack-sm)}
+.section :global(.alu-pathway-feature-card){background:transparent;box-shadow:none;padding:var(--space-inset-sm)}
+.section :global(.alu-pathway-cta){min-height:44px;padding:var(--space-inset-xs) var(--space-inset-md)}
+.section :global(.alu-product-card){background:transparent;box-shadow:none}
+.section :global(.alu-product-card--highlighted),.section :global(.alu-product-card--highlighted:hover){background:transparent;box-shadow:none}
+.section :global(.alu-product-card__body){padding:var(--space-inset-sm)}
+.section :global(.alu-product-card__footer){padding:var(--space-inset-sm)}
+
+.featureList{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-stack-xs) var(--space-stack-md);list-style:none;margin:0;padding:0}
+.featureList li{display:flex;align-items:center;gap:var(--space-stack-xs);font-size:var(--type-body-sm-size);line-height:var(--type-body-line-height)}
+.featureList li svg{flex:none;color:var(--role-accent)}
+
+.section :global(.alu-pathway-header){text-align:left;align-items:flex-start}
+
+.headerRow{padding-top:calc(var(--space-stack-md) + 40px);display:grid;grid-template-columns:minmax(0,1fr) minmax(12rem,16rem);gap:var(--space-stack-lg);align-items:center}
+.section :global(.alu-pathway-tabs){display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start}
+.section :global(.alu-pathway-tab){width:100%;min-width:0}
+@media(max-width:767px){.headerRow{grid-template-columns:1fr;gap:var(--space-stack-md)}}
+
+
+.section .productsGrid{grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr))}

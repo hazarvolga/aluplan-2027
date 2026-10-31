@@ -1,38 +1,29 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { getHomepageData, TRIAL_CTA_URL, MAIN_QUOTE_FORM_URL } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
-import type { AluIconName } from '@/components/ui/AluIcon';
 import { ProfessionalServicesSection } from './ProfessionalServicesSection';
-import { handleStructuredTabKey } from './structured-tab-key';
 import { HomepageMaxPreviewHero } from './HomepageMaxPreviewHero';
 import { HomepageProductPreviewTabs } from './HomepageProductPreviewTabs';
 import { Homepage2026Links } from './Homepage2026Links';
+import { DisciplineWorkflowSection } from './DisciplineWorkflowSection';
 
 const data = getHomepageData();
 const releaseCountryLabel = `${data.releaseLabel} · TÜRKİYE`;
 const releaseMonitorLabel = `${data.releaseLabel} · ${data.heroContent.monitorLabel}`;
 const packageMatrixSuffix = ` · ${data.packageMatrixLabel}`;
 
-const ROLE_ICONS: Record<string, AluIconName> = {
-  architect: 'building-2',
-  engineer: 'ruler',
-  fabricator: 'boxes'
-};
-
-const ROLE_ACCENTS: Record<string, string> = {
-  architect: 'var(--role-architect)', // MİMAR — Blue
-  engineer: 'var(--role-engineer)',  // MÜHENDİS — Emerald
-  fabricator: 'var(--role-fabricator)' // PREKAST — Amber
+const previewSolutionImages: Record<string, string> = {
+  '/solutions-v2/building-design': '/assets/previews/solutions/building-original.png',
+  '/solutions-v2/infrastructure': '/assets/previews/solutions/infrastructure-original.png',
+  '/solutions-v2/construction': '/assets/previews/solutions/construction-original.png',
+  '/solutions-v2/addons': '/assets/previews/solutions/addons-original.png',
+  '/solutions-v2/other': '/assets/previews/solutions/other-original.png',
 };
 
 export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: boolean }) {
-  const [roleId, setRoleId] = useState<string>(data.roles[0].id);
-
-  const activeRole = data.roles.find((r) => r.id === roleId) || data.roles[0];
-
   return (
     <>
       {/* H01: Flagship Cinematic BIM Hero */}
@@ -152,201 +143,7 @@ export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: bool
 
       {previewMaxHero && <Homepage2026Links />}
 
-      {/* H03: Interactive Role Stage + 6 Permanent Products (PathwayProductSystem) */}
-      <section
-        id="products"
-        className="preview-section alu-pathway-section"
-        aria-labelledby="products-heading"
-        style={
-          {
-            '--role-accent': ROLE_ACCENTS[activeRole.id] || 'var(--role-architect)'
-          } as React.CSSProperties
-        }
-      >
-        {/* Dynamic Ambient Glow based on Active Role */}
-        <div className="alu-pathway-glow" aria-hidden="true" />
-
-        <div className="alu-container alu-stack alu-pathway-content" style={{ gap: 'var(--space-stack-xl)' }}>
-          <div className="alu-pathway-header">
-            <span className="preview-kicker">ROLÜNÜZÜ SEÇİN · ROL VE ÜRÜN MİMARİSİ</span>
-            <h2 id="products-heading" className="alu-h1">
-              Disiplininize Özel BIM İş Akışı
-            </h2>
-            <p className="alu-body preview-meta" style={{ maxWidth: 'var(--container-application-meta)', marginInline: 'auto' }}>
-              Size en uygun iş akışını ve ürün paketini keşfedin. Seçtiğiniz disipline göre önerilen ALLPLAN paketleri aşağıda otomatik olarak öne çıkar.
-            </p>
-          </div>
-
-          {/* Role Tabs (MİMAR / MÜHENDİS / PREKAST) */}
-          <div className="alu-pathway-tabs" role="tablist" aria-label="Rolünüzü seçin">
-            {data.roles.map((role, rIdx) => {
-              const isSelected = role.id === activeRole.id;
-              const iconName = ROLE_ICONS[role.id] || 'layers';
-              const roleColor = ROLE_ACCENTS[role.id] || 'var(--role-architect)';
-              return (
-                <button
-                  key={role.id}
-                  id={`pathway-tab-${role.id}`}
-                  type="button"
-                  role="tab"
-                  aria-selected={isSelected}
-                  aria-controls="pathway-panel"
-                  tabIndex={isSelected ? 0 : -1}
-                  className={`alu-pathway-tab${isSelected ? ' alu-pathway-tab--active' : ''}`}
-                  style={{ '--tab-accent': roleColor } as React.CSSProperties}
-                  onClick={() => setRoleId(role.id)}
-                  onKeyDown={(event) => handleStructuredTabKey(
-                    event,
-                    rIdx,
-                    data.roles.length,
-                    (nextIndex) => setRoleId(data.roles[nextIndex].id)
-                  )}
-                >
-                  <span className="alu-pathway-tab__icon">
-                    <AluIcon name={iconName} size="md" />
-                  </span>
-                  <span className="alu-pathway-tab__text">
-                    <span className="alu-pathway-tab__kicker">0{rIdx + 1} · ROL</span>
-                    <span className="alu-pathway-tab__label">{role.label}</span>
-                  </span>
-                  <span className="alu-pathway-tab__dot" aria-hidden="true" />
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Active Role Content (Split View with Smooth Keyed Entrance & Staggered Features) */}
-          <div
-            id="pathway-panel"
-            role="tabpanel"
-            aria-labelledby={`pathway-tab-${activeRole.id}`}
-            className="alu-pathway-split"
-            aria-live="polite"
-          >
-            {/* Left: Animated Role Title, Description & CTA */}
-            <div key={activeRole.id + '-text'} className="alu-pathway-split__left">
-              <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-dense)' }}>
-                <span className="alu-pathway-role-badge">
-                  <AluIcon name={ROLE_ICONS[activeRole.id] || 'layers'} size="sm" />
-                  <span>{activeRole.label} İŞ AKIŞI</span>
-                </span>
-                <span className="alu-caption">{data.releaseLabel}</span>
-              </div>
-
-              <h3 className="alu-pathway-split__title">{activeRole.title}</h3>
-
-              <p className="alu-pathway-split__desc">{activeRole.description}</p>
-
-              <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-wide)', paddingTop: 'var(--space-application-jsx-regular)' }}>
-                <Link className="alu-pathway-cta" href={activeRole.href}>
-                  <span>Bu Akışı Detaylı İncele</span>
-                  <span className="alu-pathway-cta__arrow">
-                    <AluIcon name="arrow-right" size="sm" />
-                  </span>
-                </Link>
-                <a
-                  className="alu-button alu-button--secondary alu-button--md"
-                  href={TRIAL_CTA_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>Ücretsiz Dene</span>
-                  <AluIcon name="external-link" size="sm" />
-                </a>
-              </div>
-            </div>
-
-            {/* Right: Staggered 2x2 Feature Cards + Role Visual Preview */}
-            <div key={activeRole.id + '-right'} className="alu-pathway-split__right">
-              <div className="alu-pathway-features-grid">
-                {activeRole.features.map((feat, fIdx) => (
-                  <div
-                    key={activeRole.id + '-feature-' + fIdx}
-                    className="alu-pathway-feature-card"
-                  >
-                    <span className="alu-pathway-feature-card__icon" aria-hidden="true">
-                      <AluIcon name="check" size="sm" />
-                    </span>
-                    <span className="alu-pathway-feature-card__text">{feat}</span>
-                  </div>
-                ))}
-              </div>
-
-              {activeRole.image && (
-                <div className="alu-pathway-visual-frame">
-                  <img src={activeRole.image} alt={`${activeRole.label} — ${activeRole.title}`} />
-                  <div className="alu-pathway-visual-frame__caption">
-                    <span>{activeRole.label} · {activeRole.title}</span>
-                    <span>IFC 4.3 · OPENBIM</span>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* 6 Permanent Products Showcase (Conditional Highlighting & Smooth Dimming) */}
-          <div className="alu-stack" style={{ gap: 'var(--space-stack-md)' }}>
-            <div className="alu-cluster" style={{ justifyContent: 'space-between', alignItems: 'center' }}>
-              <span className="alu-caption">
-                SEÇİLİ ROL İÇİN ÖNERİLEN PAKETLER ÖNE ÇIKARILDI ({activeRole.label})
-              </span>
-              <Link className="alu-link alu-link--standalone" href="/products">
-                <span>Tüm Ürün Ailesi</span>
-                <AluIcon name="arrow-right" size="sm" />
-              </Link>
-            </div>
-
-            <div className="alu-products-showcase">
-              {data.products.map((product, pIdx) => {
-                const isHighlighted = product.relatedRoles.includes(activeRole.id);
-                return (
-                  <Link
-                    key={product.id}
-                    href={product.href}
-                    className={`alu-product-card${
-                      isHighlighted ? ' alu-product-card--highlighted' : ' alu-product-card--dimmed'
-                    }`}
-                  >
-                    {product.image && (
-                      <div className="alu-product-card__media">
-                        <img src={product.image} alt={product.title} loading="lazy" />
-                        <span className="alu-product-card__tier">0{pIdx + 1}</span>
-                        {isHighlighted && (
-                          <span className="alu-product-card__recommended">
-                            <span className="alu-product-card__pulse-dot" />
-                            <span>{activeRole.label} İÇİN ÖNERİLEN</span>
-                          </span>
-                        )}
-                      </div>
-                    )}
-                    <div className="alu-product-card__body">
-                      <div className="alu-product-card__top-row">
-                        <span className="alu-product-card__box-icon">
-                          <AluIcon name="boxes" size="md" />
-                        </span>
-                        <span
-                          className={`alu-product-card__status-dot${
-                            isHighlighted ? ' alu-product-card__status-dot--active' : ''
-                          }`}
-                          aria-hidden="true"
-                        />
-                      </div>
-                      <h3 className="alu-product-card__title">{product.title}</h3>
-                      <p className="alu-product-card__desc">{product.description}</p>
-                    </div>
-                    <div className="alu-product-card__footer">
-                      <span className="alu-product-card__cta">
-                        <span>İncele</span>
-                        <AluIcon name="arrow-right" size="sm" />
-                      </span>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
+      <DisciplineWorkflowSection id="products" roles={previewMaxHero ? data.roles.map(role => ({ ...role, image: ({ architect: '/assets/previews/workflow/architecture-original.png', engineer: '/assets/previews/workflow/engineering-original.png', fabricator: '/assets/previews/workflow/precast-original.png' } as Record<string, string>)[role.id] ?? role.image })) : data.roles} products={data.products} releaseLabel={data.releaseLabel} trialHref={TRIAL_CTA_URL} productsHref="/products" />
 
       {/* H04: Solutions Asymmetric Bento Grid */}
       <section id="solutions" className="preview-section preview-section--subtle" aria-labelledby="solutions-heading">
@@ -377,7 +174,7 @@ export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: bool
                 {item.image && (
                   <img
                     className="alu-bento-card__bg"
-                    src={item.image}
+                    src={previewMaxHero ? previewSolutionImages[item.href] ?? item.image : item.image}
                     alt={item.title}
                     loading="lazy"
                   />

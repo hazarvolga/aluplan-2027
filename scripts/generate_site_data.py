@@ -1117,6 +1117,20 @@ for raw_page in raw_200_pages:
 # License manager forms, support and official trial destinations remain distinct.
 pages_data = apply_approved_content_policy(normalize_request_links(pages_data))
 
+# The user explicitly directs all buttons with this label to release notes.
+def update_release_notes_links(value):
+    if isinstance(value, dict):
+        if value.get("text") == "Sürümleri Görüntüle" and "href" in value:
+            value["href"] = "https://www.allplan.com/system/releasenotes/"
+            value["external"] = True
+        for child in value.values():
+            update_release_notes_links(child)
+    elif isinstance(value, list):
+        for child in value:
+            update_release_notes_links(child)
+
+update_release_notes_links(pages_data)
+
 data_dir = ROOT / "src/data"
 data_dir.mkdir(parents=True, exist_ok=True)
 

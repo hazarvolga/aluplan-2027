@@ -5056,9 +5056,9 @@
         "external": false
       },
       {
-        "href": "/package-overview",
+        "href": "https://www.allplan.com/system/releasenotes/",
         "text": "Sürümleri Görüntüle",
-        "external": false
+        "external": true
       },
       {
         "href": "/solutions/architecture#mimari-is-akislari",
@@ -5219,8 +5219,8 @@
       "workflowLinks": [
         {
           "text": "Sürümleri Görüntüle",
-          "href": "/package-overview",
-          "external": false,
+          "href": "https://www.allplan.com/system/releasenotes/",
+          "external": true,
           "accentKey": "package"
         },
         {
@@ -7514,9 +7514,9 @@
         "external": false
       },
       {
-        "href": "/package-overview",
+        "href": "https://www.allplan.com/system/releasenotes/",
         "text": "Sürümleri Görüntüle",
-        "external": false
+        "external": true
       },
       {
         "href": "/solutions/architecture#mimari-is-akislari",
@@ -7723,8 +7723,8 @@
       "workflowLinks": [
         {
           "text": "Sürümleri Görüntüle",
-          "href": "/package-overview",
-          "external": false,
+          "href": "https://www.allplan.com/system/releasenotes/",
+          "external": true,
           "accentKey": "package"
         },
         {
@@ -8731,9 +8731,9 @@
         "external": false
       },
       {
-        "href": "/products/allplan",
+        "href": "https://www.allplan.com/system/releasenotes/",
         "text": "Sürümleri Görüntüle",
-        "external": false
+        "external": true
       },
       {
         "href": "/solutions/structural",
@@ -8741,9 +8741,9 @@
         "external": false
       },
       {
-        "href": "/package-overview",
+        "href": "https://www.allplan.com/system/releasenotes/",
         "text": "Sürümleri Görüntüle",
-        "external": false
+        "external": true
       },
       {
         "href": "/solutions/architecture#mimari-is-akislari",
@@ -8996,8 +8996,8 @@
       "workflowLinks": [
         {
           "text": "Sürümleri Görüntüle",
-          "href": "/package-overview",
-          "external": false,
+          "href": "https://www.allplan.com/system/releasenotes/",
+          "external": true,
           "accentKey": "package"
         },
         {
@@ -10332,9 +10332,9 @@
         "external": false
       },
       {
-        "href": "/package-overview",
+        "href": "https://www.allplan.com/system/releasenotes/",
         "text": "Sürümleri Görüntüle",
-        "external": false
+        "external": true
       },
       {
         "href": "/solutions/architecture#mimari-is-akislari",
@@ -10663,8 +10663,8 @@
       "workflowLinks": [
         {
           "text": "Sürümleri Görüntüle",
-          "href": "/package-overview",
-          "external": false,
+          "href": "https://www.allplan.com/system/releasenotes/",
+          "external": true,
           "accentKey": "package"
         },
         {
@@ -13485,9 +13485,9 @@
         "external": false
       },
       {
-        "href": "/package-overview",
+        "href": "https://www.allplan.com/system/releasenotes/",
         "text": "Sürümleri Görüntüle",
-        "external": false
+        "external": true
       },
       {
         "href": "/solutions/architecture#mimari-is-akislari",
@@ -13828,8 +13828,8 @@
       "workflowLinks": [
         {
           "text": "Sürümleri Görüntüle",
-          "href": "/package-overview",
-          "external": false,
+          "href": "https://www.allplan.com/system/releasenotes/",
+          "external": true,
           "accentKey": "package"
         },
         {
@@ -14555,9 +14555,9 @@
         "external": false
       },
       {
-        "href": "/package-overview",
+        "href": "https://www.allplan.com/system/releasenotes/",
         "text": "Sürümleri Görüntüle",
-        "external": false
+        "external": true
       },
       {
         "href": "/solutions/architecture#mimari-is-akislari",
@@ -14659,8 +14659,8 @@
       "workflowLinks": [
         {
           "text": "Sürümleri Görüntüle",
-          "href": "/package-overview",
-          "external": false,
+          "href": "https://www.allplan.com/system/releasenotes/",
+          "external": true,
           "accentKey": "package"
         },
         {

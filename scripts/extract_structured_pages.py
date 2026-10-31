@@ -231,7 +231,7 @@ def _load_cloud_services():
 CLOUD_SERVICES_MAP = _load_cloud_services()
 
 DEFAULT_WORKFLOW_LINKS = [
-    {"text": "Sürümleri Görüntüle", "href": "/package-overview", "external": False, "accentKey": "package"},
+    {"text": "Sürümleri Görüntüle", "href": "https://www.allplan.com/system/releasenotes/", "external": True, "accentKey": "package"},
     {"text": "Tasarım için İş Akışları", "href": "/solutions/architecture#mimari-is-akislari", "external": False, "accentKey": "architect"},
     {"text": "İnşaat Mühendisliği için İş Akışları", "href": "/solutions/structural#insaat-muhendisligi-is-akislari", "external": False, "accentKey": "engineer"},
     {"text": "Altyapı Mühendisliği için İş Akışları", "href": "/solutions/infrastructure#altyapi-muhendisligi-is-akislari", "external": False, "accentKey": "fabricator"},

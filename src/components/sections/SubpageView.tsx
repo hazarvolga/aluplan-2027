@@ -25,6 +25,7 @@ import { PageEndConversion } from './PageEndConversion';
 import { getPageEndConversion } from './page-end-conversion-policy';
 import { handleStructuredTabKey } from './structured-tab-key';
 import { MediaDialog } from '@/components/ui/MediaDialog';
+import { ContactMap } from './ContactMap';
 
 const SECTION_LABELS: Record<string, string> = {
   products: 'ALLPLAN ÜRÜN AİLESİ',
@@ -516,7 +517,10 @@ export function SubpageView({
             )}
 
             {/* Preserved Embedded Media */}
-            {page.embeds && page.embeds.length > 0 && !playlist && (
+            {page.path === '/contact' && page.embeds?.map((embed, index) => (
+              <ContactMap key={`${embed.src}-${index}`} src={embed.src} title={embed.title || 'Aluplan konumu'} />
+            ))}
+            {page.path !== '/contact' && page.embeds && page.embeds.length > 0 && !playlist && (
               <div className="alu-stack" style={{ gap: 'var(--space-stack-md)' }}>
                 <span className="preview-kicker">MULTİMEDYA VE VİDEO</span>
                 <h2 className="alu-h2">Video ve Sunum Kayıtları</h2>

@@ -132,7 +132,6 @@ class PageEndConversionComponentTests(unittest.TestCase):
         )
         for marker in [
             "data-page-end-conversion={model.kind}",
-            "{model.kicker}",
             "{model.title}",
             "{model.description}",
             "model.actions.map",
@@ -143,6 +142,7 @@ class PageEndConversionComponentTests(unittest.TestCase):
             with self.subTest(marker=marker):
                 self.assertIn(marker, component)
 
+        self.assertNotIn("{model.kicker}", component)
         self.assertIn("alu-trial-banner", component)
         self.assertIn("alu-trial-banner__inner", component)
         self.assertIn("alu-button--primary", component)

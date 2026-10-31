@@ -128,7 +128,7 @@ export function SubpageView({
   return (
     <>
       {/* Subpage Hero Stage */}
-      <SubpageHeroSection
+      {page.path !== '/references' && <SubpageHeroSection
         page={page}
         heroImage={heroImage}
         presentation={heroPresentation.presentation}
@@ -137,7 +137,7 @@ export function SubpageView({
         assetKind={heroPresentation.assetKind}
         sectionBadgeLabel={sectionBadgeLabel}
         isLegalPage={isLegalPage}
-      />
+      />}
 
       {['/solutions/scalypso/converter', '/solutions/scalypso/videos'].includes(page.path) && (
         <nav className="alu-container alu-cluster" aria-label="Scalypso bağlantıları" style={{ paddingBlock: 'var(--space-inset-md)' }}>

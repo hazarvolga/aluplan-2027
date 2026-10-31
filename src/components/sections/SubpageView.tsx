@@ -26,6 +26,9 @@ import { getPageEndConversion } from './page-end-conversion-policy';
 import { handleStructuredTabKey } from './structured-tab-key';
 import { MediaDialog } from '@/components/ui/MediaDialog';
 import { ContactMap } from './ContactMap';
+import { ScalypsoPageContent } from './ScalypsoPageContent';
+import { ScalypsoSubpage } from './ScalypsoSubpage';
+import { ScalypsoModeler } from './ScalypsoModeler';
 
 const SECTION_LABELS: Record<string, string> = {
   products: 'ALLPLAN ÜRÜN AİLESİ',
@@ -110,6 +113,18 @@ export function SubpageView({
 
   const sectionBadgeLabel = SECTION_LABELS[page.section] || page.eyebrow;
 
+  if (page.path === '/solutions/scalypso/modeler') {
+    return <><ScalypsoModeler page={page} />{pageEndConversion && <PageEndConversion model={pageEndConversion} />}</>;
+  }
+
+  if (['/solutions/scalypso/mobile', '/solutions/scalypso/viewer'].includes(page.path)) {
+    return <><ScalypsoSubpage page={page} />{pageEndConversion && <PageEndConversion model={pageEndConversion} />}</>;
+  }
+
+  if (page.path === '/solutions/scalypso') {
+    return <><ScalypsoPageContent page={page} />{pageEndConversion && <PageEndConversion model={pageEndConversion} />}</>;
+  }
+
   return (
     <>
       {/* Subpage Hero Stage */}
@@ -123,6 +138,13 @@ export function SubpageView({
         sectionBadgeLabel={sectionBadgeLabel}
         isLegalPage={isLegalPage}
       />
+
+      {['/solutions/scalypso/converter', '/solutions/scalypso/videos'].includes(page.path) && (
+        <nav className="alu-container alu-cluster" aria-label="Scalypso bağlantıları" style={{ paddingBlock: 'var(--space-inset-md)' }}>
+          <a className="alu-button alu-button--primary alu-button--md" href={page.contentLinks.find(link => link.text === 'Deneme Lisansı İste')?.href} target="_blank" rel="noopener noreferrer">Deneme Lisansı İste</a>
+          <a className="alu-button alu-button--secondary alu-button--md" href="/solutions/scalypso">Scalypso Ana Sayfa</a>
+        </nav>
+      )}
 
       {/* Subpage Animated/Verified Metrics Bar (when statSections exist on non-structuredLayout pages) */}
       {!page.structuredLayout && statSections.length > 0 && (

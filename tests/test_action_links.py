@@ -19,6 +19,12 @@ AX3000_MODULE_ROUTES = [
     for slug in ("elektrik", "havalandirma", "isitma", "konut-havalandirma", "sihhi-tesisat", "sprinkler")
 ]
 AX3000_NAV_HREFS = AX3000_MODULE_ROUTES[:4] + [AX3000_MODULE_ROUTES[5], AX3000_MODULE_ROUTES[4], "/products/ax3000/dokumanlar"]
+AX3000_CHANNEL = "https://www.youtube.com/channel/UC6JuTlCdaIb3Hvkj4JNMl7A/videos"
+AX3000_YOUTUBE = {
+    "/solutions/ax3000/elektrik": AX3000_CHANNEL,
+    "/solutions/ax3000/havalandirma": AX3000_CHANNEL,
+    "/solutions/ax3000/sihhi-tesisat": "https://www.youtube.com/watch?v=EXVlk83zcIs&list=PL5ma0JNNoskbikv2hCg83KVa1pvQ4fvZW",
+}
 
 
 def load_pages() -> dict:
@@ -52,7 +58,24 @@ class ActionLinkDataTests(unittest.TestCase):
     def test_ax3000_module_navigation(self):
         for route in AX3000_MODULE_ROUTES:
             with self.subTest(route=route):
-                self.assertEqual([href for _, _, href in section_actions(self.pages[route])], AX3000_NAV_HREFS)
+                hrefs = [href for _, _, href in section_actions(self.pages[route]) if "youtube.com" not in href]
+                self.assertEqual(hrefs, AX3000_NAV_HREFS)
+
+    def test_ax3000_module_navigation_sits_under_main_column_heading(self):
+        expected = {
+            "/solutions/ax3000/elektrik": "3B Elektrik Planlamaya Ne Dersiniz?",
+            "/solutions/ax3000/havalandirma": "Havalandırma Kolay Koordine Edilemez",
+        }
+        for route, heading in expected.items():
+            with self.subTest(route=route):
+                headings = {h for h, _, href in section_actions(self.pages[route]) if href == "/products/ax3000/dokumanlar"}
+                self.assertEqual(headings, {heading})
+
+    def test_ax3000_youtube_links_restored(self):
+        for route in AX3000_YOUTUBE:
+            with self.subTest(route=route):
+                actions = [(h, href) for h, _, href in section_actions(self.pages[route]) if "youtube.com" in href]
+                self.assertEqual(actions, [("AX3000 Youtube", AX3000_YOUTUBE[route])])
 
     def test_ax3000_mechanical_cta_links(self):
         actions = section_actions(self.pages["/solutions/ax3000-mekanik-tesisat"])
@@ -74,6 +97,12 @@ class ActionLinkRenderTests(unittest.TestCase):
                 if href.startswith("https://"):
                     self.assertEqual(anchors[href].get("target"), "_blank")
                     self.assertEqual(anchors[href].get("rel"), "noopener noreferrer")
+
+    def test_ax3000_youtube_links_render(self):
+        for route, href in AX3000_YOUTUBE.items():
+            with self.subTest(route=route):
+                anchors = [a for a in main_anchors(route) if a.get("href") == href]
+                self.assertEqual([(a.get("target"), a.get("rel")) for a in anchors], [("_blank", "noopener noreferrer")])
 
     def test_ax3000_navigation_renders_and_marks_current_page(self):
         for route in AX3000_MODULE_ROUTES:

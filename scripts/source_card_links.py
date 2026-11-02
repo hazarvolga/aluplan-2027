@@ -54,22 +54,50 @@ class ActionSource:
     route: str
     source_file: str
     start_marker: str
+    end_marker: str = "</section>"
+    heading_levels: str = "1-6"
 
 
 AX3000_MODULE_SLUGS = ("elektrik", "havalandirma", "isitma", "konut-havalandirma", "sihhi-tesisat", "sprinkler")
+AX3000_YOUTUBE_CARD = "AX3000 Youtube</h3>"
+AX3000_MODULE_NAV = 'className="space-y-3"'
+
+
+def ax3000_source(slug: str) -> str:
+    return f"app/solutions/ax3000/{slug}/ClientPage.tsx"
+
 
 ACTION_SOURCES: tuple[ActionSource, ...] = (
     ActionSource("/solutions-v2/connect-license", "app/solutions-v2/connect-license/page.tsx", "{/* Final CTA */}"),
     ActionSource("/solutions/ax3000-mekanik-tesisat", "app/solutions/ax3000-mekanik-tesisat/ClientPage.tsx", 'key="ekb"'),
     ActionSource("/solutions/ax3000-mekanik-tesisat", "app/solutions/ax3000-mekanik-tesisat/ClientPage.tsx", 'key="documents"'),
     *(
-        ActionSource(f"/solutions/ax3000/{slug}", f"app/solutions/ax3000/{slug}/ClientPage.tsx", 'className="space-y-3"')
+        ActionSource(f"/solutions/ax3000/{slug}", ax3000_source(slug), AX3000_YOUTUBE_CARD, end_marker=AX3000_MODULE_NAV)
+        for slug in ("elektrik", "havalandirma")
+    ),
+    ActionSource("/solutions/ax3000/sihhi-tesisat", ax3000_source("sihhi-tesisat"), AX3000_YOUTUBE_CARD),
+    *(
+        ActionSource(f"/solutions/ax3000/{slug}", ax3000_source(slug), AX3000_MODULE_NAV, heading_levels="2")
         for slug in AX3000_MODULE_SLUGS
     ),
 )
 
-JSX_LINK = re.compile(r'<(?:Link|a)\s+href="([^"]+)"[^>]*>([^<{]+)')
-JSX_HEADING = re.compile(r"<h[1-6][^>]*>([^<{]+)</h[1-6]>")
+JSX_HREF_ATTR = re.compile(r"\bhref=")
+JSX_LINK = re.compile(r'<(?:Link|a)\s+href=(?:"([^"]+)"|\{(\w+)\})[^>]*>([^<{]+)')
+STRING_CONST = r'const\s+{name}\s*=\s*"([^"]+)"'
+
+
+def heading_pattern(levels: str) -> re.Pattern:
+    return re.compile(rf"<h[{levels}][^>]*>([^<{{]+)</h[{levels}]>")
+
+
+def resolve_href(text: str, literal: str, identifier: str) -> str:
+    if literal:
+        return literal
+    match = re.search(STRING_CONST.format(name=re.escape(identifier)), text)
+    if not match:
+        raise ValueError(f"unresolved href constant {identifier!r}")
+    return match.group(1)
 
 
 def read_source(relative: str) -> str:
@@ -150,19 +178,20 @@ def extract_action_block(spec: ActionSource) -> tuple[str, list[dict]]:
     start = text.find(spec.start_marker)
     if start == -1:
         raise ValueError(f"{spec.source_file}: marker {spec.start_marker!r} not found")
-    end = text.find("</section>", start)
+    end = text.find(spec.end_marker, start + len(spec.start_marker))
+    if end == -1:
+        raise ValueError(f"{spec.source_file}: end marker {spec.end_marker!r} not found")
     block = text[start:end]
-    inner = JSX_HEADING.findall(block)
-    preceding = JSX_HEADING.findall(text[:start])
-    headings = inner or preceding[-1:]
+    heading = heading_pattern(spec.heading_levels)
+    headings = heading.findall(block) or heading.findall(text[: start + len(spec.start_marker)])[-1:]
     if not headings:
         raise ValueError(f"{spec.source_file}: no heading for block {spec.start_marker!r}")
-    actions = [
-        {"label": clean_jsx_text(label), "href": href, "external": href.startswith("http")}
-        for href, label in JSX_LINK.findall(block)
-    ]
-    if not actions:
-        raise ValueError(f"{spec.source_file}: no links in block {spec.start_marker!r}")
+    actions = []
+    for literal, identifier, label in JSX_LINK.findall(block):
+        href = resolve_href(text, literal, identifier)
+        actions.append({"label": clean_jsx_text(label), "href": href, "external": href.startswith("http")})
+    if len(actions) != len(JSX_HREF_ATTR.findall(block)) or not all(a["label"] for a in actions):
+        raise ValueError(f"{spec.source_file}: block {spec.start_marker!r} has links that were not extracted")
     return clean_jsx_text(headings[0]), actions
 
 
@@ -171,7 +200,7 @@ def attach_actions(sections: list[dict], heading: str, actions: list[dict], rout
     if index is None:
         raise ValueError(f"{route}: no section {heading!r} for action links")
     updated = list(sections)
-    updated[index] = {**updated[index], "actions": actions}
+    updated[index] = {**updated[index], "actions": [*updated[index].get("actions", []), *actions]}
     return updated
 
 

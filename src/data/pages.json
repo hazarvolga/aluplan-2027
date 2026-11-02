@@ -41672,21 +41672,6 @@
         "items": [
           "Modül Elektrik Temel tipik elektrik planlama ve diğer işçiliklerle koordineli işbirliği için gerekli fonksiyonları içerir.",
           "Elektrik Modülü size karmaşık elektrik tesisatı ihtiyaçlarınız ile ilgili hızlı planlama ve hesaplama imkanı sunar. Ayrıca otomatik olarak oluşturulmuş akım devresi ve bağlantılı akım devre listesi, kablo ve yapı elemanları ile sistemdeki kablo hat hesabını elde edersiniz."
-        ]
-      },
-      {
-        "heading": "AX3000 Youtube",
-        "level": 3,
-        "items": [
-          "AX3000 ile ilgili eğitim videoları için Youtube Kanalımızı ziyaret edebilirsiniz",
-          "İncele",
-          "Elektrik Temel",
-          "Havalandırma",
-          "Isıtma",
-          "Konut Havalandırma",
-          "Sprinkler (Fıskiye)",
-          "Sıhhi Tesisat",
-          "AX3000 Dokümanları"
         ],
         "actions": [
           {
@@ -41723,6 +41708,28 @@
             "label": "AX3000 Dokümanları",
             "href": "/products/ax3000/dokumanlar",
             "external": false
+          }
+        ]
+      },
+      {
+        "heading": "AX3000 Youtube",
+        "level": 3,
+        "items": [
+          "AX3000 ile ilgili eğitim videoları için Youtube Kanalımızı ziyaret edebilirsiniz",
+          "İncele",
+          "Elektrik Temel",
+          "Havalandırma",
+          "Isıtma",
+          "Konut Havalandırma",
+          "Sprinkler (Fıskiye)",
+          "Sıhhi Tesisat",
+          "AX3000 Dokümanları"
+        ],
+        "actions": [
+          {
+            "label": "İncele",
+            "href": "https://www.youtube.com/channel/UC6JuTlCdaIb3Hvkj4JNMl7A/videos",
+            "external": true
           }
         ]
       }
@@ -42003,33 +42010,6 @@
           "Havalandırma modülü detaylı uygulama ve planlarını hazırlamak için rahat bir araçtır.",
           "Konstrüksiyon fonksiyonları hariç hızlı planlama 'Easyline-Sistem'inde mevcuttur. Bu fonksiyon ile basit çizgi konsepti ile karmaşık 3 boyutlu sistemleri planlayabilirsiniz.",
           "Her iki sistemi de birleştirebilirsiniz! Çakışma kontrolü ile en zor durumların altından kalkabilirsiniz. Entegre edilmiş basınç kaybı hesabı ve görselleştirme ile basınç kontrolü tamamen sizde! Sıcaklık düşüşü ve akustik hesabını da yapabilirsiniz."
-        ]
-      },
-      {
-        "heading": "Avantajlar",
-        "level": 4,
-        "items": [
-          "Kolay ve detaylı uygulama ve montaj planlaması",
-          "Değişken Hesaplama",
-          "Gelişmiş 3B Kütüphane ve üretici verileri",
-          "Karmaşık uygulama planları için farklı konstrüksiyon yöntemleri",
-          "Otomatik Kesit, 2B-Görünümler ve İzometriler",
-          "Gelişmiş Metraj Hesaplaması"
-        ]
-      },
-      {
-        "heading": "AX3000 Youtube",
-        "level": 3,
-        "items": [
-          "AX3000 ile ilgili eğitim videoları için Youtube Kanalımızı ziyaret edebilirsiniz",
-          "İncele",
-          "Elektrik Temel",
-          "Havalandırma",
-          "Isıtma",
-          "Konut Havalandırma",
-          "Sprinkler (Fıskiye)",
-          "Sıhhi Tesisat",
-          "AX3000 Dokümanları"
         ],
         "actions": [
           {
@@ -42066,6 +42046,40 @@
             "label": "AX3000 Dokümanları",
             "href": "/products/ax3000/dokumanlar",
             "external": false
+          }
+        ]
+      },
+      {
+        "heading": "Avantajlar",
+        "level": 4,
+        "items": [
+          "Kolay ve detaylı uygulama ve montaj planlaması",
+          "Değişken Hesaplama",
+          "Gelişmiş 3B Kütüphane ve üretici verileri",
+          "Karmaşık uygulama planları için farklı konstrüksiyon yöntemleri",
+          "Otomatik Kesit, 2B-Görünümler ve İzometriler",
+          "Gelişmiş Metraj Hesaplaması"
+        ]
+      },
+      {
+        "heading": "AX3000 Youtube",
+        "level": 3,
+        "items": [
+          "AX3000 ile ilgili eğitim videoları için Youtube Kanalımızı ziyaret edebilirsiniz",
+          "İncele",
+          "Elektrik Temel",
+          "Havalandırma",
+          "Isıtma",
+          "Konut Havalandırma",
+          "Sprinkler (Fıskiye)",
+          "Sıhhi Tesisat",
+          "AX3000 Dokümanları"
+        ],
+        "actions": [
+          {
+            "label": "İncele",
+            "href": "https://www.youtube.com/channel/UC6JuTlCdaIb3Hvkj4JNMl7A/videos",
+            "external": true
           }
         ]
       }
@@ -42867,6 +42881,13 @@
         "items": [
           "AX3000 ile ilgili eğitim videoları için Youtube Kanalımızı ziyaret edebilirsiniz",
           "İncele"
+        ],
+        "actions": [
+          {
+            "label": "İncele",
+            "href": "https://www.youtube.com/watch?v=EXVlk83zcIs&list=PL5ma0JNNoskbikv2hCg83KVa1pvQ4fvZW",
+            "external": true
+          }
         ]
       },
       {

@@ -20,6 +20,11 @@ export interface PageHeading {
   text: string;
 }
 
+export interface SectionLink {
+  href: string;
+  label: string;
+}
+
 export interface PageSection {
   heading: string;
   level: number;
@@ -27,6 +32,7 @@ export interface PageSection {
   iconSrc?: string;
   image?: ContentImage;
   statValue?: string;
+  link?: SectionLink;
 }
 
 export interface ContentLink {

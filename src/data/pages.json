@@ -2235,6 +2235,10 @@
         "image": {
           "src": "/assets/products/allplan-hero.jpg",
           "alt": "ALLPLAN AEC"
+        },
+        "link": {
+          "href": "/products/allplan-aec",
+          "label": "Detayları Görüntüle"
         }
       },
       {
@@ -2249,6 +2253,10 @@
         "image": {
           "src": "/assets/products/allplan-ultimate/hero.jpg",
           "alt": "ALLPLAN Ultimate"
+        },
+        "link": {
+          "href": "/products/allplan-ultimate",
+          "label": "Detayları Görüntüle"
         }
       },
       {
@@ -2263,6 +2271,10 @@
         "image": {
           "src": "/assets/products/civil/hero.jpg",
           "alt": "ALLPLAN Civil"
+        },
+        "link": {
+          "href": "/products/civil",
+          "label": "Detayları Görüntüle"
         }
       },
       {
@@ -2277,6 +2289,10 @@
         "image": {
           "src": "/assets/products/allplan-professional/hero.jpg",
           "alt": "ALLPLAN Professional"
+        },
+        "link": {
+          "href": "/products/allplan-professional",
+          "label": "Detayları Görüntüle"
         }
       },
       {
@@ -2291,6 +2307,10 @@
         "image": {
           "src": "/assets/products/allplan-concept/hero.jpg",
           "alt": "ALLPLAN Concept"
+        },
+        "link": {
+          "href": "/products/allplan-concept",
+          "label": "Detayları Görüntüle"
         }
       },
       {
@@ -2305,6 +2325,10 @@
         "image": {
           "src": "/assets/solutions/precast-hero.jpg",
           "alt": "ALLPLAN Precast"
+        },
+        "link": {
+          "href": "/products/precast-detail",
+          "label": "Detayları Görüntüle"
         }
       },
       {
@@ -2318,6 +2342,10 @@
         "image": {
           "src": "/assets/products/allplan-basic/hero.jpg",
           "alt": "ALLPLAN Basic"
+        },
+        "link": {
+          "href": "/products/allplan-basic",
+          "label": "Detayları Görüntüle"
         }
       },
       {
@@ -20727,7 +20755,11 @@
         "items": [
           "Mekandan bağımsız, web tabanlı, interaktif ve çok katılımcılı eğitimler.",
           "Detayları Gör"
-        ]
+        ],
+        "link": {
+          "href": "/solutions-v2/training/online",
+          "label": "Detayları Gör"
+        }
       },
       {
         "heading": "Webinar",
@@ -20735,7 +20767,11 @@
         "items": [
           "Web tabanlı sunumlar, çoklu katılımcı dinleyici modunda ve chat fonksiyonu ile.",
           "Detayları Gör"
-        ]
+        ],
+        "link": {
+          "href": "/solutions-v2/training/webinar",
+          "label": "Detayları Gör"
+        }
       },
       {
         "heading": "Yüz Yüze (Presence)",
@@ -20743,7 +20779,11 @@
         "items": [
           "Yerinde, interaktif ve çok katılımcılı pratik eğitimler.",
           "Detayları Gör"
-        ]
+        ],
+        "link": {
+          "href": "/solutions-v2/training/classroom",
+          "label": "Detayları Gör"
+        }
       },
       {
         "heading": "Etkinlik / Fuar",
@@ -20751,7 +20791,11 @@
         "items": [
           "ALLPLAN ekibiyle kişisel iletişim imkanı sunan çeşitli formatlarda yerinde etkinlikler.",
           "Detayları Gör"
-        ]
+        ],
+        "link": {
+          "href": "/solutions-v2/training/events",
+          "label": "Detayları Gör"
+        }
       },
       {
         "heading": "Bireysel",
@@ -20759,7 +20803,11 @@
         "items": [
           "Esnek planlanabilir birimler. İçeriği, yeri, zamanı ve kapsamı siz belirlersiniz.",
           "Detayları Gör"
-        ]
+        ],
+        "link": {
+          "href": "/solutions-v2/training/individual",
+          "label": "Detayları Gör"
+        }
       },
       {
         "heading": "E-Learning",
@@ -20767,7 +20815,11 @@
         "items": [
           "Mekandan bağımsız, web tabanlı, interaktif ve bireysel öğrenme.",
           "Detayları Gör"
-        ]
+        ],
+        "link": {
+          "href": "/solutions-v2/training/e-learning",
+          "label": "Detayları Gör"
+        }
       },
       {
         "heading": "Müşterilerimiz Ne Diyor?",
@@ -29074,6 +29126,10 @@
         "image": {
           "src": "/assets/solutions/cds/surus-egirisi.webp",
           "alt": "Sürüş Eğrisi"
+        },
+        "link": {
+          "href": "/solutions/addons/drive-curve",
+          "label": "İncele"
         }
       },
       {
@@ -29086,6 +29142,10 @@
         "image": {
           "src": "/assets/solutions/cds/celik-profil-bilesenleri.webp",
           "alt": "Çelik Profil Bileşenleri"
+        },
+        "link": {
+          "href": "/solutions/addons/steel-components",
+          "label": "İncele"
         }
       },
       {
@@ -29098,6 +29158,10 @@
         "image": {
           "src": "/assets/solutions/cds/parametrik-arazi.webp",
           "alt": "Parametrik Arazi"
+        },
+        "link": {
+          "href": "/solutions/addons/parametric-terrain",
+          "label": "İncele"
         }
       },
       {
@@ -29110,6 +29174,10 @@
         "image": {
           "src": "/assets/solutions/cds/ramp.webp",
           "alt": "Rampa"
+        },
+        "link": {
+          "href": "/solutions/addons/ramp",
+          "label": "İncele"
         }
       },
       {
@@ -29122,6 +29190,10 @@
         "image": {
           "src": "/assets/solutions/cds/geometri-araclari.webp",
           "alt": "Geometri Araçları"
+        },
+        "link": {
+          "href": "/solutions/addons/geometry-tools",
+          "label": "İncele"
         }
       },
       {
@@ -29134,6 +29206,10 @@
         "image": {
           "src": "/assets/solutions/cds/2b-dwg-converter.webp",
           "alt": "2B DWG Converter"
+        },
+        "link": {
+          "href": "/solutions/addons/2d-dwg-converter",
+          "label": "İncele"
         }
       },
       {
@@ -29146,6 +29222,10 @@
         "image": {
           "src": "/assets/solutions/cds/3d-dimensioning.jpeg",
           "alt": "3B Ölçülendirme"
+        },
+        "link": {
+          "href": "/solutions/addons/three-dimensioning",
+          "label": "İncele"
         }
       },
       {
@@ -29158,6 +29238,10 @@
         "image": {
           "src": "/assets/solutions/cds/graphic-text.jpeg",
           "alt": "Grafiksel Yazı"
+        },
+        "link": {
+          "href": "/solutions/addons/graphical-text",
+          "label": "İncele"
         }
       },
       {
@@ -29170,6 +29254,10 @@
         "image": {
           "src": "/assets/solutions/cds/sketchup-converter.jpg",
           "alt": "SketchUp Dönüştürücü"
+        },
+        "link": {
+          "href": "/solutions/addons/sketchup-converter",
+          "label": "İncele"
         }
       }
     ],
@@ -40392,7 +40480,11 @@
         "items": [
           "Borulama Tesisat ve Kritik Devre Hesabı, Merkezi Basınçlandırma ve Ana Dağıtım Hattı, Sonuçları Değerlendirme İmkanı, vb.",
           "Devamını Oku"
-        ]
+        ],
+        "link": {
+          "href": "/solutions/ax3000/sihhi-tesisat",
+          "label": "Devamını Oku"
+        }
       },
       {
         "heading": "Isıtma",
@@ -40400,7 +40492,11 @@
         "items": [
           "Borulama Tesisatı ve Kritik Devre Hesabı, Isı İhtiyacı, Optimum Isı, Mahal Listesi ve metraj, Radyatör hesabı ve yerleştirme, vb.",
           "Devamını Oku"
-        ]
+        ],
+        "link": {
+          "href": "/solutions/ax3000/isitma",
+          "label": "Devamını Oku"
+        }
       },
       {
         "heading": "Havalandırma",
@@ -40408,7 +40504,11 @@
         "items": [
           "Havalandırma Hesap, Planlama ve Konstrüksiyonu, Kanal Kesit Hesabı, Sonuçları Değerlendirme İmkanı, vb.",
           "Devamını Oku"
-        ]
+        ],
+        "link": {
+          "href": "/solutions/ax3000/havalandirma",
+          "label": "Devamını Oku"
+        }
       },
       {
         "heading": "Elektrik",
@@ -40416,7 +40516,11 @@
         "items": [
           "Kablo Hattı Konstrüksiyonu, Akıllı Elektrik Elemanları ve Armatür Yerleştirme, vb.",
           "Devamını Oku"
-        ]
+        ],
+        "link": {
+          "href": "/solutions/ax3000/elektrik",
+          "label": "Devamını Oku"
+        }
       },
       {
         "heading": "Konut Havalandırma",
@@ -40424,7 +40528,11 @@
         "items": [
           "Konut havalandırma sistemleri için profesyonel çözümler",
           "Devamını Oku"
-        ]
+        ],
+        "link": {
+          "href": "/solutions/ax3000/konut-havalandirma",
+          "label": "Devamını Oku"
+        }
       },
       {
         "heading": "Sprinkler / Fıskiye",
@@ -40432,7 +40540,11 @@
         "items": [
           "Türkiye İklim Verileriyle Soğuk Yükü Hesabı",
           "Devamını Oku"
-        ]
+        ],
+        "link": {
+          "href": "/solutions/ax3000/sprinkler",
+          "label": "Devamını Oku"
+        }
       },
       {
         "heading": "Enerji Kimlik Belgesi",
@@ -44292,6 +44404,10 @@
         "image": {
           "src": "/assets/solutions/cds/surus-egirisi.webp",
           "alt": "Sürüş Eğrisi"
+        },
+        "link": {
+          "href": "/solutions/addons/drive-curve",
+          "label": "İncele"
         }
       },
       {
@@ -44304,6 +44420,10 @@
         "image": {
           "src": "/assets/solutions/cds/celik-profil-bilesenleri.webp",
           "alt": "Çelik Profil Bileşenleri"
+        },
+        "link": {
+          "href": "/solutions/addons/steel-components",
+          "label": "İncele"
         }
       },
       {
@@ -44316,6 +44436,10 @@
         "image": {
           "src": "/assets/solutions/cds/parametrik-arazi.webp",
           "alt": "Parametrik Arazi"
+        },
+        "link": {
+          "href": "/solutions/addons/parametric-terrain",
+          "label": "İncele"
         }
       },
       {
@@ -44328,6 +44452,10 @@
         "image": {
           "src": "/assets/solutions/cds/ramp.webp",
           "alt": "Rampa"
+        },
+        "link": {
+          "href": "/solutions/addons/ramp",
+          "label": "İncele"
         }
       },
       {
@@ -44340,6 +44468,10 @@
         "image": {
           "src": "/assets/solutions/cds/geometry-tools.jpeg",
           "alt": "Geometri Araçları"
+        },
+        "link": {
+          "href": "/solutions/addons/geometry-tools",
+          "label": "İncele"
         }
       },
       {
@@ -44352,6 +44484,10 @@
         "image": {
           "src": "/assets/solutions/cds/dwg-converter.jpeg",
           "alt": "2B DWG Converter"
+        },
+        "link": {
+          "href": "/solutions/addons/2d-dwg-converter",
+          "label": "İncele"
         }
       },
       {
@@ -44364,6 +44500,10 @@
         "image": {
           "src": "/assets/solutions/cds/3d-dimensioning.jpeg",
           "alt": "3B Ölçülendirme"
+        },
+        "link": {
+          "href": "/solutions/addons/three-dimensioning",
+          "label": "İncele"
         }
       },
       {
@@ -44376,6 +44516,10 @@
         "image": {
           "src": "/assets/solutions/cds/graphic-text.jpeg",
           "alt": "Grafiksel Yazı"
+        },
+        "link": {
+          "href": "/solutions/addons/graphical-text",
+          "label": "İncele"
         }
       },
       {
@@ -44388,6 +44532,10 @@
         "image": {
           "src": "/assets/solutions/cds/sketchup-converter.jpg",
           "alt": "SketchUp Dönüştürücü"
+        },
+        "link": {
+          "href": "/solutions/addons/sketchup-converter",
+          "label": "İncele"
         }
       }
     ],

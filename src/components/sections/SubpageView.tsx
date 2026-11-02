@@ -29,6 +29,7 @@ import { ContactMap } from './ContactMap';
 import { ScalypsoPageContent } from './ScalypsoPageContent';
 import { ScalypsoSubpage } from './ScalypsoSubpage';
 import { ScalypsoModeler } from './ScalypsoModeler';
+import { SectionCardLink, withoutLinkLabel } from './SectionCardLink';
 
 const SECTION_LABELS: Record<string, string> = {
   products: 'ALLPLAN ÜRÜN AİLESİ',
@@ -389,11 +390,12 @@ export function SubpageView({
                         </h4>
                       )}
                       <div className="alu-stack" style={{ gap: 'var(--space-application-jsx-dense)' }}>
-                        {sec.items.map((paragraph, pIdx) => (
+                        {withoutLinkLabel(sec.items, sec.link).map((paragraph, pIdx) => (
                           <p key={pIdx} className="alu-body-sm" style={{ margin: 0 }}>
                             {paragraph}
                           </p>
                         ))}
+                        {sec.link && <SectionCardLink link={sec.link} heading={sec.heading} />}
                       </div>
                     </article>
                   );
@@ -428,11 +430,12 @@ export function SubpageView({
                           </h3>
                         )}
                         <div className="alu-stack" style={{ gap: 'var(--space-application-jsx-comfortable)' }}>
-                          {sec.items.map((paragraph, pIdx) => (
+                          {withoutLinkLabel(sec.items, sec.link).map((paragraph, pIdx) => (
                             <p key={pIdx} className="alu-body" style={{ margin: 0 }}>
                               {paragraph}
                             </p>
                           ))}
+                          {sec.link && <SectionCardLink link={sec.link} heading={sec.heading} />}
                         </div>
                       </div>
                     </article>

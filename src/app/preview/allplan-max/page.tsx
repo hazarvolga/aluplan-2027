@@ -9,6 +9,6 @@ export const metadata: Metadata = {
 };
 
 export default function MaxPreviewRoute() {
-  if (process.env.NODE_ENV === 'production') notFound();
+  if (process.env.NODE_ENV === 'production' && process.env.ALUPLAN_2027_PREVIEW !== '1') notFound();
   return <AllplanMaxPreviewPage />;
 }

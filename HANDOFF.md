@@ -1216,3 +1216,7 @@ Kullanıcı 2027 ana sayfasını şimdilik yeterli bulup ALLPLAN Max sayfasını
 - 189 Python testi, kaynak sözleşmesi, parite, stil ve token kontrolleri ile `pnpm build` ve typecheck geçti. Yetkilendirilmiş sürüm notu ve SDS2 başlık değişiklikleri parite politikasına yol bazında işlendi; rol sekmesi testleri ortak bileşene uyarlandı.
 - `next-env.d.ts` Next build tarafından üretim route tipleri için değiştirildi; kullanıcı dosyası korunarak commit dışı bırakıldı. `.claude/launch.json` da yerel izlenmeyen ayar olarak kalır. Dev server 127.0.0.1:3001 üzerinde çalışıyor.
 - Karşılaştırma ve diğer 2027 önizlemeleri production guard altında kalıyor; testlerin geçmesi yayın/kaynak-medya kabulünün tamamlandığı anlamına gelmez. Scalypso video oynatımı ve önceki kayıp bağlantı bulguları ayrıca incelenmeli.
+
+### 02.11.2026 — Vercel inceleme yayını hazırlığı
+- `ALUPLAN_2027_PREVIEW=1` yalnız Vercel projesi production ayarında kullanıldığında 2027 ana sayfası ve önizleme rotaları görünür; `X-Robots-Tag: noindex, nofollow` ve robots disallow uygulanır. Bayrak yokken mevcut production davranışı korunur. 189 test ve bayraklı production build, 8 rota ve header yerel doğrulandı.
+- Bu bir inceleme yayınıdır; gerçek alan adına geçişten önce bayrak, indexleme, kalıcı adresler, sitemap ve içerik kabulü tekrar değerlendirilmeli.

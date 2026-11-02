@@ -9,7 +9,7 @@ function ServiceTable({ rows, label }: { rows: readonly (readonly [string, boole
   return <div className={styles.tableWrap} role="region" aria-label={label} tabIndex={0}><table><thead><tr><th scope="col">{label}</th>{columns.map(c => <th scope="col" key={c}>{c}</th>)}</tr></thead><tbody>{rows.map(([name, ...values]) => <tr key={name}><th scope="row">{name}</th>{values.map((value, i) => <td key={i}>{value ? 'Dâhil' : '—'}</td>)}</tr>)}</tbody></table></div>;
 }
 export default function ProductLifecyclePreview() {
-  if (process.env.NODE_ENV === 'production') notFound();
+  if (process.env.NODE_ENV === 'production' && process.env.ALUPLAN_2027_PREVIEW !== '1') notFound();
   return <div className={styles.page}>
     <header className={styles.hero}><div className="alu-container"><p className={styles.kicker}>ALLPLAN · POLİTİKA</p><h1>Ürün yaşam döngüsü politikası</h1><p>Ürün bakım aşamaları, sürüm desteği ve sunulan hizmetler.</p></div></header>
     <div className={styles.nav}><nav className="alu-container" aria-label="Sayfa bölümleri"><a href="#policy">Politika</a><a href="#maintenance">Ürün bakımı</a><a href="#support">Sürüm desteği</a><a href="#dates">Ürün tarihleri</a><a href="#faq">Sık sorulan sorular</a></nav></div>

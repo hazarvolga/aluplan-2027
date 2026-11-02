@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default function Home2027PreviewPage() {
-  if (process.env.NODE_ENV === 'production') {
+  if (process.env.NODE_ENV === 'production' && process.env.ALUPLAN_2027_PREVIEW !== '1') {
     notFound();
   }
 

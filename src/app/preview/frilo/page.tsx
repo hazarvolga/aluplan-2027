@@ -15,7 +15,7 @@ const editions = [
   { title: 'FRILO Ultimate', items: ['Beton, çelik, ahşap ve yığma modüllerine tam erişim', 'Karma malzemeli yapılar için 2B ve 3B çerçeve sistemleri', 'Gelişmiş temel mühendisliği ve zemin–yapı kontrolleri', 'Farklı malzemelerde kapsamlı bileşen ve detay kontrolleri', 'BIMPLUS ile ALLPLAN, SCIA ve diğer araçlara bağlantılar'] },
 ];
 export default function FriloPreview() {
-  if (process.env.NODE_ENV === 'production') notFound();
+  if (process.env.NODE_ENV === 'production' && process.env.ALUPLAN_2027_PREVIEW !== '1') notFound();
   return <div>
     <section className={hero.hero}><div className={`alu-container ${hero.content}`}><p className="preview-kicker">FRILO · YAPI ANALİZİ</p><h1 className="alu-h1">Bileşen odaklı yapı analizi ve tasarım</h1><p className="alu-body">FRILO; beton, çelik, ahşap ve yığma yapıların bileşen odaklı analizi ve tasarımı için BIM bağlantıları ve Eurocode ile DIN temelli araçlar sunar.</p><ul className={hero.heroBenefits}><li>İhtiyaçlarınıza uygun araç seti</li><li>Yapı bileşenleri için hesaplar</li><li>Düzenli hesap raporları</li><li>Diğer araçlarla iş birliği</li></ul><a className="alu-button alu-button--primary alu-button--md" href={MAIN_QUOTE_FORM_URL}>Teklif isteyin ↗</a></div></section>
     <div className={hero.editionsSection}><div className="alu-container"><EditionCards title="FRILO sürümleri" editions={editions} /></div></div>

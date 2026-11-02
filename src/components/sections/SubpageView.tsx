@@ -113,20 +113,13 @@ export function SubpageView({
 
   const sectionBadgeLabel = SECTION_LABELS[page.section] || page.eyebrow;
 
-  if (page.path === '/solutions/scalypso/modeler') {
-    return <><ScalypsoModeler page={page} />{pageEndConversion && <PageEndConversion model={pageEndConversion} />}</>;
-  }
-
-  if (['/solutions/scalypso/mobile', '/solutions/scalypso/viewer'].includes(page.path)) {
-    return <><ScalypsoSubpage page={page} />{pageEndConversion && <PageEndConversion model={pageEndConversion} />}</>;
-  }
-
-  if (page.path === '/solutions/scalypso') {
-    return <><ScalypsoPageContent page={page} />{pageEndConversion && <PageEndConversion model={pageEndConversion} />}</>;
-  }
+  const scalypsoContent = page.path === '/solutions/scalypso/modeler' ? <ScalypsoModeler page={page} />
+    : ['/solutions/scalypso/mobile', '/solutions/scalypso/viewer'].includes(page.path) ? <ScalypsoSubpage page={page} />
+    : page.path === '/solutions/scalypso' ? <ScalypsoPageContent page={page} /> : null;
 
   return (
     <>
+      {scalypsoContent ? scalypsoContent : <>
       {/* Subpage Hero Stage */}
       {page.path !== '/references' && <SubpageHeroSection
         page={page}
@@ -568,6 +561,7 @@ export function SubpageView({
         </section>
       )}
 
+      </>}
       {pageEndConversion && <PageEndConversion model={pageEndConversion} />}
 
       {/* Global Video Popup Modal (Cinema Overlay for 91+ Product & Solution Video Cards) */}

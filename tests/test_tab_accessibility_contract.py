@@ -41,13 +41,13 @@ class TabAccessibilityContractTests(unittest.TestCase):
 
     def test_all_tab_families_use_roving_focus_and_shared_keyboard_behavior(self):
         component_markers = {
-            "src/components/sections/HomepageView.tsx": [
+            "src/components/sections/DisciplineWorkflowSection.tsx": [
                 "handleStructuredTabKey",
                 "tabIndex={isSelected ? 0 : -1}",
                 "onKeyDown={(event) => handleStructuredTabKey",
-                'aria-controls="pathway-panel"',
-                'id="pathway-panel"',
-                "aria-labelledby={`pathway-tab-${activeRole.id}`}",
+                'aria-controls={`${id}-panel`}',
+                'id={`${id}-panel`}',
+                "aria-labelledby={`${id}-tab-${activeRole.id}`}",
             ],
             "src/components/sections/ProfessionalServicesSection.tsx": [
                 "handleStructuredTabKey",

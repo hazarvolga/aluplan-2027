@@ -594,7 +594,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
                 self.assertIn(marker, component)
 
         self.assertIn("import { BenefitsSection } from './BenefitsSection';", parent)
-        self.assertIn("<BenefitsSection benefits={layout.benefits} />", parent)
+        self.assertIn("<BenefitsSection benefits={layout.benefits} variant=", parent)
         self.assertNotIn("alu-benefits-grid", parent)
         self.assertNotIn("alu-benefit-card", parent)
 

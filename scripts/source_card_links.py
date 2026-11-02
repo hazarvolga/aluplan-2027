@@ -5,8 +5,9 @@ read-only 2026 source snapshot. Cards are matched to sections in source order by
 exact heading, so a repeated heading outside the card grid stays unlinked.
 """
 
+import html
+import re
 from dataclasses import dataclass
-from pathlib import Path
 
 from extract_structured_pages import (
     EV_DIR,
@@ -46,6 +47,29 @@ CARD_SOURCES: tuple[CardSource, ...] = (
         label="Devamını Oku",
     ),
 )
+
+
+@dataclass(frozen=True)
+class ActionSource:
+    route: str
+    source_file: str
+    start_marker: str
+
+
+AX3000_MODULE_SLUGS = ("elektrik", "havalandirma", "isitma", "konut-havalandirma", "sihhi-tesisat", "sprinkler")
+
+ACTION_SOURCES: tuple[ActionSource, ...] = (
+    ActionSource("/solutions-v2/connect-license", "app/solutions-v2/connect-license/page.tsx", "{/* Final CTA */}"),
+    ActionSource("/solutions/ax3000-mekanik-tesisat", "app/solutions/ax3000-mekanik-tesisat/ClientPage.tsx", 'key="ekb"'),
+    ActionSource("/solutions/ax3000-mekanik-tesisat", "app/solutions/ax3000-mekanik-tesisat/ClientPage.tsx", 'key="documents"'),
+    *(
+        ActionSource(f"/solutions/ax3000/{slug}", f"app/solutions/ax3000/{slug}/ClientPage.tsx", 'className="space-y-3"')
+        for slug in AX3000_MODULE_SLUGS
+    ),
+)
+
+JSX_LINK = re.compile(r'<(?:Link|a)\s+href="([^"]+)"[^>]*>([^<{]+)')
+JSX_HEADING = re.compile(r"<h[1-6][^>]*>([^<{]+)</h[1-6]>")
 
 
 def read_source(relative: str) -> str:
@@ -117,10 +141,48 @@ def extract_document_groups() -> list[dict]:
     return groups
 
 
+def clean_jsx_text(raw: str) -> str:
+    return " ".join(html.unescape(raw).split())
+
+
+def extract_action_block(spec: ActionSource) -> tuple[str, list[dict]]:
+    text = read_source(spec.source_file)
+    start = text.find(spec.start_marker)
+    if start == -1:
+        raise ValueError(f"{spec.source_file}: marker {spec.start_marker!r} not found")
+    end = text.find("</section>", start)
+    block = text[start:end]
+    inner = JSX_HEADING.findall(block)
+    preceding = JSX_HEADING.findall(text[:start])
+    headings = inner or preceding[-1:]
+    if not headings:
+        raise ValueError(f"{spec.source_file}: no heading for block {spec.start_marker!r}")
+    actions = [
+        {"label": clean_jsx_text(label), "href": href, "external": href.startswith("http")}
+        for href, label in JSX_LINK.findall(block)
+    ]
+    if not actions:
+        raise ValueError(f"{spec.source_file}: no links in block {spec.start_marker!r}")
+    return clean_jsx_text(headings[0]), actions
+
+
+def attach_actions(sections: list[dict], heading: str, actions: list[dict], route: str) -> list[dict]:
+    index = next((i for i, s in enumerate(sections) if s.get("heading") == heading), None)
+    if index is None:
+        raise ValueError(f"{route}: no section {heading!r} for action links")
+    updated = list(sections)
+    updated[index] = {**updated[index], "actions": actions}
+    return updated
+
+
 def apply_source_card_links(pages: dict) -> dict:
     updated = dict(pages)
     for spec in CARD_SOURCES:
         page = updated[spec.route]
         updated[spec.route] = {**page, "sections": link_sections(page["sections"], extract_cards(spec), spec.route)}
+    for action_spec in ACTION_SOURCES:
+        heading, actions = extract_action_block(action_spec)
+        page = updated[action_spec.route]
+        updated[action_spec.route] = {**page, "sections": attach_actions(page["sections"], heading, actions, action_spec.route)}
     updated[AX3000_DOCS_ROUTE] = {**updated[AX3000_DOCS_ROUTE], "documentGroups": extract_document_groups()}
     return updated

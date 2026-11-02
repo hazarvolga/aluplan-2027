@@ -25,6 +25,10 @@ export interface SectionLink {
   label: string;
 }
 
+export interface SectionAction extends SectionLink {
+  external: boolean;
+}
+
 export interface DownloadDocument {
   title: string;
   language: string;
@@ -52,6 +56,7 @@ export interface PageSection {
   image?: ContentImage;
   statValue?: string;
   link?: SectionLink;
+  actions?: SectionAction[];
 }
 
 export interface ContentLink {

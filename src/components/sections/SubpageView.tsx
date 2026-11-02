@@ -29,7 +29,7 @@ import { ContactMap } from './ContactMap';
 import { ScalypsoPageContent } from './ScalypsoPageContent';
 import { ScalypsoSubpage } from './ScalypsoSubpage';
 import { ScalypsoModeler } from './ScalypsoModeler';
-import { SectionCardLink, withoutLinkLabel } from './SectionCardLink';
+import { SectionActions, SectionCardLink, visibleSectionItems } from './SectionLinks';
 import { DocumentGroupsSection, documentSectionHeadings } from './DocumentGroupsSection';
 
 const SECTION_LABELS: Record<string, string> = {
@@ -392,12 +392,13 @@ export function SubpageView({
                         </h4>
                       )}
                       <div className="alu-stack" style={{ gap: 'var(--space-application-jsx-dense)' }}>
-                        {withoutLinkLabel(sec.items, sec.link).map((paragraph, pIdx) => (
+                        {visibleSectionItems(sec).map((paragraph, pIdx) => (
                           <p key={pIdx} className="alu-body-sm" style={{ margin: 0 }}>
                             {paragraph}
                           </p>
                         ))}
                         {sec.link && <SectionCardLink link={sec.link} heading={sec.heading} />}
+                        {sec.actions && <SectionActions actions={sec.actions} currentPath={page.path} />}
                       </div>
                     </article>
                   );
@@ -434,12 +435,13 @@ export function SubpageView({
                           </h3>
                         )}
                         <div className="alu-stack" style={{ gap: 'var(--space-application-jsx-comfortable)' }}>
-                          {withoutLinkLabel(sec.items, sec.link).map((paragraph, pIdx) => (
+                          {visibleSectionItems(sec).map((paragraph, pIdx) => (
                             <p key={pIdx} className="alu-body" style={{ margin: 0 }}>
                               {paragraph}
                             </p>
                           ))}
                           {sec.link && <SectionCardLink link={sec.link} heading={sec.heading} />}
+                          {sec.actions && <SectionActions actions={sec.actions} currentPath={page.path} />}
                         </div>
                       </div>
                     </article>

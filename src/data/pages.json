@@ -19122,6 +19122,23 @@
           "Allplan Connect'e Git",
           "Ekip Üyelerine Lisans Atama Rehberi",
           "Lisans Yöneticisi Bilgi Formu"
+        ],
+        "actions": [
+          {
+            "label": "Allplan Connect'e Git",
+            "href": "https://connect2.allplan.com/",
+            "external": true
+          },
+          {
+            "label": "Ekip Üyelerine Lisans Atama Rehberi",
+            "href": "/solutions-v2/connect-license/how-to-assign",
+            "external": false
+          },
+          {
+            "label": "Lisans Yöneticisi Bilgi Formu",
+            "href": "https://forms.office.com/r/HSrhvAkYmb",
+            "external": true
+          }
         ]
       }
     ],
@@ -40635,6 +40652,13 @@
           "BEP Yönetmeliğine göre çizimden hesap yapan tek çözüm",
           "Devamını Oku",
           "AX3000 Doküman Merkezi"
+        ],
+        "actions": [
+          {
+            "label": "Devamını Oku",
+            "href": "/solutions/ax3000-yapi-fizigi",
+            "external": false
+          }
         ]
       },
       {
@@ -40643,6 +40667,13 @@
         "items": [
           "AX3000 modüllerini ve teknik fonksiyonlarını inceleyin. Ürün broşürlerini ve fonksiyon açıklamalarını PDF veya Word formatında indirin.",
           "AX3000 Dokümanları"
+        ],
+        "actions": [
+          {
+            "label": "AX3000 Dokümanları",
+            "href": "/products/ax3000/dokumanlar",
+            "external": false
+          }
         ]
       }
     ],
@@ -41656,6 +41687,43 @@
           "Sprinkler (Fıskiye)",
           "Sıhhi Tesisat",
           "AX3000 Dokümanları"
+        ],
+        "actions": [
+          {
+            "label": "Elektrik Temel",
+            "href": "/solutions/ax3000/elektrik",
+            "external": false
+          },
+          {
+            "label": "Havalandırma",
+            "href": "/solutions/ax3000/havalandirma",
+            "external": false
+          },
+          {
+            "label": "Isıtma",
+            "href": "/solutions/ax3000/isitma",
+            "external": false
+          },
+          {
+            "label": "Konut Havalandırma",
+            "href": "/solutions/ax3000/konut-havalandirma",
+            "external": false
+          },
+          {
+            "label": "Sprinkler (Fıskiye)",
+            "href": "/solutions/ax3000/sprinkler",
+            "external": false
+          },
+          {
+            "label": "Sıhhi Tesisat",
+            "href": "/solutions/ax3000/sihhi-tesisat",
+            "external": false
+          },
+          {
+            "label": "AX3000 Dokümanları",
+            "href": "/products/ax3000/dokumanlar",
+            "external": false
+          }
         ]
       }
     ],
@@ -41962,6 +42030,43 @@
           "Sprinkler (Fıskiye)",
           "Sıhhi Tesisat",
           "AX3000 Dokümanları"
+        ],
+        "actions": [
+          {
+            "label": "Elektrik Temel",
+            "href": "/solutions/ax3000/elektrik",
+            "external": false
+          },
+          {
+            "label": "Havalandırma",
+            "href": "/solutions/ax3000/havalandirma",
+            "external": false
+          },
+          {
+            "label": "Isıtma",
+            "href": "/solutions/ax3000/isitma",
+            "external": false
+          },
+          {
+            "label": "Konut Havalandırma",
+            "href": "/solutions/ax3000/konut-havalandirma",
+            "external": false
+          },
+          {
+            "label": "Sprinkler (Fıskiye)",
+            "href": "/solutions/ax3000/sprinkler",
+            "external": false
+          },
+          {
+            "label": "Sıhhi Tesisat",
+            "href": "/solutions/ax3000/sihhi-tesisat",
+            "external": false
+          },
+          {
+            "label": "AX3000 Dokümanları",
+            "href": "/products/ax3000/dokumanlar",
+            "external": false
+          }
         ]
       }
     ],
@@ -42258,6 +42363,43 @@
           "Sprinkler (Fıskiye)",
           "Sıhhi Tesisat",
           "AX3000 Dokümanları"
+        ],
+        "actions": [
+          {
+            "label": "Elektrik Temel",
+            "href": "/solutions/ax3000/elektrik",
+            "external": false
+          },
+          {
+            "label": "Havalandırma",
+            "href": "/solutions/ax3000/havalandirma",
+            "external": false
+          },
+          {
+            "label": "Isıtma",
+            "href": "/solutions/ax3000/isitma",
+            "external": false
+          },
+          {
+            "label": "Konut Havalandırma",
+            "href": "/solutions/ax3000/konut-havalandirma",
+            "external": false
+          },
+          {
+            "label": "Sprinkler (Fıskiye)",
+            "href": "/solutions/ax3000/sprinkler",
+            "external": false
+          },
+          {
+            "label": "Sıhhi Tesisat",
+            "href": "/solutions/ax3000/sihhi-tesisat",
+            "external": false
+          },
+          {
+            "label": "AX3000 Dokümanları",
+            "href": "/products/ax3000/dokumanlar",
+            "external": false
+          }
         ]
       },
       {
@@ -42440,6 +42582,43 @@
           "Sprinkler (Fıskiye)",
           "Sıhhi Tesisat",
           "AX3000 Dokümanları"
+        ],
+        "actions": [
+          {
+            "label": "Elektrik Temel",
+            "href": "/solutions/ax3000/elektrik",
+            "external": false
+          },
+          {
+            "label": "Havalandırma",
+            "href": "/solutions/ax3000/havalandirma",
+            "external": false
+          },
+          {
+            "label": "Isıtma",
+            "href": "/solutions/ax3000/isitma",
+            "external": false
+          },
+          {
+            "label": "Konut Havalandırma",
+            "href": "/solutions/ax3000/konut-havalandirma",
+            "external": false
+          },
+          {
+            "label": "Sprinkler (Fıskiye)",
+            "href": "/solutions/ax3000/sprinkler",
+            "external": false
+          },
+          {
+            "label": "Sıhhi Tesisat",
+            "href": "/solutions/ax3000/sihhi-tesisat",
+            "external": false
+          },
+          {
+            "label": "AX3000 Dokümanları",
+            "href": "/products/ax3000/dokumanlar",
+            "external": false
+          }
         ]
       }
     ],
@@ -42702,6 +42881,43 @@
           "Sprinkler (Fıskiye)",
           "Sıhhi Tesisat",
           "AX3000 Dokümanları"
+        ],
+        "actions": [
+          {
+            "label": "Elektrik Temel",
+            "href": "/solutions/ax3000/elektrik",
+            "external": false
+          },
+          {
+            "label": "Havalandırma",
+            "href": "/solutions/ax3000/havalandirma",
+            "external": false
+          },
+          {
+            "label": "Isıtma",
+            "href": "/solutions/ax3000/isitma",
+            "external": false
+          },
+          {
+            "label": "Konut Havalandırma",
+            "href": "/solutions/ax3000/konut-havalandirma",
+            "external": false
+          },
+          {
+            "label": "Sprinkler (Fıskiye)",
+            "href": "/solutions/ax3000/sprinkler",
+            "external": false
+          },
+          {
+            "label": "Sıhhi Tesisat",
+            "href": "/solutions/ax3000/sihhi-tesisat",
+            "external": false
+          },
+          {
+            "label": "AX3000 Dokümanları",
+            "href": "/products/ax3000/dokumanlar",
+            "external": false
+          }
         ]
       }
     ],
@@ -42876,6 +43092,43 @@
           "Sprinkler (Fıskiye)",
           "Sıhhi Tesisat",
           "AX3000 Dokümanları"
+        ],
+        "actions": [
+          {
+            "label": "Elektrik Temel",
+            "href": "/solutions/ax3000/elektrik",
+            "external": false
+          },
+          {
+            "label": "Havalandırma",
+            "href": "/solutions/ax3000/havalandirma",
+            "external": false
+          },
+          {
+            "label": "Isıtma",
+            "href": "/solutions/ax3000/isitma",
+            "external": false
+          },
+          {
+            "label": "Konut Havalandırma",
+            "href": "/solutions/ax3000/konut-havalandirma",
+            "external": false
+          },
+          {
+            "label": "Sprinkler (Fıskiye)",
+            "href": "/solutions/ax3000/sprinkler",
+            "external": false
+          },
+          {
+            "label": "Sıhhi Tesisat",
+            "href": "/solutions/ax3000/sihhi-tesisat",
+            "external": false
+          },
+          {
+            "label": "AX3000 Dokümanları",
+            "href": "/products/ax3000/dokumanlar",
+            "external": false
+          }
         ]
       },
       {

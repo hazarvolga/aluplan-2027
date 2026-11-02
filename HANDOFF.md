@@ -1210,3 +1210,9 @@ Kullanıcı 2027 ana sayfasını şimdilik yeterli bulup ALLPLAN Max sayfasını
 - Doğrulama: `pnpm typecheck`, `pnpm styles:check` ve `python3 -m unittest tests/test_page_end_conversion.py` geçti. `pnpm test` 189 testte 11 başarısızlıkla duruyor: token ölçümleri, kaynak link/içerik paritesi, sayfa sonu render sınırı, benefits sınırı, taşınan rol sekmesi sözleşmesi ve tema kontratı. Tam test yeşil değil; failures test beklentisi veya gerçek regresyon açısından ayrı ayrı incelenmeli.
 - Açık işler: `/products` sayfası canlı kaynakla eksik içerik karşılaştırması; Scalypso video oynatımının doğrulanması; önceden raporlanan connect-login ve SketchUp Converter bağlantı kayıpları; 2027 sayfalarının üretim rotaları/noindex/sitemap kararı. Karşılaştırma bağlantısı yalnız geliştirmede 2027 tablosuna gider; üretimde PDF korunur. Yayın yapılmadı.
 - `.claude/launch.json` yerel, izlenmeyen geliştirme ayarı olarak bırakıldı. Mevcut eski siteden ve geçmişteki onaylı form yönlendirmesinden sapmalar ayrıca incelenmeli.
+
+### 02.11.2026 — Testler ve GitHub düzeni
+- `architectural-sheet-concept/` GitHub main dalından kaldırıldı (d7fa308); yerel dosyalar korundu ve .gitignore ile yerel tutuluyor. Çalışma dalında da takipten çıkarıldı (3864aa7).
+- 189 Python testi, kaynak sözleşmesi, parite, stil ve token kontrolleri ile `pnpm build` ve typecheck geçti. Yetkilendirilmiş sürüm notu ve SDS2 başlık değişiklikleri parite politikasına yol bazında işlendi; rol sekmesi testleri ortak bileşene uyarlandı.
+- `next-env.d.ts` Next build tarafından üretim route tipleri için değiştirildi; kullanıcı dosyası korunarak commit dışı bırakıldı. `.claude/launch.json` da yerel izlenmeyen ayar olarak kalır. Dev server 127.0.0.1:3001 üzerinde çalışıyor.
+- Karşılaştırma ve diğer 2027 önizlemeleri production guard altında kalıyor; testlerin geçmesi yayın/kaynak-medya kabulünün tamamlandığı anlamına gelmez. Scalypso video oynatımı ve önceki kayıp bağlantı bulguları ayrıca incelenmeli.

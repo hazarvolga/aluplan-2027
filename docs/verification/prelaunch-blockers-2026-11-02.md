@@ -49,7 +49,7 @@ Plan: `docs/superpowers/plans/2026-11-02-prelaunch-blockers.md`. Dal: `codex/pre
 - **`/preview/product-lifecycle`:** 2027 ana sayfası bu adrese bağlantı veriyor, bu yüzden yayın bayrağıyla açık. Kalıcı URL ve "Yerel Önizleme" başlığı için karar gerekiyor.
 - **Bağlantı farkları:** `docs/verification/main-link-gap-2026-11-02.md` D bölümündeki farklar sınıflandırılmalı.
 - **OG görselleri:** `/2027/max` OG görseli AI üretimi hero, `/2027/scia` OG görseli FRILO hero'su. Marka ve hak onayı açık.
-- **Vercel ortam değişkenleri (K2):** Preview ve Production için `ALUPLAN_SHOW_2027=1` ve `ALUPLAN_BLOCK_INDEXING=1` tanımlanmalı, ardından `ALUPLAN_2027_PREVIEW` kaldırılmalı. Eski değişken yeni değişkenler olmadan dururken `next.config.mjs` build'i bilerek durdurur (`25562a6` sonrası koruma). Böylece indeks engeli sessizce kalkamaz.
+- **Vercel ortam değişkenleri (K2):** Preview ve Production için `ALUPLAN_SHOW_2027=1` ve `ALUPLAN_BLOCK_INDEXING=1` tanımlanmalı, ardından `ALUPLAN_2027_PREVIEW` kaldırılmalı. Eski değişken yeni değişkenler olmadan dururken `next.config.mjs` build'i bilerek durdurur (`3ded119`). Böylece indeks engeli sessizce kalkamaz.
 - **`/2027/compare` iç notu:** sayfada görünen "Bu yerel inceleme, uluslararası üretici sayfasına dayanır. Türkiye paket kapsamı ve koşulları doğrulanmalıdır." metni, sayfa gerçek alan adında indekslenirse ziyaretçiye ve arama motoruna yayınlanır. Metnin kalması, değişmesi ya da kaldırılması içerik kararıdır (`src/app/2027/compare/page.tsx:19`).
 
 ## Bağımsız kod incelemesi ve düzeltmeler

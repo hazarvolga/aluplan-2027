@@ -5,14 +5,15 @@ import { getPageData } from '@/lib/site-data';
 import { buildPageJsonLd } from '@/lib/schema';
 import { HomepageView } from '@/components/sections/HomepageView';
 import { Homepage2027PreviewView } from '@/components/sections/Homepage2027PreviewView';
+import { getHomepageVariant, isIndexingBlocked } from '@/lib/release-flags';
 
 export function generateMetadata(): Metadata {
-  if ((process.env.NODE_ENV !== 'production' || process.env.ALUPLAN_2027_PREVIEW === '1')) return { title: 'Aluplan 2027 | Yerel inceleme', robots: { index: false, follow: false } };
-  return buildPageMetadata('/');
+  const metadata = buildPageMetadata('/');
+  return isIndexingBlocked() ? { ...metadata, robots: { index: false, follow: false } } : metadata;
 }
 
 export default function HomePage() {
-  if ((process.env.NODE_ENV !== 'production' || process.env.ALUPLAN_2027_PREVIEW === '1')) return <Homepage2027PreviewView />;
+  if (getHomepageVariant() === 'release-2027') return <Homepage2027PreviewView />;
   const page = getPageData('/')!;
   const jsonLd = buildPageJsonLd(page);
 

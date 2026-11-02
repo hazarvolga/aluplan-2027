@@ -4,6 +4,7 @@ import type { ReactElement } from 'react';
 import type { ContentImage, PageRecord } from '@/lib/site-data';
 import { MAIN_QUOTE_FORM_URL, TRIAL_CTA_URL } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
+import { isReleaseContentEnabled } from '@/lib/release-flags';
 import type {
   HeroBackgroundSources,
   HeroVisualAssetKind,
@@ -128,7 +129,7 @@ export function SubpageHeroSection({
                 <AluIcon name="external-link" size="sm" />
               </a>
               {page.path.startsWith('/products') && (
-                process.env.NODE_ENV === 'production' && process.env.ALUPLAN_2027_PREVIEW !== '1' ? (
+                !isReleaseContentEnabled() ? (
                   <a href="/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf" target="_blank" rel="noopener noreferrer" className="alu-button alu-button--ghost alu-button--md">
                     <AluIcon name="file-text" size="sm" />
                     <span>Paket Karşılaştırma PDF</span>

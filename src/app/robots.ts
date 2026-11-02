@@ -1,10 +1,11 @@
 import type { MetadataRoute } from 'next';
 import { SITE_ORIGIN } from '@/lib/site-data';
+import { isIndexingBlocked } from '@/lib/release-flags';
 
 const DISALLOW_PATHS = ['/api/', '/_next/', '/health', '/hero-3d', '/test-webgl'];
 
 export default function robots(): MetadataRoute.Robots {
-  if (process.env.ALUPLAN_2027_PREVIEW === '1') return { rules: { userAgent: '*', disallow: '/' } };
+  if (isIndexingBlocked()) return { rules: { userAgent: '*', disallow: '/' } };
   return {
     rules: [
       {

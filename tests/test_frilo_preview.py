@@ -5,8 +5,8 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 class FriloPreviewContract(unittest.TestCase):
     def test_source_sections_and_preview_isolation(self):
-        page = (ROOT / 'src/app/preview/frilo/page.tsx').read_text()
-        self.assertIn("process.env.NODE_ENV === 'production'", page)
+        page = (ROOT / 'src/app/2027/frilo/page.tsx').read_text()
+        self.assertIn("!isReleaseContentEnabled()", page)
         self.assertIn('index: false', page)
         for anchor in ('frilo-overview', 'frilo-capabilities', 'frilo-stories', 'frilo-faq'):
             self.assertIn(f'id="{anchor}"', page)

@@ -6,7 +6,8 @@ import { ProductHero } from '@/components/sections/ProductHero';
 import { EditionCards } from '@/components/sections/EditionCards';
 import { PreviewClosingSection } from '@/components/sections/PreviewClosingSection';
 import { MAIN_QUOTE_FORM_URL } from '@/lib/site-data';
-import styles from '@/app/preview/frilo/hero.module.css';
+import styles from '@/app/2027/frilo/hero.module.css';
+import { isReleaseContentEnabled } from '@/lib/release-flags';
 
 export const metadata: Metadata = { title: 'SCIA | Yerel inceleme', robots: { index: false, follow: false, nocache: true } };
 const editions = [
@@ -27,7 +28,7 @@ const faq = [
  ['Sürümler arasında yükseltme yapılabilir mi?','Evet. Ekipler, projeleri karmaşıklaştıkça veya gelişmiş analiz ihtiyaçları arttıkça daha üst sürümlere geçebilir.'],
 ];
 export default function SciaPage(){
- if(process.env.NODE_ENV === 'production' && process.env.ALUPLAN_2027_PREVIEW !== '1') notFound();
+ if(!isReleaseContentEnabled()) notFound();
  return <div><div id="scia-top"><ProductHero eyebrow="SCIA" title="Yapı analizi ve tasarım" description="SCIA, bina, altyapı ve karmaşık taşıyıcı sistemler üzerinde çalışan mühendisler için yapı analizi ve tasarım araçları sunar." image="/assets/previews/frilo/frilo-hero.jpg" actions={[{label:'Teklif isteyin ↗',href:MAIN_QUOTE_FORM_URL,variant:'primary'}]} /></div>
  <div className={styles.editionsSection}><div className="alu-container"><EditionCards title="SCIA sürümleri" editions={editions}/></div></div>
  <div className={styles.navigationSection}><nav className={`alu-container ${styles.tabList}`} aria-label="SCIA sayfa bölümleri"><a href="#scia-top">SCIA</a><a href="#scia-capabilities">Yetenekler</a><a href="#scia-stories">Başarı hikâyeleri</a><a href="#scia-faq">Sık sorulan sorular</a></nav></div>

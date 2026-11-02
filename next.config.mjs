@@ -44,13 +44,16 @@ const securityHeaders = [
 
 const nextConfig = {
   poweredByHeader: false,
-  env: { ALUPLAN_2027_PREVIEW: process.env.ALUPLAN_2027_PREVIEW ?? '0' },
+  env: {
+    ALUPLAN_SHOW_2027: process.env.ALUPLAN_SHOW_2027 ?? '0',
+    ALUPLAN_BLOCK_INDEXING: process.env.ALUPLAN_BLOCK_INDEXING ?? '0'
+  },
   reactStrictMode: true,
   async headers() {
     return [
       {
         source: '/:path*',
-        headers: process.env.ALUPLAN_2027_PREVIEW === '1'
+        headers: process.env.ALUPLAN_BLOCK_INDEXING === '1'
           ? [...securityHeaders, { key: 'X-Robots-Tag', value: 'noindex, nofollow' }]
           : securityHeaders
       }

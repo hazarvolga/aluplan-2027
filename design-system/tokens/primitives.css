@@ -344,6 +344,8 @@
   --ref-size-preview-section-heading-measure: 52rem;
   --ref-size-preview-meta-measure: 70ch;
   --ref-size-preview-bimflex-media-min: 26rem;
+  --ref-size-preview-bimflex-compact-width: 28rem;
+  --ref-size-preview-bimflex-compact-height: 20rem;
   --ref-size-preview-bimflex-logo-width: 12rem;
   --ref-size-preview-bimflex-tile-min-height: 12rem;
   --ref-size-preview-innovation-card-min-height: 18rem;

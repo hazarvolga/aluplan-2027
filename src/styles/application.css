@@ -4030,8 +4030,8 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 .preview-bimflex__logo { width: min(5rem, 35%); }
 .preview-bimflex__media {
   width: 100%;
-  max-width: 28rem;
-  height: 20rem;
+  max-width: var(--size-preview-bimflex-compact-width);
+  height: var(--size-preview-bimflex-compact-height);
   justify-self: end;
   grid-template-rows: repeat(2, minmax(0, 1fr));
 }

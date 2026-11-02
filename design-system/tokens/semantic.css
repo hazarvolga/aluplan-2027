@@ -214,6 +214,8 @@
   --size-preview-section-heading-measure: var(--ref-size-preview-section-heading-measure);
   --size-preview-meta-measure: var(--ref-size-preview-meta-measure);
   --size-preview-bimflex-media-min: var(--ref-size-preview-bimflex-media-min);
+  --size-preview-bimflex-compact-width: var(--ref-size-preview-bimflex-compact-width);
+  --size-preview-bimflex-compact-height: var(--ref-size-preview-bimflex-compact-height);
   --size-preview-bimflex-logo-width: var(--ref-size-preview-bimflex-logo-width);
   --size-preview-bimflex-tile-min-height: var(--ref-size-preview-bimflex-tile-min-height);
   --size-preview-innovation-card-min-height: var(--ref-size-preview-innovation-card-min-height);
@@ -745,6 +747,8 @@
   --size-preview-section-heading-measure: var(--ref-size-preview-section-heading-measure);
   --size-preview-meta-measure: var(--ref-size-preview-meta-measure);
   --size-preview-bimflex-media-min: var(--ref-size-preview-bimflex-media-min);
+  --size-preview-bimflex-compact-width: var(--ref-size-preview-bimflex-compact-width);
+  --size-preview-bimflex-compact-height: var(--ref-size-preview-bimflex-compact-height);
   --size-preview-bimflex-logo-width: var(--ref-size-preview-bimflex-logo-width);
   --size-preview-bimflex-tile-min-height: var(--ref-size-preview-bimflex-tile-min-height);
   --size-preview-innovation-card-min-height: var(--ref-size-preview-innovation-card-min-height);
@@ -1412,6 +1416,8 @@
   --size-preview-section-heading-measure: var(--ref-size-preview-section-heading-measure);
   --size-preview-meta-measure: var(--ref-size-preview-meta-measure);
   --size-preview-bimflex-media-min: var(--ref-size-preview-bimflex-media-min);
+  --size-preview-bimflex-compact-width: var(--ref-size-preview-bimflex-compact-width);
+  --size-preview-bimflex-compact-height: var(--ref-size-preview-bimflex-compact-height);
   --size-preview-bimflex-logo-width: var(--ref-size-preview-bimflex-logo-width);
   --size-preview-bimflex-tile-min-height: var(--ref-size-preview-bimflex-tile-min-height);
   --size-preview-innovation-card-min-height: var(--ref-size-preview-innovation-card-min-height);

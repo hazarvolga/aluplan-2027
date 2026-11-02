@@ -1220,3 +1220,12 @@ Kullanıcı 2027 ana sayfasını şimdilik yeterli bulup ALLPLAN Max sayfasını
 ### 02.11.2026 — Vercel inceleme yayını hazırlığı
 - `ALUPLAN_2027_PREVIEW=1` yalnız Vercel projesi production ayarında kullanıldığında 2027 ana sayfası ve önizleme rotaları görünür; `X-Robots-Tag: noindex, nofollow` ve robots disallow uygulanır. Bayrak yokken mevcut production davranışı korunur. 189 test ve bayraklı production build, 8 rota ve header yerel doğrulandı.
 - Bu bir inceleme yayınıdır; gerçek alan adına geçişten önce bayrak, indexleme, kalıcı adresler, sitemap ve içerik kabulü tekrar değerlendirilmeli.
+
+### 02.11.2026 — Ürün sekmeleri, Max denetimi ve karşılaştırma bağlantısı
+- Ana sayfa ürün sekmelerine seçilen ürüne göre sağdan görseller yerel olarak eklendi; altı görsel/sekme ve mobil taşma kontrol edildi. Vercel'e henüz gönderilmedi.
+- ALLPLAN Max kaynak sayfa ile Vercel ve yerel karşılaştırıldı: ana bölümler, 3 özellik, 3 yorum ve 6 diğer özellik mevcut; yerel ve Vercel metni eşleşiyor ve 494f6dc commitinde. 4 yerel MP4 HTTP 206; ilk video düğmesi YouTube iframe açtı, gerçek oynatma ve diğer videolar henüz doğrulanmadı. Kaynaktaki video indirme bağlantısı eksik; anket başlığı yerelde h2 yerine etiket. İçerik tercümesi ve üretici medya hakları yayın öncesi kontrol edilmeli.
+- Vercel'de PDF bağlantısının kalmasının nedeni preview environment değişkeninin client bundle'da bulunmamasıydı; next.config içinde yalnız gizli olmayan ALUPLAN_2027_PREVIEW değeri build'e aktarıldı. Bayraklı production build ve tarayıcıda `/products/allplan-basic` hedefi `/2027/compare` doğrulandı; değişiklik henüz deploy edilmedi. 189 test geçti.
+- `/products/allplan` mevcut ürün sayfasıdır; üreticinin 2027 yenilikler sayfası için yerel `/2027/features` hazırlanmıştır. Ürün sekmesi mevcutta `/products/allplan` adresine, hero butonu `/2027/features` adresine gider; rota kararı kullanıcıyla netleştirilmeli.
+- Max denetimindeki video indirme yedeği ve anket başlığının h2 semantiği yerelde eklendi; güncel 189 test ve typecheck geçti. Bu düzeltmeler henüz Vercel'de değil.
+
+- 02.11.2026 hizalama: kullanıcı isteğiyle Connect parola sıfırlama ve SketchUp Converter kurulum kılavuzu bağlantıları geri getirildi; Setup bağlantısı zaten mevcuttu. Altı ürün sekmesi görseli yerel tarayıcıda; Max ilk video modalı ve 4 MP4 erişimi kontrol edildi. Tüm videoların tam oynatılması, 2027 içerik/doğruluk ve kaynak medya izinleri hâlâ yayın öncesi inceleme gerektirir. Önizleme bayrağı client bundle'a iletilerek PDF sorunu düzeltildi; typecheck, 189 test ve bayraklı build geçti.

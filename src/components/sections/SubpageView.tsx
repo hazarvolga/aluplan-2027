@@ -561,6 +561,11 @@ export function SubpageView({
         </section>
       )}
 
+      {['/solutions-v2/connect-login', '/solutions/addons/sketchup-converter'].includes(page.path) && (() => {
+        const labels = page.path === '/solutions-v2/connect-login' ? ['Parola Sıfırlama Sayfasına Git'] : ['Kurulum Kılavuzu'];
+        const links = page.contentLinks.filter(link => labels.includes(link.text));
+        return links.length > 0 && <section className="preview-section" aria-label="İlgili bağlantılar"><div className="alu-container alu-cluster">{links.map(link => <a key={link.href} className="alu-button alu-button--secondary alu-button--md" href={link.href} target="_blank" rel="noopener noreferrer">{link.text} ↗</a>)}</div></section>;
+      })()}
       </>}
       {pageEndConversion && <PageEndConversion model={pageEndConversion} />}
 

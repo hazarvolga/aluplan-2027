@@ -1229,3 +1229,5 @@ Kullanıcı 2027 ana sayfasını şimdilik yeterli bulup ALLPLAN Max sayfasını
 - Max denetimindeki video indirme yedeği ve anket başlığının h2 semantiği yerelde eklendi; güncel 189 test ve typecheck geçti. Bu düzeltmeler henüz Vercel'de değil.
 
 - 02.11.2026 hizalama: kullanıcı isteğiyle Connect parola sıfırlama ve SketchUp Converter kurulum kılavuzu bağlantıları geri getirildi; Setup bağlantısı zaten mevcuttu. Altı ürün sekmesi görseli yerel tarayıcıda; Max ilk video modalı ve 4 MP4 erişimi kontrol edildi. Tüm videoların tam oynatılması, 2027 içerik/doğruluk ve kaynak medya izinleri hâlâ yayın öncesi inceleme gerektirir. Önizleme bayrağı client bundle'a iletilerek PDF sorunu düzeltildi; typecheck, 189 test ve bayraklı build geçti.
+
+- Ana sayfadaki ALLPLAN ürün sekmesinin bağlantısı kullanıcı düzeltmesiyle `/2027/features` olarak değiştirildi; hero ile aynı 2027 yenilik sayfasına gider. Önceki `/products/allplan` mevcut URL korunur. Navigasyon testi ve tarayıcıda sekme/hedef kontrol edildi.

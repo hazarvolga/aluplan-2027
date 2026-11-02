@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aluplan 2027 — İçerik Envanteri Durumu</title>
+<style>
+  :root { --ink:#1e2a32; --muted:#5b6b74; --line:#dfe5e8; --teal:#0e7c86; --ok:#1a7f4e; --warn:#b0681a; --bg:#f6f8f9; }
+  * { box-sizing:border-box; }
+  body { font:15px/1.55 -apple-system, "Segoe UI", Roboto, sans-serif; color:var(--ink); background:var(--bg); margin:0; }
+  main { max-width:960px; margin:0 auto; padding:32px 20px 64px; }
+  h1 { font-size:26px; margin:0 0 4px; }
+  h2 { font-size:19px; margin:36px 0 12px; }
+  .sub { color:var(--muted); margin:0 0 24px; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
+  .card b { display:block; font-size:24px; }
+  .card span { color:var(--muted); font-size:13px; }
+  table { width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+  th, td { text-align:left; padding:9px 12px; border-bottom:1px solid var(--line); font-size:14px; vertical-align:top; }
+  th { background:#eef2f4; font-weight:600; }
+  tr:last-child td { border-bottom:0; }
+  td.pill { white-space:nowrap; }
+  .ok { color:var(--ok); font-weight:600; }
+  .warn { color:var(--warn); font-weight:600; }
+  .todo { background:#fff; border:1px solid var(--line); border-radius:10px; padding:6px 20px; }
+  .todo li { padding:8px 0; border-bottom:1px solid var(--line); }
+  .todo li:last-child { border-bottom:0; }
+  .todo li::marker { color:var(--teal); }
+  code { background:#eef2f4; padding:1px 5px; border-radius:4px; font-size:12.5px; }
+  .note { color:var(--muted); font-size:13px; margin-top:14px; }
+  a { color:var(--teal); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Aluplan 2027 — İçerik Envanteri</h1>
+  <p class="sub">Durum: 28.10.2026 · Aşama A → D tamamlandı · Kaynaklar commit'li (<code>docs/content-2027/</code>), push/deploy yok.</p>
+
+  <div class="cards">
+    <div class="card"><b>10</b><span>hedef sayfa</span></div>
+    <div class="card"><b>394</b><span>içerik birimi</span></div>
+    <div class="card"><b>13</b><span>web docx / 761 blok</span></div>
+    <div class="card"><b>20</b><span>kaynak belge / 775 blok</span></div>
+    <div class="card"><b>15</b><span>açık karar</span></div>
+  </div>
+
+  <h2>Aşama durumu</h2>
+  <table>
+    <tr><th>Aşama</th><th>Kapsam</th><th>Durum</th></tr>
+    <tr><td>A</td><td>Dosya envanteri (tüm kök klasörler, 3.965 dosya)</td><td class="ok">Tamamlandı</td></tr>
+    <tr><td>B1–B2</td><td>13 web docx + 18 edition girişi, birebir metin</td><td class="ok">Tamamlandı</td></tr>
+    <tr><td>B5</td><td>7 sales PDF metin katmanı</td><td class="ok">Tamamlandı</td></tr>
+    <tr><td>B6</td><td>Proof points (anonim yüzdeler)</td><td class="ok">Tamamlandı</td></tr>
+    <tr><td>C</td><td>Web envanteri: 10 sayfa × 394 birim + TR taslak — onaylandı</td><td class="ok">Tamamlandı</td></tr>
+    <tr><td>D</td><td><code>content-records.json</code> — 394 kayıt, makine okunur</td><td class="ok">Tamamlandı</td></tr>
+    <tr><td>B3</td><td>14 İngilizce messaging brief</td><td class="warn">Senin indirmen bekleniyor</td></tr>
+    <tr><td>B4</td><td>PPTX külliyatı kapsam kararı</td><td class="warn">Senin kararın bekliyor</td></tr>
+  </table>
+
+  <h2>Senin yapman gerekenler</h2>
+  <ol class="todo">
+    <li><b>B3 — Messaging brief'leri indir:</b> SharePoint'teki 14 İngilizce brief dosyasını indir; geldiğinde <code>01-source-text/messaging/</code> altına ayrışacak.</li>
+    <li><b>B4 — PPTX kapsam kararı ver:</b> sunum desteleri envantere girsin mi? (girerse metin çıkarımı yapılır)</li>
+    <li><b>Rota yapısı — FRILO:</b> tek <code>/products/frilo</code> sayfası mı, sürüm başına sayfa mı?</li>
+    <li><b>Rota yapısı — SCIA:</b> tek <code>/products/scia</code> sayfası mı, sürüm başına mı?</li>
+    <li><b>Max rotası:</b> <code>/products/allplan-max</code> açılacak mı? Açılırsa sürüm sayfalarındaki tekrar eden Max bölümü korunacak mı?</li>
+    <li><b>Parametric / Rebar çakışması:</b> <code>/solutions/features-allplan-bridge</code>, <code>/solutions/structural</code>, <code>/solutions/rebar-engineering</code> yeni rotalara 301 mi olacak?</li>
+    <li><b>Sayısal iddiaların yayın izni:</b> "50% faster" (Civil), "5×" ve "20–50%" (SDS2), %18 / %21 / %24 (Max) Türkiye'de yayımlanabilir mi?</li>
+    <li><b>Görsel atamaları:</b> edition sayfalarının boş <code>FEATURE n IMAGE</code> hücreleri, Max'taki 9 <code>XXXXX</code> yer tutucu, Civil'deki 3 boş görsel bağlantısı, SDS2 ve Max ana görselleri — kim seçiyor?</li>
+    <li><b>Bimplus değişikliği:</b> kaynak, hero altındaki mevcut maddelerin değiştirilmesini istiyor; etkilenen mevcut maddeleri üretici kaydından doğrula.</li>
+    <li><b>Kaynak hataları üreticiye bildirilsin mi:</b> Max pillar-2 metin tekrarı ("model analysis and quantity takeoffs and model analysis") ve FRILO Geotechnics Ultimate'in hatalı başlığı.</li>
+  </ol>
+
+  <h2>Sayfa envanteri</h2>
+  <table>
+    <tr><th>Sayfa</th><th>Birim</th><th>Hedef rotalar</th><th>Açık karar</th></tr>
+    <tr><td><code>allplan-home</code></td><td>3</td><td><code>/products/allplan</code></td><td>1</td></tr>
+    <tr><td><code>allplan-editions</code></td><td>24</td><td><code>/products/allplan-basic</code> … <code>/products/allplan-ultimate</code></td><td>2</td></tr>
+    <tr><td><code>allplan-bimplus</code></td><td>4</td><td><code>/products/allplan-bimplus</code></td><td>1</td></tr>
+    <tr><td><code>allplan-parametric</code></td><td>91</td><td><code>/products/allplan-parametric</code> (yeni)</td><td>2</td></tr>
+    <tr><td><code>allplan-rebar</code></td><td>97</td><td><code>/products/allplan-rebar</code> (yeni)</td><td>2</td></tr>
+    <tr><td><code>allplan-max</code></td><td>41</td><td><code>/products/allplan-max</code> (yeni)</td><td>3</td></tr>
+    <tr><td><code>allplan-civil</code></td><td>11</td><td><code>/products/civil</code> + 3 çözüm rotası</td><td>2</td></tr>
+    <tr><td><code>frilo-editions</code></td><td>84</td><td><code>/products/frilo</code> (yeni)</td><td>2</td></tr>
+    <tr><td><code>scia-editions</code></td><td>28</td><td><code>/products/scia</code> (yeni)</td><td>2</td></tr>
+    <tr><td><code>sds2</code></td><td>11</td><td><code>/products/sds2-home</code>, <code>/solutions/steel</code></td><td>2</td></tr>
+  </table>
+
+  <h2>Dosyalar ve komutlar</h2>
+  <ul>
+    <li>Envanter (onaylı): <code>docs/content-2027/02-inventory/pages/*.md</code></li>
+    <li>Makine katmanı: <code>docs/content-2027/03-data/content-records.json</code></li>
+    <li>Açık kararların tam listesi: <code>docs/content-2027/02-inventory/open-decisions.md</code></li>
+    <li>Kapsam doğrulama: <code>python3 scripts/build_web_inventory.py --check</code> → "Sorun yok"</li>
+    <li>Kayıt doğrulama: <code>python3 scripts/build_content_records.py --check</code> → "güncel"</li>
+  </ul>
+
+  <p class="note">Bu sayfa statik bir durum özetidir; TR metinleri taslak olarak işaretlidir ve her envanter satırı <code>slug#bN</code> blok adresiyle kaynağına izlenebilir biçimde bağlıdır.</p>
+</main>
+</body>
+</html>

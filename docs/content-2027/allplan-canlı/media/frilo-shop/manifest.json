@@ -1,0 +1,82 @@
+[
+  {
+    "index": 1,
+    "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_768,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fheader%2FFRILO_product-page_header_800x800.jpg%3Fv%3Dv1",
+    "file": "01.jpg",
+    "status": 200,
+    "ok": true,
+    "sha256": "aaf799db12ec580fbe63a6bccb4ff31d87e9bf21ce2a8b6b78f630f9a29c7003"
+  },
+  {
+    "index": 2,
+    "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_768,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fmisc%2FImage-Demo_800x480_new.jpg%3Fv%3Dv1",
+    "file": "02.jpg",
+    "status": 200,
+    "ok": true,
+    "sha256": "acef5b4bcdfc9f7101f4edf46b4ad2eb571ea3cf6a2fa443bc96eb47fea7c980"
+  },
+  {
+    "index": 3,
+    "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Foverview%2FFRILO_overview.jpg%3Fv%3Dv1",
+    "file": "03.jpg",
+    "status": 200,
+    "ok": true,
+    "sha256": "56322de2d8eff2d994a248e276733535ffb80e92267250479acec4dc1abdf55a"
+  },
+  {
+    "index": 4,
+    "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_640,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fbenefits%2FFrilo-Capabilities-01_ho6_01_plus_eng.png%3Fv%3Dv1",
+    "file": "04.png",
+    "status": 200,
+    "ok": true,
+    "sha256": "abec414f351246d1780d72b1463bc63040eb4077ac6c712fb5d8a5c0076c5942"
+  },
+  {
+    "index": 5,
+    "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fbenefits%2Ffrilo%2Fcapabilities-frilo-product-page-element-2.png%3Fv%3Dv1",
+    "file": "05.png",
+    "status": 200,
+    "ok": true,
+    "sha256": "acd1ab4420a3aa471451618c5761a1c5dd14e685a3d82ba76b49e483d1eb4f98"
+  },
+  {
+    "index": 6,
+    "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fbenefits%2Ffrilo%2Fcapabilities-frilo-product-page-element-3.png%3Fv%3Dv1",
+    "file": "06.png",
+    "status": 200,
+    "ok": true,
+    "sha256": "220cb8c1628664ec8e9f688c443d2a3e43111aeb4e4540715ebe875288df5cc6"
+  },
+  {
+    "index": 7,
+    "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fbenefits%2Ffrilo%2Fcapabilities_frilo-element-4.png%3Fv%3Dv1",
+    "file": "07.png",
+    "status": 200,
+    "ok": true,
+    "sha256": "a2b21ecb00226d2fef274e9572c497849cceda74c5d71bbc89e3d0564938b8bf"
+  },
+  {
+    "index": 8,
+    "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fbenefits%2Ffrilo%2Fcapabilities_frilo-element-5.png%3Fv%3Dv1",
+    "file": "08.jpg",
+    "status": 200,
+    "ok": true,
+    "sha256": "f4c74487be01094c5a514b0440fb5fac678b6726e17428aa377311b284d06145"
+  },
+  {
+    "index": 9,
+    "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2F_processed_%2Fd%2Fe%2Fcsm_A7_04695_16zu9_5242391a33.jpg%3Fv%3Dv1",
+    "file": "09.jpg",
+    "status": 200,
+    "ok": true,
+    "sha256": "fd55fbc67940e36cd0d14113f4c217b054c1457e5260455ee1910be8462c60b3"
+  },
+  {
+    "index": 10,
+    "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2F_processed_%2Fa%2Fc%2Fcsm_Die_hell_erleuchtete_Konzernzentrale_bei_Nacht___C2_A9Thilo_Ross_352fb16db6.jpg%3Fv%3Dv1",
+    "file": "10.jpg",
+    "status": 200,
+    "ok": true,
+    "sha256": "93718825d1476005f485854a3e9de4f8146214fe2f3ea9b32c92abb5ea551a70"
+  }
+]

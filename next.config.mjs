@@ -49,7 +49,9 @@ const nextConfig = {
     return [
       {
         source: '/:path*',
-        headers: securityHeaders
+        headers: process.env.ALUPLAN_2027_PREVIEW === '1'
+          ? [...securityHeaders, { key: 'X-Robots-Tag', value: 'noindex, nofollow' }]
+          : securityHeaders
       }
     ];
   },

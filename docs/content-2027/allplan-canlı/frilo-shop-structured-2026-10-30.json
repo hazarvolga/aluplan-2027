@@ -1,0 +1,1009 @@
+{
+  "url": "https://www.allplan.com/shop/products/frilo",
+  "title": "Buy FRILO | ALLPLAN Shop | Allplan",
+  "language": "en-US",
+  "capturedAt": "2026-10-30T13:12:22.220Z",
+  "blocks": [
+    {
+      "order": 0,
+      "tag": "IMG",
+      "role": null,
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_768,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fheader%2FFRILO_product-page_header_800x800.jpg%3Fv%3Dv1",
+      "alt": ""
+    },
+    {
+      "order": 1,
+      "tag": "LI",
+      "role": null,
+      "text": "FRILO - Component-Oriented Structural Analysis."
+    },
+    {
+      "order": 2,
+      "tag": "BUTTON",
+      "role": null,
+      "text": ""
+    },
+    {
+      "order": 3,
+      "tag": "LI",
+      "role": null,
+      "text": "Home"
+    },
+    {
+      "order": 4,
+      "tag": "A",
+      "role": null,
+      "text": "Home",
+      "href": "https://www.allplan.com/us_en"
+    },
+    {
+      "order": 5,
+      "tag": "LI",
+      "role": null,
+      "text": ""
+    },
+    {
+      "order": 6,
+      "tag": "LI",
+      "role": null,
+      "text": "Products"
+    },
+    {
+      "order": 7,
+      "tag": "A",
+      "role": null,
+      "text": "Products",
+      "href": "https://www.allplan.com/en-US/shop/products"
+    },
+    {
+      "order": 8,
+      "tag": "LI",
+      "role": null,
+      "text": ""
+    },
+    {
+      "order": 9,
+      "tag": "LI",
+      "role": null,
+      "text": "FRILO - Component-Oriented Structural Analysis."
+    },
+    {
+      "order": 10,
+      "tag": "H1",
+      "role": null,
+      "text": "FRILO - Component-Oriented Structural Analysis."
+    },
+    {
+      "order": 11,
+      "tag": "P",
+      "role": null,
+      "text": "FRILO helps firms move more projects forward thanks to a component-oriented approach to structural analysis and design, deep BIM integrations, and up-to-date Eurocode and DIN regulations. Available in convenient editions so you only buy what you need."
+    },
+    {
+      "order": 12,
+      "tag": "A",
+      "role": null,
+      "text": "More information",
+      "href": "https://www.allplan.com/shop/products/frilo#clp-products"
+    },
+    {
+      "order": 13,
+      "tag": "BUTTON",
+      "role": null,
+      "text": "More information"
+    },
+    {
+      "order": 14,
+      "tag": "H3",
+      "role": null,
+      "text": "Find the FRILO solution designed for you"
+    },
+    {
+      "order": 15,
+      "tag": "BUTTON",
+      "role": "radio",
+      "text": "12 months"
+    },
+    {
+      "order": 16,
+      "tag": "BUTTON",
+      "role": "radio",
+      "text": "36 months"
+    },
+    {
+      "order": 17,
+      "tag": "H4",
+      "role": null,
+      "text": "FRILO Concept"
+    },
+    {
+      "order": 18,
+      "tag": "H4",
+      "role": null,
+      "text": "$119.00"
+    },
+    {
+      "order": 19,
+      "tag": "P",
+      "role": null,
+      "text": "per user per month"
+    },
+    {
+      "order": 20,
+      "tag": "P",
+      "role": null,
+      "text": "Total $1,428.00 (excl. VAT) billed yearly"
+    },
+    {
+      "order": 21,
+      "tag": "BUTTON",
+      "role": null,
+      "text": "Add to Cart"
+    },
+    {
+      "order": 22,
+      "tag": "P",
+      "role": null,
+      "text": "What's included:"
+    },
+    {
+      "order": 23,
+      "tag": "LI",
+      "role": null,
+      "text": "Complete workflow for simple residential buildings"
+    },
+    {
+      "order": 24,
+      "tag": "LI",
+      "role": null,
+      "text": "Building model for story-by-story load transfer"
+    },
+    {
+      "order": 25,
+      "tag": "LI",
+      "role": null,
+      "text": "Continuous beams, slabs, columns, foundations"
+    },
+    {
+      "order": 26,
+      "tag": "LI",
+      "role": null,
+      "text": "Roof design for rafters, purlins, and roof systems"
+    },
+    {
+      "order": 27,
+      "tag": "LI",
+      "role": null,
+      "text": "Masonry and timber wall verification for EC/DIN"
+    },
+    {
+      "order": 28,
+      "tag": "A",
+      "role": null,
+      "text": "View Edition",
+      "href": "https://www.allplan.com/en-US/shop/products/frilo/frilo-concept"
+    },
+    {
+      "order": 29,
+      "tag": "H4",
+      "role": null,
+      "text": "FRILO Professional Concrete"
+    },
+    {
+      "order": 30,
+      "tag": "H4",
+      "role": null,
+      "text": "$198.00"
+    },
+    {
+      "order": 31,
+      "tag": "P",
+      "role": null,
+      "text": "per user per month"
+    },
+    {
+      "order": 32,
+      "tag": "P",
+      "role": null,
+      "text": "Total $2,376.00 (excl. VAT) billed yearly"
+    },
+    {
+      "order": 33,
+      "tag": "BUTTON",
+      "role": null,
+      "text": "Add to Cart"
+    },
+    {
+      "order": 34,
+      "tag": "P",
+      "role": null,
+      "text": "What's included:"
+    },
+    {
+      "order": 35,
+      "tag": "LI",
+      "role": null,
+      "text": "Tools for concrete/masonry"
+    },
+    {
+      "order": 36,
+      "tag": "LI",
+      "role": null,
+      "text": "Advanced reinforced concrete component design"
+    },
+    {
+      "order": 37,
+      "tag": "LI",
+      "role": null,
+      "text": "Punching shear, corbels, half-joints, strut-and-tie models"
+    },
+    {
+      "order": 38,
+      "tag": "LI",
+      "role": null,
+      "text": "Detailed reinforcement layouts with crack-width checks"
+    },
+    {
+      "order": 39,
+      "tag": "LI",
+      "role": null,
+      "text": "FBC/BIM Connector"
+    },
+    {
+      "order": 40,
+      "tag": "A",
+      "role": null,
+      "text": "View Edition",
+      "href": "https://www.allplan.com/en-US/shop/products/frilo/frilo-professional-concrete"
+    },
+    {
+      "order": 41,
+      "tag": "H4",
+      "role": null,
+      "text": "FRILO Professional Steel"
+    },
+    {
+      "order": 42,
+      "tag": "H4",
+      "role": null,
+      "text": "$198.00"
+    },
+    {
+      "order": 43,
+      "tag": "P",
+      "role": null,
+      "text": "per user per month"
+    },
+    {
+      "order": 44,
+      "tag": "P",
+      "role": null,
+      "text": "Total $2,376.00 (excl. VAT) billed yearly"
+    },
+    {
+      "order": 45,
+      "tag": "BUTTON",
+      "role": null,
+      "text": "Add to Cart"
+    },
+    {
+      "order": 46,
+      "tag": "P",
+      "role": null,
+      "text": "What's included:"
+    },
+    {
+      "order": 47,
+      "tag": "LI",
+      "role": null,
+      "text": "Dedicated steel design tools"
+    },
+    {
+      "order": 48,
+      "tag": "LI",
+      "role": null,
+      "text": "Steel beams, columns, frames, and trusses"
+    },
+    {
+      "order": 49,
+      "tag": "LI",
+      "role": null,
+      "text": "Lateral torsional buckling and stability verifications"
+    },
+    {
+      "order": 50,
+      "tag": "LI",
+      "role": null,
+      "text": "Steel connections, girder supports, bracings, and welds"
+    },
+    {
+      "order": 51,
+      "tag": "LI",
+      "role": null,
+      "text": "FBC/BIM Connector"
+    },
+    {
+      "order": 52,
+      "tag": "A",
+      "role": null,
+      "text": "View Edition",
+      "href": "https://www.allplan.com/en-US/shop/products/frilo/frilo-professional-steel"
+    },
+    {
+      "order": 53,
+      "tag": "H4",
+      "role": null,
+      "text": "FRILO Professional Timber"
+    },
+    {
+      "order": 54,
+      "tag": "H4",
+      "role": null,
+      "text": "$198.00"
+    },
+    {
+      "order": 55,
+      "tag": "P",
+      "role": null,
+      "text": "per user per month"
+    },
+    {
+      "order": 56,
+      "tag": "P",
+      "role": null,
+      "text": "Total $2,376.00 (excl. VAT) billed yearly"
+    },
+    {
+      "order": 57,
+      "tag": "BUTTON",
+      "role": null,
+      "text": "Add to Cart"
+    },
+    {
+      "order": 58,
+      "tag": "P",
+      "role": null,
+      "text": "What's included:"
+    },
+    {
+      "order": 59,
+      "tag": "LI",
+      "role": null,
+      "text": "Deep timber construction focus"
+    },
+    {
+      "order": 60,
+      "tag": "LI",
+      "role": null,
+      "text": "Timber beams, trusses, and frame systems"
+    },
+    {
+      "order": 61,
+      "tag": "LI",
+      "role": null,
+      "text": "Glued laminated girders and cross-laminated timber beams"
+    },
+    {
+      "order": 62,
+      "tag": "LI",
+      "role": null,
+      "text": "Joints: skew notches, tension joints, dovetail connections"
+    },
+    {
+      "order": 63,
+      "tag": "LI",
+      "role": null,
+      "text": "FBC/BIM Connector"
+    },
+    {
+      "order": 64,
+      "tag": "A",
+      "role": null,
+      "text": "View Edition",
+      "href": "https://www.allplan.com/en-US/shop/products/frilo/frilo-professional-timber"
+    },
+    {
+      "order": 65,
+      "tag": "H4",
+      "role": null,
+      "text": "FRILO Ultimate"
+    },
+    {
+      "order": 66,
+      "tag": "H4",
+      "role": null,
+      "text": "$278.00"
+    },
+    {
+      "order": 67,
+      "tag": "P",
+      "role": null,
+      "text": "per user per month"
+    },
+    {
+      "order": 68,
+      "tag": "P",
+      "role": null,
+      "text": "Total $3,336.00 (excl. VAT) billed yearly"
+    },
+    {
+      "order": 69,
+      "tag": "BUTTON",
+      "role": null,
+      "text": "Add to Cart"
+    },
+    {
+      "order": 70,
+      "tag": "P",
+      "role": null,
+      "text": "What's included:"
+    },
+    {
+      "order": 71,
+      "tag": "LI",
+      "role": null,
+      "text": "Full access to concrete, steel, timber, and masonry modules"
+    },
+    {
+      "order": 72,
+      "tag": "LI",
+      "role": null,
+      "text": "2D/3D frameworks for complex multi-material structures"
+    },
+    {
+      "order": 73,
+      "tag": "LI",
+      "role": null,
+      "text": "Advanced foundation engineering and ground-structure checks"
+    },
+    {
+      "order": 74,
+      "tag": "LI",
+      "role": null,
+      "text": "Comprehensive component and detail verifications across materials"
+    },
+    {
+      "order": 75,
+      "tag": "LI",
+      "role": null,
+      "text": "BIMPLUS and connections to ALLPLAN, SCIA, and other tools"
+    },
+    {
+      "order": 76,
+      "tag": "A",
+      "role": null,
+      "text": "View Edition",
+      "href": "https://www.allplan.com/en-US/shop/products/frilo/frilo-ultimate"
+    },
+    {
+      "order": 77,
+      "tag": "IMG",
+      "role": null,
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fmisc%2FImage-Demo_800x480_new.jpg%3Fv%3Dv1",
+      "alt": ""
+    },
+    {
+      "order": 78,
+      "tag": "H3",
+      "role": null,
+      "text": "Need Help Choosing the Right FRILO Edition?"
+    },
+    {
+      "order": 79,
+      "tag": "P",
+      "role": null,
+      "text": "Talk with an FRILO expert to find the best solution for your projects, workflows, and team."
+    },
+    {
+      "order": 80,
+      "tag": "A",
+      "role": null,
+      "text": "Request Contact",
+      "href": "https://www.allplan.com/en-contact-frilo/"
+    },
+    {
+      "order": 81,
+      "tag": "BUTTON",
+      "role": null,
+      "text": "Request Contact"
+    },
+    {
+      "order": 82,
+      "tag": "BUTTON",
+      "role": null,
+      "text": ""
+    },
+    {
+      "order": 83,
+      "tag": "BUTTON",
+      "role": "tab",
+      "text": "Overview"
+    },
+    {
+      "order": 84,
+      "tag": "BUTTON",
+      "role": "tab",
+      "text": "Capabilities"
+    },
+    {
+      "order": 85,
+      "tag": "BUTTON",
+      "role": "tab",
+      "text": "Success Stories"
+    },
+    {
+      "order": 86,
+      "tag": "BUTTON",
+      "role": "tab",
+      "text": "FAQ"
+    },
+    {
+      "order": 87,
+      "tag": "BUTTON",
+      "role": null,
+      "text": ""
+    },
+    {
+      "order": 88,
+      "tag": "A",
+      "role": null,
+      "text": "Free trial",
+      "href": "https://connect2.allplan.com/auth/get-trial?product=frilo"
+    },
+    {
+      "order": 89,
+      "tag": "BUTTON",
+      "role": null,
+      "text": "Free trial"
+    },
+    {
+      "order": 90,
+      "tag": "A",
+      "role": null,
+      "text": "Pricing",
+      "href": "https://www.allplan.com/en-US/shop/products/frilo"
+    },
+    {
+      "order": 91,
+      "tag": "BUTTON",
+      "role": null,
+      "text": "Pricing"
+    },
+    {
+      "order": 92,
+      "tag": "A",
+      "role": null,
+      "text": "Free trial",
+      "href": "https://connect2.allplan.com/auth/get-trial?product=frilo"
+    },
+    {
+      "order": 93,
+      "tag": "BUTTON",
+      "role": null,
+      "text": "Free trial"
+    },
+    {
+      "order": 94,
+      "tag": "A",
+      "role": null,
+      "text": "Pricing",
+      "href": "https://www.allplan.com/en-US/shop/products/frilo"
+    },
+    {
+      "order": 95,
+      "tag": "BUTTON",
+      "role": null,
+      "text": "Pricing"
+    },
+    {
+      "order": 96,
+      "tag": "H3",
+      "role": null,
+      "text": "Component-Oriented Structural Analysis. Design Faster. Submit with Confidence."
+    },
+    {
+      "order": 97,
+      "tag": "H4",
+      "role": null,
+      "text": ""
+    },
+    {
+      "order": 98,
+      "tag": "P",
+      "role": null,
+      "text": "FRILO is a component-oriented structural analysis and design solution for concrete, steel, timber, and masonry structures, aligned with Eurocode and DIN standards. Structural engineers use FRILO to move more projects forward by modeling realistic building behavior, verifying critical components, and documenting results in a transparent, auditable way. FRILO 2027 brings several major upgrades. FRILO Connections unifies all connection types into one consistent tool with time-saving reporting. CLT+ adds dedicated 2D design for CLT slabs. AI Coach delivers instant, conversational support."
+    },
+    {
+      "order": 99,
+      "tag": "A",
+      "role": null,
+      "text": "New features in 2027",
+      "href": "https://www.allplan.com/products/allplan-2026-features/"
+    },
+    {
+      "order": 100,
+      "tag": "BUTTON",
+      "role": null,
+      "text": "New features in 2027"
+    },
+    {
+      "order": 101,
+      "tag": "IMG",
+      "role": null,
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Foverview%2FFRILO_overview.jpg%3Fv%3Dv1",
+      "alt": ""
+    },
+    {
+      "order": 102,
+      "tag": "H3",
+      "role": null,
+      "text": "Compare Key Capabilities"
+    },
+    {
+      "order": 103,
+      "tag": "IMG",
+      "role": null,
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_640,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fbenefits%2FFrilo-Capabilities-01_ho6_01_plus_eng.png%3Fv%3Dv1",
+      "alt": ""
+    },
+    {
+      "order": 104,
+      "tag": "IMG",
+      "role": null,
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fbenefits%2Ffrilo%2Fcapabilities-frilo-product-page-element-2.png%3Fv%3Dv1",
+      "alt": ""
+    },
+    {
+      "order": 105,
+      "tag": "IMG",
+      "role": null,
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fbenefits%2Ffrilo%2Fcapabilities-frilo-product-page-element-3.png%3Fv%3Dv1",
+      "alt": ""
+    },
+    {
+      "order": 106,
+      "tag": "IMG",
+      "role": null,
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fbenefits%2Ffrilo%2Fcapabilities_frilo-element-4.png%3Fv%3Dv1",
+      "alt": ""
+    },
+    {
+      "order": 107,
+      "tag": "IMG",
+      "role": null,
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fbenefits%2Ffrilo%2Fcapabilities_frilo-element-5.png%3Fv%3Dv1",
+      "alt": ""
+    },
+    {
+      "order": 108,
+      "tag": "SUMMARY",
+      "role": null,
+      "text": "Component-oriented structural design across materials"
+    },
+    {
+      "order": 109,
+      "tag": "DIV",
+      "role": null,
+      "text": "FRILO offers specialized modules for beams, columns, slabs, walls, roofs, and foundations in concrete, steel, timber, masonry, and geotechnics, so engineers can select exactly the component they need and reach code-compliant results without building a full global FEM model. This reduces setup time and lets small offices handle more projects with the same staff."
+    },
+    {
+      "order": 110,
+      "tag": "SUMMARY",
+      "role": null,
+      "text": "Building Model and frameworks for realistic load paths"
+    },
+    {
+      "order": 111,
+      "tag": "DIV",
+      "role": null,
+      "text": "With the Building Model and framework programs, FRILO determines vertical and horizontal load transfer through multi-storey structures, including wind, seismic, and inclination effects, and supports 2D/3D bar frameworks in multiple materials. This gives engineers confidence that component-level verifications reflect a realistic global load path, improving safety and minimizing rework at approval stages."
+    },
+    {
+      "order": 112,
+      "tag": "SUMMARY",
+      "role": null,
+      "text": "Deep code checks with second-generation Eurocodes and DIN"
+    },
+    {
+      "order": 113,
+      "tag": "DIV",
+      "role": null,
+      "text": "FRILO’s modules implement Eurocode-based calculation models and relevant DIN regulations, including second-generation Eurocodes in the new editions, so routine checks (punching shear, buckling, crack width, stability, and serviceability) follow up-to-date standards. This alignment directly reduces the risk of revisions from checking engineers, supports smoother approvals, and keeps calculations valid over the project lifecycle."
+    },
+    {
+      "order": 114,
+      "tag": "SUMMARY",
+      "role": null,
+      "text": "Integrated BIM workflows via FRILO BIM-Connector and BIMPLUS"
+    },
+    {
+      "order": 115,
+      "tag": "DIV",
+      "role": null,
+      "text": "The FRILO BIM-Connector imports 3D building models as IFC or SAF files into the FRILO environment, allowing engineers to idealize analytical models, assign loads, and send back verified components to other ALLPLAN tools or FEM solutions. This integration cuts manual data transfer, prevents inconsistencies between model and calculations, and speeds up coordination with architects and other disciplines. The Ultimate Edition includes access to BIMPLUS, which extends your workflow beyond model import by providing a cloud-based collaboration environment for coordinating, reviewing, and managing your structural models. With BIMPLUS, project stakeholders can access a centralized digital model, track changes, and resolve issues in real time: ensuring that analysis results, geometry, and project data stay aligned throughout the entire lifecycle. Built on openBIM principles, BIMPLUS connects teams, disciplines, and data in one shared source of truth."
+    },
+    {
+      "order": 116,
+      "tag": "SUMMARY",
+      "role": null,
+      "text": "Verifiable, authority-ready documentation with Document Designer"
+    },
+    {
+      "order": 117,
+      "tag": "DIV",
+      "role": null,
+      "text": "The Document Designer compiles analysis and design results from all relevant modules into a structured, clearly formatted output document that follows conventions expected by building authorities and checking engineers. This means reports are effectively done when calculations are finished, saving hours of manual write-up and helping firms demonstrate professional rigor."
+    },
+    {
+      "order": 118,
+      "tag": "H3",
+      "role": null,
+      "text": "FRILO makes it possible"
+    },
+    {
+      "order": 119,
+      "tag": "BUTTON",
+      "role": null,
+      "text": ""
+    },
+    {
+      "order": 120,
+      "tag": "BUTTON",
+      "role": null,
+      "text": ""
+    },
+    {
+      "order": 121,
+      "tag": "IMG",
+      "role": null,
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2F_processed_%2Fd%2Fe%2Fcsm_A7_04695_16zu9_5242391a33.jpg%3Fv%3Dv1",
+      "alt": "Schwabenhof West’s Eye-catching, Bridge-like Slab"
+    },
+    {
+      "order": 122,
+      "tag": "H4",
+      "role": null,
+      "text": "Schwabenhof West’s Eye-catching, Bridge-like Slab"
+    },
+    {
+      "order": 123,
+      "tag": "P",
+      "role": null,
+      "text": "The Schwabenhof West office complex in Heilbronn draws attention with its bridge-like, load-bearing slab. Despite the large span of the slab, Wulle Lichti Walz, the engineering office responsible for the structural analysis and design, had to achieve this without using floor-to-ceiling, wall-like beams."
+    },
+    {
+      "order": 124,
+      "tag": "A",
+      "role": null,
+      "text": "Read more",
+      "href": "https://www.allplan.com/blog/schwabenhof-wests-eye-catching-bridge-like-slab/"
+    },
+    {
+      "order": 125,
+      "tag": "IMG",
+      "role": null,
+      "text": "",
+      "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2F_processed_%2Fa%2Fc%2Fcsm_Die_hell_erleuchtete_Konzernzentrale_bei_Nacht___C2_A9Thilo_Ross_352fb16db6.jpg%3Fv%3Dv1",
+      "alt": "A love letter to concrete"
+    },
+    {
+      "order": 126,
+      "tag": "H4",
+      "role": null,
+      "text": "A love letter to concrete"
+    },
+    {
+      "order": 127,
+      "tag": "P",
+      "role": null,
+      "text": "The consulting engineers from Wulle Lichti Walz GmbH were responsible for the structural analysis and design of the impressive building and share insights into their approach, which relied on both FRILO and ALLPLAN."
+    },
+    {
+      "order": 128,
+      "tag": "A",
+      "role": null,
+      "text": "Read more",
+      "href": "https://www.allplan.com/blog/a-love-letter-to-concrete/"
+    },
+    {
+      "order": 129,
+      "tag": "BUTTON",
+      "role": null,
+      "text": ""
+    },
+    {
+      "order": 130,
+      "tag": "BUTTON",
+      "role": null,
+      "text": ""
+    },
+    {
+      "order": 131,
+      "tag": "H3",
+      "role": null,
+      "text": "Frequently Asked Questions"
+    },
+    {
+      "order": 132,
+      "tag": "SUMMARY",
+      "role": null,
+      "text": "Who is FRILO designed for?"
+    },
+    {
+      "order": 133,
+      "tag": "DIV",
+      "role": null,
+      "text": "FRILO is designed for structural engineers and engineering offices that need reliable, code-compliant analysis and design tools for building structures in concrete, steel, timber, and masonry."
+    },
+    {
+      "order": 134,
+      "tag": "SUMMARY",
+      "role": null,
+      "text": "How do the editions differ?"
+    },
+    {
+      "order": 135,
+      "tag": "DIV",
+      "role": null,
+      "text": "Concept offers the most common components in residential and straightforward building projects. The professional editions add advanced capabilities for concrete, steel, or timber with some BIM capabilities. Ultimate combines all modules with full integration across ALLPLAN tools and any other tool that operates in an Open BIM framework."
+    },
+    {
+      "order": 136,
+      "tag": "SUMMARY",
+      "role": null,
+      "text": "Can FRILO integrate with my CAD/BIM tools?"
+    },
+    {
+      "order": 137,
+      "tag": "DIV",
+      "role": null,
+      "text": "Yes. The FRILO BIM Connector imports 3D building models in IFC or SAF format from your CAD/BIM environment, helping you build analytical models and keep geometry and loads in sync. The Ultimate Edition includes access to BIMPLUS, which extends your workflow beyond model import by providing a cloud-based collaboration environment for coordinating, reviewing, and managing your structural models. With BIMPLUS, project stakeholders can access a centralized digital model, track changes, and resolve issues in real time—ensuring that analysis results, geometry, and project data stay aligned throughout the entire lifecycle. Built on openBIM principles, BIMPLUS connects teams, disciplines, and data in one shared source of truth."
+    },
+    {
+      "order": 138,
+      "tag": "SUMMARY",
+      "role": null,
+      "text": "How is documentation handled?"
+    },
+    {
+      "order": 139,
+      "tag": "DIV",
+      "role": null,
+      "text": "The Document Designer compiles analysis and design results into a unified, verifiable output document that you can share with clients, authorities, or internal reviewers."
+    },
+    {
+      "order": 140,
+      "tag": "SUMMARY",
+      "role": null,
+      "text": "Is FRILO suitable for both small and large offices?"
+    },
+    {
+      "order": 141,
+      "tag": "DIV",
+      "role": null,
+      "text": "Yes. The edition structure lets smaller offices start with the essentials and grow into more specialized workflows, while larger firms can choose Ultimate for full coverage of materials and components."
+    },
+    {
+      "order": 142,
+      "tag": "H3",
+      "role": null,
+      "text": "Talk to an Expert"
+    },
+    {
+      "order": 143,
+      "tag": "P",
+      "role": null,
+      "text": "Get personalized guidance from FRILO experts to find the right edition for your workflows, projects, and team. Book a free consultation with no pressure, just clarity."
+    },
+    {
+      "order": 144,
+      "tag": "A",
+      "role": null,
+      "text": "Request Contact",
+      "href": "https://www.allplan.com/en-contact-frilo/"
+    },
+    {
+      "order": 145,
+      "tag": "BUTTON",
+      "role": null,
+      "text": "Request Contact"
+    },
+    {
+      "order": 146,
+      "tag": "H3",
+      "role": null,
+      "text": "Try FRILO Free"
+    },
+    {
+      "order": 147,
+      "tag": "P",
+      "role": null,
+      "text": "Explore FRILO for 14 days at no cost. For evaluation and non-commercial use. No cancellation required."
+    },
+    {
+      "order": 148,
+      "tag": "A",
+      "role": null,
+      "text": "Get Free Trial",
+      "href": "https://connect2.allplan.com/auth/get-trial?product=frilo"
+    },
+    {
+      "order": 149,
+      "tag": "BUTTON",
+      "role": null,
+      "text": "Get Free Trial"
+    }
+  ],
+  "accordions": [
+    {
+      "order": 0,
+      "question": "Component-oriented structural design across materials",
+      "answer": "FRILO offers specialized modules for beams, columns, slabs, walls, roofs, and foundations in concrete, steel, timber, masonry, and geotechnics, so engineers can select exactly the component they need and reach code-compliant results without building a full global FEM model. This reduces setup time and lets small offices handle more projects with the same staff.",
+      "initiallyOpen": true
+    },
+    {
+      "order": 1,
+      "question": "Building Model and frameworks for realistic load paths",
+      "answer": "With the Building Model and framework programs, FRILO determines vertical and horizontal load transfer through multi-storey structures, including wind, seismic, and inclination effects, and supports 2D/3D bar frameworks in multiple materials. This gives engineers confidence that component-level verifications reflect a realistic global load path, improving safety and minimizing rework at approval stages.",
+      "initiallyOpen": false
+    },
+    {
+      "order": 2,
+      "question": "Deep code checks with second-generation Eurocodes and DIN",
+      "answer": "FRILO’s modules implement Eurocode-based calculation models and relevant DIN regulations, including second-generation Eurocodes in the new editions, so routine checks (punching shear, buckling, crack width, stability, and serviceability) follow up-to-date standards. This alignment directly reduces the risk of revisions from checking engineers, supports smoother approvals, and keeps calculations valid over the project lifecycle.",
+      "initiallyOpen": false
+    },
+    {
+      "order": 3,
+      "question": "Integrated BIM workflows via FRILO BIM-Connector and BIMPLUS",
+      "answer": "The FRILO BIM-Connector imports 3D building models as IFC or SAF files into the FRILO environment, allowing engineers to idealize analytical models, assign loads, and send back verified components to other ALLPLAN tools or FEM solutions. This integration cuts manual data transfer, prevents inconsistencies between model and calculations, and speeds up coordination with architects and other disciplines. The Ultimate Edition includes access to BIMPLUS, which extends your workflow beyond model import by providing a cloud-based collaboration environment for coordinating, reviewing, and managing your structural models. With BIMPLUS, project stakeholders can access a centralized digital model, track changes, and resolve issues in real time: ensuring that analysis results, geometry, and project data stay aligned throughout the entire lifecycle. Built on openBIM principles, BIMPLUS connects teams, disciplines, and data in one shared source of truth.",
+      "initiallyOpen": false
+    },
+    {
+      "order": 4,
+      "question": "Verifiable, authority-ready documentation with Document Designer",
+      "answer": "The Document Designer compiles analysis and design results from all relevant modules into a structured, clearly formatted output document that follows conventions expected by building authorities and checking engineers. This means reports are effectively done when calculations are finished, saving hours of manual write-up and helping firms demonstrate professional rigor.",
+      "initiallyOpen": false
+    },
+    {
+      "order": 5,
+      "question": "Who is FRILO designed for?",
+      "answer": "FRILO is designed for structural engineers and engineering offices that need reliable, code-compliant analysis and design tools for building structures in concrete, steel, timber, and masonry.",
+      "initiallyOpen": true
+    },
+    {
+      "order": 6,
+      "question": "How do the editions differ?",
+      "answer": "Concept offers the most common components in residential and straightforward building projects. The professional editions add advanced capabilities for concrete, steel, or timber with some BIM capabilities. Ultimate combines all modules with full integration across ALLPLAN tools and any other tool that operates in an Open BIM framework.",
+      "initiallyOpen": false
+    },
+    {
+      "order": 7,
+      "question": "Can FRILO integrate with my CAD/BIM tools?",
+      "answer": "Yes. The FRILO BIM Connector imports 3D building models in IFC or SAF format from your CAD/BIM environment, helping you build analytical models and keep geometry and loads in sync. The Ultimate Edition includes access to BIMPLUS, which extends your workflow beyond model import by providing a cloud-based collaboration environment for coordinating, reviewing, and managing your structural models. With BIMPLUS, project stakeholders can access a centralized digital model, track changes, and resolve issues in real time—ensuring that analysis results, geometry, and project data stay aligned throughout the entire lifecycle. Built on openBIM principles, BIMPLUS connects teams, disciplines, and data in one shared source of truth.",
+      "initiallyOpen": false
+    },
+    {
+      "order": 8,
+      "question": "How is documentation handled?",
+      "answer": "The Document Designer compiles analysis and design results into a unified, verifiable output document that you can share with clients, authorities, or internal reviewers.",
+      "initiallyOpen": false
+    },
+    {
+      "order": 9,
+      "question": "Is FRILO suitable for both small and large offices?",
+      "answer": "Yes. The edition structure lets smaller offices start with the essentials and grow into more specialized workflows, while larger firms can choose Ultimate for full coverage of materials and components.",
+      "initiallyOpen": false
+    }
+  ],
+  "special": []
+}

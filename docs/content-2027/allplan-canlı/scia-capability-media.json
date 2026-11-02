@@ -1,0 +1,22 @@
+[
+  {
+    "file": "capability-1.jpg",
+    "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_640,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fbenefits%2Fcapabilities_scia-element-1_16x9_new.jpg%3Fv%3Dv1",
+    "status": 200
+  },
+  {
+    "file": "capability-2.jpg",
+    "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fbenefits%2Fcapabilities_scia-element-2_16x9_new.jpg%3Fv%3Dv1",
+    "status": 200
+  },
+  {
+    "file": "capability-3.jpg",
+    "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fbenefits%2Fcapabilities_scia-element-3_16x9_new.jpg%3Fv%3Dv1",
+    "status": 200
+  },
+  {
+    "file": "capability-4.jpg",
+    "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2Fuser_upload%2Fshared-files%2Fshop%2Fbenefits%2Fcapabilities_scia-element-4_16x9_new.jpg%3Fv%3Dv1",
+    "status": 200
+  }
+]

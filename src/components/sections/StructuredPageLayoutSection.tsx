@@ -4,16 +4,19 @@ import Link from 'next/link';
 import type { ReactElement } from 'react';
 
 import type {
-  ContentLink,
   StructuredPageLayout,
   StructuredWorkflowLink
 } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
+import { MetricCards } from './MetricCards';
+import { ChallengesBand } from './ChallengesBand';
 import { BenefitsSection } from './BenefitsSection';
 import { FAQSection } from './FAQSection';
 import { MediaGridSection } from './MediaGridSection';
+import { sds2Features2027 } from '@/data/sds2-2027-features';
 import { ReferencesDirectorySection } from './ReferencesDirectorySection';
 import { SplitCalloutSection } from './SplitCalloutSection';
+import { StructuredContentBlocks } from './StructuredContentBlocks';
 import { WorkflowSection } from './WorkflowSection';
 
 interface StructuredVideoRequest {
@@ -29,7 +32,7 @@ interface StructuredImageRequest {
 
 interface StructuredPageLayoutSectionProps {
   layout: StructuredPageLayout;
-  contentLinks: ContentLink[];
+  pagePath: string;
   activeReferenceCategoryId: string;
   referenceSearchQuery: string;
   onReferenceCategoryChange: (categoryId: string) => void;
@@ -37,6 +40,8 @@ interface StructuredPageLayoutSectionProps {
   onVideo: (video: StructuredVideoRequest) => void;
   onImage: (image: StructuredImageRequest) => void;
 }
+
+const SDS2_SURVEY_SOURCE = 'Kaynak: 2021’de SDS2 müşterileri arasında yapılan SDS2 ROI Anketi. Katılımcıların diğer çelik detaylandırma yazılımlarıyla deneyimleri farklılık göstermiştir.';
 
 const WORKFLOW_ACCENTS: Record<StructuredWorkflowLink['accentKey'], string> = {
   package: 'var(--workflow-package)',
@@ -47,7 +52,7 @@ const WORKFLOW_ACCENTS: Record<StructuredWorkflowLink['accentKey'], string> = {
 
 export function StructuredPageLayoutSection({
   layout,
-  contentLinks,
+  pagePath,
   activeReferenceCategoryId,
   referenceSearchQuery,
   onReferenceCategoryChange,
@@ -55,6 +60,19 @@ export function StructuredPageLayoutSection({
   onVideo,
   onImage
 }: StructuredPageLayoutSectionProps): ReactElement {
+  if (layout.contentBlocks && layout.contentBlocks.length > 0) {
+    return (
+      <div className="alu-structured-page">
+        <StructuredContentBlocks
+          blocks={layout.contentBlocks}
+          onVideo={onVideo}
+          onImage={onImage}
+        />
+        <FAQSection faqDirectory={layout.faqDirectory} />
+      </div>
+    );
+  }
+
   return (
     <div className="alu-structured-page">
       {layout.intro && (
@@ -66,7 +84,7 @@ export function StructuredPageLayoutSection({
               }`}
             >
               <div className="alu-intro-split__content">
-                {layout.intro.kicker && (
+      {layout.intro.kicker && (
                   <span className="preview-kicker">{layout.intro.kicker}</span>
                 )}
                 <h2 className="alu-h1" style={{ margin: 0 }}>
@@ -208,8 +226,27 @@ export function StructuredPageLayoutSection({
         />
       )}
 
+      {pagePath === '/products/sds2-home' && <MediaGridSection grid={sds2Features2027} itemKeyPrefix="sds2-2027" onVideo={onVideo} onImage={onImage} />}
+
+      {pagePath === '/products/sds2-home' && <section className="preview-section preview-section--subtle"><div className="alu-container"><ChallengesBand title="Bu zorluklarla sık sık karşılaşıyor musunuz?" items={["Genel geçer birleşimler ek iş gücü, maliyet ve zaman alan bilgi talepleri (RFI) yaratır.", "Projeleri daha hızlı ve daha düşük maliyetle teslim etme baskısı artar.", "Hatalı maliyet tahminleri, gecikmeler ve artan proje maliyetleri kârı azaltır."]} /></div></section>}
+
+      {pagePath === '/products/sds2-home' && <section className="preview-section"><div className="alu-container"><div className="alu-stack" style={{gap:"var(--space-stack-sm)", marginBottom:"var(--space-stack-lg)"}}><span className="preview-kicker">/ SDS2 · İŞİNİZE KATKISI</span><h2 className="alu-h2" style={{margin:0}}>SDS2 by ALLPLAN işinize nasıl fayda sağlar?</h2></div><MetricCards items={[
+        {value:'%93', label:'ZAMAN TASARRUFU', description:'Kullanıcıların %93’ü, SDS2 by ALLPLAN ile projeleri en az %25 daha hızlı tamamladığını bildiriyor.', source: SDS2_SURVEY_SOURCE},
+        {value:'%86', label:'DAHA FAZLA VERİMLİLİK', description:'Kullanıcıların %86’sı, SDS2 by ALLPLAN’ın imalat verimliliğini artırmaya yardımcı olduğunu söylüyor.', source: SDS2_SURVEY_SOURCE},
+        {value:'%71', label:'DAHA ÜRETKEN', description:'Kullanıcıların %71’i, kullanmaya başladıktan sonraki bir yıl içinde üretkenlik artışı gördü.', source: SDS2_SURVEY_SOURCE},
+      ]} /></div></section>}
+
+      {pagePath === '/products/sds2-home' && <BenefitsSection benefits={{kicker:'/ SDS2 BY ALLPLAN', title:'Çelik detaylandırmada öne çıkan yetenekler', items:[
+        {sourceId:'live.sds.ben.connections',title:'Akıllı birleşimleri otomatik tasarlayın',description:'Modelleme sırasında tam doğrulanmış birleşimler oluşturarak zaman kazanın; hataları ve bilgi taleplerini (RFI) azaltın.',iconSrc:'/assets/previews/sds2/icons/automated_workflows.png'},
+        {sourceId:'live.sds.ben.customized',title:'Özelleştirilmiş tasarım otomasyonu',description:'Modelinizi imalatçının ve montajcının güçlü yönlerine ve tercihlerine kolayca uyarlayın.',iconSrc:'/assets/previews/sds2/icons/icon-02.png'},
+        {sourceId:'live.sds.ben.multiuser',title:'Canlı çok kullanıcılı modelleme',description:'Diğer kullanıcılarla aynı model üzerinde aynı anda, veri hataları olmadan çalışın.',iconSrc:'/assets/previews/sds2/icons/productive_collab.png'},
+        {sourceId:'live.sds.ben.rfi',title:'Bilgi taleplerinde zaman kazanın',description:'Etkileşimli raporlar ve basit model inceleme iş akışlarıyla tasarım niyetini kolayca iletin.',iconSrc:'/assets/previews/sds2/icons/more_accurate_deliverables.png'},
+        {sourceId:'live.sds.ben.production',title:'Doğru üretim verileri',description:'İmalatı kolaylaştırmak için sektörün önde gelen otomatik ekipman çözümleriyle entegrasyon sağlayın.',iconSrc:'/assets/previews/sds2/icons/accurate_production_data.png'},
+        {sourceId:'live.sds.ben.bim',title:'Kesintisiz BIM iş akışları',description:'Verileri tasarımdan inşaata BIM döngüsü boyunca kullanın.',iconSrc:'/assets/previews/sds2/icons/import_bim_models.png'},
+      ]}} />}
+
       {layout.benefits && layout.benefits.items.length > 0 && (
-        <BenefitsSection benefits={layout.benefits} />
+        <BenefitsSection benefits={layout.benefits} variant={pagePath === "/products/sds2-home" ? "category-list" : "default"} />
       )}
 
       {layout.coreFeatures && layout.coreFeatures.items.length > 0 && (
@@ -297,46 +334,6 @@ export function StructuredPageLayoutSection({
       )}
 
       <FAQSection faqDirectory={layout.faqDirectory} />
-
-      {contentLinks.length > 0 && (
-        <section className="preview-section" aria-label="İlgili Bağlantılar ve Dokümanlar">
-          <div className="alu-container">
-            <div className="alu-techspecs-banner" style={{ padding: 'var(--space-inset-lg)' }}>
-              <div className="alu-stack" style={{ gap: 'var(--space-stack-md)' }}>
-                <span className="preview-kicker">İLGİLİ BAĞLANTILAR, MODÜLLER VE DOKÜMANLAR</span>
-                <h2 className="alu-h3" style={{ margin: 0 }}>
-                  Bu Sayfayla İlgili Hızlı Geçişler ve İndirmeler
-                </h2>
-                <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-dense)' }}>
-                  {contentLinks.map((contentLink, linkIndex) =>
-                    contentLink.external ? (
-                      <a
-                        key={`${contentLink.href}-${linkIndex}`}
-                        href={contentLink.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="alu-button alu-button--secondary alu-button--sm"
-                      >
-                        <span>{contentLink.text}</span>
-                        <AluIcon name="external-link" size="sm" />
-                      </a>
-                    ) : (
-                      <Link
-                        key={`${contentLink.href}-${linkIndex}`}
-                        href={contentLink.href}
-                        className="alu-button alu-button--secondary alu-button--sm"
-                      >
-                        <span>{contentLink.text}</span>
-                        <AluIcon name="arrow-right" size="sm" />
-                      </Link>
-                    )
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
     </div>
   );
 }

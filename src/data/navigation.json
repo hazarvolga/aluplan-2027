@@ -33,6 +33,401 @@
       "https://www.youtube.com/c/AllplanTurkey"
     ]
   },
+  "solutionDirectory": {
+    "catalogIntro": {
+      "kicker": "TÜM ÇÖZÜMLERİMİZ",
+      "title": "Geleceği Tasarlayın",
+      "description": "Bina tasarımından altyapı mühendisliğine, inşaat planlamasından eklentilere kadar projenizin her aşaması için geliştirilmiş BIM çözümlerini keşfedin."
+    },
+    "groups": [
+      {
+        "title": "BİNA TASARIMI",
+        "hubPath": "/solutions-v2/building-design",
+        "hubItems": [
+          {
+            "title": "Mimari",
+            "href": "/solutions/architecture",
+            "description": "Profesyonel çözüm paketi.",
+            "external": false
+          },
+          {
+            "title": "Strüktürel Mühendislik",
+            "href": "/solutions/structural",
+            "description": "Profesyonel çözüm paketi.",
+            "external": false
+          },
+          {
+            "title": "MEP",
+            "href": "/solutions/mep",
+            "description": "Profesyonel çözüm paketi.",
+            "external": false
+          },
+          {
+            "title": "ALLPLAN ENDÜSTRİ ÇÖZÜMLERİ",
+            "href": "/solutions/allplan-industry",
+            "description": "Profesyonel çözüm paketi.",
+            "external": false
+          }
+        ],
+        "catalogItems": [
+          {
+            "title": "Mimari",
+            "href": "/solutions/architecture",
+            "description": "Yaratıcı vizyonunuzu kusursuz bir şekilde gerçeğe dönüştüren, tasarım özgürlüğü ve hassasiyeti bir arada sunan kapsamlı BIM çözümü.",
+            "image": {
+              "src": "/assets/solutions/architecture-hero.jpg",
+              "alt": "Mimari"
+            },
+            "external": false
+          },
+          {
+            "title": "Strüktürel Mühendislik",
+            "href": "/solutions/structural",
+            "description": "Karmaşık yapısal analizlerden detaylandırmaya kadar, güvenli ve optimize edilmiş yapılar için güçlü mühendislik araçları.",
+            "image": {
+              "src": "/assets/solutions/structural-hero.jpg",
+              "alt": "Strüktürel Mühendislik"
+            },
+            "external": false
+          },
+          {
+            "title": "MEP",
+            "href": "/solutions/mep",
+            "description": "Mekanik, elektrik ve sıhhi tesisat sistemlerinin entegre tasarımı ve koordinasyonu için gelişmiş modelleme yetenekleri.",
+            "image": {
+              "src": "/assets/solutions/mep-hero.jpg",
+              "alt": "MEP"
+            },
+            "external": false
+          },
+          {
+            "title": "ALLPLAN Endüstri Çözümleri",
+            "href": "/solutions/allplan-industry",
+            "description": "Endüstriyel tesisler ve özel yapılar için özelleştirilmiş, yüksek performanslı tasarım ve detaylandırma çözümleri.",
+            "image": {
+              "src": "/assets/solutions/architecture-hero.jpg",
+              "alt": "ALLPLAN Endüstri Çözümleri"
+            },
+            "external": false
+          }
+        ]
+      },
+      {
+        "title": "ALTYAPI TASARIMI",
+        "hubPath": "/solutions-v2/infrastructure",
+        "hubItems": [
+          {
+            "title": "Altyapı Mühendisliği",
+            "href": "/solutions/infrastructure",
+            "description": "Profesyonel çözüm paketi.",
+            "external": false
+          },
+          {
+            "title": "Yol ve Demiryolu Tasarımı",
+            "href": "/solutions/road-railway",
+            "description": "Profesyonel çözüm paketi.",
+            "external": false
+          },
+          {
+            "title": "Köprü Tasarımı",
+            "href": "/solutions/bridge-design",
+            "description": "Profesyonel çözüm paketi.",
+            "external": false
+          }
+        ],
+        "catalogItems": [
+          {
+            "title": "Altyapı Mühendisliği",
+            "href": "/solutions/infrastructure",
+            "description": "Karmaşık altyapı projeleri, tüneller ve yeraltı yapıları için hassas modelleme ve planlama araçları.",
+            "image": {
+              "src": "/assets/solutions/infrastructure-hero.jpg",
+              "alt": "Altyapı Mühendisliği"
+            },
+            "external": false
+          },
+          {
+            "title": "Yol ve Demiryolu Tasarımı",
+            "href": "/solutions/road-railway",
+            "description": "Parametrik yol ve demiryolu tasarımı ile güzergah planlamasından detaylı kesitlere kadar eksiksiz çözüm.",
+            "image": {
+              "src": "/assets/solutions/road-railway-hero.jpg",
+              "alt": "Yol ve Demiryolu Tasarımı"
+            },
+            "external": false
+          },
+          {
+            "title": "Köprü Tasarımı",
+            "href": "/solutions/bridge-design",
+            "description": "Parametrik modelleme ile her türlü köprü tipini verimli bir şekilde tasarlayın, analiz edin ve detaylandırın.",
+            "image": {
+              "src": "/assets/solutions/bridge-hero.jpg",
+              "alt": "Köprü Tasarımı"
+            },
+            "external": false
+          }
+        ]
+      },
+      {
+        "title": "İNŞAAT PLANLAMASI",
+        "hubPath": "/solutions-v2/construction",
+        "hubItems": [
+          {
+            "title": "Prekast Üretimi",
+            "href": "/solutions/precast",
+            "description": "Profesyonel çözüm paketi.",
+            "external": false
+          },
+          {
+            "title": "Çelik Detaylandırma & İmalat",
+            "href": "/solutions/steel",
+            "description": "Profesyonel çözüm paketi.",
+            "external": false
+          },
+          {
+            "title": "Şantiye Planlaması",
+            "href": "/solutions/site-planning",
+            "description": "Profesyonel çözüm paketi.",
+            "external": false
+          }
+        ],
+        "catalogItems": [
+          {
+            "title": "Prekast Üretimi",
+            "href": "/solutions/precast",
+            "description": "Otomatikleştirilmiş prekast tasarım ve üretim süreçleri ile verimliliği artırın ve hataları en aza indirin.",
+            "image": {
+              "src": "/assets/solutions/precast-hero.jpg",
+              "alt": "Prekast Üretimi"
+            },
+            "external": false
+          },
+          {
+            "title": "Çelik Detaylandırma & İmalat",
+            "href": "/solutions/steel",
+            "description": "SDS2 entegrasyonu ile çelik yapıların detaylandırılması ve imalat verilerinin otomatik oluşturulması.",
+            "image": {
+              "src": "/assets/solutions/steel-hero.jpg",
+              "alt": "Çelik Detaylandırma & İmalat"
+            },
+            "external": false
+          },
+          {
+            "title": "Şantiye Planlaması",
+            "href": "/solutions/site-planning",
+            "description": "Şantiye sahasını 3B olarak planlayın, vinç konumlarını optimize edin ve lojistik süreçlerini simüle edin.",
+            "image": {
+              "src": "/assets/solutions/site-planning-hero.jpg",
+              "alt": "Şantiye Planlaması"
+            },
+            "external": false
+          }
+        ]
+      },
+      {
+        "title": "EKLENTİLER",
+        "hubPath": "/solutions-v2/addons",
+        "hubItems": [
+          {
+            "title": "CDS Add-On",
+            "href": "/solutions/cds-addon",
+            "description": "Profesyonel çözüm paketi.",
+            "external": false
+          },
+          {
+            "title": "Allto PytonPart Generator",
+            "href": "https://allplantools.com/",
+            "description": "Profesyonel çözüm paketi.",
+            "external": true
+          },
+          {
+            "title": "Allto PytonPart",
+            "href": "/solutions/pythonpart",
+            "description": "Profesyonel çözüm paketi.",
+            "external": false
+          },
+          {
+            "title": "AX3000 MEP",
+            "href": "/solutions/ax3000",
+            "description": "Profesyonel çözüm paketi.",
+            "external": false
+          },
+          {
+            "title": "Scalypso",
+            "href": "/solutions/scalypso",
+            "description": "Profesyonel çözüm paketi.",
+            "external": false
+          }
+        ],
+        "catalogItems": [
+          {
+            "title": "CDS Add-On",
+            "href": "/solutions/cds-addon",
+            "description": "Kablo ve boru sistemleri için eklenti çözümü. Tesisat projelerinizde hız kazanın.",
+            "image": {
+              "src": "/assets/solutions/mep-hero.jpg",
+              "alt": "CDS Add-On"
+            },
+            "external": false
+          },
+          {
+            "title": "Allto PythonPart Generator",
+            "href": "https://allplantools.com/",
+            "description": "Kod yazmadan kendi parametrik PythonPart nesnelerinizi oluşturun ve iş akışlarınızı otomatikleştirin.",
+            "image": {
+              "src": "/assets/solutions/architecture-hero.jpg",
+              "alt": "Allto PythonPart Generator"
+            },
+            "external": true
+          },
+          {
+            "title": "Allto PythonPart",
+            "href": "/solutions/pythonpart",
+            "description": "Python tabanlı parametrik nesneler ile tekrarlayan görevleri otomatikleştirin ve tasarım hızınızı artırın.",
+            "image": {
+              "src": "/assets/solutions/architecture-hero.jpg",
+              "alt": "Allto PythonPart"
+            },
+            "external": false
+          },
+          {
+            "title": "AX3000 MEP",
+            "href": "/solutions/ax3000-mekanik-tesisat",
+            "description": "Entegre enerji analizi ve tesisat hesaplamaları ile sürdürülebilir bina sistemleri tasarlayın.",
+            "image": {
+              "src": "/assets/solutions/mep-hero.jpg",
+              "alt": "AX3000 MEP"
+            },
+            "external": false
+          },
+          {
+            "title": "Scalypso",
+            "href": "/solutions/scalypso",
+            "description": "Nokta bulutu verilerini işleyin ve mevcut yapıları hassas bir şekilde BIM modellerine dönüştürün.",
+            "image": {
+              "src": "/assets/solutions/site-planning-hero.jpg",
+              "alt": "Scalypso"
+            },
+            "external": false
+          }
+        ]
+      },
+      {
+        "title": "DİĞER ÜRÜNLER",
+        "hubPath": "/solutions-v2/other",
+        "hubItems": [
+          {
+            "title": "BIMFlex",
+            "href": "/solutions/bimflex",
+            "description": "Profesyonel çözüm paketi.",
+            "external": false
+          },
+          {
+            "title": "Donatı Mühendisliği",
+            "href": "/solutions/rebar-engineering",
+            "description": "Profesyonel çözüm paketi.",
+            "external": false
+          },
+          {
+            "title": "İmar Yönetmeliği BIM Eklentisi",
+            "href": "/solutions/imar-yonetmeligi-bim-eklentisi",
+            "description": "Profesyonel çözüm paketi.",
+            "external": false
+          },
+          {
+            "title": "BIMX5",
+            "href": "/solutions/bimx5",
+            "description": "Profesyonel çözüm paketi.",
+            "external": false
+          },
+          {
+            "title": "Allplan Oska İşbirliği",
+            "href": "/solutions/oska",
+            "description": "Profesyonel çözüm paketi.",
+            "external": false
+          },
+          {
+            "title": "Allplan Poz Kataloğu",
+            "href": "/solutions/poz-catalog",
+            "description": "Profesyonel çözüm paketi.",
+            "external": false
+          }
+        ],
+        "catalogItems": [
+          {
+            "title": "BIMFlex",
+            "href": "/solutions/bimflex",
+            "description": "FlexSoft ve Aluplan satış ortaklığı kapsamında Aluplan tarafından da sunulabilen Allplan donatı otomasyonu eklenti paketi.",
+            "image": {
+              "src": "/assets/solutions/bimflex/kolon-model.png",
+              "alt": "BIMFlex"
+            },
+            "external": false
+          },
+          {
+            "title": "Allplan BIMPLUS",
+            "href": "/products/allplan-bimplus",
+            "description": "Bulut tabanlı BIM işbirliği platformu ile tüm proje paydaşlarını tek bir merkezde buluşturun.",
+            "image": {
+              "src": "/assets/solutions/architecture-hero.jpg",
+              "alt": "Allplan BIMPLUS"
+            },
+            "external": false
+          },
+          {
+            "title": "BIMX5",
+            "href": "/solutions/bimx5",
+            "description": "İhale, Metraj, Hakediş ve BIM modellemesi için nihai çözüm. Allplan ve 2b dwg Converter hızıyla.",
+            "image": {
+              "src": "/assets/solutions/oska/bimx5-section.jpg",
+              "alt": "BIMX5"
+            },
+            "external": false
+          },
+          {
+            "title": "Donatı Mühendisliği",
+            "href": "/solutions/rebar-engineering",
+            "description": "Otomatik donatı detaylandırma ve metraj raporlama araçları ile betonarme projelerinde hız kazanın.",
+            "image": {
+              "src": "/assets/solutions/structural-hero.jpg",
+              "alt": "Donatı Mühendisliği"
+            },
+            "external": false
+          },
+          {
+            "title": "İmar Yönetmeliği BIM Eklentisi",
+            "href": "/solutions/imar-yonetmeligi-bim-eklentisi",
+            "description": "Projelerinizin Planlı Alanlar İmar Yönetmeliğine uygunluğunu otomatik olarak kontrol edin ve raporlayın.",
+            "image": {
+              "src": "/assets/solutions/planli-alanlar/planla-hesapla.png",
+              "alt": "İmar Yönetmeliği BIM Eklentisi"
+            },
+            "external": false
+          },
+          {
+            "title": "Allplan Oska İşbirliği",
+            "href": "/solutions/oska",
+            "description": "Allplan metraj verilerini Oska yaklaşık maliyet ve hakediş yazılımlarına doğrudan aktarın.",
+            "image": {
+              "src": "/assets/solutions/oska/hero-banner.jpg",
+              "alt": "Allplan Oska İşbirliği"
+            },
+            "external": false
+          },
+          {
+            "title": "Allplan Poz Kataloğu",
+            "href": "/solutions/poz-catalog",
+            "description": "Türkiye poz birim fiyat kataloğu entegrasyonu ile keşif ve maliyet hesaplamalarınızı otomatikleştirin.",
+            "image": {
+              "src": "/assets/solutions/architecture-hero.jpg",
+              "alt": "Allplan Poz Kataloğu"
+            },
+            "external": false
+          }
+        ]
+      }
+    ]
+  },
   "topBar": {
     "email": "info@aluplan.com.tr",
     "phones": [

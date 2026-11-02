@@ -1,0 +1,38 @@
+[
+  {
+    "file": "story-1.jpg",
+    "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2F_processed_%2F2%2Ff%2Fcsm_skyresidence_prodis_web9_ee424ac75c.jpg%3Fv%3Dv1",
+    "status": 200,
+    "sha256": "8492c750b5b89ec785236607cf731cf635b00e7bff818ee20c340df72c971596"
+  },
+  {
+    "file": "story-2.jpg",
+    "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2F_processed_%2F9%2Fc%2Fcsm_strasky_bridge_web5_05cafa204e.jpg%3Fv%3Dv1",
+    "status": 200,
+    "sha256": "79d8dfc99fe86995f035a02eb1c73ea12662f275afaf0de7efa5154697e3b717"
+  },
+  {
+    "file": "story-3.jpg",
+    "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2F_processed_%2F6%2Fa%2Fcsm_thedome_picture_1200x800_0_976e9b3edf.jpg%3Fv%3Dv1",
+    "status": 200,
+    "sha256": "1a9d7a76e02dcc41b89caa5c16dea15bb8dd96f0a415d8fb9e15ddf5b3e4de5f"
+  },
+  {
+    "file": "story-4.jpg",
+    "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2F_processed_%2Fe%2Fe%2Fcsm_OperaParis_0_d36b3eb629.jpg%3Fv%3Dv1",
+    "status": 200,
+    "sha256": "415243cbf192b5321ccbd3dbaf8464f24c8e2e322782a2e3cb4efd5ee8dc98d8"
+  },
+  {
+    "file": "story-5.jpg",
+    "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2F_processed_%2Fb%2F3%2Fcsm_header_ropeway-lattice-tower_1920x745-flip_02628afac8.jpg%3Fv%3Dv1",
+    "status": 200,
+    "sha256": "547742c471506d631cb10a1ec70e1e983c58678de41b15cf16ec0b8d506d2638"
+  },
+  {
+    "file": "story-6.jpg",
+    "src": "https://res.cloudinary.com/vsf-sap/image/fetch/f_auto,c_limit,dpr_auto,w_1536,q_auto/https%3A%2F%2Ftypo3-parser-dev.vercel.app%2Fapi%2Fimages%2Ffileadmin%2F_processed_%2F2%2Fd%2Fcsm_Artstat_sporthall_1920x745_9a5877d00a.jpg%3Fv%3Dv1",
+    "status": 200,
+    "sha256": "36a1a8b121853e650f5e013edc1b1a7fcee084bcd9cc4bc9af05e0455ace0343"
+  }
+]

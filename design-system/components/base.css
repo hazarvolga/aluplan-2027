@@ -3,8 +3,9 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;background:var(--surfac
 body{margin:0;overflow-wrap:break-word;background:var(--surface-page);color:var(--text-primary);font-family:var(--font-body);font-size:var(--type-body-size);line-height:var(--type-body-line-height);font-weight:var(--font-weight-body);-webkit-font-smoothing:antialiased}
 :where(*,*::before,*::after){box-sizing:border-box}
 :where(img,svg,video){max-width:100%}
-:where(a){color:var(--text-link)}
+:where(a){color:var(--text-link);text-decoration:none}
 :where(a:hover){color:var(--text-link-hover)}
+:where(p) > a{font-weight:var(--font-weight-strong)}
 :where(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:var(--focus-width) solid var(--focus-ring);outline-offset:var(--focus-offset)}
 .alu-on-brand :focus-visible,.alu-on-brand:focus-visible{outline-color:var(--focus-ring-on-brand)}
 .alu-visually-hidden{position:absolute!important;width:1px; /* raw-ok: a11y visually-hidden constant */

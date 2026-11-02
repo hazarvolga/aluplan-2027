@@ -231,7 +231,7 @@ def _load_cloud_services():
 CLOUD_SERVICES_MAP = _load_cloud_services()
 
 DEFAULT_WORKFLOW_LINKS = [
-    {"text": "Sürümleri Görüntüle", "href": "/package-overview", "external": False, "accentKey": "package"},
+    {"text": "Sürümleri Görüntüle", "href": "https://www.allplan.com/system/releasenotes/", "external": True, "accentKey": "package"},
     {"text": "Tasarım için İş Akışları", "href": "/solutions/architecture#mimari-is-akislari", "external": False, "accentKey": "architect"},
     {"text": "İnşaat Mühendisliği için İş Akışları", "href": "/solutions/structural#insaat-muhendisligi-is-akislari", "external": False, "accentKey": "engineer"},
     {"text": "Altyapı Mühendisliği için İş Akışları", "href": "/solutions/infrastructure#altyapi-muhendisligi-is-akislari", "external": False, "accentKey": "fabricator"},
@@ -998,27 +998,46 @@ def parse_ax3000():
 
     spec_objs = split_top_level_objects(find_const_array(txt, "specificFunctions"))
     add_objs = split_top_level_objects(find_const_array(txt, "additionalFunctions"))
-    benefits = [
+    specific_benefit_ids = [
+        "ax-product-feature-drawing-data",
+        "ax-product-feature-related-windows",
+        "ax-product-feature-specific-functions",
+        "ax-product-feature-planning-construction",
+        "ax-product-feature-views",
+        "ax-product-feature-construction-tools",
+    ]
+    additional_benefit_ids = [
+        "ax-product-feature-plan-preview",
+        "ax-product-feature-data-exchange",
+        "ax-product-feature-layout",
+        "ax-product-feature-consistent-data",
+    ]
+    specific_benefits = [
         {
+            "sourceId": specific_benefit_ids[index],
             "iconSrc": imp.get(get_prop_ident(o, "icon"), ""),
             "subtitle": "/ BELİRLİ FONKSİYONLAR",
             "title": get_prop_str(o, "title"),
             "description": get_prop_str(o, "description"),
         }
-        for o in spec_objs
-    ] + [
+        for index, o in enumerate(spec_objs)
+    ]
+    additional_benefits = [
         {
+            "sourceId": additional_benefit_ids[index],
             "iconSrc": imp.get(get_prop_ident(o, "icon"), ""),
             "subtitle": "/ EK FONKSİYONLAR",
             "title": get_prop_str(o, "title"),
-            "description": get_prop_str(o, "description") or "Plan öngörünümü ve gelişmiş pafta kontrolü.",
+            "description": get_prop_str(o, "description"),
         }
-        for o in add_objs
+        for index, o in enumerate(add_objs)
     ]
+    benefits = specific_benefits + additional_benefits
 
     mod_objs = split_top_level_objects(find_const_array(txt, "specialModules"))
     mod_items = [
         {
+            "sourceId": f"ax-product-module-{index + 1}",
             "title": get_prop_str(o, "title"),
             "description": get_prop_str(o, "description"),
             "imageSrc": imp.get(get_prop_ident(o, "image"), ""),
@@ -1026,47 +1045,66 @@ def parse_ax3000():
             "ctaText": "Devamını oku",
             "external": False,
         }
-        for o in mod_objs
+        for index, o in enumerate(mod_objs)
     ]
 
-    return {
-        "intro": {
-            "kicker": "/ TÜRK STANDARTLARINA UYUMLU MEP BIM",
-            "title": "Türk Standartları ve Tümleşik MEP Çözümü",
-            "bullets": [
-                "TS 825 Bileşen Arayüzü",
-                "Isıtma Modülünde Kat, Yön ve İşletme Zamlarının Otomatik Hesabı",
-                "Türkiye İklim Verileri",
-                "EKB yazılımı BEP Yönetmeliğine göre",
-                "Soğutma Hesabı Türkiye İklim Verilerine göre",
-            ],
-        },
-        "splitCallouts": [
-            {
-                "kicker": "/ 25 YILLIK CAD DENEYİMİ",
-                "title": "Deneyim Kazandırır & Tümleşik Kullanım",
-                "description": "AX3000'in Bina Tesisatı çözümünde lider konuma gelmesi CAD pazarındaki 25 yıllık deneyimin sonucudur. Sıhhi Tesisat, Isıtma, Havalandırma, Soğutma, EKB ve Elektrik tesisatı için çok seçenekli özel çözümler üretebilirsiniz.",
-                "imageSrc": imp.get("simulason", "/assets/solutions/ax3000/simulason.jpg"),
-            },
-            {
-                "kicker": "/ VERİ YÖNETİMİ",
-                "title": "Optimum Veri Yönetimi",
-                "description": "AX-3000 yerleşim plan içindeki verileri en uygun ve anlaşılır şekilde sıralayarak projenizi yönetmenizi kolaylaştırır.",
-                "imageSrc": imp.get("untitled3", "/assets/solutions/ax3000/Untitled-3.png"),
-            },
+    intro = {
+        "kicker": "/ TÜRK STANDARTLARINA UYUMLU MEP BIM",
+        "title": "Türk Standartları ve Tümleşik MEP Çözümü",
+        "bullets": [
+            "TS 825 Bileşen Arayüzü",
+            "Isıtma Modülünde Kat, Yön ve İşletme Zamlarının Otomatik Hesabı",
+            "Türkiye İklim Verileri",
+            "EKB yazılımı BEP Yönetmeliğine göre",
+            "Soğutma Hesabı Türkiye İklim Verilerine göre",
         ],
+    }
+    experience_callout = {
+        "sourceId": "ax-product-experience",
+        "kicker": "/ 25 YILLIK CAD DENEYİMİ",
+        "title": "Deneyim Kazandırır",
+        "description": "AX3000'in Bina Tesisatı çözümünde lider konuma gelmesi CAD pazarındaki 25 yıllık deneyimin sonucudur. AX-3000 Mekanik ve Tesisat ile ilgili ihtiyaçlarınız için geliştirilmiş ilk CAD yazılımıdır ve işinizde projelendirmeden konstrüksiyona ve uygulamaya kadar tüm ihtiyaçlarınızı karşılar.",
+        "imageSrc": imp.get("axBg1", "/assets/solutions/ax3000/ax-bg-1.jpg"),
+    }
+    integrated_callout = {
+        "sourceId": "ax-product-integrated-use",
+        "kicker": "/ MODÜLER MEP YAPISI",
+        "title": "Tümleşik Kullanım",
+        "description": "AX3000'deki modüler yapı sayesinde Sıhhi Tesisat , Isıtma, Havalandırma, Soğutma, EKB ve Elektrik tesisatı için çok seçenekli özel çözümler üretebilirsiniz. Siz bir kere yazılımda çalışmaya başlayın, tümleşik kullanım sayesinde ileri safhalara kolayca geleceksiniz.",
+        "imageSrc": imp.get("simulason", "/assets/solutions/ax3000/simulason.jpg"),
+        "reverse": True,
+    }
+    data_callout = {
+        "sourceId": "ax-product-data-management",
+        "kicker": "/ VERİ YÖNETİMİ",
+        "title": "Optimum Veri Yönetimi",
+        "description": "AX-3000 yerleşim plan içindeki verileri en uygun ve anlaşılır şekilde sıralayarak projenizi yönetmenizi kolaylaştırır.",
+        "imageSrc": imp.get("untitled3", "/assets/solutions/ax3000/Untitled-3.png"),
+    }
+    module_grid = {
+        "kicker": "/ ÖZEL MODÜLLER",
+        "title": "AX3000 Özel Modüller",
+        "columns": 3,
+        "items": mod_items,
+    }
+
+    return {
+        "intro": intro,
+        "splitCallouts": [experience_callout, integrated_callout, data_callout],
         "benefits": {
             "kicker": f"/ {len(benefits)} FONKSİYON",
             "title": "Belirli ve Ek Fonksiyonlar",
             "items": benefits,
         },
-        "extraGrids": [
-            {
-                "kicker": "/ ÖZEL MODÜLLER",
-                "title": "AX3000 Özel Modüller",
-                "columns": 3,
-                "items": mod_items,
-            }
+        "extraGrids": [module_grid],
+        "contentBlocks": [
+            {"kind": "intro", "sourceId": "ax-product-intro", "content": intro},
+            {"kind": "splitCallouts", "sourceId": "ax-product-experience-block", "items": [experience_callout]},
+            {"kind": "splitCallouts", "sourceId": "ax-product-integrated-use-block", "items": [integrated_callout]},
+            {"kind": "benefits", "sourceId": "ax-product-specific-functions", "content": {"kicker": "/ BELİRLİ FONKSİYONLAR", "title": "Belirli Fonksiyonlar", "items": specific_benefits}},
+            {"kind": "splitCallouts", "sourceId": "ax-product-data-management-block", "items": [data_callout]},
+            {"kind": "benefits", "sourceId": "ax-product-additional-functions", "content": {"kicker": "/ EK FONKSİYONLAR", "title": "Ek Fonksiyonlar", "items": additional_benefits}},
+            {"kind": "mediaGrid", "sourceId": "ax-product-modules", "content": module_grid},
         ],
     }
 
@@ -1088,12 +1126,13 @@ def parse_sds2_home():
 
     return {
         "intro": {
-            "kicker": "/ SDS2 ULTIMATE",
-            "title": "SDS2 ULTIMATE NEDİR?",
+            "kicker": "/ SDS2 BY ALLPLAN",
+            "title": "SDS2 BY ALLPLAN NEDİR?",
+            "paragraphs": ["SDS2 by ALLPLAN, otomatik ve çakışmasız birleşimlerle gelişmiş çelik modelleme sağlayan, piyasadaki tek bütünleşik çelik detaylandırma ve birleşim tasarımı çözümüdür. İmalathaneden şantiyeye kadar daha doğru ve uygulanabilir tasarımlar sunmanıza yardımcı olur."],
             "bullets": [
-                "SDS2 Ultimate, günlük projelerinde hassasiyet ve verimlilik arayan detaylandırıcılar için geliştirilen, sektör lideri çelik detaylandırma yazılımıdır.",
-                "Otomatik bağlantı tasarımı, kapsamlı 3B modelleme ve BIM ile CNC sistemleriyle sorunsuz entegrasyon.",
-                "İş akışlarını optimize eder, maliyetli hataları azaltır ve üretime hazır, doğru çizimler sunar.",
+                "Birleşimleri tasarlamak, çizim doğruluğunu artırmak ve birleşimin tamamını daha az manuel işlemle kontrol etmek için akıllı otomasyon.",
+                "İmalat tercihlerine göre özelleştirilmiş tasarım otomasyonu.",
+                "Sektörün önde gelen BIM ve imalat yönetimi çözümleriyle tam birlikte çalışabilirlik.",
             ],
             "videoEmbedUrl": "https://www.youtube.com/embed/oKqf6wjm9tg",
         },
@@ -3045,84 +3084,203 @@ def parse_solutions_ax3000_pages(route: str):
         fpath = EV_DIR / "app/solutions/ax3000/ClientPage.tsx"
         txt = fpath.read_text(encoding="utf-8")
         imp = parse_imports(txt)
-        return {
-            "splitCallouts": [
+        intro = {
+            "kicker": "/ TÜRK STANDARTLARINA UYUMLU MEP BIM",
+            "title": "AX3000 MEP",
+            "bullets": [
+                "TS 825 Bileşen Arayüzü",
+                "Isıtma Modülünde Kat, Yön ve İşletme Zamlarının Otomatik Hesabı",
+                "Türkiye İklim Verileri",
+                "EKB yazılımı BEP Yönetmeliğine göre",
+                "Soğutma Hesabı Türkiye İklim Verilerine göre",
+            ],
+            "imageSrc": imp.get("axBg1", ""),
+            "imageAlt": "AX3000 MEP",
+            "actions": [
                 {
+                    "sourceId": "ax-solution-action-request",
+                    "text": "Teklif Talep Formu",
+                    "href": "https://forms.office.com/r/hXhnKAG912",
+                    "external": True,
+                },
+                {
+                    "sourceId": "ax-solution-action-youtube",
+                    "text": "Youtube Kanalımız",
+                    "href": "https://www.youtube.com/watch?v=EXVlk83zcIs&list=PL5ma0JNNoskbikv2hCg83KVa1pvQ4fvZW",
+                    "external": True,
+                },
+                {
+                    "sourceId": "ax-solution-action-documents",
+                    "text": "AX3000 Dokümanları",
+                    "href": "/products/ax3000/dokumanlar",
+                    "external": False,
+                },
+            ],
+        }
+        feature_ids = [
+            "ax-solution-feature-drawing-data",
+            "ax-solution-feature-related-windows",
+            "ax-solution-feature-specific-functions",
+            "ax-solution-feature-views",
+            "ax-solution-feature-construction-tools",
+            "ax-solution-feature-integrated-solutions",
+            "ax-solution-feature-plan-preview",
+            "ax-solution-feature-data-exchange",
+            "ax-solution-feature-layout",
+            "ax-solution-feature-consistent-data",
+        ]
+        feature_groups = []
+        for group_var, group_title, group_ids in (
+            ("features1", "Belirli Fonksiyonlar", feature_ids[:6]),
+            ("features2", "Belirli Fonksiyonlar", feature_ids[6:]),
+        ):
+            group_items = []
+            for source_id, obj in zip(
+                group_ids,
+                split_top_level_objects(find_const_array(txt, group_var)),
+            ):
+                group_items.append({
+                    "sourceId": source_id,
+                    "title": get_prop_str(obj, "title"),
+                    "description": get_prop_str(obj, "description"),
+                    "iconSrc": imp.get(get_prop_ident(obj, "icon"), ""),
+                })
+            feature_groups.append({
+                "kicker": "/ AX3000 FONKSİYONLARI",
+                "title": group_title,
+                "items": group_items,
+            })
+
+        experience_callout = {
+                    "sourceId": "ax-solution-experience",
                     "kicker": "/ BİNA TESİSATI ÇÖZÜMÜ · TÜRK STANDARTLARINA UYUMLU",
                     "title": "Deneyim Kazandırır",
                     "description": "AX3000'in Bina Tesisatı çözümünde lider konuma gelmesi CAD pazarındaki 25 yıllık deneyimin sonucudur. AX-3000 Mekanik ve Tesisat ile ilgili ihtiyaçlarınız için geliştirilmiş ilk CAD yazılımıdır ve işinizde projelendirmeden konstrüksiyona ve uygulamaya kadar tüm ihtiyaçlarınızı karşılar.",
-                    "bullets": [
-                        "TS 825 Bileşen Arayüzü",
-                        "Isıtma Modülünde Kat, Yön ve İşletme Zamlarının Otomatik Hesabı",
-                        "Türkiye İklim Verileri",
-                        "EKB yazılımı BEP Yönetmeliğine göre",
-                        "Soğutma Hesabı Türkiye İklim Verilerine göre",
-                    ],
                     "youtubeId": "fHYDP36DcjA",
                     "reverse": False,
-                },
-                {
+                }
+        integrated_callout = {
+                    "sourceId": "ax-solution-integrated-use",
                     "kicker": "/ MODÜLER MEP YAPISI",
                     "title": "Tümleşik Kullanım",
                     "description": "AX3000'deki modüler yapı sayesinde Sıhhi Tesisat, Isıtma, Havalandırma, Soğutma, EKB ve Elektrik tesisatı için çok seçenekli özel çözümler üretebilirsiniz. Siz bir kere yazılımda çalışmaya başlayın, tümleşik kullanım sayesinde ileri safhalara kolayca geleceksiniz.",
                     "imageSrc": imp.get("simulason", ""),
                     "reverse": True,
-                },
-                {
+                }
+        data_callout = {
+                    "sourceId": "ax-solution-data-management",
                     "kicker": "/ VERİ YÖNETİMİ",
                     "title": "Optimum Veri Yönetimi",
                     "description": "AX-3000 yerleşim plan içindeki verileri en uygun ve anlaşılır şekilde sıralayarak projenizi yönetmenizi kolaylaştırır.",
                     "imageSrc": imp.get("untitled3", ""),
                     "reverse": False,
-                },
-            ],
-            "extraGrids": [
-                {
+                }
+        module_grid = {
                     "kicker": "/ AX3000 UZMANLIK MODÜLLERİ",
                     "title": "AX3000 Çözüm Ailesi",
                     "columns": 3,
                     "items": [
-                        {"title": "AX3000 Virtual Reality", "description": "Şimdi hazır! Müşterileriniz çok daha memnun kalacaklar çünkü isteklerine daha iyi cevap verebilirsiniz.", "imageSrc": imp.get("slideVr1", ""), "href": "/solutions/ax3000-virtual-reality", "ctaText": "Devamını oku"},
-                        {"title": "AX3000 Yapı Fiziği", "description": "Saatlik hava durumu verilerine dayanan dinamik simülasyonlar - dünya çapında!", "imageSrc": imp.get("sanitation", ""), "href": "/solutions/ax3000-yapi-fizigi", "ctaText": "Devamını oku"},
-                        {"title": "AX3000 Mekanik Tesisat", "description": "Tümleşik kullanım, akıllı çizim elemanları ve çok seçenekli otomatik hesaplama sayesinde planlama zamanınızı en verimli şekilde kullanmanızı sağlar.", "imageSrc": imp.get("ventilation", ""), "href": "/solutions/ax3000-mekanik-tesisat", "ctaText": "Devamını oku"},
+                        {"sourceId": "ax-solution-module-vr", "title": "AX3000 Virtual Reality", "description": "Şimdi hazır! Müşterileriniz çok daha memnun kalacaklar çünkü isteklerine daha iyi cevap verebilirsiniz.", "imageSrc": imp.get("slideVr1", ""), "href": "/solutions/ax3000-virtual-reality", "ctaText": "Devamını oku"},
+                        {"sourceId": "ax-solution-module-building-physics", "title": "AX3000 Yapı Fiziği", "description": "Saatlik hava durumu verilerine dayanan dinamik simülasyonlar - dünya çapında!", "imageSrc": imp.get("sanitation", ""), "href": "/solutions/ax3000-yapi-fizigi", "ctaText": "Devamını oku"},
+                        {"sourceId": "ax-solution-module-mep", "title": "AX3000 Mekanik Tesisat", "description": "Tümleşik kullanım, akıllı çizim elemanları ve çok seçenekli otomatik hesaplama sayesinde planlama zamanınızı en verimli şekilde kullanmanızı sağlar", "imageSrc": imp.get("ventilation", ""), "href": "/solutions/ax3000-mekanik-tesisat", "ctaText": "Devamını oku"},
                     ],
                 }
+        return {
+            "intro": intro,
+            "splitCallouts": [experience_callout, integrated_callout, data_callout],
+            "benefits": {
+                "kicker": "/ 10 FONKSİYON",
+                "title": "AX3000 Fonksiyonları",
+                "items": feature_groups[0]["items"] + feature_groups[1]["items"],
+            },
+            "extraGrids": [module_grid],
+            "contentBlocks": [
+                {"kind": "intro", "sourceId": "ax-solution-intro", "content": intro},
+                {"kind": "splitCallouts", "sourceId": "ax-solution-experience-block", "items": [experience_callout]},
+                {"kind": "splitCallouts", "sourceId": "ax-solution-integrated-use-block", "items": [integrated_callout]},
+                {"kind": "benefits", "sourceId": "ax-solution-specific-functions", "content": feature_groups[0]},
+                {"kind": "splitCallouts", "sourceId": "ax-solution-data-management-block", "items": [data_callout]},
+                {"kind": "benefits", "sourceId": "ax-solution-additional-functions", "content": feature_groups[1]},
+                {"kind": "mediaGrid", "sourceId": "ax-solution-modules", "content": module_grid},
             ],
         }
     elif route == "/solutions/ax3000-virtual-reality":
         fpath = EV_DIR / "app/solutions/ax3000-virtual-reality/ClientPage.tsx"
         txt = fpath.read_text(encoding="utf-8")
         imp = parse_imports(txt)
-        return {
-            "splitCallouts": [
-                {
+        primary_callout = {
+                    "sourceId": "ax-vr-primary",
                     "kicker": "/ AX3000 VIRTUAL REALITY · OPEN BIM & BIMPLUS",
-                    "title": "Virtual Reality: Tek bir tıklama ile sınırsız 3B-Gerçeği yaşayın",
+                    "title": "Virtual Reality: Tek bir tıklama ile sınırsız \n3B-Gerçeği yaşayın",
                     "paragraphs": [
-                        "Şimdi hazır! Müşterileriniz çok daha memnun kalacaklar çünkü isteklerine daha iyi cevap verebilirsiniz. Ofisinizde toplantı esnasında planladığınız yapının etrafında ve içinde gezindirebileceksiniz.",
-                        "Bunu kullanırken teknolojinin desteklediği bir 3B-Gözlük (Örneğin: Oculus Rift, VIVE VR), Game-Engine ve AX3000 Plugin planlama araçtan verileri okumaktadır. Gerçek mekanların izlenimi, orantıyı, aydınlatma durumunu ve renk/malzeme seçimlerinizi farklı yıllık ve günlük saat dilimlerine veya hava koşullarına göre sunabilirsiniz.",
-                        "Bimplus: Virtual-Reality-Çözümü Tüm Planlama Yazılımları İçin. Bu merkezi Open-BIM platformu ile yapılarınız ve planlarınızla her planlama yazılımı üzerinden sanal gezinti hazırlayabilir ve müşterilerinize sunabilirsiniz.",
-                    ],
-                    "bullets": [
-                        "Firma ESS Bimplus platformu için geliştirdiği merkezi OPEN BIM platformu mal sahipleri için bir Allplan servisidir.",
-                        "Sistem bağımsız platform olduğundan bina modelini hangi yazılımda ürettiğiniz fark etmez.",
-                        "Virtual Reality'de 3B modelde karmaşık yapılar daha iyi anlaşılır.",
-                        "Planlama hataları bina uygulamadan önce belli olur.",
+                        "Bunu kullanırken teknolojinin desteklediği bir 3B-Gözlük. Örneğin: Oculus Rift, VIVE VR), Game-Engin ve AX3000 Plugin Planlama -Araçtan verileri okumakta tır. Bu yöntem ile müşteriniz resmen planladığını z yapıların etrafında içinde serbest gezinebilir kendi istediği gibi. Avantajınız: Sadece bu yöntem ile gerçek mekanların izlenimi orantıyı aydınlatma durumu ve renk malzeme seçimlerinizi sunmuş olacaksınız. Hemde farklı yıllık ve günlük saat dilimlerine göre veya hava koşullara göre.",
+                        "BricsCAD ve Archicad tek tıklama planlama yazılımınızda ve başlayın!",
+                        "Daha kolay olamaz! Çalışma tarzınız değiş meye çek. Sadece müşteriniz ile iletişim daha iyi olacak. AX3000 VR normal planlama yazılımınız için bir Plugin dir. İstediğiniz zaman şu anki planlama durumundan sadece tek bir tıklama ile gerçek zaman VR çevresini yükleyebilirsiniz. Müşteriniz hızlı her değişikliği hemen sunabilirsiniz. Örneğin bir duvarın taşınması veya pencerenin büyümesi gibi…..",
+                        "Bimplus: Virtual‐Reality‐Çözümü Tüm Planlama Yazılımlar İçin.",
+                        "Eğer herhangi başka bir planlama yazılım ile mi çalışıyormusunuz? Sorun değil AX3000 VR Bimplus platformunda da size bir zarif çözüm sunabiliyoruz. Bu merkezi Open-Bim-Platformu ile yapılarınız ve planlarınız her planlama yazılım ile sanal gezinti hazırlaya bilirsiniz ve müşterilerinize suna bilirsiniz.",
                     ],
                     "youtubeId": "fHYDP36DcjA",
-                    "ctaText": "Demo Test",
-                    "ctaHref": "https://vr.ax3000-group.de/",
-                    "external": True,
                     "reverse": False,
-                },
+                }
+        main_intro_callout = {
+            "sourceId": "ax-vr-main-intro",
+            "title": "Virtual Reality: Tek bir tıklama ile sınırsız 3B-Gerçeği yaşayın",
+            "description": "Şimdi hazır! Müşterileriniz çok daha memnun kalacaklar çünkü isteklerine daha iyi cevap verebilirsiniz. Bunu nasıl başaracaksınız? Çok kolay! Ofisinizde Toplantı esnasında planladığınız yapının etrafında içinde gezindirebileceksiniz. Serbest hareket edebilecek her yöne baka bilecek ilerde yapı bitiğinde bina nasıl olacağını görecek.",
+        }
+        more_than_video_callout = {
+            "sourceId": "ax-vr-more-than-video",
+            "title": "Virtuelle Realität – 3B-Videodan Fazlası",
+            "paragraphs": [
+                "Bunu kullanırken teknolojinin desteklediği bir 3B-Gözlük. Örneğin: Oculus Rift, VIVE VR), Game-Engin ve AX3000 Plugin Planlama -Araçtan verileri okumakta tır. Bu yöntem ile müşteriniz resmen planladığını z yapıların etrafında içinde serbest gezinebilir kendi istediği gibi. Avantajınız: Sadece bu yöntem ile gerçek mekanların izlenimi orantıyı aydınlatma durumu ve renk malzeme seçimlerinizi sunmuş olacaksınız. Hemde farklı yıllık ve günlük saat dilimlerine göre veya hava koşullara göre.",
+                "BricsCAD ve Archicad tek tıklama planlama yazılımınızda ve başlayın!",
+                "Daha kolay olamaz! Çalışma tarzınız değiş meye çek. Sadece müşteriniz ile iletişim daha iyi olacak. AX3000 VR normal planlama yazılımınız için bir Plugin dir. İstediğiniz zaman şu anki planlama durumundan sadece tek bir tıklama ile gerçek zaman VR çevresini yükleyebilirsiniz. Müşteriniz hızlı her değişikliği hemen sunabilirsiniz. Örneğin bir duvarın taşınması veya pencerenin büyümesi gibi…..",
+            ],
+        }
+        bimplus_callout = {
+            "sourceId": "ax-vr-bimplus",
+            "title": "Bimplus: Virtual‐Reality‐Çözümü Tüm Planlama Yazılımlar İçin.",
+            "description": "Eğer herhangi başka bir planlama yazılım ile mi çalışıyormusunuz? Sorun değil AX3000 VR Bimplus platformunda da size bir zarif çözüm sunabiliyoruz. Bu merkezi Open-Bim-Platformu ile yapılarınız ve planlarınız her planlama yazılım ile sanal gezinti hazırlaya bilirsiniz ve müşterilerinize suna bilirsiniz.",
+        }
+        benefits_callout = {
+            "sourceId": "ax-vr-benefits",
+            "title": "VR-Teknoloji Planlayıcı ve mal sahibi arası komünikasyon devrimi.",
+            "bullets": [
+                "Firma ESS Bimplus platformu için geliştirdiği bir merkezi, OPEN BIM – Platformu mal sahipleri için, bir Allplan servisidir.",
+                "Sistem bağımsız platform olduğundan bina modeli hangi yazılım ürettiğinizi fark etmiyor.",
+                "Virtual Reality de 3B-Model de karmaşık yapılar daha iyi anlaşılır.",
+                "Planlama hatalar bina uygulamadan önce belli olur.",
+                "Planlama aşamalarınızı mal sahibi ile iletişimi yeni bir seviyeye yükseltin ve rekabet avantaşından faydalanın.",
+            ],
+            "imageSrc": imp.get("bannerVr", ""),
+            "ctaText": "Demo Test",
+            "ctaHref": "https://vr.ax3000-group.de/",
+            "external": True,
+        }
+        gallery = {
+            "kicker": "/ GALERİ",
+            "title": "Galeri",
+            "columns": 3,
+            "items": [
                 {
-                    "kicker": "/ VR İLETİŞİM DEVRİMİ",
-                    "title": "Virtuelle Realität – 3B-Videodan Fazlası",
-                    "description": "AX3000 VR normal planlama yazılımınız için bir eklentidir. İstediğiniz zaman şu anki planlama durumundan sadece tek bir tıklama ile gerçek zamanlı VR çevresini yükleyebilir, duvarın taşınması veya pencerenin büyümesi gibi her değişikliği anında sunabilirsiniz.",
-                    "imageSrc": imp.get("bannerVr", ""),
-                    "reverse": True,
-                },
-            ]
+                    "sourceId": f"ax-vr-slide-{index}",
+                    "title": f"VR Slide {index}",
+                    "description": "",
+                    "imageSrc": imp.get(f"vrSlide{index}", ""),
+                }
+                for index in range(1, 7)
+            ],
+        }
+        return {
+            "splitCallouts": [primary_callout, main_intro_callout, more_than_video_callout, bimplus_callout, benefits_callout],
+            "extraGrids": [gallery],
+            "contentBlocks": [
+                {"kind": "splitCallouts", "sourceId": "ax-vr-primary-block", "items": [primary_callout]},
+                {"kind": "mediaGrid", "sourceId": "ax-vr-gallery", "content": gallery},
+                {"kind": "splitCallouts", "sourceId": "ax-vr-main-intro-block", "items": [main_intro_callout]},
+                {"kind": "splitCallouts", "sourceId": "ax-vr-more-than-video-block", "items": [more_than_video_callout]},
+                {"kind": "splitCallouts", "sourceId": "ax-vr-bimplus-block", "items": [bimplus_callout]},
+                {"kind": "splitCallouts", "sourceId": "ax-vr-benefits-block", "items": [benefits_callout]},
+            ],
         }
     elif route == "/solutions/ax3000-yapi-fizigi":
         fpath = EV_DIR / "app/solutions/ax3000-yapi-fizigi/ClientPage.tsx"
@@ -3174,39 +3332,126 @@ def parse_solutions_ax3000_pages(route: str):
 
 
 def parse_allplan_industry_page():
-    return {
-        "intro": {
+    intro = {
             "kicker": "/ ALLPLAN NEDİR? · ENDÜSTRİ ÇÖZÜMLERİ",
             "title": "Sektörün En Kapsamlı BIM Çözümü",
+            "paragraphs": [
+                "ALLPLAN; mimarlar, mühendisler ve inşaat profesyonelleri için tasarım ve inşaat süreçlerini projenin her aşamasında destekleyen ve bütünleştiren disiplinler arası bir BIM yazılım çözümüdür."
+            ],
             "bullets": [
                 "Mimari ve iç mimariden, yapısal ve MEP mühendisliğine, altyapı ve köprü mühendisliğinden, betonarme ve prekast detaylandırmaya ve şantiye planlamasına kadar.",
                 "Konsept tasarımdan detaylı uygulama çıktılarına kadar tüm disiplinlerde verimli iş akışlarını destekleyen güçlü araçlar.",
                 "Daha başarılı projelerin teslimi, koordinasyonu ve verimli işbirliği için entegre bulut teknolojisi.",
             ],
             "videoEmbedUrl": "https://www.youtube.com/embed/tFnwOyX7ncI",
-        },
-        "stats": [
+        }
+    stats = [
             {"value": "45%", "label": "YÜKSEK PERFORMANS", "description": "Paydaş onayı ve zamanında inşaat için fikirlerden en yüksek ayrıntı seviyelerine daha hızlı geçiş."},
             {"value": "65%", "label": "DAHA FAZLA HASSASİYET", "description": "Daha erken bir aşamada daha hassas verilerin verimli üretimi, güvenilir maliyet kontrolü sağlar."},
             {"value": "35%", "label": "DAHA FAZLA PROJE KAZAN", "description": "Tasarım verimliliğini artırır, zamanında teslimatı destekler, daha yüksek kalitede, daha fazla proje."},
-        ],
-        "challenges": [
+        ]
+    challenges = [
             "Tasarım, planlama ve inşaat için artan karmaşıklık ve işbirliği gereksinimleri.",
             "Çok fazla zaman alan, kaliteyi etkileyen ve risk oluşturan sürekli proje değişiklikleri.",
             "Proje maliyetleriniz hakkında devam eden endişeler ve kontrolden çıkan zaman gecikmeleri.",
+        ]
+    explore_grid = {
+        "kicker": "/ TASARIMDAN İNŞAATA",
+        "title": "ALLPLAN'I KEŞFEDİN",
+        "subtitle": "Yapısal analiz iş akışları, gelişmiş detaylandırma yetenekleri ve yerleşik şantiye planlama araçları ile donatılmış, tasarımdan inşaata süreçlerini sunan tek BIM çözümüdür. AEC firmalarının konseptten detaylı tasarıma ve projenin sahada tam olarak nasıl inşa edileceğinin planlanmasına kadar tüm süreci tek bir model üzerinden kesintisiz yönetmesini sağlar.",
+        "columns": 3,
+        "items": [
+            {
+                "sourceId": "industry-building-design",
+                "title": "BİNA TASARIMI",
+                "imageSrc": "/assets/product-architecture.jpg",
+                "links": [
+                    {"text": "Mimari", "href": "/solutions/architecture"},
+                    {"text": "Strüktürel Mühendislik", "href": "/solutions/structural"},
+                    {"text": "MEP", "href": "/solutions/mep"},
+                    {"text": "ALLPLAN ENDÜSTRİ ÇÖZÜMLERİ", "href": "/solutions/allplan-industry"},
+                ],
+            },
+            {
+                "sourceId": "industry-infrastructure-design",
+                "title": "ALTYAPI TASARIMI",
+                "imageSrc": "/assets/products/civil/workflow-infrastructure.jpg",
+                "links": [
+                    {"text": "Altyapı Mühendisliği", "href": "/solutions/infrastructure"},
+                    {"text": "Yol ve Demiryolu Tasarımı", "href": "/solutions/road-railway"},
+                    {"text": "Köprü Tasarımı", "href": "/solutions/bridge-design"},
+                ],
+            },
+            {
+                "sourceId": "industry-construction-planning",
+                "title": "İNŞAAT PLANLAMASI",
+                "imageSrc": "/assets/product-precast.jpg",
+                "links": [
+                    {"text": "Prekast Üretimi", "href": "/solutions/precast"},
+                    {"text": "Çelik Detaylandırma & İmalat", "href": "/solutions/steel"},
+                    {"text": "Şantiye Planlaması", "href": "/solutions/site-planning"},
+                ],
+            },
         ],
-        "benefits": {
+    }
+    benefits = {
             "kicker": "/ ÖZELLİKLER",
             "title": "ÖNE ÇIKAN ÖZELLİKLER",
             "items": [
-                {"title": "TEK YAZILIMLA TAM ÇÖZÜM", "description": "Küçükten son derece karmaşık olana kadar her tür inşaat için uygundur, büyük model verilerini hızlı ve güvenli işler."},
-                {"title": "İSTEDİĞİNİZ GİBİ ÇALIŞIN", "description": "2B, 2.5B ve 3B'de esnek iş akışlarının yanı sıra tam obje yönelimli BIM çalışma metodolojisi."},
-                {"title": "ÜRETKEN İŞBİRLİĞİ", "description": "Çok kullanıcılı gerçek zamanlı çalışma için entegre bulut teknolojisinin yanı sıra iş ortaklarıyla model ve proje işbirliği."},
-                {"title": "İKNA EDİCİ GÖRSELLEŞTİRMELER", "description": "Müşterilere ve paydaşlara tasarımları anında açıklayan hızlı ve yüksek kaliteli sunumlar."},
-                {"title": "GEREKSİNİMLERİ KOLAYCA DEĞİŞTİRİN", "description": "Planları sıfırdan yeniden modellemek zorunda kalmadan uyarlayın ve değiştirin, zamandan tasarruf edin."},
-                {"title": "ÜSTÜN KALİTELİ TESLİMATLAR", "description": "Doğrudan 3B modelden hızlı ve doğru planlar, çizimler ve raporlar oluşturun."},
+                {"sourceId": "industry-feature-complete-solution", "title": "TEK YAZILIMLA TAM ÇÖZÜM", "description": "Küçükten son derece karmaşık olana kadar her tür inşaat için uygundur, büyük model verilerini hızlı ve güvenli işler.", "iconSrc": "/assets/solutions/industry/reasons/work_way_want.png"},
+                {"sourceId": "industry-feature-work-your-way", "title": "İSTEDİĞİNİZ GİBİ ÇALIŞIN", "description": "2B, 2.5B ve 3B'de esnek iş akışlarının yanı sıra tam obje yönelimli BIM çalışma metodolojisi.", "iconSrc": "/assets/solutions/industry/reasons/powerful_modeling.png"},
+                {"sourceId": "industry-feature-collaboration", "title": "ÜRETKEN İŞBİRLİĞİ", "description": "Çok kullanıcılı gerçek zamanlı çalışma için entegre bulut teknolojisinin yanı sıra iş ortaklarıyla model ve proje işbirliği.", "iconSrc": "/assets/solutions/industry/reasons/productive_collab.png"},
+                {"sourceId": "industry-feature-visualization", "title": "İKNA EDİCİ GÖRSELLEŞTİRMELER", "description": "Rapid high-quality presentation explaining designs instantly to clients and stakeholders.", "iconSrc": "/assets/solutions/industry/reasons/convincing_visualizations.png"},
+                {"sourceId": "industry-feature-change", "title": "GEREKSİNİMLERİ KOLAYCA DEĞİŞTİRİN", "description": "Planları sıfırdan yeniden modellemek zorunda kalmadan uyarlayın ve değiştirin, zamandan tasarruf edin.", "iconSrc": "/assets/solutions/industry/reasons/easy_modify_requirements.png"},
+                {"sourceId": "industry-feature-deliverables", "title": "ÜSTÜN KALİTELİ TESLİMATLAR", "description": "Doğrudan 3B modelden hızlı ve doğru planlar, çizimler ve raporlar oluşturun.", "iconSrc": "/assets/solutions/industry/reasons/more_accurate_deliverables.png"},
             ],
-        },
+        }
+    design_callout = {
+        "sourceId": "industry-design-to-build-callout",
+        "kicker": "/ AEC PROFESYONELLERİ İÇİN",
+        "title": "ALLPLAN İLE TASARIMDAN İNŞAATA",
+        "description": "ALLPLAN, mimarlar, inşaat ve altyapı mühendisleri, imalatçılar ve inşaat profesyonelleri için üretkenliği artıran ve yüksek kaliteli projeler sunmalarını sağlayan yenilikçi \"Tasarımdan İnşaata\" (Design to Build) iş akışları ve gerçek zamanlı işbirliği sunar. Yapay zeka tabanlı görselleştirme, bina ve altyapı modelleme gereksinimleri için hızlandırılmış ve otomatikleştirilmiş tasarım fonksiyonları sayesinde önemli ölçüde zaman tasarrufu sağlanır. Bağlantılı yapısal analiz süreçleri, üstün birlikte çalışabilirlik (interoperability), farklı malzemeler ve inşaat yöntemleri için gelişmiş detaylandırma yetenekleri ve güçlü bulut teknolojisi ile ekipler güçlenir ve performans artar.",
+        "subheading": "ALLPLAN Avantajlarınız:",
+        "bullets": [
+            "Yapay zeka tabanlı görselleştirme ve otomatik tasarım.",
+            "Bağlantılı yapısal mühendislik iş akışları.",
+            "Üstün imalat ve inşaat koordinasyonu.",
+            "Güçlü bulut tabanlı disiplinler arası işbirliği.",
+        ],
+        "ctaText": "TÜM ALLPLAN ÖZELLİKLERİNİ İNCELE",
+        "ctaHref": "/products/allplan-2026-yenilikler",
+        "external": False,
+    }
+    product_grid = {
+        "kicker": "/ ÜRÜN PAKETLERİ",
+        "title": "ALLPLAN ÜRÜN PAKETLERİ",
+        "subtitle": "Projenizin ölçeğine ve disiplinine uygun en doğru çözümü seçin.",
+        "columns": 3,
+        "items": [
+            {"sourceId": "industry-product-basic", "title": "ALLPLAN Basic", "description": "Temel 2B/3B tasarım ve detaylandırma.", "imageSrc": "/assets/product-architecture.jpg", "href": "/products/allplan-basic", "ctaText": "ÜRÜNÜ İNCELE"},
+            {"sourceId": "industry-product-concept", "title": "ALLPLAN Concept", "description": "Konsept tasarım ve modelleme için ideal çözüm.", "imageSrc": "/assets/product-engineering.jpg", "href": "/products/allplan-concept", "ctaText": "ÜRÜNÜ İNCELE"},
+            {"sourceId": "industry-product-professional", "title": "ALLPLAN Professional", "description": "Mimarlar ve mühendisler için tam kapsamlı BIM çözümü.", "imageSrc": "/assets/product-architecture.jpg", "href": "/products/allplan-professional", "ctaText": "ÜRÜNÜ İNCELE"},
+            {"sourceId": "industry-product-ultimate", "title": "ALLPLAN Ultimate", "description": "En üst düzey tüm disiplinleri kapsayan BIM paketi.", "imageSrc": "/assets/product-engineering.jpg", "href": "/products/allplan-ultimate", "ctaText": "ÜRÜNÜ İNCELE"},
+            {"sourceId": "industry-product-civil", "title": "CIVIL", "description": "Altyapı, yol ve köprü projeleri için özel araçlar.", "imageSrc": "/assets/product-bridge.jpg", "href": "/products/civil", "ctaText": "ÜRÜNÜ İNCELE"},
+            {"sourceId": "industry-product-precast", "title": "PRECAST", "description": "Prekast üretim ve detaylandırma süreçleri için.", "imageSrc": "/assets/product-precast.jpg", "href": "/products/precast", "ctaText": "ÜRÜNÜ İNCELE"},
+        ],
+    }
+    return {
+        "intro": intro,
+        "stats": stats,
+        "challenges": challenges,
+        "benefits": benefits,
+        "splitCallouts": [design_callout],
+        "extraGrids": [product_grid],
+        "contentBlocks": [
+            {"kind": "intro", "sourceId": "industry-intro", "content": intro},
+            {"kind": "challenges", "sourceId": "industry-challenges", "items": challenges},
+            {"kind": "stats", "sourceId": "industry-stats", "items": stats},
+            {"kind": "linkGroupGrid", "sourceId": "industry-explore", "content": explore_grid},
+            {"kind": "benefits", "sourceId": "industry-features", "content": benefits},
+            {"kind": "splitCallouts", "sourceId": "industry-design-to-build", "items": [design_callout]},
+            {"kind": "mediaGrid", "sourceId": "industry-products", "content": product_grid},
+        ],
     }
 
 

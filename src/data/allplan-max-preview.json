@@ -1,0 +1,326 @@
+{
+  "live.max.hero.product": {
+    "en": "Allplan Max",
+    "tr": "Allplan Max"
+  },
+  "live.max.hero.title": {
+    "en": "AI for Engineering",
+    "tr": "Mühendislik için yapay zekâ"
+  },
+  "live.max.hero.body": {
+    "en": "Allplan Max puts powerful AI tools in your control. Not an add-on and not a separate package. Included in every 2027 product.",
+    "tr": "Allplan Max, güçlü yapay zekâ araçlarını sizin kontrolünüze verir. Bir eklenti ya da ayrı bir paket değildir. Her 2027 ürününe dahildir."
+  },
+  "live.max.hero.cta": {
+    "en": "Get a demo → `/request-demo/`",
+    "tr": "Demo isteyin"
+  },
+  "live.max.detail.title": {
+    "en": "Allplan Max: AI that puts you in control.",
+    "tr": "Allplan Max: kontrolü size veren yapay zekâ."
+  },
+  "live.max.detail.body": {
+    "en": "Your teams already know how to design, analyze, and deliver great projects. With Allplan Max you get the freedom to design your own workflows, build custom features, automate repetitive work, and get instant answers to any questions.",
+    "tr": "Ekipleriniz zaten iyi projeler tasarlamayı, analiz etmeyi ve teslim etmeyi biliyor. Allplan Max ile kendi iş akışlarınızı tasarlama, özel özellikler geliştirme, tekrarlayan işleri otomatikleştirme ve her soruya anında yanıt alma özgürlüğüne sahip olursunuz."
+  },
+  "live.max.detail.list-title": {
+    "en": "AI for Everyone",
+    "tr": "Herkes için yapay zekâ"
+  },
+  "live.max.detail.bullet-1": {
+    "en": "Included with your software: Allplan Max comes with every 2027 product. You don't have to sign up for anything extra.",
+    "tr": "Yazılımınıza dahil: Allplan Max her 2027 ürünüyle birlikte gelir. Ekstra bir kayıt yapmanız gerekmez."
+  },
+  "live.max.detail.bullet-2": {
+    "en": "Unlimited usage in 2026: You deserve to experiment with AI and find the best ways it works for you, without worrying about a monthly token limit.",
+    "tr": "2026'da sınırsız kullanım: Aylık token sınırını dert etmeden yapay zekâyı denemeyi ve sizin için en iyi çalışma biçimlerini bulmayı hak ediyorsunuz."
+  },
+  "live.max.detail.cta": {
+    "en": "free trial → `/demo-download-allplan/`",
+    "tr": "Ücretsiz deneme"
+  },
+  "live.max.survey.title": {
+    "en": "Early Adopter Survey Results:",
+    "tr": "Erken Kullanıcı Anket Sonuçları:"
+  },
+  "live.max.pillar-1.stat": {
+    "en": "18% more capacity",
+    "tr": "%18 daha fazla kapasite"
+  },
+  "live.max.pillar-2.stat": {
+    "en": "21% more speed",
+    "tr": "%21 daha fazla hız"
+  },
+  "live.max.pillar-3.stat": {
+    "en": "24% more productivity",
+    "tr": "%24 daha fazla verimlilik"
+  },
+  "live.max.pillar-1.body": {
+    "en": "Your workflows are part of your competitive advantage. More capacity means more projects, which means more revenue for the firm. Allplan Max gives your teams the power to adapt your software to the way you work, not the other way around.",
+    "tr": "İş akışlarınız rekabet avantajınızın bir parçasıdır. Daha fazla kapasite daha çok proje, daha çok proje firmanıza daha fazla gelir demektir. Allplan Max, ekiplerinize yazılımı çalışma biçiminize uyarlama gücü verir; tersi değil."
+  },
+  "live.max.pillar-2.body": {
+    "en": "Every firm is under pressure to deliver more, faster. Allplan Max automates the time-consuming, repetitive tasks, from model analysis and quantity takeoffs and model analysis to drawing cleanup, reporting, visualizations, and early BIM modeling.",
+    "tr": "Her firma daha fazlasını daha hızlı teslim etme baskısı altında. Allplan Max, model analizi ve metrajdan çizim temizliğine, raporlamaya, görselleştirmelere ve erken BIM modellemeye kadar zaman alan, tekrarlayan görevleri otomatikleştirir."
+  },
+  "live.max.pillar-3.body": {
+    "en": "Even advanced users have product questions. But nobody has time to read through documentation or contact support.Allplan Max includes an AI Coach with expert product knowledge and a background in AEC.",
+    "tr": "İleri düzey kullanıcıların bile ürünle ilgili soruları olur. Ancak kimsenin dokümantasyonu baştan sona okumaya ya da desteğe başvurmaya zamanı yok. Allplan Max, uzman ürün bilgisine ve AEC geçmişine sahip bir AI Coach içerir."
+  },
+  "live.max.pillar-1.heading": {
+    "en": "Make AI work for you.",
+    "tr": "Yapay zekâyı sizin için çalıştırın."
+  },
+  "live.max.pillar-2.heading": {
+    "en": "Engineering at the speed of AI",
+    "tr": "Yapay zekâ hızında mühendislik"
+  },
+  "live.max.pillar-3.heading": {
+    "en": "A personal coach available 24/7",
+    "tr": "7/24 erişilebilen kişisel koç"
+  },
+  "live.max.3feat.title": {
+    "en": "Explore Allplan Max in more detail.AI that helps you do more and do it your way.",
+    "tr": "Allplan Max'i daha yakından keşfedin. Daha fazlasını kendi yolunuzla yapmanıza yardımcı olan yapay zekâ."
+  },
+  "live.max.3feat.fb.included": {
+    "en": "Included in: Allplan",
+    "tr": "Dahili olduğu ürün: Allplan"
+  },
+  "live.max.3feat.fb.title": {
+    "en": "Feature Builder (MCP)",
+    "tr": "Feature Builder (MCP)"
+  },
+  "live.max.3feat.fb.body": {
+    "en": "Every firm has different workflows, so every firm needs customized product features. Tell the AI how you want to modify Allplan and get plug-and-play code that makes it a reality.",
+    "tr": "Her firmanın iş akışı farklıdır, dolayısıyla her firmanın özelleştirilmiş ürün özelliklerine ihtiyacı vardır. Allplan'ı nasıl değiştirmek istediğinizi yapay zekâya anlatın, gerçeğe dönüştüren tak-çalıştır kodunu alın."
+  },
+  "live.max.3feat.fb.video": {
+    "en": "View video → `youtube.com/embed/ARHTE2-CaWk`",
+    "tr": "Videoyu izleyin"
+  },
+  "live.max.3feat.fb.cta": {
+    "en": "Request Demo → `/request-demo/`",
+    "tr": "Demo talep edin"
+  },
+  "live.max.3feat.wb.included": {
+    "en": "Included in: Allplan",
+    "tr": "Dahili olduğu ürün: Allplan"
+  },
+  "live.max.3feat.wb.title": {
+    "en": "Workflow Builder (MCP)",
+    "tr": "Workflow Builder (MCP)"
+  },
+  "live.max.3feat.wb.body": {
+    "en": "For the ultimate level of workflow control, connect Allplan to the AI tools your firm already uses. Create agentic automations, build new product integrations, and retrieve project information.",
+    "tr": "En üst düzey iş akışı kontrolü için Allplan'ı firmanızın hâlihazırda kullandığı yapay zekâ araçlarına bağlayın. Ajan tabanlı otomasyonlar kurun, yeni ürün entegrasyonları geliştirin ve proje bilgilerini alın."
+  },
+  "live.max.3feat.wb.video": {
+    "en": "View video → `youtube.com/embed/8ROtkolkemM`",
+    "tr": "Videoyu izleyin"
+  },
+  "live.max.3feat.wb.cta": {
+    "en": "Request Demo → `/request-demo/`",
+    "tr": "Demo talep edin"
+  },
+  "live.max.3feat.bim.included": {
+    "en": "Included in: Allplan and SDS2",
+    "tr": "Dahili olduğu ürünler: Allplan ve SDS2"
+  },
+  "live.max.3feat.bim.title": {
+    "en": "AI BIM Analyst",
+    "tr": "AI BIM Analyst"
+  },
+  "live.max.3feat.bim.body": {
+    "en": "It's your model, so you should be able to ask it your questions. Find objects, check attributes, calculate quantities, and generate custom tables or reports.",
+    "tr": "Model sizin, dolayısıyla sorularınızı ona sorabilmelisiniz. Nesneleri bulun, öznitelikleri denetleyin, metraj hesaplayın ve özel tablolar veya raporlar oluşturun."
+  },
+  "live.max.3feat.bim.video": {
+    "en": "View video → `youtube.com/embed/RSwNnc8XvbQ`",
+    "tr": "Videoyu izleyin"
+  },
+  "live.max.3feat.bim.cta": {
+    "en": "Request Demo → `/request-demo/`",
+    "tr": "Demo talep edin"
+  },
+  "live.max.quotes.title": {
+    "en": "WHAT OURALLPLAN CLIENTS SAY:",
+    "tr": "ALLPLAN müşterilerimiz ne diyor:"
+  },
+  "live.max.quote-1": {
+    "en": "\"The AI Formula Writer reduces the time needed to write and correct complex formulas in Allplan by helping users link parameters, define logical conditions, and avoid syntax errors.\"",
+    "tr": "AI Formula Writer, kullanıcıların parametreleri ilişkilendirmesine, mantıksal koşullar tanımlamasına ve sözdizimi hatalarından kaçınmasına yardımcı olarak Allplan'da karmaşık formüllerin yazılıp düzeltilmesi için gereken zamanı azaltır."
+  },
+  "live.max.quote-2": {
+    "en": "\"The AI BIM Modeler significantly speeds up the conversion of 2D plans and PDFs into 3D models, reducing modeling time and simplifying our workflow.\"",
+    "tr": "AI BIM Modeler, 2B planların ve PDF'lerin 3B modellere dönüştürülmesini önemli ölçüde hızlandırır, modelleme süresini kısaltır ve iş akışımızı basitleştirir."
+  },
+  "live.max.quote-3": {
+    "en": "\"The AI BIM Analyst makes checking model attributes easier through natural language, without requiring extensive software knowledge\"",
+    "tr": "AI BIM Analyst, geniş yazılım bilgisi gerektirmeden model özniteliklerinin doğal dille denetlenmesini kolaylaştırır"
+  },
+  "live.max.more.title": {
+    "en": "More Features of Allplan Max",
+    "tr": "Allplan Max'in diğer özellikleri"
+  },
+  "live.max.more.fw.title": {
+    "en": "AI Formula Writer",
+    "tr": "AI Formula Writer"
+  },
+  "live.max.more.fw.body": {
+    "en": "Customize your models. Just describe the relationship you want between attributes, labels, or object data, and get an Allplan formula in moments.",
+    "tr": "Modellerinizi özelleştirin. Öznitelikler, etiketler veya nesne verileri arasında istediğiniz ilişkiyi tarif edin, anında bir Allplan formülü alın."
+  },
+  "live.max.more.fw.included": {
+    "en": "Included in Allplan",
+    "tr": "Dahili olduğu ürün: Allplan"
+  },
+  "live.max.more.fw.image": {
+    "en": "`images/csm_AI_Formula_Writer_-_Best_Example_a1d355686c.png`",
+    "tr": "—"
+  },
+  "live.max.more.sa.title": {
+    "en": "AI Structural Analyst",
+    "tr": "AI Structural Analyst"
+  },
+  "live.max.more.sa.body": {
+    "en": "Get an engineering report tailored to your specific requirements. Spend less time writing and more time reviewing and making decisions.",
+    "tr": "Özel gereksinimlerinize göre hazırlanmış bir mühendislik raporu alın. Yazmaya daha az, incelemeye ve karar vermeye daha çok zaman ayırın."
+  },
+  "live.max.more.sa.video": {
+    "en": "View video → `youtube.com/embed/CIgKvrD7QhQ`",
+    "tr": "Videoyu izleyin"
+  },
+  "live.max.more.sa.included": {
+    "en": "Included in SCIA and FRILO",
+    "tr": "Dahili olduğu ürünler: SCIA ve FRILO"
+  },
+  "live.max.more.sa.image": {
+    "en": "`images/csm_AI_StructuralAnalyst_83493afb3c.png`",
+    "tr": "—"
+  },
+  "live.max.more.dr.title": {
+    "en": "AI Drafter",
+    "tr": "AI Drafter"
+  },
+  "live.max.more.dr.body": {
+    "en": "Automatically move overlapping annotations, and labels in 2D drawings generated from BIM models. You retain control over the final version, but AI cuts the time in half.",
+    "tr": "BIM modellerinden üretilen 2B çizimlerde üst üste binen açıklamaları ve etiketleri otomatik olarak taşıyın. Son sürümün kontrolü sizde kalır, ancak yapay zekâ süreyi yarıya indirir."
+  },
+  "live.max.more.dr.video": {
+    "en": "View video → `youtube.com/embed/zQDWJh9rCsA`",
+    "tr": "Videoyu izleyin"
+  },
+  "live.max.more.dr.included": {
+    "en": "Included in Allplan and SDS2",
+    "tr": "Dahili olduğu ürünler: Allplan ve SDS2"
+  },
+  "live.max.more.dr.image": {
+    "en": "`images/csm_AI_Drafter_Final_a89c4205be.png`",
+    "tr": "—"
+  },
+  "live.max.more.bm.title": {
+    "en": "AI BIM Modeler",
+    "tr": "AI BIM Modeler"
+  },
+  "live.max.more.bm.body": {
+    "en": "[in Beta] Create a first draft BIM model in minutes and reduce the time required to create a final version.",
+    "tr": "[Beta] Dakikalar içinde ilk taslak BIM modeli oluşturun ve son sürümü hazırlamak için gereken süreyi azaltın"
+  },
+  "live.max.more.bm.included": {
+    "en": "Included in Allplan",
+    "tr": "Dahili olduğu ürün: Allplan"
+  },
+  "live.max.more.bm.image": {
+    "en": "`images/csm_AI_BIM_Modeler4_4a3a8d2e3f.png`",
+    "tr": "—"
+  },
+  "live.max.more.vz.title": {
+    "en": "AI Visualizer",
+    "tr": "AI Visualizer"
+  },
+  "live.max.more.vz.body": {
+    "en": "Transform a sketch, photo, or simple 3D model into a compelling image. Did the client request a change? Deliver it immediately.",
+    "tr": "Bir eskizi, fotoğrafı veya basit 3B modeli etkileyici bir görsele dönüştürün. Müşteri değişiklik mi istedi? Hemen teslim edin."
+  },
+  "live.max.more.vz.video": {
+    "en": "View video → `youtube.com/embed/ypS7tjRB6rs`",
+    "tr": "Videoyu izleyin"
+  },
+  "live.max.more.vz.included": {
+    "en": "Included in Allplan",
+    "tr": "Dahili olduğu ürün: Allplan"
+  },
+  "live.max.more.vz.image": {
+    "en": "`images/csm_AI_Visualizer_Before_and_After_384986ee1d.png`",
+    "tr": "—"
+  },
+  "live.max.more.co.title": {
+    "en": "AI Coach",
+    "tr": "AI Coach"
+  },
+  "live.max.more.co.body": {
+    "en": "Get immediate answers and advice on best practices for functions, features, workflows and best practices. Faster onboarding. Immediate support.",
+    "tr": "İşlevler, özellikler ve iş akışları için en iyi uygulamalar hakkında anında yanıt ve tavsiye alın. Daha hızlı oryantasyon. Anında destek."
+  },
+  "live.max.more.co.video": {
+    "en": "View video → `youtube.com/embed/vFk7oUru2bg`",
+    "tr": "Videoyu izleyin"
+  },
+  "live.max.more.co.included": {
+    "en": "Included in all products",
+    "tr": "Dahili olduğu ürünler: tüm ürünler"
+  },
+  "live.max.more.co.image": {
+    "en": "`images/csm_AI_Coach_final_0bd4132638.png`",
+    "tr": "—"
+  },
+  "live.max.cta.title": {
+    "en": "Ready for the next step?",
+    "tr": "Bir sonraki adıma hazır mısınız?"
+  },
+  "live.max.cta.expert.title": {
+    "en": "Talk to an Expert",
+    "tr": "Uzmanla görüşün"
+  },
+  "live.max.cta.expert.body": {
+    "en": "Get personalized guidance from Allplan experts to find the right edition for your workflows, projects, and team. Book a consultation and get clarity.",
+    "tr": "Allplan uzmanlarından size özel yönlendirme alın; iş akışlarınız, projeleriniz ve ekibiniz için doğru sürümü bulun. Danışmanlık ayarlayın, netlik kazanın."
+  },
+  "live.max.cta.expert.cta": {
+    "en": "Request Demo → `/request-demo/`",
+    "tr": "Demo talep edin"
+  },
+  "live.max.cta.trial.title": {
+    "en": "Try Allplan Free",
+    "tr": "Allplan'ı ücretsiz deneyin"
+  },
+  "live.max.cta.trial.body": {
+    "en": "Explore all Allplan editions, including Civil and Precast, at no cost. For evaluation and non-commercial use. No credit card required.",
+    "tr": "Civil ve Precast dahil tüm Allplan sürümlerini ücretsiz keşfedin. Değerlendirme ve ticari olmayan kullanım içindir. Kredi kartı gerekmez."
+  },
+  "live.max.cta.trial.cta": {
+    "en": "Get Free Trial → `/demo-download-allplan/`",
+    "tr": "Ücretsiz deneme alın"
+  },
+  "live.max.more.fw.video": {
+    "en": "View video → `youtube.com/embed/L2YcuH3PQWw`",
+    "tr": "Videoyu izleyin"
+  },
+  "live.max.more.bm.video": {
+    "en": "View video → `youtube.com/embed/kNxP71mPnFM`",
+    "tr": "Videoyu izleyin"
+  },
+  "live.max.quote-1.attribution": {
+    "en": "F. B. — surveyor",
+    "tr": "F. B. — harita ölçüm uzmanı"
+  },
+  "live.max.quote-2.attribution": {
+    "en": "N. Naryshkin — architectural drafter",
+    "tr": "N. Naryshkin — mimari teknik ressam"
+  },
+  "live.max.quote-3.attribution": {
+    "en": "L. Burtscher — planner",
+    "tr": "L. Burtscher — planlamacı"
+  }
+}

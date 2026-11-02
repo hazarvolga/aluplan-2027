@@ -1,0 +1,189 @@
+{
+  "/solutions/allplan-industry": {
+    "sourceFile": "docs/00-inventory/interaction-source-evidence/app/solutions/allplan-industry/page.tsx",
+    "sourceSha256": "49c888293fa76754f9f4e5aca4b3fd3dee57676061c0dfae978f94d11e7a6706",
+    "contentBlocksSha256": "f7aeea3b5b28a4ee7de0e575ebe7752ad377da683a9c9078adb743614f14f67e",
+    "blockOrder": [
+      "industry-intro",
+      "industry-challenges",
+      "industry-stats",
+      "industry-explore",
+      "industry-features",
+      "industry-design-to-build",
+      "industry-products"
+    ],
+    "renderedTexts": [
+      "ALLPLAN; mimarlar, mühendisler ve inşaat profesyonelleri için tasarım ve inşaat süreçlerini projenin her aşamasında destekleyen ve bütünleştiren disiplinler arası bir BIM yazılım çözümüdür.",
+      "Yapısal analiz iş akışları, gelişmiş detaylandırma yetenekleri ve yerleşik şantiye planlama araçları ile donatılmış, tasarımdan inşaata süreçlerini sunan tek BIM çözümüdür.",
+      "Rapid high-quality presentation explaining designs instantly to clients and stakeholders.",
+      "Güçlü bulut tabanlı disiplinler arası işbirliği.",
+      "Projenizin ölçeğine ve disiplinine uygun en doğru çözümü seçin."
+    ],
+    "renderedHrefs": [
+      "/products/allplan-2026-yenilikler",
+      "/products/allplan-basic",
+      "/products/allplan-concept",
+      "/products/allplan-professional",
+      "/products/allplan-ultimate",
+      "/products/civil",
+      "/products/precast"
+    ],
+    "units": [
+      {"sourceId": "industry-building-design", "title": "BİNA TASARIMI", "imageSrc": "/assets/product-architecture.jpg", "hrefs": ["/solutions/architecture", "/solutions/structural", "/solutions/mep", "/solutions/allplan-industry"]},
+      {"sourceId": "industry-infrastructure-design", "title": "ALTYAPI TASARIMI", "imageSrc": "/assets/products/civil/workflow-infrastructure.jpg", "hrefs": ["/solutions/infrastructure", "/solutions/road-railway", "/solutions/bridge-design"]},
+      {"sourceId": "industry-construction-planning", "title": "İNŞAAT PLANLAMASI", "imageSrc": "/assets/product-precast.jpg", "hrefs": ["/solutions/precast", "/solutions/steel", "/solutions/site-planning"]},
+      {"sourceId": "industry-feature-complete-solution", "title": "TEK YAZILIMLA TAM ÇÖZÜM", "iconSrc": "/assets/solutions/industry/reasons/work_way_want.png"},
+      {"sourceId": "industry-feature-work-your-way", "title": "İSTEDİĞİNİZ GİBİ ÇALIŞIN", "iconSrc": "/assets/solutions/industry/reasons/powerful_modeling.png"},
+      {"sourceId": "industry-feature-collaboration", "title": "ÜRETKEN İŞBİRLİĞİ", "iconSrc": "/assets/solutions/industry/reasons/productive_collab.png"},
+      {"sourceId": "industry-feature-visualization", "title": "İKNA EDİCİ GÖRSELLEŞTİRMELER", "description": "Rapid high-quality presentation explaining designs instantly to clients and stakeholders.", "iconSrc": "/assets/solutions/industry/reasons/convincing_visualizations.png"},
+      {"sourceId": "industry-feature-change", "title": "GEREKSİNİMLERİ KOLAYCA DEĞİŞTİRİN", "iconSrc": "/assets/solutions/industry/reasons/easy_modify_requirements.png"},
+      {"sourceId": "industry-feature-deliverables", "title": "ÜSTÜN KALİTELİ TESLİMATLAR", "iconSrc": "/assets/solutions/industry/reasons/more_accurate_deliverables.png"},
+      {"sourceId": "industry-product-basic", "title": "ALLPLAN Basic", "imageSrc": "/assets/product-architecture.jpg", "href": "/products/allplan-basic"},
+      {"sourceId": "industry-product-concept", "title": "ALLPLAN Concept", "imageSrc": "/assets/product-engineering.jpg", "href": "/products/allplan-concept"},
+      {"sourceId": "industry-product-professional", "title": "ALLPLAN Professional", "imageSrc": "/assets/product-architecture.jpg", "href": "/products/allplan-professional"},
+      {"sourceId": "industry-product-ultimate", "title": "ALLPLAN Ultimate", "imageSrc": "/assets/product-engineering.jpg", "href": "/products/allplan-ultimate"},
+      {"sourceId": "industry-product-civil", "title": "CIVIL", "imageSrc": "/assets/product-bridge.jpg", "href": "/products/civil"},
+      {"sourceId": "industry-product-precast", "title": "PRECAST", "imageSrc": "/assets/product-precast.jpg", "href": "/products/precast"}
+    ]
+  },
+  "/solutions/ax3000": {
+    "sourceFile": "docs/00-inventory/interaction-source-evidence/app/solutions/ax3000/ClientPage.tsx",
+    "sourceSha256": "8ec3ba8bc443bbc8a51f318f4359237f3f66acb6f8383276771bd3e38be12011",
+    "contentBlocksSha256": "a676d1c027aedd872fffe0055369aefa3f440731162c29de75d5783dd2b555d5",
+    "blockOrder": [
+      "ax-solution-intro",
+      "ax-solution-experience-block",
+      "ax-solution-integrated-use-block",
+      "ax-solution-specific-functions",
+      "ax-solution-data-management-block",
+      "ax-solution-additional-functions",
+      "ax-solution-modules"
+    ],
+    "renderedTexts": [
+      "TS 825 Bileşen Arayüzü",
+      "Isıtma Modülünde Kat, Yön ve İşletme Zamlarının Otomatik Hesabı",
+      "Türkiye İklim Verileri",
+      "EKB yazılımı BEP Yönetmeliğine göre",
+      "Soğutma Hesabı Türkiye İklim Verilerine göre",
+      "Çizim ve Bina Verisi",
+      "İlişkili Pencereler",
+      "Belirli Fonksiyonlar",
+      "Görünümler",
+      "Gelişmiş Konstrüksiyon Araçları",
+      "Entegre Çözümler",
+      "Plan Öngörünümü",
+      "Veri Alışverişi",
+      "Tesisat Düzeni",
+      "Tutarlı Veri Bilgisi"
+    ],
+    "renderedHrefs": [
+      "https://forms.office.com/r/hXhnKAG912",
+      "https://www.youtube.com/watch?v=EXVlk83zcIs&list=PL5ma0JNNoskbikv2hCg83KVa1pvQ4fvZW",
+      "/products/ax3000/dokumanlar",
+      "/solutions/ax3000-virtual-reality",
+      "/solutions/ax3000-yapi-fizigi",
+      "/solutions/ax3000-mekanik-tesisat"
+    ],
+    "renderedImageSrcs": [
+      "/assets/solutions/ax3000/ax-bg-1.jpg",
+      "/assets/solutions/ax3000/simulason.jpg",
+      "/assets/solutions/ax3000/Untitled-3.png"
+    ],
+    "requiredUnitIds": [
+      "ax-solution-action-request",
+      "ax-solution-action-youtube",
+      "ax-solution-action-documents",
+      "ax-solution-feature-drawing-data",
+      "ax-solution-feature-related-windows",
+      "ax-solution-feature-specific-functions",
+      "ax-solution-feature-views",
+      "ax-solution-feature-construction-tools",
+      "ax-solution-feature-integrated-solutions",
+      "ax-solution-feature-plan-preview",
+      "ax-solution-feature-data-exchange",
+      "ax-solution-feature-layout",
+      "ax-solution-feature-consistent-data"
+    ]
+  },
+  "/products/ax3000": {
+    "sourceFile": "docs/00-inventory/interaction-source-evidence/app/products/ax3000/ClientPage.tsx",
+    "sourceSha256": "11f0eaec7ec0fb2b995d760284501960655a7a0b9e3d82ac4512a1154982589a",
+    "contentBlocksSha256": "a2f6cdc3614a8ac45dd36aa546bcf9faef2af1fd4931d79961c54d0fdbb00e69",
+    "blockOrder": [
+      "ax-product-intro",
+      "ax-product-experience-block",
+      "ax-product-integrated-use-block",
+      "ax-product-specific-functions",
+      "ax-product-data-management-block",
+      "ax-product-additional-functions",
+      "ax-product-modules"
+    ],
+    "renderedTexts": [
+      "Deneyim Kazandırır",
+      "Tümleşik Kullanım",
+      "Çizim ve Bina Verisi",
+      "İlişkili Pencereler",
+      "Planlama ve Konstrüksiyon",
+      "Görünümler",
+      "Gelişmiş Konstrüksiyon Araçları",
+      "Plan Öngörünümü",
+      "Veri Alışverişi",
+      "Tesisat Düzeni",
+      "Tutarlı Veri Bilgisi",
+      "Optimum Veri Yönetimi"
+    ],
+    "renderedHrefs": [
+      "/solutions/ax3000-virtual-reality",
+      "/solutions/ax3000-yapi-fizigi",
+      "/solutions/ax3000-mekanik-tesisat"
+    ],
+    "renderedImageSrcs": [
+      "/assets/solutions/ax3000/ax-bg-1.jpg",
+      "/assets/solutions/ax3000/simulason.jpg",
+      "/assets/solutions/ax3000/Untitled-3.png"
+    ],
+    "callouts": [
+      {"sourceId": "ax-product-experience", "title": "Deneyim Kazandırır", "imageSrc": "/assets/solutions/ax3000/ax-bg-1.jpg"},
+      {"sourceId": "ax-product-integrated-use", "title": "Tümleşik Kullanım", "imageSrc": "/assets/solutions/ax3000/simulason.jpg"}
+    ]
+  },
+  "/solutions/ax3000-virtual-reality": {
+    "sourceFile": "docs/00-inventory/interaction-source-evidence/app/solutions/ax3000-virtual-reality/ClientPage.tsx",
+    "sourceSha256": "ecc0e4a3cbc578b9cf026510cf55d30e4577c0fa9e799fd26c5d3320f47dfc4a",
+    "contentBlocksSha256": "4aa4f1b9fa49d9bfd16bf6dcf69990f7ed2f9dc38ccf4080eac6f66fc5e95089",
+    "blockOrder": [
+      "ax-vr-primary-block",
+      "ax-vr-gallery",
+      "ax-vr-main-intro-block",
+      "ax-vr-more-than-video-block",
+      "ax-vr-bimplus-block",
+      "ax-vr-benefits-block"
+    ],
+    "renderedTexts": [
+      "Virtual Reality: Tek bir tıklama ile sınırsız 3B-Gerçeği yaşayın",
+      "Virtuelle Realität – 3B-Videodan Fazlası",
+      "BricsCAD ve Archicad tek tıklama planlama yazılımınızda ve başlayın!",
+      "Bimplus: Virtual‐Reality‐Çözümü Tüm Planlama Yazılımlar İçin.",
+      "VR-Teknoloji Planlayıcı ve mal sahibi arası komünikasyon devrimi.",
+      "Planlama aşamalarınızı mal sahibi ile iletişimi yeni bir seviyeye yükseltin ve rekabet avantaşından faydalanın."
+    ],
+    "renderedHrefs": ["https://vr.ax3000-group.de/"],
+    "renderedImageSrcs": [
+      "/assets/solutions/ax3000/virtual-reality/vr_slide1.jpg",
+      "/assets/solutions/ax3000/virtual-reality/vr_slide2.jpg",
+      "/assets/solutions/ax3000/virtual-reality/vr_slide3.jpg",
+      "/assets/solutions/ax3000/virtual-reality/vr_slide4.jpg",
+      "/assets/solutions/ax3000/virtual-reality/vr_slide5.jpg",
+      "/assets/solutions/ax3000/virtual-reality/vr_slide6.jpg",
+      "/assets/solutions/ax3000/virtual-reality/banner_vr.jpg"
+    ],
+    "gallery": [
+      {"sourceId": "ax-vr-slide-1", "title": "VR Slide 1", "imageSrc": "/assets/solutions/ax3000/virtual-reality/vr_slide1.jpg"},
+      {"sourceId": "ax-vr-slide-2", "title": "VR Slide 2", "imageSrc": "/assets/solutions/ax3000/virtual-reality/vr_slide2.jpg"},
+      {"sourceId": "ax-vr-slide-3", "title": "VR Slide 3", "imageSrc": "/assets/solutions/ax3000/virtual-reality/vr_slide3.jpg"},
+      {"sourceId": "ax-vr-slide-4", "title": "VR Slide 4", "imageSrc": "/assets/solutions/ax3000/virtual-reality/vr_slide4.jpg"},
+      {"sourceId": "ax-vr-slide-5", "title": "VR Slide 5", "imageSrc": "/assets/solutions/ax3000/virtual-reality/vr_slide5.jpg"},
+      {"sourceId": "ax-vr-slide-6", "title": "VR Slide 6", "imageSrc": "/assets/solutions/ax3000/virtual-reality/vr_slide6.jpg"}
+    ]
+  }
+}

@@ -18,6 +18,288 @@ STRUCTURED_LAYOUTS = build_all_structured_pages()
 ROOT = Path(__file__).resolve().parent.parent
 PUBLIC_DIR = ROOT / "public"
 
+# One explicit domain contract drives the desktop/mobile solution menu, footer hubs,
+# five hub directories, and the 22-card /solutions catalog. The two surfaces have
+# intentional differences (for example BIMPLUS is catalog-only and AX3000 has a
+# more specific catalog target), so those differences are represented as data
+# instead of inferred later from section text or generic contentLinks.
+SOLUTION_DIRECTORY_SOURCE = (
+    {
+        "title": "BİNA TASARIMI",
+        "hubPath": "/solutions-v2/building-design",
+        "items": (
+            {
+                "hubOrder": 1,
+                "catalogOrder": 1,
+                "hubTitle": "Mimari",
+                "catalogTitle": "Mimari",
+                "hubHref": "/solutions/architecture",
+                "catalogHref": "/solutions/architecture",
+            },
+            {
+                "hubOrder": 2,
+                "catalogOrder": 2,
+                "hubTitle": "Strüktürel Mühendislik",
+                "catalogTitle": "Strüktürel Mühendislik",
+                "hubHref": "/solutions/structural",
+                "catalogHref": "/solutions/structural",
+            },
+            {
+                "hubOrder": 3,
+                "catalogOrder": 3,
+                "hubTitle": "MEP",
+                "catalogTitle": "MEP",
+                "hubHref": "/solutions/mep",
+                "catalogHref": "/solutions/mep",
+            },
+            {
+                "hubOrder": 4,
+                "catalogOrder": 4,
+                "hubTitle": "ALLPLAN ENDÜSTRİ ÇÖZÜMLERİ",
+                "catalogTitle": "ALLPLAN Endüstri Çözümleri",
+                "hubHref": "/solutions/allplan-industry",
+                "catalogHref": "/solutions/allplan-industry",
+            },
+        ),
+    },
+    {
+        "title": "ALTYAPI TASARIMI",
+        "hubPath": "/solutions-v2/infrastructure",
+        "items": (
+            {
+                "hubOrder": 1,
+                "catalogOrder": 1,
+                "hubTitle": "Altyapı Mühendisliği",
+                "catalogTitle": "Altyapı Mühendisliği",
+                "hubHref": "/solutions/infrastructure",
+                "catalogHref": "/solutions/infrastructure",
+            },
+            {
+                "hubOrder": 2,
+                "catalogOrder": 2,
+                "hubTitle": "Yol ve Demiryolu Tasarımı",
+                "catalogTitle": "Yol ve Demiryolu Tasarımı",
+                "hubHref": "/solutions/road-railway",
+                "catalogHref": "/solutions/road-railway",
+            },
+            {
+                "hubOrder": 3,
+                "catalogOrder": 3,
+                "hubTitle": "Köprü Tasarımı",
+                "catalogTitle": "Köprü Tasarımı",
+                "hubHref": "/solutions/bridge-design",
+                "catalogHref": "/solutions/bridge-design",
+            },
+        ),
+    },
+    {
+        "title": "İNŞAAT PLANLAMASI",
+        "hubPath": "/solutions-v2/construction",
+        "items": (
+            {
+                "hubOrder": 1,
+                "catalogOrder": 1,
+                "hubTitle": "Prekast Üretimi",
+                "catalogTitle": "Prekast Üretimi",
+                "hubHref": "/solutions/precast",
+                "catalogHref": "/solutions/precast",
+            },
+            {
+                "hubOrder": 2,
+                "catalogOrder": 2,
+                "hubTitle": "Çelik Detaylandırma & İmalat",
+                "catalogTitle": "Çelik Detaylandırma & İmalat",
+                "hubHref": "/solutions/steel",
+                "catalogHref": "/solutions/steel",
+            },
+            {
+                "hubOrder": 3,
+                "catalogOrder": 3,
+                "hubTitle": "Şantiye Planlaması",
+                "catalogTitle": "Şantiye Planlaması",
+                "hubHref": "/solutions/site-planning",
+                "catalogHref": "/solutions/site-planning",
+            },
+        ),
+    },
+    {
+        "title": "EKLENTİLER",
+        "hubPath": "/solutions-v2/addons",
+        "items": (
+            {
+                "hubOrder": 1,
+                "catalogOrder": 1,
+                "hubTitle": "CDS Add-On",
+                "catalogTitle": "CDS Add-On",
+                "hubHref": "/solutions/cds-addon",
+                "catalogHref": "/solutions/cds-addon",
+            },
+            {
+                "hubOrder": 2,
+                "catalogOrder": 2,
+                "hubTitle": "Allto PytonPart Generator",
+                "catalogTitle": "Allto PythonPart Generator",
+                "hubHref": "https://allplantools.com/",
+                "catalogHref": "https://allplantools.com/",
+            },
+            {
+                "hubOrder": 3,
+                "catalogOrder": 3,
+                "hubTitle": "Allto PytonPart",
+                "catalogTitle": "Allto PythonPart",
+                "hubHref": "/solutions/pythonpart",
+                "catalogHref": "/solutions/pythonpart",
+            },
+            {
+                "hubOrder": 4,
+                "catalogOrder": 4,
+                "hubTitle": "AX3000 MEP",
+                "catalogTitle": "AX3000 MEP",
+                "hubHref": "/solutions/ax3000",
+                "catalogHref": "/solutions/ax3000-mekanik-tesisat",
+            },
+            {
+                "hubOrder": 5,
+                "catalogOrder": 5,
+                "hubTitle": "Scalypso",
+                "catalogTitle": "Scalypso",
+                "hubHref": "/solutions/scalypso",
+                "catalogHref": "/solutions/scalypso",
+            },
+        ),
+    },
+    {
+        "title": "DİĞER ÜRÜNLER",
+        "hubPath": "/solutions-v2/other",
+        "items": (
+            {
+                "hubOrder": 1,
+                "catalogOrder": 1,
+                "hubTitle": "BIMFlex",
+                "catalogTitle": "BIMFlex",
+                "hubHref": "/solutions/bimflex",
+                "catalogHref": "/solutions/bimflex",
+            },
+            {
+                "hubOrder": None,
+                "catalogOrder": 2,
+                "catalogTitle": "Allplan BIMPLUS",
+                "catalogHref": "/products/allplan-bimplus",
+            },
+            {
+                "hubOrder": 4,
+                "catalogOrder": 3,
+                "hubTitle": "BIMX5",
+                "catalogTitle": "BIMX5",
+                "hubHref": "/solutions/bimx5",
+                "catalogHref": "/solutions/bimx5",
+            },
+            {
+                "hubOrder": 2,
+                "catalogOrder": 4,
+                "hubTitle": "Donatı Mühendisliği",
+                "catalogTitle": "Donatı Mühendisliği",
+                "hubHref": "/solutions/rebar-engineering",
+                "catalogHref": "/solutions/rebar-engineering",
+            },
+            {
+                "hubOrder": 3,
+                "catalogOrder": 5,
+                "hubTitle": "İmar Yönetmeliği BIM Eklentisi",
+                "catalogTitle": "İmar Yönetmeliği BIM Eklentisi",
+                "hubHref": "/solutions/imar-yonetmeligi-bim-eklentisi",
+                "catalogHref": "/solutions/imar-yonetmeligi-bim-eklentisi",
+            },
+            {
+                "hubOrder": 5,
+                "catalogOrder": 6,
+                "hubTitle": "Allplan Oska İşbirliği",
+                "catalogTitle": "Allplan Oska İşbirliği",
+                "hubHref": "/solutions/oska",
+                "catalogHref": "/solutions/oska",
+            },
+            {
+                "hubOrder": 6,
+                "catalogOrder": 7,
+                "hubTitle": "Allplan Poz Kataloğu",
+                "catalogTitle": "Allplan Poz Kataloğu",
+                "hubHref": "/solutions/poz-catalog",
+                "catalogHref": "/solutions/poz-catalog",
+            },
+        ),
+    },
+)
+
+
+def build_solution_directory(pages):
+    def is_external(href: str) -> bool:
+        return href.startswith(("http://", "https://"))
+
+    solution_page = pages["/solutions"]
+    catalog_sections = {
+        section["heading"]: section
+        for section in solution_page["sections"]
+    }
+    intro_section = catalog_sections[solution_page["h1"]]
+
+    def catalog_source_content(item):
+        section = catalog_sections[item["catalogTitle"]]
+        description = next(
+            text
+            for text in section["items"]
+            if text not in {"Detayları İncele", "Siteyi Ziyaret Et"}
+        )
+        return description, section["image"]
+
+    def build_catalog_item(item):
+        description, image = catalog_source_content(item)
+        return {
+            "title": item["catalogTitle"],
+            "href": item["catalogHref"],
+            "description": description,
+            "image": image,
+            "external": is_external(item["catalogHref"]),
+        }
+
+    groups = []
+    for source_group in SOLUTION_DIRECTORY_SOURCE:
+        hub_sections = {
+            section["heading"]: section
+            for section in pages[source_group["hubPath"]]["sections"]
+        }
+        hub_items = [
+            {
+                "title": item["hubTitle"],
+                "href": item["hubHref"],
+                "description": hub_sections[item["hubTitle"]]["items"][0],
+                "external": is_external(item["hubHref"]),
+            }
+            for item in sorted(
+                (candidate for candidate in source_group["items"] if candidate.get("hubOrder") is not None),
+                key=lambda candidate: candidate["hubOrder"],
+            )
+        ]
+        catalog_items = [
+            build_catalog_item(item)
+            for item in sorted(source_group["items"], key=lambda candidate: candidate["catalogOrder"])
+        ]
+        groups.append(
+            {
+                "title": source_group["title"],
+                "hubPath": source_group["hubPath"],
+                "hubItems": hub_items,
+                "catalogItems": catalog_items,
+            }
+        )
+    return {
+        "catalogIntro": {
+            "kicker": intro_section["items"][0],
+            "title": intro_section["heading"],
+            "description": intro_section["items"][-1],
+        },
+        "groups": groups,
+    }
+
 inv_path = ROOT / "docs/00-inventory/content-inventory.json"
 mc_path = ROOT / "docs/00-inventory/media-complete-2026-10-22.json"
 ir_path = ROOT / "docs/00-inventory/interaction-register-2026-10-22.json"
@@ -699,8 +981,12 @@ for raw_page in raw_200_pages:
         }
         norm_alt = re.sub(r"\s+", " ", (alt or h1_text).strip().upper())
         img_by_alt.setdefault(norm_alt, im_obj)
-        if src not in seen_imgs:
-            seen_imgs.add(src)
+        # Preserve distinct source image roles even when cards reuse one asset.
+        # Rendering may de-duplicate gallery photos by src, but the data layer
+        # must retain each source alt/role for semantic parity.
+        image_identity = (src, alt or h1_text)
+        if image_identity not in seen_imgs:
+            seen_imgs.add(image_identity)
             images.append(im_obj)
 
     # Attach matched iconSrc, high-res image, and statValue to each section
@@ -756,23 +1042,6 @@ for raw_page in raw_200_pages:
                 pending_poster = ""
                 pending_autoplay = False
 
-    if route_path == "/products/allplan-aec" and not videos:
-        videos.append({
-            "src": "/assets/products/allplan-aec/hero/2024-header.mp4",
-            "poster": "/assets/products/allplan-aec/hero-new.jpg",
-            "title": "ALLPLAN AEC Genel Bakış Videosu",
-            "controls": True,
-            "autoplay": False,
-        })
-    elif route_path == "/solutions/bridge-design" and not videos:
-        videos.append({
-            "src": "/assets/solutions/bridge/features/2024-header.mp4",
-            "poster": None,
-            "title": "ALLPLAN Bridge Parametrik Köprü Tasarımı Videosu",
-            "controls": True,
-            "autoplay": False,
-        })
-
     embeds = []
     for emb in raw_page.get("embeds", []):
         src = (emb.get("attributes") or {}).get("src") or emb.get("src") or ""
@@ -825,9 +1094,9 @@ for raw_page in raw_200_pages:
         "path": route_path,
         "section": section_type,
         "title": seo_title,
-        "description": seo_description,
+        "description": "Otomatik çelik detaylandırma yazılımı" if route_path == "/products/sds2-home" else seo_description,
         "canonical": canonical,
-        "h1": h1_text,
+        "h1": "Çelik detaylandırma ve imalat için kapsamlı BIM çözümü" if route_path == "/products/sds2-home" else h1_text,
         "eyebrow": section_type.upper(),
         "breadcrumbs": breadcrumbs,
         "headings": body_headings,
@@ -847,6 +1116,20 @@ for raw_page in raw_200_pages:
 # Only the retired CDS/PythonPart/Scalypso demand form is remapped.
 # License manager forms, support and official trial destinations remain distinct.
 pages_data = apply_approved_content_policy(normalize_request_links(pages_data))
+
+# The user explicitly directs all buttons with this label to release notes.
+def update_release_notes_links(value):
+    if isinstance(value, dict):
+        if value.get("text") == "Sürümleri Görüntüle" and "href" in value:
+            value["href"] = "https://www.allplan.com/system/releasenotes/"
+            value["external"] = True
+        for child in value.values():
+            update_release_notes_links(child)
+    elif isinstance(value, list):
+        for child in value:
+            update_release_notes_links(child)
+
+update_release_notes_links(pages_data)
 
 data_dir = ROOT / "src/data"
 data_dir.mkdir(parents=True, exist_ok=True)
@@ -884,8 +1167,11 @@ site_identity = {
     ],
 }
 
+solution_directory = build_solution_directory(pages_data)
+
 navigation_data = {
     "siteIdentity": site_identity,
+    "solutionDirectory": solution_directory,
     "topBar": {
         "email": site_identity["email"],
         "phones": site_identity["displayPhones"],
@@ -944,51 +1230,17 @@ navigation_data = {
     ],
     "solutionsMenu": [
         {
-            "title": "BİNA TASARIMI",
+            "title": group["title"],
             "items": [
-                {"name": "Mimari", "href": "/solutions/architecture"},
-                {"name": "Strüktürel Mühendislik", "href": "/solutions/structural"},
-                {"name": "MEP", "href": "/solutions/mep"},
-                {"name": "ALLPLAN ENDÜSTRİ ÇÖZÜMLERİ", "href": "/solutions/allplan-industry"},
+                {
+                    "name": item["title"],
+                    "href": item["href"],
+                    **({"external": True} if item["external"] else {}),
+                }
+                for item in group["hubItems"]
             ],
-        },
-        {
-            "title": "ALTYAPI TASARIMI",
-            "items": [
-                {"name": "Altyapı Mühendisliği", "href": "/solutions/infrastructure"},
-                {"name": "Yol ve Demiryolu Tasarımı", "href": "/solutions/road-railway"},
-                {"name": "Köprü Tasarımı", "href": "/solutions/bridge-design"},
-            ],
-        },
-        {
-            "title": "İNŞAAT PLANLAMASI",
-            "items": [
-                {"name": "Prekast Üretimi", "href": "/solutions/precast"},
-                {"name": "Çelik Detaylandırma & İmalat", "href": "/solutions/steel"},
-                {"name": "Şantiye Planlaması", "href": "/solutions/site-planning"},
-            ],
-        },
-        {
-            "title": "EKLENTİLER",
-            "items": [
-                {"name": "CDS Add-On", "href": "/solutions/cds-addon"},
-                {"name": "Allto PytonPart Generator", "href": "https://allplantools.com/", "external": True},
-                {"name": "Allto PytonPart", "href": "/solutions/pythonpart"},
-                {"name": "AX3000 MEP", "href": "/solutions/ax3000"},
-                {"name": "Scalypso", "href": "/solutions/scalypso"},
-            ],
-        },
-        {
-            "title": "DİĞER ÜRÜNLER",
-            "items": [
-                {"name": "BIMFlex", "href": "/solutions/bimflex"},
-                {"name": "Donatı Mühendisliği", "href": "/solutions/rebar-engineering"},
-                {"name": "İmar Yönetmeliği BIM Eklentisi", "href": "/solutions/imar-yonetmeligi-bim-eklentisi"},
-                {"name": "BIMX5", "href": "/solutions/bimx5"},
-                {"name": "Allplan Oska İşbirliği", "href": "/solutions/oska"},
-                {"name": "Allplan Poz Kataloğu", "href": "/solutions/poz-catalog"},
-            ],
-        },
+        }
+        for group in solution_directory["groups"]
     ],
     "directLinks": [
         {"name": "Kaynaklar", "href": "/#professional-services"},
@@ -1007,11 +1259,8 @@ navigation_data = {
             {"label": "PRECAST", "href": "/products/precast"},
         ],
         "solutions": [
-            {"label": "BİNA TASARIMI", "href": "/solutions-v2/building-design"},
-            {"label": "ALTYAPI TASARIMI", "href": "/solutions-v2/infrastructure"},
-            {"label": "İNŞAAT PLANLAMASI", "href": "/solutions-v2/construction"},
-            {"label": "EKLENTİLER", "href": "/solutions-v2/addons"},
-            {"label": "DİĞER ÜRÜNLER", "href": "/solutions-v2/other"},
+            {"label": group["title"], "href": group["hubPath"]}
+            for group in solution_directory["groups"]
         ],
         "address": [
             "Quick Tower – Workinton",

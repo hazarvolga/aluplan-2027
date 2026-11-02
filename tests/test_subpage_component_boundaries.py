@@ -3,6 +3,8 @@
 from pathlib import Path
 import json
 import re
+import struct
+import subprocess
 import unittest
 
 
@@ -14,6 +16,41 @@ def read(relative: str) -> str:
 
 
 class SubpageComponentBoundaryTests(unittest.TestCase):
+    def test_page_end_conversion_has_one_shared_render_boundary(self):
+        parent = read("src/components/sections/SubpageView.tsx")
+        structured = read("src/components/sections/StructuredPageLayoutSection.tsx")
+
+        self.assertIn(
+            "import { PageEndConversion } from './PageEndConversion';",
+            parent,
+        )
+        self.assertIn(
+            "import { getPageEndConversion } from './page-end-conversion-policy';",
+            parent,
+        )
+        self.assertIn("const pageEndConversion = getPageEndConversion(page)", parent)
+        self.assertIn(
+            "{pageEndConversion && <PageEndConversion model={pageEndConversion} />}",
+            parent,
+        )
+        self.assertEqual(parent.count("<PageEndConversion "), 1)
+
+        removed_markers = [
+            "global-trial-heading",
+            "training-request-heading",
+            "page.contentLinks.map",
+            "İLGİLİ BAĞLANTILAR, MODÜLLER VE DOKÜMANLAR",
+            "Bu Sayfayla İlgili Hızlı Geçişler ve İndirmeler",
+        ]
+        for marker in removed_markers:
+            with self.subTest(file="SubpageView.tsx", marker=marker):
+                self.assertNotIn(marker, parent)
+            with self.subTest(file="StructuredPageLayoutSection.tsx", marker=marker):
+                self.assertNotIn(marker, structured)
+
+        self.assertNotIn("ContentLink", structured)
+        self.assertNotIn("contentLinks:", structured)
+        self.assertNotIn("contentLinks={page.contentLinks}", parent)
     def test_video_library_hub_has_a_dedicated_render_boundary(self):
         component = read("src/components/sections/VideoLibraryHubSection.tsx")
         parent = read("src/components/sections/SubpageView.tsx")
@@ -341,7 +378,12 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
             "href={TRIAL_CTA_URL}",
             "page.path.startsWith('/products')",
             'href="/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf"',
-            "backgroundImage: `url(${heroImage.src})`",
+            '<picture className="alu-subpage-hero__bg" aria-hidden="true">',
+            "import { getImageProps } from 'next/image'",
+            '<source media="(max-width: 40rem)" srcSet={responsiveBackground.mobileSrcSet}',
+            'srcSet={responsiveBackground.desktopSrcSet}',
+            "loading: 'eager'",
+            'fetchPriority="high"',
             "alt={heroImage.alt || page.h1}",
             "heroImage.alt &&",
         ]:
@@ -363,6 +405,117 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
                 self.assertIn(marker, parent)
         self.assertNotIn("alu-subpage-hero", parent)
         self.assertNotIn("alu-breadcrumb", parent)
+
+    def test_subpage_hero_uses_sitewide_family_background_presentation(self):
+        policy = read("src/components/sections/subpage-hero-presentation.ts")
+        component = read("src/components/sections/SubpageHeroSection.tsx")
+        parent = read("src/components/sections/SubpageView.tsx")
+        styles = read("src/styles/application.css")
+
+        for marker in [
+            "export type SubpageHeroPresentation = 'framed' | 'background-only'",
+            "'VF-00': 'vf-00-ecosystem-overview'",
+            "'VF-07': 'vf-07-allplan-product-platform'",
+            "'/solutions/architecture'",
+            "'/products/allplan-2026'",
+            "presentation: 'background-only'",
+            "assetKind: 'family'",
+            "assetKind: 'official-release'",
+            "presentation: 'framed'",
+        ]:
+            with self.subTest(policy_marker=marker):
+                self.assertIn(marker, policy)
+
+        for marker in [
+            "presentation: SubpageHeroPresentation",
+            "background: HeroBackgroundSources | null",
+            "familyId: HeroVisualFamilyId | null",
+            "assetKind: HeroVisualAssetKind",
+            "const showFramedMedia = Boolean(heroImage) && presentation === 'framed'",
+            "alu-subpage-hero--background-only",
+            '<picture className="alu-subpage-hero__bg" aria-hidden="true">',
+            "getImageProps({",
+            '<source media="(max-width: 40rem)" srcSet={responsiveBackground.mobileSrcSet}',
+            'srcSet={responsiveBackground.desktopSrcSet}',
+            'data-hero-family={familyId || undefined}',
+            'data-hero-source={assetKind}',
+            "showFramedMedia &&",
+            "alu-subpage-hero__content-panel",
+        ]:
+            with self.subTest(component_marker=marker):
+                self.assertIn(marker, component)
+        self.assertNotIn('className="alu-visually-hidden"', component)
+
+        for marker in [
+            "getSubpageHeroPresentation(page.path, heroImage?.src || null)",
+            "presentation={heroPresentation.presentation}",
+            "background={heroPresentation.background}",
+            "familyId={heroPresentation.familyId}",
+            "assetKind={heroPresentation.assetKind}",
+        ]:
+            with self.subTest(parent_marker=marker):
+                self.assertIn(marker, parent)
+
+        self.assertIn(".alu-subpage-hero--background-only", styles)
+        self.assertIn(".alu-subpage-hero--background-only .alu-subpage-hero__bg", styles)
+        self.assertIn(".alu-subpage-hero--background-only .alu-subpage-hero__scrim", styles)
+        self.assertIn(
+            ".alu-subpage-hero--background-only .alu-subpage-hero__content-panel",
+            styles,
+        )
+        self.assertIn(".alu-subpage-hero__bg img", styles)
+        self.assertIn("object-fit: contain", styles)
+        self.assertIn("object-position: center right", styles)
+        self.assertIn("object-fit: cover", styles)
+        mask_value = re.escape(
+            "linear-gradient(90deg, transparent 0%, transparent 28%, "
+            "var(--surface-page) 82%, var(--surface-page) 100%)"
+        )
+        self.assertRegex(styles, rf"(?m)^\s*mask-image: {mask_value};$")
+        self.assertRegex(styles, rf"(?m)^\s*-webkit-mask-image: {mask_value};$")
+        panel_rule = re.search(
+            r"\.alu-subpage-hero--background-only \.alu-subpage-hero__content-panel \{([^}]*)\}",
+            styles,
+            re.DOTALL,
+        )
+        self.assertIsNotNone(panel_rule)
+        self.assertNotIn("background:", panel_rule.group(1))
+        self.assertNotIn("padding:", panel_rule.group(1))
+
+    def test_architecture_hero_generated_assets_are_valid_and_tracked(self):
+        web_relative = Path("public/assets/solutions/architecture-hero-v2.jpg")
+        source_relative = Path(
+            "assets/source/generated/heroes/architecture-hero-v2-original.png"
+        )
+        web_asset = ROOT / web_relative
+        source_asset = ROOT / source_relative
+
+        self.assertTrue(web_asset.is_file())
+        self.assertTrue(source_asset.is_file())
+        self.assertGreater(web_asset.stat().st_size, 100_000)
+        self.assertLess(web_asset.stat().st_size, 1_000_000)
+        self.assertGreater(source_asset.stat().st_size, web_asset.stat().st_size)
+
+        web_bytes = web_asset.read_bytes()
+        self.assertTrue(web_bytes.startswith(b"\xff\xd8"))
+        self.assertTrue(web_bytes.endswith(b"\xff\xd9"))
+
+        source_bytes = source_asset.read_bytes()
+        self.assertEqual(source_bytes[:8], b"\x89PNG\r\n\x1a\n")
+        self.assertEqual(source_bytes[12:16], b"IHDR")
+        width, height = struct.unpack(">II", source_bytes[16:24])
+        self.assertEqual((width, height), (1672, 941))
+
+        for relative in (web_relative, source_relative):
+            with self.subTest(tracked=str(relative)):
+                tracked = subprocess.run(
+                    ["git", "ls-files", "--error-unmatch", str(relative)],
+                    cwd=ROOT,
+                    capture_output=True,
+                    text=True,
+                    check=False,
+                )
+                self.assertEqual(tracked.returncode, 0, tracked.stderr)
 
     def test_subpage_hero_data_preserves_route_specific_branches_and_pdf(self):
         pages = json.loads(read("src/data/pages.json"))
@@ -441,7 +594,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
                 self.assertIn(marker, component)
 
         self.assertIn("import { BenefitsSection } from './BenefitsSection';", parent)
-        self.assertIn("<BenefitsSection benefits={layout.benefits} />", parent)
+        self.assertIn("<BenefitsSection benefits={layout.benefits} variant=", parent)
         self.assertNotIn("alu-benefits-grid", parent)
         self.assertNotIn("alu-benefit-card", parent)
 
@@ -459,12 +612,15 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
             self.assertTrue(benefits.get("items"), route)
             for item in benefits["items"]:
                 self.assertTrue(item.get("title"), route)
-                self.assertTrue(item.get("description"), route)
+                if item.get("sourceId") == "ax-product-feature-plan-preview":
+                    self.assertEqual(item.get("description"), "", route)
+                else:
+                    self.assertTrue(item.get("description"), route)
                 icon_src = item.get("iconSrc")
                 if icon_src and icon_src.startswith("/"):
                     self.assertTrue((ROOT / "public" / icon_src.lstrip("/")).is_file(), icon_src)
 
-        self.assertEqual(len(benefit_routes), 28)
+        self.assertEqual(len(benefit_routes), 29)
 
     def test_media_grids_have_a_dedicated_interactive_render_boundary(self):
         component = read("src/components/sections/MediaGridSection.tsx")
@@ -528,15 +684,18 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
                 for item in grid["items"]:
                     card_count += 1
                     self.assertTrue(item.get("title"), route)
-                    self.assertTrue(item.get("description"), route)
+                    if str(item.get("sourceId", "")).startswith("ax-vr-slide-"):
+                        self.assertEqual(item.get("description"), "", route)
+                    else:
+                        self.assertTrue(item.get("description"), route)
                     image_src = item.get("imageSrc")
                     if image_src and image_src.startswith("/"):
                         self.assertTrue((ROOT / "public" / image_src.lstrip("/")).is_file(), image_src)
 
-        self.assertEqual(len(media_routes), 29)
+        self.assertEqual(len(media_routes), 31)
         self.assertEqual(core_grid_count, 8)
-        self.assertEqual(extra_grid_count, 46)
-        self.assertEqual(card_count, 362)
+        self.assertEqual(extra_grid_count, 48)
+        self.assertEqual(card_count, 374)
 
     def test_split_callouts_have_a_shared_interactive_render_boundary(self):
         component = read("src/components/sections/SplitCalloutSection.tsx")
@@ -616,10 +775,10 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
                             media_path,
                         )
 
-        self.assertEqual(len(callout_routes), 22)
+        self.assertEqual(len(callout_routes), 23)
         self.assertEqual(
             totals,
-            {"all": 62, "primary": 52, "bottom": 10, "youtube": 27, "mp4": 5, "image": 30},
+            {"all": 67, "primary": 57, "bottom": 10, "youtube": 27, "mp4": 5, "image": 31},
         )
 
 

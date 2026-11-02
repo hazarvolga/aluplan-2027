@@ -41,22 +41,22 @@ class TabAccessibilityContractTests(unittest.TestCase):
 
     def test_all_tab_families_use_roving_focus_and_shared_keyboard_behavior(self):
         component_markers = {
-            "src/components/sections/HomepageView.tsx": [
+            "src/components/sections/DisciplineWorkflowSection.tsx": [
                 "handleStructuredTabKey",
                 "tabIndex={isSelected ? 0 : -1}",
                 "onKeyDown={(event) => handleStructuredTabKey",
-                'aria-controls="pathway-panel"',
-                'id="pathway-panel"',
-                "aria-labelledby={`pathway-tab-${activeRole.id}`}",
+                'aria-controls={`${id}-panel`}',
+                'id={`${id}-panel`}',
+                "aria-labelledby={`${id}-tab-${activeRole.id}`}",
             ],
             "src/components/sections/ProfessionalServicesSection.tsx": [
                 "handleStructuredTabKey",
-                "tabIndex={activeGroupIdx === idx ? 0 : -1}",
+                "tabIndex={safeGroupIdx === idx ? 0 : -1}",
                 'aria-controls="services-panel"',
                 "onKeyDown={(event) => handleStructuredTabKey",
                 'role="tabpanel"',
                 'id="services-panel"',
-                "aria-labelledby={`services-tab-${activeGroupIdx}`}",
+                "aria-labelledby={`services-tab-${safeGroupIdx}`}",
             ],
             "src/components/sections/ReferencesDirectorySection.tsx": [
                 "handleStructuredTabKey",
@@ -96,6 +96,18 @@ class TabAccessibilityContractTests(unittest.TestCase):
         self.assertIn('aria-label="Referans kurum ara"', references)
         self.assertIn('aria-label="Site içinde ara"', site_shell)
         self.assertEqual(references.count('id="references-panel"'), 2)
+
+    def test_social_links_are_icon_only_but_keep_accessible_names(self):
+        site_shell = read("src/components/shell/SiteShell.tsx")
+
+        self.assertEqual(site_shell.count("aria-label={soc.label}"), 2)
+        self.assertEqual(
+            site_shell.count(
+                '<AluIcon name={getSocialIconName(soc.label)} size="sm" />'
+            ),
+            2,
+        )
+        self.assertNotIn("<span>{soc.label}</span>", site_shell)
 
 
 if __name__ == "__main__":

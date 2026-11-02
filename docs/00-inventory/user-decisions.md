@@ -136,3 +136,21 @@ Kullanıcı CTA etiketini `Teklif İste` olarak kabul etti. Teklif ve ücretsiz 
 ## 26.10.2026 — ALLPLAN deneme süresi doğrulandı
 
 Kullanıcı ALLPLAN ücretsiz deneme süresini **14 gün** olarak kesinleştirdi. Resmî kaynak: https://www.allplan.com/trial-or-subscription/ (26.10.2026 kontrolü: “14 DAY FREE TRIAL” ve “Limited to 14 days only.”). Önceki 14/30 gün açık sorusu bu kararla kapanmıştır; Contact'taki 30 gün ifadesi güncel koşula aykırıdır ve 2027 veri üretim/gösterim hattında 14 güne düzeltilecektir. Kaynak 2026 ve tarihsel kanıtlar değiştirilmez. Bu karar diğer üreticilerin/eklentilerin deneme koşullarına otomatik uygulanmaz. Resmî deneme hedefi ve mevcut Microsoft Forms talep kanalı korunur. Bu kayıt yalnız kararı kesinleştirir; uygulama düzeltmesi ve doğrulaması sonraki S05 adımındadır.
+
+## 29.10.2026 — Canlı envanterde yalnız EN + TR (diğer diller kapsam dışı)
+
+Kullanıcı, 2027 içerik çalışmasında yalnızca **İngilizce (birebir EN)** ve
+**Türkçe (taslak TR)** içerikle çalışılmasını kararlaştırdı; diğer dillerle
+(açık örnek: SDS2 sayfasındaki İtalyan bağlantı URL'leri, Almanca
+"Video ansehen" kaçışı) vakit kaybedilmeyecek.
+
+Sonuçları:
+- Canlı envanter dosyalarındaki birebir EN/TR kayıtları geçerlidir; kayıtta
+  "kaynak hatası" olarak geçen İtalyan URL'ler envanterin parçası olmaya
+  devam eder (canlı durumun doğru kaydı), ancak üretimde bu hedefler
+  **EN/TR karşılıklarıyla** çözülecek: canlı sayfanın EN sürümündeki
+  bağlantı hedefi esas alınır, TR gerekirse TR sürümünden alınır.
+- Almanca/İtalyanca metin kaçışları için ayrıca düzeltme, araştırma veya
+  çeviri yapılmayacak; üretici diliyle ilgilenilmez.
+- Bu karar diğer dillerdeki ücret/plan/izin sorularını kapatmaz; yalnız
+  envanter ve üretim dil kapsamını sınırlar (EN + TR).

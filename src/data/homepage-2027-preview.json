@@ -1,0 +1,59 @@
+{
+  "source": "docs/content-2027/allplan-canlı/allplan-2027-features.md#Giriş bandı; live.feat.intro.title ve live.feat.intro.body",
+  "status": "TR taslak; kapsam ve görsel kullanım hakları yayın öncesi doğrulanacak",
+  "product": "2027 YENİLİKLERİ",
+  "release": "ALLPLAN 2027",
+  "eyebrow": "ALLPLAN 2027",
+  "titleLines": [
+    "Her mühendislik iş akışı için",
+    "kapsamlı çözümler"
+  ],
+  "description": "Allplan, Allplan Civil, SCIA ve SDS2'nin 2027 sürümlerini keşfedin. Gücü sizin ellerinizde tutan yapay zekâ araçları, modern statik çözüm araçları, daha hızlı çizim ve detaylandırma ve altyapı için güçlü parametrik modeller.",
+  "primaryLabel": "2027 yeniliklerini keşfedin",
+  "primaryHref": "/2027/features",
+  "secondaryLabel": "Teklif İste",
+  "productLinks": [
+    {
+      "name": "ALLPLAN Max",
+      "description": "Mühendisler için yapay zekâ",
+      "detail": "Allplan Max, yapay zekâ araçlarını her çözüme entegre eder. Firmalar kendi iş akışlarını tasarlama, özel özellikler geliştirme, tekrarlayan işleri otomatikleştirme ve her soruya anında yanıt alma özgürlüğüne kavuşur.",
+      "sourceId": "max.slide.body",
+      "href": "/2027/max"
+    },
+    {
+      "name": "ALLPLAN",
+      "description": "Akıllı modelleme",
+      "detail": "Allplan 2027, mühendislik ekiplerine daha fazlasını sunuyor: yapay zekâ ile kontrol ve özelleştirme, güçlü donatı detaylandırma ve sorunsuz teslim için esnek BIM araçları.",
+      "sourceId": "allplan.home.hero.body",
+      "href": "/products/allplan"
+    },
+    {
+      "name": "ALLPLAN Civil",
+      "description": "Yeni nesil altyapı",
+      "detail": "Allplan Civil, parametrik iş akışları, bağlantılı modeller ve yeniden kullanılabilir şablonlarla karmaşık altyapıyı daha hızlı tasarlamanıza yardımcı olur.",
+      "sourceId": "civil.slide.hero.body",
+      "href": "/2027/civil"
+    },
+    {
+      "name": "FRILO",
+      "description": "Bileşen odaklı yapı analizi",
+      "detail": "FRILO, beton, çelik, ahşap ve yığma yapıların bileşen odaklı analizi ve tasarımı için araçlar sunar.",
+      "sourceId": "frilo.shop.overview",
+      "href": "/2027/frilo"
+    },
+    {
+      "name": "SCIA",
+      "description": "3B yapısal analiz",
+      "detail": "Her tür yapı için çoklu malzemeli statik çözüm yazılımı ve tasarım aracı.",
+      "sourceId": "live.civ.scia.li-2",
+      "href": "/2027/scia"
+    },
+    {
+      "name": "SDS2",
+      "description": "Daha hızlı çelik detaylandırma",
+      "detail": "Çelik detaylandırma ve imalatı için eksiksiz BIM çözümü.",
+      "sourceId": "live.sds.hero.title",
+      "href": "/products/sds2-home"
+    }
+  ]
+}

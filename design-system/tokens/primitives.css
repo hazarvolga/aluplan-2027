@@ -344,6 +344,8 @@
   --ref-size-preview-section-heading-measure: 52rem;
   --ref-size-preview-meta-measure: 70ch;
   --ref-size-preview-bimflex-media-min: 26rem;
+  --ref-size-preview-bimflex-compact-width: 28rem;
+  --ref-size-preview-bimflex-compact-height: 20rem;
   --ref-size-preview-bimflex-logo-width: 12rem;
   --ref-size-preview-bimflex-tile-min-height: 12rem;
   --ref-size-preview-innovation-card-min-height: 18rem;
@@ -447,11 +449,13 @@
   --ref-filter-application-bento-media-default: brightness(0.75) contrast(1.08); /* @kind other */
   --ref-filter-application-bento-media-hover: brightness(0.85) contrast(1.1); /* @kind other */
   --ref-filter-application-subpage-hero-background: blur(8px) saturate(0.8); /* @kind other */
+  --ref-filter-application-subpage-hero-background-only: contrast(1.05) saturate(0.9); /* @kind other */
   --ref-filter-application-backdrop-header: blur(16px); /* @kind other */
   --ref-filter-application-backdrop-media-badge: blur(6px); /* @kind other */
   --ref-filter-application-backdrop-modal: blur(10px); /* @kind other */
   --ref-opacity-preview-grid: 0.22; /* @kind other */
   --ref-opacity-preview-hero-mark: 0.65; /* @kind other */
+  --ref-opacity-subpage-hero-background-only: 0.82; /* @kind other */
   --ref-z-index-0: 0; /* @kind other */
   --ref-z-index-1: 1; /* @kind other */
   --ref-z-index-2: 2; /* @kind other */

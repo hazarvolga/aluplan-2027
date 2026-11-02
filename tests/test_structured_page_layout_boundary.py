@@ -23,7 +23,7 @@ class StructuredPageLayoutBoundaryTests(unittest.TestCase):
         ]
 
         self.assertEqual(len(layouts), 52)
-        self.assertEqual(sum(bool(layout.get("intro")) for layout in layouts), 28)
+        self.assertEqual(sum(bool(layout.get("intro")) for layout in layouts), 29)
         self.assertEqual(sum(bool(layout.get("workflowLinks")) for layout in layouts), 6)
         self.assertEqual(
             sum(len(layout.get("workflowLinks") or []) for layout in layouts), 24
@@ -58,7 +58,6 @@ class StructuredPageLayoutBoundaryTests(unittest.TestCase):
 
         for marker in [
             "layout: StructuredPageLayout",
-            "contentLinks: ContentLink[]",
             "activeReferenceCategoryId: string",
             "referenceSearchQuery: string",
             "onReferenceCategoryChange",
@@ -69,6 +68,9 @@ class StructuredPageLayoutBoundaryTests(unittest.TestCase):
         ]:
             with self.subTest(marker=marker):
                 self.assertIn(marker, component)
+
+        self.assertNotIn("ContentLink", component)
+        self.assertNotIn("contentLinks:", component)
 
         self.assertIn("<StructuredPageLayoutSection", parent)
         for marker in [

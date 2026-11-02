@@ -4,6 +4,7 @@
   --workflow-package: var(--ref-color-workflow-package);
   --opacity-preview-grid: var(--ref-opacity-preview-grid); /* @kind other */
   --opacity-preview-hero-mark: var(--ref-opacity-preview-hero-mark); /* @kind other */
+  --opacity-subpage-hero-background-only: var(--ref-opacity-subpage-hero-background-only); /* @kind other */
   --font-heading: var(--ref-font-family-manrope);
   --font-body: var(--ref-font-family-plex-sans);
   --font-mono: var(--ref-font-family-plex-mono);
@@ -213,9 +214,12 @@
   --size-preview-section-heading-measure: var(--ref-size-preview-section-heading-measure);
   --size-preview-meta-measure: var(--ref-size-preview-meta-measure);
   --size-preview-bimflex-media-min: var(--ref-size-preview-bimflex-media-min);
+  --size-preview-bimflex-compact-width: var(--ref-size-preview-bimflex-compact-width);
+  --size-preview-bimflex-compact-height: var(--ref-size-preview-bimflex-compact-height);
   --size-preview-bimflex-logo-width: var(--ref-size-preview-bimflex-logo-width);
   --size-preview-bimflex-tile-min-height: var(--ref-size-preview-bimflex-tile-min-height);
   --size-preview-innovation-card-min-height: var(--ref-size-preview-innovation-card-min-height);
+  --radius-button: var(--ref-radius-0);
   --radius-control: var(--ref-radius-4);
   --radius-surface: var(--ref-radius-0);
   --radius-badge: var(--ref-radius-2);
@@ -303,6 +307,7 @@
   --filter-application-bento-media-default: var(--ref-filter-application-bento-media-default); /* @kind other */
   --filter-application-bento-media-hover: var(--ref-filter-application-bento-media-hover); /* @kind other */
   --filter-application-subpage-hero-background: var(--ref-filter-application-subpage-hero-background); /* @kind other */
+  --filter-application-subpage-hero-background-only: var(--ref-filter-application-subpage-hero-background-only); /* @kind other */
   --filter-backdrop-header: var(--ref-filter-application-backdrop-header); /* @kind other */
   --filter-backdrop-media-badge: var(--ref-filter-application-backdrop-media-badge); /* @kind other */
   --filter-backdrop-modal: var(--ref-filter-application-backdrop-modal); /* @kind other */
@@ -532,6 +537,7 @@
   --workflow-package: var(--ref-color-workflow-package);
   --opacity-preview-grid: var(--ref-opacity-preview-grid); /* @kind other */
   --opacity-preview-hero-mark: var(--ref-opacity-preview-hero-mark); /* @kind other */
+  --opacity-subpage-hero-background-only: var(--ref-opacity-subpage-hero-background-only); /* @kind other */
   --font-heading: var(--ref-font-family-manrope);
   --font-body: var(--ref-font-family-plex-sans);
   --font-mono: var(--ref-font-family-plex-mono);
@@ -741,9 +747,12 @@
   --size-preview-section-heading-measure: var(--ref-size-preview-section-heading-measure);
   --size-preview-meta-measure: var(--ref-size-preview-meta-measure);
   --size-preview-bimflex-media-min: var(--ref-size-preview-bimflex-media-min);
+  --size-preview-bimflex-compact-width: var(--ref-size-preview-bimflex-compact-width);
+  --size-preview-bimflex-compact-height: var(--ref-size-preview-bimflex-compact-height);
   --size-preview-bimflex-logo-width: var(--ref-size-preview-bimflex-logo-width);
   --size-preview-bimflex-tile-min-height: var(--ref-size-preview-bimflex-tile-min-height);
   --size-preview-innovation-card-min-height: var(--ref-size-preview-innovation-card-min-height);
+  --radius-button: var(--ref-radius-0);
   --radius-control: var(--ref-radius-4);
   --radius-surface: var(--ref-radius-0);
   --radius-badge: var(--ref-radius-2);
@@ -831,6 +840,7 @@
   --filter-application-bento-media-default: var(--ref-filter-application-bento-media-default); /* @kind other */
   --filter-application-bento-media-hover: var(--ref-filter-application-bento-media-hover); /* @kind other */
   --filter-application-subpage-hero-background: var(--ref-filter-application-subpage-hero-background); /* @kind other */
+  --filter-application-subpage-hero-background-only: var(--ref-filter-application-subpage-hero-background-only); /* @kind other */
   --filter-backdrop-header: var(--ref-filter-application-backdrop-header); /* @kind other */
   --filter-backdrop-media-badge: var(--ref-filter-application-backdrop-media-badge); /* @kind other */
   --filter-backdrop-modal: var(--ref-filter-application-backdrop-modal); /* @kind other */
@@ -1196,6 +1206,7 @@
   --workflow-package: var(--ref-color-workflow-package);
   --opacity-preview-grid: var(--ref-opacity-preview-grid); /* @kind other */
   --opacity-preview-hero-mark: var(--ref-opacity-preview-hero-mark); /* @kind other */
+  --opacity-subpage-hero-background-only: var(--ref-opacity-subpage-hero-background-only); /* @kind other */
   --font-heading: var(--ref-font-family-source-serif);
   --font-body: var(--ref-font-family-public-sans);
   --font-mono: var(--ref-font-family-plex-mono);
@@ -1405,9 +1416,12 @@
   --size-preview-section-heading-measure: var(--ref-size-preview-section-heading-measure);
   --size-preview-meta-measure: var(--ref-size-preview-meta-measure);
   --size-preview-bimflex-media-min: var(--ref-size-preview-bimflex-media-min);
+  --size-preview-bimflex-compact-width: var(--ref-size-preview-bimflex-compact-width);
+  --size-preview-bimflex-compact-height: var(--ref-size-preview-bimflex-compact-height);
   --size-preview-bimflex-logo-width: var(--ref-size-preview-bimflex-logo-width);
   --size-preview-bimflex-tile-min-height: var(--ref-size-preview-bimflex-tile-min-height);
   --size-preview-innovation-card-min-height: var(--ref-size-preview-innovation-card-min-height);
+  --radius-button: var(--ref-radius-0);
   --radius-control: var(--ref-radius-full);
   --radius-surface: var(--ref-radius-16);
   --radius-badge: var(--ref-radius-full);
@@ -1495,6 +1509,7 @@
   --filter-application-bento-media-default: var(--ref-filter-application-bento-media-default); /* @kind other */
   --filter-application-bento-media-hover: var(--ref-filter-application-bento-media-hover); /* @kind other */
   --filter-application-subpage-hero-background: var(--ref-filter-application-subpage-hero-background); /* @kind other */
+  --filter-application-subpage-hero-background-only: var(--ref-filter-application-subpage-hero-background-only); /* @kind other */
   --filter-backdrop-header: var(--ref-filter-application-backdrop-header); /* @kind other */
   --filter-backdrop-media-badge: var(--ref-filter-application-backdrop-media-badge); /* @kind other */
   --filter-backdrop-modal: var(--ref-filter-application-backdrop-modal); /* @kind other */

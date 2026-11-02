@@ -21,7 +21,7 @@ class ThemeContractTests(unittest.TestCase):
                     self.assertIn('$value', value)
 
     def test_homepage_only_selects_role_tokens(self):
-        component = (ROOT / 'src/components/sections/HomepageView.tsx').read_text()
+        component = (ROOT / 'src/components/sections/DisciplineWorkflowSection.tsx').read_text()
         for role in ['architect', 'engineer', 'fabricator']:
             self.assertIn('var(--role-' + role + ')', component)
         for color in ['#3B82F6', '#10B981', '#F59E0B']:

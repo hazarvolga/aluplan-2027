@@ -49,9 +49,9 @@ export function ReferencesDirectorySection({
           {directory.kicker && (
             <span className="preview-kicker">{directory.kicker}</span>
           )}
-          <h2 className="alu-h1" style={{ margin: 0 }}>
+          <h1 className="alu-h1" style={{ margin: 0 }}>
             {directory.title}
-          </h2>
+          </h1>
           {directory.subtitle && (
             <p
               className="alu-body preview-meta"

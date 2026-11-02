@@ -120,7 +120,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 className="alu-topbar__link"
               >
                 <AluIcon name={getSocialIconName(soc.label)} size="sm" />
-                <span>{soc.label}</span>
               </a>
             ))}
           </div>
@@ -340,7 +339,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                   aria-label={soc.label}
                 >
                   <AluIcon name={getSocialIconName(soc.label)} size="sm" />
-                  <span>{soc.label}</span>
                 </a>
               ))}
             </div>

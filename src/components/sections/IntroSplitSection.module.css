@@ -1,0 +1,14 @@
+/* Compact intro uses the shared thin-line visual language. */
+.intro{padding-block:var(--space-inset-lg);background:var(--surface-default);border-block:var(--border-width-default) solid var(--border-default)}
+.introGrid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:var(--space-inset-lg)}
+.introMain,.introFacts{min-width:0}
+.eyebrow{color:var(--accent-fg);font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin:0 0 var(--space-stack-sm)}
+.introMain h2{font-family:var(--font-heading);font-size:var(--type-h2-size);line-height:var(--type-h2-line-height);margin:0 0 var(--space-stack-md)}
+.introMain>p:not(.eyebrow),.introFacts p{font-size:var(--type-body-size);line-height:var(--type-body-line-height);color:var(--text-secondary);margin:0}
+.introFacts{border-left:var(--border-width-default) solid var(--border-strong);padding-left:var(--space-inset-lg)}
+.introFacts h3{font-family:var(--font-heading);font-size:var(--type-h3-size);line-height:var(--type-h3-line-height);margin:0 0 var(--space-stack-md)}
+.introFacts p{padding-block:var(--space-stack-sm);border-top:var(--border-width-default) solid var(--border-default)}
+.introFacts a{display:inline-block;margin-top:var(--space-stack-md);color:var(--accent-fg);font-weight:var(--font-weight-strong);text-decoration:none}
+.introFacts a:hover{text-decoration:none;color:var(--text-link-hover)}
+.introFacts a:focus-visible{outline:var(--border-width-strong) solid var(--accent-border);outline-offset:var(--space-stack-xs)}
+@media(max-width:767px){.introGrid{grid-template-columns:1fr}.introFacts{border-left:0;border-top:var(--border-width-default) solid var(--border-strong);padding:var(--space-inset-md) 0 0}}

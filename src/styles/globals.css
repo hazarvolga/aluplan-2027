@@ -365,6 +365,8 @@
   --ref-size-preview-section-heading-measure: 52rem;
   --ref-size-preview-meta-measure: 70ch;
   --ref-size-preview-bimflex-media-min: 26rem;
+  --ref-size-preview-bimflex-compact-width: 28rem;
+  --ref-size-preview-bimflex-compact-height: 20rem;
   --ref-size-preview-bimflex-logo-width: 12rem;
   --ref-size-preview-bimflex-tile-min-height: 12rem;
   --ref-size-preview-innovation-card-min-height: 18rem;
@@ -468,11 +470,13 @@
   --ref-filter-application-bento-media-default: brightness(0.75) contrast(1.08); /* @kind other */
   --ref-filter-application-bento-media-hover: brightness(0.85) contrast(1.1); /* @kind other */
   --ref-filter-application-subpage-hero-background: blur(8px) saturate(0.8); /* @kind other */
+  --ref-filter-application-subpage-hero-background-only: contrast(1.05) saturate(0.9); /* @kind other */
   --ref-filter-application-backdrop-header: blur(16px); /* @kind other */
   --ref-filter-application-backdrop-media-badge: blur(6px); /* @kind other */
   --ref-filter-application-backdrop-modal: blur(10px); /* @kind other */
   --ref-opacity-preview-grid: 0.22; /* @kind other */
   --ref-opacity-preview-hero-mark: 0.65; /* @kind other */
+  --ref-opacity-subpage-hero-background-only: 0.82; /* @kind other */
   --ref-z-index-0: 0; /* @kind other */
   --ref-z-index-1: 1; /* @kind other */
   --ref-z-index-2: 2; /* @kind other */
@@ -493,6 +497,7 @@
   --workflow-package: var(--ref-color-workflow-package);
   --opacity-preview-grid: var(--ref-opacity-preview-grid); /* @kind other */
   --opacity-preview-hero-mark: var(--ref-opacity-preview-hero-mark); /* @kind other */
+  --opacity-subpage-hero-background-only: var(--ref-opacity-subpage-hero-background-only); /* @kind other */
   --font-heading: var(--ref-font-family-manrope);
   --font-body: var(--ref-font-family-plex-sans);
   --font-mono: var(--ref-font-family-plex-mono);
@@ -702,9 +707,12 @@
   --size-preview-section-heading-measure: var(--ref-size-preview-section-heading-measure);
   --size-preview-meta-measure: var(--ref-size-preview-meta-measure);
   --size-preview-bimflex-media-min: var(--ref-size-preview-bimflex-media-min);
+  --size-preview-bimflex-compact-width: var(--ref-size-preview-bimflex-compact-width);
+  --size-preview-bimflex-compact-height: var(--ref-size-preview-bimflex-compact-height);
   --size-preview-bimflex-logo-width: var(--ref-size-preview-bimflex-logo-width);
   --size-preview-bimflex-tile-min-height: var(--ref-size-preview-bimflex-tile-min-height);
   --size-preview-innovation-card-min-height: var(--ref-size-preview-innovation-card-min-height);
+  --radius-button: var(--ref-radius-0);
   --radius-control: var(--ref-radius-4);
   --radius-surface: var(--ref-radius-0);
   --radius-badge: var(--ref-radius-2);
@@ -792,6 +800,7 @@
   --filter-application-bento-media-default: var(--ref-filter-application-bento-media-default); /* @kind other */
   --filter-application-bento-media-hover: var(--ref-filter-application-bento-media-hover); /* @kind other */
   --filter-application-subpage-hero-background: var(--ref-filter-application-subpage-hero-background); /* @kind other */
+  --filter-application-subpage-hero-background-only: var(--ref-filter-application-subpage-hero-background-only); /* @kind other */
   --filter-backdrop-header: var(--ref-filter-application-backdrop-header); /* @kind other */
   --filter-backdrop-media-badge: var(--ref-filter-application-backdrop-media-badge); /* @kind other */
   --filter-backdrop-modal: var(--ref-filter-application-backdrop-modal); /* @kind other */
@@ -1021,6 +1030,7 @@
   --workflow-package: var(--ref-color-workflow-package);
   --opacity-preview-grid: var(--ref-opacity-preview-grid); /* @kind other */
   --opacity-preview-hero-mark: var(--ref-opacity-preview-hero-mark); /* @kind other */
+  --opacity-subpage-hero-background-only: var(--ref-opacity-subpage-hero-background-only); /* @kind other */
   --font-heading: var(--ref-font-family-manrope);
   --font-body: var(--ref-font-family-plex-sans);
   --font-mono: var(--ref-font-family-plex-mono);
@@ -1230,9 +1240,12 @@
   --size-preview-section-heading-measure: var(--ref-size-preview-section-heading-measure);
   --size-preview-meta-measure: var(--ref-size-preview-meta-measure);
   --size-preview-bimflex-media-min: var(--ref-size-preview-bimflex-media-min);
+  --size-preview-bimflex-compact-width: var(--ref-size-preview-bimflex-compact-width);
+  --size-preview-bimflex-compact-height: var(--ref-size-preview-bimflex-compact-height);
   --size-preview-bimflex-logo-width: var(--ref-size-preview-bimflex-logo-width);
   --size-preview-bimflex-tile-min-height: var(--ref-size-preview-bimflex-tile-min-height);
   --size-preview-innovation-card-min-height: var(--ref-size-preview-innovation-card-min-height);
+  --radius-button: var(--ref-radius-0);
   --radius-control: var(--ref-radius-4);
   --radius-surface: var(--ref-radius-0);
   --radius-badge: var(--ref-radius-2);
@@ -1320,6 +1333,7 @@
   --filter-application-bento-media-default: var(--ref-filter-application-bento-media-default); /* @kind other */
   --filter-application-bento-media-hover: var(--ref-filter-application-bento-media-hover); /* @kind other */
   --filter-application-subpage-hero-background: var(--ref-filter-application-subpage-hero-background); /* @kind other */
+  --filter-application-subpage-hero-background-only: var(--ref-filter-application-subpage-hero-background-only); /* @kind other */
   --filter-backdrop-header: var(--ref-filter-application-backdrop-header); /* @kind other */
   --filter-backdrop-media-badge: var(--ref-filter-application-backdrop-media-badge); /* @kind other */
   --filter-backdrop-modal: var(--ref-filter-application-backdrop-modal); /* @kind other */
@@ -1685,6 +1699,7 @@
   --workflow-package: var(--ref-color-workflow-package);
   --opacity-preview-grid: var(--ref-opacity-preview-grid); /* @kind other */
   --opacity-preview-hero-mark: var(--ref-opacity-preview-hero-mark); /* @kind other */
+  --opacity-subpage-hero-background-only: var(--ref-opacity-subpage-hero-background-only); /* @kind other */
   --font-heading: var(--ref-font-family-source-serif);
   --font-body: var(--ref-font-family-public-sans);
   --font-mono: var(--ref-font-family-plex-mono);
@@ -1894,9 +1909,12 @@
   --size-preview-section-heading-measure: var(--ref-size-preview-section-heading-measure);
   --size-preview-meta-measure: var(--ref-size-preview-meta-measure);
   --size-preview-bimflex-media-min: var(--ref-size-preview-bimflex-media-min);
+  --size-preview-bimflex-compact-width: var(--ref-size-preview-bimflex-compact-width);
+  --size-preview-bimflex-compact-height: var(--ref-size-preview-bimflex-compact-height);
   --size-preview-bimflex-logo-width: var(--ref-size-preview-bimflex-logo-width);
   --size-preview-bimflex-tile-min-height: var(--ref-size-preview-bimflex-tile-min-height);
   --size-preview-innovation-card-min-height: var(--ref-size-preview-innovation-card-min-height);
+  --radius-button: var(--ref-radius-0);
   --radius-control: var(--ref-radius-full);
   --radius-surface: var(--ref-radius-16);
   --radius-badge: var(--ref-radius-full);
@@ -1984,6 +2002,7 @@
   --filter-application-bento-media-default: var(--ref-filter-application-bento-media-default); /* @kind other */
   --filter-application-bento-media-hover: var(--ref-filter-application-bento-media-hover); /* @kind other */
   --filter-application-subpage-hero-background: var(--ref-filter-application-subpage-hero-background); /* @kind other */
+  --filter-application-subpage-hero-background-only: var(--ref-filter-application-subpage-hero-background-only); /* @kind other */
   --filter-backdrop-header: var(--ref-filter-application-backdrop-header); /* @kind other */
   --filter-backdrop-media-badge: var(--ref-filter-application-backdrop-media-badge); /* @kind other */
   --filter-backdrop-modal: var(--ref-filter-application-backdrop-modal); /* @kind other */
@@ -2380,7 +2399,7 @@
 /* GENERATED by scripts/build-tokens.mjs from tokens/tokens.json. Do not edit. */
 /* Layer 3: component aliases (reference semantic only). Re-declared on theme scopes so var() re-resolves inside nested themes. */
 :root{
-  --button-radius: var(--radius-control);
+  --button-radius: var(--radius-button);
   --button-font-family: var(--font-body);
   --button-font-weight: var(--font-weight-strong);
   --button-gap: var(--control-gap);
@@ -2448,7 +2467,7 @@
   --checkbox-mark-stroke: var(--icon-stroke-emphasis);
 }
 [data-theme],[data-mode]{
-  --button-radius: var(--radius-control);
+  --button-radius: var(--radius-button);
   --button-font-family: var(--font-body);
   --button-font-weight: var(--font-weight-strong);
   --button-gap: var(--control-gap);
@@ -2522,8 +2541,9 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;background:var(--surfac
 body{margin:0;overflow-wrap:break-word;background:var(--surface-page);color:var(--text-primary);font-family:var(--font-body);font-size:var(--type-body-size);line-height:var(--type-body-line-height);font-weight:var(--font-weight-body);-webkit-font-smoothing:antialiased}
 :where(*,*::before,*::after){box-sizing:border-box}
 :where(img,svg,video){max-width:100%}
-:where(a){color:var(--text-link)}
+:where(a){color:var(--text-link);text-decoration:none}
 :where(a:hover){color:var(--text-link-hover)}
+:where(p) > a{font-weight:var(--font-weight-strong)}
 :where(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:var(--focus-width) solid var(--focus-ring);outline-offset:var(--focus-offset)}
 .alu-on-brand :focus-visible,.alu-on-brand:focus-visible{outline-color:var(--focus-ring-on-brand)}
 .alu-visually-hidden{position:absolute!important;width:1px; /* raw-ok: a11y visually-hidden constant */
@@ -2601,10 +2621,10 @@ body{margin:0;overflow-wrap:break-word;background:var(--surface-page);color:var(
 .alu-btn--ghost:disabled,.alu-btn--ghost[aria-disabled="true"]{background:transparent;border-color:transparent}
 .alu-btn[aria-busy="true"]{cursor:progress}
 .alu-btn__label{min-width:0}
-.alu-link{color:var(--text-link);text-decoration-line:underline;text-decoration-thickness:var(--border-width-default);text-underline-offset:0.2em;border-radius:var(--radius-badge)}
-.alu-link:hover{color:var(--text-link-hover);text-decoration-thickness:var(--border-width-strong)}
+.alu-link{color:var(--text-link);text-decoration:none;border-radius:var(--radius-badge)}
+.alu-link:hover{color:var(--text-link-hover);text-decoration:none}
 .alu-link--standalone{display:inline-flex;align-items:center;gap:var(--space-inline-xs);font-weight:var(--font-weight-strong);text-decoration-line:none}
-.alu-link--standalone:hover{text-decoration-line:underline}
+.alu-link--standalone:hover{text-decoration:none}
 .alu-link .alu-icon{width:1em;height:1em}
 .alu-on-brand .alu-link{color:var(--text-on-brand)}
 .alu-icon-btn{display:inline-flex;align-items:center;justify-content:center;flex:none;width:var(--target-min);height:var(--target-min);padding:0;border:var(--border-width-default) solid transparent;border-radius:var(--button-radius);background:transparent;color:var(--button-ghost-fg);cursor:pointer;transition:background-color var(--motion-duration-fast) var(--motion-easing-standard)}
@@ -2626,7 +2646,7 @@ body{margin:0;overflow-wrap:break-word;background:var(--surface-page);color:var(
 .alu-card__link{color:inherit;text-decoration:none}
 .alu-card__link:focus-visible{outline:none}
 .alu-card__link::after{content:"";position:absolute;inset:0;border-radius:inherit}
-.alu-card__link:hover{color:inherit;text-decoration:underline;text-decoration-thickness:var(--border-width-default);text-underline-offset:0.2em}
+.alu-card__link:hover{color:inherit;text-decoration:none}
 .alu-card__footer{margin-top:auto;padding-top:var(--space-stack-sm);display:flex;flex-wrap:wrap;gap:var(--space-inline-md);align-items:center}
 .alu-badge{display:inline-flex;flex-wrap:wrap;align-items:center;gap:var(--space-inline-xs);max-width:100%;padding:var(--space-inline-xs) var(--space-inline-sm);border:var(--border-width-default) solid var(--border-default);border-radius:var(--badge-radius);background:var(--surface-muted);color:var(--text-primary);font-family:var(--badge-font-family);font-size:var(--type-mono-size);line-height:var(--type-mono-line-height);font-weight:var(--font-weight-label);overflow-wrap:anywhere;vertical-align:middle}
 .alu-badge .alu-icon{width:1.1em;height:1.1em}
@@ -2686,7 +2706,7 @@ body{margin:0;overflow-wrap:break-word;background:var(--surface-page);color:var(
 .alu-site-header__list{display:flex;flex-wrap:wrap;gap:var(--space-inline-xs);margin:0;padding:0;list-style:none}
 .alu-nav-link{display:inline-flex;align-items:center;min-height:var(--target-min);padding-inline:var(--space-inline-md);border-radius:var(--radius-control);color:var(--site-header-fg);text-decoration:none;font-size:var(--type-label-size);font-weight:var(--font-weight-label)}
 .alu-nav-link:hover{color:var(--site-header-fg);background:var(--action-on-brand-bg-hover)}
-.alu-nav-link[aria-current="page"]{text-decoration:underline;text-decoration-thickness:var(--border-width-strong);text-underline-offset:0.35em}
+.alu-nav-link[aria-current="page"]{text-decoration:none;background:var(--action-on-brand-bg-hover)}
 .alu-site-header__actions{display:none;gap:var(--space-inline-sm);align-items:center}
 .alu-site-header__toggle{margin-inline-start:auto}
 .alu-site-header__menu{border-top:var(--border-width-default) solid var(--site-header-border);padding-block:var(--space-inset-sm) var(--space-inset-md)}
@@ -2701,7 +2721,7 @@ body{margin:0;overflow-wrap:break-word;background:var(--surface-page);color:var(
 .alu-site-footer__heading{margin:0 0 var(--space-stack-sm);font-family:var(--font-mono);font-size:var(--type-mono-size);line-height:var(--type-mono-line-height);font-weight:var(--font-weight-label);color:var(--site-footer-fg-secondary)}
 .alu-site-footer__list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:var(--space-stack-xs)}
 .alu-site-footer__list a{display:inline-flex;align-items:center;gap:var(--space-inline-xs);min-height:var(--icon-size-lg);color:var(--site-footer-fg);text-decoration:none;font-size:var(--type-body-sm-size)}
-.alu-site-footer__list a:hover{text-decoration:underline;color:var(--site-footer-fg)}
+.alu-site-footer__list a:hover{text-decoration:none;color:var(--site-footer-fg);background:var(--surface-subtle)}
 .alu-site-footer__bottom{display:flex;min-width:0;flex-wrap:wrap;gap:var(--space-stack-md);align-items:center;justify-content:space-between;margin-top:var(--space-stack-xl);padding-top:var(--space-inset-md);border-top:var(--border-width-default) solid var(--site-footer-border);color:var(--site-footer-fg-secondary);font-size:var(--type-body-sm-size)}
 .alu-site-footer__bottom p{margin:0}
 
@@ -3023,6 +3043,10 @@ body{margin:0;background:var(--surface-page);color:var(--text-primary)}
   padding-inline: var(--button-padding-x-lg);
   font-size: var(--type-body-size);
 }
+/* Buttons have a shared square shape; inputs and decorative circles remain independent. */
+:is(button, input[type="button"], input[type="submit"], input[type="reset"], [role="button"]) {
+  border-radius: var(--button-radius) !important;
+}
 .alu-button--primary {
   background: var(--button-primary-bg);
   color: var(--button-primary-fg);
@@ -3163,7 +3187,7 @@ body{margin:0;background:var(--surface-page);color:var(--text-primary)}
 }
 .alu-site-footer__link:hover {
   color: var(--site-footer-fg);
-  text-decoration: underline;
+  text-decoration: none;
 }
 .alu-site-footer__legal {
   display: flex;
@@ -3338,7 +3362,7 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-megamenu__item:hover {
   color: var(--text-primary);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .alu-page-hero {
@@ -3364,7 +3388,7 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-breadcrumb a:hover {
   color: var(--accent-fg);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .alu-modal-backdrop {
@@ -3466,7 +3490,7 @@ button.alu-role[aria-checked="true"] {
   margin: auto;
   width: var(--size-application-video-play-badge);
   height: var(--size-application-video-play-badge);
-  border-radius: var(--radius-round);
+  border-radius: var(--button-radius);
   background: var(--action-primary-bg);
   color: var(--action-primary-fg);
   display: grid;
@@ -3653,6 +3677,40 @@ button.alu-role[aria-checked="true"] {
   z-index: var(--z-background);
   overflow: hidden;
 }
+.alu-max-preview-hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right center;
+}
+.alu-max-preview-hero .alu-hero-stage__backdrop {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 28%, var(--surface-page) 82%, var(--surface-page) 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, transparent 28%, var(--surface-page) 82%, var(--surface-page) 100%);
+}
+.alu-max-preview-hero__eyebrow {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--type-h3-size);
+  line-height: var(--type-h3-line-height);
+  color: var(--accent-fg);
+}
+.alu-max-preview-hero .alu-button {
+  min-height: var(--target-min);
+  padding-inline: var(--space-inline-md);
+  border-radius: 0;
+}
+.alu-max-preview-hero .alu-hero-stage__scrim {
+  pointer-events: none;
+  z-index: var(--z-scrim);
+  background: linear-gradient(90deg, var(--surface-page) 0%, var(--visual-subpage-hero-dark-scrim) 56%, transparent 100%);
+}
+[data-mode="light"] .alu-max-preview-hero .alu-hero-stage__scrim {
+  background: linear-gradient(90deg, var(--surface-page) 0%, var(--visual-subpage-hero-light-scrim) 58%, transparent 100%);
+}
+.alu-max-preview-hero .alu-hero-stage__inner {
+  position: relative;
+  z-index: var(--z-content);
+}
 .alu-hero-stage__bg-video {
   width: 100%;
   height: 100%;
@@ -3690,6 +3748,9 @@ button.alu-role[aria-checked="true"] {
 .alu-hero-stage__title {
   max-width: var(--container-application-hero-title);
   letter-spacing: var(--font-letter-spacing-application-display-tight);
+}
+.alu-max-preview-hero__title {
+  max-width: var(--container-application-hero-lead);
 }
 .alu-hero-stage__lead {
   max-width: var(--container-application-hero-lead);
@@ -3854,6 +3915,66 @@ button.alu-role[aria-checked="true"] {
 }
 .alu-quick-ribbon__label {
   flex: 1;
+}
+.alu-preview-product-ribbon .alu-quick-ribbon__grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.alu-preview-product-ribbon__item:nth-child(3n) {
+  border-right: 0;
+}
+.alu-preview-product-ribbon__item:nth-child(-n + 3) {
+  border-top: var(--border-width-default) solid var(--border-default);
+}
+@media (max-width: 480px) {
+  .alu-preview-product-ribbon .alu-quick-ribbon__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .alu-preview-product-ribbon__item:nth-child(3) {
+    border-top: 0;
+  }
+  .alu-preview-product-ribbon__item:nth-child(3n) {
+    border-right: var(--border-width-default) solid var(--border-default);
+  }
+  .alu-preview-product-ribbon__item:nth-child(2n) {
+    border-right: 0;
+  }
+}
+.alu-preview-product-ribbon__text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-stack-xs);
+}
+.alu-preview-product-ribbon__description {
+  color: var(--text-secondary);
+  font-size: var(--type-caption-size);
+  font-weight: var(--font-weight-body);
+}
+.alu-preview-product-ribbon__item {
+  background: transparent;
+  border: 0;
+  border-right: var(--border-width-default) solid var(--border-default);
+  border-bottom: var(--border-width-default) solid transparent;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+.alu-preview-product-ribbon__item[aria-selected="true"] {
+  border-bottom-color: var(--accent-fg);
+  color: var(--accent-fg);
+  background: var(--surface-raised);
+}
+.alu-preview-product-panel {
+  padding-block: var(--space-stack-xl);
+  border-top: var(--border-width-default) solid var(--border-default);
+}
+.alu-preview-product-panel__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-stack-md);
+  max-width: var(--container-application-hero-lead);
+  animation: aluPathwaySlideIn var(--motion-duration-base) var(--motion-easing-expressive) both;
 }
 
 /* H03: PathwayProductSystem — Interactive Role Tabs, Split Stage & Conditional Product Cards */
@@ -4649,11 +4770,18 @@ button.alu-role[aria-checked="true"] {
   position: absolute;
   inset: 0;
   z-index: var(--z-background);
-  background-size: cover;
-  background-position: center;
+  display: block;
+  overflow: hidden;
   opacity: 0.14;
   filter: var(--filter-application-subpage-hero-background);
   transform: var(--transform-decorative-subpage-hero-overscan);
+}
+.alu-subpage-hero__bg img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 .alu-subpage-hero__scrim {
   position: absolute;
@@ -4667,6 +4795,30 @@ button.alu-role[aria-checked="true"] {
   background:
     radial-gradient(circle at 82% 20%, var(--visual-subpage-hero-light-accent-glow), transparent 50%),
     linear-gradient(90deg, var(--surface-page) 50%, var(--visual-subpage-hero-light-scrim) 100%);
+}
+.alu-subpage-hero--background-only .alu-subpage-hero__content-panel {
+  align-self: flex-start;
+  max-width: var(--container-md);
+}
+.alu-subpage-hero--background-only .alu-subpage-hero__bg {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 28%, var(--surface-page) 82%, var(--surface-page) 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, transparent 28%, var(--surface-page) 82%, var(--surface-page) 100%);
+  opacity: var(--opacity-subpage-hero-background-only);
+  filter: var(--filter-application-subpage-hero-background-only);
+}
+.alu-subpage-hero--background-only .alu-subpage-hero__bg img {
+  object-fit: contain;
+  object-position: center right;
+}
+.alu-subpage-hero--background-only .alu-subpage-hero__scrim {
+  background:
+    radial-gradient(circle at 82% 20%, var(--visual-subpage-hero-accent-glow), transparent 52%),
+    linear-gradient(90deg, var(--surface-page) 0%, var(--visual-subpage-hero-dark-scrim) 56%, transparent 100%);
+}
+[data-mode="light"] .alu-subpage-hero--background-only .alu-subpage-hero__scrim {
+  background:
+    radial-gradient(circle at 82% 20%, var(--visual-subpage-hero-light-accent-glow), transparent 52%),
+    linear-gradient(90deg, var(--surface-page) 0%, var(--visual-subpage-hero-light-scrim) 58%, transparent 100%);
 }
 
 /* Alternating Split Feature Rows on Subpages */
@@ -4736,6 +4888,44 @@ button.alu-role[aria-checked="true"] {
   border: var(--border-width-default) solid var(--border-default);
   border-top: var(--border-width-strong) solid var(--accent-border);
   box-shadow: var(--elevation-raised);
+}
+.alu-solution-card {
+  color: inherit;
+  text-decoration: none;
+  transition:
+    border-color var(--motion-duration-fast) var(--motion-easing-standard),
+    background-color var(--motion-duration-fast) var(--motion-easing-standard),
+    transform var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.alu-solution-card__media {
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: var(--border-width-default) solid var(--border-subtle);
+  background: var(--surface-subtle);
+}
+.alu-solution-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.alu-solution-card:hover {
+  background: var(--surface-raised);
+  border-color: var(--accent-border);
+  transform: var(--motion-transform-lift-subtle);
+}
+.alu-solution-card__action {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-application-control-comfortable-gap);
+  margin-top: auto;
+  padding-top: var(--space-application-control-comfortable-gap);
+  border-top: var(--border-width-default) solid var(--border-subtle);
+  color: var(--accent-fg);
+  font-family: var(--font-mono);
+  font-size: var(--type-application-small-body-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
 }
 .alu-spec-card__header {
   display: flex;
@@ -5261,6 +5451,14 @@ button.alu-role[aria-checked="true"] {
 .alu-intro-split__media {
   width: 100%;
 }
+.alu-intro-split__media > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: var(--border-width-default) solid var(--border-strong);
+  box-shadow: var(--elevation-overlay);
+}
 .alu-intro-split__video-frame {
   position: relative;
   aspect-ratio: 16 / 9;
@@ -5523,7 +5721,7 @@ button.alu-role[aria-checked="true"] {
 .alu-media-card__play-circle {
   width: var(--size-application-media-play-control);
   height: var(--size-application-media-play-control);
-  border-radius: var(--radius-round);
+  border-radius: var(--button-radius);
   background: var(--visual-media-play-surface);
   border: var(--border-width-strong) solid var(--visual-media-play-border);
   color: var(--visual-on-emphasis);
@@ -5544,7 +5742,7 @@ button.alu-role[aria-checked="true"] {
   z-index: var(--z-content);
   width: var(--size-application-media-zoom-control);
   height: var(--size-application-media-zoom-control);
-  border-radius: var(--radius-round);
+  border-radius: var(--button-radius);
   background: var(--visual-media-zoom-surface);
   border: var(--border-width-default) solid var(--visual-media-border-strong);
   color: var(--visual-media-text);
@@ -5797,6 +5995,9 @@ button.alu-role[aria-checked="true"] {
   border-left: var(--border-width-heavy) solid var(--action-primary-bg);
   box-shadow: var(--elevation-overlay);
 }
+.alu-scia-callout--content-only {
+  grid-template-columns: minmax(0, 1fr);
+}
 .alu-scia-callout--reverse .alu-scia-callout__media {
   order: 2;
 }
@@ -6024,6 +6225,14 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 }
 
 @media (max-width: 64rem) {
+  .alu-max-preview-hero__image {
+    object-fit: cover;
+    object-position: 82% center;
+  }
+  .alu-subpage-hero--background-only .alu-subpage-hero__bg img {
+    object-fit: cover;
+    object-position: 82% center;
+  }
   .alu-hero-stage__grid,
   .alu-pathway-split,
   .alu-feature-row,
@@ -6071,6 +6280,29 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 }
 
 @media (max-width: 40rem) {
+  .alu-max-preview-hero .alu-hero-stage__backdrop {
+    -webkit-mask-image: linear-gradient(180deg, var(--surface-page) 0%, var(--surface-page) 46%, transparent 88%, transparent 100%);
+    mask-image: linear-gradient(180deg, var(--surface-page) 0%, var(--surface-page) 46%, transparent 88%, transparent 100%);
+  }
+  .alu-max-preview-hero .alu-hero-stage__scrim {
+    background: linear-gradient(180deg, transparent 0%, var(--visual-subpage-hero-dark-scrim) 52%, var(--surface-page) 100%);
+  }
+  [data-mode="light"] .alu-max-preview-hero .alu-hero-stage__scrim {
+    background: linear-gradient(180deg, transparent 0%, var(--visual-subpage-hero-light-scrim) 52%, var(--surface-page) 100%);
+  }
+  .alu-subpage-hero--background-only .alu-subpage-hero__bg {
+    -webkit-mask-image: linear-gradient(180deg, var(--surface-page) 0%, var(--surface-page) 46%, transparent 88%, transparent 100%);
+    mask-image: linear-gradient(180deg, var(--surface-page) 0%, var(--surface-page) 46%, transparent 88%, transparent 100%);
+  }
+  .alu-subpage-hero--background-only .alu-subpage-hero__bg img {
+    object-position: center top;
+  }
+  .alu-subpage-hero--background-only .alu-subpage-hero__scrim {
+    background: linear-gradient(180deg, transparent 0%, var(--visual-subpage-hero-dark-scrim) 52%, var(--surface-page) 100%);
+  }
+  [data-mode="light"] .alu-subpage-hero--background-only .alu-subpage-hero__scrim {
+    background: linear-gradient(180deg, transparent 0%, var(--visual-subpage-hero-light-scrim) 52%, var(--surface-page) 100%);
+  }
   .alu-hero-metrics,
   .alu-pathway-features-grid,
   .alu-products-showcase,
@@ -6692,9 +6924,46 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .alu-preview-product-panel__content {
+    animation: none;
+  }
   .alu-pathway-split__left,
   .alu-pathway-feature-card,
   .alu-pathway-visual-frame {
     animation: none !important;
   }
+}
+
+/* Compact BIMFlex spotlight: preserve each image while limiting the media area. */
+.preview-bimflex {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr);
+  gap: var(--space-stack-lg);
+  align-items: center;
+}
+.preview-bimflex__content { row-gap: var(--space-stack-sm) !important; }
+.preview-bimflex__content h2 { font-size: var(--type-h2-size); line-height: var(--type-h2-line-height); }
+.preview-bimflex__logo { width: min(5rem, 35%); }
+.preview-bimflex__media {
+  width: 100%;
+  max-width: var(--size-preview-bimflex-compact-width);
+  height: var(--size-preview-bimflex-compact-height);
+  justify-self: end;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+.preview-bimflex__figure img { min-height: 0; }
+@media (max-width: 767px) {
+  .preview-bimflex { grid-template-columns: minmax(0, 1fr); }
+  .preview-bimflex__media {
+    justify-self: stretch;
+    max-width: none;
+    height: auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto;
+  }
+  .preview-bimflex__figure--1 { grid-row: auto; }
+  .preview-bimflex__figure img { height: auto; aspect-ratio: 1 / 1; }
+  .preview-bimflex__figure figcaption { position: static; overflow-wrap: anywhere; }
 }

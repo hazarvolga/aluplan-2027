@@ -1,0 +1,53 @@
+.page{background:var(--surface-page);color:var(--text-primary)}
+.hero{padding-block:var(--space-application-section-wide-inset);background:var(--surface-subtle)}
+.hero h1{font-family:var(--font-heading);font-size:var(--type-display-size);line-height:var(--type-display-line-height);max-width:22ch;margin:var(--space-stack-md) 0}
+.hero p{max-width:75ch;line-height:var(--type-body-lg-line-height)}
+.kicker{color:var(--accent-fg);font-weight:var(--font-weight-strong);font-size:var(--type-caption-size);letter-spacing:.06em;text-transform:uppercase}
+.actions{display:flex;gap:var(--space-inline-md);flex-wrap:wrap;margin-top:var(--space-stack-lg)}
+.section{padding-block:var(--space-application-section-inset)}
+.section h2{font-family:var(--font-heading);font-size:var(--type-h2-size)}
+.navigation{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:var(--border-width-default) solid var(--border-default)}
+.navigation button{min-width:0;display:flex;flex-direction:column;gap:var(--space-stack-xs);padding:var(--space-inset-md);border:0;border-right:var(--border-width-default) solid var(--border-default);border-bottom:var(--border-width-accent) solid transparent;background:var(--surface-page);color:var(--text-primary);font:inherit;font-weight:var(--font-weight-strong);text-align:left;cursor:pointer}
+.navigation button:last-child{border-right:0}
+.navigation button:hover{background:var(--surface-raised)}
+.navigation button[aria-selected="true"]{background:var(--surface-raised);border-bottom-color:var(--accent-border);color:var(--accent-fg)}
+.tabSubtitle{font-size:var(--type-caption-size);font-weight:var(--font-weight-body);color:var(--text-secondary)}
+.group[hidden]{display:none}
+@media(max-width:767px){.navigation{display:flex;overflow-x:auto}.navigation button{flex:0 0 auto;min-width:10rem}}
+.group{padding-block:var(--space-application-section-inset);border-bottom:var(--border-width-default) solid var(--border-strong)}
+.group h2{font-size:var(--type-h2-size);margin:0 0 var(--space-stack-lg)}
+/* Feature rows share the compact, thin-line visual language of the Max preview. */
+.feature{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;margin-top:var(--space-stack-md);border:var(--border-width-default) solid var(--border-default);background:var(--surface-default)}
+.feature:nth-of-type(even) .media{order:-1}
+.featureContent{min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:var(--space-stack-sm);padding:var(--space-inset-lg)}
+.featureRibbon{margin:0;padding:var(--space-stack-xs) var(--space-inset-sm);border-left:var(--border-width-accent) solid var(--accent-border);background:var(--surface-subtle);color:var(--accent-fg);font-size:var(--type-caption-size);font-weight:var(--font-weight-strong);line-height:var(--type-caption-line-height)}
+.feature h3{margin:var(--space-stack-sm) 0 0;font-family:var(--font-heading);font-size:var(--type-h3-size);line-height:var(--type-h3-line-height)}
+.feature h4{margin:0;font-family:var(--font-heading);font-size:var(--type-body-size);line-height:var(--type-body-line-height);font-weight:var(--font-weight-strong)}
+.featureContent>p:not(.featureRibbon){margin:0;color:var(--text-secondary);line-height:var(--type-body-line-height)}
+.featureContent>a{margin-top:var(--space-stack-sm);color:var(--accent-fg);font-weight:var(--font-weight-strong);text-decoration:none}
+.featureContent>a:hover{color:var(--text-link-hover);text-decoration:none}
+.media{min-width:0;display:flex;align-items:center;padding:var(--space-inset-md);border-left:var(--border-width-default) solid var(--border-default)}
+.feature:nth-of-type(even) .media{border-left:0;border-right:var(--border-width-default) solid var(--border-default)}
+.media img,.media video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:var(--surface-muted)}
+.improvements{padding-top:var(--space-inset-lg)}
+.improvements h3{font-family:var(--font-heading);font-size:var(--type-h3-size);line-height:var(--type-h3-line-height);margin:0 0 var(--space-stack-md)}
+.improvements details{border:var(--border-width-default) solid var(--border-default);background:var(--surface-default)}
+.improvements details + details{border-top:0}
+.improvements summary{display:flex;align-items:center;justify-content:space-between;gap:var(--space-inline-md);min-height:var(--target-min);padding:var(--space-inset-sm) var(--space-inset-md);cursor:pointer;list-style:none;color:var(--text-primary);font-family:var(--font-heading);font-weight:var(--font-weight-strong);line-height:var(--type-body-line-height)}
+.improvements summary::-webkit-details-marker{display:none}
+.improvements summary::after{content:"+";flex:none;color:var(--accent-fg);font-size:var(--type-h3-size);font-weight:var(--font-weight-body)}
+.improvements details[open] summary::after{content:"−"}
+.improvements summary:hover,.improvements details[open] summary{background:var(--surface-raised)}
+.improvements summary:focus-visible{outline:var(--focus-width) solid var(--focus-ring);outline-offset:calc(-1 * var(--focus-width))}
+.improvements p{max-width:100ch;margin:0;padding:var(--space-inset-sm) var(--space-inset-md) var(--space-inset-md);color:var(--text-secondary);line-height:var(--type-body-line-height)}
+@media(max-width:767px){.feature{grid-template-columns:1fr}.feature:nth-of-type(even) .media{order:0;border-right:0}.media{border-left:0;border-top:var(--border-width-default) solid var(--border-default)}.featureContent{padding:var(--space-inset-md)}.hero{padding-block:var(--space-inset-lg)}}
+
+/* Short, restrained entrance motion; native details semantics remain intact. */
+@media (prefers-reduced-motion: no-preference){
+  .navigation button{transition:background-color var(--motion-duration-fast) var(--motion-easing-standard),color var(--motion-duration-fast) var(--motion-easing-standard),border-color var(--motion-duration-fast) var(--motion-easing-standard)}
+  .group:not([hidden]){animation:featuresPanelEnter var(--motion-duration-base) var(--motion-easing-enter) both}
+  .improvements summary{transition:background-color var(--motion-duration-fast) var(--motion-easing-standard)}
+  .improvements details[open]>p{animation:featuresDetailsEnter var(--motion-duration-base) var(--motion-easing-enter) both}
+}
+@keyframes featuresPanelEnter{from{opacity:0;transform:var(--motion-transform-lift-subtle)}to{opacity:1;transform:none}}
+@keyframes featuresDetailsEnter{from{opacity:0}to{opacity:1}}

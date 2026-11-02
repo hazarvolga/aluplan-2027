@@ -1,0 +1,6 @@
+.panel{position:relative;isolation:isolate;overflow:hidden;min-height:16rem}
+.image{position:absolute;z-index:-1;right:0;top:0;width:60%;height:100%;object-fit:cover;object-position:center;opacity:.7;mask-image:linear-gradient(to right,transparent 0%,black 45%);-webkit-mask-image:linear-gradient(to right,transparent 0%,black 45%)}
+.content{position:relative;max-width:52%;}
+@media(prefers-reduced-motion:no-preference){.image{animation:fadeIn 350ms ease-out both}@keyframes fadeIn{from{opacity:0}to{opacity:.7}}}
+@media(max-width:767px){.panel{min-height:0}.image{width:100%;opacity:.2;mask-image:linear-gradient(to right,transparent,black);-webkit-mask-image:linear-gradient(to right,transparent,black)}.content{max-width:100%}}
+@media(max-width:767px) and (prefers-reduced-motion:no-preference){.image{animation:fadeMobile 350ms ease-out both}@keyframes fadeMobile{from{opacity:0}to{opacity:.2}}}

@@ -48,26 +48,60 @@ class MainLinkCollector(HTMLParser):
     def __init__(self) -> None:
         super().__init__()
         self.depth = 0
-        self.hrefs: list[str] = []
+        self.anchors: list[dict] = []
 
     def handle_starttag(self, tag, attrs):
         if tag == "main":
             self.depth += 1
         elif tag == "a" and self.depth:
-            self.hrefs.append(dict(attrs).get("href", ""))
+            self.anchors.append(dict(attrs))
 
     def handle_endtag(self, tag):
         if tag == "main" and self.depth:
             self.depth -= 1
 
 
-def main_hrefs(route: str) -> list[str]:
+def main_anchors(route: str) -> list[dict]:
     html_file = BUILD_APP / f"{route.lstrip('/')}.html"
     if not html_file.is_file():
         raise unittest.SkipTest(f"production build output missing: {html_file}")
     collector = MainLinkCollector()
     collector.feed(html_file.read_text(encoding="utf-8"))
-    return collector.hrefs
+    return collector.anchors
+
+
+def main_hrefs(route: str) -> list[str]:
+    return [anchor.get("href", "") for anchor in main_anchors(route)]
+
+
+AX3000_DOCS_ROUTE = "/products/ax3000/dokumanlar"
+AX3000_DOCUMENTS = [
+    ("/docs/ax3000/ax3000-brochure-en.pdf", "AX3000 Genel Broşür (İngilizce, PDF) indir"),
+    ("/docs/ax3000/ax3000-brochure-de.pdf", "AX3000 Genel Broşür (Almanca, PDF) indir"),
+    ("/docs/ax3000/ax3000-brochure-en-alternative.pdf", "AX3000 Genel Broşür — Alternatif (İngilizce, PDF) indir"),
+    ("/docs/ax3000/ax3000-functions-en.pdf", "MEP Fonksiyon Açıklamaları (İngilizce, PDF) indir"),
+    ("/docs/ax3000/ax3000-functions-en.docx", "MEP Fonksiyon Açıklamaları — Word (İngilizce, DOCX) indir"),
+    ("/docs/ax3000/ax3000-functions-hexagon-en.docx", "MEP Fonksiyon Açıklamaları — Hexagon (İngilizce, DOCX) indir"),
+]
+
+
+class DocumentGroupDataTests(unittest.TestCase):
+    def test_ax3000_document_groups_follow_source(self):
+        groups = load_pages()[AX3000_DOCS_ROUTE]["documentGroups"]
+        self.assertEqual([g["id"] for g in groups], ["brosurler", "teknik-dokumanlar"])
+        hrefs = [doc["href"] for g in groups for doc in g["documents"]]
+        self.assertEqual(hrefs, [href for href, _ in AX3000_DOCUMENTS])
+
+    def test_ax3000_document_files_exist(self):
+        for href, _ in AX3000_DOCUMENTS:
+            with self.subTest(href=href):
+                self.assertTrue((ROOT / "public" / href.lstrip("/")).is_file())
+
+
+class DocumentGroupRenderTests(unittest.TestCase):
+    def test_ax3000_documents_render_as_downloads(self):
+        downloads = [(a.get("href"), a.get("aria-label")) for a in main_anchors(AX3000_DOCS_ROUTE) if "download" in a]
+        self.assertEqual(downloads, AX3000_DOCUMENTS)
 
 
 class SectionCardLinkDataTests(unittest.TestCase):

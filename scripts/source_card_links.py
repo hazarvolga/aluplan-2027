@@ -10,10 +10,17 @@ from pathlib import Path
 
 from extract_structured_pages import (
     EV_DIR,
+    PUBLIC_DIR,
+    extract_balanced_block,
     find_const_array,
     get_prop_str,
     split_top_level_objects,
 )
+
+AX3000_DOCS_ROUTE = "/products/ax3000/dokumanlar"
+AX3000_DOCS_SOURCE = "app/products/ax3000/dokumanlar/documents.ts"
+AX3000_DOCS_PUBLIC = "/docs/ax3000/"
+DOCUMENT_FIELDS = ("title", "language", "format", "detail", "size", "badge", "description", "filename")
 
 
 @dataclass(frozen=True)
@@ -81,9 +88,39 @@ def link_sections(sections: list[dict], cards: list[dict], route: str) -> list[d
     return linked
 
 
+def extract_document(obj: str) -> dict:
+    document = {field: get_prop_str(obj, field) for field in DOCUMENT_FIELDS}
+    missing = [field for field, value in document.items() if not value]
+    if missing:
+        raise ValueError(f"{AX3000_DOCS_SOURCE}: document missing {missing}: {obj[:80]!r}")
+    href = AX3000_DOCS_PUBLIC + document["filename"]
+    if not (PUBLIC_DIR / href.lstrip("/")).is_file():
+        raise FileNotFoundError(f"public document missing: {href}")
+    return {**document, "href": href}
+
+
+def extract_document_groups() -> list[dict]:
+    text = read_source(AX3000_DOCS_SOURCE)
+    groups = []
+    for group in split_top_level_objects(find_const_array(text, "documentGroups")):
+        start = group.find("documents:")
+        documents = extract_balanced_block(group, group.index("[", start), "[", "]") if start != -1 else ""
+        header = group[:start] if start != -1 else group
+        groups.append({
+            "id": get_prop_str(header, "id"),
+            "title": get_prop_str(header, "title"),
+            "description": get_prop_str(header, "description"),
+            "documents": [extract_document(obj) for obj in split_top_level_objects(documents)],
+        })
+    if not groups or not all(g["id"] and g["title"] and g["documents"] for g in groups):
+        raise ValueError(f"{AX3000_DOCS_SOURCE}: documentGroups incomplete")
+    return groups
+
+
 def apply_source_card_links(pages: dict) -> dict:
     updated = dict(pages)
     for spec in CARD_SOURCES:
         page = updated[spec.route]
         updated[spec.route] = {**page, "sections": link_sections(page["sections"], extract_cards(spec), spec.route)}
+    updated[AX3000_DOCS_ROUTE] = {**updated[AX3000_DOCS_ROUTE], "documentGroups": extract_document_groups()}
     return updated

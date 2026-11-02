@@ -30,6 +30,7 @@ import { ScalypsoPageContent } from './ScalypsoPageContent';
 import { ScalypsoSubpage } from './ScalypsoSubpage';
 import { ScalypsoModeler } from './ScalypsoModeler';
 import { SectionCardLink, withoutLinkLabel } from './SectionCardLink';
+import { DocumentGroupsSection, documentSectionHeadings } from './DocumentGroupsSection';
 
 const SECTION_LABELS: Record<string, string> = {
   products: 'ALLPLAN ÜRÜN AİLESİ',
@@ -100,9 +101,10 @@ export function SubpageView({
     !isLegalPage && !isVideoLibraryHub && !isVideoPlaylistPage
       ? page.sections.filter((s) => Boolean(s.image) && !s.statValue)
       : [];
+  const documentHeadings = page.documentGroups ? documentSectionHeadings(page.documentGroups) : new Set<string>();
   const specSections =
     !isVideoLibraryHub && !isVideoPlaylistPage && !solutionHub && !solutionCatalog
-      ? page.sections.filter((s) => !s.statValue && (!s.image || isLegalPage))
+      ? page.sections.filter((s) => !s.statValue && (!s.image || isLegalPage) && !documentHeadings.has(s.heading))
       : [];
 
   const usedPhotoSrcs = new Set<string>();
@@ -402,6 +404,8 @@ export function SubpageView({
                 })}
               </div>
             )}
+
+            {page.documentGroups && <DocumentGroupsSection groups={page.documentGroups} />}
 
             {/* Part B: Alternating Split Feature Rows (ONLY for high-resolution photos, NEVER icons) */}
             {featuredSections.length > 0 && (

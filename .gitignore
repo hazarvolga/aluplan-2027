@@ -29,3 +29,6 @@ public/assets/**/icons/*
 
 # Deferred 2027 product content; intentionally not versioned
 /Allplan 2027 Marketing Materials/
+
+# Local-only design exploration
+/architectural-sheet-concept/

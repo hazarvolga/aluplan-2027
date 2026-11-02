@@ -44,6 +44,7 @@ const securityHeaders = [
 
 const nextConfig = {
   poweredByHeader: false,
+  env: { ALUPLAN_2027_PREVIEW: process.env.ALUPLAN_2027_PREVIEW ?? '0' },
   reactStrictMode: true,
   async headers() {
     return [

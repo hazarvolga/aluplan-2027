@@ -2,6 +2,7 @@
 
 from pathlib import Path
 import json
+import os
 import re
 import subprocess
 import unittest
@@ -29,10 +30,37 @@ def run_matrix():
     return {(row["show"], row["block"]): row for row in json.loads(result.stdout)}
 
 
+def load_next_config(env: dict) -> subprocess.CompletedProcess:
+    clean = {k: v for k, v in os.environ.items() if not k.startswith("ALUPLAN_")}
+    return subprocess.run(
+        ["node", "-e", "import('./next.config.mjs').then(() => process.stdout.write('loaded'))"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        env={**clean, **env},
+    )
+
+
 class ReleaseFlagSourceTests(unittest.TestCase):
     def test_legacy_flag_removed(self):
-        offenders = [str(p.relative_to(ROOT)) for p in source_files() if "ALUPLAN_2027_PREVIEW" in p.read_text(encoding="utf-8")]
+        offenders = [
+            str(p.relative_to(ROOT))
+            for p in source_files()
+            if p.name != "next.config.mjs" and "ALUPLAN_2027_PREVIEW" in p.read_text(encoding="utf-8")
+        ]
         self.assertEqual(offenders, [])
+
+    def test_config_refuses_legacy_flag_without_new_flags(self):
+        result = load_next_config({"ALUPLAN_2027_PREVIEW": "1"})
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("ALUPLAN_BLOCK_INDEXING", result.stderr)
+
+    def test_config_loads_with_new_flags(self):
+        result = load_next_config({"ALUPLAN_2027_PREVIEW": "1", "ALUPLAN_SHOW_2027": "1", "ALUPLAN_BLOCK_INDEXING": "1"})
+        self.assertEqual((result.returncode, result.stdout), (0, "loaded"))
+
+    def test_config_loads_without_any_flag(self):
+        self.assertEqual(load_next_config({}).returncode, 0)
 
     def test_env_reads_centralized(self):
         allowed = {FLAGS_MODULE, "next.config.mjs"}

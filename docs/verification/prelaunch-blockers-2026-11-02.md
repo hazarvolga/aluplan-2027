@@ -49,7 +49,21 @@ Plan: `docs/superpowers/plans/2026-11-02-prelaunch-blockers.md`. Dal: `codex/pre
 - **`/preview/product-lifecycle`:** 2027 ana sayfası bu adrese bağlantı veriyor, bu yüzden yayın bayrağıyla açık. Kalıcı URL ve "Yerel Önizleme" başlığı için karar gerekiyor.
 - **Bağlantı farkları:** `docs/verification/main-link-gap-2026-11-02.md` D bölümündeki farklar sınıflandırılmalı.
 - **OG görselleri:** `/2027/max` OG görseli AI üretimi hero, `/2027/scia` OG görseli FRILO hero'su. Marka ve hak onayı açık.
-- **Vercel ortam değişkenleri (K2):** `ALUPLAN_2027_PREVIEW` kaldırılıp yerine Preview ve Production için `ALUPLAN_SHOW_2027=1`, `ALUPLAN_BLOCK_INDEXING=1` tanımlanmalı. **Bu yapılmadan bu dal deploy edilirse inceleme sitesi eski ana sayfaya döner ve indeks engeli kalkar.**
+- **Vercel ortam değişkenleri (K2):** Preview ve Production için `ALUPLAN_SHOW_2027=1` ve `ALUPLAN_BLOCK_INDEXING=1` tanımlanmalı, ardından `ALUPLAN_2027_PREVIEW` kaldırılmalı. Eski değişken yeni değişkenler olmadan dururken `next.config.mjs` build'i bilerek durdurur (`25562a6` sonrası koruma). Böylece indeks engeli sessizce kalkamaz.
+- **`/2027/compare` iç notu:** sayfada görünen "Bu yerel inceleme, uluslararası üretici sayfasına dayanır. Türkiye paket kapsamı ve koşulları doğrulanmalıdır." metni, sayfa gerçek alan adında indekslenirse ziyaretçiye ve arama motoruna yayınlanır. Metnin kalması, değişmesi ya da kaldırılması içerik kararıdır (`src/app/2027/compare/page.tsx:19`).
+
+## Bağımsız kod incelemesi ve düzeltmeler
+
+Dalın tamamı ayrı bir inceleyici tarafından incelendi. Sonuç: Critical yok, 3 Important, 3 Minor.
+
+- **Important — AX3000 sayfaları:** Elektrik ve Havalandırma sayfalarında modül gezinmesi YouTube kartına bağlanmıştı; üç sayfada YouTube bağlantısı düz metin kalmıştı. Düzeltildi (`25562a6`): gezinme ana sütun başlığına bağlandı, YouTube kartları ayrı blok oldu. Çıkarıcı artık bloktaki bir bağlantıyı yakalayamazsa hata veriyor.
+- **Important — eski bayrak:** eski bayrak yeni değişkenler olmadan kalırsa koruma sessizce kalkıyordu. Düzeltildi: `next.config.mjs` build'i durduruyor. Testler `test_config_refuses_legacy_flag_without_new_flags`, `test_config_loads_with_new_flags`, `test_config_loads_without_any_flag`.
+- **Important — `/2027/compare` iç notu:** içerik kararı olarak kullanıcıya bırakıldı (yukarıda).
+- **Minor (ertelendi):**
+  - İndirme bağlantılarında erişilebilir ad görünür metinle başlamıyor (WCAG 2.5.3).
+  - Dış eylem bağlantılarında yeni sekme duyurusu yok; kod tabanındaki mevcut desenle aynı.
+
+Son durum: 230 unit test, 36/36 parite, 45/45 token, typecheck ve build geçti.
 
 ## Kapsam dışı gözlemler
 

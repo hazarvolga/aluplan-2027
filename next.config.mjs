@@ -1,6 +1,16 @@
 /** @type {import('next').NextConfig} */
 const isDev = process.env.NODE_ENV !== 'production';
 
+// The retired flag both showed 2027 content and blocked indexing; deploying without its replacements would silently index the review site.
+if (
+  process.env.ALUPLAN_2027_PREVIEW !== undefined &&
+  (process.env.ALUPLAN_SHOW_2027 === undefined || process.env.ALUPLAN_BLOCK_INDEXING === undefined)
+) {
+  throw new Error(
+    'ALUPLAN_2027_PREVIEW is retired. Set ALUPLAN_SHOW_2027 and ALUPLAN_BLOCK_INDEXING explicitly before building.'
+  );
+}
+
 const securityHeaders = [
   {
     key: 'Content-Security-Policy',

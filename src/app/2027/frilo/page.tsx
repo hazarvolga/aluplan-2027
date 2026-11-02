@@ -6,8 +6,12 @@ import { notFound } from 'next/navigation';
 import { PreviewClosingSection } from '@/components/sections/PreviewClosingSection';
 import { MAIN_QUOTE_FORM_URL } from '@/lib/site-data';
 import { isReleaseContentEnabled } from '@/lib/release-flags';
+import { buildRelease2027JsonLd, buildRelease2027Metadata } from '@/lib/release-2027-routes';
+import { serializeJsonLd } from '@/lib/schema';
 
-export const metadata: Metadata = { title: 'FRILO | Yerel Önizleme', robots: { index: false, follow: false } };
+export function generateMetadata(): Metadata {
+  return buildRelease2027Metadata('/2027/frilo');
+}
 const editions = [
   { title: 'FRILO Concept', items: ['Basit konut yapıları için eksiksiz iş akışı', 'Kat bazında yük aktarımı için bina modeli', 'Sürekli kirişler, döşemeler, kolonlar ve temeller', 'Mertek, aşık ve çatı sistemlerinin tasarımı', 'Eurocode ve DIN kapsamında yığma ve ahşap duvar kontrolleri'] },
   { title: 'FRILO Professional Concrete', items: ['Beton ve yığma yapılar için araçlar', 'Gelişmiş betonarme bileşen tasarımı', 'Zımbalama, konsollar, yarım eklemler ve basınç çubuğu–çekme bağı modelleri', 'Çatlak genişliği kontrolleriyle ayrıntılı donatı düzenleri', 'FBC / BIM Connector'] },
@@ -15,7 +19,7 @@ const editions = [
   { title: 'FRILO Professional Timber', items: ['Ahşap yapı tasarımına odaklanan araçlar', 'Ahşap kirişler, kafesler ve çerçeve sistemleri', 'Tutkallı lamine kirişler ve çapraz lamine ahşap kirişler', 'Eğik dişli, çekme ve kırlangıç kuyruğu birleşimleri', 'FBC / BIM Connector'] },
   { title: 'FRILO Ultimate', items: ['Beton, çelik, ahşap ve yığma modüllerine tam erişim', 'Karma malzemeli yapılar için 2B ve 3B çerçeve sistemleri', 'Gelişmiş temel mühendisliği ve zemin–yapı kontrolleri', 'Farklı malzemelerde kapsamlı bileşen ve detay kontrolleri', 'BIMPLUS ile ALLPLAN, SCIA ve diğer araçlara bağlantılar'] },
 ];
-export default function FriloPreview() {
+function FriloPreview() {
   if (!isReleaseContentEnabled()) notFound();
   return <div>
     <section className={hero.hero}><div className={`alu-container ${hero.content}`}><p className="preview-kicker">FRILO · YAPI ANALİZİ</p><h1 className="alu-h1">Bileşen odaklı yapı analizi ve tasarım</h1><p className="alu-body">FRILO; beton, çelik, ahşap ve yığma yapıların bileşen odaklı analizi ve tasarımı için BIM bağlantıları ve Eurocode ile DIN temelli araçlar sunar.</p><ul className={hero.heroBenefits}><li>İhtiyaçlarınıza uygun araç seti</li><li>Yapı bileşenleri için hesaplar</li><li>Düzenli hesap raporları</li><li>Diğer araçlarla iş birliği</li></ul><a className="alu-button alu-button--primary alu-button--md" href={MAIN_QUOTE_FORM_URL}>Teklif isteyin ↗</a></div></section>
@@ -33,4 +37,13 @@ export default function FriloPreview() {
     <section id="frilo-faq" className={`${hero.contentSection} ${hero.faq}`}><p className={hero.kicker}>FRILO · SSS</p><h2>Sık sorulan sorular</h2>{friloFaq.map(([q,a])=><details className="alu-accordion__item" key={q}><summary className="alu-accordion__trigger">{q}</summary><p>{a}</p></details>)}</section>
     </div><PreviewClosingSection id="frilo-closing" title="FRILO hakkında görüşelim" items={[{title:'Uzmanla görüşün',paragraphs:['Projelerinize uygun FRILO sürümü hakkında bilgi alın.'],action:{label:'Teklif isteyin',href:MAIN_QUOTE_FORM_URL}},{title:'FRILO’yu deneyin',paragraphs:['FRILO’yu 14 gün ücretsiz deneyin. Deneme, değerlendirme ve ticari olmayan kullanım içindir; iptal işlemi gerektirmez.'],action:{label:'Ücretsiz deneme',href:'https://connect2.allplan.com/auth/get-trial?product=frilo'}}]} />
   </div>;
+}
+
+export default function Release2027Page() {
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(buildRelease2027JsonLd('/2027/frilo')) }} />
+      <FriloPreview />
+    </>
+  );
 }

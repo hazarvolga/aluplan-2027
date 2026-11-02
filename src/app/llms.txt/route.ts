@@ -1,7 +1,15 @@
 import { NextResponse } from 'next/server';
-import { getHomepageData } from '@/lib/site-data';
+import { getHomepageData, SITE_ORIGIN } from '@/lib/site-data';
+import { isReleaseContentEnabled } from '@/lib/release-flags';
+import { RELEASE_2027_ROUTES } from '@/lib/release-2027-routes';
 
 const homepageData = getHomepageData();
+const release2027Section = isReleaseContentEnabled()
+  ? `
+## 2027 Sürümleri (/2027)
+${RELEASE_2027_ROUTES.map((route) => `- [${route.name}](${SITE_ORIGIN}${route.path}): ${route.description}`).join('\n')}
+`
+  : '';
 const packageMatrixPeriod = homepageData.packageMatrixLabel.replace(' MATRİSİ', '');
 
 const LLMS_TXT_CONTENT = `# Aluplan Program Sistemleri — ALLPLAN Türkiye
@@ -45,7 +53,7 @@ const LLMS_TXT_CONTENT = `# Aluplan Program Sistemleri — ALLPLAN Türkiye
 - [Video Kütüphanesi (14 Seri / 216 Video)](https://aluplan.com.tr/solutions-v2/training/video-library): Hello ALLPLAN 2024, Otomatik Donatı, Köprü İş Akışları, Yol Tasarımı, AX3000, Prekast ve SDS2 eğitim videoları.
 - [Sıkça Sorulan Sorular (SSS)](https://aluplan.com.tr/solutions-v2/faq): Lisans, kurulum, sistem gereksinimleri ve OpenBIM veri değişimi.
 - [Referanslar](https://aluplan.com.tr/references): Kamu kurumları, belediyeler, üniversiteler ve mühendislik/mimarlık ofisleri.
-`;
+${release2027Section}`;
 
 export async function GET() {
   return new NextResponse(LLMS_TXT_CONTENT, {

@@ -1,15 +1,18 @@
 import type { MetadataRoute } from 'next';
 import { getAllPages, SITE_ORIGIN } from '@/lib/site-data';
+import { isReleaseContentEnabled } from '@/lib/release-flags';
+import { RELEASE_2027_ROUTES } from '@/lib/release-2027-routes';
 
 const NON_INDEXABLE_PATHS = new Set(['/health', '/search', '/hero-3d', '/test-webgl']);
+const LAST_MODIFIED = new Date('2026-10-25T00:00:00.000Z');
+const RELEASE_LAST_MODIFIED = new Date('2026-11-02T00:00:00.000Z');
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = getAllPages().filter((p) => !NON_INDEXABLE_PATHS.has(p.path));
-  const now = new Date('2026-10-25T00:00:00.000Z');
 
-  return pages.map((page) => ({
+  const pageEntries: MetadataRoute.Sitemap = pages.map((page) => ({
     url: page.canonical || (page.path === '/' ? SITE_ORIGIN : `${SITE_ORIGIN}${page.path}`),
-    lastModified: now,
+    lastModified: LAST_MODIFIED,
     changeFrequency: page.path === '/' ? 'weekly' : 'monthly',
     priority:
       page.path === '/'
@@ -20,4 +23,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
             ? 0.8
             : 0.7
   }));
+
+  const releaseEntries: MetadataRoute.Sitemap = isReleaseContentEnabled()
+    ? RELEASE_2027_ROUTES.map((route) => ({
+        url: `${SITE_ORIGIN}${route.path}`,
+        lastModified: RELEASE_LAST_MODIFIED,
+        changeFrequency: 'monthly',
+        priority: 0.9
+      }))
+    : [];
+
+  return [...pageEntries, ...releaseEntries];
 }

@@ -8,8 +8,12 @@ import { PreviewClosingSection } from '@/components/sections/PreviewClosingSecti
 import { MAIN_QUOTE_FORM_URL } from '@/lib/site-data';
 import styles from '@/app/2027/frilo/hero.module.css';
 import { isReleaseContentEnabled } from '@/lib/release-flags';
+import { buildRelease2027JsonLd, buildRelease2027Metadata } from '@/lib/release-2027-routes';
+import { serializeJsonLd } from '@/lib/schema';
 
-export const metadata: Metadata = { title: 'SCIA | Yerel inceleme', robots: { index: false, follow: false, nocache: true } };
+export function generateMetadata(): Metadata {
+  return buildRelease2027Metadata('/2027/scia');
+}
 const editions = [
  {title:'SCIA Concept', items:['Yapısal modelleme ve analiz','Beton, çelik ve ahşap için temel tasarım iş akışları','Stabilite ve dinamik analiz araçları','BIM uyumlu model alışverişi','Gelişmiş doğrusal olmayan analiz']},
  {title:'SCIA Professional', items:['Çok malzemeli tasarım iş akışları','Parametrik modelleme araçları','Gelişmiş yük oluşturma','Zemin–yapı etkileşimi analizi','Genişletilmiş BIM entegrasyonları']},
@@ -27,7 +31,7 @@ const faq = [
  ['Hangi sektörlerde kullanılır?','Yapı mühendisliği ofisleri, altyapı tasarımcıları, endüstriyel mühendislik ekipleri ve çok disiplinli AEC kuruluşları tarafından bina, köprü, endüstriyel tesis ve karmaşık yapı projelerinde kullanılır.'],
  ['Sürümler arasında yükseltme yapılabilir mi?','Evet. Ekipler, projeleri karmaşıklaştıkça veya gelişmiş analiz ihtiyaçları arttıkça daha üst sürümlere geçebilir.'],
 ];
-export default function SciaPage(){
+function SciaPage(){
  if(!isReleaseContentEnabled()) notFound();
  return <div><div id="scia-top"><ProductHero eyebrow="SCIA" title="Yapı analizi ve tasarım" description="SCIA, bina, altyapı ve karmaşık taşıyıcı sistemler üzerinde çalışan mühendisler için yapı analizi ve tasarım araçları sunar." image="/assets/previews/frilo/frilo-hero.jpg" actions={[{label:'Teklif isteyin ↗',href:MAIN_QUOTE_FORM_URL,variant:'primary'}]} /></div>
  <div className={styles.editionsSection}><div className="alu-container"><EditionCards title="SCIA sürümleri" editions={editions}/></div></div>
@@ -37,4 +41,13 @@ export default function SciaPage(){
  <div className="alu-container alu-stack"> <section id="scia-faq" className={`${styles.contentSection} ${styles.faq}`}><p className={styles.kicker}>SCIA · SSS</p><h2>Sık sorulan sorular</h2>{faq.map(([q,a])=><details key={q}><summary>{q}</summary><p>{a}</p></details>)}</section></div>
  <PreviewClosingSection id="scia-closing" title="SCIA hakkında görüşelim" items={[{title:'Uzmanla görüşün',paragraphs:['Projelerinize ve ekibinize uygun SCIA sürümü hakkında bilgi alın.'],action:{label:'Teklif isteyin',href:MAIN_QUOTE_FORM_URL}},{title:'SCIA’yı deneyin',paragraphs:['SCIA’yı 30 gün ücretsiz deneyin. Deneme, değerlendirme ve ticari olmayan kullanım içindir; iptal gerektirmez.'],action:{label:'Ücretsiz deneme',href:'https://www.scia.net/en/forms/scia-engineer-trial-request'}}]} />
  </div>;
+}
+
+export default function Release2027Page() {
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(buildRelease2027JsonLd('/2027/scia')) }} />
+      <SciaPage />
+    </>
+  );
 }

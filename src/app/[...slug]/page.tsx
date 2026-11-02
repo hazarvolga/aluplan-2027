@@ -7,7 +7,7 @@ import {
   getPlaylistData
 } from '@/lib/site-data';
 import { buildPageMetadata } from '@/lib/metadata';
-import { buildPageJsonLd } from '@/lib/schema';
+import { buildPageJsonLd, serializeJsonLd } from '@/lib/schema';
 import { SubpageView } from '@/components/sections/SubpageView';
 
 interface SlugPageProps {
@@ -43,7 +43,7 @@ export default async function SlugPage({ params }: SlugPageProps) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
       />
       <SubpageView page={page} playlist={playlist} />
     </>

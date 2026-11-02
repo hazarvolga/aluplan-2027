@@ -2,14 +2,23 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { AllplanMaxPreviewPage } from '@/components/sections/AllplanMaxPreviewPage';
 import { isReleaseContentEnabled } from '@/lib/release-flags';
+import { buildRelease2027JsonLd, buildRelease2027Metadata } from '@/lib/release-2027-routes';
+import { serializeJsonLd } from '@/lib/schema';
 
-export const metadata: Metadata = {
-  title: 'Allplan Max | Yerel Önizleme',
-  description: 'Allplan Max ürün sayfası yerel içerik ve tasarım önizlemesi.',
-  robots: { index: false, follow: false, nocache: true }
-};
+export function generateMetadata(): Metadata {
+  return buildRelease2027Metadata('/2027/max');
+}
 
-export default function MaxPreviewRoute() {
+function MaxPreviewRoute() {
   if (!isReleaseContentEnabled()) notFound();
   return <AllplanMaxPreviewPage />;
+}
+
+export default function Release2027Page() {
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(buildRelease2027JsonLd('/2027/max')) }} />
+      <MaxPreviewRoute />
+    </>
+  );
 }

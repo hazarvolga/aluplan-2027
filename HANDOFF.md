@@ -1,5 +1,11 @@
 # Oturum devri
 
+## 03.11.2026 — PR #3, #4, #5 main'e birleştirildi ve production'a çıktı
+- Sıra: #3 (db37a1e) → #4 (0db2648) → #5 (5e810e5); her biri merge commit ile, dallar silinmedi.
+- Vercel env: `ALUPLAN_SHOW_2027=1`, `ALUPLAN_BLOCK_INDEXING=1` (Production + Preview); eski `ALUPLAN_2027_PREVIEW` kaldırıldı.
+- https://aluplan-2027.vercel.app doğrulandı: `/`, `/paket-karsilastirma`, `/product-lifecycle`, `/products/allplan-rebar`, `/2027/*` 200; `/preview/product-lifecycle` ve eski karşılaştırma PDF'leri 308; `x-robots-tag: noindex, nofollow`, meta robots noindex, robots.txt `Disallow: /`.
+- Sıradaki: kullanıcının küçük revizeleri; Faz 4 (feature row bileşeni, SectionHeader, CSS budama) + önerilen ikonlu `FeatureCard`/bölüm varyantları/Radix primitives (onay bekliyor); yeni sayfa Türkçe metin kaynak kontrolü.
+
 ## 03.11.2026 — Mobil header sıkıştırması (commitlendi, onay bekliyor)
 
 - **Sorun (tarama gözlemi):** 375 px'te üst çubuk 113 px + header 149 px; sayfa h1'i y=381'de (ekranın ~%47'si) başlıyordu.

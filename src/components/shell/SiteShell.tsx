@@ -203,7 +203,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               onClick={() => setSearchOpen(true)}
             >
               <AluIcon name="search" size="sm" />
-              <span>Arama (Ctrl+K)</span>
             </button>
             <button
               type="button"
@@ -212,7 +211,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               onClick={toggleMode}
             >
               <AluIcon name={mode === 'dark' ? 'sun' : 'moon'} size="sm" />
-              <span>{mode === 'dark' ? 'Açık Mod' : 'Koyu Mod'}</span>
             </button>
             <button
               type="button"

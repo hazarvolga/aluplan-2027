@@ -1,5 +1,9 @@
 # Oturum devri
 
+## 03.11.2026 — Header sadeleştirme ve teslim
+- Header arama ve açık/koyu tema düğmelerinde yalnız ikon gösteriliyor; ekran okuyucu adları korunuyor. Masaüstü yerel görünümü ve typecheck doğrulandı; bağımsız incelemede kritik/yüksek bulgu yok.
+- Kullanıcı tüm geliştirmelerin main ile birleştirilip gönderilmesini istedi. Çalışma dalı `codex/design-phase-4`; yerel `next-env.d.ts` ve `.claude/` teslim kapsamı dışında korunur. Önizleme/yayın koşulları ve üretici görsel izinleri için önceki kayıtlar geçerlidir.
+
 ## 03.11.2026 — FRILO ana menüye eklendi
 - FRILO, Ürünler > Bina ve Altyapı grubuna `/products/frilo` hedefiyle eklendi. Masaüstü ve mobil menü ortak navigasyon verisini kullanır; sayfa kapalıysa bağlantı da yayın koşuluyla gizlenir.
 - Menü üreticisi ve `src/data/navigation.json` güncellendi. Üç hedefli test ve typecheck geçti; masaüstünde bağlantı ve hedef tarayıcıda doğrulandı. Kod incelemesi orta veya yüksek öncelikli sorun bulmadı.

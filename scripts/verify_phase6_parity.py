@@ -128,7 +128,7 @@ legacy_404_targets = [
     "/solutions/bimplus",
     "/allplan-2026nin-ozellikleri",
     "allplan-2021-features",
-    "AllplanInternational",
+    "youtube.com/@AllplanInternational",
     "cdn-ildjmbl.nitrocdn.com",
 ]
 remaining_404_links = []

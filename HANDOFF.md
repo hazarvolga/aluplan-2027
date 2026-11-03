@@ -5,7 +5,9 @@
 - Bağımsız inceleme raporundaki beş yayın engeli `codex/prelaunch-blockers` dalında kapatıldı: önizleme bayrağı `ALUPLAN_SHOW_2027` ve `ALUPLAN_BLOCK_INDEXING` olarak ayrıldı; 2027 rotalarına canonical, OG ve JSON-LD eklendi, rotalar sitemap'e girdi; ürün, eklenti, eğitim ve AX3000 kart bağlantıları, AX3000 doküman indirmeleri ve lisans operasyon bağlantıları kaynaktan geri getirildi.
 - Plan: `docs/superpowers/plans/2026-11-02-prelaunch-blockers.md`. Kanıt: `docs/verification/prelaunch-blockers-2026-11-02.md`. Kalan bağlantı farkları: `docs/verification/main-link-gap-2026-11-02.md`.
 - Kapılar: 224 unit test, 36/36 parite, 45/45 token, typecheck, iki bayrak ayarında production build ve `pnpm audit --prod` geçti. Yerel production'da masaüstü ve 375 px tarayıcı kabulü yapıldı.
-- **Deploy öncesi zorunlu:** Vercel'de `ALUPLAN_2027_PREVIEW` yerine Preview ve Production için `ALUPLAN_SHOW_2027=1` ve `ALUPLAN_BLOCK_INDEXING=1` tanımlanmalı. Aksi halde inceleme sitesi eski ana sayfaya döner ve indeks engeli kalkar. Push, merge, deploy ve env değişikliği kullanıcı onayı bekliyor.
+- **Deploy öncesi zorunlu:** Vercel'de Preview ve Production için `ALUPLAN_SHOW_2027=1` ve `ALUPLAN_BLOCK_INDEXING=1` tanımlanmalı, ardından `ALUPLAN_2027_PREVIEW` kaldırılmalı. Eski değişken tek başına kalırsa `next.config.mjs` build'i bilerek durdurur. Vercel'de Preview ortamında bayrak tanımlı olmadığı için PR önizlemesi eski ana sayfayı gösteriyor (Vercel önizlemeyi kendi `noindex` başlığı ve kimlik doğrulamasıyla koruyor).
+- 03.11.2026: PR https://github.com/hazarvolga/aluplan-2027/pull/3 açıldı (`main` hedefli, 3/3 kontrol geçti, birleştirilebilir). Merge, deploy ve Vercel ortam değişikliği kullanıcıda.
+- 03.11.2026: kullanıcı kararıyla `/2027/compare` sayfasındaki "Bu yerel inceleme… doğrulanmalıdır." notu kaldırıldı; "Sürüm bağlantıları mevcut yerel ürün sayfalarına gider." cümlesi kullanıcı kararıyla korundu.
 - Açık kararlar: 2027 başlık/açıklama metinleri (K3), `/2027/features` H1'i, `/preview/product-lifecycle` kalıcı URL'si, bağlantı farkı D bölümü, AI/FRILO OG görselleri.
 
 ## 02.11.2026 — Ara verme ve bağımsız yayın öncesi inceleme

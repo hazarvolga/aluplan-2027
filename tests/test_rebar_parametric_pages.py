@@ -4,6 +4,7 @@ from pathlib import Path
 import re
 import subprocess
 import json
+import sys
 import unittest
 
 
@@ -27,7 +28,37 @@ def content(slug: str) -> dict:
     return json.loads(result.stdout)
 
 
+def inventory(slug: str) -> dict[str, str]:
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from inventory_units import MODULES
+
+    module = next(m for m in MODULES if m.__name__.endswith(f"allplan_{slug}"))
+    return {unit.id: unit.tr for unit in module.UNITS}
+
+
 class EditionContentTests(unittest.TestCase):
+    def test_text_is_identical_to_the_inventory_turkish_drafts(self):
+        for slug in PAGES:
+            data = content(slug)
+            tr = inventory(slug)
+            with self.subTest(page=slug):
+                self.assertEqual(data["tagline"], tr[f"{slug}.hero.subtitle"])
+                self.assertEqual(data["lead"], tr[f"{slug}.hero.body"])
+                self.assertEqual(data["overviewTitle"], tr[f"{slug}.overview.title"])
+                self.assertEqual(data["benefitsTitle"], tr[f"{slug}.benefits.title"])
+                self.assertEqual(data["featuresTitle"], tr[f"{slug}.features.title"])
+                for number, item in enumerate(data["overview"], 1):
+                    self.assertEqual(item["label"], tr[f"{slug}.overview.group-{number}"])
+                    self.assertEqual(item["title"], tr[f"{slug}.overview.item-{number}.title"])
+                    self.assertEqual(item["text"], tr[f"{slug}.overview.item-{number}.body"])
+                for number, item in enumerate(data["benefits"], 1):
+                    self.assertEqual(item["title"], tr[f"{slug}.benefits.item-{number}.title"])
+                    self.assertEqual(item["text"], tr[f"{slug}.benefits.item-{number}.body"])
+                features = [item for group in data["featureGroups"] for item in group["items"]]
+                for number, item in enumerate(features, 1):
+                    self.assertEqual(item["title"], tr[f"{slug}.features.item-{number:02d}.title"])
+                    self.assertEqual(item["text"], tr[f"{slug}.features.item-{number:02d}.body"])
+
     def test_content_mirrors_the_launch_document_structure(self):
         for slug, expected in PAGES.items():
             data = content(slug)

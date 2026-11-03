@@ -1,68 +1,207 @@
 import type { ProductEditionContent } from './product-edition-content';
 
-// Turkish text of the "ALLPLAN Parametric – Edition Web Page" launch document (2027 Launch - Product Marketing Materials).
+// Turkish text of the "ALLPLAN Parametric – Edition Web Page" launch document, taken from the content inventory drafts in scripts/inventory_units/.
+// tests/test_rebar_parametric_pages.py keeps this file identical to those drafts.
 export const content: ProductEditionContent = {
-  path: '/2027/parametric',
-  name: 'Allplan Parametric',
-  tagline: 'Parametrik inşaat mühendisliği yapıları için BIM yazılımı',
-  lead: 'Allplan Parametric, inşaat mühendisliği yapılarının dört boyutlu parametrik modellenmesi ve detaylandırılması için özel işlevler sunar. Köprüleri, tünelleri, istinat duvarlarını, gürültü bariyerlerini ve prekast kirişli köprüleri modelleyin; parametrik modellemeyi ön germe, donatı, dokümantasyon, metraj ve koordine bilgi yönetimiyle birleştirin.',
-  tags: ['Parametrik inşaat tasarımı', 'Köprü modelleme', 'Parametrik ön germe', 'Donatı detaylandırması', 'OpenBIM koordinasyonu'],
-  overviewTitle: 'Parametrik inşaat mühendisliği yapıları için özel BIM çözümü',
-  overview: [
-    { label: 'Parametrik', title: 'İnşaat mühendisliği yapılarını parametrik hale getirin', text: 'Köprüler, tüneller, istinat duvarları, gürültü bariyerleri ve prekast kirişli köprüler dahil inşaat mühendisliği yapıları için özel dört boyutlu parametrik modelleme ve detaylandırma kullanın. İnşaat geometrisini özel bir parametrik iş akışında geliştirirken modelleme ve detaylandırma çalışmalarını aynı BIM proje ortamında tutun.' },
-    { label: 'Entegrasyon', title: 'Ön germeyi ve donatıyı modelleyin', text: 'Ön germe tendonlarını doğrudan proje modelinde modelleyin; çubuk donatı, hasır donatı ve BAMTEC halıları oluşturun. Özel donatı düzenleme paletlerini, varsayılan özniteliklerle yönlendirilen yerleştirmeyi ve geliştirilmiş otomatik kiriş ile perde donatısını kullanarak bağlantılı yapısal detaylandırma iş akışlarını destekleyin.' },
-    { label: 'Koordinasyon', title: 'Bilgiyi yönetin, veriyi teslim edin', text: 'Model bilgisini Bilgi Paleti ile, referans verilen dokümanları Xref Manager ile yönetin. Cloud BIM Manager, metraj ve maliyetlendirme, çakışma tespiti, IFC koordinasyonu, harici veri kaynakları ve standart dosya arayüzlerini birleştirerek bağlantılı BIM bilgi iş akışlarını ve proje teslimatını destekleyin.' }
+  "path": "/2027/parametric",
+  "name": "Allplan Parametric",
+  "tagline": "Parametrik altyapı yapıları için BIM yazılımı",
+  "lead": "Allplan Parametric, altyapı yapılarının dört boyutlu parametrik modellenmesi ve detaylandırılması için özel işlevler sunar. Köprüleri, tünelleri, istinat duvarlarını, gürültü bariyerlerini ve ön üretimli kiriş köprülerini modelleyin; ardından parametrik modellemeyi ön gerilme, donatı, dokümantasyon, metraj ve koordineli bilgi yönetimiyle birleştirin.",
+  "tags": [
+    "Parametrik Altyapı Tasarımı",
+    "Köprü Modelleme",
+    "Parametrik Ön Gerilme",
+    "Donatı Detaylandırma",
+    "OpenBIM Koordinasyon"
   ],
-  benefitsTitle: 'Neden Allplan Parametric?',
-  benefits: [
-    { title: 'Özel parametrik inşaat modelleme', text: 'Köprüleri, tünelleri, istinat duvarlarını, gürültü bariyerlerini ve prekast kirişli köprüleri özel dört boyutlu parametrik işlevlerle modelleyin ve detaylandırın. Allplan Parametric, bu inşaat mühendisliği kapsamını temel 3B modelleme, 2B çizim, yapı bileşenleri ve koordine dokümantasyonla bir araya getirir.' },
-    { title: 'Daha verimli modelleme ve dokümantasyon', text: 'Esnek yapı bileşenlerini, temel 3B modellemeyi ve kapsamlı 2B çizimi tek BIM iş akışında birleştirin. Dinamik konturlar, ilişkisel metin çıkma çizgileri ve görünüşlerde ile kesitlerde yapılandırılabilir nesne gösterimi; elle yapılan çizim düzeltmelerini azaltırken net ve ayrıntılı dokümantasyon hazırlamanıza yardımcı olur.' },
-    { title: 'Bağlantılı bilgi ve metrajlar', text: 'BIM verilerini ve metrajları incelemek, filtrelemek ve düzenlemek için Cloud BIM Manager’ı kullanın. Modellenen ve modellenmeyen nesneler için hassas ve doğrulanabilir metraj ile maliyetlendirme oluşturun; tutarlı bilgi yönetimi için yapılandırılabilir mark numaralandırmayı ve hesaplanan öznitelikleri kullanın.' },
-    { title: 'Açık ve koordine teslimat', text: 'Standart dosya arayüzleriyle veri alışverişi yapın; GIS bilgisini, 3B içeriği ve dokuları içe aktarın, görünüşlerde ve kesitlerde IFC referanslarıyla koordine olun. Geliştirilmiş IFC4 aktarımı, merkezi coğrafi referanslama, çakışma tespiti ve abonelik bulut hizmetleri bağlantılı proje iş akışlarını destekler.' }
+  "overviewTitle": "Parametrik Altyapı Yapıları için Özel BIM Çözümü",
+  "overview": [
+    {
+      "label": "Parametrikleştir",
+      "title": "Altyapı Yapılarını Parametrikleştirin",
+      "text": "Köprüler, tüneller, istinat duvarları, gürültü bariyerleri ve ön üretimli kiriş köprüleri dahil altyapı yapıları için özel dört boyutlu parametrik modelleme ve detaylandırma kullanın. Altyapı geometrisini kendine ait bir parametrik iş akışında geliştirirken modelleme ve detaylandırma faaliyetlerini aynı BIM proje ortamında tutun."
+    },
+    {
+      "label": "Entegre Et",
+      "title": "Ön Gerilmeyi ve Donatıyı Modelleyin",
+      "text": "Ön gerilme tendonlarını doğrudan proje modelinde modelleyin; çubuk donatı, hasır donatı ve BAMTEC halıları oluşturun. Bağlantılı strüktürel detaylandırma iş akışlarını desteklemek için özel donatı düzenleme paletlerini, varsayılan öznitelik güdümlü yerleştirmeyi ve iyileştirilmiş otomatik kiriş ve duvar donatısını kullanın."
+    },
+    {
+      "label": "Koordine Et",
+      "title": "Bilgiyi Yönetin ve Veriyi Teslim Edin",
+      "text": "Model bilgisini Bilgi Paleti üzerinden, referans belgeleri Xref Manager üzerinden yönetin. Bağlantılı BIM bilgi iş akışlarını ve proje teslimini desteklemek için Cloud BIM Manager, metraj ve maliyetlendirme, çakışma denetimi, IFC koordinasyonu, harici veri kaynakları ve standart dosya arayüzlerini birleştirin."
+    }
   ],
-  featuresTitle: 'Parametrik inşaat tasarımına güç veren teknoloji',
-  featureGroups: [
-    { label: 'Parametrik', items: [
-      { title: 'Parametrik modelleme', text: 'İnşaat mühendisliği yapıları için özel dört boyutlu modelleme ve detaylandırma.' },
-      { title: 'Köprü modelleme', text: 'Prekast kirişli köprüler dahil köprüleri modelleyin ve detaylandırın.' },
-      { title: 'Tünel modelleme', text: 'Tünel yapılarını parametrik inşaat iş akışında modelleyin ve detaylandırın.' },
-      { title: 'İstinat duvarları ve gürültü bariyerleri', text: 'İstinat duvarlarını ve gürültü bariyerlerini modelleyin ve detaylandırın.' },
-      { title: 'Parametrik ön germe', text: 'Ön germe tendonlarını doğrudan proje modelinde modelleyin.' }
-    ] },
-    { label: 'Detaylandırma', items: [
-      { title: 'Donatı tasarımı', text: 'Çubuk donatı, hasır donatı ve BAMTEC halıları oluşturun.' },
-      { title: 'Donatı düzenleme', text: 'Çubukları, grupları, hasırları ve etiketleri düzenlemek için 13 özel palet kullanın.' },
-      { title: 'Varsayılan donatı öznitelikleri', text: 'Donatı yerleştirirken temel BIM bilgisini uygulayın.' },
-      { title: 'Otomatik kiriş donatısı', text: 'Geliştirilmiş mesnet tanıma, ankraj ve bindirme yönetimi ile daha zengin etriye ve çubuk seçeneklerini kullanın.' },
-      { title: 'Otomatik perde donatısı', text: 'Otomatik perde donatısı için 3B cisimleri girdi olarak kullanın.' }
-    ] },
-    { label: 'Dokümantasyon', items: [
-      { title: '2B çizim', text: 'Hassas, özlü ve ayrıntılı çizimler oluşturun.' },
-      { title: 'Reinforcement AI Drafter', text: 'Donatı etiketi yerleştirmeyi otomatikleştirerek elle yapılan açıklama işini azaltın.' },
-      { title: 'İlişkisel metin çıkma çizgileri', text: 'Görünüşlerde ve kesitlerde metin çıkma çizgilerini değişen geometriye bağlı tutun.' },
-      { title: 'Dinamik konturlar', text: 'Karmaşık eğrisel 3B nesneler için görünüşe bağlı konturları ve yakalamayı kullanın.' },
-      { title: 'Görünüşlerde nesne gösterimi', text: 'SmartSymbols, PythonParts ve SmartParts nesnelerinin yatay görünüşlerde ve kesitlerde nasıl görüneceğini denetleyin.' }
-    ] },
-    { label: 'Yönetim', items: [
-      { title: 'Cloud BIM Manager', text: 'BIM verilerini ve metrajları tek bir bulut destekli bilgi yönetimi ortamında inceleyin, filtreleyin ve düzenleyin.' },
-      { title: 'Mark Numbering', text: 'Elemanları ortak özelliklere göre tarayın, gruplayın ve yapılandırılabilir, yeniden kullanılabilir numaralandırma şemalarıyla numaralandırın.' },
-      { title: 'Metraj ve maliyetlendirme', text: 'Modellenen ve modellenmeyen nesneler için hassas ve doğrulanabilir metraj ile maliyetlendirme oluşturun.' },
-      { title: 'BIM hazır araç ipuçları', text: 'Nesne adı, malzeme ve özel özellikler dahil seçili BIM özniteliklerini fareyle üzerine gelince doğrudan gösterin.' },
-      { title: 'Referans öznitelikleri', text: 'Reference ID ve Reference Name değerlerini hesaplanan öznitelik olarak kullanın.' }
-    ] },
-    { label: 'Koordinasyon', items: [
-      { title: 'Bilgi modelleme ve yönetimi', text: 'Model bilgisini Bilgi Paleti ile, referans verilen dokümanları Xref Manager ile yönetin.' },
-      { title: 'Çakışma tespiti', text: 'Yumuşak ve sert çakışmaları belirleyin.' },
-      { title: 'Gruplanmış donatı çakışmaları', text: 'Karmaşık modellerin daha net incelenmesi için donatı çakışmalarını gruplayın.' },
-      { title: 'Kesitlerde ve görünüşlerde IFC Xref’leri', text: 'IFC dış referanslarını tam aktarım yapmadan görünüşlerde ve kesitlerde gösterin.' },
-      { title: 'IFC4 aktarımı', text: 'IFC4 verilerini geliştirilmiş sınıflandırma ve coğrafi referanslama desteğiyle içe aktarın.' }
-    ] },
-    { label: 'Bağlantı', items: [
-      { title: 'Harici veri kaynakları', text: 'GIS bilgisini, 3B içeriği ve dokuları GIS Connector ve Content Connector ile içe aktarın.' },
-      { title: 'Dosya arayüzleri', text: 'IFC, BCF, PDF, RVT, 3DM, SKP, OBJ, LandXML, DWG, DGN, SAF ve daha fazlası dahil arayüzlerle veri alışverişi yapın.' },
-      { title: 'Merkezi coğrafi referanslama', text: 'Baz noktasını, ölçüm noktasını ve Allplan orijinini tek bir Özellik Paleti’nde yönetin.' },
-      { title: 'Abonelik bulut hizmetleri', text: 'Abonelik lisanslarıyla Bimplus bulut tabanlı BIM iş birliğini, proje ve ofis ekip çalışmasını, plan dağıtımını ve bulut destekli proje kaynaklarını kullanın.' },
-      { title: 'Tasarım denetimi', text: 'Model denetimlerini Solibri Inside aracılığıyla Allplan içinde çalıştırın.' }
-    ] }
+  "benefitsTitle": "Neden Allplan Parametric?",
+  "benefits": [
+    {
+      "title": "Altyapıya Özel Parametrik Modelleme",
+      "text": "Köprüleri, tünelleri, istinat duvarlarını, gürültü bariyerlerini ve ön üretimli kiriş köprülerini özel dört boyutlu parametrik işlevlerle modelleyin ve detaylandırın. Allplan Parametric bu altyapı yapısı kapsamını temel 3B modelleme, 2B çizim, yapı bileşenleri ve koordineli dokümantasyonla bir araya getirir."
+    },
+    {
+      "title": "Daha Verimli Modelleme ve Dokümantasyon",
+      "text": "Esnek yapı bileşenlerini, temel 3B modellemeyi ve kapsamlı 2B çizimi tek bir BIM iş akışında birleştirin. Dinamik konturlar, ilişkisel metin okları ve görünümler ile kesitlerde yapılandırılabilir nesne gösterimi, elle çizim tekrarını azaltırken net ve ayrıntılı dokümantasyon oluşturmaya yardımcı olur."
+    },
+    {
+      "title": "Bağlantılı Bilgi ve Metrajlar",
+      "text": "BIM verilerini ve metrajlarını incelemek, filtrelemek ve düzenlemek için Cloud BIM Manager'ı kullanın. Modellenen ve modellenmeyen nesneler için kesin, doğrulanabilir metraj ve maliyetlendirme oluşturun; tutarlı bilgi yönetimini desteklemek için yapılandırılabilir mark numaralandırması ve hesaplanan öznitelikleri kullanın."
+    },
+    {
+      "title": "Açık ve Koordineli Teslim",
+      "text": "Verileri standart dosya arayüzleri üzerinden paylaşın, GIS bilgisini, 3B içeriği ve dokuları içe aktarın; görünümlerde ve kesitlerde IFC referanslarıyla koordine olun. İyileştirilmiş IFC4 içe aktarma, merkezî jeoreferanslama, çakışma denetimi ve abonelik tabanlı bulut hizmetleri bağlantılı proje iş akışlarını destekler."
+    }
+  ],
+  "featuresTitle": "Parametrik Altyapı Tasarımını Güçlendiren Teknoloji",
+  "featureGroups": [
+    {
+      "label": "Parametrikleştir",
+      "items": [
+        {
+          "title": "Parametrik Modelleme",
+          "text": "Altyapı yapıları için özel dört boyutlu modelleme ve detaylandırma."
+        },
+        {
+          "title": "Köprü Modelleme",
+          "text": "Ön üretimli kiriş köprüleri dahil köprüleri modelleyin ve detaylandırın."
+        },
+        {
+          "title": "Tünel Modelleme",
+          "text": "Parametrik altyapı iş akışında tünel yapılarını modelleyin ve detaylandırın."
+        },
+        {
+          "title": "İstinat Duvarları ve Gürültü Bariyerleri",
+          "text": "İstinat duvarlarını ve gürültü bariyerlerini modelleyin ve detaylandırın."
+        },
+        {
+          "title": "Parametrik Ön Gerilme",
+          "text": "Ön gerilme tendonlarını doğrudan proje modelinde modelleyin."
+        }
+      ]
+    },
+    {
+      "label": "Detaylandır",
+      "items": [
+        {
+          "title": "Donatı Tasarımı",
+          "text": "Çubuk donatı, hasır donatı ve BAMTEC halıları oluşturun."
+        },
+        {
+          "title": "Donatı Düzenleme",
+          "text": "Çubukları, grupları, hasırları ve etiketleri düzenlemek için 13 özel palet kullanın."
+        },
+        {
+          "title": "Varsayılan Donatı Öznitelikleri",
+          "text": "Donatı yerleştirme sırasında temel BIM bilgisini uygulayın."
+        },
+        {
+          "title": "Otomatik Kiriş Donatısı",
+          "text": "İyileştirilmiş mesnet tanıma, kenetlenme ve bindirme yönetimi ile daha zengin etriye ve çubuk seçeneklerini kullanın."
+        },
+        {
+          "title": "Otomatik Duvar Donatısı",
+          "text": "Otomatik duvar donatısı için girdi olarak 3B gövdeleri kullanın."
+        }
+      ]
+    },
+    {
+      "label": "Dokümante Et",
+      "items": [
+        {
+          "title": "2B Çizim",
+          "text": "Kesin, öz ve ayrıntılı çizimler oluşturun."
+        },
+        {
+          "title": "Donatı AI Drafter",
+          "text": "Elle açıklama işini azaltmak için donatı etiketi yerleştirmeyi otomatikleştirin."
+        },
+        {
+          "title": "İlişkisel Metin Okları",
+          "text": "Metin oklarını görünümlerde ve kesitlerde değişen geometriye bağlı tutun."
+        },
+        {
+          "title": "Dinamik Konturlar",
+          "text": "Karmaşık eğrisel 3B nesneler için görünüme bağlı konturlar ve yakalama kullanın."
+        },
+        {
+          "title": "Görünümlerde Nesne Gösterimi",
+          "text": "SmartSymbols, PythonParts ve SmartParts'ın yatay görünümlerde ve kesitlerde nasıl görüneceğini kontrol edin."
+        }
+      ]
+    },
+    {
+      "label": "Yönet",
+      "items": [
+        {
+          "title": "Cloud BIM Manager",
+          "text": "BIM verilerini ve metrajlarını bulut destekli tek bir bilgi yönetimi ortamında inceleyin, filtreleyin ve düzenleyin."
+        },
+        {
+          "title": "Mark Numaralandırma",
+          "text": "Yapılandırılabilir, yeniden kullanılabilir numaralandırma şemalarıyla öğeleri ortak özelliklerine göre tarayın, gruplayın ve numaralandırın."
+        },
+        {
+          "title": "Metraj ve Maliyetlendirme",
+          "text": "Modellenen ve modellenmeyen nesneler için kesin, doğrulanabilir metraj ve maliyetlendirme oluşturun."
+        },
+        {
+          "title": "BIM'e Hazır İpuçları",
+          "text": "Nesne adı, malzeme ve özel özellikler dahil seçili BIM özniteliklerini doğrudan fareyle üzerine gelindiğinde gösterin."
+        },
+        {
+          "title": "Referans Öznitelikleri",
+          "text": "Referans ID ve Referans Adı'nı hesaplanan öznitelik olarak kullanın."
+        }
+      ]
+    },
+    {
+      "label": "Koordine Et",
+      "items": [
+        {
+          "title": "Bilgi Modelleme ve Yönetimi",
+          "text": "Model bilgisini Bilgi Paleti ile, referans belgeleri Xref Manager ile yönetin."
+        },
+        {
+          "title": "Çakışma Denetimi",
+          "text": "Yumuşak ve sert çakışmaları belirleyin."
+        },
+        {
+          "title": "Gruplanmış Donatı Çakışmaları",
+          "text": "Karmaşık modellerin daha net incelenmesini desteklemek için donatı çakışmalarını gruplayın."
+        },
+        {
+          "title": "Kesitlerde ve Görünümlerde IFC Xref'leri",
+          "text": "IFC harici referanslarını tam içe aktarma yapmadan görünümlerde ve kesitlerde gösterin."
+        },
+        {
+          "title": "IFC4 İçe Aktarma",
+          "text": "IFC4 verilerini iyileştirilmiş sınıflandırma ve jeoreferanslama desteğiyle içe aktarın."
+        }
+      ]
+    },
+    {
+      "label": "Bağla",
+      "items": [
+        {
+          "title": "Harici Veri Kaynakları",
+          "text": "GIS bilgisini, 3B içeriği ve dokuları GIS Connector ve Content Connector üzerinden içe aktarın."
+        },
+        {
+          "title": "Dosya Arayüzleri",
+          "text": "IFC, BCF, PDF, RVT, 3DM, SKP, OBJ, LandXML, DWG, DGN, SAF ve daha fazlası dahil arayüzler üzerinden veri paylaşın."
+        },
+        {
+          "title": "Merkezî Jeoreferanslama",
+          "text": "Baz noktayı, ölçüm noktasını ve Allplan orijinini tek bir Özellik Paleti'nde yönetin."
+        },
+        {
+          "title": "Abonelik Bulut Hizmetleri",
+          "text": "Abonelik lisanslarıyla Bimplus bulut tabanlı BIM iş birliğini, proje ekip çalışmasını, ofis ekip çalışmasını, plan dağıtımını ve bulut destekli proje kaynaklarını kullanın."
+        },
+        {
+          "title": "Tasarım Denetimi",
+          "text": "Solibri Inside ile Allplan içinde model denetimleri çalıştırın."
+        }
+      ]
+    }
   ]
 };

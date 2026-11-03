@@ -1,5 +1,12 @@
 # Oturum devri
 
+## 03.11.2026 — SDS2 kapsamı netleşti; Rebar/Parametric metinleri envanter taslağına bağlandı (commitlendi)
+
+- **SDS2:** Yeni sayfa gerekmedi. `SDS2 … Web Pages` klasöründeki iki belge zaten karşılandı: "New Text and Images – SDS2 Page" (3 yenilik: AI BIM Analyst, Model Synced Erection Drawings, Advanced Connection Group Reporting) `/products/sds2-home` sayfasında yayında (`src/data/sds2-2027-features.ts`, görseller mevcut); "2027 Home Page Information" ana sayfa SDS2 kartına işlendi (`src/data/homepage-2027-preview.json`: "SDS2 2027, ekibinize her iş akışında üretkenliği artıran, zaman kazandıran ve elle yapılan işi azaltan güçlü araçlar verir."). Önceki "SDS2 2027 sayfası yok" tespiti hatalıydı; düzeltildi.
+- **Düzeltme (Rebar/Parametric):** Projede pazarlama belgeleri için zaten Türkçe taslaklar var (`scripts/inventory_units/*.py`, ör. `allplan_rebar.py`, `allplan_parametric.py`). İlk sürümde bunlara bakmadan kendi çevirimi yazmıştım; "altyapı/inşaat mühendisliği" gibi terimler tutarsızdı. İki veri dosyası artık bu taslaklardan üretildi ve `tests/test_rebar_parametric_pages.py` aynı olmalarını zorunlu kılıyor. Taslakta bir hata düzeltildi: "Kilit Allplan ve proje olaylarında…" → "Önemli Allplan ve proje olaylarında…" (key = önemli).
+- **Açık:** envanter taslağı bu iki sayfa için `/products/allplan-rebar` ve `/products/allplan-parametric` rotalarını soruyordu (ya da `/solutions/rebar-engineering` ve `/solutions/features-allplan-bridge` genişletilsin). Şu an `/2027/rebar` ve `/2027/parametric` yayında; rota kararı kullanıcıda. Envanterdeki diğer açık sorular: 5×, 20–50%, %50 gibi sayısal iddiaların Türkiye'de yayın izni; SDS2 ana banner görseli (`Keyvisual2027_RelatedContent_SDS2.jpg`, kaynakta proje adı/firma maskeli).
+- Kapılar: 378 test, 46/46 parite, 45/45 token, typecheck, build.
+
 ## 03.11.2026 — Rebar/Parametric sayfaları ortak kart kalıbına hizalandı (commitlendi)
 
 - Tasarım tutarlılığı için `ProductEditionView` artık SCIA/FRILO'nun kullandığı `EditionCards` (bitişik çerçeveli ızgara, `+` maddeler) ve aynı sekme şeridiyle çizilir; kendi kart stili silindi. `EditionCards` iki isteğe bağlı özellik kazandı: `kicker` (varsayılan "SÜRÜMLER") ve kart içinde açıklama paragrafı veya {başlık, metin} maddeleri; mevcut SCIA/FRILO kullanımı değişmedi.

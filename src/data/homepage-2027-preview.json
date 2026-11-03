@@ -51,8 +51,8 @@
     {
       "name": "SDS2",
       "description": "Daha hızlı çelik detaylandırma",
-      "detail": "Çelik detaylandırma ve imalatı için eksiksiz BIM çözümü.",
-      "sourceId": "live.sds.hero.title",
+      "detail": "SDS2 2027, ekibinize her iş akışında üretkenliği artıran, zaman kazandıran ve elle yapılan işi azaltan güçlü araçlar verir.",
+      "sourceId": "sds2.home.body",
       "href": "/products/sds2-home"
     }
   ]

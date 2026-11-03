@@ -7,7 +7,7 @@ export function HomepageMaxPreviewHero() {
   return (
     <section className="alu-hero-stage alu-max-preview-hero" aria-labelledby="hero-title">
       <picture className="alu-hero-stage__backdrop" aria-hidden="true">
-        <img className="alu-max-preview-hero__image" src="/assets/previews/home-2027/allplan-max-generated-v2.jpg" alt="" fetchPriority="high" />
+        <img className="alu-max-preview-hero__image" src="/assets/previews/home-2027/allplan-max-ai-concept.jpg" alt="" fetchPriority="high" />
       </picture>
       <div className="alu-hero-stage__scrim" aria-hidden="true" />
       <div className="alu-container alu-hero-stage__inner">

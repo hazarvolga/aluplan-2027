@@ -48,6 +48,13 @@ class HomeSlideTests(unittest.TestCase):
         source = (ROOT / "src/components/sections/ProductTabs.tsx").read_text(encoding="utf-8")
         self.assertIn("product.headline ?? product.name", source)
 
+    def test_scia_concept_visual_exists_and_is_used(self):
+        source = (ROOT / "src/components/sections/HomepageProductPreviewTabs.tsx").read_text(encoding="utf-8")
+        self.assertIn("SCIA: '/assets/previews/home-2027/scia-analysis-concept.jpg'", source)
+        image = ROOT / "public/assets/previews/home-2027/scia-analysis-concept.jpg"
+        self.assertTrue(image.is_file())
+        self.assertLess(image.stat().st_size, 450_000)
+
 
 if __name__ == "__main__":
     unittest.main()

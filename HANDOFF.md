@@ -1,5 +1,34 @@
 # Oturum devri
 
+## 03.11.2026 — Ana sayfa hero üst boşluğu
+- Yalnız ana sayfa `.alu-max-preview-hero` üst padding değeri `--space-stack-md` kadar azaltıldı (masaüstünde 16 px); alt padding ve diğer hero’lar korunuyor. styles:check geçti, incelemede kritik/yüksek bulgu yok. Tarayıcı erişimi Work ayarında kapalı olduğundan görsel kontrol bekliyor; commit edilmedi.
+
+## 03.11.2026 — Ürün sekmeleri sabit yükseklik
+- Sekme panelleri aynı grid alanında ölçülüyor; en uzun içerik ortak yüksekliği belirlediğinden sekme değişiminde alan yüksekliği değişmez. Pasif paneller gizli ve etkileşim dışıdır; içerik sabit piksel sınırıyla kesilmez.
+- Typecheck ve beş ilgili test geçti; kod incelemesinde kritik/yüksek bulgu yok. Tarayıcı erişimi Work ayarında kapalı olduğundan farklı ekran ve zoom seviyelerinde görsel doğrulama bekliyor. Commit edilmedi.
+
+## 03.11.2026 — Ürün sekmesi görsel geçişleri
+- Ürün sekmesi görselleri eşit yükseklikte, sağa hizalı ve gerektiğinde kırpılarak gösteriliyor; masaüstünde sola, mobilde aşağı yumuşak geçiş uygulanıyor. Sekme metinlerinin okunması için ızgarada opak tema yüzeyi var.
+- Beş ilgili test, typecheck ve styles:check geçti. Yerel tarayıcı Work ayarında kapalı olduğundan açık/koyu ve mobil görsel kontrolü bekliyor; değişiklikler commit edilmedi.
+
+## 03.11.2026 — SCIA görseli ve ürün sekmesi yerleşimi
+- SCIA sekmesi için yapısal analiz konsepti üretildi ve uygulandı; optimize JPEG `public/assets/previews/home-2027/scia-analysis-concept.jpg`, kaynak PNG ve kullanım kaydı projede. Bu görsel gerçek SCIA analiz çıktısı değildir.
+- Ürün görselleri masaüstünde sağa hizalı ve contain ile, metin ayrı alanda; mobilde görsel ayrı satırda gösterilir. Mobilde görsel sekmelerin üzerinde yer alır, kullanıcı görsel değerlendirmesi gerekir.
+- İlgili beş test, typecheck ve styles:check geçti; incelemede kritik/yüksek bulgu yok. Yerel tarayıcı Work ayarı nedeniyle otomasyonla görsel kontrol yapılamadı. Değişiklikler commit edilmedi.
+
+## 03.11.2026 — Ürün sekmeleri bölüm arka planı
+- Seçili ürünün görseli tüm Ürünleri keşfedin bölümü arka planına taşındı ve sekme değişiminde güncelleniyor; yinelenen panel görseli kaldırıldı. Tema yüzeyi, seçili sekme vurgusu ve reduced-motion korundu.
+- Typecheck, dört ilgili test ve styles:check geçti; incelemede kritik/yüksek bulgu yok. Tarayıcı Work ayarında kapalı olduğundan açık/koyu ve mobil görsel kabulü bekliyor. Değişiklikler commit edilmedi.
+
+## 03.11.2026 — ALLPLAN Max hero konsepti ve genel hero geçişleri
+- Kullanıcının seçtiği yapay zekâ konsepti ana sayfa hero görseline uygulandı; JPEG türevi `public/assets/previews/home-2027/allplan-max-ai-concept.jpg`, kaynak PNG ve kullanım kaydı saklandı. Konsept gerçek ürün çıktısı değildir.
+- Alt sayfa hero görsellerinin maskesi gerçek görsel kenarına taşındı; ProductHero'da sert sınır için `cover` kullanıldı. Stil/token kontrolü ve typecheck geçti; incelemede kritik/yüksek bulgu yok.
+- Yerel tarayıcı Work ayarında kapalı olduğu için açık/koyu ve mobil görsel kontrol yapılamadı. Özellikle ProductHero `cover` geniş ekranlarda görseli kırpabilir; kullanıcı kontrolü gerekli. Değişiklikler commit edilmedi.
+
+## 03.11.2026 — Ana sayfa hero geçişi
+- Ana sayfa hero görselindeki sert sol kenar giderilmek üzere maske görselin gerçek sınırına bağlandı; mobil dikey maske korundu. Stil/token kontrolü geçti, kod incelemesinde kritik/yüksek bulgu yok.
+- Bu ortamda yerel tarayıcı kullanımı Work ayarlarıyla kapalı olduğundan açık/koyu tema ve mobil görsel kabulü kullanıcı kontrolünü bekliyor. Değişiklik henüz commit edilmedi.
+
 ## 03.11.2026 — Header sadeleştirme ve teslim
 - Header arama ve açık/koyu tema düğmelerinde yalnız ikon gösteriliyor; ekran okuyucu adları korunuyor. Masaüstü yerel görünümü ve typecheck doğrulandı; bağımsız incelemede kritik/yüksek bulgu yok.
 - Kullanıcı tüm geliştirmelerin main ile birleştirilip gönderilmesini istedi. Çalışma dalı `codex/design-phase-4`; yerel `next-env.d.ts` ve `.claude/` teslim kapsamı dışında korunur. Önizleme/yayın koşulları ve üretici görsel izinleri için önceki kayıtlar geçerlidir.

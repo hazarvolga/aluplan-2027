@@ -6,7 +6,7 @@ const images: Record<string, string> = {
   ALLPLAN: '/assets/heroes/families/vf-07-allplan-product-platform.jpg',
   'ALLPLAN Civil': '/assets/previews/allplan-civil-2027/civil-hero.jpg',
   FRILO: '/assets/previews/frilo/frilo-hero.jpg',
-  SCIA: '/assets/previews/scia/capability-1.jpg',
+  SCIA: '/assets/previews/home-2027/scia-analysis-concept.jpg',
   SDS2: '/assets/heroes/families/vf-03-construction-fabrication.jpg',
 };
 

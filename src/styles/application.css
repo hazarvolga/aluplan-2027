@@ -611,6 +611,9 @@
   border-bottom: var(--border-width-default) solid var(--border-strong);
   background: var(--surface-page);
 }
+.alu-max-preview-hero {
+  padding-block-start: calc(var(--space-application-hero-stage-padding) - var(--space-stack-md));
+}
 .alu-hero-stage__backdrop {
   position: absolute;
   inset: 0;
@@ -624,8 +627,13 @@
   object-position: right center;
 }
 .alu-max-preview-hero .alu-hero-stage__backdrop {
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 28%, var(--surface-page) 82%, var(--surface-page) 100%);
-  mask-image: linear-gradient(90deg, transparent 0%, transparent 28%, var(--surface-page) 82%, var(--surface-page) 100%);
+  left: auto;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  aspect-ratio: 2 / 1;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 5%, var(--surface-page) 78%);
+  mask-image: linear-gradient(90deg, transparent 0%, transparent 5%, var(--surface-page) 78%);
 }
 .alu-max-preview-hero__eyebrow {
   margin: 0;
@@ -1693,14 +1701,18 @@
   max-width: var(--container-md);
 }
 .alu-subpage-hero--background-only .alu-subpage-hero__bg {
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 28%, var(--surface-page) 82%, var(--surface-page) 100%);
-  mask-image: linear-gradient(90deg, transparent 0%, transparent 28%, var(--surface-page) 82%, var(--surface-page) 100%);
+  display: flex;
+  justify-content: flex-end;
   opacity: var(--opacity-subpage-hero-background-only);
   filter: var(--filter-application-subpage-hero-background-only);
 }
 .alu-subpage-hero--background-only .alu-subpage-hero__bg img {
-  object-fit: contain;
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
   object-position: center right;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 5%, var(--surface-page) 78%);
+  mask-image: linear-gradient(90deg, transparent 0%, transparent 5%, var(--surface-page) 78%);
 }
 .alu-subpage-hero--background-only .alu-subpage-hero__scrim {
   background:
@@ -2871,6 +2883,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
     object-position: 82% center;
   }
   .alu-subpage-hero--background-only .alu-subpage-hero__bg img {
+    width: 100%;
     object-fit: cover;
     object-position: 82% center;
   }
@@ -2918,6 +2931,9 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 
 @media (max-width: 40rem) {
   .alu-max-preview-hero .alu-hero-stage__backdrop {
+    left: 0;
+    width: 100%;
+    aspect-ratio: auto;
     -webkit-mask-image: linear-gradient(180deg, var(--surface-page) 0%, var(--surface-page) 46%, transparent 88%, transparent 100%);
     mask-image: linear-gradient(180deg, var(--surface-page) 0%, var(--surface-page) 46%, transparent 88%, transparent 100%);
   }
@@ -2933,6 +2949,8 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   }
   .alu-subpage-hero--background-only .alu-subpage-hero__bg img {
     object-position: center top;
+    -webkit-mask-image: none;
+    mask-image: none;
   }
   .alu-subpage-hero--background-only .alu-subpage-hero__scrim {
     background: linear-gradient(180deg, transparent 0%, var(--visual-subpage-hero-dark-scrim) 52%, var(--surface-page) 100%);

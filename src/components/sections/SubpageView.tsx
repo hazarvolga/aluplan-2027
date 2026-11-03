@@ -31,9 +31,11 @@ import { ScalypsoSubpage } from './ScalypsoSubpage';
 import { ScalypsoModeler } from './ScalypsoModeler';
 import { SectionActions, SectionCardLink, visibleSectionItems } from './SectionLinks';
 import { DocumentGroupsSection } from './DocumentGroupsSection';
+import { Ax3000MechanicalContent } from './Ax3000MechanicalContent';
 import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
 
 const AX3000_DOCS_ROUTE = '/products/ax3000/dokumanlar';
+const AX3000_MECHANICAL_ROUTE = '/solutions/ax3000-mekanik-tesisat';
 // AX3000 pages whose source has no link to the documents page.
 const AX3000_DOCS_LINK_ROUTES = ['/solutions/ax3000-yapi-fizigi', '/solutions/ax3000-virtual-reality'];
 
@@ -356,6 +358,8 @@ export function SubpageView({
           onVideo={setActiveModalVideo}
           onImage={setActiveLightboxImage}
         />
+      ) : page.path === AX3000_MECHANICAL_ROUTE ? (
+        <Ax3000MechanicalContent page={page} />
       ) : page.path === '/about' ? null : (
         /* Preserved Structured Content Sections — Benefit/Spec Grid + Alternating Photo Showcases */
         <section className="preview-section" aria-label="Sayfa içeriği">

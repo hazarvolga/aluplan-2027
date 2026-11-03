@@ -1,5 +1,11 @@
 # Oturum devri
 
+## 03.11.2026 — AX3000 Mekanik Tesisat kompakt tasarımı (yerel, commitlenmedi)
+
+- `/solutions/ax3000-mekanik-tesisat` için kullanıcı onaylı kompakt tasarım uygulandı: `Ax3000MechanicalContent` (+ CSS modülü) sayfa verisinden render eder; 28 kartlık ızgara yerine genel bakış, hızlı hesaplama, veri arayüzü şeridi, modül ızgarası ve Enerji Kimlik Belgesi/Dokümanlar çifti. Hero, kırıntı, bağlantı ve sayfa sonu bileşenleri ortak olanlardır. Sayfa verisi, URL ve bağlantılar değişmedi.
+- Gösterilmeyenler: H1'i tekrarlayan ilk kart, "AX3000 Doküman Merkezi" artığı ve liste işaretleri. "Modüller" başlığı kaynakta yok, tasarım eklemesidir (kullanıcı onayı bekliyor).
+- Test: `tests/test_ax3000_mechanical_layout.py` kaynak metin ve bağlantıların tamamının sayfada kaldığını doğrular. Kapılar: 308 unit test, 37/37 parite, 45/45 token, typecheck, build. Dev sunucusunda masaüstü ve 375 px doğrulandı.
+
 ## 03.11.2026 — Rota adları, S.S.S. menüsü ve AX3000 dokümanları (yerel, commitlenmedi)
 
 - `/paket-karsilastirma` artık 2027 karşılaştırma sayfası (`src/app/paket-karsilastirma/`). `/2027/compare` ve PDF adresleri 308 ile buraya gider. Sürüm bayrağı kapalıyken aynı adres eski sayfayı sunar; sitemap'te tek kayıt var.

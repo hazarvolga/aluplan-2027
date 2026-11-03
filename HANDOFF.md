@@ -1,5 +1,24 @@
 # Oturum devri
 
+## 03.11.2026 — Yayın öncesi sağlamlaştırma (16 geliştirme maddesi)
+
+- `codex/prelaunch-hardening` dalında (PR #3 dalının üzerinde) kullanıcının onayladığı H1–H8 kararlarıyla 16 madde ele alındı.
+  - Ana sayfanın referans verdiği toplam boyut 20,1 MB'tan 5,6 MB'a indi.
+  - `/2027/max` sayfasında mobilde video indirmesi 0'a indi.
+  - GA4, Vercel ölçümleri ve YouTube/Maps gömmeleri çerez onayına bağlandı. CSP, GA4 veri gönderimine izin verecek şekilde düzeltildi.
+  - Kırık YouTube kanal bağlantısı, allplan.com'un verdiği adresle değiştirildi.
+  - Statik dosyalara 7 gün önbellek eklendi; Node sürümü her yerde 24.
+  - Erişilebilirlik düzeltmeleri: kontrast, tablo ARIA, iletişim başlığı.
+- Plan: `docs/superpowers/plans/2026-11-03-prelaunch-hardening.md`. Kanıt: `docs/verification/prelaunch-hardening-2026-11-03.md`.
+- D2 (CSP `unsafe-inline`) ve D3 (`access-control-allow-origin: *`) kod değişmeden kabul edilen risk olarak belgelendi.
+- **Kullanıcı kararı bekleyenler:**
+  - BIMFlex videosu YouTube'da özel; kart kaldırılsın mı?
+  - YouTube kartının metni.
+  - Onayı geri çekme arayüzü.
+  - AI görsellerinin hakları.
+  - Vercel Analytics'in panelden etkinleştirilmesi.
+- Push, PR ve deploy kullanıcı onayı bekliyor.
+
 ## 02.11.2026 — Yayın öncesi engeller E1–E5 kapatıldı (yerel)
 
 - Bağımsız inceleme raporundaki beş yayın engeli `codex/prelaunch-blockers` dalında kapatıldı: önizleme bayrağı `ALUPLAN_SHOW_2027` ve `ALUPLAN_BLOCK_INDEXING` olarak ayrıldı; 2027 rotalarına canonical, OG ve JSON-LD eklendi, rotalar sitemap'e girdi; ürün, eklenti, eğitim ve AX3000 kart bağlantıları, AX3000 doküman indirmeleri ve lisans operasyon bağlantıları kaynaktan geri getirildi.

@@ -14,7 +14,9 @@ export function DocumentGroupsSection({ groups }: DocumentGroupsSectionProps) {
           <h2 id={`${group.id}-title`} className="alu-h2">{group.title}</h2>
           <p className="alu-body">{group.description}</p>
           <div className="alu-spec-grid">
-            {group.documents.map((doc) => (
+            {group.documents.map((doc) => {
+              const downloadLabel = doc.format === 'PDF' ? 'PDF İndir' : 'Word İndir';
+              return (
               <article key={doc.filename} className="alu-spec-card">
                 <div className="alu-spec-card__header">
                   <span className="alu-badge">{doc.badge}</span>
@@ -27,13 +29,14 @@ export function DocumentGroupsSection({ groups }: DocumentGroupsSectionProps) {
                   className="alu-button alu-button--primary alu-button--md"
                   href={doc.href}
                   download={doc.filename}
-                  aria-label={`${doc.title} (${doc.language}, ${doc.format}) indir`}
+                  aria-label={`${downloadLabel}: ${doc.title} (${doc.language})`}
                 >
                   <AluIcon name="download" size="sm" />
-                  <span>{doc.format === 'PDF' ? 'PDF İndir' : 'Word İndir'}</span>
+                  <span>{downloadLabel}</span>
                 </a>
               </article>
-            ))}
+              );
+            })}
           </div>
         </section>
       ))}

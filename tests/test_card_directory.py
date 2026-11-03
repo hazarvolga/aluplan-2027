@@ -76,12 +76,12 @@ def main_hrefs(route: str) -> list[str]:
 
 AX3000_DOCS_ROUTE = "/products/ax3000/dokumanlar"
 AX3000_DOCUMENTS = [
-    ("/docs/ax3000/ax3000-brochure-en.pdf", "AX3000 Genel Broşür (İngilizce, PDF) indir"),
-    ("/docs/ax3000/ax3000-brochure-de.pdf", "AX3000 Genel Broşür (Almanca, PDF) indir"),
-    ("/docs/ax3000/ax3000-brochure-en-alternative.pdf", "AX3000 Genel Broşür — Alternatif (İngilizce, PDF) indir"),
-    ("/docs/ax3000/ax3000-functions-en.pdf", "MEP Fonksiyon Açıklamaları (İngilizce, PDF) indir"),
-    ("/docs/ax3000/ax3000-functions-en.docx", "MEP Fonksiyon Açıklamaları — Word (İngilizce, DOCX) indir"),
-    ("/docs/ax3000/ax3000-functions-hexagon-en.docx", "MEP Fonksiyon Açıklamaları — Hexagon (İngilizce, DOCX) indir"),
+    ("/docs/ax3000/ax3000-brochure-en.pdf", "PDF İndir: AX3000 Genel Broşür (İngilizce)"),
+    ("/docs/ax3000/ax3000-brochure-de.pdf", "PDF İndir: AX3000 Genel Broşür (Almanca)"),
+    ("/docs/ax3000/ax3000-brochure-en-alternative.pdf", "PDF İndir: AX3000 Genel Broşür — Alternatif (İngilizce)"),
+    ("/docs/ax3000/ax3000-functions-en.pdf", "PDF İndir: MEP Fonksiyon Açıklamaları (İngilizce)"),
+    ("/docs/ax3000/ax3000-functions-en.docx", "Word İndir: MEP Fonksiyon Açıklamaları — Word (İngilizce)"),
+    ("/docs/ax3000/ax3000-functions-hexagon-en.docx", "Word İndir: MEP Fonksiyon Açıklamaları — Hexagon (İngilizce)"),
 ]
 
 

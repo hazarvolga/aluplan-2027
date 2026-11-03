@@ -145,6 +145,7 @@ export function MediaGridSection({
                         <button
                           type="button"
                           className="alu-media-card__video-btn"
+                          aria-label={`${item.ctaText || 'Videoyu İzle'}: ${item.title}`}
                           onClick={() =>
                             onVideo({
                               youtubeId: item.youtubeId!,

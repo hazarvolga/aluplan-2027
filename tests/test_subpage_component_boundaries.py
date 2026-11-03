@@ -203,7 +203,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
             "Math.max(",
             "playlist.videos.findIndex",
             "onClick={() => onVideoChange(video.id)}",
-            "https://www.youtube.com/embed/",
+            "https://www.youtube-nocookie.com/embed/",
             "https://www.youtube.com/watch?v=",
             "https://img.youtube.com/vi/",
             "alu-playlist-item--active",
@@ -560,9 +560,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
             "10K+",
             'href="/contact"',
             'href="/references"',
-            "mapEmbed.src",
-            'loading="lazy"',
-            'referrerPolicy="no-referrer-when-downgrade"',
+            "<ConsentEmbed src={mapEmbed.src}",
         ]:
             with self.subTest(marker=marker):
                 self.assertIn(marker, component)

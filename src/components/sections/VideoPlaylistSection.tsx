@@ -4,6 +4,7 @@ import Link from 'next/link';
 import type { ReactElement } from 'react';
 import type { PlaylistRecord } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
+import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
 
 interface VideoPlaylistSectionProps {
   playlist: PlaylistRecord;
@@ -45,12 +46,7 @@ export function VideoPlaylistSection({
             {currentVideo && (
               <div className="alu-playlist-player-card">
                 <div className="alu-playlist-player-card__viewport">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${currentVideo.id}`}
-                    title={currentVideo.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
+                  <ConsentEmbed src={`https://www.youtube-nocookie.com/embed/${currentVideo.id}`} title={currentVideo.title} fill />
                 </div>
                 <div className="alu-playlist-player-card__body">
                   <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import type { PageRecord } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { DirectoryCategoryIcon } from './DirectoryCategoryIcon';
+import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
 
 type AboutEditorialSectionProps = {
   page: PageRecord;
@@ -229,13 +230,7 @@ export function AboutEditorialSection({ page }: AboutEditorialSectionProps) {
 
             {mapEmbed && (
               <div className="alu-about-office__map">
-                <iframe
-                  src={mapEmbed.src}
-                  title={mapEmbed.title || 'Aluplan Ofis Konumu'}
-                  loading="lazy"
-                  allowFullScreen
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
+                <ConsentEmbed src={mapEmbed.src} title={mapEmbed.title || 'Aluplan Ofis Konumu'} fill />
               </div>
             )}
           </div>

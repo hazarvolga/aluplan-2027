@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { getHomepageData, TRIAL_CTA_URL, MAIN_QUOTE_FORM_URL } from '@/lib/site-data';
+import { getHomepageData, TRIAL_CTA_URL, MAIN_QUOTE_FORM_URL } from '@/lib/site-shared';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { ProfessionalServicesSection } from './ProfessionalServicesSection';
 import { HomepageMaxPreviewHero } from './HomepageMaxPreviewHero';

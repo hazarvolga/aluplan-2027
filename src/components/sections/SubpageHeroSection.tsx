@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { getImageProps } from 'next/image';
 import type { ReactElement } from 'react';
 import type { ContentImage, PageRecord } from '@/lib/site-data';
-import { MAIN_QUOTE_FORM_URL, TRIAL_CTA_URL } from '@/lib/site-data';
+import { MAIN_QUOTE_FORM_URL, TRIAL_CTA_URL } from '@/lib/site-shared';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { isReleaseContentEnabled } from '@/lib/release-flags';
 import type {

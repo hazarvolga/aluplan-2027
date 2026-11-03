@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { getHomepageData } from '@/lib/site-data';
+import { getHomepageData } from '@/lib/site-shared';
 import { AluIcon } from '@/components/ui/AluIcon';
 import type { AluIconName } from '@/components/ui/AluIcon';
 import { handleStructuredTabKey } from './structured-tab-key';

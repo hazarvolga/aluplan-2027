@@ -1,5 +1,5 @@
 import { challenges, metrics, benefits, faq } from '@/data/allplan-civil-2027-preview';
-import { MAIN_QUOTE_FORM_URL, TRIAL_CTA_URL } from '@/lib/site-data';
+import { MAIN_QUOTE_FORM_URL, TRIAL_CTA_URL } from '@/lib/site-shared';
 import { PreviewClosingSection } from './PreviewClosingSection';
 import { BenefitsSection } from './BenefitsSection';
 import { CivilFeatureGrid } from './CivilFeatureGrid';

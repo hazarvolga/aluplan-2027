@@ -1,5 +1,13 @@
 # Oturum devri
 
+## 03.11.2026 — D4: istemci paketinden sayfa verisinin çıkarılması (yerel, commitlenmedi)
+
+- `codex/prelaunch-decisions` dalında yarım kalan D4 tamamlandı. İstemci bileşenleri ve onların içe aktardığı yardımcı modüller artık `@/lib/site-data`'yı yalnız tip için içe aktarıyor. Sabitler, navigasyon, ana sayfa ve arama dizini `src/lib/site-shared.ts` modülünden; oynatma listeleri ve video kütüphanesi `src/lib/playlist-data.ts` modülünden geliyor. `site-data.ts` hepsini aynı adlarla dışa aktarmayı sürdürüyor; sunucu tarafı değişmedi.
+- Sonuç: en büyük istemci chunk'ı 1,73 MB'tan 229 KB'a indi; istemci chunk'larında `bodyNodes` (sayfa gövdesi) kalmadı.
+- Test: `tests/test_client_bundle_data.py`; artık `src/components` altındaki direktifsiz bileşenleri ve `.ts` yardımcılarını da tarıyor. `tests/site_data_runtime_loader.mjs`, `schema_runtime.mjs` ve `page_end_conversion_runtime.mjs` harness'larının ortak yükleyicisi oldu. `test_forms_transition.py`, form adresini yeni konumunda (`site-shared.ts`) doğruluyor; adres değişmedi.
+- Kapılar: `pnpm test` (292 unit test, kaynak sözleşmesi, 36/36 parite, stil kontrolü, 45/45 token), typecheck ve bayraklı production build geçti. Dev sunucusunda ana sayfa, video kütüphanesi, arama ve SSS sayfaları konsol hatası olmadan render edildi.
+- Commit ve push kullanıcı onayı bekliyor.
+
 ## 03.11.2026 — Yayın öncesi sağlamlaştırma (16 geliştirme maddesi)
 
 - `codex/prelaunch-hardening` dalında (PR #3 dalının üzerinde) kullanıcının onayladığı H1–H8 kararlarıyla 16 madde ele alındı.

@@ -1,15 +1,14 @@
 'use client';
 
 import React, { useState } from 'react';
+import type { PageRecord, PlaylistRecord } from '@/lib/site-data';
 import {
-  PageRecord,
-  PlaylistRecord,
   MAIN_QUOTE_FORM_URL,
   SUPPORT_PORTAL_URL,
   getSiteIdentity,
   getSolutionCatalog,
   getSolutionHub
-} from '@/lib/site-data';
+} from '@/lib/site-shared';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { TrainingTabs } from './TrainingTabs';
 import { AboutEditorialSection } from './AboutEditorialSection';

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { handleStructuredTabKey } from './structured-tab-key';
 import { featureGroups } from '@/data/allplan-2027-features-preview';
 import { allplanImprovements, sciaImprovements } from '@/data/allplan-2027-improvements';
-import { MAIN_QUOTE_FORM_URL, TRIAL_CTA_URL } from '@/lib/site-data';
+import { MAIN_QUOTE_FORM_URL, TRIAL_CTA_URL } from '@/lib/site-shared';
 import styles from './Allplan2027FeaturesPreview.module.css';
 import { PreviewClosingSection } from './PreviewClosingSection';
 

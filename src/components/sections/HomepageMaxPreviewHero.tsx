@@ -1,4 +1,4 @@
-import { MAIN_QUOTE_FORM_URL } from '@/lib/site-data';
+import { MAIN_QUOTE_FORM_URL } from '@/lib/site-shared';
 import { AluIcon } from '@/components/ui/AluIcon';
 import content from '@/data/homepage-2027-preview.json';
 

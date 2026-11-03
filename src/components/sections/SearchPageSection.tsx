@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import type { ReactElement } from 'react';
-import { getHomepageData, getSearchIndex } from '@/lib/site-data';
+import { getHomepageData, getSearchIndex } from '@/lib/site-shared';
 import { AluIcon } from '@/components/ui/AluIcon';
 
 const searchIndex = getSearchIndex();

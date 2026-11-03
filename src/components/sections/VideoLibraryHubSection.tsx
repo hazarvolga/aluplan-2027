@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getAllPlaylists, getVideoLibraryData } from '@/lib/site-data';
+import { getAllPlaylists, getVideoLibraryData } from '@/lib/playlist-data';
 import { AluIcon } from '@/components/ui/AluIcon';
 
 const allPlaylists = getAllPlaylists();

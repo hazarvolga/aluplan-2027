@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { getNavigationData, getSearchIndex, MAIN_QUOTE_FORM_URL } from '@/lib/site-data';
+import { getNavigationData, getSearchIndex, MAIN_QUOTE_FORM_URL } from '@/lib/site-shared';
 import { AluIcon, AluIconName } from '@/components/ui/AluIcon';
 import { MediaDialog } from '@/components/ui/MediaDialog';
 import { clearConsent, useConsentReady, useCookieConsent, writeConsent } from '@/lib/consent';

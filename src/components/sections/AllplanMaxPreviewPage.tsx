@@ -1,5 +1,5 @@
 import content from '@/data/allplan-max-preview.json';
-import { MAIN_QUOTE_FORM_URL, TRIAL_CTA_URL } from '@/lib/site-data';
+import { MAIN_QUOTE_FORM_URL, TRIAL_CTA_URL } from '@/lib/site-shared';
 import styles from './AllplanMaxPreviewPage.module.css';
 import { AllplanMaxVideo } from './AllplanMaxVideo';
 import { PreviewClosingSection } from './PreviewClosingSection';

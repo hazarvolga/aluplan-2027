@@ -1,9 +1,5 @@
-import {
-  MAIN_QUOTE_FORM_URL,
-  SUPPORT_PORTAL_URL,
-  TRIAL_CTA_URL,
-  type PageRecord,
-} from '@/lib/site-data';
+import type { PageRecord } from '@/lib/site-data';
+import { MAIN_QUOTE_FORM_URL, SUPPORT_PORTAL_URL, TRIAL_CTA_URL } from '@/lib/site-shared';
 
 export type PageEndConversionKind = 'commercial' | 'training' | 'support' | 'corporate';
 

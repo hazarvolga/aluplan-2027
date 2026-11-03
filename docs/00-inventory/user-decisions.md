@@ -209,3 +209,10 @@ Kullanıcı, yayın öncesi kalan maddeler listesinde aşağıdaki kararları ve
 - **Rebar ve Parametric adresleri:** `/products/allplan-rebar` ve `/products/allplan-parametric` (diğer sürüm sayfalarıyla tutarlı olsun diye `/2027/` altından taşındı).
 - **Sayısal iddialar:** Üretici belgelerindeki sayısal iddialar (ör. "5× faster", "20–50%", "up to 50% faster") doğrudur ve kullanılabilir.
 - **SDS2 ana banner görseli:** Kullanıcı uygun görseli üretip verecek; o zamana kadar mevcut üretilmiş hero ailesi görseli yer tutucu olarak kalır.
+
+## 03.11.2026 — Rota ailesi, menü ve Allplan 2027 yenilik sayfaları
+
+- Ürün sayfaları `/products/` altında toplanır: Max (`/products/allplan-max`), FRILO (`/products/frilo`), SCIA (`/products/scia`), Rebar, Parametric. Civil'in 2027 sayfası `/products/civil` ile çakıştığı için `/2027/civil` kalır.
+- Rebar ve Parametric ürünler menüsündeki ALLPLAN grubuna eklenir (yalnızca 2027 sürümü açıkken).
+- Allplan Basic, Concept, Professional ve Ultimate sayfaları birebir korunur; hero altına 2027 yeniliklerine giden bir bant eklenir ve her sürüm için ayrı 2027 yenilik sayfası (`/2027/allplan-*`) yapılır. Aynı bant Civil için de uygulanır.
+- Slogan kararı uygulaması: ana sayfa kartlarında Allplan'ın 2027 slayt başlıkları kullanılır.

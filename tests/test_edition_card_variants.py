@@ -36,6 +36,15 @@ class EditionCardVariantTests(unittest.TestCase):
         self.assertRegex(CARDS, r'className=\{styles\.stepNumber\} aria-hidden="true"')
         self.assertIn("edition.label", CARDS)
 
+    def test_steps_are_a_spaced_two_by_two_grid_with_a_left_accent_and_corner_number(self):
+        self.assertIn(".icons,.steps{grid-template-columns:repeat(2,minmax(0,1fr))}", CARDS_CSS)
+        self.assertIn(".steps{gap:var(--space-stack-md);border:0}", CARDS_CSS)
+        card = re.search(r"\.steps \.card\{[^}]*\}", CARDS_CSS).group(0)
+        self.assertIn("border-left:var(--border-width-strong) solid var(--accent-border)", card)
+        number = re.search(r"\.stepNumber\{[^}]*\}", CARDS_CSS).group(0)
+        self.assertIn("position:absolute", number)
+        self.assertIn("right:var(--card-padding)", number)
+
     def test_icon_chip_uses_accent_tokens(self):
         chip = re.search(r"\.iconChip\{[^}]*\}", CARDS_CSS).group(0)
         self.assertIn("var(--accent-bg)", chip)

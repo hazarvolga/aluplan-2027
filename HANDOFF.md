@@ -1,5 +1,13 @@
 # Oturum devri
 
+## 03.11.2026 — Rebar, Parametric ve Allplan 2027 sayfalarına ekran görüntüleri (commitlendi)
+
+- **Eklendi:** `Allplan 2027 Marketing Materials/ALLPLAN 2027 Launch…/Screenshots` klasöründen seçilen 21 ürün ekran görüntüsü web JPEG'ine çevrildi (en fazla 1600 px genişlik, 410 KB altı; `public/assets/previews/allplan-2027-screens/`). Mümkün olduğunda klasördeki hazır `_edited` / `Final` sürümleri seçildi.
+- **Rebar ve Parametric:** özellik listesinin altında "Ekran görüntüleri" bölümü (3 sütun, tıklayınca büyür): ekran görüntüsü olan özellikler (Rebar 18, Parametric 18 kart) özellik sırasıyla; görseli olmayan özellikler yalnızca listede. **Allplan 2027 yenilik sayfaları:** kartlar artık görselli (`MediaGridWithViewer`, `EditionCards` yerine); özellik başına eşleme `editionScreens`.
+- **Kaynak/test:** eşlemeler `src/data/allplan-2027-screens.ts`, yardımcılar `src/lib/feature-screens.ts`. `tests/test_feature_screens.py`: her görsel web boyutlu JPEG, her görsel için lisans günlüğünde "Manufacturer image / Pending" satırı, eşlemelerdeki özellik başlıkları gerçek, derlenmiş sayfalar görselleri içeriyor. Lisans günlüğüne 21 `SCREEN-2027-*` satırı eklendi (izin teyidi yayından önce gerekli).
+- **Eşleme notu:** "Allplan Max" özelliği için `Engineering Max - AI BIM Analyst.png`, "Donatı iş akışı otomasyonu" için duvar donatısı görüntüsü seçildi; "Cloud BIM Manager ve Mark Numbering 2.0" kartı Cloud BIM Manager görselini kullanıyor (Cloud BIM Manager kartıyla aynı). Beğenilmeyen eşleme `build_screens` mantığıyla değil doğrudan `allplan-2027-screens.ts` içinden değiştirilebilir.
+- Kapılar: 405 test, 46/46 parite, 45/45 token, typecheck, build; sayfalar tarayıcıda doğrulandı (görseller yüklendi, yatay taşma yok).
+
 ## 03.11.2026 — Kalan işlerin güncel listesi ve ertelenen karşılaştırma (commitlendi)
 
 - **Ertelenen karşılaştırma (kullanıcı kararı):** `/products/allplan-max`, `/products/scia` ve `/products/frilo` sayfaları da `/2027/civil` gibi canlı sayfalardan (envanter) üretilmiş olabilir; pazarlama klasöründeki Web Pages belgeleriyle (Max: `Allplan Max Web Page.docx`; SCIA: `New Text and Images – SCIA Pages.docx`; FRILO: `New Text and Images – FRILO - Edition Pages Copy.docx` ve Excel metinleri) satır satır karşılaştırılıp eksik içerik çıkarılabilir. Bu sayfalar canlıya onaylanarak çıktığı için şimdilik sorun yok; gerekirse yapılacak. (Civil'de bu karşılaştırma yapıldı ve eksik çıktı; sayfa sonra yalnızca yeniliklere indirildi.)

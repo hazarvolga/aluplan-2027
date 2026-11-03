@@ -1,5 +1,6 @@
 import type { AllplanEdition2027 } from '@/data/allplan-2027-editions';
-import { EditionCards } from './EditionCards';
+import { editionNewsItems } from '@/lib/feature-screens';
+import { MediaGridWithViewer } from './MediaGridWithViewer';
 import { PreviewClosingSection } from './PreviewClosingSection';
 import { ProductHero } from './ProductHero';
 
@@ -12,7 +13,7 @@ export function AllplanEditionNewsView({ edition, quoteUrl }: { edition: Allplan
       { label: 'Teklif isteyin ↗', href: quoteUrl, variant: 'primary' },
       { label: `${edition.name} sayfasına dön`, href: edition.productPath, variant: 'secondary' }
     ]} />
-    <div className="alu-container"><EditionCards kicker={`${edition.name.toUpperCase()} · 2027`} title={edition.title} editions={edition.features.map(feature => ({ title: feature.label, description: feature.text }))} /></div>
+    <MediaGridWithViewer grid={{ kicker: `/ ${edition.eyebrow}`, title: edition.title, columns: 3, items: editionNewsItems(edition) }} itemKeyPrefix={id} />
     <PreviewClosingSection id={`${id}-closing`} title={`${edition.name} hakkında görüşelim`} items={[{ title: 'Uzmanla görüşün', paragraphs: [`Projelerinize ve ekibinize uygun ALLPLAN sürümünü birlikte değerlendirelim.`], action: { label: 'Teklif isteyin', href: quoteUrl } }]} />
   </div>;
 }

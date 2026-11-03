@@ -154,3 +154,21 @@ Sonuçları:
   çeviri yapılmayacak; üretici diliyle ilgilenilmez.
 - Bu karar diğer dillerdeki ücret/plan/izin sorularını kapatmaz; yalnız
   envanter ve üretim dil kapsamını sınırlar (EN + TR).
+
+## 03.11.2026 — Yayın öncesi açık maddeler için kararlar
+
+Kullanıcı, yayın öncesi kalan maddeler listesinde aşağıdaki kararları verdi:
+
+- **B2 (`/2027/features` H1):** Sayfa başlığı ve giriş metni, kullanıcının verdiği üretici metninin Türkçesi olur. Üst satır: “2027 yenilikleri: Allplan, Allplan Civil, FRILO, SCIA, SDS2”; H1: “Her mühendislik iş akışı için kapsamlı çözümler”. Ana sayfa H1'iyle çakışma, üst satır H1'e alınarak giderilir (uygulama notu doğrulama belgesinde).
+- **B3 (BIMFlex özel video):** Kullanıcı videonun bulunduğu sayfayı istedi; karar sonraya kaldı.
+- **B4:** “Youtube Allplan Global” kartının başlığı bağlandığı kanala uygun hale getirilir.
+- **B5:** `<main>` bağlantı farklarının D bölümü kullanıcıyla tek tek gözden geçirilecek.
+- **B6:** “Sürümleri Görüntüle” hedefi (`allplan.com/system/releasenotes/`) korunur.
+- **B7:** Eski paket karşılaştırma PDF'leri `/2027/compare` sayfasına kalıcı yönlendirilir.
+- **C1 (doğrulanmamış iddialar):** Kullanıcı üreticiden bilgi alacak; iddialar şimdilik değiştirilmez. **Açık takip maddesi.**
+- **C2:** Projede üretilen görseller (AI üretimi hero aileleri, OG, Max posteri) kullanıcıya/projeye aittir; lisans kaydı buna göre tamamlanır.
+- **C3:** Çerez tercihlerini sonradan değiştirmek için arayüz eklenir.
+- **D1:** Ürün sayfalarının yapılandırılmış verisi ve paylaşım etiketleri SEO uyumlu hale getirilir.
+- **D2, D4, D6, D7, D8:** Erişilebilir adlar, JS paketi, indirme bağlantısı adları, AX3000 doküman başlıkları ve harita/türev betiği düzeltmeleri yürütücüye bırakıldı.
+- **E1–E3:** Ortak bileşen taşıması, premium hareket ve mobil video sonraki fazlar olarak kabul edildi.
+- **Yeni sayfa (Kaynaklar):** Ana menüdeki “Kaynaklar” bağlantısının gittiği ana sayfa bölümü (“Profesyonel Hizmetler ve Destek Merkezi”, 19 kaynak) şimdilik kalır. Aynı bilgileri daha derli toplu sunan yeni bir sayfa kullanıcıyla birlikte tasarlanacak; kullanıcı onayından sonra bölüm kaldırılıp menü yeni sayfaya bağlanacak.

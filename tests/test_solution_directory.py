@@ -261,17 +261,32 @@ class SolutionDirectoryBoundaryTests(unittest.TestCase):
                 self.assertIn("data-solution-directory", component)
         self.assertIn("<SolutionDirectoryCard", read("src/components/sections/SolutionHubSection.tsx"))
 
+    def test_building_hub_uses_shared_catalog_presentation_without_changing_content(self):
+        hub = read("src/components/sections/SolutionHubSection.tsx")
+        self.assertIn("hub.hubPath === '/solutions-v2/building-design'", hub)
+        self.assertIn("hub.hubItems.map", hub)
+        self.assertIn("hub.catalogItems.find", hub)
+        self.assertIn("<SolutionOverviewCards", hub)
+        self.assertIn("<SolutionDirectoryCard", hub)
+        data = json.loads(read("src/data/navigation.json"))["solutionDirectory"]
+        building = next(g for g in data["groups"] if g["hubPath"] == "/solutions-v2/building-design")
+        for item in building["hubItems"]:
+            matches = [candidate for candidate in building["catalogItems"] if candidate["href"] == item["href"]]
+            self.assertEqual(len(matches), 1)
+            self.assertTrue(matches[0].get("image"))
+
     def test_catalog_uses_compact_rows_and_preserves_item_content(self):
         catalog = read("src/components/sections/SolutionCatalogSection.tsx")
         self.assertNotIn("<SolutionDirectoryCard", catalog)
-        self.assertIn("group.catalogItems.map", catalog)
-        self.assertIn("item.description", catalog)
-        self.assertIn("item.image.alt", catalog)
-        self.assertIn("item.external ? '_blank' : undefined", catalog)
-        self.assertIn("item.external ? 'noopener noreferrer' : undefined", catalog)
-        self.assertIn("styles.featured", catalog)
-        self.assertIn("styles.productLink", catalog)
-        self.assertIn("ProductsOverview.module.css", catalog)
+        self.assertIn("<SolutionOverviewCards items={group.catalogItems}", catalog)
+        cards = read("src/components/sections/SolutionOverviewCards.tsx")
+        self.assertIn("item.description", cards)
+        self.assertIn("item.image.alt", cards)
+        self.assertIn("item.external ? '_blank' : undefined", cards)
+        self.assertIn("item.external ? 'noopener noreferrer' : undefined", cards)
+        self.assertIn("styles.featured", cards)
+        self.assertIn("styles.productLink", cards)
+        self.assertIn("ProductsOverview.module.css", cards)
 
     def test_catalog_group_headings_share_spacing_and_component(self):
         catalog = read("src/components/sections/SolutionCatalogSection.tsx")

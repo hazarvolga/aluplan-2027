@@ -19,16 +19,14 @@ def allplan_group() -> list[dict]:
 
 
 class ReleaseMenuTests(unittest.TestCase):
-    def test_rebar_and_parametric_follow_the_four_editions_and_are_release_only(self):
+    def test_held_rebar_and_parametric_are_not_in_the_menu(self):
+        # Held until ALLPLAN publishes them (docs/00-inventory/user-decisions.md, 03.11.2026).
         items = allplan_group()
         names = [item["name"] for item in items]
-        self.assertEqual(names[:6], ["ALLPLAN Basic", "ALLPLAN Concept", "ALLPLAN Professional", "ALLPLAN Ultimate", "ALLPLAN Rebar", "ALLPLAN Parametric"])
-        for item in items:
-            if item["name"] in RELEASE_ITEMS:
-                self.assertEqual(item["href"], RELEASE_ITEMS[item["name"]])
-                self.assertIs(item.get("releaseOnly"), True)
-            else:
-                self.assertNotIn("releaseOnly", item)
+        self.assertEqual(names[:4], ["ALLPLAN Basic", "ALLPLAN Concept", "ALLPLAN Professional", "ALLPLAN Ultimate"])
+        hrefs = {item["href"] for item in items}
+        for href in RELEASE_ITEMS.values():
+            self.assertNotIn(href, hrefs)
 
     def test_shell_hides_release_only_items_in_the_desktop_and_mobile_menus(self):
         self.assertIn("releaseOnly", SHELL)

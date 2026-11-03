@@ -1233,8 +1233,6 @@ navigation_data = {
                 {"name": "ALLPLAN Concept", "href": "/products/allplan-concept"},
                 {"name": "ALLPLAN Professional", "href": "/products/allplan-professional"},
                 {"name": "ALLPLAN Ultimate", "href": "/products/allplan-ultimate"},
-                {"name": "ALLPLAN Rebar", "href": "/products/allplan-rebar", "releaseOnly": True},
-                {"name": "ALLPLAN Parametric", "href": "/products/allplan-parametric", "releaseOnly": True},
                 {"name": "ALLPLAN Cloud Services", "href": "/products/allplan-cloud-services"},
                 {"name": "CIVIL", "href": "/products/civil"},
                 {"name": "PRECAST", "href": "/products/precast"},

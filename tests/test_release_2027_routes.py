@@ -10,6 +10,8 @@ ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = "https://aluplan.com.tr"
 SITE_DESCRIPTION_PREFIX = "1995'ten beri Türkiye'nin güvenilir ALLPLAN distribütörü"
 RELEASE_PATHS = ["/2027/features", "/products/allplan-max", "/2027/civil", "/products/frilo", "/products/scia", "/products/allplan-rebar", "/products/allplan-parametric", "/2027/allplan-basic", "/2027/allplan-concept", "/2027/allplan-professional", "/2027/allplan-ultimate", "/paket-karsilastirma", "/product-lifecycle", "/kaynaklar", "/egitim-merkezlerimiz", "/kaydedilmis-webinarlar"]
+# Held until ALLPLAN publishes them: metadata exists, but they stay out of the sitemap.
+HELD_PATHS = {"/products/allplan-rebar", "/products/allplan-parametric"}
 PRODUCT_NAMES = {
     "/2027/features": "ALLPLAN 2027",
     "/products/allplan-max": "Allplan Max",
@@ -128,7 +130,10 @@ class ReleaseRouteRuntimeTests(unittest.TestCase):
 
     def test_sitemap_includes_release_routes(self):
         for route in RELEASE_PATHS:
-            self.assertIn(ORIGIN + route, self.data["live"]["sitemap"])
+            if route in HELD_PATHS:
+                self.assertNotIn(ORIGIN + route, self.data["live"]["sitemap"])
+            else:
+                self.assertIn(ORIGIN + route, self.data["live"]["sitemap"])
 
     def test_sitemap_omits_release_routes_on_rollback(self):
         self.assertFalse([url for url in self.data["rollback"]["sitemap"] if "/2027/" in url])

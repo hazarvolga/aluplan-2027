@@ -1,5 +1,10 @@
 # Oturum devri
 
+## 03.11.2026 — Rebar ve Parametric bekletildi; FRILO sürüm kartları (dal `codex/design-phase-4`, commitlendi)
+- **Karar:** Allplan Rebar ve Allplan Parametric allplan.com'da yayınlanana kadar yayınlanmaz. Menüden kaldırıldı (`scripts/generate_site_data.py` → `navigation.json`), sitemap ve `llms.txt` dışında (`PUBLISHED_RELEASE_2027_ROUTES`), canlıda 404 (`heldUntilManufacturerRelease: true` + `isLocalPreviewEnabled()`); yerel `pnpm dev`'de açık. Sayfa, veri ve testler korunuyor; içerik render testleri bekletme süresince gerekçeyle atlanıyor. Yayına alma adımları: `docs/00-inventory/user-decisions.md` (03.11.2026 — Allplan Rebar ve Allplan Parametric bekletilir).
+- **FRILO:** "FRILO sürümleri" ve "FRILO Geotechnics sürümleri" bantları yeni `EditionCards` `cards` varyantında (2 sütun, aralıklı, sol kalın vurgu çizgisi).
+- **Doğrulama:** 466 test (4 gerekçeli atlama), 46/46 parite, bayraklı build; build'de sitemap ve ana sayfa menüsünde iki rota yok, sayfaları 404.
+
 ## 03.11.2026 — Tasarım standardizasyonu, Faz 4 (dal `codex/design-phase-4`, commitlendi, onay bekliyor)
 - **Kart varyantları:** `EditionCards` artık `grid | steps | icons` alıyor. Rebar ve Parametric sayfalarında "Genel bakış" bandı `steps`: 2×2, kartlar arası boşluk, solda kalın vurgu çizgisi, sağ üst köşede 01–04 numarası (dekoratif, `aria-hidden`), etiket ayrı satırda. "Avantajlar" bandı `icons`: aynı kart dili (2×2, boşluklu, sol kalın vurgu çizgisi), `AluIcon` sağ üst köşede, zeminsiz ve çerçevesiz (büyük boy). İkonlar `src/lib/product-icons.ts` içinde, metinler değişmedi. `AluIcon`'a `zap` eklendi. Yeni bağımlılık yok.
 - **FeatureRow:** alt sayfa vitrin satırları (`alu-feature-row`), FRILO yetenekleri ve Max ana özellikleri tek `FeatureRow`/`FeatureRowList` bileşeninde (kart token'ları, dönüşümlü yön, numara rozeti). Eski kurallar silindi. `alu-wf-detail` etkileşimli sekme detayı olduğu için ayrı kaldı.

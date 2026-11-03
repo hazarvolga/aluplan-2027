@@ -9,6 +9,11 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
+
+def rebar_and_parametric_are_held() -> bool:
+    """Held until ALLPLAN publishes them: the production build renders them as 404 (user-decisions.md, 03.11.2026)."""
+    routes = (ROOT / "src/lib/release-2027-routes.ts").read_text(encoding="utf-8")
+    return "heldUntilManufacturerRelease: true" in routes
 BUILT = ROOT / ".next/server/app/products"
 PAGES = {
     "rebar": {"route": "/products/allplan-rebar", "name": "Allplan Rebar", "tags": 5, "overview": 4, "benefits": 4, "groups": 6, "items": 30},
@@ -101,6 +106,8 @@ class RouteTests(unittest.TestCase):
 
 class RenderedPageTests(unittest.TestCase):
     def test_built_pages_show_every_feature_title(self):
+        if rebar_and_parametric_are_held():
+            self.skipTest("Rebar and Parametric are held until ALLPLAN publishes them")
         for slug in PAGES:
             built = BUILT / f"allplan-{slug}.html"
             if not built.is_file():

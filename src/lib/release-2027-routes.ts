@@ -8,6 +8,8 @@ export interface Release2027Route {
   description: string;
   productName: string | null;
   ogImage: string;
+  /** Built and kept, but unlinked and 404 in production until ALLPLAN publishes the product on allplan.com. */
+  heldUntilManufacturerRelease?: boolean;
 }
 
 const DEFAULT_OG_IMAGE = '/opengraph-image.jpg';
@@ -54,14 +56,16 @@ export const RELEASE_2027_ROUTES: readonly Release2027Route[] = [
     name: 'Allplan Rebar',
     description: 'Allplan Rebar; donatı tasarımı, detaylandırma, dokümantasyon, metraj ve proje koordinasyonunu tek bir odaklı BIM çözümünde birleştirir. Çubuk, hasır ve BAMTEC donatısı ile yapay zekâ destekli, otomatik detaylandırma.',
     productName: 'Allplan Rebar',
-    ogImage: '/assets/previews/allplan-2027-features/csm_bar_group_circular_-_selected_3306dc1ad4.jpg'
+    ogImage: '/assets/previews/allplan-2027-features/csm_bar_group_circular_-_selected_3306dc1ad4.jpg',
+    heldUntilManufacturerRelease: true
   },
   {
     path: '/products/allplan-parametric',
     name: 'Allplan Parametric',
     description: 'Allplan Parametric; köprü, tünel, istinat duvarı, gürültü bariyeri ve prekast kirişli köprülerin dört boyutlu parametrik modellenmesi ve detaylandırılması için özel işlevler sunar.',
     productName: 'Allplan Parametric',
-    ogImage: '/assets/previews/allplan-civil-2027/civil-hero.jpg'
+    ogImage: '/assets/previews/allplan-civil-2027/civil-hero.jpg',
+    heldUntilManufacturerRelease: true
   },
   {
     path: '/2027/allplan-basic',
@@ -193,4 +197,11 @@ export function buildRelease2027JsonLd(path: string): Record<string, unknown> {
     provider: { '@id': `${SITE_ORIGIN}/#organization` }
   };
   return { '@context': 'https://schema.org', '@graph': [{ ...webPage, mainEntity: { '@id': softwareId } }, breadcrumb, software] };
+}
+
+/** Release routes that are linked, listed in the sitemap and in llms.txt. */
+export const PUBLISHED_RELEASE_2027_ROUTES: readonly Release2027Route[] = RELEASE_2027_ROUTES.filter((route) => !route.heldUntilManufacturerRelease);
+
+export function isHeldRelease2027Route(path: string): boolean {
+  return RELEASE_2027_ROUTES.some((route) => route.path === path && route.heldUntilManufacturerRelease === true);
 }

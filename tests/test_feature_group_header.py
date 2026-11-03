@@ -6,6 +6,11 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
+
+def rebar_and_parametric_are_held() -> bool:
+    """Held until ALLPLAN publishes them: the production build renders them as 404 (user-decisions.md, 03.11.2026)."""
+    routes = (ROOT / "src/lib/release-2027-routes.ts").read_text(encoding="utf-8")
+    return "heldUntilManufacturerRelease: true" in routes
 SECTIONS = ROOT / "src/components/sections"
 
 
@@ -54,6 +59,8 @@ class GroupedPagesTests(unittest.TestCase):
 
 class GroupHeaderRenderTests(unittest.TestCase):
     def test_built_rebar_page_shows_group_labels_as_h3(self):
+        if rebar_and_parametric_are_held():
+            self.skipTest("Rebar and Parametric are held until ALLPLAN publishes them")
         html = ROOT / ".next/server/app/products/allplan-rebar.html"
         if not html.is_file():
             self.skipTest("build output missing")

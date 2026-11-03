@@ -1,13 +1,13 @@
 import { NextResponse } from 'next/server';
 import { getHomepageData, SITE_ORIGIN } from '@/lib/site-data';
 import { isReleaseContentEnabled } from '@/lib/release-flags';
-import { RELEASE_2027_ROUTES } from '@/lib/release-2027-routes';
+import { PUBLISHED_RELEASE_2027_ROUTES } from '@/lib/release-2027-routes';
 
 const homepageData = getHomepageData();
 const release2027Section = isReleaseContentEnabled()
   ? `
 ## 2027 Sürümleri (/2027)
-${RELEASE_2027_ROUTES.map((route) => `- [${route.name}](${SITE_ORIGIN}${route.path}): ${route.description}`).join('\n')}
+${PUBLISHED_RELEASE_2027_ROUTES.map((route) => `- [${route.name}](${SITE_ORIGIN}${route.path}): ${route.description}`).join('\n')}
 `
   : '';
 const packageMatrixPeriod = homepageData.packageMatrixLabel.replace(' MATRİSİ', '');

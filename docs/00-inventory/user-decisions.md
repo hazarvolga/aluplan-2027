@@ -155,6 +155,12 @@ Sonuçları:
 - Bu karar diğer dillerdeki ücret/plan/izin sorularını kapatmaz; yalnız
   envanter ve üretim dil kapsamını sınırlar (EN + TR).
 
+## 03.11.2026 — Allplan Rebar ve Allplan Parametric bekletilir
+
+- **Karar:** Allplan Rebar ve Allplan Parametric henüz ALLPLAN merkezinin sitesinde (allplan.com) yayınlanmadığı için Aluplan sitesinde de yayınlanmaz. Ürünler menüsünden kaldırıldı; sitemap ve `llms.txt` dışında tutuluyor; `/products/allplan-rebar` ve `/products/allplan-parametric` canlıda 404 döner.
+- **Korunanlar:** Sayfalar, veri dosyaları (`src/data/allplan-rebar-2027.ts`, `src/data/allplan-parametric-2027.ts`), tasarım ve testler silinmedi. Yerel geliştirmede (`pnpm dev`) sayfalar açık kalır. Bekletme bayrağı: `src/lib/release-2027-routes.ts` içinde `heldUntilManufacturerRelease: true`.
+- **Yayına alma adımları (allplan.com'da yayınlandıklarında):** (1) allplan.com'daki canlı sayfaları elimizdeki sayfalarla ve kaynak belgelerle (`Allplan 2027 Marketing Materials/ALLPLAN 2027 Launch - Product Marketing Materials/Web Pages/ALLPLAN Rebar - Edition Web Page.docx`, `ALLPLAN Parametric – Edition Web Page.docx`) karşılaştır, farkları güncelle; (2) Türkçe taslak metinleri onaya sun; (3) iki rotadaki `heldUntilManufacturerRelease` satırını kaldır; (4) `scripts/generate_site_data.py` ürünler menüsüne iki öğeyi geri ekle ve `pnpm data:generate` çalıştır; (5) `tests/test_held_products.py` testini yayın durumuna göre güncelle.
+
 ## 03.11.2026 — Yayın öncesi açık maddeler için kararlar
 
 Kullanıcı, yayın öncesi kalan maddeler listesinde aşağıdaki kararları verdi:

@@ -1,5 +1,12 @@
 # Oturum devri
 
+## 03.11.2026 — Rebar/Parametric sayfaları ortak kart kalıbına hizalandı (commitlendi)
+
+- Tasarım tutarlılığı için `ProductEditionView` artık SCIA/FRILO'nun kullandığı `EditionCards` (bitişik çerçeveli ızgara, `+` maddeler) ve aynı sekme şeridiyle çizilir; kendi kart stili silindi. `EditionCards` iki isteğe bağlı özellik kazandı: `kicker` (varsayılan "SÜRÜMLER") ve kart içinde açıklama paragrafı veya {başlık, metin} maddeleri; mevcut SCIA/FRILO kullanımı değişmedi.
+- Sayfa sırası SCIA ile aynı: hero, konu etiketleri, genel bakış kartları, sekme şeridi, avantajlar, özellikler, kapanış.
+- **Kural (yeni sayfalar için):** yeni 2027 ürün sayfaları `ProductEditionView` + `EditionCards` kullanır; SDS2 ve FRILO Geotechnics aynı bileşenle yapılacak. SCIA/FRILO/Civil sayfalarının ortak şablona taşınması ayrı bir iştir (şu an her biri kendi kodunu taşıyor).
+- Kapılar: 377 test, 46/46 parite, 45/45 token, typecheck, build; Rebar tarayıcıda SCIA ile karşılaştırıldı.
+
 ## 03.11.2026 — Bimplus 2027 maddeleri (commitlendi)
 
 - **Değişti:** `/products/allplan-bimplus` sayfasındaki "BIMPLUS Nedir?" bölümünde, pazarlama klasöründeki `New Text BIMPLUS Page.docx` talimatı uygulandı: giriş cümlesi kaldı, eski 3 madde silindi, yerine "2027’de yeni:" başlığı ve 3 yeni madde (BCF 3.0 değişimi, odaklı model incelemeleri, Excel destekli BIM verisi) konuldu. Kaynak: `scripts/extract_structured_pages.py` (`parse_allplan_bimplus`); `pages.json` yeniden üretildi. Test: `tests/test_bimplus_page.py`.

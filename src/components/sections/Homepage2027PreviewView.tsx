@@ -9,7 +9,7 @@ export function Homepage2027PreviewView() {
     <section className={styles.lifecycle} aria-label="Ürün yaşam döngüsü">
       <div className={`alu-container ${styles.row}`}>
         <p>ALLPLAN ürün yaşam döngüsü ve sürüm desteği hakkında bilgi alın.</p>
-        <Link href="/preview/product-lifecycle">Ürün yaşam döngüsünü inceleyin <AluIcon name="arrow-right" size="sm" /></Link>
+        <Link href="/product-lifecycle">Ürün yaşam döngüsünü inceleyin <AluIcon name="arrow-right" size="sm" /></Link>
       </div>
     </section>
 

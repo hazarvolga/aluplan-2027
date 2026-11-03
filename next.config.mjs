@@ -107,6 +107,11 @@ const nextConfig = {
         permanent: true
       },
       {
+        source: '/preview/product-lifecycle',
+        destination: '/product-lifecycle',
+        permanent: true
+      },
+      {
         source: '/try-free',
         destination: 'https://www.allplan.com/trial-or-subscription/',
         permanent: true

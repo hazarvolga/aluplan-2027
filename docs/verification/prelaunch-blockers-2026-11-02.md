@@ -46,7 +46,7 @@ Plan: `docs/superpowers/plans/2026-11-02-prelaunch-blockers.md`. Dal: `codex/pre
 
 - **K3 metinleri:** 2027 sayfalarının başlıkları "ürün adı | Aluplan" biçiminde; açıklamalar sayfada yayında olan hero paragrafından birebir alındı. Yeni metin yazılmadı. Onay bekleniyor (`src/lib/release-2027-routes.ts`).
 - **`/2027/features` H1'i:** ana sayfa H1'iyle aynı; farklı bir H1 yeni metin gerektiriyor.
-- **`/preview/product-lifecycle`:** 2027 ana sayfası bu adrese bağlantı veriyor, bu yüzden yayın bayrağıyla açık. Kalıcı URL ve "Yerel Önizleme" başlığı için karar gerekiyor.
+- **`/preview/product-lifecycle`:** kullanıcı kararıyla (03.11.2026) `/product-lifecycle` adresine taşındı; eski adres 308 ile yönleniyor. Sayfa rota kaydına eklendi (canonical, OG, JSON-LD, sitemap), "Yerel Önizleme" başlığı ve sabit noindex kalktı. Önceki not: 2027 ana sayfası bu adrese bağlantı veriyor, bu yüzden yayın bayrağıyla açık. Kalıcı URL ve "Yerel Önizleme" başlığı için karar gerekiyor.
 - **Bağlantı farkları:** `docs/verification/main-link-gap-2026-11-02.md` D bölümündeki farklar sınıflandırılmalı.
 - **OG görselleri:** `/2027/max` OG görseli AI üretimi hero, `/2027/scia` OG görseli FRILO hero'su. Marka ve hak onayı açık.
 - **Vercel ortam değişkenleri (K2):** Preview ve Production için `ALUPLAN_SHOW_2027=1` ve `ALUPLAN_BLOCK_INDEXING=1` tanımlanmalı, ardından `ALUPLAN_2027_PREVIEW` kaldırılmalı. Eski değişken yeni değişkenler olmadan dururken `next.config.mjs` build'i bilerek durdurur (`3ded119`). Böylece indeks engeli sessizce kalkamaz.

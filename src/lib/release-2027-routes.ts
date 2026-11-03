@@ -55,6 +55,13 @@ export const RELEASE_2027_ROUTES: readonly Release2027Route[] = [
     description: 'Basic, Concept, Professional ve Ultimate sürümlerinin özelliklerini karşılaştırın.',
     productName: null,
     ogImage: DEFAULT_OG_IMAGE
+  },
+  {
+    path: '/product-lifecycle',
+    name: 'Ürün Yaşam Döngüsü Politikası',
+    description: 'Ürün bakım aşamaları, sürüm desteği ve sunulan hizmetler.',
+    productName: null,
+    ogImage: DEFAULT_OG_IMAGE
   }
 ];
 

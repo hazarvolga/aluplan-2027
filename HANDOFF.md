@@ -8,7 +8,8 @@
 - **Deploy öncesi zorunlu:** Vercel'de Preview ve Production için `ALUPLAN_SHOW_2027=1` ve `ALUPLAN_BLOCK_INDEXING=1` tanımlanmalı, ardından `ALUPLAN_2027_PREVIEW` kaldırılmalı. Eski değişken tek başına kalırsa `next.config.mjs` build'i bilerek durdurur. Vercel'de Preview ortamında bayrak tanımlı olmadığı için PR önizlemesi eski ana sayfayı gösteriyor (Vercel önizlemeyi kendi `noindex` başlığı ve kimlik doğrulamasıyla koruyor).
 - 03.11.2026: PR https://github.com/hazarvolga/aluplan-2027/pull/3 açıldı (`main` hedefli, 3/3 kontrol geçti, birleştirilebilir). Merge, deploy ve Vercel ortam değişikliği kullanıcıda.
 - 03.11.2026: kullanıcı kararıyla `/2027/compare` sayfasındaki "Bu yerel inceleme… doğrulanmalıdır." notu kaldırıldı; "Sürüm bağlantıları mevcut yerel ürün sayfalarına gider." cümlesi kullanıcı kararıyla korundu.
-- Açık kararlar: 2027 başlık/açıklama metinleri (K3), `/2027/features` H1'i, `/preview/product-lifecycle` kalıcı URL'si, bağlantı farkı D bölümü, AI/FRILO OG görselleri.
+- 03.11.2026: kullanıcı kararıyla ürün yaşam döngüsü sayfası `/product-lifecycle` adresine taşındı (eski `/preview/product-lifecycle` 308 yönleniyor); indekslenebilir metadata, JSON-LD ve sitemap kaydı eklendi.
+- Açık kararlar: 2027 başlık/açıklama metinleri (K3), `/2027/features` H1'i, bağlantı farkı D bölümü, AI/FRILO OG görselleri.
 
 ## 02.11.2026 — Ara verme ve bağımsız yayın öncesi inceleme
 

@@ -9,7 +9,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = "https://aluplan.com.tr"
 SITE_DESCRIPTION_PREFIX = "1995'ten beri Türkiye'nin güvenilir ALLPLAN distribütörü"
-RELEASE_PATHS = ["/2027/features", "/2027/max", "/2027/civil", "/2027/frilo", "/2027/scia", "/2027/compare"]
+RELEASE_PATHS = ["/2027/features", "/2027/max", "/2027/civil", "/2027/frilo", "/2027/scia", "/2027/compare", "/product-lifecycle"]
 PRODUCT_NAMES = {
     "/2027/features": "ALLPLAN 2027",
     "/2027/max": "Allplan Max",
@@ -32,7 +32,11 @@ def graph_types(json_ld: dict) -> dict:
 
 class ReleaseRouteSourceTests(unittest.TestCase):
     def test_no_preview_labels(self):
-        sources = [*(ROOT / "src/app/2027").rglob("page.tsx"), ROOT / "src/lib/release-2027-routes.ts"]
+        sources = [
+            *(ROOT / "src/app/2027").rglob("page.tsx"),
+            ROOT / "src/app/product-lifecycle/page.tsx",
+            ROOT / "src/lib/release-2027-routes.ts",
+        ]
         offenders = [
             str(p.relative_to(ROOT))
             for p in sources
@@ -46,6 +50,17 @@ class ReleaseRouteSourceTests(unittest.TestCase):
             with self.subTest(route=route):
                 self.assertIn(f"buildRelease2027Metadata('{route}')", source)
                 self.assertIn(f"serializeJsonLd(buildRelease2027JsonLd('{route}'))", source)
+
+    def test_product_lifecycle_moved_out_of_preview(self):
+        self.assertFalse((ROOT / "src/app/preview/product-lifecycle").exists())
+        home = (ROOT / "src/components/sections/Homepage2027PreviewView.tsx").read_text(encoding="utf-8")
+        self.assertIn('href="/product-lifecycle"', home)
+        self.assertNotIn("/preview/product-lifecycle\"", home)
+        config = (ROOT / "next.config.mjs").read_text(encoding="utf-8")
+        self.assertRegex(
+            config,
+            r"source: '/preview/product-lifecycle',\s*destination: '/product-lifecycle',\s*permanent: true",
+        )
 
     def test_compare_has_no_internal_review_note(self):
         source = (ROOT / "src/app/2027/compare/page.tsx").read_text(encoding="utf-8")
@@ -94,7 +109,9 @@ class ReleaseRouteRuntimeTests(unittest.TestCase):
                 self.assertEqual(graph_types(self.data["live"]["jsonLd"][route])["SoftwareApplication"]["name"], name)
 
     def test_compare_jsonld_has_no_software_application(self):
-        self.assertNotIn("SoftwareApplication", graph_types(self.data["live"]["jsonLd"]["/2027/compare"]))
+        for route in ("/2027/compare", "/product-lifecycle"):
+            with self.subTest(route=route):
+                self.assertNotIn("SoftwareApplication", graph_types(self.data["live"]["jsonLd"][route]))
 
     def test_jsonld_breadcrumb_ends_at_route(self):
         for route in RELEASE_PATHS:

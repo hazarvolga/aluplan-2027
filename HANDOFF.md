@@ -1,5 +1,113 @@
 # Oturum devri
 
+## 03.11.2026 — Yerel teslim durumu
+- Ana sayfa, ürün/çözüm kartları, hero alt çizgisi ve görsel performans değişiklikleri bu kayıtla birlikte `codex/design-phase-4` üzerinde yerel commit kapsamına alındı. Push, merge veya yayın yapılmadı. Önceki kayıtların “commit edilmedi” ifadeleri tarihsel durumdur; güncel durumu bu bölüm belirtir.
+- Commit öncesi `pnpm test`: 505 test başarılı, 4 atlama; 46/46 parite ve token/stil kontrolleri geçti. `pnpm typecheck` başarılı. Son ürün CTA düzeltmesi yedi kartta tarayıcıda ve bağımsız incelemede doğrulandı. Gerçek mobil cihaz/saha performansı, WebP desteklemeyen tarayıcıda fallback ve yayın/medya izinleri hâlâ açık.
+- Sonraki önerilen adım: beş çözüm hub sayfasında içerik ve hedef paritesini inceleyip yeniden tasarım önerisiyle birlikte olası adresler ve 301 haritasını kullanıcı onayına sunmak; onay gelmeden URL değiştirme.
+
+## 03.11.2026 — Çözüm hub sayfaları ve yerel commit hazırlığı
+- Kullanıcı mevcut çalışmanın commit edilmesini ve ana sayfadaki beş çözüm kartının hedeflerinin yeni tasarımla değerlendirilmesini istedi. Kartlar `/solutions-v2/building-design`, `/infrastructure`, `/construction`, `/addons`, `/other` hub'larına gider; ortak `SolutionHubSection` ve `SolutionDirectoryCard` kullanırlar. Hero ve sayfa sonu zaten ortaktır. Tasarım ve rota değişikliği henüz uygulanmadı.
+- Dikkat: genel `/solutions-v2/addons` ile mevcut `/solutions/addons` aynı kapsam değildir; ikincisi CDS eklentileri sayfasıdır. Hub ve `/solutions` kataloğu arasında BIMPLUS ve AX3000 hedefleri dahil farklılıklar vardır; içerik/bağlantı haritası çıkarılmadan birleştirilmemeli. Türkçe URL örnekleri yalnız öneri; değişiklik için eksiksiz 301 haritası ve kullanıcı onayı gerekli. Next.js mevcut permanent redirects 308 verdiğinden 301 uygulama yöntemi ayrıca doğrulanmalı.
+- Commit öncesi ürün kartlarında kaynak “Detayları Görüntüle” etiketinin görünmediği tespit edildi; görünür metin ve erişilebilir bağlantı adına geri eklendi. Yedi kart tarayıcıda kontrol edildi. `next-env.d.ts`, `.claude/`, `.superpowers/` ve `premium-audit.json` yerel/üretilmiş durum olarak teslim kapsamı dışında korunur. Commit yalnız yereldir; push veya yayın isteği verilmedi.
+
+## 03.11.2026 — Hero çizgisi inceltme
+- Ortak hero alt çizgisi kullanıcı isteğiyle 2 px'den 1 px'e indirildi. Kaynaklar sayfasında yerel tarayıcıda görsel ve hesaplanan kalınlık kontrol edildi; styles:check geçti. Değişiklik yerel, commit edilmedi.
+
+## 03.11.2026 — Hero alt çizgisi
+- Kullanıcı isteğiyle üstteki kısa `PageEntrance` ve ana sayfa içindeki yinelenen kısa çizgi kaldırıldı. Ortak `HeroBottomLine` ana sayfa, ortak alt sayfa, ürün, kompakt ve Scalypso hero ailelerinin alt kenarında soldan sağa tam genişlikte 1 sn'de çizilir ve kalır. Mobilde/reduced-motion'da animasyonsuz statik çizgi görünür; içerik ve linkler etkilenmez.
+- Yerel üretim derlemesi başarılı, `pages.json` içindeki 102 rotadan 101'inde bir çizgi, hero'suz `/references` üzerinde sıfır çizgi doğrulandı. Masaüstü ana sayfa, Yol ve Demiryolu, FRILO, Kaynaklar, Scalypso Modeler; 355px mobil ve 773px reduced-motion kontrol edildi. 504 test (4 atlama), 46 parite, typecheck ve styles:check geçti; bağımsız incelemede kritik/yüksek bulgu yok. Gerçek cihaz/açık tema görsel kabulü bekliyor; commit edilmedi.
+
+## 03.11.2026 — Eklentiler sayfası: sonraki iş
+- Kullanıcı `/solutions-v2/addons` sayfasının animasyon çalışmaları bittikten sonra yeniden tasarlanmasını ve önerilen `/eklentiler` adresinin değerlendirilmesini istedi. Önce `/solutions/addons`, mevcut `/solutions-v2/addons` ve olası `/eklentiler`/`/addon` rotaları içerik, hedef ve kapsam bakımından karşılaştırılacak; URL değişikliği için 301 haritası hazırlanıp kullanıcı onayına sunulacak.
+- Ekranda işaretlenen sayfa sonu alanı ortak bileşen olarak kullanılmalı: mevcut `PageEndConversion` ve politikasının gerçekten hangi rotalarda kullanıldığı bu sonraki işte doğrulanacak. Şimdilik sayfa/URL değişikliği yapılmadı.
+
+## 03.11.2026 — Tüm sayfalarda dekoratif giriş
+- Kullanıcının onayladığı hafif giriş `PageEntrance` ile ortak `SiteShell` içine eklendi: çizgi 600 ms, kare 180 ms sonra 300 ms; ana sayfa mevcut çizgisi 180 ms gecikir. İçerik/CTA beklemez; 768 px altında ve reduced-motion'da gizli; rota değişiminde yalnız işaret yenilenir, hash'te aynı kalır. Yeni bağımlılık veya genel sayfa geçişi yok.
+- Üretim build ve 102 doğrudan sayfanın server HTML işareti kontrol edildi; Eklentiler/Kaynaklar masaüstü, Kaynaklar 355 px mobil, reduced-motion, JS kapalı ve rota/hash davranışı kontrol edildi. Bağımsız incelemenin main konumlandırma riski, sıfır yükseklikli dekorasyonla giderildi. Tüm rotalar ayrı ayrı görsel incelenmedi.
+- Mobil ağ benzetiminde Eklentiler LCP 3.108/3.116→3.144/3.132 ms, CLS her ölçümde 0,000286, script +157 bayt. Ölçümden sonra işaret konumu görünürlük için 2 px ayarlandı ve görsel kontrol edildi; bu son CSS düzeltmesi yeniden ölçülmedi. İkişer ölçüm gerçek saha/INP değildir; ayrıntı `docs/verification/motion-pilot-performance-2026-11-03.md`. 504 test geçti (4 atlama); kullanıcının görsel kabulü bekleniyor, commit edilmedi.
+
+## 03.11.2026 — SCIA yükleme ve tüm sayfalarda hareket isteği
+- Kullanıcı görsel yükleme sırası/zamanlaması ve ardından bütün sayfalarda hafif giriş hareketi istedi. `/products/scia` alt bölümlerindeki yetenek ve proje görselleri lazy yapıldı, mevcut boyutları korundu. Üçer yerel mobil benzetim ölçümünde medyan LCP 6.076→4.764 ms, CLS 0; normal ağda akordeon ve galeri görselleri kontrol edildi. 501 test (4 atlama), parite ve tip/stil kontrolleri geçti. Yavaş ağda hızlı galeri seçimi ve gerçek cihaz doğrulaması açık; bağımsız incelemede kritik/yüksek sorun yok. Yerel, commit edilmedi.
+- `/solutions-v2/addons` kartlarında otomatik giriş animasyonu bulunmadığı, ortak hero'nun optimize/öncelikli olduğu görüldü. Tüm sayfa giriş hareketi için `docs/superpowers/specs/2026-11-03-premium-motion-design.md` içine yeni taslak eklendi; kullanıcının tasarım onayı bekleniyor, site geneline hareket uygulanmadı. Mobilde kapatma tercihi korunmalı.
+
+## 03.11.2026 — Ana sayfa hero yükleme iyileştirmesi
+- Yavaş mobil ağ izinde hero ile yarışan üç alt bölüm görselinin erken preload edildiği görüldü. `ProductTabs`, `DisciplineWorkflowSection` ve FlexSoft logosu lazy yapıldı; logoya 512×512 doğal ölçü eklendi. Aynı hero JPEG'den tam çözünürlüklü 105.794 bayt WebP üretildi (JPEG 268.054 bayt fallback olarak kaldı); lisans kaydı güncellendi.
+- Ayrı üretim derlemeleri, 355 CSS px / 4× CPU / 150 ms / 1,6 Mbit/sn ve üçer dönüşümlü yükleme ile: medyan LCP 7.844→3.040 ms; CLS her ölçümde 0,000016. Gerçek cihaz/saha ve INP değil; JPEG fallback WebP desteklemeyen gerçek tarayıcıda ayrıca denenmedi. Mobil/masaüstü hero, normal ağda Civil/rol sekme görselleri doğrulandı; yavaş bağlantıda sekme ve uzun gezinme CLS kontrolü açık. Ayrıntı `docs/verification/motion-pilot-performance-2026-11-03.md`.
+- Tam test geçti: 500 Python testi (4 atlama), parite 46/46, stil/token; typecheck ve üretim derlemeleri başarılı. Bağımsız incelemede logo alanı ve test kapsamı bulguları düzeltildi. Değişiklikler yerel ve commit edilmedi; kullanıcı görsel kabulü bekliyor.
+
+## 03.11.2026 — Mobil hareket ve yavaş ağ ölçümü
+- Kullanıcı önerisiyle yeni hero ve öne çıkan ürün kartı giriş animasyonları 768 CSS px altında kapatıldı, tablet/masaüstü ve azaltılmış hareket koşulu korundu. Önceden mevcut sekme/smooth-scroll hareketleri bu kapsam dışında. 27 ilgili test, typecheck ve styles:check geçti; bağımsız incelemede kritik/yüksek bulgu yok. Mobil 355 px hero ve kart `animation:none`, tablet 773 px hero animasyonu etkin doğrulandı.
+- İki yerel üretim derlemesi, 4× CPU, 150 ms gecikme, yaklaşık 1,6 Mbit/sn, 355 px ve önbellek kapalı olarak ikişer kez ölçüldü: ana sayfa LCP öncesi 7,10/7,86 sn, sonrası 7,11/7,11 sn; `/products` öncesi 2,58/2,63 sn, sonrası 2,55/2,61 sn. CLS düşük; INP ve gerçek cihaz ölçülmedi. Ayrıntılar `docs/verification/motion-pilot-performance-2026-11-03.md` içinde. Ana sayfa hero görseli LCP adayı; neden ve iyileştirme ayrıca araştırılmalı. Genel sayfa geçişi eklenmedi.
+
+## 03.11.2026 — Hareket pilotu performans karşılaştırması
+- Pilotlu ve pilotsuz ayrı yerel üretim derlemeleri 355 CSS px, önbellek kapalı ve üçer yüklemeyle karşılaştırıldı. Ana sayfa medyan LCP 100→108 ms, ürünler 92→96 ms; script aktarımı yaklaşık +376/377 bayt. CLS ölçümleri çok düşük ve benzer aralıkta. Ham değerler ve sınırlar `docs/verification/motion-pilot-performance-2026-11-03.md` içinde.
+- Bunlar localhost laboratuvarı; gerçek mobil cihaz, yavaş ağ, saha LCP/CLS ve INP doğrulaması değildir. Kart animasyonu kaydırma sırasında ayrıca performans ölçümüne girmedi. Genel sayfa geçişi eklenmedi; kaynaklar ara başlıkları sonraki iş olarak bekliyor.
+
+## 03.11.2026 — Sayfa geçişi ve kaynak ara başlıkları
+- Kullanıcı sayfa geçişi kararını performans gözetilerek Codex'e bıraktı. Karar: mevcut hero/kart pilotunun üretim koşullarında performansı ölçülene kadar genel sayfa geçişi eklenmez; sonrasında yalnız kısa View Transition denemesi, azaltılmış hareket ve tarayıcı geri dönüşüyle değerlendirilebilir. Kurulu Next.js rehberi App Router desteğini belgeliyor; henüz ölçüm veya uygulama yok.
+- Kullanıcı `/kaynaklar` sayfasındaki “Öğren ve yardım al” ve diğer ara başlıkların daha önce kullanılan ortak başlık örnekleriyle daha sonra düzeltilmesini istedi. İlgili bileşen `src/components/sections/ResourcesDirectory.tsx`; bu isteğe şimdi dokunulmadı.
+
+## 03.11.2026 — Premium hareket pilotu
+- Onaylı pilot yerelde uygulandı: ana sayfa hero dekoratif görseli ve çizgisi ile `/products` ilk büyük kartı animasyonlu; kart ilk görünümde bir kez çalışır. Yeni bağımlılık eklenmedi. Kullanıcının mevcut düzenlemeleriyle aynı çalışma dalında, commit edilmeden duruyor.
+- Bağımsız inceleme tercih değişince kart animasyonunun tekrarlanması sorununu buldu; hareket bitiminde/azaltılmış hareket durumunda animasyon sınıfı kaldırılarak düzeltildi. Mobil 355 CSS pikselde koyu tema, yatay taşma, ilk/tekrar görünüm, azaltılmış hareket ve tercih değişimi; `/products` JS kapalı içerik kontrol edildi. Açık tema, gerçek cihaz ve tüm mobil kırpmalar henüz ayrıca görsel doğrulanmadı.
+- Typecheck, styles:check ve tam `pnpm test` geçti: 498 Python testi (4 atlama), 46 parite, token kontrolleri. Kaynak testi runtime davranışını tek başına kanıtlamaz. Önce/sonra güvenilir LCP, CLS, INP ve JS aktarımı ölçülemedi; hero hareketinin LCP etkisi belirsiz. Kullanıcı görsel kabulü ve performans karşılaştırması bekleniyor.
+- Kullanıcı sayfa geçişlerini sordu; yerel Next.js rehberi View Transitions yaklaşımını belgeliyor. Bu özellik pilot kapsamında uygulanmadı; ayrı tasarım/değerlendirme gerekir.
+
+## 03.11.2026 — Hareket tasarımı onayı ve pilot planı
+- Kullanıcı premium hareket dili tasarımını onayladı. İlk pilot planı `docs/superpowers/plans/2026-11-03-premium-motion-pilot.md`: ana sayfa hero ve `/products` ilk büyük kart, yeni bağımlılık olmadan; tüm siteye yayılım ve Lenis ayrı karar. Pilot planı ve yürütme yöntemi kullanıcı incelemesini bekliyor; uygulama yapılmadı.
+
+## 03.11.2026 — Kart hareketi kararı
+- Kullanıcının yorucu olmayan hareket talebi üzerine tasarım taslağına pilotta yalnız öne çıkan kartın görselinin ziyaret başına bir kez hareket etmesi, diğer kartların girişte sabit kalması işlendi. Tasarım onayı bekleniyor; uygulama yapılmadı.
+
+## 03.11.2026 — Premium hareket dili taslağı
+- Kullanıcı geçici karşılaştırmada C · Etkileyici seçeneğini seçti. Tasarım ve önceki çoklu inceleme kararları `docs/superpowers/specs/2026-11-03-premium-motion-design.md` içinde; uygulama veya bağımlılık onayı değil. Bağımsız belge kontrolünde kart görselinin sayfada görünürken de hareket edip etmeyeceği açık soru olarak belirlendi. Tasarım onayı ve sonraki planlama bekleniyor; belge commit edilmedi.
+
+## 03.11.2026 — Hareket dili geçici önizlemesi
+- Kullanıcının onayıyla ana sayfa ve kart için A sakin / B dengeli / C etkileyici hareket seçeneklerini karşılaştıran bağımsız geçici önizleme `.superpowers/brainstorm/62752-1793709852/content/motion-options.html` içinde hazırlandı. Ürün koduna uygulanmadı; CSS ile fikir deneniyor, GSAP/Lenis/React Bits kurulmadı. Kullanıcının görsel değerlendirmesi bekleniyor.
+
+## 03.11.2026 — Ürünler ve çözümler mobil kontrolü
+- Kullanıcı büyük görsellerin yüksekliğini uygun buldu. Yerel tarayıcıda 355 CSS piksel genişliğinde `/products` ve `/solutions` kontrol edildi: yatay taşma ve kontrol anında kırık görsel yok; kartlar tek sütuna geçiyor. Ürün kartları ile Mimari ve Altyapı grupları görsel incelendi; diğer büyük çözüm kartlarında 5:2 oranı doğrulandı. Diğer kartların tamamı tek tek görsel incelenmedi. Kod değişmedi.
+
+## 03.11.2026 — Büyük kart görseli daha yatay
+- Ortak büyük kart görsel oranı kullanıcı isteğiyle 2:1'den 5:2'ye değiştirildi; aynı genişlikte yükseklik %20 daha az. `/solutions` beş büyük kart ve `/products` ilk büyük kart oranı tarayıcıda doğrulandı. 16 ilgili test ve styles:check geçti; görsel kabul bekliyor, commit edilmedi.
+
+## 03.11.2026 — Büyük kart görsel yüksekliği
+- Kullanıcı isteğiyle `/solutions` ve `/products` ortak büyük kart görselleri 16:10'dan 2:1'e indirildi; görsel `cover` ile kırpılıyor. Tarayıcıda beş çözüm kartı ve ilk ürün kartı oranı doğrulandı, Mimari kartın masaüstü görünümü kontrol edildi. 16 ilgili test ve styles:check geçti; commit edilmedi, diğer kırpmaların görsel kabulü bekleniyor.
+
+## 03.11.2026 — Büyük kart metin hizası
+- `/products` ve `/solutions` ortak büyük kart stilinde metin görselin üstüne hizalandı. Yerel tarayıcıda beş çözüm grubunda görsel ve metin başlangıçları arasındaki fark 0 px ölçüldü. 16 ilgili test ve styles:check geçti; değişiklik commit edilmedi.
+
+## 03.11.2026 — Çözüm grubu başlık aralıkları
+- `/solutions` üzerindeki beş ara başlık ortak `SectionHeader` kullanmayı sürdürüyor. Tanımsız boşluk token'ı kaldırıldı; her grup öncesine `--space-stack-xl` üst boşluğu eklendi. Tarayıcıda masaüstünde beş grubun 40 px boşluğu doğrulandı.
+- 12 çözüm dizini testi, typecheck ve styles:check geçti; kod incelemesinde kritik/yüksek bulgu yok. Mobil görsel kontrol ve kullanıcı kabulü bekliyor; commit edilmedi.
+
+## 03.11.2026 — Çözümler sayfasında ürün düzeni
+- Kullanıcı isteğiyle `/solutions` katalog grupları `/products` ile aynı CSS düzenine taşındı: her grubun ilk öğesi geniş, diğerleri iki sütunlu; tüm kart bağlantılı. Mevcut 22 öğenin metinleri, görselleri ve hedefleri korunur; harici bağlantının yeni sekme davranışı sürer.
+- 11 çözüm dizini testi, typecheck ve styles:check geçti. Yerel tarayıcıda masaüstü koyu tema ve bağlantılar kontrol edildi; mobil ve ekran okuyucu deneyimi ayrıca doğrulanmadı. İncelemede görünür CTA metni korunacak şekilde düzeltildi. Değişiklik commit edilmedi; kullanıcının görsel değerlendirmesi bekleniyor.
+
+## 03.11.2026 — Ürün başlığı kare ölçüsü
+- Ana sayfa ürün başlığındaki kare 1cap ile başlığın büyük harf yüksekliğine bağlandı; desteklenmeyen tarayıcılar için em fallback var. Typecheck ve styles:check geçti, incelemede kritik/yüksek bulgu yok. Optik hizalamanın tarayıcıda kullanıcı tarafından kontrolü bekliyor; commit edilmedi.
+
+## 03.11.2026 — Ana sayfaya özel ürün başlığı
+- Ürün ara başlığı bağımsız HomepageProductHeading bileşenine ayrıldı: solda dekoratif kare, sağda 2027; diğer GroupHeader kullanımları korunuyor. İlgili 16 testten biri build eksikliğiyle atlandı, kalanları, typecheck ve styles:check geçti; incelemede kritik/yüksek bulgu yok. Görsel kabul bekliyor; commit edilmedi.
+
+## 03.11.2026 — Ana sayfa ürün ara başlığı: FRILO grup dili
+- Ürün sekmeleri üstündeki başlık ortak GroupHeader ile FRILO'daki numara/çizgi/sayı düzenine taşındı; h2 semantiği ve veri kaynağından ürün sayısı kullanılır. Diğer GroupHeader kullanımında h3 varsayılanı korunur.
+- İlgili 16 testten biri build eksikliği nedeniyle atlandı, diğerleri; typecheck ve styles:check geçti. İncelemede kritik/yüksek bulgu yok. Tarayıcı otomasyonu kapalı; görsel kabul bekliyor. Commit edilmedi.
+
+## 03.11.2026 — Ürün sekmeleri ara başlığı
+- Ürün sekmeleri öncesindeki ara başlık ortak SectionHeader tipografisiyle “ÜRÜN EKOSİSTEMİ / Her iş akışı için doğru araç” olarak güncellendi. Sekiz ilgili test, typecheck ve styles:check geçti; incelemede kritik/yüksek bulgu yok. Yerel tarayıcı otomasyonu kapalı, görsel kabul bekliyor. Commit edilmedi.
+
+## 03.11.2026 — Ana sayfa hero ve bölüm bağlantıları
+- Taslaktaki genel hero metni uygulandı. Çözümleri keşfedin `#solutions` bölümüne, Ürünleri keşfedin `#products` rol/paket alanına gider; hareket tercihine göre yumuşak/anlık kaydırma ve header boşluğu eklendi. Teklif hedefi korunur.
+- Ürün sekmelerinin önüne bölüm başlığı eklendi; 2026 yenilikleri bandı ana sayfadan kaldırıldı, sayfalar korunuyor. Önceki 2027 hero metni veri kaynağında duruyor. Önceki alt sayfa maskesi test beklentisi güncellendi.
+- Sekiz hedefli test, typecheck, styles:check geçti; CTA eklenmeden önce tam test 488 testte 4 atlama ile geçti. Tarayıcı otomasyonu Work ayarında kapalı olduğundan kaydırma ve header boşluğunun görsel kontrolü bekliyor. Değişiklikler commit edilmedi.
+
+## 03.11.2026 — Ana sayfa yerleşim taslağı ve restore point
+- Önceki uygulama değişiklikleri `d4ecd12` commit'iyle kaydedildi; yerel `restore/homepage-before-solutions-layout-20261103` etiketi bu commit'i işaret eder. Push yapılmadı. `next-env.d.ts` ve `.claude/` yerel durumları korunuyor.
+- Çözüm alanları öncelikli ayrı statik yerleşim taslağı `docs/previews/homepage-solutions-wireframe/` içinde; uygulama ana sayfası bu taslakla değiştirilmedi. Önizleme 127.0.0.1:8771 üzerinde sunuldu. Taslaktaki yeni metinler/gruplamalar öneridir, içerik ve URL eşlemesi ile kullanıcı kabulü gerektirir.
+- Typecheck, styles:check ve beş ana sayfa testi geçti; mevcut hero kırpılması ve mobil görünümün görsel kabulü açık. Tarayıcı otomasyonu Work ayarında kapalıdır.
+
 ## 03.11.2026 — Ana sayfa hero üst boşluğu
 - Yalnız ana sayfa `.alu-max-preview-hero` üst padding değeri `--space-stack-md` kadar azaltıldı (masaüstünde 16 px); alt padding ve diğer hero’lar korunuyor. styles:check geçti, incelemede kritik/yüksek bulgu yok. Tarayıcı erişimi Work ayarında kapalı olduğundan görsel kontrol bekliyor; commit edilmedi.
 

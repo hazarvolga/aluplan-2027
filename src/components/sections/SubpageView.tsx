@@ -37,6 +37,7 @@ import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
 import { MediaViewerDialogs } from './MediaViewerDialogs';
 import { FeatureRow, FeatureRowList } from './FeatureRow';
 import { SectionHeader } from './SectionHeader';
+import { ProductsOverview } from './ProductsOverview';
 
 const AX3000_DOCS_ROUTE = '/products/ax3000/dokumanlar';
 const AX3000_MECHANICAL_ROUTE = '/solutions/ax3000-mekanik-tesisat';
@@ -364,6 +365,7 @@ export function SubpageView({
         <section className="preview-section" aria-label="Sayfa içeriği">
           <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
             {/* Part A: Benefit & Specification Cards (with native 48x48 icon badge when sec.iconSrc exists) */}
+            {page.path === '/products' ? <ProductsOverview page={page} /> : <>
             {specSections.length > 0 && (
               <div
                 className="alu-spec-grid"
@@ -441,6 +443,7 @@ export function SubpageView({
                 })}
               </FeatureRowList>
             )}
+            </>}
 
             {/* Interactive States / Tabs captured during Phase 0 dynamic audit */}
             {page.interactiveStates && page.interactiveStates.length > 0 && (

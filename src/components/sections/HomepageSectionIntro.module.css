@@ -1,0 +1,5 @@
+.intro{background:var(--surface-page);padding-block:var(--space-inset-md)}
+.solutions{scroll-margin-top:8rem}
+:global(#products){scroll-margin-top:8rem}
+@media(prefers-reduced-motion:no-preference){:global(html):has(:global(.alu-max-preview-hero)){scroll-behavior:smooth}}
+@media(prefers-reduced-motion:reduce){:global(html):has(:global(.alu-max-preview-hero)){scroll-behavior:auto}}

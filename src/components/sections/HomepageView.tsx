@@ -7,8 +7,10 @@ import { AluIcon } from '@/components/ui/AluIcon';
 import { ProfessionalServicesSection } from './ProfessionalServicesSection';
 import { HomepageMaxPreviewHero } from './HomepageMaxPreviewHero';
 import { HomepageProductPreviewTabs } from './HomepageProductPreviewTabs';
-import { Homepage2026Links } from './Homepage2026Links';
 import { DisciplineWorkflowSection } from './DisciplineWorkflowSection';
+import { HomepageProductHeading } from './HomepageProductHeading';
+import { HeroBottomLine } from './HeroBottomLine';
+import styles from './HomepageSectionIntro.module.css';
 
 const data = getHomepageData();
 const releaseCountryLabel = `${data.releaseLabel} · TÜRKİYE`;
@@ -126,10 +128,11 @@ export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: bool
             </aside>
           </div>
         </div>
+        <HeroBottomLine />
       </section>}
 
       {/* H02: QuickLinks Command Ribbon */}
-      {previewMaxHero ? <HomepageProductPreviewTabs /> : <section className="alu-quick-ribbon" aria-label="Hızlı erişimler">
+      {previewMaxHero ? <><section className={styles.intro} aria-labelledby="homepage-products-heading"><div className="alu-container"><HomepageProductHeading /></div></section><HomepageProductPreviewTabs /></> : <section className="alu-quick-ribbon" aria-label="Hızlı erişimler">
         <div className="alu-container alu-quick-ribbon__grid">
           {data.quickLinks.map(([label, href], idx) => (
             <Link key={href} className="alu-quick-ribbon__item" href={href}>
@@ -141,12 +144,10 @@ export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: bool
         </div>
       </section>}
 
-      {previewMaxHero && <Homepage2026Links />}
-
       <DisciplineWorkflowSection id="products" roles={previewMaxHero ? data.roles.map(role => ({ ...role, image: ({ architect: '/assets/previews/workflow/architecture-web.jpg', engineer: '/assets/previews/workflow/engineering-web.jpg', fabricator: '/assets/previews/workflow/precast-web.jpg' } as Record<string, string>)[role.id] ?? role.image })) : data.roles} products={data.products} releaseLabel={data.releaseLabel} trialHref={TRIAL_CTA_URL} productsHref="/products" />
 
       {/* H04: Solutions Asymmetric Bento Grid */}
-      <section id="solutions" className="preview-section preview-section--subtle" aria-labelledby="solutions-heading">
+      <section id="solutions" className={`preview-section preview-section--subtle ${styles.solutions}`} aria-labelledby="solutions-heading">
         <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
           <div className="preview-section-heading">
             <div className="alu-stack">
@@ -272,6 +273,9 @@ export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: bool
                 className="preview-bimflex__logo"
                 src={data.bimflex.logo.src}
                 alt={data.bimflex.logo.alt}
+                loading="lazy"
+                width={512}
+                height={512}
               />
               <h2 id="bimflex-heading" className="alu-h1">
                 {data.bimflex.title}

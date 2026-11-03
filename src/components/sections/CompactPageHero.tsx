@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
 import styles from './CompactPageHero.module.css';
+import { HeroBottomLine } from './HeroBottomLine';
 
 export interface HeroCrumb {
   label: string;
@@ -17,7 +18,7 @@ interface CompactPageHeroProps {
 
 export function CompactPageHero({ crumbs, kicker, title, lead, children }: CompactPageHeroProps) {
   return (
-    <header className={styles.hero}>
+    <header className={styles.hero} style={{ position: 'relative' }}>
       <div className="alu-container">
         <nav className={styles.breadcrumb} aria-label="Sayfa yolu">
           {crumbs.map((crumb, index) => (
@@ -32,6 +33,7 @@ export function CompactPageHero({ crumbs, kicker, title, lead, children }: Compa
         <p className={styles.lead}>{lead}</p>
         {children}
       </div>
+      <HeroBottomLine />
     </header>
   );
 }

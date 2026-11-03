@@ -1,0 +1,213 @@
+[
+  {
+    "id": "basic",
+    "label": "ALLPLAN Basic",
+    "items": [
+      {
+        "title": "Georeferans Konumlandırma",
+        "description": "Survey Point ve Base Point ile hassas proje koordinasyonu ve gerçek kuzey ayarları.",
+        "tag": "YENİ"
+      },
+      {
+        "title": "Preoptima Entegrasyonu",
+        "description": "Erken tasarım aşamasında karbon ayak izi değerlendirmesi ve sürdürülebilirlik analizi.",
+        "tag": "YENİ"
+      },
+      {
+        "title": "Karanlık Mod",
+        "description": "Göz yorgunluğunu azaltan ve pil ömrünü uzatan modern karanlık mod arayüzü.",
+        "tag": "YENİ"
+      },
+      {
+        "title": "Model Görüntüleyici",
+        "description": "Tarayıcı tabanlı ücretsiz IFC model görüntüleyici ile anında erişim.",
+        "tag": "BULUT"
+      },
+      {
+        "title": "Gelişmiş Çakışma Yönetimi",
+        "description": "Filtrelenebilir çakışma testleri ve detaylı raporlama ile hatasız koordinasyon.",
+        "tag": "YENİ"
+      }
+    ]
+  },
+  {
+    "id": "concept",
+    "label": "ALLPLAN Concept",
+    "items": [
+      {
+        "title": "BSDD Entegrasyonu",
+        "description": "buildingSMART Data Dictionary ile standartlaştırılmış veri girişi.",
+        "tag": "YENİ"
+      },
+      {
+        "title": "AI Asistanı",
+        "description": "AEC süreçleri için özelleşmiş yapay zeka destekli rehberlik ve destek.",
+        "tag": "YAPAY ZEKA"
+      },
+      {
+        "title": "Gelişmiş Bilgi Paleti",
+        "description": "Esnek gruplama, otomatik toplamlar ve daha sezgisel veri yönetimi.",
+        "tag": "GELİŞTİRİLDİ"
+      },
+      {
+        "title": "Bulut Referansı (XRef)",
+        "description": "BIMPLUS üzerinden IFC, DWG ve PDF dosyalarını bulut referansı olarak ekleme.",
+        "tag": "YENİ"
+      },
+      {
+        "title": "Geopackage Desteği",
+        "description": "CBS verilerinin (Shapefile vb.) doğrudan içe aktarımı ve arazi uyumu.",
+        "tag": "YENİ"
+      },
+      {
+        "title": "Serbest Merdiven",
+        "description": "Kurallara bağlı kalmadan özgür formda merdiven modelleme aracı.",
+        "tag": "GELİŞTİRİLDİ"
+      },
+      {
+        "title": "Çok Katmanlı Döşeme",
+        "description": "Döşeme katmanlarının hassas yönetimi ve birleşim detayları.",
+        "tag": "GELİŞTİRİLDİ"
+      },
+      {
+        "title": "2D Belge Kırpma",
+        "description": "Bindirme (Overlay) yöneticisi ile 2D planların sadece ilgili kısımlarını gösterin.",
+        "tag": "YENİ"
+      },
+      {
+        "title": "Bluebeam Bağlantısı",
+        "description": "Bluebeam Studio ile doğrudan 2D/3D PDF iş akışı entegrasyonu.",
+        "tag": "YENİ"
+      }
+    ]
+  },
+  {
+    "id": "professional",
+    "label": "ALLPLAN Professional",
+    "items": [
+      {
+        "title": "IDS Tabanlı Veri",
+        "description": "Information Delivery Specification (IDS) ile otomatik nitelik kontrolü ve doğrulama.",
+        "tag": "YENİ"
+      },
+      {
+        "title": "Grafik Geçersiz Kılma",
+        "description": "Model görünümünü kurallara göre otomatik renklendirme ve stilize etme.",
+        "tag": "YENİ"
+      },
+      {
+        "title": "Donatıdan Şantiyeye",
+        "description": "Kağıtsız, tamamen dijital model üzerinden donatı montaj iş akışı.",
+        "tag": "DEVRİMSEL"
+      },
+      {
+        "title": "Otomatik Kolon Donatısı",
+        "description": "Farklı bölge ve kurallara göre kolon donatılarının otomatik yerleşimi.",
+        "tag": "OTOMASYON"
+      },
+      {
+        "title": "Strüktürel Çerçeveleme",
+        "description": "Çelik konstrüksiyon bağlantılarının otomatik güncellenmesi ve detaylandırılması.",
+        "tag": "GELİŞTİRİLDİ"
+      },
+      {
+        "title": "Kural Bazlı Ölçülendirme",
+        "description": "Prefabrik elemanlar için otomatik, kural tabanlı ölçü çizgileri.",
+        "tag": "PREFAB"
+      },
+      {
+        "title": "Yerel Görünümler",
+        "description": "Ana modelden bağımsız, ölçeklenebilir ve detaylandırılabilir yerel görünümler.",
+        "tag": "PREFAB"
+      },
+      {
+        "title": "Parça Numaralandırma",
+        "description": "Prefabrik elemanların üretim sırası ve lojistiği için akıllı numaralandırma.",
+        "tag": "PREFAB"
+      }
+    ]
+  },
+  {
+    "id": "ultimate",
+    "label": "ALLPLAN Ultimate",
+    "items": [
+      {
+        "title": "Birleşik Arazi Modeli",
+        "description": "Yüksek performanslı, hassas ve büyük ölçekli yeni dijital arazi motoru.",
+        "tag": "YENİ"
+      },
+      {
+        "title": "Parametrik Tünel",
+        "description": "Eksen ve kesit bazlı, tam parametrik tünel modelleme yetenekleri.",
+        "tag": "YENİ"
+      },
+      {
+        "title": "3B Yol Kavşağı",
+        "description": "Düşey profil kontrolü ile daha hassas ve akıcı yol kesişimleri.",
+        "tag": "GELİŞTİRİLDİ"
+      },
+      {
+        "title": "BIMPLUS Model Aktarımı",
+        "description": "Altyapı modellerinin (yol, köprü) doğrudan buluta entegrasyonu.",
+        "tag": "ENTEGRASYON"
+      },
+      {
+        "title": "Parametrik Kesitler",
+        "description": "Altyapı elemanları için esnek ve güçlü 2D/3D parametrik kesit editörü.",
+        "tag": "GELİŞTİRİLDİ"
+      },
+      {
+        "title": "Temel ve Kazı",
+        "description": "Karmaşık kazı çukurları ve iksa sistemleri için iyileştirilmiş araçlar.",
+        "tag": "GELİŞTİRİLDİ"
+      }
+    ]
+  },
+  {
+    "id": "civil",
+    "label": "CIVIL",
+    "items": [
+      {
+        "title": "Altyapı Yapı Strüktürü",
+        "description": "Köprü ve tünel projeleri için bina benzeri kat ve yapı yönetimi.",
+        "tag": "YENİ"
+      },
+      {
+        "title": "3B Katman Yönetimi",
+        "description": "Altyapı modellerinde disiplinler arası katman ve görünürlük kontrolü.",
+        "tag": "YENİ"
+      },
+      {
+        "title": "Hacimsel FEM",
+        "description": "Köprü ayakları ve temeller için 3D solid (hacim) sonlu elemanlar analizi.",
+        "tag": "TEKNİK ÖNİZLEME"
+      },
+      {
+        "title": "Prefabrik Köprü",
+        "description": "Öngerilmeli kirişli köprüler için hızlandırılmış modelleme iş akışları.",
+        "tag": "GELİŞTİRİLDİ"
+      }
+    ]
+  },
+  {
+    "id": "precast",
+    "label": "PRECAST",
+    "items": [
+      {
+        "title": "Filigran Döşeme Çözümü",
+        "description": "Yarı prefabrik döşemeler için donatı ve hasır otomasyonu.",
+        "tag": "OTOMASYON"
+      },
+      {
+        "title": "Gizli Donatı Gösterimi",
+        "description": "Beton içinde kalan ve çıkan donatıların çizimlerde otomatik ayrımı.",
+        "tag": "YENİ"
+      },
+      {
+        "title": "Özelleştirilebilir Metraj",
+        "description": "ERP sistemlerine uygun, esnek ve kural tabanlı metraj raporları.",
+        "tag": "VERİ"
+      }
+    ]
+  }
+]

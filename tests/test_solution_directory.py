@@ -259,7 +259,27 @@ class SolutionDirectoryBoundaryTests(unittest.TestCase):
             with self.subTest(component=relative):
                 self.assertNotIn("'use client'", component)
                 self.assertIn("data-solution-directory", component)
-                self.assertIn("<SolutionDirectoryCard", component)
+        self.assertIn("<SolutionDirectoryCard", read("src/components/sections/SolutionHubSection.tsx"))
+
+    def test_catalog_uses_compact_rows_and_preserves_item_content(self):
+        catalog = read("src/components/sections/SolutionCatalogSection.tsx")
+        self.assertNotIn("<SolutionDirectoryCard", catalog)
+        self.assertIn("group.catalogItems.map", catalog)
+        self.assertIn("item.description", catalog)
+        self.assertIn("item.image.alt", catalog)
+        self.assertIn("item.external ? '_blank' : undefined", catalog)
+        self.assertIn("item.external ? 'noopener noreferrer' : undefined", catalog)
+        self.assertIn("styles.featured", catalog)
+        self.assertIn("styles.productLink", catalog)
+        self.assertIn("ProductsOverview.module.css", catalog)
+
+    def test_catalog_group_headings_share_spacing_and_component(self):
+        catalog = read("src/components/sections/SolutionCatalogSection.tsx")
+        css = read("src/components/sections/SolutionCatalogSection.module.css")
+        self.assertIn('<SectionHeader kicker=', catalog)
+        self.assertIn('className={`alu-stack ${catalogStyles.group}`}', catalog)
+        self.assertIn('padding-top: var(--space-stack-xl)', css)
+        self.assertNotIn('--space-stack-2xl', catalog)
 
 
 if __name__ == "__main__":

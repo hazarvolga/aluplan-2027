@@ -6,6 +6,7 @@ import { MAIN_QUOTE_FORM_URL, TRIAL_CTA_URL } from '@/lib/site-shared';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { isReleaseContentEnabled } from '@/lib/release-flags';
 import { heroLead } from '@/lib/hero-lead';
+import { HeroBottomLine } from './HeroBottomLine';
 import type {
   HeroBackgroundSources,
   HeroVisualAssetKind,
@@ -160,6 +161,7 @@ export function SubpageHeroSection({
           </figure>
         )}
       </div>
+      <HeroBottomLine />
     </section>
   );
 }

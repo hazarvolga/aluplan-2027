@@ -134,7 +134,7 @@ export function DisciplineWorkflowSection({ id, roles, products, releaseLabel, t
 
               {activeRole.image && (
                 <div className="alu-pathway-visual-frame">
-                  <img src={activeRole.image} alt={`${activeRole.label} — ${activeRole.title}`} />
+                  <img src={activeRole.image} alt={`${activeRole.label} — ${activeRole.title}`} loading="lazy" />
                   <div className="alu-pathway-visual-frame__caption">
                     <span>{activeRole.label} · {activeRole.title}</span>
                     <span>IFC 4.3 · OPENBIM</span>

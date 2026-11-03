@@ -14,6 +14,12 @@ PARTS = ROOT / "src/components/sections/ProductPageParts.tsx"
 
 
 class ProductPagePartsTests(unittest.TestCase):
+    def test_scia_below_fold_images_are_lazy_and_keep_dimensions(self):
+        for name in ('CapabilityAccordion.tsx', 'ProjectCarousel.tsx'):
+            source = (ROOT / 'src/components/sections' / name).read_text(encoding='utf-8')
+            with self.subTest(component=name):
+                self.assertRegex(source, r'<img[^>]*width=\{1536\}[^>]*height=\{864\}[^>]*loading="lazy"')
+
     def test_parts_define_the_shared_blocks(self):
         source = PARTS.read_text(encoding="utf-8")
         for name in ("ProductTabNav", "ProductEditionsBand", "ProductContentSection", "ProductFaq"):

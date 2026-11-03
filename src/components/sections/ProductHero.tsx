@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react';
 import styles from './ProductHero.module.css';
+import { HeroBottomLine } from './HeroBottomLine';
 
 type Action = { label: string; href: string; variant: 'primary' | 'secondary' };
 
@@ -21,5 +22,6 @@ export function ProductHero({ eyebrow, title, description, image, actions, highl
       {highlights && highlights.length > 0 && <ul className={styles.highlights}>{highlights.map(item => <li key={item}>{item}</li>)}</ul>}
       <div className={styles.actions}>{actions.map(action => <a key={action.href} className={`alu-button alu-button--${action.variant} alu-button--md`} href={action.href}>{action.label}</a>)}</div>
     </div>
+    <HeroBottomLine />
   </section>;
 }

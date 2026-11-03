@@ -467,12 +467,26 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
         self.assertIn("object-fit: contain", styles)
         self.assertIn("object-position: center right", styles)
         self.assertIn("object-fit: cover", styles)
-        mask_value = re.escape(
-            "linear-gradient(90deg, transparent 0%, transparent 28%, "
-            "var(--surface-page) 82%, var(--surface-page) 100%)"
+        image_rules = re.findall(
+            r"\.alu-subpage-hero--background-only \.alu-subpage-hero__bg img \{([^}]*)\}",
+            styles, re.DOTALL,
         )
-        self.assertRegex(styles, rf"(?m)^\s*mask-image: {mask_value};$")
-        self.assertRegex(styles, rf"(?m)^\s*-webkit-mask-image: {mask_value};$")
+        self.assertGreaterEqual(len(image_rules), 2)
+        desktop_image, mobile_image = image_rules[0], image_rules[-1]
+        desktop_mask = "linear-gradient(90deg, transparent 0%, transparent 5%, var(--surface-page) 78%)"
+        self.assertIn(f"mask-image: {desktop_mask};", desktop_image)
+        self.assertIn(f"-webkit-mask-image: {desktop_mask};", desktop_image)
+        self.assertIn("mask-image: none;", mobile_image)
+        self.assertIn("-webkit-mask-image: none;", mobile_image)
+        mobile_section = styles[styles.index('@media (max-width: 40rem) {', styles.index(desktop_image)):]
+        mobile_backdrop = re.search(
+            r"\.alu-subpage-hero--background-only \.alu-subpage-hero__bg \{([^}]*)\}",
+            mobile_section, re.DOTALL,
+        )
+        self.assertIsNotNone(mobile_backdrop)
+        mobile_mask = "linear-gradient(180deg, var(--surface-page) 0%, var(--surface-page) 46%, transparent 88%, transparent 100%)"
+        self.assertIn(f"mask-image: {mobile_mask};", mobile_backdrop.group(1))
+        self.assertIn(f"-webkit-mask-image: {mobile_mask};", mobile_backdrop.group(1))
         panel_rule = re.search(
             r"\.alu-subpage-hero--background-only \.alu-subpage-hero__content-panel \{([^}]*)\}",
             styles,

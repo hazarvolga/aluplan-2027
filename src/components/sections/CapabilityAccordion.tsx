@@ -13,6 +13,6 @@ export function CapabilityAccordion({ items }: { items: readonly Capability[] })
       <h3><button type="button" id={`${id}-button-${index}`} aria-expanded={active === index} aria-disabled={active === index} aria-controls={`${id}-panel-${index}`} onClick={() => setSelected(index)}>{item.title}<span aria-hidden="true">{active === index ? '−' : '+'}</span></button></h3>
       <div id={`${id}-panel-${index}`} role="region" aria-labelledby={`${id}-button-${index}`} hidden={active !== index}><p>{item.description}</p></div>
     </div>)}</div>
-    <img className={styles.image} src={items[active].image} alt={items[active].alt} width={1536} height={864} />
+    <img className={styles.image} src={items[active].image} alt={items[active].alt} width={1536} height={864} loading="lazy" />
   </div>;
 }

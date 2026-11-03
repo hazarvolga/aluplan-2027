@@ -16,7 +16,13 @@ BUILT = ROOT / ".next/server/app/kaydedilmis-webinarlar.html"
 INVENTORY = (ROOT / "docs/00-inventory/page-content.md").read_text(encoding="utf-8")
 QUOTE_FORM = "https://forms.office.com/r/hXhnKAG912"
 SOURCE_WEBINAR_COUNT = 13
-CHANNEL_ADDITIONS = {"Allplan Bridge 2022 Webinar": "tTQ1fL-9P9M", "BIMX5 Kurum Rapor Eklentisi": "3L-AuAXlqz0"}
+CHANNEL_ADDITIONS = {
+    "Allplan Akıllı BIM Eklentisi ile İmar Yönetmeliği Uygulaması": "HmRaR_NeVQA",
+    "ALLPLAN ile Her Yerde ve Her Zaman Çalışma": "FUwkV_UcDso",
+    "Allplan Bridge 2022 Webinar": "tTQ1fL-9P9M",
+    "BIMX5 Kurum Rapor Eklentisi": "3L-AuAXlqz0",
+}
+BIM1SOHBET = "Bim1Sohbet"
 WEBINAR_COUNT = SOURCE_WEBINAR_COUNT + len(CHANNEL_ADDITIONS)
 # Recordings found on the Allplan Turkey channel (@AllplanTurkey) and matched by title and date.
 YOUTUBE_LINKS = {
@@ -28,6 +34,8 @@ YOUTUBE_LINKS = {
     "Soru Cevap Semineri": "UaDnMdrmJ4w",
     "Allplan Engineering 2021 ve Yenilikler": "MhtYjJKLZtc",
     "Allplan 2018-2021: İpuçları": "vXZBQ0IPVsQ",
+    # Same description as the card text; the recording is on the Bim1Sohbet channel (@bim1sohbet65).
+    "Bimfili Youtube Kanalı: BIMX5 Nedir?": "b_i5Lvucy2s",
     **CHANNEL_ADDITIONS,
 }
 
@@ -126,6 +134,18 @@ class RecordedWebinarsSourceTests(unittest.TestCase):
             self.assertEqual(entries[title]["image"], "")
         self.assertEqual(entries["Allplan Bridge 2022 Webinar"]["date"], "19 Nisan 2022")
         self.assertEqual(entries["BIMX5 Kurum Rapor Eklentisi"]["date"], "9 Temmuz 2021")
+        self.assertEqual(entries["Allplan Akıllı BIM Eklentisi ile İmar Yönetmeliği Uygulaması"]["date"], "20 Ağustos 2022")
+        self.assertEqual(entries["ALLPLAN ile Her Yerde ve Her Zaman Çalışma"]["date"], "17 Ağustos 2022")
+        for title in ("Allplan Akıllı BIM Eklentisi ile İmar Yönetmeliği Uygulaması", "ALLPLAN ile Her Yerde ve Her Zaman Çalışma"):
+            self.assertEqual(entries[title].get("source"), BIM1SOHBET)
+        self.assertEqual(entries["Bimfili Youtube Kanalı: BIMX5 Nedir?"]["date"], "10 Haziran 2021")
+        self.assertEqual(
+            [entry["youtubeId"] for entry in webinar_entries() if not entry["youtubeId"]], [None] * 4
+        )
+
+    def test_the_media_grid_shows_the_broadcast_channel_as_the_card_subtitle(self):
+        page = (ROOT / "src/components/sections/RecordedWebinars.tsx").read_text(encoding="utf-8")
+        self.assertIn("subtitle: webinar.source", page)
 
     def test_data_carries_the_overview_benefits_audience_and_cta(self):
         text = data_text()
@@ -168,7 +188,7 @@ class RecordedWebinarsRenderTests(unittest.TestCase):
         expected = [
             *BENEFITS, *AUDIENCE, *(part for pair in STATS for part in pair),
             "Kaydedilmiş Webinarlar", "Genel Bakış", "Kazanımlarınız", "Kimler İçin Uygun?", "Hazır mısınız?", "Webinar Takvimine Göz At",
-            *(value for entry in entries for value in (entry["title"], entry["date"], entry["description"]) if value),
+            *(value for entry in entries for value in (entry["title"], entry["date"], entry["description"], entry.get("source")) if value),
         ]
         self.assertEqual([item for item in expected if item not in shown], [])
 

@@ -6,6 +6,8 @@ export interface RecordedWebinar {
   image: string;
   /** YouTube video id of the recording; null until the link is known. */
   youtubeId: string | null;
+  /** Channel that carries the recording, when it is not the Allplan Turkey channel. */
+  source?: string;
 }
 
 export interface RecordedWebinarsContent {
@@ -28,7 +30,7 @@ export interface RecordedWebinarsContent {
 }
 
 // Content of the former /solutions-v2/training/webinar page (2026 source), kept here after that page was removed.
-// Recording links and the two entries without a poster come from the Allplan Turkey YouTube channel (@AllplanTurkey).
+// Recording links and the two entries without a poster come from the Allplan Turkey YouTube channel (@AllplanTurkey); the two Bim1Sohbet entries (@bim1sohbet65) are broadcasts with Ahmet Melih Dinekli.
 export const recordedWebinars: RecordedWebinarsContent = {
   "kicker": "BİLGİ PAYLAŞIMI",
   "title": "Webinarlar",
@@ -85,6 +87,22 @@ export const recordedWebinars: RecordedWebinarsContent = {
   "archiveTitle": "Kaydedilmiş Webinarlar",
   "archiveLead": "Kaçırdığınız veya tekrar izlemek istediğiniz webinarlarımıza buradan ulaşabilirsiniz.",
   "webinars": [
+    {
+      "title": "Allplan Akıllı BIM Eklentisi ile İmar Yönetmeliği Uygulaması",
+      "date": "20 Ağustos 2022",
+      "description": "Allplan ile projelerinizi doğrudan 2018'de yürürlüğe giren Planlı Alanlar İmar Yönetmeliğine göre nasıl uyumlu üretebiliriz?",
+      "image": "",
+      "youtubeId": "HmRaR_NeVQA",
+      "source": "Bim1Sohbet"
+    },
+    {
+      "title": "ALLPLAN ile Her Yerde ve Her Zaman Çalışma",
+      "date": "17 Ağustos 2022",
+      "description": "Pandemi sürecinde uzaktan çalışmanın yollarını konuşacağız. Konuğumuz Y.Mimar Mühendis Ahmet Melih Dinekli.",
+      "image": "",
+      "youtubeId": "FUwkV_UcDso",
+      "source": "Bim1Sohbet"
+    },
     {
       "title": "Allplan Bridge 2022 Webinar",
       "date": "19 Nisan 2022",
@@ -153,7 +171,7 @@ export const recordedWebinars: RecordedWebinarsContent = {
       "date": "10 Haziran 2021",
       "description": "Ahmet Melih Dinekli ve Ferdi Dinekli'nin anlatımı ile 'BIMX5 Nedir?' ve nasıl kullanılır?",
       "image": "/assets/images/webinars/bimx5-youtube.jpeg",
-      "youtubeId": null
+      "youtubeId": "b_i5Lvucy2s"
     },
     {
       "title": "ALLPLAN PRECAST SEVİYENİZİ YÜKSELTİN",

@@ -15,6 +15,7 @@ const archive: StructuredMediaGridSection = {
   items: content.webinars.map((webinar) => ({
     title: webinar.title,
     badge: webinar.date,
+    subtitle: webinar.source,
     description: webinar.description,
     imageSrc: webinar.image,
     youtubeId: webinar.youtubeId

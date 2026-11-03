@@ -45,10 +45,11 @@ class EditionCardVariantTests(unittest.TestCase):
         self.assertIn("position:absolute", number)
         self.assertIn("right:var(--card-padding)", number)
 
-    def test_icon_chip_uses_accent_tokens(self):
+    def test_icon_sits_in_the_corner_without_a_box(self):
         chip = re.search(r"\.iconChip\{[^}]*\}", CARDS_CSS).group(0)
-        self.assertIn("var(--accent-bg)", chip)
         self.assertIn("var(--accent-fg)", chip)
+        self.assertNotIn("background", chip)
+        self.assertNotIn("border", chip)
         self.assertIn("position:absolute", chip)
         self.assertIn("right:var(--card-padding)", chip)
 

@@ -17,7 +17,7 @@ export function EditionCards({ title, editions, kicker = 'SÜRÜMLER', lead, var
     <div className={styles.heading}><SectionHeader kicker={kicker} title={title} lead={lead} id={headingId} /></div>
     <div className={gridClass} data-variant={variant}>{editions.map((edition, index) => <article className={styles.card} key={edition.title}>
       {variant === 'steps' && <p className={styles.stepLabel}><span className={styles.stepNumber} aria-hidden="true">{stepNumber(index)}</span>{edition.label}</p>}
-      {variant === 'icons' && edition.icon && <span className={styles.iconChip}><AluIcon name={edition.icon} /></span>}
+      {variant === 'icons' && edition.icon && <span className={styles.iconChip}><AluIcon name={edition.icon} size="lg" /></span>}
       <h3>{edition.title}</h3>
       {edition.description && <p>{edition.description}</p>}
       {edition.items && edition.itemsLabel && <p className={styles.itemsLabel}>{edition.itemsLabel}</p>}

@@ -16,6 +16,7 @@ PROJECT_GENERATED = [
 MANUFACTURER = [
     *(f"public/assets/previews/scia/capability-{n}.jpg" for n in range(1, 5)),
     *(f"public/assets/previews/scia/story-{n}.jpg" for n in range(1, 7)),
+    *(f"public/assets/previews/allplan-civil-2027/new-2027-{name}.png" for name in ("axis-grid", "stationing", "serial-elements")),
 ]
 
 

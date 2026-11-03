@@ -1,5 +1,12 @@
 # Oturum devri
 
+## 03.11.2026 — Civil 2027 yenilikleri `/2027/civil` sayfasına eklendi (commitlendi)
+
+- **Bulgu:** `/2027/civil` sayfası pazarlama klasöründen değil, 29.10.2026'da envanterlenen canlı Allplan Civil sayfasından (`docs/content-2027/allplan-canlı/allplan-civil.md`) üretilmişti; "New Text and Images – Civil Page" belgesindeki yeni özellikler sayfada yoktu.
+- **Eklendi:** "ALLPLAN Civil nedir?" bölümünün hemen altına "Allplan Civil'deki Yenilikler" bölümü: giriş paragrafı ve 3 yenilik (Otomatik Parametrik Eksen Gridi, Esnek Dağıtım ve İstasyonlama, Yeniden Kullanılabilir Seri Elemanlar), paylaşılan `MediaGridWithViewer` ile. Metin envanter taslağından (`src/data/allplan-civil-2027-news.ts`; `tests/test_civil_2027_news.py` birebir eşitliği korur). Görseller belgedeki üç dosyadır (`public/assets/previews/allplan-civil-2027/new-2027-*.png`, değiştirilmeden kopyalandı); `docs/brand/assets-license-log.md` içine üç "Manufacturer image / Pending" satırı eklendi ve `test_asset_license_log.py` kapsamına alındı.
+- **Not:** `/2027/features` sayfasındaki Civil kartları aynı görsellerin canlı siteden indirilmiş kopyalarını kullanıyor (yinelenen iki dosya); ikinci yenilik (istasyonlama) orada `Editable_Stationing.mp4` videosu, bu sayfada belgedeki görsel. Civil "Home Page Slides" belgesindeki görsel (Lammschlucht Köprüsü) ve altyazısı henüz kullanılmadı.
+- Kapılar: 398 test, 46/46 parite, 45/45 token, typecheck, build; bölüm tarayıcıda doğrulandı.
+
 ## 03.11.2026 — Rota taşıma, menü, ana sayfa başlıkları ve Allplan 2027 yenilik sayfaları (commitlendi)
 
 - **Rotalar taşındı (kullanıcı kararı, tutarlılık):** `/2027/max` → `/products/allplan-max`, `/2027/frilo` → `/products/frilo`, `/2027/scia` → `/products/scia`. Bu adresler hiç yayımlanmadığı için yönlendirme eklenmedi (eski adresler 404). Ortak sekme stili `ProductPage.module.css` olarak `src/components/sections/` altına alındı.

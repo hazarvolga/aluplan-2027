@@ -3,6 +3,8 @@ import { MAIN_QUOTE_FORM_URL, TRIAL_CTA_URL } from '@/lib/site-shared';
 import { PreviewClosingSection } from './PreviewClosingSection';
 import { BenefitsSection } from './BenefitsSection';
 import { CivilFeatureGrid } from './CivilFeatureGrid';
+import { MediaGridWithViewer } from './MediaGridWithViewer';
+import { civilNews2027 } from '@/data/allplan-civil-2027-news';
 import styles from './AllplanCivilPreview.module.css';
 import quoteStyles from './AllplanMaxPreviewPage.module.css';
 import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
@@ -24,6 +26,7 @@ export function AllplanCivilPreview(){return <div className={styles.page}>
   </div>
   <div className="alu-intro-split__media"><div className="alu-intro-split__video-frame"><ConsentEmbed src="https://www.youtube-nocookie.com/embed/SeA6ncaqUhY?rel=0" title="ALLPLAN Civil tanıtım videosu" className={styles.overviewVideo} /></div></div>
 </div></section>
+<MediaGridWithViewer grid={civilNews2027} itemKeyPrefix="civil-2027" />
 <section className={styles.section}><div className="alu-container"><div className="alu-challenges-band"><div className="alu-challenges-band__header"><span className="preview-kicker">/ SEKTÖREL ZORLUKLAR</span><h2 className="alu-h3">Bu zorluklarla sık sık karşılaşıyor musunuz?</h2></div><div className={`alu-challenges-grid ${styles.challengesGrid}`}>{challenges.map((x,i)=><article className="alu-challenge-card" key={x}><span className="alu-challenge-card__num">0{i+1}</span><p className="alu-body-sm" style={{margin:0}}>{x}</p></article>)}</div></div></div></section>
 <section className={styles.band}><div className="alu-container"><h2>ALLPLAN işinize nasıl katkı sağlar?</h2><div className="alu-hero-metrics">{metrics.map(([v,t,d])=><article className="alu-hero-metrics__item" key={t}><span className="alu-hero-metrics__value">{v}</span><h3 className="alu-hero-metrics__label">{t}</h3><p className="alu-hero-metrics__note">{d}</p></article>)}</div></div></section>
 <BenefitsSection benefits={{ title: 'ALLPLAN Civil’in avantajları', items: benefits.map(([title, description], index) => ({ title, description, iconSrc: `/assets/previews/allplan-civil-2027/features/${['powerful_modeling.png','precise_3d_reinforcement.png','interdisciplinary_aec_design.png','quickly_create_model_variants_templates.png','integrated_structural_analysis.png','reinforcement_design_code_checking.png','easily_implement_changes.png','more_accurate_deliverables.png'][index]}` })) }} />

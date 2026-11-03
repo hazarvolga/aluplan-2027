@@ -5,7 +5,7 @@ import { SectionHeader } from './SectionHeader';
 import { GroupHeader } from './GroupHeader';
 
 type EditionItem = string | { title: string; text: string };
-type Edition = { title: string; items?: readonly EditionItem[]; description?: string; itemsLabel?: string; label?: string; icon?: AluIconName };
+type Edition = { title: string; items?: readonly EditionItem[]; description?: string; itemsLabel?: string; label?: string; icon?: AluIconName; link?: { href: string; label: string } };
 
 type EditionCardsProps = { title: string; editions: readonly Edition[]; kicker?: string; lead?: string; variant?: 'grid' | 'cards' | 'steps' | 'icons'; group?: { index: number; unit?: string } };
 
@@ -27,6 +27,7 @@ export function EditionCards({ title, editions, kicker = 'SÜRÜMLER', lead, var
       {edition.items && <ul>{edition.items.map(item => typeof item === 'string'
         ? <li key={item}>{item}</li>
         : <li key={item.title}><strong>{item.title}</strong> {item.text}</li>)}</ul>}
+      {edition.link && <a className={styles.cardLink} href={edition.link.href} target="_blank" rel="noopener noreferrer" aria-label={`${edition.link.label.replace(' ↗', '')}: ${edition.title} (yeni sekmede açılır)`}>{edition.link.label}</a>}
     </article>)}</div>
   </section>;
 }

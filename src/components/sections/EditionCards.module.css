@@ -18,3 +18,7 @@
 .icons .card h3{display:flex;align-items:center;min-height:var(--icon-size-lg);padding-right:calc(var(--icon-size-lg) + var(--space-inset-sm))}
 .iconChip{position:absolute;top:var(--card-padding);right:var(--card-padding);display:inline-flex;color:var(--accent-fg)}
 .grouped{padding-block:var(--space-stack-md)}
+.cards .card{display:flex;flex-direction:column}
+.cardLink{align-self:flex-start;margin-top:auto;padding-top:var(--space-stack-md);color:var(--accent-fg);font-weight:var(--font-weight-strong);text-decoration:none}
+.cardLink:hover{text-decoration:underline;text-underline-offset:.2em}
+.cardLink:focus-visible{outline:var(--border-width-strong) solid var(--accent-border);outline-offset:var(--space-inline-xs)}

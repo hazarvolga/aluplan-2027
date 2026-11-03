@@ -8,8 +8,8 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGE = ROOT / "src/app/2027/frilo/page.tsx"
-BUILT = ROOT / ".next/server/app/2027/frilo.html"
+PAGE = ROOT / "src/app/products/frilo/page.tsx"
+BUILT = ROOT / ".next/server/app/products/frilo.html"
 GEOTECH_KEYS = ["geotech-concept", "geotech-pit", "geotech-retaining", "geotech-ultimate", "soil-mechanics"]
 
 

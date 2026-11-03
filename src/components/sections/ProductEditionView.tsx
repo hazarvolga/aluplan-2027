@@ -2,7 +2,7 @@ import { ProductHero } from './ProductHero';
 import { EditionCards } from './EditionCards';
 import { PreviewClosingSection } from './PreviewClosingSection';
 import type { ProductEditionContent } from '@/data/product-edition-content';
-import page from '@/app/2027/frilo/hero.module.css';
+import page from '@/components/sections/ProductPage.module.css';
 import styles from './ProductEditionView.module.css';
 
 export function ProductEditionView({ content, heroImage, quoteUrl }: { content: ProductEditionContent; heroImage: string; quoteUrl: string }) {

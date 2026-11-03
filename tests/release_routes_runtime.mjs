@@ -53,7 +53,7 @@ const live = withEnv('1', '0', () => ({
   sitemap: sitemap.default().map((entry) => entry.url),
 }));
 const review = withEnv('1', '1', () => ({
-  robots: routes.buildRelease2027Metadata('/2027/max').robots,
+  robots: routes.buildRelease2027Metadata('/products/allplan-max').robots,
 }));
 const rollback = withEnv('0', '0', () => ({ sitemap: sitemap.default().map((entry) => entry.url) }));
 

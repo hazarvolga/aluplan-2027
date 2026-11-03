@@ -21,6 +21,17 @@ function getSocialIconName(label: string): AluIconName {
   return 'globe';
 }
 
+interface MenuItem {
+  name: string;
+  href: string;
+  external?: boolean;
+  releaseOnly?: boolean;
+}
+
+function visibleItems(items: readonly MenuItem[]): MenuItem[] {
+  return isReleaseContentEnabled() ? [...items] : items.filter((item) => !item.releaseOnly);
+}
+
 export function SiteShell({ children }: { children: React.ReactNode }) {
   const [mode, setMode] = useState<'dark' | 'light'>('dark');
   const [openMenu, setOpenMenu] = useState<'products' | 'solutions' | null>(null);
@@ -224,7 +235,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 <div key={sec.title}>
                   <h3 className="alu-megamenu__title">{sec.title}</h3>
                   <ul className="alu-megamenu__list">
-                    {sec.items.map((item) => (
+                    {visibleItems(sec.items).map((item) => (
                       <li key={item.href + item.name}>
                         {item.external ? (
                           <a
@@ -288,7 +299,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                   <div key={`${sec.title}-${sIdx}`}>
                     <h3 className="alu-megamenu__title">{sec.title}</h3>
                     <ul className="alu-megamenu__list">
-                      {sec.items.map((item) => (
+                      {visibleItems(sec.items).map((item) => (
                         <li key={item.href + item.name}>
                           <Link
                             href={item.href}

@@ -17,13 +17,17 @@
       "name": "ALLPLAN Max",
       "description": "Mühendisler için yapay zekâ",
       "detail": "Allplan Max, yapay zekâ araçlarını her çözüme entegre eder. Firmalar kendi iş akışlarını tasarlama, özel özellikler geliştirme, tekrarlayan işleri otomatikleştirme ve her soruya anında yanıt alma özgürlüğüne kavuşur.",
+      "headline": "Mühendisler için yapay zekâ. Sadece otomatikleştirmeyin. Yenilik üretin.",
+      "headlineSourceId": "max.slide.headline",
       "sourceId": "max.slide.body",
-      "href": "/2027/max"
+      "href": "/products/allplan-max"
     },
     {
       "name": "ALLPLAN",
       "description": "Akıllı modelleme",
       "detail": "Allplan 2027, mühendislik ekiplerine daha fazlasını sunuyor: yapay zekâ ile kontrol ve özelleştirme, güçlü donatı detaylandırma ve sorunsuz teslim için esnek BIM araçları.",
+      "headline": "Gücü ve kontrolü mühendislerin eline vermek",
+      "headlineSourceId": "allplan.home.hero.title",
       "sourceId": "allplan.home.hero.body",
       "href": "/2027/features"
     },
@@ -31,6 +35,8 @@
       "name": "ALLPLAN Civil",
       "description": "Yeni nesil altyapı",
       "detail": "Allplan Civil, parametrik iş akışları, bağlantılı modeller ve yeniden kullanılabilir şablonlarla karmaşık altyapıyı daha hızlı tasarlamanıza yardımcı olur.",
+      "headline": "Altyapı projelerini %50'ye kadar daha hızlı teslim edin",
+      "headlineSourceId": "civil.slide.hero.title",
       "sourceId": "civil.slide.hero.body",
       "href": "/2027/civil"
     },
@@ -39,19 +45,21 @@
       "description": "Bileşen odaklı yapı analizi",
       "detail": "FRILO, beton, çelik, ahşap ve yığma yapıların bileşen odaklı analizi ve tasarımı için araçlar sunar.",
       "sourceId": "frilo.shop.overview",
-      "href": "/2027/frilo"
+      "href": "/products/frilo"
     },
     {
       "name": "SCIA",
       "description": "3B yapısal analiz",
       "detail": "Her tür yapı için çoklu malzemeli statik çözüm yazılımı ve tasarım aracı.",
       "sourceId": "live.civ.scia.li-2",
-      "href": "/2027/scia"
+      "href": "/products/scia"
     },
     {
       "name": "SDS2",
       "description": "Daha hızlı çelik detaylandırma",
       "detail": "SDS2 2027, ekibinize her iş akışında üretkenliği artıran, zaman kazandıran ve elle yapılan işi azaltan güçlü araçlar verir.",
+      "headline": "Zaman Kazanın, Daha Fazla İş Yapın",
+      "headlineSourceId": "sds2.home.title",
       "sourceId": "sds2.home.body",
       "href": "/products/sds2-home"
     }

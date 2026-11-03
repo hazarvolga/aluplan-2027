@@ -18,6 +18,9 @@ import { SearchPageSection } from './SearchPageSection';
 import { SubpageHeroSection } from './SubpageHeroSection';
 import { getSubpageHeroPresentation } from './subpage-hero-presentation';
 import { StructuredPageLayoutSection } from './StructuredPageLayoutSection';
+import { Release2027Band } from './Release2027Band';
+import { release2027Bands } from '@/data/allplan-2027-editions';
+import { isReleaseContentEnabled } from '@/lib/release-flags';
 import { SolutionHubSection } from './SolutionHubSection';
 import { SolutionCatalogSection } from './SolutionCatalogSection';
 import { PageEndConversion } from './PageEndConversion';
@@ -139,6 +142,8 @@ export function SubpageView({
         sectionBadgeLabel={sectionBadgeLabel}
         isLegalPage={isLegalPage}
       />}
+
+      {isReleaseContentEnabled() && release2027Bands[page.path] && <Release2027Band band={release2027Bands[page.path]} />}
 
       {['/solutions/scalypso/converter', '/solutions/scalypso/videos'].includes(page.path) && (
         <nav className="alu-container alu-cluster" aria-label="Scalypso bağlantıları" style={{ paddingBlock: 'var(--space-inset-md)' }}>

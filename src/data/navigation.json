@@ -479,6 +479,16 @@
           "href": "/products/allplan-ultimate"
         },
         {
+          "name": "ALLPLAN Rebar",
+          "href": "/products/allplan-rebar",
+          "releaseOnly": true
+        },
+        {
+          "name": "ALLPLAN Parametric",
+          "href": "/products/allplan-parametric",
+          "releaseOnly": true
+        },
+        {
           "name": "ALLPLAN Cloud Services",
           "href": "/products/allplan-cloud-services"
         },

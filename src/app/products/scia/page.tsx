@@ -6,13 +6,13 @@ import { ProductHero } from '@/components/sections/ProductHero';
 import { EditionCards } from '@/components/sections/EditionCards';
 import { PreviewClosingSection } from '@/components/sections/PreviewClosingSection';
 import { MAIN_QUOTE_FORM_URL } from '@/lib/site-data';
-import styles from '@/app/2027/frilo/hero.module.css';
+import styles from '@/components/sections/ProductPage.module.css';
 import { isReleaseContentEnabled } from '@/lib/release-flags';
 import { buildRelease2027JsonLd, buildRelease2027Metadata } from '@/lib/release-2027-routes';
 import { serializeJsonLd } from '@/lib/schema';
 
 export function generateMetadata(): Metadata {
-  return buildRelease2027Metadata('/2027/scia');
+  return buildRelease2027Metadata('/products/scia');
 }
 const editions = [
  {title:'SCIA Concept', items:['Yapısal modelleme ve analiz','Beton, çelik ve ahşap için temel tasarım iş akışları','Stabilite ve dinamik analiz araçları','BIM uyumlu model alışverişi','Gelişmiş doğrusal olmayan analiz']},
@@ -46,7 +46,7 @@ function SciaPage(){
 export default function Release2027Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(buildRelease2027JsonLd('/2027/scia')) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(buildRelease2027JsonLd('/products/scia')) }} />
       <SciaPage />
     </>
   );

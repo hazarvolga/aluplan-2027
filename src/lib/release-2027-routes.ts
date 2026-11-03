@@ -22,7 +22,7 @@ export const RELEASE_2027_ROUTES: readonly Release2027Route[] = [
     ogImage: DEFAULT_OG_IMAGE
   },
   {
-    path: '/2027/max',
+    path: '/products/allplan-max',
     name: 'Allplan Max',
     description: 'Allplan Max, güçlü yapay zekâ araçlarını sizin kontrolünüze verir. Bir eklenti ya da ayrı bir paket değildir. Her 2027 ürününe dahildir.',
     productName: 'Allplan Max',
@@ -36,14 +36,14 @@ export const RELEASE_2027_ROUTES: readonly Release2027Route[] = [
     ogImage: '/assets/previews/allplan-civil-2027/civil-hero.jpg'
   },
   {
-    path: '/2027/frilo',
+    path: '/products/frilo',
     name: 'FRILO',
     description: 'FRILO; beton, çelik, ahşap ve yığma yapıların bileşen odaklı analizi ve tasarımı için BIM bağlantıları ve Eurocode ile DIN temelli araçlar sunar.',
     productName: 'FRILO',
     ogImage: '/assets/previews/frilo/frilo-hero.jpg'
   },
   {
-    path: '/2027/scia',
+    path: '/products/scia',
     name: 'SCIA',
     description: 'SCIA, bina, altyapı ve karmaşık taşıyıcı sistemler üzerinde çalışan mühendisler için yapı analizi ve tasarım araçları sunar.',
     productName: 'SCIA',
@@ -62,6 +62,34 @@ export const RELEASE_2027_ROUTES: readonly Release2027Route[] = [
     description: 'Allplan Parametric; köprü, tünel, istinat duvarı, gürültü bariyeri ve prekast kirişli köprülerin dört boyutlu parametrik modellenmesi ve detaylandırılması için özel işlevler sunar.',
     productName: 'Allplan Parametric',
     ogImage: '/assets/previews/allplan-civil-2027/civil-hero.jpg'
+  },
+  {
+    path: '/2027/allplan-basic',
+    name: 'ALLPLAN Basic 2027 yenilikleri',
+    description: 'Allplan Basic, güvenilir 2B çizime, temel 3B modellemeye ve bulut tabanlı iş birliğine ihtiyaç duyan ekipler için giriş seviyesi CAD çözümüdür.',
+    productName: 'ALLPLAN Basic',
+    ogImage: '/assets/heroes/families/vf-07-allplan-product-platform.jpg'
+  },
+  {
+    path: '/2027/allplan-concept',
+    name: 'ALLPLAN Concept 2027 yenilikleri',
+    description: 'Allplan Concept, erken tasarımdan teslimata kadar güvenilir modelleme, görselleştirme ve dokümantasyona ihtiyaç duyan mimari ekipler için bir BIM çözümüdür.',
+    productName: 'ALLPLAN Concept',
+    ogImage: '/assets/heroes/families/vf-07-allplan-product-platform.jpg'
+  },
+  {
+    path: '/2027/allplan-professional',
+    name: 'ALLPLAN Professional 2027 yenilikleri',
+    description: 'Allplan Professional, yüksek performanslı modelleme, detaylandırma ve otomasyona ihtiyaç duyan mimari ve mühendislik ekipleri için güçlü bir BIM çözümüdür.',
+    productName: 'ALLPLAN Professional',
+    ogImage: '/assets/heroes/families/vf-07-allplan-product-platform.jpg'
+  },
+  {
+    path: '/2027/allplan-ultimate',
+    name: 'ALLPLAN Ultimate 2027 yenilikleri',
+    description: 'Allplan Ultimate, tasarımdan inşaya uzanan uçtan uca iş akışları için nihai BIM çözümüdür.',
+    productName: 'ALLPLAN Ultimate',
+    ogImage: '/assets/heroes/families/vf-07-allplan-product-platform.jpg'
   },
   {
     path: '/paket-karsilastirma',

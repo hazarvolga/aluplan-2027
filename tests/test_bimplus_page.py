@@ -2,6 +2,7 @@
 
 from pathlib import Path
 import json
+import sys
 import unittest
 
 
@@ -9,12 +10,18 @@ ROOT = Path(__file__).resolve().parents[1]
 ROUTE = "/products/allplan-bimplus"
 BUILT = ROOT / ".next/server/app/products/allplan-bimplus.html"
 INTRO = "BIMPLUS, inşaat projelerinde yer alan tüm disiplinler için açık BIM model bazlı veri ve proje iş birliği platformudur."
-LEAD_IN = "2027’de yeni:"
-BULLETS = [
-    "BCF 3.0 değişimi: Daha akıcı koordinasyon ve güçlü birlikte çalışabilirlik için sorunları içe ve dışa aktarın.",
-    "Odaklı model incelemeleri: Bindirmeleri kırpın ve 2B çizimleri 3B modellerle hizalayın. Ortografik görünümleri sorunlara, sahnelere ve slayt gösterilerine kaydedin.",
-    "Excel destekli BIM verisi: Seçili nesneleri dinamik olarak inceleyin ve içe aktarma sırasında eksik temel metrajları otomatik hesaplayın.",
-]
+
+
+def inventory() -> dict[str, str]:
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from inventory_units import MODULES
+
+    return {unit.id: unit.tr for module in MODULES for unit in module.UNITS}
+
+
+TR = inventory()
+LEAD_IN = TR["bimplus.new.label"]
+BULLETS = [TR["bimplus.new.bcf"], TR["bimplus.new.reviews"], TR["bimplus.new.excel"]]
 REPLACED = [
     "Proje verilerine her yerden, her zaman erişin",
     "Herhangi bir inşaat sektörü yazılımından proje verilerini",

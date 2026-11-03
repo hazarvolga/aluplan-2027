@@ -6,7 +6,7 @@ import { AluIcon } from '@/components/ui/AluIcon';
 import { handleStructuredTabKey } from './structured-tab-key';
 import styles from './ProductTabs.module.css';
 
-type ProductTab = { name: string; description: string; detail: string; href: string; image?: string };
+type ProductTab = { name: string; description: string; detail: string; href: string; image?: string; headline?: string };
 export function ProductTabs({ items, label = 'Ürünleri keşfedin', actionLabel = 'Ürünü keşfedin' }: { items: readonly ProductTab[]; label?: string; actionLabel?: string }) {
   const [selected, setSelected] = useState(0);
   const id = useId();
@@ -25,7 +25,7 @@ export function ProductTabs({ items, label = 'Ürünleri keşfedin', actionLabel
       </div>
       <div id={`${id}-panel`} role="tabpanel" aria-labelledby={`${id}-tab-${activeIndex}`} tabIndex={0} className={`alu-preview-product-panel ${styles.panel}`}>
         {product.image && <img key={product.image} className={styles.image} src={product.image} alt="" aria-hidden="true" />}
-        <div key={product.name} className={`alu-preview-product-panel__content ${styles.content}`}><span className="preview-kicker">{product.description}</span><h2 className="alu-h2">{product.name}</h2><p className="alu-body preview-meta">{product.detail}</p>
+        <div key={product.name} className={`alu-preview-product-panel__content ${styles.content}`}><span className="preview-kicker">{product.description}</span><h2 className="alu-h2">{product.headline ?? product.name}</h2><p className="alu-body preview-meta">{product.detail}</p>
           <Link className="alu-button alu-button--secondary" href={product.href}><span>{actionLabel}</span><AluIcon name="arrow-right" size="sm" /></Link>
         </div>
       </div>

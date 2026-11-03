@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import hero from './hero.module.css';
+import hero from '@/components/sections/ProductPage.module.css';
 import { friloCapabilities, friloFaq } from './content';
 import { EditionCards } from '@/components/sections/EditionCards';
 import { geotechnics } from '@/data/frilo-geotechnics-2027';
@@ -11,7 +11,7 @@ import { buildRelease2027JsonLd, buildRelease2027Metadata } from '@/lib/release-
 import { serializeJsonLd } from '@/lib/schema';
 
 export function generateMetadata(): Metadata {
-  return buildRelease2027Metadata('/2027/frilo');
+  return buildRelease2027Metadata('/products/frilo');
 }
 const editions = [
   { title: 'FRILO Concept', items: ['Basit konut yapıları için eksiksiz iş akışı', 'Kat bazında yük aktarımı için bina modeli', 'Sürekli kirişler, döşemeler, kolonlar ve temeller', 'Mertek, aşık ve çatı sistemlerinin tasarımı', 'Eurocode ve DIN kapsamında yığma ve ahşap duvar kontrolleri'] },
@@ -45,7 +45,7 @@ function FriloPreview() {
 export default function Release2027Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(buildRelease2027JsonLd('/2027/frilo')) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(buildRelease2027JsonLd('/products/frilo')) }} />
       <FriloPreview />
     </>
   );

@@ -6,6 +6,7 @@ import { getNavigationData, getSearchIndex, MAIN_QUOTE_FORM_URL } from '@/lib/si
 import { AluIcon, AluIconName } from '@/components/ui/AluIcon';
 import { MediaDialog } from '@/components/ui/MediaDialog';
 import { clearConsent, useConsentReady, useCookieConsent, writeConsent } from '@/lib/consent';
+import { isReleaseContentEnabled } from '@/lib/release-flags';
 
 const navData = getNavigationData();
 const searchIndex = getSearchIndex();
@@ -166,7 +167,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               <span>Ürünler</span>
               <AluIcon name="chevron-down" size="sm" />
             </button>
-            <Link className="alu-site-nav__link" href="/#professional-services">
+            <Link className="alu-site-nav__link" href={isReleaseContentEnabled() ? '/kaynaklar' : '/#professional-services'}>
               Kaynaklar
             </Link>
             <Link className="alu-site-nav__link" href="/references">

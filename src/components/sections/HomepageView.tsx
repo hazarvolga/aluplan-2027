@@ -256,8 +256,8 @@ export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: bool
         </div>
       </section>}
 
-      {/* H06: Professional Services */}
-      {previewMaxHero ? <ProfessionalServicesSection hidePartnerAccess /> : <ProfessionalServicesSection />}
+      {/* H06: Professional Services (the 2027 release lists these on /kaynaklar instead) */}
+      {!previewMaxHero && <ProfessionalServicesSection />}
 
       {/* H07: BIMFlex Spotlight */}
       <section id="bimflex" className="preview-section" aria-labelledby="bimflex-heading">

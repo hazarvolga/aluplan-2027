@@ -12,11 +12,11 @@ const services = data.services;
 const serviceGroups = data.serviceGroups;
 const serviceByName = new Map(services.map((service) => [service.title, service]));
 
-export function ProfessionalServicesSection({ hidePartnerAccess = false }: { hidePartnerAccess?: boolean }) {
+export function ProfessionalServicesSection() {
   const [activeGroupIdx, setActiveGroupIdx] = useState<number>(0);
   const [showAllServices, setShowAllServices] = useState<boolean>(false);
-  const visibleGroups = hidePartnerAccess ? serviceGroups.filter((group) => group.title !== 'Partner erişimi') : serviceGroups;
-  const serviceCount = hidePartnerAccess ? services.filter((service) => service.title !== 'Partner').length : services.length;
+  const visibleGroups = serviceGroups;
+  const serviceCount = services.length;
   const safeGroupIdx = activeGroupIdx < visibleGroups.length ? activeGroupIdx : 0;
   const activeGroup = visibleGroups[safeGroupIdx];
   const allResourcesButtonLabel = showAllServices

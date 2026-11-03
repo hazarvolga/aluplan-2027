@@ -62,6 +62,13 @@ export const RELEASE_2027_ROUTES: readonly Release2027Route[] = [
     description: 'Ürün bakım aşamaları, sürüm desteği ve sunulan hizmetler.',
     productName: null,
     ogImage: DEFAULT_OG_IMAGE
+  },
+  {
+    path: '/kaynaklar',
+    name: 'Kaynaklar',
+    description: 'Eğitim, Microsoft Teams canlı bağlantı ve allplan.net.tr/tr ticket platformu dahil 19 profesyonel hizmet ve teknik kaynağa tek merkezden ulaşın.',
+    productName: null,
+    ogImage: DEFAULT_OG_IMAGE
   }
 ];
 

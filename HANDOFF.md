@@ -1,5 +1,12 @@
 # Oturum devri
 
+## 03.11.2026 — Kaynaklar sayfası yayında (yerel, commitlenmedi)
+
+- Kaynaklar sayfası kalıcı olarak `/kaynaklar` adresinde (`ResourcesDirectory`, içerik `homepage.json` hizmet verisinden; Partner gizli, 19 kaynak, üç kategori). Geçici `/preview/kaynaklar` rotası kaldırıldı.
+- 2027 sürümü açıkken: ana menüdeki "Kaynaklar" `/kaynaklar`'a gider, ana sayfadaki "Profesyonel Hizmetler" bölümü gösterilmez, sayfa sitemap'e ve release metadata/JSON-LD kaydına girer. Sürüm kapalıyken (geri alma): menü `/#professional-services`'e döner, ana sayfa bölümü geri gelir, `/kaynaklar` 404 verir.
+- Mobil çekmecede "Kaynaklar" bağlantısı yok (daha önce de yoktu); eklemek ayrı karar. `navigation.json` içindeki `directLinks` verisi arayüzde kullanılmadığı için dokunulmadı.
+- Test: `tests/test_resources_page.py`. Kapılar: 317 unit test, 37/37 parite, 45/45 token, typecheck, iki sürüm ayarında production build ve sunucu yoklaması.
+
 ## 03.11.2026 — AX3000 Mekanik Tesisat kompakt tasarımı (yerel, commitlenmedi)
 
 - `/solutions/ax3000-mekanik-tesisat` için kullanıcı onaylı kompakt tasarım uygulandı: `Ax3000MechanicalContent` (+ CSS modülü) sayfa verisinden render eder; 28 kartlık ızgara yerine genel bakış, hızlı hesaplama, veri arayüzü şeridi, modül ızgarası ve Enerji Kimlik Belgesi/Dokümanlar çifti. Hero, kırıntı, bağlantı ve sayfa sonu bileşenleri ortak olanlardır. Sayfa verisi, URL ve bağlantılar değişmedi.

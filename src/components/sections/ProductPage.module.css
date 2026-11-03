@@ -20,11 +20,6 @@
 .kicker{margin:0 0 var(--space-stack-xs);color:var(--accent-fg);font-size:var(--type-caption-size);font-weight:var(--font-weight-strong);letter-spacing:.06em}
 .sectionBand p + p{margin-top:var(--space-stack-md)}
 .textLink{display:inline-block;margin-top:var(--space-stack-md);color:var(--accent-fg);font-weight:var(--font-weight-strong);text-decoration:none}
-.capabilityList{border-top:var(--border-width-default) solid var(--border-default)}
-.capability{display:grid;grid-template-columns:3rem minmax(12rem, .8fr) minmax(0, 1.5fr);gap:var(--space-inline-md);padding:var(--space-inset-md) 0;border-bottom:var(--border-width-default) solid var(--border-default)}
-.capability h3,.capability p{margin:0}.capability h3{font-size:var(--type-body-size);line-height:var(--type-body-line-height)}
-.capability p{color:var(--text-secondary);line-height:var(--type-body-line-height)}.number{color:var(--accent-fg);font-size:var(--type-caption-size)}
-@media(max-width:767px){.capability{grid-template-columns:2rem minmax(0,1fr)}.capability p{grid-column:2}}
 
 .updatesGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-stack-md)}
 .updateCard{border:var(--border-width-default) solid var(--card-border);background:var(--card-bg);box-shadow:var(--card-shadow)}
@@ -36,11 +31,6 @@
 .overview{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:clamp(2rem,5vw,5rem);align-items:center}
 .overview img{display:block;width:100%;height:auto;aspect-ratio:15/8;object-fit:cover}
 .sectionBand .kicker{color:var(--accent-fg);margin-bottom:var(--space-stack-xs)}
-.capability{grid-template-columns:minmax(0,1fr) minmax(0,.85fr);align-items:center;gap:clamp(2rem,5vw,5rem);padding-block:clamp(2rem,4vw,3.5rem)}
-.capabilityText{display:grid;grid-template-columns:3rem minmax(0,1fr);gap:var(--space-stack-sm) var(--space-inline-md)}
-.capabilityText h3{font-size:var(--type-h4-size);line-height:var(--type-h4-line-height)}
-.capabilityText p{grid-column:2;max-width:65ch}
-.capability img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:var(--surface-raised)}
 .stories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-stack-lg)}
 .stories article{border-bottom:var(--border-width-default) solid var(--border-default);padding-bottom:var(--space-inset-md)}
 .stories img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
@@ -49,7 +39,7 @@
 .stories a{color:var(--accent-fg);font-weight:var(--font-weight-strong);text-decoration:none}
 .stories a:hover,.textLink:hover{text-decoration:underline;text-underline-offset:.2em}
 @media(prefers-reduced-motion:no-preference){.stories img,.updateCard img{transition:opacity var(--motion-duration-fast) var(--motion-easing-standard)}.stories article:hover img,.updateCard:hover img{opacity:.88}}
-@media(max-width:767px){.overview,.stories,.capability{grid-template-columns:1fr}.capabilityText{grid-template-columns:2rem minmax(0,1fr)}.capabilityText p{grid-column:2}}
+@media(max-width:767px){.overview,.stories{grid-template-columns:1fr}}
 
 @media (prefers-reduced-motion: no-preference) {
   :global(html):has(.navigationSection) { scroll-behavior: smooth; }

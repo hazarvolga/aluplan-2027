@@ -7,6 +7,7 @@ import { AllplanMaxFeatureClip } from './AllplanMaxFeatureClip';
 import { IntroSplitSection } from './IntroSplitSection';
 import { CustomerTestimonials } from './CustomerTestimonials';
 import { ProductHero } from './ProductHero';
+import { FeatureRow, FeatureRowList } from './FeatureRow';
 
 const records: Record<string, { en: string; tr: string }> = content;
 const text = (key: string) => records[`live.max.${key}`]?.tr ?? '';
@@ -41,7 +42,7 @@ export function AllplanMaxPreviewPage() {
         <p className="alu-hero-metrics__note">{text(`pillar-${n}.body`)}</p>
       </article>;
     })}</div></div></section>
-    <section className={`alu-container ${styles.section}`}><p className={styles.eyebrow}>ÖNE ÇIKAN ÖZELLİKLER</p><h2>{text('3feat.title')}</h2><div className={styles.featureList}>{mainFeatures.map(({key,video,clip}) => <article className={styles.feature} key={key}><div className={styles.featureText}><p className={styles.eyebrow}>{text(`3feat.${key}.included`)}</p><h3>{text(`3feat.${key}.title`)}</h3><p>{text(`3feat.${key}.body`)}</p><div className={styles.featureActions}><AllplanMaxVideo id={video} title={text(`3feat.${key}.title`)} /><a href={MAIN_QUOTE_FORM_URL} aria-label={`Demo talep edin: ${text(`3feat.${key}.title`)}`}>Demo talep edin ↗</a></div></div><AllplanMaxFeatureClip src={`/assets/previews/allplan-max/${clip}`} title={text(`3feat.${key}.title`)} /></article>)}</div></section>
+    <section className={`alu-container ${styles.section}`}><p className={styles.eyebrow}>ÖNE ÇIKAN ÖZELLİKLER</p><h2>{text('3feat.title')}</h2><FeatureRowList>{mainFeatures.map(({key,video,clip}, index) => <FeatureRow key={key} index={index} kicker={text(`3feat.${key}.included`)} title={text(`3feat.${key}.title`)} media={<AllplanMaxFeatureClip src={`/assets/previews/allplan-max/${clip}`} title={text(`3feat.${key}.title`)} />}><p>{text(`3feat.${key}.body`)}</p><div className={styles.featureActions}><AllplanMaxVideo id={video} title={text(`3feat.${key}.title`)} /><a href={MAIN_QUOTE_FORM_URL} aria-label={`Demo talep edin: ${text(`3feat.${key}.title`)}`}>Demo talep edin ↗</a></div></FeatureRow>)}</FeatureRowList></section>
     <CustomerTestimonials title={text('quotes.title')} items={[1, 2, 3].map(n => {
       const [name, role] = text(`quote-${n}.attribution`).split(' — ');
       return { name, role, quote: text(`quote-${n}`), source: 'Kaynak: ALLPLAN' };

@@ -4832,56 +4832,6 @@ button.alu-role[aria-checked="true"] {
 }
 
 /* Alternating Split Feature Rows on Subpages */
-.alu-feature-rows {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-application-feature-rows-gap);
-}
-.alu-feature-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  background: var(--surface-raised);
-  border: var(--border-width-default) solid var(--border-strong);
-  box-shadow: var(--elevation-raised);
-  overflow: hidden;
-}
-.alu-feature-row--reverse .alu-feature-row__media {
-  order: 2;
-}
-.alu-feature-row--reverse .alu-feature-row__content {
-  order: 1;
-}
-.alu-feature-row__media {
-  position: relative;
-  min-height: var(--layout-application-feature-media-min-height);
-  background: var(--visual-media-surface);
-  overflow: hidden;
-}
-.alu-feature-row__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.alu-feature-row__index {
-  position: absolute;
-  top: var(--space-application-jsx-section);
-  left: var(--space-application-jsx-section);
-  padding: var(--space-stack-xs) var(--space-application-card-dense-gap);
-  background: var(--visual-media-caption-surface);
-  border: var(--border-width-default) solid var(--accent-border);
-  color: var(--ref-color-rust-300);
-  font-family: var(--font-mono);
-  font-size: var(--type-application-caption-compact-size);
-  font-weight: var(--font-weight-application-pathway-role-badge);
-}
-.alu-feature-row__content {
-  padding: var(--space-application-techspecs-banner-padding);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: var(--space-application-panel-inset);
-}
 
 /* Architectural Specification Grid */
 .alu-spec-grid {
@@ -6044,7 +5994,6 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   }
   .alu-hero-stage__grid,
   .alu-pathway-split,
-  .alu-feature-row,
   .alu-trial-banner__inner,
   .alu-playlist-stage,
   .alu-intro-split,
@@ -6067,8 +6016,6 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   .alu-products-showcase {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .alu-feature-row--reverse .alu-feature-row__media,
-  .alu-feature-row--reverse .alu-feature-row__content,
   .alu-scia-callout--reverse .alu-scia-callout__media,
   .alu-scia-callout--reverse .alu-scia-callout__content {
     order: initial;

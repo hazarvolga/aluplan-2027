@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import styles from './AllplanMaxPreviewPage.module.css';
 
 const AUTOPLAY_QUERY = '(min-width: 768px) and (prefers-reduced-motion: no-preference)';
 const VISIBILITY_MARGIN = '200px';
@@ -44,7 +43,6 @@ export function AllplanMaxFeatureClip({ src, title }: { src: string; title: stri
 
   return <video
     ref={videoRef}
-    className={styles.featureClip}
     muted
     loop
     playsInline

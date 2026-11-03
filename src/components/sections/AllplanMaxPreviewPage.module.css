@@ -16,9 +16,8 @@
 .threeColumns,.cards{grid-template-columns:repeat(3,minmax(0,1fr))}
 .panel,.card,.quote{border:1px solid var(--border-default);padding:2rem;margin:0}
 .stat{display:block;font-size:2rem;color:var(--accent-fg)}
-.featureList{display:grid;gap:1rem}.feature{border:1px solid var(--border-default);padding:2rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
 .quote{line-height:1.7}
-@media(max-width:767px){.hero{background-size:auto 100%;background-position:70% center}.twoColumns,.threeColumns,.cards,.feature{grid-template-columns:1fr}.section{padding-block:4rem}.panel,.card,.quote,.feature{padding:1.5rem}}
+@media(max-width:767px){.hero{background-size:auto 100%;background-position:70% center}.twoColumns,.threeColumns,.cards{grid-template-columns:1fr}.section{padding-block:4rem}.panel,.card,.quote{padding:1.5rem}}
 
 .videoSection{padding-block:0}
 .videoSection video{display:block;width:100%;aspect-ratio:16/9;max-height:720px;background:var(--surface-inverse)}
@@ -29,15 +28,10 @@
 @media(max-width:767px){.surveyMetrics{grid-template-columns:1fr}}
 @media(max-width:767px){.surveyMetrics :global(.alu-hero-metrics__item){border-right:0;border-bottom:var(--border-width-default) solid var(--border-default)}.surveyMetrics :global(.alu-hero-metrics__item:last-child){border-bottom:0}}
 
-.feature{align-items:center}
-.feature:nth-child(even) .featureClip{grid-column:1;grid-row:1}
-.feature:nth-child(even) .featureText{grid-column:2;grid-row:1}
-.featureClip{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--surface-inverse)}
 .featureActions{display:flex;align-items:center;gap:var(--space-application-section-gap);flex-wrap:wrap}
 .videoTrigger{appearance:none;border:0;padding:0;background:transparent;color:var(--accent-fg);font:inherit;text-decoration:none;cursor:pointer}
 .videoTrigger:hover{color:var(--text-link-hover);text-decoration:none}
 .videoTrigger:focus-visible{outline:2px solid var(--accent-border);outline-offset:4px}
-@media(max-width:767px){.feature:nth-child(even) .featureClip,.feature:nth-child(even) .featureText{grid-column:auto;grid-row:auto}}
 
 .section .productRibbon{display:block;padding:var(--space-stack-xs) var(--space-application-card-dense-inset);border-left:var(--border-width-accent) solid var(--accent-border);background:var(--surface-subtle);color:var(--accent-fg);font-size:var(--type-caption-size);font-weight:var(--font-weight-strong);line-height:var(--type-caption-line-height);overflow-wrap:anywhere}
 

@@ -272,7 +272,6 @@ class AppStylesTests(unittest.TestCase):
             '.alu-modal': ('max-height', '--layout-application-modal-max-height'),
             '.alu-bento-card--1': ('min-height', '--layout-application-bento-feature-min-height'),
             '.alu-service-pill': ('min-height', '--layout-application-service-pill-min-height'),
-            '.alu-feature-row__media': ('min-height', '--layout-application-feature-media-min-height'),
             '.alu-video-modal__dialog': ('max-height', '--layout-application-video-dialog-max-height'),
             '.alu-video-modal__image-viewport': ('max-height', '--layout-application-image-viewport-max-height'),
             '.alu-video-modal__image-viewport img': ('max-height', '--layout-application-image-max-height'),

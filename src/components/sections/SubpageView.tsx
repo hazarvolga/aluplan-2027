@@ -35,6 +35,7 @@ import { DocumentGroupsSection } from './DocumentGroupsSection';
 import { Ax3000MechanicalContent } from './Ax3000MechanicalContent';
 import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
 import { MediaViewerDialogs } from './MediaViewerDialogs';
+import { FeatureRow, FeatureRowList } from './FeatureRow';
 
 const AX3000_DOCS_ROUTE = '/products/ax3000/dokumanlar';
 const AX3000_MECHANICAL_ROUTE = '/solutions/ax3000-mekanik-tesisat';
@@ -418,44 +419,29 @@ export function SubpageView({
 
             {/* Part B: Alternating Split Feature Rows (ONLY for high-resolution photos, NEVER icons) */}
             {featuredSections.length > 0 && (
-              <div className="alu-feature-rows">
+              <FeatureRowList>
                 {featuredSections.map((sec, idx) => {
                   const secImg = sec.image!;
-                  const isReversed = idx % 2 === 1;
                   return (
-                    <article
+                    <FeatureRow
                       key={`feat-${sec.heading}-${idx}`}
-                      className={`alu-feature-row${isReversed ? ' alu-feature-row--reverse' : ''}`}
+                      index={idx}
+                      kicker={`0${idx + 1} · İŞ AKIŞI VE ÖZELLİK`}
+                      title={sec.heading}
+                      headingLevel={sec.level === 2 ? 2 : 3}
+                      media={<img src={secImg.src} alt={secImg.alt || sec.heading} loading="lazy" />}
                     >
-                      <div className="alu-feature-row__media">
-                        <img src={secImg.src} alt={secImg.alt || sec.heading} loading="lazy" />
-                        <span className="alu-feature-row__index">0{idx + 1}</span>
-                      </div>
-                      <div className="alu-feature-row__content">
-                        <span className="preview-kicker">0{idx + 1} · İŞ AKIŞI VE ÖZELLİK</span>
-                        {sec.level === 2 ? (
-                          <h2 className="alu-h2" style={{ margin: 0 }}>
-                            {sec.heading}
-                          </h2>
-                        ) : (
-                          <h3 className="alu-h2" style={{ margin: 0 }}>
-                            {sec.heading}
-                          </h3>
-                        )}
-                        <div className="alu-stack" style={{ gap: 'var(--space-application-jsx-comfortable)' }}>
-                          {visibleSectionItems(sec).map((paragraph, pIdx) => (
-                            <p key={pIdx} className="alu-body" style={{ margin: 0 }}>
-                              {paragraph}
-                            </p>
-                          ))}
-                          {sec.link && <SectionCardLink link={sec.link} heading={sec.heading} />}
-                          {sec.actions && <SectionActions actions={sec.actions} currentPath={page.path} />}
-                        </div>
-                      </div>
-                    </article>
+                      {visibleSectionItems(sec).map((paragraph, pIdx) => (
+                        <p key={pIdx} className="alu-body">
+                          {paragraph}
+                        </p>
+                      ))}
+                      {sec.link && <SectionCardLink link={sec.link} heading={sec.heading} />}
+                      {sec.actions && <SectionActions actions={sec.actions} currentPath={page.path} />}
+                    </FeatureRow>
                   );
                 })}
-              </div>
+              </FeatureRowList>
             )}
 
             {/* Interactive States / Tabs captured during Phase 0 dynamic audit */}

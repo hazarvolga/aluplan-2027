@@ -11,7 +11,7 @@ export type HeroVisualFamilyId =
   | 'VF-07'
   | 'VF-08';
 
-export type HeroVisualAssetKind = 'family' | 'official-release' | 'page-fallback';
+export type HeroVisualAssetKind = 'family' | 'official-release' | 'generated-release' | 'page-fallback';
 
 export interface HeroBackgroundSources {
   desktopSrc: string;
@@ -87,6 +87,15 @@ export function getSubpageHeroPresentation(
       familyId: null,
       assetKind: 'page-fallback',
       background: pageBackground(fallbackBackgroundSrc)
+    };
+  }
+
+  if (path === '/products/allplan-2026-yenilikler') {
+    return {
+      presentation: 'background-only',
+      familyId,
+      assetKind: 'generated-release',
+      background: pageBackground('/assets/heroes/allplan-2026-innovations-generated.jpg')
     };
   }
 

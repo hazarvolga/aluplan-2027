@@ -6,46 +6,45 @@ import type { ReactElement } from 'react';
 import type { StructuredLinkGroupGridSection } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { SectionHeader } from './SectionHeader';
+import styles from './ProductsOverview.module.css';
+import groupStyles from './LinkGroupGridSection.module.css';
 
 interface LinkGroupGridSectionProps {
   grid: StructuredLinkGroupGridSection;
 }
 
 export function LinkGroupGridSection({ grid }: LinkGroupGridSectionProps): ReactElement {
-  const columns = grid.columns || 3;
-
   return (
     <section className="preview-section" aria-label={grid.title}>
       <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
         <SectionHeader kicker={grid.kicker} title={grid.title} lead={grid.subtitle} />
 
-        <div className={`alu-media-grid alu-media-grid--cols-${columns}`}>
-          {grid.items.map((card) => (
+        <div className={styles.products}>
+          {grid.items.map((card, index) => (
             <article
               key={card.sourceId}
-              className="alu-media-card"
+              className={index === 0 ? `${styles.product} ${styles.featured}` : styles.product}
               data-source-id={card.sourceId}
             >
-              <div className="alu-media-card__thumb">
-                <img src={card.imageSrc} alt={card.title} loading="lazy" />
-                <div className="alu-media-card__scrim" aria-hidden="true" />
-              </div>
-              <div className="alu-media-card__body">
-                <h3 className="alu-media-card__title">{card.title}</h3>
-                <ul className="alu-media-card__bullets">
-                  {card.links.map((item, index) => (
-                    <li key={`${card.sourceId}-${item.href}-${index}`}>
-                      <AluIcon name="arrow-right" size="sm" />
-                      {item.external ? (
-                        <a href={item.href} target="_blank" rel="noopener noreferrer">
-                          {item.text}
-                        </a>
-                      ) : (
-                        <Link href={item.href}>{item.text}</Link>
-                      )}
-                    </li>
-                  ))}
-                </ul>
+              <div className={styles.productLink}>
+                <div className={styles.media}>
+                  <img src={card.imageSrc} alt={card.title} loading="lazy" />
+                </div>
+                <div className={styles.content}>
+                  <h3 className={styles.title}>{card.title}</h3>
+                  <ul className={groupStyles.links}>
+                    {card.links.map((item, linkIndex) => (
+                      <li key={`${card.sourceId}-${item.href}-${linkIndex}`}>
+                        <AluIcon name="arrow-right" size="sm" />
+                        {item.external ? (
+                          <a href={item.href} target="_blank" rel="noopener noreferrer">{item.text}</a>
+                        ) : (
+                          <Link href={item.href}>{item.text}</Link>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </article>
           ))}

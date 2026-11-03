@@ -48,11 +48,14 @@ ${packageComparisonLine}
 - [İnşaat Planlaması](https://aluplan.com.tr/cozumler/insaat-planlamasi): Prekast Üretimi (/solutions/precast), Çelik (/solutions/steel), Şantiye Planlaması (/solutions/site-planning).
 - [BIMFlex Otomatik Donatı Paketi](https://aluplan.com.tr/solutions/bimflex): FlexSoft AR-GE x Aluplan iş birliğiyle kolon, kiriş, perde, döşeme ve temel donatı otomasyonu.
 - [İmar Yönetmeliği BIM Eklentisi](https://aluplan.com.tr/solutions/imar-yonetmeligi-bim-eklentisi): Planlı Alanlar İmar Yönetmeliği uyumlu otomatik BIM denetimi.
-- [CDS Add-On & Allto PythonPart & Scalypso](https://aluplan.com.tr/solutions/addons): 2B DWG Converter, Drive Curve, Parametric Terrain, Ramp, Steel Components, 3B Lazer Tarama Nokta Bulutu (Scalypso).
+- [CDS Eklentileri](https://aluplan.com.tr/solutions/addons): 2B DWG Converter, Drive Curve, Parametric Terrain, Ramp ve Steel Components.
+- [Allto PythonPart](https://aluplan.com.tr/solutions/pythonpart): ALLPLAN için PythonPart eklentileri.
+- [Scalypso](https://aluplan.com.tr/solutions/scalypso): 3B lazer tarama ve nokta bulutu araçları.
 - [BIMX5, Oska e-Hakediş & Poz Kataloğu](https://aluplan.com.tr/solutions/oska): 5B BIM metraj, yaklaşık maliyet ve Çevre Şehircilik poz entegrasyonu.
 
 ## Eğitim, Teknik Destek ve Kaynaklar
-- [ALLPLAN Quick Start](https://aluplan.com.tr/solutions-v2/training/quick-start): 7 adımda hızlı başlangıç rehberi ve kuruma özel eğitim (/solutions-v2/training/individual).
+- [ALLPLAN QuickStart: Buildings](https://aluplan.com.tr/video-kutuphanesi/quickstart-buildings): Bina modelleme için hızlı başlangıç videoları.
+- [Kaynaklar](https://aluplan.com.tr/kaynaklar): Eğitim, teknik destek ve lisans kaynakları.
 - [Video Kütüphanesi (14 Seri / 216 Video)](https://aluplan.com.tr/video-kutuphanesi): Hello ALLPLAN 2024, Otomatik Donatı, Köprü İş Akışları, Yol Tasarımı, AX3000, Prekast ve SDS2 eğitim videoları.
 - [Sıkça Sorulan Sorular (SSS)](https://aluplan.com.tr/faq): Lisans, kurulum, sistem gereksinimleri ve OpenBIM veri değişimi.
 - [Referanslar](https://aluplan.com.tr/references): Kamu kurumları, belediyeler, üniversiteler ve mühendislik/mimarlık ofisleri.

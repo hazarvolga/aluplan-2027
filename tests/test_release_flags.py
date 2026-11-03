@@ -102,6 +102,12 @@ class ReleaseFlagRuntimeTests(unittest.TestCase):
         self.assertEqual(row["robots"]["sitemap"], "https://aluplan.com.tr/sitemap.xml")
         self.assertEqual(row["homepageVariant"], "release-2027")
 
+    def test_indexable_site_allows_next_assets_for_all_crawlers(self):
+        rules = self.matrix[("1", "0")]["robots"]["rules"]
+        for rule in rules:
+            with self.subTest(user_agent=rule["userAgent"]):
+                self.assertNotIn("/_next/", rule.get("disallow", []))
+
     def test_rollback_restores_legacy_homepage(self):
         row = self.matrix[("0", "0")]
         self.assertEqual(row["homepageVariant"], "legacy")

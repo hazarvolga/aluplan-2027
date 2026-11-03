@@ -145,8 +145,7 @@ export function buildPageJsonLd(page: PageRecord, playlist?: PlaylistRecord | nu
           name: v.title,
           description: v.description || `${playlist.title} — ${v.title}`,
           thumbnailUrl: `https://img.youtube.com/vi/${v.id}/hqdefault.jpg`,
-          embedUrl: `https://www.youtube-nocookie.com/embed/${v.id}`,
-          contentUrl: `https://www.youtube.com/watch?v=${v.id}`
+          embedUrl: `https://www.youtube-nocookie.com/embed/${v.id}`
         }
       }))
     };

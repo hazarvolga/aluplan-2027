@@ -158,9 +158,16 @@ export function StructuredContentBlocks({
   onVideo,
   onImage
 }: StructuredContentBlocksProps): ReactElement {
+  const firstChallenge = blocks.findIndex((block) => block.kind === 'challenges');
+  const laterStats = firstChallenge < 0 ? [] : blocks.filter((block, index) => index > firstChallenge && block.kind === 'stats');
+  const orderedBlocks = laterStats.length === 0 ? blocks : blocks.flatMap((block, index) => {
+    if (index === firstChallenge) return [...laterStats, block];
+    return index > firstChallenge && block.kind === 'stats' ? [] : [block];
+  });
+
   return (
     <>
-      {blocks.map((block) => (
+      {orderedBlocks.map((block) => (
         <div key={block.sourceId} data-source-id={block.sourceId}>
           {renderBlock(block, onVideo, onImage)}
         </div>

@@ -65,6 +65,16 @@ class SchemaRuntimeTests(unittest.TestCase):
             [visible_faq_answer(item) for item in expected_items],
         )
 
+    def test_playlist_videos_use_embed_without_mislabeling_watch_page_as_media_file(self):
+        page = graph_entity(render_schema("/video-kutuphanesi/ax3000"), "CollectionPage")
+        items = page["mainEntity"]["itemListElement"]
+        self.assertGreater(len(items), 0)
+        for entry in items:
+            video = entry["item"]
+            self.assertTrue(video["embedUrl"].startswith("https://www.youtube-nocookie.com/embed/"))
+            self.assertNotIn("contentUrl", video)
+            self.assertNotIn("uploadDate", video)
+
     def test_no_page_uses_the_retired_service_schema(self):
         self.assertEqual(
             [page["path"] for page in self.pages.values() if page["schemaType"] == "Service"], []

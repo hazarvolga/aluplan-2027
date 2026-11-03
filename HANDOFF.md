@@ -1785,3 +1785,32 @@ Kullanıcı 2027 ana sayfasını şimdilik yeterli bulup ALLPLAN Max sayfasını
 ### 03.11.2026 — Commit öncesi doğrulama
 - Çözüm merkezleri adres taşıması, Scalypso/CDS ortak bileşenleri, ortak alt başlık ve bağımsız sektörel zorluk bölümleri için `pnpm typecheck` ve `pnpm test` başarılı: 521 test, 4 atlandı; parite, stil ve token kontrolleri başarılı. Değişiklik kapsamıyla sınırlı güvenlik incelemesinde kritik/yüksek bulgu yok. Yayın yapılmadı.
 - `next-env.d.ts` üretim/dev tip yolu değişikliği ve `.claude/`, `.superpowers/`, `premium-audit.json` yerel dosyaları önceki durumlarıyla commit dışında tutuldu.
+
+### 03.11.2026 — Video listeleri ve site içi kaynaklar
+- 14 yerel oynatma listesinde otomatik eklenen genel teknik görsel galerisi kaldırıldı; oyuncu ve 216 benzersiz video/242 liste kaydı korundu. Diğer sayfalardaki genel galeriler korunur.
+- Video kütüphanesindeki Allplan 2026 oynatma listesi ile English, International ve Precast kanalları `/video-kutuphanesi/kaynak/*` yerel sayfalarına bağlandı. Kaynak YouTube bağlantıları kütüphane kartında ve yeni sayfada da korunur. 2026 oynatma listesi kullanıcı etkinleştirmeli YouTube nocookie playlist iframe'i kullanır; gerçek oynatma yerelde görüldü.
+- Üç kanal resmî YouTube RSS akışından en fazla son 15 videoyu çeker; bu tüm kanal arşivi değildir. Sabit kanal kimlikleri, beş saniyelik zaman aşımı ve saatlik yenileme vardır; hata/boş akışta dürüst bilgilendirme ve YouTube bağlantısı sunulur. Yeni kanal listeleri, onay öncesinde üçüncü taraf video küçük resmi yüklemez. Dört kaynak sayfası noindex'tir ve sitemap'e eklenmemiştir; kaynak veri/generator değişmemiştir.
+- Yerel kontrolde 2026 listesi oynatıldı, English, International ve Precast akışlarında 15 video, video seçimi ve 355px yatay taşmama kontrol edildi. Kaynak, galeri, video kütüphanesi ve rota testleri 39/39; typecheck, styles:check ve `ALUPLAN_SHOW_2027=1 ALUPLAN_BLOCK_INDEXING=1 pnpm build` başarılı. Yayın yapılmadı. Akışın hedef üretim sunucusundan erişimi yayın öncesi ayrıca doğrulanmalıdır.
+
+### 03.11.2026 — Alt sayfa hero görselleri
+- Ortak `SubpageHeroSection` arka planında aşırı büyütme kaldırıldı, görseller sağa hizalı `contain` ile ve soldan daha erken açılan gradientle gösterilir. Ürün önizleme `ProductHero` görselleri de sağa konumlandı; mobilde yüksek hero nedeniyle büyüme önlenerek görsel genişliğe sığdırıldı. Görselsiz özel hero'lara görsel eklenmedi.
+- Endüstri, yol-demiryolu, MEP, prekast, Scalypso Converter, BIMFlex ve Ultimate üzerinden hero görsel ailesi/masaüstü örnekleri ile 355px mobil taşma incelendi. Bağımsız incelemede kritik sorun yok; solda odaklanan görsellerin gradient altında görünürlüğü görsel bazında daha sonra değerlendirilmelidir.
+- `pnpm typecheck`, stil kontrolü ve tam `pnpm test` başarılı: 528 test, 4 atlandı; parite/token kontrolleri geçti. Video çalışması paralel yapıldı; ilgili ayrıntılar aynı handoff'ta. Yerel değişiklikler yayınlanmadı.
+
+### 03.11.2026 — Endüstri sıralaması, kartlar ve 2026 hero
+- Endüstri dahil zorluk içeren çözüm sayfalarında metrikler Sektörel Zorluklar'dan önce gösterilir; özgün metrik/zorluk verileri ve diğer bloklar korunur. Endüstri ALLPLAN'I KEŞFEDİN bölümündeki üç kategori ve 10 alt bağlantı ortak LinkGroupGridSection ile ProductsOverview tasarımına taşındı.
+- Alt sayfa hero fotoğrafı gerçek resim kutusunda maskelenerek dikey keskin sınır giderildi; açık/koyu ve mobil kontrol edildi. Ana sayfa Max maskesi bağımsız incelemede yanlışlıkla değişmiş bulundu ve eski değerine döndürüldü.
+- `/products/allplan-2026-yenilikler` için kullanıcı isteğiyle üretilmiş konsept görsel `public/assets/heroes/allplan-2026-innovations-generated.jpg` (356 KB); bu görsel resmî ALLPLAN ürün ekranı veya gerçek proje değildir. Diğer VF-08 sayfasının kaynak görseli korunur.
+- Yerel Endüstri sayfasında metrik→zorluk sırası, 10 bağlantı ve 355px taşma; 2026 hero masaüstü görünümü doğrulandı. `pnpm test`: 530 test başarılı, 4 atlandı; bağımsız incelemenin bulgusu olan Max maskesi sonrasında geri alındı. Yayın yapılmadı.
+- Video isteği incelemesi: 14 playlist ve üç yeni kanal zaten `VideoPlaylistSection` (sol oynatıcı/sağ liste) kullanıyor. 2026 YouTube listesi doğrulanmış tam video listesi yokluğunda resmî iframe ile sunuluyor; tam liste gibi uydurulmamalı. Yeni video kaynakları ve galerilerle ilgili önceki kayıtlar ayrıca geçerlidir.
+
+### 03.11.2026 — Yayın öncesi bağımsız ilk denetim
+- SEO/GEO, güvenlik/DevOps ve mobil/performans kontrolleri paralel yapıldı; kanıt, açıklar, risk ve cutover sırası `docs/verification/release-readiness-2026-11-03.md` içinde. Canlıya yayın veya sunucu değişikliği yapılmadı.
+- `robots.txt` üretimde /_next/ JS/CSS kaynaklarını engellemeyecek şekilde düzeltildi; preview engeli korundu. `llms.txt` CDS/Allto/Scalypso ve QuickStart hedefleri düzeltildi. Video schema yanlış contentUrl kaldırıldı, doğrulanmamış tarih uydurulmadı.
+- `pnpm typecheck`, 534 test (4 atlandı), 51 parite ve 45 token testi başarılı. SEO düzeltmeleri sonrası `ALUPLAN_SHOW_2027=1 ALUPLAN_BLOCK_INDEXING=1 pnpm build` başarılı (135 statik sayfa); indexlenebilir üretim modu ve gerçek host ayrıca doğrulanmalı. Dört production sayfasında 355px yatay taşma/kırık görsel yok; güvenilir Lighthouse/CrUX ölçümü ortamda yapılamadı. Gerçek deploy, hedef platform/bağımlılık, izin öncesi YouTube görselleri, indeksleme ve rollback öncesi kararlar raporda açık.
+
+### 03.11.2026 — Yayın öncesi güvenli düzeltmeler
+- Kullanıcı video oynatma davranışının performans açısından mevcut hâliyle kalmasını istedi; genel çerez kabulü video oynatmak için zorunlu değil, oynat düğmesi ilgili gömüyü yükler. Sağ listeden ilk seçimde ikinci oynat tıklaması gerekebilir; davranış değiştirilmedi.
+- CDS Add-On, ALLPLAN Industry ve Civil kesilmiş meta/hero açıklamaları mevcut bodyNodes içindeki tam cümlelerden düzeltildi, arama verisi/generator politikası eşitlendi; CDS TBDY iddiası doğrulanmış sayılmaz. Tam veri üretiminin gerçek kaynakla tekrarı ayrıca doğrulanmalı.
+- YouTube RSS yanıtı 256 KiB ile sınırlandı; zaman aşımı, cache ve boş sonuç fallback'i korunarak hassas veri içermeyen hata sinyali eklendi. Bağımsız inceleme kritik/yüksek bulgu göstermedi.
+- `pnpm typecheck` ve `pnpm test` başarılı: 536 test (4 atlandı), parite/stil/token kontrolleri başarılı. Gerçek mobil LCP ve dağıtım/geri dönüş kontrolleri hâlâ açık; yayın yapılmadı.

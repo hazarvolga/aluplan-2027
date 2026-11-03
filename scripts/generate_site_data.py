@@ -1073,6 +1073,17 @@ for raw_page in raw_200_pages:
             seo_description = f"{h1_text}: {snippet}"
         else:
             seo_description = f"{h1_text} — Aluplan Program Sistemleri tarafından Türkiye'de sunulan ALLPLAN BIM yazılım, eğitim ve mühendislik çözümü ({route_path})."
+    # Keep these hero/meta leads as complete, verbatim sentences from their source content.
+    verified_leads = {
+        "/solutions/cds-addon": "Türkiye Bina Deprem Yönetmeliği'ne (TBDY 2018) uyumlu betonarme tasarım eklentisi.",
+        "/solutions/allplan-industry": "ALLPLAN; mimarlar, mühendisler ve inşaat profesyonelleri için tasarım ve inşaat süreçlerini projenin her aşamasında destekleyen ve bütünleştiren disiplinler arası bir BIM yazılım çözümüdür.",
+        "/products/civil": "ALLPLAN Civil, çok disiplinli ve inşaat mühendisliği danışmanlıkları için gelişmiş altyapı tasarımından inşa süreçlerine yönelik nihai çözümdür.",
+    }
+    if route_path in verified_leads:
+        lead = verified_leads[route_path]
+        if not any(lead in node for node in body_nodes):
+            raise ValueError(f"Source content changed for verified description: {route_path}")
+        seo_description = lead
     if seo_description in used_descriptions:
         seo_description = f"{seo_description} [{route_path}]"
     used_descriptions.add(seo_description)

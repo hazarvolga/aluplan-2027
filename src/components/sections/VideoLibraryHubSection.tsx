@@ -4,6 +4,7 @@ import { isReleaseContentEnabled } from '@/lib/release-flags';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { CompactPageHero } from './CompactPageHero';
 import styles from './VideoLibraryHubSection.module.css';
+import { videoSourceForUrl } from '@/lib/video-sources';
 
 const allPlaylists = getAllPlaylists();
 const playlistByUrl = new Map(allPlaylists.map((playlist) => [playlist.url, playlist]));
@@ -45,7 +46,9 @@ export function VideoLibraryHubSection() {
             <p className={`${styles.text} ${styles.sectionLead}`}>{videoLibrary.description}</p>
             <ul className={styles.tiles}>
               {videoLibrary.items.map((item, idx) => {
-                const isInternal = item.url.startsWith('/');
+                const sourceKey = videoSourceForUrl(item.url);
+                const effectiveUrl = sourceKey ? `/video-kutuphanesi/kaynak/${sourceKey}` : item.url;
+                const isInternal = effectiveUrl.startsWith('/');
                 const isExternal = item.url.startsWith('http');
                 const hasDestination = item.url !== '#';
                 const matchedPlaylist = isInternal ? playlistByUrl.get(item.url) : undefined;
@@ -63,7 +66,7 @@ export function VideoLibraryHubSection() {
                       <div className={styles.tileFoot}>
                         {matchedPlaylist && <span className={styles.count}>{`${matchedPlaylist.count} Video`}</span>}
                         {isInternal ? (
-                          <Link href={item.url} className={`alu-link alu-link--standalone ${styles.action}`} aria-label={`${ACTION_LABEL}: ${item.title}`}>
+                          <Link href={effectiveUrl} className={`alu-link alu-link--standalone ${styles.action}`} aria-label={`${ACTION_LABEL}: ${item.title}`}>
                             <span>{ACTION_LABEL}</span>
                             <AluIcon name="arrow-right" size="sm" />
                           </Link>
@@ -80,6 +83,7 @@ export function VideoLibraryHubSection() {
                             <AluIcon name="external-link" size="sm" />
                           </a>
                         )}
+                        {sourceKey && <a href={item.url} target="_blank" rel="noopener noreferrer" className="alu-link alu-link--standalone" aria-label={`YouTube’da aç: ${item.title} (yeni sekmede açılır)`}>YouTube’da aç ↗</a>}
                       </div>
                     )}
                   </li>

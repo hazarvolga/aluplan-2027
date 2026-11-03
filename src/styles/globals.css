@@ -4598,7 +4598,6 @@ body{margin:0;background:var(--surface-page);color:var(--text-primary)}
   overflow: hidden;
   opacity: 0.14;
   filter: var(--filter-application-subpage-hero-background);
-  transform: var(--transform-decorative-subpage-hero-overscan);
 }
 .alu-subpage-hero__bg img {
   width: 100%;
@@ -4631,12 +4630,13 @@ body{margin:0;background:var(--surface-page);color:var(--text-primary)}
   filter: var(--filter-application-subpage-hero-background-only);
 }
 .alu-subpage-hero--background-only .alu-subpage-hero__bg img {
-  width: auto;
+  position: static !important;
+  width: auto !important;
   max-width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center right;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 5%, var(--surface-page) 78%);
-  mask-image: linear-gradient(90deg, transparent 0%, transparent 5%, var(--surface-page) 78%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, var(--surface-page) 60%);
+  mask-image: linear-gradient(90deg, transparent 0%, var(--surface-page) 60%);
 }
 .alu-subpage-hero--background-only .alu-subpage-hero__scrim {
   background:
@@ -5807,9 +5807,8 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
     object-position: 82% center;
   }
   .alu-subpage-hero--background-only .alu-subpage-hero__bg img {
-    width: 100%;
-    object-fit: cover;
-    object-position: 82% center;
+    object-fit: contain;
+    object-position: center right;
   }
   .alu-hero-stage__grid,
   .alu-pathway-split,
@@ -5872,7 +5871,9 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
     mask-image: linear-gradient(180deg, var(--surface-page) 0%, var(--surface-page) 46%, transparent 88%, transparent 100%);
   }
   .alu-subpage-hero--background-only .alu-subpage-hero__bg img {
-    object-position: center top;
+    position: absolute !important;
+    width: 100% !important;
+    object-position: right top;
     -webkit-mask-image: none;
     mask-image: none;
   }

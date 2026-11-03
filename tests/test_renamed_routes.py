@@ -110,7 +110,7 @@ class VideoLibraryRouteTests(unittest.TestCase):
     def test_hub_component_recognises_internal_playlists_by_path_not_by_the_old_prefix(self):
         hub = (ROOT / "src/components/sections/VideoLibraryHubSection.tsx").read_text(encoding="utf-8")
         self.assertNotIn("startsWith('/solutions-v2')", hub)
-        self.assertIn("item.url.startsWith('/')", hub)
+        self.assertIn("effectiveUrl.startsWith('/')", hub)
 
     def test_training_page_end_conversion_still_covers_the_moved_pages(self):
         policy = (ROOT / "src/components/sections/page-end-conversion-policy.ts").read_text(encoding="utf-8")

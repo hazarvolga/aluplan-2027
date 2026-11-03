@@ -369,6 +369,12 @@ class AppStylesTests(unittest.TestCase):
             with self.subTest(selector=selector):
                 self.assertEqual(values, [f'var({token})'])
 
+    def test_subpage_hero_does_not_zoom_its_background(self):
+        source = (ROOT / 'src/styles/application.css').read_text(encoding='utf-8')
+        background = re.search(r'(?m)^\.alu-subpage-hero__bg \{([^{}]*)\}', source).group(1)
+        self.assertNotRegex(background, r'(?m)^\s*transform\s*:')
+        self.assertIn('object-fit: contain;', source)
+
     def test_remaining_visual_transforms_use_role_specific_tokens(self):
         source = (ROOT / 'src/styles/application.css').read_text(encoding='utf-8')
         expected = {
@@ -383,7 +389,6 @@ class AppStylesTests(unittest.TestCase):
             '.alu-product-card:hover .alu-product-card__cta': '--motion-transform-product-cta-hover',
             '.alu-bento-card:hover .alu-bento-card__bg': '--motion-transform-card-media-zoom',
             '.alu-innovation-card:hover .alu-innovation-card__media img': '--motion-transform-card-media-zoom',
-            '.alu-subpage-hero__bg': '--transform-decorative-subpage-hero-overscan',
             '.alu-media-card:hover .alu-media-card__thumb img': '--motion-transform-media-showcase-zoom',
             '.alu-scia-callout__media--interactive:hover img,\n.alu-scia-callout__media--interactive:hover video': '--motion-transform-media-detail-zoom',
             '.alu-scia-callout__media--interactive:hover .alu-media-card__play-circle': '--motion-transform-play-control-zoom',

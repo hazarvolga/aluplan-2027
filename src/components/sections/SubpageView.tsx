@@ -363,7 +363,7 @@ export function SubpageView({
         <CdsAddonPageContent page={page} />
       ) : page.path === AX3000_MECHANICAL_ROUTE ? (
         <Ax3000MechanicalContent page={page} />
-      ) : page.path === '/about' ? null : (
+      ) : page.path === '/about' || isVideoPlaylistPage ? null : (
         /* Preserved Structured Content Sections — Benefit/Spec Grid + Alternating Photo Showcases */
         <section className="preview-section" aria-label="Sayfa içeriği">
           <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>

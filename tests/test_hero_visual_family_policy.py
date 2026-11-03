@@ -92,7 +92,7 @@ class HeroVisualFamilyPolicyTests(unittest.TestCase):
                     "mobileSrc": f"/assets/heroes/families/{stem}-mobile.jpg",
                 })
 
-    def test_annual_release_routes_preserve_the_page_source_image(self):
+    def test_annual_release_routes_use_their_expected_hero_image(self):
         self.assertEqual(
             set(FIXTURE["VF-08"]),
             {"/products/allplan-2026", "/products/allplan-2026-yenilikler"},
@@ -104,10 +104,12 @@ class HeroVisualFamilyPolicyTests(unittest.TestCase):
                 self.assertTrue((ROOT / "public" / source_path.lstrip("/")).is_file())
                 self.assertEqual(model["presentation"], "background-only")
                 self.assertEqual(model["familyId"], "VF-08")
-                self.assertEqual(model["assetKind"], "official-release")
+                expected = "/assets/heroes/allplan-2026-innovations-generated.jpg" if route == "/products/allplan-2026-yenilikler" else source_path
+                self.assertTrue((ROOT / "public" / expected.lstrip("/")).is_file())
+                self.assertEqual(model["assetKind"], "generated-release" if route == "/products/allplan-2026-yenilikler" else "official-release")
                 self.assertEqual(model["background"], {
-                    "desktopSrc": source_path,
-                    "mobileSrc": source_path,
+                    "desktopSrc": expected,
+                    "mobileSrc": expected,
                 })
 
     def test_routes_outside_the_family_scope_preserve_framed_fallback(self):

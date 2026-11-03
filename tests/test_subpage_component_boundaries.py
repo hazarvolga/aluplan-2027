@@ -63,7 +63,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
             "videoLibrary.items.map",
             "styles.banner",
             "styles.tiles",
-            "const isInternal = item.url.startsWith('/')",
+            "const isInternal = effectiveUrl.startsWith('/')",
             "matchedPlaylist.count",
             "videoLibrary.subscribe.title",
             'target={isExternal ? \'_blank\' : undefined}',
@@ -207,7 +207,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
             "https://www.youtube.com/watch?v=",
             "https://img.youtube.com/vi/",
             "alu-playlist-item--active",
-            "Bölüm {currentIdx + 1} / {playlist.videos.length}",
+            "{itemPrefix} {currentIdx + 1} / {playlist.videos.length}",
             "Video Kütüphanesine Dön",
             'target="_blank"',
             'rel="noopener noreferrer"',
@@ -473,7 +473,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
         )
         self.assertGreaterEqual(len(image_rules), 2)
         desktop_image, mobile_image = image_rules[0], image_rules[-1]
-        desktop_mask = "linear-gradient(90deg, transparent 0%, transparent 5%, var(--surface-page) 78%)"
+        desktop_mask = "linear-gradient(90deg, transparent 0%, var(--surface-page) 60%)"
         self.assertIn(f"mask-image: {desktop_mask};", desktop_image)
         self.assertIn(f"-webkit-mask-image: {desktop_mask};", desktop_image)
         self.assertIn("mask-image: none;", mobile_image)

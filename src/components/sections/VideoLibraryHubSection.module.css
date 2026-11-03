@@ -12,6 +12,6 @@
 .tile{flex:1 1 20rem;min-width:0;background:var(--surface-raised);padding:var(--space-inset-md);display:flex;flex-direction:column;gap:var(--space-stack-xs)}
 .tileHead{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--space-stack-sm)}
 .icon,.iconMuted{flex:none;display:inline-flex}.icon{color:var(--accent-fg)}.iconMuted{color:var(--text-secondary)}
-.tileFoot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:var(--space-stack-sm);padding-top:var(--space-stack-xs)}
+.tileFoot{margin-top:auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-stack-sm);padding-top:var(--space-stack-xs)}
 .count{font-family:var(--font-mono);font-size:var(--type-caption-size);letter-spacing:.04em;color:var(--text-secondary)}
 .action{display:inline-flex;align-items:center;min-height:var(--target-min);margin-left:auto}

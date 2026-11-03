@@ -24,4 +24,4 @@ const route = process.argv[2];
 const page = siteData.getPageData(route);
 if (!page) throw new Error(`Unknown page route: ${route}`);
 
-process.stdout.write(JSON.stringify(schema.buildPageJsonLd(page)));
+process.stdout.write(JSON.stringify(schema.buildPageJsonLd(page, page.playlistId ? siteData.getPlaylistData(page.playlistId) : null)));

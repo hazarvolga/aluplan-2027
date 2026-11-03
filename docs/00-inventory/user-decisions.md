@@ -195,3 +195,11 @@ Kullanıcı, yayın öncesi kalan maddeler listesinde aşağıdaki kararları ve
 - LGN Proje Akademi logosuz kalır.
 - AX3000 Mekanik Tesisat: "Modüller" başlığı gösterilmez, yalnız kartlar kalır.
 - C1 ve B3 maddeleri bekler; B5 kullanıcıyla birlikte gözden geçirilecek.
+
+## 03.11.2026 — Segment, dönüşüm, form, üretici izni ve slogan kararları
+
+- **Segment önceliği (soru 1):** Mimar, mühendis ve prekast arasında öncelik ayrımı yok; üçü eşit ağırlıktadır.
+- **Birincil dönüşüm (soru 2):** Sitenin tek başlıca hedefi TEKLİF.
+- **Form altyapısı (soru 3):** Microsoft Forms ile yayına çıkılır.
+- **Üretici izinleri (soru 5):** Kullanıcı kuralları bilerek çalıştıklarını belirtti; yayın engeli yok.
+- **Slogan:** Aluplan'ın kendi sloganları yerine Allplan'ın 2027 lansman sloganları kullanılır. Kaynak: `Allplan 2027 Marketing Materials/*/Web Pages` ve `Messaging` (Git dışı). Marka kılavuzundaki üç slogan adayı kullanılmaz.

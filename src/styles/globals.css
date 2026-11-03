@@ -6559,3 +6559,8 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
     justify-content: center;
   }
 }
+
+/* Numbered feature groups under one section heading sit closer together. */
+.preview-section--group {
+  padding-block: var(--space-stack-lg);
+}

@@ -21,7 +21,7 @@ export function ProductEditionView({ content, heroImage, quoteUrl }: { content: 
     <ProductEditionsBand id={`${id}-benefits`} className={styles.anchor} kicker={kicker('AVANTAJLAR')} title={content.benefitsTitle} variant="icons" editions={content.benefits.map((item, index) => ({ title: item.title, description: item.text, icon: benefitIcons[index] }))} />
     <div id={`${id}-features`} className={styles.anchor}>
       <div className="alu-container"><div className={styles.featuresHeading}><SectionHeader kicker={kicker('ÖZELLİKLER')} title={content.featuresTitle} /></div></div>
-      {featureGroups.map(group => <MediaGridWithViewer key={group.label} grid={{ title: group.label, columns: 3, items: group.items }} itemKeyPrefix={`${id}-${group.label}`} />)}
+      {featureGroups.map((group, index) => <MediaGridWithViewer key={group.label} grid={{ title: group.label, columns: 3, items: group.items }} itemKeyPrefix={`${id}-${group.label}`} group={{ index }} />)}
     </div>
     <PreviewClosingSection id={`${id}-closing`} title={`${content.name} hakkında görüşelim`} items={[{ title: 'Uzmanla görüşün', paragraphs: [`Projelerinize ve ekibinize uygun çözümü ${content.name} ile birlikte değerlendirelim.`], action: { label: 'Teklif isteyin', href: quoteUrl } }]} />
   </div>;

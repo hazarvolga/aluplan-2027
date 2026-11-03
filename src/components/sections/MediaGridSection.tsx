@@ -6,6 +6,7 @@ import Link from 'next/link';
 import type { StructuredMediaGridSection } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { SectionHeader } from './SectionHeader';
+import { GroupHeader } from './GroupHeader';
 
 interface MediaVideoRequest {
   youtubeId: string;
@@ -22,20 +23,25 @@ interface MediaGridSectionProps {
   itemKeyPrefix: string;
   onVideo: (video: MediaVideoRequest) => void;
   onImage: (image: MediaImageRequest) => void;
+  /** Renders the title as a numbered group label under a parent section heading. */
+  group?: { index: number };
 }
 
 export function MediaGridSection({
   grid,
   itemKeyPrefix,
   onVideo,
-  onImage
+  onImage,
+  group
 }: MediaGridSectionProps): ReactElement {
   const columns = grid.columns || 3;
 
   return (
-    <section className="preview-section" aria-label={grid.title}>
-      <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
-        <SectionHeader kicker={grid.kicker} title={grid.title} lead={grid.subtitle} />
+    <section className={group ? 'preview-section preview-section--group' : 'preview-section'} aria-label={grid.title}>
+      <div className="alu-container alu-stack" style={{ gap: group ? 'var(--space-stack-md)' : 'var(--space-stack-xl)' }}>
+        {group
+          ? <GroupHeader index={group.index} title={grid.title} count={grid.items.length} />
+          : <SectionHeader kicker={grid.kicker} title={grid.title} lead={grid.subtitle} />}
 
         <div className={`alu-media-grid alu-media-grid--cols-${columns}`}>
           {grid.items.map((item, index) => {

@@ -6075,11 +6075,14 @@
       "intro": {
         "kicker": "/ OPENBIM BULUT PLATFORMU",
         "title": "BIMPLUS Nedir?",
-        "bullets": [
+        "paragraphs": [
           "BIMPLUS, inşaat projelerinde yer alan tüm disiplinler için açık BIM model bazlı veri ve proje iş birliği platformudur.",
-          "Proje verilerine her yerden, her zaman erişin, tüm bilgi ihtiyaçlarınızı doğru kişilere verimli bir şekilde iletin ve proje ortaklarıyla gerçek zamanlı iş birliği yapın.",
-          "Herhangi bir inşaat sektörü yazılımından proje verilerini kolayca dahil edin, birleştirin, koordine edin, inceleyin ve merkezi bir modelde etkili bir şekilde yönetin.",
-          "Tüm aşamalarda BIM tabanlı projeleri yönetin ve kontrol edin, etkili sorun yönetimi ve güçlü görselleştirme araçlarını kullanarak revizyonları ve görevleri kolayca takip edin."
+          "2027’de yeni:"
+        ],
+        "bullets": [
+          "BCF 3.0 değişimi: Daha akıcı koordinasyon ve güçlü birlikte çalışabilirlik için sorunları içe ve dışa aktarın.",
+          "Odaklı model incelemeleri: Bindirmeleri kırpın ve 2B çizimleri 3B modellerle hizalayın. Ortografik görünümleri sorunlara, sahnelere ve slayt gösterilerine kaydedin.",
+          "Excel destekli BIM verisi: Seçili nesneleri dinamik olarak inceleyin ve içe aktarma sırasında eksik temel metrajları otomatik hesaplayın."
         ],
         "videoEmbedUrl": "https://www.youtube.com/embed/DTSdM7tSBlU"
       },

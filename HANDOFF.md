@@ -1,5 +1,11 @@
 # Oturum devri
 
+## 03.11.2026 — Bimplus 2027 maddeleri (commitlendi)
+
+- **Değişti:** `/products/allplan-bimplus` sayfasındaki "BIMPLUS Nedir?" bölümünde, pazarlama klasöründeki `New Text BIMPLUS Page.docx` talimatı uygulandı: giriş cümlesi kaldı, eski 3 madde silindi, yerine "2027’de yeni:" başlığı ve 3 yeni madde (BCF 3.0 değişimi, odaklı model incelemeleri, Excel destekli BIM verisi) konuldu. Kaynak: `scripts/extract_structured_pages.py` (`parse_allplan_bimplus`); `pages.json` yeniden üretildi. Test: `tests/test_bimplus_page.py`.
+- **Not:** Silinen üç madde ("Proje verilerine her yerden…", "Herhangi bir inşaat sektörü yazılımından…", "Tüm aşamalarda BIM tabanlı projeleri…") canlı sitedeki özgün maddelerdi; belge değiştirilmelerini açıkça istediği için kaldırıldı. Türkçe metin benim çevirim, onay bekliyor.
+- Kapılar: 377 test, 46/46 parite, 45/45 token, typecheck, build; sayfa tarayıcıda doğrulandı.
+
 ## 03.11.2026 — Allplan Rebar ve Allplan Parametric sayfaları (commitlendi)
 
 - **Eklendi:** `/2027/rebar` ve `/2027/parametric`. Kaynak: `Allplan 2027 Marketing Materials/ALLPLAN 2027 Launch…/Web Pages/` altındaki iki "Edition Web Page" belgesi (Git dışı). Metinler belgeden Türkçeye çevrildi (taslak çeviri; ürün ve özellik adları İngilizce bırakıldı). Yapı: hero, konu etiketleri, genel bakış kartları, avantajlar, 6 gruplu özellik listesi (her biri 30 özellik), kapanışta teklif butonu (Microsoft Forms). Paylaşılan bileşen `ProductEditionView`, içerik `src/data/allplan-{rebar,parametric}-2027.ts`.

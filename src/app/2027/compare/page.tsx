@@ -16,7 +16,7 @@ const editions = [
 ];
 function Compare2027(){
  if(!isReleaseContentEnabled()) notFound();
- return <div className={styles.page}><div className="alu-container"><header className={styles.hero}><p className="preview-kicker">ALLPLAN · 2027</p><h1>ALLPLAN sürümlerini karşılaştırın</h1><p>Basic, Concept, Professional ve Ultimate sürümlerinin özelliklerini karşılaştırın.</p><p className={styles.notice}>Bu yerel inceleme, uluslararası üretici sayfasına dayanır. Türkiye paket kapsamı ve koşulları doğrulanmalıdır. Sürüm bağlantıları mevcut yerel ürün sayfalarına gider.</p></header>
+ return <div className={styles.page}><div className="alu-container"><header className={styles.hero}><p className="preview-kicker">ALLPLAN · 2027</p><h1>ALLPLAN sürümlerini karşılaştırın</h1><p>Basic, Concept, Professional ve Ultimate sürümlerinin özelliklerini karşılaştırın.</p><p className={styles.notice}>Sürüm bağlantıları mevcut yerel ürün sayfalarına gider.</p></header>
  <p className={styles.footnote}>✓ Dâhil · — Kaynakta dâhil olarak işaretlenmemiş · İsteğe bağlı. Mobilde tabloyu yatay kaydırabilirsiniz.</p>
  <ComparisonTable editions={editions} /><p className={styles.footnote}>** ALLPLAN abonelik lisanslarına dâhildir. *** ALLPLAN Model Viewer, ALLPLAN aboneliği veya Bimplus Professional satın alımıyla kullanılabilir.</p>
  <section className={styles.editions}><p className="preview-kicker">/ SÜRÜMLER</p><h2>İhtiyacınıza uygun sürümü keşfedin</h2><div>{editions.map(e=><article key={e.name}><h3>ALLPLAN {e.name}</h3><p>{e.description}</p><a href={e.href}>Sürümü incele ↗</a></article>)}</div></section></div></div>;

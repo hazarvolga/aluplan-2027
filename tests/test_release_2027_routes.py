@@ -47,6 +47,12 @@ class ReleaseRouteSourceTests(unittest.TestCase):
                 self.assertIn(f"buildRelease2027Metadata('{route}')", source)
                 self.assertIn(f"serializeJsonLd(buildRelease2027JsonLd('{route}'))", source)
 
+    def test_compare_has_no_internal_review_note(self):
+        source = (ROOT / "src/app/2027/compare/page.tsx").read_text(encoding="utf-8")
+        self.assertNotIn("Bu yerel inceleme, uluslararası üretici sayfasına dayanır.", source)
+        self.assertNotIn("Türkiye paket kapsamı ve koşulları doğrulanmalıdır.", source)
+        self.assertIn("Sürüm bağlantıları mevcut yerel ürün sayfalarına gider.", source)
+
     def test_llms_txt_lists_release_routes_from_registry(self):
         source = (ROOT / "src/app/llms.txt/route.ts").read_text(encoding="utf-8")
         self.assertIn("RELEASE_2027_ROUTES", source)

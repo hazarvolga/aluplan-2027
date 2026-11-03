@@ -1,5 +1,14 @@
 # Oturum devri
 
+## 03.11.2026 — Tasarım standardizasyonu, Faz 4 (dal `codex/design-phase-4`, commitlendi, onay bekliyor)
+- **Kart varyantları:** `EditionCards` artık `grid | steps | icons` alıyor. Rebar ve Parametric sayfalarında "Genel bakış" bandı `steps`: 2×2, kartlar arası boşluk, solda kalın vurgu çizgisi, sağ üst köşede 01–04 numarası (dekoratif, `aria-hidden`), etiket ayrı satırda. "Avantajlar" bandı `icons`: 2×2, `AluIcon` ikon rozeti. İkonlar `src/lib/product-icons.ts` içinde, metinler değişmedi. `AluIcon`'a `zap` eklendi. Yeni bağımlılık yok.
+- **FeatureRow:** alt sayfa vitrin satırları (`alu-feature-row`), FRILO yetenekleri ve Max ana özellikleri tek `FeatureRow`/`FeatureRowList` bileşeninde (kart token'ları, dönüşümlü yön, numara rozeti). Eski kurallar silindi. `alu-wf-detail` etkileşimli sekme detayı olduğu için ayrı kaldı.
+- **SectionHeader:** Hakkımızda (3), Max (3: anket, özellikler, AI araçları), iletişim haritası, Yenilikler, Hizmetler, Oynatma listesi, Disiplin iş akışı, çözüm kataloğu grupları, SDS2 ve alt sayfa video/galeri/sekme başlıkları ortak başlığa taşındı. Hakkımızda h2'leri 48 px'ten, Max h2'leri 56 px'ten 32 px'e indi. Kart içi başlıklar, bölünmüş intro'lar ve ana sayfa bilerek dokunulmadı.
+- **CSS budama:** `application.css` içindeki 21 sınıfın kuralları silindi (hiçbir bileşen, veri veya script'te geçmiyor: partner strip, page hero, role selector, video grid/badge, pathway feature card vb.; dinamik `preview-bimflex__figure--N` korundu). Max modülündeki ölü hero/quote/testimonial/sütun kuralları silindi; `.section h3` yalnız AI araç kartlarına daraltıldı. Toplam yaklaşık 435 satır silindi.
+- **Doğrulama:** 452 test (bayraklı build ile render testleri dahil), 46/46 parite, token kontrolü, typecheck, `ALUPLAN_SHOW_2027=1 ALUPLAN_BLOCK_INDEXING=1 pnpm build`. Koyu modda Rebar, FRILO, Oska, Max ve Hakkımızda sayfalarına bakıldı. Açık mod ve mobil tek tek bakılmadı.
+- **Not:** render testleri 2027 bayrakları olmadan alınan build'de düşer; build'i bayraklarla alın.
+- **Sıradaki:** kullanıcı onayı, ardından PR. Açık adaylar: diğer ürün sayfalarının (Basic/Concept/Professional/Ultimate, Civil) benzer bantları; etkileşimli parçalar için Radix (henüz eklenmedi).
+
 ## 03.11.2026 — PR #3, #4, #5 main'e birleştirildi ve production'a çıktı
 - Sıra: #3 (db37a1e) → #4 (0db2648) → #5 (5e810e5); her biri merge commit ile, dallar silinmedi.
 - Vercel env: `ALUPLAN_SHOW_2027=1`, `ALUPLAN_BLOCK_INDEXING=1` (Production + Preview); eski `ALUPLAN_2027_PREVIEW` kaldırıldı.

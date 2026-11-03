@@ -35,18 +35,16 @@ def inventory():
     return module, units, names
 
 
-def expected_features(module, units):
-    """Shared feature texts used by the geotechnics editions, with the editions that carry them."""
-    found: dict[str, dict] = {}
-    for key in GEOTECH_KEYS:
-        number = 1
-        while f"frilo.{key}.feature-{number}.title" in units:
-            title_ref = units[f"frilo.{key}.feature-{number}.title"].shared
-            body_ref = units[f"frilo.{key}.feature-{number}.body"].shared
-            entry = found.setdefault(title_ref, {"title": module.SHARED[title_ref].tr, "text": module.SHARED[body_ref].tr, "keys": []})
-            entry["keys"].append(key)
-            number += 1
-    return list(found.values())
+def expected_features(module, units, key):
+    """Shared feature texts of one geotechnics edition, in the order of the launch document."""
+    features = []
+    number = 1
+    while f"frilo.{key}.feature-{number}.title" in units:
+        title_ref = units[f"frilo.{key}.feature-{number}.title"].shared
+        body_ref = units[f"frilo.{key}.feature-{number}.body"].shared
+        features.append({"title": module.SHARED[title_ref].tr, "text": module.SHARED[body_ref].tr})
+        number += 1
+    return features
 
 
 class GeotechnicsContentTests(unittest.TestCase):
@@ -58,13 +56,16 @@ class GeotechnicsContentTests(unittest.TestCase):
         for edition, key in zip(data["editions"], GEOTECH_KEYS):
             with self.subTest(edition=key):
                 self.assertEqual(edition["intro"], units[f"frilo.{key}.intro"].tr)
-        features = expected_features(module, units)
-        self.assertEqual(len(data["features"]), len(features))
-        for actual, expected in zip(data["features"], features):
-            with self.subTest(feature=expected["title"]):
-                self.assertEqual(actual["title"], expected["title"])
-                self.assertEqual(actual["text"], expected["text"])
-                self.assertEqual(actual["editions"], [names[k] for k in expected["keys"]])
+        for edition, key in zip(data["editions"], GEOTECH_KEYS):
+            with self.subTest(news=key):
+                features = expected_features(module, units, key)
+                title = units.get(f"frilo.{key}.section-title")
+                self.assertEqual(edition.get("newsTitle"), title.tr if title else None)
+                self.assertEqual(edition["features"], features)
+
+    def test_every_edition_but_soil_mechanics_has_its_own_news_section(self):
+        data = content()
+        self.assertEqual([len(e["features"]) for e in data["editions"]], [3, 3, 3, 3, 0])
 
     def test_page_shows_the_geotechnics_sections_with_the_shared_cards(self):
         source = PAGE.read_text(encoding="utf-8")
@@ -72,6 +73,8 @@ class GeotechnicsContentTests(unittest.TestCase):
         self.assertIn('id="frilo-geotechnics"', source)
         self.assertIn('href="#frilo-geotechnics"', source)
         self.assertIn("EditionCards", source)
+        self.assertIn("edition.newsTitle", source)
+        self.assertNotIn("Dahil olduğu sürümler", source)
 
 
 class GeotechnicsRenderTests(unittest.TestCase):
@@ -80,7 +83,7 @@ class GeotechnicsRenderTests(unittest.TestCase):
             self.skipTest("build output missing")
         html = BUILT.read_text(encoding="utf-8")
         data = content()
-        for text in [data["lead"], *(e["name"] for e in data["editions"]), *(e["intro"] for e in data["editions"]), *(f["title"] for f in data["features"]), *(f["text"] for f in data["features"])]:
+        for text in [data["lead"], *(e["name"] for e in data["editions"]), *(e["intro"] for e in data["editions"]), *(e["newsTitle"] for e in data["editions"] if e.get("newsTitle")), *(f["title"] for e in data["editions"] for f in e["features"])]:
             with self.subTest(text=text[:40]):
                 self.assertIn(text.replace("&", "&amp;").replace("'", "&#x27;"), html)
 

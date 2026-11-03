@@ -1,0 +1,35 @@
+"""Allplan Max media downloads nothing heavy until a visitor reaches or plays it."""
+
+from pathlib import Path
+import re
+import unittest
+
+
+ROOT = Path(__file__).resolve().parents[1]
+CLIP = ROOT / "src/components/sections/AllplanMaxFeatureClip.tsx"
+PAGE = ROOT / "src/components/sections/AllplanMaxPreviewPage.tsx"
+
+
+class MaxMediaLoadingTests(unittest.TestCase):
+    def test_clip_defers_source_until_visible(self):
+        source = CLIP.read_text(encoding="utf-8")
+        self.assertIn('preload="none"', source)
+        self.assertIn("IntersectionObserver", source)
+        self.assertIn("src={visible ? src : undefined}", source)
+        self.assertNotIn("<source", source)
+
+    def test_clip_autoplays_only_on_wide_screens_without_reduced_motion(self):
+        source = CLIP.read_text(encoding="utf-8")
+        self.assertIn("(min-width: 768px) and (prefers-reduced-motion: no-preference)", source)
+        self.assertNotIn("autoPlay", source)
+
+    def test_intro_video_loads_on_demand_with_poster(self):
+        video = re.search(r"<video[^>]*Allplan Max|<video[^>]*ALLPLAN Max[^>]*>", PAGE.read_text(encoding="utf-8"))
+        self.assertIsNotNone(video)
+        tag = video.group(0)
+        self.assertIn('preload="none"', tag)
+        self.assertIn('poster="/assets/previews/home-2027/allplan-max-generated-v2.jpg"', tag)
+
+
+if __name__ == "__main__":
+    unittest.main()

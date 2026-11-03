@@ -30,7 +30,7 @@ export function AllplanMaxPreviewPage() {
     <IntroSplitSection eyebrow="ALLPLAN MAX" title={text('detail.title')} description={text('detail.body')}
       factsTitle={text('detail.list-title')} facts={[text('detail.bullet-1'), text('detail.bullet-2')]}
       action={{ label: 'Ücretsiz deneme ↗', href: TRIAL_CTA_URL }} />
-    <section className={`alu-container ${styles.videoSection}`}><video controls preload="metadata" playsInline aria-label="ALLPLAN Max tanıtım videosu"><source src="/assets/previews/allplan-max/Allplan_Max_2027_FINAL_1080p.mp4" type="video/mp4" />Tarayıcınız video oynatmayı desteklemiyor. <a href="/assets/previews/allplan-max/Allplan_Max_2027_FINAL_1080p.mp4">Videoyu indirin</a>.</video></section>
+    <section className={`alu-container ${styles.videoSection}`}><video controls preload="none" poster="/assets/previews/home-2027/allplan-max-generated-v2.jpg" playsInline aria-label="ALLPLAN Max tanıtım videosu"><source src="/assets/previews/allplan-max/Allplan_Max_2027_FINAL_1080p.mp4" type="video/mp4" />Tarayıcınız video oynatmayı desteklemiyor. <a href="/assets/previews/allplan-max/Allplan_Max_2027_FINAL_1080p.mp4">Videoyu indirin</a>.</video></section>
     <section className={styles.band}><div className={`alu-container ${styles.section}`}><h2 className={styles.eyebrow}>ALLPLAN · {text('survey.title')}</h2><div className={`alu-hero-metrics ${styles.surveyMetrics}`}>{[1,2,3].map(n => {
       const stat = text(`pillar-${n}.stat`);
       const match = stat.match(/^(%\d+)\s+(.+)$/);

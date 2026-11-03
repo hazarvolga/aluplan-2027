@@ -27,7 +27,7 @@ export function InnovationsSection({ id, eyebrow, title, description, cta, cards
         <div className="preview-section-heading">
           <div className="alu-stack">
             <span className="preview-kicker">{eyebrow}</span>
-            <h2 id={`${id}-heading`} className="alu-h1">{title}</h2>
+            <h2 id={`${id}-heading`} className="alu-h2">{title}</h2>
             <p className="alu-body preview-meta">{description}</p>
           </div>
           <Link className="alu-button alu-button--primary alu-button--md" href={cta.href}>

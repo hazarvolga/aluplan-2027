@@ -30,7 +30,7 @@ export function ProfessionalServicesSection() {
         <div className="preview-section-heading">
           <div className="alu-stack">
             <span className="preview-kicker">PROFESYONEL HİZMETLER VE DESTEK MERKEZİ</span>
-            <h2 id="services-heading" className="alu-h1">
+            <h2 id="services-heading" className="alu-h2">
               Öğrenme, Teknik Destek ve Lisans Kaynakları
             </h2>
             <p className="alu-body preview-meta">

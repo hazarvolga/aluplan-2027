@@ -35,7 +35,7 @@ export function FAQSection({ faqDirectory }: FAQSectionProps) {
           {faqDir.kicker && (
             <span className="preview-kicker">{faqDir.kicker}</span>
           )}
-          <h2 className="alu-h1" style={{ margin: 0 }}>
+          <h2 className="alu-h2" style={{ margin: 0 }}>
             {faqDir.title}
           </h2>
           {faqDir.subtitle && (

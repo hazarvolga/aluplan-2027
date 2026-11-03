@@ -9,7 +9,7 @@ export function SolutionCatalogSection({ directory }: { directory: SolutionDirec
       <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-2xl)' }}>
         <div className="alu-stack" style={{ gap: 'var(--space-stack-sm)' }}>
           <span className="preview-kicker">{intro.kicker}</span>
-          <h2 className="alu-h1" style={{ margin: 0 }}>
+          <h2 className="alu-h2" style={{ margin: 0 }}>
             {intro.title}
           </h2>
           <p className="alu-body-lg" style={{ margin: 0, maxWidth: 'var(--container-application-intro-single)' }}>

@@ -312,7 +312,7 @@ export function SubpageView({
           <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-lg)' }}>
             <div className="alu-stack">
               <span className="preview-kicker">TEKNİK VİDEO GÖSTERİMLERİ</span>
-              <h2 className="alu-h1">Uygulama ve İş Akışı Videoları</h2>
+              <h2 className="alu-h2">Uygulama ve İş Akışı Videoları</h2>
             </div>
             <div className="alu-products-showcase">
               {pageVideos.map((vid, vIdx) => (

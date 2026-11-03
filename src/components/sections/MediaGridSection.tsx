@@ -36,7 +36,7 @@ export function MediaGridSection({
       <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
         <div className="alu-section-header-center">
           {grid.kicker && <span className="preview-kicker">{grid.kicker}</span>}
-          <h2 className="alu-h1" style={{ margin: 0 }}>
+          <h2 className="alu-h2" style={{ margin: 0 }}>
             {grid.title}
           </h2>
           {grid.subtitle && (

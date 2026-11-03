@@ -88,7 +88,7 @@ export function StructuredPageLayoutSection({
       {layout.intro.kicker && (
                   <span className="preview-kicker">{layout.intro.kicker}</span>
                 )}
-                <h2 className="alu-h1" style={{ margin: 0 }}>
+                <h2 className="alu-h2" style={{ margin: 0 }}>
                   {layout.intro.title}
                 </h2>
                 {layout.intro.paragraphs?.map((paragraph, paragraphIndex) => (
@@ -290,7 +290,7 @@ export function StructuredPageLayoutSection({
           <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
             <div className="alu-section-header-center">
               <span className="preview-kicker">/ SIKÇA SORULAN SORULAR</span>
-              <h2 className="alu-h1" style={{ margin: 0 }}>
+              <h2 className="alu-h2" style={{ margin: 0 }}>
                 {layout.faq.title}
               </h2>
             </div>

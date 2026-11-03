@@ -1,6 +1,6 @@
 .section{padding-block:var(--space-inset-lg)}
 .heading{margin-bottom:var(--space-stack-md)}
-.heading h2{margin:0;font-family:var(--font-heading);font-size:var(--type-h3-size);line-height:var(--type-h3-line-height)}
+.heading h2{margin:0;font-family:var(--font-heading);font-size:var(--type-h2-size);line-height:var(--type-h2-line-height)}
 .kicker{margin:0 0 var(--space-stack-xs);font-size:var(--type-caption-size);font-weight:var(--font-weight-strong);color:var(--accent-fg)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));border-top:var(--border-width-default) solid var(--border-default);border-left:var(--border-width-default) solid var(--border-default)}
 .card{min-width:0;padding:var(--space-inset-md);background:var(--surface-default);border-right:var(--border-width-default) solid var(--border-default);border-bottom:var(--border-width-default) solid var(--border-default)}

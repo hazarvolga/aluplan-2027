@@ -44,10 +44,10 @@ export function runTokenTests({ build = buildTokens, lint = lintComponentCss, T,
   test('negative: missing theme key (field/dark text.link)', () => { const t = clone(); delete t.themes.field.modes.dark.text.link; return has(run(t).errors, /field\.dark: color token set differs\. Missing: semantic\.text\.link/) || run(t).errors.join(' | '); });
   test('negative: theme adding a non-existent semantic token', () => { const t = clone(); t.themes.field.base.space.extra = { $value: '{primitive.space.4}' }; return has(run(t).errors, /may only override existing/) || 'not detected'; });
   test('negative: contrast failure is an error', () => { const t = clone(); t.themes.aluplan.modes.light.text.secondary.$value = '{primitive.color.silver.300}'; return has(run(t).errors, /Contrast FAIL \[aluplan\/light\] text\.secondary/) || 'not detected'; });
-  test('contrast decision uses unrounded ratio (4.4969 displays 4.50 but fails)', () => {
-    const t = clone(); t.primitive.color.testEdge = { $value: '#647A86' }; t.themes.aluplan.modes.light.text.secondary.$value = '{primitive.color.testEdge}';
+  test('contrast decision uses unrounded ratio (4.4953 displays 4.50 but fails)', () => {
+    const t = clone(); t.primitive.color.testEdge = { $value: '#417A86' }; t.themes.aluplan.modes.light.text.secondary.$value = '{primitive.color.testEdge}';
     const r = run(t); const c = r.contrast.find(c => c.theme === 'aluplan' && c.mode === 'light' && c.fg === 'text.secondary' && c.bg === 'surface.page');
-    return (c && c.display === '4.50' && c.pass === false && has(r.errors, /text\.secondary on surface\.page: 4\.4969/)) || JSON.stringify(c);
+    return (c && c.display === '4.50' && c.pass === false && has(r.errors, /text\.secondary on surface\.page: 4\.4953/)) || JSON.stringify(c);
   });
 
   test('logo size change does not affect icon sizes', () => {

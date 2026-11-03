@@ -33,7 +33,7 @@ export function DisciplineWorkflowSection({ id, roles, products, releaseLabel, t
           <div className={styles.headerRow}>
           <div className="alu-pathway-header">
             <span className="preview-kicker">ROLÜNÜZÜ SEÇİN · ROL VE ÜRÜN MİMARİSİ</span>
-            <h2 id={`${id}-heading`} className="alu-h1">
+            <h2 id={`${id}-heading`} className="alu-h2">
               Disiplininize Özel BIM İş Akışı
             </h2>
             <p className="alu-body preview-meta" style={{ maxWidth: 'var(--container-application-meta)' }}>

@@ -7,7 +7,7 @@ import { GroupHeader } from './GroupHeader';
 type EditionItem = string | { title: string; text: string };
 type Edition = { title: string; items?: readonly EditionItem[]; description?: string; itemsLabel?: string; label?: string; icon?: AluIconName };
 
-type EditionCardsProps = { title: string; editions: readonly Edition[]; kicker?: string; lead?: string; variant?: 'grid' | 'steps' | 'icons'; group?: { index: number; unit?: string } };
+type EditionCardsProps = { title: string; editions: readonly Edition[]; kicker?: string; lead?: string; variant?: 'grid' | 'cards' | 'steps' | 'icons'; group?: { index: number; unit?: string } };
 
 const stepNumber = (index: number) => String(index + 1).padStart(2, '0');
 

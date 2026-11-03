@@ -6,6 +6,11 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
+
+def rebar_and_parametric_are_held() -> bool:
+    """Held until ALLPLAN publishes them: the production build renders them as 404 (user-decisions.md, 03.11.2026)."""
+    routes = (ROOT / "src/lib/release-2027-routes.ts").read_text(encoding="utf-8")
+    return "heldUntilManufacturerRelease: true" in routes
 SECTIONS = ROOT / "src/components/sections"
 CARDS = (SECTIONS / "EditionCards.tsx").read_text(encoding="utf-8")
 CARDS_CSS = (SECTIONS / "EditionCards.module.css").read_text(encoding="utf-8")
@@ -26,7 +31,7 @@ def benefit_count(path: Path) -> int:
 
 class EditionCardVariantTests(unittest.TestCase):
     def test_cards_offer_grid_steps_and_icons_variants(self):
-        self.assertIn("variant?: 'grid' | 'steps' | 'icons'", CARDS)
+        self.assertIn("variant?: 'grid' | 'cards' | 'steps' | 'icons'", CARDS)
         self.assertIn("data-variant={variant}", CARDS)
         for name in (".steps", ".icons", ".stepNumber", ".iconChip"):
             with self.subTest(selector=name):
@@ -37,9 +42,9 @@ class EditionCardVariantTests(unittest.TestCase):
         self.assertIn("edition.label", CARDS)
 
     def test_steps_are_a_spaced_two_by_two_grid_with_a_left_accent_and_corner_number(self):
-        self.assertIn(".icons,.steps{grid-template-columns:repeat(2,minmax(0,1fr))}", CARDS_CSS)
-        self.assertIn(".icons,.steps{gap:var(--space-stack-md);border:0}", CARDS_CSS)
-        card = re.search(r"\.icons \.card,\.steps \.card\{[^}]*\}", CARDS_CSS).group(0)
+        self.assertIn(".cards,.icons,.steps{grid-template-columns:repeat(2,minmax(0,1fr))}", CARDS_CSS)
+        self.assertIn(".cards,.icons,.steps{gap:var(--space-stack-md);border:0}", CARDS_CSS)
+        card = re.search(r"\.cards \.card,\.icons \.card,\.steps \.card\{[^}]*\}", CARDS_CSS).group(0)
         self.assertIn("border-left:var(--border-width-strong) solid var(--accent-border)", card)
         number = re.search(r"\.stepNumber\{[^}]*\}", CARDS_CSS).group(0)
         self.assertIn("position:absolute", number)
@@ -52,6 +57,12 @@ class EditionCardVariantTests(unittest.TestCase):
         self.assertNotIn("border", chip)
         self.assertIn("position:absolute", chip)
         self.assertIn("right:var(--card-padding)", chip)
+
+
+class FriloEditionBandTests(unittest.TestCase):
+    def test_both_frilo_edition_bands_use_the_spaced_cards(self):
+        page = (ROOT / "src/app/products/frilo/page.tsx").read_text(encoding="utf-8")
+        self.assertEqual(page.count('variant="cards"'), 2)
 
 
 class ProductEditionViewTests(unittest.TestCase):
@@ -77,6 +88,8 @@ class ProductEditionViewTests(unittest.TestCase):
 
 class EditionCardRenderTests(unittest.TestCase):
     def test_built_rebar_page_uses_both_variants(self):
+        if rebar_and_parametric_are_held():
+            self.skipTest("Rebar and Parametric are held until ALLPLAN publishes them")
         html = ROOT / ".next/server/app/products/allplan-rebar.html"
         if not html.is_file():
             self.skipTest("build output missing")

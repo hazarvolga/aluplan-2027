@@ -1,5 +1,17 @@
 # Oturum devri
 
+## 03.11.2026 — Webinar kayıtları YouTube'a bağlandı, classroom sayfası kaldırıldı (yerel, commitlenmedi)
+
+- **YouTube:** Allplan Türkiye kanalı (`@AllplanTurkey`, 210 video) tarandı; 20 dakikadan uzun 12 video listelendi. 8 mevcut webinar kartı başlık ve tarihle eşleştirilip `youtubeId` ile bağlandı, kanalda olup kartlarımızda bulunmayan iki webinar eklendi: "Allplan Bridge 2022 Webinar" (19 Nisan 2022) ve "BIMX5 Kurum Rapor Eklentisi" (9 Temmuz 2021). Bu ikisi yerel poster yerine YouTube küçük resmini kullanır. Kartlar ortak `MediaGridSection`; videoya tıklayınca onay kapılı açılır pencere.
+- **Kaldırıldı:** `/solutions-v2/training/classroom`; 308 ile `/kaynaklar`'a (sürüm kapalıyken `/`) yönlenir.
+- Kapılar: 363 unit test, 42/42 parite, 45/45 token, typecheck, build; tarayıcıda video penceresi ve yönlendirme doğrulandı.
+
+## 03.11.2026 — Webinar kartları ortak bileşene geçti, online eğitim sayfası kaldırıldı (yerel, commitlenmedi)
+
+- **Webinar arşivi:** kendi satır tasarımım kaldırıldı; sayfa artık ortak `MediaGridSection` (`alu-media-card`) kartlarını kullanır. Video/görsel pencereleri `SubpageView` içinden ortak `MediaViewerDialogs` bileşenine çıkarıldı; `MediaGridWithViewer` bunu `SubpageView` dışındaki sayfalara taşır. "Arşivde" etiketi kalktı. Sayfa başlığı kaynaktaki gibi "Webinarlar", arşiv bölümü "Kaydedilmiş Webinarlar".
+- **Kaldırıldı:** `/solutions-v2/training/online` üretilen veriden silindi; 308 ile `/kaynaklar`'a (sürüm kapalıyken `/`) yönlenir. `removedRoutes` bunu da kapsar.
+- Kapılar: 361 unit test, 41/41 parite, 45/45 token, typecheck, build; tarayıcıda kartlar, görsel büyütme penceresi ve yönlendirme doğrulandı.
+
 ## 03.11.2026 — Video Kütüphanesi ve Kaydedilmiş Webinarlar kompakt tasarımı (yerel, commitlenmedi)
 
 - **`/video-kutuphanesi`:** `VideoLibraryHubSection` yeniden yazıldı (ortak `CompactPageHero`, resmi kanal şeridi, 22 kartlık kompakt ızgara; iç listelerde "N Video" sayacı). Hero metinleri üreteçten (`video-library.json` içindeki `hero`). Hub artık genel alt sayfa hero'sunu göstermez (`SubpageView`). Kaynakta bağlantısı `#` olan 4 kart tıklanabilir değil, gri ikonlu ve eylemsiz.
@@ -25,8 +37,8 @@
 
 - **Kaynaklar sayfası:** mobil menüye "Kaynaklar" eklendi; Öğren/Bilgi kartlarında ikonlar sağ üst köşede, zeminsiz (lisans satırlarındaki kutulu ikonlar aynen kaldı). `/kaynaklar` adresi öneridir, onay bekliyor. `navigation.json` içindeki `directLinks` verisi arayüzde kullanılmıyor, eski hedefi (`/#professional-services`) gösteriyor.
 - **Kaynaklar yeni kartlar:** "Video Kütüphanesi" (`/video-kutuphanesi`), "Kaydedilmiş Webinarlar" (`/kaydedilmis-webinarlar`) ve "Eğitim Merkezleri" (`/egitim-merkezlerimiz`) bağlantıları kesin. Video Kütüphanesi ve Eğitim Merkezleri kartlarının açıklama/buton metni hâlâ geçici (Kaydedilmiş Webinarlar açıklaması eski sayfanın kendi metninden). Kaynak: `scripts/generate_site_data.py` içindeki `ADDED_SERVICES`. Sürüm kapalıyken eski ana sayfa bölümü de bu üç kartı gösterir (sayı 22).
-- **Kayıtlı webinarlar:** Eski sayfadaki "Hemen İzle" yalnızca "(Arşivde)" yazan tıklanamaz bir metindi; 13 webinarın hiçbirinde gerçek video bağlantısı yok. Yeni sayfada sahte buton yok, "Arşivde" etiketi var. Gerçek kayıt bağlantıları verilirse eklenir.
-- **Eğitim alt sayfaları:** `/solutions-v2/training` altındaki 6 sayfa (online, classroom, events, individual, e-learning, quick-start) yerinde duruyor ama siteden bağlantı almıyor; silinsin mi kararı bekliyor.
+- **Kayıtlı webinarlar:** 15 karttan 10'unun YouTube kaydı bağlı (Allplan Türkiye kanalı, başlık ve tarihle eşleştirildi). Bağlı olmayan 5 webinarın kanalda kaydı yok: IMO / ALLPLAN BRIDGE 2022, IMO / ALLPLAN ENGINEERING 2022, BIMX5 - Genel, Bimfili "BIMX5 Nedir?", Görsel Komut Dosyaları (Visual Scripting; kanalda yalnızca 2,5 dakikalık bir klip var, webinar değil). Kullanıcı bu kayıtların bağlantısını verirse `youtubeId` alanı yeterli. Doğrulama gerektirenler: "2B DWG Converter" kartı 6 Temmuz 2021, kanaldaki kayıt başlığı 8 Temmuz; "BIMX5 Kurum Rapor Eklentisi" (9 Temmuz) "BIMX5 - Genel" ile aynı etkinlik olabilir. Kanalda ayrıca SCIA Engineer (Nisan 2026, 56 dk) ve Allplan Bridge Conference 2026 (Temmuz 2026, 28 dk) uzun videoları var; webinar olup olmadıkları belirsiz olduğu için eklenmedi.
+- **Eğitim alt sayfaları:** `/solutions-v2/training` altında 4 sayfa kaldı (events, individual, e-learning, quick-start); siteden bağlantı almıyorlar, silinsin mi kararı bekliyor.
 - **LGN logosu:** Eğitim İş Ortaklarımız sayfasında LGN Proje Akademi logosu yok (projede dosyası bulunamadı); dosya verilirse eklenir.
 - **AX3000 Mekanik Tesisat:** "Modüller" başlığı (kaynakta yok) ve bölüm sırası (modüller özelliklerin önüne alınabilir) onay bekliyor.
 - **BIMFlex özel video (B3):** kart kaldırılsın mı, video sahibinden herkese açık yapılması mı istensin?

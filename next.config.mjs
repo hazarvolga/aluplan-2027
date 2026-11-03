@@ -143,6 +143,16 @@ const nextConfig = {
         permanent: true
       },
       {
+        source: '/solutions-v2/training/classroom',
+        destination: showRelease ? '/kaynaklar' : '/',
+        permanent: true
+      },
+      {
+        source: '/solutions-v2/training/online',
+        destination: showRelease ? '/kaynaklar' : '/',
+        permanent: true
+      },
+      {
         source: '/solutions-v2/training/webinar',
         destination: showRelease ? '/kaydedilmis-webinarlar' : '/',
         permanent: true

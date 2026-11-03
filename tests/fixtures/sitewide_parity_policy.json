@@ -2,7 +2,7 @@
   "defaultEvidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence",
   "routeRenames": {"/solutions-v2/faq": "/faq"},
   "routePrefixRenames": {"/solutions-v2/training/video-library": "/video-kutuphanesi"},
-  "removedRoutes": {"/solutions-v2/training": "/kaynaklar", "/solutions-v2/training/webinar": "/kaydedilmis-webinarlar"},
+  "removedRoutes": {"/solutions-v2/training": "/kaynaklar", "/solutions-v2/training/webinar": "/kaydedilmis-webinarlar", "/solutions-v2/training/online": "/kaynaklar", "/solutions-v2/training/classroom": "/kaynaklar"},
   "excludedRoutes": [
     {
       "route": "/hero-3d",

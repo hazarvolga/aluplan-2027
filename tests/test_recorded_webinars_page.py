@@ -3,6 +3,7 @@
 from html.parser import HTMLParser
 from pathlib import Path
 import json
+import re
 import unittest
 
 
@@ -14,7 +15,27 @@ DATA = ROOT / "src/data/recorded-webinars.ts"
 BUILT = ROOT / ".next/server/app/kaydedilmis-webinarlar.html"
 INVENTORY = (ROOT / "docs/00-inventory/page-content.md").read_text(encoding="utf-8")
 QUOTE_FORM = "https://forms.office.com/r/hXhnKAG912"
-WEBINAR_COUNT = 13
+SOURCE_WEBINAR_COUNT = 13
+CHANNEL_ADDITIONS = {"Allplan Bridge 2022 Webinar": "tTQ1fL-9P9M", "BIMX5 Kurum Rapor Eklentisi": "3L-AuAXlqz0"}
+WEBINAR_COUNT = SOURCE_WEBINAR_COUNT + len(CHANNEL_ADDITIONS)
+# Recordings found on the Allplan Turkey channel (@AllplanTurkey) and matched by title and date.
+YOUTUBE_LINKS = {
+    "Allplan Bridge 2021": "cQ57NOYXwJA",
+    "BIMX5 Online Webinar - İmar Yönetmeliği": "Cvf_nwrSPBQ",
+    "BIMX5 Online Webinar - 2B DWG Converter": "dBr2W3Qyd0Y",
+    "Bimplus Online Webinar: BIM İşbirliği": "yF1GQhPJclI",
+    "ALLPLAN PRECAST SEVİYENİZİ YÜKSELTİN": "-_6LiE0H-Sw",
+    "Soru Cevap Semineri": "UaDnMdrmJ4w",
+    "Allplan Engineering 2021 ve Yenilikler": "MhtYjJKLZtc",
+    "Allplan 2018-2021: İpuçları": "vXZBQ0IPVsQ",
+    **CHANNEL_ADDITIONS,
+}
+
+
+def webinar_entries() -> list[dict]:
+    text = DATA.read_text(encoding="utf-8")
+    start = text.index('"webinars"')
+    return json.loads(text[text.index("[", start): text.rindex("]") + 1])
 STATS = [("45-60", "Dakika Süre"), ("Ücretsiz", "Genellikle"), ("Uzman", "Konuşmacılar"), ("Soru", "Cevap Bölümü")]
 BENEFITS = ["Zaman Verimliliği", "Güncel Konular", "Kolay Erişim", "Tekrar İzleme"]
 AUDIENCE = [
@@ -82,16 +103,29 @@ class RecordedWebinarsSourceTests(unittest.TestCase):
 
     def test_every_webinar_in_the_data_is_backed_by_the_2026_inventory(self):
         text = data_text()
-        self.assertEqual(text.count('"image": "/assets/images/webinars/'), WEBINAR_COUNT)
-        start = text.index('"webinars"')
-        entries = json.loads(text[text.index("[", start): text.rindex("]") + 1])
+        self.assertEqual(text.count('"image": "/assets/images/webinars/'), SOURCE_WEBINAR_COUNT)
+        entries = webinar_entries()
         self.assertEqual(len(entries), WEBINAR_COUNT)
-        for entry in entries:
+        source_entries = [entry for entry in entries if entry["title"] not in CHANNEL_ADDITIONS]
+        self.assertEqual(len(source_entries), SOURCE_WEBINAR_COUNT)
+        for entry in source_entries:
             with self.subTest(webinar=entry["title"]):
                 self.assertIn(entry["title"], INVENTORY)
                 self.assertIn(entry["date"], INVENTORY)
                 self.assertIn(entry["description"], INVENTORY)
                 self.assertTrue((ROOT / "public" / entry["image"].lstrip("/")).is_file())
+
+    def test_recordings_found_on_the_channel_are_linked_and_the_two_missing_webinars_are_added(self):
+        entries = {entry["title"]: entry for entry in webinar_entries()}
+        for title, video_id in YOUTUBE_LINKS.items():
+            with self.subTest(webinar=title):
+                self.assertEqual(entries[title]["youtubeId"], video_id)
+        linked = {title for title, entry in entries.items() if entry["youtubeId"]}
+        self.assertEqual(linked, set(YOUTUBE_LINKS))
+        for title in CHANNEL_ADDITIONS:
+            self.assertEqual(entries[title]["image"], "")
+        self.assertEqual(entries["Allplan Bridge 2022 Webinar"]["date"], "19 Nisan 2022")
+        self.assertEqual(entries["BIMX5 Kurum Rapor Eklentisi"]["date"], "9 Temmuz 2021")
 
     def test_data_carries_the_overview_benefits_audience_and_cta(self):
         text = data_text()
@@ -101,21 +135,40 @@ class RecordedWebinarsSourceTests(unittest.TestCase):
     def test_page_shares_the_compact_hero(self):
         self.assertIn("CompactPageHero", (ROOT / "src/components/sections/RecordedWebinars.tsx").read_text(encoding="utf-8"))
 
-    def test_archive_does_not_fake_watch_links(self):
-        source = (ROOT / "src/components/sections/RecordedWebinars.tsx").read_text(encoding="utf-8")
-        self.assertNotIn("youtube", source.lower())
+    def test_archive_reuses_the_shared_media_grid_and_viewer(self):
+        page = (ROOT / "src/components/sections/RecordedWebinars.tsx").read_text(encoding="utf-8")
+        self.assertIn("MediaGridWithViewer", page)
+        self.assertNotIn("styles.webinar", page)
+        wrapper = (ROOT / "src/components/sections/MediaGridWithViewer.tsx").read_text(encoding="utf-8")
+        self.assertIn("MediaGridSection", wrapper)
+        self.assertIn("MediaViewerDialogs", wrapper)
+        view = (ROOT / "src/components/sections/SubpageView.tsx").read_text(encoding="utf-8")
+        self.assertIn("MediaViewerDialogs", view)
+        self.assertNotIn("<MediaDialog", view)
+
+    def test_webinars_without_a_recording_link_show_no_status_label(self):
+        text = data_text()
+        self.assertNotIn("Arşivde", text)
+        self.assertNotIn("archiveStatus", text)
+        for entry in webinar_entries():
+            with self.subTest(webinar=entry["title"]):
+                self.assertIn("youtubeId", entry)
+                self.assertTrue(entry["youtubeId"] is None or re.fullmatch(r"[A-Za-z0-9_-]{11}", entry["youtubeId"]))
+
+    def test_hero_is_the_source_heading_and_the_archive_keeps_its_own_title(self):
+        text = data_text()
+        self.assertIn('"title": "Webinarlar"', text)
+        self.assertIn('"archiveTitle": "Kaydedilmiş Webinarlar"', text)
 
 
 class RecordedWebinarsRenderTests(unittest.TestCase):
     def test_every_text_is_on_the_page(self):
         shown = set(rendered().text)
-        text = data_text()
-        start = text.index('"webinars"')
-        entries = json.loads(text[text.index("[", start): text.rindex("]") + 1])
+        entries = webinar_entries()
         expected = [
             *BENEFITS, *AUDIENCE, *(part for pair in STATS for part in pair),
             "Kaydedilmiş Webinarlar", "Genel Bakış", "Kazanımlarınız", "Kimler İçin Uygun?", "Hazır mısınız?", "Webinar Takvimine Göz At",
-            *(value for entry in entries for value in (entry["title"], entry["date"], entry["description"])),
+            *(value for entry in entries for value in (entry["title"], entry["date"], entry["description"]) if value),
         ]
         self.assertEqual([item for item in expected if item not in shown], [])
 

@@ -57,22 +57,22 @@ class HeroVisualFamilyPolicyTests(unittest.TestCase):
         cls.fallback = runtime["fallback"]
         cls.runtime_route_map = runtime["routeMap"]
 
-    def test_fixture_covers_the_exact_97_route_presentation_scope(self):
+    def test_fixture_covers_the_exact_95_route_presentation_scope(self):
         fixture_assignments = [route for routes in FIXTURE.values() for route in routes]
         scope_routes = {
             path for path, page in self.pages.items()
             if page.get("section") in SCOPE_SECTIONS
         }
-        self.assertEqual(len(fixture_assignments), 97)
+        self.assertEqual(len(fixture_assignments), 95)
         self.assertTrue(all(count == 1 for count in Counter(fixture_assignments).values()))
-        self.assertEqual(len(ROUTE_TO_FAMILY), 97)
+        self.assertEqual(len(ROUTE_TO_FAMILY), 95)
         self.assertEqual(scope_routes, set(ROUTE_TO_FAMILY))
         self.assertEqual(self.runtime_route_map, ROUTE_TO_FAMILY)
         self.assertEqual(
             Counter(ROUTE_TO_FAMILY.values()),
             Counter({
                 "VF-00": 2, "VF-01": 6, "VF-02": 7, "VF-03": 7,
-                "VF-04": 30, "VF-05": 10, "VF-06": 27, "VF-07": 6,
+                "VF-04": 30, "VF-05": 10, "VF-06": 25, "VF-07": 6,
                 "VF-08": 2,
             }),
         )

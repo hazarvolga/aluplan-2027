@@ -1,27 +1,25 @@
 import { AluIcon } from '@/components/ui/AluIcon';
 import { recordedWebinars } from '@/data/recorded-webinars';
-import type { RecordedWebinar } from '@/data/recorded-webinars';
+import type { StructuredMediaGridSection } from '@/lib/site-data';
 import { MAIN_QUOTE_FORM_URL } from '@/lib/site-shared';
 import { CompactPageHero } from './CompactPageHero';
+import { MediaGridWithViewer } from './MediaGridWithViewer';
 import styles from './RecordedWebinars.module.css';
 
 const content = recordedWebinars;
 
-function Webinar({ webinar }: { webinar: RecordedWebinar }) {
-  return (
-    <li className={styles.webinar}>
-      <img className={styles.thumb} src={webinar.image} alt="" loading="lazy" />
-      <div className={styles.webinarBody}>
-        <div className={styles.meta}>
-          <span>{webinar.date}</span>
-          <span className={styles.status}>{content.archiveStatus}</span>
-        </div>
-        <h3 className={styles.itemTitle}>{webinar.title}</h3>
-        <p className={styles.text}>{webinar.description}</p>
-      </div>
-    </li>
-  );
-}
+const archive: StructuredMediaGridSection = {
+  title: content.archiveTitle,
+  subtitle: content.archiveLead,
+  columns: 3,
+  items: content.webinars.map((webinar) => ({
+    title: webinar.title,
+    badge: webinar.date,
+    description: webinar.description,
+    imageSrc: webinar.image,
+    youtubeId: webinar.youtubeId
+  }))
+};
 
 export function RecordedWebinars() {
   return (
@@ -33,16 +31,7 @@ export function RecordedWebinars() {
         lead={content.lead}
       />
       <div>
-        <section className={styles.band} aria-label={content.archiveTitle}>
-          <div className="alu-container">
-            <p className={styles.sectionLead}>{content.archiveLead}</p>
-            <ul className={styles.webinars}>
-              {content.webinars.map((webinar) => (
-                <Webinar key={`${webinar.title}-${webinar.date}`} webinar={webinar} />
-              ))}
-            </ul>
-          </div>
-        </section>
+        <MediaGridWithViewer grid={archive} itemKeyPrefix="webinar" />
 
         <section className={styles.band} aria-labelledby="webinar-genel-bakis">
           <div className={`alu-container ${styles.overview}`}>

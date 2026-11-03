@@ -1160,7 +1160,7 @@ def rename_routes(value):
 pages_data = rename_routes(pages_data)
 
 # Pages the 2027 site no longer publishes; their URLs redirect (see next.config.mjs).
-REMOVED_ROUTES = ("/solutions-v2/training", "/solutions-v2/training/webinar")
+REMOVED_ROUTES = ("/solutions-v2/training", "/solutions-v2/training/webinar", "/solutions-v2/training/online", "/solutions-v2/training/classroom")
 pages_data = {path: page for path, page in pages_data.items() if path not in REMOVED_ROUTES}
 
 data_dir = ROOT / "src/data"

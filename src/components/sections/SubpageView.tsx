@@ -23,7 +23,6 @@ import { SolutionCatalogSection } from './SolutionCatalogSection';
 import { PageEndConversion } from './PageEndConversion';
 import { getPageEndConversion } from './page-end-conversion-policy';
 import { handleStructuredTabKey } from './structured-tab-key';
-import { MediaDialog } from '@/components/ui/MediaDialog';
 import { ContactMap } from './ContactMap';
 import { ScalypsoPageContent } from './ScalypsoPageContent';
 import { ScalypsoSubpage } from './ScalypsoSubpage';
@@ -32,6 +31,7 @@ import { SectionActions, SectionCardLink, visibleSectionItems } from './SectionL
 import { DocumentGroupsSection } from './DocumentGroupsSection';
 import { Ax3000MechanicalContent } from './Ax3000MechanicalContent';
 import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
+import { MediaViewerDialogs } from './MediaViewerDialogs';
 
 const AX3000_DOCS_ROUTE = '/products/ax3000/dokumanlar';
 const AX3000_MECHANICAL_ROUTE = '/solutions/ax3000-mekanik-tesisat';
@@ -584,86 +584,12 @@ export function SubpageView({
       </>}
       {pageEndConversion && <PageEndConversion model={pageEndConversion} />}
 
-      {/* Global Video Popup Modal (Cinema Overlay for 91+ Product & Solution Video Cards) */}
-      {activeModalVideo && (
-        <MediaDialog label={activeModalVideo.title} onClose={() => setActiveModalVideo(null)}>
-          <div
-            className="alu-video-modal__dialog"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="alu-video-modal__header">
-              <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-dense)' }}>
-                <span className="alu-badge alu-badge--accent">
-                  <AluIcon name="circle-play" size="sm" />
-                  <span>VİDEO ÖNİZLEME</span>
-                </span>
-                <h3 className="alu-video-modal__title">{activeModalVideo.title}</h3>
-              </div>
-              <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-regular)' }}>
-                {activeModalVideo.youtubeId && (
-                  <a
-                    href={`https://www.youtube.com/watch?v=${activeModalVideo.youtubeId}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="alu-button alu-button--secondary alu-button--sm"
-                  >
-                    <span>YouTube&apos;da Aç</span>
-                    <AluIcon name="external-link" size="sm" />
-                  </a>
-                )}
-                <button
-                  type="button"
-                  className="alu-video-modal__close"
-                  data-media-dialog-close
-                  aria-label="Videoyu kapat"
-                  onClick={() => setActiveModalVideo(null)}
-                >
-                  ✕
-                </button>
-              </div>
-            </div>
-            <div className="alu-video-modal__viewport">
-              {activeModalVideo.videoSrc ? (
-                <video
-                  src={activeModalVideo.videoSrc}
-                  controls
-                  autoPlay
-                  playsInline
-                  style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }}
-                />
-              ) : (
-                <ConsentEmbed src={`https://www.youtube-nocookie.com/embed/${activeModalVideo.youtubeId}?autoplay=1`} title={activeModalVideo.title} requested />
-              )}
-            </div>
-          </div>
-        </MediaDialog>
-      )}
-
-      {/* Global Image Lightbox Modal (Full-Resolution Screenshot Inspector) */}
-      {activeLightboxImage && (
-        <MediaDialog label={activeLightboxImage.title} onClose={() => setActiveLightboxImage(null)}>
-          <div
-            className="alu-video-modal__dialog alu-video-modal__dialog--image"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="alu-video-modal__header">
-              <h3 className="alu-video-modal__title">{activeLightboxImage.title}</h3>
-              <button
-                type="button"
-                className="alu-video-modal__close"
-                data-media-dialog-close
-                aria-label="Görseli kapat"
-                onClick={() => setActiveLightboxImage(null)}
-              >
-                ✕
-              </button>
-            </div>
-            <div className="alu-video-modal__image-viewport">
-              <img src={activeLightboxImage.src} alt={activeLightboxImage.title} />
-            </div>
-          </div>
-        </MediaDialog>
-      )}
+      <MediaViewerDialogs
+        video={activeModalVideo}
+        image={activeLightboxImage}
+        onCloseVideo={() => setActiveModalVideo(null)}
+        onCloseImage={() => setActiveLightboxImage(null)}
+      />
 
     </>
   );

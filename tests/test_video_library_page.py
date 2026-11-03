@@ -99,16 +99,5 @@ class VideoLibraryRenderTests(unittest.TestCase):
         self.assertFalse([c for c in page.classes if "alu-yt" in c])
 
 
-class RecordedWebinarsCompactTests(unittest.TestCase):
-    def test_webinars_render_as_compact_rows_with_a_small_fixed_thumbnail(self):
-        css = (ROOT / "src/components/sections/RecordedWebinars.module.css").read_text(encoding="utf-8")
-        thumb = css[css.index(".thumb{"):].split("}")[0]
-        self.assertIn("width:9rem", thumb)
-        self.assertNotIn("aspect-ratio:16/9;object-fit:cover;border-bottom", thumb)
-        webinar = css[css.index(".webinar{"):].split("}")[0]
-        self.assertIn("flex-wrap:wrap", webinar)
-        self.assertIn("flex:1 1 32rem", webinar)
-
-
 if __name__ == "__main__":
     unittest.main()

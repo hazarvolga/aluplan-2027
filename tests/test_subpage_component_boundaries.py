@@ -322,8 +322,8 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
                 )
             ]
 
-        self.assertEqual(len(search_index), 108)
-        self.assertEqual(len({item["path"] for item in search_index}), 108)
+        self.assertEqual(len(search_index), 106)
+        self.assertEqual(len({item["path"] for item in search_index}), 106)
         self.assertEqual(
             [item["path"] for item in search_index],
             list(pages.keys()),
@@ -343,9 +343,9 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
                 self.assertEqual(item["section"], page["section"])
                 self.assertEqual(item["description"], page["description"])
 
-        self.assertEqual(len(filter_paths("")), 108)
-        self.assertEqual(len(filter_paths(" ")), 108)
-        self.assertEqual(len(filter_paths("allplan")), 77)
+        self.assertEqual(len(filter_paths("")), 106)
+        self.assertEqual(len(filter_paths(" ")), 106)
+        self.assertEqual(len(filter_paths("allplan")), 75)
         self.assertEqual(
             filter_paths("BIMFlex"),
             ["/solutions-v2/other", "/solutions/bimflex"],
@@ -534,7 +534,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
         ]
         product_routes = [page["path"] for page in subpages if page["path"].startswith("/products")]
 
-        self.assertEqual(len(subpages), 107)
+        self.assertEqual(len(subpages), 105)
         self.assertEqual(len(hero_image_routes), 68)
         self.assertEqual(no_cta_routes, ["/about", "/gizlilik-politikasi", "/kullanim-sartlari", "/kvkk"])
         self.assertEqual(len(product_routes), 18)

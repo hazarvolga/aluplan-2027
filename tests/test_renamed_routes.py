@@ -119,6 +119,16 @@ class RemovedTrainingHubTests(unittest.TestCase):
         self.assertEqual(redirect["destination"], "/kaynaklar")
         self.assertTrue(redirect["permanent"])
 
+    def test_classroom_training_url_redirects_to_the_resources_page(self):
+        redirect = config_redirects()["/solutions-v2/training/classroom"]
+        self.assertEqual(redirect["destination"], "/kaynaklar")
+        self.assertTrue(redirect["permanent"])
+
+    def test_online_training_url_redirects_to_the_resources_page(self):
+        redirect = config_redirects()["/solutions-v2/training/online"]
+        self.assertEqual(redirect["destination"], "/kaynaklar")
+        self.assertTrue(redirect["permanent"])
+
     def test_webinar_url_redirects_to_the_recorded_webinars_page(self):
         redirect = config_redirects()["/solutions-v2/training/webinar"]
         self.assertEqual(redirect["destination"], "/kaydedilmis-webinarlar")
@@ -127,7 +137,9 @@ class RemovedTrainingHubTests(unittest.TestCase):
     def test_hub_is_gone_from_the_generated_data_but_its_subpages_remain(self):
         pages = json.loads((DATA / "pages.json").read_text(encoding="utf-8"))
         self.assertNotIn(TRAINING_HUB, pages)
-        for slug in ("online", "classroom", "events", "individual", "e-learning", "quick-start"):
+        self.assertNotIn(f"{TRAINING_HUB}/online", pages)
+        self.assertNotIn(f"{TRAINING_HUB}/classroom", pages)
+        for slug in ("events", "individual", "e-learning", "quick-start"):
             with self.subTest(slug=slug):
                 self.assertIn(f"{TRAINING_HUB}/{slug}", pages)
 

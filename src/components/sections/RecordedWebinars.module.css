@@ -2,13 +2,7 @@
 .band{padding-block:var(--space-stack-xl);border-bottom:var(--border-width-default) solid var(--border-default)}
 .groupTitle{font-family:var(--font-heading);font-size:var(--type-h2-size);margin:0 0 var(--space-stack-md)}
 .itemTitle{font-family:var(--font-heading);font-size:var(--type-h4-size);font-weight:var(--font-weight-strong);margin:0}
-.text,.sectionLead{color:var(--text-secondary);font-size:var(--type-body-sm-size);line-height:var(--type-body-line-height);margin:0}
-.sectionLead{margin-bottom:var(--space-stack-md)}
-.webinars{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:var(--border-width-default);background:var(--border-default);border:var(--border-width-default) solid var(--border-default)}
-.webinar{flex:1 1 32rem;min-width:0;background:var(--surface-raised);padding:var(--space-inset-sm);display:flex;flex-wrap:wrap;gap:var(--space-stack-sm)}
-.thumb{flex:none;display:block;width:9rem;height:5.0625rem;object-fit:cover;border:var(--border-width-default) solid var(--border-default)}
-.webinarBody{flex:1 1 14rem;min-width:0;display:flex;flex-direction:column;gap:var(--space-stack-xs)}
-.meta{display:flex;justify-content:space-between;gap:var(--space-stack-sm);font-size:var(--type-caption-size);color:var(--text-secondary)}.status{font-family:var(--font-mono);text-transform:uppercase;color:var(--accent-fg)}
+.text{color:var(--text-secondary);font-size:var(--type-body-sm-size);line-height:var(--type-body-line-height);margin:0}
 .overview{display:flex;flex-wrap:wrap;gap:var(--space-stack-lg);align-items:flex-start}.overviewText{flex:2 1 28rem;min-width:0}.audience{flex:1 1 20rem;min-width:0}
 .stats{display:flex;flex-wrap:wrap;gap:var(--border-width-default);margin:var(--space-stack-md) 0 0;background:var(--border-default);border:var(--border-width-default) solid var(--border-default)}
 .stat{flex:1 1 8rem;background:var(--surface-raised);padding:var(--space-inset-sm);display:grid}.stat dt{font-family:var(--font-heading);font-size:var(--type-h3-size);font-weight:var(--font-weight-strong);color:var(--accent-fg)}.stat dd{margin:0;color:var(--text-secondary);font-size:var(--type-body-sm-size)}

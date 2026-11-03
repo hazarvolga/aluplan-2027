@@ -6564,3 +6564,8 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 .preview-section--group {
   padding-block: var(--space-stack-lg);
 }
+
+/* Parent header of a run of grouped grids; the first group supplies the space below it. */
+.preview-section--group-parent {
+  padding-bottom: 0;
+}

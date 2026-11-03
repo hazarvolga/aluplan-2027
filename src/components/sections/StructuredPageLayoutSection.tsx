@@ -20,6 +20,7 @@ import { StructuredContentBlocks } from './StructuredContentBlocks';
 import { WorkflowSection } from './WorkflowSection';
 import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
 import { SectionHeader } from './SectionHeader';
+import { gridGroupFor } from '@/lib/grid-groups';
 
 interface StructuredVideoRequest {
   youtubeId?: string;
@@ -62,6 +63,7 @@ export function StructuredPageLayoutSection({
   onVideo,
   onImage
 }: StructuredPageLayoutSectionProps): ReactElement {
+  const gridGroup = gridGroupFor(pagePath);
   if (layout.contentBlocks && layout.contentBlocks.length > 0) {
     return (
       <div className="alu-structured-page">
@@ -263,6 +265,13 @@ export function StructuredPageLayoutSection({
         />
       )}
 
+      {gridGroup && layout.extraGrids && layout.extraGrids.length > 0 && (
+        <div className="preview-section preview-section--group-parent">
+          <div className="alu-container">
+            <SectionHeader kicker={layout.extraGrids[0].kicker} title={gridGroup.title} />
+          </div>
+        </div>
+      )}
       {layout.extraGrids?.map((grid, gridIndex) => (
         <MediaGridSection
           key={`extra-grid-${gridIndex}`}
@@ -270,6 +279,7 @@ export function StructuredPageLayoutSection({
           itemKeyPrefix={`extra-grid-${gridIndex}`}
           onVideo={onVideo}
           onImage={onImage}
+          group={gridGroup ? { index: gridIndex, unit: gridGroup.unit } : undefined}
         />
       ))}
 

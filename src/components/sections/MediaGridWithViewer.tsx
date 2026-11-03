@@ -7,7 +7,7 @@ import { MediaViewerDialogs } from './MediaViewerDialogs';
 import type { ViewerImage, ViewerVideo } from './MediaViewerDialogs';
 
 /** A media grid that brings its own video popup and image lightbox, for pages that are not SubpageView. */
-export function MediaGridWithViewer({ grid, itemKeyPrefix, group }: { grid: StructuredMediaGridSection; itemKeyPrefix: string; group?: { index: number } }) {
+export function MediaGridWithViewer({ grid, itemKeyPrefix, group }: { grid: StructuredMediaGridSection; itemKeyPrefix: string; group?: { index: number; unit?: string } }) {
   const [video, setVideo] = useState<ViewerVideo | null>(null);
   const [image, setImage] = useState<ViewerImage | null>(null);
 

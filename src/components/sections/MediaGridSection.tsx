@@ -24,7 +24,7 @@ interface MediaGridSectionProps {
   onVideo: (video: MediaVideoRequest) => void;
   onImage: (image: MediaImageRequest) => void;
   /** Renders the title as a numbered group label under a parent section heading. */
-  group?: { index: number };
+  group?: { index: number; unit?: string };
 }
 
 export function MediaGridSection({
@@ -40,7 +40,7 @@ export function MediaGridSection({
     <section className={group ? 'preview-section preview-section--group' : 'preview-section'} aria-label={grid.title}>
       <div className="alu-container alu-stack" style={{ gap: group ? 'var(--space-stack-md)' : 'var(--space-stack-xl)' }}>
         {group
-          ? <GroupHeader index={group.index} title={grid.title} count={grid.items.length} />
+          ? <GroupHeader index={group.index} title={grid.title} count={grid.items.length} unit={group.unit} lead={grid.subtitle} />
           : <SectionHeader kicker={grid.kicker} title={grid.title} lead={grid.subtitle} />}
 
         <div className={`alu-media-grid alu-media-grid--cols-${columns}`}>

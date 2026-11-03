@@ -2,19 +2,22 @@ import { useId } from 'react';
 import { AluIcon, type AluIconName } from '@/components/ui/AluIcon';
 import styles from './EditionCards.module.css';
 import { SectionHeader } from './SectionHeader';
+import { GroupHeader } from './GroupHeader';
 
 type EditionItem = string | { title: string; text: string };
 type Edition = { title: string; items?: readonly EditionItem[]; description?: string; itemsLabel?: string; label?: string; icon?: AluIconName };
 
-type EditionCardsProps = { title: string; editions: readonly Edition[]; kicker?: string; lead?: string; variant?: 'grid' | 'steps' | 'icons' };
+type EditionCardsProps = { title: string; editions: readonly Edition[]; kicker?: string; lead?: string; variant?: 'grid' | 'steps' | 'icons'; group?: { index: number; unit?: string } };
 
 const stepNumber = (index: number) => String(index + 1).padStart(2, '0');
 
-export function EditionCards({ title, editions, kicker = 'SÜRÜMLER', lead, variant = 'grid' }: EditionCardsProps) {
+export function EditionCards({ title, editions, kicker = 'SÜRÜMLER', lead, variant = 'grid', group }: EditionCardsProps) {
   const headingId = useId();
   const gridClass = variant === 'grid' ? styles.grid : `${styles.grid} ${styles[variant]}`;
-  return <section className={styles.section} aria-labelledby={headingId}>
-    <div className={styles.heading}><SectionHeader kicker={kicker} title={title} lead={lead} id={headingId} /></div>
+  return <section className={group ? `${styles.section} ${styles.grouped}` : styles.section} aria-labelledby={group ? undefined : headingId} aria-label={group ? title : undefined}>
+    <div className={styles.heading}>{group
+      ? <GroupHeader index={group.index} title={title} count={editions.length} unit={group.unit} lead={lead} />
+      : <SectionHeader kicker={kicker} title={title} lead={lead} id={headingId} />}</div>
     <div className={gridClass} data-variant={variant}>{editions.map((edition, index) => <article className={styles.card} key={edition.title}>
       {variant === 'steps' && <p className={styles.stepLabel}><span className={styles.stepNumber} aria-hidden="true">{stepNumber(index)}</span>{edition.label}</p>}
       {variant === 'icons' && edition.icon && <span className={styles.iconChip}><AluIcon name={edition.icon} size="lg" /></span>}

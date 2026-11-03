@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const isDev = process.env.NODE_ENV !== 'production';
+// Mirrors isReleaseContentEnabled(): the 2027 pages exist in development or when the release flag is on.
+const showRelease = isDev || process.env.ALUPLAN_SHOW_2027 === '1';
 
 // The retired flag both showed 2027 content and blocked indexing; deploying without its replacements would silently index the review site.
 if (
@@ -113,6 +115,71 @@ const nextConfig = {
       {
         source: '/allplan-2021-features',
         destination: '/products/allplan-2026-yenilikler',
+        permanent: true
+      },
+      {
+        source: '/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf',
+        destination: '/paket-karsilastirma',
+        permanent: true
+      },
+      {
+        source: '/docs/V2026_Paket_Karsilastirma-Q4-2025_R01.pdf',
+        destination: '/paket-karsilastirma',
+        permanent: true
+      },
+      {
+        source: '/2027/compare',
+        destination: '/paket-karsilastirma',
+        permanent: true
+      },
+      {
+        source: '/solutions-v2/faq',
+        destination: '/faq',
+        permanent: true
+      },
+      {
+        source: '/solutions-v2/training',
+        destination: showRelease ? '/kaynaklar' : '/',
+        permanent: true
+      },
+      {
+        source: '/solutions-v2/training/events',
+        destination: showRelease ? '/kaynaklar' : '/',
+        permanent: true
+      },
+      {
+        source: '/solutions-v2/training/individual',
+        destination: showRelease ? '/kaynaklar' : '/',
+        permanent: true
+      },
+      {
+        source: '/solutions-v2/training/e-learning',
+        destination: showRelease ? '/kaynaklar' : '/',
+        permanent: true
+      },
+      {
+        source: '/solutions-v2/training/quick-start',
+        destination: showRelease ? '/kaynaklar' : '/',
+        permanent: true
+      },
+      {
+        source: '/solutions-v2/training/classroom',
+        destination: showRelease ? '/kaynaklar' : '/',
+        permanent: true
+      },
+      {
+        source: '/solutions-v2/training/online',
+        destination: showRelease ? '/kaynaklar' : '/',
+        permanent: true
+      },
+      {
+        source: '/solutions-v2/training/webinar',
+        destination: showRelease ? '/kaydedilmis-webinarlar' : '/',
+        permanent: true
+      },
+      {
+        source: '/solutions-v2/training/video-library/:path*',
+        destination: '/video-kutuphanesi/:path*',
         permanent: true
       },
       {

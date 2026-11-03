@@ -61,9 +61,9 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
             "const videoLibrary = getVideoLibraryData()",
             "const playlistByUrl",
             "videoLibrary.items.map",
-            "alu-yt-banner",
-            "alu-yt-grid",
-            "alu-yt-card--internal",
+            "styles.banner",
+            "styles.tiles",
+            "const isInternal = item.url.startsWith('/')",
             "matchedPlaylist.count",
             "videoLibrary.subscribe.title",
             'target={isExternal ? \'_blank\' : undefined}',
@@ -85,25 +85,25 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
         expected_pairs = [
             ("Allplan 2026", "https://youtube.com/playlist?list=PLowC-ZFUywGMotfHSyzqoNZCQYWl_6G1x&si=BSEJvgjsQWgbIwVe"),
             ("Youtube Allplan English", "https://www.youtube.com/@ALLPLANEnglish"),
-            ("Youtube Allplan Global", "https://www.youtube.com/c/AllplanInternational"),
+            ("ALLPLAN YouTube Kanalı", "https://www.youtube.com/c/AllplanInternational"),
             ("Youtube Allplan Precast", "https://www.youtube.com/c/AllplanPrecast"),
-            ("Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları", "/solutions-v2/training/video-library/hello-allplan-2024"),
-            ("Allplan Add On Geometry Tools", "/solutions-v2/training/video-library/addon-geometry"),
-            ("AX3000 - MEP & Enerji", "/solutions-v2/training/video-library/ax3000"),
+            ("Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları", "/video-kutuphanesi/hello-allplan-2024"),
+            ("Allplan Add On Geometry Tools", "/video-kutuphanesi/addon-geometry"),
+            ("AX3000 - MEP & Enerji", "/video-kutuphanesi/ax3000"),
             ("Youtube CDS Allplan Add-On", "#"),
-            ("Allplan Road Design Workflow", "/solutions-v2/training/video-library/road-design"),
-            ("Allplan Bridge Workflows", "/solutions-v2/training/video-library/bridge-workflows"),
-            ("Campus Tutorials (Deutsch)", "/solutions-v2/training/video-library/campus-de"),
-            ("Campus Tutorials (English)", "/solutions-v2/training/video-library/campus-en"),
+            ("Allplan Road Design Workflow", "/video-kutuphanesi/road-design"),
+            ("Allplan Bridge Workflows", "/video-kutuphanesi/bridge-workflows"),
+            ("Campus Tutorials (Deutsch)", "/video-kutuphanesi/campus-de"),
+            ("Campus Tutorials (English)", "/video-kutuphanesi/campus-en"),
             ("Allplan Bridge", "#"),
             ("Allplan Bridge Tutorials", "#"),
-            ("SDS2 Detaylandırma", "/solutions-v2/training/video-library/sds2-intro"),
-            ("Konut İnşaatı İş Akışları", "/solutions-v2/training/video-library/konut-insaati"),
-            ("Bridge Workflow 2022", "/solutions-v2/training/video-library/bridge-workflow-2022"),
-            ("Otomatik Donatı (PythonPart)", "/solutions-v2/training/video-library/otomatik-donati"),
-            ("ALLPLAN QuickStart: Buildings", "/solutions-v2/training/video-library/quickstart-buildings"),
-            ("ALLPLAN for Reinforcement", "/solutions-v2/training/video-library/allplan-reinforcement"),
-            ("Allplan Campus Tutorials 2019-2022", "/solutions-v2/training/video-library/campus-tutorials-2019-2022"),
+            ("SDS2 Detaylandırma", "/video-kutuphanesi/sds2-intro"),
+            ("Konut İnşaatı İş Akışları", "/video-kutuphanesi/konut-insaati"),
+            ("Bridge Workflow 2022", "/video-kutuphanesi/bridge-workflow-2022"),
+            ("Otomatik Donatı (PythonPart)", "/video-kutuphanesi/otomatik-donati"),
+            ("ALLPLAN QuickStart: Buildings", "/video-kutuphanesi/quickstart-buildings"),
+            ("ALLPLAN for Reinforcement", "/video-kutuphanesi/allplan-reinforcement"),
+            ("Allplan Campus Tutorials 2019-2022", "/video-kutuphanesi/campus-tutorials-2019-2022"),
             ("ALLPLAN Pythonparts Youtube Kanalı", "#"),
         ]
 
@@ -322,8 +322,8 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
                 )
             ]
 
-        self.assertEqual(len(search_index), 110)
-        self.assertEqual(len({item["path"] for item in search_index}), 110)
+        self.assertEqual(len(search_index), 102)
+        self.assertEqual(len({item["path"] for item in search_index}), 102)
         self.assertEqual(
             [item["path"] for item in search_index],
             list(pages.keys()),
@@ -343,9 +343,9 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
                 self.assertEqual(item["section"], page["section"])
                 self.assertEqual(item["description"], page["description"])
 
-        self.assertEqual(len(filter_paths("")), 110)
-        self.assertEqual(len(filter_paths(" ")), 110)
-        self.assertEqual(len(filter_paths("allplan")), 79)
+        self.assertEqual(len(filter_paths("")), 102)
+        self.assertEqual(len(filter_paths(" ")), 102)
+        self.assertEqual(len(filter_paths("allplan")), 71)
         self.assertEqual(
             filter_paths("BIMFlex"),
             ["/solutions-v2/other", "/solutions/bimflex"],
@@ -534,8 +534,8 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
         ]
         product_routes = [page["path"] for page in subpages if page["path"].startswith("/products")]
 
-        self.assertEqual(len(subpages), 109)
-        self.assertEqual(len(hero_image_routes), 69)
+        self.assertEqual(len(subpages), 101)
+        self.assertEqual(len(hero_image_routes), 68)
         self.assertEqual(no_cta_routes, ["/about", "/gizlilik-politikasi", "/kullanim-sartlari", "/kvkk"])
         self.assertEqual(len(product_routes), 18)
         self.assertTrue(
@@ -575,8 +575,9 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
 
         self.assertIn("import type { StructuredPageLayout }", component)
         self.assertNotIn("'use client'", component)
+        self.assertIn("<SectionHeader", component)
+        self.assertIn("alu-section-header", read("src/components/sections/SectionHeader.tsx"))
         for marker in [
-            "alu-section-header-center",
             "alu-benefits-grid",
             "alu-benefits-grid--cols-4",
             "alu-benefits-grid--cols-3",
@@ -690,10 +691,10 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
                     if image_src and image_src.startswith("/"):
                         self.assertTrue((ROOT / "public" / image_src.lstrip("/")).is_file(), image_src)
 
-        self.assertEqual(len(media_routes), 31)
+        self.assertEqual(len(media_routes), 29)
         self.assertEqual(core_grid_count, 8)
-        self.assertEqual(extra_grid_count, 48)
-        self.assertEqual(card_count, 374)
+        self.assertEqual(extra_grid_count, 44)
+        self.assertEqual(card_count, 348)
 
     def test_split_callouts_have_a_shared_interactive_render_boundary(self):
         component = read("src/components/sections/SplitCalloutSection.tsx")

@@ -1,5 +1,29 @@
 import { getSiteIdentity, SITE_ORIGIN } from './site-data';
 import type { PageRecord, PlaylistRecord, StructuredFaqItem } from './site-data';
+import { getPageShareImage } from './share-image';
+
+const PRODUCT_NAMES: Readonly<Record<string, string>> = {
+  '/products/allplan': 'ALLPLAN',
+  '/products/allplan-2026': 'ALLPLAN 2026',
+  '/products/allplan-2026-yenilikler': 'ALLPLAN 2026',
+  '/products/allplan-aec': 'ALLPLAN AEC',
+  '/products/allplan-basic': 'ALLPLAN Basic',
+  '/products/allplan-bimplus': 'ALLPLAN Bimplus',
+  '/products/allplan-cloud-services': 'ALLPLAN Cloud Services',
+  '/products/allplan-concept': 'ALLPLAN Concept',
+  '/products/allplan-professional': 'ALLPLAN Professional',
+  '/products/allplan-ultimate': 'ALLPLAN Ultimate',
+  '/products/architecture': 'ALLPLAN Architecture',
+  '/products/ax3000': 'AX3000',
+  '/products/civil': 'ALLPLAN Civil',
+  '/products/precast': 'ALLPLAN Precast',
+  '/products/precast-detail': 'ALLPLAN Precast Detail',
+  '/products/sds2-home': 'SDS2'
+};
+
+function productName(page: PageRecord): string {
+  return PRODUCT_NAMES[page.path] ?? page.breadcrumbs.at(-1)?.label ?? page.h1;
+}
 
 function faqAnswerText(item: StructuredFaqItem): string {
   return [
@@ -82,31 +106,14 @@ export function buildPageJsonLd(page: PageRecord, playlist?: PlaylistRecord | nu
     graph.push({
       '@type': 'SoftwareApplication',
       '@id': appEntityId,
-      name: page.h1,
+      name: productName(page),
+      image: getPageShareImage(page).url,
       description: page.description,
       applicationCategory: 'DesignApplication',
       operatingSystem: 'Windows 10, Windows 11',
       url: pageUrl,
       provider: {
         '@id': `${SITE_ORIGIN}/#organization`
-      }
-    });
-  } else if (page.schemaType === 'Service') {
-    const serviceId = `${pageUrl}#service`;
-    baseWebPage.mainEntity = { '@id': serviceId };
-    graph.push(baseWebPage);
-    graph.push({
-      '@type': 'Service',
-      '@id': serviceId,
-      name: page.h1,
-      description: page.description,
-      serviceType: 'BIM Eğitim, Webinar ve Teknik Danışmanlık Hizmeti',
-      provider: {
-        '@id': `${SITE_ORIGIN}/#organization`
-      },
-      areaServed: {
-        '@type': 'Country',
-        name: 'Türkiye'
       }
     });
   } else if (page.schemaType === 'FAQPage') {

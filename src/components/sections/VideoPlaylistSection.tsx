@@ -30,12 +30,12 @@ export function VideoPlaylistSection({
         <div className="preview-section-heading">
           <div className="alu-stack">
             <span className="preview-kicker">VİDEO EĞİTİM SERİSİ · {playlist.count} VİDEO</span>
-            <h2 id="playlist-heading" className="alu-h1">
+            <h2 id="playlist-heading" className="alu-h2">
               {playlist.title}
             </h2>
             {playlist.subtitle && <p className="alu-body preview-meta">{playlist.subtitle}</p>}
           </div>
-          <Link className="alu-button alu-button--secondary alu-button--md" href="/solutions-v2/training/video-library">
+          <Link className="alu-button alu-button--secondary alu-button--md" href="/video-kutuphanesi">
             <span>Video Kütüphanesine Dön</span>
             <AluIcon name="arrow-right" size="sm" />
           </Link>

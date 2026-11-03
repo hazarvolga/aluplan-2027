@@ -400,9 +400,9 @@
   --layout-application-training-image-max-width: var(--ref-size-application-training-image-max-width);
   --layout-application-utility-panel-max-height: var(--ref-size-application-utility-panel-max-height);
   --layout-application-content-column-min-width: var(--ref-size-application-content-column-min-width);
-  --surface-page: var(--ref-color-white);
+  --surface-page: var(--ref-color-silver-50);
   --surface-default: var(--ref-color-white);
-  --surface-subtle: var(--ref-color-silver-50);
+  --surface-subtle: var(--ref-color-silver-100);
   --surface-muted: var(--ref-color-silver-100);
   --surface-raised: var(--ref-color-white);
   --surface-brand: var(--ref-color-ink-950);
@@ -414,7 +414,7 @@
   --text-inverse: var(--ref-color-silver-50);
   --text-on-brand: var(--ref-color-white);
   --text-on-brand-secondary: var(--ref-color-silver-300);
-  --text-link: var(--ref-color-blueprint-600);
+  --text-link: var(--ref-color-blueprint-700);
   --text-link-hover: var(--ref-color-blueprint-800);
   --border-subtle: var(--ref-color-silver-100);
   --border-default: var(--ref-color-silver-200);
@@ -512,6 +512,7 @@
   --visual-media-thumbnail-scrim-start: var(--ref-color-visual-media-thumbnail-scrim-start);
   --visual-media-thumbnail-scrim-end: var(--ref-color-visual-media-thumbnail-scrim-end);
   --visual-media-badge-surface: var(--ref-color-visual-media-badge-surface);
+  --visual-media-badge-text: var(--ref-color-visual-media-badge-text);
   --visual-media-play-surface: var(--ref-color-visual-media-play-surface);
   --visual-media-play-border: var(--ref-color-visual-media-play-border);
   --visual-media-zoom-surface: var(--ref-color-visual-media-zoom-surface);
@@ -935,9 +936,9 @@
   --layout-application-content-column-min-width: var(--ref-size-application-content-column-min-width);
 }
 [data-theme="aluplan"][data-mode="light"]{
-  --surface-page: var(--ref-color-white);
+  --surface-page: var(--ref-color-silver-50);
   --surface-default: var(--ref-color-white);
-  --surface-subtle: var(--ref-color-silver-50);
+  --surface-subtle: var(--ref-color-silver-100);
   --surface-muted: var(--ref-color-silver-100);
   --surface-raised: var(--ref-color-white);
   --surface-brand: var(--ref-color-ink-950);
@@ -949,7 +950,7 @@
   --text-inverse: var(--ref-color-silver-50);
   --text-on-brand: var(--ref-color-white);
   --text-on-brand-secondary: var(--ref-color-silver-300);
-  --text-link: var(--ref-color-blueprint-600);
+  --text-link: var(--ref-color-blueprint-700);
   --text-link-hover: var(--ref-color-blueprint-800);
   --border-subtle: var(--ref-color-silver-100);
   --border-default: var(--ref-color-silver-200);
@@ -1047,6 +1048,7 @@
   --visual-media-thumbnail-scrim-start: var(--ref-color-visual-media-thumbnail-scrim-start);
   --visual-media-thumbnail-scrim-end: var(--ref-color-visual-media-thumbnail-scrim-end);
   --visual-media-badge-surface: var(--ref-color-visual-media-badge-surface);
+  --visual-media-badge-text: var(--ref-color-visual-media-badge-text);
   --visual-media-play-surface: var(--ref-color-visual-media-play-surface);
   --visual-media-play-border: var(--ref-color-visual-media-play-border);
   --visual-media-zoom-surface: var(--ref-color-visual-media-zoom-surface);
@@ -1070,10 +1072,10 @@
 }
 [data-theme="aluplan"][data-mode="dark"]{
   --surface-page: var(--ref-color-anthracite-950);
-  --surface-default: var(--ref-color-anthracite-900);
-  --surface-subtle: var(--ref-color-anthracite-900);
-  --surface-muted: var(--ref-color-anthracite-800);
-  --surface-raised: var(--ref-color-anthracite-850);
+  --surface-default: var(--ref-color-anthracite-800);
+  --surface-subtle: var(--ref-color-anthracite-850);
+  --surface-muted: var(--ref-color-anthracite-700);
+  --surface-raised: var(--ref-color-anthracite-800);
   --surface-brand: var(--ref-color-anthracite-950);
   --surface-inverse: var(--ref-color-silver-50);
   --surface-scrim: var(--ref-color-alpha-scrim-dark);
@@ -1088,7 +1090,7 @@
   --border-subtle: var(--ref-color-anthracite-800);
   --border-default: var(--ref-color-anthracite-700);
   --border-strong: var(--ref-color-silver-500);
-  --border-control: var(--ref-color-silver-500);
+  --border-control: var(--ref-color-silver-400);
   --border-control-hover: var(--ref-color-silver-200);
   --border-on-brand: var(--ref-color-anthracite-700);
   --action-primary-bg: var(--ref-color-teal-300);
@@ -1096,12 +1098,12 @@
   --action-primary-bg-active: var(--ref-color-teal-400);
   --action-primary-fg: var(--ref-color-anthracite-950);
   --action-secondary-fg: var(--ref-color-silver-50);
-  --action-secondary-border: var(--ref-color-silver-500);
-  --action-secondary-bg-hover: var(--ref-color-anthracite-800);
-  --action-secondary-bg-active: var(--ref-color-anthracite-700);
+  --action-secondary-border: var(--ref-color-silver-400);
+  --action-secondary-bg-hover: var(--ref-color-anthracite-700);
+  --action-secondary-bg-active: var(--ref-color-anthracite-600);
   --action-ghost-fg: var(--ref-color-silver-50);
-  --action-ghost-bg-hover: var(--ref-color-anthracite-800);
-  --action-ghost-bg-active: var(--ref-color-anthracite-700);
+  --action-ghost-bg-hover: var(--ref-color-anthracite-700);
+  --action-ghost-bg-active: var(--ref-color-anthracite-600);
   --action-disabled-bg: var(--ref-color-anthracite-800);
   --action-disabled-fg: var(--ref-color-silver-400);
   --action-disabled-border: var(--ref-color-anthracite-700);
@@ -1181,6 +1183,7 @@
   --visual-media-thumbnail-scrim-start: var(--ref-color-visual-media-thumbnail-scrim-start);
   --visual-media-thumbnail-scrim-end: var(--ref-color-visual-media-thumbnail-scrim-end);
   --visual-media-badge-surface: var(--ref-color-visual-media-badge-surface);
+  --visual-media-badge-text: var(--ref-color-visual-media-badge-text);
   --visual-media-play-surface: var(--ref-color-visual-media-play-surface);
   --visual-media-play-border: var(--ref-color-visual-media-play-border);
   --visual-media-zoom-surface: var(--ref-color-visual-media-zoom-surface);
@@ -1716,6 +1719,7 @@
   --visual-media-thumbnail-scrim-start: var(--ref-color-visual-media-thumbnail-scrim-start);
   --visual-media-thumbnail-scrim-end: var(--ref-color-visual-media-thumbnail-scrim-end);
   --visual-media-badge-surface: var(--ref-color-visual-media-badge-surface);
+  --visual-media-badge-text: var(--ref-color-visual-media-badge-text);
   --visual-media-play-surface: var(--ref-color-visual-media-play-surface);
   --visual-media-play-border: var(--ref-color-visual-media-play-border);
   --visual-media-zoom-surface: var(--ref-color-visual-media-zoom-surface);
@@ -1850,6 +1854,7 @@
   --visual-media-thumbnail-scrim-start: var(--ref-color-visual-media-thumbnail-scrim-start);
   --visual-media-thumbnail-scrim-end: var(--ref-color-visual-media-thumbnail-scrim-end);
   --visual-media-badge-surface: var(--ref-color-visual-media-badge-surface);
+  --visual-media-badge-text: var(--ref-color-visual-media-badge-text);
   --visual-media-play-surface: var(--ref-color-visual-media-play-surface);
   --visual-media-play-border: var(--ref-color-visual-media-play-border);
   --visual-media-zoom-surface: var(--ref-color-visual-media-zoom-surface);

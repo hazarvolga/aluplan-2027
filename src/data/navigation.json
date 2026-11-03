@@ -479,6 +479,16 @@
           "href": "/products/allplan-ultimate"
         },
         {
+          "name": "ALLPLAN Rebar",
+          "href": "/products/allplan-rebar",
+          "releaseOnly": true
+        },
+        {
+          "name": "ALLPLAN Parametric",
+          "href": "/products/allplan-parametric",
+          "releaseOnly": true
+        },
+        {
           "name": "ALLPLAN Cloud Services",
           "href": "/products/allplan-cloud-services"
         },
@@ -671,24 +681,6 @@
           "href": "/solutions/poz-catalog"
         }
       ]
-    }
-  ],
-  "directLinks": [
-    {
-      "name": "Kaynaklar",
-      "href": "/#professional-services"
-    },
-    {
-      "name": "Referanslar",
-      "href": "/references"
-    },
-    {
-      "name": "Hakkımızda",
-      "href": "/about"
-    },
-    {
-      "name": "İletişim",
-      "href": "/contact"
     }
   ],
   "footer": {

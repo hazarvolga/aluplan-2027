@@ -180,6 +180,7 @@ export function SplitCalloutSection({
                   <div className="alu-cluster" style={{ marginTop: 'var(--space-application-jsx-regular)' }}>
                     {hasVideo && (
                       <button
+                        aria-label={`Videoyu İzle: ${callout.title}`}
                         type="button"
                         className="alu-button alu-button--primary alu-button--md"
                         onClick={() => {

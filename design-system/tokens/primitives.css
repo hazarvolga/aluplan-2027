@@ -133,6 +133,7 @@
   --ref-color-visual-media-thumbnail-scrim-start: rgba(10, 12, 16, 0.12);
   --ref-color-visual-media-thumbnail-scrim-end: rgba(10, 12, 16, 0.55);
   --ref-color-visual-media-badge-surface: rgba(12, 14, 18, 0.86);
+  --ref-color-visual-media-badge-text: #2DD4BF;
   --ref-color-visual-media-play-surface: rgba(14, 165, 233, 0.88);
   --ref-color-visual-media-play-border: rgba(255, 255, 255, 0.85);
   --ref-color-visual-media-zoom-surface: rgba(12, 14, 18, 0.72);
@@ -165,9 +166,9 @@
   --ref-font-size-250: 2.5rem;
   --ref-font-size-300: 3rem;
   --ref-font-size-350: 3.5rem;
-  --ref-font-size-application-micro-label: 0.72rem;
+  --ref-font-size-application-micro-label: 0.75rem;
   --ref-font-size-application-hero-metrics-value: clamp(1.85rem, 3vw, 2.5rem); /* @kind other */
-  --ref-font-size-application-micro-compact: 0.68rem;
+  --ref-font-size-application-micro-compact: 0.75rem;
   --ref-font-size-application-small-body: 0.95rem;
   --ref-font-size-application-pathway-split-title: clamp(2.25rem, 4vw, 3.5rem); /* @kind other */
   --ref-font-size-application-pathway-split-desc: clamp(1.05rem, 1.35vw, 1.22rem); /* @kind other */
@@ -182,7 +183,7 @@
   --ref-font-size-application-card-title: 1.2rem;
   --ref-font-size-application-playlist-player-card-title: clamp(1.4rem, 2.2vw, 1.85rem); /* @kind other */
   --ref-font-size-application-small-body-relaxed: 0.975rem;
-  --ref-font-size-application-micro: 0.7rem;
+  --ref-font-size-application-micro: 0.75rem;
   --ref-font-size-application-body-intro: 1.08rem;
   --ref-font-size-application-metadata-compact: 0.84rem;
   --ref-font-size-application-caption-reading: 0.82rem;

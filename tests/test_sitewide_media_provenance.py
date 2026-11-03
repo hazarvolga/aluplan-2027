@@ -13,6 +13,19 @@ INVENTORY = json.loads(
 )
 PAGES = json.loads((ROOT / "src/data/pages.json").read_text(encoding="utf-8"))
 EXCLUDED_ROUTES = {"/hero-3d", "/test-webgl"}
+RENAME_POLICY = json.loads((ROOT / "tests/fixtures/sitewide_parity_policy.json").read_text(encoding="utf-8"))
+ROUTE_RENAMES = RENAME_POLICY.get("routeRenames", {})
+ROUTE_PREFIX_RENAMES = RENAME_POLICY.get("routePrefixRenames", {})
+REMOVED_ROUTES = set(RENAME_POLICY.get("removedRoutes", {}))
+
+
+def renamed_route(route: str) -> str:
+    if route in ROUTE_RENAMES:
+        return ROUTE_RENAMES[route]
+    for old, new in ROUTE_PREFIX_RENAMES.items():
+        if route == old or route.startswith(old + "/"):
+            return new + route[len(old):]
+    return route
 
 
 def route_for_url(url: str) -> str:
@@ -37,9 +50,9 @@ def source_native_videos() -> dict[str, set[str]]:
         if page.get("status") != 200:
             continue
         route = route_for_url(page["url"])
-        if route in EXCLUDED_ROUTES:
+        if route in EXCLUDED_ROUTES or route in REMOVED_ROUTES:
             continue
-        result[route] = {
+        result[renamed_route(route)] = {
             normalize_native_video_src((item.get("attributes") or {}).get("src", ""))
             for item in page.get("media", [])
             if item.get("tag") in {"video", "source"}

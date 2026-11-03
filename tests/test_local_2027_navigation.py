@@ -18,10 +18,10 @@ class LocalNavigationTests(unittest.TestCase):
         links = {p['name']: p['href'] for p in data['productLinks']}
         self.assertEqual(links['ALLPLAN'], '/2027/features')
         self.assertEqual(data['primaryHref'], links['ALLPLAN'])
-        self.assertEqual(links['FRILO'], '/2027/frilo')
+        self.assertEqual(links['FRILO'], '/products/frilo')
         self.assertEqual(links['ALLPLAN Civil'], '/2027/civil')
-        for route in ('frilo', 'civil', 'max', 'features'):
-            source = (ROOT / f'src/app/2027/{route}/page.tsx').read_text()
+        for route in ('products/frilo', '2027/civil', 'products/allplan-max', '2027/features'):
+            source = (ROOT / f'src/app/{route}/page.tsx').read_text()
             self.assertIn("!isReleaseContentEnabled()", source)
 
 if __name__ == '__main__': unittest.main()

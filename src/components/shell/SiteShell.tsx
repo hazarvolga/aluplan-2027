@@ -2,10 +2,11 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { getNavigationData, getSearchIndex, MAIN_QUOTE_FORM_URL } from '@/lib/site-data';
+import { getNavigationData, getSearchIndex, MAIN_QUOTE_FORM_URL } from '@/lib/site-shared';
 import { AluIcon, AluIconName } from '@/components/ui/AluIcon';
 import { MediaDialog } from '@/components/ui/MediaDialog';
-import { useConsentReady, useCookieConsent, writeConsent } from '@/lib/consent';
+import { clearConsent, useConsentReady, useCookieConsent, writeConsent } from '@/lib/consent';
+import { isReleaseContentEnabled } from '@/lib/release-flags';
 
 const navData = getNavigationData();
 const searchIndex = getSearchIndex();
@@ -18,6 +19,17 @@ function getSocialIconName(label: string): AluIconName {
   if (low.includes('instagram')) return 'instagram';
   if (low.includes('youtube')) return 'youtube';
   return 'globe';
+}
+
+interface MenuItem {
+  name: string;
+  href: string;
+  external?: boolean;
+  releaseOnly?: boolean;
+}
+
+function visibleItems(items: readonly MenuItem[]): MenuItem[] {
+  return isReleaseContentEnabled() ? [...items] : items.filter((item) => !item.releaseOnly);
 }
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
@@ -166,7 +178,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               <span>Ürünler</span>
               <AluIcon name="chevron-down" size="sm" />
             </button>
-            <Link className="alu-site-nav__link" href="/#professional-services">
+            <Link className="alu-site-nav__link" href={isReleaseContentEnabled() ? '/kaynaklar' : '/#professional-services'}>
               Kaynaklar
             </Link>
             <Link className="alu-site-nav__link" href="/references">
@@ -174,6 +186,9 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             </Link>
             <Link className="alu-site-nav__link" href="/about">
               Hakkımızda
+            </Link>
+            <Link className="alu-site-nav__link" href="/faq">
+              S.S.S.
             </Link>
             <Link className="alu-site-nav__link" href="/contact">
               İletişim
@@ -220,7 +235,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 <div key={sec.title}>
                   <h3 className="alu-megamenu__title">{sec.title}</h3>
                   <ul className="alu-megamenu__list">
-                    {sec.items.map((item) => (
+                    {visibleItems(sec.items).map((item) => (
                       <li key={item.href + item.name}>
                         {item.external ? (
                           <a
@@ -263,14 +278,17 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 <Link className="alu-button alu-button--secondary alu-button--sm" href="/solutions" onClick={() => setMobileMenuOpen(false)}>
                   Tüm Çözümler
                 </Link>
-                <Link className="alu-button alu-button--secondary alu-button--sm" href="/solutions-v2/training" onClick={() => setMobileMenuOpen(false)}>
-                  Eğitim & Webinar
+                <Link className="alu-button alu-button--secondary alu-button--sm" href={isReleaseContentEnabled() ? '/kaynaklar' : '/#professional-services'} onClick={() => setMobileMenuOpen(false)}>
+                  Kaynaklar
                 </Link>
                 <Link className="alu-button alu-button--secondary alu-button--sm" href="/references" onClick={() => setMobileMenuOpen(false)}>
                   Referanslar
                 </Link>
                 <Link className="alu-button alu-button--secondary alu-button--sm" href="/about" onClick={() => setMobileMenuOpen(false)}>
                   Hakkımızda
+                </Link>
+                <Link className="alu-button alu-button--secondary alu-button--sm" href="/faq" onClick={() => setMobileMenuOpen(false)}>
+                  S.S.S.
                 </Link>
                 <Link className="alu-button alu-button--secondary alu-button--sm" href="/contact" onClick={() => setMobileMenuOpen(false)}>
                   İletişim
@@ -281,7 +299,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                   <div key={`${sec.title}-${sIdx}`}>
                     <h3 className="alu-megamenu__title">{sec.title}</h3>
                     <ul className="alu-megamenu__list">
-                      {sec.items.map((item) => (
+                      {visibleItems(sec.items).map((item) => (
                         <li key={item.href + item.name}>
                           <Link
                             href={item.href}
@@ -296,6 +314,23 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                     </ul>
                   </div>
                 ))}
+              </div>
+              <div className="alu-mobile-drawer__contact">
+                <div className="alu-topbar__socials" aria-label="Sosyal medya bağlantıları">
+                  {navData.topBar.socialLinks.map((soc) => (
+                    <a key={soc.label} href={soc.href} target="_blank" rel="noopener noreferrer" aria-label={soc.label} className="alu-topbar__link">
+                      <AluIcon name={getSocialIconName(soc.label)} size="sm" />
+                    </a>
+                  ))}
+                </div>
+                <a href={`mailto:${navData.topBar.email}`} className="alu-topbar__link">
+                  <AluIcon name="mail" size="sm" />
+                  <span>{navData.topBar.email}</span>
+                </a>
+                <a className="alu-topbar__link" href={MAIN_QUOTE_FORM_URL} target="_blank" rel="noopener noreferrer">
+                  <span>Hızlı Talep Oluştur</span>
+                  <AluIcon name="arrow-up-right" size="sm" />
+                </a>
               </div>
             </div>
           </div>
@@ -396,6 +431,14 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 {item.label}
               </Link>
             ))}
+            <button
+              type="button"
+              className="alu-site-footer__link"
+              style={{ background: 'transparent', border: 0, padding: 0, font: 'inherit', cursor: 'pointer' }}
+              onClick={clearConsent}
+            >
+              Çerez tercihleri
+            </button>
           </div>
           <span>{navData.footer.credit}</span>
         </div>

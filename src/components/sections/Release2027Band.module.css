@@ -1,0 +1,5 @@
+.band{border-bottom:var(--border-width-default) solid var(--border-default);background:var(--surface-raised);padding-block:var(--space-inset-md)}
+.inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-inline-md)}
+.text{display:grid;gap:var(--space-stack-xs)}
+.kicker{margin:0;color:var(--accent-fg);font-size:var(--type-caption-size);font-weight:var(--font-weight-strong);letter-spacing:.06em}
+.title{margin:0;font-family:var(--font-heading);font-size:var(--type-h4-size);line-height:var(--type-h4-line-height)}

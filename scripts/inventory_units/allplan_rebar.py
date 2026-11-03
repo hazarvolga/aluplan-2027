@@ -102,7 +102,7 @@ FEATURE_TR = [
      "veri paylaşın."),
     ("PythonPart Sürümleme",
      "Özel betikli nesnelerin güncellemelerini daha fazla kontrolle yönetin."),
-    ("Python API Olayları", "Kilit Allplan ve proje olaylarında eylemleri otomatikleştirin."),
+    ("Python API Olayları", "Önemli Allplan ve proje olaylarında eylemleri otomatikleştirin."),
     ("Python Baskı Düzeni Otomasyonu",
      "Python API üzerinden baskı düzeni işlemlerini ve 2B çizim üretimini otomatikleştirin."),
     ("Abonelik Bulut Hizmetleri",

@@ -25,7 +25,7 @@ def special_view(text, route):
 
 class ExternalRequestChannelTests(unittest.TestCase):
     def test_single_common_request_destination_remains_the_existing_form(self):
-        data = read("src/lib/site-data.ts")
+        data = read("src/lib/site-shared.ts")
         self.assertRegex(data, rf"MAIN_QUOTE_FORM_URL\s*=\s*['\"]{re.escape(FORM_URL)}['\"]")
 
     def test_topbar_request_is_an_external_link_not_a_local_submit(self):

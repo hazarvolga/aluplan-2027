@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 import type { StructuredMediaGridSection } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
+import { SectionHeader } from './SectionHeader';
 
 interface MediaVideoRequest {
   youtubeId: string;
@@ -34,17 +35,7 @@ export function MediaGridSection({
   return (
     <section className="preview-section" aria-label={grid.title}>
       <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
-        <div className="alu-section-header-center">
-          {grid.kicker && <span className="preview-kicker">{grid.kicker}</span>}
-          <h2 className="alu-h1" style={{ margin: 0 }}>
-            {grid.title}
-          </h2>
-          {grid.subtitle && (
-            <p className="alu-body preview-meta" style={{ margin: 0, maxWidth: 'var(--container-prose)' }}>
-              {grid.subtitle}
-            </p>
-          )}
-        </div>
+        <SectionHeader kicker={grid.kicker} title={grid.title} lead={grid.subtitle} />
 
         <div className={`alu-media-grid alu-media-grid--cols-${columns}`}>
           {grid.items.map((item, index) => {
@@ -145,6 +136,7 @@ export function MediaGridSection({
                         <button
                           type="button"
                           className="alu-media-card__video-btn"
+                          aria-label={`${item.ctaText || 'Videoyu İzle'}: ${item.title}`}
                           onClick={() =>
                             onVideo({
                               youtubeId: item.youtubeId!,
@@ -162,12 +154,13 @@ export function MediaGridSection({
                             target="_blank"
                             rel="noopener noreferrer"
                             className="alu-link alu-link--standalone"
+                            aria-label={`${item.ctaText || 'Detayları İncele'}: ${item.title}`}
                           >
                             <span>{item.ctaText || 'Detayları İncele'}</span>
                             <AluIcon name="external-link" size="sm" />
                           </a>
                         ) : (
-                          <Link href={item.href} className="alu-link alu-link--standalone">
+                          <Link href={item.href} className="alu-link alu-link--standalone" aria-label={`${item.ctaText || 'Detayları İncele'}: ${item.title}`}>
                             <span>{item.ctaText || 'Detayları İncele'}</span>
                             <AluIcon name="arrow-right" size="sm" />
                           </Link>

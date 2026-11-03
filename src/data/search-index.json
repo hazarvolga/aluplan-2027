@@ -296,7 +296,7 @@
     "keywords": "Prekast Üretimi Çelik Detaylandırma & İmalat Şantiye Planlaması"
   },
   {
-    "path": "/solutions-v2/faq",
+    "path": "/faq",
     "title": "Sıkça Sorulan Sorular",
     "seoTitle": "Sıkça Sorulan Sorular (SSS) ve Teknik Bilgi Bankası | Aluplan",
     "section": "solutions-v2",
@@ -320,63 +320,7 @@
     "keywords": "BIMFlex Donatı Mühendisliği İmar Yönetmeliği BIM Eklentisi BIMX5 Allplan Oska İşbirliği Allplan Poz Kataloğu"
   },
   {
-    "path": "/solutions-v2/training",
-    "title": "ALLPLAN Eğitimleri",
-    "seoTitle": "ALLPLAN Eğitim, Webinar ve Teknik Gelişim Merkezi | Aluplan",
-    "section": "training",
-    "description": "ALLPLAN Eğitimleri: Uzmanlığınızdan faydalanın ve profesyonel bilgi ve becerilerinizi bir üst seviyeye taşıyın! Akademik iş birliklerimiz ve yetkili eğitim merkezlerimiz.",
-    "keywords": "Eğitim İş Ortaklarımız Yıldız Teknik Üniversitesi İstanbul Aydın Üniversitesi Kastamonu MYO İstanbul Gelişim Üniversitesi Orta Doğu Teknik Üniversitesi IMO Ankara LGN Proje Akademi"
-  },
-  {
-    "path": "/solutions-v2/training/classroom",
-    "title": "Sınıf İçi Eğitim (Yüz Yüze)",
-    "seoTitle": "Sınıf İçi (Yüz Yüze) ALLPLAN BIM Eğitim Programları | Aluplan",
-    "section": "training",
-    "description": "Sınıf İçi Eğitim (Yüz Yüze): Tam odaklanma, birebir iletişim ve pratik uygulama. Modern eğitim merkezlerimizde gerçekleştirdiğimiz sınıf içi eğitimler, tamamen öğrenmeye odaklanabilece",
-    "keywords": "Genel Bakış Kazanımlarınız Tam Odaklanma Anında Müdahale Networking Hazır Altyapı Kimler İçin Uygun? Hazır mısınız?"
-  },
-  {
-    "path": "/solutions-v2/training/e-learning",
-    "title": "E-Learning & Video Eğitimler",
-    "seoTitle": "E-Learning — Kendi Hızınızda Çevrim İçi ALLPLAN Eğitimi | Aluplan",
-    "section": "training",
-    "description": "E-Learning & Video Eğitimler: Kendi hızınızda, istediğiniz zaman, istediğiniz yerde öğrenin. Allplan E-Learning platformu, yüzlerce video ders, adım adım rehberler ve sertifika programl",
-    "keywords": "Genel Bakış Kazanımlarınız Kendi Hızınızda Öğrenme Geniş İçerik Arşivi Maliyet Avantajı Sürekli Güncel Kimler İçin Uygun? Hazır mısınız?"
-  },
-  {
-    "path": "/solutions-v2/training/events",
-    "title": "Etkinlik ve Fuarlar",
-    "seoTitle": "ALLPLAN Etkinlikler, Seminerler ve Sektör Buluşmaları | Aluplan",
-    "section": "training",
-    "description": "Etkinlik ve Fuarlar: Sektörle buluşma, vizyon ve teknoloji şöleni. Allplan olarak katıldığımız veya düzenlediğimiz etkinlikler, sadece bir yazılım tanıtımı değil, inşaat sektör",
-    "keywords": "Genel Bakış Kazanımlarınız Teknoloji Deneyimi Sektör Liderleriyle Tanışma İlham Verici Sunumlar Özel Kampanyalar Kimler İçin Uygun? Hazır mısınız?"
-  },
-  {
-    "path": "/solutions-v2/training/individual",
-    "title": "Bireysel & Kurumsal Özel Eğitim",
-    "seoTitle": "Bireysel ve Kuruma Özel Özelleştirilmiş ALLPLAN Eğitimi | Aluplan",
-    "section": "training",
-    "description": "Bireysel & Kurumsal Özel Eğitim: Tamamen size ve projenize özel, terzi işi eğitim programı. Standart müfredatların dışına çıkın. Bireysel eğitimlerimiz, tamamen sizin ihtiyaçlarınıza, proj",
-    "keywords": "Genel Bakış Kazanımlarınız İhtiyaca Yönelik Müfredat Kendi Projeniz Üzerinde Çalışma Esnek Planlama Danışmanlık Yaklaşımı Kimler İçin Uygun? Hazır mısınız?"
-  },
-  {
-    "path": "/solutions-v2/training/online",
-    "title": "Online Eğitimler",
-    "seoTitle": "Canlı Online ALLPLAN Eğitimleri ve Uzaktan Atölyeler | Aluplan",
-    "section": "training",
-    "description": "Online Eğitimler: Mekandan bağımsız, etkileşimli ve profesyonel uzaktan eğitim deneyimi. Online eğitimlerimiz, fiziksel bir sınıfta olma zorunluluğu olmadan, tamamen canlı v",
-    "keywords": "Genel Bakış Kazanımlarınız Mekandan Bağımsız Canlı & İnteraktif Eğitim Kayıtları Küçük Gruplar Kimler İçin Uygun? Hazır mısınız?"
-  },
-  {
-    "path": "/solutions-v2/training/quick-start",
-    "title": "Allplan 2026 Kapsamlı Başlangıç Rehberi",
-    "seoTitle": "ALLPLAN Quick Start — 7 Adımda Hızlı Başlangıç Rehberi | Aluplan",
-    "section": "training",
-    "description": "Allplan 2026 Kapsamlı Başlangıç Rehberi: Bu kılavuz, Allplan BIM yazılımının profesyonel düzeydeki kullanımını, Open BIM iş akışlarını ve Allplan 2026 yeniliklerini derinlemesine ele alır. Mimarla",
-    "keywords": "İçindekiler Modüller ve Profesyonel İş Akışları Allplan Architecture Temel Özellikler Allplan 2026 ile Yeni Profesyonel İş Akışları Verimlilik ve Doğruluk Parametrik Tasarım"
-  },
-  {
-    "path": "/solutions-v2/training/video-library",
+    "path": "/video-kutuphanesi",
     "title": "Video Kütüphanesi",
     "seoTitle": "ALLPLAN Video Kütüphanesi ve Eğitim Oynatma Listeleri | Aluplan",
     "section": "training",
@@ -384,7 +328,7 @@
     "keywords": "Önerilen Oynatma Listeleri ve Kanallar Allplan Türkiye YouTube Kanalına Abone Olun Allplan 2026 Youtube Allplan English Youtube Allplan Global Youtube Allplan Precast Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları Allplan Add On Geometry Tools"
   },
   {
-    "path": "/solutions-v2/training/video-library/addon-geometry",
+    "path": "/video-kutuphanesi/addon-geometry",
     "title": "Allplan Add On Geometry Tools — Eğitim Video Serisi",
     "seoTitle": "Allplan Add On Geometry Tools — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "section": "video-library",
@@ -392,7 +336,7 @@
     "keywords": "Allplan Add On Geometry Tools ALLPLAN Add-On Geometry Tools V2 - OBJ Import Drohnenaufnahmen Oynatma Listesi1 / 14"
   },
   {
-    "path": "/solutions-v2/training/video-library/allplan-reinforcement",
+    "path": "/video-kutuphanesi/allplan-reinforcement",
     "title": "ALLPLAN for Reinforcement — Eğitim Video Serisi",
     "seoTitle": "ALLPLAN for Reinforcement — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "section": "video-library",
@@ -400,7 +344,7 @@
     "keywords": "ALLPLAN for Reinforcement Allplan Reinforcing Shorts; Retaining Wall Oynatma Listesi1 / 18"
   },
   {
-    "path": "/solutions-v2/training/video-library/ax3000",
+    "path": "/video-kutuphanesi/ax3000",
     "title": "AX3000 - MEP & Enerji — Eğitim Video Serisi",
     "seoTitle": "AX3000 - MEP & Enerji — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "section": "video-library",
@@ -408,7 +352,7 @@
     "keywords": "AX3000 - MEP & Enerji AX3000 MEP Sunum 1 Oynatma Listesi1 / 34"
   },
   {
-    "path": "/solutions-v2/training/video-library/bridge-workflow-2022",
+    "path": "/video-kutuphanesi/bridge-workflow-2022",
     "title": "Bridge Workflow 2022 — Eğitim Video Serisi",
     "seoTitle": "Bridge Workflow 2022 — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "section": "video-library",
@@ -416,7 +360,7 @@
     "keywords": "Bridge Workflow 2022 1 - Aks Oluşturma Oynatma Listesi1 / 8"
   },
   {
-    "path": "/solutions-v2/training/video-library/bridge-workflows",
+    "path": "/video-kutuphanesi/bridge-workflows",
     "title": "Allplan Bridge Workflows — Eğitim Video Serisi",
     "seoTitle": "Allplan Bridge Workflows — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "section": "video-library",
@@ -424,7 +368,7 @@
     "keywords": "Allplan Bridge Workflows ALLPLAN Bridge Workflows l Alignment Definition Oynatma Listesi1 / 15"
   },
   {
-    "path": "/solutions-v2/training/video-library/campus-de",
+    "path": "/video-kutuphanesi/campus-de",
     "title": "Campus Tutorials (Deutsch) — Eğitim Video Serisi",
     "seoTitle": "Campus Tutorials (Deutsch) — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "section": "video-library",
@@ -432,7 +376,7 @@
     "keywords": "Campus Tutorials (Deutsch) Neuinstallation von \"Allplan 2022\" | Eine detaillierte Anleitung Oynatma Listesi1 / 26"
   },
   {
-    "path": "/solutions-v2/training/video-library/campus-en",
+    "path": "/video-kutuphanesi/campus-en",
     "title": "Campus Tutorials (English) — Eğitim Video Serisi",
     "seoTitle": "Campus Tutorials (English) — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "section": "video-library",
@@ -440,7 +384,7 @@
     "keywords": "Campus Tutorials (English) Actionbar Oynatma Listesi1 / 26"
   },
   {
-    "path": "/solutions-v2/training/video-library/campus-tutorials-2019-2022",
+    "path": "/video-kutuphanesi/campus-tutorials-2019-2022",
     "title": "Allplan Campus Tutorials 2019-2022 — Eğitim Video Serisi",
     "seoTitle": "Allplan Campus Tutorials 2019-2022 — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "section": "video-library",
@@ -448,7 +392,7 @@
     "keywords": "Allplan Campus Tutorials 2019-2022 Neuinstallation von \"Allplan 2022\" | Eine detaillierte Anleitung Oynatma Listesi1 / 26"
   },
   {
-    "path": "/solutions-v2/training/video-library/hello-allplan-2024",
+    "path": "/video-kutuphanesi/hello-allplan-2024",
     "title": "Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları — Eğitim Video Serisi",
     "seoTitle": "Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "section": "video-library",
@@ -456,7 +400,7 @@
     "keywords": "Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları Hello Allplan! 2024 - Bak ve Hisset Oynatma Listesi1 / 39"
   },
   {
-    "path": "/solutions-v2/training/video-library/konut-insaati",
+    "path": "/video-kutuphanesi/konut-insaati",
     "title": "Konut İnşaatı İş Akışları — Eğitim Video Serisi",
     "seoTitle": "Konut İnşaatı İş Akışları — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "section": "video-library",
@@ -464,7 +408,7 @@
     "keywords": "Konut İnşaatı İş Akışları Konut İnşaatı İş Akışları | Konut Proje Teslimi | 01 - Satış Sunumlarınızı Artırın Oynatma Listesi1 / 4"
   },
   {
-    "path": "/solutions-v2/training/video-library/otomatik-donati",
+    "path": "/video-kutuphanesi/otomatik-donati",
     "title": "Otomatik Donatı (PythonPart) — Eğitim Video Serisi",
     "seoTitle": "Otomatik Donatı (PythonPart) — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "section": "video-library",
@@ -472,7 +416,7 @@
     "keywords": "Otomatik Donatı (PythonPart) Otomatik Donatı Kolon TRK Oynatma Listesi1 / 9"
   },
   {
-    "path": "/solutions-v2/training/video-library/quickstart-buildings",
+    "path": "/video-kutuphanesi/quickstart-buildings",
     "title": "ALLPLAN QuickStart: Buildings — Eğitim Video Serisi",
     "seoTitle": "ALLPLAN QuickStart: Buildings — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "section": "video-library",
@@ -480,7 +424,7 @@
     "keywords": "ALLPLAN QuickStart: Buildings Allplan QuickStart: Buildings Lesson 1 - Allplan User Interface Oynatma Listesi1 / 9"
   },
   {
-    "path": "/solutions-v2/training/video-library/road-design",
+    "path": "/video-kutuphanesi/road-design",
     "title": "Allplan Road Design Workflow — Eğitim Video Serisi",
     "seoTitle": "Allplan Road Design Workflow — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "section": "video-library",
@@ -488,20 +432,12 @@
     "keywords": "Allplan Road Design Workflow 1.1 | General - General Settings Oynatma Listesi1 / 12"
   },
   {
-    "path": "/solutions-v2/training/video-library/sds2-intro",
+    "path": "/video-kutuphanesi/sds2-intro",
     "title": "SDS2 Detaylandırma — Eğitim Video Serisi",
     "seoTitle": "SDS2 Detaylandırma — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "section": "video-library",
     "description": "SDS2 Detaylandırma — Eğitim Video Serisi: SDS2 ürün tanıtımı ve lansman videoları. konusu detaylı olarak incelenmektedir. Allplan 2024'ün sunduğu yenilikleri keşfedin.",
     "keywords": "SDS2 Detaylandırma SDS2 Product Video Oynatma Listesi1 / 2"
-  },
-  {
-    "path": "/solutions-v2/training/webinar",
-    "title": "Webinarlar",
-    "seoTitle": "ALLPLAN Teknik Webinarlar ve Canlı Kayıt Arşivi | Aluplan",
-    "section": "training",
-    "description": "Webinarlar: Kısa, odaklanmış ve bilgi dolu çevrimiçi seminerler. Webinarlarımız, belirli bir konu, yeni bir özellik veya sektörel bir gelişme hakkında hızlı ve yoğun b",
-    "keywords": "Genel Bakış Kazanımlarınız Zaman Verimliliği Güncel Konular Kolay Erişim Tekrar İzleme Kimler İçin Uygun? Hazır mısınız?"
   },
   {
     "path": "/solutions/addons",

@@ -1,14 +1,22 @@
 import pagesJson from '@/data/pages.json';
-import playlistsJson from '@/data/playlists.json';
-import navigationJson from '@/data/navigation.json';
-import homepageJson from '@/data/homepage.json';
-import searchIndexJson from '@/data/search-index.json';
-import videoLibraryJson from '@/data/video-library.json';
 
-export const SITE_ORIGIN = 'https://aluplan.com.tr';
-export const TRIAL_CTA_URL = 'https://www.allplan.com/trial-or-subscription/';
-export const MAIN_QUOTE_FORM_URL = 'https://forms.office.com/r/hXhnKAG912';
-export const SUPPORT_PORTAL_URL = 'https://allplan.net.tr/tr';
+import { normalizeLookupPath } from './site-shared';
+export { getPlaylistData, getAllPlaylists, getVideoLibraryData } from './playlist-data';
+
+export {
+  SITE_ORIGIN,
+  TRIAL_CTA_URL,
+  MAIN_QUOTE_FORM_URL,
+  SUPPORT_PORTAL_URL,
+  normalizeLookupPath,
+  getNavigationData,
+  getSolutionDirectory,
+  getSolutionHub,
+  getSolutionCatalog,
+  getSiteIdentity,
+  getHomepageData,
+  getSearchIndex
+} from './site-shared';
 
 export interface BreadcrumbItem {
   label: string;
@@ -291,23 +299,8 @@ export interface StructuredReferencesDirectory {
   items: StructuredReferenceItem[];
 }
 
-export interface StructuredTrainingTabs {
-  title: string;
-  tabs: {
-    key: string;
-    label: string;
-    title: string;
-    paragraphs: string[];
-    features: string[];
-    href: string;
-    linkLabel: string;
-    imageSrc?: string;
-  }[];
-}
-
 export interface StructuredPageLayout {
   contentBlocks?: StructuredContentBlock[];
-  trainingTabs?: StructuredTrainingTabs;
   intro?: StructuredIntro;
   workflowLinks?: StructuredWorkflowLink[] | null;
   stats?: StructuredStatItem[];
@@ -397,24 +390,13 @@ export interface SiteIdentity {
   sameAs: string[];
 }
 
-interface NavigationData {
+export interface NavigationData {
   siteIdentity: SiteIdentity;
   solutionDirectory: SolutionDirectory;
   [key: string]: unknown;
 }
 
 const pagesMap = pagesJson as unknown as Record<string, PageRecord>;
-const playlistsMap = playlistsJson as unknown as Record<string, PlaylistRecord>;
-const navigationData = navigationJson as unknown as NavigationData;
-
-export function normalizeLookupPath(pathname: string): string {
-  if (!pathname || pathname === '/') return '/';
-  const decoded = decodeURIComponent(pathname).replace(/\/+$/, '') || '/';
-  if (decoded === '/solutions/imar-yonetmliği-bim-eklentisi') {
-    return '/solutions/imar-yonetmeligi-bim-eklentisi';
-  }
-  return decoded;
-}
 
 export function getPageData(pathname: string): PageRecord | null {
   const key = normalizeLookupPath(pathname);
@@ -427,45 +409,4 @@ export function getAllPagePaths(): string[] {
 
 export function getAllPages(): PageRecord[] {
   return Object.values(pagesMap);
-}
-
-export function getPlaylistData(playlistId: string): PlaylistRecord | null {
-  return playlistsMap[playlistId] || null;
-}
-
-export function getAllPlaylists(): PlaylistRecord[] {
-  return Object.values(playlistsMap);
-}
-
-export function getNavigationData() {
-  return navigationJson;
-}
-
-export function getSolutionDirectory(): SolutionDirectory {
-  return navigationData.solutionDirectory;
-}
-
-export function getSolutionHub(pathname: string): SolutionDirectoryGroup | null {
-  const key = normalizeLookupPath(pathname);
-  return navigationData.solutionDirectory.groups.find((group) => group.hubPath === key) || null;
-}
-
-export function getSolutionCatalog(): SolutionDirectory {
-  return navigationData.solutionDirectory;
-}
-
-export function getSiteIdentity(): SiteIdentity {
-  return navigationData.siteIdentity;
-}
-
-export function getHomepageData() {
-  return homepageJson;
-}
-
-export function getVideoLibraryData() {
-  return videoLibraryJson;
-}
-
-export function getSearchIndex(): SearchEntry[] {
-  return searchIndexJson as SearchEntry[];
 }

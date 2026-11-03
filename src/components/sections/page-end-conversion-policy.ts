@@ -1,9 +1,5 @@
-import {
-  MAIN_QUOTE_FORM_URL,
-  SUPPORT_PORTAL_URL,
-  TRIAL_CTA_URL,
-  type PageRecord,
-} from '@/lib/site-data';
+import type { PageRecord } from '@/lib/site-data';
+import { MAIN_QUOTE_FORM_URL, SUPPORT_PORTAL_URL, TRIAL_CTA_URL } from '@/lib/site-shared';
 
 export type PageEndConversionKind = 'commercial' | 'training' | 'support' | 'corporate';
 
@@ -32,7 +28,7 @@ const HIDDEN_PATHS = [
 
 const SUPPORT_PATHS = [
   '/solutions-v2/connect-login',
-  '/solutions-v2/faq',
+  '/faq',
 ] as const;
 
 function commercialConversion(): PageEndConversionModel {
@@ -90,7 +86,7 @@ export function getPageEndConversion(page: PageEndConversionInput): PageEndConve
     return null;
   }
 
-  if (page.path.startsWith('/solutions-v2/training')) {
+  if (page.path.startsWith('/video-kutuphanesi')) {
     return trainingConversion();
   }
 

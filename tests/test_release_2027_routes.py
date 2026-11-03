@@ -9,13 +9,19 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = "https://aluplan.com.tr"
 SITE_DESCRIPTION_PREFIX = "1995'ten beri Türkiye'nin güvenilir ALLPLAN distribütörü"
-RELEASE_PATHS = ["/2027/features", "/2027/max", "/2027/civil", "/2027/frilo", "/2027/scia", "/2027/compare", "/product-lifecycle"]
+RELEASE_PATHS = ["/2027/features", "/products/allplan-max", "/2027/civil", "/products/frilo", "/products/scia", "/products/allplan-rebar", "/products/allplan-parametric", "/2027/allplan-basic", "/2027/allplan-concept", "/2027/allplan-professional", "/2027/allplan-ultimate", "/paket-karsilastirma", "/product-lifecycle", "/kaynaklar", "/egitim-merkezlerimiz", "/kaydedilmis-webinarlar"]
 PRODUCT_NAMES = {
     "/2027/features": "ALLPLAN 2027",
-    "/2027/max": "Allplan Max",
+    "/products/allplan-max": "Allplan Max",
     "/2027/civil": "ALLPLAN Civil",
-    "/2027/frilo": "FRILO",
-    "/2027/scia": "SCIA",
+    "/products/frilo": "FRILO",
+    "/products/scia": "SCIA",
+    "/products/allplan-rebar": "Allplan Rebar",
+    "/products/allplan-parametric": "Allplan Parametric",
+    "/2027/allplan-basic": "ALLPLAN Basic",
+    "/2027/allplan-concept": "ALLPLAN Concept",
+    "/2027/allplan-professional": "ALLPLAN Professional",
+    "/2027/allplan-ultimate": "ALLPLAN Ultimate",
 }
 
 
@@ -63,7 +69,7 @@ class ReleaseRouteSourceTests(unittest.TestCase):
         )
 
     def test_compare_has_no_internal_review_note(self):
-        source = (ROOT / "src/app/2027/compare/page.tsx").read_text(encoding="utf-8")
+        source = (ROOT / "src/app/paket-karsilastirma/page.tsx").read_text(encoding="utf-8")
         self.assertNotIn("Bu yerel inceleme, uluslararası üretici sayfasına dayanır.", source)
         self.assertNotIn("Türkiye paket kapsamı ve koşulları doğrulanmalıdır.", source)
         self.assertIn("Sürüm bağlantıları mevcut yerel ürün sayfalarına gider.", source)
@@ -109,7 +115,7 @@ class ReleaseRouteRuntimeTests(unittest.TestCase):
                 self.assertEqual(graph_types(self.data["live"]["jsonLd"][route])["SoftwareApplication"]["name"], name)
 
     def test_compare_jsonld_has_no_software_application(self):
-        for route in ("/2027/compare", "/product-lifecycle"):
+        for route in ("/paket-karsilastirma", "/product-lifecycle"):
             with self.subTest(route=route):
                 self.assertNotIn("SoftwareApplication", graph_types(self.data["live"]["jsonLd"][route]))
 
@@ -126,6 +132,8 @@ class ReleaseRouteRuntimeTests(unittest.TestCase):
 
     def test_sitemap_omits_release_routes_on_rollback(self):
         self.assertFalse([url for url in self.data["rollback"]["sitemap"] if "/2027/" in url])
+        for route in ("/products/allplan-rebar", "/products/allplan-parametric", "/products/allplan-max", "/products/frilo", "/products/scia"):
+            self.assertNotIn(ORIGIN + route, self.data["rollback"]["sitemap"])
 
     def test_jsonld_escaped(self):
         self.assertNotIn("<", self.data["escaped"])

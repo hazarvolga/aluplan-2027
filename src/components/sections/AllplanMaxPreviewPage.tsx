@@ -1,5 +1,5 @@
 import content from '@/data/allplan-max-preview.json';
-import { MAIN_QUOTE_FORM_URL, TRIAL_CTA_URL } from '@/lib/site-data';
+import { MAIN_QUOTE_FORM_URL, TRIAL_CTA_URL } from '@/lib/site-shared';
 import styles from './AllplanMaxPreviewPage.module.css';
 import { AllplanMaxVideo } from './AllplanMaxVideo';
 import { PreviewClosingSection } from './PreviewClosingSection';
@@ -25,8 +25,8 @@ const moreFeatures = [
 ];
 
 export function AllplanMaxPreviewPage() {
-  return <main id="main-content" className={styles.page}>
-    <ProductHero eyebrow="Allplan Max" title={text('hero.title')} description={text('hero.body')} image="/assets/previews/home-2027/allplan-max-generated-v2.jpg" actions={[{ label: 'Demo talep edin ↗', href: MAIN_QUOTE_FORM_URL, variant: 'primary' }, { label: 'Ücretsiz deneme ↗', href: TRIAL_CTA_URL, variant: 'secondary' }]} />
+  return <div className={styles.page}>
+    <ProductHero eyebrow="Allplan Max" title={text('hero.title')} description={text('hero.body')} image="/assets/previews/home-2027/allplan-max-generated-v2.jpg" variant="showcase" actions={[{ label: 'Demo talep edin ↗', href: MAIN_QUOTE_FORM_URL, variant: 'primary' }, { label: 'Ücretsiz deneme ↗', href: TRIAL_CTA_URL, variant: 'secondary' }]} />
     <IntroSplitSection eyebrow="ALLPLAN MAX" title={text('detail.title')} description={text('detail.body')}
       factsTitle={text('detail.list-title')} facts={[text('detail.bullet-1'), text('detail.bullet-2')]}
       action={{ label: 'Ücretsiz deneme ↗', href: TRIAL_CTA_URL }} />
@@ -41,7 +41,7 @@ export function AllplanMaxPreviewPage() {
         <p className="alu-hero-metrics__note">{text(`pillar-${n}.body`)}</p>
       </article>;
     })}</div></div></section>
-    <section className={`alu-container ${styles.section}`}><p className={styles.eyebrow}>ÖNE ÇIKAN ÖZELLİKLER</p><h2>{text('3feat.title')}</h2><div className={styles.featureList}>{mainFeatures.map(({key,video,clip}) => <article className={styles.feature} key={key}><div className={styles.featureText}><p className={styles.eyebrow}>{text(`3feat.${key}.included`)}</p><h3>{text(`3feat.${key}.title`)}</h3><p>{text(`3feat.${key}.body`)}</p><div className={styles.featureActions}><AllplanMaxVideo id={video} title={text(`3feat.${key}.title`)} /><a href={MAIN_QUOTE_FORM_URL}>Demo talep edin ↗</a></div></div><AllplanMaxFeatureClip src={`/assets/previews/allplan-max/${clip}`} title={text(`3feat.${key}.title`)} /></article>)}</div></section>
+    <section className={`alu-container ${styles.section}`}><p className={styles.eyebrow}>ÖNE ÇIKAN ÖZELLİKLER</p><h2>{text('3feat.title')}</h2><div className={styles.featureList}>{mainFeatures.map(({key,video,clip}) => <article className={styles.feature} key={key}><div className={styles.featureText}><p className={styles.eyebrow}>{text(`3feat.${key}.included`)}</p><h3>{text(`3feat.${key}.title`)}</h3><p>{text(`3feat.${key}.body`)}</p><div className={styles.featureActions}><AllplanMaxVideo id={video} title={text(`3feat.${key}.title`)} /><a href={MAIN_QUOTE_FORM_URL} aria-label={`Demo talep edin: ${text(`3feat.${key}.title`)}`}>Demo talep edin ↗</a></div></div><AllplanMaxFeatureClip src={`/assets/previews/allplan-max/${clip}`} title={text(`3feat.${key}.title`)} /></article>)}</div></section>
     <CustomerTestimonials title={text('quotes.title')} items={[1, 2, 3].map(n => {
       const [name, role] = text(`quote-${n}.attribution`).split(' — ');
       return { name, role, quote: text(`quote-${n}`), source: 'Kaynak: ALLPLAN' };
@@ -51,5 +51,5 @@ export function AllplanMaxPreviewPage() {
       title: text(`cta.${key}.title`), paragraphs: [text(`cta.${key}.body`)],
       action: { href: key === 'trial' ? TRIAL_CTA_URL : MAIN_QUOTE_FORM_URL, label: text(`cta.${key}.cta`) }
     }))} />
-  </main>;
+  </div>;
 }

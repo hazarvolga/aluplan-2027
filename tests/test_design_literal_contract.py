@@ -52,7 +52,6 @@ class DesignLiteralContractTests(unittest.TestCase):
             "--z-background",
             "--z-scrim",
             "--z-base",
-            "--z-foreground",
             "--z-content",
             "--z-sticky-context",
             "--z-dialog-top",

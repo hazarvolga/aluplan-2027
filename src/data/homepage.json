@@ -208,14 +208,6 @@
   ],
   "services": [
     {
-      "title": "Eğitim",
-      "description": "Online ve yüz yüze profesyonel ALLPLAN eğitimleri ile uzmanlaşın.",
-      "status": "active",
-      "href": "/solutions-v2/training",
-      "cta": "Eğitim Takvimi",
-      "icon": "graduation-cap"
-    },
-    {
       "title": "Teknik Destek",
       "description": "Microsoft Teams üzerinden uzaktan bağlantı ile kesintisiz teknik destek sağlıyoruz.",
       "status": "active",
@@ -267,7 +259,7 @@
       "title": "ALLPLAN FAQ",
       "description": "Sıkça sorulan sorular ve çözüm veri tabanı.",
       "status": "active",
-      "href": "/solutions-v2/faq",
+      "href": "/faq",
       "cta": "İncele",
       "icon": "circle-help"
     },
@@ -366,6 +358,30 @@
       "href": "/solutions-v2/connect-license/activation",
       "cta": "Görüntüle",
       "icon": "file-text"
+    },
+    {
+      "title": "Video Kütüphanesi",
+      "description": "ALLPLAN eğitim videolarını ve oynatma listelerini izleyin.",
+      "status": "active",
+      "href": "/video-kutuphanesi",
+      "cta": "İzle",
+      "icon": "circle-play"
+    },
+    {
+      "title": "Kaydedilmiş Webinarlar",
+      "description": "Kaçırdığınız veya tekrar izlemek istediğiniz webinarlarımıza buradan ulaşabilirsiniz.",
+      "status": "active",
+      "href": "/kaydedilmis-webinarlar",
+      "cta": "İncele",
+      "icon": "video"
+    },
+    {
+      "title": "Eğitim Merkezleri",
+      "description": "Eğitim merkezlerimiz ve eğitim olanakları hakkında bilgi alın.",
+      "status": "active",
+      "href": "/egitim-merkezlerimiz",
+      "cta": "İncele",
+      "icon": "map-pin"
     }
   ],
   "quickLinks": [
@@ -387,7 +403,7 @@
     ],
     [
       "Eğitim Videoları",
-      "/solutions-v2/training/video-library"
+      "/video-kutuphanesi"
     ]
   ],
   "packageAccess": {
@@ -508,7 +524,9 @@
     {
       "title": "Öğren ve yardım al",
       "serviceTitles": [
-        "Eğitim",
+        "Video Kütüphanesi",
+        "Kaydedilmiş Webinarlar",
+        "Eğitim Merkezleri",
         "Teknik Destek",
         "Destek Platformu",
         "Danışmanlık",

@@ -11,6 +11,9 @@ ${RELEASE_2027_ROUTES.map((route) => `- [${route.name}](${SITE_ORIGIN}${route.pa
 `
   : '';
 const packageMatrixPeriod = homepageData.packageMatrixLabel.replace(' MATRİSİ', '');
+const packageComparisonLine = isReleaseContentEnabled()
+  ? `- [Paket Karşılaştırma](${SITE_ORIGIN}/paket-karsilastirma): Basic, Concept, Professional ve Ultimate sürümlerinin özellik karşılaştırması.`
+  : `- [Paket Karşılaştırma Rehberi (${packageMatrixPeriod} PDF)](${SITE_ORIGIN}/paket-karsilastirma): Paketlerin teknik özellik karşılaştırması.`;
 
 const LLMS_TXT_CONTENT = `# Aluplan Program Sistemleri — ALLPLAN Türkiye
 
@@ -37,7 +40,7 @@ const LLMS_TXT_CONTENT = `# Aluplan Program Sistemleri — ALLPLAN Türkiye
 - [ALLPLAN Cloud Services & Bimplus](https://aluplan.com.tr/products/allplan-cloud-services): Bulut tabanlı OpenBIM (IFC 4.3, BCF) ortak veri ortamı.
 - [AX3000 MEP & Enerji](https://aluplan.com.tr/products/ax3000): ALLPLAN entegre mekanik tesisat (HVAC, sıhhi tesisat, ısıtma, elektrik, sprinkler) ve yapı fiziği/enerji simülasyonu.
 - [SDS2 Çelik Detaylandırma](https://aluplan.com.tr/products/sds2-home): Çelik yapı detaylandırma, otomatik birleşim hesabı ve CNC/imalat.
-- [Paket Karşılaştırma Rehberi (${packageMatrixPeriod} PDF)](https://aluplan.com.tr/paket-karsilastirma): Paketlerin teknik özellik karşılaştırması.
+${packageComparisonLine}
 
 ## Uzmanlık Çözümleri ve Eklentiler (/solutions)
 - [Bina Tasarımı](https://aluplan.com.tr/solutions-v2/building-design): Mimari (/solutions/architecture), Strüktürel (/solutions/structural), MEP (/solutions/mep) ve Endüstriyel tesis (/solutions/allplan-industry).
@@ -48,10 +51,10 @@ const LLMS_TXT_CONTENT = `# Aluplan Program Sistemleri — ALLPLAN Türkiye
 - [CDS Add-On & Allto PythonPart & Scalypso](https://aluplan.com.tr/solutions/addons): 2B DWG Converter, Drive Curve, Parametric Terrain, Ramp, Steel Components, 3B Lazer Tarama Nokta Bulutu (Scalypso).
 - [BIMX5, Oska e-Hakediş & Poz Kataloğu](https://aluplan.com.tr/solutions/oska): 5B BIM metraj, yaklaşık maliyet ve Çevre Şehircilik poz entegrasyonu.
 
-## Eğitim, Teknik Destek ve Kaynaklar (/solutions-v2/training)
-- [ALLPLAN Eğitim Merkezi](https://aluplan.com.tr/solutions-v2/training): Dönemsel teknik webinarlar, hızlı başlangıç rehberi (/solutions-v2/training/quick-start) ve kuruma özel eğitim talepleri.
-- [Video Kütüphanesi (14 Seri / 216 Video)](https://aluplan.com.tr/solutions-v2/training/video-library): Hello ALLPLAN 2024, Otomatik Donatı, Köprü İş Akışları, Yol Tasarımı, AX3000, Prekast ve SDS2 eğitim videoları.
-- [Sıkça Sorulan Sorular (SSS)](https://aluplan.com.tr/solutions-v2/faq): Lisans, kurulum, sistem gereksinimleri ve OpenBIM veri değişimi.
+## Eğitim, Teknik Destek ve Kaynaklar
+- [ALLPLAN Quick Start](https://aluplan.com.tr/solutions-v2/training/quick-start): 7 adımda hızlı başlangıç rehberi ve kuruma özel eğitim (/solutions-v2/training/individual).
+- [Video Kütüphanesi (14 Seri / 216 Video)](https://aluplan.com.tr/video-kutuphanesi): Hello ALLPLAN 2024, Otomatik Donatı, Köprü İş Akışları, Yol Tasarımı, AX3000, Prekast ve SDS2 eğitim videoları.
+- [Sıkça Sorulan Sorular (SSS)](https://aluplan.com.tr/faq): Lisans, kurulum, sistem gereksinimleri ve OpenBIM veri değişimi.
 - [Referanslar](https://aluplan.com.tr/references): Kamu kurumları, belediyeler, üniversiteler ve mühendislik/mimarlık ofisleri.
 ${release2027Section}`;
 

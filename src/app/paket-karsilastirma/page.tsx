@@ -1,0 +1,51 @@
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { ComparisonTable } from './ComparisonTable';
+import styles from './page.module.css';
+import { isReleaseContentEnabled } from '@/lib/release-flags';
+import { buildRelease2027JsonLd, buildRelease2027Metadata } from '@/lib/release-2027-routes';
+import { buildPageJsonLd, serializeJsonLd } from '@/lib/schema';
+import { buildPageMetadata } from '@/lib/metadata';
+import { getPageData, getPlaylistData } from '@/lib/site-data';
+import { SubpageView } from '@/components/sections/SubpageView';
+import { CompactPageHero } from '@/components/sections/CompactPageHero';
+import { SectionHeader } from '@/components/sections/SectionHeader';
+
+export function generateMetadata(): Metadata {
+  return isReleaseContentEnabled() ? buildRelease2027Metadata('/paket-karsilastirma') : buildPageMetadata('/paket-karsilastirma');
+}
+const editions = [
+ {name:'Basic',description:'Çizimler ve basit 3B modeller oluşturmak için yalnızca sektör bağımsız işlevleri içeren başlangıç çözümüdür. Sonrasında sektöre özel bir çözüme yükseltme önerilir.',href:'/products/allplan-basic'},
+ {name:'Concept',description:'Mimarlık ofisleri ve gayrimenkul geliştiricileri için bina tasarımında gerekli işlevleri içerir; kamu kurumları ve MEP mühendisleri için platform olarak da uygundur.',href:'/products/allplan-concept'},
+ {name:'Professional',description:'Mühendislik ve mimarlık ofisleri, yapı detaylandırmacıları ve yükleniciler için bina, yol ve altyapı yapılarının tasarım ve detaylandırmasında gerekli tüm işlevleri içerir. Kamu kurumları ve MEP mühendisleri için platform olarak da uygundur.',href:'/products/allplan-professional'},
+ {name:'Ultimate',description:'Çok disiplinli tasarım ofisleri, tasarla-yap inşaat şirketleri ve kamu kurumları için bina, yol ve altyapı yapılarının tasarım, detaylandırma ve inşaatına yönelik tüm ilgili işlevleri içeren eksiksiz çözümdür. Kamu kurumları ve MEP mühendisleri için platform olarak da uygundur.',href:'/products/allplan-ultimate'}
+];
+function Compare2027(){
+ return <div className={styles.page}><CompactPageHero crumbs={[{ label: 'Ana Sayfa', href: '/' }, { label: 'Paket karşılaştırma' }]} kicker="ALLPLAN · 2027" title="ALLPLAN sürümlerini karşılaştırın" lead="Basic, Concept, Professional ve Ultimate sürümlerinin özelliklerini karşılaştırın."><p className={styles.notice}>Sürüm bağlantıları mevcut yerel ürün sayfalarına gider.</p></CompactPageHero><div className="alu-container">
+ <p className={styles.footnote}>✓ Dâhil · — Kaynakta dâhil olarak işaretlenmemiş · İsteğe bağlı. Mobilde tabloyu yatay kaydırabilirsiniz.</p>
+ <ComparisonTable editions={editions} /><p className={styles.footnote}>** ALLPLAN abonelik lisanslarına dâhildir. *** ALLPLAN Model Viewer, ALLPLAN aboneliği veya Bimplus Professional satın alımıyla kullanılabilir.</p>
+ <section className={styles.editions}><SectionHeader kicker="/ SÜRÜMLER" title="İhtiyacınıza uygun sürümü keşfedin" /><div>{editions.map(e=><article key={e.name}><h3>ALLPLAN {e.name}</h3><p>{e.description}</p><a href={e.href} aria-label={`Sürümü incele: ALLPLAN ${e.name}`}>Sürümü incele ↗</a></article>)}</div></section></div></div>;
+}
+
+// With the 2027 release off, this URL keeps serving the existing package comparison page.
+function LegacyPackageComparison() {
+  const page = getPageData('/paket-karsilastirma');
+  if (!page) notFound();
+  const playlist = page.playlistId ? getPlaylistData(page.playlistId) : null;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(buildPageJsonLd(page, playlist)) }} />
+      <SubpageView page={page} playlist={playlist} />
+    </>
+  );
+}
+
+export default function PackageComparisonPage() {
+  if (!isReleaseContentEnabled()) return <LegacyPackageComparison />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(buildRelease2027JsonLd('/paket-karsilastirma')) }} />
+      <Compare2027 />
+    </>
+  );
+}

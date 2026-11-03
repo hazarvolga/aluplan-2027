@@ -23,10 +23,6 @@ EXPECTED = {
         "/products/allplan-professional", "/products/allplan-concept",
         "/products/precast-detail", "/products/allplan-basic",
     ],
-    "/solutions-v2/training": [
-        f"/solutions-v2/training/{slug}"
-        for slug in ("online", "webinar", "classroom", "events", "individual", "e-learning")
-    ],
     "/solutions/addons": ADDON_HREFS,
     "/solutions/cds-addon": ADDON_HREFS,
     "/solutions/ax3000-mekanik-tesisat": [
@@ -76,12 +72,12 @@ def main_hrefs(route: str) -> list[str]:
 
 AX3000_DOCS_ROUTE = "/products/ax3000/dokumanlar"
 AX3000_DOCUMENTS = [
-    ("/docs/ax3000/ax3000-brochure-en.pdf", "AX3000 Genel Broşür (İngilizce, PDF) indir"),
-    ("/docs/ax3000/ax3000-brochure-de.pdf", "AX3000 Genel Broşür (Almanca, PDF) indir"),
-    ("/docs/ax3000/ax3000-brochure-en-alternative.pdf", "AX3000 Genel Broşür — Alternatif (İngilizce, PDF) indir"),
-    ("/docs/ax3000/ax3000-functions-en.pdf", "MEP Fonksiyon Açıklamaları (İngilizce, PDF) indir"),
-    ("/docs/ax3000/ax3000-functions-en.docx", "MEP Fonksiyon Açıklamaları — Word (İngilizce, DOCX) indir"),
-    ("/docs/ax3000/ax3000-functions-hexagon-en.docx", "MEP Fonksiyon Açıklamaları — Hexagon (İngilizce, DOCX) indir"),
+    ("/docs/ax3000/ax3000-brochure-en.pdf", "PDF İndir: AX3000 Genel Broşür (İngilizce)"),
+    ("/docs/ax3000/ax3000-brochure-de.pdf", "PDF İndir: AX3000 Genel Broşür (Almanca)"),
+    ("/docs/ax3000/ax3000-brochure-en-alternative.pdf", "PDF İndir: AX3000 Genel Broşür — Alternatif (İngilizce)"),
+    ("/docs/ax3000/ax3000-functions-en.pdf", "PDF İndir: MEP Fonksiyon Açıklamaları (İngilizce)"),
+    ("/docs/ax3000/ax3000-functions-en.docx", "Word İndir: MEP Fonksiyon Açıklamaları — Word (İngilizce)"),
+    ("/docs/ax3000/ax3000-functions-hexagon-en.docx", "Word İndir: MEP Fonksiyon Açıklamaları — Hexagon (İngilizce)"),
 ]
 
 
@@ -144,6 +140,36 @@ class SectionCardLinkRenderTests(unittest.TestCase):
                 rendered = main_hrefs(route)
                 for href in hrefs:
                     self.assertIn(href, rendered)
+
+
+AX3000_DOCS_LINKED_ROUTES = ["/solutions/ax3000-yapi-fizigi", "/solutions/ax3000-virtual-reality"]
+AX3000_INTRO_CARD_HEADINGS = ("AX3000 Dokümanları</h2>", "Broşürler ve teknik kaynaklar</h2>")
+
+
+class Ax3000DocumentsPageTests(unittest.TestCase):
+    def test_documents_page_has_no_intro_cards_under_the_hero(self):
+        html_file = BUILD_APP / "products/ax3000/dokumanlar.html"
+        if not html_file.is_file():
+            raise unittest.SkipTest(f"production build output missing: {html_file}")
+        html = html_file.read_text(encoding="utf-8")
+        for heading in AX3000_INTRO_CARD_HEADINGS:
+            with self.subTest(heading=heading):
+                self.assertNotIn(heading, html.split("<main", 1)[-1].split("</h1>", 1)[-1])
+        self.assertIn("Teknik Dokümanlar", html)
+
+    def test_related_ax3000_pages_link_to_the_documents_page(self):
+        pages = load_pages()
+        routes = [
+            route for route in pages
+            if "ax3000" in route and route not in (AX3000_DOCS_ROUTE, "/video-kutuphanesi/ax3000")
+        ]
+        for route in routes:
+            with self.subTest(route=route):
+                if route in AX3000_DOCS_LINKED_ROUTES:
+                    self.assertNotIn(AX3000_DOCS_ROUTE, str(pages[route]))
+                    self.assertIn(AX3000_DOCS_ROUTE, main_hrefs(route))
+                else:
+                    self.assertIn(AX3000_DOCS_ROUTE, str(pages[route]))
 
 
 if __name__ == "__main__":

@@ -1,4 +1,9 @@
 {
+  "hero": {
+    "kicker": "GÖRSEL EĞİTİM",
+    "title": "Video Kütüphanesi",
+    "lead": "İhtiyacınız olan bilgiye görsel olarak ulaşın."
+  },
   "kicker": "GÖRSEL EĞİTİM · VİDEO KÜTÜPHANESİ",
   "title": "Önerilen Oynatma Listeleri ve Kanallar",
   "description": "Sizin için derlediğimiz en popüler ve faydalı video kaynak liste ve kanalları.",
@@ -21,7 +26,7 @@
       "url": "https://www.youtube.com/@ALLPLANEnglish"
     },
     {
-      "title": "Youtube Allplan Global",
+      "title": "ALLPLAN YouTube Kanalı",
       "description": "Dünya genelinden Allplan kullanıcı hikayeleri ve küresel etkinlikler.",
       "url": "https://www.youtube.com/c/AllplanInternational"
     },
@@ -33,17 +38,17 @@
     {
       "title": "Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları",
       "description": "Allplan 2024 sürümü ile gelen tüm yeniliklerin Türkçe anlatımı.",
-      "url": "/solutions-v2/training/video-library/hello-allplan-2024"
+      "url": "/video-kutuphanesi/hello-allplan-2024"
     },
     {
       "title": "Allplan Add On Geometry Tools",
       "description": "Topografik ve geometrik düzenleme araçları, arazi modelleme eğitimleri.",
-      "url": "/solutions-v2/training/video-library/addon-geometry"
+      "url": "/video-kutuphanesi/addon-geometry"
     },
     {
       "title": "AX3000 - MEP & Enerji",
       "description": "Mekanik, Elektrik, Tesisat ve Enerji Kimlik Belgesi (EKB) eğitimleri.",
-      "url": "/solutions-v2/training/video-library/ax3000"
+      "url": "/video-kutuphanesi/ax3000"
     },
     {
       "title": "Youtube CDS Allplan Add-On",
@@ -53,22 +58,22 @@
     {
       "title": "Allplan Road Design Workflow",
       "description": "Yol tasarımı iş akışları ve yol modülü eğitim videoları.",
-      "url": "/solutions-v2/training/video-library/road-design"
+      "url": "/video-kutuphanesi/road-design"
     },
     {
       "title": "Allplan Bridge Workflows",
       "description": "Köprü tasarımı süreçleri ve BIM entegrasyonu.",
-      "url": "/solutions-v2/training/video-library/bridge-workflows"
+      "url": "/video-kutuphanesi/bridge-workflows"
     },
     {
       "title": "Campus Tutorials (Deutsch)",
       "description": "Öğrenciler için detaylı Almanca eğitim serisi.",
-      "url": "/solutions-v2/training/video-library/campus-de"
+      "url": "/video-kutuphanesi/campus-de"
     },
     {
       "title": "Campus Tutorials (English)",
       "description": "Öğrenciler için kapsamlı İngilizce eğitim serisi.",
-      "url": "/solutions-v2/training/video-library/campus-en"
+      "url": "/video-kutuphanesi/campus-en"
     },
     {
       "title": "Allplan Bridge",
@@ -83,37 +88,37 @@
     {
       "title": "SDS2 Detaylandırma",
       "description": "SDS2 ürün tanıtımı ve lansman videoları.",
-      "url": "/solutions-v2/training/video-library/sds2-intro"
+      "url": "/video-kutuphanesi/sds2-intro"
     },
     {
       "title": "Konut İnşaatı İş Akışları",
       "description": "Konut proje teslimi, tasarım ve şantiye planlama süreçleri.",
-      "url": "/solutions-v2/training/video-library/konut-insaati"
+      "url": "/video-kutuphanesi/konut-insaati"
     },
     {
       "title": "Bridge Workflow 2022",
       "description": "2022 Köprü tasarımı ve iş akışları eğitim serisi.",
-      "url": "/solutions-v2/training/video-library/bridge-workflow-2022"
+      "url": "/video-kutuphanesi/bridge-workflow-2022"
     },
     {
       "title": "Otomatik Donatı (PythonPart)",
       "description": "Otomatik donatılandırma ve PythonPart araçları kullanımı.",
-      "url": "/solutions-v2/training/video-library/otomatik-donati"
+      "url": "/video-kutuphanesi/otomatik-donati"
     },
     {
       "title": "ALLPLAN QuickStart: Buildings",
       "description": "Allplan ile bina modellemeye hızlı başlangıç rehberi (9 Ders).",
-      "url": "/solutions-v2/training/video-library/quickstart-buildings"
+      "url": "/video-kutuphanesi/quickstart-buildings"
     },
     {
       "title": "ALLPLAN for Reinforcement",
       "description": "Betonarme detaylandırma, donatı modelleme ve raporlama eğitimleri (18 Video).",
-      "url": "/solutions-v2/training/video-library/allplan-reinforcement"
+      "url": "/video-kutuphanesi/allplan-reinforcement"
     },
     {
       "title": "Allplan Campus Tutorials 2019-2022",
       "description": "Öğrenciler için kapsamlı Almanca eğitim serisi (2019-2022).",
-      "url": "/solutions-v2/training/video-library/campus-tutorials-2019-2022"
+      "url": "/video-kutuphanesi/campus-tutorials-2019-2022"
     },
     {
       "title": "ALLPLAN Pythonparts Youtube Kanalı",

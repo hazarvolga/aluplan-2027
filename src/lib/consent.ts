@@ -27,6 +27,16 @@ export function writeConsent(choice: ConsentChoice): void {
   window.dispatchEvent(new Event(CONSENT_EVENT));
 }
 
+export function clearConsent(): void {
+  sessionChoice = null;
+  try {
+    window.localStorage.removeItem(CONSENT_STORAGE_KEY);
+  } catch {
+    // Storage can be blocked; clearing sessionChoice still reopens the banner.
+  }
+  window.dispatchEvent(new Event(CONSENT_EVENT));
+}
+
 function subscribe(onChange: () => void): () => void {
   window.addEventListener(CONSENT_EVENT, onChange);
   window.addEventListener('storage', onChange);

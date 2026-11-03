@@ -9,7 +9,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 EMBED_COMPONENT = ROOT / "src/components/ui/ConsentEmbed.tsx"
 BUILD_APP = ROOT / ".next/server/app"
-EMBED_PAGES = ["index", "contact", "about", "solutions/scalypso", "2027/civil", "solutions-v2/training/video-library/addon-geometry"]
+EMBED_PAGES = ["index", "contact", "about", "solutions/scalypso", "2027/civil", "video-kutuphanesi/addon-geometry"]
 
 
 def ui_sources():

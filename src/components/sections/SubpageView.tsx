@@ -1,17 +1,16 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
+import type { PageRecord, PlaylistRecord } from '@/lib/site-data';
 import {
-  PageRecord,
-  PlaylistRecord,
   MAIN_QUOTE_FORM_URL,
   SUPPORT_PORTAL_URL,
   getSiteIdentity,
   getSolutionCatalog,
   getSolutionHub
-} from '@/lib/site-data';
+} from '@/lib/site-shared';
 import { AluIcon } from '@/components/ui/AluIcon';
-import { TrainingTabs } from './TrainingTabs';
 import { AboutEditorialSection } from './AboutEditorialSection';
 import { VideoLibraryHubSection } from './VideoLibraryHubSection';
 import { VideoPlaylistSection } from './VideoPlaylistSection';
@@ -19,19 +18,28 @@ import { SearchPageSection } from './SearchPageSection';
 import { SubpageHeroSection } from './SubpageHeroSection';
 import { getSubpageHeroPresentation } from './subpage-hero-presentation';
 import { StructuredPageLayoutSection } from './StructuredPageLayoutSection';
+import { Release2027Band } from './Release2027Band';
+import { release2027Bands } from '@/data/allplan-2027-editions';
+import { isReleaseContentEnabled } from '@/lib/release-flags';
 import { SolutionHubSection } from './SolutionHubSection';
 import { SolutionCatalogSection } from './SolutionCatalogSection';
 import { PageEndConversion } from './PageEndConversion';
 import { getPageEndConversion } from './page-end-conversion-policy';
 import { handleStructuredTabKey } from './structured-tab-key';
-import { MediaDialog } from '@/components/ui/MediaDialog';
 import { ContactMap } from './ContactMap';
 import { ScalypsoPageContent } from './ScalypsoPageContent';
 import { ScalypsoSubpage } from './ScalypsoSubpage';
 import { ScalypsoModeler } from './ScalypsoModeler';
 import { SectionActions, SectionCardLink, visibleSectionItems } from './SectionLinks';
-import { DocumentGroupsSection, documentSectionHeadings } from './DocumentGroupsSection';
+import { DocumentGroupsSection } from './DocumentGroupsSection';
+import { Ax3000MechanicalContent } from './Ax3000MechanicalContent';
 import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
+import { MediaViewerDialogs } from './MediaViewerDialogs';
+
+const AX3000_DOCS_ROUTE = '/products/ax3000/dokumanlar';
+const AX3000_MECHANICAL_ROUTE = '/solutions/ax3000-mekanik-tesisat';
+// AX3000 pages whose source has no link to the documents page.
+const AX3000_DOCS_LINK_ROUTES = ['/solutions/ax3000-yapi-fizigi', '/solutions/ax3000-virtual-reality'];
 
 const SECTION_LABELS: Record<string, string> = {
   products: 'ALLPLAN ÜRÜN AİLESİ',
@@ -72,7 +80,7 @@ export function SubpageView({
   const [refSearchQuery, setRefSearchQuery] = useState<string>('');
 
   const isLegalPage = page.section === 'legal';
-  const isVideoLibraryHub = page.path === '/solutions-v2/training/video-library';
+  const isVideoLibraryHub = page.path === '/video-kutuphanesi';
   const isVideoPlaylistPage = Boolean(playlist);
   const solutionHub = getSolutionHub(page.path);
   const solutionCatalog = page.path === '/solutions' ? getSolutionCatalog() : null;
@@ -102,10 +110,9 @@ export function SubpageView({
     !isLegalPage && !isVideoLibraryHub && !isVideoPlaylistPage
       ? page.sections.filter((s) => Boolean(s.image) && !s.statValue)
       : [];
-  const documentHeadings = page.documentGroups ? documentSectionHeadings(page.documentGroups) : new Set<string>();
   const specSections =
-    !isVideoLibraryHub && !isVideoPlaylistPage && !solutionHub && !solutionCatalog
-      ? page.sections.filter((s) => !s.statValue && (!s.image || isLegalPage) && !documentHeadings.has(s.heading))
+    !isVideoLibraryHub && !isVideoPlaylistPage && !solutionHub && !solutionCatalog && !page.documentGroups
+      ? page.sections.filter((s) => !s.statValue && (!s.image || isLegalPage))
       : [];
 
   const usedPhotoSrcs = new Set<string>();
@@ -125,7 +132,7 @@ export function SubpageView({
     <>
       {scalypsoContent ? scalypsoContent : <>
       {/* Subpage Hero Stage */}
-      {page.path !== '/references' && <SubpageHeroSection
+      {page.path !== '/references' && !isVideoLibraryHub && <SubpageHeroSection
         page={page}
         heroImage={heroImage}
         presentation={heroPresentation.presentation}
@@ -135,6 +142,8 @@ export function SubpageView({
         sectionBadgeLabel={sectionBadgeLabel}
         isLegalPage={isLegalPage}
       />}
+
+      {isReleaseContentEnabled() && release2027Bands[page.path] && <Release2027Band band={release2027Bands[page.path]} />}
 
       {['/solutions/scalypso/converter', '/solutions/scalypso/videos'].includes(page.path) && (
         <nav className="alu-container alu-cluster" aria-label="Scalypso bağlantıları" style={{ paddingBlock: 'var(--space-inset-md)' }}>
@@ -166,7 +175,7 @@ export function SubpageView({
         </section>
       )}
 
-      {/* Special Interactive View: Video Playlist (/solutions-v2/training/video-library/[playlistId]) */}
+      {/* Special Interactive View: Video Playlist (/video-kutuphanesi/[playlistId]) */}
       {playlist && (
         <VideoPlaylistSection
           playlist={playlist}
@@ -175,7 +184,7 @@ export function SubpageView({
         />
       )}
 
-      {/* Special Interactive View: Video Library Hub (/solutions-v2/training/video-library) */}
+      {/* Special Interactive View: Video Library Hub (/video-kutuphanesi) */}
       {isVideoLibraryHub && <VideoLibraryHubSection />}
 
       {/* Special Interactive View: Search Page (/search) */}
@@ -184,10 +193,6 @@ export function SubpageView({
           query={searchQuery}
           onQueryChange={setSearchQuery}
         />
-      )}
-
-      {page.path === '/solutions-v2/training' && page.structuredLayout?.trainingTabs && (
-        <TrainingTabs content={page.structuredLayout.trainingTabs} />
       )}
 
       {/* Contact requests use the shared Microsoft form; direct channels stay available */}
@@ -307,7 +312,7 @@ export function SubpageView({
           <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-lg)' }}>
             <div className="alu-stack">
               <span className="preview-kicker">TEKNİK VİDEO GÖSTERİMLERİ</span>
-              <h2 className="alu-h1">Uygulama ve İş Akışı Videoları</h2>
+              <h2 className="alu-h2">Uygulama ve İş Akışı Videoları</h2>
             </div>
             <div className="alu-products-showcase">
               {pageVideos.map((vid, vIdx) => (
@@ -342,7 +347,7 @@ export function SubpageView({
         <SolutionCatalogSection directory={solutionCatalog} />
       ) : solutionHub ? (
         <SolutionHubSection hub={solutionHub} />
-      ) : page.structuredLayout && !page.structuredLayout.trainingTabs ? (
+      ) : page.structuredLayout ? (
         <StructuredPageLayoutSection
           layout={page.structuredLayout}
           pagePath={page.path}
@@ -353,6 +358,8 @@ export function SubpageView({
           onVideo={setActiveModalVideo}
           onImage={setActiveLightboxImage}
         />
+      ) : page.path === AX3000_MECHANICAL_ROUTE ? (
+        <Ax3000MechanicalContent page={page} />
       ) : page.path === '/about' ? null : (
         /* Preserved Structured Content Sections — Benefit/Spec Grid + Alternating Photo Showcases */
         <section className="preview-section" aria-label="Sayfa içeriği">
@@ -570,89 +577,24 @@ export function SubpageView({
         const links = page.contentLinks.filter(link => labels.includes(link.text));
         return links.length > 0 && <section className="preview-section" aria-label="İlgili bağlantılar"><div className="alu-container alu-cluster">{links.map(link => <a key={link.href} className="alu-button alu-button--secondary alu-button--md" href={link.href} target="_blank" rel="noopener noreferrer">{link.text} ↗</a>)}</div></section>;
       })()}
+      {AX3000_DOCS_LINK_ROUTES.includes(page.path) && (
+        <section className="preview-section" aria-label="AX3000 dokümanları">
+          <div className="alu-container alu-cluster">
+            <Link className="alu-button alu-button--secondary alu-button--md" href={AX3000_DOCS_ROUTE}>
+              AX3000 broşürleri ve teknik dokümanlar
+            </Link>
+          </div>
+        </section>
+      )}
       </>}
       {pageEndConversion && <PageEndConversion model={pageEndConversion} />}
 
-      {/* Global Video Popup Modal (Cinema Overlay for 91+ Product & Solution Video Cards) */}
-      {activeModalVideo && (
-        <MediaDialog label={activeModalVideo.title} onClose={() => setActiveModalVideo(null)}>
-          <div
-            className="alu-video-modal__dialog"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="alu-video-modal__header">
-              <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-dense)' }}>
-                <span className="alu-badge alu-badge--accent">
-                  <AluIcon name="circle-play" size="sm" />
-                  <span>VİDEO ÖNİZLEME</span>
-                </span>
-                <h3 className="alu-video-modal__title">{activeModalVideo.title}</h3>
-              </div>
-              <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-regular)' }}>
-                {activeModalVideo.youtubeId && (
-                  <a
-                    href={`https://www.youtube.com/watch?v=${activeModalVideo.youtubeId}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="alu-button alu-button--secondary alu-button--sm"
-                  >
-                    <span>YouTube&apos;da Aç</span>
-                    <AluIcon name="external-link" size="sm" />
-                  </a>
-                )}
-                <button
-                  type="button"
-                  className="alu-video-modal__close"
-                  data-media-dialog-close
-                  aria-label="Videoyu kapat"
-                  onClick={() => setActiveModalVideo(null)}
-                >
-                  ✕
-                </button>
-              </div>
-            </div>
-            <div className="alu-video-modal__viewport">
-              {activeModalVideo.videoSrc ? (
-                <video
-                  src={activeModalVideo.videoSrc}
-                  controls
-                  autoPlay
-                  playsInline
-                  style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }}
-                />
-              ) : (
-                <ConsentEmbed src={`https://www.youtube-nocookie.com/embed/${activeModalVideo.youtubeId}?autoplay=1`} title={activeModalVideo.title} requested />
-              )}
-            </div>
-          </div>
-        </MediaDialog>
-      )}
-
-      {/* Global Image Lightbox Modal (Full-Resolution Screenshot Inspector) */}
-      {activeLightboxImage && (
-        <MediaDialog label={activeLightboxImage.title} onClose={() => setActiveLightboxImage(null)}>
-          <div
-            className="alu-video-modal__dialog alu-video-modal__dialog--image"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="alu-video-modal__header">
-              <h3 className="alu-video-modal__title">{activeLightboxImage.title}</h3>
-              <button
-                type="button"
-                className="alu-video-modal__close"
-                data-media-dialog-close
-                aria-label="Görseli kapat"
-                onClick={() => setActiveLightboxImage(null)}
-              >
-                ✕
-              </button>
-            </div>
-            <div className="alu-video-modal__image-viewport">
-              <img src={activeLightboxImage.src} alt={activeLightboxImage.title} />
-            </div>
-          </div>
-        </MediaDialog>
-      )}
+      <MediaViewerDialogs
+        video={activeModalVideo}
+        image={activeLightboxImage}
+        onCloseVideo={() => setActiveModalVideo(null)}
+        onCloseImage={() => setActiveLightboxImage(null)}
+      />
 
     </>
   );

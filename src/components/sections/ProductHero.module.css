@@ -1,7 +1,13 @@
-.hero{position:relative;min-height:540px;display:flex;align-items:center;background:linear-gradient(90deg,#151718 5%,rgba(21,23,24,.96) 35%,rgba(21,23,24,.3) 100%),var(--hero-image) right center/auto 100% no-repeat}
-.content{width:100%;padding-block:var(--space-application-section-inset)}
-.hero h1{font-size:clamp(2.6rem,5vw,5rem);line-height:1.06;max-width:12ch;margin:1rem 0}
-.lead{font-size:1.2rem;max-width:44rem;line-height:1.65}
-.eyebrow{color:var(--accent-fg);font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
-.actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
-@media(max-width:767px){.hero{background-size:auto 100%;background-position:70% center}}
+.hero{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;min-height:18rem;background:var(--surface-page);border-bottom:var(--border-width-default) solid var(--border-default)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--hero-image) right center/auto 100% no-repeat;mask-image:linear-gradient(90deg,transparent 20%,rgba(0,0,0,.15) 45%,#000 85%);-webkit-mask-image:linear-gradient(90deg,transparent 20%,rgba(0,0,0,.15) 45%,#000 85%)}
+.content{width:100%;padding-block:var(--space-stack-lg) var(--space-stack-xl)}
+.hero h1{font-size:var(--type-h1-size);line-height:var(--type-h1-line-height);max-width:20ch;margin:var(--space-stack-sm) 0}
+.lead{margin:0;max-width:46rem;color:var(--text-secondary);font-size:var(--type-h4-size);line-height:var(--type-body-line-height)}
+.eyebrow{margin:0;color:var(--accent-fg);font-size:var(--type-caption-size);font-weight:var(--font-weight-strong);text-transform:uppercase;letter-spacing:.08em}
+.highlights{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-stack-xs) var(--space-inline-md);max-width:36rem;padding:0;margin:var(--space-stack-md) 0 0;list-style:none;color:var(--text-secondary);font-size:var(--type-caption-size)}
+.highlights li::before{content:'—';color:var(--accent-fg);margin-right:.5rem}
+.actions{display:flex;flex-wrap:wrap;gap:var(--space-inline-md);margin-top:var(--space-stack-lg)}
+.showcase{min-height:34rem}
+.showcase .content{padding-block:var(--space-application-section-inset)}
+.showcase h1{font-size:var(--type-display-size);line-height:var(--type-display-line-height);max-width:14ch}
+@media(max-width:767px){.hero::before{background-position:75% center;opacity:.55}.highlights{grid-template-columns:1fr}}

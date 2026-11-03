@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import type { StructuredWorkflowTabsSection } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { handleStructuredTabKey } from './structured-tab-key';
+import { SectionHeader } from './SectionHeader';
 
 
 export function WorkflowSection({
@@ -29,17 +30,7 @@ export function WorkflowSection({
       {wfTabs && wfTabs.categories.length > 0 && currentWfCat && (
         <section className="preview-section preview-section--subtle" aria-label={wfTabs.title}>
           <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
-            <div className="alu-section-header-center">
-              {wfTabs.kicker && <span className="preview-kicker">{wfTabs.kicker}</span>}
-              <h2 className="alu-h1" style={{ margin: 0 }}>
-                {wfTabs.title}
-              </h2>
-              {wfTabs.subtitle && (
-                <p className="alu-body preview-meta" style={{ margin: 0, maxWidth: 'var(--container-prose)' }}>
-                  {wfTabs.subtitle}
-                </p>
-              )}
-            </div>
+            <SectionHeader kicker={wfTabs.kicker} title={wfTabs.title} lead={wfTabs.subtitle} />
 
             {/* Category Tabs Bar */}
             <div className="alu-wf-cats" role="tablist" aria-label={wfTabs.title}>

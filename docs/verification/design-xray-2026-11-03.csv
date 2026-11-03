@@ -1,0 +1,117 @@
+route,hero_family,page_kind,h1,h1_all_caps,hero_lead_repeats_h1,h2_count,h2_style_classes,card_classes,images,videos,details,tables,html_kb
+/,F6 One-off layout,utility/marketing,Her mühendislik iş akışı içinkapsamlı çözümler,0,,5,alu-h1x3;alu-h2x1;plainx1,,12,0,0,0,41
+/2027/allplan-basic,F4 ProductHero 80px,product,Allplan Basic,0,,2,XGaCEqx1;alu-h1x1,XGaCEqx1;alu-media-cardx3,3,0,0,0,23
+/2027/allplan-concept,F4 ProductHero 80px,product,Allplan Concept,0,,2,XGaCEqx1;alu-h1x1,XGaCEqx1;alu-media-cardx3,3,0,0,0,23
+/2027/allplan-professional,F4 ProductHero 80px,product,Allplan Professional,0,,2,XGaCEqx1;alu-h1x1,XGaCEqx1;alu-media-cardx3,3,0,0,0,23
+/2027/allplan-ultimate,F4 ProductHero 80px,product,Allplan Ultimate,0,,2,XGaCEqx1;alu-h1x1,XGaCEqx1;alu-media-cardx3,3,0,0,0,22
+/2027/civil,F4 ProductHero 80px,product,ALLPLAN Civil,0,,2,XGaCEqx1;alu-h1x1,XGaCEqx1;alu-media-cardx3,3,0,0,0,23
+/2027/features,F6 One-off layout,product,"2027 yenilikleri: Allplan, Allplan Civil, FRILO, SCIA, SDS2",0,,3,XGaCEqx1;plainx2,BO7QqGx3;XGaCEqx2,3,0,31,0,33
+/about,F2 Subpage hero 56px + generic sections,utility/marketing,Türkiye'nin Güvenilir BIM Çözüm Ortağı,0,1,4,alu-h1x3;jbAHwWx1,alu-about-value-itemx4,0,0,0,0,30
+/contact,F2 Subpage hero 56px + generic sections,utility/marketing,Bizimle İletişime Geçin,0,1,4,alu-h2x3;alu-h3x1,alu-spec-cardx8,0,0,0,0,30
+/egitim-merkezlerimiz,F3 CompactPageHero 48px,utility/marketing,Eğitim İş Ortaklarımız,0,,2,JmKsTa_groupTitlex2,,0,0,0,0,22
+/faq,F1 Subpage hero 56px + structured layout,utility/marketing,Sıkça Sorulan Sorular,0,1,2,alu-h1x1;jbAHwWx1,,1,0,7,0,38
+/gizlilik-politikasi,F2 Subpage hero 56px + generic sections,legal,Gizlilik Politikası,0,1,4,alu-h3x4,alu-spec-cardx4,0,0,0,0,24
+/kaydedilmis-webinarlar,F3 CompactPageHero 48px,utility/marketing,Webinarlar,0,,5,AXL7VW_groupTitlex4;alu-h1x1,alu-media-cardx4;alu-media-card alu-media-card--videox15,19,0,0,0,55
+/kaynaklar,F3 CompactPageHero 48px,utility/marketing,"Öğrenme, Teknik Destek ve Lisans Kaynakları",0,,3,coo8FW_groupTitlex3,,0,0,0,0,42
+/kullanim-sartlari,F2 Subpage hero 56px + generic sections,legal,Kullanım Şartları,0,1,6,alu-h3x6,alu-spec-cardx6,0,0,0,0,25
+/kvkk,F2 Subpage hero 56px + generic sections,legal,KVKK Aydınlatma Metni,0,1,7,alu-h3x7,alu-spec-cardx9,0,0,0,0,28
+/package-overview,F2 Subpage hero 56px + generic sections,utility/marketing,Paket Karşılaştırması,0,1,2,alu-h3x1;jbAHwWx1,alu-spec-cardx1,0,0,0,0,22
+/paket-karsilastirma,F6 One-off layout,utility/marketing,ALLPLAN sürümlerini karşılaştırın,0,,1,plainx1,,0,0,0,1,65
+/product-lifecycle,F6 One-off layout,legal,Ürün yaşam döngüsü politikası,0,,6,plainx6,,0,0,8,7,29
+/products,F2 Subpage hero 56px + generic sections,product,ALLPLAN Ürün Ailesi,0,1,3,alu-h3x2;jbAHwWx1,alu-feature-rowx4;alu-feature-row alu-feature-row--reversex4;alu-spec-cardx7,9,0,0,0,37
+/products/allplan,F2 Subpage hero 56px + generic sections,product,ALLPLAN,1,1,4,alu-h3x3;jbAHwWx1,alu-spec-cardx6,1,0,0,0,30
+/products/allplan-2026,F1 Subpage hero 56px + structured layout,product,DAHA İYİ BİR GELECEK İNŞA ETMEK İÇİN TASARLANDI,1,1,3,alu-h1x2;jbAHwWx1,alu-media-cardx1;alu-media-card alu-media-card--videox6,8,0,0,0,53
+/products/allplan-2026-yenilikler,F1 Subpage hero 56px + structured layout,product,DAHA İYİ BİR GELECEK İNŞA ETMEK İÇİN TASARLANDI,1,0,3,alu-h1x2;jbAHwWx1,alu-wf-detailx1,2,0,0,0,36
+/products/allplan-aec,F1 Subpage hero 56px + structured layout,product,ALLPLAN,1,1,4,alu-h1x3;jbAHwWx1,alu-benefit-cardx6;alu-wf-detailx1,8,0,0,0,36
+/products/allplan-basic,F1 Subpage hero 56px + structured layout,product,"TASARIM, GÖRÜNTÜLEME VE İŞ BİRLİĞİ İÇİN TEMEL ÇÖZÜM",1,1,7,alu-h1x5;jbAHwWx1;l1tsFWx1,alu-benefit-cardx3;alu-media-cardx12;alu-media-card alu-media-card--videox6,22,0,0,0,56
+/products/allplan-bimplus,F1 Subpage hero 56px + structured layout,product,"BIMPLUS projenizi işbirliği için paylaşın, koordine edin ve yönetin",0,0,9,alu-h1x8;jbAHwWx1,alu-benefit-cardx6;alu-media-card alu-media-card--videox15;alu-wf-detailx1,23,0,0,0,78
+/products/allplan-cloud-services,F1 Subpage hero 56px + structured layout,product,ALLPLAN Bulut Hizmetleri,0,1,4,alu-h1x2;alu-h2x1;jbAHwWx1,alu-media-cardx7;alu-media-card alu-media-card--videox2,11,0,0,0,44
+/products/allplan-concept,F1 Subpage hero 56px + structured layout,product,MODELLEME VE TASARIM DOKÜMANTASYONU İÇİN BIM ÇÖZÜMÜ,1,1,7,alu-h1x5;jbAHwWx1;l1tsFWx1,alu-benefit-cardx6;alu-media-cardx14;alu-media-card alu-media-card--videox10,31,0,0,0,68
+/products/allplan-max,F4 ProductHero 80px,product,Mühendislik için yapay zekâ,0,,6,XGaCEqx1;_5RLcVax1;plainx4,XGaCEqx2;_5RLcVax3;_5RLcVa_cardx6;alu-hero-metrics__itemx3,6,4,0,0,30
+/products/allplan-parametric,F4 ProductHero 80px,product,Allplan Parametric,0,,10,XGaCEqx1;alu-h1x6;plainx3,XGaCEqx1;_7rZpgG_cardx7;alu-media-cardx30,14,0,0,0,44
+/products/allplan-professional,F1 Subpage hero 56px + structured layout,product,DETAYLANDIRMA VE İLERİ DÜZEY OTOMASYON İÇİN BIM ÇÖZÜMÜ,1,1,7,alu-h1x5;jbAHwWx1;l1tsFWx1,alu-benefit-cardx9;alu-media-cardx18;alu-media-card alu-media-card--videox12,40,0,0,0,78
+/products/allplan-rebar,F4 ProductHero 80px,product,Allplan Rebar,0,,10,XGaCEqx1;alu-h1x6;plainx3,XGaCEqx1;_7rZpgG_cardx8;alu-media-cardx30,18,0,0,0,47
+/products/allplan-ultimate,F1 Subpage hero 56px + structured layout,product,Tasarımdan inşaata kadar tam iş akışı için kapsamlı BIM çözümü.,0,1,9,alu-h1x6;alu-h2x1;jbAHwWx1;l1tsFWx1,alu-benefit-cardx12;alu-media-cardx24;alu-media-card alu-media-card--videox14,52,0,3,0,94
+/products/architecture,F2 Subpage hero 56px + generic sections,product,Allplan Architecture,0,0,3,alu-h3x2;jbAHwWx1,alu-spec-cardx2,1,0,0,0,26
+/products/ax3000,F1 Subpage hero 56px + structured layout,product,AX3000 MEP,1,0,8,alu-h1x4;alu-h2x3;jbAHwWx1,alu-benefit-cardx10;alu-media-cardx3,17,0,0,0,42
+/products/ax3000/dokumanlar,F2 Subpage hero 56px + generic sections,product,AX3000 Dokümanları,0,0,4,alu-h2x3;jbAHwWx1,alu-spec-cardx6,3,0,0,0,33
+/products/civil,F1 Subpage hero 56px + structured layout,product,İleri Düzey Altyapı Tasarımından İnşa Akışlarına yönelik Çözüm.,0,1,10,alu-h1x7;alu-h2x1;jbAHwWx1;l1tsFWx1,alu-benefit-cardx8;alu-media-cardx24;alu-media-card alu-media-card--videox17,51,0,3,0,98
+/products/frilo,F5 FRILO custom hero 48px,product,Bileşen odaklı yapı analizi ve tasarım,0,,12,XGaCEqx1;plainx11,XGaCEqx2;_7rZpgG_cardx22;naGhcW_capabilityx5;naGhcW_updateCardx3,11,0,5,0,39
+/products/precast,F1 Subpage hero 56px + structured layout,product,PREKAST TASARIMI İÇİN EŞSİZ BIM ÇÖZÜMÜ,1,1,5,alu-h1x4;jbAHwWx1,alu-benefit-cardx6;alu-media-cardx3;alu-wf-detailx1,11,0,0,0,42
+/products/precast-detail,F1 Subpage hero 56px + structured layout,product,ALLPLAN PRECAST – Prefabrik Elemanlar,0,0,5,alu-h1x4;jbAHwWx1,alu-benefit-cardx6;alu-media-cardx3;alu-wf-detailx1,11,0,0,0,39
+/products/scia,F4 ProductHero 80px,product,Yapı analizi ve tasarım,0,,5,XGaCEqx1;plainx4,XGaCEqx2;_7rZpgG_cardx3,7,0,4,0,26
+/products/sds2-home,F1 Subpage hero 56px + structured layout,product,Çelik detaylandırma ve imalat için kapsamlı BIM çözümü,0,0,7,alu-h1x4;alu-h2x1;alu-h3x1;jbAHwWx1,alu-benefit-cardx11;alu-media-cardx3,10,0,0,0,39
+/references,F6 One-off layout,utility/marketing,BIM Odaklı İş Ortaklarımız ve Referans Müşterilerimiz,0,,1,jbAHwWx1,alu-ref-cardx228,0,0,0,0,204
+/search,F2 Subpage hero 56px + generic sections,utility/marketing,"Site İçi Arama — Ürün, Çözüm ve Eğitim Kütüphanesi",0,0,2,alu-h2x1;alu-h3x1,alu-service-cardx102;alu-spec-cardx1,0,0,0,0,98
+/solutions,F2 Subpage hero 56px + generic sections,solution,Geleceği Tasarlayın,0,0,7,alu-h1x1;alu-h2x5;jbAHwWx1,,23,0,0,0,45
+/solutions-v2/addons,F2 Subpage hero 56px + generic sections,solution,EKLENTİLER,1,1,6,alu-h3x5;jbAHwWx1,,1,0,0,0,27
+/solutions-v2/building-design,F2 Subpage hero 56px + generic sections,solution,BİNA TASARIMI,1,1,5,alu-h3x4;jbAHwWx1,,1,0,0,0,27
+/solutions-v2/connect-license,F2 Subpage hero 56px + generic sections,solution,ALLPLAN 2026 & Yeni Lisanslama,0,1,5,alu-h3x4;jbAHwWx1,alu-spec-cardx16,1,0,0,0,36
+/solutions-v2/connect-license/activation,F2 Subpage hero 56px + generic sections,solution,ALLPLAN Lisans Deklarasyon ve Aktivasyon Formu,0,0,3,alu-h2x1;alu-h3x1;jbAHwWx1,alu-spec-cardx2,1,0,0,0,28
+/solutions-v2/connect-license/how-to-assign,F1 Subpage hero 56px + structured layout,solution,Lisans Atama ve Yönetim Rehberi,0,1,2,alu-h1x1;jbAHwWx1,,1,0,3,0,32
+/solutions-v2/connect-login,F2 Subpage hero 56px + generic sections,solution,Allplan Connect: Giriş Problemleri veya Parola Sıfırlama,0,1,5,alu-h2x1;alu-h3x3;jbAHwWx1,alu-spec-cardx7,3,0,0,0,31
+/solutions-v2/construction,F2 Subpage hero 56px + generic sections,solution,İNŞAAT PLANLAMASI,1,1,4,alu-h3x3;jbAHwWx1,,1,0,0,0,26
+/solutions-v2/infrastructure,F2 Subpage hero 56px + generic sections,solution,ALTYAPI TASARIMI,1,1,4,alu-h3x3;jbAHwWx1,,1,0,0,0,26
+/solutions-v2/other,F2 Subpage hero 56px + generic sections,solution,DİĞER ÇÖZÜMLERİMİZ,1,1,7,alu-h3x6;jbAHwWx1,,1,0,0,0,28
+/solutions/addons,F2 Subpage hero 56px + generic sections,solution,CDS Eklentiler,0,0,2,alu-h3x1;jbAHwWx1,alu-feature-rowx5;alu-feature-row alu-feature-row--reversex4;alu-spec-cardx1,10,0,0,0,33
+/solutions/addons/2d-dwg-converter,F1 Subpage hero 56px + structured layout,solution,2B DWG Converter,0,0,5,alu-h1x2;alu-h2x2;jbAHwWx1,alu-benefit-cardx30;alu-media-card alu-media-card--videox6,39,0,0,0,57
+/solutions/addons/drive-curve,F1 Subpage hero 56px + structured layout,solution,Add On Sürüş Eğrisi,0,0,5,alu-h1x3;alu-h2x1;jbAHwWx1,alu-benefit-cardx11;alu-media-card alu-media-card--videox7;alu-wf-detailx1,15,0,0,0,49
+/solutions/addons/geometry-tools,F1 Subpage hero 56px + structured layout,solution,Geometri Araçları,0,0,5,alu-h1x2;alu-h2x2;jbAHwWx1,alu-benefit-cardx36;alu-media-card alu-media-card--videox17,56,0,0,0,81
+/solutions/addons/graphical-text,F1 Subpage hero 56px + structured layout,solution,Grafiksel Yazı,0,0,4,alu-h1x1;alu-h2x2;jbAHwWx1,alu-media-card alu-media-card--videox2,5,0,0,0,33
+/solutions/addons/parametric-terrain,F1 Subpage hero 56px + structured layout,solution,Parametrik Arazi,0,1,7,alu-h2x6;jbAHwWx1,,7,0,0,0,43
+/solutions/addons/ramp,F1 Subpage hero 56px + structured layout,solution,Rampa,0,1,5,alu-h1x1;alu-h2x3;jbAHwWx1,alu-media-card alu-media-card--videox3,7,0,0,0,38
+/solutions/addons/sketchup-converter,F1 Subpage hero 56px + structured layout,solution,SketchUp Dönüştürücü,0,0,5,alu-h1x3;alu-h2x1;jbAHwWx1,alu-media-card alu-media-card--videox3;alu-wf-detailx1,5,0,0,0,39
+/solutions/addons/steel-components,F1 Subpage hero 56px + structured layout,solution,Çelik Profil Bileşenler için Parametrik Allplan Eklentisi,0,0,7,alu-h1x4;alu-h2x2;jbAHwWx1,alu-benefit-cardx8;alu-media-card alu-media-card--videox29;alu-wf-detailx1,40,0,0,0,94
+/solutions/addons/three-dimensioning,F1 Subpage hero 56px + structured layout,solution,3B Ölçülendirme,0,0,6,alu-h1x2;alu-h2x3;jbAHwWx1,alu-benefit-cardx18;alu-media-card alu-media-card--videox3,25,0,0,0,48
+/solutions/allplan-bulut-hizmetleri,F1 Subpage hero 56px + structured layout,solution,DAHA İYİ BİR GELECEK İNŞA ETMEK İÇİN TASARLANDI,1,0,3,alu-h1x2;jbAHwWx1,alu-media-cardx8;alu-media-card alu-media-card--videox4,13,0,0,0,55
+/solutions/allplan-industry,F1 Subpage hero 56px + structured layout,solution,ALLPLAN,1,1,7,alu-h1x4;alu-h2x1;alu-h3x1;jbAHwWx1,alu-benefit-cardx6;alu-media-cardx9,16,0,0,0,49
+/solutions/architecture,F1 Subpage hero 56px + structured layout,solution,MİMARİ,1,1,4,alu-h1x3;jbAHwWx1,alu-benefit-cardx12;alu-wf-detailx1,14,0,0,0,40
+/solutions/ax3000,F1 Subpage hero 56px + structured layout,solution,AX3000 MEP,1,1,8,alu-h1x4;alu-h2x3;jbAHwWx1,alu-benefit-cardx10;alu-media-cardx3,18,0,0,0,43
+/solutions/ax3000-mekanik-tesisat,F2 Subpage hero 56px + generic sections,solution,AX3000 Mekanik Tesisat,0,0,4,jbAHwWx1;waB2Sqx3,,3,0,0,0,33
+/solutions/ax3000-virtual-reality,F1 Subpage hero 56px + structured layout,solution,AX3000 VIRTUAL REALITY,1,0,7,alu-h1x1;alu-h2x5;jbAHwWx1,alu-media-cardx6,9,0,0,0,41
+/solutions/ax3000-yapi-fizigi,F1 Subpage hero 56px + structured layout,solution,AX3000 Yapı Fiziği,0,0,4,alu-h2x3;jbAHwWx1,,4,0,0,0,33
+/solutions/ax3000/elektrik,F2 Subpage hero 56px + generic sections,solution,AX3000 Elektrik Temel,0,0,3,alu-h3x2;jbAHwWx1,alu-spec-cardx3,1,0,0,0,28
+/solutions/ax3000/havalandirma,F2 Subpage hero 56px + generic sections,solution,AX3000 Havalandırma,0,0,4,alu-h3x3;jbAHwWx1,alu-spec-cardx5,1,0,0,0,30
+/solutions/ax3000/isitma,F2 Subpage hero 56px + generic sections,solution,Isıtma Sistemleri Şantiyede Düzenlenir,0,0,4,alu-h3x3;jbAHwWx1,alu-spec-cardx6,1,0,0,0,30
+/solutions/ax3000/konut-havalandirma,F2 Subpage hero 56px + generic sections,solution,AX3000 Konut Havalandırma,0,0,4,alu-h3x3;jbAHwWx1,alu-spec-cardx3,1,0,0,0,27
+/solutions/ax3000/sihhi-tesisat,F2 Subpage hero 56px + generic sections,solution,AX3000 Sıhhi Tesisat,0,0,5,alu-h3x4;jbAHwWx1,alu-spec-cardx5,1,0,0,0,30
+/solutions/ax3000/sprinkler,F2 Subpage hero 56px + generic sections,solution,AX3000 Sprinkler,0,0,4,alu-h3x3;jbAHwWx1,alu-spec-cardx4,1,0,0,0,27
+/solutions/bimflex,F1 Subpage hero 56px + structured layout,solution,BIMFlex Allplan eklenti paketi,0,0,5,alu-h1x4;jbAHwWx1,alu-benefit-cardx3;alu-media-cardx7;alu-media-card alu-media-card--videox6,14,0,0,0,52
+/solutions/bimx5,F1 Subpage hero 56px + structured layout,solution,Allplan’le BIM modellemesi ve metraj…,0,1,4,alu-h1x2;alu-h2x1;jbAHwWx1,alu-benefit-cardx3;alu-media-card alu-media-card--videox3,5,0,0,0,35
+/solutions/bridge-design,F1 Subpage hero 56px + structured layout,solution,Köprü Mühendisliği,0,1,3,alu-h1x2;jbAHwWx1,alu-benefit-cardx12,13,0,0,0,34
+/solutions/cds-addon,F2 Subpage hero 56px + generic sections,solution,CDS ADD-ON,1,1,3,alu-h3x2;jbAHwWx1,alu-feature-rowx5;alu-feature-row alu-feature-row--reversex4;alu-spec-cardx2,10,0,0,0,34
+/solutions/features-allplan-bridge,F1 Subpage hero 56px + structured layout,solution,Allplan Bridge Özellikleri,0,1,13,alu-h2x12;jbAHwWx1,,8,5,0,0,58
+/solutions/imar-yonetmeligi-bim-eklentisi,F1 Subpage hero 56px + structured layout,solution,DENGELERİ DEĞİŞTİRİN,1,1,5,alu-h1x1;alu-h2x3;jbAHwWx1,alu-media-card alu-media-card--videox8,12,0,0,0,50
+/solutions/infrastructure,F1 Subpage hero 56px + structured layout,solution,ALT YAPI MÜHENDİSLİĞİ,1,1,4,alu-h1x3;jbAHwWx1,alu-benefit-cardx12;alu-wf-detailx1,14,0,0,0,40
+/solutions/mep,F1 Subpage hero 56px + structured layout,solution,MEP ENGINEERING,1,1,4,alu-h1x3;jbAHwWx1,alu-benefit-cardx12;alu-wf-detailx1,14,0,0,0,39
+/solutions/modeling-of-precast-girder-bridges,F1 Subpage hero 56px + structured layout,solution,MODELING OF PRECAST GIRDER BRIDGES,1,0,10,alu-h1x1;alu-h2x8;jbAHwWx1,,9,0,0,0,42
+/solutions/oska,F2 Subpage hero 56px + generic sections,solution,Performansın gücünün kilidi açılıyor,0,1,6,alu-h2x2;alu-h3x3;jbAHwWx1,alu-feature-rowx1;alu-spec-cardx3,3,0,0,0,29
+/solutions/poz-catalog,F1 Subpage hero 56px + structured layout,solution,ALLPLAN POZ KATALOĞU,1,1,2,alu-h2x1;jbAHwWx1,,2,0,0,0,26
+/solutions/precast,F1 Subpage hero 56px + structured layout,solution,PREKAST İMALATI,1,1,3,alu-h1x2;jbAHwWx1,alu-benefit-cardx12,13,0,0,0,35
+/solutions/pythonpart,F1 Subpage hero 56px + structured layout,solution,ALLTO PythonParts,0,1,6,alu-h1x5;jbAHwWx1,alu-media-card alu-media-card--videox23,24,0,0,0,78
+/solutions/rebar-engineering,F1 Subpage hero 56px + structured layout,solution,Bu inovasyona inanamayacaksınız…,0,1,3,alu-h1x2;jbAHwWx1,alu-media-card alu-media-card--videox8,9,0,0,0,40
+/solutions/road-railway,F1 Subpage hero 56px + structured layout,solution,KARAYOLU VE DEMİRYOLU ALTYAPISI,1,1,4,alu-h1x3;jbAHwWx1,alu-benefit-cardx12;alu-wf-detailx1,14,0,0,0,38
+/solutions/scalypso,F6 One-off layout,solution,Scalypso,0,,8,jbAHwWx1;plainx7,,11,0,0,0,26
+/solutions/scalypso/converter,F1 Subpage hero 56px + structured layout,solution,Converter,0,0,3,alu-h2x2;jbAHwWx1,,3,0,0,0,32
+/solutions/scalypso/mobile,F6 One-off layout,solution,Mobile,0,,7,jbAHwWx1;plainx6,,1,0,0,0,21
+/solutions/scalypso/modeler,F6 One-off layout,solution,Modeler,0,,5,jbAHwWx1;plainx4,,1,0,0,0,23
+/solutions/scalypso/videos,F1 Subpage hero 56px + structured layout,solution,Videolar,0,0,2,alu-h1x1;jbAHwWx1,alu-media-card alu-media-card--videox5,6,0,0,0,34
+/solutions/scalypso/viewer,F6 One-off layout,solution,Viewer,0,,4,jbAHwWx1;plainx3,,0,0,0,0,21
+/solutions/site-planning,F1 Subpage hero 56px + structured layout,solution,ŞANTİYE PLANLAMASI,1,1,4,alu-h1x3;jbAHwWx1,alu-benefit-cardx12;alu-wf-detailx1,14,0,0,0,36
+/solutions/steel,F1 Subpage hero 56px + structured layout,solution,ÇELİK DETAYLANDIRMA & İMALAT,1,1,3,alu-h1x2;jbAHwWx1,alu-benefit-cardx9,10,0,0,0,33
+/solutions/structural,F1 Subpage hero 56px + structured layout,solution,STRÜKTÜREL MÜHENDİSLİK,1,1,4,alu-h1x3;jbAHwWx1,alu-benefit-cardx12;alu-wf-detailx1,14,0,0,0,38
+/video-kutuphanesi,F3 CompactPageHero 48px,video playlist,Video Kütüphanesi,0,,3,O6IXvG_bannerTitlex1;O6IXvG_groupTitlex1;jbAHwWx1,,0,0,0,0,44
+/video-kutuphanesi/addon-geometry,F2 Subpage hero 56px + generic sections,video playlist,Allplan Add On Geometry Tools — Eğitim Video Serisi,0,1,3,alu-h1x1;alu-h2x1;jbAHwWx1,,28,0,0,0,42
+/video-kutuphanesi/allplan-reinforcement,F2 Subpage hero 56px + generic sections,video playlist,ALLPLAN for Reinforcement — Eğitim Video Serisi,0,1,3,alu-h1x1;alu-h2x1;jbAHwWx1,,36,0,0,0,45
+/video-kutuphanesi/ax3000,F2 Subpage hero 56px + generic sections,video playlist,AX3000 - MEP & Enerji — Eğitim Video Serisi,0,1,3,alu-h1x1;alu-h2x1;jbAHwWx1,,68,0,0,0,57
+/video-kutuphanesi/bridge-workflow-2022,F2 Subpage hero 56px + generic sections,video playlist,Bridge Workflow 2022 — Eğitim Video Serisi,0,1,3,alu-h1x1;alu-h2x1;jbAHwWx1,,16,0,0,0,35
+/video-kutuphanesi/bridge-workflows,F2 Subpage hero 56px + generic sections,video playlist,Allplan Bridge Workflows — Eğitim Video Serisi,0,1,3,alu-h1x1;alu-h2x1;jbAHwWx1,,30,0,0,0,42
+/video-kutuphanesi/campus-de,F2 Subpage hero 56px + generic sections,video playlist,Campus Tutorials (Deutsch) — Eğitim Video Serisi,0,1,3,alu-h1x1;alu-h2x1;jbAHwWx1,,52,0,0,0,49
+/video-kutuphanesi/campus-en,F2 Subpage hero 56px + generic sections,video playlist,Campus Tutorials (English) — Eğitim Video Serisi,0,1,3,alu-h1x1;alu-h2x1;jbAHwWx1,,52,0,0,0,48
+/video-kutuphanesi/campus-tutorials-2019-2022,F2 Subpage hero 56px + generic sections,video playlist,Allplan Campus Tutorials 2019-2022 — Eğitim Video Serisi,0,1,3,alu-h1x1;alu-h2x1;jbAHwWx1,,52,0,0,0,50
+/video-kutuphanesi/hello-allplan-2024,F2 Subpage hero 56px + generic sections,video playlist,Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları — Eğitim Video ,0,1,3,alu-h1x1;alu-h2x1;jbAHwWx1,,78,0,0,0,63
+/video-kutuphanesi/konut-insaati,F2 Subpage hero 56px + generic sections,video playlist,Konut İnşaatı İş Akışları — Eğitim Video Serisi,0,1,3,alu-h1x1;alu-h2x1;jbAHwWx1,,8,0,0,0,33
+/video-kutuphanesi/otomatik-donati,F2 Subpage hero 56px + generic sections,video playlist,Otomatik Donatı (PythonPart) — Eğitim Video Serisi,0,1,3,alu-h1x1;alu-h2x1;jbAHwWx1,,18,0,0,0,36
+/video-kutuphanesi/quickstart-buildings,F2 Subpage hero 56px + generic sections,video playlist,ALLPLAN QuickStart: Buildings — Eğitim Video Serisi,0,1,3,alu-h1x1;alu-h2x1;jbAHwWx1,,18,0,0,0,38
+/video-kutuphanesi/road-design,F2 Subpage hero 56px + generic sections,video playlist,Allplan Road Design Workflow — Eğitim Video Serisi,0,1,3,alu-h1x1;alu-h2x1;jbAHwWx1,,24,0,0,0,39
+/video-kutuphanesi/sds2-intro,F2 Subpage hero 56px + generic sections,video playlist,SDS2 Detaylandırma — Eğitim Video Serisi,0,1,3,alu-h1x1;alu-h2x1;jbAHwWx1,,4,0,0,0,30

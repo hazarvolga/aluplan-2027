@@ -22,7 +22,7 @@ class PresentationDataContractTests(unittest.TestCase):
         self.assertEqual(len(homepage["heroContent"]["tags"]), 14)
         self.assertEqual(
             [len(group["serviceTitles"]) for group in homepage["serviceGroups"]],
-            [5, 5, 9, 1],
+            [7, 5, 9, 1],
         )
         grouped_titles = [
             title

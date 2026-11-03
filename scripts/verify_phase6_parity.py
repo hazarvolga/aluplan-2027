@@ -21,6 +21,19 @@ llms_route_path = ROOT / "src/app/llms.txt/route.ts"
 sitemap_path = ROOT / "src/app/sitemap.ts"
 robots_path = ROOT / "src/app/robots.ts"
 
+rename_policy = json.loads((ROOT / "tests/fixtures/sitewide_parity_policy.json").read_text(encoding="utf-8"))
+route_renames = rename_policy.get("routeRenames", {})
+route_prefix_renames = rename_policy.get("routePrefixRenames", {})
+removed_routes = rename_policy.get("removedRoutes", {})
+
+
+def renamed_route(route: str) -> str:
+    if route in route_renames:
+        return route_renames[route]
+    for old, new in route_prefix_renames.items():
+        if route == old or route.startswith(old + "/"):
+            return new + route[len(old):]
+    return route
 pages = json.loads(pages_path.read_text(encoding="utf-8"))
 playlists = json.loads(playlists_path.read_text(encoding="utf-8"))
 nav = json.loads(nav_path.read_text(encoding="utf-8"))
@@ -64,8 +77,26 @@ for r in rows:
     elif r["classification"] == "redirect_to_valid_2xx":
         expected_redirects.append((url, r["redirect_target"].replace("https://aluplan.com.tr", "")))
 
-missing_routes = [u for u in expected_200_routes if u not in pages]
-check("All 110 public HTTP 200 routes exist in src/data/pages.json", len(missing_routes) == 0 and len(pages) == 110, f"missing={missing_routes}, count={len(pages)}")
+missing_routes = [u for u in expected_200_routes if u not in removed_routes and renamed_route(u) not in pages]
+check(f"All {110 - len(removed_routes)} public HTTP 200 routes exist in src/data/pages.json (110 in the source, {len(removed_routes)} removed by decision)", len(missing_routes) == 0 and len(pages) == 110 - len(removed_routes), f"missing={missing_routes}, count={len(pages)}")
+
+for src, dst in removed_routes.items():
+    check(
+        f"Removed route keeps a 308 and is no longer published: {src} -> {dst}",
+        f"source: '{src}'," in next_config and src not in pages,
+    )
+
+for src, dst in route_renames.items():
+    check(
+        f"Renamed route keeps a 308 from its old URL: {src} -> {dst}",
+        f"source: '{src}'," in next_config and dst in pages,
+    )
+
+for src, dst in route_prefix_renames.items():
+    check(
+        f"Renamed route tree keeps a 308 from its old URLs: {src}/:path* -> {dst}/:path*",
+        f"source: '{src}/:path*'," in next_config and dst in pages,
+    )
 
 for src, dst in expected_redirects:
     check(f"308 redirect preserved in next.config.mjs: {src} -> {dst}", src in next_config and dst in next_config)
@@ -102,10 +133,10 @@ for route_path, p in pages.items():
         if lnk.get("href") == "/try-free":
             bad_trial_links.append(route_path)
 
-check("100% self-referencing canonicals across all 110 pages", len(bad_canonicals) == 0, str(bad_canonicals[:3]))
-check("100% unique SEO <title> across all 110 pages", len(titles) == len(pages), f"{len(titles)}/{len(pages)}")
-check("100% unique <meta name='description'> across all 110 pages", len(descriptions) == len(pages), f"{len(descriptions)}/{len(pages)}")
-check("100% single <h1> hierarchy across all 110 pages", len(bad_h1) == 0, str(bad_h1))
+check(f"100% self-referencing canonicals across all {len(pages)} pages", len(bad_canonicals) == 0, str(bad_canonicals[:3]))
+check(f"100% unique SEO <title> across all {len(pages)} pages", len(titles) == len(pages), f"{len(titles)}/{len(pages)}")
+check(f"100% unique <meta name='description'> across all {len(pages)} pages", len(descriptions) == len(pages), f"{len(descriptions)}/{len(pages)}")
+check(f"100% single <h1> hierarchy across all {len(pages)} pages", len(bad_h1) == 0, str(bad_h1))
 check("Zero /solutions-v2 (404) parent links in breadcrumbs", len(bad_breadcrumbs) == 0, str(bad_breadcrumbs))
 check("Zero [email protected] obfuscation artifacts in bodyNodes", len(email_obfuscation_leaks) == 0, str(email_obfuscation_leaks))
 check("Zero /try-free (404) links; free trial normalized to allplan.com/trial-or-subscription/", len(bad_trial_links) == 0, str(bad_trial_links))
@@ -153,7 +184,7 @@ check("All 14 video library playlists preserved", len(playlists) == 14, f"count=
 check("All 216 unique videos / 242 playlist entries preserved", len(unique_video_ids) == 216 and total_playlist_entries == 242, f"unique={len(unique_video_ids)}, total={total_playlist_entries}")
 
 # 4. Homepage H01-H08 & Footer Content Parity
-check("Homepage preserves 3 roles, 6 products, 5 solutions, 20 services", len(hp["roles"]) == 3 and len(hp["products"]) == 6 and len(hp["solutions"]) == 5 and len(hp["services"]) == 20)
+check("Homepage preserves 3 roles, 6 products, 5 solutions, 20 source services minus the removed Eğitim card plus 3 added learning cards", len(hp["roles"]) == 3 and len(hp["products"]) == 6 and len(hp["solutions"]) == 5 and len(hp["services"]) == 22)
 check("Homepage preserves 6 package PDF items, BIMFlex visuals, 3 innovation cards", len(hp["packages"]) == 6 and len(hp["bimflex"]["media"]) == 3 and "logo" in hp["bimflex"] and len(hp["innovations"]) == 3)
 check(
     "HomepageView includes all 14 Hero technical tags and direct trial URL",
@@ -190,7 +221,7 @@ for route_path, p in pages.items():
                 missing_page_videos.append((route_path, src))
 
 check(
-    "All generated content image occurrences across 110 pages resolve to existing local files or external URLs",
+    f"All generated content image occurrences across {len(pages)} pages resolve to existing local files or external URLs",
     total_page_images > 0 and len(missing_page_images) == 0,
     f"total={total_page_images}, missing={missing_page_images[:5]}",
 )
@@ -261,9 +292,9 @@ check(
     f"items={len(ref_dir.get('items', []))}, categories={len(ref_dir.get('categories', []))}",
 )
 
-faq_dir = (pages["/solutions-v2/faq"].get("structuredLayout") or {}).get("faqDirectory") or {}
+faq_dir = (pages["/faq"].get("structuredLayout") or {}).get("faqDirectory") or {}
 check(
-    "/solutions-v2/faq preserves all 5 interactive FAQ category tabs and 25 Q&A items",
+    "/faq preserves all 5 interactive FAQ category tabs and 25 Q&A items",
     len(faq_dir.get("categories", [])) == 5 and sum(len(c.get("items", [])) for c in faq_dir.get("categories", [])) == 25,
 )
 

@@ -30,6 +30,7 @@ const routes = evaluate('src/lib/release-2027-routes.ts', (request) => {
 });
 const schema = evaluate('src/lib/schema.ts', (request) => {
   if (request === './site-data') return { ...siteData, getSiteIdentity: () => ({}) };
+  if (request === './share-image') return { getPageShareImage: () => ({ url: '' }) };
   throw new Error(`Unsupported schema import: ${request}`);
 });
 const sitemap = evaluate('src/app/sitemap.ts', (request) => {
@@ -52,7 +53,7 @@ const live = withEnv('1', '0', () => ({
   sitemap: sitemap.default().map((entry) => entry.url),
 }));
 const review = withEnv('1', '1', () => ({
-  robots: routes.buildRelease2027Metadata('/2027/max').robots,
+  robots: routes.buildRelease2027Metadata('/products/allplan-max').robots,
 }));
 const rollback = withEnv('0', '0', () => ({ sitemap: sitemap.default().map((entry) => entry.url) }));
 

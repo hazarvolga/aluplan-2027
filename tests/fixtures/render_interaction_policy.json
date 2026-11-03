@@ -6,7 +6,7 @@
     "/products/allplan-bimplus": {"count": 11, "sha256": "b0fa9bc3663e67b2a3c32ac57490cc97730d6ce6087ca3e959f95a1e29fa1ac6"},
     "/products/precast": {"count": 16, "sha256": "22e52ab82d2aa08e2c8876db430e5c7178e44558ec8689a3bb31a44f2dbf82d7"},
     "/products/precast-detail": {"count": 15, "sha256": "54ac434e0a205111561044e81cf5e7739c462446fd7b39be5a802ddf55f11730"},
-    "/solutions-v2/faq": {"count": 41, "sha256": "65fcdec6cc81c94971ee24b3d4c5ea42012ad64760aa97bb22575cf8077e5a79"},
+    "/faq": {"count": 41, "sha256": "65fcdec6cc81c94971ee24b3d4c5ea42012ad64760aa97bb22575cf8077e5a79"},
     "/solutions-v2/training/quick-start": {"count": 6, "sha256": "b5f06e5421bb2fc6b241427ff7cfddb6d6536a04660ba0d594cfd0a555c3ad82"},
     "/solutions/addons/drive-curve": {"count": 9, "sha256": "ab862dc72ce6260de3065cfc1e451d8be7f22f4794725498876bfb55b424f2ec"},
     "/solutions/addons/sketchup-converter": {"count": 2, "sha256": "8fe1f77b8ffe5f28fcc8b7ad38de91104a2e21ae0bf0dc4bea88d29e452f25fc"},

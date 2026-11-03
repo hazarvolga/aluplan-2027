@@ -6,17 +6,17 @@ Computed from tokens/tokens.json with the WCAG 2.x relative-luminance formula. A
 
 | Foreground | Background | Values | Ratio | Min | Result |
 |---|---|---|---|---|---|
-| text.primary | surface.page | #0A0E27 / #FFFFFF | 19.00 | 4.5 | pass (measured) |
+| text.primary | surface.page | #0A0E27 / #F5F7FA | 17.71 | 4.5 | pass (measured) |
 | text.primary | surface.default | #0A0E27 / #FFFFFF | 19.00 | 4.5 | pass (measured) |
-| text.primary | surface.subtle | #0A0E27 / #F5F7FA | 17.71 | 4.5 | pass (measured) |
+| text.primary | surface.subtle | #0A0E27 / #E6EAF0 | 15.74 | 4.5 | pass (measured) |
 | text.primary | surface.muted | #0A0E27 / #E6EAF0 | 15.74 | 4.5 | pass (measured) |
-| text.secondary | surface.page | #566073 / #FFFFFF | 6.33 | 4.5 | pass (measured) |
+| text.secondary | surface.page | #566073 / #F5F7FA | 5.90 | 4.5 | pass (measured) |
 | text.secondary | surface.default | #566073 / #FFFFFF | 6.33 | 4.5 | pass (measured) |
-| text.secondary | surface.subtle | #566073 / #F5F7FA | 5.90 | 4.5 | pass (measured) |
+| text.secondary | surface.subtle | #566073 / #E6EAF0 | 5.24 | 4.5 | pass (measured) |
 | text.secondary | surface.muted | #566073 / #E6EAF0 | 5.24 | 4.5 | pass (measured) |
-| text.link | surface.page | #2563EB / #FFFFFF | 5.17 | 4.5 | pass (measured) |
-| text.link | surface.default | #2563EB / #FFFFFF | 5.17 | 4.5 | pass (measured) |
-| text.link | surface.subtle | #2563EB / #F5F7FA | 4.82 | 4.5 | pass (measured) |
+| text.link | surface.page | #1D4ED8 / #F5F7FA | 6.24 | 4.5 | pass (measured) |
+| text.link | surface.default | #1D4ED8 / #FFFFFF | 6.70 | 4.5 | pass (measured) |
+| text.link | surface.subtle | #1D4ED8 / #E6EAF0 | 5.55 | 4.5 | pass (measured) |
 | text.linkHover | surface.default | #1E40AF / #FFFFFF | 8.72 | 4.5 | pass (measured) |
 | text.onBrand | surface.brand | #FFFFFF / #0A0E27 | 19.00 | 4.5 | pass (measured) |
 | text.onBrandSecondary | surface.brand | #B8C0CC / #0A0E27 | 10.36 | 4.5 | pass (measured) |
@@ -36,10 +36,10 @@ Computed from tokens/tokens.json with the WCAG 2.x relative-luminance formula. A
 | status.success.fg | surface.default | #067647 / #FFFFFF | 5.69 | 4.5 | pass (measured) |
 | status.warning.fg | surface.default | #B54708 / #FFFFFF | 5.43 | 4.5 | pass (measured) |
 | border.control | surface.default | #6B7588 / #FFFFFF | 4.64 | 3 | pass (measured) |
-| border.control | surface.page | #6B7588 / #FFFFFF | 4.64 | 3 | pass (measured) |
+| border.control | surface.page | #6B7588 / #F5F7FA | 4.32 | 3 | pass (measured) |
 | action.secondary.border | surface.default | #6B7588 / #FFFFFF | 4.64 | 3 | pass (measured) |
 | action.primary.bg | surface.default | #0F766E / #FFFFFF | 5.47 | 3 | pass (measured) |
-| focus.ring | surface.page | #2563EB / #FFFFFF | 5.17 | 3 | pass (measured) |
+| focus.ring | surface.page | #2563EB / #F5F7FA | 4.82 | 3 | pass (measured) |
 | focus.ring | surface.default | #2563EB / #FFFFFF | 5.17 | 3 | pass (measured) |
 | focus.ringOnBrand | surface.brand | #60A5FA / #0A0E27 | 7.47 | 3 | pass (measured) |
 | status.danger.border | surface.default | #B42318 / #FFFFFF | 6.57 | 3 | pass (measured) |
@@ -59,43 +59,43 @@ Computed from tokens/tokens.json with the WCAG 2.x relative-luminance formula. A
 | Foreground | Background | Values | Ratio | Min | Result |
 |---|---|---|---|---|---|
 | text.primary | surface.page | #F5F7FA / #181A1B | 16.27 | 4.5 | pass (measured) |
-| text.primary | surface.default | #F5F7FA / #202324 | 14.74 | 4.5 | pass (measured) |
-| text.primary | surface.subtle | #F5F7FA / #202324 | 14.74 | 4.5 | pass (measured) |
-| text.primary | surface.muted | #F5F7FA / #303436 | 11.72 | 4.5 | pass (measured) |
+| text.primary | surface.default | #F5F7FA / #303436 | 11.72 | 4.5 | pass (measured) |
+| text.primary | surface.subtle | #F5F7FA / #272A2C | 13.46 | 4.5 | pass (measured) |
+| text.primary | surface.muted | #F5F7FA / #414749 | 8.81 | 4.5 | pass (measured) |
 | text.secondary | surface.page | #B8C0CC / #181A1B | 9.52 | 4.5 | pass (measured) |
-| text.secondary | surface.default | #B8C0CC / #202324 | 8.63 | 4.5 | pass (measured) |
-| text.secondary | surface.subtle | #B8C0CC / #202324 | 8.63 | 4.5 | pass (measured) |
-| text.secondary | surface.muted | #B8C0CC / #303436 | 6.86 | 4.5 | pass (measured) |
+| text.secondary | surface.default | #B8C0CC / #303436 | 6.86 | 4.5 | pass (measured) |
+| text.secondary | surface.subtle | #B8C0CC / #272A2C | 7.88 | 4.5 | pass (measured) |
+| text.secondary | surface.muted | #B8C0CC / #414749 | 5.15 | 4.5 | pass (measured) |
 | text.link | surface.page | #60A5FA / #181A1B | 6.87 | 4.5 | pass (measured) |
-| text.link | surface.default | #60A5FA / #202324 | 6.22 | 4.5 | pass (measured) |
-| text.link | surface.subtle | #60A5FA / #202324 | 6.22 | 4.5 | pass (measured) |
-| text.linkHover | surface.default | #93C5FD / #202324 | 8.77 | 4.5 | pass (measured) |
+| text.link | surface.default | #60A5FA / #303436 | 4.95 | 4.5 | pass (measured) |
+| text.link | surface.subtle | #60A5FA / #272A2C | 5.68 | 4.5 | pass (measured) |
+| text.linkHover | surface.default | #93C5FD / #303436 | 6.97 | 4.5 | pass (measured) |
 | text.onBrand | surface.brand | #FFFFFF / #181A1B | 17.46 | 4.5 | pass (measured) |
 | text.onBrandSecondary | surface.brand | #B8C0CC / #181A1B | 9.52 | 4.5 | pass (measured) |
 | action.primary.fg | action.primary.bg | #181A1B / #2DD4BF | 9.38 | 4.5 | pass (measured) |
 | action.primary.fg | action.primary.bgHover | #181A1B / #5EEAD4 | 11.81 | 4.5 | pass (measured) |
 | action.primary.fg | action.primary.bgActive | #181A1B / #5EEAD4 | 11.81 | 4.5 | pass (measured) |
-| action.secondary.fg | surface.default | #F5F7FA / #202324 | 14.74 | 4.5 | pass (measured) |
-| action.secondary.fg | action.secondary.bgHover | #F5F7FA / #303436 | 11.72 | 4.5 | pass (measured) |
-| action.ghost.fg | action.ghost.bgHover | #F5F7FA / #303436 | 11.72 | 4.5 | pass (measured) |
-| accent.fg | surface.default | #2DD4BF / #202324 | 8.50 | 4.5 | pass (measured) |
+| action.secondary.fg | surface.default | #F5F7FA / #303436 | 11.72 | 4.5 | pass (measured) |
+| action.secondary.fg | action.secondary.bgHover | #F5F7FA / #414749 | 8.81 | 4.5 | pass (measured) |
+| action.ghost.fg | action.ghost.bgHover | #F5F7FA / #414749 | 8.81 | 4.5 | pass (measured) |
+| accent.fg | surface.default | #2DD4BF / #303436 | 6.75 | 4.5 | pass (measured) |
 | accent.fg | accent.bg | #2DD4BF / #0B2E2C | 7.83 | 4.5 | pass (measured) |
 | status.info.fg | status.info.bg | #93C5FD / #272A2C | 8.01 | 4.5 | pass (measured) |
 | status.success.fg | status.success.bg | #75E0A7 / #05301F | 8.96 | 4.5 | pass (measured) |
 | status.warning.fg | status.warning.bg | #FEC84B / #3F1A07 | 9.97 | 4.5 | pass (measured) |
 | status.danger.fg | status.danger.bg | #FDA29B / #4A140C | 7.75 | 4.5 | pass (measured) |
-| status.danger.fg | surface.default | #FDA29B / #202324 | 8.15 | 4.5 | pass (measured) |
-| status.success.fg | surface.default | #75E0A7 / #202324 | 9.78 | 4.5 | pass (measured) |
-| status.warning.fg | surface.default | #FEC84B / #202324 | 10.23 | 4.5 | pass (measured) |
-| border.control | surface.default | #6B7588 / #202324 | 3.41 | 3 | pass (measured) |
-| border.control | surface.page | #6B7588 / #181A1B | 3.76 | 3 | pass (measured) |
-| action.secondary.border | surface.default | #6B7588 / #202324 | 3.41 | 3 | pass (measured) |
-| action.primary.bg | surface.default | #2DD4BF / #202324 | 8.50 | 3 | pass (measured) |
+| status.danger.fg | surface.default | #FDA29B / #303436 | 6.48 | 4.5 | pass (measured) |
+| status.success.fg | surface.default | #75E0A7 / #303436 | 7.77 | 4.5 | pass (measured) |
+| status.warning.fg | surface.default | #FEC84B / #303436 | 8.13 | 4.5 | pass (measured) |
+| border.control | surface.default | #8E97A6 / #303436 | 4.27 | 3 | pass (measured) |
+| border.control | surface.page | #8E97A6 / #181A1B | 5.93 | 3 | pass (measured) |
+| action.secondary.border | surface.default | #8E97A6 / #303436 | 4.27 | 3 | pass (measured) |
+| action.primary.bg | surface.default | #2DD4BF / #303436 | 6.75 | 3 | pass (measured) |
 | focus.ring | surface.page | #60A5FA / #181A1B | 6.87 | 3 | pass (measured) |
-| focus.ring | surface.default | #60A5FA / #202324 | 6.22 | 3 | pass (measured) |
+| focus.ring | surface.default | #60A5FA / #303436 | 4.95 | 3 | pass (measured) |
 | focus.ringOnBrand | surface.brand | #60A5FA / #181A1B | 6.87 | 3 | pass (measured) |
-| status.danger.border | surface.default | #FDA29B / #202324 | 8.15 | 3 | pass (measured) |
-| text.disabled | surface.default | #6B7588 / #202324 | 3.41 | — | info: informational: disabled controls are exempt (WCAG 1.4.3); state also conveyed by cursor/aria-disabled |
+| status.danger.border | surface.default | #FDA29B / #303436 | 6.48 | 3 | pass (measured) |
+| text.disabled | surface.default | #6B7588 / #303436 | 2.71 | — | info: informational: disabled controls are exempt (WCAG 1.4.3); state also conveyed by cursor/aria-disabled |
 | action.onBrand.fg | action.onBrand.bgHover | #FFFFFF / #303436 | 12.57 | 4.5 | pass (measured) |
 | text.primary | status.info.bg | #F5F7FA / #272A2C | 13.46 | 4.5 | pass (measured) |
 | text.primary | status.success.bg | #F5F7FA / #05301F | 13.50 | 4.5 | pass (measured) |

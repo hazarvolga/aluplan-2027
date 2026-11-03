@@ -7,7 +7,7 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-TABLE = ROOT / "src/app/2027/compare/ComparisonTable.tsx"
+TABLE = ROOT / "src/app/paket-karsilastirma/ComparisonTable.tsx"
 ARCHITECTURE_HTML = ROOT / ".next/server/app/solutions/architecture.html"
 
 

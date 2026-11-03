@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { getPageData, SITE_ORIGIN } from './site-data';
+import { getPageData } from './site-data';
+import { getPageShareImage } from './share-image';
 
 export function buildPageMetadata(pathname: string): Metadata {
   const page = getPageData(pathname);
@@ -12,6 +13,7 @@ export function buildPageMetadata(pathname: string): Metadata {
   }
 
   const isUtility = page.path === '/health' || page.path === '/search';
+  const shareImage = getPageShareImage(page);
 
   return {
     title: page.title,
@@ -29,20 +31,13 @@ export function buildPageMetadata(pathname: string): Metadata {
       siteName: 'Aluplan Program Sistemleri',
       locale: 'tr_TR',
       type: 'website',
-      images: [
-        {
-          url: `${SITE_ORIGIN}/opengraph-image.jpg`,
-          width: 1200,
-          height: 630,
-          alt: page.h1
-        }
-      ]
+      images: [shareImage]
     },
     twitter: {
       card: 'summary_large_image',
       title: page.title,
       description: page.description,
-      images: [`${SITE_ORIGIN}/opengraph-image.jpg`]
+      images: [shareImage.url]
     }
   };
 }

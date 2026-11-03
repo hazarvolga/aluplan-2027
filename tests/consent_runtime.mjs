@@ -30,6 +30,7 @@ function memoryStorage(initial = {}) {
     values,
     getItem: (key) => (key in values ? values[key] : null),
     setItem: (key, value) => { values[key] = String(value); },
+    removeItem: (key) => { delete values[key]; },
   };
 }
 
@@ -40,6 +41,12 @@ first.consent.writeConsent('accepted');
 const afterAccept = first.consent.readConsent();
 
 const invalid = load(memoryStorage({ 'cookie-consent': 'maybe' })).consent.readConsent();
+
+const clearStorage = memoryStorage();
+const clearing = load(clearStorage);
+clearing.consent.writeConsent('accepted');
+if (clearing.consent.clearConsent) clearing.consent.clearConsent();
+const afterClear = clearing.consent.readConsent();
 
 const throwing = { getItem() { throw new Error('blocked'); }, setItem() { throw new Error('blocked'); } };
 const blocked = load(throwing);
@@ -56,4 +63,6 @@ process.stdout.write(JSON.stringify({
   blockedRead,
   blockedEvents: blocked.events,
   blockedAfterWrite,
+  afterClear,
+  clearEvents: clearing.events,
 }));

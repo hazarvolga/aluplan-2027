@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { getHomepageData, TRIAL_CTA_URL, MAIN_QUOTE_FORM_URL } from '@/lib/site-data';
+import { getHomepageData, TRIAL_CTA_URL, MAIN_QUOTE_FORM_URL } from '@/lib/site-shared';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { ProfessionalServicesSection } from './ProfessionalServicesSection';
 import { HomepageMaxPreviewHero } from './HomepageMaxPreviewHero';
@@ -256,8 +256,8 @@ export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: bool
         </div>
       </section>}
 
-      {/* H06: Professional Services */}
-      {previewMaxHero ? <ProfessionalServicesSection hidePartnerAccess /> : <ProfessionalServicesSection />}
+      {/* H06: Professional Services (the 2027 release lists these on /kaynaklar instead) */}
+      {!previewMaxHero && <ProfessionalServicesSection />}
 
       {/* H07: BIMFlex Spotlight */}
       <section id="bimflex" className="preview-section" aria-labelledby="bimflex-heading">

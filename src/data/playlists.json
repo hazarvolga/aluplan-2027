@@ -1,7 +1,7 @@
 {
   "hello-allplan-2024": {
     "id": "hello-allplan-2024",
-    "url": "/solutions-v2/training/video-library/hello-allplan-2024",
+    "url": "/video-kutuphanesi/hello-allplan-2024",
     "key": "helloAllplan2024Data",
     "title": "Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları",
     "subtitle": "Allplan 2024 ile gelen tüm yeni özellikler ve geliştirmeler.",
@@ -167,7 +167,7 @@
   },
   "road-design": {
     "id": "road-design",
-    "url": "/solutions-v2/training/video-library/road-design",
+    "url": "/video-kutuphanesi/road-design",
     "key": "roadDesignData",
     "title": "Allplan Road Design Workflow",
     "subtitle": "Yol tasarımı iş akışları ve yol modülü eğitim videoları.",
@@ -225,7 +225,7 @@
   },
   "bridge-workflows": {
     "id": "bridge-workflows",
-    "url": "/solutions-v2/training/video-library/bridge-workflows",
+    "url": "/video-kutuphanesi/bridge-workflows",
     "key": "bridgeWorkflowsData",
     "title": "Allplan Bridge Workflows",
     "subtitle": "Köprü tasarımı süreçleri ve BIM entegrasyonu.",
@@ -295,7 +295,7 @@
   },
   "campus-de": {
     "id": "campus-de",
-    "url": "/solutions-v2/training/video-library/campus-de",
+    "url": "/video-kutuphanesi/campus-de",
     "key": "campusDeData",
     "title": "Campus Tutorials (Deutsch)",
     "subtitle": "Öğrenciler için Almanca Allplan eğitim serisi.",
@@ -409,7 +409,7 @@
   },
   "campus-en": {
     "id": "campus-en",
-    "url": "/solutions-v2/training/video-library/campus-en",
+    "url": "/video-kutuphanesi/campus-en",
     "key": "campusEnData",
     "title": "Campus Tutorials (English)",
     "subtitle": "Öğrenciler için İngilizce Allplan eğitim serisi.",
@@ -523,7 +523,7 @@
   },
   "addon-geometry": {
     "id": "addon-geometry",
-    "url": "/solutions-v2/training/video-library/addon-geometry",
+    "url": "/video-kutuphanesi/addon-geometry",
     "key": "addonGeometryData",
     "title": "Allplan Add On Geometry Tools",
     "subtitle": "Topografik ve geometrik düzenleme araçları eğitimi.",
@@ -589,7 +589,7 @@
   },
   "ax3000": {
     "id": "ax3000",
-    "url": "/solutions-v2/training/video-library/ax3000",
+    "url": "/video-kutuphanesi/ax3000",
     "key": "ax3000Data",
     "title": "AX3000 - MEP & Enerji",
     "subtitle": "Mekanik, Elektrik, Tesisat ve Enerji Kimlik Belgesi (EKB) eğitimleri.",
@@ -735,7 +735,7 @@
   },
   "sds2-intro": {
     "id": "sds2-intro",
-    "url": "/solutions-v2/training/video-library/sds2-intro",
+    "url": "/video-kutuphanesi/sds2-intro",
     "key": "sds2Data",
     "title": "SDS2 Detaylandırma",
     "subtitle": "SDS2 ürün tanıtımı ve lansman videoları.",
@@ -753,7 +753,7 @@
   },
   "konut-insaati": {
     "id": "konut-insaati",
-    "url": "/solutions-v2/training/video-library/konut-insaati",
+    "url": "/video-kutuphanesi/konut-insaati",
     "key": "konutInsaatiData",
     "title": "Konut İnşaatı İş Akışları",
     "subtitle": "Konut proje teslimi, tasarım ve şantiye planlama süreçleri.",
@@ -779,7 +779,7 @@
   },
   "bridge-workflow-2022": {
     "id": "bridge-workflow-2022",
-    "url": "/solutions-v2/training/video-library/bridge-workflow-2022",
+    "url": "/video-kutuphanesi/bridge-workflow-2022",
     "key": "bridgeWorkflow2022Data",
     "title": "Bridge Workflow 2022",
     "subtitle": "2022 Köprü tasarımı ve iş akışları eğitim serisi.",
@@ -821,7 +821,7 @@
   },
   "otomatik-donati": {
     "id": "otomatik-donati",
-    "url": "/solutions-v2/training/video-library/otomatik-donati",
+    "url": "/video-kutuphanesi/otomatik-donati",
     "key": "otomatikDonatiData",
     "title": "Otomatik Donatı (PythonPart)",
     "subtitle": "Otomatik donatılandırma ve PythonPart araçları kullanımı.",
@@ -867,7 +867,7 @@
   },
   "quickstart-buildings": {
     "id": "quickstart-buildings",
-    "url": "/solutions-v2/training/video-library/quickstart-buildings",
+    "url": "/video-kutuphanesi/quickstart-buildings",
     "key": "quickStartBuildingsData",
     "title": "ALLPLAN QuickStart: Buildings",
     "subtitle": "Allplan ile bina modellemeye hızlı başlangıç rehberi.",
@@ -913,7 +913,7 @@
   },
   "allplan-reinforcement": {
     "id": "allplan-reinforcement",
-    "url": "/solutions-v2/training/video-library/allplan-reinforcement",
+    "url": "/video-kutuphanesi/allplan-reinforcement",
     "key": "allplanReinforcementData",
     "title": "ALLPLAN for Reinforcement",
     "subtitle": "Betonarme detaylandırma, donatı modelleme ve raporlama eğitimleri.",
@@ -995,7 +995,7 @@
   },
   "campus-tutorials-2019-2022": {
     "id": "campus-tutorials-2019-2022",
-    "url": "/solutions-v2/training/video-library/campus-tutorials-2019-2022",
+    "url": "/video-kutuphanesi/campus-tutorials-2019-2022",
     "key": "campusDeData",
     "title": "Allplan Campus Tutorials 2019-2022",
     "subtitle": "Öğrenciler için kapsamlı Almanca eğitim serisi (2019-2022).",

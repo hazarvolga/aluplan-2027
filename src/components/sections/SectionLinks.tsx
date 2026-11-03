@@ -34,6 +34,7 @@ export function SectionActions({ actions, currentPath }: SectionActionsProps) {
             className="alu-button alu-button--secondary alu-button--md"
           >
             <span>{action.label}</span>
+            <span className="alu-visually-hidden"> (yeni sekmede açılır)</span>
             <AluIcon name="external-link" size="sm" />
           </a>
         ) : (

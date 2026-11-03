@@ -154,3 +154,65 @@ Sonuçları:
   çeviri yapılmayacak; üretici diliyle ilgilenilmez.
 - Bu karar diğer dillerdeki ücret/plan/izin sorularını kapatmaz; yalnız
   envanter ve üretim dil kapsamını sınırlar (EN + TR).
+
+## 03.11.2026 — Yayın öncesi açık maddeler için kararlar
+
+Kullanıcı, yayın öncesi kalan maddeler listesinde aşağıdaki kararları verdi:
+
+- **B2 (`/2027/features` H1):** Sayfa başlığı ve giriş metni, kullanıcının verdiği üretici metninin Türkçesi olur. Üst satır: “2027 yenilikleri: Allplan, Allplan Civil, FRILO, SCIA, SDS2”; H1: “Her mühendislik iş akışı için kapsamlı çözümler”. Ana sayfa H1'iyle çakışma, üst satır H1'e alınarak giderilir (uygulama notu doğrulama belgesinde).
+- **B3 (BIMFlex özel video):** Kullanıcı videonun bulunduğu sayfayı istedi; karar sonraya kaldı.
+- **B4:** “Youtube Allplan Global” kartının başlığı bağlandığı kanala uygun hale getirilir.
+- **B5:** `<main>` bağlantı farklarının D bölümü kullanıcıyla tek tek gözden geçirilecek.
+- **B6:** “Sürümleri Görüntüle” hedefi (`allplan.com/system/releasenotes/`) korunur.
+- **B7:** Eski paket karşılaştırma PDF'leri `/2027/compare` sayfasına kalıcı yönlendirilir.
+- **C1 (doğrulanmamış iddialar):** Kullanıcı üreticiden bilgi alacak; iddialar şimdilik değiştirilmez. **Açık takip maddesi.**
+- **C2:** Projede üretilen görseller (AI üretimi hero aileleri, OG, Max posteri) kullanıcıya/projeye aittir; lisans kaydı buna göre tamamlanır.
+- **C3:** Çerez tercihlerini sonradan değiştirmek için arayüz eklenir.
+- **D1:** Ürün sayfalarının yapılandırılmış verisi ve paylaşım etiketleri SEO uyumlu hale getirilir.
+- **D2, D4, D6, D7, D8:** Erişilebilir adlar, JS paketi, indirme bağlantısı adları, AX3000 doküman başlıkları ve harita/türev betiği düzeltmeleri yürütücüye bırakıldı.
+- **E1–E3:** Ortak bileşen taşıması, premium hareket ve mobil video sonraki fazlar olarak kabul edildi.
+- **Yeni sayfa (Kaynaklar):** Ana menüdeki “Kaynaklar” bağlantısının gittiği ana sayfa bölümü (“Profesyonel Hizmetler ve Destek Merkezi”, 19 kaynak) şimdilik kalır. Aynı bilgileri daha derli toplu sunan yeni bir sayfa kullanıcıyla birlikte tasarlanacak; kullanıcı onayından sonra bölüm kaldırılıp menü yeni sayfaya bağlanacak.
+
+## 03.11.2026 — Rota adları, menü ve AX3000 dokümanları
+
+- **Paket karşılaştırma:** 2027 karşılaştırma sayfası `/paket-karsilastirma` adresinde yayımlanır; eski içerik bu adreste sunulmaz. `/2027/compare` kalıcı olarak (308) buraya yönlenir; eski paket karşılaştırma PDF yönlendirmeleri de buraya gider. 2027 sürümü kapalıyken (geri alma) bu adres mevcut sayfayı sunmaya devam eder.
+- **SSS:** `/solutions-v2/faq` sayfası `/faq` adresine taşındı; eski adres kalıcı (308) yönlenir. Ana menüde Hakkımızda ile İletişim arasına "S.S.S." eklendi (masaüstü ve mobil).
+- **AX3000 dokümanları:** `/products/ax3000/dokumanlar` sayfasında hero altındaki iki tanıtım kartı kaldırıldı. Dokümanlar sayfasına bağlantısı olmayan AX3000 Yapı Fiziği ve Virtual Reality sayfalarına bağlantı eklendi.
+- **Kaynaklar sayfası:** Tasarım onaylandı ve `/kaynaklar` adresinde yayımlandı. Ana menüdeki "Kaynaklar" bu sayfaya bağlandı; ana sayfadaki "Profesyonel Hizmetler ve Destek Merkezi" bölümü 2027 sürümünde kaldırıldı (geri almada eski hâli döner). Sayfa adresi `/kaynaklar` benim önerimdir; farklı bir adres istenirse 308 yönlendirmesiyle değiştirilir.
+- **Video kütüphanesi adresi:** SEO için `/solutions-v2/training/video-library` yerine `/video-kutuphanesi` kullanılır; altındaki oynatma listeleri `/video-kutuphanesi/<liste>` olur. Eski adresler kalıcı (308) yönlenir. Slug `/video-kutuphanesi` benim önerimdir; farklı bir ad istenirse aynı yöntemle değiştirilir.
+- **Kaynaklar yeni kartlar:** "Öğren ve yardım al" grubuna "Video Kütüphanesi" ve "Eğitim Merkezleri" kartları eklendi; Video Kütüphanesi `/video-kutuphanesi`'ne gider, Eğitim Merkezleri'nin bağlantısı ve iki kartın metinleri kullanıcıdan gelecek.
+- **Eğitim sayfaları:** `/solutions-v2/training` (eğitim ana sayfası) tamamen kaldırıldı ve `/kaynaklar`'a yönlendirilir; alt sayfaları (online, classroom, events, individual, e-learning, quick-start) yerinde bırakıldı. Kaynaklar'daki "Eğitim" kartı kaldırıldı.
+- **Eğitim Merkezlerimiz:** Yeni sayfa `/egitim-merkezlerimiz` adresinde; içerik eski eğitim sayfasındaki "Eğitim İş Ortaklarımız" bölümüdür. LGN Proje Akademi e-postası `info@lgnprojeakademi.com` (kullanıcı teyidi).
+- **Kaydedilmiş Webinarlar:** Kaynaklar'ın "Öğren ve yardım al" grubuna kart eklendi; içerik `/solutions-v2/training/webinar` sayfasından yeni `/kaydedilmis-webinarlar` sayfasına taşındı ve eski sayfa kaldırıldı (adresi yeni sayfaya yönlenir). Sayfa adresi `/kaydedilmis-webinarlar` benim önerimdir.
+- **Online eğitim sayfası:** `/solutions-v2/training/online` tamamen kaldırıldı; adresi `/kaynaklar`'a yönlenir. Webinar kartları için ortak medya kartı bileşeni kullanılır; kayıt bağlantıları (YouTube) kullanıcıdan istenecek.
+- **Webinar kayıtları:** Kayıtlar Allplan Türkiye YouTube kanalından bağlandı; kanalda olup kartlarda bulunmayan webinarlar (Allplan Bridge 2022 Webinar, BIMX5 Kurum Rapor Eklentisi) eklendi. `/solutions-v2/training/classroom` sayfası kaldırıldı ve `/kaynaklar`'a yönlenir.
+- **Bim1Sohbet kayıtları:** `@bim1sohbet65` kanalındaki Melih Dinekli yayınları webinar arşivine eklendi; "BIMX5 Nedir" kaydı Bimfili kartıyla eşleştirildi (kullanıcı teyidi).
+- **Eğitim alt sayfaları:** events, individual, e-learning ve quick-start sayfaları tamamen kaldırıldı; adresleri `/kaynaklar`'a yönlenir (kullanıcı kararı). Teknik borç temizliği için en hızlı kazanç sırası bana bırakıldı.
+
+## 03.11.2026 — Webinar arşivi, LGN ve AX3000 kararları
+
+- SCIA Engineer (So86QONybGA) ve Bridge Conference 2026 (uXg-6lUJ494) videoları webinar olmasa da Kaydedilmiş Webinarlar arşivine eklenir.
+- LGN Proje Akademi logosuz kalır.
+- AX3000 Mekanik Tesisat: "Modüller" başlığı gösterilmez, yalnız kartlar kalır.
+- C1 ve B3 maddeleri bekler; B5 kullanıcıyla birlikte gözden geçirilecek.
+
+## 03.11.2026 — Segment, dönüşüm, form, üretici izni ve slogan kararları
+
+- **Segment önceliği (soru 1):** Mimar, mühendis ve prekast arasında öncelik ayrımı yok; üçü eşit ağırlıktadır.
+- **Birincil dönüşüm (soru 2):** Sitenin tek başlıca hedefi TEKLİF.
+- **Form altyapısı (soru 3):** Microsoft Forms ile yayına çıkılır.
+- **Üretici izinleri (soru 5):** Kullanıcı kuralları bilerek çalıştıklarını belirtti; yayın engeli yok.
+- **Slogan:** Aluplan'ın kendi sloganları yerine Allplan'ın 2027 lansman sloganları kullanılır. Kaynak: `Allplan 2027 Marketing Materials/*/Web Pages` ve `Messaging` (Git dışı). Marka kılavuzundaki üç slogan adayı kullanılmaz.
+
+- **Rebar ve Parametric:** Pazarlama klasöründeki edition web page belgelerine göre iki yeni sayfa eklenir (`/2027/rebar`, `/2027/parametric`); sıra: Rebar ve Parametric, sonra Bimplus, SDS2, FRILO Geotechnics, Allplan edition sayfaları, ana sayfa slaytları.
+
+- **Rebar ve Parametric adresleri:** `/products/allplan-rebar` ve `/products/allplan-parametric` (diğer sürüm sayfalarıyla tutarlı olsun diye `/2027/` altından taşındı).
+- **Sayısal iddialar:** Üretici belgelerindeki sayısal iddialar (ör. "5× faster", "20–50%", "up to 50% faster") doğrudur ve kullanılabilir.
+- **SDS2 ana banner görseli:** Kullanıcı uygun görseli üretip verecek; o zamana kadar mevcut üretilmiş hero ailesi görseli yer tutucu olarak kalır.
+
+## 03.11.2026 — Rota ailesi, menü ve Allplan 2027 yenilik sayfaları
+
+- Ürün sayfaları `/products/` altında toplanır: Max (`/products/allplan-max`), FRILO (`/products/frilo`), SCIA (`/products/scia`), Rebar, Parametric. Civil'in 2027 sayfası `/products/civil` ile çakıştığı için `/2027/civil` kalır.
+- Rebar ve Parametric ürünler menüsündeki ALLPLAN grubuna eklenir (yalnızca 2027 sürümü açıkken).
+- Allplan Basic, Concept, Professional ve Ultimate sayfaları birebir korunur; hero altına 2027 yeniliklerine giden bir bant eklenir ve her sürüm için ayrı 2027 yenilik sayfası (`/2027/allplan-*`) yapılır. Aynı bant Civil için de uygulanır.
+- Slogan kararı uygulaması: ana sayfa kartlarında Allplan'ın 2027 slayt başlıkları kullanılır.

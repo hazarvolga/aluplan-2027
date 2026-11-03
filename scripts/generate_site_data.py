@@ -701,6 +701,9 @@ def build_breadcrumbs(route_path: str, page_h1: str) -> list:
     if route_path == "/":
         return [{"label": "Ana Sayfa", "href": "/"}]
     crumbs = [{"label": "Ana Sayfa", "href": "/"}]
+    if route_path == "/solutions-v2/faq":
+        crumbs.append({"label": "Sıkça Sorulan Sorular", "href": route_path})
+        return crumbs
     if route_path.startswith("/products/ax3000/"):
         crumbs.extend([
             {"label": "Ürünler", "href": "/products"},
@@ -743,16 +746,12 @@ def build_breadcrumbs(route_path: str, page_h1: str) -> list:
         return crumbs
     if route_path.startswith("/solutions-v2/training/video-library/"):
         crumbs.extend([
-            {"label": "Eğitim", "href": "/solutions-v2/training"},
             {"label": "Video Kütüphanesi", "href": "/solutions-v2/training/video-library"},
             {"label": page_h1, "href": route_path},
         ])
         return crumbs
     if route_path.startswith("/solutions-v2/training/"):
-        crumbs.extend([
-            {"label": "Eğitim", "href": "/solutions-v2/training"},
-            {"label": page_h1, "href": route_path},
-        ])
+        crumbs.append({"label": page_h1, "href": route_path})
         return crumbs
     if route_path.startswith("/solutions-v2/connect-license/"):
         crumbs.extend([
@@ -780,8 +779,6 @@ def determine_schema_type(route_path: str) -> str:
         return "FAQPage"
     if route_path.startswith("/solutions-v2/training/video-library"):
         return "VideoGallery"
-    if route_path.startswith("/solutions-v2/training"):
-        return "Service"
     if route_path in {"/products", "/solutions", "/solutions/addons", "/solutions-v2/addons"}:
         return "CollectionPage"
     if route_path.startswith("/products/") and route_path != "/products/ax3000/dokumanlar":
@@ -1132,6 +1129,50 @@ def update_release_notes_links(value):
 
 update_release_notes_links(pages_data)
 
+# Source routes that the 2027 site publishes under a different slug. Extraction and per-route
+# policy above still use the source route; the rename is applied to the finished data only.
+ROUTE_RENAMES = {"/solutions-v2/faq": "/faq"}
+# A prefix rename moves a page and everything below it (the video library hub and its playlists).
+ROUTE_PREFIX_RENAMES = {"/solutions-v2/training/video-library": "/video-kutuphanesi"}
+SITE_URL_ORIGIN = "https://aluplan.com.tr"
+
+
+def rename_route_value(value: str) -> str:
+    for prefix in ("", SITE_URL_ORIGIN):
+        for old, new in ROUTE_RENAMES.items():
+            if value == prefix + old or value.startswith((prefix + old + "#", prefix + old + "?")):
+                return prefix + new + value[len(prefix + old):]
+        for old, new in ROUTE_PREFIX_RENAMES.items():
+            if value == prefix + old or value.startswith((prefix + old + "/", prefix + old + "#", prefix + old + "?")):
+                return prefix + new + value[len(prefix + old):]
+    return value
+
+
+def rename_routes(value):
+    if isinstance(value, dict):
+        return {rename_route_value(key): rename_routes(child) for key, child in value.items()}
+    if isinstance(value, list):
+        return [rename_routes(child) for child in value]
+    if isinstance(value, str):
+        return rename_route_value(value)
+    return value
+
+
+pages_data = rename_routes(pages_data)
+
+# Pages the 2027 site no longer publishes; their URLs redirect (see next.config.mjs).
+REMOVED_ROUTES = (
+    "/solutions-v2/training",
+    "/solutions-v2/training/webinar",
+    "/solutions-v2/training/online",
+    "/solutions-v2/training/classroom",
+    "/solutions-v2/training/events",
+    "/solutions-v2/training/individual",
+    "/solutions-v2/training/e-learning",
+    "/solutions-v2/training/quick-start",
+)
+pages_data = {path: page for path, page in pages_data.items() if path not in REMOVED_ROUTES}
+
 data_dir = ROOT / "src/data"
 data_dir.mkdir(parents=True, exist_ok=True)
 
@@ -1139,7 +1180,7 @@ with open(data_dir / "pages.json", "w", encoding="utf-8") as f:
     json.dump(pages_data, f, ensure_ascii=False, indent=2)
 
 with open(data_dir / "playlists.json", "w", encoding="utf-8") as f:
-    json.dump(playlist_by_id, f, ensure_ascii=False, indent=2)
+    json.dump(rename_routes(playlist_by_id), f, ensure_ascii=False, indent=2)
 
 site_identity = {
     "name": "Aluplan Program Sistemleri",
@@ -1192,6 +1233,8 @@ navigation_data = {
                 {"name": "ALLPLAN Concept", "href": "/products/allplan-concept"},
                 {"name": "ALLPLAN Professional", "href": "/products/allplan-professional"},
                 {"name": "ALLPLAN Ultimate", "href": "/products/allplan-ultimate"},
+                {"name": "ALLPLAN Rebar", "href": "/products/allplan-rebar", "releaseOnly": True},
+                {"name": "ALLPLAN Parametric", "href": "/products/allplan-parametric", "releaseOnly": True},
                 {"name": "ALLPLAN Cloud Services", "href": "/products/allplan-cloud-services"},
                 {"name": "CIVIL", "href": "/products/civil"},
                 {"name": "PRECAST", "href": "/products/precast"},
@@ -1242,12 +1285,6 @@ navigation_data = {
             ],
         }
         for group in solution_directory["groups"]
-    ],
-    "directLinks": [
-        {"name": "Kaynaklar", "href": "/#professional-services"},
-        {"name": "Referanslar", "href": "/references"},
-        {"name": "Hakkımızda", "href": "/about"},
-        {"name": "İletişim", "href": "/contact"},
     ],
     "footer": {
         "description": "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri.",
@@ -1370,29 +1407,66 @@ for s in homepage_data.get("services", []):
     if "aluplan.net.tr" in s.get("href", "").lower() or "allplan.net.tr" in s.get("href", "").lower():
         s["href"] = "https://allplan.net.tr/tr"
 
+# 2027 additions to the learning group; the source homepage does not carry them.
+# Copy and destinations are provisional until the user supplies the final ones.
+ADDED_SERVICES = [
+    {
+        "title": "Video Kütüphanesi",
+        "description": "ALLPLAN eğitim videolarını ve oynatma listelerini izleyin.",
+        "status": "active",
+        "href": "/video-kutuphanesi",
+        "cta": "İzle",
+    },
+    {
+        "title": "Kaydedilmiş Webinarlar",
+        "description": "Kaçırdığınız veya tekrar izlemek istediğiniz webinarlarımıza buradan ulaşabilirsiniz.",
+        "status": "active",
+        "href": "/kaydedilmis-webinarlar",
+        "cta": "İncele",
+    },
+    {
+        "title": "Eğitim Merkezleri",
+        "description": "Eğitim merkezlerimiz ve eğitim olanakları hakkında bilgi alın.",
+        "status": "active",
+        "href": "/egitim-merkezlerimiz",
+        "cta": "İncele",
+    },
+]
+REMOVED_SERVICES = ("Eğitim",)
+homepage_data["services"] = [
+    *(service for service in homepage_data.get("services", []) if service["title"] not in REMOVED_SERVICES),
+    *ADDED_SERVICES,
+]
+
 SERVICE_ICONS = {
-    "Eğitim": "graduation-cap", "Teknik Destek": "life-buoy", "Destek Platformu": "life-buoy",
+    "Teknik Destek": "life-buoy", "Destek Platformu": "life-buoy",
     "Danışmanlık": "users", "Sertifika": "award", "Download": "download", "Connect: Giriş": "key",
     "Admin Lisans : Lisans Yöneticisi Bilgi Formu": "shield", "CodeMeter WebDepot": "key",
     "Deklarasyon Formu": "file-text", "ALLPLAN FAQ": "circle-help", "Blog Global": "globe",
     "Canlı Webinarlar": "video", "BIM Rehberi": "book-open", "OPENBIM": "boxes",
     "Sistem Gereksinimleri": "cpu", "Tüm Gereksinimler": "layers", "Sürüm Notları": "sparkles",
     "IFC Export El Kitabı": "file-text", "Partner": "users",
+    "Video Kütüphanesi": "circle-play", "Kaydedilmiş Webinarlar": "video", "Eğitim Merkezleri": "map-pin",
 }
 for service in homepage_data.get("services", []):
     service["icon"] = SERVICE_ICONS.get(service["title"], "layers")
 
 homepage_data["serviceGroups"] = [
-    {"title": "Öğren ve yardım al", "serviceTitles": ["Eğitim", "Teknik Destek", "Destek Platformu", "Danışmanlık", "Sertifika"]},
+    {"title": "Öğren ve yardım al", "serviceTitles": ["Video Kütüphanesi", "Kaydedilmiş Webinarlar", "Eğitim Merkezleri", "Teknik Destek", "Destek Platformu", "Danışmanlık", "Sertifika"]},
     {"title": "Yazılım ve lisans işlemleri", "serviceTitles": ["Download", "Connect: Giriş", "Admin Lisans : Lisans Yöneticisi Bilgi Formu", "CodeMeter WebDepot", "Deklarasyon Formu"]},
     {"title": "Bilgi ve güncellemeler", "serviceTitles": ["ALLPLAN FAQ", "Blog Global", "Canlı Webinarlar", "BIM Rehberi", "OPENBIM", "Sistem Gereksinimleri", "Tüm Gereksinimler", "Sürüm Notları", "IFC Export El Kitabı"]},
     {"title": "Partner erişimi", "serviceTitles": ["Partner"]},
 ]
 
 with open(data_dir / "homepage.json", "w", encoding="utf-8") as f:
-    json.dump(homepage_data, f, ensure_ascii=False, indent=2)
+    json.dump(rename_routes(homepage_data), f, ensure_ascii=False, indent=2)
 
 video_library_data = {
+    "hero": {
+        "kicker": "GÖRSEL EĞİTİM",
+        "title": "Video Kütüphanesi",
+        "lead": "İhtiyacınız olan bilgiye görsel olarak ulaşın.",
+    },
     "kicker": "GÖRSEL EĞİTİM · VİDEO KÜTÜPHANESİ",
     "title": "Önerilen Oynatma Listeleri ve Kanallar",
     "description": "Sizin için derlediğimiz en popüler ve faydalı video kaynak liste ve kanalları.",
@@ -1406,7 +1480,7 @@ video_library_data = {
     "items": [
         {"title": "Allplan 2026", "description": "Allplan 2026 sürümü için hazırlanmış kapsamlı eğitim videoları ve yenilikler.", "url": "https://youtube.com/playlist?list=PLowC-ZFUywGMotfHSyzqoNZCQYWl_6G1x&si=BSEJvgjsQWgbIwVe"},
         {"title": "Youtube Allplan English", "description": "Allplan global İngilizce içerikleri, uluslararası örnekler ve eğitimler.", "url": "https://www.youtube.com/@ALLPLANEnglish"},
-        {"title": "Youtube Allplan Global", "description": "Dünya genelinden Allplan kullanıcı hikayeleri ve küresel etkinlikler.", "url": "https://www.youtube.com/c/AllplanInternational"},
+        {"title": "ALLPLAN YouTube Kanalı", "description": "Dünya genelinden Allplan kullanıcı hikayeleri ve küresel etkinlikler.", "url": "https://www.youtube.com/c/AllplanInternational"},
         {"title": "Youtube Allplan Precast", "description": "Prekast beton tasarımı ve üretimi üzerine özelleşmiş Almanca/İngilizce içerikler.", "url": "https://www.youtube.com/c/AllplanPrecast"},
         {"title": "Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları", "description": "Allplan 2024 sürümü ile gelen tüm yeniliklerin Türkçe anlatımı.", "url": "/solutions-v2/training/video-library/hello-allplan-2024"},
         {"title": "Allplan Add On Geometry Tools", "description": "Topografik ve geometrik düzenleme araçları, arazi modelleme eğitimleri.", "url": "/solutions-v2/training/video-library/addon-geometry"},
@@ -1429,7 +1503,7 @@ video_library_data = {
     ],
 }
 with open(data_dir / "video-library.json", "w", encoding="utf-8") as f:
-    json.dump(video_library_data, f, ensure_ascii=False, indent=2)
+    json.dump(rename_routes(video_library_data), f, ensure_ascii=False, indent=2)
 
 # Build search-index.json
 search_entries = [
@@ -1454,5 +1528,5 @@ if SOURCE_AVAILABLE:
 
 print(f"Generated {len(pages_data)} routes in src/data/pages.json")
 print(f"Generated {len(playlist_by_id)} playlists in src/data/playlists.json")
-print(f"Unique titles: {len(used_titles)} / {len(pages_data)}")
-print(f"Unique descriptions: {len(used_descriptions)} / {len(pages_data)}")
+print(f"Unique titles: {len({page['title'] for page in pages_data.values()})} / {len(pages_data)}")
+print(f"Unique descriptions: {len({page['description'] for page in pages_data.values()})} / {len(pages_data)}")

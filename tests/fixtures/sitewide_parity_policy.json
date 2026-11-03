@@ -1,5 +1,8 @@
 {
   "defaultEvidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence",
+  "routeRenames": {"/solutions-v2/faq": "/faq"},
+  "routePrefixRenames": {"/solutions-v2/training/video-library": "/video-kutuphanesi"},
+  "removedRoutes": {"/solutions-v2/training": "/kaynaklar", "/solutions-v2/training/webinar": "/kaydedilmis-webinarlar", "/solutions-v2/training/online": "/kaynaklar", "/solutions-v2/training/classroom": "/kaynaklar", "/solutions-v2/training/events": "/kaynaklar", "/solutions-v2/training/individual": "/kaynaklar", "/solutions-v2/training/e-learning": "/kaynaklar", "/solutions-v2/training/quick-start": "/kaynaklar"},
   "excludedRoutes": [
     {
       "route": "/hero-3d",
@@ -262,7 +265,7 @@
       "reason": "Civil introduction video is preserved from the 2026 source implementation"
     },
     {
-      "route": "/solutions-v2/faq",
+      "route": "/faq",
       "dimension": "structuredUrl",
       "source": "",
       "generated": "https://www.allplan.com/product-lifecycle/",
@@ -351,98 +354,98 @@
       "reason": "Late source H1 is promoted before preceding H2 headings for semantic heading order"
     },
     {
-      "route": "/solutions-v2/training/video-library/addon-geometry",
+      "route": "/video-kutuphanesi/addon-geometry",
       "dimension": "h1",
       "source": "Allplan Add On Geometry Tools",
       "generated": "Allplan Add On Geometry Tools — Eğitim Video Serisi",
       "reason": "Approved playlist detail title pattern"
     },
     {
-      "route": "/solutions-v2/training/video-library/allplan-reinforcement",
+      "route": "/video-kutuphanesi/allplan-reinforcement",
       "dimension": "h1",
       "source": "ALLPLAN for Reinforcement",
       "generated": "ALLPLAN for Reinforcement — Eğitim Video Serisi",
       "reason": "Approved playlist detail title pattern"
     },
     {
-      "route": "/solutions-v2/training/video-library/ax3000",
+      "route": "/video-kutuphanesi/ax3000",
       "dimension": "h1",
       "source": "AX3000 - MEP & Enerji",
       "generated": "AX3000 - MEP & Enerji — Eğitim Video Serisi",
       "reason": "Approved playlist detail title pattern"
     },
     {
-      "route": "/solutions-v2/training/video-library/bridge-workflow-2022",
+      "route": "/video-kutuphanesi/bridge-workflow-2022",
       "dimension": "h1",
       "source": "Bridge Workflow 2022",
       "generated": "Bridge Workflow 2022 — Eğitim Video Serisi",
       "reason": "Approved playlist detail title pattern"
     },
     {
-      "route": "/solutions-v2/training/video-library/bridge-workflows",
+      "route": "/video-kutuphanesi/bridge-workflows",
       "dimension": "h1",
       "source": "Allplan Bridge Workflows",
       "generated": "Allplan Bridge Workflows — Eğitim Video Serisi",
       "reason": "Approved playlist detail title pattern"
     },
     {
-      "route": "/solutions-v2/training/video-library/campus-de",
+      "route": "/video-kutuphanesi/campus-de",
       "dimension": "h1",
       "source": "Campus Tutorials (Deutsch)",
       "generated": "Campus Tutorials (Deutsch) — Eğitim Video Serisi",
       "reason": "Approved playlist detail title pattern"
     },
     {
-      "route": "/solutions-v2/training/video-library/campus-en",
+      "route": "/video-kutuphanesi/campus-en",
       "dimension": "h1",
       "source": "Campus Tutorials (English)",
       "generated": "Campus Tutorials (English) — Eğitim Video Serisi",
       "reason": "Approved playlist detail title pattern"
     },
     {
-      "route": "/solutions-v2/training/video-library/campus-tutorials-2019-2022",
+      "route": "/video-kutuphanesi/campus-tutorials-2019-2022",
       "dimension": "h1",
       "source": "Allplan Campus Tutorials 2019-2022",
       "generated": "Allplan Campus Tutorials 2019-2022 — Eğitim Video Serisi",
       "reason": "Approved playlist detail title pattern"
     },
     {
-      "route": "/solutions-v2/training/video-library/hello-allplan-2024",
+      "route": "/video-kutuphanesi/hello-allplan-2024",
       "dimension": "h1",
       "source": "Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları",
       "generated": "Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları — Eğitim Video Serisi",
       "reason": "Approved playlist detail title pattern"
     },
     {
-      "route": "/solutions-v2/training/video-library/konut-insaati",
+      "route": "/video-kutuphanesi/konut-insaati",
       "dimension": "h1",
       "source": "Konut İnşaatı İş Akışları",
       "generated": "Konut İnşaatı İş Akışları — Eğitim Video Serisi",
       "reason": "Approved playlist detail title pattern"
     },
     {
-      "route": "/solutions-v2/training/video-library/otomatik-donati",
+      "route": "/video-kutuphanesi/otomatik-donati",
       "dimension": "h1",
       "source": "Otomatik Donatı (PythonPart)",
       "generated": "Otomatik Donatı (PythonPart) — Eğitim Video Serisi",
       "reason": "Approved playlist detail title pattern"
     },
     {
-      "route": "/solutions-v2/training/video-library/quickstart-buildings",
+      "route": "/video-kutuphanesi/quickstart-buildings",
       "dimension": "h1",
       "source": "ALLPLAN QuickStart: Buildings",
       "generated": "ALLPLAN QuickStart: Buildings — Eğitim Video Serisi",
       "reason": "Approved playlist detail title pattern"
     },
     {
-      "route": "/solutions-v2/training/video-library/road-design",
+      "route": "/video-kutuphanesi/road-design",
       "dimension": "h1",
       "source": "Allplan Road Design Workflow",
       "generated": "Allplan Road Design Workflow — Eğitim Video Serisi",
       "reason": "Approved playlist detail title pattern"
     },
     {
-      "route": "/solutions-v2/training/video-library/sds2-intro",
+      "route": "/video-kutuphanesi/sds2-intro",
       "dimension": "h1",
       "source": "SDS2 Detaylandırma",
       "generated": "SDS2 Detaylandırma — Eğitim Video Serisi",

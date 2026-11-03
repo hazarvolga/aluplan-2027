@@ -48,7 +48,7 @@ function renderBlock(
             <div className={`alu-intro-split${block.content.videoEmbedUrl || block.content.imageSrc ? '' : ' alu-intro-split--single'}`}>
               <div className="alu-intro-split__content">
                 {block.content.kicker && <span className="preview-kicker">{block.content.kicker}</span>}
-                {block.content.title && <h2 className="alu-h1" style={{ margin: 0 }}>{block.content.title}</h2>}
+                {block.content.title && <h2 className="alu-h2" style={{ margin: 0 }}>{block.content.title}</h2>}
                 {block.content.paragraphs?.map((paragraph, index) => (
                   <p key={index} className="alu-body">{paragraph}</p>
                 ))}

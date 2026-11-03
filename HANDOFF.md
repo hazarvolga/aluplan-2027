@@ -8,7 +8,7 @@
 - **D7 (AX3000 doküman başlıkları):** 2026 kaynağı `documents.ts` ile üretilen 6 doküman 8 alan üzerinden karşılaştırıldı, fark yok; düzeltme gerekmedi.
 - **D8 (harita/türev betiği):** `build_web_derivatives.py --check` geçiyor; harita onay kapılı ve başlıklı; düzeltme gerekmedi.
 - **CSS borcu:** kullanılmayan `alu-yt-*` stilleri `application.css` ve üretilen `globals.css`'ten silindi (`test_app_styles.py` ve `--z-foreground` kullanım testi buna göre güncellendi); ilgili jetonlar için yukarıdaki açık maddeye bakın.
-- Kapılar: 370 unit test, 46/46 parite, 45/45 token, typecheck, `styles:check`, build. Tarayıcı doğrulaması commit sonrası yapılacak (aşağıdaki not güncellenir).
+- Kapılar: 370 unit test, 46/46 parite, 45/45 token, typecheck, `styles:check`, build. Tarayıcı doğrulaması yapıldı (dev sunucusu yeniden başlatıldı): 4 kaldırılan sayfa ve webinar yönlendirmesi çalışıyor, SSS kırıntısı, Kaynaklar kart aria-label (21), video kütüphanesi alu-yt CSS içermiyor, arama 200, sunucu hatası yok.
 
 ## 03.11.2026 — Bim1Sohbet kayıtları eklendi (yerel, commitlenmedi)
 

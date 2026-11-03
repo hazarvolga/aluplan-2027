@@ -163,12 +163,13 @@ export function MediaGridSection({
                             target="_blank"
                             rel="noopener noreferrer"
                             className="alu-link alu-link--standalone"
+                            aria-label={`${item.ctaText || 'Detayları İncele'}: ${item.title}`}
                           >
                             <span>{item.ctaText || 'Detayları İncele'}</span>
                             <AluIcon name="external-link" size="sm" />
                           </a>
                         ) : (
-                          <Link href={item.href} className="alu-link alu-link--standalone">
+                          <Link href={item.href} className="alu-link alu-link--standalone" aria-label={`${item.ctaText || 'Detayları İncele'}: ${item.title}`}>
                             <span>{item.ctaText || 'Detayları İncele'}</span>
                             <AluIcon name="arrow-right" size="sm" />
                           </Link>

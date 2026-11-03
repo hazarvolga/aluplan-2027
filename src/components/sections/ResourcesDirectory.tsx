@@ -41,25 +41,25 @@ const totalServices = groups.reduce((sum, group) => sum + group.services.length,
 
 function ServiceAction({ service, tone }: { service: Service; tone: ActionTone }) {
   const className = TONE_CLASS[tone];
+  const label = `${service.cta}: ${service.title}`;
   if (service.href.startsWith('http')) {
     return (
-      <a className={className} href={service.href} target="_blank" rel="noopener noreferrer">
+      <a className={className} href={service.href} target="_blank" rel="noopener noreferrer" aria-label={`${label} (yeni sekmede açılır)`}>
         <span>{service.cta}</span>
-        <span className="alu-visually-hidden"> (yeni sekmede açılır)</span>
         <AluIcon name="external-link" size="sm" />
       </a>
     );
   }
   if (service.href.startsWith('/docs/')) {
     return (
-      <a className={className} href={service.href}>
+      <a className={className} href={service.href} aria-label={label}>
         <span>{service.cta}</span>
         <AluIcon name="download" size="sm" />
       </a>
     );
   }
   return (
-    <Link className={className} href={service.href}>
+    <Link className={className} href={service.href} aria-label={label}>
       <span>{service.cta}</span>
       <AluIcon name="arrow-right" size="sm" />
     </Link>

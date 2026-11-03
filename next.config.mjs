@@ -143,6 +143,26 @@ const nextConfig = {
         permanent: true
       },
       {
+        source: '/solutions-v2/training/events',
+        destination: showRelease ? '/kaynaklar' : '/',
+        permanent: true
+      },
+      {
+        source: '/solutions-v2/training/individual',
+        destination: showRelease ? '/kaynaklar' : '/',
+        permanent: true
+      },
+      {
+        source: '/solutions-v2/training/e-learning',
+        destination: showRelease ? '/kaynaklar' : '/',
+        permanent: true
+      },
+      {
+        source: '/solutions-v2/training/quick-start',
+        destination: showRelease ? '/kaynaklar' : '/',
+        permanent: true
+      },
+      {
         source: '/solutions-v2/training/classroom',
         destination: showRelease ? '/kaynaklar' : '/',
         permanent: true

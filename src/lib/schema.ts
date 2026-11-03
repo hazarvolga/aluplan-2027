@@ -116,24 +116,6 @@ export function buildPageJsonLd(page: PageRecord, playlist?: PlaylistRecord | nu
         '@id': `${SITE_ORIGIN}/#organization`
       }
     });
-  } else if (page.schemaType === 'Service') {
-    const serviceId = `${pageUrl}#service`;
-    baseWebPage.mainEntity = { '@id': serviceId };
-    graph.push(baseWebPage);
-    graph.push({
-      '@type': 'Service',
-      '@id': serviceId,
-      name: page.h1,
-      description: page.description,
-      serviceType: 'BIM Eğitim, Webinar ve Teknik Danışmanlık Hizmeti',
-      provider: {
-        '@id': `${SITE_ORIGIN}/#organization`
-      },
-      areaServed: {
-        '@type': 'Country',
-        name: 'Türkiye'
-      }
-    });
   } else if (page.schemaType === 'FAQPage') {
     const visibleFaqItems = page.structuredLayout?.faqDirectory?.categories.flatMap(
       (category) => category.items

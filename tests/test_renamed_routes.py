@@ -60,9 +60,16 @@ class FaqRouteTests(unittest.TestCase):
             with self.subTest(file=name):
                 self.assertNotIn("/solutions-v2/faq", (DATA / name).read_text(encoding="utf-8"))
 
-    def test_navigation_data_places_faq_between_about_and_contact(self):
-        links = [item["name"] for item in json.loads((DATA / "navigation.json").read_text(encoding="utf-8"))["directLinks"]]
-        self.assertEqual(links[-3:], ["Hakkımızda", "S.S.S.", "İletişim"])
+    def test_navigation_data_no_longer_carries_the_unused_direct_links(self):
+        navigation = json.loads((DATA / "navigation.json").read_text(encoding="utf-8"))
+        self.assertNotIn("directLinks", navigation)
+        self.assertNotIn("directLinks", (ROOT / "scripts/generate_site_data.py").read_text(encoding="utf-8"))
+
+    def test_faq_breadcrumb_is_home_then_the_page(self):
+        self.assertEqual(
+            self.pages["/faq"]["breadcrumbs"],
+            [{"label": "Ana Sayfa", "href": "/"}, {"label": "Sıkça Sorulan Sorular", "href": "/faq"}],
+        )
 
 
 class MainMenuTests(unittest.TestCase):
@@ -134,14 +141,28 @@ class RemovedTrainingHubTests(unittest.TestCase):
         self.assertEqual(redirect["destination"], "/kaydedilmis-webinarlar")
         self.assertTrue(redirect["permanent"])
 
-    def test_hub_is_gone_from_the_generated_data_but_its_subpages_remain(self):
-        pages = json.loads((DATA / "pages.json").read_text(encoding="utf-8"))
-        self.assertNotIn(TRAINING_HUB, pages)
-        self.assertNotIn(f"{TRAINING_HUB}/online", pages)
-        self.assertNotIn(f"{TRAINING_HUB}/classroom", pages)
+    def test_remaining_training_subpages_redirect_to_the_resources_page(self):
+        redirects = config_redirects()
         for slug in ("events", "individual", "e-learning", "quick-start"):
             with self.subTest(slug=slug):
-                self.assertIn(f"{TRAINING_HUB}/{slug}", pages)
+                redirect = redirects[f"{TRAINING_HUB}/{slug}"]
+                self.assertEqual(redirect["destination"], "/kaynaklar")
+                self.assertTrue(redirect["permanent"])
+
+    def test_no_training_page_is_published_any_more(self):
+        pages = json.loads((DATA / "pages.json").read_text(encoding="utf-8"))
+        self.assertEqual([path for path in pages if path.startswith(TRAINING_HUB)], [])
+
+    def test_page_end_conversion_no_longer_matches_the_removed_training_prefix(self):
+        policy = (ROOT / "src/components/sections/page-end-conversion-policy.ts").read_text(encoding="utf-8")
+        self.assertNotIn("/solutions-v2/training", policy)
+        self.assertIn("page.path.startsWith('/video-kutuphanesi')", policy)
+
+    def test_llms_txt_describes_the_package_comparison_for_the_active_release(self):
+        route = (ROOT / "src/app/llms.txt/route.ts").read_text(encoding="utf-8")
+        self.assertIn("packageComparisonLine", route)
+        self.assertIn("Basic, Concept, Professional ve Ultimate", route)
+        self.assertIn("${packageComparisonLine}", route)
 
     def test_no_breadcrumb_links_to_the_removed_hub(self):
         pages = json.loads((DATA / "pages.json").read_text(encoding="utf-8"))

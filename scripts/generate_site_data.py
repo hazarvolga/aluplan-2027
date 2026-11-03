@@ -701,6 +701,9 @@ def build_breadcrumbs(route_path: str, page_h1: str) -> list:
     if route_path == "/":
         return [{"label": "Ana Sayfa", "href": "/"}]
     crumbs = [{"label": "Ana Sayfa", "href": "/"}]
+    if route_path == "/solutions-v2/faq":
+        crumbs.append({"label": "Sıkça Sorulan Sorular", "href": route_path})
+        return crumbs
     if route_path.startswith("/products/ax3000/"):
         crumbs.extend([
             {"label": "Ürünler", "href": "/products"},
@@ -776,8 +779,6 @@ def determine_schema_type(route_path: str) -> str:
         return "FAQPage"
     if route_path.startswith("/solutions-v2/training/video-library"):
         return "VideoGallery"
-    if route_path.startswith("/solutions-v2/training"):
-        return "Service"
     if route_path in {"/products", "/solutions", "/solutions/addons", "/solutions-v2/addons"}:
         return "CollectionPage"
     if route_path.startswith("/products/") and route_path != "/products/ax3000/dokumanlar":
@@ -1160,7 +1161,16 @@ def rename_routes(value):
 pages_data = rename_routes(pages_data)
 
 # Pages the 2027 site no longer publishes; their URLs redirect (see next.config.mjs).
-REMOVED_ROUTES = ("/solutions-v2/training", "/solutions-v2/training/webinar", "/solutions-v2/training/online", "/solutions-v2/training/classroom")
+REMOVED_ROUTES = (
+    "/solutions-v2/training",
+    "/solutions-v2/training/webinar",
+    "/solutions-v2/training/online",
+    "/solutions-v2/training/classroom",
+    "/solutions-v2/training/events",
+    "/solutions-v2/training/individual",
+    "/solutions-v2/training/e-learning",
+    "/solutions-v2/training/quick-start",
+)
 pages_data = {path: page for path, page in pages_data.items() if path not in REMOVED_ROUTES}
 
 data_dir = ROOT / "src/data"
@@ -1273,13 +1283,6 @@ navigation_data = {
             ],
         }
         for group in solution_directory["groups"]
-    ],
-    "directLinks": [
-        {"name": "Kaynaklar", "href": "/#professional-services"},
-        {"name": "Referanslar", "href": "/references"},
-        {"name": "Hakkımızda", "href": "/about"},
-        {"name": "S.S.S.", "href": "/faq"},
-        {"name": "İletişim", "href": "/contact"},
     ],
     "footer": {
         "description": "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri.",
@@ -1523,5 +1526,5 @@ if SOURCE_AVAILABLE:
 
 print(f"Generated {len(pages_data)} routes in src/data/pages.json")
 print(f"Generated {len(playlist_by_id)} playlists in src/data/playlists.json")
-print(f"Unique titles: {len(used_titles)} / {len(pages_data)}")
-print(f"Unique descriptions: {len(used_descriptions)} / {len(pages_data)}")
+print(f"Unique titles: {len({page['title'] for page in pages_data.values()})} / {len(pages_data)}")
+print(f"Unique descriptions: {len({page['description'] for page in pages_data.values()})} / {len(pages_data)}")

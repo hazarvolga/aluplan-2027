@@ -322,8 +322,8 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
                 )
             ]
 
-        self.assertEqual(len(search_index), 106)
-        self.assertEqual(len({item["path"] for item in search_index}), 106)
+        self.assertEqual(len(search_index), 102)
+        self.assertEqual(len({item["path"] for item in search_index}), 102)
         self.assertEqual(
             [item["path"] for item in search_index],
             list(pages.keys()),
@@ -343,9 +343,9 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
                 self.assertEqual(item["section"], page["section"])
                 self.assertEqual(item["description"], page["description"])
 
-        self.assertEqual(len(filter_paths("")), 106)
-        self.assertEqual(len(filter_paths(" ")), 106)
-        self.assertEqual(len(filter_paths("allplan")), 75)
+        self.assertEqual(len(filter_paths("")), 102)
+        self.assertEqual(len(filter_paths(" ")), 102)
+        self.assertEqual(len(filter_paths("allplan")), 71)
         self.assertEqual(
             filter_paths("BIMFlex"),
             ["/solutions-v2/other", "/solutions/bimflex"],
@@ -534,7 +534,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
         ]
         product_routes = [page["path"] for page in subpages if page["path"].startswith("/products")]
 
-        self.assertEqual(len(subpages), 105)
+        self.assertEqual(len(subpages), 101)
         self.assertEqual(len(hero_image_routes), 68)
         self.assertEqual(no_cta_routes, ["/about", "/gizlilik-politikasi", "/kullanim-sartlari", "/kvkk"])
         self.assertEqual(len(product_routes), 18)
@@ -690,10 +690,10 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
                     if image_src and image_src.startswith("/"):
                         self.assertTrue((ROOT / "public" / image_src.lstrip("/")).is_file(), image_src)
 
-        self.assertEqual(len(media_routes), 30)
+        self.assertEqual(len(media_routes), 29)
         self.assertEqual(core_grid_count, 8)
-        self.assertEqual(extra_grid_count, 47)
-        self.assertEqual(card_count, 361)
+        self.assertEqual(extra_grid_count, 44)
+        self.assertEqual(card_count, 348)
 
     def test_split_callouts_have_a_shared_interactive_render_boundary(self):
         component = read("src/components/sections/SplitCalloutSection.tsx")

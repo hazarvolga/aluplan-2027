@@ -187,3 +187,4 @@ Kullanıcı, yayın öncesi kalan maddeler listesinde aşağıdaki kararları ve
 - **Online eğitim sayfası:** `/solutions-v2/training/online` tamamen kaldırıldı; adresi `/kaynaklar`'a yönlenir. Webinar kartları için ortak medya kartı bileşeni kullanılır; kayıt bağlantıları (YouTube) kullanıcıdan istenecek.
 - **Webinar kayıtları:** Kayıtlar Allplan Türkiye YouTube kanalından bağlandı; kanalda olup kartlarda bulunmayan webinarlar (Allplan Bridge 2022 Webinar, BIMX5 Kurum Rapor Eklentisi) eklendi. `/solutions-v2/training/classroom` sayfası kaldırıldı ve `/kaynaklar`'a yönlenir.
 - **Bim1Sohbet kayıtları:** `@bim1sohbet65` kanalındaki Melih Dinekli yayınları webinar arşivine eklendi; "BIMX5 Nedir" kaydı Bimfili kartıyla eşleştirildi (kullanıcı teyidi).
+- **Eğitim alt sayfaları:** events, individual, e-learning ve quick-start sayfaları tamamen kaldırıldı; adresleri `/kaynaklar`'a yönlenir (kullanıcı kararı). Teknik borç temizliği için en hızlı kazanç sırası bana bırakıldı.

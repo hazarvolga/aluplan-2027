@@ -673,28 +673,6 @@
       ]
     }
   ],
-  "directLinks": [
-    {
-      "name": "Kaynaklar",
-      "href": "/#professional-services"
-    },
-    {
-      "name": "Referanslar",
-      "href": "/references"
-    },
-    {
-      "name": "Hakkımızda",
-      "href": "/about"
-    },
-    {
-      "name": "S.S.S.",
-      "href": "/faq"
-    },
-    {
-      "name": "İletişim",
-      "href": "/contact"
-    }
-  ],
   "footer": {
     "description": "1995'ten beri Türkiye'nin güvenilir Allplan distribütörü. Mimari ve mühendislik projeleriniz için profesyonel BIM çözümleri.",
     "products": [

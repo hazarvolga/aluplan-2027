@@ -15,7 +15,7 @@ COMMERCIAL_ROUTES = (
     "/paket-karsilastirma",
 )
 TRAINING_ROUTES = (
-    "/solutions-v2/training/events",
+    "/video-kutuphanesi",
     "/video-kutuphanesi/road-design",
 )
 SUPPORT_ROUTES = (

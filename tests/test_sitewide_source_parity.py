@@ -155,17 +155,17 @@ class SitewideSourceParityUnitTests(unittest.TestCase):
 
 
 class SitewideSourceParityIntegrationTests(unittest.TestCase):
-    def test_real_dataset_has_106_routes_and_no_unapproved_findings(self):
+    def test_real_dataset_has_102_routes_and_no_unapproved_findings(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             report = verify_sitewide_source_parity(
                 root=ROOT,
                 policy=load_policy(POLICY),
                 output_dir=Path(temp_dir),
             )
-        self.assertEqual(report["summary"]["sourceRoutes"], 106)
-        self.assertEqual(report["summary"]["generatedRoutes"], 106)
+        self.assertEqual(report["summary"]["sourceRoutes"], 102)
+        self.assertEqual(report["summary"]["generatedRoutes"], 102)
         self.assertEqual(report["summary"]["failures"], 0, report["findings"][:10])
-        self.assertEqual(len(report["routeResults"]), 106)
+        self.assertEqual(len(report["routeResults"]), 102)
         self.assertTrue(
             all(item["status"] in {"pass", "approved_difference"} for item in report["routeResults"])
         )

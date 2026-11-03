@@ -53,7 +53,7 @@ export function SearchPageSection({
                 <p className="alu-body-sm">{item.description}</p>
               </div>
               <div className="alu-card__footer">
-                <Link className="alu-link alu-link--standalone" href={item.path}>
+                <Link className="alu-link alu-link--standalone" href={item.path} aria-label={`Sayfaya Git: ${item.seoTitle.replace(/ \| Aluplan$/, '')}`}>
                   <span>Sayfaya Git</span>
                   <AluIcon name="arrow-right" size="sm" />
                 </Link>

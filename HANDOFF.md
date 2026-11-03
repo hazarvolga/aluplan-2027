@@ -1,5 +1,15 @@
 # Oturum devri
 
+## 03.11.2026 — Teknik borç temizliği ve eğitim sayfalarının tamamen kaldırılması (commitlendi)
+
+- **Kaldırıldı:** `/solutions-v2/training` altındaki kalan 4 sayfa (events, individual, e-learning, quick-start). Hepsi 308 ile `/kaynaklar`'a yönlenir (sürüm kapalıyken `/`); `removedRoutes` ve `REMOVED_ROUTES` kaydı güncel. Artık `/solutions-v2/training` altında yayımlanan sayfa yok; sayfa sonu bileşeni yalnızca `/video-kutuphanesi` önekini eğitim dönüşümüyle eşler. Üretilen sayfa sayısı 102.
+- **Küçük düzeltmeler:** SSS kırıntısı "Ana Sayfa > Sıkça Sorulan Sorular"; kullanılmayan `directLinks` verisi üreteçten ve `navigation.json`'dan silindi; `llms.txt` paket karşılaştırma satırı sürüme göre ("PDF" yalnızca sürüm kapalıyken); üreteç çıktısındaki "Unique titles/descriptions" sayaçları kaldırılan sayfalardan sonra doğru sayıyı yazar; hiçbir sayfada kullanılmayan `Service` şeması (`schema.ts` dalı, üreteç kuralı, test) silindi.
+- **D6 (bağlantı adları):** derlenmiş 119 sayfa tarandı; aynı adı taşıyıp farklı yere giden bağlantılar bulundu (Kaynaklar, arama sonuçları, ortak `MediaGridSection`, Scalypso, Civil ve FRILO sayfaları) ve hepsine ayırt edici `aria-label` eklendi. Kalıcı koruma: `tests/test_link_names.py`.
+- **D7 (AX3000 doküman başlıkları):** 2026 kaynağı `documents.ts` ile üretilen 6 doküman 8 alan üzerinden karşılaştırıldı, fark yok; düzeltme gerekmedi.
+- **D8 (harita/türev betiği):** `build_web_derivatives.py --check` geçiyor; harita onay kapılı ve başlıklı; düzeltme gerekmedi.
+- **CSS borcu:** kullanılmayan `alu-yt-*` stilleri `application.css` ve üretilen `globals.css`'ten silindi (`test_app_styles.py` ve `--z-foreground` kullanım testi buna göre güncellendi); ilgili jetonlar için yukarıdaki açık maddeye bakın.
+- Kapılar: 370 unit test, 46/46 parite, 45/45 token, typecheck, `styles:check`, build. Tarayıcı doğrulaması commit sonrası yapılacak (aşağıdaki not güncellenir).
+
 ## 03.11.2026 — Bim1Sohbet kayıtları eklendi (yerel, commitlenmedi)
 
 - `@bim1sohbet65` kanalındaki Melih Dinekli yayınları tarandı: "BIMX5 Nedir" Bimfili kartına bağlandı, "Allplan Akıllı BIM Eklentisi ile İmar Yönetmeliği Uygulaması" (20 Ağustos 2022) ve "ALLPLAN ile Her Yerde ve Her Zaman Çalışma" (17 Ağustos 2022) yeni kart olarak eklendi; kartlarda kanal adı (Bim1Sohbet) alt başlık olarak görünür (`source` alanı). Kanalın diğer ~90 videosu genel BIM yayınları olduğu için eklenmedi.
@@ -40,18 +50,15 @@
 
 ## 03.11.2026 — Açık maddeler (kullanıcı: "sonra bakacağız")
 
-- **Kaynaklar sayfası:** mobil menüye "Kaynaklar" eklendi; Öğren/Bilgi kartlarında ikonlar sağ üst köşede, zeminsiz (lisans satırlarındaki kutulu ikonlar aynen kaldı). `/kaynaklar` adresi öneridir, onay bekliyor. `navigation.json` içindeki `directLinks` verisi arayüzde kullanılmıyor, eski hedefi (`/#professional-services`) gösteriyor.
+- **Kaynaklar sayfası:** mobil menüye "Kaynaklar" eklendi; Öğren/Bilgi kartlarında ikonlar sağ üst köşede, zeminsiz (lisans satırlarındaki kutulu ikonlar aynen kaldı). `/kaynaklar` adresi öneridir, onay bekliyor.
 - **Kaynaklar yeni kartlar:** "Video Kütüphanesi" (`/video-kutuphanesi`), "Kaydedilmiş Webinarlar" (`/kaydedilmis-webinarlar`) ve "Eğitim Merkezleri" (`/egitim-merkezlerimiz`) bağlantıları kesin. Video Kütüphanesi ve Eğitim Merkezleri kartlarının açıklama/buton metni hâlâ geçici (Kaydedilmiş Webinarlar açıklaması eski sayfanın kendi metninden). Kaynak: `scripts/generate_site_data.py` içindeki `ADDED_SERVICES`. Sürüm kapalıyken eski ana sayfa bölümü de bu üç kartı gösterir (sayı 22).
 - **Kayıtlı webinarlar:** 17 karttan 13'ünün YouTube kaydı bağlı: Allplan Türkiye kanalı (`@AllplanTurkey`) ve Bim1Sohbet kanalı (`@bim1sohbet65`, Ahmet Melih Dinekli yayınları). "BIMX5 Nedir?" kaydı, kartımızın açıklamasıyla birebir aynı olduğu için Bimfili kartına bağlandı. Kaydı bulunamayan 4 webinar: IMO / ALLPLAN BRIDGE 2022, IMO / ALLPLAN ENGINEERING 2022, BIMX5 - Genel, Görsel Komut Dosyaları (Visual Scripting; kanalda yalnızca 2,5 dakikalık bir klip var). Bağlantı verilirse `youtubeId` alanı yeterli. Teyit gerektirenler: "2B DWG Converter" kartı 6 Temmuz 2021, kayıt başlığı 8 Temmuz; "BIMX5 Kurum Rapor Eklentisi" (9 Temmuz) "BIMX5 - Genel" ile aynı etkinlik olabilir; Bim1Sohbet'ten eklenen iki kartın tarihi YouTube yükleme tarihidir (gerçek yayın tarihi bilinmiyor). Allplan Türkiye kanalında SCIA Engineer (Nisan 2026) ve Allplan Bridge Conference 2026 videoları webinar olup olmadığı belirsiz olduğu için eklenmedi.
-- **Eğitim alt sayfaları:** `/solutions-v2/training` altında 4 sayfa kaldı (events, individual, e-learning, quick-start); siteden bağlantı almıyorlar, silinsin mi kararı bekliyor.
 - **LGN logosu:** Eğitim İş Ortaklarımız sayfasında LGN Proje Akademi logosu yok (projede dosyası bulunamadı); dosya verilirse eklenir.
 - **AX3000 Mekanik Tesisat:** "Modüller" başlığı (kaynakta yok) ve bölüm sırası (modüller özelliklerin önüne alınabilir) onay bekliyor.
 - **BIMFlex özel video (B3):** kart kaldırılsın mı, video sahibinden herkese açık yapılması mı istensin?
 - **Doğrulanmamış iddialar (C1):** üreticiden bilgi bekleniyor.
 - **Bağlantı farkları D bölümü (B5):** `docs/verification/main-link-gap-2026-11-02.md` kullanıcıyla tek tek gözden geçirilecek.
-- **SSS kırıntısı:** "Ana Sayfa > Çözümler > SSS"; üst menüye taşındığı için "Ana Sayfa > SSS" olması önerildi.
-- **`llms.txt`:** paket karşılaştırma satırı hâlâ "PDF" diyor; 2027 sürümü açıkken yanlış.
-- **D6/D7/D8:** indirme bağlantısı adları, AX3000 doküman başlıkları ve harita/türev betiği düzeltmeleri doğrulanmadı (D6 büyük olasılıkla kapandı).
+- **Kullanılmayan YouTube jetonları:** eski `alu-yt-*` stilleri silindi; `design-system/tokens/tokens.json` içindeki `youtube*` görsel/boyut/gölge/dönüşüm jetonları (ve onlardan üretilen CSS değişkenleri) artık hiçbir stilde kullanılmıyor. Canonical tasarım sistemi dosyası olduğu için silinmedi; temizlik ayrı ve onaylı bir iş.
 - **Sonraki fazlar (E1–E3):** ortak bileşen taşıması, premium hareket, mobil video.
 - **Yayın:** `codex/prelaunch-decisions` push edilmedi; PR #3 ile ilişkisi, Vercel ortam değişkenleri (`ALUPLAN_SHOW_2027`, `ALUPLAN_BLOCK_INDEXING`; eski `ALUPLAN_2027_PREVIEW` kaldırılmalı), Vercel Analytics ve deploy kullanıcıda.
 

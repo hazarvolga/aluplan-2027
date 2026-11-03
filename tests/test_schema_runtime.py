@@ -65,21 +65,11 @@ class SchemaRuntimeTests(unittest.TestCase):
             [visible_faq_answer(item) for item in expected_items],
         )
 
-    def test_service_schema_uses_unique_canonical_entity_ids(self):
-        service_pages = [
-            page for page in self.pages.values() if page["schemaType"] == "Service"
-        ]
-        service_ids = [
-            graph_entity(render_schema(page["path"]), "Service")["@id"]
-            for page in service_pages
-        ]
-
-        self.assertEqual(len(service_pages), 4)
+    def test_no_page_uses_the_retired_service_schema(self):
         self.assertEqual(
-            service_ids,
-            [f'{page["canonical"]}#service' for page in service_pages],
+            [page["path"] for page in self.pages.values() if page["schemaType"] == "Service"], []
         )
-        self.assertEqual(len(set(service_ids)), len(service_ids))
+        self.assertNotIn("'Service'", (ROOT / "src/lib/schema.ts").read_text(encoding="utf-8"))
 
     def test_organization_schema_uses_generated_site_identity(self):
         navigation = json.loads(

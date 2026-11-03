@@ -62,6 +62,11 @@ class VideoLibrarySourceTests(unittest.TestCase):
         self.assertNotIn("alu-yt-", source)
         self.assertIn("videoLibrary.hero", source)
 
+    def test_the_retired_video_card_styles_are_gone_from_the_stylesheets(self):
+        for name in ("src/styles/application.css", "src/styles/globals.css"):
+            with self.subTest(file=name):
+                self.assertNotIn("alu-yt-", (ROOT / name).read_text(encoding="utf-8"))
+
     def test_tiles_without_a_destination_are_not_links(self):
         source = COMPONENT.read_text(encoding="utf-8")
         self.assertIn("item.url !== '#'", source)

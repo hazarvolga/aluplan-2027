@@ -86,7 +86,7 @@ export function getPageEndConversion(page: PageEndConversionInput): PageEndConve
     return null;
   }
 
-  if (page.path.startsWith('/solutions-v2/training') || page.path.startsWith('/video-kutuphanesi')) {
+  if (page.path.startsWith('/video-kutuphanesi')) {
     return trainingConversion();
   }
 

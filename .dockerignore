@@ -1,0 +1,19 @@
+# Only build inputs enter the context; keep local and sensitive files out.
+*
+!package.json
+!pnpm-lock.yaml
+!next.config.mjs
+!tsconfig.json
+!next-env.d.ts
+!src/
+!public/
+!scripts/
+!design-system/
+# Explicitly prevent secrets and build artifacts even if nested in included inputs.
+**/.env*
+**/node_modules
+**/.next
+**/.git
+**/.claude
+**/.superpowers
+**/*.tsbuildinfo

@@ -59,6 +59,7 @@ const STATIC_ASSET_PREFIXES = ['/assets', '/docs', '/videos', '/images'];
 const STATIC_ASSET_CACHE = 'public, max-age=604800, stale-while-revalidate=86400';
 
 const nextConfig = {
+  output: 'standalone',
   poweredByHeader: false,
   env: {
     ALUPLAN_SHOW_2027: process.env.ALUPLAN_SHOW_2027 ?? '0',

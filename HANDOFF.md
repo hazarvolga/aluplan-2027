@@ -1814,3 +1814,12 @@ Kullanıcı 2027 ana sayfasını şimdilik yeterli bulup ALLPLAN Max sayfasını
 - CDS Add-On, ALLPLAN Industry ve Civil kesilmiş meta/hero açıklamaları mevcut bodyNodes içindeki tam cümlelerden düzeltildi, arama verisi/generator politikası eşitlendi; CDS TBDY iddiası doğrulanmış sayılmaz. Tam veri üretiminin gerçek kaynakla tekrarı ayrıca doğrulanmalı.
 - YouTube RSS yanıtı 256 KiB ile sınırlandı; zaman aşımı, cache ve boş sonuç fallback'i korunarak hassas veri içermeyen hata sinyali eklendi. Bağımsız inceleme kritik/yüksek bulgu göstermedi.
 - `pnpm typecheck` ve `pnpm test` başarılı: 536 test (4 atlandı), parite/stil/token kontrolleri başarılı. Gerçek mobil LCP ve dağıtım/geri dönüş kontrolleri hâlâ açık; yayın yapılmadı.
+
+### 03.11.2026 — Coolify canlı geçiş incelemesi
+- Kullanıcı isteğiyle mevcut Coolify uygulaması salt okunur incelendi; durum/commit, Dockerfile/port/domain, healthcheck ve rollback görüntüsü ile 2027 repo dalı/Node/flag farkları `docs/verification/coolify-transition-plan-2026-11-03.md` dosyasına kaydedildi. Kullanıcı oturum açtı; gizli değerler okunmadı.
+- Çalışan uygulama 2026 main `a958c9d8...`, yeni repo aktif aday `codex/design-phase-4` `586c44c...`, 2027 main ayrı. Mevcut build Dockerfile, 2027'de Dockerfile yok; port ve bağımsız staging/rollback provası gerekir. Canlı ayar, DNS ve deployment değiştirilmedi.
+
+### 03.11.2026 — Coolify staging hazırlığı
+- Kullanıcı planı onayladı; `preview.aluplan.com.tr` staging hostname olarak seçildi. Cloudflare'da yalnız `preview` A kaydı `167.86.84.107` (DNS only) eklendi; mevcut kayıtlar, Microsoft 365 MX ve autodiscover değiştirilmedi. Eski Plesk kayıtları envanteri/kullanım doğrulaması sonraya bırakıldı.
+- Node 24/pnpm 10.24 çok aşamalı Dockerfile, hassas/gereksiz dosyaları dışarıda tutan .dockerignore, Next standalone ve dinamik no-store `/health` eklendi. Yerel Docker build ve non-root 0.0.0.0 runtime başarılı; `/health` 200, preview robots noindex ve eski rota 301 doğrulandı. Health yalnız HTTP yaşam kontrolüdür.
+- Bağımsız kod/güvenlik incelemesinde kritik/yüksek bulgu yok; typecheck ve 539 test (4 atlandı) başarılı. Build/runtime preview bayrakları staging'de tekrar HTTP üzerinden doğrulanmalı. Canlı domain ve mevcut üretim uygulaması değiştirilmedi.

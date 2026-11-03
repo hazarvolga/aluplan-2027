@@ -31,7 +31,7 @@ export function buildPageMetadata(pathname: string): Metadata {
       type: 'website',
       images: [
         {
-          url: `${SITE_ORIGIN}/opengraph-image.png`,
+          url: `${SITE_ORIGIN}/opengraph-image.jpg`,
           width: 1200,
           height: 630,
           alt: page.h1
@@ -42,7 +42,7 @@ export function buildPageMetadata(pathname: string): Metadata {
       card: 'summary_large_image',
       title: page.title,
       description: page.description,
-      images: [`${SITE_ORIGIN}/opengraph-image.png`]
+      images: [`${SITE_ORIGIN}/opengraph-image.jpg`]
     }
   };
 }

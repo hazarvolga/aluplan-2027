@@ -10,7 +10,7 @@ export interface Release2027Route {
   ogImage: string;
 }
 
-const DEFAULT_OG_IMAGE = '/opengraph-image.png';
+const DEFAULT_OG_IMAGE = '/opengraph-image.jpg';
 const SITE_NAME = 'Aluplan Program Sistemleri';
 
 export const RELEASE_2027_ROUTES: readonly Release2027Route[] = [

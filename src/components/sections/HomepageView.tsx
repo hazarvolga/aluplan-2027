@@ -16,11 +16,11 @@ const releaseMonitorLabel = `${data.releaseLabel} · ${data.heroContent.monitorL
 const packageMatrixSuffix = ` · ${data.packageMatrixLabel}`;
 
 const previewSolutionImages: Record<string, string> = {
-  '/solutions-v2/building-design': '/assets/previews/solutions/building-original.png',
-  '/solutions-v2/infrastructure': '/assets/previews/solutions/infrastructure-original.png',
-  '/solutions-v2/construction': '/assets/previews/solutions/construction-original.png',
-  '/solutions-v2/addons': '/assets/previews/solutions/addons-original.png',
-  '/solutions-v2/other': '/assets/previews/solutions/other-original.png',
+  '/solutions-v2/building-design': '/assets/previews/solutions/building-web.jpg',
+  '/solutions-v2/infrastructure': '/assets/previews/solutions/infrastructure-web.jpg',
+  '/solutions-v2/construction': '/assets/previews/solutions/construction-web.jpg',
+  '/solutions-v2/addons': '/assets/previews/solutions/addons-web.jpg',
+  '/solutions-v2/other': '/assets/previews/solutions/other-web.jpg',
 };
 
 export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: boolean }) {
@@ -143,7 +143,7 @@ export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: bool
 
       {previewMaxHero && <Homepage2026Links />}
 
-      <DisciplineWorkflowSection id="products" roles={previewMaxHero ? data.roles.map(role => ({ ...role, image: ({ architect: '/assets/previews/workflow/architecture-original.png', engineer: '/assets/previews/workflow/engineering-original.png', fabricator: '/assets/previews/workflow/precast-original.png' } as Record<string, string>)[role.id] ?? role.image })) : data.roles} products={data.products} releaseLabel={data.releaseLabel} trialHref={TRIAL_CTA_URL} productsHref="/products" />
+      <DisciplineWorkflowSection id="products" roles={previewMaxHero ? data.roles.map(role => ({ ...role, image: ({ architect: '/assets/previews/workflow/architecture-web.jpg', engineer: '/assets/previews/workflow/engineering-web.jpg', fabricator: '/assets/previews/workflow/precast-web.jpg' } as Record<string, string>)[role.id] ?? role.image })) : data.roles} products={data.products} releaseLabel={data.releaseLabel} trialHref={TRIAL_CTA_URL} productsHref="/products" />
 
       {/* H04: Solutions Asymmetric Bento Grid */}
       <section id="solutions" className="preview-section preview-section--subtle" aria-labelledby="solutions-heading">

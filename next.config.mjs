@@ -52,6 +52,10 @@ const securityHeaders = [
   }
 ];
 
+// Public files keep stable names, so they get a week of caching instead of `immutable`.
+const STATIC_ASSET_PREFIXES = ['/assets', '/docs', '/videos', '/images'];
+const STATIC_ASSET_CACHE = 'public, max-age=604800, stale-while-revalidate=86400';
+
 const nextConfig = {
   poweredByHeader: false,
   env: {
@@ -62,6 +66,10 @@ const nextConfig = {
   reactStrictMode: true,
   async headers() {
     return [
+      ...STATIC_ASSET_PREFIXES.map((prefix) => ({
+        source: `${prefix}/:path*`,
+        headers: [{ key: 'Cache-Control', value: STATIC_ASSET_CACHE }]
+      })),
       {
         source: '/:path*',
         headers: process.env.ALUPLAN_BLOCK_INDEXING === '1'

@@ -1542,12 +1542,15 @@ button.alu-role[aria-checked="true"] {
   font-family: var(--font-mono);
   font-size: var(--type-caption-size);
   font-weight: var(--font-weight-application-pathway-role-badge);
-  color: var(--role-accent, var(--accent-fg));
+  color: var(--text-primary);
   opacity: 0.78;
   transform: var(--motion-transform-product-cta-rest);
   transition:
     opacity var(--motion-duration-slow) var(--motion-easing-expressive),
     transform var(--motion-duration-slow) var(--motion-easing-expressive);
+}
+.alu-product-card__cta .alu-icon {
+  color: var(--role-accent, var(--accent-fg));
 }
 .alu-product-card:hover .alu-product-card__cta {
   opacity: 1;

@@ -85,7 +85,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
         expected_pairs = [
             ("Allplan 2026", "https://youtube.com/playlist?list=PLowC-ZFUywGMotfHSyzqoNZCQYWl_6G1x&si=BSEJvgjsQWgbIwVe"),
             ("Youtube Allplan English", "https://www.youtube.com/@ALLPLANEnglish"),
-            ("Youtube Allplan Global", "https://www.youtube.com/@ALLPLANglobal"),
+            ("Youtube Allplan Global", "https://www.youtube.com/c/AllplanInternational"),
             ("Youtube Allplan Precast", "https://www.youtube.com/c/AllplanPrecast"),
             ("Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları", "/solutions-v2/training/video-library/hello-allplan-2024"),
             ("Allplan Add On Geometry Tools", "/solutions-v2/training/video-library/addon-geometry"),
@@ -203,7 +203,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
             "Math.max(",
             "playlist.videos.findIndex",
             "onClick={() => onVideoChange(video.id)}",
-            "https://www.youtube.com/embed/",
+            "https://www.youtube-nocookie.com/embed/",
             "https://www.youtube.com/watch?v=",
             "https://img.youtube.com/vi/",
             "alu-playlist-item--active",
@@ -560,9 +560,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
             "10K+",
             'href="/contact"',
             'href="/references"',
-            "mapEmbed.src",
-            'loading="lazy"',
-            'referrerPolicy="no-referrer-when-downgrade"',
+            "<ConsentEmbed src={mapEmbed.src}",
         ]:
             with self.subTest(marker=marker):
                 self.assertIn(marker, component)

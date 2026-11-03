@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import '@/styles/globals.css';
 import { SiteShell } from '@/components/shell/SiteShell';
+import { ConsentScripts } from '@/components/shell/ConsentScripts';
 import { SITE_ORIGIN } from '@/lib/site-data';
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="tr" data-theme="aluplan" data-mode="dark">
       <body>
         <SiteShell>{children}</SiteShell>
+        <ConsentScripts />
       </body>
     </html>
   );

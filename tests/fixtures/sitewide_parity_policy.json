@@ -60,8 +60,8 @@
     },
     {
       "source": "https://www.youtube.com/@AllplanInternational",
-      "generated": "https://www.youtube.com/@ALLPLANglobal",
-      "reason": "Current official ALLPLAN channel"
+      "generated": "https://www.youtube.com/c/AllplanInternational",
+      "reason": "Channel link published on allplan.com; @AllplanInternational and @ALLPLANglobal handles return 404 (checked 2026-11-03)"
     },
     {
       "source": "https://forms.office.com/r/XLQm9JPTSR",

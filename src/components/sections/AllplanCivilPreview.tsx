@@ -5,6 +5,7 @@ import { BenefitsSection } from './BenefitsSection';
 import { CivilFeatureGrid } from './CivilFeatureGrid';
 import styles from './AllplanCivilPreview.module.css';
 import quoteStyles from './AllplanMaxPreviewPage.module.css';
+import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
 
 const cases = [
  ['Queensferry Crossing','Edinburgh, İskoçya (Birleşik Krallık)','Edinburgh yakınlarındaki üç kuleli askılı köprünün kuleleri 200 metreden yüksektir. Avrupa’nın büyük altyapı projelerinden biri olan yapı, 3B donatı planlamasından yararlanmıştır.','https://www.allplan.com/fileadmin/user_upload/shared-files/references/Interim_On24/EN_Bridge/Case_Study_Queensferry_Crossing_EN_GmbH.pdf'],
@@ -21,7 +22,7 @@ export function AllplanCivilPreview(){return <div className={styles.page}>
     <div className={styles.overviewIncludes}><h3>ALLPLAN Ultimate’ın tüm özelliklerine ek olarak</h3><ul><li>Entegre köprü yapı analizi</li><li>Donatı tasarımı ve yönetmelik kontrolü</li></ul></div>
     <div className={styles.links}><a href="/products/allplan-ultimate">ALLPLAN Ultimate ↗</a><a href="/solutions/bridge-design">Köprü mühendisliği iş akışları ↗</a><a href="/solutions/infrastructure">Altyapı mühendisliği iş akışları ↗</a></div>
   </div>
-  <div className="alu-intro-split__media"><div className="alu-intro-split__video-frame"><iframe className={styles.overviewVideo} src="https://www.youtube-nocookie.com/embed/SeA6ncaqUhY?rel=0" title="ALLPLAN Civil tanıtım videosu" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen /></div></div>
+  <div className="alu-intro-split__media"><div className="alu-intro-split__video-frame"><ConsentEmbed src="https://www.youtube-nocookie.com/embed/SeA6ncaqUhY?rel=0" title="ALLPLAN Civil tanıtım videosu" className={styles.overviewVideo} /></div></div>
 </div></section>
 <section className={styles.section}><div className="alu-container"><div className="alu-challenges-band"><div className="alu-challenges-band__header"><span className="preview-kicker">/ SEKTÖREL ZORLUKLAR</span><h2 className="alu-h3">Bu zorluklarla sık sık karşılaşıyor musunuz?</h2></div><div className={`alu-challenges-grid ${styles.challengesGrid}`}>{challenges.map((x,i)=><article className="alu-challenge-card" key={x}><span className="alu-challenge-card__num">0{i+1}</span><p className="alu-body-sm" style={{margin:0}}>{x}</p></article>)}</div></div></div></section>
 <section className={styles.band}><div className="alu-container"><h2>ALLPLAN işinize nasıl katkı sağlar?</h2><div className="alu-hero-metrics">{metrics.map(([v,t,d])=><article className="alu-hero-metrics__item" key={t}><span className="alu-hero-metrics__value">{v}</span><h3 className="alu-hero-metrics__label">{t}</h3><p className="alu-hero-metrics__note">{d}</p></article>)}</div></div></section>

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { MediaDialog } from '@/components/ui/MediaDialog';
 import styles from './AllplanMaxPreviewPage.module.css';
+import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
 
 export function AllplanMaxVideo({ id, title }: { id: string; title: string }) {
   const [open, setOpen] = useState(false);
@@ -18,7 +19,7 @@ export function AllplanMaxVideo({ id, title }: { id: string; title: string }) {
           <button type="button" className="alu-video-modal__close" data-media-dialog-close aria-label="Videoyu kapat" onClick={() => setOpen(false)}>✕</button>
         </div>
         <div className="alu-video-modal__viewport">
-          <iframe src={`https://www.youtube-nocookie.com/embed/${id}?autoplay=1`} title={`${title} videosu`} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+          <ConsentEmbed src={`https://www.youtube-nocookie.com/embed/${id}?autoplay=1`} title={`${title} videosu`} requested />
         </div>
       </div>
     </MediaDialog>}

@@ -1,20 +1,56 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './AllplanMaxPreviewPage.module.css';
 
+const AUTOPLAY_QUERY = '(min-width: 768px) and (prefers-reduced-motion: no-preference)';
+const VISIBILITY_MARGIN = '200px';
+
 export function AllplanMaxFeatureClip({ src, title }: { src: string; title: string }) {
-  const [reducedMotion, setReducedMotion] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [visible, setVisible] = useState(false);
+  const [canAutoplay, setCanAutoplay] = useState(false);
 
   useEffect(() => {
-    const media = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const update = () => setReducedMotion(media.matches);
+    const media = window.matchMedia(AUTOPLAY_QUERY);
+    const update = () => setCanAutoplay(media.matches);
     update();
     media.addEventListener('change', update);
     return () => media.removeEventListener('change', update);
   }, []);
 
-  return <video key={String(reducedMotion)} className={styles.featureClip} muted loop playsInline autoPlay={!reducedMotion} controls preload="metadata" aria-label={`${title} görsel tanıtımı`}>
-    <source src={src} type="video/mp4" />
-  </video>;
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setVisible(true);
+        observer.disconnect();
+      }
+    }, { rootMargin: VISIBILITY_MARGIN });
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || !visible) return;
+    if (canAutoplay) {
+      video.play().catch(() => undefined);
+    } else {
+      video.pause();
+    }
+  }, [visible, canAutoplay]);
+
+  return <video
+    ref={videoRef}
+    className={styles.featureClip}
+    muted
+    loop
+    playsInline
+    controls
+    preload={visible && !canAutoplay ? 'metadata' : 'none'}
+    src={visible ? `${src}#t=0.1` : undefined}
+    aria-label={`${title} görsel tanıtımı`}
+  />;
 }

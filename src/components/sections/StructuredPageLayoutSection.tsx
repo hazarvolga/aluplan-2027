@@ -18,6 +18,7 @@ import { ReferencesDirectorySection } from './ReferencesDirectorySection';
 import { SplitCalloutSection } from './SplitCalloutSection';
 import { StructuredContentBlocks } from './StructuredContentBlocks';
 import { WorkflowSection } from './WorkflowSection';
+import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
 
 interface StructuredVideoRequest {
   youtubeId?: string;
@@ -110,12 +111,7 @@ export function StructuredPageLayoutSection({
               {layout.intro.videoEmbedUrl && (
                 <div className="alu-intro-split__media">
                   <div className="alu-intro-split__video-frame">
-                    <iframe
-                      src={layout.intro.videoEmbedUrl}
-                      title={layout.intro.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
+                    <ConsentEmbed src={layout.intro.videoEmbedUrl} title={layout.intro.title ?? ''} fill />
                   </div>
                 </div>
               )}

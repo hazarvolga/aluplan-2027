@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { features, options, clouds } from '@/data/allplan-civil-2027-preview';
 import { MediaDialog } from '@/components/ui/MediaDialog';
 import { MediaGridSection } from './MediaGridSection';
+import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
 
 export function CivilFeatureGrid({ variant = 'features' }: { variant?: 'features' | 'options' | 'clouds' }) {
   const [image, setImage] = useState<{ src: string; title: string } | null>(null);
@@ -19,7 +20,7 @@ export function CivilFeatureGrid({ variant = 'features' }: { variant?: 'features
     <MediaGridSection grid={{ title: isOptions ? 'Satın alınabilir seçenekler' : isClouds ? 'ALLPLAN Cloud Services' : 'ALLPLAN Civil özellikleri', subtitle: isOptions || isClouds ? undefined : 'İşlevlere genel bakış', columns: 4, items: items.map(([title, description, youtubeId], index) => ({ title, description, youtubeId, imageSrc: `/assets/previews/allplan-civil-2027/features/${selectedImages[index]}` })) }} itemKeyPrefix={isOptions ? "civil-option" : isClouds ? "civil-cloud" : "civil-feature"} onVideo={setVideo} onImage={setImage} />
     {image && <MediaDialog label={`${image.title} görseli`} onClose={() => setImage(null)}><div className="alu-video-modal__dialog alu-video-modal__dialog--image"><div className="alu-video-modal__header"><h3 className="alu-video-modal__title">{image.title}</h3><button type="button" className="alu-video-modal__close" data-media-dialog-close aria-label="Görseli kapat" onClick={() => setImage(null)}>✕</button></div><div className="alu-video-modal__image-viewport"><img src={image.src} alt={image.title} /></div></div></MediaDialog>}
     {video && <MediaDialog label={`${video.title} videosu`} onClose={() => setVideo(null)}>
-      <div className="alu-video-modal__dialog"><div className="alu-video-modal__header"><h3 className="alu-video-modal__title">{video.title}</h3><button type="button" className="alu-video-modal__close" data-media-dialog-close aria-label="Videoyu kapat" onClick={() => setVideo(null)}>✕</button></div><div className="alu-video-modal__viewport"><iframe src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}?autoplay=1`} title={`${video.title} videosu`} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen /></div></div>
+      <div className="alu-video-modal__dialog"><div className="alu-video-modal__header"><h3 className="alu-video-modal__title">{video.title}</h3><button type="button" className="alu-video-modal__close" data-media-dialog-close aria-label="Videoyu kapat" onClick={() => setVideo(null)}>✕</button></div><div className="alu-video-modal__viewport"><ConsentEmbed src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}?autoplay=1`} title={`${video.title} videosu`} requested /></div></div>
     </MediaDialog>}
   </>;
 }

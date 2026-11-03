@@ -31,6 +31,7 @@ import { ScalypsoSubpage } from './ScalypsoSubpage';
 import { ScalypsoModeler } from './ScalypsoModeler';
 import { SectionActions, SectionCardLink, visibleSectionItems } from './SectionLinks';
 import { DocumentGroupsSection, documentSectionHeadings } from './DocumentGroupsSection';
+import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
 
 const SECTION_LABELS: Record<string, string> = {
   products: 'ALLPLAN ÜRÜN AİLESİ',
@@ -552,13 +553,7 @@ export function SubpageView({
                   {page.embeds.map((emb, eIdx) => (
                     <div key={`${emb.src}-${eIdx}`} className="alu-hero-monitor" style={{ padding: 'var(--space-inset-sm)' }}>
                       <div style={{ position: 'relative', aspectRatio: '16 / 9', width: '100%' }}>
-                        <iframe
-                          src={emb.src}
-                          title={emb.title || page.h1}
-                          style={{ width: '100%', height: '100%', border: 0 }}
-                          loading="lazy"
-                          allowFullScreen
-                        />
+                        <ConsentEmbed src={emb.src} title={emb.title || page.h1} style={{ width: '100%', height: '100%', border: 0 }} fill />
                       </div>
                     </div>
                   ))}
@@ -626,12 +621,7 @@ export function SubpageView({
                   style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }}
                 />
               ) : (
-                <iframe
-                  src={`https://www.youtube.com/embed/${activeModalVideo.youtubeId}?autoplay=1`}
-                  title={activeModalVideo.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
+                <ConsentEmbed src={`https://www.youtube-nocookie.com/embed/${activeModalVideo.youtubeId}?autoplay=1`} title={activeModalVideo.title} requested />
               )}
             </div>
           </div>

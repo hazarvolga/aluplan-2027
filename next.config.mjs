@@ -18,10 +18,10 @@ const securityHeaders = [
       "default-src 'self'",
       `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''} https://www.googletagmanager.com https://www.google-analytics.com`,
       "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' data: blob: https://aluplan.com.tr https://*.allplan.com https://img.youtube.com https://i.ytimg.com",
+      "img-src 'self' data: blob: https://aluplan.com.tr https://*.allplan.com https://img.youtube.com https://i.ytimg.com https://*.google-analytics.com https://*.googletagmanager.com https://*.google.com https://*.google.com.tr",
       "font-src 'self' data:",
       "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://forms.office.com https://www.google.com https://maps.google.com",
-      "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com",
+      "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://*.google.com https://*.google.com.tr",
       "media-src 'self' blob: data:",
       "object-src 'none'",
       "base-uri 'self'",
@@ -52,15 +52,24 @@ const securityHeaders = [
   }
 ];
 
+// Public files keep stable names, so they get a week of caching instead of `immutable`.
+const STATIC_ASSET_PREFIXES = ['/assets', '/docs', '/videos', '/images'];
+const STATIC_ASSET_CACHE = 'public, max-age=604800, stale-while-revalidate=86400';
+
 const nextConfig = {
   poweredByHeader: false,
   env: {
     ALUPLAN_SHOW_2027: process.env.ALUPLAN_SHOW_2027 ?? '0',
-    ALUPLAN_BLOCK_INDEXING: process.env.ALUPLAN_BLOCK_INDEXING ?? '0'
+    ALUPLAN_BLOCK_INDEXING: process.env.ALUPLAN_BLOCK_INDEXING ?? '0',
+    ALUPLAN_VERCEL_INSIGHTS: process.env.VERCEL === '1' ? '1' : '0'
   },
   reactStrictMode: true,
   async headers() {
     return [
+      ...STATIC_ASSET_PREFIXES.map((prefix) => ({
+        source: `${prefix}/:path*`,
+        headers: [{ key: 'Cache-Control', value: STATIC_ASSET_CACHE }]
+      })),
       {
         source: '/:path*',
         headers: process.env.ALUPLAN_BLOCK_INDEXING === '1'

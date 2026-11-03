@@ -11,6 +11,7 @@ import { BenefitsSection } from './BenefitsSection';
 import { LinkGroupGridSection } from './LinkGroupGridSection';
 import { MediaGridSection } from './MediaGridSection';
 import { SplitCalloutSection } from './SplitCalloutSection';
+import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
 
 interface StructuredVideoRequest {
   youtubeId?: string;
@@ -92,12 +93,7 @@ function renderBlock(
               {block.content.videoEmbedUrl && (
                 <div className="alu-intro-split__media">
                   <div className="alu-intro-split__video-frame">
-                    <iframe
-                      src={block.content.videoEmbedUrl}
-                      title={introLabel}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
+                    <ConsentEmbed src={block.content.videoEmbedUrl} title={introLabel} fill />
                   </div>
                 </div>
               )}

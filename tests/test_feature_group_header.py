@@ -53,7 +53,7 @@ class GroupedPagesTests(unittest.TestCase):
     def test_frilo_geotechnics_news_is_grouped_under_one_header(self):
         page = (ROOT / "src/app/products/frilo/page.tsx").read_text(encoding="utf-8")
         self.assertIn('title="FRILO Geotechnics 2027 yenilikleri"', page)
-        self.assertIn("group={{ index, unit: 'yenilik' }}", page)
+        self.assertIn('<GroupHeader index={index} title={edition.newsTitle!} count={edition.features.length} unit="yenilik" />', page)
         self.assertEqual(page.count('kicker="FRILO GEOTECHNICS · 2027"'), 1)
 
 

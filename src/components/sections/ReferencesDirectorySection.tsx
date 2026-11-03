@@ -5,6 +5,7 @@ import type { StructuredReferencesDirectory } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { DirectoryCategoryIcon } from './DirectoryCategoryIcon';
 import { handleStructuredTabKey } from './structured-tab-key';
+import { SectionHeader } from './SectionHeader';
 
 interface ReferencesDirectorySectionProps {
   directory: StructuredReferencesDirectory;
@@ -45,22 +46,7 @@ export function ReferencesDirectorySection({
         className="alu-container alu-stack"
         style={{ gap: 'var(--space-stack-xl)' }}
       >
-        <div className="alu-section-header-center">
-          {directory.kicker && (
-            <span className="preview-kicker">{directory.kicker}</span>
-          )}
-          <h1 className="alu-h1" style={{ margin: 0 }}>
-            {directory.title}
-          </h1>
-          {directory.subtitle && (
-            <p
-              className="alu-body preview-meta"
-              style={{ margin: 0, maxWidth: 'var(--container-application-prose-wide)' }}
-            >
-              {directory.subtitle}
-            </p>
-          )}
-        </div>
+        <SectionHeader as="h1" kicker={directory.kicker} title={directory.title} lead={directory.subtitle} />
 
         <div className="alu-ref-controls">
           <div

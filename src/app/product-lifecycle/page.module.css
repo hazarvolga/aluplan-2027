@@ -1,5 +1,4 @@
 .page{background:var(--surface-page);color:var(--text-primary)}
-.kicker{color:var(--accent-fg);font-size:var(--type-caption-size);letter-spacing:.06em;font-weight:var(--font-weight-strong)}
 .nav{border-bottom:var(--border-width-default) solid var(--border-default)}
 .nav nav{display:flex;overflow-x:auto;gap:var(--space-inset-lg)}
 .nav a{display:block;white-space:nowrap;padding:var(--space-inset-md) 0;color:var(--text-primary);text-decoration:none;font-weight:var(--font-weight-strong)}

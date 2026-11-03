@@ -1,3 +1,4 @@
+import { SectionHeader } from './SectionHeader';
 import styles from './PreviewClosingSection.module.css';
 
 export type PreviewClosingItem = {
@@ -14,8 +15,7 @@ export function PreviewClosingSection({ id, title, kicker, items }: {
 }) {
   return <section className={styles.section} aria-labelledby={id}>
     <div className="alu-container">
-      {kicker && <p className={styles.kicker}>{kicker}</p>}
-      <h2 id={id} className={styles.title}>{title}</h2>
+      <div className={styles.head}><SectionHeader kicker={kicker} title={title} id={id} /></div>
       <div className={styles.grid}>
         {items.map((item, index) => <article className={styles.option} key={index}>
           {item.title && <h3>{item.title}</h3>}

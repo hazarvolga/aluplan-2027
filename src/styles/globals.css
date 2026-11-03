@@ -5190,11 +5190,11 @@ button.alu-role[aria-checked="true"] {
    Structured Product & Solution Page Layouts (Live-Site 1:1 Architecture)
    ========================================================================== */
 
-.alu-section-header-center {
+.alu-section-header {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
   gap: var(--space-application-card-dense-gap);
 }
 

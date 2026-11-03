@@ -1,5 +1,15 @@
 # Oturum devri
 
+## 03.11.2026 — Faz 2 devamı: bölüm başlıkları sola hizalı (commitlendi, onay bekliyor)
+
+- **Karar (kullanıcı):** bölüm başlıkları hepsi sola hizalı.
+- **Yapılan:** `SectionHeader` sola hizalı oldu (`alu-section-header`: `align-items: flex-start`, `text-align: left`); ortalı varyant (`alu-section-header-center`) CSS'ten, bileşenlerden ve derlenmiş sayfalardan tamamen kalktı. `SectionHeader` iki yeni özellik aldı: `id` (aria-labelledby için) ve `as="h1"` (sayfa başlığı bloğu için).
+- **Kopya başlık işaretlemesi tek bileşene toplandı:** `EditionCards` (kicker+başlık+lead), `ProductPageParts` (`ProductContentSection`, `ProductFaq`), `ProductEditionView` özellik başlığı, `PreviewClosingSection`, `ReferencesDirectorySection` (h1, ortalıydı, sola hizalandı), Ürün Yaşam Döngüsü (6 bölüm), Paket Karşılaştırma sürüm başlığı, FRILO (genel bakış ve müşteri projeleri). İlgili modül CSS kuralları (kicker/başlık/lead) silindi; bölüm başlığı ile içerik arası boşluk `sectionHead`/`head` sınıflarıyla korundu.
+- **Ölçüm (dev, 1280 px):** Allplan Basic, FRILO ve Rebar'da tüm bölüm `<h2>`'leri 32 px ve container'ın sol kenarında (x=278), `text-align: left`; derlenmiş hiçbir sayfada `alu-section-header-center` yok.
+- **Testler:** `tests/test_section_header.py` (sola hizalı kural, ortalı varyant yok, benimseyen bileşenler, EditionCards kendi başlık CSS'ini taşımıyor, derlenmiş sayfalarda ortalı başlık yok). 420 test, 46/46 parite, 45/45 token, typecheck, build.
+- **Hâlâ kendi başlık stilini kullananlar (Faz 3 adayı):** Max (kendi 56 px/eyebrow başlıkları), Scalypso sayfaları, `Allplan2027FeaturesPreview` grup başlıkları, ana sayfa ve Hakkımızda (`alu-h1` h2'ler), `RecordedWebinars`/`ResourcesDirectory`/`EducationPartners`/`VideoLibraryHubSection` grup başlıkları (`groupTitle`), `ProjectCarousel`, `CustomerTestimonials`, `IntroSplitSection`, `Release2027Band` (18 px) ve `PageEndConversion` (20 px). Bunlar zaten sola hizalı; yalnızca işaretleme/ölçek kopyaları.
+- **Karar bekleyen:** görünüm uygun mu? Sonraki: Faz 3 (kart sistemi: 16 kart ailesini üçe indirme) ve yukarıdaki kalan başlıkların `SectionHeader`'a alınması.
+
 ## 03.11.2026 — Tasarım standardizasyonu, Faz 2: hero birleştirme ve SectionHeader (commitlendi, onay bekliyor)
 
 - **Kapsam (kullanıcı onayı: "Uygun, Faz 2'ye geç"):** hero ailelerinin birleştirilmesi ve tek bölüm başlığı bileşeni. İçerik değişmedi.

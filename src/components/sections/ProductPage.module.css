@@ -4,7 +4,7 @@
 .tabList a:hover{color:var(--accent-fg);border-bottom-color:var(--accent-border)}
 .tabList a:focus-visible{outline:var(--focus-width) solid var(--focus-ring);outline-offset:calc(-1 * var(--focus-width))}
 .contentSection{scroll-margin-top:8rem;padding-block:var(--space-inset-md)}
-.contentSection h2{font-family:var(--font-heading);font-size:var(--type-h2-size);line-height:var(--type-h2-line-height);margin:0 0 var(--space-stack-md)}
+.sectionHead{margin-bottom:var(--space-stack-md)}
 .faq details{border:var(--border-width-default) solid var(--border-default);background:var(--surface-default)}
 .faq details+details{border-top:0}.faq summary{display:flex;align-items:center;justify-content:space-between;gap:var(--space-inline-md);min-height:var(--target-min);padding:var(--space-inset-sm) var(--space-inset-md);list-style:none;cursor:pointer;font-weight:var(--font-weight-strong)}
 .faq summary::-webkit-details-marker{display:none}.faq summary::after{content:'+';color:var(--accent-fg);font-size:var(--type-h3-size);font-weight:var(--font-weight-body)}

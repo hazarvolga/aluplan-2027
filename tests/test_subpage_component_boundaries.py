@@ -576,7 +576,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
         self.assertIn("import type { StructuredPageLayout }", component)
         self.assertNotIn("'use client'", component)
         self.assertIn("<SectionHeader", component)
-        self.assertIn("alu-section-header-center", read("src/components/sections/SectionHeader.tsx"))
+        self.assertIn("alu-section-header", read("src/components/sections/SectionHeader.tsx"))
         for marker in [
             "alu-benefits-grid",
             "alu-benefits-grid--cols-4",

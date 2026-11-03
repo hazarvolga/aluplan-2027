@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { EditionCards } from './EditionCards';
 import page from './ProductPage.module.css';
+import { SectionHeader } from './SectionHeader';
 
 type EditionCardsProps = Parameters<typeof EditionCards>[0];
 
@@ -16,12 +17,12 @@ export function ProductEditionsBand({ id, className, ...cards }: EditionCardsPro
 
 /** Section with a kicker and a heading; `labelledBy` links the section to its heading id. */
 export function ProductContentSection({ id, kicker, title, labelledBy, children }: { id?: string; kicker: string; title: string; labelledBy?: string; children: ReactNode }) {
-  return <section id={id} className={page.contentSection} aria-labelledby={labelledBy}><p className={page.kicker}>{kicker}</p><h2 id={labelledBy}>{title}</h2>{children}</section>;
+  return <section id={id} className={page.contentSection} aria-labelledby={labelledBy}><div className={page.sectionHead}><SectionHeader kicker={kicker} title={title} id={labelledBy} /></div>{children}</section>;
 }
 
 /** Question and answer list. `accordionClasses` adds the shared accordion classes some pages use. */
 export function ProductFaq({ id, kicker, items, accordionClasses = false }: { id: string; kicker: string; items: readonly (readonly string[])[]; accordionClasses?: boolean }) {
-  return <section id={id} className={`${page.contentSection} ${page.faq}`}><p className={page.kicker}>{kicker}</p><h2>Sık sorulan sorular</h2>{items.map(([question, answer]) => accordionClasses
+  return <section id={id} className={`${page.contentSection} ${page.faq}`}><div className={page.sectionHead}><SectionHeader kicker={kicker} title="Sık sorulan sorular" /></div>{items.map(([question, answer]) => accordionClasses
     ? <details className="alu-accordion__item" key={question}><summary className="alu-accordion__trigger">{question}</summary><p>{answer}</p></details>
     : <details key={question}><summary>{question}</summary><p>{answer}</p></details>)}</section>;
 }

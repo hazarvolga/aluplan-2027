@@ -1,5 +1,6 @@
 import { useId } from 'react';
 import styles from './EditionCards.module.css';
+import { SectionHeader } from './SectionHeader';
 
 type EditionItem = string | { title: string; text: string };
 type Edition = { title: string; items?: readonly EditionItem[]; description?: string; itemsLabel?: string };
@@ -9,7 +10,7 @@ type EditionCardsProps = { title: string; editions: readonly Edition[]; kicker?:
 export function EditionCards({ title, editions, kicker = 'SÜRÜMLER', lead }: EditionCardsProps) {
   const headingId = useId();
   return <section className={styles.section} aria-labelledby={headingId}>
-    <div className={styles.heading}><p className={styles.kicker}>{kicker}</p><h2 id={headingId}>{title}</h2>{lead && <p className={styles.lead}>{lead}</p>}</div>
+    <div className={styles.heading}><SectionHeader kicker={kicker} title={title} lead={lead} id={headingId} /></div>
     <div className={styles.grid}>{editions.map(edition => <article className={styles.card} key={edition.title}>
       <h3>{edition.title}</h3>
       {edition.description && <p>{edition.description}</p>}

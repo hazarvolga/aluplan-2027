@@ -9,6 +9,7 @@ import { buildPageMetadata } from '@/lib/metadata';
 import { getPageData, getPlaylistData } from '@/lib/site-data';
 import { SubpageView } from '@/components/sections/SubpageView';
 import { CompactPageHero } from '@/components/sections/CompactPageHero';
+import { SectionHeader } from '@/components/sections/SectionHeader';
 
 export function generateMetadata(): Metadata {
   return isReleaseContentEnabled() ? buildRelease2027Metadata('/paket-karsilastirma') : buildPageMetadata('/paket-karsilastirma');
@@ -23,7 +24,7 @@ function Compare2027(){
  return <div className={styles.page}><CompactPageHero crumbs={[{ label: 'Ana Sayfa', href: '/' }, { label: 'Paket karşılaştırma' }]} kicker="ALLPLAN · 2027" title="ALLPLAN sürümlerini karşılaştırın" lead="Basic, Concept, Professional ve Ultimate sürümlerinin özelliklerini karşılaştırın."><p className={styles.notice}>Sürüm bağlantıları mevcut yerel ürün sayfalarına gider.</p></CompactPageHero><div className="alu-container">
  <p className={styles.footnote}>✓ Dâhil · — Kaynakta dâhil olarak işaretlenmemiş · İsteğe bağlı. Mobilde tabloyu yatay kaydırabilirsiniz.</p>
  <ComparisonTable editions={editions} /><p className={styles.footnote}>** ALLPLAN abonelik lisanslarına dâhildir. *** ALLPLAN Model Viewer, ALLPLAN aboneliği veya Bimplus Professional satın alımıyla kullanılabilir.</p>
- <section className={styles.editions}><p className="preview-kicker">/ SÜRÜMLER</p><h2>İhtiyacınıza uygun sürümü keşfedin</h2><div>{editions.map(e=><article key={e.name}><h3>ALLPLAN {e.name}</h3><p>{e.description}</p><a href={e.href} aria-label={`Sürümü incele: ALLPLAN ${e.name}`}>Sürümü incele ↗</a></article>)}</div></section></div></div>;
+ <section className={styles.editions}><SectionHeader kicker="/ SÜRÜMLER" title="İhtiyacınıza uygun sürümü keşfedin" /><div>{editions.map(e=><article key={e.name}><h3>ALLPLAN {e.name}</h3><p>{e.description}</p><a href={e.href} aria-label={`Sürümü incele: ALLPLAN ${e.name}`}>Sürümü incele ↗</a></article>)}</div></section></div></div>;
 }
 
 // With the 2027 release off, this URL keeps serving the existing package comparison page.

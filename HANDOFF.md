@@ -1,6 +1,12 @@
 # Oturum devri
 
-## 03.11.2026 — YARIM KALAN İŞ: FRILO sürüm kartlarına allplan.com mağaza hero görselleri (dal `codex/design-phase-4`)
+## 03.11.2026 — FRILO sürüm kartı görselleri tamamlandı
+- FRILO ve FRILO Geotechnics kartlarına üretici mağazasından on görsel eklendi; 1200 px JPEG türevleri `public/assets/previews/frilo/editions/` altında. Kaynak ve kullanıcı kararı `docs/brand/assets-license-log.md` dosyasına işlendi; üreticinin ayrıca verdiği kullanım izni henüz doğrulanmış değil.
+- `EditionCards` görselleri 16:9 gösterir; ürün arayüzünü korumak için kırpma aşağı odaklanır. Geotechnics kartlarına yeni mağaza bağlantıları eklenmedi; bu karar açık.
+- Bayraklı build, typecheck, 484 Python testi (4 gerekçeli atlama) ve 46/46 parite geçti. Tarayıcıda on görselin yüklenmesi ve oranı, açık/koyu tema incelendi. Kod incelemesinde kritik/yüksek bulgu yok; görseller toplam yaklaşık 3,7 MB, sonraki optimizasyon adayı.
+- Yerel sunucu `http://127.0.0.1:3001/products/frilo` adresinde açıldı. Kullanıcının diğer revizeleri bekleniyor; ardından Faz 4 PR'ı planlanıyor. `next-env.d.ts` ve `.claude/` yerel değişiklikleri korunuyor.
+
+## 03.11.2026 — Önceki devir: FRILO mağaza hero görselleri planı (yukarıda tamamlandı)
 - **Durum:** Dalda 15+ commit var; son commit `90bb398` (FRILO sürüm yenilikleri ve mağaza bağlantıları). Push yok, PR yok. Kullanıcı "Önce revizelerim" dedi; revizeler sürüyor. `next-env.d.ts` build değişikliği, commit edilmez.
 - **Kullanıcı onayı (03.11.2026):** "FRILO sürümleri" (5) ve "FRILO Geotechnics sürümleri" (5) kartlarına allplan.com mağaza sayfalarındaki hero görselleri alınacak ("Evet, al" + "Bu kartlarda da görsel kullanabilsek iyi olur").
 - **Bulunanlar (doğrulandı):** On mağaza sayfası 200 dönüyor: `https://www.allplan.com/en-US/shop/products/frilo/<slug>`; slug'lar `frilo-concept`, `frilo-professional-concrete`, `frilo-professional-steel`, `frilo-professional-timber`, `frilo-ultimate`, `frilo-geotechnics-concept`, `frilo-geotechnics-professional-pit`, `frilo-geotechnics-professional-retaining`, `frilo-geotechnics-ultimate`, `frilo-geotechnics-soil-mechanics`. Hero dosyaları (1200×1200 JPEG): `header_frilo-concept`, `header_frilo-prof-concrete`, `header_frilo-prof-steel`, `header_frilo-prof-timber`, `header_frilo-ultimate`, `header_frilo-geotechnics-concept`, `header_frilo-geotechnics-prof-pit`, `header_frilo-geotechnics-prof-retaining`, `header_frilo-geotechnics-ultimate`, `header_frilo-geotechnics-soil-mechanics` (+ `-1200x1200.jpg`). İndirme adresi: `https://typo3-parser-dev.vercel.app/api/images/fileadmin/user_upload/shared-files/shop/header/frilo/<dosya>` (200, ~250 KB); `www.allplan.com/fileadmin/...` 403 döner.

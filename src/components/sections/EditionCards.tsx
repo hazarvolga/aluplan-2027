@@ -5,7 +5,7 @@ import { SectionHeader } from './SectionHeader';
 import { GroupHeader } from './GroupHeader';
 
 type EditionItem = string | { title: string; text: string };
-type Edition = { title: string; items?: readonly EditionItem[]; description?: string; itemsLabel?: string; label?: string; icon?: AluIconName; link?: { href: string; label: string } };
+type Edition = { title: string; items?: readonly EditionItem[]; description?: string; itemsLabel?: string; label?: string; icon?: AluIconName; image?: { src: string; alt: string }; link?: { href: string; label: string } };
 
 type EditionCardsProps = { title: string; editions: readonly Edition[]; kicker?: string; lead?: string; variant?: 'grid' | 'cards' | 'steps' | 'icons'; group?: { index: number; unit?: string } };
 
@@ -21,6 +21,7 @@ export function EditionCards({ title, editions, kicker = 'SÜRÜMLER', lead, var
     <div className={gridClass} data-variant={variant}>{editions.map((edition, index) => <article className={styles.card} key={edition.title}>
       {variant === 'steps' && <p className={styles.stepLabel}><span className={styles.stepNumber} aria-hidden="true">{stepNumber(index)}</span>{edition.label}</p>}
       {variant === 'icons' && edition.icon && <span className={styles.iconChip}><AluIcon name={edition.icon} size="lg" /></span>}
+      {variant === 'cards' && edition.image && <img className={styles.cardImage} src={edition.image.src} alt={edition.image.alt} width="1200" height="1200" loading="lazy" />}
       <h3>{edition.title}</h3>
       {edition.description && <p>{edition.description}</p>}
       {edition.items && edition.itemsLabel && <p className={styles.itemsLabel}>{edition.itemsLabel}</p>}

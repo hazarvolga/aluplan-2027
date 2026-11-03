@@ -22,3 +22,5 @@
 .cardLink{align-self:flex-start;margin-top:auto;padding-top:var(--space-stack-md);color:var(--accent-fg);font-weight:var(--font-weight-strong);text-decoration:none}
 .cardLink:hover{text-decoration:underline;text-underline-offset:.2em}
 .cardLink:focus-visible{outline:var(--border-width-strong) solid var(--accent-border);outline-offset:var(--space-inline-xs)}
+
+.cardImage{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center 70%;margin-bottom:var(--space-stack-md)}

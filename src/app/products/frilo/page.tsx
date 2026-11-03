@@ -26,12 +26,17 @@ const editions = [
   { title: 'FRILO Professional Timber', link: { href: 'https://www.allplan.com/en-US/shop/products/frilo/frilo-professional-timber', label: 'Sürümü inceleyin ↗' }, items: ['Ahşap yapı tasarımına odaklanan araçlar', 'Ahşap kirişler, kafesler ve çerçeve sistemleri', 'Tutkallı lamine kirişler ve çapraz lamine ahşap kirişler', 'Eğik dişli, çekme ve kırlangıç kuyruğu birleşimleri', 'FBC / BIM Connector'] },
   { title: 'FRILO Ultimate', link: { href: 'https://www.allplan.com/en-US/shop/products/frilo/frilo-ultimate', label: 'Sürümü inceleyin ↗' }, items: ['Beton, çelik, ahşap ve yığma modüllerine tam erişim', 'Karma malzemeli yapılar için 2B ve 3B çerçeve sistemleri', 'Gelişmiş temel mühendisliği ve zemin–yapı kontrolleri', 'Farklı malzemelerde kapsamlı bileşen ve detay kontrolleri', 'BIMPLUS ile ALLPLAN, SCIA ve diğer araçlara bağlantılar'] },
 ];
+function friloEditionImage(title: string) {
+  const slug = title.toLowerCase().replaceAll(' ', '-');
+  return { src: `/assets/previews/frilo/editions/${slug}.jpg`, alt: '' };
+}
+
 function FriloPreview() {
   if (!isReleaseContentEnabled()) notFound();
   return <div>
     <ProductHero eyebrow="FRILO · YAPI ANALİZİ" title="Bileşen odaklı yapı analizi ve tasarım" description="FRILO; beton, çelik, ahşap ve yığma yapıların bileşen odaklı analizi ve tasarımı için BIM bağlantıları ve Eurocode ile DIN temelli araçlar sunar." image="/assets/previews/frilo/frilo-hero.jpg" highlights={['İhtiyaçlarınıza uygun araç seti', 'Yapı bileşenleri için hesaplar', 'Düzenli hesap raporları', 'Diğer araçlarla iş birliği']} actions={[{ label: 'Teklif isteyin ↗', href: MAIN_QUOTE_FORM_URL, variant: 'primary' }]} />
-    <ProductEditionsBand title="FRILO sürümleri" variant="cards" editions={editions} />
-    <ProductEditionsBand id="frilo-geotechnics" variant="cards" kicker="FRILO GEOTECHNICS · SÜRÜMLER" title="FRILO Geotechnics sürümleri" lead={geotechnics.lead} editions={geotechnics.editions.map(edition => ({ title: edition.name, description: edition.intro }))} />
+    <ProductEditionsBand title="FRILO sürümleri" variant="cards" editions={editions.map(edition => ({ ...edition, image: friloEditionImage(edition.title) }))} />
+    <ProductEditionsBand id="frilo-geotechnics" variant="cards" kicker="FRILO GEOTECHNICS · SÜRÜMLER" title="FRILO Geotechnics sürümleri" lead={geotechnics.lead} editions={geotechnics.editions.map(edition => ({ title: edition.name, description: edition.intro, image: friloEditionImage(edition.name) }))} />
     <ProductTabNav label="FRILO sayfa bölümleri" links={[{href:'#frilo-overview',label:'Genel bakış'},{href:'#frilo-geotechnics',label:'Geoteknik'},{href:'#frilo-capabilities',label:'Yetenekler'},{href:'#frilo-stories',label:'Başarı hikâyeleri'},{href:'#frilo-faq',label:'Sık sorulan sorular'}]} />
     <section id="frilo-overview" className={`${hero.sectionBand} ${hero.contentSection}`}><div className={`alu-container ${hero.overview}`}><div><SectionHeader kicker="FRILO · GENEL BAKIŞ" title="FRILO’ya genel bakış" /><p>FRILO, beton, çelik, ahşap ve yığma yapılar için Eurocode ve DIN ile uyumlu, bileşen odaklı bir yapı analizi ve tasarım çözümüdür. Yapı mühendisleri gerçekçi yapı davranışını modelleyebilir, kritik bileşenleri kontrol edebilir ve sonuçları şeffaf, denetlenebilir biçimde belgelendirebilir.</p><p>FRILO 2027 ile FRILO Connections, bağlantı türlerini zaman kazandıran raporlama ile tek bir araçta birleştirir; CLT+ çapraz lamine ahşap döşemeler için 2B tasarım sunar ve AI Coach sorulara anında destek sağlar.</p><a className={hero.textLink} href="/2027/features">2027 yeniliklerini inceleyin ↗</a></div><img src="/assets/previews/frilo/source/03.jpg" alt="Geniş açıklıklı, çapraz kolonlu bir bina iç mekânı" width="750" height="400" loading="lazy" /></div></section>
     <div className="alu-container alu-stack" style={{gap:"var(--space-stack-xl)"}}>

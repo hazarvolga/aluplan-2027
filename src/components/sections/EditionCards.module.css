@@ -9,3 +9,5 @@
 .card li{position:relative;padding-left:1rem}.card li::before{content:'+';position:absolute;left:0;color:var(--accent-fg)}
 .card p{margin:0;color:var(--text-secondary);font-size:var(--type-body-size);line-height:var(--type-body-line-height)}
 .card li strong{display:block;color:var(--text-primary);font-weight:var(--font-weight-strong)}
+.lead{max-width:75ch;margin:var(--space-stack-sm) 0 0;color:var(--text-secondary);line-height:var(--type-body-line-height)}
+.itemsLabel{margin:var(--space-stack-md) 0 var(--space-stack-xs);color:var(--text-primary);font-size:var(--type-caption-size);font-weight:var(--font-weight-strong)}

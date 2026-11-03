@@ -36,6 +36,7 @@ import { Ax3000MechanicalContent } from './Ax3000MechanicalContent';
 import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
 import { MediaViewerDialogs } from './MediaViewerDialogs';
 import { FeatureRow, FeatureRowList } from './FeatureRow';
+import { SectionHeader } from './SectionHeader';
 
 const AX3000_DOCS_ROUTE = '/products/ax3000/dokumanlar';
 const AX3000_MECHANICAL_ROUTE = '/solutions/ax3000-mekanik-tesisat';
@@ -311,10 +312,7 @@ export function SubpageView({
       {pageVideos.length > 0 && !page.structuredLayout?.splitCallouts?.some((c) => Boolean(c.videoSrc)) && (
         <section className="preview-section preview-section--subtle" aria-label="Sayfa videoları">
           <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-lg)' }}>
-            <div className="alu-stack">
-              <span className="preview-kicker">TEKNİK VİDEO GÖSTERİMLERİ</span>
-              <h2 className="alu-h2">Uygulama ve İş Akışı Videoları</h2>
-            </div>
+            <SectionHeader kicker="TEKNİK VİDEO GÖSTERİMLERİ" title="Uygulama ve İş Akışı Videoları" />
             <div className="alu-products-showcase">
               {pageVideos.map((vid, vIdx) => (
                 <article key={`${vid.src}-${vIdx}`} className="alu-product-card">
@@ -447,10 +445,7 @@ export function SubpageView({
             {/* Interactive States / Tabs captured during Phase 0 dynamic audit */}
             {page.interactiveStates && page.interactiveStates.length > 0 && (
               <div className="alu-module-tabs" aria-label="Detaylı Modül ve Sekme İçerikleri">
-                <div className="alu-stack">
-                  <span className="preview-kicker">ETKİLEŞİMLİ TEKNİK DETAYLAR</span>
-                  <h2 className="alu-h2">Detaylı Modül ve İş Akışı Sekmeleri</h2>
-                </div>
+                <SectionHeader kicker="ETKİLEŞİMLİ TEKNİK DETAYLAR" title="Detaylı Modül ve İş Akışı Sekmeleri" />
 
                 <div className="alu-service-pills" role="tablist">
                   {page.interactiveStates.map((st, sIdx) => (
@@ -510,10 +505,7 @@ export function SubpageView({
             {/* Remaining High-Resolution Visual Assets Gallery (excluding small icons) */}
             {!isLegalPage && galleryImages.length > 0 && (
               <div className="alu-stack" style={{ gap: 'var(--space-stack-lg)' }}>
-                <div className="alu-stack">
-                  <span className="preview-kicker">TEKNİK GÖRSEL GALERİ ({galleryImages.length} GÖRSEL)</span>
-                  <h2 className="alu-h2">Modül, Ekran Görüntüleri ve Uygulama Detayları</h2>
-                </div>
+                <SectionHeader kicker={`TEKNİK GÖRSEL GALERİ (${galleryImages.length} GÖRSEL)`} title="Modül, Ekran Görüntüleri ve Uygulama Detayları" />
                 <div className="alu-gallery-grid">
                   {galleryImages.map((img, gIdx) => (
                     <figure key={`${img.src}-${gIdx}`} className="alu-product-card alu-gallery-card">
@@ -540,8 +532,7 @@ export function SubpageView({
             ))}
             {page.path !== '/contact' && page.embeds && page.embeds.length > 0 && !playlist && (
               <div className="alu-stack" style={{ gap: 'var(--space-stack-md)' }}>
-                <span className="preview-kicker">MULTİMEDYA VE VİDEO</span>
-                <h2 className="alu-h2">Video ve Sunum Kayıtları</h2>
+                <SectionHeader kicker="MULTİMEDYA VE VİDEO" title="Video ve Sunum Kayıtları" />
                 <div className="alu-grid">
                   {page.embeds.map((emb, eIdx) => (
                     <div key={`${emb.src}-${eIdx}`} className="alu-hero-monitor" style={{ padding: 'var(--space-inset-sm)' }}>

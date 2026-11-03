@@ -8,6 +8,7 @@ import { IntroSplitSection } from './IntroSplitSection';
 import { CustomerTestimonials } from './CustomerTestimonials';
 import { ProductHero } from './ProductHero';
 import { FeatureRow, FeatureRowList } from './FeatureRow';
+import { SectionHeader } from './SectionHeader';
 
 const records: Record<string, { en: string; tr: string }> = content;
 const text = (key: string) => records[`live.max.${key}`]?.tr ?? '';
@@ -32,7 +33,7 @@ export function AllplanMaxPreviewPage() {
       factsTitle={text('detail.list-title')} facts={[text('detail.bullet-1'), text('detail.bullet-2')]}
       action={{ label: 'Ücretsiz deneme ↗', href: TRIAL_CTA_URL }} />
     <section className={`alu-container ${styles.videoSection}`}><video controls preload="none" poster="/assets/previews/home-2027/allplan-max-generated-v2.jpg" playsInline aria-label="ALLPLAN Max tanıtım videosu"><source src="/assets/previews/allplan-max/Allplan_Max_2027_FINAL_1080p.mp4" type="video/mp4" />Tarayıcınız video oynatmayı desteklemiyor. <a href="/assets/previews/allplan-max/Allplan_Max_2027_FINAL_1080p.mp4">Videoyu indirin</a>.</video></section>
-    <section className={styles.band}><div className={`alu-container ${styles.section}`}><h2 className={styles.eyebrow}>ALLPLAN · {text('survey.title')}</h2><div className={`alu-hero-metrics ${styles.surveyMetrics}`}>{[1,2,3].map(n => {
+    <section className={styles.band}><div className={`alu-container ${styles.section}`}><div className={styles.sectionHead}><SectionHeader kicker="ALLPLAN" title={text('survey.title')} /></div><div className={`alu-hero-metrics ${styles.surveyMetrics}`}>{[1,2,3].map(n => {
       const stat = text(`pillar-${n}.stat`);
       const match = stat.match(/^(%\d+)\s+(.+)$/);
       return <article className="alu-hero-metrics__item" key={n}>
@@ -42,12 +43,12 @@ export function AllplanMaxPreviewPage() {
         <p className="alu-hero-metrics__note">{text(`pillar-${n}.body`)}</p>
       </article>;
     })}</div></div></section>
-    <section className={`alu-container ${styles.section}`}><p className={styles.eyebrow}>ÖNE ÇIKAN ÖZELLİKLER</p><h2>{text('3feat.title')}</h2><FeatureRowList>{mainFeatures.map(({key,video,clip}, index) => <FeatureRow key={key} index={index} kicker={text(`3feat.${key}.included`)} title={text(`3feat.${key}.title`)} media={<AllplanMaxFeatureClip src={`/assets/previews/allplan-max/${clip}`} title={text(`3feat.${key}.title`)} />}><p>{text(`3feat.${key}.body`)}</p><div className={styles.featureActions}><AllplanMaxVideo id={video} title={text(`3feat.${key}.title`)} /><a href={MAIN_QUOTE_FORM_URL} aria-label={`Demo talep edin: ${text(`3feat.${key}.title`)}`}>Demo talep edin ↗</a></div></FeatureRow>)}</FeatureRowList></section>
+    <section className={`alu-container ${styles.section}`}><div className={styles.sectionHead}><SectionHeader kicker="ÖNE ÇIKAN ÖZELLİKLER" title={text('3feat.title')} /></div><FeatureRowList>{mainFeatures.map(({key,video,clip}, index) => <FeatureRow key={key} index={index} kicker={text(`3feat.${key}.included`)} title={text(`3feat.${key}.title`)} media={<AllplanMaxFeatureClip src={`/assets/previews/allplan-max/${clip}`} title={text(`3feat.${key}.title`)} />}><p>{text(`3feat.${key}.body`)}</p><div className={styles.featureActions}><AllplanMaxVideo id={video} title={text(`3feat.${key}.title`)} /><a href={MAIN_QUOTE_FORM_URL} aria-label={`Demo talep edin: ${text(`3feat.${key}.title`)}`}>Demo talep edin ↗</a></div></FeatureRow>)}</FeatureRowList></section>
     <CustomerTestimonials title={text('quotes.title')} items={[1, 2, 3].map(n => {
       const [name, role] = text(`quote-${n}.attribution`).split(' — ');
       return { name, role, quote: text(`quote-${n}`), source: 'Kaynak: ALLPLAN' };
     })} />
-    <section className={`alu-container ${styles.section}`}><p className={styles.eyebrow}>YAPAY ZEKÂ ARAÇLARI</p><h2>{text('more.title')}</h2><div className={styles.cards}>{moreFeatures.map(({key,video,image}) => <article className={styles.card} key={key}><img className={styles.featureImage} src={`/assets/previews/allplan-max/${image}`} alt={`${text(`more.${key}.title`)} — ALLPLAN ürün görseli`} loading="lazy" /><h3>{text(`more.${key}.title`)}</h3><p>{text(`more.${key}.body`)}</p>{video && <AllplanMaxVideo id={video} title={text(`more.${key}.title`)} />}<p className={styles.productRibbon}>{text(`more.${key}.included`)}</p></article>)}</div></section>
+    <section className={`alu-container ${styles.section}`}><div className={styles.sectionHead}><SectionHeader kicker="YAPAY ZEKÂ ARAÇLARI" title={text('more.title')} /></div><div className={styles.cards}>{moreFeatures.map(({key,video,image}) => <article className={styles.card} key={key}><img className={styles.featureImage} src={`/assets/previews/allplan-max/${image}`} alt={`${text(`more.${key}.title`)} — ALLPLAN ürün görseli`} loading="lazy" /><h3>{text(`more.${key}.title`)}</h3><p>{text(`more.${key}.body`)}</p>{video && <AllplanMaxVideo id={video} title={text(`more.${key}.title`)} />}<p className={styles.productRibbon}>{text(`more.${key}.included`)}</p></article>)}</div></section>
     <PreviewClosingSection id="max-closing-title" title={text('cta.title')} items={['expert', 'trial'].map(key => ({
       title: text(`cta.${key}.title`), paragraphs: [text(`cta.${key}.body`)],
       action: { href: key === 'trial' ? TRIAL_CTA_URL : MAIN_QUOTE_FORM_URL, label: text(`cta.${key}.cta`) }

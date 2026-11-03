@@ -5,6 +5,7 @@ import type { ReactElement } from 'react';
 import type { PlaylistRecord } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
+import { SectionHeader } from './SectionHeader';
 
 interface VideoPlaylistSectionProps {
   playlist: PlaylistRecord;
@@ -28,13 +29,7 @@ export function VideoPlaylistSection({
     <section className="preview-section" aria-labelledby="playlist-heading">
       <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
         <div className="preview-section-heading">
-          <div className="alu-stack">
-            <span className="preview-kicker">VİDEO EĞİTİM SERİSİ · {playlist.count} VİDEO</span>
-            <h2 id="playlist-heading" className="alu-h2">
-              {playlist.title}
-            </h2>
-            {playlist.subtitle && <p className="alu-body preview-meta">{playlist.subtitle}</p>}
-          </div>
+          <SectionHeader kicker={`VİDEO EĞİTİM SERİSİ · ${playlist.count} VİDEO`} title={playlist.title} lead={playlist.subtitle || undefined} id="playlist-heading" />
           <Link className="alu-button alu-button--secondary alu-button--md" href="/video-kutuphanesi">
             <span>Video Kütüphanesine Dön</span>
             <AluIcon name="arrow-right" size="sm" />

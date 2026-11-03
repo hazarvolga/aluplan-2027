@@ -4,6 +4,7 @@ import type { PageRecord } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { DirectoryCategoryIcon } from './DirectoryCategoryIcon';
 import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
+import { SectionHeader } from './SectionHeader';
 
 type AboutEditorialSectionProps = {
   page: PageRecord;
@@ -83,10 +84,7 @@ export function AboutEditorialSection({ page }: AboutEditorialSectionProps) {
         <div className="alu-container">
           <div className="alu-about-story">
             <aside className="alu-about-story__aside">
-              <span className="preview-kicker">KURUMSAL PROFİL · 1995’TEN BUGÜNE</span>
-              <h2 id="about-story-heading" className="alu-h1" style={{ margin: 0 }}>
-                Hikayemiz
-              </h2>
+              <SectionHeader kicker="KURUMSAL PROFİL · 1995’TEN BUGÜNE" title="Hikayemiz" id="about-story-heading" />
               <blockquote className="alu-about-quote">
                 “Türkiye’de mimari, mühendislik ve altyapı projelerinin BIM tabanlı dijital dönüşümüne 1995 yılından bu yana kesintisiz liderlik ediyoruz.”
               </blockquote>
@@ -125,12 +123,7 @@ export function AboutEditorialSection({ page }: AboutEditorialSectionProps) {
       <section className="preview-section preview-section--subtle" aria-labelledby="about-values-heading">
         <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
           <div className="alu-about-section-head">
-            <div>
-              <span className="preview-kicker">KURUMSAL İLKELER</span>
-              <h2 id="about-values-heading" className="alu-h1" style={{ margin: 'var(--space-application-jsx-offset) 0 0 0' }}>
-                Değerlerimiz
-              </h2>
-            </div>
+            <SectionHeader kicker="KURUMSAL İLKELER" title="Değerlerimiz" id="about-values-heading" />
             <p className="alu-body preview-meta" style={{ margin: 0, maxWidth: 'var(--container-application-prose-narrow)' }}>
               Çalışmalarımızı şekillendiren temel ilkelerimiz
             </p>
@@ -157,12 +150,7 @@ export function AboutEditorialSection({ page }: AboutEditorialSectionProps) {
       <section className="preview-section" aria-labelledby="about-office-heading">
         <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
           <div className="alu-about-section-head">
-            <div>
-              <span className="preview-kicker">MERKEZ OFİS &amp; LOKASYON</span>
-              <h2 id="about-office-heading" className="alu-h1" style={{ margin: 'var(--space-application-jsx-offset) 0 0 0' }}>
-                Ofisimiz
-              </h2>
-            </div>
+            <SectionHeader kicker="MERKEZ OFİS & LOKASYON" title="Ofisimiz" id="about-office-heading" />
             <p className="alu-body preview-meta" style={{ margin: 0, maxWidth: 'var(--container-application-prose-compact)' }}>
               İstanbul Ataşehir&apos;deki modern ofisimizden Türkiye geneline hizmet veriyoruz
             </p>

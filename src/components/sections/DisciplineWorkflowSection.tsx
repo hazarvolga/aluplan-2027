@@ -6,6 +6,7 @@ import type { AluIconName } from '@/components/ui/AluIcon';
 import type { getHomepageData } from '@/lib/site-data';
 import { handleStructuredTabKey } from './structured-tab-key';
 import styles from './DisciplineWorkflowSection.module.css';
+import { SectionHeader } from './SectionHeader';
 
 type HomepageData = ReturnType<typeof getHomepageData>;
 type Props = { id: string; roles: HomepageData['roles']; products: HomepageData['products']; releaseLabel: string; trialHref: string; productsHref: string };
@@ -31,15 +32,12 @@ export function DisciplineWorkflowSection({ id, roles, products, releaseLabel, t
 
         <div className="alu-container alu-stack alu-pathway-content" style={{ gap: 'var(--space-stack-xl)' }}>
           <div className={styles.headerRow}>
-          <div className="alu-pathway-header">
-            <span className="preview-kicker">ROLÜNÜZÜ SEÇİN · ROL VE ÜRÜN MİMARİSİ</span>
-            <h2 id={`${id}-heading`} className="alu-h2">
-              Disiplininize Özel BIM İş Akışı
-            </h2>
-            <p className="alu-body preview-meta" style={{ maxWidth: 'var(--container-application-meta)' }}>
-              Size en uygun iş akışını ve ürün paketini keşfedin. Seçtiğiniz disipline göre önerilen ALLPLAN paketleri aşağıda otomatik olarak öne çıkar.
-            </p>
-          </div>
+          <SectionHeader
+            kicker="ROLÜNÜZÜ SEÇİN · ROL VE ÜRÜN MİMARİSİ"
+            title="Disiplininize Özel BIM İş Akışı"
+            lead="Size en uygun iş akışını ve ürün paketini keşfedin. Seçtiğiniz disipline göre önerilen ALLPLAN paketleri aşağıda otomatik olarak öne çıkar."
+            id={`${id}-heading`}
+          />
 
           {/* Role Tabs (MİMAR / MÜHENDİS / PREKAST) */}
           <div className="alu-pathway-tabs" role="tablist" aria-orientation="vertical" aria-label="Rolünüzü seçin">

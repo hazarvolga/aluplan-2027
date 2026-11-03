@@ -1,5 +1,6 @@
 import type { SolutionDirectory } from '@/lib/site-data';
 import { SolutionDirectoryCard } from './SolutionDirectoryCard';
+import { SectionHeader } from './SectionHeader';
 
 export function SolutionCatalogSection({ directory }: { directory: SolutionDirectory }) {
   const { catalogIntro: intro, groups } = directory;
@@ -18,12 +19,7 @@ export function SolutionCatalogSection({ directory }: { directory: SolutionDirec
         </div>
         {groups.map((group, groupIndex) => (
           <section key={group.hubPath} className="alu-stack" aria-labelledby={`solution-group-${groupIndex}`}>
-            <div className="alu-stack" style={{ gap: 'var(--space-stack-sm)' }}>
-              <span className="preview-kicker">{String(groupIndex + 1).padStart(2, '0')} · ÇÖZÜM ALANI</span>
-              <h2 id={`solution-group-${groupIndex}`} className="alu-h2" style={{ margin: 0 }}>
-                {group.title}
-              </h2>
-            </div>
+            <SectionHeader kicker={`${String(groupIndex + 1).padStart(2, '0')} · ÇÖZÜM ALANI`} title={group.title} id={`solution-group-${groupIndex}`} />
             <div className="alu-spec-grid">
               {group.catalogItems.map((item, index) => (
                 <SolutionDirectoryCard

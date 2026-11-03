@@ -6,6 +6,7 @@ import { getHomepageData } from '@/lib/site-shared';
 import { AluIcon } from '@/components/ui/AluIcon';
 import type { AluIconName } from '@/components/ui/AluIcon';
 import { handleStructuredTabKey } from './structured-tab-key';
+import { SectionHeader } from './SectionHeader';
 
 const data = getHomepageData();
 const services = data.services;
@@ -28,15 +29,12 @@ export function ProfessionalServicesSection() {
     <section id="professional-services" className="preview-section preview-section--subtle" aria-labelledby="services-heading">
       <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
         <div className="preview-section-heading">
-          <div className="alu-stack">
-            <span className="preview-kicker">PROFESYONEL HİZMETLER VE DESTEK MERKEZİ</span>
-            <h2 id="services-heading" className="alu-h2">
-              Öğrenme, Teknik Destek ve Lisans Kaynakları
-            </h2>
-            <p className="alu-body preview-meta">
-              {`Eğitim, Microsoft Teams canlı bağlantı ve allplan.net.tr/tr ticket platformu dahil ${serviceCount} profesyonel hizmet ve teknik kaynağa tek merkezden ulaşın.`}
-            </p>
-          </div>
+          <SectionHeader
+            kicker="PROFESYONEL HİZMETLER VE DESTEK MERKEZİ"
+            title="Öğrenme, Teknik Destek ve Lisans Kaynakları"
+            lead={`Eğitim, Microsoft Teams canlı bağlantı ve allplan.net.tr/tr ticket platformu dahil ${serviceCount} profesyonel hizmet ve teknik kaynağa tek merkezden ulaşın.`}
+            id="services-heading"
+          />
           <button
             type="button"
             className="alu-button alu-button--secondary alu-button--md"

@@ -11,7 +11,9 @@ SECTIONS = ROOT / "src/components/sections"
 ADOPTERS = [
     "MediaGridSection", "BenefitsSection", "FAQSection", "LinkGroupGridSection", "WorkflowSection",
     "StructuredPageLayoutSection", "EditionCards", "ProductPageParts", "ProductEditionView", "PreviewClosingSection",
-    "ReferencesDirectorySection",
+    "ReferencesDirectorySection", "InnovationsSection", "ProfessionalServicesSection", "VideoPlaylistSection",
+    "DisciplineWorkflowSection", "AboutEditorialSection", "ContactMap", "SolutionCatalogSection", "AllplanMaxPreviewPage",
+    "SubpageView",
 ]
 PAGES = ["src/app/product-lifecycle/page.tsx", "src/app/paket-karsilastirma/page.tsx"]
 
@@ -38,6 +40,14 @@ class SectionHeaderSourceTests(unittest.TestCase):
         for path in PAGES:
             with self.subTest(page=path):
                 self.assertIn("<SectionHeader", (ROOT / path).read_text(encoding="utf-8"))
+
+    def test_max_page_no_longer_overrides_section_headings(self):
+        css = (SECTIONS / "AllplanMaxPreviewPage.module.css").read_text(encoding="utf-8")
+        self.assertNotIn(".section h2{", css)
+
+    def test_about_headings_use_the_section_scale(self):
+        source = (SECTIONS / "AboutEditorialSection.tsx").read_text(encoding="utf-8")
+        self.assertNotRegex(source, r'<h2[^>]*className="alu-h1"')
 
     def test_edition_cards_no_longer_style_their_own_heading(self):
         css = (SECTIONS / "EditionCards.module.css").read_text(encoding="utf-8")

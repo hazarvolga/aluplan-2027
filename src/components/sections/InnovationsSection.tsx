@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { AluIcon } from '@/components/ui/AluIcon';
+import { SectionHeader } from './SectionHeader';
 
 type InnovationCard = {
   id: string;
@@ -25,11 +26,7 @@ export function InnovationsSection({ id, eyebrow, title, description, cta, cards
     <section id={id} className="preview-section preview-section--subtle" aria-labelledby={`${id}-heading`}>
       <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
         <div className="preview-section-heading">
-          <div className="alu-stack">
-            <span className="preview-kicker">{eyebrow}</span>
-            <h2 id={`${id}-heading`} className="alu-h2">{title}</h2>
-            <p className="alu-body preview-meta">{description}</p>
-          </div>
+          <SectionHeader kicker={eyebrow} title={title} lead={description} id={`${id}-heading`} />
           <Link className="alu-button alu-button--primary alu-button--md" href={cta.href}>
             <span>{cta.label}</span><AluIcon name="arrow-right" size="sm" />
           </Link>

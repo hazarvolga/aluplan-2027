@@ -2235,6 +2235,10 @@
         "image": {
           "src": "/assets/products/allplan-hero.jpg",
           "alt": "ALLPLAN AEC"
+        },
+        "link": {
+          "href": "/products/allplan-aec",
+          "label": "Detayları Görüntüle"
         }
       },
       {
@@ -2249,6 +2253,10 @@
         "image": {
           "src": "/assets/products/allplan-ultimate/hero.jpg",
           "alt": "ALLPLAN Ultimate"
+        },
+        "link": {
+          "href": "/products/allplan-ultimate",
+          "label": "Detayları Görüntüle"
         }
       },
       {
@@ -2263,6 +2271,10 @@
         "image": {
           "src": "/assets/products/civil/hero.jpg",
           "alt": "ALLPLAN Civil"
+        },
+        "link": {
+          "href": "/products/civil",
+          "label": "Detayları Görüntüle"
         }
       },
       {
@@ -2277,6 +2289,10 @@
         "image": {
           "src": "/assets/products/allplan-professional/hero.jpg",
           "alt": "ALLPLAN Professional"
+        },
+        "link": {
+          "href": "/products/allplan-professional",
+          "label": "Detayları Görüntüle"
         }
       },
       {
@@ -2291,6 +2307,10 @@
         "image": {
           "src": "/assets/products/allplan-concept/hero.jpg",
           "alt": "ALLPLAN Concept"
+        },
+        "link": {
+          "href": "/products/allplan-concept",
+          "label": "Detayları Görüntüle"
         }
       },
       {
@@ -2305,6 +2325,10 @@
         "image": {
           "src": "/assets/solutions/precast-hero.jpg",
           "alt": "ALLPLAN Precast"
+        },
+        "link": {
+          "href": "/products/precast-detail",
+          "label": "Detayları Görüntüle"
         }
       },
       {
@@ -2318,6 +2342,10 @@
         "image": {
           "src": "/assets/products/allplan-basic/hero.jpg",
           "alt": "ALLPLAN Basic"
+        },
+        "link": {
+          "href": "/products/allplan-basic",
+          "label": "Detayları Görüntüle"
         }
       },
       {
@@ -12357,7 +12385,89 @@
     "playlistId": null,
     "interactiveStates": [],
     "schemaType": "WebPage",
-    "structuredLayout": null
+    "structuredLayout": null,
+    "documentGroups": [
+      {
+        "id": "brosurler",
+        "title": "Broşürler",
+        "description": "AX3000 modüllerini ve kullanım alanlarını keşfedin.",
+        "documents": [
+          {
+            "title": "AX3000 Genel Broşür",
+            "language": "İngilizce",
+            "format": "PDF",
+            "detail": "28 sayfa",
+            "size": "5,75 MB",
+            "badge": "Öne çıkan",
+            "description": "Yapı fiziği, enerji simülasyonu, havalandırma, ısıtma, sıhhi tesisat ve elektrik modüllerine genel bakış.",
+            "filename": "ax3000-brochure-en.pdf",
+            "href": "/docs/ax3000/ax3000-brochure-en.pdf"
+          },
+          {
+            "title": "AX3000 Genel Broşür",
+            "language": "Almanca",
+            "format": "PDF",
+            "detail": "15 sayfa · Çift sayfa düzeni",
+            "size": "4,45 MB",
+            "badge": "Almanca",
+            "description": "Bina tesisatı, yapı fiziği ve enerji hesaplamalarını modüller ve proje örnekleri üzerinden tanıtan Almanca broşür.",
+            "filename": "ax3000-brochure-de.pdf",
+            "href": "/docs/ax3000/ax3000-brochure-de.pdf"
+          },
+          {
+            "title": "AX3000 Genel Broşür — Alternatif",
+            "language": "İngilizce",
+            "format": "PDF",
+            "detail": "28 sayfa",
+            "size": "5,73 MB",
+            "badge": "Alternatif sürüm",
+            "description": "Genel İngilizce broşürün küçük metin farklılıkları içeren alternatif kopyası. Aynı modülleri ve kullanım alanlarını kapsar.",
+            "filename": "ax3000-brochure-en-alternative.pdf",
+            "href": "/docs/ax3000/ax3000-brochure-en-alternative.pdf"
+          }
+        ]
+      },
+      {
+        "id": "teknik-dokumanlar",
+        "title": "Teknik Dokümanlar",
+        "description": "Planlama yöntemlerini, hesaplama özelliklerini ve modül fonksiyonlarını inceleyin.",
+        "documents": [
+          {
+            "title": "MEP Fonksiyon Açıklamaları",
+            "language": "İngilizce",
+            "format": "PDF",
+            "detail": "5 sayfa",
+            "size": "0,92 MB",
+            "badge": "Teknik özet",
+            "description": "Easyline yaklaşımı; havalandırma, ısıtma, sıhhi tesisat ve elektrik modüllerinin modelleme, hesaplama ve raporlama özellikleri.",
+            "filename": "ax3000-functions-en.pdf",
+            "href": "/docs/ax3000/ax3000-functions-en.pdf"
+          },
+          {
+            "title": "MEP Fonksiyon Açıklamaları — Word",
+            "language": "İngilizce",
+            "format": "DOCX",
+            "detail": "Düzenlenebilir belge",
+            "size": "2,26 MB",
+            "badge": "Word belgesi",
+            "description": "Teknik fonksiyon açıklamalarının düzenlenebilir Word belgesi. Allplan, AutoCAD ve BricsCAD uyumluluğuna ilişkin bilgiler içerir.",
+            "filename": "ax3000-functions-en.docx",
+            "href": "/docs/ax3000/ax3000-functions-en.docx"
+          },
+          {
+            "title": "MEP Fonksiyon Açıklamaları — Hexagon",
+            "language": "İngilizce",
+            "format": "DOCX",
+            "detail": "Düzenlenebilir belge",
+            "size": "2,26 MB",
+            "badge": "Hexagon sürümü",
+            "description": "DWG ve Brics-BIM vurgulu teknik Word belgesi. AutoCAD ve BricsCAD bilgilerini içerir; Allplan uyumluluğu ifadeleri bu sürümde yer almaz.",
+            "filename": "ax3000-functions-hexagon-en.docx",
+            "href": "/docs/ax3000/ax3000-functions-hexagon-en.docx"
+          }
+        ]
+      }
+    ]
   },
   "/products/civil": {
     "path": "/products/civil",
@@ -19012,6 +19122,23 @@
           "Allplan Connect'e Git",
           "Ekip Üyelerine Lisans Atama Rehberi",
           "Lisans Yöneticisi Bilgi Formu"
+        ],
+        "actions": [
+          {
+            "label": "Allplan Connect'e Git",
+            "href": "https://connect2.allplan.com/",
+            "external": true
+          },
+          {
+            "label": "Ekip Üyelerine Lisans Atama Rehberi",
+            "href": "/solutions-v2/connect-license/how-to-assign",
+            "external": false
+          },
+          {
+            "label": "Lisans Yöneticisi Bilgi Formu",
+            "href": "https://forms.office.com/r/HSrhvAkYmb",
+            "external": true
+          }
         ]
       }
     ],
@@ -20727,7 +20854,11 @@
         "items": [
           "Mekandan bağımsız, web tabanlı, interaktif ve çok katılımcılı eğitimler.",
           "Detayları Gör"
-        ]
+        ],
+        "link": {
+          "href": "/solutions-v2/training/online",
+          "label": "Detayları Gör"
+        }
       },
       {
         "heading": "Webinar",
@@ -20735,7 +20866,11 @@
         "items": [
           "Web tabanlı sunumlar, çoklu katılımcı dinleyici modunda ve chat fonksiyonu ile.",
           "Detayları Gör"
-        ]
+        ],
+        "link": {
+          "href": "/solutions-v2/training/webinar",
+          "label": "Detayları Gör"
+        }
       },
       {
         "heading": "Yüz Yüze (Presence)",
@@ -20743,7 +20878,11 @@
         "items": [
           "Yerinde, interaktif ve çok katılımcılı pratik eğitimler.",
           "Detayları Gör"
-        ]
+        ],
+        "link": {
+          "href": "/solutions-v2/training/classroom",
+          "label": "Detayları Gör"
+        }
       },
       {
         "heading": "Etkinlik / Fuar",
@@ -20751,7 +20890,11 @@
         "items": [
           "ALLPLAN ekibiyle kişisel iletişim imkanı sunan çeşitli formatlarda yerinde etkinlikler.",
           "Detayları Gör"
-        ]
+        ],
+        "link": {
+          "href": "/solutions-v2/training/events",
+          "label": "Detayları Gör"
+        }
       },
       {
         "heading": "Bireysel",
@@ -20759,7 +20902,11 @@
         "items": [
           "Esnek planlanabilir birimler. İçeriği, yeri, zamanı ve kapsamı siz belirlersiniz.",
           "Detayları Gör"
-        ]
+        ],
+        "link": {
+          "href": "/solutions-v2/training/individual",
+          "label": "Detayları Gör"
+        }
       },
       {
         "heading": "E-Learning",
@@ -20767,7 +20914,11 @@
         "items": [
           "Mekandan bağımsız, web tabanlı, interaktif ve bireysel öğrenme.",
           "Detayları Gör"
-        ]
+        ],
+        "link": {
+          "href": "/solutions-v2/training/e-learning",
+          "label": "Detayları Gör"
+        }
       },
       {
         "heading": "Müşterilerimiz Ne Diyor?",
@@ -29074,6 +29225,10 @@
         "image": {
           "src": "/assets/solutions/cds/surus-egirisi.webp",
           "alt": "Sürüş Eğrisi"
+        },
+        "link": {
+          "href": "/solutions/addons/drive-curve",
+          "label": "İncele"
         }
       },
       {
@@ -29086,6 +29241,10 @@
         "image": {
           "src": "/assets/solutions/cds/celik-profil-bilesenleri.webp",
           "alt": "Çelik Profil Bileşenleri"
+        },
+        "link": {
+          "href": "/solutions/addons/steel-components",
+          "label": "İncele"
         }
       },
       {
@@ -29098,6 +29257,10 @@
         "image": {
           "src": "/assets/solutions/cds/parametrik-arazi.webp",
           "alt": "Parametrik Arazi"
+        },
+        "link": {
+          "href": "/solutions/addons/parametric-terrain",
+          "label": "İncele"
         }
       },
       {
@@ -29110,6 +29273,10 @@
         "image": {
           "src": "/assets/solutions/cds/ramp.webp",
           "alt": "Rampa"
+        },
+        "link": {
+          "href": "/solutions/addons/ramp",
+          "label": "İncele"
         }
       },
       {
@@ -29122,6 +29289,10 @@
         "image": {
           "src": "/assets/solutions/cds/geometri-araclari.webp",
           "alt": "Geometri Araçları"
+        },
+        "link": {
+          "href": "/solutions/addons/geometry-tools",
+          "label": "İncele"
         }
       },
       {
@@ -29134,6 +29305,10 @@
         "image": {
           "src": "/assets/solutions/cds/2b-dwg-converter.webp",
           "alt": "2B DWG Converter"
+        },
+        "link": {
+          "href": "/solutions/addons/2d-dwg-converter",
+          "label": "İncele"
         }
       },
       {
@@ -29146,6 +29321,10 @@
         "image": {
           "src": "/assets/solutions/cds/3d-dimensioning.jpeg",
           "alt": "3B Ölçülendirme"
+        },
+        "link": {
+          "href": "/solutions/addons/three-dimensioning",
+          "label": "İncele"
         }
       },
       {
@@ -29158,6 +29337,10 @@
         "image": {
           "src": "/assets/solutions/cds/graphic-text.jpeg",
           "alt": "Grafiksel Yazı"
+        },
+        "link": {
+          "href": "/solutions/addons/graphical-text",
+          "label": "İncele"
         }
       },
       {
@@ -29170,6 +29353,10 @@
         "image": {
           "src": "/assets/solutions/cds/sketchup-converter.jpg",
           "alt": "SketchUp Dönüştürücü"
+        },
+        "link": {
+          "href": "/solutions/addons/sketchup-converter",
+          "label": "İncele"
         }
       }
     ],
@@ -40392,7 +40579,11 @@
         "items": [
           "Borulama Tesisat ve Kritik Devre Hesabı, Merkezi Basınçlandırma ve Ana Dağıtım Hattı, Sonuçları Değerlendirme İmkanı, vb.",
           "Devamını Oku"
-        ]
+        ],
+        "link": {
+          "href": "/solutions/ax3000/sihhi-tesisat",
+          "label": "Devamını Oku"
+        }
       },
       {
         "heading": "Isıtma",
@@ -40400,7 +40591,11 @@
         "items": [
           "Borulama Tesisatı ve Kritik Devre Hesabı, Isı İhtiyacı, Optimum Isı, Mahal Listesi ve metraj, Radyatör hesabı ve yerleştirme, vb.",
           "Devamını Oku"
-        ]
+        ],
+        "link": {
+          "href": "/solutions/ax3000/isitma",
+          "label": "Devamını Oku"
+        }
       },
       {
         "heading": "Havalandırma",
@@ -40408,7 +40603,11 @@
         "items": [
           "Havalandırma Hesap, Planlama ve Konstrüksiyonu, Kanal Kesit Hesabı, Sonuçları Değerlendirme İmkanı, vb.",
           "Devamını Oku"
-        ]
+        ],
+        "link": {
+          "href": "/solutions/ax3000/havalandirma",
+          "label": "Devamını Oku"
+        }
       },
       {
         "heading": "Elektrik",
@@ -40416,7 +40615,11 @@
         "items": [
           "Kablo Hattı Konstrüksiyonu, Akıllı Elektrik Elemanları ve Armatür Yerleştirme, vb.",
           "Devamını Oku"
-        ]
+        ],
+        "link": {
+          "href": "/solutions/ax3000/elektrik",
+          "label": "Devamını Oku"
+        }
       },
       {
         "heading": "Konut Havalandırma",
@@ -40424,7 +40627,11 @@
         "items": [
           "Konut havalandırma sistemleri için profesyonel çözümler",
           "Devamını Oku"
-        ]
+        ],
+        "link": {
+          "href": "/solutions/ax3000/konut-havalandirma",
+          "label": "Devamını Oku"
+        }
       },
       {
         "heading": "Sprinkler / Fıskiye",
@@ -40432,7 +40639,11 @@
         "items": [
           "Türkiye İklim Verileriyle Soğuk Yükü Hesabı",
           "Devamını Oku"
-        ]
+        ],
+        "link": {
+          "href": "/solutions/ax3000/sprinkler",
+          "label": "Devamını Oku"
+        }
       },
       {
         "heading": "Enerji Kimlik Belgesi",
@@ -40441,6 +40652,13 @@
           "BEP Yönetmeliğine göre çizimden hesap yapan tek çözüm",
           "Devamını Oku",
           "AX3000 Doküman Merkezi"
+        ],
+        "actions": [
+          {
+            "label": "Devamını Oku",
+            "href": "/solutions/ax3000-yapi-fizigi",
+            "external": false
+          }
         ]
       },
       {
@@ -40449,6 +40667,13 @@
         "items": [
           "AX3000 modüllerini ve teknik fonksiyonlarını inceleyin. Ürün broşürlerini ve fonksiyon açıklamalarını PDF veya Word formatında indirin.",
           "AX3000 Dokümanları"
+        ],
+        "actions": [
+          {
+            "label": "AX3000 Dokümanları",
+            "href": "/products/ax3000/dokumanlar",
+            "external": false
+          }
         ]
       }
     ],
@@ -41447,6 +41672,43 @@
         "items": [
           "Modül Elektrik Temel tipik elektrik planlama ve diğer işçiliklerle koordineli işbirliği için gerekli fonksiyonları içerir.",
           "Elektrik Modülü size karmaşık elektrik tesisatı ihtiyaçlarınız ile ilgili hızlı planlama ve hesaplama imkanı sunar. Ayrıca otomatik olarak oluşturulmuş akım devresi ve bağlantılı akım devre listesi, kablo ve yapı elemanları ile sistemdeki kablo hat hesabını elde edersiniz."
+        ],
+        "actions": [
+          {
+            "label": "Elektrik Temel",
+            "href": "/solutions/ax3000/elektrik",
+            "external": false
+          },
+          {
+            "label": "Havalandırma",
+            "href": "/solutions/ax3000/havalandirma",
+            "external": false
+          },
+          {
+            "label": "Isıtma",
+            "href": "/solutions/ax3000/isitma",
+            "external": false
+          },
+          {
+            "label": "Konut Havalandırma",
+            "href": "/solutions/ax3000/konut-havalandirma",
+            "external": false
+          },
+          {
+            "label": "Sprinkler (Fıskiye)",
+            "href": "/solutions/ax3000/sprinkler",
+            "external": false
+          },
+          {
+            "label": "Sıhhi Tesisat",
+            "href": "/solutions/ax3000/sihhi-tesisat",
+            "external": false
+          },
+          {
+            "label": "AX3000 Dokümanları",
+            "href": "/products/ax3000/dokumanlar",
+            "external": false
+          }
         ]
       },
       {
@@ -41462,6 +41724,13 @@
           "Sprinkler (Fıskiye)",
           "Sıhhi Tesisat",
           "AX3000 Dokümanları"
+        ],
+        "actions": [
+          {
+            "label": "İncele",
+            "href": "https://www.youtube.com/channel/UC6JuTlCdaIb3Hvkj4JNMl7A/videos",
+            "external": true
+          }
         ]
       }
     ],
@@ -41741,6 +42010,43 @@
           "Havalandırma modülü detaylı uygulama ve planlarını hazırlamak için rahat bir araçtır.",
           "Konstrüksiyon fonksiyonları hariç hızlı planlama 'Easyline-Sistem'inde mevcuttur. Bu fonksiyon ile basit çizgi konsepti ile karmaşık 3 boyutlu sistemleri planlayabilirsiniz.",
           "Her iki sistemi de birleştirebilirsiniz! Çakışma kontrolü ile en zor durumların altından kalkabilirsiniz. Entegre edilmiş basınç kaybı hesabı ve görselleştirme ile basınç kontrolü tamamen sizde! Sıcaklık düşüşü ve akustik hesabını da yapabilirsiniz."
+        ],
+        "actions": [
+          {
+            "label": "Elektrik Temel",
+            "href": "/solutions/ax3000/elektrik",
+            "external": false
+          },
+          {
+            "label": "Havalandırma",
+            "href": "/solutions/ax3000/havalandirma",
+            "external": false
+          },
+          {
+            "label": "Isıtma",
+            "href": "/solutions/ax3000/isitma",
+            "external": false
+          },
+          {
+            "label": "Konut Havalandırma",
+            "href": "/solutions/ax3000/konut-havalandirma",
+            "external": false
+          },
+          {
+            "label": "Sprinkler (Fıskiye)",
+            "href": "/solutions/ax3000/sprinkler",
+            "external": false
+          },
+          {
+            "label": "Sıhhi Tesisat",
+            "href": "/solutions/ax3000/sihhi-tesisat",
+            "external": false
+          },
+          {
+            "label": "AX3000 Dokümanları",
+            "href": "/products/ax3000/dokumanlar",
+            "external": false
+          }
         ]
       },
       {
@@ -41768,6 +42074,13 @@
           "Sprinkler (Fıskiye)",
           "Sıhhi Tesisat",
           "AX3000 Dokümanları"
+        ],
+        "actions": [
+          {
+            "label": "İncele",
+            "href": "https://www.youtube.com/channel/UC6JuTlCdaIb3Hvkj4JNMl7A/videos",
+            "external": true
+          }
         ]
       }
     ],
@@ -42064,6 +42377,43 @@
           "Sprinkler (Fıskiye)",
           "Sıhhi Tesisat",
           "AX3000 Dokümanları"
+        ],
+        "actions": [
+          {
+            "label": "Elektrik Temel",
+            "href": "/solutions/ax3000/elektrik",
+            "external": false
+          },
+          {
+            "label": "Havalandırma",
+            "href": "/solutions/ax3000/havalandirma",
+            "external": false
+          },
+          {
+            "label": "Isıtma",
+            "href": "/solutions/ax3000/isitma",
+            "external": false
+          },
+          {
+            "label": "Konut Havalandırma",
+            "href": "/solutions/ax3000/konut-havalandirma",
+            "external": false
+          },
+          {
+            "label": "Sprinkler (Fıskiye)",
+            "href": "/solutions/ax3000/sprinkler",
+            "external": false
+          },
+          {
+            "label": "Sıhhi Tesisat",
+            "href": "/solutions/ax3000/sihhi-tesisat",
+            "external": false
+          },
+          {
+            "label": "AX3000 Dokümanları",
+            "href": "/products/ax3000/dokumanlar",
+            "external": false
+          }
         ]
       },
       {
@@ -42246,6 +42596,43 @@
           "Sprinkler (Fıskiye)",
           "Sıhhi Tesisat",
           "AX3000 Dokümanları"
+        ],
+        "actions": [
+          {
+            "label": "Elektrik Temel",
+            "href": "/solutions/ax3000/elektrik",
+            "external": false
+          },
+          {
+            "label": "Havalandırma",
+            "href": "/solutions/ax3000/havalandirma",
+            "external": false
+          },
+          {
+            "label": "Isıtma",
+            "href": "/solutions/ax3000/isitma",
+            "external": false
+          },
+          {
+            "label": "Konut Havalandırma",
+            "href": "/solutions/ax3000/konut-havalandirma",
+            "external": false
+          },
+          {
+            "label": "Sprinkler (Fıskiye)",
+            "href": "/solutions/ax3000/sprinkler",
+            "external": false
+          },
+          {
+            "label": "Sıhhi Tesisat",
+            "href": "/solutions/ax3000/sihhi-tesisat",
+            "external": false
+          },
+          {
+            "label": "AX3000 Dokümanları",
+            "href": "/products/ax3000/dokumanlar",
+            "external": false
+          }
         ]
       }
     ],
@@ -42494,6 +42881,13 @@
         "items": [
           "AX3000 ile ilgili eğitim videoları için Youtube Kanalımızı ziyaret edebilirsiniz",
           "İncele"
+        ],
+        "actions": [
+          {
+            "label": "İncele",
+            "href": "https://www.youtube.com/watch?v=EXVlk83zcIs&list=PL5ma0JNNoskbikv2hCg83KVa1pvQ4fvZW",
+            "external": true
+          }
         ]
       },
       {
@@ -42508,6 +42902,43 @@
           "Sprinkler (Fıskiye)",
           "Sıhhi Tesisat",
           "AX3000 Dokümanları"
+        ],
+        "actions": [
+          {
+            "label": "Elektrik Temel",
+            "href": "/solutions/ax3000/elektrik",
+            "external": false
+          },
+          {
+            "label": "Havalandırma",
+            "href": "/solutions/ax3000/havalandirma",
+            "external": false
+          },
+          {
+            "label": "Isıtma",
+            "href": "/solutions/ax3000/isitma",
+            "external": false
+          },
+          {
+            "label": "Konut Havalandırma",
+            "href": "/solutions/ax3000/konut-havalandirma",
+            "external": false
+          },
+          {
+            "label": "Sprinkler (Fıskiye)",
+            "href": "/solutions/ax3000/sprinkler",
+            "external": false
+          },
+          {
+            "label": "Sıhhi Tesisat",
+            "href": "/solutions/ax3000/sihhi-tesisat",
+            "external": false
+          },
+          {
+            "label": "AX3000 Dokümanları",
+            "href": "/products/ax3000/dokumanlar",
+            "external": false
+          }
         ]
       }
     ],
@@ -42682,6 +43113,43 @@
           "Sprinkler (Fıskiye)",
           "Sıhhi Tesisat",
           "AX3000 Dokümanları"
+        ],
+        "actions": [
+          {
+            "label": "Elektrik Temel",
+            "href": "/solutions/ax3000/elektrik",
+            "external": false
+          },
+          {
+            "label": "Havalandırma",
+            "href": "/solutions/ax3000/havalandirma",
+            "external": false
+          },
+          {
+            "label": "Isıtma",
+            "href": "/solutions/ax3000/isitma",
+            "external": false
+          },
+          {
+            "label": "Konut Havalandırma",
+            "href": "/solutions/ax3000/konut-havalandirma",
+            "external": false
+          },
+          {
+            "label": "Sprinkler (Fıskiye)",
+            "href": "/solutions/ax3000/sprinkler",
+            "external": false
+          },
+          {
+            "label": "Sıhhi Tesisat",
+            "href": "/solutions/ax3000/sihhi-tesisat",
+            "external": false
+          },
+          {
+            "label": "AX3000 Dokümanları",
+            "href": "/products/ax3000/dokumanlar",
+            "external": false
+          }
         ]
       },
       {
@@ -44292,6 +44760,10 @@
         "image": {
           "src": "/assets/solutions/cds/surus-egirisi.webp",
           "alt": "Sürüş Eğrisi"
+        },
+        "link": {
+          "href": "/solutions/addons/drive-curve",
+          "label": "İncele"
         }
       },
       {
@@ -44304,6 +44776,10 @@
         "image": {
           "src": "/assets/solutions/cds/celik-profil-bilesenleri.webp",
           "alt": "Çelik Profil Bileşenleri"
+        },
+        "link": {
+          "href": "/solutions/addons/steel-components",
+          "label": "İncele"
         }
       },
       {
@@ -44316,6 +44792,10 @@
         "image": {
           "src": "/assets/solutions/cds/parametrik-arazi.webp",
           "alt": "Parametrik Arazi"
+        },
+        "link": {
+          "href": "/solutions/addons/parametric-terrain",
+          "label": "İncele"
         }
       },
       {
@@ -44328,6 +44808,10 @@
         "image": {
           "src": "/assets/solutions/cds/ramp.webp",
           "alt": "Rampa"
+        },
+        "link": {
+          "href": "/solutions/addons/ramp",
+          "label": "İncele"
         }
       },
       {
@@ -44340,6 +44824,10 @@
         "image": {
           "src": "/assets/solutions/cds/geometry-tools.jpeg",
           "alt": "Geometri Araçları"
+        },
+        "link": {
+          "href": "/solutions/addons/geometry-tools",
+          "label": "İncele"
         }
       },
       {
@@ -44352,6 +44840,10 @@
         "image": {
           "src": "/assets/solutions/cds/dwg-converter.jpeg",
           "alt": "2B DWG Converter"
+        },
+        "link": {
+          "href": "/solutions/addons/2d-dwg-converter",
+          "label": "İncele"
         }
       },
       {
@@ -44364,6 +44856,10 @@
         "image": {
           "src": "/assets/solutions/cds/3d-dimensioning.jpeg",
           "alt": "3B Ölçülendirme"
+        },
+        "link": {
+          "href": "/solutions/addons/three-dimensioning",
+          "label": "İncele"
         }
       },
       {
@@ -44376,6 +44872,10 @@
         "image": {
           "src": "/assets/solutions/cds/graphic-text.jpeg",
           "alt": "Grafiksel Yazı"
+        },
+        "link": {
+          "href": "/solutions/addons/graphical-text",
+          "label": "İncele"
         }
       },
       {
@@ -44388,6 +44888,10 @@
         "image": {
           "src": "/assets/solutions/cds/sketchup-converter.jpg",
           "alt": "SketchUp Dönüştürücü"
+        },
+        "link": {
+          "href": "/solutions/addons/sketchup-converter",
+          "label": "İncele"
         }
       }
     ],

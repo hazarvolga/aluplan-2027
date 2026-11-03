@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Homepage2027PreviewView } from '@/components/sections/Homepage2027PreviewView';
+import { isLocalPreviewEnabled } from '@/lib/release-flags';
 
 export const metadata: Metadata = {
   title: 'Aluplan 2027 Ana Sayfa Önizlemesi',
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 export default function Home2027PreviewPage() {
-  if (process.env.NODE_ENV === 'production' && process.env.ALUPLAN_2027_PREVIEW !== '1') {
+  if (!isLocalPreviewEnabled()) {
     notFound();
   }
 

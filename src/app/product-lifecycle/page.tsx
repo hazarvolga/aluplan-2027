@@ -2,14 +2,19 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { expiringExample, friloEnded, friloOctober2025, maintenanceServices, supportServices } from './data';
 import styles from './page.module.css';
+import { isReleaseContentEnabled } from '@/lib/release-flags';
+import { buildRelease2027JsonLd, buildRelease2027Metadata } from '@/lib/release-2027-routes';
+import { serializeJsonLd } from '@/lib/schema';
 
-export const metadata: Metadata = { title: 'Ürün Yaşam Döngüsü Politikası | Yerel Önizleme', robots: { index: false, follow: false } };
+export function generateMetadata(): Metadata {
+  return buildRelease2027Metadata('/product-lifecycle');
+}
 const columns = ['Güncel sürüm', 'Desteklenen sürüm', 'Kullanımdan kaldırılmış sürüm'];
 function ServiceTable({ rows, label }: { rows: readonly (readonly [string, boolean, boolean, boolean])[]; label: string }) {
   return <div className={styles.tableWrap} role="region" aria-label={label} tabIndex={0}><table><thead><tr><th scope="col">{label}</th>{columns.map(c => <th scope="col" key={c}>{c}</th>)}</tr></thead><tbody>{rows.map(([name, ...values]) => <tr key={name}><th scope="row">{name}</th>{values.map((value, i) => <td key={i}>{value ? 'Dâhil' : '—'}</td>)}</tr>)}</tbody></table></div>;
 }
-export default function ProductLifecyclePreview() {
-  if (process.env.NODE_ENV === 'production' && process.env.ALUPLAN_2027_PREVIEW !== '1') notFound();
+function ProductLifecyclePage() {
+  if (!isReleaseContentEnabled()) notFound();
   return <div className={styles.page}>
     <header className={styles.hero}><div className="alu-container"><p className={styles.kicker}>ALLPLAN · POLİTİKA</p><h1>Ürün yaşam döngüsü politikası</h1><p>Ürün bakım aşamaları, sürüm desteği ve sunulan hizmetler.</p></div></header>
     <div className={styles.nav}><nav className="alu-container" aria-label="Sayfa bölümleri"><a href="#policy">Politika</a><a href="#maintenance">Ürün bakımı</a><a href="#support">Sürüm desteği</a><a href="#dates">Ürün tarihleri</a><a href="#faq">Sık sorulan sorular</a></nav></div>
@@ -31,4 +36,13 @@ export default function ProductLifecyclePreview() {
       </div></section>
       <p className={styles.source}>Kaynak: <a href="https://www.allplan.com/product-lifecycle/">ALLPLAN ürün yaşam döngüsü politikası ↗</a></p>
     </div></div>;
+}
+
+export default function Release2027Page() {
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(buildRelease2027JsonLd('/product-lifecycle')) }} />
+      <ProductLifecyclePage />
+    </>
+  );
 }

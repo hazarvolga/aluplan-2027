@@ -12,6 +12,7 @@ from extract_structured_pages import build_all_structured_pages
 from document_assets import preflight_documents, sync_documents, write_manifest
 from request_links import normalize_request_links
 from content_policy import apply_approved_content_policy
+from source_card_links import apply_source_card_links
 
 STRUCTURED_LAYOUTS = build_all_structured_pages()
 
@@ -1115,7 +1116,7 @@ for raw_page in raw_200_pages:
 
 # Only the retired CDS/PythonPart/Scalypso demand form is remapped.
 # License manager forms, support and official trial destinations remain distinct.
-pages_data = apply_approved_content_policy(normalize_request_links(pages_data))
+pages_data = apply_source_card_links(apply_approved_content_policy(normalize_request_links(pages_data)))
 
 # The user explicitly directs all buttons with this label to release notes.
 def update_release_notes_links(value):

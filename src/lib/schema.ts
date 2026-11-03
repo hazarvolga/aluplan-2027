@@ -153,3 +153,7 @@ export function buildPageJsonLd(page: PageRecord, playlist?: PlaylistRecord | nu
     '@graph': graph
   };
 }
+
+export function serializeJsonLd(data: unknown): string {
+  return JSON.stringify(data).replace(/</g, '\\u003c');
+}

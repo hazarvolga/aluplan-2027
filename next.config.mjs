@@ -1,6 +1,16 @@
 /** @type {import('next').NextConfig} */
 const isDev = process.env.NODE_ENV !== 'production';
 
+// The retired flag both showed 2027 content and blocked indexing; deploying without its replacements would silently index the review site.
+if (
+  process.env.ALUPLAN_2027_PREVIEW !== undefined &&
+  (process.env.ALUPLAN_SHOW_2027 === undefined || process.env.ALUPLAN_BLOCK_INDEXING === undefined)
+) {
+  throw new Error(
+    'ALUPLAN_2027_PREVIEW is retired. Set ALUPLAN_SHOW_2027 and ALUPLAN_BLOCK_INDEXING explicitly before building.'
+  );
+}
+
 const securityHeaders = [
   {
     key: 'Content-Security-Policy',
@@ -44,13 +54,16 @@ const securityHeaders = [
 
 const nextConfig = {
   poweredByHeader: false,
-  env: { ALUPLAN_2027_PREVIEW: process.env.ALUPLAN_2027_PREVIEW ?? '0' },
+  env: {
+    ALUPLAN_SHOW_2027: process.env.ALUPLAN_SHOW_2027 ?? '0',
+    ALUPLAN_BLOCK_INDEXING: process.env.ALUPLAN_BLOCK_INDEXING ?? '0'
+  },
   reactStrictMode: true,
   async headers() {
     return [
       {
         source: '/:path*',
-        headers: process.env.ALUPLAN_2027_PREVIEW === '1'
+        headers: process.env.ALUPLAN_BLOCK_INDEXING === '1'
           ? [...securityHeaders, { key: 'X-Robots-Tag', value: 'noindex, nofollow' }]
           : securityHeaders
       }
@@ -91,6 +104,11 @@ const nextConfig = {
       {
         source: '/allplan-2021-features',
         destination: '/products/allplan-2026-yenilikler',
+        permanent: true
+      },
+      {
+        source: '/preview/product-lifecycle',
+        destination: '/product-lifecycle',
         permanent: true
       },
       {

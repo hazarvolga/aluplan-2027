@@ -1,5 +1,26 @@
 # Oturum devri
 
+## 02.11.2026 — Yayın öncesi engeller E1–E5 kapatıldı (yerel)
+
+- Bağımsız inceleme raporundaki beş yayın engeli `codex/prelaunch-blockers` dalında kapatıldı: önizleme bayrağı `ALUPLAN_SHOW_2027` ve `ALUPLAN_BLOCK_INDEXING` olarak ayrıldı; 2027 rotalarına canonical, OG ve JSON-LD eklendi, rotalar sitemap'e girdi; ürün, eklenti, eğitim ve AX3000 kart bağlantıları, AX3000 doküman indirmeleri ve lisans operasyon bağlantıları kaynaktan geri getirildi.
+- Plan: `docs/superpowers/plans/2026-11-02-prelaunch-blockers.md`. Kanıt: `docs/verification/prelaunch-blockers-2026-11-02.md`. Kalan bağlantı farkları: `docs/verification/main-link-gap-2026-11-02.md`.
+- Kapılar: 224 unit test, 36/36 parite, 45/45 token, typecheck, iki bayrak ayarında production build ve `pnpm audit --prod` geçti. Yerel production'da masaüstü ve 375 px tarayıcı kabulü yapıldı.
+- **Deploy öncesi zorunlu:** Vercel'de Preview ve Production için `ALUPLAN_SHOW_2027=1` ve `ALUPLAN_BLOCK_INDEXING=1` tanımlanmalı, ardından `ALUPLAN_2027_PREVIEW` kaldırılmalı. Eski değişken tek başına kalırsa `next.config.mjs` build'i bilerek durdurur. Vercel'de Preview ortamında bayrak tanımlı olmadığı için PR önizlemesi eski ana sayfayı gösteriyor (Vercel önizlemeyi kendi `noindex` başlığı ve kimlik doğrulamasıyla koruyor).
+- 03.11.2026: PR https://github.com/hazarvolga/aluplan-2027/pull/3 açıldı (`main` hedefli, 3/3 kontrol geçti, birleştirilebilir). Merge, deploy ve Vercel ortam değişikliği kullanıcıda.
+- 03.11.2026: kullanıcı kararıyla `/2027/compare` sayfasındaki "Bu yerel inceleme… doğrulanmalıdır." notu kaldırıldı; "Sürüm bağlantıları mevcut yerel ürün sayfalarına gider." cümlesi kullanıcı kararıyla korundu.
+- 03.11.2026: kullanıcı kararıyla ürün yaşam döngüsü sayfası `/product-lifecycle` adresine taşındı (eski `/preview/product-lifecycle` 308 yönleniyor); indekslenebilir metadata, JSON-LD ve sitemap kaydı eklendi.
+- Açık kararlar: 2027 başlık/açıklama metinleri (K3), `/2027/features` H1'i, bağlantı farkı D bölümü, AI/FRILO OG görselleri.
+
+## 02.11.2026 — Ara verme ve bağımsız yayın öncesi inceleme
+
+- Proje, Vercel üzerinde firma içerik incelemesine açıktır: https://aluplan-2027.vercel.app/. Bu adres gerçek alan adına geçiş anlamına gelmez; 02.11.2026 kontrolünde ana sayfa HTTP 200 ve `X-Robots-Tag: noindex, nofollow` döndürdü. `aluplan.com.tr` üzerinde yeni sürümün yayına alındığı doğrulanmadı.
+- Yerel çalışma dalı `codex/page-end-conversion-design` son commit `2103e3b`; yerel `origin/main` referansı `04680a4` ve bu commit çalışma dalını içeriyor. Bu tespit yerel Git referansına aittir; bu oturumda uzak sunucudan fetch ve Vercel deployment–commit eşlemesi yapılmadı.
+- Ana sayfa hero ve ALLPLAN ürün sekmesi `/2027/features` hedefine yönelir; mevcut `/products/allplan` rotası korunmuştur. Önceki tarihli, sekmenin başka hedefe gittiğini söyleyen notlar tarihsel kayıttır. Karşılaştırma butonları ve üretim bayrağı dahil tüm hedefler bağımsız olarak yeniden taranmalıdır.
+- Vercel'de ana sayfanın altı ürün sekmesinin görselleri masaüstü tarayıcıda yüklendi ve sekme geçişleri gözlendi. Bu, tüm cihazlarda görsel kabul veya bütün sayfaların kaynakla eşleştiği anlamına gelmez.
+- Son kayıtlara göre 189 test, typecheck ve bayraklı build geçti; bunlar önceki oturumun sonuçlarıdır, bu dokümantasyon güncellemesinde yeniden çalıştırılmadı. Max videolarının tamamının oynatılması, kaynak içerik/medya eşleşmesi ve kullanım hakları, form ve CTA hedefleri, SEO/indexleme ve gerçek alan adı yayın planı ayrıca doğrulanmalı.
+- Çalışma ağacında daha önceden var olan `next-env.d.ts` değişikliği ve takip edilmeyen `.claude/` bulunuyor; inceleyen ajan bunları korumalı. Bu oturumda handoff ve inceleme istemi dışında kod değişikliği yapılmadı. Bu belge güncellemeleri henüz commitlenmedi veya push edilmedi.
+- Sıradaki adım: `docs/verification/prelaunch-independent-review-prompt.md` istemiyle salt-okunur bağımsız inceleme yaptırmak; bulguları değerlendirip düzeltmeleri ve gerçek yayın adımlarını ayrıca planlamak.
+
 ## 29.10.2026 — ALLPLAN Max hero önizleme taslağı
 
 - Partner kategorisi kaldırılırken hot reload ile eski seçili sekme indeksi korunabildiği için oluşan `serviceTitles` runtime hatası giderildi: geçersiz seçim ilk görünür gruba güvenle düşer ve boş grup durumu kontrol edilir.

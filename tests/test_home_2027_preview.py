@@ -30,7 +30,7 @@ class Home2027PreviewContractTests(unittest.TestCase):
         self.assertIn("index: false", source)
         self.assertIn("follow: false", source)
         self.assertIn("nocache: true", source)
-        self.assertIn("process.env.NODE_ENV === 'production'", source)
+        self.assertIn("!isLocalPreviewEnabled()", source)
         self.assertIn("notFound()", source)
 
     def test_preview_route_is_not_published_in_sitemap_or_navigation(self):

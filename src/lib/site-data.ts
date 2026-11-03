@@ -20,6 +20,34 @@ export interface PageHeading {
   text: string;
 }
 
+export interface SectionLink {
+  href: string;
+  label: string;
+}
+
+export interface SectionAction extends SectionLink {
+  external: boolean;
+}
+
+export interface DownloadDocument {
+  title: string;
+  language: string;
+  format: string;
+  detail: string;
+  size: string;
+  badge: string;
+  description: string;
+  filename: string;
+  href: string;
+}
+
+export interface DocumentGroup {
+  id: string;
+  title: string;
+  description: string;
+  documents: DownloadDocument[];
+}
+
 export interface PageSection {
   heading: string;
   level: number;
@@ -27,6 +55,8 @@ export interface PageSection {
   iconSrc?: string;
   image?: ContentImage;
   statValue?: string;
+  link?: SectionLink;
+  actions?: SectionAction[];
 }
 
 export interface ContentLink {
@@ -316,6 +346,7 @@ export interface PageRecord {
   interactiveStates: InteractiveState[];
   schemaType: string;
   structuredLayout?: StructuredPageLayout | null;
+  documentGroups?: DocumentGroup[];
 }
 
 export interface PlaylistVideo {

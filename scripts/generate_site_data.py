@@ -1243,6 +1243,7 @@ navigation_data = {
             "items": [
                 {"name": "Allplan - AEC Endüstrisi için BIM", "href": "/products/allplan-aec"},
                 {"name": "Allplan Bridge - Köprü Tasarımı", "href": "/solutions/bridge-design"},
+                {"name": "FRILO", "href": "/products/frilo", "releaseOnly": True},
                 {"name": "AX3000 - Enerji Simülasyonu", "href": "/products/ax3000"},
                 {"name": "AX3000 - Mekanik Tesisat", "href": "/solutions/ax3000-mekanik-tesisat"},
             ],

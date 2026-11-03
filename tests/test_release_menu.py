@@ -19,6 +19,15 @@ def allplan_group() -> list[dict]:
 
 
 class ReleaseMenuTests(unittest.TestCase):
+    def test_frilo_is_a_release_only_product_menu_entry(self):
+        navigation = json.loads((ROOT / "src/data/navigation.json").read_text(encoding="utf-8"))
+        items = [item for group in navigation["productsMenu"] for item in group["items"]]
+        self.assertEqual([item for item in items if item["name"] == "FRILO"], [
+            {"name": "FRILO", "href": "/products/frilo", "releaseOnly": True},
+        ])
+        generator = (ROOT / "scripts/generate_site_data.py").read_text(encoding="utf-8")
+        self.assertIn('{"name": "FRILO", "href": "/products/frilo", "releaseOnly": True}', generator)
+
     def test_held_rebar_and_parametric_are_not_in_the_menu(self):
         # Held until ALLPLAN publishes them (docs/00-inventory/user-decisions.md, 03.11.2026).
         items = allplan_group()

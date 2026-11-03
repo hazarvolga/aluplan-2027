@@ -504,6 +504,11 @@
           "href": "/solutions/bridge-design"
         },
         {
+          "name": "FRILO",
+          "href": "/products/frilo",
+          "releaseOnly": true
+        },
+        {
           "name": "AX3000 - Enerji Simülasyonu",
           "href": "/products/ax3000"
         },

@@ -1,5 +1,10 @@
 # Oturum devri
 
+## 03.11.2026 — FRILO ana menüye eklendi
+- FRILO, Ürünler > Bina ve Altyapı grubuna `/products/frilo` hedefiyle eklendi. Masaüstü ve mobil menü ortak navigasyon verisini kullanır; sayfa kapalıysa bağlantı da yayın koşuluyla gizlenir.
+- Menü üreticisi ve `src/data/navigation.json` güncellendi. Üç hedefli test ve typecheck geçti; masaüstünde bağlantı ve hedef tarayıcıda doğrulandı. Kod incelemesi orta veya yüksek öncelikli sorun bulmadı.
+- Yerel geliştirme sunucusu 127.0.0.1:3001 üzerinde açık; diğer kullanıcı revizeleri bekleniyor.
+
 ## 03.11.2026 — FRILO sürüm kartı görselleri tamamlandı
 - FRILO ve FRILO Geotechnics kartlarına üretici mağazasından on görsel eklendi; 1200 px JPEG türevleri `public/assets/previews/frilo/editions/` altında. Kaynak ve kullanıcı kararı `docs/brand/assets-license-log.md` dosyasına işlendi; üreticinin ayrıca verdiği kullanım izni henüz doğrulanmış değil.
 - `EditionCards` görselleri 16:9 gösterir; ürün arayüzünü korumak için kırpma aşağı odaklanır. Geotechnics kartlarına yeni mağaza bağlantıları eklenmedi; bu karar açık.

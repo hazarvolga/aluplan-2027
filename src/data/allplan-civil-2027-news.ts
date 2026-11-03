@@ -26,3 +26,9 @@ export const civilNews2027 = {
     }
   ]
 };
+
+export const civilNewsHero = {
+  "eyebrow": "SÜRÜM 2027",
+  "title": "ALLPLAN Civil",
+  "description": "Allplan Civil, parametrik iş akışları, bağlantılı modeller ve yeniden kullanılabilir şablonlarla karmaşık altyapıyı daha hızlı tasarlamanıza yardımcı olur."
+};

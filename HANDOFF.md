@@ -1,5 +1,12 @@
 # Oturum devri
 
+## 03.11.2026 — `/2027/civil` yalnızca yenilikleri gösteriyor (commitlendi)
+
+- **Karar (kullanıcı):** `/2027/civil` sayfasında yalnızca Civil 2027 yenilikleri olur; Civil'in tam ürün anlatımı (nedir, zorluklar, metrikler, avantajlar, özellikler, bulut hizmetleri, seçenekler, SSS, uzman videoları, müşteri projeleri) `/products/civil` (2026 sayfası) üzerinde kalır.
+- **Yeni yapı:** hero (SÜRÜM 2027, ALLPLAN Civil, Civil slayt gövde metni, "Teklif isteyin" ve "ALLPLAN Civil sayfasına dön" → `/products/civil`), 3 yenilik bölümü (görselli), kapanışta teklif. Bileşen `CivilNewsView`; metin envanter taslağından (`src/data/allplan-civil-2027-news.ts`, `civilNews2027` + `civilNewsHero`); `tests/test_civil_2027_news.py` hem birebir eşitliği hem eski bölüm başlıklarının sayfada olmadığını denetler.
+- **Silindi (ölü kod):** `AllplanCivilPreview.tsx/.module.css`, `CivilFeatureGrid.tsx`, `allplan-civil-2027-preview.ts` ve yalnızca bunların kullandığı 64 görsel (`public/assets/previews/allplan-civil-2027/` altında yalnızca `civil-hero.jpg` ve üç yenilik görseli kaldı; 6,0 MB → 1,6 MB). Silinen içerik git geçmişinde ve `docs/content-2027/allplan-canlı/` arşivinde duruyor.
+- Kapılar: 400 test, 46/46 parite, 45/45 token, typecheck, build; sayfa tarayıcıda doğrulandı (h1 + 2 h2, 3 yenilik kartı).
+
 ## 03.11.2026 — Civil 2027 yenilikleri `/2027/civil` sayfasına eklendi (commitlendi)
 
 - **Bulgu:** `/2027/civil` sayfası pazarlama klasöründen değil, 29.10.2026'da envanterlenen canlı Allplan Civil sayfasından (`docs/content-2027/allplan-canlı/allplan-civil.md`) üretilmişti; "New Text and Images – Civil Page" belgesindeki yeni özellikler sayfada yoktu.

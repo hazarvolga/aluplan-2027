@@ -38,8 +38,8 @@ class EditionCardVariantTests(unittest.TestCase):
 
     def test_steps_are_a_spaced_two_by_two_grid_with_a_left_accent_and_corner_number(self):
         self.assertIn(".icons,.steps{grid-template-columns:repeat(2,minmax(0,1fr))}", CARDS_CSS)
-        self.assertIn(".steps{gap:var(--space-stack-md);border:0}", CARDS_CSS)
-        card = re.search(r"\.steps \.card\{[^}]*\}", CARDS_CSS).group(0)
+        self.assertIn(".icons,.steps{gap:var(--space-stack-md);border:0}", CARDS_CSS)
+        card = re.search(r"\.icons \.card,\.steps \.card\{[^}]*\}", CARDS_CSS).group(0)
         self.assertIn("border-left:var(--border-width-strong) solid var(--accent-border)", card)
         number = re.search(r"\.stepNumber\{[^}]*\}", CARDS_CSS).group(0)
         self.assertIn("position:absolute", number)
@@ -49,6 +49,8 @@ class EditionCardVariantTests(unittest.TestCase):
         chip = re.search(r"\.iconChip\{[^}]*\}", CARDS_CSS).group(0)
         self.assertIn("var(--accent-bg)", chip)
         self.assertIn("var(--accent-fg)", chip)
+        self.assertIn("position:absolute", chip)
+        self.assertIn("right:var(--card-padding)", chip)
 
 
 class ProductEditionViewTests(unittest.TestCase):

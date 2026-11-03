@@ -157,7 +157,7 @@
 - **Bağlantı farkları D bölümü (B5):** `docs/verification/main-link-gap-2026-11-02.md` kullanıcıyla tek tek gözden geçirilecek.
 - **Kullanılmayan YouTube jetonları:** eski `alu-yt-*` stilleri silindi; `design-system/tokens/tokens.json` içindeki `youtube*` görsel/boyut/gölge/dönüşüm jetonları (ve onlardan üretilen CSS değişkenleri) artık hiçbir stilde kullanılmıyor. Canonical tasarım sistemi dosyası olduğu için silinmedi; temizlik ayrı ve onaylı bir iş.
 - **Sonraki fazlar (E1–E3):** ortak bileşen taşıması, premium hareket, mobil video.
-- **Yayın:** `codex/prelaunch-decisions` push edilmedi; PR #3 ile ilişkisi, Vercel ortam değişkenleri (`ALUPLAN_SHOW_2027`, `ALUPLAN_BLOCK_INDEXING`; eski `ALUPLAN_2027_PREVIEW` kaldırılmalı), Vercel Analytics ve deploy kullanıcıda.
+- **Yayın:** `codex/prelaunch-decisions` kullanıcının açık izniyle 03.11.2026'da `origin`'e push edildi (yeni dal; Vercel'in otomatik dal dağıtımına bırakıldı, deploy sonucu kullanıcı tarafından kontrol edilecek); PR açılmadı, PR #3 ile ilişkisi, Vercel ortam değişkenleri (`ALUPLAN_SHOW_2027`, `ALUPLAN_BLOCK_INDEXING`; eski `ALUPLAN_2027_PREVIEW` kaldırılmalı), Vercel Analytics ve deploy kullanıcıda.
 
 ## 03.11.2026 — Kaynaklar sayfası yayında (yerel, commitlenmedi)
 

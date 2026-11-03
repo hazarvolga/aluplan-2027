@@ -1,5 +1,12 @@
 # Oturum devri
 
+## 03.11.2026 — Allplan Rebar ve Allplan Parametric sayfaları (commitlendi)
+
+- **Eklendi:** `/2027/rebar` ve `/2027/parametric`. Kaynak: `Allplan 2027 Marketing Materials/ALLPLAN 2027 Launch…/Web Pages/` altındaki iki "Edition Web Page" belgesi (Git dışı). Metinler belgeden Türkçeye çevrildi (taslak çeviri; ürün ve özellik adları İngilizce bırakıldı). Yapı: hero, konu etiketleri, genel bakış kartları, avantajlar, 6 gruplu özellik listesi (her biri 30 özellik), kapanışta teklif butonu (Microsoft Forms). Paylaşılan bileşen `ProductEditionView`, içerik `src/data/allplan-{rebar,parametric}-2027.ts`.
+- **Kayıt:** `RELEASE_2027_ROUTES` (metadata, JSON-LD, sitemap, llms.txt) ve `tests/test_release_2027_routes.py` güncellendi; yeni test `tests/test_rebar_parametric_pages.py`. Sürüm kapalıyken iki sayfa 404 verir (diğer 2027 sayfalarıyla aynı).
+- **Açık:** (1) `/2027/rebar` ve `/2027/parametric` adresleri öneridir, onay bekliyor. (2) Belgelerde görsel yok; hero için mevcut görseller kullanıldı (Rebar: grup donatı görseli, Parametric: Civil hero). Özellik görselleri verilirse eklenir. (3) Belgedeki "Try Allplan Parametric" / "Talk to an Expert" butonları yerine yalnızca "Teklif isteyin" kondu (karar: tek hedef teklif). (4) Menü ve ana sayfadan bağlantı henüz yok. (5) İngilizce hero etiketleri ve Türkçe çeviri metinleri kullanıcı onayı bekliyor.
+- Kapılar: 374 test, 46/46 parite, 45/45 token, typecheck, build; iki sayfa tarayıcıda açıldı, hata yok.
+
 ## 03.11.2026 — Teknik borç temizliği ve eğitim sayfalarının tamamen kaldırılması (commitlendi)
 
 - **Kaldırıldı:** `/solutions-v2/training` altındaki kalan 4 sayfa (events, individual, e-learning, quick-start). Hepsi 308 ile `/kaynaklar`'a yönlenir (sürüm kapalıyken `/`); `removedRoutes` ve `REMOVED_ROUTES` kaydı güncel. Artık `/solutions-v2/training` altında yayımlanan sayfa yok; sayfa sonu bileşeni yalnızca `/video-kutuphanesi` önekini eğitim dönüşümüyle eşler. Üretilen sayfa sayısı 102.

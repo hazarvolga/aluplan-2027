@@ -50,6 +50,20 @@ export const RELEASE_2027_ROUTES: readonly Release2027Route[] = [
     ogImage: '/assets/previews/frilo/frilo-hero.jpg'
   },
   {
+    path: '/2027/rebar',
+    name: 'Allplan Rebar',
+    description: 'Allplan Rebar; donatı tasarımı, detaylandırma, dokümantasyon, metraj ve proje koordinasyonunu tek bir odaklı BIM çözümünde birleştirir. Çubuk, hasır ve BAMTEC donatısı ile yapay zekâ destekli, otomatik detaylandırma.',
+    productName: 'Allplan Rebar',
+    ogImage: '/assets/previews/allplan-2027-features/csm_bar_group_circular_-_selected_3306dc1ad4.jpg'
+  },
+  {
+    path: '/2027/parametric',
+    name: 'Allplan Parametric',
+    description: 'Allplan Parametric; köprü, tünel, istinat duvarı, gürültü bariyeri ve prekast kirişli köprülerin dört boyutlu parametrik modellenmesi ve detaylandırılması için özel işlevler sunar.',
+    productName: 'Allplan Parametric',
+    ogImage: '/assets/previews/allplan-civil-2027/civil-hero.jpg'
+  },
+  {
     path: '/paket-karsilastirma',
     name: 'ALLPLAN 2027 sürüm karşılaştırması',
     description: 'Basic, Concept, Professional ve Ultimate sürümlerinin özelliklerini karşılaştırın.',

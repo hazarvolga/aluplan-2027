@@ -203,3 +203,5 @@ Kullanıcı, yayın öncesi kalan maddeler listesinde aşağıdaki kararları ve
 - **Form altyapısı (soru 3):** Microsoft Forms ile yayına çıkılır.
 - **Üretici izinleri (soru 5):** Kullanıcı kuralları bilerek çalıştıklarını belirtti; yayın engeli yok.
 - **Slogan:** Aluplan'ın kendi sloganları yerine Allplan'ın 2027 lansman sloganları kullanılır. Kaynak: `Allplan 2027 Marketing Materials/*/Web Pages` ve `Messaging` (Git dışı). Marka kılavuzundaki üç slogan adayı kullanılmaz.
+
+- **Rebar ve Parametric:** Pazarlama klasöründeki edition web page belgelerine göre iki yeni sayfa eklenir (`/2027/rebar`, `/2027/parametric`); sıra: Rebar ve Parametric, sonra Bimplus, SDS2, FRILO Geotechnics, Allplan edition sayfaları, ana sayfa slaytları.

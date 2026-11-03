@@ -1745,3 +1745,43 @@ Kullanıcı 2027 ana sayfasını şimdilik yeterli bulup ALLPLAN Max sayfasını
 - Beş merkez için içerik/hedef/görsel envanteri, katalog farkları, ayrı CDS koleksiyonu ve onaya sunulacak beş 301 önerisi `docs/00-inventory/solution-hubs-migration-proposal-2026-11-03.md` dosyasındadır. Ana sayfa kaynak ve gerçek gösterilen görselleri ayrı kaydedildi.
 - URL, canonical, sitemap veya yönlendirme değiştirilmedi. Önerilen adresler ve 301 haritası kullanıcı onayı, canlı rota/indeks ve çakışma kontrolü bekler. `/solutions/addons` ayrı CDS koleksiyonudur; BIMPLUS ve AX3000 farkları çözülmeden birleştirilmemelidir. Next.js kalıcı yönlendirme davranışında 308/301 ayrımı doğrulanmalıdır.
 - Yerel masaüstü ve 355px mobil örnek incelendi; dört kart hedefi ve metni kontrol edildi, mobilde yatay taşma görülmedi. Bağımsız incelemede derleme artığı düzeltildi ve görsel envanteri tamamlandı. Tür kontrolü, stil kontrolü ve ilgili 13 test geçti. `pnpm test`: 506 test başarılı (4 atlandı), kaynak sözleşmesi, 46 parite kontrolü ve 45 token testi başarılı.
+
+### 03.11.2026 — Çözüm merkezleri adres taşıması
+- Taşıma öncesi geri dönüş noktası: `a48713fc140250fa9efe509b1893c2554f2f8c59` (yerel commit; mevcut çalışma ağacındaki `next-env.d.ts` ve izlenmeyen yerel dosyalar dışında). Değişiklikler yayınlanmadı.
+- Kullanıcı onayıyla beş merkez `/cozumler/bina-tasarimi`, `/cozumler/altyapi-tasarimi`, `/cozumler/insaat-planlamasi`, `/eklentiler`, `/cozumler/diger-urunler` adreslerine taşındı; eski beş URL doğrudan HTTP 301 ile yönlenir ve query korunur. Veri üreticisi, canonical, sitemap, arama, ana sayfa, footer ve hero görsel aileleri uyarlandı.
+- Ortak kart düzeni beş merkezde uygulanır; mevcut 21 kartın metinleri, sıralaması ve hedefleri korunur. AX3000 görseli katalog kaydından seçilir ama hub linki değiştirilmez. `/solutions/addons` ve CDS alt rotaları ayrıdır; BIMPLUS ve AX3000 kaynak farkları birleştirilmedi.
+- Canlı sitede yeni beş adres HTTP 404 olarak görüldü (03.11.2026); trafik, arama indeksi ve üretim altyapısı yayın öncesi doğrulanmalı. Yerel HTTP'de beş 301, query, beş 200, canonical ve sitemap kontrol edildi; 355px eklentiler sayfasında yatay taşma gözlenmedi. Bağımsız kod incelemesinde kritik/yüksek bulgu yok; design-system tarihsel önizleme dosyalarındaki eski linkler yönlendirme üzerinden çalışır.
+- Üretim derlemesi `ALUPLAN_SHOW_2027=1 ALUPLAN_BLOCK_INDEXING=1 pnpm build` başarılı. `pnpm test`: 512 test başarılı (4 atlandı); 51 parite ve 45 token kontrolü başarılı.
+
+### 03.11.2026 — Ortak kapanış ve Scalypso deneme bağlantısı
+- `PreviewClosingSection`, `PageEndConversion` ortak görünümünü kullanır; Ultimate ve diğer önizlemelerde mevcut başlık, açıklama, seçenekler ve buton hedefleri korunur.
+- Scalypso ana sayfasındaki yinelenen deneme lisansı bölümü kaldırıldı. Ortak kapanışta Scalypso başlığı ve deneme talebi metni gösterilir; teklif ve deneme düğmeleri önceden onaylı genel talep formuna gider. Scalypso alt sayfalarındaki genel hero deneme bağlantısı da aynı talep yoluna uyarlandı; ALLPLAN trial hedefi kullanılmaz. Genel formun Scalypso/deneme talebini ayrı sınıflandırdığı doğrulanmadı.
+- Canlı sitede beş eski solution-v2 hub adresi 200 verdi; eski bağlantılar ve yer imleri için yerel 301 yönlendirmeleri korunmalı. Yerel Ultimate ve Scalypso kapanışları, Scalypso bağlantı hedefleri ve mobil yatay genişlik kontrol edildi. Bağımsız incelemede kritik/yüksek bulgu yok. `pnpm typecheck` ve `pnpm test` geçti: 513 test, 4 atlandı; parite ve token kontrolleri başarılı. Henüz yayınlanmadı.
+
+### 03.11.2026 — Scalypso ortak başlıklar ve CAD listesi
+- Scalypso ana sayfasındaki altı bölüm başlığı ortak `SectionHeader` bileşenine bağlandı; CAD yazılımları ve gereksinimler semantik listeleri mevcut tema tokenlarıyla kompakt ve vurgulu düzenlendi. İçerik, sıra ve bağlantılar korundu.
+- Deneme lisansı ve teklif düğmeleri önceden onaylanan Microsoft Forms ana talep formuna gider. Formun talep türünü ayrı sınıflandırması doğrulanmadı.
+- Yerel tarayıcıda başlıklar, 12 CAD yazılımı, üç gereksinim, form hedefleri ve 355px yatay taşma kontrol edildi; bağımsız inceleme kritik/yüksek bulgu göstermedi. `pnpm typecheck`, `pnpm styles:check` ve 15 ilgili test başarılı. Yayın yapılmadı.
+
+### 03.11.2026 — Scalypso modülleri ve tarayıcı listesi
+- Scalypso'nun beş modülü mevcut ortak `SolutionOverviewCards` sunumuna bağlandı; bütün açıklama paragrafları, beş görsel, `Detaylı Bilgi` ve hedefler korunur. Ortak bileşenin diğer kullanımları varsayılan davranışını korur.
+- Tarayıcı, CAD ve gereksinim listeleri ortak `CompactSpecList` bileşeniyle sunulur; sekiz tarayıcı ve diğer liste öğeleri/sırası korunur. Erişilebilir liste semantiği için role=list eklendi.
+- Yerel masaüstü ve 355px görünümde modül bağlantıları, liste sayıları ve yatay taşma kontrol edildi; bağımsız incelemede kritik/yüksek bulgu yok. Typecheck, stil kontrolü ve 28 ilgili test geçti. Yayın yapılmadı.
+
+### 03.11.2026 — CDS Add-On sayfası
+- `/solutions/cds-addon` gövdesi ortak `SectionHeader` ve `SolutionOverviewCards` kullanır. İki kaynak giriş bölümü ve dokuz kartın başlık, açıklama, görsel ve `/solutions/addons/*` hedefleri korunur; genel hero ve PageEndConversion korunur. CDS ikonları sayfaya özel `object-fit: contain` ile kırpılmaz; diğer ortak kartlar etkilenmez.
+- Mevcut TBDY 2018 betonarme uyumluluk metni ile genel CDS eklentilerinin kapsam ilişkisi doğrulanmadı; mevcut metin aynen korundu, ürün doğrulaması gerekir. Kaynak 2026 sayfasında hero ve CTA butonları kapalı iken mevcut yerel genel CTA'lar gösteriliyor; ALLPLAN trial hedefinin CDS için uygunluğu ayrıca değerlendirilmeli.
+- Masaüstü görünümü, 355px yatay taşma ve dokuz görsel/hedef kontrol edildi. 13 gerçek render/ilgili test, typecheck ve styles:check geçti; bağımsız incelemede kritik/yüksek bulgu yok. Ortak kartların aria-label uygulamasıyla ekran okuyucu başlık/açıklama sunumu ayrıca doğrulanmalı. Yayın yapılmadı.
+
+### 03.11.2026 — Kompakt ortak alt başlık
+- Ortak `SectionHeader` bileşenine `as="h3"` seçeneği eklendi; `alu-h3` kullanır ve h1/h2 davranışları korunur. Scalypso CAD bölümündeki Gereksinimler alt başlığı bu bileşene taşındı.
+- Yerel tarayıcıda gerçek h3 semantiği, bölüm içi görünüm ve 355px taşma kontrol edildi; bağımsız inceleme kritik/yüksek bulgu göstermedi. Typecheck, styles:check ve 9 ilgili test başarılı. Yayın yapılmadı.
+
+### 03.11.2026 — Görünür kompakt h3 ve bağımsız sektörel zorluklar
+- Ortak SectionHeader `h3` varyantına ince vurgu çizgisi ve üst boşluk eklendi; gerçek h3 semantiği ve h1/h2 davranışı korunur. Scalypso Gereksinimler başlığında masaüstü görünüm doğrulandı.
+- `StructuredPageLayoutSection` içindeki dokuz çözüm sayfası Sektörel Zorluklar alanı metrikler bölümünden ayrılarak mevcut `ChallengesBand` ile bağımsız section oldu. İçerik ve sırası korunur, metrik yoksa da zorluklar görünür; Industry ve SDS2 alanları çiftlenmez.
+- Road-railway yerel DOM'da metriklerden sonra beş madde, 355px genişlikte taşmasız düzen doğrulandı. 32 ilgili test, typecheck, styles:check başarılı; bağımsız incelemede kritik/yüksek bulgu yok. Yayın yapılmadı.
+
+### 03.11.2026 — Commit öncesi doğrulama
+- Çözüm merkezleri adres taşıması, Scalypso/CDS ortak bileşenleri, ortak alt başlık ve bağımsız sektörel zorluk bölümleri için `pnpm typecheck` ve `pnpm test` başarılı: 521 test, 4 atlandı; parite, stil ve token kontrolleri başarılı. Değişiklik kapsamıyla sınırlı güvenlik incelemesinde kritik/yüksek bulgu yok. Yayın yapılmadı.
+- `next-env.d.ts` üretim/dev tip yolu değişikliği ve `.claude/`, `.superpowers/`, `premium-audit.json` yerel dosyaları önceki durumlarıyla commit dışında tutuldu.

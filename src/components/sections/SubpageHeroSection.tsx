@@ -35,6 +35,9 @@ export function SubpageHeroSection({
   sectionBadgeLabel,
   isLegalPage
 }: SubpageHeroSectionProps): ReactElement {
+  const scalypsoTrial = page.path.startsWith('/solutions/scalypso/')
+    ? (page.contentLinks.find((link) => link.text === 'Deneme Lisansı İste')?.href ?? MAIN_QUOTE_FORM_URL)
+    : undefined;
   const showFramedMedia = Boolean(heroImage) && presentation === 'framed';
   const responsiveBackground = background ? (() => {
     const common = { alt: '', fill: true, sizes: '100vw', loading: 'eager' } as const;
@@ -122,12 +125,12 @@ export function SubpageHeroSection({
                 <AluIcon name="external-link" size="sm" />
               </a>
               <a
-                href={TRIAL_CTA_URL}
+                href={scalypsoTrial ?? TRIAL_CTA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="alu-button alu-button--secondary alu-button--md"
               >
-                <span>Ücretsiz Deneme</span>
+                <span>{scalypsoTrial ? 'Deneme Lisansı İste' : 'Ücretsiz Deneme'}</span>
                 <AluIcon name="external-link" size="sm" />
               </a>
               {page.path.startsWith('/products') && (

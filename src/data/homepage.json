@@ -147,7 +147,7 @@
       "subtitle": "Mimari & Mühendislik",
       "description": "Tasarım, Strüktürel Analiz, MEP ve Endüstriyel çözümler.",
       "cta": "Çözümleri İncele",
-      "href": "/solutions-v2/building-design",
+      "href": "/cozumler/bina-tasarimi",
       "image": "/assets/solutions/architecture-hero.jpg"
     },
     {
@@ -155,7 +155,7 @@
       "subtitle": "Yol & Köprü",
       "description": "Köprü, Tünel ve Yol projeleri için parametrik modelleme.",
       "cta": "Keşfet",
-      "href": "/solutions-v2/infrastructure",
+      "href": "/cozumler/altyapi-tasarimi",
       "image": "/assets/solutions/infrastructure-hero.jpg"
     },
     {
@@ -163,7 +163,7 @@
       "subtitle": "Prekast & Çelik",
       "description": "Üretimden şantiyeye kesintisiz veri akışı.",
       "cta": "Detaylar",
-      "href": "/solutions-v2/construction",
+      "href": "/cozumler/insaat-planlamasi",
       "image": "/assets/solutions/precast-hero.jpg"
     },
     {
@@ -171,7 +171,7 @@
       "subtitle": "Add-ons & Tools",
       "description": "Özelleştirilmiş eklentiler ve araçlar.",
       "cta": "İncele",
-      "href": "/solutions-v2/addons",
+      "href": "/eklentiler",
       "image": "/assets/product-engineering.jpg"
     },
     {
@@ -179,7 +179,7 @@
       "subtitle": "Bimplus & More",
       "description": "İşbirliği ve tamamlayıcı ürünler.",
       "cta": "Göz At",
-      "href": "/solutions-v2/other",
+      "href": "/cozumler/diger-urunler",
       "image": "/assets/solutions/architecture-hero.jpg"
     }
   ],

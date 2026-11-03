@@ -42,7 +42,7 @@
     "groups": [
       {
         "title": "BİNA TASARIMI",
-        "hubPath": "/solutions-v2/building-design",
+        "hubPath": "/cozumler/bina-tasarimi",
         "hubItems": [
           {
             "title": "Mimari",
@@ -114,7 +114,7 @@
       },
       {
         "title": "ALTYAPI TASARIMI",
-        "hubPath": "/solutions-v2/infrastructure",
+        "hubPath": "/cozumler/altyapi-tasarimi",
         "hubItems": [
           {
             "title": "Altyapı Mühendisliği",
@@ -170,7 +170,7 @@
       },
       {
         "title": "İNŞAAT PLANLAMASI",
-        "hubPath": "/solutions-v2/construction",
+        "hubPath": "/cozumler/insaat-planlamasi",
         "hubItems": [
           {
             "title": "Prekast Üretimi",
@@ -226,7 +226,7 @@
       },
       {
         "title": "EKLENTİLER",
-        "hubPath": "/solutions-v2/addons",
+        "hubPath": "/eklentiler",
         "hubItems": [
           {
             "title": "CDS Add-On",
@@ -314,7 +314,7 @@
       },
       {
         "title": "DİĞER ÜRÜNLER",
-        "hubPath": "/solutions-v2/other",
+        "hubPath": "/cozumler/diger-urunler",
         "hubItems": [
           {
             "title": "BIMFlex",
@@ -709,23 +709,23 @@
     "solutions": [
       {
         "label": "BİNA TASARIMI",
-        "href": "/solutions-v2/building-design"
+        "href": "/cozumler/bina-tasarimi"
       },
       {
         "label": "ALTYAPI TASARIMI",
-        "href": "/solutions-v2/infrastructure"
+        "href": "/cozumler/altyapi-tasarimi"
       },
       {
         "label": "İNŞAAT PLANLAMASI",
-        "href": "/solutions-v2/construction"
+        "href": "/cozumler/insaat-planlamasi"
       },
       {
         "label": "EKLENTİLER",
-        "href": "/solutions-v2/addons"
+        "href": "/eklentiler"
       },
       {
         "label": "DİĞER ÜRÜNLER",
-        "href": "/solutions-v2/other"
+        "href": "/cozumler/diger-urunler"
       }
     ],
     "address": [

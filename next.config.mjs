@@ -82,6 +82,11 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      { source: '/solutions-v2/building-design', destination: '/cozumler/bina-tasarimi', statusCode: 301 },
+      { source: '/solutions-v2/infrastructure', destination: '/cozumler/altyapi-tasarimi', statusCode: 301 },
+      { source: '/solutions-v2/construction', destination: '/cozumler/insaat-planlamasi', statusCode: 301 },
+      { source: '/solutions-v2/addons', destination: '/eklentiler', statusCode: 301 },
+      { source: '/solutions-v2/other', destination: '/cozumler/diger-urunler', statusCode: 301 },
       {
         source: '/solutions/PlanliAlanlar',
         destination: '/solutions/imar-yonetmeligi-bim-eklentisi',

@@ -18,11 +18,11 @@ const releaseMonitorLabel = `${data.releaseLabel} · ${data.heroContent.monitorL
 const packageMatrixSuffix = ` · ${data.packageMatrixLabel}`;
 
 const previewSolutionImages: Record<string, string> = {
-  '/solutions-v2/building-design': '/assets/previews/solutions/building-web.jpg',
-  '/solutions-v2/infrastructure': '/assets/previews/solutions/infrastructure-web.jpg',
-  '/solutions-v2/construction': '/assets/previews/solutions/construction-web.jpg',
-  '/solutions-v2/addons': '/assets/previews/solutions/addons-web.jpg',
-  '/solutions-v2/other': '/assets/previews/solutions/other-web.jpg',
+  '/cozumler/bina-tasarimi': '/assets/previews/solutions/building-web.jpg',
+  '/cozumler/altyapi-tasarimi': '/assets/previews/solutions/infrastructure-web.jpg',
+  '/cozumler/insaat-planlamasi': '/assets/previews/solutions/construction-web.jpg',
+  '/eklentiler': '/assets/previews/solutions/addons-web.jpg',
+  '/cozumler/diger-urunler': '/assets/previews/solutions/other-web.jpg',
 };
 
 export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: boolean }) {

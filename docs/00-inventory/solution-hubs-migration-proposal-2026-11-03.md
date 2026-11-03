@@ -1,6 +1,6 @@
 # Çözüm merkezleri: içerik, bağlantı ve adres taşıma taslağı
 
-Durum: **taslak; adresler ve 301 yönlendirmeleri onay ve uygulama bekliyor**. Bu envanter 3 Kasım 2026 tarihli `src/data/navigation.json`, `src/data/homepage.json` ve `src/data/pages.json` verilerine dayanır; canlı site, mevcut indeksleme ve önerilen adreslerin tüm olası altyapı çakışmaları doğrulanmadı.
+Durum: **kullanıcı onayı sonrası yerelde uygulandı; üretime yayınlanmadı**. Aşağıdaki tablolar taşıma öncesi envanter ve onaylanan haritayı gösterir. 03.11.2026 tarihinde beş önerilen adres canlı sitede HTTP 404 döndü; altyapı ve indeksleme kontrolleri yayın öncesinde tekrarlanmalıdır. Bu envanter 3 Kasım 2026 tarihli `src/data/navigation.json`, `src/data/homepage.json` ve `src/data/pages.json` verilerine dayanır; canlı site, mevcut indeksleme ve önerilen adreslerin tüm olası altyapı çakışmaları doğrulanmadı.
 
 ## Ana sayfa, footer ve önerilen yönlendirmeler
 
@@ -22,11 +22,11 @@ Ana sayfada `HomepageView.tsx`, kaynak görsellerin yerine aşağıdaki önizlem
 | Eklentiler | `/assets/previews/solutions/addons-web.jpg` |
 | Diğer Çözümlerimiz | `/assets/previews/solutions/other-web.jpg` |
 
-Öneri: yukarıdaki mevcut hedeflerden aynı satırdaki yeni hedefe **tek adımda HTTP 301**. Bunlar henüz uygulanmadı; `solutions-v2` altındaki diğer rehber ve lisans sayfaları bu haritanın kapsamı dışındadır. Footer çözüm bağlantıları aynı beş eski hedefe gider; üst çözümler menüsü grup adları altında doğrudan aşağıdaki kart hedeflerine gider, hub adreslerine gitmez.
+Öneri: yukarıdaki mevcut hedeflerden aynı satırdaki yeni hedefe **tek adımda HTTP 301**. Bu eşlemeler yerelde uygulandı; `solutions-v2` altındaki diğer rehber ve lisans sayfaları bu haritanın kapsamı dışındadır. Footer çözüm bağlantıları aynı beş eski hedefe gider; üst çözümler menüsü grup adları altında doğrudan aşağıdaki kart hedeflerine gider, hub adreslerine gitmez.
 
 ## Kaynak hub kartları ve katalog karşılaştırması
 
-Hub kartları `SolutionHubSection` üzerinden `hubItems` listesini kullanır; Bina Tasarımı örneği ortak katalog sunumunu, diğerleri `SolutionDirectoryCard` kullanır. Bina örneğinde mevcut dört metin ve hedef korunarak, eşleşen katalog görselleri gösterilir. Aşağıda hub kartlarının gerçek değerleri korunmuştur: mevcut 21 hub kartında `image` alanı yoktur. Katalog görseli ve açıklamaları ayrı `catalogItems` verisidir; bunların huba aktarımı tasarım kararı olarak ele alınmalıdır. Dış bağlantı yeni sekmede açılır.
+Hub kartları `SolutionHubSection` üzerinden `hubItems` listesini kullanır; Beş merkez ortak katalog sunumunu kullanır. Mevcut metin ve hedefler korunarak eşleşen katalog görselleri gösterilir; AX3000 görseli farklı katalog hedefinden açık eşlemeyle alınır. Aşağıda hub kartlarının gerçek değerleri korunmuştur: mevcut 21 hub kartında `image` alanı yoktur. Katalog görseli ve açıklamaları ayrı `catalogItems` verisidir; bunların huba aktarımı tasarım kararı olarak ele alınmalıdır. Dış bağlantı yeni sekmede açılır.
 
 ### BİNA TASARIMI — `/solutions-v2/building-design`
 

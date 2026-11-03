@@ -88,7 +88,7 @@ for src, dst in removed_routes.items():
 
 for src, dst in route_renames.items():
     check(
-        f"Renamed route keeps a 308 from its old URL: {src} -> {dst}",
+        f"Renamed route keeps a redirect from its old URL: {src} -> {dst}",
         f"source: '{src}'," in next_config and dst in pages,
     )
 

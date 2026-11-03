@@ -15,6 +15,10 @@ export interface PageEndConversionModel {
   title: string;
   description: string;
   actions: PageEndConversionAction[];
+  preview?: {
+    headingId: string;
+    items: readonly { title?: string; paragraphs: readonly string[]; action?: { label: string; href: string } }[];
+  };
 }
 
 type PageEndConversionInput = Pick<PageRecord, 'path' | 'section'>;
@@ -40,6 +44,19 @@ function commercialConversion(): PageEndConversionModel {
     actions: [
       { label: 'Teklif İste', href: MAIN_QUOTE_FORM_URL, emphasis: 'primary' },
       { label: 'Ücretsiz Deneme', href: TRIAL_CTA_URL, emphasis: 'secondary' },
+    ],
+  };
+}
+
+function scalypsoConversion(): PageEndConversionModel {
+  return {
+    kind: 'commercial',
+    kicker: 'BİR SONRAKİ ADIM',
+    title: 'Scalypso hakkında görüşelim',
+    description: 'Bir deneme lisansı talep etmek için lütfen Başvuru Formunu doldurunuz.',
+    actions: [
+      { label: 'Teklif İste', href: MAIN_QUOTE_FORM_URL, emphasis: 'primary' },
+      { label: 'Deneme Lisansı İste', href: MAIN_QUOTE_FORM_URL, emphasis: 'secondary' },
     ],
   };
 }
@@ -84,6 +101,10 @@ function corporateConversion(): PageEndConversionModel {
 export function getPageEndConversion(page: PageEndConversionInput): PageEndConversionModel | null {
   if (page.section === 'legal' || HIDDEN_PATHS.some((path) => path === page.path)) {
     return null;
+  }
+
+  if (page.path === '/solutions/scalypso' || page.path.startsWith('/solutions/scalypso/')) {
+    return scalypsoConversion();
   }
 
   if (page.path.startsWith('/video-kutuphanesi')) {

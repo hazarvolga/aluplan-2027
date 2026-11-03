@@ -6,3 +6,6 @@
 .actions{display:flex;flex-direction:column;align-items:flex-start;gap:var(--space-stack-xs);padding:0;background:transparent;border:0;flex-shrink:0}
 .actionTitle{margin:0;color:var(--text-secondary);font-size:var(--type-body-sm-size);font-weight:var(--font-weight-strong)}
 @media(max-width:767px){.inner{align-items:flex-start;flex-direction:column;gap:var(--space-stack-md)}.actions{width:100%}}
+
+.previewOption{display:flex;flex-direction:column;align-items:flex-start;gap:var(--space-stack-xs);max-width:36rem}
+ .previewActions{flex:1;min-width:0}

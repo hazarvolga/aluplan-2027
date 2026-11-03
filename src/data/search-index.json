@@ -240,7 +240,7 @@
     "keywords": "BİNA TASARIMI Mimari Strüktürel Mühendislik MEP ALLPLAN Endüstri Çözümleri ALTYAPI TASARIMI Altyapı Mühendisliği Yol ve Demiryolu Tasarımı"
   },
   {
-    "path": "/solutions-v2/addons",
+    "path": "/eklentiler",
     "title": "EKLENTİLER",
     "seoTitle": "ALLPLAN Eklenti Kataloğu ve Üretkenlik Modülleri | Aluplan",
     "section": "solutions-v2",
@@ -248,7 +248,7 @@
     "keywords": "CDS Add-On Allto PytonPart Generator Allto PytonPart AX3000 MEP Scalypso"
   },
   {
-    "path": "/solutions-v2/building-design",
+    "path": "/cozumler/bina-tasarimi",
     "title": "BİNA TASARIMI",
     "seoTitle": "Bina Tasarımı Çözümleri — Mimari, Yapısal ve MEP BIM | Aluplan",
     "section": "solutions-v2",
@@ -288,7 +288,7 @@
     "keywords": "Giriş Yapamıyor musunuz? Connect Sifre Sıfırlama Sayfasını Başlatın E-postanızı Kontrol Edin E-posta Gelmedi mi? Yeni Parola Belirleyin Hazır mısınız?"
   },
   {
-    "path": "/solutions-v2/construction",
+    "path": "/cozumler/insaat-planlamasi",
     "title": "İNŞAAT PLANLAMASI",
     "seoTitle": "İnşaat Planlaması, Prekast, Çelik ve Şantiye Çözümleri | Aluplan",
     "section": "solutions-v2",
@@ -304,7 +304,7 @@
     "keywords": "Genel Abonelik (Subscription) SSS Abonelik (Subscription) nedir? Abonelik ile neleri elde ederim? Abonelik süresi ne kadardır ve yenilemek istemezsem ne olur? Ödemeyi nasıl yapabilirim? Aboneliğimi iptal edersem ne olur? Yazılıma erişmek için başka seçeneğim var mı? Aboneliğin temel avantajları nelerdir?"
   },
   {
-    "path": "/solutions-v2/infrastructure",
+    "path": "/cozumler/altyapi-tasarimi",
     "title": "ALTYAPI TASARIMI",
     "seoTitle": "Altyapı Tasarımı — Köprü, Yol, Tünel ve Geoteknik BIM | Aluplan",
     "section": "solutions-v2",
@@ -312,7 +312,7 @@
     "keywords": "Altyapı Mühendisliği Yol ve Demiryolu Tasarımı Köprü Tasarımı"
   },
   {
-    "path": "/solutions-v2/other",
+    "path": "/cozumler/diger-urunler",
     "title": "DİĞER ÇÖZÜMLERİMİZ",
     "seoTitle": "Tamamlayıcı BIM Çözümleri, Maliyet ve Eklenti Ailesi | Aluplan",
     "section": "solutions-v2",

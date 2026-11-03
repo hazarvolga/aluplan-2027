@@ -188,26 +188,17 @@ export function StructuredPageLayoutSection({
               ))}
             </div>
 
-            {layout.challenges && layout.challenges.length > 0 && (
-              <div className="alu-challenges-band">
-                <div className="alu-challenges-band__header">
-                  <span className="preview-kicker">/ SEKTÖREL ZORLUKLAR</span>
-                  <h3 className="alu-h3" style={{ margin: 0 }}>
-                    Günümüz Projelerinde Karşılaşılan Temel Zorluklar
-                  </h3>
-                </div>
-                <div className="alu-challenges-grid">
-                  {layout.challenges.map((challenge, challengeIndex) => (
-                    <div key={challengeIndex} className="alu-challenge-card">
-                      <span className="alu-challenge-card__num">0{challengeIndex + 1}</span>
-                      <p className="alu-body-sm" style={{ margin: 0 }}>
-                        {challenge}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
+          </div>
+        </section>
+      )}
+
+      {layout.challenges && layout.challenges.length > 0 && (
+        <section className="preview-section preview-section--subtle" aria-label="Sektörel Zorluklar">
+          <div className="alu-container">
+            <ChallengesBand
+              title="Günümüz Projelerinde Karşılaşılan Temel Zorluklar"
+              items={layout.challenges}
+            />
           </div>
         </section>
       )}

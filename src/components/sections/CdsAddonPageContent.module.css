@@ -1,0 +1,2 @@
+.modules article img { object-fit: contain; background: var(--surface-subtle); }
+.modules article a:hover img { transform: none; }

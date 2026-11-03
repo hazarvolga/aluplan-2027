@@ -266,7 +266,7 @@ def build_solution_directory(pages):
     for source_group in SOLUTION_DIRECTORY_SOURCE:
         hub_sections = {
             section["heading"]: section
-            for section in pages[source_group["hubPath"]]["sections"]
+            for section in pages[rename_route_value(source_group["hubPath"])]["sections"]
         }
         hub_items = [
             {
@@ -287,7 +287,7 @@ def build_solution_directory(pages):
         groups.append(
             {
                 "title": source_group["title"],
-                "hubPath": source_group["hubPath"],
+                "hubPath": rename_route_value(source_group["hubPath"]),
                 "hubItems": hub_items,
                 "catalogItems": catalog_items,
             }
@@ -1131,7 +1131,14 @@ update_release_notes_links(pages_data)
 
 # Source routes that the 2027 site publishes under a different slug. Extraction and per-route
 # policy above still use the source route; the rename is applied to the finished data only.
-ROUTE_RENAMES = {"/solutions-v2/faq": "/faq"}
+ROUTE_RENAMES = {
+    "/solutions-v2/faq": "/faq",
+    "/solutions-v2/building-design": "/cozumler/bina-tasarimi",
+    "/solutions-v2/infrastructure": "/cozumler/altyapi-tasarimi",
+    "/solutions-v2/construction": "/cozumler/insaat-planlamasi",
+    "/solutions-v2/addons": "/eklentiler",
+    "/solutions-v2/other": "/cozumler/diger-urunler",
+}
 # A prefix rename moves a page and everything below it (the video library hub and its playlists).
 ROUTE_PREFIX_RENAMES = {"/solutions-v2/training/video-library": "/video-kutuphanesi"}
 SITE_URL_ORIGIN = "https://aluplan.com.tr"

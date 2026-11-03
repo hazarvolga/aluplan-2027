@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SECTIONS = ROOT / "src/components/sections"
 ADOPTERS = [
     "MediaGridSection", "BenefitsSection", "FAQSection", "LinkGroupGridSection", "WorkflowSection",
-    "StructuredPageLayoutSection", "EditionCards", "ProductPageParts", "ProductEditionView", "PreviewClosingSection",
+    "StructuredPageLayoutSection", "EditionCards", "ProductPageParts", "ProductEditionView", "PageEndConversion",
     "ReferencesDirectorySection", "InnovationsSection", "ProfessionalServicesSection", "VideoPlaylistSection",
     "DisciplineWorkflowSection", "AboutEditorialSection", "ContactMap", "SolutionCatalogSection", "AllplanMaxPreviewPage",
     "SubpageView",

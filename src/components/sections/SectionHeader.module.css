@@ -1,0 +1,8 @@
+.marker {
+  display: inline-block;
+  width: var(--space-inset-md);
+  height: var(--border-width-default);
+  margin-inline-end: var(--space-inline-sm);
+  background: var(--accent-fg);
+  vertical-align: middle;
+}

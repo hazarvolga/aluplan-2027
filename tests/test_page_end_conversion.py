@@ -14,6 +14,7 @@ COMMERCIAL_ROUTES = (
     "/package-overview",
     "/paket-karsilastirma",
 )
+SCALYPSO_ROUTES = ("/solutions/scalypso", "/solutions/scalypso/converter", "/solutions/scalypso/mobile", "/solutions/scalypso/modeler", "/solutions/scalypso/videos", "/solutions/scalypso/viewer")
 TRAINING_ROUTES = (
     "/video-kutuphanesi",
     "/video-kutuphanesi/road-design",
@@ -36,6 +37,7 @@ HIDDEN_ROUTES = (
 )
 ALL_ROUTES = (
     *COMMERCIAL_ROUTES,
+    *SCALYPSO_ROUTES,
     *TRAINING_ROUTES,
     *SUPPORT_ROUTES,
     *CORPORATE_ROUTES,
@@ -74,6 +76,15 @@ class PageEndConversionPolicyTests(unittest.TestCase):
                     [action["label"] for action in model["actions"]],
                     ["Teklif İste", "Ücretsiz Deneme"],
                 )
+
+    def test_scalypso_routes_offer_relevant_trial_request(self):
+        for route in SCALYPSO_ROUTES:
+            with self.subTest(route=route):
+                model = self.results[route]
+                self.assertIn("Scalypso", model["title"])
+                self.assertEqual([a["label"] for a in model["actions"]], ["Teklif İste", "Deneme Lisansı İste"])
+                self.assertEqual(model["actions"][0]["href"], model["actions"][1]["href"])
+                self.assertIn("Bir deneme lisansı talep etmek için", model["description"])
 
     def test_training_routes_offer_training_request_then_quote(self):
         for route in TRAINING_ROUTES:

@@ -28,6 +28,7 @@ import { getPageEndConversion } from './page-end-conversion-policy';
 import { handleStructuredTabKey } from './structured-tab-key';
 import { ContactMap } from './ContactMap';
 import { ScalypsoPageContent } from './ScalypsoPageContent';
+import { CdsAddonPageContent } from './CdsAddonPageContent';
 import { ScalypsoSubpage } from './ScalypsoSubpage';
 import { ScalypsoModeler } from './ScalypsoModeler';
 import { SectionActions, SectionCardLink, visibleSectionItems } from './SectionLinks';
@@ -358,6 +359,8 @@ export function SubpageView({
           onVideo={setActiveModalVideo}
           onImage={setActiveLightboxImage}
         />
+      ) : page.path === '/solutions/cds-addon' ? (
+        <CdsAddonPageContent page={page} />
       ) : page.path === AX3000_MECHANICAL_ROUTE ? (
         <Ax3000MechanicalContent page={page} />
       ) : page.path === '/about' ? null : (

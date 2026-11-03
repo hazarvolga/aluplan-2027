@@ -190,7 +190,7 @@ class RenderAuditTests(unittest.TestCase):
             (Path(__file__).resolve().parents[1] / 'src/data/pages.json').read_text()
         )
         catalog = audit.render_expectation(pages['/solutions'])
-        hub = audit.render_expectation(pages['/solutions-v2/building-design'])
+        hub = audit.render_expectation(pages['/cozumler/bina-tasarimi'])
         self.assertTrue(any('Yaratıcı vizyonunuzu' in item for item in catalog['bodyText']))
         self.assertIn('Profesyonel çözüm paketi.', hub['bodyText'])
 

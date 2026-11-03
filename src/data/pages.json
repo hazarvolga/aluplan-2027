@@ -639,27 +639,27 @@
         "external": false
       },
       {
-        "href": "/solutions-v2/building-design",
+        "href": "/cozumler/bina-tasarimi",
         "text": "Mimari & MühendislikBİNA TASARIMITasarım, Strüktürel Analiz, MEP ve Endüstriyel çözümler.Çözümleri İncele",
         "external": false
       },
       {
-        "href": "/solutions-v2/infrastructure",
+        "href": "/cozumler/altyapi-tasarimi",
         "text": "Yol & KöprüALTYAPI TASARIMIKöprü, Tünel ve Yol projeleri için parametrik modelleme.Keşfet",
         "external": false
       },
       {
-        "href": "/solutions-v2/construction",
+        "href": "/cozumler/insaat-planlamasi",
         "text": "Prekast & ÇelikİNŞAAT PLANLAMASIÜretimden şantiyeye kesintisiz veri akışı.Detaylar",
         "external": false
       },
       {
-        "href": "/solutions-v2/addons",
+        "href": "/eklentiler",
         "text": "Add-ons & ToolsEKLENTİLERÖzelleştirilmiş eklentiler ve araçlar.İncele",
         "external": false
       },
       {
-        "href": "/solutions-v2/other",
+        "href": "/cozumler/diger-urunler",
         "text": "Bimplus & MoreDİĞER ÇÖZÜMLERİMİZİşbirliği ve tamamlayıcı ürünler.Göz At",
         "external": false
       },
@@ -18553,12 +18553,12 @@
     "schemaType": "CollectionPage",
     "structuredLayout": null
   },
-  "/solutions-v2/addons": {
-    "path": "/solutions-v2/addons",
+  "/eklentiler": {
+    "path": "/eklentiler",
     "section": "solutions-v2",
     "title": "ALLPLAN Eklenti Kataloğu ve Üretkenlik Modülleri | Aluplan",
     "description": "EKLENTİLER: Projenize güç katan özel modüller ve araçlar.",
-    "canonical": "https://aluplan.com.tr/solutions-v2/addons",
+    "canonical": "https://aluplan.com.tr/eklentiler",
     "h1": "EKLENTİLER",
     "eyebrow": "SOLUTIONS-V2",
     "breadcrumbs": [
@@ -18572,7 +18572,7 @@
       },
       {
         "label": "ALLPLAN Eklenti Kataloğu ve Üretkenlik Modülleri",
-        "href": "/solutions-v2/addons"
+        "href": "/eklentiler"
       }
     ],
     "headings": [
@@ -18712,12 +18712,12 @@
     "schemaType": "CollectionPage",
     "structuredLayout": null
   },
-  "/solutions-v2/building-design": {
-    "path": "/solutions-v2/building-design",
+  "/cozumler/bina-tasarimi": {
+    "path": "/cozumler/bina-tasarimi",
     "section": "solutions-v2",
     "title": "Bina Tasarımı Çözümleri — Mimari, Yapısal ve MEP BIM | Aluplan",
     "description": "BİNA TASARIMI: Mimari, Strüktürel ve MEP disiplinleri için entegre tasarım araçları.",
-    "canonical": "https://aluplan.com.tr/solutions-v2/building-design",
+    "canonical": "https://aluplan.com.tr/cozumler/bina-tasarimi",
     "h1": "BİNA TASARIMI",
     "eyebrow": "SOLUTIONS-V2",
     "breadcrumbs": [
@@ -18731,7 +18731,7 @@
       },
       {
         "label": "Bina Tasarımı Çözümleri",
-        "href": "/solutions-v2/building-design"
+        "href": "/cozumler/bina-tasarimi"
       }
     ],
     "headings": [
@@ -19689,12 +19689,12 @@
     "schemaType": "WebPage",
     "structuredLayout": null
   },
-  "/solutions-v2/construction": {
-    "path": "/solutions-v2/construction",
+  "/cozumler/insaat-planlamasi": {
+    "path": "/cozumler/insaat-planlamasi",
     "section": "solutions-v2",
     "title": "İnşaat Planlaması, Prekast, Çelik ve Şantiye Çözümleri | Aluplan",
     "description": "İNŞAAT PLANLAMASI: Prekast ve çelik üretimi için detaylandırma ve şantiye yönetimi.",
-    "canonical": "https://aluplan.com.tr/solutions-v2/construction",
+    "canonical": "https://aluplan.com.tr/cozumler/insaat-planlamasi",
     "h1": "İNŞAAT PLANLAMASI",
     "eyebrow": "SOLUTIONS-V2",
     "breadcrumbs": [
@@ -19708,7 +19708,7 @@
       },
       {
         "label": "İnşaat Planlaması, Prekast, Çelik ve Şantiye Çözümleri",
-        "href": "/solutions-v2/construction"
+        "href": "/cozumler/insaat-planlamasi"
       }
     ],
     "headings": [
@@ -20248,12 +20248,12 @@
       }
     }
   },
-  "/solutions-v2/infrastructure": {
-    "path": "/solutions-v2/infrastructure",
+  "/cozumler/altyapi-tasarimi": {
+    "path": "/cozumler/altyapi-tasarimi",
     "section": "solutions-v2",
     "title": "Altyapı Tasarımı — Köprü, Yol, Tünel ve Geoteknik BIM | Aluplan",
     "description": "ALTYAPI TASARIMI: Yol, köprü ve tünel projeleri için parametrik modelleme çözümleri.",
-    "canonical": "https://aluplan.com.tr/solutions-v2/infrastructure",
+    "canonical": "https://aluplan.com.tr/cozumler/altyapi-tasarimi",
     "h1": "ALTYAPI TASARIMI",
     "eyebrow": "SOLUTIONS-V2",
     "breadcrumbs": [
@@ -20267,7 +20267,7 @@
       },
       {
         "label": "Altyapı Tasarımı",
-        "href": "/solutions-v2/infrastructure"
+        "href": "/cozumler/altyapi-tasarimi"
       }
     ],
     "headings": [
@@ -20371,12 +20371,12 @@
     "schemaType": "WebPage",
     "structuredLayout": null
   },
-  "/solutions-v2/other": {
-    "path": "/solutions-v2/other",
+  "/cozumler/diger-urunler": {
+    "path": "/cozumler/diger-urunler",
     "section": "solutions-v2",
     "title": "Tamamlayıcı BIM Çözümleri, Maliyet ve Eklenti Ailesi | Aluplan",
     "description": "DİĞER ÇÖZÜMLERİMİZ: İşbirliği platformları ve tamamlayıcı mühendislik araçları.",
-    "canonical": "https://aluplan.com.tr/solutions-v2/other",
+    "canonical": "https://aluplan.com.tr/cozumler/diger-urunler",
     "h1": "DİĞER ÇÖZÜMLERİMİZ",
     "eyebrow": "SOLUTIONS-V2",
     "breadcrumbs": [
@@ -20390,7 +20390,7 @@
       },
       {
         "label": "Tamamlayıcı BIM Çözümleri, Maliyet ve Eklenti Ailesi",
-        "href": "/solutions-v2/other"
+        "href": "/cozumler/diger-urunler"
       }
     ],
     "headings": [

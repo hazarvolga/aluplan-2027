@@ -43,9 +43,9 @@ const LLMS_TXT_CONTENT = `# Aluplan Program Sistemleri — ALLPLAN Türkiye
 ${packageComparisonLine}
 
 ## Uzmanlık Çözümleri ve Eklentiler (/solutions)
-- [Bina Tasarımı](https://aluplan.com.tr/solutions-v2/building-design): Mimari (/solutions/architecture), Strüktürel (/solutions/structural), MEP (/solutions/mep) ve Endüstriyel tesis (/solutions/allplan-industry).
-- [Altyapı Tasarımı](https://aluplan.com.tr/solutions-v2/infrastructure): Altyapı (/solutions/infrastructure), Yol ve Demiryolu (/solutions/road-railway), ALLPLAN Bridge Köprü Tasarımı (/solutions/bridge-design).
-- [İnşaat Planlaması](https://aluplan.com.tr/solutions-v2/construction): Prekast Üretimi (/solutions/precast), Çelik (/solutions/steel), Şantiye Planlaması (/solutions/site-planning).
+- [Bina Tasarımı](https://aluplan.com.tr/cozumler/bina-tasarimi): Mimari (/solutions/architecture), Strüktürel (/solutions/structural), MEP (/solutions/mep) ve Endüstriyel tesis (/solutions/allplan-industry).
+- [Altyapı Tasarımı](https://aluplan.com.tr/cozumler/altyapi-tasarimi): Altyapı (/solutions/infrastructure), Yol ve Demiryolu (/solutions/road-railway), ALLPLAN Bridge Köprü Tasarımı (/solutions/bridge-design).
+- [İnşaat Planlaması](https://aluplan.com.tr/cozumler/insaat-planlamasi): Prekast Üretimi (/solutions/precast), Çelik (/solutions/steel), Şantiye Planlaması (/solutions/site-planning).
 - [BIMFlex Otomatik Donatı Paketi](https://aluplan.com.tr/solutions/bimflex): FlexSoft AR-GE x Aluplan iş birliğiyle kolon, kiriş, perde, döşeme ve temel donatı otomasyonu.
 - [İmar Yönetmeliği BIM Eklentisi](https://aluplan.com.tr/solutions/imar-yonetmeligi-bim-eklentisi): Planlı Alanlar İmar Yönetmeliği uyumlu otomatik BIM denetimi.
 - [CDS Add-On & Allto PythonPart & Scalypso](https://aluplan.com.tr/solutions/addons): 2B DWG Converter, Drive Curve, Parametric Terrain, Ramp, Steel Components, 3B Lazer Tarama Nokta Bulutu (Scalypso).

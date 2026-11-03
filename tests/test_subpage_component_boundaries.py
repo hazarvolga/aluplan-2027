@@ -348,7 +348,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
         self.assertEqual(len(filter_paths("allplan")), 71)
         self.assertEqual(
             filter_paths("BIMFlex"),
-            ["/solutions-v2/other", "/solutions/bimflex"],
+            ["/cozumler/diger-urunler", "/solutions/bimflex"],
         )
         self.assertEqual(len(filter_paths("Köprü")), 9)
         self.assertEqual(len(filter_paths("Prekast")), 4)
@@ -375,7 +375,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
             "page.description",
             "!isLegalPage && page.path !== '/about'",
             "href={MAIN_QUOTE_FORM_URL}",
-            "href={TRIAL_CTA_URL}",
+            "href={scalypsoTrial ?? TRIAL_CTA_URL}",
             "page.path.startsWith('/products')",
             'href="/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf"',
             '<picture className="alu-subpage-hero__bg" aria-hidden="true">',

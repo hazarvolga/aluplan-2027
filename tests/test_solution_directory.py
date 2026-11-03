@@ -13,30 +13,30 @@ def read(relative: str) -> str:
 
 
 EXPECTED_HUBS = {
-    "/solutions-v2/building-design": [
+    "/cozumler/bina-tasarimi": [
         ("Mimari", "/solutions/architecture"),
         ("Strüktürel Mühendislik", "/solutions/structural"),
         ("MEP", "/solutions/mep"),
         ("ALLPLAN ENDÜSTRİ ÇÖZÜMLERİ", "/solutions/allplan-industry"),
     ],
-    "/solutions-v2/infrastructure": [
+    "/cozumler/altyapi-tasarimi": [
         ("Altyapı Mühendisliği", "/solutions/infrastructure"),
         ("Yol ve Demiryolu Tasarımı", "/solutions/road-railway"),
         ("Köprü Tasarımı", "/solutions/bridge-design"),
     ],
-    "/solutions-v2/construction": [
+    "/cozumler/insaat-planlamasi": [
         ("Prekast Üretimi", "/solutions/precast"),
         ("Çelik Detaylandırma & İmalat", "/solutions/steel"),
         ("Şantiye Planlaması", "/solutions/site-planning"),
     ],
-    "/solutions-v2/addons": [
+    "/eklentiler": [
         ("CDS Add-On", "/solutions/cds-addon"),
         ("Allto PytonPart Generator", "https://allplantools.com/"),
         ("Allto PytonPart", "/solutions/pythonpart"),
         ("AX3000 MEP", "/solutions/ax3000"),
         ("Scalypso", "/solutions/scalypso"),
     ],
-    "/solutions-v2/other": [
+    "/cozumler/diger-urunler": [
         ("BIMFlex", "/solutions/bimflex"),
         ("Donatı Mühendisliği", "/solutions/rebar-engineering"),
         ("İmar Yönetmeliği BIM Eklentisi", "/solutions/imar-yonetmeligi-bim-eklentisi"),
@@ -261,15 +261,14 @@ class SolutionDirectoryBoundaryTests(unittest.TestCase):
                 self.assertIn("data-solution-directory", component)
         self.assertIn("<SolutionDirectoryCard", read("src/components/sections/SolutionHubSection.tsx"))
 
-    def test_building_hub_uses_shared_catalog_presentation_without_changing_content(self):
+    def test_hubs_use_shared_catalog_presentation_without_changing_content(self):
         hub = read("src/components/sections/SolutionHubSection.tsx")
-        self.assertIn("hub.hubPath === '/solutions-v2/building-design'", hub)
         self.assertIn("hub.hubItems.map", hub)
         self.assertIn("hub.catalogItems.find", hub)
         self.assertIn("<SolutionOverviewCards", hub)
         self.assertIn("<SolutionDirectoryCard", hub)
         data = json.loads(read("src/data/navigation.json"))["solutionDirectory"]
-        building = next(g for g in data["groups"] if g["hubPath"] == "/solutions-v2/building-design")
+        building = next(g for g in data["groups"] if g["hubPath"] == "/cozumler/bina-tasarimi")
         for item in building["hubItems"]:
             matches = [candidate for candidate in building["catalogItems"] if candidate["href"] == item["href"]]
             self.assertEqual(len(matches), 1)

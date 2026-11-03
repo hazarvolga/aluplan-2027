@@ -51,7 +51,7 @@ const LLMS_TXT_CONTENT = `# Aluplan Program Sistemleri — ALLPLAN Türkiye
 ## Eğitim, Teknik Destek ve Kaynaklar (/solutions-v2/training)
 - [ALLPLAN Eğitim Merkezi](https://aluplan.com.tr/solutions-v2/training): Dönemsel teknik webinarlar, hızlı başlangıç rehberi (/solutions-v2/training/quick-start) ve kuruma özel eğitim talepleri.
 - [Video Kütüphanesi (14 Seri / 216 Video)](https://aluplan.com.tr/solutions-v2/training/video-library): Hello ALLPLAN 2024, Otomatik Donatı, Köprü İş Akışları, Yol Tasarımı, AX3000, Prekast ve SDS2 eğitim videoları.
-- [Sıkça Sorulan Sorular (SSS)](https://aluplan.com.tr/solutions-v2/faq): Lisans, kurulum, sistem gereksinimleri ve OpenBIM veri değişimi.
+- [Sıkça Sorulan Sorular (SSS)](https://aluplan.com.tr/faq): Lisans, kurulum, sistem gereksinimleri ve OpenBIM veri değişimi.
 - [Referanslar](https://aluplan.com.tr/references): Kamu kurumları, belediyeler, üniversiteler ve mühendislik/mimarlık ofisleri.
 ${release2027Section}`;
 

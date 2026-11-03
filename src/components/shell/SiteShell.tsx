@@ -175,6 +175,9 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <Link className="alu-site-nav__link" href="/about">
               Hakkımızda
             </Link>
+            <Link className="alu-site-nav__link" href="/faq">
+              S.S.S.
+            </Link>
             <Link className="alu-site-nav__link" href="/contact">
               İletişim
             </Link>
@@ -271,6 +274,9 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 </Link>
                 <Link className="alu-button alu-button--secondary alu-button--sm" href="/about" onClick={() => setMobileMenuOpen(false)}>
                   Hakkımızda
+                </Link>
+                <Link className="alu-button alu-button--secondary alu-button--sm" href="/faq" onClick={() => setMobileMenuOpen(false)}>
+                  S.S.S.
                 </Link>
                 <Link className="alu-button alu-button--secondary alu-button--sm" href="/contact" onClick={() => setMobileMenuOpen(false)}>
                   İletişim

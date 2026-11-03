@@ -2719,7 +2719,7 @@
         "external": true
       },
       {
-        "href": "/solutions-v2/faq",
+        "href": "/faq",
         "text": "Abonelik SSS",
         "external": false
       },
@@ -3537,7 +3537,7 @@
         "external": true
       },
       {
-        "href": "/solutions-v2/faq",
+        "href": "/faq",
         "text": "Abonelik SSS",
         "external": false
       },
@@ -4276,7 +4276,7 @@
         "external": true
       },
       {
-        "href": "/solutions-v2/faq",
+        "href": "/faq",
         "text": "Abonelik SSS",
         "external": false
       },
@@ -5074,7 +5074,7 @@
         "external": true
       },
       {
-        "href": "/solutions-v2/faq",
+        "href": "/faq",
         "text": "Abonelik SSS",
         "external": false
       },
@@ -5929,7 +5929,7 @@
         "external": true
       },
       {
-        "href": "/solutions-v2/faq",
+        "href": "/faq",
         "text": "Abonelik SSS",
         "external": false
       },
@@ -6721,7 +6721,7 @@
         "external": true
       },
       {
-        "href": "/solutions-v2/faq",
+        "href": "/faq",
         "text": "Abonelik SSS",
         "external": false
       },
@@ -7532,7 +7532,7 @@
         "external": true
       },
       {
-        "href": "/solutions-v2/faq",
+        "href": "/faq",
         "text": "Abonelik SSS",
         "external": false
       },
@@ -8749,7 +8749,7 @@
         "external": true
       },
       {
-        "href": "/solutions-v2/faq",
+        "href": "/faq",
         "text": "Abonelik SSS",
         "external": false
       },
@@ -10350,7 +10350,7 @@
         "external": true
       },
       {
-        "href": "/solutions-v2/faq",
+        "href": "/faq",
         "text": "Abonelik SSS",
         "external": false
       },
@@ -11161,7 +11161,7 @@
         "external": true
       },
       {
-        "href": "/solutions-v2/faq",
+        "href": "/faq",
         "text": "Abonelik SSS",
         "external": false
       },
@@ -11562,7 +11562,7 @@
         "external": true
       },
       {
-        "href": "/solutions-v2/faq",
+        "href": "/faq",
         "text": "Abonelik SSS",
         "external": false
       },
@@ -14655,7 +14655,7 @@
         "external": true
       },
       {
-        "href": "/solutions-v2/faq",
+        "href": "/faq",
         "text": "Abonelik SSS",
         "external": false
       },
@@ -15326,7 +15326,7 @@
         "external": true
       },
       {
-        "href": "/solutions-v2/faq",
+        "href": "/faq",
         "text": "Abonelik SSS",
         "external": false
       },
@@ -15865,7 +15865,7 @@
         "external": true
       },
       {
-        "href": "/solutions-v2/faq",
+        "href": "/faq",
         "text": "Abonelik SSS",
         "external": false
       },
@@ -19809,12 +19809,12 @@
     "schemaType": "WebPage",
     "structuredLayout": null
   },
-  "/solutions-v2/faq": {
-    "path": "/solutions-v2/faq",
+  "/faq": {
+    "path": "/faq",
     "section": "solutions-v2",
     "title": "Sıkça Sorulan Sorular (SSS) ve Teknik Bilgi Bankası | Aluplan",
     "description": "Sıkça Sorulan Sorular: Allplan lisanslama, teknik özellikler ve abonelik modelleri hakkında merak ettikleriniz. Allplan abonelik sistemi, ödeme seçenekleri ve iptal koşulları hak",
-    "canonical": "https://aluplan.com.tr/solutions-v2/faq",
+    "canonical": "https://aluplan.com.tr/faq",
     "h1": "Sıkça Sorulan Sorular",
     "eyebrow": "SOLUTIONS-V2",
     "breadcrumbs": [
@@ -19828,7 +19828,7 @@
       },
       {
         "label": "Sıkça Sorulan Sorular (SSS) ve Teknik Bilgi Bankası",
-        "href": "/solutions-v2/faq"
+        "href": "/faq"
       }
     ],
     "headings": [
@@ -38978,7 +38978,7 @@
         "external": true
       },
       {
-        "href": "/solutions-v2/faq",
+        "href": "/faq",
         "text": "Abonelik SSS",
         "external": false
       },

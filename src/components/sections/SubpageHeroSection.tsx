@@ -135,7 +135,7 @@ export function SubpageHeroSection({
                     <span>Paket Karşılaştırma PDF</span>
                   </a>
                 ) : (
-                  <Link href="/2027/compare" className="alu-button alu-button--ghost alu-button--md">
+                  <Link href="/paket-karsilastirma" className="alu-button alu-button--ghost alu-button--md">
                     <AluIcon name="file-text" size="sm" />
                     <span>Paketleri karşılaştırın</span>
                   </Link>

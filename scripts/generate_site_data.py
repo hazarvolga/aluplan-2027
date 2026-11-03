@@ -1132,6 +1132,32 @@ def update_release_notes_links(value):
 
 update_release_notes_links(pages_data)
 
+# Source routes that the 2027 site publishes under a different slug. Extraction and per-route
+# policy above still use the source route; the rename is applied to the finished data only.
+ROUTE_RENAMES = {"/solutions-v2/faq": "/faq"}
+SITE_URL_ORIGIN = "https://aluplan.com.tr"
+
+
+def rename_route_value(value: str) -> str:
+    for old, new in ROUTE_RENAMES.items():
+        for prefix in ("", SITE_URL_ORIGIN):
+            if value == prefix + old or value.startswith((prefix + old + "#", prefix + old + "?")):
+                return prefix + new + value[len(prefix + old):]
+    return value
+
+
+def rename_routes(value):
+    if isinstance(value, dict):
+        return {rename_route_value(key): rename_routes(child) for key, child in value.items()}
+    if isinstance(value, list):
+        return [rename_routes(child) for child in value]
+    if isinstance(value, str):
+        return rename_route_value(value)
+    return value
+
+
+pages_data = rename_routes(pages_data)
+
 data_dir = ROOT / "src/data"
 data_dir.mkdir(parents=True, exist_ok=True)
 
@@ -1247,6 +1273,7 @@ navigation_data = {
         {"name": "Kaynaklar", "href": "/#professional-services"},
         {"name": "Referanslar", "href": "/references"},
         {"name": "Hakkımızda", "href": "/about"},
+        {"name": "S.S.S.", "href": "/faq"},
         {"name": "İletişim", "href": "/contact"},
     ],
     "footer": {
@@ -1390,7 +1417,7 @@ homepage_data["serviceGroups"] = [
 ]
 
 with open(data_dir / "homepage.json", "w", encoding="utf-8") as f:
-    json.dump(homepage_data, f, ensure_ascii=False, indent=2)
+    json.dump(rename_routes(homepage_data), f, ensure_ascii=False, indent=2)
 
 video_library_data = {
     "kicker": "GÖRSEL EĞİTİM · VİDEO KÜTÜPHANESİ",

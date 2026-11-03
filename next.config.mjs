@@ -117,12 +117,22 @@ const nextConfig = {
       },
       {
         source: '/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf',
-        destination: '/2027/compare',
+        destination: '/paket-karsilastirma',
         permanent: true
       },
       {
         source: '/docs/V2026_Paket_Karsilastirma-Q4-2025_R01.pdf',
-        destination: '/2027/compare',
+        destination: '/paket-karsilastirma',
+        permanent: true
+      },
+      {
+        source: '/2027/compare',
+        destination: '/paket-karsilastirma',
+        permanent: true
+      },
+      {
+        source: '/solutions-v2/faq',
+        destination: '/faq',
         permanent: true
       },
       {

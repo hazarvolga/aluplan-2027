@@ -267,7 +267,7 @@
       "title": "ALLPLAN FAQ",
       "description": "Sıkça sorulan sorular ve çözüm veri tabanı.",
       "status": "active",
-      "href": "/solutions-v2/faq",
+      "href": "/faq",
       "cta": "İncele",
       "icon": "circle-help"
     },

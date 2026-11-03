@@ -50,7 +50,7 @@ export const RELEASE_2027_ROUTES: readonly Release2027Route[] = [
     ogImage: '/assets/previews/frilo/frilo-hero.jpg'
   },
   {
-    path: '/2027/compare',
+    path: '/paket-karsilastirma',
     name: 'ALLPLAN 2027 sürüm karşılaştırması',
     description: 'Basic, Concept, Professional ve Ultimate sürümlerinin özelliklerini karşılaştırın.',
     productName: null,

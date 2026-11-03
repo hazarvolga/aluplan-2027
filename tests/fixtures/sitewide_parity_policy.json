@@ -1,5 +1,6 @@
 {
   "defaultEvidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence",
+  "routeRenames": {"/solutions-v2/faq": "/faq"},
   "excludedRoutes": [
     {
       "route": "/hero-3d",
@@ -262,7 +263,7 @@
       "reason": "Civil introduction video is preserved from the 2026 source implementation"
     },
     {
-      "route": "/solutions-v2/faq",
+      "route": "/faq",
       "dimension": "structuredUrl",
       "source": "",
       "generated": "https://www.allplan.com/product-lifecycle/",

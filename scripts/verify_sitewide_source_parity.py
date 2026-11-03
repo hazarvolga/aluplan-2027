@@ -59,6 +59,10 @@ def route_for_url(url: str) -> str:
     return path or "/"
 
 
+def _rename_route(route: str, policy: dict) -> str:
+    return policy.get("routeRenames", {}).get(route, route)
+
+
 def load_policy(path: Path) -> dict:
     policy = json.loads(path.read_text(encoding="utf-8"))
     validate_policy(policy)
@@ -79,6 +83,10 @@ def validate_policy(policy: dict) -> None:
             raise ValueError(f"Exact override needs evidence: {route}")
         if not clean_text(override.get("evidence")) and not default_evidence:
             raise ValueError(f"Exact override needs an evidence pointer: {route}")
+
+    for old, new in policy.get("routeRenames", {}).items():
+        if any(char in old + new for char in WILDCARD_CHARS):
+            raise ValueError(f"Wildcard route rename is not allowed: {old}")
 
     for key in ("excludedRoutes", "linkReplacements", "textReplacements", "imageReplacements"):
         for item in policy.get(key, []):
@@ -104,6 +112,10 @@ def _replace_link(href: str, policy: dict, route: str = "") -> str:
         value = "https://www.allplan.com/trial-or-subscription/"
     if value.startswith("/cdn-cgi/l/email-protection"):
         value = "mailto:info@aluplan.com.tr"
+    base = value.split("#")[0].split("?")[0]
+    renamed = _rename_route(base.rstrip("/") or "/", policy)
+    if renamed != (base.rstrip("/") or "/"):
+        value = renamed + value[len(base):]
     for replacement in policy.get("linkReplacements", []):
         if (
             (not replacement.get("route") or replacement["route"] == route)
@@ -221,6 +233,7 @@ def _source_snapshot(
         route = route_for_url(page["url"])
         if route in excluded:
             continue
+        route = _rename_route(route, policy)
         headings = [
             clean_text(item.get("text"))
             for item in page.get("headings", [])
@@ -479,11 +492,12 @@ def structured_integrity_findings(
 
 
 def _policy_applications(inventory: dict, route: str, policy: dict) -> list[dict]:
+    source_route = next((old for old, new in policy.get("routeRenames", {}).items() if new == route), route)
     page = next(
         (
             item
             for item in inventory.get("pages", [])
-            if item.get("status") == 200 and route_for_url(item.get("url", "")) == route
+            if item.get("status") == 200 and route_for_url(item.get("url", "")) == source_route
         ),
         {},
     )

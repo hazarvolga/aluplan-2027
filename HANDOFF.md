@@ -1,5 +1,13 @@
 # Oturum devri
 
+## 03.11.2026 — Rota adları, S.S.S. menüsü ve AX3000 dokümanları (yerel, commitlenmedi)
+
+- `/paket-karsilastirma` artık 2027 karşılaştırma sayfası (`src/app/paket-karsilastirma/`). `/2027/compare` ve PDF adresleri 308 ile buraya gider. Sürüm bayrağı kapalıyken aynı adres eski sayfayı sunar; sitemap'te tek kayıt var.
+- `/solutions-v2/faq` → `/faq` (308). Yeniden adlandırma `scripts/generate_site_data.py` içindeki `ROUTE_RENAMES` ile üretim sonrası uygulanır; kaynak envanter karşılaştırmaları `tests/fixtures/sitewide_parity_policy.json` içindeki `routeRenames` ile eşlenir. Menüde "S.S.S." Hakkımızda ile İletişim arasında (`SiteShell.tsx`, masaüstü ve mobil).
+- AX3000 dokümanları sayfasında hero altındaki iki kart gizlendi; Yapı Fiziği ve Virtual Reality sayfalarına doküman bağlantısı eklendi (`SubpageView.tsx`).
+- Kapılar: `pnpm test` (302 unit test, 37/37 parite, 45/45 token), typecheck, iki bayrak ayarında build. Dev sunucusunda tüm sayfalar ve mobil menü doğrulandı.
+- Açık: FAQ sayfasının kırıntısı hâlâ "Ana Sayfa > Çözümler > SSS"; `llms.txt` karşılaştırma satırı hâlâ "PDF" diyor.
+
 ## 03.11.2026 — D4: istemci paketinden sayfa verisinin çıkarılması (yerel, commitlenmedi)
 
 - `codex/prelaunch-decisions` dalında yarım kalan D4 tamamlandı. İstemci bileşenleri ve onların içe aktardığı yardımcı modüller artık `@/lib/site-data`'yı yalnız tip için içe aktarıyor. Sabitler, navigasyon, ana sayfa ve arama dizini `src/lib/site-shared.ts` modülünden; oynatma listeleri ve video kütüphanesi `src/lib/playlist-data.ts` modülünden geliyor. `site-data.ts` hepsini aynı adlarla dışa aktarmayı sürdürüyor; sunucu tarafı değişmedi.

@@ -23,7 +23,7 @@ SUPPORT_ROUTES = (
     "/solutions-v2/connect-license",
     "/solutions-v2/connect-license/activation",
     "/solutions-v2/connect-login",
-    "/solutions-v2/faq",
+    "/faq",
 )
 CORPORATE_ROUTES = ("/about", "/references")
 HIDDEN_ROUTES = (

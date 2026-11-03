@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import type { PageRecord, PlaylistRecord } from '@/lib/site-data';
 import {
   MAIN_QUOTE_FORM_URL,
@@ -29,8 +30,12 @@ import { ScalypsoPageContent } from './ScalypsoPageContent';
 import { ScalypsoSubpage } from './ScalypsoSubpage';
 import { ScalypsoModeler } from './ScalypsoModeler';
 import { SectionActions, SectionCardLink, visibleSectionItems } from './SectionLinks';
-import { DocumentGroupsSection, documentSectionHeadings } from './DocumentGroupsSection';
+import { DocumentGroupsSection } from './DocumentGroupsSection';
 import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
+
+const AX3000_DOCS_ROUTE = '/products/ax3000/dokumanlar';
+// AX3000 pages whose source has no link to the documents page.
+const AX3000_DOCS_LINK_ROUTES = ['/solutions/ax3000-yapi-fizigi', '/solutions/ax3000-virtual-reality'];
 
 const SECTION_LABELS: Record<string, string> = {
   products: 'ALLPLAN ÜRÜN AİLESİ',
@@ -101,10 +106,9 @@ export function SubpageView({
     !isLegalPage && !isVideoLibraryHub && !isVideoPlaylistPage
       ? page.sections.filter((s) => Boolean(s.image) && !s.statValue)
       : [];
-  const documentHeadings = page.documentGroups ? documentSectionHeadings(page.documentGroups) : new Set<string>();
   const specSections =
-    !isVideoLibraryHub && !isVideoPlaylistPage && !solutionHub && !solutionCatalog
-      ? page.sections.filter((s) => !s.statValue && (!s.image || isLegalPage) && !documentHeadings.has(s.heading))
+    !isVideoLibraryHub && !isVideoPlaylistPage && !solutionHub && !solutionCatalog && !page.documentGroups
+      ? page.sections.filter((s) => !s.statValue && (!s.image || isLegalPage))
       : [];
 
   const usedPhotoSrcs = new Set<string>();
@@ -569,6 +573,15 @@ export function SubpageView({
         const links = page.contentLinks.filter(link => labels.includes(link.text));
         return links.length > 0 && <section className="preview-section" aria-label="İlgili bağlantılar"><div className="alu-container alu-cluster">{links.map(link => <a key={link.href} className="alu-button alu-button--secondary alu-button--md" href={link.href} target="_blank" rel="noopener noreferrer">{link.text} ↗</a>)}</div></section>;
       })()}
+      {AX3000_DOCS_LINK_ROUTES.includes(page.path) && (
+        <section className="preview-section" aria-label="AX3000 dokümanları">
+          <div className="alu-container alu-cluster">
+            <Link className="alu-button alu-button--secondary alu-button--md" href={AX3000_DOCS_ROUTE}>
+              AX3000 broşürleri ve teknik dokümanlar
+            </Link>
+          </div>
+        </section>
+      )}
       </>}
       {pageEndConversion && <PageEndConversion model={pageEndConversion} />}
 

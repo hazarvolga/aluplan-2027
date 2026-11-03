@@ -13,6 +13,9 @@ INVENTORY = json.loads(
 )
 PAGES = json.loads((ROOT / "src/data/pages.json").read_text(encoding="utf-8"))
 EXCLUDED_ROUTES = {"/hero-3d", "/test-webgl"}
+ROUTE_RENAMES = json.loads(
+    (ROOT / "tests/fixtures/sitewide_parity_policy.json").read_text(encoding="utf-8")
+).get("routeRenames", {})
 
 
 def route_for_url(url: str) -> str:
@@ -39,7 +42,7 @@ def source_native_videos() -> dict[str, set[str]]:
         route = route_for_url(page["url"])
         if route in EXCLUDED_ROUTES:
             continue
-        result[route] = {
+        result[ROUTE_RENAMES.get(route, route)] = {
             normalize_native_video_src((item.get("attributes") or {}).get("src", ""))
             for item in page.get("media", [])
             if item.get("tag") in {"video", "source"}

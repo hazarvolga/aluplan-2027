@@ -46,7 +46,7 @@ class ComparisonPdfRedirectTests(unittest.TestCase):
         redirects = {r["source"]: r for r in config_redirects()}
         for pdf in OLD_COMPARISON_PDFS:
             with self.subTest(pdf=pdf):
-                self.assertEqual(redirects[pdf]["destination"], "/2027/compare")
+                self.assertEqual(redirects[pdf]["destination"], "/paket-karsilastirma")
                 self.assertTrue(redirects[pdf]["permanent"])
 
 

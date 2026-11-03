@@ -21,6 +21,9 @@ llms_route_path = ROOT / "src/app/llms.txt/route.ts"
 sitemap_path = ROOT / "src/app/sitemap.ts"
 robots_path = ROOT / "src/app/robots.ts"
 
+route_renames = json.loads(
+    (ROOT / "tests/fixtures/sitewide_parity_policy.json").read_text(encoding="utf-8")
+).get("routeRenames", {})
 pages = json.loads(pages_path.read_text(encoding="utf-8"))
 playlists = json.loads(playlists_path.read_text(encoding="utf-8"))
 nav = json.loads(nav_path.read_text(encoding="utf-8"))
@@ -64,8 +67,14 @@ for r in rows:
     elif r["classification"] == "redirect_to_valid_2xx":
         expected_redirects.append((url, r["redirect_target"].replace("https://aluplan.com.tr", "")))
 
-missing_routes = [u for u in expected_200_routes if u not in pages]
+missing_routes = [u for u in expected_200_routes if route_renames.get(u, u) not in pages]
 check("All 110 public HTTP 200 routes exist in src/data/pages.json", len(missing_routes) == 0 and len(pages) == 110, f"missing={missing_routes}, count={len(pages)}")
+
+for src, dst in route_renames.items():
+    check(
+        f"Renamed route keeps a 308 from its old URL: {src} -> {dst}",
+        f"source: '{src}'," in next_config and dst in pages,
+    )
 
 for src, dst in expected_redirects:
     check(f"308 redirect preserved in next.config.mjs: {src} -> {dst}", src in next_config and dst in next_config)
@@ -261,9 +270,9 @@ check(
     f"items={len(ref_dir.get('items', []))}, categories={len(ref_dir.get('categories', []))}",
 )
 
-faq_dir = (pages["/solutions-v2/faq"].get("structuredLayout") or {}).get("faqDirectory") or {}
+faq_dir = (pages["/faq"].get("structuredLayout") or {}).get("faqDirectory") or {}
 check(
-    "/solutions-v2/faq preserves all 5 interactive FAQ category tabs and 25 Q&A items",
+    "/faq preserves all 5 interactive FAQ category tabs and 25 Q&A items",
     len(faq_dir.get("categories", [])) == 5 and sum(len(c.get("items", [])) for c in faq_dir.get("categories", [])) == 25,
 )
 

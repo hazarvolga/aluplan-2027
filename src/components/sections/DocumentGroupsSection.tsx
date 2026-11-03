@@ -43,7 +43,3 @@ export function DocumentGroupsSection({ groups }: DocumentGroupsSectionProps) {
     </>
   );
 }
-
-export function documentSectionHeadings(groups: DocumentGroup[]): Set<string> {
-  return new Set(groups.flatMap((group) => [group.title, ...group.documents.map((doc) => doc.title)]));
-}

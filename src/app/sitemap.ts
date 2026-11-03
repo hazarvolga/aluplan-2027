@@ -8,7 +8,9 @@ const LAST_MODIFIED = new Date('2026-10-25T00:00:00.000Z');
 const RELEASE_LAST_MODIFIED = new Date('2026-11-02T00:00:00.000Z');
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const pages = getAllPages().filter((p) => !NON_INDEXABLE_PATHS.has(p.path));
+  // A release route that reuses a page-data path (the package comparison) is listed once, from the release entry.
+  const releasePaths = new Set(isReleaseContentEnabled() ? RELEASE_2027_ROUTES.map((route) => route.path) : []);
+  const pages = getAllPages().filter((p) => !NON_INDEXABLE_PATHS.has(p.path) && !releasePaths.has(p.path));
 
   const pageEntries: MetadataRoute.Sitemap = pages.map((page) => ({
     url: page.canonical || (page.path === '/' ? SITE_ORIGIN : `${SITE_ORIGIN}${page.path}`),

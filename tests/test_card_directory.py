@@ -146,5 +146,35 @@ class SectionCardLinkRenderTests(unittest.TestCase):
                     self.assertIn(href, rendered)
 
 
+AX3000_DOCS_LINKED_ROUTES = ["/solutions/ax3000-yapi-fizigi", "/solutions/ax3000-virtual-reality"]
+AX3000_INTRO_CARD_HEADINGS = ("AX3000 Dokümanları</h2>", "Broşürler ve teknik kaynaklar</h2>")
+
+
+class Ax3000DocumentsPageTests(unittest.TestCase):
+    def test_documents_page_has_no_intro_cards_under_the_hero(self):
+        html_file = BUILD_APP / "products/ax3000/dokumanlar.html"
+        if not html_file.is_file():
+            raise unittest.SkipTest(f"production build output missing: {html_file}")
+        html = html_file.read_text(encoding="utf-8")
+        for heading in AX3000_INTRO_CARD_HEADINGS:
+            with self.subTest(heading=heading):
+                self.assertNotIn(heading, html.split("<main", 1)[-1].split("</h1>", 1)[-1])
+        self.assertIn("Teknik Dokümanlar", html)
+
+    def test_related_ax3000_pages_link_to_the_documents_page(self):
+        pages = load_pages()
+        routes = [
+            route for route in pages
+            if "ax3000" in route and route not in (AX3000_DOCS_ROUTE, "/solutions-v2/training/video-library/ax3000")
+        ]
+        for route in routes:
+            with self.subTest(route=route):
+                if route in AX3000_DOCS_LINKED_ROUTES:
+                    self.assertNotIn(AX3000_DOCS_ROUTE, str(pages[route]))
+                    self.assertIn(AX3000_DOCS_ROUTE, main_hrefs(route))
+                else:
+                    self.assertIn(AX3000_DOCS_ROUTE, str(pages[route]))
+
+
 if __name__ == "__main__":
     unittest.main()

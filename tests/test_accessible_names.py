@@ -8,8 +8,8 @@ ROOT = Path(__file__).resolve().parents[1]
 EXPECTED = {
     "src/components/sections/MediaGridSection.tsx": "aria-label={`${item.ctaText || 'Videoyu İzle'}: ${item.title}`}",
     "src/components/sections/SplitCalloutSection.tsx": "aria-label={`Videoyu İzle: ${callout.title}`}",
-    "src/app/2027/compare/page.tsx": "aria-label={`Sürümü incele: ALLPLAN ${e.name}`}",
-    "src/app/2027/compare/ComparisonTable.tsx": "aria-label={`Sürümü incele: ALLPLAN ${e.name}`}",
+    "src/app/paket-karsilastirma/page.tsx": "aria-label={`Sürümü incele: ALLPLAN ${e.name}`}",
+    "src/app/paket-karsilastirma/ComparisonTable.tsx": "aria-label={`Sürümü incele: ALLPLAN ${e.name}`}",
     "src/components/sections/AllplanMaxPreviewPage.tsx": "aria-label={`Demo talep edin: ${text(`3feat.${key}.title`)}`}",
     "src/components/sections/DocumentGroupsSection.tsx": "aria-label={`${downloadLabel}: ${doc.title} (${doc.language})`}",
 }

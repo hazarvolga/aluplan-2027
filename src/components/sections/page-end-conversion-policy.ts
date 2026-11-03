@@ -28,7 +28,7 @@ const HIDDEN_PATHS = [
 
 const SUPPORT_PATHS = [
   '/solutions-v2/connect-login',
-  '/solutions-v2/faq',
+  '/faq',
 ] as const;
 
 function commercialConversion(): PageEndConversionModel {

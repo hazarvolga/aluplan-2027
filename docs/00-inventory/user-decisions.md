@@ -172,3 +172,9 @@ Kullanıcı, yayın öncesi kalan maddeler listesinde aşağıdaki kararları ve
 - **D2, D4, D6, D7, D8:** Erişilebilir adlar, JS paketi, indirme bağlantısı adları, AX3000 doküman başlıkları ve harita/türev betiği düzeltmeleri yürütücüye bırakıldı.
 - **E1–E3:** Ortak bileşen taşıması, premium hareket ve mobil video sonraki fazlar olarak kabul edildi.
 - **Yeni sayfa (Kaynaklar):** Ana menüdeki “Kaynaklar” bağlantısının gittiği ana sayfa bölümü (“Profesyonel Hizmetler ve Destek Merkezi”, 19 kaynak) şimdilik kalır. Aynı bilgileri daha derli toplu sunan yeni bir sayfa kullanıcıyla birlikte tasarlanacak; kullanıcı onayından sonra bölüm kaldırılıp menü yeni sayfaya bağlanacak.
+
+## 03.11.2026 — Rota adları, menü ve AX3000 dokümanları
+
+- **Paket karşılaştırma:** 2027 karşılaştırma sayfası `/paket-karsilastirma` adresinde yayımlanır; eski içerik bu adreste sunulmaz. `/2027/compare` kalıcı olarak (308) buraya yönlenir; eski paket karşılaştırma PDF yönlendirmeleri de buraya gider. 2027 sürümü kapalıyken (geri alma) bu adres mevcut sayfayı sunmaya devam eder.
+- **SSS:** `/solutions-v2/faq` sayfası `/faq` adresine taşındı; eski adres kalıcı (308) yönlenir. Ana menüde Hakkımızda ile İletişim arasına "S.S.S." eklendi (masaüstü ve mobil).
+- **AX3000 dokümanları:** `/products/ax3000/dokumanlar` sayfasında hero altındaki iki tanıtım kartı kaldırıldı. Dokümanlar sayfasına bağlantısı olmayan AX3000 Yapı Fiziği ve Virtual Reality sayfalarına bağlantı eklendi.

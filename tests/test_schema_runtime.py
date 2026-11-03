@@ -47,7 +47,7 @@ class SchemaRuntimeTests(unittest.TestCase):
         cls.pages = json.loads((ROOT / "src/data/pages.json").read_text(encoding="utf-8"))
 
     def test_faq_schema_matches_all_visible_questions_in_order(self):
-        page = self.pages["/solutions-v2/faq"]
+        page = self.pages["/faq"]
         expected_items = [
             item
             for category in page["structuredLayout"]["faqDirectory"]["categories"]

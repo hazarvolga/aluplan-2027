@@ -204,13 +204,9 @@ class AppStylesTests(unittest.TestCase):
     def test_tokenized_component_sizes_have_no_raw_dimensions(self):
         source = (ROOT / 'src/styles/application.css').read_text(encoding='utf-8')
         expected = {
-            '.alu-video-play-badge': {'width': '--size-application-video-play-badge', 'height': '--size-application-video-play-badge'},
-            '.alu-partner-strip__item': {'height': '--size-application-partner-item-height'},
-            '.alu-partner-strip__item img': {'max-height': '--size-application-partner-logo-max-height'},
             '.alu-hero-monitor__dot': {'width': '--size-application-monitor-dot', 'height': '--size-application-monitor-dot'},
             '.alu-pathway-tab__icon': {'width': '--size-application-pathway-tab-icon', 'height': '--size-application-pathway-tab-icon'},
             '.alu-pathway-tab__dot': {'width': '--size-application-pathway-dot', 'height': '--size-application-pathway-dot'},
-            '.alu-pathway-feature-card__icon': {'width': '--size-application-pathway-feature-icon', 'height': '--size-application-pathway-feature-icon'},
             '.alu-product-card__pulse-dot': {'width': '--size-application-product-pulse-dot', 'height': '--size-application-product-pulse-dot'},
             '.alu-product-card__box-icon': {'width': '--size-application-product-box-icon', 'height': '--size-application-product-box-icon'},
             '.alu-product-card__status-dot': {'width': '--size-application-product-status-dot', 'height': '--size-application-product-status-dot'},
@@ -377,7 +373,6 @@ class AppStylesTests(unittest.TestCase):
         source = (ROOT / 'src/styles/application.css').read_text(encoding='utf-8')
         expected = {
             '.alu-card:hover .alu-card__media img': '--motion-transform-media-generic-zoom',
-            '.alu-card__media--video:hover .alu-video-play-badge': '--motion-transform-video-badge-zoom',
             '.alu-pathway-tab--active': '--motion-transform-pathway-tab-active',
             '.alu-pathway-split:hover .alu-pathway-visual-frame img': '--motion-transform-media-detail-zoom',
             '.alu-product-card--highlighted': '--motion-transform-product-highlighted',
@@ -514,7 +509,6 @@ class AppStylesTests(unittest.TestCase):
     def test_application_shadows_use_semantic_tokens(self):
         source = (ROOT / 'src/styles/application.css').read_text(encoding='utf-8')
         expected = {
-            'button.alu-role[aria-checked="true"]': '--shadow-application-role-selected-ring',
             '.alu-site-header': '--shadow-application-header',
             '.alu-megamenu': '--shadow-application-mega-menu',
             '[data-mode="light"] .alu-site-header': '--shadow-application-header-light',

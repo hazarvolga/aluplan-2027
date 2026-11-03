@@ -315,6 +315,23 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                   </div>
                 ))}
               </div>
+              <div className="alu-mobile-drawer__contact">
+                <div className="alu-topbar__socials" aria-label="Sosyal medya bağlantıları">
+                  {navData.topBar.socialLinks.map((soc) => (
+                    <a key={soc.label} href={soc.href} target="_blank" rel="noopener noreferrer" aria-label={soc.label} className="alu-topbar__link">
+                      <AluIcon name={getSocialIconName(soc.label)} size="sm" />
+                    </a>
+                  ))}
+                </div>
+                <a href={`mailto:${navData.topBar.email}`} className="alu-topbar__link">
+                  <AluIcon name="mail" size="sm" />
+                  <span>{navData.topBar.email}</span>
+                </a>
+                <a className="alu-topbar__link" href={MAIN_QUOTE_FORM_URL} target="_blank" rel="noopener noreferrer">
+                  <span>Hızlı Talep Oluştur</span>
+                  <AluIcon name="arrow-up-right" size="sm" />
+                </a>
+              </div>
             </div>
           </div>
         )}

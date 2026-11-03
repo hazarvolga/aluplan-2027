@@ -1,5 +1,13 @@
 # Oturum devri
 
+## 03.11.2026 — Mobil header sıkıştırması (commitlendi, onay bekliyor)
+
+- **Sorun (tarama gözlemi):** 375 px'te üst çubuk 113 px + header 149 px; sayfa h1'i y=381'de (ekranın ~%47'si) başlıyordu.
+- **Yapılan:** 40 rem ve altında üst çubuk gizlendi; sosyal ikonlar, e-posta ve "Hızlı Talep Oluştur" mobil menü çekmecesinin altına taşındı (`alu-mobile-drawer__contact`). Header tek satır, arama/tema/menü düğmeleri yalnız ikon (44×44, `aria-label`'lı). Tablet ve masaüstü değişmedi.
+- **Ölçüm (375×812, /products/allplan-basic, dev):** üst çubuk 0, header 73 px, h1 y=192, yatay taşma yok. Çekmece açıldı: 5 sosyal bağlantı, e-posta ve teklif formu bağlantısı görünür ve doğru hedefli.
+- **Testler:** `tests/test_mobile_header.py` (5 test); `test_tab_accessibility_contract.py` sosyal bağlantı sayısı 3 (çekmece kopyası dahil). 437 test, 46/46 parite, 45/45 token, typecheck, build.
+- **Sınırlar:** açık mod mobil ve gerçek cihazda bakılmadı; çekmece içeriği yalnız koyu modda gözle kontrol edildi.
+
 ## 03.11.2026 — Tüm sayfaların gözden geçirilmesi (tarama + düzeltmeler; commitlendi, onay bekliyor)
 
 - **Yöntem:** her sayfada çalışan bir ölçüm betiği (tarayıcıda `main` içindeki metinler için WCAG kontrastı, yatay taşma, h1 sayısı, ortalı h2, kırık görsel, eksik alt, yinelenen id, 12 px altı metin, `href="#"`). **Masaüstünde 116 sayfanın tamamı, koyu ve açık modda** (232 ölçüm); **mobilde (375 px, koyu mod) 40 sayfa** (tüm şablon ailelerinin temsilcileri + tüm bileşen türleri) tarandı; 4 temsilî sayfa mobilde, 6 sayfa açık/koyu masaüstünde gözle bakıldı.

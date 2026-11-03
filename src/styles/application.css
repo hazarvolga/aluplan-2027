@@ -3852,3 +3852,35 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   .preview-bimflex__figure img { height: auto; aspect-ratio: 1 / 1; }
   .preview-bimflex__figure figcaption { position: static; overflow-wrap: anywhere; }
 }
+
+/* Phones: one compact header row; the top bar items live in the menu drawer. */
+.alu-mobile-drawer__contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-inline-md);
+  padding-top: var(--space-stack-md);
+  border-top: var(--border-width-default) solid var(--border-default);
+}
+@media (max-width: 40rem) {
+  .alu-topbar {
+    display: none;
+  }
+  .alu-site-header__inner {
+    flex-wrap: nowrap;
+    gap: var(--space-inline-sm);
+  }
+  .alu-site-header__inner > .alu-cluster {
+    flex-wrap: nowrap;
+    gap: var(--space-inline-xs);
+  }
+  .alu-site-header__inner > .alu-cluster .alu-button > span {
+    display: none;
+  }
+  .alu-site-header__inner > .alu-cluster .alu-button {
+    min-width: var(--target-min);
+    min-height: var(--target-min);
+    padding-inline: 0;
+    justify-content: center;
+  }
+}

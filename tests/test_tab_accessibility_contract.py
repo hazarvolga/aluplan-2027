@@ -96,12 +96,13 @@ class TabAccessibilityContractTests(unittest.TestCase):
     def test_social_links_are_icon_only_but_keep_accessible_names(self):
         site_shell = read("src/components/shell/SiteShell.tsx")
 
-        self.assertEqual(site_shell.count("aria-label={soc.label}"), 2)
+        # top bar, footer and the mobile drawer contact block
+        self.assertEqual(site_shell.count("aria-label={soc.label}"), 3)
         self.assertEqual(
             site_shell.count(
                 '<AluIcon name={getSocialIconName(soc.label)} size="sm" />'
             ),
-            2,
+            3,
         )
         self.assertNotIn("<span>{soc.label}</span>", site_shell)
 

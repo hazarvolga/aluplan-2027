@@ -1135,13 +1135,18 @@ update_release_notes_links(pages_data)
 # Source routes that the 2027 site publishes under a different slug. Extraction and per-route
 # policy above still use the source route; the rename is applied to the finished data only.
 ROUTE_RENAMES = {"/solutions-v2/faq": "/faq"}
+# A prefix rename moves a page and everything below it (the video library hub and its playlists).
+ROUTE_PREFIX_RENAMES = {"/solutions-v2/training/video-library": "/video-kutuphanesi"}
 SITE_URL_ORIGIN = "https://aluplan.com.tr"
 
 
 def rename_route_value(value: str) -> str:
-    for old, new in ROUTE_RENAMES.items():
-        for prefix in ("", SITE_URL_ORIGIN):
+    for prefix in ("", SITE_URL_ORIGIN):
+        for old, new in ROUTE_RENAMES.items():
             if value == prefix + old or value.startswith((prefix + old + "#", prefix + old + "?")):
+                return prefix + new + value[len(prefix + old):]
+        for old, new in ROUTE_PREFIX_RENAMES.items():
+            if value == prefix + old or value.startswith((prefix + old + "/", prefix + old + "#", prefix + old + "?")):
                 return prefix + new + value[len(prefix + old):]
     return value
 
@@ -1165,7 +1170,7 @@ with open(data_dir / "pages.json", "w", encoding="utf-8") as f:
     json.dump(pages_data, f, ensure_ascii=False, indent=2)
 
 with open(data_dir / "playlists.json", "w", encoding="utf-8") as f:
-    json.dump(playlist_by_id, f, ensure_ascii=False, indent=2)
+    json.dump(rename_routes(playlist_by_id), f, ensure_ascii=False, indent=2)
 
 site_identity = {
     "name": "Aluplan Program Sistemleri",
@@ -1397,6 +1402,26 @@ for s in homepage_data.get("services", []):
     if "aluplan.net.tr" in s.get("href", "").lower() or "allplan.net.tr" in s.get("href", "").lower():
         s["href"] = "https://allplan.net.tr/tr"
 
+# 2027 additions to the learning group; the source homepage does not carry them.
+# Copy and destinations are provisional until the user supplies the final ones.
+ADDED_SERVICES = [
+    {
+        "title": "Video Kütüphanesi",
+        "description": "ALLPLAN eğitim videolarını ve oynatma listelerini izleyin.",
+        "status": "active",
+        "href": "/video-kutuphanesi",
+        "cta": "İzle",
+    },
+    {
+        "title": "Eğitim Merkezleri",
+        "description": "Eğitim merkezlerimiz ve eğitim olanakları hakkında bilgi alın.",
+        "status": "active",
+        "href": "/solutions-v2/training",
+        "cta": "İncele",
+    },
+]
+homepage_data["services"] = [*homepage_data.get("services", []), *ADDED_SERVICES]
+
 SERVICE_ICONS = {
     "Eğitim": "graduation-cap", "Teknik Destek": "life-buoy", "Destek Platformu": "life-buoy",
     "Danışmanlık": "users", "Sertifika": "award", "Download": "download", "Connect: Giriş": "key",
@@ -1405,12 +1430,13 @@ SERVICE_ICONS = {
     "Canlı Webinarlar": "video", "BIM Rehberi": "book-open", "OPENBIM": "boxes",
     "Sistem Gereksinimleri": "cpu", "Tüm Gereksinimler": "layers", "Sürüm Notları": "sparkles",
     "IFC Export El Kitabı": "file-text", "Partner": "users",
+    "Video Kütüphanesi": "circle-play", "Eğitim Merkezleri": "map-pin",
 }
 for service in homepage_data.get("services", []):
     service["icon"] = SERVICE_ICONS.get(service["title"], "layers")
 
 homepage_data["serviceGroups"] = [
-    {"title": "Öğren ve yardım al", "serviceTitles": ["Eğitim", "Teknik Destek", "Destek Platformu", "Danışmanlık", "Sertifika"]},
+    {"title": "Öğren ve yardım al", "serviceTitles": ["Eğitim", "Video Kütüphanesi", "Eğitim Merkezleri", "Teknik Destek", "Destek Platformu", "Danışmanlık", "Sertifika"]},
     {"title": "Yazılım ve lisans işlemleri", "serviceTitles": ["Download", "Connect: Giriş", "Admin Lisans : Lisans Yöneticisi Bilgi Formu", "CodeMeter WebDepot", "Deklarasyon Formu"]},
     {"title": "Bilgi ve güncellemeler", "serviceTitles": ["ALLPLAN FAQ", "Blog Global", "Canlı Webinarlar", "BIM Rehberi", "OPENBIM", "Sistem Gereksinimleri", "Tüm Gereksinimler", "Sürüm Notları", "IFC Export El Kitabı"]},
     {"title": "Partner erişimi", "serviceTitles": ["Partner"]},
@@ -1456,7 +1482,7 @@ video_library_data = {
     ],
 }
 with open(data_dir / "video-library.json", "w", encoding="utf-8") as f:
-    json.dump(video_library_data, f, ensure_ascii=False, indent=2)
+    json.dump(rename_routes(video_library_data), f, ensure_ascii=False, indent=2)
 
 # Build search-index.json
 search_entries = [

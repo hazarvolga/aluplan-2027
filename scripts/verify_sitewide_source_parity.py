@@ -60,7 +60,23 @@ def route_for_url(url: str) -> str:
 
 
 def _rename_route(route: str, policy: dict) -> str:
-    return policy.get("routeRenames", {}).get(route, route)
+    renamed = policy.get("routeRenames", {}).get(route)
+    if renamed:
+        return renamed
+    for old, new in policy.get("routePrefixRenames", {}).items():
+        if route == old or route.startswith(old + "/"):
+            return new + route[len(old):]
+    return route
+
+
+def _source_route(route: str, policy: dict) -> str:
+    for old, new in policy.get("routeRenames", {}).items():
+        if route == new:
+            return old
+    for old, new in policy.get("routePrefixRenames", {}).items():
+        if route == new or route.startswith(new + "/"):
+            return old + route[len(new):]
+    return route
 
 
 def load_policy(path: Path) -> dict:
@@ -84,7 +100,7 @@ def validate_policy(policy: dict) -> None:
         if not clean_text(override.get("evidence")) and not default_evidence:
             raise ValueError(f"Exact override needs an evidence pointer: {route}")
 
-    for old, new in policy.get("routeRenames", {}).items():
+    for old, new in {**policy.get("routeRenames", {}), **policy.get("routePrefixRenames", {})}.items():
         if any(char in old + new for char in WILDCARD_CHARS):
             raise ValueError(f"Wildcard route rename is not allowed: {old}")
 
@@ -492,7 +508,7 @@ def structured_integrity_findings(
 
 
 def _policy_applications(inventory: dict, route: str, policy: dict) -> list[dict]:
-    source_route = next((old for old, new in policy.get("routeRenames", {}).items() if new == route), route)
+    source_route = _source_route(route, policy)
     page = next(
         (
             item

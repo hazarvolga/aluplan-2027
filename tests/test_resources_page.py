@@ -57,7 +57,7 @@ class ResourcesDirectoryTests(unittest.TestCase):
                 self.assertNotIn(service["description"], source)
                 self.assertNotIn(service["href"], source)
 
-    def test_every_listed_service_resolves_and_nineteen_remain_without_partner(self):
+    def test_every_listed_service_resolves_and_twenty_one_remain_without_partner(self):
         titles = {service["title"] for service in HOMEPAGE["services"]}
         listed = [
             title
@@ -65,7 +65,7 @@ class ResourcesDirectoryTests(unittest.TestCase):
             for title in group["serviceTitles"]
         ]
         self.assertEqual([title for title in listed if title not in titles], [])
-        self.assertEqual(len(listed), 19)
+        self.assertEqual(len(listed), 21)
 
     def test_every_icon_is_bare_and_card_icons_sit_in_the_corner(self):
         source = VIEW.read_text(encoding="utf-8")
@@ -81,6 +81,15 @@ class ResourcesDirectoryTests(unittest.TestCase):
         self.assertNotIn("background", bare)
         self.assertNotIn("border", bare)
 
+    def test_tile_groups_fill_their_last_row(self):
+        css = (ROOT / "src/components/sections/ResourcesDirectory.module.css").read_text(encoding="utf-8")
+        tiles = css[css.index(".tiles{"):].split("}")[0]
+        self.assertIn("display:flex", tiles)
+        self.assertIn("flex-wrap:wrap", tiles)
+        self.assertNotIn("grid-template-columns", tiles)
+        tile = css[css.index(".tile{"):].split("}")[0]
+        self.assertIn("flex:1 1 18rem", tile)
+
     def test_license_row_buttons_share_one_width(self):
         source = VIEW.read_text(encoding="utf-8")
         rows = source[source.index("function ListGroup"):source.index("function GridGroup")]
@@ -88,6 +97,23 @@ class ResourcesDirectoryTests(unittest.TestCase):
         css = (ROOT / "src/components/sections/ResourcesDirectory.module.css").read_text(encoding="utf-8")
         action = css[css.index(".rowAction"):].split("}")[0]
         self.assertIn("flex:0 0 12rem", action)
+
+    def test_learning_group_lists_the_video_library_and_training_centers(self):
+        group = next(g for g in HOMEPAGE["serviceGroups"] if g["title"] == "Öğren ve yardım al")
+        services = {s["title"]: s for s in HOMEPAGE["services"]}
+        self.assertEqual(
+            group["serviceTitles"],
+            ["Eğitim", "Video Kütüphanesi", "Eğitim Merkezleri", "Teknik Destek", "Destek Platformu", "Danışmanlık", "Sertifika"],
+        )
+        pages = json.loads((ROOT / "src/data/pages.json").read_text(encoding="utf-8"))
+        for title, icon in (("Video Kütüphanesi", "circle-play"), ("Eğitim Merkezleri", "map-pin")):
+            with self.subTest(service=title):
+                service = services[title]
+                self.assertEqual(service["icon"], icon)
+                self.assertTrue(service["description"] and service["cta"])
+                if service["href"].startswith("/"):
+                    self.assertIn(service["href"], pages)
+        self.assertEqual(services["Video Kütüphanesi"]["href"], "/video-kutuphanesi")
 
     def test_view_leaves_out_the_partner_group(self):
         self.assertIn(HIDDEN_GROUP, VIEW.read_text(encoding="utf-8"))

@@ -366,6 +366,22 @@
       "href": "/solutions-v2/connect-license/activation",
       "cta": "Görüntüle",
       "icon": "file-text"
+    },
+    {
+      "title": "Video Kütüphanesi",
+      "description": "ALLPLAN eğitim videolarını ve oynatma listelerini izleyin.",
+      "status": "active",
+      "href": "/video-kutuphanesi",
+      "cta": "İzle",
+      "icon": "circle-play"
+    },
+    {
+      "title": "Eğitim Merkezleri",
+      "description": "Eğitim merkezlerimiz ve eğitim olanakları hakkında bilgi alın.",
+      "status": "active",
+      "href": "/solutions-v2/training",
+      "cta": "İncele",
+      "icon": "map-pin"
     }
   ],
   "quickLinks": [
@@ -387,7 +403,7 @@
     ],
     [
       "Eğitim Videoları",
-      "/solutions-v2/training/video-library"
+      "/video-kutuphanesi"
     ]
   ],
   "packageAccess": {
@@ -509,6 +525,8 @@
       "title": "Öğren ve yardım al",
       "serviceTitles": [
         "Eğitim",
+        "Video Kütüphanesi",
+        "Eğitim Merkezleri",
         "Teknik Destek",
         "Destek Platformu",
         "Danışmanlık",

@@ -1,8 +1,15 @@
 # Oturum devri
 
+## 03.11.2026 — Video kütüphanesi SEO uyumlu adrese taşındı (yerel, commitlenmedi)
+
+- `/solutions-v2/training/video-library` ve altındaki 14 oynatma listesi `/video-kutuphanesi` ve `/video-kutuphanesi/<liste>` adreslerine taşındı; eski adresler `:path*` ile 308 yönlenir (`next.config.mjs`). Taşıma üreteçteki `ROUTE_PREFIX_RENAMES` ile üretim sonrası uygulanır; kaynak envanter eşleşmesi `tests/fixtures/sitewide_parity_policy.json` içindeki `routePrefixRenames` ile yapılır (doğrulayıcılar ve parite betiği önek kuralını bilir).
+- Sayfa sonu bileşeni, taşınan sayfalar için eğitim dönüşümünü korur (`/video-kutuphanesi` öneki). Sitemap, canonical, arama dizini, kırıntı ve `llms.txt` yeni adresi kullanır.
+- Kapılar: 326 unit test, 38/38 parite, 45/45 token, typecheck, build ve production sunucu yoklaması (yeni adresler 200, eski adresler 308).
+
 ## 03.11.2026 — Açık maddeler (kullanıcı: "sonra bakacağız")
 
 - **Kaynaklar sayfası:** mobil menüye "Kaynaklar" eklendi; Öğren/Bilgi kartlarında ikonlar sağ üst köşede, zeminsiz (lisans satırlarındaki kutulu ikonlar aynen kaldı). `/kaynaklar` adresi öneridir, onay bekliyor. `navigation.json` içindeki `directLinks` verisi arayüzde kullanılmıyor, eski hedefi (`/#professional-services`) gösteriyor.
+- **Kaynaklar yeni kartlar:** "Video Kütüphanesi" kartının bağlantısı kesinleşti (`/video-kutuphanesi`); açıklama ve buton metni hâlâ geçici. "Eğitim Merkezleri" kartının bağlantısı (geçici `/solutions-v2/training`), açıklaması ve buton metni kullanıcıdan gelecek. Kaynak: `scripts/generate_site_data.py` içindeki `ADDED_SERVICES` (ikonlar `SERVICE_ICONS`'ta). Sürüm kapalıyken eski ana sayfa bölümü de bu iki kartı gösterir (sayı 22).
 - **AX3000 Mekanik Tesisat:** "Modüller" başlığı (kaynakta yok) ve bölüm sırası (modüller özelliklerin önüne alınabilir) onay bekliyor.
 - **BIMFlex özel video (B3):** kart kaldırılsın mı, video sahibinden herkese açık yapılması mı istensin?
 - **Doğrulanmamış iddialar (C1):** üreticiden bilgi bekleniyor.

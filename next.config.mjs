@@ -136,6 +136,11 @@ const nextConfig = {
         permanent: true
       },
       {
+        source: '/solutions-v2/training/video-library/:path*',
+        destination: '/video-kutuphanesi/:path*',
+        permanent: true
+      },
+      {
         source: '/preview/product-lifecycle',
         destination: '/product-lifecycle',
         permanent: true

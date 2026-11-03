@@ -165,7 +165,7 @@ class Ax3000DocumentsPageTests(unittest.TestCase):
         pages = load_pages()
         routes = [
             route for route in pages
-            if "ax3000" in route and route not in (AX3000_DOCS_ROUTE, "/solutions-v2/training/video-library/ax3000")
+            if "ax3000" in route and route not in (AX3000_DOCS_ROUTE, "/video-kutuphanesi/ax3000")
         ]
         for route in routes:
             with self.subTest(route=route):

@@ -629,7 +629,7 @@
         "external": false
       },
       {
-        "href": "/solutions-v2/training/video-library",
+        "href": "/video-kutuphanesi",
         "text": "Eğitim Videoları",
         "external": false
       },
@@ -21068,7 +21068,7 @@
               "Özellik Tanıtımları",
               "Versiyon Yenilikleri"
             ],
-            "href": "/solutions-v2/training/video-library",
+            "href": "/video-kutuphanesi",
             "linkLabel": "Videolara Göz Atın",
             "imageSrc": "/assets/images/webinars/bimx5-youtube.jpeg",
             "sourceImageSrc": "/images/webinars/bimx5-youtube.jpeg"
@@ -22755,12 +22755,12 @@
       ]
     }
   },
-  "/solutions-v2/training/video-library": {
-    "path": "/solutions-v2/training/video-library",
+  "/video-kutuphanesi": {
+    "path": "/video-kutuphanesi",
     "section": "training",
     "title": "ALLPLAN Video Kütüphanesi ve Eğitim Oynatma Listeleri | Aluplan",
     "description": "Video Kütüphanesi: İhtiyacınız olan bilgiye görsel olarak ulaşın. Önerilen Oynatma Listeleri ve Kanallar",
-    "canonical": "https://aluplan.com.tr/solutions-v2/training/video-library",
+    "canonical": "https://aluplan.com.tr/video-kutuphanesi",
     "h1": "Video Kütüphanesi",
     "eyebrow": "TRAINING",
     "breadcrumbs": [
@@ -22774,7 +22774,7 @@
       },
       {
         "label": "ALLPLAN Video Kütüphanesi ve Eğitim Oynatma Listeleri",
-        "href": "/solutions-v2/training/video-library"
+        "href": "/video-kutuphanesi"
       }
     ],
     "headings": [
@@ -23192,17 +23192,17 @@
         "external": true
       },
       {
-        "href": "/solutions-v2/training/video-library/hello-allplan-2024",
+        "href": "/video-kutuphanesi/hello-allplan-2024",
         "text": "Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim VideolarıAllplan 2024 sürümü ile gelen tüm yeniliklerin Türkçe anlatımı.İzleme Listesini İncele",
         "external": false
       },
       {
-        "href": "/solutions-v2/training/video-library/addon-geometry",
+        "href": "/video-kutuphanesi/addon-geometry",
         "text": "Allplan Add On Geometry ToolsTopografik ve geometrik düzenleme araçları, arazi modelleme eğitimleri.İzleme Listesini İncele",
         "external": false
       },
       {
-        "href": "/solutions-v2/training/video-library/ax3000",
+        "href": "/video-kutuphanesi/ax3000",
         "text": "AX3000 - MEP & EnerjiMekanik, Elektrik, Tesisat ve Enerji Kimlik Belgesi (EKB) eğitimleri.İzleme Listesini İncele",
         "external": false
       },
@@ -23212,22 +23212,22 @@
         "external": false
       },
       {
-        "href": "/solutions-v2/training/video-library/road-design",
+        "href": "/video-kutuphanesi/road-design",
         "text": "Allplan Road Design WorkflowYol tasarımı iş akışları ve yol modülü eğitim videoları.İzleme Listesini İncele",
         "external": false
       },
       {
-        "href": "/solutions-v2/training/video-library/bridge-workflows",
+        "href": "/video-kutuphanesi/bridge-workflows",
         "text": "Allplan Bridge WorkflowsKöprü tasarımı süreçleri ve BIM entegrasyonu.İzleme Listesini İncele",
         "external": false
       },
       {
-        "href": "/solutions-v2/training/video-library/campus-de",
+        "href": "/video-kutuphanesi/campus-de",
         "text": "Campus Tutorials (Deutsch)Öğrenciler için detaylı Almanca eğitim serisi.İzleme Listesini İncele",
         "external": false
       },
       {
-        "href": "/solutions-v2/training/video-library/campus-en",
+        "href": "/video-kutuphanesi/campus-en",
         "text": "Campus Tutorials (English)Öğrenciler için kapsamlı İngilizce eğitim serisi.İzleme Listesini İncele",
         "external": false
       },
@@ -23242,37 +23242,37 @@
         "external": false
       },
       {
-        "href": "/solutions-v2/training/video-library/sds2-intro",
+        "href": "/video-kutuphanesi/sds2-intro",
         "text": "SDS2 DetaylandırmaSDS2 ürün tanıtımı ve lansman videoları.İzleme Listesini İncele",
         "external": false
       },
       {
-        "href": "/solutions-v2/training/video-library/konut-insaati",
+        "href": "/video-kutuphanesi/konut-insaati",
         "text": "Konut İnşaatı İş AkışlarıKonut proje teslimi, tasarım ve şantiye planlama süreçleri.İzleme Listesini İncele",
         "external": false
       },
       {
-        "href": "/solutions-v2/training/video-library/bridge-workflow-2022",
+        "href": "/video-kutuphanesi/bridge-workflow-2022",
         "text": "Bridge Workflow 20222022 Köprü tasarımı ve iş akışları eğitim serisi.İzleme Listesini İncele",
         "external": false
       },
       {
-        "href": "/solutions-v2/training/video-library/otomatik-donati",
+        "href": "/video-kutuphanesi/otomatik-donati",
         "text": "Otomatik Donatı (PythonPart)Otomatik donatılandırma ve PythonPart araçları kullanımı.İzleme Listesini İncele",
         "external": false
       },
       {
-        "href": "/solutions-v2/training/video-library/quickstart-buildings",
+        "href": "/video-kutuphanesi/quickstart-buildings",
         "text": "ALLPLAN QuickStart: BuildingsAllplan ile bina modellemeye hızlı başlangıç rehberi (9 Ders).İzleme Listesini İncele",
         "external": false
       },
       {
-        "href": "/solutions-v2/training/video-library/allplan-reinforcement",
+        "href": "/video-kutuphanesi/allplan-reinforcement",
         "text": "ALLPLAN for ReinforcementBetonarme detaylandırma, donatı modelleme ve raporlama eğitimleri (18 Video).İzleme Listesini İncele",
         "external": false
       },
       {
-        "href": "/solutions-v2/training/video-library/campus-tutorials-2019-2022",
+        "href": "/video-kutuphanesi/campus-tutorials-2019-2022",
         "text": "Allplan Campus Tutorials 2019-2022Öğrenciler için kapsamlı Almanca eğitim serisi (2019-2022).İzleme Listesini İncele",
         "external": false
       },
@@ -23301,12 +23301,12 @@
     "schemaType": "VideoGallery",
     "structuredLayout": null
   },
-  "/solutions-v2/training/video-library/addon-geometry": {
-    "path": "/solutions-v2/training/video-library/addon-geometry",
+  "/video-kutuphanesi/addon-geometry": {
+    "path": "/video-kutuphanesi/addon-geometry",
     "section": "video-library",
     "title": "Allplan Add On Geometry Tools — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "description": "Allplan Add On Geometry Tools — Eğitim Video Serisi: Topografik ve geometrik düzenleme araçları eğitimi. ALLPLAN Add-On Geometry Tools V2 - OBJ Import Drohnenaufnahmen",
-    "canonical": "https://aluplan.com.tr/solutions-v2/training/video-library/addon-geometry",
+    "canonical": "https://aluplan.com.tr/video-kutuphanesi/addon-geometry",
     "h1": "Allplan Add On Geometry Tools — Eğitim Video Serisi",
     "eyebrow": "VIDEO-LIBRARY",
     "breadcrumbs": [
@@ -23320,11 +23320,11 @@
       },
       {
         "label": "Video Kütüphanesi",
-        "href": "/solutions-v2/training/video-library"
+        "href": "/video-kutuphanesi"
       },
       {
         "label": "Allplan Add On Geometry Tools",
-        "href": "/solutions-v2/training/video-library/addon-geometry"
+        "href": "/video-kutuphanesi/addon-geometry"
       }
     ],
     "headings": [
@@ -23622,12 +23622,12 @@
     "schemaType": "VideoGallery",
     "structuredLayout": null
   },
-  "/solutions-v2/training/video-library/allplan-reinforcement": {
-    "path": "/solutions-v2/training/video-library/allplan-reinforcement",
+  "/video-kutuphanesi/allplan-reinforcement": {
+    "path": "/video-kutuphanesi/allplan-reinforcement",
     "section": "video-library",
     "title": "ALLPLAN for Reinforcement — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "description": "ALLPLAN for Reinforcement — Eğitim Video Serisi: Betonarme detaylandırma, donatı modelleme ve raporlama eğitimleri. Allplan Reinforcing Shorts; Retaining Wall",
-    "canonical": "https://aluplan.com.tr/solutions-v2/training/video-library/allplan-reinforcement",
+    "canonical": "https://aluplan.com.tr/video-kutuphanesi/allplan-reinforcement",
     "h1": "ALLPLAN for Reinforcement — Eğitim Video Serisi",
     "eyebrow": "VIDEO-LIBRARY",
     "breadcrumbs": [
@@ -23641,11 +23641,11 @@
       },
       {
         "label": "Video Kütüphanesi",
-        "href": "/solutions-v2/training/video-library"
+        "href": "/video-kutuphanesi"
       },
       {
         "label": "ALLPLAN for Reinforcement",
-        "href": "/solutions-v2/training/video-library/allplan-reinforcement"
+        "href": "/video-kutuphanesi/allplan-reinforcement"
       }
     ],
     "headings": [
@@ -23999,12 +23999,12 @@
     "schemaType": "VideoGallery",
     "structuredLayout": null
   },
-  "/solutions-v2/training/video-library/ax3000": {
-    "path": "/solutions-v2/training/video-library/ax3000",
+  "/video-kutuphanesi/ax3000": {
+    "path": "/video-kutuphanesi/ax3000",
     "section": "video-library",
     "title": "AX3000 - MEP & Enerji — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "description": "AX3000 - MEP & Enerji — Eğitim Video Serisi: Mekanik, Elektrik, Tesisat ve Enerji Kimlik Belgesi (EKB) eğitimleri. konusu detaylı olarak incelenmektedir. Allplan 2024'ün sunduğu yenilikleri keşfedin.",
-    "canonical": "https://aluplan.com.tr/solutions-v2/training/video-library/ax3000",
+    "canonical": "https://aluplan.com.tr/video-kutuphanesi/ax3000",
     "h1": "AX3000 - MEP & Enerji — Eğitim Video Serisi",
     "eyebrow": "VIDEO-LIBRARY",
     "breadcrumbs": [
@@ -24018,11 +24018,11 @@
       },
       {
         "label": "Video Kütüphanesi",
-        "href": "/solutions-v2/training/video-library"
+        "href": "/video-kutuphanesi"
       },
       {
         "label": "AX3000 - MEP & Enerji",
-        "href": "/solutions-v2/training/video-library/ax3000"
+        "href": "/video-kutuphanesi/ax3000"
       }
     ],
     "headings": [
@@ -24600,12 +24600,12 @@
     "schemaType": "VideoGallery",
     "structuredLayout": null
   },
-  "/solutions-v2/training/video-library/bridge-workflow-2022": {
-    "path": "/solutions-v2/training/video-library/bridge-workflow-2022",
+  "/video-kutuphanesi/bridge-workflow-2022": {
+    "path": "/video-kutuphanesi/bridge-workflow-2022",
     "section": "video-library",
     "title": "Bridge Workflow 2022 — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "description": "Bridge Workflow 2022 — Eğitim Video Serisi: 2022 Köprü tasarımı ve iş akışları eğitim serisi. konusu detaylı olarak incelenmektedir. Allplan 2024'ün sunduğu yenilikleri keşfedin.",
-    "canonical": "https://aluplan.com.tr/solutions-v2/training/video-library/bridge-workflow-2022",
+    "canonical": "https://aluplan.com.tr/video-kutuphanesi/bridge-workflow-2022",
     "h1": "Bridge Workflow 2022 — Eğitim Video Serisi",
     "eyebrow": "VIDEO-LIBRARY",
     "breadcrumbs": [
@@ -24619,11 +24619,11 @@
       },
       {
         "label": "Video Kütüphanesi",
-        "href": "/solutions-v2/training/video-library"
+        "href": "/video-kutuphanesi"
       },
       {
         "label": "Bridge Workflow 2022",
-        "href": "/solutions-v2/training/video-library/bridge-workflow-2022"
+        "href": "/video-kutuphanesi/bridge-workflow-2022"
       }
     ],
     "headings": [
@@ -24836,12 +24836,12 @@
     "schemaType": "VideoGallery",
     "structuredLayout": null
   },
-  "/solutions-v2/training/video-library/bridge-workflows": {
-    "path": "/solutions-v2/training/video-library/bridge-workflows",
+  "/video-kutuphanesi/bridge-workflows": {
+    "path": "/video-kutuphanesi/bridge-workflows",
     "section": "video-library",
     "title": "Allplan Bridge Workflows — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "description": "Allplan Bridge Workflows — Eğitim Video Serisi: Köprü tasarımı süreçleri ve BIM entegrasyonu. ALLPLAN Bridge Workflows l Alignment Definition",
-    "canonical": "https://aluplan.com.tr/solutions-v2/training/video-library/bridge-workflows",
+    "canonical": "https://aluplan.com.tr/video-kutuphanesi/bridge-workflows",
     "h1": "Allplan Bridge Workflows — Eğitim Video Serisi",
     "eyebrow": "VIDEO-LIBRARY",
     "breadcrumbs": [
@@ -24855,11 +24855,11 @@
       },
       {
         "label": "Video Kütüphanesi",
-        "href": "/solutions-v2/training/video-library"
+        "href": "/video-kutuphanesi"
       },
       {
         "label": "Allplan Bridge Workflows",
-        "href": "/solutions-v2/training/video-library/bridge-workflows"
+        "href": "/video-kutuphanesi/bridge-workflows"
       }
     ],
     "headings": [
@@ -25171,12 +25171,12 @@
     "schemaType": "VideoGallery",
     "structuredLayout": null
   },
-  "/solutions-v2/training/video-library/campus-de": {
-    "path": "/solutions-v2/training/video-library/campus-de",
+  "/video-kutuphanesi/campus-de": {
+    "path": "/video-kutuphanesi/campus-de",
     "section": "video-library",
     "title": "Campus Tutorials (Deutsch) — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "description": "Campus Tutorials (Deutsch) — Eğitim Video Serisi: Öğrenciler için Almanca Allplan eğitim serisi. Neuinstallation von \"Allplan 2022\" | Eine detaillierte Anleitung",
-    "canonical": "https://aluplan.com.tr/solutions-v2/training/video-library/campus-de",
+    "canonical": "https://aluplan.com.tr/video-kutuphanesi/campus-de",
     "h1": "Campus Tutorials (Deutsch) — Eğitim Video Serisi",
     "eyebrow": "VIDEO-LIBRARY",
     "breadcrumbs": [
@@ -25190,11 +25190,11 @@
       },
       {
         "label": "Video Kütüphanesi",
-        "href": "/solutions-v2/training/video-library"
+        "href": "/video-kutuphanesi"
       },
       {
         "label": "Campus Tutorials (Deutsch)",
-        "href": "/solutions-v2/training/video-library/campus-de"
+        "href": "/video-kutuphanesi/campus-de"
       }
     ],
     "headings": [
@@ -25660,12 +25660,12 @@
     "schemaType": "VideoGallery",
     "structuredLayout": null
   },
-  "/solutions-v2/training/video-library/campus-en": {
-    "path": "/solutions-v2/training/video-library/campus-en",
+  "/video-kutuphanesi/campus-en": {
+    "path": "/video-kutuphanesi/campus-en",
     "section": "video-library",
     "title": "Campus Tutorials (English) — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "description": "Campus Tutorials (English) — Eğitim Video Serisi: Öğrenciler için İngilizce Allplan eğitim serisi. konusu detaylı olarak incelenmektedir. Allplan 2024'ün sunduğu yenilikleri keşfedin.",
-    "canonical": "https://aluplan.com.tr/solutions-v2/training/video-library/campus-en",
+    "canonical": "https://aluplan.com.tr/video-kutuphanesi/campus-en",
     "h1": "Campus Tutorials (English) — Eğitim Video Serisi",
     "eyebrow": "VIDEO-LIBRARY",
     "breadcrumbs": [
@@ -25679,11 +25679,11 @@
       },
       {
         "label": "Video Kütüphanesi",
-        "href": "/solutions-v2/training/video-library"
+        "href": "/video-kutuphanesi"
       },
       {
         "label": "Campus Tutorials (English)",
-        "href": "/solutions-v2/training/video-library/campus-en"
+        "href": "/video-kutuphanesi/campus-en"
       }
     ],
     "headings": [
@@ -26149,12 +26149,12 @@
     "schemaType": "VideoGallery",
     "structuredLayout": null
   },
-  "/solutions-v2/training/video-library/campus-tutorials-2019-2022": {
-    "path": "/solutions-v2/training/video-library/campus-tutorials-2019-2022",
+  "/video-kutuphanesi/campus-tutorials-2019-2022": {
+    "path": "/video-kutuphanesi/campus-tutorials-2019-2022",
     "section": "video-library",
     "title": "Allplan Campus Tutorials 2019-2022 — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "description": "Allplan Campus Tutorials 2019-2022 — Eğitim Video Serisi: Öğrenciler için kapsamlı Almanca eğitim serisi (2019-2022). Neuinstallation von \"Allplan 2022\" | Eine detaillierte Anleitung",
-    "canonical": "https://aluplan.com.tr/solutions-v2/training/video-library/campus-tutorials-2019-2022",
+    "canonical": "https://aluplan.com.tr/video-kutuphanesi/campus-tutorials-2019-2022",
     "h1": "Allplan Campus Tutorials 2019-2022 — Eğitim Video Serisi",
     "eyebrow": "VIDEO-LIBRARY",
     "breadcrumbs": [
@@ -26168,11 +26168,11 @@
       },
       {
         "label": "Video Kütüphanesi",
-        "href": "/solutions-v2/training/video-library"
+        "href": "/video-kutuphanesi"
       },
       {
         "label": "Allplan Campus Tutorials 2019-2022",
-        "href": "/solutions-v2/training/video-library/campus-tutorials-2019-2022"
+        "href": "/video-kutuphanesi/campus-tutorials-2019-2022"
       }
     ],
     "headings": [
@@ -26638,12 +26638,12 @@
     "schemaType": "VideoGallery",
     "structuredLayout": null
   },
-  "/solutions-v2/training/video-library/hello-allplan-2024": {
-    "path": "/solutions-v2/training/video-library/hello-allplan-2024",
+  "/video-kutuphanesi/hello-allplan-2024": {
+    "path": "/video-kutuphanesi/hello-allplan-2024",
     "section": "video-library",
     "title": "Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "description": "Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları — Eğitim Video Serisi: Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları Allplan 2024 ile gelen tüm yeni özellikler ve geliştirmeler.",
-    "canonical": "https://aluplan.com.tr/solutions-v2/training/video-library/hello-allplan-2024",
+    "canonical": "https://aluplan.com.tr/video-kutuphanesi/hello-allplan-2024",
     "h1": "Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları — Eğitim Video Serisi",
     "eyebrow": "VIDEO-LIBRARY",
     "breadcrumbs": [
@@ -26657,11 +26657,11 @@
       },
       {
         "label": "Video Kütüphanesi",
-        "href": "/solutions-v2/training/video-library"
+        "href": "/video-kutuphanesi"
       },
       {
         "label": "Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları",
-        "href": "/solutions-v2/training/video-library/hello-allplan-2024"
+        "href": "/video-kutuphanesi/hello-allplan-2024"
       }
     ],
     "headings": [
@@ -27309,12 +27309,12 @@
     "schemaType": "VideoGallery",
     "structuredLayout": null
   },
-  "/solutions-v2/training/video-library/konut-insaati": {
-    "path": "/solutions-v2/training/video-library/konut-insaati",
+  "/video-kutuphanesi/konut-insaati": {
+    "path": "/video-kutuphanesi/konut-insaati",
     "section": "video-library",
     "title": "Konut İnşaatı İş Akışları — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "description": "Konut İnşaatı İş Akışları — Eğitim Video Serisi: Konut proje teslimi, tasarım ve şantiye planlama süreçleri. Konut İnşaatı İş Akışları | Konut Proje Teslimi | 01 - Satış Sunumlarınızı Artırın",
-    "canonical": "https://aluplan.com.tr/solutions-v2/training/video-library/konut-insaati",
+    "canonical": "https://aluplan.com.tr/video-kutuphanesi/konut-insaati",
     "h1": "Konut İnşaatı İş Akışları — Eğitim Video Serisi",
     "eyebrow": "VIDEO-LIBRARY",
     "breadcrumbs": [
@@ -27328,11 +27328,11 @@
       },
       {
         "label": "Video Kütüphanesi",
-        "href": "/solutions-v2/training/video-library"
+        "href": "/video-kutuphanesi"
       },
       {
         "label": "Konut İnşaatı İş Akışları",
-        "href": "/solutions-v2/training/video-library/konut-insaati"
+        "href": "/video-kutuphanesi/konut-insaati"
       }
     ],
     "headings": [
@@ -27490,12 +27490,12 @@
     "schemaType": "VideoGallery",
     "structuredLayout": null
   },
-  "/solutions-v2/training/video-library/otomatik-donati": {
-    "path": "/solutions-v2/training/video-library/otomatik-donati",
+  "/video-kutuphanesi/otomatik-donati": {
+    "path": "/video-kutuphanesi/otomatik-donati",
     "section": "video-library",
     "title": "Otomatik Donatı (PythonPart) — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "description": "Otomatik Donatı (PythonPart) — Eğitim Video Serisi: Otomatik donatılandırma ve PythonPart araçları kullanımı. konusu detaylı olarak incelenmektedir. Allplan 2024'ün sunduğu yenilikleri keşfedin.",
-    "canonical": "https://aluplan.com.tr/solutions-v2/training/video-library/otomatik-donati",
+    "canonical": "https://aluplan.com.tr/video-kutuphanesi/otomatik-donati",
     "h1": "Otomatik Donatı (PythonPart) — Eğitim Video Serisi",
     "eyebrow": "VIDEO-LIBRARY",
     "breadcrumbs": [
@@ -27509,11 +27509,11 @@
       },
       {
         "label": "Video Kütüphanesi",
-        "href": "/solutions-v2/training/video-library"
+        "href": "/video-kutuphanesi"
       },
       {
         "label": "Otomatik Donatı (PythonPart)",
-        "href": "/solutions-v2/training/video-library/otomatik-donati"
+        "href": "/video-kutuphanesi/otomatik-donati"
       }
     ],
     "headings": [
@@ -27741,12 +27741,12 @@
     "schemaType": "VideoGallery",
     "structuredLayout": null
   },
-  "/solutions-v2/training/video-library/quickstart-buildings": {
-    "path": "/solutions-v2/training/video-library/quickstart-buildings",
+  "/video-kutuphanesi/quickstart-buildings": {
+    "path": "/video-kutuphanesi/quickstart-buildings",
     "section": "video-library",
     "title": "ALLPLAN QuickStart: Buildings — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "description": "ALLPLAN QuickStart: Buildings — Eğitim Video Serisi: Allplan ile bina modellemeye hızlı başlangıç rehberi. Allplan QuickStart: Buildings Lesson 1 - Allplan User Interface",
-    "canonical": "https://aluplan.com.tr/solutions-v2/training/video-library/quickstart-buildings",
+    "canonical": "https://aluplan.com.tr/video-kutuphanesi/quickstart-buildings",
     "h1": "ALLPLAN QuickStart: Buildings — Eğitim Video Serisi",
     "eyebrow": "VIDEO-LIBRARY",
     "breadcrumbs": [
@@ -27760,11 +27760,11 @@
       },
       {
         "label": "Video Kütüphanesi",
-        "href": "/solutions-v2/training/video-library"
+        "href": "/video-kutuphanesi"
       },
       {
         "label": "ALLPLAN QuickStart: Buildings",
-        "href": "/solutions-v2/training/video-library/quickstart-buildings"
+        "href": "/video-kutuphanesi/quickstart-buildings"
       }
     ],
     "headings": [
@@ -27992,12 +27992,12 @@
     "schemaType": "VideoGallery",
     "structuredLayout": null
   },
-  "/solutions-v2/training/video-library/road-design": {
-    "path": "/solutions-v2/training/video-library/road-design",
+  "/video-kutuphanesi/road-design": {
+    "path": "/video-kutuphanesi/road-design",
     "section": "video-library",
     "title": "Allplan Road Design Workflow — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "description": "Allplan Road Design Workflow — Eğitim Video Serisi: Yol tasarımı iş akışları ve yol modülü eğitim videoları. konusu detaylı olarak incelenmektedir. Allplan 2024'ün sunduğu yenilikleri keşfedin.",
-    "canonical": "https://aluplan.com.tr/solutions-v2/training/video-library/road-design",
+    "canonical": "https://aluplan.com.tr/video-kutuphanesi/road-design",
     "h1": "Allplan Road Design Workflow — Eğitim Video Serisi",
     "eyebrow": "VIDEO-LIBRARY",
     "breadcrumbs": [
@@ -28011,11 +28011,11 @@
       },
       {
         "label": "Video Kütüphanesi",
-        "href": "/solutions-v2/training/video-library"
+        "href": "/video-kutuphanesi"
       },
       {
         "label": "Allplan Road Design Workflow",
-        "href": "/solutions-v2/training/video-library/road-design"
+        "href": "/video-kutuphanesi/road-design"
       }
     ],
     "headings": [
@@ -28285,12 +28285,12 @@
     "schemaType": "VideoGallery",
     "structuredLayout": null
   },
-  "/solutions-v2/training/video-library/sds2-intro": {
-    "path": "/solutions-v2/training/video-library/sds2-intro",
+  "/video-kutuphanesi/sds2-intro": {
+    "path": "/video-kutuphanesi/sds2-intro",
     "section": "video-library",
     "title": "SDS2 Detaylandırma — Eğitim Video Serisi | Aluplan BIM Çözümleri",
     "description": "SDS2 Detaylandırma — Eğitim Video Serisi: SDS2 ürün tanıtımı ve lansman videoları. konusu detaylı olarak incelenmektedir. Allplan 2024'ün sunduğu yenilikleri keşfedin.",
-    "canonical": "https://aluplan.com.tr/solutions-v2/training/video-library/sds2-intro",
+    "canonical": "https://aluplan.com.tr/video-kutuphanesi/sds2-intro",
     "h1": "SDS2 Detaylandırma — Eğitim Video Serisi",
     "eyebrow": "VIDEO-LIBRARY",
     "breadcrumbs": [
@@ -28304,11 +28304,11 @@
       },
       {
         "label": "Video Kütüphanesi",
-        "href": "/solutions-v2/training/video-library"
+        "href": "/video-kutuphanesi"
       },
       {
         "label": "SDS2 Detaylandırma",
-        "href": "/solutions-v2/training/video-library/sds2-intro"
+        "href": "/video-kutuphanesi/sds2-intro"
       }
     ],
     "headings": [

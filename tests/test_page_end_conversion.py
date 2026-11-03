@@ -17,7 +17,7 @@ COMMERCIAL_ROUTES = (
 TRAINING_ROUTES = (
     "/solutions-v2/training",
     "/solutions-v2/training/webinar",
-    "/solutions-v2/training/video-library/road-design",
+    "/video-kutuphanesi/road-design",
 )
 SUPPORT_ROUTES = (
     "/solutions-v2/connect-license",

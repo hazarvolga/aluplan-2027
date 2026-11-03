@@ -35,7 +35,7 @@ export function VideoPlaylistSection({
             </h2>
             {playlist.subtitle && <p className="alu-body preview-meta">{playlist.subtitle}</p>}
           </div>
-          <Link className="alu-button alu-button--secondary alu-button--md" href="/solutions-v2/training/video-library">
+          <Link className="alu-button alu-button--secondary alu-button--md" href="/video-kutuphanesi">
             <span>Video Kütüphanesine Dön</span>
             <AluIcon name="arrow-right" size="sm" />
           </Link>

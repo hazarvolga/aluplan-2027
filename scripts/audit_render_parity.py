@@ -416,7 +416,7 @@ def render_expectation(page):
             images.append({'src': thumbnail, 'alt': ''})
             allowed_external_images.append(thumbnail)
         rendered_layout = {'playlist': playlist}
-    elif path == '/solutions-v2/training/video-library':
+    elif path == '/video-kutuphanesi':
         library = json.loads((ROOT / 'src/data/video-library.json').read_text())
         headings.append(library['title'])
         links.append(library['subscribe']['href'])
@@ -550,7 +550,7 @@ def render_expectation(page):
             or path == '/solutions'
             or bool(solution_hub)
             or bool(playlist)
-            or path == '/solutions-v2/training/video-library'
+            or path == '/video-kutuphanesi'
             or (path != '/' and bool(page.get('sections')))
         ),
     }

@@ -78,7 +78,7 @@ export function SubpageView({
   const [refSearchQuery, setRefSearchQuery] = useState<string>('');
 
   const isLegalPage = page.section === 'legal';
-  const isVideoLibraryHub = page.path === '/solutions-v2/training/video-library';
+  const isVideoLibraryHub = page.path === '/video-kutuphanesi';
   const isVideoPlaylistPage = Boolean(playlist);
   const solutionHub = getSolutionHub(page.path);
   const solutionCatalog = page.path === '/solutions' ? getSolutionCatalog() : null;
@@ -171,7 +171,7 @@ export function SubpageView({
         </section>
       )}
 
-      {/* Special Interactive View: Video Playlist (/solutions-v2/training/video-library/[playlistId]) */}
+      {/* Special Interactive View: Video Playlist (/video-kutuphanesi/[playlistId]) */}
       {playlist && (
         <VideoPlaylistSection
           playlist={playlist}
@@ -180,7 +180,7 @@ export function SubpageView({
         />
       )}
 
-      {/* Special Interactive View: Video Library Hub (/solutions-v2/training/video-library) */}
+      {/* Special Interactive View: Video Library Hub (/video-kutuphanesi) */}
       {isVideoLibraryHub && <VideoLibraryHubSection />}
 
       {/* Special Interactive View: Search Page (/search) */}

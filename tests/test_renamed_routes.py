@@ -77,5 +77,33 @@ class MainMenuTests(unittest.TestCase):
         self.assertEqual(second, sorted(second))
 
 
+VIDEO_OLD = "/solutions-v2/training/video-library"
+VIDEO_NEW = "/video-kutuphanesi"
+
+
+class VideoLibraryRouteTests(unittest.TestCase):
+    def test_old_urls_redirect_permanently_with_the_path_preserved(self):
+        redirect = config_redirects()[f"{VIDEO_OLD}/:path*"]
+        self.assertEqual(redirect["destination"], f"{VIDEO_NEW}/:path*")
+        self.assertTrue(redirect["permanent"])
+
+    def test_hub_and_playlists_are_published_under_the_new_slug(self):
+        pages = json.loads((DATA / "pages.json").read_text(encoding="utf-8"))
+        routes = [route for route in pages if route.startswith(VIDEO_NEW)]
+        self.assertIn(VIDEO_NEW, routes)
+        self.assertEqual(len(routes), 15)
+        self.assertFalse([route for route in pages if "video-library" in route])
+        self.assertEqual(pages[VIDEO_NEW]["canonical"], f"https://aluplan.com.tr{VIDEO_NEW}")
+
+    def test_no_generated_data_uses_the_old_slug(self):
+        for name in ("pages.json", "homepage.json", "navigation.json", "search-index.json", "playlists.json", "video-library.json"):
+            with self.subTest(file=name):
+                self.assertNotIn(VIDEO_OLD, (DATA / name).read_text(encoding="utf-8"))
+
+    def test_training_page_end_conversion_still_covers_the_moved_pages(self):
+        policy = (ROOT / "src/components/sections/page-end-conversion-policy.ts").read_text(encoding="utf-8")
+        self.assertIn("page.path.startsWith('/video-kutuphanesi')", policy)
+
+
 if __name__ == "__main__":
     unittest.main()

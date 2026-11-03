@@ -12,8 +12,8 @@ export function Allplan2027FeaturesPreview() {
   const [activeIndex, setActiveIndex] = useState(0);
   return <div className={styles.page}>
     <section className={styles.hero}><div className="alu-container">
-      <p className={styles.kicker}>2027 YENİLİKLERİ · ALLPLAN · ALLPLAN CIVIL · FRILO · SCIA · SDS2</p>
-      <h1>Her mühendislik iş akışı için kapsamlı çözümler</h1>
+      <h1>2027 yenilikleri: Allplan, Allplan Civil, FRILO, SCIA, SDS2</h1>
+      <p className={styles.tagline}>Her mühendislik iş akışı için kapsamlı çözümler</p>
       <p>Allplan, Allplan Civil, FRILO, SCIA ve SDS2’nin 2027 sürümlerini keşfedin. İş akışı ne olursa olsun mühendisler için çözümler sunuyoruz. Kontrolü sizin elinizde tutan yapay zekâ araçları, yapı analizi için modern araçlar, daha hızlı çizim ve detaylandırma ve altyapı için güçlü parametrik modeller.</p>
       <div className={styles.actions}><a className="alu-button alu-button--primary alu-button--md" href={MAIN_QUOTE_FORM_URL}>Demo talep edin ↗</a><a className="alu-button alu-button--secondary alu-button--md" href={TRIAL_CTA_URL}>Ücretsiz deneme ↗</a></div>
     </div></section>

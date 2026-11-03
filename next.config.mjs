@@ -116,6 +116,16 @@ const nextConfig = {
         permanent: true
       },
       {
+        source: '/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf',
+        destination: '/2027/compare',
+        permanent: true
+      },
+      {
+        source: '/docs/V2026_Paket_Karsilastirma-Q4-2025_R01.pdf',
+        destination: '/2027/compare',
+        permanent: true
+      },
+      {
         source: '/preview/product-lifecycle',
         destination: '/product-lifecycle',
         permanent: true

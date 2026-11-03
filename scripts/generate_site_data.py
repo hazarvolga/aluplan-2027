@@ -1406,7 +1406,7 @@ video_library_data = {
     "items": [
         {"title": "Allplan 2026", "description": "Allplan 2026 sürümü için hazırlanmış kapsamlı eğitim videoları ve yenilikler.", "url": "https://youtube.com/playlist?list=PLowC-ZFUywGMotfHSyzqoNZCQYWl_6G1x&si=BSEJvgjsQWgbIwVe"},
         {"title": "Youtube Allplan English", "description": "Allplan global İngilizce içerikleri, uluslararası örnekler ve eğitimler.", "url": "https://www.youtube.com/@ALLPLANEnglish"},
-        {"title": "Youtube Allplan Global", "description": "Dünya genelinden Allplan kullanıcı hikayeleri ve küresel etkinlikler.", "url": "https://www.youtube.com/c/AllplanInternational"},
+        {"title": "ALLPLAN YouTube Kanalı", "description": "Dünya genelinden Allplan kullanıcı hikayeleri ve küresel etkinlikler.", "url": "https://www.youtube.com/c/AllplanInternational"},
         {"title": "Youtube Allplan Precast", "description": "Prekast beton tasarımı ve üretimi üzerine özelleşmiş Almanca/İngilizce içerikler.", "url": "https://www.youtube.com/c/AllplanPrecast"},
         {"title": "Allplan ile Tanışın: Tüm Disiplinler İçin Temel Eğitim Videoları", "description": "Allplan 2024 sürümü ile gelen tüm yeniliklerin Türkçe anlatımı.", "url": "/solutions-v2/training/video-library/hello-allplan-2024"},
         {"title": "Allplan Add On Geometry Tools", "description": "Topografik ve geometrik düzenleme araçları, arazi modelleme eğitimleri.", "url": "/solutions-v2/training/video-library/addon-geometry"},

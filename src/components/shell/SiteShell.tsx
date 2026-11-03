@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { getNavigationData, getSearchIndex, MAIN_QUOTE_FORM_URL } from '@/lib/site-data';
 import { AluIcon, AluIconName } from '@/components/ui/AluIcon';
 import { MediaDialog } from '@/components/ui/MediaDialog';
-import { useConsentReady, useCookieConsent, writeConsent } from '@/lib/consent';
+import { clearConsent, useConsentReady, useCookieConsent, writeConsent } from '@/lib/consent';
 
 const navData = getNavigationData();
 const searchIndex = getSearchIndex();
@@ -396,6 +396,14 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 {item.label}
               </Link>
             ))}
+            <button
+              type="button"
+              className="alu-site-footer__link"
+              style={{ background: 'transparent', border: 0, padding: 0, font: 'inherit', cursor: 'pointer' }}
+              onClick={clearConsent}
+            >
+              Çerez tercihleri
+            </button>
           </div>
           <span>{navData.footer.credit}</span>
         </div>

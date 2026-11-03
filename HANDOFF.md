@@ -1,5 +1,21 @@
 # Oturum devri
 
+## 03.11.2026 — Tüm sayfaların gözden geçirilmesi (tarama + düzeltmeler; commitlendi, onay bekliyor)
+
+- **Yöntem:** her sayfada çalışan bir ölçüm betiği (tarayıcıda `main` içindeki metinler için WCAG kontrastı, yatay taşma, h1 sayısı, ortalı h2, kırık görsel, eksik alt, yinelenen id, 12 px altı metin, `href="#"`). **Masaüstünde 116 sayfanın tamamı, koyu ve açık modda** (232 ölçüm); **mobilde (375 px, koyu mod) 40 sayfa** (tüm şablon ailelerinin temsilcileri + tüm bileşen türleri) tarandı; 4 temsilî sayfa mobilde, 6 sayfa açık/koyu masaüstünde gözle bakıldı.
+- **Temiz çıkanlar (116 sayfa):** yatay taşma yok (masaüstü ve mobil), her sayfada tek h1, ortalı bölüm başlığı yok, kırık görsel yok, eksik `alt` yok, `href="#"` yok. Mobilde taranan 40 sayfada taşma yok.
+- **Bulunup düzeltilenler:**
+  1. **Video rozeti ("VİDEO"), açık modda kontrast 3.52:1 (≈35 sayfa):** rozet her iki temada koyu zemin üzerinde, ama metin `--accent-fg` (açık temada koyu teal) idi. Yeni sabit token `--visual-media-badge-text` (`#2DD4BF`) eklendi (4 tema-mod bloğu + primitif).
+  2. **Referanslar etkin sekmesi koyu modda 1.86:1** (parlak teal üstünde beyaz metin): `--action-primary-bg`/`--action-primary-fg` çiftine alındı (kontrast testli çift; hover ve sayı rozeti dahil).
+  3. **Ana sayfa rol rozeti ("MİMAR İŞ AKIŞI") açık modda 2.49:1:** rozet metni rol renginin %45'i + `--text-primary` karışımı oldu.
+  4. **Allplan Max sayfasında iç içe iki `<main>` ve yinelenen `id="main-content"`:** Max bileşeninin kök `<main>`'i `<div>` yapıldı.
+  5. **12 px altı metin (70'ten fazla sayfa; Referanslar'da 235 öğe):** `applicationMicroLabel` 0.72→0.75 rem, `applicationMicroCompact` 0.68→0.75 rem, `applicationMicro` 0.7→0.75 rem (hepsi 12 px).
+- **Ölçüm hatası düzeltmesi (dürüstlük):** betik `color-mix` sonucunu (`color(srgb 0–1)`) başta 0–255 sanıyordu; bu, ana sayfa rozetinde yanlış bir koyu mod alarmı üretti ve açık mod için yanlış "geçti" verebilirdi. Ayrıştırıcı düzeltildi; `color-mix` kullanan tüm bileşenlerin sayfaları (ana sayfa, ürün/çözüm sayfaları) yeniden taranıp temiz çıktı.
+- **Testler:** `tests/test_review_findings.py` (rozet token'ı, referans sekmesi çifti, rol rozeti karışımı, mikro boyutlar ≥ 12 px, Max'te `<main>` yok, derlenmiş her sayfada tam bir `<main>`; yerel `preview/` ve `archive/` hariç). 432 test, 46/46 parite, 45/45 token, typecheck, build.
+- **Ölçülmeyenler / sınırlar:** betik görsel veya gradyan zemin üzerindeki metni atlıyor (hero ve kart görselleri üstündeki metin kontrastı ölçülmedi); hover, odak ve etkinleştirilmiş durumlar, klavye gezinmesi, formlar (iletişim, lisans etkinleştirme), video açılır penceresi, çerez bandı ve arama sonuçları etkileşimi test edilmedi; mobilde 76 sayfa taranmadı (şablon aileleri kapsandığı için örnekleme; açık mod mobilde taranmadı); gerçek cihaz ve Lighthouse/CrUX ölçümü yok; dev sunucusunda ölçüldü.
+- **Gözlem (düzeltilmedi, karar gerekir):** mobilde sayfa içeriği ekranın yaklaşık %35'inden başlıyor (üst çubuk: sosyal ikonlar, e-posta, "Hızlı Talep Oluştur", logo, arama, tema, menü). Kabuk (header) mobilde ilk ekranı büyük ölçüde dolduruyor.
+- **Karar bekleyen:** mobil header yoğunluğu; kalan Faz 3/4 işleri (özellik satırları, kalan başlık kopyaları, global CSS budama).
+
 ## 03.11.2026 — Tasarım standardizasyonu, Faz 3: kart sistemi (commitlendi, onay bekliyor)
 
 - **Bulgu:** tasarım sisteminde zaten kanonik bir kart var (`design-system/components/surfaces/surfaces.css` `.alu-card` + `--card-bg/-border/-radius/-shadow/-shadow-hover/-padding` token'ları); uygulama kartları bunu kullanmıyor, her biri kendi değerlerini taşıyordu. Ölçüm (faz öncesi): kart başlığı 15.7 / 16 / 17.3 / 18 / 20 / 21.6 / 22.4 px (yedi boyut), iç boşluk 20 / 22 / 24 / 26 / 36 px, kenarlık 0–3 px, üst vurgu çizgisi üç farklı biçimde, hover kaldırması üç seviye (subtle/moderate/strong).

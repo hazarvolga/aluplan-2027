@@ -25,7 +25,7 @@ const moreFeatures = [
 ];
 
 export function AllplanMaxPreviewPage() {
-  return <main id="main-content" className={styles.page}>
+  return <div className={styles.page}>
     <ProductHero eyebrow="Allplan Max" title={text('hero.title')} description={text('hero.body')} image="/assets/previews/home-2027/allplan-max-generated-v2.jpg" variant="showcase" actions={[{ label: 'Demo talep edin ↗', href: MAIN_QUOTE_FORM_URL, variant: 'primary' }, { label: 'Ücretsiz deneme ↗', href: TRIAL_CTA_URL, variant: 'secondary' }]} />
     <IntroSplitSection eyebrow="ALLPLAN MAX" title={text('detail.title')} description={text('detail.body')}
       factsTitle={text('detail.list-title')} facts={[text('detail.bullet-1'), text('detail.bullet-2')]}
@@ -51,5 +51,5 @@ export function AllplanMaxPreviewPage() {
       title: text(`cta.${key}.title`), paragraphs: [text(`cta.${key}.body`)],
       action: { href: key === 'trial' ? TRIAL_CTA_URL : MAIN_QUOTE_FORM_URL, label: text(`cta.${key}.cta`) }
     }))} />
-  </main>;
+  </div>;
 }

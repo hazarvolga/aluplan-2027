@@ -1230,7 +1230,7 @@ button.alu-role[aria-checked="true"] {
   font-size: var(--type-caption-size);
   font-weight: var(--font-weight-application-pathway-role-badge);
   letter-spacing: var(--font-letter-spacing-application-kicker);
-  color: var(--role-accent, var(--role-architect));
+  color: color-mix(in srgb, var(--role-accent, var(--role-architect)) 45%, var(--text-primary));
   background: color-mix(in srgb, var(--role-accent, var(--role-architect)) 14%, transparent);
   border: var(--border-width-default) solid color-mix(in srgb, var(--role-accent, var(--role-architect)) 45%, transparent);
 }
@@ -2588,7 +2588,7 @@ button.alu-role[aria-checked="true"] {
   background: var(--visual-media-badge-surface);
   backdrop-filter: var(--filter-backdrop-media-badge);
   border: var(--border-width-default) solid var(--accent-border);
-  color: var(--accent-fg);
+  color: var(--visual-media-badge-text);
   font-family: var(--font-mono);
   font-size: var(--type-application-micro-compact-size);
   font-weight: var(--font-weight-application-pathway-role-badge);
@@ -3254,15 +3254,15 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 }
 
 .alu-ref-tab--active {
-  background: var(--accent-primary);
-  border-color: var(--accent-primary);
-  color: var(--visual-on-emphasis);
+  background: var(--action-primary-bg);
+  border-color: var(--action-primary-bg);
+  color: var(--action-primary-fg);
   box-shadow: var(--shadow-application-reference-tab-active);
 }
 
 .alu-ref-tab--active:hover {
-  background: var(--accent-primary);
-  color: var(--visual-on-emphasis);
+  background: var(--action-primary-bg);
+  color: var(--action-primary-fg);
 }
 
 .alu-ref-tab__icon {
@@ -3292,7 +3292,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 
 .alu-ref-tab--active .alu-ref-tab__count {
   background: var(--visual-reference-active-count-surface);
-  color: var(--visual-on-emphasis);
+  color: var(--action-primary-fg);
 }
 
 .alu-ref-toolbar {

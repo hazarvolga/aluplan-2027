@@ -270,6 +270,9 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 <Link className="alu-button alu-button--secondary alu-button--sm" href="/solutions-v2/training" onClick={() => setMobileMenuOpen(false)}>
                   Eğitim & Webinar
                 </Link>
+                <Link className="alu-button alu-button--secondary alu-button--sm" href={isReleaseContentEnabled() ? '/kaynaklar' : '/#professional-services'} onClick={() => setMobileMenuOpen(false)}>
+                  Kaynaklar
+                </Link>
                 <Link className="alu-button alu-button--secondary alu-button--sm" href="/references" onClick={() => setMobileMenuOpen(false)}>
                   Referanslar
                 </Link>

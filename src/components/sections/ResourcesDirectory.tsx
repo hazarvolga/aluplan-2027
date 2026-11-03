@@ -65,9 +65,9 @@ function ServiceAction({ service, tone }: { service: Service; tone: ActionTone }
   );
 }
 
-function ServiceIcon({ service }: { service: Service }) {
+function BareIcon({ service }: { service: Service }) {
   return (
-    <span className={`alu-support-card__icon ${styles.icon}`} aria-hidden="true">
+    <span className={styles.bareIcon} aria-hidden="true">
       <AluIcon name={service.icon as AluIconName} size="md" />
     </span>
   );
@@ -77,8 +77,8 @@ function Tile({ service }: { service: Service }) {
   return (
     <li className={styles.tile}>
       <div className={styles.tileHead}>
-        <ServiceIcon service={service} />
         <h3 className={styles.itemTitle}>{service.title}</h3>
+        <BareIcon service={service} />
       </div>
       <p className={styles.text}>{service.description}</p>
       <div className={styles.tileAction}>
@@ -95,8 +95,8 @@ function SupportGroup({ services }: { services: Service[] }) {
         {services.filter((service) => FEATURED_SERVICES.has(service.title)).map((service) => (
           <li key={service.title} className={styles.featured}>
             <div className={styles.tileHead}>
-              <ServiceIcon service={service} />
               <h3 className={styles.featuredTitle}>{service.title}</h3>
+              <BareIcon service={service} />
             </div>
             <p className={styles.featuredText}>{service.description}</p>
             <div className={styles.tileAction}>
@@ -119,12 +119,14 @@ function ListGroup({ services }: { services: Service[] }) {
     <ul className={styles.rows}>
       {services.map((service) => (
         <li key={service.title} className={styles.row}>
-          <ServiceIcon service={service} />
+          <BareIcon service={service} />
           <div className={styles.rowText}>
             <h3 className={styles.itemTitle}>{service.title}</h3>
             <p className={styles.text}>{service.description}</p>
           </div>
-          <ServiceAction service={service} tone="outline" />
+          <div className={styles.rowAction}>
+            <ServiceAction service={service} tone="outline" />
+          </div>
         </li>
       ))}
     </ul>

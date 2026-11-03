@@ -1,5 +1,18 @@
 # Oturum devri
 
+## 03.11.2026 — Açık maddeler (kullanıcı: "sonra bakacağız")
+
+- **Kaynaklar sayfası:** mobil menüye "Kaynaklar" eklendi; Öğren/Bilgi kartlarında ikonlar sağ üst köşede, zeminsiz (lisans satırlarındaki kutulu ikonlar aynen kaldı). `/kaynaklar` adresi öneridir, onay bekliyor. `navigation.json` içindeki `directLinks` verisi arayüzde kullanılmıyor, eski hedefi (`/#professional-services`) gösteriyor.
+- **AX3000 Mekanik Tesisat:** "Modüller" başlığı (kaynakta yok) ve bölüm sırası (modüller özelliklerin önüne alınabilir) onay bekliyor.
+- **BIMFlex özel video (B3):** kart kaldırılsın mı, video sahibinden herkese açık yapılması mı istensin?
+- **Doğrulanmamış iddialar (C1):** üreticiden bilgi bekleniyor.
+- **Bağlantı farkları D bölümü (B5):** `docs/verification/main-link-gap-2026-11-02.md` kullanıcıyla tek tek gözden geçirilecek.
+- **SSS kırıntısı:** "Ana Sayfa > Çözümler > SSS"; üst menüye taşındığı için "Ana Sayfa > SSS" olması önerildi.
+- **`llms.txt`:** paket karşılaştırma satırı hâlâ "PDF" diyor; 2027 sürümü açıkken yanlış.
+- **D6/D7/D8:** indirme bağlantısı adları, AX3000 doküman başlıkları ve harita/türev betiği düzeltmeleri doğrulanmadı (D6 büyük olasılıkla kapandı).
+- **Sonraki fazlar (E1–E3):** ortak bileşen taşıması, premium hareket, mobil video.
+- **Yayın:** `codex/prelaunch-decisions` push edilmedi; PR #3 ile ilişkisi, Vercel ortam değişkenleri (`ALUPLAN_SHOW_2027`, `ALUPLAN_BLOCK_INDEXING`; eski `ALUPLAN_2027_PREVIEW` kaldırılmalı), Vercel Analytics ve deploy kullanıcıda.
+
 ## 03.11.2026 — Kaynaklar sayfası yayında (yerel, commitlenmedi)
 
 - Kaynaklar sayfası kalıcı olarak `/kaynaklar` adresinde (`ResourcesDirectory`, içerik `homepage.json` hizmet verisinden; Partner gizli, 19 kaynak, üç kategori). Geçici `/preview/kaynaklar` rotası kaldırıldı.

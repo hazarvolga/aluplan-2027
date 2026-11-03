@@ -37,6 +37,12 @@ class ResourcesLinkTests(unittest.TestCase):
         shell = read("src/components/shell/SiteShell.tsx")
         self.assertIn("isReleaseContentEnabled() ? '/kaynaklar' : '/#professional-services'", shell)
 
+    def test_mobile_drawer_lists_resources_before_references(self):
+        shell = read("src/components/shell/SiteShell.tsx")
+        drawer = shell[shell.index("Mobil Gezinme Menüsü"):]
+        self.assertIn("isReleaseContentEnabled() ? '/kaynaklar' : '/#professional-services'", drawer)
+        self.assertLess(drawer.index("/kaynaklar"), drawer.index('href="/references"'))
+
     def test_homepage_section_is_removed_for_the_release_and_kept_for_rollback(self):
         home = read("src/components/sections/HomepageView.tsx")
         self.assertIn("{!previewMaxHero && <ProfessionalServicesSection />}", home)
@@ -60,6 +66,28 @@ class ResourcesDirectoryTests(unittest.TestCase):
         ]
         self.assertEqual([title for title in listed if title not in titles], [])
         self.assertEqual(len(listed), 19)
+
+    def test_every_icon_is_bare_and_card_icons_sit_in_the_corner(self):
+        source = VIEW.read_text(encoding="utf-8")
+        self.assertNotIn("ServiceIcon", source)
+        self.assertNotIn("alu-support-card__icon", source)
+        tile = source[source.index("function Tile"):source.index("function SupportGroup")]
+        featured = source[source.index("function SupportGroup"):source.index("function ListGroup")]
+        rows = source[source.index("function ListGroup"):source.index("function GridGroup")]
+        for card in (tile, featured, rows):
+            self.assertIn("<BareIcon", card)
+        css = (ROOT / "src/components/sections/ResourcesDirectory.module.css").read_text(encoding="utf-8")
+        bare = css[css.index(".bareIcon"):].split("}")[0]
+        self.assertNotIn("background", bare)
+        self.assertNotIn("border", bare)
+
+    def test_license_row_buttons_share_one_width(self):
+        source = VIEW.read_text(encoding="utf-8")
+        rows = source[source.index("function ListGroup"):source.index("function GridGroup")]
+        self.assertIn("styles.rowAction", rows)
+        css = (ROOT / "src/components/sections/ResourcesDirectory.module.css").read_text(encoding="utf-8")
+        action = css[css.index(".rowAction"):].split("}")[0]
+        self.assertIn("flex:0 0 12rem", action)
 
     def test_view_leaves_out_the_partner_group(self):
         self.assertIn(HIDDEN_GROUP, VIEW.read_text(encoding="utf-8"))

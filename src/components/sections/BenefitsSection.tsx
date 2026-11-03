@@ -2,6 +2,7 @@ import type { ReactElement } from 'react';
 import styles from './BenefitsSection.module.css';
 
 import type { StructuredPageLayout } from '@/lib/site-data';
+import { SectionHeader } from './SectionHeader';
 
 type BenefitsSectionData = NonNullable<StructuredPageLayout['benefits']>;
 
@@ -20,12 +21,7 @@ export function BenefitsSection({ benefits, variant = "default" }: BenefitsSecti
   return (
     <section className={`preview-section preview-section--subtle ${styles.section}`} aria-label={benefits.title}>
       <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
-        <div className="alu-section-header-center">
-          {benefits.kicker && <span className="preview-kicker">{benefits.kicker}</span>}
-          <h2 className="alu-h2" style={{ margin: 0 }}>
-            {benefits.title}
-          </h2>
-        </div>
+        <SectionHeader kicker={benefits.kicker} title={benefits.title} />
 
         <div className={gridClassName}>
           {benefits.items.map((benefit, index) => (

@@ -5,6 +5,7 @@ import type { StructuredFaqDirectory } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { DirectoryCategoryIcon } from './DirectoryCategoryIcon';
 import { handleStructuredTabKey } from './structured-tab-key';
+import { SectionHeader } from './SectionHeader';
 
 type FAQSectionProps = {
   faqDirectory?: StructuredFaqDirectory;
@@ -31,22 +32,7 @@ export function FAQSection({ faqDirectory }: FAQSectionProps) {
         className="alu-container alu-stack"
         style={{ gap: 'var(--space-stack-xl)' }}
       >
-        <div className="alu-section-header-center">
-          {faqDir.kicker && (
-            <span className="preview-kicker">{faqDir.kicker}</span>
-          )}
-          <h2 className="alu-h2" style={{ margin: 0 }}>
-            {faqDir.title}
-          </h2>
-          {faqDir.subtitle && (
-            <p
-              className="alu-body preview-meta"
-              style={{ margin: 0, maxWidth: 'var(--container-prose)' }}
-            >
-              {faqDir.subtitle}
-            </p>
-          )}
-        </div>
+        <SectionHeader kicker={faqDir.kicker} title={faqDir.title} lead={faqDir.subtitle} />
 
         {faqDir.categories.length > 1 && (
           <div

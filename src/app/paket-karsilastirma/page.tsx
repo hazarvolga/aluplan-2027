@@ -8,6 +8,7 @@ import { buildPageJsonLd, serializeJsonLd } from '@/lib/schema';
 import { buildPageMetadata } from '@/lib/metadata';
 import { getPageData, getPlaylistData } from '@/lib/site-data';
 import { SubpageView } from '@/components/sections/SubpageView';
+import { CompactPageHero } from '@/components/sections/CompactPageHero';
 
 export function generateMetadata(): Metadata {
   return isReleaseContentEnabled() ? buildRelease2027Metadata('/paket-karsilastirma') : buildPageMetadata('/paket-karsilastirma');
@@ -19,7 +20,7 @@ const editions = [
  {name:'Ultimate',description:'Çok disiplinli tasarım ofisleri, tasarla-yap inşaat şirketleri ve kamu kurumları için bina, yol ve altyapı yapılarının tasarım, detaylandırma ve inşaatına yönelik tüm ilgili işlevleri içeren eksiksiz çözümdür. Kamu kurumları ve MEP mühendisleri için platform olarak da uygundur.',href:'/products/allplan-ultimate'}
 ];
 function Compare2027(){
- return <div className={styles.page}><div className="alu-container"><header className={styles.hero}><p className="preview-kicker">ALLPLAN · 2027</p><h1>ALLPLAN sürümlerini karşılaştırın</h1><p>Basic, Concept, Professional ve Ultimate sürümlerinin özelliklerini karşılaştırın.</p><p className={styles.notice}>Sürüm bağlantıları mevcut yerel ürün sayfalarına gider.</p></header>
+ return <div className={styles.page}><CompactPageHero crumbs={[{ label: 'Ana Sayfa', href: '/' }, { label: 'Paket karşılaştırma' }]} kicker="ALLPLAN · 2027" title="ALLPLAN sürümlerini karşılaştırın" lead="Basic, Concept, Professional ve Ultimate sürümlerinin özelliklerini karşılaştırın."><p className={styles.notice}>Sürüm bağlantıları mevcut yerel ürün sayfalarına gider.</p></CompactPageHero><div className="alu-container">
  <p className={styles.footnote}>✓ Dâhil · — Kaynakta dâhil olarak işaretlenmemiş · İsteğe bağlı. Mobilde tabloyu yatay kaydırabilirsiniz.</p>
  <ComparisonTable editions={editions} /><p className={styles.footnote}>** ALLPLAN abonelik lisanslarına dâhildir. *** ALLPLAN Model Viewer, ALLPLAN aboneliği veya Bimplus Professional satın alımıyla kullanılabilir.</p>
  <section className={styles.editions}><p className="preview-kicker">/ SÜRÜMLER</p><h2>İhtiyacınıza uygun sürümü keşfedin</h2><div>{editions.map(e=><article key={e.name}><h3>ALLPLAN {e.name}</h3><p>{e.description}</p><a href={e.href} aria-label={`Sürümü incele: ALLPLAN ${e.name}`}>Sürümü incele ↗</a></article>)}</div></section></div></div>;

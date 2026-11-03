@@ -26,7 +26,7 @@ const moreFeatures = [
 
 export function AllplanMaxPreviewPage() {
   return <main id="main-content" className={styles.page}>
-    <ProductHero eyebrow="Allplan Max" title={text('hero.title')} description={text('hero.body')} image="/assets/previews/home-2027/allplan-max-generated-v2.jpg" actions={[{ label: 'Demo talep edin ↗', href: MAIN_QUOTE_FORM_URL, variant: 'primary' }, { label: 'Ücretsiz deneme ↗', href: TRIAL_CTA_URL, variant: 'secondary' }]} />
+    <ProductHero eyebrow="Allplan Max" title={text('hero.title')} description={text('hero.body')} image="/assets/previews/home-2027/allplan-max-generated-v2.jpg" variant="showcase" actions={[{ label: 'Demo talep edin ↗', href: MAIN_QUOTE_FORM_URL, variant: 'primary' }, { label: 'Ücretsiz deneme ↗', href: TRIAL_CTA_URL, variant: 'secondary' }]} />
     <IntroSplitSection eyebrow="ALLPLAN MAX" title={text('detail.title')} description={text('detail.body')}
       factsTitle={text('detail.list-title')} facts={[text('detail.bullet-1'), text('detail.bullet-2')]}
       action={{ label: 'Ücretsiz deneme ↗', href: TRIAL_CTA_URL }} />

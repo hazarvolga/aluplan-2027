@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import hero from '@/components/sections/ProductPage.module.css';
+import { ProductHero } from '@/components/sections/ProductHero';
 import { ProductContentSection, ProductEditionsBand, ProductFaq, ProductTabNav } from '@/components/sections/ProductPageParts';
 import { friloCapabilities, friloFaq } from './content';
 import { EditionCards } from '@/components/sections/EditionCards';
@@ -24,7 +25,7 @@ const editions = [
 function FriloPreview() {
   if (!isReleaseContentEnabled()) notFound();
   return <div>
-    <section className={hero.hero}><div className={`alu-container ${hero.content}`}><p className="preview-kicker">FRILO · YAPI ANALİZİ</p><h1 className="alu-h1">Bileşen odaklı yapı analizi ve tasarım</h1><p className="alu-body">FRILO; beton, çelik, ahşap ve yığma yapıların bileşen odaklı analizi ve tasarımı için BIM bağlantıları ve Eurocode ile DIN temelli araçlar sunar.</p><ul className={hero.heroBenefits}><li>İhtiyaçlarınıza uygun araç seti</li><li>Yapı bileşenleri için hesaplar</li><li>Düzenli hesap raporları</li><li>Diğer araçlarla iş birliği</li></ul><a className="alu-button alu-button--primary alu-button--md" href={MAIN_QUOTE_FORM_URL}>Teklif isteyin ↗</a></div></section>
+    <ProductHero eyebrow="FRILO · YAPI ANALİZİ" title="Bileşen odaklı yapı analizi ve tasarım" description="FRILO; beton, çelik, ahşap ve yığma yapıların bileşen odaklı analizi ve tasarımı için BIM bağlantıları ve Eurocode ile DIN temelli araçlar sunar." image="/assets/previews/frilo/frilo-hero.jpg" highlights={['İhtiyaçlarınıza uygun araç seti', 'Yapı bileşenleri için hesaplar', 'Düzenli hesap raporları', 'Diğer araçlarla iş birliği']} actions={[{ label: 'Teklif isteyin ↗', href: MAIN_QUOTE_FORM_URL, variant: 'primary' }]} />
     <ProductEditionsBand title="FRILO sürümleri" editions={editions} />
     <ProductEditionsBand id="frilo-geotechnics" kicker="FRILO GEOTECHNICS · SÜRÜMLER" title="FRILO Geotechnics sürümleri" lead={geotechnics.lead} editions={geotechnics.editions.map(edition => ({ title: edition.name, description: edition.intro }))} />
     <ProductTabNav label="FRILO sayfa bölümleri" links={[{href:'#frilo-overview',label:'Genel bakış'},{href:'#frilo-geotechnics',label:'Geoteknik'},{href:'#frilo-capabilities',label:'Yetenekler'},{href:'#frilo-stories',label:'Başarı hikâyeleri'},{href:'#frilo-faq',label:'Sık sorulan sorular'}]} />

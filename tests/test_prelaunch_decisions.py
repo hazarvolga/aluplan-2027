@@ -28,9 +28,9 @@ def config_redirects() -> list[dict]:
 class FeaturesHeadingTests(unittest.TestCase):
     def test_h1_is_the_2027_line_and_tagline_follows(self):
         source = FEATURES.read_text(encoding="utf-8")
-        self.assertIn("<h1>2027 yenilikleri: Allplan, Allplan Civil, FRILO, SCIA, SDS2</h1>", source)
-        self.assertRegex(source, r"<p className=\{styles\.tagline\}>Her mühendislik iş akışı için kapsamlı çözümler</p>")
-        self.assertNotIn("<h1>Her mühendislik iş akışı için kapsamlı çözümler</h1>", source)
+        self.assertIn('title="2027 yenilikleri: Allplan, Allplan Civil, FRILO, SCIA, SDS2"', source)
+        self.assertIn('lead="Her mühendislik iş akışı için kapsamlı çözümler"', source)
+        self.assertNotIn('title="Her mühendislik iş akışı için kapsamlı çözümler"', source)
 
 
 class YoutubeCardTitleTests(unittest.TestCase):

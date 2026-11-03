@@ -19,6 +19,7 @@ import { SplitCalloutSection } from './SplitCalloutSection';
 import { StructuredContentBlocks } from './StructuredContentBlocks';
 import { WorkflowSection } from './WorkflowSection';
 import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
+import { SectionHeader } from './SectionHeader';
 
 interface StructuredVideoRequest {
   youtubeId?: string;
@@ -288,12 +289,7 @@ export function StructuredPageLayoutSection({
       {layout.faq && layout.faq.items.length > 0 && (
         <section className="preview-section preview-section--subtle" aria-label={layout.faq.title}>
           <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
-            <div className="alu-section-header-center">
-              <span className="preview-kicker">/ SIKÇA SORULAN SORULAR</span>
-              <h2 className="alu-h2" style={{ margin: 0 }}>
-                {layout.faq.title}
-              </h2>
-            </div>
+            <SectionHeader kicker="/ SIKÇA SORULAN SORULAR" title={layout.faq.title} />
             <div className="alu-faq-list">
               {layout.faq.items.map((faqItem, faqIndex) => (
                 <details

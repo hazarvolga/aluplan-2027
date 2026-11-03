@@ -5,6 +5,7 @@ import type { ContentImage, PageRecord } from '@/lib/site-data';
 import { MAIN_QUOTE_FORM_URL, TRIAL_CTA_URL } from '@/lib/site-shared';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { isReleaseContentEnabled } from '@/lib/release-flags';
+import { heroLead } from '@/lib/hero-lead';
 import type {
   HeroBackgroundSources,
   HeroVisualAssetKind,
@@ -100,12 +101,12 @@ export function SubpageHeroSection({
             <span className="alu-badge">ALLPLAN TÜRKİYE</span>
           </div>
 
-          <h1 id="page-h1" className="alu-display" style={{ margin: 0 }}>
+          <h1 id="page-h1" className="alu-h1" style={{ margin: 0 }}>
             {page.h1}
           </h1>
 
           <p className="alu-body-lg preview-meta" style={{ margin: 0 }}>
-            {page.description}
+            {heroLead(page.h1, page.description)}
           </p>
 
           {!isLegalPage && page.path !== '/about' && (
@@ -114,7 +115,7 @@ export function SubpageHeroSection({
                 href={MAIN_QUOTE_FORM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="alu-button alu-button--primary alu-button--lg"
+                className="alu-button alu-button--primary alu-button--md"
               >
                 <span>Teklif Talep Formu</span>
                 <AluIcon name="external-link" size="sm" />
@@ -123,7 +124,7 @@ export function SubpageHeroSection({
                 href={TRIAL_CTA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="alu-button alu-button--secondary alu-button--lg"
+                className="alu-button alu-button--secondary alu-button--md"
               >
                 <span>Ücretsiz Deneme</span>
                 <AluIcon name="external-link" size="sm" />

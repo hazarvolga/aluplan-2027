@@ -1847,7 +1847,7 @@ button.alu-role[aria-checked="true"] {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding-block: var(--space-application-subpage-hero-padding);
+  padding-block: var(--space-stack-lg) var(--space-stack-xl);
   border-bottom: var(--border-width-default) solid var(--border-strong);
   background: var(--surface-page);
 }

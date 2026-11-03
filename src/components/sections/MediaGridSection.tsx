@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 import type { StructuredMediaGridSection } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
+import { SectionHeader } from './SectionHeader';
 
 interface MediaVideoRequest {
   youtubeId: string;
@@ -34,17 +35,7 @@ export function MediaGridSection({
   return (
     <section className="preview-section" aria-label={grid.title}>
       <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
-        <div className="alu-section-header-center">
-          {grid.kicker && <span className="preview-kicker">{grid.kicker}</span>}
-          <h2 className="alu-h2" style={{ margin: 0 }}>
-            {grid.title}
-          </h2>
-          {grid.subtitle && (
-            <p className="alu-body preview-meta" style={{ margin: 0, maxWidth: 'var(--container-prose)' }}>
-              {grid.subtitle}
-            </p>
-          )}
-        </div>
+        <SectionHeader kicker={grid.kicker} title={grid.title} lead={grid.subtitle} />
 
         <div className={`alu-media-grid alu-media-grid--cols-${columns}`}>
           {grid.items.map((item, index) => {

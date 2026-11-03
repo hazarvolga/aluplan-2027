@@ -5,6 +5,7 @@ import styles from './page.module.css';
 import { isReleaseContentEnabled } from '@/lib/release-flags';
 import { buildRelease2027JsonLd, buildRelease2027Metadata } from '@/lib/release-2027-routes';
 import { serializeJsonLd } from '@/lib/schema';
+import { CompactPageHero } from '@/components/sections/CompactPageHero';
 
 export function generateMetadata(): Metadata {
   return buildRelease2027Metadata('/product-lifecycle');
@@ -16,7 +17,7 @@ function ServiceTable({ rows, label }: { rows: readonly (readonly [string, boole
 function ProductLifecyclePage() {
   if (!isReleaseContentEnabled()) notFound();
   return <div className={styles.page}>
-    <header className={styles.hero}><div className="alu-container"><p className={styles.kicker}>ALLPLAN · POLİTİKA</p><h1>Ürün yaşam döngüsü politikası</h1><p>Ürün bakım aşamaları, sürüm desteği ve sunulan hizmetler.</p></div></header>
+    <CompactPageHero crumbs={[{ label: 'Ana Sayfa', href: '/' }, { label: 'Ürün yaşam döngüsü politikası' }]} kicker="ALLPLAN · POLİTİKA" title="Ürün yaşam döngüsü politikası" lead="Ürün bakım aşamaları, sürüm desteği ve sunulan hizmetler." />
     <div className={styles.nav}><nav className="alu-container" aria-label="Sayfa bölümleri"><a href="#policy">Politika</a><a href="#maintenance">Ürün bakımı</a><a href="#support">Sürüm desteği</a><a href="#dates">Ürün tarihleri</a><a href="#faq">Sık sorulan sorular</a></nav></div>
     <div className={`alu-container ${styles.content}`}>
       <section id="policy"><p className={styles.kicker}>HAKKINDA</p><h2>Ürün yaşam döngüsü politikamız</h2><p>Bu politika, ALLPLAN’ın masaüstü ürünleri (ALLPLAN, FRILO ve DC-Software), SCIA ve SDS2 için geçerlidir.</p><p>Ürünlerimizin ve sürümlerinin yaşam döngüsünü ve sunulan hizmetleri açıklar. Ürün Yaşam Döngüsü Politikasında kullanılan terimler aşağıda açıklanmıştır.</p><p>Ürün ve hizmetlerimizin kalitesini sürekli iyileştirdiğimiz için birçok ürünümüzün eski sürümlerinin kademeli olarak kullanımdan kaldırılması kaçınılmazdır. Bir ürün yaşam döngüsü politikası, müşterilerin güvenlik ve performans güncellemelerini takip ederken sürüm yükseltmelerini planlamasını sağlar. ALLPLAN, müşterilerin her ürünün daima en son sürümünü kullanmasını önerir.</p><p>Bu politika, <a href="https://www.allplan.com/product-lifecycle-old/">önceki ALLPLAN yaşam döngüsü politikasının</a> yerini alır ve 13 Ocak 2025 tarihinden itibaren geçerlidir. Ürün bakım yaşam döngüsü boyunca sunulan teknik destek ve bakım hizmetlerinin nasıl ve ne zaman değişeceğini açıklayarak açıkça tanımlanmış yaşam döngüsü ve destek koşulları oluşturur.</p></section>

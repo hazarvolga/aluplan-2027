@@ -1,7 +1,5 @@
 .page{background:var(--surface-page);color:var(--text-primary)}
-.hero{padding-block:var(--space-application-section-wide-inset);background:var(--surface-subtle)}
-.hero h1{font-family:var(--font-heading);font-size:var(--type-h2-size);line-height:var(--type-h2-line-height);max-width:32ch;margin:var(--space-stack-md) 0 var(--space-stack-sm)}.hero .tagline{font-family:var(--font-heading);font-size:var(--type-h3-size);line-height:var(--type-h3-line-height);color:var(--text-secondary);margin:0 0 var(--space-stack-md)}
-.hero p{max-width:75ch;line-height:var(--type-body-lg-line-height)}
+.heroText{max-width:75ch;margin:var(--space-stack-md) 0 0;line-height:var(--type-body-lg-line-height)}
 .kicker{color:var(--accent-fg);font-weight:var(--font-weight-strong);font-size:var(--type-caption-size);letter-spacing:.06em;text-transform:uppercase}
 .actions{display:flex;gap:var(--space-inline-md);flex-wrap:wrap;margin-top:var(--space-stack-lg)}
 .section{padding-block:var(--space-application-section-inset)}

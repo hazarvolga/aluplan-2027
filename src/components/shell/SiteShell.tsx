@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { getNavigationData, getSearchIndex, MAIN_QUOTE_FORM_URL } from '@/lib/site-data';
 import { AluIcon, AluIconName } from '@/components/ui/AluIcon';
 import { MediaDialog } from '@/components/ui/MediaDialog';
+import { useConsentReady, useCookieConsent, writeConsent } from '@/lib/consent';
 
 const navData = getNavigationData();
 const searchIndex = getSearchIndex();
@@ -25,8 +26,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [cookieConsent, setCookieConsent] = useState<'accepted' | 'rejected' | null>(null);
-  const [consentLoaded, setConsentLoaded] = useState(false);
+  const cookieConsent = useCookieConsent();
+  const consentLoaded = useConsentReady();
 
   useEffect(() => {
     try {
@@ -37,14 +38,9 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       } else {
         document.documentElement.setAttribute('data-mode', 'dark');
       }
-      const savedConsent = localStorage.getItem('cookie-consent');
-      if (savedConsent === 'accepted' || savedConsent === 'rejected') {
-        setCookieConsent(savedConsent);
-      }
     } catch {
       // ignore storage errors
     }
-    setConsentLoaded(true);
   }, []);
 
   useEffect(() => {
@@ -74,14 +70,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
     }
   };
 
-  const handleConsent = (choice: 'accepted' | 'rejected') => {
-    setCookieConsent(choice);
-    try {
-      localStorage.setItem('cookie-consent', choice);
-    } catch {
-      // ignore
-    }
-  };
+  const handleConsent = (choice: 'accepted' | 'rejected') => writeConsent(choice);
 
   const filteredSearch = searchQuery.trim()
     ? searchIndex
@@ -461,7 +450,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         </MediaDialog>
       )}
 
-      {/* KVKK Cookie Consent Banner (gates Google Analytics until accepted) */}
       {consentLoaded && cookieConsent === null && (
         <aside className="alu-cookie-banner" aria-label="Çerez Tercihleri">
           <div className="alu-stack" style={{ gap: 'var(--space-application-jsx-comfortable)' }}>

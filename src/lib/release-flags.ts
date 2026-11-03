@@ -17,3 +17,7 @@ export function isLocalPreviewEnabled(): boolean {
 export function getHomepageVariant(): HomepageVariant {
   return isReleaseContentEnabled() ? 'release-2027' : 'legacy';
 }
+
+export function isVercelInsightsEnabled(): boolean {
+  return process.env.ALUPLAN_VERCEL_INSIGHTS === '1';
+}

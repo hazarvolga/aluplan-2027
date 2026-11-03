@@ -27,9 +27,9 @@
 @media(max-width:767px){.capability{grid-template-columns:2rem minmax(0,1fr)}.capability p{grid-column:2}}
 
 .updatesGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-stack-md)}
-.updateCard{border:var(--border-width-default) solid var(--border-default);background:var(--surface-default)}
+.updateCard{border:var(--border-width-default) solid var(--card-border);background:var(--card-bg);box-shadow:var(--card-shadow)}
 .updateCard img{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:var(--surface-raised)}
-.updateCard div{padding:var(--space-inset-md)}.updateCard h3{font-size:var(--type-body-size);margin:0 0 var(--space-stack-xs)}.updateCard p{margin:0;color:var(--text-secondary)}
+.updateCard div{padding:var(--space-inset-md)}.updateCard h3{font-size:var(--type-application-body-intro-size);font-weight:var(--font-weight-application-pathway-role-badge);margin:0 0 var(--space-stack-xs)}.updateCard p{margin:0;color:var(--text-secondary)}
 @media(max-width:767px){.updatesGrid{grid-template-columns:1fr}}
 
 /* Preview: restrained structural lines and image-led reading rhythm. */

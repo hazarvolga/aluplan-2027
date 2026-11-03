@@ -4684,10 +4684,11 @@ button.alu-role[aria-checked="true"] {
   display: flex;
   flex-direction: column;
   gap: var(--space-application-panel-inset);
-  padding: var(--space-application-section-inset);
-  background: var(--surface-default);
-  border: var(--border-width-default) solid var(--border-default);
-  border-top: var(--border-width-strong) solid var(--border-strong);
+  padding: var(--card-padding);
+  background: var(--card-bg);
+  border: var(--border-width-default) solid var(--card-border);
+  border-radius: var(--card-radius);
+  border-top: var(--border-width-strong) solid var(--accent-border);
   box-shadow: var(--elevation-raised);
   transition:
     border-color var(--motion-duration-fast) var(--motion-easing-standard),
@@ -4886,9 +4887,10 @@ button.alu-role[aria-checked="true"] {
   display: flex;
   flex-direction: column;
   gap: var(--space-application-card-inset);
-  padding: var(--space-application-section-comfortable-inset);
-  background: var(--surface-default);
-  border: var(--border-width-default) solid var(--border-default);
+  padding: var(--card-padding);
+  background: var(--card-bg);
+  border: var(--border-width-default) solid var(--card-border);
+  border-radius: var(--card-radius);
   border-top: var(--border-width-strong) solid var(--accent-border);
   box-shadow: var(--elevation-raised);
 }
@@ -4929,6 +4931,11 @@ button.alu-role[aria-checked="true"] {
   font-family: var(--font-mono);
   font-size: var(--type-application-small-body-size);
   font-weight: var(--font-weight-application-pathway-role-badge);
+}
+.alu-spec-card .alu-h3 {
+  font-size: var(--type-application-body-intro-size);
+  font-weight: var(--font-weight-application-pathway-role-badge);
+  line-height: var(--type-h3-line-height);
 }
 .alu-spec-card__header {
   display: flex;
@@ -5380,9 +5387,10 @@ button.alu-role[aria-checked="true"] {
   display: flex;
   flex-direction: column;
   gap: var(--space-application-card-inset);
-  padding: var(--space-application-section-inset);
-  background: var(--surface-default);
-  border: var(--border-width-default) solid var(--border-default);
+  padding: var(--card-padding);
+  background: var(--card-bg);
+  border: var(--border-width-default) solid var(--card-border);
+  border-radius: var(--card-radius);
   box-shadow: var(--elevation-raised);
   transition:
     transform var(--motion-duration-panel) var(--motion-easing-expressive),
@@ -5390,9 +5398,9 @@ button.alu-role[aria-checked="true"] {
     box-shadow var(--motion-duration-panel) var(--motion-easing-default);
 }
 .alu-benefit-card:hover {
-  transform: var(--motion-transform-lift-strong);
+  transform: var(--motion-transform-lift-subtle);
   border-color: var(--accent-border);
-  box-shadow: var(--elevation-overlay);
+  box-shadow: var(--elevation-hover);
 }
 .alu-benefit-card__top {
   display: flex;
@@ -5446,8 +5454,9 @@ button.alu-role[aria-checked="true"] {
 .alu-media-card {
   display: flex;
   flex-direction: column;
-  background: var(--surface-default);
-  border: var(--border-width-default) solid var(--border-default);
+  background: var(--card-bg);
+  border: var(--border-width-default) solid var(--card-border);
+  border-radius: var(--card-radius);
   box-shadow: var(--elevation-raised);
   overflow: hidden;
   transition:
@@ -5456,9 +5465,9 @@ button.alu-role[aria-checked="true"] {
     box-shadow var(--motion-duration-media) var(--motion-easing-default);
 }
 .alu-media-card:hover {
-  transform: var(--motion-transform-lift-strong);
+  transform: var(--motion-transform-lift-subtle);
   border-color: var(--accent-border);
-  box-shadow: var(--elevation-overlay);
+  box-shadow: var(--elevation-hover);
 }
 .alu-media-card__thumb {
   position: relative;
@@ -6267,8 +6276,9 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   align-items: center;
   gap: var(--space-application-panel-inset);
   padding: var(--space-application-section-dense-gap) var(--space-application-section-compact-gap);
-  background: var(--surface-default);
-  border: var(--border-width-default) solid var(--border-default);
+  background: var(--card-bg);
+  border: var(--border-width-default) solid var(--card-border);
+  border-radius: var(--card-radius);
   box-shadow: var(--elevation-raised);
   transition: transform var(--motion-duration-base) var(--motion-easing-expressive),
     border-color var(--motion-duration-base) var(--motion-easing-default),
@@ -6555,16 +6565,17 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
   display: flex;
   flex-direction: column;
   gap: var(--space-application-card-comfortable-gap);
-  padding: var(--space-application-about-value-item-padding);
-  background: var(--surface-default);
-  border: var(--border-width-default) solid var(--border-default);
-  border-top: var(--border-width-accent) solid var(--accent-border);
+  padding: var(--card-padding);
+  background: var(--card-bg);
+  border: var(--border-width-default) solid var(--card-border);
+  border-radius: var(--card-radius);
+  border-top: var(--border-width-strong) solid var(--accent-border);
   box-shadow: var(--elevation-raised);
   transition: transform var(--motion-duration-responsive) var(--motion-easing-expressive), border-color var(--motion-duration-responsive) var(--motion-easing-default), background-color var(--motion-duration-base) var(--motion-easing-default);
 }
 
 .alu-about-value-item:hover {
-  transform: var(--motion-transform-lift-moderate);
+  transform: var(--motion-transform-lift-subtle);
   border-color: var(--accent-border);
   background: var(--surface-raised);
 }
@@ -6598,7 +6609,7 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 .alu-about-value-item__title {
   margin: 0;
   font-family: var(--font-display);
-  font-size: var(--type-application-feature-title-size);
+  font-size: var(--type-application-body-intro-size);
   font-weight: var(--font-weight-application-pathway-role-badge);
   color: var(--text-primary);
 }

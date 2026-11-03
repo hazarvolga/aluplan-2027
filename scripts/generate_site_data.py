@@ -566,7 +566,7 @@ GENERIC_DESCRIPTIONS = {
 ROUTE_LABELS = {
     "/": "ALLPLAN Türkiye | Profesyonel BIM Yazılımları",
     "/about": "Hakkımızda — Türkiye’nin Güvenilir BIM Çözüm Ortağı",
-    "/contact": "İletişim ve Teknik Danışmanlık — Aluplan",
+    "/contact": "İletişim ve Teknik Danışmanlık",
     "/gizlilik-politikasi": "Gizlilik Politikası ve Veri Güvenliği",
     "/kullanim-sartlari": "İnternet Sitesi Kullanım Şartları",
     "/kvkk": "KVKK Kişisel Verilerin İşlenmesi Aydınlatma Metni",

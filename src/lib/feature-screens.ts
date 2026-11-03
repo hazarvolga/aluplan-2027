@@ -3,12 +3,16 @@ import type { AllplanEdition2027 } from '@/data/allplan-2027-editions';
 import type { ProductEditionContent } from '@/data/product-edition-content';
 import type { StructuredMediaCardItem } from '@/lib/site-data';
 
-/** Screenshot cards for the features of an edition page that have a screen, in feature order. */
-export function productScreenItems(content: ProductEditionContent): StructuredMediaCardItem[] {
-  return content.featureGroups
-    .flatMap(group => group.items)
-    .filter(item => featureScreens[item.title])
-    .map(item => ({ title: item.title, description: '', imageSrc: screens[featureScreens[item.title]].src }));
+/** Feature cards per group; a feature with a screenshot shows it in the same card as its text. */
+export function productFeatureGroups(content: ProductEditionContent): { label: string; items: StructuredMediaCardItem[] }[] {
+  return content.featureGroups.map(group => ({
+    label: group.label,
+    items: group.items.map(item => ({
+      title: item.title,
+      description: item.text,
+      imageSrc: featureScreens[item.title] ? screens[featureScreens[item.title]].src : null
+    }))
+  }));
 }
 
 /** Feature cards (label, text, screenshot) of an Allplan 2027 news page. */

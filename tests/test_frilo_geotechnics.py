@@ -71,7 +71,7 @@ class GeotechnicsContentTests(unittest.TestCase):
         source = PAGE.read_text(encoding="utf-8")
         self.assertIn("frilo-geotechnics-2027", source)
         self.assertIn('id="frilo-geotechnics"', source)
-        self.assertIn('href="#frilo-geotechnics"', source)
+        self.assertIn("href:'#frilo-geotechnics'", source)
         self.assertIn("EditionCards", source)
         self.assertIn("edition.newsTitle", source)
         self.assertNotIn("Dahil olduğu sürümler", source)

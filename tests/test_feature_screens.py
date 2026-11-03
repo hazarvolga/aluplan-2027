@@ -86,10 +86,12 @@ class ScreenAssetTests(unittest.TestCase):
 
 
 class ScreenComponentTests(unittest.TestCase):
-    def test_edition_view_has_a_screenshot_gallery_and_news_pages_use_the_media_grid(self):
+    def test_feature_text_and_screenshot_share_one_card_and_news_pages_use_the_media_grid(self):
         view = (ROOT / "src/components/sections/ProductEditionView.tsx").read_text(encoding="utf-8")
         self.assertIn("MediaGridWithViewer", view)
-        self.assertIn("Ekran görüntüleri", view)
+        self.assertIn("productFeatureGroups", view)
+        self.assertNotIn("Ekran görüntüleri", view)
+        self.assertNotIn("productScreenItems", view)
         news = (ROOT / "src/components/sections/AllplanEditionNewsView.tsx").read_text(encoding="utf-8")
         self.assertIn("MediaGridWithViewer", news)
         self.assertNotIn("EditionCards", news)
@@ -103,11 +105,16 @@ class ScreenRenderTests(unittest.TestCase):
         for slug in ("rebar", "parametric"):
             html = (BUILT / f"products/allplan-{slug}.html").read_text(encoding="utf-8")
             titles = {item["title"] for group in page_content(slug)["featureGroups"] for item in group["items"]}
-            expected = {data["screens"][sid]["src"] for title, sid in data["featureScreens"].items() if title in titles}
+            expected = {title: data["screens"][sid]["src"] for title, sid in data["featureScreens"].items() if title in titles}
             self.assertGreaterEqual(len(expected), 8)
-            for src in expected:
-                with self.subTest(page=slug, src=src):
-                    self.assertIn(src, html)
+            self.assertNotIn("Ekran görüntüleri", html)
+            cards = html.split("<article")
+            features = {item["title"]: item["text"] for group in page_content(slug)["featureGroups"] for item in group["items"]}
+            for title, src in expected.items():
+                card = next(c for c in cards if f'alu-media-card__title">{title.replace("&", "&amp;").replace(chr(39), "&#x27;")}<' in c)
+                with self.subTest(page=slug, feature=title):
+                    self.assertIn(src, card)
+                    self.assertIn(features[title].replace("&", "&amp;").replace("'", "&#x27;"), card)
         editions = node_exports("src/data/allplan-2027-editions.ts", ["editions"])["editions"]
         for edition in editions:
             html = (BUILT / f"2027/allplan-{edition['slug']}.html").read_text(encoding="utf-8")

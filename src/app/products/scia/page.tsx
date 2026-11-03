@@ -3,10 +3,9 @@ import { notFound } from 'next/navigation';
 import { ProjectCarousel } from '@/components/sections/ProjectCarousel';
 import { CapabilityAccordion } from '@/components/sections/CapabilityAccordion';
 import { ProductHero } from '@/components/sections/ProductHero';
-import { EditionCards } from '@/components/sections/EditionCards';
 import { PreviewClosingSection } from '@/components/sections/PreviewClosingSection';
 import { MAIN_QUOTE_FORM_URL } from '@/lib/site-data';
-import styles from '@/components/sections/ProductPage.module.css';
+import { ProductContentSection, ProductEditionsBand, ProductFaq, ProductTabNav } from '@/components/sections/ProductPageParts';
 import { isReleaseContentEnabled } from '@/lib/release-flags';
 import { buildRelease2027JsonLd, buildRelease2027Metadata } from '@/lib/release-2027-routes';
 import { serializeJsonLd } from '@/lib/schema';
@@ -34,11 +33,11 @@ const faq = [
 function SciaPage(){
  if(!isReleaseContentEnabled()) notFound();
  return <div><div id="scia-top"><ProductHero eyebrow="SCIA" title="Yapı analizi ve tasarım" description="SCIA, bina, altyapı ve karmaşık taşıyıcı sistemler üzerinde çalışan mühendisler için yapı analizi ve tasarım araçları sunar." image="/assets/previews/frilo/frilo-hero.jpg" actions={[{label:'Teklif isteyin ↗',href:MAIN_QUOTE_FORM_URL,variant:'primary'}]} /></div>
- <div className={styles.editionsSection}><div className="alu-container"><EditionCards title="SCIA sürümleri" editions={editions}/></div></div>
- <div className={styles.navigationSection}><nav className={`alu-container ${styles.tabList}`} aria-label="SCIA sayfa bölümleri"><a href="#scia-top">SCIA</a><a href="#scia-capabilities">Yetenekler</a><a href="#scia-stories">Başarı hikâyeleri</a><a href="#scia-faq">Sık sorulan sorular</a></nav></div>
- <div className="alu-container alu-stack"><section id="scia-capabilities" className={styles.contentSection}><p className={styles.kicker}>SCIA · YETENEKLER</p><h2>Öne çıkan yetenekler</h2><CapabilityAccordion items={capabilities.map(([title, description], index) => ({ title, description, image: `/assets/previews/scia/capability-${index + 1}.jpg`, alt: `SCIA arayüzü: ${title}` }))} /></section>
+ <ProductEditionsBand title="SCIA sürümleri" editions={editions}/>
+ <ProductTabNav label="SCIA sayfa bölümleri" links={[{href:'#scia-top',label:'SCIA'},{href:'#scia-capabilities',label:'Yetenekler'},{href:'#scia-stories',label:'Başarı hikâyeleri'},{href:'#scia-faq',label:'Sık sorulan sorular'}]} />
+ <div className="alu-container alu-stack"><ProductContentSection id="scia-capabilities" kicker="SCIA · YETENEKLER" title="Öne çıkan yetenekler"><CapabilityAccordion items={capabilities.map(([title, description], index) => ({ title, description, image: `/assets/previews/scia/capability-${index + 1}.jpg`, alt: `SCIA arayüzü: ${title}` }))} /></ProductContentSection>
  </div><ProjectCarousel id="scia-stories" eyebrow="SCIA · PROJELER" title="Müşteri projeleri" projects={[['Sky Park Residence','Bratislava, Slovakya','sky-park-residence'],['Demiryolu sahası üzerindeki yaya köprüsü','Çekya','pedestrian-bridge-over-railway-yard'],['Albert Square cam kubbesi','Belçika','showcase-project-glass-dome-albert-square-knokke'],['Palais Garnier','Fransa','palais-garnier-where-culture-and-technology-meet'],['Teleferik kafes kulesi','Avusturya','ropeway-lattice-tower'],['Çok amaçlı spor salonu','Çekya','multi-functional-sports-hall']].map(([title, location, slug], index) => ({title, location, href: `https://www.scia.net/en/user-stories/${slug}`, image: `/assets/previews/scia/story-${index + 1}.jpg`, alt: `${title} projesi`}))} />
- <div className="alu-container alu-stack"> <section id="scia-faq" className={`${styles.contentSection} ${styles.faq}`}><p className={styles.kicker}>SCIA · SSS</p><h2>Sık sorulan sorular</h2>{faq.map(([q,a])=><details key={q}><summary>{q}</summary><p>{a}</p></details>)}</section></div>
+ <div className="alu-container alu-stack"> <ProductFaq id="scia-faq" kicker="SCIA · SSS" items={faq} /></div>
  <PreviewClosingSection id="scia-closing" title="SCIA hakkında görüşelim" items={[{title:'Uzmanla görüşün',paragraphs:['Projelerinize ve ekibinize uygun SCIA sürümü hakkında bilgi alın.'],action:{label:'Teklif isteyin',href:MAIN_QUOTE_FORM_URL}},{title:'SCIA’yı deneyin',paragraphs:['SCIA’yı 30 gün ücretsiz deneyin. Deneme, değerlendirme ve ticari olmayan kullanım içindir; iptal gerektirmez.'],action:{label:'Ücretsiz deneme',href:'https://www.scia.net/en/forms/scia-engineer-trial-request'}}]} />
  </div>;
 }

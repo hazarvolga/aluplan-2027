@@ -32,11 +32,25 @@ Plan: `docs/superpowers/plans/2026-11-03-prelaunch-hardening.md`. Dal: `codex/pr
 - **Onayı geri çekme:** Çerez bandı yalnız bir kez gösteriliyor; ayarı sonradan değiştirecek bir arayüz yok. KVKK açısından bir "Çerez tercihleri" bağlantısı eklenmesi önerilir.
 - **Görsel hakları:** Yeni OG görseli (VF-00) ve Max video posteri AI ile üretilmiş görseller; lisans kaydı onay bekliyor.
 
+## Bağımsız kod incelemesi ve düzeltmeler
+
+Dalın tamamı ayrı bir inceleyici tarafından incelendi: Critical bulgu çıkmadı, sonuç "Ready to merge: With fixes".
+
+**Düzeltilen bulgular:**
+- **Max klipleri (Important):** Mobilde ve hareket azaltma açıkken klipler boş kutu olarak görünüyordu. Artık görünür olan klip ilk kareyi gösteriyor (`preload="metadata"` + `#t=0.1`). Bu nedenle mobilde görünür kliplerin meta verisi ve ilk karesi indiriliyor; kayıttaki "MP4 indirmesi 0" artık "yalnız ilk kare" anlamına geliyor.
+- **Kapak butonu (Minor'den Important'a yükseltildi):** Buton adı artık gömmenin başlığını içeriyor ("{başlık}: Videoyu oynat"). Tıklama sonrası klavye odağı iframe'e geçiyor.
+- **Satır içi kapak (Minor'den Important'a yükseltildi):** Video tek tıklamada başlıyor (`autoplay=1`).
+
+**Ertelenen bulgular:**
+- **YouTube küçük resimleri:** 275 adet `img.youtube.com` küçük resmi (oynatma listeleri, medya ızgaraları) onaydan bağımsız yükleniyor. Bu durum önceden de vardı. KVKK tutarlılığı için yerel küçük resimlere geçilmesi ya da bunların da onaya bağlanması ayrıca karar gerektiriyor.
+- **Türev kontrolü:** `build_web_derivatives.py --check`, kaynak görsel değişip en-boy oranı aynı kalırsa eski türevi yakalamıyor. Kaynak dosyaların SHA-256 değerlerini tutan bir manifest eklenebilir.
+- **İletişim haritası:** Haritanın yüksekliği kapakta ve yüklenmiş haritada farklı; onaydan sonra küçük bir yerleşim kayması oluyor.
+
 ## Komutlar ve sonuçlar
 
 | Komut | Sonuç |
 |---|---|
-| `pnpm test` | 268 unit test, 36/36 parite, 45/45 token testi geçti |
+| `pnpm test` | 272 unit test, 36/36 parite, 45/45 token testi geçti |
 | `pnpm typecheck` | Hatasız |
 | `ALUPLAN_SHOW_2027=1 ALUPLAN_BLOCK_INDEXING=0 pnpm build` ve `=1` | İkisi de geçti |
 | `pnpm audit --prod` | Bilinen güvenlik açığı yok |

@@ -13,9 +13,12 @@ PAGE = ROOT / "src/components/sections/AllplanMaxPreviewPage.tsx"
 class MaxMediaLoadingTests(unittest.TestCase):
     def test_clip_defers_source_until_visible(self):
         source = CLIP.read_text(encoding="utf-8")
-        self.assertIn('preload="none"', source)
         self.assertIn("IntersectionObserver", source)
-        self.assertIn("src={visible ? src : undefined}", source)
+        self.assertIn("src={visible ? `${src}#t=0.1` : undefined}", source)
+
+    def test_clip_shows_first_frame_when_it_cannot_autoplay(self):
+        source = CLIP.read_text(encoding="utf-8")
+        self.assertIn("preload={visible && !canAutoplay ? 'metadata' : 'none'}", source)
         self.assertNotIn("<source", source)
 
     def test_clip_autoplays_only_on_wide_screens_without_reduced_motion(self):

@@ -49,8 +49,8 @@ export function AllplanMaxFeatureClip({ src, title }: { src: string; title: stri
     loop
     playsInline
     controls
-    preload="none"
-    src={visible ? src : undefined}
+    preload={visible && !canAutoplay ? 'metadata' : 'none'}
+    src={visible ? `${src}#t=0.1` : undefined}
     aria-label={`${title} görsel tanıtımı`}
   />;
 }

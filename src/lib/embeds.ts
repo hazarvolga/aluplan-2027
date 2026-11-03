@@ -10,3 +10,9 @@ export function normalizeEmbedSrc(src: string): string {
 export function embedKind(src: string): EmbedKind {
   return /google\.[a-z.]+\/maps/.test(src) ? 'map' : 'video';
 }
+
+export function withAutoplay(src: string): string {
+  const normalized = normalizeEmbedSrc(src);
+  if (embedKind(normalized) !== 'video' || /[?&]autoplay=/.test(normalized)) return normalized;
+  return `${normalized}${normalized.includes('?') ? '&' : '?'}autoplay=1`;
+}

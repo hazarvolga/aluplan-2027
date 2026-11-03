@@ -1,5 +1,19 @@
 # Oturum devri
 
+## 03.11.2026 — Kalan işlerin güncel listesi ve ertelenen karşılaştırma (commitlendi)
+
+- **Ertelenen karşılaştırma (kullanıcı kararı):** `/products/allplan-max`, `/products/scia` ve `/products/frilo` sayfaları da `/2027/civil` gibi canlı sayfalardan (envanter) üretilmiş olabilir; pazarlama klasöründeki Web Pages belgeleriyle (Max: `Allplan Max Web Page.docx`; SCIA: `New Text and Images – SCIA Pages.docx`; FRILO: `New Text and Images – FRILO - Edition Pages Copy.docx` ve Excel metinleri) satır satır karşılaştırılıp eksik içerik çıkarılabilir. Bu sayfalar canlıya onaylanarak çıktığı için şimdilik sorun yok; gerekirse yapılacak. (Civil'de bu karşılaştırma yapıldı ve eksik çıktı; sayfa sonra yalnızca yeniliklere indirildi.)
+- **Henüz yapılmayanlar (bu oturumdan):**
+  - `/products/allplan` ürün sayfasına "Allplan 2027" ana metni (`allplan.home.whats-new`: "Allplan 2027, mühendislik ekiplerine daha fazla kontrol veriyor…") hiçbir yere konmadı; sayfa 2026 anlatımıyla duruyor (envanterdeki açık soru: korunsun mu, 2027 hero ile mi değişsin).
+  - Pazarlama klasöründeki `Messaging`, `Sales Enablement Assets` (31/25/8/14/36/25 dosya), `Videos` (63/6/29/3/32/31) ve `Screenshots` (139/26/45/105/92/17) klasörleri ve üç `Launch 2027 - Intro text edition pages shop EN.xlsx` dosyası okunmadı/işlenmedi.
+  - Rebar ve Parametric sayfalarında özellik görseli yok (hero'da mevcut görseller); Allplan 2027 yenilik sayfalarında da aynı. Ekran görüntüleri `Screenshots` klasöründe.
+  - Civil "Home Page Slides" belgesindeki görsel (Lammschlucht Köprüsü) ve altyazısı kullanılmadı; `/2027/features` Civil kartları canlıdan indirilmiş yinelenen görselleri kullanıyor.
+  - SDS2 ana banner görseli: kullanıcı üretip verecek (şimdilik üretilmiş hero ailesi görseli).
+  - Üretici görsellerinin izin kaydı hep "Pending" (`docs/brand/assets-license-log.md`); yayından önce Allplan teyidi gerekir.
+  - Yeni sayfaların Türkçe metni projenin envanter taslağıdır; kullanıcı onayı sürüyor (özellikle yeni sayfa adresleri `/products/allplan-rebar`, `/products/allplan-parametric`, `/2027/allplan-*`).
+  - Sürüm bayrağı kapalıyken (üretim derlemesi) bantların, menü öğelerinin ve 404'lerin davranışı test ve kodla doğrulandı ama bayrağı kapatarak ayrı bir üretim derlemesiyle denenmedi.
+- **Mevcut açık maddeler değişmedi:** yukarıdaki "Açık maddeler" bölümü (kayıtsız 4 webinar, tarih teyitleri, geçici Kaynaklar kart metinleri, B3 BIMFlex videosunu sahibine açtırma, C1, B5, `youtube*` jetonları, E1–E3, yayın adımları). C1 için not: kullanıcı sayısal iddiaların (5×, %20–50, %50) doğru olduğunu ve kullanılabileceğini söyledi; kalan C1 maddeleri üreticiden bilgi bekliyor.
+
 ## 03.11.2026 — `/2027/civil` yalnızca yenilikleri gösteriyor (commitlendi)
 
 - **Karar (kullanıcı):** `/2027/civil` sayfasında yalnızca Civil 2027 yenilikleri olur; Civil'in tam ürün anlatımı (nedir, zorluklar, metrikler, avantajlar, özellikler, bulut hizmetleri, seçenekler, SSS, uzman videoları, müşteri projeleri) `/products/civil` (2026 sayfası) üzerinde kalır.

@@ -3,7 +3,7 @@ import type { ProductEditionContent } from './product-edition-content';
 // Turkish text of the "ALLPLAN Rebar - Edition Web Page" launch document, taken from the content inventory drafts in scripts/inventory_units/.
 // tests/test_rebar_parametric_pages.py keeps this file identical to those drafts.
 export const content: ProductEditionContent = {
-  "path": "/2027/rebar",
+  "path": "/products/allplan-rebar",
   "name": "Allplan Rebar",
   "tagline": "Donatı detaylandırma için BIM yazılımı",
   "lead": "Allplan Rebar, donatı tasarımını, detaylandırmayı, dokümantasyonu, metrajı ve proje koordinasyonunu tek bir odaklı BIM çözümünde bir araya getirir. Çubuk, hasır ve BAMTEC donatısı oluşturun; yapay zekâ destekli ve otomatik detaylandırma iş akışlarını kullanın; koordineli donatı çizimleri ve bilgileri teslim edin.",

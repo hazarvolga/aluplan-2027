@@ -205,3 +205,7 @@ Kullanıcı, yayın öncesi kalan maddeler listesinde aşağıdaki kararları ve
 - **Slogan:** Aluplan'ın kendi sloganları yerine Allplan'ın 2027 lansman sloganları kullanılır. Kaynak: `Allplan 2027 Marketing Materials/*/Web Pages` ve `Messaging` (Git dışı). Marka kılavuzundaki üç slogan adayı kullanılmaz.
 
 - **Rebar ve Parametric:** Pazarlama klasöründeki edition web page belgelerine göre iki yeni sayfa eklenir (`/2027/rebar`, `/2027/parametric`); sıra: Rebar ve Parametric, sonra Bimplus, SDS2, FRILO Geotechnics, Allplan edition sayfaları, ana sayfa slaytları.
+
+- **Rebar ve Parametric adresleri:** `/products/allplan-rebar` ve `/products/allplan-parametric` (diğer sürüm sayfalarıyla tutarlı olsun diye `/2027/` altından taşındı).
+- **Sayısal iddialar:** Üretici belgelerindeki sayısal iddialar (ör. "5× faster", "20–50%", "up to 50% faster") doğrudur ve kullanılabilir.
+- **SDS2 ana banner görseli:** Kullanıcı uygun görseli üretip verecek; o zamana kadar mevcut üretilmiş hero ailesi görseli yer tutucu olarak kalır.

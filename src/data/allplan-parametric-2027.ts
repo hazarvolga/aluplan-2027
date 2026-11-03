@@ -3,7 +3,7 @@ import type { ProductEditionContent } from './product-edition-content';
 // Turkish text of the "ALLPLAN Parametric – Edition Web Page" launch document, taken from the content inventory drafts in scripts/inventory_units/.
 // tests/test_rebar_parametric_pages.py keeps this file identical to those drafts.
 export const content: ProductEditionContent = {
-  "path": "/2027/parametric",
+  "path": "/products/allplan-parametric",
   "name": "Allplan Parametric",
   "tagline": "Parametrik altyapı yapıları için BIM yazılımı",
   "lead": "Allplan Parametric, altyapı yapılarının dört boyutlu parametrik modellenmesi ve detaylandırılması için özel işlevler sunar. Köprüleri, tünelleri, istinat duvarlarını, gürültü bariyerlerini ve ön üretimli kiriş köprülerini modelleyin; ardından parametrik modellemeyi ön gerilme, donatı, dokümantasyon, metraj ve koordineli bilgi yönetimiyle birleştirin.",

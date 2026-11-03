@@ -9,10 +9,10 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-BUILT = ROOT / ".next/server/app/2027"
+BUILT = ROOT / ".next/server/app/products"
 PAGES = {
-    "rebar": {"name": "Allplan Rebar", "tags": 5, "overview": 4, "benefits": 4, "groups": 6, "items": 30},
-    "parametric": {"name": "Allplan Parametric", "tags": 5, "overview": 3, "benefits": 4, "groups": 6, "items": 30},
+    "rebar": {"route": "/products/allplan-rebar", "name": "Allplan Rebar", "tags": 5, "overview": 4, "benefits": 4, "groups": 6, "items": 30},
+    "parametric": {"route": "/products/allplan-parametric", "name": "Allplan Parametric", "tags": 5, "overview": 3, "benefits": 4, "groups": 6, "items": 30},
 }
 
 
@@ -82,18 +82,27 @@ class EditionContentTests(unittest.TestCase):
 
     def test_pages_state_the_quote_goal(self):
         for slug in PAGES:
-            source = (ROOT / f"src/app/2027/{slug}/page.tsx").read_text(encoding="utf-8")
+            route = PAGES[slug]["route"]
+            source = (ROOT / f"src/app{route}/page.tsx").read_text(encoding="utf-8")
             with self.subTest(page=slug):
                 self.assertIn("MAIN_QUOTE_FORM_URL", source)
-                self.assertIn(f"buildRelease2027Metadata('/2027/{slug}')", source)
-                self.assertIn(f"serializeJsonLd(buildRelease2027JsonLd('/2027/{slug}'))", source)
+                self.assertIn(f"buildRelease2027Metadata('{route}')", source)
+                self.assertIn(f"serializeJsonLd(buildRelease2027JsonLd('{route}'))", source)
                 self.assertIn("isReleaseContentEnabled()", source)
+
+
+class RouteTests(unittest.TestCase):
+    def test_pages_live_under_products_like_the_other_edition_pages_and_data_paths_match(self):
+        for slug, expected in PAGES.items():
+            with self.subTest(page=slug):
+                self.assertEqual(content(slug)["path"], expected["route"])
+                self.assertFalse((ROOT / "src/app/2027" / slug).exists())
 
 
 class RenderedPageTests(unittest.TestCase):
     def test_built_pages_show_every_feature_title(self):
         for slug in PAGES:
-            built = BUILT / f"{slug}.html"
+            built = BUILT / f"allplan-{slug}.html"
             if not built.is_file():
                 self.skipTest("build output missing")
             html = built.read_text(encoding="utf-8")

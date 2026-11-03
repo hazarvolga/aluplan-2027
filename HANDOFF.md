@@ -1,5 +1,12 @@
 # Oturum devri
 
+## 03.11.2026 — Rebar/Parametric adres kararı, sayısal iddialar ve SDS2 görseli (commitlendi)
+
+- **Taşındı:** `/2027/rebar` → `/products/allplan-rebar`, `/2027/parametric` → `/products/allplan-parametric` (diğer sürüm sayfalarıyla tutarlı, envanter taslağının önerdiği adresler). Bu iki adres hiç yayımlanmadığı (dal push edilmedi) için eski adreslere yönlendirme eklenmedi; `/2027/rebar` ve `/2027/parametric` artık 404 verir. Sürüm bayrağı kapalıyken iki sayfa 404 verir ve sitemap'ten çıkar (yeni test).
+- **Kullanıcı kararı — sayısal iddialar:** "5 kata kadar daha hızlı", "%20–50", "%50'ye kadar daha hızlı" gibi üretici iddiaları doğru kabul edildi, olduğu gibi kullanılır (envanterdeki "yayın izni" açık soruları kapandı).
+- **Kullanıcı kararı — SDS2 ana banner görseli:** Kullanıcı uygun görseli üretecek ve verecek. O zamana kadar SDS2 ana sayfa kartı mevcut üretilmiş hero ailesi görselini (`vf-03-construction-fabrication.jpg`) kullanır; yeni görsel gelince `HomepageProductPreviewTabs.tsx` içindeki `images.SDS2` değiştirilir. Kaynak belgedeki `Keyvisual2027_RelatedContent_SDS2.jpg` kullanılmaz (proje adı ve firma bilgisi maskeli).
+- Kapılar: 379 test, 46/46 parite, 45/45 token, typecheck, build; yeni adresler tarayıcıda 200, sitemap'te var.
+
 ## 03.11.2026 — SDS2 kapsamı netleşti; Rebar/Parametric metinleri envanter taslağına bağlandı (commitlendi)
 
 - **SDS2:** Yeni sayfa gerekmedi. `SDS2 … Web Pages` klasöründeki iki belge zaten karşılandı: "New Text and Images – SDS2 Page" (3 yenilik: AI BIM Analyst, Model Synced Erection Drawings, Advanced Connection Group Reporting) `/products/sds2-home` sayfasında yayında (`src/data/sds2-2027-features.ts`, görseller mevcut); "2027 Home Page Information" ana sayfa SDS2 kartına işlendi (`src/data/homepage-2027-preview.json`: "SDS2 2027, ekibinize her iş akışında üretkenliği artıran, zaman kazandıran ve elle yapılan işi azaltan güçlü araçlar verir."). Önceki "SDS2 2027 sayfası yok" tespiti hatalıydı; düzeltildi.

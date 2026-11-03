@@ -45,10 +45,20 @@ const siteData = evaluateCommonJs(
   },
 );
 
+const presentation = evaluateCommonJs(transpile('src/components/sections/subpage-hero-presentation.ts'), () => {
+  throw new Error('presentation must not import');
+});
+const shareImage = evaluateCommonJs(transpile('src/lib/share-image.ts'), (request) => {
+  if (request === './site-data') return siteData;
+  if (request === '../components/sections/subpage-hero-presentation') return presentation;
+  throw new Error(`Unsupported share-image import: ${request}`);
+});
+
 const schema = evaluateCommonJs(
   transpile('src/lib/schema.ts'),
   (request) => {
     if (request === './site-data') return siteData;
+    if (request === './share-image') return shareImage;
     throw new Error(`Unsupported schema import: ${request}`);
   },
 );

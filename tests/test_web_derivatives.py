@@ -65,7 +65,7 @@ class WebDerivativeTests(unittest.TestCase):
         self.assertLess(path.stat().st_size, MAX_OG_BYTES)
 
     def test_metadata_uses_jpeg_share_image(self):
-        for source in ("src/lib/metadata.ts", "src/lib/release-2027-routes.ts"):
+        for source in ("src/lib/share-image.ts", "src/lib/release-2027-routes.ts"):
             text = (ROOT / source).read_text(encoding="utf-8")
             with self.subTest(source=source):
                 self.assertIn("/opengraph-image.jpg", text)

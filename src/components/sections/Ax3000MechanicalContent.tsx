@@ -103,9 +103,8 @@ export function Ax3000MechanicalContent({ page }: { page: PageRecord }) {
         </div>
       </section>
 
-      <section className={styles.band} aria-labelledby="mech-modules">
+      <section className={styles.band} aria-label="Modüller">
         <div className="alu-container">
-          <h2 id="mech-modules" className={styles.title}>Modüller</h2>
           <div className={`${styles.tiles} ${styles.moduleTiles}`}>
             {layout.modules.map((module) => (
               <div key={module.heading} className={`${styles.tile} ${styles.module}`}>

@@ -30,7 +30,7 @@ export interface RecordedWebinarsContent {
 }
 
 // Content of the former /solutions-v2/training/webinar page (2026 source), kept here after that page was removed.
-// Recording links and the two entries without a poster come from the Allplan Turkey YouTube channel (@AllplanTurkey); the two Bim1Sohbet entries (@bim1sohbet65) are broadcasts with Ahmet Melih Dinekli.
+// Recording links and the two entries without a poster come from the Allplan Turkey YouTube channel (@AllplanTurkey); the two Bim1Sohbet entries (@bim1sohbet65) are broadcasts with Ahmet Melih Dinekli. The Bridge Conference 2026 and SCIA Engineer videos are not webinars; they sit in the archive at the owner's request.
 export const recordedWebinars: RecordedWebinarsContent = {
   "kicker": "BİLGİ PAYLAŞIMI",
   "title": "Webinarlar",
@@ -87,6 +87,20 @@ export const recordedWebinars: RecordedWebinarsContent = {
   "archiveTitle": "Kaydedilmiş Webinarlar",
   "archiveLead": "Kaçırdığınız veya tekrar izlemek istediğiniz webinarlarımıza buradan ulaşabilirsiniz.",
   "webinars": [
+    {
+      "title": "Bridge Conference 2026: ALLPLAN ile Uçtan Uca Köprü ve Tünel Tasarımı",
+      "date": "Temmuz 2026",
+      "description": "Dengeli konsol, çelik kompozit, prekast kirişli, MSS köprüler ve tüneller. Yüksel Proje sunumu.",
+      "image": "",
+      "youtubeId": "uXg-6lUJ494"
+    },
+    {
+      "title": "SCIA Engineer ile Uçtan Uca Süreç",
+      "date": "Nisan 2026",
+      "description": "Allplan 2026'nın geliştirilmiş çakışma kontrolü ile SCIA Engineer arasında daha doğru ve temiz bir model akışının nasıl sağlandığını gösteren video.",
+      "image": "",
+      "youtubeId": "So86QONybGA"
+    },
     {
       "title": "Allplan Akıllı BIM Eklentisi ile İmar Yönetmeliği Uygulaması",
       "date": "20 Ağustos 2022",

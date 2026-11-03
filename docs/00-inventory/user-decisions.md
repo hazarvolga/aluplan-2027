@@ -188,3 +188,10 @@ Kullanıcı, yayın öncesi kalan maddeler listesinde aşağıdaki kararları ve
 - **Webinar kayıtları:** Kayıtlar Allplan Türkiye YouTube kanalından bağlandı; kanalda olup kartlarda bulunmayan webinarlar (Allplan Bridge 2022 Webinar, BIMX5 Kurum Rapor Eklentisi) eklendi. `/solutions-v2/training/classroom` sayfası kaldırıldı ve `/kaynaklar`'a yönlenir.
 - **Bim1Sohbet kayıtları:** `@bim1sohbet65` kanalındaki Melih Dinekli yayınları webinar arşivine eklendi; "BIMX5 Nedir" kaydı Bimfili kartıyla eşleştirildi (kullanıcı teyidi).
 - **Eğitim alt sayfaları:** events, individual, e-learning ve quick-start sayfaları tamamen kaldırıldı; adresleri `/kaynaklar`'a yönlenir (kullanıcı kararı). Teknik borç temizliği için en hızlı kazanç sırası bana bırakıldı.
+
+## 03.11.2026 — Webinar arşivi, LGN ve AX3000 kararları
+
+- SCIA Engineer (So86QONybGA) ve Bridge Conference 2026 (uXg-6lUJ494) videoları webinar olmasa da Kaydedilmiş Webinarlar arşivine eklenir.
+- LGN Proje Akademi logosuz kalır.
+- AX3000 Mekanik Tesisat: "Modüller" başlığı gösterilmez, yalnız kartlar kalır.
+- C1 ve B3 maddeleri bekler; B5 kullanıcıyla birlikte gözden geçirilecek.

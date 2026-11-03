@@ -21,6 +21,9 @@ CHANNEL_ADDITIONS = {
     "ALLPLAN ile Her Yerde ve Her Zaman Çalışma": "FUwkV_UcDso",
     "Allplan Bridge 2022 Webinar": "tTQ1fL-9P9M",
     "BIMX5 Kurum Rapor Eklentisi": "3L-AuAXlqz0",
+    # Not webinars (a customer conference talk and a product demo); added to the archive at the owner's request.
+    "Bridge Conference 2026: ALLPLAN ile Uçtan Uca Köprü ve Tünel Tasarımı": "uXg-6lUJ494",
+    "SCIA Engineer ile Uçtan Uca Süreç": "So86QONybGA",
 }
 BIM1SOHBET = "Bim1Sohbet"
 WEBINAR_COUNT = SOURCE_WEBINAR_COUNT + len(CHANNEL_ADDITIONS)
@@ -133,6 +136,8 @@ class RecordedWebinarsSourceTests(unittest.TestCase):
         for title in CHANNEL_ADDITIONS:
             self.assertEqual(entries[title]["image"], "")
         self.assertEqual(entries["Allplan Bridge 2022 Webinar"]["date"], "19 Nisan 2022")
+        self.assertEqual(entries["SCIA Engineer ile Uçtan Uca Süreç"]["date"], "Nisan 2026")
+        self.assertEqual(entries["Bridge Conference 2026: ALLPLAN ile Uçtan Uca Köprü ve Tünel Tasarımı"]["date"], "Temmuz 2026")
         self.assertEqual(entries["BIMX5 Kurum Rapor Eklentisi"]["date"], "9 Temmuz 2021")
         self.assertEqual(entries["Allplan Akıllı BIM Eklentisi ile İmar Yönetmeliği Uygulaması"]["date"], "20 Ağustos 2022")
         self.assertEqual(entries["ALLPLAN ile Her Yerde ve Her Zaman Çalışma"]["date"], "17 Ağustos 2022")

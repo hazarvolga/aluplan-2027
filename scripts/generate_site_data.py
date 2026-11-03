@@ -743,16 +743,12 @@ def build_breadcrumbs(route_path: str, page_h1: str) -> list:
         return crumbs
     if route_path.startswith("/solutions-v2/training/video-library/"):
         crumbs.extend([
-            {"label": "Eğitim", "href": "/solutions-v2/training"},
             {"label": "Video Kütüphanesi", "href": "/solutions-v2/training/video-library"},
             {"label": page_h1, "href": route_path},
         ])
         return crumbs
     if route_path.startswith("/solutions-v2/training/"):
-        crumbs.extend([
-            {"label": "Eğitim", "href": "/solutions-v2/training"},
-            {"label": page_h1, "href": route_path},
-        ])
+        crumbs.append({"label": page_h1, "href": route_path})
         return crumbs
     if route_path.startswith("/solutions-v2/connect-license/"):
         crumbs.extend([
@@ -1163,6 +1159,10 @@ def rename_routes(value):
 
 pages_data = rename_routes(pages_data)
 
+# Pages the 2027 site no longer publishes; their URLs redirect (see next.config.mjs).
+REMOVED_ROUTES = ("/solutions-v2/training", "/solutions-v2/training/webinar")
+pages_data = {path: page for path, page in pages_data.items() if path not in REMOVED_ROUTES}
+
 data_dir = ROOT / "src/data"
 data_dir.mkdir(parents=True, exist_ok=True)
 
@@ -1413,30 +1413,41 @@ ADDED_SERVICES = [
         "cta": "İzle",
     },
     {
+        "title": "Kaydedilmiş Webinarlar",
+        "description": "Kaçırdığınız veya tekrar izlemek istediğiniz webinarlarımıza buradan ulaşabilirsiniz.",
+        "status": "active",
+        "href": "/kaydedilmis-webinarlar",
+        "cta": "İncele",
+    },
+    {
         "title": "Eğitim Merkezleri",
         "description": "Eğitim merkezlerimiz ve eğitim olanakları hakkında bilgi alın.",
         "status": "active",
-        "href": "/solutions-v2/training",
+        "href": "/egitim-merkezlerimiz",
         "cta": "İncele",
     },
 ]
-homepage_data["services"] = [*homepage_data.get("services", []), *ADDED_SERVICES]
+REMOVED_SERVICES = ("Eğitim",)
+homepage_data["services"] = [
+    *(service for service in homepage_data.get("services", []) if service["title"] not in REMOVED_SERVICES),
+    *ADDED_SERVICES,
+]
 
 SERVICE_ICONS = {
-    "Eğitim": "graduation-cap", "Teknik Destek": "life-buoy", "Destek Platformu": "life-buoy",
+    "Teknik Destek": "life-buoy", "Destek Platformu": "life-buoy",
     "Danışmanlık": "users", "Sertifika": "award", "Download": "download", "Connect: Giriş": "key",
     "Admin Lisans : Lisans Yöneticisi Bilgi Formu": "shield", "CodeMeter WebDepot": "key",
     "Deklarasyon Formu": "file-text", "ALLPLAN FAQ": "circle-help", "Blog Global": "globe",
     "Canlı Webinarlar": "video", "BIM Rehberi": "book-open", "OPENBIM": "boxes",
     "Sistem Gereksinimleri": "cpu", "Tüm Gereksinimler": "layers", "Sürüm Notları": "sparkles",
     "IFC Export El Kitabı": "file-text", "Partner": "users",
-    "Video Kütüphanesi": "circle-play", "Eğitim Merkezleri": "map-pin",
+    "Video Kütüphanesi": "circle-play", "Kaydedilmiş Webinarlar": "video", "Eğitim Merkezleri": "map-pin",
 }
 for service in homepage_data.get("services", []):
     service["icon"] = SERVICE_ICONS.get(service["title"], "layers")
 
 homepage_data["serviceGroups"] = [
-    {"title": "Öğren ve yardım al", "serviceTitles": ["Eğitim", "Video Kütüphanesi", "Eğitim Merkezleri", "Teknik Destek", "Destek Platformu", "Danışmanlık", "Sertifika"]},
+    {"title": "Öğren ve yardım al", "serviceTitles": ["Video Kütüphanesi", "Kaydedilmiş Webinarlar", "Eğitim Merkezleri", "Teknik Destek", "Destek Platformu", "Danışmanlık", "Sertifika"]},
     {"title": "Yazılım ve lisans işlemleri", "serviceTitles": ["Download", "Connect: Giriş", "Admin Lisans : Lisans Yöneticisi Bilgi Formu", "CodeMeter WebDepot", "Deklarasyon Formu"]},
     {"title": "Bilgi ve güncellemeler", "serviceTitles": ["ALLPLAN FAQ", "Blog Global", "Canlı Webinarlar", "BIM Rehberi", "OPENBIM", "Sistem Gereksinimleri", "Tüm Gereksinimler", "Sürüm Notları", "IFC Export El Kitabı"]},
     {"title": "Partner erişimi", "serviceTitles": ["Partner"]},
@@ -1446,6 +1457,11 @@ with open(data_dir / "homepage.json", "w", encoding="utf-8") as f:
     json.dump(rename_routes(homepage_data), f, ensure_ascii=False, indent=2)
 
 video_library_data = {
+    "hero": {
+        "kicker": "GÖRSEL EĞİTİM",
+        "title": "Video Kütüphanesi",
+        "lead": "İhtiyacınız olan bilgiye görsel olarak ulaşın.",
+    },
     "kicker": "GÖRSEL EĞİTİM · VİDEO KÜTÜPHANESİ",
     "title": "Önerilen Oynatma Listeleri ve Kanallar",
     "description": "Sizin için derlediğimiz en popüler ve faydalı video kaynak liste ve kanalları.",

@@ -320,14 +320,6 @@
     "keywords": "BIMFlex Donatı Mühendisliği İmar Yönetmeliği BIM Eklentisi BIMX5 Allplan Oska İşbirliği Allplan Poz Kataloğu"
   },
   {
-    "path": "/solutions-v2/training",
-    "title": "ALLPLAN Eğitimleri",
-    "seoTitle": "ALLPLAN Eğitim, Webinar ve Teknik Gelişim Merkezi | Aluplan",
-    "section": "training",
-    "description": "ALLPLAN Eğitimleri: Uzmanlığınızdan faydalanın ve profesyonel bilgi ve becerilerinizi bir üst seviyeye taşıyın! Akademik iş birliklerimiz ve yetkili eğitim merkezlerimiz.",
-    "keywords": "Eğitim İş Ortaklarımız Yıldız Teknik Üniversitesi İstanbul Aydın Üniversitesi Kastamonu MYO İstanbul Gelişim Üniversitesi Orta Doğu Teknik Üniversitesi IMO Ankara LGN Proje Akademi"
-  },
-  {
     "path": "/solutions-v2/training/classroom",
     "title": "Sınıf İçi Eğitim (Yüz Yüze)",
     "seoTitle": "Sınıf İçi (Yüz Yüze) ALLPLAN BIM Eğitim Programları | Aluplan",
@@ -494,14 +486,6 @@
     "section": "video-library",
     "description": "SDS2 Detaylandırma — Eğitim Video Serisi: SDS2 ürün tanıtımı ve lansman videoları. konusu detaylı olarak incelenmektedir. Allplan 2024'ün sunduğu yenilikleri keşfedin.",
     "keywords": "SDS2 Detaylandırma SDS2 Product Video Oynatma Listesi1 / 2"
-  },
-  {
-    "path": "/solutions-v2/training/webinar",
-    "title": "Webinarlar",
-    "seoTitle": "ALLPLAN Teknik Webinarlar ve Canlı Kayıt Arşivi | Aluplan",
-    "section": "training",
-    "description": "Webinarlar: Kısa, odaklanmış ve bilgi dolu çevrimiçi seminerler. Webinarlarımız, belirli bir konu, yeni bir özellik veya sektörel bir gelişme hakkında hızlı ve yoğun b",
-    "keywords": "Genel Bakış Kazanımlarınız Zaman Verimliliği Güncel Konular Kolay Erişim Tekrar İzleme Kimler İçin Uygun? Hazır mısınız?"
   },
   {
     "path": "/solutions/addons",

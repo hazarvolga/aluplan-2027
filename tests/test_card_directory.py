@@ -23,10 +23,6 @@ EXPECTED = {
         "/products/allplan-professional", "/products/allplan-concept",
         "/products/precast-detail", "/products/allplan-basic",
     ],
-    "/solutions-v2/training": [
-        f"/solutions-v2/training/{slug}"
-        for slug in ("online", "webinar", "classroom", "events", "individual", "e-learning")
-    ],
     "/solutions/addons": ADDON_HREFS,
     "/solutions/cds-addon": ADDON_HREFS,
     "/solutions/ax3000-mekanik-tesisat": [

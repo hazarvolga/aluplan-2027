@@ -22,7 +22,7 @@ class StructuredPageLayoutBoundaryTests(unittest.TestCase):
             and not page["structuredLayout"].get("trainingTabs")
         ]
 
-        self.assertEqual(len(layouts), 52)
+        self.assertEqual(len(layouts), 51)
         self.assertEqual(sum(bool(layout.get("intro")) for layout in layouts), 29)
         self.assertEqual(sum(bool(layout.get("workflowLinks")) for layout in layouts), 6)
         self.assertEqual(
@@ -49,7 +49,7 @@ class StructuredPageLayoutBoundaryTests(unittest.TestCase):
                 if page.get("structuredLayout")
                 and not page["structuredLayout"].get("trainingTabs")
             ),
-            273,
+            270,
         )
 
     def test_structured_layout_has_a_dedicated_controlled_component(self):

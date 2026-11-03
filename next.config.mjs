@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const isDev = process.env.NODE_ENV !== 'production';
+// Mirrors isReleaseContentEnabled(): the 2027 pages exist in development or when the release flag is on.
+const showRelease = isDev || process.env.ALUPLAN_SHOW_2027 === '1';
 
 // The retired flag both showed 2027 content and blocked indexing; deploying without its replacements would silently index the review site.
 if (
@@ -133,6 +135,16 @@ const nextConfig = {
       {
         source: '/solutions-v2/faq',
         destination: '/faq',
+        permanent: true
+      },
+      {
+        source: '/solutions-v2/training',
+        destination: showRelease ? '/kaynaklar' : '/',
+        permanent: true
+      },
+      {
+        source: '/solutions-v2/training/webinar',
+        destination: showRelease ? '/kaydedilmis-webinarlar' : '/',
         permanent: true
       },
       {

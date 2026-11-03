@@ -69,6 +69,20 @@ export const RELEASE_2027_ROUTES: readonly Release2027Route[] = [
     description: 'Eğitim, Microsoft Teams canlı bağlantı ve allplan.net.tr/tr ticket platformu dahil 19 profesyonel hizmet ve teknik kaynağa tek merkezden ulaşın.',
     productName: null,
     ogImage: DEFAULT_OG_IMAGE
+  },
+  {
+    path: '/egitim-merkezlerimiz',
+    name: 'Eğitim İş Ortaklarımız',
+    description: 'Akademik iş birliklerimiz ve yetkili eğitim merkezlerimiz.',
+    productName: null,
+    ogImage: DEFAULT_OG_IMAGE
+  },
+  {
+    path: '/kaydedilmis-webinarlar',
+    name: 'Kaydedilmiş Webinarlar',
+    description: 'Kısa, odaklanmış ve bilgi dolu çevrimiçi seminerler. Kaçırdığınız veya tekrar izlemek istediğiniz webinarlarımıza buradan ulaşabilirsiniz.',
+    productName: null,
+    ogImage: DEFAULT_OG_IMAGE
   }
 ];
 

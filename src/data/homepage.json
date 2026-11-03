@@ -208,14 +208,6 @@
   ],
   "services": [
     {
-      "title": "Eğitim",
-      "description": "Online ve yüz yüze profesyonel ALLPLAN eğitimleri ile uzmanlaşın.",
-      "status": "active",
-      "href": "/solutions-v2/training",
-      "cta": "Eğitim Takvimi",
-      "icon": "graduation-cap"
-    },
-    {
       "title": "Teknik Destek",
       "description": "Microsoft Teams üzerinden uzaktan bağlantı ile kesintisiz teknik destek sağlıyoruz.",
       "status": "active",
@@ -376,10 +368,18 @@
       "icon": "circle-play"
     },
     {
+      "title": "Kaydedilmiş Webinarlar",
+      "description": "Kaçırdığınız veya tekrar izlemek istediğiniz webinarlarımıza buradan ulaşabilirsiniz.",
+      "status": "active",
+      "href": "/kaydedilmis-webinarlar",
+      "cta": "İncele",
+      "icon": "video"
+    },
+    {
       "title": "Eğitim Merkezleri",
       "description": "Eğitim merkezlerimiz ve eğitim olanakları hakkında bilgi alın.",
       "status": "active",
-      "href": "/solutions-v2/training",
+      "href": "/egitim-merkezlerimiz",
       "cta": "İncele",
       "icon": "map-pin"
     }
@@ -524,8 +524,8 @@
     {
       "title": "Öğren ve yardım al",
       "serviceTitles": [
-        "Eğitim",
         "Video Kütüphanesi",
+        "Kaydedilmiş Webinarlar",
         "Eğitim Merkezleri",
         "Teknik Destek",
         "Destek Platformu",

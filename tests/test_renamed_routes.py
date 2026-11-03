@@ -100,9 +100,48 @@ class VideoLibraryRouteTests(unittest.TestCase):
             with self.subTest(file=name):
                 self.assertNotIn(VIDEO_OLD, (DATA / name).read_text(encoding="utf-8"))
 
+    def test_hub_component_recognises_internal_playlists_by_path_not_by_the_old_prefix(self):
+        hub = (ROOT / "src/components/sections/VideoLibraryHubSection.tsx").read_text(encoding="utf-8")
+        self.assertNotIn("startsWith('/solutions-v2')", hub)
+        self.assertIn("item.url.startsWith('/')", hub)
+
     def test_training_page_end_conversion_still_covers_the_moved_pages(self):
         policy = (ROOT / "src/components/sections/page-end-conversion-policy.ts").read_text(encoding="utf-8")
         self.assertIn("page.path.startsWith('/video-kutuphanesi')", policy)
+
+
+TRAINING_HUB = "/solutions-v2/training"
+
+
+class RemovedTrainingHubTests(unittest.TestCase):
+    def test_hub_url_redirects_to_the_resources_page(self):
+        redirect = config_redirects()[TRAINING_HUB]
+        self.assertEqual(redirect["destination"], "/kaynaklar")
+        self.assertTrue(redirect["permanent"])
+
+    def test_webinar_url_redirects_to_the_recorded_webinars_page(self):
+        redirect = config_redirects()["/solutions-v2/training/webinar"]
+        self.assertEqual(redirect["destination"], "/kaydedilmis-webinarlar")
+        self.assertTrue(redirect["permanent"])
+
+    def test_hub_is_gone_from_the_generated_data_but_its_subpages_remain(self):
+        pages = json.loads((DATA / "pages.json").read_text(encoding="utf-8"))
+        self.assertNotIn(TRAINING_HUB, pages)
+        for slug in ("online", "classroom", "events", "individual", "e-learning", "quick-start"):
+            with self.subTest(slug=slug):
+                self.assertIn(f"{TRAINING_HUB}/{slug}", pages)
+
+    def test_no_breadcrumb_links_to_the_removed_hub(self):
+        pages = json.loads((DATA / "pages.json").read_text(encoding="utf-8"))
+        offenders = [path for path, page in pages.items() if any(c["href"] == TRAINING_HUB for c in page["breadcrumbs"])]
+        self.assertEqual(offenders, [])
+
+    def test_mobile_drawer_no_longer_links_to_the_hub(self):
+        self.assertNotIn(f'href="{TRAINING_HUB}"', SHELL.read_text(encoding="utf-8"))
+
+    def test_hub_only_component_is_removed(self):
+        self.assertFalse((ROOT / "src/components/sections/TrainingTabs.tsx").exists())
+        self.assertNotIn("TrainingTabs", (ROOT / "src/components/sections/SubpageView.tsx").read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

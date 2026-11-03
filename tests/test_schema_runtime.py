@@ -74,7 +74,7 @@ class SchemaRuntimeTests(unittest.TestCase):
             for page in service_pages
         ]
 
-        self.assertEqual(len(service_pages), 8)
+        self.assertEqual(len(service_pages), 6)
         self.assertEqual(
             service_ids,
             [f'{page["canonical"]}#service' for page in service_pages],

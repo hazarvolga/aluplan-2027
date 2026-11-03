@@ -103,7 +103,7 @@ class ResourcesDirectoryTests(unittest.TestCase):
         services = {s["title"]: s for s in HOMEPAGE["services"]}
         self.assertEqual(
             group["serviceTitles"],
-            ["Eğitim", "Video Kütüphanesi", "Eğitim Merkezleri", "Teknik Destek", "Destek Platformu", "Danışmanlık", "Sertifika"],
+            ["Video Kütüphanesi", "Kaydedilmiş Webinarlar", "Eğitim Merkezleri", "Teknik Destek", "Destek Platformu", "Danışmanlık", "Sertifika"],
         )
         pages = json.loads((ROOT / "src/data/pages.json").read_text(encoding="utf-8"))
         for title, icon in (("Video Kütüphanesi", "circle-play"), ("Eğitim Merkezleri", "map-pin")):
@@ -111,9 +111,13 @@ class ResourcesDirectoryTests(unittest.TestCase):
                 service = services[title]
                 self.assertEqual(service["icon"], icon)
                 self.assertTrue(service["description"] and service["cta"])
-                if service["href"].startswith("/"):
-                    self.assertIn(service["href"], pages)
+        self.assertIn("/video-kutuphanesi", pages)
         self.assertEqual(services["Video Kütüphanesi"]["href"], "/video-kutuphanesi")
+        self.assertEqual(services["Eğitim Merkezleri"]["href"], "/egitim-merkezlerimiz")
+        self.assertIn("path: '/egitim-merkezlerimiz'", read("src/lib/release-2027-routes.ts"))
+
+    def test_the_removed_training_card_is_gone(self):
+        self.assertNotIn("Eğitim", {service["title"] for service in HOMEPAGE["services"]})
 
     def test_view_leaves_out_the_partner_group(self):
         self.assertIn(HIDDEN_GROUP, VIEW.read_text(encoding="utf-8"))

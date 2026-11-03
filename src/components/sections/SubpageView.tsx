@@ -11,7 +11,6 @@ import {
   getSolutionHub
 } from '@/lib/site-shared';
 import { AluIcon } from '@/components/ui/AluIcon';
-import { TrainingTabs } from './TrainingTabs';
 import { AboutEditorialSection } from './AboutEditorialSection';
 import { VideoLibraryHubSection } from './VideoLibraryHubSection';
 import { VideoPlaylistSection } from './VideoPlaylistSection';
@@ -130,7 +129,7 @@ export function SubpageView({
     <>
       {scalypsoContent ? scalypsoContent : <>
       {/* Subpage Hero Stage */}
-      {page.path !== '/references' && <SubpageHeroSection
+      {page.path !== '/references' && !isVideoLibraryHub && <SubpageHeroSection
         page={page}
         heroImage={heroImage}
         presentation={heroPresentation.presentation}
@@ -189,10 +188,6 @@ export function SubpageView({
           query={searchQuery}
           onQueryChange={setSearchQuery}
         />
-      )}
-
-      {page.path === '/solutions-v2/training' && page.structuredLayout?.trainingTabs && (
-        <TrainingTabs content={page.structuredLayout.trainingTabs} />
       )}
 
       {/* Contact requests use the shared Microsoft form; direct channels stay available */}
@@ -347,7 +342,7 @@ export function SubpageView({
         <SolutionCatalogSection directory={solutionCatalog} />
       ) : solutionHub ? (
         <SolutionHubSection hub={solutionHub} />
-      ) : page.structuredLayout && !page.structuredLayout.trainingTabs ? (
+      ) : page.structuredLayout ? (
         <StructuredPageLayoutSection
           layout={page.structuredLayout}
           pagePath={page.path}

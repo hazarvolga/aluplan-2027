@@ -20549,602 +20549,6 @@
     "schemaType": "WebPage",
     "structuredLayout": null
   },
-  "/solutions-v2/training": {
-    "path": "/solutions-v2/training",
-    "section": "training",
-    "title": "ALLPLAN Eğitim, Webinar ve Teknik Gelişim Merkezi | Aluplan",
-    "description": "ALLPLAN Eğitimleri: Uzmanlığınızdan faydalanın ve profesyonel bilgi ve becerilerinizi bir üst seviyeye taşıyın! Akademik iş birliklerimiz ve yetkili eğitim merkezlerimiz.",
-    "canonical": "https://aluplan.com.tr/solutions-v2/training",
-    "h1": "ALLPLAN Eğitimleri",
-    "eyebrow": "TRAINING",
-    "breadcrumbs": [
-      {
-        "label": "Ana Sayfa",
-        "href": "/"
-      },
-      {
-        "label": "Çözümler",
-        "href": "/solutions"
-      },
-      {
-        "label": "ALLPLAN Eğitim, Webinar ve Teknik Gelişim Merkezi",
-        "href": "/solutions-v2/training"
-      }
-    ],
-    "headings": [
-      {
-        "level": 2,
-        "text": "Eğitim İş Ortaklarımız"
-      },
-      {
-        "level": 4,
-        "text": "Yıldız Teknik Üniversitesi"
-      },
-      {
-        "level": 4,
-        "text": "İstanbul Aydın Üniversitesi"
-      },
-      {
-        "level": 4,
-        "text": "Kastamonu MYO"
-      },
-      {
-        "level": 4,
-        "text": "İstanbul Gelişim Üniversitesi"
-      },
-      {
-        "level": 4,
-        "text": "Orta Doğu Teknik Üniversitesi"
-      },
-      {
-        "level": 3,
-        "text": "IMO Ankara"
-      },
-      {
-        "level": 3,
-        "text": "LGN Proje Akademi"
-      },
-      {
-        "level": 2,
-        "text": "Genişletilmiş Eğitim ve Webinar Teklifimizi Keşfedin"
-      },
-      {
-        "level": 3,
-        "text": "Herkes İçin ALLPLAN!"
-      },
-      {
-        "level": 2,
-        "text": "Eğitim Formatlarımız"
-      },
-      {
-        "level": 3,
-        "text": "Online"
-      },
-      {
-        "level": 3,
-        "text": "Webinar"
-      },
-      {
-        "level": 3,
-        "text": "Yüz Yüze (Presence)"
-      },
-      {
-        "level": 3,
-        "text": "Etkinlik / Fuar"
-      },
-      {
-        "level": 3,
-        "text": "Bireysel"
-      },
-      {
-        "level": 3,
-        "text": "E-Learning"
-      },
-      {
-        "level": 2,
-        "text": "Müşterilerimiz Ne Diyor?"
-      },
-      {
-        "level": 2,
-        "text": "Okul, Öğretim ve Çalışmalar İçin Teklifimiz"
-      }
-    ],
-    "bodyNodes": [
-      "Training",
-      "Ana Sayfaya Dön",
-      "PROFESYONEL HİZMETLER",
-      "ALLPLAN Eğitimleri",
-      "Uzmanlığınızdan faydalanın ve profesyonel bilgi ve becerilerinizi bir üst seviyeye taşıyın!",
-      "Eğitim İş Ortaklarımız",
-      "Akademik iş birliklerimiz ve yetkili eğitim merkezlerimiz.",
-      "Üniversiteler",
-      "Yıldız Teknik Üniversitesi",
-      "İnşaat Mühendisliği",
-      "Mimarlık",
-      "İstanbul Aydın Üniversitesi",
-      "İnşaat Mühendisliği",
-      "Mimarlık",
-      "Kastamonu MYO",
-      "İstanbul Gelişim Üniversitesi",
-      "İnşaat Teknolojisi",
-      "Mimarlık",
-      "Orta Doğu Teknik Üniversitesi",
-      "İnşaat Mühendisliği",
-      "Eğitim Merkezlerimiz",
-      "IMO Ankara",
-      "Mizgin Bektaş",
-      "Araştırma Görevlisi",
-      "TMMOB İnşaat Mühendisleri Odası",
-      "Ankara Şubesi",
-      "0 312 294 3060",
-      "LGN",
-      "LGN Proje Akademi",
-      "Sahrayıcedit Mah. Ferit Bey Sok. No:24 / 12",
-      "34734 Kadıköy / İstanbul",
-      "info@aluplan.com.tr",
-      "0 533 218 90 66",
-      "Genişletilmiş Eğitim ve",
-      "Webinar Teklifimizi Keşfedin",
-      "Profesyonel gelişiminiz için teklifimiz.",
-      "İlgi Duyanlar",
-      "Video Kütüphanesi",
-      "Temel",
-      "İleri Seviye",
-      "Özel",
-      "BIM",
-      "İlgi Duyanlar",
-      "Herkes İçin ALLPLAN!",
-      "Disipline özgü giriş eğitimlerimizle, ALLPLAN CAD programına, yazılımın temel konseptine ve çalışma alanınız için sunduğumuz araçlara genel bir bakış elde edin.",
-      "Genel Bakış",
-      "Temel Konseptler",
-      "Sektörel Araçlar",
-      "Hızlı Başlangıç",
-      "Eğitim Formatlarımız",
-      "Size en uygun öğrenme yöntemini seçin. İster online, ister yerinde, isterseniz bireysel.",
-      "Online",
-      "Mekandan bağımsız, web tabanlı, interaktif ve çok katılımcılı eğitimler.",
-      "Detayları Gör",
-      "Webinar",
-      "Web tabanlı sunumlar, çoklu katılımcı dinleyici modunda ve chat fonksiyonu ile.",
-      "Detayları Gör",
-      "Yüz Yüze (Presence)",
-      "Yerinde, interaktif ve çok katılımcılı pratik eğitimler.",
-      "Detayları Gör",
-      "Etkinlik / Fuar",
-      "ALLPLAN ekibiyle kişisel iletişim imkanı sunan çeşitli formatlarda yerinde etkinlikler.",
-      "Detayları Gör",
-      "Bireysel",
-      "Esnek planlanabilir birimler. İçeriği, yeri, zamanı ve kapsamı siz belirlersiniz.",
-      "Detayları Gör",
-      "E-Learning",
-      "Mekandan bağımsız, web tabanlı, interaktif ve bireysel öğrenme.",
-      "Detayları Gör",
-      "Müşterilerimiz Ne Diyor?",
-      "\"",
-      "Çok karmaşık soyut konuları pratik ve basit bir şekilde iletme yeteneğine sahipsiniz. Eğitim bana ve ekibime büyük bir bilgi artışı sağladı.",
-      "\"",
-      "B",
-      "BIM Yöneticisi",
-      "\"",
-      "Eğitim çok ilginç, yararlı ve eğlenceliydi.",
-      "\"",
-      "P",
-      "Proje Yöneticisi CAD",
-      "\"",
-      "ALLPLAN'da özel sorunlar için bile her zaman destek alırsınız.",
-      "\"",
-      "B",
-      "BIM Yöneticisi",
-      "\"",
-      "BIM konusunda uzmanlık benim için dokunulmaz. ALLPLAN'da özellikler (attributes) konusunda ne kadar çok şey olduğunu görmek beni şaşırttı.",
-      "\"",
-      "G",
-      "Genel Müdür",
-      "Öğrenciler ve Okullar İçin",
-      "Okul, Öğretim ve Çalışmalar İçin",
-      "Teklifimiz",
-      "Gelecek okul veya çalışma projeleri için genel temellerin yanı sıra, çalışan öğrenci olarak iş başvurusu gibi eğitimdeki özel durumlar için odaklanmış teklifler sunuyoruz.",
-      "İletişim Formu",
-      "Campus"
-    ],
-    "sections": [
-      {
-        "heading": "ALLPLAN Eğitimleri",
-        "level": 2,
-        "items": [
-          "Training",
-          "Ana Sayfaya Dön",
-          "PROFESYONEL HİZMETLER",
-          "Uzmanlığınızdan faydalanın ve profesyonel bilgi ve becerilerinizi bir üst seviyeye taşıyın!"
-        ]
-      },
-      {
-        "heading": "Eğitim İş Ortaklarımız",
-        "level": 2,
-        "items": [
-          "Akademik iş birliklerimiz ve yetkili eğitim merkezlerimiz.",
-          "Üniversiteler"
-        ]
-      },
-      {
-        "heading": "Yıldız Teknik Üniversitesi",
-        "level": 4,
-        "items": [
-          "İnşaat Mühendisliği",
-          "Mimarlık"
-        ]
-      },
-      {
-        "heading": "İstanbul Aydın Üniversitesi",
-        "level": 4,
-        "items": [
-          "İnşaat Mühendisliği",
-          "Mimarlık"
-        ]
-      },
-      {
-        "heading": "İstanbul Gelişim Üniversitesi",
-        "level": 4,
-        "items": [
-          "İnşaat Teknolojisi",
-          "Mimarlık"
-        ]
-      },
-      {
-        "heading": "Orta Doğu Teknik Üniversitesi",
-        "level": 4,
-        "items": [
-          "İnşaat Mühendisliği",
-          "Eğitim Merkezlerimiz"
-        ]
-      },
-      {
-        "heading": "IMO Ankara",
-        "level": 3,
-        "items": [
-          "Mizgin Bektaş",
-          "Araştırma Görevlisi",
-          "TMMOB İnşaat Mühendisleri Odası",
-          "Ankara Şubesi",
-          "0 312 294 3060",
-          "LGN"
-        ]
-      },
-      {
-        "heading": "LGN Proje Akademi",
-        "level": 3,
-        "items": [
-          "Sahrayıcedit Mah. Ferit Bey Sok. No:24 / 12",
-          "34734 Kadıköy / İstanbul",
-          "info@aluplan.com.tr",
-          "0 533 218 90 66",
-          "Genişletilmiş Eğitim ve",
-          "Webinar Teklifimizi Keşfedin",
-          "Profesyonel gelişiminiz için teklifimiz.",
-          "İlgi Duyanlar",
-          "Video Kütüphanesi",
-          "Temel",
-          "İleri Seviye",
-          "Özel",
-          "BIM",
-          "İlgi Duyanlar"
-        ]
-      },
-      {
-        "heading": "Herkes İçin ALLPLAN!",
-        "level": 3,
-        "items": [
-          "Disipline özgü giriş eğitimlerimizle, ALLPLAN CAD programına, yazılımın temel konseptine ve çalışma alanınız için sunduğumuz araçlara genel bir bakış elde edin.",
-          "Genel Bakış",
-          "Temel Konseptler",
-          "Sektörel Araçlar",
-          "Hızlı Başlangıç"
-        ]
-      },
-      {
-        "heading": "Eğitim Formatlarımız",
-        "level": 2,
-        "items": [
-          "Size en uygun öğrenme yöntemini seçin. İster online, ister yerinde, isterseniz bireysel."
-        ]
-      },
-      {
-        "heading": "Online",
-        "level": 3,
-        "items": [
-          "Mekandan bağımsız, web tabanlı, interaktif ve çok katılımcılı eğitimler.",
-          "Detayları Gör"
-        ],
-        "link": {
-          "href": "/solutions-v2/training/online",
-          "label": "Detayları Gör"
-        }
-      },
-      {
-        "heading": "Webinar",
-        "level": 3,
-        "items": [
-          "Web tabanlı sunumlar, çoklu katılımcı dinleyici modunda ve chat fonksiyonu ile.",
-          "Detayları Gör"
-        ],
-        "link": {
-          "href": "/solutions-v2/training/webinar",
-          "label": "Detayları Gör"
-        }
-      },
-      {
-        "heading": "Yüz Yüze (Presence)",
-        "level": 3,
-        "items": [
-          "Yerinde, interaktif ve çok katılımcılı pratik eğitimler.",
-          "Detayları Gör"
-        ],
-        "link": {
-          "href": "/solutions-v2/training/classroom",
-          "label": "Detayları Gör"
-        }
-      },
-      {
-        "heading": "Etkinlik / Fuar",
-        "level": 3,
-        "items": [
-          "ALLPLAN ekibiyle kişisel iletişim imkanı sunan çeşitli formatlarda yerinde etkinlikler.",
-          "Detayları Gör"
-        ],
-        "link": {
-          "href": "/solutions-v2/training/events",
-          "label": "Detayları Gör"
-        }
-      },
-      {
-        "heading": "Bireysel",
-        "level": 3,
-        "items": [
-          "Esnek planlanabilir birimler. İçeriği, yeri, zamanı ve kapsamı siz belirlersiniz.",
-          "Detayları Gör"
-        ],
-        "link": {
-          "href": "/solutions-v2/training/individual",
-          "label": "Detayları Gör"
-        }
-      },
-      {
-        "heading": "E-Learning",
-        "level": 3,
-        "items": [
-          "Mekandan bağımsız, web tabanlı, interaktif ve bireysel öğrenme.",
-          "Detayları Gör"
-        ],
-        "link": {
-          "href": "/solutions-v2/training/e-learning",
-          "label": "Detayları Gör"
-        }
-      },
-      {
-        "heading": "Müşterilerimiz Ne Diyor?",
-        "level": 2,
-        "items": [
-          "\"",
-          "Çok karmaşık soyut konuları pratik ve basit bir şekilde iletme yeteneğine sahipsiniz. Eğitim bana ve ekibime büyük bir bilgi artışı sağladı.",
-          "\"",
-          "B",
-          "BIM Yöneticisi",
-          "\"",
-          "Eğitim çok ilginç, yararlı ve eğlenceliydi.",
-          "\"",
-          "P",
-          "Proje Yöneticisi CAD",
-          "\"",
-          "ALLPLAN'da özel sorunlar için bile her zaman destek alırsınız.",
-          "\"",
-          "B",
-          "BIM Yöneticisi",
-          "\"",
-          "BIM konusunda uzmanlık benim için dokunulmaz. ALLPLAN'da özellikler (attributes) konusunda ne kadar çok şey olduğunu görmek beni şaşırttı.",
-          "\"",
-          "G",
-          "Genel Müdür",
-          "Öğrenciler ve Okullar İçin",
-          "Okul, Öğretim ve Çalışmalar İçin",
-          "Teklifimiz",
-          "Gelecek okul veya çalışma projeleri için genel temellerin yanı sıra, çalışan öğrenci olarak iş başvurusu gibi eğitimdeki özel durumlar için odaklanmış teklifler sunuyoruz.",
-          "İletişim Formu",
-          "Campus"
-        ]
-      }
-    ],
-    "contentLinks": [
-      {
-        "href": "/",
-        "text": "Ana Sayfaya Dön",
-        "external": false
-      },
-      {
-        "href": "tel:03122943060",
-        "text": "0 312 294 3060",
-        "external": false
-      },
-      {
-        "href": "mailto:info@aluplan.com.tr",
-        "text": "info@aluplan.com.tr",
-        "external": false
-      },
-      {
-        "href": "tel:05332189066",
-        "text": "0 533 218 90 66",
-        "external": false
-      },
-      {
-        "href": "/solutions-v2/training/quick-start",
-        "text": "Hızlı Başlangıç",
-        "external": false
-      },
-      {
-        "href": "/solutions-v2/training/online",
-        "text": "OnlineMekandan bağımsız, web tabanlı, interaktif ve çok katılımcılı eğitimler.Detayları Gör",
-        "external": false
-      },
-      {
-        "href": "/solutions-v2/training/webinar",
-        "text": "WebinarWeb tabanlı sunumlar, çoklu katılımcı dinleyici modunda ve chat fonksiyonu ile.Detayları Gör",
-        "external": false
-      },
-      {
-        "href": "/solutions-v2/training/classroom",
-        "text": "Yüz Yüze (Presence)Yerinde, interaktif ve çok katılımcılı pratik eğitimler.Detayları Gör",
-        "external": false
-      },
-      {
-        "href": "/solutions-v2/training/events",
-        "text": "Etkinlik / FuarALLPLAN ekibiyle kişisel iletişim imkanı sunan çeşitli formatlarda yerinde etkinlikler.Detayları Gör",
-        "external": false
-      },
-      {
-        "href": "/solutions-v2/training/individual",
-        "text": "BireyselEsnek planlanabilir birimler. İçeriği, yeri, zamanı ve kapsamı siz belirlersiniz.Detayları Gör",
-        "external": false
-      },
-      {
-        "href": "/solutions-v2/training/e-learning",
-        "text": "E-LearningMekandan bağımsız, web tabanlı, interaktif ve bireysel öğrenme.Detayları Gör",
-        "external": false
-      },
-      {
-        "href": "https://www.allplan.com/trial-or-subscription/",
-        "text": "Şimdi İndir",
-        "external": true
-      },
-      {
-        "href": "https://forms.office.com/r/hXhnKAG912",
-        "text": "Teklif Talep Formu",
-        "external": true
-      }
-    ],
-    "buttons": [
-      "İlgi Duyanlar",
-      "Video Kütüphanesi",
-      "Temel",
-      "İleri Seviye",
-      "Özel",
-      "BIM",
-      "İletişim Formu"
-    ],
-    "images": [],
-    "videos": [],
-    "embeds": [],
-    "playlistId": null,
-    "interactiveStates": [],
-    "schemaType": "Service",
-    "structuredLayout": {
-      "trainingTabs": {
-        "title": "Genişletilmiş Eğitim ve Webinar Teklifimizi Keşfedin",
-        "tabs": [
-          {
-            "key": "interest",
-            "label": "İlgi Duyanlar",
-            "title": "Herkes İçin ALLPLAN!",
-            "paragraphs": [
-              "Disipline özgü giriş eğitimlerimizle, ALLPLAN CAD programına, yazılımın temel konseptine ve çalışma alanınız için sunduğumuz araçlara genel bir bakış elde edin."
-            ],
-            "features": [
-              "Genel Bakış",
-              "Temel Konseptler",
-              "Sektörel Araçlar"
-            ],
-            "href": "/solutions-v2/training/quick-start",
-            "linkLabel": "Hızlı Başlangıç",
-            "imageSrc": null,
-            "sourceImageSrc": "/images/training-interest.jpg"
-          },
-          {
-            "key": "video-library",
-            "label": "Video Kütüphanesi",
-            "title": "İzleyin ve Öğrenin!",
-            "paragraphs": [
-              "Geniş video arşivimizde Allplan özelliklerini, ipuçlarını, iş akışlarını ve 'Nasıl Yapılır?' rehberlerini bulabilirsiniz."
-            ],
-            "features": [
-              "Youtube Oynatma Listeleri",
-              "Özellik Tanıtımları",
-              "Versiyon Yenilikleri"
-            ],
-            "href": "/video-kutuphanesi",
-            "linkLabel": "Videolara Göz Atın",
-            "imageSrc": "/assets/images/webinars/bimx5-youtube.jpeg",
-            "sourceImageSrc": "/images/webinars/bimx5-youtube.jpeg"
-          },
-          {
-            "key": "basic",
-            "label": "Temel",
-            "title": "ALLPLAN Dünyasına Giriş!",
-            "paragraphs": [
-              "Birkaç gün süren temel eğitimlerimizde, mesleki alanınız ne olursa olsun, ALLPLAN ile etkili çalışmak ve programın tam potansiyelini kullanmak için gerekli tüm bilgi ve becerileri sağlıyoruz."
-            ],
-            "features": [
-              "Kapsamlı Temel Bilgiler",
-              "Etkili Çalışma Yöntemleri",
-              "Program Potansiyeli"
-            ],
-            "href": "https://forms.office.com/r/hXhnKAG912",
-            "linkLabel": "İletişim Formu",
-            "imageSrc": null,
-            "sourceImageSrc": "/images/training-basic.jpg"
-          },
-          {
-            "key": "advanced",
-            "label": "İleri Seviye",
-            "title": "ALLPLAN Uzmanı Olma Yolunda!",
-            "paragraphs": [
-              "Temel eğitimlerin üzerine inşa edilen, alanınıza özel olarak tasarlanmış ileri seviye seminerlerle bilginizi derinleştirin ve yazılım fonksiyonlarını tam kapasiteyle kullanın."
-            ],
-            "features": [
-              "İleri Modül Bilgisi",
-              "Sektörel Derinleşme",
-              "Uzmanlık Seviyesi"
-            ],
-            "href": "https://forms.office.com/r/hXhnKAG912",
-            "linkLabel": "İletişim Formu",
-            "imageSrc": null,
-            "sourceImageSrc": "/images/training-advanced.jpg"
-          },
-          {
-            "key": "special",
-            "label": "Özel",
-            "title": "Özel Konularda Derin Bilgi!",
-            "paragraphs": [
-              "Mevcut kapsamlı ALLPLAN bilginizin üzerine, özel eğitimlerimiz belirli bir program alanına veya özel bir konunun ALLPLAN ile uygulanmasına dair derinlemesine içgörü sağlar."
-            ],
-            "features": [
-              "Spesifik Konular",
-              "Derinlemesine İçgörü",
-              "Uygulama Pratikleri"
-            ],
-            "href": "https://forms.office.com/r/hXhnKAG912",
-            "linkLabel": "İletişim Formu",
-            "imageSrc": null,
-            "sourceImageSrc": "/images/training-special.jpg"
-          },
-          {
-            "key": "bim",
-            "label": "BIM",
-            "title": "BIM Üzerine Uzmanlık!",
-            "paragraphs": [
-              "BIM odaklı eğitimlerimizde, Yapı Bilgi Modellemesi (BIM) konusunda yazılımlar arası teori veya pratik ALLPLAN uygulamalarını öğrenin. Sertifika alma imkanı sunar."
-            ],
-            "features": [
-              "BIM Teorisi",
-              "Pratik Uygulama",
-              "Sertifikasyon İmkanı"
-            ],
-            "href": "https://forms.office.com/r/hXhnKAG912",
-            "linkLabel": "İletişim Formu",
-            "imageSrc": null,
-            "sourceImageSrc": "/images/training-bim.jpg"
-          }
-        ]
-      }
-    }
-  },
   "/solutions-v2/training/classroom": {
     "path": "/solutions-v2/training/classroom",
     "section": "training",
@@ -21157,10 +20561,6 @@
       {
         "label": "Ana Sayfa",
         "href": "/"
-      },
-      {
-        "label": "Eğitim",
-        "href": "/solutions-v2/training"
       },
       {
         "label": "Sınıf İçi (Yüz Yüze) ALLPLAN BIM Eğitim Programları",
@@ -21352,10 +20752,6 @@
         "href": "/"
       },
       {
-        "label": "Eğitim",
-        "href": "/solutions-v2/training"
-      },
-      {
         "label": "E-Learning",
         "href": "/solutions-v2/training/e-learning"
       }
@@ -21543,10 +20939,6 @@
       {
         "label": "Ana Sayfa",
         "href": "/"
-      },
-      {
-        "label": "Eğitim",
-        "href": "/solutions-v2/training"
       },
       {
         "label": "ALLPLAN Etkinlikler, Seminerler ve Sektör Buluşmaları",
@@ -21738,10 +21130,6 @@
         "href": "/"
       },
       {
-        "label": "Eğitim",
-        "href": "/solutions-v2/training"
-      },
-      {
         "label": "Bireysel ve Kuruma Özel Özelleştirilmiş ALLPLAN Eğitimi",
         "href": "/solutions-v2/training/individual"
       }
@@ -21931,10 +21319,6 @@
         "href": "/"
       },
       {
-        "label": "Eğitim",
-        "href": "/solutions-v2/training"
-      },
-      {
         "label": "Canlı Online ALLPLAN Eğitimleri ve Uzaktan Atölyeler",
         "href": "/solutions-v2/training/online"
       }
@@ -22121,10 +21505,6 @@
       {
         "label": "Ana Sayfa",
         "href": "/"
-      },
-      {
-        "label": "Eğitim",
-        "href": "/solutions-v2/training"
       },
       {
         "label": "ALLPLAN Quick Start",
@@ -22769,10 +22149,6 @@
         "href": "/"
       },
       {
-        "label": "Eğitim",
-        "href": "/solutions-v2/training"
-      },
-      {
         "label": "ALLPLAN Video Kütüphanesi ve Eğitim Oynatma Listeleri",
         "href": "/video-kutuphanesi"
       }
@@ -23315,10 +22691,6 @@
         "href": "/"
       },
       {
-        "label": "Eğitim",
-        "href": "/solutions-v2/training"
-      },
-      {
         "label": "Video Kütüphanesi",
         "href": "/video-kutuphanesi"
       },
@@ -23634,10 +23006,6 @@
       {
         "label": "Ana Sayfa",
         "href": "/"
-      },
-      {
-        "label": "Eğitim",
-        "href": "/solutions-v2/training"
       },
       {
         "label": "Video Kütüphanesi",
@@ -24011,10 +23379,6 @@
       {
         "label": "Ana Sayfa",
         "href": "/"
-      },
-      {
-        "label": "Eğitim",
-        "href": "/solutions-v2/training"
       },
       {
         "label": "Video Kütüphanesi",
@@ -24614,10 +23978,6 @@
         "href": "/"
       },
       {
-        "label": "Eğitim",
-        "href": "/solutions-v2/training"
-      },
-      {
         "label": "Video Kütüphanesi",
         "href": "/video-kutuphanesi"
       },
@@ -24848,10 +24208,6 @@
       {
         "label": "Ana Sayfa",
         "href": "/"
-      },
-      {
-        "label": "Eğitim",
-        "href": "/solutions-v2/training"
       },
       {
         "label": "Video Kütüphanesi",
@@ -25183,10 +24539,6 @@
       {
         "label": "Ana Sayfa",
         "href": "/"
-      },
-      {
-        "label": "Eğitim",
-        "href": "/solutions-v2/training"
       },
       {
         "label": "Video Kütüphanesi",
@@ -25674,10 +25026,6 @@
         "href": "/"
       },
       {
-        "label": "Eğitim",
-        "href": "/solutions-v2/training"
-      },
-      {
         "label": "Video Kütüphanesi",
         "href": "/video-kutuphanesi"
       },
@@ -26163,10 +25511,6 @@
         "href": "/"
       },
       {
-        "label": "Eğitim",
-        "href": "/solutions-v2/training"
-      },
-      {
         "label": "Video Kütüphanesi",
         "href": "/video-kutuphanesi"
       },
@@ -26650,10 +25994,6 @@
       {
         "label": "Ana Sayfa",
         "href": "/"
-      },
-      {
-        "label": "Eğitim",
-        "href": "/solutions-v2/training"
       },
       {
         "label": "Video Kütüphanesi",
@@ -27323,10 +26663,6 @@
         "href": "/"
       },
       {
-        "label": "Eğitim",
-        "href": "/solutions-v2/training"
-      },
-      {
         "label": "Video Kütüphanesi",
         "href": "/video-kutuphanesi"
       },
@@ -27502,10 +26838,6 @@
       {
         "label": "Ana Sayfa",
         "href": "/"
-      },
-      {
-        "label": "Eğitim",
-        "href": "/solutions-v2/training"
       },
       {
         "label": "Video Kütüphanesi",
@@ -27755,10 +27087,6 @@
         "href": "/"
       },
       {
-        "label": "Eğitim",
-        "href": "/solutions-v2/training"
-      },
-      {
         "label": "Video Kütüphanesi",
         "href": "/video-kutuphanesi"
       },
@@ -28004,10 +27332,6 @@
       {
         "label": "Ana Sayfa",
         "href": "/"
-      },
-      {
-        "label": "Eğitim",
-        "href": "/solutions-v2/training"
       },
       {
         "label": "Video Kütüphanesi",
@@ -28299,10 +27623,6 @@
         "href": "/"
       },
       {
-        "label": "Eğitim",
-        "href": "/solutions-v2/training"
-      },
-      {
         "label": "Video Kütüphanesi",
         "href": "/video-kutuphanesi"
       },
@@ -28437,678 +27757,6 @@
     "interactiveStates": [],
     "schemaType": "VideoGallery",
     "structuredLayout": null
-  },
-  "/solutions-v2/training/webinar": {
-    "path": "/solutions-v2/training/webinar",
-    "section": "training",
-    "title": "ALLPLAN Teknik Webinarlar ve Canlı Kayıt Arşivi | Aluplan",
-    "description": "Webinarlar: Kısa, odaklanmış ve bilgi dolu çevrimiçi seminerler. Webinarlarımız, belirli bir konu, yeni bir özellik veya sektörel bir gelişme hakkında hızlı ve yoğun b",
-    "canonical": "https://aluplan.com.tr/solutions-v2/training/webinar",
-    "h1": "Webinarlar",
-    "eyebrow": "TRAINING",
-    "breadcrumbs": [
-      {
-        "label": "Ana Sayfa",
-        "href": "/"
-      },
-      {
-        "label": "Eğitim",
-        "href": "/solutions-v2/training"
-      },
-      {
-        "label": "ALLPLAN Teknik Webinarlar ve Canlı Kayıt Arşivi",
-        "href": "/solutions-v2/training/webinar"
-      }
-    ],
-    "headings": [
-      {
-        "level": 2,
-        "text": "Genel Bakış"
-      },
-      {
-        "level": 3,
-        "text": "Kazanımlarınız"
-      },
-      {
-        "level": 4,
-        "text": "Zaman Verimliliği"
-      },
-      {
-        "level": 4,
-        "text": "Güncel Konular"
-      },
-      {
-        "level": 4,
-        "text": "Kolay Erişim"
-      },
-      {
-        "level": 4,
-        "text": "Tekrar İzleme"
-      },
-      {
-        "level": 3,
-        "text": "Kimler İçin Uygun?"
-      },
-      {
-        "level": 3,
-        "text": "Hazır mısınız?"
-      },
-      {
-        "level": 2,
-        "text": "Kaydedilmiş Webinarlar"
-      },
-      {
-        "level": 3,
-        "text": "IMO / ALLPLAN BRIDGE 2022 WEBİNAR"
-      },
-      {
-        "level": 3,
-        "text": "IMO / ALLPLAN ENGINEERING 2022 WEBINAR"
-      },
-      {
-        "level": 3,
-        "text": "Allplan Bridge 2021"
-      },
-      {
-        "level": 3,
-        "text": "BIMX5 Online Webinar - İmar Yönetmeliği"
-      },
-      {
-        "level": 3,
-        "text": "BIMX5 Online Webinar - Genel"
-      },
-      {
-        "level": 3,
-        "text": "BIMX5 Online Webinar - 2B DWG Converter"
-      },
-      {
-        "level": 3,
-        "text": "Bimplus Online Webinar: BIM İşbirliği"
-      },
-      {
-        "level": 3,
-        "text": "Bimfili Youtube Kanalı: BIMX5 Nedir?"
-      },
-      {
-        "level": 3,
-        "text": "ALLPLAN PRECAST SEVİYENİZİ YÜKSELTİN"
-      },
-      {
-        "level": 3,
-        "text": "Soru Cevap Semineri"
-      },
-      {
-        "level": 3,
-        "text": "Allplan Engineering 2021 ve Yenilikler"
-      },
-      {
-        "level": 3,
-        "text": "Allplan 2018-2021: İpuçları"
-      },
-      {
-        "level": 3,
-        "text": "Görsel Komut Dosyalarına Giriş (Visual Scripting)"
-      }
-    ],
-    "bodyNodes": [
-      "Training",
-      "Webinar",
-      "Ana Sayfaya Dön",
-      "BİLGİ PAYLAŞIMI",
-      "Webinarlar",
-      "Kısa, odaklanmış ve bilgi dolu çevrimiçi seminerler.",
-      "Genel Bakış",
-      "Webinarlarımız, belirli bir konu, yeni bir özellik veya sektörel bir gelişme hakkında hızlı ve yoğun bilgi aktarımı sağlar. Genellikle 45-60 dakika süren bu oturumlar, öğle molasında bile kendinizi geliştirmeniz için mükemmel bir fırsattır.",
-      "45-60",
-      "Dakika Süre",
-      "Ücretsiz",
-      "Genellikle",
-      "Uzman",
-      "Konuşmacılar",
-      "Soru",
-      "Cevap Bölümü",
-      "Kazanımlarınız",
-      "Zaman Verimliliği",
-      "Kısa sürede, belirli bir konuda derinlemesine bilgi sahibi olun.",
-      "Güncel Konular",
-      "Sektördeki en son trendleri, yönetmelik değişikliklerini ve yazılım yeniliklerini takip edin.",
-      "Kolay Erişim",
-      "Kayıt olun ve linke tıklayın. Herhangi bir kurulum gerektirmez.",
-      "Tekrar İzleme",
-      "Webinar kayıtlarına arşivimizden dilediğiniz zaman ulaşın.",
-      "Kimler İçin Uygun?",
-      "Yenilikleri takip etmek isteyen yoğun profesyoneller",
-      "Belirli bir özellik hakkında hızlı bilgi almak isteyen kullanıcılar",
-      "Allplan potansiyelini keşfetmek isteyen yöneticiler",
-      "Sürekli mesleki gelişimi hedefleyen öğrenciler ve akademisyenler",
-      "Hazır mısınız?",
-      "Eğitim takvimini incelemek veya özel bir teklif almak için bizimle iletişime geçin.",
-      "Webinar Takvimine Göz At",
-      "Kaydedilmiş Webinarlar",
-      "Kaçırdığınız veya tekrar izlemek istediğiniz webinarlarımıza buradan ulaşabilirsiniz.",
-      "23 Kasım 2021",
-      "IMO / ALLPLAN BRIDGE 2022 WEBİNAR",
-      "Allplan Bridge eğitmeni Şaman Bayyurt yazılımın hangi ihtiyaçlara cevap verdiği, kimler için kullanışlı olduğu ve çalışma yöntemleri hakkında bilgiler verecektir.",
-      "Hemen İzle",
-      "(Arşivde)",
-      "16 Kasım 2021",
-      "IMO / ALLPLAN ENGINEERING 2022 WEBINAR",
-      "Allplan ile her türlü gerçek 3B yapınızı modelleyip, donatıyı 3B olarak nasıl döşeyebileceğinizi ve bu yönteminin avantajlarını keşfedin.",
-      "Hemen İzle",
-      "(Arşivde)",
-      "6 Ağustos 2021",
-      "Allplan Bridge 2021",
-      "Allplan Bridge 2021 sürümü ile gelen yenilikler ve köprü tasarımı süreçleri üzerine kapsamlı bir webinar.",
-      "Hemen İzle",
-      "(Arşivde)",
-      "13 Temmuz 2021",
-      "BIMX5 Online Webinar - İmar Yönetmeliği",
-      "BIMX5 ve İmar Yönetmeliği uyumluluğu üzerine detaylı inceleme.",
-      "Hemen İzle",
-      "(Arşivde)",
-      "9 Temmuz 2021",
-      "BIMX5 Online Webinar - Genel",
-      "BIMX5 araçlarının genel tanıtımı ve kullanım alanları.",
-      "Hemen İzle",
-      "(Arşivde)",
-      "6 Temmuz 2021",
-      "BIMX5 Online Webinar - 2B DWG Converter",
-      "2B DWG dosyalarını BIM modellerine dönüştürme süreçleri ve BIMX5 Converter özellikleri.",
-      "Hemen İzle",
-      "(Arşivde)",
-      "2 Temmuz 2021",
-      "Bimplus Online Webinar: BIM İşbirliği",
-      "Günlük openBIM iş akışınız için özel yenilikler ve BIM işbirliği çözümleri.",
-      "Hemen İzle",
-      "(Arşivde)",
-      "10 Haziran 2021",
-      "Bimfili Youtube Kanalı: BIMX5 Nedir?",
-      "Ahmet Melih Dinekli ve Ferdi Dinekli'nin anlatımı ile 'BIMX5 Nedir?' ve nasıl kullanılır?",
-      "Hemen İzle",
-      "8 Haziran 2021",
-      "ALLPLAN PRECAST SEVİYENİZİ YÜKSELTİN",
-      "Yapısal detaycılar ve yükleniciler için tüm süreçleri destekleyen üst düzey BIM yazılımı Allplan Precast.",
-      "Hemen İzle",
-      "(Arşivde)",
-      "15 Ocak 2021",
-      "Soru Cevap Semineri",
-      "Allplan Architecture ve Engineering ile ilgili teknik sorular ve kullanım ipuçları üzerine interaktif oturum.",
-      "Hemen İzle",
-      "(Arşivde)",
-      "7 Ocak 2021",
-      "Allplan Engineering 2021 ve Yenilikler",
-      "Parametrik tasarım, modelleme ve Allplan Engineering 2021 sürümünün getirdiği tüm yenilikler.",
-      "Hemen İzle",
-      "(Arşivde)",
-      "30 Aralık 2020",
-      "Allplan 2018-2021: İpuçları",
-      "Ayarlar, seçenekler ve verimlilik artırıcı ipuçları ile Allplan deneyiminizi iyileştirin.",
-      "Hemen İzle",
-      "(Arşivde)",
-      "19 Şubat 2020",
-      "Görsel Komut Dosyalarına Giriş (Visual Scripting)",
-      "Visual Scripting dünyasına giriş yapın ve parametrik tasarımın gücünü keşfedin.",
-      "Hemen İzle",
-      "(Arşivde)"
-    ],
-    "sections": [
-      {
-        "heading": "Webinarlar",
-        "level": 2,
-        "items": [
-          "Training",
-          "Webinar",
-          "Ana Sayfaya Dön",
-          "BİLGİ PAYLAŞIMI",
-          "Kısa, odaklanmış ve bilgi dolu çevrimiçi seminerler."
-        ]
-      },
-      {
-        "heading": "Genel Bakış",
-        "level": 2,
-        "items": [
-          "Webinarlarımız, belirli bir konu, yeni bir özellik veya sektörel bir gelişme hakkında hızlı ve yoğun bilgi aktarımı sağlar. Genellikle 45-60 dakika süren bu oturumlar, öğle molasında bile kendinizi geliştirmeniz için mükemmel bir fırsattır.",
-          "45-60",
-          "Dakika Süre",
-          "Ücretsiz",
-          "Genellikle",
-          "Uzman",
-          "Konuşmacılar",
-          "Soru",
-          "Cevap Bölümü"
-        ]
-      },
-      {
-        "heading": "Zaman Verimliliği",
-        "level": 4,
-        "items": [
-          "Kısa sürede, belirli bir konuda derinlemesine bilgi sahibi olun."
-        ]
-      },
-      {
-        "heading": "Güncel Konular",
-        "level": 4,
-        "items": [
-          "Sektördeki en son trendleri, yönetmelik değişikliklerini ve yazılım yeniliklerini takip edin."
-        ]
-      },
-      {
-        "heading": "Kolay Erişim",
-        "level": 4,
-        "items": [
-          "Kayıt olun ve linke tıklayın. Herhangi bir kurulum gerektirmez."
-        ]
-      },
-      {
-        "heading": "Tekrar İzleme",
-        "level": 4,
-        "items": [
-          "Webinar kayıtlarına arşivimizden dilediğiniz zaman ulaşın."
-        ]
-      },
-      {
-        "heading": "Kimler İçin Uygun?",
-        "level": 3,
-        "items": [
-          "Yenilikleri takip etmek isteyen yoğun profesyoneller",
-          "Belirli bir özellik hakkında hızlı bilgi almak isteyen kullanıcılar",
-          "Allplan potansiyelini keşfetmek isteyen yöneticiler",
-          "Sürekli mesleki gelişimi hedefleyen öğrenciler ve akademisyenler"
-        ]
-      },
-      {
-        "heading": "Hazır mısınız?",
-        "level": 3,
-        "items": [
-          "Eğitim takvimini incelemek veya özel bir teklif almak için bizimle iletişime geçin.",
-          "Webinar Takvimine Göz At"
-        ]
-      },
-      {
-        "heading": "Kaydedilmiş Webinarlar",
-        "level": 2,
-        "items": [
-          "Kaçırdığınız veya tekrar izlemek istediğiniz webinarlarımıza buradan ulaşabilirsiniz.",
-          "23 Kasım 2021"
-        ]
-      },
-      {
-        "heading": "IMO / ALLPLAN BRIDGE 2022 WEBİNAR",
-        "level": 3,
-        "items": [
-          "Allplan Bridge eğitmeni Şaman Bayyurt yazılımın hangi ihtiyaçlara cevap verdiği, kimler için kullanışlı olduğu ve çalışma yöntemleri hakkında bilgiler verecektir.",
-          "Hemen İzle",
-          "(Arşivde)",
-          "16 Kasım 2021"
-        ],
-        "image": {
-          "src": "/assets/images/webinars/allplan-bridge-2022.png",
-          "alt": "IMO / ALLPLAN BRIDGE 2022 WEBİNAR"
-        }
-      },
-      {
-        "heading": "IMO / ALLPLAN ENGINEERING 2022 WEBINAR",
-        "level": 3,
-        "items": [
-          "Allplan ile her türlü gerçek 3B yapınızı modelleyip, donatıyı 3B olarak nasıl döşeyebileceğinizi ve bu yönteminin avantajlarını keşfedin.",
-          "Hemen İzle",
-          "(Arşivde)",
-          "6 Ağustos 2021"
-        ],
-        "image": {
-          "src": "/assets/images/webinars/allplan-engineering-2022.png",
-          "alt": "IMO / ALLPLAN ENGINEERING 2022 WEBINAR"
-        }
-      },
-      {
-        "heading": "Allplan Bridge 2021",
-        "level": 3,
-        "items": [
-          "Allplan Bridge 2021 sürümü ile gelen yenilikler ve köprü tasarımı süreçleri üzerine kapsamlı bir webinar.",
-          "Hemen İzle",
-          "(Arşivde)",
-          "13 Temmuz 2021"
-        ],
-        "image": {
-          "src": "/assets/images/webinars/allplan-bridge-2021.jpg",
-          "alt": "Allplan Bridge 2021"
-        }
-      },
-      {
-        "heading": "BIMX5 Online Webinar - İmar Yönetmeliği",
-        "level": 3,
-        "items": [
-          "BIMX5 ve İmar Yönetmeliği uyumluluğu üzerine detaylı inceleme.",
-          "Hemen İzle",
-          "(Arşivde)",
-          "9 Temmuz 2021"
-        ],
-        "image": {
-          "src": "/assets/images/webinars/bimx5.jpg",
-          "alt": "BIMX5 Online Webinar - İmar Yönetmeliği"
-        }
-      },
-      {
-        "heading": "BIMX5 Online Webinar - Genel",
-        "level": 3,
-        "items": [
-          "BIMX5 araçlarının genel tanıtımı ve kullanım alanları.",
-          "Hemen İzle",
-          "(Arşivde)",
-          "6 Temmuz 2021"
-        ],
-        "image": {
-          "src": "/assets/images/webinars/bimx5.jpg",
-          "alt": "BIMX5 Online Webinar - Genel"
-        }
-      },
-      {
-        "heading": "BIMX5 Online Webinar - 2B DWG Converter",
-        "level": 3,
-        "items": [
-          "2B DWG dosyalarını BIM modellerine dönüştürme süreçleri ve BIMX5 Converter özellikleri.",
-          "Hemen İzle",
-          "(Arşivde)",
-          "2 Temmuz 2021"
-        ],
-        "image": {
-          "src": "/assets/images/webinars/bimx5.jpg",
-          "alt": "BIMX5 Online Webinar - 2B DWG Converter"
-        }
-      },
-      {
-        "heading": "Bimplus Online Webinar: BIM İşbirliği",
-        "level": 3,
-        "items": [
-          "Günlük openBIM iş akışınız için özel yenilikler ve BIM işbirliği çözümleri.",
-          "Hemen İzle",
-          "(Arşivde)",
-          "10 Haziran 2021"
-        ],
-        "image": {
-          "src": "/assets/images/webinars/qa-seminar.jpg",
-          "alt": "Bimplus Online Webinar: BIM İşbirliği"
-        }
-      },
-      {
-        "heading": "Bimfili Youtube Kanalı: BIMX5 Nedir?",
-        "level": 3,
-        "items": [
-          "Ahmet Melih Dinekli ve Ferdi Dinekli'nin anlatımı ile 'BIMX5 Nedir?' ve nasıl kullanılır?",
-          "Hemen İzle",
-          "8 Haziran 2021"
-        ],
-        "image": {
-          "src": "/assets/images/webinars/bimx5-youtube.jpeg",
-          "alt": "Bimfili Youtube Kanalı: BIMX5 Nedir?"
-        }
-      },
-      {
-        "heading": "ALLPLAN PRECAST SEVİYENİZİ YÜKSELTİN",
-        "level": 3,
-        "items": [
-          "Yapısal detaycılar ve yükleniciler için tüm süreçleri destekleyen üst düzey BIM yazılımı Allplan Precast.",
-          "Hemen İzle",
-          "(Arşivde)",
-          "15 Ocak 2021"
-        ],
-        "image": {
-          "src": "/assets/images/webinars/allplan-precast.jpg",
-          "alt": "ALLPLAN PRECAST SEVİYENİZİ YÜKSELTİN"
-        }
-      },
-      {
-        "heading": "Soru Cevap Semineri",
-        "level": 3,
-        "items": [
-          "Allplan Architecture ve Engineering ile ilgili teknik sorular ve kullanım ipuçları üzerine interaktif oturum.",
-          "Hemen İzle",
-          "(Arşivde)",
-          "7 Ocak 2021"
-        ],
-        "image": {
-          "src": "/assets/images/webinars/qa-seminar.jpg",
-          "alt": "Soru Cevap Semineri"
-        }
-      },
-      {
-        "heading": "Allplan Engineering 2021 ve Yenilikler",
-        "level": 3,
-        "items": [
-          "Parametrik tasarım, modelleme ve Allplan Engineering 2021 sürümünün getirdiği tüm yenilikler.",
-          "Hemen İzle",
-          "(Arşivde)",
-          "30 Aralık 2020"
-        ],
-        "image": {
-          "src": "/assets/images/webinars/qa-seminar.jpg",
-          "alt": "Allplan Engineering 2021 ve Yenilikler"
-        }
-      },
-      {
-        "heading": "Allplan 2018-2021: İpuçları",
-        "level": 3,
-        "items": [
-          "Ayarlar, seçenekler ve verimlilik artırıcı ipuçları ile Allplan deneyiminizi iyileştirin.",
-          "Hemen İzle",
-          "(Arşivde)",
-          "19 Şubat 2020"
-        ],
-        "image": {
-          "src": "/assets/images/webinars/qa-seminar.jpg",
-          "alt": "Allplan 2018-2021: İpuçları"
-        }
-      },
-      {
-        "heading": "Görsel Komut Dosyalarına Giriş (Visual Scripting)",
-        "level": 3,
-        "items": [
-          "Visual Scripting dünyasına giriş yapın ve parametrik tasarımın gücünü keşfedin.",
-          "Hemen İzle",
-          "(Arşivde)"
-        ],
-        "image": {
-          "src": "/assets/images/webinars/visual-scripting.jpg",
-          "alt": "Görsel Komut Dosyalarına Giriş (Visual Scripting)"
-        }
-      }
-    ],
-    "contentLinks": [
-      {
-        "href": "/",
-        "text": "Ana Sayfaya Dön",
-        "external": false
-      },
-      {
-        "href": "https://www.allplan.com/trial-or-subscription/",
-        "text": "Şimdi İndir",
-        "external": true
-      },
-      {
-        "href": "https://forms.office.com/r/hXhnKAG912",
-        "text": "Teklif Talep Formu",
-        "external": true
-      }
-    ],
-    "buttons": [
-      "Webinar Takvimine Göz At",
-      "Hemen İzle"
-    ],
-    "images": [
-      {
-        "src": "/assets/images/webinars/allplan-bridge-2022.png",
-        "alt": "IMO / ALLPLAN BRIDGE 2022 WEBİNAR",
-        "isIcon": false
-      },
-      {
-        "src": "/assets/images/webinars/allplan-engineering-2022.png",
-        "alt": "IMO / ALLPLAN ENGINEERING 2022 WEBINAR",
-        "isIcon": false
-      },
-      {
-        "src": "/assets/images/webinars/allplan-bridge-2021.jpg",
-        "alt": "Allplan Bridge 2021",
-        "isIcon": false
-      },
-      {
-        "src": "/assets/images/webinars/bimx5.jpg",
-        "alt": "BIMX5 Online Webinar - İmar Yönetmeliği",
-        "isIcon": false
-      },
-      {
-        "src": "/assets/images/webinars/bimx5.jpg",
-        "alt": "BIMX5 Online Webinar - Genel",
-        "isIcon": false
-      },
-      {
-        "src": "/assets/images/webinars/bimx5.jpg",
-        "alt": "BIMX5 Online Webinar - 2B DWG Converter",
-        "isIcon": false
-      },
-      {
-        "src": "/assets/images/webinars/qa-seminar.jpg",
-        "alt": "Bimplus Online Webinar: BIM İşbirliği",
-        "isIcon": false
-      },
-      {
-        "src": "/assets/images/webinars/bimx5-youtube.jpeg",
-        "alt": "Bimfili Youtube Kanalı: BIMX5 Nedir?",
-        "isIcon": false
-      },
-      {
-        "src": "/assets/images/webinars/allplan-precast.jpg",
-        "alt": "ALLPLAN PRECAST SEVİYENİZİ YÜKSELTİN",
-        "isIcon": false
-      },
-      {
-        "src": "/assets/images/webinars/qa-seminar.jpg",
-        "alt": "Soru Cevap Semineri",
-        "isIcon": false
-      },
-      {
-        "src": "/assets/images/webinars/qa-seminar.jpg",
-        "alt": "Allplan Engineering 2021 ve Yenilikler",
-        "isIcon": false
-      },
-      {
-        "src": "/assets/images/webinars/qa-seminar.jpg",
-        "alt": "Allplan 2018-2021: İpuçları",
-        "isIcon": false
-      },
-      {
-        "src": "/assets/images/webinars/visual-scripting.jpg",
-        "alt": "Görsel Komut Dosyalarına Giriş (Visual Scripting)",
-        "isIcon": false
-      }
-    ],
-    "videos": [],
-    "embeds": [],
-    "playlistId": null,
-    "interactiveStates": [],
-    "schemaType": "Service",
-    "structuredLayout": {
-      "extraGrids": [
-        {
-          "kicker": "/ WEBINAR ARŞİVİ",
-          "title": "Kaydedilmiş Webinarlar",
-          "subtitle": "Kaçırdığınız veya tekrar izlemek istediğiniz webinar kayıtlarımız.",
-          "columns": 3,
-          "items": [
-            {
-              "title": "IMO / ALLPLAN BRIDGE 2022 WEBİNAR",
-              "badge": "23 Kasım 2021",
-              "description": "Allplan Bridge eğitmeni Şaman Bayyurt yazılımın hangi ihtiyaçlara cevap verdiği, kimler için kullanışlı olduğu ve çalışma yöntemleri hakkında bilgiler verecektir.",
-              "imageSrc": "/assets/images/webinars/allplan-bridge-2022.png",
-              "youtubeId": null
-            },
-            {
-              "title": "IMO / ALLPLAN ENGINEERING 2022 WEBINAR",
-              "badge": "16 Kasım 2021",
-              "description": "Allplan ile her türlü gerçek 3B yapınızı modelleyip, donatıyı 3B olarak nasıl döşeyebileceğinizi ve bu yönteminin avantajlarını keşfedin.",
-              "imageSrc": "/assets/images/webinars/allplan-engineering-2022.png",
-              "youtubeId": null
-            },
-            {
-              "title": "Allplan Bridge 2021",
-              "badge": "6 Ağustos 2021",
-              "description": "Allplan Bridge 2021 sürümü ile gelen yenilikler ve köprü tasarımı süreçleri üzerine kapsamlı bir webinar.",
-              "imageSrc": "/assets/images/webinars/allplan-bridge-2021.jpg",
-              "youtubeId": null
-            },
-            {
-              "title": "BIMX5 Online Webinar - İmar Yönetmeliği",
-              "badge": "13 Temmuz 2021",
-              "description": "BIMX5 ve İmar Yönetmeliği uyumluluğu üzerine detaylı inceleme.",
-              "imageSrc": "/assets/images/webinars/bimx5.jpg",
-              "youtubeId": null
-            },
-            {
-              "title": "BIMX5 Online Webinar - Genel",
-              "badge": "9 Temmuz 2021",
-              "description": "BIMX5 araçlarının genel tanıtımı ve kullanım alanları.",
-              "imageSrc": "/assets/images/webinars/bimx5.jpg",
-              "youtubeId": null
-            },
-            {
-              "title": "BIMX5 Online Webinar - 2B DWG Converter",
-              "badge": "6 Temmuz 2021",
-              "description": "2B DWG dosyalarını BIM modellerine dönüştürme süreçleri ve BIMX5 Converter özellikleri.",
-              "imageSrc": "/assets/images/webinars/bimx5.jpg",
-              "youtubeId": null
-            },
-            {
-              "title": "Bimplus Online Webinar: BIM İşbirliği",
-              "badge": "2 Temmuz 2021",
-              "description": "Günlük openBIM iş akışınız için özel yenilikler ve BIM işbirliği çözümleri.",
-              "imageSrc": "/assets/images/webinars/qa-seminar.jpg",
-              "youtubeId": null
-            },
-            {
-              "title": "Bimfili Youtube Kanalı: BIMX5 Nedir?",
-              "badge": "10 Haziran 2021",
-              "description": "Ahmet Melih Dinekli ve Ferdi Dinekli'nin anlatımı ile 'BIMX5 Nedir?' ve nasıl kullanılır?",
-              "imageSrc": "/assets/images/webinars/bimx5-youtube.jpeg",
-              "youtubeId": null
-            },
-            {
-              "title": "ALLPLAN PRECAST SEVİYENİZİ YÜKSELTİN",
-              "badge": "8 Haziran 2021",
-              "description": "Yapısal detaycılar ve yükleniciler için tüm süreçleri destekleyen üst düzey BIM yazılımı Allplan Precast.",
-              "imageSrc": "/assets/images/webinars/allplan-precast.jpg",
-              "youtubeId": null
-            },
-            {
-              "title": "Soru Cevap Semineri",
-              "badge": "15 Ocak 2021",
-              "description": "Allplan Architecture ve Engineering ile ilgili teknik sorular ve kullanım ipuçları üzerine interaktif oturum.",
-              "imageSrc": "/assets/images/webinars/qa-seminar.jpg",
-              "youtubeId": null
-            },
-            {
-              "title": "Allplan Engineering 2021 ve Yenilikler",
-              "badge": "7 Ocak 2021",
-              "description": "Parametrik tasarım, modelleme ve Allplan Engineering 2021 sürümünün getirdiği tüm yenilikler.",
-              "imageSrc": "/assets/images/webinars/qa-seminar.jpg",
-              "youtubeId": null
-            },
-            {
-              "title": "Allplan 2018-2021: İpuçları",
-              "badge": "30 Aralık 2020",
-              "description": "Ayarlar, seçenekler ve verimlilik artırıcı ipuçları ile Allplan deneyiminizi iyileştirin.",
-              "imageSrc": "/assets/images/webinars/qa-seminar.jpg",
-              "youtubeId": null
-            },
-            {
-              "title": "Görsel Komut Dosyalarına Giriş (Visual Scripting)",
-              "badge": "19 Şubat 2020",
-              "description": "Visual Scripting dünyasına giriş yapın ve parametrik tasarımın gücünü keşfedin.",
-              "imageSrc": "/assets/images/webinars/visual-scripting.jpg",
-              "youtubeId": null
-            }
-          ]
-        }
-      ]
-    }
   },
   "/solutions/addons": {
     "path": "/solutions/addons",

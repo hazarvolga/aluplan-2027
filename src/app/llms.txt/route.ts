@@ -48,8 +48,8 @@ const LLMS_TXT_CONTENT = `# Aluplan Program Sistemleri — ALLPLAN Türkiye
 - [CDS Add-On & Allto PythonPart & Scalypso](https://aluplan.com.tr/solutions/addons): 2B DWG Converter, Drive Curve, Parametric Terrain, Ramp, Steel Components, 3B Lazer Tarama Nokta Bulutu (Scalypso).
 - [BIMX5, Oska e-Hakediş & Poz Kataloğu](https://aluplan.com.tr/solutions/oska): 5B BIM metraj, yaklaşık maliyet ve Çevre Şehircilik poz entegrasyonu.
 
-## Eğitim, Teknik Destek ve Kaynaklar (/solutions-v2/training)
-- [ALLPLAN Eğitim Merkezi](https://aluplan.com.tr/solutions-v2/training): Dönemsel teknik webinarlar, hızlı başlangıç rehberi (/solutions-v2/training/quick-start) ve kuruma özel eğitim talepleri.
+## Eğitim, Teknik Destek ve Kaynaklar
+- [ALLPLAN Quick Start](https://aluplan.com.tr/solutions-v2/training/quick-start): 7 adımda hızlı başlangıç rehberi ve kuruma özel eğitim (/solutions-v2/training/individual).
 - [Video Kütüphanesi (14 Seri / 216 Video)](https://aluplan.com.tr/video-kutuphanesi): Hello ALLPLAN 2024, Otomatik Donatı, Köprü İş Akışları, Yol Tasarımı, AX3000, Prekast ve SDS2 eğitim videoları.
 - [Sıkça Sorulan Sorular (SSS)](https://aluplan.com.tr/faq): Lisans, kurulum, sistem gereksinimleri ve OpenBIM veri değişimi.
 - [Referanslar](https://aluplan.com.tr/references): Kamu kurumları, belediyeler, üniversiteler ve mühendislik/mimarlık ofisleri.

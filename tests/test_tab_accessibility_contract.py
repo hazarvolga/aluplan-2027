@@ -75,10 +75,6 @@ class TabAccessibilityContractTests(unittest.TestCase):
                 'id="module-panel"',
                 "aria-labelledby={`module-tab-${activeTabIdx}`}",
             ],
-            "src/components/sections/TrainingTabs.tsx": [
-                "handleStructuredTabKey",
-                "onKeyDown={(event) => handleStructuredTabKey",
-            ],
         }
 
         for relative, markers in component_markers.items():

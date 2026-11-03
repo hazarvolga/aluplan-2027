@@ -1,4 +1,9 @@
 {
+  "hero": {
+    "kicker": "GÖRSEL EĞİTİM",
+    "title": "Video Kütüphanesi",
+    "lead": "İhtiyacınız olan bilgiye görsel olarak ulaşın."
+  },
   "kicker": "GÖRSEL EĞİTİM · VİDEO KÜTÜPHANESİ",
   "title": "Önerilen Oynatma Listeleri ve Kanallar",
   "description": "Sizin için derlediğimiz en popüler ve faydalı video kaynak liste ve kanalları.",

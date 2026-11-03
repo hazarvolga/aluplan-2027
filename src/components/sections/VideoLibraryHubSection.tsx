@@ -1,115 +1,94 @@
 import Link from 'next/link';
 import { getAllPlaylists, getVideoLibraryData } from '@/lib/playlist-data';
+import { isReleaseContentEnabled } from '@/lib/release-flags';
 import { AluIcon } from '@/components/ui/AluIcon';
+import { CompactPageHero } from './CompactPageHero';
+import styles from './VideoLibraryHubSection.module.css';
 
 const allPlaylists = getAllPlaylists();
 const playlistByUrl = new Map(allPlaylists.map((playlist) => [playlist.url, playlist]));
 const videoLibrary = getVideoLibraryData();
+const ACTION_LABEL = 'İzleme Listesini İncele';
 
 export function VideoLibraryHubSection() {
+  const crumbs = [
+    { label: 'Ana Sayfa', href: '/' },
+    ...(isReleaseContentEnabled() ? [{ label: 'Kaynaklar', href: '/kaynaklar' }] : []),
+    { label: videoLibrary.hero.title }
+  ];
+
   return (
-    <section className="preview-section" aria-labelledby="all-playlists-heading">
-      <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
-        <div className="alu-stack" style={{ gap: 'var(--space-application-jsx-regular)' }}>
-          <span className="preview-kicker">{videoLibrary.kicker}</span>
-          <h2 id="all-playlists-heading" className="alu-h1">
-            {videoLibrary.title}
-          </h2>
-          <p className="alu-body preview-meta" style={{ maxWidth: 'var(--container-application-meta)' }}>
-            {videoLibrary.description}
-          </p>
-        </div>
-
-        <div className="alu-yt-banner">
-          <div className="alu-yt-banner__watermark" aria-hidden="true">
-            <AluIcon name="youtube" size="lg" />
-          </div>
-          <div className="alu-yt-banner__content">
-            <div className="alu-yt-banner__badge">
-              <span className="alu-yt-banner__badge-icon">
+    <div className={styles.page}>
+      <CompactPageHero crumbs={crumbs} kicker={videoLibrary.hero.kicker} title={videoLibrary.hero.title} lead={videoLibrary.hero.lead} />
+      <div>
+        <section className={styles.band} aria-labelledby="video-channel-heading">
+          <div className="alu-container">
+            <div className={styles.banner}>
+              <div className={styles.bannerText}>
+                <p className={styles.badge}>{videoLibrary.subscribe.badge}</p>
+                <h2 id="video-channel-heading" className={styles.bannerTitle}>{videoLibrary.subscribe.title}</h2>
+                <p className={styles.text}>{videoLibrary.subscribe.description}</p>
+              </div>
+              <a className="alu-button alu-button--primary alu-button--md" href={videoLibrary.subscribe.href} target="_blank" rel="noopener noreferrer">
                 <AluIcon name="youtube" size="sm" />
-              </span>
-              <span>{videoLibrary.subscribe.badge}</span>
-            </div>
-            <h3 className="alu-yt-banner__title">
-              {videoLibrary.subscribe.title}
-            </h3>
-            <p className="alu-yt-banner__desc">
-              {videoLibrary.subscribe.description}
-            </p>
-          </div>
-          <div className="alu-yt-banner__action">
-            <a
-              href={videoLibrary.subscribe.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="alu-yt-subscribe-btn"
-            >
-              <AluIcon name="youtube" size="md" />
-              <span>{videoLibrary.subscribe.label}</span>
-            </a>
-          </div>
-        </div>
-
-        <div className="alu-yt-grid">
-          {videoLibrary.items.map((item, idx) => {
-            const isInternal = item.url.startsWith('/solutions-v2');
-            const isExternal = item.url.startsWith('http');
-            const matchedPlaylist = isInternal ? playlistByUrl.get(item.url) : undefined;
-            const cardClassName = `alu-yt-card${
-              isInternal ? ' alu-yt-card--internal' : ''
-            }`;
-
-            const cardInner = (
-              <>
-                <div className="alu-yt-card__top">
-                  <div className="alu-yt-card__icon">
-                    <AluIcon name="youtube" size="lg" />
-                  </div>
-                  {matchedPlaylist && (
-                    <span className="alu-yt-card__count">
-                      {matchedPlaylist.count} Video
-                    </span>
-                  )}
-                </div>
-
-                <h3 className="alu-yt-card__title">{item.title}</h3>
-
-                <p className="alu-yt-card__desc">{item.description}</p>
-
-                <div className="alu-yt-card__footer">
-                  <span>İzleme Listesini İncele</span>
-                  <AluIcon name="external-link" size="sm" />
-                </div>
-
-                <div className="alu-yt-card__watermark" aria-hidden="true">
-                  <AluIcon name="circle-play" size="lg" />
-                </div>
-              </>
-            );
-
-            if (isInternal) {
-              return (
-                <Link key={`${item.title}-${idx}`} href={item.url} className={cardClassName}>
-                  {cardInner}
-                </Link>
-              );
-            }
-
-            return (
-              <a
-                key={`${item.title}-${idx}`}
-                href={item.url}
-                target={isExternal ? '_blank' : undefined}
-                rel={isExternal ? 'noopener noreferrer' : undefined}
-                className={cardClassName}
-              >
-                {cardInner}
+                <span>{videoLibrary.subscribe.label}</span>
+                <span className="alu-visually-hidden"> (yeni sekmede açılır)</span>
+                <AluIcon name="external-link" size="sm" />
               </a>
-            );
-          })}
-        </div>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.band} aria-labelledby="all-playlists-heading">
+          <div className="alu-container">
+            <h2 id="all-playlists-heading" className={styles.groupTitle}>{videoLibrary.title}</h2>
+            <p className={`${styles.text} ${styles.sectionLead}`}>{videoLibrary.description}</p>
+            <ul className={styles.tiles}>
+              {videoLibrary.items.map((item, idx) => {
+                const isInternal = item.url.startsWith('/');
+                const isExternal = item.url.startsWith('http');
+                const hasDestination = item.url !== '#';
+                const matchedPlaylist = isInternal ? playlistByUrl.get(item.url) : undefined;
+
+                return (
+                  <li key={`${item.title}-${idx}`} className={styles.tile}>
+                    <div className={styles.tileHead}>
+                      <h3 className={styles.itemTitle}>{item.title}</h3>
+                      <span className={hasDestination ? styles.icon : styles.iconMuted} aria-hidden="true">
+                        <AluIcon name="youtube" size="md" />
+                      </span>
+                    </div>
+                    <p className={styles.text}>{item.description}</p>
+                    {hasDestination && (
+                      <div className={styles.tileFoot}>
+                        {matchedPlaylist && <span className={styles.count}>{`${matchedPlaylist.count} Video`}</span>}
+                        {isInternal ? (
+                          <Link href={item.url} className={`alu-link alu-link--standalone ${styles.action}`} aria-label={`${ACTION_LABEL}: ${item.title}`}>
+                            <span>{ACTION_LABEL}</span>
+                            <AluIcon name="arrow-right" size="sm" />
+                          </Link>
+                        ) : (
+                          <a
+                            href={item.url}
+                            target={isExternal ? '_blank' : undefined}
+                            rel={isExternal ? 'noopener noreferrer' : undefined}
+                            className={`alu-link alu-link--standalone ${styles.action}`}
+                            aria-label={`${ACTION_LABEL}: ${item.title}`}
+                          >
+                            <span>{ACTION_LABEL}</span>
+                            <span className="alu-visually-hidden"> (yeni sekmede açılır)</span>
+                            <AluIcon name="external-link" size="sm" />
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </section>
       </div>
-    </section>
+    </div>
   );
 }

@@ -1,5 +1,20 @@
 # Oturum devri
 
+## 03.11.2026 — Video Kütüphanesi ve Kaydedilmiş Webinarlar kompakt tasarımı (yerel, commitlenmedi)
+
+- **`/video-kutuphanesi`:** `VideoLibraryHubSection` yeniden yazıldı (ortak `CompactPageHero`, resmi kanal şeridi, 22 kartlık kompakt ızgara; iç listelerde "N Video" sayacı). Hero metinleri üreteçten (`video-library.json` içindeki `hero`). Hub artık genel alt sayfa hero'sunu göstermez (`SubpageView`). Kaynakta bağlantısı `#` olan 4 kart tıklanabilir değil, gri ikonlu ve eylemsiz.
+- **`/kaydedilmis-webinarlar`:** webinarlar iri 16:9 kartlar yerine 2 sütunlu kompakt satırlar (144×81 küçük resim).
+- **Hata düzeltmesi:** adres taşımasından sonra hub iç listeleri `'/solutions-v2'` önekiyle tanıdığı için iç bağlantı sanmıyordu; `startsWith('/')` ile düzeltildi ve teste bağlandı.
+- **Kalan borç:** eski `alu-yt-*` CSS kuralları ve tokenları artık kullanılmıyor ama `test_app_styles.py` tarafından doğrulandığı için silinmedi; temizlik ayrı iş.
+- Kapılar: 359 unit test, 40/40 parite, 45/45 token, typecheck, build; masaüstü ve 375 px tarayıcı doğrulaması.
+
+## 03.11.2026 — Eğitim sayfaları yeniden düzenlendi (yerel, commitlenmedi)
+
+- **Kaldırıldı:** `/solutions-v2/training` (eğitim ana sayfası) ve `/solutions-v2/training/webinar` üretilen veriden silindi (`REMOVED_ROUTES`, `scripts/generate_site_data.py`). Eski adresler 308 ile yönlenir: eğitim ana sayfası `/kaynaklar`, webinar sayfası `/kaydedilmis-webinarlar`; 2027 sürümü kapalıyken (geri alma) ikisi de `/`'a gider. Kaynaklar'daki "Eğitim" kartı ve mobil menüdeki "Eğitim & Webinar" bağlantısı kaldırıldı; yalnız eğitim ana sayfasına özel `TrainingTabs` bileşeni silindi. Parite araçları `removedRoutes` ile bunları tanır.
+- **Eklendi:** `/egitim-merkezlerimiz` (Eğitim İş Ortaklarımız: 5 üniversite, IMO Ankara ve LGN Proje Akademi; içerik `src/data/education-partners.ts`) ve `/kaydedilmis-webinarlar` (13 kayıtlı webinar, genel bakış, kazanımlar, hedef kitle, çağrı; içerik `src/data/recorded-webinars.ts`, eski sayfanın 2026 kaynağından). İkisi de 2027 sürümüne bağlı rotalar (metadata, JSON-LD, sitemap). Ortak `CompactPageHero` Kaynaklar sayfasıyla paylaşılır.
+- **E-posta düzeltmesi:** LGN'in e-postası `info@lgnprojeakademi.com` (2026 kaynağı ve kullanıcı teyidi). Eski eğitim sayfası verisindeki `info@aluplan.com.tr` yanlış dönüşmüştü; sayfa silindi.
+- Kapılar: 350 unit test, 40/40 parite, 45/45 token, typecheck, build, production sunucu yoklaması ve tarayıcı doğrulaması.
+
 ## 03.11.2026 — Video kütüphanesi SEO uyumlu adrese taşındı (yerel, commitlenmedi)
 
 - `/solutions-v2/training/video-library` ve altındaki 14 oynatma listesi `/video-kutuphanesi` ve `/video-kutuphanesi/<liste>` adreslerine taşındı; eski adresler `:path*` ile 308 yönlenir (`next.config.mjs`). Taşıma üreteçteki `ROUTE_PREFIX_RENAMES` ile üretim sonrası uygulanır; kaynak envanter eşleşmesi `tests/fixtures/sitewide_parity_policy.json` içindeki `routePrefixRenames` ile yapılır (doğrulayıcılar ve parite betiği önek kuralını bilir).
@@ -9,7 +24,10 @@
 ## 03.11.2026 — Açık maddeler (kullanıcı: "sonra bakacağız")
 
 - **Kaynaklar sayfası:** mobil menüye "Kaynaklar" eklendi; Öğren/Bilgi kartlarında ikonlar sağ üst köşede, zeminsiz (lisans satırlarındaki kutulu ikonlar aynen kaldı). `/kaynaklar` adresi öneridir, onay bekliyor. `navigation.json` içindeki `directLinks` verisi arayüzde kullanılmıyor, eski hedefi (`/#professional-services`) gösteriyor.
-- **Kaynaklar yeni kartlar:** "Video Kütüphanesi" kartının bağlantısı kesinleşti (`/video-kutuphanesi`); açıklama ve buton metni hâlâ geçici. "Eğitim Merkezleri" kartının bağlantısı (geçici `/solutions-v2/training`), açıklaması ve buton metni kullanıcıdan gelecek. Kaynak: `scripts/generate_site_data.py` içindeki `ADDED_SERVICES` (ikonlar `SERVICE_ICONS`'ta). Sürüm kapalıyken eski ana sayfa bölümü de bu iki kartı gösterir (sayı 22).
+- **Kaynaklar yeni kartlar:** "Video Kütüphanesi" (`/video-kutuphanesi`), "Kaydedilmiş Webinarlar" (`/kaydedilmis-webinarlar`) ve "Eğitim Merkezleri" (`/egitim-merkezlerimiz`) bağlantıları kesin. Video Kütüphanesi ve Eğitim Merkezleri kartlarının açıklama/buton metni hâlâ geçici (Kaydedilmiş Webinarlar açıklaması eski sayfanın kendi metninden). Kaynak: `scripts/generate_site_data.py` içindeki `ADDED_SERVICES`. Sürüm kapalıyken eski ana sayfa bölümü de bu üç kartı gösterir (sayı 22).
+- **Kayıtlı webinarlar:** Eski sayfadaki "Hemen İzle" yalnızca "(Arşivde)" yazan tıklanamaz bir metindi; 13 webinarın hiçbirinde gerçek video bağlantısı yok. Yeni sayfada sahte buton yok, "Arşivde" etiketi var. Gerçek kayıt bağlantıları verilirse eklenir.
+- **Eğitim alt sayfaları:** `/solutions-v2/training` altındaki 6 sayfa (online, classroom, events, individual, e-learning, quick-start) yerinde duruyor ama siteden bağlantı almıyor; silinsin mi kararı bekliyor.
+- **LGN logosu:** Eğitim İş Ortaklarımız sayfasında LGN Proje Akademi logosu yok (projede dosyası bulunamadı); dosya verilirse eklenir.
 - **AX3000 Mekanik Tesisat:** "Modüller" başlığı (kaynakta yok) ve bölüm sırası (modüller özelliklerin önüne alınabilir) onay bekliyor.
 - **BIMFlex özel video (B3):** kart kaldırılsın mı, video sahibinden herkese açık yapılması mı istensin?
 - **Doğrulanmamış iddialar (C1):** üreticiden bilgi bekleniyor.

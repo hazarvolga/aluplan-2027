@@ -299,23 +299,8 @@ export interface StructuredReferencesDirectory {
   items: StructuredReferenceItem[];
 }
 
-export interface StructuredTrainingTabs {
-  title: string;
-  tabs: {
-    key: string;
-    label: string;
-    title: string;
-    paragraphs: string[];
-    features: string[];
-    href: string;
-    linkLabel: string;
-    imageSrc?: string;
-  }[];
-}
-
 export interface StructuredPageLayout {
   contentBlocks?: StructuredContentBlock[];
-  trainingTabs?: StructuredTrainingTabs;
   intro?: StructuredIntro;
   workflowLinks?: StructuredWorkflowLink[] | null;
   stats?: StructuredStatItem[];

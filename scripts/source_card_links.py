@@ -36,7 +36,6 @@ class CardSource:
 
 CARD_SOURCES: tuple[CardSource, ...] = (
     CardSource("/products", "app/products/page.tsx", "products", label="Detayları Görüntüle"),
-    CardSource("/solutions-v2/training", "app/solutions-v2/training/page.tsx", "formats", label="Detayları Gör"),
     CardSource("/solutions/addons", "app/solutions/addons/ClientPage.tsx", "items", label_prop="buttonText"),
     CardSource("/solutions/cds-addon", "app/solutions/cds-addon/ClientPage.tsx", "addonsCards", label_prop="buttonText"),
     CardSource(

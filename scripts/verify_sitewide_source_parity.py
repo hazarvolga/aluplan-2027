@@ -100,7 +100,7 @@ def validate_policy(policy: dict) -> None:
         if not clean_text(override.get("evidence")) and not default_evidence:
             raise ValueError(f"Exact override needs an evidence pointer: {route}")
 
-    for old, new in {**policy.get("routeRenames", {}), **policy.get("routePrefixRenames", {})}.items():
+    for old, new in {**policy.get("routeRenames", {}), **policy.get("routePrefixRenames", {}), **policy.get("removedRoutes", {})}.items():
         if any(char in old + new for char in WILDCARD_CHARS):
             raise ValueError(f"Wildcard route rename is not allowed: {old}")
 
@@ -241,7 +241,7 @@ def _source_snapshot(
     root: Optional[Path] = None,
 ) -> dict[str, dict]:
     image_hashes = image_hashes or {}
-    excluded = {item["route"] for item in policy.get("excludedRoutes", [])}
+    excluded = {item["route"] for item in policy.get("excludedRoutes", [])} | set(policy.get("removedRoutes", {}))
     snapshot: dict[str, dict] = {}
     for page in inventory.get("pages", []):
         if page.get("status") != 200:

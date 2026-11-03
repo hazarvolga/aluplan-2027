@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { getHomepageData } from '@/lib/site-shared';
 import { AluIcon } from '@/components/ui/AluIcon';
 import type { AluIconName } from '@/components/ui/AluIcon';
+import { CompactPageHero } from './CompactPageHero';
 import styles from './ResourcesDirectory.module.css';
 
 type Service = ReturnType<typeof getHomepageData>['services'][number];
@@ -146,28 +147,21 @@ function GridGroup({ services }: { services: Service[] }) {
 export function ResourcesDirectory() {
   return (
     <div className={styles.page}>
-      <header className={styles.hero}>
-        <div className="alu-container">
-          <nav className={styles.breadcrumb} aria-label="Sayfa yolu">
-            <Link href="/">Ana Sayfa</Link>
-            <span aria-hidden="true">/</span>
-            <span aria-current="page">Kaynaklar</span>
-          </nav>
-          <span className="alu-badge alu-badge--accent">{PAGE_KICKER}</span>
-          <h1 className={styles.title}>{PAGE_TITLE}</h1>
-          <p className={styles.lead}>
-            {`Eğitim, Microsoft Teams canlı bağlantı ve allplan.net.tr/tr ticket platformu dahil ${totalServices} profesyonel hizmet ve teknik kaynağa tek merkezden ulaşın.`}
-          </p>
-          <nav className={styles.chips} aria-label="Kaynak kategorileri">
-            {groups.map((group) => (
-              <a key={group.id} className={styles.chip} href={`#${group.id}`}>
-                <span>{group.title}</span>
-                <span className={styles.count}>{group.services.length}</span>
-              </a>
-            ))}
-          </nav>
-        </div>
-      </header>
+      <CompactPageHero
+        crumbs={[{ label: 'Ana Sayfa', href: '/' }, { label: 'Kaynaklar' }]}
+        kicker={PAGE_KICKER}
+        title={PAGE_TITLE}
+        lead={`Eğitim, Microsoft Teams canlı bağlantı ve allplan.net.tr/tr ticket platformu dahil ${totalServices} profesyonel hizmet ve teknik kaynağa tek merkezden ulaşın.`}
+      >
+        <nav className={styles.chips} aria-label="Kaynak kategorileri">
+          {groups.map((group) => (
+            <a key={group.id} className={styles.chip} href={`#${group.id}`}>
+              <span>{group.title}</span>
+              <span className={styles.count}>{group.services.length}</span>
+            </a>
+          ))}
+        </nav>
+      </CompactPageHero>
       <div>
         {groups.map((group) => (
           <section key={group.id} id={group.id} className={styles.band} aria-labelledby={`${group.id}-title`}>

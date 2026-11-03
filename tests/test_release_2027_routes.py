@@ -9,7 +9,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = "https://aluplan.com.tr"
 SITE_DESCRIPTION_PREFIX = "1995'ten beri Türkiye'nin güvenilir ALLPLAN distribütörü"
-RELEASE_PATHS = ["/2027/features", "/2027/max", "/2027/civil", "/2027/frilo", "/2027/scia", "/paket-karsilastirma", "/product-lifecycle", "/kaynaklar"]
+RELEASE_PATHS = ["/2027/features", "/2027/max", "/2027/civil", "/2027/frilo", "/2027/scia", "/paket-karsilastirma", "/product-lifecycle", "/kaynaklar", "/egitim-merkezlerimiz", "/kaydedilmis-webinarlar"]
 PRODUCT_NAMES = {
     "/2027/features": "ALLPLAN 2027",
     "/2027/max": "Allplan Max",

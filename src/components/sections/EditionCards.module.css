@@ -8,3 +8,12 @@
 .card p{margin:0;color:var(--text-secondary);font-size:var(--type-body-size);line-height:var(--type-body-line-height)}
 .card li strong{display:block;color:var(--text-primary);font-weight:var(--font-weight-strong)}
 .itemsLabel{margin:var(--space-stack-md) 0 var(--space-stack-xs);color:var(--text-primary);font-size:var(--type-caption-size);font-weight:var(--font-weight-strong)}
+.steps .card{border-top:var(--border-width-strong) solid var(--accent-border)}
+.stepLabel{display:flex;flex-direction:column;gap:var(--space-stack-xs);margin:0 0 var(--space-stack-sm);color:var(--text-secondary);font-family:var(--font-mono);font-size:var(--type-mono-size);letter-spacing:var(--font-letter-spacing-mono);text-transform:uppercase}
+.card .stepLabel{color:var(--text-secondary);font-size:var(--type-mono-size)}
+.stepNumber{color:var(--accent-fg);font-size:var(--type-h2-size);line-height:1;letter-spacing:0}
+.icons{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:48rem){.icons{grid-template-columns:minmax(0,1fr)}}
+.icons .card{display:grid;align-content:start;gap:var(--space-stack-sm)}
+.icons .card h3{margin:0}
+.iconChip{display:inline-flex;align-items:center;justify-content:center;justify-self:start;padding:var(--space-inset-sm);margin-bottom:var(--space-stack-xs);border:var(--border-width-default) solid var(--accent-border);background:var(--accent-bg);color:var(--accent-fg)}

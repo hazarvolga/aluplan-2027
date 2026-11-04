@@ -46,7 +46,6 @@ function homepageImage(src: string) {
 }
 
 export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: boolean }) {
-  const cloudLink = data.quickLinks.find(([, href]) => href === '/products/allplan-cloud-services');
   return (
     <>
       {/* H01: Flagship Cinematic BIM Hero */}
@@ -153,7 +152,7 @@ export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: bool
       </section></DebugComponentLabel>}
 
       {/* H02: QuickLinks Command Ribbon */}
-      {previewMaxHero ? <><DebugComponentLabel name="HomepageProductHeading"><section className={styles.intro} aria-labelledby="homepage-products-heading"><div className="alu-container"><HomepageProductHeading />{cloudLink && <Link className="alu-link alu-link--standalone" href={cloudLink[1]}>{cloudLink[0]} ↗</Link>}</div></section></DebugComponentLabel><DebugComponentLabel name="HomepageProductPreviewTabs"><HomepageProductPreviewTabs /></DebugComponentLabel></> : <DebugComponentLabel name="quickRibbon (özel)"><section className="alu-quick-ribbon" aria-label="Hızlı erişimler">
+      {previewMaxHero ? <><DebugComponentLabel name="HomepageProductHeading"><section className={styles.intro} aria-labelledby="homepage-products-heading"><div className="alu-container"><HomepageProductHeading /></div></section></DebugComponentLabel><DebugComponentLabel name="HomepageProductPreviewTabs"><HomepageProductPreviewTabs /></DebugComponentLabel></> : <DebugComponentLabel name="quickRibbon (özel)"><section className="alu-quick-ribbon" aria-label="Hızlı erişimler">
         <div className="alu-container alu-quick-ribbon__grid">
           {data.quickLinks.map(([label, href], idx) => (
             <Link key={href} className="alu-quick-ribbon__item" href={href}>

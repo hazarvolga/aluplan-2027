@@ -25,6 +25,7 @@ import { SolutionHubSection } from './SolutionHubSection';
 import { SolutionCatalogSection } from './SolutionCatalogSection';
 import { PageEndConversion } from './PageEndConversion';
 import { getPageEndConversion } from './page-end-conversion-policy';
+import { relatedBridgeLinks } from '@/lib/related-links';
 import { handleStructuredTabKey } from './structured-tab-key';
 import { ContactMap } from './ContactMap';
 import { ScalypsoPageContent } from './ScalypsoPageContent';
@@ -93,6 +94,7 @@ export function SubpageView({
   const solutionHub = getSolutionHub(page.path);
   const solutionCatalog = page.path === '/solutions' ? getSolutionCatalog() : null;
   const pageEndConversion = getPageEndConversion(page);
+  const bridgeLinks = relatedBridgeLinks(page);
   // Separate high-resolution photos from small icon assets (52x52 / 128x128 PNGs)
   const photoImages = React.useMemo(() => {
     const seen = new Set<string>();
@@ -571,6 +573,18 @@ export function SubpageView({
         </section>
       )}
       </>}
+      {bridgeLinks.length > 0 && (
+        <section className="preview-section" aria-label="İlgili köprü çözümleri">
+          <div className="alu-container alu-cluster">
+            {bridgeLinks.map((link) => (
+              <Link key={link.href} className="alu-link alu-link--standalone" href={link.href}
+                aria-label={link.text === 'Özellikler' ? 'ALLPLAN Bridge Özellikleri' : undefined}>
+                {link.text} ↗
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
       {pageEndConversion && <DebugComponentLabel name="PageEndConversion"><PageEndConversion model={pageEndConversion} /></DebugComponentLabel>}
 
       <MediaViewerDialogs

@@ -1,5 +1,10 @@
 # Oturum devri
 
+## 04.11.2026 — SEO denetiminden yerel iyileştirmeler
+- Arama, footer ve paket yönlendirmesi be023bf commitine alındı. Sonrasında kaynak metniyle doğrulanabilen eski metadata kesimleri tam kaynak paragrafına tamamlandı; meta, sosyal paylaşım ve JSON-LD açıklamaları eşleştirildi, ekranda görünen metinler değiştirilmedi.
+- Köprü Tasarımı ve Civil sayfalarında kaynakta mevcut üç iç bağlantı görünür hale getirildi. Yerelde her iki hedef 200 döndü. Mobil hero LCP için animasyonu kaldırma veya düşük çözünürlük seçme uygulanmadı: mobilde animasyon yok, mevcut cover kırpması küçük görsellerde kalite kaybına yol açabilir; gerçek LCP izi ve alan verisi bekleniyor.
+- Cloudflare yönlendirme, bot politikası ve CSP kararları, kurumsal sayıların kaynak doğrulaması ile görsel alt metinlerinin kapsamlı incelemesi yapılmadı. Yerel SEO iyileştirmeleri canlıya dağıtılmadı.
+
 ## 04.11.2026 — Footer, paket yönlendirmesi ve arama kapsamı
 - Footer telif yılı 2027 yapıldı, geliştirici kredisi yeni sekmede hazarvolga.com.tr bağlantısıdır. /package-overview 301 ile /paket-karsilastirma adresine yönlenir ve site haritasından ve arama verisinden çıkarıldı. Yerelde HTTP ve üretilen HTML doğrulandı.
 - Arama Türkçe/aksan duyarsız ve çok kelimeli eşleştirme kullanır. Site haritasındaki 112 sayfa, 2027 sayfaları, yapılandırılmış sekmeler ve SSS, oynatma listeleri ve özel içerik kaynakları indekslendi; 12 sonuç sınırı kaldırıldı. İndeks arama açılınca yüklenir; 2027 kapalıyken yayınlanmayan rotalar gösterilmez. Üretim/güncellik: `pnpm search:index` ve `pnpm search:check`.

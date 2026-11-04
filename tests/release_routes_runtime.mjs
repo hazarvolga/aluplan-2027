@@ -31,6 +31,7 @@ const routes = evaluate('src/lib/release-2027-routes.ts', (request) => {
 const schema = evaluate('src/lib/schema.ts', (request) => {
   if (request === './site-data') return { ...siteData, getSiteIdentity: () => ({}) };
   if (request === './share-image') return { getPageShareImage: () => ({ url: '' }) };
+  if (request === './metadata-description') return evaluate('src/lib/metadata-description.ts', () => { throw new Error('metadata-description must not import'); });
   throw new Error(`Unsupported schema import: ${request}`);
 });
 const sitemap = evaluate('src/app/sitemap.ts', (request) => {

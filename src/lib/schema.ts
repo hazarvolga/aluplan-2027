@@ -1,6 +1,7 @@
 import { getSiteIdentity, SITE_ORIGIN } from './site-data';
 import type { PageRecord, PlaylistRecord, StructuredFaqItem } from './site-data';
 import { getPageShareImage } from './share-image';
+import { metadataDescription } from './metadata-description';
 
 const PRODUCT_NAMES: Readonly<Record<string, string>> = {
   '/products/allplan': 'ALLPLAN',
@@ -86,7 +87,7 @@ export function buildPageJsonLd(page: PageRecord, playlist?: PlaylistRecord | nu
     url: pageUrl,
     name: page.title,
     headline: page.h1,
-    description: page.description,
+    description: metadataDescription(page),
     inLanguage: 'tr-TR',
     isPartOf: {
       '@id': `${SITE_ORIGIN}/#website`
@@ -108,7 +109,7 @@ export function buildPageJsonLd(page: PageRecord, playlist?: PlaylistRecord | nu
       '@id': appEntityId,
       name: productName(page),
       image: getPageShareImage(page).url,
-      description: page.description,
+      description: metadataDescription(page),
       applicationCategory: 'DesignApplication',
       operatingSystem: 'Windows 10, Windows 11',
       url: pageUrl,

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getPageData } from './site-data';
 import { getPageShareImage } from './share-image';
+import { metadataDescription } from './metadata-description';
 
 export function buildPageMetadata(pathname: string): Metadata {
   const page = getPageData(pathname);
@@ -14,10 +15,11 @@ export function buildPageMetadata(pathname: string): Metadata {
 
   const isUtility = page.path === '/health' || page.path === '/search';
   const shareImage = getPageShareImage(page);
+  const description = metadataDescription(page);
 
   return {
     title: page.title,
-    description: page.description,
+    description,
     alternates: {
       canonical: page.canonical
     },
@@ -26,7 +28,7 @@ export function buildPageMetadata(pathname: string): Metadata {
       : { index: true, follow: true },
     openGraph: {
       title: page.title,
-      description: page.description,
+      description,
       url: page.canonical,
       siteName: 'Aluplan Program Sistemleri',
       locale: 'tr_TR',
@@ -36,7 +38,7 @@ export function buildPageMetadata(pathname: string): Metadata {
     twitter: {
       card: 'summary_large_image',
       title: page.title,
-      description: page.description,
+      description,
       images: [shareImage.url]
     }
   };

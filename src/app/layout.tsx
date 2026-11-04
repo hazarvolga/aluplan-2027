@@ -5,6 +5,8 @@ import { SiteShell } from '@/components/shell/SiteShell';
 import { ConsentScripts } from '@/components/shell/ConsentScripts';
 import { DebugOverlayController } from '@/components/sections/DebugComponentLabel';
 import { SITE_ORIGIN } from '@/lib/site-data';
+import { isReleaseContentEnabled } from '@/lib/release-flags';
+import { SearchIndexProvider } from '@/components/shell/SearchIndexProvider';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_ORIGIN),
@@ -25,7 +27,7 @@ export default function RootLayout({
     <html lang="tr" data-theme="aluplan" data-mode="dark">
       <body>
         <DebugOverlayController />
-        <SiteShell>{children}</SiteShell>
+        <SearchIndexProvider showRelease={isReleaseContentEnabled()}><SiteShell>{children}</SiteShell></SearchIndexProvider>
         <ConsentScripts />
       </body>
     </html>

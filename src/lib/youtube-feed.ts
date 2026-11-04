@@ -44,16 +44,22 @@ async function readBoundedFeed(response: Response): Promise<string> {
   }
 }
 
-export async function getChannelVideos(channelId: string): Promise<ChannelVideo[]> {
-  if (!/^UC[A-Za-z0-9_-]{22}$/.test(channelId)) return [];
+export async function getChannelVideosWithStatus(channelId: string): Promise<ChannelVideo[] | null> {
+  if (!/^UC[A-Za-z0-9_-]{22}$/.test(channelId)) return null;
   try {
     const response = await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`, {
       next: { revalidate: 3600 }, signal: AbortSignal.timeout(5000),
     });
     if (!response.ok) throw new Error("feed_unavailable");
-    return parseChannelFeed(await readBoundedFeed(response));
+    const xml = await readBoundedFeed(response);
+    if (!/<feed(?:\s|>)/i.test(xml) || !/<\/feed\s*>/i.test(xml)) throw new Error('feed_invalid');
+    return parseChannelFeed(xml);
   } catch {
     console.warn("YouTube channel feed could not be loaded.");
-    return [];
+    return null;
   }
+}
+
+export async function getChannelVideos(channelId: string): Promise<ChannelVideo[]> {
+  return (await getChannelVideosWithStatus(channelId)) ?? [];
 }

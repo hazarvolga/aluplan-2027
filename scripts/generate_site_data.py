@@ -1324,7 +1324,7 @@ navigation_data = {
             {"label": "Kullanım Şartları", "href": "/kullanim-sartlari"},
             {"label": "KVKK", "href": "/kvkk"},
         ],
-        "copyright": "© 2026 Aluplan Program Sistemleri.",
+        "copyright": "© 2027 Aluplan Program Sistemleri.",
         "credit": "Design & Develop by Hazar Volga Ekiz",
     },
 }
@@ -1518,6 +1518,17 @@ with open(data_dir / "video-library.json", "w", encoding="utf-8") as f:
     json.dump(rename_routes(video_library_data), f, ensure_ascii=False, indent=2)
 
 # Build search-index.json
+def searchable_text(value):
+    """Extract visible structured content without indexing URLs and technical identifiers."""
+    if isinstance(value, str):
+        return [value] if value and not value.startswith(("/", "http://", "https://", "#")) else []
+    if isinstance(value, list):
+        return [text for item in value for text in searchable_text(item)]
+    if isinstance(value, dict):
+        excluded = {"id", "href", "src", "url", "image", "icon", "className", "type", "key", "slug", "variant", "videoId"}
+        return [text for key, item in value.items() if key not in excluded for text in searchable_text(item)]
+    return []
+
 search_entries = [
     {
         "path": p["path"],
@@ -1525,9 +1536,9 @@ search_entries = [
         "seoTitle": p["title"],
         "section": p["section"],
         "description": p["description"],
-        "keywords": " ".join(h["text"] for h in p["headings"][:8]),
+        "keywords": " ".join([*(searchable_text(p["structuredLayout"]) if p.get("structuredLayout") else [*(h["text"] for h in p["headings"]), *p.get("bodyNodes", []), *searchable_text(p.get("sections"))]), *searchable_text(playlist_by_id.get(p.get("playlistId")))]),
     }
-    for p in pages_data.values()
+    for p in pages_data.values() if p["path"] != "/package-overview"
 ]
 with open(data_dir / "search-index.json", "w", encoding="utf-8") as f:
     json.dump(search_entries, f, ensure_ascii=False, indent=2)

@@ -1,11 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import type { ReactElement } from 'react';
-import { getHomepageData, getSearchIndex } from '@/lib/site-shared';
+import { useEffect, type ReactElement } from 'react';
+import { getHomepageData } from '@/lib/site-shared';
+import { useSearchIndex } from '@/components/shell/SearchIndexProvider';
+import { searchEntries } from '@/lib/search';
 import { AluIcon } from '@/components/ui/AluIcon';
 
-const searchIndex = getSearchIndex();
 const homepageData = getHomepageData();
 
 interface SearchPageSectionProps {
@@ -17,18 +18,9 @@ export function SearchPageSection({
   query,
   onQueryChange
 }: SearchPageSectionProps): ReactElement {
-  const filteredResults = query.trim()
-    ? searchIndex.filter((item) => {
-        const normalizedQuery = query.toLowerCase();
-        return (
-          item.title.toLowerCase().includes(normalizedQuery) ||
-          item.seoTitle.toLowerCase().includes(normalizedQuery) ||
-          item.description.toLowerCase().includes(normalizedQuery) ||
-          item.path.toLowerCase().includes(normalizedQuery) ||
-          item.keywords.toLowerCase().includes(normalizedQuery)
-        );
-      })
-    : searchIndex;
+  const { entries: searchIndex, loading, error, videoPartial, load, retryVideos } = useSearchIndex();
+  useEffect(() => { load(); }, [load]);
+  const filteredResults = searchEntries(searchIndex, query);
 
   return (
     <section className="preview-section" aria-labelledby="search-page-heading">
@@ -36,6 +28,10 @@ export function SearchPageSection({
         <h2 id="search-page-heading" className="alu-h2">
           Tüm Sayfa, Ürün ve Çözümlerde Ara ({filteredResults.length} sonuç)
         </h2>
+        {loading && <p role="status">Arama hazırlanıyor…</p>}
+        {error && <button type="button" onClick={load}>Arama yüklenemedi. Tekrar dene</button>}
+        {videoPartial && <p role="status">Bazı güncel video başlıkları şu anda aranamayabilir. <button type="button" onClick={retryVideos}>Tekrar dene</button></p>}
+        {!loading && !error && query.trim() && filteredResults.length === 0 && <p role="status">Sonuç bulunamadı.</p>}
         <input
           type="search"
           className="alu-input"

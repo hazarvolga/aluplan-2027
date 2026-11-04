@@ -14,8 +14,7 @@ export {
   getSolutionHub,
   getSolutionCatalog,
   getSiteIdentity,
-  getHomepageData,
-  getSearchIndex
+  getHomepageData
 } from './site-shared';
 
 export interface BreadcrumbItem {

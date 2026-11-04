@@ -134,6 +134,11 @@ const nextConfig = {
         permanent: true
       },
       {
+        source: '/package-overview',
+        destination: '/paket-karsilastirma',
+        statusCode: 301
+      },
+      {
         source: '/2027/compare',
         destination: '/paket-karsilastirma',
         permanent: true

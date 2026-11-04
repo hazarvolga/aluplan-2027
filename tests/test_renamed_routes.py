@@ -23,6 +23,11 @@ def config_redirects() -> dict[str, dict]:
 
 
 class RenamedRouteRedirectTests(unittest.TestCase):
+    def test_placeholder_redirects_with_301_to_comparison(self):
+        redirect = config_redirects()["/package-overview"]
+        self.assertEqual(redirect["destination"], "/paket-karsilastirma")
+        self.assertEqual(redirect["statusCode"], 301)
+
     def test_old_urls_redirect_permanently_to_the_new_slugs(self):
         redirects = config_redirects()
         for old, new in (("/2027/compare", "/paket-karsilastirma"), ("/solutions-v2/faq", "/faq")):

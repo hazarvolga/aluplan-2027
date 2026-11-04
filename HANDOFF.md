@@ -1,5 +1,15 @@
 # Oturum devri
 
+## 04.11.2026 — Footer, paket yönlendirmesi ve arama kapsamı
+- Footer telif yılı 2027 yapıldı, geliştirici kredisi yeni sekmede hazarvolga.com.tr bağlantısıdır. /package-overview 301 ile /paket-karsilastirma adresine yönlenir ve site haritasından ve arama verisinden çıkarıldı. Yerelde HTTP ve üretilen HTML doğrulandı.
+- Arama Türkçe/aksan duyarsız ve çok kelimeli eşleştirme kullanır. Site haritasındaki 112 sayfa, 2027 sayfaları, yapılandırılmış sekmeler ve SSS, oynatma listeleri ve özel içerik kaynakları indekslendi; 12 sonuç sınırı kaldırıldı. İndeks arama açılınca yüklenir; 2027 kapalıyken yayınlanmayan rotalar gösterilmez. Üretim/güncellik: `pnpm search:index` ve `pnpm search:check`.
+- Video kaynaklarındaki YouTube kanal akışı başlıkları ayrı API ile alınır; akış erişilemezse eksik arama uyarısı ve tekrar deneme gösterilir. YouTube'a gömülü 2026 oynatma listesinin iframe içi başlıkları ve video/PDF dosyalarının içeriği bu kapsamda indekslenmez. Özel içerik kaynakları açık haritaya bağlıdır; yeni içerik bileşenleri eklenirken kapsama eklenmelidir.
+
+## 04.11.2026 — SEO, GEO ve performans raporu değerlendirmesi
+- Önceki çalışma bb173e9 commitine alındı; restore/pre-seo-geo-review-20261104 etiketi aynı noktayı gösterir. Kullanıcıya ait takip edilmeyen yerel dosyalar korunmuştur.
+- Kullanıcının belirttiği denetim raporu değerlendirildi; canlı www adresi 200, HTTP adresleri 307 döndürüyor ve /package-overview hazırlık içeriğiyle erişilebilir. Cloudflare robots yönergeleri ve mobil LCP nedeni ayrıca doğrulanmalı; yerel ana sayfa giriş animasyonu 768 px altına uygulanmıyor.
+- Rapor önerileri uygulanmadı. Sayfa yönlendirme kararı, bot politikası ve gerçek dağıtım üzerinde LCP izi öncelikli değerlendirme konuları; sayısal iddialar ve ürün üreticileri kaynaklarıyla doğrulanmalı.
+
 ## 04.11.2026 — Yaşam döngüsü içeriği tek sayfada
 - Kullanıcı kararıyla /product-lifecycle ve ana sayfa bağlantısı korundu, SSS'deki yinelenen yaşam döngüsü sekmesi kaldırıldı. Karşılaştırmada altı sorunun anlamı ve iki hizmet tablosu ayrı sayfada mevcut; bu sayfa ayrıca bakım aşamalarını, ürün tarihlerini ve hizmetlerin daha ayrıntılı kapsamını içerir. SSS'de dört kategori ve 19 soru kalır.
 - Kaynak ve üretilmiş veriler, SEO şeması ve parite kontrolleri güncellendi. 582 test (4 atlama), 102/102 kaynak paritesi ve 2027 build başarılı. Yeni yönlendirme eklenmedi; önceki yönlendirme önerisi kullanıcı tarafından değiştirilmiştir.

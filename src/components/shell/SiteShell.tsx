@@ -2,7 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { getNavigationData, getSearchIndex, MAIN_QUOTE_FORM_URL } from '@/lib/site-shared';
+import { getNavigationData, MAIN_QUOTE_FORM_URL } from '@/lib/site-shared';
+import { useSearchIndex } from './SearchIndexProvider';
+import { searchEntries } from '@/lib/search';
 import { AluIcon, AluIconName } from '@/components/ui/AluIcon';
 import { MediaDialog } from '@/components/ui/MediaDialog';
 import { clearConsent, useConsentReady, useCookieConsent, writeConsent } from '@/lib/consent';
@@ -11,7 +13,6 @@ import { DebugComponentLabel } from '@/components/sections/DebugComponentLabel';
 import debugStyles from '@/components/sections/DebugComponentLabel.module.css';
 
 const navData = getNavigationData();
-const searchIndex = getSearchIndex();
 
 function getSocialIconName(label: string): AluIconName {
   const low = label.toLowerCase();
@@ -35,6 +36,7 @@ function visibleItems(items: readonly MenuItem[]): MenuItem[] {
 }
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
+  const { entries: searchIndex, loading: searchLoading, error: searchError, videoPartial, load: loadSearch, retryVideos } = useSearchIndex();
   const [mode, setMode] = useState<'dark' | 'light'>('dark');
   const [openMenu, setOpenMenu] = useState<'products' | 'solutions' | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -42,6 +44,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   const [searchQuery, setSearchQuery] = useState('');
   const cookieConsent = useCookieConsent();
   const consentLoaded = useConsentReady();
+
+  useEffect(() => { if (searchOpen) loadSearch(); }, [searchOpen, loadSearch]);
 
   useEffect(() => {
     try {
@@ -86,20 +90,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
   const handleConsent = (choice: 'accepted' | 'rejected') => writeConsent(choice);
 
-  const filteredSearch = searchQuery.trim()
-    ? searchIndex
-        .filter((item) => {
-          const q = searchQuery.toLowerCase();
-          return (
-            item.title.toLowerCase().includes(q) ||
-            item.seoTitle.toLowerCase().includes(q) ||
-            item.description.toLowerCase().includes(q) ||
-            item.path.toLowerCase().includes(q) ||
-            item.keywords.toLowerCase().includes(q)
-          );
-        })
-        .slice(0, 12)
-    : searchIndex.slice(0, 8);
+  const filteredSearch = searchQuery.trim() ? searchEntries(searchIndex, searchQuery) : searchIndex.slice(0, 8);
 
   const logoSrc = mode === 'dark' ? '/assets/logo/aluplan-logo-white-filled.svg' : '/assets/logo/aluplan-logo-black.svg';
 
@@ -436,7 +427,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               Çerez tercihleri
             </button>
           </div>
-          <span>{navData.footer.credit}</span>
+          <a href="https://hazarvolga.com.tr/" target="_blank" rel="noopener noreferrer" className="alu-site-footer__link">{navData.footer.credit}</a>
         </div>
       </footer></DebugComponentLabel>
 
@@ -467,6 +458,10 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               data-media-dialog-initial-focus
             />
             <div className="alu-stack" style={{ gap: 'var(--space-application-jsx-regular)', maxHeight: 'var(--layout-application-utility-panel-max-height)', overflowY: 'auto' }}>
+              {searchLoading && <p role="status">Arama hazırlanıyor…</p>}
+              {searchError && <button type="button" onClick={loadSearch}>Arama yüklenemedi. Tekrar dene</button>}
+              {videoPartial && <p role="status">Bazı güncel video başlıkları şu anda aranamayabilir. <button type="button" onClick={retryVideos}>Tekrar dene</button></p>}
+              {!searchLoading && !searchError && searchQuery.trim() && filteredSearch.length === 0 && <p role="status">Sonuç bulunamadı.</p>}
               {filteredSearch.map((item) => (
                 <Link
                   key={item.path}

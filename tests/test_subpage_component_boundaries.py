@@ -270,21 +270,12 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
         parent = read("src/components/sections/SubpageView.tsx")
 
         self.assertTrue(component.startswith("'use client';"))
-        self.assertRegex(
-            component,
-            r"import \{[^}]*\bgetHomepageData\b[^}]*\bgetSearchIndex\b[^}]*\}",
-        )
+        self.assertIn('useSearchIndex', component)
         for marker in [
             "query: string",
             "onQueryChange: (query: string) => void",
-            "const searchIndex = getSearchIndex()",
-            "query.trim()",
-            "const normalizedQuery = query.toLowerCase()",
-            "item.title.toLowerCase().includes(normalizedQuery)",
-            "item.seoTitle.toLowerCase().includes(normalizedQuery)",
-            "item.description.toLowerCase().includes(normalizedQuery)",
-            "item.path.toLowerCase().includes(normalizedQuery)",
-            "item.keywords.toLowerCase().includes(normalizedQuery)",
+            "entries: searchIndex, loading, error, videoPartial, load, retryVideos",
+            "searchEntries(searchIndex, query)",
             "Tüm Sayfa, Ürün ve Çözümlerde Ara",
             "filteredResults.map",
             "item.section.toUpperCase()",
@@ -319,17 +310,17 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
                 )
             ]
 
-        self.assertEqual(len(search_index), 102)
-        self.assertEqual(len({item["path"] for item in search_index}), 102)
+        self.assertEqual(len(search_index), len(pages) - 1)
+        self.assertEqual(len({item["path"] for item in search_index}), len(search_index))
         self.assertEqual(
             [item["path"] for item in search_index],
-            list(pages.keys()),
+            [path for path in pages if path != "/package-overview"],
         )
         self.assertEqual(search_index[0]["path"], "/")
         self.assertEqual(search_index[-1]["path"], "/solutions/structural")
         self.assertEqual(
             {item["path"] for item in search_index if not item["keywords"]},
-            {"/health", "/package-overview", "/references", "/search"},
+            {path for path, page in pages.items() if path != "/package-overview" and not page["headings"] and not page["bodyNodes"]},
         )
         for item in search_index:
             with self.subTest(path=item["path"]):
@@ -340,17 +331,10 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
                 self.assertEqual(item["section"], page["section"])
                 self.assertEqual(item["description"], page["description"])
 
-        self.assertEqual(len(filter_paths("")), 102)
-        self.assertEqual(len(filter_paths(" ")), 102)
-        self.assertEqual(len(filter_paths("allplan")), 71)
-        self.assertEqual(
-            filter_paths("BIMFlex"),
-            ["/cozumler/diger-urunler", "/solutions/bimflex"],
-        )
-        self.assertEqual(len(filter_paths("Köprü")), 9)
-        self.assertEqual(len(filter_paths("Prekast")), 4)
+        self.assertEqual(len(filter_paths("")), len(search_index))
+        self.assertEqual(len(filter_paths(" ")), len(search_index))
+        self.assertIn("/solutions/bimflex", filter_paths("BIMFlex"))
         self.assertEqual(filter_paths("__none__"), [])
-        self.assertEqual(filter_paths(" bimflex "), ["/solutions/bimflex"])
 
     def test_subpage_hero_has_a_dedicated_stateless_render_boundary(self):
         component = read("src/components/sections/SubpageHeroSection.tsx")

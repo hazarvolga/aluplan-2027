@@ -77,8 +77,10 @@ for r in rows:
     elif r["classification"] == "redirect_to_valid_2xx":
         expected_redirects.append((url, r["redirect_target"].replace("https://aluplan.com.tr", "")))
 
-missing_routes = [u for u in expected_200_routes if u not in removed_routes and renamed_route(u) not in pages]
-check(f"All {110 - len(removed_routes)} public HTTP 200 routes exist in src/data/pages.json (110 in the source, {len(removed_routes)} removed by decision)", len(missing_routes) == 0 and len(pages) == 110 - len(removed_routes), f"missing={missing_routes}, count={len(pages)}")
+redirected_placeholder = "/package-overview"
+missing_routes = [u for u in expected_200_routes if u not in removed_routes and u != redirected_placeholder and renamed_route(u) not in pages]
+check("Source routes remain available as pages or approved redirects", len(missing_routes) == 0 and len(pages) == 110 - len(removed_routes), f"missing={missing_routes}, count={len(pages)}")
+check("Package overview redirects permanently to the comparison page", "source: '/package-overview'," in next_config and "destination: '/paket-karsilastirma',\n        statusCode: 301" in next_config and "'/package-overview'" in sitemap_ts)
 
 for src, dst in removed_routes.items():
     check(

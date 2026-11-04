@@ -3,7 +3,7 @@ import { getAllPages, SITE_ORIGIN } from '@/lib/site-data';
 import { isReleaseContentEnabled } from '@/lib/release-flags';
 import { PUBLISHED_RELEASE_2027_ROUTES } from '@/lib/release-2027-routes';
 
-const NON_INDEXABLE_PATHS = new Set(['/health', '/search', '/hero-3d', '/test-webgl']);
+const NON_INDEXABLE_PATHS = new Set(['/health', '/search', '/hero-3d', '/test-webgl', '/package-overview']);
 const LAST_MODIFIED = new Date('2026-10-25T00:00:00.000Z');
 const RELEASE_LAST_MODIFIED = new Date('2026-11-02T00:00:00.000Z');
 

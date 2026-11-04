@@ -1,10 +1,8 @@
 // Client-safe site data: constants, navigation, homepage and search index, without the full page dataset.
 import navigationJson from '@/data/navigation.json';
 import homepageJson from '@/data/homepage.json';
-import searchIndexJson from '@/data/search-index.json';
 import type {
   NavigationData,
-  SearchEntry,
   SiteIdentity,
   SolutionDirectory,
   SolutionDirectoryGroup
@@ -49,8 +47,4 @@ export function getSiteIdentity(): SiteIdentity {
 
 export function getHomepageData() {
   return homepageJson;
-}
-
-export function getSearchIndex(): SearchEntry[] {
-  return searchIndexJson as SearchEntry[];
 }

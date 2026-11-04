@@ -19,6 +19,19 @@ def allplan_group() -> list[dict]:
 
 
 class ReleaseMenuTests(unittest.TestCase):
+    def test_partner_solutions_are_in_collaboration_group(self):
+        navigation = json.loads((ROOT / 'src/data/navigation.json').read_text(encoding='utf-8'))
+        groups = navigation['productsMenu']
+        self.assertNotIn('ORTAK ÇÖZÜMLER', [group['title'] for group in groups])
+        collaboration = next(group for group in groups if group['title'] == 'İŞBİRLİĞİ YAZILIMI')
+        self.assertEqual([item['name'] for item in collaboration['items']], ['ALLPLAN BIMPLUS', 'Allplan Ortak Çözümleri'])
+        self.assertEqual(collaboration['items'][1]['href'], 'https://www.allplan.com/allplan-partner-solutions/')
+        self.assertTrue(collaboration['items'][1]['external'])
+        generator = (ROOT / 'scripts/generate_site_data.py').read_text(encoding='utf-8')
+        menu = generator.split('"productsMenu": [', 1)[1].split('"solutionsMenu": [', 1)[0]
+        self.assertNotIn('"title": "ORTAK ÇÖZÜMLER"', menu)
+        self.assertIn('"name": "Allplan Ortak Çözümleri"', menu.split('"title": "İŞBİRLİĞİ YAZILIMI"', 1)[1])
+
     def test_frilo_is_a_release_only_product_menu_entry(self):
         navigation = json.loads((ROOT / "src/data/navigation.json").read_text(encoding="utf-8"))
         items = [item for group in navigation["productsMenu"] for item in group["items"]]

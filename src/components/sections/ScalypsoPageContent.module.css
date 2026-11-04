@@ -10,14 +10,7 @@
 
 
 /* Module cards with images */
-.moduleGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr));gap:var(--space-stack-sm);margin-top:var(--space-stack-sm)}
-.moduleCard{display:flex;flex-direction:column;background:var(--card-bg);border:var(--border-width-default) solid var(--card-border);color:var(--text-primary);text-decoration:none;overflow:hidden;transition:box-shadow var(--motion-duration-fast) var(--motion-easing-standard)}
-.moduleCard:hover{box-shadow:var(--elevation-hover)}
-.moduleImageWrap{position:relative;aspect-ratio:16/9;overflow:hidden}
-.moduleImage{width:100%;height:100%;object-fit:cover;display:block}
-.moduleBody{display:flex;flex-direction:column;gap:var(--space-stack-xs);padding:var(--card-padding)}
-.moduleBody strong{font-size:var(--type-application-body-intro-size);color:var(--accent-fg)}
-.moduleBody span{color:var(--text-secondary);font-size:var(--type-caption-size);line-height:var(--type-body-line-height);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.moduleList{margin-top:var(--space-stack-sm)}
 
 /* Application image gallery */
 .appGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,10rem),1fr));gap:var(--space-stack-sm);margin-top:var(--space-stack-sm)}

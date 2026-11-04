@@ -1,6 +1,8 @@
 import type { SolutionDirectory } from '@/lib/site-data';
 import { SectionHeader } from './SectionHeader';
 import { SolutionOverviewCards } from './SolutionOverviewCards';
+import { ProductsOverview } from './ProductsOverview';
+import { DebugComponentLabel } from './DebugComponentLabel';
 import catalogStyles from './SolutionCatalogSection.module.css';
 
 export function SolutionCatalogSection({ directory }: { directory: SolutionDirectory }) {
@@ -21,7 +23,9 @@ export function SolutionCatalogSection({ directory }: { directory: SolutionDirec
         {groups.map((group, groupIndex) => (
           <section key={group.hubPath} className={`alu-stack ${catalogStyles.group}`} aria-labelledby={`solution-group-${groupIndex}`}>
             <SectionHeader kicker={`${String(groupIndex + 1).padStart(2, '0')} · ÇÖZÜM ALANI`} title={group.title} id={`solution-group-${groupIndex}`} />
-            <SolutionOverviewCards items={group.catalogItems} headingLevel={3} />
+            {group.hubPath === '/cozumler/bina-tasarimi' ? (
+              <DebugComponentLabel name="ProductsOverview"><ProductsOverview items={group.catalogItems} headingLevel={3} /></DebugComponentLabel>
+            ) : <SolutionOverviewCards items={group.catalogItems} headingLevel={3} />}
           </section>
         ))}
       </div>

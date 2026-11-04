@@ -1277,15 +1277,10 @@ navigation_data = {
             ],
         },
         {
-            "title": "ORTAK ÇÖZÜMLER",
-            "items": [
-                {"name": "Allplan Ortak Çözümleri", "href": "https://www.allplan.com/allplan-partner-solutions/", "external": True},
-            ],
-        },
-        {
             "title": "İŞBİRLİĞİ YAZILIMI",
             "items": [
                 {"name": "ALLPLAN BIMPLUS", "href": "/products/allplan-bimplus"},
+                {"name": "Allplan Ortak Çözümleri", "href": "https://www.allplan.com/allplan-partner-solutions/", "external": True},
             ],
         },
     ],

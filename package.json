@@ -13,12 +13,12 @@
     "typecheck": "tsc --noEmit",
     "test:parity": "python3 scripts/verify_phase6_parity.py",
     "test:source-contract": "python3 scripts/verify_structured_source_contract.py",
-    "test": "python3 -m unittest discover -s tests && pnpm test:source-contract && python3 scripts/verify_phase6_parity.py && pnpm styles:check && pnpm test:tokens",
+    "test": "python3 -m unittest discover -s tests && pnpm test:source-contract && python3 scripts/verify_phase6_parity.py && pnpm styles:check",
     "build": "pnpm styles:check && next build",
     "start": "next start --hostname 127.0.0.1 --port 3000",
     "docs:sync": "python3 scripts/document_assets.py",
     "styles:generate": "node design-system/scripts/build-tokens.mjs && python3 scripts/build_app_styles.py",
-    "styles:check": "node design-system/scripts/build-tokens.mjs --check && python3 scripts/build_app_styles.py --check",
+    "styles:check": "node design-system/scripts/build-tokens.mjs --check && python3 scripts/build_app_styles.py --check && python3 scripts/check_component_colors.py && node design-system/scripts/token-tests.mjs",
     "test:tokens": "node design-system/scripts/token-tests.mjs"
   },
   "dependencies": {

@@ -1,0 +1,3 @@
+.tabs :global(.alu-wf-cats) {
+  justify-content: flex-start;
+}

@@ -1,5 +1,117 @@
 # Oturum devri
 
+## 04.11.2026 — Palet denemesi öncesi geri dönüş noktası
+- Kullanıcı isteğiyle mevcut ortak bileşen ve tema değişiklikleri commitlenerek palet denemesi öncesi geri dönüş noktası hazırlanıyor. ASE dosyası ve kişisel yerel dosyalar çalışma ağacında korunur.
+
+## 04.11.2026 — Adobe Color ASE palet testi
+- Kök `AdobeColor My Color Theme.ase` geçerli: #586E8C, #21313F, #455D72, #728DA5, #D8D4D2. Dosya değiştirilmedi, palet siteye uygulanmadı.
+- Mevcut vurgu rollerine birebir aday eşlemede dört kontrast kontrolü başarısız; türetilmiş #F0EEED ve #9CB1C3 ile örnek eşlemede 192 kontrol başarılı, açık renkli görsel üstündeki yarı saydam video rozeti kontrastı 6,00:1. Bu, örnek rol eşlemesidir; nihai tasarım/görsel kabulü yapılmadı.
+
+## 04.11.2026 — Merkezi tema paleti güvencesi
+- Tema paletinin kanonik kaynağı design-system/tokens/tokens.json olarak belgelendi; bağımsız video rozeti metni Aluplan teal / Field moss paletinin açık tonuna bağlandı. Varsayılan Aluplan rozeti aynı rengi korur; Field rozeti kendi paletine uyarlanır. Paket karşılaştırma gölgesi tema elevation tokenına taşındı.
+- Bileşen ve app CSS modülleri ile statik JSX renkleri için dar istisnalı guard styles:check/build hattına eklendi; dinamik JS ve görsellere gömülü renkler kapsam dışıdır. Kart zemininde aksan kontrastı, palet mutasyonu ve yarı saydam medya rozeti kontrastı test edilir. Yeni palet uygulama adımları design-system/README.md'de.
+- 578 test başarılı (4 atlama), 47 token testi, 192 kontrast kontrolü ve 2027 bayraklı build başarılı. Kaynaklar koyu temada yerelde doğrulandı; bağımsız inceleme bulguları giderildi. Değişiklikler commit edilmedi.
+
+## 04.11.2026 — Kaynaklar ortak ara başlıkları
+- Kaynaklar sayfasının üç bölüm başlığı ortak SectionHeader bileşenine taşındı; başlık hiyerarşisi, bölüm ID'leri ve aria-labelledby ilişkileri korundu, turuncu etiketler eklendi.
+- Üç etiket ve başlık tarayıcıda doğrulandı; 27 ilgili test, typecheck ve styles:check başarılı. Teal paleti merkezi tokenlara bağlı, ancak farklı açık/koyu tonlar ve bağımsız medya rozeti/görsel renkleri tek değer değiştirilince otomatik güncellenmez. Değişiklik commit edilmedi.
+
+## 04.11.2026 — SupportGridCards bağlantı rengi
+- Normal SupportGridCards bağlantıları genel mavi yerine tema uyumlu vurgu rengini kullanır; hover'da ana metin rengi ve alt çizgi gösterilir. FeaturedSupportCards düğmeleri etkilenmez.
+- Açık ve koyu temada tarayıcıdan renkler doğrulandı; kart zemininde kontrast sırasıyla 5,47:1 ve 6,75:1. 19 kaynak testi ve styles:check başarılı; kod incelemesinde somut regresyon bulunmadı. Değişiklik commit edilmedi.
+
+## 04.11.2026 — Lisans kaynakları kart düzeni
+- Yazılım ve lisans işlemleri aynı kart düzenine taşındı: Connect: Giriş ve Deklarasyon Formu FeaturedSupportCards, kalan üç kaynak SupportGridCards içinde. İçerikler ve bağlantılar korundu.
+- Masaüstü ve mobil görünümde iki etiket ve 2/3 kart doğrulandı. 19 kaynak testi, typecheck ve styles:check başarılı; kod incelemesinde somut regresyon yok. Değişiklikler commit edilmedi.
+
+## 04.11.2026 — Bilgi ve güncellemeler öne çıkan kartları
+- ALLPLAN FAQ ve Sistem Gereksinimleri FeaturedSupportCards ile bölümün başına taşındı; kalan yedi kart SupportGridCards olarak sırasını koruyor. Metinler, ikonlar ve bağlantı hedefleri korunuyor.
+- Masaüstü ve mobilde iki ayrı turuncu etiket ve kart grupları doğrulandı; 19 kaynak testi, typecheck ve styles:check başarılı. Kod incelemesinde somut regresyon bulunmadı. Değişiklikler commit edilmedi.
+
+## 04.11.2026 — Destek kartlarının ayrılması
+- Büyük Teknik Destek ve Destek Platformu kartları ayrı FeaturedSupportCards bileşenine çıkarıldı; iki gruptaki normal kartlar aynı SupportGridCards bileşenini kullanıyor. Her bileşenin kendi turuncu etiketi yalnız kendi kartlarını sarıyor. Temel ikon/bağlantı yardımcıları ve bazı CSS sınıfları paylaşılmaya devam ediyor.
+- Masaüstü ve mobilde etiket sınırları ve 2/5/9 kart kontrol edildi; 19 kaynak testi, typecheck ve styles:check başarılı. İncelemede somut regresyon bulunmadı. Değişiklikler commit edilmedi.
+
+## 04.11.2026 — Ortak SupportGridCards
+- Kaynaklar sayfasının öne çıkan destek kartları ve normal kart grubu bağımsız SupportGridCards bileşenine taşındı; Öğren ve yardım al ile Bilgi ve güncellemeler aynı bileşeni ve turuncu etiketi kullanır. 2 öne çıkan, 5 normal ve 9 bilgi kartının içeriği, sıralaması, ikonları ve bağlantıları korundu.
+- Tarayıcıda iki etiket, kartlar ve mobil taşma kontrol edildi. Gerçek verilerle 18 kaynak testi, typecheck ve styles:check başarılı; kod incelemesinde somut regresyon bulunmadı. Değişiklikler commit edilmedi.
+
+## 04.11.2026 — Alt menü kompakt düzen
+- Ürünler ve Çözümler alt menü bağlantılarındaki oklar masaüstü ve mobilde kaldırıldı. Satır yüksekliği hafif azaltıldı; masaüstü bağlantıların dikey boşluğu 6 px'den 4 px'e düşürüldü, mobil iç boşluk korundu.
+- Masaüstünde iki menü ve mobil çekmecede okların kaldırıldığı tarayıcıda doğrulandı. 29 ilgili test ve styles:check başarılı; kod incelemesinde somut regresyon yok. Değişiklikler commit edilmedi.
+
+## 04.11.2026 — Ana menü düzeni ve geçişi
+- Ürünler menüsündeki Allplan Ortak Çözümleri bağlantısı, URL ve dış bağlantı niteliği korunarak İşbirliği Yazılımı sütununa taşındı; Ortak Çözümler sütunu kaldırıldı. Veri jeneratörü ve navigation.json birlikte güncellendi.
+- Masaüstü Çözümler ve Ürünler panellerine 200 ms yumuşak görünme geçişi eklendi; hareket azaltma tercihi desteklenir. Yerel tarayıcıda iki panel ve yeni menü düzeni doğrulandı. 29 ilgili test, typecheck ve styles:check başarılı; bağımsız incelemelerde somut regresyon bulunmadı. Değişiklikler commit edilmedi.
+
+## 04.11.2026 — SDS2 kategori ikonları
+- SDS2 Ultimate Fonksiyonellik Hızlı Bakış alanındaki beş kategoriye AluIcon kütüphanesinden farklı ikonlar eklendi. BenefitIconCards kategori varyantı isteğe bağlı kütüphane ikonu destekler; içerikler ve diğer sayfaların mevcut ikonları korundu.
+- SDS2 sayfasında beş ikon ve liste içerikleri tarayıcıda doğrulandı; 25 ilgili test, typecheck ve styles:check başarılı. Kod incelemesindeki eski kaynak-kalıbı testi güncellendi ve beş kategori eşlemesi için test eklendi. Değişiklikler commit edilmedi.
+
+## 04.11.2026 — EditionCards liste tipografisi
+- Ortak EditionCards liste metinleri 16 px'den 15,2 px'e, satır yüksekliği 25,6 px'den 22,8 px'e düşürüldü. Liste kullanan tüm varyantları etkiler; başlıklar ve açıklama paragrafları değişmez.
+- FRILO'da hesaplanan ölçüler ve beş liste öğesi tarayıcıda doğrulandı; styles:check ve 16 ilgili test başarılı (1 atlama). Kod incelemesinde somut regresyon bulunmadı. Değişiklik commit edilmedi.
+
+## 04.11.2026 — Ortak WorkFlowTabs ve sol hizalama
+- WorkflowSection başlığı korundu; kategori sekmeleri ve altındaki etkileşimli içerik, turuncu etiketi olan ortak WorkFlowTabs bileşenine çıkarıldı. Kategori butonları bileşenin kullanıldığı tüm sayfalarda sola hizalanır; FAQ etkilenmez.
+- AEC ve BIMPLUS sayfalarında etiket ve hizalama, AEC'de klavye ile sekme geçişi doğrulandı. 2027 bayraklarıyla build ve tam test paketi başarılı: 566 test, 4 atlama; bağımsız incelemede somut regresyon bulunmadı. Değişiklikler commit edilmedi.
+- FRILO sürüm kartları zaten ortak EditionCards bileşeninin cards varyantını kullanır; FRILO Geotechnics de aynı varyantı kullanır. SCIA ve diğer sayfalar aynı bileşenin farklı varyantlarını kullanabilir.
+
+## 04.11.2026 — Ortak fayda kart grubu
+- `BenefitsSection` içindeki kart grubu bağımsız `BenefitIconCards` bileşenine çıkarıldı ve turuncu etiketi eklendi. Ultimate'taki 12 kartın içeriği ve ikonları, diğer sayfalardaki kullanım ve SDS2 liste varyantı korundu.
+- Ultimate sayfasında 12 kart, 12 ikon ve etiket yerelde kontrol edildi. 2027 bayraklarıyla build ve tam test paketi başarılı: 563 test, 4 atlama; bağımsız incelemede somut regresyon yok. Değişiklikler önceki yerel çalışmalarla birlikte commit edilmedi.
+
+## 04.11.2026 — WorkflowRibbon tipografi ve oklar
+- Ortak `WorkflowRibbon` bağlantı metinleri 14 px/700'den 13,6 px/500'e düşürüldü. Renkli noktalar kaldırıldı; oklar sağ üste dönük `arrow-up-right` olarak değiştirildi. Tüm kullanan sayfalara yansır, bağlantı verileri korunur.
+- Civil'de yerel görünüm ve mobil genişlikte taşma/bağlantı boyutları kontrol edildi; 28 ilgili test, typecheck ve styles:check başarılı. Değişiklikler önceki yerel çalışmalarla birlikte commit edilmedi.
+
+## 04.11.2026 — WorkflowRibbon düz şerit
+- Ortak WorkflowRibbon bölümünün üst/alt paddingi ve bağlantılar arasındaki boşluk kaldırıldı; bağlantılar düz, tek çizgilerle ayrılmış bitişik hücrelere dönüştürüldü. Hover yükselmesi/gölgesi kaldırıldı; klavye odağı ve iç dokunma alanları korundu.
+- Yerel masaüstü ve mobil genişlikte boşluk, taşma ve hedef yükseklikleri kontrol edildi. İlgili 28 test, typecheck ve styles:check başarılı; bağımsız incelemede somut regresyon yok. Değişiklikler önceki yerel çalışmalarla birlikte commit edilmedi.
+
+## 04.11.2026 — Ortak hızlı iş akışı şeridi
+- Hızlı İş Akışı Bağlantıları alanı bağımsız `WorkflowRibbon` bileşenine çıkarıldı; turuncu etiket gerçek bileşen adını gösteriyor. Basic, Concept, Professional, Ultimate, Civil ve Precast sayfaları aynı bileşeni kullanır. Metinler, hedefler, renkler, sıralama ve dış bağlantı davranışı korundu.
+- Civil sayfasında etiket ve bağlantılar yerelde doğrulandı. 2027 bayraklarıyla build ve tam test paketi başarılı: 559 test, 4 atlama; bağımsız incelemede somut regresyon yok. Değişiklikler önceki yerel çalışmalarla birlikte commit edilmedi.
+
+## 04.11.2026 — Ortak paket giriş alanı
+- Legacy giriş alanı `StructuredIntroSection` adlı ortak bileşene taşındı ve aynı adlı turuncu etiket eklendi. Basic, Concept, Professional, Ultimate ve Civil aynı kompakt liste stilini kullanıyor; dairesiz tikler ve yazı ayarı ortak bileşen stilinden geliyor. Diğer legacy giriş sayfalarının önceki liste stili korunuyor.
+- Beş sayfada liste sayıları ve ortak stil yerelde kontrol edildi; paket içerik ve video verileri test edildi. 2027 bayraklarıyla build ve tam test paketi başarılı: 557 test, 4 atlama. Değişiklikler önceki yerel çalışmalarla birlikte commit edilmedi.
+
+## 04.11.2026 — Civil giriş listesi
+- `/products/civil` “ALLPLAN Civil Nedir?” listesindeki daireli tikler daha küçük, dairesiz simgelere dönüştürüldü; yazı 15,6 px'den yaklaşık 15,2 px'e düşürüldü. Stil yalnız bu listenin kapsamına alındı.
+- Yerel masaüstü ve mobil genişlikte görünüm/taşma, typecheck ve styles:check doğrulandı; bağımsız inceleme somut regresyon bulmadı. Değişiklikler önceki yerel çalışmalarla birlikte commit edilmedi.
+
+## 04.11.2026 — Video kartı sadeleştirme
+- `FuncsGridCars` video kartlarında yalnız görselin ortasındaki oynat simgesi bırakıldı; üstteki video rozeti ve alttaki yinelenen düğme kaldırıldı. Görselin fare, Enter ve Space ile video açma davranışı ve erişilebilir adı korundu. Bu ortak bileşenin kullanıldığı tüm sayfalara yansır.
+- Basic sayfasında görünüm ve klavyeyle video açma doğrulandı; 2027 bayraklarıyla build ve tam test paketi başarılı: 554 test, 4 atlama. Değişiklikler önceki yerel çalışmalarla birlikte commit edilmedi.
+
+## 04.11.2026 — Kart grubu adı
+- Kullanıcı isteğiyle `MediaGridCards` bileşeni ve turuncu etiketi `FuncsGridCars` olarak yeniden adlandırıldı. Basic sayfasında etiket doğrulandı; ilgili 24 test ve typecheck başarılı. Yerel değişiklikler commit edilmedi.
+
+## 04.11.2026 — Ortak medya kart grubu
+- `MediaGridSection` içindeki kart grubu ayrı `MediaGridCards` bileşenine çıkarıldı ve kendi turuncu etiketi eklendi. Böylece ALLPLAN Basic “Fonksiyonellik Hızlı Bakış” dahil bu bölümün kullanıldığı sayfalarda kart grubu ayrıca görülebilir.
+- Basic'te altı kart, görsel büyütme ve video penceresi yerelde doğrulandı. 2027 bayraklarıyla build ve tam test paketi başarılı: 553 test, 4 atlama; parite ve token kontrolleri başarılı. Değişiklikler önceki yerel çalışmalarla birlikte commit edilmedi.
+
+## 04.11.2026 — Endüstri ürün paketleri ortak kartları
+- `/solutions/allplan-industry` “ALLPLAN ÜRÜN PAKETLERİ” alanı `ProductsOverview` kullanıyor. ALLPLAN Ultimate ilk sırada 1:1 büyük görselle sunuldu; diğer beş paketin göreli sırası, verileri, bağlantıları, görselleri ve CTA metinleri korundu. Görsel büyütme ayrı bir düğmeyle mevcut dialogu açar.
+- Yerelde büyütme dialogu, mobil kare oranı ve taşma kontrol edildi. 2027 bayraklarıyla build ve tam test paketi başarılı: 551 test, 4 atlama; sonraki erişilebilir ad düzeltmesinde 16 ilgili test ve typecheck başarılı. Değişiklikler önceki yerel çalışmalarla birlikte commit edilmedi.
+
+## 04.11.2026 — Bina Tasarımı ortak kartları
+- `/solutions` sayfasında yalnız Bina Tasarımı grubundaki dört kart `ProductsOverview` ile gösteriliyor ve turuncu etiket taşıyor. Diğer dört grup mevcut bileşenini koruyor. Kart verileri ve hedefleri korunurken eylem yazısı ortak bileşendeki “İncele ↗” oldu; ortak bileşene dış bağlantılar için güvenli yeni sekme desteği eklendi.
+- Yerel masaüstü ve mobil genişlik kontrolü, 2027 bayraklarıyla build, 26 ilgili test ve 51 parite kontrolü başarılı. Değişiklikler önceki yerel çalışmalarla birlikte commit edilmedi.
+
+## 04.11.2026 — Scalypso modüllerinde ortak ürün kartları
+- `ProductsOverview` veriyle yeniden kullanılabilir hale getirildi ve Scalypso Modülleri alanında uygulandı. Beş modülün sırası, adları, açıklamaları, görsel/alt metinleri, hedefleri ve bölüm açıklaması korundu; `ProductsOverview` debug etiketi eklendi. Modül görsellerinde Next.js optimizasyonu devam ediyor.
+- Yerelde masaüstü ve mobil genişlik, beş hedef ve görsel doğrulandı. 2027 bayraklarıyla build ve `pnpm test` başarılı: 545 test, 4 atlama; parite ve token kontrolleri başarılı. Kullanıcının önceki `ProductsInnovations` ve kart metni değişiklikleriyle birlikte commit edilmedi.
+
+## 04.11.2026 — Ürün kartı eylem metni
+- `ProductsOverview` ürün kartlarından görünür “Detayları Görüntüle ↗” metni kaldırıldı. Görsel üzerindeki “İncele ↗” ve kart bağlantıları korundu; erişilebilir bağlantı adı `İncele: ürün adı` olarak sadeleştirildi.
+- Yerel `/products` görünümü ve ALLPLAN AEC bağlantı hedefi kontrol edildi; ilgili 8 test ve typecheck başarılı. Bağımsız inceleme somut regresyon bulmadı. Değişiklikler önceki `ProductsInnovations` ayrımıyla birlikte commit edilmedi; kullanıcı bileşenin kullanılacağı diğer sayfaları bildirecek.
+
+## 04.11.2026 — Ürün yenilikleri bileşeni
+- Ürünler sayfasındaki “Ürün Ailesindeki Yenilikler” alanı `ProductsInnovations` bileşenine ayrıldı ve `ProductsOverview` ile kardeş olarak ayrı turuncu etiket aldı. İçerik, bağlantılar, sekme ve klavye davranışı korundu.
+- Yerel `/products` sayfasında iki etiket, sekme tıklaması ve ok tuşuyla geçiş doğrulandı. 2027 bayraklarıyla build, 32 ilgili test ve 51 parite kontrolü başarılı; bağımsız inceleme somut regresyon bulmadı. Değişiklikler commit edilmedi.
+
 ## 04.11.2026 — Debug sistemi test düzeltmeleri
 - Scalypso Modeler modül bağlantılarının erişilebilir adları modül adına göre ayrıştırıldı; görünür metin ve hedefler korundu. Eski hero, breadcrumb, bileşen sınırı ve başlık hiyerarşisi testleri mevcut davranışı doğrulayacak şekilde güncellendi.
 - `ALUPLAN_SHOW_2027=1 ALUPLAN_BLOCK_INDEXING=1 pnpm build` başarılı. Ardından `pnpm test`: 542 test başarılı, 4 atlandı; kaynak sözleşmesi, 51 parite ve 45 token kontrolü başarılı. Yerel Modeler sayfasında dört bağlantının ayrı erişilebilir adı doğrulandı. Bağımsız incelemede kritik/yüksek bulgu yok.

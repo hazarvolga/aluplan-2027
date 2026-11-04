@@ -5,7 +5,7 @@
 @media(max-width:767px){.editions>div{grid-template-columns:1fr}.table{min-width:48rem}}
 .featureName{display:flex;align-items:center;gap:var(--space-stack-sm)}
 .info{position:relative;flex:none}.info button{display:grid;place-items:center;width:2rem;height:2rem;padding:0;border:0;background:transparent;cursor:pointer}.info button :global(svg){width:1rem;height:1rem;color:var(--text-secondary)}.info button:hover :global(svg),.info button[aria-expanded="true"] :global(svg){color:var(--accent-fg)}.info button:focus-visible{outline:var(--focus-width) solid var(--focus-ring);outline-offset:2px}
-.tooltip{position:absolute;z-index:10;left:100%;top:0;width:min(22rem,75vw);padding:var(--space-inset-md);background:var(--surface-raised);border:var(--border-width-default) solid var(--border-strong);color:var(--text-primary);font-size:var(--type-body-sm-size);line-height:var(--type-body-line-height);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.tooltip{position:absolute;z-index:10;left:100%;top:0;width:min(22rem,75vw);padding:var(--space-inset-md);background:var(--surface-raised);border:var(--border-width-default) solid var(--border-strong);color:var(--text-primary);font-size:var(--type-body-sm-size);line-height:var(--type-body-line-height);box-shadow:var(--elevation-overlay)}
 .infoUp .tooltip{top:auto;bottom:100%}
 @media(max-width:767px){.featureName{display:block}.info{display:block}.info button{width:var(--target-min);height:var(--target-min)}.tooltip{position:static;width:auto;box-shadow:none}}
 @media(prefers-reduced-motion:no-preference){.tooltip{animation:infoFade 220ms ease-out both}@keyframes infoFade{from{opacity:0}to{opacity:1}}}

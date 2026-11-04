@@ -3,7 +3,7 @@
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:var(--space-stack-sm)}
 .card{min-width:0;padding:var(--card-padding);background:var(--card-bg);border:var(--border-width-default) solid var(--card-border);border-left:var(--border-width-strong) solid var(--accent-border)}
 .card h3{margin:0 0 var(--space-stack-md);font-size:var(--type-application-body-intro-size);line-height:var(--type-body-line-height);font-weight:var(--font-weight-application-pathway-role-badge)}
-.card ul{display:grid;gap:var(--space-stack-xs);padding:0;margin:0;list-style:none;color:var(--text-secondary);font-size:var(--type-body-size);line-height:var(--type-body-line-height)}
+.card ul{display:grid;gap:var(--space-stack-xs);padding:0;margin:0;list-style:none;color:var(--text-secondary);font-size:calc(var(--type-body-size) * .95);line-height:var(--type-body-sm-line-height)}
 .card li{position:relative;padding-left:1rem}.card li::before{content:'+';position:absolute;left:0;color:var(--accent-fg)}
 .card p{margin:0;color:var(--text-secondary);font-size:var(--type-body-size);line-height:var(--type-body-line-height)}
 .card li strong{display:block;color:var(--text-primary);font-weight:var(--font-weight-strong)}

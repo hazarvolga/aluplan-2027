@@ -587,29 +587,34 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
 
     def test_structured_benefits_have_a_dedicated_render_boundary(self):
         component = read("src/components/sections/BenefitsSection.tsx")
+        cards = read("src/components/sections/BenefitIconCards.tsx")
         parent = read("src/components/sections/StructuredPageLayoutSection.tsx")
 
         self.assertIn("import type { StructuredPageLayout }", component)
         self.assertNotIn("'use client'", component)
         self.assertIn("<SectionHeader", component)
+        self.assertIn("benefits.kicker", component)
+        self.assertIn("benefits.title", component)
+        self.assertIn("import { BenefitIconCards } from './BenefitIconCards';", component)
+        self.assertIn('<BenefitIconCards items={benefits.items} variant={variant}', component)
+        self.assertIn('<DebugComponentLabel name="BenefitIconCards">', cards)
         self.assertIn("alu-section-header", read("src/components/sections/SectionHeader.tsx"))
         for marker in [
             "alu-benefits-grid",
             "alu-benefits-grid--cols-4",
             "alu-benefits-grid--cols-3",
-            "benefits.kicker",
-            "benefits.title",
-            "benefits.items.map",
+            "items.map",
             "benefit.subtitle",
             "benefit.iconSrc",
             "benefit.description",
             'loading="lazy"',
         ]:
             with self.subTest(marker=marker):
-                self.assertIn(marker, component)
+                self.assertIn(marker, cards)
 
         self.assertIn("import { BenefitsSection } from './BenefitsSection';", parent)
-        self.assertIn("<BenefitsSection benefits={layout.benefits} variant=", parent)
+        self.assertIn("<BenefitsSection benefits=", parent)
+        self.assertIn("layout.benefits.items.map", parent)
         self.assertNotIn("alu-benefits-grid", parent)
         self.assertNotIn("alu-benefit-card", parent)
 
@@ -639,10 +644,13 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
 
     def test_media_grids_have_a_dedicated_interactive_render_boundary(self):
         component = read("src/components/sections/MediaGridSection.tsx")
+        cards = read("src/components/sections/FuncsGridCars.tsx")
         parent = read("src/components/sections/StructuredPageLayoutSection.tsx")
 
         self.assertTrue(component.startswith("'use client';"))
         self.assertIn("import type { StructuredMediaGridSection }", component)
+        self.assertIn("import { FuncsGridCars } from './FuncsGridCars';", component)
+        self.assertIn('<DebugComponentLabel name="FuncsGridCars"><FuncsGridCars', component)
         for marker in [
             "grid.columns || 3",
             "grid.items.map",
@@ -662,7 +670,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
             'rel="noopener noreferrer"',
         ]:
             with self.subTest(marker=marker):
-                self.assertIn(marker, component)
+                self.assertIn(marker, cards)
 
         self.assertIn("import { MediaGridSection } from './MediaGridSection';", parent)
         self.assertIn('itemKeyPrefix="core-features"', parent)

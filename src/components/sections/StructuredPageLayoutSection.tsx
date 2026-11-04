@@ -1,13 +1,9 @@
 'use client';
 
-import Link from 'next/link';
 import type { ReactElement } from 'react';
 
-import type {
-  StructuredPageLayout,
-  StructuredWorkflowLink
-} from '@/lib/site-data';
-import { AluIcon } from '@/components/ui/AluIcon';
+import type { StructuredPageLayout } from '@/lib/site-data';
+import { AluIcon, type AluIconName } from '@/components/ui/AluIcon';
 import { MetricCards } from './MetricCards';
 import { ChallengesBand } from './ChallengesBand';
 import { BenefitsSection } from './BenefitsSection';
@@ -18,10 +14,11 @@ import { ReferencesDirectorySection } from './ReferencesDirectorySection';
 import { SplitCalloutSection } from './SplitCalloutSection';
 import { StructuredContentBlocks } from './StructuredContentBlocks';
 import { WorkflowSection } from './WorkflowSection';
-import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
 import { SectionHeader } from './SectionHeader';
 import { gridGroupFor } from '@/lib/grid-groups';
 import { DebugComponentLabel } from './DebugComponentLabel';
+import { StructuredIntroSection } from './StructuredIntroSection';
+import { WorkflowRibbon } from './WorkflowRibbon';
 
 interface StructuredVideoRequest {
   youtubeId?: string;
@@ -45,13 +42,15 @@ interface StructuredPageLayoutSectionProps {
   onImage: (image: StructuredImageRequest) => void;
 }
 
-const SDS2_SURVEY_SOURCE = 'Kaynak: 2021’de SDS2 müşterileri arasında yapılan SDS2 ROI Anketi. Katılımcıların diğer çelik detaylandırma yazılımlarıyla deneyimleri farklılık göstermiştir.';
+const PACKAGE_INTRO_PATHS = new Set(['/products/allplan-basic', '/products/allplan-concept', '/products/allplan-professional', '/products/allplan-ultimate', '/products/civil']);
 
-const WORKFLOW_ACCENTS: Record<StructuredWorkflowLink['accentKey'], string> = {
-  package: 'var(--workflow-package)',
-  architect: 'var(--role-architect)',
-  engineer: 'var(--role-engineer)',
-  fabricator: 'var(--role-fabricator)'
+const SDS2_SURVEY_SOURCE = 'Kaynak: 2021’de SDS2 müşterileri arasında yapılan SDS2 ROI Anketi. Katılımcıların diğer çelik detaylandırma yazılımlarıyla deneyimleri farklılık göstermiştir.';
+const SDS2_CATEGORY_ICONS: Readonly<Record<string, AluIconName>> = {
+  MODELLEME: 'boxes',
+  PLANLAMA: 'ruler',
+  'BİRLİKTE ÇALIŞABİLİRLİK': 'layers',
+  TESLİMATLAR: 'file-text',
+  EKLENTİLER: 'cpu',
 };
 
 export function StructuredPageLayoutSection({
@@ -80,92 +79,9 @@ export function StructuredPageLayoutSection({
 
   return (
     <div className="alu-structured-page">
-      {layout.intro && (
-        <DebugComponentLabel name="introSplit (özel)"><section className="preview-section" aria-label={layout.intro.title}>
-          <div className="alu-container">
-            <div
-              className={`alu-intro-split${
-                layout.intro.videoEmbedUrl ? '' : ' alu-intro-split--single'
-              }`}
-            >
-              <div className="alu-intro-split__content">
-      {layout.intro.kicker && (
-                  <span className="preview-kicker">{layout.intro.kicker}</span>
-                )}
-                <h2 className="alu-h2" style={{ margin: 0 }}>
-                  {layout.intro.title}
-                </h2>
-                {layout.intro.paragraphs?.map((paragraph, paragraphIndex) => (
-                  <p key={paragraphIndex} className="alu-body">{paragraph}</p>
-                ))}
-                {layout.intro.bullets.length > 0 && (
-                  <ul className="alu-intro-split__bullets">
-                    {layout.intro.bullets.map((bullet, bulletIndex) => (
-                      <li key={bulletIndex} className="alu-intro-split__bullet">
-                        <span className="alu-intro-split__bullet-icon">
-                          <AluIcon name="check" size="sm" />
-                        </span>
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
+      {layout.intro && <StructuredIntroSection intro={layout.intro} compactBullets={PACKAGE_INTRO_PATHS.has(pagePath)} />}
 
-              {layout.intro.videoEmbedUrl && (
-                <div className="alu-intro-split__media">
-                  <div className="alu-intro-split__video-frame">
-                    <ConsentEmbed src={layout.intro.videoEmbedUrl} title={layout.intro.title ?? ''} fill />
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-        </section></DebugComponentLabel>
-      )}
-
-      {layout.workflowLinks && layout.workflowLinks.length > 0 && (
-        <DebugComponentLabel name="workflowRibbon (özel)"><section className="alu-workflow-ribbon-section" aria-label="Hızlı İş Akışı Bağlantıları">
-          <div className="alu-container">
-            <div className="alu-workflow-ribbon">
-              {layout.workflowLinks.map((workflowLink, workflowIndex) => {
-                const pillContent = (
-                  <>
-                    <span
-                      className="alu-workflow-pill__dot"
-                      style={{ background: WORKFLOW_ACCENTS[workflowLink.accentKey] }}
-                    />
-                    <span className="alu-workflow-pill__text">{workflowLink.text}</span>
-                    <span className="alu-workflow-pill__arrow">
-                      <AluIcon name="arrow-right" size="sm" />
-                    </span>
-                  </>
-                );
-
-                return workflowLink.external ? (
-                  <a
-                    key={`${workflowLink.href}-${workflowIndex}`}
-                    href={workflowLink.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="alu-workflow-pill"
-                  >
-                    {pillContent}
-                  </a>
-                ) : (
-                  <Link
-                    key={`${workflowLink.href}-${workflowIndex}`}
-                    href={workflowLink.href}
-                    className="alu-workflow-pill"
-                  >
-                    {pillContent}
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        </section></DebugComponentLabel>
-      )}
+      {layout.workflowLinks && <WorkflowRibbon links={layout.workflowLinks} />}
 
       {layout.stats && layout.stats.length > 0 && (
         <DebugComponentLabel name="metricsBand (özel)"><section className="preview-section preview-section--subtle" aria-label="Performans Göstergeleri">
@@ -237,7 +153,7 @@ export function StructuredPageLayoutSection({
       ]}} /></DebugComponentLabel>}
 
       {layout.benefits && layout.benefits.items.length > 0 && (
-        <DebugComponentLabel name="BenefitsSection"><BenefitsSection benefits={layout.benefits} variant={pagePath === "/products/sds2-home" ? "category-list" : "default"} /></DebugComponentLabel>
+        <DebugComponentLabel name="BenefitsSection"><BenefitsSection benefits={pagePath === '/products/sds2-home' ? { ...layout.benefits, items: layout.benefits.items.map(item => ({ ...item, iconName: SDS2_CATEGORY_ICONS[item.title] })) } : layout.benefits} variant={pagePath === "/products/sds2-home" ? "category-list" : "default"} /></DebugComponentLabel>
       )}
 
       {layout.coreFeatures && layout.coreFeatures.items.length > 0 && (

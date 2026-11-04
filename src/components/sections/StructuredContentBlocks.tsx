@@ -13,6 +13,8 @@ import { MediaGridSection } from './MediaGridSection';
 import { SplitCalloutSection } from './SplitCalloutSection';
 import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
 import { DebugComponentLabel } from './DebugComponentLabel';
+import { ProductsOverview } from './ProductsOverview';
+import { SectionHeader } from './SectionHeader';
 
 interface StructuredVideoRequest {
   youtubeId?: string;
@@ -42,7 +44,7 @@ function blockLabel(block: StructuredContentBlock): string {
     case 'stats': return 'metricsSection (özel)';
     case 'linkGroupGrid': return 'LinkGroupGridSection';
     case 'benefits': return 'BenefitsSection';
-    case 'mediaGrid': return 'MediaGridSection';
+    case 'mediaGrid': return block.sourceId === 'industry-products' ? 'Ürün Paketleri (özel)' : 'MediaGridSection';
     case 'splitCallouts': return 'SplitCalloutSection';
     default: return assertNever(block);
   }
@@ -145,6 +147,27 @@ function renderBlock(
     case 'benefits':
       return <BenefitsSection benefits={block.content} />;
     case 'mediaGrid':
+      if (block.sourceId === 'industry-products' && block.content.items.every(item => item.href && !item.youtubeId)) {
+        const featured = block.content.items.filter(item => item.sourceId === 'industry-product-ultimate');
+        const others = block.content.items.filter(item => item.sourceId !== 'industry-product-ultimate');
+        return (
+          <section className="preview-section" aria-label={block.content.title}>
+            <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
+              <SectionHeader kicker={block.content.kicker} title={block.content.title} lead={block.content.subtitle} />
+              <DebugComponentLabel name="ProductsOverview"><ProductsOverview headingLevel={3} featuredSquare onImage={onImage} items={[...featured, ...others].map(item => ({
+                sourceId: item.sourceId,
+                href: item.href!,
+                title: item.title,
+                description: item.description,
+                image: item.imageSrc ? { src: item.imageSrc, alt: item.title } : undefined,
+                badge: item.badge ?? undefined,
+                actionLabel: item.ctaText ?? undefined,
+                external: item.external,
+              }))} /></DebugComponentLabel>
+            </div>
+          </section>
+        );
+      }
       return (
         <MediaGridSection
           grid={block.content}

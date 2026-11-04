@@ -1,0 +1,15 @@
+.compactBullets :global(.alu-intro-split__bullet) {
+  font-size: var(--type-application-small-body-size);
+}
+
+.compactBullets :global(.alu-intro-split__bullet-icon) {
+  width: var(--type-body-sm-size);
+  height: var(--type-body-sm-size);
+  border: 0;
+  background: transparent;
+}
+
+.compactBullets :global(.alu-intro-split__bullet-icon svg) {
+  width: 100%;
+  height: 100%;
+}

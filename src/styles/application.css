@@ -362,6 +362,13 @@
   padding-block: var(--space-inset-lg);
   box-shadow: var(--elevation-overlay);
 }
+.alu-megamenu:not(.alu-mobile-drawer) {
+  animation: aluMegamenuFadeIn var(--motion-duration-base) var(--motion-easing-standard) both;
+}
+@keyframes aluMegamenuFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 .alu-megamenu__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
@@ -589,11 +596,15 @@
   align-items: center;
   gap: var(--space-application-dense-gap);
   padding: var(--space-application-dense-gap) var(--space-stack-sm);
+  line-height: var(--type-body-sm-line-height);
   border-radius: var(--radius-control);
   transition:
     background-color var(--motion-duration-fast) var(--motion-easing-standard),
     color var(--motion-duration-fast) var(--motion-easing-standard),
     transform var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.alu-megamenu:not(.alu-mobile-drawer) .alu-megamenu__item {
+  padding-block: var(--space-stack-xs);
 }
 .alu-megamenu__item:hover {
   background: var(--surface-subtle);
@@ -2138,45 +2149,40 @@
 
 /* 2. Workflow Links Ribbon */
 .alu-workflow-ribbon-section {
-  padding-block: var(--space-application-section-inset);
+  padding-block: 0;
   background: var(--surface-subtle);
-  border-block: var(--border-width-default) solid var(--border-default);
 }
 .alu-workflow-ribbon {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--space-application-card-inset);
+  gap: 0;
+  border-top: var(--border-width-default) solid var(--border-default);
+  border-left: var(--border-width-default) solid var(--border-default);
 }
 .alu-workflow-pill {
   display: flex;
   align-items: center;
   gap: var(--space-application-card-compact-gap);
   padding: var(--space-application-card-comfortable-inset) var(--space-application-panel-wide-inset);
-  background: var(--surface-default);
-  border: var(--border-width-default) solid var(--border-default);
+  background: transparent;
+  border: 0;
+  border-right: var(--border-width-default) solid var(--border-default);
+  border-bottom: var(--border-width-default) solid var(--border-default);
   color: var(--text-primary);
   text-decoration: none;
   font-family: var(--font-body);
-  font-size: var(--type-body-sm-size);
-  font-weight: var(--font-weight-application-pathway-role-badge);
+  font-size: var(--type-application-metadata-size);
+  font-weight: var(--font-weight-label);
   transition:
-    transform var(--motion-duration-control) var(--motion-easing-default),
-    border-color var(--motion-duration-control) var(--motion-easing-default),
-    background-color var(--motion-duration-control) var(--motion-easing-default),
-    box-shadow var(--motion-duration-control) var(--motion-easing-default);
+    background-color var(--motion-duration-control) var(--motion-easing-default);
 }
 .alu-workflow-pill:hover {
-  transform: var(--motion-transform-lift-subtle);
-  border-color: var(--accent-border);
   background: var(--surface-raised);
-  box-shadow: var(--elevation-raised);
   text-decoration: none;
 }
-.alu-workflow-pill__dot {
-  width: var(--size-application-workflow-dot);
-  height: var(--size-application-workflow-dot);
-  border-radius: var(--radius-round);
-  flex-shrink: 0;
+.alu-workflow-pill:focus-visible {
+  outline: var(--border-width-strong) solid var(--accent-fg);
+  outline-offset: calc(-1 * var(--border-width-strong));
 }
 .alu-workflow-pill__text {
   flex: 1;

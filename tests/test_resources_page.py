@@ -1,7 +1,10 @@
 """/kaynaklar replaces the homepage services section and the Kaynaklar menu target."""
 
 from pathlib import Path
+from html.parser import HTMLParser
 import json
+import re
+import subprocess
 import unittest
 
 
@@ -71,10 +74,10 @@ class ResourcesDirectoryTests(unittest.TestCase):
         source = VIEW.read_text(encoding="utf-8")
         self.assertNotIn("ServiceIcon", source)
         self.assertNotIn("alu-support-card__icon", source)
-        tile = source[source.index("function Tile"):source.index("function SupportGroup")]
-        featured = source[source.index("function SupportGroup"):source.index("function ListGroup")]
-        rows = source[source.index("function ListGroup"):source.index("function GridGroup")]
-        for card in (tile, featured, rows):
+        cards = read("src/components/sections/SupportGridCards.tsx")
+        tile = cards[cards.index("function Tile"):cards.index("export function SupportGridCards")]
+        featured = read("src/components/sections/FeaturedSupportCards.tsx")
+        for card in (tile, featured):
             self.assertIn("<BareIcon", card)
         css = (ROOT / "src/components/sections/ResourcesDirectory.module.css").read_text(encoding="utf-8")
         bare = css[css.index(".bareIcon"):].split("}")[0]
@@ -89,14 +92,6 @@ class ResourcesDirectoryTests(unittest.TestCase):
         self.assertNotIn("grid-template-columns", tiles)
         tile = css[css.index(".tile{"):].split("}")[0]
         self.assertIn("flex:1 1 18rem", tile)
-
-    def test_license_row_buttons_share_one_width(self):
-        source = VIEW.read_text(encoding="utf-8")
-        rows = source[source.index("function ListGroup"):source.index("function GridGroup")]
-        self.assertIn("styles.rowAction", rows)
-        css = (ROOT / "src/components/sections/ResourcesDirectory.module.css").read_text(encoding="utf-8")
-        action = css[css.index(".rowAction"):].split("}")[0]
-        self.assertIn("flex:0 0 12rem", action)
 
     def test_learning_group_lists_the_video_library_and_training_centers(self):
         group = next(g for g in HOMEPAGE["serviceGroups"] if g["title"] == "Öğren ve yardım al")
@@ -123,9 +118,162 @@ class ResourcesDirectoryTests(unittest.TestCase):
         self.assertIn(HIDDEN_GROUP, VIEW.read_text(encoding="utf-8"))
 
     def test_external_links_open_safely_in_a_new_tab(self):
-        source = VIEW.read_text(encoding="utf-8")
+        source = read("src/components/sections/SupportGridCards.tsx")
         self.assertIn('target="_blank"', source)
         self.assertIn('rel="noopener noreferrer"', source)
+
+    def test_both_groups_use_same_shared_component(self):
+        source = VIEW.read_text(encoding="utf-8")
+        self.assertIn("<FeaturedSupportCards", source)
+        self.assertNotIn("featuredTitles={FEATURED_SERVICES}", source)
+        self.assertIn("<SupportGridCards", source)
+
+
+RENDER_CARDS = r'''
+const fs=require('fs'), vm=require('vm'), ts=require('typescript');
+const React=require('react'), {renderToStaticMarkup}=require('react-dom/server');
+function load(file) {
+  const code=ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX}}).outputText;
+  const mod={exports:{}};
+  function req(id) {
+    if(id==='react'||id==='react/jsx-runtime') return require(id);
+    if(id==='next/link') return {default:({children,...props})=>React.createElement('a',props,children)};
+    if(id==='@/components/ui/AluIcon') return {AluIcon:({name})=>React.createElement('svg',{'data-icon':name,'aria-hidden':'true'})};
+    if(id==='@/lib/site-shared') return {getHomepageData:()=>JSON.parse(fs.readFileSync('src/data/homepage.json','utf8'))};
+    if(id==='./CompactPageHero') return {CompactPageHero:({children})=>React.createElement('div',null,children)};
+    if(id==='./DebugComponentLabel') return {DebugComponentLabel:({name,children})=>React.createElement('div',{'data-debug-label':name},children)};
+    if(id.endsWith('.module.css')) return {default:new Proxy({}, {get:(_,key)=>String(key)})};
+    if(id.startsWith('./')) return load('src/components/sections/'+id.slice(2)+'.tsx');
+    throw Error('Unexpected import: '+id);
+  }
+  vm.runInThisContext('(function(exports,require,module){'+code+'})',{filename:file})(mod.exports,req,mod);
+  return mod.exports;
+}
+const {SupportGridCards}=load('src/components/sections/SupportGridCards.tsx');
+const {FeaturedSupportCards}=load('src/components/sections/FeaturedSupportCards.tsx');
+const {ResourcesDirectory}=load('src/components/sections/ResourcesDirectory.tsx');
+const data=JSON.parse(fs.readFileSync('src/data/homepage.json','utf8'));
+const servicesFor=title=>data.serviceGroups.find(g=>g.title===title).serviceTitles.map(t=>data.services.find(s=>s.title===t));
+const allSupport=servicesFor('Öğren ve yardım al'), names=['Teknik Destek','Destek Platformu'];
+const featured=allSupport.filter(s=>names.includes(s.title)), support=allSupport.filter(s=>!names.includes(s.title)), info=servicesFor('Bilgi ve güncellemeler');
+const render=(Component,services)=>renderToStaticMarkup(React.createElement(Component,{services}));
+process.stdout.write(JSON.stringify({featured,support,info,featuredHtml:render(FeaturedSupportCards,featured),supportHtml:render(SupportGridCards,support),infoHtml:render(SupportGridCards,info),emptyHtml:render(SupportGridCards,[]),pageHtml:renderToStaticMarkup(React.createElement(ResourcesDirectory))}));
+'''
+
+
+class CardsParser(HTMLParser):
+    def __init__(self):
+        super().__init__(); self.cards=[]; self.current=None; self.labels=[]
+    def handle_starttag(self,tag,attrs):
+        attrs=dict(attrs)
+        if attrs.get('data-debug-label'): self.labels.append(attrs['data-debug-label'])
+        if tag=='li': self.current={'text':'','class':attrs.get('class'),'links':[],'icons':[]}; self.cards.append(self.current)
+        if self.current is not None and tag=='a': self.current['links'].append(attrs)
+        if self.current is not None and tag=='svg': self.current['icons'].append(attrs.get('data-icon'))
+    def handle_data(self,text):
+        if self.current is not None: self.current['text']+=text
+    def handle_endtag(self,tag):
+        if tag=='li': self.current=None
+
+
+class CardGroupParser(HTMLParser):
+    def __init__(self):
+        super().__init__(); self.stack=[]; self.groups=[]; self.heading=None
+    def handle_starttag(self,tag,attrs):
+        attrs=dict(attrs); group=None
+        if attrs.get('data-debug-label') in ('FeaturedSupportCards','SupportGridCards'):
+            group={'label':attrs['data-debug-label'],'titles':[]}; self.groups.append(group)
+        self.stack.append((tag,group))
+        if tag=='h3': self.heading=''
+    def handle_data(self,text):
+        if self.heading is not None: self.heading+=text
+    def handle_endtag(self,tag):
+        if tag=='h3' and self.heading is not None:
+            group=next((group for _,group in reversed(self.stack) if group),None)
+            if group is not None: group['titles'].append(self.heading)
+            self.heading=None
+        for index in range(len(self.stack)-1,-1,-1):
+            if self.stack[index][0]==tag:
+                del self.stack[index:]; break
+
+
+class SupportGridCardsTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        result=subprocess.run(['node','-e',RENDER_CARDS],cwd=ROOT,capture_output=True,text=True,check=True)
+        cls.render=json.loads(result.stdout)
+
+    def test_real_groups_preserve_content_links_icons_and_debug_labels(self):
+        for group,html_key in [('featured','featuredHtml'),('support','supportHtml'),('info','infoHtml')]:
+            with self.subTest(group=group):
+                parser=CardsParser(); parser.feed(self.render[html_key])
+                self.assertEqual(parser.labels, ['FeaturedSupportCards' if group == 'featured' else 'SupportGridCards'])
+                self.assertEqual(len(parser.cards),len(self.render[group]))
+                by_title={service['title']:service for service in self.render[group]}
+                for card in parser.cards:
+                    matches=[s for title,s in by_title.items() if title in card['text']]
+                    self.assertEqual(len(matches),1)
+                    service=matches[0]
+                    self.assertIn(service['description'],card['text']); self.assertIn(service['cta'],card['text'])
+                    self.assertIn(service['icon'],card['icons'])
+                    self.assertEqual(len(card['links']),1); self.assertEqual(card['links'][0]['href'],service['href'])
+                    if service['href'].startswith('http'):
+                        self.assertEqual(card['links'][0]['target'],'_blank')
+                        self.assertEqual(card['links'][0]['rel'],'noopener noreferrer')
+                if group=='featured':
+                    self.assertEqual([card['class'] for card in parser.cards].count('featured'),2)
+                else:
+                    self.assertEqual([card['class'] for card in parser.cards].count('tile'),5 if group == 'support' else 9)
+
+    def test_empty_services_render_no_cards(self):
+        parser=CardsParser(); parser.feed(self.render['emptyHtml'])
+        self.assertEqual(parser.cards,[])
+
+    def test_resource_headings_use_shared_section_header_with_accessible_ids(self):
+        page=self.render['pageHtml']
+        expected=['Öğren ve yardım al', 'Yazılım ve lisans işlemleri', 'Bilgi ve güncellemeler']
+        for index,title in enumerate(expected,1):
+            with self.subTest(title=title):
+                section_id=f'kaynak-grubu-{index}'
+                match=re.search(rf'<section\b(?=[^>]*\bid="{section_id}")(?=[^>]*\baria-labelledby="{section_id}-title")[^>]*>(.*?)</section>',page,re.S)
+                self.assertIsNotNone(match)
+                html=match.group(1)
+                heading=rf'<div data-debug-label="SectionHeader">.*?<h2\b[^>]*\bid="{section_id}-title"[^>]*>{re.escape(title)}</h2>'
+                self.assertRegex(html,heading)
+                self.assertEqual(len(re.findall(rf'<h2\b[^>]*\bid="{section_id}-title"',html)),1)
+
+    def test_page_groups_use_independent_labels_with_correct_cards(self):
+        page=self.render['pageHtml']
+        learning=page.split('id="kaynak-grubu-1"',1)[1].split('</section>',1)[0]
+        updates=page.split('id="kaynak-grubu-3"',1)[1].split('</section>',1)[0]
+        for section, expected in ((learning, ['FeaturedSupportCards', 'SupportGridCards']), (updates, ['FeaturedSupportCards', 'SupportGridCards'])):
+            parser=CardsParser(); parser.feed(section)
+            self.assertEqual([label for label in parser.labels if label in ('FeaturedSupportCards','SupportGridCards')],expected)
+            self.assertEqual(len(parser.cards),7 if section == learning else 9)
+        self.assertIn('Teknik Destek',learning)
+        self.assertNotIn('Teknik Destek',updates)
+        groups=CardGroupParser(); groups.feed(updates)
+        self.assertEqual(groups.groups[0]['titles'], ['ALLPLAN FAQ', 'Sistem Gereksinimleri'])
+        original=next(group['serviceTitles'] for group in HOMEPAGE['serviceGroups'] if group['title']=='Bilgi ve güncellemeler')
+        self.assertEqual(groups.groups[1]['titles'], [title for title in original if title not in groups.groups[0]['titles']])
+
+    def test_license_group_promotes_requested_cards_and_preserves_all_content(self):
+        section=self.render['pageHtml'].split('id="kaynak-grubu-2"',1)[1].split('</section>',1)[0]
+        groups=CardGroupParser(); groups.feed(section)
+        self.assertEqual([group['label'] for group in groups.groups], ['FeaturedSupportCards', 'SupportGridCards'])
+        self.assertEqual(groups.groups[0]['titles'], ['Connect: Giriş', 'Deklarasyon Formu'])
+        original=next(group['serviceTitles'] for group in HOMEPAGE['serviceGroups'] if group['title']=='Yazılım ve lisans işlemleri')
+        self.assertEqual(groups.groups[1]['titles'], [title for title in original if title not in groups.groups[0]['titles']])
+        parser=CardsParser(); parser.feed(section)
+        self.assertEqual(len(parser.cards),5)
+        services={service['title']:service for service in HOMEPAGE['services'] if service['title'] in original}
+        for card,title in zip(parser.cards,groups.groups[0]['titles'] + groups.groups[1]['titles']):
+            service=services[title]
+            self.assertIn(title,card['text']); self.assertIn(service['description'],card['text']); self.assertIn(service['cta'],card['text'])
+            self.assertIn(service['icon'],card['icons'])
+            self.assertEqual(len(card['links']),1); self.assertEqual(card['links'][0]['href'],service['href'])
+            if service['href'].startswith('http'):
+                self.assertEqual(card['links'][0]['target'],'_blank'); self.assertEqual(card['links'][0]['rel'],'noopener noreferrer')
 
 
 if __name__ == "__main__":

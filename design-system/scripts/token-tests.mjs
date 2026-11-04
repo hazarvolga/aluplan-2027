@@ -104,6 +104,43 @@ export function runTokenTests({ build = buildTokens, lint = lintComponentCss, T,
       changed.resolved.field.dark['--role-architect'] === base.resolved.field.dark['--role-architect'] &&
       T.themes.aluplan.modes.dark.role.architect.$value !== t.themes.aluplan.modes.dark.role.architect.$value) || 'theme scope leaked';
   });
+  test('changing the teal palette updates Aluplan accent, buttons and media badge in both modes only', () => {
+    const t = clone();
+    t.primitive.color.teal['300'].$value = '#2CD3BE';
+    t.primitive.color.teal['700'].$value = '#0F756D';
+    const changed = run(t);
+    if (changed.errors.length) return changed.errors.join(' | ');
+    const keys = ['--accent-fg', '--action-primary-bg', '--visual-media-badge-text'];
+    for (const mode of ['light', 'dark']) {
+      for (const key of keys) {
+        if (changed.resolved.aluplan[mode][key] === base.resolved.aluplan[mode][key]) return `aluplan/${mode} ${key} did not follow teal`;
+        if (changed.resolved.field[mode][key] !== base.resolved.field[mode][key]) return `field/${mode} ${key} changed with teal`;
+      }
+      if (changed.resolved.aluplan[mode]['--visual-media-badge-text'] !== t.primitive.color.teal['300'].$value) return `aluplan/${mode} media badge did not use teal 300`;
+    }
+    return true;
+  });
+  test('media badge text has readable contrast over a white image in every theme and mode', () => {
+    const parse = value => {
+      const hex = value.match(/^#([\da-f]{6})$/i);
+      if (hex) return [0, 2, 4].map(i => parseInt(hex[1].slice(i, i + 2), 16)).concat(1);
+      const rgba = value.match(/^rgba?\(([^)]+)\)$/i);
+      if (!rgba) throw new Error(`Unsupported badge color: ${value}`);
+      const parts = rgba[1].split(',').map(Number);
+      if ((parts.length !== 3 && parts.length !== 4) || parts.some(n => !Number.isFinite(n))) throw new Error(`Invalid badge color: ${value}`);
+      return [parts[0], parts[1], parts[2], parts[3] ?? 1];
+    };
+    const composite = (fg, bg) => fg.slice(0, 3).map((c, i) => c * fg[3] + bg[i] * (1 - fg[3]));
+    const luminance = rgb => rgb.map(v => v / 255).map(v => v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4).reduce((s, v, i) => s + v * [0.2126, 0.7152, 0.0722][i], 0);
+    for (const [theme, modes] of Object.entries(base.resolved)) for (const [mode, values] of Object.entries(modes)) {
+      const surface = composite(parse(values['--visual-media-badge-surface']), [255, 255, 255]);
+      const text = composite(parse(values['--visual-media-badge-text']), surface);
+      const [high, low] = [luminance(surface), luminance(text)].sort((a, b) => b - a);
+      const contrast = (high + 0.05) / (low + 0.05);
+      if (contrast < 4.5) return `${theme}/${mode} media badge contrast ${contrast.toFixed(3)} < 4.5`;
+    }
+    return true;
+  });
   test('application overlay and chrome tokens support isolated mode edits', () => {
     const t = clone();
     t.themes.aluplan.modes.dark.visual.modalBackdrop.$value = '{primitive.color.role.engineer}';

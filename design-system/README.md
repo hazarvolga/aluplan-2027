@@ -12,6 +12,12 @@ Kök uygulama, kanonik design-system dosyalarını `scripts/build_app_styles.py`
 
 Tema kapsamlarında `data-theme` ve `data-mode` birlikte verilir. İçerik ve schema katmanları tema değerlerinden bağımsızdır. Yeni bir etkileşim veya bilgi mimarisi değişikliği token değişikliği değildir.
 
+### Yeni renk paleti uygulama
+
+Renklerin kanonik kaynağı `tokens/tokens.json` dosyasıdır. Yeni bir marka paleti verildiğinde ilgili `primitive.color` tonlarını ve gerekirse `themes` altındaki açık/koyu semantik rol eşlemelerini burada güncelleyin; bileşenlere ayrı renk değerleri yazmayın. `aluplan` temasında vurgu ve birincil eylemler teal tonlarını, `field` temasında moss tonlarını kullanır. Açık ve koyu modlar farklı tonlara ihtiyaç duyduğundan tek bir HEX değeri bütün palet yerine geçmez. Medya rozeti, koyu görsel yüzeyi üzerinde okunabilir açık palet tonunu kullanır.
+
+Değişiklikten sonra kökte `pnpm styles:generate`, `pnpm styles:check` ve `pnpm test:tokens` çalıştırın; kontrast hatalarını giderin ve her iki modda arayüzü gözle kontrol edin. `styles:check`, bileşen CSS modüllerinde ve statik JSX renklerinde token dışı sabit renkleri de denetler; dinamik ifadeler ve görsel dosyaları bu denetimin dışındadır. Durum renkleri, harici marka renkleri, debug etiketleri ve görsellere işlenmiş renkler ayrı rollerdir; palet değişiminde otomatik yeniden renklendirilmez.
+
 Uygulama JSX'inde sabit görünüm ölçülerini doğrudan sayı olarak yazmayın; gap/inset, metin genişliği, özel içerik genişliği, satır yüksekliği ve ikon çizgisi gibi roller için `tokens/tokens.json` içindeki semantik tokenları kullanın. Yüzde, `auto`, aspect ratio ve veri/indekse bağlı stiller yapısal/dinamik olabilir; bunları sabit görünüm değeri gibi tokenlaştırmayın. Inline ölçü geçişinin dört tema/mod eşliği `docs/verification/s06-2026-10-27/inline-style-migration.json` altında kanıtlanmıştır.
 
 ## Kaynaklar

@@ -23,6 +23,7 @@ function load(path) {
     if (id === './HeroBottomLine') return {HeroBottomLine: () => null};
     if (id === './SolutionOverviewCards') return {SolutionOverviewCards: () => null};
     if (id === './CompactSpecList') return {CompactSpecList: () => null};
+    if (id === './useFirstVisible') return {useFirstVisible: () => ({ref: null, hasAppeared: false, finish: () => {}})};
     if (id.startsWith('./')) return load('src/components/sections/' + id.slice(2) + '.tsx');
     throw Error('Unexpected import: ' + id);
   }

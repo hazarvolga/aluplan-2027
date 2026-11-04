@@ -230,7 +230,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
         {/* Desktop MegaMenu */}
         {openMenu && (
-          <div className="alu-megamenu" role="region" aria-label={openMenu === 'products' ? 'Ürünler Menüsü' : 'Çözümler Menüsü'}>
+          <div key={openMenu} className="alu-megamenu" role="region" aria-label={openMenu === 'products' ? 'Ürünler Menüsü' : 'Çözümler Menüsü'}>
             <div className="alu-container alu-megamenu__grid">
               {(openMenu === 'products' ? navData.productsMenu : navData.solutionsMenu).map((sec) => (
                 <div key={sec.title}>
@@ -247,7 +247,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                             onClick={() => setOpenMenu(null)}
                           >
                             <span>{item.name}</span>
-                            <AluIcon name="arrow-up-right" size="sm" />
                           </a>
                         ) : (
                           <Link
@@ -255,7 +254,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                             className="alu-megamenu__item"
                             onClick={() => setOpenMenu(null)}
                           >
-                            <AluIcon name="chevron-right" size="sm" />
                             <span>{item.name}</span>
                           </Link>
                         )}
@@ -307,7 +305,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                             className="alu-megamenu__item"
                             onClick={() => setMobileMenuOpen(false)}
                           >
-                            <AluIcon name="chevron-right" size="sm" />
                             <span>{item.name}</span>
                           </Link>
                         </li>

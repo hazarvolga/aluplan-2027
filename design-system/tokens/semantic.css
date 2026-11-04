@@ -512,7 +512,7 @@
   --visual-media-thumbnail-scrim-start: var(--ref-color-visual-media-thumbnail-scrim-start);
   --visual-media-thumbnail-scrim-end: var(--ref-color-visual-media-thumbnail-scrim-end);
   --visual-media-badge-surface: var(--ref-color-visual-media-badge-surface);
-  --visual-media-badge-text: var(--ref-color-visual-media-badge-text);
+  --visual-media-badge-text: var(--ref-color-teal-300);
   --visual-media-play-surface: var(--ref-color-visual-media-play-surface);
   --visual-media-play-border: var(--ref-color-visual-media-play-border);
   --visual-media-zoom-surface: var(--ref-color-visual-media-zoom-surface);
@@ -1048,7 +1048,7 @@
   --visual-media-thumbnail-scrim-start: var(--ref-color-visual-media-thumbnail-scrim-start);
   --visual-media-thumbnail-scrim-end: var(--ref-color-visual-media-thumbnail-scrim-end);
   --visual-media-badge-surface: var(--ref-color-visual-media-badge-surface);
-  --visual-media-badge-text: var(--ref-color-visual-media-badge-text);
+  --visual-media-badge-text: var(--ref-color-teal-300);
   --visual-media-play-surface: var(--ref-color-visual-media-play-surface);
   --visual-media-play-border: var(--ref-color-visual-media-play-border);
   --visual-media-zoom-surface: var(--ref-color-visual-media-zoom-surface);
@@ -1183,7 +1183,7 @@
   --visual-media-thumbnail-scrim-start: var(--ref-color-visual-media-thumbnail-scrim-start);
   --visual-media-thumbnail-scrim-end: var(--ref-color-visual-media-thumbnail-scrim-end);
   --visual-media-badge-surface: var(--ref-color-visual-media-badge-surface);
-  --visual-media-badge-text: var(--ref-color-visual-media-badge-text);
+  --visual-media-badge-text: var(--ref-color-teal-300);
   --visual-media-play-surface: var(--ref-color-visual-media-play-surface);
   --visual-media-play-border: var(--ref-color-visual-media-play-border);
   --visual-media-zoom-surface: var(--ref-color-visual-media-zoom-surface);
@@ -1719,7 +1719,7 @@
   --visual-media-thumbnail-scrim-start: var(--ref-color-visual-media-thumbnail-scrim-start);
   --visual-media-thumbnail-scrim-end: var(--ref-color-visual-media-thumbnail-scrim-end);
   --visual-media-badge-surface: var(--ref-color-visual-media-badge-surface);
-  --visual-media-badge-text: var(--ref-color-visual-media-badge-text);
+  --visual-media-badge-text: var(--ref-color-moss-300);
   --visual-media-play-surface: var(--ref-color-visual-media-play-surface);
   --visual-media-play-border: var(--ref-color-visual-media-play-border);
   --visual-media-zoom-surface: var(--ref-color-visual-media-zoom-surface);
@@ -1854,7 +1854,7 @@
   --visual-media-thumbnail-scrim-start: var(--ref-color-visual-media-thumbnail-scrim-start);
   --visual-media-thumbnail-scrim-end: var(--ref-color-visual-media-thumbnail-scrim-end);
   --visual-media-badge-surface: var(--ref-color-visual-media-badge-surface);
-  --visual-media-badge-text: var(--ref-color-visual-media-badge-text);
+  --visual-media-badge-text: var(--ref-color-moss-300);
   --visual-media-play-surface: var(--ref-color-visual-media-play-surface);
   --visual-media-play-border: var(--ref-color-visual-media-play-border);
   --visual-media-zoom-surface: var(--ref-color-visual-media-zoom-surface);

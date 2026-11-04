@@ -6,7 +6,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 EXPECTED = {
-    "src/components/sections/MediaGridSection.tsx": "aria-label={`${item.ctaText || 'Videoyu İzle'}: ${item.title}`}",
+    "src/components/sections/FuncsGridCars.tsx": "`${item.title} videosunu pop-up pencerede oynat`",
     "src/components/sections/SplitCalloutSection.tsx": "aria-label={`Videoyu İzle: ${callout.title}`}",
     "src/app/paket-karsilastirma/page.tsx": "aria-label={`Sürümü incele: ALLPLAN ${e.name}`}",
     "src/app/paket-karsilastirma/ComparisonTable.tsx": "aria-label={`Sürümü incele: ALLPLAN ${e.name}`}",

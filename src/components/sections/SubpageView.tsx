@@ -39,6 +39,8 @@ import { MediaViewerDialogs } from './MediaViewerDialogs';
 import { FeatureRow, FeatureRowList } from './FeatureRow';
 import { SectionHeader } from './SectionHeader';
 import { ProductsOverview } from './ProductsOverview';
+import { ProductsInnovations } from './ProductsInnovations';
+import productsStyles from './ProductsOverview.module.css';
 import { PageBreadcrumb } from './PageBreadcrumb';
 import { DebugComponentLabel } from './DebugComponentLabel';
 
@@ -364,7 +366,10 @@ export function SubpageView({
         <section className="preview-section" aria-label="Sayfa içeriği">
           <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
             {/* Part A: Benefit & Specification Cards (with native 48x48 icon badge when sec.iconSrc exists) */}
-            {page.path === '/products' ? <DebugComponentLabel name="ProductsOverview"><ProductsOverview page={page} /></DebugComponentLabel> : <>
+            {page.path === '/products' ? <div className={productsStyles.overview}>
+              <DebugComponentLabel name="ProductsOverview"><ProductsOverview page={page} /></DebugComponentLabel>
+              {page.sections.some(section => section.heading === 'Ürün Ailesindeki Yenilikler') && <DebugComponentLabel name="ProductsInnovations"><ProductsInnovations page={page} /></DebugComponentLabel>}
+            </div> : <>
             {specSections.length > 0 && (
               <DebugComponentLabel name="specGrid (özel)"><div
                 className="alu-spec-grid"

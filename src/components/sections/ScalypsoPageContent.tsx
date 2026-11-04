@@ -8,6 +8,7 @@ import { ProductEditionsBand } from './ProductPageParts';
 import { PreviewClosingSection } from './PreviewClosingSection';
 import { FeatureRow, FeatureRowList } from './FeatureRow';
 import { DebugComponentLabel } from './DebugComponentLabel';
+import { ProductsOverview } from './ProductsOverview';
 import styles from './ScalypsoPageContent.module.css';
 
 const MODULES: readonly { name: string; sectionKey: string; href: string }[] = [
@@ -83,25 +84,21 @@ export function ScalypsoPageContent({ page }: { page: PageRecord }) {
     <ProductEditionsBand kicker="SCALYPSO · DİJİTAL AVANTAJ" title="Dijital Avantaj Kazanın" editions={advantages} />
     </DebugComponentLabel>
 
-    <DebugComponentLabel name="SectionHeader + moduleGrid (özel)">
+    <DebugComponentLabel name="Scalypso Modülleri (özel)">
     <section className={styles.compact}><div className="alu-container">
       <SectionHeader kicker="SCALYPSO · MODÜLLER" title="Scalypso Modülleri" />
       {section('Scalypso Modülleri')?.items.map(text => <p key={text} className={styles.body}>{text}</p>)}
-      <nav className={styles.moduleGrid} aria-label="Scalypso modülleri">
-        {MODULES.map(m => {
-          const sec = section(m.sectionKey);
-          const desc = sec?.items.filter(t => t !== 'Detaylı Bilgi') ?? [];
-          const img = sec?.image;
-          return <Link key={m.href} href={m.href} className={styles.moduleCard}>
-            {img && <div className={styles.moduleImageWrap}>
-              <Image src={img.src} alt={img.alt} width={400} height={220} className={styles.moduleImage} />
-            </div>}
-            <div className={styles.moduleBody}>
-              <strong>{m.name}</strong>
-              {desc[0] && <span>{desc[0]}</span>}
-            </div>
-          </Link>;
-        })}
+      <nav className={styles.moduleList} aria-label="Scalypso modülleri">
+        <DebugComponentLabel name="ProductsOverview"><ProductsOverview headingLevel={3} items={MODULES.map(module => {
+          const content = section(module.sectionKey);
+          return {
+            href: module.href,
+            title: module.name,
+            description: content?.items.filter(text => text !== 'Detaylı Bilgi')[0] ?? '',
+            image: content?.image,
+            optimizedImage: true,
+          };
+        })} /></DebugComponentLabel>
       </nav>
     </div></section>
     </DebugComponentLabel>

@@ -27,6 +27,7 @@ Computed from tokens/tokens.json with the WCAG 2.x relative-luminance formula. A
 | action.secondary.fg | action.secondary.bgHover | #0A0E27 / #F5F7FA | 17.71 | 4.5 | pass (measured) |
 | action.ghost.fg | action.ghost.bgHover | #0A0E27 / #E6EAF0 | 15.74 | 4.5 | pass (measured) |
 | accent.fg | surface.default | #0F766E / #FFFFFF | 5.47 | 4.5 | pass (measured) |
+| accent.fg | surface.raised | #0F766E / #FFFFFF | 5.47 | 4.5 | pass (measured) |
 | accent.fg | accent.bg | #0F766E / #EEFBF8 | 5.16 | 4.5 | pass (measured) |
 | status.info.fg | status.info.bg | #1D4ED8 / #EEF4FF | 6.07 | 4.5 | pass (measured) |
 | status.success.fg | status.success.bg | #067647 / #ECFDF3 | 5.40 | 4.5 | pass (measured) |
@@ -79,6 +80,7 @@ Computed from tokens/tokens.json with the WCAG 2.x relative-luminance formula. A
 | action.secondary.fg | action.secondary.bgHover | #F5F7FA / #414749 | 8.81 | 4.5 | pass (measured) |
 | action.ghost.fg | action.ghost.bgHover | #F5F7FA / #414749 | 8.81 | 4.5 | pass (measured) |
 | accent.fg | surface.default | #2DD4BF / #303436 | 6.75 | 4.5 | pass (measured) |
+| accent.fg | surface.raised | #2DD4BF / #303436 | 6.75 | 4.5 | pass (measured) |
 | accent.fg | accent.bg | #2DD4BF / #0B2E2C | 7.83 | 4.5 | pass (measured) |
 | status.info.fg | status.info.bg | #93C5FD / #272A2C | 8.01 | 4.5 | pass (measured) |
 | status.success.fg | status.success.bg | #75E0A7 / #05301F | 8.96 | 4.5 | pass (measured) |
@@ -131,6 +133,7 @@ Computed from tokens/tokens.json with the WCAG 2.x relative-luminance formula. A
 | action.secondary.fg | action.secondary.bgHover | #151310 / #F0EBE4 | 15.64 | 4.5 | pass (measured) |
 | action.ghost.fg | action.ghost.bgHover | #151310 / #F0EBE4 | 15.64 | 4.5 | pass (measured) |
 | accent.fg | surface.default | #2F6B45 / #FFFFFF | 6.34 | 4.5 | pass (measured) |
+| accent.fg | surface.raised | #2F6B45 / #FFFFFF | 6.34 | 4.5 | pass (measured) |
 | accent.fg | accent.bg | #2F6B45 / #EFF7F1 | 5.81 | 4.5 | pass (measured) |
 | status.info.fg | status.info.bg | #1D4ED8 / #EEF4FF | 6.07 | 4.5 | pass (measured) |
 | status.success.fg | status.success.bg | #067647 / #ECFDF3 | 5.40 | 4.5 | pass (measured) |
@@ -183,6 +186,7 @@ Computed from tokens/tokens.json with the WCAG 2.x relative-luminance formula. A
 | action.secondary.fg | action.secondary.bgHover | #FAF8F5 / #2E2A25 | 13.44 | 4.5 | pass (measured) |
 | action.ghost.fg | action.ghost.bgHover | #FAF8F5 / #2E2A25 | 13.44 | 4.5 | pass (measured) |
 | accent.fg | surface.default | #86D19F / #1F1C18 | 9.40 | 4.5 | pass (measured) |
+| accent.fg | surface.raised | #86D19F / #2E2A25 | 7.89 | 4.5 | pass (measured) |
 | accent.fg | accent.bg | #86D19F / #1A3D2A | 6.67 | 4.5 | pass (measured) |
 | status.info.fg | status.info.bg | #93C5FD / #1F1C18 | 9.41 | 4.5 | pass (measured) |
 | status.success.fg | status.success.bg | #75E0A7 / #05301F | 8.96 | 4.5 | pass (measured) |

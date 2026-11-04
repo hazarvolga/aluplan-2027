@@ -22,12 +22,11 @@ def rule(selector: str) -> str:
 class ContrastTests(unittest.TestCase):
     def test_video_badge_text_has_its_own_token_that_reads_on_the_dark_badge(self):
         self.assertIn("color: var(--visual-media-badge-text);", rule("alu-media-card__video-badge"))
-        self.assertEqual(TOKENS["primitive"]["color"]["visual"]["mediaBadgeText"]["$value"], "#2DD4BF")
         for theme in ("aluplan", "field"):
             for mode in ("light", "dark"):
-                visual = TOKENS["themes"][theme]["modes"][mode]["visual"] if "visual" in TOKENS["themes"][theme]["modes"][mode] else None
-                if visual is not None:
-                    self.assertIn("mediaBadgeText", visual, f"{theme}/{mode}")
+                visual = TOKENS["themes"][theme]["modes"][mode]["visual"]
+                palette = "teal" if theme == "aluplan" else "moss"
+                self.assertEqual(visual["mediaBadgeText"]["$value"], f"{{primitive.color.{palette}.300}}")
 
     def test_active_reference_tab_uses_the_primary_action_colour_pair(self):
         self.assertIn("background: var(--action-primary-bg);", rule("alu-ref-tab--active"))

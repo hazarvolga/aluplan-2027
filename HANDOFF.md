@@ -1,5 +1,10 @@
 # Oturum devri
 
+## 04.11.2026 — Analytics onayı ve canlı yayın
+- Kullanıcı talebiyle `3dc8e079954fb234cae2cafe2e8fee28bfed844d` origin/main'e gönderildi ve Coolify production bu SHA'ya sabitlenerek yeniden dağıtıldı; Coolify durumu healthy, `/health` HTTP 200. Geri dönüş: production Git Source SHA `0eee22e5ce68eac8fb9bdaa4efde90b6de7b564f`, ardından yeniden dağıtım.
+- Canlı tarayıcıda çerez reddinden sonra temiz yüklemede Google betiği/isteği yok; kabul sonrası G-DQYT0D9MQ5 için iki collect yanıtı 204; geri çekme ve SPA geçişinde, ayrıca diğer sekmenin geçişinde yeni collect gözlenmedi. Önceden gönderilmiş istekler geri alınamaz; depolama ve sekmeler arası iletişimin birlikte engellenmesi istisnası sürer.
+- `pnpm test` 603 başarılı/4 atlama, typecheck, üretim bayraklı build, `pnpm audit --prod --audit-level high` ve veri üretimi başarılı. GitHub CI run 41863295089 yayın sırasında queued durumundaydı; sonucu yeniden kontrol edilmeli. Canlı HTTP denemelerinde bazı paralel istekler zaman aşımına uğradı; `/faq` tekrar denemede 200 döndü, durum izlenmeli. Cloudflare Web Analytics otomatik eklemesi kapalıdır ve site kimliği build'e eklenmedi.
+
 ## 04.11.2026 — Google Analytics ve Search Console
 - Kullanıcı isteğiyle Google Analytics Aluplan mülkündeki web akışı (G-DQYT0D9MQ5), Search Console `aluplan.com.tr` alan adı mülküyle canlı panelde ilişkilendirildi; bağlantı listesi başarılı gösterdi. Analytics Search Console Sorgular raporu açıldı ve veri gösterdi. Bağlantı geri alınabilir: Analytics > Yönetici > Ürün bağlantıları > Search Console bağlantıları.
 - Canlıda ret sonrası temiz sayfa yüklemesinde Google betiği/isteği gözlenmedi; kabul sonrası ölçüm isteği gönderildi. Geri çekme sırasında GA opt-out React effect'ini beklediğinden yerelde eşzamanlı durdurma ve sekmeler arası testler hazırlandı; kod canlıya dağıtılmadı. Yerel tarayıcıda kabul→geri çekme→ret→yeniden kabul ve SPA geçişinden sonra Google collect 204 gözlendi. Önceden kuyruğa alınan istekler geri alınamaz.

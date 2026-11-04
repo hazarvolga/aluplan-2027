@@ -638,7 +638,8 @@
 .alu-max-preview-hero__eyebrow {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: var(--type-h3-size);
+  font-size: var(--type-h2-size);
+  font-weight: var(--font-weight-strong);
   line-height: var(--type-h3-line-height);
   letter-spacing: var(--ref-font-letter-spacing-application-label);
   color: var(--accent-fg);

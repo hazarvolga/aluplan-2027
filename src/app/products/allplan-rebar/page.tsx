@@ -8,6 +8,7 @@ import { buildRelease2027JsonLd, buildRelease2027Metadata, isHeldRelease2027Rout
 import { serializeJsonLd } from '@/lib/schema';
 
 export function generateMetadata(): Metadata {
+  if (!isReleaseContentEnabled() || (isHeldRelease2027Route('/products/allplan-rebar') && !isLocalPreviewEnabled())) notFound();
   return buildRelease2027Metadata('/products/allplan-rebar');
 }
 

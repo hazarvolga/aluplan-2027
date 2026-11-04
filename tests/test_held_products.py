@@ -49,12 +49,18 @@ class HeldProductRenderTests(unittest.TestCase):
         app = ROOT / ".next/server/app/products"
         if not (app / "frilo.html").is_file():
             self.skipTest("build output missing")
-        for folder in HELD.values():
-            html = app / f"{folder}.html"
-            with self.subTest(page=folder):
-                if html.is_file():
-                    self.assertNotIn("<title>Allplan Rebar | Aluplan", html.read_text(encoding="utf-8"))
-                    self.assertNotIn("<title>Allplan Parametric | Aluplan", html.read_text(encoding="utf-8"))
+        for path, folder in HELD.items():
+            for extension in ('html', 'rsc'):
+                output = app / f"{folder}.{extension}"
+                with self.subTest(page=folder, extension=extension):
+                    self.assertTrue(output.is_file())
+                    text = output.read_text(encoding="utf-8").lower()
+                    self.assertNotIn("allplan rebar", text)
+                    self.assertNotIn("allplan parametric", text)
+                    self.assertNotIn(f"https://aluplan.com.tr{path}", text)
+                    self.assertNotIn("index, follow", text)
+                    if extension == 'html':
+                        self.assertIn('noindex', text)
 
 
 if __name__ == "__main__":

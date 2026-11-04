@@ -14,7 +14,7 @@ export function FeaturedSupportCards({ services }: { services: readonly SupportC
               <BareIcon service={service} />
             </div>
             <p className={styles.featuredText}>{service.description}</p>
-            <div className={styles.tileAction}>
+            <div className={styles.featuredAction}>
               <ServiceAction service={service} tone="primary" />
             </div>
           </li>

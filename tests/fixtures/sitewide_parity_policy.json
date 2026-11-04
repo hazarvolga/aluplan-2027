@@ -265,13 +265,6 @@
       "reason": "Civil introduction video is preserved from the 2026 source implementation"
     },
     {
-      "route": "/faq",
-      "dimension": "structuredUrl",
-      "source": "",
-      "generated": "https://www.allplan.com/product-lifecycle/",
-      "reason": "Official product lifecycle CTA is preserved from the 2026 source implementation"
-    },
-    {
       "route": "/solutions-v2/training/quick-start",
       "dimension": "headings",
       "source": [

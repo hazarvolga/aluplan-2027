@@ -343,7 +343,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         <div className="alu-site-footer__grid">
           <div className="alu-stack" style={{ gap: 'var(--space-application-jsx-comfortable)' }}>
             <img
-              className="alu-logo alu-logo--sm"
+              className="alu-logo alu-site-footer__logo"
               src={logoSrc}
               alt="Aluplan"
               width={132}
@@ -372,7 +372,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               {navData.footer.products.map((item) => (
                 <li key={item.href}>
                   <Link className="alu-site-footer__link" href={item.href}>
-                    <AluIcon name="chevron-right" size="sm" />
                     <span>{item.label}</span>
                   </Link>
                 </li>
@@ -386,7 +385,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               {navData.footer.solutions.map((item) => (
                 <li key={item.href}>
                   <Link className="alu-site-footer__link" href={item.href}>
-                    <AluIcon name="chevron-right" size="sm" />
                     <span>{item.label}</span>
                   </Link>
                 </li>

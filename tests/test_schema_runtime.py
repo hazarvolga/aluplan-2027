@@ -55,7 +55,7 @@ class SchemaRuntimeTests(unittest.TestCase):
         ]
         faq_page = graph_entity(render_schema(page["path"]), "FAQPage")
 
-        self.assertEqual(len(faq_page["mainEntity"]), 25)
+        self.assertEqual(len(faq_page["mainEntity"]), 19)
         self.assertEqual(
             [entry["name"] for entry in faq_page["mainEntity"]],
             [item["question"] for item in expected_items],

@@ -1,5 +1,17 @@
 # Oturum devri
 
+## 04.11.2026 — Yaşam döngüsü içeriği tek sayfada
+- Kullanıcı kararıyla /product-lifecycle ve ana sayfa bağlantısı korundu, SSS'deki yinelenen yaşam döngüsü sekmesi kaldırıldı. Karşılaştırmada altı sorunun anlamı ve iki hizmet tablosu ayrı sayfada mevcut; bu sayfa ayrıca bakım aşamalarını, ürün tarihlerini ve hizmetlerin daha ayrıntılı kapsamını içerir. SSS'de dört kategori ve 19 soru kalır.
+- Kaynak ve üretilmiş veriler, SEO şeması ve parite kontrolleri güncellendi. 582 test (4 atlama), 102/102 kaynak paritesi ve 2027 build başarılı. Yeni yönlendirme eklenmedi; önceki yönlendirme önerisi kullanıcı tarafından değiştirilmiştir.
+
+## 04.11.2026 — Footer menüsü ve logo
+- Footer Ürünler ve Çözümler bağlantılarındaki oklar kaldırıldı; iletişim/sosyal ikonlar ve bağlantılar korundu. Footer logosu bulunduğu sütunun genişliğine uyacak şekilde büyütüldü, başlık logosu değişmedi.
+- Yerel masaüstünde 6 ürün/5 çözüm bağlantısı oksuz, logo 257 px sütun genişliğinde; mobilde 309 px sütuna uyum ve taşmasız görünüm doğrulandı. Typecheck, 6 ilgili test ve styles:check başarılı. Değişiklikler commitlenmedi.
+
+## 04.11.2026 — FeaturedSupportCards butonları
+- FeaturedSupportCards butonları kartların iç genişliğine yayıldı, alt çizgiye bitiştirildi ve masaüstünde 36 px'e inceltildi; mobilde 44 px hedef korundu. Hover arka planı açık ve koyu temada belirginleştirildi; diğer kartlar etkilenmez.
+- Kaynaklar sayfasındaki üç grupta buton genişliği ve sıfır alt padding, mobilde boyut ve taşma tarayıcıda doğrulandı. 20 kaynak testi, typecheck ve styles:check başarılı; hover kontrastı dört tema/modda incelendi. Değişiklikler commitlenmedi.
+
 ## 04.11.2026 — Seçilen nötr palet
 - Kullanıcı dark.ase tabanlı nötr palet ile beyaz açık sayfa ve #F5F5F5 kart yüzeyini beğendi; deneme ana çalışma dalıyla birleştirilmek üzere hazırlanıyor. Koyu tema ve durum/rol renkleri ayrı rollerle çalışır. ASE dosyaları yerel kullanıcı girdisi olarak bırakıldı.
 - Önceki site için restore/pre-adobe-palette-20261104, mavi-gri deneme için restore/adobe-palette-preview-20261104 etiketleri korunuyor. Sıradaki iş: kullanıcının bildireceği küçük düzenlemeler.

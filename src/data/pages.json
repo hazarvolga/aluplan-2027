@@ -19949,8 +19949,8 @@
     "structuredLayout": {
       "faqDirectory": {
         "kicker": "/ YARDIM MERKEZİ · SIKÇA SORULAN SORULAR",
-        "title": "Lisanslama, Cloud ve Ürün Yaşam Döngüsü Rehberi",
-        "subtitle": "Sekmeler arasında geçiş yaparak Allplan abonelik sistemi, ALLPLAN Cloud hizmetleri, Serviceplus dönüşümü, Workgroup işbirliği ve ürün yaşam döngüsü politikalarını inceleyin.",
+        "title": "Lisanslama, Cloud ve İşbirliği Rehberi",
+        "subtitle": "Sekmeler arasında geçiş yaparak Allplan abonelik sistemi, ALLPLAN Cloud hizmetleri, Serviceplus dönüşümü ve Workgroup işbirliği hakkında bilgi alın.",
         "categories": [
           {
             "id": "subscription",
@@ -20121,126 +20121,6 @@
                   "LAN çözümünün sürekli iyileştirilmesi devam edecektir.",
                   "Share (WAN) ve BIMPLUS entegrasyonları ile \"Allplan Cloud\" çatısı altında daha kapsamlı ve güvenli bir işbirliği platformu hedeflenmektedir."
                 ]
-              }
-            ]
-          },
-          {
-            "id": "lifecycle",
-            "label": "Ürün Yaşam Döngüsü",
-            "iconName": "shield",
-            "title": "Ürün Yaşam Döngüsü (Product Lifecycle)",
-            "subtitle": "Versiyon onayı, bakım aşamaları ve teknik destek kapsamı politikaları. (13 Ocak 2025'ten itibaren geçerlidir)",
-            "ctaText": "Learn more: ALLPLAN product lifecycle policy",
-            "ctaHref": "https://www.allplan.com/product-lifecycle/",
-            "items": [
-              {
-                "question": "Bu ürün yaşam döngüsü politikasının kapsamı nedir?",
-                "answer": "Bu politika 13 Ocak 2025 tarihi itibariyle geçerlidir ve ALLPLAN'ın masaüstü ürünlerini (ALLPLAN, FRILO, DC-Software), SCIA ve SDS2 ürünlerinin şimdiki ve gelecek versiyonlarını kapsar. ALLPLAN 2024 ve önceki sürümleri kapsayan eski politikaların yerini alır."
-              },
-              {
-                "question": "Ürün Bakımı (Product Maintenance) ve Sürüm Desteği (Version Support) arasındaki fark nedir?",
-                "answer": "İki kavram farklı hizmet katmanlarını ifade eder:",
-                "bullets": [
-                  "Ürün Bakımı: Belirli bir sürümün bulunduğu bakım aşamasına bağlı olarak kullanıcının bekleyebileceği yazılım güncelleme türlerini tanımlar.",
-                  "Sürüm Desteği: Teknik Destek ile iletişim kurma yollarını ve sağlanan hizmetleri tanımlar."
-                ]
-              },
-              {
-                "question": "Hangi bakım hizmetleri hangi aşamaya dahildir?",
-                "answer": "Ürün Bakım Hizmetleri aşama karşılaştırma tablosu:",
-                "table": {
-                  "headers": [
-                    "Ürün Bakım Hizmetleri",
-                    "Current (Güncel)",
-                    "Supported (Desteklenen)",
-                    "Retired (Emekli)"
-                  ],
-                  "rows": [
-                    [
-                      "Yeni özellikler",
-                      "✓",
-                      "-",
-                      "-"
-                    ],
-                    [
-                      "İyileştirmeler",
-                      "✓",
-                      "-",
-                      "-"
-                    ],
-                    [
-                      "Bakım düzeltmeleri*",
-                      "✓",
-                      "✓",
-                      "-"
-                    ],
-                    [
-                      "Yeni ortamları sertifikalandırma",
-                      "✓",
-                      "-",
-                      "-"
-                    ],
-                    [
-                      "ALLPLAN Cloud Bağlantısı (Direct Interface)",
-                      "✓",
-                      "✓",
-                      "-"
-                    ]
-                  ]
-                },
-                "note": "* ALLPLAN, hataların ve eksikliklerin düzeltilmesini, kullanıcılar üzerindeki etkilerini ve diğer kriterleri göz önünde bulundurarak kendi takdirine bağlı olarak önceliklendirir."
-              },
-              {
-                "question": "Hangi teknik destek hizmetleri hangi aşamaya dahildir?",
-                "answer": "Teknik Destek Hizmetleri aşama karşılaştırma tablosu:",
-                "table": {
-                  "headers": [
-                    "Teknik Destek Hizmetleri",
-                    "Current (Güncel)",
-                    "Supported (Desteklenen)",
-                    "Retired (Emekli)"
-                  ],
-                  "rows": [
-                    [
-                      "Destek kaynakları (online)",
-                      "✓",
-                      "✓",
-                      "-"
-                    ],
-                    [
-                      "Eğitim materyalleri (online)",
-                      "✓",
-                      "✓",
-                      "-"
-                    ],
-                    [
-                      "Olay bildirimi (Telefon, mail, ticket)",
-                      "✓",
-                      "✓",
-                      "-"
-                    ],
-                    [
-                      "Hizmet talepleri (Service requests)",
-                      "✓",
-                      "✓",
-                      "-"
-                    ],
-                    [
-                      "İndirmeler (Downloads)",
-                      "✓",
-                      "✓",
-                      "-"
-                    ]
-                  ]
-                }
-              },
-              {
-                "question": "Ana Sürüm (Major Version) nedir? Ne sıklıkla yayınlanır?",
-                "answer": "Yeni (büyük) özellikler, geliştirmeler veya değişiklikler içeren sürümdür. Sürüm numarasının en solundaki rakam değiştiğinde anlaşılır (Örn. ALLPLAN 2025'ten ALLPLAN 2026'ya geçiş). Yayınlanma sıklığı: Genellikle yılda bir kez."
-              },
-              {
-                "question": "Ara Sürüm (Minor Version) nedir? Ne sıklıkla yayınlanır?",
-                "answer": "Küçük özellikler, stabilite, performans veya güvenlik iyileştirmeleri içeren sürümdür. Sürüm numarasının sağındaki rakamlar değiştiğinde anlaşılır (Örn. 2025-0-1 veya 2025-1-0). Yayınlanma sıklığı: Genellikle yılda birkaç kez (ürün hattına göre değişir)."
               }
             ]
           }

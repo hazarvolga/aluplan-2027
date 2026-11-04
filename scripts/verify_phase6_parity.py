@@ -294,8 +294,11 @@ check(
 
 faq_dir = (pages["/faq"].get("structuredLayout") or {}).get("faqDirectory") or {}
 check(
-    "/faq preserves all 5 interactive FAQ category tabs and 25 Q&A items",
-    len(faq_dir.get("categories", [])) == 5 and sum(len(c.get("items", [])) for c in faq_dir.get("categories", [])) == 25,
+    "/faq keeps four categories and 19 Q&A items; lifecycle is on its own page",
+    len(faq_dir.get("categories", [])) == 4
+    and sum(len(c.get("items", [])) for c in faq_dir.get("categories", [])) == 19
+    and all(c.get("id") != "lifecycle" for c in faq_dir.get("categories", []))
+    and (ROOT / "src/app/product-lifecycle/page.tsx").is_file(),
 )
 
 # 6. GEO (/llms.txt, robots.ts, sitemap.ts) & Security

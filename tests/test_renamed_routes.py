@@ -5,6 +5,7 @@ import json
 import os
 import subprocess
 import unittest
+from scripts.extract_structured_pages import parse_faq_page
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -54,6 +55,25 @@ class FaqRouteTests(unittest.TestCase):
         self.assertEqual(page["path"], "/faq")
         self.assertEqual(page["canonical"], "https://aluplan.com.tr/faq")
         self.assertNotIn("/solutions-v2/faq", self.pages)
+
+    def test_lifecycle_remains_on_its_own_page_not_as_an_faq_category(self):
+        directory = self.pages["/faq"]["structuredLayout"]["faqDirectory"]
+        self.assertEqual(directory, parse_faq_page()["faqDirectory"])
+        categories = directory["categories"]
+        self.assertEqual([category["id"] for category in categories], ["subscription", "cloud", "conversion", "workgroup"])
+        self.assertNotIn("lifecycle", [category["id"] for category in categories])
+        self.assertEqual(sum(len(category["items"]) for category in categories), 19)
+        lifecycle = (ROOT / "src/app/product-lifecycle/page.tsx").read_text(encoding="utf-8")
+        for text in (
+            "Bu ürün yaşam döngüsü politikasının kapsamı nedir?",
+            "Ürün bakımı ile sürüm desteği arasındaki fark nedir?",
+            "Ürün bakım aşamalarının her birinde hangi bakım hizmetleri yer alır?",
+            "Her sürüm destek aşamasında hangi teknik destek ve bakım hizmetleri yer alır?",
+            "Ana sürüm nedir?",
+            "Ara sürüm nedir?",
+        ):
+            with self.subTest(text=text):
+                self.assertIn(text, lifecycle)
 
     def test_no_generated_data_links_to_the_old_faq_url(self):
         for name in ("pages.json", "homepage.json", "navigation.json", "search-index.json"):

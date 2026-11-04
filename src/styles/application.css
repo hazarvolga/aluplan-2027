@@ -258,6 +258,11 @@
   margin-inline: auto;
   padding-inline: var(--container-gutter);
 }
+.alu-site-footer__logo {
+  width: 100%;
+  max-width: var(--layout-application-content-column-min-width);
+  height: auto;
+}
 .alu-site-footer__link {
   color: var(--site-footer-fg-secondary);
   text-decoration: none;

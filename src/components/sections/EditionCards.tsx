@@ -11,6 +11,19 @@ type Edition = { title: string; items?: readonly EditionItem[]; description?: st
 type EditionCardsProps = { title: string; editions: readonly Edition[]; kicker?: string; lead?: string; variant?: 'grid' | 'cards' | 'steps' | 'icons'; group?: { index: number; unit?: string } };
 
 const stepNumber = (index: number) => String(index + 1).padStart(2, '0');
+const friloEditionImages = new Set([
+  'frilo-concept', 'frilo-professional-concrete', 'frilo-professional-steel',
+  'frilo-professional-timber', 'frilo-ultimate', 'frilo-geotechnics-concept',
+  'frilo-geotechnics-professional-pit', 'frilo-geotechnics-professional-retaining',
+  'frilo-geotechnics-ultimate', 'frilo-geotechnics-soil-mechanics',
+]);
+
+function friloEditionSrcSet(src: string) {
+  const match = /^\/assets\/previews\/frilo\/editions\/([^/]+)\.jpg$/.exec(src);
+  if (!match || !friloEditionImages.has(match[1])) return undefined;
+  const base = `/assets/optimized/frilo/editions/${match[1]}`;
+  return `${base}-480.webp 480w, ${base}-800.webp 800w, ${base}-1200.webp 1200w`;
+}
 
 export function EditionCards({ title, editions, kicker = 'SÜRÜMLER', lead, variant = 'grid', group }: EditionCardsProps) {
   const headingId = useId();
@@ -22,7 +35,10 @@ export function EditionCards({ title, editions, kicker = 'SÜRÜMLER', lead, var
     <div className={gridClass} data-variant={variant}>{editions.map((edition, index) => <article className={styles.card} key={edition.title}>
       {variant === 'steps' && <p className={styles.stepLabel}><span className={styles.stepNumber} aria-hidden="true">{stepNumber(index)}</span>{edition.label}</p>}
       {variant === 'icons' && edition.icon && <span className={styles.iconChip}><AluIcon name={edition.icon} size="lg" /></span>}
-      {variant === 'cards' && edition.image && <img className={styles.cardImage} src={edition.image.src} alt={edition.image.alt} width="1200" height="1200" loading="lazy" />}
+      {variant === 'cards' && edition.image && <picture>
+        {friloEditionSrcSet(edition.image.src) && <source type="image/webp" srcSet={friloEditionSrcSet(edition.image.src)} sizes="(max-width: 48rem) 100vw, 50vw" />}
+        <img className={styles.cardImage} src={edition.image.src} alt={edition.image.alt} width="1200" height="1200" loading="lazy" />
+      </picture>}
       <h3>{edition.title}</h3>
       {edition.description && <p>{edition.description}</p>}
       {edition.items && edition.itemsLabel && <p className={styles.itemsLabel}>{edition.itemsLabel}</p>}

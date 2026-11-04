@@ -17,6 +17,18 @@ class EditionImageTests(unittest.TestCase):
                 self.assertLessEqual(image.stat().st_size, 450_000)
                 self.assertEqual(image.read_bytes()[:3], b'\xff\xd8\xff')
 
+    def test_responsive_webp_variants_exist_and_are_smaller(self):
+        for slug in SLUGS:
+            source = ROOT / f'public/assets/previews/frilo/editions/{slug}.jpg'
+            for width in (480, 800, 1200):
+                with self.subTest(slug=slug, width=width):
+                    image = ROOT / f'public/assets/optimized/frilo/editions/{slug}-{width}.webp'
+                    self.assertTrue(image.is_file())
+                    header = image.read_bytes()[:12]
+                    self.assertEqual(header[:4], b'RIFF')
+                    self.assertEqual(header[8:12], b'WEBP')
+                    self.assertLess(image.stat().st_size, source.stat().st_size)
+
     def test_both_bands_use_images_and_cards_render_them(self):
         page = (ROOT / 'src/app/products/frilo/page.tsx').read_text()
         cards = (ROOT / 'src/components/sections/EditionCards.tsx').read_text()

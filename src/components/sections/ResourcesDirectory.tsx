@@ -148,7 +148,6 @@ export function ResourcesDirectory() {
   return (
     <div className={styles.page}>
       <CompactPageHero
-        crumbs={[{ label: 'Ana Sayfa', href: '/' }, { label: 'Kaynaklar' }]}
         kicker={PAGE_KICKER}
         title={PAGE_TITLE}
         lead={`Eğitim, Microsoft Teams canlı bağlantı ve allplan.net.tr/tr ticket platformu dahil ${totalServices} profesyonel hizmet ve teknik kaynağa tek merkezden ulaşın.`}

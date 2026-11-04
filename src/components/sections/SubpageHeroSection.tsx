@@ -80,23 +80,6 @@ export function SubpageHeroSection({
           className="alu-stack alu-subpage-hero__content-panel"
           style={{ gap: 'var(--space-stack-md)' }}
         >
-          <nav aria-label="Sayfa konumu (Breadcrumb)">
-            <ol className="alu-breadcrumb">
-              {page.breadcrumbs.map((crumb, idx) => (
-                <li key={crumb.href + idx} style={{ display: 'inline-flex', alignItems: 'center', gap: 'var(--space-application-jsx-compact)' }}>
-                  {idx > 0 && <AluIcon name="chevron-right" size="sm" />}
-                  {idx < page.breadcrumbs.length - 1 ? (
-                    <Link href={crumb.href}>{crumb.label}</Link>
-                  ) : (
-                    <span aria-current="page" style={{ color: 'var(--text-primary)' }}>
-                      {crumb.label}
-                    </span>
-                  )}
-                </li>
-              ))}
-            </ol>
-          </nav>
-
           <div className="alu-cluster">
             <span className="alu-badge alu-badge--accent">
               <AluIcon name="layers" size="sm" />

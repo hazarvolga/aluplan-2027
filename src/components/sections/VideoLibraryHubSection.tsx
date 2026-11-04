@@ -12,15 +12,9 @@ const videoLibrary = getVideoLibraryData();
 const ACTION_LABEL = 'İzleme Listesini İncele';
 
 export function VideoLibraryHubSection() {
-  const crumbs = [
-    { label: 'Ana Sayfa', href: '/' },
-    ...(isReleaseContentEnabled() ? [{ label: 'Kaynaklar', href: '/kaynaklar' }] : []),
-    { label: videoLibrary.hero.title }
-  ];
-
   return (
     <div className={styles.page}>
-      <CompactPageHero crumbs={crumbs} kicker={videoLibrary.hero.kicker} title={videoLibrary.hero.title} lead={videoLibrary.hero.lead} />
+      <CompactPageHero kicker={videoLibrary.hero.kicker} title={videoLibrary.hero.title} lead={videoLibrary.hero.lead} />
       <div>
         <section className={styles.band} aria-labelledby="video-channel-heading">
           <div className="alu-container">

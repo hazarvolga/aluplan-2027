@@ -1,0 +1,8 @@
+.page{background:var(--surface-page)}
+.compact{padding-block:var(--space-inset-md)}
+.body{color:var(--text-secondary);line-height:var(--type-body-line-height);max-width:48rem}
+.heroActions{display:flex;flex-wrap:wrap;gap:var(--space-stack-sm);margin-top:var(--space-stack-md)}
+.heroImageWrap{overflow:hidden;border-radius:var(--radius-md, 0.5rem);max-width:48rem}
+.heroImage{width:100%;height:auto;display:block;object-fit:cover}
+.sectionImageWrap{overflow:hidden;border-radius:var(--radius-md, 0.5rem);max-width:36rem;margin-bottom:var(--space-stack-sm)}
+.sectionImage{width:100%;height:auto;display:block;object-fit:cover}

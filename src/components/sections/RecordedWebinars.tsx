@@ -26,7 +26,6 @@ export function RecordedWebinars() {
   return (
     <div className={styles.page}>
       <CompactPageHero
-        crumbs={[{ label: 'Ana Sayfa', href: '/' }, { label: 'Kaynaklar', href: '/kaynaklar' }, { label: content.title }]}
         kicker={content.kicker}
         title={content.title}
         lead={content.lead}

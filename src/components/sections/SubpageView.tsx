@@ -39,6 +39,8 @@ import { MediaViewerDialogs } from './MediaViewerDialogs';
 import { FeatureRow, FeatureRowList } from './FeatureRow';
 import { SectionHeader } from './SectionHeader';
 import { ProductsOverview } from './ProductsOverview';
+import { PageBreadcrumb } from './PageBreadcrumb';
+import { DebugComponentLabel } from './DebugComponentLabel';
 
 const AX3000_DOCS_ROUTE = '/products/ax3000/dokumanlar';
 const AX3000_MECHANICAL_ROUTE = '/solutions/ax3000-mekanik-tesisat';
@@ -129,14 +131,15 @@ export function SubpageView({
   const sectionBadgeLabel = SECTION_LABELS[page.section] || page.eyebrow;
 
   const scalypsoContent = page.path === '/solutions/scalypso/modeler' ? <ScalypsoModeler page={page} />
-    : ['/solutions/scalypso/mobile', '/solutions/scalypso/viewer'].includes(page.path) ? <ScalypsoSubpage page={page} />
+    : ['/solutions/scalypso/mobile', '/solutions/scalypso/viewer', '/solutions/scalypso/converter', '/solutions/scalypso/videos'].includes(page.path) ? <ScalypsoSubpage page={page} />
     : page.path === '/solutions/scalypso' ? <ScalypsoPageContent page={page} /> : null;
 
   return (
     <>
+      {page.breadcrumbs && page.breadcrumbs.length > 1 && <PageBreadcrumb items={page.breadcrumbs} />}
       {scalypsoContent ? scalypsoContent : <>
       {/* Subpage Hero Stage */}
-      {page.path !== '/references' && !isVideoLibraryHub && <SubpageHeroSection
+      {page.path !== '/references' && !isVideoLibraryHub && <DebugComponentLabel name="SubpageHeroSection"><SubpageHeroSection
         page={page}
         heroImage={heroImage}
         presentation={heroPresentation.presentation}
@@ -145,20 +148,13 @@ export function SubpageView({
         assetKind={heroPresentation.assetKind}
         sectionBadgeLabel={sectionBadgeLabel}
         isLegalPage={isLegalPage}
-      />}
+      /></DebugComponentLabel>}
 
-      {isReleaseContentEnabled() && release2027Bands[page.path] && <Release2027Band band={release2027Bands[page.path]} />}
-
-      {['/solutions/scalypso/converter', '/solutions/scalypso/videos'].includes(page.path) && (
-        <nav className="alu-container alu-cluster" aria-label="Scalypso bağlantıları" style={{ paddingBlock: 'var(--space-inset-md)' }}>
-          <a className="alu-button alu-button--primary alu-button--md" href={page.contentLinks.find(link => link.text === 'Deneme Lisansı İste')?.href} target="_blank" rel="noopener noreferrer">Deneme Lisansı İste</a>
-          <a className="alu-button alu-button--secondary alu-button--md" href="/solutions/scalypso">Scalypso Ana Sayfa</a>
-        </nav>
-      )}
+      {isReleaseContentEnabled() && release2027Bands[page.path] && <DebugComponentLabel name="Release2027Band"><Release2027Band band={release2027Bands[page.path]} /></DebugComponentLabel>}
 
       {/* Subpage Animated/Verified Metrics Bar (when statSections exist on non-structuredLayout pages) */}
       {!page.structuredLayout && statSections.length > 0 && (
-        <section className="preview-section preview-section--subtle" aria-label="Performans ve Verimlilik Göstergeleri">
+        <DebugComponentLabel name="metricsBand (özel)"><section className="preview-section preview-section--subtle" aria-label="Performans ve Verimlilik Göstergeleri">
           <div className="alu-container">
             <div className="alu-hero-metrics" style={{ gridTemplateColumns: `repeat(${Math.min(statSections.length, 4)}, minmax(0, 1fr))` }}>
               {statSections.map((st) => (
@@ -176,32 +172,32 @@ export function SubpageView({
               ))}
             </div>
           </div>
-        </section>
+        </section></DebugComponentLabel>
       )}
 
       {/* Special Interactive View: Video Playlist (/video-kutuphanesi/[playlistId]) */}
       {playlist && (
-        <VideoPlaylistSection
+        <DebugComponentLabel name="VideoPlaylistSection"><VideoPlaylistSection
           playlist={playlist}
           activeVideoId={activeVideoId}
           onVideoChange={setActiveVideoId}
-        />
+        /></DebugComponentLabel>
       )}
 
       {/* Special Interactive View: Video Library Hub (/video-kutuphanesi) */}
-      {isVideoLibraryHub && <VideoLibraryHubSection />}
+      {isVideoLibraryHub && <DebugComponentLabel name="VideoLibraryHubSection"><VideoLibraryHubSection /></DebugComponentLabel>}
 
       {/* Special Interactive View: Search Page (/search) */}
       {page.path === '/search' && (
-        <SearchPageSection
+        <DebugComponentLabel name="SearchPageSection"><SearchPageSection
           query={searchQuery}
           onQueryChange={setSearchQuery}
-        />
+        /></DebugComponentLabel>
       )}
 
       {/* Contact requests use the shared Microsoft form; direct channels stay available */}
       {page.path === '/contact' && (
-        <section className="preview-section preview-section--subtle" aria-labelledby="contact-form-heading">
+        <DebugComponentLabel name="contactSection (özel)"><section className="preview-section preview-section--subtle" aria-labelledby="contact-form-heading">
           <div className="alu-container alu-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, var(--layout-application-content-column-min-width)), 1fr))' }}>
             <div className="alu-service-card alu-stack">
               <span className="preview-kicker">DOĞRUDAN İLETİŞİM</span>
@@ -276,14 +272,14 @@ export function SubpageView({
               </ul>
             </div>
           </div>
-        </section>
+        </section></DebugComponentLabel>
       )}
 
       {/* Special Corporate Editorial Profile View (/about) */}
-      {page.path === '/about' && <AboutEditorialSection page={page} />}
+      {page.path === '/about' && <DebugComponentLabel name="AboutEditorialSection"><AboutEditorialSection page={page} /></DebugComponentLabel>}
       {/* License declarations remain separate from sales requests */}
       {page.path === '/solutions-v2/connect-license/activation' && (
-        <section className="preview-section preview-section--subtle" aria-labelledby="activation-form-heading">
+        <DebugComponentLabel name="activationSection (özel)"><section className="preview-section preview-section--subtle" aria-labelledby="activation-form-heading">
           <div className="alu-container">
             <div className="alu-service-card alu-stack">
               <span className="preview-kicker">LİSANS AKTİVASYONU</span>
@@ -307,12 +303,12 @@ export function SubpageView({
               </div>
             </div>
           </div>
-        </section>
+        </section></DebugComponentLabel>
       )}
 
       {/* Preserved Native MP4 Videos (only when not already paired inside structuredLayout.splitCallouts) */}
       {pageVideos.length > 0 && !page.structuredLayout?.splitCallouts?.some((c) => Boolean(c.videoSrc)) && (
-        <section className="preview-section preview-section--subtle" aria-label="Sayfa videoları">
+        <DebugComponentLabel name="SectionHeader + videoShowcase (özel)"><section className="preview-section preview-section--subtle" aria-label="Sayfa videoları">
           <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-lg)' }}>
             <SectionHeader kicker="TEKNİK VİDEO GÖSTERİMLERİ" title="Uygulama ve İş Akışı Videoları" />
             <div className="alu-products-showcase">
@@ -340,16 +336,16 @@ export function SubpageView({
               ))}
             </div>
           </div>
-        </section>
+        </section></DebugComponentLabel>
       )}
 
       {/* Solution catalog and category hubs use their explicit typed navigation contract. */}
       {solutionCatalog ? (
-        <SolutionCatalogSection directory={solutionCatalog} />
+        <DebugComponentLabel name="SolutionCatalogSection"><SolutionCatalogSection directory={solutionCatalog} /></DebugComponentLabel>
       ) : solutionHub ? (
-        <SolutionHubSection hub={solutionHub} />
+        <DebugComponentLabel name="SolutionHubSection"><SolutionHubSection hub={solutionHub} /></DebugComponentLabel>
       ) : page.structuredLayout ? (
-        <StructuredPageLayoutSection
+        <DebugComponentLabel name="StructuredPageLayoutSection"><StructuredPageLayoutSection
           layout={page.structuredLayout}
           pagePath={page.path}
           activeReferenceCategoryId={activeRefCatId}
@@ -358,19 +354,19 @@ export function SubpageView({
           onReferenceSearchQueryChange={setRefSearchQuery}
           onVideo={setActiveModalVideo}
           onImage={setActiveLightboxImage}
-        />
+        /></DebugComponentLabel>
       ) : page.path === '/solutions/cds-addon' ? (
-        <CdsAddonPageContent page={page} />
+        <DebugComponentLabel name="CdsAddonPageContent"><CdsAddonPageContent page={page} /></DebugComponentLabel>
       ) : page.path === AX3000_MECHANICAL_ROUTE ? (
-        <Ax3000MechanicalContent page={page} />
+        <DebugComponentLabel name="Ax3000MechanicalContent"><Ax3000MechanicalContent page={page} /></DebugComponentLabel>
       ) : page.path === '/about' || isVideoPlaylistPage ? null : (
         /* Preserved Structured Content Sections — Benefit/Spec Grid + Alternating Photo Showcases */
         <section className="preview-section" aria-label="Sayfa içeriği">
           <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
             {/* Part A: Benefit & Specification Cards (with native 48x48 icon badge when sec.iconSrc exists) */}
-            {page.path === '/products' ? <ProductsOverview page={page} /> : <>
+            {page.path === '/products' ? <DebugComponentLabel name="ProductsOverview"><ProductsOverview page={page} /></DebugComponentLabel> : <>
             {specSections.length > 0 && (
-              <div
+              <DebugComponentLabel name="specGrid (özel)"><div
                 className="alu-spec-grid"
                 style={isLegalPage ? { gridTemplateColumns: '1fr' } : undefined}
               >
@@ -415,14 +411,14 @@ export function SubpageView({
                     </article>
                   );
                 })}
-              </div>
+              </div></DebugComponentLabel>
             )}
 
-            {page.documentGroups && <DocumentGroupsSection groups={page.documentGroups} />}
+            {page.documentGroups && <DebugComponentLabel name="DocumentGroupsSection"><DocumentGroupsSection groups={page.documentGroups} /></DebugComponentLabel>}
 
             {/* Part B: Alternating Split Feature Rows (ONLY for high-resolution photos, NEVER icons) */}
             {featuredSections.length > 0 && (
-              <FeatureRowList>
+              <DebugComponentLabel name="FeatureRowList"><FeatureRowList>
                 {featuredSections.map((sec, idx) => {
                   const secImg = sec.image!;
                   return (
@@ -444,13 +440,13 @@ export function SubpageView({
                     </FeatureRow>
                   );
                 })}
-              </FeatureRowList>
+              </FeatureRowList></DebugComponentLabel>
             )}
             </>}
 
             {/* Interactive States / Tabs captured during Phase 0 dynamic audit */}
             {page.interactiveStates && page.interactiveStates.length > 0 && (
-              <div className="alu-module-tabs" aria-label="Detaylı Modül ve Sekme İçerikleri">
+              <DebugComponentLabel name="interactiveTabs (özel)"><div className="alu-module-tabs" aria-label="Detaylı Modül ve Sekme İçerikleri">
                 <SectionHeader kicker="ETKİLEŞİMLİ TEKNİK DETAYLAR" title="Detaylı Modül ve İş Akışı Sekmeleri" />
 
                 <div className="alu-service-pills" role="tablist">
@@ -505,12 +501,12 @@ export function SubpageView({
                     </div>
                   </div>
                 )}
-              </div>
+              </div></DebugComponentLabel>
             )}
 
             {/* Remaining High-Resolution Visual Assets Gallery (excluding small icons) */}
             {!isLegalPage && galleryImages.length > 0 && (
-              <div className="alu-stack" style={{ gap: 'var(--space-stack-lg)' }}>
+              <DebugComponentLabel name="SectionHeader + galleryGrid (özel)"><div className="alu-stack" style={{ gap: 'var(--space-stack-lg)' }}>
                 <SectionHeader kicker={`TEKNİK GÖRSEL GALERİ (${galleryImages.length} GÖRSEL)`} title="Modül, Ekran Görüntüleri ve Uygulama Detayları" />
                 <div className="alu-gallery-grid">
                   {galleryImages.map((img, gIdx) => (
@@ -529,7 +525,7 @@ export function SubpageView({
                     </figure>
                   ))}
                 </div>
-              </div>
+              </div></DebugComponentLabel>
             )}
 
             {/* Preserved Embedded Media */}
@@ -570,7 +566,7 @@ export function SubpageView({
         </section>
       )}
       </>}
-      {pageEndConversion && <PageEndConversion model={pageEndConversion} />}
+      {pageEndConversion && <DebugComponentLabel name="PageEndConversion"><PageEndConversion model={pageEndConversion} /></DebugComponentLabel>}
 
       <MediaViewerDialogs
         video={activeModalVideo}

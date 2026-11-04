@@ -16,7 +16,7 @@ export function VideoSourcePage({ title, description, sourceUrl, playlistId, vid
   const [activeVideoId, setActiveVideoId] = useState(videos[0]?.id ?? '');
   const playlist: PlaylistRecord = { id: sourceUrl, key: sourceUrl, url: sourceUrl, title: 'Son videolar', subtitle: 'Kanalın en son yayınladığı en fazla 15 video gösterilir.', count: videos.length, videos };
   return <>
-    <CompactPageHero crumbs={[{ label: 'Ana Sayfa', href: '/' }, { label: 'Video Kütüphanesi', href: '/video-kutuphanesi' }, { label: title }]} kicker="VİDEO KÜTÜPHANESİ" title={title} lead={description}>
+    <CompactPageHero kicker="VİDEO KÜTÜPHANESİ" title={title} lead={description}>
       <a className="alu-button alu-button--secondary alu-button--md" href={sourceUrl} target="_blank" rel="noopener noreferrer">YouTube’da aç ↗</a>
     </CompactPageHero>
     {playlistId ? <section className="preview-section" aria-label="Oynatma listesi"><div className="alu-container alu-stack">

@@ -1,22 +1,95 @@
-import { HeroBottomLine } from './HeroBottomLine';
+import Image from 'next/image';
 import Link from 'next/link';
 import type { PageRecord } from '@/lib/site-data';
+import { CompactPageHero } from './CompactPageHero';
+import { SectionHeader } from './SectionHeader';
+import { CompactSpecList } from './CompactSpecList';
+import { PreviewClosingSection } from './PreviewClosingSection';
+import { DebugComponentLabel } from './DebugComponentLabel';
 import styles from './ScalypsoModeler.module.css';
+
+const MODULE_NAMES = ['Pipe Module', 'BIM Module', 'Steel Module', 'Ortho Module'] as const;
 
 export function ScalypsoModeler({ page }: { page: PageRecord }) {
   const form = page.contentLinks.find(link => link.text === 'Deneme Lisansı İste')?.href;
-  const introduction = page.sections.find(section => section.heading === '3B lazer veri tarama');
-  const items = introduction?.items.filter(item => item !== '•' && item !== '01') ?? [];
-  const paragraphs = [items[0], items[1], items[items.length - 1]].filter(Boolean);
-  const systems = items.slice(2, -1);
-  const modules = ['Pipe Module', 'BIM Module', 'Steel Module', 'Ortho Module'];
-  const image = page.images.find(item => !item.isIcon && item.src);
-  const trial = page.sections.find((item, index) => index > 1 && item.heading === 'Deneme Lisansı İste');
+  const appForm = page.contentLinks.find(link => link.text === 'Başvuru Formu İçin Tıklayın')?.href;
+
+  const introSection = page.sections.find(s => s.heading === '3B lazer veri tarama');
+  const rawItems = introSection?.items.filter(item => item !== '•' && item !== '01') ?? [];
+  const introParagraphs = [rawItems[0], rawItems[1]].filter(Boolean);
+  const cadSystems = rawItems.slice(2, -1);
+  const modulesIntro = rawItems[rawItems.length - 1];
+
+  const heroImage = page.images.find(item => !item.isIcon && item.src);
+  const trial = page.sections.find((s, i) => i > 1 && s.heading === 'Deneme Lisansı İste');
+
+  const intro = page.sections[0]?.items.find(item => item.length > 50) ?? page.description;
+
   return <div className={styles.page}>
-    <section className={styles.hero} style={{ position: 'relative' }}><div className="alu-container"><span className="preview-kicker">SCALYPSO MODÜLÜ</span><h1>Modeler</h1><p>{page.sections[0]?.items.find(item => item.length > 50)}</p><div className={styles.actions}>{form && <a className="alu-button alu-button--primary alu-button--md" href={form} target="_blank" rel="noopener noreferrer">Deneme Lisansı İste</a>}<Link className="alu-button alu-button--secondary alu-button--md" href="/solutions/scalypso">Scalypso Ana Sayfa</Link></div></div><HeroBottomLine /></section>
-    <section className={styles.section}><div className={`alu-container ${styles.intro}`}><div><span className="preview-kicker">SCALYPSO MODELER</span><h2>3B lazer veri tarama</h2>{paragraphs.slice(0,2).map((paragraph,index)=><p key={index}>{paragraph}</p>)}</div>{image && <img src={image.src} alt={image.alt || 'Scalypso Modeler'} />}</div></section>
-    <section className={styles.section}><div className="alu-container"><span className="preview-kicker">BİRLİKTE ÇALIŞABİLİRLİK</span><h2>Desteklenen CAD yazılımları</h2><ul className={styles.systems}>{systems.map(system=><li key={system}>{system}</li>)}</ul></div></section>
-    <section className={styles.section}><div className="alu-container"><span className="preview-kicker">SCALYPSO MODELER</span><h2>Modüller</h2>{paragraphs.slice(2).map((paragraph,index)=><p key={index}>{paragraph}</p>)}<div className={styles.modules}>{modules.map(name=>{const section=page.sections.find(item=>item.heading===name);const link=page.contentLinks.find(item=>item.text===name);return <article key={name}><h3>{name}</h3>{section?.items.filter(text=>text !== '•').map(text=><p key={text}>{text}</p>)}{link && <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={`Detaylı bilgi: ${name}`}>Detaylı bilgi ↗</a>}</article>})}</div></div></section>
-    {form && <section className={styles.section}><div className={`alu-container ${styles.trial}`}><div><h2>Deneme Lisansı İste</h2>{trial?.items.filter(text=>text !== 'Başvuru Formu İçin Tıklayın').map(text=><p key={text}>{text}</p>)}</div><a className="alu-button alu-button--primary alu-button--md" href={form} target="_blank" rel="noopener noreferrer">Başvuru Formu İçin Tıklayın</a></div></section>}
+    <DebugComponentLabel name="CompactPageHero">
+    <CompactPageHero
+      kicker="SCALYPSO MODÜLÜ"
+      title="Scalypso Modeler"
+      lead={intro}
+    >
+      <div className={styles.heroActions}>
+        {form && <a className="alu-button alu-button--primary alu-button--md" href={form} target="_blank" rel="noopener noreferrer">Deneme Lisansı İste</a>}
+        <Link className="alu-button alu-button--secondary alu-button--md" href="/solutions/scalypso">Scalypso Ana Sayfa</Link>
+      </div>
+    </CompactPageHero>
+    </DebugComponentLabel>
+
+    <DebugComponentLabel name="SectionHeader + introGrid (özel)">
+    <section className={styles.compact}><div className="alu-container">
+      <SectionHeader kicker="SCALYPSO MODELER" title="3B lazer veri tarama" />
+      <div className={styles.introGrid}>
+        <div>
+          {introParagraphs.map((text, i) => <p key={i} className={styles.body}>{text}</p>)}
+        </div>
+        {heroImage && <div className={styles.introImageWrap}>
+          <Image src={heroImage.src} alt={heroImage.alt || 'Scalypso Modeler'} width={600} height={354} className={styles.introImage} />
+        </div>}
+      </div>
+    </div></section>
+    </DebugComponentLabel>
+
+    <DebugComponentLabel name="SectionHeader + CompactSpecList">
+    <section className={styles.compact}><div className="alu-container">
+      <SectionHeader kicker="BİRLİKTE ÇALIŞABİLİRLİK" title="Desteklenen CAD yazılımları" />
+      <CompactSpecList items={cadSystems} />
+    </div></section>
+    </DebugComponentLabel>
+
+    <DebugComponentLabel name="SectionHeader + moduleGrid (özel)">
+    <section className={styles.compact}><div className="alu-container">
+      <SectionHeader kicker="SCALYPSO MODELER" title="Modüller" />
+      {modulesIntro && <p className={styles.body}>{modulesIntro}</p>}
+      <div className={styles.moduleGrid}>
+        {MODULE_NAMES.map(name => {
+          const sec = page.sections.find(s => s.heading === name);
+          const link = page.contentLinks.find(l => l.text === name);
+          return <article key={name} className={styles.moduleCard}>
+            <strong>{name}</strong>
+            {sec?.items.filter(t => t !== '•').map((text, i) => <p key={i} className={styles.moduleDesc}>{text}</p>)}
+            {link && <a href={link.href} target="_blank" rel="noopener noreferrer" className={styles.moduleLink}>Detaylı bilgi ↗</a>}
+          </article>;
+        })}
+      </div>
+    </div></section>
+    </DebugComponentLabel>
+
+    <DebugComponentLabel name="PreviewClosingSection">
+    <PreviewClosingSection
+      id="scalypso-modeler-closing"
+      title="Scalypso Modeler hakkında görüşelim"
+      items={[
+        {
+          title: 'Deneme lisansı',
+          paragraphs: trial?.items.filter(t => t !== 'Başvuru Formu İçin Tıklayın') ?? ['Bir deneme lisansı talep etmek için lütfen Başvuru Formunu doldurunuz.'],
+          action: (appForm ?? form) ? { label: 'Başvuru Formu', href: (appForm ?? form)! } : undefined,
+        },
+      ]}
+    />
+    </DebugComponentLabel>
   </div>;
 }

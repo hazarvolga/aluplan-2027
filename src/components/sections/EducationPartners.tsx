@@ -57,7 +57,6 @@ export function EducationPartners() {
   return (
     <div className={styles.page}>
       <CompactPageHero
-        crumbs={[{ label: 'Ana Sayfa', href: '/' }, { label: 'Kaynaklar', href: '/kaynaklar' }, { label: title }]}
         title={title}
         lead={intro}
       />

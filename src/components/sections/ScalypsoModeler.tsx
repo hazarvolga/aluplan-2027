@@ -71,7 +71,7 @@ export function ScalypsoModeler({ page }: { page: PageRecord }) {
           return <article key={name} className={styles.moduleCard}>
             <strong>{name}</strong>
             {sec?.items.filter(t => t !== '•').map((text, i) => <p key={i} className={styles.moduleDesc}>{text}</p>)}
-            {link && <a href={link.href} target="_blank" rel="noopener noreferrer" className={styles.moduleLink}>Detaylı bilgi ↗</a>}
+            {link && <a href={link.href} target="_blank" rel="noopener noreferrer" className={styles.moduleLink} aria-label={`${name}: Detaylı bilgi (yeni sekmede açılır)`}>Detaylı bilgi ↗</a>}
           </article>;
         })}
       </div>

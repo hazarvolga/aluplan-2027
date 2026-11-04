@@ -45,7 +45,7 @@ class ResourcesLinkTests(unittest.TestCase):
 
     def test_homepage_section_is_removed_for_the_release_and_kept_for_rollback(self):
         home = read("src/components/sections/HomepageView.tsx")
-        self.assertIn("{!previewMaxHero && <ProfessionalServicesSection />}", home)
+        self.assertRegex(home, r'\{!previewMaxHero\s*&&\s*<DebugComponentLabel\b[^>]*>\s*<ProfessionalServicesSection\s*/>\s*</DebugComponentLabel>\s*\}')
 
 
 class ResourcesDirectoryTests(unittest.TestCase):

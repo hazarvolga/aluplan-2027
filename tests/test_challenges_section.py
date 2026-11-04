@@ -18,6 +18,7 @@ function load(path) {
   const code = ts.transpileModule(src, {compilerOptions: {module: ts.ModuleKind.CommonJS, jsx: ts.JsxEmit.ReactJSX}}).outputText;
   const module = {exports:{}};
   function req(id) {
+    if (id === './DebugComponentLabel') return {DebugComponentLabel: ({children}) => children};
     if (id === 'react/jsx-runtime' || id === 'react') return require(id);
     if (id === 'next/link') return {__esModule:true, default:({children, ...props})=>React.createElement('a',props,children)};
     if (id === '@/components/ui/AluIcon') return {AluIcon:()=>null};

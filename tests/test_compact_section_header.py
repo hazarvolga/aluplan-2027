@@ -14,8 +14,11 @@ function load(path) {
   const code = ts.transpileModule(source, {compilerOptions: {module: ts.ModuleKind.CommonJS, jsx: ts.JsxEmit.ReactJSX}}).outputText;
   const module = {exports: {}};
   function req(id) {
-    if (id === 'react/jsx-runtime') return require(id);
+    if (id === './DebugComponentLabel') return {DebugComponentLabel: ({children}) => children};
+    if (id === 'react/jsx-runtime' || id === 'react') return require(id);
     if (id === 'next/link') return {__esModule: true, default: ({children, ...props}) => React.createElement('a', props, children)};
+    if (id === 'next/image') return {__esModule: true, default: ({fill, ...props}) => React.createElement('img', props)};
+    if (id === '@/components/ui/AluIcon') return {AluIcon: () => null};
     if (id.endsWith('.module.css')) return new Proxy({}, {get: (_, key) => String(key)});
     if (id === './HeroBottomLine') return {HeroBottomLine: () => null};
     if (id === './SolutionOverviewCards') return {SolutionOverviewCards: () => null};
@@ -89,7 +92,11 @@ class CompactSectionHeaderTests(unittest.TestCase):
         self.assertEqual((requirements[0]['tag'], requirements[0]['class'], requirements[0]['parent_class']),
                          ('h3', 'alu-h3', 'alu-section-header'))
         cad = next(item for item in headings if item['text'] == 'Desteklenen CAD Yazılımları')
-        self.assertEqual(cad['tag'], 'h2')
+        scanners = next(item for item in headings if item['text'] == 'Desteklenen Tarayıcılar')
+        self.assertEqual(scanners['tag'], 'h2')
+        self.assertEqual((cad['tag'], cad['class'], cad['parent_class']),
+                         ('h3', 'alu-h3', 'alu-section-header'))
+        self.assertLess(headings.index(scanners), headings.index(cad))
         self.assertLess(headings.index(cad), headings.index(requirements[0]))
 
 if __name__ == '__main__':

@@ -79,7 +79,8 @@ class VideoLibrarySourceTests(unittest.TestCase):
 
     def test_hub_skips_the_generic_subpage_hero(self):
         view = (ROOT / "src/components/sections/SubpageView.tsx").read_text(encoding="utf-8")
-        self.assertIn("page.path !== '/references' && !isVideoLibraryHub && <SubpageHeroSection", view)
+        self.assertIn("page.path !== '/references' && !isVideoLibraryHub && <DebugComponentLabel name=\"SubpageHeroSection\"><SubpageHeroSection", view)
+        self.assertIn("isVideoLibraryHub && <VideoLibraryHubSection />", view)
 
 
 class VideoLibraryRenderTests(unittest.TestCase):

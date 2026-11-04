@@ -11,6 +11,7 @@ import { DisciplineWorkflowSection } from './DisciplineWorkflowSection';
 import { HomepageProductHeading } from './HomepageProductHeading';
 import { HeroBottomLine } from './HeroBottomLine';
 import styles from './HomepageSectionIntro.module.css';
+import { DebugComponentLabel } from './DebugComponentLabel';
 
 const data = getHomepageData();
 const releaseCountryLabel = `${data.releaseLabel} · TÜRKİYE`;
@@ -29,7 +30,7 @@ export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: bool
   return (
     <>
       {/* H01: Flagship Cinematic BIM Hero */}
-      {previewMaxHero ? <HomepageMaxPreviewHero /> : <section className="alu-hero-stage" aria-labelledby="hero-title">
+      {previewMaxHero ? <DebugComponentLabel name="HomepageMaxPreviewHero"><HomepageMaxPreviewHero /></DebugComponentLabel> : <DebugComponentLabel name="homepageHero (özel)"><section className="alu-hero-stage" aria-labelledby="hero-title">
         {data.heroVideo && (
           <div className="alu-hero-stage__backdrop" aria-hidden="true">
             <video
@@ -129,10 +130,10 @@ export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: bool
           </div>
         </div>
         <HeroBottomLine />
-      </section>}
+      </section></DebugComponentLabel>}
 
       {/* H02: QuickLinks Command Ribbon */}
-      {previewMaxHero ? <><section className={styles.intro} aria-labelledby="homepage-products-heading"><div className="alu-container"><HomepageProductHeading /></div></section><HomepageProductPreviewTabs /></> : <section className="alu-quick-ribbon" aria-label="Hızlı erişimler">
+      {previewMaxHero ? <><DebugComponentLabel name="HomepageProductHeading"><section className={styles.intro} aria-labelledby="homepage-products-heading"><div className="alu-container"><HomepageProductHeading /></div></section></DebugComponentLabel><DebugComponentLabel name="HomepageProductPreviewTabs"><HomepageProductPreviewTabs /></DebugComponentLabel></> : <DebugComponentLabel name="quickRibbon (özel)"><section className="alu-quick-ribbon" aria-label="Hızlı erişimler">
         <div className="alu-container alu-quick-ribbon__grid">
           {data.quickLinks.map(([label, href], idx) => (
             <Link key={href} className="alu-quick-ribbon__item" href={href}>
@@ -142,12 +143,12 @@ export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: bool
             </Link>
           ))}
         </div>
-      </section>}
+      </section></DebugComponentLabel>}
 
-      <DisciplineWorkflowSection id="products" roles={previewMaxHero ? data.roles.map(role => ({ ...role, image: ({ architect: '/assets/previews/workflow/architecture-web.jpg', engineer: '/assets/previews/workflow/engineering-web.jpg', fabricator: '/assets/previews/workflow/precast-web.jpg' } as Record<string, string>)[role.id] ?? role.image })) : data.roles} products={data.products} releaseLabel={data.releaseLabel} trialHref={TRIAL_CTA_URL} productsHref="/products" />
+      <DebugComponentLabel name="DisciplineWorkflowSection"><DisciplineWorkflowSection id="products" roles={previewMaxHero ? data.roles.map(role => ({ ...role, image: ({ architect: '/assets/previews/workflow/architecture-web.jpg', engineer: '/assets/previews/workflow/engineering-web.jpg', fabricator: '/assets/previews/workflow/precast-web.jpg' } as Record<string, string>)[role.id] ?? role.image })) : data.roles} products={data.products} releaseLabel={data.releaseLabel} trialHref={TRIAL_CTA_URL} productsHref="/products" /></DebugComponentLabel>
 
       {/* H04: Solutions Asymmetric Bento Grid */}
-      <section id="solutions" className={`preview-section preview-section--subtle ${styles.solutions}`} aria-labelledby="solutions-heading">
+      <DebugComponentLabel name="homepageSolutions (özel)"><section id="solutions" className={`preview-section preview-section--subtle ${styles.solutions}`} aria-labelledby="solutions-heading">
         <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
           <div className="preview-section-heading">
             <div className="alu-stack">
@@ -197,10 +198,10 @@ export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: bool
             ))}
           </div>
         </div>
-      </section>
+      </section></DebugComponentLabel>
 
       {/* H05: Package Comparison / TechSpecs */}
-      {!previewMaxHero && <section id="package-comparison" className="preview-section" aria-labelledby="packages-heading">
+      {!previewMaxHero && <DebugComponentLabel name="packageComparison (özel)"><section id="package-comparison" className="preview-section" aria-labelledby="packages-heading">
         <div className="alu-container">
           <div className="alu-techspecs-banner">
             <div className="alu-techspecs-banner__header">
@@ -255,13 +256,13 @@ export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: bool
             </div>
           </div>
         </div>
-      </section>}
+      </section></DebugComponentLabel>}
 
       {/* H06: Professional Services (the 2027 release lists these on /kaynaklar instead) */}
-      {!previewMaxHero && <ProfessionalServicesSection />}
+      {!previewMaxHero && <DebugComponentLabel name="ProfessionalServicesSection"><ProfessionalServicesSection /></DebugComponentLabel>}
 
       {/* H07: BIMFlex Spotlight */}
-      <section id="bimflex" className="preview-section" aria-labelledby="bimflex-heading">
+      <DebugComponentLabel name="homepageBimflex (özel)"><section id="bimflex" className="preview-section" aria-labelledby="bimflex-heading">
         <div className="alu-container">
           <div className="preview-bimflex">
             <div className="alu-stack preview-bimflex__content" style={{ gap: 'var(--space-stack-lg)' }}>
@@ -314,7 +315,7 @@ export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: bool
             </div>
           </div>
         </div>
-      </section>
+      </section></DebugComponentLabel>
 
     </>
   );

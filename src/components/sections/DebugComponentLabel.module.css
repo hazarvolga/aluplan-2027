@@ -1,0 +1,47 @@
+.wrapper {
+  display: contents;
+}
+
+.label {
+  display: none;
+}
+
+.label::before {
+  content: attr(data-debug-label);
+}
+
+:global(html[data-debug-overlay='1']) .wrapper {
+  display: block;
+  position: relative;
+  outline: 1px solid #f9731640;
+}
+
+:global(html[data-debug-overlay='1']) .label {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: #f97316;
+  color: #fff;
+  font: 600 10px/16px monospace;
+  padding: 2px 8px;
+  border-bottom-right-radius: 4px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+:global(html[data-debug-overlay='1']) .wrapper .wrapper > .label {
+  top: 20px;
+  left: 8px;
+}
+
+:global(html[data-debug-overlay='1']) .wrapper .wrapper .wrapper > .label {
+  top: 40px;
+  left: 16px;
+}
+
+:global(html[data-debug-overlay='1']) .wrapper .wrapper .wrapper .wrapper > .label {
+  top: 60px;
+  left: 24px;
+}

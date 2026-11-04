@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { DebugComponentLabel } from './DebugComponentLabel';
 import Link from 'next/link';
 import type { PlaylistRecord } from '@/lib/site-data';
 import type { ChannelVideo } from '@/lib/youtube-feed';
@@ -16,14 +17,14 @@ export function VideoSourcePage({ title, description, sourceUrl, playlistId, vid
   const [activeVideoId, setActiveVideoId] = useState(videos[0]?.id ?? '');
   const playlist: PlaylistRecord = { id: sourceUrl, key: sourceUrl, url: sourceUrl, title: 'Son videolar', subtitle: 'Kanalın en son yayınladığı en fazla 15 video gösterilir.', count: videos.length, videos };
   return <>
-    <CompactPageHero kicker="VİDEO KÜTÜPHANESİ" title={title} lead={description}>
+    <DebugComponentLabel name="CompactPageHero"><CompactPageHero kicker="VİDEO KÜTÜPHANESİ" title={title} lead={description}>
       <a className="alu-button alu-button--secondary alu-button--md" href={sourceUrl} target="_blank" rel="noopener noreferrer">YouTube’da aç ↗</a>
-    </CompactPageHero>
-    {playlistId ? <section className="preview-section" aria-label="Oynatma listesi"><div className="alu-container alu-stack">
+    </CompactPageHero></DebugComponentLabel>
+    {playlistId ? <DebugComponentLabel name="playlistEmbed (özel)"><section className="preview-section" aria-label="Oynatma listesi"><div className="alu-container alu-stack">
       <p className="alu-body">Oynatma listesini bu sayfada izleyebilir veya YouTube’da açabilirsiniz.</p>
       <div className="alu-playlist-player-card__viewport"><ConsentEmbed src={`https://www.youtube-nocookie.com/embed/videoseries?list=${playlistId}`} title={`${title} oynatma listesi`} fill /></div>
       <Link className="alu-link" href="/video-kutuphanesi">Video Kütüphanesine Dön</Link>
-    </div></section> : videos.length ? <VideoPlaylistSection playlist={playlist} activeVideoId={activeVideoId} onVideoChange={setActiveVideoId} videoLabel="Video" itemPrefix="Video" playlistKicker={`SON VİDEOLAR · ${videos.length} VİDEO`} showFallbackDescription={false} showThumbnails={false} /> : <section className="preview-section"><div className="alu-container alu-stack"><h2 className="alu-h2">Son videolara şu anda ulaşılamıyor</h2><p>Liste geçici olarak yüklenemedi. Kanalı YouTube’da açarak videolara ulaşabilirsiniz.</p><a className="alu-button alu-button--secondary alu-button--md" href={sourceUrl} target="_blank" rel="noopener noreferrer">Kanalı YouTube’da aç ↗</a></div></section>}
-    {conversion && <PageEndConversion model={conversion} />}
+    </div></section></DebugComponentLabel> : videos.length ? <DebugComponentLabel name="VideoPlaylistSection"><VideoPlaylistSection playlist={playlist} activeVideoId={activeVideoId} onVideoChange={setActiveVideoId} videoLabel="Video" itemPrefix="Video" playlistKicker={`SON VİDEOLAR · ${videos.length} VİDEO`} showFallbackDescription={false} showThumbnails={false} /></DebugComponentLabel> : <DebugComponentLabel name="videoFallback (özel)"><section className="preview-section"><div className="alu-container alu-stack"><h2 className="alu-h2">Son videolara şu anda ulaşılamıyor</h2><p>Liste geçici olarak yüklenemedi. Kanalı YouTube’da açarak videolara ulaşabilirsiniz.</p><a className="alu-button alu-button--secondary alu-button--md" href={sourceUrl} target="_blank" rel="noopener noreferrer">Kanalı YouTube’da aç ↗</a></div></section></DebugComponentLabel>}
+    {conversion && <DebugComponentLabel name="PageEndConversion"><PageEndConversion model={conversion} /></DebugComponentLabel>}
   </>;
 }

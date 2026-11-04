@@ -12,6 +12,7 @@ import { LinkGroupGridSection } from './LinkGroupGridSection';
 import { MediaGridSection } from './MediaGridSection';
 import { SplitCalloutSection } from './SplitCalloutSection';
 import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
+import { DebugComponentLabel } from './DebugComponentLabel';
 
 interface StructuredVideoRequest {
   youtubeId?: string;
@@ -32,6 +33,19 @@ interface StructuredContentBlocksProps {
 
 function assertNever(value: never): never {
   throw new Error(`Unsupported structured content block: ${JSON.stringify(value)}`);
+}
+
+function blockLabel(block: StructuredContentBlock): string {
+  switch (block.kind) {
+    case 'intro': return 'introSplit (özel)';
+    case 'challenges': return 'challengesSection (özel)';
+    case 'stats': return 'metricsSection (özel)';
+    case 'linkGroupGrid': return 'LinkGroupGridSection';
+    case 'benefits': return 'BenefitsSection';
+    case 'mediaGrid': return 'MediaGridSection';
+    case 'splitCallouts': return 'SplitCalloutSection';
+    default: return assertNever(block);
+  }
 }
 
 function renderBlock(
@@ -169,7 +183,9 @@ export function StructuredContentBlocks({
     <>
       {orderedBlocks.map((block) => (
         <div key={block.sourceId} data-source-id={block.sourceId}>
-          {renderBlock(block, onVideo, onImage)}
+          <DebugComponentLabel name={blockLabel(block)}>
+            {renderBlock(block, onVideo, onImage)}
+          </DebugComponentLabel>
         </div>
       ))}
     </>

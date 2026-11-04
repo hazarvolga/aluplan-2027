@@ -1,3 +1,4 @@
+import { DebugComponentLabel } from './DebugComponentLabel';
 import Link from 'next/link';
 import { getAllPlaylists, getVideoLibraryData } from '@/lib/playlist-data';
 import { isReleaseContentEnabled } from '@/lib/release-flags';
@@ -14,10 +15,10 @@ const ACTION_LABEL = 'İzleme Listesini İncele';
 export function VideoLibraryHubSection() {
   return (
     <div className={styles.page}>
-      <CompactPageHero kicker={videoLibrary.hero.kicker} title={videoLibrary.hero.title} lead={videoLibrary.hero.lead} />
+      <DebugComponentLabel name="CompactPageHero"><CompactPageHero kicker={videoLibrary.hero.kicker} title={videoLibrary.hero.title} lead={videoLibrary.hero.lead} /></DebugComponentLabel>
       <div>
         <section className={styles.band} aria-labelledby="video-channel-heading">
-          <div className="alu-container">
+          <DebugComponentLabel name="videoChannel (özel)"><div className="alu-container">
             <div className={styles.banner}>
               <div className={styles.bannerText}>
                 <p className={styles.badge}>{videoLibrary.subscribe.badge}</p>
@@ -31,11 +32,11 @@ export function VideoLibraryHubSection() {
                 <AluIcon name="external-link" size="sm" />
               </a>
             </div>
-          </div>
+          </div></DebugComponentLabel>
         </section>
 
         <section className={styles.band} aria-labelledby="all-playlists-heading">
-          <div className="alu-container">
+          <DebugComponentLabel name="videoPlaylists (özel)"><div className="alu-container">
             <h2 id="all-playlists-heading" className={styles.groupTitle}>{videoLibrary.title}</h2>
             <p className={`${styles.text} ${styles.sectionLead}`}>{videoLibrary.description}</p>
             <ul className={styles.tiles}>
@@ -84,7 +85,7 @@ export function VideoLibraryHubSection() {
                 );
               })}
             </ul>
-          </div>
+          </div></DebugComponentLabel>
         </section>
       </div>
     </div>

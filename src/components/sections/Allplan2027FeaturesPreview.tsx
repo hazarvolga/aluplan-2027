@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { DebugComponentLabel } from './DebugComponentLabel';
 import { handleStructuredTabKey } from './structured-tab-key';
 import { featureGroups } from '@/data/allplan-2027-features-preview';
 import { allplanImprovements, sciaImprovements } from '@/data/allplan-2027-improvements';
@@ -12,11 +13,11 @@ import { CompactPageHero } from './CompactPageHero';
 export function Allplan2027FeaturesPreview() {
   const [activeIndex, setActiveIndex] = useState(0);
   return <div className={styles.page}>
-    <CompactPageHero title="2027 yenilikleri: Allplan, Allplan Civil, FRILO, SCIA, SDS2" lead="Her mühendislik iş akışı için kapsamlı çözümler">
+    <DebugComponentLabel name="CompactPageHero"><CompactPageHero title="2027 yenilikleri: Allplan, Allplan Civil, FRILO, SCIA, SDS2" lead="Her mühendislik iş akışı için kapsamlı çözümler">
       <p className={styles.heroText}>Allplan, Allplan Civil, FRILO, SCIA ve SDS2’nin 2027 sürümlerini keşfedin. İş akışı ne olursa olsun mühendisler için çözümler sunuyoruz. Kontrolü sizin elinizde tutan yapay zekâ araçları, yapı analizi için modern araçlar, daha hızlı çizim ve detaylandırma ve altyapı için güçlü parametrik modeller.</p>
       <div className={styles.actions}><a className="alu-button alu-button--primary alu-button--md" href={MAIN_QUOTE_FORM_URL}>Demo talep edin ↗</a><a className="alu-button alu-button--secondary alu-button--md" href={TRIAL_CTA_URL}>Ücretsiz deneme ↗</a></div>
-    </CompactPageHero>
-    <section className={`alu-container ${styles.section}`} aria-labelledby="features-2027-title">
+    </CompactPageHero></DebugComponentLabel>
+    <DebugComponentLabel name="featuresTabs (özel)"><section className={`alu-container ${styles.section}`} aria-labelledby="features-2027-title">
       <h2 id="features-2027-title">2027 yeniliklerini keşfedin</h2>
       <div className={styles.navigation} role="tablist" aria-label="2027 ürün yenilikleri">
         {featureGroups.map((group, index) => <button type="button" role="tab" id={`features-tab-${group.id}`} aria-controls={`features-${group.id}`} aria-selected={index === activeIndex} tabIndex={index === activeIndex ? 0 : -1} key={group.id} onClick={() => setActiveIndex(index)} onKeyDown={event => handleStructuredTabKey(event, index, featureGroups.length, setActiveIndex)}><span>{group.name}</span><span className={styles.tabSubtitle}>{group.subtitle}</span></button>)}
@@ -34,13 +35,13 @@ export function Allplan2027FeaturesPreview() {
           </>}
         </section>;
       })}
-    </section>
-    <PreviewClosingSection id="features-closing-title" kicker="ALLPLAN" title="Daha iyi bir yarın inşa etmek için tasarlayın" items={[
+    </section></DebugComponentLabel>
+    <DebugComponentLabel name="PreviewClosingSection"><PreviewClosingSection id="features-closing-title" kicker="ALLPLAN" title="Daha iyi bir yarın inşa etmek için tasarlayın" items={[
       { paragraphs: ['Daha üretken, iş birlikçi ve gelişmiş iş akışları'] },
       { title: 'ALLPLAN’ı ücretsiz deneyin', paragraphs: [
         'Tek bir platformda disiplinler arası AEC ekip çalışması; malzeme ve inşaat yöntemlerinde üstün koordinasyon; gelişmiş BIM iş akışları ve gerçek zamanlı iş birliği.',
         'ALLPLAN’ın tam sürümünü 14 gün boyunca ücretsiz ve yükümlülük olmadan deneyin. Yazılımı indirerek tüm avantajları kendiniz keşfedin.'
       ], action: { label: 'Şimdi indirin', href: TRIAL_CTA_URL } }
-    ]} />
+    ]} /></DebugComponentLabel>
   </div>;
 }

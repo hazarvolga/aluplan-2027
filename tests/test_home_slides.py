@@ -58,11 +58,14 @@ class HomeSlideTests(unittest.TestCase):
     def test_homepage_hero_points_to_existing_solutions_section(self):
         hero = (ROOT / 'src/components/sections/HomepageMaxPreviewHero.tsx').read_text(encoding='utf-8')
         page = (ROOT / 'src/components/sections/HomepageView.tsx').read_text(encoding='utf-8')
-        self.assertIn('Tasarım ve mühendislik için BIM çözümleri', hero)
+        self.assertIn('<h1 id="hero-title"', hero)
+        self.assertIn('Mühendislik yeniden tanımlanıyor', hero)
         self.assertIn('href="#solutions"', hero)
         self.assertIn('href="#products"', hero)
         self.assertIn('Ürünleri keşfedin', hero)
+        self.assertIn('Çözümleri keşfedin', hero)
         self.assertIn('id="solutions"', page)
+        self.assertIn('DisciplineWorkflowSection id="products"', page)
         self.assertIn('MAIN_QUOTE_FORM_URL', hero)
 
     def test_hero_motion_is_decorative_and_respects_motion_preference(self):

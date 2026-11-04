@@ -1,3 +1,4 @@
+import { DebugComponentLabel } from './DebugComponentLabel';
 import type { PageRecord, PageSection } from '@/lib/site-data';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { SectionActions, SectionCardLink, visibleSectionItems } from './SectionLinks';
@@ -46,7 +47,7 @@ export function Ax3000MechanicalContent({ page }: { page: PageRecord }) {
   const layout = buildLayout(page);
   return (
     <div className={styles.page}>
-      <section className={styles.band} aria-labelledby="mech-intro">
+      <DebugComponentLabel name="ax3000Intro (özel)"><section className={styles.band} aria-labelledby="mech-intro">
         <div className={`alu-container ${styles.intro}`}>
           <div>
             <h2 id="mech-intro" className={styles.title}>{layout.intro.heading}</h2>
@@ -67,9 +68,9 @@ export function Ax3000MechanicalContent({ page }: { page: PageRecord }) {
             </div>
           </div>
         </div>
-      </section>
+      </section></DebugComponentLabel>
 
-      <section className={styles.band} aria-labelledby="mech-smart">
+      <DebugComponentLabel name="ax3000Smart (özel)"><section className={styles.band} aria-labelledby="mech-smart">
         <div className="alu-container">
           <h2 id="mech-smart" className={styles.title}>{layout.smart.heading}</h2>
           <div className={styles.smart}>
@@ -87,9 +88,9 @@ export function Ax3000MechanicalContent({ page }: { page: PageRecord }) {
             </div>
           </div>
         </div>
-      </section>
+      </section></DebugComponentLabel>
 
-      <section className={styles.band} aria-labelledby="mech-data">
+      <DebugComponentLabel name="ax3000Interfaces (özel)"><section className={styles.band} aria-labelledby="mech-data">
         <div className="alu-container">
           <h2 id="mech-data" className={styles.title}>{HEADINGS.data}</h2>
           <div className={styles.tiles}>
@@ -101,9 +102,9 @@ export function Ax3000MechanicalContent({ page }: { page: PageRecord }) {
             ))}
           </div>
         </div>
-      </section>
+      </section></DebugComponentLabel>
 
-      <section className={styles.band} aria-label="Modüller">
+      <DebugComponentLabel name="ax3000Modules (özel)"><section className={styles.band} aria-label="Modüller">
         <div className="alu-container">
           <div className={`${styles.tiles} ${styles.moduleTiles}`}>
             {layout.modules.map((module) => (
@@ -124,7 +125,7 @@ export function Ax3000MechanicalContent({ page }: { page: PageRecord }) {
             ))}
           </div>
         </div>
-      </section>
+      </section></DebugComponentLabel>
     </div>
   );
 }

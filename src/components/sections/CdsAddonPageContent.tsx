@@ -1,3 +1,4 @@
+import { DebugComponentLabel } from './DebugComponentLabel';
 import type { PageRecord } from '@/lib/site-data';
 import { SectionHeader } from './SectionHeader';
 import { visibleSectionItems } from './SectionLinks';
@@ -22,16 +23,16 @@ export function CdsAddonPageContent({ page }: { page: PageRecord }) {
     <section className="preview-section" aria-label="Sayfa içeriği">
       <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
         {introductions.map((section, index) => (
-          <div className="alu-stack" style={{ gap: 'var(--space-stack-sm)' }} key={`${section.heading}-${index}`}>
+          <DebugComponentLabel name="SectionHeader + paragraphs" key={`${section.heading}-${index}`}><div className="alu-stack" style={{ gap: 'var(--space-stack-sm)' }}>
             <SectionHeader title={section.heading} />
             {visibleSectionItems(section).map((paragraph, paragraphIndex) => (
               <p className="alu-body" key={paragraphIndex} style={{ margin: 0 }}>{paragraph}</p>
             ))}
-          </div>
+          </div></DebugComponentLabel>
         ))}
-        <div className={styles.modules}>
+        <DebugComponentLabel name="SolutionOverviewCards"><div className={styles.modules}>
           <SolutionOverviewCards items={items} headingLevel={3} paragraphsByHref={paragraphsByHref} actionLabel="İncele" />
-        </div>
+        </div></DebugComponentLabel>
       </div>
     </section>
   );

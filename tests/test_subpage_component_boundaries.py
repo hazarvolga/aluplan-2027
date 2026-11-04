@@ -29,10 +29,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
             parent,
         )
         self.assertIn("const pageEndConversion = getPageEndConversion(page)", parent)
-        self.assertIn(
-            "{pageEndConversion && <PageEndConversion model={pageEndConversion} />}",
-            parent,
-        )
+        self.assertRegex(parent, r'\{pageEndConversion\s*&&\s*<DebugComponentLabel\s+name="PageEndConversion">\s*<PageEndConversion model=\{pageEndConversion\}\s*/>\s*</DebugComponentLabel>\}')
         self.assertEqual(parent.count("<PageEndConversion "), 1)
 
         removed_markers = [
@@ -368,8 +365,6 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
             "isLegalPage: boolean",
             "alu-subpage-hero",
             'aria-labelledby="page-h1"',
-            "page.breadcrumbs.map",
-            'aria-current="page"',
             "sectionBadgeLabel",
             "page.h1",
             "page.description",
@@ -405,6 +400,13 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
                 self.assertIn(marker, parent)
         self.assertNotIn("alu-subpage-hero", parent)
         self.assertNotIn("alu-breadcrumb", parent)
+        breadcrumb = read("src/components/sections/PageBreadcrumb.tsx")
+        self.assertIn("import { PageBreadcrumb } from './PageBreadcrumb';", parent)
+        self.assertIn("page.breadcrumbs.length > 1 && <PageBreadcrumb items={page.breadcrumbs} />", parent)
+        self.assertIn("items.map", breadcrumb)
+        self.assertIn('aria-current="page"', breadcrumb)
+        self.assertIn('aria-label="Sayfa yolu"', breadcrumb)
+        self.assertNotIn("page.breadcrumbs", component)
 
     def test_subpage_hero_uses_sitewide_family_background_presentation(self):
         policy = read("src/components/sections/subpage-hero-presentation.ts")
@@ -580,7 +582,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
                 self.assertIn(marker, component)
 
         self.assertIn("import { AboutEditorialSection } from './AboutEditorialSection';", parent)
-        self.assertIn("page.path === '/about' && <AboutEditorialSection page={page} />", parent)
+        self.assertRegex(parent, r"page\.path === '/about'\s*&&\s*<DebugComponentLabel\s+name=\"AboutEditorialSection\">\s*<AboutEditorialSection page=\{page\}\s*/>\s*</DebugComponentLabel>")
         self.assertNotIn("alu-about-editorial", parent)
 
     def test_structured_benefits_have_a_dedicated_render_boundary(self):

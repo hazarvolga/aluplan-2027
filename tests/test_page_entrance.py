@@ -7,9 +7,14 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class PageEntranceTests(unittest.TestCase):
     def test_hero_line_is_shared_at_hero_boundaries(self):
-        for name in ('HomepageMaxPreviewHero.tsx', 'HomepageView.tsx', 'SubpageHeroSection.tsx', 'ProductHero.tsx', 'CompactPageHero.tsx', 'ScalypsoPageContent.tsx', 'ScalypsoModeler.tsx', 'ScalypsoSubpage.tsx'):
+        for name in ('HomepageMaxPreviewHero.tsx', 'HomepageView.tsx', 'SubpageHeroSection.tsx', 'ProductHero.tsx', 'CompactPageHero.tsx'):
             with self.subTest(component=name):
                 self.assertIn('<HeroBottomLine />', (ROOT / 'src/components/sections' / name).read_text())
+        for name in ('ScalypsoPageContent.tsx', 'ScalypsoModeler.tsx', 'ScalypsoSubpage.tsx'):
+            with self.subTest(component=name):
+                text = (ROOT / 'src/components/sections' / name).read_text()
+                self.assertIn("import { CompactPageHero } from './CompactPageHero';", text)
+                self.assertIn('<CompactPageHero', text)
         shell = (ROOT / 'src/components/shell/SiteShell.tsx').read_text()
         self.assertNotIn('<PageEntrance />', shell)
 

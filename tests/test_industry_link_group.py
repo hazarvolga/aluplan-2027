@@ -14,7 +14,8 @@ function load(path) {
   const code = ts.transpileModule(source, {compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX}}).outputText;
   const m = {exports:{}};
   function req(id) {
-    if (id === 'react/jsx-runtime') return require(id);
+    if (id === './DebugComponentLabel') return {DebugComponentLabel: ({children}) => children};
+    if (id === 'react/jsx-runtime' || id === 'react') return require(id);
     if (id === '@/components/ui/AluIcon') return {AluIcon:()=>null};
     if (id === 'next/link') return {__esModule:true,default:({children,...props})=>React.createElement('a',props,children)};
     if (id.endsWith('.module.css')) return new Proxy({}, {get:(_,key)=>String(key)});

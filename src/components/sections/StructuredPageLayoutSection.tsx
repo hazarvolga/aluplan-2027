@@ -21,6 +21,7 @@ import { WorkflowSection } from './WorkflowSection';
 import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
 import { SectionHeader } from './SectionHeader';
 import { gridGroupFor } from '@/lib/grid-groups';
+import { DebugComponentLabel } from './DebugComponentLabel';
 
 interface StructuredVideoRequest {
   youtubeId?: string;
@@ -72,7 +73,7 @@ export function StructuredPageLayoutSection({
           onVideo={onVideo}
           onImage={onImage}
         />
-        <FAQSection faqDirectory={layout.faqDirectory} />
+        {layout.faqDirectory && layout.faqDirectory.categories.length > 0 && <DebugComponentLabel name="FAQSection"><FAQSection faqDirectory={layout.faqDirectory} /></DebugComponentLabel>}
       </div>
     );
   }
@@ -80,7 +81,7 @@ export function StructuredPageLayoutSection({
   return (
     <div className="alu-structured-page">
       {layout.intro && (
-        <section className="preview-section" aria-label={layout.intro.title}>
+        <DebugComponentLabel name="introSplit (özel)"><section className="preview-section" aria-label={layout.intro.title}>
           <div className="alu-container">
             <div
               className={`alu-intro-split${
@@ -120,11 +121,11 @@ export function StructuredPageLayoutSection({
               )}
             </div>
           </div>
-        </section>
+        </section></DebugComponentLabel>
       )}
 
       {layout.workflowLinks && layout.workflowLinks.length > 0 && (
-        <section className="alu-workflow-ribbon-section" aria-label="Hızlı İş Akışı Bağlantıları">
+        <DebugComponentLabel name="workflowRibbon (özel)"><section className="alu-workflow-ribbon-section" aria-label="Hızlı İş Akışı Bağlantıları">
           <div className="alu-container">
             <div className="alu-workflow-ribbon">
               {layout.workflowLinks.map((workflowLink, workflowIndex) => {
@@ -163,11 +164,11 @@ export function StructuredPageLayoutSection({
               })}
             </div>
           </div>
-        </section>
+        </section></DebugComponentLabel>
       )}
 
       {layout.stats && layout.stats.length > 0 && (
-        <section className="preview-section preview-section--subtle" aria-label="Performans Göstergeleri">
+        <DebugComponentLabel name="metricsBand (özel)"><section className="preview-section preview-section--subtle" aria-label="Performans Göstergeleri">
           <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
             <div
               className="alu-hero-metrics"
@@ -189,22 +190,22 @@ export function StructuredPageLayoutSection({
             </div>
 
           </div>
-        </section>
+        </section></DebugComponentLabel>
       )}
 
       {layout.challenges && layout.challenges.length > 0 && (
-        <section className="preview-section preview-section--subtle" aria-label="Sektörel Zorluklar">
+        <DebugComponentLabel name="challengesSection (özel)"><section className="preview-section preview-section--subtle" aria-label="Sektörel Zorluklar">
           <div className="alu-container">
             <ChallengesBand
               title="Günümüz Projelerinde Karşılaşılan Temel Zorluklar"
               items={layout.challenges}
             />
           </div>
-        </section>
+        </section></DebugComponentLabel>
       )}
 
-      {layout.splitCallouts && (
-        <SplitCalloutSection
+      {layout.splitCallouts?.some((callout) => callout.title !== 'Lisans ve Gereksinimler' && !callout.title.includes('SCIA Engineer')) && (
+        <DebugComponentLabel name="SplitCalloutSection"><SplitCalloutSection
           callouts={layout.splitCallouts.filter(
             (callout) =>
               callout.title !== 'Lisans ve Gereksinimler' &&
@@ -213,47 +214,47 @@ export function StructuredPageLayoutSection({
           itemKeyPrefix="callout-top"
           onVideo={onVideo}
           onImage={onImage}
-        />
+        /></DebugComponentLabel>
       )}
 
-      {pagePath === '/products/sds2-home' && <MediaGridSection grid={sds2Features2027} itemKeyPrefix="sds2-2027" onVideo={onVideo} onImage={onImage} />}
+      {pagePath === '/products/sds2-home' && <DebugComponentLabel name="MediaGridSection"><MediaGridSection grid={sds2Features2027} itemKeyPrefix="sds2-2027" onVideo={onVideo} onImage={onImage} /></DebugComponentLabel>}
 
-      {pagePath === '/products/sds2-home' && <section className="preview-section preview-section--subtle"><div className="alu-container"><ChallengesBand title="Bu zorluklarla sık sık karşılaşıyor musunuz?" items={["Genel geçer birleşimler ek iş gücü, maliyet ve zaman alan bilgi talepleri (RFI) yaratır.", "Projeleri daha hızlı ve daha düşük maliyetle teslim etme baskısı artar.", "Hatalı maliyet tahminleri, gecikmeler ve artan proje maliyetleri kârı azaltır."]} /></div></section>}
+      {pagePath === '/products/sds2-home' && <DebugComponentLabel name="challengesSection (özel)"><section className="preview-section preview-section--subtle"><div className="alu-container"><ChallengesBand title="Bu zorluklarla sık sık karşılaşıyor musunuz?" items={["Genel geçer birleşimler ek iş gücü, maliyet ve zaman alan bilgi talepleri (RFI) yaratır.", "Projeleri daha hızlı ve daha düşük maliyetle teslim etme baskısı artar.", "Hatalı maliyet tahminleri, gecikmeler ve artan proje maliyetleri kârı azaltır."]} /></div></section></DebugComponentLabel>}
 
-      {pagePath === '/products/sds2-home' && <section className="preview-section"><div className="alu-container"><div style={{marginBottom:"var(--space-stack-lg)"}}><SectionHeader kicker="/ SDS2 · İŞİNİZE KATKISI" title="SDS2 by ALLPLAN işinize nasıl fayda sağlar?" /></div><MetricCards items={[
+      {pagePath === '/products/sds2-home' && <DebugComponentLabel name="metricsSection (özel)"><section className="preview-section"><div className="alu-container"><div style={{marginBottom:"var(--space-stack-lg)"}}><SectionHeader kicker="/ SDS2 · İŞİNİZE KATKISI" title="SDS2 by ALLPLAN işinize nasıl fayda sağlar?" /></div><MetricCards items={[
         {value:'%93', label:'ZAMAN TASARRUFU', description:'Kullanıcıların %93’ü, SDS2 by ALLPLAN ile projeleri en az %25 daha hızlı tamamladığını bildiriyor.', source: SDS2_SURVEY_SOURCE},
         {value:'%86', label:'DAHA FAZLA VERİMLİLİK', description:'Kullanıcıların %86’sı, SDS2 by ALLPLAN’ın imalat verimliliğini artırmaya yardımcı olduğunu söylüyor.', source: SDS2_SURVEY_SOURCE},
         {value:'%71', label:'DAHA ÜRETKEN', description:'Kullanıcıların %71’i, kullanmaya başladıktan sonraki bir yıl içinde üretkenlik artışı gördü.', source: SDS2_SURVEY_SOURCE},
-      ]} /></div></section>}
+      ]} /></div></section></DebugComponentLabel>}
 
-      {pagePath === '/products/sds2-home' && <BenefitsSection benefits={{kicker:'/ SDS2 BY ALLPLAN', title:'Çelik detaylandırmada öne çıkan yetenekler', items:[
+      {pagePath === '/products/sds2-home' && <DebugComponentLabel name="BenefitsSection"><BenefitsSection benefits={{kicker:'/ SDS2 BY ALLPLAN', title:'Çelik detaylandırmada öne çıkan yetenekler', items:[
         {sourceId:'live.sds.ben.connections',title:'Akıllı birleşimleri otomatik tasarlayın',description:'Modelleme sırasında tam doğrulanmış birleşimler oluşturarak zaman kazanın; hataları ve bilgi taleplerini (RFI) azaltın.',iconSrc:'/assets/previews/sds2/icons/automated_workflows.png'},
         {sourceId:'live.sds.ben.customized',title:'Özelleştirilmiş tasarım otomasyonu',description:'Modelinizi imalatçının ve montajcının güçlü yönlerine ve tercihlerine kolayca uyarlayın.',iconSrc:'/assets/previews/sds2/icons/icon-02.png'},
         {sourceId:'live.sds.ben.multiuser',title:'Canlı çok kullanıcılı modelleme',description:'Diğer kullanıcılarla aynı model üzerinde aynı anda, veri hataları olmadan çalışın.',iconSrc:'/assets/previews/sds2/icons/productive_collab.png'},
         {sourceId:'live.sds.ben.rfi',title:'Bilgi taleplerinde zaman kazanın',description:'Etkileşimli raporlar ve basit model inceleme iş akışlarıyla tasarım niyetini kolayca iletin.',iconSrc:'/assets/previews/sds2/icons/more_accurate_deliverables.png'},
         {sourceId:'live.sds.ben.production',title:'Doğru üretim verileri',description:'İmalatı kolaylaştırmak için sektörün önde gelen otomatik ekipman çözümleriyle entegrasyon sağlayın.',iconSrc:'/assets/previews/sds2/icons/accurate_production_data.png'},
         {sourceId:'live.sds.ben.bim',title:'Kesintisiz BIM iş akışları',description:'Verileri tasarımdan inşaata BIM döngüsü boyunca kullanın.',iconSrc:'/assets/previews/sds2/icons/import_bim_models.png'},
-      ]}} />}
+      ]}} /></DebugComponentLabel>}
 
       {layout.benefits && layout.benefits.items.length > 0 && (
-        <BenefitsSection benefits={layout.benefits} variant={pagePath === "/products/sds2-home" ? "category-list" : "default"} />
+        <DebugComponentLabel name="BenefitsSection"><BenefitsSection benefits={layout.benefits} variant={pagePath === "/products/sds2-home" ? "category-list" : "default"} /></DebugComponentLabel>
       )}
 
       {layout.coreFeatures && layout.coreFeatures.items.length > 0 && (
-        <MediaGridSection
+        <DebugComponentLabel name="MediaGridSection"><MediaGridSection
           grid={layout.coreFeatures}
           itemKeyPrefix="core-features"
           onVideo={onVideo}
           onImage={onImage}
-        />
+        /></DebugComponentLabel>
       )}
 
       {layout.workflowTabs && (
-        <WorkflowSection
+        <DebugComponentLabel name="WorkflowSection"><WorkflowSection
           content={layout.workflowTabs}
           onVideo={onVideo}
           onImage={onImage}
-        />
+        /></DebugComponentLabel>
       )}
 
       {gridGroup && layout.extraGrids && layout.extraGrids.length > 0 && (
@@ -264,18 +265,17 @@ export function StructuredPageLayoutSection({
         </div>
       )}
       {layout.extraGrids?.map((grid, gridIndex) => (
-        <MediaGridSection
-          key={`extra-grid-${gridIndex}`}
+        <DebugComponentLabel key={`extra-grid-${gridIndex}`} name="MediaGridSection"><MediaGridSection
           grid={grid}
           itemKeyPrefix={`extra-grid-${gridIndex}`}
           onVideo={onVideo}
           onImage={onImage}
           group={gridGroup ? { index: gridIndex, unit: gridGroup.unit } : undefined}
-        />
+        /></DebugComponentLabel>
       ))}
 
-      {layout.splitCallouts && (
-        <SplitCalloutSection
+      {layout.splitCallouts?.some((callout) => callout.title === 'Lisans ve Gereksinimler' || callout.title.includes('SCIA Engineer')) && (
+        <DebugComponentLabel name="SplitCalloutSection"><SplitCalloutSection
           callouts={layout.splitCallouts.filter(
             (callout) =>
               callout.title === 'Lisans ve Gereksinimler' ||
@@ -284,11 +284,11 @@ export function StructuredPageLayoutSection({
           itemKeyPrefix="callout-bottom"
           onVideo={onVideo}
           onImage={onImage}
-        />
+        /></DebugComponentLabel>
       )}
 
       {layout.faq && layout.faq.items.length > 0 && (
-        <section className="preview-section preview-section--subtle" aria-label={layout.faq.title}>
+        <DebugComponentLabel name="faqList (özel)"><section className="preview-section preview-section--subtle" aria-label={layout.faq.title}>
           <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
             <SectionHeader kicker="/ SIKÇA SORULAN SORULAR" title={layout.faq.title} />
             <div className="alu-faq-list">
@@ -313,20 +313,20 @@ export function StructuredPageLayoutSection({
               ))}
             </div>
           </div>
-        </section>
+        </section></DebugComponentLabel>
       )}
 
       {layout.referencesDirectory && (
-        <ReferencesDirectorySection
+        <DebugComponentLabel name="ReferencesDirectorySection"><ReferencesDirectorySection
           directory={layout.referencesDirectory}
           activeCategoryId={activeReferenceCategoryId}
           searchQuery={referenceSearchQuery}
           onCategoryChange={onReferenceCategoryChange}
           onSearchQueryChange={onReferenceSearchQueryChange}
-        />
+        /></DebugComponentLabel>
       )}
 
-      <FAQSection faqDirectory={layout.faqDirectory} />
+      {layout.faqDirectory && layout.faqDirectory.categories.length > 0 && <DebugComponentLabel name="FAQSection"><FAQSection faqDirectory={layout.faqDirectory} /></DebugComponentLabel>}
     </div>
   );
 }

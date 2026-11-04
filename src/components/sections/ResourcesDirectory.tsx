@@ -1,3 +1,4 @@
+import { DebugComponentLabel } from './DebugComponentLabel';
 import Link from 'next/link';
 import { getHomepageData } from '@/lib/site-shared';
 import { AluIcon } from '@/components/ui/AluIcon';
@@ -147,7 +148,7 @@ function GridGroup({ services }: { services: Service[] }) {
 export function ResourcesDirectory() {
   return (
     <div className={styles.page}>
-      <CompactPageHero
+      <DebugComponentLabel name="CompactPageHero"><CompactPageHero
         kicker={PAGE_KICKER}
         title={PAGE_TITLE}
         lead={`Eğitim, Microsoft Teams canlı bağlantı ve allplan.net.tr/tr ticket platformu dahil ${totalServices} profesyonel hizmet ve teknik kaynağa tek merkezden ulaşın.`}
@@ -160,17 +161,17 @@ export function ResourcesDirectory() {
             </a>
           ))}
         </nav>
-      </CompactPageHero>
+      </CompactPageHero></DebugComponentLabel>
       <div>
-        {groups.map((group) => (
-          <section key={group.id} id={group.id} className={styles.band} aria-labelledby={`${group.id}-title`}>
+        {groups.map((group, index) => (
+          <DebugComponentLabel key={group.id} name={`resourcesGroup: ${group.layout} (özel)`}><section id={group.id} className={`${styles.band} ${index === groups.length - 1 ? styles.lastBand : ''}`} aria-labelledby={`${group.id}-title`}>
             <div className="alu-container">
               <h2 id={`${group.id}-title`} className={styles.groupTitle}>{group.title}</h2>
               {group.layout === 'support' && <SupportGroup services={group.services} />}
               {group.layout === 'list' && <ListGroup services={group.services} />}
               {group.layout === 'grid' && <GridGroup services={group.services} />}
             </div>
-          </section>
+          </section></DebugComponentLabel>
         ))}
       </div>
     </div>

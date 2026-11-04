@@ -7,6 +7,8 @@ import { AluIcon, AluIconName } from '@/components/ui/AluIcon';
 import { MediaDialog } from '@/components/ui/MediaDialog';
 import { clearConsent, useConsentReady, useCookieConsent, writeConsent } from '@/lib/consent';
 import { isReleaseContentEnabled } from '@/lib/release-flags';
+import { DebugComponentLabel } from '@/components/sections/DebugComponentLabel';
+import debugStyles from '@/components/sections/DebugComponentLabel.module.css';
 
 const navData = getNavigationData();
 const searchIndex = getSearchIndex();
@@ -108,7 +110,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       </a>
 
       {/* Top Bar */}
-      <div className="alu-topbar">
+      <DebugComponentLabel name="SiteShell · TopBar (özel)"><div className="alu-topbar">
         <div className="alu-container alu-topbar__inner">
           <div className="alu-topbar__socials" aria-label="Sosyal medya bağlantıları">
             {navData.topBar.socialLinks.map((soc) => (
@@ -140,10 +142,11 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             </a>
           </div>
         </div>
-      </div>
+      </div></DebugComponentLabel>
 
       {/* Main Header (Navigation-focused per Phase 5 decision) */}
       <header className="alu-site-header" onMouseLeave={() => setOpenMenu(null)}>
+        <span className={debugStyles.label} data-debug-label="SiteShell · Header (özel)" aria-hidden="true" />
         <div className="alu-site-header__inner">
           <Link className="alu-logo-link" href="/" aria-label="Aluplan Ana Sayfa">
             <img
@@ -339,7 +342,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       <main id="main-content">{children}</main>
 
       {/* Footer */}
-      <footer className="alu-site-footer">
+      <DebugComponentLabel name="SiteShell · Footer (özel)"><footer className="alu-site-footer">
         <div className="alu-site-footer__grid">
           <div className="alu-stack" style={{ gap: 'var(--space-application-jsx-comfortable)' }}>
             <img
@@ -440,7 +443,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           </div>
           <span>{navData.footer.credit}</span>
         </div>
-      </footer>
+      </footer></DebugComponentLabel>
 
       {/* Search Command Modal */}
       {searchOpen && (

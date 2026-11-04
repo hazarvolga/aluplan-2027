@@ -1,5 +1,23 @@
 # Oturum devri
 
+## 04.11.2026 — Debug sistemi test düzeltmeleri
+- Scalypso Modeler modül bağlantılarının erişilebilir adları modül adına göre ayrıştırıldı; görünür metin ve hedefler korundu. Eski hero, breadcrumb, bileşen sınırı ve başlık hiyerarşisi testleri mevcut davranışı doğrulayacak şekilde güncellendi.
+- `ALUPLAN_SHOW_2027=1 ALUPLAN_BLOCK_INDEXING=1 pnpm build` başarılı. Ardından `pnpm test`: 542 test başarılı, 4 atlandı; kaynak sözleşmesi, 51 parite ve 45 token kontrolü başarılı. Yerel Modeler sayfasında dört bağlantının ayrı erişilebilir adı doğrulandı. Bağımsız incelemede kritik/yüksek bulgu yok.
+
+## 04.11.2026 — Site geneli bileşen etiketleri
+- `window.__debugOverlay()` kök yerleşimde her sayfada kullanılabilir; `true`/`false` ile açıkça ayarlanır. Durum localStorage ile saklanır ve aynı origin üzerindeki açık sekmeler arasında eşitlenir. Bileşen ağacı aç/kapat sırasında yeniden oluşturulmaz; etiketler erişilebilirlik ağacından gizlenir ve metinleri HTML gövdesine eklenmez.
+- Ana sayfa, doğrudan ürün/kaynak sayfaları, yapılandırılmış içerik ve ortak `SectionHeader`, `GroupHeader`, `FeatureRow`, `FeatureRowList`, `EditionCards`, `MetricCards`, `ChallengesBand`, `CompactSpecList` etiketlendi. Özel bölümler `(özel)` olarak belirtilir. Her küçük UI öğesi için kapsam iddiası yok; sonraki sayfa incelemelerinde eksikler tamamlanabilir.
+- Yerel ana sayfa, çözümler, iletişim ve FRILO örnekleri; sekmeler arası eşitleme, yenileme ve seçili ürün sekmesinin korunması kontrol edildi. Overlay açık bırakıldı. 2027 bayraklarıyla build, typecheck, 3 debug testi, 51 parite ve 45 token testi başarılı. Tam Python testinde 542 testten 11 başarısızlık, 4 atlama kaldı: eski hero/breadcrumb/sınır beklentileri, Scalypso başlık beklentisi ve Scalypso Modeler belirsiz bağlantı adı ayrıca incelenmeli. Değişiklikler commit edilmedi.
+
+## 04.11.2026 — Eksik debug overlay etiketleri
+- `SubpageView` içindeki `ContactMap` ve genel gömülü medya bloğu `DebugComponentLabel` ile etiketlendi. `pnpm typecheck` ve `git diff --check` başarılı; bağımsız incelemede kritik/yüksek bulgu yok.
+- Yerel `/contact` sayfasında etiketin açılması, yenileme ve sayfa geçişi sonrası kalması ve kapatılması doğrulandı. Genel gömülü medya dalı mevcut sayfa verileri ve alternatif sayfa düzenleri nedeniyle örnek bir canlı sayfada görüntülenemedi; kod yolu etiketlendi. Overlay değişiminde mevcut bileşen davranışı nedeniyle gömüler yeniden oluşturulabilir.
+- Değişiklikler commit edilmedi. Yerel debug overlay doğrulama sonunda kapatıldı.
+
+## 04.11.2026 — Yerel geliştirme sunucusu
+- Kullanıcı isteğiyle `pnpm dev` başlatıldı: `http://127.0.0.1:3000/`; ana sayfa HTTP 200 döndürdü. Sunucu bu oturumdaki süreç çalıştığı sürece erişilebilir.
+- Mevcut dal `codex/coolify-staging-20261103`, HEAD `f08bb19` ve uzak daldan bir commit ileride. Aşağıdaki standardizasyon kaydındaki “commit yapılmadı” ifadesi bu nedenle güncel değil. `.claude/`, `.superpowers/` ve `premium-audit.json` takip edilmeyen dosyalar olarak korundu.
+
 ## 04.11.2026 — Site geneli tasarım standardizasyonu ve debug overlay
 - Breadcrumb layout seviyesine taşındı: `PageBreadcrumb` bileşeni oluşturuldu, `SubpageView` içinde tüm sayfalar için render ediliyor. `CompactPageHero`'dan crumbs prop'u ve `SubpageHeroSection`'dan breadcrumb nav bloğu kaldırıldı. 11 dosyadan crumbs prop temizlendi.
 - Debug overlay sistemi: `DebugComponentLabel` bileşeni `window.__debugOverlay()` ile açılıp kapanıyor, localStorage ile sayfalar arası kalıcı. SubpageView'daki tüm ana section'lar (hero, stats, video, search, contact, about, activation, solution catalog/hub, structured layout, CDS addon, AX3000, spec grid, feature rows, tabs, gallery, PageEndConversion, ProductsOverview) sarıldı. Scalypso ailesinde zaten mevcuttu.

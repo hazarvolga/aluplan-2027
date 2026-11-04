@@ -1,3 +1,4 @@
+import { DebugComponentLabel } from '@/components/sections/DebugComponentLabel';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { ComparisonTable } from './ComparisonTable';
@@ -21,10 +22,10 @@ const editions = [
  {name:'Ultimate',description:'Çok disiplinli tasarım ofisleri, tasarla-yap inşaat şirketleri ve kamu kurumları için bina, yol ve altyapı yapılarının tasarım, detaylandırma ve inşaatına yönelik tüm ilgili işlevleri içeren eksiksiz çözümdür. Kamu kurumları ve MEP mühendisleri için platform olarak da uygundur.',href:'/products/allplan-ultimate'}
 ];
 function Compare2027(){
- return <div className={styles.page}><CompactPageHero kicker="ALLPLAN · 2027" title="ALLPLAN sürümlerini karşılaştırın" lead="Basic, Concept, Professional ve Ultimate sürümlerinin özelliklerini karşılaştırın."><p className={styles.notice}>Sürüm bağlantıları mevcut yerel ürün sayfalarına gider.</p></CompactPageHero><div className="alu-container">
+ return <div className={styles.page}><DebugComponentLabel name="CompactPageHero"><CompactPageHero kicker="ALLPLAN · 2027" title="ALLPLAN sürümlerini karşılaştırın" lead="Basic, Concept, Professional ve Ultimate sürümlerinin özelliklerini karşılaştırın."><p className={styles.notice}>Sürüm bağlantıları mevcut yerel ürün sayfalarına gider.</p></CompactPageHero></DebugComponentLabel><div className="alu-container">
  <p className={styles.footnote}>✓ Dâhil · — Kaynakta dâhil olarak işaretlenmemiş · İsteğe bağlı. Mobilde tabloyu yatay kaydırabilirsiniz.</p>
- <ComparisonTable editions={editions} /><p className={styles.footnote}>** ALLPLAN abonelik lisanslarına dâhildir. *** ALLPLAN Model Viewer, ALLPLAN aboneliği veya Bimplus Professional satın alımıyla kullanılabilir.</p>
- <section className={styles.editions}><SectionHeader kicker="/ SÜRÜMLER" title="İhtiyacınıza uygun sürümü keşfedin" /><div>{editions.map(e=><article key={e.name}><h3>ALLPLAN {e.name}</h3><p>{e.description}</p><a href={e.href} aria-label={`Sürümü incele: ALLPLAN ${e.name}`}>Sürümü incele ↗</a></article>)}</div></section></div></div>;
+ <DebugComponentLabel name="ComparisonTable"><ComparisonTable editions={editions} /></DebugComponentLabel><p className={styles.footnote}>** ALLPLAN abonelik lisanslarına dâhildir. *** ALLPLAN Model Viewer, ALLPLAN aboneliği veya Bimplus Professional satın alımıyla kullanılabilir.</p>
+ <DebugComponentLabel name="editionLinks (özel)"><section className={styles.editions}><SectionHeader kicker="/ SÜRÜMLER" title="İhtiyacınıza uygun sürümü keşfedin" /><div>{editions.map(e=><article key={e.name}><h3>ALLPLAN {e.name}</h3><p>{e.description}</p><a href={e.href} aria-label={`Sürümü incele: ALLPLAN ${e.name}`}>Sürümü incele ↗</a></article>)}</div></section></DebugComponentLabel></div></div>;
 }
 
 // With the 2027 release off, this URL keeps serving the existing package comparison page.

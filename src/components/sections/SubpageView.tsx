@@ -185,7 +185,7 @@ export function SubpageView({
       )}
 
       {/* Special Interactive View: Video Library Hub (/video-kutuphanesi) */}
-      {isVideoLibraryHub && <DebugComponentLabel name="VideoLibraryHubSection"><VideoLibraryHubSection /></DebugComponentLabel>}
+      {isVideoLibraryHub && <VideoLibraryHubSection />}
 
       {/* Special Interactive View: Search Page (/search) */}
       {page.path === '/search' && (
@@ -345,7 +345,7 @@ export function SubpageView({
       ) : solutionHub ? (
         <DebugComponentLabel name="SolutionHubSection"><SolutionHubSection hub={solutionHub} /></DebugComponentLabel>
       ) : page.structuredLayout ? (
-        <DebugComponentLabel name="StructuredPageLayoutSection"><StructuredPageLayoutSection
+        <StructuredPageLayoutSection
           layout={page.structuredLayout}
           pagePath={page.path}
           activeReferenceCategoryId={activeRefCatId}
@@ -354,11 +354,11 @@ export function SubpageView({
           onReferenceSearchQueryChange={setRefSearchQuery}
           onVideo={setActiveModalVideo}
           onImage={setActiveLightboxImage}
-        /></DebugComponentLabel>
+        />
       ) : page.path === '/solutions/cds-addon' ? (
-        <DebugComponentLabel name="CdsAddonPageContent"><CdsAddonPageContent page={page} /></DebugComponentLabel>
+        <CdsAddonPageContent page={page} />
       ) : page.path === AX3000_MECHANICAL_ROUTE ? (
-        <DebugComponentLabel name="Ax3000MechanicalContent"><Ax3000MechanicalContent page={page} /></DebugComponentLabel>
+        <Ax3000MechanicalContent page={page} />
       ) : page.path === '/about' || isVideoPlaylistPage ? null : (
         /* Preserved Structured Content Sections — Benefit/Spec Grid + Alternating Photo Showcases */
         <section className="preview-section" aria-label="Sayfa içeriği">
@@ -418,7 +418,7 @@ export function SubpageView({
 
             {/* Part B: Alternating Split Feature Rows (ONLY for high-resolution photos, NEVER icons) */}
             {featuredSections.length > 0 && (
-              <DebugComponentLabel name="FeatureRowList"><FeatureRowList>
+              <FeatureRowList>
                 {featuredSections.map((sec, idx) => {
                   const secImg = sec.image!;
                   return (
@@ -440,7 +440,7 @@ export function SubpageView({
                     </FeatureRow>
                   );
                 })}
-              </FeatureRowList></DebugComponentLabel>
+              </FeatureRowList>
             )}
             </>}
 
@@ -530,10 +530,10 @@ export function SubpageView({
 
             {/* Preserved Embedded Media */}
             {page.path === '/contact' && page.embeds?.map((embed, index) => (
-              <ContactMap key={`${embed.src}-${index}`} src={embed.src} title={embed.title || 'Aluplan konumu'} />
+              <DebugComponentLabel key={`${embed.src}-${index}`} name="ContactMap"><ContactMap src={embed.src} title={embed.title || 'Aluplan konumu'} /></DebugComponentLabel>
             ))}
             {page.path !== '/contact' && page.embeds && page.embeds.length > 0 && !playlist && (
-              <div className="alu-stack" style={{ gap: 'var(--space-stack-md)' }}>
+              <DebugComponentLabel name="SectionHeader + embeddedMedia (özel)"><div className="alu-stack" style={{ gap: 'var(--space-stack-md)' }}>
                 <SectionHeader kicker="MULTİMEDYA VE VİDEO" title="Video ve Sunum Kayıtları" />
                 <div className="alu-grid">
                   {page.embeds.map((emb, eIdx) => (
@@ -544,7 +544,7 @@ export function SubpageView({
                     </div>
                   ))}
                 </div>
-              </div>
+              </div></DebugComponentLabel>
             )}
 
           </div>

@@ -63,7 +63,6 @@ export function ScalypsoPageContent({ page }: { page: PageRecord }) {
     </div></section>
     </DebugComponentLabel>
 
-    <DebugComponentLabel name="FeatureRow (ortak)">
     <div className="alu-container">
     <FeatureRowList>
       <FeatureRow
@@ -79,7 +78,6 @@ export function ScalypsoPageContent({ page }: { page: PageRecord }) {
       </FeatureRow>
     </FeatureRowList>
     </div>
-    </DebugComponentLabel>
 
     <DebugComponentLabel name="ProductEditionsBand">
     <ProductEditionsBand kicker="SCALYPSO · DİJİTAL AVANTAJ" title="Dijital Avantaj Kazanın" editions={advantages} />

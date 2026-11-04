@@ -1,5 +1,6 @@
 import type { ReactElement } from 'react';
 import styles from './SectionHeader.module.css';
+import { DebugComponentLabel } from './DebugComponentLabel';
 
 interface SectionHeaderProps {
   kicker?: string;
@@ -15,7 +16,7 @@ interface SectionHeaderProps {
 export function SectionHeader({ kicker, title, lead, id, as = 'h2' }: SectionHeaderProps): ReactElement {
   const Heading = as;
   return (
-    <div className="alu-section-header">
+    <DebugComponentLabel name="SectionHeader"><div className="alu-section-header">
       {kicker && <span className="preview-kicker">{kicker}</span>}
       <Heading id={id} className={as === 'h1' ? 'alu-h1' : as === 'h3' ? 'alu-h3' : 'alu-h2'} style={{ margin: 0, ...(as === 'h3' ? { paddingTop: 'var(--space-stack-md)' } : {}) }}>
         {as === 'h3' && <span className={styles.marker} aria-hidden="true" />}
@@ -26,6 +27,6 @@ export function SectionHeader({ kicker, title, lead, id, as = 'h2' }: SectionHea
           {lead}
         </p>
       )}
-    </div>
+    </div></DebugComponentLabel>
   );
 }

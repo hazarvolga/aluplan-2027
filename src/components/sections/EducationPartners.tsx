@@ -1,3 +1,4 @@
+import { DebugComponentLabel } from './DebugComponentLabel';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { educationPartners } from '@/data/education-partners';
 import type { EducationCenter, EducationUniversity } from '@/data/education-partners';
@@ -56,12 +57,12 @@ function Center({ center }: { center: EducationCenter }) {
 export function EducationPartners() {
   return (
     <div className={styles.page}>
-      <CompactPageHero
+      <DebugComponentLabel name="CompactPageHero"><CompactPageHero
         title={title}
         lead={intro}
-      />
+      /></DebugComponentLabel>
       <div>
-        <section className={styles.band} aria-labelledby="egitim-universiteler">
+        <DebugComponentLabel name="universities (özel)"><section className={styles.band} aria-labelledby="egitim-universiteler">
           <div className="alu-container">
             <h2 id="egitim-universiteler" className={styles.groupTitle}>{universitiesTitle}</h2>
             <ul className={styles.tiles}>
@@ -70,8 +71,8 @@ export function EducationPartners() {
               ))}
             </ul>
           </div>
-        </section>
-        <section className={styles.band} aria-labelledby="egitim-merkezleri">
+        </section></DebugComponentLabel>
+        <DebugComponentLabel name="educationCenters (özel)"><section className={`${styles.band} ${styles.lastBand}`} aria-labelledby="egitim-merkezleri">
           <div className="alu-container">
             <h2 id="egitim-merkezleri" className={styles.groupTitle}>{centersTitle}</h2>
             <ul className={styles.tiles}>
@@ -80,7 +81,7 @@ export function EducationPartners() {
               ))}
             </ul>
           </div>
-        </section>
+        </section></DebugComponentLabel>
       </div>
     </div>
   );

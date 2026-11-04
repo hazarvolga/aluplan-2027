@@ -1,3 +1,4 @@
+import { DebugComponentLabel } from './DebugComponentLabel';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { recordedWebinars } from '@/data/recorded-webinars';
 import type { StructuredMediaGridSection } from '@/lib/site-data';
@@ -25,15 +26,15 @@ const archive: StructuredMediaGridSection = {
 export function RecordedWebinars() {
   return (
     <div className={styles.page}>
-      <CompactPageHero
+      <DebugComponentLabel name="CompactPageHero"><CompactPageHero
         kicker={content.kicker}
         title={content.title}
         lead={content.lead}
-      />
+      /></DebugComponentLabel>
       <div>
-        <MediaGridWithViewer grid={archive} itemKeyPrefix="webinar" />
+        <DebugComponentLabel name="MediaGridWithViewer"><MediaGridWithViewer grid={archive} itemKeyPrefix="webinar" /></DebugComponentLabel>
 
-        <section className={styles.band} aria-labelledby="webinar-genel-bakis">
+        <DebugComponentLabel name="webinarOverview (özel)"><section className={styles.band} aria-labelledby="webinar-genel-bakis">
           <div className={`alu-container ${styles.overview}`}>
             <div className={styles.overviewText}>
               <h2 id="webinar-genel-bakis" className={styles.groupTitle}>{content.overviewTitle}</h2>
@@ -59,9 +60,9 @@ export function RecordedWebinars() {
               </ul>
             </div>
           </div>
-        </section>
+        </section></DebugComponentLabel>
 
-        <section className={styles.band} aria-labelledby="webinar-kazanimlar">
+        <DebugComponentLabel name="webinarBenefits (özel)"><section className={styles.band} aria-labelledby="webinar-kazanimlar">
           <div className="alu-container">
             <h2 id="webinar-kazanimlar" className={styles.groupTitle}>{content.benefitsTitle}</h2>
             <ul className={styles.benefits}>
@@ -73,9 +74,9 @@ export function RecordedWebinars() {
               ))}
             </ul>
           </div>
-        </section>
+        </section></DebugComponentLabel>
 
-        <section className={styles.cta} aria-labelledby="webinar-cta">
+        <DebugComponentLabel name="webinarCta (özel)"><section className={styles.cta} aria-labelledby="webinar-cta">
           <div className={`alu-container ${styles.ctaInner}`}>
             <div>
               <h2 id="webinar-cta" className={styles.groupTitle}>{content.ctaTitle}</h2>
@@ -87,7 +88,7 @@ export function RecordedWebinars() {
               <AluIcon name="external-link" size="sm" />
             </a>
           </div>
-        </section>
+        </section></DebugComponentLabel>
       </div>
     </div>
   );

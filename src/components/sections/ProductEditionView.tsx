@@ -1,3 +1,4 @@
+import { DebugComponentLabel } from './DebugComponentLabel';
 import { ProductHero } from './ProductHero';
 import { ProductEditionsBand, ProductTabNav } from './ProductPageParts';
 import { MediaGridWithViewer } from './MediaGridWithViewer';
@@ -14,15 +15,15 @@ export function ProductEditionView({ content, heroImage, quoteUrl }: { content: 
   const kicker = (section: string) => `${content.name.toUpperCase()} · ${section}`;
   const benefitIcons = productBenefitIcons(content.path);
   return <div>
-    <div id={`${id}-top`}><ProductHero eyebrow={content.tagline.toUpperCase()} title={content.name} description={content.lead} image={heroImage} actions={[{ label: 'Teklif isteyin ↗', href: quoteUrl, variant: 'primary' }]} /></div>
+    <div id={`${id}-top`}><DebugComponentLabel name="ProductHero"><ProductHero eyebrow={content.tagline.toUpperCase()} title={content.name} description={content.lead} image={heroImage} actions={[{ label: 'Teklif isteyin ↗', href: quoteUrl, variant: 'primary' }]} /></DebugComponentLabel></div>
     <div className="alu-container"><ul className={styles.tags} aria-label={`${content.name} konuları`}>{content.tags.map(tag => <li key={tag}>{tag}</li>)}</ul></div>
-    <ProductEditionsBand kicker={kicker('GENEL BAKIŞ')} title={content.overviewTitle} variant="steps" editions={content.overview.map(item => ({ label: item.label, title: item.title, description: item.text }))} />
-    <ProductTabNav label={`${content.name} sayfa bölümleri`} links={[{ href: `#${id}-top`, label: content.name }, { href: `#${id}-benefits`, label: 'Avantajlar' }, { href: `#${id}-features`, label: 'Özellikler' }]} />
-    <ProductEditionsBand id={`${id}-benefits`} className={styles.anchor} kicker={kicker('AVANTAJLAR')} title={content.benefitsTitle} variant="icons" editions={content.benefits.map((item, index) => ({ title: item.title, description: item.text, icon: benefitIcons[index] }))} />
+    <DebugComponentLabel name="ProductEditionsBand"><ProductEditionsBand kicker={kicker('GENEL BAKIŞ')} title={content.overviewTitle} variant="steps" editions={content.overview.map(item => ({ label: item.label, title: item.title, description: item.text }))} /></DebugComponentLabel>
+    <DebugComponentLabel name="ProductTabNav"><ProductTabNav label={`${content.name} sayfa bölümleri`} links={[{ href: `#${id}-top`, label: content.name }, { href: `#${id}-benefits`, label: 'Avantajlar' }, { href: `#${id}-features`, label: 'Özellikler' }]} /></DebugComponentLabel>
+    <DebugComponentLabel name="ProductEditionsBand"><ProductEditionsBand id={`${id}-benefits`} className={styles.anchor} kicker={kicker('AVANTAJLAR')} title={content.benefitsTitle} variant="icons" editions={content.benefits.map((item, index) => ({ title: item.title, description: item.text, icon: benefitIcons[index] }))} /></DebugComponentLabel>
     <div id={`${id}-features`} className={styles.anchor}>
       <div className="alu-container"><div className={styles.featuresHeading}><SectionHeader kicker={kicker('ÖZELLİKLER')} title={content.featuresTitle} /></div></div>
-      {featureGroups.map((group, index) => <MediaGridWithViewer key={group.label} grid={{ title: group.label, columns: 3, items: group.items }} itemKeyPrefix={`${id}-${group.label}`} group={{ index }} />)}
+      {featureGroups.map((group, index) => <DebugComponentLabel key={group.label} name="MediaGridWithViewer"><MediaGridWithViewer grid={{ title: group.label, columns: 3, items: group.items }} itemKeyPrefix={`${id}-${group.label}`} group={{ index }} /></DebugComponentLabel>)}
     </div>
-    <PreviewClosingSection id={`${id}-closing`} title={`${content.name} hakkında görüşelim`} items={[{ title: 'Uzmanla görüşün', paragraphs: [`Projelerinize ve ekibinize uygun çözümü ${content.name} ile birlikte değerlendirelim.`], action: { label: 'Teklif isteyin', href: quoteUrl } }]} />
+    <DebugComponentLabel name="PreviewClosingSection"><PreviewClosingSection id={`${id}-closing`} title={`${content.name} hakkında görüşelim`} items={[{ title: 'Uzmanla görüşün', paragraphs: [`Projelerinize ve ekibinize uygun çözümü ${content.name} ile birlikte değerlendirelim.`], action: { label: 'Teklif isteyin', href: quoteUrl } }]} /></DebugComponentLabel>
   </div>;
 }

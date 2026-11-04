@@ -12,7 +12,7 @@ export function HomepageMaxPreviewHero() {
       <div className="alu-hero-stage__scrim" aria-hidden="true" />
       <div className="alu-container alu-hero-stage__inner">
         <div className="alu-stack" style={{ gap: 'var(--space-stack-lg)' }}>
-          <p className="alu-max-preview-hero__eyebrow">2027 ÇIKTI · ALLPLAN'IN EN GÜÇLÜ SÜRÜMÜ</p>
+          <p className="alu-max-preview-hero__eyebrow"><span className="alu-max-preview-hero__eyebrow-line">2027 ÇIKTI</span><br /><span>ALLPLAN'IN EN GÜÇLÜ SÜRÜMÜ</span></p>
           <h1 id="hero-title" className="alu-h2 alu-hero-stage__title alu-max-preview-hero__title">Mühendislik yeniden tanımlanıyor</h1>
           <p className="alu-body-lg alu-hero-stage__lead">Yapay zekâ, parametrik tasarım ve çoklu disiplin desteğiyle donatılmış ALLPLAN 2027 artık kullanıma hazır. Yeni dönemi başlatın.</p>
           <div className="alu-cluster" role="group" aria-label="Ana eylemler">

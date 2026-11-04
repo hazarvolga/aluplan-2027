@@ -400,12 +400,12 @@
   --layout-application-training-image-max-width: var(--ref-size-application-training-image-max-width);
   --layout-application-utility-panel-max-height: var(--ref-size-application-utility-panel-max-height);
   --layout-application-content-column-min-width: var(--ref-size-application-content-column-min-width);
-  --surface-page: var(--ref-color-silver-50);
-  --surface-default: var(--ref-color-white);
-  --surface-subtle: var(--ref-color-silver-100);
-  --surface-muted: var(--ref-color-silver-100);
-  --surface-raised: var(--ref-color-white);
-  --surface-brand: var(--ref-color-ink-950);
+  --surface-page: var(--ref-color-preview-surface-light-page);
+  --surface-default: var(--ref-color-preview-surface-light-card);
+  --surface-subtle: var(--ref-color-preview-surface-light-subtle);
+  --surface-muted: var(--ref-color-preview-surface-light-muted);
+  --surface-raised: var(--ref-color-preview-surface-light-card);
+  --surface-brand: var(--ref-color-teal-900);
   --surface-inverse: var(--ref-color-ink-900);
   --surface-scrim: var(--ref-color-alpha-scrim-light);
   --text-primary: var(--ref-color-ink-950);
@@ -524,10 +524,10 @@
   --visual-reference-count-surface: var(--ref-color-visual-reference-count-surface);
   --visual-reference-active-count-surface: var(--ref-color-visual-reference-active-count-surface);
   --visual-comparison-success-fallback: var(--ref-color-visual-comparison-success-fallback);
-  --chrome-header-bg: var(--ref-color-visual-header-light-surface);
+  --chrome-header-bg: var(--ref-color-preview-surface-light-header);
   --chrome-header-fg: var(--ref-color-ink-950);
   --chrome-header-border: var(--ref-color-silver-200);
-  --chrome-footer-bg: var(--ref-color-silver-50);
+  --chrome-footer-bg: var(--ref-color-preview-surface-light-page);
   --chrome-footer-fg: var(--ref-color-ink-950);
   --chrome-footer-fg-secondary: var(--ref-color-silver-600);
   --chrome-footer-border: var(--ref-color-silver-200);
@@ -936,12 +936,12 @@
   --layout-application-content-column-min-width: var(--ref-size-application-content-column-min-width);
 }
 [data-theme="aluplan"][data-mode="light"]{
-  --surface-page: var(--ref-color-silver-50);
-  --surface-default: var(--ref-color-white);
-  --surface-subtle: var(--ref-color-silver-100);
-  --surface-muted: var(--ref-color-silver-100);
-  --surface-raised: var(--ref-color-white);
-  --surface-brand: var(--ref-color-ink-950);
+  --surface-page: var(--ref-color-preview-surface-light-page);
+  --surface-default: var(--ref-color-preview-surface-light-card);
+  --surface-subtle: var(--ref-color-preview-surface-light-subtle);
+  --surface-muted: var(--ref-color-preview-surface-light-muted);
+  --surface-raised: var(--ref-color-preview-surface-light-card);
+  --surface-brand: var(--ref-color-teal-900);
   --surface-inverse: var(--ref-color-ink-900);
   --surface-scrim: var(--ref-color-alpha-scrim-light);
   --text-primary: var(--ref-color-ink-950);
@@ -1060,10 +1060,10 @@
   --visual-reference-count-surface: var(--ref-color-visual-reference-count-surface);
   --visual-reference-active-count-surface: var(--ref-color-visual-reference-active-count-surface);
   --visual-comparison-success-fallback: var(--ref-color-visual-comparison-success-fallback);
-  --chrome-header-bg: var(--ref-color-visual-header-light-surface);
+  --chrome-header-bg: var(--ref-color-preview-surface-light-header);
   --chrome-header-fg: var(--ref-color-ink-950);
   --chrome-header-border: var(--ref-color-silver-200);
-  --chrome-footer-bg: var(--ref-color-silver-50);
+  --chrome-footer-bg: var(--ref-color-preview-surface-light-page);
   --chrome-footer-fg: var(--ref-color-ink-950);
   --chrome-footer-fg-secondary: var(--ref-color-silver-600);
   --chrome-footer-border: var(--ref-color-silver-200);
@@ -1071,12 +1071,12 @@
   color-scheme: light;
 }
 [data-theme="aluplan"][data-mode="dark"]{
-  --surface-page: var(--ref-color-anthracite-950);
-  --surface-default: var(--ref-color-anthracite-800);
-  --surface-subtle: var(--ref-color-anthracite-850);
-  --surface-muted: var(--ref-color-anthracite-700);
-  --surface-raised: var(--ref-color-anthracite-800);
-  --surface-brand: var(--ref-color-anthracite-950);
+  --surface-page: var(--ref-color-preview-surface-dark-page);
+  --surface-default: var(--ref-color-preview-surface-dark-card);
+  --surface-subtle: var(--ref-color-preview-surface-dark-subtle);
+  --surface-muted: var(--ref-color-preview-surface-dark-muted);
+  --surface-raised: var(--ref-color-preview-surface-dark-card);
+  --surface-brand: var(--ref-color-preview-surface-dark-page);
   --surface-inverse: var(--ref-color-silver-50);
   --surface-scrim: var(--ref-color-alpha-scrim-dark);
   --text-primary: var(--ref-color-silver-50);
@@ -1195,10 +1195,10 @@
   --visual-reference-count-surface: var(--ref-color-visual-reference-count-surface);
   --visual-reference-active-count-surface: var(--ref-color-visual-reference-active-count-surface);
   --visual-comparison-success-fallback: var(--ref-color-visual-comparison-success-fallback);
-  --chrome-header-bg: var(--ref-color-anthracite-950);
+  --chrome-header-bg: var(--ref-color-preview-surface-dark-page);
   --chrome-header-fg: var(--ref-color-white);
   --chrome-header-border: var(--ref-color-anthracite-700);
-  --chrome-footer-bg: var(--ref-color-anthracite-950);
+  --chrome-footer-bg: var(--ref-color-preview-surface-dark-page);
   --chrome-footer-fg: var(--ref-color-white);
   --chrome-footer-fg-secondary: var(--ref-color-silver-300);
   --chrome-footer-border: var(--ref-color-anthracite-700);

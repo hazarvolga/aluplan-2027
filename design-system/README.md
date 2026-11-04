@@ -14,7 +14,7 @@ Tema kapsamlarında `data-theme` ve `data-mode` birlikte verilir. İçerik ve sc
 
 ### Yeni renk paleti uygulama
 
-Renklerin kanonik kaynağı `tokens/tokens.json` dosyasıdır. Yeni bir marka paleti verildiğinde ilgili `primitive.color` tonlarını ve gerekirse `themes` altındaki açık/koyu semantik rol eşlemelerini burada güncelleyin; bileşenlere ayrı renk değerleri yazmayın. `aluplan` temasında vurgu ve birincil eylemler teal tonlarını, `field` temasında moss tonlarını kullanır. Açık ve koyu modlar farklı tonlara ihtiyaç duyduğundan tek bir HEX değeri bütün palet yerine geçmez. Medya rozeti, koyu görsel yüzeyi üzerinde okunabilir açık palet tonunu kullanır.
+Renklerin kanonik kaynağı `tokens/tokens.json` dosyasıdır. Yeni bir marka paleti verildiğinde ilgili `primitive.color` tonlarını ve gerekirse `themes` altındaki açık/koyu semantik rol eşlemelerini burada güncelleyin; bileşenlere ayrı renk değerleri yazmayın. `aluplan` temasında `teal` adlı mevcut token grubu nötr vurgu tonlarını, `field` temasında moss tonlarını kullanır. Açık ve koyu modlar farklı tonlara ihtiyaç duyduğundan tek bir HEX değeri bütün palet yerine geçmez. Medya rozeti, koyu görsel yüzeyi üzerinde okunabilir açık palet tonunu kullanır.
 
 Değişiklikten sonra kökte `pnpm styles:generate`, `pnpm styles:check` ve `pnpm test:tokens` çalıştırın; kontrast hatalarını giderin ve her iki modda arayüzü gözle kontrol edin. `styles:check`, bileşen CSS modüllerinde ve statik JSX renklerinde token dışı sabit renkleri de denetler; dinamik ifadeler ve görsel dosyaları bu denetimin dışındadır. Durum renkleri, harici marka renkleri, debug etiketleri ve görsellere işlenmiş renkler ayrı rollerdir; palet değişiminde otomatik yeniden renklendirilmez.
 
@@ -23,7 +23,7 @@ Uygulama JSX'inde sabit görünüm ölçülerini doğrudan sayı olarak yazmayı
 ## Kaynaklar
 
 - `assets/logo/aluplan-logo-white.svg`, `assets/logo/aluplan-logo-white-filled.svg` (koyu yüzeyler için kök `fill="#FFFFFF"` eklenmiş varyant) ve `assets/logo/aluplan-logo-black.svg` (açık yüzeyler için kaynak siyah logo).
-- Kullanıcı tarafından onaylanan Antrasit koyu yüzey paleti (`#181A1B` ana zemin, `#202324` kart, `#272A2C` raised, `#303436` muted, `#414749` çizgiler) + Silver/Ink açık mod, Alu Teal (`#2DD4BF` / `#0F766E`) ve Blueprint (`#60A5FA` / `#2563EB`) aksanları; `Manrope`, `IBM Plex Sans`, `IBM Plex Mono` yerel WOFF2 font ailesi.
+- Güncel Aluplan uygulaması: açık temada beyaz sayfa ve `#F5F5F5` kartlar; koyu temada `#0D0D0D` sayfa ve `#262626` kartlar, nötr vurgu tonları ve ayrı Blueprint bağlantı renkleri. `Manrope`, `IBM Plex Sans`, `IBM Plex Mono` yerel WOFF2 font ailesi kullanılır.
 - Canlı stil rehberi (`catalog/index.html`) ve gerçek ana sayfa içerik bloklarını (`H01–H08`) barındıran `ui_kits/homepage/index.html`.
 
 ## Hızlı başlangıç
@@ -110,8 +110,8 @@ Marka: BrandLogo, Icon.
 ## VISUAL FOUNDATIONS
 
 - **Yön:** sakin mimari berraklık, mühendislik hassasiyeti. Güçlü tipografi, ince çizgiler, bol beyaz alan.
-- **Renk:** açık modda beyaz/Silver yüzeyler, Ink metin; Teal (#0F766E) birincil eylem ve vurgu; Blueprint (#2563EB) bağlantı, odak ve bilgi. Koyu modda Antrasit yüzeyler (`#181A1B` sayfa/marka zemini, `#202324` kart, `#272A2C` raised, `#303436` muted, `#414749` sınır çizgisi), Teal #2DD4BF eylem, Blueprint #60A5FA bağlantı/odak. Teal #2DD4BF açık zeminde metin/eylem olarak kullanılmaz (beyaz üzerinde 1.86:1).
-- **Marka yüzeyi:** `--surface-brand` header, footer ve logo kabı; koyu modda Antrasit 950 (`#181A1B`), açık modda Ink 950.
+- **Renk:** açık modda beyaz sayfa ve açık gri kartlar; koyu modda siyah sayfa ve koyu gri kartlar kullanılır. Birincil eylem ve vurgular nötr tonlardadır; Blueprint bağlantı, odak ve bilgi rengi olarak ayrı kalır. Güncel değerler ve kontrast kontrolleri token kaynak ve raporlarındadır.
+- **Marka yüzeyi:** `--surface-brand` açık ve koyu modda koyu nötr bir yüzeydir. Header ve footer renkleri ayrı chrome tokenlarıyla yönetilir.
 - **Tipografi:** Manrope başlık (700, -0.01em), IBM Plex Sans gövde (400/500/600), IBM Plex Mono teknik etiket (sentence case). Display/H1/H2 `clamp()` ile akışkan. Başlıklar `text-wrap: balance`, gövde `pretty`.
 - **Boşluk ve Yoğunluk:** 4px tabanlı rem skala; semantik yoğunluk kuralları: `16px` kompakt / mobil dar görünüm, `24px` standart kart, `32px` büyük panel; bölüm arası `--space-section`.
 - **Arka plan:** düz renk yüzeyler. Gradyan, doku, desen, illüstrasyon, cam efekti, blur yok. Şeffaflık yalnız dialog scrim'inde.

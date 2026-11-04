@@ -111,7 +111,6 @@ export function buildPageJsonLd(page: PageRecord, playlist?: PlaylistRecord | nu
       image: getPageShareImage(page).url,
       description: metadataDescription(page),
       applicationCategory: 'DesignApplication',
-      operatingSystem: 'Windows 10, Windows 11',
       url: pageUrl,
       provider: {
         '@id': `${SITE_ORIGIN}/#organization`

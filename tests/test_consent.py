@@ -30,8 +30,20 @@ class ConsentStoreTests(unittest.TestCase):
         self.assertEqual(self.data["blockedEvents"], ["aluplan-consent-change"])
         self.assertEqual(self.data["blockedAfterWrite"], "rejected")
 
+    def test_cross_tab_clear_does_not_restore_stale_acceptance(self):
+        self.assertIsNone(self.data["afterOtherTabClear"])
+        self.assertEqual(self.data["afterOtherTabAccept"], "accepted")
+        self.assertEqual(self.data["afterOtherTabReject"], "rejected")
+
+    def test_readable_but_unwritable_storage_cannot_override_new_choice(self):
+        self.assertEqual(self.data["rejectedDespiteStaleStorage"], "rejected")
+        self.assertIsNone(self.data["clearDespiteStaleStorage"])
+
 
 class ConsentWiringTests(unittest.TestCase):
+    def test_cloudflare_runtime_requires_consent_and_blocks_on_withdrawal(self):
+        subprocess.run(["node", "tests/cloudflare_consent_runtime.mjs"], cwd=ROOT, check=True, capture_output=True, text=True)
+
     def test_banner_uses_shared_store(self):
         shell = (ROOT / "src/components/shell/SiteShell.tsx").read_text(encoding="utf-8")
         self.assertIn("writeConsent(", shell)
@@ -40,7 +52,8 @@ class ConsentWiringTests(unittest.TestCase):
 
     def test_analytics_require_acceptance(self):
         scripts = (ROOT / "src/components/shell/ConsentScripts.tsx").read_text(encoding="utf-8")
-        self.assertIn("G-DQYT0D9MQ5", scripts)
+        self.assertIn("GA_MEASUREMENT_ID", scripts)
+        self.assertIn("G-DQYT0D9MQ5", (ROOT / "src/lib/consent.ts").read_text(encoding="utf-8"))
         self.assertIn("if (consent !== 'accepted') return null;", scripts)
         layout = (ROOT / "src/app/layout.tsx").read_text(encoding="utf-8")
         self.assertIn("<ConsentScripts />", layout)
@@ -57,6 +70,13 @@ class ConsentWiringTests(unittest.TestCase):
                        "https://*.google.com", "https://*.google.com.tr"):
             with self.subTest(directive="img-src", origin=origin):
                 self.assertIn(origin, image)
+
+    def test_csp_allows_manual_cloudflare_beacon_only_at_its_origins(self):
+        config = (ROOT / "next.config.mjs").read_text(encoding="utf-8")
+        script = next(line for line in config.splitlines() if '`script-src' in line)
+        connect = next(line for line in config.splitlines() if '"connect-src' in line)
+        self.assertIn("https://static.cloudflareinsights.com", script)
+        self.assertIn("https://cloudflareinsights.com", connect)
 
     def test_built_homepage_loads_no_analytics_before_consent(self):
         if not BUILD_HOME.is_file():

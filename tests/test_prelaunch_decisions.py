@@ -58,8 +58,9 @@ class CookiePreferencesTests(unittest.TestCase):
 
     def test_withdrawn_consent_disables_running_analytics(self):
         scripts = (ROOT / "src/components/shell/ConsentScripts.tsx").read_text(encoding="utf-8")
-        self.assertIn("`ga-disable-${GA_MEASUREMENT_ID}`", scripts)
-        self.assertIn("consent !== 'accepted'", scripts)
+        consent = (ROOT / "src/lib/consent.ts").read_text(encoding="utf-8")
+        self.assertIn("`ga-disable-${GA_MEASUREMENT_ID}`", consent)
+        self.assertIn("setGoogleAnalyticsDisabled(!allowed)", scripts)
 
     def test_clear_consent_resets_choice(self):
         result = subprocess.run(["node", "tests/consent_runtime.mjs"], cwd=ROOT, check=True, capture_output=True, text=True)

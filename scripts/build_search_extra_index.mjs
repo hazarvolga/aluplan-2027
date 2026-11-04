@@ -107,7 +107,7 @@ const homeLegacy = ['heroContent', 'quickLinks', 'packageAccess', 'packages'].fl
 const configs = [
   { path: '/', keywords: [...homeCommon, ...fileContent('src/components/sections/DisciplineWorkflowSection.tsx')] },
   { path: '/', legacyOnly: true, keywords: [...homeLegacy, ...homepageVariantText(false)] },
-  { path: '/', releaseOnly: true, keywords: [...homepageVariantText(true), ...productTabLabels()], files: ['src/components/sections/Homepage2027PreviewView.tsx', 'src/components/sections/HomepageMaxPreviewHero.tsx', 'src/components/sections/HomepageProductHeading.tsx', 'src/data/homepage-2027-preview.json'] },
+  { path: '/', releaseOnly: true, keywords: [...homepageVariantText(true), ...productTabLabels(), ...flatten(home.quickLinks.filter(([, href]) => href === '/products/allplan-cloud-services'))], files: ['src/components/sections/Homepage2027PreviewView.tsx', 'src/components/sections/HomepageMaxPreviewHero.tsx', 'src/components/sections/HomepageProductHeading.tsx', 'src/data/homepage-2027-preview.json'] },
   { path: '/products', files: ['src/components/sections/ProductsInnovations.tsx', 'src/data/products-innovations.json'] },
   { path: '/products/sds2-home', files: ['src/data/sds2-2027-features.ts'], keywords: conditionalSdsText() },
   { path: '/about', files: ['src/components/sections/AboutEditorialSection.tsx'] },

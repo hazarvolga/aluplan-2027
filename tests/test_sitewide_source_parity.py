@@ -6,6 +6,7 @@ import tempfile
 import unittest
 
 from scripts.verify_sitewide_source_parity import (
+    _source_body_nodes,
     compare_snapshots,
     load_policy,
     structured_integrity_findings,
@@ -19,6 +20,26 @@ POLICY = ROOT / "tests/fixtures/sitewide_parity_policy.json"
 
 
 class SitewideSourceParityUnitTests(unittest.TestCase):
+    def test_explicit_text_removal_is_exact_route_scoped_and_does_not_hide_other_losses(self):
+        policy = {'textReplacements': [{'route': '/about', 'source': '29+', 'generated': '', 'reason': 'Approved removal'}]}
+        page = {'text_nodes': ['29+', 'Yıllık Tecrübe', 'Other retained sentence']}
+        self.assertEqual(_source_body_nodes('/about', page, policy), ['Yıllık Tecrübe', 'Other retained sentence'])
+        self.assertEqual(_source_body_nodes('/other', page, policy), page['text_nodes'])
+        expected = {'/about': {**self.source['/sample'], 'bodyText': _source_body_nodes('/about', page, policy)}}
+        actual = {'/about': {**expected['/about'], 'bodyText': ['Other retained sentence']}}
+        findings = compare_snapshots(expected, actual, {'exactOverrides': []})
+        self.assertTrue(any(item['kind'] == 'missing' and item['expected'] == ['Yıllık Tecrübe'] for item in findings))
+
+    def test_approved_removal_does_not_hide_a_second_matching_occurrence(self):
+        policy = {'textReplacements': [{'route': '/about', 'source': '29+', 'generated': '', 'reason': 'Approved removal'}]}
+        page = {'text_nodes': ['29+', 'Unrelated text', '29+']}
+        expected_nodes = _source_body_nodes('/about', page, policy)
+        self.assertEqual(expected_nodes, ['Unrelated text', '29+'])
+        expected = {'/about': {**self.source['/sample'], 'bodyText': expected_nodes}}
+        actual = {'/about': {**expected['/about'], 'bodyText': ['Unrelated text']}}
+        findings = compare_snapshots(expected, actual, {'exactOverrides': []})
+        self.assertTrue(any(item['kind'] == 'missing' and item['expected'] == ['29+'] for item in findings))
+
     def setUp(self):
         self.source = {
             "/sample": {

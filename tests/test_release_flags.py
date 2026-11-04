@@ -102,6 +102,22 @@ class ReleaseFlagRuntimeTests(unittest.TestCase):
         self.assertEqual(row["robots"]["sitemap"], "https://aluplan.com.tr/sitemap.xml")
         self.assertEqual(row["homepageVariant"], "release-2027")
 
+    def test_ai_training_is_disallowed_but_search_and_user_agents_can_crawl(self):
+        rules = self.matrix[("1", "0")]["robots"]["rules"]
+        def rule_for(agent):
+            return next(rule for rule in rules if agent in (rule["userAgent"] if isinstance(rule["userAgent"], list) else [rule["userAgent"]]))
+        for agent in ["GPTBot", "ClaudeBot", "Google-Extended"]:
+            with self.subTest(agent=agent):
+                rule = rule_for(agent)
+                self.assertEqual(rule["disallow"], "/")
+                self.assertNotIn("allow", rule)
+        for agent in ["OAI-SearchBot", "ChatGPT-User", "Claude-SearchBot", "Claude-User", "PerplexityBot", "Perplexity-User"]:
+            with self.subTest(agent=agent):
+                rule = rule_for(agent)
+                self.assertIn("/", rule["allow"])
+                self.assertIn("/api/", rule["disallow"])
+                self.assertNotIn("/", rule["disallow"])
+
     def test_indexable_site_allows_next_assets_for_all_crawlers(self):
         rules = self.matrix[("1", "0")]["robots"]["rules"]
         for rule in rules:

@@ -165,7 +165,18 @@ def _source_body_nodes(route: str, page: dict, policy: dict) -> list[str]:
     if route != "/" and CTA_MARKER in nodes[:end]:
         marker = nodes[:end].index(CTA_MARKER)
         end = marker - 1 if marker and nodes[marker - 1] == "ALLPLAN" else marker
-    return [_replace_text(route, item, policy) for item in nodes[start:end]]
+    output = []
+    removed_once = set()
+    for item in nodes[start:end]:
+        if item in removed_once:
+            output.append(item)
+            continue
+        replaced = _replace_text(route, item, policy)
+        if replaced:
+            output.append(replaced)
+        else:
+            removed_once.add(item)
+    return output
 
 
 def normalize_native_video_src(src: str) -> str:

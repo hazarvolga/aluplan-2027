@@ -7,6 +7,23 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class MetadataSourceDescriptionsTests(unittest.TestCase):
+    def test_kvkk_description_joins_source_fragments_and_schema_agrees(self):
+        script = """
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import { metadataDescription } from './src/lib/metadata-description.ts';
+const p = JSON.parse(fs.readFileSync('src/data/pages.json', 'utf8'))['/kvkk'];
+const result = metadataDescription(p);
+assert.ok(result.startsWith(p.description));
+assert.ok(result.includes('("Aluplan Bilgisayar" veya "Şirket") olarak,'));
+assert.ok(result.endsWith('hususunda sizleri bilgilendirmek isteriz.'));
+assert.equal(metadataDescription({...p, bodyNodes: p.bodyNodes.slice(0, 4)}), p.description);
+"""
+        subprocess.run(['node', '--input-type=module', '-e', script], cwd=ROOT, check=True, capture_output=True, text=True)
+        graph = json.loads(subprocess.check_output(['node', 'tests/schema_runtime.mjs', '/kvkk'], cwd=ROOT, text=True))['@graph']
+        page = next(item for item in graph if item.get('headline') == 'KVKK Aydınlatma Metni')
+        self.assertTrue(page['description'].endswith('hususunda sizleri bilgilendirmek isteriz.'))
+
     def test_json_ld_uses_the_same_complete_description(self):
         graph = json.loads(subprocess.check_output(['node', 'tests/schema_runtime.mjs', '/faq'], cwd=ROOT, text=True))['@graph']
         page = next(item for item in graph if item.get('headline') == 'Sıkça Sorulan Sorular')

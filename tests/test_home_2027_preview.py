@@ -1,4 +1,5 @@
 from pathlib import Path
+import json
 import unittest
 
 
@@ -8,6 +9,14 @@ PREVIEW_VIEW = ROOT / "src/components/sections/Homepage2027PreviewView.tsx"
 
 
 class Home2027PreviewContractTests(unittest.TestCase):
+    def test_release_homepage_restores_cloud_services_quick_link(self):
+        data = json.loads((ROOT / 'src/data/homepage.json').read_text(encoding='utf-8'))
+        self.assertIn(['ALLPLAN CLOUD Hizmetleri', '/products/allplan-cloud-services'], data['quickLinks'])
+        home = (ROOT / 'src/components/sections/HomepageView.tsx').read_text(encoding='utf-8')
+        self.assertIn("data.quickLinks.find(([, href]) => href === '/products/allplan-cloud-services')", home)
+        self.assertIn('href={cloudLink[1]}', home)
+        self.assertIn('{cloudLink[0]}', home)
+
     def test_preview_route_reuses_the_current_homepage_without_copying_content(self):
         self.assertTrue(PREVIEW_PAGE.is_file(), "2027 homepage preview route is missing")
         self.assertTrue(PREVIEW_VIEW.is_file(), "2027 homepage preview view is missing")

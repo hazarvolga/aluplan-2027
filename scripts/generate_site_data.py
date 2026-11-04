@@ -1178,6 +1178,22 @@ def rename_routes(value):
 
 pages_data = rename_routes(pages_data)
 
+# User decision: remove the corporate metrics band and team-size claim.
+ABOUT_REMOVED_METRIC_NODES = frozenset({"29+", "Yıllık Tecrübe", "500+", "Aktif Müşteri", "50+", "Uzman Kadro", "10K+", "Tamamlanan Proje"})
+
+
+def clean_about_content(text):
+    return text.replace("50'den fazla uzman kadromuz", "uzman kadromuz")
+
+
+if "/about" in pages_data:
+    about = pages_data["/about"]
+    pages_data = {**pages_data, "/about": {
+        **about,
+        "bodyNodes": [clean_about_content(text) for text in about["bodyNodes"] if text not in ABOUT_REMOVED_METRIC_NODES],
+        "sections": [{**section, "items": [clean_about_content(text) for text in section["items"] if text not in ABOUT_REMOVED_METRIC_NODES]} for section in about["sections"]],
+    }}
+
 # Pages the 2027 site no longer publishes; their URLs redirect (see next.config.mjs).
 REMOVED_ROUTES = (
     "/solutions-v2/training",
@@ -1529,6 +1545,12 @@ def searchable_text(value):
         return [text for key, item in value.items() if key not in excluded for text in searchable_text(item)]
     return []
 
+def searchable_page_content(page):
+    if page.get("structuredLayout"):
+        return searchable_text(page["structuredLayout"])
+    text = [*(h["text"] for h in page["headings"]), *page.get("bodyNodes", []), *searchable_text(page.get("sections"))]
+    return text
+
 search_entries = [
     {
         "path": p["path"],
@@ -1536,7 +1558,7 @@ search_entries = [
         "seoTitle": p["title"],
         "section": p["section"],
         "description": p["description"],
-        "keywords": " ".join([*(searchable_text(p["structuredLayout"]) if p.get("structuredLayout") else [*(h["text"] for h in p["headings"]), *p.get("bodyNodes", []), *searchable_text(p.get("sections"))]), *searchable_text(playlist_by_id.get(p.get("playlistId")))]),
+        "keywords": " ".join([*searchable_page_content(p), *searchable_text(playlist_by_id.get(p.get("playlistId")))]),
     }
     for p in pages_data.values() if p["path"] != "/package-overview"
 ]

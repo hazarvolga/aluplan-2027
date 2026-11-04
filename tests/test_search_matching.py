@@ -22,6 +22,9 @@ class SearchMatchingTests(unittest.TestCase):
         self.assertNotIn('/products/allplan-parametric', release_paths)
         self.assertNotIn('/package-overview', by_path)
         self.assertNotIn('Ürün Yaşam Döngüsü', by_path['/faq']['keywords'])
+        for removed in ('29+', '500+', '50+', '10K+'):
+            self.assertNotIn(removed, by_path['/about']['keywords'])
+        self.assertNotIn("50'den fazla uzman", by_path['/about']['keywords'])
         self.assertIn('Workgroup', by_path['/faq']['keywords'])
         self.assertIn('Gelişmiş Yapı Bileşenleri', by_path['/products/allplan-aec']['keywords'])
         self.assertIn('Paletler', by_path['/video-kutuphanesi/hello-allplan-2024']['keywords'])
@@ -42,13 +45,14 @@ class SearchMatchingTests(unittest.TestCase):
         playlists = json.loads((data / 'playlists.json').read_text())
         index = json.loads((data / 'search-index.json').read_text())
         tree = ast.parse((ROOT / 'scripts/generate_site_data.py').read_text())
-        function = next(node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == 'searchable_text')
+        functions = [node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name in ('searchable_text', 'searchable_page_content')]
         namespace = {}
-        exec(compile(ast.Module(body=[function], type_ignores=[]), 'searchable_text', 'exec'), namespace)
+        exec(compile(ast.Module(body=functions, type_ignores=[]), 'searchable_text', 'exec'), namespace)
         extract = namespace['searchable_text']
+        page_content = namespace['searchable_page_content']
         for entry in index:
             page = pages[entry['path']]
-            content = extract(page['structuredLayout']) if page.get('structuredLayout') else [*(heading['text'] for heading in page['headings']), *page.get('bodyNodes', []), *extract(page.get('sections'))]
+            content = page_content(page)
             expected = ' '.join([*content, *extract(playlists.get(page.get('playlistId')))])
             self.assertEqual(entry['keywords'], expected, entry['path'])
 

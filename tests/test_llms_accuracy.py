@@ -5,6 +5,12 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 
 class LlmsAccuracyTests(unittest.TestCase):
+    def test_removed_corporate_statistics_are_not_in_llms_summary(self):
+        text = (ROOT / "src/app/llms.txt/route.ts").read_text(encoding="utf-8")
+        for statistic in ('29+', '500+', '50+', '10K+'):
+            self.assertNotIn(statistic, text)
+        self.assertIn('**Kuruluş:** 1995', text)
+
     def test_each_addon_source_has_its_own_corresponding_page(self):
         text = (ROOT / "src/app/llms.txt/route.ts").read_text(encoding="utf-8")
         self.assertIn("[CDS Eklentileri](https://aluplan.com.tr/solutions/addons)", text)

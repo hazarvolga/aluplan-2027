@@ -58,6 +58,11 @@ class ProductSchemaTests(unittest.TestCase):
         entity = software(schema("/products/civil"))
         self.assertTrue(entity["image"].startswith(f"{ORIGIN}/"))
 
+    def test_products_do_not_claim_unverified_operating_system(self):
+        for route in EXPECTED_NAMES:
+            with self.subTest(route=route):
+                self.assertNotIn("operatingSystem", software(schema(route)))
+
 
 class ShareImageTests(unittest.TestCase):
     def test_family_route_uses_family_hero(self):

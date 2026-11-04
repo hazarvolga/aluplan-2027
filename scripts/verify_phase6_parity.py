@@ -305,7 +305,7 @@ check(
 
 # 6. GEO (/llms.txt, robots.ts, sitemap.ts) & Security
 check("GEO /llms.txt route exists and includes ALLPLAN Türkiye summary", "Aluplan Program Sistemleri" in llms_ts and "https://www.allplan.com/trial-or-subscription/" in llms_ts)
-check("robots.ts explicitly allows GPTBot, ClaudeBot, PerplexityBot, Google-Extended", all(bot in robots_ts for bot in ["GPTBot", "ClaudeBot", "PerplexityBot", "Google-Extended"]))
+check("robots.ts separates AI training crawlers from search and user agents", all(bot in robots_ts for bot in ["GPTBot", "ClaudeBot", "Google-Extended", "OAI-SearchBot", "ChatGPT-User", "Claude-SearchBot", "Claude-User", "PerplexityBot", "Perplexity-User"]) and "userAgent: ['GPTBot', 'ClaudeBot', 'Google-Extended']" in robots_ts and "disallow: '/'" in robots_ts)
 check("sitemap.ts excludes /health, /hero-3d, /test-webgl", all(ex in sitemap_ts for ex in ["/health", "/hero-3d", "/test-webgl"]))
 check("Security helper enforces escapeHtml, rate limiting, and TLSv1.2+", "escapeHtml" in security_ts and "TLSv1.2" in security_ts and "rejectUnauthorized: true" in security_ts)
 check("Unified security headers configured in next.config.mjs", all(h in next_config for h in ["Content-Security-Policy", "Strict-Transport-Security", "X-Content-Type-Options", "X-Frame-Options", "Referrer-Policy", "Permissions-Policy"]))

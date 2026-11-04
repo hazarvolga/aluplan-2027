@@ -18,13 +18,6 @@ export function AboutEditorialSection({ page }: AboutEditorialSectionProps) {
     "Deneyimli ve sertifikalı uzman kadromuzla, müşterilerimize sadece yazılım tedarik etmekle kalmıyor, aynı zamanda kapsamlı eğitim, teknik destek ve proje danışmanlığı hizmetleriyle yanlarında oluyoruz. İstanbul Ataşehir'deki merkez ofisimizden Türkiye genelindeki kamu kurumlarına, üniversitelere, mimarlık ve mühendislik ofislerine, inşaat firmalarına hizmet veriyoruz."
   ];
 
-  const corporateMetrics = [
-    { value: '29+', label: 'Yıllık Tecrübe', meta: '1995’ten Beri Türkiye Distribütörü' },
-    { value: '500+', label: 'Aktif Müşteri', meta: 'Kamu, Kurumsal & Mühendislik Ofisleri' },
-    { value: '50+', label: 'Uzman Kadro', meta: 'BIM Danışmanlığı & Teknik Destek' },
-    { value: '10K+', label: 'Tamamlanan Proje', meta: 'Üstyapı, Köprü, Altyapı & Prekast' }
-  ];
-
   const corporateValues = [
     {
       num: 'I',
@@ -64,21 +57,6 @@ export function AboutEditorialSection({ page }: AboutEditorialSectionProps) {
 
   return (
     <div className="alu-about-editorial">
-      {/* 1. Corporate Key Metrics Ledger */}
-      <section className="alu-about-metrics-band" aria-label="Kurumsal Göstergeler">
-        <div className="alu-container">
-          <div className="alu-about-metrics">
-            {corporateMetrics.map((metric) => (
-              <div key={metric.label} className="alu-about-metric">
-                <span className="alu-about-metric__value">{metric.value}</span>
-                <span className="alu-about-metric__label">{metric.label}</span>
-                <span className="alu-about-metric__meta">{metric.meta}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* 2. Asymmetric Editorial Story ("Hikayemiz") */}
       <section className="preview-section" aria-labelledby="about-story-heading">
         <div className="alu-container">

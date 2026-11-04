@@ -1,21 +1,24 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Script from 'next/script';
-import { useCookieConsent } from '@/lib/consent';
+import { GA_MEASUREMENT_ID, readConsent, setGoogleAnalyticsDisabled, useCookieConsent } from '@/lib/consent';
+import { hasWritableAcceptance, startCloudflareAnalytics } from '@/lib/cloudflare-analytics';
 import { isVercelInsightsEnabled } from '@/lib/release-flags';
-
-const GA_MEASUREMENT_ID = 'G-DQYT0D9MQ5';
 
 export function ConsentScripts() {
   const consent = useCookieConsent();
+  const [analyticsAllowed, setAnalyticsAllowed] = useState(false);
 
   useEffect(() => {
-    // Google's opt-out flag stops an already loaded gtag when consent is withdrawn.
-    (window as unknown as Record<string, boolean>)[`ga-disable-${GA_MEASUREMENT_ID}`] = consent !== 'accepted';
+    const allowed = consent === 'accepted' && readConsent() === 'accepted' && hasWritableAcceptance() && readConsent() === 'accepted';
+    setGoogleAnalyticsDisabled(!allowed);
+    setAnalyticsAllowed(allowed);
+    if (allowed) startCloudflareAnalytics(process.env.NEXT_PUBLIC_CLOUDFLARE_ANALYTICS_TOKEN, true);
   }, [consent]);
 
   if (consent !== 'accepted') return null;
+  if (!analyticsAllowed) return null;
 
   return (
     <>

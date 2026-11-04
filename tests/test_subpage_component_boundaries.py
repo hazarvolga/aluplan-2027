@@ -550,20 +550,26 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
         self.assertNotIn("'use client'", component)
         for marker in [
             "alu-about-editorial",
-            "Kurumsal Göstergeler",
             "Hikayemiz",
             "Değerlerimiz",
             "Ofisimiz",
-            "29+",
-            "500+",
-            "50+",
-            "10K+",
             'href="/contact"',
             'href="/references"',
             "<ConsentEmbed src={mapEmbed.src}",
         ]:
             with self.subTest(marker=marker):
                 self.assertIn(marker, component)
+
+        for marker in ["Kurumsal Göstergeler", "29+", "500+", "50+", "10K+"]:
+            self.assertNotIn(marker, component)
+
+        about = json.loads(read('src/data/pages.json'))['/about']
+        original = "İstanbul Ataşehir'deki ofisimizden Türkiye geneline hizmet veren uzman kadromuz, müşterilerimizin projelerinde başarılı olmalarını sağlamak için özveriyle çalışmaktadır. Belediyeler, üniversiteler, özel mimarlık ve mühendislik ofisleri ile büyük ölçekli inşaat firmalarına hizmet vermekteyiz."
+        story = next(section for section in about['sections'] if section['heading'] == 'Hikayemiz')
+        self.assertIn(original, story['items'])
+        self.assertIn(original, about['bodyNodes'])
+        for marker in ['29+', '500+', '50+', '10K+', "50'den fazla uzman"]:
+            self.assertNotIn(marker, json.dumps(about, ensure_ascii=False))
 
         self.assertIn("import { AboutEditorialSection } from './AboutEditorialSection';", parent)
         self.assertRegex(parent, r"page\.path === '/about'\s*&&\s*<DebugComponentLabel\s+name=\"AboutEditorialSection\">\s*<AboutEditorialSection page=\{page\}\s*/>\s*</DebugComponentLabel>")

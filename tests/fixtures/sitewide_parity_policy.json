@@ -228,6 +228,15 @@
     }
   ],
   "textReplacements": [
+    {"route": "/about", "source": "29+", "generated": "", "reason": "User requested removal of corporate metrics section on 4 November 2026"},
+    {"route": "/about", "source": "Yıllık Tecrübe", "generated": "", "reason": "User requested removal of corporate metrics section on 4 November 2026"},
+    {"route": "/about", "source": "500+", "generated": "", "reason": "User requested removal of corporate metrics section on 4 November 2026"},
+    {"route": "/about", "source": "Aktif Müşteri", "generated": "", "reason": "User requested removal of corporate metrics section on 4 November 2026"},
+    {"route": "/about", "source": "50+", "generated": "", "reason": "User requested removal of corporate metrics section on 4 November 2026"},
+    {"route": "/about", "source": "Uzman Kadro", "generated": "", "reason": "User requested removal of corporate metrics section on 4 November 2026"},
+    {"route": "/about", "source": "10K+", "generated": "", "reason": "User requested removal of corporate metrics section on 4 November 2026"},
+    {"route": "/about", "source": "Tamamlanan Proje", "generated": "", "reason": "User requested removal of corporate metrics section on 4 November 2026"},
+    {"route": "/about", "source": "İstanbul Ataşehir'deki ofisimizden Türkiye geneline hizmet veren 50'den fazla uzman kadromuz, müşterilerimizin projelerinde başarılı olmalarını sağlamak için özveriyle çalışmaktadır. Belediyeler, üniversiteler, özel mimarlık ve mühendislik ofisleri ile büyük ölçekli inşaat firmalarına hizmet vermekteyiz.", "generated": "İstanbul Ataşehir'deki ofisimizden Türkiye geneline hizmet veren uzman kadromuz, müşterilerimizin projelerinde başarılı olmalarını sağlamak için özveriyle çalışmaktadır. Belediyeler, üniversiteler, özel mimarlık ve mühendislik ofisleri ile büyük ölçekli inşaat firmalarına hizmet vermekteyiz.", "reason": "User explicitly approved removing the unverified team size on 4 November 2026"},
     {
       "route": "/contact",
       "source": "30 gün boyunca Allplan'ı ücretsiz deneyin. Kredi kartı bilgisi gerekmez.",

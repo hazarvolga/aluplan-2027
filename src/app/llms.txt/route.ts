@@ -20,7 +20,7 @@ const LLMS_TXT_CONTENT = `# Aluplan Program Sistemleri — ALLPLAN Türkiye
 > 1995'ten beri Türkiye'nin yetkili ALLPLAN distribütörü ve mühendislik çözüm ortağı. Mimari, inşaat mühendisliği (betonarme/çelik), köprü/altyapı, prekast beton üretimi ve MEP/enerji simülasyonu alanlarında BIM yazılımları, teknik destek ve eğitim hizmetleri sunar.
 
 ## Kurumsal Özet
-- **Kuruluş:** 1995 (29+ yıllık tecrübe, 500+ aktif müşteri, 50+ uzman kadro, 10K+ tamamlanan proje)
+- **Kuruluş:** 1995
 - **Resmî Web Sitesi:** https://aluplan.com.tr
 - **Merkez Ofis:** Quick Tower – Workinton, İçerenköy Mah. Topçu İbrahim Sok. 8/10D No: 5, 34752 Ataşehir / İstanbul
 - **Telefonlar:** (+90) 216 225 84 41 | (+90) 543 211 94 42 | (+90) 549 499 73 79

@@ -15,15 +15,19 @@ export default function robots(): MetadataRoute.Robots {
       },
       {
         userAgent: [
-          'GPTBot',
           'OAI-SearchBot',
           'ChatGPT-User',
-          'ClaudeBot',
+          'Claude-SearchBot',
+          'Claude-User',
           'PerplexityBot',
-          'Google-Extended'
+          'Perplexity-User'
         ],
         allow: ['/', '/llms.txt'],
         disallow: DISALLOW_PATHS
+      },
+      {
+        userAgent: ['GPTBot', 'ClaudeBot', 'Google-Extended'],
+        disallow: '/'
       }
     ],
     sitemap: `${SITE_ORIGIN}/sitemap.xml`,

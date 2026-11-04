@@ -2,7 +2,7 @@ import content from '@/data/homepage-2027-preview.json';
 import { ProductTabs } from './ProductTabs';
 
 const images: Record<string, string> = {
-  'ALLPLAN Max': '/assets/previews/home-2027/allplan-max-generated-v2.jpg',
+  'ALLPLAN Max': '/assets/previews/home-2027/allplan-max-generated-v2-q80.webp',
   ALLPLAN: '/assets/heroes/families/vf-07-allplan-product-platform.jpg',
   'ALLPLAN Civil': '/assets/previews/allplan-civil-2027/civil-hero.jpg',
   FRILO: '/assets/previews/frilo/frilo-hero.jpg',

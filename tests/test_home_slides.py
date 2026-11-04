@@ -81,12 +81,14 @@ class HomeSlideTests(unittest.TestCase):
 
     def test_home_hero_uses_optimized_image_with_original_fallback(self):
         hero = (ROOT / 'src/components/sections/HomepageMaxPreviewHero.tsx').read_text()
-        optimized = ROOT / 'public/assets/previews/home-2027/allplan-max-ai-concept.webp'
+        optimized = ROOT / 'public/assets/previews/home-2027/allplan-max-ai-concept-q75.webp'
+        previous = ROOT / 'public/assets/previews/home-2027/allplan-max-ai-concept.webp'
         original = ROOT / 'public/assets/previews/home-2027/allplan-max-ai-concept.jpg'
         self.assertTrue(optimized.exists())
         self.assertLess(optimized.stat().st_size, original.stat().st_size)
+        self.assertLess(optimized.stat().st_size, previous.stat().st_size * 0.8)
         self.assertIn('type="image/webp"', hero)
-        self.assertIn('/assets/previews/home-2027/allplan-max-ai-concept.webp', hero)
+        self.assertIn('/assets/previews/home-2027/allplan-max-ai-concept-q75.webp', hero)
         self.assertIn('/assets/previews/home-2027/allplan-max-ai-concept.jpg', hero)
         self.assertIn('fetchPriority="high"', hero)
 
@@ -98,6 +100,14 @@ class HomeSlideTests(unittest.TestCase):
         self.assertRegex(workflow, r'<img[^>]*src=\{activeRole\.image\}[^>]*loading="lazy"')
         self.assertRegex(home, r'src=\{data\.bimflex\.logo\.src\}[^>]*loading="lazy"')
         self.assertRegex(home, r'src=\{data\.bimflex\.logo\.src\}[^>]*width=\{512\}[^>]*height=\{512\}')
+
+    def test_home_product_image_uses_smaller_webp(self):
+        tabs = (ROOT / 'src/components/sections/HomepageProductPreviewTabs.tsx').read_text()
+        optimized = ROOT / 'public/assets/previews/home-2027/allplan-max-generated-v2-q80.webp'
+        original = ROOT / 'public/assets/previews/home-2027/allplan-max-generated-v2.jpg'
+        self.assertTrue(optimized.exists())
+        self.assertLess(optimized.stat().st_size, original.stat().st_size * 0.4)
+        self.assertIn('/assets/previews/home-2027/allplan-max-generated-v2-q80.webp', tabs)
 
     def test_homepage_section_scroll_respects_motion_preferences(self):
         css = (ROOT / 'src/components/sections/HomepageSectionIntro.module.css').read_text(encoding='utf-8')

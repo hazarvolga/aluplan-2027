@@ -142,25 +142,28 @@ export function AkademiOverview(): ReactElement {
                 </li>
               ))}
             </ul>
-            <p className={styles.note}><AluIcon name="info" size="sm" /> {akademiProgressNote}</p>
+            <p className={styles.note}><span aria-hidden="true"><AluIcon name="info" size="sm" /></span> {akademiProgressNote}</p>
           </div>
         </section>
       </DebugComponentLabel>
 
       <DebugComponentLabel name="AkademiNextSteps (özel)">
-        <section className={`${styles.band} ${styles.lastBand}`} aria-label="Sertifika ve bilgi bankası">
-          <div className={`alu-container ${styles.split}`}>
-            <article className={styles.panel}>
-              <span className={styles.icon} aria-hidden="true"><AluIcon name="award" size="md" /></span>
-              <h2 className={styles.cardTitle}>{akademiCertificate.title}</h2>
-              <p className={styles.text}>{akademiCertificate.text}</p>
-              <a className="alu-button alu-button--primary alu-button--md" href={akademiCertificate.action.href}>{akademiCertificate.action.label}</a>
-            </article>
-            <article className={styles.panel}>
-              <span className={styles.icon} aria-hidden="true"><AluIcon name="file-text" size="md" /></span>
-              <h2 className={styles.cardTitle}>{akademiKnowledgeBase.title}</h2>
-              <p className={styles.text}>{akademiKnowledgeBase.text}</p>
-            </article>
+        <section className={`${styles.band} ${styles.lastBand}`} aria-labelledby="akademi-sonraki">
+          <div className="alu-container">
+            <SectionHeader id="akademi-sonraki" kicker="SONRAKI ADIM" title="Sertifika ve bilgi bankası" />
+            <div className={styles.split}>
+              <article className={styles.panel}>
+                <span className={styles.icon} aria-hidden="true"><AluIcon name="award" size="md" /></span>
+                <h3 className={styles.cardTitle}>{akademiCertificate.title}</h3>
+                <p className={styles.text}>{akademiCertificate.text}</p>
+                <a className="alu-button alu-button--primary alu-button--md" href={akademiCertificate.action.href}>{akademiCertificate.action.label}</a>
+              </article>
+              <article className={styles.panel}>
+                <span className={styles.icon} aria-hidden="true"><AluIcon name="file-text" size="md" /></span>
+                <h3 className={styles.cardTitle}>{akademiKnowledgeBase.title}</h3>
+                <p className={styles.text}>{akademiKnowledgeBase.text}</p>
+              </article>
+            </div>
           </div>
         </section>
       </DebugComponentLabel>

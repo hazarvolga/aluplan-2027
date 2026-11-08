@@ -2,6 +2,7 @@
 Python validator. No YAML/zod dependency; the JSON is the single source of truth."""
 
 from pathlib import Path
+import importlib.util
 import json
 import re
 import subprocess
@@ -12,6 +13,13 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 CONTENT_DIR = ROOT / "src/data/akademi-content"
 VALIDATOR = ROOT / "scripts/validate_akademi_content.py"
+
+
+def _load_validator():
+    spec = importlib.util.spec_from_file_location("validate_akademi_content", VALIDATOR)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
 
 REQUIRED = ("code", "slug", "title", "levelSlug", "hours", "outcomes", "sessionFlow",
             "durationSplit", "runningProjectStep")
@@ -67,6 +75,31 @@ class AkademiContentTests(unittest.TestCase):
             if m["levelSlug"] == "ileri":
                 with self.subTest(file=path.name):
                     self.assertTrue(m.get("trackTitle"), f"{path.name}: ileri module needs a trackTitle")
+
+    def test_validator_rejects_quiz_without_exactly_one_correct_option(self):
+        mod = _load_validator()
+        bad = {
+            "quiz": [
+                {"id": "Q1", "prompt": "x?", "explanation": "e",
+                 "options": [{"text": "a", "correct": True}, {"text": "b", "correct": True}]},
+            ],
+        }
+        errors = []
+        mod.validate_quiz(Path("BAD.json"), bad, errors)
+        self.assertTrue(any("exactly one correct" in e for e in errors), errors)
+
+    def test_validator_accepts_a_well_formed_quiz(self):
+        mod = _load_validator()
+        ok = {
+            "quiz": [
+                {"id": "Q1", "prompt": "x?", "explanation": "e",
+                 "options": [{"text": "a", "correct": True}, {"text": "b", "correct": False},
+                             {"text": "c", "correct": False}, {"text": "d", "correct": False}]},
+            ],
+        }
+        errors = []
+        mod.validate_quiz(Path("OK.json"), ok, errors)
+        self.assertEqual(errors, [])
 
     def test_validator_passes_on_the_content(self):
         result = subprocess.run([sys.executable, str(VALIDATOR)], capture_output=True, text=True)

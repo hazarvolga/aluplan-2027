@@ -45,6 +45,44 @@ export interface DurationSlice {
   minutes: number;
 }
 
+export interface ApplicationStep {
+  step: string;
+  /** Optional "Neden?" rationale shown beside the step. */
+  why?: string;
+}
+
+export interface CommonMistake {
+  mistake: string;
+  symptom: string;
+  fix: string;
+}
+
+export interface Differentiation {
+  /** For fast learners. */
+  fast: string;
+  /** For learners who need support. */
+  support: string;
+}
+
+export interface QuizOption {
+  text: string;
+  correct: boolean;
+}
+
+export interface QuizQuestion {
+  id: string;
+  prompt: string;
+  /** Multiple-choice options; exactly one has correct: true. */
+  options: readonly QuizOption[];
+  /** Shown after answering: why the correct option is right (and distractors wrong). */
+  explanation: string;
+  bloom?: string;
+  /** Kolay | Orta | Zor */
+  difficulty?: string;
+  /** Linked outcome code, e.g. K-B1.3. */
+  outcomeCode?: string;
+}
+
 export interface ContentModule {
   code: string;
   slug: string;
@@ -65,6 +103,14 @@ export interface ContentModule {
   homework?: string;
   assessment?: string;
   materials?: readonly string[];
+  /** Step-by-step application guide (adım adım uygulama yönergesi). */
+  applicationSteps?: readonly ApplicationStep[];
+  /** Common mistakes and fixes (sık yapılan hatalar). */
+  commonMistakes?: readonly CommonMistake[];
+  /** Differentiation for fast learners / those needing support (farklılaştırma). */
+  differentiation?: Differentiation;
+  /** Interactive self-assessment quiz (öz değerlendirme quizi). */
+  quiz?: readonly QuizQuestion[];
   /** True when the module is proposed in the plan, not yet in the PRD. */
   proposed?: boolean;
   /** Reserved for a future per-lesson split; unused today. */

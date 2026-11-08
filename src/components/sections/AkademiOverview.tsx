@@ -1,4 +1,5 @@
 import type { ReactElement } from 'react';
+import Link from 'next/link';
 import { AluIcon } from '@/components/ui/AluIcon';
 import {
   akademiCertificate,
@@ -10,68 +11,11 @@ import {
   akademiProgressNote,
   akademiRunningProject,
 } from '@/data/akademi';
-import type { AkademiLevel, AkademiModule } from '@/data/akademi';
 import { CompactPageHero } from './CompactPageHero';
 import { DebugComponentLabel } from './DebugComponentLabel';
 import { SectionHeader } from './SectionHeader';
+import { Callout, LevelCard } from '@/components/akademi/kit';
 import styles from './AkademiOverview.module.css';
-
-function totalHours(modules: readonly AkademiModule[]): number {
-  return modules.reduce((sum, module) => sum + module.hours, 0);
-}
-
-function ModuleList({ modules }: { modules: readonly AkademiModule[] }): ReactElement {
-  return (
-    <ul className={styles.modules}>
-      {modules.map((module) => (
-        <li key={module.code} className={styles.module}>
-          <span className={styles.moduleCode}>{module.code}</span>
-          <span className={styles.moduleTitle}>
-            {module.title}
-            {module.proposed && <span className={styles.proposed}>önerilen</span>}
-          </span>
-          <span className={styles.moduleHours}>{module.hours} sa</span>
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-function LevelCard({ level }: { level: AkademiLevel }): ReactElement {
-  return (
-    <li className={`${styles.level} ${level.shared ? '' : styles.levelTracks}`}>
-      <div className={styles.levelHead}>
-        <span className={styles.levelNumber} aria-hidden="true">{level.number}</span>
-        <div>
-          <h3 className={styles.levelTitle}>Seviye {level.number} · {level.title}</h3>
-          <p className={styles.levelRole}>{level.role} · {level.shared ? 'Ortak çekirdek' : 'Disiplin kolları'}</p>
-        </div>
-      </div>
-      <p className={styles.text}>{level.summary}</p>
-      {level.modules && (
-        <>
-          <ModuleList modules={level.modules} />
-          <p className={styles.levelTotal}>Toplam {totalHours(level.modules)} saat</p>
-        </>
-      )}
-      {level.tracks && (
-        <ul className={styles.tracks}>
-          {level.tracks.map((track) => (
-            <li key={track.title} className={styles.track}>
-              <h4 className={styles.trackTitle}>{track.title}</h4>
-              <p className={styles.text}>{track.summary}</p>
-              <ModuleList modules={track.modules} />
-              <p className={styles.levelTotal}>{totalHours(track.modules)} saat</p>
-            </li>
-          ))}
-        </ul>
-      )}
-      <a className={`alu-button alu-button--ghost alu-button--sm ${styles.levelLink}`} href={`/akademi/${level.slug}`}>
-        Seviye {level.number} detayını inceleyin →
-      </a>
-    </li>
-  );
-}
 
 export function AkademiOverview(): ReactElement {
   return (
@@ -98,6 +42,9 @@ export function AkademiOverview(): ReactElement {
                   <ol className={styles.steps}>
                     {path.steps.map((step) => <li key={step}>{step}</li>)}
                   </ol>
+                  <Link className={styles.entryCta} href="/akademi/seviye-1">
+                    Seviye 1 ile başlayın →
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -105,13 +52,17 @@ export function AkademiOverview(): ReactElement {
         </section>
       </DebugComponentLabel>
 
-      <DebugComponentLabel name="AkademiLevels (özel)">
+      <DebugComponentLabel name="AkademiLevels (kit)">
         <section id="seviyeler" className={styles.band} aria-labelledby="akademi-seviyeler">
           <div className="alu-container">
             <SectionHeader id="akademi-seviyeler" kicker="PROGRAM" title="Dört seviye, dört disiplin kolu" lead="Seviye 1, 2 ve 4 herkes için ortaktır. Seviye 3’te mimari, betonarme, prekast ve çelik ya da altyapı kollarından birini seçersiniz; kolların süreleri eşittir. Süreler taslaktır." />
-            <ol className={styles.levels}>
-              {akademiLevels.map((level) => <LevelCard key={level.number} level={level} />)}
-            </ol>
+            <ul className={styles.levelGrid}>
+              {akademiLevels.map((level) => (
+                <li key={level.number} className={styles.levelGridItem}>
+                  <LevelCard level={level} />
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
       </DebugComponentLabel>
@@ -145,7 +96,11 @@ export function AkademiOverview(): ReactElement {
                 </li>
               ))}
             </ul>
-            <p className={styles.note}><span aria-hidden="true"><AluIcon name="info" size="sm" /></span> {akademiProgressNote}</p>
+            <div className={styles.noteWrap}>
+              <Callout label="Öz değerlendirme">
+                <p>{akademiProgressNote}</p>
+              </Callout>
+            </div>
           </div>
         </section>
       </DebugComponentLabel>

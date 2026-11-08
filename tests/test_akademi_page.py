@@ -76,5 +76,18 @@ class AkademiLevelPageTests(unittest.TestCase):
                 self.assertNotIn("/akademi", read(path))
 
 
+class AkademiOverviewRedesignTests(unittest.TestCase):
+    def test_overview_uses_the_shared_kit(self):
+        src = read("src/components/sections/AkademiOverview.tsx")
+        self.assertIn("@/components/akademi/kit", src)
+        self.assertIn("LevelCard", src)
+        # the old inline LevelCard implementation is gone
+        self.assertNotIn("function LevelCard(", src)
+
+    def test_entry_paths_link_into_the_program(self):
+        src = read("src/components/sections/AkademiOverview.tsx")
+        self.assertIn("/akademi/seviye-1", src)
+
+
 if __name__ == "__main__":
     unittest.main()

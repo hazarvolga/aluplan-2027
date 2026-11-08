@@ -1,7 +1,13 @@
-.card{border-top:var(--border-width-default) solid var(--border-default);padding:var(--space-inset-md) 0;display:flex;flex-direction:column;gap:var(--space-stack-sm)}
+.card{position:relative;border-top:var(--border-width-default) solid var(--border-default);padding:var(--space-inset-md) 0;display:flex;flex-direction:column;gap:var(--space-stack-sm);transition:border-color var(--motion-duration-fast, 150ms) ease}
+.card:hover{border-top-color:var(--accent-akademi)}
 .head{display:grid;grid-template-columns:auto 1fr auto;gap:var(--space-stack-sm);align-items:baseline}
 .code{font-family:var(--font-mono);font-size:var(--type-body-sm-size);color:var(--accent-akademi)}
 .title{font-family:var(--font-heading);font-size:var(--type-h4-size);font-weight:var(--font-weight-strong);line-height:1.25;margin:0}
+.titleLink{color:inherit;text-decoration:none}
+/* Stretch the title link over the whole card so the entire row is clickable. */
+.titleLink::after{content:"";position:absolute;inset:0}
+.card:hover .titleLink{color:var(--accent-akademi)}
+.titleLink:focus-visible{outline:var(--border-width-accent, 2px) solid var(--focus-ring, var(--accent-akademi));outline-offset:var(--space-stack-xs)}
 .proposed{margin-left:var(--space-stack-xs);font-style:italic;font-weight:var(--font-weight);font-size:var(--type-body-sm-size);color:var(--text-secondary)}
 .hours{font-family:var(--font-mono);font-size:var(--type-body-sm-size);color:var(--text-secondary);white-space:nowrap}
 .outcomes{list-style:none;margin:0;padding:0;display:grid;gap:var(--space-stack-xs)}

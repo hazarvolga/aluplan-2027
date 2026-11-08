@@ -1,19 +1,19 @@
 import type { ReactElement } from 'react';
 import Link from 'next/link';
-import type { AkademiLevel, AkademiModule } from '@/data/akademi';
+import type { ContentLevel, ContentModule } from '@/data/akademi-content';
 import styles from './LevelCard.module.css';
 
-function totalHours(modules: readonly AkademiModule[]): number {
+function totalHours(modules: readonly ContentModule[]): number {
   return modules.reduce((sum, module) => sum + module.hours, 0);
 }
 
-function levelHours(level: AkademiLevel): number {
+function levelHours(level: ContentLevel): number {
   if (level.modules) return totalHours(level.modules);
   if (level.tracks) return totalHours(level.tracks[0]?.modules ?? []);
   return 0;
 }
 
-function unitCount(level: AkademiLevel): number {
+function unitCount(level: ContentLevel): number {
   if (level.modules) return level.modules.length;
   if (level.tracks) return level.tracks.length;
   return 0;
@@ -24,7 +24,7 @@ export function LevelCard({
   level,
   active = false,
 }: {
-  level: AkademiLevel;
+  level: ContentLevel;
   active?: boolean;
 }): ReactElement {
   return (

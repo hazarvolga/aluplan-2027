@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { AkademiLevelDetail } from '@/components/sections/AkademiLevelDetail';
-import { akademiLevelSlugs, getAkademiLevel } from '@/data/akademi';
+import { levelSlugs, getLevelBySlug } from '@/data/akademi-content';
 import { isAkademiEnabled } from '@/lib/release-flags';
 
 /** Draft section: the whole /akademi area is never indexed until content is approved. */
@@ -14,7 +14,7 @@ export const dynamicParams = false;
 /** Build the level pages only while the draft is enabled; production builds none. */
 export function generateStaticParams(): Array<{ seviye: string }> {
   if (!isAkademiEnabled()) return [];
-  return akademiLevelSlugs.map((seviye) => ({ seviye }));
+  return levelSlugs.map((seviye) => ({ seviye }));
 }
 
 export default async function AkademiLevelPage({
@@ -24,7 +24,7 @@ export default async function AkademiLevelPage({
 }) {
   if (!isAkademiEnabled()) notFound();
   const { seviye } = await params;
-  const level = getAkademiLevel(seviye);
+  const level = getLevelBySlug(seviye);
   if (!level) notFound();
   return <AkademiLevelDetail level={level} />;
 }

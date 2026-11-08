@@ -1,0 +1,48 @@
+{
+  "code": "M10",
+  "slug": "openbim-ifc-koordinasyon",
+  "title": "openBIM, IFC 4.3, IDS ve CDE Koordinasyonu",
+  "levelSlug": "uzman",
+  "trackTitle": null,
+  "hours": 10,
+  "format": "Hibrit",
+  "prerequisite": "U.M9",
+  "summary": "Sürekli projeyi IFC olarak teslim eder, veri kaybını denetler ve referans modelle BCF, IDS, CDE ile koordinasyonu yürütür.",
+  "outcomes": [
+    { "text": "IFC dışa/içe aktarımını yapar ve veri kaybını denetler", "bloom": "Uygulama", "code": "K-U10.1" },
+    { "text": "BCF ile sorun yönetimini ve referans model koordinasyonunu yürütür", "bloom": "Uygulama", "code": "K-U10.2" },
+    { "text": "IDS, CDE ve ISO 19650 temel kavramlarını teslim akışına uygular", "bloom": "Uygulama", "code": "K-U10.3" }
+  ],
+  "concepts": [
+    { "term": "openBIM", "desc": "Açık formatlarla, markadan bağımsız BIM iş birliği", "en": "openBIM" },
+    { "term": "IFC", "desc": "Disiplinler arası açık model veri formatı", "en": "Industry Foundation Classes" },
+    { "term": "MVD", "desc": "IFC'nin hangi alt kümesinin aktarılacağını belirleyen görünüm", "en": "Model View Definition" },
+    { "term": "BCF", "desc": "Model üstünde sorun ve yorum paylaşım formatı", "en": "BIM Collaboration Format" },
+    { "term": "Referans model", "desc": "Başka disiplinin koordinasyon için eklenen modeli", "en": "Reference model" },
+    { "term": "IDS", "desc": "Hangi bilginin nasıl teslim edileceğini tanımlayan şartname", "en": "Information Delivery Specification" },
+    { "term": "CDE", "desc": "Projedeki tüm verinin toplandığı ortak ortam", "en": "Common Data Environment" },
+    { "term": "ISO 19650", "desc": "BIM ile bilgi yönetimi uluslararası standardı", "en": "ISO 19650" }
+  ],
+  "sessionFlow": [
+    { "time": "0–5", "phase": "Dikkat çekme", "instructor": "Aynı proje, iki yazılım: IFC ile aktarım", "participant": "Soruyu yanıtlar", "material": "Slayt 1" },
+    { "time": "5–15", "phase": "Hedef + ön bilgi", "instructor": "Kazanımlar; openBIM mantığını bağlar", "participant": "Isınma sorusu", "material": "Diyagram" },
+    { "time": "15–40", "phase": "Demonstrasyon", "instructor": "IFC dışa aktarır, veri kaybını gösterir", "participant": "İzler", "material": "Örnek proje" },
+    { "time": "40–90", "phase": "Rehberli uygulama", "instructor": "Katılımcılarla referans model + BCF kurar", "participant": "Sorun oluşturur", "material": "Adım kartı A3" },
+    { "time": "90–135", "phase": "Bağımsız görev", "instructor": "Dolaşır, IDS/teslimi denetler", "participant": "IFC teslimini hazırlar", "material": "Görev A3" },
+    { "time": "135–150", "phase": "Değerlendirme", "instructor": "Kontrol listesi + mini quiz", "participant": "Quiz-U10'u çözer", "material": "Quiz-U10" }
+  ],
+  "durationSplit": [
+    { "label": "Anlatım", "minutes": 40 },
+    { "label": "Uygulama", "minutes": 50 },
+    { "label": "Ölçme", "minutes": 15 },
+    { "label": "Bireysel", "minutes": 45 }
+  ],
+  "runningProjectStep": "Bu derste sürekli proje IFC olarak teslim edilir, veri kaybı denetlenir ve referans modelle koordinasyon (kural denetimi, sorun yönetimi) yürütülür.",
+  "homework": "Sürekli projeyi IDS'e uygun biçimde IFC olarak dışa aktarın, veri kaybını denetleyin ve bir referans model üzerinde en az iki BCF sorunu oluşturun. Teslim: IFC dosyası + denetim notu + BCF paketi · Süre: ~120 dk · Ölçüt: Doğru IFC görünümü, belgelenmiş veri kaybı kontrolü, konuma bağlı anlamlı BCF sorunları.",
+  "assessment": "Quiz-U10 (8 soru): openBIM ile kapalı iş akışı farkı, MVD'nin önemi, eksik özellik senaryosu, veri kaybının en güvenilir denetimi, BCF'in e-postaya göre avantajı, IDS'in tanımı, IFC teslim adımlarının sıralaması, ISO 19650'nin teslimde izlediği bilgi.",
+  "materials": [
+    "Örnek IFC dosyası, IDS şablonu ve BCF paketi (kurum kaynağı eklenecek)",
+    "buildingSMART IFC/BCF referansları ve ISO 19650 özet notu [sürüme göre doğrula]"
+  ],
+  "proposed": false
+}

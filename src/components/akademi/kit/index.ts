@@ -4,3 +4,5 @@ export { MetaRow } from './MetaRow';
 export type { MetaItem } from './MetaRow';
 export { SectionRule } from './SectionRule';
 export { Callout } from './Callout';
+export { DistributionBar } from './DistributionBar';
+export { Timeline } from './Timeline';

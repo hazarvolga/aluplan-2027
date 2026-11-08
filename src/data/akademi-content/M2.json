@@ -1,0 +1,45 @@
+{
+  "code": "M2",
+  "slug": "proje-yapisi",
+  "title": "Proje Yapısı, Yapı Yapısı ve Çizim Dosyaları",
+  "levelSlug": "temel",
+  "trackTitle": null,
+  "hours": 12,
+  "format": "Hibrit",
+  "prerequisite": "B.M1",
+  "summary": "Proje, yapı yapısı ve çizim dosyası ilişkisini kavrar; kat/seviye ve aks sistemini kurarak modelin iskeletini hazırlar ve çizim dosyalarını katman mantığına göre düzenler.",
+  "outcomes": [
+    { "text": "Proje, yapı yapısı (building structure) ve çizim dosyası (document) ilişkisini açıklar.", "bloom": "Anlama", "code": "K-B2.1" },
+    { "text": "Kat/seviye ve aks sistemini kurar.", "bloom": "Uygulama", "code": "K-B2.2" },
+    { "text": "Çizim dosyalarını katman/yapı mantığına göre düzenler.", "bloom": "Uygulama", "code": "K-B2.3" }
+  ],
+  "concepts": [
+    { "term": "Yapı yapısı", "desc": "Projeyi kat/yapı/bölüm olarak organize eden ağaç", "en": "Building structure / Bauwerksstruktur" },
+    { "term": "Çizim dosyası", "desc": "Modelin parçalarının yerleştiği numaralı birim", "en": "Document / Teilbild" },
+    { "term": "Katman", "desc": "Elemanları görünürlük/format için gruplayan sistem", "en": "Layer" },
+    { "term": "Aks sistemi", "desc": "Kolon/duvar yerleşimini yöneten referans ızgara", "en": "Grid / axis grid" },
+    { "term": "Kat yüksekliği", "desc": "Her kat düzleminin kot ve yükseklik tanımı", "en": "Storey / level" }
+  ],
+  "sessionFlow": [
+    { "time": "0–5", "phase": "Dikkat çekme", "instructor": "Dağınık vs. düzenli proje dosyası karşılaştırır", "participant": "Farkı tartışır", "material": "Slayt 1" },
+    { "time": "5–15", "phase": "Hedef + ön bilgi", "instructor": "Yapı yapısı ağacını açıklar, M1'i bağlar", "participant": "Soru-cevap", "material": "Diyagram" },
+    { "time": "15–35", "phase": "Demonstrasyon", "instructor": "Kat/seviye tanımı ve aks sistemi kurar", "participant": "İzler, not alır", "material": "Örnek proje" },
+    { "time": "35–75", "phase": "Rehberli uygulama", "instructor": "Katılımcılarla birlikte kendi projelerinde kurar", "participant": "Adımları uygular", "material": "Adım kartı A2" },
+    { "time": "75–100", "phase": "Bağımsız görev", "instructor": "Dolaşır, çizim dosyası düzenini denetler", "participant": "Katmanları düzenler", "material": "Görev A2" },
+    { "time": "100–110", "phase": "Değerlendirme + kapanış", "instructor": "Kontrol listesi + mini quiz", "participant": "Quiz-B2'yi çözer", "material": "Quiz-B2" }
+  ],
+  "durationSplit": [
+    { "label": "Anlatım", "minutes": 35 },
+    { "label": "Uygulama", "minutes": 40 },
+    { "label": "Ölçme", "minutes": 10 },
+    { "label": "Bireysel", "minutes": 25 }
+  ],
+  "runningProjectStep": "Bu derste sürekli projenin kat/seviye ve aks sistemi kurulur; modelin iskeleti hazırlanır.",
+  "homework": "Sürekli projenin 4 katını ve aks sistemini kurun; çizim dosyalarını işlev bazında adlandırın. Teslim: Proje dosyası + yapı yapısı ekran görüntüsü · Süre: ~60 dk · Ölçüt: Doğru kot, adlandırılmış akslar, düzenli dosya yapısı.",
+  "assessment": "Quiz-B2 (6 soru): yapı yapısının organize ettiği birimler, çizim dosyası ile katman farkı, kat kotunun önemi, aks sisteminin işlevi ve sıralama, iyi çizim dosyası ismi, kat kotu hata bulma.",
+  "materials": [
+    "Yapı yapısı şablon dosyası (kurum kaynağı eklenecek)",
+    "İsimlendirme standardı tablosu"
+  ],
+  "proposed": false
+}

@@ -7,8 +7,8 @@
 ## Öğrenme kazanımları
 Bu modülün sonunda katılımcı:
 1. Çelik yapı elemanlarını (profil, kolon, kiriş) doğru kesit ve kalite ile **modeller**. [K-İ6.1]
-2. Çelik bağlantıları (birleşim, levha, bulon) **oluşturur** ve detaylandırır. [K-İ6.1]
-3. SDS2 entegrasyonu ile üretim/detay aktarım akışını **tanımlar**. [K-İ6.1] `[SDS2 entegrasyonunu sürüme göre doğrula]`
+2. Çelik bağlantıları (birleşim, levha, bulon) **oluşturur** ve detaylandırır. [K-İ6.2]
+3. SDS2 entegrasyonu ile üretim/detay aktarım akışını **tanımlar**. [K-İ6.3] `[SDS2 entegrasyonunu sürüme göre doğrula]`
 
 ## Temel kavramlar ve terimler
 | Terim | Açıklama | İngilizce |

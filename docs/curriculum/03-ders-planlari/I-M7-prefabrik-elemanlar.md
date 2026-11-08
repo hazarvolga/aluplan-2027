@@ -7,8 +7,8 @@
 ## Öğrenme kazanımları
 Bu modülün sonunda katılımcı:
 1. Prefabrik (precast) elemanları (panel, kiriş, döşeme plağı) doğru parametrelerle **oluşturur**. [K-İ7.1]
-2. Elemanları üretim mantığına göre parçalara (segment) **ayırır** ve kodlar. [K-İ7.1]
-3. Üretim verisini (production data) ve eleman listelerini **hazırlar**. [K-İ7.1] `[sürüme göre doğrula]`
+2. Elemanları üretim mantığına göre parçalara (segment) **ayırır** ve kodlar. [K-İ7.2]
+3. Üretim verisini (production data) ve eleman listelerini **hazırlar**. [K-İ7.3] `[sürüme göre doğrula]`
 
 ## Temel kavramlar ve terimler
 | Terim | Açıklama | İngilizce |

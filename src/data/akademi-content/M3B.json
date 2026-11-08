@@ -1,0 +1,46 @@
+{
+  "code": "M3B",
+  "slug": "ileri-mimari-modelleme",
+  "title": "İleri Mimari Modelleme ve Sunum",
+  "levelSlug": "ileri",
+  "trackTitle": "Mimari",
+  "hours": 16,
+  "format": "Hibrit",
+  "prerequisite": "Seviye 2 tamamlanmış",
+  "summary": "Karmaşık geometri ile cephe ve giydirme cephe sistemlerini modeller; tasarım varyantları türetir ve ortak kamera/ışık ile görselleştirme çıktısı alır.",
+  "outcomes": [
+    { "text": "Karmaşık geometri ile cephe ve giydirme cephe (curtain wall) sistemlerini modeller", "bloom": "Yaratma", "code": "K-İ3B.1" },
+    { "text": "Tasarım varyantlarını (design variants) ve görselleştirme çıktısını oluşturur", "bloom": "Yaratma", "code": "K-İ3B.2" }
+  ],
+  "concepts": [
+    { "term": "Cephe", "desc": "Binanın dış yüzeyini oluşturan yapı katmanı", "en": "Façade / Fassade" },
+    { "term": "Giydirme cephe", "desc": "Taşıyıcı olmayan, panel ve profillerden oluşan dış kabuk", "en": "Curtain wall" },
+    { "term": "Serbest geometri", "desc": "Standart elemanlara sığmayan, modelle oluşturulan biçim", "en": "Freeform / Solid" },
+    { "term": "Tasarım varyantı", "desc": "Aynı projenin karşılaştırılabilir alternatif çözümü", "en": "Design variant" },
+    { "term": "Görselleştirme", "desc": "Modelden gerçekçi ışıklı görsel üretme", "en": "Rendering" },
+    { "term": "Malzeme/kaplama", "desc": "Yüzeye atanan görsel ve fiziksel doku", "en": "Material / Surface" }
+  ],
+  "sessionFlow": [
+    { "time": "0–5", "phase": "Dikkat çekme", "instructor": "Düz duvar vs. giydirme cephe örneği", "participant": "Farkı söyler", "material": "Slayt 1" },
+    { "time": "5–15", "phase": "Hedef + ön bilgi", "instructor": "Kazanımlar; Seviye 2 modelini bağlar", "participant": "Isınma sorusu", "material": "Diyagram" },
+    { "time": "15–40", "phase": "Demonstrasyon", "instructor": "Cephe gridini ve panel sistemini kurar", "participant": "İzler", "material": "Örnek proje" },
+    { "time": "40–95", "phase": "Rehberli uygulama", "instructor": "Katılımcılarla cephe modelini oluşturur", "participant": "Grid + panel yerleştirir", "material": "Adım kartı A3" },
+    { "time": "95–130", "phase": "Bağımsız görev", "instructor": "Dolaşır, geometriyi denetler", "participant": "Varyant + malzeme ekler", "material": "Görev A3" },
+    { "time": "130–145", "phase": "Görselleştirme", "instructor": "Kamera, ışık, render ayarını gösterir", "participant": "Render alır", "material": "Render ön ayarı" },
+    { "time": "145–155", "phase": "Değerlendirme", "instructor": "Kontrol listesi + mini quiz", "participant": "Quiz-İ3B'yi çözer", "material": "Quiz-İ3B" }
+  ],
+  "durationSplit": [
+    { "label": "Anlatım", "minutes": 40 },
+    { "label": "Uygulama", "minutes": 70 },
+    { "label": "Ölçme", "minutes": 10 },
+    { "label": "Bireysel", "minutes": 35 }
+  ],
+  "runningProjectStep": "Bu derste sürekli projenin mimari kolunda cephe (façade) detayı modellenir ve görselleştirme (render) çıktısı alınır.",
+  "homework": "Sürekli projenin bir cephesini giydirme cephe olarak modelleyin, iki tasarım varyantı türetin ve her varyant için aynı kameradan bir render alın. Teslim: Proje dosyası + 2 render görseli. Süre: ~120 dk. Ölçüt: Gride bağlı paneller, atanmış malzemeler, ortak kameradan karşılaştırılabilir görseller.",
+  "assessment": "Quiz-İ3B (8 soru): giydirme cephe ile standart duvar farkı, panelleri gride bağlamanın avantajı, gri render senaryosu, serbest geometrinin nesneyle kurulması, cephe modelleme sıralaması, tasarım varyantının işlevi, karşılaştırılamayan görsel hata bulma, malzeme atamasının beslediği iki çıktı.",
+  "materials": [
+    "Başlangıç ve bitmiş cephe dosyası (kurum kaynağı eklenecek)",
+    "Malzeme/kaplama kütüphanesi ve render ön ayar tablosu [sürüme göre doğrula]"
+  ],
+  "proposed": true
+}

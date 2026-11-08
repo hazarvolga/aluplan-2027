@@ -1,0 +1,21 @@
+.list{margin:0;padding:0;list-style:none}
+
+.step{position:relative;display:grid;grid-template-columns:minmax(3.5rem,auto) 1fr;gap:var(--space-inline-md);padding:0 0 var(--space-stack-md) var(--space-inset-sm)}
+.step:last-child{padding-bottom:0}
+
+/* Hairline vertical spine with a node at each step's time. */
+.spine{position:absolute;left:0;top:.35rem;bottom:0;width:var(--border-width-default);background:var(--border-default)}
+.step:last-child .spine{bottom:auto;height:.35rem}
+.spine::before{content:"";position:absolute;left:50%;top:0;width:.4rem;height:.4rem;transform:translate(-50%,-50%);background:var(--text-primary);border-radius:50%}
+
+.time{font-family:var(--font-mono);font-size:var(--type-body-sm-size);color:var(--text-secondary);letter-spacing:.04em}
+
+.body{display:flex;flex-direction:column;gap:var(--space-stack-xs)}
+.phase{margin:0;font-size:var(--type-body-md-size);font-weight:var(--font-weight-strong);color:var(--text-primary)}
+
+.roles{display:flex;flex-direction:column;gap:var(--space-stack-xs);margin:0}
+.role{display:grid;grid-template-columns:minmax(4.5rem,auto) 1fr;gap:var(--space-inline-sm)}
+.roleKey{font-family:var(--font-mono);font-size:var(--type-body-sm-size);text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted)}
+.roleVal{font-size:var(--type-body-sm-size);color:var(--text-primary);margin:0;min-width:0;overflow-wrap:anywhere}
+
+.material{align-self:flex-start;font-family:var(--font-mono);font-size:var(--type-body-sm-size);color:var(--text-secondary);border:var(--border-width-default) solid var(--border-subtle);padding:0 var(--space-inline-xs)}

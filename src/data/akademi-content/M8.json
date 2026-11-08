@@ -1,0 +1,47 @@
+{
+  "code": "M8",
+  "slug": "civil-ve-bridge",
+  "title": "ALLPLAN Civil ve Bridge ile Altyapı",
+  "levelSlug": "ileri",
+  "trackTitle": "Altyapı ve köprü",
+  "hours": 16,
+  "format": "Hibrit",
+  "prerequisite": "Seviye 2 tamamlanmış",
+  "summary": "Parametrik yol/altyapı modelini oluşturur, prefabrik kirişli bir köprüyü modeller ve altyapı ile köprü modelini sürekli proje koordinatlarına hizalar.",
+  "outcomes": [
+    { "text": "Parametrik yol/altyapı modelini (güzergâh, enkesit, kazı/dolgu) oluşturur.", "bloom": "Uygulama", "code": "K-İ8.1" },
+    { "text": "Prefabrik kirişli bir köprüyü (tabliye, kiriş, mesnet) modeller.", "bloom": "Uygulama", "code": "K-İ8.2" },
+    { "text": "Altyapı ve köprü modelini sürekli proje koordinatlarına hizalar.", "bloom": "Uygulama", "code": "K-İ8.3" }
+  ],
+  "concepts": [
+    { "term": "Güzergâh", "desc": "Yolun plan ve boykesitteki ekseni", "en": "Alignment" },
+    { "term": "Enkesit", "desc": "Yolun enine kesit şablonu (şerit, banket, şev)", "en": "Cross section" },
+    { "term": "Kazı/dolgu", "desc": "Araziye göre toprak işi hacimleri", "en": "Cut / fill" },
+    { "term": "Tabliye", "desc": "Köprünün taşıt geçen üst döşemesi", "en": "Deck" },
+    { "term": "Prefabrik kiriş", "desc": "Fabrikada üretilip yerine konan köprü kirişi", "en": "Precast girder" },
+    { "term": "Mesnet", "desc": "Kirişi ayağa/başlığa bağlayan taşıyıcı", "en": "Bearing / support" }
+  ],
+  "sessionFlow": [
+    { "time": "0–5", "phase": "Dikkat çekme", "instructor": "Bina modeli vs. yol/köprü modeli", "participant": "Farkı söyler", "material": "Slayt 1" },
+    { "time": "5–15", "phase": "Hedef + ön bilgi", "instructor": "Kazanımlar; sürekli proje koordinatını bağlar", "participant": "Isınma sorusu", "material": "Diyagram" },
+    { "time": "15–45", "phase": "Demonstrasyon", "instructor": "Güzergâh + enkesit ile yol modeli kurar", "participant": "İzler", "material": "Örnek proje" },
+    { "time": "45–100", "phase": "Rehberli uygulama", "instructor": "Katılımcılarla yolu ve köprü akslarını kurar", "participant": "Güzergâh + enkesit girer", "material": "Adım kartı A3" },
+    { "time": "100–150", "phase": "Bağımsız görev", "instructor": "Dolaşır, köprü elemanlarını denetler", "participant": "Kiriş + tabliye + mesnet ekler", "material": "Görev A3" },
+    { "time": "150–160", "phase": "Değerlendirme", "instructor": "Kontrol listesi + mini quiz", "participant": "Quiz-İ8'i çözer", "material": "Quiz-İ8" }
+  ],
+  "durationSplit": [
+    { "label": "Anlatım", "minutes": 45 },
+    { "label": "Uygulama", "minutes": 55 },
+    { "label": "Ölçme", "minutes": 10 },
+    { "label": "Bireysel", "minutes": 50 }
+  ],
+  "runningProjectStep": "Altyapı kolunda, sürekli projenin yanına prefabrik kirişli küçük bir köprü eklenir.",
+  "homework": "Altyapı kolunda tek açıklıklı prefabrik kirişli küçük bir köprü modelleyin: güzergâh, enkesit, kirişler, mesnetler ve tabliye; sürekli proje koordinatına hizalı. Teslim: Proje dosyası + 3B görünüm + hacim/metraj özeti · Süre: ~120 dk · Ölçüt: Güzergâha bağlı yol gövdesi, yola hizalı köprü, tanımlı kiriş-mesnet-tabliye.",
+  "assessment": "Quiz-İ8 (8 soru): güzergâhın önce tanımlanması, enkesit şablonunun ürettiği çıktı, köprünün yola oturmama nedeni, mesnetin işlevi, yol + köprü modelleme sırası, modelin koordinata hizalanması, mesneti tanımsız kirişi bulma ve tabliye yükünün aktarıldığı eleman.",
+  "materials": [
+    "Başlangıç ve bitmiş yol/köprü dosyası (kurum kaynağı eklenecek)",
+    "Enkesit şablonu kütüphanesi",
+    "ALLPLAN Civil/Bridge iş akışı kontrol listesi [sürüme göre doğrula]"
+  ],
+  "proposed": false
+}

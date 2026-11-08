@@ -1,0 +1,46 @@
+{
+  "code": "M1",
+  "slug": "arayuz-ve-temel-gezinme",
+  "title": "Arayüz ve Temel Gezinme",
+  "levelSlug": "temel",
+  "trackTitle": null,
+  "hours": 8,
+  "format": "Hibrit",
+  "prerequisite": "Yok",
+  "summary": "ALLPLAN arayüzünün bölümlerini tanır, temel gezinme ve görünüm araçlarını kullanır; CAD ile BIM arasındaki farkı kavrar.",
+  "outcomes": [
+    { "text": "ALLPLAN arayüzünün ana bölümlerini (Actionbar, paletler, çizim alanı, durum çubuğu) tanımlar", "bloom": "Hatırlama", "code": "K-B1.1" },
+    { "text": "Temel gezinme ve görünüm araçlarını kullanır", "bloom": "Uygulama", "code": "K-B1.2" },
+    { "text": "CAD ile BIM arasındaki farkı ve nesne tabanlı, parametrik modelleme mantığını açıklar", "bloom": "Anlama", "code": "K-B1.3" }
+  ],
+  "concepts": [
+    { "term": "BIM", "desc": "Geometri + veri içeren, nesne tabanlı yapı bilgi modeli", "en": "Building Information Modeling" },
+    { "term": "Parametrik nesne", "desc": "Değerleri değiştirilince kendini güncelleyen eleman", "en": "Parametric object" },
+    { "term": "Actionbar", "desc": "Görev/rol odaklı üst araç şeridi", "en": "Actionbar" },
+    { "term": "Palet", "desc": "Özellikler, kütüphane, katmanlar gibi yan pencereler", "en": "Palette" },
+    { "term": "Çizim dosyası", "desc": "Modelin parçalarının tutulduğu katman benzeri birim", "en": "Document / Teilbild" },
+    { "term": "Viewport", "desc": "Aynı modeli farklı açılardan gösteren pencere düzeni", "en": "Viewport" }
+  ],
+  "sessionFlow": [
+    { "time": "0–5", "phase": "Dikkat çekme", "instructor": "CAD çizgi vs. BIM duvar karşılaştırması gösterir", "participant": "Farkı tartışır", "material": "Slayt 1" },
+    { "time": "5–10", "phase": "Hedef ve ön bilgi", "instructor": "Kazanımları söyler, 'model = geometri + veri'", "participant": "Isınma sorusu", "material": "Slayt 2" },
+    { "time": "10–25", "phase": "Demonstrasyon", "instructor": "Arayüz turu: Actionbar, paletler, çizim alanı", "participant": "İzler, bölümleri işaretler", "material": "Örnek proje" },
+    { "time": "25–55", "phase": "Rehberli uygulama", "instructor": "Yakınlaştırma/kaydırma/viewport'u birlikte dener", "participant": "Adımları uygular", "material": "Adım kartı A1" },
+    { "time": "55–75", "phase": "Bağımsız görev", "instructor": "Dolaşır, destek verir", "participant": "Verilen görünümleri tek başına açar", "material": "Görev A1" },
+    { "time": "75–85", "phase": "Değerlendirme ve kapanış", "instructor": "Çıkış bileti / mini quiz", "participant": "Quiz-B1'i çözer", "material": "Quiz-B1" }
+  ],
+  "durationSplit": [
+    { "label": "Anlatım", "minutes": 25 },
+    { "label": "Uygulama", "minutes": 30 },
+    { "label": "Ölçme", "minutes": 10 },
+    { "label": "Bireysel", "minutes": 20 }
+  ],
+  "runningProjectStep": "Bu derste proje dosyası açılır ve çalışma ortamı tanınır; henüz modelleme yapılmaz.",
+  "homework": "Eğitim projesini açıp 3 farklı viewport düzeni kurun ve her birinin ekran görüntüsünü alın.",
+  "assessment": "Quiz-B1 (5 soru, öz değerlendirme): BIM/CAD farkı, parametrik nesne, paletler, viewport, 'tümünü sığdır'.",
+  "materials": [
+    "ALLPLAN resmî yardım dökümanı (kurum kaynağı eklenecek)",
+    "Kısayol tablosu [sürüme göre doğrula]"
+  ],
+  "proposed": false
+}

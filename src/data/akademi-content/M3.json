@@ -1,0 +1,46 @@
+{
+  "code": "M3",
+  "slug": "parametrik-mimari-elemanlar",
+  "title": "Parametrik Mimari Elemanlar ve Hacimler",
+  "levelSlug": "temel",
+  "trackTitle": null,
+  "hours": 16,
+  "format": "Hibrit",
+  "prerequisite": "B.M1, B.M2",
+  "summary": "Duvar, döşeme, kolon ve kiriş gibi parametrik elemanları doğru parametrelerle yerleştirir; kapı/pencere açıklıkları ile merdiven elemanlarını ekler ve elemanlar arası birleşim önceliklerini uygular.",
+  "outcomes": [
+    { "text": "Duvar, döşeme, kolon, kiriş gibi parametrik elemanları doğru parametrelerle yerleştirir.", "bloom": "Uygulama", "code": "K-B3.1" },
+    { "text": "Kapı/pencere açıklıklarını ve merdiven/korkuluk elemanlarını oluşturur.", "bloom": "Uygulama", "code": "K-B3.2" },
+    { "text": "Elemanlar arası birleşim ve öncelik kurallarını uygular.", "bloom": "Uygulama", "code": "K-B3.3" }
+  ],
+  "concepts": [
+    { "term": "Duvar", "desc": "Yükseklik/kalınlık/katman parametreli taşıyıcı veya bölme elemanı", "en": "Wall / Wand" },
+    { "term": "Döşeme", "desc": "Kat düzlemini oluşturan yatay eleman", "en": "Slab / Decke" },
+    { "term": "Kolon", "desc": "Düşey taşıyıcı parametrik eleman", "en": "Column / Stütze" },
+    { "term": "Kiriş", "desc": "Yatay taşıyıcı parametrik eleman", "en": "Beam / Unterzug" },
+    { "term": "Açıklık", "desc": "Duvara yerleşen kapı/pencere boşluğu + elemanı", "en": "Opening (door/window)" },
+    { "term": "Birleşim önceliği", "desc": "Kesişen elemanların hangisinin diğerini kestiği kural", "en": "Priority" }
+  ],
+  "sessionFlow": [
+    { "time": "0–5", "phase": "Dikkat çekme", "instructor": "Çizgiyle çizilmiş vs. parametrik duvar", "participant": "Farkı söyler", "material": "Slayt 1" },
+    { "time": "5–15", "phase": "Hedef + ön bilgi", "instructor": "Kazanımlar; M2 aks sistemini bağlar", "participant": "Isınma sorusu", "material": "Diyagram" },
+    { "time": "15–35", "phase": "Demonstrasyon", "instructor": "Duvar + döşeme + kolon yerleştirir", "participant": "İzler", "material": "Örnek proje" },
+    { "time": "35–85", "phase": "Rehberli uygulama", "instructor": "Katılımcılarla kat modelini kurar", "participant": "Elemanları yerleştirir", "material": "Adım kartı A3" },
+    { "time": "85–120", "phase": "Bağımsız görev", "instructor": "Dolaşır, birleşimleri denetler", "participant": "Kapı/pencere + merdiven ekler", "material": "Görev A3" },
+    { "time": "120–130", "phase": "Değerlendirme", "instructor": "Kontrol listesi + mini quiz", "participant": "Quiz-B3'ü çözer", "material": "Quiz-B3" }
+  ],
+  "durationSplit": [
+    { "label": "Anlatım", "minutes": 35 },
+    { "label": "Uygulama", "minutes": 50 },
+    { "label": "Ölçme", "minutes": 10 },
+    { "label": "Bireysel", "minutes": 35 }
+  ],
+  "runningProjectStep": "Bu derste sürekli projenin temel mimari modeli (duvar, döşeme, kolon, kiriş, kapı/pencere, merdiven) oluşturulur.",
+  "homework": "Sürekli projenin zemin katını tam modelleyin: duvarlar, döşeme, kolon/kiriş, kapı/pencere, merdiven. Teslim: Proje dosyası + 3B görünüm · Süre: ~120 dk · Ölçüt: Akslara hizalı taşıyıcı, doğru açıklıklar, temiz birleşimler.",
+  "assessment": "Quiz-B3 (8 soru): parametrik duvarın avantajı, döşemenin bağlı olduğu tanım, kapının metrajda çıkmaması senaryosu, birleşim önceliğinin işlevi, modelleme sırası, kolonun aksa oturtulması, yanlış birleşim hata bulma, merdiven-korkuluk ilişkisi.",
+  "materials": [
+    "Başlangıç ve bitmiş kat dosyası (kurum kaynağı eklenecek)",
+    "Eleman parametre tablosu [sürüme göre doğrula]"
+  ],
+  "proposed": false
+}

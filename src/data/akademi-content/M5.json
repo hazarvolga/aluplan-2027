@@ -1,0 +1,46 @@
+{
+  "code": "M5",
+  "slug": "betonarme-3b-donati",
+  "title": "Betonarme Yapılarda 3B Donatı",
+  "levelSlug": "ileri",
+  "trackTitle": "Betonarme ve 3B donatı",
+  "hours": 16,
+  "format": "Hibrit",
+  "prerequisite": "Seviye 2 tamamlanmış",
+  "summary": "Betonarme elemanlarda 3B donatıyı pas payı, boyuna donatı ve etriyeyle detaylandırır; çakışmaları denetler ve modelden büküm şeması ile donatı listesi üretir.",
+  "outcomes": [
+    { "text": "Betonarme elemanlarda 3B donatıyı detaylandırır", "bloom": "Uygulama", "code": "K-İ5.1" },
+    { "text": "Büküm şemaları (bending schedule) ve donatı listelerini üretir", "bloom": "Yaratma", "code": "K-İ5.2" }
+  ],
+  "concepts": [
+    { "term": "Donatı", "desc": "Betona gömülen çelik çubuk", "en": "Reinforcement / Rebar" },
+    { "term": "Boyuna donatı", "desc": "Eleman ekseni boyunca uzanan ana çubuk", "en": "Longitudinal bar" },
+    { "term": "Etriye", "desc": "Boyuna donatıyı saran enine donatı", "en": "Stirrup / Tie" },
+    { "term": "Pas payı", "desc": "Donatı ile beton yüzeyi arası koruyucu mesafe", "en": "Concrete cover" },
+    { "term": "Büküm şeması", "desc": "Çubuğun şekil, boy ve büküm açılarını gösteren çizim", "en": "Bending schedule" },
+    { "term": "Donatı listesi", "desc": "Çap/adet/boy/ağırlık dökümü", "en": "Bar / reinforcement list" }
+  ],
+  "sessionFlow": [
+    { "time": "0–5", "phase": "Dikkat çekme", "instructor": "2B donatı çizimi vs. 3B donatı modeli", "participant": "Farkı söyler", "material": "Slayt 1" },
+    { "time": "5–15", "phase": "Hedef + ön bilgi", "instructor": "Kazanımlar; betonarme elemanı bağlar", "participant": "Isınma sorusu", "material": "Diyagram" },
+    { "time": "15–40", "phase": "Demonstrasyon", "instructor": "Boyuna donatı + etriye yerleştirir", "participant": "İzler", "material": "Örnek proje" },
+    { "time": "40–95", "phase": "Rehberli uygulama", "instructor": "Katılımcılarla eleman donatısını kurar", "participant": "Donatı + pas payı girer", "material": "Adım kartı A3" },
+    { "time": "95–130", "phase": "Bağımsız görev", "instructor": "Dolaşır, çakışmaları denetler", "participant": "İkinci elemanı donatır", "material": "Görev A3" },
+    { "time": "130–145", "phase": "Çıktı", "instructor": "Büküm şeması ve listeyi üretir", "participant": "Liste alır", "material": "Liste şablonu" },
+    { "time": "145–155", "phase": "Değerlendirme", "instructor": "Kontrol listesi + mini quiz", "participant": "Quiz-İ5'i çözer", "material": "Quiz-İ5" }
+  ],
+  "durationSplit": [
+    { "label": "Anlatım", "minutes": 40 },
+    { "label": "Uygulama", "minutes": 70 },
+    { "label": "Ölçme", "minutes": 10 },
+    { "label": "Bireysel", "minutes": 35 }
+  ],
+  "runningProjectStep": "Bu derste sürekli projenin betonarme kolunda bir elemanın (örneğin kiriş veya kolon) 3B donatısı (reinforcement) detaylandırılır.",
+  "homework": "Sürekli projenin bir betonarme elemanını (kiriş veya kolon) 3B donatıyla detaylandırın, çakışmaları denetleyin ve büküm şeması ile donatı listesini modelden üretin. Teslim: Proje dosyası + donatı listesi. Süre: ~120 dk. Ölçüt: Doğru pas payı, çakışmasız donatı, modelden üretilmiş tutarlı liste.",
+  "assessment": "Quiz-İ5 (8 soru): 3B donatının 2B çizime göre avantajı, pas payının önce tanımlanması, liste güncellenmeyen etriye senaryosu, büküm şemasının veri kaynağı, donatma sıralaması, çakışma denetiminin önemi, modelle uyuşmayan liste satırı, donatı listesinin modelden üretilme gerekçesi.",
+  "materials": [
+    "Başlangıç ve bitmiş donatı dosyası (kurum kaynağı eklenecek)",
+    "Büküm şeması ve donatı listesi şablonu [sürüme göre doğrula]"
+  ],
+  "proposed": false
+}

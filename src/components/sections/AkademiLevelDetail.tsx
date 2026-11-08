@@ -5,6 +5,7 @@ import { CompactPageHero } from './CompactPageHero';
 import { DebugComponentLabel } from './DebugComponentLabel';
 import { SectionHeader } from './SectionHeader';
 import { MetaRow, ModuleCard } from '@/components/akademi/kit';
+import { AkademiJsonLd } from '@/components/akademi/AkademiJsonLd';
 import styles from './AkademiLevelDetail.module.css';
 
 function totalHours(modules: readonly AkademiModule[]): number {
@@ -37,6 +38,7 @@ export function AkademiLevelDetail({ level }: { level: AkademiLevel }): ReactEle
 
   return (
     <div className={styles.page}>
+      <AkademiJsonLd level={level} />
       <DebugComponentLabel name="AkademiLevelDetail (özel)">
         <CompactPageHero
           kicker={`SEVİYE ${level.number} · ${level.shared ? 'ORTAK' : 'DİSİPLİN KOLLARI'}`}

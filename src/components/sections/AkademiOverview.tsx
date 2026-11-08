@@ -16,11 +16,13 @@ import { DebugComponentLabel } from './DebugComponentLabel';
 import { SectionHeader } from './SectionHeader';
 import { Callout, LevelCard } from '@/components/akademi/kit';
 import { RevealList } from '@/components/akademi/motion/RevealList';
+import { AkademiJsonLd } from '@/components/akademi/AkademiJsonLd';
 import styles from './AkademiOverview.module.css';
 
 export function AkademiOverview(): ReactElement {
   return (
     <div className={styles.page}>
+      <AkademiJsonLd />
       <DebugComponentLabel name="CompactPageHero">
         <CompactPageHero kicker={akademiHero.kicker} title={akademiHero.title} lead={akademiHero.lead}>
           <div className={styles.heroActions}>

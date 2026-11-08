@@ -803,7 +803,7 @@
 /* Monumental Hero Metrics Bar */
 .alu-hero-metrics {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(var(--hero-metric-columns, 4), minmax(0, 1fr));
   background: var(--surface-raised);
   border: var(--border-width-default) solid var(--border-strong);
   box-shadow: var(--elevation-raised);
@@ -3644,6 +3644,52 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 }
 
 /* Phones: one compact header row; the top bar items live in the menu drawer. */
+.alu-mobile-drawer {
+  max-height: var(--layout-application-mobile-drawer-max-height);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.alu-mobile-drawer__nav {
+  display: flex;
+  flex-direction: column;
+}
+.alu-mobile-drawer__group,
+.alu-mobile-drawer__link {
+  border-bottom: var(--border-width-default) solid var(--border-default);
+}
+.alu-mobile-drawer__summary,
+.alu-mobile-drawer__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--target-min);
+  color: var(--text-primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+.alu-mobile-drawer__summary {
+  list-style: none;
+}
+.alu-mobile-drawer__summary::-webkit-details-marker {
+  display: none;
+}
+.alu-mobile-drawer__group-content {
+  padding: 0 var(--space-inset-sm) var(--space-inset-md);
+}
+.alu-mobile-drawer__section {
+  margin-top: var(--space-stack-md);
+}
+.alu-mobile-drawer__all {
+  display: inline-flex;
+  min-height: var(--target-min);
+  align-items: center;
+  color: var(--accent-fg);
+  text-decoration: none;
+}
+.alu-mobile-drawer__link:hover,
+.alu-mobile-drawer__all:hover {
+  color: var(--accent-fg);
+}
 .alu-mobile-drawer__contact {
   display: flex;
   flex-wrap: wrap;

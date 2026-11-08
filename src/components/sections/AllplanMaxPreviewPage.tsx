@@ -14,9 +14,9 @@ import { SectionHeader } from './SectionHeader';
 const records: Record<string, { en: string; tr: string }> = content;
 const text = (key: string) => records[`live.max.${key}`]?.tr ?? '';
 const mainFeatures = [
-  { key: 'fb', video: 'ARHTE2-CaWk', clip: 'AI-Feature-Builder_08Cut.mp4' },
-  { key: 'wb', video: '8ROtkolkemM', clip: 'AI-Workflow-Builder_09cut.mp4' },
-  { key: 'bim', video: 'RSwNnc8XvbQ', clip: 'AI-Bim-Analyst_02Cut.mp4' }
+  { key: 'fb', video: 'ARHTE2-CaWk', clip: 'AI-Feature-Builder_08Cut.mp4', poster: 'AI-Feature-Builder_08Cut.jpg' },
+  { key: 'wb', video: '8ROtkolkemM', clip: 'AI-Workflow-Builder_09cut.mp4', poster: 'AI-Workflow-Builder_09cut.jpg' },
+  { key: 'bim', video: 'RSwNnc8XvbQ', clip: 'AI-Bim-Analyst_02Cut.mp4', poster: 'AI-Bim-Analyst_02Cut.jpg' }
 ];
 const moreFeatures = [
   { key: 'fw', video: 'L2YcuH3PQWw', image: 'csm_AI_Formula_Writer_-_Best_Example_a1d355686c.png' },
@@ -44,7 +44,7 @@ export function AllplanMaxPreviewPage() {
         <p className="alu-hero-metrics__note">{text(`pillar-${n}.body`)}</p>
       </article>;
     })}</div></div></section></DebugComponentLabel>
-    <DebugComponentLabel name="SectionHeader + FeatureRowList"><section className={`alu-container ${styles.section}`}><div className={styles.sectionHead}><SectionHeader kicker="ÖNE ÇIKAN ÖZELLİKLER" title={text('3feat.title')} /></div><FeatureRowList>{mainFeatures.map(({key,video,clip}, index) => <FeatureRow key={key} index={index} kicker={text(`3feat.${key}.included`)} title={text(`3feat.${key}.title`)} media={<AllplanMaxFeatureClip src={`/assets/previews/allplan-max/${clip}`} title={text(`3feat.${key}.title`)} />}><p>{text(`3feat.${key}.body`)}</p><div className={styles.featureActions}><AllplanMaxVideo id={video} title={text(`3feat.${key}.title`)} /><a href={MAIN_QUOTE_FORM_URL} aria-label={`Demo talep edin: ${text(`3feat.${key}.title`)}`}>Demo talep edin ↗</a></div></FeatureRow>)}</FeatureRowList></section></DebugComponentLabel>
+    <DebugComponentLabel name="SectionHeader + FeatureRowList"><section className={`alu-container ${styles.section}`}><div className={styles.sectionHead}><SectionHeader kicker="ÖNE ÇIKAN ÖZELLİKLER" title={text('3feat.title')} /></div><FeatureRowList>{mainFeatures.map(({key,video,clip,poster}, index) => <FeatureRow key={key} index={index} kicker={text(`3feat.${key}.included`)} title={text(`3feat.${key}.title`)} media={<AllplanMaxFeatureClip src={`/assets/previews/allplan-max/${clip}`} poster={`/assets/previews/allplan-max/${poster}`} title={text(`3feat.${key}.title`)} />}><p>{text(`3feat.${key}.body`)}</p><div className={styles.featureActions}><AllplanMaxVideo id={video} title={text(`3feat.${key}.title`)} /><a href={MAIN_QUOTE_FORM_URL} aria-label={`Demo talep edin: ${text(`3feat.${key}.title`)}`}>Demo talep edin ↗</a></div></FeatureRow>)}</FeatureRowList></section></DebugComponentLabel>
     <DebugComponentLabel name="CustomerTestimonials"><CustomerTestimonials title={text('quotes.title')} items={[1, 2, 3].map(n => {
       const [name, role] = text(`quote-${n}.attribution`).split(' — ');
       return { name, role, quote: text(`quote-${n}`), source: 'Kaynak: ALLPLAN' };

@@ -262,14 +262,14 @@ def _source_snapshot(
             continue
         route = _rename_route(route, policy)
         headings = [
-            clean_text(item.get("text"))
+            _replace_text(route, clean_text(item.get("text")), policy)
             for item in page.get("headings", [])
             if clean_text(item.get("text"))
             and clean_text(item.get("text")) not in GLOBAL_HEADING_TEXT
         ]
         h1 = next(
             (
-                clean_text(item.get("text"))
+                _replace_text(route, clean_text(item.get("text")), policy)
                 for item in page.get("headings", [])
                 if item.get("level") == 1 and clean_text(item.get("text"))
             ),
@@ -297,7 +297,7 @@ def _source_snapshot(
                         policy,
                         root,
                     ),
-                    "alt": clean_text(attrs.get("alt")),
+                    "alt": _replace_text(route, clean_text(attrs.get("alt")), policy),
                 }
             )
         videos = {

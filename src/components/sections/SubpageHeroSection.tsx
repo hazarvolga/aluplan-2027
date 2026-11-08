@@ -62,6 +62,14 @@ export function SubpageHeroSection({
     >
       {responsiveBackground && (
         <picture className="alu-subpage-hero__bg" aria-hidden="true">
+          {page.path === '/products/allplan-basic' && background?.mobileSrc === '/assets/heroes/families/vf-07-allplan-product-platform-mobile.jpg' && (
+            <source
+              type="image/avif"
+              media="(max-width: 40rem)"
+              sizes="100vw"
+              srcSet="/assets/optimized/allplan-basic/hero-mobile-480.avif 480w, /assets/optimized/allplan-basic/hero-mobile-753.avif 753w"
+            />
+          )}
           <source media="(max-width: 40rem)" srcSet={responsiveBackground.mobileSrcSet} />
           <img
             {...responsiveBackground.desktopImageProps}

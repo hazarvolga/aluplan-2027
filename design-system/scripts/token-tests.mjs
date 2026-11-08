@@ -309,6 +309,7 @@ export function runTokenTests({ build = buildTokens, lint = lintComponentCss, T,
   test('application structural-layout tokens preserve desktop and responsive dimensions', () => {
     const expected = {
       '--layout-application-header-min-height': '4.5rem',
+      '--layout-application-mobile-drawer-max-height': 'calc(100dvh - 4.5rem)',
       '--layout-application-modal-max-height': '90vh',
       '--layout-application-bento-feature-min-height': '32rem',
       '--layout-application-service-pill-min-height': '2.75rem',

@@ -52,7 +52,8 @@ class ReleaseMenuTests(unittest.TestCase):
 
     def test_shell_hides_release_only_items_in_the_desktop_and_mobile_menus(self):
         self.assertIn("releaseOnly", SHELL)
-        self.assertEqual(SHELL.count("visibleItems(sec.items)"), 2)
+        self.assertIn("visibleItems(sec.items)", SHELL)
+        self.assertIn("visibleItems(section.items)", SHELL)
         self.assertNotIn("sec.items.map", SHELL)
 
 

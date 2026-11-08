@@ -57,7 +57,16 @@ export function FuncsGridCars({ grid, itemKeyPrefix, onVideo, onImage }: FuncsGr
                       }
                     }}
                   >
-                    <img src={resolvedThumbSrc} alt={item.title} loading="lazy" />
+                    {resolvedThumbSrc === '/assets/products/allplan-basic/layouting.png' ? (
+                      <picture>
+                        <source
+                          type="image/webp"
+                          srcSet="/assets/optimized/allplan-basic/layouting-400.webp 400w, /assets/optimized/allplan-basic/layouting-700.webp 700w"
+                          sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                        />
+                        <img src={resolvedThumbSrc} alt={item.title} loading="lazy" />
+                      </picture>
+                    ) : <img src={resolvedThumbSrc} alt={item.title} loading="lazy" />}
                     <div className="alu-media-card__scrim" aria-hidden="true" />
                     {hasVideo ? (
                       <>

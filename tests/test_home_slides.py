@@ -97,9 +97,9 @@ class HomeSlideTests(unittest.TestCase):
         workflow = (ROOT / 'src/components/sections/DisciplineWorkflowSection.tsx').read_text()
         home = (ROOT / 'src/components/sections/HomepageView.tsx').read_text()
         self.assertRegex(tabs, r'<img[^>]*src=\{product\.image\}[^>]*loading="lazy"')
-        self.assertRegex(workflow, r'<img[^>]*src=\{activeRole\.image\}[^>]*loading="lazy"')
-        self.assertRegex(home, r'src=\{data\.bimflex\.logo\.src\}[^>]*loading="lazy"')
-        self.assertRegex(home, r'src=\{data\.bimflex\.logo\.src\}[^>]*width=\{512\}[^>]*height=\{512\}')
+        self.assertRegex(workflow, r'<img[^>]*workflowImage\(activeRole\.image\)[^>]*loading="lazy"')
+        self.assertRegex(home, r'homepageImage\(data\.bimflex\.logo\.src\)[^>]*loading="lazy"')
+        self.assertRegex(home, r'homepageImage\(data\.bimflex\.logo\.src\)[^>]*width=\{512\}[^>]*height=\{512\}')
 
     def test_home_product_image_uses_smaller_webp(self):
         tabs = (ROOT / 'src/components/sections/HomepageProductPreviewTabs.tsx').read_text()

@@ -26,6 +26,25 @@ const previewSolutionImages: Record<string, string> = {
   '/cozumler/diger-urunler': '/assets/previews/solutions/other-web.jpg',
 };
 
+// Pre-generated variants avoid runtime image transforms and serve only the
+// dimensions needed by the homepage cards. Original files remain available.
+const optimizedHomepageImages: Record<string, string> = Object.fromEntries([
+  ...Object.values(previewSolutionImages),
+  '/assets/bimflex/doseme-bosluk-model.png',
+  '/assets/bimflex/kiris-model.png',
+  '/assets/bimflex/kolon-model.png',
+].map((src) => [src, `/assets/optimized/homepage/${src.split('/').pop()!.replace(/\.[^.]+$/, '')}`]));
+
+function homepageImage(src: string) {
+  if (src === '/assets/bimflex/flexsoft-logo.png') {
+    return { src: '/assets/optimized/homepage/flexsoft-logo-512.webp', srcSet: '/assets/optimized/homepage/flexsoft-logo-160.webp 160w, /assets/optimized/homepage/flexsoft-logo-320.webp 320w, /assets/optimized/homepage/flexsoft-logo-512.webp 512w' };
+  }
+  const base = optimizedHomepageImages[src];
+  if (!base) return { src };
+  const largest = src.endsWith('.png') ? 1440 : 1200;
+  return { src: `${base}-${largest}.webp`, srcSet: `${base}-480.webp 480w, ${base}-960.webp 960w, ${base}-${largest}.webp ${largest}w` };
+}
+
 export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: boolean }) {
   const cloudLink = data.quickLinks.find(([, href]) => href === '/products/allplan-cloud-services');
   return (
@@ -177,7 +196,8 @@ export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: bool
                 {item.image && (
                   <img
                     className="alu-bento-card__bg"
-                    src={previewMaxHero ? previewSolutionImages[item.href] ?? item.image : item.image}
+                    {...homepageImage(previewMaxHero ? previewSolutionImages[item.href] ?? item.image : item.image)}
+                    sizes="(max-width: 767px) 100vw, 50vw"
                     alt={item.title}
                     loading="lazy"
                   />
@@ -273,7 +293,8 @@ export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: bool
               </div>
               <img
                 className="preview-bimflex__logo"
-                src={data.bimflex.logo.src}
+                {...homepageImage(data.bimflex.logo.src)}
+                sizes="80px"
                 alt={data.bimflex.logo.alt}
                 loading="lazy"
                 width={512}
@@ -309,7 +330,7 @@ export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: bool
                   key={visual.src}
                   className={`preview-bimflex__figure preview-bimflex__figure--${index + 1}`}
                 >
-                  <img src={visual.src} alt={visual.alt} loading="lazy" />
+                  <img {...homepageImage(visual.src)} sizes="(max-width: 767px) 100vw, 35vw" alt={visual.alt} loading="lazy" />
                   <figcaption>{visual.alt}</figcaption>
                 </figure>
               ))}

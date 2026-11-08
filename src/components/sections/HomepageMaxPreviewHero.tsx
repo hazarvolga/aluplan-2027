@@ -6,6 +6,7 @@ export function HomepageMaxPreviewHero() {
   return (
     <section className="alu-hero-stage alu-max-preview-hero" aria-labelledby="hero-title">
       <picture className="alu-hero-stage__backdrop" aria-hidden="true">
+        <source media="(max-width: 767px)" type="image/webp" srcSet="/assets/previews/home-2027/allplan-max-ai-concept-mobile-q75.webp" />
         <source type="image/webp" srcSet="/assets/previews/home-2027/allplan-max-ai-concept-q75.webp" />
         <img className={`alu-max-preview-hero__image ${styles.imageMotion}`} src="/assets/previews/home-2027/allplan-max-ai-concept.jpg" alt="" width={1774} height={887} fetchPriority="high" />
       </picture>

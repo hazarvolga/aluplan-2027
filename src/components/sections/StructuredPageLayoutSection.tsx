@@ -1,6 +1,6 @@
 'use client';
 
-import type { ReactElement } from 'react';
+import type { CSSProperties, ReactElement } from 'react';
 
 import type { StructuredPageLayout } from '@/lib/site-data';
 import { AluIcon, type AluIconName } from '@/components/ui/AluIcon';
@@ -88,9 +88,7 @@ export function StructuredPageLayoutSection({
           <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
             <div
               className="alu-hero-metrics"
-              style={{
-                gridTemplateColumns: `repeat(${Math.min(layout.stats.length, 4)}, minmax(0, 1fr))`
-              }}
+              style={{ '--hero-metric-columns': Math.min(layout.stats.length, 4) } as CSSProperties}
             >
               {layout.stats.map((stat, statIndex) => (
                 <div key={`${stat.label}-${statIndex}`} className="alu-hero-metrics__item">

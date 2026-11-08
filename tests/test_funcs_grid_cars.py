@@ -56,10 +56,11 @@ class Cards(HTMLParser):
     def handle_starttag(self, tag, attrs):
         attrs=dict(attrs)
         if attrs.get('data-debug-label'): self.labels.append(attrs['data-debug-label'])
-        if tag=='article': self.current={'text':'','images':[],'buttons':[],'links':[],'classes':[],'native_buttons':[]}
+        if tag=='article': self.current={'text':'','images':[],'sources':[],'buttons':[],'links':[],'classes':[],'native_buttons':[]}
         if self.current is not None:
             self.current['classes'].extend(attrs.get('class','').split())
             if tag=='img': self.current['images'].append((attrs.get('src'),attrs.get('alt')))
+            if tag=='source': self.current['sources'].append(attrs)
             if attrs.get('role')=='button': self.current['buttons'].append((attrs.get('aria-label'),attrs.get('tabindex')))
             if tag=='button': self.current['native_buttons'].append(attrs.get('aria-label'))
             if tag=='a': self.current['links'].append(attrs.get('href'))
@@ -102,6 +103,12 @@ class FuncsGridCarsTests(unittest.TestCase):
                 self.assertNotIn('alu-media-card__video-btn',card['classes'])
                 self.assertEqual(card['native_buttons'],[])
                 self.assertEqual(len(card['buttons']),1)
+
+    def test_optimized_layout_thumbnail_keeps_original_fallback(self):
+        card = next(card for card, item in zip(self.parser.cards, self.grid['items']) if item.get('imageSrc') == '/assets/products/allplan-basic/layouting.png')
+        self.assertEqual(card['sources'][0]['type'], 'image/webp')
+        self.assertIn('/assets/optimized/allplan-basic/layouting-400.webp 400w', card['sources'][0]['srcset'])
+        self.assertIn(('/assets/products/allplan-basic/layouting.png', 'Düzenleme'), card['images'])
 
     def test_grid_has_its_own_debug_label_and_component_boundary(self):
         self.assertIn('FuncsGridCars',self.parser.labels)

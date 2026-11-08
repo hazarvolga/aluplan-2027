@@ -1126,6 +1126,11 @@ for raw_page in raw_200_pages:
 # License manager forms, support and official trial destinations remain distinct.
 pages_data = apply_source_card_links(apply_approved_content_policy(normalize_request_links(pages_data)))
 
+# User-approved Turkish translation of the original Bridge workflow.
+from bridge_precast_translation import translate_precast_bridge
+bridge_path = '/solutions/modeling-of-precast-girder-bridges'
+pages_data[bridge_path] = translate_precast_bridge(pages_data[bridge_path])
+
 # The user explicitly directs all buttons with this label to release notes.
 def update_release_notes_links(value):
     if isinstance(value, dict):

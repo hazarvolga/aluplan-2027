@@ -1,12 +1,14 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import styles from './AllplanMaxFeatureClip.module.css';
 
 const AUTOPLAY_QUERY = '(min-width: 768px) and (prefers-reduced-motion: no-preference)';
 const VISIBILITY_MARGIN = '200px';
 
-export function AllplanMaxFeatureClip({ src, title }: { src: string; title: string }) {
+export function AllplanMaxFeatureClip({ src, poster, title }: { src: string; poster: string; title: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
   const [canAutoplay, setCanAutoplay] = useState(false);
 
@@ -19,15 +21,19 @@ export function AllplanMaxFeatureClip({ src, title }: { src: string; title: stri
   }, []);
 
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
+    const container = containerRef.current;
+    if (!container) return;
+    if (!('IntersectionObserver' in window)) {
+      setVisible(true);
+      return;
+    }
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setVisible(true);
         observer.disconnect();
       }
     }, { rootMargin: VISIBILITY_MARGIN });
-    observer.observe(video);
+    observer.observe(container);
     return () => observer.disconnect();
   }, []);
 
@@ -41,14 +47,16 @@ export function AllplanMaxFeatureClip({ src, title }: { src: string; title: stri
     }
   }, [visible, canAutoplay]);
 
-  return <video
+  return <div ref={containerRef} className={styles.container}>{visible && <video
     ref={videoRef}
+    className={styles.video}
     muted
     loop
     playsInline
     controls
     preload={visible && !canAutoplay ? 'metadata' : 'none'}
-    src={visible ? `${src}#t=0.1` : undefined}
+    poster={poster}
+    src={`${src}#t=0.1`}
     aria-label={`${title} görsel tanıtımı`}
-  />;
+  />}</div>;
 }

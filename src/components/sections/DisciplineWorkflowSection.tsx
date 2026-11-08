@@ -12,6 +12,12 @@ type HomepageData = ReturnType<typeof getHomepageData>;
 type Props = { id: string; roles: HomepageData['roles']; products: HomepageData['products']; releaseLabel: string; trialHref: string; productsHref: string };
 const ROLE_ICONS: Record<string, AluIconName> = { architect: 'building-2', engineer: 'ruler', fabricator: 'boxes' };
 const ROLE_ACCENTS: Record<string, string> = { architect: 'var(--role-architect)', engineer: 'var(--role-engineer)', fabricator: 'var(--role-fabricator)' };
+function workflowImage(src: string) {
+  const match = /^\/assets\/previews\/workflow\/(architecture|engineering|precast)-web\.jpg$/.exec(src);
+  if (!match) return { src };
+  const base = `/assets/optimized/homepage/${match[1]}-web`;
+  return { src: `${base}-1200.webp`, srcSet: `${base}-480.webp 480w, ${base}-960.webp 960w, ${base}-1200.webp 1200w` };
+}
 export function DisciplineWorkflowSection({ id, roles, products, releaseLabel, trialHref, productsHref }: Props) {
   const [roleId, setRoleId] = useState(roles[0]?.id ?? '');
   const activeRole = roles.find(role => role.id === roleId) ?? roles[0];
@@ -134,7 +140,7 @@ export function DisciplineWorkflowSection({ id, roles, products, releaseLabel, t
 
               {activeRole.image && (
                 <div className="alu-pathway-visual-frame">
-                  <img src={activeRole.image} alt={`${activeRole.label} — ${activeRole.title}`} loading="lazy" />
+                  <img {...workflowImage(activeRole.image)} sizes="(max-width: 767px) 100vw, 50vw" alt={`${activeRole.label} — ${activeRole.title}`} loading="lazy" />
                   <div className="alu-pathway-visual-frame__caption">
                     <span>{activeRole.label} · {activeRole.title}</span>
                     <span>IFC 4.3 · OPENBIM</span>

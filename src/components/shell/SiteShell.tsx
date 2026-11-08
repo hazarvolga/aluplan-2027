@@ -11,6 +11,7 @@ import { clearConsent, useConsentReady, useCookieConsent, writeConsent } from '@
 import { isReleaseContentEnabled } from '@/lib/release-flags';
 import { DebugComponentLabel } from '@/components/sections/DebugComponentLabel';
 import debugStyles from '@/components/sections/DebugComponentLabel.module.css';
+import { useThemeMode } from '@/components/theme/ThemeModeProvider';
 
 const navData = getNavigationData();
 
@@ -78,7 +79,7 @@ function MobileMenuGroup({ title, href, sections, onNavigate }: {
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
   const { entries: searchIndex, loading: searchLoading, error: searchError, videoPartial, load: loadSearch, retryVideos } = useSearchIndex();
-  const [mode, setMode] = useState<'dark' | 'light'>('dark');
+  const { mode, toggleMode } = useThemeMode();
   const [openMenu, setOpenMenu] = useState<'products' | 'solutions' | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -87,20 +88,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   const consentLoaded = useConsentReady();
 
   useEffect(() => { if (searchOpen) loadSearch(); }, [searchOpen, loadSearch]);
-
-  useEffect(() => {
-    try {
-      const savedMode = localStorage.getItem('aluplan-theme-mode');
-      if (savedMode === 'light' || savedMode === 'dark') {
-        setMode(savedMode);
-        document.documentElement.setAttribute('data-mode', savedMode);
-      } else {
-        document.documentElement.setAttribute('data-mode', 'dark');
-      }
-    } catch {
-      // ignore storage errors
-    }
-  }, []);
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
@@ -118,17 +105,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
   }, []);
-
-  const toggleMode = () => {
-    const next = mode === 'dark' ? 'light' : 'dark';
-    setMode(next);
-    document.documentElement.setAttribute('data-mode', next);
-    try {
-      localStorage.setItem('aluplan-theme-mode', next);
-    } catch {
-      // ignore
-    }
-  };
 
   const handleConsent = (choice: 'accepted' | 'rejected') => writeConsent(choice);
 

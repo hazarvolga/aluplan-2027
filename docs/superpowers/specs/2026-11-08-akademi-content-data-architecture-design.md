@@ -49,7 +49,7 @@ Bu doküman **tek bir içerik veri mimarisi** kurar: tüm akademi sayfaları (la
 
 ## 5. Yaklaşımlar (veri kaynağı)
 
-- **A — Modül başına yapılandırılmış YAML + şema + üretici (seçildi).** YAML'lar `content/akademi/modules/<code>.yaml`; **projenin mevcut deseniyle hizalı** (`generate_site_data.py` → commit'li `pages.json` + elle TS tipi): bir **Python üretici** (`scripts/generate_akademi_content.py`) YAML'ı okur, şema doğrular, **commit'li `src/data/akademi-curriculum.json`** üretir; elle yazılmış TS tipleri + ince bir loader sayfalara sunar (runtime parse yok). Prose markdown eğitmen/uzun-metin referansı olarak kalır (sayfa kaynağı değil). **Tek yeni bağımlılık: PyYAML** (yalnız build-time Python; npm/runtime bundle'a GİRMEZ — "sıfır runtime dep" korunur). Artı: proje deseniyle tutarlı, güvenilir, tip-güvenli, tek kaynak, `lessons[]`'a açık, CMS'e köprü. Eksi: içeriğin bir kez markdown→YAML aktarımı (tek seferlik, Claude yapar).
+- **A — Modül başına yapılandırılmış JSON + stdlib şema doğrulayıcı (seçildi; format JSON'a güncellendi — planlama-anı kararı).** İçerik doğrudan `src/data/akademi-content/<code>.json` olarak repoda (projenin `pages.json` deseni). Elle yazılmış TS tipleri + ince bir loader (`src/data/akademi-content.ts`) modül JSON'larını statik import edip birleştirir ve tipli sunar (ayrı build adımı yok). Bir **Python stdlib doğrulayıcı** (`scripts/validate_akademi_content.py`, **yeni dep yok**) JSON'ları şemaya göre denetler, `pnpm test`'te çalışır. **YAML+PyYAML terk edildi:** projede Python dep yönetimi yok (requirements/pyproject yok), CI pip kurmuyor — PyYAML yeni altyapı borcu + "minimal dep"e aykırı olurdu. Prose markdown referans kalır. Artı: **sıfır yeni dep**, proje deseniyle birebir, tip-güvenli, tek kaynak, `lessons[]`'a açık, CMS'e köprü. Eksi: JSON yazımı YAML kadar şık değil (Claude yazar; ~12 dosya).
 - **B — Markdown frontmatter (reddedildi).** Tek dosyada veri+metin; zengin veri frontmatter'ı şişirir, gray-matter bağımlılığı, prose gövde veriyle çakışır.
 - **C — Prose parse (reddedildi).** Markdown insan-için; değişken tablolar, Bloom fiilin içinde, `[sürüme göre doğrula]` notları → kırılgan parser.
 
@@ -63,10 +63,10 @@ Bu doküman **tek bir içerik veri mimarisi** kurar: tüm akademi sayfaları (la
 - **Module:** `code` (sayfada etiket), **`slug` (açıklayıcı, URL'de; başlıktan türetilir, seviye içinde benzersiz)**, `title`, `level`, `hours`, `format` (ör. "Hibrit"), `prerequisite` (önceki modül kodu/serbest metin), `summary`, `outcomes: { text, bloom, code }[]`, `concepts?: { term, desc, en }[]`, `sessionFlow: { time, phase, instructor, participant, material }[]` (örnek oturum), `durationSplit: { label, minutes }[]` (anlatım/uygulama/ölçme/bireysel), `runningProjectStep`, `homework?`, `assessment?` (quiz özeti), `materials?: string[]`, `proposed?`, `lessons?: Lesson[]` (ileriye açık).
 - **Not (karar):** `durationSplit` 4 etiketle (**anlatım/uygulama/ölçme/bireysel**, mockup) **YAML'da elle yazılır**; markdown'daki Temas/Uygulama/Bireysel'den içerik aktarımında türetilir (ölçme dilimi = ders sonu quiz/değerlendirme payı). Hesaplama değil, yazılı veri — güvenilir.
 
-### 6.2 Üretim hattı (karar — builder-check sonrası)
-- YAML → `scripts/generate_akademi_content.py` (PyYAML) → **commit'li `src/data/akademi-curriculum.json`** + elle yazılmış TS tipleri/loader (`src/data/akademi-content.ts`). `pages.json` deseninin birebir aynısı.
-- Şema doğrulama Python'da (elle kontrol, zod YOK — ekstra dep yok); eksik/yanlış alan → üretici hata verir.
-- **Gating:** üretilen JSON commit'lenir; `pnpm test` içinde bir **drift kontrolü** (`generate --check`) çalışır (styles drift deseni gibi). `build` script'ine EKLENMEZ (mevcut `build` = search:check && styles:check && next build; `data:generate` zaten build'de değil — bu desenle tutarlı).
+### 6.2 İçerik hattı (karar — JSON-direct, planlama-anı)
+- Kaynak = commit'li `src/data/akademi-content/<code>.json` (modül başına). TS loader (`src/data/akademi-content.ts`) statik import'la birleştirir + tipler; **üretici/build adımı yok**.
+- **Doğrulama:** `scripts/validate_akademi_content.py` (Python **stdlib**, zod/PyYAML YOK) JSON'ları şemaya göre denetler (zorunlu alanlar, slug benzersizliği, süre toplamları, enum'lar); `pnpm test`'e eklenir. Eksik/yanlış → test fail.
+- Not: Ayrı "generated" dosya yok (kaynak JSON zaten tüketilen veri), dolayısıyla drift sorunu yok; yalnız şema doğrulaması.
 
 ### 6.3 Sayfalar / rotalar
 **URL yapısı — tam semantik, prefix yok (kullanıcı kararı, SEO/GEO için):**
@@ -83,8 +83,7 @@ Bu doküman **tek bir içerik veri mimarisi** kurar: tüm akademi sayfaları (la
 - **Prose markdown:** `03-ders-planlari/*.md` **referans olarak kalır** (sayfalarda gösterilmeyen temel kavramlar, adım adım yönerge, sık hatalar, eğitmen notları değerli). *(2026-11-08 kullanıcı onayı.)*
 
 ### Builder-check'ten gelip benim kararladığım noktalar (kullanıcı veto edebilir)
-- **Üretim hattı:** proje deseni (`generate_site_data.py`→`pages.json`) birebir izlenir: Python üretici → commit'li `akademi-curriculum.json` + elle TS tipi. **Tek yeni dep: PyYAML** (build-time Python; runtime/npm bundle'a girmez). zod yok.
-- **Gating:** üretilen JSON commit'li; drift kontrolü `pnpm test`'te; `build`'e eklenmez.
+- **İçerik hattı:** JSON-direct (format YAML→JSON'a güncellendi) — kaynak `src/data/akademi-content/<code>.json`, TS loader birleştirir/tipler, Python **stdlib** doğrulayıcı `pnpm test`'te. **Sıfır yeni dep** (PyYAML terk edildi: proje Python dep yönetmiyor, CI pip kurmuyor).
 - **akademi.ts:** tamamen taşınır/emekli (tek kaynak); tüketiciler refaktör (planda aşamalı).
 - **Rota:** modül slug=kod (benzersiz), `generateStaticParams` 12 modül, track breadcrumb'da veriden.
 - **durationSplit:** 4 etiket YAML'da elle yazılı (hesaplama değil).

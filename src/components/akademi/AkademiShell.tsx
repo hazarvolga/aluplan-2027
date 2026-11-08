@@ -4,6 +4,7 @@ import type { ReactNode } from 'react';
 import { useThemeMode } from '@/components/theme/ThemeModeProvider';
 import { AkademiHeader } from './AkademiHeader';
 import { AkademiFooter } from './AkademiFooter';
+import { AkademiSidebar } from './AkademiSidebar';
 import styles from './AkademiShell.module.css';
 
 /**
@@ -18,6 +19,7 @@ export function AkademiShell({ children }: { children: ReactNode }) {
       <a href="#akademi-main" className="alu-skip-link">İçeriğe geç</a>
       <AkademiHeader />
       <div className={styles.body}>
+        <AkademiSidebar />
         <main id="akademi-main" className={styles.main}>{children}</main>
       </div>
       <AkademiFooter />

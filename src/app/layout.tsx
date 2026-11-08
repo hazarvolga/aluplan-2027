@@ -2,6 +2,8 @@ import React from 'react';
 import type { Metadata } from 'next';
 import '@/styles/globals.css';
 import { SiteShell } from '@/components/shell/SiteShell';
+import { ThemeModeProvider } from '@/components/theme/ThemeModeProvider';
+import { ConsentBanner } from '@/components/shell/ConsentBanner';
 import { ConsentScripts } from '@/components/shell/ConsentScripts';
 import { DebugOverlayController } from '@/components/sections/DebugComponentLabel';
 import { SITE_ORIGIN } from '@/lib/site-data';
@@ -26,9 +28,12 @@ export default function RootLayout({
   return (
     <html lang="tr" data-theme="aluplan" data-mode="dark">
       <body>
-        <DebugOverlayController />
-        <SearchIndexProvider showRelease={isReleaseContentEnabled()}><SiteShell>{children}</SiteShell></SearchIndexProvider>
-        <ConsentScripts />
+        <ThemeModeProvider>
+          <DebugOverlayController />
+          <SearchIndexProvider showRelease={isReleaseContentEnabled()}><SiteShell>{children}</SiteShell></SearchIndexProvider>
+          <ConsentBanner />
+          <ConsentScripts />
+        </ThemeModeProvider>
       </body>
     </html>
   );

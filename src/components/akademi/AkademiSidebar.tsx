@@ -1,0 +1,109 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { AluIcon } from '@/components/ui/AluIcon';
+import { buildSidebarLevels, isAkademiLevelActive } from './sidebar-nav';
+import styles from './AkademiSidebar.module.css';
+
+const sidebarLevels = buildSidebarLevels();
+
+/** Program-wide curriculum nav: sticky rail on desktop, off-canvas drawer on mobile. */
+export function AkademiSidebar() {
+  const pathname = usePathname() ?? '';
+  const [open, setOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
+  const toggleRef = useRef<HTMLButtonElement>(null);
+
+  // Track the drawer breakpoint so off-screen links are not left in the tab order on desktop.
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 959px)');
+    const update = () => setIsMobile(mq.matches);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, []);
+
+  // Close the mobile drawer whenever the route changes.
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  // Move focus into the drawer when it opens on mobile.
+  useEffect(() => {
+    if (open && isMobile) {
+      navRef.current?.querySelector<HTMLElement>('a, button')?.focus();
+    }
+  }, [open, isMobile]);
+
+  // Esc closes the drawer and returns focus to the toggle.
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setOpen((wasOpen) => {
+          if (wasOpen) toggleRef.current?.focus();
+          return false;
+        });
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
+
+  const close = () => {
+    setOpen(false);
+    toggleRef.current?.focus();
+  };
+
+  return (
+    <>
+      <button
+        ref={toggleRef}
+        type="button"
+        className={styles.toggle}
+        aria-expanded={open}
+        aria-controls="akademi-sidebar"
+        onClick={() => setOpen((value) => !value)}
+      >
+        <AluIcon name={open ? 'x' : 'menu'} size="sm" />
+        <span>Müfredat</span>
+      </button>
+
+      {open && <div className={styles.scrim} onClick={close} aria-hidden="true" />}
+
+      <nav
+        ref={navRef}
+        id="akademi-sidebar"
+        className={`${styles.sidebar} ${open ? styles.open : ''}`}
+        aria-label="Müfredat gezinmesi"
+        inert={isMobile && !open}
+      >
+        <p className={styles.heading}>Müfredat</p>
+        <ol className={styles.levels}>
+          {sidebarLevels.map((level) => {
+            const active = isAkademiLevelActive(pathname, level.slug);
+            return (
+              <li key={level.slug} className={`${styles.level} ${active ? styles.active : ''}`}>
+                <Link
+                  href={`/akademi/${level.slug}`}
+                  className={styles.levelLink}
+                  aria-current={active ? 'page' : undefined}
+                >
+                  <span className={styles.levelNo}>{String(level.number).padStart(2, '0')}</span>
+                  <span className={styles.levelTitle}>{level.title}</span>
+                </Link>
+                <ul className={styles.codes}>
+                  {level.codes.map((code) => (
+                    <li key={code} className={styles.code}>{code}</li>
+                  ))}
+                </ul>
+              </li>
+            );
+          })}
+        </ol>
+      </nav>
+    </>
+  );
+}

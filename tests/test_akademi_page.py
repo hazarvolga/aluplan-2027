@@ -76,5 +76,36 @@ class AkademiLevelPageTests(unittest.TestCase):
                 self.assertNotIn("/akademi", read(path))
 
 
+class AkademiOverviewRedesignTests(unittest.TestCase):
+    def test_overview_uses_the_shared_kit(self):
+        src = read("src/components/sections/AkademiOverview.tsx")
+        self.assertIn("@/components/akademi/kit", src)
+        self.assertIn("LevelCard", src)
+        # the old inline LevelCard implementation is gone
+        self.assertNotIn("function LevelCard(", src)
+
+    def test_entry_paths_link_into_the_program(self):
+        src = read("src/components/sections/AkademiOverview.tsx")
+        self.assertIn("/akademi/seviye-1", src)
+
+
+class AkademiLevelDetailRedesignTests(unittest.TestCase):
+    def test_level_detail_uses_the_kit(self):
+        src = read("src/components/sections/AkademiLevelDetail.tsx")
+        self.assertIn("@/components/akademi/kit", src)
+        self.assertIn("ModuleCard", src)
+        self.assertNotIn("function ModuleCard(", src)
+
+    def test_single_module_track_hides_the_repeated_hours(self):
+        src = read("src/components/sections/AkademiLevelDetail.tsx")
+        # A single-module track states its hours once (the track total), so the module hides them.
+        self.assertIn("track.modules.length === 1", src)
+        self.assertIn("showHours={!single}", src)
+
+    def test_level_detail_keeps_prev_next_nav(self):
+        src = read("src/components/sections/AkademiLevelDetail.tsx")
+        self.assertIn("<nav", src)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,6 @@
+.footer{border-top:var(--border-width-default) solid var(--border-default);background:var(--surface-page)}
+.inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-stack-sm);padding-block:var(--space-stack-md);color:var(--text-secondary);font-size:var(--type-body-sm-size)}
+.copy{color:var(--text-secondary)}
+.legal{display:flex;flex-wrap:wrap;gap:var(--space-stack-md)}
+.link{color:var(--text-secondary);text-decoration:none}
+.link:hover{color:var(--text-primary)}

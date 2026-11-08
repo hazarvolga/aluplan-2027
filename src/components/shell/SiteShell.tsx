@@ -2,15 +2,18 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { hasOwnChrome } from '@/lib/chrome-routes';
 import { getNavigationData, MAIN_QUOTE_FORM_URL } from '@/lib/site-shared';
 import { useSearchIndex } from './SearchIndexProvider';
 import { searchEntries } from '@/lib/search';
 import { AluIcon, AluIconName } from '@/components/ui/AluIcon';
 import { MediaDialog } from '@/components/ui/MediaDialog';
-import { clearConsent, useConsentReady, useCookieConsent, writeConsent } from '@/lib/consent';
+import { clearConsent } from '@/lib/consent';
 import { isReleaseContentEnabled } from '@/lib/release-flags';
 import { DebugComponentLabel } from '@/components/sections/DebugComponentLabel';
 import debugStyles from '@/components/sections/DebugComponentLabel.module.css';
+import { useThemeMode } from '@/components/theme/ThemeModeProvider';
 
 const navData = getNavigationData();
 
@@ -78,29 +81,14 @@ function MobileMenuGroup({ title, href, sections, onNavigate }: {
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
   const { entries: searchIndex, loading: searchLoading, error: searchError, videoPartial, load: loadSearch, retryVideos } = useSearchIndex();
-  const [mode, setMode] = useState<'dark' | 'light'>('dark');
+  const { mode, toggleMode } = useThemeMode();
+  const pathname = usePathname();
   const [openMenu, setOpenMenu] = useState<'products' | 'solutions' | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const cookieConsent = useCookieConsent();
-  const consentLoaded = useConsentReady();
 
   useEffect(() => { if (searchOpen) loadSearch(); }, [searchOpen, loadSearch]);
-
-  useEffect(() => {
-    try {
-      const savedMode = localStorage.getItem('aluplan-theme-mode');
-      if (savedMode === 'light' || savedMode === 'dark') {
-        setMode(savedMode);
-        document.documentElement.setAttribute('data-mode', savedMode);
-      } else {
-        document.documentElement.setAttribute('data-mode', 'dark');
-      }
-    } catch {
-      // ignore storage errors
-    }
-  }, []);
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
@@ -119,18 +107,10 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
     return () => window.removeEventListener('keydown', onKeyDown);
   }, []);
 
-  const toggleMode = () => {
-    const next = mode === 'dark' ? 'light' : 'dark';
-    setMode(next);
-    document.documentElement.setAttribute('data-mode', next);
-    try {
-      localStorage.setItem('aluplan-theme-mode', next);
-    } catch {
-      // ignore
-    }
-  };
-
-  const handleConsent = (choice: 'accepted' | 'rejected') => writeConsent(choice);
+  // Sections with their own chrome (e.g. /akademi) render bare; their own layout supplies the shell.
+  if (hasOwnChrome(pathname ?? '')) {
+    return <>{children}</>;
+  }
 
   const filteredSearch = searchQuery.trim() ? searchEntries(searchIndex, searchQuery) : searchIndex.slice(0, 8);
 
@@ -503,39 +483,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         </MediaDialog>
       )}
 
-      {consentLoaded && cookieConsent === null && (
-        <aside className="alu-cookie-banner" aria-label="Çerez Tercihleri">
-          <div className="alu-stack" style={{ gap: 'var(--space-application-jsx-comfortable)' }}>
-            <p className="alu-body-sm" style={{ margin: 0 }}>
-              Deneyiminizi iyileştirmek ve site trafiğini analiz etmek için çerezleri kullanıyoruz. Analitik çerezler yalnızca açık onayınızla etkinleştirilir. Detaylı bilgi için{' '}
-              <Link href="/gizlilik-politikasi" className="alu-link">
-                Gizlilik Politikası
-              </Link>{' '}
-              ve{' '}
-              <Link href="/kvkk" className="alu-link">
-                KVKK Aydınlatma Metni
-              </Link>{' '}
-              sayfalarını inceleyebilirsiniz.
-            </p>
-            <div className="alu-cluster" style={{ justifyContent: 'flex-end' }}>
-              <button
-                type="button"
-                className="alu-button alu-button--secondary alu-button--sm"
-                onClick={() => handleConsent('rejected')}
-              >
-                Yalnız Zorunlu Çerezler
-              </button>
-              <button
-                type="button"
-                className="alu-button alu-button--primary alu-button--sm"
-                onClick={() => handleConsent('accepted')}
-              >
-                Tümünü Kabul Et
-              </button>
-            </div>
-          </div>
-        </aside>
-      )}
     </div>
   );
 }

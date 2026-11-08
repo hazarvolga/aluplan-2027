@@ -1,0 +1,5 @@
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,11rem),1fr));margin:0;border:var(--border-width-default) solid var(--border-default)}
+.cell{padding:var(--space-inset-sm);border-right:var(--border-width-default) solid var(--border-default)}
+.cell:last-child{border-right:0}
+.k{font-family:var(--font-mono);font-size:var(--type-body-sm-size);letter-spacing:.1em;text-transform:uppercase;color:var(--text-secondary);margin:0 0 var(--space-stack-xs)}
+.v{font-size:var(--type-body-sm-size);font-weight:var(--font-weight-strong);color:var(--text-primary);margin:0}

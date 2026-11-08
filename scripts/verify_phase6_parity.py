@@ -42,6 +42,8 @@ next_config = next_config_path.read_text(encoding="utf-8")
 security_ts = security_path.read_text(encoding="utf-8")
 shell_tsx = shell_path.read_text(encoding="utf-8")
 consent_ts = (ROOT / "src/lib/consent.ts").read_text(encoding="utf-8")
+# The consent banner now lives in its own shared root component (not inside SiteShell).
+banner_tsx = (ROOT / "src/components/shell/ConsentBanner.tsx").read_text(encoding="utf-8")
 hp_view_tsx = hp_view_path.read_text(encoding="utf-8")
 subpage_view_tsx = subpage_view_path.read_text(encoding="utf-8")
 llms_ts = llms_route_path.read_text(encoding="utf-8")
@@ -309,7 +311,7 @@ check("robots.ts separates AI training crawlers from search and user agents", al
 check("sitemap.ts excludes /health, /hero-3d, /test-webgl", all(ex in sitemap_ts for ex in ["/health", "/hero-3d", "/test-webgl"]))
 check("Security helper enforces escapeHtml, rate limiting, and TLSv1.2+", "escapeHtml" in security_ts and "TLSv1.2" in security_ts and "rejectUnauthorized: true" in security_ts)
 check("Unified security headers configured in next.config.mjs", all(h in next_config for h in ["Content-Security-Policy", "Strict-Transport-Security", "X-Content-Type-Options", "X-Frame-Options", "Referrer-Policy", "Permissions-Policy"]))
-check("CookieConsent banner gates analytics until user consent", "cookie-consent" in consent_ts and "writeConsent(" in shell_tsx and "Yalnız Zorunlu Çerezler" in shell_tsx)
+check("CookieConsent banner gates analytics until user consent", "cookie-consent" in consent_ts and "writeConsent(" in banner_tsx and "Yalnız Zorunlu Çerezler" in banner_tsx)
 
 print(f"\nPhase 6 Verification Summary: {passed} passed, {failed} failed")
 if failed > 0:

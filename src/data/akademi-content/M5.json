@@ -9,31 +9,117 @@
   "prerequisite": "Seviye 2 tamamlanmış",
   "summary": "Betonarme elemanlarda 3B donatıyı pas payı, boyuna donatı ve etriyeyle detaylandırır; çakışmaları denetler ve modelden büküm şeması ile donatı listesi üretir.",
   "outcomes": [
-    { "text": "Betonarme elemanlarda 3B donatıyı detaylandırır", "bloom": "Uygulama", "code": "K-İ5.1" },
-    { "text": "Büküm şemaları (bending schedule) ve donatı listelerini üretir", "bloom": "Yaratma", "code": "K-İ5.2" }
+    {
+      "text": "Betonarme elemanlarda 3B donatıyı detaylandırır",
+      "bloom": "Uygulama",
+      "code": "K-İ5.1"
+    },
+    {
+      "text": "Büküm şemaları (bending schedule) ve donatı listelerini üretir",
+      "bloom": "Yaratma",
+      "code": "K-İ5.2"
+    }
   ],
   "concepts": [
-    { "term": "Donatı", "desc": "Betona gömülen çelik çubuk", "en": "Reinforcement / Rebar" },
-    { "term": "Boyuna donatı", "desc": "Eleman ekseni boyunca uzanan ana çubuk", "en": "Longitudinal bar" },
-    { "term": "Etriye", "desc": "Boyuna donatıyı saran enine donatı", "en": "Stirrup / Tie" },
-    { "term": "Pas payı", "desc": "Donatı ile beton yüzeyi arası koruyucu mesafe", "en": "Concrete cover" },
-    { "term": "Büküm şeması", "desc": "Çubuğun şekil, boy ve büküm açılarını gösteren çizim", "en": "Bending schedule" },
-    { "term": "Donatı listesi", "desc": "Çap/adet/boy/ağırlık dökümü", "en": "Bar / reinforcement list" }
+    {
+      "term": "Donatı",
+      "desc": "Betona gömülen çelik çubuk",
+      "en": "Reinforcement / Rebar"
+    },
+    {
+      "term": "Boyuna donatı",
+      "desc": "Eleman ekseni boyunca uzanan ana çubuk",
+      "en": "Longitudinal bar"
+    },
+    {
+      "term": "Etriye",
+      "desc": "Boyuna donatıyı saran enine donatı",
+      "en": "Stirrup / Tie"
+    },
+    {
+      "term": "Pas payı",
+      "desc": "Donatı ile beton yüzeyi arası koruyucu mesafe",
+      "en": "Concrete cover"
+    },
+    {
+      "term": "Büküm şeması",
+      "desc": "Çubuğun şekil, boy ve büküm açılarını gösteren çizim",
+      "en": "Bending schedule"
+    },
+    {
+      "term": "Donatı listesi",
+      "desc": "Çap/adet/boy/ağırlık dökümü",
+      "en": "Bar / reinforcement list"
+    }
   ],
   "sessionFlow": [
-    { "time": "0–5", "phase": "Dikkat çekme", "instructor": "2B donatı çizimi vs. 3B donatı modeli", "participant": "Farkı söyler", "material": "Slayt 1" },
-    { "time": "5–15", "phase": "Hedef + ön bilgi", "instructor": "Kazanımlar; betonarme elemanı bağlar", "participant": "Isınma sorusu", "material": "Diyagram" },
-    { "time": "15–40", "phase": "Demonstrasyon", "instructor": "Boyuna donatı + etriye yerleştirir", "participant": "İzler", "material": "Örnek proje" },
-    { "time": "40–95", "phase": "Rehberli uygulama", "instructor": "Katılımcılarla eleman donatısını kurar", "participant": "Donatı + pas payı girer", "material": "Adım kartı A3" },
-    { "time": "95–130", "phase": "Bağımsız görev", "instructor": "Dolaşır, çakışmaları denetler", "participant": "İkinci elemanı donatır", "material": "Görev A3" },
-    { "time": "130–145", "phase": "Çıktı", "instructor": "Büküm şeması ve listeyi üretir", "participant": "Liste alır", "material": "Liste şablonu" },
-    { "time": "145–155", "phase": "Değerlendirme", "instructor": "Kontrol listesi + mini quiz", "participant": "Quiz-İ5'i çözer", "material": "Quiz-İ5" }
+    {
+      "time": "0–5",
+      "phase": "Dikkat çekme",
+      "instructor": "2B donatı çizimi vs. 3B donatı modeli",
+      "participant": "Farkı söyler",
+      "material": "Slayt 1"
+    },
+    {
+      "time": "5–15",
+      "phase": "Hedef + ön bilgi",
+      "instructor": "Kazanımlar; betonarme elemanı bağlar",
+      "participant": "Isınma sorusu",
+      "material": "Diyagram"
+    },
+    {
+      "time": "15–40",
+      "phase": "Demonstrasyon",
+      "instructor": "Boyuna donatı + etriye yerleştirir",
+      "participant": "İzler",
+      "material": "Örnek proje"
+    },
+    {
+      "time": "40–95",
+      "phase": "Rehberli uygulama",
+      "instructor": "Katılımcılarla eleman donatısını kurar",
+      "participant": "Donatı + pas payı girer",
+      "material": "Adım kartı A3"
+    },
+    {
+      "time": "95–130",
+      "phase": "Bağımsız görev",
+      "instructor": "Dolaşır, çakışmaları denetler",
+      "participant": "İkinci elemanı donatır",
+      "material": "Görev A3"
+    },
+    {
+      "time": "130–145",
+      "phase": "Çıktı",
+      "instructor": "Büküm şeması ve listeyi üretir",
+      "participant": "Liste alır",
+      "material": "Liste şablonu"
+    },
+    {
+      "time": "145–155",
+      "phase": "Değerlendirme",
+      "instructor": "Kontrol listesi + mini quiz",
+      "participant": "Quiz-İ5'i çözer",
+      "material": "Quiz-İ5"
+    }
   ],
   "durationSplit": [
-    { "label": "Anlatım", "minutes": 40 },
-    { "label": "Uygulama", "minutes": 70 },
-    { "label": "Ölçme", "minutes": 10 },
-    { "label": "Bireysel", "minutes": 35 }
+    {
+      "label": "Anlatım",
+      "minutes": 40
+    },
+    {
+      "label": "Uygulama",
+      "minutes": 70
+    },
+    {
+      "label": "Ölçme",
+      "minutes": 10
+    },
+    {
+      "label": "Bireysel",
+      "minutes": 35
+    }
   ],
   "runningProjectStep": "Bu derste sürekli projenin betonarme kolunda bir elemanın (örneğin kiriş veya kolon) 3B donatısı (reinforcement) detaylandırılır.",
   "homework": "Sürekli projenin bir betonarme elemanını (kiriş veya kolon) 3B donatıyla detaylandırın, çakışmaları denetleyin ve büküm şeması ile donatı listesini modelden üretin. Teslim: Proje dosyası + donatı listesi. Süre: ~120 dk. Ölçüt: Doğru pas payı, çakışmasız donatı, modelden üretilmiş tutarlı liste.",
@@ -42,5 +128,220 @@
     "Başlangıç ve bitmiş donatı dosyası (kurum kaynağı eklenecek)",
     "Büküm şeması ve donatı listesi şablonu [sürüme göre doğrula]"
   ],
-  "proposed": false
+  "proposed": false,
+  "applicationSteps": [
+    {
+      "step": "Donatılacak betonarme elemanı seçin ve pas payını (concrete cover) tanımlayın. [sürüme göre doğrula]",
+      "why": "Pas payı, donatının doğru konuma oturması ve dayanıklılık için önce belirlenmelidir."
+    },
+    {
+      "step": "Boyuna donatıyı (longitudinal bar) eleman ekseni boyunca yerleştirin.",
+      "why": "Ana taşıyıcı çubuklar önce konunca etriye aralığı buna göre kurulur."
+    },
+    {
+      "step": "Etriyeleri (stirrup) belirlenen aralıkla tanımlayın.",
+      "why": "Etriye aralığı hesaba bağlıdır; 3B modelde aralık değişince adet ve liste otomatik güncellenir."
+    },
+    {
+      "step": "Donatıların birbiriyle ve pas payıyla çakışmadığını 3B'de kontrol edin.",
+      "why": "Çakışan donatı sahada yerleşmez; hatayı modelde görmek sahada görmekten ucuzdur."
+    },
+    {
+      "step": "Çubuklara büküm (bending) ve kanca değerlerini girin.",
+      "why": "Büküm şeması bu değerlerden üretilir; eksik değer listeyi hatalı yapar."
+    },
+    {
+      "step": "Büküm şemasını ve donatı listesini (bar list) oluşturun. [sürüme göre doğrula]",
+      "why": "Liste doğrudan modelden gelirse metraj ve imalat verisi tutarlı olur."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "mistake": "Pas payını tanımlamama",
+      "symptom": "Donatı yüzeye çok yakın/dışarıda",
+      "fix": "Pas payını eleman başında girin"
+    },
+    {
+      "mistake": "Etriye aralığını sabit sanma",
+      "symptom": "Değişiklik listeye yansımıyor",
+      "fix": "Aralığı parametre olarak tanımlayın"
+    },
+    {
+      "mistake": "Donatı çakışmasını görmezden gelme",
+      "symptom": "Sahada çubuklar oturmuyor",
+      "fix": "3B'de çakışma denetimi yapın"
+    },
+    {
+      "mistake": "Büküm/kanca değeri eksik",
+      "symptom": "Büküm şeması hatalı",
+      "fix": "Çubuk uçlarına büküm değeri girin"
+    },
+    {
+      "mistake": "Listeyi elle yazma",
+      "symptom": "Liste modelle tutmuyor",
+      "fix": "Listeyi doğrudan modelden üretin"
+    }
+  ],
+  "differentiation": {
+    "fast": "Kiriş-kolon birleşimindeki donatı detayını ve ankraj boyunu da ekler.",
+    "support": "Tek bir kirişte yalnızca boyuna donatı + etriye ile başlar; büküm şeması bir sonraki oturumda ele alınır."
+  },
+  "quiz": [
+    {
+      "id": "M5-Q1",
+      "prompt": "3B donatı modellemenin 2B donatı çizimine göre temel avantajı nedir?",
+      "options": [
+        {
+          "text": "Çakışma/birleşim kontrolü yapılabilmesi ve donatı listesinin modelden otomatik türemesi",
+          "correct": true
+        },
+        {
+          "text": "Dosya boyutunun küçülmesi ve daha az katman kullanılması",
+          "correct": false
+        },
+        {
+          "text": "Donatıların elle sayılarak listeye yazılabilmesi",
+          "correct": false
+        },
+        {
+          "text": "Çubuklara renk atanabilmesi",
+          "correct": false
+        }
+      ],
+      "explanation": "3B donatıda çubuklar arası çakışma görünür olur ve liste doğrudan modelden türer; bu tutarlılığı sağlar. Dosya boyutu avantaj değildir. Elle sayım tam da 3B modelin ortadan kaldırdığı hata kaynağıdır. Renk, donatı doğruluğuyla ilgisizdir.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-İ5.1"
+    },
+    {
+      "id": "M5-Q2",
+      "prompt": "Bir elemanı donatırken pas payı neden diğer adımlardan önce tanımlanır?",
+      "options": [
+        {
+          "text": "Donatının doğru konuma oturması ve dayanıklılık (koruyucu mesafe) buna bağlı olduğu için",
+          "correct": true
+        },
+        {
+          "text": "Büküm şeması yalnızca pas payından üretildiği için",
+          "correct": false
+        },
+        {
+          "text": "Etriye adedi pas payı girilmeden görünmediği için",
+          "correct": false
+        },
+        {
+          "text": "Pas payı girilmezse boyuna donatı yerleştirilemediği için",
+          "correct": false
+        }
+      ],
+      "explanation": "Pas payı donatının beton yüzeyine olan koruyucu mesafesini belirler; konum ve dayanıklılık bununla başlar. Büküm şeması büküm/kanca değerlerinden üretilir, pas payından değil. Etriye adedi aralığa bağlıdır. Boyuna donatı pas payı olmadan da yerleştirilebilir, ama konumu yanlış olur.",
+      "bloom": "Uygulama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-İ5.1"
+    },
+    {
+      "id": "M5-Q3",
+      "prompt": "Etriye aralığını modelde değiştirdiniz ancak donatı listesindeki etriye adedi değişmedi. En olası neden nedir?",
+      "options": [
+        {
+          "text": "Etriye aralığı parametre yerine sabit bir değer olarak tanımlanmış",
+          "correct": false
+        },
+        {
+          "text": "Liste modelle ilişkili güncellenmiyor; aralık parametre olarak tanımlanmadığı için adet türemiyor",
+          "correct": true
+        },
+        {
+          "text": "Pas payı çok büyük girilmiş",
+          "correct": false
+        },
+        {
+          "text": "Boyuna donatı çapı yanlış seçilmiş",
+          "correct": false
+        }
+      ],
+      "explanation": "Aralık parametre olarak tanımlıysa değişiklik adedi ve listeyi otomatik günceller; adet değişmiyorsa aralık modelle ilişkili bir parametre değildir. İlk şık doğru nedenin yarısını söylese de 'listeyi güncellemiyor' sonucunu açıklamaz, bu yüzden ikinci şık tam gerekçedir. Pas payı ve boyuna donatı çapı etriye adedini belirlemez.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-İ5.2"
+    },
+    {
+      "id": "M5-Q4",
+      "prompt": "Büküm şeması (bending schedule) doğru üretilsin istiyorsanız modelde hangi veriyi eksiksiz girmeniz gerekir?",
+      "options": [
+        {
+          "text": "Çubukların büküm ve kanca değerleri",
+          "correct": true
+        },
+        {
+          "text": "Yalnızca pas payı değeri",
+          "correct": false
+        },
+        {
+          "text": "Katman rengi ve çizgi kalınlığı",
+          "correct": false
+        },
+        {
+          "text": "Pafta ölçeği",
+          "correct": false
+        }
+      ],
+      "explanation": "Büküm şeması, çubuğun büküm açıları ve kanca değerlerinden türetilir; bu değerler eksikse şema hatalı çıkar. Pas payı konumu etkiler ama büküm geometrisini tanımlamaz. Renk, çizgi kalınlığı ve pafta ölçeği çıktının biçimidir, büküm verisi değildir.",
+      "bloom": "Anlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-İ5.2"
+    },
+    {
+      "id": "M5-Q5",
+      "prompt": "Bir betonarme elemanı 3B donatıyla detaylandırırken doğru işlem sırası hangisidir?",
+      "options": [
+        {
+          "text": "Boyuna donatı → etriye → pas payı → çakışma kontrolü → liste",
+          "correct": false
+        },
+        {
+          "text": "Pas payı → boyuna donatı → etriye → çakışma kontrolü → büküm/liste",
+          "correct": true
+        },
+        {
+          "text": "Liste üret → pas payı → boyuna donatı → etriye",
+          "correct": false
+        },
+        {
+          "text": "Etriye → boyuna donatı → pas payı → büküm/liste",
+          "correct": false
+        }
+      ],
+      "explanation": "Önce pas payı (konum referansı), sonra ana taşıyıcı boyuna donatı, ardından ona göre etriye, sonra çakışma denetimi ve en sonda büküm/liste gelir. Pas payını araya veya sona almak donatıyı yanlış konuma oturtur. Listeyi en başta üretmek anlamsızdır çünkü liste modelden türetilir.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-İ5.1"
+    },
+    {
+      "id": "M5-Q6",
+      "prompt": "Donatı listesini elle yazmak yerine doğrudan modelden üretmenin en güçlü gerekçesi nedir?",
+      "options": [
+        {
+          "text": "Liste model ile tutarlı kalır; metraj ve imalat verisi değişiklikte otomatik güncellenir",
+          "correct": true
+        },
+        {
+          "text": "Elle yazılan liste her zaman daha hızlı hazırlanır",
+          "correct": false
+        },
+        {
+          "text": "Modelden üretilen liste yazdırılamaz, bu yüzden tercih edilir",
+          "correct": false
+        },
+        {
+          "text": "Elle liste çakışma denetimini de otomatik yapar",
+          "correct": false
+        }
+      ],
+      "explanation": "Modelden üretilen liste, model değiştiğinde birlikte güncellenir; böylece metraj ve imalat verisi tutarlı kalır. Elle liste hızlı görünse de model değişince elde kalır ve hata üretir. Modelden üretilen liste pekâlâ yazdırılabilir. Çakışma denetimi 3B modelin işidir, elle listenin değil.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Zor",
+      "outcomeCode": "K-İ5.2"
+    }
+  ]
 }

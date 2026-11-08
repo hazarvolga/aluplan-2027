@@ -9,31 +9,115 @@
   "prerequisite": "Seviye 2 tamamlanmış",
   "summary": "Parametrik yol/altyapı modelini oluşturur, prefabrik kirişli bir köprüyü modeller ve altyapı ile köprü modelini sürekli proje koordinatlarına hizalar.",
   "outcomes": [
-    { "text": "Parametrik yol/altyapı modelini (güzergâh, enkesit, kazı/dolgu) oluşturur.", "bloom": "Uygulama", "code": "K-İ8.1" },
-    { "text": "Prefabrik kirişli bir köprüyü (tabliye, kiriş, mesnet) modeller.", "bloom": "Uygulama", "code": "K-İ8.2" },
-    { "text": "Altyapı ve köprü modelini sürekli proje koordinatlarına hizalar.", "bloom": "Uygulama", "code": "K-İ8.3" }
+    {
+      "text": "Parametrik yol/altyapı modelini (güzergâh, enkesit, kazı/dolgu) oluşturur.",
+      "bloom": "Uygulama",
+      "code": "K-İ8.1"
+    },
+    {
+      "text": "Prefabrik kirişli bir köprüyü (tabliye, kiriş, mesnet) modeller.",
+      "bloom": "Uygulama",
+      "code": "K-İ8.2"
+    },
+    {
+      "text": "Altyapı ve köprü modelini sürekli proje koordinatlarına hizalar.",
+      "bloom": "Uygulama",
+      "code": "K-İ8.3"
+    }
   ],
   "concepts": [
-    { "term": "Güzergâh", "desc": "Yolun plan ve boykesitteki ekseni", "en": "Alignment" },
-    { "term": "Enkesit", "desc": "Yolun enine kesit şablonu (şerit, banket, şev)", "en": "Cross section" },
-    { "term": "Kazı/dolgu", "desc": "Araziye göre toprak işi hacimleri", "en": "Cut / fill" },
-    { "term": "Tabliye", "desc": "Köprünün taşıt geçen üst döşemesi", "en": "Deck" },
-    { "term": "Prefabrik kiriş", "desc": "Fabrikada üretilip yerine konan köprü kirişi", "en": "Precast girder" },
-    { "term": "Mesnet", "desc": "Kirişi ayağa/başlığa bağlayan taşıyıcı", "en": "Bearing / support" }
+    {
+      "term": "Güzergâh",
+      "desc": "Yolun plan ve boykesitteki ekseni",
+      "en": "Alignment"
+    },
+    {
+      "term": "Enkesit",
+      "desc": "Yolun enine kesit şablonu (şerit, banket, şev)",
+      "en": "Cross section"
+    },
+    {
+      "term": "Kazı/dolgu",
+      "desc": "Araziye göre toprak işi hacimleri",
+      "en": "Cut / fill"
+    },
+    {
+      "term": "Tabliye",
+      "desc": "Köprünün taşıt geçen üst döşemesi",
+      "en": "Deck"
+    },
+    {
+      "term": "Prefabrik kiriş",
+      "desc": "Fabrikada üretilip yerine konan köprü kirişi",
+      "en": "Precast girder"
+    },
+    {
+      "term": "Mesnet",
+      "desc": "Kirişi ayağa/başlığa bağlayan taşıyıcı",
+      "en": "Bearing / support"
+    }
   ],
   "sessionFlow": [
-    { "time": "0–5", "phase": "Dikkat çekme", "instructor": "Bina modeli vs. yol/köprü modeli", "participant": "Farkı söyler", "material": "Slayt 1" },
-    { "time": "5–15", "phase": "Hedef + ön bilgi", "instructor": "Kazanımlar; sürekli proje koordinatını bağlar", "participant": "Isınma sorusu", "material": "Diyagram" },
-    { "time": "15–45", "phase": "Demonstrasyon", "instructor": "Güzergâh + enkesit ile yol modeli kurar", "participant": "İzler", "material": "Örnek proje" },
-    { "time": "45–100", "phase": "Rehberli uygulama", "instructor": "Katılımcılarla yolu ve köprü akslarını kurar", "participant": "Güzergâh + enkesit girer", "material": "Adım kartı A3" },
-    { "time": "100–150", "phase": "Bağımsız görev", "instructor": "Dolaşır, köprü elemanlarını denetler", "participant": "Kiriş + tabliye + mesnet ekler", "material": "Görev A3" },
-    { "time": "150–160", "phase": "Değerlendirme", "instructor": "Kontrol listesi + mini quiz", "participant": "Quiz-İ8'i çözer", "material": "Quiz-İ8" }
+    {
+      "time": "0–5",
+      "phase": "Dikkat çekme",
+      "instructor": "Bina modeli vs. yol/köprü modeli",
+      "participant": "Farkı söyler",
+      "material": "Slayt 1"
+    },
+    {
+      "time": "5–15",
+      "phase": "Hedef + ön bilgi",
+      "instructor": "Kazanımlar; sürekli proje koordinatını bağlar",
+      "participant": "Isınma sorusu",
+      "material": "Diyagram"
+    },
+    {
+      "time": "15–45",
+      "phase": "Demonstrasyon",
+      "instructor": "Güzergâh + enkesit ile yol modeli kurar",
+      "participant": "İzler",
+      "material": "Örnek proje"
+    },
+    {
+      "time": "45–100",
+      "phase": "Rehberli uygulama",
+      "instructor": "Katılımcılarla yolu ve köprü akslarını kurar",
+      "participant": "Güzergâh + enkesit girer",
+      "material": "Adım kartı A3"
+    },
+    {
+      "time": "100–150",
+      "phase": "Bağımsız görev",
+      "instructor": "Dolaşır, köprü elemanlarını denetler",
+      "participant": "Kiriş + tabliye + mesnet ekler",
+      "material": "Görev A3"
+    },
+    {
+      "time": "150–160",
+      "phase": "Değerlendirme",
+      "instructor": "Kontrol listesi + mini quiz",
+      "participant": "Quiz-İ8'i çözer",
+      "material": "Quiz-İ8"
+    }
   ],
   "durationSplit": [
-    { "label": "Anlatım", "minutes": 45 },
-    { "label": "Uygulama", "minutes": 55 },
-    { "label": "Ölçme", "minutes": 10 },
-    { "label": "Bireysel", "minutes": 50 }
+    {
+      "label": "Anlatım",
+      "minutes": 45
+    },
+    {
+      "label": "Uygulama",
+      "minutes": 55
+    },
+    {
+      "label": "Ölçme",
+      "minutes": 10
+    },
+    {
+      "label": "Bireysel",
+      "minutes": 50
+    }
   ],
   "runningProjectStep": "Altyapı kolunda, sürekli projenin yanına prefabrik kirişli küçük bir köprü eklenir.",
   "homework": "Altyapı kolunda tek açıklıklı prefabrik kirişli küçük bir köprü modelleyin: güzergâh, enkesit, kirişler, mesnetler ve tabliye; sürekli proje koordinatına hizalı. Teslim: Proje dosyası + 3B görünüm + hacim/metraj özeti · Süre: ~120 dk · Ölçüt: Güzergâha bağlı yol gövdesi, yola hizalı köprü, tanımlı kiriş-mesnet-tabliye.",
@@ -42,6 +126,216 @@
     "Başlangıç ve bitmiş yol/köprü dosyası (kurum kaynağı eklenecek)",
     "Enkesit şablonu kütüphanesi",
     "ALLPLAN Civil/Bridge iş akışı kontrol listesi [sürüme göre doğrula]"
+  ],
+  "applicationSteps": [
+    {
+      "step": "Yol güzergâhını (alignment) plan ve boykesitte tanımlayın. [ALLPLAN Civil / sürüme göre doğrula]",
+      "why": "Güzergâh, tüm altyapı modelinin omurgasıdır; sonraki her eleman buna bağlanır."
+    },
+    {
+      "step": "Enkesit şablonunu (şerit, banket, şev) güzergâh boyunca uygulayın.",
+      "why": "Enkesit, yolun üç boyutlu gövdesini ve kazı/dolgu hacimlerini üretir."
+    },
+    {
+      "step": "Köprü akslarını ve açıklıklarını güzergâh üzerine yerleştirin. [ALLPLAN Bridge / sürüme göre doğrula]",
+      "why": "Köprü, yol geometrisine oturur; aks uyumsuzluğu tüm modeli bozar."
+    },
+    {
+      "step": "Prefabrik kirişleri açıklıklara yerleştirin ve mesnetleri tanımlayın. [sürüme göre doğrula]",
+      "why": "Kiriş ve mesnet, köprünün taşıma sistemini oluşturur; üretim ve montaj buradan türer."
+    },
+    {
+      "step": "Tabliyeyi (deck) kirişlerin üstüne modelleyin.",
+      "why": "Tabliye, taşıt yükünü kirişlere aktaran üst döşemedir; kirişlerle uyumlu olmalıdır."
+    },
+    {
+      "step": "Altyapı ve köprü modelini sürekli proje koordinatına hizalayıp metraj/hacim çıktısını kontrol edin.",
+      "why": "Koordinat uyumu, disiplinler arası koordinasyon ve doğru metraj için gereklidir."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "mistake": "Güzergâhı önce tanımlamamak",
+      "symptom": "Elemanlar bağlanmıyor, dağınık",
+      "fix": "Önce güzergâhı kurup elemanları ona bağlayın"
+    },
+    {
+      "mistake": "Enkesiti güzergâh boyunca uygulamamak",
+      "symptom": "Yol gövdesi/hacim eksik",
+      "fix": "Enkesit şablonunu tüm güzergâha uygulayın"
+    },
+    {
+      "mistake": "Köprü aksını yola hizalamamak",
+      "symptom": "Köprü yol geometrisine oturmuyor",
+      "fix": "Köprü akslarını güzergâha hizalayın [sürüme göre doğrula]"
+    },
+    {
+      "mistake": "Mesneti tanımsız bırakmak",
+      "symptom": "Kiriş taşıma sistemi eksik",
+      "fix": "Her kiriş ucuna mesnet tanımlayın"
+    }
+  ],
+  "differentiation": {
+    "fast": "İkinci bir açıklık ekleyip farklı kiriş tipiyle köprüyü çok açıklıklı türetir.",
+    "support": "Yalnızca tek açıklıklı köprü ve basit düz güzergâh; enkesit varyantları sonraki oturumda."
+  },
+  "quiz": [
+    {
+      "id": "M8-Q1",
+      "prompt": "Altyapı modelinde yol güzergâhı neden diğer elemanlardan önce tanımlanır?",
+      "options": [
+        {
+          "text": "Güzergâh olmadan proje dosyası kaydedilemediği için.",
+          "correct": false
+        },
+        {
+          "text": "Güzergâh yalnızca çıktı rengini belirlediği için ilk sırada girilir.",
+          "correct": false
+        },
+        {
+          "text": "Güzergâh modelin omurgasıdır; enkesit, köprü aksları ve diğer elemanlar ona bağlanır.",
+          "correct": true
+        },
+        {
+          "text": "Kazı/dolgu hacmini elle hesaplamak için önce güzergâh gerekir.",
+          "correct": false
+        }
+      ],
+      "explanation": "Güzergâh, tüm altyapı modelinin referans ekseni olduğu için önce tanımlanır; enkesit ve köprü buna oturur. Dosya kaydı güzergâha bağlı değildir; güzergâh renk belirlemez; kazı/dolgu güzergâh + enkesitten otomatik türetilir, elle hesap için değildir.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-İ8.1"
+    },
+    {
+      "id": "M8-Q2",
+      "prompt": "Güzergâh boyunca uygulanan enkesit şablonu modelde neyi üretir?",
+      "options": [
+        {
+          "text": "Yolun üç boyutlu gövdesini ve araziye göre kazı/dolgu hacimlerini.",
+          "correct": true
+        },
+        {
+          "text": "Yalnızca köprü tabliyesinin kalınlığını.",
+          "correct": false
+        },
+        {
+          "text": "Sadece güzergâhın plandaki eksenini.",
+          "correct": false
+        },
+        {
+          "text": "Mesnetlerin taşıma kapasitesini.",
+          "correct": false
+        }
+      ],
+      "explanation": "Enkesit, güzergâh boyunca süpürülerek yolun 3B gövdesini ve araziyle farktan kazı/dolgu hacimlerini üretir. Tabliye kalınlığı köprü modelinin işidir; plandaki eksen zaten güzergâhın kendisidir; mesnet kapasitesi yapısal bir veridir, enkesitten çıkmaz.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-İ8.1"
+    },
+    {
+      "id": "M8-Q3",
+      "prompt": "Modellenen köprü yol geometrisine oturmuyor ve elemanlar kaymış görünüyor. En olası neden nedir?",
+      "options": [
+        {
+          "text": "Tabliye kalınlığı yanlış girilmiş.",
+          "correct": false
+        },
+        {
+          "text": "Köprü aksları güzergâha hizalanmamış.",
+          "correct": true
+        },
+        {
+          "text": "Enkesitte banket genişliği fazla seçilmiş.",
+          "correct": false
+        },
+        {
+          "text": "Kazı/dolgu hacmi henüz hesaplanmamış.",
+          "correct": false
+        }
+      ],
+      "explanation": "Köprü, yol geometrisine oturması için aksları güzergâha hizalanmalıdır; hizasızlık tüm köprüyü kaydırır. Tabliye kalınlığı oturmayı değil, yüksekliği etkiler; banket genişliği yol enkesitini ilgilendirir; kazı/dolgu hacmi bir metraj çıktısıdır, konumu bozmaz.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-İ8.2"
+    },
+    {
+      "id": "M8-Q4",
+      "prompt": "Prefabrik kirişli köprüde bir kirişin ucunda mesnet tanımlanmazsa bu neyi bozar?",
+      "options": [
+        {
+          "text": "Yalnızca tabliyenin görünüm rengini.",
+          "correct": false
+        },
+        {
+          "text": "Güzergâhın plandaki toplam uzunluğunu.",
+          "correct": false
+        },
+        {
+          "text": "Enkesit şablonundaki şerit sayısını.",
+          "correct": false
+        },
+        {
+          "text": "Kirişin taşıma sistemini; yük aktarım yolu ve montaj tanımı eksik kalır.",
+          "correct": true
+        }
+      ],
+      "explanation": "Mesnet, kirişi ayağa/başlığa bağlayan taşıyıcıdır; tanımsız kalırsa yük aktarımı ve montaj tanımı eksik olur. Renk, güzergâh uzunluğu ve enkesit şerit sayısı mesnetten bağımsız parametrelerdir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-İ8.2"
+    },
+    {
+      "id": "M8-Q5",
+      "prompt": "Yol ve köprü modelleme adımlarının doğru sırası hangisidir?",
+      "options": [
+        {
+          "text": "Güzergâh → enkesit → köprü aksları → kiriş ve mesnet → tabliye",
+          "correct": true
+        },
+        {
+          "text": "Tabliye → kiriş → köprü aksları → enkesit → güzergâh",
+          "correct": false
+        },
+        {
+          "text": "Köprü aksları → güzergâh → tabliye → enkesit → kiriş",
+          "correct": false
+        },
+        {
+          "text": "Enkesit → güzergâh → tabliye → kiriş → köprü aksları",
+          "correct": false
+        }
+      ],
+      "explanation": "Önce omurga güzergâh, sonra enkesitle yol gövdesi, ardından güzergâha hizalı köprü aksları, sonra taşıma sistemi (kiriş + mesnet) ve en son üst döşeme tabliye gelir. Diğer sıralamalar bir elemanı, bağlı olduğu referanstan önce kurmaya çalıştığı için yeniden çalışma doğurur.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-İ8.2"
+    },
+    {
+      "id": "M8-Q6",
+      "prompt": "Altyapı ve köprü modelinin sürekli proje koordinatına hizalanması neden kritik bir teslim şartıdır?",
+      "options": [
+        {
+          "text": "Koordinat hizası yalnızca modelin ekranda ortalanmasını sağlar.",
+          "correct": false
+        },
+        {
+          "text": "Hizalama, kullanılan kiriş tiplerinin sayısını otomatik azaltır.",
+          "correct": false
+        },
+        {
+          "text": "Disiplinler arası koordinasyon ve doğru metraj/hacim ancak ortak koordinatta güvenilir olur.",
+          "correct": true
+        },
+        {
+          "text": "Koordinat sistemi dosya boyutunu küçülttüğü için gereklidir.",
+          "correct": false
+        }
+      ],
+      "explanation": "Ortak koordinat, referans modellerin üst üste doğru oturmasını ve metraj/hacmin doğru yerden okunmasını sağlar; koordinasyonun temelidir. Ekran ortalaması bir görüntüleme kolaylığıdır; hizalama kiriş tip sayısını değiştirmez; koordinat seçimi dosya boyutuyla ilgili değildir.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Zor",
+      "outcomeCode": "K-İ8.3"
+    }
   ],
   "proposed": false
 }

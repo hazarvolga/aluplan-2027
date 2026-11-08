@@ -127,5 +127,188 @@
     "Profil/kesit kütüphane tablosu",
     "SDS2 aktarım kontrol listesi [sürüme göre doğrula]"
   ],
-  "proposed": false
+  "proposed": false,
+  "applicationSteps": [
+    {
+      "step": "Çelik profil kütüphanesinden (profile library) uygun kesiti seçin; malzeme kalitesini (örn. S235) girin. [sürüme göre doğrula]",
+      "why": "Kesit ve kalite, hem statik hem metraj çıktısını doğrudan belirler."
+    },
+    {
+      "step": "Çelik kolonları akslara yerleştirin.",
+      "why": "Akslara bağlı eleman, değişiklikte tüm sisteme tutarlı yansır."
+    },
+    {
+      "step": "Kolonlar arasına çelik kirişleri geçirin ve uç kotlarını hizalayın.",
+      "why": "Kot uyumsuzluğu, bağlantı modelini ve üretim verisini hatalı yapar."
+    },
+    {
+      "step": "Kolon-kiriş birleşimlerine bağlantı elemanlarını (levha, bulon) ekleyin. [sürüme göre doğrula]",
+      "why": "Bağlantı, çelik yapının taşıma ve montaj mantığını tanımlar; detay ve üretim buradan türer."
+    },
+    {
+      "step": "Modeli SDS2 aktarımı için hazırlayın (eleman adlandırma, kesit eşlemesi kontrolü). [SDS2 entegrasyonunu sürüme göre doğrula]",
+      "why": "Üretim yazılımına temiz veri gitmezse detay ve CNC çıktısı bozulur."
+    },
+    {
+      "step": "Çelik elemanların metraja ve ağırlık listesine doğru yansıdığını kontrol edin."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "mistake": "Yanlış profil kesiti seçme",
+      "symptom": "Statik ve ağırlık hatalı",
+      "fix": "Kütüphaneden doğru kesiti yeniden atayın"
+    },
+    {
+      "mistake": "Kiriş uç kotunu hizalamama",
+      "symptom": "Bağlantı modeli boşlukta",
+      "fix": "Uç kotlarını kolon aksına hizalayın"
+    },
+    {
+      "mistake": "Bağlantı elemanını atlama",
+      "symptom": "Montaj ve detay çıkmıyor",
+      "fix": "Birleşime levha + bulon ekleyin"
+    },
+    {
+      "mistake": "SDS2 için adlandırma tutarsızlığı",
+      "symptom": "Aktarımda eleman eşleşmiyor",
+      "fix": "Adlandırma/kesit eşlemesini aktarımdan önce düzeltin [sürüme göre doğrula]"
+    }
+  ],
+  "differentiation": {
+    "fast": "İkinci bir açıklıkta farklı profil kesitiyle çerçeve türetir ve bağlantıları varyantlar.",
+    "support": "Yalnızca tek açıklıklı kolon + kiriş çerçevesi; bağlantı detayı bir sonraki oturumda."
+  },
+  "quiz": [
+    {
+      "id": "M6-Q1",
+      "prompt": "Çelik profil seçerken kesit boyutunun yanında malzeme kalitesinin (örn. S235) de girilmesi neden gereklidir?",
+      "options": [
+        {
+          "text": "Kesit ve kalite birlikte hem statik davranışı hem ağırlık/metraj çıktısını belirlediği için",
+          "correct": true
+        },
+        {
+          "text": "Kalite yalnızca elemanın rengini değiştirdiği için",
+          "correct": false
+        },
+        {
+          "text": "Kalite girilmeden profil akslara yerleştirilemediği için",
+          "correct": false
+        },
+        {
+          "text": "Kalite yalnızca SDS2 aktarımında zorunlu, modelde gereksiz olduğu için",
+          "correct": false
+        }
+      ],
+      "explanation": "Malzeme kalitesi profilin dayanımını ve dolayısıyla statik ile ağırlık/metraj sonuçlarını etkiler; eksikse çıktı güvenilmez olur. Kalite renk değil malzeme özelliğidir. Profil kaliteden bağımsız yerleştirilebilir. Kalite yalnızca aktarım için değil, modelin kendi doğruluğu için de gereklidir.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-İ6.1"
+    },
+    {
+      "id": "M6-Q2",
+      "prompt": "Çelik çerçeveyi modellerken doğru işlem sırası aşağıdakilerden hangisidir?",
+      "options": [
+        {
+          "text": "Bağlantı ekle → kolon yerleştir → kiriş geçir → kesit seç",
+          "correct": false
+        },
+        {
+          "text": "Kesit/kalite seç → kolonları akslara yerleştir → kirişleri geçir ve kotları hizala → bağlantıları ekle",
+          "correct": true
+        },
+        {
+          "text": "Kiriş geçir → kolon yerleştir → kesit seç → bağlantı ekle",
+          "correct": false
+        },
+        {
+          "text": "SDS2 aktar → kolon yerleştir → kiriş geçir → bağlantı ekle",
+          "correct": false
+        }
+      ],
+      "explanation": "Önce kesit/kalite tanımlanır, sonra kolonlar aksa oturtulur, kirişler geçirilip kotlar hizalanır ve en sonda bağlantılar eklenir; aktarım bunların hepsinden sonra gelir. Bağlantıyı veya kirişi elemanlardan önce koymak boşlukta model üretir. SDS2 aktarımı modelleme bitmeden yapılamaz.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-İ6.1"
+    },
+    {
+      "id": "M6-Q3",
+      "prompt": "Bir kolon-kiriş birleşiminde bağlantı modeli boşlukta, elemandan kopuk görünüyor. İlk kontrol edilecek olası neden nedir?",
+      "options": [
+        {
+          "text": "Bağlantıya levha yerine bulon tanımlanmış",
+          "correct": false
+        },
+        {
+          "text": "Kiriş uç kotu kolon aksına hizalanmamış; bağlantı tutunacağı yüzeyi bulamıyor",
+          "correct": true
+        },
+        {
+          "text": "Profil kalitesi S235 yerine S355 seçilmiş",
+          "correct": false
+        },
+        {
+          "text": "Metraj listesi henüz üretilmemiş",
+          "correct": false
+        }
+      ],
+      "explanation": "Bağlantı, kirişin uç kotu kolon aksıyla hizalı değilse tutunacağı geometriyi bulamaz ve boşlukta kalır; çözüm uç kotunu hizalamaktır. Levha/bulon karışımı bağlantının tipiyle ilgilidir, konumuyla değil. Kalite seçimi geometrik boşluğu açıklamaz. Metraj listesi üretimi bağlantının konumunu etkilemez.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-İ6.2"
+    },
+    {
+      "id": "M6-Q4",
+      "prompt": "Kolon-kiriş birleşimine eklenen bağlantı elemanları (levha + bulon) öncelikle neyi tanımlar?",
+      "options": [
+        {
+          "text": "Çelik yapının taşıma ve montaj mantığını; detay ve üretim verisi buradan türer",
+          "correct": true
+        },
+        {
+          "text": "Yalnızca elemanların ekrandaki görünüm rengini",
+          "correct": false
+        },
+        {
+          "text": "Profilin boyuna donatı düzenini",
+          "correct": false
+        },
+        {
+          "text": "Yalnızca pafta ölçeğini",
+          "correct": false
+        }
+      ],
+      "explanation": "Bağlantı, elemanların nasıl taşındığını ve montajlandığını tanımlar; çelik detay ve üretim verisi bu bağlantıdan türetilir. Görünüm rengi bağlantının işleviyle ilgisizdir. Boyuna donatı betonarmeye özgüdür, çelik bağlantıda yer almaz. Pafta ölçeği çıktının biçimidir.",
+      "bloom": "Anlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-İ6.2"
+    },
+    {
+      "id": "M6-Q5",
+      "prompt": "Modeli üretim yazılımına (SDS2) aktarmadan önce eleman adlandırma ve kesit eşlemesini kontrol etmek neden kritiktir? [sürüme göre doğrula]",
+      "options": [
+        {
+          "text": "Temiz ve tutarlı veri gitmezse detay ve CNC üretim çıktısı bozulur; elemanlar aktarımda eşleşmez",
+          "correct": true
+        },
+        {
+          "text": "Kontrol yalnızca dosyanın açılış süresini kısalttığı için",
+          "correct": false
+        },
+        {
+          "text": "Adlandırma modelin ekran rengini belirlediği için",
+          "correct": false
+        },
+        {
+          "text": "Kesit eşlemesi yalnızca metrajı değil hiçbir şeyi etkilemediği için",
+          "correct": false
+        }
+      ],
+      "explanation": "Tutarsız adlandırma/kesit eşlemesi aktarımda elemanların yanlış eşleşmesine yol açar ve detay ile CNC çıktısı bozulur; bu yüzden aktarımdan önce düzeltilir. Açılış süresi konuyla ilgisizdir. Adlandırma renk belirlemez. Kesit eşlemesi aktarım doğruluğunu doğrudan etkiler, etkisiz değildir.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Zor",
+      "outcomeCode": "K-İ6.3"
+    }
+  ]
 }

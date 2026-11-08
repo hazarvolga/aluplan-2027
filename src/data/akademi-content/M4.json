@@ -9,31 +9,115 @@
   "prerequisite": "B.M1, B.M2, B.M3",
   "summary": "Modelden kesit ve görünüş üretir, görünüm ayarlarını düzenler; pafta düzenini kurup ölçülendirme, metin ve tarama ile tamamlayarak PDF/DWG çıktısı alır.",
   "outcomes": [
-    { "text": "Modelden kesit ve görünüş üretir ve görünüm ayarlarını düzenler.", "bloom": "Uygulama", "code": "K-O4.1" },
-    { "text": "Pafta düzenini (layout) kurar ve PDF/DWG olarak çıktı alır.", "bloom": "Uygulama", "code": "K-O4.2" },
-    { "text": "Ölçülendirme, metin ve tarama ile paftayı tamamlar.", "bloom": "Uygulama", "code": "K-O4.3" }
+    {
+      "text": "Modelden kesit ve görünüş üretir ve görünüm ayarlarını düzenler.",
+      "bloom": "Uygulama",
+      "code": "K-O4.1"
+    },
+    {
+      "text": "Pafta düzenini (layout) kurar ve PDF/DWG olarak çıktı alır.",
+      "bloom": "Uygulama",
+      "code": "K-O4.2"
+    },
+    {
+      "text": "Ölçülendirme, metin ve tarama ile paftayı tamamlar.",
+      "bloom": "Uygulama",
+      "code": "K-O4.3"
+    }
   ],
   "concepts": [
-    { "term": "Kesit", "desc": "Modeli bir düzlemle keserek üretilen iki boyutlu görünüm", "en": "Section / Schnitt" },
-    { "term": "Görünüş", "desc": "Modele bir yönden bakışla üretilen 2B çizim (cephe)", "en": "View / elevation" },
-    { "term": "Pafta", "desc": "Çizimlerin ölçekli yerleştiği çıktı sayfası", "en": "Layout / plan layout" },
-    { "term": "Ölçülendirme", "desc": "Bir uzunluğu veya kotu ölçü çizgisiyle gösteren eleman", "en": "Dimension" },
-    { "term": "Tarama", "desc": "Bir alanı malzeme/işleve göre dolduran desen", "en": "Hatch / pattern" },
-    { "term": "Antet", "desc": "Pafta kenarındaki proje bilgi ve çerçeve bloğu", "en": "Title block" }
+    {
+      "term": "Kesit",
+      "desc": "Modeli bir düzlemle keserek üretilen iki boyutlu görünüm",
+      "en": "Section / Schnitt"
+    },
+    {
+      "term": "Görünüş",
+      "desc": "Modele bir yönden bakışla üretilen 2B çizim (cephe)",
+      "en": "View / elevation"
+    },
+    {
+      "term": "Pafta",
+      "desc": "Çizimlerin ölçekli yerleştiği çıktı sayfası",
+      "en": "Layout / plan layout"
+    },
+    {
+      "term": "Ölçülendirme",
+      "desc": "Bir uzunluğu veya kotu ölçü çizgisiyle gösteren eleman",
+      "en": "Dimension"
+    },
+    {
+      "term": "Tarama",
+      "desc": "Bir alanı malzeme/işleve göre dolduran desen",
+      "en": "Hatch / pattern"
+    },
+    {
+      "term": "Antet",
+      "desc": "Pafta kenarındaki proje bilgi ve çerçeve bloğu",
+      "en": "Title block"
+    }
   ],
   "sessionFlow": [
-    { "time": "0–5", "phase": "Dikkat çekme", "instructor": "Elle çizilen plan vs. modelden üretilen plan", "participant": "Farkı söyler", "material": "Slayt 1" },
-    { "time": "5–15", "phase": "Hedef + ön bilgi", "instructor": "Kazanımlar; M3 modelini dokümana bağlar", "participant": "Isınma sorusu", "material": "Diyagram" },
-    { "time": "15–35", "phase": "Demonstrasyon", "instructor": "Kesit düzlemi tanımlar, görünüş üretir", "participant": "İzler", "material": "Örnek proje" },
-    { "time": "35–85", "phase": "Rehberli uygulama", "instructor": "Katılımcılarla kesit + görünüş üretir", "participant": "Çizimleri oluşturur", "material": "Adım kartı A3" },
-    { "time": "85–120", "phase": "Bağımsız görev", "instructor": "Dolaşır, pafta düzenini denetler", "participant": "Paftaya yerleştirir, PDF alır", "material": "Görev A3" },
-    { "time": "120–130", "phase": "Değerlendirme", "instructor": "Kontrol listesi + mini quiz", "participant": "Quiz-O4'ü çözer", "material": "Quiz-O4" }
+    {
+      "time": "0–5",
+      "phase": "Dikkat çekme",
+      "instructor": "Elle çizilen plan vs. modelden üretilen plan",
+      "participant": "Farkı söyler",
+      "material": "Slayt 1"
+    },
+    {
+      "time": "5–15",
+      "phase": "Hedef + ön bilgi",
+      "instructor": "Kazanımlar; M3 modelini dokümana bağlar",
+      "participant": "Isınma sorusu",
+      "material": "Diyagram"
+    },
+    {
+      "time": "15–35",
+      "phase": "Demonstrasyon",
+      "instructor": "Kesit düzlemi tanımlar, görünüş üretir",
+      "participant": "İzler",
+      "material": "Örnek proje"
+    },
+    {
+      "time": "35–85",
+      "phase": "Rehberli uygulama",
+      "instructor": "Katılımcılarla kesit + görünüş üretir",
+      "participant": "Çizimleri oluşturur",
+      "material": "Adım kartı A3"
+    },
+    {
+      "time": "85–120",
+      "phase": "Bağımsız görev",
+      "instructor": "Dolaşır, pafta düzenini denetler",
+      "participant": "Paftaya yerleştirir, PDF alır",
+      "material": "Görev A3"
+    },
+    {
+      "time": "120–130",
+      "phase": "Değerlendirme",
+      "instructor": "Kontrol listesi + mini quiz",
+      "participant": "Quiz-O4'ü çözer",
+      "material": "Quiz-O4"
+    }
   ],
   "durationSplit": [
-    { "label": "Anlatım", "minutes": 35 },
-    { "label": "Uygulama", "minutes": 50 },
-    { "label": "Ölçme", "minutes": 10 },
-    { "label": "Bireysel", "minutes": 35 }
+    {
+      "label": "Anlatım",
+      "minutes": 35
+    },
+    {
+      "label": "Uygulama",
+      "minutes": 50
+    },
+    {
+      "label": "Ölçme",
+      "minutes": 10
+    },
+    {
+      "label": "Bireysel",
+      "minutes": 35
+    }
   ],
   "runningProjectStep": "Bu derste sürekli projenin 3B modelinden kesitler, görünüşler ve çıktıya hazır paftalar üretilir; model ilk kez dokümana dönüşür.",
   "homework": "Sürekli projenin bir kesitini, bir cephesini ve bir planını tek paftada toplayın; PDF çıktısı alın. Teslim: Pafta PDF'i + proje dosyası · Süre: ~120 dk · Ölçüt: Modelden türeyen kesit/görünüş, doğru ölçek, okunur ölçülendirme ve antet.",
@@ -42,5 +126,198 @@
     "Başlangıç ve bitmiş pafta dosyası (kurum kaynağı eklenecek)",
     "Antet/pafta şablonu ve ölçek tablosu [sürüme göre doğrula]"
   ],
-  "proposed": false
+  "proposed": false,
+  "applicationSteps": [
+    {
+      "step": "Model üzerinde kesit düzlemini (kesit çizgisini) tanımlayın ve kesiti üretin. [sürüme göre doğrula]",
+      "why": "Kesit modele bağlıdır; model değişince kesit güncellenir, yeniden çizim gerekmez."
+    },
+    {
+      "step": "Cephe/görünüşleri istenen yönlerden oluşturun.",
+      "why": "Görünüşler de modelden türediğinden plan, kesit ve cephe birbirleriyle tutarlı kalır."
+    },
+    {
+      "step": "Görünüm ayarlarını düzenleyin: ölçek, çizgi kalınlığı, katman görünürlüğü.",
+      "why": "Aynı model farklı ölçek ve detay seviyelerinde okunabilir çıktı vermelidir."
+    },
+    {
+      "step": "Yeni bir pafta açın ve antet/çerçeveyi yerleştirin. [sürüme göre doğrula]",
+      "why": "Antet, proje bilgisini ve ölçek referansını taşır; kurumsal teslim standardının parçasıdır."
+    },
+    {
+      "step": "Plan, kesit ve görünüşleri paftaya ölçekli olarak yerleştirin.",
+      "why": "Pafta ölçeği ile çizim ölçeği uyumlu olmazsa baskı boyutları yanlış çıkar."
+    },
+    {
+      "step": "Ölçülendirme, metin ve taramayı ekleyerek paftayı tamamlayın.",
+      "why": "Dokümanın okunabilirliği ve inşa edilebilirliği bu açıklayıcı katmana bağlıdır."
+    },
+    {
+      "step": "Paftayı PDF ve gerekiyorsa DWG olarak dışa aktarın.",
+      "why": "Teslim ve paylaşım için standart, herkesin açabileceği çıktı biçimleri gerekir."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "mistake": "Kesit çizgisini yanlış yere koyma",
+      "symptom": "Kesitte önemli detay görünmüyor",
+      "fix": "Kesit düzlemini doğru akstan geçirin"
+    },
+    {
+      "mistake": "Pafta ölçeği ile çizim ölçeği uyumsuz",
+      "symptom": "Baskıda boyutlar yanlış",
+      "fix": "Pafta ve çizim ölçeğini eşitleyin"
+    },
+    {
+      "mistake": "Katman görünürlüğünü ayarlamama",
+      "symptom": "Çıktı kalabalık, okunmuyor",
+      "fix": "Gereksiz katmanları çıktı görünümünde kapatın"
+    },
+    {
+      "mistake": "Ölçülendirmeyi modelden kopuk verme",
+      "symptom": "Model değişince ölçü güncellenmiyor",
+      "fix": "Ölçüyü model/çizim elemanına yakalatın"
+    },
+    {
+      "mistake": "PDF'i yanlış kağıt boyutunda alma",
+      "symptom": "Çıktı kırpık veya küçük",
+      "fix": "Pafta boyutu ile çıktı kağıdını eşleştirin"
+    }
+  ],
+  "differentiation": {
+    "fast": "Ofis için yeniden kullanılabilir bir antet/pafta şablonu taslağı hazırlar.",
+    "support": "Yalnızca bir kesit + bir pafta ile başlar; görünüşler sonraki oturumda."
+  },
+  "quiz": [
+    {
+      "id": "M4-Q1",
+      "prompt": "Modelden bir kesit üretildikten sonra model değişirse kesit ne olur?",
+      "options": [
+        {
+          "text": "Modelle ilişkili olduğu için otomatik güncellenir",
+          "correct": true
+        },
+        {
+          "text": "Elle yeniden çizilmesi gerekir",
+          "correct": false
+        },
+        {
+          "text": "Silinir ve yeniden tanımlanması gerekir",
+          "correct": false
+        },
+        {
+          "text": "Değişmeden eski haliyle kalır",
+          "correct": false
+        }
+      ],
+      "explanation": "Kesit modelden türetilir; model değiştiğinde kesit de güncellenir, dokümantasyonda BIM'in temel kazancı budur. Elle yeniden çizme ve silip tanımlama gereksiz yeniden çalışmadır; kesit eski haliyle de kalmaz çünkü model ile bağlıdır.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-O4.1"
+    },
+    {
+      "id": "M4-Q2",
+      "prompt": "Kesit ile görünüş (cephe) arasındaki temel fark nedir?",
+      "options": [
+        {
+          "text": "Kesit modeli bir düzlemle keserek, görünüş ise bir yönden bakışla üretilir",
+          "correct": true
+        },
+        {
+          "text": "Kesit her zaman renkli, görünüş siyah-beyazdır",
+          "correct": false
+        },
+        {
+          "text": "Kesit elle çizilir, görünüş modelden üretilir",
+          "correct": false
+        },
+        {
+          "text": "İkisi arasında işlevsel bir fark yoktur",
+          "correct": false
+        }
+      ],
+      "explanation": "Kesit modeli bir düzlemle keserek iç bilgiyi, görünüş ise dışarıdan bakışla cepheyi verir; ikisi de modelden türer. Renk ayrımı ve 'kesit elle çizilir' yanlıştır çünkü her ikisi de modelden üretilir; işlevleri farklı olduğu için 'fark yok' da yanlıştır.",
+      "bloom": "Anlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-O4.1"
+    },
+    {
+      "id": "M4-Q3",
+      "prompt": "Bir paftayı PDF olarak bastığınızda çizim boyutları gerçeğinden farklı çıkıyor. İlk kontrol edilecek olası neden nedir?",
+      "options": [
+        {
+          "text": "Pafta ölçeği ile çizim ölçeğinin uyumsuz olması",
+          "correct": true
+        },
+        {
+          "text": "Katman renklerinin yanlış seçilmesi",
+          "correct": false
+        },
+        {
+          "text": "Modelde kesit çizgisinin tanımlı olmaması",
+          "correct": false
+        },
+        {
+          "text": "Antetin paftaya eklenmemiş olması",
+          "correct": false
+        }
+      ],
+      "explanation": "Baskıda boyutların kayması tipik olarak pafta ölçeği ile çizim ölçeğinin eşleşmemesinden doğar; eşitlenince boyutlar doğru basar. Katman rengi okunurluğu etkiler ama ölçüyü bozmaz; kesit çizgisi ve antet eksikliği ise boyut hatasının nedeni değildir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-O4.2"
+    },
+    {
+      "id": "M4-Q4",
+      "prompt": "Paftaya yerleştirilen ölçülendirme neden doğrudan model/çizim elemanına yakalatılmalıdır?",
+      "options": [
+        {
+          "text": "Model değiştiğinde ölçünün de birlikte güncellenmesi için",
+          "correct": true
+        },
+        {
+          "text": "Ölçü çizgisi daha kalın görünsün diye",
+          "correct": false
+        },
+        {
+          "text": "PDF dosya boyutu küçülsün diye",
+          "correct": false
+        },
+        {
+          "text": "Antet bilgisini otomatik doldursun diye",
+          "correct": false
+        }
+      ],
+      "explanation": "Elemana yakalanan ölçü, eleman değiştiğinde birlikte güncellenir; modelden kopuk verilen ölçü eski değeri gösterir ve hataya yol açar. Çizgi kalınlığı, dosya boyutu ve antet doldurma ölçü yakalamanın amacı değildir.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-O4.3"
+    },
+    {
+      "id": "M4-Q5",
+      "prompt": "Modelden çıktıya giden iş akışında aşağıdaki adımların doğru sırası hangisidir?",
+      "options": [
+        {
+          "text": "Kesit/görünüş üret → görünüm ayarla → paftaya yerleştir → PDF/DWG dışa aktar",
+          "correct": true
+        },
+        {
+          "text": "PDF dışa aktar → paftaya yerleştir → kesit üret → görünüm ayarla",
+          "correct": false
+        },
+        {
+          "text": "Paftaya yerleştir → kesit üret → PDF dışa aktar → görünüm ayarla",
+          "correct": false
+        },
+        {
+          "text": "Görünüm ayarla → PDF dışa aktar → kesit üret → paftaya yerleştir",
+          "correct": false
+        }
+      ],
+      "explanation": "Önce modelden kesit/görünüş üretilir, görünüm ayarlanır, paftaya ölçekli yerleştirilir ve en son dışa aktarılır; her adım bir öncekine dayanır. Diğer sıralar dışa aktarmayı veya yerleştirmeyi içerik hazır olmadan öne aldığından yeniden çalışma doğurur.",
+      "bloom": "Uygulama",
+      "difficulty": "Zor",
+      "outcomeCode": "K-O4.2"
+    }
+  ]
 }

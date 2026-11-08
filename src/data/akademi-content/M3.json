@@ -9,31 +9,115 @@
   "prerequisite": "B.M1, B.M2",
   "summary": "Duvar, döşeme, kolon ve kiriş gibi parametrik elemanları doğru parametrelerle yerleştirir; kapı/pencere açıklıkları ile merdiven elemanlarını ekler ve elemanlar arası birleşim önceliklerini uygular.",
   "outcomes": [
-    { "text": "Duvar, döşeme, kolon, kiriş gibi parametrik elemanları doğru parametrelerle yerleştirir.", "bloom": "Uygulama", "code": "K-B3.1" },
-    { "text": "Kapı/pencere açıklıklarını ve merdiven/korkuluk elemanlarını oluşturur.", "bloom": "Uygulama", "code": "K-B3.2" },
-    { "text": "Elemanlar arası birleşim ve öncelik kurallarını uygular.", "bloom": "Uygulama", "code": "K-B3.3" }
+    {
+      "text": "Duvar, döşeme, kolon, kiriş gibi parametrik elemanları doğru parametrelerle yerleştirir.",
+      "bloom": "Uygulama",
+      "code": "K-B3.1"
+    },
+    {
+      "text": "Kapı/pencere açıklıklarını ve merdiven/korkuluk elemanlarını oluşturur.",
+      "bloom": "Uygulama",
+      "code": "K-B3.2"
+    },
+    {
+      "text": "Elemanlar arası birleşim ve öncelik kurallarını uygular.",
+      "bloom": "Uygulama",
+      "code": "K-B3.3"
+    }
   ],
   "concepts": [
-    { "term": "Duvar", "desc": "Yükseklik/kalınlık/katman parametreli taşıyıcı veya bölme elemanı", "en": "Wall / Wand" },
-    { "term": "Döşeme", "desc": "Kat düzlemini oluşturan yatay eleman", "en": "Slab / Decke" },
-    { "term": "Kolon", "desc": "Düşey taşıyıcı parametrik eleman", "en": "Column / Stütze" },
-    { "term": "Kiriş", "desc": "Yatay taşıyıcı parametrik eleman", "en": "Beam / Unterzug" },
-    { "term": "Açıklık", "desc": "Duvara yerleşen kapı/pencere boşluğu + elemanı", "en": "Opening (door/window)" },
-    { "term": "Birleşim önceliği", "desc": "Kesişen elemanların hangisinin diğerini kestiği kural", "en": "Priority" }
+    {
+      "term": "Duvar",
+      "desc": "Yükseklik/kalınlık/katman parametreli taşıyıcı veya bölme elemanı",
+      "en": "Wall / Wand"
+    },
+    {
+      "term": "Döşeme",
+      "desc": "Kat düzlemini oluşturan yatay eleman",
+      "en": "Slab / Decke"
+    },
+    {
+      "term": "Kolon",
+      "desc": "Düşey taşıyıcı parametrik eleman",
+      "en": "Column / Stütze"
+    },
+    {
+      "term": "Kiriş",
+      "desc": "Yatay taşıyıcı parametrik eleman",
+      "en": "Beam / Unterzug"
+    },
+    {
+      "term": "Açıklık",
+      "desc": "Duvara yerleşen kapı/pencere boşluğu + elemanı",
+      "en": "Opening (door/window)"
+    },
+    {
+      "term": "Birleşim önceliği",
+      "desc": "Kesişen elemanların hangisinin diğerini kestiği kural",
+      "en": "Priority"
+    }
   ],
   "sessionFlow": [
-    { "time": "0–5", "phase": "Dikkat çekme", "instructor": "Çizgiyle çizilmiş vs. parametrik duvar", "participant": "Farkı söyler", "material": "Slayt 1" },
-    { "time": "5–15", "phase": "Hedef + ön bilgi", "instructor": "Kazanımlar; M2 aks sistemini bağlar", "participant": "Isınma sorusu", "material": "Diyagram" },
-    { "time": "15–35", "phase": "Demonstrasyon", "instructor": "Duvar + döşeme + kolon yerleştirir", "participant": "İzler", "material": "Örnek proje" },
-    { "time": "35–85", "phase": "Rehberli uygulama", "instructor": "Katılımcılarla kat modelini kurar", "participant": "Elemanları yerleştirir", "material": "Adım kartı A3" },
-    { "time": "85–120", "phase": "Bağımsız görev", "instructor": "Dolaşır, birleşimleri denetler", "participant": "Kapı/pencere + merdiven ekler", "material": "Görev A3" },
-    { "time": "120–130", "phase": "Değerlendirme", "instructor": "Kontrol listesi + mini quiz", "participant": "Quiz-B3'ü çözer", "material": "Quiz-B3" }
+    {
+      "time": "0–5",
+      "phase": "Dikkat çekme",
+      "instructor": "Çizgiyle çizilmiş vs. parametrik duvar",
+      "participant": "Farkı söyler",
+      "material": "Slayt 1"
+    },
+    {
+      "time": "5–15",
+      "phase": "Hedef + ön bilgi",
+      "instructor": "Kazanımlar; M2 aks sistemini bağlar",
+      "participant": "Isınma sorusu",
+      "material": "Diyagram"
+    },
+    {
+      "time": "15–35",
+      "phase": "Demonstrasyon",
+      "instructor": "Duvar + döşeme + kolon yerleştirir",
+      "participant": "İzler",
+      "material": "Örnek proje"
+    },
+    {
+      "time": "35–85",
+      "phase": "Rehberli uygulama",
+      "instructor": "Katılımcılarla kat modelini kurar",
+      "participant": "Elemanları yerleştirir",
+      "material": "Adım kartı A3"
+    },
+    {
+      "time": "85–120",
+      "phase": "Bağımsız görev",
+      "instructor": "Dolaşır, birleşimleri denetler",
+      "participant": "Kapı/pencere + merdiven ekler",
+      "material": "Görev A3"
+    },
+    {
+      "time": "120–130",
+      "phase": "Değerlendirme",
+      "instructor": "Kontrol listesi + mini quiz",
+      "participant": "Quiz-B3'ü çözer",
+      "material": "Quiz-B3"
+    }
   ],
   "durationSplit": [
-    { "label": "Anlatım", "minutes": 35 },
-    { "label": "Uygulama", "minutes": 50 },
-    { "label": "Ölçme", "minutes": 10 },
-    { "label": "Bireysel", "minutes": 35 }
+    {
+      "label": "Anlatım",
+      "minutes": 35
+    },
+    {
+      "label": "Uygulama",
+      "minutes": 50
+    },
+    {
+      "label": "Ölçme",
+      "minutes": 10
+    },
+    {
+      "label": "Bireysel",
+      "minutes": 35
+    }
   ],
   "runningProjectStep": "Bu derste sürekli projenin temel mimari modeli (duvar, döşeme, kolon, kiriş, kapı/pencere, merdiven) oluşturulur.",
   "homework": "Sürekli projenin zemin katını tam modelleyin: duvarlar, döşeme, kolon/kiriş, kapı/pencere, merdiven. Teslim: Proje dosyası + 3B görünüm · Süre: ~120 dk · Ölçüt: Akslara hizalı taşıyıcı, doğru açıklıklar, temiz birleşimler.",
@@ -42,5 +126,240 @@
     "Başlangıç ve bitmiş kat dosyası (kurum kaynağı eklenecek)",
     "Eleman parametre tablosu [sürüme göre doğrula]"
   ],
-  "proposed": false
+  "proposed": false,
+  "applicationSteps": [
+    {
+      "step": "Aks sistemine hizalı duvarları yerleştirin; yükseklik ve kalınlık parametrelerini girin.",
+      "why": "Parametrik değer sonradan tek yerden güncellenir; çizgi tekrar çizilmez."
+    },
+    {
+      "step": "Döşemeyi kat düzleminde oluşturun.",
+      "why": "Döşeme, kat kotuna bağlı olduğundan M2'deki kat tanımı doğru olmalıdır."
+    },
+    {
+      "step": "Kolon ve kirişleri akslara yerleştirin.",
+      "why": "Taşıyıcı sistem akslara bağlı olunca değişiklik tüm kata tutarlı yansır."
+    },
+    {
+      "step": "Duvarlara kapı ve pencere açıklıklarını ekleyin. [sürüme göre doğrula]",
+      "why": "Açıklık bir nesnedir; duvarla ilişkilidir ve metraja/çizelgeye otomatik yansır."
+    },
+    {
+      "step": "Merdiven ve korkuluğu yerleştirin."
+    },
+    {
+      "step": "Birleşim önceliklerini kontrol edin (kiriş-kolon, duvar-döşeme).",
+      "why": "Yanlış öncelik, kesit ve metrajda hatalı sonuç verir."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "mistake": "Duvar yüksekliği kata bağlanmamış",
+      "symptom": "Duvarlar yanlış boyda",
+      "fix": "Yüksekliği kat yapısına bağlayın"
+    },
+    {
+      "mistake": "Açıklığı duvardan bağımsız çizme",
+      "symptom": "Kapı/pencere metrajda çıkmıyor",
+      "fix": "Açıklığı duvar elemanına ekleyin"
+    },
+    {
+      "mistake": "Birleşim önceliği tanımsız",
+      "symptom": "Kesitte elemanlar üst üste",
+      "fix": "Öncelik değerlerini ayarlayın"
+    },
+    {
+      "mistake": "Kolonu aksa oturtmama",
+      "symptom": "Model dağınık, değişiklik zor",
+      "fix": "Kolonu aks kesişimine yakalatın"
+    }
+  ],
+  "differentiation": {
+    "fast": "İkinci bir kat tipini kopyalayıp parametrik farklarla türetir.",
+    "support": "Yalnızca duvar + döşeme ile tek kat; kolon/kiriş bir sonraki oturumda."
+  },
+  "quiz": [
+    {
+      "id": "M3-Q1",
+      "prompt": "Parametrik duvarın çizgiyle çizilmiş duvara göre temel avantajı nedir?",
+      "options": [
+        {
+          "text": "Daha az renk seçeneği sunması",
+          "correct": false
+        },
+        {
+          "text": "Yükseklik/kalınlık gibi değerlerin tek yerden güncellenip çizimin yeniden çizilmemesi",
+          "correct": true
+        },
+        {
+          "text": "Dosyayı otomatik yedeklemesi",
+          "correct": false
+        },
+        {
+          "text": "İnternet olmadan açılabilmesi",
+          "correct": false
+        }
+      ],
+      "explanation": "Parametrik duvar, yükseklik ve kalınlık gibi parametreleri tek yerden günceller; değişiklik için çizgi yeniden çizilmez. Renk, yedekleme veya çevrimdışı açılma parametrik duvarın ayırt edici avantajı değildir.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-B3.1"
+    },
+    {
+      "id": "M3-Q2",
+      "prompt": "Döşemenin doğru düzlemde oturması öncelikle hangi tanıma bağlıdır?",
+      "options": [
+        {
+          "text": "Katman rengine",
+          "correct": false
+        },
+        {
+          "text": "Kat kotu (seviye) tanımına",
+          "correct": true
+        },
+        {
+          "text": "Çıktı ölçeğine",
+          "correct": false
+        },
+        {
+          "text": "Dosya adına",
+          "correct": false
+        }
+      ],
+      "explanation": "Döşeme kat düzleminde oluşturulur ve kat kotuna bağlıdır; bu yüzden M2'deki kat tanımı doğru olmalıdır. Katman rengi, çıktı ölçeği ve dosya adı döşemenin düzlemini belirlemez.",
+      "bloom": "Anlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-B3.1"
+    },
+    {
+      "id": "M3-Q3",
+      "prompt": "Bir katılımcı kapı ekledi ama kapı metraj listesinde görünmüyor. En olası neden nedir?",
+      "options": [
+        {
+          "text": "Kapı yanlış renkte",
+          "correct": false
+        },
+        {
+          "text": "Kapı, duvar elemanına bağlı bir açıklık olarak değil, bağımsız çizgi olarak eklendi",
+          "correct": true
+        },
+        {
+          "text": "Metraj listesi bozuk",
+          "correct": false
+        },
+        {
+          "text": "Kat kotu yanlış",
+          "correct": false
+        }
+      ],
+      "explanation": "Kapı/pencere, duvara bağlı bir açıklık nesnesi olmalıdır; bağımsız çizildiğinde metraja yansımaz. Renk, bozuk liste veya kat kotu bu belirtiyi açıklamaz; çözüm açıklığı duvar elemanına eklemektir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-B3.2"
+    },
+    {
+      "id": "M3-Q4",
+      "prompt": "Birleşim önceliği (priority) ne işe yarar?",
+      "options": [
+        {
+          "text": "Elemanların çizim sırasını alfabetik diziler",
+          "correct": false
+        },
+        {
+          "text": "Kesişen elemanlardan hangisinin diğerini kestiğini belirler",
+          "correct": true
+        },
+        {
+          "text": "Dosyanın açılış hızını artırır",
+          "correct": false
+        },
+        {
+          "text": "Katman sayısını sınırlar",
+          "correct": false
+        }
+      ],
+      "explanation": "Birleşim önceliği, kesişen elemanlarda hangisinin diğerini kestiğini tanımlar; yanlış öncelik kesit ve metrajda hatalı sonuç verir. Alfabetik sıralama, açılış hızı veya katman sınırı önceliğin işlevi değildir.",
+      "bloom": "Anlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-B3.3"
+    },
+    {
+      "id": "M3-Q5",
+      "prompt": "Bir katı modellerken aşağıdaki sıralamalardan hangisi en doğrudur?",
+      "options": [
+        {
+          "text": "Kapı/pencere aç → duvar yerleştir → kolon koy",
+          "correct": false
+        },
+        {
+          "text": "Akslara hizalı duvarları yerleştir → döşeme oluştur → kolon/kiriş koy → açıklık ekle",
+          "correct": true
+        },
+        {
+          "text": "Merdiven koy → döşeme oluştur → duvar yerleştir",
+          "correct": false
+        },
+        {
+          "text": "Önce birleşim önceliklerini ayarla → sonra hiçbir eleman ekleme",
+          "correct": false
+        }
+      ],
+      "explanation": "Önce akslara hizalı taşıyıcı ve kabuk (duvar, döşeme, kolon/kiriş), ardından duvara bağlı açıklıklar gelir; açıklık duvar olmadan, döşeme kat tanımı olmadan tutarlı kurulamaz. Diğer sıralamalar bağımlılık zincirini bozar.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-B3.1"
+    },
+    {
+      "id": "M3-Q6",
+      "prompt": "Kolon neden aks kesişimine oturtulur?",
+      "options": [
+        {
+          "text": "Daha az yer kapladığı için",
+          "correct": false
+        },
+        {
+          "text": "Akslara bağlı taşıyıcı, değişiklikte tüm kata tutarlı yansıdığı için",
+          "correct": true
+        },
+        {
+          "text": "Rengi otomatik değiştiği için",
+          "correct": false
+        },
+        {
+          "text": "Metrajdan çıkarıldığı için",
+          "correct": false
+        }
+      ],
+      "explanation": "Kolon aks kesişimine yakalatıldığında taşıyıcı sistem akslara bağlı kalır ve değişiklik tüm kata tutarlı yansır; aksa oturmayan kolon modeli dağıtır. Yer kaplama, renk veya metrajdan çıkarma bu kuralın gerekçesi değildir.",
+      "bloom": "Analiz",
+      "difficulty": "Zor",
+      "outcomeCode": "K-B3.3"
+    },
+    {
+      "id": "M3-Q7",
+      "prompt": "Merdiven elemanı hangi elemanla birlikte ele alınır?",
+      "options": [
+        {
+          "text": "Korkulukla",
+          "correct": true
+        },
+        {
+          "text": "Çıktı ölçeğiyle",
+          "correct": false
+        },
+        {
+          "text": "Katman rengiyle",
+          "correct": false
+        },
+        {
+          "text": "Aks adıyla",
+          "correct": false
+        }
+      ],
+      "explanation": "Merdiven, güvenlik ve bütünlük açısından korkulukla birlikte yerleştirilir. Çıktı ölçeği, katman rengi ve aks adı merdivenin tamamlayıcı elemanı değildir.",
+      "bloom": "Hatırlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-B3.2"
+    }
+  ]
 }

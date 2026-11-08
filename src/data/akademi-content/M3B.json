@@ -9,31 +9,117 @@
   "prerequisite": "Seviye 2 tamamlanmış",
   "summary": "Karmaşık geometri ile cephe ve giydirme cephe sistemlerini modeller; tasarım varyantları türetir ve ortak kamera/ışık ile görselleştirme çıktısı alır.",
   "outcomes": [
-    { "text": "Karmaşık geometri ile cephe ve giydirme cephe (curtain wall) sistemlerini modeller", "bloom": "Yaratma", "code": "K-İ3B.1" },
-    { "text": "Tasarım varyantlarını (design variants) ve görselleştirme çıktısını oluşturur", "bloom": "Yaratma", "code": "K-İ3B.2" }
+    {
+      "text": "Karmaşık geometri ile cephe ve giydirme cephe (curtain wall) sistemlerini modeller",
+      "bloom": "Yaratma",
+      "code": "K-İ3B.1"
+    },
+    {
+      "text": "Tasarım varyantlarını (design variants) ve görselleştirme çıktısını oluşturur",
+      "bloom": "Yaratma",
+      "code": "K-İ3B.2"
+    }
   ],
   "concepts": [
-    { "term": "Cephe", "desc": "Binanın dış yüzeyini oluşturan yapı katmanı", "en": "Façade / Fassade" },
-    { "term": "Giydirme cephe", "desc": "Taşıyıcı olmayan, panel ve profillerden oluşan dış kabuk", "en": "Curtain wall" },
-    { "term": "Serbest geometri", "desc": "Standart elemanlara sığmayan, modelle oluşturulan biçim", "en": "Freeform / Solid" },
-    { "term": "Tasarım varyantı", "desc": "Aynı projenin karşılaştırılabilir alternatif çözümü", "en": "Design variant" },
-    { "term": "Görselleştirme", "desc": "Modelden gerçekçi ışıklı görsel üretme", "en": "Rendering" },
-    { "term": "Malzeme/kaplama", "desc": "Yüzeye atanan görsel ve fiziksel doku", "en": "Material / Surface" }
+    {
+      "term": "Cephe",
+      "desc": "Binanın dış yüzeyini oluşturan yapı katmanı",
+      "en": "Façade / Fassade"
+    },
+    {
+      "term": "Giydirme cephe",
+      "desc": "Taşıyıcı olmayan, panel ve profillerden oluşan dış kabuk",
+      "en": "Curtain wall"
+    },
+    {
+      "term": "Serbest geometri",
+      "desc": "Standart elemanlara sığmayan, modelle oluşturulan biçim",
+      "en": "Freeform / Solid"
+    },
+    {
+      "term": "Tasarım varyantı",
+      "desc": "Aynı projenin karşılaştırılabilir alternatif çözümü",
+      "en": "Design variant"
+    },
+    {
+      "term": "Görselleştirme",
+      "desc": "Modelden gerçekçi ışıklı görsel üretme",
+      "en": "Rendering"
+    },
+    {
+      "term": "Malzeme/kaplama",
+      "desc": "Yüzeye atanan görsel ve fiziksel doku",
+      "en": "Material / Surface"
+    }
   ],
   "sessionFlow": [
-    { "time": "0–5", "phase": "Dikkat çekme", "instructor": "Düz duvar vs. giydirme cephe örneği", "participant": "Farkı söyler", "material": "Slayt 1" },
-    { "time": "5–15", "phase": "Hedef + ön bilgi", "instructor": "Kazanımlar; Seviye 2 modelini bağlar", "participant": "Isınma sorusu", "material": "Diyagram" },
-    { "time": "15–40", "phase": "Demonstrasyon", "instructor": "Cephe gridini ve panel sistemini kurar", "participant": "İzler", "material": "Örnek proje" },
-    { "time": "40–95", "phase": "Rehberli uygulama", "instructor": "Katılımcılarla cephe modelini oluşturur", "participant": "Grid + panel yerleştirir", "material": "Adım kartı A3" },
-    { "time": "95–130", "phase": "Bağımsız görev", "instructor": "Dolaşır, geometriyi denetler", "participant": "Varyant + malzeme ekler", "material": "Görev A3" },
-    { "time": "130–145", "phase": "Görselleştirme", "instructor": "Kamera, ışık, render ayarını gösterir", "participant": "Render alır", "material": "Render ön ayarı" },
-    { "time": "145–155", "phase": "Değerlendirme", "instructor": "Kontrol listesi + mini quiz", "participant": "Quiz-İ3B'yi çözer", "material": "Quiz-İ3B" }
+    {
+      "time": "0–5",
+      "phase": "Dikkat çekme",
+      "instructor": "Düz duvar vs. giydirme cephe örneği",
+      "participant": "Farkı söyler",
+      "material": "Slayt 1"
+    },
+    {
+      "time": "5–15",
+      "phase": "Hedef + ön bilgi",
+      "instructor": "Kazanımlar; Seviye 2 modelini bağlar",
+      "participant": "Isınma sorusu",
+      "material": "Diyagram"
+    },
+    {
+      "time": "15–40",
+      "phase": "Demonstrasyon",
+      "instructor": "Cephe gridini ve panel sistemini kurar",
+      "participant": "İzler",
+      "material": "Örnek proje"
+    },
+    {
+      "time": "40–95",
+      "phase": "Rehberli uygulama",
+      "instructor": "Katılımcılarla cephe modelini oluşturur",
+      "participant": "Grid + panel yerleştirir",
+      "material": "Adım kartı A3"
+    },
+    {
+      "time": "95–130",
+      "phase": "Bağımsız görev",
+      "instructor": "Dolaşır, geometriyi denetler",
+      "participant": "Varyant + malzeme ekler",
+      "material": "Görev A3"
+    },
+    {
+      "time": "130–145",
+      "phase": "Görselleştirme",
+      "instructor": "Kamera, ışık, render ayarını gösterir",
+      "participant": "Render alır",
+      "material": "Render ön ayarı"
+    },
+    {
+      "time": "145–155",
+      "phase": "Değerlendirme",
+      "instructor": "Kontrol listesi + mini quiz",
+      "participant": "Quiz-İ3B'yi çözer",
+      "material": "Quiz-İ3B"
+    }
   ],
   "durationSplit": [
-    { "label": "Anlatım", "minutes": 40 },
-    { "label": "Uygulama", "minutes": 70 },
-    { "label": "Ölçme", "minutes": 10 },
-    { "label": "Bireysel", "minutes": 35 }
+    {
+      "label": "Anlatım",
+      "minutes": 40
+    },
+    {
+      "label": "Uygulama",
+      "minutes": 70
+    },
+    {
+      "label": "Ölçme",
+      "minutes": 10
+    },
+    {
+      "label": "Bireysel",
+      "minutes": 35
+    }
   ],
   "runningProjectStep": "Bu derste sürekli projenin mimari kolunda cephe (façade) detayı modellenir ve görselleştirme (render) çıktısı alınır.",
   "homework": "Sürekli projenin bir cephesini giydirme cephe olarak modelleyin, iki tasarım varyantı türetin ve her varyant için aynı kameradan bir render alın. Teslim: Proje dosyası + 2 render görseli. Süre: ~120 dk. Ölçüt: Gride bağlı paneller, atanmış malzemeler, ortak kameradan karşılaştırılabilir görseller.",
@@ -42,5 +128,194 @@
     "Başlangıç ve bitmiş cephe dosyası (kurum kaynağı eklenecek)",
     "Malzeme/kaplama kütüphanesi ve render ön ayar tablosu [sürüme göre doğrula]"
   ],
-  "proposed": true
+  "proposed": true,
+  "applicationSteps": [
+    {
+      "step": "Cephe için bir referans yüzey veya grid (grid / ızgara) tanımlayın. [sürüme göre doğrula]",
+      "why": "Panel ve profiller gride bağlanınca ölçü değişikliği tüm cepheye tutarlı yansır."
+    },
+    {
+      "step": "Giydirme cephe panellerini ve taşıyıcı profilleri yerleştirin.",
+      "why": "Panel bir nesnedir; cam/dolgu alanı ve profil metrajı otomatik üretilir."
+    },
+    {
+      "step": "Standart elemana sığmayan bölümleri serbest geometri (freeform) ile modelleyin.",
+      "why": "Karmaşık biçim çizgiyle değil katı/yüzey nesnesiyle kurulursa düzenlenebilir kalır."
+    },
+    {
+      "step": "Yüzeylere malzeme ve kaplama atayın.",
+      "why": "Malzeme hem görselleştirmeyi hem de yüzey metrajını besler."
+    },
+    {
+      "step": "İkinci bir tasarım varyantı türetin (örneğin farklı panel bölüntüsü). [sürüme göre doğrula]",
+      "why": "Varyantlar karşılaştırmayı kolaylaştırır; ana model bozulmadan alternatif denenir."
+    },
+    {
+      "step": "Kamera açısı, ışık ve render ön ayarını tanımlayıp görsel çıktı alın.",
+      "why": "Sabit kamera ve ışık, varyantların adil karşılaştırılmasını sağlar."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "mistake": "Panelleri gride bağlamama",
+      "symptom": "Ölçü değişince cephe dağılıyor",
+      "fix": "Panelleri referans gride yakalatın"
+    },
+    {
+      "mistake": "Serbest geometriyi çizgiyle kurma",
+      "symptom": "Biçim düzenlenemiyor",
+      "fix": "Katı/yüzey nesnesi olarak modelleyin"
+    },
+    {
+      "mistake": "Malzeme atanmaması",
+      "symptom": "Render gri/boş görünüyor",
+      "fix": "Yüzeylere malzeme/kaplama atayın"
+    },
+    {
+      "mistake": "Varyantı ana modele yazma",
+      "symptom": "Alternatif denerken proje bozuluyor",
+      "fix": "Varyantı ayrı katman/kopya üzerinde kurun"
+    },
+    {
+      "mistake": "Her varyantta farklı kamera",
+      "symptom": "Görseller karşılaştırılamıyor",
+      "fix": "Ortak kamera ve ışık ön ayarı kullanın"
+    }
+  ],
+  "differentiation": {
+    "fast": "Üçüncü bir varyant ve gece/gündüz iki ışık senaryosuyla render seti üretir.",
+    "support": "Tek düzlemli giydirme cephe + tek malzeme + tek kamera ile başlar; serbest geometri bir sonraki oturuma bırakılır."
+  },
+  "quiz": [
+    {
+      "id": "M3B-Q1",
+      "prompt": "Giydirme cephe panellerinin referans gride bağlanması, bağlanmamasına göre hangi davranışı sağlar?",
+      "options": [
+        {
+          "text": "Grid ölçüsü değiştiğinde paneller tutarlı biçimde birlikte güncellenir",
+          "correct": true
+        },
+        {
+          "text": "Paneller daha parlak renkte görünür",
+          "correct": false
+        },
+        {
+          "text": "Render süresi otomatik yarıya iner",
+          "correct": false
+        },
+        {
+          "text": "Panellerin malzemesi otomatik atanır",
+          "correct": false
+        }
+      ],
+      "explanation": "Gride bağlı paneller, grid ölçüsü değiştiğinde konum ve bölüntüyü tutarlı güncellerler; bağlanmayan panellerde ölçü değişince cephe dağılır. Renk parlaklığı, render süresi ve malzeme ataması grid bağının sağladığı davranış değildir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-İ3B.1"
+    },
+    {
+      "id": "M3B-Q2",
+      "prompt": "Karmaşık bir cephe bölümünü çizgiyle değil serbest geometri (katı/yüzey) nesnesiyle kurmanın temel gerekçesi nedir?",
+      "options": [
+        {
+          "text": "Nesne olarak kurulan biçim düzenlenebilir kalır ve metraj/görselleştirmeyi besler",
+          "correct": true
+        },
+        {
+          "text": "Çizgi nesnesi yazılımda hiç çizilemez",
+          "correct": false
+        },
+        {
+          "text": "Serbest geometri her zaman daha az bellek kullanır",
+          "correct": false
+        },
+        {
+          "text": "Çizgiyle kurulan biçim otomatik renklenir",
+          "correct": false
+        }
+      ],
+      "explanation": "Katı/yüzey nesnesi düzenlenebilir kalır ve yüzey metrajı ile görselleştirmeyi besler; çizgiyle kurulan biçim ise sonradan zor değiştirilir ve veri taşımaz. Çizginin hiç çizilememesi ve otomatik renklenme yanlıştır; bellek avantajı da bu tercihin özü değildir.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Zor",
+      "outcomeCode": "K-İ3B.1"
+    },
+    {
+      "id": "M3B-Q3",
+      "prompt": "Alınan render gri ve boş görünüyor. İlk kontrol edilmesi gereken olası neden nedir?",
+      "options": [
+        {
+          "text": "Yüzeylere malzeme/kaplama atanmamış olması",
+          "correct": true
+        },
+        {
+          "text": "Panellerin gride bağlı olması",
+          "correct": false
+        },
+        {
+          "text": "Tasarım varyantı sayısının az olması",
+          "correct": false
+        },
+        {
+          "text": "Kamera adının yazılmamış olması",
+          "correct": false
+        }
+      ],
+      "explanation": "Render, yüzeylere atanan malzemeden görsel bilgiyi alır; malzeme atanmamış yüzey gri/boş çıkar ve atama yapılınca düzelir. Gride bağlı panel doğru bir durumdur; varyant sayısı ve kamera adı görüntünün gri çıkmasının nedeni değildir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-İ3B.2"
+    },
+    {
+      "id": "M3B-Q4",
+      "prompt": "Bir tasarım varyantını ayrı katman/kopya üzerinde kurmak yerine doğrudan ana modele yazmak hangi soruna yol açar?",
+      "options": [
+        {
+          "text": "Alternatif denenirken ana proje bozulur ve geri dönüş zorlaşır",
+          "correct": true
+        },
+        {
+          "text": "Render çözünürlüğü otomatik düşer",
+          "correct": false
+        },
+        {
+          "text": "Malzeme kütüphanesi silinir",
+          "correct": false
+        },
+        {
+          "text": "Kamera ön ayarı kaybolur",
+          "correct": false
+        }
+      ],
+      "explanation": "Varyant ana modele yazılırsa alternatif denemeleri asıl projeyi bozar ve karşılaştırma için temiz bir referans kalmaz; ayrı katman/kopya bu riski ortadan kaldırır. Render çözünürlüğü, malzeme kütüphanesi ve kamera ön ayarı bu hatadan doğrudan etkilenmez.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Orta",
+      "outcomeCode": "K-İ3B.2"
+    },
+    {
+      "id": "M3B-Q5",
+      "prompt": "İki tasarım varyantının render görselleri adil biçimde karşılaştırılamıyor. En olası neden nedir?",
+      "options": [
+        {
+          "text": "Her varyantın farklı kamera ve ışık ile alınmış olması",
+          "correct": true
+        },
+        {
+          "text": "Her iki varyantın da aynı gride bağlı olması",
+          "correct": false
+        },
+        {
+          "text": "Varyantların ayrı katmanlarda kurulmuş olması",
+          "correct": false
+        },
+        {
+          "text": "Panellere malzeme atanmış olması",
+          "correct": false
+        }
+      ],
+      "explanation": "Farklı kamera açısı ve ışık, varyantlar arasındaki farkı değil çekim koşulunu değiştirir; ortak kamera/ışık ön ayarı adil karşılaştırmayı sağlar. Ortak gride bağlılık, ayrı katman ve malzeme atanmış olması doğru uygulamalardır, karşılaştırmayı bozmaz.",
+      "bloom": "Analiz",
+      "difficulty": "Zor",
+      "outcomeCode": "K-İ3B.2"
+    }
+  ]
 }

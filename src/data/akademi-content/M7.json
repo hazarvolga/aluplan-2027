@@ -127,5 +127,214 @@
     "Eleman kodlama şeması",
     "Üretim verisi/liste şablonu [sürüme göre doğrula]"
   ],
-  "proposed": false
+  "proposed": false,
+  "applicationSteps": [
+    {
+      "step": "Modeldeki bir mimari/taşıyıcı elemanı prefabrik elemana dönüştürün (panel, kiriş veya döşeme plağı). [sürüme göre doğrula]",
+      "why": "Prefabrik eleman, üretim ve montaj verisini taşıyan ayrı bir nesnedir."
+    },
+    {
+      "step": "Elemanı üretim ve taşıma sınırlarına göre segmentlere ayırın.",
+      "why": "Fabrika kapasitesi ve taşıma boyutu, parçanın büyüklüğünü sınırlar."
+    },
+    {
+      "step": "Her segmente benzersiz eleman kodu (mark) verin.",
+      "why": "Kod, üretim ve sahada montajın takibini sağlar."
+    },
+    {
+      "step": "Gömülü parçaları (kaldırma ankrajı, bağlantı plakası) ekleyin. [sürüme göre doğrula]",
+      "why": "Üretim ve montaj bu parçalar olmadan yapılamaz; veride görünmelidir."
+    },
+    {
+      "step": "Üretim verisini ve eleman listesini üretin (ölçü, donatı, gömülü parça özeti).",
+      "why": "Fabrika bu çıktıyla üretir; model ile liste tutarlı olmalıdır."
+    },
+    {
+      "step": "Eleman kodları ile listeyi karşılaştırıp eksik/çakışan kod olmadığını kontrol edin."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "mistake": "Segment sınırını taşıma boyutuna göre vermemek",
+      "symptom": "Parça üretilemez/taşınamaz",
+      "fix": "Segmenti üretim/taşıma limitine göre bölün"
+    },
+    {
+      "mistake": "Eleman kodunu tekrarlı vermek",
+      "symptom": "Listede çakışan kod",
+      "fix": "Benzersiz kodlama şemasını uygulayın"
+    },
+    {
+      "mistake": "Gömülü parçayı atlamak",
+      "symptom": "Üretim verisinde ankraj yok",
+      "fix": "Elemana gömülü parçaları ekleyin"
+    },
+    {
+      "mistake": "Model ile liste tutarsızlığı",
+      "symptom": "Üretim verisi yanlış",
+      "fix": "Listeyi modelden yeniden üretip eşleştirin [sürüme göre doğrula]"
+    }
+  ],
+  "differentiation": {
+    "fast": "Birden çok panel tipini kopyalayıp parametrik farklarla türetir ve toplu kod verir.",
+    "support": "Tek bir prefabrik panel; segment ayırma ve kodlama bir sonraki oturumda."
+  },
+  "quiz": [
+    {
+      "id": "M7-Q1",
+      "prompt": "Prefabrik (önüretimli) eleman ile yerinde döküm arasındaki temel fark nedir?",
+      "options": [
+        {
+          "text": "Prefabrik eleman fabrikada üretilip sahada montajlanır ve üretim/montaj verisini taşıyan ayrı bir nesnedir",
+          "correct": true
+        },
+        {
+          "text": "Prefabrik eleman yalnızca 2B çizilebilir, yerinde döküm 3B çizilir",
+          "correct": false
+        },
+        {
+          "text": "Prefabrik elemanın metrajı çıkarılamaz",
+          "correct": false
+        },
+        {
+          "text": "Yerinde döküm eleman kodu gerektirir, prefabrik gerektirmez",
+          "correct": false
+        }
+      ],
+      "explanation": "Prefabrik eleman fabrikada üretilip sahada birleştirilir ve üretim/montaj verisini taşıyan ayrı bir nesne olarak modellenir. Her ikisi de 3B modellenebilir. Prefabrik elemanın metrajı ve üretim verisi tam da çıkarılabilir olmalıdır. Eleman kodu/mark asıl prefabrik üretim-montaj takibi için gereklidir.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-İ7.1"
+    },
+    {
+      "id": "M7-Q2",
+      "prompt": "Bir prefabrik elemanı segmentlere ayırırken segment sınırını öncelikle ne belirler?",
+      "options": [
+        {
+          "text": "Fabrika üretim kapasitesi ve taşıma (nakliye) boyut limiti",
+          "correct": true
+        },
+        {
+          "text": "Elemanın ekranda göründüğü renk",
+          "correct": false
+        },
+        {
+          "text": "Paftanın çıktı ölçeği",
+          "correct": false
+        },
+        {
+          "text": "Modeldeki katman sayısı",
+          "correct": false
+        }
+      ],
+      "explanation": "Segment büyüklüğünü üretim kapasitesi ve taşıma boyutu sınırlar; limitin üstünde bir parça üretilemez veya taşınamaz. Renk, pafta ölçeği ve katman sayısı parçanın fiziksel üretilebilirliğiyle ilgisizdir.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-İ7.2"
+    },
+    {
+      "id": "M7-Q3",
+      "prompt": "Üretilen eleman listesinde çakışan (aynı) eleman kodu görünüyor. En olası neden nedir?",
+      "options": [
+        {
+          "text": "Gömülü parçalar modele eklenmemiş",
+          "correct": false
+        },
+        {
+          "text": "Benzersiz kodlama şeması uygulanmamış; aynı mark birden çok segmente verilmiş",
+          "correct": true
+        },
+        {
+          "text": "Segmentler taşıma limitinin altında bölünmüş",
+          "correct": false
+        },
+        {
+          "text": "Üretim verisi henüz oluşturulmamış",
+          "correct": false
+        }
+      ],
+      "explanation": "Her segmente benzersiz kod verilmezse listede aynı mark birden çok kez çıkar; çözüm benzersiz kodlama şemasını uygulamaktır. Gömülü parça eksikliği üretim verisini etkiler ama kod çakışmasını açıklamaz. Taşıma limitinin altında bölme segment sayısıyla ilgilidir, kod benzersizliğiyle değil. Veri üretilmemişse çakışan kod da görünmezdi.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-İ7.2"
+    },
+    {
+      "id": "M7-Q4",
+      "prompt": "Prefabrik elemana gömülü parçaların (kaldırma ankrajı, bağlantı plakası) modele eklenmesi neden gereklidir?",
+      "options": [
+        {
+          "text": "Üretim ve montaj bu parçalar olmadan yapılamaz; üretim verisinde görünmeleri gerekir",
+          "correct": true
+        },
+        {
+          "text": "Yalnızca elemanın ağırlığını azalttıkları için",
+          "correct": false
+        },
+        {
+          "text": "Yalnızca elemanın rengini belirledikleri için",
+          "correct": false
+        },
+        {
+          "text": "Segment sınırını otomatik çizdikleri için",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaldırma ve bağlantı için gerekli gömülü parçalar modelde yoksa üretim verisinde de görünmez ve montaj yapılamaz; bu yüzden eklenmeleri zorunludur. Gömülü parçalar ağırlığı azaltmaz, eklenti olarak eklenir. Renk ve segment sınırıyla ilişkileri yoktur.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-İ7.1"
+    },
+    {
+      "id": "M7-Q5",
+      "prompt": "Bir elemanı prefabriğe çevirirken doğru işlem sırası hangisidir?",
+      "options": [
+        {
+          "text": "Üretim verisi üret → kod ver → segmentle → prefabriğe çevir",
+          "correct": false
+        },
+        {
+          "text": "Prefabriğe çevir → segmentlere ayır → benzersiz kod ver → gömülü parça ekle → üretim verisi/liste üret",
+          "correct": true
+        },
+        {
+          "text": "Kod ver → prefabriğe çevir → segmentle → gömülü parça ekle",
+          "correct": false
+        },
+        {
+          "text": "Segmentle → üretim verisi üret → prefabriğe çevir → kod ver",
+          "correct": false
+        }
+      ],
+      "explanation": "Önce eleman prefabriğe çevrilir, üretim/taşıma limitine göre segmentlenir, her segmente benzersiz kod verilir, gömülü parçalar eklenir ve en sonda üretim verisi/liste üretilir. Üretim verisini veya kodu segmentlemeden önce üretmek, henüz tanımlanmamış parçalara dayanır ve yeniden çalışma doğurur.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-İ7.3"
+    },
+    {
+      "id": "M7-Q6",
+      "prompt": "Fabrikaya giden üretim verisinin model ile birebir tutarlı olması neden kritik bir gerekliliktir? [sürüme göre doğrula]",
+      "options": [
+        {
+          "text": "Fabrika üretimi bu çıktıya göre yaptığı için; model ile liste ayrışırsa yanlış parça üretilir",
+          "correct": true
+        },
+        {
+          "text": "Tutarlılık yalnızca dosya boyutunu küçülttüğü için",
+          "correct": false
+        },
+        {
+          "text": "Üretim verisi tutarlı olmazsa model otomatik silindiği için",
+          "correct": false
+        },
+        {
+          "text": "Tutarlılık yalnızca paftanın rengini düzelttiği için",
+          "correct": false
+        }
+      ],
+      "explanation": "Fabrika doğrudan üretim verisiyle imalat yapar; model ile liste ayrışırsa sahadaki parça modeldekinden farklı üretilir, bu da maliyetli hatadır. Tutarlılığın dosya boyutu, model silinmesi veya pafta rengiyle bir ilgisi yoktur.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Zor",
+      "outcomeCode": "K-İ7.3"
+    }
+  ]
 }

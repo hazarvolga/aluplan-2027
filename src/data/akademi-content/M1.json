@@ -9,31 +9,115 @@
   "prerequisite": "Yok",
   "summary": "ALLPLAN arayüzünün bölümlerini tanır, temel gezinme ve görünüm araçlarını kullanır; CAD ile BIM arasındaki farkı kavrar.",
   "outcomes": [
-    { "text": "ALLPLAN arayüzünün ana bölümlerini (Actionbar, paletler, çizim alanı, durum çubuğu) tanımlar", "bloom": "Hatırlama", "code": "K-B1.1" },
-    { "text": "Temel gezinme ve görünüm araçlarını kullanır", "bloom": "Uygulama", "code": "K-B1.2" },
-    { "text": "CAD ile BIM arasındaki farkı ve nesne tabanlı, parametrik modelleme mantığını açıklar", "bloom": "Anlama", "code": "K-B1.3" }
+    {
+      "text": "ALLPLAN arayüzünün ana bölümlerini (Actionbar, paletler, çizim alanı, durum çubuğu) tanımlar",
+      "bloom": "Hatırlama",
+      "code": "K-B1.1"
+    },
+    {
+      "text": "Temel gezinme ve görünüm araçlarını kullanır",
+      "bloom": "Uygulama",
+      "code": "K-B1.2"
+    },
+    {
+      "text": "CAD ile BIM arasındaki farkı ve nesne tabanlı, parametrik modelleme mantığını açıklar",
+      "bloom": "Anlama",
+      "code": "K-B1.3"
+    }
   ],
   "concepts": [
-    { "term": "BIM", "desc": "Geometri + veri içeren, nesne tabanlı yapı bilgi modeli", "en": "Building Information Modeling" },
-    { "term": "Parametrik nesne", "desc": "Değerleri değiştirilince kendini güncelleyen eleman", "en": "Parametric object" },
-    { "term": "Actionbar", "desc": "Görev/rol odaklı üst araç şeridi", "en": "Actionbar" },
-    { "term": "Palet", "desc": "Özellikler, kütüphane, katmanlar gibi yan pencereler", "en": "Palette" },
-    { "term": "Çizim dosyası", "desc": "Modelin parçalarının tutulduğu katman benzeri birim", "en": "Document / Teilbild" },
-    { "term": "Viewport", "desc": "Aynı modeli farklı açılardan gösteren pencere düzeni", "en": "Viewport" }
+    {
+      "term": "BIM",
+      "desc": "Geometri + veri içeren, nesne tabanlı yapı bilgi modeli",
+      "en": "Building Information Modeling"
+    },
+    {
+      "term": "Parametrik nesne",
+      "desc": "Değerleri değiştirilince kendini güncelleyen eleman",
+      "en": "Parametric object"
+    },
+    {
+      "term": "Actionbar",
+      "desc": "Görev/rol odaklı üst araç şeridi",
+      "en": "Actionbar"
+    },
+    {
+      "term": "Palet",
+      "desc": "Özellikler, kütüphane, katmanlar gibi yan pencereler",
+      "en": "Palette"
+    },
+    {
+      "term": "Çizim dosyası",
+      "desc": "Modelin parçalarının tutulduğu katman benzeri birim",
+      "en": "Document / Teilbild"
+    },
+    {
+      "term": "Viewport",
+      "desc": "Aynı modeli farklı açılardan gösteren pencere düzeni",
+      "en": "Viewport"
+    }
   ],
   "sessionFlow": [
-    { "time": "0–5", "phase": "Dikkat çekme", "instructor": "CAD çizgi vs. BIM duvar karşılaştırması gösterir", "participant": "Farkı tartışır", "material": "Slayt 1" },
-    { "time": "5–10", "phase": "Hedef ve ön bilgi", "instructor": "Kazanımları söyler, 'model = geometri + veri'", "participant": "Isınma sorusu", "material": "Slayt 2" },
-    { "time": "10–25", "phase": "Demonstrasyon", "instructor": "Arayüz turu: Actionbar, paletler, çizim alanı", "participant": "İzler, bölümleri işaretler", "material": "Örnek proje" },
-    { "time": "25–55", "phase": "Rehberli uygulama", "instructor": "Yakınlaştırma/kaydırma/viewport'u birlikte dener", "participant": "Adımları uygular", "material": "Adım kartı A1" },
-    { "time": "55–75", "phase": "Bağımsız görev", "instructor": "Dolaşır, destek verir", "participant": "Verilen görünümleri tek başına açar", "material": "Görev A1" },
-    { "time": "75–85", "phase": "Değerlendirme ve kapanış", "instructor": "Çıkış bileti / mini quiz", "participant": "Quiz-B1'i çözer", "material": "Quiz-B1" }
+    {
+      "time": "0–5",
+      "phase": "Dikkat çekme",
+      "instructor": "CAD çizgi vs. BIM duvar karşılaştırması gösterir",
+      "participant": "Farkı tartışır",
+      "material": "Slayt 1"
+    },
+    {
+      "time": "5–10",
+      "phase": "Hedef ve ön bilgi",
+      "instructor": "Kazanımları söyler, 'model = geometri + veri'",
+      "participant": "Isınma sorusu",
+      "material": "Slayt 2"
+    },
+    {
+      "time": "10–25",
+      "phase": "Demonstrasyon",
+      "instructor": "Arayüz turu: Actionbar, paletler, çizim alanı",
+      "participant": "İzler, bölümleri işaretler",
+      "material": "Örnek proje"
+    },
+    {
+      "time": "25–55",
+      "phase": "Rehberli uygulama",
+      "instructor": "Yakınlaştırma/kaydırma/viewport'u birlikte dener",
+      "participant": "Adımları uygular",
+      "material": "Adım kartı A1"
+    },
+    {
+      "time": "55–75",
+      "phase": "Bağımsız görev",
+      "instructor": "Dolaşır, destek verir",
+      "participant": "Verilen görünümleri tek başına açar",
+      "material": "Görev A1"
+    },
+    {
+      "time": "75–85",
+      "phase": "Değerlendirme ve kapanış",
+      "instructor": "Çıkış bileti / mini quiz",
+      "participant": "Quiz-B1'i çözer",
+      "material": "Quiz-B1"
+    }
   ],
   "durationSplit": [
-    { "label": "Anlatım", "minutes": 25 },
-    { "label": "Uygulama", "minutes": 30 },
-    { "label": "Ölçme", "minutes": 10 },
-    { "label": "Bireysel", "minutes": 20 }
+    {
+      "label": "Anlatım",
+      "minutes": 25
+    },
+    {
+      "label": "Uygulama",
+      "minutes": 30
+    },
+    {
+      "label": "Ölçme",
+      "minutes": 10
+    },
+    {
+      "label": "Bireysel",
+      "minutes": 20
+    }
   ],
   "runningProjectStep": "Bu derste proje dosyası açılır ve çalışma ortamı tanınır; henüz modelleme yapılmaz.",
   "homework": "Eğitim projesini açıp 3 farklı viewport düzeni kurun ve her birinin ekran görüntüsünü alın.",
@@ -42,5 +126,179 @@
     "ALLPLAN resmî yardım dökümanı (kurum kaynağı eklenecek)",
     "Kısayol tablosu [sürüme göre doğrula]"
   ],
-  "proposed": false
+  "proposed": false,
+  "applicationSteps": [
+    {
+      "step": "ALLPLAN'ı açın ve eğitim projesini seçin.",
+      "why": "Her ders aynı sürekli proje üzerinden ilerler."
+    },
+    {
+      "step": "Actionbar'daki rol/görev sekmelerini inceleyin. [sürüme göre doğrula]",
+      "why": "Araçlar role göre gruplanır; doğru sekme doğru aracı bulmayı hızlandırır."
+    },
+    {
+      "step": "Paletleri açıp kapatın (Özellikler, Kütüphane, Katmanlar).",
+      "why": "Ekran düzenini kendinize göre kurmak bilişsel yükü azaltır."
+    },
+    {
+      "step": "Fare tekerleğiyle yakınlaştırın, orta tuşla kaydırın, 'tümünü sığdır' ile modeli ortalayın."
+    },
+    {
+      "step": "Viewport düzenini değiştirin (plan + 3B).",
+      "why": "BIM'de aynı model birden çok görünümde eş zamanlı güncellenir; bunu görmek nesne tabanlı mantığı pekiştirir."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "mistake": "Paleti kapatıp bulamama",
+      "symptom": "Yan pencere kayboldu",
+      "fix": "Görünüm/Paletler menüsünden geri açın [sürüme göre doğrula]"
+    },
+    {
+      "mistake": "Yanlış viewport'ta çizim",
+      "symptom": "Eleman beklenmedik yerde görünüyor",
+      "fix": "Aktif viewport'u kontrol edin"
+    },
+    {
+      "mistake": "Kaydırmayı zoom sanma",
+      "symptom": "Model 'kayboldu'",
+      "fix": "'Tümünü sığdır' ile geri dönün"
+    }
+  ],
+  "differentiation": {
+    "fast": "Kendi palet/kısayol düzenini kaydedip ekran görüntüsüyle paylaşır.",
+    "support": "Yalnızca plan + 3B ikili viewport ile çalışır; diğer düzenler sonraya."
+  },
+  "quiz": [
+    {
+      "id": "M1-Q1",
+      "prompt": "BIM'i geleneksel CAD'den ayıran temel özellik nedir?",
+      "options": [
+        {
+          "text": "Daha hızlı çizim yapması",
+          "correct": false
+        },
+        {
+          "text": "Nesnelerin geometriyle birlikte veri taşıması",
+          "correct": true
+        },
+        {
+          "text": "Sadece 3B çizmesi",
+          "correct": false
+        },
+        {
+          "text": "Renkli çıktı vermesi",
+          "correct": false
+        }
+      ],
+      "explanation": "BIM'de bir duvar yalnızca çizgi değil; kalınlık, malzeme, yükseklik gibi veriyi de taşır. Hız bir sonuçtur, tanım değildir; BIM 2B de üretir; çıktı rengi ise konuyla ilgisizdir.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-B1.3"
+    },
+    {
+      "id": "M1-Q2",
+      "prompt": "Parametrik nesne ne demektir?",
+      "options": [
+        {
+          "text": "Yükseklik, kalınlık gibi değerleri değiştirilince kendini güncelleyen eleman",
+          "correct": true
+        },
+        {
+          "text": "Yalnızca tek bir açıdan görünen sabit çizim",
+          "correct": false
+        },
+        {
+          "text": "Veri taşımayan basit bir çizgi grubu",
+          "correct": false
+        },
+        {
+          "text": "Sadece renk bilgisi tutan bir katman",
+          "correct": false
+        }
+      ],
+      "explanation": "Parametrik nesne değerleri (yükseklik, kalınlık) değiştiğinde geometrisini otomatik günceller; bu yüzden tek yerden düzenlenir. Sabit çizim, veri taşımayan çizgi ve yalnızca renk tutan katman parametrik davranış göstermez.",
+      "bloom": "Anlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-B1.3"
+    },
+    {
+      "id": "M1-Q3",
+      "prompt": "Paletler (Özellikler, Kütüphane, Katmanlar) ne işe yarar?",
+      "options": [
+        {
+          "text": "Modeli kalıcı olarak kaydeder",
+          "correct": false
+        },
+        {
+          "text": "Özellik, kütüphane ve katman gibi araçları yan pencerelerde erişilebilir kılar",
+          "correct": true
+        },
+        {
+          "text": "Çizim alanının çözünürlüğünü artırır",
+          "correct": false
+        },
+        {
+          "text": "Yalnızca 3B görünümde çalışır",
+          "correct": false
+        }
+      ],
+      "explanation": "Paletler; özellikler, kütüphane ve katmanlar gibi işlevlere yan pencerelerden erişim sağlar ve ekran düzeninin kurulmasına yardımcı olur. Kaydetme, çözünürlük veya yalnızca 3B ile çalışma paletin işlevi değildir.",
+      "bloom": "Hatırlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-B1.1"
+    },
+    {
+      "id": "M1-Q4",
+      "prompt": "Bir modelde neden birden fazla viewport (ör. plan + 3B) açılır?",
+      "options": [
+        {
+          "text": "Her viewport ayrı bir model dosyası tuttuğu için",
+          "correct": false
+        },
+        {
+          "text": "Aynı model farklı açılardan eş zamanlı görülüp güncellenebildiği için",
+          "correct": true
+        },
+        {
+          "text": "Dosya boyutunu küçültmek için",
+          "correct": false
+        },
+        {
+          "text": "Yalnızca çıktı rengini değiştirmek için",
+          "correct": false
+        }
+      ],
+      "explanation": "Viewport'lar aynı modeli farklı açılardan gösterir; biri değişince hepsi birlikte güncellenir, bu da nesne tabanlı mantığı pekiştirir. Her viewport ayrı dosya tutmaz, dosyayı küçültmez ve çıktı rengini yönetmez.",
+      "bloom": "Anlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-B1.2"
+    },
+    {
+      "id": "M1-Q5",
+      "prompt": "Çalışırken model ekrandan kaybolduğunda görünümü hızla geri getirmek için en uygun araç hangisidir?",
+      "options": [
+        {
+          "text": "Projeyi kapatıp yeniden açmak",
+          "correct": false
+        },
+        {
+          "text": "Yeni bir çizim dosyası oluşturmak",
+          "correct": false
+        },
+        {
+          "text": "'Tümünü sığdır' ile modeli görünüme ortalamak",
+          "correct": true
+        },
+        {
+          "text": "Paletleri tek tek kapatmak",
+          "correct": false
+        }
+      ],
+      "explanation": "'Tümünü sığdır', kaydırma/yakınlaştırma sonucu görünüm dışına çıkan modeli tekrar ekrana ortalar. Projeyi kapatmak, yeni dosya açmak veya paletleri kapatmak görünümü geri getirmez.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-B1.2"
+    }
+  ]
 }

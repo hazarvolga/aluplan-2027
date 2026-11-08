@@ -9,31 +9,115 @@
   "prerequisite": "O.M4",
   "summary": "Kütüphane elemanlarını ve parametrik objeleri yönetir, elemanlara özellik atayıp sınıflandırır; modelden metraj, kapı/pencere çizelgesi ve mahal listesi üretir.",
   "outcomes": [
-    { "text": "Kütüphane elemanlarını ve özel parametrik objeleri yönetir", "bloom": "Uygulama", "code": "K-O4B.1" },
-    { "text": "Elemanlara özellik (attribute) atar ve sınıflandırma mantığını uygular", "bloom": "Uygulama", "code": "K-O4B.2" },
-    { "text": "Metraj, kapı/pencere çizelgesi ve mahal listesi üretir", "bloom": "Yaratma", "code": "K-O4B.3" }
+    {
+      "text": "Kütüphane elemanlarını ve özel parametrik objeleri yönetir",
+      "bloom": "Uygulama",
+      "code": "K-O4B.1"
+    },
+    {
+      "text": "Elemanlara özellik (attribute) atar ve sınıflandırma mantığını uygular",
+      "bloom": "Uygulama",
+      "code": "K-O4B.2"
+    },
+    {
+      "text": "Metraj, kapı/pencere çizelgesi ve mahal listesi üretir",
+      "bloom": "Yaratma",
+      "code": "K-O4B.3"
+    }
   ],
   "concepts": [
-    { "term": "Kütüphane", "desc": "Hazır obje ve sembollerin saklandığı kaynak", "en": "Library" },
-    { "term": "Parametrik obje", "desc": "Değerle değişen, yeniden kullanılabilir akıllı eleman", "en": "Parametric object / SmartPart" },
-    { "term": "Özellik (attribute)", "desc": "Elemana iliştirilen veri alanı (ad, malzeme, kod)", "en": "Attribute / property" },
-    { "term": "Sınıflandırma", "desc": "Elemanları ortak koda göre gruplayan sistem", "en": "Classification" },
-    { "term": "Metraj", "desc": "Model verisinden üretilen miktar/alan/adet listesi", "en": "Quantity take-off" },
-    { "term": "Mahal listesi", "desc": "Odaların alan ve işlev dökümü", "en": "Room schedule" }
+    {
+      "term": "Kütüphane",
+      "desc": "Hazır obje ve sembollerin saklandığı kaynak",
+      "en": "Library"
+    },
+    {
+      "term": "Parametrik obje",
+      "desc": "Değerle değişen, yeniden kullanılabilir akıllı eleman",
+      "en": "Parametric object / SmartPart"
+    },
+    {
+      "term": "Özellik (attribute)",
+      "desc": "Elemana iliştirilen veri alanı (ad, malzeme, kod)",
+      "en": "Attribute / property"
+    },
+    {
+      "term": "Sınıflandırma",
+      "desc": "Elemanları ortak koda göre gruplayan sistem",
+      "en": "Classification"
+    },
+    {
+      "term": "Metraj",
+      "desc": "Model verisinden üretilen miktar/alan/adet listesi",
+      "en": "Quantity take-off"
+    },
+    {
+      "term": "Mahal listesi",
+      "desc": "Odaların alan ve işlev dökümü",
+      "en": "Room schedule"
+    }
   ],
   "sessionFlow": [
-    { "time": "0–5", "phase": "Dikkat çekme", "instructor": "Elle sayılan metraj vs. modelden metraj", "participant": "Farkı söyler", "material": "Slayt 1" },
-    { "time": "5–15", "phase": "Hedef + ön bilgi", "instructor": "Kazanımlar; M4 dokümanını veriye bağlar", "participant": "Isınma sorusu", "material": "Diyagram" },
-    { "time": "15–35", "phase": "Demonstrasyon", "instructor": "Özellik atar, kütüphaneden obje yerleştirir", "participant": "İzler", "material": "Örnek proje" },
-    { "time": "35–85", "phase": "Rehberli uygulama", "instructor": "Katılımcılarla özellik + sınıflandırma uygular", "participant": "Elemanları etiketler", "material": "Adım kartı A3" },
-    { "time": "85–120", "phase": "Bağımsız görev", "instructor": "Dolaşır, listeleri denetler", "participant": "Metraj + çizelge üretir", "material": "Görev A3" },
-    { "time": "120–130", "phase": "Değerlendirme", "instructor": "Kontrol listesi + mini quiz", "participant": "Quiz-O4B'yi çözer", "material": "Quiz-O4B" }
+    {
+      "time": "0–5",
+      "phase": "Dikkat çekme",
+      "instructor": "Elle sayılan metraj vs. modelden metraj",
+      "participant": "Farkı söyler",
+      "material": "Slayt 1"
+    },
+    {
+      "time": "5–15",
+      "phase": "Hedef + ön bilgi",
+      "instructor": "Kazanımlar; M4 dokümanını veriye bağlar",
+      "participant": "Isınma sorusu",
+      "material": "Diyagram"
+    },
+    {
+      "time": "15–35",
+      "phase": "Demonstrasyon",
+      "instructor": "Özellik atar, kütüphaneden obje yerleştirir",
+      "participant": "İzler",
+      "material": "Örnek proje"
+    },
+    {
+      "time": "35–85",
+      "phase": "Rehberli uygulama",
+      "instructor": "Katılımcılarla özellik + sınıflandırma uygular",
+      "participant": "Elemanları etiketler",
+      "material": "Adım kartı A3"
+    },
+    {
+      "time": "85–120",
+      "phase": "Bağımsız görev",
+      "instructor": "Dolaşır, listeleri denetler",
+      "participant": "Metraj + çizelge üretir",
+      "material": "Görev A3"
+    },
+    {
+      "time": "120–130",
+      "phase": "Değerlendirme",
+      "instructor": "Kontrol listesi + mini quiz",
+      "participant": "Quiz-O4B'yi çözer",
+      "material": "Quiz-O4B"
+    }
   ],
   "durationSplit": [
-    { "label": "Anlatım", "minutes": 35 },
-    { "label": "Uygulama", "minutes": 50 },
-    { "label": "Ölçme", "minutes": 10 },
-    { "label": "Bireysel", "minutes": 35 }
+    {
+      "label": "Anlatım",
+      "minutes": 35
+    },
+    {
+      "label": "Uygulama",
+      "minutes": 50
+    },
+    {
+      "label": "Ölçme",
+      "minutes": 10
+    },
+    {
+      "label": "Bireysel",
+      "minutes": 35
+    }
   ],
   "runningProjectStep": "Bu derste sürekli projenin elemanlarına özellikler atanır ve modelden metraj, kapı/pencere çizelgesi ile mahal listesi üretilir.",
   "homework": "Sürekli projede duvar ve kapı/pencerelere özellik atayın; bir metraj listesi ve bir kapı/pencere çizelgesi üretin. Teslim: Çizelge çıktısı + proje dosyası. Süre: ~120 dk. Ölçüt: Dolu özellik alanları, doğru miktarlar, filtrelenebilir sınıflandırma.",
@@ -42,5 +126,220 @@
     "Özellik atanmış örnek proje dosyası (kurum kaynağı eklenecek)",
     "Attribute ve poz/kod şablonu tablosu [sürüme göre doğrula]"
   ],
-  "proposed": true
+  "proposed": true,
+  "applicationSteps": [
+    {
+      "step": "Kütüphaneden gerekli objeleri (mobilya, kapı/pencere tipleri) modele yerleştirin. [sürüme göre doğrula]",
+      "why": "Hazır kütüphane tekrar eden çizimi önler ve objeler metraja otomatik yansır."
+    },
+    {
+      "step": "Bir özel parametrik objeyi parametreleriyle düzenleyin.",
+      "why": "Aynı obje, ölçü değiştirilerek farklı yerlerde yeniden kullanılır; tek tanım çok varyant verir."
+    },
+    {
+      "step": "Elemanlara özellik (attribute) atayın: ad, malzeme, poz/kod.",
+      "why": "Metraj ve çizelge bu veri alanlarından beslenir; veri yoksa liste de boş çıkar."
+    },
+    {
+      "step": "Sınıflandırma mantığını uygulayın (ör. duvarları işleve göre gruplama). [sürüme göre doğrula]",
+      "why": "Sınıflandırma, listeleri derli toplu ve filtrelenebilir yapar."
+    },
+    {
+      "step": "Modelden metraj listesini (alan/hacim/adet) üretin.",
+      "why": "Miktarlar modelden türediği için model değişince liste güncellenir; elle sayım hatası ortadan kalkar."
+    },
+    {
+      "step": "Kapı/pencere çizelgesini ve mahal listesini oluşturun.",
+      "why": "Bu çizelgeler hem dokümanın hem de keşif/maliyet çalışmasının temelini oluşturur."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "mistake": "Elemana özellik atamama",
+      "symptom": "Metrajda isim/kod boş çıkıyor",
+      "fix": "Eksik attribute alanlarını doldurun"
+    },
+    {
+      "mistake": "Sınıflandırmayı atlama",
+      "symptom": "Liste karışık, filtrelenemiyor",
+      "fix": "Elemanları ortak koda göre sınıflandırın"
+    },
+    {
+      "mistake": "Kütüphane objesini çizgiyle taklit etme",
+      "symptom": "Obje metrajda görünmüyor",
+      "fix": "Gerçek kütüphane objesi kullanın"
+    },
+    {
+      "mistake": "Mahal sınırını eksik tanımlama",
+      "symptom": "Oda alanı hatalı/çıkmıyor",
+      "fix": "Mahal (oda) elemanını kapalı tanımlayın"
+    },
+    {
+      "mistake": "Listeyi dışa aktarmadan bırakma",
+      "symptom": "Veri paylaşılamıyor",
+      "fix": "Çizelgeyi tablo/çıktı olarak dışa aktarın"
+    }
+  ],
+  "differentiation": {
+    "fast": "Ofis için standart bir özellik (attribute) ve poz/kod şablonu taslağı hazırlar.",
+    "support": "Yalnızca kapı/pencere çizelgesiyle başlar; metraj ve mahal sonraki oturumda."
+  },
+  "quiz": [
+    {
+      "id": "M4B-Q1",
+      "prompt": "Metraj neden elle sayım yerine modelden üretilir?",
+      "options": [
+        {
+          "text": "Miktarlar modelden türediği için model değişince liste birlikte güncellenir ve sayım hatası azalır",
+          "correct": true
+        },
+        {
+          "text": "Modelden üretilen metraj her zaman daha renklidir",
+          "correct": false
+        },
+        {
+          "text": "Elle sayım yazılımda mümkün değildir",
+          "correct": false
+        },
+        {
+          "text": "Modelden metraj dosya boyutunu küçültür",
+          "correct": false
+        }
+      ],
+      "explanation": "Model tabanlı metraj, miktarı eleman verisinden türetir; model değişince liste de güncellenir ve manuel sayım hatası ortadan kalkar. Renk ve dosya boyutu konu dışıdır; elle sayım teknik olarak mümkündür ama hataya ve tekrara açıktır.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-O4B.3"
+    },
+    {
+      "id": "M4B-Q2",
+      "prompt": "Bir elemana atanan özellik (attribute) temel olarak ne işe yarar?",
+      "options": [
+        {
+          "text": "Metraj ve çizelgeleri besleyen veri alanını (ad, malzeme, poz/kod) taşır",
+          "correct": true
+        },
+        {
+          "text": "Elemanın ekranda görünme rengini belirler",
+          "correct": false
+        },
+        {
+          "text": "Elemanı otomatik olarak siler",
+          "correct": false
+        },
+        {
+          "text": "Modelin dosya biçimini değiştirir",
+          "correct": false
+        }
+      ],
+      "explanation": "Attribute, elemana iliştirilen veri alanıdır; metraj ve çizelgeler bu alanlardan beslenir. Renk, silme ve dosya biçimi attribute'un işlevi değildir; veri taşımadan liste boş çıkar.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-O4B.2"
+    },
+    {
+      "id": "M4B-Q3",
+      "prompt": "Metraj listesinde bazı kapıların adı boş çıkıyor. En olası neden nedir?",
+      "options": [
+        {
+          "text": "Kapılara ad/kod attribute'u atanmamış olması",
+          "correct": true
+        },
+        {
+          "text": "Pafta ölçeğinin yanlış seçilmesi",
+          "correct": false
+        },
+        {
+          "text": "Çıktının yanlış kağıt boyutunda alınması",
+          "correct": false
+        },
+        {
+          "text": "Kesit çizgisinin yanlış yere konması",
+          "correct": false
+        }
+      ],
+      "explanation": "Çizelge veri alanlarından beslendiği için ad/kod attribute'u atanmamış kapı metrajda isimsiz görünür; eksik alan doldurulunca sorun kalkar. Pafta ölçeği, kağıt boyutu ve kesit çizgisi dokümantasyon konularıdır, metraj verisinin boş çıkmasını açıklamaz.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-O4B.2"
+    },
+    {
+      "id": "M4B-Q4",
+      "prompt": "Mahal listesinde bazı odalar eksik çıkıyor. İlk kontrol edilmesi gereken nedir?",
+      "options": [
+        {
+          "text": "Oda/mahal nesnelerinin tanımlı ve sınırının kapalı olup olmadığı",
+          "correct": true
+        },
+        {
+          "text": "Pafta antetinin doldurulmuş olup olmadığı",
+          "correct": false
+        },
+        {
+          "text": "Çıktı renginin doğru olup olmadığı",
+          "correct": false
+        },
+        {
+          "text": "Projedeki kat sayısı",
+          "correct": false
+        }
+      ],
+      "explanation": "Mahal listesi tanımlı oda nesnelerinden beslenir; sınırı kapalı tanımlanmamış veya hiç tanımlanmamış mekân listeye girmez. Antet, çıktı rengi ve kat sayısı odanın listeye girmesini belirlemez.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-O4B.3"
+    },
+    {
+      "id": "M4B-Q5",
+      "prompt": "Kütüphane objesi kullanmanın, elemanı çizgiyle taklit etmeye göre temel avantajı nedir?",
+      "options": [
+        {
+          "text": "Obje bir nesne olduğu için metraja ve çizelgeye otomatik yansır",
+          "correct": true
+        },
+        {
+          "text": "Çizgiye göre daha az dosya alanı kaplar",
+          "correct": false
+        },
+        {
+          "text": "Her zaman daha hızlı çizilir",
+          "correct": false
+        },
+        {
+          "text": "Çıktıda daha koyu görünür",
+          "correct": false
+        }
+      ],
+      "explanation": "Kütüphane objesi veri taşıyan bir nesnedir; metraj ve çizelgeye otomatik girer, oysa çizgiyle taklit edilen eleman listelerde görünmez. Dosya alanı, çizim hızı ve çıktı koyuluğu bu avantajın özü değildir.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-O4B.1"
+    },
+    {
+      "id": "M4B-Q6",
+      "prompt": "Özellikten çizelgeye giden doğru iş akışı sırası hangisidir?",
+      "options": [
+        {
+          "text": "Özellik ata → sınıflandır → metraj üret → kapı/pencere ve mahal çizelgesini oluştur",
+          "correct": true
+        },
+        {
+          "text": "Çizelge oluştur → metraj üret → özellik ata → sınıflandır",
+          "correct": false
+        },
+        {
+          "text": "Metraj üret → özellik ata → çizelge oluştur → sınıflandır",
+          "correct": false
+        },
+        {
+          "text": "Sınıflandır → çizelge oluştur → özellik ata → metraj üret",
+          "correct": false
+        }
+      ],
+      "explanation": "Önce elemanlara veri (özellik) atanır, sınıflandırılır, ardından bu veriden metraj ve çizelgeler üretilir; her adım bir öncekinin verisine dayanır. Diğer sıralar listeyi veri hazır olmadan öne aldığından boş veya hatalı çıktı üretir.",
+      "bloom": "Uygulama",
+      "difficulty": "Zor",
+      "outcomeCode": "K-O4B.3"
+    }
+  ]
 }

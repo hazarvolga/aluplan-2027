@@ -9,30 +9,110 @@
   "prerequisite": "Seviye 3'ten en az bir kol",
   "summary": "Sürekli projede tekrar eden işleri görsel programlama ile otomatikleştirir ve PythonParts ile özel parametrik objeler geliştirir.",
   "outcomes": [
-    { "text": "Görsel programlama (visual scripting) ile parametrik bir iş akışını kurgular", "bloom": "Yaratma", "code": "K-U9.1" },
-    { "text": "PythonParts ile özel bir parametrik obje/otomasyon geliştirir", "bloom": "Yaratma", "code": "K-U9.2" }
+    {
+      "text": "Görsel programlama (visual scripting) ile parametrik bir iş akışını kurgular",
+      "bloom": "Yaratma",
+      "code": "K-U9.1"
+    },
+    {
+      "text": "PythonParts ile özel bir parametrik obje/otomasyon geliştirir",
+      "bloom": "Yaratma",
+      "code": "K-U9.2"
+    }
   ],
   "concepts": [
-    { "term": "Görsel programlama", "desc": "Kod yazmadan, blokları bağlayarak kurulan parametrik akış", "en": "Visual Scripting" },
-    { "term": "Düğüm", "desc": "Akışta tek bir işlem yapan blok (girdi–işlem–çıktı)", "en": "Node" },
-    { "term": "Parametre", "desc": "Dışarıdan değiştirilen değer (sayı, mesafe, adet)", "en": "Parameter" },
-    { "term": "PythonPart", "desc": "Python ile tanımlanan özel parametrik obje", "en": "PythonPart" },
-    { "term": "PYP dosyası", "desc": "PythonPart'ın arayüz/parametre tanımını tutan dosya", "en": ".pyp file" },
-    { "term": "Otomasyon", "desc": "Tekrar eden bir işin tek komutla üretilmesi", "en": "Automation" }
+    {
+      "term": "Görsel programlama",
+      "desc": "Kod yazmadan, blokları bağlayarak kurulan parametrik akış",
+      "en": "Visual Scripting"
+    },
+    {
+      "term": "Düğüm",
+      "desc": "Akışta tek bir işlem yapan blok (girdi–işlem–çıktı)",
+      "en": "Node"
+    },
+    {
+      "term": "Parametre",
+      "desc": "Dışarıdan değiştirilen değer (sayı, mesafe, adet)",
+      "en": "Parameter"
+    },
+    {
+      "term": "PythonPart",
+      "desc": "Python ile tanımlanan özel parametrik obje",
+      "en": "PythonPart"
+    },
+    {
+      "term": "PYP dosyası",
+      "desc": "PythonPart'ın arayüz/parametre tanımını tutan dosya",
+      "en": ".pyp file"
+    },
+    {
+      "term": "Otomasyon",
+      "desc": "Tekrar eden bir işin tek komutla üretilmesi",
+      "en": "Automation"
+    }
   ],
   "sessionFlow": [
-    { "time": "0–5", "phase": "Dikkat çekme", "instructor": "Elle 50 kolon vs. tek akışla 50 kolon", "participant": "Farkı söyler", "material": "Slayt 1" },
-    { "time": "5–15", "phase": "Hedef + ön bilgi", "instructor": "Kazanımlar; parametrik mantığı bağlar", "participant": "Isınma sorusu", "material": "Diyagram" },
-    { "time": "15–40", "phase": "Demonstrasyon", "instructor": "Basit bir görsel akış kurar (dizi üretir)", "participant": "İzler", "material": "Örnek akış" },
-    { "time": "40–95", "phase": "Rehberli uygulama", "instructor": "Katılımcılarla akışı parametrik hale getirir", "participant": "Düğümleri bağlar", "material": "Adım kartı A3" },
-    { "time": "95–150", "phase": "Bağımsız görev", "instructor": "Dolaşır, akışı ve PythonPart'ı denetler", "participant": "Kendi otomasyonunu kurar", "material": "Görev A3" },
-    { "time": "150–165", "phase": "Değerlendirme", "instructor": "Kontrol listesi + mini quiz", "participant": "Quiz-U9'u çözer", "material": "Quiz-U9" }
+    {
+      "time": "0–5",
+      "phase": "Dikkat çekme",
+      "instructor": "Elle 50 kolon vs. tek akışla 50 kolon",
+      "participant": "Farkı söyler",
+      "material": "Slayt 1"
+    },
+    {
+      "time": "5–15",
+      "phase": "Hedef + ön bilgi",
+      "instructor": "Kazanımlar; parametrik mantığı bağlar",
+      "participant": "Isınma sorusu",
+      "material": "Diyagram"
+    },
+    {
+      "time": "15–40",
+      "phase": "Demonstrasyon",
+      "instructor": "Basit bir görsel akış kurar (dizi üretir)",
+      "participant": "İzler",
+      "material": "Örnek akış"
+    },
+    {
+      "time": "40–95",
+      "phase": "Rehberli uygulama",
+      "instructor": "Katılımcılarla akışı parametrik hale getirir",
+      "participant": "Düğümleri bağlar",
+      "material": "Adım kartı A3"
+    },
+    {
+      "time": "95–150",
+      "phase": "Bağımsız görev",
+      "instructor": "Dolaşır, akışı ve PythonPart'ı denetler",
+      "participant": "Kendi otomasyonunu kurar",
+      "material": "Görev A3"
+    },
+    {
+      "time": "150–165",
+      "phase": "Değerlendirme",
+      "instructor": "Kontrol listesi + mini quiz",
+      "participant": "Quiz-U9'u çözer",
+      "material": "Quiz-U9"
+    }
   ],
   "durationSplit": [
-    { "label": "Anlatım", "minutes": 40 },
-    { "label": "Uygulama", "minutes": 55 },
-    { "label": "Ölçme", "minutes": 15 },
-    { "label": "Bireysel", "minutes": 55 }
+    {
+      "label": "Anlatım",
+      "minutes": 40
+    },
+    {
+      "label": "Uygulama",
+      "minutes": 55
+    },
+    {
+      "label": "Ölçme",
+      "minutes": 15
+    },
+    {
+      "label": "Bireysel",
+      "minutes": 55
+    }
   ],
   "runningProjectStep": "Bu derste sürekli projede tekrar eden işler (tekrarlı eleman dizileri, sayısal güncellemeler, liste üretimi) görsel programlama ve PythonParts ile otomatikleştirilir.",
   "homework": "Sürekli projede tekrar eden bir işi (ör. merdiven basamakları veya cephe bölme dizisi) görsel programlama ile otomatikleştirin ve en az bir parametresi dışarıdan değişen küçük bir PythonPart üretin. Teslim: Akış dosyası + PythonPart + 3B görünüm · Süre: ~120 dk · Ölçüt: Parametre değişiminde modelin doğru güncellenmesi, gömülü değer bulunmaması.",
@@ -40,6 +120,221 @@
   "materials": [
     "Örnek görsel akış ve PythonPart iskelet dosyası (kurum kaynağı eklenecek)",
     "ALLPLAN Python API referansı ve parametre tablosu [sürüme göre doğrula]"
+  ],
+  "applicationSteps": [
+    {
+      "step": "Otomatikleştirilecek tekrar eden işi tanımlayın (ör. aks boyunca kolon dizisi).",
+      "why": "Otomasyon ancak işin kuralı net olduğunda doğru sonuç verir; önce kural, sonra akış."
+    },
+    {
+      "step": "Görsel programlama ortamını açın ve girdi parametrelerini (adet, aralık, yükseklik) tanımlayın. [sürüme göre doğrula]",
+      "why": "Parametreler dışarıdan değişince akış yeniden çizilmeden güncellenir."
+    },
+    {
+      "step": "Düğümleri sırayla bağlayın: girdi → geometri üretimi → yerleştirme.",
+      "why": "Her düğüm tek iş yaptığında akış okunur kalır ve hatayı bulmak kolaylaşır."
+    },
+    {
+      "step": "Akışı farklı parametre değerleriyle çalıştırıp çıktıyı doğrulayın.",
+      "why": "Otomasyonun güvenilirliği, sınır değerlerde (0, çok büyük adet) test edilerek anlaşılır."
+    },
+    {
+      "step": "Tekrarlı özel bir obje için basit bir PythonPart iskeleti oluşturun; parametreleri PYP arayüzünden girin. [sürüme göre doğrula]",
+      "why": "PythonPart, görsel akışın yetmediği özel geometri ve kuralları kodla tanımlamayı sağlar."
+    },
+    {
+      "step": "PythonPart'ı sürekli projeye yerleştirip parametre değişiminde modelin güncellendiğini denetleyin.",
+      "why": "Amaç tek seferlik geometri değil, yeniden kullanılabilir bir araçtır."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "mistake": "Kuralı netleştirmeden akışa başlama",
+      "symptom": "Akış çalışır ama yanlış dizer",
+      "fix": "Önce girdi/çıktı kuralını yazın"
+    },
+    {
+      "mistake": "Değeri akışa gömme (hardcode)",
+      "symptom": "Parametre değişince güncellenmez",
+      "fix": "Değeri girdi parametresine taşıyın"
+    },
+    {
+      "mistake": "Düğümleri yanlış sırada bağlama",
+      "symptom": "Boş veya hatalı çıktı",
+      "fix": "Girdi→işlem→çıktı sırasını izleyin"
+    },
+    {
+      "mistake": "PYP arayüzü ile kodun uyuşmaması",
+      "symptom": "Parametre girildiği halde etkisiz",
+      "fix": "PYP parametre adını kodla eşleyin [sürüme göre doğrula]"
+    },
+    {
+      "mistake": "Sınır değerleri test etmeme",
+      "symptom": "Uçlarda çöküş/boş sonuç",
+      "fix": "0 ve büyük değerlerle deneyin"
+    }
+  ],
+  "differentiation": {
+    "fast": "Akışa koşul (ör. kat yüksekliğine göre farklı eleman) ekleyip PythonPart'a ikinci bir parametre katar.",
+    "support": "Yalnızca hazır bir görsel akışı parametre değiştirerek çalıştırır; PythonPart bir sonraki oturuma bırakılır."
+  },
+  "quiz": [
+    {
+      "id": "M9-Q1",
+      "prompt": "Bir işi otomatikleştirmeden önce sorulacak en doğru soru hangisidir?",
+      "options": [
+        {
+          "text": "Bu iş yeterince sık tekrarlanıyor ve kurallı mı?",
+          "correct": true
+        },
+        {
+          "text": "En yeni araç hangisi?",
+          "correct": false
+        },
+        {
+          "text": "Kod uzun mu?",
+          "correct": false
+        },
+        {
+          "text": "Renk teması ne?",
+          "correct": false
+        }
+      ],
+      "explanation": "Otomasyon, sık tekrarlanan ve kurallaştırılabilen işlerde değer üretir; tek seferlik işlerde maliyeti faydasından yüksek olabilir. Aracın yeniliği, kodun uzunluğu veya renk teması otomasyon kararının ölçütü değildir.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Orta",
+      "outcomeCode": "K-U9.1"
+    },
+    {
+      "id": "M9-Q2",
+      "prompt": "Görsel programlama ile elle modelleme arasındaki temel fark nedir?",
+      "options": [
+        {
+          "text": "Görsel programlama her elemanı tek tek elle yerleştirir.",
+          "correct": false
+        },
+        {
+          "text": "Görsel programlama yalnızca 2B çizim üretebilir.",
+          "correct": false
+        },
+        {
+          "text": "Görsel akış, tekrar eden işi parametrik tek bir akıştan üretir; parametre değişince çıktı otomatik güncellenir.",
+          "correct": true
+        },
+        {
+          "text": "Elle modelleme, parametre değiştiğinde kendini otomatik günceller.",
+          "correct": false
+        }
+      ],
+      "explanation": "Görsel akış işi parametrik bir kurala bağlar; parametre değişince çıktı yeniden çizilmeden güncellenir. İlk şık elle modellemeyi tarif eder; görsel akış 2B ile sınırlı değildir; otomatik güncelleme elle modellemenin değil, parametrik akışın özelliğidir.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-U9.1"
+    },
+    {
+      "id": "M9-Q3",
+      "prompt": "Görsel programlamada bir düğüm (node) ne yapar?",
+      "options": [
+        {
+          "text": "Tüm akışı tek başına çalıştırır.",
+          "correct": false
+        },
+        {
+          "text": "Girdi alır, tek bir işlem uygular ve çıktı üretir.",
+          "correct": true
+        },
+        {
+          "text": "Yalnızca parametreleri saklar, işlem yapmaz.",
+          "correct": false
+        },
+        {
+          "text": "Modeli IFC olarak dışa aktarır.",
+          "correct": false
+        }
+      ],
+      "explanation": "Düğüm, girdi–işlem–çıktı yapısında tek bir işi yürütür; akış bu düğümlerin bağlanmasıyla kurulur. Akışın tamamını tek düğüm çalıştırmaz; düğüm yalnızca depolamaz, işlem de yapar; IFC dışa aktarımı bu modülün değil, openBIM modülünün konusudur.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-U9.1"
+    },
+    {
+      "id": "M9-Q4",
+      "prompt": "Bir görsel akışta parametre değiştirildiği halde model güncellenmiyor. En olası neden nedir?",
+      "options": [
+        {
+          "text": "Akışta çok fazla düğüm bulunması.",
+          "correct": false
+        },
+        {
+          "text": "Değerin akışa gömülü (hardcode) olması; girdi parametresine bağlı olmaması.",
+          "correct": true
+        },
+        {
+          "text": "PythonPart arayüzünün kapalı olması.",
+          "correct": false
+        },
+        {
+          "text": "Modelin IFC sürümünün yanlış olması.",
+          "correct": false
+        }
+      ],
+      "explanation": "Değer düğümün içine sabit yazıldıysa dış parametre değişimi etki etmez; değer girdi parametresine taşınmalıdır. Düğüm sayısı performansı etkiler ama güncellemeyi engellemez; PythonPart arayüzü ayrı bir araçtır; IFC sürümü bu akışla ilgisizdir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-U9.1"
+    },
+    {
+      "id": "M9-Q5",
+      "prompt": "Hangi durumda PythonPart, görsel akışa tercih edilir?",
+      "options": [
+        {
+          "text": "Her durumda, yalnızca akıştaki düğüm sayısını azaltmak için.",
+          "correct": false
+        },
+        {
+          "text": "Yalnızca 2B anotasyon eklemek için.",
+          "correct": false
+        },
+        {
+          "text": "Görsel akışın yetmediği özel geometri ve kuralların kodla tanımlanması gerektiğinde.",
+          "correct": true
+        },
+        {
+          "text": "Parametresi hiç değişmeyen tek seferlik bir çizim için.",
+          "correct": false
+        }
+      ],
+      "explanation": "PythonPart, görsel akışın karşılamadığı özel geometri ve mantığı kodla ifade etmek gerektiğinde değer katar. Düğüm sayısını azaltmak tek başına gerekçe değildir; basit anotasyon için gerekmez; tek seferlik ve değişmeyen çizimde otomasyon maliyeti faydasından yüksektir.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Orta",
+      "outcomeCode": "K-U9.2"
+    },
+    {
+      "id": "M9-Q6",
+      "prompt": "PYP arayüzünden girilen bir parametre modelde hiçbir etki yaratmıyor. İlk kontrol edilmesi gereken nedir?",
+      "options": [
+        {
+          "text": "Ekran çözünürlüğü.",
+          "correct": false
+        },
+        {
+          "text": "PYP'deki parametre adının koddaki değişken adıyla eşleşip eşleşmediği.",
+          "correct": true
+        },
+        {
+          "text": "Dosya adının uzunluğu.",
+          "correct": false
+        },
+        {
+          "text": "Katman rengi.",
+          "correct": false
+        }
+      ],
+      "explanation": "Parametre etkisizse çoğunlukla PYP arayüzündeki ad ile koddaki değişken adı uyuşmuyordur; önce bu eşleme denetlenir. Çözünürlük, dosya adı ve katman rengi parametrenin modele etkisiyle ilgili değildir.",
+      "bloom": "Analiz",
+      "difficulty": "Zor",
+      "outcomeCode": "K-U9.2"
+    }
   ],
   "proposed": false
 }

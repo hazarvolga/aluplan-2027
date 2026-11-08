@@ -9,33 +9,125 @@
   "prerequisite": "U.M9",
   "summary": "Sürekli projeyi IFC olarak teslim eder, veri kaybını denetler ve referans modelle BCF, IDS, CDE ile koordinasyonu yürütür.",
   "outcomes": [
-    { "text": "IFC dışa/içe aktarımını yapar ve veri kaybını denetler", "bloom": "Uygulama", "code": "K-U10.1" },
-    { "text": "BCF ile sorun yönetimini ve referans model koordinasyonunu yürütür", "bloom": "Uygulama", "code": "K-U10.2" },
-    { "text": "IDS, CDE ve ISO 19650 temel kavramlarını teslim akışına uygular", "bloom": "Uygulama", "code": "K-U10.3" }
+    {
+      "text": "IFC dışa/içe aktarımını yapar ve veri kaybını denetler",
+      "bloom": "Uygulama",
+      "code": "K-U10.1"
+    },
+    {
+      "text": "BCF ile sorun yönetimini ve referans model koordinasyonunu yürütür",
+      "bloom": "Uygulama",
+      "code": "K-U10.2"
+    },
+    {
+      "text": "IDS, CDE ve ISO 19650 temel kavramlarını teslim akışına uygular",
+      "bloom": "Uygulama",
+      "code": "K-U10.3"
+    }
   ],
   "concepts": [
-    { "term": "openBIM", "desc": "Açık formatlarla, markadan bağımsız BIM iş birliği", "en": "openBIM" },
-    { "term": "IFC", "desc": "Disiplinler arası açık model veri formatı", "en": "Industry Foundation Classes" },
-    { "term": "MVD", "desc": "IFC'nin hangi alt kümesinin aktarılacağını belirleyen görünüm", "en": "Model View Definition" },
-    { "term": "BCF", "desc": "Model üstünde sorun ve yorum paylaşım formatı", "en": "BIM Collaboration Format" },
-    { "term": "Referans model", "desc": "Başka disiplinin koordinasyon için eklenen modeli", "en": "Reference model" },
-    { "term": "IDS", "desc": "Hangi bilginin nasıl teslim edileceğini tanımlayan şartname", "en": "Information Delivery Specification" },
-    { "term": "CDE", "desc": "Projedeki tüm verinin toplandığı ortak ortam", "en": "Common Data Environment" },
-    { "term": "ISO 19650", "desc": "BIM ile bilgi yönetimi uluslararası standardı", "en": "ISO 19650" }
+    {
+      "term": "openBIM",
+      "desc": "Açık formatlarla, markadan bağımsız BIM iş birliği",
+      "en": "openBIM"
+    },
+    {
+      "term": "IFC",
+      "desc": "Disiplinler arası açık model veri formatı",
+      "en": "Industry Foundation Classes"
+    },
+    {
+      "term": "MVD",
+      "desc": "IFC'nin hangi alt kümesinin aktarılacağını belirleyen görünüm",
+      "en": "Model View Definition"
+    },
+    {
+      "term": "BCF",
+      "desc": "Model üstünde sorun ve yorum paylaşım formatı",
+      "en": "BIM Collaboration Format"
+    },
+    {
+      "term": "Referans model",
+      "desc": "Başka disiplinin koordinasyon için eklenen modeli",
+      "en": "Reference model"
+    },
+    {
+      "term": "IDS",
+      "desc": "Hangi bilginin nasıl teslim edileceğini tanımlayan şartname",
+      "en": "Information Delivery Specification"
+    },
+    {
+      "term": "CDE",
+      "desc": "Projedeki tüm verinin toplandığı ortak ortam",
+      "en": "Common Data Environment"
+    },
+    {
+      "term": "ISO 19650",
+      "desc": "BIM ile bilgi yönetimi uluslararası standardı",
+      "en": "ISO 19650"
+    }
   ],
   "sessionFlow": [
-    { "time": "0–5", "phase": "Dikkat çekme", "instructor": "Aynı proje, iki yazılım: IFC ile aktarım", "participant": "Soruyu yanıtlar", "material": "Slayt 1" },
-    { "time": "5–15", "phase": "Hedef + ön bilgi", "instructor": "Kazanımlar; openBIM mantığını bağlar", "participant": "Isınma sorusu", "material": "Diyagram" },
-    { "time": "15–40", "phase": "Demonstrasyon", "instructor": "IFC dışa aktarır, veri kaybını gösterir", "participant": "İzler", "material": "Örnek proje" },
-    { "time": "40–90", "phase": "Rehberli uygulama", "instructor": "Katılımcılarla referans model + BCF kurar", "participant": "Sorun oluşturur", "material": "Adım kartı A3" },
-    { "time": "90–135", "phase": "Bağımsız görev", "instructor": "Dolaşır, IDS/teslimi denetler", "participant": "IFC teslimini hazırlar", "material": "Görev A3" },
-    { "time": "135–150", "phase": "Değerlendirme", "instructor": "Kontrol listesi + mini quiz", "participant": "Quiz-U10'u çözer", "material": "Quiz-U10" }
+    {
+      "time": "0–5",
+      "phase": "Dikkat çekme",
+      "instructor": "Aynı proje, iki yazılım: IFC ile aktarım",
+      "participant": "Soruyu yanıtlar",
+      "material": "Slayt 1"
+    },
+    {
+      "time": "5–15",
+      "phase": "Hedef + ön bilgi",
+      "instructor": "Kazanımlar; openBIM mantığını bağlar",
+      "participant": "Isınma sorusu",
+      "material": "Diyagram"
+    },
+    {
+      "time": "15–40",
+      "phase": "Demonstrasyon",
+      "instructor": "IFC dışa aktarır, veri kaybını gösterir",
+      "participant": "İzler",
+      "material": "Örnek proje"
+    },
+    {
+      "time": "40–90",
+      "phase": "Rehberli uygulama",
+      "instructor": "Katılımcılarla referans model + BCF kurar",
+      "participant": "Sorun oluşturur",
+      "material": "Adım kartı A3"
+    },
+    {
+      "time": "90–135",
+      "phase": "Bağımsız görev",
+      "instructor": "Dolaşır, IDS/teslimi denetler",
+      "participant": "IFC teslimini hazırlar",
+      "material": "Görev A3"
+    },
+    {
+      "time": "135–150",
+      "phase": "Değerlendirme",
+      "instructor": "Kontrol listesi + mini quiz",
+      "participant": "Quiz-U10'u çözer",
+      "material": "Quiz-U10"
+    }
   ],
   "durationSplit": [
-    { "label": "Anlatım", "minutes": 40 },
-    { "label": "Uygulama", "minutes": 50 },
-    { "label": "Ölçme", "minutes": 15 },
-    { "label": "Bireysel", "minutes": 45 }
+    {
+      "label": "Anlatım",
+      "minutes": 40
+    },
+    {
+      "label": "Uygulama",
+      "minutes": 50
+    },
+    {
+      "label": "Ölçme",
+      "minutes": 15
+    },
+    {
+      "label": "Bireysel",
+      "minutes": 45
+    }
   ],
   "runningProjectStep": "Bu derste sürekli proje IFC olarak teslim edilir, veri kaybı denetlenir ve referans modelle koordinasyon (kural denetimi, sorun yönetimi) yürütülür.",
   "homework": "Sürekli projeyi IDS'e uygun biçimde IFC olarak dışa aktarın, veri kaybını denetleyin ve bir referans model üzerinde en az iki BCF sorunu oluşturun. Teslim: IFC dosyası + denetim notu + BCF paketi · Süre: ~120 dk · Ölçüt: Doğru IFC görünümü, belgelenmiş veri kaybı kontrolü, konuma bağlı anlamlı BCF sorunları.",
@@ -43,6 +135,221 @@
   "materials": [
     "Örnek IFC dosyası, IDS şablonu ve BCF paketi (kurum kaynağı eklenecek)",
     "buildingSMART IFC/BCF referansları ve ISO 19650 özet notu [sürüme göre doğrula]"
+  ],
+  "applicationSteps": [
+    {
+      "step": "Teslim şartını (IDS) ve hedef görünümü (MVD) belirleyin; hangi bilginin aktarılacağını kararlaştırın. [sürüme göre doğrula]",
+      "why": "IFC \"her şeyi\" değil, şartnameye uygun bilgiyi taşımalıdır; önce şartname, sonra aktarım."
+    },
+    {
+      "step": "Modeli IFC olarak dışa aktarın; doğru IFC sürümünü ve görünümünü seçin. [IFC 4.3 / sürüme göre doğrula]",
+      "why": "Yanlış sürüm veya görünüm, karşı tarafta eksik/okunamayan model demektir."
+    },
+    {
+      "step": "Dışa aktarılan IFC'yi boş bir ortamda tekrar içe aktarıp veri kaybını denetleyin (geometri, özellik, sınıflandırma).",
+      "why": "Veri kaybı ancak bağımsız kontrolle görülür; kaynak modele bakmak yanıltır."
+    },
+    {
+      "step": "Başka bir disiplinin referans modelini projeye ekleyin ve çakışmaları gözleyin.",
+      "why": "Koordinasyon, modellerin aynı ortamda karşılaştırılmasıyla yapılır."
+    },
+    {
+      "step": "Bulunan sorunları BCF ile oluşturun; konum, açıklama ve sorumlu bilgisini girin.",
+      "why": "BCF, sorunu modelden bağımsız ama konuma bağlı taşır; e-postadan farklı olarak iz bırakır."
+    },
+    {
+      "step": "Teslim paketini CDE/teslim akışına uygun adlandırma ve durum bilgisiyle düzenleyin.",
+      "why": "ISO 19650, bilginin kim tarafından, hangi durumda teslim edildiğinin izlenmesini ister."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "mistake": "Şartnamesiz (IDS'siz) IFC aktarımı",
+      "symptom": "Karşı taraf bilgi eksik diyor",
+      "fix": "Önce IDS/MVD belirleyin"
+    },
+    {
+      "mistake": "Yanlış IFC sürümü/görünümü seçme",
+      "symptom": "Model eksik veya açılamıyor",
+      "fix": "Hedefe uygun sürüm/MVD seçin [sürüme göre doğrula]"
+    },
+    {
+      "mistake": "Veri kaybını denetlememe",
+      "symptom": "Teslimden sonra eksik fark edilir",
+      "fix": "IFC'yi boş ortamda içe aktarıp kontrol edin"
+    },
+    {
+      "mistake": "Sorunu e-posta ile bildirme",
+      "symptom": "İz kalmıyor, konum belirsiz",
+      "fix": "BCF ile konuma bağlı sorun açın"
+    },
+    {
+      "mistake": "Adlandırma/durum kuralsız teslim",
+      "symptom": "CDE'de dosya karışıyor",
+      "fix": "ISO 19650 adlandırma ve durumu uygulayın"
+    }
+  ],
+  "differentiation": {
+    "fast": "IDS'e göre otomatik kural denetimi kurar ve BCF sorunlarını referans modelde kapatıp yeniden denetler.",
+    "support": "Yalnızca IFC dışa aktarımı + veri kaybı kontrolü; BCF ve CDE kavramları sonraki oturumda uygulanır."
+  },
+  "quiz": [
+    {
+      "id": "M10-Q1",
+      "prompt": "IFC dışa aktarımından sonra alıcı ekip bazı özelliklerin kaybolduğunu bildiriyor. İlk kontrol edilecek nedir?",
+      "options": [
+        {
+          "text": "Dışa aktarım eşlemesi (mapping) ve MVD/IFC sürümü.",
+          "correct": true
+        },
+        {
+          "text": "Monitör çözünürlüğü.",
+          "correct": false
+        },
+        {
+          "text": "Dosya adı.",
+          "correct": false
+        },
+        {
+          "text": "Katman rengi.",
+          "correct": false
+        }
+      ],
+      "explanation": "IFC'de veri kaybı çoğunlukla yanlış eşleme veya uyumsuz sürüm/MVD'den kaynaklanır; ilk bakılacak yer burasıdır. Monitör çözünürlüğü, dosya adı ve katman rengi aktarılan özellik setini etkilemez.",
+      "bloom": "Analiz",
+      "difficulty": "Zor",
+      "outcomeCode": "K-U10.1"
+    },
+    {
+      "id": "M10-Q2",
+      "prompt": "openBIM iş akışını kapalı (tek yazılım) iş akışından ayıran temel özellik nedir?",
+      "options": [
+        {
+          "text": "Yalnızca tek bir yazılımın dosyalarını açabilmesi.",
+          "correct": false
+        },
+        {
+          "text": "Disiplinlerin açık ve markadan bağımsız formatlarla (IFC/BCF) veri alışverişi yapabilmesi.",
+          "correct": true
+        },
+        {
+          "text": "Modelin yalnızca 2B olarak paylaşılması.",
+          "correct": false
+        },
+        {
+          "text": "Veri alışverişinin yalnızca e-posta ile yapılması.",
+          "correct": false
+        }
+      ],
+      "explanation": "openBIM, açık formatlar üzerinden markadan bağımsız iş birliğidir; farklı yazılımlar aynı veriyi paylaşabilir. Tek yazılıma bağlılık tam tersi (kapalı) yaklaşımdır; openBIM 2B ile sınırlı değildir; paylaşım e-postaya değil, yapılandırılmış formatlara dayanır.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-U10.1"
+    },
+    {
+      "id": "M10-Q3",
+      "prompt": "IFC dışa aktarımında Model View Definition (MVD) neyi belirler?",
+      "options": [
+        {
+          "text": "Modelin ekranda hangi renkte görüneceğini.",
+          "correct": false
+        },
+        {
+          "text": "Dosyanın kaydedileceği klasörü.",
+          "correct": false
+        },
+        {
+          "text": "IFC'nin hangi alt kümesinin (hangi bilgi ve nesnelerin) aktarılacağını.",
+          "correct": true
+        },
+        {
+          "text": "Projeye katılan kişi sayısını.",
+          "correct": false
+        }
+      ],
+      "explanation": "MVD, IFC'nin hangi alt kümesinin taşınacağını tanımlar; teslimin kapsamını bu belirler. Renk, kayıt klasörü ve katılımcı sayısı MVD'nin konusu değildir.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-U10.1"
+    },
+    {
+      "id": "M10-Q4",
+      "prompt": "Dışa aktarılan bir IFC'de veri kaybı en güvenilir biçimde nasıl denetlenir?",
+      "options": [
+        {
+          "text": "Kaynak modele bakıp elemanların yerinde olduğunu doğrulayarak.",
+          "correct": false
+        },
+        {
+          "text": "IFC'yi boş/bağımsız bir ortamda tekrar içe aktarıp geometri, özellik ve sınıflandırmayı kontrol ederek.",
+          "correct": true
+        },
+        {
+          "text": "Dosya boyutunu kontrol ederek.",
+          "correct": false
+        },
+        {
+          "text": "Ekran görüntüsü alıp paylaşarak.",
+          "correct": false
+        }
+      ],
+      "explanation": "Veri kaybı ancak IFC'yi bağımsız bir ortamda içe aktarıp gerçekte taşınan bilgiye bakınca görülür; kaynak modele bakmak yanıltır çünkü orada veri zaten tamdır. Dosya boyutu ve ekran görüntüsü taşınan özelliklerin eksiksizliğini göstermez.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Orta",
+      "outcomeCode": "K-U10.1"
+    },
+    {
+      "id": "M10-Q5",
+      "prompt": "Sorunları BCF ile bildirmenin, e-posta ile bildirmeye göre temel avantajı nedir?",
+      "options": [
+        {
+          "text": "Sorunu daha renkli gösterir.",
+          "correct": false
+        },
+        {
+          "text": "Modeli otomatik olarak düzeltir.",
+          "correct": false
+        },
+        {
+          "text": "Teslim dosyasının boyutunu küçültür.",
+          "correct": false
+        },
+        {
+          "text": "Sorunu modeldeki konuma bağlar ve izlenebilir bir kayıt bırakır.",
+          "correct": true
+        }
+      ],
+      "explanation": "BCF, sorunu konuma (kamera açısı, eleman) bağlayıp yapılandırılmış, izlenebilir bir kayıt bırakır; e-posta bu bağı ve izi sağlamaz. BCF görsel süsleme yapmaz, modeli kendisi düzeltmez ve dosya boyutu küçültme amacı taşımaz.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Orta",
+      "outcomeCode": "K-U10.2"
+    },
+    {
+      "id": "M10-Q6",
+      "prompt": "ISO 19650'ye göre düzenlenmiş bir CDE tesliminde adlandırma ve durum bilgisi neyi izlenebilir kılar?",
+      "options": [
+        {
+          "text": "Bilginin kim tarafından, hangi durumda (taslak, paylaşılan, yayımlanan) teslim edildiğini.",
+          "correct": true
+        },
+        {
+          "text": "Modelin kaç poligon içerdiğini.",
+          "correct": false
+        },
+        {
+          "text": "Kullanılan monitörün markasını.",
+          "correct": false
+        },
+        {
+          "text": "Dosyanın açılma hızını.",
+          "correct": false
+        }
+      ],
+      "explanation": "ISO 19650, bilginin sahibini ve durumunu (taslak/paylaşılan/yayımlanan) izlemeyi ister; adlandırma ve durum alanları bunu sağlar. Poligon sayısı, monitör markası ve açılma hızı teslim yönetiminin konusu değildir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-U10.3"
+    }
   ],
   "proposed": false
 }

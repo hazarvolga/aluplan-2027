@@ -1,0 +1,57 @@
+.page{background:var(--surface-page);color:var(--text-primary)}
+
+.breadcrumb{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-inline-xs);padding:var(--space-stack-md) 0 0;font-size:var(--type-body-sm-size);color:var(--text-secondary)}
+.breadcrumb a{color:var(--text-secondary);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent-akademi)}
+.breadcrumb [aria-current="page"]{color:var(--text-primary)}
+.sep{color:var(--text-muted)}
+
+.heroMeta{margin-top:var(--space-stack-md)}
+.distribution{margin-top:var(--space-stack-md);max-width:34rem}
+
+.band{padding-block:var(--space-stack-xl);border-bottom:var(--border-width-default) solid var(--border-default)}
+.lastBand{border-bottom:0}
+
+/* Outcomes as hairline rows: text left, Bloom + code tags right. */
+.outcomes{list-style:none;margin:var(--space-stack-lg) 0 0;padding:0;display:grid;gap:0}
+.outcome{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:var(--space-inline-md);padding:var(--space-stack-sm) 0;border-top:var(--border-width-default) solid var(--border-default)}
+.outcome:last-child{border-bottom:var(--border-width-default) solid var(--border-default)}
+.outcomeText{margin:0;color:var(--text-primary);max-width:46rem}
+.outcomeTags{display:inline-flex;align-items:center;gap:var(--space-inline-xs);white-space:nowrap}
+.bloom{font-size:var(--type-body-sm-size);color:var(--text-secondary)}
+.code{font-family:var(--font-mono);font-size:var(--type-body-sm-size);color:var(--accent-akademi);border:var(--border-width-default) solid var(--accent-border);padding:0 var(--space-inline-xs)}
+
+/* Concepts as a ruled definition grid. */
+.concepts{margin:var(--space-stack-lg) 0 0;display:grid;gap:0}
+.concept{display:grid;grid-template-columns:minmax(10rem,14rem) 1fr;gap:var(--space-inline-md);padding:var(--space-stack-sm) 0;border-top:var(--border-width-default) solid var(--border-default)}
+.concept:last-child{border-bottom:var(--border-width-default) solid var(--border-default)}
+.conceptTerm{display:flex;flex-direction:column;gap:var(--space-stack-xs);margin:0;font-weight:var(--font-weight-strong);color:var(--text-primary)}
+.conceptEn{font-family:var(--font-mono);font-size:var(--type-body-sm-size);font-weight:var(--font-weight-regular, 400);color:var(--text-muted)}
+.conceptDesc{margin:0;color:var(--text-secondary)}
+
+.timeline{margin-top:var(--space-stack-lg);max-width:46rem}
+
+.resources{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:var(--space-stack-md);margin-top:var(--space-stack-lg)}
+.resource{border:var(--border-width-default) solid var(--border-default);border-top:var(--border-width-thick, 3px) solid var(--accent-akademi);padding:var(--space-inset-md);display:flex;flex-direction:column;gap:var(--space-stack-sm)}
+.resourceTitle{font-family:var(--font-heading);font-size:var(--type-h4-size);font-weight:var(--font-weight-strong);margin:0}
+.resourceText{margin:0;color:var(--text-secondary);font-size:var(--type-body-sm-size)}
+.materials{list-style:none;margin:0;padding:0;display:grid;gap:var(--space-stack-xs)}
+.material{color:var(--text-secondary);font-size:var(--type-body-sm-size);padding-left:var(--space-inline-md);position:relative}
+.material::before{content:"—";position:absolute;left:0;color:var(--text-muted)}
+
+.moduleNav{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-stack-md)}
+.navLink{display:flex;flex-direction:column;gap:var(--space-stack-xs);text-decoration:none;color:var(--text-primary)}
+.navNext{text-align:right;margin-left:auto}
+.navDir{color:var(--accent-akademi);font-size:var(--type-body-sm-size);font-weight:var(--font-weight-strong)}
+.navTitle{font-family:var(--font-heading);font-size:var(--type-h4-size)}
+
+/* Below 959px the shell shows a fixed "Müfredat" drawer toggle at the top-left;
+   clear it so the breadcrumb starts beneath the toggle, not under it. */
+@media (max-width:959px){
+  .breadcrumb{padding-top:calc(var(--target-min) * 2 + var(--space-stack-sm))}
+}
+
+@media (max-width:40rem){
+  .concept{grid-template-columns:1fr;gap:var(--space-stack-xs)}
+  .outcome{flex-direction:column;gap:var(--space-stack-xs)}
+}

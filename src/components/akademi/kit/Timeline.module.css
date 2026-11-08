@@ -16,6 +16,6 @@
 .roles{display:flex;flex-direction:column;gap:var(--space-stack-xs);margin:0}
 .role{display:grid;grid-template-columns:minmax(4.5rem,auto) 1fr;gap:var(--space-inline-sm)}
 .roleKey{font-family:var(--font-mono);font-size:var(--type-body-sm-size);text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted)}
-.roleVal{font-size:var(--type-body-sm-size);color:var(--text-primary);margin:0}
+.roleVal{font-size:var(--type-body-sm-size);color:var(--text-primary);margin:0;min-width:0;overflow-wrap:anywhere}
 
 .material{align-self:flex-start;font-family:var(--font-mono);font-size:var(--type-body-sm-size);color:var(--text-secondary);border:var(--border-width-default) solid var(--border-subtle);padding:0 var(--space-inline-xs)}

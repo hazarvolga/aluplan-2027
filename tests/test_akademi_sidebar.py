@@ -28,6 +28,14 @@ class AkademiSidebarTests(unittest.TestCase):
         src = read("src/components/akademi/sidebar-nav.ts")
         self.assertIn("export function isAkademiLevelActive", src)
 
+    def test_mobile_drawer_manages_focus_and_tab_order(self):
+        src = read("src/components/akademi/AkademiSidebar.tsx")
+        # Mobile-aware so off-screen links are not left in the tab order when closed.
+        self.assertIn("matchMedia", src)
+        self.assertIn("inert", src)
+        # Focus is moved (into the drawer on open, back to the toggle on close).
+        self.assertIn(".focus()", src)
+
     def test_sidebar_css_uses_tokens_not_literal_colors(self):
         css = read("src/components/akademi/AkademiSidebar.module.css")
         self.assertNotRegex(css, r"#[0-9a-fA-F]{3,8}\b")

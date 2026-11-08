@@ -6,6 +6,7 @@ import { DebugComponentLabel } from './DebugComponentLabel';
 import { SectionHeader } from './SectionHeader';
 import { Callout, DistributionBar, MetaRow, Timeline } from '@/components/akademi/kit';
 import { AkademiJsonLd } from '@/components/akademi/AkademiJsonLd';
+import { AkademiQuiz } from '@/components/akademi/AkademiQuiz';
 import styles from './AkademiModuleDetail.module.css';
 
 /** All modules in program order, so prev/next crosses level boundaries. */
@@ -122,6 +123,81 @@ export function AkademiModuleDetail({
         </section>
       </DebugComponentLabel>
 
+      {module.applicationSteps && module.applicationSteps.length > 0 && (
+        <DebugComponentLabel name="AkademiModuleSteps (özel)">
+          <section className={styles.band} aria-labelledby="modul-uygulama">
+            <div className="alu-container">
+              <SectionHeader
+                id="modul-uygulama"
+                kicker="UYGULAMA"
+                title="Adım adım uygulama"
+                lead="Her kritik adımın yanında neden o şekilde yapıldığı belirtilir."
+              />
+              <ol className={styles.steps}>
+                {module.applicationSteps.map((item, index) => (
+                  <li key={index} className={styles.step}>
+                    <span className={styles.stepNo}>{String(index + 1).padStart(2, '0')}</span>
+                    <div className={styles.stepBody}>
+                      <p className={styles.stepText}>{item.step}</p>
+                      {item.why && (
+                        <p className={styles.stepWhy}>
+                          <span className={styles.whyLabel}>Neden?</span> {item.why}
+                        </p>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </section>
+        </DebugComponentLabel>
+      )}
+
+      {module.commonMistakes && module.commonMistakes.length > 0 && (
+        <DebugComponentLabel name="AkademiModuleMistakes (özel)">
+          <section className={styles.band} aria-labelledby="modul-hatalar">
+            <div className="alu-container">
+              <SectionHeader id="modul-hatalar" kicker="DİKKAT" title="Sık yapılan hatalar" />
+              <dl className={styles.mistakes}>
+                {module.commonMistakes.map((item, index) => (
+                  <div key={index} className={styles.mistake}>
+                    <dt className={styles.mistakeHead}>{item.mistake}</dt>
+                    <dd className={styles.mistakeBody}>
+                      <p className={styles.mistakeSymptom}>
+                        <span className={styles.mistakeKey}>Belirti</span> {item.symptom}
+                      </p>
+                      <p className={styles.mistakeFix}>
+                        <span className={styles.mistakeKey}>Çözüm</span> {item.fix}
+                      </p>
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </section>
+        </DebugComponentLabel>
+      )}
+
+      {module.differentiation && (
+        <DebugComponentLabel name="AkademiModuleDifferentiation (özel)">
+          <section className={styles.band} aria-labelledby="modul-farklilastirma">
+            <div className="alu-container">
+              <SectionHeader id="modul-farklilastirma" kicker="FARKLILAŞTIRMA" title="Herkese göre ilerleme" />
+              <div className={styles.diffGrid}>
+                <div className={styles.diffCard}>
+                  <h3 className={styles.diffTitle}>Hızlı ilerleyenler</h3>
+                  <p className={styles.diffText}>{module.differentiation.fast}</p>
+                </div>
+                <div className={styles.diffCard}>
+                  <h3 className={styles.diffTitle}>Desteğe ihtiyaç duyanlar</h3>
+                  <p className={styles.diffText}>{module.differentiation.support}</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </DebugComponentLabel>
+      )}
+
       <DebugComponentLabel name="AkademiModuleProject (özel)">
         <section className={styles.band} aria-labelledby="modul-proje">
           <div className="alu-container">
@@ -132,6 +208,24 @@ export function AkademiModuleDetail({
           </div>
         </section>
       </DebugComponentLabel>
+
+      {module.quiz && module.quiz.length > 0 && (
+        <DebugComponentLabel name="AkademiModuleQuiz (interaktif)">
+          <section className={styles.band} aria-labelledby="modul-quiz">
+            <div className="alu-container">
+              <SectionHeader
+                id="modul-quiz"
+                kicker="ÖZ DEĞERLENDİRME"
+                title="Ders sonu quiz"
+                lead="Bir şık seçin; doğru yanıtı ve açıklamasını görün. Sonuçlar yalnızca bu tarayıcıda saklanır, sertifika yerine geçmez."
+              />
+              <div className={styles.quiz}>
+                <AkademiQuiz moduleCode={module.code} questions={module.quiz} />
+              </div>
+            </div>
+          </section>
+        </DebugComponentLabel>
+      )}
 
       {(module.assessment || module.homework || (module.materials && module.materials.length > 0)) && (
         <DebugComponentLabel name="AkademiModuleAssessment (özel)">

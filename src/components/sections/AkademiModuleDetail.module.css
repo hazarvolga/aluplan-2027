@@ -39,6 +39,34 @@
 .material{color:var(--text-secondary);font-size:var(--type-body-sm-size);padding-left:var(--space-inline-md);position:relative}
 .material::before{content:"—";position:absolute;left:0;color:var(--text-muted)}
 
+/* Adım adım uygulama */
+.steps{list-style:none;margin:var(--space-stack-lg) 0 0;padding:0;display:flex;flex-direction:column;gap:0}
+.step{display:grid;grid-template-columns:auto 1fr;gap:var(--space-inline-md);padding:var(--space-stack-md) 0;border-top:var(--border-width-default) solid var(--border-default)}
+.step:last-child{border-bottom:var(--border-width-default) solid var(--border-default)}
+.stepNo{font-family:var(--font-mono);font-size:var(--type-body-sm-size);color:var(--accent-akademi)}
+.stepBody{display:flex;flex-direction:column;gap:var(--space-stack-xs);min-width:0}
+.stepText{margin:0;color:var(--text-primary)}
+.stepWhy{margin:0;font-size:var(--type-body-sm-size);color:var(--text-secondary)}
+.whyLabel{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-right:var(--space-inline-xs)}
+
+/* Sık yapılan hatalar */
+.mistakes{margin:var(--space-stack-lg) 0 0;display:grid;gap:0}
+.mistake{display:grid;grid-template-columns:minmax(12rem,18rem) 1fr;gap:var(--space-inline-md);padding:var(--space-stack-md) 0;border-top:var(--border-width-default) solid var(--border-default)}
+.mistake:last-child{border-bottom:var(--border-width-default) solid var(--border-default)}
+.mistakeHead{margin:0;font-weight:var(--font-weight-strong);color:var(--text-primary)}
+.mistakeBody{margin:0;display:flex;flex-direction:column;gap:var(--space-stack-xs);min-width:0}
+.mistakeSymptom,.mistakeFix{margin:0;font-size:var(--type-body-sm-size);color:var(--text-secondary)}
+.mistakeKey{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-right:var(--space-inline-xs)}
+
+/* Farklılaştırma */
+.diffGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:var(--space-stack-md);margin-top:var(--space-stack-lg)}
+.diffCard{border:var(--border-width-default) solid var(--border-default);border-top:var(--border-width-thick, 3px) solid var(--accent-akademi);padding:var(--space-inset-md);display:flex;flex-direction:column;gap:var(--space-stack-sm)}
+.diffTitle{margin:0;font-family:var(--font-heading);font-size:var(--type-h4-size);font-weight:var(--font-weight-strong)}
+.diffText{margin:0;color:var(--text-secondary);font-size:var(--type-body-sm-size)}
+
+/* Quiz */
+.quiz{margin-top:var(--space-stack-lg);max-width:46rem}
+
 .moduleNav{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-stack-md)}
 .navLink{display:flex;flex-direction:column;gap:var(--space-stack-xs);text-decoration:none;color:var(--text-primary)}
 .navNext{text-align:right;margin-left:auto}
@@ -54,4 +82,5 @@
 @media (max-width:40rem){
   .concept{grid-template-columns:1fr;gap:var(--space-stack-xs)}
   .outcome{flex-direction:column;gap:var(--space-stack-xs)}
+  .mistake{grid-template-columns:1fr;gap:var(--space-stack-xs)}
 }

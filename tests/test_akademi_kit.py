@@ -15,7 +15,8 @@ def read(path: str) -> str:
 
 
 class AkademiKitTests(unittest.TestCase):
-    components = ("ModuleCard", "LevelCard", "MetaRow", "SectionRule", "Callout")
+    components = ("ModuleCard", "LevelCard", "MetaRow", "SectionRule", "Callout",
+                  "DistributionBar", "Timeline")
 
     def test_every_component_and_index_exist(self):
         for name in self.components:
@@ -39,6 +40,19 @@ class AkademiKitTests(unittest.TestCase):
         self.assertIn("{module.title}", src)
         # The code must not be rendered inside a heading element.
         self.assertNotRegex(src, r"<h[1-6][^>]*>\s*\{module\.code\}")
+
+    def test_distribution_bar_is_grayscale_not_accent(self):
+        # The duration bar is a neutral data mark; the single akademi accent is reserved
+        # for wayfinding, so the bar uses only neutral text/surface tokens.
+        css = read(f"{KIT}/DistributionBar.module.css")
+        self.assertNotIn("--accent-akademi", css)
+        self.assertRegex(css, r"var\(--(text|surface|border)-")
+
+    def test_distribution_bar_and_timeline_consume_the_content_types(self):
+        bar = read(f"{KIT}/DistributionBar.tsx")
+        timeline = read(f"{KIT}/Timeline.tsx")
+        self.assertIn("DurationSlice", bar)
+        self.assertIn("SessionStep", timeline)
 
     def test_kit_styles_use_tokens_not_literal_colors(self):
         for name in self.components:

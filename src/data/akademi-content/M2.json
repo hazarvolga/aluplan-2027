@@ -136,7 +136,7 @@
       "why": "Kolon ve duvarlar akslara hizalanınca model tutarlı ve değiştirilebilir olur."
     },
     {
-      "step": "Çizim dosyalarını işlev bazında adlandırın (ör. 'Zemin kat — taşıyıcı').",
+      "step": "Çizim dosyalarını işlev bazında adlandırın (ör. 'Zemin kat: taşıyıcı').",
       "why": "İsimlendirme standardı ekip çalışmasının ve kendi işinizin bulunabilirliğinin temelidir."
     },
     {
@@ -279,7 +279,7 @@
           "correct": false
         },
         {
-          "text": "Zemin kat — taşıyıcı",
+          "text": "Zemin kat: taşıyıcı",
           "correct": true
         },
         {
@@ -291,7 +291,7 @@
           "correct": false
         }
       ],
-      "explanation": "'Zemin kat — taşıyıcı' kat ve işlevi açıkça belirtir; isimlendirme standardı bulunabilirliği artırır. 'Yeni1', 'asdf' ve 'Dosya kopya (2)' içeriğe dair bilgi vermez ve koordinasyonu zorlaştırır.",
+      "explanation": "'Zemin kat: taşıyıcı' kat ve işlevi açıkça belirtir; isimlendirme standardı bulunabilirliği artırır. 'Yeni1', 'asdf' ve 'Dosya kopya (2)' içeriğe dair bilgi vermez ve koordinasyonu zorlaştırır.",
       "bloom": "Uygulama",
       "difficulty": "Kolay",
       "outcomeCode": "K-B2.3"

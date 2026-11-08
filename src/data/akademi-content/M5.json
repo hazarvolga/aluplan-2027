@@ -244,12 +244,12 @@
       "prompt": "Etriye aralığını modelde değiştirdiniz ancak donatı listesindeki etriye adedi değişmedi. En olası neden nedir?",
       "options": [
         {
-          "text": "Etriye aralığı parametre yerine sabit bir değer olarak tanımlanmış",
-          "correct": false
+          "text": "Etriye aralığı parametre yerine sabit bir değer olarak tanımlanmış, bu yüzden adet türemiyor",
+          "correct": true
         },
         {
-          "text": "Liste modelle ilişkili güncellenmiyor; aralık parametre olarak tanımlanmadığı için adet türemiyor",
-          "correct": true
+          "text": "Donatı listesi elle güncellenir; modeldeki değişiklikler listeye otomatik yansımaz",
+          "correct": false
         },
         {
           "text": "Pas payı çok büyük girilmiş",
@@ -260,7 +260,7 @@
           "correct": false
         }
       ],
-      "explanation": "Aralık parametre olarak tanımlıysa değişiklik adedi ve listeyi otomatik günceller; adet değişmiyorsa aralık modelle ilişkili bir parametre değildir. İlk şık doğru nedenin yarısını söylese de 'listeyi güncellemiyor' sonucunu açıklamaz, bu yüzden ikinci şık tam gerekçedir. Pas payı ve boyuna donatı çapı etriye adedini belirlemez.",
+      "explanation": "Etriye aralığı parametrik bir değer olarak tanımlıysa, aralığı değiştirince adet ve liste otomatik güncellenir. Adet değişmiyorsa aralık sabit, modelle ilişkisiz bir değer olarak girilmiştir. BIM'de donatı listeleri modelden türetilir ve elle güncelleme gerektirmez; pas payı ve boyuna donatı çapı etriye adedini belirlemez.",
       "bloom": "Analiz",
       "difficulty": "Orta",
       "outcomeCode": "K-İ5.2"

@@ -142,12 +142,15 @@ export function AkademiQuiz({
                         className={styles.option}
                         data-state={state}
                         aria-pressed={isPicked}
-                        disabled={answered}
-                        onClick={() => pick(question.id, oi)}
+                        aria-disabled={answered}
+                        onClick={() => {
+                          if (!answered) pick(question.id, oi);
+                        }}
                       >
                         <span className={styles.marker} aria-hidden="true">
                           {answered && isCorrect ? '✓' : answered && isPicked ? '✕' : String.fromCharCode(65 + oi)}
                         </span>
+                        {answered && isCorrect && <span className={styles.srOnly}>Doğru cevap: </span>}
                         <span className={styles.optionText}>{option.text}</span>
                       </button>
                     );

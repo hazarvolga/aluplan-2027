@@ -14,9 +14,12 @@
 
 .options{display:flex;flex-direction:column;gap:var(--space-stack-xs)}
 .option{display:flex;align-items:flex-start;gap:var(--space-inline-sm);width:100%;text-align:left;padding:var(--space-inset-sm);background:var(--surface-page);border:var(--border-width-default) solid var(--border-default);color:var(--text-primary);font-size:var(--type-body-sm-size);cursor:pointer;transition:border-color var(--motion-duration-fast, 150ms) ease}
-.option:hover:not(:disabled){border-color:var(--border-strong)}
+.option:hover:not([aria-disabled="true"]){border-color:var(--border-strong)}
 .option:focus-visible{outline:var(--border-width-accent, 2px) solid var(--focus-ring, var(--accent-akademi));outline-offset:2px}
-.option:disabled{cursor:default}
+.option[aria-disabled="true"]{cursor:default}
+
+/* Visually hidden, still read by screen readers (announces the correct option). */
+.srOnly{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
 .marker{flex:none;display:inline-flex;align-items:center;justify-content:center;width:1.4rem;height:1.4rem;font-family:var(--font-mono);font-size:var(--type-body-sm-size);border:var(--border-width-default) solid var(--border-default);color:var(--text-secondary)}
 .optionText{flex:1 1 auto;min-width:0}

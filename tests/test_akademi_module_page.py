@@ -69,5 +69,18 @@ class AkademiModuleDetailTests(unittest.TestCase):
         self.assertNotRegex(css, r"\brg?ba?\(")
 
 
+class AkademiModuleLinkTests(unittest.TestCase):
+    def test_module_card_links_to_the_module_detail_page(self):
+        # Each module card on a level page links to /akademi/<levelSlug>/<slug>.
+        src = read("src/components/akademi/kit/ModuleCard.tsx")
+        self.assertIn("next/link", src)
+        self.assertIn("/akademi/${module.levelSlug}/${module.slug}", src)
+
+    def test_module_card_css_uses_tokens_not_literal_colors(self):
+        css = read("src/components/akademi/kit/ModuleCard.module.css")
+        self.assertNotRegex(css, r"#[0-9a-fA-F]{3,8}\b")
+        self.assertNotRegex(css, r"\brg?ba?\(")
+
+
 if __name__ == "__main__":
     unittest.main()

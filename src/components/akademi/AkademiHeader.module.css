@@ -1,0 +1,10 @@
+.header{position:sticky;top:0;z-index:20;background:var(--surface-page);border-bottom:var(--border-width-default) solid var(--border-default)}
+.inner{display:flex;align-items:center;justify-content:space-between;gap:var(--space-stack-md);padding-block:var(--space-stack-sm)}
+.brand{display:inline-flex;align-items:baseline;gap:var(--space-stack-xs);text-decoration:none;color:var(--text-primary)}
+.logo{height:var(--type-h4-size);width:auto}
+.wordmark{font-family:var(--font-heading);font-size:var(--type-body-sm-size);font-weight:var(--font-weight-strong);letter-spacing:.14em;text-transform:uppercase;color:var(--text-secondary)}
+.nav{display:flex;align-items:center;gap:var(--space-stack-sm)}
+.explore{display:inline-flex;align-items:center;gap:var(--space-stack-xs);text-decoration:none;color:var(--text-primary);font-size:var(--type-body-sm-size);font-weight:var(--font-weight-strong)}
+.explore:hover{color:var(--accent-fg)}
+.toggle{display:inline-flex;align-items:center;justify-content:center;min-width:var(--target-min);min-height:var(--target-min);background:transparent;border:var(--border-width-default) solid var(--border-default);color:var(--text-primary);cursor:pointer}
+.toggle:hover{border-color:var(--accent-fg);color:var(--accent-fg)}

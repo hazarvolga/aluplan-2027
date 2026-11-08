@@ -4,6 +4,9 @@
 .meta{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-stack-xs);color:var(--text-secondary);font-size:var(--type-body-sm-size);margin:var(--space-stack-sm) 0 0}
 .icon,.outcomeIcon{display:inline-flex;color:var(--accent-fg)}
 .heroActions{display:flex;flex-wrap:wrap;gap:var(--space-stack-sm);margin-top:var(--space-stack-md)}
+.heroMeta{margin-top:var(--space-stack-md)}
+.moduleGrid{list-style:none;margin:var(--space-stack-lg) 0 0;padding:0;display:grid;gap:var(--space-stack-md)}
+.moduleGridItem{display:block}
 
 .modules,.tracks,.outcomes{list-style:none;margin:0;padding:0}
 .modules{display:grid;gap:var(--space-stack-md);margin-top:var(--space-stack-lg)}

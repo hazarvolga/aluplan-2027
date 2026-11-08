@@ -45,8 +45,8 @@ export function AkademiOverview(): ReactElement {
                   <ol className={styles.steps}>
                     {path.steps.map((step) => <li key={step}>{step}</li>)}
                   </ol>
-                  <Link className={styles.entryCta} href="/akademi/seviye-1">
-                    Seviye 1 ile başlayın →
+                  <Link className={styles.entryCta} href="/akademi/temel">
+                    Temel seviye ile başlayın →
                   </Link>
                 </li>
               ))}

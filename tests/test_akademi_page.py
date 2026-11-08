@@ -62,12 +62,20 @@ class AkademiLevelPageTests(unittest.TestCase):
         self.assertIn("if (!isAkademiEnabled()) return [];", page)
         self.assertIn("export const dynamicParams = false;", page)
 
-    def test_every_level_has_a_slug_and_slugs_are_unique(self):
+    def test_every_level_has_a_semantic_slug_and_slugs_are_unique(self):
         data = read("src/data/akademi.ts")
         slugs = re.findall(r"slug: '([a-z0-9-]+)'", data)
         self.assertEqual(len(slugs), 4)
         self.assertEqual(len(set(slugs)), 4)
-        self.assertEqual(set(slugs), {"seviye-1", "seviye-2", "seviye-3", "seviye-4"})
+        self.assertEqual(set(slugs), {"temel", "orta", "ileri", "uzman"})
+        self.assertNotIn("seviye-", data)
+
+    def test_content_and_legacy_level_slugs_agree(self):
+        # During the akademi.ts → akademi-content.ts migration both sources exist; their
+        # level slugs must stay identical so routes resolve from either one.
+        content = read("src/data/akademi-content.ts")
+        content_slugs = set(re.findall(r"slug: '([a-z]+)',", content))
+        self.assertTrue({"temel", "orta", "ileri", "uzman"} <= content_slugs)
 
     def test_level_pages_are_not_linked_from_sitemap_or_search(self):
         for path in ("src/app/sitemap.ts", "src/data/navigation.json",
@@ -86,7 +94,8 @@ class AkademiOverviewRedesignTests(unittest.TestCase):
 
     def test_entry_paths_link_into_the_program(self):
         src = read("src/components/sections/AkademiOverview.tsx")
-        self.assertIn("/akademi/seviye-1", src)
+        self.assertIn("/akademi/temel", src)
+        self.assertNotIn("/akademi/seviye-", src)
 
 
 class AkademiLevelDetailRedesignTests(unittest.TestCase):

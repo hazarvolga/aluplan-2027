@@ -28,6 +28,14 @@ class AkademiSidebarTests(unittest.TestCase):
         src = read("src/components/akademi/sidebar-nav.ts")
         self.assertIn("export function isAkademiLevelActive", src)
 
+    def test_sidebar_links_use_semantic_level_slugs(self):
+        # The sidebar builds /akademi/${slug} from the level data; those slugs are semantic
+        # (temel/orta/ileri/uzman), so no seviye-N link can reach the sidebar.
+        for path in ("src/data/akademi.ts", "src/components/akademi/sidebar-nav.ts",
+                     "src/components/akademi/AkademiSidebar.tsx"):
+            with self.subTest(file=path):
+                self.assertNotIn("seviye-", read(path))
+
     def test_mobile_drawer_manages_focus_and_tab_order(self):
         src = read("src/components/akademi/AkademiSidebar.tsx")
         # Mobile-aware so off-screen links are not left in the tab order when closed.

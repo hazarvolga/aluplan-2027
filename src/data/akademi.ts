@@ -22,7 +22,7 @@ export interface AkademiTrack {
 
 export interface AkademiLevel {
   number: number;
-  /** URL slug for the level detail page, e.g. 'seviye-1'. */
+  /** Semantic URL slug for the level detail page, e.g. 'temel'. */
   slug: string;
   title: string;
   role: string;
@@ -63,7 +63,7 @@ export const akademiEntryPaths: readonly AkademiEntryPath[] = [
 export const akademiLevels: readonly AkademiLevel[] = [
   {
     number: 1,
-    slug: 'seviye-1',
+    slug: 'temel',
     title: 'Temel',
     role: 'BIM Uygulayıcısı',
     shared: true,
@@ -103,7 +103,7 @@ export const akademiLevels: readonly AkademiLevel[] = [
   },
   {
     number: 2,
-    slug: 'seviye-2',
+    slug: 'orta',
     title: 'Orta',
     role: 'BIM Uzmanı',
     shared: true,
@@ -134,7 +134,7 @@ export const akademiLevels: readonly AkademiLevel[] = [
   },
   {
     number: 3,
-    slug: 'seviye-3',
+    slug: 'ileri',
     title: 'İleri',
     role: 'Disiplin uzmanı',
     shared: false,
@@ -208,7 +208,7 @@ export const akademiLevels: readonly AkademiLevel[] = [
   },
   {
     number: 4,
-    slug: 'seviye-4',
+    slug: 'uzman',
     title: 'Uzman',
     role: 'BIM Yöneticisi ve Geliştirici',
     shared: true,

@@ -16,6 +16,8 @@ def phone_rules() -> str:
 
 
 class MobileHeaderCssTests(unittest.TestCase):
+    def test_drawer_scrolls_within_viewport(self):
+        self.assertRegex(CSS, r'\.alu-mobile-drawer \{[^}]*max-height: var\(--layout-application-mobile-drawer-max-height\);[^}]*overflow-y: auto;')
     def test_top_bar_is_hidden_on_phones(self):
         rules = phone_rules()
         self.assertRegex(rules, r"\.alu-topbar \{[^}]*display: none;")
@@ -32,6 +34,15 @@ class MobileHeaderCssTests(unittest.TestCase):
 
 
 class MobileHeaderMarkupTests(unittest.TestCase):
+    def test_mobile_uses_separate_expandable_solution_and_product_groups(self):
+        drawer = SHELL[SHELL.index('{/* Mobile Drawer */}'):SHELL.index('{/* Main Content */}')]
+        group = SHELL[SHELL.index('function MobileMenuGroup'):SHELL.index('export function SiteShell')]
+        self.assertIn('<details', group)
+        self.assertIn('navData.solutionsMenu', drawer)
+        self.assertIn('navData.productsMenu', drawer)
+        self.assertNotIn('[...navData.productsMenu, ...navData.solutionsMenu]', drawer)
+        self.assertIn('target="_blank"', group)
+        self.assertIn('rel="noopener noreferrer"', group)
     def test_header_buttons_keep_their_accessible_names_when_labels_are_hidden(self):
         for label in ("Site içi arama (Ctrl+K)", "'Açık temaya geç'", "'Menüyü kapat'"):
             self.assertIn(label, SHELL)

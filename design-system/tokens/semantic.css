@@ -384,6 +384,7 @@
   --layout-tab-max: var(--ref-size-measure-20);
   --layout-dialog-max: var(--ref-size-measure-32);
   --layout-application-header-min-height: var(--ref-size-measure-4-5);
+  --layout-application-mobile-drawer-max-height: calc(100dvh - var(--ref-size-measure-4-5)); /* @kind other */
   --layout-application-modal-max-height: 90vh;
   --layout-application-bento-feature-min-height: var(--ref-size-measure-32);
   --layout-application-service-pill-min-height: var(--ref-size-11);
@@ -918,6 +919,7 @@
   --layout-tab-max: var(--ref-size-measure-20);
   --layout-dialog-max: var(--ref-size-measure-32);
   --layout-application-header-min-height: var(--ref-size-measure-4-5);
+  --layout-application-mobile-drawer-max-height: calc(100dvh - var(--ref-size-measure-4-5)); /* @kind other */
   --layout-application-modal-max-height: 90vh;
   --layout-application-bento-feature-min-height: var(--ref-size-measure-32);
   --layout-application-service-pill-min-height: var(--ref-size-11);
@@ -1589,6 +1591,7 @@
   --layout-tab-max: var(--ref-size-measure-20);
   --layout-dialog-max: var(--ref-size-measure-32);
   --layout-application-header-min-height: var(--ref-size-measure-4-5);
+  --layout-application-mobile-drawer-max-height: calc(100dvh - var(--ref-size-measure-4-5)); /* @kind other */
   --layout-application-modal-max-height: 90vh;
   --layout-application-bento-feature-min-height: var(--ref-size-measure-32);
   --layout-application-service-pill-min-height: var(--ref-size-11);

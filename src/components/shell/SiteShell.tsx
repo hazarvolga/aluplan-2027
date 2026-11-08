@@ -35,6 +35,47 @@ function visibleItems(items: readonly MenuItem[]): MenuItem[] {
   return isReleaseContentEnabled() ? [...items] : items.filter((item) => !item.releaseOnly);
 }
 
+function MobileMenuGroup({ title, href, sections, onNavigate }: {
+  title: string;
+  href: string;
+  sections: readonly { title: string; items: readonly MenuItem[] }[];
+  onNavigate: () => void;
+}) {
+  return (
+    <details className="alu-mobile-drawer__group">
+      <summary className="alu-mobile-drawer__summary">
+        <span>{title}</span>
+        <AluIcon name="chevron-down" size="sm" />
+      </summary>
+      <div className="alu-mobile-drawer__group-content">
+        <Link href={href} className="alu-mobile-drawer__all" onClick={onNavigate}>
+          {title === 'Çözümler' ? 'Tüm Çözümler' : 'Tüm Ürünler'}
+        </Link>
+        {sections.map((section) => (
+          <div key={section.title} className="alu-mobile-drawer__section">
+            <h3 className="alu-megamenu__title">{section.title}</h3>
+            <ul className="alu-megamenu__list">
+              {visibleItems(section.items).map((item) => (
+                <li key={item.href + item.name}>
+                  {item.external ? (
+                    <a href={item.href} target="_blank" rel="noopener noreferrer" className="alu-megamenu__item" onClick={onNavigate}>
+                      {item.name}
+                    </a>
+                  ) : (
+                    <Link href={item.href} className="alu-megamenu__item" onClick={onNavigate}>
+                      {item.name}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </details>
+  );
+}
+
 export function SiteShell({ children }: { children: React.ReactNode }) {
   const { entries: searchIndex, loading: searchLoading, error: searchError, videoPartial, load: loadSearch, retryVideos } = useSearchIndex();
   const [mode, setMode] = useState<'dark' | 'light'>('dark');
@@ -70,6 +111,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         setSearchOpen((prev) => !prev);
       } else if (e.key === 'Escape') {
         setOpenMenu(null);
+        setMobileMenuOpen(false);
         setSearchOpen(false);
       }
     };
@@ -211,6 +253,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               className="alu-button alu-button--ghost alu-button--sm alu-mobile-menu-toggle"
               aria-label={mobileMenuOpen ? 'Menüyü kapat' : 'Menüyü aç'}
               aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-navigation"
               onClick={() => setMobileMenuOpen((prev) => !prev)}
             >
               <AluIcon name={mobileMenuOpen ? 'x' : 'menu'} size="sm" />
@@ -259,50 +302,26 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
         {/* Mobile Drawer */}
         {mobileMenuOpen && (
-          <div className="alu-megamenu alu-mobile-drawer" role="dialog" aria-label="Mobil Gezinme Menüsü">
+          <div id="mobile-navigation" className="alu-megamenu alu-mobile-drawer" role="navigation" aria-label="Mobil Gezinme Menüsü">
             <div className="alu-container alu-stack" style={{ gap: 'var(--space-application-jsx-section-wide)' }}>
-              <div className="alu-cluster">
-                <Link className="alu-button alu-button--secondary alu-button--sm" href="/products" onClick={() => setMobileMenuOpen(false)}>
-                  Tüm Ürünler
-                </Link>
-                <Link className="alu-button alu-button--secondary alu-button--sm" href="/solutions" onClick={() => setMobileMenuOpen(false)}>
-                  Tüm Çözümler
-                </Link>
-                <Link className="alu-button alu-button--secondary alu-button--sm" href={isReleaseContentEnabled() ? '/kaynaklar' : '/#professional-services'} onClick={() => setMobileMenuOpen(false)}>
+              <div className="alu-mobile-drawer__nav">
+                <MobileMenuGroup title="Çözümler" href="/solutions" sections={navData.solutionsMenu} onNavigate={() => setMobileMenuOpen(false)} />
+                <MobileMenuGroup title="Ürünler" href="/products" sections={navData.productsMenu} onNavigate={() => setMobileMenuOpen(false)} />
+                <Link className="alu-mobile-drawer__link" href={isReleaseContentEnabled() ? '/kaynaklar' : '/#professional-services'} onClick={() => setMobileMenuOpen(false)}>
                   Kaynaklar
                 </Link>
-                <Link className="alu-button alu-button--secondary alu-button--sm" href="/references" onClick={() => setMobileMenuOpen(false)}>
+                <Link className="alu-mobile-drawer__link" href="/references" onClick={() => setMobileMenuOpen(false)}>
                   Referanslar
                 </Link>
-                <Link className="alu-button alu-button--secondary alu-button--sm" href="/about" onClick={() => setMobileMenuOpen(false)}>
+                <Link className="alu-mobile-drawer__link" href="/about" onClick={() => setMobileMenuOpen(false)}>
                   Hakkımızda
                 </Link>
-                <Link className="alu-button alu-button--secondary alu-button--sm" href="/faq" onClick={() => setMobileMenuOpen(false)}>
+                <Link className="alu-mobile-drawer__link" href="/faq" onClick={() => setMobileMenuOpen(false)}>
                   S.S.S.
                 </Link>
-                <Link className="alu-button alu-button--secondary alu-button--sm" href="/contact" onClick={() => setMobileMenuOpen(false)}>
+                <Link className="alu-mobile-drawer__link" href="/contact" onClick={() => setMobileMenuOpen(false)}>
                   İletişim
                 </Link>
-              </div>
-              <div className="alu-megamenu__grid">
-                {[...navData.productsMenu, ...navData.solutionsMenu].map((sec, sIdx) => (
-                  <div key={`${sec.title}-${sIdx}`}>
-                    <h3 className="alu-megamenu__title">{sec.title}</h3>
-                    <ul className="alu-megamenu__list">
-                      {visibleItems(sec.items).map((item) => (
-                        <li key={item.href + item.name}>
-                          <Link
-                            href={item.href}
-                            className="alu-megamenu__item"
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            <span>{item.name}</span>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
               </div>
               <div className="alu-mobile-drawer__contact">
                 <div className="alu-topbar__socials" aria-label="Sosyal medya bağlantıları">

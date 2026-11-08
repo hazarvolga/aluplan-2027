@@ -160,7 +160,7 @@ export function SubpageView({
       {!page.structuredLayout && statSections.length > 0 && (
         <DebugComponentLabel name="metricsBand (özel)"><section className="preview-section preview-section--subtle" aria-label="Performans ve Verimlilik Göstergeleri">
           <div className="alu-container">
-            <div className="alu-hero-metrics" style={{ gridTemplateColumns: `repeat(${Math.min(statSections.length, 4)}, minmax(0, 1fr))` }}>
+            <div className="alu-hero-metrics" style={{ '--hero-metric-columns': Math.min(statSections.length, 4) } as React.CSSProperties}>
               {statSections.map((st) => (
                 <div key={st.heading} className="alu-hero-metrics__item">
                   <span className="alu-hero-metrics__value">{st.statValue}</span>

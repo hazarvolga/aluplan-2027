@@ -944,6 +944,7 @@
   --accent-fg: var(--ref-color-teal-700);
   --accent-bg: var(--ref-color-teal-50);
   --accent-border: var(--ref-color-teal-700);
+  --accent-akademi: var(--ref-color-rust-700);
   --status-info-fg: var(--ref-color-blueprint-700);
   --status-info-bg: var(--ref-color-blueprint-50);
   --status-info-border: var(--ref-color-blueprint-600);
@@ -1481,6 +1482,7 @@
   --accent-fg: var(--ref-color-teal-700);
   --accent-bg: var(--ref-color-teal-50);
   --accent-border: var(--ref-color-teal-700);
+  --accent-akademi: var(--ref-color-rust-700);
   --status-info-fg: var(--ref-color-blueprint-700);
   --status-info-bg: var(--ref-color-blueprint-50);
   --status-info-border: var(--ref-color-blueprint-600);
@@ -1616,6 +1618,7 @@
   --accent-fg: var(--ref-color-teal-300);
   --accent-bg: var(--ref-color-teal-950);
   --accent-border: var(--ref-color-teal-300);
+  --accent-akademi: var(--ref-color-rust-300);
   --status-info-fg: var(--ref-color-blueprint-300);
   --status-info-bg: var(--ref-color-anthracite-850);
   --status-info-border: var(--ref-color-blueprint-400);
@@ -2153,6 +2156,7 @@
   --accent-fg: var(--ref-color-moss-700);
   --accent-bg: var(--ref-color-moss-50);
   --accent-border: var(--ref-color-moss-700);
+  --accent-akademi: var(--ref-color-rust-700);
   --status-info-fg: var(--ref-color-blueprint-700);
   --status-info-bg: var(--ref-color-blueprint-50);
   --status-info-border: var(--ref-color-blueprint-600);
@@ -2288,6 +2292,7 @@
   --accent-fg: var(--ref-color-moss-300);
   --accent-bg: var(--ref-color-moss-900);
   --accent-border: var(--ref-color-moss-300);
+  --accent-akademi: var(--ref-color-rust-300);
   --status-info-fg: var(--ref-color-blueprint-300);
   --status-info-bg: var(--ref-color-stone-900);
   --status-info-border: var(--ref-color-blueprint-400);

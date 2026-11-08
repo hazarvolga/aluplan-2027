@@ -24,8 +24,8 @@
 .levelGrid{list-style:none;margin:var(--space-stack-lg) 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:var(--space-stack-md)}
 .levelGridItem{display:flex}
 .levelGridItem>*{width:100%}
-.entryCta{align-self:flex-start;margin-top:var(--space-stack-xs);text-decoration:none;color:var(--text-primary);font-weight:var(--font-weight-strong);font-size:var(--type-body-sm-size)}
-.entryCta:hover{color:var(--accent-fg)}
+.entryCta{align-self:flex-start;margin-top:var(--space-stack-xs);text-decoration:none;color:var(--accent-akademi);font-weight:var(--font-weight-strong);font-size:var(--type-body-sm-size)}
+.entryCta:hover{text-decoration:underline}
 .noteWrap{margin-top:var(--space-stack-md)}
 
 .modules{display:grid;border-top:var(--border-width-default) solid var(--border-default)}

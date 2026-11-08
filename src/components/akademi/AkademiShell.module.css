@@ -1,3 +1,4 @@
 .shell{min-height:100vh;display:flex;flex-direction:column;background:var(--surface-page);color:var(--text-primary)}
 .body{flex:1 1 auto;display:flex;gap:var(--space-inset-md);align-items:flex-start;width:100%;padding-inline:var(--space-inset-md)}
+.bodyFull{flex:1 1 auto;width:100%}
 .main{flex:1 1 auto;min-width:0}

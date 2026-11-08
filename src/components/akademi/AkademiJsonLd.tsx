@@ -1,9 +1,11 @@
-import { akademiHero, akademiLevels } from '@/data/akademi';
-import type { AkademiLevel } from '@/data/akademi';
+import { akademiProgram } from '@/data/akademi-content';
+import type { ContentLevel } from '@/data/akademi-content';
+
+const { hero: akademiHero, levels: akademiLevels } = akademiProgram;
 
 const SITE = 'https://aluplan.com.tr';
 
-function levelCourse(level: AkademiLevel) {
+function levelCourse(level: ContentLevel) {
   return {
     '@type': 'Course',
     name: `Seviye ${level.number} · ${level.title}`,
@@ -18,7 +20,7 @@ function levelCourse(level: AkademiLevel) {
  * Course / ItemList structured data for the academy. Rendered now so the GEO/SEO
  * foundation is in place; the pages themselves stay noindex until launch.
  */
-export function AkademiJsonLd({ level }: { level?: AkademiLevel }) {
+export function AkademiJsonLd({ level }: { level?: ContentLevel }) {
   const data = level
     ? { '@context': 'https://schema.org', ...levelCourse(level) }
     : {

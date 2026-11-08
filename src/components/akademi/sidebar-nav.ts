@@ -1,4 +1,6 @@
-import { akademiLevels } from '@/data/akademi';
+import { akademiProgram } from '@/data/akademi-content';
+
+const akademiLevels = akademiProgram.levels;
 
 export interface SidebarLevel {
   number: number;

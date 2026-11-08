@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react';
 import { AluIcon } from '@/components/ui/AluIcon';
-import type { AkademiModule } from '@/data/akademi';
+import type { ContentModule } from '@/data/akademi-content';
 import styles from './ModuleCard.module.css';
 
 /**
@@ -12,7 +12,7 @@ export function ModuleCard({
   module,
   showHours = true,
 }: {
-  module: AkademiModule;
+  module: ContentModule;
   showHours?: boolean;
 }): ReactElement {
   return (
@@ -25,12 +25,12 @@ export function ModuleCard({
         </h3>
         {showHours && <span className={styles.hours}>{module.hours} sa</span>}
       </div>
-      {module.outcomes && (
+      {module.outcomes && module.outcomes.length > 0 && (
         <ul className={styles.outcomes}>
           {module.outcomes.map((outcome) => (
-            <li key={outcome} className={styles.outcome}>
+            <li key={outcome.code || outcome.text} className={styles.outcome}>
               <span className={styles.check} aria-hidden="true"><AluIcon name="check" size="sm" /></span>
-              {outcome}
+              {outcome.text}
             </li>
           ))}
         </ul>

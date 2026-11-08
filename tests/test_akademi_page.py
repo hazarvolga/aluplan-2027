@@ -36,15 +36,19 @@ class AkademiDraftTests(unittest.TestCase):
                 self.assertNotIn("ALUPLAN_SHOW_AKADEMI", read(path))
 
     def test_level_three_tracks_have_equal_hours(self):
-        data = read("src/data/akademi.ts")
-        level_three = data[data.index("number: 3,"):data.index("number: 4,")]
-        tracks = re.split(r"\n\s+\{\n\s+title: '", level_three)[1:]
-        self.assertEqual(len(tracks), 4)
-        totals = {sum(int(h) for h in re.findall(r"hours: (\d+)", track)) for track in tracks}
-        self.assertEqual(len(totals), 1, f"track hours differ: {totals}")
+        # İleri (ileri) modules carry their track in trackTitle; each track's total must match.
+        import json
+        content_dir = ROOT / "src/data/akademi-content"
+        by_track: dict[str, int] = {}
+        for path in content_dir.glob("*.json"):
+            m = json.loads(path.read_text(encoding="utf-8"))
+            if m["levelSlug"] == "ileri":
+                by_track[m["trackTitle"]] = by_track.get(m["trackTitle"], 0) + m["hours"]
+        self.assertEqual(len(by_track), 4, f"expected 4 tracks, got {by_track}")
+        self.assertEqual(len(set(by_track.values())), 1, f"track hours differ: {by_track}")
 
     def test_quiz_is_described_as_self_assessment_not_certificate(self):
-        data = read("src/data/akademi.ts")
+        data = read("src/data/akademi-content.ts")
         self.assertIn("sertifika yerine geçmez", data)
 
 
@@ -63,19 +67,26 @@ class AkademiLevelPageTests(unittest.TestCase):
         self.assertIn("export const dynamicParams = false;", page)
 
     def test_every_level_has_a_semantic_slug_and_slugs_are_unique(self):
-        data = read("src/data/akademi.ts")
-        slugs = re.findall(r"slug: '([a-z0-9-]+)'", data)
-        self.assertEqual(len(slugs), 4)
-        self.assertEqual(len(set(slugs)), 4)
+        data = read("src/data/akademi-content.ts")
+        slugs = re.findall(r"slug: '([a-z]+)',", data)
         self.assertEqual(set(slugs), {"temel", "orta", "ileri", "uzman"})
         self.assertNotIn("seviye-", data)
 
-    def test_content_and_legacy_level_slugs_agree(self):
-        # During the akademi.ts → akademi-content.ts migration both sources exist; their
-        # level slugs must stay identical so routes resolve from either one.
-        content = read("src/data/akademi-content.ts")
-        content_slugs = set(re.findall(r"slug: '([a-z]+)',", content))
-        self.assertTrue({"temel", "orta", "ileri", "uzman"} <= content_slugs)
+    def test_akademi_ts_is_retired(self):
+        self.assertFalse((ROOT / "src/data/akademi.ts").exists(),
+                         "akademi.ts should be deleted; akademi-content.ts is the single source")
+
+    def test_pages_read_only_the_content_model(self):
+        for path in ("src/components/sections/AkademiOverview.tsx",
+                     "src/components/sections/AkademiLevelDetail.tsx",
+                     "src/components/akademi/AkademiJsonLd.tsx",
+                     "src/components/akademi/sidebar-nav.ts",
+                     "src/app/akademi/page.tsx",
+                     "src/app/akademi/[seviye]/page.tsx"):
+            with self.subTest(file=path):
+                src = read(path)
+                self.assertIn("@/data/akademi-content", src)
+                self.assertNotRegex(src, r"@/data/akademi'")
 
     def test_level_pages_are_not_linked_from_sitemap_or_search(self):
         for path in ("src/app/sitemap.ts", "src/data/navigation.json",

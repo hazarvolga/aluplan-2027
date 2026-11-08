@@ -1,16 +1,7 @@
 import type { ReactElement } from 'react';
 import Link from 'next/link';
 import { AluIcon } from '@/components/ui/AluIcon';
-import {
-  akademiCertificate,
-  akademiEntryPaths,
-  akademiHero,
-  akademiKnowledgeBase,
-  akademiLessonParts,
-  akademiLevels,
-  akademiProgressNote,
-  akademiRunningProject,
-} from '@/data/akademi';
+import { akademiProgram } from '@/data/akademi-content';
 import { CompactPageHero } from './CompactPageHero';
 import { DebugComponentLabel } from './DebugComponentLabel';
 import { SectionHeader } from './SectionHeader';
@@ -20,6 +11,17 @@ import { AkademiJsonLd } from '@/components/akademi/AkademiJsonLd';
 import styles from './AkademiOverview.module.css';
 
 export function AkademiOverview(): ReactElement {
+  const {
+    hero: akademiHero,
+    entryPaths: akademiEntryPaths,
+    levels: akademiLevels,
+    runningProject: akademiRunningProject,
+    lessonParts: akademiLessonParts,
+    progressNote: akademiProgressNote,
+    certificate: akademiCertificate,
+    knowledgeBase: akademiKnowledgeBase,
+  } = akademiProgram;
+
   return (
     <div className={styles.page}>
       <AkademiJsonLd />

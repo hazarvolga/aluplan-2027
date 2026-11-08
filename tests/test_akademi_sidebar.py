@@ -31,7 +31,7 @@ class AkademiSidebarTests(unittest.TestCase):
     def test_sidebar_links_use_semantic_level_slugs(self):
         # The sidebar builds /akademi/${slug} from the level data; those slugs are semantic
         # (temel/orta/ileri/uzman), so no seviye-N link can reach the sidebar.
-        for path in ("src/data/akademi.ts", "src/components/akademi/sidebar-nav.ts",
+        for path in ("src/data/akademi-content.ts", "src/components/akademi/sidebar-nav.ts",
                      "src/components/akademi/AkademiSidebar.tsx"):
             with self.subTest(file=path):
                 self.assertNotIn("seviye-", read(path))

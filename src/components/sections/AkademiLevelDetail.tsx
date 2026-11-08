@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react';
-import { akademiLevels } from '@/data/akademi';
-import type { AkademiLevel, AkademiModule } from '@/data/akademi';
+import { akademiProgram } from '@/data/akademi-content';
+import type { ContentLevel, ContentModule } from '@/data/akademi-content';
 import { CompactPageHero } from './CompactPageHero';
 import { DebugComponentLabel } from './DebugComponentLabel';
 import { SectionHeader } from './SectionHeader';
@@ -8,23 +8,25 @@ import { MetaRow, ModuleCard } from '@/components/akademi/kit';
 import { AkademiJsonLd } from '@/components/akademi/AkademiJsonLd';
 import styles from './AkademiLevelDetail.module.css';
 
-function totalHours(modules: readonly AkademiModule[]): number {
+const akademiLevels = akademiProgram.levels;
+
+function totalHours(modules: readonly ContentModule[]): number {
   return modules.reduce((sum, module) => sum + module.hours, 0);
 }
 
-function levelHours(level: AkademiLevel): number {
+function levelHours(level: ContentLevel): number {
   if (level.modules) return totalHours(level.modules);
   if (level.tracks) return totalHours(level.tracks[0]?.modules ?? []);
   return 0;
 }
 
-function unitCount(level: AkademiLevel): number {
+function unitCount(level: ContentLevel): number {
   if (level.modules) return level.modules.length;
   if (level.tracks) return level.tracks.length;
   return 0;
 }
 
-export function AkademiLevelDetail({ level }: { level: AkademiLevel }): ReactElement {
+export function AkademiLevelDetail({ level }: { level: ContentLevel }): ReactElement {
   const index = akademiLevels.findIndex((item) => item.slug === level.slug);
   const previous = index > 0 ? akademiLevels[index - 1] : undefined;
   const next = index < akademiLevels.length - 1 ? akademiLevels[index + 1] : undefined;

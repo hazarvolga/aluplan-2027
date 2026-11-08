@@ -309,6 +309,84 @@
       "bloom": "Değerlendirme",
       "difficulty": "Zor",
       "outcomeCode": "K-İ6.3"
+    },
+    {
+      "id": "M6-Q6",
+      "prompt": "Çelik kolonların aks sistemine oturtulması hangi faydayı sağlar?",
+      "options": [
+        {
+          "text": "Kolonların ekran rengi otomatik değişir",
+          "correct": false
+        },
+        {
+          "text": "Profil kalitesi aksa göre otomatik S355 olur",
+          "correct": false
+        },
+        {
+          "text": "Aksa bağlı kolon, değişiklikte tüm sisteme tutarlı yansır; kiriş ve bağlantılar hizalı kalır",
+          "correct": true
+        },
+        {
+          "text": "Kolonlar aksa oturunca ağırlık listesi gereksiz hale gelir",
+          "correct": false
+        }
+      ],
+      "explanation": "Akslara bağlı kolon, konum değiştiğinde sistemin tümünü tutarlı günceller ve kiriş ile bağlantı hizasını korur. Ekran rengi ve otomatik kalite seçimi aksla ilgili değildir. Ağırlık listesi her durumda gereklidir; aks bağı onu gereksiz yapmaz.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-İ6.1"
+    },
+    {
+      "id": "M6-Q7",
+      "prompt": "Bir çelik kirişe yanlış profil kesiti atandığında bunu ilk hangi belirtiden fark edersiniz?",
+      "options": [
+        {
+          "text": "Render süresinin uzamasından",
+          "correct": false
+        },
+        {
+          "text": "Pafta ölçeğinin değişmesinden",
+          "correct": false
+        },
+        {
+          "text": "Kamera açısının kaymasından",
+          "correct": false
+        },
+        {
+          "text": "Statik davranışın ve ağırlık/metraj çıktısının hatalı çıkmasından",
+          "correct": true
+        }
+      ],
+      "explanation": "Yanlış kesit, elemanın dayanımını ve ağırlık/metraj değerini bozar; hata önce bu çıktılarda görülür ve doğru kesit yeniden atanınca düzelir. Render süresi, pafta ölçeği ve kamera açısı profil kesitinden etkilenmez.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-İ6.1"
+    },
+    {
+      "id": "M6-Q8",
+      "prompt": "Çelik elemanların ağırlık listesine doğru yansımasının önemi nedir?",
+      "options": [
+        {
+          "text": "Yalnızca dosyanın açılış süresini kısaltır",
+          "correct": false
+        },
+        {
+          "text": "Yalnızca elemanların ekran rengini belirler",
+          "correct": false
+        },
+        {
+          "text": "Metraj ve üretim/tedarik planlaması doğru ağırlığa dayandığı için maliyet ve imalat buna göre kurulur",
+          "correct": true
+        },
+        {
+          "text": "Ağırlık listesi bağlantı tipini otomatik seçer",
+          "correct": false
+        }
+      ],
+      "explanation": "Doğru ağırlık listesi metraj ile üretim ve tedarik planlamasının temelidir; yanlış ağırlık maliyet ve imalatı yanıltır. Açılış süresi ve ekran rengi ağırlıkla ilgisizdir. Ağırlık listesi bağlantı tipini seçmez, yalnızca elemanların kütle dökümünü verir.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Zor",
+      "outcomeCode": "K-İ6.1"
     }
   ]
 }

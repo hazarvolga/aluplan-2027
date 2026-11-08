@@ -316,6 +316,84 @@
       "bloom": "Analiz",
       "difficulty": "Zor",
       "outcomeCode": "K-İ3B.2"
+    },
+    {
+      "id": "M3B-Q6",
+      "prompt": "Giydirme cephe (curtain wall) ile standart duvarın temel farkı nedir?",
+      "options": [
+        {
+          "text": "Giydirme cephe binanın taşıyıcı yükünü taşır, standart duvar taşımaz",
+          "correct": false
+        },
+        {
+          "text": "Giydirme cephe taşıyıcı olmayan, panel ve profillerden oluşan dış kabuktur; standart duvar ise yapı katmanı olarak kurulur",
+          "correct": true
+        },
+        {
+          "text": "İkisi arasında yalnızca yüzey rengi farkı vardır",
+          "correct": false
+        },
+        {
+          "text": "Giydirme cephe yalnızca iç mekânda kullanılır",
+          "correct": false
+        }
+      ],
+      "explanation": "Giydirme cephe taşıyıcı olmayan, panel ve profillerden oluşan bir dış kabuktur; standart duvardan işlev ve kurulum olarak ayrılır. Taşıyıcılık iddiası terstir, giydirme cephe sistem yükünü taşımaz. Renk farkı yüzeysel olup tanımlayıcı değildir. Giydirme cephe dış kabuktur; yalnız iç mekân kullanımı yanlıştır.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-İ3B.1"
+    },
+    {
+      "id": "M3B-Q7",
+      "prompt": "Bir giydirme cepheyi modellerken doğru işlem sırası hangisidir?",
+      "options": [
+        {
+          "text": "Malzeme ata → grid tanımla → panel yerleştir → render al",
+          "correct": false
+        },
+        {
+          "text": "Render al → grid tanımla → panel yerleştir → malzeme ata",
+          "correct": false
+        },
+        {
+          "text": "Referans grid tanımla → panel ve profilleri yerleştir → malzeme ata → ortak kamera/ışık ile render al",
+          "correct": true
+        },
+        {
+          "text": "Panel yerleştir → grid tanımla → render al → malzeme ata",
+          "correct": false
+        }
+      ],
+      "explanation": "Önce referans grid, sonra panel ve profiller, ardından malzeme, en son sabit kamera/ışık ile render gelir. Malzeme veya render'ı başa almak paneli dayanacağı grid olmadan kurar ve çıktıyı bozar. Grid'i panelden sonra tanımlamak panelin gride bağlanmasını engeller.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-İ3B.1"
+    },
+    {
+      "id": "M3B-Q8",
+      "prompt": "Yüzeylere malzeme/kaplama atamak hangi iki çıktıyı birlikte besler?",
+      "options": [
+        {
+          "text": "Yalnızca dosya boyutunu ve katman sayısını",
+          "correct": false
+        },
+        {
+          "text": "Yalnızca kamera adını ve render süresini",
+          "correct": false
+        },
+        {
+          "text": "Yalnızca grid ölçüsünü ve panel adedini",
+          "correct": false
+        },
+        {
+          "text": "Görselleştirme (render) görünümünü ve yüzey metrajını",
+          "correct": true
+        }
+      ],
+      "explanation": "Malzeme ataması hem render'daki gerçekçi görünümü hem de yüzey metrajını besler; ikisi aynı atamadan türer. Dosya boyutu/katman sayısı, kamera adı/render süresi ve grid/panel adedi malzeme atamasının doğrudan beslediği çıktılar değildir.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-İ3B.2"
     }
   ]
 }

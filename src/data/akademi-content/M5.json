@@ -342,6 +342,58 @@
       "bloom": "Değerlendirme",
       "difficulty": "Zor",
       "outcomeCode": "K-İ5.2"
+    },
+    {
+      "id": "M5-Q7",
+      "prompt": "Donatı çakışmasını sahada değil 3B modelde denetlemenin en güçlü gerekçesi nedir?",
+      "options": [
+        {
+          "text": "3B çakışma denetimi donatı listesini otomatik siler ve yeniden yazar",
+          "correct": false
+        },
+        {
+          "text": "Çakışma denetimi pas payını otomatik büyütür",
+          "correct": false
+        },
+        {
+          "text": "Çakışan donatı sahada yerleşmez; hatayı modelde görüp düzeltmek sahada düzeltmekten ucuz ve hızlıdır",
+          "correct": true
+        },
+        {
+          "text": "Saha denetimi modeldeki denetimden her zaman daha doğrudur",
+          "correct": false
+        }
+      ],
+      "explanation": "Çakışan çubuklar sahada oturmaz; hatayı modelde yakalayıp düzeltmek imalat ve işçilik maliyetini düşürür. Liste silme ve pas payını büyütme çakışma denetiminin işlevi değildir. Saha denetimi geç ve pahalı kalır, modeldekinden daha doğru değildir.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Orta",
+      "outcomeCode": "K-İ5.1"
+    },
+    {
+      "id": "M5-Q8",
+      "prompt": "Modelden üretilen donatı listesinde bir satırın modeldeki çubukla uyuşmadığını gördünüz. En olası neden nedir?",
+      "options": [
+        {
+          "text": "Pafta ölçeği yanlış seçilmiş",
+          "correct": false
+        },
+        {
+          "text": "O satır elle düzenlenmiş/eklenmiş olduğundan modelden türeyen veriyle bağı kopmuş",
+          "correct": true
+        },
+        {
+          "text": "Modelden üretilen liste hiçbir zaman modelle uyuşmaz",
+          "correct": false
+        },
+        {
+          "text": "Çubuğa katman rengi atanmamış",
+          "correct": false
+        }
+      ],
+      "explanation": "Modelden türeyen liste satırları model değişince birlikte güncellenir; bir satır elle düzenlenmişse modelle bağı kopar ve uyuşmaz. Pafta ölçeği ve katman rengi satırdaki sayısal uyuşmazlığı açıklamaz. Modelden üretilen liste normalde modelle uyuşur; 'hiçbir zaman uyuşmaz' yanlıştır.",
+      "bloom": "Analiz",
+      "difficulty": "Zor",
+      "outcomeCode": "K-İ5.2"
     }
   ]
 }

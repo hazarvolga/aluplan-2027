@@ -340,6 +340,58 @@
       "bloom": "Uygulama",
       "difficulty": "Zor",
       "outcomeCode": "K-O4B.3"
+    },
+    {
+      "id": "M4B-Q7",
+      "prompt": "Elemanları sınıflandırmanın (classification) metraj ve çizelgelere temel katkısı nedir?",
+      "options": [
+        {
+          "text": "Çıktıdaki çizgi kalınlığını artırır",
+          "correct": false
+        },
+        {
+          "text": "Modelin dosya biçimini değiştirir",
+          "correct": false
+        },
+        {
+          "text": "Listeleri ortak koda göre derli toplu ve filtrelenebilir yapar",
+          "correct": true
+        },
+        {
+          "text": "Elemanların rengini otomatik eşitler",
+          "correct": false
+        }
+      ],
+      "explanation": "Sınıflandırma, elemanları ortak koda göre gruplayarak listeleri derli toplu ve filtrelenebilir hale getirir; böylece metraj ve çizelgeler kategori bazında okunur. Çizgi kalınlığı, dosya biçimi ve renk sınıflandırmanın sağladığı katkı değildir.",
+      "bloom": "Anlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-O4B.2"
+    },
+    {
+      "id": "M4B-Q8",
+      "prompt": "Mahal listesi (room schedule) temel olarak neyi dökümler?",
+      "options": [
+        {
+          "text": "Kapı ve pencerelerin cam kalınlığını",
+          "correct": false
+        },
+        {
+          "text": "Odaların alanını ve işlevini",
+          "correct": true
+        },
+        {
+          "text": "Pafta ölçeğini ve kağıt boyutunu",
+          "correct": false
+        },
+        {
+          "text": "Kesit düzlemlerinin sayısını",
+          "correct": false
+        }
+      ],
+      "explanation": "Mahal listesi, tanımlı oda nesnelerinden odaların alan ve işlev dökümünü üretir. Cam kalınlığı, pafta ölçeği/kağıt boyutu ve kesit sayısı mahal listesinin içeriği değildir.",
+      "bloom": "Hatırlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-O4B.3"
     }
   ]
 }

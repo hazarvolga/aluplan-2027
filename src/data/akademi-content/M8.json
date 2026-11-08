@@ -335,6 +335,58 @@
       "bloom": "Değerlendirme",
       "difficulty": "Zor",
       "outcomeCode": "K-İ8.3"
+    },
+    {
+      "id": "M8-Q7",
+      "prompt": "Köprü modelinde birden çok prefabrik kiriş var; biri dışında hepsinde mesnet tanımlı. Mesnetsiz kirişteki hata ve çözümü nedir?",
+      "options": [
+        {
+          "text": "Kirişin kendi güzergâhı tanımlanmamış; kirişe ayrı güzergâh ekleyin",
+          "correct": false
+        },
+        {
+          "text": "Kirişin üstüne tabliye modellenmemiş; önce tabliyeyi ekleyin",
+          "correct": false
+        },
+        {
+          "text": "Kirişe enkesit şablonu uygulanmamış; enkesiti kirişe uygulayın",
+          "correct": false
+        },
+        {
+          "text": "O kirişin ucunda mesnet tanımlanmamış; her kiriş ucuna mesnet tanımlayın",
+          "correct": true
+        }
+      ],
+      "explanation": "Taşıma sistemi için her kiriş ucunun ayağa/başlığa mesnetle bağlanması gerekir; mesnetsiz kirişte eksik olan budur ve çözüm uca mesnet tanımlamaktır. Güzergâh yola aittir, tek kirişe değil; tabliye üst döşemedir, mesnetin yerini tutmaz; enkesit yol gövdesini üretir, kiriş mesnetiyle ilgisizdir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-İ8.2"
+    },
+    {
+      "id": "M8-Q8",
+      "prompt": "Prefabrik kirişli köprüde tabliye, taşıt (trafik) yükünü öncelikle hangi elemana aktarır?",
+      "options": [
+        {
+          "text": "Yükü doğrudan yol güzergâhının eksenine aktarır",
+          "correct": false
+        },
+        {
+          "text": "Taşıt yükünü altındaki kirişlere aktarır",
+          "correct": true
+        },
+        {
+          "text": "Yükü enkesit şablonuna aktarır",
+          "correct": false
+        },
+        {
+          "text": "Yükü kazı/dolgu hacmine aktarır",
+          "correct": false
+        }
+      ],
+      "explanation": "Tabliye üst döşeme olarak taşıt yükünü altındaki kirişlere aktarır; kirişler de yükü mesnetler üzerinden alt yapıya iletir. Güzergâh ekseni bir geometri referansıdır, taşıyıcı değil; enkesit yol gövdesini tanımlayan bir şablondur; kazı/dolgu ise toprak işi hacmidir, yük taşımaz.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-İ8.2"
     }
   ],
   "proposed": false

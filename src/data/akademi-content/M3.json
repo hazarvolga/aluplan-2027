@@ -360,6 +360,32 @@
       "bloom": "Hatırlama",
       "difficulty": "Kolay",
       "outcomeCode": "K-B3.2"
+    },
+    {
+      "id": "M3-Q8",
+      "prompt": "Kesitte kiriş ile kolon kesişimi iki eleman üst üste taşmış görünüyor; birleşim temiz değil. En olası neden nedir?",
+      "options": [
+        {
+          "text": "Kesişen elemanlar için birleşim önceliği (priority) tanımlanmamış",
+          "correct": true
+        },
+        {
+          "text": "Kolon farklı bir katman renginde",
+          "correct": false
+        },
+        {
+          "text": "Döşeme kalınlığı çok büyük girilmiş",
+          "correct": false
+        },
+        {
+          "text": "Çıktı ölçeği yanlış seçilmiş",
+          "correct": false
+        }
+      ],
+      "explanation": "Kesitte kesişen elemanların üst üste görünmesi, hangi elemanın diğerini keseceğini belirleyen birleşim önceliğinin tanımsız olmasından kaynaklanır; öncelik değerleri ayarlanınca birleşim temizlenir. Katman rengi yalnızca görünümü, döşeme kalınlığı döşemeyi, çıktı ölçeği ise baskı boyutunu etkiler; hiçbiri kesişim önceliğini belirlemez.",
+      "bloom": "Analiz",
+      "difficulty": "Zor",
+      "outcomeCode": "K-B3.3"
     }
   ]
 }

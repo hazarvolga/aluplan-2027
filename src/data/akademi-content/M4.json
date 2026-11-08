@@ -318,6 +318,84 @@
       "bloom": "Uygulama",
       "difficulty": "Zor",
       "outcomeCode": "K-O4.2"
+    },
+    {
+      "id": "M4-Q6",
+      "prompt": "Pafta (layout) temel olarak ne işe yarar?",
+      "options": [
+        {
+          "text": "Modeli 3B olarak döndürüp incelemeyi sağlar",
+          "correct": false
+        },
+        {
+          "text": "Çizimleri ölçekli biçimde çıktı sayfasında düzenlemeyi sağlar",
+          "correct": true
+        },
+        {
+          "text": "Elemanlara malzeme özelliği atar",
+          "correct": false
+        },
+        {
+          "text": "Kesit düzlemini otomatik tanımlar",
+          "correct": false
+        }
+      ],
+      "explanation": "Pafta, plan/kesit/görünüş gibi çizimlerin ölçekli olarak yerleştiği çıktı sayfasıdır; teslim ve baskı bu düzende hazırlanır. 3B inceleme model ortamının, malzeme atama özelliklerin, kesit düzlemi tanımı ise kesit aracının işidir.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-O4.2"
+    },
+    {
+      "id": "M4-Q7",
+      "prompt": "Pafta antedi (title block) öncelikle neyi taşır?",
+      "options": [
+        {
+          "text": "Modelin taşıyıcı sistem hesabını",
+          "correct": false
+        },
+        {
+          "text": "Elemanların birleşim önceliklerini",
+          "correct": false
+        },
+        {
+          "text": "Proje bilgisi, ölçek referansı ve çerçeve gibi teslim bilgilerini",
+          "correct": true
+        },
+        {
+          "text": "Kütüphane objelerinin listesini",
+          "correct": false
+        }
+      ],
+      "explanation": "Antet, paftanın kenarındaki proje bilgisini, ölçek referansını ve çerçeveyi taşıyan bloktur; kurumsal teslim standardının parçasıdır. Taşıyıcı hesap, birleşim önceliği ve kütüphane listesi antedin içeriği değildir.",
+      "bloom": "Anlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-O4.2"
+    },
+    {
+      "id": "M4-Q8",
+      "prompt": "Paftayı teslim ve paylaşım için dışa aktarırken yaygın olarak hangi çıktı biçimleri kullanılır?",
+      "options": [
+        {
+          "text": "Yalnızca ham model dosyası",
+          "correct": false
+        },
+        {
+          "text": "Yalnızca görüntü panosu bağlantısı",
+          "correct": false
+        },
+        {
+          "text": "Yalnızca sıkıştırılmış yedek dosyası",
+          "correct": false
+        },
+        {
+          "text": "PDF ve gerektiğinde DWG",
+          "correct": true
+        }
+      ],
+      "explanation": "Pafta teslimi için herkesin açabileceği standart biçimler olan PDF ve gerektiğinde DWG kullanılır. Ham model dosyası, pano bağlantısı veya yedek dosyası paylaşım için standart teslim biçimi değildir.",
+      "bloom": "Hatırlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-O4.2"
     }
   ]
 }

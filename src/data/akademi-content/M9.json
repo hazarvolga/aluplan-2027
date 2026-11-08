@@ -334,6 +334,58 @@
       "bloom": "Analiz",
       "difficulty": "Zor",
       "outcomeCode": "K-U9.2"
+    },
+    {
+      "id": "M9-Q7",
+      "prompt": "Bir otomasyon akışını kurarken adımların en doğru sırası hangisidir?",
+      "options": [
+        {
+          "text": "Önce düğümleri bağla, sonra işin kuralını belirle, parametreleri en sona bırak.",
+          "correct": false
+        },
+        {
+          "text": "Önce çıktı düğümünü yerleştir, sonra girdi parametrelerini tanımla.",
+          "correct": false
+        },
+        {
+          "text": "Değerleri doğrudan düğümlere gömerek başla ve girdi parametresi hiç tanımlama.",
+          "correct": false
+        },
+        {
+          "text": "İşin kuralını tanımla; girdi parametrelerini belirle; düğümleri girdi, işlem, çıktı sırasıyla bağla; sınır değerlerle test et.",
+          "correct": true
+        }
+      ],
+      "explanation": "Doğru akış önce kuralı, sonra girdi parametrelerini netleştirir; düğümler girdiden çıktıya doğru bağlanır ve en sonda sınır değerlerle sınanır. İkinci şıkta kural akıştan sonra geldiği için akış yanlış dizer; üçüncü şık sırayı tersine çevirir; dördüncü şıktaki gömülü değer, parametre değişiminde modelin güncellenmemesine yol açar.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Orta",
+      "outcomeCode": "K-U9.1"
+    },
+    {
+      "id": "M9-Q8",
+      "prompt": "Bir görsel akışta bağlantılar şöyle kurulmuş: geometri üretimi düğümünün çıktısı girdi düğümüne, girdi düğümü de yerleştirme düğümüne bağlı. Akış boş çıktı veriyor. Hata nedir?",
+      "options": [
+        {
+          "text": "Akış ters yönde bağlanmış; doğru yön girdi, geometri üretimi, yerleştirme olmalı.",
+          "correct": true
+        },
+        {
+          "text": "Akışta düğüm sayısı fazla olduğu için çıktı boş geliyor.",
+          "correct": false
+        },
+        {
+          "text": "Girilen parametre değeri çok büyük olduğu için akış boş çıktı veriyor.",
+          "correct": false
+        },
+        {
+          "text": "Modelin IFC sürümü yanlış seçildiği için çıktı boş geliyor.",
+          "correct": false
+        }
+      ],
+      "explanation": "Veri girdiden başlayıp geometri üretimi ve yerleştirmeye akmalıdır; burada bağlantı yönü tersine kurulduğu için üretim düğümü girdisiz kalır ve çıktı boş gelir. Düğüm sayısı performansı etkiler ama boş çıktıya yol açmaz; büyük parametre değeri hatalı değil yoğun çıktı verir; IFC sürümü bu modülün ve bu akışın konusu değildir.",
+      "bloom": "Analiz",
+      "difficulty": "Zor",
+      "outcomeCode": "K-U9.1"
     }
   ],
   "proposed": false

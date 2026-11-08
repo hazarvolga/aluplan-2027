@@ -335,6 +335,58 @@
       "bloom": "Değerlendirme",
       "difficulty": "Zor",
       "outcomeCode": "K-İ7.3"
+    },
+    {
+      "id": "M7-Q7",
+      "prompt": "Eleman listesinde bir prefabrik segmentin üretim verisinde kaldırma ankrajı (gömülü parça) görünmüyor; diğer segmentlerde var. Bu segmentteki hata ve çözümü nedir?",
+      "options": [
+        {
+          "text": "Segment taşıma limitinin üstünde bölünmüş; daha küçük parçalara ayırın",
+          "correct": false
+        },
+        {
+          "text": "Model ile liste tutarsız; listeyi silip elle yeniden çizin",
+          "correct": false
+        },
+        {
+          "text": "O segmente gömülü parça (kaldırma ankrajı) eklenmemiş; elemana ekleyip üretim verisini yenileyin",
+          "correct": true
+        },
+        {
+          "text": "Segmente benzersiz kod verilmemiş; kodlama şemasını uygulayın",
+          "correct": false
+        }
+      ],
+      "explanation": "Üretim verisinde ankrajın hiç görünmemesi, gömülü parçanın o elemana modelde eklenmemiş olmasından kaynaklanır; çözüm parçayı elemana ekleyip veriyi yenilemektir. Taşıma limiti segment büyüklüğünü ilgilendirir, ankrajın yokluğunu değil. Burada liste modeli doğru yansıtıyor (ikisinde de ankraj yok), yani tutarsızlık değil eksik modelleme vardır. Kod eksikliği ise listede çakışan/boş kod olarak görünürdü, ankraj olarak değil.",
+      "bloom": "Analiz",
+      "difficulty": "Zor",
+      "outcomeCode": "K-İ7.1"
+    },
+    {
+      "id": "M7-Q8",
+      "prompt": "Her prefabrik segmente verilen eleman kodu (mark) asıl olarak ne işe yarar?",
+      "options": [
+        {
+          "text": "Elemanın ekrandaki görünüm rengini belirler",
+          "correct": false
+        },
+        {
+          "text": "Segmentin taşıma limitini otomatik hesaplar",
+          "correct": false
+        },
+        {
+          "text": "Elemana eklenecek gömülü parça sayısını azaltır",
+          "correct": false
+        },
+        {
+          "text": "Her segmenti benzersiz tanımlayıp üretim ve sahada montaj takibini sağlar",
+          "correct": true
+        }
+      ],
+      "explanation": "Eleman kodu her segmente benzersiz kimlik vererek fabrikada üretim ve sahada montajın hangi parçaya ait olduğunu izlenebilir kılar. Renk bir görüntüleme ayarıdır; taşıma limiti üretim/nakliye verisinden gelir, koddan değil; gömülü parça sayısı tasarımla belirlenir, kodla değişmez.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-İ7.2"
     }
   ]
 }

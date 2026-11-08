@@ -349,6 +349,58 @@
       "bloom": "Analiz",
       "difficulty": "Orta",
       "outcomeCode": "K-U10.3"
+    },
+    {
+      "id": "M10-Q7",
+      "prompt": "openBIM tesliminde IDS (bilgi teslim şartnamesi) öncelikle neyi tanımlar?",
+      "options": [
+        {
+          "text": "Sorunların model üstünde konuma bağlı olarak nasıl paylaşılacağını.",
+          "correct": false
+        },
+        {
+          "text": "Tüm proje dosyalarının ortak ortamda nasıl depolanacağını.",
+          "correct": false
+        },
+        {
+          "text": "Hangi bilginin (özellikler, sınıflandırma) zorunlu olduğunu ve nasıl teslim edileceğini.",
+          "correct": true
+        },
+        {
+          "text": "Modelin ekranda hangi çözünürlük ve kalitede görüneceğini.",
+          "correct": false
+        }
+      ],
+      "explanation": "IDS, bir teslimde hangi bilginin zorunlu olduğunu ve nasıl teslim edilip doğrulanacağını baştan tanımlayan şartnamedir. Konuma bağlı sorun paylaşımı BCF'in, dosyaların ortak depolanması CDE'nin işidir; render kalitesi teslim şartnamesinin konusu değildir.",
+      "bloom": "Anlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-U10.3"
+    },
+    {
+      "id": "M10-Q8",
+      "prompt": "Bir IFC teslim akışının en doğru adım sırası hangisidir?",
+      "options": [
+        {
+          "text": "Önce IFC dışa aktar, sonra hangi bilginin teslim edileceğine karar ver.",
+          "correct": false
+        },
+        {
+          "text": "Önce BCF sorunlarını aç, sonra modeli IFC olarak dışa aktar.",
+          "correct": false
+        },
+        {
+          "text": "Veri kaybını kaynak modele bakarak denetle, ayrı bir ortamda içe aktarma yapma.",
+          "correct": false
+        },
+        {
+          "text": "IDS/MVD belirle; IFC dışa aktar; boş ortamda içe aktarıp veri kaybını denetle; BCF ile sorunları aç; CDE adlandırma ve durum bilgisiyle paketle.",
+          "correct": true
+        }
+      ],
+      "explanation": "Doğru akış şartnameyle (IDS/MVD) başlar, dışa aktarımın ardından bağımsız içe aktarmayla veri kaybını denetler, sorunları BCF ile açar ve CDE kurallarıyla paketler. İkinci şıkta şartname aktarımdan sonra geldiği için eksik teslim olur; üçüncü şıkta henüz model paylaşılmadan sorun açılamaz; dördüncü şıkta kaynak modele bakmak yanıltır çünkü veri kaybı ancak bağımsız içe aktarmayla görülür.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Orta",
+      "outcomeCode": "K-U10.1"
     }
   ],
   "proposed": false

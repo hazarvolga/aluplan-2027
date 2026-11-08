@@ -1,0 +1,4 @@
+.callout{border:var(--border-width-default) solid var(--border-default);border-left:3px solid var(--accent-fg);background:var(--surface-raised);padding:var(--space-inset-md);display:flex;flex-direction:column;gap:var(--space-stack-xs)}
+.label{font-family:var(--font-mono);font-size:var(--type-body-sm-size);letter-spacing:.14em;text-transform:uppercase;color:var(--text-secondary)}
+.body{color:var(--text-secondary);font-size:var(--type-body-sm-size)}
+.body p{margin:0}

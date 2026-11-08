@@ -353,11 +353,11 @@
           "correct": false
         },
         {
-          "text": "Statik davranışın ve ağırlık/metraj çıktısının hatalı çıkmasından",
+          "text": "Kesit geometrisinin ve ağırlık/metraj çıktısının yanlış olmasından",
           "correct": true
         }
       ],
-      "explanation": "Yanlış kesit, elemanın dayanımını ve ağırlık/metraj değerini bozar; hata önce bu çıktılarda görülür ve doğru kesit yeniden atanınca düzelir. Render süresi, pafta ölçeği ve kamera açısı profil kesitinden etkilenmez.",
+      "explanation": "Yanlış kesit, elemanın görünen geometrisini ve ağırlık/metraj değerini bozar; hata önce model görünümünde ve bu çıktılarda fark edilir, doğru kesit yeniden atanınca düzelir. Render süresi, pafta ölçeği ve kamera açısı profil kesitinden etkilenmez.",
       "bloom": "Analiz",
       "difficulty": "Orta",
       "outcomeCode": "K-İ6.1"
@@ -386,7 +386,7 @@
       "explanation": "Doğru ağırlık listesi metraj ile üretim ve tedarik planlamasının temelidir; yanlış ağırlık maliyet ve imalatı yanıltır. Açılış süresi ve ekran rengi ağırlıkla ilgisizdir. Ağırlık listesi bağlantı tipini seçmez, yalnızca elemanların kütle dökümünü verir.",
       "bloom": "Değerlendirme",
       "difficulty": "Zor",
-      "outcomeCode": "K-İ6.1"
+      "outcomeCode": "K-İ6.3"
     }
   ]
 }

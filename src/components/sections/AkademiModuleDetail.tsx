@@ -56,7 +56,7 @@ export function AkademiModuleDetail({
             <MetaRow items={metaItems} />
           </div>
           <div className={styles.distribution}>
-            <DistributionBar segments={module.durationSplit} />
+            <DistributionBar segments={module.durationSplit} caption="Örnek oturum süre dağılımı" />
           </div>
         </CompactPageHero>
       </DebugComponentLabel>

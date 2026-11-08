@@ -16,15 +16,18 @@ const SHADE_ORDER: Record<DurationSlice['label'], number> = {
  */
 export function DistributionBar({
   segments,
+  caption,
 }: {
   segments: readonly DurationSlice[];
+  caption?: string;
 }): ReactElement | null {
   const total = segments.reduce((sum, slice) => sum + slice.minutes, 0);
   if (total <= 0) return null;
 
   return (
     <div className={styles.wrap}>
-      <div className={styles.bar} role="img" aria-label={ariaLabel(segments, total)}>
+      {caption && <p className={styles.caption}>{caption}</p>}
+      <div className={styles.bar} role="img" aria-label={`${caption ? caption + ' — ' : ''}${ariaLabel(segments, total)}`}>
         {segments.map((slice) => (
           <span
             key={slice.label}

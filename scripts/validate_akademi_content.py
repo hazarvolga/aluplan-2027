@@ -33,12 +33,21 @@ def validate_module(path, data, errors):
     if not isinstance(data.get("slug"), str) or not data.get("slug"):
         err(errors, path, "slug must be a non-empty string")
 
+    if data.get("levelSlug") == "ileri" and not data.get("trackTitle"):
+        err(errors, path, "ileri module must declare a trackTitle")
+
     outcomes = data.get("outcomes") or []
     if not outcomes:
         err(errors, path, "outcomes must be non-empty")
+    outcome_codes = []
     for i, o in enumerate(outcomes):
         if not {"text", "bloom", "code"} <= set(o or {}):
             err(errors, path, f"outcome[{i}] needs text/bloom/code")
+        code = (o or {}).get("code")
+        if code:
+            outcome_codes.append(code)
+    if len(outcome_codes) != len(set(outcome_codes)):
+        err(errors, path, f"duplicate outcome codes within module: {outcome_codes}")
 
     flow = data.get("sessionFlow") or []
     if not flow:

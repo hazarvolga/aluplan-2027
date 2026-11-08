@@ -1,5 +1,7 @@
 .wrap{display:flex;flex-direction:column;gap:var(--space-stack-sm)}
 
+.caption{margin:0;font-family:var(--font-mono);font-size:var(--type-body-sm-size);text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted)}
+
 .bar{display:flex;width:100%;height:var(--space-inset-md);border:var(--border-width-default) solid var(--border-strong);overflow:hidden}
 
 .segment{flex:0 0 var(--seg);height:100%;border-right:var(--border-width-default) solid var(--surface-page)}

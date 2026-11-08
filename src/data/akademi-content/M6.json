@@ -9,31 +9,115 @@
   "prerequisite": "Seviye 2 tamamlanmış",
   "summary": "Çelik yapı elemanlarını doğru kesit ve kalite ile modeller, kolon-kiriş bağlantılarını oluşturur ve SDS2 ile üretim/detay aktarım akışını tanımlar.",
   "outcomes": [
-    { "text": "Çelik yapı elemanlarını (profil, kolon, kiriş) doğru kesit ve kalite ile modeller.", "bloom": "Uygulama", "code": "K-İ6.1" },
-    { "text": "Çelik bağlantıları (birleşim, levha, bulon) oluşturur ve detaylandırır.", "bloom": "Uygulama", "code": "K-İ6.1" },
-    { "text": "SDS2 entegrasyonu ile üretim/detay aktarım akışını tanımlar.", "bloom": "Hatırlama", "code": "K-İ6.1" }
+    {
+      "text": "Çelik yapı elemanlarını (profil, kolon, kiriş) doğru kesit ve kalite ile modeller.",
+      "bloom": "Uygulama",
+      "code": "K-İ6.1"
+    },
+    {
+      "text": "Çelik bağlantıları (birleşim, levha, bulon) oluşturur ve detaylandırır.",
+      "bloom": "Uygulama",
+      "code": "K-İ6.2"
+    },
+    {
+      "text": "SDS2 entegrasyonu ile üretim/detay aktarım akışını tanımlar.",
+      "bloom": "Hatırlama",
+      "code": "K-İ6.3"
+    }
   ],
   "concepts": [
-    { "term": "Çelik profil", "desc": "Standart kesitli (I, H, boru, lama) taşıyıcı eleman", "en": "Steel profile / section" },
-    { "term": "Çelik kolon", "desc": "Düşey taşıyıcı çelik eleman", "en": "Steel column" },
-    { "term": "Çelik kiriş", "desc": "Yatay taşıyıcı çelik eleman", "en": "Steel beam / girder" },
-    { "term": "Bağlantı", "desc": "İki elemanı birleştiren levha + bulon + kaynak düzeni", "en": "Connection / joint" },
-    { "term": "Bulon", "desc": "Elemanları birleştiren sökülebilir cıvata", "en": "Bolt" },
-    { "term": "SDS2", "desc": "Çelik detay ve üretim yazılımı; model aktarım köprüsü", "en": "SDS2 (steel detailing)" }
+    {
+      "term": "Çelik profil",
+      "desc": "Standart kesitli (I, H, boru, lama) taşıyıcı eleman",
+      "en": "Steel profile / section"
+    },
+    {
+      "term": "Çelik kolon",
+      "desc": "Düşey taşıyıcı çelik eleman",
+      "en": "Steel column"
+    },
+    {
+      "term": "Çelik kiriş",
+      "desc": "Yatay taşıyıcı çelik eleman",
+      "en": "Steel beam / girder"
+    },
+    {
+      "term": "Bağlantı",
+      "desc": "İki elemanı birleştiren levha + bulon + kaynak düzeni",
+      "en": "Connection / joint"
+    },
+    {
+      "term": "Bulon",
+      "desc": "Elemanları birleştiren sökülebilir cıvata",
+      "en": "Bolt"
+    },
+    {
+      "term": "SDS2",
+      "desc": "Çelik detay ve üretim yazılımı; model aktarım köprüsü",
+      "en": "SDS2 (steel detailing)"
+    }
   ],
   "sessionFlow": [
-    { "time": "0–5", "phase": "Dikkat çekme", "instructor": "Betonarme vs. çelik iskelet karşılaştırması", "participant": "Farkı söyler", "material": "Slayt 1" },
-    { "time": "5–15", "phase": "Hedef + ön bilgi", "instructor": "Kazanımlar; Seviye 2 metrajı bağlar", "participant": "Isınma sorusu", "material": "Diyagram" },
-    { "time": "15–40", "phase": "Demonstrasyon", "instructor": "Profil kütüphanesinden kolon + kiriş yerleştirir", "participant": "İzler", "material": "Örnek proje" },
-    { "time": "40–95", "phase": "Rehberli uygulama", "instructor": "Katılımcılarla çelik çerçeve kurar", "participant": "Elemanları yerleştirir", "material": "Adım kartı A3" },
-    { "time": "95–130", "phase": "Bağımsız görev", "instructor": "Dolaşır, bağlantıları denetler", "participant": "Bağlantı + bulon ekler", "material": "Görev A3" },
-    { "time": "130–140", "phase": "Değerlendirme", "instructor": "Kontrol listesi + mini quiz", "participant": "Quiz-İ6'yı çözer", "material": "Quiz-İ6" }
+    {
+      "time": "0–5",
+      "phase": "Dikkat çekme",
+      "instructor": "Betonarme vs. çelik iskelet karşılaştırması",
+      "participant": "Farkı söyler",
+      "material": "Slayt 1"
+    },
+    {
+      "time": "5–15",
+      "phase": "Hedef + ön bilgi",
+      "instructor": "Kazanımlar; Seviye 2 metrajı bağlar",
+      "participant": "Isınma sorusu",
+      "material": "Diyagram"
+    },
+    {
+      "time": "15–40",
+      "phase": "Demonstrasyon",
+      "instructor": "Profil kütüphanesinden kolon + kiriş yerleştirir",
+      "participant": "İzler",
+      "material": "Örnek proje"
+    },
+    {
+      "time": "40–95",
+      "phase": "Rehberli uygulama",
+      "instructor": "Katılımcılarla çelik çerçeve kurar",
+      "participant": "Elemanları yerleştirir",
+      "material": "Adım kartı A3"
+    },
+    {
+      "time": "95–130",
+      "phase": "Bağımsız görev",
+      "instructor": "Dolaşır, bağlantıları denetler",
+      "participant": "Bağlantı + bulon ekler",
+      "material": "Görev A3"
+    },
+    {
+      "time": "130–140",
+      "phase": "Değerlendirme",
+      "instructor": "Kontrol listesi + mini quiz",
+      "participant": "Quiz-İ6'yı çözer",
+      "material": "Quiz-İ6"
+    }
   ],
   "durationSplit": [
-    { "label": "Anlatım", "minutes": 40 },
-    { "label": "Uygulama", "minutes": 55 },
-    { "label": "Ölçme", "minutes": 10 },
-    { "label": "Bireysel", "minutes": 35 }
+    {
+      "label": "Anlatım",
+      "minutes": 40
+    },
+    {
+      "label": "Uygulama",
+      "minutes": 55
+    },
+    {
+      "label": "Ölçme",
+      "minutes": 10
+    },
+    {
+      "label": "Bireysel",
+      "minutes": 35
+    }
   ],
   "runningProjectStep": "Bu derste sürekli projeye çelik bir ara kat/çatı iskeleti (kolon, kiriş, bağlantı) eklenir.",
   "homework": "Sürekli projeye tek açıklıklı çelik çerçeve ekleyin: kolonlar, kirişler ve en az iki kolon-kiriş bağlantısı. Teslim: Proje dosyası + 3B görünüm + ağırlık listesi · Süre: ~60 dk · Ölçüt: Doğru kesit/kalite, akslara hizalı elemanlar, tanımlı bağlantılar.",

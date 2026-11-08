@@ -55,6 +55,19 @@ class AkademiContentTests(unittest.TestCase):
             self.assertNotIn(key, seen, f"duplicate slug {key} in {path.name} and {seen.get(key)}")
             seen[key] = path.name
 
+    def test_outcome_codes_are_unique_within_a_module(self):
+        for path, m in modules():
+            with self.subTest(file=path.name):
+                codes = [o["code"] for o in m["outcomes"] if o.get("code")]
+                self.assertEqual(len(codes), len(set(codes)),
+                                 f"{path.name}: duplicate outcome codes {codes}")
+
+    def test_ileri_modules_declare_a_track(self):
+        for path, m in modules():
+            if m["levelSlug"] == "ileri":
+                with self.subTest(file=path.name):
+                    self.assertTrue(m.get("trackTitle"), f"{path.name}: ileri module needs a trackTitle")
+
     def test_validator_passes_on_the_content(self):
         result = subprocess.run([sys.executable, str(VALIDATOR)], capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)

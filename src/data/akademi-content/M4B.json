@@ -1,0 +1,46 @@
+{
+  "code": "M4B",
+  "slug": "kutuphane-ozellik-metraj",
+  "title": "Kütüphane, Özellikler ve Metraj Listeleri",
+  "levelSlug": "orta",
+  "trackTitle": null,
+  "hours": 12,
+  "format": "Hibrit",
+  "prerequisite": "O.M4",
+  "summary": "Kütüphane elemanlarını ve parametrik objeleri yönetir, elemanlara özellik atayıp sınıflandırır; modelden metraj, kapı/pencere çizelgesi ve mahal listesi üretir.",
+  "outcomes": [
+    { "text": "Kütüphane elemanlarını ve özel parametrik objeleri yönetir", "bloom": "Uygulama", "code": "K-O4B.1" },
+    { "text": "Elemanlara özellik (attribute) atar ve sınıflandırma mantığını uygular", "bloom": "Uygulama", "code": "K-O4B.2" },
+    { "text": "Metraj, kapı/pencere çizelgesi ve mahal listesi üretir", "bloom": "Yaratma", "code": "K-O4B.3" }
+  ],
+  "concepts": [
+    { "term": "Kütüphane", "desc": "Hazır obje ve sembollerin saklandığı kaynak", "en": "Library" },
+    { "term": "Parametrik obje", "desc": "Değerle değişen, yeniden kullanılabilir akıllı eleman", "en": "Parametric object / SmartPart" },
+    { "term": "Özellik (attribute)", "desc": "Elemana iliştirilen veri alanı (ad, malzeme, kod)", "en": "Attribute / property" },
+    { "term": "Sınıflandırma", "desc": "Elemanları ortak koda göre gruplayan sistem", "en": "Classification" },
+    { "term": "Metraj", "desc": "Model verisinden üretilen miktar/alan/adet listesi", "en": "Quantity take-off" },
+    { "term": "Mahal listesi", "desc": "Odaların alan ve işlev dökümü", "en": "Room schedule" }
+  ],
+  "sessionFlow": [
+    { "time": "0–5", "phase": "Dikkat çekme", "instructor": "Elle sayılan metraj vs. modelden metraj", "participant": "Farkı söyler", "material": "Slayt 1" },
+    { "time": "5–15", "phase": "Hedef + ön bilgi", "instructor": "Kazanımlar; M4 dokümanını veriye bağlar", "participant": "Isınma sorusu", "material": "Diyagram" },
+    { "time": "15–35", "phase": "Demonstrasyon", "instructor": "Özellik atar, kütüphaneden obje yerleştirir", "participant": "İzler", "material": "Örnek proje" },
+    { "time": "35–85", "phase": "Rehberli uygulama", "instructor": "Katılımcılarla özellik + sınıflandırma uygular", "participant": "Elemanları etiketler", "material": "Adım kartı A3" },
+    { "time": "85–120", "phase": "Bağımsız görev", "instructor": "Dolaşır, listeleri denetler", "participant": "Metraj + çizelge üretir", "material": "Görev A3" },
+    { "time": "120–130", "phase": "Değerlendirme", "instructor": "Kontrol listesi + mini quiz", "participant": "Quiz-O4B'yi çözer", "material": "Quiz-O4B" }
+  ],
+  "durationSplit": [
+    { "label": "Anlatım", "minutes": 35 },
+    { "label": "Uygulama", "minutes": 50 },
+    { "label": "Ölçme", "minutes": 10 },
+    { "label": "Bireysel", "minutes": 35 }
+  ],
+  "runningProjectStep": "Bu derste sürekli projenin elemanlarına özellikler atanır ve modelden metraj, kapı/pencere çizelgesi ile mahal listesi üretilir.",
+  "homework": "Sürekli projede duvar ve kapı/pencerelere özellik atayın; bir metraj listesi ve bir kapı/pencere çizelgesi üretin. Teslim: Çizelge çıktısı + proje dosyası. Süre: ~120 dk. Ölçüt: Dolu özellik alanları, doğru miktarlar, filtrelenebilir sınıflandırma.",
+  "assessment": "Quiz-O4B (8 soru): modelden metrajın gerekçesi, attribute'un işlevi, atanmamış attribute senaryosu, sınıflandırmanın listeye katkısı, özellik→metraj→çizelge sıralaması, kütüphane objesinin avantajı, mahal alanı hata bulma, mahal listesinin dökümü.",
+  "materials": [
+    "Özellik atanmış örnek proje dosyası (kurum kaynağı eklenecek)",
+    "Attribute ve poz/kod şablonu tablosu [sürüme göre doğrula]"
+  ],
+  "proposed": true
+}

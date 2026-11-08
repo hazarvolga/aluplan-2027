@@ -1,0 +1,46 @@
+{
+  "code": "M4",
+  "slug": "dokumantasyon-ve-pafta",
+  "title": "2B Dokümantasyon, Kesitler ve Pafta Düzeni",
+  "levelSlug": "orta",
+  "trackTitle": null,
+  "hours": 12,
+  "format": "Hibrit",
+  "prerequisite": "B.M1, B.M2, B.M3",
+  "summary": "Modelden kesit ve görünüş üretir, görünüm ayarlarını düzenler; pafta düzenini kurup ölçülendirme, metin ve tarama ile tamamlayarak PDF/DWG çıktısı alır.",
+  "outcomes": [
+    { "text": "Modelden kesit ve görünüş üretir ve görünüm ayarlarını düzenler.", "bloom": "Uygulama", "code": "K-O4.1" },
+    { "text": "Pafta düzenini (layout) kurar ve PDF/DWG olarak çıktı alır.", "bloom": "Uygulama", "code": "K-O4.2" },
+    { "text": "Ölçülendirme, metin ve tarama ile paftayı tamamlar.", "bloom": "Uygulama", "code": "K-O4.3" }
+  ],
+  "concepts": [
+    { "term": "Kesit", "desc": "Modeli bir düzlemle keserek üretilen iki boyutlu görünüm", "en": "Section / Schnitt" },
+    { "term": "Görünüş", "desc": "Modele bir yönden bakışla üretilen 2B çizim (cephe)", "en": "View / elevation" },
+    { "term": "Pafta", "desc": "Çizimlerin ölçekli yerleştiği çıktı sayfası", "en": "Layout / plan layout" },
+    { "term": "Ölçülendirme", "desc": "Bir uzunluğu veya kotu ölçü çizgisiyle gösteren eleman", "en": "Dimension" },
+    { "term": "Tarama", "desc": "Bir alanı malzeme/işleve göre dolduran desen", "en": "Hatch / pattern" },
+    { "term": "Antet", "desc": "Pafta kenarındaki proje bilgi ve çerçeve bloğu", "en": "Title block" }
+  ],
+  "sessionFlow": [
+    { "time": "0–5", "phase": "Dikkat çekme", "instructor": "Elle çizilen plan vs. modelden üretilen plan", "participant": "Farkı söyler", "material": "Slayt 1" },
+    { "time": "5–15", "phase": "Hedef + ön bilgi", "instructor": "Kazanımlar; M3 modelini dokümana bağlar", "participant": "Isınma sorusu", "material": "Diyagram" },
+    { "time": "15–35", "phase": "Demonstrasyon", "instructor": "Kesit düzlemi tanımlar, görünüş üretir", "participant": "İzler", "material": "Örnek proje" },
+    { "time": "35–85", "phase": "Rehberli uygulama", "instructor": "Katılımcılarla kesit + görünüş üretir", "participant": "Çizimleri oluşturur", "material": "Adım kartı A3" },
+    { "time": "85–120", "phase": "Bağımsız görev", "instructor": "Dolaşır, pafta düzenini denetler", "participant": "Paftaya yerleştirir, PDF alır", "material": "Görev A3" },
+    { "time": "120–130", "phase": "Değerlendirme", "instructor": "Kontrol listesi + mini quiz", "participant": "Quiz-O4'ü çözer", "material": "Quiz-O4" }
+  ],
+  "durationSplit": [
+    { "label": "Anlatım", "minutes": 35 },
+    { "label": "Uygulama", "minutes": 50 },
+    { "label": "Ölçme", "minutes": 10 },
+    { "label": "Bireysel", "minutes": 35 }
+  ],
+  "runningProjectStep": "Bu derste sürekli projenin 3B modelinden kesitler, görünüşler ve çıktıya hazır paftalar üretilir; model ilk kez dokümana dönüşür.",
+  "homework": "Sürekli projenin bir kesitini, bir cephesini ve bir planını tek paftada toplayın; PDF çıktısı alın. Teslim: Pafta PDF'i + proje dosyası · Süre: ~120 dk · Ölçüt: Modelden türeyen kesit/görünüş, doğru ölçek, okunur ölçülendirme ve antet.",
+  "assessment": "Quiz-O4 (8 soru): kesitin modelden üretilme nedeni, görünüş ile kesit farkı, baskıda boyut hatası senaryosu, paftanın işlevi, model-doküman adım sıralaması, antetin taşıdığı bilgi, pafta ölçek hata bulma, çıktı dosya biçimleri (PDF/DWG).",
+  "materials": [
+    "Başlangıç ve bitmiş pafta dosyası (kurum kaynağı eklenecek)",
+    "Antet/pafta şablonu ve ölçek tablosu [sürüme göre doğrula]"
+  ],
+  "proposed": false
+}

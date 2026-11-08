@@ -1,0 +1,47 @@
+{
+  "code": "M7",
+  "slug": "prefabrik-elemanlar",
+  "title": "Prefabrik Elemanlar ve Üretim Verisi",
+  "levelSlug": "ileri",
+  "trackTitle": "Prekast ve çelik",
+  "hours": 8,
+  "format": "Hibrit",
+  "prerequisite": "İ.M6",
+  "summary": "Prefabrik elemanları doğru parametrelerle oluşturur, üretim mantığına göre segmentlere ayırıp kodlar ve üretim verisi ile eleman listelerini hazırlar.",
+  "outcomes": [
+    { "text": "Prefabrik (precast) elemanları (panel, kiriş, döşeme plağı) doğru parametrelerle oluşturur.", "bloom": "Uygulama", "code": "K-İ7.1" },
+    { "text": "Elemanları üretim mantığına göre parçalara (segment) ayırır ve kodlar.", "bloom": "Analiz", "code": "K-İ7.1" },
+    { "text": "Üretim verisini (production data) ve eleman listelerini hazırlar.", "bloom": "Uygulama", "code": "K-İ7.1" }
+  ],
+  "concepts": [
+    { "term": "Prefabrik eleman", "desc": "Fabrikada önceden üretilip sahada montajlanan parça", "en": "Precast element" },
+    { "term": "Panel", "desc": "Prefabrik duvar/cephe plağı", "en": "Precast panel" },
+    { "term": "Segment", "desc": "Üretim/taşıma için ayrılmış tekil parça", "en": "Segment / unit" },
+    { "term": "Eleman kodu", "desc": "Her prefabrik parçaya verilen benzersiz kimlik", "en": "Element mark / ID" },
+    { "term": "Üretim verisi", "desc": "Fabrikaya giden ölçü, donatı, gömülü parça bilgisi", "en": "Production data" },
+    { "term": "Gömülü parça", "desc": "Elemana dökülen bağlantı/kaldırma ankrajı", "en": "Embedded part / insert" }
+  ],
+  "sessionFlow": [
+    { "time": "0–5", "phase": "Dikkat çekme", "instructor": "Yerinde döküm vs. prefabrik üretim", "participant": "Farkı söyler", "material": "Slayt 1" },
+    { "time": "5–15", "phase": "Hedef + ön bilgi", "instructor": "Kazanımlar; M6 çelik mantığını bağlar", "participant": "Isınma sorusu", "material": "Diyagram" },
+    { "time": "15–40", "phase": "Demonstrasyon", "instructor": "Bir panel/kirişi prefabrik elemana çevirir", "participant": "İzler", "material": "Örnek proje" },
+    { "time": "40–95", "phase": "Rehberli uygulama", "instructor": "Katılımcılarla elemanları segmentlere ayırır", "participant": "Parçalar + kod verir", "material": "Adım kartı A3" },
+    { "time": "95–130", "phase": "Bağımsız görev", "instructor": "Dolaşır, üretim verisini denetler", "participant": "Eleman listesi + veri üretir", "material": "Görev A3" },
+    { "time": "130–140", "phase": "Değerlendirme", "instructor": "Kontrol listesi + mini quiz", "participant": "Quiz-İ7'yi çözer", "material": "Quiz-İ7" }
+  ],
+  "durationSplit": [
+    { "label": "Anlatım", "minutes": 40 },
+    { "label": "Uygulama", "minutes": 55 },
+    { "label": "Ölçme", "minutes": 10 },
+    { "label": "Bireysel", "minutes": 35 }
+  ],
+  "runningProjectStep": "Bu derste sürekli projenin bir bölümü prefabrik (önüretimli) elemanlara dönüştürülür ve üretim verisi hazırlanır.",
+  "homework": "Sürekli projenin bir cephe/kat bölümünü prefabrik elemanlara dönüştürün: en az iki panel/eleman, segment ayrımı, eleman kodları ve üretim verisi listesi. Teslim: Proje dosyası + eleman listesi · Süre: ~60 dk · Ölçüt: Doğru segment, benzersiz kodlar, model ile tutarlı üretim verisi.",
+  "assessment": "Quiz-İ7 (8 soru): prefabrik ile yerinde döküm farkı, segment sınırını belirleyen limit, çakışan eleman kodu nedeni, gömülü parçanın modele eklenmesi, prefabriğe çevirme sırası, üretim verisi ile model tutarlılığı, eksik gömülü parçayı bulma ve eleman kodunun işlevi.",
+  "materials": [
+    "Başlangıç ve bitmiş prefabrik eleman dosyası (kurum kaynağı eklenecek)",
+    "Eleman kodlama şeması",
+    "Üretim verisi/liste şablonu [sürüme göre doğrula]"
+  ],
+  "proposed": false
+}

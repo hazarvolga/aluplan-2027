@@ -1,0 +1,45 @@
+{
+  "code": "M9",
+  "slug": "otomasyon-visual-scripting",
+  "title": "Otomasyon, Visual Scripting ve PythonParts",
+  "levelSlug": "uzman",
+  "trackTitle": null,
+  "hours": 12,
+  "format": "Hibrit",
+  "prerequisite": "Seviye 3'ten en az bir kol",
+  "summary": "Sürekli projede tekrar eden işleri görsel programlama ile otomatikleştirir ve PythonParts ile özel parametrik objeler geliştirir.",
+  "outcomes": [
+    { "text": "Görsel programlama (visual scripting) ile parametrik bir iş akışını kurgular", "bloom": "Yaratma", "code": "K-U9.1" },
+    { "text": "PythonParts ile özel bir parametrik obje/otomasyon geliştirir", "bloom": "Yaratma", "code": "K-U9.2" }
+  ],
+  "concepts": [
+    { "term": "Görsel programlama", "desc": "Kod yazmadan, blokları bağlayarak kurulan parametrik akış", "en": "Visual Scripting" },
+    { "term": "Düğüm", "desc": "Akışta tek bir işlem yapan blok (girdi–işlem–çıktı)", "en": "Node" },
+    { "term": "Parametre", "desc": "Dışarıdan değiştirilen değer (sayı, mesafe, adet)", "en": "Parameter" },
+    { "term": "PythonPart", "desc": "Python ile tanımlanan özel parametrik obje", "en": "PythonPart" },
+    { "term": "PYP dosyası", "desc": "PythonPart'ın arayüz/parametre tanımını tutan dosya", "en": ".pyp file" },
+    { "term": "Otomasyon", "desc": "Tekrar eden bir işin tek komutla üretilmesi", "en": "Automation" }
+  ],
+  "sessionFlow": [
+    { "time": "0–5", "phase": "Dikkat çekme", "instructor": "Elle 50 kolon vs. tek akışla 50 kolon", "participant": "Farkı söyler", "material": "Slayt 1" },
+    { "time": "5–15", "phase": "Hedef + ön bilgi", "instructor": "Kazanımlar; parametrik mantığı bağlar", "participant": "Isınma sorusu", "material": "Diyagram" },
+    { "time": "15–40", "phase": "Demonstrasyon", "instructor": "Basit bir görsel akış kurar (dizi üretir)", "participant": "İzler", "material": "Örnek akış" },
+    { "time": "40–95", "phase": "Rehberli uygulama", "instructor": "Katılımcılarla akışı parametrik hale getirir", "participant": "Düğümleri bağlar", "material": "Adım kartı A3" },
+    { "time": "95–150", "phase": "Bağımsız görev", "instructor": "Dolaşır, akışı ve PythonPart'ı denetler", "participant": "Kendi otomasyonunu kurar", "material": "Görev A3" },
+    { "time": "150–165", "phase": "Değerlendirme", "instructor": "Kontrol listesi + mini quiz", "participant": "Quiz-U9'u çözer", "material": "Quiz-U9" }
+  ],
+  "durationSplit": [
+    { "label": "Anlatım", "minutes": 40 },
+    { "label": "Uygulama", "minutes": 55 },
+    { "label": "Ölçme", "minutes": 15 },
+    { "label": "Bireysel", "minutes": 55 }
+  ],
+  "runningProjectStep": "Bu derste sürekli projede tekrar eden işler (tekrarlı eleman dizileri, sayısal güncellemeler, liste üretimi) görsel programlama ve PythonParts ile otomatikleştirilir.",
+  "homework": "Sürekli projede tekrar eden bir işi (ör. merdiven basamakları veya cephe bölme dizisi) görsel programlama ile otomatikleştirin ve en az bir parametresi dışarıdan değişen küçük bir PythonPart üretin. Teslim: Akış dosyası + PythonPart + 3B görünüm · Süre: ~120 dk · Ölçüt: Parametre değişiminde modelin doğru güncellenmesi, gömülü değer bulunmaması.",
+  "assessment": "Quiz-U9 (8 soru): görsel programlama ile elle modelleme farkı, düğümün işlevi, gömülü değer senaryosu, PythonPart tercihi, otomasyon adımlarının sıralaması, PYP dosyasının tanımı, yanlış bağlanan düğümü bulma, sınır değer testi.",
+  "materials": [
+    "Örnek görsel akış ve PythonPart iskelet dosyası (kurum kaynağı eklenecek)",
+    "ALLPLAN Python API referansı ve parametre tablosu [sürüme göre doğrula]"
+  ],
+  "proposed": false
+}

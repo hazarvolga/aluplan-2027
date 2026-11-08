@@ -61,8 +61,13 @@ class LandmarkTests(unittest.TestCase):
             for name in files:
                 path = Path(base) / name
                 relative = str(path.relative_to(app))
-                # local-only routes (preview, archive) and products held until ALLPLAN publishes them answer 404 in production
-                held = relative in ("products/allplan-rebar.html", "products/allplan-parametric.html")
+                # local-only routes (preview, archive), products held until ALLPLAN publishes them, and
+                # draft sections gated by a feature flag (ALUPLAN_SHOW_AKADEMI) all answer 404 in production
+                held = relative in (
+                    "products/allplan-rebar.html",
+                    "products/allplan-parametric.html",
+                    "akademi.html",  # draft; hidden in production via ALUPLAN_SHOW_AKADEMI
+                )
                 if name.endswith(".html") and "/_" not in str(path) and not held and not relative.startswith(("preview/", "archive/")):
                     count = len(re.findall(r"<main[ >]", path.read_text(encoding="utf-8")))
                     if count != 1:

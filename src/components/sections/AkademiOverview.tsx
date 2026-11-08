@@ -15,6 +15,7 @@ import { CompactPageHero } from './CompactPageHero';
 import { DebugComponentLabel } from './DebugComponentLabel';
 import { SectionHeader } from './SectionHeader';
 import { Callout, LevelCard } from '@/components/akademi/kit';
+import { RevealList } from '@/components/akademi/motion/RevealList';
 import styles from './AkademiOverview.module.css';
 
 export function AkademiOverview(): ReactElement {
@@ -56,13 +57,13 @@ export function AkademiOverview(): ReactElement {
         <section id="seviyeler" className={styles.band} aria-labelledby="akademi-seviyeler">
           <div className="alu-container">
             <SectionHeader id="akademi-seviyeler" kicker="PROGRAM" title="Dört seviye, dört disiplin kolu" lead="Seviye 1, 2 ve 4 herkes için ortaktır. Seviye 3’te mimari, betonarme, prekast ve çelik ya da altyapı kollarından birini seçersiniz; kolların süreleri eşittir. Süreler taslaktır." />
-            <ul className={styles.levelGrid}>
+            <RevealList className={styles.levelGrid}>
               {akademiLevels.map((level) => (
                 <li key={level.number} className={styles.levelGridItem}>
                   <LevelCard level={level} />
                 </li>
               ))}
-            </ul>
+            </RevealList>
           </div>
         </section>
       </DebugComponentLabel>

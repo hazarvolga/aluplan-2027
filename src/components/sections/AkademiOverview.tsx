@@ -66,6 +66,9 @@ function LevelCard({ level }: { level: AkademiLevel }): ReactElement {
           ))}
         </ul>
       )}
+      <a className={`alu-button alu-button--ghost alu-button--sm ${styles.levelLink}`} href={`/akademi/${level.slug}`}>
+        Seviye {level.number} detayını inceleyin →
+      </a>
     </li>
   );
 }

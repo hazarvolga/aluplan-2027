@@ -48,5 +48,33 @@ class AkademiDraftTests(unittest.TestCase):
         self.assertIn("sertifika yerine geçmez", data)
 
 
+class AkademiLevelPageTests(unittest.TestCase):
+    def test_level_route_is_flag_gated_and_never_indexed(self):
+        page = read("src/app/akademi/[seviye]/page.tsx")
+        self.assertIn("if (!isAkademiEnabled()) notFound();", page)
+        self.assertIn("robots: { index: false, follow: false }", page)
+        self.assertNotIn("isReleaseContentEnabled", page)
+
+    def test_level_route_builds_no_pages_in_production(self):
+        # generateStaticParams returns [] when the draft is off, so a production build creates
+        # no /akademi/<slug> HTML; dynamicParams = false makes unbuilt slugs answer 404.
+        page = read("src/app/akademi/[seviye]/page.tsx")
+        self.assertIn("if (!isAkademiEnabled()) return [];", page)
+        self.assertIn("export const dynamicParams = false;", page)
+
+    def test_every_level_has_a_slug_and_slugs_are_unique(self):
+        data = read("src/data/akademi.ts")
+        slugs = re.findall(r"slug: '([a-z0-9-]+)'", data)
+        self.assertEqual(len(slugs), 4)
+        self.assertEqual(len(set(slugs)), 4)
+        self.assertEqual(set(slugs), {"seviye-1", "seviye-2", "seviye-3", "seviye-4"})
+
+    def test_level_pages_are_not_linked_from_sitemap_or_search(self):
+        for path in ("src/app/sitemap.ts", "src/data/navigation.json",
+                     "src/data/search-index.json", "src/data/search-extra-index.json"):
+            with self.subTest(file=path):
+                self.assertNotIn("/akademi", read(path))
+
+
 if __name__ == "__main__":
     unittest.main()

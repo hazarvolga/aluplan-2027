@@ -19,6 +19,7 @@
 .levelTitle{font-family:var(--font-heading);font-size:var(--type-h3-size);font-weight:var(--font-weight-strong);margin:0}
 .levelRole{color:var(--text-secondary);font-size:var(--type-body-sm-size);margin:0}
 .levelTotal{color:var(--text-secondary);font-size:var(--type-body-sm-size);margin:0;text-align:right}
+.levelLink{align-self:flex-start;margin-top:var(--space-stack-xs)}
 
 .modules{display:grid;border-top:var(--border-width-default) solid var(--border-default)}
 .module{display:grid;grid-template-columns:auto 1fr auto;gap:var(--space-stack-sm);align-items:baseline;padding-block:var(--space-stack-xs);border-bottom:var(--border-width-default) solid var(--border-default);font-size:var(--type-body-sm-size)}

@@ -10,6 +10,8 @@ export interface AkademiModule {
   hours: number;
   /** True when the module is proposed in the plan and not part of the PRD. */
   proposed?: boolean;
+  /** Learning outcomes (kazanımlar) shown on the level detail page. */
+  outcomes?: readonly string[];
 }
 
 export interface AkademiTrack {
@@ -20,6 +22,8 @@ export interface AkademiTrack {
 
 export interface AkademiLevel {
   number: number;
+  /** URL slug for the level detail page, e.g. 'seviye-1'. */
+  slug: string;
   title: string;
   role: string;
   shared: boolean;
@@ -59,29 +63,78 @@ export const akademiEntryPaths: readonly AkademiEntryPath[] = [
 export const akademiLevels: readonly AkademiLevel[] = [
   {
     number: 1,
+    slug: 'seviye-1',
     title: 'Temel',
     role: 'BIM Uygulayıcısı',
     shared: true,
     summary: 'Arayüz, proje yapısı ve parametrik mimari elemanlarla ilk modelinizi kurarsınız.',
     modules: [
-      { code: 'M1', title: 'Arayüz ve temel gezinme', hours: 8 },
-      { code: 'M2', title: 'Proje yapısı, yapı yapısı ve çizim dosyaları', hours: 12 },
-      { code: 'M3', title: 'Parametrik mimari elemanlar ve hacimler', hours: 16 },
+      {
+        code: 'M1',
+        title: 'Arayüz ve temel gezinme',
+        hours: 8,
+        outcomes: [
+          'ALLPLAN arayüzünün ana bölümlerini tanımlar',
+          'Temel gezinme ve görünüm araçlarını kullanır',
+          'CAD ile BIM arasındaki farkı açıklar',
+        ],
+      },
+      {
+        code: 'M2',
+        title: 'Proje yapısı, yapı yapısı ve çizim dosyaları',
+        hours: 12,
+        outcomes: [
+          'Proje, yapı yapısı ve çizim dosyası ilişkisini açıklar',
+          'Kat/seviye ve aks sistemini kurar',
+          'Çizim dosyalarını katman mantığına göre düzenler',
+        ],
+      },
+      {
+        code: 'M3',
+        title: 'Parametrik mimari elemanlar ve hacimler',
+        hours: 16,
+        outcomes: [
+          'Duvar, döşeme, kolon ve kirişi doğru parametrelerle yerleştirir',
+          'Kapı/pencere açıklıklarını ve merdiveni oluşturur',
+          'Elemanlar arası birleşim önceliklerini uygular',
+        ],
+      },
     ],
   },
   {
     number: 2,
+    slug: 'seviye-2',
     title: 'Orta',
     role: 'BIM Uzmanı',
     shared: true,
     summary: 'Modelden kesit, görünüş, pafta ve metraj üretirsiniz.',
     modules: [
-      { code: 'M4', title: '2B dokümantasyon, kesitler ve pafta düzeni', hours: 12 },
-      { code: 'M4B', title: 'Kütüphane, özellikler ve metraj listeleri', hours: 12, proposed: true },
+      {
+        code: 'M4',
+        title: '2B dokümantasyon, kesitler ve pafta düzeni',
+        hours: 12,
+        outcomes: [
+          'Modelden kesit ve görünüş üretir',
+          'Pafta düzenini kurar ve PDF/DWG çıktı alır',
+          'Ölçülendirme, metin ve tarama ile paftayı tamamlar',
+        ],
+      },
+      {
+        code: 'M4B',
+        title: 'Kütüphane, özellikler ve metraj listeleri',
+        hours: 12,
+        proposed: true,
+        outcomes: [
+          'Kütüphane ve özel parametrik objeleri yönetir',
+          'Elemanlara özellik atar ve sınıflandırma uygular',
+          'Metraj, çizelge ve mahal listesi üretir',
+        ],
+      },
     ],
   },
   {
     number: 3,
+    slug: 'seviye-3',
     title: 'İleri',
     role: 'Disiplin uzmanı',
     shared: false,
@@ -90,40 +143,107 @@ export const akademiLevels: readonly AkademiLevel[] = [
       {
         title: 'Mimari',
         summary: 'Karmaşık geometri, cephe, varyantlar ve görselleştirme.',
-        modules: [{ code: 'M3B', title: 'İleri mimari modelleme ve sunum', hours: 16, proposed: true }],
+        modules: [
+          {
+            code: 'M3B',
+            title: 'İleri mimari modelleme ve sunum',
+            hours: 16,
+            proposed: true,
+            outcomes: [
+              'Karmaşık geometri ve cephe sistemlerini modeller',
+              'Tasarım varyantları ve görselleştirme çıktısı oluşturur',
+            ],
+          },
+        ],
       },
       {
         title: 'Betonarme ve 3B donatı',
         summary: '3B donatı detaylandırma, büküm şemaları ve donatı listeleri.',
-        modules: [{ code: 'M5', title: 'Betonarme yapılarda 3B donatı', hours: 16 }],
+        modules: [
+          {
+            code: 'M5',
+            title: 'Betonarme yapılarda 3B donatı',
+            hours: 16,
+            outcomes: [
+              'Betonarme elemanlarda 3B donatıyı detaylandırır',
+              'Büküm şemaları ve donatı listeleri üretir',
+            ],
+          },
+        ],
       },
       {
         title: 'Prekast ve çelik',
         summary: 'Prekast eleman üretimi ve çelik bağlantılar.',
         modules: [
-          { code: 'M6', title: 'Çelik yapı tasarımı ve SDS2', hours: 8 },
-          { code: 'M7', title: 'Prekast elemanlar ve üretim verisi', hours: 8 },
+          {
+            code: 'M6',
+            title: 'Çelik yapı tasarımı ve SDS2',
+            hours: 8,
+            outcomes: ['Çelik yapı elemanlarını ve bağlantılarını modeller'],
+          },
+          {
+            code: 'M7',
+            title: 'Prekast elemanlar ve üretim verisi',
+            hours: 8,
+            outcomes: ['Prekast elemanları ve üretim verisini hazırlar'],
+          },
         ],
       },
       {
         title: 'Altyapı ve köprü',
         summary: 'Parametrik yol, tünel ve köprü modelleme.',
-        modules: [{ code: 'M8', title: 'ALLPLAN Civil ve Bridge ile altyapı', hours: 16 }],
+        modules: [
+          {
+            code: 'M8',
+            title: 'ALLPLAN Civil ve Bridge ile altyapı',
+            hours: 16,
+            outcomes: [
+              'Parametrik yol/altyapı modelini oluşturur',
+              'Prefabrik kirişli köprüyü modeller',
+            ],
+          },
+        ],
       },
     ],
   },
   {
     number: 4,
+    slug: 'seviye-4',
     title: 'Uzman',
     role: 'BIM Yöneticisi ve Geliştirici',
     shared: true,
     summary: 'openBIM ile disiplinler arası çalışır, tekrar eden işleri otomatikleştirirsiniz.',
     modules: [
-      { code: 'M9', title: 'Otomasyon, Visual Scripting ve PythonParts', hours: 12 },
-      { code: 'M10', title: 'openBIM, IFC 4.3, IDS ve CDE koordinasyonu', hours: 10 },
+      {
+        code: 'M9',
+        title: 'Otomasyon, Visual Scripting ve PythonParts',
+        hours: 12,
+        outcomes: [
+          'Görsel programlama ile parametrik bir iş akışı kurgular',
+          'PythonParts ile özel otomasyon geliştirir',
+        ],
+      },
+      {
+        code: 'M10',
+        title: 'openBIM, IFC 4.3, IDS ve CDE koordinasyonu',
+        hours: 10,
+        outcomes: [
+          'IFC dışa/içe aktarımını yapar ve veri kaybını denetler',
+          'BCF ile sorun yönetimi ve koordinasyonu yürütür',
+          'IDS/CDE ve ISO 19650 kavramlarını teslim akışına uygular',
+        ],
+      },
     ],
   },
 ];
+
+/** Level slugs for the detail route (used by generateStaticParams when the draft is enabled). */
+export const akademiLevelSlugs: readonly string[] = akademiLevels.map((level) => level.slug);
+
+/** Returns the level for a slug, or undefined when the slug is unknown. */
+export function getAkademiLevel(slug: string): AkademiLevel | undefined {
+  return akademiLevels.find((level) => level.slug === slug);
+}
 
 export const akademiRunningProject = {
   title: 'Tek proje, baştan sona',

@@ -45,10 +45,10 @@ class ConsentWiringTests(unittest.TestCase):
         subprocess.run(["node", "tests/cloudflare_consent_runtime.mjs"], cwd=ROOT, check=True, capture_output=True, text=True)
 
     def test_banner_uses_shared_store(self):
-        shell = (ROOT / "src/components/shell/SiteShell.tsx").read_text(encoding="utf-8")
-        self.assertIn("writeConsent(", shell)
-        self.assertIn("useCookieConsent()", shell)
-        self.assertNotIn("'cookie-consent'", shell)
+        banner = (ROOT / "src/components/shell/ConsentBanner.tsx").read_text(encoding="utf-8")
+        self.assertIn("writeConsent(", banner)
+        self.assertIn("useCookieConsent()", banner)
+        self.assertNotIn("'cookie-consent'", banner)
 
     def test_analytics_require_acceptance(self):
         scripts = (ROOT / "src/components/shell/ConsentScripts.tsx").read_text(encoding="utf-8")

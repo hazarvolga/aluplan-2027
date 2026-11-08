@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { hasOwnChrome } from '@/lib/chrome-routes';
 import { getNavigationData, MAIN_QUOTE_FORM_URL } from '@/lib/site-shared';
 import { useSearchIndex } from './SearchIndexProvider';
 import { searchEntries } from '@/lib/search';
@@ -80,6 +82,7 @@ function MobileMenuGroup({ title, href, sections, onNavigate }: {
 export function SiteShell({ children }: { children: React.ReactNode }) {
   const { entries: searchIndex, loading: searchLoading, error: searchError, videoPartial, load: loadSearch, retryVideos } = useSearchIndex();
   const { mode, toggleMode } = useThemeMode();
+  const pathname = usePathname();
   const [openMenu, setOpenMenu] = useState<'products' | 'solutions' | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -103,6 +106,11 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
   }, []);
+
+  // Sections with their own chrome (e.g. /akademi) render bare; their own layout supplies the shell.
+  if (hasOwnChrome(pathname ?? '')) {
+    return <>{children}</>;
+  }
 
   const filteredSearch = searchQuery.trim() ? searchEntries(searchIndex, searchQuery) : searchIndex.slice(0, 8);
 

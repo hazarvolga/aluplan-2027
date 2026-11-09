@@ -16,7 +16,9 @@
       "time": "",
       "heading": "Ağ Oluştur (Mesh / Triangulate) Komutu ile İlk SAM Modelinin Üretimi",
       "body": "**Çevre -> Sayısal Arazi Modeli (Digital Terrain Model) -> Ağ Oluştur (Mesh / Vermaschen)** komutunu seçin.\n1. Yeni bir arazi modeli oluşturmak için ekranda boş bir alana tıklayın ve modele bir ad/numara verin.\n2. Üçgenlemeye dahil edilecek tüm 3B arazi noktalarını pencere açarak (`Selection Rectangle`) seçin.\n3. Allplan noktaları Delaunay üçgenleme kurallarına göre birleştirerek anında **Sayısal Arazi Modelini (SAM / DTM)** oluşturur.",
-      "figures": []
+      "figures": [
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfon_fe2a6cb2.png"
+      ]
     },
     {
       "time": "",

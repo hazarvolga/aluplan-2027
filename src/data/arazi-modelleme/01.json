@@ -28,7 +28,9 @@
       "time": "",
       "heading": "10 Adımlı Arazi ve Çevre Modelleme İş Akışı Özeti",
       "body": "Canlı eğitim boyunca uygulanacak uçtan uca mühendislik ve mimari iş akışı:\n1. **Arazi Dosyasını Alma:** Halihazır harita (`DXF/DWG`) veya nokta bulutu/koordinat dosyasını (`ASCII/CSV/LandXML`) doğru birim ve koordinat ofseti ile içe aktarma.\n2. **Arazi Nokta Kotlarının Girilmesi:** Harita üzerindeki kot yazılarına göre Z kotlu `Arazi Noktası` yerleştirme.\n3. **Dijital Arazi Modeli (SAM / DTM):** Noktaları üçgenleyerek (`Ağ Oluştur`) arazi ağını ve dış sınırını üretme.\n4. **Eş Yükselti Eğrileri (İzohipsler):** Ana ve ara münhani eğrilerini otomatik hesaplatma ve etiketleme.\n5. **3B Arazi Modeli:** SAM ağını 3B çokgen yüzeye (`3D Surface`) dönüştürme.\n6. **3B Maket Modeli:** 3B arazi yüzeyine et kalınlığı / taban kotu vererek kapalı 3B katı maket (`3D Solid`) üretme.\n7. **3B Arazinin Düzleme Dönüştürülmesi:** Arazi yüzeyini mimari elemanların tanıyacağı `Serbest Düzlem / Referans Yüzey` haline getirme.\n8. **Yolların Modellenmesi:** Yol izlerini arazi yüzeyine izdüşürerek (`Project`) eğimli 3B yol ve bordürleri modelleme.\n9. **Binaların Modellenmesi:** Çevre yapılarını ve ana binayı eğimli arazi düzlemine bağlayarak (`Bottom Level = Reference Surface`) kütlesel ve mimari olarak yerleştirme.",
-      "figures": []
+      "figures": [
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfon_fe2a6cb2.png"
+      ]
     },
     {
       "time": "",

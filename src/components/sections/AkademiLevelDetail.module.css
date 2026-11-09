@@ -39,3 +39,9 @@
 .navNext{text-align:right;margin-left:auto}
 .navDir{color:var(--accent-fg);font-size:var(--type-body-sm-size);font-weight:var(--font-weight-strong)}
 .navTitle{font-family:var(--font-heading);font-size:var(--type-h4-size)}
+
+/* Temel Modelleme series card on the Temel level overview */
+.seriesCard{margin-top:var(--space-stack-lg);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-inline-md);max-width:52rem;padding:var(--space-inset-md);border:var(--border-width-default) solid var(--border-default);border-left:3px solid var(--accent-akademi);text-decoration:none;color:var(--text-primary);transition:border-color var(--motion-duration-fast,150ms) ease}
+.seriesCard:hover{border-color:var(--border-strong)}
+.seriesCardTitle{font-size:var(--type-body-md-size);color:var(--text-secondary)}
+.seriesCardCta{flex:none;font-weight:var(--font-weight-strong);color:var(--accent-akademi)}

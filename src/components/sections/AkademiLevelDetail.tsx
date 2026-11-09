@@ -74,6 +74,25 @@ export function AkademiLevelDetail({ level }: { level: ContentLevel }): ReactEle
         </DebugComponentLabel>
       )}
 
+      {level.slug === 'temel' && (
+        <DebugComponentLabel name="AkademiLevelTmSeries (özel)">
+          <section className={styles.band} aria-labelledby="seviye-tm">
+            <div className="alu-container">
+              <SectionHeader
+                id="seviye-tm"
+                kicker="UYGULAMALI SERİ"
+                title="Temel Modelleme Eğitimi"
+                lead="On altı uygulamalı derste bir binayı sıfırdan modellersiniz: aks, duvar, kapı/pencere, kolon/kiriş, döşeme, merdiven, temel ve çatı. Her adımda Türkçe komutlar ve ekran görüntüleri."
+              />
+              <a className={styles.seriesCard} href="/akademi/temel-modelleme">
+                <span className={styles.seriesCardTitle}>16 uygulamalı ders · Türkçe arayüz komutları · ekran görüntülü anlatım</span>
+                <span className={styles.seriesCardCta}>Seriye git →</span>
+              </a>
+            </div>
+          </section>
+        </DebugComponentLabel>
+      )}
+
       {level.tracks && (
         <DebugComponentLabel name="AkademiLevelTracks (kit)">
           <section className={styles.band} aria-labelledby="seviye-kollar">

@@ -4,6 +4,7 @@
   "title": "Temel Oluşturma",
   "duration": "03:51",
   "sourceModule": "Proje 1 — Modül 3: Temel Elemanları (Şerit, Tekil ve Radye Temel)",
+  "intro": "Temel, binanın yükünü zemine aktaran **en alttaki taşıyıcıdır**. ALLPLAN'da taşıyıcı duvarların altına şerit temel, kolonların altına tekil temel, tüm oturum alanı altına radye temel modellersiniz. Bunları da düzlemlere bağlarsınız; böylece temel kotu tek yerden yönetilir. Doğru temel modeli hem statik hem beton metrajı için gereklidir.",
   "objectives": [
     "Taşıyıcı duvarların altına Şerit Temel (Strip Foundation / Streifenfundament) modellemek.",
     "Kolonların altına Tekil / Kademeli Temel (Isolated / Block Foundation / Einzelfundament) yerleştirmek.",
@@ -41,6 +42,13 @@
       ]
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Temeli sabit kota bağlamak",
+      "body": "Temeli kot düzlemi yerine **sabit kota** bağlarsanız, zemin kotu veya kat yüksekliği değişince temel yerinde kalır ve taşıyıcılarla bağlantısı kopar. Temel üst/alt kotunu ilgili düzleme bağlayın."
+    }
+  ],
+  "checkpoint": "Taşıyıcı duvar altında şerit temel, kolon altında tekil temel ve oturum alanı altında radye temeli doğru kotta oluşturabiliyorsanız temel elemanlarını modellemeyi kavramışsınız demektir.",
   "commands": [
     {
       "name": "Şerit Temel (Strip Foundation)",
@@ -104,19 +112,6 @@
         "/akademi/temel-modelleme/11634_0EMRD00000LNXs2_d2836f6d.png",
         "/akademi/temel-modelleme/11634_0EMRD00000LNaxx_43ae6bf4.png",
         "/akademi/temel-modelleme/11634_0EMRD00000LNV3s_69d4309a.png"
-      ]
-    },
-    {
-      "id": "de_12284",
-      "title": "Warum erhalte ich die Meldung Professional zu Fundamente: Keine freie Lizenz verfügbar",
-      "body": "- **Kaynak URL (Alındığı Adres):** https://learnnow.allplan.com/totara/engage/resources/howto/index.php?id=12284&source=howto\n- **Kaynak ID (`resource_id`):** `12284`\n- **Resmi Salesforce / Allplan KB No:** `000010218-de`\n- **İçerik Tipi:** `knowledge_article`\n- **Dil:** `de`\n- **Kategori Ağacı:** `FRILO > Grundbau & Fundamente > Fundamente`\n- **Geçerli Allplan Sürümleri:** `Tüm Sürümler`\n- **Yazar & Tarih:** Erstellt am 19. August 2026, 15:13. Zuletzt aktualisiert am 19. August 2026, 15:13. | Owner: Salesforce Integration\n- **Doğrudan PDF Kılavuz URL:** -\n- **Eğitim Videosu / Webinar URL:** -\n- **İndirilen PDF, Örnek Dosya ve Ekran Görüntüleri (7 Adet):**\n - [SCREENSHOT] `12284_0EMRD00000ZpEMX_4830f815.png` (73.27 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/12284/0EMRD00000ZpEMX.png | SHA-256: `4830f8158c80ce57...`)\n - [SCREENSHOT] `12284_0EMRD00000Zsjbt_fbdd051b.png` (66.5 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/12284/0EMRD00000Zsjbt.png | SHA-256: `fbdd051b61928901...`)\n - [SCREENSHOT] `12284_0EMRD00000ZsiuM_02231e57.png` (48.33 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/12284/0EMRD00000ZsiuM.png | SHA-256: `02231e57806c2f1a...`)\n - [SCREENSHOT] `12284_0EMRD00000ZshqE_5141cc64.png` (77.47 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/12284/0EMRD00000ZshqE.png | SHA-256: `5141cc64a47548b5...`)\n - [SCREENSHOT] `12284_0EMRD00000ZslKL_fc5bdd9b.png` (73.02 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/12284/0EMRD00000ZslKL.png | SHA-256: `fc5bdd9b2d587dbc...`)\n - [SCREENSHOT] `12284_0EMRD00000ZsQNy_6f24aae2.png` (89.21 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/12284/0EMRD00000ZsQNy.png | SHA-256: `6f24aae22da62359...`)\n - [PDF_MANUAL] `12284_Der-Leistungsumfang-des-FD-PRO_76476b33.pdf` (4436.58 KB | Orjinal URL: https://www.frilo.eu/wp-content/uploads/DE/PDF/Produktblatt/Der-Leistungsumfang-des-FD-PRO.pdf | SHA-256: `76476b3363a30fdb...`)\n\n\n\nDiese Meldung erscheint, wenn in der aktuellen Position eine **FD-PRO**-Funktion aktiv ist, aber keine freie FD-PRO-Lizenz verfügbar ist. \n**Professional zu Fundamente: Keine freie Lizenz verfügbar. \n **\n\n**FD-PRO (Professional zu Fundamente)** ist eine Zusatzoption für FD+, FDB+, FDS+ und GBR+. Es handelt sich  …",
-      "figures": [
-        "/akademi/temel-modelleme/12284_0EMRD00000ZpEMX_4830f815.png",
-        "/akademi/temel-modelleme/12284_0EMRD00000Zsjbt_fbdd051b.png",
-        "/akademi/temel-modelleme/12284_0EMRD00000ZshqE_5141cc64.png",
-        "/akademi/temel-modelleme/12284_0EMRD00000ZsiuM_02231e57.png",
-        "/akademi/temel-modelleme/12284_0EMRD00000ZsQNy_6f24aae2.png",
-        "/akademi/temel-modelleme/12284_0EMRD00000ZslKL_fc5bdd9b.png"
       ]
     }
   ]

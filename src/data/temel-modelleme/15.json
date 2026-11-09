@@ -4,6 +4,7 @@
   "title": "Kat Kopyalama ve Düzenleme",
   "duration": "04:23",
   "sourceModule": "Proje 1 — Modül 2 & Modül 3: Bina Strüktürü ve Parametrik Kat Yönetimi",
+  "intro": "Her katı sıfırdan çizmezsiniz. Zemin katı bitirince **Bina Strüktürü** üzerinden onu üst katlara **kopyalar**, sonra sadece farklılıkları (cephe, balkon, iç mekan) revize edersiniz. Elemanlar düzlemlere (OK/UK) bağlı olduğu için kopyalanan kat üst kat kotuna kendiliğinden uyar. Bu ders, tek kattan çok katlı binaya geçişin verimli yoludur.",
   "objectives": [
     "Tamamlanan Zemin Kat çizim dosyalarını Bina Strüktürü üzerinden üst katlara kopyalamak.",
     "Standart Referans Düzlemlerine (OK/UK) bağlı elemanların üst kat kotlarına otomatik uyarlandığını doğrulamak.",
@@ -41,6 +42,13 @@
       ]
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Kopyalamadan önce düzlem bağlarını kontrol etmemek",
+      "body": "Elemanlar düzlemlere bağlı değilse, katı kopyaladığınızda üst katta **yanlış kota** otururlar. Kopyalamadan önce zemin kat elemanlarının OK/UK düzlemlerine bağlı olduğunu doğrulayın; böylece kopyalar üst kat kotuna kendiliğinden uyar."
+    }
+  ],
+  "checkpoint": "Zemin kat dosyalarını üst katlara kopyalayabiliyorsanız, kopyalanan elemanların üst kat kotuna otomatik uyduğunu Düzlem Yöneticisi'nde doğruladıysanız ve normal katta revizyon yapabiliyorsanız çok katlı modeli kurmayı kavramışsınız demektir.",
   "commands": [
     {
       "name": "Çizim Dosyası İçeriğini Kopyala",

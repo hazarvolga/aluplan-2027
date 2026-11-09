@@ -4,6 +4,7 @@
   "title": "Ölçülendirme",
   "duration": "03:21",
   "sourceModule": "Proje 1 — Modül 4: 2B Teknik Dokümantasyon ve İlişkisel Ölçülendirme",
+  "intro": "Ölçülendirme yalnızca sayı yazmak değildir. ALLPLAN'da **ilişkisel (associative)** ölçü çizgisi kullanırsanız, modeli değiştirdiğinizde ölçü değeri kendiliğinden güncellenir; bu, elle düzeltme hatalarını ortadan kaldırır. Bu derste doğrusal, açılı ve duvar ölçülendirmesini, ayrıca mevcut bir ölçü dizisine sonradan nokta ekleyip çıkarmayı öğreneceksiniz.",
   "objectives": [
     "Standart Ölçü Çizgisi (Dimension Line) ile İlişkisel Ölçülendirme (Associative Dimensioning) arasındaki farkı uygulamak.",
     "Yatay, dikey, açılı ölçü dizileri, Duvar Ölçülendirme (Measure Walls) ve Kot Ölçülendirmesi (Elevation Point) oluşturmak.",
@@ -41,6 +42,13 @@
       ]
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Standart ölçü çizgisi modeli takip etmez",
+      "body": "**Standart** ölçü çizgisi, ölçtüğü geometri değişince kendini güncellemez; değeri elle düzeltmek zorunda kalırsınız ve bu, çıktıda yanlış ölçüye yol açar. Model üzerinde her zaman **ilişkisel (associative)** ölçülendirmeyi tercih edin."
+    }
+  ],
+  "checkpoint": "İlişkisel bir ölçü çizgisi koyup modeli değiştirdiğinizde ölçünün otomatik güncellendiğini görüyorsanız, duvar ve kot ölçülendirmesi yapabiliyor, mevcut bir ölçü dizisine nokta ekleyip çıkarabiliyorsanız ölçülendirmeyi doğru kullanıyorsunuz demektir.",
   "commands": [
     {
       "name": "Ölçü Çizgisi (Dimension Line)",

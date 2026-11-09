@@ -4,6 +4,7 @@
   "title": "Kolon ve Kiriş Oluşturma",
   "duration": "05:49",
   "sourceModule": "Proje 1 — Modül 3: Akıllı Parametrik Mimari ve Taşıyıcı Elemanlar",
+  "intro": "Kolon ve kiriş binanın **taşıyıcı iskeletidir**. ALLPLAN'da bunları aks kesişimlerine yerleştirir, kat üst düzlemine bağlarsınız; böylece kat yüksekliği değişince onlar da uyar. **Öncelik (Priority)** sayesinde bir kolon duvarla kesiştiğinde hacim iki kez sayılmaz (otomatik minha). Bu, ileride doğru metraj için kritiktir.",
   "objectives": [
     "Dikdörtgen, dairesel veya profil kesitli betonarme/çelik Kolon (Column / Stütze) elemanlarını aks kesişimlerine yerleştirmek.",
     "Sarkık Kiriş (Downstand Beam / Unterzug) ve Ters Kiriş (Upstand Beam / Überzug) elemanlarını kat üst düzlemine bağlı modellemek.",
@@ -31,6 +32,13 @@
       ]
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Kolon ile duvara aynı önceliği vermek",
+      "body": "Kolon ve kesiştiği duvar **aynı önceliğe** sahipse hacim iki kez sayılır ve beton metrajı şişer. Taşıyıcı kolona duvardan yüksek öncelik verin; kesişimde hacmin tek sayıldığını rapordan doğrulayın."
+    }
+  ],
+  "checkpoint": "Kolonlarınız aks kesişimlerinde ve doğru kesitte duruyorsa, kirişler kat üst kotuna bağlıysa ve kolon-duvar kesişiminde hacmin tek sayıldığını (öncelikle minha) doğruladıysanız taşıyıcı elemanları doğru modellemişsiniz demektir.",
   "commands": [
     {
       "name": "Kolon (Column / Stütze)",

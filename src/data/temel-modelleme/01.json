@@ -4,6 +4,7 @@
   "title": "ALLPLAN BIM Felsefesi ve Modelleme İş Akışı",
   "duration": "Giriş",
   "sourceModule": "Proje 1 — Modül 1: Arayüz Mimarisi, WPF Çerçevesi ve Temel Navigasyon",
+  "intro": "Bu ders bir komut dersi değil; ALLPLAN ile çalışırken zihninizde kurmanız gereken **düşünce biçimini** anlatır. ALLPLAN'da çizgi çizmezsiniz, içinde malzeme ve yükseklik bilgisi olan **akıllı yapı elemanları** (duvar, döşeme, kolon) modellersiniz; hepsi tek bir veri tabanında, Bina Strüktürü -> Çizim Dosyası -> Katman hiyerarşisinde yaşar. Bu mantığı baştan oturtursanız sonraki on beş dersin tamamı kolaylaşır. Burada ayrıca eğitim boyunca sıfırdan kuracağımız örnek binanın yol haritasını göreceksiniz.",
   "objectives": [
     "Allplan'da 2B CAD çizimi ile 3B parametrik BIM modellemenin tek veri tabanında nasıl birleştiğini kavramak.",
     "Proje -> Bina Strüktürü (Building Structure / Bauwerksstruktur) -> Çizim Dosyası (Drawing File / Teilbild) -> Katman (Layer) çalışma hiyerarşisini öğrenmek.",
@@ -41,6 +42,7 @@
       ]
     }
   ],
+  "checkpoint": "Bu dersi anladıysanız şu üç cümleyi kendi sözlerinizle söyleyebilirsiniz: bir duvar sadece iki çizgi değil, içinde malzeme ve yükseklik bilgisi olan bir nesnedir; model bir kez kurulunca kesit, görünüş ve metraj ondan otomatik üretilir; her eleman Bina Strüktürü içindeki bir çizim dosyasında durur. Komut uygulaması yok; sonraki derste arayüzü tanıyacağız.",
   "commands": [
     {
       "name": "Proje (Project)",

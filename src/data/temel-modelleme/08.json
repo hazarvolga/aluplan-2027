@@ -4,6 +4,7 @@
   "title": "Aks Oluşturma",
   "duration": "02:43",
   "sourceModule": "Proje 1 — Modül 2 & Modül 3: Parametrik Aks Ağı (Axis Grid / Achsraster)",
+  "intro": "Aks ağı binanın **omurgasıdır**: mimar da statikçi de kolonları, duvarları ve temelleri bu ortak çizgilere göre yerleştirir. Bu yüzden aksları **ayrı bir çizim dosyasında** kurar, sonra tüm katlarda referans olarak kullanırız. Bu derste X/Y açıklıklarını, A-B-C / 1-2-3 balon etiketlerini ve otomatik aks ölçülendirmesini tanımlayacaksınız; sonraki derslerde kolon ve duvarları tam bu akslara oturtacağız.",
   "objectives": [
     "Mimari ve statik elemanların ortak referansı olan Aks Ağını (Axis Grid / Achsraster) ayrı bir çizim dosyasında oluşturmak.",
     "X ve Y yönü aks açıklıklarını, aks balon etiketlerini (A, B, C / 1, 2, 3) ve otomatik aks ölçülendirmesini tanımlamak.",
@@ -40,6 +41,13 @@
       ]
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Aksları model dosyasına çizmek",
+      "body": "Aks ağını kat çizim dosyasının içine çizerseniz her katta tekrar çizmeniz gerekir ve akslar katlar arasında kayar. Aksları **ayrı bir çizim dosyasında** tutun ve tüm katlarda **referans** olarak açın; böylece tek yerden yönetilir."
+    }
+  ],
+  "checkpoint": "Aks ağınız kendi çizim dosyasında duruyorsa, X ve Y akslarının etiketleri (A,B,C / 1,2,3) ve aralıkları doğru görünüyorsa ve bir aks aralığını değiştirip ağı güncelleyebiliyorsanız binanın omurgası hazır demektir.",
   "commands": [
     {
       "name": "Aks Ağı (Axis Grid / Achsraster)",

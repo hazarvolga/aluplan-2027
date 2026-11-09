@@ -4,6 +4,7 @@
   "title": "2D Düzenleme Komutları (Standart CAD İşlemleri)",
   "duration": "10:48",
   "sourceModule": "Proje 1 — Modül 1 & Modül 4: Doğrudan Obje Modifikasyonu ve Düzenleme",
+  "intro": "Çizmek işin yarısıdır; asıl zaman **düzenlemede** geçer. ALLPLAN'da bir elemanı seçtiğinizde üzerinde beliren tutamaçlarla (**Direct Object Modification**) onu doğrudan taşır, kopyalar, döndürür ve aynalarsınız; ayrı komut aramazsınız. Kırpma, uzatma, pah ve köşe yuvarlatma da 2B geometriyi temizler. Bu araçlar sonraki tüm derslerdeki revizyonların temelidir.",
   "objectives": [
     "Doğrudan Obje Modifikasyonu (Direct Object Modification) tutamaçlarıyla hızlı taşıma, kopyalama, döndürme ve aynalama yapmak.",
     "İki Elemanı Kesiştir (Intersect), Çizgi Kırp/Uzat (Trim/Extend), İki Nokta Arasını Sil, Pah Kır (Chamfer) ve Yuvarlat (Fillet) komutlarını kullanmak.",
@@ -40,6 +41,7 @@
       ]
     }
   ],
+  "checkpoint": "Bir elemanı seçip tutamaçlarından taşıyıp kopyalayabiliyorsanız, iki çizgiyi kırpıp uzatabiliyor, pah ve yuvarlatma uygulayabiliyorsanız ve bir elemanın biçim özelliklerini diğerine aktarabiliyorsanız düzenleme araçlarında rahatsınız demektir.",
   "commands": [
     {
       "name": "Taşı / Kopyala (Move / Copy)",

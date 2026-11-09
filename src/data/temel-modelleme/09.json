@@ -4,6 +4,7 @@
   "title": "Duvar Oluşturma",
   "duration": "08:41",
   "sourceModule": "Proje 1 — Modül 3: Akıllı Parametrik Mimari Elemanlar ve Hacim Yönetimi",
+  "intro": "Duvar, ALLPLAN'daki ilk gerçek **3B mimari elemanınızdır**. Bir çizgi değil; içinde katmanlar (taşıyıcı + yalıtım + kaplama), malzeme, imalat kalemi ve kot bağlantısı olan akıllı bir nesnedir. **Öncelik (Priority)** numarası sayesinde duvarlar birbirine ve diğer elemanlara doğru birleşir. Bu dersten sonra modeliniz artık 'çizim' değil, metrajı alınabilen bir yapı olmaya başlar.",
   "objectives": [
     "Tek katmanlı iç duvarlar ve çok katmanlı dış cephe duvarlarını (taşıyıcı + yalıtım + kaplama) tanımlamak.",
     "Duvar katmanlarına malzeme, imalat kalemi (Trade / Gewerk), öncelik numarası (Priority / Priorität) ve kat düzlemi kot bağlantısı (OK/UK) atamak.",
@@ -41,6 +42,13 @@
       ]
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Katman önceliğini (Priority) yanlış vermek",
+      "body": "Çok katmanlı duvarlarda veya kesişen duvarlarda **Öncelik (Priority)** numarası yanlışsa birleşimler hatalı görünür ve hacimler yanlış düşülür (minha). Taşıyıcı katmana en yüksek önceliği verin; birleşimleri çizdikten sonra planda kontrol edin."
+    }
+  ],
+  "checkpoint": "Çok katmanlı bir dış duvar ile tek katmanlı iç duvarı tanımlayabiliyorsanız, duvarların alt/üst kotu kat düzlemlerine bağlıysa ve T/L birleşimleri temiz görünüyorsa duvar modellemeyi kavramışsınız demektir.",
   "commands": [
     {
       "name": "Duvar (Wall / Wand)",

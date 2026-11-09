@@ -4,6 +4,7 @@
   "title": "Kapı ve Pencere Oluşturma",
   "duration": "11:09",
   "sourceModule": "Proje 1 — Modül 3: Akıllı Parametrik Mimari Elemanlar ve SmartParts",
+  "intro": "Kapı ve pencereyi duvara elle boşluk açıp çizmezsiniz; ALLPLAN'da bunlar **parametrik nesnelerdir** ve duvarın içine yerleştiğinde boşluğu kendisi açar, duvarla birlikte hareket eder. Çok katmanlı duvarlarda diş/lamba (**reveal**) ve yalıtım dönüşü gibi detayları da bu nesneler yönetir. SmartParts ile kasa, kanat, cam ve denizliğe kadar 3B modelleyebilirsiniz.",
   "objectives": [
     "Duvarlara parametrik Kapı (Door / Tür) ve Pencere (Window / Fenster) boşlukları açmak.",
     "Çok katmanlı duvarlarda Diş / Lamba (Reveal / Anschlag) ve yalıtım dönüşü detaylarını tanımlamak.",
@@ -41,6 +42,13 @@
       ]
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Boşluğu duvar seçmeden yerleştirmek",
+      "body": "Kapı/pencereyi yerleştirirken **önce duvarı yakalamazsanız** eleman boşluk açmaz; duvarın üstünde serbest bir sembol olarak kalır. Yerleştirmeden önce imlecin ilgili duvara kenetlendiğinden emin olun."
+    }
+  ],
+  "checkpoint": "Bir duvara parametrik kapı ve pencere yerleştirip boşluğun otomatik açıldığını görüyorsanız, parapet yüksekliği ve diş (reveal) ayarlarını yapabiliyor ve bir SmartPart pencereyle 3B kasa/kanat modelleyebiliyorsanız bu dersi tamamladınız demektir.",
   "commands": [
     {
       "name": "Kapı (Door / Tür)",

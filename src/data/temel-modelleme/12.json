@@ -4,6 +4,7 @@
   "title": "Döşeme Oluşturma",
   "duration": "02:30",
   "sourceModule": "Proje 1 — Modül 3: Akıllı Parametrik Mimari Elemanlar ve Döşeme Boşlukları",
+  "intro": "Döşeme, katı yatayda kapatan **betonarme plaktır**. Dış konturu elle çizmek yerine kat duvarlarının dış çizgisini **yakalayarak** oluşturursunuz; kalınlığını da kat düzlemine bağlarsınız. Merdiven kovası, asansör ve şaftlar için döşemede **boşluk** açmak, modelin doğru ve metrajın gerçekçi olması için şarttır.",
   "objectives": [
     "Kat dış konturunu yakalayarak parametrik betonarme Döşeme (Slab / Decke) plağı oluşturmak.",
     "Döşeme kalınlığını kat üst düzlemine bağlamak.",
@@ -31,6 +32,13 @@
       ]
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Döşeme boşluğunu açmayı unutmak",
+      "body": "Merdiven kovası, asansör veya şaft için **boşluk açmazsanız** hem model yanlış olur hem de beton metrajı gereğinden fazla çıkar. Döşemeyi oluşturduktan sonra tüm düşey geçişlerde boşlukları açmayı alışkanlık hâline getirin."
+    }
+  ],
+  "checkpoint": "Kat dış konturunu yakalayıp döşeme plağını oluşturabiliyorsanız, kalınlığı kat düzlemine bağlıysa ve merdiven/şaft için döşeme boşluğu açabiliyorsanız döşeme modellemeyi kavramışsınız demektir.",
   "commands": [
     {
       "name": "Döşeme (Slab / Decke)",

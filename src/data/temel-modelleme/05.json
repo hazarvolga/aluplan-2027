@@ -4,6 +4,7 @@
   "title": "2D Oluşturma Komutları (Standart CAD İşlemleri)",
   "duration": "16:13",
   "sourceModule": "Proje 1 — Modül 1 & Modül 4: 2B Konstrüksiyon ve Teknik Dokümantasyon",
+  "intro": "BIM'de çoğunlukla 3B modelleriz ama **2B çizim** hâlâ gereklidir: detaylar, taramalar, semboller ve altlıklar. Bu derste çizgiyi oluşturmadan önce onun **kalemini, çizgi tipini ve rengini** belirlemeyi, sonra temel komutlarla hassas geometri üretmeyi öğreneceksiniz. Kapalı bir alanı otomatik tanıtıp içine tarama veya dolgu uygulamak, elle poligon çizmekten çok daha hızlıdır.",
   "objectives": [
     "Kalem kalınlığı (Pen), çizgi tipi (Linetype), çizgi rengi (Color) ve Yardımcı Konstrüksiyon Çizgisi (Construction Line) kullanmak.",
     "Çizgi, Poligon Çizgisi, Dikdörtgen, Daire, Yay, Spline ve Paralel Çizgi araçlarıyla hassas 2B geometri üretmek.",
@@ -51,6 +52,13 @@
       ]
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Yardımcı konstrüksiyon çizgisini model sanmak",
+      "body": "**Yardımcı konstrüksiyon (Construction Line)** çizgileri yalnızca referanstır; çıktıya ve metraja girmez. Kalıcı geometriyi normal çizgiyle çizin, yardımcı çizgileri sadece hizalama için kullanın; işiniz bitince temizleyin."
+    }
+  ],
+  "checkpoint": "Çizmeden önce kalem, çizgi tipi ve renk seçebiliyorsanız, çizgi-dikdörtgen-daire-yay ile ölçülü geometri üretebiliyorsanız ve kapalı bir bölgeyi Alan Tespiti ile tanıtıp içine tarama/desen/dolgu koyabiliyorsanız 2B oluşturma araçlarını kavramışsınız demektir.",
   "commands": [
     {
       "name": "Çizgi (Line / Linie)",

@@ -4,6 +4,7 @@
   "title": "Çatı ve Çatı Elemanları Oluşturma",
   "duration": "07:48",
   "sourceModule": "Proje 1 — Modül 3: Parametrik Çatı Düzlemi, Çatı Kaplaması ve Ahşap Karkas",
+  "intro": "Çatı, eğimli yüzeyleriyle modelin en çok **üç boyutlu düşünmeyi** gerektiren parçasıdır. ALLPLAN'da önce bir **Çatı Düzlemi (Dachlandschaft)** tanımlarsınız; bu, görünmez eğimli bir yüzeydir. Sonra çatı katı duvar ve kolonlarının üst kotunu bu düzleme **bağlarsınız**, böylece hepsi eğime göre kesilir. Üstüne çatı kaplaması, güvercinlik, çatı penceresi ve ahşap karkas (mertek/aşık) gelir.",
   "objectives": [
     "Çatı Düzlemi (Roof Frame / Dachlandschaft) ile eğimli çatı zarfı (Beşik Çatı, Kırma Çatı) oluşturmak.",
     "Çatı katı duvar ve kolonlarının üst kotunu çatı düzlemine bağlayarak eğimli kesilmesini sağlamak.",
@@ -51,6 +52,13 @@
       ]
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Duvar üst kotunu çatıya bağlamamak",
+      "body": "Çatı katı duvar ve kolonlarının üst kotunu **çatı düzlemine bağlamazsanız** eğimli kesilmezler ve çatıdan taşarlar. Önce çatı düzlemini kurun, sonra duvar/kolon üst kotunu bu düzleme bağlayın."
+    }
+  ],
+  "checkpoint": "Bir çatı düzlemi tanımlayıp eğim verebiliyorsanız, duvar ve kolonların üst kotu çatıya bağlanınca eğimli kesildiğini görüyorsanız ve çatı kaplaması, güvercinlik veya mertek elemanlarından en az birini modelleyebiliyorsanız çatı dersini tamamladınız demektir.",
   "commands": [
     {
       "name": "Çatı Düzlemi (Roof Frame)",
@@ -80,16 +88,20 @@
   "media": {
     "videos": [
       {
-        "title": "Dach - Dachformen und Gaubenformen - Übersicht",
+        "title": "Düzlemler ve Çatı Düzlemleri (how-to webinar)",
         "file": "10933_youtube_7Jk3EfEExsE_601078f5.mp4",
         "vimeoId": "",
-        "sizeMB": 125.66
+        "sizeMB": 125.66,
+        "youtubeId": "7Jk3EfEExsE",
+        "note": "Almanca anlatım · ALLPLAN Deutschland (resmî kanal)"
       },
       {
-        "title": "Dach - Dachformen und Gaubenformen - Übersicht",
+        "title": "Yeni Çatı Düzlemi — sadece çatılar için değil",
         "file": "10933_youtube_wP26jFW3cWA_e13ef0ec.mp4",
         "vimeoId": "",
-        "sizeMB": 66.84
+        "sizeMB": 66.84,
+        "youtubeId": "wP26jFW3cWA",
+        "note": "Almanca anlatım · ALLPLAN Deutschland (resmî kanal)"
       },
       {
         "title": "Add-On Varianten-Profil - Spezialdach Leimträgern",

@@ -4,6 +4,7 @@
   "title": "Çizim Dosyaları ve Yükseklik İlişkileri",
   "duration": "11:10",
   "sourceModule": "Proje 1 — Modül 2: Proje Yapılandırması, Hiyerarşik Bina Strüktürü ve Çizim Dosyaları",
+  "intro": "ALLPLAN'da çizimleriniz **çizim dosyalarında (Teilbild)** durur; bir dosyada çalışırken başka dosyaları referans olarak arkanızda görürsünüz, tıpkı şeffaf kağıtları üst üste koymak gibi. Bina Strüktürü bu dosyaları katlara bağlar ve her kata bir yükseklik verir. Yüksekliği elle yazmak yerine **düzlemlere (OK/UK)** bağlarsanız, kat kotunu değiştirdiğinizde elemanlar kendiliğinden uyar. Bu ders modelin iskeletini kurar; sonraki tüm elemanlar bu iskelete oturur.",
   "objectives": [
     "Çizim Dosyası (Drawing File / Teilbild) mantığını ve Aktif / Düzenleme / Referans modlarını doğru kullanmak.",
     "Bina Strüktürü (Building Structure / Bauwerksstruktur) oluşturarak katları ve çizim dosyalarını organize etmek.",
@@ -41,6 +42,13 @@
       ]
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Elemanı düzleme bağlamayı unutmak",
+      "body": "Bir elemana düzlem (OK/UK) yerine **sabit kot** girerseniz, kat yüksekliğini sonradan değiştirdiğinizde o eleman yerinde kalır ve modelden kopar. Yükseklikleri her zaman kat düzlemlerine bağlayın; sabit kotu yalnızca gerçekten sabit olması gereken yerlerde kullanın."
+    }
+  ],
+  "checkpoint": "Bina Strüktüründe katlarınız ve altlarındaki çizim dosyaları görünüyorsa, bir dosyayı aktif yapıp diğerlerini referansta izleyebiliyorsanız ve Düzlem Yöneticisi'nde kat alt/üst kotlarını (UK/OK) görebiliyorsanız modelin yükseklik iskeleti hazır demektir.",
   "commands": [
     {
       "name": "Proje Bazında Aç",

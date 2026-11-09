@@ -4,6 +4,7 @@
   "title": "Allplan Arayüz İncelemesi ve Çalışma Prensipleri",
   "duration": "08:15",
   "sourceModule": "Proje 1 — Modül 1: Arayüz Mimarisi, WPF Çerçevesi ve Temel Navigasyon",
+  "intro": "ALLPLAN'ın arayüzü ilk bakışta kalabalık görünür ama tek bir mantığa dayanır: ne yapmak istediğinizi önce **Rol (Role)** ve **Görev (Task)** olarak seçersiniz, araçlar da ona göre Actionbar'da belirir. Sık kullandığınız her şey paletlerdedir. Bu derste arayüzü ezberlemek yerine nerede ne aramanız gerektiğinin haritasını çıkaracaksınız; böylece sonraki derslerde 'o komut neredeydi' diye kaybolmazsınız.",
   "objectives": [
     "Actionbar (Aksiyon Çubuğu) üzerindeki Rol (Role), Görev (Task) ve Görev Alanı (Task Area) hiyerarşisini kullanmak.",
     "Özellikler (Properties), Sihirbazlar (Wizards), Kütüphane (Library), Objeler (Objects) ve Katmanlar (Layers) paletlerini yönetmek.",
@@ -49,6 +50,7 @@
       ]
     }
   ],
+  "checkpoint": "Rolü değiştirdiğinizde Actionbar'daki araçların değiştiğini görüyorsanız, Özellikler ve Kütüphane paletlerini açıp kapatabiliyorsanız ve aynı modeli Plan ile İzometrik pencerede aynı anda izleyebiliyorsanız arayüze hâkim olmaya başladınız demektir.",
   "commands": [
     {
       "name": "Actionbar (Aksiyon Çubuğu)",

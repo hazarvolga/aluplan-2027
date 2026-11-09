@@ -4,6 +4,7 @@
   "title": "Merdiven Oluşturma",
   "duration": "03:55",
   "sourceModule": "Proje 1 — Modül 3: Parametrik Merdiven Modelleyici ve Korkuluk Sistemleri",
+  "intro": "Merdiven, ALLPLAN'ın en **parametrik** elemanlarından biridir: tipini (düz, L, U), rıht yüksekliğini ve basamak genişliğini verirsiniz, program 3B merdiveni ve korkuluğu kurar. Kat düzlemleri arasına oturduğu için kat yüksekliği değişince **basamak sayısı kendini ayarlar**. 2B planda kesim çizgisi ve basamak numaralandırması da buradan gelir.",
   "objectives": [
     "Kat düzlemleri arasında 3B parametrik Merdiven (Stair / Treppe) (Düz, L, U sahanlıklı) modellemek.",
     "Rıht yüksekliği, basamak genişliği, merdiven plağı, kaplama ve Korkuluk (Handrail / Geländer) elemanlarını yapılandırmak.",
@@ -41,6 +42,13 @@
       ]
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Merdiveni kat düzlemleri arasına bağlamamak",
+      "body": "Merdiveni **kat düzlemleri (OK/UK) arasına** bağlamaz, sabit yükseklik verirseniz kat yüksekliği değiştiğinde basamak sayısı uymaz ve merdiven sahanlıkla çakışır. Yüksekliği her zaman alt ve üst kat düzlemine bağlayın."
+    }
+  ],
+  "checkpoint": "Kat düzlemleri arasında doğru basamak sayısıyla bir merdiven kurabiliyorsanız, rıht/basamak ve korkuluk ayarlarını yapabiliyor ve 2B planda kesim gösterimi ile numaralandırmayı görebiliyorsanız merdiven modellemeyi tamamladınız demektir.",
   "commands": [
     {
       "name": "U Tipi / Düz / Serbest Merdiven",

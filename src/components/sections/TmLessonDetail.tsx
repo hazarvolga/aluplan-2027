@@ -42,11 +42,7 @@ export function TmLessonDetail({ lesson }: { lesson: TmLesson }): ReactElement {
         <span aria-current="page">{lesson.title}</span>
       </nav>
 
-      <CompactPageHero
-        kicker={`DERS ${String(lesson.no).padStart(2, '0')}${lesson.duration ? ` · ${lesson.duration}` : ''}`}
-        title={lesson.title}
-        lead={lesson.objectives[0]}
-      />
+      <CompactPageHero title={lesson.title} lead={lesson.objectives[0]} />
 
       {lesson.objectives.length > 0 && (
         <section className={styles.band} aria-labelledby="tm-hedef">

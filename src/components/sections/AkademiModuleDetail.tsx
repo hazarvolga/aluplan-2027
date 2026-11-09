@@ -4,7 +4,7 @@ import type { ContentLevel, ContentModule } from '@/data/akademi-content';
 import { CompactPageHero } from './CompactPageHero';
 import { DebugComponentLabel } from './DebugComponentLabel';
 import { SectionHeader } from './SectionHeader';
-import { Figure, Lesson } from '@/components/akademi/kit';
+import { Figure, Lesson, PrevNextNav } from '@/components/akademi/kit';
 import { AkademiJsonLd } from '@/components/akademi/AkademiJsonLd';
 import { AkademiQuiz } from '@/components/akademi/AkademiQuiz';
 import styles from './AkademiModuleDetail.module.css';
@@ -186,24 +186,11 @@ export function AkademiModuleDetail({
         </DebugComponentLabel>
       )}
 
-      <DebugComponentLabel name="AkademiModuleNav (özel)">
-        <nav className={`${styles.band} ${styles.lastBand}`} aria-label="Modüller arası gezinme">
-          <div className={`alu-container ${styles.moduleNav}`}>
-            {previous ? (
-              <a className={styles.navLink} href={`/akademi/${previous.levelSlug}/${previous.slug}`}>
-                <span className={styles.navDir}>← Önceki modül</span>
-                <span className={styles.navTitle}>{previous.title}</span>
-              </a>
-            ) : <span />}
-            {next && (
-              <a className={`${styles.navLink} ${styles.navNext}`} href={`/akademi/${next.levelSlug}/${next.slug}`}>
-                <span className={styles.navDir}>Sonraki modül →</span>
-                <span className={styles.navTitle}>{next.title}</span>
-              </a>
-            )}
-          </div>
-        </nav>
-      </DebugComponentLabel>
+      <PrevNextNav
+        label="Modüller arası gezinme"
+        previous={previous ? { href: `/akademi/${previous.levelSlug}/${previous.slug}`, title: previous.title } : undefined}
+        next={next ? { href: `/akademi/${next.levelSlug}/${next.slug}`, title: next.title } : undefined}
+      />
     </div>
   );
 }

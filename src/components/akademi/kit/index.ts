@@ -10,3 +10,5 @@ export { Figure } from './Figure';
 export { Lesson } from './Lesson';
 export { LessonVideo } from './LessonVideo';
 export { CommandTable } from './CommandTable';
+export { PrevNextNav } from './PrevNextNav';
+export type { PrevNextItem } from './PrevNextNav';

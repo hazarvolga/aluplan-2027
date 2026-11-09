@@ -1,7 +1,7 @@
 import type { ReactElement, ReactNode } from 'react';
 import { CompactPageHero } from './CompactPageHero';
 import { SectionHeader } from './SectionHeader';
-import { CommandTable } from '@/components/akademi/kit';
+import { CommandTable, PrevNextNav } from '@/components/akademi/kit';
 import { temelModellemeLessons } from '@/data/temel-modelleme';
 import type { TmLesson } from '@/data/temel-modelleme';
 import styles from './TmLessonDetail.module.css';
@@ -125,22 +125,11 @@ export function TmLessonDetail({ lesson }: { lesson: TmLesson }): ReactElement {
         </section>
       )}
 
-      <nav className={`${styles.band} ${styles.lastBand}`} aria-label="Dersler arası gezinme">
-        <div className={`alu-container ${styles.lessonNav}`}>
-          {previous ? (
-            <a className={styles.navLink} href={`/akademi/temel-modelleme/${previous.slug}`}>
-              <span className={styles.navDir}>← Önceki ders</span>
-              <span className={styles.navTitle}>{previous.title}</span>
-            </a>
-          ) : <span />}
-          {next && (
-            <a className={`${styles.navLink} ${styles.navNext}`} href={`/akademi/temel-modelleme/${next.slug}`}>
-              <span className={styles.navDir}>Sonraki ders →</span>
-              <span className={styles.navTitle}>{next.title}</span>
-            </a>
-          )}
-        </div>
-      </nav>
+      <PrevNextNav
+        label="Dersler arası gezinme"
+        previous={previous ? { href: `/akademi/temel-modelleme/${previous.slug}`, title: previous.title } : undefined}
+        next={next ? { href: `/akademi/temel-modelleme/${next.slug}`, title: next.title } : undefined}
+      />
     </div>
   );
 }

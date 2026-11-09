@@ -4,7 +4,7 @@ import type { ContentLevel, ContentModule } from '@/data/akademi-content';
 import { CompactPageHero } from './CompactPageHero';
 import { DebugComponentLabel } from './DebugComponentLabel';
 import { SectionHeader } from './SectionHeader';
-import { Callout, DistributionBar, MetaRow, Timeline } from '@/components/akademi/kit';
+import { Figure, Lesson } from '@/components/akademi/kit';
 import { AkademiJsonLd } from '@/components/akademi/AkademiJsonLd';
 import { AkademiQuiz } from '@/components/akademi/AkademiQuiz';
 import styles from './AkademiModuleDetail.module.css';
@@ -26,16 +26,6 @@ export function AkademiModuleDetail({
   const previous = index > 0 ? ordered[index - 1] : undefined;
   const next = index >= 0 && index < ordered.length - 1 ? ordered[index + 1] : undefined;
 
-  const metaItems = [
-    { k: 'Toplam süre', v: `${module.hours} saat` },
-    { k: 'Format', v: module.format },
-    { k: 'Ön koşul', v: module.prerequisite },
-    { k: 'Kazanım', v: String(module.outcomes.length) },
-  ];
-
-  const kicker = [module.code, level.title.toUpperCase(), module.trackTitle?.toUpperCase()]
-    .filter(Boolean)
-    .join(' · ');
 
   return (
     <div className={styles.page}>
@@ -52,76 +42,25 @@ export function AkademiModuleDetail({
       </DebugComponentLabel>
 
       <DebugComponentLabel name="AkademiModuleHero (özel)">
-        <CompactPageHero kicker={kicker} title={module.title} lead={module.summary}>
-          <div className={styles.heroMeta}>
-            <MetaRow items={metaItems} />
-          </div>
-          <div className={styles.distribution}>
-            <DistributionBar segments={module.durationSplit} caption="Örnek oturum süre dağılımı" />
-          </div>
-        </CompactPageHero>
+        <CompactPageHero title={module.title} lead={module.summary} />
       </DebugComponentLabel>
 
-      <DebugComponentLabel name="AkademiModuleOutcomes (özel)">
-        <section className={styles.band} aria-labelledby="modul-kazanimlar">
-          <div className="alu-container">
-            <SectionHeader
-              id="modul-kazanimlar"
-              kicker="KAZANIMLAR"
-              title="Bu modülün sonunda"
-              lead="Her kazanım bir Bloom düzeyine ve bir kazanım koduna bağlıdır."
-            />
-            <ul className={styles.outcomes}>
-              {module.outcomes.map((outcome) => (
-                <li key={outcome.code || outcome.text} className={styles.outcome}>
-                  <p className={styles.outcomeText}>{outcome.text}</p>
-                  <span className={styles.outcomeTags}>
-                    <span className={styles.bloom}>{outcome.bloom}</span>
-                    {outcome.code && <span className={styles.code}>{outcome.code}</span>}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      </DebugComponentLabel>
-
-      {module.concepts && module.concepts.length > 0 && (
-        <DebugComponentLabel name="AkademiModuleConcepts (özel)">
-          <section className={styles.band} aria-labelledby="modul-kavramlar">
+      {module.lesson && module.lesson.sections.length > 0 && (
+        <DebugComponentLabel name="AkademiModuleLesson (ders)">
+          <section className={styles.band} aria-labelledby="modul-ders">
             <div className="alu-container">
-              <SectionHeader id="modul-kavramlar" kicker="KAVRAMLAR" title="Temel kavramlar ve terimler" />
-              <dl className={styles.concepts}>
-                {module.concepts.map((concept) => (
-                  <div key={concept.term} className={styles.concept}>
-                    <dt className={styles.conceptTerm}>
-                      {concept.term}
-                      <span className={styles.conceptEn}>{concept.en}</span>
-                    </dt>
-                    <dd className={styles.conceptDesc}>{concept.desc}</dd>
-                  </div>
-                ))}
-              </dl>
+              <SectionHeader
+                id="modul-ders"
+                title={module.lesson.title ?? module.title}
+                lead={module.lesson.subtitle}
+              />
+              <div className={styles.lesson}>
+                <Lesson lesson={module.lesson} />
+              </div>
             </div>
           </section>
         </DebugComponentLabel>
       )}
-
-      <DebugComponentLabel name="AkademiModuleFlow (kit)">
-        <section className={styles.band} aria-labelledby="modul-akis">
-          <div className="alu-container">
-            <SectionHeader
-              id="modul-akis"
-              kicker="DERS AKIŞI"
-              title="Örnek oturum akışı"
-              lead="Dakika bazlı bir örnek oturum; süreler ve sıralama eğitmene göre uyarlanır."
-            />
-            <div className={styles.timeline}>
-              <Timeline steps={module.sessionFlow} />
-            </div>
-          </div>
-        </section>
-      </DebugComponentLabel>
 
       {module.applicationSteps && module.applicationSteps.length > 0 && (
         <DebugComponentLabel name="AkademiModuleSteps (özel)">
@@ -144,6 +83,11 @@ export function AkademiModuleDetail({
                           <span className={styles.whyLabel}>Neden?</span> {item.why}
                         </p>
                       )}
+                      {item.figure && (
+                        <div className={styles.stepFigure}>
+                          <Figure figure={item.figure} />
+                        </div>
+                      )}
                     </div>
                   </li>
                 ))}
@@ -157,57 +101,33 @@ export function AkademiModuleDetail({
         <DebugComponentLabel name="AkademiModuleMistakes (özel)">
           <section className={styles.band} aria-labelledby="modul-hatalar">
             <div className="alu-container">
-              <SectionHeader id="modul-hatalar" kicker="DİKKAT" title="Sık yapılan hatalar" />
-              <dl className={styles.mistakes}>
+              <SectionHeader
+                id="modul-hatalar"
+                kicker="DİKKAT"
+                title="Sık yapılan hatalar"
+                lead="Takılırsanız buraya bakın. Başlığa tıklayınca belirtisi ve çözümü açılır."
+              />
+              <ul className={styles.mistakeList}>
                 {module.commonMistakes.map((item, index) => (
-                  <div key={index} className={styles.mistake}>
-                    <dt className={styles.mistakeHead}>{item.mistake}</dt>
-                    <dd className={styles.mistakeBody}>
-                      <p className={styles.mistakeSymptom}>
-                        <span className={styles.mistakeKey}>Belirti</span> {item.symptom}
-                      </p>
-                      <p className={styles.mistakeFix}>
-                        <span className={styles.mistakeKey}>Çözüm</span> {item.fix}
-                      </p>
-                    </dd>
-                  </div>
+                  <li key={index} className={styles.mistakeItem}>
+                    <details className={styles.mistake}>
+                      <summary className={styles.mistakeHead}>{item.mistake}</summary>
+                      <div className={styles.mistakeBody}>
+                        <p className={styles.mistakeSymptom}>
+                          <span className={styles.mistakeKey}>Belirti</span> {item.symptom}
+                        </p>
+                        <p className={styles.mistakeFix}>
+                          <span className={styles.mistakeKey}>Çözüm</span> {item.fix}
+                        </p>
+                      </div>
+                    </details>
+                  </li>
                 ))}
-              </dl>
+              </ul>
             </div>
           </section>
         </DebugComponentLabel>
       )}
-
-      {module.differentiation && (
-        <DebugComponentLabel name="AkademiModuleDifferentiation (özel)">
-          <section className={styles.band} aria-labelledby="modul-farklilastirma">
-            <div className="alu-container">
-              <SectionHeader id="modul-farklilastirma" kicker="FARKLILAŞTIRMA" title="Herkese göre ilerleme" />
-              <div className={styles.diffGrid}>
-                <div className={styles.diffCard}>
-                  <h3 className={styles.diffTitle}>Hızlı ilerleyenler</h3>
-                  <p className={styles.diffText}>{module.differentiation.fast}</p>
-                </div>
-                <div className={styles.diffCard}>
-                  <h3 className={styles.diffTitle}>Desteğe ihtiyaç duyanlar</h3>
-                  <p className={styles.diffText}>{module.differentiation.support}</p>
-                </div>
-              </div>
-            </div>
-          </section>
-        </DebugComponentLabel>
-      )}
-
-      <DebugComponentLabel name="AkademiModuleProject (özel)">
-        <section className={styles.band} aria-labelledby="modul-proje">
-          <div className="alu-container">
-            <SectionHeader id="modul-proje" kicker="SÜREKLİ PROJE" title="Bu dersin projeye katkısı" />
-            <Callout label="Sürekli proje adımı">
-              <p>{module.runningProjectStep}</p>
-            </Callout>
-          </div>
-        </section>
-      </DebugComponentLabel>
 
       {module.quiz && module.quiz.length > 0 && (
         <DebugComponentLabel name="AkademiModuleQuiz (interaktif)">
@@ -227,35 +147,40 @@ export function AkademiModuleDetail({
         </DebugComponentLabel>
       )}
 
-      {(module.assessment || module.homework || (module.materials && module.materials.length > 0)) && (
-        <DebugComponentLabel name="AkademiModuleAssessment (özel)">
-          <section className={styles.band} aria-labelledby="modul-olcme">
+      {module.homework && (
+        <DebugComponentLabel name="AkademiModuleExercise (özel)">
+          <section className={styles.band} aria-labelledby="modul-alistirma">
             <div className="alu-container">
-              <SectionHeader id="modul-olcme" kicker="ÖLÇME VE KAYNAKLAR" title="Ödev, ölçme ve materyaller" />
-              <div className={styles.resources}>
-                {module.assessment && (
-                  <div className={styles.resource}>
-                    <h3 className={styles.resourceTitle}>Ölçme</h3>
-                    <p className={styles.resourceText}>{module.assessment}</p>
-                  </div>
-                )}
-                {module.homework && (
-                  <div className={styles.resource}>
-                    <h3 className={styles.resourceTitle}>Ödev</h3>
-                    <p className={styles.resourceText}>{module.homework}</p>
-                  </div>
-                )}
-                {module.materials && module.materials.length > 0 && (
-                  <div className={styles.resource}>
-                    <h3 className={styles.resourceTitle}>Materyaller</h3>
-                    <ul className={styles.materials}>
-                      {module.materials.map((material) => (
-                        <li key={material} className={styles.material}>{material}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
+              <p id="modul-alistirma" className="preview-kicker">Şimdi kendiniz deneyin</p>
+              <p className={styles.exerciseTask}>{module.homework}</p>
+            </div>
+          </section>
+        </DebugComponentLabel>
+      )}
+
+      {module.concepts && module.concepts.length > 0 && (
+        <DebugComponentLabel name="AkademiModuleGlossary (akordeon)">
+          <section className={styles.band} aria-labelledby="modul-sozluk">
+            <div className="alu-container">
+              <details className={styles.accordion}>
+                <summary className={styles.accordionSummary}>
+                  <span className={styles.accordionKicker}>SÖZLÜK</span>
+                  <span id="modul-sozluk" className={styles.accordionTitle}>
+                    Bu derste geçen terimler ({module.concepts.length})
+                  </span>
+                </summary>
+                <dl className={styles.concepts}>
+                  {module.concepts.map((concept) => (
+                    <div key={concept.term} className={styles.concept}>
+                      <dt className={styles.conceptTerm}>
+                        {concept.term}
+                        <span className={styles.conceptEn}>{concept.en}</span>
+                      </dt>
+                      <dd className={styles.conceptDesc}>{concept.desc}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </details>
             </div>
           </section>
         </DebugComponentLabel>
@@ -267,13 +192,13 @@ export function AkademiModuleDetail({
             {previous ? (
               <a className={styles.navLink} href={`/akademi/${previous.levelSlug}/${previous.slug}`}>
                 <span className={styles.navDir}>← Önceki modül</span>
-                <span className={styles.navTitle}>{previous.code} · {previous.title}</span>
+                <span className={styles.navTitle}>{previous.title}</span>
               </a>
             ) : <span />}
             {next && (
               <a className={`${styles.navLink} ${styles.navNext}`} href={`/akademi/${next.levelSlug}/${next.slug}`}>
                 <span className={styles.navDir}>Sonraki modül →</span>
-                <span className={styles.navTitle}>{next.code} · {next.title}</span>
+                <span className={styles.navTitle}>{next.title}</span>
               </a>
             )}
           </div>

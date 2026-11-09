@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { AluIcon } from '@/components/ui/AluIcon';
-import { buildSidebarLevels, isAkademiLevelActive } from './sidebar-nav';
+import { buildSidebarLevels, isAkademiLevelActive, isAkademiModuleActive } from './sidebar-nav';
 import styles from './AkademiSidebar.module.css';
 
 const sidebarLevels = buildSidebarLevels();
@@ -94,10 +94,21 @@ export function AkademiSidebar() {
                   <span className={styles.levelNo}>{String(level.number).padStart(2, '0')}</span>
                   <span className={styles.levelTitle}>{level.title}</span>
                 </Link>
-                <ul className={styles.codes}>
-                  {level.codes.map((code) => (
-                    <li key={code} className={styles.code}>{code}</li>
-                  ))}
+                <ul className={styles.modules}>
+                  {level.modules.map((module) => {
+                    const moduleActive = isAkademiModuleActive(pathname, module);
+                    return (
+                      <li key={module.code} className={styles.moduleItem}>
+                        <Link
+                          href={`/akademi/${module.levelSlug}/${module.slug}`}
+                          className={`${styles.moduleLink} ${moduleActive ? styles.moduleActive : ''}`}
+                          aria-current={moduleActive ? 'page' : undefined}
+                        >
+                          <span className={styles.moduleTitle}>{module.title}</span>
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               </li>
             );

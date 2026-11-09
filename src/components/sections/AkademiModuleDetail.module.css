@@ -50,13 +50,30 @@
 .whyLabel{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-right:var(--space-inline-xs)}
 
 /* Sık yapılan hatalar */
-.mistakes{margin:var(--space-stack-lg) 0 0;display:grid;gap:0}
-.mistake{display:grid;grid-template-columns:minmax(12rem,18rem) 1fr;gap:var(--space-inline-md);padding:var(--space-stack-md) 0;border-top:var(--border-width-default) solid var(--border-default)}
-.mistake:last-child{border-bottom:var(--border-width-default) solid var(--border-default)}
-.mistakeHead{margin:0;font-weight:var(--font-weight-strong);color:var(--text-primary)}
-.mistakeBody{margin:0;display:flex;flex-direction:column;gap:var(--space-stack-xs);min-width:0}
+.mistakeList{list-style:none;margin:var(--space-stack-lg) 0 0;padding:0;display:flex;flex-direction:column;gap:0}
+.mistakeItem{margin:0}
+.mistake{border-top:var(--border-width-default) solid var(--border-default)}
+.mistakeItem:last-child .mistake{border-bottom:var(--border-width-default) solid var(--border-default)}
+.mistakeHead{list-style:none;cursor:pointer;display:flex;align-items:center;gap:var(--space-inline-sm);padding:var(--space-stack-md) 0;font-weight:var(--font-weight-strong);color:var(--text-primary)}
+.mistakeHead::-webkit-details-marker{display:none}
+.mistakeHead::before{content:"+";font-family:var(--font-mono);color:var(--accent-akademi);flex:none}
+.mistake[open] .mistakeHead::before{content:"–"}
+.mistakeHead:focus-visible{outline:var(--border-width-accent,2px) solid var(--focus-ring,var(--accent-akademi));outline-offset:2px}
+.mistakeBody{margin:0 0 var(--space-stack-md);padding-left:calc(var(--space-inline-sm) + 1ch);display:flex;flex-direction:column;gap:var(--space-stack-xs);min-width:0}
 .mistakeSymptom,.mistakeFix{margin:0;font-size:var(--type-body-sm-size);color:var(--text-secondary)}
 .mistakeKey{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-right:var(--space-inline-xs)}
+
+/* Lesson (DERS) wrapper */
+.lesson{margin-top:var(--space-stack-lg)}
+
+/* Shared accordion (glossary) */
+.accordion{border:var(--border-width-default) solid var(--border-subtle);background:var(--surface-raised);margin-top:var(--space-stack-sm)}
+.accordionSummary{list-style:none;cursor:pointer;display:flex;align-items:baseline;gap:var(--space-inline-sm);padding:var(--space-inset-md)}
+.accordionSummary::-webkit-details-marker{display:none}
+.accordionSummary:focus-visible{outline:var(--border-width-accent,2px) solid var(--focus-ring,var(--accent-akademi));outline-offset:2px}
+.accordionKicker{font-family:var(--font-mono);font-size:var(--type-body-sm-size);letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted)}
+.accordionTitle{font-size:var(--type-body-md-size);color:var(--text-secondary)}
+.accordion[open] .concepts{padding:0 var(--space-inset-md) var(--space-inset-md)}
 
 /* Farklılaştırma */
 .diffGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:var(--space-stack-md);margin-top:var(--space-stack-lg)}
@@ -71,7 +88,7 @@
 .navLink{display:flex;flex-direction:column;gap:var(--space-stack-xs);text-decoration:none;color:var(--text-primary)}
 .navNext{text-align:right;margin-left:auto}
 .navDir{color:var(--accent-akademi);font-size:var(--type-body-sm-size);font-weight:var(--font-weight-strong)}
-.navTitle{font-family:var(--font-heading);font-size:var(--type-h4-size)}
+.navTitle{font-family:var(--font-heading);font-size:var(--type-body-md-size)}
 
 /* Below 959px the shell shows a fixed "Müfredat" drawer toggle at the top-left;
    clear it so the breadcrumb starts beneath the toggle, not under it. */
@@ -82,5 +99,21 @@
 @media (max-width:40rem){
   .concept{grid-template-columns:1fr;gap:var(--space-stack-xs)}
   .outcome{flex-direction:column;gap:var(--space-stack-xs)}
-  .mistake{grid-template-columns:1fr;gap:var(--space-stack-xs)}
 }
+
+/* Demo (Ekranda) — curated real screenshots */
+.demoGrid{margin-top:var(--space-stack-lg);display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:var(--space-stack-lg);align-items:start;max-width:64rem}
+.stepFigure{margin-top:var(--space-stack-sm);max-width:34rem}
+
+/* Instructor plan — de-emphasized, collapsed by default */
+.instructor{border:var(--border-width-default) solid var(--border-subtle);background:var(--surface-raised)}
+.instructorSummary{list-style:none;cursor:pointer;display:flex;flex-direction:column;gap:var(--space-stack-xs);padding:var(--space-inset-md)}
+.instructorSummary::-webkit-details-marker{display:none}
+.instructorSummary:focus-visible{outline:var(--border-width-accent,2px) solid var(--focus-ring,var(--accent-akademi));outline-offset:2px}
+.instructorKicker{font-family:var(--font-mono);font-size:var(--type-body-sm-size);letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted)}
+.instructorTitle{font-family:var(--font-heading);font-size:var(--type-h4-size);color:var(--text-secondary)}
+.instructorHint{font-size:var(--type-body-sm-size);color:var(--text-muted)}
+.instructor[open] .timeline{padding:0 var(--space-inset-md) var(--space-inset-md)}
+
+/* Exercise (Alıştırma) — the single practice task, no redundant box label */
+.exerciseTask{max-width:44rem;margin:var(--space-stack-md) 0 0;padding:var(--space-inset-md);border-left:3px solid var(--accent-akademi);background:var(--surface-raised);color:var(--text-secondary);font-size:var(--type-body-sm-size);line-height:var(--line-height-relaxed,1.7)}

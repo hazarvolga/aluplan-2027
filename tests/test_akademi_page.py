@@ -116,11 +116,12 @@ class AkademiLevelDetailRedesignTests(unittest.TestCase):
         self.assertIn("ModuleCard", src)
         self.assertNotIn("function ModuleCard(", src)
 
-    def test_single_module_track_hides_the_repeated_hours(self):
+    def test_level_detail_shows_no_classroom_hours(self):
         src = read("src/components/sections/AkademiLevelDetail.tsx")
-        # A single-module track states its hours once (the track total), so the module hides them.
-        self.assertIn("track.modules.length === 1", src)
-        self.assertIn("showHours={!single}", src)
+        # Self-paced online course: no classroom hour totals or per-card hours.
+        self.assertNotIn("showHours", src)
+        self.assertNotIn("Toplam", src)
+        self.assertNotIn("levelHours", src)
 
     def test_level_detail_keeps_prev_next_nav(self):
         src = read("src/components/sections/AkademiLevelDetail.tsx")

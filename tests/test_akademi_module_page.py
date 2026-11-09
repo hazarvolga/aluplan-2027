@@ -45,18 +45,22 @@ class AkademiModuleDetailTests(unittest.TestCase):
         src = read(DETAIL)
         self.assertNotIn("<main", src)
 
-    def test_detail_renders_the_rich_card_parts(self):
+    def test_detail_renders_the_student_lesson_parts(self):
+        # The student page is a self-paced lesson: the taught lesson (DERS) is the
+        # spine, plus the running-project callout and the interactive quiz.
         src = read(DETAIL)
-        for token in ("DistributionBar", "Timeline", "MetaRow", "Callout",
-                      "module.outcomes", "module.sessionFlow", "module.durationSplit",
-                      "runningProjectStep"):
+        for token in ("module.lesson", "Lesson", "module.homework", "AkademiQuiz"):
             with self.subTest(token=token):
                 self.assertIn(token, src)
 
-    def test_detail_shows_bloom_and_outcome_code(self):
+    def test_detail_drops_curriculum_and_instructor_metadata(self):
+        # Bloom levels, outcome codes, the classroom session timeline and the
+        # duration bar are curriculum/instructor material, not student content.
         src = read(DETAIL)
-        self.assertIn("outcome.bloom", src)
-        self.assertIn("outcome.code", src)
+        for token in ("outcome.bloom", "outcome.code", "Timeline",
+                      "DistributionBar", "module.sessionFlow", "module.durationSplit"):
+            with self.subTest(token=token):
+                self.assertNotIn(token, src)
 
     def test_detail_has_prev_next_module_nav_and_breadcrumb(self):
         src = read(DETAIL)

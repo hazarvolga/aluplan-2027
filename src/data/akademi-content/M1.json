@@ -7,7 +7,7 @@
   "hours": 8,
   "format": "Hibrit",
   "prerequisite": "Yok",
-  "summary": "ALLPLAN arayüzünün bölümlerini tanır, temel gezinme ve görünüm araçlarını kullanır; CAD ile BIM arasındaki farkı kavrar.",
+  "summary": "Bu derste ALLPLAN arayüzünün bölümlerini tanıyacak, temel gezinme ve görünüm araçlarını kullanacak, CAD ile BIM arasındaki farkı kavrayacaksınız.",
   "outcomes": [
     {
       "text": "ALLPLAN arayüzünün ana bölümlerini (Actionbar, paletler, çizim alanı, durum çubuğu) tanımlar",
@@ -25,6 +25,64 @@
       "code": "K-B1.3"
     }
   ],
+  "lesson": {
+    "title": "ALLPLAN’a ilk bakış",
+    "subtitle": "Çizim programı değil, bir yapı modelleme aracı. Önce ekranı ve çalışma mantığını tanıyalım.",
+    "intro": "ALLPLAN'ı ilk kez açıyorsunuz. Bu program boyunca tek bir bina projesini baştan sona kuracaksınız; her ders bu projeye bir katman ekler. Bu ilk derste ise programı bir çizim aracı gibi değil, bir yapı modelleme aracı gibi tanıyacak; ekranın bölümlerini, temel gezinmeyi ve aynı modeli farklı pencerelerden görmeyi öğreneceksiniz. Henüz bir şey çizmiyoruz; önce aracı tanıyoruz.",
+    "sections": [
+      {
+        "heading": "CAD'den BIM'e: neden bir duvar çizgiden fazlasıdır",
+        "body": [
+          "AutoCAD gibi klasik bir CAD programında bir duvarı iki çizgiyle çizersiniz. O çizgiler yalnızca çizgidir; duvar olduklarını, ne kadar kalın ya da yüksek olduklarını bilmezler. Metrajı siz ayrıca sayarsınız, kesiti siz ayrıca çizersiniz.",
+          "ALLPLAN'da ise bir duvar çizdiğinizde program onu **duvar** olarak tanır: kalınlığı, yüksekliği, malzemesi ve bağlı olduğu kat vardır. Planı, kesiti ve metrajı bu tek nesneden türetir. İşte **BIM** (Building Information Modeling) budur: geometriyle birlikte **veri** taşıyan, nesne tabanlı bir model.",
+          "Bu yüzden ALLPLAN'da çizmezsiniz, modellersiniz. Değerleri değiştirilince kendini güncelleyen bu akıllı elemanlara **parametrik nesne** denir. Bir duvarın yüksekliğini değiştirdiğinizde plan, kesit ve metraj birlikte güncellenir."
+        ],
+        "tryIt": "Şimdi sen dene: Zihninde bir duvarı canlandır. CAD'de bu neyi bilir, BIM'de neyi bilir? Farkı bir cümleyle kendine söyle."
+      },
+      {
+        "heading": "ALLPLAN'ı açtığınızda ne görürsünüz",
+        "body": [
+          "Ekranın en üstünde, araçların görevlere göre gruplandığı şerit olan **Actionbar** durur. Modelleme, dokümantasyon veya donatı gibi farklı işler için farklı sekmeler sunar; aradığınız aracı doğru sekmede ararsınız.",
+          "Çalışma alanının kenarlarında **paletler** açılır: Özellikler (Properties), Kütüphane (Library) ve Katmanlar (Layers) gibi. Paletler modelin çevresine yerleşir ve hangisinin açık kalacağına siz karar verirsiniz; ekran düzenini kendinize göre kurmak işi hızlandırır.",
+          "Ortadaki geniş boşluk **çizim alanınızdır**. En altta ise o an hangi araçla, hangi ayarla çalıştığınızı söyleyen **durum çubuğu** bulunur. Bir işlem sırasında takılırsanız, çoğu zaman cevap durum çubuğundadır."
+        ],
+        "figure": {
+          "src": "/akademi/m1/arayuz-paletler.png",
+          "alt": "ALLPLAN arayüzünde palet bölgeleri kırmızı oklarla işaretli: solda Girdi Tablosu (Input Table), üstte Proje Verisi (Project Data) ve Girdi Paneli (Input Panel).",
+          "caption": "Paletler modelin çevresine yerleşir. Görünmüyorlarsa panik yok; birazdan nasıl geri getirileceğini göreceğiz.",
+          "source": "ALLPLAN dokümantasyonu",
+          "width": 953,
+          "height": 446
+        },
+        "tryIt": "Şimdi sen dene: ALLPLAN'ı aç ve dört bölgeyi gözünle bul: üstte Actionbar, kenarda paletler, ortada çizim alanı, altta durum çubuğu."
+      },
+      {
+        "heading": "Gezinme: yakınlaştırma, kaydırma ve \"tümünü sığdır\"",
+        "body": [
+          "Modelde dolaşmanın üç temel hareketi vardır. Fare tekerleğini çevirerek **yakınlaştırır/uzaklaştırırsınız**. Tekerleğe (orta tuşa) basılı tutup sürükleyerek görünümü **kaydırırsınız**. Bu iki hareket farklıdır: kaydırma modeli taşımaz, yalnızca ona baktığınız pencereyi oynatır.",
+          "Model gözden kaybolduğunda telaşlanmayın; büyük ihtimalle kaydırma ya da aşırı yakınlaştırma yüzünden görünüm dışına çıkmıştır. **\"Tümünü sığdır\"** komutu modeli tekrar ekrana ortalar ve sizi güvenli başlangıç noktasına döndürür. [komut adı sürüme göre değişebilir]"
+        ],
+        "tryIt": "Şimdi sen dene: Yakınlaştır, sonra orta tuşla kaydır ve modeli bilerek kaybet. Ardından \"tümünü sığdır\" ile geri getir."
+      },
+      {
+        "heading": "Aynı modeli birden çok pencereden görmek: viewport",
+        "body": [
+          "ALLPLAN'da aynı modele farklı açılardan bakan pencerelere **viewport** denir. Örneğin solda planı, sağda 3B görünümü açabilirsiniz. Önemli olan şudur: bunlar ayrı dosyalar değildir; aynı modelin farklı görünümleridir. Planda bir duvarı değiştirirseniz 3B'de de anında değişir.",
+          "Bu, nesne tabanlı mantığın gözle görülür halidir ve neden \"çizmiyoruz, modelliyoruz\" dediğimizi anlatır. Modelin parçaları, katman benzeri birimler olan **çizim dosyalarında** (Teilbild / Document) tutulur; viewport ise bu parçaları bir arada izlediğiniz penceredir.",
+          "Aşağıdaki görüntüde arka planda 3B bir model, önde ise araç arama kutusu görünüyor: aradığınız aracı adıyla yazarak da bulabilirsiniz."
+        ],
+        "figure": {
+          "src": "/akademi/m1/arayuz-arama-navigasyon.png",
+          "alt": "ALLPLAN'da araç arama kutusu açık; arka planda 3B bir çelik çatı modeli görünüyor, arama sonuçları İngilizce listeleniyor.",
+          "caption": "Aynı modelin 3B görünümü ve araç arama. Aracın tam adını hatırlamıyorsanız yazarak arayabilirsiniz.",
+          "source": "ALLPLAN dokümantasyonu",
+          "width": 440,
+          "height": 354
+        },
+        "tryIt": "Şimdi sen dene: Plan ve 3B'yi yan yana aç. Bir pencerede küçük bir değişiklik yap ve diğerinde aynı anda güncellendiğini gör."
+      }
+    ]
+  },
   "concepts": [
     {
       "term": "BIM",
@@ -138,7 +196,15 @@
     },
     {
       "step": "Paletleri açıp kapatın (Özellikler, Kütüphane, Katmanlar).",
-      "why": "Ekran düzenini kendinize göre kurmak bilişsel yükü azaltır."
+      "why": "Ekran düzenini kendinize göre kurmak bilişsel yükü azaltır.",
+      "figure": {
+        "src": "/akademi/m1/arayuz-paletler.png",
+        "alt": "ALLPLAN palet bölgeleri kırmızı oklarla işaretli: Girdi Tablosu, Proje Verisi ve Girdi Paneli.",
+        "caption": "Paletler modelin çevresinde açılır; görünmüyorlarsa Görünüm menüsünden geri getirilir.",
+        "source": "ALLPLAN dokümantasyonu",
+        "width": 953,
+        "height": 446
+      }
     },
     {
       "step": "Fare tekerleğiyle yakınlaştırın, orta tuşla kaydırın, 'tümünü sığdır' ile modeli ortalayın."
@@ -300,5 +366,6 @@
       "difficulty": "Orta",
       "outcomeCode": "K-B1.2"
     }
-  ]
+  ],
+  "estimatedMinutes": 40
 }

@@ -45,10 +45,54 @@ export interface DurationSlice {
   minutes: number;
 }
 
+/**
+ * A real ALLPLAN screenshot (or other still) shown in a lesson.
+ * `src` is a path under /public (e.g. /akademi/m1/arayuz-paletler.png).
+ * `alt` is required: it must describe what the image shows for screen
+ * readers and when the image fails to load.
+ */
+export interface Figure {
+  src: string;
+  alt: string;
+  /** Short caption shown under the image. */
+  caption?: string;
+  /** Attribution line, e.g. "ALLPLAN dokümantasyonu". */
+  source?: string;
+  /** Intrinsic pixel size, so the layout reserves space (no CLS). */
+  width?: number;
+  height?: number;
+}
+
 export interface ApplicationStep {
   step: string;
   /** Optional "Neden?" rationale shown beside the step. */
   why?: string;
+  /** Optional real screenshot that shows this step on screen. */
+  figure?: Figure;
+}
+
+/**
+ * One taught section of the actual lesson (DERS) — this is the teaching text a
+ * self-paced online learner reads, not curriculum scaffolding. `body` holds the
+ * explanatory paragraphs; key terms are wrapped in **double asterisks** and
+ * rendered bold (safe text segmentation, no HTML). `figure` embeds the real
+ * screenshot at the point it is discussed; `tryIt` is a short "now you try it".
+ */
+export interface LessonSection {
+  heading: string;
+  body: readonly string[];
+  figure?: Figure;
+  tryIt?: string;
+}
+
+export interface Lesson {
+  /** Topic intro heading that opens the lesson (not a generic "Anlatım" label). */
+  title?: string;
+  /** Short one-line hook shown under the title. */
+  subtitle?: string;
+  /** Optional one-paragraph lead-in before the first section. */
+  intro?: string;
+  sections: readonly LessonSection[];
 }
 
 export interface CommonMistake {
@@ -95,7 +139,13 @@ export interface ContentModule {
   format: string;
   prerequisite: string;
   summary: string;
+  /** Estimated self-paced completion time in minutes (shown on the lesson hero). */
+  estimatedMinutes?: number;
   outcomes: readonly Outcome[];
+  /** The actual taught lesson (DERS): the spine of the student-facing page. */
+  lesson?: Lesson;
+  /** Curated real screenshots that demonstrate the module on screen. */
+  demo?: readonly Figure[];
   concepts?: readonly Concept[];
   sessionFlow: readonly SessionStep[];
   durationSplit: readonly DurationSlice[];

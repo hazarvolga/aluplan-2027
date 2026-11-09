@@ -5,6 +5,13 @@
 .icon,.outcomeIcon{display:inline-flex;color:var(--accent-fg)}
 .heroActions{display:flex;flex-wrap:wrap;gap:var(--space-stack-sm);margin-top:var(--space-stack-md)}
 .heroMeta{margin-top:var(--space-stack-md)}
+
+/* Flat single-line meta: no box, no stacked cells. */
+.heroMetaFlat{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--space-inline-xs) var(--space-inline-md);margin:var(--space-stack-md) 0 0;padding:0}
+.heroMetaItem{display:flex;align-items:baseline;gap:var(--space-inline-xs);margin:0}
+.heroMetaItem:not(:last-child)::after{content:"·";color:var(--border-strong);margin-left:var(--space-inline-md)}
+.heroMetaKey{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.08em;font-size:var(--type-body-sm-size);color:var(--text-muted)}
+.heroMetaVal{margin:0;font-size:var(--type-body-sm-size);color:var(--text-primary);font-weight:var(--font-weight-strong)}
 .moduleGrid{list-style:none;margin:var(--space-stack-md) 0 0;padding:0;display:grid;gap:0}
 .moduleGridItem{display:block}
 

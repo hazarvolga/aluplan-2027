@@ -4,21 +4,11 @@ import type { ContentLevel, ContentModule } from '@/data/akademi-content';
 import { CompactPageHero } from './CompactPageHero';
 import { DebugComponentLabel } from './DebugComponentLabel';
 import { SectionHeader } from './SectionHeader';
-import { MetaRow, ModuleCard } from '@/components/akademi/kit';
+import { ModuleCard } from '@/components/akademi/kit';
 import { AkademiJsonLd } from '@/components/akademi/AkademiJsonLd';
 import styles from './AkademiLevelDetail.module.css';
 
 const akademiLevels = akademiProgram.levels;
-
-function totalHours(modules: readonly ContentModule[]): number {
-  return modules.reduce((sum, module) => sum + module.hours, 0);
-}
-
-function levelHours(level: ContentLevel): number {
-  if (level.modules) return totalHours(level.modules);
-  if (level.tracks) return totalHours(level.tracks[0]?.modules ?? []);
-  return 0;
-}
 
 function unitCount(level: ContentLevel): number {
   if (level.modules) return level.modules.length;
@@ -34,7 +24,6 @@ export function AkademiLevelDetail({ level }: { level: ContentLevel }): ReactEle
   const metaItems = [
     { k: 'Rol', v: level.role },
     { k: 'Yapı', v: level.shared ? 'Ortak çekirdek' : 'Disiplin kolları' },
-    { k: 'Süre', v: level.shared ? `${levelHours(level)} saat` : `Kol başına ${levelHours(level)} saat` },
     { k: level.shared ? 'Modül' : 'Kol', v: String(unitCount(level)) },
   ];
 
@@ -47,9 +36,14 @@ export function AkademiLevelDetail({ level }: { level: ContentLevel }): ReactEle
           title={`Seviye ${level.number} · ${level.title}`}
           lead={level.summary}
         >
-          <div className={styles.heroMeta}>
-            <MetaRow items={metaItems} />
-          </div>
+          <dl className={styles.heroMetaFlat}>
+            {metaItems.map((item) => (
+              <div key={item.k} className={styles.heroMetaItem}>
+                <dt className={styles.heroMetaKey}>{item.k}</dt>
+                <dd className={styles.heroMetaVal}>{item.v}</dd>
+              </div>
+            ))}
+          </dl>
           <div className={styles.heroActions}>
             <a className="alu-button alu-button--secondary alu-button--md" href="/akademi#seviyeler">
               Tüm program
@@ -65,8 +59,8 @@ export function AkademiLevelDetail({ level }: { level: ContentLevel }): ReactEle
               <SectionHeader
                 id="seviye-moduller"
                 kicker="MODÜLLER"
-                title="Bu seviyedeki modüller"
-                lead="Her modül kısa anlatım, adım adım uygulama ve öz değerlendirme quiziyle ilerler."
+                title="Bu seviyedeki dersler"
+                lead="Her derste konuyu öğrenir, ekranda görür, adım adım uygular ve kısa bir quizle kendinizi sınarsınız."
               />
               <ul className={styles.moduleGrid}>
                 {level.modules.map((module) => (
@@ -75,7 +69,6 @@ export function AkademiLevelDetail({ level }: { level: ContentLevel }): ReactEle
                   </li>
                 ))}
               </ul>
-              <p className={styles.total}>Toplam {levelHours(level)} saat</p>
             </div>
           </section>
         </DebugComponentLabel>
@@ -93,7 +86,6 @@ export function AkademiLevelDetail({ level }: { level: ContentLevel }): ReactEle
               />
               <ul className={styles.tracks}>
                 {level.tracks.map((track) => {
-                  const single = track.modules.length === 1;
                   return (
                     <li key={track.title} className={styles.track}>
                       <h3 className={styles.trackTitle}>{track.title}</h3>
@@ -101,11 +93,10 @@ export function AkademiLevelDetail({ level }: { level: ContentLevel }): ReactEle
                       <ul className={styles.moduleGrid}>
                         {track.modules.map((module) => (
                           <li key={module.code} className={styles.moduleGridItem}>
-                            <ModuleCard module={module} showHours={!single} />
+                            <ModuleCard module={module} />
                           </li>
                         ))}
                       </ul>
-                      <p className={styles.total}>{totalHours(track.modules)} saat</p>
                     </li>
                   );
                 })}

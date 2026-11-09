@@ -30,16 +30,14 @@ class AkademiKitTests(unittest.TestCase):
             with self.subTest(component=name):
                 self.assertIn(name, idx)
 
-    def test_module_card_can_hide_repeated_hours(self):
+    def test_module_card_is_student_facing_title_link_without_code_or_hours(self):
         src = read(f"{KIT}/ModuleCard.tsx")
-        self.assertIn("showHours", src)
-
-    def test_module_card_code_is_separate_from_the_heading(self):
-        src = read(f"{KIT}/ModuleCard.tsx")
-        self.assertIn("{module.code}", src)
+        # The title links to the module detail page.
         self.assertIn("{module.title}", src)
-        # The code must not be rendered inside a heading element.
-        self.assertNotRegex(src, r"<h[1-6][^>]*>\s*\{module\.code\}")
+        self.assertIn("/akademi/", src)
+        # This is a student-facing course: the internal code and classroom hours are not shown.
+        self.assertNotIn("{module.code}", src)
+        self.assertNotIn("module.hours", src)
 
     def test_distribution_bar_is_grayscale_not_accent(self):
         # The duration bar is a neutral data mark; the single akademi accent is reserved

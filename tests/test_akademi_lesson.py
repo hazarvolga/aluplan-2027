@@ -38,7 +38,7 @@ class AkademiQuizComponentTests(unittest.TestCase):
 class AkademiModuleLessonRenderTests(unittest.TestCase):
     def test_detail_renders_lesson_body_and_quiz(self):
         src = read("src/components/sections/AkademiModuleDetail.tsx")
-        for token in ("applicationSteps", "commonMistakes", "differentiation",
+        for token in ("applicationSteps", "commonMistakes",
                       "AkademiQuiz", "module.quiz"):
             with self.subTest(token=token):
                 self.assertIn(token, src)
@@ -83,3 +83,75 @@ class AkademiLessonContentTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class AkademiLessonMediaTests(unittest.TestCase):
+    """Lessons can show real ALLPLAN screenshots; every figure needs working src + alt,
+    and the instructor session plan is separated from the student-facing lesson."""
+
+    def test_figure_component_requires_alt_and_reserves_space(self):
+        src = read("src/components/akademi/kit/Figure.tsx")
+        self.assertIn("alt={alt}", src)
+        self.assertIn("width={width}", src)
+        self.assertIn("height={height}", src)
+        self.assertIn("loading={priority", src)
+
+    def test_figure_css_uses_tokens_not_literal_colors(self):
+        css = read("src/components/akademi/kit/Figure.module.css")
+        self.assertNotRegex(css, r"#[0-9a-fA-F]{3,8}\b")
+        self.assertNotRegex(css, r"\brg?ba?\(")
+
+    def test_detail_renders_taught_lesson_not_instructor_material(self):
+        src = read("src/components/sections/AkademiModuleDetail.tsx")
+        # The taught lesson (DERS) is the spine; per-step figures still render.
+        self.assertIn("module.lesson", src)
+        self.assertIn("item.figure", src)
+        # This is a self-paced online course: no instructor-facing material, no
+        # classroom session plan, no classroom duration bar / format on the student page.
+        self.assertNotIn("EĞİTMEN", src)
+        self.assertNotIn("Timeline", src)
+        self.assertNotIn("DistributionBar", src)
+        self.assertNotIn("module.format", src)
+        # Common mistakes are an accordion (details/summary).
+        self.assertIn("<details", src)
+
+    def test_lesson_component_renders_prose_figure_and_tryit(self):
+        src = read("src/components/akademi/kit/Lesson.tsx")
+        self.assertIn("section.body", src)
+        self.assertIn("section.figure", src)
+        self.assertIn("section.tryIt", src)
+        # Bold key terms via safe text segmentation, not raw HTML.
+        self.assertNotIn("dangerouslySetInnerHTML", src)
+
+    def test_lesson_css_uses_tokens_not_literal_colors(self):
+        css = read("src/components/akademi/kit/Lesson.module.css")
+        self.assertNotRegex(css, r"#[0-9a-fA-F]{3,8}\b")
+        self.assertNotRegex(css, r"\brg?ba?\(")
+
+    def test_m1_has_a_taught_lesson_with_sections(self):
+        data = json.loads((CONTENT_DIR / "M1.json").read_text(encoding="utf-8"))
+        lesson = data.get("lesson") or {}
+        sections = lesson.get("sections") or []
+        self.assertGreaterEqual(len(sections), 3, "M1 lesson should have at least 3 taught sections")
+        for section in sections:
+            self.assertTrue(section.get("heading"), "each section needs a heading")
+            body = section.get("body") or []
+            self.assertTrue(body and all(len(p) > 40 for p in body), "each section needs real prose")
+        self.assertIsInstance(data.get("estimatedMinutes"), int)
+
+    def test_every_akademi_figure_file_exists(self):
+        """Any figure referenced by any module (demo, lesson section, or step) has a real file."""
+        for path in sorted(CONTENT_DIR.glob("*.json")):
+            data = json.loads(path.read_text(encoding="utf-8"))
+            figures = list(data.get("demo") or [])
+            for section in (data.get("lesson") or {}).get("sections") or []:
+                if isinstance(section, dict) and section.get("figure"):
+                    figures.append(section["figure"])
+            for step in data.get("applicationSteps") or []:
+                if isinstance(step, dict) and step.get("figure"):
+                    figures.append(step["figure"])
+            for fig in figures:
+                with self.subTest(module=path.stem, src=fig.get("src")):
+                    self.assertGreaterEqual(len(fig.get("alt", "")), 20)
+                    asset = ROOT / "public" / fig["src"].lstrip("/")
+                    self.assertTrue(asset.is_file(), f"missing image file: {asset}")

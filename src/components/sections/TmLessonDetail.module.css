@@ -15,6 +15,7 @@
 .step{display:grid;grid-template-columns:auto 1fr;gap:var(--space-inline-md);padding:var(--space-stack-lg) 0;border-top:var(--border-width-default) solid var(--border-default)}
 .step:last-child{border-bottom:var(--border-width-default) solid var(--border-default)}
 .time{font-family:var(--font-mono);font-size:var(--type-body-sm-size);color:var(--accent-akademi);white-space:nowrap}
+.stepNo{font-family:var(--font-mono);font-size:var(--type-body-sm-size);color:var(--accent-akademi)}
 .stepBody{display:flex;flex-direction:column;gap:var(--space-stack-xs);min-width:0}
 .stepHeading{margin:0;font-family:var(--font-heading);font-size:var(--type-h4-size);color:var(--text-primary)}
 .stepText{margin:0;font-size:var(--type-body-md-size);line-height:var(--line-height-relaxed,1.7);color:var(--text-secondary)}

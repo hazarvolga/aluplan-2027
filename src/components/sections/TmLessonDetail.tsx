@@ -1,7 +1,7 @@
 import type { ReactElement, ReactNode } from 'react';
 import { CompactPageHero } from './CompactPageHero';
 import { SectionHeader } from './SectionHeader';
-import { CommandTable, LessonVideo } from '@/components/akademi/kit';
+import { CommandTable } from '@/components/akademi/kit';
 import { temelModellemeLessons } from '@/data/temel-modelleme';
 import type { TmLesson } from '@/data/temel-modelleme';
 import styles from './TmLessonDetail.module.css';
@@ -64,11 +64,11 @@ export function TmLessonDetail({ lesson }: { lesson: TmLesson }): ReactElement {
       {lesson.steps.length > 0 && (
         <section className={styles.band} aria-labelledby="tm-adimlar">
           <div className="alu-container">
-            <SectionHeader id="tm-adimlar" kicker="UYGULAMA" title="Adım adım" lead="Videodaki zaman damgalarına göre ilerleyin." />
+            <SectionHeader id="tm-adimlar" kicker="UYGULAMA" title="Adım adım" lead="Her adımı kendi ALLPLAN’ınızda, sırayla uygulayın. Ekran görüntülü anlatımlar aşağıdaki kaynak makalelerdedir." />
             <ol className={styles.steps}>
               {lesson.steps.map((s, i) => (
                 <li key={i} className={styles.step}>
-                  {s.time && <span className={styles.time}>{s.time}</span>}
+                  <span className={styles.stepNo}>{String(i + 1).padStart(2, '0')}</span>
                   <div className={styles.stepBody}>
                     <h3 className={styles.stepHeading}>{s.heading}</h3>
                     <p className={styles.stepText}>{withEmphasis(s.body)}</p>
@@ -86,19 +86,6 @@ export function TmLessonDetail({ lesson }: { lesson: TmLesson }): ReactElement {
           <div className="alu-container">
             <SectionHeader id="tm-komut" kicker="KOMUTLAR" title="Komut, menü yolu ve kısayol" lead="Türkçe arayüz adları (orijinaliyle); kendi sürümünüzde doğrulayın." />
             <CommandTable commands={lesson.commands} />
-          </div>
-        </section>
-      )}
-
-      {lesson.media.videos.length > 0 && (
-        <section className={styles.band} aria-labelledby="tm-video">
-          <div className="alu-container">
-            <SectionHeader id="tm-video" kicker="VİDEOLAR" title="Ders videoları" lead="Videolar Aluplan kanalına yüklenince buraya gömülecek." />
-            <div className={styles.videos}>
-              {lesson.media.videos.map((v) => (
-                <LessonVideo key={v.file} video={{ title: v.title, source: 'vimeo', placeholder: true }} />
-              ))}
-            </div>
           </div>
         </section>
       )}

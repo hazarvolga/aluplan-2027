@@ -12,27 +12,39 @@
   ],
   "steps": [
     {
-      "time": "00:00 – 03:30",
-      "heading": "Biçim Özellikleri ve Yardımcı Konstrüksiyon Modu",
-      "body": "**Biçim (Format)** araç çubuğundan kalem kalınlığı (`0.13`, `0.25`, `0.35`, `0.50 mm`), çizgi tipi ve katman seçimi yapın. Pafta baskısında görünmeyen referans eksenleri çizmek için **Yardımcı Konstrüksiyon Formatı (Construction Line Format / Hilfskonstruktion)** (`Ctrl+K`) modunu açıp kapatmayı uygulayın.",
+      "time": "00:00 – 02:42",
+      "heading": "Biçim Özellikleri: Kalem, Çizgi Tipi ve Renk",
+      "body": "2B çizime başlamadan önce **Biçim (Format)** araç çubuğundan kalem kalınlığını (`0.13`, `0.25`, `0.35`, `0.50 mm`), çizgi tipini ve rengini seçin. Bunu çizmeden önce yaparsınız; çünkü kalem kalınlığı paftada çizginin ne kadar koyu basılacağını belirler ve sonradan tek tek düzeltmek yerine doğru biçimle çizmek en temiz yoldur.",
       "figures": []
     },
     {
-      "time": "03:30 – 08:00",
-      "heading": "Temel 2B Çizim Komutları (Çizgi, Dikdörtgen, Daire, Yay)",
-      "body": "**Taslak (Draft)** görev alanından **Çizgi (Line)**, **Poligon Çizgisi (Polyline)**, **Dikdörtgen (Rectangle)** ve **Daire/Yay (Circle/Arc)** komutlarını çalıştırın. Diyalog satırında `dX`, `dY`, `Uzunluk (Length)` ve `Açı (Angle)` alanları arasında `Tab` tuşuyla geçiş yaparak tam ölçülü çizim yapın.",
+      "time": "02:42 – 05:24",
+      "heading": "Yardımcı Konstrüksiyon Modu (Construction Line)",
+      "body": "**Yardımcı Konstrüksiyon Formatı (Construction Line / Hilfskonstruktion)** (`Ctrl+K`) modunu açıp kapatmayı öğrenin. Bu modda çizdiğiniz referans eksenleri ve yardımcı çizgiler ekranda görünür ama **pafta baskısında çıkmaz**; bu yüzden ölçü kurgusu ve hizalama için kullanın, model geometrisiyle karışmaz.",
       "figures": []
     },
     {
-      "time": "08:00 – 12:00",
-      "heading": "Paralel Çizgi, Nokta Bölmeleri ve Poligonlaştırma",
-      "body": "**Elemana Paralel (Parallel to Element)** komutuyla mevcut bir çizgiden belirli mesafe ve adette ofset çizgileri üretin. Açık veya kesişen çizgileri **Alan Tespiti (Area Detection / Flächenelement suchen)** (ada algılama) ile tek tıkla kapalı poligona dönüştürün.",
+      "time": "05:24 – 08:06",
+      "heading": "Temel Çizim: Çizgi, Poligon ve Dikdörtgen",
+      "body": "**Taslak (Draft)** görev alanından **Çizgi (Line)**, **Poligon Çizgisi (Polyline)** ve **Dikdörtgen (Rectangle)** komutlarıyla geometri üretin. Diyalog satırında `dX`, `dY`, `Uzunluk (Length)` ve `Açı (Angle)` alanları arasında `Tab` ile geçerek değer girin; çünkü ölçüyü klavyeden vermek, fareyle yaklaşık tıklamanın aksine tam ölçülü ve tekrarlanabilir çizim sağlar.",
       "figures": []
     },
     {
-      "time": "12:00 – 16:13",
-      "heading": "Tarama (Hatching), Desen (Pattern) ve Dolgu (Fill)",
-      "body": "**Tarama (Hatching / Schraffur)**, **Desen (Pattern / Muster)** ve **Dolgu (Fill / Füllfläche)** komutlarıyla betonarme, tuğla, yalıtım ve zemin kaplama taramaları oluşturun; tarama yönünü ve referans ölçeğe göre sıklık davranışını (`Ölçeğe göre ayarla / Scale-dependent`) yapılandırın.",
+      "time": "08:06 – 10:48",
+      "heading": "Daire, Yay ve Paralel Çizgi",
+      "body": "**Daire / Yay (Circle / Arc)** ile yuvarlak geometriyi, **Elemana Paralel (Parallel to Element)** ile mevcut bir çizgiden belirli mesafe ve adette ofset çizgileri üretin. Paralel komutunu kullanın; çünkü eşit aralıklı çizgileri (örneğin kaplama derzleri veya çoklu ofset) tek tek ölçüp çizmek yerine bir referanstan otomatik türetmek hem hızlı hem de hatasızdır.",
+      "figures": []
+    },
+    {
+      "time": "10:48 – 13:30",
+      "heading": "Alan Tespiti ile Poligonlaştırma",
+      "body": "Açık veya kesişen çizgileri **Alan Tespiti (Area Detection / Flächenelement suchen)** ile tek tıkla kapalı bir poligona dönüştürün. Bunu tercih edin; çünkü taramanın veya dolgunun oturacağı sınırı elle nokta nokta çizmek yerine, kapalı adayı otomatik tanıtmak çok daha hızlıdır ve sınır birebir çizgilere oturur.",
+      "figures": []
+    },
+    {
+      "time": "13:30 – 16:13",
+      "heading": "Tarama, Desen ve Dolgu (Hatching / Pattern / Fill)",
+      "body": "Kapalı bölgelere **Tarama (Hatching)**, **Desen (Pattern)** ve **Dolgu (Fill)** uygulayarak betonarme, tuğla, yalıtım ve zemin kaplamasını gösterin. Tarama sıklığının **ölçeğe göre ayarlanmasını (Scale-dependent)** açın; çünkü aynı tarama 1:50 ve 1:100 paftada farklı sıklıkta görünmeli, aksi halde ya çok sık ya da çok seyrek basılır.",
       "figures": []
     }
   ],

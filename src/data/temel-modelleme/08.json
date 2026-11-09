@@ -12,21 +12,33 @@
   ],
   "steps": [
     {
-      "time": "00:00 – 01:00",
+      "time": "00:00 – 00:33",
       "heading": "Aks Çizim Dosyasının Seçimi",
-      "body": "Bina strüktüründe tüm katlarda altlık olarak referans alınacak **Aks Ağı Çizim Dosyasını** (örn. `Çizim Dosyası 100`) aktif hale getirin.",
+      "body": "Bina strüktüründe, tüm katlarda altlık olarak referans alınacak **Aks Ağı Çizim Dosyasını** (örneğin `Çizim Dosyası 100`) aktif edin. Aksları ayrı bir dosyada tutarsınız; çünkü aks ağı tek bir kata değil binanın tamamına aittir ve her katta aynı omurgayı göstermek için ortak bir dosyada durması gerekir.",
       "figures": []
     },
     {
-      "time": "01:00 – 02:00",
-      "heading": "Aks Ağı (Axis Grid / Achsraster) Parametrelerinin Girilmesi",
-      "body": "**Taslak (Draft) / Mimari (Architecture) -> Aks Ağı (Axis Grid / Achsraster)** komutunu çalıştırın. `X` ve `Y` sekmelerinde bölge açıklıklarını (`örn. 5.00; 4.50; 6.00` veya `3*5.00`), aks çizgi tipini (noktalı kesik çizgi), balon sembolünü ve otomatik ölçü çizgisi seçeneğini işaretleyip çalışma alanına yerleştirin.",
+      "time": "00:33 – 01:06",
+      "heading": "Aks Ağı Komutu ve X/Y Açıklıkları",
+      "body": "**Taslak (Draft) / Mimari -> Aks Ağı (Axis Grid / Achsraster)** komutunu çalıştırın; `X` ve `Y` sekmelerinde bölge açıklıklarını girin (örneğin `5.00; 4.50; 6.00` tek tek, ya da eşit açıklıklar için `3*5.00`). Açıklıkları sayısal verirsiniz; çünkü aks aralıkları taşıyıcı sistemin ölçüsüdür ve kolon ile duvarlar sonradan tam bu değerlere oturacaktır.",
       "figures": []
     },
     {
-      "time": "02:00 – 02:43",
+      "time": "01:06 – 01:38",
+      "heading": "Aks Etiketleri ve Çizgi Tipi",
+      "body": "Aks balon sembolünü ve etiket dizisini (bir yönde `A, B, C`, diğer yönde `1, 2, 3`) tanımlayın, aks çizgisine noktalı kesik çizgi tipini verin. Etiketleri standart harf ve rakam dizisiyle verirsiniz; çünkü tüm paftalar ve statik çizimler kolonları bu ortak aks adlarıyla anar, böylece disiplinler arasında karışıklık olmaz.",
+      "figures": []
+    },
+    {
+      "time": "01:38 – 02:10",
+      "heading": "Otomatik Aks Ölçülendirmesi",
+      "body": "Komut içinde otomatik ölçü çizgisi seçeneğini işaretleyerek aks aralıklarının kendiliğinden ölçülendirilmesini sağlayın. Bunu açarsınız; çünkü aks aralığını sonradan değiştirdiğinizde ölçü de birlikte güncellenir ve ölçüyü elle yazmanın aksine model ile çizim her zaman tutarlı kalır.",
+      "figures": []
+    },
+    {
+      "time": "02:10 – 02:43",
       "heading": "Aks Ağını Düzenleme",
-      "body": "Aks ağına çift tıklayarak veya tutamaç noktalarını kullanarak sonradan yeni aks ekleyin, aks etiket yönlerini ve taşma mesafelerini güncelleyin.",
+      "body": "Aks ağına çift tıklayıp **Özellikler Paleti**nden veya tutamaç noktalarından sonradan yeni aks ekleyin, aralığı değiştirin, etiket yönünü ve taşma mesafelerini güncelleyin. Değişikliği ağ üzerinden yaparsınız; çünkü aks ağı ilişkiseldir ve bir aralığı güncellediğinizde etiketler ile ölçüler birlikte yeniden düzenlenir.",
       "figures": []
     }
   ],

@@ -1,6 +1,7 @@
 import type { ReactElement, ReactNode } from 'react';
 import type { Lesson as LessonData } from '@/data/akademi-content';
 import { Figure } from './Figure';
+import { LessonVideo } from './LessonVideo';
 import styles from './Lesson.module.css';
 
 /**
@@ -31,6 +32,11 @@ export function Lesson({ lesson }: { lesson: LessonData }): ReactElement {
           {section.figure && (
             <div className={styles.figure}>
               <Figure figure={section.figure} priority={index === 0} />
+            </div>
+          )}
+          {section.video && (
+            <div className={styles.figure}>
+              <LessonVideo video={section.video} />
             </div>
           )}
           {section.tryIt && (

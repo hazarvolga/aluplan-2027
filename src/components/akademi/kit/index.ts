@@ -8,3 +8,4 @@ export { DistributionBar } from './DistributionBar';
 export { Timeline } from './Timeline';
 export { Figure } from './Figure';
 export { Lesson } from './Lesson';
+export { LessonVideo } from './LessonVideo';

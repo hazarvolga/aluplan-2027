@@ -78,10 +78,25 @@ export interface ApplicationStep {
  * rendered bold (safe text segmentation, no HTML). `figure` embeds the real
  * screenshot at the point it is discussed; `tryIt` is a short "now you try it".
  */
+/**
+ * An embedded tutorial video. `url` is a provider embed URL
+ * (e.g. https://player.vimeo.com/video/ID or https://www.youtube.com/embed/ID).
+ * The original ALLPLAN Vimeo videos are domain-locked, so these point at
+ * Aluplan's own re-hosted copies once available.
+ */
+export interface LessonVideo {
+  url: string;
+  title?: string;
+  /** 'vimeo' | 'youtube' — for the label only. */
+  source?: string;
+}
+
 export interface LessonSection {
   heading: string;
   body: readonly string[];
   figure?: Figure;
+  /** Optional embedded tutorial video for this section. */
+  video?: LessonVideo;
   tryIt?: string;
 }
 

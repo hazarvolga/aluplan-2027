@@ -1,0 +1,113 @@
+{
+  "no": 11,
+  "slug": "kolon-kiris",
+  "title": "Kolon ve Kiriş Oluşturma",
+  "duration": "05:49",
+  "sourceModule": "Proje 1 — Modül 3: Akıllı Parametrik Mimari ve Taşıyıcı Elemanlar",
+  "objectives": [
+    "Dikdörtgen, dairesel veya profil kesitli betonarme/çelik Kolon (Column / Stütze) elemanlarını aks kesişimlerine yerleştirmek.",
+    "Sarkık Kiriş (Downstand Beam / Unterzug) ve Ters Kiriş (Upstand Beam / Überzug) elemanlarını kat üst düzlemine bağlı modellemek.",
+    "Kolon ve kirişlerin duvarlarla kesişiminde Öncelik (Priority) sayesinde otomatik hacim düşümü (Minha) yapılmasını doğrulamak."
+  ],
+  "steps": [
+    {
+      "time": "00:00 – 03:00",
+      "heading": "Kolon (Column / Stütze) Parametreleri ve Yerleşimi",
+      "body": "**Mimari (Architecture) -> Kolon (Column / Stütze)** komutunu çalıştırın. Kesit tipini (Dikdörtgen `30/60 cm`, Dairesel `Ø40 cm`), malzeme (`C30/37`), öncelik (`300`) ve **Yükseklik (Height)** bağlantısını (`Alt Düzlem -> Üst Düzlem`) seçin. Tutma noktasını (merkez veya köşe) belirleyerek aks kesişimlerine yerleştirin.",
+      "figures": []
+    },
+    {
+      "time": "03:00 – 05:49",
+      "heading": "Kiriş (Beam / Unterzug) Parametreleri ve Kot Bağlantısı",
+      "body": "**Kiriş (Beam / Unterzug - Überzug)** komutuna girin. Genişlik (`b = 30 cm`) ve yükseklik (`h = 50 cm`) değerlerini tanımlayın. **Yükseklik (Height)** ayarlarında kiriş üst kotunu **Kat Üst Düzlemine (`OK = 0.00`)**, alt kotunu ise üst kot referansından `50 cm` aşağıya (`Sabit Eleman Yüksekliği = 50 cm`) bağlayarak kolonlar arasına çizin.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Kolon (Column / Stütze)",
+      "menu": "Mimari (Architecture) -> Elemanlar -> Kolon (Column / Stütze)",
+      "shortcut": "Kolon İkonu",
+      "desc": "Dikdörtgen, dairesel, çokgen veya çelik profil kesitli düşey/eğimli taşıyıcı kolon oluşturur."
+    },
+    {
+      "name": "Kiriş (Beam / Unterzug - Überzug)",
+      "menu": "Mimari (Architecture) -> Elemanlar -> Kiriş (Downstand Beam, Upstand Beam)",
+      "shortcut": "Kiriş İkonu",
+      "desc": "Döşeme altına sarkan kiriş (Unterzug) veya döşeme üstüne çalışan ters kiriş (Überzug) modeller."
+    },
+    {
+      "name": "Eğimli Taşıyıcı Kolon",
+      "menu": "Mimari / Mühendislik -> Taşıyıcı Kolon (Structural Column / Tragwerksstütze)",
+      "shortcut": "Taşıyıcı Grubu",
+      "desc": "Başlangıç ve bitiş noktası farklı eksenlerde olan eğimli betonarme/çelik kolonları modeller."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "NEUERUNG 2024 - Geneigte Tragwerksstütze",
+        "file": "2741_vimeo_880584945_f875930a.mp4",
+        "vimeoId": "880584945",
+        "sizeMB": 7.99
+      },
+      {
+        "title": "PythonParts - Stütze expandierend",
+        "file": "2806_vimeo_777282059_a1f2c2ab.mp4",
+        "vimeoId": "777282059",
+        "sizeMB": 7.98
+      }
+    ],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_2741",
+      "title": "YENİLİK 2024 - Eğimli Taşıyıcı Sistem Kolonu",
+      "body": "Eğimli taşıyıcı sistem kolonu",
+      "figures": []
+    },
+    {
+      "id": "de_2806",
+      "title": "PythonParts - Genişleyen Kolon (Stütze expandierend)",
+      "body": "Bu videoda \"Genişleyen kolon (Stütze expandierend)\" ile modellemeyi açıklıyoruz.",
+      "figures": []
+    },
+    {
+      "id": "de_11400",
+      "title": "Nitelikler - Kolon için Genel Bakış",
+      "body": "**Soru:** \n \nKolonların etiketlenmesi/metrajı için hangi nitelikler kullanılabilir? \n \n**Arka Plan:** \nKolonun kendi nitelikleri/özellikleri doğrudan kullanılabilir. Kolona bağlı alt yapı elemanlarının — örneğin boşlukların (pencereler, Fransız pencereleri, kapılar, nişler, oyuklar vb.) — ve kolona bitişik diğer yapı elemanlarının nitelikleri, yapı elemanlarının referanslarını değerlendiren formüller aracılığıyla kısmen etiketlenebilir. \n \n**Uygulama Alanı:** \nKolonlar \n \n**Kolon Etiketlemesi** \nAşağıdaki bölümlerde doğrudan kolon ile değerlendirilebilen/etiketlenebilen özellikler gösterilmektedir. \n \n**Kolon** \nÖrneğin aşağıdaki geometrik nitelikler kullanılabilir:\n\n| | | |\n|  |  |  |\n| **Nitelik** | **ID** | **Açıklama** |\n| Üst Kot (OK) | 98 | **Üst Kot (OK)** ve **Üst Kenar (Oberkante)** nitelikleri, kolonda kolonun 0.00 üzerindeki ortalama üst kenarını verir. |\n| Üst Kenar (Oberkante) | 113 |\n| Alt Kot (UK) | 97 | **Alt Kot (UK)** ve **Alt Kenar (Unterkante)** nitelikleri, kolonda kolonun 0.00 üzerindeki ortalama alt kenarını verir. |\n| Alt Kenar (Unterkante) | 112 |\n| Uzunluk (Länge) | 220 | **Uzunluk (Länge)**, **Kalınlık (Dicke)** ve **Yükseklik (Höhe)** geometriyi tanımlar. Kolonun ilk noktasından yola çıkılarak **Uzunluk (Länge)**, kolonda tanımlanan ilk kenara göre (poligonal kolonlarda ilk noktadan sonraki kenar) kenar yönündeki maksimum uzanım olarak belirlenir. **Yükseklik (Höhe)** ortalama yükseklik olarak verilir ve **Kalınlık/Mutlak\\_Kalınlık (Dicke/Dicke\\_Absolut)** kolonun ilk kenara dik olan ortalama uzanımı olarak belirlenir. **Mutlak\\_Yükseklik (Höhe\\_absolut)** bir kolonun **maksimum** yüksekliğini verir. **Mutlak\\_Uzunluk (Länge\\_absolut)** ve **Mutlak\\_Kalınlık (Dicke\\_absolut)** nitelikleri, **Uzunluk (Länge)** ve **Kalınlık (Dicke)** ile aynı değerleri verir. Kolonun şekline bağlı olarak — örn. dairesel kolonlarda — **Uzunluk (Länge) ve** Kalınlık (Dicke) için herhangi bir değer verilmez. Not: Nemetschek profil kataloğundan alınan kesitlerde **Kalınlık (Dicke)** niteliği, **Mutlak\\_Kalınlık (Dicke\\_absolut)** niteliğinden farklı bir değer içerir. |\n| Kalınlık (Dicke) | 221 |\n| Yükseklik (Höhe) | 222 |\n| Mutlak uzunluk (Länge absolut) | 198 |\n| Mutlak kalınlık (Dicke absolut) | 199 |\n| Mutlak yükseklik (Höhe absolut) | 204 |\n| | |\n| Çevre (Umfang) | 228 | Çevre, kolonun kenar uzunluklarının toplamını tanımlar. Bu hesaplamada **tüm** kenarlar dikkate alınır. |\n| Yarıçap (Radius) | 107 | Yarıçap yalnızca dairesel bir kolonda verilir …",
+      "figures": [
+        "/akademi/temel-modelleme/11400_0EM7U000001Td8N_b5050b7a.png",
+        "/akademi/temel-modelleme/11400_0EM7U000001Td8T_ff975fb9.png"
+      ]
+    },
+    {
+      "id": "de_9163",
+      "title": "Nitelikler - Sarkık Kiriş (Unterzug) İçin Genel Bakış",
+      "body": "**Soru:** \n \nSarkık kirişlerin (Unterzüge) etiketlenmesi/metrajı için hangi nitelikler kullanılabilir? \n \n**Arka Plan:** \nSarkık kirişin kendi nitelikleri/özellikleri doğrudan kullanılabilir. Sarkık kirişe bağlı alt yapı elemanlarının (nişler, rezervasyonlar vb. boşluklar) yanı sıra sarkık kirişe birleşen diğer yapı elemanlarının nitelikleri, yapı elemanlarının referanslarını değerlendiren formüller aracılığıyla kısmen etiketlenebilir. \n \nNot: \nSarkık kirişlere pencere, kapı ve/veya Fransız balkon kapısı (Fenstertüren) yerleştirilemez. \n \n**Uygulama Alanı:** \nSarkık kirişler (Unterzüge) \n \n**Sarkık Kiriş Etiketlemesi** \nAşağıdaki bölümlerde doğrudan metrajı alınabilen/etiketlenebilen özellikler gösterilmektedir. \n \n**Sarkık Kiriş (Unterzug)** \nÖrneğin aşağıdaki geometrik nitelikler mevcuttur:\n\n| | | |\n|  |  |  |\n| **Nitelik** | **ID** | **Açıklama** |\n| Üst kenar (Oberkante) | 98 | **OK** ve **Üst kenar (Oberkante)** nitelikleri, sarkık kirişte kirişin 0.00 kotuna göre ortalama üst kenar kotunu verir. |\n| OK | 113 |\n| Alt kenar (Unterkante) | 97 | **UK** ve **Alt kenar (Unterkante)** nitelikleri, sarkık kirişte kirişin 0.00 kotuna göre ortalama alt kenar kotunu verir. |\n| UK | 112 |\n| Uzunluk (Länge) | 220 | **Kalınlık (Dicke)** ve **Yükseklik (Höhe)**, geometriyi **ortalama** değerler üzerinden tanımlar; yani burada her birinin ortalaması hesaplanır. **Uzunluk (Länge), Mutlak uzunluk (Länge\\_absolut)**, **Mutlak kalınlık (Dicke\\_absolut)** ve **Mutlak yükseklik (Höhe\\_absolut)** ise **maksimum** değerleri belirtir. Temel olarak uzunluk ve **Länge\\_absolut** her zaman aks yönünde, **Yükseklik (Höhe)** ve **Höhe\\_absolut** ise Z yönünde ölçülür. **Kalınlık (Dicke)** sarkık kirişin genişliğini belirtir. Yönler, tekil duvar/kiriş parçasının uzunluğundan bağımsızdır. **Dicke\\_absolut**, konik sarkık kirişlerde maksimum kalınlığı belirtir. Not: Nemetschek profil kataloğundan alınan kesitlerde **Kalınlık (Dicke)** niteliği, **Dicke\\_absolut** niteliğinden farklı bir değer içerir. |\n| Kalınlık (Dicke) | 221 |\n| Yükseklik (Höhe) | 222 |\n| Mutlak uzunluk (Länge absolut) | 198 |\n| Mutlak kalınlık (Dicke absolut) | 199 |\n| Mutlak yükseklik (Höhe absolut) | 204 |\n| | |\n| Çevre (Umfang) | 228 | Çevre, kenar uzunluklarının toplamını tanımlar. Bu hesaplamada **tüm** kenarlar dikkate alınır. |\n| Yarıçap (Radius) | 107 | Yarıçap, dairesel sarkık kirişlerde bile - benzer olan duvardan farklı olarak - değerlendirilmez ve bu nedenle her zaman 0.00 değerindedir. |\n| Oturma ala …",
+      "figures": [
+        "/akademi/temel-modelleme/9163_0EM7U000001Td8p_b5050b7a.png"
+      ]
+    },
+    {
+      "id": "de_11311",
+      "title": "Etiket Stilleri - Kolon",
+      "body": "**Soru:** \n \nKolonların etiketlenmesi/raporlanması için hangi nitelikler kullanılabilir? \n \n**Arka Plan:** \nKolonun kendisine ait nitelikler/özellikler doğrudan kullanılabilir. Kolona bağlı alt yapı elemanlarının (pencereler, Fransız pencereleri, kapılar, nişler, boşluklar vb. açıklıklar) ve kolona bitişik diğer yapı elemanlarının nitelikleri, yapı elemanlarının referanslarını değerlendiren formüller aracılığıyla kısmen etiketlenebilir. \n \n**Uygulama Alanı:** \nKolonlar \n \n**Kolon Etiketleme (Beschriftung Stütze)** \nAşağıdaki bölümlerde kolon ile doğrudan değerlendirilebilen/etiketlenebilen özellikler gösterilmektedir. \n \n**Duvar veya Duvar Katmanı (Wand bzw. Wandschicht)** \nÖrneğin aşağıdaki geometrik nitelikler kullanılabilir:\n\n| | | |\n|  |  |  |\n| **Nitelik (Attribut)** | **ID** | **Açıklama (Beschreibung)** |\n| OK | 98 | **OK** ve **Üst Kot (Oberkante)** nitelikleri, duvarda 0.00 kotuna göre ortalama üst kotu verir. |\n| Oberkante | 113 |\n| UK | 97 | **UK** ve **Alt Kot (Unterkante)** nitelikleri, duvarda 0.00 kotuna göre ortalama alt kotu verir. |\n| Unterkante | 112 |\n| Länge | 220 | **Uzunluk (Länge)**, **Kalınlık (Dicke)** ve **Yükseklik (Höhe)** geometriyi tanımlar. Kolonun ilk noktasından başlayarak **Uzunluk (Länge)**, kolonda tanımlanan ilk kenara (çokgen kolonlarda ilk noktadan sonraki kenara) göre kenar yönündeki maksimum uzanım üzerinden belirlenir. **Yükseklik (Höhe)** ortalama yükseklik olarak verilir ve **Kalınlık/Mutlak Kalınlık (Dicke/Dicke\\_Absolut)** ilk kenara dik doğrultudaki ortalama kolon uzanımı olarak hesaplanır. **Mutlak Yükseklik (Höhe\\_absolut)** bir kolonun **maksimum** yüksekliğini verir. **Mutlak Uzunluk (Länge\\_absolut)** ve **Mutlak Kalınlık (Dicke\\_absolut)** nitelikleri, **Uzunluk (Länge)** ve **Kalınlık (Dicke)** ile aynı değerleri verir. Kolonun formuna bağlı olarak - örn. dairesel kolonlarda - **Uzunluk (Länge)** **ve** Kalınlık (Dicke) için değer verilmez. |\n| Dicke | 221 |\n| Höhe | 222 |\n| Länge absolut | 198 |\n| Dicke absolut | 199 |\n| Höhe absolut | 204 |\n| | |\n| Umfang | 228 | Çevre (Umfang), kolonun kenar uzunluklarının toplamını tanımlar. Bu hesapta **tüm** kenarlar dikkate alınır. |\n| Radius | 107 | Yarıçap (Radius) yalnızca dairesel bir kolonda verilir. Aksi takdirde yarıçap her zaman 0.00 değerindedir. |\n| Grundfläche | 224 | Alan nitelikleri kolonun \"zarfını\" farklı şekillerde tanımlar. **Taban Alanı (Grundfläche)** kolonun tam oturum alanını verir. Zemine kadar inen boşluklar düşülmeden ölçülür ve böylece d …",
+      "figures": [
+        "/akademi/temel-modelleme/11311_0EM7U000001TdDa_b5050b7a.png",
+        "/akademi/temel-modelleme/11400_0EM7U000001Td8K_ccb4c51c.png",
+        "/akademi/temel-modelleme/11400_0EM7U000001Td8R_5a9eaccd.png",
+        "/akademi/temel-modelleme/11400_0EM7U000001Td8P_54816fa9.png",
+        "/akademi/temel-modelleme/11400_0EM7U000001Td8M_eca6d3ed.png",
+        "/akademi/temel-modelleme/11400_0EM7U000001Td8S_59fb3c34.png",
+        "/akademi/temel-modelleme/11400_0EM7U000001Td8Q_9d593dda.png",
+        "/akademi/temel-modelleme/11400_0EM7U000001Td8L_eea189e7.png",
+        "/akademi/temel-modelleme/11400_0EM7U000001Td8O_dcd9f63a.png",
+        "/akademi/temel-modelleme/11400_0EM7U000001Td8J_9480b8ac.png",
+        "/akademi/temel-modelleme/9163_0EM7U000001Td8l_46000e65.png"
+      ]
+    }
+  ]
+}

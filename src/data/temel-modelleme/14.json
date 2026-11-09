@@ -1,0 +1,111 @@
+{
+  "no": 14,
+  "slug": "temel-olusturma",
+  "title": "Temel Oluşturma",
+  "duration": "03:51",
+  "sourceModule": "Proje 1 — Modül 3: Temel Elemanları (Şerit, Tekil ve Radye Temel)",
+  "objectives": [
+    "Taşıyıcı duvarların altına Şerit Temel (Strip Foundation / Streifenfundament) modellemek.",
+    "Kolonların altına Tekil / Kademeli Temel (Isolated / Block Foundation / Einzelfundament) yerleştirmek.",
+    "Bina oturum alanı altına ampatmanlı Radye Temel (Slab Foundation / Bodenplatte) ve grobeton katmanı oluşturmak."
+  ],
+  "steps": [
+    {
+      "time": "00:00 – 01:20",
+      "heading": "Temel Çizim Dosyası ve Kot Düzlemi",
+      "body": "Bina strüktüründe **Temel** çizim dosyasını aktif edin ve Zemin/Bodrum Kat duvar ile kolon çizim dosyalarını **Referans Modunda** altlık olarak açın.",
+      "figures": []
+    },
+    {
+      "time": "01:20 – 02:35",
+      "heading": "Şerit Temel ve Tekil Temel Modelleme",
+      "body": "**Mimari (Architecture) -> Temel (Foundation / Fundament)** grubundan **Şerit Temel (Strip Foundation)** ve **Tekil Temel (Isolated Foundation)** komutlarını kullanarak kolon ve perdelerin altına temel elemanlarını yerleştirin; temel genişliği, yüksekliği ve grobeton (`Sauberkeitsschicht`) taşma paylarını girin.",
+      "figures": []
+    },
+    {
+      "time": "02:35 – 03:51",
+      "heading": "Radye Temel (Slab Foundation / Bodenplatte) Oluşturma",
+      "body": "**Radye Temel (Slab Foundation / Bodenplatte)** komutuyla bina dış konturundan ampatman (`örn. 50 cm`) çıkması vererek radye temel plağını oluşturun ve asansör çukuru eğimli hafer (Haunch) geçişlerini tanımlayın.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Şerit Temel (Strip Foundation)",
+      "menu": "Mimari (Architecture) -> Temeller (Foundations) -> Şerit Temel (Strip Foundation / Streifenfundament)",
+      "shortcut": "Temel Grubu",
+      "desc": "Perde ve taşıyıcı duvarların altına doğrusal/poligonal şerit temel ve grobeton katmanı yerleştirir."
+    },
+    {
+      "name": "Tekil Temel (Isolated Foundation)",
+      "menu": "Mimari (Architecture) -> Temeller (Foundations) -> Tekil Temel (Isolated Foundation / Einzelfundament)",
+      "shortcut": "Temel Grubu",
+      "desc": "Kolonların altına simetrik/eksantrik tekil veya kademeli pabuç temel modeller."
+    },
+    {
+      "name": "Radye Temel (Slab Foundation)",
+      "menu": "Mimari (Architecture) -> Temeller (Foundations) -> Radye Temel (Slab Foundation / Bodenplatte)",
+      "shortcut": "Temel Grubu",
+      "desc": "Bina oturum alanı altına ampatman çıkmalı radye plak ve eğimli asansör çukuru geçişlerini oluşturur."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Add-On Baugrube - Aushub mit Bodenplatte Gefälle",
+        "file": "12737_vimeo_1235292890_ba11e321.mp4",
+        "vimeoId": "1235292890",
+        "sizeMB": 23.96
+      },
+      {
+        "title": "Add-On Baugrube - Aushub Fundament im Gefälle",
+        "file": "12738_vimeo_1235292899_e8b73dbc.mp4",
+        "vimeoId": "1235292899",
+        "sizeMB": 22.96
+      }
+    ],
+    "pdfs": [
+      "12284_Der-Leistungsumfang-des-FD-PRO_76476b33.pdf"
+    ],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_12737",
+      "title": "Add-On Baugrube (Yapı Çukuru Eklentisi) - Eğimli Temel Plağı ile Kazı",
+      "body": "Bu video, farklı eğimlere sahip kazı yüzeylerinin bir araziye nasıl entegre edilebileceğini göstermektedir. 3B yüzeylerin ve çeşitli ayarların kullanımı sayesinde arazi modelleri hassas bir şekilde uyarlanabilir ve görselleştirilebilir.",
+      "figures": []
+    },
+    {
+      "id": "de_12738",
+      "title": "Add-On Baugrube (Yapı Çukuru Eklentisi) - Eğimde Temel Kazısı",
+      "body": "Yapı çukuru tasarımında yeni kazı düzlemleri eklenerek yapı çukurları detaylarla zenginleştirilebilir. 3B katı modellerin entegrasyonu sayesinde metraj hesaplamaları kolayca gerçekleştirilebilir. Elemanların eğimi, yönü ve yüksekliği üç nokta yardımıyla kolayca ayarlanabilir. Temeller özel olarak uyarlanabilir ve adlandırılabilir; böylece yapı çukurunun esnek bir şekilde şekillendirilmesi sağlanır.",
+      "figures": []
+    },
+    {
+      "id": "en_11634",
+      "title": "Temel Tablosu (Foundation Table)",
+      "body": "SCIA Engineer 22.1 sürümünden itibaren, eski kullanıcı arayüzünde olduğu gibi yeni kullanıcı arayüzünde de reaksiyonları bir temel tablosu olarak görselleştirmek mümkündür.\n\nHesaplama tamamlandığında öncelikle **Ana menü (Main menu) > Sonuçlar (Results) > Mesnetler (Supports) > Reaksiyonlar (Reactions)** üzerinden reaksiyonlar menüsüne gitmeniz gerekir.\n\nBurada seçim tipini \"**Tümü (All)**\" ve herhangi bir yükleme durumunu veya kombinasyonu seçebilirsiniz. Ayrıca \"**Mesnet üzerindeki etkiler (Actions on support)**\" seçeneğini işaretlemeniz gerekir.\n\nSonuçları temel tablosu formatında elde etmek amacıyla düğüm noktası reaksiyonlarının -1 ile çarpıldığı anlamına gelen bir \"-1\" çarpanının uygulandığını görürsünüz.\n\nArdından \"**Rapor önizleme (Report preview)**\" işlem düğmesine tıkladığınızda, yapının her bir düğüm noktası mesnedi üzerindeki etkilerin her yükleme durumu için ayrı ayrı gösterildiği bir çıktı görebilirsiniz.\n\nAyrıca bir mesnedi veya bir mesnet grubunu seçmek ve seçim tipini \"**Geçerli (Current)**\" olarak belirleyerek yalnızca bu seçime ait sonuçları istemek de mümkündür.\n\n \n\nMühendislik raporuna (engineering report) \"**reaksiyonlar (reactions)**\" öğesini ekleyip \"**Mesnet üzerindeki etkiler (Actions on support)**\" seçeneğini işaretleyerek temel tablosu sonuçlarını mühendislik raporunda almak da mümkündür.",
+      "figures": [
+        "/akademi/temel-modelleme/11634_0EMRD00000LNawL_ee7fc069.png",
+        "/akademi/temel-modelleme/11634_0EMRD00000LNazZ_e9b5614b.png",
+        "/akademi/temel-modelleme/11634_0EMRD00000LNXs2_d2836f6d.png",
+        "/akademi/temel-modelleme/11634_0EMRD00000LNaxx_43ae6bf4.png",
+        "/akademi/temel-modelleme/11634_0EMRD00000LNV3s_69d4309a.png"
+      ]
+    },
+    {
+      "id": "de_12284",
+      "title": "Warum erhalte ich die Meldung Professional zu Fundamente: Keine freie Lizenz verfügbar",
+      "body": "- **Kaynak URL (Alındığı Adres):** https://learnnow.allplan.com/totara/engage/resources/howto/index.php?id=12284&source=howto\n- **Kaynak ID (`resource_id`):** `12284`\n- **Resmi Salesforce / Allplan KB No:** `000010218-de`\n- **İçerik Tipi:** `knowledge_article`\n- **Dil:** `de`\n- **Kategori Ağacı:** `FRILO > Grundbau & Fundamente > Fundamente`\n- **Geçerli Allplan Sürümleri:** `Tüm Sürümler`\n- **Yazar & Tarih:** Erstellt am 19. August 2026, 15:13. Zuletzt aktualisiert am 19. August 2026, 15:13. | Owner: Salesforce Integration\n- **Doğrudan PDF Kılavuz URL:** -\n- **Eğitim Videosu / Webinar URL:** -\n- **İndirilen PDF, Örnek Dosya ve Ekran Görüntüleri (7 Adet):**\n - [SCREENSHOT] `12284_0EMRD00000ZpEMX_4830f815.png` (73.27 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/12284/0EMRD00000ZpEMX.png | SHA-256: `4830f8158c80ce57...`)\n - [SCREENSHOT] `12284_0EMRD00000Zsjbt_fbdd051b.png` (66.5 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/12284/0EMRD00000Zsjbt.png | SHA-256: `fbdd051b61928901...`)\n - [SCREENSHOT] `12284_0EMRD00000ZsiuM_02231e57.png` (48.33 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/12284/0EMRD00000ZsiuM.png | SHA-256: `02231e57806c2f1a...`)\n - [SCREENSHOT] `12284_0EMRD00000ZshqE_5141cc64.png` (77.47 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/12284/0EMRD00000ZshqE.png | SHA-256: `5141cc64a47548b5...`)\n - [SCREENSHOT] `12284_0EMRD00000ZslKL_fc5bdd9b.png` (73.02 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/12284/0EMRD00000ZslKL.png | SHA-256: `fc5bdd9b2d587dbc...`)\n - [SCREENSHOT] `12284_0EMRD00000ZsQNy_6f24aae2.png` (89.21 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/12284/0EMRD00000ZsQNy.png | SHA-256: `6f24aae22da62359...`)\n - [PDF_MANUAL] `12284_Der-Leistungsumfang-des-FD-PRO_76476b33.pdf` (4436.58 KB | Orjinal URL: https://www.frilo.eu/wp-content/uploads/DE/PDF/Produktblatt/Der-Leistungsumfang-des-FD-PRO.pdf | SHA-256: `76476b3363a30fdb...`)\n\n\n\nDiese Meldung erscheint, wenn in der aktuellen Position eine **FD-PRO**-Funktion aktiv ist, aber keine freie FD-PRO-Lizenz verfügbar ist. \n**Professional zu Fundamente: Keine freie Lizenz verfügbar. \n **\n\n**FD-PRO (Professional zu Fundamente)** ist eine Zusatzoption für FD+, FDB+, FDS+ und GBR+. Es handelt sich  …",
+      "figures": [
+        "/akademi/temel-modelleme/12284_0EMRD00000ZpEMX_4830f815.png",
+        "/akademi/temel-modelleme/12284_0EMRD00000Zsjbt_fbdd051b.png",
+        "/akademi/temel-modelleme/12284_0EMRD00000ZshqE_5141cc64.png",
+        "/akademi/temel-modelleme/12284_0EMRD00000ZsiuM_02231e57.png",
+        "/akademi/temel-modelleme/12284_0EMRD00000ZsQNy_6f24aae2.png",
+        "/akademi/temel-modelleme/12284_0EMRD00000ZslKL_fc5bdd9b.png"
+      ]
+    }
+  ]
+}

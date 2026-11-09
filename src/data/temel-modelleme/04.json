@@ -1,0 +1,145 @@
+{
+  "no": 4,
+  "slug": "cizim-dosyalari-yukseklik",
+  "title": "Çizim Dosyaları ve Yükseklik İlişkileri",
+  "duration": "11:10",
+  "sourceModule": "Proje 1 — Modül 2: Proje Yapılandırması, Hiyerarşik Bina Strüktürü ve Çizim Dosyaları",
+  "objectives": [
+    "Çizim Dosyası (Drawing File / Teilbild) mantığını ve Aktif / Düzenleme / Referans modlarını doğru kullanmak.",
+    "Bina Strüktürü (Building Structure / Bauwerksstruktur) oluşturarak katları ve çizim dosyalarını organize etmek.",
+    "Düzlemler Paleti (Planes Palette / Ebenenmanager) ile kat yüksekliklerini ve Standart Referans Düzlemlerini (Alt Kot UK / Üst Kot OK) parametrik yönetmek."
+  ],
+  "steps": [
+    {
+      "time": "00:00 – 03:30",
+      "heading": "Çizim Dosyası (Drawing File / Teilbild) Durumları",
+      "body": "**Proje Bazında Aç: Çizim Dosyaları (Open on a Project-Specific Basis)** penceresini açın. Aynı anda yalnızca **1 adet Aktif (Current - Kırmızı)** çizim dosyası olabilir (yeni çizilen elemanlar buraya kaydedilir). Diğer çizim dosyalarını **Düzenleme Modu (Edit Mode - Sarı)** veya yalnızca kilitli altlık olarak görmek için **Referans Modu (Reference Mode - Gri)** olarak açın.",
+      "figures": []
+    },
+    {
+      "time": "03:30 – 07:00",
+      "heading": "Bina Strüktürü (Building Structure / Bauwerksstruktur) Kurulumu",
+      "body": "Sol üstte **Bina Strüktürü (Building Structure)** sekmesine geçin. **Bina (Building)** düğümü altında **Temel**, **Zemin Kat**, **1. Normal Kat** ve **Çatı Katı** strüktür seviyelerini oluşturun; her kata ilgili çizim dosyası aralıklarını (örn. Zemin Kat: `101 Aks`, `102 Mimari Duvar/Doğrama`, `103 Kolon/Kiriş`, `104 Döşeme`, `105 Merdiven`) atayın.",
+      "figures": []
+    },
+    {
+      "time": "07:00 – 11:10",
+      "heading": "Düzlem Yöneticisi ve Yükseklik İlişkileri (OK / UK)",
+      "body": "**Düzlemler Paleti (Planes Palette / Ebenenpalette)** üzerinden her katın döşeme üst kotunu ve kat yüksekliğini (örn. `Zemin Kat: ±0.00 -> +3.00 m`) tanımlayın. Yapı elemanlarının **Yükseklik (Height)** ayarlarında **Alt Kot (Bottom Level / UK)** değerini *Katın Alt Düzlemine*, **Üst Kot (Top Level / OK)** değerini *Katın Üst Düzlemine* (döşeme kalınlığı kadar ofsetle) bağlayarak tam parametrik yükseklik ilişkisi kurun.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Proje Bazında Aç",
+      "menu": "Dosya (File) -> Proje Bazında Aç: Çizim Dosyaları (Open on a Project-Specific Basis)",
+      "shortcut": "Çift Sol Tık (Boş Alan)",
+      "desc": "Bina strüktürü ve çizim dosyası yönetim penceresini açar."
+    },
+    {
+      "name": "Düzlemler Paleti (Planes Palette)",
+      "menu": "Paletler -> Düzlemler (Planes / Ebenenpalette)",
+      "shortcut": "Düzlem Sekmesi",
+      "desc": "Bina kat düzlemlerini (Bodrum, Zemin, Normal Katlar, Çatı) ve kot yüksekliklerini merkezi olarak yönetir."
+    },
+    {
+      "name": "Kat Modeli / Kat Yöneticisi",
+      "menu": "Bina Strüktürü -> Kat Modeli Oluştur / Değiştir (Floor Manager)",
+      "shortcut": "Sağ Tık (Bina Strüktürü)",
+      "desc": "Kat adlarını, kat yüksekliklerini, döşeme kalınlıklarını ve standart referans düzlemlerini toplu üretir."
+    },
+    {
+      "name": "Yükseklik (Height / Höhe)",
+      "menu": "Eleman Özellikleri -> Yükseklik (Height) Butonu",
+      "shortcut": "Özellikler Diyaloğu",
+      "desc": "Yapı elemanının Üst Kot (OK) ve Alt Kot (UK) bağlantısını standart kat düzlemlerine veya sabit kota bağlar."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Project Navigator",
+        "file": "3313_vimeo_886401525_56799f6d.mp4",
+        "vimeoId": "886401525",
+        "sizeMB": 42.62
+      },
+      {
+        "title": "Projekt-Navigation",
+        "file": "3304_vimeo_880815508_33205716.mp4",
+        "vimeoId": "880815508",
+        "sizeMB": 44.14
+      }
+    ],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "en_3313",
+      "title": "Proje Yöneticisi (Project Navigator)",
+      "body": "Bir Bimplus projesi içerisinde Proje Yöneticisinin (Project Navigator) kullanımına ilişkin bilgiler.",
+      "figures": []
+    },
+    {
+      "id": "de_3304",
+      "title": "Proje Navigasyonu",
+      "body": "Bir Bimplus projesi içerisinde **Proje Gezgini (Projekt Navigator)** kullanımı hakkında bilgiler.",
+      "figures": []
+    },
+    {
+      "id": "de_11225",
+      "title": "Mahaller - Katlar ile DIN 277'ye göre brüt hacimlerin ve brüt taban alanlarının belirlenmesi",
+      "body": "**Soru:** \n \nDIN 277-1:20161 standardına göre tutarlı alanlar ve hacimler elde etmek için katlar nasıl oluşturulmalıdır? \n \n \n**Cevap:** \n \n**1.** **Giriş** \n**BGF (Brüt Taban Alanı / Brutto-Grundfläche)** ve **BRI (Brüt Hacim / Brutto-Rauminhalt)** değerlerinin belirlenmesi için kısmi alanların ve kısmi hacimlerin DIN 277-1:2016-01 standardında tanımlanan kurallara uygun şekilde bölümlendirilerek girilmesi gerekir. Örneğin, talep edilen \"kat planı düzlemlerine göre ayrı hesaplama...\" şartını karşılayabilmek için bir binanın en azından kat bazında kısmi hacimlere ayrılması gereklidir. Aşağıda DIN standardının ön koşulları Allplan'daki çözüm yaklaşımlarıyla birlikte gösterilmektedir.\n\n**Brüt Taban Alanlarının (BGF)** ve **Brüt Hacmin (BRI)** belirlenmesi amacıyla katların girilmesi, DIN277-1:2016-01 standardına ilişkin bilgi sahibi olunmasını gerektirir.\n\n**2****.** **Fonksiyonlar** \nYapı Elemanları/Objeler (Bauteile/Objekte)\n\n **Kat (Geschoss)**, **Mahal, Kat Grubu (Raum-, Geschossgruppe)**\n\nMetraj, Etiket (Auswertung, Beschriftung)\n\n **Konut Alanı (Wohnfläche), DIN277, Yapı Ruhsatı (Bauantrag)**, **Raporlar (Reports)**, **Etiketle (Beschriften)**\n\nAyarlar (Einstellungen)\n\n **Seçenekler (Optionen)**\n\n**3.** **Temel Esaslar** \n**3.1.** **Ölçü Birimleri, Hassasiyet** \n \nDIN 277-1:2016-01 standardı, **5.5 Ölçü Birimleri (Messeinheiten)** başlığı altında taban alanlarının **metrekare (m²)** ve hacimlerin **metreküp (m³)** cinsinden belirtilmesi gerektiğini tanımlar. Hesaplama hassasiyetine ilişkin olarak DIN standardı **5.1 Hesaplama Hassasiyeti (Genauigkeit der Ermittlung)** başlığı altında kesin bir ifade sunmaz. Yalnızca hesaplama hassasiyetinin planlama aşamasına (örn. ihtiyaç planlaması, ön proje, avan proje, uygulama projesi ve dokümantasyon) ve mevcut plan belgelerine göre belirlenmesi gerektiği açıklanır.\n\nBundan hareketle aşağıdaki yaklaşım uygulanır:\n\n| | | |\n|  |  |  |\n| **Proje Durumu (Projektstatus)** | **Açıklama (Beschreibung)** | **Hassasiyet (Genauigkeit)** |\n| **İhtiyaç Planlaması, Ön Proje (Bedarfsplanung, Vorplanung)** | Bina tasarlanır. Geometri henüz kaydedilmemiştir veya yalnızca kabaca kaydedilmiştir. Planlamadaki belirsizlikler büyüktür. | Taban alanları: ondalık basamak yok, örn. 206 m² Hacimler: ondalık basamak yok, örn. 1.203 m³ |\n| **Avan Proje (Entwurfsplanung)** | Bina esas itibarıyla kaydedilmiştir. Projede artık yalnızca nispeten küçük belirsizlikler mevcuttur. | Taban alanları: bir ondalık basamak, örn. 206,4 m² Hacimler: bir  …",
+      "figures": [
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPo_7918729c.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPp_fac0d1a4.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPq_46a9a9d3.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPr_aeb5a169.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPs_926f8b45.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPt_d2e11e0f.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPu_ef782b30.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPv_4a90c932.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPw_23da24fe.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPx_e26af978.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPy_08a9767f.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPz_fc43c60e.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdQ0_f055afa6.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdQ1_afb7d5cb.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdQ2_50f4a5d2.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdQ3_a628ec51.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdQ4_3a82eb17.png"
+      ]
+    },
+    {
+      "id": "de_11382",
+      "title": "Nitelikler - Kat için Genel Bakış (Metinler, Geometri, DIN277 ve BauNVO)",
+      "body": "**Soru:** \n \nKatların etiketlenmesi (raporlarda değerlendirilmesi) için hangi nitelikler kullanılabilir? \nDIN277'ye göre Brüt Taban Alanı / Brüt Hacim nasıl etiketlenebilir? \n \n \n**Temel Bilgi:** \nKatlar (Geschosse) iki ana amaca hizmet eder: \n1. DIN277 alan hesabına göre brüt taban alanı ile brüt hacmin ve Alman İmar Kullanım Yönetmeliği'ne (Baunutzungsverordnung) göre taban alanlarının belirlenmesi için bölgelerin tanımlanması \n2. Yan yüzeylere sahip cephelerde (örn. dış sıva) standart ince yapı imalatları için taşıyıcı bileşen olarak kullanılması. \n \n**Nitelikler (Attribute)**\n\n| | | |\n|  |  |  |\n| **Nitelik - Metinler (Attribut - Texte)** | **ID** | **Açıklama (Beschreibung)** |\n| Ortscode\\_Geschossbezeichnung | 246 | Maksimum 32 karakter (A32) uzunluğunda metin niteliği. Giriş, Kat (Geschoss) sekmesinde, Kat Nitelikleri (Geschossattribute) bölümündeki **Kat Kısa Adı (Geschoss Kurzbezeichnung)** alanından yapılır. Genellikle buraya örn. EG, OG veya düzlem için bir numara girilir. |\n| Bezeichnung | 507 | Maksimum 32 karakter (A32) uzunluğunda metin niteliği. Giriş, Kat (Geschoss) sekmesindeki **Ad/Nitelikler (Bezeichnung/Qualitäten)** alanından yapılır. Katalog ataması (Katalogzuordnung) altında adlandırma için bir seçim kataloğu yerine ++ seçilirse, arka arkaya oluşturulan birden fazla katta numaralar (Ad) otomatik olarak artırılabilir. |\n| Funktion | 506 | Maksimum 80 karakter (A80) uzunluğunda metin niteliği. Giriş, Kat (Geschoss) sekmesindeki **Fonksiyon (Funktion)** alanından yapılır. |\n| Text1 Text2 Text3 Text4 Text5 | 501 502 503 504 505 | Maksimum 80 karakter (A80) uzunluğunda metin nitelikleri. Giriş, Mahal (Raum) sekmesinde Metinler (Texte) altından yapılır. Metinler serbest bilgiler içerebilir. |\n\nListelenen metin niteliklerinin yanı sıra Tadilat Kategorisi (Umbaukategorie) gibi diğer nitelikler de kullanılabilir. Bunlar Ad/Nitelikler (Bezeichnung/Qualitäten) üzerinden veya kullanıcı nitelikleri (Benutzerattribute) aracılığıyla ayarlanabilir.\n\n| | | |\n|  |  |  |\n| **Nitelik - Geometri (Attribut - Geometrie)** | **ID** | **Açıklama (Beschreibung)** |\n| Länge | 220 | **Uzunluk (Länge)** ve **Kalınlık (Dicke)** nitelikleri herhangi bir değerlendirme sonucu vermez veya değer içermez. |\n| Dicke | 221 |\n| | |\n| Länge\\_absolut | 198 | **Mutlak Uzunluk (Länge\\_absolut)** ve **Mutlak Kalınlık (Dicke\\_absolut)**, **Min-Max Kutusu (Min-Max-Box)** olarak adlandırılan sınır kutusunun boyutunu verir. Bu kutu, ilk poligon noktasından başlayarak takip eden ç …",
+      "figures": [
+        "/akademi/temel-modelleme/11382_0EM7U000001Td7w_cf0339a3.png"
+      ]
+    },
+    {
+      "id": "de_10602",
+      "title": "Çatı - Kat - Ara döşeme oluşturma",
+      "body": "**Soru:** \n \nÇatı katında bir ara döşemeyi nasıl oluşturabilirim? \n \n \n \n**Cevap:** \n \nÇatı katında çatı düzlemine veya çatı yüzeyine (Dachlandschaft) temiz bir şekilde uyum sağlayacak bir ara döşeme oluşturmak istiyorsunuz: \n \n \n \nBunun için aşağıdaki adımları izleyin:\n\n* Önce tüm kat planının üzerine bir döşeme çizin; kot bağlantısı ve doğru yayılım alanı ile sonraki adımlarda ilgileneceksiniz.\n\n \n\n* Bir sonraki adımda döşemenin doğru kot bağlantısını ayarlayın. Bunun için döşemenin üzerine sol çift tıklayın -> **Yükseklik (Höhe)** yolunu izleyin ve aşağıdaki değerleri ayarlayın:\n\n \n\n* 1 için: Buraya çatı düzleminin (veya çatı yüzeyinin) alt kotu ile döşemenin alt kotu arasındaki mesafeyi girin\n* 2 için: Buraya istediğiniz döşeme kalınlığını girin\n* 3 için: Buraya kenar bölgesinin (döşemenin alın yüzeyinin) belirli bir mesafe ile eğimli çatı düzlemine uyum sağlaması gerektiğini girin. Bu örnekte bu mesafe 0,00'dır ve üstteki eğimli düzleme 0,00 mesafe ile birleşen eğimli döşeme bitişini oluşturur.\n\n \n \n \n \n\n**Dikkat**: \ndöşeme artık doğru kot bağlantısıyla çizim dosyasında mevcut olduğundan, muhtemelen aşağıdaki mesaj görünecektir: \n \n \n \nBu mesaj neden görünür? Çünkü oluşturma işlemiyle şimdilik yalnızca bir ara adım inşa ettik; bu ara adım negatife doğru geliştiği için geometrik olarak mümkün olmayan bir 3B yapı elemanı üretir: \n \n \n\n* Bu nedenle şimdi son bir adımda döşemenin kat planındaki yayılım alanının düzenlenmesi gerekir. İlk adımda döşemeyi tüm kat planının üzerinde oluşturmuştunuz. Ancak döşemenin yalnızca çatı eğimine kadar uzanması ve onun ötesine geçmemesi gerektiği açıktır:\n\n* Bunun için kat planı görünümünden bir kalkan duvar (alın) görünüşüne geçin ve şu komutu seçin: **Düzen (Bearbeiten) -> Noktaları Değiştir (Punkte modifizieren).** Güvenilir bir şekilde yalnızca döşemeyi değiştirebilmek için **Mimari Filtresi (Architekturfilter)** (Araç çubuğu: **Filtre Sihirbazı (Filter-Assistent)**) üzerine tıklayın ve **Döşeme (Decke)** öğesini seçin. Bir tarafta döşemenin değiştirilecek kenar bölgesinin etrafına bir seçim penceresi çizin ve seçilen noktaları kenar bölgesinden döşeme alt kotunun eğimli çatı düzlemi ile kesişim noktasına kadar değiştirin (taşıyın).\n\n* Bu adımı diğer tarafta da tekrarlayın. Sonuç istediğiniz gibi görünecektir:\n\n \n \n \n \n \n**Not:** \n \nbazı durumlarda, örneğin bazı girinti ve çıkıntılara sahip döşemelerde, doğru kotlar ayarlandıktan sonra bile döşemenin animasyonda HÂLÂ gösterilmemesi durumu yaşanabilir (ancak kat plan …",
+      "figures": [
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiQ_3445deeb.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiR_9caad228.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiS_c1a4a6cb.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiT_a37e9532.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiU_c72c8b84.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiV_43e9e984.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiW_71755a0a.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiX_6218db6e.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiY_91aae5ca.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiZ_7f5d3c20.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001Tdia_3a754729.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001Tdib_5ef44f7c.png",
+        "/akademi/temel-modelleme/11382_0EM7U000001Td7v_05354bd9.png",
+        "/akademi/temel-modelleme/11382_0EM7U000001Td7t_2cf00294.png",
+        "/akademi/temel-modelleme/11382_0EM7U000001Td7u_06e84398.png",
+        "/akademi/temel-modelleme/11382_0EM7U000001Td7s_a1cf2a14.png"
+      ]
+    }
+  ]
+}

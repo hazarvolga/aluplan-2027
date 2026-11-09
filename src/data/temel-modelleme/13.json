@@ -1,0 +1,122 @@
+{
+  "no": 13,
+  "slug": "merdiven-olusturma",
+  "title": "Merdiven Oluşturma",
+  "duration": "03:55",
+  "sourceModule": "Proje 1 — Modül 3: Parametrik Merdiven Modelleyici ve Korkuluk Sistemleri",
+  "objectives": [
+    "Kat düzlemleri arasında 3B parametrik Merdiven (Stair / Treppe) (Düz, L, U sahanlıklı) modellemek.",
+    "Rıht yüksekliği, basamak genişliği, merdiven plağı, kaplama ve Korkuluk (Handrail / Geländer) elemanlarını yapılandırmak.",
+    "2B planda merdiven kesim çizgisi (Section display) ve basamak numaralandırmasını ayarlamak."
+  ],
+  "steps": [
+    {
+      "time": "00:00 – 01:30",
+      "heading": "Merdiven Tipi ve Kontur Girişi",
+      "body": "**Mimari (Architecture) -> Merdivenler (Stairs / Treppen)** grubundan **U Tipi Merdiven (U-Type Stair)** veya **Düz Merdiven (Straight Stair)** komutunu seçin. Merdiven boşluğu köşe noktalarını çıkış yönü sırasına göre tıklayarak dış konturu ve çıkış hattını tanımlayın.",
+      "figures": []
+    },
+    {
+      "time": "01:30 – 02:45",
+      "heading": "Yükseklik, Rıht/Basamak Geometrisi ve Bileşenler",
+      "body": "Alt kotu Zemin Kat bitmiş döşeme kotuna, üst kotu 1. Kat bitmiş döşeme kotuna bağlayın. Rıht sayısını (`örn. 18 rıht x 16.67 cm`) ve basamak genişliğini (`28–30 cm`, $2R+B \\approx 62\\text{ cm}$) ayarlayın; **Elemanlar (Stair Components)** sekmesinden betonarme plak kalınlığı, basamak kaplaması ve iç/dış korkulukları aktif edin.",
+      "figures": []
+    },
+    {
+      "time": "02:45 – 03:55",
+      "heading": "2B Plan Kesim Gösterimi ve Merdiven Altı Duvar",
+      "body": "**2B Kesit Gösterimi (2D Section)** sekmesinden kesim yüksekliğini (`1.50 m`), kesim altı sürekli çizgi ve kesim üstü kesikli çizgi stilini onaylayın; gerekirse merdiven altı duvarı eğimli üst düzleme bağlayın.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "U Tipi / Düz / Serbest Merdiven",
+      "menu": "Mimari (Architecture) -> Merdivenler (Stairs / Treppen) -> U Tipi Merdiven (U-Type Stair)",
+      "shortcut": "Merdiven Grubu",
+      "desc": "Kat kotları arasında Blondel kuralına ($2R+B$) uygun parametrik 3B merdiven ve sahanlık üretir."
+    },
+    {
+      "name": "Korkuluk (Handrail / Geländer)",
+      "menu": "Mimari (Architecture) -> Elemanlar -> Korkuluk (Handrail / Geländer)",
+      "shortcut": "Korkuluk İkonu",
+      "desc": "Merdiven kolu, balkon veya galeri kenarları boyunca parametrik dikmeli/camlı korkuluk modeller."
+    },
+    {
+      "name": "Merdiven Kesit Gösterimi (2D)",
+      "menu": "Merdiven Özellikleri -> 2B Kesit (2D Section)",
+      "shortcut": "Alt Sekme",
+      "desc": "Kat planında merdivenin 1.50 m kesim çizgisini, sürekli/kesikli çizgi ayrımını ve basamak numaralarını ayarlar."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Add-On 3D Bemassung - Treppe",
+        "file": "12701_vimeo_1235058909_dd82ab6a.mp4",
+        "vimeoId": "1235058909",
+        "sizeMB": 14.23
+      },
+      {
+        "title": "Add-On PatchWork - Treppe am Hang",
+        "file": "12561_vimeo_1234294907_098f6ac2.mp4",
+        "vimeoId": "1234294907",
+        "sizeMB": 70.58
+      }
+    ],
+    "pdfs": [],
+    "samples": [
+      "11149_Gelaender_2023_aa2344ac.ndw",
+      "10575_20210330160222_DE_3_85e6f3b4.ndw",
+      "10575_20210330160222_DE_1_0a908ae9.ndw",
+      "10575_20210330160222_DE_2_f5315cc7.ndw",
+      "10575_20210330160222_DE_4_3f41c430.ndw"
+    ]
+  },
+  "articles": [
+    {
+      "id": "de_12701",
+      "title": "Add-On 3D Bemassung (3B Ölçülendirme Eklentisi) - Merdiven",
+      "body": "Merdiven",
+      "figures": []
+    },
+    {
+      "id": "de_12561",
+      "title": "Add-On PatchWork - Yamaçta Merdiven",
+      "body": "Bu eğitim videosu, Allplan Add-On PatchWork ile farklı merdivenler ve yollar içeren eğimli bir yamaç durumunun nasıl modelleneceğini ayrıntılı olarak göstermektedir. Yüzey parçalarının (Patch) oluşturulması ve uyarlanması, form vermek için spline ve Bezier eğrilerinin kullanımı ve malzeme katmanlaşmasını görselleştirmek amacıyla kesitlerin üretilmesi uygulamalı olarak anlatılmaktadır.",
+      "figures": []
+    },
+    {
+      "id": "de_11149",
+      "title": "Korkuluk oluşturma",
+      "body": "**Soru:** \n \nBir korkuluk nasıl oluşturulabilir? \n \n \n \n**Cevap:** \n \nKolay bir parametre girişi için ön koşul, korkuluğun görünüş ve kesitte tam ölçülendirilmiş bir detay çizimidir. \nTüm ölçüler döşeme ön kenarına referans almalıdır. \n \nAşağıdakiler ölçülendirilmiş olmalıdır: \nElemanın Genişliği/Yüksekliği/(Derinliği), \n \nDüşey elemanlarda: \nEksenin döşeme ön kenarına yanal mesafesi (OffsetY), en alt noktanın (OffsetZ) döşeme üst kotuna mesafesi, uzunluk, dikme eksenine yanal mesafe (OffsetX) \nYatay elemanlarda: \nEksenin döşeme ön kenarına yanal mesafesi (OffsetY), kesit merkez noktasının (OffsetZ) döşeme üst kotuna mesafesi, dikme eksenine yanal mesafe (OffsetX) \n \nSonrasında çizim şu şekilde görünebilir: \n \n \nArdından korkuluk modelleyicisinde elemanların girişine geçilebilir: \n \n-> **Korkuluk Modelleyicisini (Geländermodellierer)** başlatın -> **Özellikler (Eigenschaften)** \n \nİletişim penceresinde öncelikle tüm kategorilerdeki (**Küpeşte/Dikme/Alan (Handlauf/Pfosten/Feld)**) tüm elemanları, listedeki elemana tıklayıp ardından X butonuna (**Elemanı Sil (Element löschen)**) basarak her şey boşalana kadar silin. \n \n \n**Elemanların oluşturulması:**\n\n* Elemanın küpeşteye mi, dikmeye mi yoksa alana mı ait olacağını düşünün... ve ilgili kategoriye tıklayın -> örneğimizde **Küpeşte (Handlauf)** ile başlıyoruz.\n\n \n**Küpeşteyi oluşturma:**\n\n* Eleman oluşturma \n + butonu ile yeni bir eleman oluşturun. \n Elemana **Ad (Namen)** olarak şunu veriyoruz: Handlauf \n Bu sırada ilk olarak yatay bir eleman oluşturulur, gerekirse bunu değiştirmek gerekir\n* **Genişlik + Yükseklik (Breite + Höhe)** değerlerini girin, örn. her iki boyut için 40 mm\n* **Kesit Tipini (Querschnittstyp)** belirleyin ... \n \"**... Köşeli Poligon (Polygon mit ... Ecken)**\" kısmına örn. 12 girin (dairesel bir kesit için)\n* Ofsetleri belirleyin \n Offset Y=48 , Offset Z=980 , Offset X=0; böylece küpeşte başlangıç veya bitiş kaçıklığı olmadan başlar....\n* **Bölümleme (Teilung)** boş kalır; çünkü bu yatay, sürekli devam eden bir elemandır ve yol boyunca tekrarlanması gerekmez\n* **Renk (Farbe)** ayarlayın; örn. 26\n* **2B Görünürlük (2D-Sichtbarkeit)** ayarlayın; örn. evet (ja) ...böylece küpeşte tamamlanmış olur\n\n \n \n \n**Dikmeleri oluşturma**\n\n* Kategori ayarlayın ... yani **Dikme (Pfosten)**\n* + butonu ile yeni eleman oluşturun ...gerekirse adını \"Pfosten\" olarak değiştirin\n* **Düşey (Vertikal)** olarak ayarlayın\n* Önceden çizilmiş obje geometrisini >> butonu ile alın (Dikkat: Dikme hâlihazırda \n dik duru …",
+      "figures": [
+        "/akademi/temel-modelleme/11149_0EM7U000001TdWo_a1790092.png",
+        "/akademi/temel-modelleme/11149_0EM7U000001TdWp_5797a28d.png",
+        "/akademi/temel-modelleme/11149_0EM7U000001TdWq_24e139bf.png",
+        "/akademi/temel-modelleme/11149_0EM7U000001TdWr_9475c1ef.png",
+        "/akademi/temel-modelleme/11149_0EM7U000001TdWs_a6a93e5c.png",
+        "/akademi/temel-modelleme/11149_0EM7U000001TdWt_d701c14c.png",
+        "/akademi/temel-modelleme/11149_0EM7U000001TdWu_94d18776.png",
+        "/akademi/temel-modelleme/11149_0EM7U000001TdWv_7047286d.png"
+      ]
+    },
+    {
+      "id": "de_11200",
+      "title": "Merdiven altında duvar oluşturma (kademeli duvar)",
+      "body": "**Soru:** \n \nBir merdivenin altında, duvarın üst kenarı merdiven eğimine/gidişatına uyum sağlayacak şekilde nasıl bir duvar oluşturabilirim? \n \n \n \n**Cevap:** \n \nÖncelikle daha sonra oluşturacağınız duvar için yardımcı yapı taşı olarak bir merdiven çizin:\n\n* **Oluştur (Erzeugen)** -> **Mimari (Architektur)** -> **Merdivenler (Treppen)** -> **Düz Merdiven (Gerade Treppe)****1** (veya istediğiniz başka bir merdiven) fonksiyonunu seçin\n* Merdivenin dış sınırını girin ve ardından ilgili parametreleri (rıht yüksekliği, basamak genişliği, basamak sayısı) ayarlayın. \"**Yapı Elemanı Parametreleri ve Özellikleri (Bauteilparameter und Eigenschaften)**\" butonu üzerinden geometriyi girebilirsiniz. Kademeli gidişata uyum sağlanması için her şeyden önce basamak (Trittstufe) önemlidir\n* Hâlihazırda bir merdiven oluşturduysanız, bunun bir kopyasını oluşturabilir ve bu kopyayı kullanmaya devam edebilirsiniz.\n\n \nSonraki adımlar, yapı elemanının düzlem modeline dönüştürülmesini içerir. Merdivenin mimari yapı elemanlarından ilk olarak 3B elemanlar oluşturursunuz:\n\n* **Oluştur (Erzeugen) -> Mimari (Architektur) -> Genel: Çatılar, Düzlemler, Kesitler (Allgemein: Dächer, Ebenen, Schnitte) -> Elemanları Dönüştür (Elemente wandeln) -> Mimariyi 3B Katı Objeye (Architektur in 3D-Körper)****1** fonksiyonunu seçin\n* Merdiven elemanlarının üzerine bir seçim alanı çizin. Alışılmış merdiven grafiği, 3B elemanların daha basit gösterimine dönüşmüştür\n\n \nSonraki düzenleme işlemlerini daha konforlu hale getirmek için merdivenin tekil katı objeleri ortak bir 3B eleman halinde birleştirilir:\n\n* **Oluştur (Erzeugen)** -> **Ek Modüller (Zusätzliche Module)** -> **3B Modelleme (Modellieren 3D)** -> **Katıları Birleştir (Körper vereinigen)****1** fonksiyonunu seçin ve gerekirse birkaç adımda 3B katı objeleri birleştirin\n* Katıların birleştirilmesi tek bir işlemle gerçekleşmezse, tüm merdiven tek bir katı objeden oluşana kadar önce tekil basamakların katılarını ve ardından basamakları birleştirin\n* Bu **3B Modelleme (Modellieren 3D)** modülüne sahip değilseniz, bu adımı atlayarak da çalışmaya devam edebilirsiniz\n\n \nŞimdi 3B elemanlar mimari düzlemlere dönüştürülür:\n\n* **Oluştur (Erzeugen)** -> **Mimari (Architektur)** -> **Genel: Çatılar, Düzlemler, Kesitler (Allgemein: Dächer, Ebenen, Schnitte)** -> **3B Katı Objeleri Mimari Düzlemlere (3D-Körper in Architekturebenen)****1** fonksiyonunu seçin ve dönüştürülecek katı objeye tıklayın (birleştirme işlemini yapmadıysanız burada her bir elemana tek tek …",
+      "figures": [
+        "/akademi/temel-modelleme/11200_0EM7U000001TdQY_c346f0e0.png",
+        "/akademi/temel-modelleme/11200_0EM7U000001TdQZ_309a6687.png"
+      ]
+    },
+    {
+      "id": "de_10575",
+      "title": "Nitelikler - Merdiven için genel bakış",
+      "body": "**Soru:** \n \nBir merdivenin yapı elemanları (Merdiven Modelleyici ile oluşturulmamış) malzeme ve benzeri bilgilerle nasıl etiketlenebilir? \n \n \n \n**Cevap:** \n \nMerdiven, alt yapı elemanlarına sahip bir yapı elemanı olarak oluşturulur. `CHILD()` formülü üzerinden merdivenin kendisi etiketlenirken bileşenlerine erişilebilir. Örn. `CHILD(@508@)` - `@508@`= Malzeme niteliği - kullanıldığında tüm malzemeler listelenir. Belirli bir yapı elemanının malzemesine doğrudan erişebilmek için seçimin sınırlandırılması gerekir. Bunun için `@18@` - Merdiven bileşen adı, numarası - niteliği kullanılabilir. \n \nMerdivenin tekil yapı elemanları - bileşenleri - 1-16 arasında numaralara sahiptir; ancak 2 ve 11 numaraları kullanılmamaktadır. \n \n \n \n**Malzeme çıktısı için formüller:**\n\n| | | |\n|  |  |  |\n| **Yapı Elemanı** | **Bileşen Numarası** | **Malzeme Formülü** |\n| Basamak (Trittstufe) | 1 | CHILD(\\_IF\\_(@18@=1)@508@\\_ELSE\\_\"\") |\n| Rıht (Setzstufe) | 3 | CHILD(\\_IF\\_(@18@=3)@508@\\_ELSE\\_\"\") |\n| Alt yapı iç (Unterbau innen) | 4 | CHILD(\\_IF\\_(@18@=4)@508@\\_ELSE\\_\"\") |\n| Alt yapı orta (Unterbau mittig) | 5 | CHILD(\\_IF\\_(@18@=5)@508@\\_ELSE\\_\"\") |\n| Alt yapı dış (Unterbau außen) | 6 | CHILD(\\_IF\\_(@18@=6)@508@\\_ELSE\\_\"\") |\n| Limon kirişi iç (Wange innen) | 7 | CHILD(\\_IF\\_(@18@=7)@508@\\_ELSE\\_\"\") |\n| Limon kirişi orta (Wange mittig) | 8 | CHILD(\\_IF\\_(@18@=8)@508@\\_ELSE\\_\"\") |\n| Limon kirişi dış (Wange außen) | 9 | CHILD(\\_IF\\_(@18@=9)@508@\\_ELSE\\_\"\") |\n| Küpeşte iç (Handlauf innen) | 10 | CHILD(\\_IF\\_(@18@=10)@508@\\_ELSE\\_\"\") |\n| Küpeşte dış (Handlauf außen) | 12 | CHILD(\\_IF\\_(@18@=12)@508@\\_ELSE\\_\"\") |\n| Serbest iç (Frei innen) | 13 | CHILD(\\_IF\\_(@18@=13)@508@\\_ELSE\\_\"\") |\n| Serbest orta (Frei mittig) | 14 | CHILD(\\_IF\\_(@18@=14)@508@\\_ELSE\\_\"\") |\n| Serbest dış (Frei außen) | 15 | CHILD(\\_IF\\_(@18@=15)@508@\\_ELSE\\_\"\") |\n| Standart metin elemanı (Norm-Text Element) | 16 | CHILD(\\_IF\\_(@18@=16)@508@\\_ELSE\\_\"\") |\n\nMalzeme yerine başka nitelikler - değerler de dahil - kullanılabilir. Ancak yapı elemanına ve merdivene bağlı olarak burada tekil olmadığı için kullanılamayacak içerikler görüntülenebilir. \n \n**Rıht yüksekliği vb. için formül** \nMerdivenin kendisinin rıht sayısı, basamak genişliği ve rıht yüksekliği ile etiketlenmesi için olası bir formül şöyledir: \nFORMAT(\"%.0f STG %.1f/%.1f\"; @88@; @89@;@90@) \n \n@88@ -> Rıht sayısı (Steigungsanzahl) \n@89@ -> Rıht yüksekliği (Steigungshöhe) \n@90@ -> Basamak genişliği (Auftrittsbreite) \n \n**Not:** \n \nMerdivende bir değişiklik yapıld …",
+      "figures": [
+        "/akademi/temel-modelleme/10575_0EM7U000001Td8g_04ea00a5.png"
+      ]
+    }
+  ]
+}

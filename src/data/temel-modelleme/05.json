@@ -1,0 +1,123 @@
+{
+  "no": 5,
+  "slug": "2d-olusturma-komutlari",
+  "title": "2D Oluşturma Komutları (Standart CAD İşlemleri)",
+  "duration": "16:13",
+  "sourceModule": "Proje 1 — Modül 1 & Modül 4: 2B Konstrüksiyon ve Teknik Dokümantasyon",
+  "objectives": [
+    "Kalem kalınlığı (Pen), çizgi tipi (Linetype), çizgi rengi (Color) ve Yardımcı Konstrüksiyon Çizgisi (Construction Line) kullanmak.",
+    "Çizgi, Poligon Çizgisi, Dikdörtgen, Daire, Yay, Spline ve Paralel Çizgi araçlarıyla hassas 2B geometri üretmek.",
+    "Alan Tespiti (Area Detection) kullanarak kapalı bölgelere Tarama (Hatching), Desen (Pattern) ve Dolgu (Fill) uygulamak."
+  ],
+  "steps": [
+    {
+      "time": "00:00 – 03:30",
+      "heading": "Biçim Özellikleri ve Yardımcı Konstrüksiyon Modu",
+      "body": "**Biçim (Format)** araç çubuğundan kalem kalınlığı (`0.13`, `0.25`, `0.35`, `0.50 mm`), çizgi tipi ve katman seçimi yapın. Pafta baskısında görünmeyen referans eksenleri çizmek için **Yardımcı Konstrüksiyon Formatı (Construction Line Format / Hilfskonstruktion)** (`Ctrl+K`) modunu açıp kapatmayı uygulayın.",
+      "figures": []
+    },
+    {
+      "time": "03:30 – 08:00",
+      "heading": "Temel 2B Çizim Komutları (Çizgi, Dikdörtgen, Daire, Yay)",
+      "body": "**Taslak (Draft)** görev alanından **Çizgi (Line)**, **Poligon Çizgisi (Polyline)**, **Dikdörtgen (Rectangle)** ve **Daire/Yay (Circle/Arc)** komutlarını çalıştırın. Diyalog satırında `dX`, `dY`, `Uzunluk (Length)` ve `Açı (Angle)` alanları arasında `Tab` tuşuyla geçiş yaparak tam ölçülü çizim yapın.",
+      "figures": []
+    },
+    {
+      "time": "08:00 – 12:00",
+      "heading": "Paralel Çizgi, Nokta Bölmeleri ve Poligonlaştırma",
+      "body": "**Elemana Paralel (Parallel to Element)** komutuyla mevcut bir çizgiden belirli mesafe ve adette ofset çizgileri üretin. Açık veya kesişen çizgileri **Alan Tespiti (Area Detection / Flächenelement suchen)** (ada algılama) ile tek tıkla kapalı poligona dönüştürün.",
+      "figures": []
+    },
+    {
+      "time": "12:00 – 16:13",
+      "heading": "Tarama (Hatching), Desen (Pattern) ve Dolgu (Fill)",
+      "body": "**Tarama (Hatching / Schraffur)**, **Desen (Pattern / Muster)** ve **Dolgu (Fill / Füllfläche)** komutlarıyla betonarme, tuğla, yalıtım ve zemin kaplama taramaları oluşturun; tarama yönünü ve referans ölçeğe göre sıklık davranışını (`Ölçeğe göre ayarla / Scale-dependent`) yapılandırın.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Çizgi (Line / Linie)",
+      "menu": "Taslak (Draft) -> Oluştur (Create) -> Çizgi (Line)",
+      "shortcut": "L",
+      "desc": "Tekil çizgi, sürekli çizgi dizisi (Polyline) ve teğet/dik çizgi oluşturur."
+    },
+    {
+      "name": "Dikdörtgen (Rectangle / Rechteck)",
+      "menu": "Taslak (Draft) -> Oluştur (Create) -> Dikdörtgen (Rectangle)",
+      "shortcut": "R",
+      "desc": "Köşeden köşeye, merkez noktadan veya orta kenardan dikdörtgen poligon çizer."
+    },
+    {
+      "name": "Daire / Yay (Circle / Arc)",
+      "menu": "Taslak (Draft) -> Oluştur (Create) -> Daire (Circle)",
+      "shortcut": "C",
+      "desc": "Merkez-yarıçap, 2 veya 3 noktadan geçen daire ve yay oluşturur."
+    },
+    {
+      "name": "Elemana Paralel (Parallel Lines)",
+      "menu": "Taslak (Draft) -> Oluştur (Create) -> Paralel Çizgi (Parallel to Element)",
+      "shortcut": "O",
+      "desc": "Mevcut 2B çizgi veya poligona belirli mesafe ve adette paralel ofset çizgisi üretir."
+    },
+    {
+      "name": "Yardımcı Konstrüksiyon (Construction Line)",
+      "menu": "Biçim (Format) -> Yardımcı Konstrüksiyon Formatı (Construction Line)",
+      "shortcut": "Ctrl+K",
+      "desc": "Çıktıda basılmayan yardımcı referans ve aks çizgisi modunu açar/kapatır."
+    },
+    {
+      "name": "Tarama / Desen / Dolgu",
+      "menu": "Taslak (Draft) -> Yüzey Elemanları -> Tarama (Hatching) / Dolgu (Fill)",
+      "shortcut": "H",
+      "desc": "Kapalı poligon içine ölçek duyarlı mimari/mühendislik taraması, desen veya renk dolgusu uygular."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_10972",
+      "title": "Dolgu Alanları - Poligonlaştırma türleri",
+      "body": "**Soru:** \n \nÖrneğin bir daire içinde bir yüzey elemanı oluştururken poligonlaştırma (yuvarlatma) nasıl etkilenebilir? \n \n \n \n**Cevap:** \n \nİki seçenek (**Daire Bölüntüsü (Kreisteilung)** ve **Kiriş Yüksekliği / Sehim (Stichmaß)**) arasında geçiş yapma ayarlarını, ilgili fonksiyon çağrıldığında doğrudan giriş seçeneklerinde bulabilirsiniz. \n \nSeçenek 1: \n \n**Daire Bölüntüsü (Kreisteilung)** ayarında, bir eğrinin yaklaştırılacağı doğruların sayısını belirten sayısal bir değer ayarlanır (sayı her zaman tam daireyi referans alır). Daire bölüntüsü değeri 8 ile 360 arasındadır. Değer ne kadar yüksekse, poligonlaştırma o kadar hassas olur. \nDaire bölüntüsü özellikle daha küçük yuvarlatmalar ve çaplar için uygundur. Daha büyük yuvarlatmalarda bu tür poligonlaştırmada çoğunlukla yuvarlatma ile poligon arasında bir fark görülür. \n \n (Kreisteilung 8) \n (Kreisteilung 120) \n \n \nSeçenek 2: \n \n**Kiriş Yüksekliği / Sehim (Stichmaß)** ayarında, dolgu alanı oluşturulurken kesenin (sekantın) yaya olan maksimum kiriş yüksekliği (sehim) kullanılır. İlgili eğri bu durumda, poligon kenarının eğriye olan maksimum mesafesi girilen kiriş yüksekliği değerinden küçük veya ona eşit olacak şekilde poligonlaştırılır. Sonuç bu sayede daire bölüntüsüne göre daha hassastır. Kiriş yüksekliği sayısı 0,005 ile 1 000 000 arasındadır. Değer ne kadar küçükse, poligonlaştırma o kadar hassas olur. \nKiriş yüksekliği, burada maksimum bir alt bölünme sayısı öngörülmediğinden özellikle daha büyük eğrilerin poligonlaştırılması için uygundur. \n \n (Stichmaß=500mm) \n (Stichmaß=5mm) \n \n \nHem daire bölüntüsü hem de kiriş yüksekliği olmak üzere her iki değer de yüzey elemanları oluşturulurken uyarlanabilir. Yüzey elemanının (örneğin Dolgu Alanı / Füllfläche) fonksiyonunu etkinleştirin ve imleç (artı kıl) ile eğriye tıklayın. Giriş seçeneklerinde (veya Dinamik Araç Çubuğunda) artık değerleri değiştirebilirsiniz. \n \n \n \n**Not:** \n \nPoligonlaştırma için **Otomatik Geometri Algılama (Automatische Geometrieermittlung)** özelliğini de kullanın. Gelişmiş nokta girişinde bunu fonksiyon etkinken bağlam menüsü üzerinden veya diyalog satırında bulabilirsiniz. \nEski nokta girişinde ise fonksiyon etkinken **Görünüm (Ansicht) -> Nokta Asistanı (Punktassistent) -> Otomatik geometri algılama açık/kapalı (Automatische Geometrieermittlung ein/aus)** üzerinden bulabilirsiniz.",
+      "figures": [
+        "/akademi/temel-modelleme/10972_0EM7U000001Te15_724a4cc5.png",
+        "/akademi/temel-modelleme/10972_0EM7U000001Te16_37e3fb19.png",
+        "/akademi/temel-modelleme/10972_0EM7U000001Te17_25ceaae5.png",
+        "/akademi/temel-modelleme/10972_0EM7U000001Te18_2f00894d.png"
+      ]
+    },
+    {
+      "id": "de_10961",
+      "title": "Desenler ve Taramalar - Biçim özelliklerini değiştirme",
+      "body": "**Soru:** \n \nBir desenin veya taramanın kalemi, rengi neden değiştirilemiyor? \n \n \n \n**Cevap:**\n\n* **Araçlar (Extras) -> Tanımlar (Definitionen) -> Desen (Muster)** yolunu seçin. Ekranda bir desen görünür ve Değiştir (Ändern) araç çubuğunda aşağıdaki fonksiyonlar kullanıma sunulur: \n \n \n* İlgili deseni seçin \n* Şimdi **Desenin gösterimi için tanımdaki kalem, renk geçerli açık/kapalı ... (Stift, Farbe aus Definition für Darstellung des Musters maßgeblich ein/aus ...)** fonksiyonuna dikkat edin \n\nFonksiyon **devre dışı (kapalı)** ise desen/desen çizgisi her zaman biçim özelliklerinde belirlenen biçimlerle gösterilir. \n \nFonksiyon **etkin (açık)** ise desen/desen çizgisi her zaman desenin tanımında belirlenen biçimlerle gösterilir. Biçim özellikleri dikkate alınmaz. \n \n \nTaramalar için de benzer şekilde **Araçlar (Extras)** -> **Tanımlar (Definitionen)** -> **Taramalar (Schraffuren)** yolunu seçin ve burada ilgili tarama için **Gösterim için tanımdaki kalem ve renk geçerli (Stift und Farbe aus Definition für Darstellung maßgeblich)** seçeneğinde istediğiniz ayarı belirleyin. \n \n \n \n**Not**: \n \nDesen ve Tarama kaynaklarının ayarlarının Büro veya Proje olarak ayarlanmış olmasına bağlı olarak, tanımda yapılan değişiklikler yalnızca güncel projeyi veya büro ayarlarını kullanan tüm projeleri etkiler. Büro klasöründeki tanımları değiştirmek için yönetici yetkilerine ihtiyacınız vardır; projedeki tanımlar ise proje sahibi tarafından da değiştirilebilir. Büro klasöründeki tanımlar değiştirildiğinde, fonksiyon çağrılırken \"*Büro yolundaki desenleri/taramaları değiştiriyorsunuz! (Sie modifizieren die Muster/Schraffuren im Büropfad!)*\" mesajını alırsınız. Bu mesaj **Tamam (OK)** ile onaylanabilir. \n \nBu konularla ilgili Çevrimiçi Yardım'da yer alan ayrıntılı açıklamaları da lütfen dikkate alın.",
+      "figures": [
+        "/akademi/temel-modelleme/10961_0EM7U000001TdvE_0c31399b.png",
+        "/akademi/temel-modelleme/10961_0EM7U000001TdvF_87603976.png",
+        "/akademi/temel-modelleme/10961_0EM7U000001TdvG_b5636cb1.png"
+      ]
+    },
+    {
+      "id": "de_9769",
+      "title": "Einbauteile - Linieneinbauteil als Musterlinie darstellen",
+      "body": "- **Kaynak URL (Alındığı Adres):** https://learnnow.allplan.com/totara/engage/resources/howto/index.php?id=9769&source=howto\n- **Kaynak ID (`resource_id`):** `9769`\n- **Resmi Salesforce / Allplan KB No:** `000008420-de`\n- **İçerik Tipi:** `knowledge_article`\n- **Dil:** `de`\n- **Kategori Ağacı:** `ALLPLAN > Allgemein > Benutzerobjekte > Einbauteile`\n- **Geçerli Allplan Sürümleri:** `ALLPLAN 2025, ALLPLAN 2024, ALLPLAN 2023, ALLPLAN 2022`\n- **Yazar & Tarih:** Erstellt am 7. Juli 2023, 10:13. Zuletzt aktualisiert am 3. Juli 2025, 15:54. | Owner: Salesforce Integration\n- **Doğrudan PDF Kılavuz URL:** -\n- **Eğitim Videosu / Webinar URL:** -\n- **İndirilen PDF, Örnek Dosya ve Ekran Görüntüleri (4 Adet):**\n - [SCREENSHOT] `9769_0EM67000007oD0h_20daae00.png` (9.79 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/9769/0EM67000007oD0h.png | SHA-256: `20daae00fc440696...`)\n - [SCREENSHOT] `9769_0EM67000007oD0m_81898c65.png` (11.11 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/9769/0EM67000007oD0m.png | SHA-256: `81898c652dccb2d8...`)\n - [SCREENSHOT] `9769_0EM67000007oD0c_d9829294.png` (10.75 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/9769/0EM67000007oD0c.png | SHA-256: `d982929453f88e70...`)\n - [SCREENSHOT] `9769_0EM67000007oD0w_bf8a94f7.png` (44.02 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/9769/0EM67000007oD0w.png | SHA-256: `bf8a94f7988ee6ed...`)\n\n\n\n**Frage:** \n1. Warum erscheint meine gewählte Muster nicht? \n2. Welche Abmessungen müssen eingegeben werden? \n3. Warum kann ich bei einigen Mustern die Farbe nicht ändern/definieren?  \n \n**Antwort:** \n \nEs können alle Musternummern <266 verwendet werden! \n \nBei der Definition gibt es keine Fehlermeldung, der Anwender kann aber nach dem Speichern selber sehen, dass die gewünschte Muster nicht dargestellt wird. \n \nIm Vorschaufenster erscheint das Linien-EBT ohne Muster: \n \n \n \nDie Abmessungen entsprechen  die eingestellte Längeeinheit im **MST. 1:1**. \nD.h. will man die Musterlinie 10cm breit und hat man als Längeeinheit m eingestellt muss man 0.1 eingeben: \n \n \n \nBestimmte Muster besitzen ihre eigene Farbdefinition. Dies wurde bereits bei dessen Definition festgelegt. \n \n \nBeim Auswählen der Muster kann man gut sehen, ob die festgelegte Farbdefinition übernehmen wird.",
+      "figures": [
+        "/akademi/temel-modelleme/9769_0EM67000007oD0c_d9829294.png",
+        "/akademi/temel-modelleme/9769_0EM67000007oD0h_20daae00.png",
+        "/akademi/temel-modelleme/9769_0EM67000007oD0m_81898c65.png",
+        "/akademi/temel-modelleme/9769_0EM67000007oD0w_bf8a94f7.png"
+      ]
+    },
+    {
+      "id": "de_10634",
+      "title": "Dışa Aktarma - DWG/DXF - Beyaz dolgu alanlarını dışa aktarma",
+      "body": "**Soru:** \n \nBeyaz bir dolgu alanı (Füllfläche) DWG'ye nasıl dışa aktarılabilir? \n \n \n \n**Cevap:** \n \nAllplan'da kullandığınız şekliyle beyaz dolgu alanlarını AutoCAD tanımaz. \nDışa aktarma sırasında beyaz dolgu alanınıza başka bir açık AutoCAD rengi eşleştirme veya bunu hiç aktarmama olanağına sahipsiniz. Bunun için dışa aktarma işleminin devamında yapılandırma penceresinde \"Değiştir (Verändern)\" düğmesine basın ve \"Dolgu Renkleri (Füllfarben)\" sekmesine geçin. Kaynak sistem olarak \"Beyaz (Weiß)\" ve hedef sistem olarak \"Beyaz/Siyah (Weiß/Schwarz)\" değerine sahip girdileri işaretleyin ve bağlam menüsü üzerinden başka bir açık renk veya DWG'de beyaz dolgu rengi gerekli değilse \"Kullanma (Nicht verwenden)\" girdisini eşleştirin. \nAlternatif olarak Allplan'da kendinize bir beyaz renk (örn. AutoCAD'e beyaz renk olarak aktarılan serbest RGB rengi 253,253,253) tanımlayın ve beyaz dolgu alanları için bu rengi kullanın. \n \nAllplan'da tanım örn.:",
+      "figures": [
+        "/akademi/temel-modelleme/10634_0EM7U000001TeNT_d6bfa607.png"
+      ]
+    }
+  ]
+}

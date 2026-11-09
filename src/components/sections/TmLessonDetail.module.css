@@ -1,0 +1,50 @@
+.page{padding-bottom:var(--space-stack-xl)}
+.breadcrumb{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-inline-xs);font-size:var(--type-body-sm-size);color:var(--text-secondary);padding:var(--space-stack-md) 32px 0}
+.breadcrumb a{color:var(--text-secondary);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent-akademi)}
+.sep{color:var(--text-muted)}
+
+.band{padding-block:var(--space-stack-xl);border-bottom:var(--border-width-default) solid var(--border-default)}
+.lastBand{border-bottom:0}
+
+.objectives{list-style:none;margin:var(--space-stack-lg) 0 0;padding:0;display:flex;flex-direction:column;gap:var(--space-stack-xs);max-width:46rem}
+.objective{position:relative;padding-left:1.4rem;color:var(--text-secondary);font-size:var(--type-body-md-size)}
+.objective::before{content:"→";position:absolute;left:0;color:var(--accent-akademi)}
+
+.steps{list-style:none;margin:var(--space-stack-lg) 0 0;padding:0;display:flex;flex-direction:column;gap:0;max-width:52rem}
+.step{display:grid;grid-template-columns:auto 1fr;gap:var(--space-inline-md);padding:var(--space-stack-lg) 0;border-top:var(--border-width-default) solid var(--border-default)}
+.step:last-child{border-bottom:var(--border-width-default) solid var(--border-default)}
+.time{font-family:var(--font-mono);font-size:var(--type-body-sm-size);color:var(--accent-akademi);white-space:nowrap}
+.stepBody{display:flex;flex-direction:column;gap:var(--space-stack-xs);min-width:0}
+.stepHeading{margin:0;font-family:var(--font-heading);font-size:var(--type-h4-size);color:var(--text-primary)}
+.stepText{margin:0;font-size:var(--type-body-md-size);line-height:var(--line-height-relaxed,1.7);color:var(--text-secondary)}
+
+.shots{margin-top:var(--space-stack-sm);display:flex;flex-wrap:wrap;gap:var(--space-stack-sm)}
+.shot{max-width:100%;width:auto;max-height:22rem;height:auto;border:var(--border-width-default) solid var(--border-default);background:var(--surface-raised)}
+
+.videos{margin-top:var(--space-stack-lg);display:grid;grid-template-columns:repeat(auto-fit,minmax(20rem,1fr));gap:var(--space-stack-lg);max-width:64rem}
+
+.articleList{list-style:none;margin:var(--space-stack-lg) 0 0;padding:0;display:flex;flex-direction:column;gap:var(--space-stack-xs);max-width:52rem}
+.articleItem{margin:0}
+.article{border:var(--border-width-default) solid var(--border-subtle);background:var(--surface-raised)}
+.articleHead{list-style:none;cursor:pointer;padding:var(--space-inset-md);font-weight:var(--font-weight-strong);color:var(--text-primary);display:flex;align-items:center;gap:var(--space-inline-sm)}
+.articleHead::-webkit-details-marker{display:none}
+.articleHead::before{content:"+";font-family:var(--font-mono);color:var(--accent-akademi)}
+.article[open] .articleHead::before{content:"–"}
+.articleHead:focus-visible{outline:var(--border-width-accent,2px) solid var(--focus-ring,var(--accent-akademi));outline-offset:2px}
+.articleBody{padding:0 var(--space-inset-md) var(--space-inset-md);display:flex;flex-direction:column;gap:var(--space-stack-xs)}
+.articleP{margin:0;font-size:var(--type-body-sm-size);line-height:var(--line-height-relaxed,1.7);color:var(--text-secondary)}
+
+.files{list-style:none;margin:var(--space-stack-lg) 0 0;padding:0;display:flex;flex-direction:column;gap:var(--space-stack-xs);max-width:52rem}
+.file{font-size:var(--type-body-sm-size);color:var(--text-secondary);display:flex;gap:var(--space-inline-sm);align-items:baseline;word-break:break-all}
+.fileKind{flex:none;font-family:var(--font-mono);font-size:var(--type-body-sm-size);color:var(--accent-akademi);border:var(--border-width-default) solid var(--accent-border);padding:0 var(--space-inline-xs)}
+
+.lessonNav{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-stack-md)}
+.navLink{display:flex;flex-direction:column;gap:var(--space-stack-xs);text-decoration:none;color:var(--text-primary)}
+.navNext{text-align:right;margin-left:auto}
+.navDir{color:var(--accent-akademi);font-size:var(--type-body-sm-size);font-weight:var(--font-weight-strong)}
+.navTitle{font-family:var(--font-heading);font-size:var(--type-body-md-size)}
+
+@media (max-width:40rem){
+  .step{grid-template-columns:1fr;gap:var(--space-stack-xs)}
+}

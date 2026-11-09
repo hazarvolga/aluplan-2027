@@ -109,6 +109,17 @@ export function AkademiSidebar() {
                       </li>
                     );
                   })}
+                  {level.slug === 'temel' && (
+                    <li className={styles.moduleItem}>
+                      <Link
+                        href="/akademi/temel-modelleme"
+                        className={`${styles.moduleLink} ${pathname.startsWith('/akademi/temel-modelleme') ? styles.moduleActive : ''}`}
+                        aria-current={pathname.startsWith('/akademi/temel-modelleme') ? 'page' : undefined}
+                      >
+                        <span className={styles.moduleTitle}>Temel Modelleme Eğitimi</span>
+                      </Link>
+                    </li>
+                  )}
                 </ul>
               </li>
             );

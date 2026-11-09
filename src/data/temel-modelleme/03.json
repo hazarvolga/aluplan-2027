@@ -1,0 +1,162 @@
+{
+  "no": 3,
+  "slug": "arayuz-incelemesi",
+  "title": "Allplan Arayüz İncelemesi ve Çalışma Prensipleri",
+  "duration": "08:15",
+  "sourceModule": "Proje 1 — Modül 1: Arayüz Mimarisi, WPF Çerçevesi ve Temel Navigasyon",
+  "objectives": [
+    "Actionbar (Aksiyon Çubuğu) üzerindeki Rol (Role), Görev (Task) ve Görev Alanı (Task Area) hiyerarşisini kullanmak.",
+    "Özellikler (Properties), Sihirbazlar (Wizards), Kütüphane (Library), Objeler (Objects) ve Katmanlar (Layers) paletlerini yönetmek.",
+    "Çoklu çalışma penceresi (Plan + İzometrik + Animasyon), fare kombinasyonları ve nokta yakalama (Snap) ilkelerini uygulamak."
+  ],
+  "steps": [
+    {
+      "time": "00:00 – 02:30",
+      "heading": "Actionbar (Aksiyon Çubuğu) ve Rol Seçimi",
+      "body": "Üst şeritte yer alan **Actionbar (Aksiyon Çubuğu)** üzerinden çalışma disiplininize göre **Mimari (Architecture)**, **Mühendislik (Engineering)** veya **Taslak (Draft)** rolünü seçin. Her sekmede sol grup **Oluştur (Create)**, sağ grup ise **Modifikasyon (Modify)** komutlarını barındırır.",
+      "figures": []
+    },
+    {
+      "time": "02:30 – 05:00",
+      "heading": "Palet Mimarisi (Özellikler, Sihirbazlar, Objeler, Kütüphane)",
+      "body": "Sol kenara kenetlenmiş paletlerden **Özellikler Paleti (Properties Palette)** seçili elemanın parametrelerini değiştirir; **Sihirbazlar (Wizards / Assistenten)** hazır kurumsal yapı elemanlarını sağ tıkla alıp çizmenizi sağlar; **Objeler Paleti (Objects Palette)** modeldeki tüm elemanları kat, çizim dosyası veya malzeme bazında filtreler ve gizler/kilitler.",
+      "figures": []
+    },
+    {
+      "time": "05:00 – 06:45",
+      "heading": "Çoklu Görünüm Pencereleri ve Görünüm Türleri",
+      "body": "**Pencere (Window) -> 2+1 Animasyon Penceresi (2+1 Animation Window)** düzenini seçerek sol tarafta 2B kat planında çalışırken sağ pencerede 3B **Animasyon (Animation)** modelini eşzamanlı izleyin.",
+      "figures": []
+    },
+    {
+      "time": "06:45 – 08:15",
+      "heading": "Diyalog Satırı, Nokta Yakalama ve Fare/Klavye Prensipleri",
+      "body": "Komut aktifken ekranın altındaki **Diyalog Satırını (Dialog Line)** takip edin. Sağ tık menüsünden **Nokta Yakalama Seçenekleri (Point Snap Options)** ile uç nokta, orta nokta, kesişim ve izleme çizgisi (Track tracing) hassasiyetini yönetin; komutu bitirmek için `Esc` tuşunu kullanın.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Actionbar (Aksiyon Çubuğu)",
+      "menu": "Üst Şerit Menü -> Rol Seçimi (Mimari, Mühendislik, Taslak)",
+      "shortcut": "Üst Şerit",
+      "desc": "Görev odaklı tüm oluşturma ve düzenleme komutlarını barındıran ana komut şeridi."
+    },
+    {
+      "name": "Özellikler Paleti (Properties Palette)",
+      "menu": "Paletler -> Özellikler (Properties)",
+      "shortcut": "Çift Sol Tık",
+      "desc": "Seçilen yapı elemanının geometri, katman ve nitelik parametrelerini anlık görüntüler ve düzenler."
+    },
+    {
+      "name": "Sihirbazlar Paleti (Wizards Palette)",
+      "menu": "Paletler -> Sihirbazlar (Wizards / Assistenten)",
+      "shortcut": "Sağ Tık Al",
+      "desc": "Önceden hazırlanmış kurumsal duvar, kolon, döşeme, ölçü ve yazı şablonlarını tek tıkla kopyalar."
+    },
+    {
+      "name": "Objeler Paleti (Objects Palette)",
+      "menu": "Paletler -> Objeler (Objects / Objektepalette)",
+      "shortcut": "Palet Sekmesi",
+      "desc": "Modeldeki tüm nesneleri kat, çizim dosyası, eleman tipi veya malzemeye göre gruplar, gizler ve seçer."
+    },
+    {
+      "name": "Çoklu Çalışma Penceresi",
+      "menu": "Pencere (Window) -> 2+1 Animasyon Penceresi",
+      "shortcut": "Alt+F4 (Animasyon)",
+      "desc": "2B kat planı ile 3B perspektif/animasyon görünümünü yan yana eşzamanlı çalıştırır."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Die Objekt Palette",
+        "file": "2943_vimeo_879668203_b96a941e.mp4",
+        "vimeoId": "879668203",
+        "sizeMB": 26.99
+      },
+      {
+        "title": "Tool-Hub Basisfunktionen Teil 1",
+        "file": "3305_vimeo_880816946_15ed227b.mp4",
+        "vimeoId": "880816946",
+        "sizeMB": 64.35
+      },
+      {
+        "title": "Tool-Hub Basisfunktionen Teil 2",
+        "file": "3306_vimeo_880818214_c00bae5c.mp4",
+        "vimeoId": "880818214",
+        "sizeMB": 99.31
+      },
+      {
+        "title": "Objekte selektieren und aktivieren",
+        "file": "3307_vimeo_880819801_0cc3bf72.mp4",
+        "vimeoId": "880819801",
+        "sizeMB": 49.11
+      }
+    ],
+    "pdfs": [],
+    "samples": [
+      "8758_20181230130608_DE_1_edbde1f5.zip"
+    ]
+  },
+  "articles": [
+    {
+      "id": "de_8843",
+      "title": "[a] Actionbar (Aksiyon Çubuğu) İçin İlk Adımlar",
+      "body": "**Soru:** \n \nActionbar (Aksiyon Çubuğu) yapısının arkasındaki temel düşünce nedir? \n \n \n**Cevap:** \n \nActionbar (Aksiyon Çubuğu) ile çalışmak; rol, görev ve aynı zamanda bağlam odaklı bir çalışma biçimidir. Komutlar temel olarak Allplan açısından mantıksal olarak bir arada bulunması gereken şekilde gruplandırılmıştır. Uzun fare hareketleri ve bir görev içinde modüller arasında sürekli geçiş yapma ihtiyacı burada önemli ölçüde azaltılmıştır. Örneğin Kaba Yapı (Rohbau) görevinde gerekli tüm komutlar yer alır, böylece modül değişikliği yapılmasına gerek kalmaz. Actionbar (Aksiyon Çubuğu) ve kullanımı hakkındaki ilk bilgilere **Başlangıç Rehberi (Onboarding)** (**ALT -> ? -> Onboarding**) üzerinden ulaşılabilir. \n \nActionbar (Aksiyon Çubuğu) ilk kez kullanıldığında tüm görev alanları daraltılmış durumdadır. İlgili görev alanına çift tıklandığında içerik bölümlere ayrılmış olarak gösterilir. Bir görev alanı içindeki bölümleme genellikle şu şekilde yapılandırılmıştır: Oluştur (Erzeugen) -> Bağlamda Oluştur (Erzeugen im Kontext) -> Bağlamda Değiştir (Modifizieren im Kontext). Actionbar (Aksiyon Çubuğu) yapısı hakkında ayrıntılı bilgilere **Bu Sürümdeki Yenilikler (Neues in dieser Version)** (**ALT -> ? -> Bu Sürümdeki Yenilikler (Neues in dieser Version) -> Kullanılabilirlik (Usability)**) altından da ulaşılabilir. \n \n \n \n \nGörev alanları burada grafiksel olarak renkleriyle de birbirinden ayrılır: Mavi renk, ilgili görevin fonksiyonlarını içerir. Açık mavi renk, mevcut görevde de zaman zaman kullanılan diğer görevlerdeki komutların bir derlemesini sunan Hızlı Erişim (Schnellzugriff) alanıdır. Gri renk ise her yerde kullanılabilen sabit, genel görev alanlarıdır. Doğrudan bir objeye uygulanacak komutlar, objenin kısayol menüsü üzerinden çağrılabilir. \nAllplan tarafından bir araya getirilen Actionbar (Aksiyon Çubuğu) içinde eksik komutlar varsa veya çok fazla komut yer alıyorsa, bunu Actionbar Yapılandırıcı (Actionbar-Konfigurator) üzerinden kendiniz kolayca değiştirebilirsiniz. Actionbar (Aksiyon Çubuğu) içindeki dişli çark sembolü (sağ üstte) üzerinden bu araç başlatılabilir. Şablon seçin (önerilen: Şablon [Standart] (Vorlage [Standard])) ve **Oluştur (Erstellen)** butonuna basın. Artık burada tüm görev alanları veya tekil fonksiyonlar Sürükle ve Bırak (Drag & Drop) yöntemiyle entegre edilebilir veya önizlemeden kaldırılabilir. Kaydettikten sonra bu yapılandırma, Actionbar (Aksiyon Çubuğu) içinde **Favori Yükle (Favorit laden)** üzerinden yüklenebilir. \n \nDaha önc …",
+      "figures": [
+        "/akademi/temel-modelleme/8843_0EM7U000001TdOd_c5bf5d8c.png",
+        "/akademi/temel-modelleme/8843_0EM7U000001TdOe_78c90f57.png"
+      ]
+    },
+    {
+      "id": "de_2943",
+      "title": "Obje Paleti (Objekt Palette)",
+      "body": "Burada Obje Paletinin (Objekt Palette) nasıl kullanıldığı, elemanlara göre nasıl filtrelendiği ve görünürlüklerinin nasıl değiştirildiği gösterilmektedir.",
+      "figures": []
+    },
+    {
+      "id": "de_3305",
+      "title": "Tool-Hub Temel Fonksiyonları Bölüm 1",
+      "body": "Bu videoda model navigasyon fonksiyonlarının yanı sıra ölçülendirme türleri ve metin notları ele alınmaktadır.",
+      "figures": []
+    },
+    {
+      "id": "de_3306",
+      "title": "Tool-Hub Temel Fonksiyonları Bölüm 2",
+      "body": "Tool-Hub'ın 3B model kesitleri, obje fonksiyonları ve navigasyon haritası gibi diğer fonksiyonlarına ilişkin açıklamalar.",
+      "figures": []
+    },
+    {
+      "id": "de_3307",
+      "title": "Objekte selektieren und aktivieren",
+      "body": "- **Kaynak URL (Alındığı Adres):** https://learnnow.allplan.com/totara/engage/resources/howto/index.php?id=3307&source=howto\n- **Kaynak ID (`resource_id`):** `3307`\n- **Resmi Salesforce / Allplan KB No:** `-`\n- **İçerik Tipi:** `explainer_video`\n- **Dil:** `de`\n- **Kategori Ağacı:** `BIMPLUS > Bim Explorer`\n- **Geçerli Allplan Sürümleri:** ``\n- **Yazar & Tarih:** Erstellt am 23. November 2023, 15:40. Zuletzt aktualisiert am 2. Oktober 2025, 15:17. | Owner: Daniel Herr\n- **Doğrudan PDF Kılavuz URL:** -\n- **Eğitim Videosu / Webinar URL:** https://vimeo.com/880819801 (Player: https://player.vimeo.com/video/880819801)\n- **İndirilen PDF, Örnek Dosya ve Ekran Görüntüleri (1 Adet):**\n - [VIDEO] `3307_vimeo_880819801_0cc3bf72.mp4` (50291.88 KB | Orjinal URL: https://player.vimeo.com/video/880819801 | SHA-256: `0cc3bf72932a263a...`)\n\n\n\nInformationen zur Auswahl und Aktivierung von Objekten im Bim Explorer werden erläutert.",
+      "figures": []
+    },
+    {
+      "id": "de_8758",
+      "title": "Asistan oluşturma ve ofiste kullanıma sunma",
+      "body": "**Soru:** \n \nKendi asistanlarımızı nasıl oluşturabilir ve ofisteki herkesin kullanımına nasıl sunabiliriz? \n \n \n**Cevap:** \n \n**Temel Esaslar:** \nALLPLAN ile çalışan tüm personel için temel olarak ortak standartlar tanımlanmalıdır. \n \nAsistanları oluşturmadan önceki ilk adım, hedefe yönelik değerlendirmeler yapmak ve hangi asistanların herkes için hemen katma değer sağlayacağını tartmak olmalıdır. Ayrıca, bir asistana yerleştirilecek objeleri çok temiz bir şekilde tanımlamak mantıklıdır. Hatta bu tanımlama, anlık ihtiyacın ötesinde bile düşünülebilir. Örneğin, ofiste henüz kullanılmıyor olsa bile katman (Layer) kullanmak faydalıdır. \n \nYaygın kullanılan asistanlar, ekranın sağ veya sol kenarına rahatça sabitlenebilmeleri için dikey formata sahiptir. \n \n \nAdım 1: \nÇizim dosyasını **Büro (Büro)** dizininde asistan olarak kaydetme:\n\n* Hazırlanan çizim dosyasını açın\n* **Dosya (Datei)** -> **Kopyayı Asistan Olarak Kaydet... (Kopie speichern als Assistent...)** (veya ALLPLAN 2023'e kadar **Dosya (Datei)** -> **Kopyayı Asistan Olarak Kaydet ve Göster... (Kopie speichern als Assistent und anzeigen...)**)\n* Kayıt konumu olarak ilgili Allplan sürümünün düğümünü, örn. **Allplan 2025** -> **Assistent-STD** (veya Allplan 2023'e kadar **Büro Asistanları (Büro Assistenten)**) seçin, **Dosya adını (Dateinamen)** belirtin (çizim dosyası adı önerilir), dosya tipi olarak **Asistan (\\*.nas) (Assistent (\\*.nas))** seçin ve **Kaydet (Speichern):** ****\n* Asistanı görüntüleme veya bir asistan grubu oluşturma sorgusunu iptal edin. Grup, asistanlarla aynı dizinde yeni olarak oluşturulacaktır. \n \n \n\nAdım 2: \nYeni asistan grubu oluşturma, asistanları ekleme ve yeniden adlandırma.\n\n* **Asistanlar (Assistenten)** paletini açın\n* Grup satırında kısayol menüsünü (sağ fare tuşu) açın -> **Yeni Grup... (Neue Gruppe...)**\n\n* Kayıt konumu olarak Adım 1'deki gibi ilgili Allplan sürümünün düğümünü, örn. **Allplan 2025** -> **Assistent-STD** (veya Allplan 2023'e kadar **Büro Asistanları (Büro Assistenten)**) seçin, **Dosya adını - örn. Büroasistanları (Dateinamen - z. B. Büroassistenten -)** belirtin ve **Kaydet (Speichern):**\n\nYeni grup, Asistanlar (Assistenten) paletinde görüntülenir.\n\n* Sekmeler alanında kısayol menüsünü (sağ fare tuşu) açın -> **Asistan Aç... (Assistent öffnen...)**\n\n* Kayıt konumu olarak **Büro Asistanları (Büro Assistenten)** konumunu seçin ve ilk asistanı işaretleyin.\n\nAynı yöntemle ikinci asistanınızı ve/veya diğer asistanları da gruba ekleyin. \n \nNot: \nHer bir sekmen …",
+      "figures": [
+        "/akademi/temel-modelleme/8758_0EMVi00000ENjZ3_0940c6fd.png",
+        "/akademi/temel-modelleme/8758_0EMVi00000ENlNx_5b8763ca.png",
+        "/akademi/temel-modelleme/8758_0EMVi00000ENlXd_6052292f.png",
+        "/akademi/temel-modelleme/8758_0EM7U000001Td7D_320d0dcf.png",
+        "/akademi/temel-modelleme/8758_0EM7U000001Td7E_7244d9ea.png",
+        "/akademi/temel-modelleme/8758_0EM7U000001Td7F_780f1849.png"
+      ]
+    },
+    {
+      "id": "de_8872",
+      "title": "[a] Actionbar (Aksiyon Çubuğu) 2018-1-1",
+      "body": "**Soru:** \n \nBu SSS makalesinde, Hotfix 2018-1-1 ile Actionbar (Aksiyon Çubuğu) üzerinde yapılan bazı değişiklikler hakkında sizi bilgilendiriyoruz. Örneğin yapılandırıcı yeniden tasarlanmış ve genişletilmiştir. \nVideo dahil olmak üzere Actionbar (Aksiyon Çubuğu) arayüzü ve kullanımına ilişkin temel açıklamayı [Actionbar'a Giriş](https://connect.allplan.com/de/support/loesungen.html?tx_nemsolution_pi1%5BdokID%5D=20171017153945&tx_nemsolution_pi1%5Baction%5D=index&tx_nemsolution_pi1%5Bcontroller%5D=Solution&cHash=fc247191487f401c768333930320f00d) başlıklı SSS makalesinde bulabilirsiniz. \n \n**Cevap:** \n \n1. Allplan 2018-1 ve önceki sürümlerde kendi oluşturduğunuz Actionbar (Aksiyon Çubuğu) şablonlarını kullanma:\n\na) Güncelleme sırasında yüklü olan Actionbar (Aksiyon Çubuğu): \nAllplan 2018-1-1 güncellemesi sırasında kendi oluşturduğunuz bir Actionbar (Aksiyon Çubuğu) şablonu yüklüyse, bu şablon kural olarak güncellemeden sonra da görüntülenir. Bu işlemde hem değişken hem de sabit alan devralınır. \n \nb) Güncelleme sırasında yüklü olmayan Actionbar (Aksiyon Çubuğu): \nAllplan 2018-1-1 güncellemesi sırasında yüklü olmayan, kendi oluşturduğunuz şablonlar Allplan kullanıcı klasöründe (**Allmenu -> Hizmet (Service) -> Windows Gezgini (Windows Explorer) -> Kendi CAD Belgelerim (USR) (eigene CAD-Dokumente (USR))**) ...\\Actionbar altında XML formatında kaydedilmiştir. \nBunları **Actionbar Yapılandırıcısı (Actionbar-Konfigurator)** -> \"Rolleri Yönet (Rollen verwalten)\" sekmesi –> \"Rolleri İçe Aktar (Rollen importieren)\" alanı üzerinden \"Dosya Aç (Datei öffnen)\" ile yükleyebilirsiniz. İstenen roller daha sonra Sürükle ve Bırak (Drag & Drop) yöntemiyle 'Rollerim (Meine Rollen)' alanına çekilerek içe aktarılabilir. Bu işlemde yalnızca değişken alanlar dikkate alınır. \n \nAlternatif olarak, özellikle hem değişken hem de sabit alanları içe aktarmak istiyorsanız, yukarıdaki kullanıcı klasöründen xml favorisini kopyalayabilir, adını \"configuration.actb\" olarak değiştirebilir ve ...\\Usr\\Local\\Actionbar klasörüne veya Workgroup kurulumunda ...\\Usr\\_Username\\_\\Actionbar klasörüne kopyalayabilirsiniz. Ardından Allplan'ı yeniden başlatın. \n(İpucu: Hala önceki yapılandırma görüntüleniyorsa, lütfen **Actionbar Yapılandırıcısı (Actionbar Konfigurator)** aracını bir kez başlatın ve Kaydet (Speichern!) yerine **İptal (Abbrechen)** düğmesine basın; böylece yapılandırmanın yüklenmesi yeniden tetiklenir). \n \n \n2. V2018-1-1 sürümünde \"Favori Yükle (Favorit laden)\": \nBir Actionbar (Aksiyon Çu …",
+      "figures": [
+        "/akademi/temel-modelleme/8872_0EM7U000001Td2I_eefd0423.png",
+        "/akademi/temel-modelleme/8872_0EM7U000001Td2J_68274a6d.png",
+        "/akademi/temel-modelleme/8872_0EM7U000001Td2K_eefd0423.png",
+        "/akademi/temel-modelleme/8872_0EM7U000001Td2L_eefd0423.png",
+        "/akademi/temel-modelleme/8872_0EM7U000001Td2M_d52e00cb.png"
+      ]
+    }
+  ]
+}

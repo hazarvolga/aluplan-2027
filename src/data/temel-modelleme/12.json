@@ -1,0 +1,102 @@
+{
+  "no": 12,
+  "slug": "doseme-olusturma",
+  "title": "Döşeme Oluşturma",
+  "duration": "02:30",
+  "sourceModule": "Proje 1 — Modül 3: Akıllı Parametrik Mimari Elemanlar ve Döşeme Boşlukları",
+  "objectives": [
+    "Kat dış konturunu yakalayarak parametrik betonarme Döşeme (Slab / Decke) plağı oluşturmak.",
+    "Döşeme kalınlığını kat üst düzlemine bağlamak.",
+    "Merdiven kovası, asansör ve tesisat şaftları için Döşeme Boşluğu (Slab Opening / Deckenöffnung) açmak."
+  ],
+  "steps": [
+    {
+      "time": "00:00 – 01:25",
+      "heading": "Döşeme (Slab / Decke) Kalınlığı ve Poligon Girişi",
+      "body": "**Mimari (Architecture) -> Döşeme (Slab / Decke)** komutunu açın. **Yükseklik (Height)** penceresinden döşeme üst kotunu kat üst düzlemine (`OK = 0.00`), kalınlığını ise `15 cm` veya `20 cm` olarak tanımlayın. Dış duvar köşe noktalarını dönerek veya **Alan Tespiti (Area Detection)** ile dış sınırı tek tıkla yakalayarak döşemeyi oluşturun.",
+      "figures": []
+    },
+    {
+      "time": "01:25 – 02:30",
+      "heading": "Döşeme Boşluğu (Slab Opening / Deckenöffnung) Açma",
+      "body": "**Döşeme Boşluğu, Girintisi (Recess, Opening in Slab / Deckenöffnung)** komutunu seçin, ilgili döşemeye tıklayın ve merdiven kovası ile şaft boşluklarını dikdörtgen veya serbest poligon olarak açın.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Döşeme (Slab / Decke)",
+      "menu": "Mimari (Architecture) -> Elemanlar -> Döşeme (Slab / Decke)",
+      "shortcut": "Döşeme İkonu",
+      "desc": "Poligon sınırları veya Alan Tespiti (Area Detection) ile kat döşeme plağını oluşturur."
+    },
+    {
+      "name": "Döşeme Boşluğu, Girintisi",
+      "menu": "Mimari (Architecture) -> Elemanlar -> Döşeme Boşluğu (Recess, Opening in Slab / Deckenöffnung)",
+      "shortcut": "Döşeme Boşluğu İkonu",
+      "desc": "Döşeme plağı içinde merdiven kovası, galeri boşluğu, baca veya tesisat şaftı boşluğu açar."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "NEUERUNG 2024 - Massivdecke",
+        "file": "2750_vimeo_880849780_f74ab5b6.mp4",
+        "vimeoId": "880849780",
+        "sizeMB": 11.0
+      },
+      {
+        "title": "Document thicknesses of slabs",
+        "file": "7207_vimeo_1018219959_ad6fe254.mp4",
+        "vimeoId": "1018219959",
+        "sizeMB": 11.16
+      }
+    ],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_2750",
+      "title": "YENİLİK 2024 - Masif Döşeme",
+      "body": "Prekast döşeme\n\n#DöşemeElemanlarınaAyırma (#Deckenelementierung)",
+      "figures": []
+    },
+    {
+      "id": "en_7207",
+      "title": "Döşeme kalınlıklarını dokümante etme",
+      "body": "Döşeme kalınlıklarının nasıl görselleştirileceğini ve dokümante edileceğini öğrenin.",
+      "figures": []
+    },
+    {
+      "id": "de_9164",
+      "title": "Nitelikler - Döşeme için genel bakış",
+      "body": "**Soru:** \n \nDöşemelerin diğer nitelikleri nasıl belirlenebilir? \nDöşemelerin etiketlenmesi ve metraj değerlendirmesi için doğrudan hangi nitelikler kullanılabilir? \n \n \n**Arka plan:** \nDöşemenin kendi nitelikleri/özellikleri doğrudan kullanılabilir. \nBoşluklar (delikler, rezervasyonlar/girintiler) gibi döşemeye bağlı alt yapı elemanlarının nitelikleri ek çağrılar (CHILD()) üzerinden değerlendirilebilir. \n \n**Uygulama alanı:** Döşemeler \n \n**Döşeme Etiketleme** \nAşağıdaki bölümlerde doğrudan değerlendirilebilen/etiketlenebilen özellikler gösterilmektedir. \n \n**Döşeme (Decke)** \nÖrneğin aşağıdaki geometrik nitelikler mevcuttur:\n\n| | | |\n|  |  |  |\n| **Nitelik (Attribut)** | **ID** | **Açıklama (Beschreibung)** |\n| Üst kot (Oberkante) | 98 | **OK** ve **Üst kot (Oberkante)** nitelikleri döşemede 0.00 üzerindeki ortalama üst kotu verir. |\n| OK | 113 |\n| Alt kot (Unterkante) | 97 | **UK** ve **Alt kot (Unterkante)** nitelikleri döşemede 0.00 üzerindeki ortalama alt kotu verir. |\n| UK | 112 |\n| Yükseklik (Höhe) | 222 | **Yükseklik (Höhe)**, **ortalama** yapı elemanı yüksekliğini (düşey ölçülen) verir **Mutlak yükseklik (Höhe\\_absolut)**, yapı elemanının alt kotundan en yüksek noktasına kadar olan **maksimum** değerini verir Diğer yapı elemanlarında rahatlıkla kullanılabilen benzer **Uzunluk (Länge)**, **Mutlak uzunluk (Länge\\_absolut)** ve ayrıca **Kalınlık (Dicke)** ve **Mutlak kalınlık (Dicke\\_absolut)** nitelikleri, geometriyi oluşturulan ilk kenardan itibaren yansıtır ve bu nedenle tarafsız bir değerlendirme için kullanılamaz. Bunun arka planında döşemenin, örneğin kirişler veya çok katmanlı duvarlar gibi önceden tanımlanmış bir yönünün/ekseninin olmaması yatar. |\n| Mutlak yükseklik (Höhe absolut) | 224 |\n| | |\n| | |\n| | |\n| | |\n| | |\n| Çevre (Umfang) | 228 | Çevre, kenar uzunluklarının toplamını tanımlar. Bu sırada **tüm** kenarlar dikkate alınır. |\n| | | |\n| Taban alanı (Grundfläche) | 224 | Alan nitelikleri yapı elemanının \"kabuğunu\" farklı şekillerde tanımlar. **Taban alanı (Grundfläche)**, döşemenin tüm alanını yatay izdüşüm alanı olarak verir. Boşluklar bu sırada minha edilmeden (dolu gibi) ölçülür. **Zemin alanı (Bodenfläche)**, döşemenin alt kotuna kadar ulaşan boşluklar düşüldükten sonraki alanı verir. **Tavan/Döşeme alanı (Deckenfläche)**, döşemenin üst kotuna kadar ulaşan boşluklar düşüldükten sonraki alanı verir. **Zemin alanı (Bodenfläche)** ve **Tavan/Döşeme alanı (Deckenfläche)** alt/üst sınırlamanın gerçek yüzeyini verir ve böylece yapı elem …",
+      "figures": [
+        "/akademi/temel-modelleme/9164_0EM7U000001Td7O_b5050b7a.png"
+      ]
+    },
+    {
+      "id": "de_10602",
+      "title": "Çatı - Kat - Ara döşeme oluşturma",
+      "body": "**Soru:** \n \nÇatı katında bir ara döşemeyi nasıl oluşturabilirim? \n \n \n \n**Cevap:** \n \nÇatı katında çatı düzlemine veya çatı yüzeyine (Dachlandschaft) temiz bir şekilde uyum sağlayacak bir ara döşeme oluşturmak istiyorsunuz: \n \n \n \nBunun için aşağıdaki adımları izleyin:\n\n* Önce tüm kat planının üzerine bir döşeme çizin; kot bağlantısı ve doğru yayılım alanı ile sonraki adımlarda ilgileneceksiniz.\n\n \n\n* Bir sonraki adımda döşemenin doğru kot bağlantısını ayarlayın. Bunun için döşemenin üzerine sol çift tıklayın -> **Yükseklik (Höhe)** yolunu izleyin ve aşağıdaki değerleri ayarlayın:\n\n \n\n* 1 için: Buraya çatı düzleminin (veya çatı yüzeyinin) alt kotu ile döşemenin alt kotu arasındaki mesafeyi girin\n* 2 için: Buraya istediğiniz döşeme kalınlığını girin\n* 3 için: Buraya kenar bölgesinin (döşemenin alın yüzeyinin) belirli bir mesafe ile eğimli çatı düzlemine uyum sağlaması gerektiğini girin. Bu örnekte bu mesafe 0,00'dır ve üstteki eğimli düzleme 0,00 mesafe ile birleşen eğimli döşeme bitişini oluşturur.\n\n \n \n \n \n\n**Dikkat**: \ndöşeme artık doğru kot bağlantısıyla çizim dosyasında mevcut olduğundan, muhtemelen aşağıdaki mesaj görünecektir: \n \n \n \nBu mesaj neden görünür? Çünkü oluşturma işlemiyle şimdilik yalnızca bir ara adım inşa ettik; bu ara adım negatife doğru geliştiği için geometrik olarak mümkün olmayan bir 3B yapı elemanı üretir: \n \n \n\n* Bu nedenle şimdi son bir adımda döşemenin kat planındaki yayılım alanının düzenlenmesi gerekir. İlk adımda döşemeyi tüm kat planının üzerinde oluşturmuştunuz. Ancak döşemenin yalnızca çatı eğimine kadar uzanması ve onun ötesine geçmemesi gerektiği açıktır:\n\n* Bunun için kat planı görünümünden bir kalkan duvar (alın) görünüşüne geçin ve şu komutu seçin: **Düzen (Bearbeiten) -> Noktaları Değiştir (Punkte modifizieren).** Güvenilir bir şekilde yalnızca döşemeyi değiştirebilmek için **Mimari Filtresi (Architekturfilter)** (Araç çubuğu: **Filtre Sihirbazı (Filter-Assistent)**) üzerine tıklayın ve **Döşeme (Decke)** öğesini seçin. Bir tarafta döşemenin değiştirilecek kenar bölgesinin etrafına bir seçim penceresi çizin ve seçilen noktaları kenar bölgesinden döşeme alt kotunun eğimli çatı düzlemi ile kesişim noktasına kadar değiştirin (taşıyın).\n\n* Bu adımı diğer tarafta da tekrarlayın. Sonuç istediğiniz gibi görünecektir:\n\n \n \n \n \n \n**Not:** \n \nbazı durumlarda, örneğin bazı girinti ve çıkıntılara sahip döşemelerde, doğru kotlar ayarlandıktan sonra bile döşemenin animasyonda HÂLÂ gösterilmemesi durumu yaşanabilir (ancak kat plan …",
+      "figures": [
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiQ_3445deeb.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiR_9caad228.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiS_c1a4a6cb.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiT_a37e9532.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiU_c72c8b84.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiV_43e9e984.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiW_71755a0a.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiX_6218db6e.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiY_91aae5ca.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiZ_7f5d3c20.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001Tdia_3a754729.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001Tdib_5ef44f7c.png",
+        "/akademi/temel-modelleme/9164_0EM7U000001Td7M_14d28b02.png",
+        "/akademi/temel-modelleme/9164_0EM7U000001Td7L_d8867246.png",
+        "/akademi/temel-modelleme/9164_0EM7U000001Td7N_eca6d3ed.png"
+      ]
+    }
+  ]
+}

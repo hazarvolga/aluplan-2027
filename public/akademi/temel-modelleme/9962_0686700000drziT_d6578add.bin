@@ -1,0 +1,46 @@
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+
+
+
+
+
+<script>
+function redirectOnLoad() {
+if (this.SfdcApp && this.SfdcApp.projectOneNavigator) { SfdcApp.projectOneNavigator.handleRedirect('https://allplan.my.salesforce.com?ec=302&startURL=%2Fvisualforce%2Fsession%3Furl%3Dhttps%253A%252F%252Fallplan.lightning.force.com%252Fcontent%252Fsession%253Furl%253Dhttps%25253A%25252F%25252Fallplan.file.force.com%25252Fsfc%25252Fservlet.shepherd%25252Fversion%25252Fdownload%25252F0686700000drziT%25253FasPdf%25253Dfalse%252526amp%2525253BoperationContext%25253DCHATTER'); }  else 
+if (window.location.replace){ 
+window.location.replace('https://allplan.my.salesforce.com?ec=302&startURL=%2Fvisualforce%2Fsession%3Furl%3Dhttps%253A%252F%252Fallplan.lightning.force.com%252Fcontent%252Fsession%253Furl%253Dhttps%25253A%25252F%25252Fallplan.file.force.com%25252Fsfc%25252Fservlet.shepherd%25252Fversion%25252Fdownload%25252F0686700000drziT%25253FasPdf%25253Dfalse%252526amp%2525253BoperationContext%25253DCHATTER');
+} else {
+window.location.href ='https://allplan.my.salesforce.com?ec=302&startURL=%2Fvisualforce%2Fsession%3Furl%3Dhttps%253A%252F%252Fallplan.lightning.force.com%252Fcontent%252Fsession%253Furl%253Dhttps%25253A%25252F%25252Fallplan.file.force.com%25252Fsfc%25252Fservlet.shepherd%25252Fversion%25252Fdownload%25252F0686700000drziT%25253FasPdf%25253Dfalse%252526amp%2525253BoperationContext%25253DCHATTER';
+} 
+} 
+redirectOnLoad();
+</script>
+
+</head>
+
+
+</html>
+
+
+
+
+
+<!-- Body events -->
+<script type="text/javascript">function bodyOnLoad(){if(window.PreferenceBits){window.PreferenceBits.prototype.csrfToken="null";};}function bodyOnBeforeUnload(){}function bodyOnFocus(){}function bodyOnUnload(){}</script>
+			
+</body>
+</html>
+
+
+<!--
+...................................................................................................
+...................................................................................................
+...................................................................................................
+...................................................................................................
+-->

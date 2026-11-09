@@ -1,0 +1,15 @@
+.page{padding-bottom:var(--space-stack-xl)}
+.breadcrumb{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-inline-xs);font-size:var(--type-body-sm-size);color:var(--text-secondary);padding:var(--space-stack-md) 32px 0}
+.breadcrumb a{color:var(--text-secondary);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent-akademi)}
+.sep{color:var(--text-muted)}
+
+.band{padding-block:var(--space-stack-xl)}
+.lessons{list-style:none;margin:var(--space-stack-lg) 0 0;padding:0;display:flex;flex-direction:column;gap:0;max-width:52rem}
+.lesson{margin:0}
+.lessonLink{display:flex;align-items:baseline;gap:var(--space-inline-md);padding:var(--space-stack-md) 0;border-top:var(--border-width-default) solid var(--border-default);text-decoration:none;color:var(--text-primary)}
+.lesson:last-child .lessonLink{border-bottom:var(--border-width-default) solid var(--border-default)}
+.lessonLink:hover .lessonTitle{color:var(--accent-akademi)}
+.no{font-family:var(--font-mono);font-size:var(--type-body-sm-size);color:var(--text-muted);flex:none;width:2rem}
+.lessonTitle{flex:1 1 auto;font-family:var(--font-heading);font-size:var(--type-body-lg-size,1.125rem)}
+.duration{flex:none;font-family:var(--font-mono);font-size:var(--type-body-sm-size);color:var(--text-muted)}

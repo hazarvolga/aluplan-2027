@@ -1,0 +1,121 @@
+{
+  "no": 1,
+  "slug": "giris-bim-felsefesi",
+  "title": "Giriş — ALLPLAN BIM Felsefesi ve Modelleme İş Akışı",
+  "duration": "Giriş",
+  "sourceModule": "Proje 1 — Modül 1: Arayüz Mimarisi, WPF Çerçevesi ve Temel Navigasyon",
+  "objectives": [
+    "Allplan'da 2B CAD çizimi ile 3B parametrik BIM modellemenin tek veri tabanında nasıl birleştiğini kavramak.",
+    "Proje -> Bina Strüktürü (Building Structure / Bauwerksstruktur) -> Çizim Dosyası (Drawing File / Teilbild) -> Katman (Layer) çalışma hiyerarşisini öğrenmek.",
+    "Eğitim boyunca sıfırdan modellenecek örnek binanın (Aks, Duvar, Kapı/Pencere, Kolon/Kiriş, Döşeme, Merdiven, Temel, Kat Kopyalama ve Çatı) iş akışını tanımak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "01. CAD'den BIM'e Geçiş ve Akıllı Yapı Elemanları",
+      "body": "Allplan'da çizilen her duvar, kolon, kiriş veya döşeme yalnızca 2B çizgilerden ibaret değildir; katman kalınlığı, malzeme/imalat kalemi (**Gewerk / Trade**), öncelik numarası (**Priorität / Priority**), yangın dayanımı ve metraj formüllerini içinde barındıran parametrik birer BIM nesnesidir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "02. Dört Katmanlı Veri Organizasyonu",
+      "body": "**Proje (Project)** en üst kapsayıcıdır. Proje içinde **Bina Strüktürü (Building Structure / Bauwerksstruktur)** katları ve düzlemleri yönetir; **Çizim Dosyaları (Drawing Files / Teilbilder)** disiplin/kat bazlı çalışma paftalarını ayırır; **Katmanlar (Layers)** ise aynı çizim dosyası içindeki bileşenlerin (örn. duvar taraması, ölçü çizgisi, tefriş) görünürlüğünü kontrol eder.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "03. Modelden Otomatik Kesit, Görünüş ve Metraj Üretimi",
+      "body": "Temel modelleme adımları tamamlandığında planda yapılan her revizyon **İlişkisel Görünüşler ve Kesitler (Associative Views and Sections)** ile metraj raporlarına anında yansır.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Proje (Project)",
+      "menu": "Dosya (File) -> Yeni Proje, Proje Aç... (New Project, Open Project...)",
+      "shortcut": "Ctrl+O",
+      "desc": "Bina modeli, çizim dosyaları, paftalar ve ofis/proje kaynaklarını barındıran en üst veri kapsayıcısı."
+    },
+    {
+      "name": "Bina Strüktürü (Building Structure)",
+      "menu": "Proje Bazında Aç (Open on a Project-Specific Basis) -> Bina Strüktürü (Building Structure)",
+      "shortcut": "Çift Sol Tık",
+      "desc": "Binayı katlara (Bodrum, Zemin, Normal Kat, Çatı) ve görünüş/kesit/rapor düğümlerine ayıran BIM ağacı."
+    },
+    {
+      "name": "Çizim Dosyası (Drawing File / Teilbild)",
+      "menu": "Proje Bazında Aç (Open on a Project-Specific Basis)",
+      "shortcut": "Ctrl+Alt+O",
+      "desc": "AutoCAD'deki tek dosya mantığından farklı olarak her katın ve disiplinin ayrı numaralı çalışma birimi (1..9999)."
+    },
+    {
+      "name": "Katman (Layer)",
+      "menu": "Biçim (Format) -> Katman Seç, Ayarla (Select, Set Layers)",
+      "shortcut": "Ctrl+4",
+      "desc": "Çizim dosyası içindeki alt bileşenlerin (duvar katmanı, ölçü, yazı, tarama) görünürlük ve yetki katmanı."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Projektorganisation - Teil 1",
+        "file": "2960_vimeo_764095193_4243feb2.mp4",
+        "vimeoId": "764095193",
+        "sizeMB": 19.4
+      },
+      {
+        "title": "New features in Allplan 2024 - Attribute sets",
+        "file": "2758_vimeo_880809738_8f272a3f.mp4",
+        "vimeoId": "880809738",
+        "sizeMB": 13.49
+      }
+    ],
+    "pdfs": [
+      "2866_Allplan_2022_Tut_Architektur_7e6e203e.pdf",
+      "2964_Allplan_BIM_Kompendium_4_IFC4_0ef0cc85.pdf",
+      "2828_Allplan_2023.1_Installation_cbb2a1ca.pdf"
+    ],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_2960",
+      "title": "Proje organizasyonu - Bölüm 1",
+      "body": "Bu video Allplan'da proje organizasyonu hakkındadır.",
+      "figures": []
+    },
+    {
+      "id": "de_8605",
+      "title": "Bimplus'ta doğru proje başlangıcı",
+      "body": "Bimplus'ta hesapla oturum açma (hesap **Ekip Sahibi (Teaminhaber)** veya **Ekip Yöneticisi (Teamadministrator)** rolüne sahip olmalıdır).\n\nÜlke koordinatlarında coğrafi referanslı olarak çalışılacaksa:\n\nAllplan'daki proje sıfır noktasını kullanın\n\nYalnızca Bimplus ile çalışılıyorsa (Allplan'da model yoksa, modeller başka kaynaklardan geliyorsa): Modelin yakınında bir nokta seçin.\n\nBIM projelerinde bu sıfır noktası BEP'te (BIM Uygulama Planı) belirtilmiş olmalıdır.\n\nBimplus'ta Offset (sıfır noktası) ayarlama\n\nÖnemli: Bir modelin ilk yüklemesinden (Upload) önce yapılmalıdır",
+      "figures": [
+        "/akademi/temel-modelleme/8605_0EMVi00000F0rF1_35ceeb6d.png",
+        "/akademi/temel-modelleme/8605_0EMVi00000F0tqH_8adbb57e.png",
+        "/akademi/temel-modelleme/8605_0EMVi00000F0trt_ecb785bb.png",
+        "/akademi/temel-modelleme/8605_0EMVi00000F0tn3_9cab8fe8.png",
+        "/akademi/temel-modelleme/8605_0EMVi00000F0tof_fe8045cd.png"
+      ]
+    },
+    {
+      "id": "de_8645",
+      "title": "Dışa Aktarma - IFC - Nitelik Eşleme (Attribute-Mapping)",
+      "body": "**Amaç:** IFC dışa aktarmak ve nitelikleri istenen veya önceden belirlenmiş bir Propertyset (Pset, Özellik Seti) içine eşlemek (mappen) ve gerekirse yeniden adlandırmak. **İşlem Adımları:** **Dosya (Datei)**, **Dışa Aktar (Exportieren)** altından «**IFC Verilerini Dışa Aktar (IFC-Daten exportieren)**» komutunu seçin. image.png İpucu: Öncesinde çizim dosyalarını seçerseniz, halihazırda yüklü olan çizim dosyaları seçilmiş olur. Metin, yazılım, yazı tipi, sayı içeren bir resim. Otomatik oluşturulan açıklama **Seçenekler (Optionen)** öğesini seçin\n--\n\n**Değişim Profilleri (Austauschprofile)** sekmesinde çeşitli hazır dışa aktarma favorileri bulunur.\n\nAşağıdaki ayarlar önerilir \n \n \n**Nitelik Eşleme (Attribute-Mapping):** \n \n«**Yeni (Neu)**» aracılığıyla yeni bir eşleme dosyası (Nitelik Eşleme (Attributzuordnung)) oluşturup `.cfg` dosyası olarak kaydedin veya «**Ara (Suchen)**» üzerinden mevcut bir eşleme dosyasını yükleyin (1.) \n«**Düzenle (Bearbeiten)**» aracılığıyla mevcut bir eşleme dosyasını uyarlayabilirsiniz (2.). \n   \n \n**Nitelik Eşleme (Attribute-Mapping)** ekranı \n \n \n1. Yeni nitelik (satır) ekleme \n2. Eşlenecek olan istenen niteliği, nitelik maskesi üzerinden veya doğrudan metin olarak (adlandırma birebir aynı olmalıdır) atama \n3. İstenen Propertyset (Pset) adını girme \n4. IFC içinde istenen nitelik adını girme (nitelik IFC içinde Allplan'dakinden farklı adlandırılabilir) \n5. IFC içindeki niteliğin biçimini girme (normalde doğrudan doğru şekilde belirtilir) \n6. Nitelik atamasını belirli bir elemana (IFC sınıfı) özel olarak oluşturma olanağı\n\n**Birimli Nitelikleri (Metrajları) Dışa Aktarma**\n\nIFC dışa aktarma işleminde kendi Nitelik Eşleme (Attribut Mapping) yapınızı kullanıyorsanız ve birimlerin de IFC dosyasına yazılmasını istiyorsanız, \"Ifc Property Type\" (ilgili niteliğin veri tipi) değerinin uygun şekilde belirtilmesi önemlidir. \nBunu örneğin (kendi eşlemeniz olmadan) oluşturulmuş bir IFC dosyasını bir metin düzenleyici (editör) ile açıp ilgili kullanıcı tanımlı nitelikleri arayarak da kontrol edebilirsiniz. Orada doğru \"Ifc Property Type\" kayıtlıdır ve kendi eşlemenizde de birebir aynı şekilde belirtebilirsiniz. \nİşte bir örnek:\n\n \n \nYani uzunluklar için **IfcLengthMeasure**, alanlar için **IfcAreaMeasure** ve hacimler için **IfcVolumeMeasure** kullanırsanız, veriler m, m² ve m³ cinsinden aktarılır (lütfen dikkat edin: IFC dosyasını bir görüntüleyici (Viewer) ile incelediğinizde, görüntüleyicinin seçeneklerinde ayarlanan birimler esas alınır. Or …",
+      "figures": [
+        "/akademi/temel-modelleme/8645_0EMVi00000F0rYL_c118a4ef.png",
+        "/akademi/temel-modelleme/8645_0EMVi000002R9xL_cc25b108.png",
+        "/akademi/temel-modelleme/8645_0EMVi000002R9xM_29f8e5f0.png",
+        "/akademi/temel-modelleme/8645_0EMVi000002R9xN_c8fbe5ef.png",
+        "/akademi/temel-modelleme/8645_0EM670000075i7H_b048d9d1.png"
+      ]
+    },
+    {
+      "id": "en_2758",
+      "title": "Allplan 2024'teki yeni özellikler - Nitelik setleri (Attribute sets)",
+      "body": "Nitelik seti tanımı ve IFC bağlantısı\n\n\n\n## F. Ek Uygulama Ekran Görüntüleri Galerisi\n\n#### `8645_0EMVi000002R9xK_bf5274ba.png` — Export - IFC - Attribute-Mapping\n\n#### `8645_0EMVi000002RAbd_2f9fdf11.png` — Export - IFC - Attribute-Mapping",
+      "figures": [
+        "/akademi/temel-modelleme/8645_0EMVi000002R9xK_bf5274ba.png",
+        "/akademi/temel-modelleme/8645_0EMVi000002RAbd_2f9fdf11.png"
+      ]
+    }
+  ]
+}

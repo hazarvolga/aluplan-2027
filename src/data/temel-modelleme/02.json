@@ -1,0 +1,113 @@
+{
+  "no": 2,
+  "slug": "proje-olusturma",
+  "title": "Allplan ile Proje Oluşturma ve Başlangıç Ayarları",
+  "duration": "03:52",
+  "sourceModule": "Proje 1 — Modül 2: Proje Yapılandırması, Hiyerarşik Bina Strüktürü ve Çizim Dosyaları",
+  "objectives": [
+    "Yeni Proje oluşturma sihirbazını kullanarak standartlara uygun bir proje açmak.",
+    "Ofis (Office) ve Proje (Project) standartlarını (Katman, Çizgi Tipi, Tarama, Nitelik Setleri) yapılandırmak.",
+    "Çalışma birimi, referans ölçek ve Büyük Koordinatlar (Large Coordinates / Große Koordinaten) ofset ayarlarını yapmak."
+  ],
+  "steps": [
+    {
+      "time": "00:00 – 01:10",
+      "heading": "Yeni Proje Sihirbazını Başlatma",
+      "body": "**Dosya (File) -> Yeni Proje, Proje Aç... (New Project, Open Project...)** (`Ctrl+O`) komutuna tıklayın. Açılan pencerede **Yeni Proje (New Project)** butonuna basarak proje adını ve kayıt konumunu (Yerel / Workgroup / Allplan Share) belirleyin.",
+      "figures": []
+    },
+    {
+      "time": "01:10 – 02:25",
+      "heading": "Şablon ve Kaynak Ayarları (Ofis vs. Proje)",
+      "body": "Ülke standardını ve varsa kurumsal **Proje Şablonunu (Project Template)** seçin. **Katman Yapıları (Layer structures)**, **Çizgi Tipleri (Line types)** ve **Yüzey Stilleri (Surface styles)** için **Proje (Project)** seçeneğini işaretleyerek projenin kendi ayarlarıyla bağımsız taşınabilir olmasını sağlayın.",
+      "figures": []
+    },
+    {
+      "time": "02:25 – 03:52",
+      "heading": "Proje Nitelikleri, Ölçek, Birim ve Koordinat Kontrolü",
+      "body": "**Proje Nitelikleri (Project Attributes / Projektattribute)** listesinden yapı adı, mimar/statik mühendisi, adres ve yönetmelik bilgilerini doldurun. Durum çubuğundan uzunluk birimini (`cm` veya `m`) ve referans ölçeği (`1:100`) kontrol edin. Harita/kadastro altlığı kullanılacaksa **Seçenekler (Options) -> Çalışma Ortamı (Desktop Environment) -> Büyük Koordinatlarla Çalışmayı Optimize Et (Optimize working with large coordinates)** seçeneğini aktif edin.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Yeni Proje, Proje Aç",
+      "menu": "Dosya (File) -> Yeni Proje, Proje Aç... (New Project, Open Project...)",
+      "shortcut": "Ctrl+O",
+      "desc": "Yeni proje oluşturma sihirbazını veya mevcut projeler listesini açar."
+    },
+    {
+      "name": "Proje Ayarları / Nitelikleri",
+      "menu": "Proje Yöneticisi -> Sağ Tık -> Özellikler (Properties) -> Proje Nitelikleri (Project Attributes)",
+      "shortcut": "Sağ Tık",
+      "desc": "Yapı adı, yatırımcı, proje numarası, deprem/rüzgar bölgesi ve IFC niteliklerinin girildiği tablo."
+    },
+    {
+      "name": "Büyük Koordinat Optimizasyonu",
+      "menu": "Araçlar (Tools) -> Seçenekler (Options) -> Çalışma Ortamı (Desktop Environment)",
+      "shortcut": "Alt+O",
+      "desc": "UTM/ITRF gibi yüksek koordinatlı harita verilerinde grafik sapmaları önlemek için merkez ofseti tanımlar."
+    },
+    {
+      "name": "Ölçek ve Uzunluk Birimi",
+      "menu": "Durum Çubuğu (Status Bar) -> Ölçek (Scale) / Uzunluk (Length)",
+      "shortcut": "Alt Çubuk",
+      "desc": "Çalışma birimini (`m`, `cm`, `mm`) ve referans çizim ölçeğini (`1:100`, `1:50`) anlık değiştirir."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Create Project",
+        "file": "3312_vimeo_886401193_997ddcf1.mp4",
+        "vimeoId": "886401193",
+        "sizeMB": 37.31
+      },
+      {
+        "title": "Projekt erstellen",
+        "file": "3303_vimeo_880814473_3e9229f5.mp4",
+        "vimeoId": "880814473",
+        "sizeMB": 39.08
+      },
+      {
+        "title": "Große Koordinaten",
+        "file": "10582_youtube_e-3QJ0HTPrA_873d3a39.mp4",
+        "vimeoId": "",
+        "sizeMB": 21.75
+      }
+    ],
+    "pdfs": [
+      "2866_Allplan_2022_Tut_Architektur_7e6e203e.pdf"
+    ],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "en_3312",
+      "title": "Proje oluşturma, modelleri yükleme ve görselleştirme hakkında bilgiler.",
+      "body": "# Proje oluşturma, modelleri yükleme ve görselleştirme hakkında bilgiler.",
+      "figures": []
+    },
+    {
+      "id": "de_3303",
+      "title": "Proje oluşturma, modellerin yüklenmesi ve görselleştirilmesi hakkında bilgiler.",
+      "body": "# Proje oluşturma, modellerin yüklenmesi ve görselleştirilmesi hakkında bilgiler.",
+      "figures": []
+    },
+    {
+      "id": "de_10582",
+      "title": "Große Koordinaten",
+      "body": "- **Kaynak URL (Alındığı Adres):** https://learnnow.allplan.com/totara/engage/resources/howto/index.php?id=10582&source=howto\n- **Kaynak ID (`resource_id`):** `10582`\n- **Resmi Salesforce / Allplan KB No:** `000007681-de`\n- **İçerik Tipi:** `knowledge_article`\n- **Dil:** `de`\n- **Kategori Ağacı:** `ALLPLAN > Allgemein > Optionen, Definitionen`\n- **Geçerli Allplan Sürümleri:** `ALLPLAN 2025, ALLPLAN 2024, ALLPLAN 2023, ALLPLAN 2022, ALLPLAN 2021, ALLPLAN 2020, ALLPLAN 2019, ALLPLAN 2018`\n- **Yazar & Tarih:** Erstellt am 17. Juli 2022, 17:56. Zuletzt aktualisiert am 27. Februar 2024, 15:52. | Owner: Salesforce Integration\n- **Doğrudan PDF Kılavuz URL:** -\n- **Eğitim Videosu / Webinar URL:** -\n- **İndirilen PDF, Örnek Dosya ve Ekran Görüntüleri (3 Adet):**\n - [VIDEO] `10582_youtube_e-3QJ0HTPrA_873d3a39.mp4` (22276.25 KB | Orjinal URL: https://www.youtube.com/watch?v=e-3QJ0HTPrA | SHA-256: `873d3a3981e67c9d...`)\n - [SCREENSHOT] `10582_0EM7U000001TexT_67477a1f.png` (5.33 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/10582/0EM7U000001TexT.png | SHA-256: `67477a1f24853b03...`)\n - [SCREENSHOT] `10582_0EM7U000001TexS_7e443124.png` (9.01 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/10582/0EM7U000001TexS.png | SHA-256: `7e4431240cb5dd8a...`)\n\n\n\n**Frage:**\n\n* Warum lassen sich Elemente nicht erzeugen?\n* Aus welchem Grund kann eine Zeichnung nicht verschoben werden?\n* Warum werden Elemente fehlerhaft erzeugt?\n* Wieso erhalte ich einen Absturz beim Import einer DXF-Datei vom Katasteramt?\n* Wieso wird die Kontur einer umfahrenen Fläche nicht korrekt erkannt?\n* Warum funktioniert die Schattenberechnung nicht, bzw. stürzt ab?\n* Warum werden Elemente in der Animation nicht korrekt dargestellt?\n* Warum fehlen zum Teil die Maßzahlen?\n* Wieso dreht sich der Bildschirmausschnitt plötzlich?\n* Wieso haben Elemente beim Verschieben/Kopieren keinen Preview?\n* Warum erfolgen Flächenberechnungen nicht korrekt?\n\n \n**Ursache:** \nDas System kann bei sehr großen Koordinaten die Daten teilweise nicht richtig berechnen bzw. darstellen. Dieser Effekt wird stärker, je mehr Daten an einem so weit entfernten Punkt erzeugt werden. \n \nWählen Sie die Funktion **Extras** -> **Messen****1**(->) **Koordinaten**. \nKlicken Sie im Grundriss mitten in die betroffene Zeichnung. \nSollten hier sehr große Werte bei den Koordinaten ohne Offset (z.B. x/y/z größer 5000 m) angezeigt werden, so können oben genann …",
+      "figures": [
+        "/akademi/temel-modelleme/10582_0EM7U000001TexS_7e443124.png",
+        "/akademi/temel-modelleme/10582_0EM7U000001TexT_67477a1f.png"
+      ]
+    },
+    {
+      "id": "de_10890",
+      "title": "Nitelikler - Proje nitelikleri kaydedilmiyor",
+      "body": "**Soru:** \n \nYeni oluşturulan proje nitelikleri neden kaydedilmiyor? \n \n \n \n**Cevap:** \n \nWindows yetki sorunları nedeniyle **AllplanProjectDB.db3** dosyasına yazma işlemi yapılamamaktadır. Bu durum, yeni oluşturulan proje niteliklerinin kaydedilmemesine yol açar. \n \n \n \n**Not:** \n \nProje niteliklerine ilişkin kayıtlar öncelikle bir Allplan kurulumunun PRJ klasöründe veya Net klasöründe (Workgroupmanager) bulunan AllplanProjectDB.db3 dosyasına ve ayrıca ilgili Allplan projesindeki PrjAtt.dat dosyasına kaydedilir; bu dosya bilgileri AllplanProjectDB.db3 dosyasından alır. Bir projede **PrjAtt.dat** dosyası artık mevcut değilse, Allplan her durumda ilgili bilgileri db3 dosyasından okur. Burada proje nitelikleri ayarlarının projeye özel mi yoksa büroya özel mi ayarlandığının bir önemi yoktur. \n \nAllplanProjectDB.db3 dosyası artık mevcut değilse ancak **PrjAtt.dat** dosyası projede hala mevcutsa, bir projenin proje nitelikleri \"**updprjattr**\" (**Allmenu -> Servis (Service) -> Hotline Araçları (Hotlinetools) -> updprjattr**) hotline aracı çalıştırılarak tekrar kullanıma sunulabilir.",
+      "figures": []
+    }
+  ]
+}

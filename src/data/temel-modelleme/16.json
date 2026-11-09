@@ -1,0 +1,186 @@
+{
+  "no": 16,
+  "slug": "cati-elemanlari",
+  "title": "Çatı ve Çatı Elemanları Oluşturma",
+  "duration": "07:48",
+  "sourceModule": "Proje 1 — Modül 3: Parametrik Çatı Düzlemi, Çatı Kaplaması ve Ahşap Karkas",
+  "objectives": [
+    "Çatı Düzlemi (Roof Frame / Dachlandschaft) ile eğimli çatı zarfı (Beşik Çatı, Kırma Çatı) oluşturmak.",
+    "Çatı katı duvar ve kolonlarının üst kotunu çatı düzlemine bağlayarak eğimli kesilmesini sağlamak.",
+    "Çok katmanlı Çatı Kaplaması (Roof Covering / Dachhaut), Güvercinlik (Dormer / Gaube), Çatı Penceresi ve Mertek/Aşık (Rafters/Purlins) elemanlarını modellemek."
+  ],
+  "steps": [
+    {
+      "time": "00:00 – 02:30",
+      "heading": "Çatı Düzlemi (Roof Frame / Dachlandschaft) ve Eğim Atama",
+      "body": "**Mimari (Architecture) -> Çatı Düzlemi (Roof Frame / Dachlandschaft)** komutunu açın. Bina dış konturundan saçak taşması (`örn. 60 cm`) vererek çatı sınırını çizin. Saçak kenarlarına tıklayarak çatı eğimini (`30°` veya `%33`) ve saçak kotunu uygulayın.",
+      "figures": []
+    },
+    {
+      "time": "02:30 – 04:30",
+      "heading": "Duvar ve Kolonların Çatı Eğimine Bağlanması",
+      "body": "Çatı düzlemi çiftlerini çatı katı çizim dosyalarına atayın; kalkan duvarların **Üst Kotunu (OK)** üst çatı düzlemiyle ilişkilendirerek duvarların çatı eğimine göre otomatik kırpılmasını sağlayın.",
+      "figures": []
+    },
+    {
+      "time": "04:30 – 06:15",
+      "heading": "Çatı Kaplaması (Roof Covering), Güvercinlik ve Çatı Penceresi",
+      "body": "**Çatı Kaplaması (Roof Covering / Dachhaut)** komutuyla çok katmanlı çatı örtüsünü (kiremit + yalıtım + kaplama tahtası) oluşturun. **Güvercinlik (Dormer / Gaube)** ve **Çatı Penceresi SmartPart (Skylight)** komutlarıyla çatıya doğal aydınlatma elemanları ekleyin.",
+      "figures": []
+    },
+    {
+      "time": "06:15 – 07:48",
+      "heading": "Ahşap/Çelik Çatı Elemanları (Mertek, Aşık, Mahya)",
+      "body": "**Mertek (Rafters / Sparren)** ve **Aşık / Mahya Kirişi (Purlin, Ridge Beam / Pfette)** araçlarıyla çatı düzlemi altına taşıyıcı mertek dizilerini ve aşık kirişlerini otomatik yerleştirin.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Çatı Düzlemi (Roof Frame)",
+      "menu": "Mimari (Architecture) -> Düzlemler -> Çatı Düzlemi (Roof Frame / Dachlandschaft)",
+      "shortcut": "Çatı Grubu",
+      "desc": "Saçak konturu, eğim açısı ve saçak/mahya kotlarıyla 3B parametrik çatı referans düzlemini üretir."
+    },
+    {
+      "name": "Güvercinlik (Dormer / Gaube)",
+      "menu": "Mimari (Architecture) -> Düzlemler -> Güvercinlik (Dormer / Gaube)",
+      "shortcut": "Çatı Grubu",
+      "desc": "Mevcut çatı düzlemi üzerine beşik, kırma veya tonoz çatı güvercinliği (Gaube) düzlemi ekler."
+    },
+    {
+      "name": "Çatı Kaplaması (Roof Covering)",
+      "menu": "Mimari (Architecture) -> Elemanlar -> Çatı Kaplaması (Roof Covering / Dachhaut)",
+      "shortcut": "Çatı Kaplama İkonu",
+      "desc": "Çatı düzlemini referans alarak çok katmanlı çatı örtüsünü (kiremit, yalıtım, kaplama) modeller."
+    },
+    {
+      "name": "Mertek / Aşık / Mahya Kirişi",
+      "menu": "Mimari (Architecture) -> Ahşap Çatı Karkası -> Mertek (Rafters / Sparren) / Aşık (Purlin / Pfette)",
+      "shortcut": "Ahşap Karkas Grubu",
+      "desc": "Çatı eğimi altında taşıyıcı ahşap/çelik mertek dizilerini, damlalık/orta/mahya aşıklarını ve dikmeleri yerleştirir."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Dach - Dachformen und Gaubenformen - Übersicht",
+        "file": "10933_youtube_7Jk3EfEExsE_601078f5.mp4",
+        "vimeoId": "",
+        "sizeMB": 125.66
+      },
+      {
+        "title": "Dach - Dachformen und Gaubenformen - Übersicht",
+        "file": "10933_youtube_wP26jFW3cWA_e13ef0ec.mp4",
+        "vimeoId": "",
+        "sizeMB": 66.84
+      },
+      {
+        "title": "Add-On Varianten-Profil - Spezialdach Leimträgern",
+        "file": "12535_vimeo_1234079888_abe10410.mp4",
+        "vimeoId": "1234079888",
+        "sizeMB": 95.51
+      },
+      {
+        "title": "Add-On Profilbauteile - Trapezbleche Dachpaneelen",
+        "file": "12676_vimeo_1234995190_eb8cc111.mp4",
+        "vimeoId": "1234995190",
+        "sizeMB": 68.13
+      }
+    ],
+    "pdfs": [
+      "2866_Allplan_2022_Tut_Architektur_7e6e203e.pdf"
+    ],
+    "samples": [
+      "11353_2025_-_Darstellung_Sparrenlage_in_Dachgeschoss_070f8367.zip",
+      "11353_20191230101505_DE_1_d7428f4d.zip",
+      "11353_2023_-_Darstellung_Sparrenlage_in_Dachgeschoss_7ea236c2.zip"
+    ]
+  },
+  "articles": [
+    {
+      "id": "de_10933",
+      "title": "Çatı - Çatı Formları ve Çatı Penceresi (Güvercinlik) Formları - Genel Bakış",
+      "body": "**Soru:** ALLPLAN'da hangi çatı ve çatı penceresi (güvercinlik) formları oluşturulabilir ve modelleme için uygun kılavuzu nerede bulabilirim?\n\n**Cevap:** ALLPLAN'da çeşitli çatı ve çatı penceresi (güvercinlik) formları oluşturulabilir. Aşağıda genel bir bakış yer almaktadır:\n\n[How to Webinar: Düzlemler ve Çatı Yüzeyleri (Ebenen und Dachlandschaften)](https://www.youtube.com/watch?v=7Jk3EfEExsE)\n\n[Webinar: Yeni Çatı Yüzeyi (Die neue Dachfläche)](https://www.youtube.com/watch?v=wP26jFW3cWA)\n\n**1. Çatı Formları Genel Bakış**\n\n| | |\n|  |  |\n| [Beşik Çatı (Satteldach)](https://allplan.my.site.com/Customer/s/article/Dachformen-Satteldach-erstellen?name=Dachformen-Satteldach-erstellen&amp;language=de) | [Sundurma / Uzatma Çatı (Schleppdach)](https://allplan.my.site.com/Customer/s/article/Dachformen-Schleppdach-erstellen?name=Dachformen-Schleppdach-erstellen&amp;language=de) |\n| [Tek Eğimli / Sundurma Çatı (Pultdach)](https://allplan.my.site.com/Customer/s/article/Dachformen-Pultdach-erstellen?name=Dachformen-Pultdach-erstellen&amp;language=de) | [Testere Dişi / Şed Çatı (Sheddach)](https://allplan.my.site.com/Customer/s/article/Dachformen-Sheddach-erstellen?name=Dachformen-Sheddach-erstellen&amp;language=de) |\n| [Mansard Çatı (Mansarddach)](https://allplan.my.site.com/Customer/s/article/Dachformen-Mansarddach-erstellen?name=Dachformen-Mansarddach-erstellen&amp;language=de) | [Kırma Çatı (Walmdach)](https://allplan.my.site.com/Customer/s/article/Dachformen-Walmdach-erstellen?name=Dachformen-Walmdach-erstellen&amp;language=de) |\n| [Yarım Kırma Çatı (Krüppelwalmdach)](https://allplan.my.site.com/Customer/s/article/Dachformen-Kr%C3%BCppelwalmdach-erstellen?name=Dachformen-Kr%C3%BCppelwalmdach-erstellen&language=de) | [Havalandırma Boşluklu Yarım Kırma Çatı (Krüppelwalmdach mit Eulenloch)](https://allplan.my.site.com/Customer/s/article/Dachformen-Kr%C3%BCppelwalmdach-mit-Eulenloch-erstellen?name=Dachformen-Kr%C3%BCppelwalmdach-mit-Eulenloch-erstellen&language=de) |\n| [Dairesel Saçaklı Çatı (Dach mit kreisförmiger Traufe)](https://allplan.my.site.com/Customer/s/article/Dachformen-Dach-mit-kreisf%C3%B6rmigen-Traufe-erstellen?name=Dachformen-Dach-mit-kreisf%C3%B6rmigen-Traufe-erstellen&language=de) | [Kubbe Çatı (Kuppeldach)](https://allplan.my.site.com/Customer/s/article/Dachformen-Kuppeldach-erstellen?name=Dachformen-Kuppeldach-erstellen&language=de) |\n| [Haç Çatı (Kreuzdach)](https://allplan.my.site.com/Customer/s/article/Dachformen-Kreuzdach-erstellen?name=Dachformen …",
+      "figures": []
+    },
+    {
+      "id": "de_9135",
+      "title": "Çatı - İki kat boyunca devam eden çatı düzlemi",
+      "body": "**Soru:** \n \nAllplan'da içinde 2 kat bulunacak eğimli bir çatı için çatı düzlemi (Dachebene) nasıl oluşturulur? \n \n \nÖrnekler: \n \n \n \n \n \n \n \n**Cevap:** \n \nBöyle bir çatı düzlemi için de aşağıdakilerin bir kombinasyonunu öneriyoruz:\n\n* **Yapı Strüktürü (Bauwerkstruktur) ile çalışma** ve\n* **Çatı Peyzajı / Genel Çatı Düzlemi (Dachlandschaft)** kullanımı.\n\nProsedüre genel bakış: \n \n1. Çatı düzlemi oluşturma \n2. Çatı düzleminden çatı peyzajı (Dachlandschaft) oluşturma \n3. Çatı peyzajını ilgili katlara (Yapı Strüktürü / BWS içindeki strüktür düğümlerine) atama \n \n \nLütfen Allplan'da **Çatı Düzlemi (Dachebene)** ile **Çatı Peyzajı (Dachlandschaft)** arasında ayrım yaptığımızı unutmayın. Çatı düzlemi yalnızca içinde bulunduğu çizim dosyasında etkilidir. Çatı peyzajı ise bir çatı düzlemine yapılan bağlantıdır ve Yapı Strüktürü (BWS) içindeki **Düzlem Yöneticisi (Ebenenmanager)** aracılığıyla tek seferde farklı katlara (BWS içindeki strüktür düğümlerine) dağıtılabilir. Böylece bir yandan çatı düzlemlerini farklı çizim dosyalarına kopyalama zahmetinden kurtulursunuz, diğer yandan da çatı peyzajı ilişkiseldir (asociatif): Bir çatı peyzajını farklı katlara atadıysanız ve orijinal çatı düzlemini değiştirirseniz, bu değişikliği tek bir adımda tüm veya seçili çatı peyzajlarına kolayca aktarabilirsiniz.\n\nİşte **ayrıntılı** prosedür: \n \n**1. Çatı düzlemi oluşturma**\n\n* Yapı strüktürünüzde, üzerinde çatı düzleminizi oluşturacağınız bir çizim dosyası açın. Organizasyonel nedenlerle bu çizim dosyasında yalnızca çatı düzlemi bulunmalıdır. Çizim dosyasına örneğin \"Orijinal Çatı Düzlemi\" adını verin. Bu çizim dosyasını katların içine değil, Yapı Strüktürü'nün (BWS) üst düzey bir alanına yerleştirmek mantıklıdır. Çünkü hem doğrudan tek bir kata ait değildir hem de ileride orijinal çatı düzleminde değişiklik yapmak istediğinizde onu hızla tekrar bulabilirsiniz.\n\n* Şimdi bu çizim dosyasında her zamanki gibi çatı düzlemini (varsa gerekli çatı pencereleri/güvercinlikler dahil) oluşturun.\n\n**2.** **Çatı düzleminden Çatı Peyzajı (Dachlandschaft) oluşturma**\n\n* Çatı düzlemi tamamlandıktan sonra **Yapı Strüktürü'ne (BWS)** ve oradan da **Düzlem Yöneticisi'ne (Ebenenmanager)** geçin. Burada **Düzlem Yöneticisi (Ebenenmanager)** içinde her zamanki gibi planladığınız binanın katlarını yansıtan bir düzlem modeli oluşturmuş durumdasınız. Şimdi çatı peyzajına ihtiyaç duyduğunuz alt katın (bu SSS'nin başındaki eskizde 1 numaralı kat) kat adına sağ tıklayın ve **Çatı peyzajı ekle (Dachlandschaf …",
+      "figures": [
+        "/akademi/temel-modelleme/9135_0EM7U000001TdGP_5893ad76.png",
+        "/akademi/temel-modelleme/9135_0EM7U000001TdGQ_e1d8843b.png",
+        "/akademi/temel-modelleme/9135_0EM7U000001TdHy_19132621.png",
+        "/akademi/temel-modelleme/9135_0EM7U000001TdHz_7c51315c.png",
+        "/akademi/temel-modelleme/9135_0EM7U000001TdI0_be37aa50.png",
+        "/akademi/temel-modelleme/9135_0EM7U000001TdI1_49f0bc7b.png",
+        "/akademi/temel-modelleme/9135_0EM7U000001TdI2_49f0bc7b.png",
+        "/akademi/temel-modelleme/9135_0EM7U000001TdI3_9c0c0992.png",
+        "/akademi/temel-modelleme/9135_0EM7U000001TdI4_2d90f3e3.png",
+        "/akademi/temel-modelleme/9135_0EM7U000001TdI5_12d86815.png",
+        "/akademi/temel-modelleme/9135_0EM7U000001TdI6_d4a66c41.png",
+        "/akademi/temel-modelleme/9135_0EM7U000001TdI7_38159e65.png",
+        "/akademi/temel-modelleme/9135_0EM7U000001TdI8_3dbeac58.png",
+        "/akademi/temel-modelleme/9135_0EM7U000001TdI9_7423eab8.png",
+        "/akademi/temel-modelleme/9135_0EM7U000001TdIA_99088cc9.png"
+      ]
+    },
+    {
+      "id": "de_10878",
+      "title": "Çatı Pencereleri (Güvercinlik) - Bir çatı penceresinin yan duvarlarını ve ön (alın) duvarını oluşturma",
+      "body": "**Soru:** \n \nBir çatı penceresinin (güvercinliğin) yan duvarlarını ve ön (alın) duvarını nasıl oluştururum? \n \n \n**Cevap:** \n \n**1) Başlangıç durumu:** \nÇatı pencereli bir çatı düzlemi halihazırda oluşturulmuştur. \n \n**Not:** \nDaha sonra yan yüzeylerle (mahal yan kaplamalarıyla) çalışacaksanız lütfen şu hususa dikkat edin: Çatı penceresi düzlemi çatı penceresinin net iç ölçüsüne karşılık geliyorsa, mahallin yan yüzeyleri çatı penceresi duvarlarının iç tarafına yerleşir. Çatı penceresi düzlemi dış ölçüye karşılık geliyorsa, yalnızca katın yan yüzeyleri çatı penceresi duvarlarının dış taraflarında oluşturulur. Diğer ilgili yan yüzeyleri (dış veya iç) çatı penceresi bölgesinde özel yan yüzeyler (Sonder-Seitenflächen) ile oluşturabilirsiniz. \n(Not: 'Dış ölçü' varyantını seçerseniz, aşağıdaki kılavuz, duvarların ilgili üst kenarlarını standart üst kota - yükseklik diyaloğunda soldan ikinci buton - bağlayabileceğiniz şekilde basitleşir. Böylece çatı penceresi ön duvarını ikiye ayırma gereği de ortadan kalkar.) \n \n**2) Çatı penceresi ön (alın) duvarının oluşturulması:** \nÇatı penceresi ön duvarını, her biri çatı penceresinin mahya çizgisinden başlayacak şekilde iki parça halinde oluşturun. Duvar uzunluğunda her iki çatı penceresi yan duvarının kalınlığını dikkate alın. \nÇatı penceresinin ön duvarlarının her birinin doğru düzleme uyum sağlaması için, duvar parametrelerinin yükseklik diyaloğunda duvarınız için aşağıdaki düzlem referanslarını ayarlayın: \n \n \nÖn duvarınızın **Üst Kenar (Oberkante)** tanımı için 'Üst Kenar (Oberkante)' altında soldan beşinci butona (= halihazırda mevcut bir elemandan değerleri devralarak giriş) tıklayın. \"Mevcut Yapı Elemanı Üst Kotu (Best. Bauteil OK)\" sorgusunu, ilgili çatı penceresi tarafının düzlem çiftine tıklayarak onaylayın. Böylece ön duvarınızın üst kenarı, çatı penceresinin ilgili eğim tarafını referans alır. \n \n -> \nİkinci taraf için de yükseklik tanımı açısından aynı işlemi uygulayın. \n -> \n \nDuvarınızın **Alt Kenarını (Unterkante)** örneğin alt düzleme bağlı olarak gerekli mesafe ile alt düzleme bağlayın. \n \n**3) Çatı penceresi yan duvarlarının oluşturulması:** \nÇatı penceresinin yan duvarlarının her birinin doğru düzleme uyum sağlaması için, duvar parametrelerinin yükseklik diyaloğunda duvarınız için aşağıdaki düzlem referanslarını ayarlayın: \n \n \nYan duvarınızın **Üst Kenar (Oberkante)** tanımı için 'Üst Kenar (Oberkante)' altında yine soldan beşinci butona (= halihazırda mevcut bir elemandan değerleri devralarak giriş) …",
+      "figures": [
+        "/akademi/temel-modelleme/10878_0EM7U000001TeAp_659cfdf6.png",
+        "/akademi/temel-modelleme/10878_0EM7U000001TeAq_a9e141fd.png",
+        "/akademi/temel-modelleme/10878_0EM7U000001TeAr_9de5fa4e.png",
+        "/akademi/temel-modelleme/10878_0EM7U000001TeAs_eed1ea83.png",
+        "/akademi/temel-modelleme/10878_0EM7U000001TeAt_6121c865.png",
+        "/akademi/temel-modelleme/10878_0EM7U000001TeAu_918e6d00.png",
+        "/akademi/temel-modelleme/10878_0EM7U000001TeAv_2c590045.png",
+        "/akademi/temel-modelleme/10878_0EM7U000001TeAw_c0d3101a.png",
+        "/akademi/temel-modelleme/10878_0EM7U000001TeAx_41f6be73.png",
+        "/akademi/temel-modelleme/10878_0EM7U000001TeAy_3f422d4d.png"
+      ]
+    },
+    {
+      "id": "de_11353",
+      "title": "Çatı - Kat - Mertek düzeni gösterimi",
+      "body": "**Soru:** \n \nÇatı katında mertekler, çatı üst görünüşü ve benzerlerini içeren detaylı bir kat planı gösterimi nasıl oluşturulabilir? \n \n \n \n**Uygulayarak Takip Etmek İçin Proje Verileri:** \n \nÇatı katında detaylı bir kat planı gösterimi için birden fazla adım gereklidir. \nAşağıdaki sistem açıklaması ekteki proje yedeği ile adım adım takip edilebilir ve örnek olarak hizmet etmesi amaçlanmıştır. \n \nEkteki proje yedeğinde iki adet Bina strüktür kademesi hazırlanmıştır.\n\n* \"Bina - bitmiş gösterim (Haus - fertige Darstellung)\" strüktür kademesi, sonucun nasıl görünebileceğine dair örnek verileri içerir.\n* \"Bina - alıştırma verileri (Haus - Übungsdaten)\" strüktür kademesi, yatay kesitleri ve görünüm filtresi düzlemini (Sichtfilterebene) oluşturabileceğiniz şekilde hazırlanmıştır.\n\n \n**Proje verilerinin yüklenmesi**\n\n* Ekteki Zip dosyasını sabit diskinize kaydedin\n* Allplan 2020'yi açın\n* **Yeni Proje, Aç (Projekt neu, öffnen)** iletişim kutusunu açın\n* Proje listesinde (en alttaki dolu satırın altında) bağlam menüsünü açın \n **Sıkıştırılmış projeyi içe aktar (Komprimiertes Projekt importieren)** \n Kaydedilen Zip dosyasını seçin ve sihirbazı takip edin\n* Şimdi yüklenen projeyi açın\n\n \n \n**Verilerin çizim dosyalarına göre sınıflandırılması** \nNesneler ve gösterimler üç çizim dosyasına dağıtılmış olarak kaydedilmiştir. Projede bir çatı yüzeyi (Dachlandschaft) içeren bir düzlem modeli yer almaktadır. Çatı yüzeyi, çatı katı için kullanılmıştır. \n \nÇizim Dosyası 120 (220) - Çatı Katı\n\n* Dış duvarlar, iç duvarlar \n Kalkan duvarlar ve iç duvarlar mesafesiz olarak üst düzleme bağlanmıştır. \n Saçak duvarlarına mutlak bir yükseklik (saçak aşığı alt kotuna eşit) verilmiştir. \n Saçak duvarlarının kalkan duvarlarla kesişimi, resimde gösterilen birleşim ortaya çıkacak şekilde sonradan işlenmiştir. \n \n\n* Mahaller \n Mahallerin üst kenarı mesafesiz olarak üst düzleme bağlanmış ve mahal ince yapısının yatay bir bitişe sahip olmasını sağlamak için yüksekliği yaklaşık mahya aşığı alt kotuyla sınırlandırılmıştır.\n* Kat \n Katın üst kenarı yaklaşık 27 cm'lik dik bir mesafeyle üst düzleme bağlanmıştır. Böylece DIN277'ye göre brüt hacim doğru şekilde hesaplanabilir.\n* Mertek düzleminde yalıtım (ek çatı kaplaması) \n Mertek düzlemindeki yalıtım için 20 cm kalınlığa sahip ve mesafesiz olarak üst düzleme bağlı ek bir çatı kaplaması (Dachhaut) kullanılmıştır. \n Geometri kat planında, çatı kaplaması (yalıtım) mertekler arasındaki duvar dolgularına kadar uzanacak şekilde seçilmiştir.\n* Çatı yüz …",
+      "figures": [
+        "/akademi/temel-modelleme/11353_0EM7U000001TdKP_5acb1b26.png",
+        "/akademi/temel-modelleme/11353_0EM7U000001TdKQ_3f13d932.png",
+        "/akademi/temel-modelleme/11353_0EM7U000001TdKR_ce86afbf.png",
+        "/akademi/temel-modelleme/11353_0EM7U000001TdKS_04fd3f06.png",
+        "/akademi/temel-modelleme/11353_0EM7U000001TdKT_59f4709c.png",
+        "/akademi/temel-modelleme/11353_0EM7U000001TdKU_60fe9e8a.png",
+        "/akademi/temel-modelleme/11353_0EM7U000001TdKV_610cad8b.png",
+        "/akademi/temel-modelleme/11353_0EM7U000001TdKW_48f79208.png",
+        "/akademi/temel-modelleme/11353_0EM7U000001TdKX_19010b0b.png"
+      ]
+    },
+    {
+      "id": "de_12535",
+      "title": "Add-On Varianten-Profil (Varyant Profil Eklentisi) - Lamine Ahşap Kirişli Özel Çatı",
+      "body": "Bu eğitim videosu, Allplan **Varyant Profil (Variantenprofil)** eklentisi ile karmaşık değişken geometrilerin ve serbest formlu çatı strüktürlerinin nasıl verimli bir şekilde oluşturulabileceğini göstermektedir. Tanımlanmış çizgiler boyunca kiriş kesitlerinin esnek bir şekilde uyarlanması sayesinde zorlu yapı elemanı formları da hayata geçirilebilir. Birden fazla profil birleştirilebilir ve ayrı ayrı parametrik hale getirilebilir; böylece dinamik geçişlere sahip süreklilik arz eden geometriler oluşur. Genişlik, yükseklik, kaçıklık (ofset), yuvarlatmalar ve boşluklar gibi parametreler her zaman uyarlanabilir ve model kendiliğinden güncellenir. Hatasız bir konstrüksiyon için komşu profiller arasında tutarlı geçiş parametrelerinin kullanılması kritik öneme sahipken, etkileşimli düzenleme özelliği iş akışını daha da hızlandırır.",
+      "figures": []
+    },
+    {
+      "id": "de_12676",
+      "title": "Add-On Profilbauteile (Profil Yapı Elemanları Eklentisi) - Trapez Saclar ve Çatı Panelleri",
+      "body": "Bu eğitim videosunda Thierry Metzler, trapez sacların ve panellerin, özellikle de çatı panellerinin nasıl yerleştirildiğini göstermektedir. Profil sacların seçimini, eğimin belirlenmesini ve boşlukların eklenmesini açıklamaktadır. Ayrıca elemanların düzenlenmesini ve farklı eğimlere sahip çatı panellerinin oluşturulmasını uygulamalı olarak göstermektedir. Son olarak elemanların metrajının çıkarılmasında niteliklerin önemini vurgulamaktadır.\n\n\n\n## F. Ek Uygulama Ekran Görüntüleri Galerisi\n\n#### `10933_0EMVi00000DRdsE_f82fcdfc.png` — Dach - Dachformen und Gaubenformen - Übersicht\n\n#### `10933_0EMVi00000DRjb3_f368eed0.png` — Dach - Dachformen und Gaubenformen - Übersicht\n\n#### `10933_0EMVi00000DRW9D_3c607250.png` — Dach - Dachformen und Gaubenformen - Übersicht\n\n#### `10933_0EMVi00000DUlbV_1ae61faa.png` — Dach - Dachformen und Gaubenformen - Übersicht\n\n#### `10933_0EMVi00000DRkgn_213f3999.png` — Dach - Dachformen und Gaubenformen - Übersicht\n\n#### `10933_0EMVi00000DRkth_135eb6c6.png` — Dach - Dachformen und Gaubenformen - Übersicht\n\n#### `10933_0EMVi00000DRfkM_48ef17ba.png` — Dach - Dachformen und Gaubenformen - Übersicht\n\n#### `10933_0EMVi00000DRl3N_51e31f24.png` — Dach - Dachformen und Gaubenformen - Übersicht\n\n#### `10933_0EMVi00000DRgoU_3dae56ea.png` — Dach - Dachformen und Gaubenformen - Übersicht\n\n#### `10933_0EMVi00000DRj6Q_01a89eb6.png` — Dach - Dachformen und Gaubenformen - Übersicht",
+      "figures": [
+        "/akademi/temel-modelleme/10933_0EMVi00000DRdsE_f82fcdfc.png",
+        "/akademi/temel-modelleme/10933_0EMVi00000DRjb3_f368eed0.png",
+        "/akademi/temel-modelleme/10933_0EMVi00000DRW9D_3c607250.png",
+        "/akademi/temel-modelleme/10933_0EMVi00000DUlbV_1ae61faa.png",
+        "/akademi/temel-modelleme/10933_0EMVi00000DRkgn_213f3999.png",
+        "/akademi/temel-modelleme/10933_0EMVi00000DRkth_135eb6c6.png",
+        "/akademi/temel-modelleme/10933_0EMVi00000DRfkM_48ef17ba.png",
+        "/akademi/temel-modelleme/10933_0EMVi00000DRl3N_51e31f24.png",
+        "/akademi/temel-modelleme/10933_0EMVi00000DRgoU_3dae56ea.png",
+        "/akademi/temel-modelleme/10933_0EMVi00000DRj6Q_01a89eb6.png"
+      ]
+    }
+  ]
+}

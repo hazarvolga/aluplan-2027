@@ -1,0 +1,123 @@
+{
+  "no": 15,
+  "slug": "kat-kopyalama",
+  "title": "Kat Kopyalama ve Düzenleme",
+  "duration": "04:23",
+  "sourceModule": "Proje 1 — Modül 2 & Modül 3: Bina Strüktürü ve Parametrik Kat Yönetimi",
+  "objectives": [
+    "Tamamlanan Zemin Kat çizim dosyalarını Bina Strüktürü üzerinden üst katlara kopyalamak.",
+    "Standart Referans Düzlemlerine (OK/UK) bağlı elemanların üst kat kotlarına otomatik uyarlandığını doğrulamak.",
+    "Kopyalanan normal katlarda cephe, balkon ve iç mekan revizyonlarını uygulamak."
+  ],
+  "steps": [
+    {
+      "time": "00:00 – 02:00",
+      "heading": "Bina Strüktüründe Kat ve Çizim Dosyası Kopyalama",
+      "body": "**Bina Strüktürü (Building Structure)** penceresinde Zemin Kat altındaki dolu çizim dosyalarını (`Duvar/Doğrama`, `Kolon/Kiriş`, `Döşeme`, `Merdiven`) seçip 1. Normal Kat ve 2. Normal Kat altındaki hedef çizim dosyalarına kopyalayın. Elemanlar standart düzlemlere bağlı olduğu için yeni katın kotlarına (`+3.00 / +6.00 m`) otomatik yerleşir.",
+      "figures": []
+    },
+    {
+      "time": "02:00 – 03:15",
+      "heading": "Normal Kat Mimari Revizyonları",
+      "body": "1. Normal Kat çizim dosyasını aktif ederek dış giriş kapısını silip pencereye dönüştürün, balkon döşeme çıkmasını ve korkuluklarını ekleyin.",
+      "figures": []
+    },
+    {
+      "time": "03:15 – 04:23",
+      "heading": "Düzlem Yöneticisi ile Çok Katlı Model Kontrolü",
+      "body": "Tüm katları **Referans Modunda** açarak 3B Animasyon penceresinde çok katlı bina modelini inceleyin; **Düzlemler Paleti (Planes Palette)** üzerinden kat yüksekliği değiştiğinde tüm katların birbirine kopmadan bağlı çalıştığını test edin.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Çizim Dosyası İçeriğini Kopyala",
+      "menu": "Bina Strüktürü -> Çizim Dosyası Sağ Tık -> Kopyala / Yapıştır (Copy / Paste)",
+      "shortcut": "Sağ Tık Menüsü",
+      "desc": "Zemin kat çizim dosyalarındaki elemanları üst kat çizim dosyalarına düzlem kotlarını koruyarak kopyalar."
+    },
+    {
+      "name": "Çizim Dosyaları Arası Kopyala",
+      "menu": "Dosya (File) -> Çizim Dosyaları Arası Kopyala / Taşı (Copy, Move Elements between Documents)",
+      "shortcut": "Alt+C",
+      "desc": "Aktif çizim dosyasındaki seçili yapı elemanlarını başka bir katın çizim dosyasına aktarır."
+    },
+    {
+      "name": "Kat Yüksekliğini Güncelle",
+      "menu": "Düzlemler Paleti (Planes Palette) -> Kat Yüksekliği Değiştir -> Diğer Katları Kaydır",
+      "shortcut": "Düzlemler Paleti",
+      "desc": "Bir katın yüksekliği değiştiğinde üstteki tüm katları ve yapı elemanlarını kopmadan yukarı/aşağı öteler."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_10589",
+      "title": "Nitelikler - Bina Strüktürü için genel bakış",
+      "body": "**Soru:** \nBina strüktüründeki düğümlere nitelikler üzerinden ek bilgiler eklenebilir mi? \nStrüktür kademelerinin adları ve eklenen diğer bilgiler etiket stillerinde ve/veya raporlarda nasıl kullanılabilir? \n \n**Temel Bilgiler:** \nAllplan 2022'den itibaren önceden tanımlanmış **Arsa (Liegenschaft)**, **Yapı (Bauwerk)**, **Bina (Gebäude)** ve **Kat (Geschoss)** strüktür kademelerine ek nitelikler eklenebilir. Bina strüktüründeki türetme strüktür kademelerine (**Görünüşler (Ansichten)**, **Kesitler (Schnitte)** ve **Raporlar (Reports)**) ve ayrıca **Kat Alanı (Geschossbereich)** strüktür kademesi ile **Serbest Strüktür Kademesi (beliebige Strukturstufe)** öğelerine nitelik eklenemez. \n \nTanım (`Bezeichnung` - `@507@`) niteliği tüm strüktür kademelerinde mevcuttur. Diğer nitelikler projenin nitelik setleriyle oluşturulup oluşturulmadığına bağlıdır. \nNiteliklerin aşağıdaki açıklaması, Allplan 2023'ün yeni projeler (şablon projeler kullanılmadan) için Nitelikler ve Nitelik Seti Şablonları alanındaki standart ayarına dayanmaktadır. \n \n**Nitelikler (Attribute)** genellikle **Proje (Projekt)** olarak önceden ayarlanır ve **Nitelik seti şablonu (Attributsetvorlage)** olarak **IFC Common** önceden tanımlanır.\n\n**Bina Strüktürü Nitelikleri** \nAşağıdaki nitelikler - IFC Common nitelik seti şablonu kullanıldığında - strüktür kademelerinde mevcuttur.\n\n| Strüktür Kademesi | Nitelikler (Tip) | Type | Tür | ID |\n|  |  |  |  |  |\n| Arsa (Liegenschaft) | | | | | | | | | |\n|  |  |  |  |  |  |  |  |  |  |\n| | Reference | Text, String | IFC | 18222 |\n| Bebaubare Fläche | Text, String | Projekt | 548 |\n| Grundflächenzahl | Zahl, Double | IFC | 18254 |\n| Geschossflächenzahl | Text, String | Projekt | 466 |\n| Maximale Gebäudehöhe | Text, String | Projekt | 549 |\n| Bruttogrundstücksfläche | Text, String | Projekt | 550 |\n| Abteilung | Text, String | IFC | 18257 |\n| Adresszeile 1 | Text, String | IFC | 18258 |\n| Adresszeile 2 | Text, String | IFC | 18259 |\n| Postfach | Text, String | IFC | 18260 |\n| Stadt | Text, String | IFC | 18261 |\n| Postleitzahl | Text, String | IFC | 18263 |\n| Region | Text, String | IFC | 18262 |\n| Land | Text, String | Projekt | 289 |\n| Bezeichnung | Text, String | | 507 |\n| Yapı (Bauwerk) | | | | |\n| | Bezeichnung | Text, String | | 507 |\n| Bina (Gebäude) | | | | |\n| | Reference | Text, String | IFC | 18222 |\n| Gebäudekennzeichnung | Text, String | Projekt | 696 |\n| Gebäudekennzeichen permanent | Boolean | IFC | 18249 |\n| Art der Ausführung | Text, String | …",
+      "figures": [
+        "/akademi/temel-modelleme/10589_0EM7U000002DAA5_60328eab.png",
+        "/akademi/temel-modelleme/10589_0EM7U000002DAAK_08e67980.png",
+        "/akademi/temel-modelleme/10589_0EM7U000002DAD4_05970c99.png"
+      ]
+    },
+    {
+      "id": "de_11225",
+      "title": "Mahaller - Katlar ile DIN 277'ye göre brüt hacimlerin ve brüt taban alanlarının belirlenmesi",
+      "body": "**Soru:** \n \nDIN 277-1:20161 standardına göre tutarlı alanlar ve hacimler elde etmek için katlar nasıl oluşturulmalıdır? \n \n \n**Cevap:** \n \n**1.** **Giriş** \n**BGF (Brüt Taban Alanı / Brutto-Grundfläche)** ve **BRI (Brüt Hacim / Brutto-Rauminhalt)** değerlerinin belirlenmesi için kısmi alanların ve kısmi hacimlerin DIN 277-1:2016-01 standardında tanımlanan kurallara uygun şekilde bölümlendirilerek girilmesi gerekir. Örneğin, talep edilen \"kat planı düzlemlerine göre ayrı hesaplama...\" şartını karşılayabilmek için bir binanın en azından kat bazında kısmi hacimlere ayrılması gereklidir. Aşağıda DIN standardının ön koşulları Allplan'daki çözüm yaklaşımlarıyla birlikte gösterilmektedir.\n\n**Brüt Taban Alanlarının (BGF)** ve **Brüt Hacmin (BRI)** belirlenmesi amacıyla katların girilmesi, DIN277-1:2016-01 standardına ilişkin bilgi sahibi olunmasını gerektirir.\n\n**2****.** **Fonksiyonlar** \nYapı Elemanları/Objeler (Bauteile/Objekte)\n\n **Kat (Geschoss)**, **Mahal, Kat Grubu (Raum-, Geschossgruppe)**\n\nMetraj, Etiket (Auswertung, Beschriftung)\n\n **Konut Alanı (Wohnfläche), DIN277, Yapı Ruhsatı (Bauantrag)**, **Raporlar (Reports)**, **Etiketle (Beschriften)**\n\nAyarlar (Einstellungen)\n\n **Seçenekler (Optionen)**\n\n**3.** **Temel Esaslar** \n**3.1.** **Ölçü Birimleri, Hassasiyet** \n \nDIN 277-1:2016-01 standardı, **5.5 Ölçü Birimleri (Messeinheiten)** başlığı altında taban alanlarının **metrekare (m²)** ve hacimlerin **metreküp (m³)** cinsinden belirtilmesi gerektiğini tanımlar. Hesaplama hassasiyetine ilişkin olarak DIN standardı **5.1 Hesaplama Hassasiyeti (Genauigkeit der Ermittlung)** başlığı altında kesin bir ifade sunmaz. Yalnızca hesaplama hassasiyetinin planlama aşamasına (örn. ihtiyaç planlaması, ön proje, avan proje, uygulama projesi ve dokümantasyon) ve mevcut plan belgelerine göre belirlenmesi gerektiği açıklanır.\n\nBundan hareketle aşağıdaki yaklaşım uygulanır:\n\n| | | |\n|  |  |  |\n| **Proje Durumu (Projektstatus)** | **Açıklama (Beschreibung)** | **Hassasiyet (Genauigkeit)** |\n| **İhtiyaç Planlaması, Ön Proje (Bedarfsplanung, Vorplanung)** | Bina tasarlanır. Geometri henüz kaydedilmemiştir veya yalnızca kabaca kaydedilmiştir. Planlamadaki belirsizlikler büyüktür. | Taban alanları: ondalık basamak yok, örn. 206 m² Hacimler: ondalık basamak yok, örn. 1.203 m³ |\n| **Avan Proje (Entwurfsplanung)** | Bina esas itibarıyla kaydedilmiştir. Projede artık yalnızca nispeten küçük belirsizlikler mevcuttur. | Taban alanları: bir ondalık basamak, örn. 206,4 m² Hacimler: bir  …",
+      "figures": [
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPo_7918729c.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPp_fac0d1a4.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPq_46a9a9d3.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPr_aeb5a169.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPs_926f8b45.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPt_d2e11e0f.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPu_ef782b30.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPv_4a90c932.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPw_23da24fe.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPx_e26af978.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPy_08a9767f.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPz_fc43c60e.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdQ0_f055afa6.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdQ1_afb7d5cb.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdQ2_50f4a5d2.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdQ3_a628ec51.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdQ4_3a82eb17.png"
+      ]
+    },
+    {
+      "id": "de_10602",
+      "title": "Çatı - Kat - Ara döşeme oluşturma",
+      "body": "**Soru:** \n \nÇatı katında bir ara döşemeyi nasıl oluşturabilirim? \n \n \n \n**Cevap:** \n \nÇatı katında çatı düzlemine veya çatı yüzeyine (Dachlandschaft) temiz bir şekilde uyum sağlayacak bir ara döşeme oluşturmak istiyorsunuz: \n \n \n \nBunun için aşağıdaki adımları izleyin:\n\n* Önce tüm kat planının üzerine bir döşeme çizin; kot bağlantısı ve doğru yayılım alanı ile sonraki adımlarda ilgileneceksiniz.\n\n \n\n* Bir sonraki adımda döşemenin doğru kot bağlantısını ayarlayın. Bunun için döşemenin üzerine sol çift tıklayın -> **Yükseklik (Höhe)** yolunu izleyin ve aşağıdaki değerleri ayarlayın:\n\n \n\n* 1 için: Buraya çatı düzleminin (veya çatı yüzeyinin) alt kotu ile döşemenin alt kotu arasındaki mesafeyi girin\n* 2 için: Buraya istediğiniz döşeme kalınlığını girin\n* 3 için: Buraya kenar bölgesinin (döşemenin alın yüzeyinin) belirli bir mesafe ile eğimli çatı düzlemine uyum sağlaması gerektiğini girin. Bu örnekte bu mesafe 0,00'dır ve üstteki eğimli düzleme 0,00 mesafe ile birleşen eğimli döşeme bitişini oluşturur.\n\n \n \n \n \n\n**Dikkat**: \ndöşeme artık doğru kot bağlantısıyla çizim dosyasında mevcut olduğundan, muhtemelen aşağıdaki mesaj görünecektir: \n \n \n \nBu mesaj neden görünür? Çünkü oluşturma işlemiyle şimdilik yalnızca bir ara adım inşa ettik; bu ara adım negatife doğru geliştiği için geometrik olarak mümkün olmayan bir 3B yapı elemanı üretir: \n \n \n\n* Bu nedenle şimdi son bir adımda döşemenin kat planındaki yayılım alanının düzenlenmesi gerekir. İlk adımda döşemeyi tüm kat planının üzerinde oluşturmuştunuz. Ancak döşemenin yalnızca çatı eğimine kadar uzanması ve onun ötesine geçmemesi gerektiği açıktır:\n\n* Bunun için kat planı görünümünden bir kalkan duvar (alın) görünüşüne geçin ve şu komutu seçin: **Düzen (Bearbeiten) -> Noktaları Değiştir (Punkte modifizieren).** Güvenilir bir şekilde yalnızca döşemeyi değiştirebilmek için **Mimari Filtresi (Architekturfilter)** (Araç çubuğu: **Filtre Sihirbazı (Filter-Assistent)**) üzerine tıklayın ve **Döşeme (Decke)** öğesini seçin. Bir tarafta döşemenin değiştirilecek kenar bölgesinin etrafına bir seçim penceresi çizin ve seçilen noktaları kenar bölgesinden döşeme alt kotunun eğimli çatı düzlemi ile kesişim noktasına kadar değiştirin (taşıyın).\n\n* Bu adımı diğer tarafta da tekrarlayın. Sonuç istediğiniz gibi görünecektir:\n\n \n \n \n \n \n**Not:** \n \nbazı durumlarda, örneğin bazı girinti ve çıkıntılara sahip döşemelerde, doğru kotlar ayarlandıktan sonra bile döşemenin animasyonda HÂLÂ gösterilmemesi durumu yaşanabilir (ancak kat plan …",
+      "figures": [
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiQ_3445deeb.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiR_9caad228.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiS_c1a4a6cb.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiT_a37e9532.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiU_c72c8b84.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiV_43e9e984.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiW_71755a0a.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiX_6218db6e.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiY_91aae5ca.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiZ_7f5d3c20.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001Tdia_3a754729.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001Tdib_5ef44f7c.png"
+      ]
+    },
+    {
+      "id": "de_9962",
+      "title": "Umgang mit bak-Dateien - Bauwerksstruktur reparieren/zurückholen",
+      "body": "- **Kaynak URL (Alındığı Adres):** https://learnnow.allplan.com/totara/engage/resources/howto/index.php?id=9962&source=howto\n- **Kaynak ID (`resource_id`):** `9962`\n- **Resmi Salesforce / Allplan KB No:** `000008347-de`\n- **İçerik Tipi:** `knowledge_article`\n- **Dil:** `de`\n- **Kategori Ağacı:** `ALLPLAN > Allgemein > BWS, Planstruktur > Bauwerkstruktur`\n- **Geçerli Allplan Sürümleri:** `ALLPLAN 2025, ALLPLAN 2024, ALLPLAN 2023, ALLPLAN 2022`\n- **Yazar & Tarih:** Erstellt am 29. Juni 2023, 15:52. Zuletzt aktualisiert am 3. Juli 2025, 12:23. | Owner: Salesforce Integration\n- **Doğrudan PDF Kılavuz URL:** -\n- **Eğitim Videosu / Webinar URL:** -\n- **İndirilen PDF, Örnek Dosya ve Ekran Görüntüleri (4 Adet):**\n - [SCREENSHOT] `9962_0EMVi000004ooH3_512bfd7e.png` (209.33 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/9962/0EMVi000004ooH3.png | SHA-256: `512bfd7e30cb18f0...`)\n - [SCREENSHOT] `9962_0EM67000007nqvp_b557dc0d.png` (25.26 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/9962/0EM67000007nqvp.png | SHA-256: `b557dc0d87f313ba...`)\n - [SCREENSHOT] `9962_0EM67000007nqvV_69459624.png` (10.36 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/9962/0EM67000007nqvV.png | SHA-256: `69459624b8ea7a16...`)\n - [SCREENSHOT] `9962_0686700000drziT_d6578add.bin` (2.21 KB | Orjinal URL: https://allplan.file.force.com/sfc/servlet.shepherd/version/download/0686700000drziT?asPdf=false&amp;operationContext=CHATTER | SHA-256: `d6578addc68f9a0d...`)\n\n\n\n**Frage:** \nMeine Bauwerksstruktur ist kaputt bzw. scheint geändert worden zu sein. Gibt es irgendwo ein Backup? \n \n**Antwort:** \nJa, es ist möglich, ein Backup Ihrer Bauwerksstruktur zu erhalten. \n \n- Schließen Sie Allplan \n- Gehen Sie zu Allmenü > Service > Windows-Explorer > Eigene CAD-Projekte (STD) \n \n \n \n- Gehen Sie zu Ihrem <Eigene CAD Projekte>/BIM-Ordner. Das Problem ist eine korrupte Datei \"Allplan\\_BIM\\_BuildingStructure.xml\". \n- Benennen Sie die Datei \"Allplan\\_BIM\\_BuildingStructure.xml\" um, z.B. in \"Allplan\\_BIM\\_BuildingStructure.xml.old\". \n- Gehen Sie zu Projekt/BIM/Backup und kopieren Sie die neueste Datei  \"Allplan\\_BIM\\_BuildingStructure.xml....................bak\". \n \n \n \n- Fügen Sie diese Datei in den Projekt/BIM-Ordner ein \n \n \n \n- Und benennen Sie die \"Allplan\\_BIM\\_BuildingStructure.xml....................bak\" in \"Allplan\\_BIM\\_BuildingStructure.xml\" um. \n \n \n \n- Sta …",
+      "figures": [
+        "/akademi/temel-modelleme/9962_0EMVi000004ooH3_512bfd7e.png",
+        "/akademi/temel-modelleme/9962_0EM67000007nqvp_b557dc0d.png",
+        "/akademi/temel-modelleme/9962_0686700000drziT_d6578add.bin",
+        "/akademi/temel-modelleme/9962_0EM67000007nqvV_69459624.png"
+      ]
+    }
+  ]
+}

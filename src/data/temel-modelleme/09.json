@@ -1,0 +1,127 @@
+{
+  "no": 9,
+  "slug": "duvar-olusturma",
+  "title": "Duvar Oluşturma",
+  "duration": "08:41",
+  "sourceModule": "Proje 1 — Modül 3: Akıllı Parametrik Mimari Elemanlar ve Hacim Yönetimi",
+  "objectives": [
+    "Tek katmanlı iç duvarlar ve çok katmanlı dış cephe duvarlarını (taşıyıcı + yalıtım + kaplama) tanımlamak.",
+    "Duvar katmanlarına malzeme, imalat kalemi (Trade / Gewerk), öncelik numarası (Priority / Priorität) ve kat düzlemi kot bağlantısı (OK/UK) atamak.",
+    "Doğrusal, dikdörtgen, dairesel ve Poligon Duvar (Polygonal Wall) çizimi ile T/L duvar birleşimlerini uygulamak."
+  ],
+  "steps": [
+    {
+      "time": "00:00 – 02:45",
+      "heading": "Duvar (Wall / Wand) Özellikleri ve Çok Katmanlı Yapı",
+      "body": "**Mimari (Architecture) -> Duvar (Wall / Wand)** komutunu açın. Katman sayısını belirleyin (örn. Dış duvar için 3 katman: `20 cm Tuğla/Betonarme + 8 cm Isı Yalıtımı + 2 cm Dış Sıva`). Taşıyıcı katmana yüksek öncelik (`300`), yalıtım ve sıvaya daha düşük öncelik (`100`) vererek kesişimlerde taşıyıcı çekirdeğin kesintisiz devam etmesini sağlayın.",
+      "figures": []
+    },
+    {
+      "time": "02:45 – 05:30",
+      "heading": "Duvar Aksı, Çizim Yönü ve Kat Düzlemi Bağlantısı",
+      "body": "Duvar referans aksını (taşıyıcı katmanın dış kenarı veya merkezi) seçin; dış cephe yalıtımının dışarıya bakması için gerekirse **Ofset Yönünü Değiştir (Reverse Offset Direction)** (`Ctrl+R`) kullanın. **Yükseklik (Height)** butonundan alt kotu kat alt düzlemine (`UK = 0.00`), üst kotu kat üst düzlemine (`OK = 0.00`) bağlayın.",
+      "figures": []
+    },
+    {
+      "time": "05:30 – 08:41",
+      "heading": "Dış ve İç Duvarların Çizimi ve Birleşim Kontrolleri",
+      "body": "Aks kesişimlerini yakalayarak dış cephe duvarlarını ve iç bölme duvarlarını çizin. **Duvarları Çizgiyle Birleştir (Join Linear Component to Line)** komutuyla T ve köşe birleşimlerini kontrol edin.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Duvar (Wall / Wand)",
+      "menu": "Mimari (Architecture) -> Elemanlar -> Duvar (Wall / Wand)",
+      "shortcut": "W",
+      "desc": "1'den 20 katmana kadar doğrusal, dairesel veya eğrisel parametrik duvar oluşturur."
+    },
+    {
+      "name": "Ofset Yönünü Değiştir",
+      "menu": "Duvar Diyalog Çubuğu -> Ofset Yönünü Değiştir (Reverse Offset Direction)",
+      "shortcut": "Ctrl+R",
+      "desc": "Duvar çizimi sırasında katman dizilimini referans aksına göre iç/dış yönünde çevirir."
+    },
+    {
+      "name": "Duvarları Çizgiyle Birleştir",
+      "menu": "Mimari (Architecture) -> Modifikasyon -> Çizgi Elemanı Çizgiyle Birleştir",
+      "shortcut": "Birleştir İkonu",
+      "desc": "T ve L duvar kesişimlerinde katman önceliklerine göre otomatik birleşim/uzatma yapar."
+    },
+    {
+      "name": "Poligon Duvar (Polygonal Wall)",
+      "menu": "Mimari (Architecture) -> Elemanlar -> Poligon Duvar (Polygonal Wall / Polygonwand)",
+      "shortcut": "Duvar Açılır Menüsü",
+      "desc": "Değişken kalınlıklı veya serbest poligonal kesitli perde/duvar elemanlarını modeller."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Grundriss EG - Wände",
+        "file": "2961_vimeo_765763233_6cb63a16.mp4",
+        "vimeoId": "765763233",
+        "sizeMB": 62.54
+      },
+      {
+        "title": "NEUERUNG 2024 -Automatische Wandanschlussbewehrung",
+        "file": "2736_vimeo_880811864_bd5a9496.mp4",
+        "vimeoId": "880811864",
+        "sizeMB": 7.64
+      }
+    ],
+    "pdfs": [
+      "2866_Allplan_2022_Tut_Architektur_7e6e203e.pdf"
+    ],
+    "samples": [
+      "9161_20201227081957_DE_1_d948c4ca.ndw",
+      "9161_20201227081957_DE_2_a88891ff.ndw"
+    ]
+  },
+  "articles": [
+    {
+      "id": "de_2961",
+      "title": "Zemin Kat Planı - Duvarlar",
+      "body": "Bu videoda zemin kat için duvarların nasıl oluşturulacağı gösterilmektedir.\n\n#Duvar #Pencere #Stil Yüzeyi #Yapı Elemanı Yüksekliği",
+      "figures": []
+    },
+    {
+      "id": "de_2736",
+      "title": "YENİLİK 2024 - Otomatik Duvar Birleşim Donatısı",
+      "body": "Otomatik duvar birleşim donatısı",
+      "figures": []
+    },
+    {
+      "id": "de_11384",
+      "title": "Nitelikler - Poligon Duvar için Genel Bakış",
+      "body": "**Soru:** \n \nDuvarların diğer nitelikleri nasıl belirlenebilir? \nPoligon duvarların etiketlenmesi ve metrajı için doğrudan hangi nitelikler kullanılabilir? \n \n \n**Arka Plan:** \nPoligon duvarın kendi nitelikleri/özellikleri doğrudan kullanılabilir. Üst yapı elemanı (Toplam duvar (Gesamtwand)), `PARENT()` referansı ile değerlendirilebilir ancak kendine ait geometri bilgileri içermez. Poligon duvarda başka katmanlar (Schichten) mevcut değildir. \nPoligon duvarlara bağlı alt yapı elemanlarının — örneğin boşlukların (nişler, oyuklar vb.) — ve poligon duvara bitişik diğer yapı elemanlarının nitelikleri, kısmen formüller aracılığıyla etiketlenebilir. Bu işlemde yapı elemanı referanslarının değerlendirilebildiği formüller kullanılabilir. \n \nNot: \nDuvarlar için uygun olan tüm boşluk türleri poligon duvarlara da yerleştirilebilir. \n \n**Uygulama Alanı:** \nPoligon duvarlar (tek ve çok katmanlı duvarlar için geçerli değildir) \n \n**Poligon Duvar Etiketlemesi** \nAşağıdaki bölümlerde doğrudan değerlendirilebilen/etiketlenebilen özellikler gösterilmektedir. \n \n**Poligon Duvar** \nÖrneğin aşağıdaki geometrik nitelikler kullanılabilir:\n\n| | | |\n|  |  |  |\n| **Nitelik** | **ID** | **Açıklama** |\n| Üst Kot (OK) | 98 | **Üst Kot (OK)** ve **Üst Kenar (Oberkante)** nitelikleri, poligon duvarda 0.00 üzerindeki ortalama üst kenarı verir. |\n| Üst Kenar (Oberkante) | 113 |\n| Alt Kot (UK) | 97 | **Alt Kot (UK)** ve **Alt Kenar (Unterkante)** nitelikleri, poligon duvarda 0.00 üzerindeki ortalama üst kenarı verir. |\n| Alt Kenar (Unterkante) | 112 |\n| Yükseklik (Höhe) | 222 | **Yükseklik (Höhe)** **ortalama** yapı elemanı yüksekliğini verirken, **Mutlak\\_Yükseklik (Höhe\\_absolut)** **maksimum** değeri belirtir. Diğer yapı elemanlarında rahatlıkla kullanılabilen benzer nitelikler olan **Uzunluk (Länge)**, **Mutlak\\_Uzunluk (Länge\\_absolut)** ve ayrıca **Kalınlık (Dicke)** ile **Mutlak\\_Kalınlık (Dicke\\_absolut)**, geometriyi oluşturulan ilk kenardan yola çıkarak yansıtır ve bu nedenle tarafsız bir metraj değerlendirmesi için kullanılamaz. Bunun arka planındaki neden, poligon duvarın örneğin kirişler veya çok katmanlı duvarlar gibi önceden tanımlanmış bir yönünün/aksının olmamasıdır. |\n| Mutlak yükseklik (Höhe absolut) | 224 |\n| | |\n| | |\n| | |\n| | |\n| | |\n| Çevre (Umfang) | 228 | Çevre, kenar uzunluklarının toplamını tanımlar. Bu hesaplamada **tüm** kenarlar dikkate alınır. |\n| | | |\n| Taban Alanı (Grundfläche) | 224 | Alan nitelikleri, poligon duvarın \"kabuğunu\" farklı şekillerde tanımlar …",
+      "figures": [
+        "/akademi/temel-modelleme/11384_0EM7U000001Td7a_b5050b7a.png"
+      ]
+    },
+    {
+      "id": "de_9161",
+      "title": "Attribute - Übersicht für Wand, Gesamtwand (mit PARENT() )",
+      "body": "- **Kaynak URL (Alındığı Adres):** https://learnnow.allplan.com/totara/engage/resources/howto/index.php?id=9161&source=howto\n- **Kaynak ID (`resource_id`):** `9161`\n- **Resmi Salesforce / Allplan KB No:** `000006419-de`\n- **İçerik Tipi:** `knowledge_article`\n- **Dil:** `de`\n- **Kategori Ağacı:** `ALLPLAN > Allgemein > Attribute`\n- **Geçerli Allplan Sürümleri:** `ALLPLAN 2025, ALLPLAN 2024, ALLPLAN 2023, ALLPLAN 2022, ALLPLAN 2021, ALLPLAN 2020, ALLPLAN 2019`\n- **Yazar & Tarih:** Erstellt am 17. Juli 2022, 17:54. Zuletzt aktualisiert am 10. Juli 2025, 14:36. | Owner: Salesforce Integration\n- **Doğrudan PDF Kılavuz URL:** -\n- **Eğitim Videosu / Webinar URL:** -\n- **İndirilen PDF, Örnek Dosya ve Ekran Görüntüleri (8 Adet):**\n - [SCREENSHOT] `9161_0EM7U000001TeWU_ccb4c51c.png` (1.02 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/9161/0EM7U000001TeWU.png | SHA-256: `ccb4c51c8a360408...`)\n - [SCREENSHOT] `9161_0EM7U000001TeWT_629c9209.png` (4.9 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/9161/0EM7U000001TeWT.png | SHA-256: `629c920960917bb5...`)\n - [SCREENSHOT] `9161_0EM7U000001TeWV_39944801.png` (1.86 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/9161/0EM7U000001TeWV.png | SHA-256: `399448012f495c9c...`)\n - [SCREENSHOT] `9161_0EM7U000001TeWW_aa750e31.png` (2.25 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/9161/0EM7U000001TeWW.png | SHA-256: `aa750e31e1ebf5ce...`)\n - [SCREENSHOT] `9161_0EM7U000001TeWY_b5050b7a.png` (12.45 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/9161/0EM7U000001TeWY.png | SHA-256: `b5050b7ada67b634...`)\n - [SCREENSHOT] `9161_0EM7U000001TeWX_9493659f.png` (10.01 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/9161/0EM7U000001TeWX.png | SHA-256: `9493659fb3b76543...`)\n - [SAMPLE_ATTACHMENT] `9161_20201227081957_DE_1_d948c4ca.ndw` (1472.24 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_attachments/9161/20201227081957_DE_1.ndw | SHA-256: `d948c4ca13f146d0...`)\n - [SAMPLE_ATTACHMENT] `9161_20201227081957_DE_2_a88891ff.ndw` (1472.24 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_attachments/9161/20201227081957_DE_2.ndw | SHA-256: `a88891ff09adb494...`)\n\n\n\n**Frage:** \n \nWi …",
+      "figures": [
+        "/akademi/temel-modelleme/9161_0EM7U000001TeWY_b5050b7a.png"
+      ]
+    },
+    {
+      "id": "de_10798",
+      "title": "Tadilat Planlaması - Mevcut Bir Duvar Üzerinde Isı Yalıtımı",
+      "body": "**Soru:** \n \nMevcut bir duvar üzerinde ısı yalıtımı nasıl oluşturulur? \n \n \n \n**Cevap:** \n \nMevcut bir duvar üzerinde ısı yalıtımı oluşturmak için 2 olanak vardır. İlgili alanda hiç boşluk yoksa veya yalnızca birkaç boşluk varsa, mevcut duvarın dışına yalıtım katmanı olarak **yeni bir duvar** çizmeyi tercih etmelisiniz. Boşlukların bulunduğu alanlarda bu yöntem, her boşluk için yeni duvarda da bir **yeni yapı boşluğu (Neubauöffnung)** (makro ve diş/lamba elemanı olmadan) oluşturulmasının gerekli olduğu anlamına gelir. \n \nÖrneğin çok sayıda boşluk içeren duvarlarda bundan kaçınmak için aşağıdaki adımları izleyebilirsiniz: \n \n**1.** Tek katmanlı duvarınızı duvar özellikleri üzerinden 2 katmanlı bir duvara dönüştürün. İkinci katmana gerekli kalınlığı ve yüksekliği verin \n \n \n**2.** Asistanda uygun bir yalıtım katmanı bulun ve bu duvar katmanına sağ fare tuşuyla tıklayın. Bağlam menüsünde **Tadilat Planlaması Dönüştürme (Umwandlung Umbauplanung)** fonksiyonunu seçin (ayarlar bu sırada devralınır) \n \n \n**3. Ne yeni yapıya dönüştürülecek? (Was soll in Neubau gewandelt werden?)** \n2 katmanlı duvarınızın yeni oluşturulan dış katmanını işaretleyin \nve bunu **Uygula (Anwenden)** ile onaylayın \n \n \n**4.** **Mimari Yapı Elemanı Özelliklerini Aktar (AR-Bauteileigenschaften übertragen)** fonksiyonu üzerinden bunu diğer dış duvarlara da uygulayabilirsiniz \n \n \n \n**Not:** \n \nSeçilen yönteme bağlı olarak dışarıdaki parapet çizgilerinin yıkım paftası (Abbruchplan) görünümünde görünür kalacağını veya eksik olacağını unutmayın. Bunun önüne yalnızca ilgili parapetlerin devre dışı bırakılması ve gerekirse 2B çizgi ile sonradan düzeltme yapılmasıyla geçilebilir. \n \n\n\n\n## F. Ek Uygulama Ekran Görüntüleri Galerisi\n\n#### `11384_0EM7U000001Td7X_14d28b02.png` — Attribute - Übersicht für Polygonwand\n\n#### `11384_0EM7U000001Td7Z_eca6d3ed.png` — Attribute - Übersicht für Polygonwand\n\n#### `11384_0EM7U000001Td7W_fe54a8e9.png` — Attribute - Übersicht für Polygonwand\n\n#### `11384_0EM7U000001Td7Y_dc3e3db3.png` — Attribute - Übersicht für Polygonwand",
+      "figures": [
+        "/akademi/temel-modelleme/10798_0EM7U000001TeNI_692acc50.png",
+        "/akademi/temel-modelleme/10798_0EM7U000001TeNJ_ca67f81b.png",
+        "/akademi/temel-modelleme/10798_0EM7U000001TeNK_4e4ac506.png",
+        "/akademi/temel-modelleme/10798_0EM7U000001TeNL_b33c6eb2.png",
+        "/akademi/temel-modelleme/10798_0EM7U000001TeNM_27652d2c.png",
+        "/akademi/temel-modelleme/11384_0EM7U000001Td7X_14d28b02.png",
+        "/akademi/temel-modelleme/11384_0EM7U000001Td7Z_eca6d3ed.png",
+        "/akademi/temel-modelleme/11384_0EM7U000001Td7W_fe54a8e9.png",
+        "/akademi/temel-modelleme/11384_0EM7U000001Td7Y_dc3e3db3.png"
+      ]
+    }
+  ]
+}

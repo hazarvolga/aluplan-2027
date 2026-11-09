@@ -1,0 +1,178 @@
+[
+  {
+    "no": 1,
+    "slug": "giris-bim-felsefesi",
+    "title": "Giriş — ALLPLAN BIM Felsefesi ve Modelleme İş Akışı",
+    "duration": "Giriş",
+    "steps": 3,
+    "commands": 4,
+    "figures": 0,
+    "videos": 2,
+    "articles": 4
+  },
+  {
+    "no": 2,
+    "slug": "proje-olusturma",
+    "title": "Allplan ile Proje Oluşturma ve Başlangıç Ayarları",
+    "duration": "03:52",
+    "steps": 3,
+    "commands": 4,
+    "figures": 0,
+    "videos": 3,
+    "articles": 4
+  },
+  {
+    "no": 3,
+    "slug": "arayuz-incelemesi",
+    "title": "Allplan Arayüz İncelemesi ve Çalışma Prensipleri",
+    "duration": "08:15",
+    "steps": 4,
+    "commands": 5,
+    "figures": 0,
+    "videos": 4,
+    "articles": 7
+  },
+  {
+    "no": 4,
+    "slug": "cizim-dosyalari-yukseklik",
+    "title": "Çizim Dosyaları ve Yükseklik İlişkileri",
+    "duration": "11:10",
+    "steps": 3,
+    "commands": 4,
+    "figures": 0,
+    "videos": 2,
+    "articles": 5
+  },
+  {
+    "no": 5,
+    "slug": "2d-olusturma-komutlari",
+    "title": "2D Oluşturma Komutları (Standart CAD İşlemleri)",
+    "duration": "16:13",
+    "steps": 4,
+    "commands": 6,
+    "figures": 0,
+    "videos": 0,
+    "articles": 4
+  },
+  {
+    "no": 6,
+    "slug": "2d-duzenleme-komutlari",
+    "title": "2D Düzenleme Komutları (Standart CAD İşlemleri)",
+    "duration": "10:48",
+    "steps": 3,
+    "commands": 6,
+    "figures": 0,
+    "videos": 2,
+    "articles": 5
+  },
+  {
+    "no": 7,
+    "slug": "olculendirme",
+    "title": "Ölçülendirme",
+    "duration": "03:21",
+    "steps": 3,
+    "commands": 4,
+    "figures": 0,
+    "videos": 2,
+    "articles": 4
+  },
+  {
+    "no": 8,
+    "slug": "aks-olusturma",
+    "title": "Aks Oluşturma",
+    "duration": "02:43",
+    "steps": 3,
+    "commands": 2,
+    "figures": 0,
+    "videos": 1,
+    "articles": 3
+  },
+  {
+    "no": 9,
+    "slug": "duvar-olusturma",
+    "title": "Duvar Oluşturma",
+    "duration": "08:41",
+    "steps": 3,
+    "commands": 4,
+    "figures": 0,
+    "videos": 2,
+    "articles": 5
+  },
+  {
+    "no": 10,
+    "slug": "kapi-pencere",
+    "title": "Kapı ve Pencere Oluşturma",
+    "duration": "11:09",
+    "steps": 3,
+    "commands": 4,
+    "figures": 0,
+    "videos": 1,
+    "articles": 5
+  },
+  {
+    "no": 11,
+    "slug": "kolon-kiris",
+    "title": "Kolon ve Kiriş Oluşturma",
+    "duration": "05:49",
+    "steps": 2,
+    "commands": 3,
+    "figures": 0,
+    "videos": 2,
+    "articles": 5
+  },
+  {
+    "no": 12,
+    "slug": "doseme-olusturma",
+    "title": "Döşeme Oluşturma",
+    "duration": "02:30",
+    "steps": 2,
+    "commands": 2,
+    "figures": 0,
+    "videos": 2,
+    "articles": 4
+  },
+  {
+    "no": 13,
+    "slug": "merdiven-olusturma",
+    "title": "Merdiven Oluşturma",
+    "duration": "03:55",
+    "steps": 3,
+    "commands": 3,
+    "figures": 0,
+    "videos": 2,
+    "articles": 5
+  },
+  {
+    "no": 14,
+    "slug": "temel-olusturma",
+    "title": "Temel Oluşturma",
+    "duration": "03:51",
+    "steps": 3,
+    "commands": 3,
+    "figures": 0,
+    "videos": 2,
+    "articles": 4
+  },
+  {
+    "no": 15,
+    "slug": "kat-kopyalama",
+    "title": "Kat Kopyalama ve Düzenleme",
+    "duration": "04:23",
+    "steps": 3,
+    "commands": 3,
+    "figures": 0,
+    "videos": 0,
+    "articles": 4
+  },
+  {
+    "no": 16,
+    "slug": "cati-elemanlari",
+    "title": "Çatı ve Çatı Elemanları Oluşturma",
+    "duration": "07:48",
+    "steps": 4,
+    "commands": 4,
+    "figures": 0,
+    "videos": 4,
+    "articles": 6
+  }
+]

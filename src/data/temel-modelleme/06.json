@@ -1,0 +1,133 @@
+{
+  "no": 6,
+  "slug": "2d-duzenleme-komutlari",
+  "title": "2D Düzenleme Komutları (Standart CAD İşlemleri)",
+  "duration": "10:48",
+  "sourceModule": "Proje 1 — Modül 1 & Modül 4: Doğrudan Obje Modifikasyonu ve Düzenleme",
+  "objectives": [
+    "Doğrudan Obje Modifikasyonu (Direct Object Modification) tutamaçlarıyla hızlı taşıma, kopyalama, döndürme ve aynalama yapmak.",
+    "İki Elemanı Kesiştir (Intersect), Çizgi Kırp/Uzat (Trim/Extend), İki Nokta Arasını Sil, Pah Kır (Chamfer) ve Yuvarlat (Fillet) komutlarını kullanmak.",
+    "Noktaları Modifiye Et (Stretch Entities / Punkte modifizieren) ve Biçim Aktar (Match Properties) ile revizyon yapmak."
+  ],
+  "steps": [
+    {
+      "time": "00:00 – 03:00",
+      "heading": "Seçim Yöntemleri ve Taşı / Kopyala / Döndür / Aynala",
+      "body": "Soldan sağa pencere (tam içine girenler) ve sağdan sola pencere (kesişenler) seçim farkını uygulayın. Seçili nesne üzerindeki bağlam menüsünden **Taşı (Move)**, **Kopyala (Copy)**, **Döndür (Rotate)** ve **Kopyalayarak Aynala (Mirror and Copy)** işlemlerini gerçekleştirin.",
+      "figures": []
+    },
+    {
+      "time": "03:00 – 06:30",
+      "heading": "Kesiştirme, Kırpma, Uzatma, Pah ve Köşe Yuvarlatma",
+      "body": "**Modifikasyon (Modify)** grubundan **İki Elemanı Kesiştir (Intersect Two Entities / 2 Elemente verschneiden)** ile açık köşeleri birleştirin; **Çizgileri Elemana Göre Kırp (Trim Lines to Element)** ve **Eleman Parçasını Sil (Delete Segment of Line)** ile fazla uzantıları temizleyin; **Köşe Yuvarlat (Fillet / Ausrunden)** ile belirli yarıçapta yay geçişi oluşturun.",
+      "figures": []
+    },
+    {
+      "time": "06:30 – 10:48",
+      "heading": "Noktaları Modifiye Et (Stretch) ve Biçim Özelliklerini Aktar",
+      "body": "**Noktaları Modifiye Et (Stretch Entities / Punkte modifizieren)** komutuyla bir aks veya oda kenarını seçip bağlı tüm çizgi ve taramalarla birlikte sündürün. **Biçim Aktar (Match Properties / Format übertragen)** komutuyla bir elemanın kalem/çizgi/katman özelliklerini diğer elemanlara kopyalayın.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Taşı / Kopyala (Move / Copy)",
+      "menu": "Modifikasyon (Modify) -> Taşı (Move) / Kopyala (Copy)",
+      "shortcut": "M / Ctrl+C",
+      "desc": "Seçilen elemanları referans noktası ve hedef koordinat/mesafe ile taşır veya çoğaltır."
+    },
+    {
+      "name": "Döndür / Aynala (Rotate / Mirror)",
+      "menu": "Modifikasyon (Modify) -> Döndür (Rotate) / Aynala (Mirror)",
+      "shortcut": "Sağ Tık Menüsü",
+      "desc": "Seçilen elemanları dönme merkezi veya ayna eksenine göre döndürür/simetrisini alır."
+    },
+    {
+      "name": "İki Elemanı Kesiştir (Intersect)",
+      "menu": "Taslak (Draft) -> Modifikasyon -> İki Elemanı Kesiştir (2 Elemente verschneiden)",
+      "shortcut": "TR",
+      "desc": "İki çizgi veya duvarı kesişim noktasında birleştirerek L köşe oluşturur."
+    },
+    {
+      "name": "Çizgileri Elemana Göre Kırp",
+      "menu": "Taslak (Draft) -> Modifikasyon -> Çizgileri Elemana Göre Kırp (Trim Lines)",
+      "shortcut": "T",
+      "desc": "Referans sınır çizgisine kadar olan fazla çizgi uzantılarını keser veya uzatır."
+    },
+    {
+      "name": "Noktaları Modifiye Et (Stretch)",
+      "menu": "Modifikasyon (Modify) -> Noktaları Modifiye Et (Stretch Entities / Punkte modifizieren)",
+      "shortcut": "S",
+      "desc": "Seçilen bölgedeki köşe noktalarını bağlı çizgi, duvar, ölçü ve taramalarla birlikte sündürür."
+    },
+    {
+      "name": "Biçim Özelliklerini Aktar",
+      "menu": "Modifikasyon (Modify) -> Biçim Aktar (Match Properties / Format übertragen)",
+      "shortcut": "Fırça İkonu",
+      "desc": "Kaynak elemanın kalem, çizgi tipi, renk ve katman özelliklerini hedef elemanlara aktarır."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Objekte selektieren und aktivieren",
+        "file": "2870_vimeo_880819801_0cc3bf72.mp4",
+        "vimeoId": "880819801",
+        "sizeMB": 49.11
+      },
+      {
+        "title": "Add-On Geometry Tools - 3D Fläche Modifizieren",
+        "file": "12654_vimeo_1234952913_a9a837ee.mp4",
+        "vimeoId": "1234952913",
+        "sizeMB": 35.39
+      }
+    ],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_2870",
+      "title": "Objeleri seçme ve etkinleştirme",
+      "body": "Bim Explorer'da objelerin seçilmesi ve aktivasyonu hakkındaki bilgiler açıklanmaktadır.\n\n#objeler",
+      "figures": []
+    },
+    {
+      "id": "en_8680",
+      "title": "Kolayca döndürme, taşıma ve yakınlaştırma",
+      "body": "Çalışma alanının sağ alt köşesinde, modeldeki bakış açısını yönlendirmek için **NaviCube** aracını bulabilirsiniz.\n\nModelinizin bir cephe görünüşüne bakmak istiyorsanız **NaviCube** üzerindeki düzlemlere, kenarlara veya köşelere tıklayabilirsiniz. Cephe görünüşleri genel koordinat sistemini temel alır.\n\n \n\nGörünümü bazı kısayol tuşları aracılığıyla yönlendirmek de mümkündür:\n\n* SHIFT + sağ fare tuşu = Taşı (Move)\n* Kaydırma tekerleğine tıklama = Taşı (Move)\n* CTRL + sağ fare tuşu = Döndür (Rotate)\n* SHIFT + CTRL + sağ fare tuşu = Yakınlaştır (Zoom)\n* Kaydırma tekerleği = Yakınlaştır (Zoom)\n\n**NaviCube** yanındaki düğmeler şu işlemler için kullanılabilir:\n\n* Tüm model görünür olacak şekilde görünümü yakınlaştırma\n* İzometrik veya perspektif görünüme geçme\n* Son görünüm yönlendirmelerini geri alma\n* Son görünüm yönlendirmelerini yineleme\n\nİpucu: Belirli bir yapı elemanı veya düğüm noktası etrafında döndürme yapmak istiyorsanız, döndürme işlemini gerçekleştirmeden önce ilgili elemanı veya düğüm noktasını seçmelisiniz. SCIA Engineer bu durumda seçimin etrafında döndürme yapacaktır.",
+      "figures": [
+        "/akademi/temel-modelleme/8680_0EMVi00000F6XIP_18e5343b.png",
+        "/akademi/temel-modelleme/8680_0EMVi00000F6L5z_c10bba24.png",
+        "/akademi/temel-modelleme/8680_0EMVi00000F6PpW_2e4a039c.png",
+        "/akademi/temel-modelleme/8680_0EMVi00000F6XFB_fe5656e0.png",
+        "/akademi/temel-modelleme/8680_0EMVi00000F6XGn_f703f633.png"
+      ]
+    },
+    {
+      "id": "de_11227",
+      "title": "Yüzey stillerini veya çizgi stillerini projeler arasında kopyalama",
+      "body": "**Soru:** \n \nÇizgi stilleri, yüzey stilleri ve çizim tipleri farklı projelerde nasıl kullanılabilir hale getirilebilir? \n \n \n \n**Cevap:** \n \nYüzey stilleri, çizgi stilleri ve çizim tipleri, tanımlar üzerinden ek kaynaklar olarak projeler arasında eklenebilir. \nBunun için **Araçlar (Extras)** -> **Tanımlar (Definitionen)** -> **Çizgi Stilleri, Yüzey Stilleri, Çizim Tipleri (Linienstile, Flächenstile, Zeichnungstypen)** bölümünü açın. \n \nÇizgi veya yüzey stilleri alanında çizim tiplerinin üzerine sağ tıklayın ve **Kısayol Menüsü (Kontextmenü)** -> **Standart/Büro/Proje'den Ek Kaynaklar Ekle (Weitere Ressourcen aus Standard/Büro/Projekt hinzufügen)** seçeneğini seçin. \n \n \n \nÜstteki seçimi **\"Ek çizim tipleriyle genişlet (Um die zusätzlichen Zeichnungstypen erweitern)\"** olarak ayarlayın (\"**Değiştir (Ersetzen)**\" seçeneğini seçerseniz, stillerin içindeki mevcut çizim tipleri silinir). \n**Kaynak Klasör (Quellordner)** kısmında **Proje (Projekt)** seçin ve stilleri devralmak istediğiniz projeyi işaretleyin. \n(Alternatif olarak (büro) standardından tanımları yüklemek için **Kaynak Klasör (Quellordner)** kısmında **Büro (Büro)** veya **Standart (Standard)** seçin.) \n**CTRL+A (STRG+A)** ile tüm stilleri veya seçmeli olarak aktarılacak istediğiniz stilleri etkinleştirin ve seçimi **\"Tamam (OK)\"** ile onaylayın. \n \nÇizgi stilleri: \n \n \n \nYüzey stilleri: \n \n \nTüm yeni çizgi ve yüzey stilleri, kullanılan çizim tipleriyle birlikte oluşturulur. Hâlihazırda mevcut olan stiller ise olası ek çizim tipleriyle tamamlanır. \nSonrasında bir stilde artık mevcut olan tüm çizim tipleri için bir tanım bulunmuyorsa, bu durum \"tanımsız (undefiniert)\" ifadesiyle işaretlenir. \n \n \n \n**Not:** \n \nYapı elemanları yalnızca belirli bir ID numarasına olan aidiyeti hafızada tutar! Bu numara değiştirilirse yapı elemanı yüzey stilini kaybeder veya ona başka bir yüzey stili atanır. \nİlgili kaynakları ve tanımları değiştirebilmek için proje sahibi veya yönetici (Administrator) olarak gerekli yetkilere sahip olmanız gerektiğini lütfen unutmayın.",
+      "figures": [
+        "/akademi/temel-modelleme/11227_0EM7U000001TdUQ_a29bbe1c.png",
+        "/akademi/temel-modelleme/11227_0EM7U000001TdUR_70671060.png",
+        "/akademi/temel-modelleme/11227_0EM7U000001TdUS_faefb095.png"
+      ]
+    },
+    {
+      "id": "de_11197",
+      "title": "Mahaller - Simetriği alınan (aynalanan) mahaller farklı alanlara sahip",
+      "body": "**Soru:** \n \nAslında birbiriyle aynı olan ancak örneğin simetriği alınmış (aynalanmış) iki mahal için farklı alanlar hesaplanıyor. Neden? \n \n \n \n**Cevap:** \n \nAllplan'ın alan hesabına nasıl başladığına bağlı olarak toplam alan farklı alt alanlara bölünür. \nBu durum grafik gösterimli bir çıktı ile somutlaştırılabilir: \n \n \n \nOndalık basamak sayısının sınırlı olması nedeniyle hesaplama sırasında farklar oluşabilir. \nBu yuvarlama sapmalarını önlemek için alanların çıktısını alırken aşağıdaki ayarlara dikkat edin:\n\n* **Oluştur (Erzeugen) -> Mimari (Architektur) -> Mahaller, Alanlar, Katlar (Räume, Flächen, Geschosse) -> Konut Alanı, DIN277, Yapı Ruhsatı (Wohnfläche, DIN277, Bauantrag)** fonksiyonunu başlatın\n* İletişim kutusu içindeki **Seçenekler (Optionen)** butonuna tıklayın\n* Açılan \"**İzlenebilir Miktar Hesapları (Nachvollziehbare Mengenansätze)**\" iletişim kutusunda \"**Alt alan sonuçlarını - tam (kesin) - değerlerden belirle (Teilflächenergebnisse aus - exakten - Werten ermitteln)**\" seçeneğini seçin ve gerekirse \"**Alt Boyutlar (Teilabmessungen)**\" ile \"**Alt Alan Sonuçları (Teilflächenergebnisse)**\" için ondalık basamak sayısını artırın\n\n \n \n\n* Mahaller etiket stilleriyle (değişken metin stilleriyle) etiketlendiyse, bu ayarlar etiket stillerini (metin stillerini) de aynı şekilde etkiler. Etiket güncellendikten sonra (**Modifikasyon (Ändern) -> Mimari (Architektur) -> Mahaller, Alanlar, Katlar (Räume, Flächen, Geschosse) -> Etiketi Güncelle (Beschriftung aktualisieren)**) bunlar çizim dosyasında da buna uygun olarak görüntülenir\n\n \n \n \n**Not:** \n \nToplam değerler için ondalık basamak sayısı, rapor şablonunda **Paftayı Modifiye Et (Layout modifizieren)** üzerinden uyarlanabilir. Bunun için ilgili hücrelere \"**Özellikler (Eigenschaften)**\" paleti üzerinden istediğiniz biçimi girin. \nDeğişken metin stillerinin (Variable Textbilder) kullanımı için lütfen Allplan Yardım (F1) içinde \"**Değişken Metin Stili (Variables Textbild)**\" başlığına bakın.",
+      "figures": [
+        "/akademi/temel-modelleme/11197_0EM7U000001TdNJ_52cd0054.png",
+        "/akademi/temel-modelleme/11197_0EM7U000001TdNK_570eeced.png"
+      ]
+    },
+    {
+      "id": "de_12654",
+      "title": "Add-On Geometry Tools (Geometri Araçları Eklentisi) - 3B Yüzey Değiştirme",
+      "body": "Allplan **Geometri Araçları (Add-On Geometrie Tools)** eklentisine ait bu eğitim videosunda, eğimli temel plaklarını ve döşemeleri hassas bir şekilde uyarlamak için yeni fonksiyonla 3B yüzeyleri nasıl değiştirebileceğinizi öğrenin. Bir düzlem içindeki tekil yüzeyleri değiştirebilme olanağı sayesinde eğimleri, yönleri ve kot noktalarını kolayca uyarlayabilir ve böylece karmaşık eğimleri sorunsuzca düzenleyebilirsiniz.",
+      "figures": []
+    }
+  ]
+}

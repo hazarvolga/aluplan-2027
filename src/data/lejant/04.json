@@ -4,7 +4,7 @@
   "title": "Mimari Lejant Hücresi Tanımlama",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 4: Hücre Tanımlama (Define Cell / Zelle definieren), Nitelikler ve Formüller",
-  "intro": "Lejantın kalbi **hücre tanımıdır**: her hücreye hangi niteliğin (ör. mahal no, alan, kapı genişliği) veya hangi formülün yazılacağını belirlersiniz. Bu ders, mimari lejant hücresine nitelik ve formül bağlamayı anlatır.",
+  "intro": "Lejantın kalbi **hücre tanımıdır**: her hücreye hangi niteliğin (ör. mahal no, alan, kapı genişliği) veya hangi formülün yazılacağını belirlersiniz. Bu ders, mimari lejant hücresine nitelik ve formül bağlamayı anlatır. Hücreye yanlış niteliği bağlarsanız tablo yanlış değeri (örneğin alan yerine çevre) metrajlar; bu yüzden hücre tanımı, lejantın doğruluğunu belirleyen adımdır.",
   "objectives": [
     "Hücre Tanımla (Define Cell / Zelle definieren) komutuyla lejantın Ana Satır (Body) ve Toplam (Summary) hücrelerini oluşturmak.",
     "Mimari nitelikleri (Mahal No `@246@`, Mahal Adı `@507@`, Fonksiyon `@506@`, Kat Adı, Taban Alanı `@224@`, Çevre `@228@`, Hacim `@223@`) hücrelere bağlamak.",

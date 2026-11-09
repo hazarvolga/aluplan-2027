@@ -18,9 +18,15 @@
       "figures": []
     },
     {
-      "time": "01:20 – 02:35",
-      "heading": "Şerit Temel ve Tekil Temel Modelleme",
-      "body": "**Mimari (Architecture) -> Temel (Foundation / Fundament)** grubundan **Şerit Temel (Strip Foundation)**'i taşıyıcı duvar ve perdelerin (çizgisel yük) altına, **Tekil Temel (Isolated Foundation)**'i kolonların (noktasal yük) altına yerleştirin; çünkü yük zemine duvarda çizgi, kolonda nokta olarak indiğinden temel geometrisi de buna göre değişir. Temel genişliği ile yüksekliğini ve altına, zemini tesviye eden grobeton (`Sauberkeitsschicht`) taşma payını girin.",
+      "time": "01:20 – 02:00",
+      "heading": "Şerit Temel (Strip Foundation): Duvar ve Perde Altı",
+      "body": "**Mimari (Architecture) -> Temel (Foundation / Fundament)** grubundan **Şerit Temel (Strip Foundation)** komutunu açın ve taşıyıcı duvarlar ile perdelerin altına yerleştirin; çünkü bu elemanların yükü zemine çizgisel indiğinden temel de doğrusal bir şerittir. Temel genişliği ile yüksekliğini ve altına, zemini tesviye eden grobeton (`Sauberkeitsschicht`) taşma payını girin.",
+      "figures": []
+    },
+    {
+      "time": "02:00 – 02:35",
+      "heading": "Tekil Temel (Isolated Foundation): Kolon Altı",
+      "body": "**Tekil Temel (Isolated Foundation)** komutuyla kolonların altına tekil veya kademeli temel pabuçlarını yerleştirin; çünkü kolonun yükü zemine noktasal indiğinden temel geometrisi de duvardakinden farklı, tek bir pabuç biçimindedir.",
       "figures": []
     },
     {

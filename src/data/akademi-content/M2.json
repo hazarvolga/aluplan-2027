@@ -7,7 +7,7 @@
   "hours": 12,
   "format": "Hibrit",
   "prerequisite": "B.M1",
-  "summary": "Proje, yapı yapısı ve çizim dosyası ilişkisini kavrar; kat/seviye ve aks sistemini kurarak modelin iskeletini hazırlar ve çizim dosyalarını katman mantığına göre düzenler.",
+  "summary": "Bu derste projenizi kurar, binanın yapı yapısını (kat ve bölümler) ve aks sistemini oluşturur, çizim dosyalarını katman mantığına göre düzenlersiniz. Yani modellemeye başlamadan önce projenin iskeletini hazırlarsınız.",
   "outcomes": [
     {
       "text": "Proje, yapı yapısı (building structure) ve çizim dosyası (document) ilişkisini açıklar.",
@@ -25,6 +25,54 @@
       "code": "K-B2.3"
     }
   ],
+  "lesson": {
+    "title": "Projenin iskeletini kurmak",
+    "subtitle": "Modellemeye başlamadan önce proje, kat sistemi ve çizim düzenini hazırlarsınız.",
+    "intro": "Bir binayı modellemeden önce onun dijital iskeletini kurarsınız. Bu derste ALLPLAN'da bir projenin nasıl düzenlendiğini, katları ve aks sistemini nasıl tanımladığınızı ve çizimlerinizi hangi mantıkla böldüğünüzü öğreneceksiniz. Bu iskelet ne kadar düzenli olursa, sonraki tüm işler (kesit, pafta, metraj) o kadar kolaylaşır.",
+    "sections": [
+      {
+        "heading": "Proje: tüm işin tek çatısı",
+        "body": [
+          "ALLPLAN'da bir **proje**, o binaya ait her şeyin toplandığı kaptır: modeliniz, çizimleriniz, ayarlarınız ve standartlarınız. Tek tek dosyalarla değil, bu tek proje içinde çalışırsınız.",
+          "Yeni bir projeye başlarken ona bir ad verir ve temel ayarlarını (birim, ülke standardı, şablon) seçersiniz. [ayar adları sürüme göre değişebilir] Baştan doğru kurulan bir proje, sonradan düzeltmekle uğraşmanızı önler."
+        ],
+        "tryIt": "Zihninde bir ofis düşün: her binanın ayrı bir klasörü var. ALLPLAN projesi de tam olarak bu klasördür; ne işe yaradığını kendine bir cümleyle söyle."
+      },
+      {
+        "heading": "Yapı yapısı: binanın dijital iskeleti",
+        "body": [
+          "**Yapı yapısı** (building structure), projeyi bina, kat ve bölümlere ayıran bir ağaçtır. Gerçek binadaki hiyerarşiyi (bina → katlar) dijital olarak kurmanızı sağlar.",
+          "Her **kat** için bir kot (taban yüksekliği) ve bir kat yüksekliği tanımlarsınız. Bu sayede çizdiğiniz duvar ya da döşeme doğru düzlemde oturur. Kat tanımı eksikse elemanlar yanlış yükseklikte görünür.",
+          "Düzenli bir yapı yapısı, ileride kesit almayı, pafta düzenlemeyi ve metraj çıkarmayı çok kolaylaştırır; dağınık bir yapı ise her adımda size zaman kaybettirir."
+        ],
+        "tryIt": "Kendi denemen: Üç katlı bir bina için yapı yapısında bina ve kat düğümlerini oluştur, her kata kot ve yükseklik gir."
+      },
+      {
+        "heading": "Aks sistemi: her şeyin hizalandığı ızgara",
+        "body": [
+          "**Aks sistemi**, kolon ve duvarların yerleşimini yöneten referans ızgarasıdır: yatayda ve düşeyde adlandırılmış çizgiler (ör. A, B, C ve 1, 2, 3).",
+          "Kolonları ve duvarları akslara hizaladığınızda modeliniz hem tutarlı olur hem de kolay değiştirilir: bir aksı kaydırdığınızda ona bağlı elemanlar birlikte hareket eder. Bu, profesyonel bir modelin temel alışkanlığıdır."
+        ],
+        "tryIt": "Kendi denemen: Basit bir X/Y aks ızgarası kur, akslarını adlandır ve bir aksın üzerine bir kolon oturt."
+      },
+      {
+        "heading": "Çizim dosyaları ve katmanlar",
+        "body": [
+          "Modelin parçaları **çizim dosyalarında** (Teilbild / Document) tutulur. Bunları katman benzeri birimler gibi düşünebilirsiniz: taşıyıcıyı bir dosyaya, tesisatı başka bir dosyaya koyarsınız. Dosyaları işlev bazında adlandırmak (ör. 'Zemin kat: taşıyıcı') işinizi bulunabilir kılar.",
+          "**Katman** (layer) ise elemanları görünürlük ve çıktı formatı için gruplayan ayrı bir sistemdir. Aşağıdaki Katman diyaloğunda hazır katman yapıları görünür; hangi katmanın görüneceğini ve nasıl basılacağını buradan yönetirsiniz. Çizim dosyası 'neyi nereye koyduğunuz', katman ise 'neyin nasıl göründüğü' ile ilgilidir; ikisini karıştırmamak önemlidir."
+        ],
+        "figure": {
+          "src": "/akademi/m2/katman-yapilari-dialog.png",
+          "alt": "ALLPLAN Katman (Layer) diyaloğu, Katman Yapıları (Layer Structures) sekmesi açık; solda ARCHITECTUUR, ENGINEERING, PREFAB gibi katman yapıları listelenmiş.",
+          "caption": "ALLPLAN Katman diyaloğu. Katmanlar, elemanların görünürlüğünü ve çıktı formatını yönetir; çizim dosyalarından ayrı bir sistemdir.",
+          "source": "ALLPLAN dokümantasyonu",
+          "width": 693,
+          "height": 315
+        },
+        "tryIt": "Kendi denemen: İki çizim dosyası aç, birini \"Zemin kat: taşıyıcı\" diye adlandır; sonra Katman diyaloğunu açıp katman yapısını incele."
+      }
+    ]
+  },
   "concepts": [
     {
       "term": "Yapı yapısı",
@@ -322,5 +370,6 @@
       "difficulty": "Zor",
       "outcomeCode": "K-B2.1"
     }
-  ]
+  ],
+  "estimatedMinutes": 50
 }

@@ -15,7 +15,10 @@
       "time": "",
       "heading": "Pafta Düzenleyiciye Geçiş, Sayfa Ayarı, Çerçeve ve Antet",
       "body": "Üst şeritten **Pafta Düzenleyici (Layout Editor / Planlayout)** moduna geçin. **Sayfa Ayarı (Page Set Up)** ile pafta boyutunu (`DIN A1` veya özel rulo) seçin; **Çerçeve Gösterimi (Layout Border)** ve **Lejant - Başlık Bloğu (Title Block / Plankopf)** ile proje niteliklerinden beslenen dinamik anteti sağ alt köşeye yerleştirin.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/8808_0EM67000006eYtQ_6bdc0dfc.png",
+        "/akademi/temel-modelleme/8808_0EM67000006eYtP_6e9b131d.png"
+      ]
     },
     {
       "time": "",
@@ -27,7 +30,9 @@
       "time": "",
       "heading": "Yazdırma ve Katmanlı Vektörel PDF Çıktısı",
       "body": "**PDF Dosyası Gönder (Export PDF Data)** veya **Paftaları Yazdır** ile katman bilgisini koruyan, baskıya hazır **vektörel** PDF pafta setini dışa aktarın. Rasterize (düşük çözünürlük) değil, vektörel verin; böylece çizgiler her ölçekte keskin kalır.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/8885_0EMRD00000Lpsgc_26cb2ed2.png"
+      ]
     }
   ],
   "checkpoint": "DIN A1 paftanızda antet proje bilgilerini otomatik yazıyorsa, plan/kesit/görünüşler doğru ölçekte dizili ve katmanlı vektörel PDF üretebiliyorsanız çıktı aşamasını tamamladınız demektir.",

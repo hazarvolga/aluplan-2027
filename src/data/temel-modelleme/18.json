@@ -15,13 +15,17 @@
       "time": "",
       "heading": "Halihazır Haritayı İçe Aktarma ve Ofset",
       "body": "`100 - Halihazır Harita Altlığı` çizim dosyasını aktif edip ölçeği (`1:500`/`1:200`) ve birimi (`m`) ayarlayın. **Dosya (File) -> İçe Aktar (Import) -> AutoCAD Verilerini İçe Aktar** ile haritayı alın; **Seçenekler**'de Dosya Birimini `Metre` yapın ve **Ağırlık merkezini ayarla: Ofset (Adjust center of gravity: Offset)** seçeneğini işaretleyin. Neden? Bu, büyük UTM koordinatlarını proje ofsetine kaydeder ve çizimi orijine (`0,0,0`) taşır; aksi halde grafik sapmaları olur.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/11158_0EM7U000001Tdbc_b88efaad.png"
+      ]
     },
     {
       "time": "",
       "heading": "Sayısal Arazi Modeli (SAM) Oluşturma ve Dış Sınır",
       "body": "**Çevre -> Sayısal Arazi Modeli -> Ağ Oluştur (Mesh / Vermaschen)** komutuyla tüm 3B arazi noktalarını pencereyle seçin; ALLPLAN Delaunay üçgenlemesiyle **SAM / DTM**'i üretir. Üçgenleme en dıştaki noktaları dışbükey birleştirdiği için, **Dış Sınır (Outer Boundary / Außengrenze)** ile gerçek arsa köşelerini işaretleyerek sınır dışındaki fazla üçgenleri kırpın.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/11379_0EM7U000001TdAg_b7bf5faf.png"
+      ]
     },
     {
       "time": "",

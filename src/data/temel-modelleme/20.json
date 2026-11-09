@@ -15,13 +15,17 @@
       "time": "",
       "heading": "Planda Kesit Hattının Çizilmesi",
       "body": "**Kesit Hattı Tanımla (Define Section / Schnittführung)** komutuyla merdiven kovasından, pencerelerden ve çatıdan geçecek şekilde `A-A` ve `B-B` kesit hatlarını ve bakış derinliğini çizin. Bakış okunu doğru yöne verin; ters yön kesiti ters gösterir.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/11178_0EM7U000001Tecw_e8923a7a.png"
+      ]
     },
     {
       "time": "",
       "heading": "İlişkisel Kesitin Türetilmesi ve Yüzey Ayarları",
       "body": "Hedef kesit çizim dosyasını aktif edin, **Kesit Oluştur (Create Section / Schnitt erzeugen)** ile `A-A` hattını seçin. **Kesit Ayarları**'nda **Kesilen Yüzeylere Kalın Çizgi Uygula** ve **Yapı Elemanı Taramalarını Göster** seçeneklerini işaretleyerek kesiti yerleştirin.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/11178_0EM7U000001Tecu_eb0ae485.png"
+      ]
     }
   ],
   "checkpoint": "A-A ve B-B kesitleriniz kesilen elemanlarda kalın kontur ve malzeme taramasıyla görünüyorsa ve modeli değiştirdiğinizde kesit kendiliğinden güncelleniyorsa kesit üretimini kavramışsınız demektir.",

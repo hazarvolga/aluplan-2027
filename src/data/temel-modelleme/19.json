@@ -15,13 +15,18 @@
       "time": "",
       "heading": "Kaynak Model Çizim Dosyalarının Seçimi",
       "body": "**Bina Strüktürü (Building Structure)** sağ bölmesinde **Görünüşler (Views)** altındaki hedef çizim dosyasını (örn. `1001 Ön Cephe`) aktif edin ve sol bölmeden **tüm katların** mimari çizim dosyalarını kaynak olarak seçin. Eksik kat seçerseniz cephede o kat görünmez.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/11423_0EM7U000001Td64_c05e5da2.png"
+      ]
     },
     {
       "time": "",
       "heading": "Görünüş Oluştur ve Bakış Yönü",
       "body": "**Görünüş Oluştur (Create View / Ansicht erzeugen)** komutunu çalıştırın, bakış yönünü (Güney/Kuzey/Doğu/Batı) tıklayın; görünür kenar kalem kalınlıklarını, yüzey taramalarını (**Yüzey Elemanları / Surface Elements**) ve gölge hesabını ayarlayarak cepheyi yerleştirin.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/11377_0EM7U000001Td6P_8bcd9bae.png",
+        "/akademi/temel-modelleme/11423_0EM7U000001Td6X_e4e3fd60.png"
+      ]
     }
   ],
   "checkpoint": "Bina Strüktürünün türetilmiş bölmesinde cephe görünüşleriniz (Ön/Arka/Yan) duruyorsa ve modelde bir pencereyi değiştirdiğinizde görünüş otomatik güncelleniyorsa ilişkisel görünüşleri doğru üretmişsiniz demektir.",

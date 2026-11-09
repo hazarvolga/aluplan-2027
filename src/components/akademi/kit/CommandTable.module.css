@@ -1,10 +1,11 @@
-.wrap{margin-top:var(--space-stack-lg);border:var(--border-width-default) solid var(--border-default);display:flex;flex-direction:column}
-.head{display:grid;grid-template-columns:minmax(9rem,1.1fr) minmax(12rem,1.6fr) auto minmax(14rem,2fr);gap:var(--space-inline-md);padding:var(--space-inset-sm) var(--space-inset-md);background:var(--surface-raised);font-family:var(--font-mono);font-size:var(--type-body-sm-size);text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);border-bottom:var(--border-width-default) solid var(--border-default)}
-.row{display:grid;grid-template-columns:minmax(9rem,1.1fr) minmax(12rem,1.6fr) auto minmax(14rem,2fr);gap:var(--space-inline-md);padding:var(--space-inset-md);border-bottom:var(--border-width-default) solid var(--border-subtle);align-items:baseline;font-size:var(--type-body-sm-size)}
+.wrap{margin-top:var(--space-stack-lg);border:var(--border-width-default) solid var(--border-default);display:flex;flex-direction:column;overflow:hidden}
+.head{display:grid;grid-template-columns:minmax(6rem,0.9fr) minmax(7.5rem,1.3fr) minmax(4rem,6.5rem) minmax(8rem,1.7fr);gap:var(--space-inline-sm);padding:var(--space-inset-sm) var(--space-inset-md);background:var(--surface-raised);font-family:var(--font-mono);font-size:var(--type-body-sm-size);text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);border-bottom:var(--border-width-default) solid var(--border-default)}
+.row{display:grid;grid-template-columns:minmax(6rem,0.9fr) minmax(7.5rem,1.3fr) minmax(4rem,6.5rem) minmax(8rem,1.7fr);gap:var(--space-inline-sm);padding:var(--space-inset-md);border-bottom:var(--border-width-default) solid var(--border-subtle);align-items:baseline;font-size:var(--type-body-sm-size)}
 .row:last-child{border-bottom:0}
+.row span{min-width:0;overflow-wrap:anywhere}
 .name{font-weight:var(--font-weight-strong);color:var(--text-primary)}
 .menu{color:var(--text-secondary)}
-.shortcut{font-family:var(--font-mono);color:var(--accent-akademi);white-space:nowrap}
+.shortcut{font-family:var(--font-mono);color:var(--accent-akademi)}
 .desc{color:var(--text-secondary)}
 
 @media (max-width:52rem){

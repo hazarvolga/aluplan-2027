@@ -22,7 +22,9 @@
       "time": "",
       "heading": "Arazi Noktası (Terrain Point) Komutunu Başlatma ve Parametre Ayarları",
       "body": "**Çevre -> Arazi -> Arazi Noktası (Terrain Point / Geländepunkt)** komutuna tıklayın. Açılan özellikler/diyalog penceresinde:\n- **Başlangıç Nokta Numarası (Initial Point Number):** `1` (her tıklamada otomatik artar: 1, 2, 3...)\n- **Sembol Tipi ve Boyutu:** Nokta sembolünü (örn. artı/daire) ve metin parametrelerini belirleyin.\n- **Z Kotu (Z Coordinate / Elevation):** Yerleştirilecek noktanın yüksekliğini metre cinsinden girin (örn. `102.50`, `103.00`, `104.25`).",
-      "figures": []
+      "figures": [
+        "/akademi/arazi-modelleme/11239_0EM7U000001TdPL_1a451924.png"
+      ]
     },
     {
       "time": "",
@@ -34,7 +36,9 @@
       "time": "",
       "heading": "İzometrik Görünüşte 3B Nokta Kotlarının Kontrolü",
       "body": "Tüm arazi noktalarını girdikten sonra 3lü çalışma penceresi (`3 Windows`) düzenine geçin. Ön ve İzometrik pencerelerde noktaların Z ekseninde gerçek yüksekliklerine (`+102.50 m` vb.) yerleştiğini görsel olarak doğrulayın; hatalı girilmiş bir Z kotu varsa **Noktaları Değiştir (Modify Points)** komutuyla Z değerini düzeltin.",
-      "figures": []
+      "figures": [
+        "/akademi/arazi-modelleme/11148_0EM7U000001TdWf_896128ba.png"
+      ]
     }
   ],
   "pitfalls": [

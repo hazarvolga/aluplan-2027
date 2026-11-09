@@ -15,13 +15,17 @@
       "time": "",
       "heading": "Donatı Obje Filtresi ve Kayıt Numarası Seçimi",
       "body": "**Lejant Tanımla (Define Legend)** komutunu açın, **Ofis -> Mühendislik / Donatı** altında kayıt numarasını seçin ve **Filtre** olarak `Çubuk Donatı Yerleşimi (Bar Placement)` nesnesini tanımlayın.",
-      "figures": []
+      "figures": [
+        "/akademi/lejant/10594_0EM7U000001TdD0_d534cfc8.png"
+      ]
     },
     {
       "time": "",
       "heading": "Üst Bilgi, Ana Poz Satırı ve Satır Kaydırma Vektörü",
       "body": "Tablo başlığını **Üst Bilgi (Header)** olarak, poz ve büküm şeması satırını **Ana Satır (Body)** olarak seçin; büküm şemasının yüksekliğine uygun satır aralığını (`dY`) tıklayın.",
-      "figures": []
+      "figures": [
+        "/akademi/lejant/11050_0EM7U000001Tdh6_051353ad.png"
+      ]
     },
     {
       "time": "",

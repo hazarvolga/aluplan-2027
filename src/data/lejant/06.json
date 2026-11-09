@@ -15,7 +15,9 @@
       "time": "",
       "heading": "Kat Planında Canlı Test",
       "body": "Mahalleri ve doğramaları modellenmiş bir kat planı çizim dosyasını açın. **Lejant Oluştur (Create Legend)** komutuyla az önce kaydettiğiniz mimari lejantı seçin, **İlişkisel (Associative)** kutusunu işaretleyip planın sağına yerleştirin.",
-      "figures": []
+      "figures": [
+        "/akademi/lejant/11051_0EM7U000001Tdn0_ee80ee73.png"
+      ]
     },
     {
       "time": "",
@@ -27,7 +29,9 @@
       "time": "",
       "heading": "Lejant Şablonunu Düzenleme ve Yedekleme",
       "body": "Hücre taşması veya hizalama kusuru varsa **Lejant Değiştir (Modify Legend)** ile şablonu açıp hücre genişliğini düzeltin ve tekrar kaydedin.",
-      "figures": []
+      "figures": [
+        "/akademi/lejant/11051_0EM7U000001Tdn5_8dde7a6e.png"
+      ]
     }
   ],
   "pitfalls": [

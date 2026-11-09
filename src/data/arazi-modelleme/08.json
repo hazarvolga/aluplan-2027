@@ -28,13 +28,17 @@
       "time": "",
       "heading": "Dönüştürülen Arazi Düzleminin Kontrolü ve Kenar Görünümü",
       "body": "Düzleme dönüştürülen arazi modeli planda kesikli/özel düzlem çizgisiyle, İzometrik ve Animasyon (`F4`) pencerelerinde ise topoğrafik yüzey olarak görünür. Üzerine gelindiğinde araç ipucunda (`Tooltip`) `Serbest Düzlem / Çatı Düzlemi / Referans Yüzey` olarak tanımlandığını doğrulayın.",
-      "figures": []
+      "figures": [
+        "/akademi/arazi-modelleme/11348_0EM7U000001TdF2_bb9e8e28.png"
+      ]
     },
     {
       "time": "",
       "heading": "Mimari Elemanların Yükseklik Diyaloğunda Arazi Düzlemini Seçme Testi",
       "body": "Herhangi bir mimari komutta (örn. `Duvar`) **Yükseklik (Height)** butonuna tıkladığınızda **Alt Seviye: Özel Düzleme / Referans Yüzeye Bağla (`Arazi_Yuzeyi_Referans`)** seçeneğinin aktif olduğunu kontrol edin.",
-      "figures": []
+      "figures": [
+        "/akademi/arazi-modelleme/11348_0EM7U000001TdF1_e7f23598.png"
+      ]
     }
   ],
   "pitfalls": [

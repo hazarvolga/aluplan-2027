@@ -15,13 +15,18 @@
       "time": "",
       "heading": "Poz No, Adet, Çap ve Boy Hücrelerinin Tanımlanması",
       "body": "**Hücre Tanımla (Define Cell)** komutuyla Ana Satır içine sırasıyla **Poz Numarası (Mark Number)** (Artan sıralama `Sort: Ascending` aktif), **Adet (Piece Count)**, **Çap (Bar Diameter)** ve **Kesim Boyu (Bar Length)** nitelik hücrelerini yerleştirin.",
-      "figures": []
+      "figures": [
+        "/akademi/lejant/10594_0EM7U000001TdD0_d534cfc8.png",
+        "/akademi/lejant/8713_0EM67000008DXkH_153b9716.png"
+      ]
     },
     {
       "time": "",
       "heading": "Büküm Şeması (Bending Shape / Biegeform) Hücresinin Ayarlanması",
       "body": "Büküm şeması sütununa **Grafik Hücre -> Büküm Şeması (Biegeform)** tanımlayın; büküm kollarının ölçeklenebilir kutu sınırlarını, kanca/kıvrım boylarının ve açılarının şema üzerinde gösterilmesini aktif edin.",
-      "figures": []
+      "figures": [
+        "/akademi/lejant/8713_0EM67000008DTjo_4f27ff30.png"
+      ]
     },
     {
       "time": "",

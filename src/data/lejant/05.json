@@ -15,19 +15,25 @@
       "time": "",
       "heading": "Lejant Tanımla Komutu ve Obje Filtresinin Seçilmesi",
       "body": "**Lejant Tanımla (Define Legend / Legende definieren)** komutunu çalıştırın. Kayıt yeri olarak **Ofis (Office) -> Mimari** dizininde bir numara seçin ve **Filtre (Filter)** penceresinden taranacak yapı elemanını (örn. `Mimari -> Mahal (Room)` veya `Kapı (Door)`) tanımlayın.",
-      "figures": []
+      "figures": [
+        "/akademi/lejant/11050_0EM7U000001TdmG_8f39c27e.png"
+      ]
     },
     {
       "time": "",
       "heading": "Lejant Bölgelerinin (Üst Bilgi, Ana Satır, Toplam) Seçimi",
       "body": "Diyalog çubuğundaki sırayla önce **Üst Bilgi (Header)** elemanlarını pencere içine alarak seçin; ardından **Ana Satır (Body)** çizgi ve hücrelerini seçip satırın aşağıya doğru tekrarlama yönünü (üst sol köşeden alt sol köşeye `dY` mesafesini) tıklayın.",
-      "figures": []
+      "figures": [
+        "/akademi/lejant/11050_0EM7U000001Tdh6_051353ad.png"
+      ]
     },
     {
       "time": "",
       "heading": "Toplam Satırı, Alt Bilgi ve Başlangıç Tutma Noktasının Onaylanması",
       "body": "**Toplam (Summary)** ve **Alt Bilgi (Footer)** elemanlarını seçin; son olarak lejant ekrana yerleştirilirken farenin ucunda tutulacak **Referans Noktasını (Anchor Point)** tıklayarak mimari lejant şablonunu kaydedin.",
-      "figures": []
+      "figures": [
+        "/akademi/lejant/11050_0EM7U000001TdmL_68334f2f.png"
+      ]
     }
   ],
   "pitfalls": [

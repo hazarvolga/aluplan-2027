@@ -15,19 +15,25 @@
       "time": "",
       "heading": "Standart Lejantların Neden Doğrudan Değiştirilmemesi Gerektiği",
       "body": "**Varsayılan (Default / Standard)** dizinindeki lejantlar Allplan sürüm güncellemelerinde üzerine yazılarak sıfırlanabilir. Bu nedenle yeni bir lejant tasarlarken her zaman mevcut bir şablon **Ofis (Office / Büro)** dizinine kopyalanmalıdır.",
-      "figures": []
+      "figures": [
+        "/akademi/lejant/10888_0EM7U000001TeD2_1c01ef32.png"
+      ]
     },
     {
       "time": "",
       "heading": "Lejantları Yönet (Manage Legends) ile Kopyalama",
       "body": "**Lejantları Yönet (Manage Legends / Legenden verwalten)** komutunu açın. Kaynak olarak **Varsayılan (Default) -> Mimari (Architecture)** klasöründen örneğin `Mahal Listesi / Zemin Alanları` lejantını seçin ve hedef olarak **Ofis (Office)** klasöründe boş bir numaraya kopyalayıp yeni bir isim verin.",
-      "figures": []
+      "figures": [
+        "/akademi/lejant/10888_0EM7U000001Te3b_f6366dcc.png"
+      ]
     },
     {
       "time": "",
       "heading": "Şablonu Çalışma Alanına Çağırma ve Çerçeve Tasarımı",
       "body": "**Lejant Değiştir (Modify Legend)** komutuyla kopyaladığınız lejantı boş bir çizim dosyasına yerleştirin; 2B çizim ve metin araçlarıyla tablo sütun genişliklerini kendi kurumsal pafta tasarımınıza göre revize edin.",
-      "figures": []
+      "figures": [
+        "/akademi/lejant/11050_0EM7U000001Tdh6_051353ad.png"
+      ]
     }
   ],
   "pitfalls": [

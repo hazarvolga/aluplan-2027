@@ -16,25 +16,33 @@
       "time": "",
       "heading": "Halihazır Harita İçin Boş Çizim Dosyası Seçimi ve Ölçek Ayarı",
       "body": "**Yapı Strüktürü Aç (Open on a Project-Specific Basis)** penceresinden `100 - Halihazır Harita Altlığı` çizim dosyasını aktif hale getirin. Durum çubuğundan çalışma ölçeğini vaziyet planına uygun olarak `1:500` veya `1:200` ve ölçü birimini `m` (metre) olarak ayarlayın.",
-      "figures": []
+      "figures": [
+        "/akademi/arazi-modelleme/11158_0EM7U000001Tdbl_a464017e.png"
+      ]
     },
     {
       "time": "",
       "heading": "İçe Aktar (Import) Komutu ve DXF/DWG Seçenekleri",
       "body": "**Dosya (File) -> İçe Aktar (Import) -> AutoCAD Verilerini İçe Aktar (Import AutoCAD Data)** komutunu çalıştırın (veya dosyayı doğrudan çalışma alanına sürükleyip bırakın). Dosya seçimi penceresinde sağ alttaki **Seçenekler... (Options...)** butonuna tıklayın:\n- **Genel Ayarlar (General Settings)** sekmesinde **Dosya Birimi (Unit in File)** değerini harita birimiyle (`Metre`) eşleştirin.\n- **Koordinatlar ve Uzunluk Parametreleri (Coordinate and Length Parameters)** bölümünde **Ağırlık merkezini ayarla: Ofset (Adjust center of gravity to: Offset)** seçeneğini işaretleyin. Bu seçenek, büyük UTM koordinatlarını otomatik olarak proje ofsetine kaydeder ve çizimi Allplan orijinine (`0,0,0`) taşır.",
-      "figures": []
+      "figures": [
+        "/akademi/arazi-modelleme/11158_0EM7U000001Tdbf_4a5e9865.png"
+      ]
     },
     {
       "time": "",
       "heading": "Katman (Layer) ve Çizgi/Yazı Eşleştirmelerinin Kontrolü",
       "body": "**Değiştir (Modify)** butonuyla Önizleme ve Eşleştirme (`Assignment`) penceresini açarak halihazır haritadaki eş yükselti eğrileri, ada/parsel sınırları, mevcut binalar, yollar ve kot noktası katmanlarının Allplan katmanlarına (`Layers`) aktarımını onaylayın.",
-      "figures": []
+      "figures": [
+        "/akademi/arazi-modelleme/11158_0EM7U000001Tdbg_21b1b51d.png"
+      ]
     },
     {
       "time": "",
       "heading": "İçe Aktarılan Haritanın Ölçü Kontrolü ve Rölöve Nokta Dosyaları (.ASC / .XYZ)",
       "body": "Harita ekrana geldikten sonra **Ölç (Measure -> Length)** aracıyla bilinen iki parsel köşesi veya karelaj ağı (`100 m` grid) arasındaki mesafeyi ölçerek ölçeğin `1:1` doğruluğunu teyit edin. Eğer elinizde DXF/DWG yerine harita mühendisinden gelen bir koordinat listesi (`.asc`, `.prn`, `.xyz`, `LandXML`) varsa **Arazi -> İçe/Dışa Aktar -> Noktaları İçe Aktar (Import Points)** komutuyla noktaları doğrudan 3B koordinatlarıyla sahneye okuyabilirsiniz.",
-      "figures": []
+      "figures": [
+        "/akademi/arazi-modelleme/11158_0EM7U000001Tdbj_b69d5b05.png"
+      ]
     }
   ],
   "pitfalls": [

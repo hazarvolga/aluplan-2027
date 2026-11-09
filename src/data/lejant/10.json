@@ -21,13 +21,17 @@
       "time": "",
       "heading": "Donatı Revizyonu ve Otomatik Tonaj Güncelleme Testi",
       "body": "Plandaki veya kesitteki bir etriye/boyuna donatının çapını (`Ø12 -> Ø14`) veya aralığını değiştirin; donatı lejantındaki adet, birim ağırlık, büküm kolu uzunlukları ve genel toplam ağırlığın (`kg`) hatasız güncellendiğini doğrulayın.",
-      "figures": []
+      "figures": [
+        "/akademi/lejant/8713_0EM67000008DTQ4_d5f2622b.png"
+      ]
     },
     {
       "time": "",
       "heading": "İnce Ayar Düzenlemeleri ve Kurumsal Arşivleme",
       "body": "Büküm şeması yazılarında üst üste binme veya sütun darlığı varsa **Lejant Değiştir (Modify Legend)** ile büküm şeması hücre kutusunu genişletin; son halini **Lejantları Yönet** üzerinden `.zip` / `.leg` olarak yedekleyin.",
-      "figures": []
+      "figures": [
+        "/akademi/lejant/10888_0EM7U000001Te3b_f6366dcc.png"
+      ]
     }
   ],
   "pitfalls": [

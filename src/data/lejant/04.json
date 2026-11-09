@@ -15,7 +15,9 @@
       "time": "",
       "heading": "Hücre Tanımla (Define Cell / Zelle definieren) Diyaloğu",
       "body": "**Hücre Tanımla (Define Cell)** komutunu açın. İlk sütun için **Nitelik (Attribute)** listesinden `Mahal No / Kat Kısa Adı` veya `Ad (Bezeichnung @507@)` niteliğini seçin.",
-      "figures": []
+      "figures": [
+        "/akademi/lejant/11050_0EM7U000001TdmI_8be976c0.png"
+      ]
     },
     {
       "time": "",
@@ -27,7 +29,9 @@
       "time": "",
       "heading": "Sıralama Kriteri ve Toplam Hücresi (`SUM`) Tanımlama",
       "body": "Sıralama yapılacak hücrede (örn. Mahal No) **Sırala (Sort: Ascending)** seçeneğini işaretleyin. Toplam satırına geçip alan hücresinin altına **Toplam (Total / Summe)** tipinde yeni bir hücre yerleştirerek tüm mahallerin toplam `m²` değerini hesaplatın.",
-      "figures": []
+      "figures": [
+        "/akademi/lejant/11050_0EM7U000001TdmL_68334f2f.png"
+      ]
     }
   ],
   "pitfalls": [

@@ -7,7 +7,8 @@
   "hours": 12,
   "format": "Hibrit",
   "prerequisite": "O.M4",
-  "summary": "Kütüphane elemanlarını ve parametrik objeleri yönetir, elemanlara özellik atayıp sınıflandırır; modelden metraj, kapı/pencere çizelgesi ve mahal listesi üretir.",
+  "summary": "Bu derste kütüphane objelerini ve parametrik elemanları modele yerleştirir, elemanlara özellik (attribute) atayıp sınıflandırırsınız; sonra modelden metraj, kapı/pencere çizelgesi ve mahal listesi üretirsiniz. Modeldeki veri, elle sayım yapmadan listelere dönüşür.",
+  "estimatedMinutes": 50,
   "outcomes": [
     {
       "text": "Kütüphane elemanlarını ve özel parametrik objeleri yönetir",
@@ -25,6 +26,45 @@
       "code": "K-O4B.3"
     }
   ],
+  "lesson": {
+    "title": "Modeli veriye çevirmek",
+    "subtitle": "Elemanlara bilgi iliştirir, o bilgiden otomatik listeler üretirsiniz.",
+    "intro": "Şimdiye kadar modeli kurdunuz ve belgelediniz. Bu derste modelin içindeki veriyi işe koşacaksınız: kütüphaneden hazır objeler yerleştirecek, elemanlara özellik atayacak ve modelden metraj ile çizelgeler üreteceksiniz. Buradaki fikir şudur: doğru veriyi bir kez girerseniz, listeler kendini üretir.",
+    "sections": [
+      {
+        "heading": "Kütüphane ve parametrik objeler",
+        "body": [
+          "**Kütüphane**, hazır objelerin ve sembollerin saklandığı kaynaktır: mobilya, kapı/pencere tipleri, semboller. Bir objeyi modele sürüklediğinizde o bir **parametrik obje** olarak gelir; boyutunu ve tipini değerlerle değiştirirsiniz.",
+          "Kütüphaneyi kullanmak hem zaman kazandırır hem de standardı korur: herkes aynı kapı tipini aynı veriyle yerleştirdiğinde listeleriniz tutarlı olur."
+        ],
+        "tryIt": "Kendi denemen: Kütüphaneden bir kapı ve bir pencere tipi yerleştir; sonra birinin genişliğini parametresinden değiştir."
+      },
+      {
+        "heading": "Özellik (attribute): elemana iliştirilen veri",
+        "body": [
+          "Her eleman geometrinin yanında veri de taşır. **Özellik** (attribute), bir elemana iliştirdiğiniz bilgi alanıdır: ad, malzeme, poz/kod gibi. Bir duvara 'taşıyıcı beton, C25' yazdığınızda bu bilgi metraja ve listelere taşınır.",
+          "Özellik atamak sıkıcı görünür ama listelerin tamamı bu veriye dayanır: veri yoksa liste de yoktur. Doğru bir kez girin, her yerde kullanın."
+        ],
+        "tryIt": "Kendi denemen: Birkaç duvara malzeme ve poz/kod özelliği ata; aynı özelliği taşıyan elemanları seç."
+      },
+      {
+        "heading": "Sınıflandırma: ortak koda göre gruplamak",
+        "body": [
+          "**Sınıflandırma**, elemanları ortak bir koda göre gruplayan sistemdir (örneğin duvarları işleve göre: taşıyıcı, bölme, cephe). Sınıflandırma, hem metrajı düzenli tutar hem de IFC tesliminde disiplinler arası ortak dili sağlar.",
+          "İyi bir sınıflandırma, projenin büyüdükçe dağılmasını önler: her eleman nereye ait olduğunu bilir."
+        ],
+        "tryIt": "Kendi denemen: Duvarlarını işleve göre sınıflandır (taşıyıcı / bölme) ve bir gruba göre süz."
+      },
+      {
+        "heading": "Listeler: metraj, çizelge ve mahal listesi",
+        "body": [
+          "Veri hazırsa listeler otomatik gelir. **Metraj**, model verisinden üretilen miktar/alan/adet dökümüdür; kapı/pencere çizelgesi tüm açıklıkları tek tabloda toplar; **mahal listesi** ise odaların alan ve işlev dökümünü verir.",
+          "Bu listelerin en büyük avantajı canlı olmalarıdır: modeli değiştirdiğinizde liste de güncellenir. Elle sayıma göre hem daha hızlı hem daha az hatalıdır."
+        ],
+        "tryIt": "Kendi denemen: Modelden bir alan/adet metrajı ile kapı-pencere çizelgesi üret; bir pencere ekleyip listenin güncellendiğini gör."
+      }
+    ]
+  },
   "concepts": [
     {
       "term": "Kütüphane",

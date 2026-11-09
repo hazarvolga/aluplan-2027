@@ -7,7 +7,8 @@
   "hours": 16,
   "format": "Hibrit",
   "prerequisite": "Seviye 2 tamamlanmış",
-  "summary": "Karmaşık geometri ile cephe ve giydirme cephe sistemlerini modeller; tasarım varyantları türetir ve ortak kamera/ışık ile görselleştirme çıktısı alır.",
+  "summary": "Bu derste karmaşık geometriyle cephe ve giydirme cephe sistemlerini modeller, yüzeylere malzeme atar, tasarım varyantları türetir ve ortak kamera/ışık ile görselleştirme çıktısı alırsınız. Mimari fikrinizi hem modelleyip hem sunabilir hâle gelirsiniz.",
+  "estimatedMinutes": 60,
   "outcomes": [
     {
       "text": "Karmaşık geometri ile cephe ve giydirme cephe (curtain wall) sistemlerini modeller",
@@ -20,6 +21,45 @@
       "code": "K-İ3B.2"
     }
   ],
+  "lesson": {
+    "title": "İleri mimari biçim ve sunum",
+    "subtitle": "Standart elemanların bittiği yerde serbest geometri, varyant ve görselle devam edersiniz.",
+    "intro": "İleri mimaride çoğu biçim standart duvar-döşeme araçlarına sığmaz. Bu derste cephe ve giydirme cephe sistemlerini kuracak, standart elemana sığmayan yerleri serbest geometriyle modelleyecek, tasarım alternatifleri türetecek ve projenizi gerçekçi bir görselle sunacaksınız.",
+    "sections": [
+      {
+        "heading": "Cephe ve giydirme cephe",
+        "body": [
+          "**Cephe**, binanın dış yüzeyini oluşturan katmandır. **Giydirme cephe** (curtain wall) ise taşıyıcı olmayan, panel ve profillerden oluşan bir dış kabuktur; kendi ağırlığını taşır ama binayı taşımaz. Bunu bir referans yüzey ya da ızgara üzerine kurarsınız. [araç adı sürüme göre değişebilir]",
+          "Giydirme cepheyi parametrik kurmak, panel bölüntüsünü sonradan değiştirmenizi kolaylaştırır: bir ızgarayı güncellediğinizde paneller birlikte yeniden dizilir."
+        ],
+        "tryIt": "Kendi denemen: Bir referans yüzey tanımla ve üzerine panel/profil ızgarasıyla basit bir giydirme cephe kur."
+      },
+      {
+        "heading": "Serbest geometri: standart elemanın sınırı",
+        "body": [
+          "Eğrisel bir çatı ya da heykelsi bir biçim standart araçlara sığmaz. **Serbest geometri** (freeform) ile bu bölümleri doğrudan yüzey/katı olarak modellersiniz. Serbest geometri güçlüdür ama veri taşımadığı için onu mümkün olduğunca yapı elemanlarıyla birleştirmek gerekir.",
+          "İyi bir iş akışı, biçimi serbest geometriyle arar, sonra mümkün olan yerleri parametrik elemanlara çevirir; böylece hem biçim hem veri korunur."
+        ],
+        "tryIt": "Kendi denemen: Standart elemana sığmayan bir bölümü serbest geometriyle modelle (ör. eğrisel bir saçak)."
+      },
+      {
+        "heading": "Malzeme ve görselleştirme",
+        "body": [
+          "**Görselleştirme**, modelden gerçekçi, ışıklı bir görsel üretmektir. Önce yüzeylere **malzeme ve kaplama** atarsınız (beton, cam, ahşap), sonra bir kamera açısı, ışık ve render ön ayarı tanımlarsınız.",
+          "Amaç fotogerçekçilik yarışı değil, fikri anlaşılır kılmaktır: doğru malzeme ve sakin bir ışık, abartılı bir render'dan daha ikna edicidir."
+        ],
+        "tryIt": "Kendi denemen: Cepheye cam ve beton malzemesi ata, bir kamera açısı seç ve tek bir görsel al."
+      },
+      {
+        "heading": "Tasarım varyantları",
+        "body": [
+          "**Tasarım varyantı**, aynı projenin karşılaştırılabilir bir alternatifidir (örneğin farklı panel bölüntüsü ya da farklı cephe oranı). Varyantları yan yana görmek, kararı sezgiyle değil karşılaştırmayla vermenizi sağlar.",
+          "Varyantları ayrı dosyalara kopyalamak yerine projenin varyant mekanizmasını kullanmak, değişiklikleri yönetilebilir tutar."
+        ],
+        "tryIt": "Kendi denemen: İlk cephenin bir kopyasından farklı panel bölüntülü ikinci bir varyant türet ve ikisini karşılaştır."
+      }
+    ]
+  },
   "concepts": [
     {
       "term": "Cephe",

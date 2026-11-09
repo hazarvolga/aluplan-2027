@@ -4,6 +4,7 @@
   "title": "Mimari Lejantı Oluşturma",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 4: Lejant Tanımlama (Define Legend / Legende definieren) ve Obje Filtreleri",
+  "intro": "Hücreleri tanımladıktan sonra lejantı **paftaya veya plana yerleştirip oluşturursunuz**. Bu ders, tanımlı hücrelerden gerçek lejant tablosunu üretmeyi anlatır.",
   "objectives": [
     "Tasarlanan tablo çerçevesini ve hücreleri Lejant Tanımla (Define Legend / Legende definieren) komutuyla paketleyip kaydetmek.",
     "Obje Seçim Filtresi (Filter): Lejantın yalnızca Mahalleri, yalnızca Kapıları, yalnızca Pencereleri veya yalnızca Duvarları okumasını şartlandırmak.",
@@ -29,6 +30,13 @@
       "figures": []
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Lejantı yanlış ölçeğe/çizim tipine yerleştirmek",
+      "body": "Lejantı yanlış referans ölçeğe veya çizim tipine koyarsanız yazılar okunmaz boyutta çıkar veya elemanları yakalayamaz. Lejantı ilgili planla aynı ölçekte ve doğru çizim dosyasında oluşturun."
+    }
+  ],
+  "checkpoint": "Lejant tablonuz doğru ölçek ve çizim tipinde yerleşmiş, satırları modeldeki elemanlardan otomatik dolmuşsa mimari lejantı doğru oluşturmuşsunuz demektir.",
   "commands": [
     {
       "name": "Lejant Tanımla (Define Legend)",

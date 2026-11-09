@@ -4,6 +4,7 @@
   "title": "Donatı Lejantı Hücresini Tanımlama",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 5: Donatı Nitelikleri, Büküm Şeması Grafik Hücresi ve Çap Bazlı Ağırlık Hesapları",
+  "intro": "Donatı lejantının hücreleri, donatı niteliklerine (poz, çap Ø, boy, adet, toplam boy, şekil) ve formüllere (ör. adet × birim boy = toplam boy) bağlanır. Bu ders, donatı lejant hücresini doğru tanımlamayı anlatır.",
   "objectives": [
     "Donatıya özel nitelikleri: Poz Numarası (Mark number), Adet (Number of pieces), Donatı Çapı (Diameter Ø), Kesim Boyu (Bar length), Toplam Boy, Çelik Kalitesi (B420C / B500C) ve Ağırlık (Weight kg) hücrelerini tanımlamak.",
     "Büküm Şeması (Bending Shape / Biegeform) grafik hücresini boyutlandırıp kenar parça boyları ve büküm açılarıyla birlikte hücreye yerleştirmek.",
@@ -29,6 +30,13 @@
       "figures": []
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Donatı niteliklerini yanlış eşlemek",
+      "body": "Çap, boy, adet veya poz niteliğini yanlış sütuna bağlarsanız metraj tablosu yanlış demir miktarı verir; bu doğrudan maliyet hatasıdır. Her sütunu doğru donatı niteliğiyle eşleştirin ve toplam boy formülünü (adet × birim boy) kontrol edin."
+    }
+  ],
+  "checkpoint": "Hücreleriniz poz/çap/boy/adet niteliklerine doğru bağlıysa ve örnek bir donatıda toplam boy formülü doğru hesaplıyorsa donatı hücre tanımını doğru yapmışsınız demektir.",
   "commands": [
     {
       "name": "Donatı Nitelik Hücresi",

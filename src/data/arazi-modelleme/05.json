@@ -4,6 +4,7 @@
   "title": "Eş Yükselti Eğrilerinin Oluşturulması",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 3 & Modül 6: Eş Yükselti Eğrileri (Contour Lines / Höhenlinien), İzohips Etiketleme ve Arazi Kesitleri",
+  "intro": "**Eş yükselti eğrileri (izohips / Höhenlinien)**, aynı kottaki noktaları birleştiren çizgilerdir ve vaziyet planının okunabilirliğinin temelidir. Bu derste SAM'den izohipsleri üretir, ana/ara eğri ayrımını ve kot etiketlerini ayarlarsınız.",
   "objectives": [
     "Oluşturulan Sayısal Arazi Modeli (SAM / DTM) üzerinden **Eş Yükselti Eğrileri (Contour Lines / Höhenlinien)** komutuyla otomatik izohips eğrileri üretmek.",
     "Ana eş yükselti eğrileri (örn. her `5.00 m`'de bir kalın çizgi ve kot yazılı) ile ara eş yükselti eğrilerinin (örn. her `1.00 m` veya `0.50 m`'de bir ince çizgi) aralık, kalem kalınlığı, çizgi tipi ve renk ayarlarını yapılandırmak.",
@@ -36,6 +37,13 @@
       "figures": []
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Eğri aralığını ölçeğe göre seçmemek",
+      "body": "Eğri aralığını (Schrittweite) ölçekten bağımsız seçerseniz plan okunmaz olur: büyük ölçekli vaziyet planında `1.00 m` çok seyrek, küçük ölçekte çok sık görünür. Detaylı planlarda `0.50/0.25 m`, genel planlarda `1.00 m` kullanın ve ana eğrileri farklı kalem/renkle ayırın."
+    }
+  ],
+  "checkpoint": "Eğri aralığı projenin ölçeğine uygunsa, her beşinci eğri kalın **ana eğri** olarak vurgulanmışsa ve ana eğriler kot değeriyle etiketliyse izohipsleri doğru üretmişsiniz demektir.",
   "commands": [
     {
       "name": "Eş Yükselti Eğrileri (Contour Lines)",

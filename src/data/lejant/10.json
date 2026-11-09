@@ -4,6 +4,7 @@
   "title": "Donatı Lejantını Test Etme - Düzenleme",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 5: 3B Donatılı Model Üzerinde Lejant Testi, Pafta İlişkisi ve Revizyon",
+  "intro": "Donatı lejantı metrajın temelidir; bu yüzden **test edip düzenlemek** kritiktir. Bir donatıyı değiştirip metrajın güncellendiğini, pozların doğru toplandığını ve tablonun okunaklı olduğunu kontrol edersiniz.",
   "objectives": [
     "3B donatısı modellenmiş bir kolon, kiriş, perde veya temel çizim dosyasında yeni Donatı Lejantını test etmek.",
     "Poz adedi, aralık (`s = 15 cm -> 10 cm`), çap veya pas payı değiştiğinde büküm şemasının ve toplam demir metrajının (`kg`) otomatik güncellendiğini doğrulamak.",
@@ -29,6 +30,13 @@
       "figures": []
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Metrajı güncellemeden paftaya almak",
+      "body": "Donatı değişince lejant metrajını **yenilemezseniz**, paftaya eski/yanlış demir miktarı gider ve imalatta hata doğar. Her donatı değişikliğinden sonra lejantı güncelleyin ve toplamları kontrol edin; donatı lejantı bir metraj belgesidir, görsel süs değildir."
+    }
+  ],
+  "checkpoint": "Bir donatının çap/boy/adedini değiştirdiğinizde lejant metrajı otomatik güncelleniyorsa, pozlar doğru toplanıyor ve tablo okunaklıysa donatı lejantınız doğru çalışıyor demektir.",
   "commands": [
     {
       "name": "Donatı Lejantı Oluştur",

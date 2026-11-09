@@ -4,6 +4,7 @@
   "title": "3B Arazi Modelinin Oluşturulması",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 3 & Modül 6: SAM Elemanlarını 3B Elemanlara Dönüştürme (Convert DTM Elements to 3D Surface / 3D Mesh)",
+  "intro": "SAM, jeodezik bir veri tipidir; onu serbest 3B modelleme araçlarıyla (kesme, doku, Boolean) işlemek için **3B yüzeye** dönüştürmeniz gerekir. Bu ders, SAM'i kaybetmeden 3B arazi yüzeyi üretmeyi ve ona doku/ortofoto atamayı anlatır.",
   "objectives": [
     "Sayısal Arazi Modelinin (SAM / DTM) neden doğrudan serbest 3B Boolean işlemlerine veya referans düzlem dönüşümüne girmediğini; bunun için önce **3B Elemanlara Dönüştürülmesi (Convert DTM Elements)** gerektiğini anlamak.",
     "**SAM Elemanlarını Dönüştür (Convert DTM Elements / DGM-Elemente wandeln)** komutuyla SAM modelini başka bir çizim dosyasına **3B Çokgen Yüzey (3D Surface / 3D-Fläche)** veya **3B Ağ (3D Mesh)** olarak aktarmak.",
@@ -36,6 +37,13 @@
       "figures": []
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Orijinal SAM modelini kaybetmek",
+      "body": "Dönüştürme sırasında hedef çizim dosyası vermez, SAM'in üstüne yazarsanız, üzerinde kübaj/izohips hesabı yapabildiğiniz jeodezik veriyi kaybedersiniz. Komuttaki **Hedef Çizim Dosyası** alanına boş bir numara (`103`) verin; `102`'deki SAM'i koruyun."
+    }
+  ],
+  "checkpoint": "Yeni çizim dosyasında (örn. `103`) elemanınız artık standart bir **3B Yüzey** ise, orijinal SAM dosyası (`102`) hâlâ duruyorsa ve yüzeye çim/toprak veya ortofoto dokusu atadıysanız 3B araziyi doğru üretmişsiniz demektir.",
   "commands": [
     {
       "name": "SAM Elemanlarını Dönüştür",

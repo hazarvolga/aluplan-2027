@@ -4,6 +4,7 @@
   "title": "Binaların Modellenmesi",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 3 & Modül 6: Eğimli Arazi Düzlemi Üzerinde Çevre Binalarının ve Mimari Kütlelerin Modellenmesi",
+  "intro": "Son adımda bina(lar) araziye oturur. Bu derste, mimari bina modelinin ±0.00 kotunu arazi kotuyla ilişkilendirir, gerekirse kazı-dolgu (şev) ile binayı araziye kaynaştırırsınız; böylece vaziyet planı ve 3B çevre maketi tamamlanır.",
   "objectives": [
     "Halihazır harita altlığındaki çevre binalarını (komşu parsellerdeki mevcut yapıları) Ders 8'de oluşturduğumuz **Eğimli Arazi Düzlemi (Terrain Reference Plane)** üzerine oturtarak hızlıca 3B kütleye dönüştürmek.",
     "**Duvar (Wall)**, **Kolon (Column)** veya **Mahal / Kütle (Room / 3D Solid)** komutlarında **Alt Seviye (Bottom Level)** değerini arazi düzlemine bağlayıp, bina kat adetlerine göre (`3 Kat = 9.00 m`, `5 Kat = 15.00 m`) yükseklik vermek.",
@@ -36,6 +37,13 @@
       "figures": []
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Binayı arazi kotuna oturtmayı unutmak",
+      "body": "Bina modelini arazi kotundan bağımsız ±0.00'da bırakırsanız, 3B maketde bina havada veya gömülü görünür. Binanın ±0.00 kotunu arazinin ilgili noktasıyla ilişkilendirin ve giriş kotu ile arazi kotu arasındaki şevi/merdiveni modelleyin."
+    }
+  ],
+  "checkpoint": "Binanız doğru kotta araziye oturuyorsa, zemin kat ±0.00'ı arazi kotuyla ilişkiliyse ve çevresinde kazı/dolgu (şev) tutarlıysa çevre maketini tamamlamışsınız demektir.",
   "commands": [
     {
       "name": "Duvar / Kütle (Araziye Bağlı Yükseklik)",

@@ -4,6 +4,7 @@
   "title": "Arazi Dosyasını Alma",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 2 & Modül 6: DXF/DWG Halihazır Harita İçe Aktarma, Büyük Koordinatlar (Ofset) ve Nokta Dosyaları",
+  "intro": "Arazi modellemenin ilk adımı, harita mühendisinden gelen **halihazır haritayı** (DXF/DWG) projeye doğru almaktır. Burada en kritik konu birim ve koordinattır: haritalar çoğu zaman büyük ülke koordinatlarıyla (UTM/ITRF) gelir ve doğru ayarlanmazsa çizim orijinden çok uzakta açılıp grafik hatalarına yol açar.",
   "objectives": [
     "Halihazır harita dosyalarını (`.dWG`, `.dxf`) doğru ölçü birimi (`m`, `cm`, `mm`), ölçek ve katman (layer) eşleştirmesiyle boş bir çizim dosyasına içe aktarmak (`Import`).",
     "Büyük ülke koordinatlarına (`UTM`, `ITRF`, `ED50`) sahip harita dosyalarını içe aktarırken karşılaşılan görüntü bozulmalarını önlemek için **Ağırlık Merkezini Ayarla: Ofset (Adjust center of gravity to: Offset)** seçeneğini kullanmak.",
@@ -36,6 +37,13 @@
       "figures": []
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Ofset (ağırlık merkezi) ayarını atlamak",
+      "body": "İçe aktarma Seçenekleri'nde **Ağırlık merkezini ayarla: Ofset** seçeneğini işaretlemezseniz, büyük UTM/ITRF koordinatları yüzünden çizim orijinden kilometrelerce uzakta açılır; önizleme, gölge ve alan hesapları bozulur. Ofseti baştan işaretleyin. Ayrıca Dosya Birimini harita birimiyle (Metre) eşleştirmezseniz ölçek 1:1 çıkmaz."
+    }
+  ],
+  "checkpoint": "Harita doğru birimde (`m`) ve `1:1` ölçekte ekrana geldiyse, karelaj/parsel köşeleri arasını Ölç ile doğruladıysanız ve koordinatlar ofsetle orijine taşındıysa içe aktarmayı doğru yapmışsınız demektir.",
   "commands": [
     {
       "name": "AutoCAD Verilerini İçe Aktar",

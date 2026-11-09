@@ -4,6 +4,7 @@
   "title": "Giriş",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 3 & Modül 6: Sayısal Arazi Modeli (SAM / DTM - DGM), Jeodezi ve Çevre Modelleme Temelleri",
+  "intro": "Bir bina tek başına durmaz; belli bir eğimi ve kotu olan bir arsanın üzerinde yer alır. Bu seri, ALLPLAN'da **arazi modellemenin** (Terrain / Gelände) tüm zincirini öğretir: halihazır haritadan 3B arazi noktalarına, üçgenleme ağından eş yükselti eğrilerine, 3B maketten yollara ve çevre binalarına. Bu giriş dersinde iş akışının bütününü ve **Sayısal Arazi Modeli (SAM / DTM)** ile 3B yüzey/katı arasındaki veri yapısı farkını kavrarsınız.",
   "objectives": [
     "Allplan'da Arazi Modelleme (Terrain Modeling / Geländemodell) iş akışının mimari vaziyet planı, altyapı, kazı-dolgu ve 3B çevre maketi üretimindeki rolünü kavramak.",
     "Actionbar üzerinde **Çevre (Surroundings / Umgebung)** rolü altındaki **Arazi (Terrain / Gelände)** ve **Sayısal Arazi Modeli (Digital Terrain Model - DTM / DGM)** görev alanlarını tanımak.",
@@ -36,6 +37,13 @@
       "figures": []
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Arazi verisini bina modeliyle karıştırmak",
+      "body": "Arazi noktalarını, SAM'i ve 3B araziyi bina modeliyle **aynı çizim dosyasına** koyarsanız veriler birbirine karışır ve yönetilemez olur. Bina Strüktürü içinde ayrı bir Dış Mekan/Arazi düğümü açın ve her aşamaya (harita 100, noktalar 101, SAM 102, 3B arazi 103, yollar 104) ayrı çizim dosyası verin."
+    }
+  ],
+  "checkpoint": "On adımlı zinciri (harita → noktalar → SAM → izohips → 3B arazi → maket → düzlem → yollar → binalar) kendi sözlerinizle anlatabiliyor ve Actionbar'da Çevre (Surroundings) rolü altındaki Arazi araç gruplarını bulabiliyorsanız seriye hazırsınız demektir.",
   "commands": [
     {
       "name": "Çevre Rolü (Surroundings Role)",

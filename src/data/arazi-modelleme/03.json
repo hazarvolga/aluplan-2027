@@ -4,6 +4,7 @@
   "title": "Arazi Nokta Kotlarının Girilmesi",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 3 & Modül 6: Arazi Noktası (Terrain Point / Geländepunkt), Z Kotu Girişi ve Sembol Noktaları",
+  "intro": "Sayısal arazi modeli, gerçek **3B kotlu noktalardan** üretilir. Bu derste ya haritadaki 2B kot yazılarını 3B arazi noktalarına dönüştürür ya da harita mühendisinden gelen koordinat dosyasını (.asc/.xyz) doğrudan okursunuz. Noktaların doğru Z değerine sahip olması, sonraki tüm aşamaların (üçgenleme, izohips, şev) doğruluğunu belirler.",
   "objectives": [
     "2B olarak içe aktarılmış halihazır harita altlığı üzerindeki kot noktalarını ve izohips kotlarını okuyarak 3B **Arazi Noktası (Terrain Point / Geländepunkt)** oluşturmak.",
     "Arazi Noktası özellikler paletinde **Nokta Numarası (Point Number)**, **Nokta Sembolü**, **Etiketleme (Z Kotu Yazısı)** ve **Z Yüksekliği (Height Z)** parametrelerini doğru ayarlamak.",
@@ -36,6 +37,13 @@
       "figures": []
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Noktaları Z kotu olmadan 2B girmek",
+      "body": "Arazi noktalarını yükseklik (Z) değeri olmadan 2B olarak girerseniz, üçgenleme düz bir yüzey üretir ve izohips/şev hesapları anlamsız olur. Her noktanın gerçek kotunu girin; harita kot yazılarını 3B noktaya dönüştürürken yazının bağlı olduğu kotu kullandığından emin olun."
+    }
+  ],
+  "checkpoint": "Ekranda noktalar gerçek Z yükseklikleriyle (2B değil 3B) duruyorsa ve İzometri görünümünde arazinin eğimini görebiliyorsanız nokta kotlarını doğru girmişsiniz demektir.",
   "commands": [
     {
       "name": "Arazi Noktası (Terrain Point)",

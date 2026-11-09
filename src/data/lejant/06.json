@@ -4,6 +4,7 @@
   "title": "Mimari Lejantı Test Etme - Düzenleme",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 4: İlişkisel Mimari Lejant Testi, Revizyon ve Yedekleme",
+  "intro": "Lejant oluşturulduktan sonra **test edip düzenlemek** gerekir: yeni bir eleman ekleyip lejantın güncellenip güncellenmediğini, sütun/yazı hizasını ve boş satırları kontrol edersiniz. Bu ders, lejantı doğrulama ve ince ayar adımıdır.",
   "objectives": [
     "Oluşturulan mimari lejantı gerçek bir kat planı üzerinde İlişkisel (Associative) olarak test etmek.",
     "Mahal alanı veya doğrama boyutu değiştirildiğinde lejant değerlerinin ve toplamlarının anlık güncellendiğini doğrulamak.",
@@ -29,6 +30,13 @@
       "figures": []
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Model değişince lejantı güncellememek",
+      "body": "Lejant bazı durumlarda otomatik tazelenmez; yeni eleman ekleyip lejantı **güncellemezseniz** eksik/yanlış tablo paftaya gider. Değişiklik sonrası lejantı yenileyin ve satır sayısının elemanlarla örtüştüğünü doğrulayın."
+    }
+  ],
+  "checkpoint": "Modele yeni bir eleman eklediğinizde lejant satırı otomatik ekleniyorsa, sütunlar hizalı ve yazılar okunaklıysa lejantınız doğru çalışıyor demektir.",
   "commands": [
     {
       "name": "Lejant Oluştur (Create Legend)",

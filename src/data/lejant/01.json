@@ -4,6 +4,7 @@
   "title": "Giriş",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 4 & Modül 5: İlişkisel Lejantlar (Associative Legends) ve Dinamik Metraj Tabloları",
+  "intro": "**Lejant (Legend)**, bir paftadaki semboller, taramalar, malzemeler veya donatı pozlarının ne anlama geldiğini açıklayan tablodur. ALLPLAN'da lejantı elle çizmezsiniz: modeldeki **niteliklerden ve formüllerden otomatik beslenen akıllı bir nesne** olarak kurarsınız. Bu seri, mimari ve donatı lejantlarını sıfırdan tasarlamayı, hücre tanımlamayı, oluşturmayı ve düzenlemeyi öğretir.",
   "objectives": [
     "Allplan'da İlişkisel Lejant (Associative Legend / Legende) ile Rapor (Report) ve Etiket Stili (Label Style / Beschriftungsbild) arasındaki farkı kavramak.",
     "Mimari Lejantların (Mahal listesi, Kapı/Pencere metraj tablosu, Kat alan özeti) ve Mühendislik Donatı Lejantlarının (Stabstahllegende / Mattenlegende — Çubuk ve Hasır Donatı Metraj Cetveli) çalışma mantığını öğrenmek.",
@@ -29,6 +30,13 @@
       "figures": []
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Lejantı elle tablo gibi çizmek",
+      "body": "Lejantı düz çizgi ve metinle elle çizerseniz, model değişince güncellenmez ve her projede yeniden çizmeniz gerekir. Lejantı **hücre ve formül tabanlı akıllı bir nesne** olarak kurun; böylece bir kez tanımlayıp tüm projelerde kullanırsınız."
+    }
+  ],
+  "checkpoint": "Lejantın elle çizilen bir tablo değil, niteliklerden otomatik beslenen bir nesne olduğunu ve mimari ile donatı lejantının farkını kavradıysanız, Pafta Düzenleyicide lejant araçlarını bulabiliyorsanız seriye hazırsınız demektir.",
   "commands": [
     {
       "name": "Lejant Oluştur (Create Legend)",

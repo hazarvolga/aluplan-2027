@@ -4,6 +4,7 @@
   "title": "Donatı Lejantı Tasarımı - Lejant Kopyalama",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 5: 3B Donatı Detaylandırma, Donatı Lejantı (Reinforcing Bar Legend / Stabstahllegende) ve Büküm Şemaları",
+  "intro": "Donatı lejantı (demir metrajı / bar schedule), bir betonarme elemandaki donatıların **poz, çap, boy, adet ve şekil** bilgilerini tablolayan özel bir lejanttır. Bu ders, hazır bir donatı lejantını kopyalayıp standardınıza uyarlamayı anlatır.",
   "objectives": [
     "Mühendislik (Engineering) rolünde kullanılan Çubuk Donatı Lejantı (Reinforcing Bar Legend / Stabstahllegende) ve Hasır Donatı Lejantı (Mesh Legend / Mattenlegende) standartlarını tanımak.",
     "Standart bir donatı metraj/büküm lejantını Lejantları Yönet ile Ofis (Office) klasörüne kopyalamak.",
@@ -23,6 +24,13 @@
       "figures": []
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Donatı lejantını mimari lejant gibi kurmak",
+      "body": "Donatı lejantı, poz numarası, çap, şekil kodu ve toplam boy gibi **donatıya özgü nitelikler** üzerine kuruludur; mimari lejant şablonuyla çalışmaz. Doğru donatı lejant şablonunu kopyalayın ve donatı niteliklerine bağlayın."
+    }
+  ],
+  "checkpoint": "Hazır bir donatı lejantını projenize kopyalayıp sütunları (poz, çap, boy, adet, toplam boy) kendi standardınıza göre uyarladıysanız tasarım adımını tamamlamışsınız demektir.",
   "commands": [
     {
       "name": "Donatı Lejantı (Reinforcement Legend)",

@@ -4,6 +4,7 @@
   "title": "Bir Lejantın Parçaları",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 4: Lejant Şablon Mimarisi (Header, Body, Sublist, Summary, Footer)",
+  "intro": "Bir lejantı kurmadan önce parçalarını tanımak gerekir: **lejant gövdesi** (çerçeve/başlık), **lejant hücreleri** (her satır/sütun) ve hücrelerin içindeki **nitelik/formül alanları**. Bu ders, bir lejantın anatomisini ve hücrelerin niteliklere nasıl bağlandığını gösterir.",
   "objectives": [
     "Bir Allplan lejant şablonunu oluşturan 5 temel bileşeni (Üst Bilgi, Ana Satır, Alt Liste, Toplam/Özet Satırı, Alt Bilgi) tanımak.",
     "Sabit metinler, 2B tablo çerçeve çizgileri ve dinamik Hücre (Cell / Zelle) elemanlarının görev dağılımını öğrenmek.",
@@ -29,6 +30,13 @@
       "figures": []
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Hücre ile gövdeyi karıştırmak",
+      "body": "Lejant gövdesi (çerçeve) ile lejant hücresi (tek bir bilgi kutusu) farklı nesnelerdir. Tasarımı hücre düzeyinde kurmazsanız, bilgiler niteliklere bağlanmaz ve lejant otomatik beslenmez. Önce hücreleri ve nitelik bağlarını tanımlayın, sonra gövdeyi oluşturun."
+    }
+  ],
+  "checkpoint": "Bir lejantta gövde, hücre ve nitelik/formül alanlarını ayırt edebiliyor ve her hücrenin hangi nitelikten beslendiğini okuyabiliyorsanız lejant yapısını kavramışsınız demektir.",
   "commands": [
     {
       "name": "Üst Bilgi (Header / Kopfzeile)",

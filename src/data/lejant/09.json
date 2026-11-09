@@ -4,6 +4,7 @@
   "title": "Donatı Lejantını Oluşturma",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 5: Donatı Lejantı Paketleme, Filtreleme ve Alt Liste Kurulumu",
+  "intro": "Tanımlı hücrelerden gerçek **donatı metraj tablosunu** üretirsiniz. Bu ders, bir betonarme elemanın donatılarını yakalayıp lejant tablosunu oluşturmayı anlatır.",
   "objectives": [
     "Hazırlanan başlık, ana poz satırı, büküm şeması hücresi ve çap bazlı özet tablosunu Lejant Tanımla (Define Legend) ile birleştirmek.",
     "Obje Filtresini Çubuk Donatı (Bar Reinforcement / Rundstahl) veya Hasır Donatı (Mesh Reinforcement) olarak ayarlamak.",
@@ -29,6 +30,13 @@
       "figures": []
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Pozları yakalamadan lejant oluşturmak",
+      "body": "Lejantı oluştururken ilgili donatıları/elemanı doğru seçmezseniz tablo boş veya eksik gelir. Lejantı üretirken kapsamı (hangi eleman/çizim dosyası) doğru belirleyin ve tüm pozların listelendiğini doğrulayın."
+    }
+  ],
+  "checkpoint": "Donatı lejant tablonuz elemanın pozlarını, çap ve boylarını doğru listeliyorsa ve toplam demir miktarı hesaplanıyorsa donatı lejantını doğru oluşturmuşsunuz demektir.",
   "commands": [
     {
       "name": "Lejant Tanımla (Define Legend)",

@@ -4,6 +4,7 @@
   "title": "3B Arazinin Düzleme Dönüştürülmesi",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 3 & Modül 6: 3B Yüzeyi Düzleme / Referans Yüzeye Dönüştürme (3D Surface to Plane / Reference Surface - Bezugsfläche)",
+  "intro": "Yol, döşeme ve duvar gibi mimari elemanları araziye oturtmanın en temiz yolu, araziyi bir **referans yüzeye / serbest düzleme (Bezugsfläche)** dönüştürmektir. Böylece elemanların alt kotunu doğrudan arazi yüzeyine bağlarsınız.",
   "objectives": [
     "Mimari yapı elemanlarının (duvar, kolon, bahçe duvarı, bina kütlesi, çatı/döşeme) eğimli arazi yüzeyini alt veya üst sınır olarak tanıyabilmesi için **3B Yüzeyi Düzleme Dönüştür (Convert 3D Surface to Plane / 3D-Fläche in Ebene)** ve **Referans Yüzey (Reference Surface / Bezugsfläche)** kavramlarını öğrenmek.",
     "3B arazi yüzeyini **Serbest Düzlemler (Custom Planes / Freie Ebenen)** veya **Düzlemler Paleti (Planes Palette)** içine yerel referans yüzeyi olarak kaydetmek.",
@@ -36,6 +37,13 @@
       "figures": []
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Referans yüzeyi yok sayıp sabit kot vermek",
+      "body": "Elemanları araziye sabit kotla oturtursanız, arazi eğimini takip etmezler ve havada/gömülü kalırlar. Araziyi referans yüzeye dönüştürüp eleman alt kotunu bu yüzeye bağlayın; eğim değişince eleman da uyar."
+    }
+  ],
+  "checkpoint": "3B araziniz bir referans yüzey/serbest düzlem haline geldiyse ve üzerine yerleştirdiğiniz bir test döşemesi arazi eğimine uyuyorsa dönüşümü doğru yapmışsınız demektir.",
   "commands": [
     {
       "name": "3B Yüzeyi Düzleme Dönüştür",

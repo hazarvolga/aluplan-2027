@@ -4,6 +4,7 @@
   "title": "Dijital Arazi Modelinin Oluşturulması",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 3 & Modül 6: Sayısal Arazi Modeli (SAM / DTM - DGM), Üçgenleme Ağı (TIN), Dış Sınır ve Kırık Hatlar",
+  "intro": "**Sayısal Arazi Modeli (SAM / DTM)**, arazi noktalarını Delaunay üçgenlemesiyle birleştiren özel bir jeodezik yüzeydir; üzerinde izohips, şev ve kübaj (kazı-dolgu) hesabı yapabilirsiniz. Bu ders, noktalardan SAM üretmeyi ve onu gerçek arsa sınırına kırpmayı anlatır.",
   "objectives": [
     "Girilen 3B arazi noktalarını **Ağ Oluştur (Mesh / Triangulate / Vermaschen)** komutuyla üçgenleyerek **Dijital Arazi Modeli (SAM / DTM / DGM)** oluşturmak.",
     "Konkav (içbükey) arsa sınırlarında oluşan istenmeyen dış üçgenleri **Dış Sınır (Outer Boundary / Außengrenze)** komutuyla temizlemek.",
@@ -36,6 +37,13 @@
       "figures": []
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Dış sınır (Außengrenze) tanımlamamak",
+      "body": "Üçgenleme varsayılan olarak en dıştaki noktaları **dışbükey (konveks) bir zarfta** birleştirir; arsa L şeklinde veya girintiliyse sınır dışında fazla üçgenler kalır ve alan/kübaj yanlış çıkar. **Dış Sınır** komutuyla gerçek arsa sınırını işaretleyip fazla üçgenleri kırpın."
+    }
+  ],
+  "checkpoint": "SAM modeliniz noktaları üçgen ağıyla birleştirdiyse ve dış sınır gerçek arsa köşelerine kırpıldıysa (konveks zarf fazlalıkları temizlendi) sayısal arazi modelini doğru kurmuşsunuz demektir.",
   "commands": [
     {
       "name": "Ağ Oluştur (Mesh / Triangulate)",

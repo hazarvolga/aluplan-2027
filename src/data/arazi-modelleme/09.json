@@ -4,6 +4,7 @@
   "title": "Yolların Modellenmesi",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 3 & Modül 6: Arazi Üzerinde Yol Modelleme (2B Yol İzini 3B Araziye İzdüşürme, Bölme ve Allplan Road)",
+  "intro": "Vaziyet planının önemli bir parçası **yollar ve kaldırımlardır**. Bu derste, 2B haritadaki yol sınırlarından yola çıkıp araziyi yol sınırları boyunca bölerek asfalt dokusu atar ve kaldırım kademesini modellersiniz.",
   "objectives": [
     "Halihazır haritadaki 2B yol, kaldırım ve parsel içi yürüme yolu sınırlarını eğimli 3B arazi yüzeyi üzerine izdüşürerek (`Project / İzdüşüm`) veya 3B kesme (`Split / Intersect`) ile modellemek.",
     "3B arazi yüzeyinden kesilerek ayrılan yol şeritlerine asfalt/taş kaplama materyali atamak ve kaldırım/bordür kot farkını (`Extrude / Offset` ile `+15 cm`) oluşturmak.",
@@ -36,6 +37,13 @@
       "figures": []
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Yolu araziden bağımsız düz modellemek",
+      "body": "Yolu düz bir plak olarak modellerseniz arazinin eğimiyle çakışır (bir yerde gömülü, bir yerde havada kalır). Yolu, **3B araziyi yol sınırlarıyla bölerek** veya referans düzleme bağlı döşemeyle modelleyin; böylece eğime uyar."
+    }
+  ],
+  "checkpoint": "Yol yüzeyiniz arazi eğimine birebir oturuyorsa, asfalt/parke dokusu atanmışsa ve kaldırımlar bordür kademesiyle (`+0.15 m`) yükseltilmişse yolları doğru modellemişsiniz demektir.",
   "commands": [
     {
       "name": "3B Elemanları Böl (Split 3D Elements)",

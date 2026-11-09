@@ -4,6 +4,7 @@
   "title": "Mimari Lejant Tasarımı - Lejant Kopyalama",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 4: Lejant Yönetimi ve Standart Şablondan Ofis Klasörüne Kopyalama",
+  "intro": "Mimari bir lejantı (örn. kapı/pencere veya mahal lejantı) sıfırdan çizmek yerine, çoğu zaman **hazır bir lejantı kopyalayıp** kendi standardınıza uyarlamak çok daha hızlıdır. Bu ders, mevcut bir lejantı kopyalama ve uyarlama mantığını anlatır.",
   "objectives": [
     "Allplan'ın Varsayılan (Default / Standard) mimari lejantlarını bozmadan Ofis (Office / Büro) klasörüne kopyalamak.",
     "Lejantları Yönet (Manage Legends / Legenden verwalten) aracında dosya ve grup numaralarını düzenlemek.",
@@ -29,6 +30,13 @@
       "figures": []
     }
   ],
+  "pitfalls": [
+    {
+      "title": "Kopyalamadan orijinali düzenlemek",
+      "body": "Kütüphanedeki/ofis standardındaki lejantı doğrudan düzenlerseniz, tüm projelerde kullanılan orijinali bozarsınız. Önce lejantı projenize **kopyalayın**, sonra kopya üzerinde çalışın; orijinali referans olarak koruyun."
+    }
+  ],
+  "checkpoint": "Hazır bir mimari lejantı projenize kopyalayıp başlık, sütun ve nitelik eşlemelerini kendi standardınıza göre uyarladıysanız tasarım adımını doğru yapmışsınız demektir.",
   "commands": [
     {
       "name": "Lejantları Yönet (Manage Legends)",

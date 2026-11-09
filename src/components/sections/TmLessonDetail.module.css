@@ -68,3 +68,11 @@
 @media (max-width:40rem){
   .step{grid-template-columns:1fr;gap:var(--space-stack-xs)}
 }
+
+/* Derinlemesine: rewritten Q&A with inline, interleaved screenshots */
+.deepDive{display:flex;flex-direction:column;gap:var(--space-stack-md);max-width:var(--measure-prose,46rem)}
+.deepHeading{margin:var(--space-stack-sm) 0 0;font-family:var(--font-heading);font-size:var(--type-title-sm-size);line-height:var(--line-height-snug,1.3);color:var(--text-primary)}
+.deepText{margin:0;font-size:var(--type-body-md-size);line-height:var(--line-height-relaxed,1.7);color:var(--text-secondary)}
+.deepFigure{margin:0;display:flex;flex-direction:column;gap:var(--space-stack-xs)}
+.deepImg{max-width:100%;width:auto;max-height:26rem;height:auto;border:var(--border-width-default) solid var(--border-default);background:var(--surface-raised)}
+.deepCaption{font-size:var(--type-body-sm-size);line-height:var(--line-height-snug,1.35);color:var(--text-muted)}

@@ -153,5 +153,101 @@
         "/akademi/temel-modelleme/11382_0EM7U000001Td7s_a1cf2a14.png"
       ]
     }
-  ]
+  ],
+  "deepDive": {
+    "title": "DIN 277'ye Göre Brüt Alan ve Hacim: Katları Doğru Kurmak",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Bir binanın brüt taban alanını (BGF) ve brüt hacmini (BRI) **DIN 277-1:2016** standardına uygun hesaplamak için katları doğru bölümlemeniz gerekir. Allplan'da bunu **Kat (Geschoss)** yapı elemanlarıyla yaparsınız: her kat planı düzlemi için ayrı bir Kat elemanı girersiniz, böylece standardın \"kat bazında ayrı hesaplama\" şartını karşılarsınız."
+      },
+      {
+        "type": "heading",
+        "text": "Hassasiyet, proje aşamasına bağlıdır"
+      },
+      {
+        "type": "text",
+        "text": "Standart, ondalık hassasiyetini kesin sabitlemez; hassasiyeti proje aşamasına göre seçersiniz. İhtiyaç ve ön projede ondalık kullanmazsınız (örneğin 206 m², 1.203 m³), avan projede bir ondalık (206,4 m²), uygulama ve ruhsat projesinde iki ondalık yeterlidir (206,44 m²; 1.202,78 m³). Çıktıda hassasiyeti rapor alırken **Seçenekler (Optionen)** penceresinden ayarlarsınız."
+      },
+      {
+        "type": "heading",
+        "text": "Örnek bina: iki katlı bir yapı"
+      },
+      {
+        "type": "text",
+        "text": "Aşağıdaki örnek; bodrumsuz, kullanılmayan çatı katlı iki katlı bir binadır ve giriş bölgesinde iki katlı bir galeri boşluğu (Luftraum) vardır. Her katı, duvarların bulunduğu çizim dosyasında bir **Kat** elemanı olarak girersiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11225_0EM7U000001TdPx_e26af978.png",
+        "caption": "Örnek bina: iki katlı yapı, girişte iki katlı galeri boşluğu."
+      },
+      {
+        "type": "heading",
+        "text": "Zemin kat: tek katlı alan"
+      },
+      {
+        "type": "text",
+        "text": "Kat elemanını kat planının **dış kenarlarından** girin; sıvayı yapı elemanı içinde **Dış Yan Kaplamalar (Seitenbeläge außen)** ile mutlaka tanımlayın. Katın yüksekliğini, taban döşemesinin alt kenarından üstteki döşemenin üst kenarına kadar verin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11225_0EM7U000001TdPz_fc43c60e.png",
+        "caption": "Zemin kat yükseklik tanımı: alt döşemenin altından üst döşemenin üstüne."
+      },
+      {
+        "type": "text",
+        "text": "Ayarlarda DIN 277 için önemli alanlar kırmızı çerçeveyle işaretlidir. **Çarpan (Faktor)** 0.000 girilse bile tüm yan kaplamalar kendi kalınlıklarıyla hesaba katılır; kat yüksekliği ise yalnızca brüt hacmi etkiler."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11225_0EM7U000001TdQ0_f055afa6.png",
+        "caption": "Kat elemanı ayarları; DIN 277 için kritik alanlar kırmızı çerçeveli."
+      },
+      {
+        "type": "heading",
+        "text": "İki katlı alan (galeri boşluğu)"
+      },
+      {
+        "type": "text",
+        "text": "Kırmızı alan iki katlıdır ve iki şekilde girilebilir: ya tam yüksekliğiyle tek elemanda, ya da zemin kat ile normal kat olarak ikiye bölerek. İkiye bölerseniz üst kısım için **Alan Tipi (Flächenart) DIN277** değerini **M = çok katlı BRI, BGF yok** seçin. Ayırma çizgisini, sıva kalınlığı kadar mesafeyle duvarın önüne yerleştirin; böylece her iki alanın alanı ve hacmi doğru çıkar."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11225_0EM7U000001TdQ1_afb7d5cb.png",
+        "caption": "İki katlı alanın ayrımı: ayırma çizgisi duvarın önünde, sıva kalınlığı kadar içeride."
+      },
+      {
+        "type": "heading",
+        "text": "Normal kat ve çatı katı"
+      },
+      {
+        "type": "text",
+        "text": "Normal katın geometrisi zemin katı izler; yüksekliğini döşeme altından üst döşemenin üstüne tanımlarsınız. En üst (çatı) katta üst kenar, çatının veya çatı kaplamasının üstüdür. Kullanılmayan çatı arası için **Alan Tipi DIN277 = M** seçin; çünkü bu alan hacme (BRI) girer ama brüt taban alanına (BGF) girmez."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11225_0EM7U000001TdQ2_50f4a5d2.png",
+        "caption": "Normal kat yükseklik tanımı."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11225_0EM7U000001TdQ3_a628ec51.png",
+        "caption": "Çatı katı: üst kenar çatı kaplamasının üstünde, Alan Tipi M."
+      },
+      {
+        "type": "heading",
+        "text": "Etiketleme"
+      },
+      {
+        "type": "text",
+        "text": "Oluşturduğunuz Kat elemanlarının her birini ayrı ayrı etiketleyebilirsiniz. 1:100 ölçeğindeki etiket stili, DIN 277'ye göre ilgili alan ve hacim bilgilerini gösterir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11225_0EM7U000001TdQ4_3a82eb17.png",
+        "caption": "DIN 277 etiket stiliyle sonuç."
+      }
+    ]
+  }
 }

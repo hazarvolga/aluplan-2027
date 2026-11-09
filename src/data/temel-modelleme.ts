@@ -58,6 +58,23 @@ export interface TmPitfall {
   body: string;
 }
 
+/** One block of the deep-dive: a subheading, a prose paragraph, or an inline image. */
+export type TmDeepBlock =
+  | { type: 'heading'; text: string }
+  | { type: 'text'; text: string }
+  | { type: 'image'; src: string; caption?: string };
+
+/**
+ * "Derinlemesine": valuable source Q&A rewritten in the lesson's own "siz" voice,
+ * with screenshots interleaved inline next to the passage they illustrate. Shown
+ * as its own section after the lesson ends; when present, it replaces the raw
+ * "Derinleşmek için" article accordion for that lesson.
+ */
+export interface TmDeepDive {
+  title?: string;
+  blocks: readonly TmDeepBlock[];
+}
+
 export interface TmVideo {
   title: string;
   file: string;
@@ -96,6 +113,8 @@ export interface TmLesson {
   commands: readonly TmCommand[];
   media: TmMedia;
   articles: readonly TmArticle[];
+  /** Optional rewritten, image-interleaved deep-dive shown after the lesson. */
+  deepDive?: TmDeepDive;
 }
 
 export const temelModellemeHero = {

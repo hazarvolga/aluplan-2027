@@ -163,7 +163,30 @@ export function TmLessonDetail({
         </section>
       )}
 
-      {lesson.articles.length > 0 && (
+      {lesson.deepDive ? (
+        <section className={styles.band} aria-labelledby="tm-derin">
+          <div className="alu-container">
+            <SectionHeader id="tm-derin" kicker="DERİNLEMESİNE" title={lesson.deepDive.title ?? 'Derinlemesine'} lead="Dersin konusunu uygulamada bir adım öteye taşıyan, sık karşılaşılan durumlar ve çözümleri." />
+            <div className={styles.deepDive}>
+              {lesson.deepDive.blocks.map((b, i) => {
+                if (b.type === 'heading') {
+                  return <h3 key={i} className={styles.deepHeading}>{b.text}</h3>;
+                }
+                if (b.type === 'image') {
+                  return (
+                    <figure key={i} className={styles.deepFigure}>
+                      {/* eslint-disable-next-line @next/next/no-img-element -- static /public asset */}
+                      <img className={styles.deepImg} src={b.src} alt={b.caption ?? 'Ekran görüntüsü'} loading="lazy" decoding="async" />
+                      {b.caption ? <figcaption className={styles.deepCaption}>{b.caption}</figcaption> : null}
+                    </figure>
+                  );
+                }
+                return <p key={i} className={styles.deepText}>{withEmphasis(b.text)}</p>;
+              })}
+            </div>
+          </div>
+        </section>
+      ) : lesson.articles.length > 0 ? (
         <section className={styles.band} aria-labelledby="tm-makale">
           <div className="alu-container">
             <SectionHeader id="tm-makale" kicker="KAYNAK MAKALELER" title="Derinleşmek için" lead="ALLPLAN Türkçe destek içeriğinden ilgili makaleler. Başlığa tıklayınca açılır." />
@@ -184,7 +207,7 @@ export function TmLessonDetail({
             </ul>
           </div>
         </section>
-      )}
+      ) : null}
 
       {(lesson.media.pdfs.length > 0 || lesson.media.samples.length > 0) && (
         <section className={styles.band} aria-labelledby="tm-indir">

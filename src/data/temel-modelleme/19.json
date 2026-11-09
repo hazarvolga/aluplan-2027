@@ -22,20 +22,27 @@
     {
       "time": "",
       "heading": "Görünüş Oluştur ve Bakış Yönü",
-      "body": "**Görünüş Oluştur (Create View / Ansicht erzeugen)** komutunu çalıştırın, bakış yönünü (Güney/Kuzey/Doğu/Batı) tıklayın; görünür kenar kalem kalınlıklarını, yüzey taramalarını (**Yüzey Elemanları / Surface Elements**) ve gölge hesabını ayarlayarak cepheyi yerleştirin.",
+      "body": "**Görünüş Oluştur (Create View / Ansicht erzeugen)** komutunu çalıştırın ve bakış yönünü (Güney/Kuzey/Doğu/Batı) tıklayarak cephe görünüşünü yerleştirin. Bina eğik (döndürülmüş) yerleşmişse **Serbest Projeksiyon (Free Projection)** ile göz/hedef noktasını binanın eksenine göre tanımlayıp düzgün (ortogonal) cephe elde edin.",
       "figures": [
-        "/akademi/temel-modelleme/11377_0EM7U000001Td6P_8bcd9bae.png",
+        "/akademi/temel-modelleme/11377_0EM7U000001Td6P_8bcd9bae.png"
+      ]
+    },
+    {
+      "time": "",
+      "heading": "Yüzey, Gölge Ayarları ve Otomatik Güncellemenin Doğrulanması",
+      "body": "Görünüş çerçevesine çift tıklayıp **Görünüş Özellikleri**'nden görünür kenar kalem kalınlıklarını, **Yüzey Elemanları (Surface Elements)** tarama/dokularını ve ışık-gölge hesabını ayarlayın. Son olarak 3B modelde bir pencereyi büyütün ve cephe görünüşünün **elle müdahale olmadan** güncellendiğini doğrulayın; ilişkisel görünüşün gücü budur.",
+      "figures": [
         "/akademi/temel-modelleme/11423_0EM7U000001Td6X_e4e3fd60.png"
       ]
     }
   ],
-  "checkpoint": "Bina Strüktürünün türetilmiş bölmesinde cephe görünüşleriniz (Ön/Arka/Yan) duruyorsa ve modelde bir pencereyi değiştirdiğinizde görünüş otomatik güncelleniyorsa ilişkisel görünüşleri doğru üretmişsiniz demektir.",
   "pitfalls": [
     {
       "title": "İlişkisel görünüşü elle düzeltmek",
       "body": "Cephe görünüşü modele **canlı bağlıdır**; üzerindeki çizgileri 2B çizgi gibi elle silip düzeltmeyin, ilk güncellemede değişikliğiniz kaybolur. Bir şey yanlışsa modeli veya görünüş özelliklerini düzeltin. Ayrıca kaynak olarak tüm katları seçtiğinizden emin olun, yoksa cephe eksik çıkar."
     }
   ],
+  "checkpoint": "Bina Strüktürünün türetilmiş bölmesinde cephe görünüşleriniz (Ön/Arka/Yan) duruyorsa ve modelde bir pencereyi değiştirdiğinizde görünüş otomatik güncelleniyorsa ilişkisel görünüşleri doğru üretmişsiniz demektir.",
   "commands": [
     {
       "name": "Görünüş Oluştur (Create View)",
@@ -62,5 +69,12 @@
     "pdfs": [],
     "samples": []
   },
-  "articles": []
+  "articles": [
+    {
+      "id": "de_11377",
+      "title": "Döndürülmüş (Eğik) Bir Binanın Görünümleri",
+      "body": "Eğik yerleşmiş (döndürülmüş) bir binada cephe görünüşü üretirken, görünüş yönü binaya **dik** olmalıdır; yoksa cephe çarpık çıkar. **Serbest Projeksiyon (Free Projection)** ile göz noktası (Augpunkt) ve hedef noktasını (Zielpunkt) binanın eksenine göre tanımlayarak döndürülmüş binanın düzgün (ortogonal) cephesini elde edersiniz. İkiz/sıra evlerde her birimin görünüşü ayrı ayrı bu yolla üretilir.\nKaynak: ALLPLAN KB de_11377, de_11423.",
+      "figures": []
+    }
+  ]
 }

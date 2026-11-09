@@ -35,13 +35,13 @@
       ]
     }
   ],
-  "checkpoint": "DIN A1 paftanızda antet proje bilgilerini otomatik yazıyorsa, plan/kesit/görünüşler doğru ölçekte dizili ve katmanlı vektörel PDF üretebiliyorsanız çıktı aşamasını tamamladınız demektir.",
   "pitfalls": [
     {
       "title": "Çizimleri paftaya kopyalamak",
       "body": "Pafta elemanları çizimlerin **referansıdır**, kopyası değil: **Çizim Dosyası Yerleştir** ile yerleştirin, modeli değiştirince pafta kendiliğinden güncellensin. Çizimi elle kopyalarsanız bağ kopar ve pafta eskir. Çıktıyı da rasterize değil katmanlı vektörel PDF olarak verin."
     }
   ],
+  "checkpoint": "DIN A1 paftanızda antet proje bilgilerini otomatik yazıyorsa, plan/kesit/görünüşler doğru ölçekte dizili ve katmanlı vektörel PDF üretebiliyorsanız çıktı aşamasını tamamladınız demektir.",
   "commands": [
     {
       "name": "Sayfa Ayarı (Page Set Up)",
@@ -79,5 +79,12 @@
     "pdfs": [],
     "samples": []
   },
-  "articles": []
+  "articles": [
+    {
+      "id": "de_10603",
+      "title": "Pafta Penceresinde Katman Görünürlüğü",
+      "body": "Paftaya yerleştirdiğiniz bir çizimin yalnızca belirli **katmanlarını (Layer)** göstermek için **Pafta Penceresi**'nde katman görünürlüğünü ayarlayabilirsiniz. Böylece aynı çizim dosyasını farklı paftalarda farklı katman kümeleriyle gösterir, tek modelden mimari, statik ve tesisat paftalarını ayrı ayrı üretirsiniz.\nKaynak: ALLPLAN KB de_10603.",
+      "figures": []
+    }
+  ]
 }

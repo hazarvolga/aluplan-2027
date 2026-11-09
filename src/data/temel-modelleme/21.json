@@ -22,21 +22,39 @@
       "heading": "Kat, Saçak, Mahya ve Temel Kotlarının Yerleştirilmesi",
       "body": "Kesit ve cephe görünüşlerinde döşeme üstlerini, kiriş/lento altlarını, saçak ve mahya noktalarını tıklayarak düşey kot zincirleri oluşturun. Değerler modelden okunur; kat yüksekliği değişince kotlar kendiliğinden güncellenir.",
       "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Etiket ve Metin ile Nitelikleri Plana Yazdırma",
+      "body": "Kotlardan sonra eleman niteliklerini plana yazdırmak için elemana sağ tıklayıp **Etiketle (Label / Beschriften)** komutunu seçin ve bir **Etiket Stili (Label Style)** uygulayın: kapı/pencere doğrama boyutu (`150/140`), parapet yüksekliği (`BRH = 90`) ve kolon/kiriş kesiti (`K101 30/60`) aks üzerine yazılır. Etiketler niteliklere **dinamik bağlıdır**: pencere genişliğini `150`'den `180`'e değiştirirseniz etiket elle müdahale olmadan `180/140` olur. Serbest açıklamalar için ayrıca **Metin (Text)** aracını kullanın.",
+      "figures": []
     }
   ],
-  "checkpoint": "Kesit ve görünüşlerde ±0.00'a göre döşeme, saçak, mahya ve temel kotları sembollerle yazılıysa ve model değişince kot değerleri güncelleniyorsa kot ölçülendirmeyi doğru yapıyorsunuz demektir.",
   "pitfalls": [
     {
       "title": "Yanlış ±0.00 ve elle kot düzeltme",
       "body": "±0.00 referansını yanlış noktaya (örn. kaba döşeme yerine bitmiş döşeme olması gerekirken) verirseniz tüm kotlar sistematik kayar. Baz noktasını baştan doğru seçin. İlişkisel kot değerini elle yazmayın; model değişince güncellenen değeri bozarsınız."
     }
   ],
+  "checkpoint": "Kesit ve görünüşlerde ±0.00'a göre döşeme, saçak, mahya ve temel kotları sembollerle yazılıysa, kapı/pencere ve taşıyıcı elemanlar etiketliyse ve model değişince hem kotlar hem etiketler kendiliğinden güncelleniyorsa kot ölçülendirme ve etiketlemeyi doğru yapıyorsunuz demektir.",
   "commands": [
     {
       "name": "Kot Ölçülendirmesi",
       "menu": "Ölçülendirme -> Kot Ölçülendirmesi (Elevation Point / Kotenbemaßung)",
       "shortcut": "Kot İkonu",
       "desc": "Kesit, görünüş ve planlarda ±0.00 baz noktasına göre otomatik kot değeri ve sembolü yazar."
+    },
+    {
+      "name": "Etiketle (Label)",
+      "menu": "Eleman Sağ Tık -> Etiketle (Label / Beschriften)",
+      "shortcut": "Sağ Tık Menüsü",
+      "desc": "Seçilen elemanın niteliklerini (boyut, malzeme, poz no) dinamik, modele bağlı metin olarak yazar."
+    },
+    {
+      "name": "Etiket Stili (Label Style)",
+      "menu": "Mimari / Metin -> Etiket Stili (Label Style / Beschriftungsbild)",
+      "shortcut": "Etiket Grubu",
+      "desc": "Nitelik ve formül içeren akıllı etiket şablonları oluşturur ve uygular."
     }
   ],
   "media": {
@@ -57,5 +75,12 @@
     "pdfs": [],
     "samples": []
   },
-  "articles": []
+  "articles": [
+    {
+      "id": "de_10641",
+      "title": "Etiket Stillerinde Biçim Ayarları",
+      "body": "**Soru:** Etiket stilindeki (Beschriftungsbild) bir metin nasıl biçimlendirilir (örn. Kalın)?\n**Cevap:** Etiket stillerinde biçimlendirme sınırlıdır. Bir niteliği veya formülü yerleştirirken/değiştirirken **metin yüksekliği, metin genişliği, yazı tipi ve açısı** üzerinde değişiklik yapabilirsiniz; ancak normal metindeki tüm doğrudan biçim seçenekleri her yerde geçerli değildir. Kalın gibi efektler için stilin ilgili nitelik/yazı tipi ayarını kullanın.\nKaynak: ALLPLAN KB de_10641.",
+      "figures": []
+    }
+  ]
 }

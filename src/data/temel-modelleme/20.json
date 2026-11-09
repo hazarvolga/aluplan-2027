@@ -26,15 +26,21 @@
       "figures": [
         "/akademi/temel-modelleme/11178_0EM7U000001Tecu_eb0ae485.png"
       ]
+    },
+    {
+      "time": "",
+      "heading": "Kademeli (Şaşırtmalı) Kesit ve Detay İnceleme",
+      "body": "Tek bir düzlemden geçmeyen yerler için kesit hattını **kademeli (şaşırtmalı / verspringend)** çizin: hat yön değiştirerek merdiven, şaft ve pencere gibi farklı noktalardan geçebilir. Türetilen kesitte merdiven basamaklarını, çatı eğimini ve döşeme-duvar bağlantılarını inceleyin; yanlış görünen bir yer varsa modeli düzeltin, kesit kendiliğinden güncellenir.",
+      "figures": []
     }
   ],
-  "checkpoint": "A-A ve B-B kesitleriniz kesilen elemanlarda kalın kontur ve malzeme taramasıyla görünüyorsa ve modeli değiştirdiğinizde kesit kendiliğinden güncelleniyorsa kesit üretimini kavramışsınız demektir.",
   "pitfalls": [
     {
       "title": "Kesit hattını silmek veya yanlış yöne çizmek",
       "body": "Kesit, **kesit hattıyla ilişkilidir**: hattı silerseniz kesit güncellenmez veya kaybolur. Hattı koruyun. Ayrıca bakış okunu yanlış yöne verirseniz kesit ters tarafı gösterir; hattı çizerken okun baktığı yönü kontrol edin."
     }
   ],
+  "checkpoint": "A-A ve B-B kesitleriniz kesilen elemanlarda kalın kontur ve malzeme taramasıyla görünüyorsa ve modeli değiştirdiğinizde kesit kendiliğinden güncelleniyorsa kesit üretimini kavramışsınız demektir.",
   "commands": [
     {
       "name": "Kesit Hattı Tanımla",
@@ -67,5 +73,12 @@
     "pdfs": [],
     "samples": []
   },
-  "articles": []
+  "articles": [
+    {
+      "id": "de_10813",
+      "title": "Bir Görünüş veya Kesitten Yeni Kesit Oluşturma (UVS)",
+      "body": "Mevcut bir **görünüş veya kesit** üzerinden yeni bir kesit türetebilirsiniz. Örneğin bir cephe görünüşü ya da ana kesit üzerinde yatay/düşey yeni bir kesit hattı tanımlayarak ikincil (detay) kesitleri çıkarırsınız. Böylece ana çizimden detay kesitlerine hızlıca inersiniz; tüm bu kesitler modelle ilişkili kalır ve birlikte güncellenir.\nKaynak: ALLPLAN KB de_10813 (UVS - Yeni Görünüşler/Kesitler).",
+      "figures": []
+    }
+  ]
 }

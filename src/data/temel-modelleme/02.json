@@ -14,13 +14,17 @@
       "time": "00:00 – 01:10",
       "heading": "Yeni Proje Sihirbazını Başlatma",
       "body": "**Dosya (File) -> Yeni Proje, Proje Aç... (New Project, Open Project...)** (`Ctrl+O`) komutuna tıklayın. Açılan pencerede **Yeni Proje (New Project)** butonuna basarak proje adını ve kayıt konumunu (Yerel / Workgroup / Allplan Share) belirleyin.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/10582_0EM7U000001TexS_7e443124.png"
+      ]
     },
     {
       "time": "01:10 – 02:25",
       "heading": "Şablon ve Kaynak Ayarları (Ofis vs. Proje)",
       "body": "Ülke standardını ve varsa kurumsal **Proje Şablonunu (Project Template)** seçin. **Katman Yapıları (Layer structures)**, **Çizgi Tipleri (Line types)** ve **Yüzey Stilleri (Surface styles)** için **Proje (Project)** seçeneğini işaretleyerek projenin kendi ayarlarıyla bağımsız taşınabilir olmasını sağlayın.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/10582_0EM7U000001TexT_67477a1f.png"
+      ]
     },
     {
       "time": "02:25 – 03:52",

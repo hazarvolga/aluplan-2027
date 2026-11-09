@@ -14,25 +14,41 @@
       "time": "00:00 – 02:30",
       "heading": "Çatı Düzlemi (Roof Frame / Dachlandschaft) ve Eğim Atama",
       "body": "**Mimari (Architecture) -> Çatı Düzlemi (Roof Frame / Dachlandschaft)** komutunu açın. Bina dış konturundan saçak taşması (`örn. 60 cm`) vererek çatı sınırını çizin. Saçak kenarlarına tıklayarak çatı eğimini (`30°` veya `%33`) ve saçak kotunu uygulayın.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/9135_0EM7U000001TdGP_5893ad76.png",
+        "/akademi/temel-modelleme/9135_0EM7U000001TdGQ_e1d8843b.png",
+        "/akademi/temel-modelleme/9135_0EM7U000001TdHy_19132621.png"
+      ]
     },
     {
       "time": "02:30 – 04:30",
       "heading": "Duvar ve Kolonların Çatı Eğimine Bağlanması",
       "body": "Çatı düzlemi çiftlerini çatı katı çizim dosyalarına atayın; kalkan duvarların **Üst Kotunu (OK)** üst çatı düzlemiyle ilişkilendirerek duvarların çatı eğimine göre otomatik kırpılmasını sağlayın.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/9135_0EM7U000001TdI7_38159e65.png",
+        "/akademi/temel-modelleme/9135_0EM7U000001TdI8_3dbeac58.png",
+        "/akademi/temel-modelleme/9135_0EM7U000001TdI9_7423eab8.png"
+      ]
     },
     {
       "time": "04:30 – 06:15",
       "heading": "Çatı Kaplaması (Roof Covering), Güvercinlik ve Çatı Penceresi",
       "body": "**Çatı Kaplaması (Roof Covering / Dachhaut)** komutuyla çok katmanlı çatı örtüsünü (kiremit + yalıtım + kaplama tahtası) oluşturun. **Güvercinlik (Dormer / Gaube)** ve **Çatı Penceresi SmartPart (Skylight)** komutlarıyla çatıya doğal aydınlatma elemanları ekleyin.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/10878_0EM7U000001TeAw_c0d3101a.png",
+        "/akademi/temel-modelleme/10878_0EM7U000001TeAx_41f6be73.png",
+        "/akademi/temel-modelleme/10878_0EM7U000001TeAy_3f422d4d.png"
+      ]
     },
     {
       "time": "06:15 – 07:48",
       "heading": "Ahşap/Çelik Çatı Elemanları (Mertek, Aşık, Mahya)",
       "body": "**Mertek (Rafters / Sparren)** ve **Aşık / Mahya Kirişi (Purlin, Ridge Beam / Pfette)** araçlarıyla çatı düzlemi altına taşıyıcı mertek dizilerini ve aşık kirişlerini otomatik yerleştirin.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/11353_0EM7U000001TdKX_19010b0b.png",
+        "/akademi/temel-modelleme/10933_0EMVi00000DRdsE_f82fcdfc.png",
+        "/akademi/temel-modelleme/10933_0EMVi00000DRjb3_f368eed0.png"
+      ]
     }
   ],
   "commands": [

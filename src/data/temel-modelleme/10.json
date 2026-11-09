@@ -14,19 +14,31 @@
       "time": "00:00 – 03:30",
       "heading": "Kapı (Door / Tür) Boşluğu ve Kanat Sembolü",
       "body": "**Mimari (Architecture) -> Kapı (Door / Tür)** komutunu seçin. Kapı genişliği (`90 cm`, `100 cm`) ve yüksekliğini (`210 cm`), alt kot bağlantısını (bitmiş döşeme kotu) ve 2B açılış yönü sembolünü seçerek duvar üzerinde köşe referans mesafesiyle yerleştirin.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/10616_0EM7U000001Te8d_13d4990d.png",
+        "/akademi/temel-modelleme/10616_0EM7U000001Te8e_d00176d2.png",
+        "/akademi/temel-modelleme/10616_0EM7U000001Te8f_1d52c819.png"
+      ]
     },
     {
       "time": "03:30 – 07:00",
       "heading": "Pencere (Window / Fenster), Parapet Yüksekliği ve Diş (Reveal) Ayarları",
       "body": "**Pencere (Window / Fenster)** komutuna girin; pencere genişliği, yüksekliği ve **Parapet Yüksekliğini (Sill Height / Brüstungshöhe)** ayarlayın. Çok katmanlı duvarlarda **Diş (Reveal / Anschlag)** sekmesinden dış yalıtım katmanının doğrama kasasına dönüş mesafesini tanımlayın.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/10616_0EM7U000001Te8q_445603e9.png",
+        "/akademi/temel-modelleme/10616_0EM7U000001Te8r_f0565942.png",
+        "/akademi/temel-modelleme/10616_0EM7U000001Te8s_a5a45120.png"
+      ]
     },
     {
       "time": "07:00 – 11:09",
       "heading": "Kapı ve Pencere SmartParts Modelleme",
       "body": "**Kütüphane (Library)** veya boşluk özellikleri içinden **Pencere SmartPart / Kapı SmartPart** aracını açın. Kasa/kanat profillerini, çift açılım sembollerini, denizlik/parapet profillerini, panjur kutusunu (**Rollladenkasten**) ve 3B cam/doğrama materyallerini tanımlayıp boşluğa yerleştirin.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/8900_0EM7U000001Tdhr_8055419a.png",
+        "/akademi/temel-modelleme/8900_0EM7U000001Tdhs_39ccabbc.png",
+        "/akademi/temel-modelleme/8900_0EM7U000001Tdht_e7ce85f6.png"
+      ]
     }
   ],
   "commands": [

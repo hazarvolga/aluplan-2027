@@ -14,25 +14,41 @@
       "time": "00:00 – 03:30",
       "heading": "Biçim Özellikleri ve Yardımcı Konstrüksiyon Modu",
       "body": "**Biçim (Format)** araç çubuğundan kalem kalınlığı (`0.13`, `0.25`, `0.35`, `0.50 mm`), çizgi tipi ve katman seçimi yapın. Pafta baskısında görünmeyen referans eksenleri çizmek için **Yardımcı Konstrüksiyon Formatı (Construction Line Format / Hilfskonstruktion)** (`Ctrl+K`) modunu açıp kapatmayı uygulayın.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/10972_0EM7U000001Te15_724a4cc5.png",
+        "/akademi/temel-modelleme/10972_0EM7U000001Te16_37e3fb19.png",
+        "/akademi/temel-modelleme/10972_0EM7U000001Te17_25ceaae5.png"
+      ]
     },
     {
       "time": "03:30 – 08:00",
       "heading": "Temel 2B Çizim Komutları (Çizgi, Dikdörtgen, Daire, Yay)",
       "body": "**Taslak (Draft)** görev alanından **Çizgi (Line)**, **Poligon Çizgisi (Polyline)**, **Dikdörtgen (Rectangle)** ve **Daire/Yay (Circle/Arc)** komutlarını çalıştırın. Diyalog satırında `dX`, `dY`, `Uzunluk (Length)` ve `Açı (Angle)` alanları arasında `Tab` tuşuyla geçiş yaparak tam ölçülü çizim yapın.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/10972_0EM7U000001Te18_2f00894d.png",
+        "/akademi/temel-modelleme/10961_0EM7U000001TdvE_0c31399b.png",
+        "/akademi/temel-modelleme/10961_0EM7U000001TdvF_87603976.png"
+      ]
     },
     {
       "time": "08:00 – 12:00",
       "heading": "Paralel Çizgi, Nokta Bölmeleri ve Poligonlaştırma",
       "body": "**Elemana Paralel (Parallel to Element)** komutuyla mevcut bir çizgiden belirli mesafe ve adette ofset çizgileri üretin. Açık veya kesişen çizgileri **Alan Tespiti (Area Detection / Flächenelement suchen)** (ada algılama) ile tek tıkla kapalı poligona dönüştürün.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/10961_0EM7U000001TdvG_b5636cb1.png",
+        "/akademi/temel-modelleme/9769_0EM67000007oD0c_d9829294.png",
+        "/akademi/temel-modelleme/9769_0EM67000007oD0h_20daae00.png"
+      ]
     },
     {
       "time": "12:00 – 16:13",
       "heading": "Tarama (Hatching), Desen (Pattern) ve Dolgu (Fill)",
       "body": "**Tarama (Hatching / Schraffur)**, **Desen (Pattern / Muster)** ve **Dolgu (Fill / Füllfläche)** komutlarıyla betonarme, tuğla, yalıtım ve zemin kaplama taramaları oluşturun; tarama yönünü ve referans ölçeğe göre sıklık davranışını (`Ölçeğe göre ayarla / Scale-dependent`) yapılandırın.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/9769_0EM67000007oD0m_81898c65.png",
+        "/akademi/temel-modelleme/9769_0EM67000007oD0w_bf8a94f7.png",
+        "/akademi/temel-modelleme/10634_0EM7U000001TeNT_d6bfa607.png"
+      ]
     }
   ],
   "commands": [

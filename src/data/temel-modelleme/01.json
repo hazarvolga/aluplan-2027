@@ -14,19 +14,31 @@
       "time": "",
       "heading": "01. CAD'den BIM'e Geçiş ve Akıllı Yapı Elemanları",
       "body": "Allplan'da çizilen her duvar, kolon, kiriş veya döşeme yalnızca 2B çizgilerden ibaret değildir; katman kalınlığı, malzeme/imalat kalemi (**Gewerk / Trade**), öncelik numarası (**Priorität / Priority**), yangın dayanımı ve metraj formüllerini içinde barındıran parametrik birer BIM nesnesidir.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/8605_0EMVi00000F0rF1_35ceeb6d.png",
+        "/akademi/temel-modelleme/8605_0EMVi00000F0tqH_8adbb57e.png",
+        "/akademi/temel-modelleme/8605_0EMVi00000F0trt_ecb785bb.png"
+      ]
     },
     {
       "time": "",
       "heading": "02. Dört Katmanlı Veri Organizasyonu",
       "body": "**Proje (Project)** en üst kapsayıcıdır. Proje içinde **Bina Strüktürü (Building Structure / Bauwerksstruktur)** katları ve düzlemleri yönetir; **Çizim Dosyaları (Drawing Files / Teilbilder)** disiplin/kat bazlı çalışma paftalarını ayırır; **Katmanlar (Layers)** ise aynı çizim dosyası içindeki bileşenlerin (örn. duvar taraması, ölçü çizgisi, tefriş) görünürlüğünü kontrol eder.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/8605_0EMVi00000F0tof_fe8045cd.png",
+        "/akademi/temel-modelleme/8645_0EMVi00000F0rYL_c118a4ef.png",
+        "/akademi/temel-modelleme/8645_0EMVi000002R9xL_cc25b108.png"
+      ]
     },
     {
       "time": "",
       "heading": "03. Modelden Otomatik Kesit, Görünüş ve Metraj Üretimi",
       "body": "Temel modelleme adımları tamamlandığında planda yapılan her revizyon **İlişkisel Görünüşler ve Kesitler (Associative Views and Sections)** ile metraj raporlarına anında yansır.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/8645_0EMVi000002R9xN_c8fbe5ef.png",
+        "/akademi/temel-modelleme/8645_0EM670000075i7H_b048d9d1.png",
+        "/akademi/temel-modelleme/8645_0EMVi000002R9xK_bf5274ba.png"
+      ]
     }
   ],
   "commands": [

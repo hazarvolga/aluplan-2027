@@ -14,19 +14,31 @@
       "time": "00:00 – 02:00",
       "heading": "Bina Strüktüründe Kat ve Çizim Dosyası Kopyalama",
       "body": "**Bina Strüktürü (Building Structure)** penceresinde Zemin Kat altındaki dolu çizim dosyalarını (`Duvar/Doğrama`, `Kolon/Kiriş`, `Döşeme`, `Merdiven`) seçip 1. Normal Kat ve 2. Normal Kat altındaki hedef çizim dosyalarına kopyalayın. Elemanlar standart düzlemlere bağlı olduğu için yeni katın kotlarına (`+3.00 / +6.00 m`) otomatik yerleşir.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/10589_0EM7U000002DAA5_60328eab.png",
+        "/akademi/temel-modelleme/10589_0EM7U000002DAAK_08e67980.png",
+        "/akademi/temel-modelleme/10589_0EM7U000002DAD4_05970c99.png"
+      ]
     },
     {
       "time": "02:00 – 03:15",
       "heading": "Normal Kat Mimari Revizyonları",
       "body": "1. Normal Kat çizim dosyasını aktif ederek dış giriş kapısını silip pencereye dönüştürün, balkon döşeme çıkmasını ve korkuluklarını ekleyin.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPx_e26af978.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPy_08a9767f.png",
+        "/akademi/temel-modelleme/11225_0EM7U000001TdPz_fc43c60e.png"
+      ]
     },
     {
       "time": "03:15 – 04:23",
       "heading": "Düzlem Yöneticisi ile Çok Katlı Model Kontrolü",
       "body": "Tüm katları **Referans Modunda** açarak 3B Animasyon penceresinde çok katlı bina modelini inceleyin; **Düzlemler Paleti (Planes Palette)** üzerinden kat yüksekliği değiştiğinde tüm katların birbirine kopmadan bağlı çalıştığını test edin.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiU_c72c8b84.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiV_43e9e984.png",
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiW_71755a0a.png"
+      ]
     }
   ],
   "commands": [

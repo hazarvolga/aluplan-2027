@@ -14,19 +14,30 @@
       "time": "00:00 – 01:00",
       "heading": "Aks Çizim Dosyasının Seçimi",
       "body": "Bina strüktüründe tüm katlarda altlık olarak referans alınacak **Aks Ağı Çizim Dosyasını** (örn. `Çizim Dosyası 100`) aktif hale getirin.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/11667_0EMRD00000LMwUH_7b86648a.png",
+        "/akademi/temel-modelleme/11667_0EMRD00000LMqQU_01b38cfc.png",
+        "/akademi/temel-modelleme/11667_0EMRD00000LMaaE_e4b20058.png"
+      ]
     },
     {
       "time": "01:00 – 02:00",
       "heading": "Aks Ağı (Axis Grid / Achsraster) Parametrelerinin Girilmesi",
       "body": "**Taslak (Draft) / Mimari (Architecture) -> Aks Ağı (Axis Grid / Achsraster)** komutunu çalıştırın. `X` ve `Y` sekmelerinde bölge açıklıklarını (`örn. 5.00; 4.50; 6.00` veya `3*5.00`), aks çizgi tipini (noktalı kesik çizgi), balon sembolünü ve otomatik ölçü çizgisi seçeneğini işaretleyip çalışma alanına yerleştirin.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/11667_0EMRD00000LMwVt_f33b56c2.png",
+        "/akademi/temel-modelleme/11667_0EMRD00000LMVp4_353809fe.png",
+        "/akademi/temel-modelleme/8773_0EMVi00000EIB3N_e6f6249b.png"
+      ]
     },
     {
       "time": "02:00 – 02:43",
       "heading": "Aks Ağını Düzenleme",
       "body": "Aks ağına çift tıklayarak veya tutamaç noktalarını kullanarak sonradan yeni aks ekleyin, aks etiket yönlerini ve taşma mesafelerini güncelleyin.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/8773_0EMVi00000EIB6b_85c44bfe.png",
+        "/akademi/temel-modelleme/8773_0EMVi00000EI3c6_c6ebfbb6.jpeg"
+      ]
     }
   ],
   "commands": [

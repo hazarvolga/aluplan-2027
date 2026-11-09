@@ -14,19 +14,31 @@
       "time": "00:00 – 02:45",
       "heading": "Duvar (Wall / Wand) Özellikleri ve Çok Katmanlı Yapı",
       "body": "**Mimari (Architecture) -> Duvar (Wall / Wand)** komutunu açın. Katman sayısını belirleyin (örn. Dış duvar için 3 katman: `20 cm Tuğla/Betonarme + 8 cm Isı Yalıtımı + 2 cm Dış Sıva`). Taşıyıcı katmana yüksek öncelik (`300`), yalıtım ve sıvaya daha düşük öncelik (`100`) vererek kesişimlerde taşıyıcı çekirdeğin kesintisiz devam etmesini sağlayın.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/11384_0EM7U000001Td7a_b5050b7a.png",
+        "/akademi/temel-modelleme/9161_0EM7U000001TeWY_b5050b7a.png",
+        "/akademi/temel-modelleme/10798_0EM7U000001TeNI_692acc50.png"
+      ]
     },
     {
       "time": "02:45 – 05:30",
       "heading": "Duvar Aksı, Çizim Yönü ve Kat Düzlemi Bağlantısı",
       "body": "Duvar referans aksını (taşıyıcı katmanın dış kenarı veya merkezi) seçin; dış cephe yalıtımının dışarıya bakması için gerekirse **Ofset Yönünü Değiştir (Reverse Offset Direction)** (`Ctrl+R`) kullanın. **Yükseklik (Height)** butonundan alt kotu kat alt düzlemine (`UK = 0.00`), üst kotu kat üst düzlemine (`OK = 0.00`) bağlayın.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/10798_0EM7U000001TeNK_4e4ac506.png",
+        "/akademi/temel-modelleme/10798_0EM7U000001TeNL_b33c6eb2.png",
+        "/akademi/temel-modelleme/10798_0EM7U000001TeNM_27652d2c.png"
+      ]
     },
     {
       "time": "05:30 – 08:41",
       "heading": "Dış ve İç Duvarların Çizimi ve Birleşim Kontrolleri",
       "body": "Aks kesişimlerini yakalayarak dış cephe duvarlarını ve iç bölme duvarlarını çizin. **Duvarları Çizgiyle Birleştir (Join Linear Component to Line)** komutuyla T ve köşe birleşimlerini kontrol edin.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/11384_0EM7U000001Td7Z_eca6d3ed.png",
+        "/akademi/temel-modelleme/11384_0EM7U000001Td7W_fe54a8e9.png",
+        "/akademi/temel-modelleme/11384_0EM7U000001Td7Y_dc3e3db3.png"
+      ]
     }
   ],
   "commands": [

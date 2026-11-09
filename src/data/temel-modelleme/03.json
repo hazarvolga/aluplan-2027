@@ -14,25 +14,39 @@
       "time": "00:00 – 02:30",
       "heading": "Actionbar (Aksiyon Çubuğu) ve Rol Seçimi",
       "body": "Üst şeritte yer alan **Actionbar (Aksiyon Çubuğu)** üzerinden çalışma disiplininize göre **Mimari (Architecture)**, **Mühendislik (Engineering)** veya **Taslak (Draft)** rolünü seçin. Her sekmede sol grup **Oluştur (Create)**, sağ grup ise **Modifikasyon (Modify)** komutlarını barındırır.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/8843_0EM7U000001TdOd_c5bf5d8c.png",
+        "/akademi/temel-modelleme/8843_0EM7U000001TdOe_78c90f57.png",
+        "/akademi/temel-modelleme/8758_0EMVi00000ENjZ3_0940c6fd.png"
+      ]
     },
     {
       "time": "02:30 – 05:00",
       "heading": "Palet Mimarisi (Özellikler, Sihirbazlar, Objeler, Kütüphane)",
       "body": "Sol kenara kenetlenmiş paletlerden **Özellikler Paleti (Properties Palette)** seçili elemanın parametrelerini değiştirir; **Sihirbazlar (Wizards / Assistenten)** hazır kurumsal yapı elemanlarını sağ tıkla alıp çizmenizi sağlar; **Objeler Paleti (Objects Palette)** modeldeki tüm elemanları kat, çizim dosyası veya malzeme bazında filtreler ve gizler/kilitler.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/8758_0EMVi00000ENlXd_6052292f.png",
+        "/akademi/temel-modelleme/8758_0EM7U000001Td7D_320d0dcf.png",
+        "/akademi/temel-modelleme/8758_0EM7U000001Td7E_7244d9ea.png"
+      ]
     },
     {
       "time": "05:00 – 06:45",
       "heading": "Çoklu Görünüm Pencereleri ve Görünüm Türleri",
       "body": "**Pencere (Window) -> 2+1 Animasyon Penceresi (2+1 Animation Window)** düzenini seçerek sol tarafta 2B kat planında çalışırken sağ pencerede 3B **Animasyon (Animation)** modelini eşzamanlı izleyin.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/8872_0EM7U000001Td2I_eefd0423.png",
+        "/akademi/temel-modelleme/8872_0EM7U000001Td2J_68274a6d.png",
+        "/akademi/temel-modelleme/8872_0EM7U000001Td2K_eefd0423.png"
+      ]
     },
     {
       "time": "06:45 – 08:15",
       "heading": "Diyalog Satırı, Nokta Yakalama ve Fare/Klavye Prensipleri",
       "body": "Komut aktifken ekranın altındaki **Diyalog Satırını (Dialog Line)** takip edin. Sağ tık menüsünden **Nokta Yakalama Seçenekleri (Point Snap Options)** ile uç nokta, orta nokta, kesişim ve izleme çizgisi (Track tracing) hassasiyetini yönetin; komutu bitirmek için `Esc` tuşunu kullanın.",
-      "figures": []
+      "figures": [
+        "/akademi/temel-modelleme/8872_0EM7U000001Td2M_d52e00cb.png"
+      ]
     }
   ],
   "commands": [

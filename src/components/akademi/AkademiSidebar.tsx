@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { buildSidebarLevels, isAkademiLevelActive, isAkademiModuleActive } from './sidebar-nav';
+import { temelModellemeLessons } from '@/data/temel-modelleme';
 import styles from './AkademiSidebar.module.css';
 
 const sidebarLevels = buildSidebarLevels();
@@ -113,11 +114,30 @@ export function AkademiSidebar() {
                     <li className={styles.moduleItem}>
                       <Link
                         href="/akademi/temel-modelleme"
-                        className={`${styles.moduleLink} ${pathname.startsWith('/akademi/temel-modelleme') ? styles.moduleActive : ''}`}
-                        aria-current={pathname.startsWith('/akademi/temel-modelleme') ? 'page' : undefined}
+                        className={`${styles.moduleLink} ${pathname === '/akademi/temel-modelleme' ? styles.moduleActive : ''}`}
+                        aria-current={pathname === '/akademi/temel-modelleme' ? 'page' : undefined}
                       >
                         <span className={styles.moduleTitle}>Temel Modelleme Eğitimi</span>
                       </Link>
+                      {pathname.startsWith('/akademi/temel-modelleme') && (
+                        <ul className={styles.tmLessons}>
+                          {temelModellemeLessons.map((lsn) => {
+                            const active = pathname === `/akademi/temel-modelleme/${lsn.slug}`;
+                            return (
+                              <li key={lsn.slug}>
+                                <Link
+                                  href={`/akademi/temel-modelleme/${lsn.slug}`}
+                                  className={`${styles.tmLessonLink} ${active ? styles.moduleActive : ''}`}
+                                  aria-current={active ? 'page' : undefined}
+                                >
+                                  <span className={styles.tmLessonNo}>{String(lsn.no).padStart(2, '0')}</span>
+                                  <span className={styles.tmLessonTitle}>{lsn.title}</span>
+                                </Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      )}
                     </li>
                   )}
                 </ul>

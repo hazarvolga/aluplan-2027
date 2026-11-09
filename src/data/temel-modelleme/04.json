@@ -247,6 +247,23 @@
         "type": "image",
         "src": "/akademi/temel-modelleme/11225_0EM7U000001TdQ4_3a82eb17.png",
         "caption": "DIN 277 etiket stiliyle sonuç."
+      },
+      {
+        "type": "heading",
+        "text": "Kat (Geschoss) Elemanının Nitelikleri ve Etiketlenmesi"
+      },
+      {
+        "type": "text",
+        "text": "Kat (Geschoss) elemanı iki işe yarar: bir yandan DIN 277'ye göre brüt taban alanı ile brüt hacmin ve imar yönetmeliğine (BauNVO) göre taban alanlarının hesaplanacağı bölgeleri tanımlar; diğer yandan dış sıva gibi cephe ince yapı imalatları için yan yüzeyli bir taşıyıcı bileşen görevi görür."
+      },
+      {
+        "type": "text",
+        "text": "Katları paftada etiketlemek veya raporlarda değerlendirmek için niteliklerini kullanırsınız. En sık kullanılanlar: **Kat Kısa Adı (Geschoss Kurzbezeichnung)** (örneğin zemin kat için EG, normal kat için OG gibi kısa kod), **Bezeichnung** (kat adı) ve DIN 277'ye göre brüt taban alanı ile brüt hacim değerleridir. Bu niteliklere bağlı etiket stilleriyle her katı standart biçimde etiketlersiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11382_0EM7U000001Td7w_cf0339a3.png",
+        "caption": "Kat elemanının nitelik ve geometri değerlerinin genel görünümü."
       }
     ]
   }

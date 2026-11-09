@@ -7,7 +7,7 @@
   "hours": 16,
   "format": "Hibrit",
   "prerequisite": "B.M1, B.M2",
-  "summary": "Duvar, döşeme, kolon ve kiriş gibi parametrik elemanları doğru parametrelerle yerleştirir; kapı/pencere açıklıkları ile merdiven elemanlarını ekler ve elemanlar arası birleşim önceliklerini uygular.",
+  "summary": "Bu derste duvar, döşeme, kolon ve kiriş gibi parametrik elemanları doğru parametrelerle yerleştirir, kapı ve pencere açıklıklarını eklersiniz; elemanlar birbirine değdiğinde hangisinin diğerini kestiğini belirleyen birleşim önceliklerini uygularsınız. Artık gerçekten modelliyorsunuz.",
   "outcomes": [
     {
       "text": "Duvar, döşeme, kolon, kiriş gibi parametrik elemanları doğru parametrelerle yerleştirir.",
@@ -25,6 +25,53 @@
       "code": "K-B3.3"
     }
   ],
+  "lesson": {
+    "title": "İlk binanızı modellemek",
+    "subtitle": "Çizmiyorsunuz; akıllı duvarlar, döşemeler ve kolonlar yerleştiriyorsunuz.",
+    "intro": "Önceki derslerde aracı tanıdınız ve projenin iskeletini kurdunuz. Şimdi gerçek modelleme başlıyor. Bu derste duvar, döşeme, kolon ve kiriş gibi parametrik elemanları yerleştirecek, duvarlara kapı ve pencere açacak ve elemanların birbiriyle doğru birleşmesini sağlayacaksınız. Sürekli projenizin ilk katı bu derste ayağa kalkar.",
+    "sections": [
+      {
+        "heading": "Çizmiyoruz, yerleştiriyoruz",
+        "body": [
+          "Bir CAD programında bir duvarı çizgi çizgi çizersiniz. ALLPLAN'da ise bir **parametrik** duvar aracını seçer, yüksekliğini ve kalınlığını girer, sonra onu modele yerleştirirsiniz. Program geometriyi sizin için üretir.",
+          "Bu yüzden değerleri sonradan değiştirmek kolaydır: bir duvarın yüksekliğini güncellediğinizde duvar kendini yeniden çizer, planı ve kesiti de birlikte güncellenir. İşte parametrik modellemenin gücü budur."
+        ],
+        "tryIt": "Bir duvar aracını aç ve yerleştirmeden önce yükseklik ile kalınlık alanlarını bul; bu iki değerin duvarı nasıl tanımladığını gör."
+      },
+      {
+        "heading": "Duvar: ilk taşıyıcı eleman",
+        "body": [
+          "**Duvar**, çoğu modelin başladığı elemandır. Duvarı yerleştirirken onu aks sistemine hizalarsınız; böylece plan düzgün ve değiştirilebilir olur. Yükseklik değerini kat tanımınızla uyumlu verirsiniz.",
+          "Bir duvar yalnızca bir çizgi değildir: taşıyıcı mı bölme mi olduğunu, kaç katmanlı olduğunu ve malzemesini de taşır. Bu bilgiler sonradan metraj ve kesitlerde otomatik kullanılır."
+        ],
+        "tryIt": "Kendi denemen: Aks sistemine hizalı bir dış duvar çevresi yerleştir; yüksekliği kat yüksekliğinle aynı olsun."
+      },
+      {
+        "heading": "Döşeme, kolon ve kiriş",
+        "body": [
+          "**Döşeme**, kat düzlemini oluşturan yatay elemandır; genellikle duvar çevresini kapatan bir kontur çizerek oluşturursunuz. **Kolon** düşey, **kiriş** ise yatay taşıyıcı parametrik elemanlardır ve ikisini de akslara yerleştirirsiniz.",
+          "Bu elemanları akslara bağlı tutmak, modelin tutarlılığının anahtarıdır: bir aksı taşıdığınızda ona oturan kolon da taşınır. Taşıyıcı sistemi akslar üzerinden kurmak, hem mimari hem mühendislik tarafı için ortak bir dil sağlar."
+        ],
+        "tryIt": "Kendi denemen: Kat düzleminde bir döşeme oluştur, sonra iki aks kesişimine birer kolon yerleştir."
+      },
+      {
+        "heading": "Açıklıklar: kapı ve pencere",
+        "body": [
+          "Kapı ve pencereler duvara ayrı çizilmez; duvara bir **açıklık** olarak yerleştirilir. Açıklığı eklediğinizde program duvarda boşluğu açar ve kapı/pencere elemanını içine koyar. [araç adı sürüme göre değişebilir]",
+          "Açıklık duvara bağlı olduğu için, duvarı taşıdığınızda kapı ve pencere de onunla gelir. Yüksekliğini ve genişliğini parametre olarak verir, denizlik/lento gibi ayrıntıları eklersiniz."
+        ],
+        "tryIt": "Kendi denemen: Bir dış duvara bir pencere ve bir kapı açıklığı ekle; sonra duvarı biraz taşı ve açıklıkların onunla birlikte geldiğini gör."
+      },
+      {
+        "heading": "Birleşimler ve öncelik",
+        "body": [
+          "Elemanlar birbirine değdiğinde hangisinin diğerini kestiği bir kurala bağlıdır; buna **birleşim önceliği** denir. Örneğin bir kiriş ile kolon kesiştiğinde, metraj ve kesitin doğru çıkması için hangisinin hacminin esas alınacağı önceden tanımlanır.",
+          "Birleşim önceliklerini kontrol etmek sıkıcı görünebilir ama metrajınızı kurtarır: yanlış öncelik, aynı betonu iki kez saymaya ya da hiç saymamaya yol açar."
+        ],
+        "tryIt": "Kendi denemen: Bir kiriş ile kolonu kesiştir ve birleşim önceliğini kontrol et; hangisinin diğerini kestiğini belirle."
+      }
+    ]
+  },
   "concepts": [
     {
       "term": "Duvar",
@@ -387,5 +434,6 @@
       "difficulty": "Zor",
       "outcomeCode": "K-B3.3"
     }
-  ]
+  ],
+  "estimatedMinutes": 60
 }

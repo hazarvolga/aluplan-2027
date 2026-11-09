@@ -172,5 +172,56 @@
         "/akademi/arazi-modelleme/10933_0EMVi00000DRjb3_f368eed0.png"
       ]
     }
-  ]
+  ],
+  "deepDive": {
+    "title": "DIN 277-1:2016'ya Göre Taban Alanları",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "DIN 277-1:2016-1 standardı, yapının taban alanlarını ve mahal hacimlerini belirlemenin kurallarını verir. Allplan bu belirlemeyi iki yapı elemanıyla yapar: Kat (Geschoss) ve Mahal (Raum). Tekil elemanları doğrudan etiketleyebilir (örneğin Mahal Etiketi), kullanım birimleri için Mahal Grubu, kullanım ilişkileri için Kat Grupları halinde birleştirebilirsiniz. Çıktıyı Raporlar (Reports) üzerinden alırsınız. Not: DIN değerlerinin yanında yapı elemanlarına başka bilgiler de ekleyip metrajlayabilirsiniz; ancak doğru DIN değeri için bazı girişler zorunludur. Standarda yeni eklenen arsa alanları şu an ideal modellenememektedir."
+      },
+      {
+        "type": "heading",
+        "text": "Taban alanı terimleri"
+      },
+      {
+        "type": "text",
+        "text": "BGF (Brüt Taban Alanı), yapının tüm kat planı düzlemlerinin toplam alanıdır. KGF (Konstrüksiyon Taban Alanı), BGF'nin yükselen yapı konstrüksiyonlarını kapsayan alt alanıdır ve Allplan'da doğrudan metrajlanamaz; BGF'den net mahal alanını çıkararak elde edersiniz. NRF (Net Mahal Alanı), kullanılabilir mahallerin taban alanlarının toplamıdır, yani kullanım alanı (NUF), teknik alan (TF) ve sirkülasyon alanının (VF) toplamıdır."
+      },
+      {
+        "type": "heading",
+        "text": "Mahal hacmi terimleri"
+      },
+      {
+        "type": "text",
+        "text": "BRI (Brüt Mahal Hacmi) yapının toplam hacmidir. KRI (Konstrüksiyon Mahal Hacmi) doğrudan metrajlanamaz; BRI'den net mahal hacmini çıkararak bulursunuz. NRI (Net Mahal Hacmi), tüm kullanılabilir mahalleri kapsayan alt hacimdir."
+      },
+      {
+        "type": "heading",
+        "text": "Kat elemanının DIN277 ayarları"
+      },
+      {
+        "type": "text",
+        "text": "Kat elemanının DIN277, BauNVO sekmesinde, DIN277 Nitelikleri bölümündeki ayarlar değerlendirilir. Çevreleme Türü (Umschließungsart) sınıflandırmaya yarar: R standart durum, S özel durumdur. Alan Türü DIN277 (Flächenart) ise objenin nasıl metrajlanacağını belirler: B objeyi her zaman hesaba katar (standart durum), M çok katlı BRI için kullanılır ve taban alanında alan bilgisi olmadan listelenir (örneğin galeri boşlukları), U kısmen listelenir ve LGF (galeri boşluğu taban alanı) olarak adlandırılır, V ise DIN277 çıktısında dikkate alınmaz. Faktör DIN277 genellikle 1.0 bırakılır, çünkü standart bitmiş yüzeyleri esas alır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11198_0EM7U000001TdYS_cd3234a5.png",
+        "caption": "Kat elemanı: DIN277, BauNVO sekmesindeki nitelik ayarları."
+      },
+      {
+        "type": "heading",
+        "text": "Mahal elemanının DIN277 ayarları"
+      },
+      {
+        "type": "text",
+        "text": "Mahal elemanında da aynı sekme kullanılır. Çevreleme Türü yine R veya S olur. Kullanım Türü (Nutzungsart) alanın rolünü belirler: NUF kullanım alanı (ana grup veya NUF 1-7 alt grupları), TF teknik alan, VF sirkülasyon alanıdır. Alan Türü DIN277 için N net mahal alanı ve net hacmi (NRF ve NRI), M çok katlı NRI, L ise boş hacim anlamına gelir. Metrajda N objeyi her zaman hesaba katar, M mahal hacmi için kullanılır, L kısmen LGF olarak listelenir. Daha fazla bilgiyi her fonksiyonun F1 Yardım bölümünde bulabilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11198_0EM7U000001TdYT_a9e99019.png",
+        "caption": "Mahal elemanı: Kullanım Türü ve Alan Türü DIN277 ayarları."
+      }
+    ]
+  }
 }

@@ -153,5 +153,98 @@
         "/akademi/lejant/11051_0EM7U000001TdnN_fbdfeac9.png"
       ]
     }
-  ]
+  ],
+  "deepDive": {
+    "title": "Sıfırdan Yeni Bir Lejant Kurmak",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Döşeme yüzeylerini malzemeye göre (VOB) metrajlayan kendi lejantınızı tanımlayabilirsiniz. Önce hazırlık yaparsınız. Lejantları her zaman 1:100 ölçekli çizim dosyasında oluşturun; başka ölçekte lejant metin boyutlarını kontrol etmek zorlaşır. Lejantla gösterilecek birkaç obje hazır olmalı, burada farklı büyüklükte döşeme ince yapılı mahaller. Gösterilecek veriyi de önceden belirlersiniz: en üst katmanın malzemesi için MT_Boden(@508@;0), en üst katmanın VOB alanı için MT_Boden(@81@;0) formülünü kullanırsınız."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11050_0EM7U000001Tdh5_4c0afca1.png",
+        "caption": "Lejantla metrajlanacak farklı büyüklükte döşeme yüzeyleri."
+      },
+      {
+        "type": "text",
+        "text": "Lejantın görünümünü önceden çizin. Bir lejant için en az bir satır gerekir; çoğunlukla bir Başlık (Kopf) ve genel toplam için bir Toplam (Fuß) satırı mantıklıdır. Filtrelemeyi, yani hangi objeye bakılacağını da planlarsınız; burada Döşeme Yüzeyi (Bodenfläche) objesi SELECT alanında ayarlanır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11050_0EM7U000001Tdh6_051353ad.png",
+        "caption": "Başlık, satır ve toplam alanlarıyla lejantın ön çizimi."
+      },
+      {
+        "type": "heading",
+        "text": "Alanları çizin ve hücreleri tanımlayın"
+      },
+      {
+        "type": "text",
+        "text": "Başlık, Satır ve Toplam alanlarını çizin. Münferit alanlar birbirinden bağımsız seçilebilmelidir: sol ve sağ kenar çizgilerini üç parçalı yapın, dolgu alanlarını tek tek oluşturun. Sabit metinleri normal metin olarak yazın. Ardından Actionbar üzerinde Kullanıcı Objeleri (Benutzerobjekte) görevini açıp Raporlar, Lejantlar bölümünü bulun ve Hücre Tanımla (Zelle definieren) fonksiyonunu seçin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11050_0EM7U000001TdmG_8f39c27e.png",
+        "caption": "Kullanıcı Objeleri görevinde Raporlar, Lejantlar bölümü."
+      },
+      {
+        "type": "text",
+        "text": "İlk hücre (Hücre 1 / Sütun 1) en üst katmanın malzemesini verir. Dinamik araç çubuğunda Formül düğmesine basıp MT_Boden(@508@;0) formülünü girin. Yerleştirmeden önce formatı kontrol edin, örneğin A16 (16 karakterlik metin). Formülü soldaki satıra yerleştirin. İkinci hücre için alanı verecek MT_Boden(@81@;0) formülünü F8.2 formatı, m² birimi ve sağa dayalı hizalamayla oluşturun; bu hücre 2 numarasını alır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11050_0EM7U000001TdmJ_3f5c6749.png",
+        "caption": "Hücre Tanımla: formül ve A16 metin formatı."
+      },
+      {
+        "type": "text",
+        "text": "Toplam satırını tüm Hücre 2'lerin toplamıyla tamamlayın; formül SUMME(SPALTE2) olur, format Hücre 2 ile aynıdır. Önemli: hücreler kesintisiz numaralandırılmalıdır. Sıralamada boşluk olursa kaydederken hata alırsınız; No-Değ (Nr-Mod) düğmesiyle numaraları düzeltebilirsiniz, ancak formüldeki sütun numaraları otomatik güncellenmez."
+      },
+      {
+        "type": "heading",
+        "text": "Lejantı tanımlayın ve kaydedin"
+      },
+      {
+        "type": "text",
+        "text": "Lejant Tanımla (Legende definieren) fonksiyonunu açın. Lejant tipini Mimari (Archit) seçin. Select'i Döşeme Yüzeyi objesine ayarlamak için Select alanına tıklayın; Mimari Elemanlar Filtresi'nde Objekt= seçimiyle Bodenfläche'yi seçin. Onaydan sonra kriter Objekt=Bodenfläche olarak görünür."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11050_0EM7U000001TdmO_6b0f4339.png",
+        "caption": "Select: obje filtresi olarak Döşeme Yüzeyi (Bodenfläche)."
+      },
+      {
+        "type": "text",
+        "text": "Başlık (Kopf) düğmesine basıp başlığa girecek tüm elemanları seçin. Hücre / Satır (Zeile) düğmesiyle satıra girecek elemanları seçin; yatay çizgiler satırda görünmemeli, başlık ve altbilginin kenarını oluşturmalıdır. Satır bir satır aralığı (Zeilenvorschub) ister; örnekte yükseklik 30 ölçüldüğü için giriş 3,0 mm olur. Toplam (Summe) düğmesiyle toplam alanını tanımlayın. Son olarak Fix düğmesiyle lejantı boş bir numaraya kaydedip ad verin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11050_0EM7U000001TdmP_e32d7c30.png",
+        "caption": "Başlık alanına girecek elemanların seçilmesi."
+      },
+      {
+        "type": "heading",
+        "text": "İlk test ve satırları toplatma"
+      },
+      {
+        "type": "text",
+        "text": "Lejant fonksiyonunu seçip yeni lejantı çizim dosyasına yerleştirin. İlk testte lejant her döşeme yüzeyini tek tek gösterir. Allplan satırda tüm döşeme katmanlarını metrajlayabildiği için, tekil sonuçları toplatırken yalnızca en üst katmanın VOB alanını hesaplayan ek bir filtre gerekir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11050_0EM7U000001TdmV_59601d7b.png",
+        "caption": "İlk test: lejant her döşeme yüzeyini ayrı satırda gösteriyor."
+      },
+      {
+        "type": "text",
+        "text": "Lejant Değiştir (Legende modifizieren) fonksiyonunu açıp lejantı seçin. Bilgi (Info) düğmesiyle Hücre 2 üzerine tıklayın. Tekil sonuçları topla (Einzelergebnisse aufsummieren) seçeneğini etkinleştirin ve formülü şöyle değiştirin: _IF_(MT_Boden(@210@;0)=@210@)@81@_ELSE_0. Formül en üst katmanın katman numarasını o an değerlendirilen numarayla karşılaştırır; eşitse VOB alanını verir, değilse 0 olur. Böylece yalnızca en üst katman sayılır. Tamam ile kapatın, ESC ile moddan çıkın ve kaydet (speichern) seçin. Son test, tekil değerlerle aynı toplamı göstermelidir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11050_0EM7U000001TdmY_8abccb12.png",
+        "caption": "En üst katmanı bulan toplama formülünün girilmesi."
+      }
+    ]
+  }
 }

@@ -170,5 +170,79 @@
         "/akademi/temel-modelleme/8872_0EM7U000001Td2M_d52e00cb.png"
       ]
     }
-  ]
+  ],
+  "deepDive": {
+    "title": "Kendi Asistanlarınızı Kurmak",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Asistanlar (Assistenten), sağ tık ile hazır yapı elemanı alıp çizmenizi sağlayan paletlerdir. Kendi asistanlarınızı oluşturmadan önce ofis genelinde **ortak standartlar** tanımlayın. Hangi asistanın herkese hemen katkı sağlayacağını tartın ve asistana koyacağınız objeleri temiz tanımlayın. Henüz kullanmıyor olsanız bile katman (Layer) kullanmak ileride işinizi kolaylaştırır. Sık kullanılan asistanlar ekranın sağ veya sol kenarına rahat sabitlensin diye **dikey** formatta hazırlanır."
+      },
+      {
+        "type": "heading",
+        "text": "Adım 1: Çizim dosyasını asistan olarak kaydetme"
+      },
+      {
+        "type": "text",
+        "text": "Hazırladığınız çizim dosyasını açın. **Dosya (Datei) -> Kopyayı Asistan Olarak Kaydet (Kopie speichern als Assistent...)** yolunu izleyin. Kayıt konumu olarak kullandığınız Allplan sürümünün düğümünü, örneğin **Allplan 2025 -> Assistent-STD** seçin. Dosya adını girin (çizim dosyası adı önerilir), dosya tipini **Asistan (*.nas)** olarak seçin ve **Kaydet (Speichern)** deyin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8758_0EMVi00000ENjZ3_0940c6fd.png",
+        "caption": "Çizim dosyasını Asistan (*.nas) dosya tipiyle kaydetme penceresi."
+      },
+      {
+        "type": "text",
+        "text": "Asistanı görüntüleme veya yeni asistan grubu oluşturma sorgusunu bu adımda **iptal edin**. Grup, asistanlarla aynı dizinde sonraki adımda oluşturulacaktır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8758_0EMVi00000ENlNx_5b8763ca.png",
+        "caption": "Kayıttan sonra çıkan asistan grubu sorgusunu iptal edin."
+      },
+      {
+        "type": "heading",
+        "text": "Adım 2: Grup oluşturma ve asistan ekleme"
+      },
+      {
+        "type": "text",
+        "text": "**Asistanlar (Assistenten)** paletini açın. Grup satırında sağ tık ile kısayol menüsünü açın ve **Yeni Grup (Neue Gruppe...)** seçin. Kayıt konumu olarak yine ilgili sürüm düğümünü (**Allplan 2025 -> Assistent-STD**) seçin, grup için bir dosya adı girin ve **Kaydet (Speichern)** deyin. Yeni grup palette görünür."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8758_0EM7U000001Td7D_320d0dcf.png",
+        "caption": "Grup satırında sağ tık menüsünden Yeni Grup oluşturma."
+      },
+      {
+        "type": "text",
+        "text": "Sekmeler alanında sağ tık ile **Asistan Aç (Assistent öffnen...)** seçin, kayıt konumunu belirleyip ilk asistanı işaretleyin. Aynı yöntemle diğer asistanları da gruba ekleyin. Her sekmenin görünen adını sağ tık menüsünden değiştirebilirsiniz; bu adların dosya adıyla aynı olması gerekmez."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8758_0EM7U000001Td7E_7244d9ea.png",
+        "caption": "Sekme alanından Asistan Aç ile hazır asistanı gruba ekleme."
+      },
+      {
+        "type": "heading",
+        "text": "Adım 3: Asistanları diğer bilgisayarlara sunma"
+      },
+      {
+        "type": "text",
+        "text": "**Asistanlar (Assistenten)** paletini açın, grup satırında sağ tık ile **Grup Ekle (Gruppe hinzufügen...)** seçin. Böylece oluşturduğunuz grubu başka iş istasyonlarında da kullanıma açarsınız."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8758_0EM7U000001Td7F_780f1849.png",
+        "caption": "Grup Ekle ile asistan grubunu başka bilgisayarlarda kullanıma sunma."
+      },
+      {
+        "type": "heading",
+        "text": "Güncellenme mantığı"
+      },
+      {
+        "type": "text",
+        "text": "Asistanlar her çağrıldığında yeniden yüklenir; mevcut verinin üzerine yeni içerik yazarsanız **anında** kullanıma hazır olur. Asistan grubu ise her program başlangıcında okunur. Bu yüzden gruba yeni asistan eklediğinizde, bunların her yerde görünmesi için Allplan'ı **yeniden başlatın**."
+      }
+    ]
+  }
 }

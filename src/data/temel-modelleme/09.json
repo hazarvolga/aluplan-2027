@@ -133,5 +133,66 @@
         "/akademi/temel-modelleme/11384_0EM7U000001Td7Y_dc3e3db3.png"
       ]
     }
-  ]
+  ],
+  "deepDive": {
+    "title": "Mevcut Duvara Isı Yalıtımı",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Tadilat planlamasında mevcut bir duvara ısı yalıtımı eklemenin iki yolu vardır. Duvarda hiç boşluk yoksa veya az boşluk varsa, mevcut duvarın dışına **yeni bir duvar** çizip onu yalıtım katmanı yapmayı tercih edin. Ancak bu yolda, her boşluk için yeni duvarda da ayrı bir **yeni yapı boşluğu (Neubauöffnung)** açmanız gerekir. **Çok sayıda boşluk** içeren duvarlarda bundan kaçınmak için aşağıdaki yöntemi izleyin."
+      },
+      {
+        "type": "heading",
+        "text": "Adım 1: Duvarı iki katmana dönüştürün"
+      },
+      {
+        "type": "text",
+        "text": "Tek katmanlı duvarınızı, duvar özellikleri üzerinden **iki katmanlı** bir duvara dönüştürün. Eklenen ikinci katmana yalıtım için gerekli **kalınlığı ve yüksekliği** verin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10798_0EM7U000001TeNI_692acc50.png",
+        "caption": "Duvar özelliklerinde tek katmanlı duvarı iki katmana çevirme."
+      },
+      {
+        "type": "heading",
+        "text": "Adım 2: Yalıtım katmanını yeni yapıya dönüştürün"
+      },
+      {
+        "type": "text",
+        "text": "Asistanda uygun bir yalıtım katmanı bulun ve bu katmana **sağ tıklayın**. Bağlam menüsünde **Tadilat Planlaması Dönüştürme (Umwandlung Umbauplanung)** fonksiyonunu seçin; ayarlar bu sırada devralınır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10798_0EM7U000001TeNJ_ca67f81b.png",
+        "caption": "Yalıtım katmanına sağ tık ile Tadilat Planlaması Dönüştürme fonksiyonu."
+      },
+      {
+        "type": "heading",
+        "text": "Adım 3: Dış katmanı işaretleyip uygulayın"
+      },
+      {
+        "type": "text",
+        "text": "**Ne yeni yapıya dönüştürülecek? (Was soll in Neubau gewandelt werden?)** sorusunda, iki katmanlı duvarınızın yeni oluşturulan **dış katmanını** işaretleyin ve **Uygula (Anwenden)** ile onaylayın. Bu dönüşümü **Mimari Yapı Elemanı Özelliklerini Aktar (AR-Bauteileigenschaften übertragen)** fonksiyonuyla diğer dış duvarlara da uygulayabilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10798_0EM7U000001TeNK_4e4ac506.png",
+        "caption": "Yeni yapıya dönüştürülecek dış katmanın seçimi."
+      },
+      {
+        "type": "heading",
+        "text": "Yıkım paftasına dikkat"
+      },
+      {
+        "type": "text",
+        "text": "Seçtiğiniz yönteme bağlı olarak, dıştaki parapet çizgileri yıkım paftası (Abbruchplan) görünümünde **görünür kalabilir veya eksik olabilir**. Bunu ancak ilgili parapetleri devre dışı bırakarak ve gerekirse **2B çizgi** ile sonradan düzelterek yönetebilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10798_0EM7U000001TeNM_27652d2c.png",
+        "caption": "Yıkım paftası görünümünde parapet çizgilerinin durumu."
+      }
+    ]
+  }
 }

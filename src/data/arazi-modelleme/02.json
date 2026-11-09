@@ -221,5 +221,75 @@
       "body": "Bu eğitim videosu, Allplan **Geometri Araçları (Add-On Geometrie-Tools)** Sürüm 2.004'ün yeni fonksiyonlarını, özellikle de LandXML formatının içe ve dışa aktarımını tanıtmaktadır. Arazi verilerinin harita ölçümü ve yapı çukuru kazısı için nasıl kullanılabileceği, LandXML formatında hangi elemanların yer aldığı ve bunların Allplan'a nasıl içe aktarıldığı gösterilmektedir. Bu noktada arayüzün arazi yüzeyine odaklandığı ve aksların bilinçli olarak modellenmediği vurgulanmaktadır. Dokulu ve dokusuz arazi verilerinin içe aktarımına yönelik çeşitli örneklerin yanı sıra üstyapı projelerindeki kullanımı ve LandXML dosyası olarak dışa aktarma için üçgenleme (triangülasyon) fonksiyonu sunulmaktadır.",
       "figures": []
     }
-  ]
+  ],
+  "deepDive": {
+    "title": "Büyük Koordinatlı DXF'i Doğru İçe Aktarmak",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Harita mühendisinden gelen bir DXF dosyasını (örneğin \"alkisvektordaten_utm32.dxf\") Allplan'a açtığınızda ve ekrana sığdırdığınızda çoğu zaman hiçbir şey görünmez. Bunun nedeni şudur: kadastral nirengi noktalarının etiketleri global orijinde durur, noktaların kendisi ise UTM koordinatlarında, yani bu etiketten kilometrelerce uzaktadır. Bu yüzden Allplan, içe aktarma sırasında dosyanın ağırlık merkezini belirleyemez."
+      },
+      {
+        "type": "heading",
+        "text": "Önce koordinatı öğrenin"
+      },
+      {
+        "type": "text",
+        "text": "Dosyanın gerçek koordinatını bir DXF görüntüleyici ile öğrenebilirsiniz. Örneğin ücretsiz TrueView'i açar, ortadaki herhangi bir noktayı ölçersiniz (\"Measure\" alanında \"Locate Point\" düğmesiyle). Ölçtüğünüz değeri yuvarlayıp proje ofseti olarak girersiniz. Projeyi işaretleyin, kısayol menüsünden Özellikler (Eigenschaften) seçin ve ofseti yazın. Görüntüleyicide X: 735531 ve Y: 5353041 ölçtüyseniz, ofset olarak X: 735000 ve Y: 5353000 girmeniz yeterlidir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11158_0EM7U000001Tdbe_3596d738.png",
+        "caption": "Proje özelliklerinde ofset koordinatlarının yuvarlanmış olarak girilmesi."
+      },
+      {
+        "type": "heading",
+        "text": "İçe aktarma seçenekleri"
+      },
+      {
+        "type": "text",
+        "text": "Boş bir çizim dosyasını çift tıklayıp tek başına etkinleştirin. Dosya (Datei) -> İçe Aktar (Importieren) -> AutoCAD Verilerini İçe Aktar yolunu açın ve dişli simgeli Seçenekler (Optionen) düğmesine basın. Önce Sıfırla (Reset) ile ayarları Allplan'ın önerdiği standartlara döndürün. 3B veriye ihtiyacınız yoksa Genel Ayarlar sekmesinde aktarım türünü 2D seçin, birimi Metre yapın ve ağırlık merkezi ayarını Kapalı (Aus) bırakın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11158_0EM7U000001Tdbf_4a5e9865.png",
+        "caption": "AutoCAD içe aktarma seçenekleri: dişli simgesinden açılan ayar penceresi."
+      },
+      {
+        "type": "text",
+        "text": "Gelişmiş Ayarlar (Erweiterte Einstellungen) sekmesinde Nitelik (Attribut) seçeneğinin işaretini kaldırın. Tamam ile onaylayıp Aç (Öffnen) ile aktarımı başlatın. Yapılandırma penceresinde Değiştir (Verändern) düğmesine basın; burada renklerin, çizgi tiplerinin ve katmanların atamalarını kontrol edip gerekirse yeniden atarsınız (kaydı işaretleyip sağ fare tuşu menüsünden)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11158_0EM7U000001Tdbg_21b1b51d.png",
+        "caption": "Genel Ayarlar: aktarım türü 2D, birim Metre."
+      },
+      {
+        "type": "heading",
+        "text": "Koordinat uyarlamasına dikkat"
+      },
+      {
+        "type": "text",
+        "text": "Yapılandırmada \"Koordinat uyarlaması olmadan (Ohne Koordinatenanpassung)\" seçeneğinin işaretli olduğundan ve öyle kaldığından emin olun. İçe aktarmadan sonra Makroyu Parçala (Makro auflösen) fonksiyonunu \"Yerleşim Katmanı\" atamasıyla seçin ve Ctrl + A ile tüm objelere uygulayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11158_0EM7U000001Tdbj_b69d5b05.png",
+        "caption": "Koordinat uyarlaması olmadan seçeneği işaretli kalmalı."
+      },
+      {
+        "type": "heading",
+        "text": "Ofset mi, sıfır noktası mı?"
+      },
+      {
+        "type": "text",
+        "text": "CAD sistemleri çok büyük koordinatlarda hesaplama sorunu yaşar; uzak bir noktada ne kadar çok veri olursa sorun o kadar büyür. Bu yüzden veriler global orijinin yakınında tutulur. Sıfır Noktası (Nullpunkt) seçeneği veriyi orijine taşır ama kaydırma vektörünü saklamaz; coğrafi koordinata ihtiyacınız yoksa bunu kullanırsınız. Ofset (Offset) seçeneği ise veriyi orijine taşır ve kaydırma vektörünü projeye kaydeder; böylece ölçüm yaptığınızda gerçek koordinatlar yine de görünür. Görüntüleyici kullanmak istemiyorsanız, dosyayı bir kez kaydırmadan (birim Metre) açıp bir nokta ölçer, sonra veriyi silebilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11158_0EM7U000001Tdbl_a464017e.png",
+        "caption": "Ek Kaydırma alanına ofset koordinatlarını eksi işaretiyle girme seçeneği."
+      }
+    ]
+  }
 }

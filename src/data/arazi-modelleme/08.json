@@ -161,5 +161,49 @@
         "/akademi/arazi-modelleme/9135_0EM7U000001TdIA_99088cc9.png"
       ]
     }
-  ]
+  ],
+  "deepDive": {
+    "title": "Araziye Referanslı Yan Yüzey Oluşturmak",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Karmaşık formlu bir arazide, zemine temas eden su yalıtımı yüzeyini arazi kesitine tam oturtmak isteyebilirsiniz. Bunu Yan Yüzey (Seitenfläche) fonksiyonunu arazi referans düzlemine bağlayarak yaparsınız. Ön koşul: bir düzlem modeli hazır olmalı ve etkin çizim dosyalarından birinde araziye karşılık gelen bir 3B yüzey bulunmalıdır."
+      },
+      {
+        "type": "heading",
+        "text": "Düzlem modeline arazi yüzeyini ekleme"
+      },
+      {
+        "type": "text",
+        "text": "Düzlemler (Ebenen) paletini açın. Kilit sembolünü (Değişiklik Modu Açık/Kapalı) seçerek düzenleme moduna geçin ve istediğiniz düzlem çiftinin başlığını seçin (burada Zemin Kat / Erdgeschoss). Referans yüzey ekle/değiştir (Bezugsfläche einfügen/ersetzen) fonksiyonunu seçip 3B arazi yüzeyini tıklayın. İsterseniz referans yüzeyin adını doğrudan değiştirebilirsiniz (örneğin Arazi / Gelände). Değişiklikleri devralıp moddan çıkmak için kilit sembolünü tekrar seçin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11348_0EM7U000001TdF0_02a26789.png",
+        "caption": "Düzlemler paletinde değişiklik modu ve düzlem çiftinin seçilmesi."
+      },
+      {
+        "type": "heading",
+        "text": "Yan yüzeyi iki referans düzleme bağlama"
+      },
+      {
+        "type": "text",
+        "text": "Yan Yüzey (Seitenfläche) fonksiyonunu açın ve ince yapı katmanlarını istediğiniz gibi ayarlayın. Yükseklik (Höhe) ayarlarını açın. Üst kenar için referans düzlem olarak yeni eklediğiniz Arazi (Gelände) düzlemini seçip onaylayın. Alt kenar için örneğin temellerin alt kenarını (Alt Kenar F / Unterkante F) referans düzlem seçin. Böylece yan yüzeyin üstü araziyi, altı temeli izler."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11348_0EM7U000001TdF1_e7f23598.png",
+        "caption": "Üst kenar Arazi düzlemine, alt kenar temel alt kenarına bağlanıyor."
+      },
+      {
+        "type": "text",
+        "text": "Ayarları kapatın ve istediğiniz yapı kütlesi kenarlarında yan yüzeyi oluşturun. Sonuç, üst kenarı arazi kesitine uyan bir su yalıtımı yüzeyidir. Not: 2018 sürümünden itibaren Actionbar (Aksiyon Çubuğu) kullanıyorsanız, Alt tuşuyla menü çubuğunu geçici olarak görüntüleyebilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11348_0EM7U000001TdF2_bb9e8e28.png",
+        "caption": "Oluşturulan, üst kenarı araziye referanslı yan yüzey."
+      }
+    ]
+  }
 }

@@ -143,5 +143,57 @@
       "title": "Yanlış seçim penceresiyle fazla eleman taşımak",
       "body": "Soldan sağa açılan seçim penceresi yalnızca **tamamen içine aldığı** elemanları, sağdan sola açılan pencere ise **dokunduğu tüm** elemanları seçer. İkisini karıştırırsanız istemeden fazla elemanı taşır veya silersiniz. Taşı veya sil öncesi hangi seçim yönünü kullandığınızı kontrol edin."
     }
-  ]
+  ],
+  "deepDive": {
+    "title": "Stilleri Projeler Arası Kopyalama",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Çizgi stilleri (Linienstile), yüzey stilleri (Flächenstile) ve çizim tipleri (Zeichnungstypen), tanımlar üzerinden **ek kaynak** olarak başka projelere taşınabilir. Böylece bir projede kurduğunuz standardı yeniden kurmak zorunda kalmazsınız."
+      },
+      {
+        "type": "heading",
+        "text": "Tanımlar penceresini açma"
+      },
+      {
+        "type": "text",
+        "text": "**Araçlar (Extras) -> Tanımlar (Definitionen) -> Çizgi Stilleri, Yüzey Stilleri, Çizim Tipleri** bölümünü açın. Çizgi veya yüzey stilleri alanında, çizim tiplerinin üzerine sağ tıklayın ve kısayol menüsünden **Standart/Büro/Proje'den Ek Kaynaklar Ekle (Weitere Ressourcen aus Standard/Büro/Projekt hinzufügen)** seçeneğini seçin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11227_0EM7U000001TdUQ_a29bbe1c.png",
+        "caption": "Sağ tık menüsünden ek kaynak ekleme seçeneği."
+      },
+      {
+        "type": "heading",
+        "text": "Kaynağı seçme ve aktarma"
+      },
+      {
+        "type": "text",
+        "text": "Üstteki seçimi **Ek çizim tipleriyle genişlet (Um die zusätzlichen Zeichnungstypen erweitern)** olarak ayarlayın. **Değiştir (Ersetzen)** seçeneğini kullanırsanız stillerin içindeki mevcut çizim tipleri **silinir**. **Kaynak Klasör (Quellordner)** kısmında **Proje (Projekt)** seçin ve stilleri alacağınız projeyi işaretleyin. Alternatif olarak büro standardı için **Büro (Büro)** veya **Standart (Standard)** seçebilirsiniz. **CTRL+A** ile tüm stilleri veya seçmeli olarak istediklerinizi etkinleştirin ve **Tamam (OK)** ile onaylayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11227_0EM7U000001TdUR_70671060.png",
+        "caption": "Çizgi stilleri (Linienstile) seçim listesi."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11227_0EM7U000001TdUS_faefb095.png",
+        "caption": "Yüzey stilleri (Flächenstile) seçim listesi."
+      },
+      {
+        "type": "text",
+        "text": "Tüm yeni çizgi ve yüzey stilleri, kullandıkları çizim tipleriyle birlikte oluşturulur. Hali hazırda var olan stiller ise olası ek çizim tipleriyle tamamlanır. Bir stilde mevcut çizim tiplerinin tümü için tanım yoksa, bu durum **tanımsız (undefiniert)** olarak işaretlenir."
+      },
+      {
+        "type": "heading",
+        "text": "Dikkat edilecek noktalar"
+      },
+      {
+        "type": "text",
+        "text": "Yapı elemanları yalnızca belirli bir **ID numarasına aidiyeti** hafızada tutar. Bu numara değişirse yapı elemanı yüzey stilini kaybeder veya ona başka bir stil atanır. Ayrıca kaynakları ve tanımları değiştirebilmek için **proje sahibi veya yönetici (Administrator)** yetkisine sahip olmanız gerekir."
+      }
+    ]
+  }
 }

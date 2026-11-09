@@ -139,5 +139,58 @@
         "/akademi/temel-modelleme/10634_0EM7U000001TeNT_d6bfa607.png"
       ]
     }
-  ]
+  ],
+  "deepDive": {
+    "title": "Poligonlaştırma Türleri",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Bir eğri, örneğin bir daire içinde yüzey elemanı (Dolgu Alanı / Füllfläche) oluştururken düz kenarlara yaklaştırılır. Bu yaklaştırmanın inceliğini iki seçenek belirler: **Daire Bölüntüsü (Kreisteilung)** ve **Kiriş Yüksekliği / Sehim (Stichmaß)**. İkisi arasındaki geçişi, fonksiyonu çağırdığınızda doğrudan giriş seçeneklerinde (veya Dinamik Araç Çubuğunda) bulursunuz."
+      },
+      {
+        "type": "heading",
+        "text": "Seçenek 1: Daire Bölüntüsü (Kreisteilung)"
+      },
+      {
+        "type": "text",
+        "text": "Burada eğrinin yaklaştırılacağı **doğru sayısını** girersiniz; değer her zaman tam daireyi referans alır ve 8 ile 360 arasında olur. Değer yükseldikçe poligonlaştırma hassaslaşır. Daire bölüntüsü özellikle **küçük yuvarlatmalar ve çaplar** için uygundur. Büyük yuvarlatmalarda ise yuvarlatma ile poligon arasında çoğunlukla gözle görülür fark kalır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10972_0EM7U000001Te15_724a4cc5.png",
+        "caption": "Daire Bölüntüsü (Kreisteilung) 8: kaba, köşeli yaklaşım."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10972_0EM7U000001Te16_37e3fb19.png",
+        "caption": "Daire Bölüntüsü (Kreisteilung) 120: eğriye çok yakın sonuç."
+      },
+      {
+        "type": "heading",
+        "text": "Seçenek 2: Kiriş Yüksekliği / Sehim (Stichmaß)"
+      },
+      {
+        "type": "text",
+        "text": "Burada kesenin (sekant) yaya olan **maksimum kiriş yüksekliğini** girersiniz. Eğri, poligon kenarının eğriye mesafesi girdiğiniz değerden küçük veya ona eşit olacak şekilde bölünür. Değer 0,005 ile 1 000 000 arasındadır ve **küçüldükçe** sonuç hassaslaşır. Maksimum alt bölünme sayısı öngörülmediği için bu yöntem **büyük eğriler** için daha uygundur ve daire bölüntüsüne göre daha hassas sonuç verir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10972_0EM7U000001Te17_25ceaae5.png",
+        "caption": "Kiriş yüksekliği (Stichmaß) 500 mm: büyük sehim, köşeli sonuç."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10972_0EM7U000001Te18_2f00894d.png",
+        "caption": "Kiriş yüksekliği (Stichmaß) 5 mm: küçük sehim, pürüzsüz eğri."
+      },
+      {
+        "type": "heading",
+        "text": "Uygulama ve ipucu"
+      },
+      {
+        "type": "text",
+        "text": "Her iki değeri de yüzey elemanı oluştururken uyarlayabilirsiniz: fonksiyonu etkinleştirin, artı kıl imleciyle eğriye tıklayın ve giriş seçeneklerinden değeri değiştirin. Poligonlaştırmada **Otomatik Geometri Algılama (Automatische Geometrieermittlung)** özelliğini de kullanın. Gelişmiş nokta girişinde bunu fonksiyon etkinken bağlam menüsünden veya diyalog satırından, eski nokta girişinde ise **Görünüm (Ansicht) -> Nokta Asistanı (Punktassistent)** altından açıp kapatırsınız."
+      }
+    ]
+  }
 }

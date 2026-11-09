@@ -131,5 +131,88 @@
         "/akademi/temel-modelleme/10575_0EM7U000001Td8g_04ea00a5.png"
       ]
     }
-  ]
+  ],
+  "deepDive": {
+    "title": "Korkuluk Modelleyici ile Korkuluk",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Korkuluk Modelleyici'de (Geländermodellierer) parametre girişini kolaylaştıran ön koşul, korkuluğun görünüş ve kesitte tam ölçülendirilmiş bir detay çizimidir. Tüm ölçüler döşeme ön kenarına referans almalıdır."
+      },
+      {
+        "type": "text",
+        "text": "Her eleman için genişlik, yükseklik ve gerekiyorsa derinlik ölçülüdür. Düşey elemanlarda eksenin döşeme ön kenarına yanal mesafesi (OffsetY), en alt noktanın döşeme üst kotuna mesafesi (OffsetZ), uzunluk ve dikme eksenine yanal mesafe (OffsetX) girilir. Yatay elemanlarda ise OffsetY, kesit merkezinin döşeme üst kotuna mesafesi (OffsetZ) ve OffsetX kullanılır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11149_0EM7U000001TdWo_a1790092.png",
+        "caption": "Tam ölçülendirilmiş korkuluk detay çizimi."
+      },
+      {
+        "type": "text",
+        "text": "Korkuluk Modelleyici'yi başlatıp Özellikler (Eigenschaften) penceresini açın. Önce tüm kategorilerdeki (Küpeşte/Dikme/Alan) mevcut elemanları, listeden seçip Elemanı Sil (Element löschen) ile tek tek silin; pencere tümüyle boşalsın. Her yeni elemanda önce hangi kategoriye ait olduğuna karar verip o kategoriye tıklarsınız."
+      },
+      {
+        "type": "heading",
+        "text": "Küpeşte (Handlauf)"
+      },
+      {
+        "type": "text",
+        "text": "Artı butonuyla yeni eleman oluşturup adını Handlauf yapın. Eleman yatay olmalıdır. Genişlik ve yükseklik için örn. 40 mm girin. Kesit tipini belirleyin: dairesel bir kesit için Köşeli Poligon (Polygon mit Ecken) alanına örn. 12 yazın. Ofsetleri verin: OffsetY=48, OffsetZ=980, OffsetX=0. Bölümleme (Teilung) boş kalır, çünkü bu sürekli devam eden yatay bir elemandır. Renk (örn. 26) ve 2B görünürlüğü ayarlayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11149_0EM7U000001TdWr_9475c1ef.png",
+        "caption": "Tamamlanmış küpeşte."
+      },
+      {
+        "type": "heading",
+        "text": "Dikme (Pfosten)"
+      },
+      {
+        "type": "text",
+        "text": "Kategoriyi Dikme yapıp artı ile yeni eleman açın ve Düşey (Vertikal) olarak ayarlayın. Önceden çizdiğiniz obje geometrisini çift ok butonuyla alın; dikme hazırda dik durmalı, tek bir 3B katı obje olmalı ve X ekseni taban kenarına (döşeme ön kenarına) hizalı olmalıdır. Ofsetleri girin: OffsetZ=-296, OffsetY=60. Uzunluk, genişlik ve yükseklik 3B objeden belirlenir. Renk (örn. 18) ve 2B görünürlüğü ayarlayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11149_0EM7U000001TdWs_a6a93e5c.png",
+        "caption": "Tamamlanmış dikme."
+      },
+      {
+        "type": "heading",
+        "text": "Yanal levhalar ve başlık plakası"
+      },
+      {
+        "type": "text",
+        "text": "Yine Dikme kategorisinde yanal tespit levhalarını kurun. Düşey olarak ayarlayın; Genişlik=10, Yükseklik=105 (burada yükseklik levhanın derinliğidir) ve Uzunluk=40 girin. Ofsetler: OffsetX=-10, OffsetY=64, OffsetZ=-220. İkinci levha için elemanı kopyalayıp yalnızca OffsetX'i -10'dan 10'a çevirin; böylece levha dikme eksenine göre simetrik olur."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11149_0EM7U000001TdWt_d701c14c.png",
+        "caption": "Dikmeye eklenen yanal levhalar."
+      },
+      {
+        "type": "text",
+        "text": "Ankraj başlık plakasını da Dikme kategorisinde ekleyin: Genişlik=80, Yükseklik=10, Uzunluk=100, OffsetZ=-250, OffsetY=5. Genişlik her zaman görünüş genişliğidir; yükseklik düşey elemanlarda derinliği ifade eder. Böylece dikme tamamlanır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11149_0EM7U000001TdWu_94d18776.png",
+        "caption": "Başlık plakasıyla tamamlanan dikme."
+      },
+      {
+        "type": "heading",
+        "text": "Halatlar (Alan / Feld)"
+      },
+      {
+        "type": "text",
+        "text": "Halatları Alan (Feld) kategorisinde kurarsınız. Artı ile eleman açıp adını Seil1 yapın, Yatay olarak ayarlayın, Genişlik/Yükseklik=10 mm, kesit tipini yuvarlak (örn. 12 köşe) seçin. OffsetZ=85, OffsetY=60 ve OffsetXStart=OffsetXEnd=5 (dikme kalınlığının yarısı) girin. Sonraki halatlar için elemanı kopyalayıp yalnızca OffsetZ'yi değiştirin: Seil2 için 195, diğerleri için benzer şekilde. Böylece korkuluk stiliniz hazır olur."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11149_0EM7U000001TdWv_7047286d.png",
+        "caption": "Tamamlanmış korkuluk."
+      }
+    ]
+  }
 }

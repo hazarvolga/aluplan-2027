@@ -1,0 +1,61 @@
+{
+  "no": 21,
+  "slug": "kot-etiket",
+  "title": "Kot Ölçülendirme, Etiket ve Metin",
+  "duration": "",
+  "sourceModule": "Proje 1 — Modül 4: Kesit, Görünüş ve Planlarda İlişkisel Kot Ölçülendirme",
+  "intro": "Kesit ve görünüşler hazır; şimdi onlara **kot (Höhenkote)** yazacaksınız. Kot ölçülendirmesi, her noktanın **±0.00'a göre** yüksekliğini bir sembolle gösterir. İlişkisel kot, modelin Z koordinatını otomatik okur; kat yüksekliğini değiştirince kot değeri de değişir, elle düzeltme gerekmez.",
+  "objectives": [
+    "Türetilen kesit ve görünüşlerde ±0.00 referans kotunu tanımlayarak ilişkisel Kot Ölçülendirmesi yapmak.",
+    "Döşeme üst/alt, saçak, mahya, temel alt ve parapet/lento kotlarını standart sembollerle ölçülendirmek.",
+    "Kat planlarında kaba ve bitmiş döşeme kot sembollerini yerleştirmek."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "±0.00 Referans Kotunun Belirlenmesi",
+      "body": "**Kot Ölçülendirmesi (Elevation Point / Kotenbemaßung)** komutuna girin. İlişkisel kesitlerde modelin kendi Z koordinatını otomatik okumasını sağlayın veya **zemin kat bitmiş döşeme üstünü** `±0.00` baz noktası olarak tıklayın. Baz noktası yanlışsa tüm kotlar kayar.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Kat, Saçak, Mahya ve Temel Kotlarının Yerleştirilmesi",
+      "body": "Kesit ve cephe görünüşlerinde döşeme üstlerini, kiriş/lento altlarını, saçak ve mahya noktalarını tıklayarak düşey kot zincirleri oluşturun. Değerler modelden okunur; kat yüksekliği değişince kotlar kendiliğinden güncellenir.",
+      "figures": []
+    }
+  ],
+  "checkpoint": "Kesit ve görünüşlerde ±0.00'a göre döşeme, saçak, mahya ve temel kotları sembollerle yazılıysa ve model değişince kot değerleri güncelleniyorsa kot ölçülendirmeyi doğru yapıyorsunuz demektir.",
+  "pitfalls": [
+    {
+      "title": "Yanlış ±0.00 ve elle kot düzeltme",
+      "body": "±0.00 referansını yanlış noktaya (örn. kaba döşeme yerine bitmiş döşeme olması gerekirken) verirseniz tüm kotlar sistematik kayar. Baz noktasını baştan doğru seçin. İlişkisel kot değerini elle yazmayın; model değişince güncellenen değeri bozarsınız."
+    }
+  ],
+  "commands": [
+    {
+      "name": "Kot Ölçülendirmesi",
+      "menu": "Ölçülendirme -> Kot Ölçülendirmesi (Elevation Point / Kotenbemaßung)",
+      "shortcut": "Kot İkonu",
+      "desc": "Kesit, görünüş ve planlarda ±0.00 baz noktasına göre otomatik kot değeri ve sembolü yazar."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Höhenkote (Lokal-Beschriftung)",
+        "file": "12592_vimeo_1234331309_6ffcf497.mp4",
+        "vimeoId": "1234331309",
+        "sizeMB": 28.95
+      },
+      {
+        "title": "3D Bemassung - Höhenkoten",
+        "file": "12711_vimeo_1235062126_dfa43e63.mp4",
+        "vimeoId": "1235062126",
+        "sizeMB": 26.94
+      }
+    ],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": []
+}

@@ -1,0 +1,78 @@
+{
+  "no": 22,
+  "slug": "pafta",
+  "title": "Pafta Düzenleme ve PDF Çıktı",
+  "duration": "",
+  "sourceModule": "Proje 1 — Modül 4: Pafta Düzenleyici (Layout Editor / Planlayout) ve PDF/DWG Çıktı",
+  "intro": "Model ve çizimler bitti; son adım **teslim**. **Pafta Düzenleyici (Layout Editor)**, plan, kesit ve görünüşleri bir kağıt üzerinde (örn. `DIN A1`) belli ölçeklerde dizdiğiniz yerdir. Çizimleri paftaya kopyalamazsınız, **referansla** yerleştirirsiniz; model değişince pafta güncellenir. Antet proje bilgilerini otomatik yazar ve katmanlı vektörel PDF üretirsiniz.",
+  "objectives": [
+    "Pafta Düzenleyici (Layout Editor / Planlayout) ortamında standart veya özel boyutlu pafta sayfası oluşturmak.",
+    "Pafta çerçevesi ve proje niteliklerini otomatik okuyan dinamik Antet (Title Block / Plankopf) yerleştirmek.",
+    "Plan, görünüş ve kesitleri farklı ölçeklerde paftaya dizmek, kırpmak ve katmanlı vektörel PDF olarak dışa aktarmak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Pafta Düzenleyiciye Geçiş, Sayfa Ayarı, Çerçeve ve Antet",
+      "body": "Üst şeritten **Pafta Düzenleyici (Layout Editor / Planlayout)** moduna geçin. **Sayfa Ayarı (Page Set Up)** ile pafta boyutunu (`DIN A1` veya özel rulo) seçin; **Çerçeve Gösterimi (Layout Border)** ve **Lejant - Başlık Bloğu (Title Block / Plankopf)** ile proje niteliklerinden beslenen dinamik anteti sağ alt köşeye yerleştirin.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Plan, Kesit ve Görünüşlerin Yerleştirilmesi ve Katman Filtresi",
+      "body": "**Çizim Dosyası Yerleştir (Layout Element)** ile Zemin Kat Planı (`1:50`), Normal Kat Planı (`1:50`), Kesitler (`1:50`) ve Cephe Görünüşlerini (`1:100`) paftaya dizin. **Katman (Layer)** filtresiyle istemediğiniz yardımcı katmanları gizleyin, **Pafta Penceresi (Layout Window)** ile sınırları kırpın.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Yazdırma ve Katmanlı Vektörel PDF Çıktısı",
+      "body": "**PDF Dosyası Gönder (Export PDF Data)** veya **Paftaları Yazdır** ile katman bilgisini koruyan, baskıya hazır **vektörel** PDF pafta setini dışa aktarın. Rasterize (düşük çözünürlük) değil, vektörel verin; böylece çizgiler her ölçekte keskin kalır.",
+      "figures": []
+    }
+  ],
+  "checkpoint": "DIN A1 paftanızda antet proje bilgilerini otomatik yazıyorsa, plan/kesit/görünüşler doğru ölçekte dizili ve katmanlı vektörel PDF üretebiliyorsanız çıktı aşamasını tamamladınız demektir.",
+  "pitfalls": [
+    {
+      "title": "Çizimleri paftaya kopyalamak",
+      "body": "Pafta elemanları çizimlerin **referansıdır**, kopyası değil: **Çizim Dosyası Yerleştir** ile yerleştirin, modeli değiştirince pafta kendiliğinden güncellensin. Çizimi elle kopyalarsanız bağ kopar ve pafta eskir. Çıktıyı da rasterize değil katmanlı vektörel PDF olarak verin."
+    }
+  ],
+  "commands": [
+    {
+      "name": "Sayfa Ayarı (Page Set Up)",
+      "menu": "Pafta Düzenleyici -> Sayfa Ayarı (Page Set Up / Seite einrichten)",
+      "shortcut": "Sayfa Ayarı İkonu",
+      "desc": "Pafta kağıt ebadını (DIN A0, A1, rulo), kenar boşluklarını ve çerçeve/antet şablonunu tanımlar."
+    },
+    {
+      "name": "Çerçeve ve Antet",
+      "menu": "Pafta Düzenleyici -> Çerçeve Gösterimi (Layout Border) / Lejant - Başlık Bloğu",
+      "shortcut": "Antet İkonu",
+      "desc": "Paftaya katlama işaretli çerçeve ve proje niteliklerinden beslenen dinamik antet yerleştirir."
+    },
+    {
+      "name": "Çizim Dosyası Yerleştir",
+      "menu": "Pafta Düzenleyici -> Çizim Dosyası Yerleştir (Layout Element / Planelement)",
+      "shortcut": "Pafta Elemanı İkonu",
+      "desc": "Bina strüktüründeki plan, kesit ve görünüş çizim dosyalarını seçilen ölçek ve çizim tipiyle paftaya dizer."
+    },
+    {
+      "name": "Pafta Penceresi (Layout Window)",
+      "menu": "Pafta Düzenleyici -> Pafta Penceresi (Layout Window / Planfenster)",
+      "shortcut": "Pafta Penceresi",
+      "desc": "Yerleştirilen çizimin yalnızca belirli bir dikdörtgen/poligon bölgesini kırparak gösterir."
+    },
+    {
+      "name": "PDF Dosyası Gönder",
+      "menu": "Pafta Düzenleyici -> PDF Dosyası Gönder (Export PDF Data / PDF-Daten exportieren)",
+      "shortcut": "PDF İkonu",
+      "desc": "Paftaları katmanlı, vektörel ve yüksek çözünürlüklü PDF/A formatında dışa aktarır."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": []
+}

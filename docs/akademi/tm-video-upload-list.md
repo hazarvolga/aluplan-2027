@@ -65,3 +65,17 @@ ilgili dersin bir bölümüne gömülür. Dosyalar: `allplan_learnnow/Allplan_Te
 - **Add-On Varianten-Profil - Spezialdach Leimträgern**  · vimeo:1234079888  · `12535_vimeo_1234079888_abe10410.mp4` (95.51 MB)
 - **Add-On Profilbauteile - Trapezbleche Dachpaneelen**  · vimeo:1234995190  · `12676_vimeo_1234995190_eb8cc111.mp4` (68.13 MB)
 
+
+## Dokümantasyon fazı dersleri (17-22) — eşleşen videolar (Vimeo, domain-kilitli → ertelendi)
+
+
+### 19. Görünüşler (İlişkisel Cephe Görünüşleri) (`gorunusler`)
+- Ansichten & Schnitte — Vimeo `777290382` · `2801_vimeo_777290382_f7c770f5.mp4` (18.63 MB)
+
+### 20. Kesitler (İlişkisel Kesit) (`kesitler`)
+- Schnitte (UVS) — Vimeo `777290351` · `2802_vimeo_777290351_b0df5a76.mp4` (5.16 MB)
+- YENİLİK 2024 - UVS — Vimeo `894173775` · `3444_vimeo_894173775_808d0e03.mp4` (10.4 MB)
+
+### 21. Kot Ölçülendirme, Etiket ve Metin (`kot-etiket`)
+- Höhenkote (Lokal-Beschriftung) — Vimeo `1234331309` · `12592_vimeo_1234331309_6ffcf497.mp4` (28.95 MB)
+- 3D Bemassung - Höhenkoten — Vimeo `1235062126` · `12711_vimeo_1235062126_dfa43e63.mp4` (26.94 MB)

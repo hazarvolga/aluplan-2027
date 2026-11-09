@@ -1,0 +1,67 @@
+{
+  "no": 20,
+  "slug": "kesitler",
+  "title": "Kesitler (İlişkisel Kesit)",
+  "duration": "",
+  "sourceModule": "Proje 1 — Modül 4: İlişkisel Kesit Otomasyonu (Associative Sections / Schnitte)",
+  "intro": "Kesit, binanın içini gösteren en önemli teknik çizimdir. ALLPLAN'da önce planda bir **kesit hattı (Schnittführung)** çizer, sonra ondan **ilişkisel kesit** türetirsiniz. Kesit modelle canlı bağlıdır: kat yüksekliğini veya bir duvarı değiştirdiğinizde kesit de güncellenir. Kesilen elemanlar kalın kontur ve malzeme taramasıyla ayrışır.",
+  "objectives": [
+    "Kat planları üzerinde düz veya kademeli Kesit Hattı (Section Path / Schnittführung) tanımlamak.",
+    "Kesit derinliği, alt/üst kot sınırları ve kesilen elemanların kalın kontur + malzeme taraması ayarlarını yapmak.",
+    "3B modelden türetilen A-A ve B-B ilişkisel kesitlerini oluşturup merdiven/çatı detaylarını incelemek."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Planda Kesit Hattının Çizilmesi",
+      "body": "**Kesit Hattı Tanımla (Define Section / Schnittführung)** komutuyla merdiven kovasından, pencerelerden ve çatıdan geçecek şekilde `A-A` ve `B-B` kesit hatlarını ve bakış derinliğini çizin. Bakış okunu doğru yöne verin; ters yön kesiti ters gösterir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "İlişkisel Kesitin Türetilmesi ve Yüzey Ayarları",
+      "body": "Hedef kesit çizim dosyasını aktif edin, **Kesit Oluştur (Create Section / Schnitt erzeugen)** ile `A-A` hattını seçin. **Kesit Ayarları**'nda **Kesilen Yüzeylere Kalın Çizgi Uygula** ve **Yapı Elemanı Taramalarını Göster** seçeneklerini işaretleyerek kesiti yerleştirin.",
+      "figures": []
+    }
+  ],
+  "checkpoint": "A-A ve B-B kesitleriniz kesilen elemanlarda kalın kontur ve malzeme taramasıyla görünüyorsa ve modeli değiştirdiğinizde kesit kendiliğinden güncelleniyorsa kesit üretimini kavramışsınız demektir.",
+  "pitfalls": [
+    {
+      "title": "Kesit hattını silmek veya yanlış yöne çizmek",
+      "body": "Kesit, **kesit hattıyla ilişkilidir**: hattı silerseniz kesit güncellenmez veya kaybolur. Hattı koruyun. Ayrıca bakış okunu yanlış yöne verirseniz kesit ters tarafı gösterir; hattı çizerken okun baktığı yönü kontrol edin."
+    }
+  ],
+  "commands": [
+    {
+      "name": "Kesit Hattı Tanımla",
+      "menu": "Görünüşler ve Kesitler -> Kesit Hattı Tanımla (Define Section / Schnittführung)",
+      "shortcut": "Kesit Hattı İkonu",
+      "desc": "Kat planında A-A, B-B düz veya kademeli kesit güzergahını ve bakış derinliğini tanımlar."
+    },
+    {
+      "name": "Kesit Oluştur (Create Section)",
+      "menu": "Görünüşler ve Kesitler -> Kesit Oluştur (Create Section / Schnitt erzeugen)",
+      "shortcut": "Kesit İkonu",
+      "desc": "Tanımlanan kesit hattını referans alarak malzeme taramalı ve kalın konturlu ilişkisel kesit üretir."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Schnitte (UVS)",
+        "file": "2802_vimeo_777290351_b0df5a76.mp4",
+        "vimeoId": "777290351",
+        "sizeMB": 5.16
+      },
+      {
+        "title": "YENİLİK 2024 - UVS",
+        "file": "3444_vimeo_894173775_808d0e03.mp4",
+        "vimeoId": "894173775",
+        "sizeMB": 10.4
+      }
+    ],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": []
+}

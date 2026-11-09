@@ -179,5 +179,30 @@
     "no": 17,
     "slug": "mahaller",
     "title": "Mahal Tanımlama ve İnce Yapı Yüzeyleri"
+  },
+  {
+    "no": 18,
+    "slug": "cevre-arazi",
+    "title": "Çevre ve Arazi Düzenleme"
+  },
+  {
+    "no": 19,
+    "slug": "gorunusler",
+    "title": "Görünüşler (İlişkisel Cephe Görünüşleri)"
+  },
+  {
+    "no": 20,
+    "slug": "kesitler",
+    "title": "Kesitler (İlişkisel Kesit)"
+  },
+  {
+    "no": 21,
+    "slug": "kot-etiket",
+    "title": "Kot Ölçülendirme, Etiket ve Metin"
+  },
+  {
+    "no": 22,
+    "slug": "pafta",
+    "title": "Pafta Düzenleme ve PDF Çıktı"
   }
 ]

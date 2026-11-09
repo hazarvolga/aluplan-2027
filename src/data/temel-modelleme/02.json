@@ -119,5 +119,30 @@
       "body": "**Soru:** Yeni oluşturulan proje nitelikleri neden kaydedilmiyor?\n**Neden:** Windows yetki sorunları nedeniyle **AllplanProjectDB.db3** dosyasına yazılamaz; bu, yeni girilen proje niteliklerinin kaydedilmemesine yol açar.\n**Not:** Proje nitelikleri önce kurulumun PRJ klasöründeki (Workgroup'ta Net klasörü) AllplanProjectDB.db3 dosyasına, ayrıca ilgili projedeki **PrjAtt.dat** dosyasına yazılır. PrjAtt.dat yoksa bilgiler db3'ten okunur. db3 yoksa ama PrjAtt.dat projede hâlâ varsa, nitelikler **Allmenu -> Servis (Service) -> Hotline Araçları (Hotlinetools) -> updprjattr** aracıyla geri getirilebilir.",
       "figures": []
     }
-  ]
+  ],
+  "deepDive": {
+    "title": "Derinlemesine",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Büyük Koordinatlarla Çalışma (Offset)"
+      },
+      {
+        "type": "text",
+        "text": "Harita veya kadastro altlıklı projelerde **büyük koordinatlar** sinsi sorunlara yol açar: elemanlar oluşturulamaz veya hatalı oluşur, çizim taşınamaz, kadastro DXF'i içe aktarılırken program çöker, alan ve gölge hesapları çalışmaz, ekran aniden döner. Bunların kök nedeni tektir: sistem, sıfır noktasından çok uzaktaki (ofsetsiz koordinatı yaklaşık 5.000 m'den büyük) verileri tam hesaplayamaz ve ekranda doğru gösteremez."
+      },
+      {
+        "type": "text",
+        "text": "Kontrol için **Araçlar (Extras) -> Ölç (Messen) -> Koordinatlar** komutunu seçip çizimin ortasına tıklayın; **Ofsetsiz (ohne Offset)** X/Y/Z değerleri çok büyükse bir ofset tanımlamanız gerekir. Çözüm, **Büyük Koordinatlarla Çalışmayı Optimize Et** seçeneğiyle bir merkez ofseti kullanmaktır; böylece ALLPLAN dahili olarak küçük koordinatlarla çalışır ve bu sorunlar ortadan kalkar."
+      },
+      {
+        "type": "heading",
+        "text": "Proje Nitelikleri Kaydedilmiyor"
+      },
+      {
+        "type": "text",
+        "text": "Yeni girdiğiniz proje nitelikleri kaydedilmiyorsa, nedeni genellikle Windows yetki sorunları yüzünden **AllplanProjectDB.db3** dosyasına yazılamamasıdır. Proje nitelikleri hem kurulumun PRJ klasöründeki bu veritabanına hem de projedeki **PrjAtt.dat** dosyasına yazılır. db3 yoksa ama PrjAtt.dat projede duruyorsa, nitelikleri **Allmenu -> Servis (Service) -> Hotline Araçları (Hotlinetools) -> updprjattr** aracıyla geri getirebilirsiniz."
+      }
+    ]
+  }
 }

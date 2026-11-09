@@ -26,9 +26,19 @@ function TmImages({ srcs, label }: { srcs: readonly string[]; label: string }): 
   );
 }
 
-export function TmLessonDetail({ lesson }: { lesson: TmLesson }): ReactElement {
+export function TmLessonDetail({
+  lesson,
+  allLessons = temelModellemeLessons,
+  basePath = '/akademi/temel-modelleme',
+  breadcrumbLabel = 'Temel Modelleme',
+}: {
+  lesson: TmLesson;
+  allLessons?: readonly TmLesson[];
+  basePath?: string;
+  breadcrumbLabel?: string;
+}): ReactElement {
   const embeddableVideos = lesson.media.videos.filter((v) => Boolean(v.youtubeId));
-  const ordered = temelModellemeLessons;
+  const ordered = allLessons;
   const index = ordered.findIndex((l) => l.slug === lesson.slug);
   const previous = index > 0 ? ordered[index - 1] : undefined;
   const next = index >= 0 && index < ordered.length - 1 ? ordered[index + 1] : undefined;
@@ -38,7 +48,7 @@ export function TmLessonDetail({ lesson }: { lesson: TmLesson }): ReactElement {
       <nav className={styles.breadcrumb} aria-label="Konum">
         <a href="/akademi">Akademi</a>
         <span aria-hidden="true" className={styles.sep}>/</span>
-        <a href="/akademi/temel-modelleme">Temel Modelleme</a>
+        <a href={basePath}>{breadcrumbLabel}</a>
         <span aria-hidden="true" className={styles.sep}>/</span>
         <span aria-current="page">{lesson.title}</span>
       </nav>
@@ -194,8 +204,8 @@ export function TmLessonDetail({ lesson }: { lesson: TmLesson }): ReactElement {
 
       <PrevNextNav
         label="Dersler arası gezinme"
-        previous={previous ? { href: `/akademi/temel-modelleme/${previous.slug}`, title: previous.title } : undefined}
-        next={next ? { href: `/akademi/temel-modelleme/${next.slug}`, title: next.title } : undefined}
+        previous={previous ? { href: `${basePath}/${previous.slug}`, title: previous.title } : undefined}
+        next={next ? { href: `${basePath}/${next.slug}`, title: next.title } : undefined}
       />
     </div>
   );

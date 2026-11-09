@@ -7,9 +7,44 @@ import { SectionHeader } from './SectionHeader';
 import { ModuleCard } from '@/components/akademi/kit';
 import { AkademiJsonLd } from '@/components/akademi/AkademiJsonLd';
 import { temelModellemeLessons } from '@/data/temel-modelleme';
+import { araziModellemeLessons } from '@/data/arazi-modelleme';
+import { lejantLessons } from '@/data/lejant';
 import styles from './AkademiLevelDetail.module.css';
 
 const akademiLevels = akademiProgram.levels;
+
+interface SeriesCard {
+  levelSlug: string;
+  basePath: string;
+  title: string;
+  lead: string;
+  count: number;
+}
+
+/** Applied lesson-series shown as cards on their level overview page. */
+const SERIES_CARDS: readonly SeriesCard[] = [
+  {
+    levelSlug: 'temel',
+    basePath: '/akademi/temel-modelleme',
+    title: 'Temel Modelleme Eğitimi',
+    lead: 'Uygulamalı derslerde bir binayı sıfırdan modellersiniz: aks, duvar, kapı/pencere, kolon/kiriş, döşeme, merdiven, temel ve çatı. Ardından mahal, kesit, görünüş ve pafta ile modeli belgeleyip sunarsınız. Her adımda Türkçe komutlar ve ekran görüntüleri.',
+    count: temelModellemeLessons.length,
+  },
+  {
+    levelSlug: 'temel',
+    basePath: '/akademi/arazi-modelleme',
+    title: 'Arazi Modelleme Eğitimi',
+    lead: 'Halihazır haritadan başlayıp arsanın sayısal arazi modelini, eş yükselti eğrilerini, 3B maketini, yollarını ve çevre binalarını modellersiniz. Binanızı gerçek araziye oturtur, vaziyet planına hazırlarsınız.',
+    count: araziModellemeLessons.length,
+  },
+  {
+    levelSlug: 'orta',
+    basePath: '/akademi/lejant',
+    title: 'Lejant Oluşturma Eğitimi',
+    lead: 'Pafta Düzenleyicide mimari ve donatı lejantlarını sıfırdan tasarlar, hücre ve formülleri tanımlar, lejantı oluşturup test eder ve düzenlersiniz. Paftalarınıza standart, otomatik beslenen lejantlar eklersiniz.',
+    count: lejantLessons.length,
+  },
+];
 
 function unitCount(level: ContentLevel): number {
   if (level.modules) return level.modules.length;
@@ -75,24 +110,24 @@ export function AkademiLevelDetail({ level }: { level: ContentLevel }): ReactEle
         </DebugComponentLabel>
       )}
 
-      {level.slug === 'temel' && (
-        <DebugComponentLabel name="AkademiLevelTmSeries (özel)">
-          <section className={styles.band} aria-labelledby="seviye-tm">
+      {SERIES_CARDS.filter((series) => series.levelSlug === level.slug).map((series, i) => (
+        <DebugComponentLabel key={series.basePath} name="AkademiLevelSeries (özel)">
+          <section className={styles.band} aria-labelledby={`seviye-seri-${i}`}>
             <div className="alu-container">
               <SectionHeader
-                id="seviye-tm"
+                id={`seviye-seri-${i}`}
                 kicker="UYGULAMALI SERİ"
-                title="Temel Modelleme Eğitimi"
-                lead="Uygulamalı derslerde bir binayı sıfırdan modellersiniz: aks, duvar, kapı/pencere, kolon/kiriş, döşeme, merdiven, temel ve çatı. Ardından mahal, kesit, görünüş ve pafta ile modeli belgeleyip sunarsınız. Her adımda Türkçe komutlar ve ekran görüntüleri."
+                title={series.title}
+                lead={series.lead}
               />
-              <a className={styles.seriesCard} href="/akademi/temel-modelleme">
-                <span className={styles.seriesCardTitle}>{temelModellemeLessons.length} uygulamalı ders · Türkçe arayüz komutları · ekran görüntülü anlatım</span>
+              <a className={styles.seriesCard} href={series.basePath}>
+                <span className={styles.seriesCardTitle}>{series.count} uygulamalı ders · Türkçe arayüz komutları · ekran görüntülü anlatım</span>
                 <span className={styles.seriesCardCta}>Seriye git →</span>
               </a>
             </div>
           </section>
         </DebugComponentLabel>
-      )}
+      ))}
 
       {level.tracks && (
         <DebugComponentLabel name="AkademiLevelTracks (kit)">

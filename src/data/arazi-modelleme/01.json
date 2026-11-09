@@ -1,0 +1,138 @@
+{
+  "no": 1,
+  "slug": "giris",
+  "title": "Giriş",
+  "duration": "",
+  "sourceModule": "Proje 1 — Modül 3 & Modül 6: Sayısal Arazi Modeli (SAM / DTM - DGM), Jeodezi ve Çevre Modelleme Temelleri",
+  "objectives": [
+    "Allplan'da Arazi Modelleme (Terrain Modeling / Geländemodell) iş akışının mimari vaziyet planı, altyapı, kazı-dolgu ve 3B çevre maketi üretimindeki rolünü kavramak.",
+    "Actionbar üzerinde **Çevre (Surroundings / Umgebung)** rolü altındaki **Arazi (Terrain / Gelände)** ve **Sayısal Arazi Modeli (Digital Terrain Model - DTM / DGM)** görev alanlarını tanımak.",
+    "2B harita/kadastro altlığından 3B arazi noktalarına, üçgenleme ağından (TIN - Triangulated Irregular Network) eş yükselti eğrilerine, 3B katı maket modelinden referans düzlemlere, yollara ve çevre binalarına uzanan 10 adımlı üretim zincirini anlamak.",
+    "Sayısal Arazi Modeli (SAM / DGM) elemanı ile 3B Yüzey / 3B Katı (3D Surface / 3D Solid) ve Referans Yüzey (Reference Surface / Bezugsfläche) arasındaki veri yapısı farklarını öğrenmek."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Actionbar'da Çevre (Surroundings) Rolü ve Arazi Görev Alanı",
+      "body": "Allplan'da arazi ve topoğrafya araçlarına erişmek için Actionbar'ın sol üst köşesindeki Rol seçim listesinden **Çevre (Surroundings / Umgebung)** veya **Mimari (Architecture)** rolüne geçin. **Arazi (Terrain / Gelände)** görev alanı altında **Arazi Noktası (Terrain Point)**, **Sayısal Arazi Modeli (Digital Terrain Model)**, **Eş Yükselti Eğrileri (Contour Lines)**, **Şev (Slope)** ve **Yol / Altyapı (Road / Site Plan)** araç grupları yer alır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Arazi Modelleme İçin Bina Strüktürü ve Çizim Dosyası (Drawing File) Kurulumu",
+      "body": "Arazi modelleme çalışmasında verilerin birbirine karışmaması için **Bina Strüktürü (Building Structure)** içinde ayrı bir **Dış Mekan / Arazi (Site / Terrain)** düğümü açın ve çizim dosyalarını şu sırayla organize edin:\n- **Çizim Dosyası 100:** İçe aktarılan 2B Harita / DXF-DWG Hali Hazır Altlık\n- **Çizim Dosyası 101:** 3B Arazi Noktaları (`Sembol Noktaları / Arazi Noktaları`)\n- **Çizim Dosyası 102:** Sayısal Arazi Modeli (`SAM / DTM Üçgenleme Ağı` ve `Eş Yükselti Eğrileri`)\n- **Çizim Dosyası 103:** 3B Arazi Yüzeyi ve 3B Katı Maket Modeli (`3B Yüzey / 3B Katı`)\n- **Çizim Dosyası 104:** Yollar, Kaldırımlar ve Parsel İçi Kaplamalar\n- **Çizim Dosyası 105:** Çevre Binaları ve Mimari Kütleler",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "10 Adımlı Arazi ve Çevre Modelleme İş Akışı Özeti",
+      "body": "Canlı eğitim boyunca uygulanacak uçtan uca mühendislik ve mimari iş akışı:\n1. **Arazi Dosyasını Alma:** Halihazır harita (`DXF/DWG`) veya nokta bulutu/koordinat dosyasını (`ASCII/CSV/LandXML`) doğru birim ve koordinat ofseti ile içe aktarma.\n2. **Arazi Nokta Kotlarının Girilmesi:** Harita üzerindeki kot yazılarına göre Z kotlu `Arazi Noktası` yerleştirme.\n3. **Dijital Arazi Modeli (SAM / DTM):** Noktaları üçgenleyerek (`Ağ Oluştur`) arazi ağını ve dış sınırını üretme.\n4. **Eş Yükselti Eğrileri (İzohipsler):** Ana ve ara münhani eğrilerini otomatik hesaplatma ve etiketleme.\n5. **3B Arazi Modeli:** SAM ağını 3B çokgen yüzeye (`3D Surface`) dönüştürme.\n6. **3B Maket Modeli:** 3B arazi yüzeyine et kalınlığı / taban kotu vererek kapalı 3B katı maket (`3D Solid`) üretme.\n7. **3B Arazinin Düzleme Dönüştürülmesi:** Arazi yüzeyini mimari elemanların tanıyacağı `Serbest Düzlem / Referans Yüzey` haline getirme.\n8. **Yolların Modellenmesi:** Yol izlerini arazi yüzeyine izdüşürerek (`Project`) eğimli 3B yol ve bordürleri modelleme.\n9. **Binaların Modellenmesi:** Çevre yapılarını ve ana binayı eğimli arazi düzlemine bağlayarak (`Bottom Level = Reference Surface`) kütlesel ve mimari olarak yerleştirme.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Küresel (UTM / ITRF) Koordinatlar ve Proje Ofseti Prensibi",
+      "body": "Harita mühendislerinden gelen halihazır paftalar genellikle çok büyük ülke koordinatlarına (`X = 4.500.000 m, Y = 500.000 m`) sahiptir. CAD motorunda kayan nokta hassasiyeti kaybı yaşamamak için **Proje Özellikleri (Project Properties)** altında **Ofset Koordinatları (Offset Coordinates)** tanımlanmalı ve tüm arazi/bina modelleri orijine yakın çalışılıp dışa aktarılırken gerçek koordinatlarıyla teslim edilmelidir.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Çevre Rolü (Surroundings Role)",
+      "menu": "Actionbar -> Rol: Çevre (Surroundings / Umgebung)",
+      "shortcut": "Actionbar Rol Seçimi",
+      "desc": "Arazi, Sayısal Arazi Modeli (SAM/DTM), Kentsel Tasarım ve Yol araçlarını aktif eder."
+    },
+    {
+      "name": "Arazi Noktası (Terrain Point)",
+      "menu": "Çevre -> Arazi -> Arazi Noktası (Geländepunkt)",
+      "shortcut": "Arazi Görev Alanı",
+      "desc": "X, Y, Z koordinatlarına ve nokta numarasına sahip akıllı topoğrafik kot noktası yerleştirir."
+    },
+    {
+      "name": "Ağ Oluştur (Mesh / Triangulate)",
+      "menu": "Çevre -> Sayısal Arazi Modeli -> Ağ Oluştur (Vermaschen)",
+      "shortcut": "SAM / DTM Grubu",
+      "desc": "Seçilen arazi noktalarını Delaunay üçgenleme algoritmasıyla birleştirerek SAM (DTM) oluşturur."
+    },
+    {
+      "name": "Eş Yükselti Eğrileri (Contour Lines)",
+      "menu": "Çevre -> Sayısal Arazi Modeli -> Eş Yükselti Eğrileri (Höhenlinien)",
+      "shortcut": "SAM / DTM Grubu",
+      "desc": "Sayısal arazi modeli üzerinde belirlenen adım aralığında ana ve ara izohips eğrileri üretir."
+    },
+    {
+      "name": "SAM Elemanlarını Dönüştür (Convert DTM Elements)",
+      "menu": "Çevre -> Sayısal Arazi Modeli -> SAM Elemanlarını Dönüştür (DGM-Elemente wandeln)",
+      "shortcut": "Dönüştürme Aracı",
+      "desc": "Sayısal arazi modelini 3B Yüzey (3D-Fläche), 3B Katı veya Konstrüksiyon çizgilerine dönüştürür."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Add-On Baugrube - Geländeplanung für Architekten",
+        "file": "12714_vimeo_1235282147_b77a71db.mp4",
+        "vimeoId": "1235282147",
+        "sizeMB": 135.32
+      },
+      {
+        "title": "Add-On Baugrube - Gelände erstellen",
+        "file": "12732_vimeo_1235293014_b7a58ce6.mp4",
+        "vimeoId": "1235293014",
+        "sizeMB": 43.06
+      }
+    ],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "fr_9311",
+      "title": "Arazi modelleyici",
+      "body": "**SORUN:** \n \nArazi modülü Allplan kullanıcıları tarafından genellikle az bilinir ve tam olarak anlaşılmaz. \n \n**ÇÖZÜM:** \n \nBu makale modülün başlıca araçlarını açıklamayı amaçlamaktadır.\n\nBu modüle erişmek için öncelikle rol değiştirmeniz ve **Çevre / Arazi (Environnement)** rolüne geçmeniz gerekir. \n \nBu modül içinde arazi noktası dosyalarını içe veya dışa aktarabilirsiniz. .re1, .re2, .reb ve .asc formatları Allplan'a doğrudan içe aktarılabilir. Diğer formatlar için nokta dosyalarınızı dönüştürmek ve ardından içe aktarmak üzere Scalypso eklentisini kullanabilirsiniz. \n \nAllplan üzerinde doğrudan 3B arazi noktaları oluşturmak da mümkündür. \n \nArdından 3B bir arazi ağı (Sayısal Arazi Modeli - MT3D) oluşturmak için içe aktarılan veya manuel olarak konumlandırılan 3B arazi noktalarını üçgenlemek (ağ oluşturmak) yeterlidir. \n \nArazinizin gösterimini yönetebilir ve topoğrafyayı renk geçişi (gradyan) içeren bir dolgu biçiminde geçici olarak görüntüleyebilirsiniz. \n \n**Dış sınır (contour extérieur)** aracıyla ağın dış sınırını oluşturabilir veya yeniden sınırlandırabilirsiniz. \n \nEşyükselti eğrilerini (courbes de niveaux) çok kolay bir şekilde oluşturabilirsiniz. \n \n**Ağ noktası (Point de maillage)** aracıyla ağ noktalarını ekleyebilir, değiştirebilir veya silebilirsiniz. \n \n**MT3D ağına eleman ekle (ajouter élément au maillage MT3D)** aracıyla mevcut ağınıza farklı eleman tiplerini (nokta, çizgi, poligon çizgisi, spline) entegre edebilirsiniz. Entegre edilecek elemanın plandaki konumuna göre ek kot noktaları yerleştirilecektir. \n \nAyrıca **Boşluk açma (évidement)** fonksiyonuyla arazinizin bir kısmında boşluk açabilirsiniz. \n \nBir profil kesiti çizmek ve 2B bir profil şeması çıkarmak oldukça kolaydır. Belirli bir profil kesiti (örn: bir yol ekseni) için mevcut bir 2B çizgiyi veya spline'ı referans olarak almak mümkündür. \n \n**Adım 1:** Bir profil kesiti tanımlayın. \n \n**Adım 2:** Daha önce oluşturulan profil kesitinden bir profil şeması çıkarın. \n \nİlk arazi, dolgu (remblai) veya kazı (déblai) yapmak üzere şev (talus) fonksiyonları yardımıyla değiştirilebilir. \n**Genel şev (talus général)** aracı bir platformun oturma alanını ve yapılacak şevlerin eğimini tanımlama …",
+      "figures": [
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfSD_8e03becf.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfX3_f59b4909.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tdrq_677ea60d.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfdV_4d3d07fa.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfgj_6714924e.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfjx_391a5b44.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfon_fe2a6cb2.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfvF_05064fc0.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tg05_ec995132.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tWsN_e1032fe7.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tg6X_3809d03c.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003ta9D_f910474b.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003teER_e58f33f8.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tg89_41f80b82.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tgGD_0e5359fe.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tYCF_3a92348f.png"
+      ]
+    },
+    {
+      "id": "en_6500",
+      "title": "Allplan 2020 Adım Adım - Jeodezi",
+      "body": "Vaziyet planı (site plan) ve arazi modeli (terrain model) görev alanlarının en önemli fonksiyonlarını öğrenin.",
+      "figures": []
+    },
+    {
+      "id": "de_12714",
+      "title": "Add-On Baugrube (Yapı Çukuru Eklentisi) - Mimarlar İçin Arazi Tasarımı",
+      "body": "**Yapı Çukuru (Add-On Baugrube)** eklentisi, arazi modellerinin ve yapı çukurlarının doğrudan Allplan içinde dinamik olarak oluşturulmasını ve düzenlenmesini sağlar. Araziler; 3B eşyükselti eğrileri, arazi noktaları ve kırık hatlardan (şev/süreksizlik hatlarından) üretilebilir ve 3B ağlar, arazi katı modelleri veya katman modelleri olarak gösterilebilir. Yapı çukurları, dolgular/seddeler ve altyapı/boru hendekleri esnek bir şekilde modellenebilir ve şev açılarının, kotların ve kaçıklıkların (ofsetlerin) uyarlanmasıyla her zaman değiştirilebilir. Dinamik gerçek zamanlı uyarlama, çoklu seçim ve çeşitli düzenleme fonksiyonları sayesinde değişiklikler verimli ve anlaşılır bir şekilde uygulanır. Ek olarak eğim okları, inşaat etaplarına göre hacim hesaplamaları ve Allplan Raporları ile metraj çıkarılması, sonuçların hassas bir şekilde dokümante edilmesine ve kontrol edilmesine olanak tanır.",
+      "figures": []
+    },
+    {
+      "id": "de_12732",
+      "title": "Add-On Baugrube (Yapı Çukuru Eklentisi) - Arazi Oluşturma",
+      "body": "Bu video, **Yapı Çukuru (Add-On Baugrube)** eklentisi ile arazi oluşturmaya yönelik çeşitli yöntemleri göstermektedir. Tamamı üçgen ağ oluşturma (triangülasyon) komutu yardımıyla arazilere dönüştürülen 3B tekil noktalar, 3B poligon çizgileri, 3B yüzeyler ve 3B katı modeller içeren örnekler sunulmaktadır. **Yapı Çukuru (Baugrube)** fonksiyonu ayrıca farklı görünüm varyantlarına sahip etkileşimli arazilerin üretilmesine olanak tanır.",
+      "figures": []
+    },
+    {
+      "id": "de_11408",
+      "title": "SAM (DGM) - Sayısal Arazi Modelinin Animasyonu",
+      "body": "**Soru:** \n \nBir sayısal arazi modelini (örn. bir arazi kullanım planı için) farklı dokularla (Texturen) nasıl kaplayabilir ve bir animasyonda gösterebilirim? \n \n \n \n**Cevap:** \n \nSAM'ın (DGM) kendisi doğrudan dokularla kaplanamaz. İstisna olarak coğrafi referanslı ortofotolar kullanılabilir. (bkz. Not) \nDokulu bir animasyon için SAM, 3B katılara veya mimari objelere (döşemelere) dönüştürülmelidir:\n\n1. SAM'ın bulunduğu çizim dosyasını etkinleştirin ve SAM'ı **Oluştur (Erzeugen) -> Arazi (Gelände) -> Sayısal Arazi Modeli (digitales Geländemodell) -> SAM Objesini 3B Objeye (DGM Element in 3D Element)** fonksiyonu üzerinden 3B katı olarak ikinci bir çizim dosyasına türetin.\n2. Türetilen 3B katının bulunduğu çizim dosyasını etkinleştirin ve **Oluştur (Erzeugen) -> Mimari (Architektur) -> Genel: Çatılar, Düzlemler, Kesitler (Allgemein: Dächer,Ebenen, Schnitte) -> 3B Katıları Mimari Düzlemlere (3D Körper in Architekturebenen)** fonksiyonu ile 3B katıyı mimari düzlemlere dönüştürün.\n3. Her bir doku için ilgili yüzey tanımlarına sahip bir döşeme oluşturun.\n\n \n**Not:** \n \nCoğrafi referanslı bir ortofotonun doku olarak kullanımına ilişkin kılavuzu şu adreste bulabilirsiniz: \n<https://connect.allplan.com/de/faqid/20111027095434.html> \n \n \n.",
+      "figures": []
+    }
+  ]
+}

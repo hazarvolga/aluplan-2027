@@ -1,0 +1,128 @@
+{
+  "no": 10,
+  "slug": "donati-lejantini-test-etme-duzenleme",
+  "title": "Donatı Lejantını Test Etme - Düzenleme",
+  "duration": "",
+  "sourceModule": "Proje 1 — Modül 5: 3B Donatılı Model Üzerinde Lejant Testi, Pafta İlişkisi ve Revizyon",
+  "objectives": [
+    "3B donatısı modellenmiş bir kolon, kiriş, perde veya temel çizim dosyasında yeni Donatı Lejantını test etmek.",
+    "Poz adedi, aralık (`s = 15 cm -> 10 cm`), çap veya pas payı değiştiğinde büküm şemasının ve toplam demir metrajının (`kg`) otomatik güncellendiğini doğrulamak.",
+    "Pafta Düzenleyici (Layout Editor) içinde yalnızca paftadaki aktif donatı çizim dosyalarını okuyan pafta bazlı donatı lejantı yerleştirmek ve şablonu yedeklemek."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Donatılı Çizim Dosyasında Lejantın Yerleştirilmesi",
+      "body": "Donatı detaylandırması yapılmış bir çizim dosyasını açın. **Donatı Lejantı (Reinforcement Legend)** komutuyla **Ofis (Office)** klasöründen yeni oluşturduğunuz lejantı seçin ve **İlişkisel (Associative)** olarak çalışma alanına yerleştirin.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Donatı Revizyonu ve Otomatik Tonaj Güncelleme Testi",
+      "body": "Plandaki veya kesitteki bir etriye/boyuna donatının çapını (`Ø12 -> Ø14`) veya aralığını değiştirin; donatı lejantındaki adet, birim ağırlık, büküm kolu uzunlukları ve genel toplam ağırlığın (`kg`) hatasız güncellendiğini doğrulayın.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "İnce Ayar Düzenlemeleri ve Kurumsal Arşivleme",
+      "body": "Büküm şeması yazılarında üst üste binme veya sütun darlığı varsa **Lejant Değiştir (Modify Legend)** ile büküm şeması hücre kutusunu genişletin; son halini **Lejantları Yönet** üzerinden `.zip` / `.leg` olarak yedekleyin.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Donatı Lejantı Oluştur",
+      "menu": "Mühendislik (Engineering) -> Donatı Lejantı (Reinforcement Legend)",
+      "shortcut": "Donatı Lejantı",
+      "desc": "Ofis klasörüne kaydedilen özel donatı metraj cetvelini çizim dosyasına veya paftaya yerleştirir."
+    },
+    {
+      "name": "Pozlandırma / Yeniden Pozla",
+      "menu": "Mühendislik -> Pozlandırma (Mark Numbering / Verlegenummerierung)",
+      "shortcut": "Pozlandırma İkonu",
+      "desc": "Aynı çap ve büküm boyuna sahip donatıları gruplayıp poz numaralarını ve lejant sıralamasını düzenler."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Legende modifizieren mit Erklärung der Begriffe",
+        "file": "6644_vimeo_990106499_d0f673c7.mp4",
+        "vimeoId": "990106499",
+        "sizeMB": 21.38
+      },
+      {
+        "title": "New features in Allplan 2024 - Automated reinforcement - Column",
+        "file": "2759_vimeo_880893605_9cf7b34f.mp4",
+        "vimeoId": "880893605",
+        "sizeMB": 7.66
+      },
+      {
+        "title": "NEUERUNG 2024 - Automatische Stützenbewehrung",
+        "file": "2760_vimeo_880891648_c4b53f7e.mp4",
+        "vimeoId": "880891648",
+        "sizeMB": 7.7
+      }
+    ],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_10594",
+      "title": "Etiket Stilleri - Formül Koleksiyonu - Koşullar için örnekler (mantıksal uygunluk kontrolleri ve benzerleri)",
+      "body": "**Soru:** \n \nEtiket stillerinde çerçeveler (Umrandungen) ve değerlerin gösterimi koşullara bağlanabilir mi? \n \n \n**Cevap:** \n \n**Durum 1:** \nYapı elemanlarına genellikle bir daire (%K0) ile çerçevelenen poz numaraları verilir. Bir değişiklik olması durumunda yapı elemanlarının bazı kısımları yeniden numaralandırılır ve ilave/revizyon pozu (Nachtragsposition) olarak bir tanımlayıcı alır. \n \nÖrnekte poz numarası için `Positionsnummer` (`@194@`) niteliği ve bir ilave pozun işaretlenmesi için `TextPos` (`@1311@`) niteliği kullanılmaktadır \nKullanılan biçimlendirmeler: \n%K0 -> devamındaki metne bağlı bir çapa sahip bir daire oluşturur \n%N0 -> devamındaki metne bağlı bir çapa sahip bir sekizgen oluşturur \n \nAşağıdaki formül, `TextPos` niteliğine bağlı olarak istenen değişikliği oluşturur \n \n\\_IF\\_(@1311@=\"N\\*\")\"%N0\"+@194@+\" \"+@1311@\\_ELSE\\_\"%K0\"+@194@ \n \nFormat olarak örn. A30 kullanılmalıdır. Ek olarak bir ön metin (örn. pos.) kullanılabilir. \n \nAçıklama:\n\n| | |\n|  |  |\n| \\_IF\\_(Kontrol)Çıktı1\\_ELSE\\_Çıktı2 | Kontrolün sonucu Doğru (Wahr) ise Çıktı1, aksi halde Çıktı2 döndürülür |\n| \\_IF\\_(@1311@=\"N\\*\")Çıktı1 | 1311 (`TextPos`) niteliğinin içeriği \"N\" ile başlıyorsa Çıktı1 döndürülür |\n| \"%N0\" +@194@ +\" \" +@1311@ | Bir sekizgen oluşturmak için kontrol karakteri (Metin) Poz numarası niteliği eklenir bir boşluk karakteri eklenir TextPos niteliği eklenir |\n| \\_ELSE\\_ \"%K0\" +@194@ | Kontrol Yanlış (Falsch) döndürdüğünde 2. durum için başlangıç Bir daire oluşturmak için kontrol karakteri (Metin) Poz numarası niteliği eklenir |\n\n \nBir yapı elemanı bu etiket stili ile etiketlendiğinde poz numarası her zaman daire içinde görüntülenir. `TextPos` niteliğine örn. N1 (İlave 1 / Nachtrag 1 için) girilirse bu poz bir sekizgen ile işaretlenir. \n \n \nEkteki dosyalarda formül basit bir örnekle birlikte yer almaktadır. \n \n \n**Durum 2:** \nKapıların boşluk yüksekliği kontrol edilmek isteniyor ve net geçiş yüksekliğinin (bitmiş döşeme üst kotundan kaba lento alt kotuna kadar) altına düşülmesi durumunda bir uyarı yazdırılması, aksi halde hiçbir şey görünmemesi isteniyor. Kapı, Büyük Kapı SmartPart veya kapı makrosu yapı elemanının etiketlendiği varsayılmaktadır. \n \n1. Kapı yüksekliğinin be …",
+      "figures": [
+        "/akademi/lejant/10594_0EM7U000001TdD0_d534cfc8.png",
+        "/akademi/lejant/10594_0EM7U000001TdD1_295af95b.png"
+      ]
+    },
+    {
+      "id": "de_8713",
+      "title": "Bewehrung - Schnelle Erzeugung von speziellen Biegeformen",
+      "body": "- **Kaynak URL (Alındığı Adres):** https://learnnow.allplan.com/totara/engage/resources/howto/index.php?id=8713&source=howto\n- **Kaynak ID (`resource_id`):** `8713`\n- **Resmi Salesforce / Allplan KB No:** `000008523-de`\n- **İçerik Tipi:** `knowledge_article`\n- **Dil:** `de`\n- **Kategori Ağacı:** `ALLPLAN > Ingenieurbau > Bewehrung > Rundstahl`\n- **Geçerli Allplan Sürümleri:** `ALLPLAN 2025, ALLPLAN 2024, ALLPLAN 2023, ALLPLAN 2022`\n- **Yazar & Tarih:** Erstellt am 13. Oktober 2023, 17:59. Zuletzt aktualisiert am 23. Juli 2025, 22:21. | Owner: Salesforce Integration\n- **Doğrudan PDF Kılavuz URL:** -\n- **Eğitim Videosu / Webinar URL:** -\n- **İndirilen PDF, Örnek Dosya ve Ekran Görüntüleri (7 Adet):**\n - [SCREENSHOT] `8713_0EM67000008DTQ4_d5f2622b.png` (14.94 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/8713/0EM67000008DTQ4.png | SHA-256: `d5f2622b319b8d5f...`)\n - [SCREENSHOT] `8713_0EM67000008DTkD_61d50645.png` (12.33 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/8713/0EM67000008DTkD.png | SHA-256: `61d506450808daaf...`)\n - [SCREENSHOT] `8713_0EM67000008DXkH_153b9716.png` (18.69 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/8713/0EM67000008DXkH.png | SHA-256: `153b97167d469a45...`)\n - [SCREENSHOT] `8713_0EM67000008DTjo_4f27ff30.png` (114.22 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/8713/0EM67000008DTjo.png | SHA-256: `4f27ff30c2820a0a...`)\n - [SCREENSHOT] `8713_0EM67000008DTnH_dcf2e41b.png` (82.89 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/8713/0EM67000008DTnH.png | SHA-256: `dcf2e41be8641876...`)\n - [SCREENSHOT] `8713_0EM67000008DTmO_2d08672b.png` (120.51 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/8713/0EM67000008DTmO.png | SHA-256: `2d08672b640ccdac...`)\n - [SCREENSHOT] `8713_0EM67000008DTlQ_8fc16201.png` (149.57 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/8713/0EM67000008DTlQ.png | SHA-256: `8fc162011ac7b …",
+      "figures": [
+        "/akademi/lejant/8713_0EM67000008DTkD_61d50645.png",
+        "/akademi/lejant/8713_0EM67000008DTjo_4f27ff30.png",
+        "/akademi/lejant/8713_0EM67000008DXkH_153b9716.png",
+        "/akademi/lejant/8713_0EM67000008DTQ4_d5f2622b.png",
+        "/akademi/lejant/8713_0EM67000008DTlQ_8fc16201.png",
+        "/akademi/lejant/8713_0EM67000008DTmO_2d08672b.png",
+        "/akademi/lejant/8713_0EM67000008DTnH_dcf2e41b.png"
+      ]
+    },
+    {
+      "id": "de_6644",
+      "title": "Kavramların Açıklamasıyla Lejant Değiştirme",
+      "body": "Bir lejant nasıl değiştirilebilir?",
+      "figures": []
+    },
+    {
+      "id": "de_10888",
+      "title": "Etiket Stilleri / Lejantlar - Yedekleme ve Geri Yükleme",
+      "body": "**Soru:** \n \nBir lejantın / etiket stilinin veri alışverişi. \nBir lejant / etiket stili nasıl yedeklenir? \nBir lejant / etiket stili nasıl geri yüklenir (içe aktarılır)? \n \n \n \n**Cevap:** \n \nBir lejant her zaman **zle00x.deu** (x dosya numarasını temsil eder) lejant dosyasından (dosyalarından) ve ek bir lejant yönetim dosyası olan **zle000.deu** dosyasından oluşur. Pafta lejantları (başlık blokları) bu sırada her zaman 7 veya 8 numaralı dosyada bulunmalıdır (**zle007.deu**, **zle008.deu**). \n \nBir etiket stili her zaman **zdo00x.deu** (x dosya numarasını temsil eder) etiket stili dosyasından (dosyalarından) ve ek bir etiket stili yönetim dosyası olan **zdo000.deu** dosyasından oluşur. \n \n**a) Lejant dosyasını / etiket stili dosyasını öncelikle bilgisayarınıza kaydedin**: \n \nÖncelikle pafta lejantınızı bilgisayarda yedeklemek istediğiniz bir yedekleme klasörü tanımlayın: \n**Dosya (Datei)** -> **ProjectPilot**'u açın ve burada \"*Harici Yol (Externer Pfad)*\" düğümüne sağ fare tuşuyla tıklayın. Bağlam menüsünden **Harici yol seç... (Externen Pfad auswählen...)** seçeneğini seçin. Pafta lejantınızı bilgisayarda yedeklemek istediğiniz bir yedekleme klasörü ayarlayın: \n \n \nProjectPilot'u kapatın ve **Oluştur (Erzeugen)** -> **Ek Modüller (zusätzliche Module)** -> **Şablonlar: Raporlar, Lejantlar, Etiketler (Vorlagen: Reports,Legenden,Beschriftungen)** -> **Etiket Stillerini, Lejantları Yönet (Beschriftungsbilder,Legenden verwalten)** -> **Lejantlar (Legenden)** veya **Etiket Stilleri (Beschriftungsbilder)** yolunu seçin. \nAçılan diyalogda şimdi sol tarafta kaydedilecek dosyanın bulunduğu kaynak dizine, örneğin \"*Büro*\" üzerine tıklayın. Ardından kaydedilecek klasöre, örneğin \"*Planlegenden\\_Büroeigene*\" üzerine tıklayın ve kaydedilecek tüm lejantları/etiket stillerini işaretleyin. \nŞimdi **Kopyala (Kopieren)** üzerine tıklayın: \n \n \n \nArdından kayıt konumu olarak \"*Harici Yol (Externer Pfad)*\" öğesini seçin (bunu en başta belirlemiştiniz) -> dosya numarasını seçin (örneğin 7) -> kayıt için numaraları işaretleyin -> **Çalıştır / Uygula (Ausführen)**: \n \n \nArtık harici yol için belirlediğiniz klasörde **zle00x.deu** (veya zle007.deu) lejant dosyasını ve ek bir lejant yön …",
+      "figures": [
+        "/akademi/lejant/10888_0EM7U000001Te3a_a3b840c5.png",
+        "/akademi/lejant/10888_0EM7U000001Te3b_f6366dcc.png",
+        "/akademi/lejant/10888_0EM7U000001TeD1_8ee7091b.png",
+        "/akademi/lejant/10888_0EM7U000001TeD2_1c01ef32.png",
+        "/akademi/lejant/10888_0EM7U000001TeD3_3d46f97e.png",
+        "/akademi/lejant/10888_0EM7U000001TeD4_a3b840c5.png",
+        "/akademi/lejant/10888_0EM7U000001TeD5_7fcdb21f.png",
+        "/akademi/lejant/10888_0EM7U000001TeD6_14f716d6.png"
+      ]
+    },
+    {
+      "id": "de_2759",
+      "title": "Allplan 2024'teki yeni özellikler - Otomatik donatı - Kolon",
+      "body": "Otomatik donatı - Kolon",
+      "figures": []
+    },
+    {
+      "id": "de_2760",
+      "title": "YENİLİK 2024 - Otomatik Kolon Donatısı",
+      "body": "Otomatik kolon donatısı",
+      "figures": []
+    }
+  ]
+}

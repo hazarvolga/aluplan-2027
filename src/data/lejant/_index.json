@@ -1,0 +1,52 @@
+[
+  {
+    "no": 1,
+    "slug": "giris",
+    "title": "Giriş"
+  },
+  {
+    "no": 2,
+    "slug": "bir-lejantin-parcalari",
+    "title": "Bir Lejantın Parçaları"
+  },
+  {
+    "no": 3,
+    "slug": "mimari-lejant-tasarimi-lejant-kopyalama",
+    "title": "Mimari Lejant Tasarımı - Lejant Kopyalama"
+  },
+  {
+    "no": 4,
+    "slug": "mimari-lejant-hucresi-tanimlama",
+    "title": "Mimari Lejant Hücresi Tanımlama"
+  },
+  {
+    "no": 5,
+    "slug": "mimari-lejanti-olusturma",
+    "title": "Mimari Lejantı Oluşturma"
+  },
+  {
+    "no": 6,
+    "slug": "mimari-lejanti-test-etme-duzenleme",
+    "title": "Mimari Lejantı Test Etme - Düzenleme"
+  },
+  {
+    "no": 7,
+    "slug": "donati-lejanti-tasarimi-lejant-kopyalama",
+    "title": "Donatı Lejantı Tasarımı - Lejant Kopyalama"
+  },
+  {
+    "no": 8,
+    "slug": "donati-lejanti-hucresini-tanimlama",
+    "title": "Donatı Lejantı Hücresini Tanımlama"
+  },
+  {
+    "no": 9,
+    "slug": "donati-lejantini-olusturma",
+    "title": "Donatı Lejantını Oluşturma"
+  },
+  {
+    "no": 10,
+    "slug": "donati-lejantini-test-etme-duzenleme",
+    "title": "Donatı Lejantını Test Etme - Düzenleme"
+  }
+]

@@ -1,0 +1,168 @@
+{
+  "no": 10,
+  "slug": "binalarin-modellenmesi",
+  "title": "Binaların Modellenmesi",
+  "duration": "",
+  "sourceModule": "Proje 1 — Modül 3 & Modül 6: Eğimli Arazi Düzlemi Üzerinde Çevre Binalarının ve Mimari Kütlelerin Modellenmesi",
+  "objectives": [
+    "Halihazır harita altlığındaki çevre binalarını (komşu parsellerdeki mevcut yapıları) Ders 8'de oluşturduğumuz **Eğimli Arazi Düzlemi (Terrain Reference Plane)** üzerine oturtarak hızlıca 3B kütleye dönüştürmek.",
+    "**Duvar (Wall)**, **Kolon (Column)** veya **Mahal / Kütle (Room / 3D Solid)** komutlarında **Alt Seviye (Bottom Level)** değerini arazi düzlemine bağlayıp, bina kat adetlerine göre (`3 Kat = 9.00 m`, `5 Kat = 15.00 m`) yükseklik vermek.",
+    "Eğimli araziye oturan binaların üst bitişlerinin teraziye alınmış yatay bir düzlemde bitmesini sağlamak için **Üst Seviye (Top Level)** ayarını yapılandırmak.",
+    "Çevre binalarına kırma/beşik çatı (`Roof Frame`) eklemek ve 3B arazi, yollar ve binalardan oluşan vaziyet maketini Animasyon/Render penceresinde sunuma hazırlamak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Çevre Binaları Çizim Dosyasını Aktif Etme ve Arazi Düzlemini Açma",
+      "body": "`105 - Çevre Binaları` çizim dosyasını aktif (`Kırmızı`) yapın. Arka planda `100 - Halihazır Harita Altlığı` ve Ders 8'de düzleme dönüştürdüğümüz `Arazi Düzlemi` çizim dosyasını açık tutun.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Eğimli Arazi Düzlemine Oturan Çevre Binalarının Yükseklik Ayarı",
+      "body": "Harita üzerindeki mevcut komşu binaların kat adetleri yazılıdır (örn. `B+Z+3 = 4 Kat ≈ 12.00 m`). Bir binanın tabanının eğimli araziye tam oturması, çatısının ise yatay (terazide) bitmesi için:\n1. **Mimari -> Duvar (Wall)** veya **Kolon / Prizmatik Kütle** komutuna girin ve **Özellikler (Properties) -> Yükseklik (Height)** butonuna tıklayın.\n2. **Alt Seviye (Bottom Level):** `Alt Düzleme / Referans Yüzeye Bağlı (Relative to Lower Plane / Reference Surface)` seçin ve ofseti `0.00 m` (veya toprağa hafif gömülmesi için `-0.50 m`) yapın.\n3. **Üst Seviye (Top Level):** Binanın saçak kotunun eğimli değil **yatay** olması için `Sabit Eleman Yüksekliği / Maksimum Yükseklik` veya `Üst Düzleme Bağlı` seçeneğini kullanarak bina yüksekliğini (`12.00 m`) tanımlayın.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Harita Üzerindeki Bina Konturlarının Hızlıca Modellenmesi",
+      "body": "**Dikdörtgen / Poligonal Giriş** modunu kullanarak harita üzerindeki bina oturum sınırlarını (`Footprints`) hızla dönün. Farklı kat yüksekliğine sahip binalara geçerken yalnızca yükseklik değerini (`9.00 m`, `15.00 m`, `18.00 m`) değiştirin. Çok sayıda çevre binası içeren kentsel modellerde kapalı 2B bina poligonlarını tek adımda 3B kütlelere dönüştürebilir veya `CityGML` verisi içe aktarabilirsiniz.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Çatı Kalıbı (Roof Frame), Vaziyet Kesiti ve Final Görselleştirme",
+      "body": "İstenen çevre binalarının üzerine **Çatı Kalıbı (Roof Frame / Dachebene)** komutuyla hızlı kırma/beşik çatılar ekleyin. Son olarak `102 (İzohipsler)`, `103 (3B Arazi Maketi)`, `104 (Yollar)` ve `105 (Binalar)` çizim dosyalarını birlikte açarak:\n- **Kesit Oluştur (Generate Section)** ile tüm araziyi, yolları ve binaları kesen genel **Vaziyet Kesitlerini (Site Sections)** alın.\n- **Animasyon (`F4`) / Görünüm Türü: RT_Render** penceresinde güneş/gölge analiziyle vaziyet maketi sunumunu tamamlayın.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Duvar / Kütle (Araziye Bağlı Yükseklik)",
+      "menu": "Mimari -> Duvar (Wand) -> Yükseklik: Alt Seviye = Özel Düzlem",
+      "shortcut": "Mimari Görev Alanı",
+      "desc": "Tabanı eğimli arazi düzlemine oturan, üstü yatay saçak kotunda biten bina cepheleri üretir."
+    },
+    {
+      "name": "Döşeme / Kütle Modelleme",
+      "menu": "Mimari -> Döşeme (Decke) / 3B Katı Ekstrüzyon",
+      "shortcut": "Mimari / 3B Modelleme",
+      "desc": "Kapalı bina oturum poligonlarını kat yüksekliğince yükselterek çevre bina maketlerini oluşturur."
+    },
+    {
+      "name": "Çatı Kalıbı (Roof Frame)",
+      "menu": "Mimari -> Çatı Kalıbı (Dachebene)",
+      "shortcut": "Çatı Grubu",
+      "desc": "Çevre binalarının üstüne eğimli kırma veya beşik çatı düzlemleri tanımlar."
+    },
+    {
+      "name": "Kesit Oluştur (Vaziyet Kesiti)",
+      "menu": "Kesitler -> Kesit Oluştur (Schnitt erzeugen)",
+      "shortcut": "Kesitler Görev Alanı",
+      "desc": "3B arazi maketi, yollar ve binalar üzerinden kotlu 2B/3B vaziyet kesitleri üretir."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Add-On CityGML - Import",
+        "file": "12569_vimeo_1234309042_89061552.mp4",
+        "vimeoId": "1234309042",
+        "sizeMB": 100.79
+      },
+      {
+        "title": "Add-On Modell Inspector - Räume Importieren",
+        "file": "12586_vimeo_1234322555_e4c786a5.mp4",
+        "vimeoId": "1234322555",
+        "sizeMB": 11.14
+      },
+      {
+        "title": "Add-On 3D Bemassung - Übersichtsplan Überbauung",
+        "file": "12705_vimeo_1235060551_edec9dcf.mp4",
+        "vimeoId": "1235060551",
+        "sizeMB": 21.07
+      },
+      {
+        "title": "Add-On 3D Bemassung - Perspektive für den Plan",
+        "file": "12713_vimeo_1235064677_d86eb7a3.mp4",
+        "vimeoId": "1235064677",
+        "sizeMB": 94.19
+      },
+      {
+        "title": "Dach - Dachformen und Gaubenformen - Übersicht",
+        "file": "10933_youtube_7Jk3EfEExsE_601078f5.mp4",
+        "vimeoId": "",
+        "sizeMB": 125.66,
+        "youtubeId": "7Jk3EfEExsE"
+      },
+      {
+        "title": "Dach - Dachformen und Gaubenformen - Übersicht",
+        "file": "10933_youtube_wP26jFW3cWA_e13ef0ec.mp4",
+        "vimeoId": "",
+        "sizeMB": 66.84,
+        "youtubeId": "wP26jFW3cWA"
+      }
+    ],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_12569",
+      "title": "Add-On CityGML - İçe Aktarma (Import)",
+      "body": "CityGML; şehir ve peyzaj objelerinin 3B geometrisini, 3B topolojisini, semantiğini ve görsel görünümünü tanımlamaya yönelik açık ve yazılımdan bağımsız bir bilgi modelidir. Buna örnek olarak arazi, binalar, su ve ulaşım alanları ile bitki örtüsü ve arazi kullanımları sayılabilir. **Add-On CityGML** eklentisi ile arazi ve şehir modellerinizi hızlı ve kolay bir şekilde Allplan'a içe aktarabilirsiniz!",
+      "figures": []
+    },
+    {
+      "id": "de_12586",
+      "title": "Add-On Modell Inspector (Model Denetleyicisi Eklentisi) - Mahalleri İçe Aktarma",
+      "body": "**Model Denetleyicisi (Add-on Modellinspektor)** eklentisine ait bu eğitim videosu, **Mahalleri İçe Aktar (Räume importieren)** fonksiyonunu göstermektedir. İlgili özelliklere sahip mahalleri otomatik olarak oluşturmak üzere mahal niteliklerini içeren bir Excel listesinin nasıl okutulduğu açıklanmaktadır. Bu özellik, projelerin Allplan'a hızlı bir şekilde içe aktarılmasını sağlar ve tasarım çalışmalarına başlanmasını kolaylaştırır.",
+      "figures": []
+    },
+    {
+      "id": "de_12705",
+      "title": "Add-On 3D Bemassung (3B Ölçülendirme Eklentisi) - Yerleşke Genel Yerleşim Planı",
+      "body": "Yerleşke Genel Yerleşim Planı",
+      "figures": []
+    },
+    {
+      "id": "de_12713",
+      "title": "Add-On 3D Bemassung (3B Ölçülendirme Eklentisi) - Pafta İçin Perspektif",
+      "body": "Bu videoda, Allplan'ın **3B Ölçülendirme (Add-on 3D-Bemassung)** eklentisinde perspektiflerde ve görünümlerde olağandışı çizgilere neden olan can sıkıcı bir hata (bug) ele alınmaktadır. Hata tamamen giderilmemiş olsa da bu durumu aşmak için pratik bir çözüm bulunmuştur. Bir güncelleme aracılığıyla istenmeyen çizgiler kaldırılır; bu da 3B ölçülendirmelerin paftalar üzerinde kullanımını iyileştirir ve şantiyeler ile işverenlerle iletişimi kolaylaştırır.",
+      "figures": []
+    },
+    {
+      "id": "de_11198",
+      "title": "Mahaller - DIN 277-1:2016-1 standardına göre inşaat sektöründe taban alanları ve mahal hacimleri",
+      "body": "**Soru:** \n \nBu SSS (FAQ), DIN 277-1:2016-01 standardına göre taban alanlarının ve mahal hacimlerinin belirlenmesine ilişkin temel bilgileri açıklamaktadır.\n\n**Cevap:**\n\n**1.** **Giriş** \nAllplan, yapım süreci için gerekli olan taban alanlarının ve mahal hacimlerinin DIN 277-1:2016-1 standardına göre belirlenmesi amacıyla birden fazla fonksiyon sunar.\n\nNot: DIN 277-1 kapsamındaki değerlere ek olarak yapı elemanlarına başka bilgiler de eklenebilir ve bunların metrajı yapılabilir. Doğru DIN değerlerinin elde edilmesi için kısmen ek bilgileri zorunlu kılan girişler yapılması gerekir.\n\n**2.** **Temel Bilgiler** \nTemel olarak yapının taban alanları ve mahal hacimleri, **Kat (Geschoss)** ve **Mahal (Raum)** yapı elemanları ile modellenebilir. \nTekil yapı elemanları doğrudan etiketlenebilir (örn. **Mahal Etiketi (Raumbeschriftung)**) ve gruplar halinde birleştirilebilir (örn. kullanım birimleri için **Mahal Grubu (Raumgruppe)**, kullanım ilişkileri için **Kat Grupları (Geschossgruppen)**). Anlaşılır çıktı alma işlemi çeşitli **Raporlar (Reports)** üzerinden gerçekleştirilir. \nDIN277-1:2016-1 standardına yeni eklenen arsa alanları şu anda ideal şekilde modellenememekte ve metrajı yapılamamaktadır.\n\n**3.** **Fonksiyonlar** \nYapı Elemanları/Objeler\n\n **Kat (Geschoss)**, **Mahal (Raum)**, **Mahal, Kat Grubu (Raum-, Geschossgruppe)**\n\nMetraj\n\n **Konut Alanı, DIN277, Yapı Ruhsatı (Wohnfläche, DIN277, Bauantrag)** **Raporlar (Reports)**\n\n*Konut Alanı, DIN277, Yapı Ruhsatı (Wohnfläche, DIN277, Bauantrag)* fonksiyonu, istenen alana ait raporların alt klasörüne doğrudan erişim sunar. *Raporlar (Reports)* üzerinden her zaman tüm raporlar seçilebilir.\n\n**4.** **Terimler, Yapı Elemanları, Raporlar** \n**4.1.** **Taban Alanları (Grundflächen)**\n\n| | | |\n|  |  |  |\n| **BGF** **Brüt Taban Alanı (Brutto-Grundfläche)** | Yapının tüm kat planı düzlemlerinin toplam alanı | Geschoss Brutto-Grundflächen Abmessungen.rdlc |\n| **KGF** **Konstrüksiyon Taban Alanı (Konstruktions-Grundfläche)** | Brüt taban alanının (BGF), yapının yükselen tüm yapı konstrüksiyonlarını kapsayan alt alanı. | Şu anda Allplan içinde doğrudan metrajı yapılamamaktadır. Konstrüksiyon taban alanı, brüt taban alanından net …",
+      "figures": [
+        "/akademi/arazi-modelleme/11198_0EM7U000001TdYD_7918729c.png",
+        "/akademi/arazi-modelleme/11198_0EM7U000001TdYE_82944b1d.png",
+        "/akademi/arazi-modelleme/11198_0EM7U000001TdYF_fac0d1a4.png",
+        "/akademi/arazi-modelleme/11198_0EM7U000001TdYG_46a9a9d3.png",
+        "/akademi/arazi-modelleme/11198_0EM7U000001TdYH_aeb5a169.png",
+        "/akademi/arazi-modelleme/11198_0EM7U000001TdYS_cd3234a5.png",
+        "/akademi/arazi-modelleme/11198_0EM7U000001TdYT_a9e99019.png"
+      ]
+    },
+    {
+      "id": "de_10933",
+      "title": "Çatı - Çatı Formları ve Çatı Penceresi (Güvercinlik) Formları - Genel Bakış",
+      "body": "**Soru:** ALLPLAN'da hangi çatı ve çatı penceresi (güvercinlik) formları oluşturulabilir ve modelleme için uygun kılavuzu nerede bulabilirim?\n\n**Cevap:** ALLPLAN'da çeşitli çatı ve çatı penceresi (güvercinlik) formları oluşturulabilir. Aşağıda genel bir bakış yer almaktadır:\n\n[How to Webinar: Düzlemler ve Çatı Yüzeyleri (Ebenen und Dachlandschaften)](https://www.youtube.com/watch?v=7Jk3EfEExsE)\n\n[Webinar: Yeni Çatı Yüzeyi (Die neue Dachfläche)](https://www.youtube.com/watch?v=wP26jFW3cWA)\n\n**1. Çatı Formları Genel Bakış**\n\n| | |\n|  |  |\n| [Beşik Çatı (Satteldach)](https://allplan.my.site.com/Customer/s/article/Dachformen-Satteldach-erstellen?name=Dachformen-Satteldach-erstellen&amp;language=de) | [Sundurma / Uzatma Çatı (Schleppdach)](https://allplan.my.site.com/Customer/s/article/Dachformen-Schleppdach-erstellen?name=Dachformen-Schleppdach-erstellen&amp;language=de) |\n| [Tek Eğimli / Sundurma Çatı (Pultdach)](https://allplan.my.site.com/Customer/s/article/Dachformen-Pultdach-erstellen?name=Dachformen-Pultdach-erstellen&amp;language=de) | [Testere Dişi / Şed Çatı (Sheddach)](https://allplan.my.site.com/Customer/s/article/Dachformen-Sheddach-erstellen?name=Dachformen-Sheddach-erstellen&amp;language=de) |\n| [Mansard Çatı (Mansarddach)](https://allplan.my.site.com/Customer/s/article/Dachformen-Mansarddach-erstellen?name=Dachformen-Mansarddach-erstellen&amp;language=de) | [Kırma Çatı (Walmdach)](https://allplan.my.site.com/Customer/s/article/Dachformen-Walmdach-erstellen?name=Dachformen-Walmdach-erstellen&amp;language=de) |\n| [Yarım Kırma Çatı (Krüppelwalmdach)](https://allplan.my.site.com/Customer/s/article/Dachformen-Kr%C3%BCppelwalmdach-erstellen?name=Dachformen-Kr%C3%BCppelwalmdach-erstellen&language=de) | [Havalandırma Boşluklu Yarım Kırma Çatı (Krüppelwalmdach mit Eulenloch)](https://allplan.my.site.com/Customer/s/article/Dachformen-Kr%C3%BCppelwalmdach-mit-Eulenloch-erstellen?name=Dachformen-Kr%C3%BCppelwalmdach-mit-Eulenloch-erstellen&language=de) |\n| [Dairesel Saçaklı Çatı (Dach mit kreisförmiger Traufe)](https://allplan.my.site.com/Customer/s/article/Dachformen-Dach-mit-kreisf%C3%B6rmigen-Traufe-erstellen?name=Dachformen-Dach-mit-kreisf%C3%B6rmigen-Traufe- …",
+      "figures": [
+        "/akademi/arazi-modelleme/11198_0EM7U000001TdYK_82944b1d.png",
+        "/akademi/arazi-modelleme/11198_0EM7U000001TdYL_aeb5a169.png",
+        "/akademi/arazi-modelleme/11198_0EM7U000001TdYQ_82944b1d.png",
+        "/akademi/arazi-modelleme/11198_0EM7U000001TdYN_aeb5a169.png",
+        "/akademi/arazi-modelleme/11198_0EM7U000001TdYI_7918729c.png",
+        "/akademi/arazi-modelleme/11198_0EM7U000001TdYJ_aeb5a169.png",
+        "/akademi/arazi-modelleme/11198_0EM7U000001TdYM_aeb5a169.png",
+        "/akademi/arazi-modelleme/11198_0EM7U000001TdYP_aeb5a169.png",
+        "/akademi/arazi-modelleme/11198_0EM7U000001TdYO_7918729c.png",
+        "/akademi/arazi-modelleme/11198_0EM7U000001TdYR_aeb5a169.png",
+        "/akademi/arazi-modelleme/10933_0EMVi00000DRdsE_f82fcdfc.png",
+        "/akademi/arazi-modelleme/10933_0EMVi00000DRjb3_f368eed0.png"
+      ]
+    }
+  ]
+}

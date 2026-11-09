@@ -1,0 +1,153 @@
+{
+  "no": 4,
+  "slug": "mimari-lejant-hucresi-tanimlama",
+  "title": "Mimari Lejant Hücresi Tanımlama",
+  "duration": "",
+  "sourceModule": "Proje 1 — Modül 4: Hücre Tanımlama (Define Cell / Zelle definieren), Nitelikler ve Formüller",
+  "objectives": [
+    "Hücre Tanımla (Define Cell / Zelle definieren) komutuyla lejantın Ana Satır (Body) ve Toplam (Summary) hücrelerini oluşturmak.",
+    "Mimari nitelikleri (Mahal No `@246@`, Mahal Adı `@507@`, Fonksiyon `@506@`, Kat Adı, Taban Alanı `@224@`, Çevre `@228@`, Hacim `@223@`) hücrelere bağlamak.",
+    "Hücre veri formatlarını (`A32` metin, `F8.2` ondalıklı sayı, `I4` tam sayı), hizalamayı, sütun genişliği sınırını ve matematiksel formülleri (`@224@*1.10`, `_IF_`) tanımlamak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Hücre Tanımla (Define Cell / Zelle definieren) Diyaloğu",
+      "body": "**Hücre Tanımla (Define Cell)** komutunu açın. İlk sütun için **Nitelik (Attribute)** listesinden `Mahal No / Kat Kısa Adı` veya `Ad (Bezeichnung @507@)` niteliğini seçin.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Format (`A`, `F`, `I`), Ondalık Basamak ve Metin Hizalama",
+      "body": "Metin hücreleri için `A20` (sola hizalı), alan ve hacim hücreleri için `F8.2` (2 ondalık basamaklı, sağa veya ondalık noktaya hizalı) formatını seçin; birimi (`m²`, `m³`, `m`) otomatik veya sabit sütun olarak ayarlayın.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Sıralama Kriteri ve Toplam Hücresi (`SUM`) Tanımlama",
+      "body": "Sıralama yapılacak hücrede (örn. Mahal No) **Sırala (Sort: Ascending)** seçeneğini işaretleyin. Toplam satırına geçip alan hücresinin altına **Toplam (Total / Summe)** tipinde yeni bir hücre yerleştirerek tüm mahallerin toplam `m²` değerini hesaplatın.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Hücre Tanımla (Define Cell)",
+      "menu": "Kullanıcı Tanımlı Objeler -> Lejantlar -> Hücre Tanımla (Define Cell / Zelle definieren)",
+      "shortcut": "Hücre İkonu",
+      "desc": "Lejant satırları içine nitelik (Attribute), formül, grafik sembol veya toplam değeri okuyan akıllı hücre yerleştirir."
+    },
+    {
+      "name": "Nitelik Seçimi (Attribute Selection)",
+      "menu": "Hücre Tanımla Diyaloğu -> Nitelik (Attribute) Butonu",
+      "shortcut": "Nitelik İkonu",
+      "desc": "Mimari, Genel, Kat, Mahal veya IFC nitelik kataloğundan ilgili değişkeni seçer."
+    },
+    {
+      "name": "Formül Düzenleyici (Formula)",
+      "menu": "Hücre Tanımla Diyaloğu -> Formül (Formula / Formel)",
+      "shortcut": "Formül İkonu",
+      "desc": "Nitelikler arasında dört işlem, `PARENT()`, `CHILD()` ve `_IF_ ... _ELSE_` koşullu ifadeleri yazar."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_11050",
+      "title": "Lejantlar - Yeni bir lejant oluşturma (Örnek: Döşeme yüzeyi, en üst katman)",
+      "body": "**Soru:** \n \nÖrneğin döşeme yüzeylerinin malzemeye göre metraj gösterimi (VOB) için bir lejant kullanıcı tarafından nasıl tanımlanabilir? \n \n \n \n**Cevap:** \n \nKendi lejantlarınızı oluşturmak için - örnekte alt lejantları olmayan basit bir lejant gösterilmektedir - aşağıdaki hazırlıklar yapılmalıdır.\n\n* Lejantlar her zaman 1:100 ölçekli çizim dosyalarında oluşturulmalıdır. Çizim dosyası başka bir ölçeğe sahipse, lejantla ilişkili metin boyutlarının kontrol edilmesi zordur.\n* Lejant ile gösterilecek birden fazla objenin oluşturulması. \n Burada: Döşeme ince yapılarına sahip (farklı büyüklükte) mahaller \n \n* Gösterilecek verilerin belirlenmesi, niteliklerin, formüllerin ve benzerlerinin listelenmesi ve araştırılması \n \n İstek: Mahallerin döşeme yüzeyi ve tekil döşeme yüzeylerinin metrajı yapılmalıdır. \n Sıralama en üst katmanın (üst kaplamanın) malzemesine göre yapılmalıdır. \n VOB alanı (malzemeye göre toplam olarak) hesaplanmalı ve tüm kaplamaların bir toplamı oluşturulmalıdır. \n\n | | |\n |  |  |\n | **İstenen Gösterim** | **Nitelik/Formül - Çözüm Yaklaşımı** |\n | Bir döşeme yüzeyinin en üst katmanının malzemesi | Malzeme (@508@) niteliği malzemeyi içerir. İnce yapı yüzeylerinde her katmanın nitelikleri özel bir çağrı ile (diğer SSS makalelerine de bakın) hesaplanabilir. **MT\\_Boden(@508@;0)** en üst katmanın malzemesini gösterir. |\n | En üst katmanın VOB alanı | VOB alanının hesaplanması için iki yaklaşım seçilebilir. VOB\\_Alanı (VOB\\_Fläche) (@81@) niteliği HER ZAMAN VOB alanını gösterirken, VOB\\_Miktarı (VOB\\_Menge) (@100@) niteliği seçilen hakediş birimine göre dinamik olarak ilgili miktarı gösterir. VOB miktarının yalnızca Allplan standardında tanımlanmış hakediş kurallarına sahip bir imalat kaleminin seçilmesi durumunda VOB'a uygun bir miktar gösterebileceğine dikkat edilmelidir. **MT\\_Boden(@81@;0)** en üst katmanın VOB alanını gösterir. Alternatif olarak burada çoğunlukla doğrudan nitelik kullanılabilir. |\n* Hangi objelere göre filtreleme yapılacağının planlanması. \n Burada: Döşeme yüzeyleri objesine göre bir filtreleme yapılmalıdır. Filtreleme, lejantın tanımlanması sırasında **SELECT** olarak adlandırılan kısımda ayarlanır.\n* Lejantın görsel görünümünün ön …",
+      "figures": [
+        "/akademi/lejant/11050_0EM7U000001Tdh5_4c0afca1.png",
+        "/akademi/lejant/11050_0EM7U000001Tdh6_051353ad.png",
+        "/akademi/lejant/11050_0EM7U000001TdmF_1593f5f6.png",
+        "/akademi/lejant/11050_0EM7U000001TdmG_8f39c27e.png",
+        "/akademi/lejant/11050_0EM7U000001TdmH_14db8c83.png",
+        "/akademi/lejant/11050_0EM7U000001TdmI_8be976c0.png",
+        "/akademi/lejant/11050_0EM7U000001TdmJ_3f5c6749.png",
+        "/akademi/lejant/11050_0EM7U000001TdmK_f8af41b8.png",
+        "/akademi/lejant/11050_0EM7U000001TdmL_68334f2f.png",
+        "/akademi/lejant/11050_0EM7U000001TdmM_79048ebe.png",
+        "/akademi/lejant/11050_0EM7U000001TdmN_bd435891.png",
+        "/akademi/lejant/11050_0EM7U000001TdmO_6b0f4339.png",
+        "/akademi/lejant/11050_0EM7U000001TdmP_e32d7c30.png",
+        "/akademi/lejant/11050_0EM7U000001TdmQ_37eb1981.png",
+        "/akademi/lejant/11050_0EM7U000001TdmR_ee96d2c6.png",
+        "/akademi/lejant/11050_0EM7U000001TdmS_bd6213b8.png",
+        "/akademi/lejant/11050_0EM7U000001TdmT_a3048946.png",
+        "/akademi/lejant/11050_0EM7U000001TdmU_9f695b7f.png",
+        "/akademi/lejant/11050_0EM7U000001TdmV_59601d7b.png",
+        "/akademi/lejant/11050_0EM7U000001TdmW_9f03f45b.png",
+        "/akademi/lejant/11050_0EM7U000001TdmX_93bd6a29.png",
+        "/akademi/lejant/11050_0EM7U000001TdmY_8abccb12.png",
+        "/akademi/lejant/11050_0EM7U000001TdmZ_a7dcd456.png",
+        "/akademi/lejant/11050_0EM7U000001Tdma_fe9b964a.png"
+      ]
+    },
+    {
+      "id": "de_11307",
+      "title": "Etiket Stilleri - Etiket stillerinin içeriği",
+      "body": "**Soru:** \n \nBir etiket stilinde (Beschriftungsbild) hangi niteliklerin kullanıldığı nasıl öğrenilebilir? \n \n \n \n**Örnek Durumlar:**\n\n* Etiketlenmiş veriler mevcut, ancak orijinal etiket stili mevcut değil / bulunamıyor.\n* Bir etiket stili arıyorsunuz ve standart etiketlerin neleri değerlendirdiğini bilmek istiyorsunuz.\n* İş arkadaşlarınızın verileri üzerinde çalışmaya devam etmeniz gerekiyor, ancak mevcut etiketin doğru şekilde değişmesi için hangi nitelikleri değiştirmeniz gerektiğini bilmiyorsunuz\n* Metrajınızda çizim dosyasında etiketlenmiş olanlarla aynı değerlere sahip olmak istiyorsunuz.\n\n \n**Durum 1 - Bir etiket stilinde hangi nitelikler mevcut.** \nKendi etiket stilinizi veya bir standart etiket stilini kullanılan nitelikler açısından incelemek istiyorsunuz. \nBunun için aşağıdaki adımları izleyin: \n \n- **Etiket Stili (Beschriftungsbild)** fonksiyonunu çağırın \n \n \n \n- Giriş Seçenekleri (Eingabeoptionen) -> **Oku (Lesen)** \n \n \n \n- İncelenecek etiket stilini **seçin** ve çizim dosyasına yerleştirin. \n \n \nEtiket stiline bağlı olarak birden fazla folyo (Folie) ortaya çıkacaktır. Tekil folyoların hangi ayarlarla (ölçekler veya çizim tipleri) kaydedildiği okunamaz. \n \n- Giriş Seçenekleri (Eingabeoptionen) -> **Modi** -> örn. İşlev (Funktion) **(1**) metnini seçin. \n(Numaralandırılmış örnekler aşağıda kısaca daha yakından incelenecektir.) \n \n \nSeçimden sonra Etiket Stili (Beschriftungsbild) araç çubuğu görüntülenir. İçinde çeşitli ayarlar görünür. \n \n \n**Temel Ayarlar:** \n \n**Format (Biçim)**: Çıktı biçiminin ayarı. Burada **10** karakterlik bir metin çıktısına **(A)** izin veren bir metin biçimi ayarlanmıştır. Daha uzun metinler burada kesilir. Diğer biçimler örneğin maks. 8 karakterlik (virgül dahil) ve bunun 3'ü ondalık basamak olan sayısal çıktı için F8.3 veya kot biçimi olarak K15.3'tür. Bununla ilgili daha fazla bilgiyi Yardım'da bulabilirsiniz. \n**Anpass (Uyarla)**: Uyarla fonksiyonu etkinleştirildiğinde metin boyutu ölçeğe göre uyarlanmaz. Ölçekten bağımsız olarak metnin ihtiyaç duyduğu alan aynı kalır. \n**DIM (Birim)**: Burada - sayısal çıktılarda - birim ayarlanabilir. Doğrudan bir nitelik çıktısı kullanıldığında değerler (mümkünse) seçilen birime gö …",
+      "figures": [
+        "/akademi/lejant/11307_0EM7U000001TdDA_09a214c9.png",
+        "/akademi/lejant/11307_0EM7U000001TdDB_0ed94683.png",
+        "/akademi/lejant/11307_0EM7U000001TdDC_70179970.png",
+        "/akademi/lejant/11307_0EM7U000001TdDD_11dc365c.png",
+        "/akademi/lejant/11307_0EM7U000001TdDE_6b6ec24d.png",
+        "/akademi/lejant/11307_0EM7U000001TdDF_abd8da22.png",
+        "/akademi/lejant/11307_0EM7U000001TdDG_77797bbc.png",
+        "/akademi/lejant/11307_0EM7U000001TdDH_88fa68de.png",
+        "/akademi/lejant/11307_0EM7U000001TdDI_871593a3.png",
+        "/akademi/lejant/11307_0EM7U000001TdDJ_09a214c9.png",
+        "/akademi/lejant/11307_0EM7U000001TdDK_db937216.png",
+        "/akademi/lejant/11307_0EM7U000001TdDL_ba46191d.png",
+        "/akademi/lejant/11307_0EM7U000001TdDM_28e37380.png"
+      ]
+    },
+    {
+      "id": "de_10641",
+      "title": "Etiket Stilleri - Biçim ayarları",
+      "body": "**Soru:** \n \nBir etiket stilindeki (Beschriftungsbild) bir metin örn. nasıl Kalın (Fett) olarak gösterilebilir? \n \n \n \n**Cevap:** \n \nEtiket stillerinde doğrudan yalnızca sınırlı biçimlendirmeler (normal metne kıyasla) kullanılabilir. \n \nDoğrudan **Etiket Stili (Beschriftungsbild)** fonksiyonunda bir niteliği (veya yerleştirilmiş bir formülü) yerleştirirken veya değiştirirken metin yüksekliği, metin genişliği, yazı tipi ve sütun açısı üzerinde değişiklik yapılabilir. \n \n \nNitelik çizim dosyasına yerleştirildikten sonra **Özellikler (Eigenschaften)** paleti ek olanaklar sunar. \n \n**Özellikler (Eigenschaften)** paletinde tekil nitelik için metinlerdekiyle aynı ayarlar yapılabilir. \n \nBiçim (Format) \n- Kalem kalınlığı (yalnızca Allplan standart yazı tiplerinde etkilidir, True-Type veya OpenType yazı tiplerinde etkili değildir) \n- Çizgi rengi \n- Katman \n- Kalem/Çizgi tipi/Renk özelliklerinin katmana bağlanması \n \nEleman (Element) \n- Ayarlarıyla birlikte metin bloğu etrafında çerçeve \n- Pencere arka plan rengi veya seçilebilir başka bir arka plan rengi ile arka plan dolgusu \n- Kalın (Fett), İtalik (Kursiv), Altı çizili (Unterstrichen) ve Üstü çizili (Durchgestrichen) gibi yazı tipi vurgulamaları. \n \n \nBu biçimlendirmelerin avantajı nispeten kolay uygulanabilir olmalarıdır. Bu sırada her zaman bir niteliğin veya bir formülün tüm ifadesi dikkate alınır. \nDezavantajı ise bir yandan niteliğin değerine bağlı olarak değişken şekilde veya başka nitelikler tarafından kontrol edilerek bir biçim özelliğinin değiştirilememesi, diğer yandan bir ifadenin belirli kısımlarının farklı şekilde biçimlendirilememesidir. \n \n**Formüllerde Biçimlendirme Olanakları** \nBir metnin çıktısını almaya yönelik bir formülün içinde (örn. A50 formatı) farklı kontrol karakterleriyle bir biçimlendirme elde edilebilir. Bunun için bir biçimlendirmenin başlangıcı ve sonu için birer karakter kombinasyonu gereklidir. Başlangıç karakteri ile bitiş karakteri arasında kalan metin biçimlendirmeye uygun olarak gösterilir. \n \n**Biçimlendirmeler Bölüm 1** \nAşağıdaki biçimlendirmeler metin düzenleyicide de eklenebilir. Orada biçimlendirmeler sadeleştirilir ve yalnızca etkileriyle gösterilir. Kontrol karakterlerinin …",
+      "figures": [
+        "/akademi/lejant/10641_0EM7U000001TdUV_37baaa34.png",
+        "/akademi/lejant/10641_0EM7U000001TdUW_3ec07482.png",
+        "/akademi/lejant/10641_0EM7U000001TdUr_8a5e26d6.png",
+        "/akademi/lejant/10641_0EM7U000001TdUs_6bc57392.png",
+        "/akademi/lejant/10641_0EM7U000001TdUt_33c72e0a.png",
+        "/akademi/lejant/10641_0EM7U000001TdUu_52a880f7.png",
+        "/akademi/lejant/10641_0EM7U000001TdUv_029f8502.png"
+      ]
+    },
+    {
+      "id": "de_11382",
+      "title": "Nitelikler - Kat için Genel Bakış (Metinler, Geometri, DIN277 ve BauNVO)",
+      "body": "**Soru:** \n \nKatların etiketlenmesi (raporlarda değerlendirilmesi) için hangi nitelikler kullanılabilir? \nDIN277'ye göre Brüt Taban Alanı / Brüt Hacim nasıl etiketlenebilir? \n \n \n**Temel Bilgi:** \nKatlar (Geschosse) iki ana amaca hizmet eder: \n1. DIN277 alan hesabına göre brüt taban alanı ile brüt hacmin ve Alman İmar Kullanım Yönetmeliği'ne (Baunutzungsverordnung) göre taban alanlarının belirlenmesi için bölgelerin tanımlanması \n2. Yan yüzeylere sahip cephelerde (örn. dış sıva) standart ince yapı imalatları için taşıyıcı bileşen olarak kullanılması. \n \n**Nitelikler (Attribute)**\n\n| | | |\n|  |  |  |\n| **Nitelik - Metinler (Attribut - Texte)** | **ID** | **Açıklama (Beschreibung)** |\n| Ortscode\\_Geschossbezeichnung | 246 | Maksimum 32 karakter (A32) uzunluğunda metin niteliği. Giriş, Kat (Geschoss) sekmesinde, Kat Nitelikleri (Geschossattribute) bölümündeki **Kat Kısa Adı (Geschoss Kurzbezeichnung)** alanından yapılır. Genellikle buraya örn. EG, OG veya düzlem için bir numara girilir. |\n| Bezeichnung | 507 | Maksimum 32 karakter (A32) uzunluğunda metin niteliği. Giriş, Kat (Geschoss) sekmesindeki **Ad/Nitelikler (Bezeichnung/Qualitäten)** alanından yapılır. Katalog ataması (Katalogzuordnung) altında adlandırma için bir seçim kataloğu yerine ++ seçilirse, arka arkaya oluşturulan birden fazla katta numaralar (Ad) otomatik olarak artırılabilir. |\n| Funktion | 506 | Maksimum 80 karakter (A80) uzunluğunda metin niteliği. Giriş, Kat (Geschoss) sekmesindeki **Fonksiyon (Funktion)** alanından yapılır. |\n| Text1 Text2 Text3 Text4 Text5 | 501 502 503 504 505 | Maksimum 80 karakter (A80) uzunluğunda metin nitelikleri. Giriş, Mahal (Raum) sekmesinde Metinler (Texte) altından yapılır. Metinler serbest bilgiler içerebilir. |\n\nListelenen metin niteliklerinin yanı sıra Tadilat Kategorisi (Umbaukategorie) gibi diğer nitelikler de kullanılabilir. Bunlar Ad/Nitelikler (Bezeichnung/Qualitäten) üzerinden veya kullanıcı nitelikleri (Benutzerattribute) aracılığıyla ayarlanabilir.\n\n| | | |\n|  |  |  |\n| **Nitelik - Geometri (Attribut - Geometrie)** | **ID** | **Açıklama (Beschreibung)** |\n| Länge | 220 | **Uzunluk (Länge)** ve **Kalınlık (Dicke)** nitelikleri herhangi bir değerlendirme s …",
+      "figures": [
+        "/akademi/lejant/11382_0EM7U000001Td7w_cf0339a3.png"
+      ]
+    },
+    {
+      "id": "de_10638",
+      "title": "Nitelikler - Oturma alanı hesabı, kullanım alanları için genel bakış",
+      "body": "**Soru:** \n \nOturma alanları (Wohnflächen) ve kullanım alanları (Nutzungsflächen) için kendi etiket stillerimizde (veya raporlarımızda) hangi nitelikler kullanılabilir? \n \n \n \n**Cevap:** \n \nEtiket stilleri ve kullanıcıya uyarlanmış raporlar için, taban alanlarını Oturma Alanı Yönetmeliğine (Wohnflächenverordnung) veya DIN 277'ye göre değerlendiren çeşitli nitelikler kullanıma sunulmaktadır. Aşağıda en önemli nitelikler kısa birer açıklamayla birlikte belirtilmiştir. \n \n**Oturma Alanı Yönetmeliğine Göre Metraj** \nTemel olarak oturma alanının belirlenmesi için raporlar oluşturulurken yükseklik bölümlemesi ve benzeri ayarlar ayarlandığı şekliyle dikkate alınır. Ayarlardaki değişiklikler (kullanılan niteliğe ve değiştirilen özelliğe bağlı olarak) bir rapor oluşturulurken VE etiketleme için uygulanır. \n \n \n \n \nOturma alanı hesaplamaları için standart ayarlar gösterilmiştir. \n \nOturma alanını (mahalin taban alanına dayalı olarak) değerlendiren tüm nitelikler; yükseklik bölümlemesini, tesisat yapı elemanlarını, nişleri ve benzerlerini ayarlandığı şekliyle dikkate alır. \nOturma alanı hesabı çarpanı (mahalin özelliklerinde ayarlanabilir) birlikte dikkate alınır.\n\n| | | | |\n|  |  |  |  |\n| **Nitelik Adı** **Numara** | **Açıklama** **Metraj** | **Etiket Formatı** | **Değerler/İçerik** |\n| **Wohnfläche\\_Ausbau** @197@ | Mahalin tüm ince iş yüzeyleri dikkate alınır. Yükseklik bölümleri için döşeme katman yapısı ve tavan katman yapısı dikkate alınır. Güncel Oturma Alanı Yönetmeliğine göre etiketleme ve bitmiş yüzeylerle II. Hesaplama Yönetmeliğine göre yapılan hesaplamalar için kullanılır. | F8.2 F8.3 A254 | 27,63m² |\n| **Wohnfläche\\_Rohbau** @196@ | Boyutlar ince işler dikkate alınmadan mahale göre belirlenir. Yalnızca özel durumlar ve özel ihtiyaçlar için kullanılır. | F8.2 F8.3 A254 | 29,25m² |\n| **Wohnfläche\\_Rohbau\\_mit\\_Abzug** @193@ | Boyutlar ince işler dikkate alınmadan mahale göre belirlenir. Orada \"Götürü kesintili / ilaveli kaba yapı (Rohbau mit Pauschalabzug / Zuschlag)\" seçili olmasa bile götürü kesinti (metraj sırasındaki ayar) dikkate alınır: Bu götürü kesintinin dikkate alınmasının ön koşulu, mahalin ayarlarında Götürü sıva kesintisinin (`Pauschale Putzabzug` …",
+      "figures": [
+        "/akademi/lejant/10638_0EM7U000001TeQr_c7ead46d.png",
+        "/akademi/lejant/10638_0EM7U000001TeQs_2280d71b.png",
+        "/akademi/lejant/10641_0EM7U000001TdUY_4ba206e3.png",
+        "/akademi/lejant/10641_0EM7U000001TdUX_a910d704.png",
+        "/akademi/lejant/10641_0EM7U000001TdUZ_8382c1af.png",
+        "/akademi/lejant/10641_0EM7U000001TdUe_c03297d4.png",
+        "/akademi/lejant/10641_0EM7U000001TdUi_6e04d44d.png",
+        "/akademi/lejant/10641_0EM7U000001TdUf_58fe86c4.png",
+        "/akademi/lejant/10641_0EM7U000001TdUc_54725791.png",
+        "/akademi/lejant/10641_0EM7U000001TdUg_a2554d5e.png",
+        "/akademi/lejant/10641_0EM7U000001TdUb_2eb8aec6.png",
+        "/akademi/lejant/10641_0EM7U000001TdUa_35eb9ab8.png",
+        "/akademi/lejant/10641_0EM7U000001TdUh_a658d614.png",
+        "/akademi/lejant/10641_0EM7U000001TdUd_d3cf7e59.png"
+      ]
+    }
+  ]
+}

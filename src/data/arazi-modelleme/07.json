@@ -1,0 +1,180 @@
+{
+  "no": 7,
+  "slug": "3b-maket-modelinin-olusturulmasi",
+  "title": "3B Maket Modelinin Oluşturulması",
+  "duration": "",
+  "sourceModule": "Proje 1 — Modül 3 & Modül 6: 3B Yüzeyden 3B Katı Maket (Extrude / 3D-Fläche zu 3D-Körper), Boolean Kesme ve Kademeli Maket",
+  "objectives": [
+    "Kağıt kalınlığındaki 3B Arazi Yüzeyini (`3D Surface`) mimari sunumlarda ve kesitlerde dolu görünecek bir **3B Katı Maket Modeline (3D Solid Terrain Block / 3D-Körper)** dönüştürmek.",
+    "**Yüzeyi Katıya Dönüştür / Ekstrüzyon (Extrude / 3D Surface to 3D Solid)** ve **Boolean Çıkarma / Kesişim (Subtract / Intersect)** yöntemleriyle tabanı düz, üstü topoğrafik eğimli 3B arazi bloğu üretmek.",
+    "3B katı arazi maketinde bina bodrum kazısı, gömülü otopark veya altgeçit boşluklarını **Birinden Çıkar (Subtract and Remove Solids)** komutuyla açmak.",
+    "Sunum estetiği için maket yan yüzeylerine ve kesit yüzeylerine toprak/kaya taraması veya ahşap/beyaz maket dokusu atamak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "3B Arazi Yüzeyini Kopyalama ve Modelleme Rolüne Geçiş",
+      "body": "`103 - 3B Arazi Modeli` çizim dosyasındaki 3B arazi yüzeyinin bir kopyasını maket üretimi için koruyun. Actionbar üzerinde **Tasarım (Design) / Serbest Modelleme (Freeform Modeling / Modellieren)** görev alanına geçin.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Yöntem A: 3B Yüzeyi Belirli Bir Taban Düzlemine Kadar Katıya Dönüştürme",
+      "body": "Üst yüzeyi eğimli olan 3B arazi kabuğunu alt tabanı yatay bir 3B katı bloğa (`3D Solid`) dönüştürmek için:\n1. **Ekstrüzyon / Yüzeyi Katıya Dönüştür (Extrude / Surface to Solid)** veya **SAM Elemanlarını Dönüştür -> 3B Katı (3D Solid)** seçeneğini aktif edin.\n2. Arazinin en düşük kotunun (örn. `+100.00 m`) altında yatay bir taban kotu (örn. `+95.00 m` veya `0.00 m`) tanımlayın.\n3. Arazi yüzeyine tıkladığınızda yan cepheleri düşey, tabanı düz ve üstü topoğrafik arazi formunda kapalı bir **3B Katı (3D Solid / 3D-Körper)** maket bloğu oluşur.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Yöntem B: 3B Kutu (Box) ve Arazi Yüzeyi ile Boolean Kesme İşlemi",
+      "body": "Özel formlu (örneğin dairesel, pahlı veya parsel sınırından taşan) bir maket kaidesi oluşturmak istediğinizde:\n1. **Kutu / Silindir / Poligon Prizma (Box / Cylinder / 3D Solid)** komutuyla arsa sınırlarını kapsayan ve arazinin en yüksek kotunu aşan bir 3B katı prizma çizin.\n2. **3B Yüzey ile Katıyı Böl (Split 3D Solids with Surface / Körper mit Fläche trennen)** komutunu çalıştırın.\n3. Önce 3B prizmayı, ardından 3B arazi yüzeyini seçin. Prizma arazi yüzeyi boyunca ikiye bölünür; üstteki parçayı sildiğinizde geriye kusursuz 3B Arazi Maketi kalır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Bina Oturum ve Bodrum Kazı Boşluklarının Maketten Çıkarılması",
+      "body": "Bina bodrum katlarının arazi maketi içine gömüleceği hacmi bir 3B Kutu olarak modelleyin ve **Birinden Çıkar ve Sil (Subtract and Remove Solids / Körper abziehen und löschen)** komutuyla 3B arazi maketinden çıkarın.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Yüzey ile Katıyı Böl (Split Solid with Surface)",
+      "menu": "Serbest Modelleme -> 3B Katıyı Yüzey ile Böl (3D-Körper mit Ebene/Fläche trennen)",
+      "shortcut": "Boolean Araçları",
+      "desc": "Bir 3B katı prizmayı eğimli 3B arazi yüzeyi boyunca keserek alt maket bloğunu elde eder."
+    },
+    {
+      "name": "Ekstrüzyon (Extrude)",
+      "menu": "Serbest Modelleme -> Ekstrüzyon (Extrudieren)",
+      "shortcut": "3B Modelleme",
+      "desc": "3B yüzeyi belirli bir vektör boyunca veya bir taban düzlemine kadar uzatarak 3B katıya dönüştürür."
+    },
+    {
+      "name": "Birinden Çıkar ve Sil (Subtract Solids)",
+      "menu": "Serbest Modelleme -> Birinden Çıkar ve Sil (Körper abziehen und löschen)",
+      "shortcut": "Boolean Araçları",
+      "desc": "3B arazi maketinden bina bodrum kazı hacmini veya tünel/havuz boşluklarını çıkarır."
+    },
+    {
+      "name": "3B Kutu / Poligon Katı (Box)",
+      "menu": "Serbest Modelleme -> Kutu (Quader)",
+      "shortcut": "Temel 3B Cisimler",
+      "desc": "Arazi maket kaidesini veya Boolean kesme hacmini oluşturmak için prizmatik 3B katı üretir."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Add-On PatchWork - Überbauung Kristallblick",
+        "file": "12566_vimeo_1234301431_b07db460.mp4",
+        "vimeoId": "1234301431",
+        "sizeMB": 146.6
+      },
+      {
+        "title": "Add-On Baugrube - DGM Modellieren Unterführung",
+        "file": "12775_vimeo_1235302372_e73cea77.mp4",
+        "vimeoId": "1235302372",
+        "sizeMB": 130.52
+      },
+      {
+        "title": "Add-On Baugrube - 3D Elemente zuschneiden",
+        "file": "12777_vimeo_1235306985_6ed7fdc1.mp4",
+        "vimeoId": "1235306985",
+        "sizeMB": 197.71
+      },
+      {
+        "title": "Add-On Geometry Tools - Dreiecks-Netz vereinfachen",
+        "file": "12656_vimeo_1234953127_784e7d96.mp4",
+        "vimeoId": "1234953127",
+        "sizeMB": 122.2
+      },
+      {
+        "title": "Add-On Element Converter - 3D Körper und Bauteile",
+        "file": "12645_vimeo_1234949012_8c4ee74b.mp4",
+        "vimeoId": "1234949012",
+        "sizeMB": 22.77
+      },
+      {
+        "title": "Allplan Baugrube - Unterseite eines 3D Körpers übernehmen",
+        "file": "3287_vimeo_887205983_a04f3a46.mp4",
+        "vimeoId": "887205983",
+        "sizeMB": 12.51
+      },
+      {
+        "title": "Allplan Excavation Pit - Take Over the Bottom Side of a 3D Body",
+        "file": "3406_vimeo_887610023_f551c7c6.mp4",
+        "vimeoId": "887610023",
+        "sizeMB": 10.24
+      }
+    ],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "fr_9311",
+      "title": "Arazi modelleyici",
+      "body": "**SORUN:** \n \nArazi modülü Allplan kullanıcıları tarafından genellikle az bilinir ve tam olarak anlaşılmaz. \n \n**ÇÖZÜM:** \n \nBu makale modülün başlıca araçlarını açıklamayı amaçlamaktadır.\n\nBu modüle erişmek için öncelikle rol değiştirmeniz ve **Çevre / Arazi (Environnement)** rolüne geçmeniz gerekir. \n \nBu modül içinde arazi noktası dosyalarını içe veya dışa aktarabilirsiniz. .re1, .re2, .reb ve .asc formatları Allplan'a doğrudan içe aktarılabilir. Diğer formatlar için nokta dosyalarınızı dönüştürmek ve ardından içe aktarmak üzere Scalypso eklentisini kullanabilirsiniz. \n \nAllplan üzerinde doğrudan 3B arazi noktaları oluşturmak da mümkündür. \n \nArdından 3B bir arazi ağı (Sayısal Arazi Modeli - MT3D) oluşturmak için içe aktarılan veya manuel olarak konumlandırılan 3B arazi noktalarını üçgenlemek (ağ oluşturmak) yeterlidir. \n \nArazinizin gösterimini yönetebilir ve topoğrafyayı renk geçişi (gradyan) içeren bir dolgu biçiminde geçici olarak görüntüleyebilirsiniz. \n \n**Dış sınır (contour extérieur)** aracıyla ağın dış sınırını oluşturabilir veya yeniden sınırlandırabilirsiniz. \n \nEşyükselti eğrilerini (courbes de niveaux) çok kolay bir şekilde oluşturabilirsiniz. \n \n**Ağ noktası (Point de maillage)** aracıyla ağ noktalarını ekleyebilir, değiştirebilir veya silebilirsiniz. \n \n**MT3D ağına eleman ekle (ajouter élément au maillage MT3D)** aracıyla mevcut ağınıza farklı eleman tiplerini (nokta, çizgi, poligon çizgisi, spline) entegre edebilirsiniz. Entegre edilecek elemanın plandaki konumuna göre ek kot noktaları yerleştirilecektir. \n \nAyrıca **Boşluk açma (évidement)** fonksiyonuyla arazinizin bir kısmında boşluk açabilirsiniz. \n \nBir profil kesiti çizmek ve 2B bir profil şeması çıkarmak oldukça kolaydır. Belirli bir profil kesiti (örn: bir yol ekseni) için mevcut bir 2B çizgiyi veya spline'ı referans olarak almak mümkündür. \n \n**Adım 1:** Bir profil kesiti tanımlayın. \n \n**Adım 2:** Daha önce oluşturulan profil kesitinden bir profil şeması çıkarın. \n \nİlk arazi, dolgu (remblai) veya kazı (déblai) yapmak üzere şev (talus) fonksiyonları yardımıyla değiştirilebilir. \n**Genel şev (talus général)** aracı bir platformun oturma alanını ve yapılacak şevlerin eğimini tanımlama …",
+      "figures": [
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfSD_8e03becf.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfX3_f59b4909.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tdrq_677ea60d.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfdV_4d3d07fa.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfgj_6714924e.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfjx_391a5b44.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfon_fe2a6cb2.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfvF_05064fc0.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tg05_ec995132.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tWsN_e1032fe7.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tg6X_3809d03c.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003ta9D_f910474b.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003teER_e58f33f8.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tg89_41f80b82.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tgGD_0e5359fe.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tYCF_3a92348f.png"
+      ]
+    },
+    {
+      "id": "de_12566",
+      "title": "Add-On PatchWork - Kristallblick Yerleşkesi",
+      "body": "Bu video, eski SAY (DGM) modülüne kıyasla karmaşık arazi modellemelerini daha verimli ve kullanıcı dostu şekilde gerçekleştirmek için Allplan'da PatchWork eklentisinin nasıl kullanılabileceğini göstermektedir. Eğimli bir arazide yolların, rampaların ve teras yüzeylerinin nasıl modellendiği ve uyarlandığı anlatılmaktadır.",
+      "figures": []
+    },
+    {
+      "id": "de_12775",
+      "title": "Add-On Baugrube (Yapı Çukuru Eklentisi) - Altgeçit SAY (DGM) Modelleme",
+      "body": "Bu eğitim videosu, ileri düzey kullanıcılara Allplan **Yapı Çukuru (Add-On Baugrube)** modülü ile sayısal araziyi, 3B modellemeyi ve yapı çukurlarını nasıl birleştirebileceklerini göstermektedir. 3B yüzeylerin nasıl oluşturulacağı, bölgelerin nasıl modelleneceği, yapı çukurlarının nasıl üretileceği ve karmaşık geometrilerin nasıl kesilip birleştirileceği anlatılmaktadır. Yapı çukurunu hassas bir şekilde uyarlamak ve ardışık değişiklikleri gerçekleştirmek için yenilikçi bir püf noktası tanıtılmaktadır.",
+      "figures": []
+    },
+    {
+      "id": "de_12777",
+      "title": "Add-On Baugrube (Yapı Çukuru Eklentisi) - 3B Elemanları Kırpma/Kesme",
+      "body": "Bu eğitim videosu, Allplan **Yapı Çukuru (Add-On Baugrube)** eklentisinin 3.008 sürümündeki yeni **3B Elemanları Kırp (3D-Elemente zuschneiden)** komutunu tanıtmaktadır. Bu komut; katı modeller, yüzeyler ve çizgiler gibi 3B elemanların hassas bir şekilde kesilmesini ve bu sırada dış kenarın kaldırılmasını sağlar. Fonksiyon özellikle karmaşık 3B modeller için son derece kullanışlıdır ve arazi ile bina verilerinin düzenlenmesi ve görselleştirilmesinde zaman kazandırır.",
+      "figures": []
+    },
+    {
+      "id": "de_12656",
+      "title": "Add-On Geometry Tools (Geometri Araçları Eklentisi) - Üçgen Ağı Basitleştirme",
+      "body": "Bu eğitim videosu, Allplan **Geometri Araçları (Add-On Geometrietools)** Sürüm 2'nin yeni özelliği olan **Üçgen Ağ Basitleştirme (3eck-Netz-Vereinfachung)** fonksiyonunu tanıtmaktadır. Poligon sayısını azaltmak ve karmaşık modelleri basitleştirmek için fonksiyonun nasıl uygulandığına dair örnekler gösterilmektedir. Uygulama alanı basit figürlerden detaylı 3B modellere ve sayısal arazi modellerine kadar uzanmakta olup poligon azaltma işleminin yüksek performansı ortaya konulmaktadır.",
+      "figures": []
+    },
+    {
+      "id": "de_12645",
+      "title": "Add-On Element Converter (Eleman Dönüştürücü Eklentisi) - 3B Katı Modeller ve Yapı Elemanları",
+      "body": "**ElementConverter** eklentisi, Allplan'daki 3B katı modellerin duvarlar, pencereler, kapılar, kolonlar ve döşemeler gibi mimari yapı elemanlarına dönüştürülmesini sağlar. Basit komutlar sayesinde poligonal elemanlar hassas bir şekilde yorumlanıp dönüştürülebilir; bu da mimari yapı elemanlarının oluşturulmasını kolaylaştırır.",
+      "figures": []
+    },
+    {
+      "id": "de_3287",
+      "title": "Allplan Kazı Çukuru - Bir 3B Hacmin Alt Yüzünü devralma",
+      "body": "Bu videoda bir kazı oluşturmak için bir 3B hacmin alt yüzünü nasıl kullanacağınızı görebilirsiniz.\n\n#KazıÇukuru #Arazi",
+      "figures": []
+    },
+    {
+      "id": "en_3406",
+      "title": "Allplan Kazı Çukuru - Bir 3B Hacmin Alt Yüzünü Devralma",
+      "body": "Bu videoda bir kazı oluşturmak için 3B bir hacmin alt yüzünün nasıl kullanılacağını görebilirsiniz.",
+      "figures": []
+    }
+  ]
+}

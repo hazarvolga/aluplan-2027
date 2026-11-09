@@ -1,0 +1,132 @@
+{
+  "no": 5,
+  "slug": "es-yukselti-egrilerinin-olusturulmasi",
+  "title": "Eş Yükselti Eğrilerinin Oluşturulması",
+  "duration": "",
+  "sourceModule": "Proje 1 — Modül 3 & Modül 6: Eş Yükselti Eğrileri (Contour Lines / Höhenlinien), İzohips Etiketleme ve Arazi Kesitleri",
+  "objectives": [
+    "Oluşturulan Sayısal Arazi Modeli (SAM / DTM) üzerinden **Eş Yükselti Eğrileri (Contour Lines / Höhenlinien)** komutuyla otomatik izohips eğrileri üretmek.",
+    "Ana eş yükselti eğrileri (örn. her `5.00 m`'de bir kalın çizgi ve kot yazılı) ile ara eş yükselti eğrilerinin (örn. her `1.00 m` veya `0.50 m`'de bir ince çizgi) aralık, kalem kalınlığı, çizgi tipi ve renk ayarlarını yapılandırmak.",
+    "Eş yükselti eğrileri üzerindeki otomatik kot yazılarının (`Contour Line Labeling`) yazı boyutu, ondalık basamak sayısı ve eğri yönüne hizalanmasını ayarlamak.",
+    "Arazi üzerinden **Profil Kesiti (Profile Section)** alarak 2B boykesit/enkesit diyagramı çıkarmayı öğrenmek."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Eş Yükselti Eğrileri (Contour Lines / Höhenlinien) Komutunu Başlatma",
+      "body": "**Çevre -> Sayısal Arazi Modeli -> Eş Yükselti Eğrileri (Contour Lines / Höhenlinien)** komutuna tıklayın ve çizim alanındaki Sayısal Arazi Modelini (`SAM / DTM`) seçin.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "İzohips Başlangıç Kotu, Adım Aralığı ve Ana/Ara Eğri Ayarları",
+      "body": "Açılan özellikler penceresinde eş yükselti eğrisi parametrelerini projenin ölçeğine göre tanımlayın:\n- **Başlangıç Yüksekliği ve Bitiş Yüksekliği (Start / End Elevation):** Varsayılan olarak arazinin minimum ve maksimum kotlarını otomatik alır.\n- **Eğri Aralığı (Increment / Schrittweite):** Ara eğriler için `1.00 m` (veya detaylı vaziyet planlarında `0.50 m` / `0.25 m`) girin.\n- **Ana Eğri Aralığı (Index Contour / Haupthöhenlinie):** Her `5.` eğriyi (örn. `100.00 m`, `105.00 m`, `110.00 m`) ana izohips olarak kalın kalem (`0.35 mm`) ve farklı bir renkle vurgulanacak şekilde işaretleyin.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "İzohips Kot Etiketlerinin (Labeling) ve Eğri Yumuşatmanın Ayarlanması",
+      "body": "Aynı diyalog penceresinde **Etiketleme (Label / Beschriftung)** seçeneğini aktif edin:\n- Yalnızca ana eğrilerin mi yoksa tüm eğrilerin mi kot yazısıyla etiketleneceğini seçin.\n- Yazı yüksekliğini ve ondalık basamak sayısını (`2 basamak: 105.00`) belirleyin.\n- `Tamam (OK)` butonuna bastığınızda eş yükselti eğrileri SAM modelinin üzerine ilişkisel olarak çizilir ve etiketlenir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Arazi Profil Kesiti (Terrain Profile) Çıkarma",
+      "body": "Arazinin eğimini kesitte görmek için **Profil Kesiti (Profile / Profilschnitt)** komutunu seçin, SAM modeline tıklayın ve planda kesit hattını işaretleyin. Ardından **Profil Şeması (Profile Diagram)** komutuyla mevcut arazi kesitini kot cetveliyle birlikte 2B çizim alanına yerleştirin.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Eş Yükselti Eğrileri (Contour Lines)",
+      "menu": "Çevre -> Sayısal Arazi Modeli -> Eş Yükselti Eğrileri (Höhenlinien)",
+      "shortcut": "SAM / DTM Grubu",
+      "desc": "Sayısal arazi modeli üzerinde belirtilen kot aralığında ana ve ara izohips eğrileri üretir."
+    },
+    {
+      "name": "Eğri Etiketleme (Contour Labeling)",
+      "menu": "Eş Yükselti Eğrileri Diyaloğu -> Etiket (Beschriftung)",
+      "shortcut": "Özellikler Paleti",
+      "desc": "Ana ve ara izohips eğrilerinin üzerine eğri açısına paralel kot değerlerini yazar."
+    },
+    {
+      "name": "Profil Kesiti (Profile Section)",
+      "menu": "Çevre -> Sayısal Arazi Modeli -> Profil Kesiti (Profilschnitt)",
+      "shortcut": "SAM / DTM Grubu",
+      "desc": "Sayısal arazi modeli üzerinde seçilen bir hat veya yol ekseni boyunca kesit tanımlar."
+    },
+    {
+      "name": "Profil Şeması (Profile Diagram)",
+      "menu": "Çevre -> Sayısal Arazi Modeli -> Profil Şeması (Profildiagramm)",
+      "shortcut": "SAM / DTM Grubu",
+      "desc": "Tanımlanan arazi kesitini ölçekli, kot tablolu 2B boykesit/enkesit çizimine dönüştürür."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Add-On Baugrube - Höhenlinien zu Gelände",
+        "file": "12734_vimeo_1235292828_11c20cab.mp4",
+        "vimeoId": "1235292828",
+        "sizeMB": 32.98
+      },
+      {
+        "title": "Add-On PatchWork - Höhenlinien",
+        "file": "12556_vimeo_1234294301_b7a22d95.mp4",
+        "vimeoId": "1234294301",
+        "sizeMB": 43.06
+      }
+    ],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_12734",
+      "title": "Add-On Baugrube (Yapı Çukuru Eklentisi) - Eşyükselti Eğrilerinden Araziye",
+      "body": "Bu video, 3B poligon çizgilerinin basitleştirilmesi ve azaltılması yoluyla içe aktarılmış eşyükselti eğrilerinden (münhanilerden) bir arazinin nasıl oluşturulduğunu göstermektedir. Noktaların elenmesi ve üçgen ağların oluşturulması sayesinde, sonraki düzenlemeleri kolaylaştıran ve Allplan'da kullanılabilen optimize edilmiş bir arazi katı modeli üretilir.",
+      "figures": []
+    },
+    {
+      "id": "de_12556",
+      "title": "Add-On PatchWork - Eşyükselti Eğrileri (Münhaniler)",
+      "body": "Bu eğitim videosu, eşyükselti eğrileri (münhaniler) içeren bir örnek üzerinden Allplan Add-On PatchWork eklentisinin kullanımını göstermektedir. 3B spline eğrileri, arazi noktaları ve sınır çizgilerinden temel bir geometrinin nasıl oluşturulacağı ve bunun PatchWork ile nasıl çerçeveleneceği anlatılmaktadır. Ayrıca etkileyici bir görselleştirme elde etmek amacıyla renk geçişli (gradyan) gösterimin eşyükselti eğrileriyle nasıl birleştirildiği gösterilmektedir.",
+      "figures": []
+    },
+    {
+      "id": "fr_9311",
+      "title": "Arazi modelleyici",
+      "body": "**SORUN:** \n \nArazi modülü Allplan kullanıcıları tarafından genellikle az bilinir ve tam olarak anlaşılmaz. \n \n**ÇÖZÜM:** \n \nBu makale modülün başlıca araçlarını açıklamayı amaçlamaktadır.\n\nBu modüle erişmek için öncelikle rol değiştirmeniz ve **Çevre / Arazi (Environnement)** rolüne geçmeniz gerekir. \n \nBu modül içinde arazi noktası dosyalarını içe veya dışa aktarabilirsiniz. .re1, .re2, .reb ve .asc formatları Allplan'a doğrudan içe aktarılabilir. Diğer formatlar için nokta dosyalarınızı dönüştürmek ve ardından içe aktarmak üzere Scalypso eklentisini kullanabilirsiniz. \n \nAllplan üzerinde doğrudan 3B arazi noktaları oluşturmak da mümkündür. \n \nArdından 3B bir arazi ağı (Sayısal Arazi Modeli - MT3D) oluşturmak için içe aktarılan veya manuel olarak konumlandırılan 3B arazi noktalarını üçgenlemek (ağ oluşturmak) yeterlidir. \n \nArazinizin gösterimini yönetebilir ve topoğrafyayı renk geçişi (gradyan) içeren bir dolgu biçiminde geçici olarak görüntüleyebilirsiniz. \n \n**Dış sınır (contour extérieur)** aracıyla ağın dış sınırını oluşturabilir veya yeniden sınırlandırabilirsiniz. \n \nEşyükselti eğrilerini (courbes de niveaux) çok kolay bir şekilde oluşturabilirsiniz. \n \n**Ağ noktası (Point de maillage)** aracıyla ağ noktalarını ekleyebilir, değiştirebilir veya silebilirsiniz. \n \n**MT3D ağına eleman ekle (ajouter élément au maillage MT3D)** aracıyla mevcut ağınıza farklı eleman tiplerini (nokta, çizgi, poligon çizgisi, spline) entegre edebilirsiniz. Entegre edilecek elemanın plandaki konumuna göre ek kot noktaları yerleştirilecektir. \n \nAyrıca **Boşluk açma (évidement)** fonksiyonuyla arazinizin bir kısmında boşluk açabilirsiniz. \n \nBir profil kesiti çizmek ve 2B bir profil şeması çıkarmak oldukça kolaydır. Belirli bir profil kesiti (örn: bir yol ekseni) için mevcut bir 2B çizgiyi veya spline'ı referans olarak almak mümkündür. \n \n**Adım 1:** Bir profil kesiti tanımlayın. \n \n**Adım 2:** Daha önce oluşturulan profil kesitinden bir profil şeması çıkarın. \n \nİlk arazi, dolgu (remblai) veya kazı (déblai) yapmak üzere şev (talus) fonksiyonları yardımıyla değiştirilebilir. \n**Genel şev (talus général)** aracı bir platformun oturma alanını ve yapılacak şevlerin eğimini tanımlama …",
+      "figures": [
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfSD_8e03becf.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfX3_f59b4909.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tdrq_677ea60d.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfdV_4d3d07fa.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfgj_6714924e.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfjx_391a5b44.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfon_fe2a6cb2.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfvF_05064fc0.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tg05_ec995132.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tWsN_e1032fe7.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tg6X_3809d03c.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003ta9D_f910474b.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003teER_e58f33f8.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tg89_41f80b82.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tgGD_0e5359fe.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tYCF_3a92348f.png"
+      ]
+    },
+    {
+      "id": "es_6402",
+      "title": "Allplan İpuçları | Sayısal Arazi Modelinde Eşyükselti Eğrilerini Çizme",
+      "body": "# Allplan İpuçları | Sayısal Arazi Modelinde Eşyükselti Eğrilerini Çizme",
+      "figures": []
+    },
+    {
+      "id": "es_6440",
+      "title": "Allplan İpuçları | Sayısal Arazi Modelinden Profil Üretme",
+      "body": "# Allplan İpuçları | Sayısal Arazi Modelinden Profil Üretme",
+      "figures": []
+    }
+  ]
+}

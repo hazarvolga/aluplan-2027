@@ -1,0 +1,90 @@
+{
+  "no": 7,
+  "slug": "donati-lejanti-tasarimi-lejant-kopyalama",
+  "title": "Donatı Lejantı Tasarımı - Lejant Kopyalama",
+  "duration": "",
+  "sourceModule": "Proje 1 — Modül 5: 3B Donatı Detaylandırma, Donatı Lejantı (Reinforcing Bar Legend / Stabstahllegende) ve Büküm Şemaları",
+  "objectives": [
+    "Mühendislik (Engineering) rolünde kullanılan Çubuk Donatı Lejantı (Reinforcing Bar Legend / Stabstahllegende) ve Hasır Donatı Lejantı (Mesh Legend / Mattenlegende) standartlarını tanımak.",
+    "Standart bir donatı metraj/büküm lejantını Lejantları Yönet ile Ofis (Office) klasörüne kopyalamak.",
+    "TS 500 ve ISO 3766 standartlarına uygun donatı metraj tablosu sütun yapısını (Poz No, Adet, Çap Ø, Tek Boy, Toplam Boy, Büküm Şeması, Çap Bazlı Ağırlık Özeti) kurgulamak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Standart Donatı Lejantını Ofis Klasörüne Kopyalama",
+      "body": "**Lejantları Yönet (Manage Legends)** penceresinde **Varsayılan (Default) -> Mühendislik / Donatı (Engineering / Reinforcement)** altından büküm şemalı çelik listesini (`Stahlliste mit Biegeformen`) seçin ve **Ofis (Office)** klasörüne yeni bir numarayla kopyalayın.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Türkiye Uygulama Standardına Göre Tablo Başlığı ve Sütun Düzeni",
+      "body": "**Lejant Değiştir (Modify Legend)** ile şablonu ekrana çağırın. Sütun başlıklarını **Poz No**, **Çap (Ø)**, **Adet**, **Bir Boy (cm/m)**, **Toplam Boy (m)**, **Büküm Şeması ve Kıvrım Boyları** ile **Birim/Toplam Ağırlık (kg)** olacak şekilde Türkçe mühendislik jargonuyla düzenleyin.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Donatı Lejantı (Reinforcement Legend)",
+      "menu": "Mühendislik (Engineering) -> Donatı -> Donatı Lejantı (Stabstahllegende)",
+      "shortcut": "Donatı Lejant İkonu",
+      "desc": "Pafta üzerindeki çubuk/hasır donatıların poz, çap, adet, boy, büküm şeması ve tonaj tablosunu üretir."
+    },
+    {
+      "name": "Lejantları Yönet (Manage Legends)",
+      "menu": "Kullanıcı Tanımlı Objeler -> Lejantlar -> Lejantları Yönet",
+      "shortcut": "Yönetim Grubu",
+      "desc": "Varsayılan Mühendislik/Donatı klasöründeki çelik listesini Ofis klasörüne kopyalar."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Legende kopieren",
+        "file": "6643_vimeo_990103825_4a8a433e.mp4",
+        "vimeoId": "990103825",
+        "sizeMB": 7.31
+      }
+    ],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_10594",
+      "title": "Etiket Stilleri - Formül Koleksiyonu - Koşullar için örnekler (mantıksal uygunluk kontrolleri ve benzerleri)",
+      "body": "**Soru:** \n \nEtiket stillerinde çerçeveler (Umrandungen) ve değerlerin gösterimi koşullara bağlanabilir mi? \n \n \n**Cevap:** \n \n**Durum 1:** \nYapı elemanlarına genellikle bir daire (%K0) ile çerçevelenen poz numaraları verilir. Bir değişiklik olması durumunda yapı elemanlarının bazı kısımları yeniden numaralandırılır ve ilave/revizyon pozu (Nachtragsposition) olarak bir tanımlayıcı alır. \n \nÖrnekte poz numarası için `Positionsnummer` (`@194@`) niteliği ve bir ilave pozun işaretlenmesi için `TextPos` (`@1311@`) niteliği kullanılmaktadır \nKullanılan biçimlendirmeler: \n%K0 -> devamındaki metne bağlı bir çapa sahip bir daire oluşturur \n%N0 -> devamındaki metne bağlı bir çapa sahip bir sekizgen oluşturur \n \nAşağıdaki formül, `TextPos` niteliğine bağlı olarak istenen değişikliği oluşturur \n \n\\_IF\\_(@1311@=\"N\\*\")\"%N0\"+@194@+\" \"+@1311@\\_ELSE\\_\"%K0\"+@194@ \n \nFormat olarak örn. A30 kullanılmalıdır. Ek olarak bir ön metin (örn. pos.) kullanılabilir. \n \nAçıklama:\n\n| | |\n|  |  |\n| \\_IF\\_(Kontrol)Çıktı1\\_ELSE\\_Çıktı2 | Kontrolün sonucu Doğru (Wahr) ise Çıktı1, aksi halde Çıktı2 döndürülür |\n| \\_IF\\_(@1311@=\"N\\*\")Çıktı1 | 1311 (`TextPos`) niteliğinin içeriği \"N\" ile başlıyorsa Çıktı1 döndürülür |\n| \"%N0\" +@194@ +\" \" +@1311@ | Bir sekizgen oluşturmak için kontrol karakteri (Metin) Poz numarası niteliği eklenir bir boşluk karakteri eklenir TextPos niteliği eklenir |\n| \\_ELSE\\_ \"%K0\" +@194@ | Kontrol Yanlış (Falsch) döndürdüğünde 2. durum için başlangıç Bir daire oluşturmak için kontrol karakteri (Metin) Poz numarası niteliği eklenir |\n\n \nBir yapı elemanı bu etiket stili ile etiketlendiğinde poz numarası her zaman daire içinde görüntülenir. `TextPos` niteliğine örn. N1 (İlave 1 / Nachtrag 1 için) girilirse bu poz bir sekizgen ile işaretlenir. \n \n \nEkteki dosyalarda formül basit bir örnekle birlikte yer almaktadır. \n \n \n**Durum 2:** \nKapıların boşluk yüksekliği kontrol edilmek isteniyor ve net geçiş yüksekliğinin (bitmiş döşeme üst kotundan kaba lento alt kotuna kadar) altına düşülmesi durumunda bir uyarı yazdırılması, aksi halde hiçbir şey görünmemesi isteniyor. Kapı, Büyük Kapı SmartPart veya kapı makrosu yapı elemanının etiketlendiği varsayılmaktadır. \n \n1. Kapı yüksekliğinin be …",
+      "figures": [
+        "/akademi/lejant/10594_0EM7U000001TdD0_d534cfc8.png",
+        "/akademi/lejant/10594_0EM7U000001TdD1_295af95b.png"
+      ]
+    },
+    {
+      "id": "de_10869",
+      "title": "Legenden - Stahlliste mit festem Büronamen erstellen",
+      "body": "- **Kaynak URL (Alındığı Adres):** https://learnnow.allplan.com/totara/engage/resources/howto/index.php?id=10869&source=howto\n- **Kaynak ID (`resource_id`):** `10869`\n- **Resmi Salesforce / Allplan KB No:** `000007475-de`\n- **İçerik Tipi:** `knowledge_article`\n- **Dil:** `de`\n- **Kategori Ağacı:** `ALLPLAN > Allgemein > Auswertungen`\n- **Geçerli Allplan Sürümleri:** `ALLPLAN, ALLPLAN 2012, ALLPLAN 2009`\n- **Yazar & Tarih:** Erstellt am 17. Juli 2022, 18:05. Zuletzt aktualisiert am 25. Juni 2025, 09:41. | Owner: Salesforce Integration\n- **Doğrudan PDF Kılavuz URL:** -\n- **Eğitim Videosu / Webinar URL:** -\n- **İndirilen PDF, Örnek Dosya ve Ekran Görüntüleri (0 Adet):**\n - *(Ek Dosya / Görsel Yok)*\n\n\n\n**Frage:** \n \nWie kann eine Stahlliste mit einem festgelegten Büronamen erstellt werden? \n \n \n \n**Antwort**: \n \nAktivieren Sie ein neues Teilbild und wechseln Sie im CAD Navigator in das Listenmodul \n(Zusätzliche Module -> Listenerstellung). \nKopieren Sie die gewünschte Stahlliste mit der Listenverwaltung (Erzeugen -> Zusätzliche Module -> Listenerstellung -> Listenverwaltung) vom Verzeichnis **Standard** in das Verzeichnis **Büro**. Dabei muss die Dateinummer beibehalten werden, z.B. Standard - Datei 18 Stahllisten - Liste Rundstl L 1 nach Büro - Datei 18 Stahllisten - Musterfirma kopieren. Diese kopierte Liste wird mit **Listen modifizieren** geöffnet (Ändern -> Zusätzliche Module ->Listenerstellung -> Listen modifizieren). \nMit dem Befehl **Ze-Lö** werden die Zellen Kundenname Zeile 1 und Kundenname Zeile 2 in der Liste gelöscht. Jetzt erstellen Sie den gewünschten Text mit dem Befehl **Ze-Ins** (Listenbereich: Listenkopf und Zellentyp: Texte ).",
+      "figures": []
+    },
+    {
+      "id": "de_6643",
+      "title": "Lejant Kopyalama",
+      "body": "Yönetim üzerinden lejantların kopyalanması",
+      "figures": []
+    },
+    {
+      "id": "de_10888",
+      "title": "Etiket Stilleri / Lejantlar - Yedekleme ve Geri Yükleme",
+      "body": "**Soru:** \n \nBir lejantın / etiket stilinin veri alışverişi. \nBir lejant / etiket stili nasıl yedeklenir? \nBir lejant / etiket stili nasıl geri yüklenir (içe aktarılır)? \n \n \n \n**Cevap:** \n \nBir lejant her zaman **zle00x.deu** (x dosya numarasını temsil eder) lejant dosyasından (dosyalarından) ve ek bir lejant yönetim dosyası olan **zle000.deu** dosyasından oluşur. Pafta lejantları (başlık blokları) bu sırada her zaman 7 veya 8 numaralı dosyada bulunmalıdır (**zle007.deu**, **zle008.deu**). \n \nBir etiket stili her zaman **zdo00x.deu** (x dosya numarasını temsil eder) etiket stili dosyasından (dosyalarından) ve ek bir etiket stili yönetim dosyası olan **zdo000.deu** dosyasından oluşur. \n \n**a) Lejant dosyasını / etiket stili dosyasını öncelikle bilgisayarınıza kaydedin**: \n \nÖncelikle pafta lejantınızı bilgisayarda yedeklemek istediğiniz bir yedekleme klasörü tanımlayın: \n**Dosya (Datei)** -> **ProjectPilot**'u açın ve burada \"*Harici Yol (Externer Pfad)*\" düğümüne sağ fare tuşuyla tıklayın. Bağlam menüsünden **Harici yol seç... (Externen Pfad auswählen...)** seçeneğini seçin. Pafta lejantınızı bilgisayarda yedeklemek istediğiniz bir yedekleme klasörü ayarlayın: \n \n \nProjectPilot'u kapatın ve **Oluştur (Erzeugen)** -> **Ek Modüller (zusätzliche Module)** -> **Şablonlar: Raporlar, Lejantlar, Etiketler (Vorlagen: Reports,Legenden,Beschriftungen)** -> **Etiket Stillerini, Lejantları Yönet (Beschriftungsbilder,Legenden verwalten)** -> **Lejantlar (Legenden)** veya **Etiket Stilleri (Beschriftungsbilder)** yolunu seçin. \nAçılan diyalogda şimdi sol tarafta kaydedilecek dosyanın bulunduğu kaynak dizine, örneğin \"*Büro*\" üzerine tıklayın. Ardından kaydedilecek klasöre, örneğin \"*Planlegenden\\_Büroeigene*\" üzerine tıklayın ve kaydedilecek tüm lejantları/etiket stillerini işaretleyin. \nŞimdi **Kopyala (Kopieren)** üzerine tıklayın: \n \n \n \nArdından kayıt konumu olarak \"*Harici Yol (Externer Pfad)*\" öğesini seçin (bunu en başta belirlemiştiniz) -> dosya numarasını seçin (örneğin 7) -> kayıt için numaraları işaretleyin -> **Çalıştır / Uygula (Ausführen)**: \n \n \nArtık harici yol için belirlediğiniz klasörde **zle00x.deu** (veya zle007.deu) lejant dosyasını ve ek bir lejant yön …",
+      "figures": [
+        "/akademi/lejant/10888_0EM7U000001Te3a_a3b840c5.png",
+        "/akademi/lejant/10888_0EM7U000001Te3b_f6366dcc.png",
+        "/akademi/lejant/10888_0EM7U000001TeD1_8ee7091b.png",
+        "/akademi/lejant/10888_0EM7U000001TeD2_1c01ef32.png",
+        "/akademi/lejant/10888_0EM7U000001TeD3_3d46f97e.png",
+        "/akademi/lejant/10888_0EM7U000001TeD4_a3b840c5.png",
+        "/akademi/lejant/10888_0EM7U000001TeD5_7fcdb21f.png",
+        "/akademi/lejant/10888_0EM7U000001TeD6_14f716d6.png"
+      ]
+    }
+  ]
+}

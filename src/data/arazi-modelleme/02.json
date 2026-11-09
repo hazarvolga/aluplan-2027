@@ -1,0 +1,209 @@
+{
+  "no": 2,
+  "slug": "arazi-dosyasini-alma",
+  "title": "Arazi Dosyasını Alma",
+  "duration": "",
+  "sourceModule": "Proje 1 — Modül 2 & Modül 6: DXF/DWG Halihazır Harita İçe Aktarma, Büyük Koordinatlar (Ofset) ve Nokta Dosyaları",
+  "objectives": [
+    "Halihazır harita dosyalarını (`.dWG`, `.dxf`) doğru ölçü birimi (`m`, `cm`, `mm`), ölçek ve katman (layer) eşleştirmesiyle boş bir çizim dosyasına içe aktarmak (`Import`).",
+    "Büyük ülke koordinatlarına (`UTM`, `ITRF`, `ED50`) sahip harita dosyalarını içe aktarırken karşılaşılan görüntü bozulmalarını önlemek için **Ağırlık Merkezini Ayarla: Ofset (Adjust center of gravity to: Offset)** seçeneğini kullanmak.",
+    "DXF/DWG içe aktarma Seçenekleri (`Options -> General Settings`) altında 2B/3B eleman aktarımı, blok çözme ve yazı karakter seti ayarlarını yapılandırmak.",
+    "Harita altlığı dışındaki sayısal koordinat dosyalarının (`.asc`, `.csv`, `.xyz`, `LandXML`, `ESRI-Grid`) doğrudan Arazi Modülüne nasıl okutulduğunu kavramak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Halihazır Harita İçin Boş Çizim Dosyası Seçimi ve Ölçek Ayarı",
+      "body": "**Yapı Strüktürü Aç (Open on a Project-Specific Basis)** penceresinden `100 - Halihazır Harita Altlığı` çizim dosyasını aktif hale getirin. Durum çubuğundan çalışma ölçeğini vaziyet planına uygun olarak `1:500` veya `1:200` ve ölçü birimini `m` (metre) olarak ayarlayın.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "İçe Aktar (Import) Komutu ve DXF/DWG Seçenekleri",
+      "body": "**Dosya (File) -> İçe Aktar (Import) -> AutoCAD Verilerini İçe Aktar (Import AutoCAD Data)** komutunu çalıştırın (veya dosyayı doğrudan çalışma alanına sürükleyip bırakın). Dosya seçimi penceresinde sağ alttaki **Seçenekler... (Options...)** butonuna tıklayın:\n- **Genel Ayarlar (General Settings)** sekmesinde **Dosya Birimi (Unit in File)** değerini harita birimiyle (`Metre`) eşleştirin.\n- **Koordinatlar ve Uzunluk Parametreleri (Coordinate and Length Parameters)** bölümünde **Ağırlık merkezini ayarla: Ofset (Adjust center of gravity to: Offset)** seçeneğini işaretleyin. Bu seçenek, büyük UTM koordinatlarını otomatik olarak proje ofsetine kaydeder ve çizimi Allplan orijinine (`0,0,0`) taşır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Katman (Layer) ve Çizgi/Yazı Eşleştirmelerinin Kontrolü",
+      "body": "**Değiştir (Modify)** butonuyla Önizleme ve Eşleştirme (`Assignment`) penceresini açarak halihazır haritadaki eş yükselti eğrileri, ada/parsel sınırları, mevcut binalar, yollar ve kot noktası katmanlarının Allplan katmanlarına (`Layers`) aktarımını onaylayın.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "İçe Aktarılan Haritanın Ölçü Kontrolü ve Rölöve Nokta Dosyaları (.ASC / .XYZ)",
+      "body": "Harita ekrana geldikten sonra **Ölç (Measure -> Length)** aracıyla bilinen iki parsel köşesi veya karelaj ağı (`100 m` grid) arasındaki mesafeyi ölçerek ölçeğin `1:1` doğruluğunu teyit edin. Eğer elinizde DXF/DWG yerine harita mühendisinden gelen bir koordinat listesi (`.asc`, `.prn`, `.xyz`, `LandXML`) varsa **Arazi -> İçe/Dışa Aktar -> Noktaları İçe Aktar (Import Points)** komutuyla noktaları doğrudan 3B koordinatlarıyla sahneye okuyabilirsiniz.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "AutoCAD Verilerini İçe Aktar",
+      "menu": "Dosya -> İçe Aktar -> AutoCAD Verilerini İçe Aktar (AutoCAD Daten importieren)",
+      "shortcut": "Menü Çubuğu / Sürükle-Bırak",
+      "desc": "DWG ve DXF formatındaki 2B/3B halihazır harita dosyalarını çizim dosyasına aktarır."
+    },
+    {
+      "name": "İçe Aktarma Seçenekleri (Options)",
+      "menu": "İçe Aktar Diyaloğu -> Seçenekler (Optionen) -> Genel Ayarlar",
+      "shortcut": "Seçenekler Butonu",
+      "desc": "Dosya birimi, ölçek çarpanı, 2B/3B dönüşümü ve büyük koordinat ofset ayarlarını yönetir."
+    },
+    {
+      "name": "Ağırlık Merkezini Ofsete Ayarla",
+      "menu": "Seçenekler -> Genel Ayarlar -> Ağırlık merkezini ayarla: Ofset",
+      "shortcut": "Koordinat Kontrolü",
+      "desc": "Büyük ülke koordinatlarını Proje Özelliklerindeki Ofset değerine yazar ve modeli merkeze çeker."
+    },
+    {
+      "name": "Noktaları İçe Aktar (Import Points)",
+      "menu": "Çevre -> Arazi -> Noktaları İçe Aktar (Punkte importieren)",
+      "shortcut": "Arazi Görev Alanı",
+      "desc": ".asc, .re1, .re2, .reb formatındaki topoğrafik koordinat dosyalarını 3B arazi noktası olarak okur."
+    },
+    {
+      "name": "Ölç (Measure)",
+      "menu": "Hızlı Erişim / Araçlar -> Ölç (Messen)",
+      "shortcut": "Ölçüm Aracı",
+      "desc": "İçe aktarılan harita altlığındaki karelaj veya parsel kenar uzunluklarını kontrol eder."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Import - DXF \"alkisvektordaten_utm32.dxf\" - Datei",
+        "file": "11158_youtube_e-3QJ0HTPrA_873d3a39.mp4",
+        "vimeoId": "",
+        "sizeMB": 21.75,
+        "youtubeId": "e-3QJ0HTPrA"
+      },
+      {
+        "title": "Datenaustausch - DWG Import",
+        "file": "2803_vimeo_777290144_3d763fc3.mp4",
+        "vimeoId": "777290144",
+        "sizeMB": 14.33
+      },
+      {
+        "title": "Import of CAD files",
+        "file": "7199_vimeo_1018220132_8349b6d2.mp4",
+        "vimeoId": "1018220132",
+        "sizeMB": 22.42
+      },
+      {
+        "title": "Add-On Baugrube - Gelände aus Punktdatei",
+        "file": "12716_vimeo_1235282149_9f883aec.mp4",
+        "vimeoId": "1235282149",
+        "sizeMB": 43.32
+      },
+      {
+        "title": "Add-On Geometry Tools - XYZ Gelände Importieren",
+        "file": "12658_vimeo_1234953298_43249300.mp4",
+        "vimeoId": "1234953298",
+        "sizeMB": 74.72
+      },
+      {
+        "title": "Add-On Geometry Tools - ESRI-Grid Gelände import",
+        "file": "12661_vimeo_1234953896_4f0d1600.mp4",
+        "vimeoId": "1234953896",
+        "sizeMB": 98.78
+      },
+      {
+        "title": "Add-On Geometry Tools - LandXML Gelände",
+        "file": "12662_vimeo_1234954072_ef4f7ed5.mp4",
+        "vimeoId": "1234954072",
+        "sizeMB": 70.58
+      }
+    ],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_11158",
+      "title": "İçe Aktarma - DXF \"alkisvektordaten_utm32.dxf\" dosyası",
+      "body": "**Soru:** \n \n\"alkisvektordaten\\_utm32.dxf\" gibi dosyalar Allplan'a nasıl okunabilir (içe aktarılabilir)? \n \n \n \n**Cevap:** \n \nBöyle bir DXF dosyası Allplan'a veya başka bir CAD programına okunduğunda ve tüm ekrana yakınlaştırıldığında (Zoom) hiçbir şey görünmez. \nBunun nedeni, kadastral nirengi noktalarının etiketlerinin global orijinde yer alması, buna karşın kadastral nirengi noktalarının kendisinin UTM koordinatlarında, yani bu etiketten çok uzakta bulunmasıdır. \n \nBu yüzden Allplan içe aktarma sırasında DXF dosyasının ağırlık merkezini belirleyemez. \n \nBu durumda koordinatlar bir DXF görüntüleyici (Viewer) ile belirlenebilir. \nÖrneğin TrueView 2019 internetten ücretsiz olarak indirilebilir; bununla DXF dosyasını açabilir ve ortalarda yer alan herhangi bir noktayı ölçebilirsiniz (TrueView içinde \"**Measure**\" alanında \"**Locate Point**\" butonunu seçin). \n \n \nArdından bu değerleri yuvarlanmış olarak Allplan'da proje ayarlarına (**Yeni Proje, Aç (Projekt neu, öffnen)** -> projeyi işaretleyin ve kısayol menüsü üzerinden **Özellikler (Eigenschaften)** seçeneğini çağırın) ofset (Offset) olarak girin. \nÖrneğin görüntüleyicide X : \"735531\" ve Y : \"5353041\" değerlerini ölçtüyseniz, ofset koordinatları olarak X : \"735000\" ve Y : \"5353000\" girebilirsiniz. \n \n\nArdından boş bir çizim dosyasını tek başına etkinleştirin (çizim dosyasına çift tıklayın) ve Allplan program simgesi veya menü çubuğu üzerinden (**Dosya (Datei) -> İçe Aktar (Importieren) -> AutoCAD Verilerini İçe Aktar (AutoCAD Daten importieren) -> Seçenekler (Optionen)** - dişli çark simgeli buton) ayarları kontrol edin.\n\n**Sıfırla (Reset)** butonu (yarım daire şeklindeki ok simgeli buton) üzerinden ayarları Allplan tarafından önerilen standart değerlere sıfırlayın. \n3B verilere ihtiyacınız yoksa, lütfen *'Genel Ayarlar (Allgemeine Einstellungen)'* sekmesinde aktarım türü olarak **\"2D\"** seçeneğini işaretleyin, birim olarak **\"Metre (Meter)\"** seçin ve ağırlık merkezi ayarını **\"Kapalı (Aus)\"** olarak bırakın.\n\n'**Gelişmiş Ayarlar (Erweiterte Einstellungen)**' sekmesinde **\"Nitelik (Attribut)\"** seçeneğindeki işareti kaldırın.\n\nGerekirse diğer değişiklikleri yapın ve ardından ayarı onaylamak için **Tamam (OK)** …",
+      "figures": [
+        "/akademi/arazi-modelleme/11158_0EM7U000001Tdbc_b88efaad.png",
+        "/akademi/arazi-modelleme/11158_0EM7U000001Tdbd_73c5966a.png",
+        "/akademi/arazi-modelleme/11158_0EM7U000001Tdbe_3596d738.png",
+        "/akademi/arazi-modelleme/11158_0EM7U000001Tdbf_4a5e9865.png",
+        "/akademi/arazi-modelleme/11158_0EM7U000001Tdbg_21b1b51d.png",
+        "/akademi/arazi-modelleme/11158_0EM7U000001Tdbh_e2a276a5.png",
+        "/akademi/arazi-modelleme/11158_0EM7U000001Tdbi_9af64da0.png",
+        "/akademi/arazi-modelleme/11158_0EM7U000001Tdbj_b69d5b05.png",
+        "/akademi/arazi-modelleme/11158_0EM7U000001Tdbk_849b9ed3.png",
+        "/akademi/arazi-modelleme/11158_0EM7U000001Tdbl_a464017e.png"
+      ]
+    },
+    {
+      "id": "fr_9170",
+      "title": "DWG İçe Aktarma - Model Alanı - Büyük Koordinatlar",
+      "body": "**SORUN:** \n \nDXF veya DWG dosyaları nasıl içe aktarılır? \n \n**ÇÖZÜM:** \n \n**Adım 1: İçe aktarılacak dosyayı tanımlama:** \n \nBir DWG dosyası bir model alanı (espace Objet) ve bazen de (1 veya birden fazla) pafta görünümü (présentations) içerir. İçe aktarma sırasında \"**Ayrıntılar (Détails)**\" komutu aracılığıyla dosyanın önizlemesine erişebilirsiniz: \n \n \n \nÖnizlemede kırmızı bir çarpı işareti görüntülenirse bu durum dosyanın çok yeni bir sürüme ait olabileceği veya Allplan ile uyumsuz olduğu anlamına gelir. \nÖnizleme üzerinde sağ tıklayarak model alanına veya pafta görünümlerinden birine erişebilirsiniz. Dikkat: Seçeneklerde \"**Otomatik seçim (Sélection automatique)**\" kutusu etkinleştirilmişse bu tercih içe aktarılacak içeriğin seçimini etkileyecektir. \nİçe aktarma parametrelerindeki önizleme veya seçenekler aracılığıyla neyi içe aktarmak istediğinizi belirlemeniz önemlidir: \n \n \n \nAltlık olarak kullanmak üzere yalnızca model alanını istiyorsak tercihimiz \"**Çizim (model alanı) (Dessin (espace objet))**\" olacaktır. \n \n**Adım 2: Ölçek faktörünü / birimi tanımlama:** \n \nDoğru bir şekilde içe aktarmak için bazen çizimi ölçek faktörü veya birim aracılığıyla yeniden boyutlandırmak gerekir. \n \n \n \nDosya cm cinsinden tanımlanmışsa ve siz metre cinsinden çalışıyorsanız birim alanına \"cm\" girmeniz yeterlidir; Allplan verileri yeniden ölçeklendirecektir. \nBaşlangıç birimini bilmiyorsanız \"**metre (mètre)**\" olarak bırakın ve bir ölçek faktörü değeri girin. Bunu bazen 2 aşamada yapmak gerekebilir (önce faktör 1 ile ilk içe aktarma, ardından Allplan'da bir uzunluk ölçümü yaptıktan sonra belgeyi silip yeni faktörü girme [örn: 0,01]). \n \n**Adım 3: Çizim/model koordinatlarını tanımlama:** \n \nDXF veya DWG dosyaları büyük koordinatlara sahip elemanlar içeriyorsa (örn. Gauss-Krüger / Lambert koordinatlarına sahip halihazır/topoğrafik veriler), bu durum Allplan'a içe aktarıldıktan sonra performans kayıplarına yol açabilir. Verilerin sorunsuz bir şekilde içe aktarılması için aşağıdaki prosedürler kullanılabilir. \nBu prosedürler, özellikle model alanı içeren bir dosyada yapılandırmaya tıklamadan içe aktarma yaparak veya yapılandırmaya girip birimi değiştirmeden kullanılabilir. …",
+      "figures": [
+        "/akademi/arazi-modelleme/9170_0EMVi0000069Vtx_78c1e19a.png",
+        "/akademi/arazi-modelleme/9170_0EMVi0000068f8z_c1c011e7.png",
+        "/akademi/arazi-modelleme/9170_0EMVi0000069GyB_4a3ba09c.png",
+        "/akademi/arazi-modelleme/9170_0EMVi0000069Vac_98caa430.png",
+        "/akademi/arazi-modelleme/9170_0EMVi0000069WlB_f08ffecb.png",
+        "/akademi/arazi-modelleme/9170_0EMVi0000068bv0_5bfa0dfd.png",
+        "/akademi/arazi-modelleme/9170_0EMVi0000069d3V_eb0fc2c3.png",
+        "/akademi/arazi-modelleme/9170_0EMVi0000069eIv_686d9dc6.png",
+        "/akademi/arazi-modelleme/9170_0EMVi0000069aSE_70ddcc66.png",
+        "/akademi/arazi-modelleme/9170_0EMVi0000069dwM_d5e9e72e.png",
+        "/akademi/arazi-modelleme/9170_0EMVi0000069Pmy_9987a7b7.png",
+        "/akademi/arazi-modelleme/9170_0EMVi0000069Pmz_14d9f957.png",
+        "/akademi/arazi-modelleme/9170_0EMVi0000068e6T_986fa510.png",
+        "/akademi/arazi-modelleme/9170_0EMVi0000069g4b_c0b0674c.png",
+        "/akademi/arazi-modelleme/9170_0EMVi0000069T0x_e86422a6.png"
+      ]
+    },
+    {
+      "id": "en_10631",
+      "title": "İçe aktarma (Import): büyük koordinatlarla çalışma, dört seçenek",
+      "body": "**Soru:** \n \nBüyük koordinatlara sahip yapı elemanları içeren DXF ve DWG dosyalarını nasıl içe aktarabilirim? \n \n \n \n**Cevap:** \n \nBüyük koordinatlara sahip yapı elemanları içeren içe aktarılmış DXF ve DWG dosyaları Allplan'da performans sorunlarına yol açabilir. Bu verilerle ilgili sorunları önlemek için aşağıdaki seçeneklere sahipsiniz:\n\n**Seçenek 1: bir ofset (offset) ayarlama** \nProjede bir ofset tanımlayın. Allplan 2011 ve sonraki sürümlerde bunu yeni bir proje oluştururken doğrudan yapabilirsiniz. Mevcut projeler için ofset koordinatlarını daha sonra belirleyebilirsiniz. Bunu yapmak için **Dosya (File)** menüsü -> **Proje Aç (Open Project)** -> ilgili projeyi seçin -> kısayol menüsünü açın ve **Özellikler (Properties)** seçeneğine tıklayın. (Allplan 2009 ve önceki sürümlerde, **Araçlar (Tools)** menüsü -> **Seçenekler (Options)** -> **Gelişmiş Çizim (Advanced Draft)** -> **Ayarlar (Settings)** sekmesini seçin). Ofset, seçenek 2'de açıklandığı gibi içe aktarma sırasında otomatik olarak da ayarlanabilir.\n\n**Seçenek 2: ağırlık merkezini ayarla: ofset (adjust center of gravity to: offset)** \nİçe aktarırken, **Seçenekler (Options)** -> **Genel Ayarlar (General Settings)** sekmesini (V2008 ve önceki sürümlerde **Gelişmiş Transfer Ayarları (Advanced Transfer Settings)** sekmesi) seçin ve *Ağırlık merkezini ayarla (Adjust center of gravity to)* kısmında \"Ofset (Offset)\" onay kutusunu işaretleyin. Sistem projede otomatik olarak bir ofset ayarlar. Sonuç olarak, dosyanın başlangıç noktası (= min-maks kutusunun merkezi) koordinat sisteminin başlangıç noktasına (orijine) ayarlanır. Daha önce bir ofset belirlediyseniz veya içe aktarılacak veriler büyük koordinatlar içermiyorsa bu seçenek kullanılamaz.\n\n**Seçenek 3: ağırlık merkezini ayarla: orijin (adjust center of gravity to: origin)** \nİçe aktarırken, **Seçenekler (Options)** -> **Genel Ayarlar (General Settings)** sekmesini (V2008 ve önceki sürümlerde **Gelişmiş Transfer Ayarları (Advanced Transfer Settings)** sekmesi) seçin ve *Ağırlık merkezini ayarla (Adjust center of gravity to)* kısmında \"Orijin (Origin)\" onay kutusunu işaretleyin. Bu işlem, dosyanın merkezini Allplan koordinat sisteminin başlangıç noktasına (or …",
+      "figures": []
+    },
+    {
+      "id": "en_10577",
+      "title": "Büyük koordinatlar",
+      "body": "**Soru:**\n\n* Neden yapı elemanı oluşturamıyorum?\n* Neden bir çizimi taşıyamıyorum?\n* Yapı elemanları neden doğru oluşturulmuyor?\n* Tapu/kadastro müdürlüğünden gelen bir DXF dosyasını içe aktardığımda program neden çöküyor?\n* Çevrelenmiş bir alanın dış konturu neden doğru algılanmıyor?\n* Neden gölgeleri hesaplayamıyorum?\n* Yapı elemanları animasyonda neden doğru görüntülenmiyor?\n* Ölçü metninin bazı kısımları neden eksik?\n* Ekranın içeriği neden aniden dönüyor?\n* Yapı elemanlarını taşırken veya kopyalarken neden önizleme alamıyorum?\n* Alanlar neden doğru hesaplanmıyor?\n\n \n \n \n**Bu sorunların nedenini bulma:** \n \nProje ayarlarında (**Dosya (File) -> Yeni Proje, Proje Aç (New Project, Open Project)** -> projeyi seçin ve kısayol menüsünü açın -> **Özellikler (Properties)**; Allplan 2009 ve öncesi: **Araçlar (Tools)** -> **Seçenekler (Options)** -> **Gelişmiş Çizim (Advanced Draft)** -> **Ayarlar (Settings)**) bir ofset (offset) ayarlanıp ayarlanmadığını kontrol edin. Ofset koordinatları varsa onay kutusunun işaretini kaldırın. \n \n**Araçlar (Tools)** -> **Ölç (Measure)** (->) **Koordinatlar (Coordinates)** seçeneğini seçin. \nPlan görünümünde çizimin ortasına tıklayın. \nÇok büyük değerler varsa (örneğin x/y/z değerleri 5000 m'den büyükse), bu sorunların nedenini buldunuz demektir. \n \nSistem, çok büyük koordinatlara sahip verileri hesaplarken ve görüntülerken sorun yaşar. Çok büyük koordinatlara sahip ne kadar çok veriniz varsa bu etki o kadar büyük olur. \n \n \n \n**Çözüm:** \n\n* **Araçlar (Tools) -> Seçenekler... (Options...) -> Çalışma alanı (Desktop environment) -> Genel (General)** yoluna tıklayın ve **Büyük koordinatlarla çalışmayı optimize et (Optimize working with large coordinates)** seçeneğini işaretleyin (Allplan 2009 ve öncesi: **Araçlar (Tools) -> Seçenekler (Options) -> Genel Seçenekler (Global Options) -> Çeşitli (Miscellaneous)** sekmesi -> **Büyük koordinatlarla çalışmayı optimize et (Optimize working with large coordinates)**). Bundan sonra Allplan'ı yeniden başlatmanız gerekir. Aksi takdirde bu ayarın hiçbir etkisi olmaz.\n\nBu bir kullanıcı ayarıdır ve her kullanıcı için ayrı ayrı tanımlamanız gerekir.\n\n* Genellikle en iyi çözüm, verileri Allplan orijinin …",
+      "figures": []
+    },
+    {
+      "id": "de_2803",
+      "title": "Veri alışverişi - DWG İçe Aktarma",
+      "body": "Model alanı (Modellbereich)",
+      "figures": []
+    },
+    {
+      "id": "en_7199",
+      "title": "CAD dosyalarının içe aktarılması",
+      "body": "SCIA Engineer'da CAD dosyalarının nasıl içe aktarılacağını öğrenin.",
+      "figures": []
+    },
+    {
+      "id": "de_12716",
+      "title": "Add-On Baugrube (Yapı Çukuru Eklentisi) - Nokta Dosyasından Arazi",
+      "body": "Bu video, bir nokta dosyası yardımıyla arazinin nasıl oluşturulduğunu göstermektedir. Üçgen ağların (TIN) oluşturulması, arazinin çeşitli fonksiyonlarla düzenlenmesi ve eşyükselti eğrisi etiketlemesi için akış/eğim çizgilerinin (Falllinien) eklenmesi gibi adımlar açıklanmaktadır. Yapı çukuru modülü, arazinin dinamik olarak uyarlanmasına ve sınırlar ile görünümler gibi parametrelerin her zaman değiştirilmesine olanak tanır.",
+      "figures": []
+    },
+    {
+      "id": "de_12658",
+      "title": "Add-On Geometry Tools (Geometri Araçları Eklentisi) - XYZ Arazi İçe Aktarma",
+      "body": "Bu eğitim videosu, XYZ arayüzünün entegrasyonu dahil olmak üzere Allplan **Geometri Araçları (Add-On Geometrie Tools)** Sürüm 2.004'ün yeni fonksiyonlarını tanıtmaktadır. Yükseklik modellerinin swisstopo'dan nasıl indirileceği, içe aktarılacağı ve Allplan'da nasıl işleneceği gösterilmektedir. Süreç; verilerin indirilmesini, Allplan'a içe aktarılmasını, noktaların üçgen ağa dönüştürülmesini, 3B yüzeylerin oluşturulmasını ve üçgen ağların basitleştirilmesini kapsar. Verimli veri işleme ve temizlemeye yönelik ipuçları da verilmektedir.",
+      "figures": []
+    },
+    {
+      "id": "de_12661",
+      "title": "Add-On Geometry Tools (Geometri Araçları Eklentisi) - ESRI-Grid Arazi İçe Aktarma",
+      "body": "Bu eğitim videosu, Allplan **Geometri Araçları (Add-On Geometrie Tools)** Sürüm 2.004'te ESRI-Grid verilerinin entegrasyonunu tanıtmaktadır. Graubünden Kantonu'nun portalı olan GeoGR'den verilerin ücretsiz olarak nasıl indirilebileceği, ardından Allplan'a nasıl içe aktarılacağı ve inşaat projeleri için nasıl kullanılacağı gösterilmektedir. Grid verileriyle nasıl çalışılacağı, eşyükselti eğrilerinin nasıl üretileceği ve Allplan'ın büyük veri kümeleriyle nasıl başa çıkabildiği açıklanmaktadır.",
+      "figures": []
+    },
+    {
+      "id": "de_12662",
+      "title": "Add-On Geometry Tools (Geometri Araçları Eklentisi) - LandXML Arazi",
+      "body": "Bu eğitim videosu, Allplan **Geometri Araçları (Add-On Geometrie-Tools)** Sürüm 2.004'ün yeni fonksiyonlarını, özellikle de LandXML formatının içe ve dışa aktarımını tanıtmaktadır. Arazi verilerinin harita ölçümü ve yapı çukuru kazısı için nasıl kullanılabileceği, LandXML formatında hangi elemanların yer aldığı ve bunların Allplan'a nasıl içe aktarıldığı gösterilmektedir. Bu noktada arayüzün arazi yüzeyine odaklandığı ve aksların bilinçli olarak modellenmediği vurgulanmaktadır. Dokulu ve dokusuz arazi verilerinin içe aktarımına yönelik çeşitli örneklerin yanı sıra üstyapı projelerindeki kullanımı ve LandXML dosyası olarak dışa aktarma için üçgenleme (triangülasyon) fonksiyonu sunulmaktadır.",
+      "figures": []
+    }
+  ]
+}

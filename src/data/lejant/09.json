@@ -1,0 +1,99 @@
+{
+  "no": 9,
+  "slug": "donati-lejantini-olusturma",
+  "title": "Donatı Lejantını Oluşturma",
+  "duration": "",
+  "sourceModule": "Proje 1 — Modül 5: Donatı Lejantı Paketleme, Filtreleme ve Alt Liste Kurulumu",
+  "objectives": [
+    "Hazırlanan başlık, ana poz satırı, büküm şeması hücresi ve çap bazlı özet tablosunu Lejant Tanımla (Define Legend) ile birleştirmek.",
+    "Obje Filtresini Çubuk Donatı (Bar Reinforcement / Rundstahl) veya Hasır Donatı (Mesh Reinforcement) olarak ayarlamak.",
+    "Alt Liste (Sublist) mekanizmasıyla ana poz tablosunun hemen altına Çap Bazlı Özet Tablosunu (Cross-diameter summary) bağlamak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Donatı Obje Filtresi ve Kayıt Numarası Seçimi",
+      "body": "**Lejant Tanımla (Define Legend)** komutunu açın, **Ofis -> Mühendislik / Donatı** altında kayıt numarasını seçin ve **Filtre** olarak `Çubuk Donatı Yerleşimi (Bar Placement)` nesnesini tanımlayın.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Üst Bilgi, Ana Poz Satırı ve Satır Kaydırma Vektörü",
+      "body": "Tablo başlığını **Üst Bilgi (Header)** olarak, poz ve büküm şeması satırını **Ana Satır (Body)** olarak seçin; büküm şemasının yüksekliğine uygun satır aralığını (`dY`) tıklayın.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Çap Özeti Alt Listesi, Toplam Satırı ve Referans Noktası",
+      "body": "Çap bazlı özet ve genel toplam ağırlık (`Toplam kg`) bölgesini **Toplam / Alt Liste** olarak bağlayın ve sağ üst veya sol üst köşeyi yerleştirme referans noktası olarak seçip donatı lejantını kaydedin.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Lejant Tanımla (Define Legend)",
+      "menu": "Kullanıcı Tanımlı Objeler -> Lejantlar -> Lejant Tanımla",
+      "shortcut": "Lejant Tanımla",
+      "desc": "Donatı lejantının Üst Bilgi, Ana Satır, Alt Liste ve Toplam bölgelerini seçip Ofis klasörüne kaydeder."
+    },
+    {
+      "name": "Alt Liste Ata (Assign Sublist)",
+      "menu": "Lejant Tanımla -> Alt Liste (Sublist / Unterliste)",
+      "shortcut": "Alt Liste Butonu",
+      "desc": "Ana poz listesinin altına çap bazlı toplam ağırlık özet tablosunu otomatik ekler."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_10594",
+      "title": "Etiket Stilleri - Formül Koleksiyonu - Koşullar için örnekler (mantıksal uygunluk kontrolleri ve benzerleri)",
+      "body": "**Soru:** \n \nEtiket stillerinde çerçeveler (Umrandungen) ve değerlerin gösterimi koşullara bağlanabilir mi? \n \n \n**Cevap:** \n \n**Durum 1:** \nYapı elemanlarına genellikle bir daire (%K0) ile çerçevelenen poz numaraları verilir. Bir değişiklik olması durumunda yapı elemanlarının bazı kısımları yeniden numaralandırılır ve ilave/revizyon pozu (Nachtragsposition) olarak bir tanımlayıcı alır. \n \nÖrnekte poz numarası için `Positionsnummer` (`@194@`) niteliği ve bir ilave pozun işaretlenmesi için `TextPos` (`@1311@`) niteliği kullanılmaktadır \nKullanılan biçimlendirmeler: \n%K0 -> devamındaki metne bağlı bir çapa sahip bir daire oluşturur \n%N0 -> devamındaki metne bağlı bir çapa sahip bir sekizgen oluşturur \n \nAşağıdaki formül, `TextPos` niteliğine bağlı olarak istenen değişikliği oluşturur \n \n\\_IF\\_(@1311@=\"N\\*\")\"%N0\"+@194@+\" \"+@1311@\\_ELSE\\_\"%K0\"+@194@ \n \nFormat olarak örn. A30 kullanılmalıdır. Ek olarak bir ön metin (örn. pos.) kullanılabilir. \n \nAçıklama:\n\n| | |\n|  |  |\n| \\_IF\\_(Kontrol)Çıktı1\\_ELSE\\_Çıktı2 | Kontrolün sonucu Doğru (Wahr) ise Çıktı1, aksi halde Çıktı2 döndürülür |\n| \\_IF\\_(@1311@=\"N\\*\")Çıktı1 | 1311 (`TextPos`) niteliğinin içeriği \"N\" ile başlıyorsa Çıktı1 döndürülür |\n| \"%N0\" +@194@ +\" \" +@1311@ | Bir sekizgen oluşturmak için kontrol karakteri (Metin) Poz numarası niteliği eklenir bir boşluk karakteri eklenir TextPos niteliği eklenir |\n| \\_ELSE\\_ \"%K0\" +@194@ | Kontrol Yanlış (Falsch) döndürdüğünde 2. durum için başlangıç Bir daire oluşturmak için kontrol karakteri (Metin) Poz numarası niteliği eklenir |\n\n \nBir yapı elemanı bu etiket stili ile etiketlendiğinde poz numarası her zaman daire içinde görüntülenir. `TextPos` niteliğine örn. N1 (İlave 1 / Nachtrag 1 için) girilirse bu poz bir sekizgen ile işaretlenir. \n \n \nEkteki dosyalarda formül basit bir örnekle birlikte yer almaktadır. \n \n \n**Durum 2:** \nKapıların boşluk yüksekliği kontrol edilmek isteniyor ve net geçiş yüksekliğinin (bitmiş döşeme üst kotundan kaba lento alt kotuna kadar) altına düşülmesi durumunda bir uyarı yazdırılması, aksi halde hiçbir şey görünmemesi isteniyor. Kapı, Büyük Kapı SmartPart veya kapı makrosu yapı elemanının etiketlendiği varsayılmaktadır. \n \n1. Kapı yüksekliğinin be …",
+      "figures": [
+        "/akademi/lejant/10594_0EM7U000001TdD0_d534cfc8.png",
+        "/akademi/lejant/10594_0EM7U000001TdD1_295af95b.png"
+      ]
+    },
+    {
+      "id": "de_10869",
+      "title": "Legenden - Stahlliste mit festem Büronamen erstellen",
+      "body": "- **Kaynak URL (Alındığı Adres):** https://learnnow.allplan.com/totara/engage/resources/howto/index.php?id=10869&source=howto\n- **Kaynak ID (`resource_id`):** `10869`\n- **Resmi Salesforce / Allplan KB No:** `000007475-de`\n- **İçerik Tipi:** `knowledge_article`\n- **Dil:** `de`\n- **Kategori Ağacı:** `ALLPLAN > Allgemein > Auswertungen`\n- **Geçerli Allplan Sürümleri:** `ALLPLAN, ALLPLAN 2012, ALLPLAN 2009`\n- **Yazar & Tarih:** Erstellt am 17. Juli 2022, 18:05. Zuletzt aktualisiert am 25. Juni 2025, 09:41. | Owner: Salesforce Integration\n- **Doğrudan PDF Kılavuz URL:** -\n- **Eğitim Videosu / Webinar URL:** -\n- **İndirilen PDF, Örnek Dosya ve Ekran Görüntüleri (0 Adet):**\n - *(Ek Dosya / Görsel Yok)*\n\n\n\n**Frage:** \n \nWie kann eine Stahlliste mit einem festgelegten Büronamen erstellt werden? \n \n \n \n**Antwort**: \n \nAktivieren Sie ein neues Teilbild und wechseln Sie im CAD Navigator in das Listenmodul \n(Zusätzliche Module -> Listenerstellung). \nKopieren Sie die gewünschte Stahlliste mit der Listenverwaltung (Erzeugen -> Zusätzliche Module -> Listenerstellung -> Listenverwaltung) vom Verzeichnis **Standard** in das Verzeichnis **Büro**. Dabei muss die Dateinummer beibehalten werden, z.B. Standard - Datei 18 Stahllisten - Liste Rundstl L 1 nach Büro - Datei 18 Stahllisten - Musterfirma kopieren. Diese kopierte Liste wird mit **Listen modifizieren** geöffnet (Ändern -> Zusätzliche Module ->Listenerstellung -> Listen modifizieren). \nMit dem Befehl **Ze-Lö** werden die Zellen Kundenname Zeile 1 und Kundenname Zeile 2 in der Liste gelöscht. Jetzt erstellen Sie den gewünschten Text mit dem Befehl **Ze-Ins** (Listenbereich: Listenkopf und Zellentyp: Texte ).",
+      "figures": []
+    },
+    {
+      "id": "de_11050",
+      "title": "Lejantlar - Yeni bir lejant oluşturma (Örnek: Döşeme yüzeyi, en üst katman)",
+      "body": "**Soru:** \n \nÖrneğin döşeme yüzeylerinin malzemeye göre metraj gösterimi (VOB) için bir lejant kullanıcı tarafından nasıl tanımlanabilir? \n \n \n \n**Cevap:** \n \nKendi lejantlarınızı oluşturmak için - örnekte alt lejantları olmayan basit bir lejant gösterilmektedir - aşağıdaki hazırlıklar yapılmalıdır.\n\n* Lejantlar her zaman 1:100 ölçekli çizim dosyalarında oluşturulmalıdır. Çizim dosyası başka bir ölçeğe sahipse, lejantla ilişkili metin boyutlarının kontrol edilmesi zordur.\n* Lejant ile gösterilecek birden fazla objenin oluşturulması. \n Burada: Döşeme ince yapılarına sahip (farklı büyüklükte) mahaller \n \n* Gösterilecek verilerin belirlenmesi, niteliklerin, formüllerin ve benzerlerinin listelenmesi ve araştırılması \n \n İstek: Mahallerin döşeme yüzeyi ve tekil döşeme yüzeylerinin metrajı yapılmalıdır. \n Sıralama en üst katmanın (üst kaplamanın) malzemesine göre yapılmalıdır. \n VOB alanı (malzemeye göre toplam olarak) hesaplanmalı ve tüm kaplamaların bir toplamı oluşturulmalıdır. \n\n | | |\n |  |  |\n | **İstenen Gösterim** | **Nitelik/Formül - Çözüm Yaklaşımı** |\n | Bir döşeme yüzeyinin en üst katmanının malzemesi | Malzeme (@508@) niteliği malzemeyi içerir. İnce yapı yüzeylerinde her katmanın nitelikleri özel bir çağrı ile (diğer SSS makalelerine de bakın) hesaplanabilir. **MT\\_Boden(@508@;0)** en üst katmanın malzemesini gösterir. |\n | En üst katmanın VOB alanı | VOB alanının hesaplanması için iki yaklaşım seçilebilir. VOB\\_Alanı (VOB\\_Fläche) (@81@) niteliği HER ZAMAN VOB alanını gösterirken, VOB\\_Miktarı (VOB\\_Menge) (@100@) niteliği seçilen hakediş birimine göre dinamik olarak ilgili miktarı gösterir. VOB miktarının yalnızca Allplan standardında tanımlanmış hakediş kurallarına sahip bir imalat kaleminin seçilmesi durumunda VOB'a uygun bir miktar gösterebileceğine dikkat edilmelidir. **MT\\_Boden(@81@;0)** en üst katmanın VOB alanını gösterir. Alternatif olarak burada çoğunlukla doğrudan nitelik kullanılabilir. |\n* Hangi objelere göre filtreleme yapılacağının planlanması. \n Burada: Döşeme yüzeyleri objesine göre bir filtreleme yapılmalıdır. Filtreleme, lejantın tanımlanması sırasında **SELECT** olarak adlandırılan kısımda ayarlanır.\n* Lejantın görsel görünümünün ön …",
+      "figures": [
+        "/akademi/lejant/11050_0EM7U000001Tdh5_4c0afca1.png",
+        "/akademi/lejant/11050_0EM7U000001Tdh6_051353ad.png",
+        "/akademi/lejant/11050_0EM7U000001TdmF_1593f5f6.png",
+        "/akademi/lejant/11050_0EM7U000001TdmG_8f39c27e.png",
+        "/akademi/lejant/11050_0EM7U000001TdmH_14db8c83.png",
+        "/akademi/lejant/11050_0EM7U000001TdmI_8be976c0.png",
+        "/akademi/lejant/11050_0EM7U000001TdmJ_3f5c6749.png",
+        "/akademi/lejant/11050_0EM7U000001TdmK_f8af41b8.png",
+        "/akademi/lejant/11050_0EM7U000001TdmL_68334f2f.png",
+        "/akademi/lejant/11050_0EM7U000001TdmM_79048ebe.png",
+        "/akademi/lejant/11050_0EM7U000001TdmN_bd435891.png",
+        "/akademi/lejant/11050_0EM7U000001TdmO_6b0f4339.png",
+        "/akademi/lejant/11050_0EM7U000001TdmP_e32d7c30.png",
+        "/akademi/lejant/11050_0EM7U000001TdmQ_37eb1981.png",
+        "/akademi/lejant/11050_0EM7U000001TdmR_ee96d2c6.png",
+        "/akademi/lejant/11050_0EM7U000001TdmS_bd6213b8.png",
+        "/akademi/lejant/11050_0EM7U000001TdmT_a3048946.png",
+        "/akademi/lejant/11050_0EM7U000001TdmU_9f695b7f.png",
+        "/akademi/lejant/11050_0EM7U000001TdmV_59601d7b.png",
+        "/akademi/lejant/11050_0EM7U000001TdmW_9f03f45b.png",
+        "/akademi/lejant/11050_0EM7U000001TdmX_93bd6a29.png",
+        "/akademi/lejant/11050_0EM7U000001TdmY_8abccb12.png",
+        "/akademi/lejant/11050_0EM7U000001TdmZ_a7dcd456.png",
+        "/akademi/lejant/11050_0EM7U000001Tdma_fe9b964a.png"
+      ]
+    }
+  ]
+}

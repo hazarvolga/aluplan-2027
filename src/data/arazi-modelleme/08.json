@@ -1,0 +1,153 @@
+{
+  "no": 8,
+  "slug": "3b-arazinin-duzleme-donusturulmesi",
+  "title": "3B Arazinin Düzleme Dönüştürülmesi",
+  "duration": "",
+  "sourceModule": "Proje 1 — Modül 3 & Modül 6: 3B Yüzeyi Düzleme / Referans Yüzeye Dönüştürme (3D Surface to Plane / Reference Surface - Bezugsfläche)",
+  "objectives": [
+    "Mimari yapı elemanlarının (duvar, kolon, bahçe duvarı, bina kütlesi, çatı/döşeme) eğimli arazi yüzeyini alt veya üst sınır olarak tanıyabilmesi için **3B Yüzeyi Düzleme Dönüştür (Convert 3D Surface to Plane / 3D-Fläche in Ebene)** ve **Referans Yüzey (Reference Surface / Bezugsfläche)** kavramlarını öğrenmek.",
+    "3B arazi yüzeyini **Serbest Düzlemler (Custom Planes / Freie Ebenen)** veya **Düzlemler Paleti (Planes Palette)** içine yerel referans yüzeyi olarak kaydetmek.",
+    "Düzleme dönüştürülen arazi yüzeyinin kat/çizim dosyası içindeki davranışını ve kesitlerdeki görünürlüğünü kontrol etmek.",
+    "Bahçe duvarlarının, istinat duvarlarının ve çevre binalarının taban kotunu bu eğimli arazi düzlemine (`Alt Seviye = Özel Düzlem / Referans Yüzey`) nasıl kilitleyeceğimizi hazırlamak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Neden 3B Araziyi Düzleme (Plane / Reference Surface) Dönüştürüyoruz?",
+      "body": "Allplan'da standart mimari elemanlar (`Duvar`, `Kolon`, `Döşeme`, `Temel`) yüksekliklerini **Alt Düzlem (Bottom Level)** ve **Üst Düzlem (Top Level)** referanslarından alır. 3B arazi yüzeyini bir **Serbest Düzlem (Custom Plane)** veya **Referans Yüzey (Reference Surface / Bezugsfläche)** haline getirdiğinizde, arazi üzerine çizeceğiniz her mimari eleman (bahçe duvarı, yol kaplaması, çevre binaları) alt kotunu otomatik olarak arazinin eğimine uydurur.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "3B Yüzeyi Düzleme Dönüştür (3D Surface to Reference Plane) İşlemi",
+      "body": "`103` numaralı çizim dosyasındaki (veya yeni bir çizim dosyasındaki) 3B arazi yüzeyi ekranda açıkken:\n1. **Mimari -> Düzlemler (Planes / Ebenen) -> 3B Yüzeyi Düzleme Dönüştür (Convert 3D Surface to Plane / 3D-Fläche in Ebene)** veya **Referans Yüzey Tanımla (Reference Surface / Bezugsfläche)** komutunu çalıştırın.\n2. Çizim alanındaki 3B arazi yüzeyine tıklayın.\n3. Eğer **Referans Yüzey (Bezugsfläche)** olarak kaydediyorsanız yüzeye anlamlı bir isim verin (örn. `Arazi_Yuzeyi_Referans`). Böylece **Düzlemler Paleti (Planes Palette)** içinde bu yüzey tüm mimari komutlar tarafından seçilebilir hale gelir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Dönüştürülen Arazi Düzleminin Kontrolü ve Kenar Görünümü",
+      "body": "Düzleme dönüştürülen arazi modeli planda kesikli/özel düzlem çizgisiyle, İzometrik ve Animasyon (`F4`) pencerelerinde ise topoğrafik yüzey olarak görünür. Üzerine gelindiğinde araç ipucunda (`Tooltip`) `Serbest Düzlem / Çatı Düzlemi / Referans Yüzey` olarak tanımlandığını doğrulayın.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Mimari Elemanların Yükseklik Diyaloğunda Arazi Düzlemini Seçme Testi",
+      "body": "Herhangi bir mimari komutta (örn. `Duvar`) **Yükseklik (Height)** butonuna tıkladığınızda **Alt Seviye: Özel Düzleme / Referans Yüzeye Bağla (`Arazi_Yuzeyi_Referans`)** seçeneğinin aktif olduğunu kontrol edin.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "3B Yüzeyi Düzleme Dönüştür",
+      "menu": "Mimari -> Düzlemler -> 3B Yüzeyi Düzleme Dönüştür (3D-Fläche in Ebene)",
+      "shortcut": "Düzlemler Grubu",
+      "desc": "Seçilen 3B arazi yüzeyini mimari elemanların bağlanabileceği serbest düzleme dönüştürür."
+    },
+    {
+      "name": "Referans Yüzey (Reference Surface)",
+      "menu": "Düzlemler Paleti (Planes Palette) -> Referans Yüzey Ekle (Bezugsfläche)",
+      "shortcut": "Düzlemler Paleti",
+      "desc": "3B arazi yüzeyini isimlendirilmiş bir referans yüzeyi olarak bina strüktürüne kaydeder."
+    },
+    {
+      "name": "Serbest Düzlem (Custom Plane)",
+      "menu": "Mimari -> Düzlemler -> Serbest Düzlem (Freie Ebene)",
+      "shortcut": "Düzlemler Grubu",
+      "desc": "Üç nokta veya eğim tanımlayarak yerel eğimli referans düzlemleri oluşturur."
+    },
+    {
+      "name": "Düzlemi 3B Yüzeye Dönüştür",
+      "menu": "Serbest Modelleme -> Elemanları Dönüştür -> Düzlemi 3B Yüzeye",
+      "shortcut": "Dönüştürme Aracı",
+      "desc": "Serbest düzlemi tekrar 3B poligon yüzeye geri çevirir."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Add-On Geometry Tools - 3D und Bezugsflächen",
+        "file": "12655_vimeo_1234953052_9e33bc9a.mp4",
+        "vimeoId": "1234953052",
+        "sizeMB": 121.44
+      },
+      {
+        "title": "Add-On Baugrube - Neuer Workflow mit Bezugsflächen",
+        "file": "12780_vimeo_1235314389_cedc7fe5.mp4",
+        "vimeoId": "1235314389",
+        "sizeMB": 139.22
+      },
+      {
+        "title": "ALLPLAN Add-On PatchWork - Übernahme 3D Fläche",
+        "file": "12563_vimeo_1234295179_fa01eb39.mp4",
+        "vimeoId": "1234295179",
+        "sizeMB": 45.41
+      },
+      {
+        "title": "Add-On PatchWork - Ebene und geneigte Fläche",
+        "file": "12567_vimeo_1234295521_d369f970.mp4",
+        "vimeoId": "1234295521",
+        "sizeMB": 84.38
+      }
+    ],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_12655",
+      "title": "Add-On Geometry Tools (Geometri Araçları Eklentisi) - 3B ve Referans Yüzeyleri",
+      "body": "Bu eğitim videosu, farklı eğimlere sahip 3B yüzeylerin üretilmesini sağlayan Allplan **Geometri Araçları (Add-On Geometrie Tools)** eklentisinin en yeni fonksiyonlarını tanıtmaktadır. Geometriyi optimize etmek amacıyla gereksiz noktaların ve kısa üçgenlerin nasıl ortadan kaldırılabileceği gösterilmektedir. Pratik örnekler üzerinden, bu temizleme işleminin mimari yapı elemanlarının sorunsuz entegrasyonuna nasıl katkı sağladığı ve referans yüzeylerinin düzenlenmesini nasıl kolaylaştırdığı açıklanmaktadır.",
+      "figures": []
+    },
+    {
+      "id": "de_12780",
+      "title": "Add-On Baugrube (Yapı Çukuru Eklentisi) - Referans Yüzeyleriyle Yeni İş Akışı",
+      "body": "Bu videoda, mimarların ve inşaat mühendislerinin çalışma şeklinde önemli bir iyileştirme sunan Allplan **Yapı Çukuru (Add-On Baugrube)** eklentisinin en yeni 3.0.0.15 sürümü tanıtılmaktadır. Yapılan uyarlama, duvarlar ve döşemeler gibi mimari yapı elemanları için referans yüzeyleri üretilmesine ve bunların verimli bir şekilde yönetilmesine olanak tanır. Bir inşaat mühendisliği bürosundan alınan örnek üzerinden, yeni işlevselliğin inşaat projelerinin tasarımını nasıl kolaylaştırdığı gösterilmektedir. **Düzlem Yöneticisi (Ebenen Manager)** kullanımı ve 3B yüzeylerin entegrasyonu dahil olmak üzere iş akışı detaylı olarak açıklanmaktadır. Değiştiricilerin (Modifikatoren) düzenlenmesini ve uyarlanmasını önemli ölçüde basitleştiren referans yüzeylerinin yeni görünürlük özelliğinin avantajları vurgulanmaktadır.",
+      "figures": []
+    },
+    {
+      "id": "de_12563",
+      "title": "ALLPLAN Add-On PatchWork - 3B Yüzey Devralma",
+      "body": "Bu eğitim videosu, istenilen her türlü geometriyi modellemek amacıyla Allplan Add-On PatchWork eklentisi ile 3B yüzeylerin ve özellikle bu yüzeylerin kenarlarının nasıl devralınabileceğini göstermektedir. Yamaçtaki bir merdiven örneği üzerinden, yollar için 3B yüzeylerin kullanılması ve bunların kenarlarının PatchWork içine entegre edilmesiyle bu işlemin nasıl çalıştığı anlatılmaktadır. 3B yüzeylerin bulunduğu bölgelerde kot bilgilerinin doğrudan 3B yüzeyden devralınması nedeniyle ek kot tanımlamalarına ihtiyaç duyulmadığı açıklanmaktadır. Son olarak, oluşturulan yüzeyin 3B spline eğrileri ile nasıl birleştirilebileceği gösterilmektedir.",
+      "figures": []
+    },
+    {
+      "id": "de_12567",
+      "title": "Add-On PatchWork - Düzlem ve Eğimli Yüzey",
+      "body": "Bu eğitim videosu, daireler, çizgiler ve noktalar kullanarak karmaşık arazi formları oluşturmak ve değiştirmek için Allplan PatchWork eklentisinin kullanımını göstermektedir. Yüzeylerin nasıl düzleştirilebileceği, eğimlendirilebileceği ve mevcut kotlara uyarlanabileceği anlatılmaktadır; bu özellik, örneğin belirli eğim gereksinimlerine sahip otoparkların tasarımını kolaylaştırır.",
+      "figures": []
+    },
+    {
+      "id": "de_11348",
+      "title": "Referans Yüzey - Zemin içinde su yalıtımı uygulaması (Yan Yüzey)",
+      "body": "**Soru:** \n \nKarmaşık formlu bir arazide, zemine temas eden su yalıtımı yüzeyi arazi kesitine uygun olarak nasıl oluşturulabilir? \n \n \n \n**Cevap:** \n \nÖn Koşul: \nHalihazırda bir düzlem modeli mevcuttur ve etkin çizim dosyalarından birinde istenen araziye karşılık gelen bir 3B yüzey bulunmaktadır. \n(Aşağıdaki SSS makalesinde parsel sınırlarının kot gidişatına dayanarak eğrisel bir 3B yüzeyi nasıl oluşturabileceğiniz açıklanmıştır: <https://connect.allplan.com/de/faqid/20181011062228.html>) \n \nFonksiyonlar: \n**Düzlemler (Ebenen) Paleti** \n**Actionbar (Aksiyon Çubuğu)**: **İnce Yapı (Ausbau)** görevi -> **Yan Yüzey (Seitenfläche)** \n**Actionbar olmadan**: **Oluştur (Erzeugen) -> Mimari (Architektur) -> Mahaller, Alanlar, Katlar (Räume, Flächen, Geschosse) -> Yan Yüzey (Seitenfläche)****1**. \n \nProsedür: \nDüzlem modelini arazi referans yüzeyi ile tamamlama\n\n* **Düzlemler (Ebenen)** paletini açın\n* **(1)** Kilit sembolünü (**Değişiklik Modu Açık/Kapalı (Modifikationsmodus Ein/Aus)**) seçin ve istenen düzlem çiftinin üzerindeki **(2)** başlığı seçin (burada **Zemin Kat (Erdgeschoss)**)\n\n \n\n* **Referans yüzey ekle/değiştir (Bezugsfläche einfügen/ersetzen)** **(3)** fonksiyonunu seçin ve 3B yüzeyi seçin.\n* Gerekirse referans yüzeyin adı doğrudan değiştirilebilir (örn. Arazi (Gelände))\n* Değişiklikleri devralmak ve değişiklik modundan çıkmak için kilit sembolünü (**Değişiklik Modu Açık/Kapalı (Modifikationsmodus Ein/Aus)**) tekrar seçin.\n\n \nAraziye referanslı yan yüzey oluşturma\n\n* **Yan Yüzey (Seitenfläche)** fonksiyonunu açın ve ince yapı katmanlarını istediğiniz gibi ayarlayın.\n* **Yükseklik (Höhe)** ayarlarını açın \n **(4)** Üst kenar için referans düzlem seçimi -> yeni eklenen **Arazi (Gelände)** referans düzlemini seçin ve onaylayın. \n **(5)** Alt kenar için referans düzlem seçimi -> örn. temellerin alt kenarını (**Alt Kenar F (Unterkante F)**) referans düzlem olarak seçin ve onaylayın.\n\n,\n\n* Ayarları kapatın ve istenen yapı kütlesi kenarlarında yan yüzeyi oluşturun.\n\n \n \n \n \n**Not:** \n \n**1)** 2018 sürümünden itibaren **Actionbar (Aksiyon Çubuğu)** yapılandırmasını kullanan kullanıcılar, Alt tuşu ile menü çubuğunu geçici olarak görüntüleyebilirler.",
+      "figures": [
+        "/akademi/arazi-modelleme/11348_0EM7U000001TdF0_02a26789.png",
+        "/akademi/arazi-modelleme/11348_0EM7U000001TdF1_e7f23598.png",
+        "/akademi/arazi-modelleme/11348_0EM7U000001TdF2_bb9e8e28.png"
+      ]
+    },
+    {
+      "id": "de_9135",
+      "title": "Çatı - İki kat boyunca devam eden çatı düzlemi",
+      "body": "**Soru:** \n \nAllplan'da içinde 2 kat bulunacak eğimli bir çatı için çatı düzlemi (Dachebene) nasıl oluşturulur? \n \n \nÖrnekler: \n \n \n \n \n \n \n \n**Cevap:** \n \nBöyle bir çatı düzlemi için de aşağıdakilerin bir kombinasyonunu öneriyoruz:\n\n* **Yapı Strüktürü (Bauwerkstruktur) ile çalışma** ve\n* **Çatı Peyzajı / Genel Çatı Düzlemi (Dachlandschaft)** kullanımı.\n\nProsedüre genel bakış: \n \n1. Çatı düzlemi oluşturma \n2. Çatı düzleminden çatı peyzajı (Dachlandschaft) oluşturma \n3. Çatı peyzajını ilgili katlara (Yapı Strüktürü / BWS içindeki strüktür düğümlerine) atama \n \n \nLütfen Allplan'da **Çatı Düzlemi (Dachebene)** ile **Çatı Peyzajı (Dachlandschaft)** arasında ayrım yaptığımızı unutmayın. Çatı düzlemi yalnızca içinde bulunduğu çizim dosyasında etkilidir. Çatı peyzajı ise bir çatı düzlemine yapılan bağlantıdır ve Yapı Strüktürü (BWS) içindeki **Düzlem Yöneticisi (Ebenenmanager)** aracılığıyla tek seferde farklı katlara (BWS içindeki strüktür düğümlerine) dağıtılabilir. Böylece bir yandan çatı düzlemlerini farklı çizim dosyalarına kopyalama zahmetinden kurtulursunuz, diğer yandan da çatı peyzajı ilişkiseldir (asociatif): Bir çatı peyzajını farklı katlara atadıysanız ve orijinal çatı düzlemini değiştirirseniz, bu değişikliği tek bir adımda tüm veya seçili çatı peyzajlarına kolayca aktarabilirsiniz.\n\nİşte **ayrıntılı** prosedür: \n \n**1. Çatı düzlemi oluşturma**\n\n* Yapı strüktürünüzde, üzerinde çatı düzleminizi oluşturacağınız bir çizim dosyası açın. Organizasyonel nedenlerle bu çizim dosyasında yalnızca çatı düzlemi bulunmalıdır. Çizim dosyasına örneğin \"Orijinal Çatı Düzlemi\" adını verin. Bu çizim dosyasını katların içine değil, Yapı Strüktürü'nün (BWS) üst düzey bir alanına yerleştirmek mantıklıdır. Çünkü hem doğrudan tek bir kata ait değildir hem de ileride orijinal çatı düzleminde değişiklik yapmak istediğinizde onu hızla tekrar bulabilirsiniz.\n\n* Şimdi bu çizim dosyasında her zamanki gibi çatı düzlemini (varsa gerekli çatı pencereleri/güvercinlikler dahil) oluşturun.\n\n**2.** **Çatı düzleminden Çatı Peyzajı (Dachlandschaft) oluşturma**\n\n* Çatı düzlemi tamamlandıktan sonra **Yapı Strüktürü'ne (BWS)** ve oradan da **Düzlem Yöneticisi'ne (Ebenenmanager)** geçin. Burada ** …",
+      "figures": [
+        "/akademi/arazi-modelleme/9135_0EM7U000001TdGP_5893ad76.png",
+        "/akademi/arazi-modelleme/9135_0EM7U000001TdGQ_e1d8843b.png",
+        "/akademi/arazi-modelleme/9135_0EM7U000001TdHy_19132621.png",
+        "/akademi/arazi-modelleme/9135_0EM7U000001TdHz_7c51315c.png",
+        "/akademi/arazi-modelleme/9135_0EM7U000001TdI0_be37aa50.png",
+        "/akademi/arazi-modelleme/9135_0EM7U000001TdI1_49f0bc7b.png",
+        "/akademi/arazi-modelleme/9135_0EM7U000001TdI2_49f0bc7b.png",
+        "/akademi/arazi-modelleme/9135_0EM7U000001TdI3_9c0c0992.png",
+        "/akademi/arazi-modelleme/9135_0EM7U000001TdI4_2d90f3e3.png",
+        "/akademi/arazi-modelleme/9135_0EM7U000001TdI5_12d86815.png",
+        "/akademi/arazi-modelleme/9135_0EM7U000001TdI6_d4a66c41.png",
+        "/akademi/arazi-modelleme/9135_0EM7U000001TdI7_38159e65.png",
+        "/akademi/arazi-modelleme/9135_0EM7U000001TdI8_3dbeac58.png",
+        "/akademi/arazi-modelleme/9135_0EM7U000001TdI9_7423eab8.png",
+        "/akademi/arazi-modelleme/9135_0EM7U000001TdIA_99088cc9.png"
+      ]
+    }
+  ]
+}

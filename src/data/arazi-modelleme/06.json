@@ -1,0 +1,150 @@
+{
+  "no": 6,
+  "slug": "3b-arazi-modelinin-olusturulmasi",
+  "title": "3B Arazi Modelinin Oluşturulması",
+  "duration": "",
+  "sourceModule": "Proje 1 — Modül 3 & Modül 6: SAM Elemanlarını 3B Elemanlara Dönüştürme (Convert DTM Elements to 3D Surface / 3D Mesh)",
+  "objectives": [
+    "Sayısal Arazi Modelinin (SAM / DTM) neden doğrudan serbest 3B Boolean işlemlerine veya referans düzlem dönüşümüne girmediğini; bunun için önce **3B Elemanlara Dönüştürülmesi (Convert DTM Elements)** gerektiğini anlamak.",
+    "**SAM Elemanlarını Dönüştür (Convert DTM Elements / DGM-Elemente wandeln)** komutuyla SAM modelini başka bir çizim dosyasına **3B Çokgen Yüzey (3D Surface / 3D-Fläche)** veya **3B Ağ (3D Mesh)** olarak aktarmak.",
+    "Orijinal SAM modelini bozmadan korumak için dönüşüm işlemini hedef çizim dosyası (`103 - 3B Arazi Yüzeyi`) seçerek yürütmek.",
+    "3B arazi yüzeyine doku (`Çim / Toprak / Uydu Ortofoto`) atayarak Animasyon penceresinde (`F4`) gerçekçi arazi görselleştirmesi elde etmek."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Orijinal SAM Modelini Koruma ve Hedef Çizim Dosyası Belirleme",
+      "body": "Sayısal Arazi Modeli (`SAM / DTM`), üzerinde izohips, şev ve kübaj hesabı yapılabilen özel bir jeodezik veri tipidir. Onu 3B serbest modelleme araçlarıyla işlemek için dönüştürürken orijinal SAM çizim dosyasını (`102`) kaybetmemek gerekir. Komut içindeki **Hedef Çizim Dosyası (Target Drawing File)** seçeneğine boş bir çizim dosyası numarası (örn. `103 - 3B Arazi Modeli`) girin.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "SAM Elemanlarını Dönüştür (Convert DTM Elements) Komutunun Uygulanması",
+      "body": "**Çevre -> Sayısal Arazi Modeli -> SAM Elemanlarını Dönüştür (Convert DTM Elements / DGM-Elemente wandeln)** komutunu çalıştırın:\n1. Açılan araç çubuğunda hedef dönüşüm tipini **3B Elemanlar (3D Elements / 3D-Elemente)** ve alt tipini **3B Yüzey / Çokgen Yüzey (3D Surface / Polygonfläche)** olarak seçin.\n2. Hedef çizim dosyası olarak `103` numarasını belirleyin.\n3. Ekrandaki Sayısal Arazi Modeline (`SAM`) tıklayın. Allplan tüm üçgen ağını tek bir birleşik 3B yüzeye dönüştürerek `103` numaralı çizim dosyasına yazar.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "103 Numaralı Çizim Dosyasına Geçiş ve 3B Arazi Yüzeyinin Kontrolü",
+      "body": "`102` numaralı SAM çizim dosyasını kapatıp yalnızca `103 - 3B Arazi Modeli` çizim dosyasını aktif yapın. Farenin sağ tuşuyla yüzeye tıklayıp **Özellikler (Properties)** penceresini açtığınızda elemanın artık standart bir **3B Yüzey (3D Surface / 3D-Fläche)** olduğunu göreceksiniz.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "3B Arazi Yüzeyine Yüzey Materyali veya Ortofoto Doku Atama",
+      "body": "3B arazi yüzeyini seçin, **Özellikler (Properties)** paletinden **Yüzey (Surface)** kutusuna tıklayın ve kütüphaneden doğal çim/toprak dokusu veya hava fotoğrafı (`Ortofoto`) atayın.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "SAM Elemanlarını Dönüştür",
+      "menu": "Çevre -> Sayısal Arazi Modeli -> SAM Elemanlarını Dönüştür (DGM-Elemente wandeln)",
+      "shortcut": "SAM / DTM Grubu",
+      "desc": "Sayısal arazi modelini 3B Yüzeye, 3B Katıya veya 2B/3B Konstrüksiyon çizgilerine çevirir."
+    },
+    {
+      "name": "Hedef Tip: 3B Yüzey (3D Surface)",
+      "menu": "SAM Elemanlarını Dönüştür Araç Çubuğu -> 3B-Yüzey (3D-Fläche)",
+      "shortcut": "Seçenek Araç Çubuğu",
+      "desc": "SAM üçgenleme ağını tek parça 3B poligon yüzey olarak hedef çizim dosyasına kaydeder."
+    },
+    {
+      "name": "Elemanları Dönüştür (Convert Elements)",
+      "menu": "Değiştir -> Ek Modüller -> 3B Modelleme -> Elemanları Dönüştür",
+      "shortcut": "3B Modelleme",
+      "desc": "3B elemanları SAM'a veya mimari elemanları 3B yüzeye/katıya dönüştürür."
+    },
+    {
+      "name": "Özel Yüzey Ata (Assign Custom Surface)",
+      "menu": "3B Yüzey Sağ Tık -> Özel Yüzey Ata (Oberfläche zuweisen)",
+      "shortcut": "Kısayol Menüsü",
+      "desc": "3B arazi yüzeyine çim, toprak veya ortofoto uydu görüntüsü kaplaması atar."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Add-On Baugrube - Gelände 2D und 3D Ableiten",
+        "file": "12757_vimeo_1235293073_a1969551.mp4",
+        "vimeoId": "1235293073",
+        "sizeMB": 23.16
+      },
+      {
+        "title": "Allplan Baugrube - 3D Flächen übernehmen",
+        "file": "3286_vimeo_887205958_6af1f8f3.mp4",
+        "vimeoId": "887205958",
+        "sizeMB": 18.02
+      },
+      {
+        "title": "Allplan Excavation Pit - Take over 3D Surfaces",
+        "file": "3405_vimeo_887609959_2b01fde4.mp4",
+        "vimeoId": "887609959",
+        "sizeMB": 15.53
+      }
+    ],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "fr_9311",
+      "title": "Arazi modelleyici",
+      "body": "**SORUN:** \n \nArazi modülü Allplan kullanıcıları tarafından genellikle az bilinir ve tam olarak anlaşılmaz. \n \n**ÇÖZÜM:** \n \nBu makale modülün başlıca araçlarını açıklamayı amaçlamaktadır.\n\nBu modüle erişmek için öncelikle rol değiştirmeniz ve **Çevre / Arazi (Environnement)** rolüne geçmeniz gerekir. \n \nBu modül içinde arazi noktası dosyalarını içe veya dışa aktarabilirsiniz. .re1, .re2, .reb ve .asc formatları Allplan'a doğrudan içe aktarılabilir. Diğer formatlar için nokta dosyalarınızı dönüştürmek ve ardından içe aktarmak üzere Scalypso eklentisini kullanabilirsiniz. \n \nAllplan üzerinde doğrudan 3B arazi noktaları oluşturmak da mümkündür. \n \nArdından 3B bir arazi ağı (Sayısal Arazi Modeli - MT3D) oluşturmak için içe aktarılan veya manuel olarak konumlandırılan 3B arazi noktalarını üçgenlemek (ağ oluşturmak) yeterlidir. \n \nArazinizin gösterimini yönetebilir ve topoğrafyayı renk geçişi (gradyan) içeren bir dolgu biçiminde geçici olarak görüntüleyebilirsiniz. \n \n**Dış sınır (contour extérieur)** aracıyla ağın dış sınırını oluşturabilir veya yeniden sınırlandırabilirsiniz. \n \nEşyükselti eğrilerini (courbes de niveaux) çok kolay bir şekilde oluşturabilirsiniz. \n \n**Ağ noktası (Point de maillage)** aracıyla ağ noktalarını ekleyebilir, değiştirebilir veya silebilirsiniz. \n \n**MT3D ağına eleman ekle (ajouter élément au maillage MT3D)** aracıyla mevcut ağınıza farklı eleman tiplerini (nokta, çizgi, poligon çizgisi, spline) entegre edebilirsiniz. Entegre edilecek elemanın plandaki konumuna göre ek kot noktaları yerleştirilecektir. \n \nAyrıca **Boşluk açma (évidement)** fonksiyonuyla arazinizin bir kısmında boşluk açabilirsiniz. \n \nBir profil kesiti çizmek ve 2B bir profil şeması çıkarmak oldukça kolaydır. Belirli bir profil kesiti (örn: bir yol ekseni) için mevcut bir 2B çizgiyi veya spline'ı referans olarak almak mümkündür. \n \n**Adım 1:** Bir profil kesiti tanımlayın. \n \n**Adım 2:** Daha önce oluşturulan profil kesitinden bir profil şeması çıkarın. \n \nİlk arazi, dolgu (remblai) veya kazı (déblai) yapmak üzere şev (talus) fonksiyonları yardımıyla değiştirilebilir. \n**Genel şev (talus général)** aracı bir platformun oturma alanını ve yapılacak şevlerin eğimini tanımlama …",
+      "figures": [
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfSD_8e03becf.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfX3_f59b4909.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tdrq_677ea60d.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfdV_4d3d07fa.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfgj_6714924e.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfjx_391a5b44.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfon_fe2a6cb2.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tfvF_05064fc0.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tg05_ec995132.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tWsN_e1032fe7.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tg6X_3809d03c.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003ta9D_f910474b.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003teER_e58f33f8.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tg89_41f80b82.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tgGD_0e5359fe.png",
+        "/akademi/arazi-modelleme/9311_0EMVi000003tYCF_3a92348f.png"
+      ]
+    },
+    {
+      "id": "de_12757",
+      "title": "Add-On Baugrube (Yapı Çukuru Eklentisi) - Arazi 2B ve 3B Türetme",
+      "body": "Palet yardımıyla sayısal bir yapı çukurundan 2B veya 3B görünümleri nasıl kolayca türetebileceğinizi öğrenin. Parametreleri seçebilir, 2B elemanları dışa aktarabilir ve istediğiniz konumlara yerleştirebilirsiniz. 2B gösterim, Allplan komutlarıyla ilave değişiklikler yapılmasına olanak tanır. 3B gösterim için malzeme özellikleri içeren ve kolayca açılıp kapatılabilen (görünür/gizli yapılabilen) eleman katı modelleri dışa aktarılır.",
+      "figures": []
+    },
+    {
+      "id": "es_6403",
+      "title": "Allplan İpuçları | 3B Elemanı Sayısal Arazi Modeline (MDT) Dönüştürme",
+      "body": "# Allplan İpuçları | 3B Elemanı Sayısal Arazi Modeline (MDT) Dönüştürme",
+      "figures": []
+    },
+    {
+      "id": "de_3286",
+      "title": "Allplan Kazı Çukuru - 3B Yüzeyleri devralma",
+      "body": "Bu videoda bir kazı oluşturmak için bir 3B yüzeyi nasıl kullanabileceğinizi görebilirsiniz.\n\n#KazıÇukuru #Arazi",
+      "figures": []
+    },
+    {
+      "id": "en_3405",
+      "title": "Allplan Kazı Çukuru - 3B Yüzeyleri Devralma",
+      "body": "Bu videoda bir kazı oluşturmak için 3B bir yüzeyi nasıl kullanabileceğinizi görebilirsiniz.",
+      "figures": []
+    },
+    {
+      "id": "de_10967",
+      "title": "DGM - Ortho-Foto als Textur für eine Gelände-Animation",
+      "body": "- **Kaynak URL (Alındığı Adres):** https://learnnow.allplan.com/totara/engage/resources/howto/index.php?id=10967&source=howto\n- **Kaynak ID (`resource_id`):** `10967`\n- **Resmi Salesforce / Allplan KB No:** `000007278-de`\n- **İçerik Tipi:** `knowledge_article`\n- **Dil:** `de`\n- **Kategori Ağacı:** `ALLPLAN > Umgebung > Gelände`\n- **Geçerli Allplan Sürümleri:** `ALLPLAN, ALLPLAN 2025, ALLPLAN 2024, ALLPLAN 2023, ALLPLAN 2022, ALLPLAN 2014, ALLPLAN 2013, ALLPLAN 2012, ALLPLAN 2009`\n- **Yazar & Tarih:** Erstellt am 17. Juli 2022, 18:03. Zuletzt aktualisiert am 7. Juli 2025, 15:32. | Owner: Salesforce Integration\n- **Doğrudan PDF Kılavuz URL:** -\n- **Eğitim Videosu / Webinar URL:** -\n- **İndirilen PDF, Örnek Dosya ve Ekran Görüntüleri (0 Adet):**\n - *(Ek Dosya / Görsel Yok)*\n\n\n\n**Frage:** \n \nWie kann für ein Gelände in der Animation das dazugehörige Landschaftsfoto als Textur eingepasst hinterlegt werden \n \n \n \n**Antwort:** \n \nDamit ein Landschaftsfoto in der Animation als Textur lagerichtig auf ein Digitales Geländemodell (DGM) gemappt werden kann, muss dieses als Geo-referenziertes Orthofoto vorliegen. Zudem müssen die Geländekoordinaten des DGM mit denen des Orthofotos übereinstimmen. \n \nAktivieren Sie in Allplan für das verwendete DGM die Option \"T-Grnd\" (**Ändern->Gelände->Digitales Geländemodell->DGM modifizieren-> T-Grnd**). \nIn den Oberflächeneinstellungen der Animation aktivieren Sie bei der Texturbelegung die Option \"Metrisch\" sowie die Option \"Textur aktiviert\". \nDesweiteren ist erforderlich, dass Sie in den Oberflächeneinstellungen bei der Option \"Skalierung\" die Ausdehnung des Bildes für die X - und Y- Richtung eingeben. \nUm die Ausdehnung des Bildes richtig erfassen zu können kann es notwendig sein das Bild zuvor in einem Teilbild georeferenziert als Pixelfläche zu importieren und die Bildabmaße über die Messfunktion zu ermitteln. \nWählen Sie im letzten Schritt in den Oberflächeneinstellungen der Animation das Orthofoto als Textur für das darzustellende Gelände. \n \nZusätzlicher Aufwand wird nötig, wenn das verwendete DGM zwar lagerichtig ist, aber eine geringere Flächenausdehnung als das verwendete Orthofoto hat. \nHierbei gilt, dass die Fläche des DGM …",
+      "figures": []
+    },
+    {
+      "id": "en_10902",
+      "title": "Arazi animasyonu için doku (texture) olarak ortofoto kullanma",
+      "body": "**Soru:** \n \nAraziyi animasyonda göstermek istiyorum. İlgili peyzaj/arazi fotoğrafını doku (texture) olarak nasıl oturtabilirim? \n \n \n \n**Cevap:** \n \nBir arazi fotoğrafının animasyonda doku olarak bir sayısal arazi modeline (SAM/DTM) doğru şekilde kaplanabilmesi için bu fotoğrafın coğrafi referanslı bir ortofoto olarak mevcut olması gerekir. Ek olarak, SAM'ın (DTM) arazi koordinatları ortofotonun koordinatlarıyla eşleşmelidir. \n \nAllplan'da, kullanılan SAM (DTM) için \"T Plan\" seçeneğini belirleyin (**Modifikasyon (Modify) -> Arazi (Terrain) -> Sayısal Arazi Modeli (Digital Terrain Model) -> SAM Değiştir (Modify DTM) -> T Plan**). \nAnimasyonun yüzey ayarlarında, 'Doku uygula (Apply texture)' alanında \"Metrik (Metric)\" ve \"Doku etkin (Texture activated)\" seçeneklerini belirleyin. \nEk olarak, 'Yeniden Boyutlandır (Resize)' alanında görüntünün X ve Y yönlerindeki boyutunu belirtmeniz gerekir. \nGörüntünün boyutunu doğru şekilde girebildiğinizden emin olmak için önce görüntüyü coğrafi referanslı bir bitmap alanı olarak bir çizim dosyasına içe aktarmanız ve \"Ölç (Measure)\" aracını kullanarak boyutlarını belirlemeniz gerekebilir. \nSon olarak, animasyonun yüzey ayarlarında görüntülenecek arazi için doku olarak ortofotoyu seçin. \n \nSAM (DTM) doğru konumlandırılmışsa ancak alanı kullanılan ortofotonun alanından daha küçükse ek adımlar gereklidir. \n\"Dış Sınır (Exterior Boundary)\" aracını kullanarak SAM'ın (DTM) alanını henüz küçültmediğiniz varsayılmaktadır. \nOrtofotonun animasyonda arazi modeli için doku olarak doğru şekilde kullanılabilmesi için SAM'ın (DTM) boyutunun fotoğrafın boyutuyla eşleşmesi gerekir. \nSonuç olarak, SAM (DTM) alanının büyütülmesi gerekir. \n \nAncak daha sonra SAM'ın (DTM) dokuyla birlikte animasyonu için önemli olduğundan, önce SAM'ın mevcut dış sınırını kaydetmeniz gerekir. Bunu yapmak için arazi verilerini bir çizgi nitelik dosyasına (line attribute file) kaydedin. \n \nAllplan'da **Oluştur (Create) -> Arazi (Terrain) -> Sayısal Arazi Modeli (Digital Terrain Model) -> Dosya Arayüzü (File Interface)** üzerine tıklayın ve aşağıdaki seçenekleri belirleyin: \n \n- D Tipi (F Type) = LinAtt \n- G/Ç (I/O) = O file \n \nSeçimi onaylamak için \"Uygula (Apply)\" düğm …",
+      "figures": []
+    }
+  ]
+}

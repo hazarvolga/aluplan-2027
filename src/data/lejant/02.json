@@ -1,0 +1,130 @@
+{
+  "no": 2,
+  "slug": "bir-lejantin-parcalari",
+  "title": "Bir Lejantın Parçaları",
+  "duration": "",
+  "sourceModule": "Proje 1 — Modül 4: Lejant Şablon Mimarisi (Header, Body, Sublist, Summary, Footer)",
+  "objectives": [
+    "Bir Allplan lejant şablonunu oluşturan 5 temel bileşeni (Üst Bilgi, Ana Satır, Alt Liste, Toplam/Özet Satırı, Alt Bilgi) tanımak.",
+    "Sabit metinler, 2B tablo çerçeve çizgileri ve dinamik Hücre (Cell / Zelle) elemanlarının görev dağılımını öğrenmek.",
+    "Sıralama kriteri (Sort sequence), gruplama ve sayfa kırılımı (Page break) kurallarını anlamak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Üst Bilgi (Header / Kopfzeile) ve Sütun Başlıkları",
+      "body": "**Üst Bilgi (Header)** bölgesi lejantın başında bir kez (veya her yeni sütun/sayfa başında) basılır. Tablo adını, proje adı niteliğini ve sütun başlık çerçevelerini içerir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Ana Satır (Body / Hauptzeile) ve Tekrarlama Mantığı",
+      "body": "**Ana Satır (Body)** lejantın kalbidir. Seçilen filtreye (örn. `Obje = Mahal` veya `Obje = Çubuk Donatı`) uyan her nesne için bu satır bir kez çoğaltılır. İçindeki **Hücreler (Cells / Zellen)** nesnenin niteliklerini (`@507@` Oda Adı, `@224@` Taban Alanı vb.) okur.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Toplam/Özet Satırı (Summary / Summenzeile) ve Alt Bilgi (Footer)",
+      "body": "**Toplam Satırı (Summary)** sayısal hücrelerin toplamını (`SUM`) veya ortalamasını yazdırır. Donatı lejantlarında her çap için ayrı toplam ağırlık (`Ø8, Ø12, Ø16...`) ve genel toplam ağırlık burada üretilir.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Üst Bilgi (Header / Kopfzeile)",
+      "menu": "Lejant Değiştir -> Üst Bilgi (Header / Kopfzeile)",
+      "shortcut": "Bileşen 1",
+      "desc": "Tablonun en üstünde yer alan başlık bandı, sütun başlıkları (Poz, Adet, Çap, Boy, Alan) ve firma logosu."
+    },
+    {
+      "name": "Ana Satır (Body / Hauptzeile)",
+      "menu": "Lejant Değiştir -> Ana Satır (Body / Hauptzeile)",
+      "shortcut": "Bileşen 2",
+      "desc": "Filtreye uyan her yapı elemanı (veya her poz) için aşağıya doğru tekrarlanan veri satırı ve hücreleri."
+    },
+    {
+      "name": "Alt Liste (Sublist / Unterliste)",
+      "menu": "Lejant Değiştir -> Alt Liste (Sublist / Unterliste)",
+      "shortcut": "Bileşen 3",
+      "desc": "Ana satırın içindeki alt bileşenleri (örn. mahalin kaplama katmanları veya çok katmanlı duvar katmanları) listeler."
+    },
+    {
+      "name": "Toplam Satırı (Summary / Summenzeile)",
+      "menu": "Lejant Değiştir -> Toplam/Özet (Summary / Summenzeile)",
+      "shortcut": "Bileşen 4",
+      "desc": "Gruplanan veya listelenen elemanların ara toplamını ve genel toplamını (Toplam m², Toplam kg/ton) hesaplar."
+    },
+    {
+      "name": "Alt Bilgi (Footer / Fußzeile)",
+      "menu": "Lejant Değiştir -> Alt Bilgi (Footer / Fußzeile)",
+      "shortcut": "Bileşen 5",
+      "desc": "Sayfa sonu çizgisi, tarih, sayfa numarası veya açıklama notlarını barındırır."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Legende modifizieren mit Erklärung der Begriffe",
+        "file": "6644_vimeo_990106499_d0f673c7.mp4",
+        "vimeoId": "990106499",
+        "sizeMB": 21.38
+      }
+    ],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_6644",
+      "title": "Kavramların Açıklamasıyla Lejant Değiştirme",
+      "body": "Bir lejant nasıl değiştirilebilir?",
+      "figures": []
+    },
+    {
+      "id": "de_11307",
+      "title": "Etiket Stilleri - Etiket stillerinin içeriği",
+      "body": "**Soru:** \n \nBir etiket stilinde (Beschriftungsbild) hangi niteliklerin kullanıldığı nasıl öğrenilebilir? \n \n \n \n**Örnek Durumlar:**\n\n* Etiketlenmiş veriler mevcut, ancak orijinal etiket stili mevcut değil / bulunamıyor.\n* Bir etiket stili arıyorsunuz ve standart etiketlerin neleri değerlendirdiğini bilmek istiyorsunuz.\n* İş arkadaşlarınızın verileri üzerinde çalışmaya devam etmeniz gerekiyor, ancak mevcut etiketin doğru şekilde değişmesi için hangi nitelikleri değiştirmeniz gerektiğini bilmiyorsunuz\n* Metrajınızda çizim dosyasında etiketlenmiş olanlarla aynı değerlere sahip olmak istiyorsunuz.\n\n \n**Durum 1 - Bir etiket stilinde hangi nitelikler mevcut.** \nKendi etiket stilinizi veya bir standart etiket stilini kullanılan nitelikler açısından incelemek istiyorsunuz. \nBunun için aşağıdaki adımları izleyin: \n \n- **Etiket Stili (Beschriftungsbild)** fonksiyonunu çağırın \n \n \n \n- Giriş Seçenekleri (Eingabeoptionen) -> **Oku (Lesen)** \n \n \n \n- İncelenecek etiket stilini **seçin** ve çizim dosyasına yerleştirin. \n \n \nEtiket stiline bağlı olarak birden fazla folyo (Folie) ortaya çıkacaktır. Tekil folyoların hangi ayarlarla (ölçekler veya çizim tipleri) kaydedildiği okunamaz. \n \n- Giriş Seçenekleri (Eingabeoptionen) -> **Modi** -> örn. İşlev (Funktion) **(1**) metnini seçin. \n(Numaralandırılmış örnekler aşağıda kısaca daha yakından incelenecektir.) \n \n \nSeçimden sonra Etiket Stili (Beschriftungsbild) araç çubuğu görüntülenir. İçinde çeşitli ayarlar görünür. \n \n \n**Temel Ayarlar:** \n \n**Format (Biçim)**: Çıktı biçiminin ayarı. Burada **10** karakterlik bir metin çıktısına **(A)** izin veren bir metin biçimi ayarlanmıştır. Daha uzun metinler burada kesilir. Diğer biçimler örneğin maks. 8 karakterlik (virgül dahil) ve bunun 3'ü ondalık basamak olan sayısal çıktı için F8.3 veya kot biçimi olarak K15.3'tür. Bununla ilgili daha fazla bilgiyi Yardım'da bulabilirsiniz. \n**Anpass (Uyarla)**: Uyarla fonksiyonu etkinleştirildiğinde metin boyutu ölçeğe göre uyarlanmaz. Ölçekten bağımsız olarak metnin ihtiyaç duyduğu alan aynı kalır. \n**DIM (Birim)**: Burada - sayısal çıktılarda - birim ayarlanabilir. Doğrudan bir nitelik çıktısı kullanıldığında değerler (mümkünse) seçilen birime gö …",
+      "figures": [
+        "/akademi/lejant/11307_0EM7U000001TdDA_09a214c9.png",
+        "/akademi/lejant/11307_0EM7U000001TdDB_0ed94683.png",
+        "/akademi/lejant/11307_0EM7U000001TdDC_70179970.png",
+        "/akademi/lejant/11307_0EM7U000001TdDD_11dc365c.png",
+        "/akademi/lejant/11307_0EM7U000001TdDE_6b6ec24d.png",
+        "/akademi/lejant/11307_0EM7U000001TdDF_abd8da22.png",
+        "/akademi/lejant/11307_0EM7U000001TdDG_77797bbc.png",
+        "/akademi/lejant/11307_0EM7U000001TdDH_88fa68de.png",
+        "/akademi/lejant/11307_0EM7U000001TdDI_871593a3.png",
+        "/akademi/lejant/11307_0EM7U000001TdDJ_09a214c9.png",
+        "/akademi/lejant/11307_0EM7U000001TdDK_db937216.png",
+        "/akademi/lejant/11307_0EM7U000001TdDL_ba46191d.png",
+        "/akademi/lejant/11307_0EM7U000001TdDM_28e37380.png"
+      ]
+    },
+    {
+      "id": "de_10641",
+      "title": "Etiket Stilleri - Biçim ayarları",
+      "body": "**Soru:** \n \nBir etiket stilindeki (Beschriftungsbild) bir metin örn. nasıl Kalın (Fett) olarak gösterilebilir? \n \n \n \n**Cevap:** \n \nEtiket stillerinde doğrudan yalnızca sınırlı biçimlendirmeler (normal metne kıyasla) kullanılabilir. \n \nDoğrudan **Etiket Stili (Beschriftungsbild)** fonksiyonunda bir niteliği (veya yerleştirilmiş bir formülü) yerleştirirken veya değiştirirken metin yüksekliği, metin genişliği, yazı tipi ve sütun açısı üzerinde değişiklik yapılabilir. \n \n \nNitelik çizim dosyasına yerleştirildikten sonra **Özellikler (Eigenschaften)** paleti ek olanaklar sunar. \n \n**Özellikler (Eigenschaften)** paletinde tekil nitelik için metinlerdekiyle aynı ayarlar yapılabilir. \n \nBiçim (Format) \n- Kalem kalınlığı (yalnızca Allplan standart yazı tiplerinde etkilidir, True-Type veya OpenType yazı tiplerinde etkili değildir) \n- Çizgi rengi \n- Katman \n- Kalem/Çizgi tipi/Renk özelliklerinin katmana bağlanması \n \nEleman (Element) \n- Ayarlarıyla birlikte metin bloğu etrafında çerçeve \n- Pencere arka plan rengi veya seçilebilir başka bir arka plan rengi ile arka plan dolgusu \n- Kalın (Fett), İtalik (Kursiv), Altı çizili (Unterstrichen) ve Üstü çizili (Durchgestrichen) gibi yazı tipi vurgulamaları. \n \n \nBu biçimlendirmelerin avantajı nispeten kolay uygulanabilir olmalarıdır. Bu sırada her zaman bir niteliğin veya bir formülün tüm ifadesi dikkate alınır. \nDezavantajı ise bir yandan niteliğin değerine bağlı olarak değişken şekilde veya başka nitelikler tarafından kontrol edilerek bir biçim özelliğinin değiştirilememesi, diğer yandan bir ifadenin belirli kısımlarının farklı şekilde biçimlendirilememesidir. \n \n**Formüllerde Biçimlendirme Olanakları** \nBir metnin çıktısını almaya yönelik bir formülün içinde (örn. A50 formatı) farklı kontrol karakterleriyle bir biçimlendirme elde edilebilir. Bunun için bir biçimlendirmenin başlangıcı ve sonu için birer karakter kombinasyonu gereklidir. Başlangıç karakteri ile bitiş karakteri arasında kalan metin biçimlendirmeye uygun olarak gösterilir. \n \n**Biçimlendirmeler Bölüm 1** \nAşağıdaki biçimlendirmeler metin düzenleyicide de eklenebilir. Orada biçimlendirmeler sadeleştirilir ve yalnızca etkileriyle gösterilir. Kontrol karakterlerinin …",
+      "figures": [
+        "/akademi/lejant/10641_0EM7U000001TdUV_37baaa34.png",
+        "/akademi/lejant/10641_0EM7U000001TdUW_3ec07482.png",
+        "/akademi/lejant/10641_0EM7U000001TdUr_8a5e26d6.png",
+        "/akademi/lejant/10641_0EM7U000001TdUs_6bc57392.png",
+        "/akademi/lejant/10641_0EM7U000001TdUt_33c72e0a.png",
+        "/akademi/lejant/10641_0EM7U000001TdUu_52a880f7.png",
+        "/akademi/lejant/10641_0EM7U000001TdUv_029f8502.png",
+        "/akademi/lejant/10641_0EM7U000001TdUY_4ba206e3.png",
+        "/akademi/lejant/10641_0EM7U000001TdUX_a910d704.png",
+        "/akademi/lejant/10641_0EM7U000001TdUZ_8382c1af.png",
+        "/akademi/lejant/10641_0EM7U000001TdUe_c03297d4.png",
+        "/akademi/lejant/10641_0EM7U000001TdUi_6e04d44d.png",
+        "/akademi/lejant/10641_0EM7U000001TdUf_58fe86c4.png",
+        "/akademi/lejant/10641_0EM7U000001TdUc_54725791.png",
+        "/akademi/lejant/10641_0EM7U000001TdUg_a2554d5e.png",
+        "/akademi/lejant/10641_0EM7U000001TdUb_2eb8aec6.png",
+        "/akademi/lejant/10641_0EM7U000001TdUa_35eb9ab8.png",
+        "/akademi/lejant/10641_0EM7U000001TdUh_a658d614.png",
+        "/akademi/lejant/10641_0EM7U000001TdUd_d3cf7e59.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "no": 9,
+  "slug": "yollarin-modellenmesi",
+  "title": "Yolların Modellenmesi",
+  "duration": "",
+  "sourceModule": "Proje 1 — Modül 3 & Modül 6: Arazi Üzerinde Yol Modelleme (2B Yol İzini 3B Araziye İzdüşürme, Bölme ve Allplan Road)",
+  "objectives": [
+    "Halihazır haritadaki 2B yol, kaldırım ve parsel içi yürüme yolu sınırlarını eğimli 3B arazi yüzeyi üzerine izdüşürerek (`Project / İzdüşüm`) veya 3B kesme (`Split / Intersect`) ile modellemek.",
+    "3B arazi yüzeyinden kesilerek ayrılan yol şeritlerine asfalt/taş kaplama materyali atamak ve kaldırım/bordür kot farkını (`Extrude / Offset` ile `+15 cm`) oluşturmak.",
+    "Sayısal Arazi Modeli (`SAM / DTM`) üzerinde **Yol / Şev (Road / Slope / Böschung)** araçlarıyla kazı ve dolgu şevlerini oluşturmayı kavramak.",
+    "Parametrik güzergah tasarımı gerektiren altyapı projelerinde **Allplan Road** modülünün Yatay Güzergah (`Horizontal Alignment`), Düşey Kurp (`Vertical Alignment`) ve Enkesit Şablonu iş akışını tanımak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "2B Haritadaki Yol Sınırlarını Kapalı Poligon / 3B Prizma Haline Getirme",
+      "body": "`104 - Yollar ve Kaldırımlar` çizim dosyasını aktif edin ve `100 - Halihazır Harita Altlığı` dosyasını arka planda açın. Haritadaki yol kenar çizgilerini takip ederek kapalı bir 2B poligon (veya 3B katı prizma) oluşturun.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Yöntem A: 3B Arazi Yüzeyini Yol Sınırlarıyla Bölme ve Asfalt Dokusu Atama",
+      "body": "Mimari vaziyet maketlerinde yolu arazi eğimiyle birebir uyumlu modellemenin en temiz yolu:\n1. Yol sınır poligonundan arazinin tüm yüksekliğini kesen düşey bir 3B katı/yüzey üretin veya **3B Elemanları Çizgi/Poligon ile Böl (Split 3D Elements)** aracını kullanın.\n2. 3B arazi yüzeyini yol sınırları boyunca bölün (`Split`).\n3. Ayrılan yol yüzey parçasını seçip **Özellikler -> Yüzey (Surface)** kısmından `Asfalt / Parke Taşı` dokusu atayın.\n4. Kaldırım yüzeylerini seçip **Ekstrüzyon (Extrude)** ile Z yönünde `+0.15 m` (15 cm) yükselterek bordür ve yaya kaldırımı kademesini oluşturun.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Yöntem B: Arazi Düzlemine Bağlı Döşeme / Duvar ile Yol ve Kaldırım Modelleme",
+      "body": "Ders 8'de araziyi **Serbest Düzlem / Referans Yüzey** haline getirdiğimiz için:\n1. **Mimari -> Döşeme (Slab)** komutunu çalıştırın.\n2. **Yükseklik (Height)** ayarlarında döşemenin üst kotunu arazi düzlemine (`Üst Seviye = Alt Düzleme Bağlı + 0.05 m`) ve kalınlığını `0.20 m` olarak bağlayın.\n3. Planda yol poligonunu girdiğinizde döşeme otomatik olarak 3B arazinin tüm eğimini takip eden 3 boyutlu bir yol plağına dönüşür.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Yöntem C: Allplan Road ile Parametrik Karayolu Güzergahı ve Şevler",
+      "body": "Mühendislik projelerinde yatay kurplar, boykesit eğimleri ve dever (enine eğim) gerektiğinde **Allplan Road** görev alanından:\n1. Arazi modelini (`Terrain`) tanımlayın.\n2. **Yatay Güzergah (Horizontal Alignment)** ve **Düşey Güzergah (Vertical Alignment)** eksenlerini oluşturun.\n3. Standart yol enkesit şablonunu (`Cross Section Template`) eksene atayarak 3B yol gövdesini ve yarma/dolgu şevlerini otomatik hesaplatın.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "3B Elemanları Böl (Split 3D Elements)",
+      "menu": "Serbest Modelleme -> 3B Katıyı/Yüzeyi Böl (3D-Körper trennen)",
+      "shortcut": "Boolean / Kesme",
+      "desc": "3B arazi yüzeyini veya maketini plandaki yol sınırları boyunca keserek yol şeridini ayırır."
+    },
+    {
+      "name": "Eğri/Nokta İzdüşümü (Project Curve/Point)",
+      "menu": "Serbest Modelleme / Kazı Çukuru -> Eğriyi Yüzeye İzdüşür",
+      "shortcut": "İzdüşüm Aracı",
+      "desc": "2B yol eksenini ve kenar çizgilerini 3B arazi yüzeyi üzerine Z kotlu olarak izdüşürür."
+    },
+    {
+      "name": "Döşeme (Arazi Düzlemine Bağlı)",
+      "menu": "Mimari -> Döşeme (Decke) -> Yükseklik: Serbest Düzleme Bağlı",
+      "shortcut": "Mimari Eleman",
+      "desc": "Eğimli arazi düzlemini takip eden sabit kalınlıklı 3B yol ve kaldırım plağı oluşturur."
+    },
+    {
+      "name": "Allplan Road — Arazi ve Eksen Tasarımı",
+      "menu": "Road -> Terrain Design / Horizontal & Vertical Alignment",
+      "shortcut": "Allplan Road",
+      "desc": "Kırık çizgilerle arazi tasarımı, yatay/düşey yol ekseni ve 3B parametrik yol modeli üretir."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Allplan Road - New Project and Terrain Design",
+        "file": "3459_vimeo_833277394_b6a0fae7.mp4",
+        "vimeoId": "833277394",
+        "sizeMB": 25.68
+      },
+      {
+        "title": "Alplan Road - Terrain Design with break lines",
+        "file": "3460_vimeo_833280319_e861742a.mp4",
+        "vimeoId": "833280319",
+        "sizeMB": 65.59
+      },
+      {
+        "title": "Allplan Road - Axis design: Horizontal alignment",
+        "file": "3458_vimeo_878776523_863b86ff.mp4",
+        "vimeoId": "878776523",
+        "sizeMB": 36.53
+      },
+      {
+        "title": "Allplan Road - Axis design: Vertical alignment",
+        "file": "3457_vimeo_879672684_dcd147f7.mp4",
+        "vimeoId": "879672684",
+        "sizeMB": 40.19
+      },
+      {
+        "title": "Allplan Road - More alignment functions",
+        "file": "3456_vimeo_879672963_7d95b822.mp4",
+        "vimeoId": "879672963",
+        "sizeMB": 28.74
+      },
+      {
+        "title": "Add-On Baugrube - Gelände mit Leitungsgraben",
+        "file": "12720_vimeo_1235282226_b1a7dd95.mp4",
+        "vimeoId": "1235282226",
+        "sizeMB": 35.2
+      },
+      {
+        "title": "Add-On Geometry Tools - Gefälle Planen",
+        "file": "12650_vimeo_1234952408_ef658644.mp4",
+        "vimeoId": "1234952408",
+        "sizeMB": 16.88
+      }
+    ],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "en_3459",
+      "title": "Allplan Road - Yeni Proje ve Arazi Tasarımı",
+      "body": "Yeni bir Allplan projesinin nasıl oluşturulacağını, yeni bir SAM (DTM) yüzeyinin nasıl oluşturulacağını ve yüzey verilerinin nasıl uygulanacağını öğrenin.",
+      "figures": []
+    },
+    {
+      "id": "en_3460",
+      "title": "Allplan Road - Kırık çizgilerle (break lines) Arazi Tasarımı",
+      "body": "DWG/DXF'ten bir SAM (DTM) yüzeyinin nasıl devralınacağını, kırık çizgilerle (breaklines) ağ (mesh) oluşturmayı, yüzey görsel stillerini uygulamayı ve SAM (DTM) boyutunun nasıl küçültüleceğini öğrenin.",
+      "figures": []
+    },
+    {
+      "id": "en_3458",
+      "title": "Allplan Road - Aks tasarımı: Yatay güzergah (Horizontal alignment)",
+      "body": "Yeni bir aksın nasıl oluşturulacağını ve farklı editörlerle yatay güzergahın nasıl tanımlanacağını öğrenin.",
+      "figures": []
+    },
+    {
+      "id": "en_3457",
+      "title": "Allplan Road - Aks tasarımı: Düşey güzergah (Vertical alignment)",
+      "body": "Bir aksın düşey güzergahının (boykesitinin) nasıl tanımlanacağını öğrenin.",
+      "figures": []
+    },
+    {
+      "id": "en_3456",
+      "title": "Allplan Road - Diğer güzergah (alignment) fonksiyonları",
+      "body": "Önceden tanımlanmış aksların nasıl içe aktarılacağını, polilinelerden aksların nasıl devralınacağını ve aks tiplerinin nasıl dönüştürüleceğini öğrenin.",
+      "figures": []
+    },
+    {
+      "id": "en_6325",
+      "title": "Allplan Road - 3B Yol tasarımı",
+      "body": "Dokümantasyon - 3B Yol tasarımı",
+      "figures": []
+    },
+    {
+      "id": "de_7165",
+      "title": "YENİLİK 2025 - ROAD - ARAZİ - İYİLEŞTİRMELER",
+      "body": "Yenilik ALLPLAN 2025 2min\n\n> *(Not: Bu kaynağın detay uç noktası Allplan Totara sunucusunda 'Internal server error' döndürdüğü için Katalog Arama Kartı özeti ve künyesi korunarak arşivlenmiştir.)*",
+      "figures": []
+    },
+    {
+      "id": "de_12720",
+      "title": "Add-On Baugrube (Yapı Çukuru Eklentisi) - Altyapı/Boru Hendekli Arazi",
+      "body": "Bu video, arazi tasarımı yardımıyla bir altyapı/boru hendeğinin (Leitungsgraben) nasıl oluşturulduğunu göstermektedir. Kat planında bir hat boyunca poligon çizgisi fonksiyonunun kullanılmasıyla, dinamik olarak uyarlanabilen şev objelerine sahip bir kazı üretilir. Optimum geometrik çözümler elde etmek amacıyla yükseklik, eğim ve kaçıklıklar (ofsetler) gibi çeşitli parametreler esnek bir şekilde uyarlanabilir.",
+      "figures": []
+    },
+    {
+      "id": "de_12650",
+      "title": "Add-On Geometry Tools (Geometri Araçları Eklentisi) - Eğim Tasarımı",
+      "body": "Bu eğitim videosu, eğimli bir yeraltı otoparkının oluşturulmasını kolaylaştırmak için üç boyutlu alanda 20 komut sunan Allplan **Geometri Araçları (Add-On Geometrie-Tool)** eklentisini tanıtmaktadır. Arazi noktası ve üçgen ağ (TIN) gibi fonksiyonların kullanımı sayesinde, farklı kotlara sahip noktalar düzenlenebilir ve üzerinde modellemeye devam edilebilen bütüncül bir üçgen ağ oluşturulabilir. Düzlem yönetimi, mimari yapı elemanları için referans yüzeylerinin atanmasına olanak tanıyarak hassas sonuçlar elde edilmesini sağlar.",
+      "figures": []
+    }
+  ]
+}

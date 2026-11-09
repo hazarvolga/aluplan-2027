@@ -1,0 +1,143 @@
+{
+  "no": 3,
+  "slug": "mimari-lejant-tasarimi-lejant-kopyalama",
+  "title": "Mimari Lejant Tasarımı - Lejant Kopyalama",
+  "duration": "",
+  "sourceModule": "Proje 1 — Modül 4: Lejant Yönetimi ve Standart Şablondan Ofis Klasörüne Kopyalama",
+  "objectives": [
+    "Allplan'ın Varsayılan (Default / Standard) mimari lejantlarını bozmadan Ofis (Office / Büro) klasörüne kopyalamak.",
+    "Lejantları Yönet (Manage Legends / Legenden verwalten) aracında dosya ve grup numaralarını düzenlemek.",
+    "Mevcut bir mimari lejantı çalışma alanına patlatarak (Place Legend Template) tasarım altlığı olarak çağırmak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Standart Lejantların Neden Doğrudan Değiştirilmemesi Gerektiği",
+      "body": "**Varsayılan (Default / Standard)** dizinindeki lejantlar Allplan sürüm güncellemelerinde üzerine yazılarak sıfırlanabilir. Bu nedenle yeni bir lejant tasarlarken her zaman mevcut bir şablon **Ofis (Office / Büro)** dizinine kopyalanmalıdır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Lejantları Yönet (Manage Legends) ile Kopyalama",
+      "body": "**Lejantları Yönet (Manage Legends / Legenden verwalten)** komutunu açın. Kaynak olarak **Varsayılan (Default) -> Mimari (Architecture)** klasöründen örneğin `Mahal Listesi / Zemin Alanları` lejantını seçin ve hedef olarak **Ofis (Office)** klasöründe boş bir numaraya kopyalayıp yeni bir isim verin.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Şablonu Çalışma Alanına Çağırma ve Çerçeve Tasarımı",
+      "body": "**Lejant Değiştir (Modify Legend)** komutuyla kopyaladığınız lejantı boş bir çizim dosyasına yerleştirin; 2B çizim ve metin araçlarıyla tablo sütun genişliklerini kendi kurumsal pafta tasarımınıza göre revize edin.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Lejantları Yönet (Manage Legends)",
+      "menu": "Kullanıcı Tanımlı Objeler -> Lejantlar -> Lejantları Yönet (Legenden verwalten)",
+      "shortcut": "Yönetim İkonu",
+      "desc": "Standart klasördeki bir lejantı Ofis veya Proje klasörüne boş bir sıra numarasıyla kopyalar."
+    },
+    {
+      "name": "Lejant Değiştir (Modify Legend)",
+      "menu": "Kullanıcı Tanımlı Objeler -> Lejantlar -> Lejant Değiştir (Legende modifizieren)",
+      "shortcut": "Değiştir İkonu",
+      "desc": "Ofis klasörüne kopyalanan lejant şablonunu düzenlemek üzere çalışma alanına açar."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "Legende kopieren",
+        "file": "6643_vimeo_990103825_4a8a433e.mp4",
+        "vimeoId": "990103825",
+        "sizeMB": 7.31
+      }
+    ],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_6643",
+      "title": "Lejant Kopyalama",
+      "body": "Yönetim üzerinden lejantların kopyalanması",
+      "figures": []
+    },
+    {
+      "id": "de_10888",
+      "title": "Etiket Stilleri / Lejantlar - Yedekleme ve Geri Yükleme",
+      "body": "**Soru:** \n \nBir lejantın / etiket stilinin veri alışverişi. \nBir lejant / etiket stili nasıl yedeklenir? \nBir lejant / etiket stili nasıl geri yüklenir (içe aktarılır)? \n \n \n \n**Cevap:** \n \nBir lejant her zaman **zle00x.deu** (x dosya numarasını temsil eder) lejant dosyasından (dosyalarından) ve ek bir lejant yönetim dosyası olan **zle000.deu** dosyasından oluşur. Pafta lejantları (başlık blokları) bu sırada her zaman 7 veya 8 numaralı dosyada bulunmalıdır (**zle007.deu**, **zle008.deu**). \n \nBir etiket stili her zaman **zdo00x.deu** (x dosya numarasını temsil eder) etiket stili dosyasından (dosyalarından) ve ek bir etiket stili yönetim dosyası olan **zdo000.deu** dosyasından oluşur. \n \n**a) Lejant dosyasını / etiket stili dosyasını öncelikle bilgisayarınıza kaydedin**: \n \nÖncelikle pafta lejantınızı bilgisayarda yedeklemek istediğiniz bir yedekleme klasörü tanımlayın: \n**Dosya (Datei)** -> **ProjectPilot**'u açın ve burada \"*Harici Yol (Externer Pfad)*\" düğümüne sağ fare tuşuyla tıklayın. Bağlam menüsünden **Harici yol seç... (Externen Pfad auswählen...)** seçeneğini seçin. Pafta lejantınızı bilgisayarda yedeklemek istediğiniz bir yedekleme klasörü ayarlayın: \n \n \nProjectPilot'u kapatın ve **Oluştur (Erzeugen)** -> **Ek Modüller (zusätzliche Module)** -> **Şablonlar: Raporlar, Lejantlar, Etiketler (Vorlagen: Reports,Legenden,Beschriftungen)** -> **Etiket Stillerini, Lejantları Yönet (Beschriftungsbilder,Legenden verwalten)** -> **Lejantlar (Legenden)** veya **Etiket Stilleri (Beschriftungsbilder)** yolunu seçin. \nAçılan diyalogda şimdi sol tarafta kaydedilecek dosyanın bulunduğu kaynak dizine, örneğin \"*Büro*\" üzerine tıklayın. Ardından kaydedilecek klasöre, örneğin \"*Planlegenden\\_Büroeigene*\" üzerine tıklayın ve kaydedilecek tüm lejantları/etiket stillerini işaretleyin. \nŞimdi **Kopyala (Kopieren)** üzerine tıklayın: \n \n \n \nArdından kayıt konumu olarak \"*Harici Yol (Externer Pfad)*\" öğesini seçin (bunu en başta belirlemiştiniz) -> dosya numarasını seçin (örneğin 7) -> kayıt için numaraları işaretleyin -> **Çalıştır / Uygula (Ausführen)**: \n \n \nArtık harici yol için belirlediğiniz klasörde **zle00x.deu** (veya zle007.deu) lejant dosyasını ve ek bir lejant yön …",
+      "figures": [
+        "/akademi/lejant/10888_0EM7U000001Te3a_a3b840c5.png",
+        "/akademi/lejant/10888_0EM7U000001Te3b_f6366dcc.png",
+        "/akademi/lejant/10888_0EM7U000001TeD1_8ee7091b.png",
+        "/akademi/lejant/10888_0EM7U000001TeD2_1c01ef32.png",
+        "/akademi/lejant/10888_0EM7U000001TeD3_3d46f97e.png",
+        "/akademi/lejant/10888_0EM7U000001TeD4_a3b840c5.png",
+        "/akademi/lejant/10888_0EM7U000001TeD5_7fcdb21f.png",
+        "/akademi/lejant/10888_0EM7U000001TeD6_14f716d6.png"
+      ]
+    },
+    {
+      "id": "de_11050",
+      "title": "Lejantlar - Yeni bir lejant oluşturma (Örnek: Döşeme yüzeyi, en üst katman)",
+      "body": "**Soru:** \n \nÖrneğin döşeme yüzeylerinin malzemeye göre metraj gösterimi (VOB) için bir lejant kullanıcı tarafından nasıl tanımlanabilir? \n \n \n \n**Cevap:** \n \nKendi lejantlarınızı oluşturmak için - örnekte alt lejantları olmayan basit bir lejant gösterilmektedir - aşağıdaki hazırlıklar yapılmalıdır.\n\n* Lejantlar her zaman 1:100 ölçekli çizim dosyalarında oluşturulmalıdır. Çizim dosyası başka bir ölçeğe sahipse, lejantla ilişkili metin boyutlarının kontrol edilmesi zordur.\n* Lejant ile gösterilecek birden fazla objenin oluşturulması. \n Burada: Döşeme ince yapılarına sahip (farklı büyüklükte) mahaller \n \n* Gösterilecek verilerin belirlenmesi, niteliklerin, formüllerin ve benzerlerinin listelenmesi ve araştırılması \n \n İstek: Mahallerin döşeme yüzeyi ve tekil döşeme yüzeylerinin metrajı yapılmalıdır. \n Sıralama en üst katmanın (üst kaplamanın) malzemesine göre yapılmalıdır. \n VOB alanı (malzemeye göre toplam olarak) hesaplanmalı ve tüm kaplamaların bir toplamı oluşturulmalıdır. \n\n | | |\n |  |  |\n | **İstenen Gösterim** | **Nitelik/Formül - Çözüm Yaklaşımı** |\n | Bir döşeme yüzeyinin en üst katmanının malzemesi | Malzeme (@508@) niteliği malzemeyi içerir. İnce yapı yüzeylerinde her katmanın nitelikleri özel bir çağrı ile (diğer SSS makalelerine de bakın) hesaplanabilir. **MT\\_Boden(@508@;0)** en üst katmanın malzemesini gösterir. |\n | En üst katmanın VOB alanı | VOB alanının hesaplanması için iki yaklaşım seçilebilir. VOB\\_Alanı (VOB\\_Fläche) (@81@) niteliği HER ZAMAN VOB alanını gösterirken, VOB\\_Miktarı (VOB\\_Menge) (@100@) niteliği seçilen hakediş birimine göre dinamik olarak ilgili miktarı gösterir. VOB miktarının yalnızca Allplan standardında tanımlanmış hakediş kurallarına sahip bir imalat kaleminin seçilmesi durumunda VOB'a uygun bir miktar gösterebileceğine dikkat edilmelidir. **MT\\_Boden(@81@;0)** en üst katmanın VOB alanını gösterir. Alternatif olarak burada çoğunlukla doğrudan nitelik kullanılabilir. |\n* Hangi objelere göre filtreleme yapılacağının planlanması. \n Burada: Döşeme yüzeyleri objesine göre bir filtreleme yapılmalıdır. Filtreleme, lejantın tanımlanması sırasında **SELECT** olarak adlandırılan kısımda ayarlanır.\n* Lejantın görsel görünümünün ön …",
+      "figures": [
+        "/akademi/lejant/11050_0EM7U000001Tdh5_4c0afca1.png",
+        "/akademi/lejant/11050_0EM7U000001Tdh6_051353ad.png",
+        "/akademi/lejant/11050_0EM7U000001TdmF_1593f5f6.png",
+        "/akademi/lejant/11050_0EM7U000001TdmG_8f39c27e.png",
+        "/akademi/lejant/11050_0EM7U000001TdmH_14db8c83.png",
+        "/akademi/lejant/11050_0EM7U000001TdmI_8be976c0.png",
+        "/akademi/lejant/11050_0EM7U000001TdmJ_3f5c6749.png",
+        "/akademi/lejant/11050_0EM7U000001TdmK_f8af41b8.png",
+        "/akademi/lejant/11050_0EM7U000001TdmL_68334f2f.png",
+        "/akademi/lejant/11050_0EM7U000001TdmM_79048ebe.png",
+        "/akademi/lejant/11050_0EM7U000001TdmN_bd435891.png",
+        "/akademi/lejant/11050_0EM7U000001TdmO_6b0f4339.png",
+        "/akademi/lejant/11050_0EM7U000001TdmP_e32d7c30.png",
+        "/akademi/lejant/11050_0EM7U000001TdmQ_37eb1981.png",
+        "/akademi/lejant/11050_0EM7U000001TdmR_ee96d2c6.png",
+        "/akademi/lejant/11050_0EM7U000001TdmS_bd6213b8.png",
+        "/akademi/lejant/11050_0EM7U000001TdmT_a3048946.png",
+        "/akademi/lejant/11050_0EM7U000001TdmU_9f695b7f.png",
+        "/akademi/lejant/11050_0EM7U000001TdmV_59601d7b.png",
+        "/akademi/lejant/11050_0EM7U000001TdmW_9f03f45b.png",
+        "/akademi/lejant/11050_0EM7U000001TdmX_93bd6a29.png",
+        "/akademi/lejant/11050_0EM7U000001TdmY_8abccb12.png",
+        "/akademi/lejant/11050_0EM7U000001TdmZ_a7dcd456.png",
+        "/akademi/lejant/11050_0EM7U000001Tdma_fe9b964a.png"
+      ]
+    },
+    {
+      "id": "de_11051",
+      "title": "Lejantlar - \"Taban Alanı\" (Grundfläche) lejantının DIN277 standardına uyarlanması",
+      "body": "**Soru:** \n \nLejantlar kendi ihtiyaçlarımıza göre nasıl uyarlanabilir? \nÖrneğin, Taban Alanları (Grundflächen - Mimari) lejantına taban alanı yerine DIN277 alanlarının metrajı nasıl eklenebilir? \n \n \n \n**Cevap:** \n \nStandart olarak sunulan lejantlar, tıpkı raporlarda olduğu gibi doğrudan değiştirilemez. \nLejantlar önce büro standardına veya bir projeye kopyalanmalıdır. Lejantlar burada daha fazla uyarlanabilir. \n \nAşağıda farklı ana adımlar, **Mahal\\_Taban Alanları (Raum\\_Grundflächen)** lejantı (**Standart (Standard)** dizini, **1 Mimari (1 Architektur)** dosyası) üzerinden gösterilmiş ve açıklanmıştır. \n \n \n \n \n**Adım 1 - Yönetim üzerinden lejantın kopyalanması** \nLejantlar, lejantlar ve etiket stilleri yönetimi üzerinden kopyalanabilir/taşınabilir veya yeniden adlandırılabilir. \nStandarttan bir projeye lejant kopyalamak için aşağıdaki adımlar izlenmelidir: \n \n1. **Etiket Stillerini, Lejantları Yönet (Beschriftungsbilder, Legenden verwalten)** fonksiyonunu etkinleştirin (örn. **Actionbar (Aksiyon Çubuğu)** -> **Mimari (Architektur)** rolü -> **Kullanıcı Objeleri (Benutzerobjekte)** görevi -> **Etiket Stillerini, Lejantları Yönet (Beschriftungsbilder, Legenden verwalten)**) \n \n \n2. **Lejantlar (Legenden)** seçimini onaylayın \n \n \n3. Kopyalanacak lejantı seçin. \n-> Kaynak dizin **Standart (Standard)** -> Dosya **Mimari (Architektur)** -> Lejantlar **3 Mahal\\_Taban Alanları (3 Raum\\_Grundflächen)** ve **Kopyala (Kopieren)** fonksiyonunu seçin. \n \n \n4. Hedef dizini (burada mevcut proje) -> Dosya 1 (Datei 1) -> Lejant 3 (Legende 3) seçin ve işlemi **Çalıştır (Ausführen)** fonksiyonu ile başlatın. \nDosyanın bir adı olup olmamasına, bir lejantın üzerine yazılıp yazılmamasına ve/veya aynı isimde bir lejantın bulunup bulunmamasına bağlı olarak ek iletişim kutuları görüntülenir. \n \n \nHedef, ihtiyaca göre büro dizini de olabilir. 3. maddede tek bir lejant yerine alternatif olarak tüm bir dosya da kopyalanabilir. İletişim kutusunun üst kısmında **Dosya (Datei)** seçeneğine geçildiğinde işlem akışı benzerdir. \n \n5. Adını değiştirmek için ilk iletişim kutusunda projeyi ve orada az önce kopyalanan lejantı seçin. \n \n \n**Adım 2 - Değiştirmek üzere lejantı açma** \nLejantı **Lej …",
+      "figures": [
+        "/akademi/lejant/11051_0EM7U000001Tdn0_ee80ee73.png",
+        "/akademi/lejant/11051_0EM7U000001Tdn1_af43f7c2.png",
+        "/akademi/lejant/11051_0EM7U000001Tdn2_fc2e5eac.png",
+        "/akademi/lejant/11051_0EM7U000001Tdn3_d237e54b.png",
+        "/akademi/lejant/11051_0EM7U000001Tdn4_ecff4b6b.png",
+        "/akademi/lejant/11051_0EM7U000001Tdn5_8dde7a6e.png",
+        "/akademi/lejant/11051_0EM7U000001Tdn6_f01d95f1.png",
+        "/akademi/lejant/11051_0EM7U000001Tdn7_c1111a85.png",
+        "/akademi/lejant/11051_0EM7U000001Tdn8_6134ce67.png",
+        "/akademi/lejant/11051_0EM7U000001Tdn9_c9dae112.png",
+        "/akademi/lejant/11051_0EM7U000001TdnA_d4d6e55f.png",
+        "/akademi/lejant/11051_0EM7U000001TdnB_e155ab65.png",
+        "/akademi/lejant/11051_0EM7U000001TdnC_5caa2bb8.png",
+        "/akademi/lejant/11051_0EM7U000001TdnD_465ad69b.png",
+        "/akademi/lejant/11051_0EM7U000001TdnE_cc43a6f1.png",
+        "/akademi/lejant/11051_0EM7U000001TdnF_469d40ea.png",
+        "/akademi/lejant/11051_0EM7U000001TdnG_c59f9a8d.png",
+        "/akademi/lejant/11051_0EM7U000001TdnH_ca59d02b.png",
+        "/akademi/lejant/11051_0EM7U000001TdnI_041f3b81.png",
+        "/akademi/lejant/11051_0EM7U000001TdnJ_3fa72c9a.png",
+        "/akademi/lejant/11051_0EM7U000001TdnK_5bc561c3.png",
+        "/akademi/lejant/11051_0EM7U000001TdnL_6970b934.png",
+        "/akademi/lejant/11051_0EM7U000001TdnM_5b379cfb.png",
+        "/akademi/lejant/11051_0EM7U000001TdnN_fbdfeac9.png"
+      ]
+    }
+  ]
+}

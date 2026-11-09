@@ -1,0 +1,103 @@
+{
+  "no": 1,
+  "slug": "giris",
+  "title": "Giriş",
+  "duration": "",
+  "sourceModule": "Proje 1 — Modül 4 & Modül 5: İlişkisel Lejantlar (Associative Legends) ve Dinamik Metraj Tabloları",
+  "objectives": [
+    "Allplan'da İlişkisel Lejant (Associative Legend / Legende) ile Rapor (Report) ve Etiket Stili (Label Style / Beschriftungsbild) arasındaki farkı kavramak.",
+    "Mimari Lejantların (Mahal listesi, Kapı/Pencere metraj tablosu, Kat alan özeti) ve Mühendislik Donatı Lejantlarının (Stabstahllegende / Mattenlegende — Çubuk ve Hasır Donatı Metraj Cetveli) çalışma mantığını öğrenmek.",
+    "Çizim dosyasına veya doğrudan paftaya yerleştirilen ilişkisel lejantların model değiştiğinde gerçek zamanlı nasıl güncellendiğini tanımak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Allplan'da Lejant (Legend / Legende) Nedir?",
+      "body": "**Lejant (Legend / Legende)**, 3B BIM modelindeki yapı elemanlarının (mahaller, duvarlar, kapılar, pencereler, çubuk/hasır donatılar) niteliklerini, adetlerini, boyutlarını, büküm şemalarını ve metraj toplamlarını doğrudan çizim dosyası veya pafta üzerine dinamik tablo olarak yerleştiren akıllı raporlama aracıdır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "İlişkisel (Associative) ve Statik Lejant Farkı",
+      "body": "Lejant yerleştirilirken **İlişkisel (Associative)** seçeneği işaretlendiğinde tablo modelle canlı bağını korur: planda bir odanın alanı büyüdüğünde veya bir donatı pozunun adedi değiştiğinde lejant tablosu otomatik güncellenir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Eğitim Kapsamı: Mimari Lejant ve Donatı Lejantı",
+      "body": "Bu eğitimde önce lejantın yapı taşlarını (Başlık, Ana Satır, Alt Liste, Toplam Satırı) inceleyecek; ardından sıfırdan bir **Mimari Mahal/Alan Lejantı** ve TS 500 / TBDY 2018 standartlarına uygun bir **Betonarme Donatı Metraj Lejantı (Stabstahllegende)** tasarlayıp test edeceğiz.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Lejant Oluştur (Create Legend)",
+      "menu": "Araçlar / Mimari / Mühendislik -> Lejant Oluştur (Create Legend / Legende)",
+      "shortcut": "Lejant İkonu",
+      "desc": "Aktif çizim dosyasındaki veya filtreye uyan yapı elemanlarından dinamik tablo/lejant üretir."
+    },
+    {
+      "name": "Lejantları Yönet (Manage Legends)",
+      "menu": "Kullanıcı Tanımlı Objeler -> Lejantlar -> Lejantları Yönet (Legenden verwalten)",
+      "shortcut": "Yönetim Grubu",
+      "desc": "Varsayılan (Default/Standard) ve Ofis (Office/Büro) dizinlerindeki lejant şablonlarını kopyalar, taşır ve yedekler."
+    },
+    {
+      "name": "Lejant - Başlık Bloğu (Title Block)",
+      "menu": "Pafta Düzenleyici (Layout Editor) -> Lejant - Başlık Bloğu (Plankopf)",
+      "shortcut": "Pafta Grubu",
+      "desc": "Pafta üzerine proje ve pafta niteliklerini otomatik okuyan dinamik antet/lejant yerleştirir."
+    }
+  ],
+  "media": {
+    "videos": [
+      {
+        "title": "New features in Allplan 2024 - Associative architecture legends",
+        "file": "2757_vimeo_880638144_c542d477.mp4",
+        "vimeoId": "880638144",
+        "sizeMB": 14.16
+      },
+      {
+        "title": "NEUERUNG 2024 - Assoziative Architekturlegenden",
+        "file": "2734_vimeo_880644068_4122183f.mp4",
+        "vimeoId": "880644068",
+        "sizeMB": 14.05
+      }
+    ],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "en_2757",
+      "title": "Allplan 2024'teki yeni özellikler - İlişkisel mimari lejantlar",
+      "body": "lejant",
+      "figures": []
+    },
+    {
+      "id": "de_2734",
+      "title": "YENİLİK 2024 - İlişkisel Mimari Lejantlar",
+      "body": "Lejant",
+      "figures": []
+    },
+    {
+      "id": "en_6502",
+      "title": "Allplan 2020 Adım Adım - Lejantlar, Lejant, Şablonlar",
+      "body": "# Allplan 2020 Adım Adım - Lejantlar, Lejant, Şablonlar",
+      "figures": []
+    },
+    {
+      "id": "de_11321",
+      "title": "Etiket Stilleri - Benzer sonuç veren farklı fonksiyonların karşılaştırılması",
+      "body": "**Soru:** \n \nYapı elemanları nasıl etiketlenebilir? \nEtiketleme için hangi fonksiyonlar vardır? \n \n \n \n**Cevap:** \n \nAllplan, etiketleme için farklı şekillerde uygulanan birden fazla fonksiyon sunar. Her biri için kullanımda biraz farklı çerçeve koşulları geçerlidir. \n \n- Metin (Text) \n- Etiket (beschriften) \n- İlişkili Etiket (Assoziativ beschriften) \n- Kot (Höhenkote) \n- Parapet Yüksekliği (Brüstungshöhe) (yalnızca boşluklar için) \n \nFarklı fonksiyonlar için kullanım alanları, kısıtlamalar ve diğer notlar aşağıda verilmiştir. Listeler sınırlayıcı değildir. \n \n**Metin (Text) Fonksiyonları** \nBasit **Yatay Metin (Text horizontal)**, **Düşey Metin (Text vertikal)** ve **Açılı Metin (Text unter Winkel)** fonksiyonları ile yapı elemanlarına bağlı olmayan basit metin blokları oluşturulabilir. \nBir metin oluşturulurken yazı tipi, renk, boyut ve daha fazlası gibi özellikler ayarlanabilir. \nBir metin bloğunun uzunluğu sınırlı değildir. \n \nKullanım alanları:\n\n* Kat planında yapı elemanı özelliklerine bağlı olmayan basit etiketler ve/veya ek özellikler.\n* Daha uzun açıklamalar, lejantlar ve benzerleri için metin blokları\n\n \nAvantajları:\n\n* Farklı şekillerde esnek kullanım\n\n \nDezavantajları:\n\n* Metin yapı elemanının \"yanında\" durur ve raporlarda, metraj listelerinde, veri aktarımlarında yapı elemanında yer alan özellikleri zorunlu olarak yansıtmaz.\n* Yapı elemanlarındaki değişikliklerde değişmez\n\n \n \n**Etiket (Beschriften) Fonksiyonu** \n**Etiket (Beschriften)** fonksiyonu ile istenen her türlü nesne - mimari yapı elemanları (örn. duvarlar, kolonlar, mahaller, boşluklar), 2B elemanlar (çizgiler, daireler, poligonlar, yüzey elemanları), 3B nesneler (prizmalar vb.), makrolar, SmartParts ve daha fazlası etiketlenebilir. \n \n**Etiket (Beschriften)** fonksiyonu ile her zaman yapı elemanının tamamı dikkate alınır. Böylece örneğin eğimli yapı elemanı alt kenarlarında ve/veya üst kenarlarında yalnızca tek bir yükseklik çıktısı alınabilir. Farklı yüksekliklere sahip mahallerde de bu nedenle yalnızca tek bir yükseklik verilir. \n \nBurada \"alt türler\" olarak üç farklı etiketleme türü kullanıma sunulmuştur: \n \n**Standart Etiket (Standardbeschriftung)** \n \nStandart etikette nesneye bağlı …",
+      "figures": [
+        "/akademi/lejant/11321_0EM7U000001TdDn_17ca65ea.png",
+        "/akademi/lejant/11321_0EM7U000001TdDo_5de901e1.png",
+        "/akademi/lejant/11321_0EM7U000001TdDp_a8bf7625.png",
+        "/akademi/lejant/11321_0EM7U000001TdDq_c17dc94f.png",
+        "/akademi/lejant/11321_0EM7U000001TdDr_42d7e352.png",
+        "/akademi/lejant/11321_0EM7U000001TdDs_5d15db3f.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "no": 1,
+    "slug": "giris",
+    "title": "Giriş"
+  },
+  {
+    "no": 2,
+    "slug": "arazi-dosyasini-alma",
+    "title": "Arazi Dosyasını Alma"
+  },
+  {
+    "no": 3,
+    "slug": "arazi-nokta-kotlarinin-girilmesi",
+    "title": "Arazi Nokta Kotlarının Girilmesi"
+  },
+  {
+    "no": 4,
+    "slug": "dijital-arazi-modelinin-olusturulmasi",
+    "title": "Dijital Arazi Modelinin Oluşturulması"
+  },
+  {
+    "no": 5,
+    "slug": "es-yukselti-egrilerinin-olusturulmasi",
+    "title": "Eş Yükselti Eğrilerinin Oluşturulması"
+  },
+  {
+    "no": 6,
+    "slug": "3b-arazi-modelinin-olusturulmasi",
+    "title": "3B Arazi Modelinin Oluşturulması"
+  },
+  {
+    "no": 7,
+    "slug": "3b-maket-modelinin-olusturulmasi",
+    "title": "3B Maket Modelinin Oluşturulması"
+  },
+  {
+    "no": 8,
+    "slug": "3b-arazinin-duzleme-donusturulmesi",
+    "title": "3B Arazinin Düzleme Dönüştürülmesi"
+  },
+  {
+    "no": 9,
+    "slug": "yollarin-modellenmesi",
+    "title": "Yolların Modellenmesi"
+  },
+  {
+    "no": 10,
+    "slug": "binalarin-modellenmesi",
+    "title": "Binaların Modellenmesi"
+  }
+]

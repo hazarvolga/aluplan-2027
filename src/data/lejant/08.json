@@ -1,0 +1,119 @@
+{
+  "no": 8,
+  "slug": "donati-lejanti-hucresini-tanimlama",
+  "title": "Donatı Lejantı Hücresini Tanımlama",
+  "duration": "",
+  "sourceModule": "Proje 1 — Modül 5: Donatı Nitelikleri, Büküm Şeması Grafik Hücresi ve Çap Bazlı Ağırlık Hesapları",
+  "objectives": [
+    "Donatıya özel nitelikleri: Poz Numarası (Mark number), Adet (Number of pieces), Donatı Çapı (Diameter Ø), Kesim Boyu (Bar length), Toplam Boy, Çelik Kalitesi (B420C / B500C) ve Ağırlık (Weight kg) hücrelerini tanımlamak.",
+    "Büküm Şeması (Bending Shape / Biegeform) grafik hücresini boyutlandırıp kenar parça boyları ve büküm açılarıyla birlikte hücreye yerleştirmek.",
+    "Alt toplam / Özet (Summary) bölgesinde her donatı çapı (`Ø8, Ø10, Ø12, Ø14, Ø16, Ø20...`) için ayrı toplam boy ve toplam ağırlık (`kg`) formüllerini kurmak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Poz No, Adet, Çap ve Boy Hücrelerinin Tanımlanması",
+      "body": "**Hücre Tanımla (Define Cell)** komutuyla Ana Satır içine sırasıyla **Poz Numarası (Mark Number)** (Artan sıralama `Sort: Ascending` aktif), **Adet (Piece Count)**, **Çap (Bar Diameter)** ve **Kesim Boyu (Bar Length)** nitelik hücrelerini yerleştirin.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Büküm Şeması (Bending Shape / Biegeform) Hücresinin Ayarlanması",
+      "body": "Büküm şeması sütununa **Grafik Hücre -> Büküm Şeması (Biegeform)** tanımlayın; büküm kollarının ölçeklenebilir kutu sınırlarını, kanca/kıvrım boylarının ve açılarının şema üzerinde gösterilmesini aktif edin.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Çap Bazlı Ağırlık Özeti ve Genel Tonaj Toplamı",
+      "body": "**Toplam/Özet (Summary)** bölgesinde her çap için toplam boy (m), birim ağırlık (`kg/m`) ve toplam ağırlık (`kg`) hücreleri ile tüm pozların **Genel Toplam Ağırlık (`kg` / `ton`)** hücresini oluşturun.",
+      "figures": []
+    }
+  ],
+  "commands": [
+    {
+      "name": "Donatı Nitelik Hücresi",
+      "menu": "Hücre Tanımla (Define Cell) -> Nitelik -> Mühendislik / Donatı (Reinforcement)",
+      "shortcut": "Hücre Tanımla",
+      "desc": "Poz no, adet, çap, tekil boy, toplam boy ve birim ağırlık niteliklerini hücreye bağlar."
+    },
+    {
+      "name": "Büküm Şeması Grafik Hücresi",
+      "menu": "Hücre Tanımla -> Grafik / Özel -> Büküm Şeması (Bending Shape / Biegeform)",
+      "shortcut": "Grafik Hücre",
+      "desc": "Donatının 2B büküm geometrisini ve kol uzunluklarını hücre kutusu içine ölçekli çizer."
+    },
+    {
+      "name": "Çap Bazlı Koşullu Toplam",
+      "menu": "Hücre Tanımla -> Formül (`_IF_(@Çap@=12)...`)",
+      "shortcut": "Formül Düzenleyici",
+      "desc": "Özet tablosunda her çap sütunu altına ilgili çapın toplam metrajını ve ağırlığını (`kg`) yazar."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_10594",
+      "title": "Etiket Stilleri - Formül Koleksiyonu - Koşullar için örnekler (mantıksal uygunluk kontrolleri ve benzerleri)",
+      "body": "**Soru:** \n \nEtiket stillerinde çerçeveler (Umrandungen) ve değerlerin gösterimi koşullara bağlanabilir mi? \n \n \n**Cevap:** \n \n**Durum 1:** \nYapı elemanlarına genellikle bir daire (%K0) ile çerçevelenen poz numaraları verilir. Bir değişiklik olması durumunda yapı elemanlarının bazı kısımları yeniden numaralandırılır ve ilave/revizyon pozu (Nachtragsposition) olarak bir tanımlayıcı alır. \n \nÖrnekte poz numarası için `Positionsnummer` (`@194@`) niteliği ve bir ilave pozun işaretlenmesi için `TextPos` (`@1311@`) niteliği kullanılmaktadır \nKullanılan biçimlendirmeler: \n%K0 -> devamındaki metne bağlı bir çapa sahip bir daire oluşturur \n%N0 -> devamındaki metne bağlı bir çapa sahip bir sekizgen oluşturur \n \nAşağıdaki formül, `TextPos` niteliğine bağlı olarak istenen değişikliği oluşturur \n \n\\_IF\\_(@1311@=\"N\\*\")\"%N0\"+@194@+\" \"+@1311@\\_ELSE\\_\"%K0\"+@194@ \n \nFormat olarak örn. A30 kullanılmalıdır. Ek olarak bir ön metin (örn. pos.) kullanılabilir. \n \nAçıklama:\n\n| | |\n|  |  |\n| \\_IF\\_(Kontrol)Çıktı1\\_ELSE\\_Çıktı2 | Kontrolün sonucu Doğru (Wahr) ise Çıktı1, aksi halde Çıktı2 döndürülür |\n| \\_IF\\_(@1311@=\"N\\*\")Çıktı1 | 1311 (`TextPos`) niteliğinin içeriği \"N\" ile başlıyorsa Çıktı1 döndürülür |\n| \"%N0\" +@194@ +\" \" +@1311@ | Bir sekizgen oluşturmak için kontrol karakteri (Metin) Poz numarası niteliği eklenir bir boşluk karakteri eklenir TextPos niteliği eklenir |\n| \\_ELSE\\_ \"%K0\" +@194@ | Kontrol Yanlış (Falsch) döndürdüğünde 2. durum için başlangıç Bir daire oluşturmak için kontrol karakteri (Metin) Poz numarası niteliği eklenir |\n\n \nBir yapı elemanı bu etiket stili ile etiketlendiğinde poz numarası her zaman daire içinde görüntülenir. `TextPos` niteliğine örn. N1 (İlave 1 / Nachtrag 1 için) girilirse bu poz bir sekizgen ile işaretlenir. \n \n \nEkteki dosyalarda formül basit bir örnekle birlikte yer almaktadır. \n \n \n**Durum 2:** \nKapıların boşluk yüksekliği kontrol edilmek isteniyor ve net geçiş yüksekliğinin (bitmiş döşeme üst kotundan kaba lento alt kotuna kadar) altına düşülmesi durumunda bir uyarı yazdırılması, aksi halde hiçbir şey görünmemesi isteniyor. Kapı, Büyük Kapı SmartPart veya kapı makrosu yapı elemanının etiketlendiği varsayılmaktadır. \n \n1. Kapı yüksekliğinin be …",
+      "figures": [
+        "/akademi/lejant/10594_0EM7U000001TdD0_d534cfc8.png",
+        "/akademi/lejant/10594_0EM7U000001TdD1_295af95b.png"
+      ]
+    },
+    {
+      "id": "de_8713",
+      "title": "Bewehrung - Schnelle Erzeugung von speziellen Biegeformen",
+      "body": "- **Kaynak URL (Alındığı Adres):** https://learnnow.allplan.com/totara/engage/resources/howto/index.php?id=8713&source=howto\n- **Kaynak ID (`resource_id`):** `8713`\n- **Resmi Salesforce / Allplan KB No:** `000008523-de`\n- **İçerik Tipi:** `knowledge_article`\n- **Dil:** `de`\n- **Kategori Ağacı:** `ALLPLAN > Ingenieurbau > Bewehrung > Rundstahl`\n- **Geçerli Allplan Sürümleri:** `ALLPLAN 2025, ALLPLAN 2024, ALLPLAN 2023, ALLPLAN 2022`\n- **Yazar & Tarih:** Erstellt am 13. Oktober 2023, 17:59. Zuletzt aktualisiert am 23. Juli 2025, 22:21. | Owner: Salesforce Integration\n- **Doğrudan PDF Kılavuz URL:** -\n- **Eğitim Videosu / Webinar URL:** -\n- **İndirilen PDF, Örnek Dosya ve Ekran Görüntüleri (7 Adet):**\n - [SCREENSHOT] `8713_0EM67000008DTQ4_d5f2622b.png` (14.94 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/8713/0EM67000008DTQ4.png | SHA-256: `d5f2622b319b8d5f...`)\n - [SCREENSHOT] `8713_0EM67000008DTkD_61d50645.png` (12.33 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/8713/0EM67000008DTkD.png | SHA-256: `61d506450808daaf...`)\n - [SCREENSHOT] `8713_0EM67000008DXkH_153b9716.png` (18.69 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/8713/0EM67000008DXkH.png | SHA-256: `153b97167d469a45...`)\n - [SCREENSHOT] `8713_0EM67000008DTjo_4f27ff30.png` (114.22 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/8713/0EM67000008DTjo.png | SHA-256: `4f27ff30c2820a0a...`)\n - [SCREENSHOT] `8713_0EM67000008DTnH_dcf2e41b.png` (82.89 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/8713/0EM67000008DTnH.png | SHA-256: `dcf2e41be8641876...`)\n - [SCREENSHOT] `8713_0EM67000008DTmO_2d08672b.png` (120.51 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/8713/0EM67000008DTmO.png | SHA-256: `2d08672b640ccdac...`)\n - [SCREENSHOT] `8713_0EM67000008DTlQ_8fc16201.png` (149.57 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/8713/0EM67000008DTlQ.png | SHA-256: `8fc162011ac7b …",
+      "figures": [
+        "/akademi/lejant/8713_0EM67000008DTkD_61d50645.png",
+        "/akademi/lejant/8713_0EM67000008DTjo_4f27ff30.png",
+        "/akademi/lejant/8713_0EM67000008DXkH_153b9716.png",
+        "/akademi/lejant/8713_0EM67000008DTQ4_d5f2622b.png",
+        "/akademi/lejant/8713_0EM67000008DTlQ_8fc16201.png",
+        "/akademi/lejant/8713_0EM67000008DTmO_2d08672b.png",
+        "/akademi/lejant/8713_0EM67000008DTnH_dcf2e41b.png"
+      ]
+    },
+    {
+      "id": "de_10887",
+      "title": "Bewehrung - R-Bewehrung mit Auszugsbemaßung nach ISO 3766 erstellen",
+      "body": "- **Kaynak URL (Alındığı Adres):** https://learnnow.allplan.com/totara/engage/resources/howto/index.php?id=10887&source=howto\n- **Kaynak ID (`resource_id`):** `10887`\n- **Resmi Salesforce / Allplan KB No:** `000007399-de`\n- **İçerik Tipi:** `knowledge_article`\n- **Dil:** `de`\n- **Kategori Ağacı:** `ALLPLAN > Ingenieurbau > Bewehrung`\n- **Geçerli Allplan Sürümleri:** `ALLPLAN, ALLPLAN 2025, ALLPLAN 2024, ALLPLAN 2023, ALLPLAN 2022, ALLPLAN 2021, ALLPLAN 2020, ALLPLAN 2019, ALLPLAN 2018, ALLPLAN 2017, ALLPLAN 2016, ALLPLAN 2015, ALLPLAN 2014, ALLPLAN 2013, ALLPLAN 2012, ALLPLAN 2009`\n- **Yazar & Tarih:** Erstellt am 17. Juli 2022, 18:05. Zuletzt aktualisiert am 24. Juni 2025, 14:21. | Owner: Salesforce Integration\n- **Doğrudan PDF Kılavuz URL:** -\n- **Eğitim Videosu / Webinar URL:** -\n- **İndirilen PDF, Örnek Dosya ve Ekran Görüntüleri (4 Adet):**\n - [SCREENSHOT] `10887_0EM7U000001Te59_e98d7d43.png` (2.79 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/10887/0EM7U000001Te59.png | SHA-256: `e98d7d43aaf735d6...`)\n - [SCREENSHOT] `10887_0EM7U000001Te5A_af8ec9ad.png` (1.69 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/10887/0EM7U000001Te5A.png | SHA-256: `af8ec9ad9d02f58e...`)\n - [SCREENSHOT] `10887_0EM7U000001Te5B_663aadc1.png` (2.64 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/10887/0EM7U000001Te5B.png | SHA-256: `663aadc19acf31b5...`)\n - [SCREENSHOT] `10887_0EM7U000001Te5C_3566f624.png` (1.55 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/10887/0EM7U000001Te5C.png | SHA-256: `3566f624b37bd24e...`)\n\n\n\n**Frage:** \n \nWie werden bei einem nicht rechtwinklig gebogenen Eisen die Schenkellängen und Biegemaße eines Auszugs ermittelt? \n \n \n \n**Antwort:** \n \nDie Schenkellängen und Maßlinien werden nach ISO 3766 (03. 2004) berechnet. Die ISO 3766 ersetzt die Vorgängerversion \nISO 4066. \n \nDie kleinen Differenzen (max. 2mm nach Bild 1) resultieren aus Rundungstoleranzen \n \n \nBild 1: Vermaßung von nicht rechtwinkligen Schenkeln gemäß ISO 3766 mit realer Eisendarstellung. \n \n \nBild 2: …",
+      "figures": [
+        "/akademi/lejant/10887_0EM7U000001Te59_e98d7d43.png",
+        "/akademi/lejant/10887_0EM7U000001Te5A_af8ec9ad.png",
+        "/akademi/lejant/10887_0EM7U000001Te5B_663aadc1.png",
+        "/akademi/lejant/10887_0EM7U000001Te5C_3566f624.png"
+      ]
+    },
+    {
+      "id": "de_10869",
+      "title": "Legenden - Stahlliste mit festem Büronamen erstellen",
+      "body": "- **Kaynak URL (Alındığı Adres):** https://learnnow.allplan.com/totara/engage/resources/howto/index.php?id=10869&source=howto\n- **Kaynak ID (`resource_id`):** `10869`\n- **Resmi Salesforce / Allplan KB No:** `000007475-de`\n- **İçerik Tipi:** `knowledge_article`\n- **Dil:** `de`\n- **Kategori Ağacı:** `ALLPLAN > Allgemein > Auswertungen`\n- **Geçerli Allplan Sürümleri:** `ALLPLAN, ALLPLAN 2012, ALLPLAN 2009`\n- **Yazar & Tarih:** Erstellt am 17. Juli 2022, 18:05. Zuletzt aktualisiert am 25. Juni 2025, 09:41. | Owner: Salesforce Integration\n- **Doğrudan PDF Kılavuz URL:** -\n- **Eğitim Videosu / Webinar URL:** -\n- **İndirilen PDF, Örnek Dosya ve Ekran Görüntüleri (0 Adet):**\n - *(Ek Dosya / Görsel Yok)*\n\n\n\n**Frage:** \n \nWie kann eine Stahlliste mit einem festgelegten Büronamen erstellt werden? \n \n \n \n**Antwort**: \n \nAktivieren Sie ein neues Teilbild und wechseln Sie im CAD Navigator in das Listenmodul \n(Zusätzliche Module -> Listenerstellung). \nKopieren Sie die gewünschte Stahlliste mit der Listenverwaltung (Erzeugen -> Zusätzliche Module -> Listenerstellung -> Listenverwaltung) vom Verzeichnis **Standard** in das Verzeichnis **Büro**. Dabei muss die Dateinummer beibehalten werden, z.B. Standard - Datei 18 Stahllisten - Liste Rundstl L 1 nach Büro - Datei 18 Stahllisten - Musterfirma kopieren. Diese kopierte Liste wird mit **Listen modifizieren** geöffnet (Ändern -> Zusätzliche Module ->Listenerstellung -> Listen modifizieren). \nMit dem Befehl **Ze-Lö** werden die Zellen Kundenname Zeile 1 und Kundenname Zeile 2 in der Liste gelöscht. Jetzt erstellen Sie den gewünschten Text mit dem Befehl **Ze-Ins** (Listenbereich: Listenkopf und Zellentyp: Texte ).",
+      "figures": []
+    },
+    {
+      "id": "de_11307",
+      "title": "Etiket Stilleri - Etiket stillerinin içeriği",
+      "body": "**Soru:** \n \nBir etiket stilinde (Beschriftungsbild) hangi niteliklerin kullanıldığı nasıl öğrenilebilir? \n \n \n \n**Örnek Durumlar:**\n\n* Etiketlenmiş veriler mevcut, ancak orijinal etiket stili mevcut değil / bulunamıyor.\n* Bir etiket stili arıyorsunuz ve standart etiketlerin neleri değerlendirdiğini bilmek istiyorsunuz.\n* İş arkadaşlarınızın verileri üzerinde çalışmaya devam etmeniz gerekiyor, ancak mevcut etiketin doğru şekilde değişmesi için hangi nitelikleri değiştirmeniz gerektiğini bilmiyorsunuz\n* Metrajınızda çizim dosyasında etiketlenmiş olanlarla aynı değerlere sahip olmak istiyorsunuz.\n\n \n**Durum 1 - Bir etiket stilinde hangi nitelikler mevcut.** \nKendi etiket stilinizi veya bir standart etiket stilini kullanılan nitelikler açısından incelemek istiyorsunuz. \nBunun için aşağıdaki adımları izleyin: \n \n- **Etiket Stili (Beschriftungsbild)** fonksiyonunu çağırın \n \n \n \n- Giriş Seçenekleri (Eingabeoptionen) -> **Oku (Lesen)** \n \n \n \n- İncelenecek etiket stilini **seçin** ve çizim dosyasına yerleştirin. \n \n \nEtiket stiline bağlı olarak birden fazla folyo (Folie) ortaya çıkacaktır. Tekil folyoların hangi ayarlarla (ölçekler veya çizim tipleri) kaydedildiği okunamaz. \n \n- Giriş Seçenekleri (Eingabeoptionen) -> **Modi** -> örn. İşlev (Funktion) **(1**) metnini seçin. \n(Numaralandırılmış örnekler aşağıda kısaca daha yakından incelenecektir.) \n \n \nSeçimden sonra Etiket Stili (Beschriftungsbild) araç çubuğu görüntülenir. İçinde çeşitli ayarlar görünür. \n \n \n**Temel Ayarlar:** \n \n**Format (Biçim)**: Çıktı biçiminin ayarı. Burada **10** karakterlik bir metin çıktısına **(A)** izin veren bir metin biçimi ayarlanmıştır. Daha uzun metinler burada kesilir. Diğer biçimler örneğin maks. 8 karakterlik (virgül dahil) ve bunun 3'ü ondalık basamak olan sayısal çıktı için F8.3 veya kot biçimi olarak K15.3'tür. Bununla ilgili daha fazla bilgiyi Yardım'da bulabilirsiniz. \n**Anpass (Uyarla)**: Uyarla fonksiyonu etkinleştirildiğinde metin boyutu ölçeğe göre uyarlanmaz. Ölçekten bağımsız olarak metnin ihtiyaç duyduğu alan aynı kalır. \n**DIM (Birim)**: Burada - sayısal çıktılarda - birim ayarlanabilir. Doğrudan bir nitelik çıktısı kullanıldığında değerler (mümkünse) seçilen birime gö …",
+      "figures": [
+        "/akademi/lejant/11307_0EM7U000001TdDA_09a214c9.png",
+        "/akademi/lejant/11307_0EM7U000001TdDB_0ed94683.png",
+        "/akademi/lejant/11307_0EM7U000001TdDC_70179970.png",
+        "/akademi/lejant/11307_0EM7U000001TdDD_11dc365c.png",
+        "/akademi/lejant/11307_0EM7U000001TdDE_6b6ec24d.png",
+        "/akademi/lejant/11307_0EM7U000001TdDF_abd8da22.png",
+        "/akademi/lejant/11307_0EM7U000001TdDG_77797bbc.png",
+        "/akademi/lejant/11307_0EM7U000001TdDH_88fa68de.png",
+        "/akademi/lejant/11307_0EM7U000001TdDI_871593a3.png",
+        "/akademi/lejant/11307_0EM7U000001TdDJ_09a214c9.png",
+        "/akademi/lejant/11307_0EM7U000001TdDK_db937216.png",
+        "/akademi/lejant/11307_0EM7U000001TdDL_ba46191d.png",
+        "/akademi/lejant/11307_0EM7U000001TdDM_28e37380.png"
+      ]
+    }
+  ]
+}

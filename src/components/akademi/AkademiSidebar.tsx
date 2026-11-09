@@ -30,6 +30,11 @@ const AKADEMI_SERIES: readonly AkademiSeriesNav[] = [
 /** Program-wide curriculum nav: sticky rail on desktop, off-canvas drawer on mobile. */
 export function AkademiSidebar() {
   const pathname = usePathname() ?? '';
+  // Focus mode: inside a lesson series, show only that series' lessons + a back link.
+  const activeSeries = AKADEMI_SERIES.find((series) => pathname.startsWith(series.basePath));
+  const activeSeriesLevelTitle = activeSeries
+    ? sidebarLevels.find((level) => level.slug === activeSeries.levelSlug)?.title ?? 'Akademi'
+    : '';
   const [open, setOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const navRef = useRef<HTMLElement>(null);
@@ -98,6 +103,33 @@ export function AkademiSidebar() {
         aria-label="Müfredat gezinmesi"
         inert={isMobile && !open}
       >
+        {activeSeries ? (
+          <div>
+            <Link href={`/akademi/${activeSeries.levelSlug}`} className={styles.backLink}>
+              <span aria-hidden="true">←</span>
+              <span>{activeSeriesLevelTitle} seviyesi</span>
+            </Link>
+            <p className={styles.heading}>{activeSeries.title}</p>
+            <ul className={`${styles.tmLessons} ${styles.focusLessons}`}>
+              {activeSeries.lessons.map((lsn) => {
+                const lessonActive = pathname === `${activeSeries.basePath}/${lsn.slug}`;
+                return (
+                  <li key={lsn.slug}>
+                    <Link
+                      href={`${activeSeries.basePath}/${lsn.slug}`}
+                      className={`${styles.tmLessonLink} ${lessonActive ? styles.moduleActive : ''}`}
+                      aria-current={lessonActive ? 'page' : undefined}
+                    >
+                      <span className={styles.tmLessonNo}>{String(lsn.no).padStart(2, '0')}</span>
+                      <span className={styles.tmLessonTitle}>{lsn.title}</span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        ) : (
+          <>
         <p className={styles.heading}>Müfredat</p>
         <ol className={styles.levels}>
           {sidebarLevels.map((level) => {
@@ -165,6 +197,8 @@ export function AkademiSidebar() {
             );
           })}
         </ol>
+          </>
+        )}
       </nav>
     </>
   );

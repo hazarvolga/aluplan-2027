@@ -7,7 +7,8 @@
   "hours": 8,
   "format": "Hibrit",
   "prerequisite": "İ.M6",
-  "summary": "Prefabrik elemanları doğru parametrelerle oluşturur, üretim mantığına göre segmentlere ayırıp kodlar ve üretim verisi ile eleman listelerini hazırlar.",
+  "summary": "Bu derste bir elemanı prefabrik elemana dönüştürür, üretim ve taşıma sınırlarına göre segmentlere ayırır, her parçaya benzersiz kod verir, gömülü parçaları ekler ve üretim verisi ile eleman listesini hazırlarsınız. Model, fabrikaya gidebilecek bir imalat verisine dönüşür.",
+  "estimatedMinutes": 40,
   "outcomes": [
     {
       "text": "Prefabrik (precast) elemanları (panel, kiriş, döşeme plağı) doğru parametrelerle oluşturur.",
@@ -25,6 +26,37 @@
       "code": "K-İ7.3"
     }
   ],
+  "lesson": {
+    "title": "Fabrikaya hazır eleman",
+    "subtitle": "Modeli parçalara böler, kodlar ve üretim verisini çıkarırsınız.",
+    "intro": "Prefabrik yapı, parçaların fabrikada üretilip sahada montajlandığı bir sistemdir. Bu derste bir elemanı prefabrik parçaya dönüştürecek, onu taşınabilir segmentlere bölecek, kodlayacak ve üretime giden veriyi hazırlayacaksınız.",
+    "sections": [
+      {
+        "heading": "Prefabrik eleman ve panel",
+        "body": [
+          "**Prefabrik eleman**, fabrikada önceden üretilip sahada monte edilen parçadır: **panel** (duvar/cephe plağı), kiriş ya da döşeme plağı. Modeldeki mimari/taşıyıcı bir elemanı prefabrik elemana dönüştürerek başlarsınız. [araç adı sürüme göre değişebilir]",
+          "Prefabrikte tasarım ile üretim iç içedir: modelediğiniz şey doğrudan imal edilecektir, bu yüzden her ayrıntı gerçek olmalıdır."
+        ],
+        "tryIt": "Kendi denemen: Bir duvarı prefabrik panele dönüştür ve onu tek bir üretim parçası olarak düşün."
+      },
+      {
+        "heading": "Segment ve kod",
+        "body": [
+          "Bir eleman çoğu zaman tek parça üretilemez; üretim ve taşıma sınırlarına göre **segment**lere ayrılır. Her segmente benzersiz bir **eleman kodu** (mark) verirsiniz; bu kod, o parçanın fabrikadan şantiyeye kadar kimliğidir.",
+          "Kodlama disiplini prefabrikin bel kemiğidir: yanlış ya da çakışan kod, sahada yanlış parçanın yanlış yere montajı demektir."
+        ],
+        "tryIt": "Kendi denemen: Bir paneli taşıma sınırına göre iki segmente böl ve her birine benzersiz kod ver."
+      },
+      {
+        "heading": "Gömülü parçalar ve üretim verisi",
+        "body": [
+          "Prefabrik parçalar **gömülü parçalar** taşır: kaldırma ankrajları, bağlantı plakaları. Bunları elemana eklersiniz; parçanın hem taşınabilmesi hem de birleşebilmesi buna bağlıdır.",
+          "Sonunda **üretim verisini** ve eleman listesini üretirsiniz: ölçü, donatı ve gömülü parça özeti. Bu veri fabrikanın kalıbıdır; eksikse parça üretilemez."
+        ],
+        "tryIt": "Kendi denemen: Panele kaldırma ankrajı ve bağlantı plakası ekle, sonra üretim verisi ile eleman listesini üret ve kodları karşılaştır."
+      }
+    ]
+  },
   "concepts": [
     {
       "term": "Prefabrik eleman",

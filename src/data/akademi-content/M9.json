@@ -7,7 +7,8 @@
   "hours": 12,
   "format": "Hibrit",
   "prerequisite": "Seviye 3'ten en az bir kol",
-  "summary": "Sürekli projede tekrar eden işleri görsel programlama ile otomatikleştirir ve PythonParts ile özel parametrik objeler geliştirir.",
+  "summary": "Bu derste tekrar eden bir işi görsel programlama ile otomatikleştirir, düğümleri bağlayarak parametrik bir akış kurar ve PythonParts ile kendi parametrik objenizi geliştirirsiniz. Elle yaptığınız tekrarları tek komuta indirgersiniz.",
+  "estimatedMinutes": 55,
   "outcomes": [
     {
       "text": "Görsel programlama (visual scripting) ile parametrik bir iş akışını kurgular",
@@ -20,6 +21,37 @@
       "code": "K-U9.2"
     }
   ],
+  "lesson": {
+    "title": "İşi otomatikleştirmek",
+    "subtitle": "Tekrar eden işi bir kez kurgular, sonra tek tıkla üretirsiniz.",
+    "intro": "Bir mühendis ya da mimar zamanının çoğunu tekrar eden işlere harcar. Bu derste bu tekrarları otomatikleştirmeyi öğreneceksiniz: görsel programlama ile bir akış kuracak ve PythonParts ile kendi akıllı objenizi geliştireceksiniz.",
+    "sections": [
+      {
+        "heading": "Görsel programlama: kod yazmadan otomasyon",
+        "body": [
+          "**Görsel programlama** (visual scripting), kod yazmadan blokları bağlayarak parametrik bir akış kurmaktır. Her blok bir **düğüm**dür: bir girdi alır, bir işlem yapar, bir çıktı verir. Düğümleri sırayla bağlayarak örneğin 'bir aks boyunca belirli aralıkla kolon diz' işini kurgularsınız.",
+          "Akışı **parametre**lerle beslersiniz (adet, aralık, yükseklik); parametreyi değiştirince çıktı yeniden üretilir. Bir kez kurup yüz kez kullanırsınız."
+        ],
+        "tryIt": "Kendi denemen: Görsel programlama ortamında adet/aralık parametreleriyle bir kolon dizisi akışı kur ve farklı değerlerle çalıştır."
+      },
+      {
+        "heading": "Düğümleri bağlamak",
+        "body": [
+          "Bir akış girdi → geometri üretimi → yerleştirme sırasıyla ilerler. Düğümleri doğru sırayla bağlamak, akışın mantığını kurar. Yanlış bağlanan bir düğüm, tüm akışı sessizce bozar; bu yüzden akışı küçük parçalar hâlinde test edersiniz.",
+          "Görsel programlamanın güzelliği, mantığı görebilmenizdir: akış bir diyagram gibi önünüzde durur."
+        ],
+        "tryIt": "Kendi denemen: Akışını farklı parametre değerleriyle çalıştır ve her değişiklikte çıktının doğru güncellendiğini doğrula."
+      },
+      {
+        "heading": "PythonParts: kendi parametrik objen",
+        "body": [
+          "**PythonPart**, Python ile tanımlanan özel bir parametrik objedir; arayüzü ve parametreleri bir **PYP dosyasında** tutulur. Görsel programlamanın ötesine geçtiğinizde, tekrar kullanılacak özel bir obje için basit bir PythonPart iskeleti kurarsınız. [sürüme göre doğrula]",
+          "PythonPart'ı projeye yerleştirip parametre değiştirdiğinizde model güncellenir: artık yalnızca kullanan değil, üreten taraftasınız."
+        ],
+        "tryIt": "Kendi denemen: Basit bir PythonPart iskeleti oluştur, parametrelerini PYP arayüzünden gir ve projeye yerleştirip parametre değişiminde güncellendiğini gör."
+      }
+    ]
+  },
   "concepts": [
     {
       "term": "Görsel programlama",

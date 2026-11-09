@@ -7,7 +7,8 @@
   "hours": 8,
   "format": "Hibrit",
   "prerequisite": "Seviye 2 tamamlanmış",
-  "summary": "Çelik yapı elemanlarını doğru kesit ve kalite ile modeller, kolon-kiriş bağlantılarını oluşturur ve SDS2 ile üretim/detay aktarım akışını tanımlar.",
+  "summary": "Bu derste çelik profilleri doğru kesit ve kalite ile modeller, kolon ve kirişleri akslara yerleştirir, kolon-kiriş birleşimlerini levha ve bulonla oluşturur ve modeli SDS2 üretim/detay aktarımı için hazırlarsınız. Çelik modeliniz imalata gidebilir hâle gelir.",
+  "estimatedMinutes": 45,
   "outcomes": [
     {
       "text": "Çelik yapı elemanlarını (profil, kolon, kiriş) doğru kesit ve kalite ile modeller.",
@@ -25,6 +26,45 @@
       "code": "K-İ6.3"
     }
   ],
+  "lesson": {
+    "title": "Çelik yapıyı modellemek",
+    "subtitle": "Profilleri seçer, akslara dizer, birleşimleri kurar ve imalata hazırlarsınız.",
+    "intro": "Çelik yapı, betonarmeden farklı bir mantıkla çalışır: standart kesitli profiller, hassas birleşimler ve fabrika imalatı. Bu derste çelik kolon ve kirişleri modelleyecek, birleşimlerini kuracak ve modeli SDS2 ile detay/üretim akışına hazırlayacaksınız.",
+    "sections": [
+      {
+        "heading": "Profil ve kalite",
+        "body": [
+          "Çelik yapı **çelik profil** ile kurulur: standart kesitli (I, H, boru, lama) taşıyıcı elemanlar. Profil kütüphanesinden kesiti seçer ve malzeme kalitesini (örneğin S235) girersiniz. [kütüphane adı sürüme göre değişebilir]",
+          "Doğru kesit ve kalite yalnızca mukavemet için değil, metraj ve ağırlık hesabı için de şarttır: çelik projede ağırlık, maliyetin doğrudan ölçüsüdür."
+        ],
+        "tryIt": "Kendi denemen: Profil kütüphanesinden bir I kesit seç, kalitesini gir ve tek bir eleman olarak yerleştir."
+      },
+      {
+        "heading": "Kolon ve kiriş: iskeleti kurmak",
+        "body": [
+          "**Çelik kolon** düşey, **çelik kiriş** yatay taşıyıcıdır. Kolonları akslara yerleştirir, kirişleri kolonlar arasına geçirir ve uç kotlarını hizalarsınız. Akslara bağlı çalışmak, çelikte de modelin tutarlılığını sağlar.",
+          "Çelikte kotlar milimetrik önemlidir: bir kiriş ucu yanlış kotta olursa birleşim imal edilemez. Bu yüzden hizalama alışkanlığı en baştan kurulur."
+        ],
+        "tryIt": "Kendi denemen: İki çelik kolonu akslara koy, aralarına bir kiriş geçir ve uç kotlarını hizala."
+      },
+      {
+        "heading": "Birleşimler: çeliğin kalbi",
+        "body": [
+          "Çelik yapının gerçek mühendisliği **bağlantılardadır**: iki elemanı birleştiren levha, **bulon** (sökülebilir cıvata) ve kaynak düzeni. Kolon-kiriş birleşimine bu elemanları eklediğinizde, birleşim hem taşır hem de imal edilebilir olur. [araç adı sürüme göre değişebilir]",
+          "İyi bir birleşim modeli, şantiyede 'bu nasıl birleşecek?' sorusunu ortadan kaldırır."
+        ],
+        "tryIt": "Kendi denemen: Bir kolon-kiriş birleşimine alın levhası ve bulon grubu ekle."
+      },
+      {
+        "heading": "SDS2 aktarımı: modelden imalata",
+        "body": [
+          "**SDS2**, çelik detay ve üretim yazılımıdır; ALLPLAN modeliniz SDS2'ye köprüyle aktarılır. Aktarımdan önce modeli hazırlarsınız: eleman adlandırma ve kesit eşlemesini kontrol edersiniz. [SDS2 entegrasyonunu sürüme göre doğrula]",
+          "Amaç, modeldeki her çeliğin imalat çizimine ve ağırlık listesine doğru yansımasıdır; aktarımdaki bir eşleme hatası fabrikada yanlış parça demektir."
+        ],
+        "tryIt": "Kendi denemen: Elemanları adlandır, kesit eşlemesini kontrol et ve çeliklerin ağırlık listesine doğru düştüğünü gör."
+      }
+    ]
+  },
   "concepts": [
     {
       "term": "Çelik profil",

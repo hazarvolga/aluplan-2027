@@ -7,7 +7,8 @@
   "hours": 16,
   "format": "Hibrit",
   "prerequisite": "Seviye 2 tamamlanmış",
-  "summary": "Parametrik yol/altyapı modelini oluşturur, prefabrik kirişli bir köprüyü modeller ve altyapı ile köprü modelini sürekli proje koordinatlarına hizalar.",
+  "summary": "Bu derste bir yol güzergâhı ve enkesitiyle parametrik altyapı modeli oluşturur, prefabrik kirişli bir köprüyü (tabliye, kiriş, mesnet) modeller ve altyapı ile köprüyü sürekli proje koordinatına hizalarsınız. Bina ölçeğinden altyapı ölçeğine geçersiniz.",
+  "estimatedMinutes": 65,
   "outcomes": [
     {
       "text": "Parametrik yol/altyapı modelini (güzergâh, enkesit, kazı/dolgu) oluşturur.",
@@ -25,6 +26,37 @@
       "code": "K-İ8.3"
     }
   ],
+  "lesson": {
+    "title": "Yol ve köprü ölçeğinde modellemek",
+    "subtitle": "Güzergâhı kurar, enkesiti uygular ve köprüyü üstüne yerleştirirsiniz.",
+    "intro": "Altyapı, binadan farklı düşünmeyi gerektirir: metrelerce uzunluk, araziye uyan geometriler ve güzergâh mantığı. Bu derste bir yol güzergâhı kuracak, enkesitini uygulayacak ve üstüne prefabrik kirişli bir köprü modelleyeceksiniz.",
+    "sections": [
+      {
+        "heading": "Güzergâh ve enkesit",
+        "body": [
+          "Altyapı modeli **güzergâh** ile başlar: yolun plan ve boykesitteki ekseni. Güzergâhı tanımladıktan sonra bir **enkesit** şablonunu (şerit, banket, şev) bu eksen boyunca uygularsınız; program yolu üç boyutlu üretir. [ALLPLAN Civil / sürüme göre doğrula]",
+          "Enkesit araziyle buluştuğunda **kazı ve dolgu** hacimleri çıkar; bu, altyapı projesinin en büyük maliyet kalemlerinden biridir."
+        ],
+        "tryIt": "Kendi denemen: Basit bir güzergâh çiz ve bir enkesit şablonunu boyunca uygula; kazı/dolgu bölgelerini gözle."
+      },
+      {
+        "heading": "Köprü: tabliye, kiriş, mesnet",
+        "body": [
+          "Köprü akslarını ve açıklıklarını güzergâh üzerine yerleştirirsiniz. **Prefabrik kirişleri** açıklıklara koyar, onları ayağa bağlayan **mesnetleri** tanımlar ve üstlerine taşıtın geçtiği **tabliyeyi** modellersiniz. [ALLPLAN Bridge / sürüme göre doğrula]",
+          "Köprü, altyapı ile yapının kesiştiği yerdir: hem güzergâha hem de taşıyıcı mantığa aynı anda uymak zorundadır."
+        ],
+        "tryIt": "Kendi denemen: Bir açıklığa prefabrik kirişleri yerleştir, mesnetleri tanımla ve üstüne tabliyeyi modelle."
+      },
+      {
+        "heading": "Koordinat ve metraj",
+        "body": [
+          "Altyapı ve köprü modelini **sürekli proje koordinatına** hizalarsınız; böylece bina, yol ve köprü aynı dünyada oturur. Sonra hacim ve metraj çıktısını kontrol edersiniz.",
+          "Altyapıda koordinat hatası pahalıdır: yanlış kotta bir köprü ayağı, gerçek dünyada yolla buluşmaz. Bu yüzden hizalama ve metraj kontrolü işin son ama kritik adımıdır."
+        ],
+        "tryIt": "Kendi denemen: Köprüyü proje koordinatına hizala ve hacim/metraj çıktısının tutarlı olduğunu kontrol et."
+      }
+    ]
+  },
   "concepts": [
     {
       "term": "Güzergâh",

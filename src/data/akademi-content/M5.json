@@ -7,7 +7,8 @@
   "hours": 16,
   "format": "Hibrit",
   "prerequisite": "Seviye 2 tamamlanmış",
-  "summary": "Betonarme elemanlarda 3B donatıyı pas payı, boyuna donatı ve etriyeyle detaylandırır; çakışmaları denetler ve modelden büküm şeması ile donatı listesi üretir.",
+  "summary": "Bu derste betonarme elemanlara 3B donatı yerleştirir: pas payını tanımlar, boyuna donatı ve etriyeleri koyar, çakışmaları 3B'de denetlersiniz; sonra modelden büküm şeması ve donatı listesi üretirsiniz. Donatı artık çizim değil, modelin bir parçasıdır.",
+  "estimatedMinutes": 60,
   "outcomes": [
     {
       "text": "Betonarme elemanlarda 3B donatıyı detaylandırır",
@@ -20,6 +21,45 @@
       "code": "K-İ5.2"
     }
   ],
+  "lesson": {
+    "title": "Betonu çelikle donatmak",
+    "subtitle": "Donatıyı 2B çizmezsiniz; betonun içine 3B olarak yerleştirirsiniz.",
+    "intro": "Betonarme bir eleman tek başına çekmeye dayanamaz; onu çelik **donatı** taşır. Bu derste bir betonarme elemanı 3B donatıyla detaylandıracak, donatıların birbirine ve yüzeye uygun mesafede durduğunu denetleyecek ve üretim için büküm şeması ile listeyi otomatik üreteceksiniz.",
+    "sections": [
+      {
+        "heading": "Pas payı: donatının sınırı",
+        "body": [
+          "Her şey **pas payı** ile başlar: donatı ile beton yüzeyi arasındaki koruyucu mesafe. Pas payı donatıyı korozyondan ve yangından korur; yanlış pas payı taşıma gücünü ve dayanıklılığı doğrudan etkiler.",
+          "Donatılacak elemanı seçip pas payını tanımladığınızda, yerleştireceğiniz tüm çubuklar bu sınır içinde kalır. [değer girişi sürüme göre değişebilir]"
+        ],
+        "tryIt": "Kendi denemen: Bir kiriş veya kolon seç ve ona bir pas payı tanımla; bu mesafenin donatıyı nasıl sınırladığını düşün."
+      },
+      {
+        "heading": "Boyuna donatı ve etriye",
+        "body": [
+          "**Boyuna donatı**, eleman ekseni boyunca uzanan ana çubuklardır; çekme kuvvetini taşırlar. **Etriye** ise bu boyuna donatıyı saran enine donatıdır; kesme kuvvetine karşı koyar ve boyuna çubukları bir arada tutar.",
+          "İkisini de 3B olarak yerleştirirsiniz: etriyeleri belirli bir aralıkla dizersiniz (mesnet bölgelerinde sık, açıklıkta seyrek). Bu, gerçek bir betonarme detayının mantığıdır."
+        ],
+        "tryIt": "Kendi denemen: Bir kirişe boyuna donatıyı yerleştir, sonra etriyeleri bir aralıkla diz; mesnet yakınında aralığı sıklaştır."
+      },
+      {
+        "heading": "Çakışma denetimi: 3B'nin asıl faydası",
+        "body": [
+          "Donatıyı 3B kurmanın en büyük faydası çakışmaları görebilmenizdir. Boyuna donatı, etriye ve başka elemanların donatıları bir kolon-kiriş birleşiminde birbirine girebilir. 3B modelde bunu önceden görür ve düzeltirsiniz; şantiyede değil.",
+          "Donatıların hem birbirine hem de pas payına uyduğunu kontrol etmek, dökülemeyen bir detayın betona dönüşmesini engeller."
+        ],
+        "tryIt": "Kendi denemen: Bir kolon-kiriş birleşiminde donatıları 3B'de döndürerek çakışma olup olmadığını kontrol et."
+      },
+      {
+        "heading": "Büküm şeması ve donatı listesi",
+        "body": [
+          "Donatı modelde hazırsa üretim verisi otomatik gelir. **Büküm şeması**, her çubuğun şeklini, boyunu ve büküm açılarını gösterir; **donatı listesi** ise çap, adet, boy ve ağırlık dökümünü verir.",
+          "Bunlar modele bağlıdır: donatıyı değiştirdiğinizde şema ve liste güncellenir. Elle hazırlanan bir donatı metrajının en büyük hata kaynağı bu bağın olmamasıdır."
+        ],
+        "tryIt": "Kendi denemen: Çubuklara büküm/kanca değerlerini gir, sonra büküm şemasını ve donatı listesini üret."
+      }
+    ]
+  },
   "concepts": [
     {
       "term": "Donatı",

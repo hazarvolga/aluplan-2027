@@ -7,7 +7,8 @@
   "hours": 10,
   "format": "Hibrit",
   "prerequisite": "U.M9",
-  "summary": "Sürekli projeyi IFC olarak teslim eder, veri kaybını denetler ve referans modelle BCF, IDS, CDE ile koordinasyonu yürütür.",
+  "summary": "Bu derste sürekli projenizi IFC olarak teslim eder, dışa aktarımda veri kaybını denetler, bir referans modelle çakışmaları gözler, sorunları BCF ile paylaşır ve IDS/CDE/ISO 19650 mantığıyla teslim paketini düzenlersiniz. Modeliniz markadan bağımsız biçimde iş birliğine açılır.",
+  "estimatedMinutes": 50,
   "outcomes": [
     {
       "text": "IFC dışa/içe aktarımını yapar ve veri kaybını denetler",
@@ -25,6 +26,37 @@
       "code": "K-U10.3"
     }
   ],
+  "lesson": {
+    "title": "Modeli açık biçimde teslim etmek",
+    "subtitle": "Modeli IFC ile paylaşır, veri kaybını denetler ve koordinasyonu yürütürsünüz.",
+    "intro": "Bir model ne kadar iyi olursa olsun, başka disiplinlerle konuşamıyorsa yarım kalır. Bu derste **openBIM** mantığını öğreneceksiniz: modeli açık formatlarla teslim etmek, veri kaybını denetlemek ve referans modellerle koordinasyonu yürütmek.",
+    "sections": [
+      {
+        "heading": "IFC ile teslim ve veri kaybı",
+        "body": [
+          "**openBIM**, açık formatlarla markadan bağımsız iş birliğidir; onun ortak dili **IFC**'dir. Modeli IFC olarak dışa aktarırken hangi bilginin aktarılacağını bir **MVD** (görünüm) belirler. [IFC 4.3 / sürüme göre doğrula]",
+          "En kritik adım denetimdir: dışa aktardığınız IFC'yi boş bir ortamda tekrar içe aktarıp geometri, özellik ve sınıflandırmanın kaybolmadığını kontrol edersiniz. Teslim ettiğinizi görmeden teslim etmeyin."
+        ],
+        "tryIt": "Kendi denemen: Modeli IFC olarak dışa aktar, boş bir ortamda tekrar içe aktar ve özellik/sınıflandırma kaybı olup olmadığını denetle."
+      },
+      {
+        "heading": "Referans model ve BCF ile koordinasyon",
+        "body": [
+          "Koordinasyon için başka bir disiplinin **referans modelini** projenize eklersiniz (örneğin mimariye tesisatı) ve çakışmaları gözlersiniz. Bulduğunuz sorunları **BCF** ile oluşturursunuz: konum, açıklama ve sorumlu bilgisini taşıyan bir sorun paylaşım formatı.",
+          "BCF'nin gücü, sorunu e-postayla değil modelin üstünde, herkesin aynı noktayı gördüğü biçimde paylaşmanızdır."
+        ],
+        "tryIt": "Kendi denemen: Bir referans model ekle, bir çakışma bul ve onu konum/açıklama/sorumlu bilgisiyle BCF olarak oluştur."
+      },
+      {
+        "heading": "IDS, CDE ve ISO 19650",
+        "body": [
+          "Teslimin kuralları da vardır. **IDS**, hangi bilginin nasıl teslim edileceğini tanımlayan şartnamedir; **CDE**, tüm proje verisinin toplandığı ortak ortamdır; **ISO 19650** ise bu bilgi yönetiminin uluslararası standardıdır.",
+          "Teslim paketini doğru adlandırma ve durum bilgisiyle CDE'ye koyduğunuzda, işiniz yalnızca 'bitmiş' değil, 'teslim edilebilir' olur. Profesyonel BIM'in farkı buradadır."
+        ],
+        "tryIt": "Kendi denemen: Teslim şartını (IDS) belirle ve teslim paketini CDE akışına uygun adlandırma ve durum bilgisiyle düzenle."
+      }
+    ]
+  },
   "concepts": [
     {
       "term": "openBIM",

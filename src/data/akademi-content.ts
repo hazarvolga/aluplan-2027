@@ -85,10 +85,13 @@ export interface ApplicationStep {
  * Aluplan's own re-hosted copies once available.
  */
 export interface LessonVideo {
-  url: string;
+  /** Provider embed URL. Omit (with placeholder: true) to reserve the slot. */
+  url?: string;
   title?: string;
   /** 'vimeo' | 'youtube' — for the label only. */
   source?: string;
+  /** True reserves a labelled slot ("video gelecek") until the url is provided. */
+  placeholder?: boolean;
 }
 
 export interface LessonSection {

@@ -64,7 +64,12 @@
           "Donatı modelde hazırsa üretim verisi otomatik gelir. **Büküm şeması**, her çubuğun şeklini, boyunu ve büküm açılarını gösterir; **donatı listesi** ise çap, adet, boy ve ağırlık dökümünü verir.",
           "Bunlar modele bağlıdır: donatıyı değiştirdiğinizde şema ve liste güncellenir. Elle hazırlanan bir donatı metrajının en büyük hata kaynağı bu bağın olmamasıdır."
         ],
-        "tryIt": "Kendi denemen: Çubuklara büküm/kanca değerlerini gir, sonra büküm şemasını ve donatı listesini üret."
+        "tryIt": "Kendi denemen: Çubuklara büküm/kanca değerlerini gir, sonra büküm şemasını ve donatı listesini üret.",
+        "video": {
+          "title": "3B donatı detaylandırma (Reinforcement Detailing)",
+          "source": "vimeo",
+          "placeholder": true
+        }
       }
     ]
   },

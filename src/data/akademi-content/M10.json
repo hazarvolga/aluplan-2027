@@ -53,7 +53,12 @@
           "Koordinasyon için başka bir disiplinin **referans modelini** projenize eklersiniz (örneğin mimariye tesisatı) ve çakışmaları gözlersiniz. Bulduğunuz sorunları **BCF** ile oluşturursunuz: konum, açıklama ve sorumlu bilgisini taşıyan bir sorun paylaşım formatı.",
           "BCF'nin gücü, sorunu e-postayla değil modelin üstünde, herkesin aynı noktayı gördüğü biçimde paylaşmanızdır."
         ],
-        "tryIt": "Kendi denemen: Bir referans model ekle, bir çakışma bul ve onu konum/açıklama/sorumlu bilgisiyle BCF olarak oluştur."
+        "tryIt": "Kendi denemen: Bir referans model ekle, bir çakışma bul ve onu konum/açıklama/sorumlu bilgisiyle BCF olarak oluştur.",
+        "video": {
+          "title": "IFC teslimi ve BCF koordinasyonu (openBIM)",
+          "source": "vimeo",
+          "placeholder": true
+        }
       },
       {
         "heading": "IDS, CDE ve ISO 19650",

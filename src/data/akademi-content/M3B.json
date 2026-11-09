@@ -56,7 +56,12 @@
           "**Görselleştirme**, modelden gerçekçi, ışıklı bir görsel üretmektir. Önce yüzeylere **malzeme ve kaplama** atarsınız (beton, cam, ahşap), sonra bir kamera açısı, ışık ve render ön ayarı tanımlarsınız.",
           "Amaç fotogerçekçilik yarışı değil, fikri anlaşılır kılmaktır: doğru malzeme ve sakin bir ışık, abartılı bir render'dan daha ikna edicidir."
         ],
-        "tryIt": "Kendi denemen: Cepheye cam ve beton malzemesi ata, bir kamera açısı seç ve tek bir görsel al."
+        "tryIt": "Kendi denemen: Cepheye cam ve beton malzemesi ata, bir kamera açısı seç ve tek bir görsel al.",
+        "video": {
+          "title": "Görselleştirme ve render (Cinerender)",
+          "source": "vimeo",
+          "placeholder": true
+        }
       },
       {
         "heading": "Tasarım varyantları",

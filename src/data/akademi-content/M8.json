@@ -37,7 +37,12 @@
           "Altyapı modeli **güzergâh** ile başlar: yolun plan ve boykesitteki ekseni. Güzergâhı tanımladıktan sonra bir **enkesit** şablonunu (şerit, banket, şev) bu eksen boyunca uygularsınız; program yolu üç boyutlu üretir. [ALLPLAN Civil / sürüme göre doğrula]",
           "Enkesit araziyle buluştuğunda **kazı ve dolgu** hacimleri çıkar; bu, altyapı projesinin en büyük maliyet kalemlerinden biridir."
         ],
-        "tryIt": "Kendi denemen: Basit bir güzergâh çiz ve bir enkesit şablonunu boyunca uygula; kazı/dolgu bölgelerini gözle."
+        "tryIt": "Kendi denemen: Basit bir güzergâh çiz ve bir enkesit şablonunu boyunca uygula; kazı/dolgu bölgelerini gözle.",
+        "video": {
+          "title": "Yol ve köprü modelleme (ALLPLAN Civil / Bridge)",
+          "source": "vimeo",
+          "placeholder": true
+        }
       },
       {
         "heading": "Köprü: tabliye, kiriş, mesnet",

@@ -4,3 +4,9 @@
 .caption{display:flex;flex-direction:column;gap:2px;padding-left:var(--space-inset-sm);border-left:3px solid var(--accent-akademi)}
 .captionText{font-size:var(--type-body-sm-size);color:var(--text-secondary);line-height:var(--line-height-snug,1.4)}
 .source{font-family:var(--font-mono);font-size:var(--type-body-sm-size);letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted)}
+
+/* Placeholder slot: reserved until a video url is provided */
+.placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-stack-xs);text-align:center;padding:var(--space-inset-md);border-style:dashed;border-color:var(--border-strong);background:var(--surface-raised)}
+.phLabel{font-family:var(--font-mono);font-size:var(--type-body-sm-size);letter-spacing:.14em;color:var(--accent-akademi)}
+.phTitle{font-family:var(--font-heading);font-size:var(--type-body-md-size);color:var(--text-primary);max-width:28rem}
+.phNote{font-size:var(--type-body-sm-size);color:var(--text-muted)}

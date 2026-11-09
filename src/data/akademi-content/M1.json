@@ -62,7 +62,12 @@
           "Modelde dolaşmanın üç temel hareketi vardır. Fare tekerleğini çevirerek **yakınlaştırır/uzaklaştırırsınız**. Tekerleğe (orta tuşa) basılı tutup sürükleyerek görünümü **kaydırırsınız**. Bu iki hareket farklıdır: kaydırma modeli taşımaz, yalnızca ona baktığınız pencereyi oynatır.",
           "Model gözden kaybolduğunda telaşlanmayın; büyük ihtimalle kaydırma ya da aşırı yakınlaştırma yüzünden görünüm dışına çıkmıştır. **\"Tümünü sığdır\"** komutu modeli tekrar ekrana ortalar ve sizi güvenli başlangıç noktasına döndürür. [komut adı sürüme göre değişebilir]"
         ],
-        "tryIt": "Şimdi sen dene: Yakınlaştır, sonra orta tuşla kaydır ve modeli bilerek kaybet. Ardından \"tümünü sığdır\" ile geri getir."
+        "tryIt": "Şimdi sen dene: Yakınlaştır, sonra orta tuşla kaydır ve modeli bilerek kaybet. Ardından \"tümünü sığdır\" ile geri getir.",
+        "video": {
+          "title": "Arayüz ve temel gezinme (ör. Object palette tanıtımı)",
+          "source": "vimeo",
+          "placeholder": true
+        }
       },
       {
         "heading": "Aynı modeli birden çok pencereden görmek: viewport",

@@ -52,7 +52,12 @@
           "**Duvar**, çoğu modelin başladığı elemandır. Duvarı yerleştirirken onu aks sistemine hizalarsınız; böylece plan düzgün ve değiştirilebilir olur. Yükseklik değerini kat tanımınızla uyumlu verirsiniz.",
           "Bir duvar yalnızca bir çizgi değildir: taşıyıcı mı bölme mi olduğunu, kaç katmanlı olduğunu ve malzemesini de taşır. Bu bilgiler sonradan metraj ve kesitlerde otomatik kullanılır."
         ],
-        "tryIt": "Kendi denemen: Aks sistemine hizalı bir dış duvar çevresi yerleştir; yüksekliği kat yüksekliğinle aynı olsun."
+        "tryIt": "Kendi denemen: Aks sistemine hizalı bir dış duvar çevresi yerleştir; yüksekliği kat yüksekliğinle aynı olsun.",
+        "video": {
+          "title": "Zemin kat duvarlarının modellenmesi (Ground Floor Plan Walls)",
+          "source": "vimeo",
+          "placeholder": true
+        }
       },
       {
         "heading": "Döşeme, kolon ve kiriş",

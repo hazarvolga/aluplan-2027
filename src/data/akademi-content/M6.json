@@ -53,7 +53,12 @@
           "**Çelik kolon** düşey, **çelik kiriş** yatay taşıyıcıdır. Kolonları akslara yerleştirir, kirişleri kolonlar arasına geçirir ve uç kotlarını hizalarsınız. Akslara bağlı çalışmak, çelikte de modelin tutarlılığını sağlar.",
           "Çelikte kotlar milimetrik önemlidir: bir kiriş ucu yanlış kotta olursa birleşim imal edilemez. Bu yüzden hizalama alışkanlığı en baştan kurulur."
         ],
-        "tryIt": "Kendi denemen: İki çelik kolonu akslara koy, aralarına bir kiriş geçir ve uç kotlarını hizala."
+        "tryIt": "Kendi denemen: İki çelik kolonu akslara koy, aralarına bir kiriş geçir ve uç kotlarını hizala.",
+        "video": {
+          "title": "Çelik yapı modelleme ve profiller",
+          "source": "vimeo",
+          "placeholder": true
+        }
       },
       {
         "heading": "Birleşimler: çeliğin kalbi",

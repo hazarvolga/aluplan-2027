@@ -155,3 +155,26 @@ class AkademiLessonMediaTests(unittest.TestCase):
                     self.assertGreaterEqual(len(fig.get("alt", "")), 20)
                     asset = ROOT / "public" / fig["src"].lstrip("/")
                     self.assertTrue(asset.is_file(), f"missing image file: {asset}")
+
+
+class AkademiLessonVideoTests(unittest.TestCase):
+    """Every module reserves a labelled video slot (placeholder until a url is set)."""
+
+    def test_lessonvideo_component_handles_placeholder(self):
+        src = read("src/components/akademi/kit/LessonVideo.tsx")
+        self.assertIn("isPlaceholder", src)
+        self.assertIn("placeholder", src)
+        self.assertIn("<iframe", src)
+
+    def test_every_module_has_a_video_slot_with_topic(self):
+        for path in sorted(CONTENT_DIR.glob("*.json")):
+            data = json.loads(path.read_text(encoding="utf-8"))
+            sections = (data.get("lesson") or {}).get("sections") or []
+            videos = [s["video"] for s in sections if isinstance(s, dict) and s.get("video")]
+            with self.subTest(module=path.stem):
+                self.assertTrue(videos, f"{path.stem}: no video slot")
+                for v in videos:
+                    self.assertTrue(v.get("title"), "video slot needs a topic title")
+                    # placeholder slots carry no url yet; real ones must have a url
+                    if not v.get("placeholder"):
+                        self.assertTrue(v.get("url"), "non-placeholder video needs a url")

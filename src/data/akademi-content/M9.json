@@ -32,7 +32,12 @@
           "**Görsel programlama** (visual scripting), kod yazmadan blokları bağlayarak parametrik bir akış kurmaktır. Her blok bir **düğüm**dür: bir girdi alır, bir işlem yapar, bir çıktı verir. Düğümleri sırayla bağlayarak örneğin 'bir aks boyunca belirli aralıkla kolon diz' işini kurgularsınız.",
           "Akışı **parametre**lerle beslersiniz (adet, aralık, yükseklik); parametreyi değiştirince çıktı yeniden üretilir. Bir kez kurup yüz kez kullanırsınız."
         ],
-        "tryIt": "Kendi denemen: Görsel programlama ortamında adet/aralık parametreleriyle bir kolon dizisi akışı kur ve farklı değerlerle çalıştır."
+        "tryIt": "Kendi denemen: Görsel programlama ortamında adet/aralık parametreleriyle bir kolon dizisi akışı kur ve farklı değerlerle çalıştır.",
+        "video": {
+          "title": "Visual Scripting ile otomasyon",
+          "source": "vimeo",
+          "placeholder": true
+        }
       },
       {
         "heading": "Düğümleri bağlamak",

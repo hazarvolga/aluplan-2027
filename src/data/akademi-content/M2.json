@@ -45,7 +45,12 @@
           "Her **kat** için bir kot (taban yüksekliği) ve bir kat yüksekliği tanımlarsınız. Bu sayede çizdiğiniz duvar ya da döşeme doğru düzlemde oturur. Kat tanımı eksikse elemanlar yanlış yükseklikte görünür.",
           "Düzenli bir yapı yapısı, ileride kesit almayı, pafta düzenlemeyi ve metraj çıkarmayı çok kolaylaştırır; dağınık bir yapı ise her adımda size zaman kaybettirir."
         ],
-        "tryIt": "Kendi denemen: Üç katlı bir bina için yapı yapısında bina ve kat düğümlerini oluştur, her kata kot ve yükseklik gir."
+        "tryIt": "Kendi denemen: Üç katlı bir bina için yapı yapısında bina ve kat düğümlerini oluştur, her kata kot ve yükseklik gir.",
+        "video": {
+          "title": "Proje yapısı ve çizim dosyaları (ProjectPilot)",
+          "source": "vimeo",
+          "placeholder": true
+        }
       },
       {
         "heading": "Aks sistemi: her şeyin hizalandığı ızgara",

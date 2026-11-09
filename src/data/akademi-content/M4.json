@@ -36,7 +36,12 @@
           "**Kesit**, modeli bir düzlemle keserek elde ettiğiniz iki boyutlu görünümdür; **görünüş** ise modele bir yönden bakışla üretilen çizimdir (örneğin cephe). İkisini de siz çizmezsiniz: model üzerinde bir kesit çizgisi tanımlar ve program kesiti üretir. [araç adı sürüme göre değişebilir]",
           "Bunun değeri şudur: bir duvarı modelde değiştirdiğinizde, o duvarın göründüğü tüm kesit ve görünüşler birlikte güncellenir. Elle çizilmiş bir projede her değişikliği tek tek düzeltmeniz gerekirdi; burada tek kaynak modeldir."
         ],
-        "tryIt": "Kendi denemen: Modelinde bir kesit çizgisi tanımla ve kesiti üret; sonra bir duvarın yüksekliğini değiştir ve kesitin güncellendiğini gör."
+        "tryIt": "Kendi denemen: Modelinde bir kesit çizgisi tanımla ve kesiti üret; sonra bir duvarın yüksekliğini değiştir ve kesitin güncellendiğini gör.",
+        "video": {
+          "title": "Modelden kesit ve görünüş üretimi",
+          "source": "vimeo",
+          "placeholder": true
+        }
       },
       {
         "heading": "Görünüm ayarları: ölçek ve okunabilirlik",

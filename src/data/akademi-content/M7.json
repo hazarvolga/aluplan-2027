@@ -37,7 +37,12 @@
           "**Prefabrik eleman**, fabrikada önceden üretilip sahada monte edilen parçadır: **panel** (duvar/cephe plağı), kiriş ya da döşeme plağı. Modeldeki mimari/taşıyıcı bir elemanı prefabrik elemana dönüştürerek başlarsınız. [araç adı sürüme göre değişebilir]",
           "Prefabrikte tasarım ile üretim iç içedir: modelediğiniz şey doğrudan imal edilecektir, bu yüzden her ayrıntı gerçek olmalıdır."
         ],
-        "tryIt": "Kendi denemen: Bir duvarı prefabrik panele dönüştür ve onu tek bir üretim parçası olarak düşün."
+        "tryIt": "Kendi denemen: Bir duvarı prefabrik panele dönüştür ve onu tek bir üretim parçası olarak düşün.",
+        "video": {
+          "title": "Prefabrik eleman oluşturma (Precast)",
+          "source": "vimeo",
+          "placeholder": true
+        }
       },
       {
         "heading": "Segment ve kod",

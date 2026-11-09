@@ -37,7 +37,12 @@
           "**Kütüphane**, hazır objelerin ve sembollerin saklandığı kaynaktır: mobilya, kapı/pencere tipleri, semboller. Bir objeyi modele sürüklediğinizde o bir **parametrik obje** olarak gelir; boyutunu ve tipini değerlerle değiştirirsiniz.",
           "Kütüphaneyi kullanmak hem zaman kazandırır hem de standardı korur: herkes aynı kapı tipini aynı veriyle yerleştirdiğinde listeleriniz tutarlı olur."
         ],
-        "tryIt": "Kendi denemen: Kütüphaneden bir kapı ve bir pencere tipi yerleştir; sonra birinin genişliğini parametresinden değiştir."
+        "tryIt": "Kendi denemen: Kütüphaneden bir kapı ve bir pencere tipi yerleştir; sonra birinin genişliğini parametresinden değiştir.",
+        "video": {
+          "title": "Kütüphane, özellik ve metraj listeleri",
+          "source": "vimeo",
+          "placeholder": true
+        }
       },
       {
         "heading": "Özellik (attribute): elemana iliştirilen veri",

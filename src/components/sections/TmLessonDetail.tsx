@@ -186,7 +186,9 @@ export function TmLessonDetail({
             </div>
           </div>
         </section>
-      ) : lesson.articles.length > 0 ? (
+      ) : null}
+
+      {lesson.articles.length > 0 ? (
         <section className={styles.band} aria-labelledby="tm-makale">
           <div className="alu-container">
             <SectionHeader id="tm-makale" kicker="KAYNAK MAKALELER" title="Derinleşmek için" lead="ALLPLAN Türkçe destek içeriğinden ilgili makaleler. Başlığa tıklayınca açılır." />

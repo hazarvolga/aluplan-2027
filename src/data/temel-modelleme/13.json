@@ -16,9 +16,7 @@
       "heading": "Merdiven Tipi ve Kontur Girişi",
       "body": "**Mimari (Architecture) -> Merdivenler (Stairs / Treppen)** grubundan **U Tipi Merdiven (U-Type Stair)** veya **Düz Merdiven (Straight Stair)** komutunu seçin. Merdiven boşluğu köşe noktalarını çıkış yönü sırasına göre tıklayarak dış konturu ve çıkış hattını tanımlayın.",
       "figures": [
-        "/akademi/temel-modelleme/11149_0EM7U000001TdWo_a1790092.png",
-        "/akademi/temel-modelleme/11149_0EM7U000001TdWp_5797a28d.png",
-        "/akademi/temel-modelleme/11149_0EM7U000001TdWq_24e139bf.png"
+        "/akademi/temel-modelleme/11200_0EM7U000001TdQZ_309a6687.png"
       ]
     },
     {
@@ -26,20 +24,15 @@
       "heading": "Yükseklik, Rıht/Basamak Geometrisi ve Bileşenler",
       "body": "Alt kotu Zemin Kat bitmiş döşeme kotuna, üst kotu 1. Kat bitmiş döşeme kotuna bağlayın. Rıht sayısını (`örn. 18 rıht x 16.67 cm`) ve basamak genişliğini (`28–30 cm`, $2R+B \\approx 62\\text{ cm}$) ayarlayın; **Elemanlar (Stair Components)** sekmesinden betonarme plak kalınlığı, basamak kaplaması ve iç/dış korkulukları aktif edin.",
       "figures": [
-        "/akademi/temel-modelleme/11149_0EM7U000001TdWs_a6a93e5c.png",
-        "/akademi/temel-modelleme/11149_0EM7U000001TdWt_d701c14c.png",
-        "/akademi/temel-modelleme/11149_0EM7U000001TdWu_94d18776.png"
+        "/akademi/temel-modelleme/10575_0EM7U000001Td8g_04ea00a5.png",
+        "/akademi/temel-modelleme/11149_0EM7U000001TdWs_a6a93e5c.png"
       ]
     },
     {
       "time": "02:45 – 03:55",
       "heading": "2B Plan Kesim Gösterimi ve Merdiven Altı Duvar",
       "body": "**2B Kesit Gösterimi (2D Section)** sekmesinden kesim yüksekliğini (`1.50 m`), kesim altı sürekli çizgi ve kesim üstü kesikli çizgi stilini onaylayın; gerekirse merdiven altı duvarı eğimli üst düzleme bağlayın.",
-      "figures": [
-        "/akademi/temel-modelleme/11200_0EM7U000001TdQY_c346f0e0.png",
-        "/akademi/temel-modelleme/11200_0EM7U000001TdQZ_309a6687.png",
-        "/akademi/temel-modelleme/10575_0EM7U000001Td8g_04ea00a5.png"
-      ]
+      "figures": []
     }
   ],
   "pitfalls": [

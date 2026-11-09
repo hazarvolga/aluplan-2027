@@ -16,9 +16,7 @@
       "heading": "Ölçü Çizgisi Stili ve İlişkisel Ölçülendirme Ayarları",
       "body": "**Ölçü Çizgisi (Dimension Line / Maßlinie)** komutuna girin ve **Özellikler (Properties)** penceresinden yazı boyutu, ok/mimari tik sembolü, ölçü birimi (`m, cm`) ve **İlişkisel (Associative)** seçeneğini aktif edin. İlişkisel ölçüler, ölçülen duvar veya pencere taşındığında otomatik güncellenir.",
       "figures": [
-        "/akademi/temel-modelleme/10887_0EM7U000001Te59_e98d7d43.png",
-        "/akademi/temel-modelleme/10887_0EM7U000001Te5A_af8ec9ad.png",
-        "/akademi/temel-modelleme/10887_0EM7U000001Te5B_663aadc1.png"
+        "/akademi/temel-modelleme/10703_0EM7U000001TeKs_ba160568.png"
       ]
     },
     {
@@ -26,9 +24,7 @@
       "heading": "Doğrusal Ölçülendirme ve Duvar Ölçülendirme (Wände bemaßen)",
       "body": "Dış cephe boyunca toplam ölçü, aks ölçüsü ve dolu/boş (pencere-kapı) ölçü sıralarını tek seferde yerleştirin. **Duvarları Ölçülendir (Measure Walls / Wände bemaßen)** komutuyla seçilen duvarlardaki kapı/pencere genişliklerini ve parapet/lento yüksekliklerini otomatik yazdırın.",
       "figures": [
-        "/akademi/temel-modelleme/10703_0EM7U000001TeKs_ba160568.png",
-        "/akademi/temel-modelleme/10703_0EM7U000001TeKt_502bd8fa.png",
-        "/akademi/temel-modelleme/10703_0EM7U000001TeKu_05f1c13d.png"
+        "/akademi/temel-modelleme/10703_0EM7U000001TeL2_61b946ce.png"
       ]
     },
     {
@@ -36,8 +32,6 @@
       "heading": "Ölçü Noktası Ekle/Sil ve Kot Ölçülendirmesi",
       "body": "**Ölçü Noktası Ekle (Add Dimension Line Point)** ve **Ölçü Noktası Sil (Del Dimension Line Point)** ile mevcut ölçü zincirini revize edin; **Kot Ölçülendirmesi (Elevation Point / Kotenbemaßung)** ile plan ve kesitlerde kot sembollerini yerleştirin.",
       "figures": [
-        "/akademi/temel-modelleme/10703_0EM7U000001TeL2_61b946ce.png",
-        "/akademi/temel-modelleme/10703_0EM7U000001TeL0_ac09bfda.png",
         "/akademi/temel-modelleme/10703_0EM7U000001TeL1_e450547f.png"
       ]
     }

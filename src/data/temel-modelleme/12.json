@@ -16,20 +16,14 @@
       "heading": "Döşeme (Slab / Decke) Kalınlığı ve Poligon Girişi",
       "body": "**Mimari (Architecture) -> Döşeme (Slab / Decke)** komutunu açın. **Yükseklik (Height)** penceresinden döşeme üst kotunu kat üst düzlemine (`OK = 0.00`), kalınlığını ise `15 cm` veya `20 cm` olarak tanımlayın. Dış duvar köşe noktalarını dönerek veya **Alan Tespiti (Area Detection)** ile dış sınırı tek tıkla yakalayarak döşemeyi oluşturun.",
       "figures": [
-        "/akademi/temel-modelleme/9164_0EM7U000001Td7O_b5050b7a.png",
-        "/akademi/temel-modelleme/10602_0EM7U000001TdiQ_3445deeb.png",
-        "/akademi/temel-modelleme/10602_0EM7U000001TdiR_9caad228.png"
+        "/akademi/temel-modelleme/10602_0EM7U000001TdiZ_7f5d3c20.png"
       ]
     },
     {
       "time": "01:25 – 02:30",
       "heading": "Döşeme Boşluğu (Slab Opening / Deckenöffnung) Açma",
       "body": "**Döşeme Boşluğu, Girintisi (Recess, Opening in Slab / Deckenöffnung)** komutunu seçin, ilgili döşemeye tıklayın ve merdiven kovası ile şaft boşluklarını dikdörtgen veya serbest poligon olarak açın.",
-      "figures": [
-        "/akademi/temel-modelleme/10602_0EM7U000001TdiX_6218db6e.png",
-        "/akademi/temel-modelleme/10602_0EM7U000001TdiY_91aae5ca.png",
-        "/akademi/temel-modelleme/10602_0EM7U000001TdiZ_7f5d3c20.png"
-      ]
+      "figures": []
     }
   ],
   "pitfalls": [

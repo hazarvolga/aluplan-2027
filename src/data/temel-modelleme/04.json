@@ -15,20 +15,14 @@
       "time": "00:00 – 03:30",
       "heading": "Çizim Dosyası (Drawing File / Teilbild) Durumları",
       "body": "**Proje Bazında Aç: Çizim Dosyaları (Open on a Project-Specific Basis)** penceresini açın. Aynı anda yalnızca **1 adet Aktif (Current - Kırmızı)** çizim dosyası olabilir (yeni çizilen elemanlar buraya kaydedilir). Diğer çizim dosyalarını **Düzenleme Modu (Edit Mode - Sarı)** veya yalnızca kilitli altlık olarak görmek için **Referans Modu (Reference Mode - Gri)** olarak açın.",
-      "figures": [
-        "/akademi/temel-modelleme/11225_0EM7U000001TdPo_7918729c.png",
-        "/akademi/temel-modelleme/11225_0EM7U000001TdPp_fac0d1a4.png",
-        "/akademi/temel-modelleme/11225_0EM7U000001TdPq_46a9a9d3.png"
-      ]
+      "figures": []
     },
     {
       "time": "03:30 – 07:00",
       "heading": "Bina Strüktürü (Building Structure / Bauwerksstruktur) Kurulumu",
       "body": "Sol üstte **Bina Strüktürü (Building Structure)** sekmesine geçin. **Bina (Building)** düğümü altında **Temel**, **Zemin Kat**, **1. Normal Kat** ve **Çatı Katı** strüktür seviyelerini oluşturun; her kata ilgili çizim dosyası aralıklarını (örn. Zemin Kat: `101 Aks`, `102 Mimari Duvar/Doğrama`, `103 Kolon/Kiriş`, `104 Döşeme`, `105 Merdiven`) atayın.",
       "figures": [
-        "/akademi/temel-modelleme/11225_0EM7U000001TdQ0_f055afa6.png",
-        "/akademi/temel-modelleme/11225_0EM7U000001TdQ1_afb7d5cb.png",
-        "/akademi/temel-modelleme/11225_0EM7U000001TdQ2_50f4a5d2.png"
+        "/akademi/temel-modelleme/11225_0EM7U000001TdQ0_f055afa6.png"
       ]
     },
     {
@@ -36,9 +30,7 @@
       "heading": "Düzlem Yöneticisi ve Yükseklik İlişkileri (OK / UK)",
       "body": "**Düzlemler Paleti (Planes Palette / Ebenenpalette)** üzerinden her katın döşeme üst kotunu ve kat yüksekliğini (örn. `Zemin Kat: ±0.00 -> +3.00 m`) tanımlayın. Yapı elemanlarının **Yükseklik (Height)** ayarlarında **Alt Kot (Bottom Level / UK)** değerini *Katın Alt Düzlemine*, **Üst Kot (Top Level / OK)** değerini *Katın Üst Düzlemine* (döşeme kalınlığı kadar ofsetle) bağlayarak tam parametrik yükseklik ilişkisi kurun.",
       "figures": [
-        "/akademi/temel-modelleme/10602_0EM7U000001TdiW_71755a0a.png",
-        "/akademi/temel-modelleme/10602_0EM7U000001TdiX_6218db6e.png",
-        "/akademi/temel-modelleme/10602_0EM7U000001TdiY_91aae5ca.png"
+        "/akademi/temel-modelleme/11225_0EM7U000001TdQ2_50f4a5d2.png"
       ]
     }
   ],

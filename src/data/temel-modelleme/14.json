@@ -15,31 +15,19 @@
       "time": "00:00 – 01:20",
       "heading": "Temel Çizim Dosyası ve Kot Düzlemi",
       "body": "Bina strüktüründe **Temel** çizim dosyasını aktif edin ve Zemin/Bodrum Kat duvar ile kolon çizim dosyalarını **Referans Modunda** altlık olarak açın.",
-      "figures": [
-        "/akademi/temel-modelleme/11634_0EMRD00000LNawL_ee7fc069.png",
-        "/akademi/temel-modelleme/11634_0EMRD00000LNazZ_e9b5614b.png",
-        "/akademi/temel-modelleme/11634_0EMRD00000LNXs2_d2836f6d.png"
-      ]
+      "figures": []
     },
     {
       "time": "01:20 – 02:35",
       "heading": "Şerit Temel ve Tekil Temel Modelleme",
       "body": "**Mimari (Architecture) -> Temel (Foundation / Fundament)** grubundan **Şerit Temel (Strip Foundation)** ve **Tekil Temel (Isolated Foundation)** komutlarını kullanarak kolon ve perdelerin altına temel elemanlarını yerleştirin; temel genişliği, yüksekliği ve grobeton (`Sauberkeitsschicht`) taşma paylarını girin.",
-      "figures": [
-        "/akademi/temel-modelleme/11634_0EMRD00000LNV3s_69d4309a.png",
-        "/akademi/temel-modelleme/12284_0EMRD00000ZpEMX_4830f815.png",
-        "/akademi/temel-modelleme/12284_0EMRD00000Zsjbt_fbdd051b.png"
-      ]
+      "figures": []
     },
     {
       "time": "02:35 – 03:51",
       "heading": "Radye Temel (Slab Foundation / Bodenplatte) Oluşturma",
       "body": "**Radye Temel (Slab Foundation / Bodenplatte)** komutuyla bina dış konturundan ampatman (`örn. 50 cm`) çıkması vererek radye temel plağını oluşturun ve asansör çukuru eğimli hafer (Haunch) geçişlerini tanımlayın.",
-      "figures": [
-        "/akademi/temel-modelleme/12284_0EMRD00000ZsiuM_02231e57.png",
-        "/akademi/temel-modelleme/12284_0EMRD00000ZsQNy_6f24aae2.png",
-        "/akademi/temel-modelleme/12284_0EMRD00000ZslKL_fc5bdd9b.png"
-      ]
+      "figures": []
     }
   ],
   "pitfalls": [

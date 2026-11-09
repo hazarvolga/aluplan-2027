@@ -15,30 +15,19 @@
       "time": "00:00 – 03:00",
       "heading": "Seçim Yöntemleri ve Taşı / Kopyala / Döndür / Aynala",
       "body": "Soldan sağa pencere (tam içine girenler) ve sağdan sola pencere (kesişenler) seçim farkını uygulayın. Seçili nesne üzerindeki bağlam menüsünden **Taşı (Move)**, **Kopyala (Copy)**, **Döndür (Rotate)** ve **Kopyalayarak Aynala (Mirror and Copy)** işlemlerini gerçekleştirin.",
-      "figures": [
-        "/akademi/temel-modelleme/8680_0EMVi00000F6XIP_18e5343b.png",
-        "/akademi/temel-modelleme/8680_0EMVi00000F6L5z_c10bba24.png",
-        "/akademi/temel-modelleme/8680_0EMVi00000F6PpW_2e4a039c.png"
-      ]
+      "figures": []
     },
     {
       "time": "03:00 – 06:30",
       "heading": "Kesiştirme, Kırpma, Uzatma, Pah ve Köşe Yuvarlatma",
       "body": "**Modifikasyon (Modify)** grubundan **İki Elemanı Kesiştir (Intersect Two Entities / 2 Elemente verschneiden)** ile açık köşeleri birleştirin; **Çizgileri Elemana Göre Kırp (Trim Lines to Element)** ve **Eleman Parçasını Sil (Delete Segment of Line)** ile fazla uzantıları temizleyin; **Köşe Yuvarlat (Fillet / Ausrunden)** ile belirli yarıçapta yay geçişi oluşturun.",
-      "figures": [
-        "/akademi/temel-modelleme/8680_0EMVi00000F6XGn_f703f633.png",
-        "/akademi/temel-modelleme/11227_0EM7U000001TdUQ_a29bbe1c.png",
-        "/akademi/temel-modelleme/11227_0EM7U000001TdUR_70671060.png"
-      ]
+      "figures": []
     },
     {
       "time": "06:30 – 10:48",
       "heading": "Noktaları Modifiye Et (Stretch) ve Biçim Özelliklerini Aktar",
       "body": "**Noktaları Modifiye Et (Stretch Entities / Punkte modifizieren)** komutuyla bir aks veya oda kenarını seçip bağlı tüm çizgi ve taramalarla birlikte sündürün. **Biçim Aktar (Match Properties / Format übertragen)** komutuyla bir elemanın kalem/çizgi/katman özelliklerini diğer elemanlara kopyalayın.",
-      "figures": [
-        "/akademi/temel-modelleme/11197_0EM7U000001TdNJ_52cd0054.png",
-        "/akademi/temel-modelleme/11197_0EM7U000001TdNK_570eeced.png"
-      ]
+      "figures": []
     }
   ],
   "checkpoint": "Bir elemanı seçip tutamaçlarından taşıyıp kopyalayabiliyorsanız, iki çizgiyi kırpıp uzatabiliyor, pah ve yuvarlatma uygulayabiliyorsanız ve bir elemanın biçim özelliklerini diğerine aktarabiliyorsanız düzenleme araçlarında rahatsınız demektir.",

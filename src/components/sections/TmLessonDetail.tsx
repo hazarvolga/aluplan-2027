@@ -27,6 +27,7 @@ function TmImages({ srcs, label }: { srcs: readonly string[]; label: string }): 
 }
 
 export function TmLessonDetail({ lesson }: { lesson: TmLesson }): ReactElement {
+  const embeddableVideos = lesson.media.videos.filter((v) => Boolean(v.youtubeId));
   const ordered = temelModellemeLessons;
   const index = ordered.findIndex((l) => l.slug === lesson.slug);
   const previous = index > 0 ? ordered[index - 1] : undefined;
@@ -44,6 +45,14 @@ export function TmLessonDetail({ lesson }: { lesson: TmLesson }): ReactElement {
 
       <CompactPageHero title={lesson.title} lead={lesson.objectives[0]} />
 
+      {lesson.intro && (
+        <section className={styles.band}>
+          <div className="alu-container">
+            <p className={styles.intro}>{withEmphasis(lesson.intro)}</p>
+          </div>
+        </section>
+      )}
+
       {lesson.objectives.length > 0 && (
         <section className={styles.band} aria-labelledby="tm-hedef">
           <div className="alu-container">
@@ -60,7 +69,7 @@ export function TmLessonDetail({ lesson }: { lesson: TmLesson }): ReactElement {
       {lesson.steps.length > 0 && (
         <section className={styles.band} aria-labelledby="tm-adimlar">
           <div className="alu-container">
-            <SectionHeader id="tm-adimlar" kicker="UYGULAMA" title="Adım adım" lead="Her adımı kendi ALLPLAN’ınızda, sırayla uygulayın. Ekran görüntülü anlatımlar aşağıdaki kaynak makalelerdedir." />
+            <SectionHeader id="tm-adimlar" kicker="UYGULAMA" title="Adım adım" lead="Her adımı kendi ALLPLAN’ınızda, sırayla uygulayın." />
             <ol className={styles.steps}>
               {lesson.steps.map((s, i) => (
                 <li key={i} className={styles.step}>
@@ -73,6 +82,64 @@ export function TmLessonDetail({ lesson }: { lesson: TmLesson }): ReactElement {
                 </li>
               ))}
             </ol>
+          </div>
+        </section>
+      )}
+
+      {lesson.checkpoint && (
+        <section className={styles.band} aria-labelledby="tm-kontrol">
+          <div className="alu-container">
+            <div className={styles.checkpoint}>
+              <span id="tm-kontrol" className={styles.checkpointLabel}>Doğru yaptıysanız</span>
+              <p className={styles.checkpointText}>{withEmphasis(lesson.checkpoint)}</p>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {lesson.pitfalls && lesson.pitfalls.length > 0 && (
+        <section className={styles.band} aria-labelledby="tm-dikkat">
+          <div className="alu-container">
+            <SectionHeader id="tm-dikkat" kicker="DİKKAT" title="Takılırsanız" lead="Bu derste sık karşılaşılan sorun ve çözümü." />
+            <ul className={styles.pitfalls}>
+              {lesson.pitfalls.map((p, i) => (
+                <li key={i} className={styles.pitfall}>
+                  <span className={styles.pitfallLabel}>Sık yapılan hata</span>
+                  <h3 className={styles.pitfallTitle}>{p.title}</h3>
+                  {p.body.split('\n').filter(Boolean).map((para, j) => (
+                    <p key={j} className={styles.pitfallBody}>{withEmphasis(para)}</p>
+                  ))}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      {embeddableVideos.length > 0 && (
+        <section className={styles.band} aria-labelledby="tm-video">
+          <div className="alu-container">
+            <SectionHeader id="tm-video" kicker="İLGİLİ VİDEO" title="Konuyu videoda izleyin" lead="ALLPLAN'ın kendi kanalındaki açık videolar. Dersin birincil anlatımı adımlar ve ekran görüntüleridir; video destekleyicidir." />
+            <ul className={styles.videoList}>
+              {embeddableVideos.map((v) => (
+                <li key={v.youtubeId} className={styles.videoItem}>
+                  <div className={styles.videoWrap}>
+                    <iframe
+                      className={styles.videoFrame}
+                      src={`https://www.youtube-nocookie.com/embed/${v.youtubeId}`}
+                      title={v.title}
+                      loading="lazy"
+                      allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                  <p className={styles.videoCaption}>
+                    {v.title}
+                    {v.note && <span className={styles.videoNote}> · {v.note}</span>}
+                  </p>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
       )}

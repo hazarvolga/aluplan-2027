@@ -46,10 +46,24 @@ export interface TmArticle {
   figures: readonly string[];
 }
 
+/** A known mistake surfaced as a prominent "DİKKAT" callout, not buried in an accordion. */
+export interface TmPitfall {
+  title: string;
+  body: string;
+}
+
 export interface TmVideo {
   title: string;
   file: string;
   vimeoId: string;
+  /**
+   * Public YouTube id, set only for videos sourced from a public youtube.com
+   * link (e.g. ALLPLAN's own channel). These are embeddable; domain-locked
+   * ALLPLAN Vimeo videos (vimeoId only, no youtubeId) are not rendered.
+   */
+  youtubeId?: string;
+  /** Optional note shown with the embed, e.g. language / channel. */
+  note?: string;
   sizeMB: number;
 }
 
@@ -65,8 +79,14 @@ export interface TmLesson {
   title: string;
   duration: string;
   sourceModule: string;
+  /** Optional 1-2 sentence conceptual framing shown before the objectives. */
+  intro?: string;
   objectives: readonly string[];
   steps: readonly TmStep[];
+  /** Optional "DİKKAT" callouts — known mistakes surfaced, not accordion-buried. */
+  pitfalls?: readonly TmPitfall[];
+  /** Optional "Doğru yaptıysanız" verification shown after the steps. */
+  checkpoint?: string;
   commands: readonly TmCommand[];
   media: TmMedia;
   articles: readonly TmArticle[];

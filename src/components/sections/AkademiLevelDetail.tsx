@@ -6,6 +6,7 @@ import { DebugComponentLabel } from './DebugComponentLabel';
 import { SectionHeader } from './SectionHeader';
 import { ModuleCard } from '@/components/akademi/kit';
 import { AkademiJsonLd } from '@/components/akademi/AkademiJsonLd';
+import { temelModellemeLessons } from '@/data/temel-modelleme';
 import styles from './AkademiLevelDetail.module.css';
 
 const akademiLevels = akademiProgram.levels;
@@ -82,10 +83,10 @@ export function AkademiLevelDetail({ level }: { level: ContentLevel }): ReactEle
                 id="seviye-tm"
                 kicker="UYGULAMALI SERİ"
                 title="Temel Modelleme Eğitimi"
-                lead="On altı uygulamalı derste bir binayı sıfırdan modellersiniz: aks, duvar, kapı/pencere, kolon/kiriş, döşeme, merdiven, temel ve çatı. Her adımda Türkçe komutlar ve ekran görüntüleri."
+                lead="Uygulamalı derslerde bir binayı sıfırdan modellersiniz: aks, duvar, kapı/pencere, kolon/kiriş, döşeme, merdiven, temel ve çatı. Ardından mahal, kesit, görünüş ve pafta ile modeli belgeleyip sunarsınız. Her adımda Türkçe komutlar ve ekran görüntüleri."
               />
               <a className={styles.seriesCard} href="/akademi/temel-modelleme">
-                <span className={styles.seriesCardTitle}>16 uygulamalı ders · Türkçe arayüz komutları · ekran görüntülü anlatım</span>
+                <span className={styles.seriesCardTitle}>{temelModellemeLessons.length} uygulamalı ders · Türkçe arayüz komutları · ekran görüntülü anlatım</span>
                 <span className={styles.seriesCardCta}>Seriye git →</span>
               </a>
             </div>

@@ -24,6 +24,7 @@ import l13 from './temel-modelleme/13.json';
 import l14 from './temel-modelleme/14.json';
 import l15 from './temel-modelleme/15.json';
 import l16 from './temel-modelleme/16.json';
+import l17 from './temel-modelleme/17.json';
 
 export interface TmCommand {
   name: string;
@@ -103,6 +104,7 @@ export const temelModellemeHero = {
 
 export const temelModellemeLessons: readonly TmLesson[] = [
   l01, l02, l03, l04, l05, l06, l07, l08, l09, l10, l11, l12, l13, l14, l15, l16,
+  l17,
 ].map((raw) => raw as TmLesson);
 
 export function getTmLesson(slug: string): TmLesson | undefined {

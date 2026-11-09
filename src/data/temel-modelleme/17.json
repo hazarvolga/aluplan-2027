@@ -1,0 +1,71 @@
+{
+  "no": 17,
+  "slug": "mahaller",
+  "title": "Mahal Tanımlama ve İnce Yapı Yüzeyleri",
+  "duration": "",
+  "sourceModule": "Proje 1 — Modül 3: Akıllı Mahal (Room / Raum) Yönetimi, İnce Yapı Yüzeyleri ve Metraj",
+  "intro": "Binanın kabuğunu kurduktan sonra sıra **mahalleri (Room / Raum)** tanımlamaya gelir. Mahal, duvarlarla çevrili bir hacmi ALLPLAN'ın tanıdığı **akıllı bir oda nesnesine** dönüştürür: net alan, hacim, kat kaplamaları ve oda etiketi hep bu nesneye bağlanır. Mahalleri doğru tanımlarsanız **metraj ve alan raporları** (DIN 277, konut alanı, yapı ruhsatı) modelden otomatik üretilir; elle alan hesaplamaktan kurtulursunuz.",
+  "objectives": [
+    "Duvarlarla çevrili odaları otomatik algılatarak veya poligon çizerek Mahal (Room / Raum) tanımlamak.",
+    "Mahal içine katmanlı ince yapı yüzeyleri (Finish / Ausbau) atamak: tavan kaplaması, döşeme kaplaması (şap + seramik/parke), yan yüzey (sıva + boya/fayans) ve süpürgelik.",
+    "Mahal Etiketi (Room Stamp / Raumstempel) ile oda no, fonksiyon, net alan ve kaplama bilgilerini plana yazdırmak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Mahal Tanımı ve Fonksiyon / İsim Girişi",
+      "body": "**Mimari (Architecture) -> Mahaller, Yüzeyler, Katlar -> Mahal (Room / Raum)** komutunu açın. **Mahal (Room)** sekmesinde Mahal No (`Z-01`), Fonksiyon (`Salon`, `Mutfak`, `Banyo`) ve kat yüksekliği bağlantısını (`Alt Düzlem -> Üst Düzlem`) tanımlayın. Fonksiyon ve numarayı baştan doğru girin; bu bilgiler sonradan raporlara ve etikete aynen taşınır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "İnce Yapı Kaplamaları (Tavan, Zemin, Duvar, Süpürgelik)",
+      "body": "**İnce Yapı (Finish / Ausbau)** sekmesine geçin ve yüzeyleri katman katman atayın: tavan (alçı sıva + boya), döşeme (`5 cm Şap + 2 cm Parke/Seramik`), düşey duvar yüzeyleri ve süpürgelik. Her katmana malzeme ve imalat kalemi verirseniz, kaba metrajın yanında **ince yapı metrajı** da modelden çıkar.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Alan Tespiti ile Yerleşim ve Mahal Etiketi (Raumstempel)",
+      "body": "**Alan Tespiti (Area Detection)** aktifken oda içine tıklayarak mahali oluşturun; ALLPLAN çevreleyen duvarları algılayıp net alanı hesaplar. Ardından açılan listeden uygun **Mahal Etiket Stilini (Room Label Style)** seçip oda ortasına yerleştirin. Etiket, oda numarasını, fonksiyonunu ve net alanını plana otomatik yazar.",
+      "figures": []
+    }
+  ],
+  "checkpoint": "Her odanın ortasında numara, fonksiyon ve net alan yazan bir etiket görüyorsanız, Raporlar'dan DIN 277 / konut alanı listesini üretebiliyorsanız ve ince yapı sekmesinde kaplama katmanlarınız tanımlıysa mahalleri doğru kurmuşsunuz demektir.",
+  "pitfalls": [
+    {
+      "title": "Alan Tespiti kapalı oda sınırı bulamıyor",
+      "body": "Alan Tespiti ile tıkladığınızda mahal oluşmuyorsa, oda sınırı **tam kapalı değildir**: iki duvar arasında küçük bir boşluk veya kapı yerinde bağlantı kopukluğu vardır. Önce duvar birleşimlerini kontrol edin; gerekirse kapı/geçiş yerine geçici bir sınır çizgisi ekleyin. Ayrıca mahal, duvarlarla aynı çizim dosyasında ve doğru katman önceliğinde olmalıdır.\nDIN 277 alanları beklediğiniz gibi çıkmıyorsa, mahal/kat elemanının **DIN277 Nitelikleri** bölümündeki Çevreleme Türü (R/S) ve Alan Türü (B/M/U/V) ayarlarını doğrulayın; yalnızca bu bölüm metraja girer."
+    }
+  ],
+  "commands": [
+    {
+      "name": "Mahal (Room / Raum)",
+      "menu": "Mimari (Architecture) -> Mahaller, Yüzeyler, Katlar -> Mahal (Room / Raum)",
+      "shortcut": "Mahal İkonu",
+      "desc": "Oda hacmini, net/brüt alanını ve ince yapı kaplama katmanlarını (tavan, zemin, duvar, süpürgelik) tanımlar."
+    },
+    {
+      "name": "Otomatik Mahal Oluştur",
+      "menu": "Mimari (Architecture) -> Otomatik Mahal (Auto-Room)",
+      "shortcut": "Mahal Grubu",
+      "desc": "Kat planındaki tüm kapalı oda sınırlarını tek seferde algılayarak mahalleri üretir."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": [
+      "10638_20190513105903_DE_1_5ab251d4.ndw"
+    ]
+  },
+  "articles": [
+    {
+      "id": "din277-mahal-alanlari",
+      "title": "DIN 277'ye göre mahal alanları ve hacimleri",
+      "body": "Bu makale, **DIN 277-1:2016** standardına göre taban alanlarının ve mahal hacimlerinin nasıl belirlendiğini özetler.\n**Alan türleri:** **BGF** (Brüt Taban Alanı), **NRF** (Net Mahal Alanı), **NUF** (Kullanım Alanı), **TF** (Teknik Alan), **VF** (Sirkülasyon Alanı); hacimler **BRI** (Brüt) ve **NRI** (Net Mahal Hacmi).\n**Nasıl modellenir:** Alanlar ve hacimler **Kat (Geschoss)** ve **Mahal (Raum)** yapı elemanlarıyla modellenir; çıktı **Raporlar (Reports)** üzerinden alınır.\n**Kritik ayar:** DIN 277 değerleri için yalnızca **DIN277 Nitelikleri (DIN277-Attribute)** bölümündeki ayarlar değerlendirilir. Çevreleme Türü **R** (standart) veya **S** (özel); Alan Türü **B** (brüt alan ve hacim), **M** (çok katlı), **U** (boş hacim) veya **V** (kullanılmayan); Faktör genellikle **1.0** bırakılır.\nKaynak: ALLPLAN KB de_11198 · learnnow.allplan.com (DIN 277-1:2016).",
+      "figures": [
+        "/akademi/temel-modelleme/11198_0EM7U000001TdYS_cd3234a5.png"
+      ]
+    }
+  ]
+}

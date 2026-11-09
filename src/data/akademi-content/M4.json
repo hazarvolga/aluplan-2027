@@ -7,7 +7,7 @@
   "hours": 12,
   "format": "Hibrit",
   "prerequisite": "B.M1, B.M2, B.M3",
-  "summary": "Modelden kesit ve görünüş üretir, görünüm ayarlarını düzenler; pafta düzenini kurup ölçülendirme, metin ve tarama ile tamamlayarak PDF/DWG çıktısı alır.",
+  "summary": "Bu derste modelinizden kesit ve görünüş üretir, görünüm ayarlarını düzenlersiniz; bir pafta kurup plan, kesit ve görünüşleri ölçekli yerleştirir, ölçülendirme, metin ve tarama ile tamamlar ve PDF/DWG olarak çıktı alırsınız. Modeliniz artık teslim edilebilir bir belgeye dönüşür.",
   "outcomes": [
     {
       "text": "Modelden kesit ve görünüş üretir ve görünüm ayarlarını düzenler.",
@@ -25,6 +25,53 @@
       "code": "K-O4.3"
     }
   ],
+  "lesson": {
+    "title": "Modelden teslim edilebilir çizime",
+    "subtitle": "Kesitleri çizmezsiniz; modelden üretir ve paftaya yerleştirirsiniz.",
+    "intro": "Modeliniz hazır; şimdi onu başkalarının okuyabileceği bir belgeye dönüştürme zamanı. Bu derste modelden kesit ve görünüş üretecek, bunları bir paftaya ölçekli yerleştirecek ve PDF olarak çıktı alacaksınız. En önemli fikir şu: çizimleri elle çizmezsiniz, modelden türetirsiniz; model değişince çizimler de birlikte güncellenir.",
+    "sections": [
+      {
+        "heading": "Modelden çizime: kesit ve görünüş",
+        "body": [
+          "**Kesit**, modeli bir düzlemle keserek elde ettiğiniz iki boyutlu görünümdür; **görünüş** ise modele bir yönden bakışla üretilen çizimdir (örneğin cephe). İkisini de siz çizmezsiniz: model üzerinde bir kesit çizgisi tanımlar ve program kesiti üretir. [araç adı sürüme göre değişebilir]",
+          "Bunun değeri şudur: bir duvarı modelde değiştirdiğinizde, o duvarın göründüğü tüm kesit ve görünüşler birlikte güncellenir. Elle çizilmiş bir projede her değişikliği tek tek düzeltmeniz gerekirdi; burada tek kaynak modeldir."
+        ],
+        "tryIt": "Kendi denemen: Modelinde bir kesit çizgisi tanımla ve kesiti üret; sonra bir duvarın yüksekliğini değiştir ve kesitin güncellendiğini gör."
+      },
+      {
+        "heading": "Görünüm ayarları: ölçek ve okunabilirlik",
+        "body": [
+          "Aynı model farklı ölçeklerde farklı ayrıntı gösterir. Bir çizimin ölçeğini, çizgi kalınlıklarını ve hangi katmanların görüneceğini ayarlayarak onu okunabilir kılarsınız. 1/50 bir detay ile 1/200 bir vaziyet planı aynı ayrıntıyı taşımaz.",
+          "İyi bir teknik çizimin sırrı doğru bilgiyi doğru ölçekte göstermektir: çok kalabalık bir pafta da, çok boş bir pafta da iletişim kurmaz."
+        ],
+        "tryIt": "Kendi denemen: Bir plan görünümünün ölçeğini değiştir ve çizgi kalınlıkları ile etiketlerin nasıl değiştiğine dikkat et."
+      },
+      {
+        "heading": "Pafta: çıktının sayfası",
+        "body": [
+          "**Pafta** (layout), çizimlerinizin ölçekli olarak yerleştiği çıktı sayfasıdır. Yeni bir pafta açar, bir **antet** ve çerçeve yerleştirir, sonra plan, kesit ve görünüşleri bu sayfaya dizersiniz. [antet yerleştirme sürüme göre değişebilir]",
+          "Paftadaki her çizim modele bağlı kalır: model değişirse paftadaki görünüm de güncellenir. Yani pafta, modelin bir fotoğrafı değil, canlı bir penceresidir."
+        ],
+        "tryIt": "Kendi denemen: Yeni bir pafta aç, antet/çerçeveyi yerleştir ve planını ölçekli olarak sayfaya koy."
+      },
+      {
+        "heading": "Paftayı tamamlamak: ölçülendirme, metin, tarama",
+        "body": [
+          "Bir teknik çizim ölçüsüz eksiktir. **Ölçülendirme**, bir uzunluğu veya kotu ölçü çizgisiyle gösterir; metin notları açıklar; **tarama** ise bir alanı malzeme ya da işleve göre desenle doldurur (örneğin beton, yalıtım).",
+          "Bu katmanlar paftayı 'çizim'den 'belge'ye çevirir: artık bir usta ya da bir mühendis onu okuyup uygulayabilir. Ölçülendirmeyi mümkün olduğunca modele bağlı yapın ki model değişince ölçü de güncellensin."
+        ],
+        "tryIt": "Kendi denemen: Bir duvarın uzunluğunu ölçülendir, bir mahal adı yaz ve bir alanı tarama ile doldur."
+      },
+      {
+        "heading": "Çıktı: PDF ve DWG",
+        "body": [
+          "Pafta hazır olunca onu paylaşılabilir bir dosyaya aktarırsınız. **PDF** herkesin açabildiği, baskıya hazır teslim biçimidir; **DWG** ise çizimi başka bir CAD programında açmak gerektiğinde kullanılır.",
+          "Çıktı almadan önce ölçek, çizgi kalınlığı ve antet bilgilerini bir kez daha kontrol edin: teslim edilen bir pafta, projenizin dışarıya giden yüzüdür."
+        ],
+        "tryIt": "Kendi denemen: Paftanı PDF olarak dışa aktar ve ölçeğin, antetin ve çizgi kalınlıklarının doğru çıktığını kontrol et."
+      }
+    ]
+  },
   "concepts": [
     {
       "term": "Kesit",
@@ -397,5 +444,6 @@
       "difficulty": "Kolay",
       "outcomeCode": "K-O4.2"
     }
-  ]
+  ],
+  "estimatedMinutes": 55
 }

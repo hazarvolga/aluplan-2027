@@ -7,7 +7,7 @@ muadil kare çekilip değiştirilebilir. (NOTR = dilsiz teknik diyagram, değiş
 Kural: yeni görsel yerleştirildiğinde bu tabloya satır eklenir; yabancı dil görseli uygunsa
 yerleştirilir ve dili not edilir — kör reddetme yok, izlenebilir liste var.
 
-**Özet:** TR 0 · DE 45 · FR 5 · EN 4 · NOTR 12 · ? 0 (toplam 66)
+**Özet:** TR 0 · DE 45 · FR 5 · EN 2 · NOTR 12 · ? 0 (toplam 64)
 
 | Seri | Ders (slug) | Adım | Başlık | Görsel | Dil | İçerik |
 |---|---|---|---|---|---|---|
@@ -21,8 +21,6 @@ yerleştirilir ve dili not edilir — kör reddetme yok, izlenebilir liste var.
 | Temel Modelleme | olculendirme | 0 | Ölçü Çizgisi Stili ve İlişkisel Ölçülend | `10703_0EM7U000001TeKs_ba160568.png` | **DE** ⚠️ | Kote / ölçü (Assoziative) araç paleti |
 | Temel Modelleme | olculendirme | 1 | Doğrusal Ölçülendirme ve Duvar Ölçülendi | `10703_0EM7U000001TeL2_61b946ce.png` | **DE** ⚠️ | Wandschicht seçim (UMSCHALT+Klick) |
 | Temel Modelleme | olculendirme | 2 | Ölçü Noktası Ekle/Sil ve Kot Ölçülendirm | `10703_0EM7U000001TeL1_e450547f.png` | **DE** ⚠️ | Abschnittseigenschaften (Maßzahl/Bauteilhöhe) |
-| Temel Modelleme | aks-olusturma | 1 | Aks Ağı (Axis Grid / Achsraster) Paramet | `11667_0EMRD00000LMwVt_f33b56c2.png` | **EN** ⚠️ | Aks ağı parametre diyaloğu (İngilizce arayüz) |
-| Temel Modelleme | aks-olusturma | 2 | Aks Ağını Düzenleme | `8773_0EMVi00000EIB6b_85c44bfe.png` | **EN** ⚠️ | Aks ağı düzenleme + 3B (İngilizce arayüz) |
 | Temel Modelleme | duvar-olusturma | 2 | Dış ve İç Duvarların Çizimi ve Birleşim  | `11384_0EM7U000001Td7Z_eca6d3ed.png` | **DE** ⚠️ | Innenecken/Außenecken birleşim şeması |
 | Temel Modelleme | kapi-pencere | 2 | Kapı ve Pencere SmartParts Modelleme | `8900_0EM7U000001Tdht_e7ce85f6.png` | **DE** ⚠️ | 3B pencere (SmartPart) + Zentralperspektive |
 | Temel Modelleme | kolon-kiris | 0 | Kolon (Column / Stütze) Parametreleri ve | `11400_0EM7U000001Td8T_ff975fb9.png` | **DE** ⚠️ | Çelik/kolon profil listesi (Länge/Dicke/Umfang) |

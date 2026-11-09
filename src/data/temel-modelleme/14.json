@@ -4,7 +4,7 @@
   "title": "Temel Oluşturma",
   "duration": "03:51",
   "sourceModule": "Proje 1 — Modül 3: Temel Elemanları (Şerit, Tekil ve Radye Temel)",
-  "intro": "Temel, binanın yükünü zemine aktaran **en alttaki taşıyıcıdır**. ALLPLAN'da taşıyıcı duvarların altına şerit temel, kolonların altına tekil temel, tüm oturum alanı altına radye temel modellersiniz. Bunları da düzlemlere bağlarsınız; böylece temel kotu tek yerden yönetilir. Doğru temel modeli hem statik hem beton metrajı için gereklidir.",
+  "intro": "Temel, binanın yükünü zemine aktaran **en alttaki taşıyıcıdır**. ALLPLAN'da taşıyıcı duvarların altına şerit temel, kolonların altına tekil temel, tüm oturum alanı altına radye temel modellersiniz. Bunları da düzlemlere bağlarsınız; böylece temel kotu tek yerden yönetilir. Doğru temel modeli hem statik hem beton metrajı için gereklidir. Bu eğitimde kurduğunuz binanın taşıyıcılarının altına bu temel tiplerini modellersiniz.",
   "objectives": [
     "Taşıyıcı duvarların altına Şerit Temel (Strip Foundation / Streifenfundament) modellemek.",
     "Kolonların altına Tekil / Kademeli Temel (Isolated / Block Foundation / Einzelfundament) yerleştirmek.",
@@ -20,13 +20,13 @@
     {
       "time": "01:20 – 02:35",
       "heading": "Şerit Temel ve Tekil Temel Modelleme",
-      "body": "**Mimari (Architecture) -> Temel (Foundation / Fundament)** grubundan **Şerit Temel (Strip Foundation)** ve **Tekil Temel (Isolated Foundation)** komutlarını kullanarak kolon ve perdelerin altına temel elemanlarını yerleştirin; temel genişliği, yüksekliği ve grobeton (`Sauberkeitsschicht`) taşma paylarını girin.",
+      "body": "**Mimari (Architecture) -> Temel (Foundation / Fundament)** grubundan **Şerit Temel (Strip Foundation)**'i taşıyıcı duvar ve perdelerin (çizgisel yük) altına, **Tekil Temel (Isolated Foundation)**'i kolonların (noktasal yük) altına yerleştirin; çünkü yük zemine duvarda çizgi, kolonda nokta olarak indiğinden temel geometrisi de buna göre değişir. Temel genişliği ile yüksekliğini ve altına, zemini tesviye eden grobeton (`Sauberkeitsschicht`) taşma payını girin.",
       "figures": []
     },
     {
       "time": "02:35 – 03:51",
       "heading": "Radye Temel (Slab Foundation / Bodenplatte) Oluşturma",
-      "body": "**Radye Temel (Slab Foundation / Bodenplatte)** komutuyla bina dış konturundan ampatman (`örn. 50 cm`) çıkması vererek radye temel plağını oluşturun ve asansör çukuru eğimli hafer (Haunch) geçişlerini tanımlayın.",
+      "body": "**Radye Temel (Slab Foundation / Bodenplatte)** komutuyla bina dış konturundan ampatman (`örn. 50 cm`) çıkması vererek radye temel plağını oluşturun ve asansör çukuru eğimli hafer (Haunch) geçişlerini tanımlayın. Ampatman, plak kenarından taşarak zemin gerilmesini daha geniş alana yaydığı için verilir.",
       "figures": []
     }
   ],
@@ -89,18 +89,6 @@
       "title": "Add-On Baugrube (Yapı Çukuru Eklentisi) - Eğimde Temel Kazısı",
       "body": "Yapı çukuru tasarımında yeni kazı düzlemleri eklenerek yapı çukurları detaylarla zenginleştirilebilir. 3B katı modellerin entegrasyonu sayesinde metraj hesaplamaları kolayca gerçekleştirilebilir. Elemanların eğimi, yönü ve yüksekliği üç nokta yardımıyla kolayca ayarlanabilir. Temeller özel olarak uyarlanabilir ve adlandırılabilir; böylece yapı çukurunun esnek bir şekilde şekillendirilmesi sağlanır.",
       "figures": []
-    },
-    {
-      "id": "en_11634",
-      "title": "Temel Tablosu (Foundation Table)",
-      "body": "SCIA Engineer 22.1 sürümünden itibaren, eski kullanıcı arayüzünde olduğu gibi yeni kullanıcı arayüzünde de reaksiyonları bir temel tablosu olarak görselleştirmek mümkündür.\n\nHesaplama tamamlandığında öncelikle **Ana menü (Main menu) > Sonuçlar (Results) > Mesnetler (Supports) > Reaksiyonlar (Reactions)** üzerinden reaksiyonlar menüsüne gitmeniz gerekir.\n\nBurada seçim tipini \"**Tümü (All)**\" ve herhangi bir yükleme durumunu veya kombinasyonu seçebilirsiniz. Ayrıca \"**Mesnet üzerindeki etkiler (Actions on support)**\" seçeneğini işaretlemeniz gerekir.\n\nSonuçları temel tablosu formatında elde etmek amacıyla düğüm noktası reaksiyonlarının -1 ile çarpıldığı anlamına gelen bir \"-1\" çarpanının uygulandığını görürsünüz.\n\nArdından \"**Rapor önizleme (Report preview)**\" işlem düğmesine tıkladığınızda, yapının her bir düğüm noktası mesnedi üzerindeki etkilerin her yükleme durumu için ayrı ayrı gösterildiği bir çıktı görebilirsiniz.\n\nAyrıca bir mesnedi veya bir mesnet grubunu seçmek ve seçim tipini \"**Geçerli (Current)**\" olarak belirleyerek yalnızca bu seçime ait sonuçları istemek de mümkündür.\n\n \n\nMühendislik raporuna (engineering report) \"**reaksiyonlar (reactions)**\" öğesini ekleyip \"**Mesnet üzerindeki etkiler (Actions on support)**\" seçeneğini işaretleyerek temel tablosu sonuçlarını mühendislik raporunda almak da mümkündür.",
-      "figures": [
-        "/akademi/temel-modelleme/11634_0EMRD00000LNawL_ee7fc069.png",
-        "/akademi/temel-modelleme/11634_0EMRD00000LNazZ_e9b5614b.png",
-        "/akademi/temel-modelleme/11634_0EMRD00000LNXs2_d2836f6d.png",
-        "/akademi/temel-modelleme/11634_0EMRD00000LNaxx_43ae6bf4.png",
-        "/akademi/temel-modelleme/11634_0EMRD00000LNV3s_69d4309a.png"
-      ]
     }
   ]
 }

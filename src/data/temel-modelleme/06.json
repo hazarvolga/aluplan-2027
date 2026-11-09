@@ -95,18 +95,6 @@
       "figures": []
     },
     {
-      "id": "en_8680",
-      "title": "Kolayca döndürme, taşıma ve yakınlaştırma",
-      "body": "Çalışma alanının sağ alt köşesinde, modeldeki bakış açısını yönlendirmek için **NaviCube** aracını bulabilirsiniz.\n\nModelinizin bir cephe görünüşüne bakmak istiyorsanız **NaviCube** üzerindeki düzlemlere, kenarlara veya köşelere tıklayabilirsiniz. Cephe görünüşleri genel koordinat sistemini temel alır.\n\n \n\nGörünümü bazı kısayol tuşları aracılığıyla yönlendirmek de mümkündür:\n\n* SHIFT + sağ fare tuşu = Taşı (Move)\n* Kaydırma tekerleğine tıklama = Taşı (Move)\n* CTRL + sağ fare tuşu = Döndür (Rotate)\n* SHIFT + CTRL + sağ fare tuşu = Yakınlaştır (Zoom)\n* Kaydırma tekerleği = Yakınlaştır (Zoom)\n\n**NaviCube** yanındaki düğmeler şu işlemler için kullanılabilir:\n\n* Tüm model görünür olacak şekilde görünümü yakınlaştırma\n* İzometrik veya perspektif görünüme geçme\n* Son görünüm yönlendirmelerini geri alma\n* Son görünüm yönlendirmelerini yineleme\n\nİpucu: Belirli bir yapı elemanı veya düğüm noktası etrafında döndürme yapmak istiyorsanız, döndürme işlemini gerçekleştirmeden önce ilgili elemanı veya düğüm noktasını seçmelisiniz. SCIA Engineer bu durumda seçimin etrafında döndürme yapacaktır.",
-      "figures": [
-        "/akademi/temel-modelleme/8680_0EMVi00000F6XIP_18e5343b.png",
-        "/akademi/temel-modelleme/8680_0EMVi00000F6L5z_c10bba24.png",
-        "/akademi/temel-modelleme/8680_0EMVi00000F6PpW_2e4a039c.png",
-        "/akademi/temel-modelleme/8680_0EMVi00000F6XFB_fe5656e0.png",
-        "/akademi/temel-modelleme/8680_0EMVi00000F6XGn_f703f633.png"
-      ]
-    },
-    {
       "id": "de_11227",
       "title": "Yüzey stillerini veya çizgi stillerini projeler arasında kopyalama",
       "body": "**Soru:** \n \nÇizgi stilleri, yüzey stilleri ve çizim tipleri farklı projelerde nasıl kullanılabilir hale getirilebilir? \n \n \n \n**Cevap:** \n \nYüzey stilleri, çizgi stilleri ve çizim tipleri, tanımlar üzerinden ek kaynaklar olarak projeler arasında eklenebilir. \nBunun için **Araçlar (Extras)** -> **Tanımlar (Definitionen)** -> **Çizgi Stilleri, Yüzey Stilleri, Çizim Tipleri (Linienstile, Flächenstile, Zeichnungstypen)** bölümünü açın. \n \nÇizgi veya yüzey stilleri alanında çizim tiplerinin üzerine sağ tıklayın ve **Kısayol Menüsü (Kontextmenü)** -> **Standart/Büro/Proje'den Ek Kaynaklar Ekle (Weitere Ressourcen aus Standard/Büro/Projekt hinzufügen)** seçeneğini seçin. \n \n \n \nÜstteki seçimi **\"Ek çizim tipleriyle genişlet (Um die zusätzlichen Zeichnungstypen erweitern)\"** olarak ayarlayın (\"**Değiştir (Ersetzen)**\" seçeneğini seçerseniz, stillerin içindeki mevcut çizim tipleri silinir). \n**Kaynak Klasör (Quellordner)** kısmında **Proje (Projekt)** seçin ve stilleri devralmak istediğiniz projeyi işaretleyin. \n(Alternatif olarak (büro) standardından tanımları yüklemek için **Kaynak Klasör (Quellordner)** kısmında **Büro (Büro)** veya **Standart (Standard)** seçin.) \n**CTRL+A (STRG+A)** ile tüm stilleri veya seçmeli olarak aktarılacak istediğiniz stilleri etkinleştirin ve seçimi **\"Tamam (OK)\"** ile onaylayın. \n \nÇizgi stilleri: \n \n \n \nYüzey stilleri: \n \n \nTüm yeni çizgi ve yüzey stilleri, kullanılan çizim tipleriyle birlikte oluşturulur. Hâlihazırda mevcut olan stiller ise olası ek çizim tipleriyle tamamlanır. \nSonrasında bir stilde artık mevcut olan tüm çizim tipleri için bir tanım bulunmuyorsa, bu durum \"tanımsız (undefiniert)\" ifadesiyle işaretlenir. \n \n \n \n**Not:** \n \nYapı elemanları yalnızca belirli bir ID numarasına olan aidiyeti hafızada tutar! Bu numara değiştirilirse yapı elemanı yüzey stilini kaybeder veya ona başka bir yüzey stili atanır. \nİlgili kaynakları ve tanımları değiştirebilmek için proje sahibi veya yönetici (Administrator) olarak gerekli yetkilere sahip olmanız gerektiğini lütfen unutmayın.",
@@ -130,6 +118,12 @@
       "title": "Add-On Geometry Tools (Geometri Araçları Eklentisi) - 3B Yüzey Değiştirme",
       "body": "Allplan **Geometri Araçları (Add-On Geometrie Tools)** eklentisine ait bu eğitim videosunda, eğimli temel plaklarını ve döşemeleri hassas bir şekilde uyarlamak için yeni fonksiyonla 3B yüzeyleri nasıl değiştirebileceğinizi öğrenin. Bir düzlem içindeki tekil yüzeyleri değiştirebilme olanağı sayesinde eğimleri, yönleri ve kot noktalarını kolayca uyarlayabilir ve böylece karmaşık eğimleri sorunsuzca düzenleyebilirsiniz.",
       "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "Yanlış seçim penceresiyle fazla eleman taşımak",
+      "body": "Soldan sağa açılan seçim penceresi yalnızca **tamamen içine aldığı** elemanları, sağdan sola açılan pencere ise **dokunduğu tüm** elemanları seçer. İkisini karıştırırsanız istemeden fazla elemanı taşır veya silersiniz. Taşı veya sil öncesi hangi seçim yönünü kullandığınızı kontrol edin."
     }
   ]
 }

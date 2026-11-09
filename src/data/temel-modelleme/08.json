@@ -21,17 +21,13 @@
       "time": "01:00 – 02:00",
       "heading": "Aks Ağı (Axis Grid / Achsraster) Parametrelerinin Girilmesi",
       "body": "**Taslak (Draft) / Mimari (Architecture) -> Aks Ağı (Axis Grid / Achsraster)** komutunu çalıştırın. `X` ve `Y` sekmelerinde bölge açıklıklarını (`örn. 5.00; 4.50; 6.00` veya `3*5.00`), aks çizgi tipini (noktalı kesik çizgi), balon sembolünü ve otomatik ölçü çizgisi seçeneğini işaretleyip çalışma alanına yerleştirin.",
-      "figures": [
-        "/akademi/temel-modelleme/11667_0EMRD00000LMwVt_f33b56c2.png"
-      ]
+      "figures": []
     },
     {
       "time": "02:00 – 02:43",
       "heading": "Aks Ağını Düzenleme",
       "body": "Aks ağına çift tıklayarak veya tutamaç noktalarını kullanarak sonradan yeni aks ekleyin, aks etiket yönlerini ve taşma mesafelerini güncelleyin.",
-      "figures": [
-        "/akademi/temel-modelleme/8773_0EMVi00000EIB6b_85c44bfe.png"
-      ]
+      "figures": []
     }
   ],
   "pitfalls": [
@@ -67,36 +63,5 @@
     "pdfs": [],
     "samples": []
   },
-  "articles": [
-    {
-      "id": "de_8552",
-      "title": "Bridge Modelleme - Aks (Altyazı: Almanca)",
-      "body": "Burada Allplan Bridge içerisinde bir aksı nasıl modelleyeceğinizi öğrenebilirsiniz.",
-      "figures": []
-    },
-    {
-      "id": "en_11667",
-      "title": "Çizgi ve nokta aksları için ayarlar",
-      "body": "Bu Bilgi Makalesi, tüm çizgi aksı (line grid) tipleri (serbest çizgi aksı, dikdörtgen aks, dairesel aks ve 3B çizgi aksı) ve nokta aksı (dot grid) için ayarları nasıl değiştirebileceğinizi göstermektedir.\n\n**Görünüm çubuğunda (Viewbar)**, nokta aksını göstermek/gizlemek için kullanabileceğiniz **Nokta aksını aç/kapat (Toggle dot grid)** simgesini bulabilirsiniz.\n\n**Ana menü (Main menu) > Görünüm (View)** veya **SCIA Spotlight** aracılığıyla nokta aksının bazı ayarlarını değiştirmek için **Nokta aksı ayarları (Dot grid settings)** iletişim kutusunu açabilirsiniz.\n\n \n\n**Nokta aksını aç/kapat (Toggle dot grid) simgesinin üzerine geldiğinizde**, bazı çizgi aksı ayarlarını değiştirebileceğiniz bir alt menü açılır.\n\nAşağıdaki olanaklara sahipsiniz:\n\n* (Tüm) çizgi akslarını **Göster/gizle (Show/hide)**\n* **Yalnızca 1 çizgi aksını göstermek (show only 1 line grid)** için açılır menü\n* **Çizgi aksı yöneticisini (line grid manager)** açmak için **Ek ayarlar (Additional settings)** düğmesi (SCIA Engineer 2010.1 sürümünden itibaren mevcuttur). Çizgi aksı yöneticisini SCIA Spotlight üzerinden de bulabilirsiniz. Çizgi aksı yöneticisinde çizgi akslarını tek tek gösterebilir veya gizleyebilir ve çizgi aksı ayarlarını ve/veya geometrisini değiştirebilirsiniz.\n\n**Durum çubuğunda (Status bar)**, yapınızı kolayca modellemenize yardımcı olabilecek yakalama noktalarını (snap points) etkinleştirebileceğiniz/devre dışı bırakabileceğiniz bir **Yakalama (Snapping)** alt menüsü bulabilirsiniz. Orada çizgi aksına ve/veya nokta aksına yakalamayı etkinleştirebilir veya devre dışı bırakabilirsiniz.",
-      "figures": [
-        "/akademi/temel-modelleme/11667_0EMRD00000LMwUH_7b86648a.png",
-        "/akademi/temel-modelleme/11667_0EMRD00000LMqQU_01b38cfc.png",
-        "/akademi/temel-modelleme/11667_0EMRD00000LMaaE_e4b20058.png",
-        "/akademi/temel-modelleme/11667_0EMRD00000LMfZu_2e12913c.png",
-        "/akademi/temel-modelleme/11667_0EMRD00000LMwVt_f33b56c2.png",
-        "/akademi/temel-modelleme/11667_0EMRD00000LMVp4_353809fe.png"
-      ]
-    },
-    {
-      "id": "en_8773",
-      "title": "Çizimlerle birlikte silindirik 3B aks ızgarası",
-      "body": "**3B çizgi ızgarası (3D line grid)** komutu (**Giriş paneli (Input panel) > Yapı (Structure) > Izgaralar ve Katlar (Grids & Storeys)**) aracılığıyla silindirik bir 3B aks ızgarası oluşturabilirsiniz:\n\n**Tip (Type)** ayarını **Silindirik (Cylindrical)** olarak belirleyin ve istediğiniz boyutları seçin:\n\nSilindirik bir çizgi ızgarası kullanılırken, ızgaranın farklı yarıçaplarını gösteren etiketler görüntülenmez. Bu nedenle bu etiketler, görüntü sihirbazı (image wizard) kullanılarak otomatik genel görünüm çizimleri (overview drawings) oluşturmak için kullanılamaz. Bunun için **‘Çizim Kurulumu’ (‘Drawing Setup’)** sekmesine gidin. Burada **‘Etiketler’ (‘Labels’)** seçeneği **‘Başlangıç’ (‘Begin’)** olarak ayarlanmıştır. Bu, tüm etiketlerin başlangıçta gösterildiği anlamına gelir; bu durumda tüm etiketler çizgi ızgarasının merkezine yansıtılır ve dolayısıyla görünmez olur. Bu seçeneği **‘Son’ (‘End’)** olarak değiştirdiğinizde etiketler görünür hale gelir ve genel görünüm çizimleri oluşturmak üzere görüntü sihirbazında kullanılabilir:\n\nGrafik penceresinde sağ tıklayın, görüntü sihirbazını çalıştırın ve **Çizgi ızgarası düzlemlerine göre kesit (genel görünüm çizimleri) (Section by planes of linegrid (overview drawings))** seçeneğini belirleyin:",
-      "figures": [
-        "/akademi/temel-modelleme/8773_0EMVi00000EIB3N_e6f6249b.png",
-        "/akademi/temel-modelleme/8773_0EMVi00000EIB4z_a938a1ca.png",
-        "/akademi/temel-modelleme/8773_0EMVi00000EIB6b_85c44bfe.png",
-        "/akademi/temel-modelleme/8773_0EMVi00000EI3c6_c6ebfbb6.jpeg"
-      ]
-    }
-  ]
+  "articles": []
 }

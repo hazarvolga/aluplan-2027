@@ -8,7 +8,7 @@
   "objectives": [
     "Mühendislik (Engineering) rolünde kullanılan Çubuk Donatı Lejantı (Reinforcing Bar Legend / Stabstahllegende) ve Hasır Donatı Lejantı (Mesh Legend / Mattenlegende) standartlarını tanımak.",
     "Standart bir donatı metraj/büküm lejantını Lejantları Yönet ile Ofis (Office) klasörüne kopyalamak.",
-    "TS 500 ve ISO 3766 standartlarına uygun donatı metraj tablosu sütun yapısını (Poz No, Adet, Çap Ø, Tek Boy, Toplam Boy, Büküm Şeması, Çap Bazlı Ağırlık Özeti) kurgulamak."
+    "Donatı metraj tablosu sütun yapısını (Poz No, Adet, Çap Ø, Tek Boy, Toplam Boy, Büküm Şeması, Çap Bazlı Ağırlık Özeti) Türkiye mühendislik pratiğine göre düzenlemek; büküm şekli gösteriminde ISO 3766 çizim ve ölçülendirme kuralını tanımak."
   ],
   "steps": [
     {
@@ -22,7 +22,7 @@
     {
       "time": "",
       "heading": "Türkiye Uygulama Standardına Göre Tablo Başlığı ve Sütun Düzeni",
-      "body": "**Lejant Değiştir (Modify Legend)** ile şablonu ekrana çağırın. Sütun başlıklarını **Poz No**, **Çap (Ø)**, **Adet**, **Bir Boy (cm/m)**, **Toplam Boy (m)**, **Büküm Şeması ve Kıvrım Boyları** ile **Birim/Toplam Ağırlık (kg)** olacak şekilde Türkçe mühendislik jargonuyla düzenleyin.",
+      "body": "**Lejant Değiştir (Modify Legend)** ile şablonu ekrana çağırın. Sütun başlıklarını **Poz No**, **Çap (Ø)**, **Adet**, **Bir Boy (cm/m)**, **Toplam Boy (m)**, **Büküm Şeması ve Kıvrım Boyları** ile **Birim/Toplam Ağırlık (kg)** olacak şekilde Türkçe mühendislik jargonuyla düzenleyin. Sütunları bu sırayla dizersiniz; çünkü imalatçıya önce pozu, sonra çap ve adedi, en sonda toplam boy ile ağırlığı okutan sıra, kesim ve büküm hatasını azaltır.",
       "figures": []
     }
   ],
@@ -32,7 +32,7 @@
       "body": "Donatı lejantı, poz numarası, çap, şekil kodu ve toplam boy gibi **donatıya özgü nitelikler** üzerine kuruludur; mimari lejant şablonuyla çalışmaz. Doğru donatı lejant şablonunu kopyalayın ve donatı niteliklerine bağlayın."
     }
   ],
-  "checkpoint": "Hazır bir donatı lejantını projenize kopyalayıp sütunları (poz, çap, boy, adet, toplam boy) kendi standardınıza göre uyarladıysanız tasarım adımını tamamlamışsınız demektir.",
+  "checkpoint": "Hazır bir donatı lejantını projenize kopyalayıp sütunları (poz, çap, boy, adet, toplam boy) kendi standardınıza göre uyarladıysanız tasarım adımını tamamlamışsınız demektir. Bu şablonu, eğitimde kuracağınız kiriş donatı cetveli için kullanırsınız.",
   "commands": [
     {
       "name": "Donatı Lejantı (Reinforcement Legend)",

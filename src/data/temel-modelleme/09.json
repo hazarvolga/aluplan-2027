@@ -192,6 +192,40 @@
         "type": "image",
         "src": "/akademi/temel-modelleme/10798_0EM7U000001TeNM_27652d2c.png",
         "caption": "Yıkım paftası görünümünde parapet çizgilerinin durumu."
+      },
+      {
+        "type": "heading",
+        "text": "Nitelik Referansi: Poligon Duvar"
+      },
+      {
+        "type": "text",
+        "text": "Poligon duvarin kendi nitelikleri dogrudan etiketleme ve metraj icin kullanilabilir. Ust eleman olan toplam duvara (Gesamtwand) `PARENT()` referansiyla erisilir, ancak toplam duvar kendine ait geometri bilgisi tasimaz; poligon duvarda ayrica katman (Schicht) bulunmaz."
+      },
+      {
+        "type": "text",
+        "text": "Metrajda yalnizca `Hacim (Volumen)` (m3) biriminde verilen degerler cizim sirasindan bagimsiz ve izlenebilirdir. `Uzunluk (Lange)`, `Kalinlik (Dicke)`, `Alan (Flache)`, `Orta Alan (Mittelflache)` ve `VOB_...` nitelikleri ilk cizilen kenara bagli oldugundan tarafsiz metraj icin uygun degildir. `Taban Alani (Grundflache)` bosluklari minha etmeden konstruksiyon alanini; `Zemin Alani (Bodenflache)` ve `Tavan Alani (Deckenflache)` zemine/uste kadar inen bosluklari dusurerek gercek alt/ust yuzeyi verir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11384_0EM7U000001Td7a_b5050b7a.png",
+        "caption": "Poligon duvarin geometrik ve metraj niteliklerinin ekranda listelenmesi."
+      },
+      {
+        "type": "heading",
+        "text": "Nitelik Referansi: Duvar ve Toplam Duvar (PARENT)"
+      },
+      {
+        "type": "text",
+        "text": "Tek ve cok katmanli duvarlarda yalnizca dogrudan secilen katmanin (Wandschicht) nitelikleri etiketlenir (poligon ve profil duvarlar bu kapsamda degildir). Diger katmanlarin, toplam duvarin (Gesamtwand) ve bosluklarin nitelikleri formullerle elde edilir."
+      },
+      {
+        "type": "text",
+        "text": "`PARENT(@XYZ@)` formuluyle bir duvar katmanindan yukari bakilarak toplam duvara atanmis bilgilere (orn. duvar tipi, yangin dayanimi, ses yalitimi) erisilir; bu yon her zaman tekil ve net deger verir. `CHILD()` ile asagi, alt objelere (orn. bosluklar) bakilir; bu yon cogunlukla birden fazla obje icerdiginden tekil degildir. Orn. `CHILD(@215@)` bir katmanin alt obje sayisini verir (en az 1,00); `CHILD(_IF_(@OBJ@=22)@215@_ELSE_0)` ise yalnizca belirli bir obje turunu sayar."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9161_0EM7U000001TeWY_b5050b7a.png",
+        "caption": "Duvar katmaninin geometrik ve metraj niteliklerinin genel gorunumu."
       }
     ]
   }

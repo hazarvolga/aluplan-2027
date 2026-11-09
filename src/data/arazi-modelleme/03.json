@@ -229,6 +229,98 @@
       {
         "type": "text",
         "text": "İpucu: Yama (Patch) ile oluşturduğunuz 3B yüzey, Allplan 2019 sürümünden itibaren mimari yapı elemanlarının bağlanacağı referans yüzey (düzlem modeli) olarak da kullanılabilir. Aksiyon Çubuğu yapılandırmasında menü çubuğunu geçici görmek isterseniz Alt tuşunu kullanın."
+      },
+      {
+        "type": "heading",
+        "text": "Excel Dosyasından Arazi Noktaları Okuma"
+      },
+      {
+        "type": "text",
+        "text": "Nokta bilgileri bir Excel tablosunda duruyorsa bunları Allplan'a aktarabilirsiniz. Tabloda noktaların X, Y ve Z değerleri ayrı sütunlarda olmalıdır; isteğe bağlı olarak nokta numarası ve kod numarası için de birer sütun kullanılabilir. Önce ilgili hücreleri tüm değerler aynı sayıda ondalık basamak gösterecek şekilde biçimlendirin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11273_0EM7U000001TdPF_9a2512a7.png",
+        "caption": "Excel'de X, Y, Z değerlerinin ayrı sütunlar halinde ve eşit ondalık basamakla biçimlendirilmesi."
+      },
+      {
+        "type": "text",
+        "text": "Excel dosyasını Dosyayı farklı kaydet (Datei speichern unter) ile Biçimlendirilmiş Metin, Boşlukla ayrılmış (*.prn) türünde kaydedin. Ardından dosyayı Windows Gezgini'nde Punkte01.prn adından Punkte01.asc olarak yeniden adlandırın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11273_0EM7U000001TdPG_77ae9333.png",
+        "caption": "Dosyanın *.prn (boşlukla ayrılmış biçimlendirilmiş metin) olarak kaydedilmesi."
+      },
+      {
+        "type": "text",
+        "text": "Windows'un bölge ayarlarına göre oluşan .asc dosyası ondalık ayırıcı olarak virgül içerebilir. Allplan'da .asc içe aktarımında yalnızca nokta kabul edilir; bu nedenle dosyayı Not Defteri ile açıp Düzen (Bearbeiten), Değiştir (Ersetzen) altından virgülü nokta ile değiştirin. İlgili sütunlardaki ondalık ayırıcılar alt alta hizalanmış olmalıdır. Dosyayı sonra Oluştur (Erzeugen), Arazi (Gelände), Vaziyet Planı (Lageplan), Nokta dosyası içe aktar, dışa aktar (Punktdatei importieren, exportieren) menüsünden okutun."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11273_0EM7U000001TdPH_dc1f6d35.png",
+        "caption": "Not Defteri'nde ondalık ayırıcıların alt alta hizalanmış kontrolü."
+      },
+      {
+        "type": "heading",
+        "text": "Metin (ASCII) Dosyasından Arazi Noktaları Okuma"
+      },
+      {
+        "type": "text",
+        "text": "Herhangi bir metin dosyasındaki vaziyet planı koordinatlarını da okuyabilirsiniz. Koşullar şunlardır: nokta numarası, X, Y, Z koordinatları ve kod numarası bir ASCII dosyasında sütunlar halinde ve yalnızca boşluklarla ayrılmış olmalı; Sekme (Tabulator) veya Noktalı Virgül (Semikolon) gibi ayırıcılar boşluk karakteriyle değiştirilmelidir. Ondalık ayırıcı nokta olmalı, virgül varsa nokta ile değiştirilmelidir."
+      },
+      {
+        "type": "text",
+        "text": "Dosyayı Not Defteri ile açın, Görünüm (Ansicht) altından Durum Çubuğu'nu (Statusleiste) görünür yapın ve her parametrenin ilk rakamının bulunduğu başlangıç sütununu okuyun. Örnekte X koordinatı 20. sütunda başlamaktadır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11239_0EM7U000001TdPK_d8c8dff8.png",
+        "caption": "Not Defteri durum çubuğunda koordinatların başlangıç sütunlarının okunması."
+      },
+      {
+        "type": "text",
+        "text": "Allplan'da Araçlar (Extras), Seçenekler (Optionen), Arazi (Gelände), Dosya arayüzü üzerinden İçe/Dışa Aktar, Nokta koordinatlarını yapılandır (Punktkoordinaten konfigurieren) altında her parametrenin başlangıç sütununu, tam sayı ve ondalık basamak sayısını girin. Ondalık noktası bu sayılara dahil edilmez. Dosyada nokta numarası veya kod numarası yoksa rastgele boş bir sütun numarası girin; kod numarası en fazla iki basamaklı sayı olabilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11239_0EM7U000001TdPL_1a451924.png",
+        "caption": "Başlangıç sütunu, tam sayı ve ondalık basamak sayılarının yapılandırılması."
+      },
+      {
+        "type": "text",
+        "text": "X ve Y koordinatları virgülden önce 3'ten fazla basamak içeriyorsa (genellikle 7 basamak), okuma işleminden önce mutlaka bir Ofset (Offset) ayarlayın. Vaziyet planlarında ofset, DXF/DWG içe aktarmanın aksine elle ayarlanmalıdır. Ardından Oluştur (Erzeugen), Arazi (Gelände), Vaziyet Planı (Lageplan), Nokta dosyası içe aktar, dışa aktar menüsünden okuma parametrelerini girip noktaları okutun."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11239_0EM7U000001TdPM_db647be2.png",
+        "caption": "Nokta dosyası okuma parametrelerinin ayarlanması."
+      },
+      {
+        "type": "heading",
+        "text": "Kotları Deniz Seviyesine (NHN) Göre Etiketleme"
+      },
+      {
+        "type": "text",
+        "text": "Projede tek bir referans kotuyla ve bir ±0,00 ile çalışıyor, ancak kotları gerçek deniz seviyesine (NN veya NHN, Normalhöhennull) göre etiketlemek istiyorsanız: önce referans kotu bir proje niteliği olarak tanımlanır. Yeni Proje, Aç (Projekt neu, öffnen), Özellikler (Eigenschaften), Proje (Projekt), Nitelikleri Ata (Attribute belegen) altında metin türünde olan Normalhöhennull (@585@) niteliğini bulun."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/8854_0EM7U000001Tczd_5ce3beab.png",
+        "caption": "Proje nitelikleri altındaki Normalhöhennull (@585@) metin niteliği."
+      },
+      {
+        "type": "text",
+        "text": "Niteliğe girilecek değer ondalık ayırıcı olarak nokta içermeli ve örneğin şu biçimde olmalıdır: 356.12 m ü. NHN. Nitelik metin olduğundan doğrudan hesaplamada kullanılamaz; VALUE(string;index) formülüyle metinden bir sayı ayıklanır. Burada string sayı içeren metin niteliği, index ise kaçıncı sayının alınacağıdır. Böylece kot çıktılarında VALUE(Normalhöhennull;1) veya VALUE(@585@;1) formülünü kullanırsınız. Mahallerde kaba ve bitmiş döşeme için örnek formüller: Kaba döşeme VALUE(@585@;1) +ROUND(@112@/1000;3;5); Bitmiş döşeme VALUE(@585@;1) +ROUND((Obj_Floor(@211@;1;2;3;4;5;6;7;8;9;10)+@112@)/1000;3;5). Biçim olarak K12.3 kullanıp DIM altında birimi m yapıp gizleyin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/8854_0EM7U000001Tcze_066afc62.png",
+        "caption": "Referans kotunun bir metin değeri (356.12 m ü. NHN) olarak girilmesi."
+      },
+      {
+        "type": "text",
+        "text": "Not: Allplan 2023 ile birlikte yapı elemanı referansları için dilden bağımsız fonksiyon çağrıları geldi. MT_Raum(), MT_Wand() ve MT_Boden() yerine Obj_Room(), Obj_Wall() ve Obj_Floor() kullanılmalıdır. Eski verilerin 2023'e dönüştürülmesinde bu formüller otomatik uyarlanır; uluslararası veri alışverişini güvence altına almak için yeni etiket stillerinde ve raporlarda dilden bağımsız fonksiyonları tercih edin."
       }
     ]
   }

@@ -127,5 +127,46 @@
         "/akademi/temel-modelleme/10703_0EM7U000001TeKw_2003164e.png"
       ]
     }
-  ]
+  ],
+  "deepDive": {
+    "title": "Derinlemesine",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "ISO 3766'ya Gore Egik Donati Acilimi Olculendirme"
+      },
+      {
+        "type": "text",
+        "text": "Dik aciyla bukulmemis bir donatida acilim (Auszug) uzerindeki kol uzunluklari (Schenkellangen) ve bukum olculeri (Biegemasse) nasil belirlenir? Kol uzunluklari ve olcu cizgileri **ISO 3766** (03.2004) standardina gore hesaplanir; bu standart, onceki **ISO 4066** surumunun yerini almistir. Resim 1'deki kucuk farklar (en cok 2 mm) yuvarlama toleranslarindan kaynaklanir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10887_0EM7U000001Te59_e98d7d43.png",
+        "caption": "Resim 1: Gercek donati gosterimiyle, dik acili olmayan kollarin ISO 3766'ya gore olculendirilmesi."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10887_0EM7U000001Te5A_af8ec9ad.png",
+        "caption": "Resim 2: Paftadaki acilim gosterimi (cubuk aksi / Stabachse)."
+      },
+      {
+        "type": "text",
+        "text": "Kivrimli (gekropft) donatilarda kivrim olcusu (Kropfmass), dusey kollarin iki dis kenari uzerinden alinir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10887_0EM7U000001Te5B_663aadc1.png",
+        "caption": "Resim 3: Kivrimli bir donatinin ISO 3766'ya gore acilim gosterimi; kivrim olcusu dis kenarlar uzerinden olculur."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10887_0EM7U000001Te5C_3566f624.png",
+        "caption": "Resim 4: Paftadaki acilim gosterimi (cubuk aksi / Stabachse)."
+      },
+      {
+        "type": "text",
+        "text": "Yanlis anlasilmalari onlemek icin bukum damgasina (Biegestempel) ilgili bilgiyi eklemenizi oneririz."
+      }
+    ]
+  }
 }

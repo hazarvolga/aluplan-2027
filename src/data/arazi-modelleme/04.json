@@ -152,5 +152,98 @@
       "body": "**Soru:** \n \nEğimli arazide yaklaşık olarak aynı kazı ve dolgu miktarına sahip bir kazı çukurunu nasıl planlayabilirim? \n \n \n \n**Cevap:** \n \nSAM (Sayısal Arazi Modeli / DTM) planlanan binanın alanına indirgenir. Kazı ve dolguyu hesaplarken veri tipini 22.014 ve kıyas düzlemini (horizon) evet (yes) olarak ayarladığınızda, kıyas düzlemi kazı çukurunun tabanını temsil eder. Kıyas düzlemi için farklı yükseklik ayarları kullanarak ardışık hesaplamalar yapabilirsiniz. Bu şekilde tabanın doğru yüksekliğine ilişkin hızlıca yaklaşık bir değer elde edebilirsiniz. \n \nAdımlar: \n \n1. Orijinal SAM (DTM) içinde binanın dış sınırını çizmek için çizgiler kullanın. Bir sonraki adım bu çizgileri SAM ile ağ yapısına dönüştürmektir (**Modifikasyon (Modify) -> Arazi (Terrain) -> Sayısal Arazi Modeli (Digital Terrain Model) -> Elemanı SAM ile Ağa Dönüştür (Mesh Element with DTM)**). Bu işlem SAM'a yeni noktalar ekler. Bu noktalar çizgilerin uç noktalarındadır ve yükseklik SAM temel alınarak enterpolasyonla hesaplanır. \n \n2. Binanın dış sınırı görevi gören bir dış sınır girin (**Modifikasyon (Modify) -> Arazi (Terrain) -> Sayısal Arazi Modeli (Digital Terrain Model) -> Dış Sınır (Exterior Boundary)**). Dış sınırı girmek için gereken noktalar, çizgileri SAM ile ağa dönüştürdüğünüzde oluşturulmuştur. \n \n3. Son olarak 22.014 veri tipini kullanarak kazı ve dolguyu hesaplayın (**Oluştur (Create) -> Arazi (Terrain) -> Sayısal Arazi Modeli (Digital Terrain Model) -> Kazı ve Dolgu Hesapla (Compute Cut and Fill)**). Özellikle aşağıdaki ayarları kullanın: **VeriTp (DataTp): 22.014; Kıyas Düzlemi (Horiz): Evet (Yes); Analiz (Analyze): Kazı ve Dolgu (Cut and Fill).** **Yükseklik (Height)** kutusuna kıyas düzlemi için başlangıç değeri olarak SAM'ın ortalama yüksekliğini girin. Kıyas düzleminin doğru yüksekliğini belirlemek için birkaç hesaplama gerçekleştirin.",
       "figures": []
     }
-  ]
+  ],
+  "deepDive": {
+    "title": "Derinlemesine",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Arazi Modülüne Kuşbakışı (Fransızca Arayüz)"
+      },
+      {
+        "type": "text",
+        "text": "Arazi modülü, Allplan'da çoğu kullanıcının az tanıdığı ama güçlü bir modüldür. Bu Derinlemesine bölüm, modülün temel araçlarını tek bir akış halinde özetler. Ekran görüntüleri Fransızca bir Allplan arayüzünden alınmıştır; komut adlarının Türkçesini parantez içindeki Fransızca karşılıklarıyla birlikte bulacaksınız. Modüle girmek için önce rolünüzü Çevre / Arazi (Environnement) rolüne değiştirin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tfSD_8e03becf.png",
+        "caption": "Çevre / Arazi (Environnement) rolüne geçiş. Arayüz Fransızcadır."
+      },
+      {
+        "type": "text",
+        "text": "Modül içinde arazi noktası dosyalarını içe veya dışa aktarabilirsiniz. .re1, .re2, .reb ve .asc biçimleri Allplan'a doğrudan içe aktarılır; diğer biçimler için Scalypso eklentisiyle önce dönüştürüp sonra içe aktarın. Noktaları doğrudan Allplan içinde 3B olarak da oluşturabilirsiniz. İçe aktarılan veya elle yerleştirilen 3B noktaları üçgenleyerek (ağ oluşturarak) bir Sayısal Arazi Modeli (MT3D) elde edersiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tfdV_4d3d07fa.png",
+        "caption": "3B arazi noktalarının üçgenlenmesiyle oluşan Sayısal Arazi Modeli (MT3D) ağı."
+      },
+      {
+        "type": "text",
+        "text": "Arazinin gösterimini yönetebilir, topoğrafyayı renk geçişli (gradyan) bir dolgu biçiminde geçici olarak görüntüleyebilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tfgj_6714924e.png",
+        "caption": "Topoğrafyanın renk geçişli (gradyan) dolgu ile geçici gösterimi."
+      },
+      {
+        "type": "text",
+        "text": "Eşyükselti eğrilerini (courbes de niveaux) çok kolay üretebilirsiniz. Dış Sınır (contour extérieur) aracıyla ağın dış sınırını oluşturur veya yeniden sınırlandırır; Ağ Noktası (Point de maillage) aracıyla ağ noktalarını ekler, değiştirir veya silersiniz. MT3D ağına nokta, çizgi, poligon çizgisi veya spline gibi elemanlar ekleyebilir, Boşluk Açma (évidement) fonksiyonuyla arazinin bir kısmında boşluk oluşturabilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tfon_fe2a6cb2.png",
+        "caption": "Eşyükselti eğrilerinin (courbes de niveaux) otomatik oluşturulması."
+      },
+      {
+        "type": "text",
+        "text": "Bir profil kesiti çizip 2B profil şeması çıkarabilirsiniz. Belirli bir kesit için (örneğin bir yol ekseni) mevcut bir 2B çizgiyi veya spline'ı referans alabilirsiniz. Önce bir profil kesiti tanımlayın, ardından bu kesitten profil şemasını üretin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tg6X_3809d03c.png",
+        "caption": "Adım 1: profil kesitinin tanımlanması. Ardından bu kesitten 2B profil şeması çıkarılır."
+      },
+      {
+        "type": "text",
+        "text": "İlk araziyi şev (talus) fonksiyonlarıyla değiştirerek dolgu (remblai) veya kazı (déblai) yapabilirsiniz. Genel Şev (talus général) aracı bir platformun oturma alanını ve şev eğimini tanımlar; Serbest Şev (talus quelconque) aracı platform çizimini ve şevlerin oturma alanını tümüyle grafiksel belirlemenizi sağlar."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/9311_0EMVi000003teER_e58f33f8.png",
+        "caption": "Şev (talus) fonksiyonlarıyla dolgu/kazı ve platform oluşturma."
+      },
+      {
+        "type": "text",
+        "text": "İki araziyi karşılaştırabilmek için bu değişiklikleri ilk arazinin bir kopyası üzerinde ayrı bir çizim dosyasında yapın. Sonra Kübajları Belirle (déterminer les cubages) aracıyla kazı/dolgu hacimlerini hesaplayıp bir rapor üretebilirsiniz. Son olarak bir 3B arazi ağını 3B yüzeye veya hacme (ya da tersine) dönüştürerek Allplan'ın serbest modelleme modülüne geçebilir ve Boolean operatörlerini kullanabilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tg89_41f80b82.png",
+        "caption": "Kübajları Belirle (déterminer les cubages) ile kazı/dolgu hacimlerinin hesaplanması."
+      },
+      {
+        "type": "heading",
+        "text": "3B / 2B Çizgilerden Dış Sınır (Außengrenze) Oluşturma"
+      },
+      {
+        "type": "text",
+        "text": "Bazen bir Sayısal Arazi Modeli'nin (SAM / DGM) dış sınırını, Dış Sınır (Außengrenze) fonksiyonuyla elle girmek yerine mevcut 3B çizgilerden üretmek daha mantıklıdır. Özel çizgi (Şev Çizgisi / Bruchkante, Dış Sınır / Außengrenze, Boşluk / Aussparung) olarak okunan bir 3B çizgi, başlangıç ve bitiş noktalarıyla aynı koordinatlardaki sembol noktaları üzerinde yer almalıdır. Tüm SAM noktaları birbirinden farklı numaralara sahip olmalı ve hiçbir noktanın numarası 0 olmamalıdır."
+      },
+      {
+        "type": "text",
+        "text": "Mevcut bir SAM'dan, SAM Objelerini Çizim Objelerine (DGM Elemente in Konstruktionselemente) fonksiyonuyla 3B çizgiler üretebilirsiniz. Çizgileri Vaziyet Planı (Lageplan) modülünden bir .lin dosyası olarak dışa yazın; Çizgi Nitelikleri (Linienattribute) arayüzünde başlangıç sütunu, tam sayı ve ondalık basamak değerlerini önceden ayarlamak işlemleri kolaylaştırır. Dosyayı Not Defteri'nde açıp çizgi kodu 3 (SAM şev çizgisi) veya 5 (vaziyet planından çizgi) değerini CTRL + H ile çizgi kodu 1 olarak değiştirin ve kaydedin."
+      },
+      {
+        "type": "text",
+        "text": "Değiştirilen çizgi dosyasını dış sınır olarak okutun. Dış sınır okunamıyor ve 'Sınır zaten mevcut, izin verilmiyor' (Grenze bereits vorhanden) veya 'Çizgi özel çizgiyi kesiyor' (Linie schneidet Sonderlinie) mesajı alınıyorsa, dosyada kapalı poligona ek başka çizgiler olabilir. Sorunlu bölgeyi bulmak için dış sınırın bir kısmını kestirme 3B çizgilerle değiştirip farklı renkle dışa yazarak yalıtın. Dış sınırı bu sorunlu bölge olmadan okuyup bölgeyi Dış Sınırı Değiştir (Außengrenze modifizieren) ile sonradan uyarlayabilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11379_0EM7U000001TdAg_b7bf5faf.png",
+        "caption": "İndirgenmiş dış sınır: sorunlu bölgeyi yalıtmak için bazı kesimler kestirme çizgilerle değiştirilir."
+      }
+    ]
+  }
 }

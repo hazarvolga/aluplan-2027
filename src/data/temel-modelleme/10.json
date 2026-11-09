@@ -240,6 +240,132 @@
         "type": "image",
         "src": "/akademi/temel-modelleme/8900_0EM7U000001Tdht_e7ce85f6.png",
         "caption": "Tamamlanmış kutu pencere."
+      },
+      {
+        "type": "heading",
+        "text": "Kapilar (Nitelikli) Raporunu Kullanmak"
+      },
+      {
+        "type": "text",
+        "text": "`Turen (mit Qualitaten).rdlc` raporu (Standart - Ince Isler - Pencereler, Kapilar dizini) bir kapi listesi uretir. Bilgiler kapidan (kapi, Buyuk Kapi SmartPart veya kapi makrosu), bitisik mahalden ve kat strruktur kademesinden cekilir. Raporun tum sutunlarini doldurabilmek icin bosluktaki SmartPart objesine yaklasik 60 niteligin atanmasi gerekir (Nitelikleri Degistir - Yeni nitelik ata)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8d_13d4990d.png",
+        "caption": "Bos niteliklere sahip ornek bir kapi; bu nitelikler raporun temelini olusturur."
+      },
+      {
+        "type": "text",
+        "text": "Kapi numarasi otomatik turetilebilir. `Lage_Ebene_automatisch`, `Lage_Raumnr_automatisch` ve `Lage_Raumfunktion_automatisch` nitelikleri bos veya `auto` iken, kapi icine acildigi mahalin numarasini alir (Durum 1)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8e_d00176d2.png",
+        "caption": "Durum 1: Nitelikler 'auto' iken kapi, icine acildigi mahalin numarasini alir."
+      },
+      {
+        "type": "text",
+        "text": "Teknik hacimlerde veya kacis yonu koridora olan kapilarda bu nitelikler bitisik mahalin bilgileriyle elle doldurulur (Durum 2). Bir mahale birden cok kapi dusuyorsa, `Tur_Nr_Zusatz` niteligine bir harf veya ek sayi girilerek ayristirma yapilir (Durum 3)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8f_1d52c819.png",
+        "caption": "Durum 2: Nitelikler elle doldurularak kapiya bitisik mahalin numarasi verilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8g_8a988a8a.png",
+        "caption": "Durum 3: `Tur_Nr_Zusatz` eki ile ayni mahaldeki kapilar ayristirilir."
+      },
+      {
+        "type": "text",
+        "text": "Genislik ve yukseklik bosluktan (kaba yapi olcusu), doseme yuksekligi mahalden, duvar kalinligi duvardan (tum katmanlar) otomatik alinir. Duvar malzemesi icin `Wand_Material_automatisch` niteligi `auto` ise once toplam duvarin `Tanim (Bezeichnung)` niteligi, bossa duvar katmaninin `Malzeme (Material)` niteligi kullanilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8j_81f82937.png",
+        "caption": "Bosluk ve duvar bilgileri; kaplama malzeme ve kalinlik olarak nitelikte tanimlanir (sari), otomatik alinan alanlar kirmizi isaretli."
+      },
+      {
+        "type": "text",
+        "text": "Kapi acilis yonu (sol veya sag) otomatik belirlenir; `Tur_DIN_automatisch` niteligi `auto`/bos ise otomatik deger, aksi halde girilen deger yazdirilir. Kasa (Zarge) genisligi (Maulweite), `Zarge_Maulweite_automatisch` 0.00 ise duvar kalinligina `Wand_Bekleidung_Bandseite` ve `Wand_Bekleidung_Bandgegenseite` kalinliklari eklenerek bulunur."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8m_bff51807.png",
+        "caption": "Kapi acilis yonu ve `Tur_DIN_automatisch` niteligi."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8p_b53b3bef.png",
+        "caption": "Kasa (Zarge) ayarlari; kasa genisligi otomatik ya da elle tanimlanabilir."
+      },
+      {
+        "type": "text",
+        "text": "Raporda `Raumbezug_Spezial`, `Wandmaterial_Spezial`, `Anschlag_Spezial` ve `Maulweite_Spezial` ayarlari standarttan sapan kapilari renkli isaretler; `Gliederung_Geschoss` ile kat gruplandirmasi acilip kapatilir. Onizlemede bir hucreye tiklamak ilgili yapi elemanini grafik penceresinde isaretleyip yakinlastirir."
+      },
+      {
+        "type": "heading",
+        "text": "Pencere/Kapi Acilis Yonunu Metinle Etiketlemek"
+      },
+      {
+        "type": "text",
+        "text": "Pencere veya kapinin acilis yonunun (Aufschlagsrichtung) otomatik etiketlenmesi icin acilis, boslukta elle girilip yerlestirilmelidir (abgesetzt)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9617_0EM67000007oVV9_9b85a4b2.png",
+        "caption": "Acilis yonunun paftada etiketlenmis gosterimi."
+      },
+      {
+        "type": "text",
+        "text": "Kapinin icinde bir makro (Makro) bulunmali ve bu makro, Montaj Parcalari Katalogu'nda (Einbauteilekatalog) birebir ayni adla ve ilgili nitelikle tanimlanmalidir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9617_0EM67000007oVVi_6d2c612e.png",
+        "caption": "Montaj parcasi katalogunda makro icin tanimlanan nitelik (1/2)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9617_0EM67000007oVVn_e2d0b600.png",
+        "caption": "Montaj parcasi katalogunda makro icin tanimlanan nitelik (2/2)."
+      },
+      {
+        "type": "text",
+        "text": "Cikti, eleman paftasinda (Elementplan) ve Liste Ureteci'nden (Listengenerator) alinan listelerde gorunur."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9617_0EM67000007oVUl_ea72cac8.png",
+        "caption": "Eleman paftasindaki cikti."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9617_0EM67000007oVVx_e4713e96.png",
+        "caption": "Liste uretecinden alinan liste."
+      },
+      {
+        "type": "heading",
+        "text": "Panjur Kutusu (Rollladenkasten) Olusturma Yontemleri"
+      },
+      {
+        "type": "text",
+        "text": "Bir panjur kutusu uc yolla olusturulabilir. 1) Panjur Kutusu mimari yapi elemani (Mimari rolu - Yapi Elemanlari): bosluk uzerine A/B mesnetli, yuksekligi ve derinligi tanimlanabilen ayri bir yapi elemani kurar; Kaba Yapi (Rohbau) raporuyla tekil metraji alinir, duvarin VOB metrajinda dogru islenir ve tek basina etiketlenebilir. Panjur rayi gostermez."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10809_0EM7U000001Te57_e4aea706.png",
+        "caption": "Panjur Kutusu mimari yapi elemani ve kat plani gosterim secenekleri."
+      },
+      {
+        "type": "text",
+        "text": "2) Pencere SmartPart'i icinde ayarlanan pencere ustu (Aufsatzrolladen) veya distan takma (Vorbaurolladen) panjur: bosluk komple degerlendirilir, kutu tekil olarak listelenemez ve ayri etiketlenemez. 3) Ayri bir Gunes Kirici SmartPart'i (Sonnenschutz-SmartPart): en esnek yontemdir; ray ve kilavuzlari gosterir, tekil metraj ve ayri etiketleme saglar. Distan takma panjurda Pencere SmartPart'inda ust kasa genisletilir; pencere ustu panjurda boskluga ust mesafe ayarlanir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10809_0EM7U000001Te9l_2b85ee07.png",
+        "caption": "Ayri Gunes Kirici SmartPart'i ile distan takma panjur; boskluga mesafe ayarlari."
       }
     ]
   }

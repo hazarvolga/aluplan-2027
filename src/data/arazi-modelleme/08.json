@@ -203,6 +203,67 @@
         "type": "image",
         "src": "/akademi/arazi-modelleme/11348_0EM7U000001TdF2_bb9e8e28.png",
         "caption": "Oluşturulan, üst kenarı araziye referanslı yan yüzey."
+      },
+      {
+        "type": "heading",
+        "text": "İki Kat Boyunca Devam Eden Çatı Düzlemi"
+      },
+      {
+        "type": "text",
+        "text": "İçinde iki kat bulunacak eğimli bir çatı için Allplan'da önerilen yöntem, Yapı Strüktürü (Bauwerkstruktur / BWS) ile çalışmayı ve Çatı Peyzajı (Dachlandschaft) kullanmayı birleştirmektir. Akış üç adımdır: çatı düzlemi oluşturmak, çatı düzleminden bir çatı peyzajı üretmek ve çatı peyzajını ilgili katlara (BWS strüktür düğümlerine) atamak."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/9135_0EM7U000001TdGP_5893ad76.png",
+        "caption": "İki katı kapsayan eğimli çatı örneği."
+      },
+      {
+        "type": "text",
+        "text": "Çatı Düzlemi (Dachebene) yalnızca içinde bulunduğu çizim dosyasında etkilidir. Çatı Peyzajı (Dachlandschaft) ise bir çatı düzlemine yapılan ilişkisel (asosiatif) bağlantıdır ve Düzlem Yöneticisi (Ebenenmanager) aracılığıyla tek seferde farklı katlara dağıtılabilir. Avantajı: çatı düzlemlerini çizim dosyalarına tek tek kopyalamaktan kurtulur, orijinal çatı düzlemini değiştirdiğinizde değişikliği tek adımda tüm çatı peyzajlarına aktarabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "1. adım, çatı düzlemi oluşturma: Yapı strüktürünüzde yalnızca çatı düzlemini içerecek bir çizim dosyası açın (örneğin 'Orijinal Çatı Düzlemi' adıyla) ve onu BWS'nin üst düzey bir alanına yerleştirin. Çatı düzlemini, gerekli çatı pencereleri/güvercinlikler dahil, her zamanki gibi oluşturun."
+      },
+      {
+        "type": "text",
+        "text": "2. adım, çatı düzleminden çatı peyzajı: BWS'den Düzlem Yöneticisi'ne geçin, katları yansıtan düzlem modelini oluşturun. Çatı peyzajına ihtiyaç duyan alt katın adına sağ tıklayıp Çatı peyzajı ekle (Dachlandschaft einfügen) seçin ve çatı düzlemini oluşturduğunuz çizim dosyasını gösterin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/9135_0EM7U000001TdHy_19132621.png",
+        "caption": "Düzlem Yöneticisi'nde ilgili kata Çatı peyzajı ekle (Dachlandschaft einfügen) komutu."
+      },
+      {
+        "type": "text",
+        "text": "Açılan iletişim kutusu bu akışın merkezidir ve üç seçenek sunar. Seçenek 1: çatı düzlemi geometrisi değiştirilmeden devralınır. Seçenek 2: geometri devralınır ancak alt kenar, çatı peyzajını oluşturduğunuz katın alt kotundan kesilir. Seçenek 3: geometri devralınır ve kot konumu tümüyle o katın alt kenarına oturacak şekilde kaydırılır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/9135_0EM7U000001TdI0_be37aa50.png",
+        "caption": "Çatı peyzajı oluşturulurken geometri ve kot davranışını belirleyen üç seçenek."
+      },
+      {
+        "type": "text",
+        "text": "Örnekte önce alt kat için Seçenek 1'i seçin; çatı peyzajı oluşur ve kendi sembolü ile tanınır. Ardından üst kat için aynı akışla bu kez Seçenek 2'yi seçin. Böylece Düzlem Yöneticisi'nde alt ve üst kat için çatı peyzajlarını tek bir orijinal çatı düzleminden üretmiş olursunuz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/9135_0EM7U000001TdI6_d4a66c41.png",
+        "caption": "Düzlem Yöneticisi'nde alt ve üst kat için oluşturulan çatı peyzajları."
+      },
+      {
+        "type": "text",
+        "text": "3. adım, çatı peyzajını katlara atama: Düzlem Yöneticisi'nden çıkın, BWS'de ilgili strüktür düğümüne sağ tıklayıp Düzlemleri ata (Ebenen zuweisen) seçin ve istediğiniz çatı peyzajını işaretleyin; katta bulunan diğer onay işaretleri korunur. Atamadan sonra strüktür düğümünde çatı peyzajı sembolü görünür ve geometri o düğümdeki tüm çizim dosyalarında geçerli olur. Dilerseniz atamayı tüm düğüm yerine yalnızca seçili çizim dosyalarına da yapabilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/9135_0EM7U000001TdIA_99088cc9.png",
+        "caption": "Atamadan sonra BWS strüktür düğümünde görünen çatı peyzajı sembolü."
+      },
+      {
+        "type": "text",
+        "text": "Not: Bir çizim dosyasına daha önce kendine özel bir düzlem ataması yapıldıysa, o dosya üst düğümün yükseklik atamasını kalıcı olarak kaybeder; duvarlarınız çatı peyzajına uymuyorsa çizim dosyasına sağ tıklayıp Düzlemleri ata ile çatı peyzajını ayrıca ekleyin. Çatı peyzajında geometri değişikliği yapmak için önce orijinal çatı düzlemini değiştirin, sonra Düzlem Yöneticisi'nde çatı peyzajı oluşturma işlemini tekrarlayın; böylece atanmış çatı peyzajları güncellenir."
       }
     ]
   }

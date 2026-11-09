@@ -199,6 +199,35 @@
         "type": "image",
         "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiZ_7f5d3c20.png",
         "caption": "Tamamlanmış ara döşeme."
+      },
+      {
+        "type": "heading",
+        "text": "Döşeme nitelikleri - metraj ve etiketleme referansı"
+      },
+      {
+        "type": "text",
+        "text": "Döşemelerin etiketlenmesi ve metraj değerlendirmesi için döşemenin kendi nitelikleri doğrudan kullanılabilir. Boşlukların (delik, girinti) nitelikleri ise CHILD() çağrısıyla alt objeden okunur."
+      },
+      {
+        "type": "text",
+        "text": "Geometrik nitelikler: Üst kot (OK, ID 98/113) ve Alt kot (UK, ID 97/112) döşemede 0,00 üzerindeki ortalama kotları verir. Yükseklik (Höhe, ID 222) ortalama eleman yüksekliğini, Mutlak yükseklik (Höhe_absolut, ID 224) alt kottan en yüksek noktaya kadarki maksimumu verir. Uzunluk ve Kalınlık nitelikleri ilk çizilen kenardan türediği için döşemede tarafsız metrajda kullanılamaz; çünkü döşemenin kiriş veya çok katmanlı duvar gibi önceden tanımlı bir ekseni yoktur."
+      },
+      {
+        "type": "text",
+        "text": "Alan nitelikleri: Taban alanı (Grundfläche, ID 224) yatay izdüşümü boşluklar dolu sayılarak verir. Zemin alanı (Bodenfläche, ID 293) ve Tavan/döşeme alanı (Deckenfläche, ID 294) boşluklar düşülmüş gerçek alt/üst yüzeyi verir ve eleman formunu izler. Yan alan (Seitenfläche, ID 295) yanal kalıp yüzeyidir. Kalıp alanı (Schalungsfläche, ID 78) komşu duvar ve kolonlar düşüldükten sonra kalan alandır; bir imalat kalemi (Gewerk) tanımlıysa alan VOB kurallarına göre boşlukları dikkate alır."
+      },
+      {
+        "type": "text",
+        "text": "Hacim ve miktar: Hacim (Volumen, ID 223) brüt hacimdir, hiçbir boşluk düşülmez. Net hacim (Netto-Volumen, ID 226) boşluklar düşülmüş halidir; Minha hacmi (Abzugsvolumen, ID 227) boşlukların toplamıdır. Miktar (Menge, ID 201), Net miktar (Nettomenge, ID 99) ve VOB_Miktarı (VOB_Menge, ID 100), ayarlanan birim ve imalat kalemine göre hacim (m3), alan (m2), adet (St) veya uzunluk (m) yazdırır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9164_0EM7U000001Td7O_b5050b7a.png",
+        "caption": "Döşeme niteliklerinin genel görünümü ve kısmi alanların ondalık basamak ayarı."
+      },
+      {
+        "type": "text",
+        "text": "Boşluk bilgileri CHILD(...): Boşluklar döşemenin alt öğesidir. Bir duvar katmanındaki boşluk sayısı gibi bilgileri okumak için CHILD() ile alt objeye bakılır. Bu yön çoğu kez birden fazla obje içerdiğinden tekil (benzersiz) değildir."
       }
     ]
   }

@@ -290,6 +290,126 @@
       {
         "type": "text",
         "text": "Peyzajı doğru düğüme atadığınız halde duvarlar uymuyorsa, o çizim dosyasına daha önce kendine özel bir düzlem ataması yapılmış olabilir. Bir çizim dosyasına özel yükseklik ataması yaptığınız anda, dosya üst düğümün atamasını kalıcı olarak kaybeder. Çözüm: çizim dosyasına sağ tıklayıp Düzlemleri ata ile uygun çatı peyzajını da ekleyin. Geometriyi değiştirmek isterseniz orijinal çatı düzlemini düzeltip peyzaj üretimini yineleyin; atanmış peyzajlar güncellenir."
+      },
+      {
+        "type": "heading",
+        "text": "Çatı penceresi (güvercinlik) yan ve ön duvarlarını oluşturma"
+      },
+      {
+        "type": "text",
+        "text": "Başlangıçta çatı pencereli bir çatı düzlemi hazırdır. Daha sonra yan yüzeylerle çalışacaksanız şuna dikkat edin: çatı penceresi düzlemi net iç ölçüye karşılık geliyorsa mahal yan yüzeyleri duvarların iç tarafına; dış ölçüye karşılık geliyorsa yalnızca kat yan yüzeyleri dış tarafa yerleşir. Dış ölçü varyantında duvarların üst kenarları standart üst kota (yükseklik diyaloğunda soldan ikinci buton) bağlanabildiği için kılavuz basitleşir ve ön duvarı ikiye ayırma gereği ortadan kalkar."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10878_0EM7U000001TeAp_659cfdf6.png",
+        "caption": "Başlangıç: çatı pencereli çatı düzlemi."
+      },
+      {
+        "type": "text",
+        "text": "Ön (alın) duvar: çatı penceresi ön duvarını, her biri mahya çizgisinden başlayan iki parça halinde oluşturun; duvar uzunluğunda iki yan duvarın kalınlığını hesaba katın. Yükseklik diyaloğunda Üst Kenar (Oberkante) için soldan beşinci butona (mevcut elemandan değer devralma) tıklayın ve \"Mevcut Yapı Elemanı Üst Kotu (Best. Bauteil OK)\" sorgusunu ilgili çatı penceresi tarafının düzlem çiftine tıklayarak onaylayın. Böylece üst kenar ilgili eğim tarafını referans alır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10878_0EM7U000001TeAq_a9e141fd.png",
+        "caption": "Ön duvar yükseklik diyaloğu düzlem referansları."
+      },
+      {
+        "type": "text",
+        "text": "İkinci taraf için aynı işlemi uygulayın. Duvarın Alt Kenarını (Unterkante) gerekli mesafeyle alt düzleme bağlayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10878_0EM7U000001TeAr_9de5fa4e.png",
+        "caption": "Düzlem çiftinin seçilmesiyle mevcut üst kot devralınır."
+      },
+      {
+        "type": "text",
+        "text": "Yan duvarlar: her biri için yükseklik diyaloğunda Üst Kenar için yine soldan beşinci butona tıklayıp \"Best. Bauteil OK\" sorgusunu çatı penceresi tarafının düzlem çiftine tıklayarak onaylayın; üst kenar çatı penceresi düzleminin üst kenarını referans alır. Alt Kenar için yine soldan beşinci butonla ana çatının düzlem çiftini seçin; alt kenar ana çatı düzleminin üst kenarını referans alır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10878_0EM7U000001TeAv_2c590045.png",
+        "caption": "Yan duvar yükseklik diyaloğu düzlem referansları."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10878_0EM7U000001TeAw_c0d3101a.png",
+        "caption": "Yan duvar üst kenarı çatı penceresi düzlemine bağlanır."
+      },
+      {
+        "type": "text",
+        "text": "Taşan duvar parçalarını Modifikasyon (Ändern) > Mimari > Temel: Duvarlar, Boşluklar, Yapı Elemanları > Çizgisel Yapı Elemanını Çizgiye Uzat/Kısalt (Linienbauteil an Linie) ile çatı penceresine uyarlayın. Çatı örtüsü (Dachhaut) için ana çatıda Giriş Tipi 2'yi (Eingabetyp 2), çatı penceresi çatısında Giriş Tipi 3'ü (Eingabetyp 3) kullanın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10878_0EM7U000001TeAy_3f422d4d.png",
+        "caption": "Taşan duvar parçalarının çatı penceresine uyarlanması."
+      },
+      {
+        "type": "heading",
+        "text": "Çatı katı için detaylı kat planı gösterimi (mertek düzeni)"
+      },
+      {
+        "type": "text",
+        "text": "Çatı katında mertekleri, çatı üst görünüşünü ve benzerlerini içeren detaylı kat planı gösterimi birden fazla adım gerektirir. Nesneler üç çizim dosyasına dağıtılır: Çizim Dosyası 120 (220) çatı katı (dış/iç duvarlar, mahaller, kat, mertek düzlemi yalıtımı, görünüm filtresi düzlemi); Çizim Dosyası 121 (221) çatı kaplaması ve mertek düzeni (kalkan duvarlar, saçak duvarları, çatı kaplaması, mertekler ve aşıklar); Çizim Dosyası 122 (222) kat planı gösterimi için kesitler."
+      },
+      {
+        "type": "text",
+        "text": "Duvar ve kesit detayları: kalkan ve iç duvarlar mesafesiz üst düzleme bağlıdır. Saçak duvarlarına saçak aşığı (Pfette) alt kotuna eşit mutlak yükseklik verilir. Katın üst kenarı yaklaşık 27 cm dik mesafeyle üst düzleme bağlanır; böylece DIN 277'ye göre brüt hacim doğru hesaplanır. Mertek düzleminde 20 cm kalınlıkta ek çatı kaplaması (Dachhaut) kullanılır. Mertekler 20 cm yüksekliğe, damlalık aşıkları 14/14, mahya aşığı 14/24 kesite sahiptir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11353_0EM7U000001TdKP_5acb1b26.png",
+        "caption": "Saçak ve kalkan duvar birleşimi."
+      },
+      {
+        "type": "text",
+        "text": "Adım 1 - çatı üst görünüşlü yatay kesit: Çizim Dosyası 222 etkin. Kesit Oluştur (Schnitt generieren) ile üstten (oben) basit yatay kesit; üst kenar kesit yüksekliğinde (örn. 4,45), alt kenar saçağın altında (örn. 2,00). Geometriyi kat planında belirtip kesiti yerleştirin. Ayarlar: kullanıcı tanımlı katman, yüzeylerden yüzey elemanları etkin, görünüş kenarları ince sürekli, gizli kenarlar kesikli, kesit kenarları kalın (örn. 0,35)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11353_0EM7U000001TdKR_ce86afbf.png",
+        "caption": "Yatay kesit giriş değerleri."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11353_0EM7U000001TdKT_59f4709c.png",
+        "caption": "Adım 1 sonucu: çatı üst görünüşlü kesit."
+      },
+      {
+        "type": "text",
+        "text": "Adım 2 - görünüm filtresi düzlemi (Sichtfilterebene): önce yatay kesitte otomatik güncellemeyi geçici kapatın. Çizim Dosyası 220 etkin. Görünüm filtresi düzleminin sınırlarını, yatay kesitin noktalarından yararlanarak kat planı formunu dönerek girin; ardından yatay kesiti tekrar otomatik güncellemeye alın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11353_0EM7U000001TdKU_60fe9e8a.png",
+        "caption": "Görünüm filtresi düzleminin kat planı formu."
+      },
+      {
+        "type": "text",
+        "text": "Adım 3 - kesit düzleminin üzerindeki mertekler: Çizim Dosyası 222 etkinken alttan (unten) basit yatay kesit oluşturun; üst kenar mahyanın üzerinde (örn. 10,00), alt kenar kesit yüksekliğinde (örn. 4,45). Ayarlarda yalnızca mertekler katmanı, görünüş kenarları ince kesikli, kesit kenarları kalın değil. Ahşap elemanlar mimari elemanlarla otomatik kesişmediğinden gerekirse Mimari Yapı Elemanlarını Çelik, Ahşap Yapı Elemanlarıyla Kesiştir fonksiyonunu uygulayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11353_0EM7U000001TdKW_48f79208.png",
+        "caption": "Kesit düzleminin üzerindeki merteklerin noktalı gösterimi."
+      },
+      {
+        "type": "text",
+        "text": "Sonuç en iyi pafta birleştirmede (Planzusammenstellung) gösterilir; yazdırılamayan çizgiler gizlenir ve çizim dosyalarının sıralaması tam kontrol edilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11353_0EM7U000001TdKX_19010b0b.png",
+        "caption": "Pafta birleştirmedeki hazır sonuç."
+      },
+      {
+        "type": "heading",
+        "text": "Profil yapı elemanları eklentisi: trapez saclar ve çatı panelleri"
+      },
+      {
+        "type": "text",
+        "text": "Add-On Profilbauteile (Profil Yapı Elemanları Eklentisi) ile trapez saclar ve paneller, özellikle çatı panelleri yerleştirilir. Thierry Metzler'in eğitim videosunda profil sacların seçimi, eğimin belirlenmesi ve boşlukların eklenmesi gösterilir; ayrıca elemanların düzenlenmesi ve farklı eğimlere sahip çatı panellerinin oluşturulması uygulamalı anlatılır. Son olarak elemanların metrajında niteliklerin önemi vurgulanır."
       }
     ]
   }

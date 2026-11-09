@@ -119,5 +119,62 @@
         "/akademi/temel-modelleme/9163_0EM7U000001Td8l_46000e65.png"
       ]
     }
-  ]
+  ],
+  "deepDive": {
+    "title": "Derinlemesine",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Nitelik Referansi: Kolon"
+      },
+      {
+        "type": "text",
+        "text": "Kolonun kendi nitelikleri dogrudan etiketleme ve metraj icin kullanilabilir; bagli bosluklarin ve bitisik elemanlarin nitelikleri formullerle kismen elde edilir. `Uzunluk (Lange)` ilk tanimli kenar yonundeki en buyuk uzanimi, `Kalinlik (Dicke)` bu kenara dik ortalama uzanimi, `Yukseklik (Hohe)` ortalama yuksekligi verir; dairesel kolonlarda `Uzunluk` ve `Kalinlik` icin deger uretilmez. `Yaricap (Radius)` yalnizca dairesel kolonda verilir, aksi halde 0.00'dir."
+      },
+      {
+        "type": "text",
+        "text": "Alan nitelikleri kolonun kabugunu farkli tanimlar: `Taban Alani (Grundflache)` bosluklari minha etmeden konstruksiyon alanini, `Zemin Alani (Bodenflache)` zemine inen bosluklari dusurerek alt yuzeyi, `Tavan Alani (Deckenflache)` uste ulasan bosluklari dusurerek ust yuzeyi, `Yan Yuzey Alani (Seitenflache)` kalip alanini verir. `Minha Hacmi (Abzugsvolumen)` tum bosluklarin toplamini (negatif), `Net Hacim (Netto-Volumen)` bosluklar dusulmus hacmi, `Hacim (Volumen)` brut hacmi verir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11400_0EM7U000001Td8N_b5050b7a.png",
+        "caption": "Kolonun geometrik ve metraj niteliklerinin ekranda listelenmesi."
+      },
+      {
+        "type": "text",
+        "text": "Nemetschek Profil Katalogu'ndan (Nemetschek Profilkatalog) profil devralinan kolonlarda `Profil Adi (Profilname)`, `Yanal Yuzey Alani/mtul (Mantelflache/lfm)` ve `Kesit Alani (Querschnittsflache)` gibi ek nitelikler otomatik eklenir. Ic/dis kose sayiminda sinir aci 180 - 360 / 19 = 161,0526316 derece olarak hesaplanir; cokgen kolonda en cok 19 kose taninir, fazlasi dairesel sayilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11400_0EM7U000001Td8T_ff975fb9.png",
+        "caption": "Nemetschek profilli kolonlarda nitelik sonuc ornekleri."
+      },
+      {
+        "type": "heading",
+        "text": "Nitelik Referansi: Sarkik Kiris (Unterzug)"
+      },
+      {
+        "type": "text",
+        "text": "Sarkik kirisin kendi nitelikleri dogrudan metraj ve etiketleme icin kullanilabilir. Sarkik kirislere pencere, kapi veya Fransiz balkon kapisi (Fenstertur) yerlestirilemez. `Uzunluk (Lange)` ve `Mutlak_Uzunluk (Lange_absolut)` aks yonunde, `Yukseklik (Hohe)` Z yonunde olculur; `Kalinlik (Dicke)` kirisin genisligini verir. `Yaricap (Radius)` duvardan farkli olarak dairesel kiriste bile degerlendirilmez, her zaman 0.00'dir. `Minha Hacmi (Abzugsvolumen)` sarkik kiriste kullanilmaz; bosluk farki, `Net Hacim (Netto-Volumen)` ile brut `Hacim (Volumen)` arasindan hesaplanir. Alt/ust objelere `PARENT()` ve `CHILD()` formulleriyle erisilir (orn. `CHILD(@215@)`)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9163_0EM7U000001Td8p_b5050b7a.png",
+        "caption": "Sarkik kirisin geometrik ve metraj niteliklerinin genel gorunumu."
+      },
+      {
+        "type": "heading",
+        "text": "Kolon Icin Etiket Stili (Beschriftungsbild)"
+      },
+      {
+        "type": "text",
+        "text": "Kolon etiketlemede, kolonun dogrudan nitelikleri bir etiket stili (Beschriftungsbild) veya obje etiketi ile cikti olarak verilir. Toplam duvara veya ust objeye `PARENT(@XYZ@)` ile erisilir (orn. `PARENT(@220@)` toplam kalinlik, `PARENT(@107@)` daire yaricapi); bu yon tekil ve net deger uretir. Alt objelere (bosluklar) `CHILD()` ile bakilir: `CHILD(@215@)` dogrudan bagli alt obje sayisini verir (yapi elemani aksi dahil, en az 1,00); `CHILD(_IF_(@OBJ@=22)@215@_ELSE_0)` ise belirli bir obje turunun adedini verir. `Zemin Alani (Bodenflache)`, `Tavan Alani`, `Yan Yuzey Alani`, `Miktar (Menge)`, `Net Miktar (Nettomenge)` ve `VOB_...` nitelikleri, Secenekler - Izlenebilir Metraj Hesaplari altinda ayarlanan ondalik basamak sayisini gosterir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11311_0EM7U000001TdDa_b5050b7a.png",
+        "caption": "Kolon etiket stilinde kullanilabilen nitelikler ve formul referanslari."
+      }
+    ]
+  }
 }

@@ -244,6 +244,135 @@
         "type": "image",
         "src": "/akademi/lejant/11050_0EM7U000001TdmY_8abccb12.png",
         "caption": "En üst katmanı bulan toplama formülünün girilmesi."
+      },
+      {
+        "type": "heading",
+        "text": "Lejant / Etiket Stili Yedekleme ve Geri Yükleme"
+      },
+      {
+        "type": "text",
+        "text": "Bir lejant her zaman zle00x.deu lejant dosyalarından ve ek bir zle000.deu yönetim dosyasından oluşur. Pafta lejantları (antetler) her zaman 7 veya 8 numaralı dosyada bulunmalıdır (zle007.deu, zle008.deu). Bir etiket stili ise zdo00x.deu dosyalarından ve zdo000.deu yönetim dosyasından oluşur."
+      },
+      {
+        "type": "text",
+        "text": "Yedekleme - önce bir harici yol tanımlayın: Dosya (Datei) -> ProjectPilot'u açın, 'Harici Yol (Externer Pfad)' düğümüne sağ tıklayıp Harici yol seç (Externen Pfad auswählen) ile bir yedekleme klasörü ayarlayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10888_0EM7U000001Te3a_a3b840c5.png",
+        "caption": "ProjectPilot'ta harici yolu (yedekleme klasörünü) tanımlama."
+      },
+      {
+        "type": "text",
+        "text": "ProjectPilot'u kapatın; Oluştur (Erzeugen) -> Ek Modüller -> Şablonlar: Raporlar, Lejantlar, Etiketler -> Etiket Stillerini, Lejantları Yönet yolunu açın. Sol tarafta kaynak dizini (örn. Büro) ve klasörü seçip kaydedilecek lejantları işaretleyin, Kopyala (Kopieren) deyin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10888_0EM7U000001Te3b_f6366dcc.png",
+        "caption": "Kaynak dizinden kaydedilecek lejantları işaretleyip Kopyala."
+      },
+      {
+        "type": "text",
+        "text": "Kayıt konumu olarak Harici Yol'u seçin, dosya numarasını (örn. 7) seçin, numaraları işaretleyip Çalıştır (Ausführen) deyin. Harici klasörde zle00x.deu (veya zle007.deu) ve zle000.deu dosyaları oluşur."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10888_0EM7U000001TeD1_8ee7091b.png",
+        "caption": "Hedef olarak Harici Yol ve dosya numarasını seçip Çalıştır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10888_0EM7U000001TeD2_1c01ef32.png",
+        "caption": "Harici klasörde oluşan zle00x.deu lejant dosyası ve zle000.deu yönetim dosyası."
+      },
+      {
+        "type": "text",
+        "text": "Geri yükleme (içe aktarma) - harici yolu, lejantınızın bulunduğu klasöre ayarlayın. Yine Etiket Stillerini, Lejantları Yönet'i açın; bu kez kaynak dizin olarak Harici Yol'u, klasörü ve geri yüklenecek lejantları seçip Kopyala deyin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10888_0EM7U000001TeD5_7fcdb21f.png",
+        "caption": "Geri yüklemede kaynak Harici Yol; geri yüklenecek lejantları işaretleyip Kopyala."
+      },
+      {
+        "type": "text",
+        "text": "Son olarak geri yükleme konumunu (örn. Büro), dosya numarasını (pafta lejantları için 7) ve numaraları seçip Çalıştır deyin. Lejantlar seçtiğiniz dizinde hazır olur. Pafta lejantları mutlaka 7 veya 8 numaralı dosyada bulunmalıdır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10888_0EM7U000001TeD6_14f716d6.png",
+        "caption": "Geri yükleme konumu ve dosya numarasını seçip Çalıştır."
+      },
+      {
+        "type": "heading",
+        "text": "Taban Alanı Lejantını DIN277'ye Uyarlamak"
+      },
+      {
+        "type": "text",
+        "text": "Standart lejantlar, tıpkı raporlar gibi doğrudan değiştirilemez; önce büro standardına veya bir projeye kopyalanmalı, sonra orada uyarlanmalıdır. Örnek olarak Mahal_Taban Alanları (Raum_Grundflächen) lejantı (Standart dizini, 1 Mimari dosyası) kullanılacaktır."
+      },
+      {
+        "type": "text",
+        "text": "Adım 1 - Kopyalama: Etiket Stillerini, Lejantları Yönet fonksiyonunu açın, Lejantlar'ı onaylayın. Kaynak dizin Standart -> Dosya Mimari -> Lejant 3 Raum_Grundflächen seçip Kopyala; hedef dizini (proje) -> Dosya 1 -> Lejant 3 seçip Çalıştır (Ausführen)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11051_0EM7U000001Tdn3_d237e54b.png",
+        "caption": "Kaynak Standart dizininden 3 Raum_Grundflächen lejantını seçip Kopyala."
+      },
+      {
+        "type": "text",
+        "text": "Adım 2 - Açma: Lejantı Modifiye Et (Legenden modifizieren) fonksiyonuyla açın. Bu örnekte iki çizim penceresi görünür: Pencere 1 filtreli ana lejant başlığı, Pencere 2 bir satır ve bir toplam içeren alt lejanttır (alt liste)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11051_0EM7U000001Tdn8_6134ce67.png",
+        "caption": "Lejant şablonu iki pencere halinde açılır: ana liste ve alt liste."
+      },
+      {
+        "type": "text",
+        "text": "Adım 3 - Yapı: Ana lejantta mahaller için bir filtre (@OBJ@=61) tanımlıdır. Sarı alan liste başlığı metni, yeşil alan ana liste satırıdır (burada PARENT(@507@) ile mahal grubunun adı), kırmızı alan alt liste satırı, mor alan alt liste toplamıdır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11051_0EM7U000001Tdn9_c9dae112.png",
+        "caption": "Renklerle lejant yapısı: başlık, ana satır, alt satır ve toplam."
+      },
+      {
+        "type": "text",
+        "text": "Adım 4 - Başlık ve filtre: Metin Modifiye Et (Text modifizieren) ile statik 'Grundfläche' metnini 'Netto-Raumflächen DIN277' ile değiştirin. Ardından Select (Seç) ile filtreye ..&Flächenart_DIN277=\"N\" kriterini ekleyin; böylece yalnızca net alan oluşturan mahaller (galeri boşlukları ve boş hacimler hariç) listelenir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11051_0EM7U000001TdnC_5caa2bb8.png",
+        "caption": "Metin Modifiye Et ile başlığı Netto-Raumflächen DIN277 olarak değiştirme."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11051_0EM7U000001TdnF_469d40ea.png",
+        "caption": "Select ile filtreye &Flächenart_DIN277=\"N\" kriterini ekleme."
+      },
+      {
+        "type": "text",
+        "text": "Adım 5 - İçeriği değiştirme: Alt listeyi öne getirin, Bilgi (Info) ile Hücre/Sütun 5'e (Alan) tıklayın, büyük butondan Mimari Miktarlar grubunda Grundfläche_DIN277 niteliğini seçin. Toplam hücresi (SUMME(SPALTE5)) otomatik olarak doğru kalır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11051_0EM7U000001TdnH_ca59d02b.png",
+        "caption": "Hücre 5 niteliğini Grundfläche_DIN277 olarak değiştirme."
+      },
+      {
+        "type": "text",
+        "text": "Adım 6 - Satıra bilgi ekleme: Karakter genişliğini (Laufweite) 2.2'den 1,6'ya düşürüp Fonksiyon hücresini sola kaydırarak yer açın. Hü-Ekle (Zelle einfügen) ile Satır tipinde bir Nitelik hücresi ekleyin ve DIN 277, Konut Alanı BauNVO grubundan Nutzungsart_DIN277 niteliğini seçin; metin yüksekliğini 2.200, biçimi A5 yapın."
+      },
+      {
+        "type": "text",
+        "text": "Adım 7 - Kaydetme: ESC ile Lejantı Modifiye Et fonksiyonundan çıkıp Kaydet (speichern) deyin. Değişiklikler seçili lejantın üzerine yazılır ve lejant projede kullanıma hazır olur."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11051_0EM7U000001TdnN_fbdfeac9.png",
+        "caption": "Sonuç: kullanım türü bilgisi eklenmiş ve ince yapı yüzeyleri hesaba katıldığı için biraz küçülmüş DIN277 alanları."
       }
     ]
   }

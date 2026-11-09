@@ -125,5 +125,93 @@
         "/akademi/temel-modelleme/8645_0EMVi000002RAbd_2f9fdf11.png"
       ]
     }
-  ]
+  ],
+  "deepDive": {
+    "title": "Derinlemesine",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Bimplus'ta Doğru Proje Başlangıcı"
+      },
+      {
+        "type": "text",
+        "text": "Bimplus'ta çalışmaya başlamadan önce hesabınızla oturum açarsınız. Hesabınızın **Ekip Sahibi (Teaminhaber)** veya **Ekip Yöneticisi (Teamadministrator)** rolüne sahip olması gerekir; bu roller olmadan proje ve model ayarlarını yapamazsınız."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8605_0EMVi00000F0rF1_35ceeb6d.png",
+        "caption": "Bimplus oturum açma ekranı."
+      },
+      {
+        "type": "text",
+        "text": "Sıfır noktasını (Nullpunkt) nasıl çalışacağınıza göre belirlersiniz. Ülke koordinatlarında coğrafi referanslı çalışacaksanız, Allplan'daki proje sıfır noktasını kullanın. Yalnızca Bimplus ile çalışıyor ve modelleri başka kaynaklardan alıyorsanız, modelin yakınında bir nokta seçin. BIM projelerinde bu sıfır noktası, BIM Uygulama Planı'nda (BEP) tanımlı olmalıdır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8605_0EMVi00000F0tn3_9cab8fe8.png",
+        "caption": "Proje sıfır noktasının belirlenmesi."
+      },
+      {
+        "type": "text",
+        "text": "Bimplus'ta Offset'i (sıfır noktası kaydırması) ayarlamayı, modeli ilk kez yüklemeden (Upload) önce yapın. İlk yüklemeden sonra yapılan değişiklikler koordinat tutarlılığını bozabileceğinden, bu adımı en baştan doğru kurmanız önemlidir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8605_0EMVi00000F0tof_fe8045cd.png",
+        "caption": "Bimplus'ta Offset (sıfır noktası) ayarı."
+      },
+      {
+        "type": "heading",
+        "text": "IFC Dışa Aktarımında Nitelik Eşleme (Attribute-Mapping)"
+      },
+      {
+        "type": "text",
+        "text": "Amaç, IFC verisini dışa aktarırken niteliklerin istenen bir Özellik Seti (Propertyset, Pset) içine eşlenmesi (mappen) ve gerekirse yeniden adlandırılmasıdır. **Dosya (Datei) -> Dışa Aktar (Exportieren) -> IFC Verilerini Dışa Aktar (IFC-Daten exportieren)** komutunu seçin. İpucu: komuttan önce çizim dosyalarını seçerseniz, bunlar listede hazır seçili gelir. Ardından **Seçenekler (Optionen)** öğesini açın."
+      },
+      {
+        "type": "text",
+        "text": "**Değişim Profilleri (Austauschprofile)** sekmesinde çeşitli hazır dışa aktarma favorileri bulunur."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8645_0EMVi00000F0rYL_c118a4ef.png",
+        "caption": "Değişim Profilleri sekmesindeki hazır dışa aktarma favorileri."
+      },
+      {
+        "type": "text",
+        "text": "Aşağıdaki ayarlar önerilir. **Nitelik Eşleme (Attribute-Mapping)** bölümünde, **Yeni (Neu)** ile yeni bir eşleme dosyası (Nitelik Eşleme, Attributzuordnung) oluşturup `.cfg` olarak kaydeder, **Ara (Suchen)** ile mevcut bir dosyayı yükler, **Düzenle (Bearbeiten)** ile mevcut bir dosyayı uyarlarsınız."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8645_0EMVi000002R9xL_cc25b108.png",
+        "caption": "Önerilen dışa aktarma ayarları."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8645_0EMVi000002R9xN_c8fbe5ef.png",
+        "caption": "Nitelik Eşleme (Attribute-Mapping) ekranı."
+      },
+      {
+        "type": "text",
+        "text": "Eşleme ekranında şunları yaparsınız: (1) yeni nitelik satırı ekleme; (2) eşlenecek niteliği, nitelik maskesi üzerinden veya doğrudan metin olarak atama (adlandırma birebir aynı olmalıdır); (3) istenen Pset adını girme; (4) IFC içindeki nitelik adını girme (IFC'de Allplan'dakinden farklı adlandırılabilir); (5) niteliğin IFC biçimini girme; (6) atamayı belirli bir IFC sınıfına özel yapma."
+      },
+      {
+        "type": "text",
+        "text": "Birimli nitelikleri (metrajları) dışa aktarmak için \"Ifc Property Type\" (niteliğin veri tipi) değerinin doğru belirtilmesi önemlidir. Uzunluklar için **IfcLengthMeasure**, alanlar için **IfcAreaMeasure**, hacimler için **IfcVolumeMeasure** kullanırsanız veriler m, m² ve m³ cinsinden aktarılır. Görüntüleyicide (Viewer) gösterilen birim, görüntüleyicinin ayarına bağlıdır; orada birim mm seçiliyse değerler milimetreye çevrilerek gösterilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8645_0EM670000075i7H_b048d9d1.png",
+        "caption": "IFC dosyasında doğru \"Ifc Property Type\" kaydı örneği."
+      },
+      {
+        "type": "heading",
+        "text": "Nitelik Setleri (Attribute Sets) ve IFC Bağlantısı"
+      },
+      {
+        "type": "text",
+        "text": "Allplan 2024 ile gelen nitelik setleri (Attribute sets), belirli nitelikleri bir arada tanımlamanıza ve bunları IFC ile ilişkilendirmenize olanak tanır. Böylece dışa aktarımda hangi niteliklerin hangi IFC yapısına bağlanacağını önceden belirleyebilirsiniz."
+      }
+    ]
+  }
 }

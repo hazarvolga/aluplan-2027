@@ -221,6 +221,28 @@
         "type": "image",
         "src": "/akademi/arazi-modelleme/11198_0EM7U000001TdYT_a9e99019.png",
         "caption": "Mahal elemanı: Kullanım Türü ve Alan Türü DIN277 ayarları."
+      },
+      {
+        "type": "heading",
+        "text": "Çatı ve Güvercinlik Formları Genel Bakış"
+      },
+      {
+        "type": "text",
+        "text": "Allplan'da çok çeşitli çatı ve çatı penceresi (güvercinlik / Gaube) formu oluşturulabilir. Başlıca çatı formları şunlardır: Beşik Çatı (Satteldach), Tek Eğimli / Sundurma Çatı (Pultdach), Sundurma / Uzatma Çatı (Schleppdach), Testere Dişi / Şed Çatı (Sheddach), Mansard Çatı (Mansarddach), Kırma Çatı (Walmdach), Yarım Kırma Çatı (Krüppelwalmdach), Dairesel Saçaklı Çatı (Dach mit kreisförmiger Traufe), Kubbe Çatı (Kuppeldach), Haç Çatı (Kreuzdach), Elmas / Eşkenar Dörtgen Çatı (Rautendach), Çadır veya Kule Çatı (Zeltdach oder Turmdach), Soğan Kubbe veya Çan Çatı (Zwiebeldach oder Glockendach), Tonoz veya Kemer Çatı (Tonnendach oder Bogendach) ve değişken mahya yüksekliğine sahip Çarpık Yüzeyli Çatı (windschiefes Dach)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/10933_0EMVi00000DRdsE_f82fcdfc.png",
+        "caption": "Allplan'da oluşturulabilen çatı formlarından genel görünüm."
+      },
+      {
+        "type": "text",
+        "text": "Güvercinlik (Gaube) formları arasında Yarasa Gözü / Kemer Güvercinlik (Fledermausgaube), Sundurma Çatılı Güvercinlik (Schleppdachgaube) ve Yamuk / Trapez Güvercinlik (Trapezgaube) bulunur. Ayrıca bir güvercinliğin yan duvarlarını ve ön duvarını oluşturabilir, güvercinliklerde saçak çıkması (Dachüberstand) tanımlayabilirsiniz. Her form için adım adım kılavuzlar Allplan Connect SSS veritabanında ve 'Düzlemler ve Çatı Yüzeyleri' ile 'Yeni Çatı Yüzeyi' web seminerlerinde yer alır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/10933_0EMVi00000DRjb3_f368eed0.png",
+        "caption": "Çatı penceresi (güvercinlik) formlarından genel görünüm."
       }
     ]
   }

@@ -242,6 +242,57 @@
       {
         "type": "text",
         "text": "Asistanlar her çağrıldığında yeniden yüklenir; mevcut verinin üzerine yeni içerik yazarsanız **anında** kullanıma hazır olur. Asistan grubu ise her program başlangıcında okunur. Bu yüzden gruba yeni asistan eklediğinizde, bunların her yerde görünmesi için Allplan'ı **yeniden başlatın**."
+      },
+      {
+        "type": "heading",
+        "text": "Actionbar (Aksiyon Çubuğu) ile İlk Adımlar"
+      },
+      {
+        "type": "text",
+        "text": "Actionbar (Aksiyon Çubuğu); rol, görev ve bağlam odaklı bir çalışma biçimi sunar. Komutlar, Allplan açısından mantıksal olarak bir arada bulunması gereken şekilde gruplanır; böylece uzun fare hareketleri ve bir görev içinde modüller arasında sürekli geçiş ihtiyacı belirgin biçimde azalır. Örneğin **Kaba Yapı (Rohbau)** görevinde gereken tüm komutlar yer alır, modül değiştirmeniz gerekmez. İlk bilgilere **Başlangıç Rehberi (Onboarding)** üzerinden ulaşırsınız: **ALT -> ? -> Onboarding**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8843_0EM7U000001TdOd_c5bf5d8c.png",
+        "caption": "Onboarding üzerinden Actionbar tanıtımı."
+      },
+      {
+        "type": "text",
+        "text": "İlk açılışta tüm görev alanları daraltılmıştır; bir alana çift tıklayınca içerik bölümlere ayrılır. Bir görev alanı genellikle şu mantıkla yapılanır: **Oluştur (Erzeugen) -> Bağlamda Oluştur (Erzeugen im Kontext) -> Bağlamda Değiştir (Modifizieren im Kontext)**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8843_0EM7U000001TdOe_78c90f57.png",
+        "caption": "Görev alanlarının renkle ayrılması."
+      },
+      {
+        "type": "text",
+        "text": "Görev alanları renklerle ayrılır: mavi, o görevin kendi fonksiyonlarını içerir; açık mavi, diğer görevlerden derlenmiş **Hızlı Erişim (Schnellzugriff)** alanıdır; gri ise her yerde kullanılabilen sabit, genel alanlardır. Eksik veya fazla komut varsa, sağ üstteki dişli çark sembolünden **Actionbar Yapılandırıcı (Actionbar-Konfigurator)** aracını açar; görev alanlarını ve fonksiyonları Sürükle-Bırak ile ekleyip çıkarır, kaydettikten sonra **Favori Yükle (Favorit laden)** ile geri çağırırsınız. Daha önce **Biçim (Format)** araç çubuğundan yapılan ayarlar artık **Özellikler (Eigenschaften)** paletinden değiştirilir."
+      },
+      {
+        "type": "heading",
+        "text": "Actionbar Yapılandırmasını Taşıma ve Rolleri Yönetme"
+      },
+      {
+        "type": "text",
+        "text": "Kendi oluşturduğunuz Actionbar şablonları ve rolleri, sürüm güncellemesinden sonra da taşınabilir. Güncelleme sırasında yüklü olan şablon kural olarak korunur ve hem değişken hem sabit alan devralınır. Güncelleme sırasında yüklü değilse, kendi şablonlarınız kullanıcı klasörünüzde (...\\Actionbar) XML biçiminde saklanır ve Actionbar Yapılandırıcı üzerinden içe aktarılır."
+      },
+      {
+        "type": "text",
+        "text": "**Rolleri Yönet (Rollen verwalten)** sekmesinde, **Rolleri İçe Aktar (Rollen importieren)** alanından **Dosya Aç (Datei öffnen)** ile bir yapılandırma dosyasını (*.ACTB veya Actionbar_*.XML) yükler; istediğiniz rolleri Sürükle-Bırak ile **Rollerim (Meine Rollen)** alanına çekersiniz. Bu içe aktarımda yalnızca değişken alanlar dikkate alınır. **Dışa Aktar (Exportieren)** ile seçili rolleri *.ACTB biçiminde kaydedersiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8872_0EM7U000001Td2M_d52e00cb.png",
+        "caption": "Actionbar Yapılandırıcı'da rollerin içe aktarılması."
+      },
+      {
+        "type": "text",
+        "text": "**Yapılandır (Konfigurieren)** sekmesinde görev alanlarını, fonksiyon gruplarını ve tek fonksiyonları Sürükle-Bırak ile önizlemeye ekler veya önizlemeden kaldırırsınız. Sabit (gri) alanlardaki değişiklik tüm rolleri, değişken (mavi) alanlardaki değişiklik ise yalnızca o an seçili rolü etkiler. Değişikliklerinizi **Kaydet (Speichern)** ile güvenceye alın."
+      },
+      {
+        "type": "text",
+        "text": "Önemli: **Rolleri Yönet** sekmesindeki **Yapılandırmayı Sıfırla (Konfiguration zurücksetzen)**, tüm değişiklikleri geri alır ve Allplan'ın fabrika çıkış durumunu geri yükler. Kendi oluşturduğunuz rolleri sonradan tekrar kullanmak istiyorsanız, sıfırlamadan önce bunları **Rollerim** alanında işaretleyip **Dışa Aktar** ile kaydedin."
       }
     ]
   }

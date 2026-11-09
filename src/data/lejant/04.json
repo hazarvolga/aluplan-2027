@@ -210,6 +210,232 @@
       {
         "type": "text",
         "text": "Etiketleme notu: Oturma ve kullanım alanı raporları, Flächenart Wohnfläche ve Flächenart_DIN277 gibi birden çok niteliğin ayarına tepki verir ve içeriği buna göre gösterir. Kendi etiket stilinizi, beklediğiniz değer görünecek şekilde tanımlamanız gerekir; örneğin Flächenart_Wohnfläche niteliği KW içeriğindeyse oturma alanı sütununu gizlemek mantıklıdır."
+      },
+      {
+        "type": "heading",
+        "text": "Sıfırdan Yeni Bir Lejant Oluşturmak (Döşeme Yüzeyi Örneği)"
+      },
+      {
+        "type": "text",
+        "text": "Kendi lejantınızı oluşturmadan önce birkaç hazırlık gerekir. Lejantlar her zaman 1:100 ölçekli çizim dosyalarında oluşturulmalıdır; başka ölçekte metin boyutlarını kontrol etmek zordur. Lejantla gösterilecek birden fazla örnek obje (burada döşeme ince yapılı mahaller) bulunmalı ve gösterilecek veriler önceden planlanmalıdır."
+      },
+      {
+        "type": "text",
+        "text": "Örnek istek: döşeme yüzeylerinin en üst katmanın (kaplamanın) malzemesine göre metrajı. En üst katmanın malzemesi MT_Boden(@508@;0), en üst katmanın VOB alanı ise MT_Boden(@81@;0) ile elde edilir. VOB_Fläche (@81@) her zaman VOB alanını, VOB_Menge (@100@) seçilen hakediş birimine göre miktarı verir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11050_0EM7U000001Tdh6_051353ad.png",
+        "caption": "Lejantın ön çizimi: Başlık (Kopf), Satır (Zeile) ve Toplam (Summe) alanları ayrı ayrı seçilebilir olmalıdır."
+      },
+      {
+        "type": "text",
+        "text": "Adım 1-2: Başlık, Satır ve Toplam alanlarını çizin; sol ve sağ kenar çizgilerini üç parçalı, dolgu alanlarını tek tek oluşturun. Lejantın sabit (statik) metinlerini normal metin olarak yazın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11050_0EM7U000001TdmF_1593f5f6.png",
+        "caption": "Lejantın sabit metinlerini normal metin olarak oluşturma."
+      },
+      {
+        "type": "text",
+        "text": "Adım 3 - Hücreler: Actionbar'da Kullanıcı Objeleri (Benutzerobjekte) -> Raporlar, Lejantlar bölümünden Hücre Tanımla (Zelle definieren) fonksiyonunu kullanın. 1 numaralı hücreye Formül (Formel) butonuyla MT_Boden(@508@;0) girin, biçim A16. 2 numaralı hücreye MT_Boden(@81@;0) girin, biçim F8.2, birim m², sağa dayalı."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11050_0EM7U000001TdmI_8be976c0.png",
+        "caption": "Dinamik araç çubuğunda Formül (Formel) butonuyla hücre formülünü girme."
+      },
+      {
+        "type": "text",
+        "text": "Toplam satırına SUMME(SPALTE2) formüllü bir hücre ekleyin (biçim Hücre 2 ile aynı). Önemli: hücreler kesintisiz numaralandırılmalıdır; boşluk varsa kayıtta hata çıkar. Nr-Mod butonuyla numaraları düzeltebilirsiniz, ancak formüldeki sütun numaraları otomatik güncellenmez."
+      },
+      {
+        "type": "text",
+        "text": "Adım 4 - Lejant Tanımla (Legende definieren): Tip Mimari (Architektur). Select (1) alanına tıklayıp Mimari Elemanlar Filtresi'nde Objekt= (2) -> Bodenfläche (3) seçin; kriter Objekt=Bodenfläche olarak görünür."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11050_0EM7U000001TdmO_6b0f4339.png",
+        "caption": "Select ile filtreyi Objekt=Bodenfläche olarak ayarlama."
+      },
+      {
+        "type": "text",
+        "text": "Başlık (Kopf), Satır (Zeile) ve Toplam (Summe) butonlarıyla ilgili elemanları seçin. Yatay çizgiler satıra değil başlık/altbilgi kenarına aittir. Satır için bir satır aralığı (Zeilenvorschub) gerekir; örnekte 30 ölçülen yükseklikten 3,0 mm giriş çıkar. Sonra Fix ile bir dosya numarasına kaydedin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11050_0EM7U000001TdmP_e32d7c30.png",
+        "caption": "Kopf (başlık) alanına yerleşecek elemanları toplu seçme."
+      },
+      {
+        "type": "text",
+        "text": "Adım 5-6 - Test ve toplama: Lejantı çizime yerleştirin; başlangıçta her döşeme yüzeyi tek tek görünür. Lejant Değiştir (Legende modifizieren) ile Bilgi (Info) -> Hücre 2'ye tıklayın, Tekil sonuçları topla (Einzelergebnisse aufsummieren) seçeneğini açın ve formülü şöyle değiştirin:"
+      },
+      {
+        "type": "text",
+        "text": "_IF_(MT_Boden(@210@;0)=@210@)@81@_ELSE_0"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11050_0EM7U000001TdmX_93bd6a29.png",
+        "caption": "Lejant Değiştir modunda Info ile Hücre 2'yi düzenleme."
+      },
+      {
+        "type": "text",
+        "text": "Formül, döşeme yüzeyinin en üst katman numarasını o an değerlendirilen katman numarasıyla karşılaştırır; eşitse VOB alanını, değilse 0 verir. Böylece toplatmada yalnızca en üst katman sayılır. ESC ile çıkıp Kaydet deyin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11050_0EM7U000001Tdma_fe9b964a.png",
+        "caption": "Son test: toplam, tekil değerlerin toplamıyla aynıdır."
+      },
+      {
+        "type": "heading",
+        "text": "Bir Etiket Stilinde Hangi Nitelikler Kullanılıyor?"
+      },
+      {
+        "type": "text",
+        "text": "Etiketlenmiş veriniz var ama orijinal etiket stilini bulamıyorsanız, ya da bir etiketin neyi değerlendirdiğini ve metrajla aynı değerleri almak için hangi niteliği değiştirmeniz gerektiğini bilmek istiyorsanız, kullanılan nitelikleri doğrudan çizim dosyasından okuyabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "Durum 1 - Bir etiket stilinin içeriğini incelemek: Etiket Stili (Beschriftungsbild) fonksiyonunu çağırın, Giriş Seçenekleri (Eingabeoptionen) altından Oku (Lesen) seçeneğini seçin, incelenecek stili seçip çizim dosyasına yerleştirin. Etiket stiline göre birden fazla folyo (Folie) oluşur; tekil folyoların hangi ölçek/çizim tipiyle kaydedildiği okunamaz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11307_0EM7U000001TdDB_0ed94683.png",
+        "caption": "Giriş Seçenekleri -> Oku (Lesen) ile mevcut bir etiket stilini çizime okutun."
+      },
+      {
+        "type": "text",
+        "text": "Ardından Giriş Seçenekleri -> Modi altından bir metni (örneğin İşlev / Funktion) seçin. Etiket Stili araç çubuğu açılır ve temel ayarları gösterir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11307_0EM7U000001TdDD_11dc365c.png",
+        "caption": "Modi ile incelenecek satırı (burada İşlev / Funktion) seçin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11307_0EM7U000001TdDE_6b6ec24d.png",
+        "caption": "Araç çubuğu: Format (çıktı biçimi, örn. A10 metin, F8.3 sayı, K15.3 kot), Anpass (ölçeğe uyum), DIM (birim) ve Info (nitelik/formül)."
+      },
+      {
+        "type": "text",
+        "text": "Info düğmesi neyin etiketlendiğini açar. Doğrudan bir nitelik tanımlıysa nitelik seçimi, bir formül tanımlıysa formül açılır. Örneğin bir Alan hücresinde şu formül bulunabilir:"
+      },
+      {
+        "type": "text",
+        "text": "_IF_(@233@=3)@93@_ELSE_(_IF_(@264@=1)@197@_ELSE_@197@/@264@)"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11307_0EM7U000001TdDF_abd8da22.png",
+        "caption": "Alan_m² hücresinde koşul formülü; Flächenart_Wohnfläche KW (=3) ise Grundfläche_DIN277, değilse katsayısı çıkarılmış Wohnfläche_Ausbau değeri. Biçim F8.1."
+      },
+      {
+        "type": "text",
+        "text": "Üst nesneye erişim için PARENT() kullanılır. Bir mahal etiket stilinde PARENT(@507@) formülü, mahalin bağlı olduğu mahal grubunun adını (Bezeichnung) döndürür. Biçim A6 olduğundan uzun grup adları kesilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11307_0EM7U000001TdDG_77797bbc.png",
+        "caption": "Grup hücresi: PARENT(@507@) ile üst nesnenin (mahal grubu) adı okunur."
+      },
+      {
+        "type": "text",
+        "text": "Durum 2 - İçeriği bilinmeyen etiketli bir nesne: Standart Etiket kullanıldıysa nesneyi aynı türle yeniden etiketlemeyi deneyip alan adlarından atamayı bulun. Nesne Etiketi veya Etiket Stili kullanıldıysa, Etiket Stili fonksiyonu + Modi + Info ile içeriği Durum 1'deki gibi okuyun."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11307_0EM7U000001TdDM_28e37380.png",
+        "caption": "Nesne Etiketi veya Etiket Stilinde Info düğmesi, kullanılan nitelik ya da formülü açar."
+      },
+      {
+        "type": "heading",
+        "text": "Etiket Stillerinde Biçim Ayarları ve Kontrol Karakterleri"
+      },
+      {
+        "type": "text",
+        "text": "Etiket stillerinde (Beschriftungsbild) normal metne göre yalnızca sınırlı biçimlendirme kullanılabilir. Bir niteliği veya formülü yerleştirirken ya da değiştirirken metin yüksekliği, genişliği, yazı tipi ve sütun açısını ayarlayabilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10641_0EM7U000001TdUV_37baaa34.png",
+        "caption": "Nitelik yerleştirirken metin yüksekliği, genişliği ve yazı tipi ayarları."
+      },
+      {
+        "type": "text",
+        "text": "Nitelik çizim dosyasına yerleştikten sonra Özellikler (Eigenschaften) paleti metinlerdekiyle aynı ayarları sunar: kalem kalınlığı (yalnızca Allplan yazı tiplerinde etkili), çizgi rengi, katman; çerçeve, arka plan dolgusu ve Kalın (Fett) / İtalik (Kursiv) / Altı çizili / Üstü çizili vurguları. Bu yöntem kolaydır ama her zaman niteliğin veya formülün tamamına uygulanır; değere bağlı değişken biçim veremez."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10641_0EM7U000001TdUW_3ec07482.png",
+        "caption": "Özellikler paleti: çerçeve, arka plan ve yazı tipi vurguları."
+      },
+      {
+        "type": "text",
+        "text": "Daha esnek biçimlendirme için formül içinde (örn. A50 biçimi) kontrol karakterleri kullanılır. Örnekler: %B{...%B} kalın, %I{...%I} italik, %U{...%U} altı çizili, %C{109|...%C} metin rengi (0-255). %K0 metni çevreleyen daire, %N0 sekizgen oluşturur. Başlangıç ve bitiş karakteri arasındaki metin biçimlenir."
+      },
+      {
+        "type": "text",
+        "text": "Koşula bağlı renk örneği - 20 m² üzerindeki mahali kırmızı, küçükleri mavi yazmak için:"
+      },
+      {
+        "type": "text",
+        "text": "(_IF_(@93@>20)\"%C{109|\"_ELSE_\"%C{122|\")+@507@+\"%C}\""
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10641_0EM7U000001TdUr_8a5e26d6.png",
+        "caption": "20 m² eşiğine göre kırmızı ve mavi renklenen mahal tanımları."
+      },
+      {
+        "type": "text",
+        "text": "Kademeli renk örneği - metin rengini alana göre 64 ile 79 arası yeşil tonlarında değiştirmek için:"
+      },
+      {
+        "type": "text",
+        "text": "\"%C{\"+(_IF_(@93@<50)(64+(@93@*15/50))_ELSE_\"79\")+\"|\"+@507@+\"%C}\""
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10641_0EM7U000001TdUt_33c72e0a.png",
+        "caption": "Alan büyüklüğüne göre yeşil tonları arasında kademelenen renk."
+      },
+      {
+        "type": "heading",
+        "text": "Kat (Geschoss) Nitelikleri: Metin, Geometri, DIN277 ve BauNVO"
+      },
+      {
+        "type": "text",
+        "text": "Katlar (Geschosse) iki işe yarar: DIN277'ye göre brüt taban alanı ile brüt hacmin ve BauNVO'ya göre taban alanlarının belirlenmesi için bölge tanımlamak; bir de yan yüzeyli cephelerde (örn. dış sıva) standart ince yapı imalatları için taşıyıcı eleman olmak."
+      },
+      {
+        "type": "text",
+        "text": "Metin nitelikleri: Ortscode_Geschossbezeichnung (246, A32, Kat kısa adı - örn. EG, OG), Bezeichnung (507, A32, Ad/Nitelikler; ++ katalogla numara otomatik artırılabilir), Funktion (506, A80), Text1-Text5 (501-505, A80, serbest metin)."
+      },
+      {
+        "type": "text",
+        "text": "Geometri nitelikleri: Länge (220) ve Dicke (221) değer vermez. Länge_absolut (198) ve Dicke_absolut (199) Min-Max kutusunun ölçüleridir. Höhe (222) katın ortalama yüksekliği, Höhe_absolut (204) boştur. Umfang (228) çevre, Grundfläche (224) ve Fläche (229) yatay taban alanı, Bodenfläche (293) zemin, Deckenfläche (294) tavan, Seitenfläche (295) yan yüzey alanıdır. Volumen (223) kaba hacimdir. Faktor (230) DIN277 hesabını ETKİLEMEZ; genellikle 1.00 bırakılır."
+      },
+      {
+        "type": "text",
+        "text": "DIN277 nitelikleri: Raumumschließung (231, R/S), Flächenart_DIN277 (232; B brüt taban alanı ve BRI, M çok katlı brüt hacim, U boşluk, V kullanılmayan bölge), Faktor_DIN277 (266, 1.00 bırakılır), Grundfläche_DIN277 (93, brüt taban alanı), Rauminhalt_DIN277 (86, brüt hacim)."
+      },
+      {
+        "type": "text",
+        "text": "BauNVO nitelikleri: BauNVO_Anrechnung_auf_GR (234, onay kutusu 0/1, bina taban alanına dahil) ve BauNVO_Anrechnung_auf_GF (250; 0 dahil değil, 1 tam kat olmayan katta yaşam mahali, 2 tam kat). Standart etiket stili: Standart dizini, Dosya 1 Mahal Etiketi (Raumstempel) içinde Nr. 10 Kat (Geschoss)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11382_0EM7U000001Td7w_cf0339a3.png",
+        "caption": "Nr. 10 Kat (Geschoss) standart etiket stili; taban alanı, kat alanı ve BRI/BGF göstergeleri."
+      },
+      {
+        "type": "text",
+        "text": "Not: Mahallerin eğimli alt kotlarında DIN277 alan hesabında tutarsız sonuçlar oluşabilir."
       }
     ]
   }

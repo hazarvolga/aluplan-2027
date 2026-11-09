@@ -197,6 +197,68 @@
         "type": "image",
         "src": "/akademi/lejant/10641_0EM7U000001TdUt_33c72e0a.png",
         "caption": "Alan büyüklüğüne göre yeşil tonları arasında kademelenen renk."
+      },
+      {
+        "type": "heading",
+        "text": "Bir Etiket Stilinde Hangi Nitelikler Kullanılıyor?"
+      },
+      {
+        "type": "text",
+        "text": "Etiketlenmiş veriniz var ama orijinal etiket stilini bulamıyorsanız, ya da bir etiketin neyi değerlendirdiğini ve metrajla aynı değerleri almak için hangi niteliği değiştirmeniz gerektiğini bilmek istiyorsanız, kullanılan nitelikleri doğrudan çizim dosyasından okuyabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "Durum 1 - Bir etiket stilinin içeriğini incelemek: Etiket Stili (Beschriftungsbild) fonksiyonunu çağırın, Giriş Seçenekleri (Eingabeoptionen) altından Oku (Lesen) seçeneğini seçin, incelenecek stili seçip çizim dosyasına yerleştirin. Etiket stiline göre birden fazla folyo (Folie) oluşur; tekil folyoların hangi ölçek/çizim tipiyle kaydedildiği okunamaz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11307_0EM7U000001TdDB_0ed94683.png",
+        "caption": "Giriş Seçenekleri -> Oku (Lesen) ile mevcut bir etiket stilini çizime okutun."
+      },
+      {
+        "type": "text",
+        "text": "Ardından Giriş Seçenekleri -> Modi altından bir metni (örneğin İşlev / Funktion) seçin. Etiket Stili araç çubuğu açılır ve temel ayarları gösterir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11307_0EM7U000001TdDD_11dc365c.png",
+        "caption": "Modi ile incelenecek satırı (burada İşlev / Funktion) seçin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11307_0EM7U000001TdDE_6b6ec24d.png",
+        "caption": "Araç çubuğu: Format (çıktı biçimi, örn. A10 metin, F8.3 sayı, K15.3 kot), Anpass (ölçeğe uyum), DIM (birim) ve Info (nitelik/formül)."
+      },
+      {
+        "type": "text",
+        "text": "Info düğmesi neyin etiketlendiğini açar. Doğrudan bir nitelik tanımlıysa nitelik seçimi, bir formül tanımlıysa formül açılır. Örneğin bir Alan hücresinde şu formül bulunabilir:"
+      },
+      {
+        "type": "text",
+        "text": "_IF_(@233@=3)@93@_ELSE_(_IF_(@264@=1)@197@_ELSE_@197@/@264@)"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11307_0EM7U000001TdDF_abd8da22.png",
+        "caption": "Alan_m² hücresinde koşul formülü; Flächenart_Wohnfläche KW (=3) ise Grundfläche_DIN277, değilse katsayısı çıkarılmış Wohnfläche_Ausbau değeri. Biçim F8.1."
+      },
+      {
+        "type": "text",
+        "text": "Üst nesneye erişim için PARENT() kullanılır. Bir mahal etiket stilinde PARENT(@507@) formülü, mahalin bağlı olduğu mahal grubunun adını (Bezeichnung) döndürür. Biçim A6 olduğundan uzun grup adları kesilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11307_0EM7U000001TdDG_77797bbc.png",
+        "caption": "Grup hücresi: PARENT(@507@) ile üst nesnenin (mahal grubu) adı okunur."
+      },
+      {
+        "type": "text",
+        "text": "Durum 2 - İçeriği bilinmeyen etiketli bir nesne: Standart Etiket kullanıldıysa nesneyi aynı türle yeniden etiketlemeyi deneyip alan adlarından atamayı bulun. Nesne Etiketi veya Etiket Stili kullanıldıysa, Etiket Stili fonksiyonu + Modi + Info ile içeriği Durum 1'deki gibi okuyun."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11307_0EM7U000001TdDM_28e37380.png",
+        "caption": "Nesne Etiketi veya Etiket Stilinde Info düğmesi, kullanılan nitelik ya da formülü açar."
       }
     ]
   }

@@ -190,6 +190,58 @@
       {
         "type": "text",
         "text": "Her iki değeri de yüzey elemanı oluştururken uyarlayabilirsiniz: fonksiyonu etkinleştirin, artı kıl imleciyle eğriye tıklayın ve giriş seçeneklerinden değeri değiştirin. Poligonlaştırmada **Otomatik Geometri Algılama (Automatische Geometrieermittlung)** özelliğini de kullanın. Gelişmiş nokta girişinde bunu fonksiyon etkinken bağlam menüsünden veya diyalog satırından, eski nokta girişinde ise **Görünüm (Ansicht) -> Nokta Asistanı (Punktassistent)** altından açıp kapatırsınız."
+      },
+      {
+        "type": "heading",
+        "text": "Desen ve Taramalarda Biçim Özelliklerini Değiştirme"
+      },
+      {
+        "type": "text",
+        "text": "Bir desenin (Muster) veya taramanın (Schraffur) kalemi ve renginin neden değişmediğinin yanıtı, tanımdaki bir ayarda gizlidir. **Araçlar (Extras) -> Tanımlar (Definitionen) -> Desen (Muster)** yolunu seçin. Ekranda bir desen görünür ve **Değiştir (Ändern)** araç çubuğunda ilgili fonksiyonlar açılır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10961_0EM7U000001TdvE_0c31399b.png",
+        "caption": "Tanımlar altında desen düzenleme araçları."
+      },
+      {
+        "type": "text",
+        "text": "İlgili deseni seçin ve \"**Desenin gösterimi için tanımdaki kalem, renk geçerli (Stift, Farbe aus Definition...)**\" fonksiyonuna dikkat edin. Bu fonksiyon kapalıysa desen, biçim özelliklerinde belirlenen kalem ve renkle gösterilir. Açıksa desen her zaman kendi tanımındaki biçimlerle gösterilir ve biçim özellikleri dikkate alınmaz. Taramalar için de **Araçlar (Extras) -> Tanımlar (Definitionen) -> Taramalar (Schraffuren)** yolunda aynı seçeneği ayarlarsınız."
+      },
+      {
+        "type": "text",
+        "text": "Not: Desen ve tarama kaynaklarının **Büro** mu yoksa **Proje** mi olarak ayarlı olduğuna göre, tanımdaki değişiklik yalnızca güncel projeyi veya büro ayarını kullanan tüm projeleri etkiler. Büro klasöründeki tanımları değiştirmek için yönetici yetkisi gerekir; projedeki tanımları ise proje sahibi de değiştirebilir."
+      },
+      {
+        "type": "heading",
+        "text": "Çizgi Montaj Parçasını (Linieneinbauteil) Desen Çizgisi Olarak Gösterme"
+      },
+      {
+        "type": "text",
+        "text": "Çizgisel bir montaj parçasını (Linieneinbauteil) desen çizgisi (Musterlinie) olarak tanımladığınızda, seçtiğiniz desen görünmeyebilir. 266'dan küçük tüm desen numaraları kullanılabilir. Tanım sırasında hata mesajı çıkmaz; ancak kaydettikten sonra desenin gösterilmediğini önizleme penceresinde görürsünüz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9769_0EM67000007oD0c_d9829294.png",
+        "caption": "Önizlemede desensiz görünen çizgi montaj parçası."
+      },
+      {
+        "type": "text",
+        "text": "Girilecek ölçüler, **ölçek 1:1'de (MST. 1:1)** ayarlı uzunluk birimine karşılık gelir. Örneğin desen çizgisini 10 cm genişlikte isterseniz ve uzunluk birimi olarak m ayarlıysa, 0,1 girmeniz gerekir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9769_0EM67000007oD0h_20daae00.png",
+        "caption": "Uzunluk birimine göre ölçü girişi (0,1 m = 10 cm)."
+      },
+      {
+        "type": "text",
+        "text": "Bazı desenlerin kendi renk tanımı vardır; bu, desenin tanımı sırasında belirlenmiştir. Deseni seçerken, belirlenmiş renk tanımının devralınıp devralınmayacağını önizlemede açıkça görebilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9769_0EM67000007oD0w_bf8a94f7.png",
+        "caption": "Desen seçiminde renk tanımının önizlemesi."
       }
     ]
   }

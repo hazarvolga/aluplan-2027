@@ -96,5 +96,110 @@
         "/akademi/lejant/10888_0EM7U000001TeD6_14f716d6.png"
       ]
     }
-  ]
+  ],
+  "deepDive": {
+    "title": "Derinlemesine",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Formül Koleksiyonu: Koşullara Bağlı Gösterim Örnekleri"
+      },
+      {
+        "type": "text",
+        "text": "Durum 1 - Poz numarasını koşula göre çerçeveleme: Yapı elemanlarına genellikle daire (%K0) içinde poz numarası verilir; bir değişiklikte bazı elemanlar yeniden numaralanıp ilave/revizyon pozu (Nachtragsposition) alır. Poz numarası için Positionsnummer (@194@), ilave poz işareti için TextPos (@1311@) niteliği kullanılır. %K0 metni çevreleyen daire, %N0 sekizgen oluşturur."
+      },
+      {
+        "type": "text",
+        "text": "Formül (biçim örn. A30): _IF_(@1311@=\"N*\")\"%N0\"+@194@+\" \"+@1311@_ELSE_\"%K0\"+@194@"
+      },
+      {
+        "type": "text",
+        "text": "TextPos içeriği 'N' ile başlıyorsa poz sekizgenle, aksi halde daireyle gösterilir. Örneğin TextPos'a N1 girilince o poz sekizgenle işaretlenir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10594_0EM7U000001TdD0_d534cfc8.png",
+        "caption": "Poz numarası normalde daire içinde; TextPos 'N' ile başlayınca sekizgen."
+      },
+      {
+        "type": "text",
+        "text": "Durum 2 - Kapı net geçiş yüksekliğini kontrol etme: Net geçiş yüksekliği (bitmiş döşeme üst kotundan kaba lento alt kotuna) hedefin altına düşerse bir uyarı, aksi halde hiçbir şey yazdırılmalıdır. Kapı yüksekliği Höhe (@222@, m) niteliğinden alınır. Belirleyici mahalin döşeme katman yapısı PARENT(Obj_Floor(@211@;1;2;3;4;5;6;7;8;9;10)) ile mm cinsinden hesaplanır (@211@ katman kalınlığı / Schichtdicke)."
+      },
+      {
+        "type": "text",
+        "text": "Yükseklik m, döşeme yapısı mm olduğundan 1000'e bölme gerekir. Hedef değerle karşılaştırma (biçim örn. A25):"
+      },
+      {
+        "type": "text",
+        "text": "_IF_((@222@-PARENT(Obj_Floor(@211@;1;2;3;4;5;6;7;8;9;10)/1000))<2,01)\"Türhöhe zu gering!\"_ELSE_\"\""
+      },
+      {
+        "type": "text",
+        "text": "Kontrol doğruysa (2,01 ile karşılaştırma) 'Türhöhe zu gering!' (Kapı yüksekliği çok düşük!) yazısı, aksi halde boş döner. Etiket stili oluşturmanın temellerini diğer SSS makalelerinde veya connect.allplan.com'da bulabilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10594_0EM7U000001TdD1_295af95b.png",
+        "caption": "Net kapı yüksekliği 2,01 m'nin altına düşünce uyarı metni görünür."
+      },
+      {
+        "type": "heading",
+        "text": "Lejant / Etiket Stili Yedekleme ve Geri Yükleme"
+      },
+      {
+        "type": "text",
+        "text": "Bir lejant her zaman zle00x.deu lejant dosyalarından ve ek bir zle000.deu yönetim dosyasından oluşur. Pafta lejantları (antetler) her zaman 7 veya 8 numaralı dosyada bulunmalıdır (zle007.deu, zle008.deu). Bir etiket stili ise zdo00x.deu dosyalarından ve zdo000.deu yönetim dosyasından oluşur."
+      },
+      {
+        "type": "text",
+        "text": "Yedekleme - önce bir harici yol tanımlayın: Dosya (Datei) -> ProjectPilot'u açın, 'Harici Yol (Externer Pfad)' düğümüne sağ tıklayıp Harici yol seç (Externen Pfad auswählen) ile bir yedekleme klasörü ayarlayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10888_0EM7U000001Te3a_a3b840c5.png",
+        "caption": "ProjectPilot'ta harici yolu (yedekleme klasörünü) tanımlama."
+      },
+      {
+        "type": "text",
+        "text": "ProjectPilot'u kapatın; Oluştur (Erzeugen) -> Ek Modüller -> Şablonlar: Raporlar, Lejantlar, Etiketler -> Etiket Stillerini, Lejantları Yönet yolunu açın. Sol tarafta kaynak dizini (örn. Büro) ve klasörü seçip kaydedilecek lejantları işaretleyin, Kopyala (Kopieren) deyin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10888_0EM7U000001Te3b_f6366dcc.png",
+        "caption": "Kaynak dizinden kaydedilecek lejantları işaretleyip Kopyala."
+      },
+      {
+        "type": "text",
+        "text": "Kayıt konumu olarak Harici Yol'u seçin, dosya numarasını (örn. 7) seçin, numaraları işaretleyip Çalıştır (Ausführen) deyin. Harici klasörde zle00x.deu (veya zle007.deu) ve zle000.deu dosyaları oluşur."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10888_0EM7U000001TeD1_8ee7091b.png",
+        "caption": "Hedef olarak Harici Yol ve dosya numarasını seçip Çalıştır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10888_0EM7U000001TeD2_1c01ef32.png",
+        "caption": "Harici klasörde oluşan zle00x.deu lejant dosyası ve zle000.deu yönetim dosyası."
+      },
+      {
+        "type": "text",
+        "text": "Geri yükleme (içe aktarma) - harici yolu, lejantınızın bulunduğu klasöre ayarlayın. Yine Etiket Stillerini, Lejantları Yönet'i açın; bu kez kaynak dizin olarak Harici Yol'u, klasörü ve geri yüklenecek lejantları seçip Kopyala deyin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10888_0EM7U000001TeD5_7fcdb21f.png",
+        "caption": "Geri yüklemede kaynak Harici Yol; geri yüklenecek lejantları işaretleyip Kopyala."
+      },
+      {
+        "type": "text",
+        "text": "Son olarak geri yükleme konumunu (örn. Büro), dosya numarasını (pafta lejantları için 7) ve numaraları seçip Çalıştır deyin. Lejantlar seçtiğiniz dizinde hazır olur. Pafta lejantları mutlaka 7 veya 8 numaralı dosyada bulunmalıdır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10888_0EM7U000001TeD6_14f716d6.png",
+        "caption": "Geri yükleme konumu ve dosya numarasını seçip Çalıştır."
+      }
+    ]
+  }
 }

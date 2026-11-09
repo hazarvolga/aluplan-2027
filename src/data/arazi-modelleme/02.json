@@ -289,6 +289,68 @@
         "type": "image",
         "src": "/akademi/arazi-modelleme/11158_0EM7U000001Tdbl_a464017e.png",
         "caption": "Ek Kaydırma alanına ofset koordinatlarını eksi işaretiyle girme seçeneği."
+      },
+      {
+        "type": "heading",
+        "text": "DWG/DXF İçe Aktarma ve Büyük Koordinatlar (Fransızca Arayüz)"
+      },
+      {
+        "type": "text",
+        "text": "Halihazır ve topoğrafik veriler çoğu zaman DWG veya DXF olarak gelir ve Gauss-Krüger / Lambert gibi büyük koordinatlar taşır. Bu bölüm içe aktarmanın adımlarını ve büyük koordinatların yol açtığı performans sorunlarını önleme yollarını özetler. Ekran görüntüleri Fransızca arayüzdendir."
+      },
+      {
+        "type": "text",
+        "text": "Adım 1, neyi içe aktaracağınızı belirleyin: Bir DWG dosyası bir model alanı (espace objet) ve bazen bir ya da birden fazla pafta görünümü (présentations) içerir. İçe aktarma penceresinde Ayrıntılar (Détails) komutuyla önizlemeye bakın. Önizlemede kırmızı bir çarpı görünüyorsa dosya çok yeni bir sürümden olabilir veya Allplan ile uyumsuzdur. Altlık olarak yalnızca model alanını istiyorsanız Çizim (model alanı) / Dessin (espace objet) seçeneğini kullanın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/9170_0EMVi0000069Vtx_78c1e19a.png",
+        "caption": "İçe aktarma önizlemesine Ayrıntılar (Détails) ile erişim."
+      },
+      {
+        "type": "text",
+        "text": "Adım 2, ölçek ve birim: Dosya cm cinsindense ve siz metreyle çalışıyorsanız birim alanına cm yazın; Allplan verileri yeniden ölçeklendirir. Başlangıç birimini bilmiyorsanız metre (mètre) bırakıp bir ölçek faktörü girin. Gerekirse bunu iki aşamada yapın: önce faktör 1 ile içe aktarın, Allplan'da bir uzunluk ölçtükten sonra belgeyi silip doğru faktörü (örneğin 0,01) girin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/9170_0EMVi0000069GyB_4a3ba09c.png",
+        "caption": "Ölçek faktörü ve birim aracılığıyla yeniden boyutlandırma."
+      },
+      {
+        "type": "text",
+        "text": "Adım 3, büyük koordinatlar: Veriler büyük koordinatlı elemanlar içeriyorsa içe aktarma sonrası performans düşebilir. En sağlıklı yöntem bir proje ofseti (offset de projet) tanımlamaktır. Böylece veriler koordinat orijinine yakın düzenlenir, ancak noktaların gerçek koordinatları tanımlanan ofset dikkate alınarak doğru ölçülür. Ofset dışa ve içe aktarmada otomatik uygulanır ve tüm proje için geçerlidir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/9170_0EMVi0000068bv0_5bfa0dfd.png",
+        "caption": "Proje ofseti (offset de projet) tanımı; büyük koordinatlar için önerilen yöntem."
+      },
+      {
+        "type": "text",
+        "text": "İçe aktarma sırasında Seçenekler (Options), Genel Ayarlar (Paramètres généraux) sekmesinde ağırlık merkezini Ofset (Décalage) olarak ayarlarsanız dosyanın ağırlık merkezi otomatik olarak sıfır noktasına yerleştirilir. Orijin (Origine) seçeneği koordinatları kalıcı değiştirir; bunu yalnızca veriyi aynı konuma geri dışa aktarmanız gerekmiyorsa kullanın. Kaydırmayı elle de verebilirsiniz: açılır listede Allplan minimum ve maksimum sınırları (étendues) ile ağırlık merkezini gösterir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/9170_0EMVi0000069d3V_eb0fc2c3.png",
+        "caption": "Kaydırmanın elle ayarlanması; minimum/maksimum sınırlar ve ağırlık merkezi."
+      },
+      {
+        "type": "text",
+        "text": "Adım 4, katman ve 2B/3B modu: Tüm katmanları mı yoksa yalnızca görünür olanları mı alacağınızı seçin ve modeli 2B, 3B veya 2B/3B olarak dönüştürün. Ofisin genel katman veritabanını şişirmemek için projenizin katmanlarını Projeye özel (Projet) olarak ayarlayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/9170_0EMVi0000069aSE_70ddcc66.png",
+        "caption": "Katman seçimi ve 2B/3B dönüştürme; önerilen ayar."
+      },
+      {
+        "type": "text",
+        "text": "Adım 5 ve 6, patlatma ve eşleştirme: Makro/blok ve dolgular gibi eleman tiplerini gerektiğinde patlatabilir (ayrıştırabilir), Değiştir (Modifier) ile bir eşleştirme (mapping) tanımlayarak çizgi tipi, kalem kalınlığı, renk ve desen gibi nesne biçimlerini dönüştürebilirsiniz. Ayarları sonraki içe/dışa aktarmalarda kullanmak üzere kaydedebilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/9170_0EMVi0000069Pmy_9987a7b7.png",
+        "caption": "Nesne biçimleri için eşleştirme (mapping) tanımı."
       }
     ]
   }

@@ -264,6 +264,60 @@
         "type": "image",
         "src": "/akademi/temel-modelleme/11382_0EM7U000001Td7w_cf0339a3.png",
         "caption": "Kat elemanının nitelik ve geometri değerlerinin genel görünümü."
+      },
+      {
+        "type": "heading",
+        "text": "Çatı Katında Eğimli Çatıya Uyan Ara Döşeme Oluşturma"
+      },
+      {
+        "type": "text",
+        "text": "Çatı katında, çatı düzlemine (çatı yüzeyine, Dachlandschaft) temiz biçimde uyan bir ara döşeme (Decke) oluşturmak için, önce tüm kat planının üzerine bir döşeme çizin. Kot bağlantısını ve doğru yayılım alanını sonraki adımlarda düzenleyeceksiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiQ_3445deeb.png",
+        "caption": "Hedef: çatı eğimine uyan ara döşeme."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiR_9caad228.png",
+        "caption": "Döşemeyi önce tüm kat planının üzerine çizin."
+      },
+      {
+        "type": "text",
+        "text": "Döşemenin doğru kot bağlantısını ayarlamak için döşemeye sol çift tıklayıp **Yükseklik (Höhe)** yolunu izleyin ve şu değerleri girin: (1) çatı düzleminin alt kotu ile döşemenin alt kotu arasındaki mesafe; (2) istediğiniz döşeme kalınlığı; (3) kenar bölgesinin (döşemenin alın yüzeyinin) eğimli çatı düzlemine hangi mesafeyle uyacağı. Bu örnekte bu mesafe 0,00'dır ve üstteki eğimli düzleme 0,00 mesafeyle birleşen eğimli bir döşeme bitişi oluşur."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiT_a37e9532.png",
+        "caption": "Yükseklik iletişim kutusunda kot değerlerinin girilmesi."
+      },
+      {
+        "type": "text",
+        "text": "Dikkat: Döşeme doğru kot bağlantısıyla çizim dosyasında oluştuğunda bir uyarı mesajı görünebilir. Bunun nedeni, bu ara adımda negatife doğru gelişen ve geometrik olarak mümkün olmayan bir 3B yapı elemanının üretilmesidir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiU_c72c8b84.png",
+        "caption": "Geometrik olarak mümkün olmayan eleman uyarısı."
+      },
+      {
+        "type": "text",
+        "text": "Son adımda döşemenin yayılım alanını düzenleyin: döşeme yalnızca çatı eğimine kadar uzanmalı, ötesine geçmemelidir. Kat planı görünümünden bir kalkan duvar (alın) görünüşüne geçin ve **Düzen (Bearbeiten) -> Noktaları Değiştir (Punkte modifizieren)** komutunu seçin. Yalnızca döşemeyi güvenle değiştirebilmek için **Filtre Sihirbazı (Filter-Assistent)** araç çubuğundan **Mimari Filtre (Architekturfilter)** ile **Döşeme (Decke)** öğesini seçin. Döşemenin değiştirilecek kenar bölgesinin etrafına bir seçim penceresi çizin ve seçilen noktaları, döşeme alt kotunun eğimli çatı düzlemiyle kesiştiği noktaya kadar taşıyın. Aynı adımı diğer tarafta da tekrarlayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiW_71755a0a.png",
+        "caption": "Döşemenin yayılım alanının eğime göre düzenlenmesi."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiZ_7f5d3c20.png",
+        "caption": "İstenen sonuç: eğime temiz uyan ara döşeme."
+      },
+      {
+        "type": "text",
+        "text": "Not: Bazı durumlarda (örneğin girinti ve çıkıntıları olan döşemelerde), doğru kotlar ayarlandıktan sonra bile döşeme animasyonda görünmeyebilir; ancak kat planında, görünüşlerde ve izometrilerde yine de görünür. Böyle bir durumda **Değiştir (Ändern) -> Mimari (Architektur) -> Yüzey Elemanı, Mimari Yüzey, Alan Değiştir (Flächenelement, Ar-Fläche, Bereich modifizieren)** fonksiyonuyla taşan bölgeleri genişçe kesin, ardından **Noktaları Değiştir** ile döşemeyi yeniden genişletin."
       }
     ]
   }

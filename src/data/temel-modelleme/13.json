@@ -212,6 +212,61 @@
         "type": "image",
         "src": "/akademi/temel-modelleme/11149_0EM7U000001TdWv_7047286d.png",
         "caption": "Tamamlanmış korkuluk."
+      },
+      {
+        "type": "heading",
+        "text": "Merdiven altında kademeli duvar oluşturma"
+      },
+      {
+        "type": "text",
+        "text": "Üst kenarı merdiven gidişatına uyan bir duvar için önce yardımcı eleman olarak bir merdiven çizin: Oluştur (Erzeugen) > Mimari (Architektur) > Merdivenler (Treppen) > Düz Merdiven (Gerade Treppe) ile dış sınırı girip rıht yüksekliği, basamak genişliği ve basamak sayısını ayarlayın. Kademeli gidişat için en çok basamak (Trittstufe) önemlidir."
+      },
+      {
+        "type": "text",
+        "text": "Merdiveni düzlem modeline dönüştürün. Önce Oluştur > Mimari > Genel: Çatılar, Düzlemler, Kesitler > Elemanları Dönüştür > Mimariyi 3B Katı Objeye (Architektur in 3D-Körper) ile 3B eleman üretin. İsterseniz Ek Modüller > 3B Modelleme (Modellieren 3D) > Katıları Birleştir (Körper vereinigen) ile tekil katıları tek bir 3B elemanda birleştirin; bu modül yoksa adım atlanabilir. Ardından 3B Katı Objeleri Mimari Düzlemlere (3D-Körper in Architekturebenen) ile düzlem çiftlerini elde edin."
+      },
+      {
+        "type": "text",
+        "text": "Duvarı düzlemlere bağlayın: Oluştur > Mimari > Temel: Duvarlar, Boşluklar, Yapı Elemanları > Duvar (Wand) ile bir duvar oluşturun. Özelliklerde Yükseklik (Höhe) butonundan üst kenarı düzlemin (merdiven basamaklarının) alt kenarına bağlayın (soldan ikinci buton); alt kenar için sabit bir kot verin (soldan üçüncü buton)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11200_0EM7U000001TdQY_c346f0e0.png",
+        "caption": "Duvarın üst kenarı merdiven düzlemine, alt kenarı sabit kota bağlanır."
+      },
+      {
+        "type": "text",
+        "text": "Böylece üst kenar merdiven gidişatını izlemek için düzlem çiftinin alt düzlemine (basamakların alt kenarına) bağlanır; alt kenar ise düzlem referansı olmadan mutlak kot olarak kalır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11200_0EM7U000001TdQZ_309a6687.png",
+        "caption": "Tamamlanan kademeli duvar."
+      },
+      {
+        "type": "text",
+        "text": "Not: Düzlem bölgesindeki diğer mimari elemanlar da bu düzlemlere bağlanabilir. İstenmeyen bağlanmayı önlemek için elemanları başka bir çizim dosyasına koyun veya onlara mutlak yükseklik verin."
+      },
+      {
+        "type": "heading",
+        "text": "Merdiven bileşenlerini niteliklerle etiketleme"
+      },
+      {
+        "type": "text",
+        "text": "Merdiven, alt yapı elemanlarına sahip bir yapı elemanıdır. CHILD() formülüyle merdiven etiketlenirken bileşenlerine erişilir. Örn. CHILD(@508@) ile @508@ (Malzeme niteliği) tüm malzemeleri listeler; belirli bir bileşenin malzemesine erişmek için seçimi @18@ (bileşen adı, numarası) ile sınırlayın. Bileşenler 1-16 arası numaralıdır; 2 ve 11 numaraları kullanılmaz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10575_0EM7U000001Td8g_04ea00a5.png",
+        "caption": "Merdiven bileşenleri ve numaralandırması."
+      },
+      {
+        "type": "text",
+        "text": "Örnek malzeme formülleri: Basamak (Trittstufe, 1) için CHILD(_IF_(@18@=1)@508@_ELSE_\"\"); Rıht (Setzstufe, 3) için CHILD(_IF_(@18@=3)@508@_ELSE_\"\"); Limon kirişi iç (Wange innen, 7) için CHILD(_IF_(@18@=7)@508@_ELSE_\"\"); Küpeşte iç (Handlauf innen, 10) için CHILD(_IF_(@18@=10)@508@_ELSE_\"\")."
+      },
+      {
+        "type": "text",
+        "text": "Merdiveni rıht sayısı, rıht yüksekliği ve basamak genişliğiyle etiketlemek için: FORMAT(\"%.0f STG %.1f/%.1f\"; @88@; @89@; @90@). Burada @88@ rıht sayısı (Steigungsanzahl), @89@ rıht yüksekliği (Steigungshöhe), @90@ basamak genişliğidir (Auftrittsbreite). Merdivende bir değişiklik yapıldığında etiket stilinin yeniden yerleştirilmesi gerekir."
       }
     ]
   }

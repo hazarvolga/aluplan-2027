@@ -193,6 +193,32 @@
       {
         "type": "text",
         "text": "Yapı elemanları yalnızca belirli bir **ID numarasına aidiyeti** hafızada tutar. Bu numara değişirse yapı elemanı yüzey stilini kaybeder veya ona başka bir stil atanır. Ayrıca kaynakları ve tanımları değiştirebilmek için **proje sahibi veya yönetici (Administrator)** yetkisine sahip olmanız gerekir."
+      },
+      {
+        "type": "heading",
+        "text": "Simetriği Alınan Mahallerin Farklı Alan Vermesi"
+      },
+      {
+        "type": "text",
+        "text": "Birbirinin aynı olan, ancak simetriği alınmış (aynalanmış) iki mahal için farklı alan hesaplanmasının nedeni, Allplan'ın toplam alanı hangi alt alanlara böldüğüne bağlıdır. Ondalık basamak sayısının sınırlı olması, hesaplama sırasında yuvarlama farkları doğurabilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11197_0EM7U000001TdNJ_52cd0054.png",
+        "caption": "Alt alanlara bölünmenin grafik gösterimli çıktısı."
+      },
+      {
+        "type": "text",
+        "text": "Bu yuvarlama sapmalarını önlemek için alan çıktısı alırken şu ayarlara dikkat edin: **Oluştur (Erzeugen) -> Mimari (Architektur) -> Mahaller, Alanlar, Katlar (Räume, Flächen, Geschosse) -> Konut Alanı, DIN277, Yapı Ruhsatı (Wohnfläche, DIN277, Bauantrag)** fonksiyonunu başlatın; iletişim kutusunda **Seçenekler (Optionen)** butonuna tıklayın; açılan \"**İzlenebilir Miktar Hesapları (Nachvollziehbare Mengenansätze)**\" kutusunda \"**Alt alan sonuçlarını tam (kesin) değerlerden belirle**\" seçeneğini işaretleyin ve gerekirse **Alt Boyutlar** ile **Alt Alan Sonuçları** için ondalık basamak sayısını artırın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11197_0EM7U000001TdNK_570eeced.png",
+        "caption": "İzlenebilir miktar hesapları seçenekleri."
+      },
+      {
+        "type": "text",
+        "text": "Mahaller etiket stilleriyle (değişken metin stilleriyle) etiketlendiyse, bu ayarlar etiket stillerini de aynı şekilde etkiler. **Etiketi Güncelle (Beschriftung aktualisieren)** sonrası değerler çizim dosyasında da güncellenir. Toplam değerlerin ondalık basamak sayısı, rapor şablonunda **Paftayı Modifiye Et (Layout modifizieren)** üzerinden, ilgili hücrelere **Özellikler (Eigenschaften)** paletinden istediğiniz biçim girilerek uyarlanabilir."
       }
     ]
   }

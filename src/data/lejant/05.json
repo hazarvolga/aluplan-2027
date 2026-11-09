@@ -22,7 +22,7 @@
     {
       "time": "",
       "heading": "Lejant Bölgelerinin (Üst Bilgi, Ana Satır, Toplam) Seçimi",
-      "body": "Diyalog çubuğundaki sırayla önce **Üst Bilgi (Header)** elemanlarını pencere içine alarak seçin; ardından **Ana Satır (Body)** çizgi ve hücrelerini seçip satırın aşağıya doğru tekrarlama yönünü (üst sol köşeden alt sol köşeye `dY` mesafesini) tıklayın.",
+      "body": "Diyalog çubuğundaki sırayla önce **Üst Bilgi (Header)** elemanlarını pencere içine alarak seçin; ardından **Ana Satır (Body)** çizgi ve hücrelerini seçip satırın aşağıya doğru tekrarlama yönünü (üst sol köşeden alt sol köşeye `dY` mesafesini) tıklayın. Satır kaydırma vektörü (`dY`) gereklidir; çünkü Allplan, her yeni nesne için ana satırı tam bu mesafe kadar aşağı kopyalar. `dY` satır yüksekliğinden küçükse satırlar üst üste biner, büyükse aralarında boşluk kalır.",
       "figures": [
         "/akademi/lejant/11050_0EM7U000001Tdh6_051353ad.png"
       ]
@@ -42,7 +42,7 @@
       "body": "Lejantı yanlış referans ölçeğe veya çizim tipine koyarsanız yazılar okunmaz boyutta çıkar veya elemanları yakalayamaz. Lejantı ilgili planla aynı ölçekte ve doğru çizim dosyasında oluşturun."
     }
   ],
-  "checkpoint": "Lejant tablonuz doğru ölçek ve çizim tipinde yerleşmiş, satırları modeldeki elemanlardan otomatik dolmuşsa mimari lejantı doğru oluşturmuşsunuz demektir.",
+  "checkpoint": "Lejant tablonuz doğru ölçek ve çizim tipinde yerleşmiş, satırları modeldeki elemanlardan otomatik dolmuşsa mimari lejantı doğru oluşturmuşsunuz demektir. Artık elinizde kat planının mahal lejantını üretecek kullanıma hazır bir şablon var.",
   "commands": [
     {
       "name": "Lejant Tanımla (Define Legend)",

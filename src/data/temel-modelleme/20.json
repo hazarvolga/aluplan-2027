@@ -14,7 +14,7 @@
     {
       "time": "",
       "heading": "Planda Kesit Hattının Çizilmesi",
-      "body": "**Kesit Hattı Tanımla (Define Section / Schnittführung)** komutuyla merdiven kovasından, pencerelerden ve çatıdan geçecek şekilde `A-A` ve `B-B` kesit hatlarını ve bakış derinliğini çizin. Bakış okunu doğru yöne verin; ters yön kesiti ters gösterir.",
+      "body": "**Kesit Hattı Tanımla (Define Section / Schnittführung)** komutuyla merdiven kovasından, pencerelerden ve çatıdan geçecek şekilde `A-A` ve `B-B` kesit hatlarını ve bakış derinliğini çizin. Bakış okunu doğru yöne verin; ters yön kesiti ters gösterir. Bu eğitim boyunca sıfırdan kurduğunuz iki katlı konutta `A-A` hattını merdiven kovasından geçirin; böylece kesit, kat bağlantısını ve basamak düzenini açıkça gösterir.",
       "figures": [
         "/akademi/temel-modelleme/11178_0EM7U000001Tecw_e8923a7a.png"
       ]
@@ -22,7 +22,7 @@
     {
       "time": "",
       "heading": "İlişkisel Kesitin Türetilmesi ve Yüzey Ayarları",
-      "body": "Hedef kesit çizim dosyasını aktif edin, **Kesit Oluştur (Create Section / Schnitt erzeugen)** ile `A-A` hattını seçin. **Kesit Ayarları**'nda **Kesilen Yüzeylere Kalın Çizgi Uygula** ve **Yapı Elemanı Taramalarını Göster** seçeneklerini işaretleyerek kesiti yerleştirin.",
+      "body": "Hedef kesit çizim dosyasını aktif edin, **Kesit Oluştur (Create Section / Schnitt erzeugen)** ile `A-A` hattını seçin. **Kesit Ayarları**'nda **Kesilen Yüzeylere Kalın Çizgi Uygula** ve **Yapı Elemanı Taramalarını Göster** seçeneklerini işaretleyerek kesiti yerleştirin. Kesilen eleman kalın kontur ve malzeme taramasıyla, arkada kalan görünen eleman ise ince çizgiyle gösterilir; bu ayrım okuyucunun bıçağın gerçekte neyin içinden geçtiğini bir bakışta ayırt etmesi içindir.",
       "figures": [
         "/akademi/temel-modelleme/11178_0EM7U000001Tecu_eb0ae485.png"
       ]

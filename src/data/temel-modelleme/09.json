@@ -14,7 +14,7 @@
     {
       "time": "00:00 – 02:45",
       "heading": "Duvar (Wall / Wand) Özellikleri ve Çok Katmanlı Yapı",
-      "body": "**Mimari (Architecture) -> Duvar (Wall / Wand)** komutunu açın. Katman sayısını belirleyin (örn. Dış duvar için 3 katman: `20 cm Tuğla/Betonarme + 8 cm Isı Yalıtımı + 2 cm Dış Sıva`). Taşıyıcı katmana yüksek öncelik (`300`), yalıtım ve sıvaya daha düşük öncelik (`100`) vererek kesişimlerde taşıyıcı çekirdeğin kesintisiz devam etmesini sağlayın.",
+      "body": "**Mimari (Architecture) -> Duvar (Wall / Wand)** komutunu açın. Katman sayısını belirleyin (örn. Dış duvar için 3 katman: `20 cm Tuğla/Betonarme + 8 cm Isı Yalıtımı + 2 cm Dış Sıva`). Taşıyıcı katmana yüksek öncelik (`300`), yalıtım ve sıvaya daha düşük öncelik (`100`) vererek kesişimlerde taşıyıcı çekirdeğin kesintisiz devam etmesini sağlayın. İki katman kesiştiğinde Öncelik (Priority) sayısı yüksek olan kesintisiz geçer, düşük olan kesilir; bu eğitim boyunca sıfırdan kurduğunuz iki katlı konutta taşıyıcı tuğla/beton çekirdeğinin daima bütün kalması için en yüksek öncelik ona verilir.",
       "figures": []
     },
     {

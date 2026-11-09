@@ -4,7 +4,7 @@
   "title": "Giriş",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 3 & Modül 6: Sayısal Arazi Modeli (SAM / DTM - DGM), Jeodezi ve Çevre Modelleme Temelleri",
-  "intro": "Bir bina tek başına durmaz; belli bir eğimi ve kotu olan bir arsanın üzerinde yer alır. Bu seri, ALLPLAN'da **arazi modellemenin** (Terrain / Gelände) tüm zincirini öğretir: halihazır haritadan 3B arazi noktalarına, üçgenleme ağından eş yükselti eğrilerine, 3B maketten yollara ve çevre binalarına. Bu giriş dersinde iş akışının bütününü ve **Sayısal Arazi Modeli (SAM / DTM)** ile 3B yüzey/katı arasındaki veri yapısı farkını kavrarsınız.",
+  "intro": "Bir bina tek başına durmaz; belli bir eğimi ve kotu olan bir arsanın üzerinde yer alır. Bu seri, ALLPLAN'da **arazi modellemenin** (Terrain / Gelände) tüm zincirini öğretir: halihazır haritadan 3B arazi noktalarına, üçgenleme ağından eş yükselti eğrilerine, 3B maketten yollara ve çevre binalarına. Bu giriş dersinde iş akışının bütününü ve **Sayısal Arazi Modeli (SAM / DTM)** ile 3B yüzey/katı arasındaki veri yapısı farkını kavrarsınız. Seri boyunca eğimli örnek arsamızı (zemin kotu yaklaşık 100 m, en yüksek nokta yaklaşık 112 m) birlikte modelleyeceğiz; her ders bu arsanın bir sonraki aşamasını kurar.",
   "objectives": [
     "Allplan'da Arazi Modelleme (Terrain Modeling / Geländemodell) iş akışının mimari vaziyet planı, altyapı, kazı-dolgu ve 3B çevre maketi üretimindeki rolünü kavramak.",
     "Actionbar üzerinde **Çevre (Surroundings / Umgebung)** rolü altındaki **Arazi (Terrain / Gelände)** ve **Sayısal Arazi Modeli (Digital Terrain Model - DTM / DGM)** görev alanlarını tanımak.",
@@ -21,7 +21,7 @@
     {
       "time": "",
       "heading": "Arazi Modelleme İçin Bina Strüktürü ve Çizim Dosyası (Drawing File) Kurulumu",
-      "body": "Arazi modelleme çalışmasında verilerin birbirine karışmaması için **Bina Strüktürü (Building Structure)** içinde ayrı bir **Dış Mekan / Arazi (Site / Terrain)** düğümü açın ve çizim dosyalarını şu sırayla organize edin:\n- **Çizim Dosyası 100:** İçe aktarılan 2B Harita / DXF-DWG Hali Hazır Altlık\n- **Çizim Dosyası 101:** 3B Arazi Noktaları (`Sembol Noktaları / Arazi Noktaları`)\n- **Çizim Dosyası 102:** Sayısal Arazi Modeli (`SAM / DTM Üçgenleme Ağı` ve `Eş Yükselti Eğrileri`)\n- **Çizim Dosyası 103:** 3B Arazi Yüzeyi ve 3B Katı Maket Modeli (`3B Yüzey / 3B Katı`)\n- **Çizim Dosyası 104:** Yollar, Kaldırımlar ve Parsel İçi Kaplamalar\n- **Çizim Dosyası 105:** Çevre Binaları ve Mimari Kütleler",
+      "body": "Arazi modelleme çalışmasında verilerin birbirine karışmaması için **Bina Strüktürü (Building Structure)** içinde ayrı bir **Dış Mekan / Arazi (Site / Terrain)** düğümü açın ve çizim dosyalarını şu sırayla organize edin:\n- **Çizim Dosyası 100:** İçe aktarılan 2B Harita / DXF-DWG Hali Hazır Altlık\n- **Çizim Dosyası 101:** 3B Arazi Noktaları (`Sembol Noktaları / Arazi Noktaları`)\n- **Çizim Dosyası 102:** Sayısal Arazi Modeli (`SAM / DTM Üçgenleme Ağı` ve `Eş Yükselti Eğrileri`)\n- **Çizim Dosyası 103:** 3B Arazi Yüzeyi ve 3B Katı Maket Modeli (`3B Yüzey / 3B Katı`)\n- **Çizim Dosyası 104:** Yollar, Kaldırımlar ve Parsel İçi Kaplamalar\n- **Çizim Dosyası 105:** Çevre Binaları ve Mimari Kütleler\n\nHer aşamayı ayrı çizim dosyasına koymanın nedeni, her veri tipinin (nokta, üçgen ağ, 3B yüzey, bina) kendi görünürlük, referans ve çıktı mantığına sahip olmasıdır; karışık tek dosyada bir aşamayı güncellediğinizde diğerlerini de yanlışlıkla taşır veya silersiniz.",
       "figures": []
     },
     {

@@ -42,7 +42,7 @@
       "body": "**Yardımcı konstrüksiyon (Construction Line)** çizgileri yalnızca referanstır; çıktıya ve metraja girmez. Kalıcı geometriyi normal çizgiyle çizin, yardımcı çizgileri sadece hizalama için kullanın; işiniz bitince temizleyin."
     }
   ],
-  "checkpoint": "Çizmeden önce kalem, çizgi tipi ve renk seçebiliyorsanız, çizgi-dikdörtgen-daire-yay ile ölçülü geometri üretebiliyorsanız ve kapalı bir bölgeyi Alan Tespiti ile tanıtıp içine tarama/desen/dolgu koyabiliyorsanız 2B oluşturma araçlarını kavramışsınız demektir.",
+  "checkpoint": "Çizmeden önce kalem, çizgi tipi ve renk seçebiliyorsanız, çizgi-dikdörtgen-daire-yay ile ölçülü geometri üretebiliyorsanız ve kapalı bir bölgeyi Alan Tespiti ile tanıtıp içine tarama/desen/dolgu koyabiliyorsanız 2B oluşturma araçlarını kavramışsınız demektir. Bu 2B araçları, eğitim boyunca sıfırdan kuracağınız iki katlı konutun detay paftalarında ve altlıklarında sürekli kullanacaksınız.",
   "commands": [
     {
       "name": "Çizgi (Line / Linie)",

@@ -33,7 +33,7 @@
     {
       "time": "",
       "heading": "3B Arazi Yüzeyine Yüzey Materyali veya Ortofoto Doku Atama",
-      "body": "3B arazi yüzeyini seçin, **Özellikler (Properties)** paletinden **Yüzey (Surface)** kutusuna tıklayın ve kütüphaneden doğal çim/toprak dokusu veya hava fotoğrafı (`Ortofoto`) atayın.",
+      "body": "3B arazi yüzeyini seçin, **Özellikler (Properties)** paletinden **Yüzey (Surface)** kutusuna tıklayın ve kütüphaneden doğal çim/toprak dokusu veya hava fotoğrafı (`Ortofoto`) atayın. Bir ortofotonun araziye doğru oturması için ön koşul, fotoğrafın coğrafi referanslı olması ve kapsadığı koordinat alanının arazi yüzeyinin koordinatlarıyla eşleşmesidir; aksi halde görüntü kayar, döner veya ölçeği tutmaz ve binalar/yollar fotoğraftaki yerlerine denk gelmez.",
       "figures": [
         "/akademi/arazi-modelleme/9311_0EMVi000003tfgj_6714924e.png"
       ]
@@ -45,7 +45,7 @@
       "body": "Dönüştürme sırasında hedef çizim dosyası vermez, SAM'in üstüne yazarsanız, üzerinde kübaj/izohips hesabı yapabildiğiniz jeodezik veriyi kaybedersiniz. Komuttaki **Hedef Çizim Dosyası** alanına boş bir numara (`103`) verin; `102`'deki SAM'i koruyun."
     }
   ],
-  "checkpoint": "Yeni çizim dosyasında (örn. `103`) elemanınız artık standart bir **3B Yüzey** ise, orijinal SAM dosyası (`102`) hâlâ duruyorsa ve yüzeye çim/toprak veya ortofoto dokusu atadıysanız 3B araziyi doğru üretmişsiniz demektir.",
+  "checkpoint": "Yeni çizim dosyasında (örn. `103`) elemanınız artık standart bir **3B Yüzey** ise, orijinal SAM dosyası (`102`) hâlâ duruyorsa ve yüzeye çim/toprak veya ortofoto dokusu atadıysanız 3B araziyi doğru üretmişsiniz demektir. Örnek arsamızın 3B yüzeyi, 100 m ile 112 m arasındaki gerçek eğimini animasyonda koruyor olmalı.",
   "commands": [
     {
       "name": "SAM Elemanlarını Dönüştür",

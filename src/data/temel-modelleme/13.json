@@ -22,7 +22,7 @@
     {
       "time": "01:30 – 02:45",
       "heading": "Yükseklik, Rıht/Basamak Geometrisi ve Bileşenler",
-      "body": "Alt kotu Zemin Kat bitmiş döşeme kotuna, üst kotu 1. Kat bitmiş döşeme kotuna bağlayın. Rıht sayısını (`örn. 18 rıht x 16.67 cm`) ve basamak genişliğini (`28–30 cm`, $2R+B \\approx 62\\text{ cm}$) ayarlayın; **Elemanlar (Stair Components)** sekmesinden betonarme plak kalınlığı, basamak kaplaması ve iç/dış korkulukları aktif edin.",
+      "body": "Alt kotu Zemin Kat bitmiş döşeme kotuna, üst kotu 1. Kat bitmiş döşeme kotuna bağlayın. Rıht sayısını (`örn. 18 rıht x 16.67 cm`) ve basamak genişliğini (`28–30 cm`, 2R+B ≈ 62 cm) ayarlayın; 2R+B (Blondel) kuralı, insanın doğal adım boyuna uyan konforlu ve güvenli bir çıkış için rıht ile basamağı dengeler. **Elemanlar (Stair Components)** sekmesinden betonarme plak kalınlığı, basamak kaplaması ve iç/dış korkulukları aktif edin.",
       "figures": [
         "/akademi/temel-modelleme/10575_0EM7U000001Td8g_04ea00a5.png",
         "/akademi/temel-modelleme/11149_0EM7U000001TdWs_a6a93e5c.png"
@@ -41,7 +41,7 @@
       "body": "Merdiveni **kat düzlemleri (OK/UK) arasına** bağlamaz, sabit yükseklik verirseniz kat yüksekliği değiştiğinde basamak sayısı uymaz ve merdiven sahanlıkla çakışır. Yüksekliği her zaman alt ve üst kat düzlemine bağlayın."
     }
   ],
-  "checkpoint": "Kat düzlemleri arasında doğru basamak sayısıyla bir merdiven kurabiliyorsanız, rıht/basamak ve korkuluk ayarlarını yapabiliyor ve 2B planda kesim gösterimi ile numaralandırmayı görebiliyorsanız merdiven modellemeyi tamamladınız demektir.",
+  "checkpoint": "Kat düzlemleri arasında doğru basamak sayısıyla bir merdiven kurabiliyorsanız, rıht/basamak ve korkuluk ayarlarını yapabiliyor ve 2B planda kesim gösterimi ile numaralandırmayı görebiliyorsanız merdiven modellemeyi tamamladınız demektir. Doğru yaptıysanız 2B kat planında basamaklar tek tek numaralı görünür ve merdiven, kesim yüksekliğinde kesikli kesme çizgisiyle ikiye ayrılmış olarak çizilir.",
   "commands": [
     {
       "name": "U Tipi / Düz / Serbest Merdiven",

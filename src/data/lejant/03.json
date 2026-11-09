@@ -14,7 +14,7 @@
     {
       "time": "",
       "heading": "Standart Lejantların Neden Doğrudan Değiştirilmemesi Gerektiği",
-      "body": "**Varsayılan (Default / Standard)** dizinindeki lejantlar Allplan sürüm güncellemelerinde üzerine yazılarak sıfırlanabilir. Bu nedenle yeni bir lejant tasarlarken her zaman mevcut bir şablon **Ofis (Office / Büro)** dizinine kopyalanmalıdır.",
+      "body": "**Varsayılan (Default / Standard)** dizinindeki lejantlar Allplan sürüm güncellemelerinde üzerine yazılarak sıfırlanabilir. Bu nedenle yeni bir lejant tasarlarken her zaman mevcut bir şablon **Ofis (Office / Büro)** dizinine kopyalanmalıdır. Varsayılan ve Ofis lejant dosyaları (`zle00x.deu`) ayrı tutulur; çünkü standart dizin güncellemede üzerine yazılabilirken, Ofis dizinindeki kopyanız güncellemelerden etkilenmeden kurumsal standardınızı korur.",
       "figures": [
         "/akademi/lejant/10888_0EM7U000001TeD2_1c01ef32.png"
       ]
@@ -42,7 +42,7 @@
       "body": "Kütüphanedeki/ofis standardındaki lejantı doğrudan düzenlerseniz, tüm projelerde kullanılan orijinali bozarsınız. Önce lejantı projenize **kopyalayın**, sonra kopya üzerinde çalışın; orijinali referans olarak koruyun."
     }
   ],
-  "checkpoint": "Hazır bir mimari lejantı projenize kopyalayıp başlık, sütun ve nitelik eşlemelerini kendi standardınıza göre uyarladıysanız tasarım adımını doğru yapmışsınız demektir.",
+  "checkpoint": "Hazır bir mimari lejantı projenize kopyalayıp başlık, sütun ve nitelik eşlemelerini kendi standardınıza göre uyarladıysanız tasarım adımını doğru yapmışsınız demektir. Bu kopya, ilerleyen derslerde kuracağınız kat planı mahal lejantının başlangıç altlığıdır.",
   "commands": [
     {
       "name": "Lejantları Yönet (Manage Legends)",

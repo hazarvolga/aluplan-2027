@@ -23,7 +23,7 @@
     {
       "time": "",
       "heading": "İzohips Başlangıç Kotu, Adım Aralığı ve Ana/Ara Eğri Ayarları",
-      "body": "Açılan özellikler penceresinde eş yükselti eğrisi parametrelerini projenin ölçeğine göre tanımlayın:\n- **Başlangıç Yüksekliği ve Bitiş Yüksekliği (Start / End Elevation):** Varsayılan olarak arazinin minimum ve maksimum kotlarını otomatik alır.\n- **Eğri Aralığı (Increment / Schrittweite):** Ara eğriler için `1.00 m` (veya detaylı vaziyet planlarında `0.50 m` / `0.25 m`) girin.\n- **Ana Eğri Aralığı (Index Contour / Haupthöhenlinie):** Her `5.` eğriyi (örn. `100.00 m`, `105.00 m`, `110.00 m`) ana izohips olarak kalın kalem (`0.35 mm`) ve farklı bir renkle vurgulanacak şekilde işaretleyin.",
+      "body": "Açılan özellikler penceresinde eş yükselti eğrisi parametrelerini projenin ölçeğine göre tanımlayın:\n- **Başlangıç Yüksekliği ve Bitiş Yüksekliği (Start / End Elevation):** Varsayılan olarak arazinin minimum ve maksimum kotlarını otomatik alır.\n- **Eğri Aralığı (Increment / Schrittweite):** Ara eğriler için `1.00 m` (veya detaylı vaziyet planlarında `0.50 m` / `0.25 m`) girin.\n- **Ana Eğri Aralığı (Index Contour / Haupthöhenlinie):** Her `5.` eğriyi (örn. `100.00 m`, `105.00 m`, `110.00 m`) ana izohips olarak kalın kalem (`0.35 mm`) ve farklı bir renkle vurgulanacak şekilde işaretleyin.\n\nEğri aralığı ölçeğe bağlı seçilir çünkü aralık ne kadar küçükse plandaki eğri çizgileri o kadar sıklaşır; küçük ölçekli (uzağa çıkan) bir paftada `0.25 m` aralık eğrileri üst üste bindirip okunmaz hale getirir, büyük ölçekli bir vaziyet planında ise `1.00 m` aralık eğimi yeterince ayrıntılı göstermez. Amaç, komşu eğriler arasında gözle ayırt edilebilir bir boşluk bırakmaktır.",
       "figures": []
     },
     {
@@ -45,7 +45,7 @@
       "body": "Eğri aralığını (Schrittweite) ölçekten bağımsız seçerseniz plan okunmaz olur: büyük ölçekli vaziyet planında `1.00 m` çok seyrek, küçük ölçekte çok sık görünür. Detaylı planlarda `0.50/0.25 m`, genel planlarda `1.00 m` kullanın ve ana eğrileri farklı kalem/renkle ayırın."
     }
   ],
-  "checkpoint": "Eğri aralığı projenin ölçeğine uygunsa, her beşinci eğri kalın **ana eğri** olarak vurgulanmışsa ve ana eğriler kot değeriyle etiketliyse izohipsleri doğru üretmişsiniz demektir.",
+  "checkpoint": "Eğri aralığı projenin ölçeğine uygunsa, her beşinci eğri kalın **ana eğri** olarak vurgulanmışsa ve ana eğriler kot değeriyle etiketliyse izohipsleri doğru üretmişsiniz demektir. Örnek arsamızda eğriler 100 m ile 112 m arasında yer almalı; arsanın dik kısımlarında eğriler sıklaşır, yatık kısımlarında seyrelir.",
   "commands": [
     {
       "name": "Eş Yükselti Eğrileri (Contour Lines)",

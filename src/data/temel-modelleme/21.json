@@ -14,7 +14,7 @@
     {
       "time": "",
       "heading": "±0.00 Referans Kotunun Belirlenmesi",
-      "body": "**Kot Ölçülendirmesi (Elevation Point / Kotenbemaßung)** komutuna girin. İlişkisel kesitlerde modelin kendi Z koordinatını otomatik okumasını sağlayın veya **zemin kat bitmiş döşeme üstünü** `±0.00` baz noktası olarak tıklayın. Baz noktası yanlışsa tüm kotlar kayar.",
+      "body": "**Kot Ölçülendirmesi (Elevation Point / Kotenbemaßung)** komutuna girin. İlişkisel kesitlerde modelin kendi Z koordinatını otomatik okumasını sağlayın veya **zemin kat bitmiş döşeme üstünü** `±0.00` baz noktası olarak tıklayın. Baz noktası yanlışsa tüm kotlar kayar. `±0.00`, bitmiş döşeme üstü olarak alınır; çünkü kullanıcının gerçekte üzerinde durduğu ve kapı/ruhsat kotlarının referanslandığı seviye burasıdır, kaba beton üstü değil.",
       "figures": []
     },
     {
@@ -26,7 +26,7 @@
     {
       "time": "",
       "heading": "Etiket ve Metin ile Nitelikleri Plana Yazdırma",
-      "body": "Kotlardan sonra eleman niteliklerini plana yazdırmak için elemana sağ tıklayıp **Etiketle (Label / Beschriften)** komutunu seçin ve bir **Etiket Stili (Label Style)** uygulayın: kapı/pencere doğrama boyutu (`150/140`), parapet yüksekliği (`BRH = 90`) ve kolon/kiriş kesiti (`K101 30/60`) aks üzerine yazılır. Etiketler niteliklere **dinamik bağlıdır**: pencere genişliğini `150`'den `180`'e değiştirirseniz etiket elle müdahale olmadan `180/140` olur. Serbest açıklamalar için ayrıca **Metin (Text)** aracını kullanın.",
+      "body": "Kotlardan sonra eleman niteliklerini plana yazdırmak için elemana sağ tıklayıp **Etiketle (Label / Beschriften)** komutunu seçin ve bir **Etiket Stili (Label Style)** uygulayın: kapı/pencere doğrama boyutu (`150/140`), parapet yüksekliği (`BRH = 90`) ve kolon/kiriş kesiti (`K101 30/60`) aks üzerine yazılır. Etiketler niteliklere **dinamik bağlıdır**: pencere genişliğini `150`'den `180`'e değiştirirseniz etiket elle müdahale olmadan `180/140` olur. Kısaca: dinamik **Etiket**, değeri elemanın niteliğinden okur ve model değişince kendiliğinden güncellenir; **Metin** aracı ise modele bağlı olmayan, elle yazdığınız sabit açıklamalar içindir.",
       "figures": []
     }
   ],

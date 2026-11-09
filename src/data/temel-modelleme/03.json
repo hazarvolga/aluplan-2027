@@ -40,7 +40,13 @@
       "figures": []
     }
   ],
-  "checkpoint": "Rolü değiştirdiğinizde Actionbar'daki araçların değiştiğini görüyorsanız, Özellikler ve Kütüphane paletlerini açıp kapatabiliyorsanız ve aynı modeli Plan ile İzometrik pencerede aynı anda izleyebiliyorsanız arayüze hâkim olmaya başladınız demektir.",
+  "checkpoint": "Rolü değiştirdiğinizde Actionbar'daki araçların değiştiğini görüyorsanız, Özellikler ve Kütüphane paletlerini açıp kapatabiliyorsanız ve aynı modeli Plan ile İzometrik pencerede aynı anda izleyebiliyorsanız arayüze hâkim olmaya başladınız demektir. Bu eğitim boyunca sıfırdan kuracağınız iki katlı konut için kendi projenizde Mimari (Architecture) rolünü açın ve bu rolde çalışacağınız araçları gözden geçirin.",
+  "pitfalls": [
+    {
+      "title": "Yanlış rolü seçip komutu bulamamak",
+      "body": "Actionbar'da seçili rol, hangi komutların göründüğünü belirler. Yanlış bir rol seçiliyken aradığınız komut önünüze gelmez ve komut 'yok' sanılabilir. Mimari modelleme yaparken önce doğru rolü (örneğin Mimari / Architecture) seçin; komutu bulamadığınızda ilk kontrol edeceğiniz yer, aktif rolün doğru olup olmadığıdır."
+    }
+  ],
   "commands": [
     {
       "name": "Actionbar (Aksiyon Çubuğu)",

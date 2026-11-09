@@ -30,7 +30,7 @@
     {
       "time": "",
       "heading": "Yüzey, Gölge Ayarları ve Otomatik Güncellemenin Doğrulanması",
-      "body": "Görünüş çerçevesine çift tıklayıp **Görünüş Özellikleri**'nden görünür kenar kalem kalınlıklarını, **Yüzey Elemanları (Surface Elements)** tarama/dokularını ve ışık-gölge hesabını ayarlayın. Son olarak 3B modelde bir pencereyi büyütün ve cephe görünüşünün **elle müdahale olmadan** güncellendiğini doğrulayın; ilişkisel görünüşün gücü budur.",
+      "body": "Görünüş çerçevesine çift tıklayıp **Görünüş Özellikleri**'nden görünür kenar kalem kalınlıklarını, **Yüzey Elemanları (Surface Elements)** tarama/dokularını ve ışık-gölge hesabını ayarlayın. Teknik ruhsat paftasında gölgeyi kapalı tutun; çünkü gölge çizgi ve ölçü okunurluğunu bozar. Sunum/render amaçlı cephede ise gölgeyi açın; derinlik ve kütle algısını güçlendirir. Son olarak 3B modelde bir pencereyi büyütün ve cephe görünüşünün **elle müdahale olmadan** güncellendiğini doğrulayın; ilişkisel görünüşün gücü budur.",
       "figures": [
         "/akademi/temel-modelleme/11423_0EM7U000001Td6X_e4e3fd60.png"
       ]
@@ -42,7 +42,7 @@
       "body": "Cephe görünüşü modele **canlı bağlıdır**; üzerindeki çizgileri 2B çizgi gibi elle silip düzeltmeyin, ilk güncellemede değişikliğiniz kaybolur. Bir şey yanlışsa modeli veya görünüş özelliklerini düzeltin. Ayrıca kaynak olarak tüm katları seçtiğinizden emin olun, yoksa cephe eksik çıkar."
     }
   ],
-  "checkpoint": "Bina Strüktürünün türetilmiş bölmesinde cephe görünüşleriniz (Ön/Arka/Yan) duruyorsa ve modelde bir pencereyi değiştirdiğinizde görünüş otomatik güncelleniyorsa ilişkisel görünüşleri doğru üretmişsiniz demektir.",
+  "checkpoint": "Bu eğitim boyunca sıfırdan kurduğunuz iki katlı konutun ön, arka ve yan cephesi Bina Strüktürünün türetilmiş bölmesinde duruyorsa ve modelde bir pencereyi değiştirdiğinizde görünüş otomatik güncelleniyorsa ilişkisel görünüşleri doğru üretmişsiniz demektir.",
   "commands": [
     {
       "name": "Görünüş Oluştur (Create View)",

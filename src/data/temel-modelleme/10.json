@@ -20,7 +20,7 @@
     {
       "time": "03:30 – 07:00",
       "heading": "Pencere (Window / Fenster), Parapet Yüksekliği ve Diş (Reveal) Ayarları",
-      "body": "**Pencere (Window / Fenster)** komutuna girin; pencere genişliği, yüksekliği ve **Parapet Yüksekliğini (Sill Height / Brüstungshöhe)** ayarlayın. Çok katmanlı duvarlarda **Diş (Reveal / Anschlag)** sekmesinden dış yalıtım katmanının doğrama kasasına dönüş mesafesini tanımlayın.",
+      "body": "**Pencere (Window / Fenster)** komutuna girin; pencere genişliği, yüksekliği ve **Parapet Yüksekliğini (Sill Height / Brüstungshöhe)** ayarlayın. Çok katmanlı duvarlarda **Diş (Reveal / Anschlag)** sekmesinden dış yalıtım katmanının doğrama kasasına dönüş mesafesini tanımlayın. Bu yalıtım dönüşü (diş) tanımlanmazsa kasa kenarında yalıtım kesilir, ısı köprüsü oluşur ve kesit çiziminde boşluk hatalı görünür.",
       "figures": []
     },
     {

@@ -37,10 +37,10 @@
   "pitfalls": [
     {
       "title": "Model değişince lejantı güncellememek",
-      "body": "Lejant bazı durumlarda otomatik tazelenmez; yeni eleman ekleyip lejantı **güncellemezseniz** eksik/yanlış tablo paftaya gider. Değişiklik sonrası lejantı yenileyin ve satır sayısının elemanlarla örtüştüğünü doğrulayın."
+      "body": "Lejant bazı durumlarda otomatik tazelenmez; yeni eleman ekleyip lejantı **güncellemezseniz** eksik/yanlış tablo paftaya gider. İlişkisel bağ çoğu değişikliği anında yansıtsa da, kapsam dışı bir çizim dosyasına eleman eklemek veya nitelik değişikliği gibi durumlarda tablo güncel kalmayabilir; bu yüzden değişiklik sonrası lejantı yenileyin ve satır sayısının elemanlarla örtüştüğünü doğrulayın."
     }
   ],
-  "checkpoint": "Modele yeni bir eleman eklediğinizde lejant satırı otomatik ekleniyorsa, sütunlar hizalı ve yazılar okunaklıysa lejantınız doğru çalışıyor demektir.",
+  "checkpoint": "Modele yeni bir eleman eklediğinizde lejant satırı otomatik ekleniyorsa, sütunlar hizalı ve yazılar okunaklıysa lejantınız doğru çalışıyor demektir. Bu adımla hedef kat planınızın mahal lejantı artık doğrulanmış ve paftaya hazır durumdadır.",
   "commands": [
     {
       "name": "Lejant Oluştur (Create Legend)",

@@ -23,7 +23,7 @@
     {
       "time": "02:00 – 03:15",
       "heading": "Normal Kat Mimari Revizyonları",
-      "body": "1. Normal Kat çizim dosyasını aktif ederek dış giriş kapısını silip pencereye dönüştürün, balkon döşeme çıkmasını ve korkuluklarını ekleyin.",
+      "body": "1. Normal Kat çizim dosyasını aktif ederek dış giriş kapısını silip pencereye dönüştürün, balkon döşeme çıkmasını ve korkuluklarını ekleyin. Zemin kattaki ana giriş yalnızca bu eğitim boyunca sıfırdan kurduğunuz iki katlı konutun giriş kotunda anlamlıdır; üst katta aynı yerde normalde balkon kapısı veya pencere bulunur, bu yüzden kopyalanan kapıyı revize edersiniz.",
       "figures": []
     },
     {
@@ -41,7 +41,7 @@
       "body": "Elemanlar düzlemlere bağlı değilse, katı kopyaladığınızda üst katta **yanlış kota** otururlar. Kopyalamadan önce zemin kat elemanlarının OK/UK düzlemlerine bağlı olduğunu doğrulayın; böylece kopyalar üst kat kotuna kendiliğinden uyar."
     }
   ],
-  "checkpoint": "Zemin kat dosyalarını üst katlara kopyalayabiliyorsanız, kopyalanan elemanların üst kat kotuna otomatik uyduğunu Düzlem Yöneticisi'nde doğruladıysanız ve normal katta revizyon yapabiliyorsanız çok katlı modeli kurmayı kavramışsınız demektir.",
+  "checkpoint": "Zemin kat dosyalarını üst katlara kopyalayabiliyorsanız, kopyalanan elemanların üst kat kotuna otomatik uyduğunu Düzlem Yöneticisi'nde doğruladıysanız ve normal katta revizyon yapabiliyorsanız çok katlı modeli kurmayı kavramışsınız demektir. Bir katın yüksekliğini Düzlemler Paleti'nden değiştirdiğinizde üstteki tüm katların duvar, kolon ve döşemeleriyle birlikte 3B modelde kopmadan yukarı kaydığını gözle görüyorsanız düzlem bağları doğru kurulmuştur.",
   "commands": [
     {
       "name": "Çizim Dosyası İçeriğini Kopyala",

@@ -4,7 +4,7 @@
   "title": "3B Maket Modelinin Oluşturulması",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 3 & Modül 6: 3B Yüzeyden 3B Katı Maket (Extrude / 3D-Fläche zu 3D-Körper), Boolean Kesme ve Kademeli Maket",
-  "intro": "Sunum ve ışık-gölge çalışmaları için araziyi kalınlıklı bir **3B katı maket** haline getirebilirsiniz. Bu ders, 3B arazi yüzeyinden altı kapalı bir katı hacim üretmeyi ve maket görünümünü ayarlamayı anlatır.",
+  "intro": "Sunum ve ışık-gölge çalışmaları için araziyi kalınlıklı bir **3B katı maket** haline getirebilirsiniz. Bu ders, 3B arazi yüzeyinden altı kapalı bir katı hacim üretmeyi ve maket görünümünü ayarlamayı anlatır. Önerilen yol, doğrudan bir taban kotuna kadar katıya dönüştüren **Yöntem A**'dır; özel bir kaide formu (dairesel, pahlı, sınırdan taşan) gerekmedikçe Boolean kesmeli **Yöntem B** ileri/opsiyonel bir alternatiftir. Örnek arsamızı (zemin kotu yaklaşık 100 m, en yüksek nokta yaklaşık 112 m) tabanı 95 m'de düz, üstü topoğrafik bir maket bloğuna çevireceğiz.",
   "objectives": [
     "Kağıt kalınlığındaki 3B Arazi Yüzeyini (`3D Surface`) mimari sunumlarda ve kesitlerde dolu görünecek bir **3B Katı Maket Modeline (3D Solid Terrain Block / 3D-Körper)** dönüştürmek.",
     "**Yüzeyi Katıya Dönüştür / Ekstrüzyon (Extrude / 3D Surface to 3D Solid)** ve **Boolean Çıkarma / Kesişim (Subtract / Intersect)** yöntemleriyle tabanı düz, üstü topoğrafik eğimli 3B arazi bloğu üretmek.",

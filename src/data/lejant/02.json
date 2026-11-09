@@ -4,7 +4,7 @@
   "title": "Bir Lejantın Parçaları",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 4: Lejant Şablon Mimarisi (Header, Body, Sublist, Summary, Footer)",
-  "intro": "Bir lejantı kurmadan önce parçalarını tanımak gerekir: **lejant gövdesi** (çerçeve/başlık), **lejant hücreleri** (her satır/sütun) ve hücrelerin içindeki **nitelik/formül alanları**. Bu ders, bir lejantın anatomisini ve hücrelerin niteliklere nasıl bağlandığını gösterir.",
+  "intro": "Bir lejantı kurmadan önce parçalarını tanımak gerekir: **lejant gövdesi** (çerçeve/başlık), **lejant hücreleri** (her satır/sütun) ve hücrelerin içindeki **nitelik/formül alanları**. Bu ders, bir lejantın anatomisini ve hücrelerin niteliklere nasıl bağlandığını gösterir. Burada tanıyacağınız bileşenler, ilerleyen derslerde kuracağınız kat planı mahal lejantının iskeletini oluşturur.",
   "objectives": [
     "Bir Allplan lejant şablonunu oluşturan 5 temel bileşeni (Üst Bilgi, Ana Satır, Alt Liste, Toplam/Özet Satırı, Alt Bilgi) tanımak.",
     "Sabit metinler, 2B tablo çerçeve çizgileri ve dinamik Hücre (Cell / Zelle) elemanlarının görev dağılımını öğrenmek.",
@@ -14,19 +14,19 @@
     {
       "time": "",
       "heading": "Üst Bilgi (Header / Kopfzeile) ve Sütun Başlıkları",
-      "body": "**Üst Bilgi (Header)** bölgesi lejantın başında bir kez (veya her yeni sütun/sayfa başında) basılır. Tablo adını, proje adı niteliğini ve sütun başlık çerçevelerini içerir.",
+      "body": "**Üst Bilgi (Header)** bölgesi lejantın başında bir kez (veya her yeni sütun/sayfa başında) basılır. Tablo adını, proje adı niteliğini ve sütun başlık çerçevelerini içerir. Üst Bilgi, hangi sütunun hangi veriyi gösterdiğini okuyucuya bir kez bildirdiği için gerekir; sayfa/sütun başında tekrarlanması ise tablo bölündüğünde başlıkların kaybolmasını önler.",
       "figures": []
     },
     {
       "time": "",
       "heading": "Ana Satır (Body / Hauptzeile) ve Tekrarlama Mantığı",
-      "body": "**Ana Satır (Body)** lejantın kalbidir. Seçilen filtreye (örn. `Obje = Mahal` veya `Obje = Çubuk Donatı`) uyan her nesne için bu satır bir kez çoğaltılır. İçindeki **Hücreler (Cells / Zellen)** nesnenin niteliklerini (`@507@` Oda Adı, `@224@` Taban Alanı vb.) okur.",
+      "body": "**Ana Satır (Body)** lejantın kalbidir. Seçilen filtreye (örn. `Obje = Mahal` veya `Obje = Çubuk Donatı`) uyan her nesne için bu satır bir kez çoğaltılır. İçindeki **Hücreler (Cells / Zellen)** nesnenin niteliklerini (`@507@` Oda Adı, `@224@` Taban Alanı vb.) okur. Ana Satırın her nesne için bir kez tekrarlanması gerekir; çünkü her mahal veya her donatı pozu tabloda kendi satırını almadan metraj tam olmaz. Alt Liste ise bir nesnenin iç bileşenlerini (kaplama katmanları gibi) ana satırın altında açtığı için ayrı bir bileşendir.",
       "figures": []
     },
     {
       "time": "",
       "heading": "Toplam/Özet Satırı (Summary / Summenzeile) ve Alt Bilgi (Footer)",
-      "body": "**Toplam Satırı (Summary)** sayısal hücrelerin toplamını (`SUM`) veya ortalamasını yazdırır. Donatı lejantlarında her çap için ayrı toplam ağırlık (`Ø8, Ø12, Ø16...`) ve genel toplam ağırlık burada üretilir.",
+      "body": "**Toplam Satırı (Summary)** sayısal hücrelerin toplamını (`SUM`) veya ortalamasını yazdırır. Donatı lejantlarında her çap için ayrı toplam ağırlık (`Ø8, Ø12, Ø16...`) ve genel toplam ağırlık burada üretilir. Toplam Satırı, tek tek satırları elle toplamadan metraj sonucunu verdiği için gerekir; Alt Bilgi ise tarih, sayfa numarası ve not gibi belgeyi tanımlayan bilgileri taşıdığı için ayrı tutulur.",
       "figures": []
     }
   ],
@@ -36,7 +36,7 @@
       "body": "Lejant gövdesi (çerçeve) ile lejant hücresi (tek bir bilgi kutusu) farklı nesnelerdir. Tasarımı hücre düzeyinde kurmazsanız, bilgiler niteliklere bağlanmaz ve lejant otomatik beslenmez. Önce hücreleri ve nitelik bağlarını tanımlayın, sonra gövdeyi oluşturun."
     }
   ],
-  "checkpoint": "Bir lejantta gövde, hücre ve nitelik/formül alanlarını ayırt edebiliyor ve her hücrenin hangi nitelikten beslendiğini okuyabiliyorsanız lejant yapısını kavramışsınız demektir.",
+  "checkpoint": "Bir lejantta gövde, hücre ve nitelik/formül alanlarını ayırt edebiliyor ve her hücrenin hangi nitelikten beslendiğini okuyabiliyorsanız lejant yapısını kavramışsınız demektir. Somut olarak: ekranda en üstte başlık bandı ve sütun başlıkları, altında her nesne için tekrarlanan veri satırları ve en altta toplam satırını ayırt edebiliyorsanız hazırsınız. Bu yapı, kat planı mahal lejantınızın da temelini oluşturur.",
   "commands": [
     {
       "name": "Üst Bilgi (Header / Kopfzeile)",

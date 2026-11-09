@@ -30,7 +30,7 @@
     {
       "time": "",
       "heading": "Çap Özeti Alt Listesi, Toplam Satırı ve Referans Noktası",
-      "body": "Çap bazlı özet ve genel toplam ağırlık (`Toplam kg`) bölgesini **Toplam / Alt Liste** olarak bağlayın ve sağ üst veya sol üst köşeyi yerleştirme referans noktası olarak seçip donatı lejantını kaydedin.",
+      "body": "Çap bazlı özet ve genel toplam ağırlık (`Toplam kg`) bölgesini **Toplam / Alt Liste** olarak bağlayın ve sağ üst veya sol üst köşeyi yerleştirme referans noktası olarak seçip donatı lejantını kaydedin. Ana poz tablosu ile çap özeti arasında ana-alt (Sublist) ilişkisi kurulur; çünkü aynı poz verisi hem poz poz listelenmeli hem de çaplara göre gruplanıp ağırlıkça toplanmalıdır. Alt liste bu ikinci okumayı aynı veriden türettiği için tutarlılığı garanti eder.",
       "figures": []
     }
   ],
@@ -40,7 +40,7 @@
       "body": "Lejantı oluştururken ilgili donatıları/elemanı doğru seçmezseniz tablo boş veya eksik gelir. Lejantı üretirken kapsamı (hangi eleman/çizim dosyası) doğru belirleyin ve tüm pozların listelendiğini doğrulayın."
     }
   ],
-  "checkpoint": "Donatı lejant tablonuz elemanın pozlarını, çap ve boylarını doğru listeliyorsa ve toplam demir miktarı hesaplanıyorsa donatı lejantını doğru oluşturmuşsunuz demektir.",
+  "checkpoint": "Donatı lejant tablonuz elemanın pozlarını, çap ve boylarını doğru listeliyorsa ve toplam demir miktarı hesaplanıyorsa donatı lejantını doğru oluşturmuşsunuz demektir. Bu tablo, hedef kiriş donatı cetvelinizin çalışan ilk sürümüdür.",
   "commands": [
     {
       "name": "Lejant Tanımla (Define Legend)",

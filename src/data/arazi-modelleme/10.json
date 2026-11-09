@@ -43,7 +43,7 @@
       "body": "Bina modelini arazi kotundan bağımsız ±0.00'da bırakırsanız, 3B maketde bina havada veya gömülü görünür. Binanın ±0.00 kotunu arazinin ilgili noktasıyla ilişkilendirin ve giriş kotu ile arazi kotu arasındaki şevi/merdiveni modelleyin."
     }
   ],
-  "checkpoint": "Binanız doğru kotta araziye oturuyorsa, zemin kat ±0.00'ı arazi kotuyla ilişkiliyse ve çevresinde kazı/dolgu (şev) tutarlıysa çevre maketini tamamlamışsınız demektir.",
+  "checkpoint": "Binanız doğru kotta araziye oturuyorsa, zemin kat ±0.00'ı arazi kotuyla ilişkiliyse ve çevresinde kazı/dolgu (şev) tutarlıysa çevre maketini tamamlamışsınız demektir. Kapanış kontrolü olarak örnek arsamızın tüm zincirini birlikte açın: 100 m–112 m eğimli arazisi (Ders 3-6), ona referans olan düzlem (Ders 8), eğime oturan yollar ve +0.15 m kaldırımı (Ders 9) ve ±0.00'ı arazi kotuna bağlı binaları (bu ders) tek bir vaziyet maketinde tutarlı görünüyorsa seri tamamlanmıştır.",
   "commands": [
     {
       "name": "Duvar / Kütle (Araziye Bağlı Yükseklik)",

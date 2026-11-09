@@ -15,7 +15,7 @@
     {
       "time": "",
       "heading": "Ağ Oluştur (Mesh / Triangulate) Komutu ile İlk SAM Modelinin Üretimi",
-      "body": "**Çevre -> Sayısal Arazi Modeli (Digital Terrain Model) -> Ağ Oluştur (Mesh / Vermaschen)** komutunu seçin.\n1. Yeni bir arazi modeli oluşturmak için ekranda boş bir alana tıklayın ve modele bir ad/numara verin.\n2. Üçgenlemeye dahil edilecek tüm 3B arazi noktalarını pencere açarak (`Selection Rectangle`) seçin.\n3. Allplan noktaları Delaunay üçgenleme kurallarına göre birleştirerek anında **Sayısal Arazi Modelini (SAM / DTM)** oluşturur.",
+      "body": "**Çevre -> Sayısal Arazi Modeli (Digital Terrain Model) -> Ağ Oluştur (Mesh / Vermaschen)** komutunu seçin.\n1. Yeni bir arazi modeli oluşturmak için ekranda boş bir alana tıklayın ve modele bir ad/numara verin.\n2. Üçgenlemeye dahil edilecek tüm 3B arazi noktalarını pencere açarak (`Selection Rectangle`) seçin.\n3. Allplan noktaları Delaunay üçgenleme kurallarına göre birleştirerek anında **Sayısal Arazi Modelini (SAM / DTM)** oluşturur. Üçgenleme, her noktayı en yakın komşularıyla birleştirip aralarında düz üçgen yüzeyler kurar; böylece ölçülen gerçek noktalar korunur ve ara bölgeler bu komşuluktan interpolasyonla tahmin edilir. Yüzeyin sadık olması, bu yüzden noktaların yoğunluğuna ve doğru yere konmasına bağlıdır.",
       "figures": [
         "/akademi/arazi-modelleme/9311_0EMVi000003tfon_fe2a6cb2.png"
       ]
@@ -45,7 +45,7 @@
       "body": "Üçgenleme varsayılan olarak en dıştaki noktaları **dışbükey (konveks) bir zarfta** birleştirir; arsa L şeklinde veya girintiliyse sınır dışında fazla üçgenler kalır ve alan/kübaj yanlış çıkar. **Dış Sınır** komutuyla gerçek arsa sınırını işaretleyip fazla üçgenleri kırpın."
     }
   ],
-  "checkpoint": "SAM modeliniz noktaları üçgen ağıyla birleştirdiyse ve dış sınır gerçek arsa köşelerine kırpıldıysa (konveks zarf fazlalıkları temizlendi) sayısal arazi modelini doğru kurmuşsunuz demektir.",
+  "checkpoint": "SAM modeliniz noktaları üçgen ağıyla birleştirdiyse ve dış sınır gerçek arsa köşelerine kırpıldıysa (konveks zarf fazlalıkları temizlendi) sayısal arazi modelini doğru kurmuşsunuz demektir. Örnek arsamızın ağı, 100 m'deki alçak kenardan 112 m'deki yüksek köşeye doğru sürekli tırmanan bir yüzey vermelidir.",
   "commands": [
     {
       "name": "Ağ Oluştur (Mesh / Triangulate)",

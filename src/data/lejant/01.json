@@ -4,10 +4,10 @@
   "title": "Giriş",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 4 & Modül 5: İlişkisel Lejantlar (Associative Legends) ve Dinamik Metraj Tabloları",
-  "intro": "**Lejant (Legend)**, bir paftadaki semboller, taramalar, malzemeler veya donatı pozlarının ne anlama geldiğini açıklayan tablodur. ALLPLAN'da lejantı elle çizmezsiniz: modeldeki **niteliklerden ve formüllerden otomatik beslenen akıllı bir nesne** olarak kurarsınız. Bu seri, mimari ve donatı lejantlarını sıfırdan tasarlamayı, hücre tanımlamayı, oluşturmayı ve düzenlemeyi öğretir.",
+  "intro": "**Lejant (Legend)**, bir paftadaki semboller, taramalar, malzemeler veya donatı pozlarının ne anlama geldiğini açıklayan tablodur. ALLPLAN'da lejantı elle çizmezsiniz: modeldeki **niteliklerden ve formüllerden otomatik beslenen akıllı bir nesne** olarak kurarsınız. Bu seri, mimari ve donatı lejantlarını sıfırdan tasarlamayı, hücre tanımlamayı, oluşturmayı ve düzenlemeyi öğretir. Seri boyunca iki somut hedef çıktıya çalışacaksınız: bir kat planının mahal lejantı (mimari dersler) ve bir kiriş donatı cetveli (donatı dersleri).",
   "objectives": [
     "Allplan'da İlişkisel Lejant (Associative Legend / Legende) ile Rapor (Report) ve Etiket Stili (Label Style / Beschriftungsbild) arasındaki farkı kavramak.",
-    "Mimari Lejantların (Mahal listesi, Kapı/Pencere metraj tablosu, Kat alan özeti) ve Mühendislik Donatı Lejantlarının (Stabstahllegende / Mattenlegende — Çubuk ve Hasır Donatı Metraj Cetveli) çalışma mantığını öğrenmek.",
+    "Mimari Lejantların (Mahal listesi, Kapı/Pencere metraj tablosu, Kat alan özeti) ve Mühendislik Donatı Lejantlarının (Stabstahllegende / Mattenlegende, Çubuk ve Hasır Donatı Metraj Cetveli) çalışma mantığını öğrenmek.",
     "Çizim dosyasına veya doğrudan paftaya yerleştirilen ilişkisel lejantların model değiştiğinde gerçek zamanlı nasıl güncellendiğini tanımak."
   ],
   "steps": [
@@ -20,7 +20,7 @@
     {
       "time": "",
       "heading": "İlişkisel (Associative) ve Statik Lejant Farkı",
-      "body": "Lejant yerleştirilirken **İlişkisel (Associative)** seçeneği işaretlendiğinde tablo modelle canlı bağını korur: planda bir odanın alanı büyüdüğünde veya bir donatı pozunun adedi değiştiğinde lejant tablosu otomatik güncellenir.",
+      "body": "Lejant yerleştirilirken **İlişkisel (Associative)** seçeneği işaretlendiğinde tablo modelle canlı bağını korur: planda bir odanın alanı büyüdüğünde veya bir donatı pozunun adedi değiştiğinde lejant tablosu otomatik güncellenir. Bu ilişkisel bağ, metraj ile pafta arasında tutarsızlığı önlediği için önemlidir: statik bir tabloda her model değişikliğini elle düzeltmeniz gerekir ve atlanan bir güncelleme yanlış metraja yol açar.",
       "figures": []
     },
     {

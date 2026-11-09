@@ -42,7 +42,7 @@
     {
       "time": "",
       "heading": "Yollar ve Kaldırımlar",
-      "body": "`104 - Yollar ve Kaldırımlar` dosyasında, haritadaki yol kenarlarını takip ederek kapalı poligon oluşturun. **3B Elemanları Çizgi/Poligon ile Böl (Split 3D Elements)** ile arazi yüzeyini yol sınırları boyunca bölüp ayrılan parçaya `Asfalt/Parke Taşı` dokusu atayın. Kaldırımı **Ekstrüzyon (Extrude)** ile `+0.15 m` yükselterek bordür kademesini oluşturun.",
+      "body": "`104 - Yollar ve Kaldırımlar` dosyasında, haritadaki yol kenarlarını takip ederek kapalı poligon oluşturun. **3B Elemanları Çizgi/Poligon ile Böl (Split 3D Elements)** ile arazi yüzeyini yol sınırları boyunca bölüp ayrılan parçaya `Asfalt/Parke Taşı` dokusu atayın. Kaldırımı **Ekstrüzyon (Extrude)** ile `+0.15 m` yükselterek bordür kademesini oluşturun. Son olarak, bu eğitim boyunca sıfırdan kurduğunuz iki katlı konutu bu arazi modeline oturtun ve binanın `±0.00` kotunu arsanın gerçek kotuyla (zemin yüksekliğiyle) ilişkilendirin; böylece bina, dolgu/kazı dengesiyle gerçek eğim üzerine doğru yükseklikte yerleşir.",
       "figures": []
     }
   ],

@@ -22,7 +22,7 @@
     {
       "time": "",
       "heading": "Format (`A`, `F`, `I`), Ondalık Basamak ve Metin Hizalama",
-      "body": "Metin hücreleri için `A20` (sola hizalı), alan ve hacim hücreleri için `F8.2` (2 ondalık basamaklı, sağa veya ondalık noktaya hizalı) formatını seçin; birimi (`m²`, `m³`, `m`) otomatik veya sabit sütun olarak ayarlayın.",
+      "body": "Metin hücreleri için `A20` (sola hizalı), alan ve hacim hücreleri için `F8.2` (2 ondalık basamaklı, sağa veya ondalık noktaya hizalı) formatını seçin; birimi (`m²`, `m³`, `m`) otomatik veya sabit sütun olarak ayarlayın. Format seçimi önemlidir: metin (`A`) biçimindeki bir değer toplanamaz ve sayısal sütunda hizalanmaz; alan/hacim gibi toplanacak değerleri sayısal (`F`) formatta tanımlarsanız ondalık nokta hizası tutar ve toplam satırı doğru hesaplar.",
       "figures": []
     },
     {
@@ -40,7 +40,7 @@
       "body": "Bir hücreye yanlış veya var olmayan bir nitelik bağlarsanız, çıktıda o hücre **boş veya hatalı** gelir. Nitelik adını modeldeki gerçek nitelikle birebir eşleştirin; alan/hacim gibi hesap alanlarında doğru formülü (ör. net alan) kullanın."
     }
   ],
-  "checkpoint": "Her hücre doğru niteliğe/formüle bağlıysa ve örnek bir elemanda hücreler gerçek değerleri (alan, no, boyut) gösteriyorsa hücre tanımını doğru yapmışsınız demektir.",
+  "checkpoint": "Her hücre doğru niteliğe/formüle bağlıysa ve örnek bir elemanda hücreler gerçek değerleri (alan, no, boyut) gösteriyorsa hücre tanımını doğru yapmışsınız demektir. Bu hücreler, kat planı mahal lejantınızın her bir sütununu besler.",
   "commands": [
     {
       "name": "Hücre Tanımla (Define Cell)",

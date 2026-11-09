@@ -4,7 +4,7 @@
   "title": "Arazi Dosyasını Alma",
   "duration": "",
   "sourceModule": "Proje 1 — Modül 2 & Modül 6: DXF/DWG Halihazır Harita İçe Aktarma, Büyük Koordinatlar (Ofset) ve Nokta Dosyaları",
-  "intro": "Arazi modellemenin ilk adımı, harita mühendisinden gelen **halihazır haritayı** (DXF/DWG) projeye doğru almaktır. Burada en kritik konu birim ve koordinattır: haritalar çoğu zaman büyük ülke koordinatlarıyla (UTM/ITRF) gelir ve doğru ayarlanmazsa çizim orijinden çok uzakta açılıp grafik hatalarına yol açar.",
+  "intro": "Arazi modellemenin ilk adımı, harita mühendisinden gelen **halihazır haritayı** (DXF/DWG) projeye doğru almaktır. Burada en kritik konu birim ve koordinattır: haritalar çoğu zaman büyük ülke koordinatlarıyla (UTM/ITRF) gelir ve doğru ayarlanmazsa çizim orijinden çok uzakta açılıp grafik hatalarına yol açar. Örnek arsamız (zemin kotu yaklaşık 100 m, en yüksek nokta yaklaşık 112 m) de böyle bir halihazır pafta içinde gelecek; ilk işimiz onu doğru birim ve ofsetle içeri almak.",
   "objectives": [
     "Halihazır harita dosyalarını (`.dWG`, `.dxf`) doğru ölçü birimi (`m`, `cm`, `mm`), ölçek ve katman (layer) eşleştirmesiyle boş bir çizim dosyasına içe aktarmak (`Import`).",
     "Büyük ülke koordinatlarına (`UTM`, `ITRF`, `ED50`) sahip harita dosyalarını içe aktarırken karşılaşılan görüntü bozulmalarını önlemek için **Ağırlık Merkezini Ayarla: Ofset (Adjust center of gravity to: Offset)** seçeneğini kullanmak.",
@@ -23,7 +23,7 @@
     {
       "time": "",
       "heading": "İçe Aktar (Import) Komutu ve DXF/DWG Seçenekleri",
-      "body": "**Dosya (File) -> İçe Aktar (Import) -> AutoCAD Verilerini İçe Aktar (Import AutoCAD Data)** komutunu çalıştırın (veya dosyayı doğrudan çalışma alanına sürükleyip bırakın). Dosya seçimi penceresinde sağ alttaki **Seçenekler... (Options...)** butonuna tıklayın:\n- **Genel Ayarlar (General Settings)** sekmesinde **Dosya Birimi (Unit in File)** değerini harita birimiyle (`Metre`) eşleştirin.\n- **Koordinatlar ve Uzunluk Parametreleri (Coordinate and Length Parameters)** bölümünde **Ağırlık merkezini ayarla: Ofset (Adjust center of gravity to: Offset)** seçeneğini işaretleyin. Bu seçenek, büyük UTM koordinatlarını otomatik olarak proje ofsetine kaydeder ve çizimi Allplan orijinine (`0,0,0`) taşır.",
+      "body": "**Dosya (File) -> İçe Aktar (Import) -> AutoCAD Verilerini İçe Aktar (Import AutoCAD Data)** komutunu çalıştırın (veya dosyayı doğrudan çalışma alanına sürükleyip bırakın). Dosya seçimi penceresinde sağ alttaki **Seçenekler... (Options...)** butonuna tıklayın:\n- **Genel Ayarlar (General Settings)** sekmesinde **Dosya Birimi (Unit in File)** değerini harita birimiyle (`Metre`) eşleştirin.\n- **Koordinatlar ve Uzunluk Parametreleri (Coordinate and Length Parameters)** bölümünde **Ağırlık merkezini ayarla: Ofset (Adjust center of gravity to: Offset)** seçeneğini işaretleyin. Bu seçenek, büyük UTM koordinatlarını otomatik olarak proje ofsetine kaydeder ve çizimi Allplan orijinine (`0,0,0`) taşır. Ofset gereklidir çünkü CAD motoru noktaları sınırlı ondalık basamakla tutar; model orijinden milyonlarca metre uzakta olursa bu basamaklar yüksekliğin ve açının küçük farklarını temsil edemez ve gölge, alan, kesit hesapları bozulur.",
       "figures": [
         "/akademi/arazi-modelleme/11158_0EM7U000001Tdbf_4a5e9865.png"
       ]

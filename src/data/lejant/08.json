@@ -31,7 +31,7 @@
     {
       "time": "",
       "heading": "Çap Bazlı Ağırlık Özeti ve Genel Tonaj Toplamı",
-      "body": "**Toplam/Özet (Summary)** bölgesinde her çap için toplam boy (m), birim ağırlık (`kg/m`) ve toplam ağırlık (`kg`) hücreleri ile tüm pozların **Genel Toplam Ağırlık (`kg` / `ton`)** hücresini oluşturun.",
+      "body": "**Toplam/Özet (Summary)** bölgesinde her çap için toplam boy (m), birim ağırlık (`kg/m`) ve toplam ağırlık (`kg`) hücreleri ile tüm pozların **Genel Toplam Ağırlık (`kg` / `ton`)** hücresini oluşturun. Toplam boy (adet × birim boy) ve kg/m birim ağırlık mantığı hücrede formülle kurulur; çünkü ağırlık, çapa bağlı kesit alanından türeyen bir büyüklüktür ve her çap için doğru birim ağırlıkla çarpılmadan tonaj güvenilir çıkmaz.",
       "figures": []
     }
   ],
@@ -41,7 +41,7 @@
       "body": "Çap, boy, adet veya poz niteliğini yanlış sütuna bağlarsanız metraj tablosu yanlış demir miktarı verir; bu doğrudan maliyet hatasıdır. Her sütunu doğru donatı niteliğiyle eşleştirin ve toplam boy formülünü (adet × birim boy) kontrol edin."
     }
   ],
-  "checkpoint": "Hücreleriniz poz/çap/boy/adet niteliklerine doğru bağlıysa ve örnek bir donatıda toplam boy formülü doğru hesaplıyorsa donatı hücre tanımını doğru yapmışsınız demektir.",
+  "checkpoint": "Hücreleriniz poz/çap/boy/adet niteliklerine doğru bağlıysa ve örnek bir donatıda toplam boy formülü doğru hesaplıyorsa donatı hücre tanımını doğru yapmışsınız demektir. Bu hücreler, hedef kiriş donatı cetvelinizin her sütununu besleyecektir.",
   "commands": [
     {
       "name": "Donatı Nitelik Hücresi",

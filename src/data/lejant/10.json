@@ -20,7 +20,7 @@
     {
       "time": "",
       "heading": "Donatı Revizyonu ve Otomatik Tonaj Güncelleme Testi",
-      "body": "Plandaki veya kesitteki bir etriye/boyuna donatının çapını (`Ø12 -> Ø14`) veya aralığını değiştirin; donatı lejantındaki adet, birim ağırlık, büküm kolu uzunlukları ve genel toplam ağırlığın (`kg`) hatasız güncellendiğini doğrulayın.",
+      "body": "Plandaki veya kesitteki bir etriye/boyuna donatının çapını (`Ø12 -> Ø14`) veya aralığını değiştirin; donatı lejantındaki adet, birim ağırlık, büküm kolu uzunlukları ve genel toplam ağırlığın (`kg`) hatasız güncellendiğini doğrulayın. Yeniden pozlandırma metrajı doğrudan etkiler; çünkü aynı çap ve büküm boyuna sahip donatılar tek pozda toplanır. Pozlar değişince hangi donatının hangi adetle hesaplandığı da değişir ve toplam demir miktarı buna göre yeniden oluşur.",
       "figures": [
         "/akademi/lejant/8713_0EM67000008DTQ4_d5f2622b.png"
       ]
@@ -40,7 +40,7 @@
       "body": "Donatı değişince lejant metrajını **yenilemezseniz**, paftaya eski/yanlış demir miktarı gider ve imalatta hata doğar. Her donatı değişikliğinden sonra lejantı güncelleyin ve toplamları kontrol edin; donatı lejantı bir metraj belgesidir, görsel süs değildir."
     }
   ],
-  "checkpoint": "Bir donatının çap/boy/adedini değiştirdiğinizde lejant metrajı otomatik güncelleniyorsa, pozlar doğru toplanıyor ve tablo okunaklıysa donatı lejantınız doğru çalışıyor demektir.",
+  "checkpoint": "Bir donatının çap/boy/adedini değiştirdiğinizde lejant metrajı otomatik güncelleniyorsa, pozlar doğru toplanıyor ve tablo okunaklıysa donatı lejantınız doğru çalışıyor demektir. Bu adımla hedef kiriş donatı cetveliniz doğrulanmış ve metraj belgesi olarak paftaya hazır durumdadır.",
   "commands": [
     {
       "name": "Donatı Lejantı Oluştur",

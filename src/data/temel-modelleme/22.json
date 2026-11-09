@@ -23,7 +23,7 @@
     {
       "time": "",
       "heading": "Plan, Kesit ve Görünüşlerin Yerleştirilmesi ve Katman Filtresi",
-      "body": "**Çizim Dosyası Yerleştir (Layout Element)** ile Zemin Kat Planı (`1:50`), Normal Kat Planı (`1:50`), Kesitler (`1:50`) ve Cephe Görünüşlerini (`1:100`) paftaya dizin. **Katman (Layer)** filtresiyle istemediğiniz yardımcı katmanları gizleyin, **Pafta Penceresi (Layout Window)** ile sınırları kırpın.",
+      "body": "**Çizim Dosyası Yerleştir (Layout Element)** ile Zemin Kat Planı (`1:50`), Normal Kat Planı (`1:50`), Kesitler (`1:50`) ve Cephe Görünüşlerini (`1:100`) paftaya dizin. Planı ve kesiti `1:50`, cepheyi `1:100` dizmenizin nedeni şudur: duvar, kapı ve kot detayının okunması gereken plan daha büyük ölçekte verilir, bütünü ve oranı gösteren cephe ise daha küçük ölçekte sığdırılır. **Katman (Layer)** filtresiyle istemediğiniz yardımcı katmanları gizleyin, **Pafta Penceresi (Layout Window)** ile sınırları kırpın.",
       "figures": []
     },
     {
@@ -41,7 +41,7 @@
       "body": "Pafta elemanları çizimlerin **referansıdır**, kopyası değil: **Çizim Dosyası Yerleştir** ile yerleştirin, modeli değiştirince pafta kendiliğinden güncellensin. Çizimi elle kopyalarsanız bağ kopar ve pafta eskir. Çıktıyı da rasterize değil katmanlı vektörel PDF olarak verin."
     }
   ],
-  "checkpoint": "DIN A1 paftanızda antet proje bilgilerini otomatik yazıyorsa, plan/kesit/görünüşler doğru ölçekte dizili ve katmanlı vektörel PDF üretebiliyorsanız çıktı aşamasını tamamladınız demektir.",
+  "checkpoint": "DIN A1 paftanızda antet proje bilgilerini otomatik yazıyorsa, plan/kesit/görünüşler doğru ölçekte dizili ve katmanlı vektörel PDF üretebiliyorsanız çıktı aşamasını tamamladınız demektir. PDF'i açıp yakınlaştırdığınızda çizgiler bulanıklaşmıyor, keskin kalıyorsa çıktınızın rasterize değil gerçekten vektörel olduğunu doğrulamış olursunuz.",
   "commands": [
     {
       "name": "Sayfa Ayarı (Page Set Up)",

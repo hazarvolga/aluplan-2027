@@ -42,7 +42,7 @@
       "body": "**Standart** ölçü çizgisi, ölçtüğü geometri değişince kendini güncellemez; değeri elle düzeltmek zorunda kalırsınız ve bu, çıktıda yanlış ölçüye yol açar. Model üzerinde her zaman **ilişkisel (associative)** ölçülendirmeyi tercih edin."
     }
   ],
-  "checkpoint": "İlişkisel bir ölçü çizgisi koyup modeli değiştirdiğinizde ölçünün otomatik güncellendiğini görüyorsanız, duvar ve kot ölçülendirmesi yapabiliyor, mevcut bir ölçü dizisine nokta ekleyip çıkarabiliyorsanız ölçülendirmeyi doğru kullanıyorsunuz demektir.",
+  "checkpoint": "İlişkisel bir ölçü çizgisi koyup modeli değiştirdiğinizde ölçünün otomatik güncellendiğini görüyorsanız, duvar ve kot ölçülendirmesi yapabiliyor, mevcut bir ölçü dizisine nokta ekleyip çıkarabiliyorsanız ölçülendirmeyi doğru kullanıyorsunuz demektir. Bunu somutlaştırmak için, eğitim boyunca kurduğunuz iki katlı konutun cephesini ilişkisel olarak ölçülendirin, sonra bir pencereyi yana taşıyıp ölçü değerinin kendiliğinden güncellendiğini gözleyin.",
   "commands": [
     {
       "name": "Ölçü Çizgisi (Dimension Line)",

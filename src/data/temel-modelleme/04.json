@@ -28,7 +28,7 @@
     {
       "time": "07:00 – 11:10",
       "heading": "Düzlem Yöneticisi ve Yükseklik İlişkileri (OK / UK)",
-      "body": "**Düzlemler Paleti (Planes Palette / Ebenenpalette)** üzerinden her katın döşeme üst kotunu ve kat yüksekliğini (örn. `Zemin Kat: ±0.00 -> +3.00 m`) tanımlayın. Yapı elemanlarının **Yükseklik (Height)** ayarlarında **Alt Kot (Bottom Level / UK)** değerini *Katın Alt Düzlemine*, **Üst Kot (Top Level / OK)** değerini *Katın Üst Düzlemine* (döşeme kalınlığı kadar ofsetle) bağlayarak tam parametrik yükseklik ilişkisi kurun.",
+      "body": "Buradaki sıra önemlidir: önce katın düzlemini tanımlayın, sonra elemanı bu düzleme bağlayın. **Düzlemler Paleti (Planes Palette / Ebenenpalette)** üzerinden her katın döşeme üst kotunu ve kat yüksekliğini (örn. `Zemin Kat: ±0.00 -> +3.00 m`) tanımlayın. Yapı elemanlarının **Yükseklik (Height)** ayarlarında **Alt Kot (Bottom Level / UK)** değerini *Katın Alt Düzlemine*, **Üst Kot (Top Level / OK)** değerini *Katın Üst Düzlemine* (döşeme kalınlığı kadar ofsetle) bağlayarak tam parametrik yükseklik ilişkisi kurun. OK/UK bağlamanın nedeni şudur: kat kotunu tek yerden (düzlemden) değiştirdiğinizde o düzleme bağlı tüm elemanlar birlikte kayar, böylece yükseklikleri eleman eleman elle düzeltmek zorunda kalmazsınız.",
       "figures": [
         "/akademi/temel-modelleme/11225_0EM7U000001TdQ2_50f4a5d2.png"
       ]

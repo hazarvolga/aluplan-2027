@@ -31,6 +31,12 @@
     }
   ],
   "checkpoint": "Bu dersi anladıysanız şu üç cümleyi kendi sözlerinizle söyleyebilirsiniz: bir duvar sadece iki çizgi değil, içinde malzeme ve yükseklik bilgisi olan bir nesnedir; model bir kez kurulunca kesit, görünüş ve metraj ondan otomatik üretilir; her eleman Bina Strüktürü içindeki bir çizim dosyasında durur. Komut uygulaması yok; sonraki derste arayüzü tanıyacağız.",
+  "pitfalls": [
+    {
+      "title": "Duvarı sadece iki çizgi sanmak",
+      "body": "BIM'de duvar, içinde malzeme, kalınlık ve yükseklik bilgisi taşıyan bir nesnedir. Bu eğitim boyunca sıfırdan kuracağınız iki katlı konutun duvarlarını iki paralel çizgi olarak çizerseniz, o çizgiler veri taşımaz; bu yüzden sonradan o duvardan otomatik metraj, kesit veya görünüş beklememelisiniz. Baştan duvar nesnesi olarak modellerseniz tüm bu çıktılar kendiliğinden üretilebilir."
+    }
+  ],
   "commands": [
     {
       "name": "Proje (Project)",

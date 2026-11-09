@@ -37,7 +37,15 @@
           "Çelik yapı **çelik profil** ile kurulur: standart kesitli (I, H, boru, lama) taşıyıcı elemanlar. Profil kütüphanesinden kesiti seçer ve malzeme kalitesini (örneğin S235) girersiniz. [kütüphane adı sürüme göre değişebilir]",
           "Doğru kesit ve kalite yalnızca mukavemet için değil, metraj ve ağırlık hesabı için de şarttır: çelik projede ağırlık, maliyetin doğrudan ölçüsüdür."
         ],
-        "tryIt": "Kendi denemen: Profil kütüphanesinden bir I kesit seç, kalitesini gir ve tek bir eleman olarak yerleştir."
+        "tryIt": "Kendi denemen: Profil kütüphanesinden bir I kesit seç, kalitesini gir ve tek bir eleman olarak yerleştir.",
+        "figure": {
+          "src": "/akademi/m6/profil-kutuphanesi.png",
+          "alt": "ALLPLAN 'Edit Profile Library' (Profil Kütüphanesini Düzenle) diyaloğu; New type / Existing alanları ve Add, Edit, Delete düğmeleri.",
+          "caption": "Profil kütüphanesi diyaloğu. Çelik kesitleri buradan seçer veya yeni kesit eklersiniz.",
+          "source": "ALLPLAN dokümantasyonu",
+          "width": 269,
+          "height": 186
+        }
       },
       {
         "heading": "Kolon ve kiriş: iskeleti kurmak",

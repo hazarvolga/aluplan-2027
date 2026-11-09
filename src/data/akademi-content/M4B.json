@@ -61,7 +61,15 @@
           "Veri hazırsa listeler otomatik gelir. **Metraj**, model verisinden üretilen miktar/alan/adet dökümüdür; kapı/pencere çizelgesi tüm açıklıkları tek tabloda toplar; **mahal listesi** ise odaların alan ve işlev dökümünü verir.",
           "Bu listelerin en büyük avantajı canlı olmalarıdır: modeli değiştirdiğinizde liste de güncellenir. Elle sayıma göre hem daha hızlı hem daha az hatalıdır."
         ],
-        "tryIt": "Kendi denemen: Modelden bir alan/adet metrajı ile kapı-pencere çizelgesi üret; bir pencere ekleyip listenin güncellendiğini gör."
+        "tryIt": "Kendi denemen: Modelden bir alan/adet metrajı ile kapı-pencere çizelgesi üret; bir pencere ekleyip listenin güncellendiğini gör.",
+        "figure": {
+          "src": "/akademi/m4b/ozellik-liste-dialog.png",
+          "alt": "ALLPLAN eleman özellik/liste yapılandırma diyaloğu; Logging ve Lists/Schedules sekmeleri, 'List text' alanı ve değişken listesi (Manufacturer, Class/subclass gibi).",
+          "caption": "Özellik ve liste yapılandırma diyaloğu. Metrajlar ve çizelgeler, elemanlara iliştirdiğiniz bu veri alanlarından üretilir.",
+          "source": "ALLPLAN dokümantasyonu",
+          "width": 707,
+          "height": 217
+        }
       }
     ]
   },

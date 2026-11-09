@@ -45,7 +45,15 @@
           "Köprü akslarını ve açıklıklarını güzergâh üzerine yerleştirirsiniz. **Prefabrik kirişleri** açıklıklara koyar, onları ayağa bağlayan **mesnetleri** tanımlar ve üstlerine taşıtın geçtiği **tabliyeyi** modellersiniz. [ALLPLAN Bridge / sürüme göre doğrula]",
           "Köprü, altyapı ile yapının kesiştiği yerdir: hem güzergâha hem de taşıyıcı mantığa aynı anda uymak zorundadır."
         ],
-        "tryIt": "Kendi denemen: Bir açıklığa prefabrik kirişleri yerleştir, mesnetleri tanımla ve üstüne tabliyeyi modelle."
+        "tryIt": "Kendi denemen: Bir açıklığa prefabrik kirişleri yerleştir, mesnetleri tanımla ve üstüne tabliyeyi modelle.",
+        "figure": {
+          "src": "/akademi/m8/kopru-yuk-gruplari.png",
+          "alt": "ALLPLAN yük grupları (Load groups) diyaloğu; Structure açılır listesinde Building, Road bridge, Footbridge, Railway bridge seçenekleri.",
+          "caption": "Yük grupları diyaloğu. Yapı tipi olarak köprü türleri (karayolu, yaya, demiryolu) tanımlanabilir; köprü yükleri bu türe göre kurgulanır.",
+          "source": "ALLPLAN dokümantasyonu",
+          "width": 651,
+          "height": 687
+        }
       },
       {
         "heading": "Koordinat ve metraj",

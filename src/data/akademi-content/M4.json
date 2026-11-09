@@ -52,7 +52,15 @@
           "**Pafta** (layout), çizimlerinizin ölçekli olarak yerleştiği çıktı sayfasıdır. Yeni bir pafta açar, bir **antet** ve çerçeve yerleştirir, sonra plan, kesit ve görünüşleri bu sayfaya dizersiniz. [antet yerleştirme sürüme göre değişebilir]",
           "Paftadaki her çizim modele bağlı kalır: model değişirse paftadaki görünüm de güncellenir. Yani pafta, modelin bir fotoğrafı değil, canlı bir penceresidir."
         ],
-        "tryIt": "Kendi denemen: Yeni bir pafta aç, antet/çerçeveyi yerleştir ve planını ölçekli olarak sayfaya koy."
+        "tryIt": "Kendi denemen: Yeni bir pafta aç, antet/çerçeveyi yerleştir ve planını ölçekli olarak sayfaya koy.",
+        "figure": {
+          "src": "/akademi/m4/pafta-print-view.png",
+          "alt": "ALLPLAN pafta (layout) baskı görünümü; bir plan ölçekli yerleştirilmiş, kırmızı balonla 'Visible frame' (görünür çerçeve) işaretli, sağ altta antet.",
+          "caption": "Pafta baskı görünümü (Print view). Çizimler sayfaya ölçekli yerleşir; görünür çerçeve basılacak alanı tanımlar.",
+          "source": "ALLPLAN dokümantasyonu",
+          "width": 3800,
+          "height": 1791
+        }
       },
       {
         "heading": "Paftayı tamamlamak: ölçülendirme, metin, tarama",

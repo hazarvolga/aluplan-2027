@@ -40,7 +40,15 @@
           "**Boyuna donatı**, eleman ekseni boyunca uzanan ana çubuklardır; çekme kuvvetini taşırlar. **Etriye** ise bu boyuna donatıyı saran enine donatıdır; kesme kuvvetine karşı koyar ve boyuna çubukları bir arada tutar.",
           "İkisini de 3B olarak yerleştirirsiniz: etriyeleri belirli bir aralıkla dizersiniz (mesnet bölgelerinde sık, açıklıkta seyrek). Bu, gerçek bir betonarme detayının mantığıdır."
         ],
-        "tryIt": "Kendi denemen: Bir kirişe boyuna donatıyı yerleştir, sonra etriyeleri bir aralıkla diz; mesnet yakınında aralığı sıklaştır."
+        "tryIt": "Kendi denemen: Bir kirişe boyuna donatıyı yerleştir, sonra etriyeleri bir aralıkla diz; mesnet yakınında aralığı sıklaştır.",
+        "figure": {
+          "src": "/akademi/m5/donati-detay.png",
+          "alt": "Betonarme bir elemanın donatı detayı; konum etiketleriyle '3: 2 HA 10 e=4' ve '1: 7 HA 8 e=25' (çap, adet, aralık) gösterimi.",
+          "caption": "Donatı detayı ve konum etiketleri. '2 HA 10 e=4' gibi notasyon çapı, adedi ve aralığı verir; bu çıktı modelden üretilir.",
+          "source": "ALLPLAN dokümantasyonu",
+          "width": 816,
+          "height": 256
+        }
       },
       {
         "heading": "Çakışma denetimi: 3B'nin asıl faydası",

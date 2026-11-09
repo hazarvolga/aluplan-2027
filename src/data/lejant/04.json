@@ -161,5 +161,56 @@
         "/akademi/lejant/10641_0EM7U000001TdUd_d3cf7e59.png"
       ]
     }
-  ]
+  ],
+  "deepDive": {
+    "title": "Oturma ve Kullanım Alanı Nitelikleri",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Kendi etiket stillerinizde (Beschriftungsbild) veya raporlarınızda mahal taban alanlarını iki farklı kurala göre değerlendirebilirsiniz: Oturma Alanı Yönetmeliği (Wohnflächenverordnung) ve DIN 277. Her kural için ayrı nitelikler kullanılır. Doğru niteliği seçmek, tablonuzun hangi alanı (kaba yapı, ince yapı, kesintili) gösterdiğini belirler."
+      },
+      {
+        "type": "heading",
+        "text": "Oturma Alanı Yönetmeliğine göre metraj"
+      },
+      {
+        "type": "text",
+        "text": "Bu gruptaki nitelikler oturma alanını mahalin taban alanına göre değerlendirir ve yükseklik bölümlemesini, tesisat yapı elemanlarını, nişleri ayarlandığı şekilde dikkate alır. Mahalin özelliklerinde ayarladığınız oturma alanı hesabı çarpanı da birlikte hesaba katılır. Rapor oluştururken yaptığınız yükseklik bölümlemesi gibi ayarlar hem rapora hem etiketlemeye aynı anda yansır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10638_0EM7U000001TeQr_c7ead46d.png",
+        "caption": "Oturma alanı hesaplamaları için gösterilen standart ayarlar."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10638_0EM7U000001TeQs_2280d71b.png",
+        "caption": "Oturma alanı hesabının ek standart ayar penceresi."
+      },
+      {
+        "type": "text",
+        "text": "Bu grupta en çok şu nitelikleri kullanırsınız. Wohnfläche_Ausbau (@197@) mahalin tüm ince iş yüzeylerini dikkate alır; yükseklik bölümlerinde döşeme ve tavan katman yapısını hesaba katar ve güncel Oturma Alanı Yönetmeliğine göre etiketleme için kullanılır. Wohnfläche_Rohbau (@196@) boyutları ince işler dikkate alınmadan kaba yapı üzerinden belirler ve yalnızca özel durumlarda kullanılır. Wohnfläche_Rohbau_mit_Abzug (@193@) yine kaba yapı üzerinden ölçer, ancak mahalin ayarlarında götürü sıva kesintisi (Pauschale Putzabzug) etkinse götürü kesintiyi de uygular."
+      },
+      {
+        "type": "text",
+        "text": "Wohnfläche (@68@) niteliğini etiket stillerinde ve lejantlarda kullanmayın. Bu nitelik, Taban Alanının Hesaplanması (Berechnung der Grundfläche) ayarına ve seçilen alan hesabı türüne göre içeriğini değiştirir; bir rapor açılırken ayar değişirse etiketteki değer de kayar. Bu yüzden yalnızca hesap türünün önceden sabitlenmediği raporlarda yeri vardır. Faktor_Wohnfläche_Raum (@264@) balkon, loca, teras veya kış bahçesi gibi azaltılmış alanlar için mahalin özelliklerinde ayarladığınız çarpandır (örn. 1.00, 0.25) ve oturma alanı niteliklerine otomatik yansır."
+      },
+      {
+        "type": "text",
+        "text": "Birkaç yardımcı nitelik daha vardır. Raum unter Treppe (@251@) merdiven altı mahaller için özel ayardır ve otomatik atanmaz. Flächenart Wohnfläche (@233@) taban alanı türünü belirler (WO, ZU, WI, KW) ve raporların hangi mahalleri dikkate alacağını etkiler, ancak oturma alanı niteliklerinin değerine doğrudan dokunmaz. Prozentabzug_Wohnfläche (@497@) o an ayarlı götürü kesinti veya ilave değeridir ve yalnızca oturma alanı raporu açılırken değiştirilebilir."
+      },
+      {
+        "type": "heading",
+        "text": "DIN 277'ye göre metraj"
+      },
+      {
+        "type": "text",
+        "text": "DIN 277'ye göre taban alanı her zaman bitmiş (ince yapı) yüzeyler üzerinden belirlenir. Grundfläche_DIN277 (@93@) mahalin tüm ince iş yüzeylerini alarak DIN 277 alanını verir. Umschließungsart (@231@) çevreleme türünü (R, S veya eski a, b, c) raporda gösterir. Nutzungsart_DIN277 (@235@) mahalin kullanımını DIN 277-1:2016 değerleriyle tutar; eski içerikler raporda otomatik çevrilir. Flächenart_DIN277 (@232@) alan ve hacimlerin doğru belirlenmesi için N, M, L tanımını taşır. Faktor_DIN277 (@266@) tedbir amaçlı bir çarpandır ve mevcut mevzuatta her zaman 1.00 bırakılmalıdır."
+      },
+      {
+        "type": "text",
+        "text": "Etiketleme notu: Oturma ve kullanım alanı raporları, Flächenart Wohnfläche ve Flächenart_DIN277 gibi birden çok niteliğin ayarına tepki verir ve içeriği buna göre gösterir. Kendi etiket stilinizi, beklediğiniz değer görünecek şekilde tanımlamanız gerekir; örneğin Flächenart_Wohnfläche niteliği KW içeriğindeyse oturma alanı sütununu gizlemek mantıklıdır."
+      }
+    ]
+  }
 }

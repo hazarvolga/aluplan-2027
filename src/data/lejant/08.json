@@ -128,5 +128,80 @@
         "/akademi/lejant/11307_0EM7U000001TdDM_28e37380.png"
       ]
     }
-  ]
+  ],
+  "deepDive": {
+    "title": "Özel Büküm Formlarını Hızlı Üretme",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Bükülmüş yuvarlak çelikleri (etriye veya serbest büküm formları) tanımlamak için genellikle Çubuk Formu (Stabform) aracını kullanırsınız. Ancak büküm tanımını önce sıfırdan çizmeniz gerektiğinde ve benzer çubukları plan üzerinde başka bir yönde yeniden üretmek istediğinizde bu yol zaman alır. Allplan'da bu işi kolaylaştıran özel bir komut vardır: Elemanı Dönüştür, Devral (Element wandeln, übernehmen)."
+      },
+      {
+        "type": "heading",
+        "text": "1. Elemanı Dönüştür, Devral ile üretim"
+      },
+      {
+        "type": "text",
+        "text": "Bu fonksiyon 2B ve 3B eskizleri büküm formlarına dönüştürmek için geliştirilmiştir. Önce büküm eksenini basit bir çizgi veya poligon çizgisiyle çizer, sonra bu eskizi gerçek bir donatı çubuğuna çevirirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/8713_0EM67000008DTjo_4f27ff30.png",
+        "caption": "Büküm formuna dönüştürülecek 2B/3B eskiz."
+      },
+      {
+        "type": "text",
+        "text": "Fonksiyonu başlatın ve eskizleri işaretleyin. Açılan Elemanı Dönüştür, Devral (Element wandeln, übernehmen) penceresinde çubuk özelliklerini (çap, çelik kalitesi, poz ve benzeri) tanımlayabilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/8713_0EM67000008DXkH_153b9716.png",
+        "caption": "Çubuk özelliklerinin tanımlandığı Elemanı Dönüştür, Devral penceresi."
+      },
+      {
+        "type": "text",
+        "text": "OK ile çubuk oluşturulur ve etiketini (Beschriftung) yerleştirebilirsiniz. Allplan köşelerde çapa karşılık gelen büküm rulosu çapını (Biegerollendurchmesser) otomatik kullanır. Ardından çubuğu her zamanki gibi döşeyebilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/8713_0EM67000008DTQ4_d5f2622b.png",
+        "caption": "Oluşturulan çubuk ve yerleştirilen poz etiketi."
+      },
+      {
+        "type": "heading",
+        "text": "2. Devral ile mevcut formu kopyalama"
+      },
+      {
+        "type": "text",
+        "text": "Bir çubuğu poligon çizgisinden ürettiyseniz, bu çubuğu doğrudan başka bir elemana kopyalayamazsınız."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/8713_0EM67000008DTlQ_8fc16201.png",
+        "caption": "Poligon çizgisinden üretilmiş, doğrudan kopyalanamayan çubuk."
+      },
+      {
+        "type": "text",
+        "text": "Bunun yerine aynı Elemanı Dönüştür, Devral (Element wandeln, übernehmen) fonksiyonuyla çubuğu iki tıklamada yeni elemana devredebilirsiniz. Bu sırada yeni bir poz numarası atanabilir, ancak mevcut büküm formunu aktarmanın hızlı ve güvenli yolu budur."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/8713_0EM67000008DTmO_2d08672b.png",
+        "caption": "Mevcut büküm formunun iki tıklamada yeni elemana devredilmesi."
+      },
+      {
+        "type": "heading",
+        "text": "Kontrol notu"
+      },
+      {
+        "type": "text",
+        "text": "Çubukları ürettikten sonra tanımlarının doğru olduğunu mutlaka kontrol edin. Fonksiyon genel ön ayarları dikkate almaz ve büküm formunu yalnızca verdiğiniz eksene (poligon çizgisi veya çizgi) göre hesaplar. Bu kontrolü yapmazsanız yuvarlak çelik cetvelindeki (Rundstahl-Auszug) diğer çubuklarla ve hesaplanan boylarla farklar oluşabilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/8713_0EM67000008DTnH_dcf2e41b.png",
+        "caption": "Üretilen çubuğun büküm tanımının doğrulanması."
+      }
+    ]
+  }
 }

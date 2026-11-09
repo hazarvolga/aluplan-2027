@@ -166,5 +166,70 @@
       "body": "Bu eğitim videosunda, yeni **Yükseklik Modeli Oluştur (Höhenmodell erstellen)** komutu ile arazi, rampa veya yeraltı otoparkları gibi eğimli yüzeyleri görsel açıdan etkileyici bir şekilde nasıl gösterebileceğinizi öğrenin. Eğimler için renk geçişlerini (gradyanları) kullanabilme olanağı sayesinde 3B yüzeyler daha canlı ve detaylı hale gelir. Bu fonksiyon, eşyükselti eğrilerinin farklı renklerle donatılmasını ve böylece inşaat projelerini daha anlaşılır kılan gerçekçi gösterimler üretilmesini sağlar.",
       "figures": []
     }
-  ]
+  ],
+  "deepDive": {
+    "title": "Köşe Kotlarıyla Hızlı Arazi",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Her zaman tam bir yüzey rölövesine ihtiyacınız yoktur. Arsanın yalnızca sınır köşelerinin kotlarını biliyorsanız, bu birkaç noktadan basitleştirilmiş bir arazi modeli üretebilirsiniz. Ön koşul şudur: arsa 2B çizgiler veya noktalar halinde bulunur ve her köşe noktasının yüksekliği (kotu) bellidir. Amacınız araziyi birebir modellemek değil, sınır kotlarına oturan sade bir hacim elde etmektir."
+      },
+      {
+        "type": "text",
+        "text": "Kullanacağınız fonksiyonlar Serbest Modelleme (Freies Modellieren) görevindeki 3B Çizgi (3D-Linie), Yama (Patch) ve 3B Yüzey (3D-Fläche) komutlarıdır. Aksiyon Çubuğunu (Actionbar) kullanmıyorsanız aynı komutlara Oluştur (Erzeugen), Ek Modüller (Zusätzliche Module), 3B Modelleme (Modellieren 3D) altından ulaşırsınız."
+      },
+      {
+        "type": "heading",
+        "text": "1. Dış sınır formunu hazırlayın"
+      },
+      {
+        "type": "text",
+        "text": "3B Çizgi (3D-Linie) fonksiyonunu açın ve giriş seçeneklerinden Poligon Çizgisi (Polygonzug) kipini seçin. Kat planında ilk köşe noktasını hedefleyin, diyalog satırına o noktanın Z koordinatını yazın ve <Enter> ile onaylayın. Diğer köşe noktalarını da kendi yükseklikleriyle (Z koordinatı) sırayla tanımlayın. Poligonu kapatmak için son nokta olarak ilk noktayı tekrar gösterin. Devam etmeden önce sonucu bir perspektif görünümde veya animasyonda kontrol edin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11148_0EM7U000001TdWd_53ce1071.png",
+        "caption": "Kapalı 3B poligon çizgisinin perspektifte kotlu köşelerle kontrolü."
+      },
+      {
+        "type": "heading",
+        "text": "2. Arazi yüzeyini oluşturun"
+      },
+      {
+        "type": "text",
+        "text": "Yama (Patch) fonksiyonunu çalıştırın ve oluşturduğunuz 3B poligon çizgisini perspektifte veya kat planında seçin. Kapalı poligondan bir 3B yüzey biçimlenir. Yüzeyin eğriliği izokurb çizgileriyle (U eğrileri ve V eğrileri) gösterilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11148_0EM7U000001TdWe_806c4160.png",
+        "caption": "Yama ile kapalı poligondan biçimlenen 3B yüzey ve izokurb çizgileri."
+      },
+      {
+        "type": "heading",
+        "text": "3. 3B katı objeye dönüştürün"
+      },
+      {
+        "type": "text",
+        "text": "3B Yüzey (3D-Fläche) komutuyla kat planında arsanın üzerinden düz bir 3B poligon yüzey geçirin. Ardından Ekstrüzyon (Extrudieren), Dış Yüzeyi Ekstrüde Et (Außenfläche extrudieren) ile bu yüzeyi seçin ve bir perspektifte en yüksek arazi noktasını yükseklik olarak verin. Böylece araziyi tümüyle kaplayan bir blok elde edersiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11148_0EM7U000001TdWf_896128ba.png",
+        "caption": "Düz poligon yüzeyin en yüksek kota kadar ekstrüde edilmesi."
+      },
+      {
+        "type": "text",
+        "text": "Şimdi bloğun üstünü eğimli yüzeyle kesin. K1 eksi K2, K2'yi sil (K1 minus K2, K2 löschen) veya eğrisel yüzeyi saklamak istiyorsanız K1 eksi K2, K2'yi koru (K1 minus K2, K2 erhalten) fonksiyonunu seçin. Önce 3B katı objeyi (Katı 1 / Körper 1), sonra diğer katı olarak 3B yüzeyi seçin, seçimi sağ fare tuşuyla onaylayın ve üstte kalan parçayı silin. Geriye sınır kotlarına oturan arazi hacmi kalır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11148_0EM7U000001TdWg_2198286e.png",
+        "caption": "Blok ile eğrisel yüzeyin farkı alınarak elde edilen arazi hacmi."
+      },
+      {
+        "type": "text",
+        "text": "İpucu: Yama (Patch) ile oluşturduğunuz 3B yüzey, Allplan 2019 sürümünden itibaren mimari yapı elemanlarının bağlanacağı referans yüzey (düzlem modeli) olarak da kullanılabilir. Aksiyon Çubuğu yapılandırmasında menü çubuğunu geçici görmek isterseniz Alt tuşunu kullanın."
+      }
+    ]
+  }
 }

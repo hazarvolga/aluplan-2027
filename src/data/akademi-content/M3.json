@@ -36,7 +36,15 @@
           "Bir CAD programında bir duvarı çizgi çizgi çizersiniz. ALLPLAN'da ise bir **parametrik** duvar aracını seçer, yüksekliğini ve kalınlığını girer, sonra onu modele yerleştirirsiniz. Program geometriyi sizin için üretir.",
           "Bu yüzden değerleri sonradan değiştirmek kolaydır: bir duvarın yüksekliğini güncellediğinizde duvar kendini yeniden çizer, planı ve kesiti de birlikte güncellenir. İşte parametrik modellemenin gücü budur."
         ],
-        "tryIt": "Bir duvar aracını aç ve yerleştirmeden önce yükseklik ile kalınlık alanlarını bul; bu iki değerin duvarı nasıl tanımladığını gör."
+        "tryIt": "Bir duvar aracını aç ve yerleştirmeden önce yükseklik ile kalınlık alanlarını bul; bu iki değerin duvarı nasıl tanımladığını gör.",
+        "figure": {
+          "src": "/akademi/m3/bina-model-cati.png",
+          "alt": "ALLPLAN'da parametrik elemanlarla modellenmiş basit bir bina: beyaz duvarlar ve kırmızı eğimli çatı, 3B görünüm.",
+          "caption": "Parametrik elemanlarla (duvar, döşeme, çatı) kurulmuş basit bir bina modeli. Çizmezsiniz; akıllı elemanları yerleştirirsiniz.",
+          "source": "ALLPLAN dokümantasyonu",
+          "width": 261,
+          "height": 253
+        }
       },
       {
         "heading": "Duvar: ilk taşıyıcı eleman",

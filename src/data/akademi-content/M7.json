@@ -53,7 +53,15 @@
           "Prefabrik parçalar **gömülü parçalar** taşır: kaldırma ankrajları, bağlantı plakaları. Bunları elemana eklersiniz; parçanın hem taşınabilmesi hem de birleşebilmesi buna bağlıdır.",
           "Sonunda **üretim verisini** ve eleman listesini üretirsiniz: ölçü, donatı ve gömülü parça özeti. Bu veri fabrikanın kalıbıdır; eksikse parça üretilemez."
         ],
-        "tryIt": "Kendi denemen: Panele kaldırma ankrajı ve bağlantı plakası ekle, sonra üretim verisi ile eleman listesini üret ve kodları karşılaştır."
+        "tryIt": "Kendi denemen: Panele kaldırma ankrajı ve bağlantı plakası ekle, sonra üretim verisi ile eleman listesini üret ve kodları karşılaştır.",
+        "figure": {
+          "src": "/akademi/m7/fixture-liste-dialog.png",
+          "alt": "ALLPLAN 'Fixture Catalog' diyaloğu (İngilizce): solda gömülü parça/ankraj listesi (anker100, M12...), sağda liste formülleri için değişkenler (Length, Width, Area, Volume, Cross-sectional area).",
+          "caption": "Gömülü parça kataloğu ve liste formül değişkenleri. Üretim verisi ve eleman listeleri bu alanlardan türetilir.",
+          "source": "ALLPLAN dokümantasyonu",
+          "width": 755,
+          "height": 613
+        }
       }
     ]
   },

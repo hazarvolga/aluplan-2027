@@ -48,7 +48,15 @@
           "**PythonPart**, Python ile tanımlanan özel bir parametrik objedir; arayüzü ve parametreleri bir **PYP dosyasında** tutulur. Görsel programlamanın ötesine geçtiğinizde, tekrar kullanılacak özel bir obje için basit bir PythonPart iskeleti kurarsınız. [sürüme göre doğrula]",
           "PythonPart'ı projeye yerleştirip parametre değiştirdiğinizde model güncellenir: artık yalnızca kullanan değil, üreten taraftasınız."
         ],
-        "tryIt": "Kendi denemen: Basit bir PythonPart iskeleti oluştur, parametrelerini PYP arayüzünden gir ve projeye yerleştirip parametre değişiminde güncellendiğini gör."
+        "tryIt": "Kendi denemen: Basit bir PythonPart iskeleti oluştur, parametrelerini PYP arayüzünden gir ve projeye yerleştirip parametre değişiminde güncellendiğini gör.",
+        "figure": {
+          "src": "/akademi/m9/pythonparts-vs-nodes.png",
+          "alt": "ALLPLAN PythonParts onay diyaloğu (İngilizce): 'You are about to install Custom VS Nodes... Would you like to proceed? Yes/No' — özel Visual Scripting düğümlerinin kurulumu.",
+          "caption": "Özel Visual Scripting düğümlerinin (VS Nodes) PythonParts üzerinden kurulumu. Görsel programlama bu düğümlerle çalışır.",
+          "source": "ALLPLAN dokümantasyonu",
+          "width": 743,
+          "height": 234
+        }
       }
     ]
   },

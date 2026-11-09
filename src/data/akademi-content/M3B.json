@@ -32,7 +32,15 @@
           "**Cephe**, binanın dış yüzeyini oluşturan katmandır. **Giydirme cephe** (curtain wall) ise taşıyıcı olmayan, panel ve profillerden oluşan bir dış kabuktur; kendi ağırlığını taşır ama binayı taşımaz. Bunu bir referans yüzey ya da ızgara üzerine kurarsınız. [araç adı sürüme göre değişebilir]",
           "Giydirme cepheyi parametrik kurmak, panel bölüntüsünü sonradan değiştirmenizi kolaylaştırır: bir ızgarayı güncellediğinizde paneller birlikte yeniden dizilir."
         ],
-        "tryIt": "Kendi denemen: Bir referans yüzey tanımla ve üzerine panel/profil ızgarasıyla basit bir giydirme cephe kur."
+        "tryIt": "Kendi denemen: Bir referans yüzey tanımla ve üzerine panel/profil ızgarasıyla basit bir giydirme cephe kur.",
+        "figure": {
+          "src": "/akademi/m3b/pencere-detay.png",
+          "alt": "Duvar içinde bir pencere elemanının yatay kesit detayı: taralı duvar kesiti ve ortada pencere boşluğu/elemanı, konum '1'.",
+          "caption": "Duvar içinde bir pencere elemanı detayı. Cephe ve açıklık elemanları duvara gömülü, parametrik parçalardır. (Geçici görsel; daha iyi cephe/render görseli sonra eklenecek.)",
+          "source": "ALLPLAN dokümantasyonu",
+          "width": 247,
+          "height": 83
+        }
       },
       {
         "heading": "Serbest geometri: standart elemanın sınırı",

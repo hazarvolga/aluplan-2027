@@ -37,7 +37,15 @@
           "**openBIM**, açık formatlarla markadan bağımsız iş birliğidir; onun ortak dili **IFC**'dir. Modeli IFC olarak dışa aktarırken hangi bilginin aktarılacağını bir **MVD** (görünüm) belirler. [IFC 4.3 / sürüme göre doğrula]",
           "En kritik adım denetimdir: dışa aktardığınız IFC'yi boş bir ortamda tekrar içe aktarıp geometri, özellik ve sınıflandırmanın kaybolmadığını kontrol edersiniz. Teslim ettiğinizi görmeden teslim etmeyin."
         ],
-        "tryIt": "Kendi denemen: Modeli IFC olarak dışa aktar, boş bir ortamda tekrar içe aktar ve özellik/sınıflandırma kaybı olup olmadığını denetle."
+        "tryIt": "Kendi denemen: Modeli IFC olarak dışa aktar, boş bir ortamda tekrar içe aktar ve özellik/sınıflandırma kaybı olup olmadığını denetle.",
+        "figure": {
+          "src": "/akademi/m10/ifc-export-dialog.png",
+          "alt": "ALLPLAN IFC Export ayarları diyaloğu (Almanca arayüz): Teilbilder (çizim dosyaları), Dateiname (dosya adı .ifc) ve Austauschprofil 'IFC4 Standard Export' (değişim profili/MVD).",
+          "caption": "IFC Export diyaloğu. Dosya adını ve değişim profilini (burada IFC4 Standard Export — hangi bilginin aktarılacağını belirleyen MVD) seçersiniz. (Arayüz Almanca)",
+          "source": "ALLPLAN dokümantasyonu",
+          "width": 637,
+          "height": 161
+        }
       },
       {
         "heading": "Referans model ve BCF ile koordinasyon",

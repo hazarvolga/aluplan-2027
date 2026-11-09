@@ -82,5 +82,22 @@
       "body": "**Soru:** Etiket stilindeki (Beschriftungsbild) bir metin nasıl biçimlendirilir (örn. Kalın)?\n**Cevap:** Etiket stillerinde biçimlendirme sınırlıdır. Bir niteliği veya formülü yerleştirirken/değiştirirken **metin yüksekliği, metin genişliği, yazı tipi ve açısı** üzerinde değişiklik yapabilirsiniz; ancak normal metindeki tüm doğrudan biçim seçenekleri her yerde geçerli değildir. Kalın gibi efektler için stilin ilgili nitelik/yazı tipi ayarını kullanın.\nKaynak: ALLPLAN KB de_10641.",
       "figures": []
     }
-  ]
+  ],
+  "deepDive": {
+    "title": "Derinlemesine",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Etiket Stillerinde (Beschriftungsbild) Biçimlendirme"
+      },
+      {
+        "type": "text",
+        "text": "Etiket stillerinde biçimlendirme sınırlıdır. Bir niteliği ya da formülü yerleştirirken veya değiştirirken metin yüksekliği, metin genişliği, yazı tipi ve açısı üzerinde değişiklik yapabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "Normal metindeki doğrudan biçim seçeneklerinin tamamı burada geçerli değildir; Kalın gibi bir efekt için ilgili niteliğin ya da yazı tipinin stil ayarını kullanın."
+      }
+    ]
+  }
 }

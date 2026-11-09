@@ -166,6 +166,22 @@
       {
         "type": "text",
         "text": "Yanlis anlasilmalari onlemek icin bukum damgasina (Biegestempel) ilgili bilgiyi eklemenizi oneririz."
+      },
+      {
+        "type": "heading",
+        "text": "İlişkili (Assoziativ) ve Basit Ölçü Çizgileri Arasındaki Fark"
+      },
+      {
+        "type": "text",
+        "text": "İlişkili ölçü çizgisinde (assoziative Maßlinie) referans noktaları doğrudan yapı elemanlarına bağlanır; yapı elemanı değiştiğinde ölçü çizgisi onunla birlikte güncellenir. Basit (ilişkisiz) ölçü çizgisinde ise referans noktaları çizim üzerinde durur ama yapı elemanına bağlı değildir."
+      },
+      {
+        "type": "text",
+        "text": "Bir ölçü çizgisinin ilişkili olup olmayacağını, oluştururken diyalog araç çubuğundan belirlersiniz; bu ayar Ölçü Çizgisi (Maßlinie), Kot (Kote), Blok Ölçülendirme (Maßlinien in Blockform), Aplikasyon (Absteckung) ve Aks Ölçülendirmesi (Achsbemaßung) fonksiyonlarında mümkündür. Özellikler paletinde Eleman bölümündeki 'Referans noktalarıyla ilişkili (Assoziativ zu Referenzpunkten)' kutucuğunun işaretini kaldırarak ilişkili çizgiyi basit çizgiye dönüştürebilirsiniz; ters yönde dönüşüm mümkün değildir."
+      },
+      {
+        "type": "text",
+        "text": "İlişkili çizgide yapı elemanı yüksekliğini ve ek metni kapatabilir veya silebilirsiniz, ancak elle yükseklik ya da metin ekleyemezsiniz. Basit çizgide yapı elemanı yüksekliği giriş sırasında boşluktan (pencere/kapı boşluğundan) devralınır; çizgi 'Duvarları Ölçülendir (Wände bemaßen)' ile oluşturulduysa yükseklik yapı elemanıyla birlikte değişir, aksi halde eleman yüksekliği değişse de sabit kalır."
       }
     ]
   }

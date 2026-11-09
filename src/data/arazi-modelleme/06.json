@@ -226,6 +226,22 @@
         "type": "image",
         "src": "/akademi/arazi-modelleme/9311_0EMVi000003tg89_41f80b82.png",
         "caption": "Kübajları Belirle (déterminer les cubages) ile kazı/dolgu hacimlerinin hesaplanması."
+      },
+      {
+        "type": "heading",
+        "text": "Arazi Animasyonu İçin Ortofotoyu Doku Olarak Kullanmak"
+      },
+      {
+        "type": "text",
+        "text": "Bir arazi fotoğrafının animasyonda doku (texture) olarak SAM'a (DTM) doğru kaplanabilmesi için fotoğrafın coğrafi referanslı bir ortofoto olması ve SAM'ın koordinatlarının ortofotonun koordinatlarıyla eşleşmesi gerekir."
+      },
+      {
+        "type": "text",
+        "text": "Kullanılan SAM için Modifikasyon (Modify) -> Arazi (Terrain) -> Sayısal Arazi Modeli (Digital Terrain Model) -> SAM Değiştir (Modify DTM) -> T Plan seçeneğini belirleyin. Animasyonun yüzey ayarlarında 'Doku uygula (Apply texture)' alanında 'Metrik (Metric)' ve 'Doku etkin (Texture activated)' seçeneklerini işaretleyin ve 'Yeniden Boyutlandır (Resize)' alanında görüntünün X ve Y boyutunu girin. Doğru boyut için ortofotoyu önce coğrafi referanslı bir bitmap olarak içe aktarıp Ölç (Measure) ile ölçebilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "SAM doğru konumlanmış ama alanı ortofotonun alanından küçükse, önce mevcut dış sınırı bir çizgi nitelik dosyasına kaydedin: Oluştur (Create) -> Arazi (Terrain) -> Sayısal Arazi Modeli (Digital Terrain Model) -> Dosya Arayüzü (File Interface) altında D Tipi (F Type) = LinAtt ve G/Ç (I/O) = O file seçin. Ardından SAM alanını ortofotonun boyutuna gelecek şekilde büyütün."
       }
     ]
   }

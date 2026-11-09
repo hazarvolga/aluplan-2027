@@ -214,6 +214,22 @@
         "type": "image",
         "src": "/akademi/arazi-modelleme/9311_0EMVi000003tg89_41f80b82.png",
         "caption": "Kübajları Belirle (déterminer les cubages) ile kazı/dolgu hacimlerinin hesaplanması."
+      },
+      {
+        "type": "heading",
+        "text": "SAM'ı (DGM) Animasyonda Dokuyla Kaplamak"
+      },
+      {
+        "type": "text",
+        "text": "Sayısal Arazi Modelinin (SAM / DGM) kendisi doğrudan dokularla (Texturen) kaplanamaz; tek istisna coğrafi referanslı ortofotolardır. Dokulu bir animasyon için SAM'ı önce 3B katılara veya mimari objelere (döşemelere) dönüştürmeniz gerekir."
+      },
+      {
+        "type": "text",
+        "text": "Önce SAM'ın çizim dosyasını etkinleştirip Oluştur (Erzeugen) -> Arazi (Gelände) -> Sayısal Arazi Modeli (digitales Geländemodell) -> SAM Objesini 3B Objeye (DGM Element in 3D Element) ile SAM'ı 3B katı olarak ikinci bir çizim dosyasına türetin. Sonra Oluştur -> Mimari (Architektur) -> Genel: Çatılar, Düzlemler, Kesitler (Allgemein: Dächer, Ebenen, Schnitte) -> 3B Katıları Mimari Düzlemlere (3D Körper in Architekturebenen) ile katıyı mimari düzlemlere dönüştürün."
+      },
+      {
+        "type": "text",
+        "text": "Son olarak her doku için ilgili yüzey tanımına sahip bir döşeme oluşturun. Not: Coğrafi referanslı ortofotonun doku olarak kullanımına ilişkin ayrı bir ALLPLAN Connect kılavuzu bulunur."
       }
     ]
   }

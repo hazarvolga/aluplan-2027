@@ -199,6 +199,18 @@
         "type": "image",
         "src": "/akademi/lejant/10888_0EM7U000001TeD6_14f716d6.png",
         "caption": "Geri yükleme konumu ve dosya numarasını seçip Çalıştır."
+      },
+      {
+        "type": "heading",
+        "text": "Sabit Büro Adıyla Çelik Listesi (Stahlliste) Oluşturmak"
+      },
+      {
+        "type": "text",
+        "text": "Yeni bir çizim dosyasını (Teilbild) etkinleştirin ve CAD Navigator'dan Liste modülüne geçin (Ek Modüller -> Liste Oluşturma / Zusätzliche Module -> Listenerstellung). Liste Yönetimi (Listenverwaltung) ile istediğiniz çelik listesini (Stahlliste) Standart (Standard) dizininden Büro (Büro) dizinine, dosya numarasını koruyarak kopyalayın; örneğin Standart - Dosya 18 Çelik Listeleri - Liste Rundstl L 1'i Büro - Dosya 18 Çelik Listeleri - Musterfirma olarak kopyalayın."
+      },
+      {
+        "type": "text",
+        "text": "Kopyalanan listeyi Listeleri Değiştir (Listen modifizieren) ile açın. Ze-Lö komutuyla Müşteri Adı (Kundenname) satır 1 ve satır 2 hücrelerini silin; ardından Ze-Ins komutuyla (Liste bölgesi: Liste başlığı / Listenkopf; hücre tipi: Metinler / Texte) sabit büro adını metin olarak ekleyin."
       }
     ]
   }

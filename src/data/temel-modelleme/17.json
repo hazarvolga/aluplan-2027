@@ -67,5 +67,31 @@
         "/akademi/temel-modelleme/11198_0EM7U000001TdYS_cd3234a5.png"
       ]
     }
-  ]
+  ],
+  "deepDive": {
+    "title": "Derinlemesine",
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "DIN 277'ye Göre Mahal Alanları ve Hacimleri"
+      },
+      {
+        "type": "text",
+        "text": "DIN 277-1:2016 standardına göre taban alanları ve mahal hacimleri belirlenir. Alan türleri: BGF (Brüt Taban Alanı), NRF (Net Mahal Alanı), NUF (Kullanım Alanı), TF (Teknik Alan), VF (Sirkülasyon Alanı); hacimler ise BRI (Brüt Hacim) ve NRI (Net Mahal Hacmi) olarak ayrılır."
+      },
+      {
+        "type": "text",
+        "text": "Alanları ve hacimleri Kat (Geschoss) ve Mahal (Raum) yapı elemanlarıyla modellersiniz; sayısal çıktıyı Raporlar (Reports) üzerinden alırsınız."
+      },
+      {
+        "type": "text",
+        "text": "DIN 277 değerleri için yalnızca DIN277 Nitelikleri (DIN277-Attribute) bölümündeki ayarlar değerlendirilir: Çevreleme Türü R (standart) veya S (özel); Alan Türü B (brüt alan ve hacim), M (çok katlı), U (boş hacim) veya V (kullanılmayan); Faktör genellikle 1,0 bırakılır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11198_0EM7U000001TdYS_cd3234a5.png",
+        "caption": "DIN 277-1:2016'ya göre taban alanı ve mahal hacmi türleri."
+      }
+    ]
+  }
 }

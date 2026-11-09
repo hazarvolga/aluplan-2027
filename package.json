@@ -15,7 +15,7 @@
     "typecheck": "tsc --noEmit",
     "test:parity": "python3 scripts/verify_phase6_parity.py",
     "test:source-contract": "python3 scripts/verify_structured_source_contract.py",
-    "test": "python3 -m unittest discover -s tests && pnpm search:check && pnpm test:source-contract && python3 scripts/verify_phase6_parity.py && pnpm styles:check",
+    "test": "python3 -m unittest discover -s tests && pnpm search:check && pnpm test:source-contract && python3 scripts/verify_phase6_parity.py && pnpm styles:check && python3 scripts/check_deepdive_coverage.py",
     "build": "pnpm search:check && pnpm styles:check && next build",
     "start": "next start --hostname 127.0.0.1 --port 3000",
     "docs:sync": "python3 scripts/document_assets.py",

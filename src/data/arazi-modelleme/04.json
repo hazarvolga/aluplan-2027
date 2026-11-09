@@ -243,6 +243,54 @@
         "type": "image",
         "src": "/akademi/arazi-modelleme/11379_0EM7U000001TdAg_b7bf5faf.png",
         "caption": "İndirgenmiş dış sınır: sorunlu bölgeyi yalıtmak için bazı kesimler kestirme çizgilerle değiştirilir."
+      },
+      {
+        "type": "heading",
+        "text": "2B DXF ve Nokta Dosyasından Şev/Kırık Hatlı SAY (DGM)"
+      },
+      {
+        "type": "text",
+        "text": "Nokta dosyasındaki noktaları Oluştur (Erzeugen) -> Arazi (Gelände) -> Vaziyet Planı (Lageplan) -> Nokta Dosyası İçe/Dışa Aktar (Punktdatei importieren, exportieren; eski adıyla Dosya Arayüzü / Dateischnittstelle) ile Çizim Dosyası 1'e aktarın ve bir Çizim Dosyası 2'ye kopyalayın. Dosya 2'deki tüm noktaları Arazi Noktasını Değiştir (Geländepunkt modifizieren) ile 0 kotuna indirin ve DXF verisini 3B çizgi olarak Dosya 2'ye aktarın."
+      },
+      {
+        "type": "text",
+        "text": "Yalnızca Dosya 2 etkinken bir çizgi nitelik dosyası (ör. Linien.lin) oluşturun; dosyayı metin düzenleyicide açıp çizgi kodunu 5'ten 3'e (kırık hat kodu) değiştirin. Sonra yalnızca Dosya 1 etkinken Oluştur -> Arazi -> Sayısal Arazi Modeli -> Üçgen Ağı Oluştur/Optimize Et (Dreiecksnetz vermaschen/optimieren) ile noktaları ağa dönüştürüp SAY'ı oluşturun ve kırık hatları bu nitelik dosyasıyla ekleyin."
+      },
+      {
+        "type": "heading",
+        "text": "Uç Noktaları Eksik Kırık Hatları (Breaklines) SAM'a Aktarmak"
+      },
+      {
+        "type": "text",
+        "text": "Kırık hatların uç noktaları SAM'daki (DTM) noktalarla kısmen örtüşür; bazı uçlar SAM'da henüz nokta olarak bulunmaz. Dosya 2'deki 3B çizgileri 3B Objeleri SAM'a Dönüştür (Convert 3D Entities to DTM) ile Dosya 3'te bir SAM'a çevirin ve Dosya Arayüzü (File Interface) ile noktalarını bir *.asc dosyasına dışa aktarın."
+      },
+      {
+        "type": "text",
+        "text": "Bu *.asc noktalarını mevcut SAM'ın bulunduğu Dosya 1'e aktarın, SAM Bağlantısını Çöz (Unlink DTM) ile bağlantıyı çözüp Ağı Oluştur/Optimize Et (Mesh/Optimize Grid) ile yeniden üçgenleyin; böylece eksik uç noktalar SAM'a eklenir. Mükerrer kalan noktaları 'nokta sembolü' filtresiyle temizleyip Arazi Noktasını Değiştir ile yeniden numaralandırabilirsiniz."
+      },
+      {
+        "type": "heading",
+        "text": "Kübaj Hesabında 'Geçerli nokta numarasına sahip nokta yok' Uyarısı"
+      },
+      {
+        "type": "text",
+        "text": "Protokollü kübaj hesabında (Veri tipi 22.013) 'Geçerli nokta numaralarına sahip nokta yok (Keine Punkte mit gültigen Punktnummern vorhanden)' uyarısının nedeni, SAM içindeki numarasız noktalar veya mükerrer (çift) nokta numaralarıdır."
+      },
+      {
+        "type": "text",
+        "text": "Çözüm için SAM'ı özel çizgileriyle (dış sınırlar, şev kırık hatları ve boşluklar) yeni nokta numaralarıyla geri yükleyin: SAM Elemanlarını Konstrüksiyon Elemanlarına Dönüştür (DGM Elemente in Konstruktionselemente wandeln) ile çizgileri ayrı bir dosyaya alıp renk filtresiyle yalnızca özel çizgileri bırakın; noktaları Sembol Noktası Değiştir (Symbolpunkt modifizieren) ile yeniden numaralandırın; ardından noktaları yeniden üçgenleyip dış sınır, boşluk ve kırık hatları nitelik dosyasıyla (kod 1 dış sınır, 2 boşluk, 3 kırık hat) yeniden ekleyin."
+      },
+      {
+        "type": "heading",
+        "text": "Yaklaşık Eşit Kazı ve Dolgu ile Kazı Çukuru Planlamak"
+      },
+      {
+        "type": "text",
+        "text": "SAM'ı planlanan binanın alanına indirgeyin. Binanın dış sınır çizgilerini Modifikasyon (Modify) -> Arazi (Terrain) -> Sayısal Arazi Modeli (Digital Terrain Model) -> Elemanı SAM ile Ağa Dönüştür (Mesh Element with DTM) ile ağa katın; bu çizgilerin uç noktalarında yükseklik SAM temel alınarak enterpolasyonla hesaplanır. Sonra Dış Sınır (Exterior Boundary) girin."
+      },
+      {
+        "type": "text",
+        "text": "Kazı ve Dolgu Hesapla (Compute Cut and Fill) fonksiyonunda VeriTp (DataTp): 22.014; Kıyas Düzlemi (Horiz): Evet; Analiz (Analyze): Kazı ve Dolgu (Cut and Fill) ayarlarını kullanın. Yükseklik (Height) kutusuna başlangıç değeri olarak SAM'ın ortalama yüksekliğini girin ve kıyas düzlemi yüksekliğini değiştirerek birkaç hesap yapıp kazı ile dolgu dengesini yakınsayın."
       }
     ]
   }

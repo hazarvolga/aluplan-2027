@@ -166,7 +166,7 @@ export function TmLessonDetail({
       {lesson.deepDive ? (
         <section className={styles.band} aria-labelledby="tm-derin">
           <div className="alu-container">
-            <SectionHeader id="tm-derin" kicker="DERİNLEMESİNE" title={lesson.deepDive.title ?? 'Derinlemesine'} lead="Dersin konusunu uygulamada bir adım öteye taşıyan, sık karşılaşılan durumlar ve çözümleri." />
+            <SectionHeader id="tm-derin" kicker="DERİNLEMESİNE" title="Sık karşılaşılan durumlar" lead="Dersin konusunu uygulamada bir adım öteye taşıyan gerçek senaryolar ve çözümleri." />
             <div className={styles.deepDive}>
               {lesson.deepDive.blocks.map((b, i) => {
                 if (b.type === 'heading') {

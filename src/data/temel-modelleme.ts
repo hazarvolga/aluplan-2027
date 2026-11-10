@@ -71,7 +71,6 @@ export type TmDeepBlock =
  * "Derinleşmek için" article accordion for that lesson.
  */
 export interface TmDeepDive {
-  title?: string;
   blocks: readonly TmDeepBlock[];
 }
 

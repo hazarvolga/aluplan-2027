@@ -20,7 +20,7 @@ export function AkademiHeader() {
           <span className={styles.wordmark}>Akademi</span>
         </Link>
         <nav className={styles.nav} aria-label="Akademi üst gezinme">
-          <Link href="/akademi/katalog" className={styles.navLink}>Katalog &amp; Yollar</Link>
+          <Link href="/akademi#katalog" className={styles.navLink}>Katalog &amp; Yollar</Link>
           <Link href="/products" className={styles.explore}>
             <span>ALLPLAN’ı keşfet</span>
             <AluIcon name="arrow-up-right" size="sm" />

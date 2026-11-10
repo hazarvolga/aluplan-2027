@@ -1,15 +1,16 @@
 import type { ReactElement, ReactNode } from 'react';
-import { CompactPageHero } from './CompactPageHero';
 import { SectionHeader } from './SectionHeader';
 import { akademiProgram, levelModules } from '@/data/akademi-content';
 import { lessonsForModule, ogrenmeYollari, ROL_ADLARI, type AkademiRol } from '@/data/akademi-mufredat-haritasi';
 import { AkademiOgrenmeYollari } from './AkademiOgrenmeYollari';
 import styles from './AkademiKatalog.module.css';
 
-interface Filters {
+interface Props {
   seviye?: string;
   rol?: string;
   sure?: string;
+  /** Süzgeç bağlantılarının işaret edeceği taban adres (ör. /akademi veya /akademi/katalog). */
+  baseHref: string;
 }
 
 interface KatalogKarti {
@@ -71,18 +72,19 @@ function buildCards(): readonly KatalogKarti[] {
   return cards;
 }
 
-function buildHref(current: Filters, key: keyof Filters, value?: string): string {
-  const next: Filters = { ...current, [key]: value };
+function buildHref(baseHref: string, current: Props, key: 'seviye' | 'rol' | 'sure', value?: string): string {
+  const next = { ...current, [key]: value };
   const params = new URLSearchParams();
   if (next.seviye) params.set('seviye', next.seviye);
   if (next.rol) params.set('rol', next.rol);
   if (next.sure) params.set('sure', next.sure);
   const qs = params.toString();
-  return `/akademi/katalog${qs ? `?${qs}` : ''}`;
+  return `${baseHref}${qs ? `?${qs}` : ''}#katalog`;
 }
 
-export function AkademiKatalog({ seviye, rol, sure }: Filters): ReactElement {
-  const current: Filters = { seviye, rol, sure };
+/** Katalog bloğu: rol-yolları + süzgeçler + modül listesi. Hero'yu çağıran sayfa verir. */
+export function AkademiKatalogBolumu({ seviye, rol, sure, baseHref }: Props): ReactElement {
+  const current: Props = { seviye, rol, sure, baseHref };
   const cards = buildCards();
   const filtered = cards.filter((card) => {
     if (seviye && card.levelSlug !== seviye) return false;
@@ -95,14 +97,8 @@ export function AkademiKatalog({ seviye, rol, sure }: Filters): ReactElement {
   });
 
   return (
-    <div className={styles.page}>
-      <CompactPageHero
-        kicker="ALUPLAN AKADEMİ"
-        title="Eğitim Kataloğu ve Öğrenme Yolları"
-        lead="Seviyeye, mesleki role ve modül süresine göre süzün. Seçtiğiniz süzgeç adrese (URL) yansır; ekip arkadaşlarınızla paylaşabilirsiniz."
-      />
-
-      <section className={styles.band} aria-labelledby="katalog-yollar">
+    <>
+      <section id="katalog" className={styles.band} aria-labelledby="katalog-yollar">
         <div className="alu-container">
           <SectionHeader
             id="katalog-yollar"
@@ -118,25 +114,25 @@ export function AkademiKatalog({ seviye, rol, sure }: Filters): ReactElement {
         <div className="alu-container">
           <SectionHeader id="katalog-suzgec" kicker="SÜZGEÇLER" title="Modülleri süzün" />
           <FilterRow label="Seviye">
-            <Chip href={buildHref(current, 'seviye', undefined)} active={!seviye}>Tümü</Chip>
+            <Chip href={buildHref(baseHref, current, 'seviye', undefined)} active={!seviye}>Tümü</Chip>
             {akademiProgram.levels.map((level) => (
-              <Chip key={level.slug} href={buildHref(current, 'seviye', level.slug)} active={seviye === level.slug}>
+              <Chip key={level.slug} href={buildHref(baseHref, current, 'seviye', level.slug)} active={seviye === level.slug}>
                 {level.title}
               </Chip>
             ))}
           </FilterRow>
           <FilterRow label="Mesleki rol">
-            <Chip href={buildHref(current, 'rol', undefined)} active={!rol}>Tüm roller</Chip>
+            <Chip href={buildHref(baseHref, current, 'rol', undefined)} active={!rol}>Tüm roller</Chip>
             {ROL_SLUGS.map((role) => (
-              <Chip key={role} href={buildHref(current, 'rol', role)} active={rol === role}>
+              <Chip key={role} href={buildHref(baseHref, current, 'rol', role)} active={rol === role}>
                 {ROL_ADLARI[role]}
               </Chip>
             ))}
           </FilterRow>
           <FilterRow label="Modül süresi">
-            <Chip href={buildHref(current, 'sure', undefined)} active={!sure}>Tüm süreler</Chip>
+            <Chip href={buildHref(baseHref, current, 'sure', undefined)} active={!sure}>Tüm süreler</Chip>
             {SURE_BUCKETS.map((bucket) => (
-              <Chip key={bucket.slug} href={buildHref(current, 'sure', bucket.slug)} active={sure === bucket.slug}>
+              <Chip key={bucket.slug} href={buildHref(baseHref, current, 'sure', bucket.slug)} active={sure === bucket.slug}>
                 {bucket.label}
               </Chip>
             ))}
@@ -154,7 +150,7 @@ export function AkademiKatalog({ seviye, rol, sure }: Filters): ReactElement {
           />
           {filtered.length === 0 ? (
             <p className={styles.empty}>
-              Seçtiğiniz süzgece uyan modül yok. <a className={styles.clear} href="/akademi/katalog">Süzgeci temizle</a>.
+              Seçtiğiniz süzgece uyan modül yok. <a className={styles.clear} href={`${baseHref}#katalog`}>Süzgeci temizle</a>.
             </p>
           ) : (
             <ul className={styles.grid}>
@@ -180,7 +176,7 @@ export function AkademiKatalog({ seviye, rol, sure }: Filters): ReactElement {
           )}
         </div>
       </section>
-    </div>
+    </>
   );
 }
 

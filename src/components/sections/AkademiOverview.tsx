@@ -1,5 +1,4 @@
 import type { ReactElement } from 'react';
-import Link from 'next/link';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { akademiProgram } from '@/data/akademi-content';
 import { CompactPageHero } from './CompactPageHero';
@@ -8,12 +7,12 @@ import { SectionHeader } from './SectionHeader';
 import { Callout, LevelCard } from '@/components/akademi/kit';
 import { RevealList } from '@/components/akademi/motion/RevealList';
 import { AkademiJsonLd } from '@/components/akademi/AkademiJsonLd';
+import { AkademiKatalogBolumu } from './AkademiKatalogBolumu';
 import styles from './AkademiOverview.module.css';
 
-export function AkademiOverview(): ReactElement {
+export function AkademiOverview({ seviye, rol, sure }: { seviye?: string; rol?: string; sure?: string }): ReactElement {
   const {
     hero: akademiHero,
-    entryPaths: akademiEntryPaths,
     levels: akademiLevels,
     runningProject: akademiRunningProject,
     lessonParts: akademiLessonParts,
@@ -28,34 +27,12 @@ export function AkademiOverview(): ReactElement {
       <DebugComponentLabel name="CompactPageHero">
         <CompactPageHero kicker={akademiHero.kicker} title={akademiHero.title} lead={akademiHero.lead}>
           <div className={styles.heroActions}>
-            <a className="alu-button alu-button--primary alu-button--md" href="#seviyeler">Programı inceleyin</a>
-            <a className="alu-button alu-button--secondary alu-button--md" href="#baslangic">Nereden başlamalıyım?</a>
+            <a className="alu-button alu-button--primary alu-button--md" href="#katalog">Katalog ve yolları gör</a>
           </div>
         </CompactPageHero>
       </DebugComponentLabel>
 
-      <DebugComponentLabel name="AkademiEntryPaths (özel)">
-        <section id="baslangic" className={styles.band} aria-labelledby="akademi-baslangic">
-          <div className="alu-container">
-            <SectionHeader id="akademi-baslangic" kicker="BAŞLANGIÇ" title="Nereden başlamalısınız?" lead="Aynı program, iki farklı giriş noktası. Daha önce başka bir BIM yazılımı kullandıysanız temelleri tekrar etmenize gerek yok." />
-            <ul className={styles.entryGrid}>
-              {akademiEntryPaths.map((path) => (
-                <li key={path.title} className={styles.entry}>
-                  <span className={styles.icon} aria-hidden="true"><AluIcon name={path.icon} size="md" /></span>
-                  <h3 className={styles.cardTitle}>{path.title}</h3>
-                  <p className={styles.levelRole}>{path.audience}</p>
-                  <ol className={styles.steps}>
-                    {path.steps.map((step) => <li key={step}>{step}</li>)}
-                  </ol>
-                  <Link className={styles.entryCta} href="/akademi/temel">
-                    Temel seviye ile başlayın →
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      </DebugComponentLabel>
+      <AkademiKatalogBolumu seviye={seviye} rol={rol} sure={sure} baseHref="/akademi" />
 
       <DebugComponentLabel name="AkademiLevels (kit)">
         <section id="seviyeler" className={styles.band} aria-labelledby="akademi-seviyeler">

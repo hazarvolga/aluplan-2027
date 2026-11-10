@@ -1,14 +1,10 @@
-import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import { AkademiKatalog } from '@/components/sections/AkademiKatalog';
+import { notFound, redirect } from 'next/navigation';
 import { isAkademiEnabled } from '@/lib/release-flags';
 
-/** Draft section: the catalog is never indexed until the academy ships. */
-export const metadata: Metadata = {
-  title: 'Eğitim Kataloğu ve Öğrenme Yolları',
-  robots: { index: false, follow: false },
-};
-
+/**
+ * Katalog ve öğrenme yolları artık /akademi içinde (#katalog). Eski adres,
+ * süzgeç parametrelerini koruyarak oraya yönlendirir; paylaşılmış linkler kırılmaz.
+ */
 export default async function AkademiKatalogPage({
   searchParams,
 }: {
@@ -16,5 +12,10 @@ export default async function AkademiKatalogPage({
 }) {
   if (!isAkademiEnabled()) notFound();
   const sp = await searchParams;
-  return <AkademiKatalog seviye={sp.seviye} rol={sp.rol} sure={sp.sure} />;
+  const params = new URLSearchParams();
+  if (sp.seviye) params.set('seviye', sp.seviye);
+  if (sp.rol) params.set('rol', sp.rol);
+  if (sp.sure) params.set('sure', sp.sure);
+  const qs = params.toString();
+  redirect(`/akademi${qs ? `?${qs}` : ''}#katalog`);
 }

@@ -13,7 +13,12 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export default function AkademiPage() {
+export default async function AkademiPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ seviye?: string; rol?: string; sure?: string }>;
+}) {
   if (!isAkademiEnabled()) notFound();
-  return <AkademiOverview />;
+  const sp = await searchParams;
+  return <AkademiOverview seviye={sp.seviye} rol={sp.rol} sure={sp.sure} />;
 }

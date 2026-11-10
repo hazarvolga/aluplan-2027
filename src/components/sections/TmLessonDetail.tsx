@@ -1,7 +1,7 @@
 import type { ReactElement, ReactNode } from 'react';
 import { CompactPageHero } from './CompactPageHero';
 import { SectionHeader } from './SectionHeader';
-import { CommandTable, PrevNextNav } from '@/components/akademi/kit';
+import { CommandTable, LessonImage, PrevNextNav } from '@/components/akademi/kit';
 import { temelModellemeLessons } from '@/data/temel-modelleme';
 import type { TmLesson } from '@/data/temel-modelleme';
 import styles from './TmLessonDetail.module.css';
@@ -19,8 +19,7 @@ function TmImages({ srcs, label }: { srcs: readonly string[]; label: string }): 
   return (
     <div className={styles.shots}>
       {srcs.map((src) => (
-        // eslint-disable-next-line @next/next/no-img-element -- static /public asset
-        <img key={src} className={styles.shot} src={src} alt={`${label} — ekran görüntüsü`} loading="lazy" decoding="async" />
+        <LessonImage key={src} src={src} alt={`${label} — ekran görüntüsü`} className={styles.shot} />
       ))}
     </div>
   );
@@ -175,8 +174,7 @@ export function TmLessonDetail({
                 if (b.type === 'image') {
                   return (
                     <figure key={i} className={styles.deepFigure}>
-                      {/* eslint-disable-next-line @next/next/no-img-element -- static /public asset */}
-                      <img className={styles.deepImg} src={b.src} alt={b.caption ?? 'Ekran görüntüsü'} loading="lazy" decoding="async" />
+                      <LessonImage src={b.src} alt={b.caption ?? 'Ekran görüntüsü'} caption={b.caption} className={styles.deepImg} />
                       {b.caption ? <figcaption className={styles.deepCaption}>{b.caption}</figcaption> : null}
                     </figure>
                   );

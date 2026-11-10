@@ -242,6 +242,23 @@
         "type": "image",
         "src": "/akademi/temel-modelleme/9769_0EM67000007oD0w_bf8a94f7.png",
         "caption": "Desen seçiminde renk tanımının önizlemesi."
+      },
+      {
+        "type": "heading",
+        "text": "Beyaz Dolgu Alanını DWG'ye Aktarmak"
+      },
+      {
+        "type": "text",
+        "text": "AutoCAD, Allplan'daki beyaz dolgu alanını (Füllfläche) tanımaz; bu yüzden DWG/DXF dışa aktarımında beyazı ya başka açık bir renge eşleştirir ya da hiç aktarmazsınız. Dışa aktarma sırasında yapılandırma penceresinde **Değiştir (Verändern)** düğmesine basıp **Dolgu Renkleri (Füllfarben)** sekmesine geçin; kaynak sistemde **Beyaz (Weiß)** ve **Beyaz/Siyah** girdilerini seçip bağlam menüsünden başka bir açık renge ya da **Kullanma (Nicht verwenden)** değerine eşleyin."
+      },
+      {
+        "type": "text",
+        "text": "Alternatif olarak Allplan'da serbest bir açık RGB rengi (örneğin 253,253,253) tanımlayıp beyaz dolgular için bunu kullanın; bu renk AutoCAD'e beyaz olarak aktarılır, böylece paftadaki beyaz dolgular DWG'de de doğru görünür."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10634_0EM7U000001TeNT_d6bfa607.png",
+        "caption": "DWG dışa aktarımında dolgu renklerinin eşleştirilmesi."
       }
     ]
   }

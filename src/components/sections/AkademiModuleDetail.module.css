@@ -117,3 +117,15 @@
 
 /* Exercise (Alıştırma) — the single practice task, no redundant box label */
 .exerciseTask{max-width:44rem;margin:var(--space-stack-md) 0 0;padding:var(--space-inset-md);border-left:3px solid var(--accent-akademi);background:var(--surface-raised);color:var(--text-secondary);font-size:var(--type-body-sm-size);line-height:var(--line-height-relaxed,1.7)}
+
+/* Bu modülde dersler — haritadan gelen seri dersleri */
+.moduleLessons{list-style:none;margin:var(--space-stack-lg) 0 0;padding:0;display:flex;flex-direction:column;gap:0;max-width:52rem}
+.moduleLessonItem{margin:0}
+.moduleLessonLink{display:grid;grid-template-columns:auto 1fr;gap:var(--space-inline-md);align-items:baseline;padding:var(--space-stack-sm) 0;border-top:var(--border-width-default) solid var(--border-default);text-decoration:none;color:var(--text-primary)}
+.moduleLessonItem:last-child .moduleLessonLink{border-bottom:var(--border-width-default) solid var(--border-default)}
+.moduleLessonNo{font-family:var(--font-mono);font-size:var(--type-body-sm-size);color:var(--accent-akademi)}
+.moduleLessonText{display:flex;flex-direction:column;gap:2px;min-width:0}
+.moduleLessonTitle{font-family:var(--font-heading);font-size:var(--type-body-md-size);color:var(--text-primary)}
+.moduleLessonLink:hover .moduleLessonTitle{color:var(--accent-akademi)}
+.moduleLessonMeta{font-size:var(--type-body-sm-size);color:var(--text-muted)}
+.moduleLessonLink:focus-visible{outline:var(--border-width-accent,2px) solid var(--accent-akademi);outline-offset:2px}

@@ -7,6 +7,7 @@ import { SectionHeader } from './SectionHeader';
 import { Figure, Lesson, PrevNextNav } from '@/components/akademi/kit';
 import { AkademiJsonLd } from '@/components/akademi/AkademiJsonLd';
 import { AkademiQuiz } from '@/components/akademi/AkademiQuiz';
+import { lessonsForModule } from '@/data/akademi-mufredat-haritasi';
 import styles from './AkademiModuleDetail.module.css';
 
 /** All modules in program order, so prev/next crosses level boundaries. */
@@ -25,6 +26,7 @@ export function AkademiModuleDetail({
   const index = ordered.findIndex((m) => m.levelSlug === module.levelSlug && m.slug === module.slug);
   const previous = index > 0 ? ordered[index - 1] : undefined;
   const next = index >= 0 && index < ordered.length - 1 ? ordered[index + 1] : undefined;
+  const moduleLessons = lessonsForModule(module.code);
 
 
   return (
@@ -44,6 +46,32 @@ export function AkademiModuleDetail({
       <DebugComponentLabel name="AkademiModuleHero (özel)">
         <CompactPageHero title={module.title} lead={module.summary} />
       </DebugComponentLabel>
+
+      {moduleLessons.length > 0 && (
+        <section className={styles.band} aria-labelledby="modul-dersler">
+          <div className="alu-container">
+            <SectionHeader
+              id="modul-dersler"
+              kicker="BU MODÜLDE"
+              title={`Dersler (${moduleLessons.length})`}
+              lead="Modülün uygulamalı dersleri. Başlığa tıklayınca derse gidersiniz."
+            />
+            <ul className={styles.moduleLessons}>
+              {moduleLessons.map((lesson) => (
+                <li key={lesson.href} className={styles.moduleLessonItem}>
+                  <a className={styles.moduleLessonLink} href={lesson.href}>
+                    <span className={styles.moduleLessonNo}>{String(lesson.no).padStart(2, '0')}</span>
+                    <span className={styles.moduleLessonText}>
+                      <span className={styles.moduleLessonTitle}>{lesson.title}</span>
+                      <span className={styles.moduleLessonMeta}>{lesson.seriLabel} · {lesson.duration}</span>
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {module.lesson && module.lesson.sections.length > 0 && (
         <DebugComponentLabel name="AkademiModuleLesson (ders)">

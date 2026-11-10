@@ -4,6 +4,7 @@ import { SectionHeader } from './SectionHeader';
 import { CommandTable, LessonImage, LessonToc, MetaRow, PrevNextNav } from '@/components/akademi/kit';
 import type { MetaItem } from '@/components/akademi/kit';
 import { AkademiQuiz } from '@/components/akademi/AkademiQuiz';
+import { moduleForLesson, ROL_ADLARI, type AkademiSeri } from '@/data/akademi-mufredat-haritasi';
 import { temelModellemeLessons } from '@/data/temel-modelleme';
 import type { TmLesson } from '@/data/temel-modelleme';
 import styles from './TmLessonDetail.module.css';
@@ -48,8 +49,17 @@ export function TmLessonDetail({
   const previous = index > 0 ? ordered[index - 1] : undefined;
   const next = index >= 0 && index < ordered.length - 1 ? ordered[index + 1] : undefined;
 
+  const series = basePath.split('/').pop() as AkademiSeri;
+  const mapEntry = moduleForLesson(series, lesson.slug);
+  const roleNames = mapEntry ? mapEntry.roles.map((role) => ROL_ADLARI[role]) : [];
+  const roleMeta: readonly MetaItem[] =
+    roleNames.length > 0
+      ? [{ k: 'Roller', v: roleNames.length >= 5 ? 'Tüm roller' : roleNames.join(', ') }]
+      : [];
+
   const meta: readonly MetaItem[] = [
     { k: 'Seviye', v: level },
+    ...roleMeta,
     { k: 'Süre', v: lesson.duration },
     { k: 'Ön koşul', v: previous ? `${String(previous.no).padStart(2, '0')} · ${previous.title}` : 'İlk ders' },
     { k: 'Başlangıç', v: previous ? 'Önceki dersin sonucu' : 'Yeni, boş proje' },

@@ -18,10 +18,16 @@ Her serinin loader'ı: `src/data/<seri>.ts` (tip: `TmLesson`). `_index.json` = m
 ### TmLesson alanları (src/data/temel-modelleme.ts)
 `no, slug, title, duration, sourceModule, intro?, objectives[], steps[]{time,heading,body,figures[]},
 pitfalls?[]{title,body}, checkpoint?, commands[]{name,menu,shortcut,desc}, media{videos,pdfs,samples},
-articles[]{id,title,body,figures[]}, deepDive?{title,blocks[]{type:heading|text|image}}`
+articles[]{id,title,body,figures[]}, deepDive?{blocks[]{type:heading|text|image}},
+quiz?[]{id,prompt,options[{text,correct}],explanation,bloom?,difficulty?,outcomeCode?},
+exercise?{task,startFile?,expected,hint?}`
 - `body` içinde `**kalın**` ve `` `kod` `` → `withEmphasis()` render eder.
 - `articles` = "Derinleşmek için" kartı (ham KB Q&A). `deepDive` = "Derinlemesine" (çevrilmiş,
-  görselli yedirilmiş hali). İkisi şu an BİRLİKTE görünür (kart gizleme kararı beklemede).
+  görselli; alt-bölüm başlıkları kart başlığıyla birebir eşli). İkisi şu an BİRLİKTE görünür
+  (kart gizleme kararı: "şimdilik dursun").
+- `quiz` = "Kendinizi sınayın" (42 derste ~3 grounded soru; `AkademiQuiz` bileşeni).
+- `exercise` = "Şimdi siz deneyin" uygulama görevi (42 derste; görev + beklenen sonuç + ipucu).
+- `deepDive.title` KALDIRILDI; Derinlemesine bölüm başlığı sabit "Sık karşılaşılan durumlar".
 
 ## Müfredat yapısı
 Seviyeler: Temel / Orta / İleri / Uzman (`src/data/akademi-content.ts`, `akademiProgram.levels`).
@@ -30,10 +36,15 @@ uygulamalı seriler (registry: `AkademiSidebar.tsx` `AKADEMI_SERIES`, `AkademiLe
 `SERIES_CARDS`). İleri/Uzman çoğunlukla iskelet.
 
 ## Renderer / bileşenler
-- Ders detay: `src/components/sections/TmLessonDetail.tsx` (+ `.module.css`). Bölümler: hero,
-  "Neler yapacaksınız" (objectives), "Adım adım" (steps + figures), "Takılırsanız" (pitfalls),
-  checkpoint, "Komut, menü yolu ve kısayol" (CommandTable), **Derinlemesine** (deepDive),
-  **Derinleşmek için** (articles kartı), PDF/örnek, PrevNext.
+- Ders detay: `src/components/sections/TmLessonDetail.tsx` (+ `.module.css`). Bölümler: hero +
+  künye (MetaRow: seviye/süre/ön koşul/başlangıç/sürüm), **LessonToc** (yapışkan ders-içi
+  içindekiler + scroll-spy + "Tamamladım" localStorage), "Neler yapacaksınız", "Adım adım"
+  (steps + figures), checkpoint, "Takılırsanız" (pitfalls), **"Şimdi siz deneyin"** (exercise),
+  **"Kendinizi sınayın"** (quiz → AkademiQuiz), ilgili video, "Komut..." (CommandTable),
+  **Derinlemesine** (deepDive), **Derinleşmek için** (articles kartı), PDF/örnek, PrevNext.
+- Kit bileşenleri: `LessonImage` (tıkla-büyüt lightbox; MediaDialog), `LessonToc` (içindekiler
+  + ilerleme), `MetaRow` (künye), `AkademiQuiz` (quiz). `level`/`allplanVersion` propları
+  seri sayfalarından geçer (lejant "Orta", diğerleri "Temel").
 - Seri genel: `TmOverview.tsx`. Sidebar: `AkademiSidebar.tsx` (seri içinde **odak modu**:
   yalnız o serinin dersleri + geri link). Seviye: `AkademiLevelDetail.tsx`.
 - Tasarım sistemi: token tabanlı (`pnpm styles:check`, `check_component_colors.py` — bileşen

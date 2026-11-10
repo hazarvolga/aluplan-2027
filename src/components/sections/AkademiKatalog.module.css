@@ -24,3 +24,8 @@
 
 .empty{margin:var(--space-stack-lg) 0 0;color:var(--text-secondary);font-size:var(--type-body-md-size)}
 .clear{color:var(--accent-akademi)}
+
+.srStatus{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.grid[data-animate="true"]{animation:katalogFade var(--motion-duration-base,.28s) var(--motion-easing-default,ease) both}
+@keyframes katalogFade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.grid[data-animate="true"]{animation:none}}

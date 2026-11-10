@@ -2,7 +2,8 @@ import type { ReactElement, ReactNode } from 'react';
 import { CompactPageHero } from './CompactPageHero';
 import { SectionHeader } from './SectionHeader';
 import { akademiProgram, levelModules } from '@/data/akademi-content';
-import { lessonsForModule, ROL_ADLARI, type AkademiRol } from '@/data/akademi-mufredat-haritasi';
+import { lessonsForModule, ogrenmeYollari, ROL_ADLARI, type AkademiRol } from '@/data/akademi-mufredat-haritasi';
+import { AkademiOgrenmeYollari } from './AkademiOgrenmeYollari';
 import styles from './AkademiKatalog.module.css';
 
 interface Filters {
@@ -100,6 +101,18 @@ export function AkademiKatalog({ seviye, rol, sure }: Filters): ReactElement {
         title="Eğitim Kataloğu ve Öğrenme Yolları"
         lead="Seviyeye, mesleki role ve modül süresine göre süzün. Seçtiğiniz süzgeç adrese (URL) yansır; ekip arkadaşlarınızla paylaşabilirsiniz."
       />
+
+      <section className={styles.band} aria-labelledby="katalog-yollar">
+        <div className="alu-container">
+          <SectionHeader
+            id="katalog-yollar"
+            kicker="ÖĞRENME YOLLARI"
+            title="Rol bazlı sıralı yollar"
+            lead="Her yol, ilgili disiplinin izlemesi gereken sıralı modülleri gösterir. İlerleme bu tarayıcıda kaydedilir."
+          />
+          <AkademiOgrenmeYollari yollar={ogrenmeYollari()} />
+        </div>
+      </section>
 
       <section className={styles.band} aria-labelledby="katalog-suzgec">
         <div className="alu-container">

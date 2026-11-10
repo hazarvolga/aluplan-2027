@@ -114,6 +114,7 @@ const SERI: Record<AkademiSeri, { lessons: readonly TmLesson[]; basePath: string
 };
 
 export interface ModulDersi {
+  slug: string;
   href: string;
   title: string;
   no: number;
@@ -131,6 +132,7 @@ export function lessonsForModule(moduleCode: string): readonly ModulDersi[] {
       const lesson = seri.lessons.find((l) => l.slug === entry.slug);
       if (!lesson) return null;
       return {
+        slug: lesson.slug,
         href: `${seri.basePath}/${lesson.slug}`,
         title: lesson.title,
         no: lesson.no,
@@ -145,4 +147,40 @@ export function lessonsForModule(moduleCode: string): readonly ModulDersi[] {
 /** Bir dersin (seri+slug) hangi modül/role ait olduğunu döndürür. */
 export function moduleForLesson(series: AkademiSeri, slug: string): MufredatKaydi | undefined {
   return mufredatHaritasi.find((entry) => entry.series === series && entry.slug === slug);
+}
+
+/** Program sırası: Temel → Orta → Arazi → İleri → Uzman. */
+export const MODUL_SIRA: readonly string[] = ['M1', 'M2', 'M3', 'M4', 'M4B', 'arazi', 'M3B', 'M5', 'M6', 'M7', 'M8', 'M9', 'M10'];
+
+export interface YolDersi {
+  slug: string;
+  href: string;
+  title: string;
+  moduleCode: string;
+}
+
+export interface OgrenmeYolu {
+  role: AkademiRol;
+  roleName: string;
+  moduleCodes: readonly string[];
+  lessons: readonly YolDersi[];
+}
+
+/** Her mesleki rol için sıralı öğrenme yolu: program sırasına göre o role ait dersler. */
+export function ogrenmeYollari(): readonly OgrenmeYolu[] {
+  const roles: readonly AkademiRol[] = ['mimar', 'statik', 'altyapi', 'bim-yonetici', 'prekast', 'teknik-ressam'];
+  return roles.map((role) => {
+    const lessons: YolDersi[] = [];
+    const moduleCodes: string[] = [];
+    for (const code of MODUL_SIRA) {
+      const inModule = lessonsForModule(code).filter((lesson) => lesson.roles.includes(role));
+      if (inModule.length > 0) {
+        moduleCodes.push(code);
+        for (const lesson of inModule) {
+          lessons.push({ slug: lesson.slug, href: lesson.href, title: lesson.title, moduleCode: code });
+        }
+      }
+    }
+    return { role, roleName: ROL_ADLARI[role], moduleCodes, lessons };
+  });
 }

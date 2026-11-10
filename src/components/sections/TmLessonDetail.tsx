@@ -1,7 +1,7 @@
 import type { ReactElement, ReactNode } from 'react';
 import { CompactPageHero } from './CompactPageHero';
 import { SectionHeader } from './SectionHeader';
-import { CommandTable, LessonImage, PrevNextNav } from '@/components/akademi/kit';
+import { CommandTable, LessonImage, LessonToc, PrevNextNav } from '@/components/akademi/kit';
 import { temelModellemeLessons } from '@/data/temel-modelleme';
 import type { TmLesson } from '@/data/temel-modelleme';
 import styles from './TmLessonDetail.module.css';
@@ -53,6 +53,8 @@ export function TmLessonDetail({
       </nav>
 
       <CompactPageHero title={lesson.title} lead={lesson.objectives[0]} />
+
+      <LessonToc slug={lesson.slug} />
 
       {lesson.intro && (
         <section className={styles.band}>

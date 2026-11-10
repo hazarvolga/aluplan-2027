@@ -4,7 +4,7 @@
 .breadcrumb a:hover{color:var(--accent-akademi)}
 .sep{color:var(--text-muted)}
 
-.band{padding-block:var(--space-stack-xl);border-bottom:var(--border-width-default) solid var(--border-default)}
+.band{padding-block:var(--space-stack-xl);border-bottom:var(--border-width-default) solid var(--border-default);scroll-margin-top:7.5rem}
 .lastBand{border-bottom:0}
 
 .intro{margin:0;max-width:46rem;font-size:var(--type-body-md-size);line-height:var(--line-height-relaxed,1.7);color:var(--text-secondary);padding-left:var(--space-inset-md);border-left:var(--border-width-accent,2px) solid var(--accent-border)}

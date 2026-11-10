@@ -11,5 +11,6 @@ export { Lesson } from './Lesson';
 export { LessonVideo } from './LessonVideo';
 export { CommandTable } from './CommandTable';
 export { LessonImage } from './LessonImage';
+export { LessonToc } from './LessonToc';
 export { PrevNextNav } from './PrevNextNav';
 export type { PrevNextItem } from './PrevNextNav';

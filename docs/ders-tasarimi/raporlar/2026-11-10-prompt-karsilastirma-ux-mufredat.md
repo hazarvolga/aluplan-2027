@@ -217,3 +217,31 @@ Backend yok; hepsi statik / SSR query param / localStorage / istemci. Fazlar (ö
 
 Öneri: **A1'den başla** (kendi içinde tam, backend'siz, en görünür kazanım); **D için önce
 haritalama taslağı** üret, onaysız içerik yapısına dokunma.
+
+---
+
+## UYGULAMA DURUMU (2026-11-10, kullanıcı tam yetki verdi)
+
+**Tamamlandı ve commit'lendi** (her faz restore tag'li; production build 141/141 temiz):
+- ✅ **Faz D (müfredat hizalama):** `akademi-mufredat-haritasi.ts` kayıt tablosu (42 ders →
+  M1-M4B + arazi, rol etiketleri; slug/URL değişmedi). Modül sayfaları "Bu modülde dersler"
+  ile haritadan besleniyor; ders künyesine "Roller" eklendi. Haritalama taslağı:
+  `2026-11-10-mufredat-hizalama-taslagi.md`. 4 açık karar önerildiği gibi uygulandı.
+  (`restore/akademi-mufredat-harita-20261110`)
+- ✅ **Faz A1 (URL-filtreli katalog):** `/akademi/katalog` — seviye/rol/süre SSR süzgeçleri,
+  URL'ye yansır, paylaşılabilir; 12 modül + Arazi, "Yakında" dürüst.
+  (`restore/akademi-katalog-a1-20261110`)
+- ✅ **Faz A2 (rol-bazlı öğrenme yolları):** 6 rol için sıralı modül zinciri + localStorage
+  ilerleme (%/ders) + "Devam et". (`restore/akademi-yollar-a2-20261110`)
+- ✅ Header'a "Katalog & Yollar" bağlantısı (keşfedilebilirlik).
+- ✅ **Faz B (temel cila):** adım okuma sütunu 40rem (~72 krk), mobil dokunma hedefi ≥44px.
+  (`restore/akademi-sunum-cila-20261110`)
+
+**Kalan (sonraki oturum, hepsi backend'siz):**
+- Faz B ileri: komut/kısayol pill etiketleri · adım düzeyi "Adımı İşaretle" + bölüm ilerlemesi
+  · ders konumu "Modül · Ders x/y" + yapışkan önceki/sonraki · Odak Modu + Yazdır/PDF ·
+  indirilebilir başlangıç dosyası · "Neden önemli" bloğu · şekil kaynak atfı · görsel
+  width/height (CLS).
+- Faz C: çok dilli (TR/EN/DE) Türkçe-toleranslı arama (build-zamanı statik indeks).
+- Faz D içerik: İleri/Uzman modülleri (M3B, M5-M10) içerik üretimi (ekip/arşiv); şu an
+  katalogda "Yakında".

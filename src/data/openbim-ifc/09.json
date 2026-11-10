@@ -1,0 +1,147 @@
+{
+  "no": 9,
+  "slug": "ids-ile-teslim-dogrulama-ve-epys-ids-yapisi",
+  "title": "IDS ile Teslim Doğrulama ve e-PYS IDS'inin Yapısı",
+  "duration": "30 dk",
+  "sourceModule": "Proje 1 · Modül 10: OpenBIM, IFC 4/4.3, IDS ve Bimplus CDE",
+  "intro": "OpenBIM teslimlerinde modelin \"görünüşte doğru\" olması yetmez; teslim alan kurumun istediği bilgiyi makine okunur biçimde taşıması gerekir. IDS (Information Delivery Specification), buildingSMART'ın bu amaçla geliştirdiği açık standarttır: IFC modelini otomatik olarak denetleyen, insan ve yazılım tarafından aynı biçimde okunan bir şartnamedir. Bu derste IDS'in mantığını ve e-PYS'in resmî EPYS_IDS dosyasının yapısını tanırsınız.",
+  "objectives": [
+    "IDS'in (Information Delivery Specification) ne olduğunu ve BIM teslimini nasıl makine okunur bir kurala bağladığını açıklamak.",
+    "Bir IDS specification'ının iki parçasını (applicability ve requirements) ve facet türlerini (entity, attribute, property, classification, material, partOf) ayırt etmek.",
+    "e-PYS EPYS_IDS dosyasının kapsamını (161 specification, IFC4X3_ADD2, EK-3/EK-5/EK-6/EK-7, Ruhsat aşaması) okuyabilmek.",
+    "ALLPLAN'ın öznitelik eşleme (Attribute-Mapping) ve dışa aktarım gücünün IDS gerekliliklerini karşılamadaki rolünü kavramak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "IDS nedir ve neden gerekir",
+      "body": "IDS (Information Delivery Specification), bir IFC modelinin hangi nesneleri hangi bilgiyi taşımak zorunda olduğunu tanımlayan, XML tabanlı açık bir buildingSMART standardıdır. Amaç, teslim beklentisini serbest metinli bir şartnameden çıkarıp makine tarafından otomatik denetlenebilir bir kurala dönüştürmektir. Böylece teslim alan kurum (burada e-PYS), gelen IFC modelini elle tek tek açmadan, bir doğrulayıcıya vererek \"bu model istenen bilgiyi taşıyor mu?\" sorusunu otomatik yanıtlayabilir. Aynı dosya hem insan tarafından okunur hem de yazılım tarafından çalıştırılır; bu, teslim sürecindeki yoruma dayalı anlaşmazlıkları ortadan kaldırır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Bir specification'ın iki parçası: applicability ve requirements",
+      "body": "IDS dosyası bir specification listesinden oluşur. Her specification iki bölümlüdür:\n- Applicability (uygulanabilirlik): Bu kural kimlere uygulanır? Örneğin \"IfcActuator sınıfındaki tüm nesneler\".\n- Requirements (gereklilikler): Uygulanan bu nesneler neyi sağlamalı? Örneğin \"Name özniteliği belirli bir desene uymalı\".\nHer gereklilik bir cardinality (zorunluluk derecesi) taşır: required (zorunlu), prohibited (yasak) veya optional (isteğe bağlı). Doğrulamada mantık nettir: Bir nesne applicability'ye uyuyorsa, requirements'ın tamamını sağlamak zorundadır; sağlamıyorsa o nesne \"fail\" (başarısız) olarak raporlanır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Facet türleri: kuralın hangi bilgiyi denetlediği",
+      "body": "Hem applicability hem requirements, \"facet\" denen yapı taşlarıyla yazılır. EPYS_IDS'te kullanılan facet türleri:\n- Entity: IFC sınıfı (ör. IfcActuator, IfcAirTerminalBox).\n- Attribute: IFC özniteliği (ör. Name) ve değer kısıtı (ör. bir regex deseni).\n- Property: Bir özellik kümesindeki (Pset) özellik ve veri tipi (ör. Pset_AirTerminalTypeCommon içindeki AirFlowRateRange, IfcVolumetricFlowRateMeasure tipinde).\n- Classification: Sınıflandırma sistemi kodu.\n- Material: Malzeme tanımı.\n- PartOf: Nesnenin başka bir nesneyle ilişkisi (parçası olma).\nEPYS_IDS'te gereklilik tarafında en çok attribute (323) ve property (186) facet'leri, uygulanabilirlik tarafında ise entity (187) kullanılır; ayrıca material (25) ve partOf (26) gereklilikleri de vardır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "e-PYS'in resmî IDS'i: EPYS_IDS künyesi",
+      "body": "Elinizdeki EPYS_IDS dosyası e-PYS sisteminin Ruhsat aşaması teslim gerekliliklerini tanımlar. Künyesi:\n- Başlık: EPYS_IDS, amaç: E-PYS, aşama (milestone): Ruhsat.\n- IFC sürümü: tüm 161 specification IFC4X3_ADD2 için tanımlıdır; yani model bu sürümde dışa aktarılmalıdır.\n- Kapsam: EK-3 (mahal/oda adları), EK-5 (Tablo 5.1 ve 5.2 kategori kodu listeleri), EK-6 (proje gereklilikleri) ve EK-7 gereklilikleri.\nDosya, aktüatörden hava terminal kutusuna, kazı-dolgu işlerinden mimari ve taşıyıcı elemanlara kadar disiplinler arası 161 nesne türü için ayrı kural tanımlar. Kuralların yetki kaynağı e-PYS Yönetmeliği ve ekleridir (EK-3, EK-5, EK-6, EK-7); IDS bu eklerin makine okunur karşılığıdır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "ALLPLAN'ın bu konudaki gücü",
+      "body": "IDS'i bir model \"kendiliğinden\" geçmez; modeldeki her nesnenin doğru IFC sınıfına, doğru ada ve doğru özniteliklere sahip olması, sonra bunların IFC'ye eksiksiz aktarılması gerekir. ALLPLAN bu iki adımda güçlüdür:\n- Yerel IFC4 / IFC4.3 desteği: ALLPLAN, IFC4 ve IFC4.3 (ADD2) modelini ara biçime gerek kalmadan doğrudan dışa aktarır; EPYS_IDS'in istediği IFC4X3_ADD2 sürümü bu yolla üretilir.\n- Öznitelik eşleme (Attribute-Mapping) ve değişim profilleri (Austauschprofile): Hangi ALLPLAN özniteliğinin hangi IFC özniteliğine veya Pset özelliğine gideceğini tek tek denetlersiniz ve bunu bir profilde saklarsınız. Bu sayede IDS'in Name deseni ve Pset gereklilikleri tekrarlanabilir biçimde karşılanır.\n- Bimplus: Nemetschek'in openBIM ortak veri ortamıdır (CDE); doğrulama sonrası sorunları BCF ile yönetir ve disiplinleri tek koordinasyon ortamında buluşturur.\nKısacası ALLPLAN'ın gücü, IDS'i \"geçmeyi\" bir şans değil, denetlenebilir ve tekrarlanabilir bir iş akışı hâline getirmesidir. Bu eşlemeyi 4. derste (öznitelik eşleme) ve doğru IFC sınıfı atamayı 5. derste kurmuştunuz; IDS o çalışmanın karşılığını alır.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: IFC sürümü uyuşmazlığı",
+      "body": "EPYS_IDS tüm kurallarını IFC4X3_ADD2 için tanımlar. Modeli IFC2x3 ya da farklı bir IFC4 alt sürümünde dışa aktarırsanız doğrulama, kuralların beklediği sınıf ve özellik adlarını bulamayabilir. Dışa aktarımda hedef sürümü IFC4.3 (ADD2) seçin."
+    },
+    {
+      "title": "DİKKAT: Applicability ile requirements'ı karıştırmak",
+      "body": "Applicability \"bu kural kime bakar\" demektir; bir nesne buraya uymuyorsa o specification onu hiç denetlemez (hata değil, kapsam dışı). Requirements ise \"uyan nesne neyi sağlamalı\" demektir; asıl pass/fail buradadır. Bir nesnenin yanlış IFC sınıfında olması, onu bir kuralın kapsamından tümüyle çıkarabilir."
+    }
+  ],
+  "checkpoint": "EPYS_IDS dosyasını açıp bir specification'ın applicability (hangi IFC sınıfı) ve requirements (hangi Name deseni veya Pset özelliği) bölümlerini birbirinden ayırabiliyor, dosyanın IFC4X3_ADD2 ve Ruhsat aşaması için tanımlı olduğunu görebiliyorsanız bu dersi kavramışsınızdır.",
+  "commands": [
+    {
+      "name": "IFC-Daten exportieren (IFC Verisi Dışa Aktar)",
+      "menu": "Datei / Export",
+      "shortcut": "",
+      "desc": "Modeli IFC olarak dışa aktarır; hedef sürüm olarak IDS'in istediği IFC4.3 (ADD2) seçilir."
+    },
+    {
+      "name": "Attribute-Mapping (Öznitelik Eşleme)",
+      "menu": "IFC dışa aktarım ayarları",
+      "shortcut": "",
+      "desc": "ALLPLAN özniteliklerinin hangi IFC özniteliği/Pset özelliğine gideceğini tanımlar; IDS gerekliliklerini karşılamanın anahtarıdır."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "epys-ids",
+      "title": "EPYS_IDS (buildingSMART IDS 1.0, IFC4X3_ADD2)",
+      "body": "e-PYS sisteminin resmî IDS dosyası (EPYS_IDS). 161 specification; EK-3, EK-5, EK-6, EK-7 gerekliliklerinin makine okunur tanımı; amaç E-PYS, aşama Ruhsat. Her specification applicability (IFC sınıfı) ve requirements (Name deseni, Pset özelliği, malzeme, ilişki) bölümlerinden oluşur. Kaynak dosya: EPYS_IDS_2026-11-06.ids.",
+      "figures": []
+    },
+    {
+      "id": "epys-yonetmelik",
+      "title": "e-PYS Yönetmeliği ve Ekleri (EK-3, EK-5, EK-6, EK-7)",
+      "body": "IDS kurallarının yetki kaynağı e-PYS Yönetmeliği ve ekleridir: EK-3 mahal adları, EK-5 Tablo 5.1 ve 5.2 kategori kodları, EK-6 proje gereklilikleri, EK-7. IDS, bu eklerde yazılı gereklilikleri otomatik denetlenebilir kurala çevirir.",
+      "figures": []
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m10-ids-1",
+      "prompt": "Bir IFC nesnesi bir IDS specification'ının applicability'sine uyuyor ama requirements'taki zorunlu Name desenini sağlamıyorsa doğrulama sonucu ne olur?",
+      "options": [
+        {
+          "text": "Nesne kapsam dışı sayılır, denetlenmez",
+          "correct": false
+        },
+        {
+          "text": "Nesne o specification için fail (başarısız) raporlanır",
+          "correct": true
+        },
+        {
+          "text": "Tüm model reddedilir ve hiçbir nesne denetlenmez",
+          "correct": false
+        },
+        {
+          "text": "IFC sürümü otomatik yükseltilir",
+          "correct": false
+        }
+      ],
+      "explanation": "Applicability'ye uyan bir nesne, zorunlu (required) gerekliliklerin tamamını sağlamak zorundadır. Name deseni sağlanmazsa o nesne o specification için fail olur. Kapsam dışı kalma yalnızca applicability'ye uymayan nesneler içindir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta"
+    },
+    {
+      "id": "m10-ids-2",
+      "prompt": "EPYS_IDS tüm specification'larını hangi IFC sürümü için tanımlar?",
+      "options": [
+        {
+          "text": "IFC2x3",
+          "correct": false
+        },
+        {
+          "text": "IFC4 (ADD1)",
+          "correct": false
+        },
+        {
+          "text": "IFC4X3_ADD2",
+          "correct": true
+        },
+        {
+          "text": "Sürümden bağımsızdır",
+          "correct": false
+        }
+      ],
+      "explanation": "Dosyadaki 161 specification'ın tamamı ifcVersion=\"IFC4X3_ADD2\" ile tanımlıdır; bu yüzden model bu sürümde dışa aktarılmalıdır.",
+      "bloom": "Hatırlama",
+      "difficulty": "Kolay"
+    }
+  ],
+  "exercise": {
+    "task": "EPYS_IDS_2026-11-06.ids dosyasını bir metin editöründe açın. İçinden bir disiplin seçin (ör. 'Hava Terminal Kutusu') ve o specification'ın applicability bölümündeki IFC sınıfını, requirements bölümündeki Name desenini ve varsa Pset özelliğini kâğıda yazın.",
+    "expected": "Seçtiğiniz specification için: uygulandığı IFC sınıfı (ör. IfcAirTerminalBox), zorunlu Name deseni (ör. MK-HTK-...) ve varsa istenen Pset özelliği (ör. Pset_AirTerminalTypeCommon / AirFlowRateRange) açıkça ayrıştırılmış olmalı.",
+    "hint": "Her specification bir <ids:applicability> ve bir <ids:requirements> bloğu içerir; Name kısıtı <xs:pattern value=\"...\"> içinde, Pset özelliği <ids:property> içindedir."
+  }
+}

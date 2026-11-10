@@ -1,0 +1,57 @@
+[
+  {
+    "no": 1,
+    "slug": "openbim-ifc-ve-bimplus-kavrami",
+    "title": "OpenBIM, IFC ve Bimplus Kavramına Giriş"
+  },
+  {
+    "no": 2,
+    "slug": "bimplus-share-proje-baslatma-ve-cde",
+    "title": "Bimplus/Share ile Proje Başlatma ve CDE Rolleri"
+  },
+  {
+    "no": 3,
+    "slug": "ifc-disa-aktarim-favoriler-ve-degisim-profilleri",
+    "title": "IFC Dışa Aktarım: Komut, Favoriler ve Değişim Profilleri"
+  },
+  {
+    "no": 4,
+    "slug": "oznitelik-esleme-attribute-mapping-ve-pset",
+    "title": "Öznitelik Eşleme (Attribute-Mapping) ve Pset'ler"
+  },
+  {
+    "no": 5,
+    "slug": "ifc-sistem-grup-ve-objekttyp-yapilari",
+    "title": "IFC'de Sistem, Grup ve Nesne Tipi: IfcSystem, IfcGroup, IfcObjectType"
+  },
+  {
+    "no": 6,
+    "slug": "ifc-ice-aktarim-ve-referans-model-xref",
+    "title": "IFC İçe Aktarım ve Referans Model (XREF)"
+  },
+  {
+    "no": 7,
+    "slug": "bimplus-cde-senkronizasyon-ve-yedekleme",
+    "title": "Bimplus CDE: Senkronizasyon ve Yedekleme"
+  },
+  {
+    "no": 8,
+    "slug": "koordinasyon-cakisma-ve-bcf-sorun-yonetimi",
+    "title": "Koordinasyon: Çakışma Kontrolü ve BCF ile Sorun Yönetimi"
+  },
+  {
+    "no": 9,
+    "slug": "ids-ile-teslim-dogrulama-ve-epys-ids-yapisi",
+    "title": "IDS ile Teslim Doğrulama ve e-PYS IDS'inin Yapısı"
+  },
+  {
+    "no": 10,
+    "slug": "epys-adlandirma-oznitelik-kurallarini-saglamak-ve-dogrulama",
+    "title": "e-PYS Adlandırma ve Öznitelik Kurallarını Modelde Sağlama ve Doğrulama"
+  },
+  {
+    "no": 11,
+    "slug": "sik-hatalar-ve-cozumleri-ifc-ve-share",
+    "title": "Sık Hatalar ve Çözümleri: IFC Penceresi, Donma ve Kilitli Proje"
+  }
+]

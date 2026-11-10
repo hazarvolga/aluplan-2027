@@ -1,0 +1,149 @@
+{
+  "no": 4,
+  "slug": "helis-donati-ve-dik-olmayan-bukum-acinim",
+  "title": "3B Helis Donatı ve Dik Olmayan Büküm Açınımı (ISO 3766)",
+  "duration": "28 dk",
+  "sourceModule": "Proje 1 · Modül 5: Betonarme Yapılarda 3B Donatı Detaylandırma",
+  "intro": "Bazı donatılar düz köşeli değildir: dairesel kolonlardaki helis (spiral) sargı veya dik açıyla bükülmemiş çubuklar. Bu ders, 3B helis donatının 2B donatı içine nasıl entegre edildiğini ve dik olmayan kolların açınım boyutlarının ISO 3766'ya göre nasıl hesaplandığını kaynağa sadık anlatır.",
+  "objectives": [
+    "3B helis (spiral) donatının 2B donatı içine nasıl entegre edildiğini tanımlamak.",
+    "3B donatı modunun (2D/3D reinforcement mode) nerede etkinleştirildiğini açıklamak.",
+    "Dik açıyla bükülmemiş çubukların açınım ve boyut hesabının ISO 3766 (03.2004) ile yapıldığını kavramak.",
+    "Açınım boyutlarındaki küçük farkların (en çok 2 mm) yuvarlama toleransından geldiğini ayırt etmek."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Helisin durumu",
+      "body": "Kaynağa göre yeni 3B helis donatı (Allplan 2009'dan beri) herhangi bir kontur boyunca farklı sarım yükseklikleriyle oluşturulabilir. Ne yazık ki bu helisi 2B çubuk olarak oluşturmak mümkün değildir; bunun yerine 3B donatıyı 2B donatıya entegre edebilirsiniz.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Helis donatıyı 2B donatıya entegre etme",
+      "body": "Kaynaktaki iş akışı: Önce planda bir dairesel kolon oluşturun (Create > Architecture altında duvar/açıklık/bileşen araçlarıyla). Kolonun bir yan görünümünü veya kesitini türetin (Create > Views, sections, details > Views and sections altında görünüm/kesit üretme). Ardından 'Tools > Options > Reinforcement > General' altında 'Reinforce with 3D model' için 2D/3D reinforcement mode kutusunu işaretleyerek 3B donatı modunu etkinleştirin. 'Create > Engineering > Çubuk Donatı (bar reinforcement) > Circular reinforcement' işlevini başlatıp helis donatıyı seçin; palette sarım yükseklikleri ve pas payını (concrete cover) ayarlayıp komut istemlerini izleyin.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Dik olmayan kolların açınımı (ISO 3766)",
+      "body": "Dik açıyla bükülmemiş bir çubuğun kol uzunlukları ve büküm boyutları kaynağa göre ISO 3766 (03.2004) uyarınca hesaplanır; ISO 3766, önceki ISO 4066'nın yerini alır. Gerçek demir gösteriminde küçük farklar (en çok 2 mm) yuvarlama toleranslarından kaynaklanır. Kıvrık (cranked) bir çubukta öteleme (offset) boyutu, düşey kolların iki dış kenarı üzerinden belirlenir. Açınım gösterimi planda çubuk ekseni (bar axis) üzerinde verilir.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Helis 2B çubuk olarak oluşturulamaz",
+      "body": "Kaynağa göre helisi doğrudan 2B çubuk olarak oluşturmak mümkün değildir. Çözüm, 3B donatı modunu etkinleştirip dairesel donatı içinden helisi oluşturmak ve kolonun görünüm/kesitine entegre etmektir."
+    },
+    {
+      "title": "DİKKAT: Açınım boyutlarını büküm damgasına yazın",
+      "body": "ISO 3766'ya göre dik olmayan kolların boyutlandırmasında yanlış anlamaları önlemek için ilgili bilgiyi büküm damgasına (bending stamp) eklemeniz önerilir. Yuvarlamadan gelen en çok 2 mm'lik fark normaldir."
+    }
+  ],
+  "checkpoint": "Dairesel kolonun görünümünü türetip 3B donatı modunu etkinleştirdikten sonra dairesel donatı içinden helisi oluşturabiliyorsanız entegrasyon doğru yapılmıştır.",
+  "commands": [
+    {
+      "name": "Circular reinforcement (helical reinforcement)",
+      "menu": "Mühendislik rolü · Donatı (Engineering · Reinforcement)",
+      "shortcut": "",
+      "desc": "Dairesel/helis donatı oluşturur; palette sarım yüksekliği ve pas payı ayarlanır."
+    },
+    {
+      "name": "2D/3D reinforcement mode (Reinforce with 3D model)",
+      "menu": "Tools > Options > Reinforcement > General",
+      "shortcut": "",
+      "desc": "3B model ile donatma modunu etkinleştirir."
+    },
+    {
+      "name": "Generate view / Generate section",
+      "menu": "Create > Views, sections, details > Views and sections",
+      "shortcut": "",
+      "desc": "Kolonun yan görünüm veya kesitini türetir."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "en_11282",
+      "title": "Yeni 3B Helis Donatıyı (Allplan 2009'dan) 2B Donatıda Oluşturma",
+      "body": "Yeni 3B helis donatı Allplan 2009'dan beri mevcuttur; bir helisin 2B yuvarlak çelik desenine yerleştirilmesi istenir. Helis, herhangi bir kontur boyunca farklı sarım yükseklikleriyle oluşturulabilir; ancak bu helisi 2B çubuk olarak oluşturmak mümkün değildir. Bunun yerine 3B donatıyı 2B donatıya entegre edebilirsiniz: Planda dairesel bir kolon oluşturun (Create > Architecture > Base: Walls, Openings, Components). Kolonun yan görünümünü veya kesitini türetin (Create > Views, sections, details > Views and sections > Generate view veya Generate section). 'Tools > Options > Reinforcement > General' altında 'Reinforce with 3D model' için 2D/3D reinforcement mode kutusunu işaretleyerek 3B donatı modunu etkinleştirin. 'Create > Engineering > Çubuk Donatı > Circular reinforcement' işlevini başlatıp helis donatıyı seçin. Palette sarım yüksekliği, pas payı vb. parametreleri ayarlayın ve helis oluşturma için istemleri izleyin.",
+      "figures": [
+        "/akademi/donati-detaylandirma/11282_0EM7U000001Teur_c8bc01ff.png",
+        "/akademi/donati-detaylandirma/11282_0EM7U000001Teus_0d563abb.png"
+      ]
+    },
+    {
+      "id": "en_10864",
+      "title": "ISO 3766'ya Göre Açınım Boyutlu Donatı Oluşturma",
+      "body": "Dik açıyla bükülmemiş bir çubuk için açınımın (pull-out) kol uzunlukları ve büküm boyutları nasıl belirlenir? Kol uzunlukları ve ölçü çizgileri ISO 3766 (03.2004) uyarınca hesaplanır; ISO 3766 önceki ISO 4066'nın yerini alır. Gerçek demir gösteriminde küçük farklar (en çok 2 mm) yuvarlama toleranslarından kaynaklanır (Şekil 1). Açınım gösterimi planda çubuk ekseni üzerinde verilir (Şekil 2). Kıvrık (cranked) bir çubuğun çizimi yine ISO 3766'ya göredir ve öteleme (offset) boyutu düşey kolların iki dış kenarı üzerinden belirlenir (Şekil 3 ve 4). İpucu: Yanlış anlamaları önlemek için ilgili bilgiyi büküm damgasına (bending stamp) dâhil etmeniz önerilir.",
+      "figures": [
+        "/akademi/donati-detaylandirma/10864_0EM7U000001Te59_e98d7d43.png",
+        "/akademi/donati-detaylandirma/10864_0EM7U000001Te5B_663aadc1.png",
+        "/akademi/donati-detaylandirma/10864_0EM7U000001Te5C_3566f624.png",
+        "/akademi/donati-detaylandirma/10864_0EM7U000001Te5A_af8ec9ad.png"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m5-4-1",
+      "prompt": "Bir dairesel kolona helis donatı eklemek için öncelikle ne yapılmalıdır?",
+      "options": [
+        {
+          "text": "Helisi doğrudan 2B çubuk olarak çizmek",
+          "correct": false
+        },
+        {
+          "text": "3B donatı modunu (2D/3D reinforcement mode) etkinleştirip dairesel donatıyı kullanmak",
+          "correct": true
+        },
+        {
+          "text": "Normu BS EN yapmak",
+          "correct": false
+        },
+        {
+          "text": "Büküm rulosu çapını değiştirmek",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre helis 2B çubuk olarak oluşturulamaz; Tools > Options > Reinforcement > General altında 2D/3D reinforcement mode etkinleştirilip Circular reinforcement ile helis oluşturulur.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta"
+    },
+    {
+      "id": "m5-4-2",
+      "prompt": "ISO 3766'ya göre dik olmayan kolların açınım boyutlarında en çok 2 mm'lik farkın nedeni nedir?",
+      "options": [
+        {
+          "text": "Yazılım hatası",
+          "correct": false
+        },
+        {
+          "text": "Yuvarlama toleransları",
+          "correct": true
+        },
+        {
+          "text": "Yanlış norm seçimi",
+          "correct": false
+        },
+        {
+          "text": "Pas payı ayarı",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynak, gerçek demir gösterimindeki küçük farkların (en çok 2 mm) yuvarlama toleranslarından kaynaklandığını belirtir.",
+      "bloom": "Kavrama",
+      "difficulty": "Kolay"
+    }
+  ],
+  "exercise": {
+    "task": "Planda dairesel bir kolon oluşturun, yan görünümünü türetin, 3B donatı modunu etkinleştirin ve Circular reinforcement ile bir helis oluşturmayı deneyin.",
+    "expected": "Helisin 3B model olarak oluşup kolonun görünümüne entegre olması; sarım yüksekliği ve pas payını palette ayarlayabilmeniz.",
+    "hint": "Helisi 2B çubuk olarak çizmeye çalışmayın; önce 2D/3D reinforcement mode kutusunu işaretleyin."
+  }
+}

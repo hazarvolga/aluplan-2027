@@ -1,0 +1,154 @@
+{
+  "no": 7,
+  "slug": "donati-gorunumleri-kopyalama-ve-2023-degisikligi",
+  "title": "Donatı Görünümleri (Bewehrungsansichten): Kopyalama ve 2023 Değişikliği",
+  "duration": "30 dk",
+  "sourceModule": "Proje 1 · Modül 5: Betonarme Yapılarda 3B Donatı Detaylandırma",
+  "intro": "Donatı görünümleri (reinforcement views / Bewehrungsansichten) ayrı çizim dosyalarında (Teilbild) tutulur ve model verisiyle bağlıdır. Bu ders, bu görünümlerin çizim dosyası içinde, farklı çizim dosyasına ve projeler arasında nasıl kopyalandığını ve Allplan 2023'ten itibaren bu modülün kaldırılmasının ne anlama geldiğini kaynağa sadık anlatır.",
+  "objectives": [
+    "Donatı görünümlerini aynı çizim dosyası içinde kopyalamayı/taşımayı tanımlamak.",
+    "Pano (Ctrl+C/Ctrl+V) ile başka bir çizim dosyasına kopyalarken kesmenin (Ctrl+X) neden çalışmadığını açıklamak.",
+    "Projeler arası kopyalamanın yalnızca ProjectPilot ile mümkün olduğunu ve bağların korunma/kaybolma seçeneklerini ayırt etmek.",
+    "Allplan 2023'ten itibaren donatı görünümleri modülünün kalkmasının veri üzerindeki etkisini kavramak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Aynı çizim dosyası içinde kopyalama",
+      "body": "Kaynağa göre kopyalamadan önce bir proje kopyası oluşturulması önerilir. Model verisi bir veya birkaç çizim dosyasında (ör. TB 1-3), donatı görünümleri ayrı bir çizim dosyasında (ör. TB 11) bulunur. Kopyalanacak kesitin görünümünü açıp 'Kopiere' (Copy) işleviyle kesiti taşıyabilir veya kopyalayabilirsiniz; kopyalanan kesit sonradan taşınıp kesit özelliklerinde adlandırması düzeltilebilir. Alternatif olarak önce kesitin kendisini (gösterilen kesit nesnesi olmadan) kopyalayıp sonra kesit nesnesini gösterebilirsiniz.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Başka bir çizim dosyasına pano ile kopyalama",
+      "body": "Bağlı bir çizim dosyasının (ör. TB 111) donatı görünümleri, belirli iş akışı izlenerek başka bir çizim dosyasına (ör. TB 112) pano üzerinden kopyalanabilir. TB 111'deki tüm görünümleri seçip Ctrl+C ile panoya alın. DİKKAT: Burada yalnızca kopyalama çalışır; kesme (Ctrl+X) çalışmaz ve bir uyarı mesajı çıkar. Hedef çizim dosyasını aktif yapın; model çizim dosyası aktif veya pasif-arka planda olmalı. Ctrl+V (veya orijinal konuma Ctrl+Alt+V) ile yapıştırın. Sonuçta hedef (TB 112) artık model çizim dosyalarına (TB 101-103) bağlanır, TB 111'e değil.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Projeler arası kopyalama",
+      "body": "Kaynağa göre donatı görünümleri pano ile bir projeden diğerine kopyalanamaz. Projeler arası kopyalama ProjectPilot ile yapılır ve iki seçenek sunar. 'Evet': Bağlar korunur; model çizim dosyaları da hedef projeye kopyalanır ve çizim dosyası numaralarının yapısı korunur. 'Hayır': Bağlar kaybolur; yalnızca donatı görünümleri olan çizim dosyası kopyalanır ve temelde 'boş' görünümler içerir. Bu boş görünümler sonradan herhangi bir model çizim dosyasıyla yeniden bağlanabilir ('Paste into view').",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Allplan 2023 değişikliği",
+      "body": "Kaynağa göre Allplan 2023'ten itibaren eski donatı görünümleri artık mevcut değildir. Donatı görünümleriyle çizdiğiniz veriler, bu sürümden itibaren otomatik olarak 2B elemanlara dönüştürülür. Önerilen: Bu modülle yürüttüğünüz projeleri bitirene kadar 2023 kurulumunu beklemek veya yükseltmeden önce eski sürümde zorunlu bir yedek almak. Dönüşümde plan düzeni ve donatının 3B modeli korunur; donatı görünümleri (ve içindeki gösterim) 2B yapı ve metinlere dönüştürülür. Donatı 3B model olarak kaldığı için, dönüşümden sonra model verisinden yeni görünüm ve kesitler türetmek yine mümkündür.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Kesme (Ctrl+X) çalışmaz",
+      "body": "Donatı görünümlerini pano ile başka bir çizim dosyasına aktarırken yalnızca kopyalama (Ctrl+C) çalışır; kesme (Ctrl+X) çalışmaz ve bir uyarı mesajı çıkar. 'Copy, move across documents' işleviyle kopyalarken de hedef çizim dosyası görüntülenirken ilgili kutu işaretlenmemelidir, aksi hâlde bir uyarı çıkar ve yalnızca boş hedef çizim dosyalarına kopyalanabilir."
+    },
+    {
+      "title": "DİKKAT: 2023 yükseltmesi öncesi yedek alın",
+      "body": "Allplan 2023'ten itibaren donatı görünümleri modülü kalkar ve bu verileriniz otomatik olarak 2B elemanlara dönüştürülür. Yükseltmeden önce projelerinizi tamamlamak veya eski sürümde zorunlu yedek almak önerilir. Dönüşüm, projeyi veya ndw dosyalarını ilk açışta gerçekleşir."
+    }
+  ],
+  "checkpoint": "Donatı görünümlerini pano ile kopyaladıktan sonra hedef çizim dosyasının doğru model çizim dosyalarına bağlandığını doğrulayabiliyorsanız iş akışı doğrudur.",
+  "commands": [
+    {
+      "name": "Kopieren (Copy)",
+      "menu": "Düzenle (Edit)",
+      "shortcut": "Ctrl+C",
+      "desc": "Donatı görünümünü/kesitini kopyalar; kesme (Ctrl+X) desteklenmez."
+    },
+    {
+      "name": "Einfügen (Paste)",
+      "menu": "Düzenle (Edit)",
+      "shortcut": "Ctrl+V / Ctrl+Alt+V",
+      "desc": "Panodaki görünümleri yapıştırır; Ctrl+Alt+V orijinal konuma yapıştırır."
+    },
+    {
+      "name": "ProjectPilot",
+      "menu": "Proje yönetimi",
+      "shortcut": "",
+      "desc": "Çizim dosyalarını projeler arası kopyalar; bağları koruma (Evet) veya kaybetme (Hayır) seçeneği sunar."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "en_11119",
+      "title": "Donatı Görünümlerini Kopyalama",
+      "body": "Donatı görünümleri nasıl kopyalanır (aynı çizim dosyası içinde, başka çizim dosyasına, projeler arası)? NOT: Kopyalamadan önce bir proje kopyası oluşturun. Aynı çizim dosyası içinde: Model verisi bir/birkaç çizim dosyasında (ör. TB 1-3), donatı görünümleri ayrı çizim dosyasında (ör. TB 11). Kopyalanacak kesitin görünümünü açıp 'Copy' ile taşıyabilir veya kopyalayabilirsiniz; kopyalanan kesit taşınıp kesit özelliklerinde adı düzeltilir. Başka çizim dosyasına pano ile: TB 111'deki tüm görünümleri Ctrl+C ile panoya alın. DİKKAT: Yalnızca kopyalama çalışır; kesme (Ctrl+X) çalışmaz, uyarı çıkar. Hedef çizim dosyasını (TB 112) aktif yapın; model çizim dosyası aktif veya pasif-arka planda olmalı. Ctrl+V veya Ctrl+Alt+V ile yapıştırın; hedef artık model çizim dosyalarına (TB 101-103) bağlanır, TB 111'e değil. 'Copy, move across documents' işleviyle de kopyalanabilir ancak hedef görüntülenirken kutu işaretlenmemeli, aksi hâlde uyarı çıkar ve yalnızca boş hedef çizim dosyalarına kopyalanabilir. Projeler arası: Pano ile projeden projeye kopyalanamaz. ProjectPilot ile iki seçenek: 'Evet' bağlar korunur, model çizim dosyaları da kopyalanır; 'Hayır' bağlar kaybolur, yalnızca donatı görünümleri kopyalanır ve 'boş' görünümler kalır; bunlar sonradan 'Paste into view' ile yeniden bağlanabilir.",
+      "figures": [
+        "/akademi/donati-detaylandirma/11119_0EM7U000001TdWm_a4653333.png",
+        "/akademi/donati-detaylandirma/11119_0EM7U000001TdWn_2ba596bb.png",
+        "/akademi/donati-detaylandirma/11119_0EM7U000001Tdiy_6f6c8611.png",
+        "/akademi/donati-detaylandirma/11119_0EM7U000001Tdj0_e63e82c7.png",
+        "/akademi/donati-detaylandirma/11119_0EM7U000001Tdiz_19c1e611.png",
+        "/akademi/donati-detaylandirma/11119_0EM7U000001Tdj1_7b443c6f.png"
+      ]
+    },
+    {
+      "id": "en_10530",
+      "title": "Donatı Görünümleri Modülünün Allplan 2023'te Kaldırılması",
+      "body": "Donatı görünümleri Allplan 2023'ten itibaren artık mevcut değildir; verilerimi nasıl kullanmaya devam ederim? Bu sürümden itibaren eski donatı görünümleri kalkar. Donatı görünümleriyle çizdiğiniz veriler otomatik olarak 2B elemanlara dönüştürülür. Bu nedenle bu projeleri bitirene kadar 2023 kurulumunu beklemek ya da yükseltmeden önce projelerinizin, ofis ve kullanıcı verilerinizin eski sürümde zorunlu yedeğini almak önerilir. Hangi projenin 2023 veya üstünde, hangisinin 2022'de tamamlanacağını dikkatle değerlendirin. Dönüşüm, 2022 ve öncesi sürümlerden gelen donatı görünümlü verilerde, projenin veya ndw dosyalarının ilk açılışında otomatik gerçekleşir. Kalıp/donatı planlarının plan düzeni korunur; donatının 3B modeli korunur; donatı görünümleri (ve içindeki donatı gösterimi) 2B yapı ve metinlere dönüştürülür. Donatı 3B model kaldığı için, çizim dosyası dönüştürüldükten sonra model verisinden yeni görünüm ve kesitler türetmek mümkündür; donatı yerleştirilebilir, modifiye edilebilir ve etiketlenebilir; şema, lejant ve raporlar eskisi gibi üretilir.",
+      "figures": []
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m5-7-1",
+      "prompt": "Donatı görünümlerini pano ile başka bir çizim dosyasına aktarırken hangi işlem çalışmaz?",
+      "options": [
+        {
+          "text": "Kopyalama (Ctrl+C)",
+          "correct": false
+        },
+        {
+          "text": "Kesme (Ctrl+X)",
+          "correct": true
+        },
+        {
+          "text": "Orijinal konuma yapıştırma (Ctrl+Alt+V)",
+          "correct": false
+        },
+        {
+          "text": "Yapıştırma (Ctrl+V)",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynak açıkça belirtir: pano ile aktarırken yalnızca kopyalama çalışır; kesme (Ctrl+X) çalışmaz ve bir uyarı mesajı çıkar.",
+      "bloom": "Kavrama",
+      "difficulty": "Kolay"
+    },
+    {
+      "id": "m5-7-2",
+      "prompt": "Allplan 2023'ten itibaren donatı görünümleriyle çizilmiş verilere ne olur?",
+      "options": [
+        {
+          "text": "Silinir",
+          "correct": false
+        },
+        {
+          "text": "Otomatik olarak 2B elemanlara dönüştürülür; 3B model ve plan düzeni korunur",
+          "correct": true
+        },
+        {
+          "text": "Değişmeden kalır ve modül çalışmaya devam eder",
+          "correct": false
+        },
+        {
+          "text": "Yalnızca BS EN normunda açılabilir",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre donatı görünümleri 2B yapı ve metinlere dönüştürülür; donatının 3B modeli ve plan düzeni korunur, bu nedenle model verisinden yeni görünüm ve kesitler türetmek mümkündür.",
+      "bloom": "Analiz",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "Donatı görünümleri olan bir çizim dosyasını seçip Ctrl+C ile panoya alın ve boş bir hedef çizim dosyasına Ctrl+V ile yapıştırın. Hedefin hangi model çizim dosyalarına bağlandığını kontrol edin.",
+    "expected": "Hedef çizim dosyasının model çizim dosyalarına bağlanması ve kesme (Ctrl+X) denendiğinde uyarı mesajı almanız.",
+    "hint": "Projeler arası kopyalama için panoyu değil ProjectPilot'u kullanın ve bağ koruma seçeneğine dikkat edin."
+  }
+}

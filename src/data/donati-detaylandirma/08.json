@@ -1,0 +1,169 @@
+{
+  "no": 8,
+  "slug": "donati-metraji-ve-sik-hata-mesajlari",
+  "title": "Donatı Metrajı ve Sık Karşılaşılan Hata Mesajları (Meldung)",
+  "duration": "30 dk",
+  "sourceModule": "Proje 1 · Modül 5: Betonarme Yapılarda 3B Donatı Detaylandırma",
+  "intro": "Donatı detaylandırmanın son halkası, metrajın (quantity take-off / Mengenermittlung) doğru üretilmesi ve donatma sırasında çıkan hata mesajlarının (Meldung) çözülmesidir. Bu ders, bileşen özniteliklerine dayalı metrajı ve kesit serisi (Querschnittsreihe) kaynaklı iki yaygın hatayı kaynağa sadık anlatır.",
+  "objectives": [
+    "Yerinde beton metrajı için bileşenlere eklenmesi gereken öznitelikleri (attributes) tanımlamak.",
+    "Metrajın hangi rapor klasöründen (Standard\\Gewerke\\Betonarbeiten) üretildiğini açıklamak.",
+    "'Exception ist not handled' hatasının kesit serisiyle ilişkisini ve çözüm adımlarını ayırt etmek.",
+    "'Nicht alle vorhandenen Stahlgüten...' mesajının eksik kesit serisi anlamına geldiğini ve nasıl tamamlanacağını kavramak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Metraj için gereken öznitelikler (NPK 241)",
+      "body": "Kaynağa göre NPK 241 Ortbetonbau (yerinde beton) metrajı için bileşenlere (mümkünse mimari bileşenler) öznitelikler eklenir. Örnekler: Craft = Beton işleri (bu meslekteki tüm bileşenler değerlendirilir), Object name = döşeme, duvar vb. (bileşen adlarını kontrol eder), Material = beton (beton raporundaki malzemeyi kontrol eder), Concrete type = ör. NPK C, Formwork type = ör. Typ 2, Degree of reinforcement = ör. 100 (kg/m3, m3 başına donatı miktarı). Duvarlarda öznitelikler duvar katmanına (wall layer) eklenmeli, tüm nesneye değil. Object name özniteliğiyle bileşenler ayrıştırılabilir (ör. standart duvarı asansör duvarından ayırmak için 'Wall Lift' yazmak).",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Metraj raporları",
+      "body": "Kaynağa göre raporlar Standard\\Gewerke\\Betonarbeiten klasöründedir. Örnek raporlar: Betonarbeiten Schweiz_2019, Schalflächen Schweiz_2019, Randschalung Decken Schweiz, Übersicht Beton und Bewehrung, ve opsiyonel olarak Sichtschalungen und Arbeitsfugen Schweiz_2019. Malzeme ataması yalnızca 'Material' özniteliğiyle de yapılabilir (ör. beton NPK C).",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Hata 1: 'Exception ist not handled' (donatma sırasında)",
+      "body": "Kaynağa göre bu mesaj büyük olasılıkla kesit serinizle (Querschnittsreihe) ilgili bir sorundan kaynaklanır. Kontrol için ALLPLAN'da Extras > Definitionen > Querschnittsreihen açılır; orada kesit serisi yoksa çözüm izlenir. Kesit serisini geri yüklemek için proje ve kaynak yönetiminden (Projektübersicht) proje ayarları açılıp Rundstahl- ve Mattenquerschnittsreihen 'Büro' konumuna getirilir; bu, var olmayan serileri ofis dizinindeki mevcut serilerle üzerine yazar. Değişiklikler mevcut donatıyı etkilediği için, ardından yeniden 'Projekt' konumuna almak önerilir. Seriler elle tamamlanabilir, bir planlama partnerinden içe aktarılabilir veya ülkeye özgü seri okutulabilir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Hata 2: 'Nicht alle vorhandenen Stahlgüten...'",
+      "body": "Kaynağa göre 'Nicht alle vorhandenen Stahlgüten sind in den Querschnittsreihen definiert' mesajı, kesit serilerinin eksik olduğunu ve çizimdeki donatının hesaplanamadığını gösterir. Çözüm için, değişiklikler mevcut donatıyı etkilediğinden önce proje ayarlarını 'Projekt' konumuna almak önerilir. Extras > Definitionen > Querschnittsreihen açılır; seriler elle tamamlanabilir, planlama partnerinden içe aktarılabilir/partnere aktarılabilir veya program klasöründeki ülkeye özgü seri (New > Ing altındaki axyzqusr.txt) Favoriler işleviyle okutulabilir.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Duvarlarda öznitelik katmana eklenmeli",
+      "body": "NPK 241 metrajında duvarlar için öznitelikler tüm nesneye değil, duvar katmanına (wall layer) eklenmelidir. Yük taşıyan bileşen özniteliği, duvar kagir ise bu yüzeyin döşeme kalıbından düşülüp düşülmeyeceğini kontrol eder."
+    },
+    {
+      "title": "DİKKAT: Querschnittsreihe değişikliği Büro'da tüm projeleri etkiler",
+      "body": "Kesit serilerini 'Büro' konumunda değiştirmek, kesit serisi için Büro'ya ayarlı tüm mevcut projeleri etkiler; 'Projekt' konumundaki değişiklik yalnızca açık projeyi etkiler. Bu nedenle kesit serisi hatalarını çözerken önce proje ayarlarını 'Projekt' konumuna almak önerilir."
+    }
+  ],
+  "checkpoint": "Bileşenlere gerekli öznitelikleri ekledikten sonra Betonarbeiten raporu üretilebiliyor ve donatma sırasında kesit serisi kaynaklı hata çıkmıyorsa metraj akışı sağlıklıdır.",
+  "commands": [
+    {
+      "name": "Querschnittsreihen (Cross-section series)",
+      "menu": "Extras > Definitionen > Querschnittsreihen",
+      "shortcut": "",
+      "desc": "Kesit serilerinin kontrol edildiği, tamamlandığı veya içe aktarıldığı diyalog."
+    },
+    {
+      "name": "Rundstahl- und Mattenquerschnittsreihen (Büro / Projekt)",
+      "menu": "Projektübersicht > Projekteinstellungen",
+      "shortcut": "",
+      "desc": "Kesit serilerini Büro veya Projekt konumuna alır; hata çözümünde kullanılır."
+    },
+    {
+      "name": "Betonarbeiten raporları",
+      "menu": "Standard\\Gewerke\\Betonarbeiten",
+      "shortcut": "",
+      "desc": "Yerinde beton metraj raporları (ör. Übersicht Beton und Bewehrung)."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "en_11537",
+      "title": "NPK 241 Ortbetonbau'ya Göre Metraj (Mengenermittlung)",
+      "body": "Yerinde beton metrajı için bileşenlerde gerekli öznitelikler (mümkünse mimari bileşenler kullanın): Craft = Beton işleri (bu meslekteki tüm bileşenler değerlendirilir); Object name = ör. döşeme, duvar, tavan (bileşen adlarını kontrol eder); Material = ör. beton (beton raporundaki malzemeyi kontrol eder); Concrete type = ör. NPK C (beton raporundaki türü kontrol eder); Formwork type = ör. Typ 2 (kalıp alanı raporundaki kalıp türünü kontrol eder); Load-bearing component (kagir duvarlarda bu yüzeyin döşeme kalıbından düşülüp düşülmeyeceğini kontrol eder); Degree of reinforcement = ör. 100 kg/m3 (m3 başına donatı miktarı). Notlar: Malzeme ataması yalnızca 'Material' özniteliğiyle de yapılabilir. Duvarlarda öznitelikler duvar katmanına eklenmelidir (tüm nesneye değil). Object name ile bileşenler ayrıştırılabilir (ör. 'Wall' yerine 'Wall Lift'). Raporlar (Standard\\Gewerke\\Betonarbeiten): Betonarbeiten Schweiz_2019, Schalflächen Schweiz_2019, Randschalung Decken Schweiz, Übersicht Beton und Bewehrung ve opsiyonel Sichtschalungen und Arbeitsfugen Schweiz_2019.",
+      "figures": [
+        "/akademi/donati-detaylandirma/11537_0EMVi000002R1YN_b5e53bec.png",
+        "/akademi/donati-detaylandirma/11537_0EMVi000002R1YM_1fc94396.png"
+      ]
+    },
+    {
+      "id": "de_8902",
+      "title": "Mesaj: 'Exception ist not handled !!!' (Donatma Sırasında)",
+      "body": "ALLPLAN'da donatma sırasında 'Exception ist not handled !!!' mesajı alınıyor. Bu mesaj büyük olasılıkla kesit serinizle (Querschnittsreihe) ilgili bir sorundan kaynaklanır. Kontrol için ALLPLAN'da Extras > Definitionen > Querschnittsreihen açın; orada kesit serisi yoksa çözümü izleyin. 1. Kesit serisini geri yükleme: Proje ve kaynak yönetiminden (Projektübersicht) proje ayarlarını açın. Rundstahl- ve Mattenquerschnittsreihen'i 'Büro' konumuna alın; bu, var olmayan serileri ofis dizinindeki mevcut serilerle üzerine yazar. Proje zaten Büro'daysa 3. adıma geçin. (Büro: değişiklik Büro'ya ayarlı tüm projeleri etkiler; Projekt: yalnızca açık projeyi etkiler.) Mesajı 'OK' ile onaylayın ve serileri yeniden 'Projekt' konumuna alın (önerilir). 2.1 Serileri elle tamamlayabilirsiniz. 2.2 Serileri bir planlama partnerinden içe aktarabilir/partnere aktarabilirsiniz. 3. Ülkeye özgü kesit serisi okutma: Ülkeye özgü seriler program klasöründedir ve Favoriler işleviyle içe aktarılır; Allmenu > Service > Windows Explorer > CAD Programmordner > New > Ing. Dosya adlarındaki ülke kısaltmaları (axyzqusr.txt): deu Almanya, eng İngiltere, fra Fransa, ita İtalya, swi İsviçre vb.",
+      "figures": [
+        "/akademi/donati-detaylandirma/8902_0EMVi00000DaqIM_c4118da7.png",
+        "/akademi/donati-detaylandirma/8902_0EMVi00000DazlR_e72815d3.png",
+        "/akademi/donati-detaylandirma/8902_0EMVi00000DaziD_b33db441.png",
+        "/akademi/donati-detaylandirma/8902_0EMVi00000C6qhl_d3d02fd0.png",
+        "/akademi/donati-detaylandirma/8902_0EMVi00000C6szh_6751277e.png",
+        "/akademi/donati-detaylandirma/8902_0EMVi00000C6pov_55c6f511.png"
+      ]
+    },
+    {
+      "id": "de_10514",
+      "title": "Mesaj: 'Mevcut çelik sınıflarının tümü kesit serilerinde tanımlı değil'",
+      "body": "ALLPLAN'da 'Nicht alle vorhandenen Stahlgüten sind in den Querschnittsreihen definiert' mesajı alınıyor. Bu mesaj, kesit serilerinin eksik olduğunu ve çizimdeki donatının hesaplanamadığını gösterir. Kesit serisini tamamlama/güncelleme: 1. Kesit serisi değişiklikleri mevcut donatıyı da etkilediği için, değiştirmeden önce proje ayarlarını 'Projekt' konumuna almak önerilir. (Büro: değişiklik Büro'ya ayarlı tüm projeleri etkiler; Projekt: yalnızca açık projeyi etkiler.) 2. ALLPLAN'da Extras > Definitionen > Querschnittsreihen açın. 3.1 Serileri elle tamamlayabilirsiniz. 3.2 Serileri bir planlama partnerinden içe aktarabilir/partnere aktarabilirsiniz. 4. Ülkeye özgü kesit serisi okutma: Seriler program klasöründedir ve Favoriler işleviyle içe aktarılır; Allmenu > Service > Windows Explorer > CAD Programmordner > New > Ing. Dosya adlarındaki ülke kısaltmaları (axyzqusr.txt): aut Avusturya, deu Almanya, eng İngiltere, fra Fransa, ita İtalya, swi İsviçre, usa ABD vb.",
+      "figures": [
+        "/akademi/donati-detaylandirma/10514_0EMVi00000C6n7B_4900b959.png",
+        "/akademi/donati-detaylandirma/10514_0EMVi00000C6VIL_c94022db.png",
+        "/akademi/donati-detaylandirma/10514_0EMVi00000C6pov_55c6f511.png",
+        "/akademi/donati-detaylandirma/10514_0EMVi00000C6qhl_d3d02fd0.png",
+        "/akademi/donati-detaylandirma/10514_0EMVi00000C6szh_6751277e.png"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m5-8-1",
+      "prompt": "NPK 241 yerinde beton metrajında m3 başına donatı miktarını hangi öznitelik taşır?",
+      "options": [
+        {
+          "text": "Craft",
+          "correct": false
+        },
+        {
+          "text": "Degree of reinforcement (ör. 100 kg/m3)",
+          "correct": true
+        },
+        {
+          "text": "Formwork type",
+          "correct": false
+        },
+        {
+          "text": "Object name",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre 'Degree of reinforcement' özniteliği m3 başına donatı içeriğini (ör. 100 kg/m3) gösterir. Craft meslek, Formwork type kalıp türü, Object name bileşen adı içindir.",
+      "bloom": "Kavrama",
+      "difficulty": "Orta"
+    },
+    {
+      "id": "m5-8-2",
+      "prompt": "'Exception ist not handled' ve 'Nicht alle Stahlgüten...' mesajlarının ortak kaynağı kaynağa göre nedir?",
+      "options": [
+        {
+          "text": "Yanlış renk ayarı",
+          "correct": false
+        },
+        {
+          "text": "Eksik veya bozuk kesit serisi (Querschnittsreihe)",
+          "correct": true
+        },
+        {
+          "text": "Eksik lisans",
+          "correct": false
+        },
+        {
+          "text": "Yanlış büküm rulosu çapı",
+          "correct": false
+        }
+      ],
+      "explanation": "Her iki KB de sorunu kesit serisine (Querschnittsreihe) bağlar; çözüm Extras > Definitionen > Querschnittsreihen üzerinden seriyi geri yüklemek, tamamlamak veya ülkeye özgü seriyi okutmaktır.",
+      "bloom": "Analiz",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "Bir beton bileşene Craft, Material, Concrete type ve Degree of reinforcement özniteliklerini ekleyin, ardından Standard\\Gewerke\\Betonarbeiten altından 'Übersicht Beton und Bewehrung' raporunu üretmeyi deneyin.",
+    "expected": "Raporun bileşeni doğru malzeme, tür ve donatı içeriğiyle listelemesi.",
+    "hint": "Donatma sırasında kesit serisi hatası çıkarsa Extras > Definitionen > Querschnittsreihen üzerinden seriyi kontrol edin ve proje ayarını önce 'Projekt' konumuna alın."
+  }
+}

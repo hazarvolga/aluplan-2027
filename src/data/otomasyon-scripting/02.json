@@ -1,0 +1,209 @@
+{
+  "no": 2,
+  "slug": "pythonparts-temelleri-ve-actionbar",
+  "title": "PythonParts Temelleri ve Actionbar'a Ekleme",
+  "duration": "30 dk",
+  "sourceModule": "Proje 1 · Modül 9: Otomasyon, Visual Scripting ve PythonParts",
+  "intro": "PythonParts, ALLPLAN kütüphanesindeki akıllı ve parametrik nesnelerdir; örneğin bir merdivenin parametrik donatısını interaktif olarak yöneten SmartStairConverter bir PythonPart'tır. Bu derste PythonParts mantığını tanıyacak ve hazır bir PythonPart'ı Actionbar'a (Aksiyon Çubuğu) nasıl ekleyeceğinizi gerçek bir prosedürle öğreneceksiniz.",
+  "objectives": [
+    "PythonParts'in ne olduğunu ve parametrik akıllı nesne mantığını açıklamak.",
+    "SmartStairConverter örneği üzerinden bir PythonPart'ın ne işe yaradığını örnekleyebilmek.",
+    "Bir PythonPart'ı Actionbar'a eklemek için gereken dosya ön koşullarını (Library klasörü ve ikonlar) tanımlamak.",
+    "Actionbar yapılandırması üzerinden PythonPart ekleme adımlarını sırayla uygulamak.",
+    "Oluşturulan PythonPart'ın Actionbar'a sürükle-bırak ile yerleştirilmesini gerçekleştirmek."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "PythonParts nedir",
+      "body": "PythonParts, ALLPLAN'in kütüphanesinde yer alan parametrik, akıllı nesnelerdir. Hazır bir çerçeve (framework) üzerine kurulurlar ve kurumunuzun ihtiyacına göre özel işlevler sağlayabilirler. Bir PythonPart, parametreleri değiştikçe kendini otomatik olarak günceller. Örneğin bir merdiven PythonPart'ı, ölçüleri değiştirildiğinde tüm donatıyı otomatik uyarlar.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Örnek: SmartStairConverter",
+      "body": "SmartStairConverter, standart dışı bir merdivenin donatısını ele almak için kullanılan bir PythonPart örneğidir. Bu nesne, merdivenin parametrik ve interaktif donatılanmasına, sonrasında ise tüm donatının otomatik uyarlanarak değiştirilmesine izin verir. Kaynak eğitimde, bir merdiven iki farklı yaklaşımla karşılaştırılır: birinci yaklaşımda bu PythonPart kullanılır; ikinci yaklaşımda ise binanın kendine özgü ihtiyaçlarına göre planlanmış, daha özel bir donatı yerleşimi ele alınır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Ön koşullar: Library klasörü ve ikonlar",
+      "body": "Bir PythonPart'ı Actionbar'a (Aksiyon Çubuğu) ekleyebilmek için iki ön koşul sağlanmalıdır: (a) istenen PythonPart'ı içeren 'Library' klasörü STD klasörü içinde bulunmalıdır; (b) gerekli ikonlar 24 ve 128 çözünürlüğünde yine STD içinde uygun şekilde kaydedilmelidir. SmartStairConverter'ı eklemek isterseniz, gereken iki ikon dosyası kaynak FAQ'in indirilebilir ekleri arasında yer alır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "PythonPart'ı Actionbar yapılandırmasına tanımlama",
+      "body": "Ön koşullar sağlandıktan sonra Actionbar yapılandırması üzerinden PythonPart tanımlanır: 'Browse' ile STD yolundaki istenen PythonPart seçilir, gereken dil(ler) için bir ad girilir, yine STD yolundan gereken iki ikon seçilir ve OK ile onaylanır. Bu adımdan sonra ALLPLAN'in yeniden başlatılması gerekir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Sürükle-bırak ile Actionbar'a yerleştirme",
+      "body": "ALLPLAN yeniden başlatıldıktan sonra tekrar Actionbar yapılandırmasına geçilir ve oluşturulan PythonPart Actionbar'a eklenir. Bunun için ya soldaki 'Plug-ins' (Plug-ins) başlığına geçip sağda 'Add-On Module - PythonParts' altındaki kaydı bulursunuz, ya da fonksiyon/araç alanına (Almanca 'Funktionen', İngilizce 'Tool') tanımladığınız adı yazarsınız. Ardından ikonu sürükle-bırak (drag & drop) ile Actionbar'da istediğiniz konuma taşırsınız.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Yeniden başlatma atlanırsa PythonPart görünmez",
+      "body": "PythonPart'ı yapılandırmaya tanımlayıp OK ile onayladıktan sonra ALLPLAN'i yeniden başlatmanız gerekir. Bu adım atlanırsa, PythonPart'ı Actionbar'a sürükle-bırak ile eklemeye çalıştığınızda tanımladığınız kayıt listede görünmeyebilir."
+    },
+    {
+      "title": "DİKKAT: Dosyalar STD dışında ise ekleme başarısız olur",
+      "body": "Library klasörü STD içinde değilse veya 24 ve 128 çözünürlükteki ikonlar STD içinde uygun şekilde kaydedilmemişse, 'Browse' ile PythonPart ya da ikonlar seçilemez. Önce dosya ön koşullarını doğrulayın."
+    }
+  ],
+  "checkpoint": "Doğru yaptıysanız, ALLPLAN yeniden başlatıldıktan sonra tanımladığınız PythonPart Actionbar yapılandırmasında görünür ve ikonunu sürükle-bırak ile Actionbar'a yerleştirebilirsiniz.",
+  "commands": [
+    {
+      "name": "Actionbar (Aksiyon Çubuğu)",
+      "menu": "",
+      "shortcut": "",
+      "desc": "ALLPLAN araç çubuğu; yapılandırması üzerinden PythonPart tanımlanıp sürükle-bırak ile eklenebilir."
+    },
+    {
+      "name": "Browse",
+      "menu": "Actionbar yapılandırması",
+      "shortcut": "",
+      "desc": "STD yolundaki istenen PythonPart'ı ve ikonları seçmek için kullanılır."
+    },
+    {
+      "name": "Plug-ins / Add-On Module - PythonParts",
+      "menu": "Actionbar yapılandırması · sol panel",
+      "shortcut": "",
+      "desc": "Tanımlanan PythonPart'ın bulunduğu yapılandırma kaydı."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_9338",
+      "title": "PythonPart'ı (SmartStairConverter) Actionbar'a Ekleme",
+      "body": "Soru: SmartStairConverter gibi bir PythonPart Actionbar'a (Aksiyon Çubuğu) nasıl eklenir? Cevap: Ön koşullar: (a) istenen PythonPart'ı içeren 'Library' klasörü STD klasöründe olmalı; (b) 24 ve 128 çözünürlükteki gerekli ikonlar da STD içinde uygun şekilde kaydedilmeli. Ardından Actionbar yapılandırması üzerinden PythonPart eklenir: STD yolundan 'Browse' ile istenen PythonPart seçilir, gereken dil(ler) için bir ad girilir, yine STD yolundan iki ikon seçilir ve OK ile onaylanır. Sonra ALLPLAN yeniden başlatılmalıdır. Tekrar Actionbar yapılandırmasına geçilip oluşturulan PythonPart eklenir: ya soldaki 'Plug-ins' bölümünden sağda 'Add-On Module - PythonParts' altındaki kayıt bulunur, ya da 'Funktionen' alanına tanımlı ad yazılır. İkon sürükle-bırak ile Actionbar'da istenen konuma taşınır. SmartStairConverter için gereken iki ikon, FAQ'in indirilebilir ekleri arasındadır.",
+      "figures": [
+        "/akademi/otomasyon-scripting/9338_SmartStairConverter_24_6f7df79e.png",
+        "/akademi/otomasyon-scripting/9338_SmartStairConverter_128_6b10f424.png",
+        "/akademi/otomasyon-scripting/9338_0EMVi000003EwTq_52924b75.png",
+        "/akademi/otomasyon-scripting/9338_0EMVi000003F35W_693e13cf.png",
+        "/akademi/otomasyon-scripting/9338_0EMVi000003F8oL_81689a0b.png"
+      ]
+    },
+    {
+      "id": "en_9337",
+      "title": "PythonPart (SmartStairConverter) Actionbar'a Ekleme (EN)",
+      "body": "Aynı prosedürün İngilizce kaynağıdır. PythonParts'ı Actionbar'a eklemek için: 'Library' klasörü gereken PythonPart ile STD klasöründe olmalı ve 24 ile 128 çözünürlükteki ikonlar da STD içinde kaydedilmeli. Actionbar yapılandırması üzerinden PythonPart eklenir: STD yolundan 'Browse' ile PythonPart seçilir, bir ad girilir, iki ikon STD yolundan seçilir, OK ile onaylanır. Ardından ALLPLAN yeniden başlatılır. Yeniden Actionbar yapılandırmasına geçilir; soldaki 'PlugIns' altında sağda 'Add-On Module - PythonParts' kaydı bulunur ya da 'Tool' alanına atanan ad yazılır. İkon sürükle-bırak ile Actionbar'da istenen konuma yerleştirilir.",
+      "figures": [
+        "/akademi/otomasyon-scripting/9337_SmartStairConverter_128_6b10f424.png",
+        "/akademi/otomasyon-scripting/9337_SmartStairConverter_24_6f7df79e.png",
+        "/akademi/otomasyon-scripting/9337_0EMVi000003EwTq_52924b75.png",
+        "/akademi/otomasyon-scripting/9337_0EMVi000003EwTs_ac63c142.png",
+        "/akademi/otomasyon-scripting/9337_0EMVi000003EwTr_8a288017.png"
+      ]
+    },
+    {
+      "id": "en_course_67",
+      "title": "İlk PythonPart'ınızı Oluşturma (Çerçeve Temelleri)",
+      "body": "Bu kaynak, ilk PythonPart'ınızı oluşturma sürecinde size rehberlik eder. PythonPart çerçevesinin (framework) nasıl çalıştığının temel ilkelerini öğrenirsiniz. Kaynak bölümlere ayrılmıştır ve standart bir PythonPart'ın nasıl oluşturulacağını gösterir. Kurs sonunda kurumunuzun ihtiyaçlarına özel kendi fonksiyonlarınızı tasarlayabilir hale gelirsiniz. Öğrenme hedefleri: PythonPart çerçevesinin temel ilkelerini öğrenmek, standart bir PythonPart oluşturmak, parametrik donatılı öğeler oluşturmak ve kendi özel fonksiyonlarınızı tasarlamak.",
+      "figures": []
+    },
+    {
+      "id": "it_course_286",
+      "title": "Standart Dışı Merdiven Donatısı: İki Yaklaşım",
+      "body": "Bu teknik oturum, standart dışı bir merdivenin tasarımına iki farklı yaklaşımı ele alır. Birinci durumda bir PythonPart kullanılır; bu, merdivenin parametrik ve interaktif donatılanmasına ve sonrasında tüm donatının otomatik uyarlanarak değiştirilmesine izin veren akıllı bir nesnedir. İkinci durumda ise binanın kendine özgü ihtiyaçlarına göre mimari olarak tasarlanmış bir merdivenin donatısı ele alınır; bu daha kişiselleştirilmiş ve özel bir demir yerleşimi yaklaşımı gerektirir. Kaynak, SmartStairConverter türü bir PythonPart'ın gerçek kullanım bağlamını verir.",
+      "figures": []
+    },
+    {
+      "id": "it_course_308",
+      "title": "Parametrik Donatı Modellemesi ve PythonPart",
+      "body": "Bu kaynak, ALLPLAN ile parametrik BIM donatı modellemesinin yenilikçi işlevlerini anlatır. Bu teknoloji, güçlü parametrik modelleyici ALLPLAN Civil ile kütüphanenin parametrik nesnelerini (PythonPart) birleştirerek iş akışını kolaylaştırır ve hızlandırır. Kullanıcı dostu arayüz ve güçlü işlevler sayesinde, 3B modellemeden proje çizimlerinin üretimine kadar farklı donatı biçimleri tanımlanabilir. Öğrenme hedefleri: parametrik BIM donatı modellemesinin yenilikçi işlevleri, 3B modellemeden gelen farklı donatı biçimleri ve proje çizimlerinin üretimi. Bu kaynak, PythonPart'ların donatı bağlamında nasıl kullanıldığını gösterir.",
+      "figures": []
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m9-2-1",
+      "prompt": "Bir PythonPart'ı Actionbar'a eklemek için 'Library' klasörü ve ikonlar nereye konulmalıdır?",
+      "options": [
+        {
+          "text": "Proje klasörüne",
+          "correct": false
+        },
+        {
+          "text": "STD klasörüne",
+          "correct": true
+        },
+        {
+          "text": "Masaüstüne",
+          "correct": false
+        },
+        {
+          "text": "Geçici (temp) klasöre",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre ön koşul olarak 'Library' klasörü STD içinde olmalı ve 24 ile 128 çözünürlükteki ikonlar da STD içinde kaydedilmelidir. Diğer konumlar prosedürde geçmez.",
+      "bloom": "Hatırlama",
+      "difficulty": "Orta"
+    },
+    {
+      "id": "m9-2-2",
+      "prompt": "PythonPart'ı Actionbar yapılandırmasında tanımlayıp OK ile onayladıktan hemen sonra hangi adım zorunludur?",
+      "options": [
+        {
+          "text": "Projeyi IFC olarak dışa aktarmak",
+          "correct": false
+        },
+        {
+          "text": "ALLPLAN'i yeniden başlatmak",
+          "correct": true
+        },
+        {
+          "text": "Yeni bir layer oluşturmak",
+          "correct": false
+        },
+        {
+          "text": "Donatıyı silmek",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynak açıkça OK sonrasında ALLPLAN'in yeniden başlatılması gerektiğini belirtir; aksi halde PythonPart Actionbar'a eklenmek üzere listede görünmeyebilir.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta"
+    },
+    {
+      "id": "m9-2-3",
+      "prompt": "SmartStairConverter nasıl bir nesnedir?",
+      "options": [
+        {
+          "text": "Bir 2B sembol kütüphanesi",
+          "correct": false
+        },
+        {
+          "text": "Merdiven donatısını parametrik ve interaktif yöneten bir PythonPart",
+          "correct": true
+        },
+        {
+          "text": "Bir dosya dışa aktarma formatı",
+          "correct": false
+        },
+        {
+          "text": "Bir render motoru",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynaklara göre SmartStairConverter, merdivenin parametrik ve interaktif donatılanmasına ve tüm donatının otomatik uyarlanmasına izin veren akıllı bir PythonPart örneğidir.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay"
+    }
+  ],
+  "exercise": {
+    "task": "Kendi ALLPLAN kurulumunuzda STD klasörünün yolunu bulun ve içinde bir 'Library' klasörü olup olmadığını kontrol edin. Bir PythonPart'ı Actionbar'a eklemek için gereken dosya ön koşullarını (Library klasörü + 24 ve 128 çözünürlükte ikon) bir kontrol listesi olarak yazın.",
+    "expected": "STD yolu ve 'Library' klasörünün varlığına dair bir doğrulama, ayrıca iki maddelik (Library klasörü, 24/128 ikonlar) hazırlık kontrol listesi.",
+    "hint": "Prosedür ancak dosyalar STD içinde doğru yerdeyse başlıyor; önce bu ön koşulu doğrulamak zaman kazandırır."
+  }
+}

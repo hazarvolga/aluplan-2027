@@ -1,0 +1,149 @@
+{
+  "no": 3,
+  "slug": "sds2-nedir-detaylandirma-is-akisi",
+  "title": "SDS2 Nedir? Çelik Detaylandırma İş Akışı ve Sertifikasyon Seviyeleri",
+  "duration": "30 dk",
+  "sourceModule": "Proje 1 · Modül 6: Çelik Yapı Tasarımı, SDS2 Entegrasyonu ve NC İmalat",
+  "intro": "SDS2, ALLPLAN ekosisteminin çelik detaylandırma (steel detailing) yazılımıdır. Bu derste SDS2'nin temel iş akışını, kullanıcı arayüzü alanlarını ve yetkinlik seviyelerine göre sertifikasyon yapısını öğreneceksiniz.",
+  "objectives": [
+    "SDS2'de bir detaylandırma işinin temel sürecini tarif etmek.",
+    "SDS2 Home Screen, Modeling ve Drawing Editor arayüzlerinin işlevini ayırt etmek.",
+    "Kiriş, kolon, düşey ve yatay çaprazlar gibi temel elemanların (Members) modellendiğini açıklamak.",
+    "Operatör, Power User ve Instructor sertifikasyon seviyelerinin kapsamını karşılaştırmak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "SDS2'nin temel süreci",
+      "body": "SDS2 ile bir çelik detaylandırma işini tamamlamak; veri içe aktarma, eleman (Member) ve bağlantıların modellenmesi, çizim (drafting) ve veri dışa aktarma adımlarını kapsar. Temel düzeyde kiriş (Beam), kolon (Column), düşey çapraz (Vertical Brace) ve yatay çapraz (Horizontal Brace) gibi elemanlar modellenir; levhalar (Sheets) oluşturulur, açıklama eklenir ve yazdırılır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Arayüz alanları",
+      "body": "SDS2 kullanıcı arayüzü üç ana alanda gezinmeyi gerektirir: Home Screen (ana ekran), Modeling (modelleme) ve Drawing Editor (çizim editörü). Temel seviye kurs, bu üç arayüzde gezinmeyi ve temel elemanları modellemeyi öğretir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Sertifikasyon seviyeleri",
+      "body": "SDS2 yetkinliği seviyelere göre belgelenir. Operator (Operatör) sertifikası, süreç ve yeteneklerin temel anlayışını; bilgi içe/dışa aktarmayı gösterir. Power User sertifikası, bir detaylandırma projesini bağımsız tamamlama yetkinliğini (veri içe aktarma, eleman ve bağlantı modelleme, çizim, veri dışa aktarma, CNC yapılandırmaları, lisans yönetimi) kapsar. Instructor (Eğitmen) sertifikası ise ileri teknik bilgiyi ve SDS2'yi 3. bilgi seviyesine kadar öğretme yetkinliğini belgeler.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Temel kurs ön bilgi beklentisi",
+      "body": "SDS2 Temel (Level 1) kursu önceden SDS2 deneyimi gerektirmez; ancak çelik detaylandırma konusunda bir miktar deneyim güçlü biçimde önerilir. Yazılımı öğrenmeden önce detaylandırma mantığına aşina olmak öğrenmeyi hızlandırır."
+    }
+  ],
+  "checkpoint": "SDS2'de bir işin veri içe aktarma, modelleme, çizim ve dışa aktarma adımlarını sırayla tarif edebiliyorsanız ve Operator ile Power User seviyelerini ayırt edebiliyorsanız, temel çerçeveyi kavramışsınız demektir.",
+  "commands": [
+    {
+      "name": "Home Screen",
+      "menu": "SDS2",
+      "shortcut": "",
+      "desc": "SDS2 ana ekranı; proje ve iş yönetimi başlangıç noktası."
+    },
+    {
+      "name": "Modeling",
+      "menu": "SDS2",
+      "shortcut": "",
+      "desc": "Eleman ve bağlantıların modellendiği ortam."
+    },
+    {
+      "name": "Drawing Editor",
+      "menu": "SDS2",
+      "shortcut": "",
+      "desc": "Çizim ve levhaların hazırlandığı editör."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "en_course_300",
+      "title": "SDS2 Temel Seviye (Level 1) kursu",
+      "body": "Bu, SDS2 için Temel (Level 1) kurstur ve önceden SDS2 deneyimi olmayanlar içindir. Bir miktar deneyimi olanlar için de temel konuları tazeleme fırsatıdır. Önceden SDS2 deneyimi gerektirmese de çelik detaylandırmada bir miktar deneyim güçlü biçimde önerilir. Kazanımlar: SDS2'de işleri tamamlamanın temel sürecini tarif etmek; SDS2 Home Screen, Modeling ve Drawing Editor arayüzlerinde gezinmek; Kiriş, Kolon, Düşey ve Yatay Çapraz gibi temel elemanları modellemek; Levhalar (Sheets) oluşturmak, açıklamak ve yazdırmak.",
+      "figures": []
+    },
+    {
+      "id": "en_course_323",
+      "title": "SDS2 Operator (Operatör) sertifikası",
+      "body": "SDS2 Operator sertifikası, sınav katılımcısının SDS2 süreç ve yeteneklerine ilişkin temel anlayışını gösterir. Bu giriş düzeyi sertifika, sahibin SDS2'de günlük çalışmaya başlamaya hazır olduğunu güvenceler. Kazanımlar: SDS2'de işleri tamamlamanın temel sürecini tarif etmek; Home Screen, Modeling ve Drawing Editor arayüzlerinde gezinmek; Kiriş, Kolon, Düşey ve Yatay Çapraz gibi temel elemanları modellemek; Levhalar oluşturup açıklamak ve yazdırmak; SDS2'ye bilgi içe ve dışa aktarmak.",
+      "figures": []
+    },
+    {
+      "id": "en_course_325",
+      "title": "SDS2 Power User sertifikası",
+      "body": "SDS2 Power User sertifikası, katılımcının SDS2 kullanarak çelik detaylandırma projelerini teslim etme yetkinliğini gösterir. Sahibi, veri içe aktarma, eleman ve bağlantı modelleme, çizim ve veri dışa aktarma dahil bir detaylandırma projesini tamamlamak için tipik tüm görevleri yapabilir. Bağımsız veya karmaşık projelerde sınırlı denetim altında çalışabilir. Kazanımlar: SDS2'deki tüm yerel Elemanları modellemek; Proje Ayarları ile Eleman ve Malzeme detaylarını yapılandırmak; sistem üretimi bağlantıları yapılandırmak ve kullanıcı tanımlı bağlantılar oluşturmak; imalat için model verisini dışa aktaracak CNC yapılandırmalarını değiştirmek; SDS2 Lisanslama Portalı'nda lisansları yönetmek.",
+      "figures": []
+    },
+    {
+      "id": "en_course_326",
+      "title": "SDS2 Instructor (Eğitmen) sertifikası",
+      "body": "SDS2 Instructor sertifikası, SDS2'ye dair ileri teknik bilgiyi belgeler. Sahibin yalnızca projeleri tamamlayacak SDS2 işlev ve süreç bilgisine değil, daha az deneyimli kullanıcılara SDS2 öğretme yeterliğine de sahip olduğunu güvenceler. Bu sertifika sahipleri, 3. bilgi seviyesine kadar (Power User sertifikasına yönelik programlar dahil) SDS2 eğitimi verebilir. Sertifika, çelik imalatçıları için kurum içi detaylandırma gibi uzmanlaşmış kullanımların ileri iş akışlarını değerlendirmez.",
+      "figures": []
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m6-3-1",
+      "prompt": "SDS2'de bir çelik detaylandırma işinin kapsadığı adımlar kaynağa göre hangileridir?",
+      "options": [
+        {
+          "text": "Yalnızca render ve animasyon",
+          "correct": false
+        },
+        {
+          "text": "Veri içe aktarma, eleman ve bağlantı modelleme, çizim, veri dışa aktarma",
+          "correct": true
+        },
+        {
+          "text": "Yalnızca statik analiz ve stabilite kontrolü",
+          "correct": false
+        },
+        {
+          "text": "Yalnızca maliyet ve teklif hazırlama",
+          "correct": false
+        }
+      ],
+      "explanation": "Power User tanımına göre tipik görevler veri içe aktarma, eleman ve bağlantı modelleme, çizim ve veri dışa aktarmadır. Statik analiz SDS2 detaylandırma kapsamı dışıdır.",
+      "bloom": "Kavrama",
+      "difficulty": "Orta"
+    },
+    {
+      "id": "m6-3-2",
+      "prompt": "İmalat için CNC yapılandırmalarını değiştirme yetkinliği hangi sertifika seviyesinde açıkça yer alır?",
+      "options": [
+        {
+          "text": "Operator",
+          "correct": false
+        },
+        {
+          "text": "Power User",
+          "correct": true
+        },
+        {
+          "text": "Temel (Level 1) kurs",
+          "correct": false
+        },
+        {
+          "text": "Onboarding kursu",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre CNC yapılandırmalarını imalat için değiştirme kazanımı Power User sertifikasında listelenir. Operator ve temel kurslar bilgi içe/dışa aktarma ve temel modellemeyle sınırlıdır.",
+      "bloom": "Analiz",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "SDS2 Operator ve Power User sertifikalarının kazanımlarını karşılaştırıp, bir detaylandırma bürosunda hangi görevler için hangi seviyenin gerektiğini iki cümleyle yazın.",
+    "expected": "Operator temel modelleme ve içe/dışa aktarmayı; Power User bağımsız proje teslimi, kullanıcı tanımlı bağlantılar ve CNC dışa aktarmayı kapsar.",
+    "hint": "CNC yapılandırması ve kullanıcı tanımlı bağlantı anahtar ayırt edici kazanımlardır."
+  }
+}

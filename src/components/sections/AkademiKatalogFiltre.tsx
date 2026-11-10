@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, type MouseEvent, type ReactElement, type ReactNode } from 'react';
 import { SectionHeader } from './SectionHeader';
-import { ROL_ADLARI, type AkademiRol } from '@/data/akademi-mufredat-haritasi';
+import { ROL_ADLARI, type AkademiRol } from '@/data/akademi-roller';
 import styles from './AkademiKatalog.module.css';
 
 /**

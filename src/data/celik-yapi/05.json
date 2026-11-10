@@ -1,0 +1,125 @@
+{
+  "no": 5,
+  "slug": "nc-imalat-ve-uretim-verisi-cikti",
+  "title": "NC İmalat ve Üretim Verisi Çıktısı: CNC Yapılandırması ve BVBS Aktarımı",
+  "duration": "28 dk",
+  "sourceModule": "Proje 1 · Modül 6: Çelik Yapı Tasarımı, SDS2 Entegrasyonu ve NC İmalat",
+  "intro": "Detaylandırılan modelin imalata dönüşmesi, makine okunabilir üretim verisi üretmekle olur. Bu derste SDS2'de imalat için CNC yapılandırmalarını ve ALLPLAN Mühendislik tarafında donatı bükme bilgisinin BVBS formatında dışa aktarımını öğreneceksiniz.",
+  "objectives": [
+    "SDS2'de model verisinin imalat için CNC yapılandırmalarıyla dışa aktarıldığını açıklamak.",
+    "ALLPLAN'da 'Bending machine' işleviyle .abs uzantılı BVBS dosyası üretmeyi öğrenmek.",
+    "BVBS dosyasının klasik bükme ve çelik listelerinin yerini tuttuğunu kavramak.",
+    "Üretim verisine hangi çizim dosyası ve katman seçiminin dahil olduğunu ayırt etmek."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "SDS2'de CNC yapılandırması",
+      "body": "SDS2 Power User kazanımlarına göre, imalat için model verisini dışa aktaracak CNC yapılandırmaları değiştirilebilir. Bu yapılandırmalar, modeldeki elemanların atölyedeki NC makinelerinin okuyabileceği üretim verisine dönüşmesini sağlar.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "ALLPLAN'da BVBS (.abs) üretimi",
+      "body": "Bükme firması, klasik bükme ve çelik listelerinin yerine BVBS formatında dosya isteyebilir. ALLPLAN'da bunun için Mühendislik (Engineering) modülündeki 'Bending machine' (bükme makinesi) işlevi kullanılır. Bu işlev '.abs' uzantılı bir dosya üretir. ALLPLAN'ın bu dosyaya yazdığı bilgi, BVBS (Bundesverband Bausoftware e.V.) kılavuzuna uygundur: donatı çubuğu, bükme biçimi, kol uzunlukları, çap gibi bilgiler kılavuzdaki kısaltmalarla verilir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Hangi veriler dahil olur",
+      "body": "'Bending machine' işlevi başlatıldığında, etkin (aktif) Çizim Dosyalarındaki tüm donatı çubukları ve hasır donatılar dikkate alınır. Ayrıca geçerli katman (layer) seçimi de hesaba katılır. Üretilen dosya, içeriğini gerekirse denetlemek için Windows metin düzenleyicisiyle açılabilir. Bilgiyi yorumlayabilmek için ilgili dernek kılavuzuna ihtiyaç vardır; bu kılavuz telif nedeniyle ALLPLAN tarafından yayımlanamaz, dernekten temin edilir.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Eksik donatı veya yanlış katman",
+      "body": "Bükme dosyası yalnızca etkin Çizim Dosyalarındaki donatıları ve geçerli katman seçimini içerir. Beklediğiniz bazı donatılar dosyada yoksa, ilgili çizim dosyasının etkin olduğundan ve doğru katmanların seçili olduğundan emin olun."
+    }
+  ],
+  "checkpoint": "'Bending machine' işleviyle ürettiğiniz .abs dosyasını metin düzenleyicisinde açıp donatı bilgilerinin BVBS kısaltmalarıyla yer aldığını görüyorsanız, üretim verisi çıktısını doğru üretmişsiniz demektir.",
+  "commands": [
+    {
+      "name": "Bending machine",
+      "menu": "ALLPLAN · Mühendislik (Engineering) modülü",
+      "shortcut": "",
+      "desc": "Donatı bükme bilgisini BVBS kılavuzuna uygun .abs dosyası olarak üreten işlev."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "en_10744",
+      "title": "Donatı ve bükme bilgisinin çelik/bükme firmasına aktarımı",
+      "body": "Soru: Bükme firması, klasik bükme ve çelik listeleri yerine BVBS formatında dosya istiyor. ALLPLAN'da böyle bir dosya nasıl üretilir? Yanıt: ALLPLAN'da Mühendislik modülündeki 'Bending machine' işlevini kullanabilirsiniz; burada '.abs' uzantılı bir dosya oluşturulur. ALLPLAN'ın bu dosyaya yazdığı bilgi, BVBS - Bundesverband Bausoftware e.V. kılavuzuna uygundur. Donatı çubuğu, bükme biçimi, kol uzunlukları, çap vb. bilgiler kılavuzdaki mutabık kısaltmalarla verilir. Üretilen dosya, içeriği denetlemek için Windows metin düzenleyicisiyle açılabilir. Bilgiyi yorumlamak için dernek kılavuzu gerekir; telif nedeniyle ALLPLAN yayımlayamaz, dernekten alınır. 'Bending machine' başlatıldığında, etkin Çizim Dosyalarındaki tüm donatı çubukları ve hasır donatılar dikkate alınır; geçerli katman seçimi de hesaba katılır.",
+      "figures": []
+    },
+    {
+      "id": "en_course_325",
+      "title": "SDS2 Power User: imalat için CNC dışa aktarımı",
+      "body": "SDS2 Power User kazanımları arasında, imalat için model verisini dışa aktaracak CNC yapılandırmalarını değiştirmek yer alır. Sahibi; veri içe aktarma, eleman ve bağlantı modelleme, çizim ve veri dışa aktarma dahil bir çelik detaylandırma projesini tamamlayabilir. Sistem üretimi bağlantıları yapılandırabilir, kullanıcı tanımlı bağlantılar oluşturabilir ve SDS2 Lisanslama Portalı'nda lisansları yönetebilir.",
+      "figures": []
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m6-5-1",
+      "prompt": "ALLPLAN'da BVBS formatında bükme verisi üretmek için hangi işlev kullanılır ve dosya uzantısı nedir?",
+      "options": [
+        {
+          "text": "Automated Connections, .ifc",
+          "correct": false
+        },
+        {
+          "text": "Bending machine, .abs",
+          "correct": true
+        },
+        {
+          "text": "Organization Admin, .lic",
+          "correct": false
+        },
+        {
+          "text": "Drawing Editor, .dwg",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre Mühendislik modülündeki 'Bending machine' işlevi, BVBS kılavuzuna uygun '.abs' uzantılı bir dosya üretir.",
+      "bloom": "Hatırlama",
+      "difficulty": "Orta"
+    },
+    {
+      "id": "m6-5-2",
+      "prompt": "'Bending machine' işlevi başlatıldığında hangi donatılar dikkate alınır?",
+      "options": [
+        {
+          "text": "Projedeki tüm donatılar, katmandan bağımsız",
+          "correct": false
+        },
+        {
+          "text": "Etkin Çizim Dosyalarındaki donatılar ve geçerli katman seçimi",
+          "correct": true
+        },
+        {
+          "text": "Yalnızca seçili tek bir donatı çubuğu",
+          "correct": false
+        },
+        {
+          "text": "Yalnızca hasır donatılar",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynak, işlev başlatıldığında etkin Çizim Dosyalarındaki tüm donatı çubukları ve hasır donatıların dikkate alındığını, ayrıca geçerli katman seçiminin de hesaba katıldığını belirtir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "Bir donatı çizim dosyasını etkin hale getirip 'Bending machine' işleviyle bir .abs dosyası üretin ve dosyayı Windows metin düzenleyicisinde açarak çap ve kol uzunluğu bilgilerini bulun.",
+    "expected": "BVBS kısaltmalarıyla donatı bilgilerini içeren okunabilir bir .abs dosyası elde edersiniz.",
+    "hint": "Beklenen donatılar eksikse çizim dosyasının etkin olduğunu ve katman seçimini kontrol edin."
+  }
+}

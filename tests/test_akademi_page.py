@@ -105,7 +105,11 @@ class AkademiOverviewRedesignTests(unittest.TestCase):
 
     def test_entry_paths_link_into_the_program(self):
         src = read("src/components/sections/AkademiOverview.tsx")
-        self.assertIn("/akademi/temel", src)
+        # /akademi ve /akademi/katalog birleştirildikten sonra genel bakış, programa
+        # tek bir satır-içi seviye bağlantısıyla değil, gömülü katalog girişiyle
+        # (#katalog + AkademiKatalogBolumu: rol yolları, modüller, seviye kartları) bağlanır.
+        self.assertIn("#katalog", src)
+        self.assertIn("AkademiKatalogBolumu", src)
         self.assertNotIn("/akademi/seviye-", src)
 
 

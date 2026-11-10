@@ -1,0 +1,138 @@
+{
+  "no": 1,
+  "slug": "visual-scripting-giris-node-kurulumu",
+  "title": "Visual Scripting'e Giriş ve Node Mantığı",
+  "duration": "25 dk",
+  "sourceModule": "Proje 1 · Modül 9: Otomasyon, Visual Scripting ve PythonParts",
+  "intro": "Visual Scripting, ALLPLAN içinde kod yazmadan parametrik nesneler oluşturmanızı ve tekrar eden işleri otomatikleştirmenizi sağlayan görsel programlama (visual programming) ortamıdır. Bu derste ortamın mantığını, node ve wire kavramlarını ve genel iş akışını tanıyacaksınız.",
+  "objectives": [
+    "Visual Scripting'in ne olduğunu ve neden kullanıldığını açıklamak.",
+    "Node (işlem kutusu) ve wire (bağlantı teli) kavramlarını ayırt etmek.",
+    "Bir Visual Scripting betiğinin genel iş akışını (oluşturma, bağlama, çalıştırma) tanımlamak.",
+    "Özellikler Paleti (Properties palette) üzerinden parametrelerin nasıl dışarıya açıldığını kavramak.",
+    "Programlama bilgisi olmadan hangi tür görevlerin otomatikleştirilebileceğini örnekleyebilmek."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Visual Scripting nedir",
+      "body": "Visual Scripting, ALLPLAN'in görsel programlama çözümüdür. Metin tabanlı kod yazmak yerine, hazır işlem bloklarını (node) ekranda birbirine bağlayarak bir mantık kurarsınız. Böylece programlama bilgisi olmayan kullanıcılar bile özel nesneler tasarlayabilir, tekrar eden görevleri otomatikleştirebilir ve modelleme süreçlerini sadeleştirebilir. Ortam hem yeni başlayanlara hem de ileri düzey kullanıcılara hitap eder.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Node ve wire: temel yapı taşları",
+      "body": "Bir Visual Scripting betiği iki temel öğeden oluşur: node ve wire. Node, tek bir işlemi temsil eden kutudur (örneğin bir değer üretmek ya da bir geometri oluşturmak). Wire ise iki node arasındaki bağlantı telidir; bir node'un çıkışını bir sonraki node'un girişine taşır. Veri soldan sağa bu teller boyunca akar ve sonuçta istediğiniz parametrik nesne ortaya çıkar.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Genel iş akışı ve dosya yönetimi",
+      "body": "Tipik bir çalışma şu sırayı izler: konuya giriş, kullanıcı arayüzünün tanınması, node'ların eklenmesi ve wire'larla bağlanması, ardından betiğin kaydedilmesi ve çalıştırılması. Kaynak eğitimde bu akış, bir konsol kolonu (Konsolenstütze / console column) örneği üzerinden parametrik nesne oluşturmanın ilk adımlarıyla gösterilir. Dosya yönetimi (betiğin saklanması ve yeniden kullanılması) da bu sürecin parçasıdır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Özellikler Paleti ile parametreleri dışarıya açmak",
+      "body": "Bir betik işe yarar hale geldiğinde, kullanıcının değiştirebileceği değerleri Özellikler Paleti'nde (Properties palette) göstermek istersiniz. Bu sayede nesneyi her kullanışta betiği açmadan, sadece palet üzerinden ölçüleri ve parametreleri ayarlayabilirsiniz. Betiği uyarladıktan sonra kaydedip çalıştırmak, parametrik bir nesneyi yeniden kullanılabilir hale getirir.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Visual Scripting bir kod değil, akış mantığıdır",
+      "body": "Yeni kullanıcılar node'ları rastgele ekleyip bağlamaya çalışabilir. Doğru yaklaşım, önce ne üretmek istediğinizi (örneğin bir kolon) tanımlayıp veriyi girişten çıkışa doğru mantıklı bir sıra ile akıtmaktır. Wire yönü (hangi çıkış hangi girişe gider) karıştırılırsa betik beklenen sonucu üretmez."
+    }
+  ],
+  "checkpoint": "Bir node'un ne işe yaradığını ve iki node'un bir wire ile nasıl bağlandığını kendi cümlenizle açıklayabiliyorsanız Visual Scripting mantığını kavramışsınız demektir.",
+  "commands": [
+    {
+      "name": "Visual Scripting",
+      "menu": "",
+      "shortcut": "",
+      "desc": "ALLPLAN'in görsel programlama ortamı; node ve wire'larla parametrik nesne ve otomasyon kurulur."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_course_255",
+      "title": "Visual Scripting'e Giriş: Konsol Kolonu Örneği",
+      "body": "Bu kaynak, Visual Scripting'e giriş yaptıktan sonra kullanıcı arayüzünü ve genel iş akışını açıklıyor. Bir konsol kolonu (Konsolenstütze) örneği üzerinden parametrik nesne oluşturmanın ilk adımları detaylı gösteriliyor. Öğrenme hedefleri: görsel programlamanın temel kavramı (ALLPLAN Visual Scripting), kullanıcı arayüzü ve genel iş akışı, dosya yönetimi, node'ların bileşenleri ve bunların wire'larla bağlanması, Özellikler Paleti'nin uyarlanması ile betiğin kaydedilip çalıştırılması. Bu makale, dersin node ve wire kavramları ile palet üzerinden parametre açma kısmı için temel oluşturur.",
+      "figures": []
+    },
+    {
+      "id": "fr_course_388",
+      "title": "Visual Scripting ile Otomasyon Kursu",
+      "body": "Bu kaynak, Visual Scripting'i ALLPLAN'in görsel programlama çözümü olarak tanıtır. Oturumlar, programlama bilgisi olmadan bile özel nesnelerin nasıl tasarlanacağını, tekrar eden görevlerin nasıl otomatikleştirileceğini ve modelleme süreçlerinin nasıl optimize edileceğini aşama aşama anlatır. Hem yeni başlayanlara hem de ileri kullanıcılara hitap eder. Belirtilen hedefler: parametrik nesneler oluşturup değiştirmek, ALLPLAN içinde tekrar eden görevleri otomatikleştirmek, öznitelikleri (attribute) yönetmek ve kullanmak, dosya içe/dışa aktarımlarını iyileştirmek ve projeye özel ihtiyaçlar için kendi çözümlerinizi devreye almak.",
+      "figures": []
+    },
+    {
+      "id": "it_course_124",
+      "title": "Modellemeden Programlamaya: Visual Scripting",
+      "body": "Bu kaynak, kavramsal eskizden uygulama projesine kadar olan modelleme yelpazesini anlatır. Duvar, döşeme, kiriş gibi önceden tanımlı mimari öğeler ya da organik modelleme yapılabilir. Daha karmaşık biçimler için 3B nesneler, ileri parametrik işlevler sayesinde modüler öğelere dönüştürülebilir; en ileri noktada ise Visual Scripting ile gerçek programlamaya ulaşılır. Öğrenme hedefleri basit modelleme, 3B modelleme, parametrik modelleme ve Visual Scripting olarak sıralanır. Bu kaynak, Visual Scripting'in modelleme ile programlama arasındaki köprü rolünü gösterir.",
+      "figures": []
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m9-1-1",
+      "prompt": "Visual Scripting'te iki node arasındaki veri akışını sağlayan öge nedir?",
+      "options": [
+        {
+          "text": "Palet",
+          "correct": false
+        },
+        {
+          "text": "Wire (bağlantı teli)",
+          "correct": true
+        },
+        {
+          "text": "Attribute",
+          "correct": false
+        },
+        {
+          "text": "Layer",
+          "correct": false
+        }
+      ],
+      "explanation": "Node tek bir işlemi temsil eder; wire ise bir node'un çıkışını bir sonraki node'un girişine taşıyan bağlantı telidir. Palet parametre gösterir, attribute öznitelik verisidir, layer ise çizim katmanıdır.",
+      "bloom": "Hatırlama",
+      "difficulty": "Kolay"
+    },
+    {
+      "id": "m9-1-2",
+      "prompt": "Visual Scripting için aşağıdakilerden hangisi doğrudur?",
+      "options": [
+        {
+          "text": "Kullanım için ileri düzey Python bilgisi zorunludur",
+          "correct": false
+        },
+        {
+          "text": "Programlama bilgisi olmadan da parametrik nesne oluşturmayı hedefler",
+          "correct": true
+        },
+        {
+          "text": "Yalnızca 2B çizim için kullanılır",
+          "correct": false
+        },
+        {
+          "text": "Nesne parametreleri değiştirilemez",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynaklar, Visual Scripting'in programlama bilgisi olmayan kullanıcıların da parametrik nesne tasarlayıp görevleri otomatikleştirmesini amaçladığını belirtir. Parametreler Özellikler Paleti'nde değiştirilebilir.",
+      "bloom": "Anlama",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "Kendi işinizde sürekli aynı ölçülerle tekrarladığınız bir nesneyi (örn. standart bir konsol kolonu ya da tekrarlı bir detay) düşünün. Bu nesnenin kullanıcının değiştirmek isteyeceği 3 parametresini (örn. yükseklik, genişlik, derinlik) kâğıt üzerinde listeleyin.",
+    "expected": "Bir nesne adı ve bu nesne için Özellikler Paleti'nde açılması mantıklı olacak en az 3 değişken parametre listesi.",
+    "hint": "Her kullanışta elle düzelttiğiniz değerler, aslında betikte dışarıya açmanız gereken parametrelerdir."
+  }
+}

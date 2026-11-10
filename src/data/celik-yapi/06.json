@@ -1,0 +1,124 @@
+{
+  "no": 6,
+  "slug": "celik-metraj-listeler-ve-raporlar",
+  "title": "Çelik Metraj, Listeler ve Raporlar: Elemandan Belgeye Bağlı Çıktı",
+  "duration": "25 dk",
+  "sourceModule": "Proje 1 · Modül 6: Çelik Yapı Tasarımı, SDS2 Entegrasyonu ve NC İmalat",
+  "intro": "Model, yalnızca geometri değil veri de taşır. Bu derste profil elemanlarından rapor üretmeyi, çelik ve bükme listelerinin modele bağlı olarak güncellenmesini ve bu çıktıların imalatla ilişkisini öğreneceksiniz.",
+  "objectives": [
+    "Profil eklentileriyle oluşturulan elemanlardan rapor üretilebildiğini açıklamak.",
+    "Çelik ve bükme listelerinin bağlı belgeler olarak gerçek zamanlı güncellendiğini kavramak.",
+    "Liste ve rapor içeriğinin ağırlık, malzeme gibi eleman özelliklerinden türediğini ayırt etmek.",
+    "Listelerin BVBS bükme verisiyle ilişkisini kurmak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Elemandan rapor üretme",
+      "body": "Profil eklentisiyle oluşturulan elemanlar hakkında rapor üretilebilir. Profiller ağırlık, malzeme ve stil gibi özellikleriyle tanımlandığından, raporlar bu özelliklerden türeyen metraj bilgisini taşır. Böylece modellediğiniz çelik elemanların miktar ve ağırlık dökümünü belge olarak alırsınız.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Bağlı listeler ve gerçek zamanlı güncelleme",
+      "body": "ALLPLAN'ın yapısal iş akışında çelik ve bükme listeleri (steel and bending lists) gibi bağlı belgeler, model üzerinden gerçek zamanlı güncellenir. Modeli değiştirdiğinizde bağlı listeler bu değişikliği yansıtır; bu, metraj ile model arasındaki tutarlılığı korur.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Listelerden imalat verisine",
+      "body": "Klasik çelik ve bükme listeleri, imalata giden bilginin okunabilir özetidir. Bükme firması bu listeler yerine BVBS formatında dosya isteyebilir; bu durumda aynı donatı bilgisi makine okunabilir biçimde dışa aktarılır. Yani listeler ve BVBS çıktısı aynı veri temelinin iki farklı sunumudur.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Eksik veya hatalı eleman özellikleri",
+      "body": "Raporlar ve listeler, elemanın ağırlık ve malzeme gibi özelliklerinden türer. Bir profil için malzeme veya ağırlık yanlış tanımlanmışsa, metraj ve rapor da yanlış çıkar. Rapor almadan önce eleman özelliklerini kontrol edin."
+    }
+  ],
+  "checkpoint": "Modelde bir profilin malzemesini değiştirdiğinizde bağlı çelik listesinin veya raporun güncellendiğini gözlemliyorsanız, veri-model bağını doğru kurmuşsunuz demektir.",
+  "commands": [],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_12687",
+      "title": "Profilbauteil: eleman raporları ve özellik uyarlama",
+      "body": "ALLPLAN 'Profilbauteil' eklentisi, serbest dikdörtgen ve yuvarlak profiller oluşturmanın yanı sıra, oluşturulan elemanlar hakkında rapor üretmeyi sağlar. Profiller ağırlık, malzeme ve stil olarak uyarlanabilir; profillerin tutma noktası ve ağırlık merkezi tanımlanabilir. Bu özellikler, elemanların ahşap, beton ve çelik gibi malzemelerle kullanımını ve bunlara dair metraj raporlarının üretilmesini mümkün kılar.",
+      "figures": []
+    },
+    {
+      "id": "en_course_54",
+      "title": "ALLPLAN yapısal mühendislik: bağlı çelik ve bükme listeleri",
+      "body": "ALLPLAN yapısal mühendislik kursu, 3B modeller oluşturmaktan sorunsuz değişikliklere kadar temel becerileri öğretir. Kesitler, görünümler ve otomatik 3B donatı oluşturmayı, BIM uyumluluğunu sağlayarak ele alır. Çelik ve bükme listeleri (steel and bending lists) gibi bağlı belgeler üzerinden gerçek zamanlı güncellemelerle tasarımları yükseltir. Kurs modülleri arasında 3B bina modeli oluşturma, kolay değişiklik, modelin tamamlanması, değerlendirme, planın derlenip çıktısı ve donatı yer alır.",
+      "figures": []
+    },
+    {
+      "id": "en_10744",
+      "title": "Listeler yerine BVBS: aynı verinin makine biçimi",
+      "body": "Bükme firması, klasik bükme ve çelik listelerinin yerine BVBS formatında dosya isteyebilir. ALLPLAN'da Mühendislik modülündeki 'Bending machine' işlevi, BVBS kılavuzuna uygun '.abs' dosyası üretir; donatı çubuğu, bükme biçimi, kol uzunlukları ve çap gibi bilgiler kılavuz kısaltmalarıyla yazılır. İşlev başlatıldığında etkin Çizim Dosyalarındaki donatılar ve geçerli katman seçimi dikkate alınır. Böylece okunabilir listelerle makine okunabilir BVBS çıktısı aynı veri temelinden beslenir.",
+      "figures": []
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m6-6-1",
+      "prompt": "Çelik ve bükme listeleri gibi bağlı belgelerin temel avantajı kaynağa göre nedir?",
+      "options": [
+        {
+          "text": "Model değişse de listeler sabit kalır",
+          "correct": false
+        },
+        {
+          "text": "Model üzerinden gerçek zamanlı güncellenir",
+          "correct": true
+        },
+        {
+          "text": "Yalnızca PDF olarak dışa aktarılabilir",
+          "correct": false
+        },
+        {
+          "text": "Donatı bilgisini içermez",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynak, çelik ve bükme listeleri gibi bağlı belgelerin model üzerinden gerçek zamanlı güncellendiğini belirtir; bu, metraj-model tutarlılığını sağlar.",
+      "bloom": "Kavrama",
+      "difficulty": "Orta"
+    },
+    {
+      "id": "m6-6-2",
+      "prompt": "Profilbauteil eklentisiyle üretilen raporlardaki metraj bilgisi hangi özelliklerden türer?",
+      "options": [
+        {
+          "text": "Yalnızca elemanın rengi",
+          "correct": false
+        },
+        {
+          "text": "Ağırlık, malzeme ve stil gibi eleman özellikleri",
+          "correct": true
+        },
+        {
+          "text": "Yalnızca lisans türü",
+          "correct": false
+        },
+        {
+          "text": "Ekran çözünürlüğü",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre Profilbauteil elemanları ağırlık, malzeme ve stil olarak uyarlanır ve bunlar hakkında rapor üretilir; metraj bu özelliklerden türer.",
+      "bloom": "Analiz",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "Profilbauteil ile bir çelik profil elemanı oluşturup malzeme ve ağırlığını tanımlayın, ardından bu eleman için bir rapor üretin.",
+    "expected": "Elemanın malzeme ve ağırlık bilgisini içeren bir metraj raporu elde edersiniz.",
+    "hint": "Rapor beklediğinizden farklıysa önce elemanın malzeme ve ağırlık tanımını kontrol edin."
+  }
+}

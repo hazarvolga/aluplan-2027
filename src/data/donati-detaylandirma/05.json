@@ -1,0 +1,151 @@
+{
+  "no": 5,
+  "slug": "donati-gosterimi-renk-ve-format",
+  "title": "Donatı Gösterimi: Çapa Göre Renk ve Format Ayarları",
+  "duration": "25 dk",
+  "sourceModule": "Proje 1 · Modül 5: Betonarme Yapılarda 3B Donatı Detaylandırma",
+  "intro": "Donatıyı çapa veya poz numarasına göre renklendirmek, planların okunabilirliğini artırır. Bu ders, çubuk ve hasırların rengini çaptan türetmek için gereken üç ayarı ve etiket (Verlegetext / label) renginin neden geride kaldığını kaynağa sadık anlatır.",
+  "objectives": [
+    "Çubuk/hasır rengini çapa (veya hasır tipine) göre türetmek için gereken üç ayarı tanımlamak.",
+    "'Element rengini kullan' (Color from element / Farbe aus Element) seçeneğinin rolünü açıklamak.",
+    "Renklendirmeyi grundrisste (planda) görünür kılan ekran ayarını ayırt etmek.",
+    "Etiket renginin çubuk rengiyle uyuşmadığı durumu tanıyıp düzeltmek."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "1. Rengi çaptan türet",
+      "body": "Kaynağa göre çaplara (veya hasır tiplerine) renk atamak için önce Extras > Optionen > Animation altında, mühendislik elemanlarının gösteriminde Rundstahl için 'Oberflächenfarbe aus Durchmesser' (yüzey rengi çaptan), Matten için 'Oberflächenfarben aus Mattenbezeichnung' (yüzey rengi hasır tanımından) ayarlanır. İngilizce kaynak bunu 'set the color per diameter' olarak özetler.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "2. Format'ta 'element rengini kullan'",
+      "body": "İkinci adımda Extras > Optionen > Bewehrung > Format (EN: Options > Reinforcement > Format) altında 'aus Element' (EN: Color from element) kontrol kutusunu işaretleyin. Bu, çubuğun renginin elemanın kendi (çaptan türeyen) renginden alınmasını sağlar.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "3. Ekran gösteriminde renkli donatı",
+      "body": "Üçüncü adımda ekran gösterimi (Bildschirmdarstellung / Show-Hide) ayarında 'Farbige Bewehrung im Grundriss' (EN: color for bars / planda renkli donatı) seçeneğini etkinleştirin. Bu üç ayar birlikte yapıldığında donatı planda çapa göre renkli görünür.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Etiket rengi eski ayarda kalıyor",
+      "body": "Çubuk çapı rengini değiştirdikten sonra çubuklar yeni renge geçerken etiket (Verlegetext) eski renkte kalabilir (ör. çubuklar mavi, etiket mor). Düzeltmek için etiketin özelliklerini (metin özellikleri) seçip 'Linienfarbe Umrandung aus Element' / 'Color from element' kutusunu işaretleyip çıkın. Kaynak uyarır: renk eşleşir ancak bu ayar kalıcı olmaz."
+    }
+  ],
+  "checkpoint": "Üç ayarı da yaptıktan sonra donatı planda çapa göre renklenip etiket rengi de çubuk rengiyle eşleşiyorsa ayarlar doğrudur.",
+  "commands": [
+    {
+      "name": "Oberflächenfarbe aus Durchmesser (color per diameter)",
+      "menu": "Extras > Optionen > Animation",
+      "shortcut": "",
+      "desc": "Rundstahl yüzey rengini çaptan türetir; hasır için Mattenbezeichnung'dan."
+    },
+    {
+      "name": "aus Element / Color from element",
+      "menu": "Extras > Optionen > Bewehrung > Format",
+      "shortcut": "",
+      "desc": "Çubuğun rengini elemanın kendi renginden alır."
+    },
+    {
+      "name": "Farbige Bewehrung im Grundriss (color for bars)",
+      "menu": "Bildschirmdarstellung / Show-Hide",
+      "shortcut": "",
+      "desc": "Planda renkli donatı gösterimini açar."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "en_9361",
+      "title": "REINF: Çubuk Renklerinin Ayarlanması ve Değiştirilmesi",
+      "body": "Çubuk ve hasır için renk ayarını doğru kullanıp sonradan etiketi nasıl değiştiririz? Sisteminizi çap veya poz numarasına göre renklendirmek için: 1) Araç/Seçenekler/Animation altında rengi çapa göre ayarlayın (set the color per diameter). 2) Araç/Seçenekler/Reinforcement/Format altında 'Color from element' kutusunu işaretleyin. 3) 'Show/Hide' ayarında 'color for bars' seçeneğini etkinleştirin. Sorun: Çubuk çapı rengini değiştirdikten sonra çubuklar son rengi korusa bile etiketler hâlâ eski ayarda kalır (çubuklar mavi, etiket mor). Düzeltmek için etiketin özelliğini (metin özelliği) seçip 'Color from element' kutusunu işaretleyip çıkın. Uyarı: renk yeniden eşleşir ama ayar kalıcı olmaz.",
+      "figures": [
+        "/akademi/donati-detaylandirma/9361_0EMVi000002WfYL_46b60fe6.png",
+        "/akademi/donati-detaylandirma/9361_0EMVi000002WfJp_7e8eea9e.png",
+        "/akademi/donati-detaylandirma/9361_0EMVi000002WZvy_f8e1b391.png",
+        "/akademi/donati-detaylandirma/9361_0EMVi000002WfgP_c9c7b4ce.png",
+        "/akademi/donati-detaylandirma/9361_0EMVi000002WdLG_1eed2be2.png",
+        "/akademi/donati-detaylandirma/9361_0EMVi000002Wfi1_e4d2578b.png"
+      ]
+    },
+    {
+      "id": "de_9360",
+      "title": "Donatı: Format Özelliklerini Değiştirme",
+      "body": "Rundstahl ve hasır için renk ayarını doğru kullanıp Verlegetext üzerinde değişikliği nasıl yaparız? Çaplara/hasır tiplerine belirli renkler atamak için: 1) Extras/Optionen/Animation/Darstellung Ingenieurbau-Elemente/Rundstahl altında 'Oberflächenfarbe aus Durchmesser', Matten için 'Oberflächenfarben aus Mattenbezeichnung' ayarlayın. 2) Extras/Optionen/Bewehrung/Format altında 'aus Element' kontrol kutusunu etkinleştirin. 3) 'Bildschirmdarstellung' ayarında 'Farbige Bewehrung im Grundriss' seçeneğini etkinleştirin. Çıktı: Bunu yaptıktan sonra donatı renkli görünür ama Verlegetext hâlâ eski ayardadır (etriyeler mavi, Verlegetext mor). Düzeltmek için etiketin özelliklerini seçip metin özelliklerini değiştirin; 'Linienfarbe Umrandung aus Element' kutusunu etkinleştirip işlemi bitirin. Dikkat: renk uyarlanır ancak ayar kalıcı olmaz.",
+      "figures": [
+        "/akademi/donati-detaylandirma/9360_0EMVi000002WfYL_46b60fe6.png",
+        "/akademi/donati-detaylandirma/9360_0EMVi000002WfgP_c9c7b4ce.png",
+        "/akademi/donati-detaylandirma/9360_0EMVi000002WgXd_ef71a2b8.png",
+        "/akademi/donati-detaylandirma/9360_0EMVi000002Wg30_ae7e402e.png",
+        "/akademi/donati-detaylandirma/9360_0EMVi000002WckA_88c79a0c.png",
+        "/akademi/donati-detaylandirma/9360_0EMVi000002Wcp0_07bfe42f.png"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m5-5-1",
+      "prompt": "Donatının planda çapa göre renkli görünmesi için kaç ayar birlikte yapılmalıdır?",
+      "options": [
+        {
+          "text": "Yalnızca bir ayar yeterlidir",
+          "correct": false
+        },
+        {
+          "text": "Animation (çaptan renk), Bewehrung/Format (aus Element), ekran gösterimi (renkli donatı) olmak üzere üç ayar",
+          "correct": true
+        },
+        {
+          "text": "Yalnızca normu BS EN yapmak",
+          "correct": false
+        },
+        {
+          "text": "Sadece etiket özelliklerini değiştirmek",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynak üç ayarı sıralar: Animation altında rengi çaptan türetme, Bewehrung/Format altında 'aus Element'/'Color from element', ve ekran gösteriminde 'Farbige Bewehrung im Grundriss'/'color for bars'.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta"
+    },
+    {
+      "id": "m5-5-2",
+      "prompt": "Çubuklar renklendi ama etiket (Verlegetext) eski renkte kaldı. Çözüm nedir?",
+      "options": [
+        {
+          "text": "Etiket özelliklerinde 'Color from element' kutusunu işaretlemek",
+          "correct": true
+        },
+        {
+          "text": "Projeyi yeniden oluşturmak",
+          "correct": false
+        },
+        {
+          "text": "Normu değiştirmek",
+          "correct": false
+        },
+        {
+          "text": "Büküm rulosu çapını modifiye etmek",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre etiketin metin özelliklerinde 'Color from element' ('Linienfarbe Umrandung aus Element') kutusu işaretlenir; renk eşleşir ancak bu ayarın kalıcı olmadığı belirtilir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "Birkaç farklı çapta çubuk yerleştirin ve üç ayarı (Animation, Format, ekran gösterimi) yaparak planda renkli donatı elde edin. Etiket renginin çubukla uyuşup uyuşmadığını kontrol edin.",
+    "expected": "Çubukların çapa göre renklenmesi; etiket uyuşmazsa 'Color from element' ile düzeltebilmeniz.",
+    "hint": "Etiket rengi kalıcı olmayabilir; uyumsuzluk tekrar oluşursa aynı kutuyu yeniden işaretleyin."
+  }
+}

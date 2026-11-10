@@ -1,0 +1,194 @@
+{
+  "no": 3,
+  "slug": "listeler-uretim-ciktisi-otomasyonu",
+  "title": "Prekast Listeleri ve Üretim Çıktısı Otomasyonu",
+  "duration": "32 dk",
+  "sourceModule": "Proje 1 · Modül 7: Prekast Yapı Elemanları ve Endüstriyel Üretim",
+  "intro": "Prekast modellemenin asıl değeri, üretim ve lojistik için doğru listeler ve veriler üretmesidir. Bu derste prekast liste üreticisinin (List generator Precast) başlık değişkenlerini nasıl özelleştirdiğinizi, taşıma ankrajı genişliğini formülle nasıl hesaplattığınızı ve üretim verisinin TIM'e nasıl aktarıldığını öğrenirsiniz.",
+  "objectives": [
+    "Prekast liste üreticisinin (List generator Precast) başlık (header) değişkenlerini InitPrjAttr.EXT ve HeaderData.ext dosyalarıyla özelleştirmeyi tanımlamak.",
+    "Standart liste dosyalarını \\ETC\\BFT\\_List klasöründen büro (STD) klasörüne kopyalama mantığını açıklamak.",
+    "Taşıma ankrajı (transport anchor / Transportanker) genişliğini öznitelik tabanlı formülle hesaplatmayı kavramak.",
+    "Üretim ve lojistik verisinin TIM ortamına (DatenExplorer, Delivery Manager) aktarıldığı akışı ayırt etmek."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Liste başlığındaki değişkenleri özelleştirmek",
+      "body": "Prekast liste üreticisinin (List generator Precast) başlığında varsayılan olarak proje öznitelikleri yazılır. Başka değerler çıkarmak isterseniz InitPrjAttr.EXT dosyasını düzenlersiniz. Bunun için dosyayı standart listeler alanından büro listeleri alanına kopyalarsınız: dizinlere sağ tıklayıp 'Lists and schedules in default folder' ve 'Lists and schedules in office folder' üzerinden Explorer'ı açar, InitPrjAttr.EXT dosyasını \\ETC\\BFT\\_List klasöründen ...STD\\BFT\\_List klasörüne kopyalarsınız. Örnekte başlıkta kat için çıkan DeckeUber değişkenine, bina strüktüründen (building structure) kat adı atanır. Başlıktaki diğer değişkenler de aynı mantıkla değiştirilebilir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Başlıktan öznitelik kaldırmak: HeaderData.ext",
+      "body": "Başlıktaki bazı öznitelikleri kaldırmak veya ek öznitelik eklemek isterseniz HeaderData.ext dosyasını düzenlersiniz; bu dosya liste üreticisinin genel başlık verisini tutar. Aynı yöntemle dosyayı \\ETC\\BFT\\_List klasöründen ...STD\\BFT\\_List klasörüne kopyalayıp düzenleyicide açarsınız. Kaynaktaki kritik uyarı: kıvrık parantez '{' ve '@xxxxx' numarası bir çeviri/dil dosyası referansıdır; düzenlenen satırda bunların da kaldırılması gerekir. Örneğin bir bileşeni kaldırmak için parantezi, metni, değişken yer tutucusunu, ikinci parantezi, değişkeni ve çeviri için metin numarasını birlikte silersiniz.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Taşıma ankrajı genişliğini formülle hesaplamak",
+      "body": "iWall duvar tiplerinde (Massivwand/masif duvar, Doppelwand/çift duvar, Thermowand/termal duvar) taşıma ankrajı (Transportanker) genişliği öznitelik tabanlı bir formülle otomatik hesaplanabilir. Formül, duvar kalınlığı (@36017@), kabukların pas payı (@36006@, @36005@) ve enine donatının maksimum çapı (@18120@) gibi öznitelikleri kullanır. Her duvar tipi için ayrı gömme parça kullanılıyorsa tipe özel formül yazılır; aynı gömme parça tüm tiplerde kullanılıyorsa, duvar tipini (@36094@) sorgulayan bir eğer-değilse (If/Else) yapısıyla ortak formül kurulur. Ortak formül karakter sınırını aştığında, formül ayrı bir kullanıcı özniteliğine (user defined attribute) yazılır ve liste metninde o öznitelik PARENTPRECAST ile değerlendirilir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Üretim verisini TIM'e aktarmak",
+      "body": "Prekast model verisi, üretim ve sevkiyat için TIM ortamına aktarılır. Kaynaktaki TIM 2024 yeniliklerine göre: DatenExplorer'da 'Synchronisieren mit' (ile senkronize et) işleviyle birden çok pencere arasında ilişki kurulabilir; bir pencerede seçilen prekast elemanın gömme parçaları, yuvarlak çelikleri gibi detayları başka pencerede görüntülenir. Özellikler penceresinde bir prekast elemana dış dosya (ör. eleman planı, üretim verisi) eklenebilir. Delivery Manager modülünde klavye kısayollarıyla stapel (yığın) üzerinde eleman taşıma ve A3 formatında kat planı raporu üretme eklenmiştir. Ayrıca Allplan'dan TIM dışa aktarımında, bir elemana bağlı olmayan 'serbest donatı' (lose Eisen / bauseits) da aktarılabilir.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Çeviri yer tutucusunu da silmek gerekir",
+      "body": "HeaderData.ext düzenlenirken yalnızca metni silmek yetmez. Kıvrık parantez '{' ve '@xxxxx' numarası bir dil/çeviri referansıdır; satır düzgün çıksın diye bu yer tutucuların da kaldırılması gerekir."
+    },
+    {
+      "title": "DİKKAT: Taşıma ankrajı formülü iç donatıda yanılır",
+      "body": "Kaynağa göre bu formüller yalnızca enine donatı (cross reinforcement) dışta ise doğru ankraj kalınlığını verir. Enine donatı içteyse boyuna demirlerin maksimum çapının da düşülmesi gerekir ve konum formülle değerlendirilemez."
+    }
+  ],
+  "checkpoint": "Düzenlenmiş InitPrjAttr.EXT veya HeaderData.ext dosyanızı büro (STD\\BFT\\_List) klasörüne kopyaladıysanız ve liste başlığı istediğiniz değerleri gösteriyorsa özelleştirme başarılıdır.",
+  "commands": [
+    {
+      "name": "List generator Precast (Listengenerator Precast)",
+      "menu": "Prekast liste üreticisi",
+      "shortcut": "",
+      "desc": "Prekast elemanların üretim/metraj listelerini üreten araç."
+    },
+    {
+      "name": "InitPrjAttr.EXT",
+      "menu": "\\ETC\\BFT\\_List ve STD\\BFT\\_List klasörleri",
+      "shortcut": "",
+      "desc": "Liste başlığındaki değişkenlere (ör. kat adı) özel değer atayan yapılandırma dosyası."
+    },
+    {
+      "name": "HeaderData.ext",
+      "menu": "\\ETC\\BFT\\_List ve STD\\BFT\\_List klasörleri",
+      "shortcut": "",
+      "desc": "Liste üreticisinin genel başlık verisini tutan dosya; öznitelik kaldırmak/eklemek için düzenlenir."
+    },
+    {
+      "name": "DatenExplorer",
+      "menu": "TIM",
+      "shortcut": "",
+      "desc": "Prekast elemanların ve alt verilerinin (gömme parça, donatı) sorgulandığı TIM aracı."
+    },
+    {
+      "name": "Delivery Manager",
+      "menu": "TIM",
+      "shortcut": "",
+      "desc": "Sevkiyat/yığınlama modülü; A3 kat planı raporu ve klavye kısayolları içerir."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_9110",
+      "title": "Prekast Liste Üreticisi: Başlık Değişkenlerini InitPrjAttr.EXT ile Uyarlama",
+      "body": "Soru: Bina strüktürünü (Bauwerkstruktur) kullanıyorum ve prekast listelerde kat özniteliğinde, strüktürden gelen kat adını çıkarmak istiyorum. Cevap: Varsayılan olarak prekast liste üreticisinin başlığında proje öznitelikleri çıkar. Başka değerler çıkarmak için InitPrjAttr.EXT dosyasını kullanırsınız. Dosyayı standart listeler alanından büro listeleri alanına kopyalayın: dizinlere sağ tıklayıp Standardlisten ve 'Listen auf Büro' üzerinden Explorer'ı açın ve InitPrjAttr.EXT dosyasını \\ETC\\BFT\\_List klasöründen ...STD\\BFT\\_List klasörüne kopyalayın. Dosyayı düzenleyicide açıp ihtiyacınıza göre uyarlayın. Örnekte başlıkta kat için çıkan DeckeUber değişkenine, bina strüktüründen gelen kat adı atanır. Başlıktaki tüm diğer değişkenler de aynı biçimde değiştirilebilir. Dosyada proje tipi kodları tanımlıdır (Geschoss = 7 kat vb.) ve bir döngü içinde kat tipi için strüktür adı okunur.",
+      "figures": [
+        "/akademi/prekast/9110_0EMVi000009JN8b_7684f6c0.png",
+        "/akademi/prekast/9110_0EMVi000009JNwb_5be785d1.png",
+        "/akademi/prekast/9110_0EMVi000009JLA2_243324a0.png"
+      ]
+    },
+    {
+      "id": "de_9108",
+      "title": "Prekast Liste Üreticisi: Başlığı HeaderData.ext ile Uyarlama",
+      "body": "Soru: Prekast listelerde başlıktan bazı öznitelikleri nasıl kaldırır veya ek öznitelik eklerim? Cevap: HeaderData.ext dosyası liste üreticisinin genel başlık verisini içerir. Bu dosyayı standart listeler alanından büro listeleri alanına kopyalayın (dizinlere sağ tıklayıp Standardlisten/'Listen auf Büro' üzerinden Explorer'ı açarak \\ETC\\BFT\\_List klasöründen ...STD\\BFT\\_List klasörüne). Dosyayı düzenleyicide açıp uyarlayın. Kıvrık parantez '{' ve '@xxxxx' numarası bir çeviri ve dil dosyası referansıdır; düzenlenen satırda bunların her ikisi de kaldırılmalıdır. Örneğin bir bileşeni (Bauteil) kaldırmak için parantezi, bileşen metnini, değişken yer tutucusunu, ikinci parantezi, değişkeni ve çeviri metin numarasını silersiniz.",
+      "figures": [
+        "/akademi/prekast/9108_0EMVi000009ZDEv_fe14a9f6.png",
+        "/akademi/prekast/9108_0EMVi000009ZE1K_758da64d.png"
+      ]
+    },
+    {
+      "id": "de_8889",
+      "title": "iWall Duvar Tipleri İçin Taşıma Ankrajı Genişliği Formülü",
+      "body": "Soru: iWall duvarlarında (masif duvar / çift duvar / termal duvar) taşıma ankrajı (Transportanker) kalınlığı otomatik hesaplanabilir mi? Cevap: Evet, şu kısıtlarla. Formüller doğru ankraj kalınlığını yalnızca enine donatı dışta ise verir; enine donatı içteyse boyuna demirlerin maksimum çapı da düşülmelidir ve konum formülle değerlendirilemez. Her duvar tipi için ayrı gömme parça (kendi katalog referansıyla) kullanılıyorsa tip başına ayrı formül yazılır. Aynı gömme parça tüm tiplerde kullanılıyorsa, duvar tipini sorgulayan bir eğer-değilse yapısıyla ortak formül kurulur. Kullanılan öznitelikler: @36017@ duvar kalınlığı (cm), @36006[1]@ ve @36005[...]@ kabukların pas payı (m), @18120@ ve @18120[1]@ enine donatının maksimum çapı (mm). Ortak formül karakter sınırını aşarsa, ayrı bir kullanıcı özniteliği (Benutzerattribut) oluşturulup liste metninde PARENTPRECAST(@xxxx@) ile değerlendirilir. Biçimlendirme: Etiket için F8.1, birim cm; kullanıcı özniteliği için kontrol öğesi Formül, veri tipi kayan nokta, birim cm.",
+      "figures": [
+        "/akademi/prekast/8889_0EMVi00000DsuFS_cbee05a4.png",
+        "/akademi/prekast/8889_0EMVi00000DsuQj_64569205.png",
+        "/akademi/prekast/8889_0EMVi00000DsuLt_359dfb71.png",
+        "/akademi/prekast/8889_0EMVi00000DshRw_28e90fac.png",
+        "/akademi/prekast/8889_0EMVi00000Dsw5x_61bfe3bb.png",
+        "/akademi/prekast/8889_0EMVi00000Dsutl_7fdfb311.png"
+      ]
+    },
+    {
+      "id": "de_9401",
+      "title": "TIM 2024 Yenilikleri (Prekast Üretim ve Lojistik)",
+      "body": "TIM, mevcut platformunda bakım modunda (performans ve kararlılık odaklı) sürdürülür; yeni özellikler Allplan Softlock tabanlı Tim Premium ile gelir. Tim Premium, Collaboration Manager, Delivery Manager, Production Manager, MES-Connect, ERP-Connect ve MWS-Connect modüllerini tek lisansta birleştirir. DatenExplorer'da 'Synchronisieren mit' işleviyle birden çok pencere arasında ilişki kurulur: bir pencerede seçili prekast elemanın gömme parça, yuvarlak çelik gibi detayları başka pencerede görüntülenir. 'Maksimum sonuç sayısı' ayarı TIM Optionen bölümüne taşınmıştır. Özellikler penceresinde bir elemana dış dosya (üç nokta simgesiyle) eklenebilir; bunlar 'Externe Dateien' olarak listelenir. Delivery Manager'da klavye kısayolları ve A3 formatında kat planı raporu eklenmiştir. Allplan'dan TIM dışa aktarımında, bir elemana bağlı olmayan serbest donatı (lose Eisen / bauseits) da aktarılabilir.",
+      "figures": [
+        "/akademi/prekast/9401_0EMVi000000OrCr_b4d246b4.png",
+        "/akademi/prekast/9401_0EMVi000000OrRN_671b28d4.png",
+        "/akademi/prekast/9401_0EMVi000000Ondu_8df1e4b6.png",
+        "/akademi/prekast/9401_0EMVi000000OqIQ_d4f96b60.png",
+        "/akademi/prekast/9401_0EMVi000000OreH_f0852e6c.png",
+        "/akademi/prekast/9401_0EMVi000000OlsE_007aefa4.png"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m7-5",
+      "prompt": "HeaderData.ext dosyasında bir özniteliği başlıktan kaldırırken kaynağa göre satırdan başka ne silinmelidir?",
+      "options": [
+        {
+          "text": "Sadece öznitelik adı yeterlidir",
+          "correct": false
+        },
+        {
+          "text": "Kıvrık parantez '{' ve '@xxxxx' çeviri/dil yer tutucusu da kaldırılmalıdır",
+          "correct": true
+        },
+        {
+          "text": "Tüm dosya yeniden oluşturulmalıdır",
+          "correct": false
+        },
+        {
+          "text": "Önce lisans dosyası silinmelidir",
+          "correct": false
+        }
+      ],
+      "correctIndex": 1,
+      "explanation": "Kaynak, '{' parantezinin ve '@xxxxx' numarasının bir çeviri/dil referansı olduğunu, satır düzgün çıksın diye bunların da silinmesi gerektiğini belirtir.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta"
+    },
+    {
+      "id": "m7-6",
+      "prompt": "Taşıma ankrajı genişliği formülü hangi koşulda doğru sonuç verir?",
+      "options": [
+        {
+          "text": "Enine donatı içte olduğunda",
+          "correct": false
+        },
+        {
+          "text": "Enine donatı dışta olduğunda",
+          "correct": true
+        },
+        {
+          "text": "Donatı tipinden bağımsız her zaman",
+          "correct": false
+        },
+        {
+          "text": "Yalnızca termal duvarda",
+          "correct": false
+        }
+      ],
+      "correctIndex": 1,
+      "explanation": "Kaynağa göre formüller doğru ankraj kalınlığını yalnızca enine donatı dışta iken verir; içteyken boyuna demir çapı da düşülmeli ve konum formülle değerlendirilemez.",
+      "bloom": "Analiz",
+      "difficulty": "Zor"
+    }
+  ],
+  "exercise": {
+    "task": "InitPrjAttr.EXT dosyasını standart liste klasöründen (\\ETC\\BFT\\_List) büro klasörüne (STD\\BFT\\_List) kopyalayıp düzenleyicide açın ve liste başlığındaki kat değişkenine bina strüktüründen gelen kat adını atayın.",
+    "expected": "Dosya büro klasörüne kopyalanmış ve düzenlenmiştir; prekast liste başlığında proje özniteliği yerine strüktürden gelen kat adı görünür.",
+    "hint": "Allplan özelleştirmelerinde standart alanı doğrudan değiştirmek yerine dosyayı önce büro (STD) alanına kopyalamak güvenli yoldur."
+  }
+}

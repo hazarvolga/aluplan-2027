@@ -1,0 +1,149 @@
+{
+  "no": 3,
+  "slug": "ozel-bukum-sekillerini-hizli-uretme",
+  "title": "Özel Büküm Şekillerini Hızlı Üretme: Eleman Dönüştürme",
+  "duration": "28 dk",
+  "sourceModule": "Proje 1 · Modül 5: Betonarme Yapılarda 3B Donatı Detaylandırma",
+  "intro": "Karmaşık bir büküm şeklini (special bar shape / spezielle Biegeform) her seferinde elle tanımlamak zaman alır. Allplan, 2B/3B bir eskizi gerçek bir donatı çubuğuna dönüştüren ve mevcut bir formu başka bir görünüme aktaran 'Element wandeln, übernehmen' (EN: Convert, Match Element) işlevini sunar. Bu ders bu hızlı üretim yolunu kaynağa sadık anlatır.",
+  "objectives": [
+    "Eskizden çubuk üretimi için 'Element wandeln, übernehmen' (Convert, Match Element) işlevinin amacını tanımlamak.",
+    "Bir 2B/3B eskizi çap atayarak gerçek bir çubuk tanımına (bar definition) dönüştürmeyi uygulamak.",
+    "Mevcut bir büküm şeklini başka bir görünüme/konuma aktarmayı ayırt etmek.",
+    "Üretim sonrası çubuk tanımının (Mark Position) doğruluğunu neden kontrol etmek gerektiğini açıklamak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Neden bu işlev",
+      "body": "Normalde eğri çubukları tanımlamak için 'Stabform' (EN: FormShape) aracını, etriye (stirrup) veya serbest form (FreeForm) için çağırırız. Bazı durumlarda büküm tanımını önce tasarlamak gerekir ve benzer çubukları planda başka bir yönde yeniden üretmek zaman alır. Kaynağa göre Allplan'da 'Element wandeln, übernehmen' (EN: Convert bars, Match Element) komutu bu adımı farklı yollarla kısaltmak için vardır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Eskizi gerçek çubuğa dönüştürme",
+      "body": "İşlev, 2B/3B çizilmiş bir eskizi gerçek bir çubuğa, bir 'çubuk tanımı' (bars definition) olarak dönüştürmek için tasarlanmıştır. İşlevi başlatın ve eskizi seçin: açılan pencerede çap (diameter) ve çubuk özelliklerini tanımlayabilirsiniz. OK ile onayladığınızda çubuk üretilir ve etiketini (Verlegetext / label) absetebilirsiniz. Allplan, her köşeyi çapa ait büküm rulosu çapıyla (bending roller diameter) düzgün bağlar. Ardından çubuğu her zamanki gibi tekil veya doğrusal (single / linear) olarak yerleştirebilirsiniz.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Mevcut formu başka bir görünüme aktarma",
+      "body": "Benzer bir büküm şekline başka bir görünüm sisteminde ihtiyacınız varsa, çubuğu yeni görünüme doğrudan kopyalayamazsınız. Kaynağa göre bunun yerine 'Element wandeln, übernehmen' ('Convert, Match Element') işlevini kullanarak 2 tıkla yeni görünümde yeni bir çubuk oluşturabilirsiniz. Bu, yeni bir çubuk pozisyonu atanmasına yol açabilir, ancak formu yeniden oluşturmanın hızlı ve güvenli bir yoludur.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Çubuk tanımını ve Mark Position'ı kontrol edin",
+      "body": "Kaynak uyarır: üretimden sonra çubuk tanımının (Mark Position özelliği) doğru olduğundan emin olun, çünkü bu işlev genel ön ayarları dikkate almaz ve büküm şemasını verilen eksene (polygonzug/çizgi) göre hesaplar. Bu kontrol yapılmazsa diğer çubuklarla şemada ve hesaplanan uzunluklarda (miktar) farklar oluşabilir."
+    },
+    {
+      "title": "DİKKAT: Çubuk doğrudan kopyalanamaz",
+      "body": "Bir çokgen çizgiden (polygonzug) üretilmiş çubuk başka bir elemana doğrudan kopyalanamaz. Formu aktarmak için kopyalama yerine 'Element wandeln, übernehmen' işlevini kullanın."
+    }
+  ],
+  "checkpoint": "Eskizinizi çap atayarak gerçek bir çubuğa dönüştürdüyseniz ve Mark Position özelliğinin diğer çubuklarla tutarlı olduğunu kontrol ettiyseniz görevi doğru yapmışsınızdır.",
+  "commands": [
+    {
+      "name": "Element wandeln, übernehmen (Convert, Match Element)",
+      "menu": "Mühendislik rolü · Donatı",
+      "shortcut": "",
+      "desc": "2B/3B eskizi gerçek çubuğa dönüştürür ve mevcut formu başka görünüme aktarır."
+    },
+    {
+      "name": "Stabform (FormShape)",
+      "menu": "Mühendislik rolü · Donatı",
+      "shortcut": "",
+      "desc": "Etriye veya serbest form gibi eğri çubukları tanımlamak için kullanılan araç."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "en_8711",
+      "title": "REINF: Özel Büküm Şeklini Hızlı Yolla Oluşturma",
+      "body": "Özel büküm şekli (BarShape) hızlıca nasıl oluşturulur? A) Element dönüştürme: Genellikle elemanı tanımlamak için FormShape aracını (etriye veya FreeForm gibi) çağırırız; bazı durumlarda tasarım zaman alır. Allplan'da 'Convert bars, Match Element' adlı özel bir komut bu adımı kısaltır. Komut, 2B/3B eskizi gerçek bir çubuğa, 'bars definition' olarak dönüştürmek içindir. Eskizi seçtiğinizde çap tanımlamanız istenir; onayladığınızda çubuk tanımı tamamlanır ve etiketleyebilirsiniz. Allplan köşeleri büküm rulosu çapıyla düzgün bağlar; yerleştirmeyi tekil veya doğrusal yapabilirsiniz. B) Element eşleştirme (Match element): Başka bir görünüm sisteminde benzer bir çubuk şekline ihtiyaç varsa çubuğu yeni görünüme kopyalayamazsınız; 'Convert, Match Element' aracıyla 2 tıkta yeni görünümde yeni çubuk oluşturabilirsiniz. Bu yeni bir pozisyona yol açabilir ama formu yeniden oluşturmanın hızlı, güvenli yoludur. İpucu: Üretimden sonra Mark Position özelliğini kontrol edin; bu araç genel tanımı dikkate almaz ve eksenleri temel alır, aksi hâlde şema ve miktarda farklar oluşur.",
+      "figures": [
+        "/akademi/donati-detaylandirma/8711_0EM67000008DTkD_61d50645.png",
+        "/akademi/donati-detaylandirma/8711_0EM67000008DTQ4_d5f2622b.png",
+        "/akademi/donati-detaylandirma/8711_0EM67000008DTDA_0a4842de.png",
+        "/akademi/donati-detaylandirma/8711_0EM67000008DTjo_4f27ff30.png",
+        "/akademi/donati-detaylandirma/8711_0EM67000008DTmO_2d08672b.png",
+        "/akademi/donati-detaylandirma/8711_0EM67000008DTlQ_8fc16201.png"
+      ]
+    },
+    {
+      "id": "de_8713",
+      "title": "Donatı: Özel Büküm Şekillerinin Hızlı Üretimi",
+      "body": "Özel büküm şekilleri (spezielle Biegeformen) hızlı ve basit nasıl üretilir? 1. 'Element wandeln, übernehmen' işleviyle: Normalde eğri rundstahlleri tanımlamak için 'Stabform' aracını (etriye veya serbest büküm formu için) çağırırız; bazen büküm tanımını önce tasarlamak ve benzer çubukları başka yönde yeniden üretmek zaman alır. Allplan'daki 'Element wandeln, übernehmen' komutu büküm şekli üretimini kolaylaştırmak için vardır. İşlev, 2B/3B eskizleri büküm şekillerine dönüştürmek için yaratılmıştır. İşlevi başlatıp eskizleri işaretleyin; açılan 'Element wandeln, übernehmen' penceresinde çubuk özelliklerini (Stab-Eigenschaften) tanımlayın. OK ile çubuk üretilir ve etiketi (Verlegetext) absetebilirsiniz; Allplan köşelerde çapa ait büküm rulosu çapını kullanır. Ardından çubuk her zamanki gibi yerleştirilir (verlegt). 2. 'Übernehmen' işlevi: Bir çokgen çizgiden (Polygonzug) üretilmiş çubuk başka bir elemana kopyalanamaz; ancak 'Element wandeln, übernehmen' ile 2 tıkta yeni elemana aktarılabilir. Bu sırada yeni bir çubuk pozisyonu atanabilir. Not: Üretimden sonra çubuk tanımının doğruluğunu kontrol edin; işlev genel ön ayarları dikkate almaz ve büküm şemasını verilen eksene (Polygonzug/çizgi) göre hesaplar, aksi hâlde rundstahl-auszug ve hesaplanan uzunluklarda farklar olabilir.",
+      "figures": [
+        "/akademi/donati-detaylandirma/8713_0EM67000008DTQ4_d5f2622b.png",
+        "/akademi/donati-detaylandirma/8713_0EM67000008DTkD_61d50645.png",
+        "/akademi/donati-detaylandirma/8713_0EM67000008DXkH_153b9716.png",
+        "/akademi/donati-detaylandirma/8713_0EM67000008DTjo_4f27ff30.png",
+        "/akademi/donati-detaylandirma/8713_0EM67000008DTnH_dcf2e41b.png",
+        "/akademi/donati-detaylandirma/8713_0EM67000008DTmO_2d08672b.png"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m5-3-1",
+      "prompt": "'Element wandeln, übernehmen' (Convert, Match Element) işlevinin temel amacı nedir?",
+      "options": [
+        {
+          "text": "Donatı raporunu dışa aktarmak",
+          "correct": false
+        },
+        {
+          "text": "2B/3B bir eskizi gerçek bir çubuk tanımına dönüştürmek",
+          "correct": true
+        },
+        {
+          "text": "Ulusal normu değiştirmek",
+          "correct": false
+        },
+        {
+          "text": "Büküm rulosu çapını palette göstermek",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre işlev, 2B/3B eskizi gerçek bir çubuğa (bars definition) dönüştürmek ve mevcut formu başka görünüme aktarmak içindir. Norm değiştirme, rapor ve büküm rulosu gösterimi ayrı konulardır.",
+      "bloom": "Kavrama",
+      "difficulty": "Kolay"
+    },
+    {
+      "id": "m5-3-2",
+      "prompt": "Eskizden çubuk üretiminden sonra neden Mark Position özelliği kontrol edilmelidir?",
+      "options": [
+        {
+          "text": "İşlev genel ön ayarları dikkate almadığı için şema ve miktarda fark oluşabilir",
+          "correct": true
+        },
+        {
+          "text": "Çubuğun rengi otomatik değiştiği için",
+          "correct": false
+        },
+        {
+          "text": "Norm otomatik olarak BS EN'e döndüğü için",
+          "correct": false
+        },
+        {
+          "text": "Etiket silineceği için",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynak, işlevin genel tanımı dikkate almayıp büküm şemasını eksene göre hesapladığını, kontrol edilmezse diğer çubuklarla şema ve hesaplanan uzunluklarda (miktar) fark oluşabileceğini belirtir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "Bir 2B eskiz (çokgen çizgi) çizin ve 'Element wandeln, übernehmen' işleviyle çap atayarak gerçek bir çubuğa dönüştürün. Üretim sonrası Mark Position özelliğini kontrol edin.",
+    "expected": "Eskizin gerçek bir çubuk tanımına dönüşmesi, köşelerin büküm rulosu çapıyla bağlanması ve Mark Position'ın diğer çubuklarla tutarlı olması.",
+    "hint": "Çubuğu doğrudan kopyalamaya çalışmak yerine aynı işlevle başka görünüme aktarabileceğinizi deneyin."
+  }
+}

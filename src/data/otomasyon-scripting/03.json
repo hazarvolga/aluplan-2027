@@ -1,0 +1,190 @@
+{
+  "no": 3,
+  "slug": "formul-editoru-betik-komutlari-ve-excel-sozdizimi",
+  "title": "Formül Editöründe Betik Komutları ve Excel Sözdizimi",
+  "duration": "28 dk",
+  "sourceModule": "Proje 1 · Modül 9: Otomasyon, Visual Scripting ve PythonParts",
+  "intro": "Etiket stili, lejant ve raporlarda öznitelik değerlerine göre koşullu metin ya da değer üretmek için Formül Editörü (Formula editor) kullanılır. Bu derste, 2023 sürümüyle genişleyen formül editöründe Excel komutlarını (SWITCH, CHOOSE) kullanmayı ve betik türünü belirleyen ön ekleri (Python, VisualBasic, Excel) öğreneceksiniz.",
+  "objectives": [
+    "Formül Editöründe bir öznitelik değerine (örn. @508@) göre koşullu çıktı üretme mantığını açıklamak.",
+    "CHOOSE() ve SWITCH() Excel komutlarının sözdizimini ve davranış farkını ayırt etmek.",
+    "Betik türünü belirlemek için p:, v: ve x: ön eklerinin ne işe yaradığını tanımlamak.",
+    "Excel komutunun çalışmadığı durumlarda olası nedenleri (Excel sürümü, dil, OpenOffice) teşhis etmek."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Neden formül editörü",
+      "body": "Etiket stili (label style), lejant (legend) ve rapor tanımlarken, bir değeri sabit yazmak yerine bir sorgu ile seçmek isteyebilirsiniz. 2023 sürümüyle birlikte formül editörü (Formeleditor / syntax editor) genişletildi ve Excel komutları kullanılabilir hale geldi. Örnek olarak önceden tanımlı bir malzeme özniteliği olan @508@ kullanılır ve bu değer üzerinden koşullu metin ya da sayı üretilir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "CHOOSE(): sıra numarasına göre seçim",
+      "body": "CHOOSE(@508@;\"AB\";\"CD\";\"EF\") yazıldığında, @508@ öznitelik değeri bir sıra numarası gibi değerlendirilir: 1 ise 'AB', 2 ise 'CD' döndürülür. Değer listedeki hiçbir sıra ile eşleşmezse, her zaman son sonuç gösterilir, bu örnekte 'EF'. CHOOSE, basit bir sıralı seçim için uygundur.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "SWITCH(): değer-sonuç eşleşmesi",
+      "body": "SWITCH, bir öznitelik değerini metin ya da sayı olarak kontrol eder ve eşleşen satıra ait metni veya değeri döndürür. Kaynaktaki olası yazımlar: SWITCH(@508@;\"1\";\"AB\";\"2\";\"CD\";\"3\";\"EF\";\"Notdefined\") ; SWITCH(VALUE(@508@);1;\"AB\";2;\"CD\";3;\"EF\";\"Notdefined\") ; SWITCH(VALUE(@508@);1;10;2;20;3;30;\"Notdefined\"). 1 değeri 'AB', 2 değeri 'CD' olarak eşleşir. Hiçbir değer eşleşmezse, tanımlanabilen son sonuç gösterilir; bu örnekte 'Notdefined'. VALUE(@508@) kullanımı, öznitelik değerini sayısal olarak ele almak içindir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Betik türü ön ekleri: p:, v:, x:",
+      "body": "Formül editörü formülü belirli bir sırayla denetler; çünkü doğrudan ALLPLAN komutu yazabilir, ayrıca PythonPartsScripts, VisualBasic betiği ve Excel komutu çağırabilirsiniz. Sistemi doğrudan kapsayıcı (direct container) yerine belirli bir betik türünü kullanmaya zorlamak için komutun önüne bir harf koyarsınız: 'p:' Python, 'v:' VisualBasic, 'x:' Excel içindir. Örnek: x:SWITCH() yazmak, komutun Excel sözdizimini kullandığını belirtir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Excel komutu çalışmazsa",
+      "body": "Bazı durumlarda Excel komutu çalışmaz. Bu, bilgisayarınıza kurulu Excel sürümüne ve diline bağlıdır. En kolay kontrol, mevcut dilinizde LEFT() veya RIGHT() gibi basit bir komutu deneyip çalışıp çalışmadığına bakmaktır. Excel yerine OpenOffice kullanıyorsanız, bu işlevler kullanılamaz.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Excel komutu dile ve sürüme bağlıdır",
+      "body": "SWITCH() veya CHOOSE() beklenen sonucu vermiyorsa, sorun formülünüzde olmayabilir: kurulu Excel sürümü ve arayüz dili komutu etkiler. Önce LEFT() ya da RIGHT() gibi basit bir komutla kurulumunuzun çalışıp çalışmadığını test edin. OpenOffice ile bu Excel işlevleri çalışmaz."
+    },
+    {
+      "title": "DİKKAT: Eşleşme yoksa son sonuç döner",
+      "body": "Hem CHOOSE hem de SWITCH'te değer listedeki hiçbir satıra uymazsa, hata vermek yerine tanımlanabilen son sonucu gösterir. Bu nedenle 'Notdefined' gibi açık bir son değer tanımlamak, yanlış eşleşmeleri fark etmenizi kolaylaştırır."
+    }
+  ],
+  "checkpoint": "Doğru yaptıysanız, @508@ değeri 1 olduğunda etiket/lejant 'AB', 2 olduğunda 'CD' üretir ve eşleşme olmadığında tanımladığınız son değer (örn. 'Notdefined') görünür.",
+  "commands": [
+    {
+      "name": "SWITCH()",
+      "menu": "Formül Editörü (Formeleditor)",
+      "shortcut": "",
+      "desc": "Bir öznitelik değerini metin/sayı olarak kontrol edip eşleşen satırın sonucunu döndüren Excel komutu."
+    },
+    {
+      "name": "CHOOSE()",
+      "menu": "Formül Editörü (Formeleditor)",
+      "shortcut": "",
+      "desc": "Öznitelik değerini sıra numarası gibi değerlendirip ilgili metni döndüren Excel komutu."
+    },
+    {
+      "name": "VALUE()",
+      "menu": "Formül Editörü (Formeleditor)",
+      "shortcut": "",
+      "desc": "Öznitelik değerini sayısal değer olarak ele almak için kullanılır."
+    },
+    {
+      "name": "p: / v: / x:",
+      "menu": "Formül Editörü (Formeleditor)",
+      "shortcut": "",
+      "desc": "Komut önüne konan betik türü ön ekleri: p Python, v VisualBasic, x Excel."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_9190",
+      "title": "Etiket/Lejant - Excel Komutu Sözdizimi",
+      "body": "Soru: Etiket stili, lejant ve rapor tanımlarken bir değeri sorgu ile seçmek istiyoruz; formülü sözdizimi editörüyle en iyi nasıl oluştururuz? Cevap: 2023 sürümüyle formül editörü genişletildi. Excel komutları SWITCH() veya CHOOSE() kullanılabilir. Örnek, önceden tanımlı bir malzeme özniteliği @508@ üzerinden verilir (1=AB/10, 2=CD/20, 3=EF/30, eşleşme yoksa Not Defined). CHOOSE(@508@;\"AB\";\"CD\";\"EF\") değeri sıra gibi okur; eşleşme yoksa son sonuç (EF) döner. SWITCH farklı yazımlarla kullanılır: SWITCH(@508@;\"1\";\"AB\";...), SWITCH(VALUE(@508@);1;\"AB\";...), SWITCH(VALUE(@508@);1;10;...). Eşleşme yoksa tanımlanabilen son sonuç (Notdefined) gösterilir. İpucu 1: Editör formülü belirli bir sırayla denetler; doğrudan ALLPLAN, PythonPartsScripts, VisualBasic ve Excel komutu çağrılabildiğinden, türü zorlamak için ön ek kullanılır: p Python, v VisualBasic, x Excel (örn. x:SWITCH()). İpucu 2: Excel komutu bazen Excel sürümü ve diline bağlı olarak çalışmaz; LEFT() veya RIGHT() ile test edin. OpenOffice'te bu işlevler yoktur.",
+      "figures": []
+    },
+    {
+      "id": "en_9189",
+      "title": "Excel Komutu İçin Sözdizimi (EN)",
+      "body": "Aynı içeriğin İngilizce kaynağıdır. 2023 sürümünden bu yana formül editörü genişledi; SWITCH() ve CHOOSE() Excel komutları kullanılabilir. @508@ önceden tanımlı bir malzeme özniteliğidir. CHOOSE(@508@;\"AB\";\"CD\";\"EF\") değeri kontrol edip ilgili satırın metnini döndürür (1=AB, 2=CD); eşleşme yoksa son sonuç (EF) gösterilir. SWITCH, değeri metin ya da sayı olarak kontrol eder ve ilgili satırın metin/değerini döndürür; eşleşme yoksa tanımlanabilen son sonuç (Notdefined) döner. İpucu 1: Editör komutları belirli sırayla denetler; doğrudan container yerine türü zorlamak için ön ek kullanılır: p Python, v visual basic, x excel (örn. x:SWITCH()). İpucu 2: Excel komutu bazen Excel sürümüne ve dile bağlı olarak çalışmaz; LEFT()/RIGHT() ile test edin, OpenOffice'te çalışmaz.",
+      "figures": []
+    },
+    {
+      "id": "fr_9191",
+      "title": "Excel Komutu Sözdizimi (FR)",
+      "body": "Aynı içeriğin Fransızca kaynağıdır ve diğerlerini doğrular. 2023 sürümüyle formül editörü genişletildi; SWITCH() ve CHOOSE() komutları @508@ özniteliğinin değeri üzerinden koşullu çıktı üretir. CHOOSE değeri doğrular ve ilgili satırın metnini döndürür (1=AB, 2=CD); eşleşme yoksa son sonuç (EF) gösterilir. SWITCH değeri metin veya sayı olarak doğrular; eşleşme yoksa tanımlanabilen son sonuç (Non defini) döner. İpucu: editör formülü belirli sırayla denetler, bu yüzden doğrudan container'ı zorlamak için ön ek yazılır (p Python, v visual basic, x excel; örn. x:SWITCH()). Excel komutu Excel sürümüne ve dile bağlı olarak çalışmayabilir; LEFT()/RIGHT() ile test edilir, OpenOffice'te çalışmaz.",
+      "figures": []
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m9-3-1",
+      "prompt": "Formül editöründe bir komutun Excel sözdizimini kullandığını belirtmek için komutun önüne hangi ön ek konur?",
+      "options": [
+        {
+          "text": "p:",
+          "correct": false
+        },
+        {
+          "text": "v:",
+          "correct": false
+        },
+        {
+          "text": "x:",
+          "correct": true
+        },
+        {
+          "text": "e:",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre 'p:' Python, 'v:' VisualBasic, 'x:' Excel içindir. Örnek: x:SWITCH() komutun Excel sözdizimini kullandığını belirtir. 'e:' diye bir ön ek kaynakta yoktur.",
+      "bloom": "Hatırlama",
+      "difficulty": "Kolay"
+    },
+    {
+      "id": "m9-3-2",
+      "prompt": "CHOOSE(@508@;\"AB\";\"CD\";\"EF\") formülünde @508@ değeri listedeki hiçbir sıra ile eşleşmezse ne döndürülür?",
+      "options": [
+        {
+          "text": "Boş değer",
+          "correct": false
+        },
+        {
+          "text": "Her zaman son sonuç (EF)",
+          "correct": true
+        },
+        {
+          "text": "Bir hata mesajı",
+          "correct": false
+        },
+        {
+          "text": "İlk sonuç (AB)",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynak açıkça, değer eşleşmezse CHOOSE'un her zaman son sonucu gösterdiğini belirtir; bu örnekte 'EF'. Hata üretmez, bu nedenle açık bir son değer tanımlamak önemlidir.",
+      "bloom": "Anlama",
+      "difficulty": "Orta"
+    },
+    {
+      "id": "m9-3-3",
+      "prompt": "Excel komutu formül editöründe çalışmıyorsa önerilen ilk kontrol nedir?",
+      "options": [
+        {
+          "text": "Bilgisayarı yeniden başlatmak",
+          "correct": false
+        },
+        {
+          "text": "LEFT() veya RIGHT() gibi basit bir komutu mevcut dilde denemek",
+          "correct": true
+        },
+        {
+          "text": "Projeyi IFC olarak dışa aktarmak",
+          "correct": false
+        },
+        {
+          "text": "Donatıyı silmek",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre Excel komutu sürüme ve dile bağlıdır; en kolay doğrulama, mevcut dilde LEFT() veya RIGHT() gibi basit bir komutun çalışıp çalışmadığını denemektir. OpenOffice ile bu işlevler çalışmaz.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "Bir malzeme özniteliğinin 1, 2 veya 3 değerlerine göre sırasıyla 'AB', 'CD', 'EF' metnini; bunların dışında ise 'Notdefined' metnini üretecek bir SWITCH formülü kâğıt üzerinde yazın. Ardından aynı sonucu CHOOSE ile yazmayı deneyin ve iki komutun eşleşme yoksa nasıl davrandığını karşılaştırın.",
+    "expected": "VALUE(@508@) kullanan geçerli bir SWITCH formülü ve bir CHOOSE formülü; eşleşme olmayan durumda her ikisinin de son sonucu döndürdüğünün fark edilmesi.",
+    "hint": "Öznitelik değerini sayı olarak ele almak için VALUE(@508@) kullanın; açık bir son değer ('Notdefined') yanlış eşleşmeleri görünür kılar."
+  }
+}

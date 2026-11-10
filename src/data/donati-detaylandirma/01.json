@@ -1,0 +1,164 @@
+{
+  "no": 1,
+  "slug": "donati-ortami-ve-ulusal-norm",
+  "title": "Donatı Ortamına Giriş ve Ulusal Norm (Nat_Code) Ayarı",
+  "duration": "30 dk",
+  "sourceModule": "Proje 1 · Modül 5: Betonarme Yapılarda 3B Donatı Detaylandırma",
+  "intro": "Allplan'da her donatı (reinforcement / Bewehrung) elemanı bir ulusal norma (National Code / Nat_Code) bağlıdır. Bu ders, donatı seçeneklerinin hangi normla çalıştığını, bu ayarın neden proje bazlı olduğunu ve farklı ülke normlarıyla nasıl çalışılacağını ele alır.",
+  "objectives": [
+    "Donatı seçeneklerinin bağlı olduğu ulusal normu (Nat_Code) tanımlamak ve bu ayarın proje bazlı olduğunu açıklamak.",
+    "Büküm rulosu çapı (bending roller diameter) ve kanca boyu (hook length) gibi değerlerin norm dosyalarından geldiğini kavramak.",
+    "Ülke paketlerinin (country packages) lisansa bağlı olduğunu ve proje oluştururken ülkenin seçildiğini ayırt etmek.",
+    "Donatı seçeneklerinin kalıcı kaydedilmesi için gereken yetki ve iş akışını açıklamak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Norm nerede saklanır",
+      "body": "Tüm normlar varsayılan olarak yerel ETC/Nat_Code klasöründe saklanır. Kaynak makale bu klasörde değişiklik yapmamanız gerektiğini vurgular, çünkü her güncellemede üzerine yazılır (overwritten). Kendi normunuzu veya bir norm kopyasını STD/Nat_Code klasöründe oluşturabilirsiniz. ETC/Nat_Code içinde her norm için bir klasör bulunur; örneğin Norm007 EC2 normuna karşılık gelir ve klasördeki Readme.txt dosyası hangi dosyanın ne işe yaradığını açıklar.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Normu tanımlayan dosyalar",
+      "body": "Her norm klasöründe altı dosya bulunur. Ana dosyalar kaynakta şöyle verilir: Settings.txt (paletin genel kullanım koşulları), BendingRollerDiameter.txt (büküm rulosu çapı hesabı), HookLength.txt (kanca boyu hesabı), Lengths.txt (bindirme boyu hesabı). Yeni bir norm tanımlamak için ETC/Nat_Code/Norm003 gibi mevcut bir klasörü STD/Nat_Code/UserNorm101 altına kopyalayıp Nat_Code.ini dosyasını kendi normunuza göre düzenlemeniz gerekir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Ülke (ülke paketi) ayarı proje oluştururken yapılır",
+      "body": "Allplan 2019 ve sonrasında projeler ülkeye özgü (country-specific) tanımlanabilir: bir proje belirli bir ülkenin kaynaklarını (tarama, desen, katman) ve donatı ayarlarını taşır. Kaynağa göre ülke, proje oluşturulurken tanımlanmalıdır ve sonradan değiştirilemez. Ayarlı ülke durum çubuğunda (status bar) görünür; uzunluk ve donatı birimleri seçilen ülkeye göre önceden ayarlanır. Birden fazla ülke paketi kullanmak lisansa bağlıdır ve özel (custom) kurulum gerektirir.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: ETC/Nat_Code klasörünü düzenlemeyin",
+      "body": "Yerleşik normlar ETC/Nat_Code altındadır ve her güncellemede üzerine yazılır. Değişiklikleriniz kaybolmaması için kopyayı STD/Nat_Code altında oluşturun. Norm değişikliğinden sonra değişikliği görmek için Allplan'ı yeniden başlatmak önerilir."
+    },
+    {
+      "title": "DİKKAT: Donatı seçenekleri kaydedilmiyor",
+      "body": "Allplan 2019'dan itibaren donatı seçenekleri proje bazlı tutulur. Sahiplik veya yönetici hakkı olmayan bir kullanıcı değişiklik yaparsa, proje değişiminde ve program kapanışında ayarlar otomatik varsayılana döner. Kalıcı olması için: projede başka kullanıcı aktif olmamalı; yönetici veya proje sahibi projeyi açıp Optionen > Bewehrung altında ayarı değiştirmeli; ardından projeyi 'Projekt neu, öffnen' ile değiştirerek veya Allplan'ı kapatarak ayar sabitlenmelidir."
+    }
+  ],
+  "checkpoint": "Durum çubuğunda projenizin ülkesini görebiliyor ve donatı seçeneklerinin bu ülkenin normuyla (ör. EC2 / DIN EN 1992) geldiğini doğrulayabiliyorsanız doğru yoldasınız.",
+  "commands": [
+    {
+      "name": "Nat_Code (ulusal norm)",
+      "menu": "Donatı aracı seçenekleri (tool Option)",
+      "shortcut": "",
+      "desc": "Donatı elemanlarının bağlı olduğu ulusal norm; proje bazlı ve kullanıcıya göre farklı olabilir."
+    },
+    {
+      "name": "Optionen > Bewehrung",
+      "menu": "Seçenekler (Options) · Donatı",
+      "shortcut": "",
+      "desc": "Donatı seçeneklerinin (büküm rulosu, kanca, birim vb.) ayarlandığı yer."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "en_10490",
+      "title": "Donatı için Ulusal Normu Değiştirme / Tanımlama",
+      "body": "Mühendislik modülünde büküm rulosu çapı ve/veya kanca boyu sık sık uyarlanır. Allplan donatı elemanları bir ulusal norma (Nat_Code) bağlıdır ve bu ayar, üzerinde çalıştığınız projeye aittir; her kullanıcı için farklı olabilir. Tüm normlar varsayılan olarak yerel ETC/Nat_Code klasöründe saklanır; bu klasörde değişiklik yapılmamalıdır çünkü her güncellemede üzerine yazılır. Kendi normunuzu veya bir kopyayı STD/Nat_Code altında oluşturabilirsiniz. Her norm klasöründe altı dosya bulunur: Settings.txt (paletin genel koşulları), BendingRollerDiameter.txt (büküm rulosu çapı), HookLength.txt (kanca boyu), Lengths.txt (bindirme boyu) öne çıkar. Yeni norm için ETC/Nat_Code/Norm003 klasörü STD/Nat_Code/UserNorm101 altına kopyalanır ve Nat_Code.ini düzenlenir (ör. Name=SPECIAL). Örnek uyarlamalar: HookLength.txt içinde düz parçayı en az 150 yapan bir koşul eklemek; Settings.txt içinde InputBendingRollerDiameterAsValue değerini 0'dan 1'e çekerek büküm rulosu çapını palette gerçek değer olarak göstermek. Değişiklikten sonra Allplan'ı yeniden başlatmak önerilir.",
+      "figures": []
+    },
+    {
+      "id": "de_11066",
+      "title": "Mesaj: 'Bu proje XX ülke ayarıyla oluşturuldu'",
+      "body": "Yurt dışındaki bir partnerle ortak çalışma hakkında. Allplan 2019'dan itibaren ülkeler arası proje çalışması mümkündür: projeler ülkeye özgü tanımlanabilir, yani bir proje belirli bir ülkenin kaynaklarını (tarama, desen, katman) ve donatı ayarlarını içerir. Lisansa bağlı olarak bir veya birden fazla ek ülke paketi kurulabilir. Ülke paketlerinin kullanımı Allplan lisansına bağlıdır; yalnızca 'Version' tipi lisanslar ülke paketlerini sınırsız içerir, mimari gibi lisanslarda varsayılan olarak yalnızca kendi ülke paketiniz bulunur. Ek ülke paketleri yeni kurulum veya yükseltmede açıkça, özel (benutzerdefiniert) kurulumla seçilmelidir. En kritik kural: ülke, proje oluşturulurken tanımlanır ve sonradan değiştirilemez. Ayarlı ülke durum çubuğunda görünür; uzunluk ve donatı birimleri proje bazlıdır ve ülkeye göre önceden ayarlanır. Her ek ülke paketi için STD.??? ve ETC.??? klasörleri oluşturulur.",
+      "figures": [
+        "/akademi/donati-detaylandirma/11066_0EM7U000001TeiS_ccbee07d.png",
+        "/akademi/donati-detaylandirma/11066_0EM7U000001TeiT_8aead013.png",
+        "/akademi/donati-detaylandirma/11066_0EM7U000001TeiV_d669288a.png",
+        "/akademi/donati-detaylandirma/11066_0EM7U000001TeiU_1ce96708.png",
+        "/akademi/donati-detaylandirma/11066_0EM7U000001TeiQ_8d0593a8.png",
+        "/akademi/donati-detaylandirma/11066_0EM7U000001TeiR_1a61c477.png"
+      ]
+    },
+    {
+      "id": "en_11122",
+      "title": "Ülkeye Özgü Projeler: Farklı Ülkelerdeki Partnerlerle Çalışma",
+      "body": "Allplan 2019 ve sonrası ülkeler arası proje çalışmasına izin verir. Proje, belirli bir ülkenin kaynaklarını ve donatı ayarlarını alır; örneğin Almanya ayarlı bir proje ile Birleşik Krallık ayarlı başka bir proje oluşturabilirsiniz. Ülke paketlerini kullanmak lisansa bağlıdır. Kurulum sırasında yalnızca kendi ülkenizin paketi gelir; farklı ülke paketleri için özel (custom) kurulum gerekir. Ülke, proje oluşturulurken tanımlanmalı ve sonradan değiştirilememelidir. Durum çubuğu projenin ülkesini gösterir; uzunluk ve donatı birimleri seçilen ülkeye göre önceden ayarlanan proje bazlı değerlerdir. Ofis yolu (office path) ve varsayılan yol (default path) daima açık projenin ülkesine göredir; bu nedenle bir favoriyi veya kütüphane öğesini kaydettiğinizde, bu öğe yalnızca aynı ülke ayarına sahip projelerde görünür.",
+      "figures": [
+        "/akademi/donati-detaylandirma/11122_0EM7U000001TehF_ccbee07d.png",
+        "/akademi/donati-detaylandirma/11122_0EM7U000001TeiG_1ce96708.png",
+        "/akademi/donati-detaylandirma/11122_0EM7U000001TeiF_8aead013.png",
+        "/akademi/donati-detaylandirma/11122_0EM7U000001TehE_8d0593a8.png",
+        "/akademi/donati-detaylandirma/11122_0EM7U000001TeiH_d669288a.png",
+        "/akademi/donati-detaylandirma/11122_0EM7U000001TeiI_60e8c9d4.png"
+      ]
+    },
+    {
+      "id": "de_10987",
+      "title": "Donatı Seçenekleri Kaydedilmiyor",
+      "body": "Allplan 2019'dan itibaren donatı seçenekleri her proje değişiminde ve yeniden başlatmada varsayılana dönüyor. Nedeni: 2019 ile donatı elemanlarına (çubuk ve hasır) ilişkin seçenekler artık kullanıcı bazlı değil proje bazlı tutulur; böylece ofiste farklı ülke normlarıyla çalışılabilir. İstenmeyen değişiklikleri önlemek için, sahiplik ve yönetici hakkı olmayan bir kullanıcının yaptığı seçenek değişiklikleri proje değişiminde ve program kapanışında otomatik varsayılana döner. Kalıcı olması için izlenecek yol: değişiklik yapılacak projede başka kullanıcı aktif olmamalı; yönetici hakları olan bir kullanıcı veya proje sahibi Allplan'ı başlatıp projeyi açmalı; Optionen > Bewehrung altında istenen seçenekler değiştirilmeli; tüm değişiklikler bitince proje 'Projekt neu, öffnen' ile değiştirilmeli veya Allplan kapatılmalıdır. Her yeni projede ayar yapmamak için şablon proje (Vorlageprojekt) kullanımı önerilir.",
+      "figures": [
+        "/akademi/donati-detaylandirma/10987_0EM7U000001TdzO_3e555529.png",
+        "/akademi/donati-detaylandirma/10987_0EM7U000001TdzP_4de3d310.png"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m5-1-1",
+      "prompt": "Allplan donatı elemanları için büküm rulosu çapı ve kanca boyu gibi değerler nereden gelir?",
+      "options": [
+        {
+          "text": "Her çizim için elle girilen sabit değerlerden",
+          "correct": false
+        },
+        {
+          "text": "Projeye bağlı ulusal norm (Nat_Code) dosyalarından",
+          "correct": true
+        },
+        {
+          "text": "Yalnızca kullanıcının Windows hesabı ayarlarından",
+          "correct": false
+        },
+        {
+          "text": "Donatının katmanından (layer)",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre donatı değerleri projeye bağlı ulusal norma (Nat_Code) aittir; bu dosyalar ETC/Nat_Code (varsayılan) veya STD/Nat_Code (kullanıcı tanımlı) altında bulunur. Elle giriş, Windows hesabı ve katman bu değerleri belirlemez.",
+      "bloom": "Kavrama",
+      "difficulty": "Kolay"
+    },
+    {
+      "id": "m5-1-2",
+      "prompt": "Bir projenin ülke ayarı ne zaman belirlenir?",
+      "options": [
+        {
+          "text": "Proje açıldıktan sonra istenildiği zaman değiştirilebilir",
+          "correct": false
+        },
+        {
+          "text": "Proje oluşturulurken; sonradan değiştirilemez",
+          "correct": true
+        },
+        {
+          "text": "Her donatı yerleştirmesinde yeniden sorulur",
+          "correct": false
+        },
+        {
+          "text": "Yalnızca lisans yenilendiğinde",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynak açıkça belirtir: ülke proje oluşturulurken tanımlanır ve sonradan değiştirilemez. Durum çubuğu ayarlı ülkeyi gösterir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "Yeni bir deneme projesi oluşturun ve donatı seçeneklerini açarak aktif normu ve uzunluk birimini not edin. Durum çubuğunda projenin ülkesini bulun.",
+    "expected": "Aktif ulusal normu (ör. EC2 / DIN EN 1992) ve birimi tanımlayabilmeniz, ülkenin durum çubuğunda göründüğünü ve proje bazlı olduğunu görmeniz.",
+    "hint": "Birimler ve donatı ayarları proje bazlıdır; farklı bir ülkeyle oluşturulmuş projede bunların değiştiğini gözlemleyin."
+  }
+}

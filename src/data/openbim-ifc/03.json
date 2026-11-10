@@ -1,0 +1,166 @@
+{
+  "no": 3,
+  "slug": "ifc-disa-aktarim-favoriler-ve-degisim-profilleri",
+  "title": "IFC Dışa Aktarım: Komut, Favoriler ve Değişim Profilleri",
+  "duration": "30 dk",
+  "sourceModule": "Proje 1 · Modül 10: OpenBIM, IFC 4/4.3, IDS ve Bimplus CDE",
+  "intro": "Bu ders, ALLPLAN modelinizi IFC olarak dışa aktarma komutunu, hazır dışa aktarım favorilerini (Austauschprofile) ve geometrinin BREP ya da ekstrüzyon olarak nasıl aktarılacağını kontrol etmeyi öğretir.",
+  "objectives": [
+    "'IFC-Daten exportieren' komutunu Datei > Exportieren altından çağırmayı tanımlamak.",
+    "Austauschprofile sekmesindeki hazır IFC4 dışa aktarım favorilerini (örn. Ifc_4_Tragwerk_export) seçmeyi öğrenmek.",
+    "Geometrinin BREP mi yoksa ekstrüzyon olarak mı yazılacağını 'Erweiterte Optionen' ve IFC Objekttyp üzerinden kontrol etmek.",
+    "Dışa aktarmadan önce ilgili Çizim Dosyalarını seçmenin aktarılan içeriği belirlediğini açıklamak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Dışa aktarım komutu",
+      "body": "IFC dışa aktarımı için 'Datei' (Dosya) > 'Exportieren' (Dışa Aktar) altından 'IFC-Daten exportieren' (IFC verilerini dışa aktar) komutunu seçin. İpucu: Komuttan önce ilgili Çizim Dosyalarını (Teilbilder) seçerseniz, o an yüklü olan çizim dosyaları dışa aktarıma dahil edilir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Austauschprofile (değişim profilleri / favoriler)",
+      "body": "Dışa aktarım diyaloğundaki 'Austauschprofile' (Değişim Profilleri) sekmesinde çeşitli hazır dışa aktarım favorileri bulunur. Kaynağa göre örnek IFC4 favorileri şunlardır: Ifc_4_Tragwerk_export (taşıyıcı sistem), Ifc_4_Bewehrung_export (donatı), Ifc_4_Baugrube_export (temel çukuru), Ifc_4_Baugrube_Sicherung_export (çukur güvenliği) ve Ifc_4_Einbauteile_export (gömülü parçalar). Bu favoriler Std/Favoriten Büro/IFC klasöründe tutulur (2024 sürümüne kadar Etc/Favoriten Standard/IFC altında).",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Geometri: BREP mi, ekstrüzyon mu",
+      "body": "Hangi elemanların BREP (Boundary Representation, sınır yüzeyleriyle tanımlı katı) olarak yazılacağını kontrol edebilirsiniz. 'Erweiterte Optionen' (Gelişmiş Seçenekler) altında 'Geometrie Konvertierung nach IFC' bölümünde 'BREP Geometrie' seçilirse tüm mimari elemanlar BREP olarak yazılır. 'Extrudierte Geometrie / BREP Geometrie' seçilip ekteki değişim profili kullanılırsa, IFC Objekttyp'a göre hangi elemanın BREP, hangisinin ekstrüzyon gövdesi olacağı denetlenir. Bir elemana tanımlı bir IFC Objekttyp verilirse (örneğin bir döşemeye IfcSlab) BREP olarak; tanımsız bırakılırsa mümkünse ekstrüzyon olarak yazılır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Objekttyp ve otomatik atama",
+      "body": "Mimari elemanlar IFC dışa aktarımda otomatik olarak doğru IFC Objekttyp'ı alır. Örneğin ALLPLAN'da Objekttyp girilmemiş veya '<undefiniert>' bırakılmış bir kolon IFC'de 'IfcColumn' olarak çıkar. BREP davranışını değiştirmek için ekteki 'ForceRetyping.nth' profili 'Austauschprofile' > 'Suchen' ile yüklenir.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Çizim dosyalarını seçmeden dışa aktarmak",
+      "body": "Komuttan önce ilgili Çizim Dosyalarını seçmezseniz dışa aktarıma dahil edilecek içerik beklediğinizden farklı olabilir. İpucuya göre önce yüklü çizim dosyalarını seçmek aktarılacak kapsamı netleştirir."
+    },
+    {
+      "title": "DİKKAT: Tanımsız IFC Objekttyp ve beklenmeyen geometri",
+      "body": "IFC Objekttyp'ı '<undefiniert>' bırakırsanız eleman mümkünse ekstrüzyon olarak yazılır. BREP istiyorsanız elemana tanımlı bir Objekttyp (örn. IfcSlab) atamanız gerekir; aksi halde geometri tipi beklediğinizden farklı olur."
+    }
+  ],
+  "checkpoint": "Bir favori profili seçip modeli IFC4 olarak dışa aktardıysanız ve bir elemanın BREP mi ekstrüzyon mu olduğunu Objekttyp ile açıklayabiliyorsanız hedefe ulaştınız.",
+  "commands": [
+    {
+      "name": "IFC-Daten exportieren",
+      "menu": "Datei · Exportieren",
+      "shortcut": "",
+      "desc": "Modeli IFC olarak dışa aktarma komutu."
+    },
+    {
+      "name": "Austauschprofile",
+      "menu": "IFC dışa aktarım diyaloğu · sekme",
+      "shortcut": "",
+      "desc": "Hazır IFC4 dışa aktarım favorilerinin ve değişim profillerinin seçildiği sekme."
+    },
+    {
+      "name": "Erweiterte Optionen / Geometrie Konvertierung nach IFC",
+      "menu": "IFC dışa aktarım · gelişmiş seçenekler",
+      "shortcut": "",
+      "desc": "BREP ya da ekstrüzyon geometri dönüşümünün seçildiği bölüm."
+    },
+    {
+      "name": "ForceRetyping.nth",
+      "menu": "Austauschprofile · Suchen",
+      "shortcut": "",
+      "desc": "IFC Objekttyp'ın dışa aktarılan geometriyi etkilemesini sağlayan ekteki değişim profili."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_8645",
+      "title": "IFC Dışa Aktarım: Komut ve Değişim Profilleri",
+      "body": "Kaynağın amacı IFC'yi dışa aktarmak ve öznitelikleri istenen Pset'e eşlemektir. Dışa aktarım 'Datei' > 'Exportieren' altındaki 'IFC-Daten exportieren' komutuyla başlar. İpucu: komuttan önce ilgili Çizim Dosyalarını seçmek, o an yüklü çizim dosyalarını dışa aktarıma dahil eder. 'Austauschprofile' sekmesinde çeşitli hazır dışa aktarım favorileri vardır. Öznitelik eşleme için yeni bir eşleme dosyası 'Neu' ile oluşturulup .cfg olarak kaydedilir ya da 'Suchen' ile mevcut dosya yüklenir; 'Bearbeiten' ile düzenlenir. Birimli özniteliklerin (uzunluk, alan, hacim) doğru aktarılması için IFC Property Type doğru girilmelidir.",
+      "figures": [
+        "/akademi/openbim-ifc/8645_0EMVi000002R9xK_bf5274ba.png",
+        "/akademi/openbim-ifc/8645_0EMVi000002RAbd_2f9fdf11.png",
+        "/akademi/openbim-ifc/8645_0EMVi000002R9xM_29f8e5f0.png",
+        "/akademi/openbim-ifc/8645_0EMVi00000F0rYL_c118a4ef.png",
+        "/akademi/openbim-ifc/8645_0EMVi000002R9xN_c8fbe5ef.png",
+        "/akademi/openbim-ifc/8645_0EMVi000002R9xL_cc25b108.png"
+      ]
+    },
+    {
+      "id": "de_9143",
+      "title": "IFC Favorileri ve Öznitelik Eşleme Dosyaları",
+      "body": "Kaynak, hazır IFC dışa aktarım favorilerinin ve öznitelik eşleme dosyalarının listesini ve konumunu verir. Favoriler Std/Favoriten Büro/IFC klasöründedir (2024 sürümüne kadar Etc/Favoriten Standard/IFC altında). Dışa aktarım favorileri: Ifc_4_Tragwerk_export, Ifc_4_Bewehrung_export, Ifc_4_Baugrube_export, Ifc_4_Baugrube_Sicherung_export, Ifc_4_Einbauteile_export. Öznitelik eşleme dosyaları ise Mapping_Tragwerk_Bauprojekt, Mapping_Tragwerk_Ausschreibung, Mapping_Tragwerk_Ausführung, Mapping_UC Bewehrung, Mapping_Einbauteile_Ausführung, Mapping_Baugrube ve Mapping_Baugrubensicherung olarak verilir.",
+      "figures": []
+    },
+    {
+      "id": "de_10691",
+      "title": "IFC Dışa Aktarımda BREP Geometri Kontrolü",
+      "body": "Kaynak, hangi mimari elemanların BREP olarak IFC'ye yazılacağının nasıl denetleneceğini açıklar. IFC dışa aktarımda 'Erweiterte Optionen' altında 'Geometrie Konvertierung nach IFC' bölümünde 'BREP Geometrie' seçilirse tüm mimari elemanlar BREP (Boundary Representation) olarak yazılır. Bunun yerine 'Extrudierte Geometrie / BREP Geometrie' seçilip ekteki değişim profili kullanılırsa hangi elemanın BREP, hangisinin ekstrüzyon gövdesi olacağı kontrol edilir. Bunun için 'Austauschprofile' ayarlarında 'Suchen' ile ekteki 'ForceRetyping.nth' dosyası seçilir. IFC Objekttyp tanımsız (örn. '<undefiniert>') bırakılırsa eleman mümkünse ekstrüzyon olarak; tanımlı bir Objekttyp (örn. döşeme için IfcSlab) verilirse BREP olarak yazılır. Objekttyp'ı girilmemiş bir kolon IFC'de 'IfcColumn' olur.",
+      "figures": []
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m10-3-1",
+      "prompt": "IFC dışa aktarım komutu hangi menü yolundan çağrılır?",
+      "options": [
+        {
+          "text": "Datei > Exportieren > IFC-Daten exportieren",
+          "correct": true
+        },
+        {
+          "text": "Ansicht > Rendern > IFC",
+          "correct": false
+        },
+        {
+          "text": "Extras > Lizenz > IFC",
+          "correct": false
+        },
+        {
+          "text": "Fenster > Neues IFC",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynak, dışa aktarımın 'Datei' > 'Exportieren' altındaki 'IFC-Daten exportieren' komutuyla yapıldığını belirtir. Diğer yollar kaynakta geçmez.",
+      "bloom": "Hatırlama",
+      "difficulty": "Kolay"
+    },
+    {
+      "id": "m10-3-2",
+      "prompt": "Bir döşemeye tanımlı IFC Objekttyp olarak IfcSlab verildiğinde geometri nasıl yazılır?",
+      "options": [
+        {
+          "text": "Her zaman ekstrüzyon olarak",
+          "correct": false
+        },
+        {
+          "text": "BREP olarak",
+          "correct": true
+        },
+        {
+          "text": "Hiç yazılmaz",
+          "correct": false
+        },
+        {
+          "text": "Yalnızca 2B çizgi olarak",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre bir elemana tanımlı bir IFC Objekttyp verilirse (döşemeye IfcSlab gibi) o eleman BREP olarak dışa aktarılır. Tanımsız bırakılırsa mümkünse ekstrüzyon olur.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "Taşıyıcı sistemi olan bir çizim dosyasını önce bir favori profille (örn. Ifc_4_Tragwerk_export) dışa aktarın; ardından 'Erweiterte Optionen' altında geometri dönüşümünü BREP'e çevirip tekrar aktarın ve iki çıktının eleman geometrisini bir IFC görüntüleyicide karşılaştırın.",
+    "expected": "Aynı modelin iki IFC çıktısı; birinde ekstrüzyon, diğerinde BREP geometri gözlemlenmesi.",
+    "hint": "Dışa aktarmadan önce ilgili çizim dosyalarını seçmeyi unutmayın."
+  }
+}

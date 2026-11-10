@@ -1,0 +1,155 @@
+{
+  "no": 1,
+  "slug": "prekast-ortami-kurulum-eleman-paleti",
+  "title": "Prekast Ortamı: Kurulum, Yapılandırma ve Eleman Paleti",
+  "duration": "25 dk",
+  "sourceModule": "Proje 1 · Modül 7: Prekast Yapı Elemanları ve Endüstriyel Üretim",
+  "intro": "Prekast (precast / Fertigteil) iş akışı, kurulum sırasında aktif edilen özel modüller üzerine kuruludur. Bu derste prekast ortamının nasıl hazır hale geldiğini, hangi kurulum seçeneklerinin gerektiğini ve en sık karşılaşılan erişim sorunlarının kökenini öğrenirsiniz.",
+  "objectives": [
+    "Prekast yapı elemanı (precast / Fertigteil) ortamının Allplan içinde hangi kurulum seçenekleriyle etkinleştiğini açıklamak.",
+    "Prekast modüllerini kullanmak için kurulumda etkinleştirilmesi gereken 'Precast elements' (Betonfertigteile) seçeneğini tanımlamak.",
+    "Yapılandırma menüsündeki kırmızı soru işareti belirtisinin nedenini ve çözümünü ayırt etmek.",
+    "Yeni Prekast Eleman Paleti (Precast Element Pallet) görünmediğinde standart ayarların nasıl sıfırlandığını kavramak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Prekast modülü nedir, ortam nasıl hazırlanır",
+      "body": "Prekast yapı elemanları (precast / Betonfertigteile), fabrikada üretilip şantiyede montajlanan beton elemanlardır (duvar, döşeme, kiriş, kolon). Allplan tarafında bu iş için ayrı bir prekast ortamı (Planbar tabanlı Precast modülleri) bulunur. Bu ortamın çalışabilmesi için ilgili modüllerin kurulum sırasında etkinleştirilmiş olması gerekir. Eğer prekast araçlarına hiç erişemiyorsanız sorun çoğu zaman projede değil, kurulum seçeneklerindedir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Kurulumda 'Precast elements' seçeneğini etkinleştirmek",
+      "body": "Prekast modüllerini kullanabilmek için kurulumda 'Precast elements' (Almanca: Betonfertigteile) seçeneğinin işaretlenmesi gerekir. Bu seçenek işaretlenmediyse yapılandırma menüsündeki girişler kırmızı soru işaretiyle görünür ve seçilemez. Kaynakta ayrıca 'Fixtures' (Einbauteile, gömme/ankastre parçalar) seçeneğine değinilir: bu seçenek yalnızca yeni (temiz) bir kurulumda işaretlenmelidir, çünkü etkinleştirildiğinde standart gömme parçalar büro klasörüne (STD) kopyalanır ve halihazırda var olan gömme parçaların üzerine yazılabilir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Yeni Prekast Eleman Paleti görünmüyorsa",
+      "body": "Bazı kullanıcılar, önceki sürümden kullanıcı arayüzü ve kısayol dosyasını (UBX) içe aktardıktan sonra eski prekast arayüzünü görmeye devam eder; yeni Prekast Eleman Paleti (Precast Element Pallet) gelmez. Kaynağa göre bunun çözümü, Service > Hotline tools > cleanstd aracıyla standart ayarları sıfırlamak ve Allplan'ı yeniden başlatmaktır. Kaydettiğiniz kısayolları geri yüklemek istiyorsanız, UBX dosyasını içe aktarmadan önce ilgili onay kutusunu devre dışı bırakmanız önerilir.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Yapılandırma menüsünde kırmızı soru işareti",
+      "body": "Planbar/prekast yeniden kurulduğunda yapılandırma menüsü girişleri kırmızı soru işaretiyle gelip seçilemiyorsa, kurulumda 'Precast elements' (Betonfertigteile) seçeneği etkinleştirilmemiştir. Çözüm, kurulumu bu seçenek işaretli olacak biçimde tamamlamaktır."
+    },
+    {
+      "title": "DİKKAT: 'Fixtures' seçeneği mevcut parçaların üzerine yazar",
+      "body": "'Fixtures' (Einbauteile) seçeneği yalnızca yeni kurulumda işaretlenmelidir. Mevcut bir kuruluma sonradan etkinleştirirseniz standart gömme parçalar STD (büro) klasörüne kopyalanır ve sizin daha önce tanımladığınız gömme parçalar kaybolabilir."
+    }
+  ],
+  "checkpoint": "Prekast araçlarına ve eleman paletine erişebiliyorsanız ve yapılandırma menüsünde kırmızı soru işareti kalmadıysa ortam doğru kurulmuştur.",
+  "commands": [
+    {
+      "name": "Precast elements (Betonfertigteile)",
+      "menu": "Allplan kurulum seçeneği",
+      "shortcut": "",
+      "desc": "Prekast modüllerini etkinleştiren kurulum seçeneği. İşaretli değilse yapılandırma menüsü erişilemez."
+    },
+    {
+      "name": "Fixtures (Einbauteile)",
+      "menu": "Allplan kurulum seçeneği",
+      "shortcut": "",
+      "desc": "Standart gömme/ankastre parçaları yükleyen seçenek; yalnızca yeni kurulumda işaretlenmelidir."
+    },
+    {
+      "name": "cleanstd",
+      "menu": "Service > Hotline tools",
+      "shortcut": "",
+      "desc": "Standart ayarları sıfırlar; yeni prekast paleti görünmediğinde kullanılır."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_9252",
+      "title": "Prekast Yapılandırması Kullanılamıyor",
+      "body": "Kullanıcı Planbar'ı yeniden kurduktan sonra yapılandırma menüsüne doğru erişemiyor: girişler kırmızı soru işaretiyle işaretli ve seçilemiyor. Kaynağın açıklaması: Prekast modüllerinin kullanılabilmesi için kurulumda 'Betonfertigteile' (Precast elements) seçeneğinin etkinleştirilmesi gerekir. Not olarak belirtilir: 'Einbauteile' (Fixtures) seçeneği yalnızca yeni bir kurulumda seçilmelidir. Bu seçenek etkinleştirildiğinde standart gömme parçalar büro klasörüne kopyalanır ve halihazırda var olan gömme parçaların üzerine yazılabilir.",
+      "figures": [
+        "/akademi/prekast/9252_0EM670000075eK7_9e3adb74.png",
+        "/akademi/prekast/9252_0EM670000075eKM_e250a04e.png"
+      ]
+    },
+    {
+      "id": "en_9467",
+      "title": "Yeni Prekast Eleman Paleti Görünmüyor",
+      "body": "Soru: Prekast elemanları için yeni kullanıcı arayüzünü nasıl görürüm? Bende hâlâ eski arayüz var. Cevap: Bu durum, önceki sürümlerden kullanıcı arayüzü ve kısayolların (UBX dosyası) içe aktarılmasından sonra ortaya çıkabilir. Standart ayarları sıfırlamak için Service > Hotline tools > cleanstd aracını kullanın ve Allplan'ı yeniden başlatın. Not: Kaydettiğiniz kısayolları geri yüklemek isterseniz, istediğiniz UBX dosyasını seçtikten sonra, ayarları içe aktarmadan önce ilgili onay kutusunu devre dışı bırakın.",
+      "figures": [
+        "/akademi/prekast/9467_0EM67000009HCvY_8059adf6.png",
+        "/akademi/prekast/9467_0EM67000009HCtO_16aee165.png"
+      ]
+    },
+    {
+      "id": "de_course_277",
+      "title": "Allplan Prekast (Fertigteilbau) Kurs Çerçevesi",
+      "body": "Kaynak, ALLPLAN'ın prekast (Fertigteilbau) öğrenme alanının genel çerçevesini verir. Öğrenme başlıkları arasında Genel (Allgemein), Mimari (Architektur), Mühendislik Yapısı (Ingenieurbau), Konstrüksiyon (Konstruktion) ve Prekast Yapı (Fertigteilbau) yer alır. Bu modül, prekast elemanlarının tasarımından endüstriyel üretim çıktısına kadar uzanan iş akışının Allplan içindeki yerini tanımlar.",
+      "figures": []
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m7-1",
+      "prompt": "Planbar yeniden kurulduktan sonra prekast yapılandırma menüsü girişleri kırmızı soru işaretiyle gelip seçilemiyor. En olası neden nedir?",
+      "options": [
+        {
+          "text": "Proje dosyası bozulmuştur",
+          "correct": false
+        },
+        {
+          "text": "Kurulumda 'Precast elements' (Betonfertigteile) seçeneği etkinleştirilmemiştir",
+          "correct": true
+        },
+        {
+          "text": "Lisans süresi dolmuştur",
+          "correct": false
+        },
+        {
+          "text": "Ülke/norm ayarı yanlıştır",
+          "correct": false
+        }
+      ],
+      "correctIndex": 1,
+      "explanation": "Kaynakta açıkça belirtilir: prekast modüllerini kullanmak için kurulumda 'Precast elements' seçeneği işaretli olmalıdır; aksi halde menü girişleri kırmızı soru işaretiyle gelir. Diğer şıklar bu belirtiyle ilişkili değildir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta"
+    },
+    {
+      "id": "m7-2",
+      "prompt": "Kurulumdaki 'Fixtures' (Einbauteile) seçeneği neden yalnızca yeni kurulumda işaretlenmelidir?",
+      "options": [
+        {
+          "text": "Lisansı geçersiz kıldığı için",
+          "correct": false
+        },
+        {
+          "text": "Mevcut gömme parçaların üzerine standart parçaları kopyalayıp onları ezebildiği için",
+          "correct": true
+        },
+        {
+          "text": "Prekast modülünü devre dışı bıraktığı için",
+          "correct": false
+        },
+        {
+          "text": "Yalnızca İngilizce arayüzde çalıştığı için",
+          "correct": false
+        }
+      ],
+      "correctIndex": 1,
+      "explanation": "Kaynağın notuna göre bu seçenek etkinleştirildiğinde standart gömme parçalar büro (STD) klasörüne kopyalanır ve var olanların üzerine yazılabilir; bu yüzden mevcut kuruluma sonradan uygulanması veri kaybına yol açabilir.",
+      "bloom": "Kavrama",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "Allplan kurulumunuzda prekast araçlarına erişip erişemediğinizi kontrol edin: yapılandırma menüsünü açın ve girişlerin kırmızı soru işareti içerip içermediğine bakın.",
+    "expected": "Girişler normal (seçilebilir) görünüyorsa 'Precast elements' seçeneği etkin demektir. Kırmızı soru işareti varsa kurulumun bu seçenekle tamamlanması gerekir.",
+    "hint": "Erişim sorunu neredeyse her zaman projede değil, kurulumda etkinleştirilen modül seçeneklerindedir."
+  }
+}

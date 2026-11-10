@@ -1,0 +1,159 @@
+{
+  "no": 11,
+  "slug": "sik-hatalar-ve-cozumleri-ifc-ve-share",
+  "title": "Sık Hatalar ve Çözümleri: IFC Penceresi, Donma ve Kilitli Proje",
+  "duration": "28 dk",
+  "sourceModule": "Proje 1 · Modül 10: OpenBIM, IFC 4/4.3, IDS ve Bimplus CDE",
+  "intro": "Bu ders, OpenBIM iş akışında sık karşılaşılan gerçek hata mesajlarını (Meldung) ve belirtileri, kaynaklardaki çözümleriyle birlikte tanıtır: IFC/Opsiyon penceresinin hemen kapanması, Share projesinin donması, 'zaten açık' kilidi ve Bimplus görünüm kayması.",
+  "objectives": [
+    "IFC/Opsiyon penceresinin hemen kapanmasının bazı HP/Dell güvenlik araçlarından kaynaklandığını ve çözümünü açıklamak.",
+    "Share projesinin açılışta donmasını, ilgili Bimplus Login dosyasını yeniden adlandırarak gidermeyi tanımlamak.",
+    "'Proje zaten aynı Bimplus Login ile açık' mesajını, cache klasörünü yeniden adlandırarak çözmeyi sıralamak.",
+    "Bimplus görünümünün fare tekerleğiyle 'uzağa kayması' sorununu fare sürücüsü ayarıyla ilişkilendirmek."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "IFC/Opsiyon penceresi hemen kapanıyor",
+      "body": "Opsiyon penceresi ya da IFC içe/dışa aktarım penceresi çağrıldıktan hemen sonra kapanıyorsa neden genellikle bir güvenlik yazılımıdır. HP bilgisayarlarda 'HP ProtectTools' paketi; Dell bilgisayarlarda 'Dell Data Protection' paketi kaldırılmalıdır. Bu paketler tam disk şifreleme ve benzeri mekanizmalarla Win32 API davranışını değiştirerek ALLPLAN'da soruna yol açar. Önce bağımlı programları, en son ana güvenlik programını kaldırın ve bilgisayarı yeniden başlatın. HP/Dell dışı bir bilgisayarsa ALLPLAN desteğine başvurun.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Share projesi açılışta donuyor",
+      "body": "ALLPLAN bir Share projesini açarken donuyorsa, Windows Explorer'da '%LocalAppData%\\Nemetschek\\bim+' yolunu açın ve bim+ klasöründeki sürümünüze ait Bimplus Login .xml dosyasını yeniden adlandırın (örneğin sonuna .alt ekleyin). Kaynak, 2020, 2021 ve 2022 sürümleri için farklı dosya adları (GUID'ler) verir. Sorunun nedeni düzgün tamamlanmamış bir Windows güncellemesi olabilir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "'Proje zaten açık' mesajı",
+      "body": "Bir Share projesi başka hiçbir bilgisayarda açık olmadığı halde 'Das Allplan Share Projekt kann nicht geöffnet werden, weil es mit demselben Bimplus Login bereits geöffnet ist' mesajı çıkabilir. Çözüm: mesajın işaret ettiği bilgisayarda, ilgili projenin cache klasörünü yeniden adlandırın. Cache klasörüne 'Projekt neu, öffnen > Share > Login' ile girip projenin yolu üzerinde sağ tık 'Im Explorer öffnen' diyerek, sonra bir üst klasöre çıkarak ulaşırsınız. Allplan Share, erişimi 'Projektname+Rechnername.inuse' adlı bir dosyayla işaretler; bu dosya normalde çıkışta silinir ama silinmezse kilit kalır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Bimplus görünümü 'uzağa kayıyor'",
+      "body": "Bimplus'ta fare tekerleğiyle görünüm modelden çok uzağa kayıyorsa bu genellikle bir Bimplus veya SDS2 hatası değil, fare sürücüsü ayarıdır. Logitech farelerde (örn. M510) 'Smooth Scrolling' seçeneği zoom darbelerini aşırı tetikler. Logitech yazılımında (Logi Options/Options+) 'Scroll wheel' bölümünde 'Smooth Scrolling' kapatıldığında görünüm yeniden normal adımlarla tepki verir.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Sürüme özel Login dosyası adı",
+      "body": "Donma çözümünde yeniden adlandırılacak Bimplus Login .xml dosyasının adı ALLPLAN sürümüne göre değişir (2020, 2021, 2022 için farklı GUID'ler). Yanlış dosyayı adlandırmak sorunu çözmez; sürümünüze uygun dosyayı seçin."
+    },
+    {
+      "title": "DİKKAT: '.inuse' kilidi",
+      "body": "'Proje zaten açık' sorununda kilit, cache'te silinmeyen 'Projektname+Rechnername.inuse' dosyasından kaynaklanabilir. Cache klasörünü yeniden adlandırma işlemini hem mesajın işaret ettiği hem de projeyi kullanacağınız bilgisayarda yapın."
+    }
+  ],
+  "checkpoint": "Bu belirtilerden biriyle karşılaştığınızda kaynaktaki doğru çözümü (güvenlik aracı kaldırma, Login dosyasını veya cache klasörünü yeniden adlandırma, Smooth Scrolling kapatma) seçebiliyorsanız hata çözümünü kavramışsınız demektir.",
+  "commands": [
+    {
+      "name": "%LocalAppData%\\Nemetschek\\bim+",
+      "menu": "Windows Explorer · yol",
+      "shortcut": "",
+      "desc": "Donma çözümünde Bimplus Login .xml dosyasının yeniden adlandırıldığı klasör."
+    },
+    {
+      "name": "Projekt neu, öffnen > Share > Login",
+      "menu": "ALLPLAN",
+      "shortcut": "",
+      "desc": "Share projesinin cache klasörüne ulaşmak için giriş yolu; sağ tık 'Im Explorer öffnen'."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_8819",
+      "title": "Opsiyon/IFC Penceresi Hemen Kapanıyor",
+      "body": "Soru: Opsiyon penceresi ya da IFC içe/dışa aktarım penceresi çağrıldıktan hemen sonra kapanırsa ne yapılır? Yanıt: HP (Hewlett-Packard) bilgisayarlarda 'HP ProtectTools' güvenlik araçlarının kurulu olup olmadığını kontrol edin; kuruluysa kaldırın. Bu paket birden çok programdan oluşur; önce bağımlı programlar, en son ana 'HP ProtectTools Security Manager' kaldırılır ve bilgisayar yeniden başlatılır. Dell bilgisayarlarda aynı durum 'Dell Data Protection' paketi için geçerlidir. Bu araçlar McAfee tam disk şifrelemesi gibi mekanizmalarla Win32 API davranışını değiştirir ve ALLPLAN'da soruna yol açar. HP/Dell dışı bir bilgisayarsa ALLPLAN desteğine başvurun.",
+      "figures": [
+        "/akademi/openbim-ifc/8819_0EM7U000001TemT_1c4e972f.png",
+        "/akademi/openbim-ifc/8819_0EM7U000001TemU_6c9136a6.png"
+      ]
+    },
+    {
+      "id": "de_9653",
+      "title": "ALLPLAN Share: Proje Açılışında Donma",
+      "body": "Soru: Share projeleri yeniden açılabilsin diye hangi önlem alınır? Yanıt: Windows Explorer'ı başlatın ve adres satırına '%LocalAppData%\\Nemetschek\\bim+' yazın. bim+ klasöründeki Bimplus Login .xml dosyasını yeniden adlandırın (örneğin sonuna .alt ekleyerek). Dosya adı sürüme göre değişir: ALLPLAN 2020, 2021 ve 2022 için farklı GUID içeren dosyalar verilmiştir. Not: Sorunun nedeni düzgün tamamlanmamış bir Windows güncellemesi olabilir.",
+      "figures": []
+    },
+    {
+      "id": "de_9658",
+      "title": "Meldung: Proje Aynı Bimplus Login ile Zaten Açık",
+      "body": "Soru: Bir Share projesi aynı Bimplus hesabıyla başka hiçbir bilgisayarda açık olmadığı halde neden başka bir bilgisayarda açılamaz? Açarken 'proje zaten açık' diyalogu çıkar. Yanıt: Mesajın işaret ettiği bilgisayarda ilgili Share projesinin cache klasörünü yeniden adlandırın. Cache klasörüne 'Projekt neu, öffnen > Share > Login' ile girip, projeyi işaretleyip sol altta görünen proje yolu üzerinde sağ tık 'Im Explorer öffnen' diyerek, Explorer'da bir üst kademeye çıkarak ulaşırsınız; cache klasörü mavi görünür ve yeniden adlandırılabilir. Aynı işlemi projeyi kullanacağınız bilgisayarda da yapın. Allplan Share, kimin hangi bilgisayardan eriştiğini 'Projektname+Rechnername.inuse' adlı dosyayla işaretler ve ikinci erişimi engeller; bu dosya normalde çıkışta silinir, bu durumda cache'te silinmemiştir.",
+      "figures": [
+        "/akademi/openbim-ifc/9658_0EM7U000001TelL_275b5f02.png",
+        "/akademi/openbim-ifc/9658_0EM7U000001TelM_6573d367.png"
+      ]
+    },
+    {
+      "id": "de_12160",
+      "title": "BIMPLUS Görünümü Fare Tekerleğiyle Uzağa Kayıyor",
+      "body": "Soru: BIMPLUS'ta fare tekerleği kullanılınca görünüm neden modelden çok uzağa kayar ve nasıl düzeltilir? Yanıt: Bu davranış genellikle fare sürücüsü ayarından kaynaklanır, bir BIMPLUS veya SDS2 hatası değildir. Logitech farelerde (örn. M510) 'Smooth Scrolling' seçeneği zoom darbelerini aşırı tetikleyerek görünümün uzağa sıçramasına yol açabilir. Çözüm için Logitech yazılımında (Logi Options/Options+) 'Scroll wheel' bölümünde 'Smooth Scrolling' devre dışı bırakılır; kapatıldığında BIMPLUS fare tekerleği zoom'una yeniden normal adımlarla tepki verir.",
+      "figures": []
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m10-9-1",
+      "prompt": "IFC/Opsiyon penceresi çağrıldıktan hemen sonra kapanıyorsa kaynağın işaret ettiği olası neden nedir?",
+      "options": [
+        {
+          "text": "Eksik IFC lisansı",
+          "correct": false
+        },
+        {
+          "text": "HP ProtectTools veya Dell Data Protection gibi güvenlik araçları",
+          "correct": true
+        },
+        {
+          "text": "Yanlış sıfır noktası",
+          "correct": false
+        },
+        {
+          "text": "Bozuk IFC dosyası",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre bazı HP ve Dell güvenlik araçları Win32 API davranışını değiştirir ve pencerenin hemen kapanmasına yol açar; çözüm bu araçları kaldırmaktır.",
+      "bloom": "Analiz",
+      "difficulty": "Orta"
+    },
+    {
+      "id": "m10-9-2",
+      "prompt": "'Proje aynı Bimplus Login ile zaten açık' mesajı için kaynaktaki çözüm nedir?",
+      "options": [
+        {
+          "text": "Projeyi silip yeniden oluşturmak",
+          "correct": false
+        },
+        {
+          "text": "İlgili projenin cache klasörünü yeniden adlandırmak",
+          "correct": true
+        },
+        {
+          "text": "Yeni bir lisans satın almak",
+          "correct": false
+        },
+        {
+          "text": "Bilgisayarı fabrika ayarına döndürmek",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynak, mesajın işaret ettiği bilgisayarda projenin cache klasörünü yeniden adlandırmayı önerir; kilit, silinmeyen '.inuse' dosyasından kaynaklanır.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "Bu dört belirti için kısa bir tanı tablosu hazırlayın: pencere hemen kapanıyor, Share donuyor, 'zaten açık' mesajı, görünüm uzağa kayıyor. Her biri için kaynaktaki çözümü tek cümleyle yazın.",
+    "expected": "Belirti-çözüm eşleşmesini doğru veren bir tablo.",
+    "hint": "Çözümlerden ikisi dosya/klasör yeniden adlandırma, biri yazılım kaldırma, biri fare sürücüsü ayarıdır."
+  }
+}

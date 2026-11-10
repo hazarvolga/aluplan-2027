@@ -1,0 +1,153 @@
+{
+  "no": 2,
+  "slug": "yabanci-norma-gore-donati-plani",
+  "title": "Yabancı Norma Göre Donatı Planı: Kesit Serileri ve Raporlar",
+  "duration": "30 dk",
+  "sourceModule": "Proje 1 · Modül 5: Betonarme Yapılarda 3B Donatı Detaylandırma",
+  "intro": "Farklı bir ülkenin standardına (ör. İngiliz Standardı, BS EN) göre donatı planı üretmek için üç şey gerekir: ülkeye özgü kesit serisinin (cross-section series / Querschnittsreihe) kurulması, normun ve birimlerin ayarlanması, uygun raporun seçilmesi. Bu ders bu üç adımı kaynağa sadık biçimde anlatır.",
+  "objectives": [
+    "Ülkeye özgü kesit serisini (Querschnittsreihe) kurmayı ve kaydetmeyi tanımlamak.",
+    "Donatı normunu (ör. BS EN) ve uzunluk birimini ayarlamayı uygulamak.",
+    "Hedef ülkeye uygun donatı raporunu (ör. British Standard) bulup seçmeyi ayırt etmek.",
+    "Kesit serisi dosyalarının ülke kısaltmalarını (ör. eng, trk, deu) okuyabilmek."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "1. Ülkeye özgü kesit serisinin kurulması",
+      "body": "Kaynağa göre kesit serilerinin kurulumu ve kaydedilmesi 'Extras > Definitionen > Querschnittsreihen' (EN: Extras > Definitions > Cross-section series) altındadır. Bu diyalogun sol alt bölümünde bir klasör simgesi ve bir disket simgesi bulunur. Kurmak için klasör simgesini seçin, açılan tarayıcıda kurulacak dosyayı seçip 'Aç' ile onaylayın. Kendi tanımladığınız bir seriyi kaydetmek için disket simgesini kullanın.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Kesit serisi dosyaları nerede",
+      "body": "Ülkeye özgü kesit serileri, Allplan kurulumunda oluşturulan 'New' klasörü altındaki 'Ing' klasöründedir (ör. C:\\Programme\\Nemetschek\\Allplan\\New\\Ing). Kurulum yolu, Allmenu altında 'Service > Windows-Explorer > CAD Programmordner' (EN: CAD programme folder) ile görüntülenir. Dosya adları axyzqusr.txt biçimindedir; xyz ülke kısaltmasıdır. Kaynakta verilen örnekler: deu Almanya, eng İngiltere, fra Fransa, ita İtalya, swi İsviçre, trk Türkiye, usa ABD. Bu liste tam değildir ve sürekli genişler.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "2. Norm ve birimlerin ayarlanması",
+      "body": "Normu ayarlamak için 'Extras > Optionen > Bewehrung' (EN: Extras > Options > Reinforcement) altında Norm parametresini BS EN (İngiliz Standardına göre Eurocode) yapın. Normların ülke eşleşmesini Allplan Yardım'da bulabilirsiniz. Birimleri ayarlamak için 'Extras > Optionen > Arbeitsumgebung' (EN: Working environment) altında uzunluk girişi (Längeneingaben in / Length input in) parametresini istenen birime ayarlayın.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "3. British Standard'a göre raporlar",
+      "body": "Kaynağa göre British Standard raporu, Allplan standart raporları içinde 'Stabliste British Standard.rdlc' (EN: British Standard.rdlc) olarak bulunur. Standart rapor seçim menüsünde iki kez 'Ebene nach oben' (EN: level upwards / bir seviye yukarı) klasörüne tıklayıp 'ENG > Reinforcement' altından İngiliz donatı raporlarını seçin.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Norm değişti ama birim değişmedi",
+      "body": "Normu BS EN yapmak tek başına yeterli değildir. Uzunluk birimini de çalışma ortamı (Arbeitsumgebung / Working environment) seçeneklerinden ayrı olarak ayarlamanız gerekir. Aksi hâlde plan doğru normla fakat beklenmeyen birimle üretilir."
+    },
+    {
+      "title": "DİKKAT: Doğru rapor klasörünü bulamama",
+      "body": "British Standard raporuna ulaşmak için rapor seçim menüsünde 'bir seviye yukarı' klasörüne iki kez çıkıp ENG > Reinforcement klasörüne gitmeniz gerekir. Varsayılan ülke klasöründe aramak sonuçsuz kalır."
+    }
+  ],
+  "checkpoint": "Kesit serisini kurduktan, normu BS EN ve birimi ayarladıktan sonra ENG > Reinforcement altından İngiliz donatı raporunu açabiliyorsanız kurulum tamamdır.",
+  "commands": [
+    {
+      "name": "Querschnittsreihen (Cross-section series)",
+      "menu": "Extras > Definitionen > Querschnittsreihen",
+      "shortcut": "",
+      "desc": "Ülkeye özgü kesit serilerinin kurulduğu/kaydedildiği diyalog (klasör ve disket simgeleri)."
+    },
+    {
+      "name": "Norm (Standard)",
+      "menu": "Extras > Optionen > Bewehrung",
+      "shortcut": "",
+      "desc": "Donatı normu parametresi; ör. BS EN seçilir."
+    },
+    {
+      "name": "Längeneingaben (Length input)",
+      "menu": "Extras > Optionen > Arbeitsumgebung",
+      "shortcut": "",
+      "desc": "Uzunluk giriş birimini ayarlar."
+    },
+    {
+      "name": "Stabliste British Standard.rdlc",
+      "menu": "Standart raporlar > ENG > Reinforcement",
+      "shortcut": "",
+      "desc": "İngiliz Standardına göre donatı listesi raporu."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "en_11278",
+      "title": "İngiliz Standardını (Norm) Kullanarak Donatı Planı Oluşturma",
+      "body": "Allplan'da İngiliz Standardına uygun donatı planı nasıl üretilir? 1. Ülkeye özgü kesit serisinin kurulumu: Kurulum ve kaydetme 'Extras > Definitions > Cross-section series' altındadır. Diyalogun sol altındaki klasör simgesiyle kurar, disket simgesiyle kaydedersiniz. Ülkeye özgü seriler kurulumda oluşturulan 'New' klasörünün altındaki 'Ing' klasöründedir (ör. C:\\Programme\\Nemetschek\\Allplan\\New\\Ing). Kurulum yolu Allmenu'de Service > Windows Explorer > CAD programme folder ile görüntülenir. Dosya adlarındaki ülke kısaltmaları axyzqusr.txt biçimindedir: deu Almanya, eng İngiltere, fra Fransa, ita İtalya, trk Türkiye, usa ABD ve diğerleri; liste tam değildir. 2. Norm ve birim ayarı: Norm için Extras > Options > Reinforcement altında Standard parametresini BS EN (İngiliz Standardına göre Eurocode) yapın. Birim için Extras > Options > Working environment altında uzunluk girişini ayarlayın. 3. British Standard raporları: Rapor 'British Standard.rdlc' olarak standart raporlardadır; seçim menüsünde iki kez 'level upwards' klasörüne tıklayıp ENG > Reinforcement altından İngiliz donatı raporlarını seçin.",
+      "figures": []
+    },
+    {
+      "id": "de_11229",
+      "title": "Yabancı Norm Kullanarak Donatı Planları",
+      "body": "Bu Almanca kaynak, en_11278'in karşılığıdır ve aynı üç adımı verir. 1. Ülkeye özgü kesit serisinin kurulumu 'Extras > Definitionen > Querschnittsreihen' altındadır; sol alttaki klasör simgesiyle Querschnittsreihen-dosyaları kurulur, disket simgesiyle kendi tanımladığınız seri kaydedilir. Ülkeye özgü seriler kurulumdaki 'New' klasörünün altındaki 'Ing' klasöründedir (ör. C:\\Programme\\Nemetschek\\Allplan\\New\\Ing); yol Allmenü'de Service > Windows-Explorer > CAD Programmordner ile görünür. Dosya adlarındaki ülke kısaltmaları (axyzqusr.txt): aut Avusturya, deu Almanya, eng İngiltere, fra Fransa, ita İtalya, swi İsviçre, trk Türkiye, usa ABD ve diğerleri. 2. Norm ve birim: Extras > Optionen > Bewehrung altında Norm parametresini BS EN yapın; Extras > Optionen > Arbeitsumgebung altında Längeneingaben in parametresini istenen uzunluk birimine ayarlayın. 3. British Standard raporu 'Stabliste British Standard.rdlc' olarak standart raporlardadır; menüde iki kez Ebene nach oben klasörüne tıklayıp ENG > Reinforcement altından İngiliz donatı raporlarını seçin.",
+      "figures": []
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m5-2-1",
+      "prompt": "İngiliz Standardına göre donatı planı için normu nerede BS EN yaparsınız?",
+      "options": [
+        {
+          "text": "Extras > Optionen > Bewehrung (Reinforcement)",
+          "correct": true
+        },
+        {
+          "text": "Extras > Definitionen > Querschnittsreihen",
+          "correct": false
+        },
+        {
+          "text": "Allmenu > Service > Windows Explorer",
+          "correct": false
+        },
+        {
+          "text": "Rapor seçim menüsü > ENG",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre norm, Extras > Optionen > Bewehrung altında Norm/Standard parametresi BS EN yapılarak ayarlanır. Querschnittsreihen kesit serisi kurulumu, Windows Explorer dosya yolu, ENG klasörü ise rapor içindir.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta"
+    },
+    {
+      "id": "m5-2-2",
+      "prompt": "axyzqusr.txt dosya adındaki 'trk' kısaltması neyi gösterir?",
+      "options": [
+        {
+          "text": "Bir büküm şeklini",
+          "correct": false
+        },
+        {
+          "text": "Türkiye'ye ait ülkeye özgü kesit serisini",
+          "correct": true
+        },
+        {
+          "text": "British Standard raporunu",
+          "correct": false
+        },
+        {
+          "text": "Büküm rulosu çapını",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynaktaki ülke kısaltması listesinde trk Türkiye'yi gösterir; dosya adlarındaki xyz alanı ülke kodudur (deu Almanya, eng İngiltere vb.).",
+      "bloom": "Kavrama",
+      "difficulty": "Kolay"
+    }
+  ],
+  "exercise": {
+    "task": "Extras > Definitionen > Querschnittsreihen diyalogunu açın ve klasör ile disket simgelerini bulun. Ardından Extras > Optionen > Bewehrung altında Norm parametresini inceleyin.",
+    "expected": "Kesit serisi kurma/kaydetme simgelerini ve Norm parametresinin BS EN gibi değerler alabildiğini görmeniz.",
+    "hint": "Kurulumsuz ülke serisi için Allplan kurulum yolundaki New\\Ing klasörüne bakın."
+  }
+}

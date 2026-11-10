@@ -1,0 +1,172 @@
+{
+  "no": 7,
+  "slug": "bimplus-cde-senkronizasyon-ve-yedekleme",
+  "title": "Bimplus CDE: Senkronizasyon ve Yedekleme",
+  "duration": "30 dk",
+  "sourceModule": "Proje 1 · Modül 10: OpenBIM, IFC 4/4.3, IDS ve Bimplus CDE",
+  "intro": "Bu ders, ALLPLAN Share projelerinde verinin ne zaman buluta senkronize edildiğini, Bimplus portalından nasıl zamanlı yedek (backup) alınacağını ve model ile dokümanların nasıl güvene alınacağını öğretir.",
+  "objectives": [
+    "Çizim Dosyalarının buluta hangi koşullarda yüklendiğini (senkronize edildiğini) sıralamak.",
+    "Planların yalnızca plan düzeni değiştiğinde yüklendiğini çizim dosyalarından ayırt etmek.",
+    "Bimplus portalında yedekleme döngüsü (Sicherungszyklus) kurup Dokumente > Backups altından yedek indirmeyi tanımlamak.",
+    "Model, doküman ve yapı yapılarının (IFC olarak) nasıl güvene alınacağını açıklamak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Çizim dosyaları ne zaman senkronize olur",
+      "body": "Bir Share projesindeki Çizim Dosyaları şu üç koşul birlikte sağlandığında buluta yüklenir: çizim dosyasında bir değişiklik olmuştur, çizim dosyası griye alınmış veya seçimden çıkarılmıştır ve 'Projekt neu, öffnen' (Projeyi aç) kapatılmıştır. Ayrıca sol üstteki ALLPLAN A'dan 'Alles speichern' (Hepsini kaydet) seçilince, 'Projekt neu, öffnen' açılınca veya Pafta Düzenleyici çağrılınca değişen tüm çizim dosyaları senkronize edilir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Pasif çizim dosyası uyarısı",
+      "body": "Bir çizim dosyası senkronize edildiğinde, aynı dosyayı gri (pasif, arka planda) tutan diğer kullanıcılar otomatik olarak değişiklik bildirimi alır ve bunu görüntülemeyi seçebilir ya da reddedebilir. Bu bildirim görünmüyorsa, güncel ALLPLAN sürümü kullanıldığından ve 'Optionen > Arbeitsumgebung > Speichern/Laden' altında 'Bei geänderten passiven Teilbildern Meldung anzeigen' kutusunun işaretli olduğundan emin olun; işaretli değilse işaretleyip ALLPLAN'ı yeniden başlatın.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Planlar farklı davranır",
+      "body": "Çizim dosyası içerikleri bir planda değiştiğinde plan yüklenMEZ, buna gerek yoktur. Planlar yalnızca plan düzeni değiştiğinde (plan elemanı taşıma veya silme gibi) ya da bir plan elemanının ölçeği veya çizim tipi değiştiğinde yüklenir; yükleme plan değişiminde veya plan düzeninden çıkışta otomatik gerçekleşir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Bulut tabanlı yedekleme",
+      "body": "ALLPLAN Share projelerinin bulut tabanlı yedeğini portal.bimplus.net üzerinden ayarlayabilir ve oradan indirebilirsiniz. Proje yöneticisi olarak proje ayarlarında bir Sicherungszyklus (yedekleme döngüsü) tanımlayarak bulutta ne sıklıkta otomatik yedek alınacağını belirlersiniz. Yedekler yerelde değil bulutta tutulur; ilgili projede 'Dokumente' > 'Backups' altında bulunur ve istediğiniz yerel yola indirilebilir. Geri yükleme ALLPLAN'da 'Projekte neu, öffnen' > 'Projekt importieren' ile yapılır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Model ve dokümanları güvene alma",
+      "body": "Bimplus projelerinde yüklenmiş model dosyalarını (*.ifc, *.landxml, *.skp, ...) indirebilirsiniz. ALLPLAN'dan veya başka bir uygulamadan gelen modeller dışa aktarılabilir. Dokümanlar zip olarak (çoklu seçimle) indirilebilir; kullanıcı tanımlı yapı yapıları (Gebäudestrukturen) model verisiyle birlikte IFC olarak dışa aktarılabilir.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Değişiklik bildirimi görünmüyor",
+      "body": "Pasif çizim dosyalarındaki değişiklik bildirimini görmüyorsanız güncel ALLPLAN sürümünü kullandığınızdan ve 'Optionen > Arbeitsumgebung > Speichern/Laden > Bei geänderten passiven Teilbildern Meldung anzeigen' kutusunun işaretli olduğundan emin olun, sonra ALLPLAN'ı yeniden başlatın."
+    },
+    {
+      "title": "DİKKAT: Bulut yedek alanını şişirmek",
+      "body": "Yedekler bulutta tutulur; bulut veri miktarını kontrol altında tutmak için artık gerekmeyen proje yedeklerini portalden silmek önerilir."
+    }
+  ],
+  "checkpoint": "Bir çizim dosyasını değiştirip griye alarak senkronize ettiyseniz ve portalde bir yedekleme döngüsü kurup yedeği Dokumente > Backups altından indirebiliyorsanız CDE veri akışını yönetiyorsunuz demektir.",
+  "commands": [
+    {
+      "name": "Alles speichern",
+      "menu": "ALLPLAN A (sol üst)",
+      "shortcut": "",
+      "desc": "Değişen tüm çizim dosyalarını senkronize eder."
+    },
+    {
+      "name": "Optionen > Arbeitsumgebung > Speichern/Laden",
+      "menu": "ALLPLAN · Seçenekler",
+      "shortcut": "",
+      "desc": "Pasif çizim dosyası değişiklik bildiriminin açıldığı seçenek."
+    },
+    {
+      "name": "Dokumente > Backups",
+      "menu": "portal.bimplus.net · proje",
+      "shortcut": "",
+      "desc": "Bulut yedeklerinin bulunduğu ve indirildiği yer."
+    },
+    {
+      "name": "Projekte neu, öffnen > Projekt importieren",
+      "menu": "ALLPLAN",
+      "shortcut": "",
+      "desc": "İndirilen yedeği projeye geri yükler."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_9657",
+      "title": "ALLPLAN Share: Bulutla Senkronizasyon",
+      "body": "Kaynak, bir Share projesinde çizim dosyalarının ve planların buluta ne zaman senkronize edildiğini açıklar. Çizim dosyaları şu üç koşul birlikte sağlandığında yüklenir: dosyada değişiklik olmuş, dosya griye alınmış veya seçimden çıkarılmış ve 'Projekt neu, öffnen' kapatılmıştır. Ayrıca ALLPLAN A'dan 'Alles speichern', 'Projekt neu, öffnen' açılışı ve Pafta Düzenleyici çağrısı da değişen dosyaları senkronize eder. Bir dosya senkronize edildiğinde onu gri (pasif) tutan diğer kullanıcılar değişiklik bildirimi alır; bildirim görünmüyorsa güncel sürüm ve 'Optionen > Arbeitsumgebung > Speichern/Laden > Bei geänderten passiven Teilbildern Meldung anzeigen' işaretli olmalıdır. Planlar yalnızca plan düzeni, ölçek veya çizim tipi değiştiğinde yüklenir; içerik değişimi planı yüklemez.",
+      "figures": []
+    },
+    {
+      "id": "de_8696",
+      "title": "ALLPLAN Share Projelerinin BIMPLUS'ta Yedeklenmesi",
+      "body": "Kaynak, ALLPLAN Share projelerinin bulut tabanlı yedeğinin portal.bimplus.net üzerinden nasıl ayarlanacağını anlatır. Proje yöneticisi, proje ayarlarında bir Sicherungszyklus (yedekleme döngüsü) tanımlayarak bulutta ne sıklıkta otomatik yedek alınacağını belirler. Yedekler yerelde değil bulutta tutulur ve ilgili projede 'Dokumente' > 'Backups' altında bulunur; her yedek istenen yerel yola indirilebilir. Bu yedekler ALLPLAN'da 'Projekte neu, öffnen' > 'Projekt importieren' ile okunabilir veya devir/arşiv için kullanılabilir. Yedekler yetkili proje yöneticileri/üyeleri tarafından ayarlanır; bulut veri miktarını kontrol altında tutmak için gereksiz yedeklerin silinmesi önerilir.",
+      "figures": [
+        "/akademi/openbim-ifc/8696_0EMVi00000Eu23u_701fd0e6.png",
+        "/akademi/openbim-ifc/8696_0EMVi00000EtkIH_13e49767.png",
+        "/akademi/openbim-ifc/8696_0EMVi00000Etjyv_8bd64f29.png"
+      ]
+    },
+    {
+      "id": "en_8604",
+      "title": "BIMPLUS Projelerinin Verilerini Güvene Alma",
+      "body": "Kaynak, BIMPLUS projelerindeki dosyaların nasıl güvene alınacağını anlatır. Yüklenmiş model dosyaları (*.ifc, *.landxml, *.skp, ...) indirilebilir; ALLPLAN'dan veya başka bir uygulamadan gelen modeller dışa aktarılabilir. Share projeleri ayrıca güvene alınabilir. Dokümanlar zip olarak indirilebilir ve çoklu seçim mümkündür. Folienshow'lar PDF olarak, Issue'lar (çoklu seçimle) BCF dosyaları olarak dışa aktarılabilir. Model, nesne, Issue veya yapılarla LINK olarak değil doğrudan bağlı dosyalar yalnızca tek tek indirilebilir. Kullanıcı tanımlı yapı yapıları model verisiyle birlikte IFC olarak dışa aktarılabilir. MY DOCUMENTS klasöründeki dosyalar her kullanıcı tarafından ayrıca güvene alınmalıdır, çünkü diğer kullanıcılar için görünmez.",
+      "figures": [
+        "/akademi/openbim-ifc/8604_0EMVi00000DLzk9_2995a5c0.png",
+        "/akademi/openbim-ifc/8604_0EMVi00000DM0rV_a3ed6b54.png"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m10-7-1",
+      "prompt": "Bir Share çizim dosyasının buluta yüklenmesi için gereken üç koşuldan biri AŞAĞIDAKİLERDEN hangisidir?",
+      "options": [
+        {
+          "text": "Dosyanın griye alınması veya seçimden çıkarılması",
+          "correct": true
+        },
+        {
+          "text": "Projenin silinmesi",
+          "correct": false
+        },
+        {
+          "text": "Yeni bir lisans atanması",
+          "correct": false
+        },
+        {
+          "text": "Planın ölçeğinin değişmesi",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynak üç koşulu sıralar: değişiklik olması, dosyanın griye alınması/seçimden çıkarılması ve 'Projekt neu, öffnen'in kapatılması. Plan ölçeği planların yüklenmesiyle ilgilidir, çizim dosyasıyla değil.",
+      "bloom": "Hatırlama",
+      "difficulty": "Orta"
+    },
+    {
+      "id": "m10-7-2",
+      "prompt": "Bimplus bulut yedekleri nerede bulunur ve geri yükleme nasıl yapılır?",
+      "options": [
+        {
+          "text": "Yerel diskte; çift tıkla açılır",
+          "correct": false
+        },
+        {
+          "text": "Portalde 'Dokumente > Backups' altında; ALLPLAN'da 'Projekt importieren' ile geri yüklenir",
+          "correct": true
+        },
+        {
+          "text": "E-posta ekinde; otomatik açılır",
+          "correct": false
+        },
+        {
+          "text": "Yedek alınamaz",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre yedekler bulutta 'Dokumente > Backups' altında tutulur ve ALLPLAN'da 'Projekte neu, öffnen > Projekt importieren' ile geri yüklenir.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "Bir Share projesinde bir çizim dosyasını değiştirip griye alın ve senkronizasyonu tetikleyin. Ardından portalde bir yedekleme döngüsü kurun ve oluşan yedeği Dokumente > Backups altından indirin.",
+    "expected": "Senkronize edilmiş çizim dosyası ve bulut üzerinden indirilmiş bir yedek dosyası.",
+    "hint": "Senkronizasyonun üç koşulunu birlikte sağladığınızdan emin olun."
+  }
+}

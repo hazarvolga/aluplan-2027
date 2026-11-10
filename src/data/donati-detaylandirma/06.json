@@ -1,0 +1,154 @@
+{
+  "no": 6,
+  "slug": "egik-gorunum-ve-bukum-rulosu-cap-gosterimi",
+  "title": "Eğik Görünümde Çubuk Gösterimi ve Büküm Rulosu Çapı",
+  "duration": "28 dk",
+  "sourceModule": "Proje 1 · Modül 5: Betonarme Yapılarda 3B Donatı Detaylandırma",
+  "intro": "Donatı, kesme düzlemine dik olmayan yönlerde bazen hatalı görünür ve standart büküm rulosu çapı (bending roller diameter) açınımda görünmeyebilir. Bu ders, eğik görünümdeki büküm gösterimini düzeltmenin iki yolunu ve büküm rulosu çapını görünür kılma yöntemini kaynağa sadık anlatır.",
+  "objectives": [
+    "Eğik (dik olmayan) görünümde büküm gösteriminin neden bozulabileceğini tanımlamak.",
+    "Gösterimi düzeltmenin iki yolunu (çubuk gösterimini değiştirme, kesit hacmini değiştirme) ayırt etmek.",
+    "Standart büküm rulosu çapının açınımda neden etiketlenmediğini açıklamak.",
+    "'Biegerolle modifizieren' (Modify Bending Roll) ile büküm rulosu çapını görünür kılmayı uygulamak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Eğik görünümde bozuk büküm",
+      "body": "Kaynağa göre bu, büküm şekline (formshape) ve kesitin kırpma çizgisinin (clipping line) tanımına bağlı bilinen bir konudur. Örnekte, kiriş yönüne eğik etriyeleri olan bir kiriş vardır. Durum 1: 180 derece kancalı, standart ve minimal büküm rulosuna sahip bir çubukta doğru gösterimin tek yolu, forma paralel kesmektir; Allplan formu büküm rulosu çapıyla yeniden oluşturmaya çalışır ama tam daireyi gösterecek yer olmadığında 90 derecelik bir köşe çıkar. Durum 2: Kırpma yolunun tanımına bağlı olarak formun garip görünmesi, kesit sonunun başka bir çubuğun kancasını kesmesinden kaynaklanır; Allplan kancada kısmen kesilmiş bir çubuğu düzgün gösteremez.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "İki düzeltme yolu",
+      "body": "Kaynağa göre iki çözüm vardır. İş akışı 1: Çubuğun gösterimini yalnızca birini gösterecek şekilde değiştirin. İş akışı 2: Kesit hacmi (section volume) tanımını yalnızca gerekli olanı alacak şekilde değiştirin; örnekte kesit 1'i kesit 3'e dönüştürerek yalnızca hacme dâhil olanı almak. Böylece gösterim düzelir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Büküm rulosu çapını görünür kılma",
+      "body": "Kaynağa göre kısmi/tam açınımda (Teil-/Gesamtauszug) büküm rulosu kutusu işaretlense bile, standart bir büküm rulosu çapı söz konusuysa büküm rulosu etiketlenmez. Etiketlemeyi etkin biçimde değiştirmek için istenen çaplarda 'Biegerolle modifizieren' (EN: Modify Bending Roll) işlevini kullanın. ÖNEMLİ: Büküm rulosu değeri Özellikler Paleti (Eigenschaften-Palette) üzerinden değiştirilirse açınımın gösterimi uyarlanmaz. Değeri herhangi bir değere değiştirin; büküm rulosu çapı artık gösterilir ve bu otomatik olarak çelik listesi ile raporu etkiler.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Özellikler Paleti'nden değiştirmek gösterimi güncellemez",
+      "body": "Büküm rulosu değeri Özellikler Paleti üzerinden değiştirilirse açınım gösterimi uyarlanmaz. Gösterimi etkilemek için 'Biegerolle modifizieren' (Modify Bending Roll) işlevini kullanın. Değeri sonradan orijinaline geri çevirseniz bile çap gösterimde kalır; varsayılan değere veya ilk gösterime sıfırlama mümkün değildir."
+    },
+    {
+      "title": "DİKKAT: 3B bükülmüş çubukta etiketleme mümkün değil",
+      "body": "Kaynak, çubuk üç boyutlu bükülmüşse büküm rulosu çapının genel olarak etiketlenemeyeceğini belirtir. Çapı elle işaretleyip silebilirsiniz, ancak bu lejant ve raporu etkilemez."
+    }
+  ],
+  "checkpoint": "Eğik görünümdeki bozuk büküm, çubuk gösterimini veya kesit hacmini değiştirerek düzeliyorsa ve istenen büküm rulosu çapı açınımda görünüyorsa doğru yoldasınız.",
+  "commands": [
+    {
+      "name": "Biegerolle modifizieren (Modify Bending Roll)",
+      "menu": "Mühendislik rolü · Donatı",
+      "shortcut": "",
+      "desc": "Büküm rulosu çapını açınımda görünür kılar; çelik listesi ve raporu da etkiler."
+    },
+    {
+      "name": "Teil-/Gesamtauszug (partial/full extract)",
+      "menu": "Donatı · Açınım (extract)",
+      "shortcut": "",
+      "desc": "Kısmi veya tam açınım; büküm rulosu kutusu burada işaretlenir."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "en_9128",
+      "title": "Eğik Görünümde Çubuk Gösterimi",
+      "body": "Form şekline dik olmayan bazı yönlerde büküm gösterimi doğru değildir; daha iyi bir gösterim nasıl tanımlanır? Bu, form şekline (formshape) ve kesitin kırpma çizgisi tanımına bağlı bilinen bir konudur. Örnekte kiriş yönüne eğik etriyeleri olan bir kiriş vardır. Durum 1: Poz 10, standart ve minimal büküm rulosuyla 180 derece kancalı bir çubuktur; doğru gösterimin tek yolu, forma paralel (kesit 2 gibi) kesmektir. Allplan formu büküm rulosu çapıyla yeniden oluşturmaya çalışır ama tam daireyi gösterecek yer olmadığından 90 derecelik köşe çıkar. Durum 2: Kırpma yolu tanımına bağlı olarak form garip görünebilir; bunun nedeni kesit sonunun başka bir çubuğun kancasını kesmesi ve aynı yerde birkaç pozun bulunması, Allplan'ın kancada kısmen kesilmiş bir çubuğu düzgün gösterememesidir. İki çözüm: İş akışı 1, çubuğun gösterimini yalnızca birini gösterecek şekilde değiştirmek. İş akışı 2, kesit hacmi tanımını yalnızca gerekli olanı alacak şekilde değiştirmek (kesit 1'i kesit 3'e dönüştürmek); sonuç düzgün gösterimdir.",
+      "figures": [
+        "/akademi/donati-detaylandirma/9128_0EMVi000008h8FR_fd505107.png",
+        "/akademi/donati-detaylandirma/9128_0EMVi000008h8aP_bc2d62b5.png",
+        "/akademi/donati-detaylandirma/9128_0EMVi000008h8Tx_ac7d9af8.png",
+        "/akademi/donati-detaylandirma/9128_0EMVi000008h80v_d169f1fa.png",
+        "/akademi/donati-detaylandirma/9128_0EMVi000008h8qX_fcd3c5d5.png",
+        "/akademi/donati-detaylandirma/9128_0EMVi000008h87N_df2b7abc.png"
+      ]
+    },
+    {
+      "id": "en_9029",
+      "title": "Donatı: Büküm Rulosu Çapını Gösterme",
+      "body": "Kısmi/tam açınımda büküm rulosu için kutuyu işaretledim ama açınım büküm rulosu gösterilmeden çıkıyor; neden ve nasıl gösteririm? Standart bir büküm rulosu çapı söz konusuysa, kutu işaretli olsa bile büküm rulosu etiketlenmez. Etiketlemeyi etkin biçimde, istenen çaplarda 'Modify Bending Roll' işlevini kullanarak değiştirebilirsiniz. ÖNEMLİ: Büküm rulosu değeri Özellikler Paleti üzerinden değiştirilirse açınımın gösterimi uyarlanmaz. Değeri herhangi bir değere değiştirin; büküm rulosu çapı artık gösterilir ve bu otomatik olarak çelik listesini ve raporu etkiler. Değeri ikinci kez orijinaline geri çevirin; büküm rulosu çapı gösterimde kalır. Varsayılan değere veya ilk gösterime sıfırlama mümkün değildir. Çapı elle işaretleyip silebilirsiniz ama bu lejant veya raporu etkilemez. İpucu: Çubuk üç boyutlu bükülmüşse etiketleme genel olarak mümkün değildir.",
+      "figures": [
+        "/akademi/donati-detaylandirma/9029_0EMVi00000BxMcT_10f287b8.png",
+        "/akademi/donati-detaylandirma/9029_0EMVi00000BxPLp_e0d78049.png"
+      ]
+    },
+    {
+      "id": "de_9031",
+      "title": "Donatı: Büküm Rulosu Çapını Gösterme (DE)",
+      "body": "en_9029'un Almanca karşılığıdır. Teil-/Gesamtauszug'da Biegerolle için kutuyu işaretledim ama açınım Biegerolle gösterimi olmadan çıkıyor. Standart bir Biegerollendurchmesser söz konusuysa, kutu işaretli olsa bile Biegerolle etiketlenmez. Etiketlemeyi, istenen çaplarda 'Biegerolle modifizieren' işleviyle etkin biçimde değiştirebilirsiniz. ÖNEMLİ: Biegerolle değeri Özellikler Paleti üzerinden değiştirilirse açınımın gösterimi uyarlanmaz. Değeri herhangi bir değere değiştirin; Biegerollendurchmesser artık gösterilir ve bu otomatik olarak Stahlliste/raporu etkiler. İkinci kez orijinal değere geri çevirseniz bile gösterim kalır; varsayılana veya ilk gösterime sıfırlama mümkün değildir. Çapı elle işaretleyip silebilirsiniz ama bu lejant ve raporu etkilemez. Not: Çubuk üç boyutlu bükülmüşse etiketleme genel olarak mümkün değildir.",
+      "figures": [
+        "/akademi/donati-detaylandirma/9031_0EMVi00000BxMcT_10f287b8.png",
+        "/akademi/donati-detaylandirma/9031_0EMVi00000BxPLp_e0d78049.png"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m5-6-1",
+      "prompt": "Eğik görünümde 180 derece kancalı bir etriyenin köşesi 90 derece görünüyor. Kaynağa göre bunun temel nedeni nedir?",
+      "options": [
+        {
+          "text": "Yanlış norm seçimi",
+          "correct": false
+        },
+        {
+          "text": "Tam daireyi gösterecek yer olmaması; form şekli ve kırpma çizgisi tanımı",
+          "correct": true
+        },
+        {
+          "text": "Çubuğun rengi",
+          "correct": false
+        },
+        {
+          "text": "Eksik kesit serisi",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre bu, form şekline ve kesitin kırpma çizgisi tanımına bağlıdır; Allplan formu büküm rulosu çapıyla yeniden oluşturmaya çalışır ama tam daireye yer olmayınca 90 derece köşe çıkar.",
+      "bloom": "Analiz",
+      "difficulty": "Zor"
+    },
+    {
+      "id": "m5-6-2",
+      "prompt": "Standart büküm rulosu çapını açınımda göstermenin kaynakta verilen yolu nedir?",
+      "options": [
+        {
+          "text": "Özellikler Paleti'nden değeri değiştirmek",
+          "correct": false
+        },
+        {
+          "text": "'Biegerolle modifizieren' (Modify Bending Roll) işlevini kullanmak",
+          "correct": true
+        },
+        {
+          "text": "Normu BS EN yapmak",
+          "correct": false
+        },
+        {
+          "text": "Çubuğu silip yeniden çizmek",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynak, Özellikler Paleti'nden değiştirmenin gösterimi uyarlamadığını; etiketlemeyi 'Biegerolle modifizieren' / 'Modify Bending Roll' işleviyle değiştirmek gerektiğini belirtir.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "Eğik etriyeli bir kirişte açınımı inceleyin. Büküm rulosu kutusu işaretli olduğu hâlde çap görünmüyorsa 'Biegerolle modifizieren' ile değeri değiştirip gösterimi sağlayın.",
+    "expected": "Büküm rulosu çapının açınımda görünür hâle gelmesi ve bunun çelik listesi/rapora yansıdığını görmeniz.",
+    "hint": "Değeri Özellikler Paleti'nden değiştirmeyin; gösterim güncellenmez. 3B bükülmüş çubukta etiketlemenin mümkün olmadığını unutmayın."
+  }
+}

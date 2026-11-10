@@ -1,0 +1,172 @@
+{
+  "no": 4,
+  "slug": "prekast-sik-hatalar-pratik",
+  "title": "Prekast Akışında Sık Hatalar ve Pratik Çözümler",
+  "duration": "28 dk",
+  "sourceModule": "Proje 1 · Modül 7: Prekast Yapı Elemanları ve Endüstriyel Üretim",
+  "intro": "Prekast iş akışında zaman kayıplarının çoğu birkaç tekrar eden hatadan kaynaklanır: eksik kurulum seçeneği, eski arayüzün takılı kalması, yanlış koşulda kurulan formül ve yanlış düzenlenen başlık dosyası. Bu derste bu tuzakları tek tek belirti/çözüm olarak toparlar ve kendiniz denersiniz.",
+  "objectives": [
+    "Prekast yapılandırmasına erişilememe ve eski arayüz sorunlarının kök nedenini ve çözümünü ayırt etmek.",
+    "Taşıma ankrajı formülünün geçerli olduğu koşulu (enine donatının konumu) doğrulamak.",
+    "Liste başlığı dosyalarında çeviri yer tutucusunu doğru temizlemeyi uygulamak.",
+    "Bir belirtiden yola çıkarak doğru düzeltme adımını seçme alışkanlığı kazanmak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Belirti 1: Prekast araçlarına erişilemiyor",
+      "body": "Yapılandırma menüsü girişleri kırmızı soru işaretiyle gelip seçilemiyorsa, kurulumda 'Precast elements' (Betonfertigteile) seçeneği etkinleştirilmemiştir. Çözüm: kurulumu bu seçenek işaretli olacak biçimde tamamlamak. Kurulumdaki 'Fixtures' seçeneğini yalnızca yeni kurulumda işaretleyin; mevcut kuruluma uygularsanız standart gömme parçalar büro klasörüne kopyalanıp sizin parçalarınızı ezebilir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Belirti 2: Yeni eleman paleti gelmiyor",
+      "body": "Önceki sürümden arayüz ve kısayol (UBX) içe aktardıysanız, yeni Prekast Eleman Paleti (Precast Element Pallet) yerine eski arayüz takılı kalabilir. Çözüm: Service > Hotline tools > cleanstd ile standart ayarları sıfırlayıp Allplan'ı yeniden başlatmak. Kısayollarınızı korumak isterseniz UBX içe aktarmadan önce ilgili onay kutusunu devre dışı bırakın.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Belirti 3: Taşıma ankrajı genişliği yanlış çıkıyor",
+      "body": "Taşıma ankrajı (transport anchor) genişliği formülü, yalnızca enine donatı (cross reinforcement) dışta ise doğru değeri verir. Enine donatı içteyse boyuna demirlerin maksimum çapı da düşülmelidir ve konum formülle değerlendirilemez. Ayrıca her duvar tipi için aynı gömme parça kullanılıyorsa, duvar tipini sorgulayan ortak (If/Else) formül gerekir; bu formül karakter sınırını aşarsa ayrı bir kullanıcı özniteliğine yazılıp liste metninde PARENTPRECAST ile değerlendirilir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Belirti 4: Liste başlığı bozuk görünüyor",
+      "body": "Liste başlığından öznitelik kaldırmak için HeaderData.ext düzenlenirken yalnızca metni silmek yetmez. '{' kıvrık parantezi ve '@xxxxx' numarası bir çeviri/dil referansıdır; bunlar da silinmezse başlık düzgün çıkmaz. Başlığa strüktürden değer atamak (ör. kat adı) içinse InitPrjAttr.EXT dosyası kullanılır. Her iki dosya da önce \\ETC\\BFT\\_List klasöründen büro (STD\\BFT\\_List) klasörüne kopyalanıp orada düzenlenmelidir.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Standart klasörü doğrudan düzenlemeyin",
+      "body": "Liste yapılandırma dosyalarını (InitPrjAttr.EXT, HeaderData.ext) \\ETC\\BFT\\_List standart alanında değil, büro (STD\\BFT\\_List) alanına kopyaladıktan sonra düzenleyin. Böylece güncellemeler değişikliklerinizi ezmez."
+    },
+    {
+      "title": "DİKKAT: Formülün geçerlilik koşulunu atlamayın",
+      "body": "Taşıma ankrajı formülünü doğrulamadan güvenmeyin. Enine donatı konumu (içte/dışta) sonucu belirler; iç donatıda formül doğru değildir."
+    }
+  ],
+  "checkpoint": "Her belirti için doğru kök nedeni (kurulum seçeneği, cleanstd, donatı konumu, çeviri yer tutucusu) eşleştirebiliyorsanız modülü pekiştirmiş olursunuz.",
+  "commands": [
+    {
+      "name": "cleanstd",
+      "menu": "Service > Hotline tools",
+      "shortcut": "",
+      "desc": "Standart ayarları sıfırlar; eski arayüz takılı kaldığında kullanılır."
+    },
+    {
+      "name": "List generator Precast (Listengenerator Precast)",
+      "menu": "Prekast liste üreticisi",
+      "shortcut": "",
+      "desc": "Prekast üretim/metraj listelerini üretir; başlığı InitPrjAttr.EXT ve HeaderData.ext ile özelleştirilir."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "en_9251",
+      "title": "Prekast Yapılandırması Kullanılamıyor (Planbar 2022)",
+      "body": "Soru: Planbar 2022 kurdum ve yapılandırma menüsüne doğru erişemiyorum; girişler kırmızı soru işaretiyle işaretli ve seçilemiyor. Cevap: Planbar 2022'de prekast modüllerini kullanmak için kurulum sırasında 'Precast elements' seçeneğinin etkinleştirilmesi gerekir. İpucu: 'Fixtures' seçeneği yalnızca yeni kurulumda seçilmelidir; etkinleştirilirse standart gömme parçalar büro klasörüne (STD) kopyalanır ve var olan gömme parçaların üzerine yazılır.",
+      "figures": [
+        "/akademi/prekast/9251_0EM670000075eJT_161f18bc.png",
+        "/akademi/prekast/9251_0EM670000075eJn_b714c8c2.png"
+      ]
+    },
+    {
+      "id": "en_9111",
+      "title": "Prekast Liste Başlığı Değişkenlerini InitPrjAttr.EXT ile Uyarlama",
+      "body": "Soru: Bina strüktürünü (building structure) kullanıyorum ve prekast listelerde kat özniteliğinde strüktürden gelen kat adını çıkarmak istiyorum. Cevap: Varsayılan olarak prekast liste üreticisinin başlığında proje öznitelikleri çıkar. Başka değerler için InitPrjAttr.EXT dosyasını kullanırsınız. Dosyayı standart listeler alanından büro listeleri alanına kopyalayın: dizinlere sağ tıklayıp 'Lists and schedules in default folder' ve 'Lists and schedules in office folder' üzerinden Explorer'ı açın ve InitPrjAttr.EXT dosyasını \\ETC\\BFT\\_List klasöründen ...STD\\BFT\\_List klasörüne kopyalayın. Dosyayı düzenleyicide açıp ihtiyacınıza göre uyarlayın. Örnekte başlıktaki DeckUber değişkenine strüktürden gelen kat adı atanır; diğer başlık değişkenleri de değiştirilebilir.",
+      "figures": [
+        "/akademi/prekast/9111_0EMVi000009JN8b_7684f6c0.png",
+        "/akademi/prekast/9111_0EMVi000009JNDR_96cace15.png",
+        "/akademi/prekast/9111_0EMVi000009JMin_fa4137e8.png"
+      ]
+    },
+    {
+      "id": "en_9109",
+      "title": "Prekast Liste Başlığını HeaderData.ext ile Uyarlama",
+      "body": "Soru: Prekast listelerde başlıktan bazı öznitelikleri nasıl kaldırır veya ek öznitelik eklerim? Cevap: HeaderData.ext dosyası liste üreticisinin genel başlık verisini içerir. Dosyayı standart listeler alanından büro listeleri alanına kopyalayın (dizinlere sağ tıklayıp 'Lists and schedules in default folder' / 'in office folder' Explorer'ıyla, \\ETC\\BFT\\_List klasöründen ...STD\\BFT\\_List klasörüne). Düzenleyicide açıp uyarlayın. Kıvrık parantez '{' ve '@xxxxx' numarası bir çeviri ve dil dosyası referansıdır; düzenlenen satırda her ikisi de kaldırılmalıdır. Örneğin bir bileşeni kaldırmak için parantez, bileşen metni, değişken yer tutucusu, ikinci parantez, değişken ve çeviri metin numarası birlikte silinir.",
+      "figures": [
+        "/akademi/prekast/9109_0EMVi000009ZCtx_aa0274c3.png",
+        "/akademi/prekast/9109_0EMVi000009ZDEv_fe14a9f6.png"
+      ]
+    },
+    {
+      "id": "en_8890",
+      "title": "iWall Taşıma Ankrajı Genişliği Formülü (Kısıtlar)",
+      "body": "Soru: iWall (masif duvar / çift duvar / termal duvar) için taşıma ankrajı kalınlığı otomatik hesaplanabilir mi? Cevap: Evet, şu kısıtlarla. Formüller doğru ankraj kalınlığını yalnızca enine donatı (cross reinforcement) dışta ise verir. Enine donatı içteyse boyuna demirlerin maksimum çapı da taşıma ankrajı genişliğinden düşülmelidir ve konum formülle değerlendirilemez. Her duvar tipi için ayrı gömme parça (kendi katalog referansıyla) kullanılıyorsa tipe özel formül yazılabilir; aynı gömme parça tüm tiplerde kullanılıyorsa, duvar tipini bir If/Else fonksiyonuyla sorgulayan ortak formül gerekir. Kullanılan öznitelikler duvar kalınlığı, kabuk pas payı ve enine donatı maksimum çapıdır. Ortak formül karakter sınırını aşarsa ayrı bir kullanıcı özniteliği oluşturulup liste metninde PARENTPRECAST ile değerlendirilir (ör. 'Ankerdicke <!PARENTPRECAST(@xxxx@)!> cm').",
+      "figures": [
+        "/akademi/prekast/8890_0EMVi00000DshRw_28e90fac.png",
+        "/akademi/prekast/8890_0EMVi00000DsuLt_359dfb71.png",
+        "/akademi/prekast/8890_0EMVi00000DsuFS_cbee05a4.png",
+        "/akademi/prekast/8890_0EMVi00000DsuQj_64569205.png",
+        "/akademi/prekast/8890_0EMVi00000DspZ8_c16ebe80.png",
+        "/akademi/prekast/8890_0EMVi00000Dsutl_7fdfb311.png"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m7-7",
+      "prompt": "Bir kullanıcı prekast yapılandırma menüsüne erişemiyor (kırmızı soru işaretleri) VE eski arayüz takılı kalmış. Hangi ikili doğru çözümdür?",
+      "options": [
+        {
+          "text": "Lisansı yenilemek ve projeyi onarmak",
+          "correct": false
+        },
+        {
+          "text": "Kurulumda 'Precast elements' seçeneğini etkinleştirmek ve cleanstd ile standart ayarları sıfırlamak",
+          "correct": true
+        },
+        {
+          "text": "Ülke ayarını değiştirmek ve yeni proje açmak",
+          "correct": false
+        },
+        {
+          "text": "HeaderData.ext dosyasını silmek ve yeniden kurmak",
+          "correct": false
+        }
+      ],
+      "correctIndex": 1,
+      "explanation": "Erişim sorunu kurulumdaki 'Precast elements' seçeneğinin eksikliğinden; eski arayüz ise içe aktarılan UBX ayarlarından kaynaklanır. Kaynaklara göre çözümler sırasıyla bu seçeneği etkinleştirmek ve Service > Hotline tools > cleanstd çalıştırmaktır.",
+      "bloom": "Analiz",
+      "difficulty": "Zor"
+    },
+    {
+      "id": "m7-8",
+      "prompt": "Liste yapılandırma dosyalarını düzenlerken en güvenli yol hangisidir?",
+      "options": [
+        {
+          "text": "Dosyaları \\ETC\\BFT\\_List standart alanında doğrudan düzenlemek",
+          "correct": false
+        },
+        {
+          "text": "Dosyaları önce büro (STD\\BFT\\_List) alanına kopyalayıp orada düzenlemek",
+          "correct": true
+        },
+        {
+          "text": "Dosyaları masaüstüne kopyalamak",
+          "correct": false
+        },
+        {
+          "text": "Dosyaları hiç kopyalamadan yeniden yazmak",
+          "correct": false
+        }
+      ],
+      "correctIndex": 1,
+      "explanation": "Kaynaklar InitPrjAttr.EXT ve HeaderData.ext dosyalarının standart listeler alanından büro listeleri alanına kopyalanıp orada düzenlenmesini anlatır; böylece standart alan ve güncellemeler değişiklikleri ezmez.",
+      "bloom": "Kavrama",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "Dört belirtiyi (erişilemeyen yapılandırma, gelmeyen yeni palet, yanlış ankraj genişliği, bozuk liste başlığı) alıp her biri için tek cümlelik kök neden ve çözüm eşleştirmesi yazın.",
+    "expected": "Erişim = eksik 'Precast elements' kurulumu; palet = cleanstd; ankraj = enine donatı konumu/If-Else formülü; başlık = çeviri yer tutucusunun temizlenmesi ve büro klasöründe düzenleme.",
+    "hint": "Her belirtide önce 'bu projede mi yoksa kurulum/ayar dosyasında mı?' diye sorun; çoğu prekast sorunu ikincisidir."
+  }
+}

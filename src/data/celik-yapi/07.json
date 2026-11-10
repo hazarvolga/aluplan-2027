@@ -1,0 +1,143 @@
+{
+  "no": 7,
+  "slug": "sik-hatalar-stabilite-add-onlari-ve-pratik",
+  "title": "Sık Hatalar, Stabilite Eklentileri ve Pratik İpuçları",
+  "duration": "26 dk",
+  "sourceModule": "Proje 1 · Modül 6: Çelik Yapı Tasarımı, SDS2 Entegrasyonu ve NC İmalat",
+  "intro": "Bu kapanış dersi, çelik iş akışında sık karşılaşılan sorunları ve çözümlerini bir araya getirir. Ayrıca detaylandırma kapsamından ayrı duran çelik stabilite doğrulama eklentilerini kısaca konumlandırır, böylece hangi işin hangi araçla yapıldığını netleştirir.",
+  "objectives": [
+    "Otomatik bağlantı ikonunun görünmeme nedenlerini ve çözümünü uygulamak.",
+    "VPN üzerinden uzaktan erişimin tipik sorunlarından kaçınmak.",
+    "ALLPLAN'da çelik stabilite doğrulamasının ayrı eklentilerle (RSX-ST, BTII+) yapıldığını, bu modülün ise detaylandırma/imalata odaklandığını ayırt etmek.",
+    "Sorun giderirken lisans, rol ve profil kaynağı gibi önkoşulları sistematik kontrol etmek."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Otomatik bağlantı ikonu görünmüyor",
+      "body": "Otomatik bağlantılar ikonuna erişemiyorsanız iki olası nedeni sırayla kontrol edin. Birincisi lisans: bu işlev Mühendislik (Engineering) sürümünden itibaren kullanılabilir. İkincisi özelleştirilmiş eylem çubuğu (custom action bar): eylem çubuğunu sıfırladığınızda ikonu Mühendislik rolünde bulursunuz. Ayrıca elemanlarınızın Nemetschek katalog profillerinden oluşturulduğundan emin olun; aksi halde bağlantılar üretilemez.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Uzaktan erişimde performans sorunları",
+      "body": "SDS2 verisine yavaş veya yoğun VPN üzerinden doğrudan erişim, çok sayıda okuma/yazma ve dosya kilidi nedeniyle yavaşlık ve erişim çatışması doğurur. Bunun yerine ana ofisteki makineye Remote Desktop ile bağlanın ya da SDS2 Edge gibi bulut/sanal çalışma alanı kullanın; veri merkezde kalır, yalnızca oturum akıtılır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Stabilite doğrulaması detaylandırmadan ayrıdır",
+      "body": "Çelik stabilite doğrulaması (knicken, biegedrillknicken) bu modülün detaylandırma/imalat odağından ayrı araçlarla yapılır. ALLPLAN çubuk sisteminde (Stabwerk) basitleştirilmiş doğrulama için RSX-ST ek modülü kullanılır; bu modül çift-T profillerini çift taraflı, kaymasız çatal mesnet varsayımıyla knicken ve biegedrillknicken açısından inceler. Daha ayrıntılı analiz için BTII+ programı kullanılır; mesnet ve yük detayları ayarlanabilir ve ersatzstab yöntemiyle mümkün olmayan profiller tanımlanabilir. BTII+ satın alındıysa RSX-ST modülü otomatik olarak dahildir.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Ersatzstab yönteminin sınırları",
+      "body": "RSX-ST ek modülündeki basitleştirilmiş doğrulama ersatzstab (ikame çubuk) yöntemine dayanır ve sınırları vardır: yalnızca çift-T profilleri, torsiyon yükü yok, mesnet ve yük uygulama noktası daima kesit ağırlık merkezinde, ara mesnetler yalnızca kısıtlı. Bu sınırların dışındaki durumlar için BTII+ gibi ayrıntılı araç gerekir."
+    },
+    {
+      "title": "DİKKAT: Profil kaynağı önkoşulu",
+      "body": "Çelik iş akışındaki birçok otomasyon (özellikle otomatik bağlantılar) elemanların Nemetschek katalog profilinden türetilmiş olmasına bağlıdır. Sorun giderirken önce bu önkoşulu doğrulayın."
+    }
+  ],
+  "checkpoint": "Bir sorun karşısında lisans, rol/eylem çubuğu ve profil kaynağını sırayla kontrol edebiliyor; stabilite doğrulamasının detaylandırmadan ayrı araçlarla yapıldığını açıklayabiliyorsanız, modülün kapsamını netleştirmişsiniz demektir.",
+  "commands": [
+    {
+      "name": "RSX-ST",
+      "menu": "ALLPLAN Stabwerk · ek modül",
+      "shortcut": "",
+      "desc": "Çift-T profiller için ersatzstab yöntemiyle basitleştirilmiş çelik stabilite doğrulaması."
+    },
+    {
+      "name": "BTII+",
+      "menu": "ALLPLAN · ayrı program (RSX bağlam menüsünden çağrılır)",
+      "shortcut": "",
+      "desc": "Biegedrillknicken için ayrıntılı stabilite analizi programı."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "en_9373",
+      "title": "Eksik ikon: lisans ve eylem çubuğu kontrolü",
+      "body": "2024 sürümünde taşıyıcı yapı modülü otomatik bağlantılar ikonu sağlar; komut elemanları arka planda SDS2 ile bağlar. Komut yalnızca kiriş ve kolonlar Nemetschek katalog profillerinden oluşturulmuşsa çalışır. NOT: Otomatik bağlantılar ikonuna erişilemiyorsa neden lisanstır (Mühendislik sürümünden itibaren) ya da özelleştirilmiş eylem çubuğudur; eylem çubuğunu sıfırlayınca ikon Mühendislik rolünde bulunur.",
+      "figures": []
+    },
+    {
+      "id": "en_12195",
+      "title": "Uzaktan erişimde önerilen yaklaşımlar",
+      "body": "SDS2 verisine yavaş/yoğun VPN üzerinden doğrudan erişim teknik olarak mümkün ama önerilmez; çok sayıda okuma/yazma ve dosya kilidi performans ve kararlılık sorunu çıkarır. VPN'de haritalanmış sürücü üzerinden WAN okuma/yazma gecikme ve çatışma doğurur. Önerilen yol, ana ofisteki SDS2 makinesine RDP ile bağlanılan Remote Desktop kurulumudur; veri yerelde kalır. Çok kullanıcılı erişimde SDS2 Edge gibi bulut dağıtımları önerilir; veri merkezde kalır, kullanıcı oturumu akıtır. Her senaryoda bant genişliği, gecikme ve güvenlik denetlenmelidir.",
+      "figures": []
+    },
+    {
+      "id": "de_11758",
+      "title": "RSX - Çelik: stabilite doğrulaması seçenekleri",
+      "body": "Çubuk sisteminde (Stabwerk) çelik stabilite doğrulaması için seçenekler: 1) RSX-ST ek modülüyle basitleştirilmiş doğrulama. Tekil çubuklar ve çubuk dizileri, çift taraflı kaymasız çatal mesnet varsayımıyla knicken ve biegedrillknicken açısından incelenir. Yük daima kesit ağırlık merkezinde uygulanır ve değiştirilemez. Doğrulama ersatzstab yöntemiyle yapılır; sınırlar: yalnızca çift-T profiller, torsiyon yok, mesnet ve yük noktası ağırlık merkezinde, ara mesnetler kısıtlı. 2) BTII+ programıyla ayrıntılı doğrulama (biegedrillknicken); mesnet ve yük detayları ayarlanabilir, ersatzstab ile mümkün olmayan profiller tanımlanabilir. RSX'ten BTII+ bağlam menüsüyle çağrılabilir ve maßgebende yükler/kombinasyonlar otomatik aktarılır. 3) RSX-ST veya BTII+ olmadan, ön deformasyonlar tanımlanmışsa 2. mertebe teorisiyle knicken doğrulanabilir; ancak düzlem çubuk sisteminde düzlem dışı knicken bu yolla doğrulanamaz, biegedrillknicken RSX'te ek modülsüz veya BTII+ olmadan mümkün değildir. Not: BTII+ satın alındıysa RSX-ST otomatik dahildir.",
+      "figures": [
+        "/akademi/celik-yapi/11758_0EMRD00000OFYMw_18538d20.png"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m6-7-1",
+      "prompt": "Otomatik bağlantı ikonu görünmüyorsa ilk kontrol edilmesi gereken iki neden nedir?",
+      "options": [
+        {
+          "text": "Ekran çözünürlüğü ve fare tipi",
+          "correct": false
+        },
+        {
+          "text": "Lisans seviyesi ve özelleştirilmiş eylem çubuğu",
+          "correct": true
+        },
+        {
+          "text": "İnternet hızı ve disk boyutu",
+          "correct": false
+        },
+        {
+          "text": "Projedeki kat sayısı ve ölçek",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynaktaki NOT, ikona erişilememesini lisansa (Mühendislik sürümünden itibaren) ve özelleştirilmiş eylem çubuğuna bağlar; eylem çubuğu sıfırlanınca ikon Mühendislik rolünde görünür.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta"
+    },
+    {
+      "id": "m6-7-2",
+      "prompt": "RSX-ST ek modülündeki basitleştirilmiş stabilite doğrulaması hangi profil türüyle sınırlıdır?",
+      "options": [
+        {
+          "text": "Yalnızca kutu profiller",
+          "correct": false
+        },
+        {
+          "text": "Yalnızca çift-T (Doppel-T) profiller",
+          "correct": true
+        },
+        {
+          "text": "Yalnızca yuvarlak profiller",
+          "correct": false
+        },
+        {
+          "text": "Tüm serbest kesitler",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre ersatzstab yöntemine dayanan RSX-ST doğrulaması yalnızca çift-T profillerle sınırlıdır; diğer durumlar için BTII+ gerekir.",
+      "bloom": "Analiz",
+      "difficulty": "Zor"
+    }
+  ],
+  "exercise": {
+    "task": "Bir çelik iş akışı sorununu (örneğin bağlantı üretilememesi) ele alıp lisans, rol/eylem çubuğu ve profil kaynağı önkoşullarını sırayla denetleyen kısa bir kontrol listesi yazın.",
+    "expected": "Üç önkoşulu (lisans, eylem çubuğu/rol, Nemetschek katalog profili) kapsayan bir sorun giderme listesi.",
+    "hint": "Stabilite doğrulaması gerekiyorsa bunun detaylandırmadan ayrı bir araç (RSX-ST veya BTII+) işi olduğunu not edin."
+  }
+}

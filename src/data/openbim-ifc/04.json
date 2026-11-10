@@ -1,0 +1,158 @@
+{
+  "no": 4,
+  "slug": "oznitelik-esleme-attribute-mapping-ve-pset",
+  "title": "Öznitelik Eşleme (Attribute-Mapping) ve Pset'ler",
+  "duration": "30 dk",
+  "sourceModule": "Proje 1 · Modül 10: OpenBIM, IFC 4/4.3, IDS ve Bimplus CDE",
+  "intro": "Bu ders, ALLPLAN özniteliklerinizi IFC'deki istenen Property Set (Pset) içine nasıl eşleyeceğinizi (Attribute-Mapping) ve birimli değerlerin (uzunluk, alan, hacim) doğru IFC Property Type ile nasıl aktarılacağını öğretir.",
+  "objectives": [
+    "Attribute-Mapping diyaloğunda yeni bir eşleme dosyası (.cfg) oluşturmayı ve mevcut dosyayı 'Suchen'/'Bearbeiten' ile kullanmayı tanımlamak.",
+    "Bir özniteliğin hedef Pset adını ve IFC içindeki yeni adını belirlemeyi öğrenmek.",
+    "Birimli öznitelikler için IfcLengthMeasure, IfcAreaMeasure ve IfcVolumeMeasure Property Type'larının doğru seçilmesini açıklamak.",
+    "Bir IFC görüntüleyicide birimin görüntü ayarına göre dönüştürülebileceğini ayırt etmek."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Eşleme dosyası oluşturma veya yükleme",
+      "body": "Attribute-Mapping (öznitelik eşleme), bir özniteliği istenen ya da önceden belirlenmiş bir Pset (Eigenschaftenset) içine eşlemek ve gerekirse yeniden adlandırmaktır. Yeni bir eşleme dosyasını 'Neu' ile oluşturup .cfg dosyası olarak kaydedin; ya da 'Suchen' ile var olan bir eşleme dosyasını yükleyin. Mevcut bir dosyayı 'Bearbeiten' ile düzenleyebilirsiniz.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Eşleme maskesinin alanları",
+      "body": "Attribute-Mapping maskesinde sırasıyla: (1) yeni bir öznitelik satırı eklenir; (2) eşlenecek öznitelik öznitelik maskesinden veya doğrudan metin olarak atanır (adlandırma tam olarak doğru olmalıdır); (3) hedef Pset adı girilir; (4) IFC içindeki istenen öznitelik adı girilir (öznitelik IFC'de ALLPLAN'dakinden farklı adlandırılabilir); (5) özniteliğin IFC içindeki formatı girilir (genelde doğrudan doğru gelir); (6) öznitelik ataması belirli bir eleman (IFC sınıfı) bazında yapılabilir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Birimli öznitelikler (miktarlar)",
+      "body": "Kendi öznitelik eşlemenizi kullanıp birimleri de IFC'ye yazmak istiyorsanız, ilgili özniteliğin IFC Property Type'ı (veri tipi) doğru girilmelidir. Uzunluklar için IfcLengthMeasure, alanlar için IfcAreaMeasure ve hacimler için IfcVolumeMeasure kullanırsanız veriler sırasıyla m, m2 ve m3 olarak aktarılır. Doğru Property Type'ı, kendi eşlemesi olmayan bir IFC dosyasını bir metin düzenleyiciyle açıp ilgili özniteliği arayarak kontrol edebilirsiniz.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Görüntüleyici birimi dönüştürür",
+      "body": "Bir IFC dosyasını bir görüntüleyicide incelerken değerler, görüntüleyicinin seçeneklerinde ayarlı birime göre gösterilir. Örneğin birim milimetre ayarlıysa, kullanıcı tanımlı özniteliklerin değerleri milimetreye dönüştürülerek ve 'mm' birimiyle gösterilir. Yani 'yanlış birim' gibi görünen bir sonuç aslında görüntüleyici ayarından kaynaklanabilir.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Öznitelik adının tam eşleşmemesi",
+      "body": "Eşlenecek özniteliği doğrudan metin olarak atarken adlandırmanın tam olarak doğru olması gerekir. Küçük bir yazım farkı özniteliğin eşlenmemesine yol açar."
+    },
+    {
+      "title": "DİKKAT: Birim görüntüleyici ayarına bağlı",
+      "body": "Bir değer görüntüleyicide beklenmedik bir birimle (örn. mm) çıkıyorsa, bu bir dışa aktarım hatası olmayabilir; görüntüleyicinin birim seçeneği değeri dönüştürüp öyle gösteriyor olabilir. Önce görüntüleyici birim ayarını kontrol edin."
+    }
+  ],
+  "checkpoint": "Bir uzunluk özniteliğini IfcLengthMeasure ile eşleyip IFC'de m biriminde doğru değeri görebiliyorsanız öznitelik eşlemeyi doğru kurmuşsunuz demektir.",
+  "commands": [
+    {
+      "name": "Attribute-Mapping",
+      "menu": "IFC dışa aktarım diyaloğu",
+      "shortcut": "",
+      "desc": "Özniteliklerin Pset'e eşlendiği ve yeniden adlandırıldığı maske."
+    },
+    {
+      "name": "Neu / Suchen / Bearbeiten",
+      "menu": "Attribute-Mapping · dosya işlemleri",
+      "shortcut": "",
+      "desc": "Yeni .cfg eşleme dosyası oluşturma, var olanı yükleme ve düzenleme."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_8645",
+      "title": "IFC Öznitelik Eşleme Maskesi ve Birimler",
+      "body": "Kaynak, öznitelik eşleme (Attribute-Mapping) sürecini anlatır. Yeni eşleme dosyası 'Neu' ile oluşturulup .cfg olarak kaydedilir ya da 'Suchen' ile mevcut dosya yüklenir; 'Bearbeiten' ile düzenlenir. Maskede yeni satır eklenir, eşlenecek öznitelik öznitelik maskesinden veya metinle atanır (adlandırma tam doğru olmalı), hedef Pset adı ve IFC içindeki öznitelik adı girilir, formatı belirtilir ve atama belirli bir IFC sınıfı bazında yapılabilir. Birimli öznitelikleri IFC'ye yazmak için IFC Property Type doğru girilmelidir: uzunluk için IfcLengthMeasure, alan için IfcAreaMeasure, hacim için IfcVolumeMeasure kullanıldığında veriler m, m2 ve m3 olarak aktarılır. Görüntüleyicide değerler, orada ayarlı birime göre dönüştürülerek gösterilir.",
+      "figures": [
+        "/akademi/openbim-ifc/8645_0EMVi000002R9xK_bf5274ba.png",
+        "/akademi/openbim-ifc/8645_0EMVi000002RAbd_2f9fdf11.png",
+        "/akademi/openbim-ifc/8645_0EMVi000002R9xM_29f8e5f0.png",
+        "/akademi/openbim-ifc/8645_0EMVi00000F0rYL_c118a4ef.png",
+        "/akademi/openbim-ifc/8645_0EMVi000002R9xN_c8fbe5ef.png",
+        "/akademi/openbim-ifc/8645_0EMVi000002R9xL_cc25b108.png"
+      ]
+    },
+    {
+      "id": "de_8899",
+      "title": "Birimli Kullanıcı Tanımlı Özniteliklerin Eşlenmesi",
+      "body": "Kaynak, IFC dışa aktarımda kendi öznitelik eşlemenizi kullanırken birimleri IFC'ye yazmak için IFC Property Type'ın doğru belirtilmesi gerektiğini vurgular. Doğru Property Type'ı, kendi eşlemesi olmayan bir IFC dosyasını bir metin düzenleyiciyle açıp ilgili kullanıcı tanımlı öznitelikleri arayarak kontrol edebilirsiniz; orada doğru Property Type yazılıdır ve siz de eşlemenizde aynısını girebilirsiniz. Uzunluk için IfcLengthMeasure, alan için IfcAreaMeasure, hacim için IfcVolumeMeasure kullanıldığında veriler m, m2 ve m3 olarak aktarılır. Görüntüleyicideki gösterim, oradaki birim seçeneğine bağlıdır.",
+      "figures": [
+        "/akademi/openbim-ifc/8899_0EM670000075i7H_b048d9d1.png"
+      ]
+    },
+    {
+      "id": "en_11503",
+      "title": "Birimli Özel Özniteliklerin IFC Dışa Aktarımı Nasıl Ayarlanır",
+      "body": "Soru: IFC dışa aktarımda birimli özel öznitelikler nasıl dahil edilir? Yanıt: IFC dışa aktarımda özel bir öznitelik eşlemesi kullanıyorsanız ve birimleri IFC dosyasına dahil etmek istiyorsanız, IFC property type doğru belirtilmelidir. Bunu, özel eşlemesi olmayan mevcut bir IFC dosyasını metin düzenleyiciyle açıp ilgili özel öznitelikleri arayarak doğrulayabilirsiniz; doğru IFC property type orada listelenir ve eşlemenize aynen uygularsınız. Uzunluk için IfcLengthMeasure, alan için IfcAreaMeasure, hacim için IfcVolumeMeasure kullanılırsa veri sırasıyla metre, metrekare ve metreküp olarak aktarılır. Bir görüntüleyicide gösterim, görüntüleyicinin birim ayarına bağlıdır; birim milimetre ayarlıysa değerler mm'ye çevrilip 'mm' birimiyle gösterilir.",
+      "figures": [
+        "/akademi/openbim-ifc/11503_0EM670000075i7H_b048d9d1.png"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m10-4-1",
+      "prompt": "Alan değerlerinin IFC'ye m2 olarak aktarılması için hangi IFC Property Type kullanılmalıdır?",
+      "options": [
+        {
+          "text": "IfcLengthMeasure",
+          "correct": false
+        },
+        {
+          "text": "IfcAreaMeasure",
+          "correct": true
+        },
+        {
+          "text": "IfcVolumeMeasure",
+          "correct": false
+        },
+        {
+          "text": "IfcCountMeasure",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre alanlar için IfcAreaMeasure kullanıldığında veri m2 olarak aktarılır. IfcLengthMeasure uzunluk (m), IfcVolumeMeasure hacim (m3) içindir.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta"
+    },
+    {
+      "id": "m10-4-2",
+      "prompt": "Doğru IFC Property Type'ı öğrenmenin kaynakta önerilen yolu nedir?",
+      "options": [
+        {
+          "text": "Rastgele bir değer girip denemek",
+          "correct": false
+        },
+        {
+          "text": "Özel eşlemesi olmayan bir IFC dosyasını metin düzenleyiciyle açıp ilgili özniteliği aramak",
+          "correct": true
+        },
+        {
+          "text": "Lisans desteğini aramak",
+          "correct": false
+        },
+        {
+          "text": "Modeli PDF olarak çıkarmak",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynak, kendi eşlemesi olmayan bir IFC dosyasını metin düzenleyiciyle açıp özniteliği arayarak doğru Property Type'ı görmeyi ve eşlemeye aynen uygulamayı önerir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "Bir hacim özniteliği için eşleme satırı oluşturun, hedef Pset adını belirleyin ve IFC Property Type'ı IfcVolumeMeasure yapın. Dışa aktardıktan sonra IFC'yi metin düzenleyiciyle açıp değerin m3 biriminde yazıldığını doğrulayın.",
+    "expected": "IFC içinde ilgili özniteliğin IfcVolumeMeasure ile ve m3 değeriyle görünmesi.",
+    "hint": "Görüntüleyicide farklı birim görürseniz önce görüntüleyicinin birim seçeneğine bakın."
+  }
+}

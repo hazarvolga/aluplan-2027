@@ -1,0 +1,37 @@
+[
+  {
+    "no": 1,
+    "slug": "celik-yapi-ortami-ve-profiller",
+    "title": "Çelik Yapı Ortamı ve Profiller: Taşıyıcı Yapı Modülü ve Profil Kataloğu"
+  },
+  {
+    "no": 2,
+    "slug": "otomatik-celik-baglantilari",
+    "title": "Otomatik Çelik Bağlantıları: SDS2 Tabanlı Birleşim Üretimi ve Düzenleme"
+  },
+  {
+    "no": 3,
+    "slug": "sds2-nedir-detaylandirma-is-akisi",
+    "title": "SDS2 Nedir? Çelik Detaylandırma İş Akışı ve Sertifikasyon Seviyeleri"
+  },
+  {
+    "no": 4,
+    "slug": "sds2-ortami-donanim-lisans-uzaktan-erisim",
+    "title": "SDS2 Ortamı: Donanım, Lisans, Uzaktan Erişim ve Bulut Çalışma Alanı"
+  },
+  {
+    "no": 5,
+    "slug": "nc-imalat-ve-uretim-verisi-cikti",
+    "title": "NC İmalat ve Üretim Verisi Çıktısı: CNC Yapılandırması ve BVBS Aktarımı"
+  },
+  {
+    "no": 6,
+    "slug": "celik-metraj-listeler-ve-raporlar",
+    "title": "Çelik Metraj, Listeler ve Raporlar: Elemandan Belgeye Bağlı Çıktı"
+  },
+  {
+    "no": 7,
+    "slug": "sik-hatalar-stabilite-add-onlari-ve-pratik",
+    "title": "Sık Hatalar, Stabilite Eklentileri ve Pratik İpuçları"
+  }
+]

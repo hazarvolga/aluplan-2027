@@ -7,26 +7,28 @@
 import { temelModellemeLessons } from './temel-modelleme';
 import { araziModellemeLessons } from './arazi-modelleme';
 import { lejantLessons } from './lejant';
+import { donatiDetaylandirmaLessons } from './donati-detaylandirma';
+import { celikYapiLessons } from './celik-yapi';
+import { prekastLessons } from './prekast';
+import { otomasyonScriptingLessons } from './otomasyon-scripting';
+import { openbimIfcLessons } from './openbim-ifc';
 import type { TmLesson } from './temel-modelleme';
+import { ROL_ADLARI, type AkademiRol } from './akademi-roller';
 
-export type AkademiRol =
-  | 'mimar'
-  | 'statik'
-  | 'altyapi'
+// Rol sabitleri hafif modülden gelir; sunucu tarafı tüketiciler için yeniden dışa aktarılır.
+// 'use client' bileşenleri ROL_ADLARI'yı doğrudan '@/data/akademi-roller'dan almalıdır.
+export { ROL_ADLARI };
+export type { AkademiRol };
+
+export type AkademiSeri =
+  | 'temel-modelleme'
+  | 'arazi-modelleme'
+  | 'lejant'
+  | 'donati-detaylandirma'
+  | 'celik-yapi'
   | 'prekast'
-  | 'bim-yonetici'
-  | 'teknik-ressam';
-
-export const ROL_ADLARI: Record<AkademiRol, string> = {
-  mimar: 'Mimar',
-  statik: 'Statik / Donatı',
-  altyapi: 'Altyapı / Köprü',
-  prekast: 'Prekast',
-  'bim-yonetici': 'BIM Yöneticisi',
-  'teknik-ressam': 'Teknik Ressam / Öğrenci',
-};
-
-export type AkademiSeri = 'temel-modelleme' | 'arazi-modelleme' | 'lejant';
+  | 'otomasyon-scripting'
+  | 'openbim-ifc';
 
 export interface MufredatKaydi {
   series: AkademiSeri;
@@ -95,6 +97,44 @@ export const mufredatHaritasi: readonly MufredatKaydi[] = [
   { series: 'lejant', slug: 'donati-lejanti-hucresini-tanimlama', moduleCode: 'M4B', roles: ['statik'] },
   { series: 'lejant', slug: 'donati-lejantini-olusturma', moduleCode: 'M4B', roles: ['statik'] },
   { series: 'lejant', slug: 'donati-lejantini-test-etme-duzenleme', moduleCode: 'M4B', roles: ['statik'] },
+  // M5 — Betonarme 3B Donatı Detaylandırma (İleri, Statik)
+  { series: 'donati-detaylandirma', slug: 'donati-ortami-ve-ulusal-norm', moduleCode: 'M5', roles: ['statik'] },
+  { series: 'donati-detaylandirma', slug: 'yabanci-norma-gore-donati-plani', moduleCode: 'M5', roles: ['statik'] },
+  { series: 'donati-detaylandirma', slug: 'ozel-bukum-sekillerini-hizli-uretme', moduleCode: 'M5', roles: ['statik'] },
+  { series: 'donati-detaylandirma', slug: 'helis-donati-ve-dik-olmayan-bukum-acinim', moduleCode: 'M5', roles: ['statik'] },
+  { series: 'donati-detaylandirma', slug: 'donati-gosterimi-renk-ve-format', moduleCode: 'M5', roles: ['statik'] },
+  { series: 'donati-detaylandirma', slug: 'egik-gorunum-ve-bukum-rulosu-cap-gosterimi', moduleCode: 'M5', roles: ['statik'] },
+  { series: 'donati-detaylandirma', slug: 'donati-gorunumleri-kopyalama-ve-2023-degisikligi', moduleCode: 'M5', roles: ['statik'] },
+  { series: 'donati-detaylandirma', slug: 'donati-metraji-ve-sik-hata-mesajlari', moduleCode: 'M5', roles: ['statik'] },
+  // M6 — Çelik Yapı, SDS2, NC İmalat (İleri, Statik)
+  { series: 'celik-yapi', slug: 'celik-yapi-ortami-ve-profiller', moduleCode: 'M6', roles: ['statik'] },
+  { series: 'celik-yapi', slug: 'otomatik-celik-baglantilari', moduleCode: 'M6', roles: ['statik'] },
+  { series: 'celik-yapi', slug: 'sds2-nedir-detaylandirma-is-akisi', moduleCode: 'M6', roles: ['statik'] },
+  { series: 'celik-yapi', slug: 'sds2-ortami-donanim-lisans-uzaktan-erisim', moduleCode: 'M6', roles: ['statik'] },
+  { series: 'celik-yapi', slug: 'nc-imalat-ve-uretim-verisi-cikti', moduleCode: 'M6', roles: ['statik'] },
+  { series: 'celik-yapi', slug: 'celik-metraj-listeler-ve-raporlar', moduleCode: 'M6', roles: ['statik'] },
+  { series: 'celik-yapi', slug: 'sik-hatalar-stabilite-add-onlari-ve-pratik', moduleCode: 'M6', roles: ['statik'] },
+  // M7 — Prekast Yapı Elemanları (İleri, Prekast)
+  { series: 'prekast', slug: 'prekast-ortami-kurulum-eleman-paleti', moduleCode: 'M7', roles: ['prekast'] },
+  { series: 'prekast', slug: 'einbauteile-ifc-tipi-ve-formul', moduleCode: 'M7', roles: ['prekast'] },
+  { series: 'prekast', slug: 'listeler-uretim-ciktisi-otomasyonu', moduleCode: 'M7', roles: ['prekast'] },
+  { series: 'prekast', slug: 'prekast-sik-hatalar-pratik', moduleCode: 'M7', roles: ['prekast'] },
+  // M9 — Otomasyon, Visual Scripting, PythonParts (Uzman, BIM Yöneticisi)
+  { series: 'otomasyon-scripting', slug: 'visual-scripting-giris-node-kurulumu', moduleCode: 'M9', roles: ['bim-yonetici'] },
+  { series: 'otomasyon-scripting', slug: 'pythonparts-temelleri-ve-actionbar', moduleCode: 'M9', roles: ['bim-yonetici'] },
+  { series: 'otomasyon-scripting', slug: 'formul-editoru-betik-komutlari-ve-excel-sozdizimi', moduleCode: 'M9', roles: ['bim-yonetici'] },
+  // M10 — OpenBIM, IFC, Bimplus CDE (Uzman, BIM Yöneticisi)
+  { series: 'openbim-ifc', slug: 'openbim-ifc-ve-bimplus-kavrami', moduleCode: 'M10', roles: ['bim-yonetici'] },
+  { series: 'openbim-ifc', slug: 'bimplus-share-proje-baslatma-ve-cde', moduleCode: 'M10', roles: ['bim-yonetici'] },
+  { series: 'openbim-ifc', slug: 'ifc-disa-aktarim-favoriler-ve-degisim-profilleri', moduleCode: 'M10', roles: ['bim-yonetici'] },
+  { series: 'openbim-ifc', slug: 'oznitelik-esleme-attribute-mapping-ve-pset', moduleCode: 'M10', roles: ['bim-yonetici'] },
+  { series: 'openbim-ifc', slug: 'ifc-sistem-grup-ve-objekttyp-yapilari', moduleCode: 'M10', roles: ['bim-yonetici'] },
+  { series: 'openbim-ifc', slug: 'ifc-ice-aktarim-ve-referans-model-xref', moduleCode: 'M10', roles: ['bim-yonetici'] },
+  { series: 'openbim-ifc', slug: 'bimplus-cde-senkronizasyon-ve-yedekleme', moduleCode: 'M10', roles: ['bim-yonetici'] },
+  { series: 'openbim-ifc', slug: 'koordinasyon-cakisma-ve-bcf-sorun-yonetimi', moduleCode: 'M10', roles: ['bim-yonetici'] },
+  { series: 'openbim-ifc', slug: 'ids-ile-teslim-dogrulama-ve-epys-ids-yapisi', moduleCode: 'M10', roles: ['bim-yonetici'] },
+  { series: 'openbim-ifc', slug: 'epys-adlandirma-oznitelik-kurallarini-saglamak-ve-dogrulama', moduleCode: 'M10', roles: ['bim-yonetici'] },
+  { series: 'openbim-ifc', slug: 'sik-hatalar-ve-cozumleri-ifc-ve-share', moduleCode: 'M10', roles: ['bim-yonetici'] },
 ];
 
 /** Modül kodundan seviye slug'ı. */
@@ -111,6 +151,11 @@ const SERI: Record<AkademiSeri, { lessons: readonly TmLesson[]; basePath: string
   'temel-modelleme': { lessons: temelModellemeLessons, basePath: '/akademi/temel-modelleme', label: 'Temel Modelleme' },
   'arazi-modelleme': { lessons: araziModellemeLessons, basePath: '/akademi/arazi-modelleme', label: 'Arazi Modelleme' },
   lejant: { lessons: lejantLessons, basePath: '/akademi/lejant', label: 'Lejant' },
+  'donati-detaylandirma': { lessons: donatiDetaylandirmaLessons, basePath: '/akademi/donati-detaylandirma', label: 'Donatı Detaylandırma' },
+  'celik-yapi': { lessons: celikYapiLessons, basePath: '/akademi/celik-yapi', label: 'Çelik Yapı' },
+  prekast: { lessons: prekastLessons, basePath: '/akademi/prekast', label: 'Prekast' },
+  'otomasyon-scripting': { lessons: otomasyonScriptingLessons, basePath: '/akademi/otomasyon-scripting', label: 'Otomasyon' },
+  'openbim-ifc': { lessons: openbimIfcLessons, basePath: '/akademi/openbim-ifc', label: 'OpenBIM' },
 };
 
 export interface ModulDersi {

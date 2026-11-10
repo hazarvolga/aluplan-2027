@@ -5,26 +5,43 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { buildSidebarLevels, isAkademiLevelActive, isAkademiModuleActive } from './sidebar-nav';
-import { temelModellemeLessons } from '@/data/temel-modelleme';
-import { araziModellemeLessons } from '@/data/arazi-modelleme';
-import { lejantLessons } from '@/data/lejant';
-import type { TmLesson } from '@/data/temel-modelleme';
+// Sidebar yalnızca no/slug/title kullanır; tam ders verisini (gövde, adım, makale,
+// figür) tarayıcıya taşımamak için hafif _index.json dosyalarını import eder.
+import temelIdx from '@/data/temel-modelleme/_index.json';
+import araziIdx from '@/data/arazi-modelleme/_index.json';
+import lejantIdx from '@/data/lejant/_index.json';
+import donatiIdx from '@/data/donati-detaylandirma/_index.json';
+import celikIdx from '@/data/celik-yapi/_index.json';
+import prekastIdx from '@/data/prekast/_index.json';
+import otomasyonIdx from '@/data/otomasyon-scripting/_index.json';
+import openbimIdx from '@/data/openbim-ifc/_index.json';
 import styles from './AkademiSidebar.module.css';
 
 const sidebarLevels = buildSidebarLevels();
+
+interface SidebarLesson {
+  no: number;
+  slug: string;
+  title: string;
+}
 
 interface AkademiSeriesNav {
   levelSlug: string;
   basePath: string;
   title: string;
-  lessons: readonly TmLesson[];
+  lessons: readonly SidebarLesson[];
 }
 
 /** Lesson series nested under a level in the sidebar. */
 const AKADEMI_SERIES: readonly AkademiSeriesNav[] = [
-  { levelSlug: 'temel', basePath: '/akademi/temel-modelleme', title: 'Temel Modelleme Eğitimi', lessons: temelModellemeLessons },
-  { levelSlug: 'temel', basePath: '/akademi/arazi-modelleme', title: 'Arazi Modelleme Eğitimi', lessons: araziModellemeLessons },
-  { levelSlug: 'orta', basePath: '/akademi/lejant', title: 'Lejant Oluşturma Eğitimi', lessons: lejantLessons },
+  { levelSlug: 'temel', basePath: '/akademi/temel-modelleme', title: 'Temel Modelleme Eğitimi', lessons: temelIdx },
+  { levelSlug: 'temel', basePath: '/akademi/arazi-modelleme', title: 'Arazi Modelleme Eğitimi', lessons: araziIdx },
+  { levelSlug: 'orta', basePath: '/akademi/lejant', title: 'Lejant Oluşturma Eğitimi', lessons: lejantIdx },
+  { levelSlug: 'ileri', basePath: '/akademi/donati-detaylandirma', title: 'Donatı Detaylandırma', lessons: donatiIdx },
+  { levelSlug: 'ileri', basePath: '/akademi/celik-yapi', title: 'Çelik Yapı ve SDS2', lessons: celikIdx },
+  { levelSlug: 'ileri', basePath: '/akademi/prekast', title: 'Prekast Yapı Elemanları', lessons: prekastIdx },
+  { levelSlug: 'uzman', basePath: '/akademi/otomasyon-scripting', title: 'Otomasyon ve Visual Scripting', lessons: otomasyonIdx },
+  { levelSlug: 'uzman', basePath: '/akademi/openbim-ifc', title: 'OpenBIM ve IFC', lessons: openbimIdx },
 ];
 
 /** Program-wide curriculum nav: sticky rail on desktop, off-canvas drawer on mobile. */

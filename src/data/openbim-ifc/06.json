@@ -1,0 +1,142 @@
+{
+  "no": 6,
+  "slug": "ifc-ice-aktarim-ve-referans-model-xref",
+  "title": "IFC İçe Aktarım ve Referans Model (XREF)",
+  "duration": "27 dk",
+  "sourceModule": "Proje 1 · Modül 10: OpenBIM, IFC 4/4.3, IDS ve Bimplus CDE",
+  "intro": "Bu ders, bir IFC dosyasını kolay güncellenebilir bir referans (XREF) olarak nasıl bağlayacağınızı, ne zaman XREF yerine içe aktarım gerektiğini ve STEP dosyalarının ALLPLAN'a nasıl taşınabileceğini öğretir.",
+  "objectives": [
+    "Bir IFC dosyasını XREF olarak bağlamayı ve çift tıkla güncellemeyi tanımlamak.",
+    "XREF ile bağlı bir IFC'yi değiştirmek (içindeki nesneleri düzenlemek) istendiğinde neden içe aktarım gerektiğini açıklamak.",
+    "XREF referansına tutunarak (snap) koordinasyon ölçümü yapmayı sıralamak.",
+    "STEP (.stp) dosyalarının doğrudan desteklenmediğini ve IFC'ye dönüştürülerek içe aktarıldığını ayırt etmek."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "IFC'yi XREF olarak bağlama",
+      "body": "Bir IFC dosyasını XREF olarak bağlamak, onu kolayca güncelleyebilmeyi sağlar. Menü çubuğunu açın, IFC dosyasını XREF olarak ekleyin, dosyayı seçin, ekleme modunu belirleyin ve plan görünümünüze yerleştirin, ardından onaylayın. Artık IFC dosyasını görüntüleyebilir ve bu modelin çeşitli noktalarına tutunarak (snap) ölçüm yapabilirsiniz.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Referansı güncelleme veya değiştirme",
+      "body": "IFC dosyasını güncellemek ya da referansı değiştirmek için eklenen XREF üzerine çift tıklayın. Böylece aynı dosya değiştiğinde modeldeki referansı yenileyebilir veya başka bir dosyaya işaret ettirebilirsiniz. Bu, OpenBIM koordinasyonunda başka disiplinin güncel modelini tek bağlantı üzerinden takip etmeyi kolaylaştırır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Ne zaman içe aktarım gerekir",
+      "body": "Önemli not: IFC dosyasının içindeki nesneleri değiştirmek (düzenlemek) istiyorsanız, dosyayı XREF olarak bağlamadan ALLPLAN'a içe aktarmanız gerekir. XREF salt referanstır; nesne düzenlemesi istiyorsanız referans değil içe aktarım yolunu seçin.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "STEP (.stp) dosyaları",
+      "body": "STEP dosyalarının doğrudan içe aktarımı ALLPLAN'da şu an desteklenmemektedir; ilgili işlev geliştirme birimi için bir gereksinim olarak belirtilmiştir ve gelecekte gelebilir. İçe aktarmak için ücretsiz açık kaynaklı FreeCAD ile STEP dosyaları açılıp IFC olarak kaydedilebilir, ardından IFC ALLPLAN'a içe aktarılır. Dışa aktarım için KIT (Karlsruhe) araştırma merkezinin ücretsiz görüntüleyicisiyle IFC dosyaları STEP formatına çevrilebilir.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: XREF ile nesne düzenlemeye çalışmak",
+      "body": "XREF olarak bağlı bir IFC'nin içindeki nesneleri düzenleyemezsiniz. Nesneleri değiştirmek istiyorsanız dosyayı XREF ile bağlamak yerine içe aktarmanız gerekir."
+    },
+    {
+      "title": "DİKKAT: STEP doğrudan içe aktarım beklentisi",
+      "body": "ALLPLAN STEP (.stp) dosyalarını doğrudan içe aktarmaz. STEP'i önce FreeCAD gibi bir araçla IFC'ye çevirin, sonra IFC'yi içe aktarın."
+    }
+  ],
+  "checkpoint": "Bir IFC'yi XREF olarak bağlayıp noktalarına tutunarak ölçüm yapabiliyor ve referansı çift tıkla güncelleyebiliyorsanız içe aktarım/referans ayrımını kavramışsınız.",
+  "commands": [
+    {
+      "name": "XREF",
+      "menu": "ALLPLAN · referans olarak ekleme",
+      "shortcut": "",
+      "desc": "IFC dosyasını kolay güncellenebilir referans olarak bağlar; çift tıkla güncellenir."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "fr_9144",
+      "title": "IFC Dosyasını XREF Olarak İçe Aktarma",
+      "body": "Sorun: Bir IFC dosyasını kolay güncellemek için nasıl XREF olarak yüklerim? Çözüm: Bir IFC dosyasını XREF olarak bağlamak ve güncellemek için menü çubuğunu açın, IFC dosyasını XREF olarak ekleyin, dosyayı seçin, ekleme modunu belirleyip plan görünümüne yerleştirin ve onaylayın. Artık IFC dosyasını görüntüleyebilir ve modelin çeşitli noktalarına tutunabilirsiniz. Güncellemek ya da referansı değiştirmek için eklenen XREF üzerine çift tıklayın. Not: IFC dosyasındaki nesneleri değiştirmek istiyorsanız dosyayı XREF ile bağlamadan ALLPLAN'a içe aktarmanız gerekir.",
+      "figures": [
+        "/akademi/openbim-ifc/9144_0EMVi000004Xwvm_51294168.png",
+        "/akademi/openbim-ifc/9144_0EMVi000004Y4LR_14c0010a.png",
+        "/akademi/openbim-ifc/9144_0EMVi000004Y4oT_fd42b553.png",
+        "/akademi/openbim-ifc/9144_0EMVi000004Y4lF_e907210f.png",
+        "/akademi/openbim-ifc/9144_0EMVi000004Y4Jp_19d18c62.png",
+        "/akademi/openbim-ifc/9144_0EMVi000004XxyI_9840ee15.png"
+      ]
+    },
+    {
+      "id": "en_11484",
+      "title": "STEP (.stp) Dosyalarının İçe/Dışa Aktarımı",
+      "body": "Soru: STEP (.stp) dosyaları ALLPLAN'a nasıl içe aktarılır? Yanıt: STEP dosyalarının doğrudan içe aktarımı ALLPLAN'da şu an desteklenmiyor; bu işlev geliştirme birimi için bir gereksinim olarak zaten belirtilmiş ve gelecekte gelebilir. STEP dışa aktarımı için Karlsruhe araştırma merkezinin ücretsiz görüntüleyicisiyle IFC dosyaları STEP formatına çevrilebilir. STEP içe aktarımı için ücretsiz açık kaynaklı FreeCAD ile STEP dosyaları açılıp IFC olarak kaydedilebilir; ardından IFC dosyaları ALLPLAN'a içe aktarılabilir.",
+      "figures": []
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m10-6-1",
+      "prompt": "Bir IFC dosyasının içindeki nesneleri düzenlemek istiyorsanız hangi yolu seçmelisiniz?",
+      "options": [
+        {
+          "text": "Dosyayı XREF olarak bağlamak",
+          "correct": false
+        },
+        {
+          "text": "Dosyayı XREF ile bağlamadan ALLPLAN'a içe aktarmak",
+          "correct": true
+        },
+        {
+          "text": "Dosyayı PDF olarak açmak",
+          "correct": false
+        },
+        {
+          "text": "Dosyayı yalnızca görüntüleyicide açmak",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynak, nesneleri değiştirmek için dosyanın XREF ile bağlanmadan içe aktarılması gerektiğini belirtir. XREF salt referanstır ve içindeki nesneler düzenlenemez.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta"
+    },
+    {
+      "id": "m10-6-2",
+      "prompt": "Kaynağa göre STEP (.stp) dosyası ALLPLAN'a nasıl taşınabilir?",
+      "options": [
+        {
+          "text": "ALLPLAN doğrudan STEP içe aktarır",
+          "correct": false
+        },
+        {
+          "text": "FreeCAD ile STEP açılıp IFC olarak kaydedilir, sonra IFC içe aktarılır",
+          "correct": true
+        },
+        {
+          "text": "STEP dosyası yeniden adlandırılıp .ifc yapılır",
+          "correct": false
+        },
+        {
+          "text": "STEP yalnızca Bimplus'a yüklenir",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynak doğrudan STEP içe aktarımının desteklenmediğini; FreeCAD ile STEP'in IFC'ye çevrilip sonra içe aktarılabileceğini belirtir. Uzantı değiştirmek dosyayı dönüştürmez.",
+      "bloom": "Analiz",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "Bir disiplin modelini IFC olarak alın ve XREF olarak bağlayın; bir referans noktasına tutunup bir mesafe ölçün. Ardından aynı IFC'nin güncel bir sürümünü çift tıkla referansa yükleyip değişimi gözlemleyin.",
+    "expected": "XREF bağlı model üzerinde snap ile ölçüm ve çift tıkla güncelleme.",
+    "hint": "Nesneyi düzenlemeniz gerekirse XREF değil içe aktarım gerektiğini unutmayın."
+  }
+}

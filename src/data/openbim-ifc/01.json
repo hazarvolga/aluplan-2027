@@ -1,0 +1,125 @@
+{
+  "no": 1,
+  "slug": "openbim-ifc-ve-bimplus-kavrami",
+  "title": "OpenBIM, IFC ve Bimplus Kavramına Giriş",
+  "duration": "25 dk",
+  "sourceModule": "Proje 1 · Modül 10: OpenBIM, IFC 4/4.3, IDS ve Bimplus CDE",
+  "intro": "Bu ders, OpenBIM yaklaşımının neden açık bir alışveriş formatına (IFC) dayandığını ve ALLPLAN modellerinizin Bimplus üzerinde farklı disiplinlerin fakülte modelleriyle nasıl üst üste bindirilip koordine edildiğini tanıtır.",
+  "objectives": [
+    "OpenBIM ve kapalı (closed) BIM arasındaki farkı, açık IFC formatının rolü üzerinden açıklamak.",
+    "IFC (Industry Foundation Classes) ve IFC4 kavramını, üreticiden bağımsız veri alışverişi standardı olarak tanımlamak.",
+    "Bimplus bulut ortamında fakülte modellerinin (Fachmodelle) üst üste bindirilmesi, çakışma tespiti ve görev dağıtımı akışını kavramak.",
+    "Bir ALLPLAN modelinin OpenBIM iş akışındaki yerini (dışa aktarım, koordinasyon, sorun geri bildirimi) sıralamak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "OpenBIM neden açık format ister",
+      "body": "OpenBIM, farklı üreticilerin yazılımlarının ortak ve açık bir veri standardı üzerinden konuşmasıdır. Bu standart IFC (Industry Foundation Classes) formatıdır. Modelinizi IFC olarak verdiğinizde, projedeki statik, mekanik veya mimari ekip hangi yazılımı kullanırsa kullansın modeli okuyabilir. Modül boyunca güncel sürüm olarak IFC4 referans alınır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Bimplus: fakülte modellerinin buluştuğu yer",
+      "body": "Kaynak KB'ye göre Bimplus, planlama verilerinizi ALLPLAN'dan veya başka programlardan (clients) buluta yükleyip, bina projesinin diğer fakülte modelleriyle (Fachmodelle) üst üste bindirdiğiniz ortamdır. Diğer proje katılımcıları bu modelleri web portalı üzerinden görüntüler, düzenler veya tamamlar; planlama hataları ile çakışmalar (Kollisionen) burada görünür hale gelir ve çözüm için gereken görevler ekip arasında dağıtılır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Uçtan uca akış",
+      "body": "Tipik OpenBIM döngüsü şudur: ALLPLAN'da modelleme, IFC veya Bimplus'a yükleme, modellerin koordinasyonu ve çakışma kontrolü, sorunların (Issues) geri bildirimi, düzeltme ve yeniden yükleme. Sonraki dersler bu zincirin her halkasını (dışa aktarım, öznitelik eşleme, içe aktarım, koordinasyon, hata çözümü) ayrı ayrı ele alır.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Cloud ürünleri lisans göçü",
+      "body": "Kaynağa göre ALLPLAN bulut ürünleri (Bimplus, ALLPLAN Share, COR, Exchange) ALLPLAN Cloud lisanslamasına geçirilmiştir. Daha önce bulut ürünleriyle çalıştıysanız, çalışmaya başlamadan önce geçiş (Migration) sürecinizin tamamlandığından emin olun; aksi halde takıma veya projeye erişemezsiniz."
+    }
+  ],
+  "checkpoint": "Bir projenin neden IFC ile dışa aktarıldığını ve Bimplus'ın koordinasyonda ne işe yaradığını kendi cümlelerinizle açıklayabiliyorsanız bu derse hazırsınız.",
+  "commands": [],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_8613",
+      "title": "ALLPLAN Bimplus: İlk Adımlar",
+      "body": "Kaynak, Bimplus ile çalışmaya başlamanın temel adımlarını anlatır. Eylül 2025'te ALLPLAN bulut lisanslamasının göçü (Migration) için bir e-posta gönderilmiştir; bu yalnızca daha önce bulut ürünleriyle (Bimplus, ALLPLAN Share, COR, Exchange) çalışanları ilgilendirir. Henüz bir Bimplus takımınız yoksa, adım adım talimatlar planlama verilerinizi ALLPLAN'dan veya diğer client'lardan Bimplus'a nasıl yükleyeceğinizi; bina projesinin diğer fakülte modelleriyle (Fachmodelle) nasıl üst üste bindirileceğini; diğer proje katılımcılarının bunları web portalı üzerinden nasıl görüntüleyip düzenleyip tamamlayacağını; planlama hataları ve çakışmaların (Kollisionen) nasıl tespit edileceğini ve çözüm için gereken görevlerin nasıl dağıtılacağını açıklar.",
+      "figures": []
+    },
+    {
+      "id": "de_8609",
+      "title": "ALLPLAN Share: İlk Adımlar",
+      "body": "Kaynak, ALLPLAN Share ile çalışmanın ön koşullarını verir. Sistem gereksinimi olarak en az 20 Mbit/s indirme ve yükleme hızında, 50 ms altı gecikmeli bir internet bağlantısı gerekir; 50 Mbit/s ve üzeri önerilir. Tam kararlılık ve performans için 'bimplus.net' ve 'api.bimplus.net' alan adlarına 443 portu üzerinden doğrudan bağlantı gereklidir ve bu bağlantılar VPN üzerinden yönlendirilmemelidir. Share kullanımı bir Bimplus hesabı ve takımı ile uygun lisans gerektirir. Bu, OpenBIM iş akışında ALLPLAN modellerinin buluta taşınması için altyapıyı oluşturur.",
+      "figures": [
+        "/akademi/openbim-ifc/8609_0EMVi00000GE1Sr_b9b96c2b.png",
+        "/akademi/openbim-ifc/8609_0EM7U000001Td6n_94463446.png",
+        "/akademi/openbim-ifc/8609_0EMVi00000GDlRK_1ec9703d.png",
+        "/akademi/openbim-ifc/8609_0EM7U000001Td6s_5ab489f6.png",
+        "/akademi/openbim-ifc/8609_0EM7U000001Td6r_cea517a8.png",
+        "/akademi/openbim-ifc/8609_0EMVi00000GEtcv_43cca8c1.png"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m10-1-1",
+      "prompt": "OpenBIM yaklaşımının temelinde hangi fikir yatar?",
+      "options": [
+        {
+          "text": "Tüm ekibin aynı üreticinin yazılımını kullanma zorunluluğu",
+          "correct": false
+        },
+        {
+          "text": "Farklı üreticilerin yazılımlarının açık IFC standardı üzerinden veri alışverişi yapması",
+          "correct": true
+        },
+        {
+          "text": "Modellerin yalnızca PDF olarak paylaşılması",
+          "correct": false
+        },
+        {
+          "text": "Her disiplinin modelini yalnızca kendi bilgisayarında tutması",
+          "correct": false
+        }
+      ],
+      "explanation": "OpenBIM, üreticiden bağımsız açık format olan IFC üzerinden veri alışverişini esas alır. Aynı üretici zorunluluğu closed BIM mantığıdır; PDF veya izole model paylaşımı koordinasyonu engeller.",
+      "bloom": "Kavrama",
+      "difficulty": "Kolay"
+    },
+    {
+      "id": "m10-1-2",
+      "prompt": "Kaynağa göre Bimplus'ta fakülte modelleri üst üste bindirildiğinde öncelikle ne görünür hale gelir?",
+      "options": [
+        {
+          "text": "Projenin maliyeti",
+          "correct": false
+        },
+        {
+          "text": "Planlama hataları ve çakışmalar (Kollisionen)",
+          "correct": true
+        },
+        {
+          "text": "Çalışanların mesai saatleri",
+          "correct": false
+        },
+        {
+          "text": "Yazılım lisans numaraları",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynak, modellerin üst üste bindirilmesiyle planlama hatalarının ve çakışmaların görünür hale geldiğini ve çözüm görevlerinin dağıtıldığını belirtir. Diğer seçenekler kaynakta geçmez.",
+      "bloom": "Analiz",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "Kendi disiplininizi (örneğin mimari) merkeze alarak, bir OpenBIM döngüsünün beş halkasını (modelleme, yükleme/dışa aktarım, koordinasyon, çakışma/sorun, düzeltme) birer cümleyle yazın.",
+    "expected": "Her halkanın ne yaptığını ve bir sonrakine nasıl bağlandığını açıklayan kısa bir akış metni.",
+    "hint": "Modelin ALLPLAN'dan çıkıp Bimplus'ta diğer modellerle buluştuğu an koordinasyonun başladığı andır."
+  }
+}

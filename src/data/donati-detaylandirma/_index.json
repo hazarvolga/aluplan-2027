@@ -1,0 +1,42 @@
+[
+  {
+    "no": 1,
+    "slug": "donati-ortami-ve-ulusal-norm",
+    "title": "Donatı Ortamına Giriş ve Ulusal Norm (Nat_Code) Ayarı"
+  },
+  {
+    "no": 2,
+    "slug": "yabanci-norma-gore-donati-plani",
+    "title": "Yabancı Norma Göre Donatı Planı: Kesit Serileri ve Raporlar"
+  },
+  {
+    "no": 3,
+    "slug": "ozel-bukum-sekillerini-hizli-uretme",
+    "title": "Özel Büküm Şekillerini Hızlı Üretme: Eleman Dönüştürme"
+  },
+  {
+    "no": 4,
+    "slug": "helis-donati-ve-dik-olmayan-bukum-acinim",
+    "title": "3B Helis Donatı ve Dik Olmayan Büküm Açınımı (ISO 3766)"
+  },
+  {
+    "no": 5,
+    "slug": "donati-gosterimi-renk-ve-format",
+    "title": "Donatı Gösterimi: Çapa Göre Renk ve Format Ayarları"
+  },
+  {
+    "no": 6,
+    "slug": "egik-gorunum-ve-bukum-rulosu-cap-gosterimi",
+    "title": "Eğik Görünümde Çubuk Gösterimi ve Büküm Rulosu Çapı"
+  },
+  {
+    "no": 7,
+    "slug": "donati-gorunumleri-kopyalama-ve-2023-degisikligi",
+    "title": "Donatı Görünümleri (Bewehrungsansichten): Kopyalama ve 2023 Değişikliği"
+  },
+  {
+    "no": 8,
+    "slug": "donati-metraji-ve-sik-hata-mesajlari",
+    "title": "Donatı Metrajı ve Sık Karşılaşılan Hata Mesajları (Meldung)"
+  }
+]

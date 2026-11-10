@@ -1,0 +1,166 @@
+{
+  "no": 2,
+  "slug": "bimplus-share-proje-baslatma-ve-cde",
+  "title": "Bimplus/Share ile Proje Başlatma ve CDE Rolleri",
+  "duration": "30 dk",
+  "sourceModule": "Proje 1 · Modül 10: OpenBIM, IFC 4/4.3, IDS ve Bimplus CDE",
+  "intro": "Bu ders, bir ALLPLAN projesini Bimplus bulutunda (CDE, ortak veri ortamı) doğru şekilde başlatmayı, sıfır noktasını (Nullpunkt) ayarlamayı ve takım rollerini doğru yetki düzeyiyle vermeyi öğretir.",
+  "objectives": [
+    "Bir projeyi 'Projekt- und Ressourcenverwaltung' üzerinden 'BIMPLUS' depolama konumuyla oluşturmayı tanımlamak.",
+    "Georeferanslı çalışmada proje sıfır noktasının (Nullpunkt) ilk yüklemeden önce neden ayarlanması gerektiğini açıklamak.",
+    "Team-Owner, Team-Administrator, Projekt-Administrator ve Projektbearbeiter rolleri arasındaki yetki farkını ayırt etmek.",
+    "Mevcut bir projeyi 'Kopieren nach' ile Bimplus'a kopyalamayı sıralamak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Giriş ve takım gereksinimi",
+      "body": "Bimplus'ta doğru başlangıç için hesabınızın Teaminhaber (takım sahibi) veya Teamadministrator rolünü içermesi gerekir. ALLPLAN 2024-2 ve 2025 sürümlerinden itibaren Bimplus girişi doğrudan ALLPLAN girişiyle yapılır; önceki sürümlerde ALLPLAN'ın sağ üstünden Bimplus'a ayrıca giriş yapılır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Yeni proje oluşturma",
+      "body": "Projeyi her zamanki gibi 'Projekt- und Ressourcenverwaltung' (Proje ve Kaynak Yönetimi) > 'Neues Projekt' (Yeni Proje) üzerinden oluşturun. Depolama konumu (Speicherort) olarak 'BIMPLUS' seçin ve ilgili takımınızı belirleyin. Proje ve model adı önerilir ve düzenlenebilir; proje şablonları kullanılabilir ancak zorunlu değildir. Proje oluşturma bittiğinde proje otomatik olarak üretilip yüklenir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Sıfır noktası (Nullpunkt) ve offset",
+      "body": "Georeferanslı, yani ülke koordinatlarıyla çalışılacaksa ALLPLAN proje sıfır noktasını kullanın. Yalnızca Bimplus ile çalışılıyorsa (ALLPLAN'da model yoksa, modeller başka kaynaklardan geliyorsa) modele yakın bir nokta seçin. BIM projelerinde bu sıfır noktası BEP'te (BIM Uygulama Planı) görünür olmalıdır. Offset (Nullpunkt) Bimplus'ta ayarlanır ve bu, bir modelin ilk yüklemesinden ÖNCE yapılmalıdır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Mevcut projeyi Bimplus'a kopyalama",
+      "body": "Var olan bir projeyi Bimplus'a taşımak için 'Projekt- und Ressourcenverwaltung' diyaloğunu açın, ilgili projeyi işaretleyin ve sağ tıkla 'Kopieren nach' (Şuraya kopyala) seçin. Depolama konumu olarak 'BIMPLUS' seçip 'Neues Bimplus-Projekt erstellen' (Yeni Bimplus projesi oluştur) kutusunu işaretleyin ve takımınızı belirleyin.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Rol ve yetki yönetimi",
+      "body": "Takım üyelerinin rolleri Bimplus portalı (portal.bimplus.net) üzerinden yönetilir. Team-Owner takımı oluşturan kişidir ve sonradan değiştirilemez. Team-Administrator'lar takımdaki tüm projelere erişir. Projekt-Administrator yalnızca ilgili projede yönetici haklarına sahiptir. Projektbearbeiter (proje işleyeni) en az yetki düzeyidir; bu düzeydeki bir kullanıcıya ALLPLAN içinde ayrıca Layerset ve Druckset hakları atanmalıdır.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Sıfır noktasını ilk yüklemeden sonra değiştirmek",
+      "body": "Offset/Nullpunkt'u Bimplus'ta ayarlamak ilk model yüklemesinden ÖNCE kritik önemdedir. Bunu atlayıp model yükledikten sonra düzeltmeye çalışmak konum tutarsızlığına yol açar."
+    },
+    {
+      "title": "DİKKAT: Gereksiz Team-Administrator yetkisi",
+      "body": "Kaynak, yeni üyelere yalnızca gerçekten gerekliyse Team-Administrator rolü verilmesini önerir; bu rol bir Projekt-Administrator'dan daha yüksek takım haklarına sahiptir ve yönetici haklarına sahip kullanıcılar projeleri silebilir."
+    }
+  ],
+  "checkpoint": "Projeniz BIMPLUS konumunda oluşmuş, sıfır noktası ilk yüklemeden önce ayarlanmış ve üyelere en düşük gerekli yetki verilmişse CDE başlangıcını doğru yapmışsınız demektir.",
+  "commands": [
+    {
+      "name": "Projekt- und Ressourcenverwaltung / Neues Projekt",
+      "menu": "ALLPLAN · Proje ve Kaynak Yönetimi",
+      "shortcut": "",
+      "desc": "Yeni projeyi oluştururken depolama konumu olarak BIMPLUS seçilir."
+    },
+    {
+      "name": "Kopieren nach",
+      "menu": "Projekt- und Ressourcenverwaltung · sağ tık",
+      "shortcut": "",
+      "desc": "Mevcut projeyi BIMPLUS'a kopyalar; 'Neues Bimplus-Projekt erstellen' işaretlenir."
+    },
+    {
+      "name": "portal.bimplus.net",
+      "menu": "Web portalı",
+      "shortcut": "",
+      "desc": "Takım üyeleri ve projelerin rol/yetki yönetimi burada yapılır."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_8605",
+      "title": "Bimplus'ta Doğru Proje Başlangıcı",
+      "body": "Kaynak, Bimplus'ta doğru proje başlangıcını anlatır. Giriş, Teaminhaber (takım sahibi) veya Teamadministrator rolünü içeren bir hesapla yapılır. Georeferanslı, ülke koordinatlarıyla çalışılacaksa ALLPLAN proje sıfır noktası (Projektnullpunkt) kullanılır. Yalnızca Bimplus ile çalışılıyorsa, yani ALLPLAN'da model yoksa ve modeller başka kaynaklardan geliyorsa, modele yakın bir nokta seçilir; BIM projelerinde bu sıfır noktasının BEP'te görünmesi gerekir. Offset (Nullpunkt) Bimplus'ta ayarlanır ve bu işlem bir modelin ilk yüklemesinden önce yapılmalıdır.",
+      "figures": [
+        "/akademi/openbim-ifc/8605_0EMVi00000F0trt_ecb785bb.png",
+        "/akademi/openbim-ifc/8605_0EMVi00000F0tqH_8adbb57e.png",
+        "/akademi/openbim-ifc/8605_0EMVi00000F0tn3_9cab8fe8.png",
+        "/akademi/openbim-ifc/8605_0EMVi00000F0tof_fe8045cd.png",
+        "/akademi/openbim-ifc/8605_0EMVi00000F0rF1_35ceeb6d.png"
+      ]
+    },
+    {
+      "id": "de_8609",
+      "title": "ALLPLAN Share: İlk Adımlar (proje oluşturma ve roller)",
+      "body": "Kaynak, Share ile yeni proje oluşturmayı ve rol yönetimini anlatır. Yeni proje 'Projekt- und Ressourcenverwaltung' > 'Neues Projekt' ile oluşturulur, depolama konumu 'BIMPLUS' ve ilgili takım seçilir; proje otomatik oluşturulup yüklenir. Mevcut proje sağ tık 'Kopieren nach' ile, 'Neues Bimplus-Projekt erstellen' işaretlenerek kopyalanır. Roller Bimplus portalı (portal.bimplus.net) üzerinden yönetilir: Team-Owner takımı kuran ve değiştirilemeyen kişidir; Team-Administrator tüm projelere erişir; Projekt-Administrator ilgili projede yöneticidir; Projektbearbeiter en düşük yetkidir ve bu kullanıcıya ALLPLAN içinde Layerset/Druckset hakları ayrıca atanır. Değişiklikler ilgili Çizim Dosyası veya plan kapatıldığında ya da 'Datei -> Speichern und Hochladen' ile yüklenir.",
+      "figures": [
+        "/akademi/openbim-ifc/8609_0EMVi00000GE1Sr_b9b96c2b.png",
+        "/akademi/openbim-ifc/8609_0EM7U000001Td6n_94463446.png",
+        "/akademi/openbim-ifc/8609_0EMVi00000GDlRK_1ec9703d.png",
+        "/akademi/openbim-ifc/8609_0EM7U000001Td6s_5ab489f6.png",
+        "/akademi/openbim-ifc/8609_0EM7U000001Td6r_cea517a8.png",
+        "/akademi/openbim-ifc/8609_0EMVi00000GEtcv_43cca8c1.png"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m10-2-1",
+      "prompt": "Bimplus'ta offset/sıfır noktası (Nullpunkt) ne zaman ayarlanmalıdır?",
+      "options": [
+        {
+          "text": "İlk model yüklemesinden önce",
+          "correct": true
+        },
+        {
+          "text": "Proje tamamen bittikten sonra",
+          "correct": false
+        },
+        {
+          "text": "Her kullanıcı kendi bilgisayarında ayrı ayrı",
+          "correct": false
+        },
+        {
+          "text": "Sıfır noktası ayarı gerekli değildir",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynak sıfır noktasının ilk model yüklemesinden önce ayarlanmasının önemli olduğunu açıkça belirtir; sonradan düzeltmek konum tutarsızlığı yaratır.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta"
+    },
+    {
+      "id": "m10-2-2",
+      "prompt": "Projektbearbeiter yetki düzeyindeki bir kullanıcı için ALLPLAN içinde ek olarak ne yapılmalıdır?",
+      "options": [
+        {
+          "text": "Hiçbir şey, tüm haklar otomatik gelir",
+          "correct": false
+        },
+        {
+          "text": "Layerset ve Druckset hakları ayrıca atanmalıdır",
+          "correct": true
+        },
+        {
+          "text": "Kullanıcı Team-Owner yapılmalıdır",
+          "correct": false
+        },
+        {
+          "text": "Kullanıcıya yeni bir lisans satın alınmalıdır",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynak, yalnızca Projektbearbeiter grubundaki kullanıcıya ALLPLAN içinde Layerset ve Druckset haklarının ayrıca atanması gerektiğini belirtir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "Üç kişilik bir ekip için rol planı yazın: takımı kuran kişi, tüm projeleri yöneten kişi ve yalnızca tek projede çalışacak kişi hangi rolü almalı? Projektbearbeiter için hangi ek adım gerekir?",
+    "expected": "Team-Owner, Team-Administrator ve Projekt-Administrator/Projektbearbeiter eşleşmesi; son kişi için Layerset/Druckset hakkı notu.",
+    "hint": "En az yetki ilkesini uygulayın: kimseye gerekenden fazla hak vermeyin."
+  }
+}

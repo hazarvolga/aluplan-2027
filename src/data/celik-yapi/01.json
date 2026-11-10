@@ -1,0 +1,149 @@
+{
+  "no": 1,
+  "slug": "celik-yapi-ortami-ve-profiller",
+  "title": "Çelik Yapı Ortamı ve Profiller: Taşıyıcı Yapı Modülü ve Profil Kataloğu",
+  "duration": "28 dk",
+  "sourceModule": "Proje 1 · Modül 6: Çelik Yapı Tasarımı, SDS2 Entegrasyonu ve NC İmalat",
+  "intro": "Çelik yapı modellemesi ALLPLAN'da Mühendislik (Engineering) rolü altındaki taşıyıcı yapı ortamında başlar. Bu derste profil kataloğunu ve parametrik profil eklentilerini, yani çelik elemanların kesitini tanımlayan temel yapı taşlarını öğreneceksiniz.",
+  "objectives": [
+    "ALLPLAN Mühendislik (Engineering) rolü altındaki taşıyıcı yapı (Supporting structure) ortamını tanımak.",
+    "Nemetschek Profil Kataloğu (Nemetschek Profiles Catalog) üzerinden standart çelik profilleri kütüphaneye aktarmayı öğrenmek.",
+    "Parametrik profil eklentilerinin (Variantenprofil, Profilbauteil) hangi durumda serbest kesit üretmek için kullanıldığını ayırt etmek.",
+    "Profil seçiminin, sonraki bağlantı ve imalat adımlarının önkoşulu olduğunu kavramak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Taşıyıcı yapı ortamı ve profil kaynağı",
+      "body": "Çelik kirişleri ve kolonları ALLPLAN'da taşıyıcı yapı (Supporting structure) modülü içinde modellersiniz. Elemanların kesiti, Nemetschek kataloğundaki profillerden seçilir. Katalog profillerini kullanmak yalnızca görünüm için değildir: otomatik bağlantılar gibi sonraki işlevler, elemanların bu katalogtan türetilmiş olmasına bağlıdır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Nemetschek profillerini kütüphaneye alma",
+      "body": "Profilleri kütüphaneye eklemek için kütüphaneyi (library) açıp 'Nemetschek Profiles Catalog' komutunu seçersiniz. Ardından sırasıyla profilleri seçer, profil biçimlerini seçer, seçim listesine (picklist) aktarır, liste ögelerini seçer ve kopyalarsınız. Bu adımlardan sonra eklenen profillere taşıyıcı yapı eleman modülü içinden erişebilirsiniz.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Parametrik ve serbest profiller",
+      "body": "Standart katalog dışında serbest kesitlere ihtiyaç duyduğunuzda parametrik profil eklentilerini kullanırsınız. 'Variantenprofil' (Varyant Profil) eklentisi, bir profil editörüyle serbest kesitler oluşturup bunları yapı elemanı, kolon veya kiriş olarak yerleştirmenizi sağlar; ölçü, biçim ve malzeme sonradan değiştirilebilir. 'Profilbauteil' (Profil Bileşeni) eklentisi ise serbest dikdörtgen ve yuvarlak profiller üretmeyi ve bunları ahşap, beton, çelik gibi malzemelerle kullanmayı sağlar.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Katalog dışı profille çalışmak",
+      "body": "Çelik elemanları Nemetschek kataloğundan türetmezseniz, sonraki aşamadaki otomatik bağlantılar oluşturulamaz. Profil seçerken, katalog profili kullandığınızdan emin olun; aksi halde profil seçimi sırasında uyarı alabilirsiniz."
+    }
+  ],
+  "checkpoint": "Nemetschek Profil Kataloğu'ndan seçtiğiniz bir profili kütüphaneye aktardıysanız ve bu profille taşıyıcı yapı elemanı yerleştirebiliyorsanız, çelik modelleme ortamını doğru kurmuşsunuz demektir.",
+  "commands": [
+    {
+      "name": "Supporting structure",
+      "menu": "ALLPLAN · Mühendislik (Engineering) rolü",
+      "shortcut": "",
+      "desc": "Çelik kiriş ve kolonların modellendiği taşıyıcı yapı ortamı."
+    },
+    {
+      "name": "Nemetschek Profiles Catalog",
+      "menu": "Kütüphane (library)",
+      "shortcut": "",
+      "desc": "Standart çelik profillerin seçilip kütüphaneye aktarıldığı katalog komutu."
+    },
+    {
+      "name": "Variantenprofil",
+      "menu": "Add-On (eklenti)",
+      "shortcut": "",
+      "desc": "Profil editörüyle parametrik serbest kesit üreten eklenti."
+    },
+    {
+      "name": "Profilbauteil",
+      "menu": "Add-On (eklenti)",
+      "shortcut": "",
+      "desc": "Serbest dikdörtgen ve yuvarlak profiller üreten eklenti."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "en_9373",
+      "title": "SDS2 bağlantısı ve profil kataloğu: eksik ikon",
+      "body": "2024 sürümünde taşıyıcı yapı (Supporting structure) modülü kullanıldığında, otomatik bağlantılar için bir ikona erişilir. Bu komut yalnızca kiriş ve kolonlar Nemetschek kataloğundaki profillerden oluşturulmuşsa çalışır; aksi halde profil seçimi sırasında uyarı gelir. Nemetschek profillerini almak için kütüphane açılıp 'Nemetschek Profiles Catalog' komutu seçilir. İş akışı: profilleri seçin, profil biçimlerini seçin, seçim listesine aktarın, liste ögelerini seçin ve kopyalayın. Eklenen profillere taşıyıcı yapı eleman modülünden erişilir.",
+      "figures": []
+    },
+    {
+      "id": "de_12525",
+      "title": "Variantenprofil eklentisi: işlev özeti",
+      "body": "Yeni ALLPLAN 'Variantenprofil' eklentisi, yüksek esneklikte parametrik profil ve bileşenlerin verimli modellenmesini sağlar. Temelinde özel bir profil editörü vardır; serbest kesitler oluşturulup bileşen, kolon veya kiriş olarak yerleştirilir. Tüm elemanlar tam parametriktir, yani ölçü, biçim ve malzeme her an hızla değiştirilebilir. Doğrusal profil interpolasyonu, boşluklar (aussparung), malzeme atama ve doğru plan/kesit gösterimi gibi gelişmiş gereksinimleri destekler. Endüstri, ahşap ve çelik yapıdaki karmaşık uygulamalar ile organik ve özgün geometri için uygundur.",
+      "figures": []
+    },
+    {
+      "id": "de_12687",
+      "title": "Profilbauteil eklentisi: serbest dikdörtgen ve yuvarlak profiller",
+      "body": "Video eğitimi, ALLPLAN 'Profilbauteil' eklentisinin (sürüm 1.0.0.13) yeni işlevlerini tanıtır; bunların arasında serbest dikdörtgen ve yuvarlak profiller oluşturma vardır. Bu profiller ahşap, beton ve çelik gibi farklı malzemelerle kullanılabilir. Oluşturulan elemanlar hakkında rapor üretilebilir, profiller ağırlık, malzeme ve stil olarak uyarlanabilir. Ayrıca profillerin tutma noktası (Festhaltepunkt) ve ağırlık merkezi (Schwerpunkt) tanımlanarak özgün tasarımlar yapılabilir.",
+      "figures": []
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m6-1-1",
+      "prompt": "Çelik elemanların otomatik bağlantılarla birleştirilebilmesi için profiller hangi kaynaktan türetilmelidir?",
+      "options": [
+        {
+          "text": "Serbest elle çizilmiş kesitlerden",
+          "correct": false
+        },
+        {
+          "text": "Nemetschek Profil Kataloğu'ndan",
+          "correct": true
+        },
+        {
+          "text": "Yalnızca beton kesit kütüphanesinden",
+          "correct": false
+        },
+        {
+          "text": "DXF olarak dışarıdan içe aktarılan çizgilerden",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre otomatik bağlantılar yalnızca elemanlar Nemetschek kataloğu profillerinden oluşturulmuşsa çalışır. Serbest kesitler veya dışarıdan gelen çizgiler bu önkoşulu sağlamaz.",
+      "bloom": "Kavrama",
+      "difficulty": "Orta"
+    },
+    {
+      "id": "m6-1-2",
+      "prompt": "Standart katalogda bulunmayan, parametrik bir serbest kesit üretmek için hangi eklenti kullanılır?",
+      "options": [
+        {
+          "text": "Variantenprofil (Varyant Profil)",
+          "correct": true
+        },
+        {
+          "text": "Bending machine",
+          "correct": false
+        },
+        {
+          "text": "SDS2 Edge",
+          "correct": false
+        },
+        {
+          "text": "Organization Admin",
+          "correct": false
+        }
+      ],
+      "explanation": "Variantenprofil eklentisi, profil editörüyle parametrik serbest kesitler üretir. Bending machine donatı/BVBS içindir, SDS2 Edge bulut erişimi, Organization Admin ise lisans yönetimi portalıdır.",
+      "bloom": "Analiz",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "ALLPLAN Mühendislik rolünde kütüphaneyi açın, Nemetschek Profiles Catalog komutuyla bir I profili seçip seçim listesine aktarın ve kütüphaneye kopyalayın.",
+    "expected": "Seçtiğiniz profil taşıyıcı yapı eleman modülünde kullanılabilir hale gelir.",
+    "hint": "İş akışı sırayla profil seç, biçim seç, listeye aktar, öge seç, kopyala adımlarını izler."
+  }
+}

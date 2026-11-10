@@ -1,0 +1,164 @@
+{
+  "no": 5,
+  "slug": "ifc-sistem-grup-ve-objekttyp-yapilari",
+  "title": "IFC'de Sistem, Grup ve Nesne Tipi: IfcSystem, IfcGroup, IfcObjectType",
+  "duration": "28 dk",
+  "sourceModule": "Proje 1 · Modül 10: OpenBIM, IFC 4/4.3, IDS ve Bimplus CDE",
+  "intro": "Bu ders, elemanlarınızı IFC içinde mantıksal olarak nasıl grupladığınızı (IfcGroup), sistemlere nasıl bağladığınızı (IfcSystem) ve gömülü parçalara doğru nesne tipini (IfcObjectType) nasıl atadığınızı öğretir.",
+  "objectives": [
+    "IfcSystem kavramını, proje özniteliklerinde tanımlanan 'Bauliches System' üzerinden açıklamak.",
+    "IfcGroup kavramını, 'Gruppe' özniteliğiyle eleman gruplama olarak tanımlamak.",
+    "Gömülü parçalara (Einbauteile) doğru IfcObjectType atamak için öznitelik düzenleme yollarını sıralamak.",
+    "Sistem/grup/nesne tipi atamalarının IFC çıktısındaki yapısal karşılığını ayırt etmek."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "IfcSystem: bauliches System",
+      "body": "Sistemlerin IFC dışa aktarımı 'IfcSystem' kavramıyla çalışır. Önce sistemler proje özniteliklerinde (Projektattribute) tanımlanır. İsteğe bağlı olarak bir 'Reference' değeri verilirse bu değer Pset_BuildingSystemCommon içine 'Reference' property'si olarak da yazılır. Ardından 'Bauliches System' (yapısal sistem) özniteliği ilgili elemanlara eklenir ve uygun sistem adıyla doldurulur. IFC çıktısında elemanlar bu sisteme bağlı görünür.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "IfcGroup: eleman gruplama",
+      "body": "Grupların IFC dışa aktarımı 'IfcGroup' kavramıyla çalışır. Önce gruplar proje özniteliklerinde tanımlanır. Ardından 'Gruppe' (grup) özniteliği ilgili elemanlara eklenir ve uygun grup adıyla doldurulur. IFC çıktısında elemanlar bu grup altında toplanmış görünür. IfcGroup ile IfcSystem arasındaki fark: sistem yapısal/işlevsel bir bütünü, grup ise serbest bir mantıksal kümeyi ifade eder.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "IfcObjectType: gömülü parçalar",
+      "body": "Gömülü parçalarınız (Einbauteile) için doğru IfcObjectType'ı ayarlamak üzere ilgili gömülü parçanın özniteliklerini tek tek düzenleyebilirsiniz. Alternatif olarak 'Attribute' > 'Attribute zuweisen' (Öznitelik ata) komutunu kullanabilirsiniz. Not: Bu yöntem YALNIZCA prekast (Fertigteil) fonksiyonları olmadan çalışan kullanıcılar içindir; prekast fonksiyonlarına sahip kullanıcılar IfcObjectType'ı gömülü parça kataloğunda (Einbauteilekatalog) 'Klassifizierung' altında atar.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Sistem/grup tanımlanmadan özniteliği elemana eklemek",
+      "body": "IfcSystem ve IfcGroup için önce sistem veya grubun proje özniteliklerinde tanımlanması, sonra ilgili özniteliğin ('Bauliches System' ya da 'Gruppe') elemanlara eklenip doğru adla doldurulması gerekir. Sıra atlanırsa eleman beklenen sisteme/gruba bağlanmaz."
+    },
+    {
+      "title": "DİKKAT: Prekast kullanıcıları için farklı yol",
+      "body": "Prekast (Fertigteil) fonksiyonlarını kullanıyorsanız IfcObjectType'ı öznitelik düzenleme yerine gömülü parça kataloğunda 'Klassifizierung' altında atamanız gerekir. Yanlış yolu kullanmak atamayı etkisiz bırakır."
+    }
+  ],
+  "checkpoint": "Bir elemanı bir sisteme ('Bauliches System') ve bir gruba ('Gruppe') bağlayıp IFC çıktısında bunların yansıdığını görebiliyorsanız yapıyı doğru kurmuşsunuz.",
+  "commands": [
+    {
+      "name": "Projektattribute",
+      "menu": "ALLPLAN · proje öznitelikleri",
+      "shortcut": "",
+      "desc": "IfcSystem ve IfcGroup için sistem ve grupların tanımlandığı yer."
+    },
+    {
+      "name": "Bauliches System",
+      "menu": "Öznitelik",
+      "shortcut": "",
+      "desc": "Elemanı bir IfcSystem'e bağlayan öznitelik; sistem adıyla doldurulur."
+    },
+    {
+      "name": "Gruppe",
+      "menu": "Öznitelik",
+      "shortcut": "",
+      "desc": "Elemanı bir IfcGroup altında toplayan öznitelik; grup adıyla doldurulur."
+    },
+    {
+      "name": "Attribute / Attribute zuweisen",
+      "menu": "ALLPLAN · öznitelik",
+      "shortcut": "",
+      "desc": "Gömülü parçalara IfcObjectType atamak için kullanılan komut."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_11578",
+      "title": "Allplan'da IfcSystem (IFC Dışa Aktarım)",
+      "body": "Kaynak, sistemlerin IFC dışa aktarımını 'IfcSystem' kavramıyla açıklar. Sistemler önce proje özniteliklerinde (Projektattribute) tanımlanır. 'Reference' değeri verilirse bu değer ek olarak Pset_BuildingSystemCommon içine 'Reference' property'si olarak yazılır (isteğe bağlı). Ardından 'Bauliches System' özniteliği elemanlara eklenir ve uygun sistem adıyla doldurulur. IFC çıktısında elemanlar bu sisteme bağlı görünür.",
+      "figures": [
+        "/akademi/openbim-ifc/11578_0EMVi00000I03A1_e63081f1.png",
+        "/akademi/openbim-ifc/11578_0EMVi00000HzmZ0_cd57b884.png",
+        "/akademi/openbim-ifc/11578_0EMVi00000I02nR_e31be947.png"
+      ]
+    },
+    {
+      "id": "de_11577",
+      "title": "Allplan'da IfcGroup (IFC Dışa Aktarım)",
+      "body": "Kaynak, grupların IFC dışa aktarımını 'IfcGroup' kavramıyla açıklar. Gruplar önce proje özniteliklerinde tanımlanır. Ardından 'Gruppe' özniteliği ilgili elemanlara eklenir ve uygun grup adıyla doldurulur. IFC çıktısında elemanlar bu grup altında toplanmış görünür.",
+      "figures": [
+        "/akademi/openbim-ifc/11577_0EMVi00000I03rZ_760678ab.png",
+        "/akademi/openbim-ifc/11577_0EMVi00000I03mj_f3daa5c2.png",
+        "/akademi/openbim-ifc/11577_0EMVi00000I03jV_6de94ae2.png"
+      ]
+    },
+    {
+      "id": "de_8912",
+      "title": "Gömülü Parçalar için IfcObjectType (Mühendislik)",
+      "body": "Soru: Gömülü parçalarım (Einbauteile) için IfcObjectType'ı nasıl ayarlarım? Yanıt: Doğru IfcObjectType'ı belirlemek için gömülü parçanın özniteliklerini tek tek düzenleyin ya da 'Attribute' > 'Attribute zuweisen' komutunu kullanın. Not: Bu yalnızca prekast (Fertigteil) fonksiyonları olmadan çalışan müşteriler içindir; prekast fonksiyonlarına sahip müşteriler IfcObjectType'ı gömülü parça kataloğunda (Einbauteilekatalog) 'Klassifizierung' altında atayabilir.",
+      "figures": [
+        "/akademi/openbim-ifc/8912_0EM67000007o2ao_7d39958d.png",
+        "/akademi/openbim-ifc/8912_0EM67000007o2bD_ad16b677.png"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m10-5-1",
+      "prompt": "Bir elemanı IFC'de bir sisteme bağlamak için hangi öznitelik elemana eklenir?",
+      "options": [
+        {
+          "text": "'Gruppe'",
+          "correct": false
+        },
+        {
+          "text": "'Bauliches System'",
+          "correct": true
+        },
+        {
+          "text": "'IfcColumn'",
+          "correct": false
+        },
+        {
+          "text": "'Reference' tek başına",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre sistem tanımlandıktan sonra 'Bauliches System' özniteliği elemana eklenir ve sistem adıyla doldurulur. 'Gruppe' grup içindir; 'Reference' ise isteğe bağlı bir ek değerdir.",
+      "bloom": "Hatırlama",
+      "difficulty": "Kolay"
+    },
+    {
+      "id": "m10-5-2",
+      "prompt": "Prekast (Fertigteil) fonksiyonlarını kullanan bir müşteri IfcObjectType'ı nereden atar?",
+      "options": [
+        {
+          "text": "'Attribute zuweisen' komutundan",
+          "correct": false
+        },
+        {
+          "text": "Gömülü parça kataloğunda 'Klassifizierung' altından",
+          "correct": true
+        },
+        {
+          "text": "Proje özniteliklerinden",
+          "correct": false
+        },
+        {
+          "text": "IFC dışa aktarım favorisinden",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynak, prekast fonksiyonlu müşterilerin IfcObjectType'ı Einbauteilekatalog içinde 'Klassifizierung' altında atadığını belirtir. Öznitelik düzenleme yolu prekast olmayan kullanıcılar içindir.",
+      "bloom": "Analiz",
+      "difficulty": "Zor"
+    }
+  ],
+  "exercise": {
+    "task": "Proje özniteliklerinde bir sistem ve bir grup tanımlayın; birkaç elemana 'Bauliches System' ve 'Gruppe' özniteliklerini atayıp doldurun. IFC olarak aktarıp çıktıda sistem ve grubun yansıdığını kontrol edin.",
+    "expected": "IFC içinde elemanların tanımlı sisteme ve gruba bağlı görünmesi.",
+    "hint": "Önce tanım (proje öznitelikleri), sonra atama (eleman özniteliği) sırasını izleyin."
+  }
+}

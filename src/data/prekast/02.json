@@ -1,0 +1,172 @@
+{
+  "no": 2,
+  "slug": "einbauteile-ifc-tipi-ve-formul",
+  "title": "Gömme Parçalar (Einbauteile): IFC Tipi ve Liste Metni Formülleri",
+  "duration": "30 dk",
+  "sourceModule": "Proje 1 · Modül 7: Prekast Yapı Elemanları ve Endüstriyel Üretim",
+  "intro": "Gömme parçalar (fixtures / Einbauteile), prekast elemanın içine yerleştirilen taşıma ankrajı, kutu, ankastre eleman gibi alt nesnelerdir. Bu derste bir gömme parçanın IFC tipini nasıl tanımladığınızı ve kataloğundaki liste metnine (List text) formülle nasıl bilgi taşıdığınızı öğrenirsiniz.",
+  "objectives": [
+    "Gömme parçanın (fixture / Einbauteil) prekast elemanın bir alt nesnesi (sub-object) olduğunu açıklamak.",
+    "Bir gömme parçaya IfcObjectType değerini öznitelik üzerinden veya 'Attributes > Assign Attributes' komutuyla atamayı tanımlamak.",
+    "Gömme parça kataloğunun liste metninde (List text) Formül Düzenleyici (Formula Editor) ile formül oluşturmayı öğrenmek.",
+    "PARENTPRECAST() komutunun neden gerektiğini, yani alt nesnenin üst prekast elemanın özniteliğine nasıl eriştiğini ayırt etmek."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Gömme parça prekastın alt nesnesidir",
+      "body": "Bir gömme parça (fixture / Einbauteil) tek başına durmaz; içine yerleştirildiği prekast elemanın (precast / Fertigteil) alt nesnesidir. Bu hiyerarşi, hangi özniteliklere doğrudan, hangilerine ancak üst eleman üzerinden erişebileceğinizi belirler. Projeye ait bir özniteliği doğrudan kullanabilirsiniz; ancak prekast elemanın bir bilgisini (örneğin döşeme kalınlığı) gömme parçaya taşımak isterseniz, üst elemana (parent) ulaşmanız gerekir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Gömme parçaya IFC tipi atamak",
+      "body": "Gömme parçanız IFC dışa aktarımında doğru sınıfla çıksın istiyorsanız, IfcObjectType değerini ayarlamanız gerekir. Kaynağa göre bunu iki yolla yapabilirsiniz: gömme parçanın özniteliklerini tek tek düzenleyerek ya da 'Attributes > Assign Attributes' (Öznitelikler > Öznitelik Ata) komutuyla toplu atayarak. Önemli not: bu yöntem yalnızca prekast olmayan (non-precast) elemanlar içindir.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Liste metnine formül yazmak ve PARENTPRECAST()",
+      "body": "Gömme parça kataloğunun liste metni (List text) içinde Formül Düzenleyici (Formula Editor) ile formül oluşturabilirsiniz. 'Function' (Fonksiyon) bölümünü açıp PARENTPRECAST üzerine çift tıklar, değerlendirmek istediğiniz özniteliği seçer ve formülü parantezle kapatırsınız. Liste metni içinde yalnızca tek bir formül eklenebilir ve bu formül <! ifade !> özel karakterleri arasında tutulur. Üst prekasttan bilgi çekmek için ifadeyi PARENTPRECAST() içine alırsınız; çünkü gömme parça alt nesne olduğundan üst elemanın özniteliğine doğrudan erişemez. Formül içinde metre değerini santimetreye çevirecek şekilde de uyarlayabilirsiniz.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: IfcObjectType yalnızca prekast olmayan elemanlar için",
+      "body": "Kaynakta vurgulanır: gömme parçaya IfcObjectType atama yöntemi yalnızca 'non-precast' (prekast olmayan) elemanlar içindir. Prekast elemanlarda bu yolun aynı şekilde geçerli olduğunu varsaymayın."
+    },
+    {
+      "title": "DİKKAT: Üst prekast bilgisi PARENTPRECAST() olmadan gelmez",
+      "body": "Prekast elemanın bir özniteliğini (örneğin kalınlığını) doğrudan gömme parça formülünde yazarsanız sonuç gelmez. Gömme parça alt nesne olduğundan, değeri PARENTPRECAST(...) ile üst elemandan okumanız gerekir."
+    }
+  ],
+  "checkpoint": "Liste metnindeki formülünüz <! ... !> arasında tek bir ifadeyse ve üst eleman bilgisini PARENTPRECAST() ile çekiyorsa doğru kurgulanmıştır.",
+  "commands": [
+    {
+      "name": "Attributes > Assign Attributes",
+      "menu": "Öznitelik atama komutu",
+      "shortcut": "",
+      "desc": "Gömme parçalara IfcObjectType gibi öznitelikleri toplu atar (yalnızca prekast olmayan elemanlar)."
+    },
+    {
+      "name": "Formula Editor (Formel-Editor)",
+      "menu": "Einbauteilekatalog (gömme parça kataloğu)",
+      "shortcut": "",
+      "desc": "Gömme parça kataloğunun liste metninde formül oluşturan düzenleyici."
+    },
+    {
+      "name": "PARENTPRECAST()",
+      "menu": "Formül fonksiyonu",
+      "shortcut": "",
+      "desc": "Gömme parçadan üst prekast elemanın (parent) özniteliğine erişmek için kullanılan formül komutu."
+    },
+    {
+      "name": "IfcObjectType",
+      "menu": "Öznitelik",
+      "shortcut": "",
+      "desc": "Gömme parçanın IFC dışa aktarımdaki nesne tipini belirleyen öznitelik."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "en_8914",
+      "title": "Gömme Parçalar İçin IfcObjectType (Mühendislik)",
+      "body": "Soru: Gömme parçalarım (fixtures) için IfcObjectType değerini nasıl ayarlarım? Cevap: Doğru IfcObjectType değerini ayarlamak için gömme parçanın özniteliklerini ya tek tek düzenleyin ya da 'Attributes > Assign Attributes' (Öznitelikler > Öznitelik Ata) komutunu kullanın. Not: Bu işlem YALNIZCA 'non-precast' (prekast olmayan) elemanlar içindir.",
+      "figures": [
+        "/akademi/prekast/8914_0EM67000007o2ao_7d39958d.png",
+        "/akademi/prekast/8914_0EM67000007o2bD_ad16b677.png"
+      ]
+    },
+    {
+      "id": "en_9608",
+      "title": "Gömme Parçanın Liste Metninde Formül Kurmak",
+      "body": "Soru: Gömme parça kataloğunun liste metni (List text) içinde özel bir formül oluşturmak mümkün mü? Cevap: Evet; gömme parça kataloğunda Formül Düzenleyici'ye (Formula Editor) erişebilirsiniz. 'Function' bölümünü açıp PARENTPRECAST üzerine çift tıklayın, değerlendirmek istediğiniz özniteliği seçin ve formülü parantezle kapatın. Yalnızca tek bir formül eklenebilir ve bu formül <! ifade !> özel karakterleri arasında tutulur. Bu sayede gömme parçanın liste metnine, parçanın dışından bilgi (proje bilgisi veya prekast bilgisi) ekleyebilirsiniz. Proje özniteliğini doğrudan ifade olarak kullanabilirsiniz; ancak bir prekast bilgisini (örneğin döşeme kalınlığı) göstermek isterseniz PARENTPRECAST() komutunu kullanmanız gerekir, çünkü gömme parça prekastın alt nesnesidir ve özniteliğe doğrudan erişemez. Formülü metreden santimetreye çevirecek biçimde de tanımlayabilirsiniz.",
+      "figures": [
+        "/akademi/prekast/9608_0EM67000007oVXA_d45f9a51.png",
+        "/akademi/prekast/9608_0EM67000007oVYr_1f0f895b.png",
+        "/akademi/prekast/9608_0EM67000007oVYc_2219a607.png",
+        "/akademi/prekast/9608_0EM67000007oVXZ_26b7bcfc.png",
+        "/akademi/prekast/9608_0EM67000007oVYw_59fcfc19.png",
+        "/akademi/prekast/9608_0EM67000007oVY3_1236f69c.png"
+      ]
+    },
+    {
+      "id": "de_9609",
+      "title": "Gömme Parçalar: Liste Metninde Formül Kurgusu",
+      "body": "Kaynak, gömme parça kataloğunun liste metni (Listentext) içinde Formül Düzenleyici (Formel-Editor) ile formül oluşturmayı anlatır. 'Funktion' bölümü açılıp PARENTPRECAST üzerine çift tıklanır, değerlendirilecek öznitelik seçilir ve formül parantezle kapatılır. Yalnızca tek bir formül eklenebilir ve <! ifade !> karakterleri arasında tutulur. Böylece gömme parçanın liste metnine proje veya prekast (Fertigteil) bilgisi taşınabilir. Proje öznitelikleri doğrudan ifade olarak kullanılabilir; ancak bir prekast bilgisi (örneğin kirişin yüksekliği) göstermek için PARENTPRECAST() komutu kullanılmalıdır, çünkü gömme parça prekastın alt nesnesidir. Formül, metre değerini santimetreye çevirecek biçimde uyarlanabilir.",
+      "figures": [
+        "/akademi/prekast/9609_0EM67000007oVXZ_26b7bcfc.png",
+        "/akademi/prekast/9609_0EM67000007oVY3_1236f69c.png",
+        "/akademi/prekast/9609_0EM67000007oVXA_d45f9a51.png",
+        "/akademi/prekast/9609_0EM67000007oVYc_2219a607.png",
+        "/akademi/prekast/9609_0EM67000007oVYw_59fcfc19.png",
+        "/akademi/prekast/9609_0EM67000007oVYr_1f0f895b.png"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m7-3",
+      "prompt": "Bir gömme parçanın liste metninde, içine yerleştirildiği prekast elemanın kalınlığını göstermek istiyorsunuz. Doğru yaklaşım hangisidir?",
+      "options": [
+        {
+          "text": "Prekast özniteliğini formüle doğrudan yazmak",
+          "correct": false
+        },
+        {
+          "text": "Özniteliği PARENTPRECAST(...) içine alarak üst elemandan okumak",
+          "correct": true
+        },
+        {
+          "text": "IfcObjectType değerini değiştirmek",
+          "correct": false
+        },
+        {
+          "text": "Gömme parçayı prekasttan ayırmak",
+          "correct": false
+        }
+      ],
+      "correctIndex": 1,
+      "explanation": "Gömme parça prekastın alt nesnesi olduğundan üst elemanın özniteliğine doğrudan erişemez; kaynağa göre değer PARENTPRECAST() komutuyla üst elemandan okunur. Doğrudan yazım çalışmaz.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta"
+    },
+    {
+      "id": "m7-4",
+      "prompt": "Gömme parça liste metni formülü hakkında kaynağa göre hangisi doğrudur?",
+      "options": [
+        {
+          "text": "İstenen sayıda formül eklenebilir",
+          "correct": false
+        },
+        {
+          "text": "Yalnızca tek bir formül eklenebilir ve <! ifade !> karakterleri arasında tutulur",
+          "correct": true
+        },
+        {
+          "text": "Formül yalnızca prekast olmayan elemanlarda çalışır",
+          "correct": false
+        },
+        {
+          "text": "Formül santimetre birimini desteklemez",
+          "correct": false
+        }
+      ],
+      "correctIndex": 1,
+      "explanation": "Kaynak, liste metnine yalnızca tek bir formül eklenebildiğini ve bu formülün <! ve !> özel karakterleri arasında tutulduğunu belirtir. Formül birim dönüşümünü (metre-santimetre) destekler.",
+      "bloom": "Kavrama",
+      "difficulty": "Kolay"
+    }
+  ],
+  "exercise": {
+    "task": "Bir gömme parça (örneğin taşıma ankrajı) için liste metninde, üst prekast elemanın bir özniteliğini gösteren basit bir formül kurgulayın: önce doğrudan özniteliği yazmayı, sonra PARENTPRECAST() ile sarmalamayı deneyin.",
+    "expected": "Doğrudan yazım sonuç vermez; PARENTPRECAST(...) ile sarmalanmış ve <! ... !> arasına alınmış formül üst elemanın değerini liste metninde gösterir.",
+    "hint": "Formül Düzenleyici'de 'Function' bölümünden PARENTPRECAST'e çift tıklayın, sonra özniteliği seçip parantezi kapatın."
+  }
+}

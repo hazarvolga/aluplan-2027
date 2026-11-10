@@ -1,0 +1,119 @@
+{
+  "no": 2,
+  "slug": "otomatik-celik-baglantilari",
+  "title": "Otomatik Çelik Bağlantıları: SDS2 Tabanlı Birleşim Üretimi ve Düzenleme",
+  "duration": "26 dk",
+  "sourceModule": "Proje 1 · Modül 6: Çelik Yapı Tasarımı, SDS2 Entegrasyonu ve NC İmalat",
+  "intro": "Profiller yerleştirildikten sonra çelik elemanlar birbirine bağlantılarla (connection / Anschluss) birleştirilir. ALLPLAN Mühendislik sürümünde bu bağlantılar arka planda SDS2 komutlarıyla otomatik üretilir. Bu derste bağlantı ikonunu, çalışma koşullarını ve birleşimlerin düzenlenmesini öğreneceksiniz.",
+  "objectives": [
+    "Otomatik bağlantılar (Automated Connections) komutunun arka planda SDS2 ile elemanları bağladığını kavramak.",
+    "Bağlantı üretiminin, elemanların Nemetschek kataloğu profillerinden oluşturulmuş olmasına bağlı olduğunu açıklamak.",
+    "Yerleştirilen bir birleşimi (assembly) çift tıklayarak düzenlemeyi öğrenmek.",
+    "Bağlantı ikonuna erişimin lisans ve rol ayarına bağlı olduğunu ayırt etmek."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Otomatik bağlantı ikonu",
+      "body": "Taşıyıcı yapı modülü 2024 sürümünde kullanıldığında, otomatik bağlantılar için bir ikon bulunur. Bu komut, taşıyıcı yapının kiriş ve kolonlarını arka planda SDS2 komutlarıyla otomatik olarak birbirine bağlar.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Çalışma koşulu: katalog profilleri",
+      "body": "Otomatik bağlantı komutu yalnızca elemanlar (kiriş ve kolonlar) Nemetschek kataloğundaki profillerden oluşturulmuşsa çalışır. Elemanlar bu profillerden türetilmemişse bağlantılar oluşturulamaz. Taşıyıcı yapı üretimi sırasında uygun olmayan bir profil seçerseniz uyarı alabilirsiniz.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Birleşimleri düzenleme",
+      "body": "Otomatik bağlantılar yerleştirildikten sonra, her birleşimin (assembly) üzerine çift tıklayarak bağlantıyı düzenleyebilirsiniz. Bu, montaj detaylarını proje gereksinimine göre uyarlamanızı sağlar.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Otomatik bağlantı ikonuna erişilemiyor",
+      "body": "Otomatik bağlantılar ikonuna erişemiyorsanız neden büyük olasılıkla lisansınızdır; bu işlev Mühendislik (Engineering) sürümünden itibaren kullanılabilir. Bir diğer olası neden özelleştirilmiş eylem çubuğunuzdur (custom action bar); eylem çubuğunu sıfırladığınızda ikonu Mühendislik rolünde bulursunuz."
+    }
+  ],
+  "checkpoint": "Nemetschek profilleriyle oluşturulmuş iki eleman arasında otomatik bir bağlantı üretip çift tıkla düzenleme penceresini açabiliyorsanız, bağlantı iş akışını doğru uygulamışsınız demektir.",
+  "commands": [
+    {
+      "name": "Automated Connections",
+      "menu": "ALLPLAN · Mühendislik (Engineering) rolü · Supporting structure",
+      "shortcut": "",
+      "desc": "Çelik elemanları arka planda SDS2 komutlarıyla otomatik birleştiren komut."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "en_9373",
+      "title": "SDS2 bağlantısı ve eksik ikon",
+      "body": "2024 sürümünde taşıyıcı yapı (Supporting structure) modülü kullanıldığında otomatik bağlantılar için bir ikon bulunur. Bu komut, elemanları arka planda SDS2 komutlarıyla otomatik olarak bağlar. Uyarı: komut yalnızca elemanlar (taşıyıcı yapının kiriş ve kolonları) Nemetschek kataloğu profillerinden oluşturulmuşsa çalışır; aksi halde bağlantı oluşturulamaz ve profil seçimi sırasında uyarı gelebilir. Otomatik bağlantılar yerleştirildikten sonra her birleşim çift tıklanarak düzenlenebilir. NOT: İkona erişilemiyorsa neden lisanstır (Mühendislik sürümünden itibaren) ya da özelleştirilmiş eylem çubuğudur; eylem çubuğu sıfırlanınca ikon Mühendislik rolünde bulunur.",
+      "figures": []
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m6-2-1",
+      "prompt": "Otomatik bağlantılar komutu elemanları hangi yolla birleştirir?",
+      "options": [
+        {
+          "text": "Kullanıcının elle çizdiği kaynak dikişleriyle",
+          "correct": false
+        },
+        {
+          "text": "Arka planda SDS2 komutlarıyla",
+          "correct": true
+        },
+        {
+          "text": "IFC dışa aktarımı sırasında",
+          "correct": false
+        },
+        {
+          "text": "Donatı bükme makinesi üzerinden",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre otomatik bağlantılar komutu, taşıyıcı yapı elemanlarını arka planda SDS2 komutlarıyla bağlar. Diğer seçenekler farklı iş akışlarına aittir.",
+      "bloom": "Kavrama",
+      "difficulty": "Kolay"
+    },
+    {
+      "id": "m6-2-2",
+      "prompt": "Otomatik bağlantı ikonu görünmüyorsa olası nedenler kaynağa göre hangileridir?",
+      "options": [
+        {
+          "text": "Yalnızca internet bağlantısının kesik olması",
+          "correct": false
+        },
+        {
+          "text": "Lisans seviyesi veya özelleştirilmiş eylem çubuğu",
+          "correct": true
+        },
+        {
+          "text": "Ekran çözünürlüğünün düşük olması",
+          "correct": false
+        },
+        {
+          "text": "Projede beton malzemenin tanımsız olması",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynaktaki NOT, ikona erişilememesini lisansa (Mühendislik sürümünden itibaren) veya özelleştirilmiş eylem çubuğuna bağlar; eylem çubuğu sıfırlanınca ikon Mühendislik rolünde görünür.",
+      "bloom": "Analiz",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "Katalog profilleriyle oluşturulmuş bir kiriş ve kolonu seçip otomatik bağlantı komutunu çalıştırın, ardından oluşan birleşime çift tıklayıp düzenleme penceresini açın.",
+    "expected": "Birleşim üretilir ve çift tıklamayla düzenlenebilir hale gelir.",
+    "hint": "Komut çalışmıyorsa önce elemanların Nemetschek katalog profilinden olduğunu doğrulayın."
+  }
+}

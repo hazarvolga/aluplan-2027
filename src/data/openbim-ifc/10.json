@@ -1,0 +1,141 @@
+{
+  "no": 10,
+  "slug": "epys-adlandirma-oznitelik-kurallarini-saglamak-ve-dogrulama",
+  "title": "e-PYS Adlandırma ve Öznitelik Kurallarını Modelde Sağlama ve Doğrulama",
+  "duration": "35 dk",
+  "sourceModule": "Proje 1 · Modül 10: OpenBIM, IFC 4/4.3, IDS ve Bimplus CDE",
+  "intro": "Önceki derste IDS'in yapısını tanıdınız. Şimdi EPYS_IDS'in modelden somut olarak ne istediğini (disiplin kodlu adlandırma, zorunlu özellikler, doğru IFC sınıfı) ve bunu ALLPLAN'da nasıl sağlayıp bir doğrulayıcıyla nasıl kontrol edeceğinizi göreceksiniz. Hedef, modeli ilk teslimde geçecek biçimde hazırlamaktır.",
+  "objectives": [
+    "EPYS_IDS'in disiplin kodlu Name (ad) desenlerini ve bunların EK-5 kategori kodlarıyla ilişkisini okumak.",
+    "Zorunlu özellik (Pset) ve veri tipi gerekliliklerinin modelde ne anlama geldiğini açıklamak.",
+    "ALLPLAN'da öznitelik eşleme ve doğru IFC sınıfı atamayla bu gereklilikleri tekrarlanabilir biçimde sağlamak.",
+    "IFC modelini bir IDS doğrulayıcıyla denetleyip fail sonuçlarını okuyup düzeltme döngüsünü kurmak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Disiplin kodlu adlandırma kuralları (Name deseni)",
+      "body": "EPYS_IDS'in en yaygın gerekliliği, nesnenin Name özniteliğinin disipline özgü bir desene uymasıdır. Örnekler (dosyadan birebir):\n- Elektrik aktüatör: EE-AKT-... \n- Mekanik hava terminal kutusu: MK-HTK-... \n- Taşıyıcı/malzeme kodlu elemanlar: (AL|ST|ZE)-KLN-... , (AL|ST|ZE)-KRS-... (kolon, kiriş vb.)\n- Mimari elemanlar: (MM|IM|PY)-KAP-... , (MM|IM|PY)-DVR-... (kapı, duvar vb.)\n- Mahal (oda) adı: (K[0-9]{2}|B[0-9]{2})_..._[0-9]{3} biçiminde kat ve kod düzeni.\nBu önekler ve kodlar keyfî değildir; yetki kaynağı e-PYS Yönetmeliği EK-5 Tablo 5.1 ve 5.2 (kategori kodu listeleri) ile EK-3 (mahal adları) eklerdir. IDS, bu kodları bir regex (xs:pattern) olarak zorunlu kılar; adı desene uymayan nesne o kural için fail olur.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Zorunlu özellikler (Pset) ve veri tipleri",
+      "body": "Bazı specification'lar yalnız adı değil, belirli bir özellik kümesindeki (Pset) özelliği de zorunlu kılar. Örnek: hava terminali için Pset_AirTerminalTypeCommon kümesinde AirFlowRateRange özelliği, IFCVolumetricFlowRateMeasure veri tipinde istenir. Burada üç şey birden denetlenir: doğru Pset adı, doğru özellik adı ve doğru veri tipi. Ayrıca bazı kurallar malzeme (material) ve nesneler arası ilişki (partOf) gerektirir. Yani \"bilgi var\" yetmez; bilgi doğru kümede, doğru adla ve doğru tiple bulunmalıdır.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "ALLPLAN'da sağlama: eşleme ve doğru sınıf (ALLPLAN'ın gücü)",
+      "body": "Bu gereklilikleri ALLPLAN'da iki ayarla karşılarsınız:\n- Doğru IFC sınıfı: Elemanın IFC'de doğru sınıfa (ör. IfcAirTerminalBox) gitmesini sağlayın; yanlış sınıf, nesneyi kuralın applicability'sinden çıkarır ve beklenen denetim hiç çalışmaz (4. ve 5. derste kurduğunuz nesne tipi/sistem yapısı burada işe yarar).\n- Öznitelik eşleme (Attribute-Mapping) ve değişim profili: ALLPLAN özniteliklerini IFC Name'ine ve istenen Pset özelliklerine eşleyin; bu eşlemeyi bir profilde (Austauschprofil) saklayıp her projede yeniden kullanın.\nALLPLAN'ın buradaki gücü, IDS uyumunu tek seferlik elle düzeltme değil, profile bağlı tekrarlanabilir bir dışa aktarım hâline getirmesidir: bir kez doğru kurduğunuz eşlemeyi tüm projede ve sonraki projelerde aynı sonuçla kullanırsınız. Model Bimplus'a yüklendiğinde doğrulama ve sorun (BCF) yönetimi de aynı openBIM ortamında yürür.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Doğrulama döngüsü: dışa aktar, denetle, düzelt",
+      "body": "Uyumu kanıtlamanın yolu doğrulamadır:\n1. Modeli IFC4.3 (ADD2) olarak dışa aktarın.\n2. Üretilen IFC dosyasını bir IDS doğrulayıcıya EPYS_IDS ile birlikte verin. Doğrulayıcı, her specification'ın applicability'sine uyan nesneleri bulup requirements'ı test eder ve pass/fail raporu üretir.\n3. Fail satırlarını okuyun: hangi nesne, hangi kural, ne eksik (yanlış ad deseni mi, eksik Pset özelliği mi, yanlış veri tipi mi).\n4. Eksikleri ALLPLAN'da düzeltin (ad, öznitelik eşleme, sınıf), yeniden dışa aktarın ve tekrar doğrulayın.\nBu döngü, modeli e-PYS'e göndermeden önce içeride tamamlanır; teslimde sürpriz ret yaşanmaz.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Ada bir karakter fazla/eksik",
+      "body": "Name deseni bir regex'tir; 'EE-AKT-...' isterken 'EEAKT...' veya 'EE_AKT...' yazmak nesneyi fail yapar. Kodları EK-5/EK-3 tablolarındaki ayraç ve büyük/küçük harf düzenine birebir uydurun."
+    },
+    {
+      "title": "DİKKAT: Doğru bilgi yanlış Pset'te",
+      "body": "Bir özellik var ama beklenen özellik kümesinde (ör. Pset_AirTerminalTypeCommon) değilse ya da veri tipi beklenenden farklıysa (ör. metin yerine IfcVolumetricFlowRateMeasure) kural yine fail olur. Eşlemede hedef Pset adını ve tipi birebir tutturun."
+    }
+  ],
+  "checkpoint": "Bir elemana EK kurallarına uygun bir ad verip (ör. mimari duvar için (MM|IM|PY)-DVR-...), öznitelik eşlemesini ayarlayıp IFC4.3 dışa aktardıktan sonra doğrulayıcıda o nesnenin ilgili specification'ı geçtiğini (pass) görebiliyorsanız kuralları sağlama becerisini kazanmışsınızdır.",
+  "commands": [
+    {
+      "name": "Attribute-Mapping (Öznitelik Eşleme)",
+      "menu": "IFC dışa aktarım ayarları",
+      "shortcut": "",
+      "desc": "ALLPLAN özniteliklerini IFC Name ve Pset özelliklerine eşler; IDS adlandırma ve özellik gerekliliklerini karşılar."
+    },
+    {
+      "name": "Austauschprofil (Değişim Profili)",
+      "menu": "IFC dışa aktarım ayarları",
+      "shortcut": "",
+      "desc": "Eşleme ayarlarını profilde saklar; aynı IDS uyumunu projeler arası tekrarlanabilir kılar."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "epys-ids",
+      "title": "EPYS_IDS: Adlandırma ve özellik gereklilikleri",
+      "body": "EPYS_IDS, disiplin kodlu Name desenlerini (EE-AKT-, MK-HTK-, (AL|ST|ZE)-KLN-, (MM|IM|PY)-DVR-, mahal (K##|B##)_..._### gibi) ve zorunlu Pset özelliklerini (ör. Pset_AirTerminalTypeCommon / AirFlowRateRange, IfcVolumetricFlowRateMeasure) tanımlar. Kaynak dosya: EPYS_IDS_2026-11-06.ids.",
+      "figures": []
+    },
+    {
+      "id": "epys-yonetmelik-ek5",
+      "title": "e-PYS Yönetmeliği EK-3 / EK-5 (kategori kodları ve mahal adları)",
+      "body": "IDS'teki ad desenlerinin kodları EK-5 Tablo 5.1 ve 5.2 kategori kodu listelerinden, mahal (oda) ad düzeni ise EK-3'ten gelir. IDS bu tabloları otomatik denetlenebilir kurala çevirir; yetki kaynağı yönetmelik ve ekleridir.",
+      "figures": []
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m10-ids-3",
+      "prompt": "Bir hava terminali nesnesine doğru adı verdiniz ama istenen özelliği Pset_AirTerminalTypeCommon yerine farklı bir özellik kümesine yazdınız. Doğrulama ne der?",
+      "options": [
+        {
+          "text": "Geçer; önemli olan özelliğin bir yerde bulunmasıdır",
+          "correct": false
+        },
+        {
+          "text": "Fail; özellik beklenen Pset'te ve doğru tipte olmak zorundadır",
+          "correct": true
+        },
+        {
+          "text": "Ad doğru olduğu için özellik kuralı atlanır",
+          "correct": false
+        },
+        {
+          "text": "IFC sürümü düşürülerek kural esnetilir",
+          "correct": false
+        }
+      ],
+      "explanation": "Property facet'i hem Pset adını hem özellik adını hem de veri tipini denetler. Doğru bilgi yanlış kümede ya da yanlış tipte ise kural fail olur.",
+      "bloom": "Analiz",
+      "difficulty": "Orta"
+    },
+    {
+      "id": "m10-ids-4",
+      "prompt": "ALLPLAN'ın IDS uyumunu tekrarlanabilir kılan asıl aracı aşağıdakilerden hangisidir?",
+      "options": [
+        {
+          "text": "Her nesneyi elle yeniden adlandırmak",
+          "correct": false
+        },
+        {
+          "text": "Öznitelik eşlemesini bir değişim profilinde (Austauschprofil) saklamak",
+          "correct": true
+        },
+        {
+          "text": "Modeli PDF olarak dışa aktarmak",
+          "correct": false
+        },
+        {
+          "text": "Doğrulamayı atlayıp doğrudan teslim etmek",
+          "correct": false
+        }
+      ],
+      "explanation": "Eşleme ayarlarını bir değişim profilinde saklamak, aynı IDS uyumunu proje içinde ve projeler arası tekrarlanabilir biçimde üretmenizi sağlar; ALLPLAN'ın buradaki gücü budur.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "Projenizden bir eleman seçin (ör. bir duvar veya bir mekanik eleman). EPYS_IDS'teki ilgili desene uygun bir Name verin, öznitelik eşlemesini ayarlayın, modeli IFC4.3 (ADD2) dışa aktarın ve bir IDS doğrulayıcıda EPYS_IDS ile denetleyin.",
+    "expected": "Doğrulama raporunda seçtiğiniz nesnenin ilgili specification için 'pass' görünmesi; varsa fail satırlarını (yanlış ad deseni, eksik/yanlış Pset özelliği) okuyup düzeltmiş olmanız.",
+    "hint": "Önce nesnenin doğru IFC sınıfına gittiğini doğrulayın; yanlış sınıf, kuralın nesnenizi hiç görmemesine yol açar. Sonra Name desenini ve istenen Pset özelliğini eşlemede tutturun."
+  }
+}

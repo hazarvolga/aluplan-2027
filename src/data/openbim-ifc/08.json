@@ -1,0 +1,132 @@
+{
+  "no": 8,
+  "slug": "koordinasyon-cakisma-ve-bcf-sorun-yonetimi",
+  "title": "Koordinasyon: Çakışma Kontrolü ve BCF ile Sorun Yönetimi",
+  "duration": "25 dk",
+  "sourceModule": "Proje 1 · Modül 10: OpenBIM, IFC 4/4.3, IDS ve Bimplus CDE",
+  "intro": "Bu ders, farklı disiplin modellerinin Bimplus'ta üst üste bindirilerek çakışmaların (Kollisionen) nasıl görünür kılındığını ve koordinasyon sorunlarının (Issues) BCF dosyaları olarak nasıl paylaşıldığını öğretir.",
+  "objectives": [
+    "Fakülte modellerinin üst üste bindirilmesiyle planlama hatalarının ve çakışmaların görünür hale geldiğini açıklamak.",
+    "Koordinasyonda tespit edilen sorunların (Issues) görev olarak proje katılımcılarına dağıtıldığını tanımlamak.",
+    "Bimplus Issue'larının BCF dosyaları olarak dışa aktarılabildiğini ve BCF'nin açık bir koordinasyon biçimi olduğunu ayırt etmek.",
+    "Koordinasyon çıktılarının (Folienshow PDF, BCF) nerede üretildiğini sıralamak."
+  ],
+  "steps": [
+    {
+      "time": "",
+      "heading": "Modelleri üst üste bindirme",
+      "body": "Koordinasyonun temeli, planlama verilerinizi Bimplus'a yükleyip bina projesinin diğer fakülte modelleriyle (Fachmodelle) üst üste bindirmektir. Bu üst üste bindirme sayesinde planlama hataları ve çakışmalar (Kollisionen) görünür hale gelir. Diğer proje katılımcıları modelleri web portalı üzerinden görüntüler, düzenler veya tamamlar.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Çakışmadan göreve",
+      "body": "Çakışmalar tespit edildiğinde, çözüm için gereken görevler proje katılımcıları arasında dağıtılır. Böylece koordinasyon yalnızca hata görmek değil, hatayı doğru kişiye yönlendirip takip etmektir. Bu akış OpenBIM'in çekirdeğidir: açık modeller, ortak ortam ve görev bazlı çözüm.",
+      "figures": []
+    },
+    {
+      "time": "",
+      "heading": "Issue'ları BCF olarak paylaşma",
+      "body": "Bimplus'ta oluşturulan Issue'lar (sorunlar) BCF dosyaları olarak dışa aktarılabilir ve çoklu seçim mümkündür. BCF açık bir koordinasyon biçimidir; bir sorunu, ilgili bakış açısı ve konumuyla birlikte başka bir yazılıma taşımanızı sağlar. Ayrıca Folienshow'lar PDF olarak dışa aktarılabilir. Model, nesne veya Issue'lara doğrudan bağlı dosyalar yalnızca tek tek indirilebilir.",
+      "figures": []
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "DİKKAT: Çakışmayı görüp göreve bağlamamak",
+      "body": "Koordinasyonun amacı çakışmayı yalnızca görmek değil, çözüm görevini doğru katılımcıya dağıtmaktır. Tespit edilen çakışma bir göreve bağlanmazsa koordinasyon tamamlanmaz."
+    },
+    {
+      "title": "DİKKAT: Doğrudan bağlı dosyaların toplu indirilememesi",
+      "body": "Model, nesne veya Issue'lara LINK yerine doğrudan bağlı dosyalar yalnızca tek tek indirilebilir; bunun için hangi nesneye bağlı olduklarını bilmek gerekir."
+    }
+  ],
+  "checkpoint": "İki disiplin modelini Bimplus'ta üst üste bindirip bir çakışmayı görünür kıldıysanız ve ilgili Issue'u BCF olarak dışa aktarabiliyorsanız koordinasyon döngüsünü kurmuşsunuz demektir.",
+  "commands": [
+    {
+      "name": "BCF",
+      "menu": "Bimplus · Issues dışa aktarım",
+      "shortcut": "",
+      "desc": "Koordinasyon sorunlarının (Issues) açık biçimde dışa aktarıldığı dosya; çoklu seçim mümkündür."
+    }
+  ],
+  "media": {
+    "videos": [],
+    "pdfs": [],
+    "samples": []
+  },
+  "articles": [
+    {
+      "id": "de_8613",
+      "title": "Bimplus ile Koordinasyon ve Çakışma Tespiti",
+      "body": "Kaynak, Bimplus ile çalışmada koordinasyonun özünü anlatır. Planlama verileriniz ALLPLAN'dan veya diğer client'lardan Bimplus'a yüklenir ve bina projesinin diğer fakülte modelleriyle (Fachmodelle) üst üste bindirilir. Diğer proje katılımcıları bunları web portalı üzerinden görüntüler, düzenler veya tamamlar. Bu üst üste bindirme sayesinde planlama hataları ve çakışmalar (Kollisionen) görünür hale gelir ve çözüm için gereken görevler katılımcılar arasında dağıtılır. Ayrıntılı adım adım talimatlar ALLPLAN Bimplus yardımında bulunur.",
+      "figures": []
+    },
+    {
+      "id": "en_8604",
+      "title": "BIMPLUS'ta Issue'ları BCF Olarak Dışa Aktarma",
+      "body": "Kaynak, BIMPLUS projelerindeki verilerin güvene alınmasını anlatırken koordinasyon çıktılarına da değinir. Issue'lar (sorunlar) BCF dosyaları olarak dışa aktarılabilir ve çoklu seçim mümkündür. Folienshow'lar PDF olarak dışa aktarılabilir. Yüklenmiş model dosyaları (*.ifc, *.landxml, *.skp, ...) indirilebilir. Model, nesne, Issue veya yapılarla LINK olarak değil doğrudan bağlı dosyalar yalnızca tek tek indirilebilir; bunun için hangi nesnelere bağlı olduklarını bilmek gerekir. Kullanıcı tanımlı yapı yapıları model verisiyle birlikte IFC olarak dışa aktarılabilir.",
+      "figures": [
+        "/akademi/openbim-ifc/8604_0EMVi00000DLzk9_2995a5c0.png",
+        "/akademi/openbim-ifc/8604_0EMVi00000DM0rV_a3ed6b54.png"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "m10-8-1",
+      "prompt": "Bimplus'ta fakülte modellerini üst üste bindirmenin temel koordinasyon faydası nedir?",
+      "options": [
+        {
+          "text": "Dosya boyutunu küçültmek",
+          "correct": false
+        },
+        {
+          "text": "Planlama hatalarını ve çakışmaları (Kollisionen) görünür kılmak",
+          "correct": true
+        },
+        {
+          "text": "Lisans sayısını azaltmak",
+          "correct": false
+        },
+        {
+          "text": "Modeli otomatik boyamak",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynak, üst üste bindirmenin planlama hatalarını ve çakışmaları görünür kıldığını ve çözüm görevlerinin dağıtıldığını belirtir.",
+      "bloom": "Kavrama",
+      "difficulty": "Kolay"
+    },
+    {
+      "id": "m10-8-2",
+      "prompt": "Bimplus'taki bir koordinasyon sorununu (Issue) başka bir yazılıma taşımak için hangi açık biçim kullanılır?",
+      "options": [
+        {
+          "text": "BCF dosyası",
+          "correct": true
+        },
+        {
+          "text": "XLS tablosu",
+          "correct": false
+        },
+        {
+          "text": "DWG çizimi",
+          "correct": false
+        },
+        {
+          "text": "JPEG görsel",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaynağa göre Issue'lar BCF dosyaları olarak dışa aktarılabilir. BCF, sorunu bakış açısı ve konumuyla taşıyan açık koordinasyon biçimidir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta"
+    }
+  ],
+  "exercise": {
+    "task": "Bir mimari ve bir statik modeli Bimplus'ta üst üste bindirin, gözle bir çakışma noktası belirleyin ve buna bir Issue oluşturup BCF olarak dışa aktarın.",
+    "expected": "Üst üste bindirilmiş iki model, işaretlenmiş bir çakışma ve dışa aktarılmış bir BCF dosyası.",
+    "hint": "Çakışmayı gördükten sonra onu bir göreve/Issue'a bağlamayı unutmayın."
+  }
+}

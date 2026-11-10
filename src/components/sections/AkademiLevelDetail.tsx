@@ -9,6 +9,11 @@ import { AkademiJsonLd } from '@/components/akademi/AkademiJsonLd';
 import { temelModellemeLessons } from '@/data/temel-modelleme';
 import { araziModellemeLessons } from '@/data/arazi-modelleme';
 import { lejantLessons } from '@/data/lejant';
+import donatiIdx from '@/data/donati-detaylandirma/_index.json';
+import celikIdx from '@/data/celik-yapi/_index.json';
+import prekastIdx from '@/data/prekast/_index.json';
+import otomasyonIdx from '@/data/otomasyon-scripting/_index.json';
+import openbimIdx from '@/data/openbim-ifc/_index.json';
 import styles from './AkademiLevelDetail.module.css';
 
 const akademiLevels = akademiProgram.levels;
@@ -43,6 +48,41 @@ const SERIES_CARDS: readonly SeriesCard[] = [
     title: 'Lejant Oluşturma Eğitimi',
     lead: 'Pafta Düzenleyicide mimari ve donatı lejantlarını sıfırdan tasarlar, hücre ve formülleri tanımlar, lejantı oluşturup test eder ve düzenlersiniz. Paftalarınıza standart, otomatik beslenen lejantlar eklersiniz.',
     count: lejantLessons.length,
+  },
+  {
+    levelSlug: 'ileri',
+    basePath: '/akademi/donati-detaylandirma',
+    title: 'Donatı Detaylandırma',
+    lead: 'Betonarme elemanların 3B donatısını ulusal norma göre kurar; kesit serileri, özel büküm şekilleri, donatı gösterimi ve metrajını üretirsiniz. ALLPLAN Mühendislik iş akışı, Türkçe açıklamalı.',
+    count: donatiIdx.length,
+  },
+  {
+    levelSlug: 'ileri',
+    basePath: '/akademi/celik-yapi',
+    title: 'Çelik Yapı ve SDS2',
+    lead: 'Çelik taşıyıcı sistemi, profilleri ve otomatik bağlantıları modeller; SDS2 ile detaylandırma, BVBS/NC imalat verisi ve çelik metrajını üretirsiniz.',
+    count: celikIdx.length,
+  },
+  {
+    levelSlug: 'ileri',
+    basePath: '/akademi/prekast',
+    title: 'Prekast Yapı Elemanları',
+    lead: 'Prekast beton elemanları, gömme parçaları ve üretim listelerini tanımlar; endüstriyel üretim çıktısını otomatikleştirirsiniz.',
+    count: prekastIdx.length,
+  },
+  {
+    levelSlug: 'uzman',
+    basePath: '/akademi/otomasyon-scripting',
+    title: 'Otomasyon ve Visual Scripting',
+    lead: 'Visual Scripting ve PythonParts ile tekrar eden işleri otomatikleştirir, formül editörü betik komutlarıyla listeleri güçlendirirsiniz.',
+    count: otomasyonIdx.length,
+  },
+  {
+    levelSlug: 'uzman',
+    basePath: '/akademi/openbim-ifc',
+    title: 'OpenBIM ve IFC',
+    lead: 'IFC dışa/içe aktarımını, öznitelik eşlemeyi, e-PYS IDS ile teslim doğrulamasını ve Bimplus CDE koordinasyonunu kurarsınız.',
+    count: openbimIdx.length,
   },
 ];
 

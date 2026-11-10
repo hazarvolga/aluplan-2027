@@ -337,5 +337,10 @@
       "difficulty": "Zor",
       "outcomeCode": "K-AR7.2"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "3B arazi yüzeyini bir taban kotuna kadar kapalı 3B katı maket bloğuna dönüştürün (ekstrüzyon + Boolean); bir bina bodrum kazısını Boolean çıkarmayla açın; kesit/yan yüzeye toprak dokusu atayın.",
+    "expected": "Arazi altı kapalı kalınlıklı bir 3B katıya dönüştü, boşluk açıldı ve perspektifte gerçek maket gibi görünüyorsa maketi kavramışsınız.",
+    "hint": "Açık 3B yüzeyi katı sanmayın; alttan boş görünür."
+  }
 }

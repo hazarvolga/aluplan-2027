@@ -341,5 +341,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-AR8.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "3B arazi yüzeyini Referans Yüzeye (serbest düzlem) dönüştürün; üzerine bir test döşemesi koyup arazi eğimine uyduğunu doğrulayın.",
+    "expected": "Arazi bir referans yüzey/serbest düzlem haline geldiyse ve test döşemesi eğime uyuyorsa dönüşümü kavramışsınız.",
+    "hint": "Elemanları sabit kotla oturtmayın; referans yüzeye bağlayın."
+  }
 }

@@ -289,5 +289,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-AR5.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "SAM üzerinden eş yükselti eğrileri üretin; ana eğrileri (örn. her 5 m) kalın çizgi ve kot yazısıyla, ara eğrileri ince ayarlayın; eğri aralığını projenin ölçeğine göre seçin.",
+    "expected": "Eğri aralığı ölçeğe uygun, ana eğriler kalın ve etiketli, ara eğriler ince ise izohipsleri kavramışsınız.",
+    "hint": "Eğri aralığını (Schrittweite) ölçekten bağımsız seçmeyin; plan okunmaz olur."
+  }
 }

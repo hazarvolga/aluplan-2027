@@ -336,5 +336,10 @@
       "difficulty": "Kolay",
       "outcomeCode": "K-TM13.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Zemin ve 1. kat düzlemleri arasına doğru basamak sayısıyla bir merdiven (düz veya L) modelleyin; rıht/basamak ve korkuluk ayarlarını yapın; 2B planda kesim gösterimini açın.",
+    "expected": "Kat düzlemleri arasında doğru basamak sayılı bir merdiven kurduysanız, korkuluk eklediyseniz ve 2B planda kesim görünüyorsa merdiveni kavramışsınız.",
+    "hint": "Merdiveni sabit yüksekliğe değil kat düzlemleri (OK/UK) arasına bağlayın."
+  }
 }

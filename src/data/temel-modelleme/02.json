@@ -223,5 +223,10 @@
       "difficulty": "Kolay",
       "outcomeCode": "K-TM2.1"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Yeni Proje sihirbazıyla konut projeniz için standartlara uygun bir proje açın; çalışma birimini, referans ölçeği (1:100) ve gerekiyorsa büyük koordinat ofsetini ayarlayın.",
+    "expected": "Başlık çubuğunda proje adınız, durum çubuğunda 1:100 ve doğru birim görünüyorsa; proje niteliklerinde yapı adını okuyabiliyorsanız proje doğru kurulmuştur.",
+    "hint": "Proje nitelikleri kaydedilmiyorsa Windows yazma iznini kontrol edin (AllplanProjectDB.db3)."
+  }
 }

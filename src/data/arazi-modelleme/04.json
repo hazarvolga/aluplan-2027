@@ -372,5 +372,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-AR4.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "3B arazi noktalarınızı üçgenleyerek SAM oluşturun; girintili arsada Dış Sınır ile gerçek köşelere kırpın; bir istinat/şev kenarını kırık hat (breakline) olarak tanıtın.",
+    "expected": "SAM noktaları üçgen ağıyla birleştirmiş, dış sınır arsaya kırpılmış ve kırık hat korunmuşsa dijital arazi modelini kavramışsınız.",
+    "hint": "Girintili/L arsada Dış Sınır (Außengrenze) tanımlamayı unutmayın."
+  }
 }

@@ -387,5 +387,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-LJ10.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "3B donatısı modellenmiş bir kolon/kiriş çizim dosyasında lejantı test edin; aralığı s=15 cm'den 10 cm'ye düşürüp büküm şeması ve toplam metrajın (kg) güncellendiğini görün; Pafta Düzenleyici'de pafta bazlı bir donatı lejantı yerleştirin.",
+    "expected": "Çap/boy/adet değişince metraj otomatik güncelleniyor, pozlar doğru toplanıyor ve pafta bazlı lejant çalışıyorsa donatı lejantını test etmeyi kavramışsınız.",
+    "hint": "Donatı değişince metrajı yenilemeden paftaya almayın; imalatta hata doğar."
+  }
 }

@@ -426,5 +426,10 @@
       "difficulty": "Zor",
       "outcomeCode": "K-LJ8.2"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Poz no, adet, çap, kesim boyu, toplam boy ve ağırlık hücrelerini tanımlayıp donatı niteliklerine bağlayın; büküm şeması grafik hücresini kenar boyları ve açılarıyla yerleştirin; her çap için toplam boy ve ağırlık formülünü kurun.",
+    "expected": "Hücreler poz/çap/boy/adet niteliklerine doğru bağlı ve örnek donatıda toplam boy formülü doğru hesaplıyorsa donatı hücre tanımını kavramışsınız.",
+    "hint": "Çap/boy/adet/poz niteliğini doğru sütuna bağlayın; yanlış eşleme maliyet hatasıdır."
+  }
 }

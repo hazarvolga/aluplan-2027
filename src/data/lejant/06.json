@@ -345,5 +345,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-LJ6.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Oluşturduğunuz lejantı gerçek bir kat planında test edin; bir mahal alanını değiştirip değer ve toplamların güncellendiğini görün; Lejant Değiştir ile bir sütun/başlık hatasını düzeltin ve lejantı dışa aktarın.",
+    "expected": "Yeni eleman ekleyince satır otomatik ekleniyor, değerler güncelleniyor ve sütunlar hizalı/okunaklıysa lejant doğru çalışıyor demektir.",
+    "hint": "Model değişince lejant otomatik tazelenmezse elle güncelleyin."
+  }
 }

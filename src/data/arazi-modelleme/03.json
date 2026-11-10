@@ -394,5 +394,10 @@
       "difficulty": "Kolay",
       "outcomeCode": "K-AR3.1"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Harita altlığını pasif (sarı) arka planda açın; kot noktalarını okuyarak temiz bir çizim dosyasına 3B arazi noktaları (Z kotlu) oluşturun; birkaç noktanın Z kotunu sonradan güncelleyin.",
+    "expected": "Noktalar gerçek Z yükseklikleriyle duruyor ve İzometride arazi eğimi görülüyorsa nokta kotlarını doğru girmişsiniz.",
+    "hint": "Noktaları Z olmadan 2B girmeyin; yoksa üçgenleme düz yüzey verir."
+  }
 }

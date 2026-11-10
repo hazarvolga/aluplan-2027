@@ -324,5 +324,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-LJ9.2"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Başlık, ana poz satırı, büküm şeması hücresi ve çap bazlı özeti Lejant Tanımla ile birleştirin; obje filtresini Çubuk Donatı yapın; Alt Liste ile çap bazlı özeti ana tablonun altına bağlayın.",
+    "expected": "Donatı lejant tablonuz pozları, çap ve boyları doğru listeliyor ve toplam demir miktarı hesaplanıyorsa donatı lejantını doğru oluşturmuşsunuz.",
+    "hint": "Lejantı üretirken kapsamı (hangi eleman/çizim dosyası) doğru seçin; yoksa tablo boş gelir."
+  }
 }

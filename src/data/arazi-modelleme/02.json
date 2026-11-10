@@ -420,5 +420,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-AR2.4"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Halihazır haritayı (DWG/DXF) boş bir çizim dosyasına doğru birim (m) ve ofsetle içe aktarın; karelaj/parsel köşeleri arasını Ölç ile doğrulayın.",
+    "expected": "Harita 1:1 ve doğru birimde ekrana geldiyse, koordinatlar ofsetle makul aralığa indiyse ve ölçüm doğruysa arazi dosyasını doğru almışsınız.",
+    "hint": "Büyük UTM/ITRF koordinatlarında 'Ağırlık merkezini ayarla: Ofset' seçeneğini işaretleyin."
+  }
 }

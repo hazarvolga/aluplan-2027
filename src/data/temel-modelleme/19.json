@@ -156,5 +156,10 @@
       "difficulty": "Kolay",
       "outcomeCode": "K-TM19.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Bina Strüktürünün türetilmiş bölmesinde konutunuzun ön, arka ve yan cephe görünüşlerini üretin; bakış yönü, doku/tarama ve kalem ayarlarını yapın; modelde bir pencereyi değiştirip görünüşün güncellendiğini görün.",
+    "expected": "Dört cephe türetilmiş bölmede duruyor ve modelde bir değişiklik görünüşe otomatik yansıyorsa ilişkisel görünüşleri kavramışsınız.",
+    "hint": "Görünüş üzerindeki çizgileri elle silmeyin; değişikliği modelde yapın."
+  }
 }

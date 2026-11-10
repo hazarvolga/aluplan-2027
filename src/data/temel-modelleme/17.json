@@ -172,5 +172,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-TM17.2"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Konutunuzdaki odaları Alan Tespitiyle mahal olarak tanımlayın; mahallere katmanlı ince yapı yüzeyleri (tavan, döşeme kaplaması, yan yüzey, süpürgelik) atayın; mahal etiketiyle oda no, fonksiyon ve net alanı plana yazdırın.",
+    "expected": "Her odada numara/fonksiyon/net alan etiketi görünüyor, ince yapı yüzeyleri atanmış ve DIN 277/konut alanı listesi üretilebiliyorsa mahalleri kavramışsınız.",
+    "hint": "Mahal oluşmuyorsa oda sınırının tam kapalı olduğundan emin olun (kapı yerindeki boşluk)."
+  }
 }

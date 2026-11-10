@@ -71,6 +71,19 @@
   .step{grid-template-columns:1fr;gap:var(--space-stack-xs)}
 }
 
+/* Uygulama görevi: öğrencinin kendi başına yaptığı görev */
+.exercise{margin-top:var(--space-stack-lg);max-width:52rem;border:var(--border-width-default) solid var(--accent-border);background:var(--surface-raised);padding:var(--space-inset-md);display:flex;flex-direction:column;gap:var(--space-stack-sm)}
+.exerciseTask{margin:0;font-size:var(--type-body-md-size);line-height:var(--line-height-relaxed,1.7);color:var(--text-primary)}
+.exerciseMeta{margin:0;font-size:var(--type-body-sm-size);color:var(--text-secondary)}
+.exerciseMetaK{font-family:var(--font-mono);font-size:var(--type-body-sm-size);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-akademi);margin-right:var(--space-inline-xs)}
+.exerciseFold{border-top:var(--border-width-default) solid var(--border-subtle);padding-top:var(--space-stack-xs)}
+.exerciseSummary{list-style:none;cursor:pointer;font-family:var(--font-mono);font-size:var(--type-body-sm-size);letter-spacing:.06em;text-transform:uppercase;color:var(--accent-akademi);display:flex;align-items:center;gap:var(--space-inline-sm)}
+.exerciseSummary::-webkit-details-marker{display:none}
+.exerciseSummary::before{content:"+";font-family:var(--font-mono)}
+.exerciseFold[open] .exerciseSummary::before{content:"–"}
+.exerciseSummary:focus-visible{outline:var(--border-width-accent,2px) solid var(--accent-akademi);outline-offset:2px}
+.exerciseFoldText{margin:var(--space-stack-xs) 0 0;font-size:var(--type-body-sm-size);line-height:var(--line-height-relaxed,1.7);color:var(--text-secondary)}
+
 /* Derinlemesine: rewritten Q&A with inline, interleaved screenshots */
 .deepDive{display:flex;flex-direction:column;gap:var(--space-stack-md);max-width:var(--measure-prose,46rem)}
 .deepHeading{margin:var(--space-stack-sm) 0 0;font-family:var(--font-heading);font-size:var(--type-title-sm-size);line-height:var(--line-height-snug,1.3);color:var(--text-primary)}

@@ -166,5 +166,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-TM22.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Pafta Düzenleyici'de DIN A1 bir pafta açın; dinamik antet yerleştirip proje bilgilerini otomatik okutun; plan, kesit ve görünüşleri doğru ölçeklerde Çizim Dosyası Yerleştir ile dizip katmanlı vektörel PDF üretin.",
+    "expected": "Antet proje bilgilerini otomatik yazıyor, çizimler doğru ölçekte dizili ve katmanlı vektörel PDF üretildiyse paftayı kavramışsınız.",
+    "hint": "Çizimleri paftaya kopyalamayın; referans (Çizim Dosyası Yerleştir) ile koyun."
+  }
 }

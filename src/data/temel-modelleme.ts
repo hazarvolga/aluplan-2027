@@ -53,6 +53,21 @@ export interface TmArticle {
   figures: readonly string[];
 }
 
+/**
+ * A hands-on practice task the student does on their own (not a step-by-step
+ * walkthrough): a real-work scenario, the result to check against, and an
+ * optional hint. This is the "apply" leg the lesson backbone needs.
+ */
+export interface TmExercise {
+  task: string;
+  /** Optional starting scenario or file to begin from. */
+  startFile?: string;
+  /** What the student should see when the task is done correctly. */
+  expected: string;
+  /** Optional nudge, revealed on demand. */
+  hint?: string;
+}
+
 /** A known mistake surfaced as a prominent "DİKKAT" callout, not buried in an accordion. */
 export interface TmPitfall {
   title: string;
@@ -117,6 +132,8 @@ export interface TmLesson {
   deepDive?: TmDeepDive;
   /** Optional self-assessment: outcome-linked multiple-choice questions. */
   quiz?: readonly QuizQuestion[];
+  /** Optional hands-on practice task done by the student alone. */
+  exercise?: TmExercise;
 }
 
 export const temelModellemeHero = {

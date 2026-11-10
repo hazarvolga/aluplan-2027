@@ -323,5 +323,10 @@
       "difficulty": "Kolay",
       "outcomeCode": "K-AR6.4"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "SAM Elemanlarını Dönüştür komutuyla SAM'i AYRI bir hedef çizim dosyasına 3B yüzey olarak aktarın; orijinal SAM dosyasını koruyun; yüzeye çim/ortofoto doku atayıp Animasyonda görün.",
+    "expected": "Yeni dosyada eleman 3B yüzey, orijinal SAM dosyası hâlâ duruyor ve yüzeye doku atanmışsa 3B arazi modelini kavramışsınız.",
+    "hint": "Dönüşümde hedef dosya verin; yoksa kübaj yapabilen SAM'in üstüne yazar ve kaybedersiniz."
+  }
 }

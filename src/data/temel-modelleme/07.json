@@ -263,5 +263,10 @@
       "difficulty": "Kolay",
       "outcomeCode": "K-TM7.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Konut planınızda bir cepheyi İlişkisel ölçü çizgisiyle ölçün; sonra bir duvarı taşıyın ve ölçünün otomatik güncellendiğini görün. Duvar ölçülendirmesi ve bir kot ölçülendirmesi ekleyin.",
+    "expected": "İlişkisel ölçü model değişince güncelleniyor, duvar ve kot ölçülendirmesi yapılmış ve bir diziye sonradan nokta ekleyebiliyorsanız ölçülendirmeyi kavramışsınız.",
+    "hint": "Standart ölçü çizgisi modeli takip etmez; değişen geometride ilişkisel ölçü kullanın."
+  }
 }

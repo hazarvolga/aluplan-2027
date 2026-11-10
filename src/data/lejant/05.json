@@ -410,5 +410,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-LJ5.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Tasarladığınız hücreleri Lejant Tanımla ile paketleyin; obje filtresini yalnız Mahaller olacak şekilde ayarlayın; üst bilgi/ana satır/toplam/alt bilgi bölgelerini sırasıyla seçip satır kaydırma vektörünü (dY) belirleyin ve doğru ölçekte yerleştirin.",
+    "expected": "Lejant doğru ölçek/çizim tipinde yerleşmiş ve satırları modeldeki mahallerden otomatik dolmuşsa mimari lejantı doğru oluşturmuşsunuz.",
+    "hint": "Lejantı ilgili planla aynı referans ölçeğe/çizim tipine yerleştirin."
+  }
 }

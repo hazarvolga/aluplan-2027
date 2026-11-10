@@ -398,5 +398,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-TM15.2"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Tamamlanan zemin kat çizim dosyalarını Bina Strüktürü üzerinden 1. kata kopyalayın; kopyalanan elemanların üst kat kotuna otomatik uyduğunu Düzlem Yöneticisi'nde doğrulayın; 1. katta bir cephe/iç mekan revizyonu yapın.",
+    "expected": "Zemin kat üst kata kopyalandıysa, elemanlar üst kat kotuna otomatik uyduysa ve revizyonu uyguladıysanız kat kopyalamayı kavramışsınız.",
+    "hint": "Kopyalamadan önce zemin kat elemanlarının OK/UK düzlemlerine bağlı olduğunu kontrol edin."
+  }
 }

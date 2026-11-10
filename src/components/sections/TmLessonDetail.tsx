@@ -145,6 +145,30 @@ export function TmLessonDetail({
         </section>
       )}
 
+      {lesson.exercise && (
+        <section className={styles.band} aria-labelledby="tm-uygulama">
+          <div className="alu-container">
+            <SectionHeader id="tm-uygulama" kicker="UYGULAMA GÖREVİ" title="Şimdi siz deneyin" lead="Adım adım tarif yok: aşağıdaki görevi kendi başınıza yapın, sonra beklenen sonuçla karşılaştırın." />
+            <div className={styles.exercise}>
+              <p className={styles.exerciseTask}>{withEmphasis(lesson.exercise.task)}</p>
+              {lesson.exercise.startFile && (
+                <p className={styles.exerciseMeta}><span className={styles.exerciseMetaK}>Başlangıç</span> {lesson.exercise.startFile}</p>
+              )}
+              {lesson.exercise.hint && (
+                <details className={styles.exerciseFold}>
+                  <summary className={styles.exerciseSummary}>İpucu</summary>
+                  <p className={styles.exerciseFoldText}>{withEmphasis(lesson.exercise.hint)}</p>
+                </details>
+              )}
+              <details className={styles.exerciseFold}>
+                <summary className={styles.exerciseSummary}>Beklenen sonuç</summary>
+                <p className={styles.exerciseFoldText}>{withEmphasis(lesson.exercise.expected)}</p>
+              </details>
+            </div>
+          </div>
+        </section>
+      )}
+
       {lesson.quiz && lesson.quiz.length > 0 && (
         <section className={styles.band} aria-labelledby="tm-quiz">
           <div className="alu-container">

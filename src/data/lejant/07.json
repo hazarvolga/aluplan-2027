@@ -292,5 +292,10 @@
       "difficulty": "Kolay",
       "outcomeCode": "K-LJ7.2"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Mühendislik rolünde standart bir çubuk donatı lejantını Ofis klasörüne kopyalayın; sütunları (poz no, adet, çap, tek boy, toplam boy, büküm şeması, çap bazlı ağırlık) Türkiye pratiğine göre düzenleyin.",
+    "expected": "Hazır donatı lejantını kopyalayıp sütunları (poz, çap, boy, adet, toplam boy) standardınıza uyarladıysanız tasarım/kopyalama adımını kavramışsınız.",
+    "hint": "Donatı lejantını mimari lejant şablonuyla kurmayın; donatıya özgü niteliklere dayanır."
+  }
 }

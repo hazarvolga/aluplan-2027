@@ -253,5 +253,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-AR9.4"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Haritadaki 2B yol sınırlarını eğimli araziden kesip ayırarak yol şeridi modelleyin; asfalt/parke dokusu atayın; kaldırımı bordür kademesiyle (+0,15 m) yükseltin.",
+    "expected": "Yol yüzeyi arazi eğimine birebir oturuyor, dokusu atanmış ve kaldırımlar bordürle yükseltilmişse yolları kavramışsınız.",
+    "hint": "Yolu düz plak olarak modellemeyin; araziyi yol sınırlarından kesin."
+  }
 }

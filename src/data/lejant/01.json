@@ -249,5 +249,11 @@
       "difficulty": "Orta",
       "outcomeCode": "K-LJ1.2"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Bir kağıda, elle çizilen bir tablo ile ilişkisel lejant arasındaki farkı; mimari (mahal/doğrama) ve donatı (poz/çap/boy) lejantının neyi okuduğunu; ilişkisel lejantın model değişince nasıl güncellendiğini kendi sözlerinizle yazın.",
+    "expected": "Lejantın niteliklerden beslenen bir nesne olduğunu, mimari ve donatı lejantının farkını ve ilişkisel güncellemeyi açıkladıysanız giriş kazanımlarını edinmişsiniz.",
+    "startFile": "Yeni, boş proje",
+    "hint": "Lejantı düz çizgi/metinle elle çizmeyin; hücre ve formülle kurun."
+  }
 }

@@ -178,5 +178,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-TM21.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Türetilen kesit/görünüşte ±0.00 referansını doğru noktaya tanımlayın; döşeme üst/alt, saçak, mahya ve temel kotlarını sembollerle ölçülendirin; kat planına kaba ve bitmiş döşeme kot sembollerini yerleştirin.",
+    "expected": "±0.00'a göre tüm kotlar sembollerle doğru yazılıysa ve model değişince güncelleniyorsa kot/etiketi kavramışsınız.",
+    "hint": "±0.00'ı doğru baz noktaya verin; yanlışsa tüm kotlar sistematik kayar."
+  }
 }

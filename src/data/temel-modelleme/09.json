@@ -295,5 +295,11 @@
       "difficulty": "Orta",
       "outcomeCode": "K-TM9.2"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Aks ağınızı referans alarak dış cephe duvarlarını çok katmanlı (taşıyıcı + yalıtım + kaplama), iç bölme duvarlarını tek katmanlı modelleyin. Taşıyıcı katmana en yüksek önceliği verin ve alt/üst kotu kat düzlemlerine bağlayın.",
+    "expected": "Çok katmanlı dış duvar ile tek katmanlı iç duvar tanımlıysa, kotlar düzleme bağlıysa ve T/L birleşimleri temiz görünüyorsa duvar modellemeyi kavramışsınız.",
+    "startFile": "Önceki dersin sonucu (aks ağı)",
+    "hint": "Taşıyıcı katmana en yüksek önceliği (örn. 300) verin ki kesişimlerde kesintisiz geçsin."
+  }
 }

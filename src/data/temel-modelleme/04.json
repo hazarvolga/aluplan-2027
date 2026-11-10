@@ -383,5 +383,11 @@
       "difficulty": "Orta",
       "outcomeCode": "K-TM4.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Konutunuz için Bina Strüktürü kurun: zemin ve 1. kat düzeyleri, altlarında çizim dosyaları olsun. Bir dosyayı aktif yapıp diğerlerini referansta izleyin; Düzlemler Paletinde kat alt/üst kotlarını (UK/OK) tanımlayın.",
+    "expected": "Bina Strüktüründe katlar ve çizim dosyaları görünüyor, bir dosya aktifken diğerleri referansta izleniyor ve kat kotları Düzlem Yöneticisi'nde doğruysa yapı doğru.",
+    "startFile": "Önceki dersin sonucu",
+    "hint": "Elemanları sabit kot yerine OK/UK düzlemlerine bağlamayı unutmayın."
+  }
 }

@@ -366,5 +366,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-TM3.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Actionbar'da rolü değiştirip araçların değiştiğini gözlemleyin; Özellikler, Kütüphane ve Katmanlar paletlerini açıp kapatın; aynı modeli plan, izometri ve animasyon penceresinde aynı anda açın.",
+    "expected": "Rolü değiştirince araçların değiştiğini, paletleri yönetebildiğinizi ve modeli üç farklı pencerede eşzamanlı gördüğünüzü doğruladıysanız arayüzü kavramışsınız.",
+    "hint": "Aradığınız komut yoksa önce seçili rolü kontrol edin."
+  }
 }

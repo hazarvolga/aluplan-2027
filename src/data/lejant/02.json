@@ -328,5 +328,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-LJ2.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Bir mimari lejant şablonunu açıp 5 bileşenini (üst bilgi, ana satır, alt liste, toplam, alt bilgi) işaretleyin; her hücrenin hangi nitelikten beslendiğini okuyun; sıralama ve sayfa kırılımı kurallarını not edin.",
+    "expected": "Gövde, hücre ve nitelik/formül alanlarını ayırt edip her hücrenin kaynağını okuyabiliyorsanız lejant parçalarını kavramışsınız.",
+    "hint": "Gövde (çerçeve) ile hücreyi (bilgi kutusu) karıştırmayın; veri hücreden gelir."
+  }
 }

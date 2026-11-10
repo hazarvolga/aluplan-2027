@@ -164,5 +164,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-TM18.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Halihazır haritayı doğru birim ve ofsetle içe aktarın; arazi noktalarından SAM üretip dış sınırını arsaya kırpın; eş yükselti eğrileri oluşturup araziyi 3B yüzeye dönüştürün.",
+    "expected": "SAM üçgenlenmiş, sınırı kırpılmış, izohipsler etiketli ve 3B yüzeye doku atanmışsa çevre/arazi düzenlemeyi kavramışsınız.",
+    "hint": "İçe aktarırken ofseti (ağırlık merkezi) işaretlemeyi unutmayın."
+  }
 }

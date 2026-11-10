@@ -336,5 +336,10 @@
       "difficulty": "Kolay",
       "outcomeCode": "K-TM5.1"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Bir yardımcı konstrüksiyon ızgarası kurun; üzerine çizgi, dikdörtgen, daire ve yay ile ölçülü 2B geometri çizin; kapalı bir bölgeyi Alan Tespitiyle seçip tarama ve dolgu uygulayın. Çizmeden önce kalem, çizgi tipi ve rengi seçin.",
+    "expected": "Ölçülü geometriniz hazır, kapalı bölge taranmış ve yardımcı çizgiler kalıcı geometriden ayrı tutulmuşsa 2B oluşturmayı kavramışsınız.",
+    "hint": "Yardımcı konstrüksiyon çizgileri çıktıya ve metraja girmez; kalıcı geometriyi normal çizgiyle çizin."
+  }
 }

@@ -483,5 +483,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-TM16.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Konutunuzun üstüne bir çatı düzlemi (beşik veya kırma) tanımlayıp eğim verin; çatı katı duvar ve kolonlarının üst kotunu çatı düzlemine bağlayıp eğimli kesilmelerini sağlayın; çok katmanlı çatı kaplaması ekleyin.",
+    "expected": "Çatı düzlemi eğimli, duvar/kolon üst kotları çatıya bağlı (eğimli kesilmiş) ve kaplama eklenmişse çatı elemanlarını kavramışsınız.",
+    "hint": "Önce çatı düzlemini kurun, sonra duvar üst kotlarını ona bağlayın."
+  }
 }

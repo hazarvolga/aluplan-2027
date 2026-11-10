@@ -320,5 +320,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-AR10.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Komşu parsellerdeki çevre binalarını, Ders 8'deki eğimli arazi düzlemine Alt Seviyeyi bağlayıp kat adedine göre (3 kat = 9,00 m) yükselterek 3B kütleye dönüştürün; üst bitişi yatay bir düzleme ayarlayın; vaziyet maketini Animasyonda sunuma hazırlayın.",
+    "expected": "Binalar doğru kotta araziye oturuyor, ±0.00 arazi kotuyla ilişkili ve çevre maketi (arazi+yollar+binalar) sunuma hazırsa binaları kavramışsınız.",
+    "hint": "Binayı arazi kotuna oturtmayı unutmayın; yoksa makette havada/gömülü görünür."
+  }
 }

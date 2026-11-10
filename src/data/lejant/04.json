@@ -517,5 +517,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-LJ4.1"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Hücre Tanımla ile ana satır ve toplam hücreleri oluşturun; mahal no, mahal adı, taban alanı ve çevre niteliklerini doğru formatta (A32/F8.2/I4) bağlayın; bir hücreye `@224@*1.10` gibi bir formül yazın; örnek bir mahalde değerleri doğrulayın.",
+    "expected": "Her hücre doğru niteliğe/formüle bağlı ve örnek elemanda gerçek değerleri (alan, no) gösteriyorsa hücre tanımını kavramışsınız.",
+    "hint": "Nitelik adını modeldeki gerçek nitelikle eşleyin; yanlışsa hücre boş/hatalı gelir."
+  }
 }

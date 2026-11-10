@@ -296,5 +296,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-TM6.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Çizdiğiniz geometride bir elemanı tutamaçlarından taşıyıp kopyalayın; iki çizgiyi kırpıp uzatın; bir köşeye pah, diğerine yuvarlatma uygulayın; bir elemanın biçimini Biçim Aktar ile başka bir elemana taşıyın.",
+    "expected": "Taşıma/kopyalama, kırp/uzat, pah/yuvarlatma ve biçim aktarma işlemlerini doğru yaptıysanız düzenleme komutlarını kavramışsınız.",
+    "hint": "Soldan sağa pencere yalnız tümüyle içine aldığını, sağdan sola pencere dokunduğu her şeyi seçer."
+  }
 }

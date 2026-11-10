@@ -160,5 +160,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-TM20.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Kat planı üzerinde düz veya kademeli bir kesit hattı tanımlayıp A-A kesitini üretin; kesit derinliği ve kesilen elemanların kalın kontur + malzeme taramasını ayarlayın; modeli değiştirip kesitin güncellendiğini görün.",
+    "expected": "A-A (ve B-B) kesiti kesilen elemanlarda kalın kontur ve taramayla görünüyor ve model değişince güncelleniyorsa kesitleri kavramışsınız.",
+    "hint": "Kesit hattını silmeyin ve bakış okunu doğru yöne verin."
+  }
 }

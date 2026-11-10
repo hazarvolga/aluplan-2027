@@ -292,5 +292,11 @@
       "difficulty": "Orta",
       "outcomeCode": "K-TM1.1"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Bu eğitimde sıfırdan kuracağınız iki katlı konutu düşünün. Bir kağıda, Proje -> Bina Strüktürü -> Çizim Dosyası -> Katman hiyerarşisini ve binanın hangi elemanlarını (aks, duvar, kapı/pencere, kolon/kiriş, döşeme, merdiven, temel, çatı) hangi sırayla modelleyeceğinizi kendi sözlerinizle yazın.",
+    "expected": "Dört seviyeli çalışma hiyerarşisini ve en az sekiz yapı elemanını doğru üretim sırasıyla listelediyseniz iş akışını kavramışsınız demektir.",
+    "startFile": "Yeni, boş proje",
+    "hint": "Duvarın iki çizgi değil, malzeme ve yükseklik taşıyan bir nesne olduğunu notunuza ekleyin."
+  }
 }

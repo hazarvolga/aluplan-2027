@@ -176,5 +176,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-TM14.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Taşıyıcı duvarların altına şerit temel, kolonların altına tekil temel yerleştirin; isterseniz oturum alanına radye temeli deneyin. Temelleri kot düzlemine bağlayın.",
+    "expected": "Şerit, tekil (ve varsa radye) temeller doğru kotta ve taşıyıcılara bağlıysa temel elemanlarını kavramışsınız.",
+    "hint": "Temeli sabit kota değil kot düzlemine bağlayın; yoksa zemin kotu değişince kopar."
+  }
 }

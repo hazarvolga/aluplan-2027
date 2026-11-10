@@ -293,5 +293,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-TM12.2"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Kat dış konturunu yakalayarak betonarme döşeme plağı oluşturun ve kalınlığını kat üst düzlemine bağlayın; merdiven kovası ve bir şaft için döşeme boşluğu açın.",
+    "expected": "Döşeme plağı dış kontura oturmuş, kalınlığı düzleme bağlı ve kova/şaft boşlukları açılmışsa döşeme modellemeyi kavramışsınız.",
+    "hint": "Kova ve şaft için boşluk açmayı unutmayın; yoksa metraj şişer."
+  }
 }

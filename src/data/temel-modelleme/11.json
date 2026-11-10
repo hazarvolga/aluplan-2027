@@ -255,5 +255,10 @@
       "difficulty": "Kolay",
       "outcomeCode": "K-TM11.1"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Aks kesişimlerine betonarme kolonlar yerleştirin ve kat üst kotuna bağlı bir sarkık kiriş modelleyin. Kolon-duvar kesişiminde hacmin tek sayıldığını (öncelik) metraj/rapordan doğrulayın.",
+    "expected": "Kolonlar aks kesişiminde ve doğru kesitte, kirişler kat üst kotuna bağlıysa ve kesişimde hacim tek sayılıyorsa kolon/kiriş modellemeyi kavramışsınız.",
+    "hint": "Kolon ile duvara aynı önceliği vermeyin; yoksa hacim iki kez sayılır."
+  }
 }

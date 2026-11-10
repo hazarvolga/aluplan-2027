@@ -155,5 +155,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-TM8.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Konutunuz için ayrı bir çizim dosyasında X ve Y yönünde aks ağı kurun; aksları A,B,C / 1,2,3 olarak etiketleyin ve otomatik aks ölçülendirmesi ekleyin. Sonra bir aks aralığını değiştirip etiketlerin uyduğunu görün.",
+    "expected": "Aks ağı kendi dosyasında, etiketli ve ölçülü duruyorsa ve aralık değişince etiketler/ölçüler uyuyorsa aks ağını doğru kurmuşsunuz.",
+    "hint": "Aksları kat dosyasına değil ayrı bir çizim dosyasına çizin."
+  }
 }

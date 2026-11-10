@@ -435,5 +435,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-TM10.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Dış ve iç duvarlarınıza parametrik kapı ve pencereler yerleştirin; parapet yüksekliği ve diş (reveal) ayarlarını yapın; en az bir pencereyi SmartPart ile kasa/kanat/cam olarak detaylandırın.",
+    "expected": "Boşluklar duvarda otomatik açıldıysa, parapet ve diş ayarları doğruysa ve bir SmartPart pencere 3B detaylıysa kapı/pencereyi kavramışsınız.",
+    "hint": "Önce duvarı yakalamazsanız boşluk açılmaz; eleman serbest sembol olarak kalır."
+  }
 }

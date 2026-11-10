@@ -446,5 +446,10 @@
       "difficulty": "Orta",
       "outcomeCode": "K-LJ3.3"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Bir varsayılan mimari lejantı Lejantları Yönet ile Ofis klasörüne kopyalayın; kopyayı çalışma alanına patlatıp başlık/sütun/nitelik eşlemelerini kendi standardınıza uyarlayın.",
+    "expected": "Hazır lejantı projenize kopyalayıp başlık, sütun ve nitelik eşlemelerini uyarladıysanız tasarım/kopyalama adımını kavramışsınız.",
+    "hint": "Orijinal standardı doğrudan düzenlemeyin; önce kopyalayın."
+  }
 }

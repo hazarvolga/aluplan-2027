@@ -311,5 +311,11 @@
       "difficulty": "Orta",
       "outcomeCode": "K-AR1.4"
     }
-  ]
+  ],
+  "exercise": {
+    "task": "Bir kağıda, arazi verisinin (noktalar, SAM, 3B arazi) hangi çizim dosyalarında, bina modelinden ayrı tutulacağını ve 10 adımlı üretim zincirini (harita → noktalar → SAM → izohips → 3B arazi → maket → düzlem → yollar → binalar) kendi sözlerinizle sıralayın.",
+    "expected": "Arazi verisini bina modelinden ayrı dosyalarda tuttuğunuzu ve zinciri doğru sırayla yazdıysanız arazi iş akışını kavramışsınız.",
+    "startFile": "Yeni, boş proje",
+    "hint": "SAM, üzerinde kübaj/izohips yapılabilen jeodezik veridir; 3B yüzey sunum içindir."
+  }
 }

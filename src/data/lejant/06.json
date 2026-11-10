@@ -3,7 +3,7 @@
   "slug": "mimari-lejanti-test-etme-duzenleme",
   "title": "Mimari Lejantı Test Etme - Düzenleme",
   "duration": "",
-  "sourceModule": "Proje 1 — Modül 4: İlişkisel Mimari Lejant Testi, Revizyon ve Yedekleme",
+  "sourceModule": "Proje 1 · Modül 4: İlişkisel Mimari Lejant Testi, Revizyon ve Yedekleme",
   "intro": "Lejant oluşturulduktan sonra **test edip düzenlemek** gerekir: yeni bir eleman ekleyip lejantın güncellenip güncellenmediğini, sütun/yazı hizasını ve boş satırları kontrol edersiniz. Bu ders, lejantı doğrulama ve ince ayar adımıdır.",
   "objectives": [
     "Oluşturulan mimari lejantı gerçek bir kat planı üzerinde İlişkisel (Associative) olarak test etmek.",
@@ -14,7 +14,7 @@
     {
       "time": "",
       "heading": "Kat Planında Canlı Test",
-      "body": "Mahalleri ve doğramaları modellenmiş bir kat planı çizim dosyasını açın. **Lejant Oluştur (Create Legend)** komutuyla az önce kaydettiğiniz mimari lejantı seçin, **İlişkisel (Associative)** kutusunu işaretleyip planın sağına yerleştirin.",
+      "body": "Mahalleri ve doğramaları modellenmiş bir kat planı çizim dosyasını açın. **Lejant Oluştur (Create Legend)** komutuyla az önce kaydettiğiniz mimari lejantı seçin, **İlişkisel (Associative)** kutusunu işaretleyip planın sağına yerleştirin. Doğru yaptıysanız planın sağında, satırları modeldeki mahal ve doğramalardan otomatik dolan bir lejant tablosu belirir.",
       "figures": [
         "/akademi/lejant/11051_0EM7U000001Tdn0_ee80ee73.png"
       ]
@@ -28,7 +28,7 @@
     {
       "time": "",
       "heading": "Lejant Şablonunu Düzenleme ve Yedekleme",
-      "body": "Hücre taşması veya hizalama kusuru varsa **Lejant Değiştir (Modify Legend)** ile şablonu açıp hücre genişliğini düzeltin ve tekrar kaydedin.",
+      "body": "Hücre taşması veya hizalama kusuru varsa **Lejant Değiştir (Modify Legend)** ile şablonu açıp hücre genişliğini düzeltin ve tekrar kaydedin. Doğru yaptıysanız taşan veya kayık hücreler düzelir ve güncellenen şablon yeniden kaydedilir.",
       "figures": [
         "/akademi/lejant/11051_0EM7U000001Tdn5_8dde7a6e.png"
       ]

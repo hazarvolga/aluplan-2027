@@ -3,7 +3,7 @@
   "slug": "cevre-arazi",
   "title": "Çevre ve Arazi Düzenleme",
   "duration": "",
-  "sourceModule": "Allplan Arazi Modelleme Eğitimi — Sayısal Arazi Modeli, Eş Yükselti, 3B Arazi ve Yollar",
+  "sourceModule": "Allplan Arazi Modelleme Eğitimi · Sayısal Arazi Modeli, Eş Yükselti, 3B Arazi ve Yollar",
   "intro": "Bina tek başına durmaz; bir arsanın üzerinde, belli bir eğim ve kotta yer alır. Bu derste halihazır haritayı içe aktarıp **Sayısal Arazi Modeli (SAM / DTM)** kurar, eş yükselti eğrilerini üretir, araziyi 3B yüzeye dönüştürüp doku atar ve yolları modellersiniz. Böylece binanız gerçek araziye oturur ve vaziyet planıyla sunuma hazır olur.",
   "objectives": [
     "Halihazır haritayı (DXF/DWG) doğru birim ve ofsetle içe aktarmak ve ölçeğini doğrulamak.",
@@ -14,7 +14,7 @@
     {
       "time": "",
       "heading": "Halihazır Haritayı İçe Aktarma ve Ofset",
-      "body": "`100 - Halihazır Harita Altlığı` çizim dosyasını aktif edip ölçeği (`1:500`/`1:200`) ve birimi (`m`) ayarlayın. **Dosya (File) -> İçe Aktar (Import) -> AutoCAD Verilerini İçe Aktar** ile haritayı alın; **Seçenekler**'de Dosya Birimini `Metre` yapın ve **Ağırlık merkezini ayarla: Ofset (Adjust center of gravity: Offset)** seçeneğini işaretleyin. Neden? Bu, büyük UTM koordinatlarını proje ofsetine kaydeder ve çizimi orijine (`0,0,0`) taşır; aksi halde grafik sapmaları olur.",
+      "body": "`100 - Halihazır Harita Altlığı` çizim dosyasını aktif edip ölçeği (`1:500`/`1:200`) ve birimi (`m`) ayarlayın. **Dosya (File) -> İçe Aktar (Import) -> AutoCAD Verilerini İçe Aktar** ile haritayı alın; **Seçenekler**'de Dosya Birimini `Metre` yapın ve **Ağırlık merkezini ayarla: Ofset (Adjust center of gravity: Offset)** seçeneğini işaretleyin. Neden? Bu, büyük UTM koordinatlarını proje ofsetine kaydeder ve çizimi orijine (`0,0,0`) taşır; aksi halde grafik sapmaları olur. Doğru yaptıysanız harita altlığı orijine yakın konumda ekrana gelir.",
       "figures": [
         "/akademi/temel-modelleme/11158_0EM7U000001Tdbc_b88efaad.png"
       ]
@@ -30,19 +30,19 @@
     {
       "time": "",
       "heading": "Eş Yükselti Eğrileri (İzohips)",
-      "body": "**Çevre -> Sayısal Arazi Modeli -> Eş Yükselti Eğrileri (Contour Lines / Höhenlinien)** komutuyla SAM'i seçin. Eğri aralığını (`1.00 m`, detaylı planda `0.50/0.25 m`) ve her beşinci eğriyi kalın **ana eğri (Index Contour)** olacak şekilde ayarlayın. **Etiketleme**'yi açıp ana eğrilere kot yazısını (`2 basamak: 105.00`) ekleyin.",
+      "body": "**Çevre -> Sayısal Arazi Modeli -> Eş Yükselti Eğrileri (Contour Lines / Höhenlinien)** komutuyla SAM'i seçin. Eğri aralığını (`1.00 m`, detaylı planda `0.50/0.25 m`) ve her beşinci eğriyi kalın **ana eğri (Index Contour)** olacak şekilde ayarlayın. **Etiketleme**'yi açıp ana eğrilere kot yazısını (`2 basamak: 105.00`) ekleyin. Doğru yaptıysanız araziye seçtiğiniz aralıkta eş yükselti eğrileri ve kot yazıları çizilir.",
       "figures": []
     },
     {
       "time": "",
       "heading": "3B Arazi Yüzeyine Dönüştürme ve Doku",
-      "body": "Orijinal SAM'i (`102`) kaybetmemek için **SAM Elemanlarını Dönüştür (Convert DTM Elements)** komutunda hedef çizim dosyasına boş bir numara (`103 - 3B Arazi Modeli`) verin ve tipi **3B Yüzey (3D Surface)** seçin. `103`'e geçip yüzeyi seçin, **Özellikler -> Yüzey (Surface)** kutusundan çim/toprak veya **Ortofoto** dokusu atayın.",
+      "body": "Orijinal SAM'i (`102`) kaybetmemek için **SAM Elemanlarını Dönüştür (Convert DTM Elements)** komutunda hedef çizim dosyasına boş bir numara (`103 - 3B Arazi Modeli`) verin ve tipi **3B Yüzey (3D Surface)** seçin. `103`'e geçip yüzeyi seçin, **Özellikler -> Yüzey (Surface)** kutusundan çim/toprak veya **Ortofoto** dokusu atayın. Doğru yaptıysanız yeni çizim dosyasında arazi 3B yüzey olarak oluşur ve seçtiğiniz doku yüzeye uygulanır.",
       "figures": []
     },
     {
       "time": "",
       "heading": "Yollar ve Kaldırımlar",
-      "body": "`104 - Yollar ve Kaldırımlar` dosyasında, haritadaki yol kenarlarını takip ederek kapalı poligon oluşturun. **3B Elemanları Çizgi/Poligon ile Böl (Split 3D Elements)** ile arazi yüzeyini yol sınırları boyunca bölüp ayrılan parçaya `Asfalt/Parke Taşı` dokusu atayın. Kaldırımı **Ekstrüzyon (Extrude)** ile `+0.15 m` yükselterek bordür kademesini oluşturun. Son olarak, bu eğitim boyunca sıfırdan kurduğunuz iki katlı konutu bu arazi modeline oturtun ve binanın `±0.00` kotunu arsanın gerçek kotuyla (zemin yüksekliğiyle) ilişkilendirin; böylece bina, dolgu/kazı dengesiyle gerçek eğim üzerine doğru yükseklikte yerleşir.",
+      "body": "`104 - Yollar ve Kaldırımlar` dosyasında, haritadaki yol kenarlarını takip ederek kapalı poligon oluşturun. **3B Elemanları Çizgi/Poligon ile Böl (Split 3D Elements)** ile arazi yüzeyini yol sınırları boyunca bölüp ayrılan parçaya `Asfalt/Parke Taşı` dokusu atayın. Kaldırımı **Ekstrüzyon (Extrude)** ile `+0.15 m` yükselterek bordür kademesini oluşturun. Son olarak, bu eğitim boyunca sıfırdan kurduğunuz iki katlı konutu bu arazi modeline oturtun ve binanın `±0.00` kotunu arsanın gerçek kotuyla (zemin yüksekliğiyle) ilişkilendirin; böylece bina, dolgu/kazı dengesiyle gerçek eğim üzerine doğru yükseklikte yerleşir. Doğru yaptıysanız yol sınırları boyunca bölünen yüzeye asfalt dokusu atanır ve kaldırım bordür kademesiyle yükselir.",
       "figures": []
     }
   ],

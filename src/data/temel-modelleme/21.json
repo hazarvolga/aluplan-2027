@@ -3,7 +3,7 @@
   "slug": "kot-etiket",
   "title": "Kot Ölçülendirme, Etiket ve Metin",
   "duration": "",
-  "sourceModule": "Proje 1 — Modül 4: Kesit, Görünüş ve Planlarda İlişkisel Kot Ölçülendirme",
+  "sourceModule": "Proje 1 · Modül 4: Kesit, Görünüş ve Planlarda İlişkisel Kot Ölçülendirme",
   "intro": "Kesit ve görünüşler hazır; şimdi onlara **kot (Höhenkote)** yazacaksınız. Kot ölçülendirmesi, her noktanın **±0.00'a göre** yüksekliğini bir sembolle gösterir. İlişkisel kot, modelin Z koordinatını otomatik okur; kat yüksekliğini değiştirince kot değeri de değişir, elle düzeltme gerekmez.",
   "objectives": [
     "Türetilen kesit ve görünüşlerde ±0.00 referans kotunu tanımlayarak ilişkisel Kot Ölçülendirmesi yapmak.",
@@ -14,7 +14,7 @@
     {
       "time": "",
       "heading": "±0.00 Referans Kotunun Belirlenmesi",
-      "body": "**Kot Ölçülendirmesi (Elevation Point / Kotenbemaßung)** komutuna girin. İlişkisel kesitlerde modelin kendi Z koordinatını otomatik okumasını sağlayın veya **zemin kat bitmiş döşeme üstünü** `±0.00` baz noktası olarak tıklayın. Baz noktası yanlışsa tüm kotlar kayar. `±0.00`, bitmiş döşeme üstü olarak alınır; çünkü kullanıcının gerçekte üzerinde durduğu ve kapı/ruhsat kotlarının referanslandığı seviye burasıdır, kaba beton üstü değil.",
+      "body": "**Kot Ölçülendirmesi (Elevation Point / Kotenbemaßung)** komutuna girin. İlişkisel kesitlerde modelin kendi Z koordinatını otomatik okumasını sağlayın veya **zemin kat bitmiş döşeme üstünü** `±0.00` baz noktası olarak tıklayın. Baz noktası yanlışsa tüm kotlar kayar. `±0.00`, bitmiş döşeme üstü olarak alınır; çünkü kullanıcının gerçekte üzerinde durduğu ve kapı/ruhsat kotlarının referanslandığı seviye burasıdır, kaba beton üstü değil. Doğru yaptıysanız tıkladığınız nokta ±0.00 referansı olarak alınır ve kotlar buna göre okunur.",
       "figures": []
     },
     {

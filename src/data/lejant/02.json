@@ -3,7 +3,7 @@
   "slug": "bir-lejantin-parcalari",
   "title": "Bir Lejantın Parçaları",
   "duration": "",
-  "sourceModule": "Proje 1 — Modül 4: Lejant Şablon Mimarisi (Header, Body, Sublist, Summary, Footer)",
+  "sourceModule": "Proje 1 · Modül 4: Lejant Şablon Mimarisi (Header, Body, Sublist, Summary, Footer)",
   "intro": "Bir lejantı kurmadan önce parçalarını tanımak gerekir: **lejant gövdesi** (çerçeve/başlık), **lejant hücreleri** (her satır/sütun) ve hücrelerin içindeki **nitelik/formül alanları**. Bu ders, bir lejantın anatomisini ve hücrelerin niteliklere nasıl bağlandığını gösterir. Burada tanıyacağınız bileşenler, ilerleyen derslerde kuracağınız kat planı mahal lejantının iskeletini oluşturur.",
   "objectives": [
     "Bir Allplan lejant şablonunu oluşturan 5 temel bileşeni (Üst Bilgi, Ana Satır, Alt Liste, Toplam/Özet Satırı, Alt Bilgi) tanımak.",

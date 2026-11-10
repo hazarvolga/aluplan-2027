@@ -3,7 +3,7 @@
   "slug": "temel-olusturma",
   "title": "Temel Oluşturma",
   "duration": "03:51",
-  "sourceModule": "Proje 1 — Modül 3: Temel Elemanları (Şerit, Tekil ve Radye Temel)",
+  "sourceModule": "Proje 1 · Modül 3: Temel Elemanları (Şerit, Tekil ve Radye Temel)",
   "intro": "Temel, binanın yükünü zemine aktaran **en alttaki taşıyıcıdır**. ALLPLAN'da taşıyıcı duvarların altına şerit temel, kolonların altına tekil temel, tüm oturum alanı altına radye temel modellersiniz. Bunları da düzlemlere bağlarsınız; böylece temel kotu tek yerden yönetilir. Doğru temel modeli hem statik hem beton metrajı için gereklidir. Bu eğitimde kurduğunuz binanın taşıyıcılarının altına bu temel tiplerini modellersiniz.",
   "objectives": [
     "Taşıyıcı duvarların altına Şerit Temel (Strip Foundation / Streifenfundament) modellemek.",
@@ -14,25 +14,25 @@
     {
       "time": "00:00 – 01:20",
       "heading": "Temel Çizim Dosyası ve Kot Düzlemi",
-      "body": "Bina strüktüründe **Temel** çizim dosyasını aktif edin ve Zemin/Bodrum Kat duvar ile kolon çizim dosyalarını **Referans Modunda** altlık olarak açın.",
+      "body": "Bina strüktüründe **Temel** çizim dosyasını aktif edin ve Zemin/Bodrum Kat duvar ile kolon çizim dosyalarını **Referans Modunda** altlık olarak açın. Doğru yaptıysanız Temel çizim dosyası aktif olur, duvar ve kolonlar gri altlık olarak görünür.",
       "figures": []
     },
     {
       "time": "01:20 – 02:00",
       "heading": "Şerit Temel (Strip Foundation): Duvar ve Perde Altı",
-      "body": "**Mimari (Architecture) -> Temel (Foundation / Fundament)** grubundan **Şerit Temel (Strip Foundation)** komutunu açın ve taşıyıcı duvarlar ile perdelerin altına yerleştirin; çünkü bu elemanların yükü zemine çizgisel indiğinden temel de doğrusal bir şerittir. Temel genişliği ile yüksekliğini ve altına, zemini tesviye eden grobeton (`Sauberkeitsschicht`) taşma payını girin.",
+      "body": "**Mimari (Architecture) -> Temel (Foundation / Fundament)** grubundan **Şerit Temel (Strip Foundation)** komutunu açın ve taşıyıcı duvarlar ile perdelerin altına yerleştirin; çünkü bu elemanların yükü zemine çizgisel indiğinden temel de doğrusal bir şerittir. Temel genişliği ile yüksekliğini ve altına, zemini tesviye eden grobeton (`Sauberkeitsschicht`) taşma payını girin. Doğru yaptıysanız taşıyıcı duvarların altında, girdiğiniz en ve yükseklikte şerit temel oluşur.",
       "figures": []
     },
     {
       "time": "02:00 – 02:35",
       "heading": "Tekil Temel (Isolated Foundation): Kolon Altı",
-      "body": "**Tekil Temel (Isolated Foundation)** komutuyla kolonların altına tekil veya kademeli temel pabuçlarını yerleştirin; çünkü kolonun yükü zemine noktasal indiğinden temel geometrisi de duvardakinden farklı, tek bir pabuç biçimindedir.",
+      "body": "**Tekil Temel (Isolated Foundation)** komutuyla kolonların altına tekil veya kademeli temel pabuçlarını yerleştirin; çünkü kolonun yükü zemine noktasal indiğinden temel geometrisi de duvardakinden farklı, tek bir pabuç biçimindedir. Doğru yaptıysanız kolonların altına tekil temel pabuçları yerleşir.",
       "figures": []
     },
     {
       "time": "02:35 – 03:51",
       "heading": "Radye Temel (Slab Foundation / Bodenplatte) Oluşturma",
-      "body": "**Radye Temel (Slab Foundation / Bodenplatte)** komutuyla bina dış konturundan ampatman (`örn. 50 cm`) çıkması vererek radye temel plağını oluşturun ve asansör çukuru eğimli hafer (Haunch) geçişlerini tanımlayın. Ampatman, plak kenarından taşarak zemin gerilmesini daha geniş alana yaydığı için verilir.",
+      "body": "**Radye Temel (Slab Foundation / Bodenplatte)** komutuyla bina dış konturundan ampatman (`örn. 50 cm`) çıkması vererek radye temel plağını oluşturun ve asansör çukuru eğimli hafer (Haunch) geçişlerini tanımlayın. Ampatman, plak kenarından taşarak zemin gerilmesini daha geniş alana yaydığı için verilir. Doğru yaptıysanız bina konturundan ampatman kadar taşan bir radye plağı oluşur.",
       "figures": []
     }
   ],

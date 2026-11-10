@@ -3,7 +3,7 @@
   "slug": "donati-lejanti-tasarimi-lejant-kopyalama",
   "title": "Donatı Lejantı Tasarımı - Lejant Kopyalama",
   "duration": "",
-  "sourceModule": "Proje 1 — Modül 5: 3B Donatı Detaylandırma, Donatı Lejantı (Reinforcing Bar Legend / Stabstahllegende) ve Büküm Şemaları",
+  "sourceModule": "Proje 1 · Modül 5: 3B Donatı Detaylandırma, Donatı Lejantı (Reinforcing Bar Legend / Stabstahllegende) ve Büküm Şemaları",
   "intro": "Donatı lejantı (demir metrajı / bar schedule), bir betonarme elemandaki donatıların **poz, çap, boy, adet ve şekil** bilgilerini tablolayan özel bir lejanttır. Bu ders, hazır bir donatı lejantını kopyalayıp standardınıza uyarlamayı anlatır.",
   "objectives": [
     "Mühendislik (Engineering) rolünde kullanılan Çubuk Donatı Lejantı (Reinforcing Bar Legend / Stabstahllegende) ve Hasır Donatı Lejantı (Mesh Legend / Mattenlegende) standartlarını tanımak.",
@@ -14,7 +14,7 @@
     {
       "time": "",
       "heading": "Standart Donatı Lejantını Ofis Klasörüne Kopyalama",
-      "body": "**Lejantları Yönet (Manage Legends)** penceresinde **Varsayılan (Default) -> Mühendislik / Donatı (Engineering / Reinforcement)** altından büküm şemalı çelik listesini (`Stahlliste mit Biegeformen`) seçin ve **Ofis (Office)** klasörüne yeni bir numarayla kopyalayın.",
+      "body": "**Lejantları Yönet (Manage Legends)** penceresinde **Varsayılan (Default) -> Mühendislik / Donatı (Engineering / Reinforcement)** altından büküm şemalı çelik listesini (`Stahlliste mit Biegeformen`) seçin ve **Ofis (Office)** klasörüne yeni bir numarayla kopyalayın. Doğru yaptıysanız büküm şemalı çelik listesi Ofis klasöründe yeni numarasıyla kopyalanmış olarak görünür.",
       "figures": [
         "/akademi/lejant/10888_0EM7U000001Te3b_f6366dcc.png"
       ]
@@ -22,7 +22,7 @@
     {
       "time": "",
       "heading": "Türkiye Uygulama Standardına Göre Tablo Başlığı ve Sütun Düzeni",
-      "body": "**Lejant Değiştir (Modify Legend)** ile şablonu ekrana çağırın. Sütun başlıklarını **Poz No**, **Çap (Ø)**, **Adet**, **Bir Boy (cm/m)**, **Toplam Boy (m)**, **Büküm Şeması ve Kıvrım Boyları** ile **Birim/Toplam Ağırlık (kg)** olacak şekilde Türkçe mühendislik jargonuyla düzenleyin. Sütunları bu sırayla dizersiniz; çünkü imalatçıya önce pozu, sonra çap ve adedi, en sonda toplam boy ile ağırlığı okutan sıra, kesim ve büküm hatasını azaltır.",
+      "body": "**Lejant Değiştir (Modify Legend)** ile şablonu ekrana çağırın. Sütun başlıklarını **Poz No**, **Çap (Ø)**, **Adet**, **Bir Boy (cm/m)**, **Toplam Boy (m)**, **Büküm Şeması ve Kıvrım Boyları** ile **Birim/Toplam Ağırlık (kg)** olacak şekilde Türkçe mühendislik jargonuyla düzenleyin. Sütunları bu sırayla dizersiniz; çünkü imalatçıya önce pozu, sonra çap ve adedi, en sonda toplam boy ile ağırlığı okutan sıra, kesim ve büküm hatasını azaltır. Doğru yaptıysanız tablo başlıkları Poz No, Çap, Adet, Boy ve Ağırlık sırasıyla Türkçe olarak görünür.",
       "figures": []
     }
   ],

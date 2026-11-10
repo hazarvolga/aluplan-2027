@@ -3,7 +3,7 @@
   "slug": "mimari-lejant-tasarimi-lejant-kopyalama",
   "title": "Mimari Lejant Tasarımı - Lejant Kopyalama",
   "duration": "",
-  "sourceModule": "Proje 1 — Modül 4: Lejant Yönetimi ve Standart Şablondan Ofis Klasörüne Kopyalama",
+  "sourceModule": "Proje 1 · Modül 4: Lejant Yönetimi ve Standart Şablondan Ofis Klasörüne Kopyalama",
   "intro": "Mimari bir lejantı (örn. kapı/pencere veya mahal lejantı) sıfırdan çizmek yerine, çoğu zaman **hazır bir lejantı kopyalayıp** kendi standardınıza uyarlamak çok daha hızlıdır. Bu ders, mevcut bir lejantı kopyalama ve uyarlama mantığını anlatır.",
   "objectives": [
     "Allplan'ın Varsayılan (Default / Standard) mimari lejantlarını bozmadan Ofis (Office / Büro) klasörüne kopyalamak.",
@@ -22,7 +22,7 @@
     {
       "time": "",
       "heading": "Lejantları Yönet (Manage Legends) ile Kopyalama",
-      "body": "**Lejantları Yönet (Manage Legends / Legenden verwalten)** komutunu açın. Kaynak olarak **Varsayılan (Default) -> Mimari (Architecture)** klasöründen örneğin `Mahal Listesi / Zemin Alanları` lejantını seçin ve hedef olarak **Ofis (Office)** klasöründe boş bir numaraya kopyalayıp yeni bir isim verin.",
+      "body": "**Lejantları Yönet (Manage Legends / Legenden verwalten)** komutunu açın. Kaynak olarak **Varsayılan (Default) -> Mimari (Architecture)** klasöründen örneğin `Mahal Listesi / Zemin Alanları` lejantını seçin ve hedef olarak **Ofis (Office)** klasöründe boş bir numaraya kopyalayıp yeni bir isim verin. Doğru yaptıysanız kopyaladığınız lejant Ofis klasöründe yeni numarası ve adıyla listelenir.",
       "figures": [
         "/akademi/lejant/10888_0EM7U000001Te3b_f6366dcc.png"
       ]
@@ -30,7 +30,7 @@
     {
       "time": "",
       "heading": "Şablonu Çalışma Alanına Çağırma ve Çerçeve Tasarımı",
-      "body": "**Lejant Değiştir (Modify Legend)** komutuyla kopyaladığınız lejantı boş bir çizim dosyasına yerleştirin; 2B çizim ve metin araçlarıyla tablo sütun genişliklerini kendi kurumsal pafta tasarımınıza göre revize edin.",
+      "body": "**Lejant Değiştir (Modify Legend)** komutuyla kopyaladığınız lejantı boş bir çizim dosyasına yerleştirin; 2B çizim ve metin araçlarıyla tablo sütun genişliklerini kendi kurumsal pafta tasarımınıza göre revize edin. Doğru yaptıysanız şablon boş çizim dosyasında düzenlenebilir bir tablo olarak açılır ve sütun genişliklerini değiştirebilirsiniz.",
       "figures": [
         "/akademi/lejant/11050_0EM7U000001Tdh6_051353ad.png"
       ]

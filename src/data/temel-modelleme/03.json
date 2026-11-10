@@ -3,7 +3,7 @@
   "slug": "arayuz-incelemesi",
   "title": "Allplan Arayüz İncelemesi ve Çalışma Prensipleri",
   "duration": "08:15",
-  "sourceModule": "Proje 1 — Modül 1: Arayüz Mimarisi, WPF Çerçevesi ve Temel Navigasyon",
+  "sourceModule": "Proje 1 · Modül 1: Arayüz Mimarisi, WPF Çerçevesi ve Temel Navigasyon",
   "intro": "ALLPLAN'ın arayüzü ilk bakışta kalabalık görünür ama tek bir mantığa dayanır: ne yapmak istediğinizi önce **Rol (Role)** ve **Görev (Task)** olarak seçersiniz, araçlar da ona göre Actionbar'da belirir. Sık kullandığınız her şey paletlerdedir. Bu derste arayüzü ezberlemek yerine nerede ne aramanız gerektiğinin haritasını çıkaracaksınız; böylece sonraki derslerde 'o komut neredeydi' diye kaybolmazsınız.",
   "objectives": [
     "Actionbar (Aksiyon Çubuğu) üzerindeki Rol (Role), Görev (Task) ve Görev Alanı (Task Area) hiyerarşisini kullanmak.",
@@ -14,7 +14,7 @@
     {
       "time": "00:00 – 02:30",
       "heading": "Actionbar (Aksiyon Çubuğu) ve Rol Seçimi",
-      "body": "Üst şeritte yer alan **Actionbar (Aksiyon Çubuğu)** üzerinden çalışma disiplininize göre **Mimari (Architecture)**, **Mühendislik (Engineering)** veya **Taslak (Draft)** rolünü seçin. Her sekmede sol grup **Oluştur (Create)**, sağ grup ise **Modifikasyon (Modify)** komutlarını barındırır.",
+      "body": "Üst şeritte yer alan **Actionbar (Aksiyon Çubuğu)** üzerinden çalışma disiplininize göre **Mimari (Architecture)**, **Mühendislik (Engineering)** veya **Taslak (Draft)** rolünü seçin. Her sekmede sol grup **Oluştur (Create)**, sağ grup ise **Modifikasyon (Modify)** komutlarını barındırır. Doğru yaptıysanız Actionbar seçtiğiniz role ait komut gruplarıyla güncellenir.",
       "figures": [
         "/akademi/temel-modelleme/8843_0EM7U000001TdOd_c5bf5d8c.png",
         "/akademi/temel-modelleme/8843_0EM7U000001TdOe_78c90f57.png",
@@ -24,7 +24,7 @@
     {
       "time": "02:30 – 05:00",
       "heading": "Palet Mimarisi (Özellikler, Sihirbazlar, Objeler, Kütüphane)",
-      "body": "Sol kenara kenetlenmiş paletlerden **Özellikler Paleti (Properties Palette)** seçili elemanın parametrelerini değiştirir; **Sihirbazlar (Wizards / Assistenten)** hazır kurumsal yapı elemanlarını sağ tıkla alıp çizmenizi sağlar; **Objeler Paleti (Objects Palette)** modeldeki tüm elemanları kat, çizim dosyası veya malzeme bazında filtreler ve gizler/kilitler.",
+      "body": "Sol kenara kenetlenmiş paletlerden **Özellikler Paleti (Properties Palette)** seçili elemanın parametrelerini değiştirir; **Sihirbazlar (Wizards / Assistenten)** hazır kurumsal yapı elemanlarını sağ tıkla alıp çizmenizi sağlar; **Objeler Paleti (Objects Palette)** modeldeki tüm elemanları kat, çizim dosyası veya malzeme bazında filtreler ve gizler/kilitler. Doğru yaptıysanız bu paletler ekranın sol kenarında açık durur ve seçtiğiniz elemanın bilgilerini gösterir.",
       "figures": []
     },
     {
@@ -36,7 +36,7 @@
     {
       "time": "06:45 – 08:15",
       "heading": "Diyalog Satırı, Nokta Yakalama ve Fare/Klavye Prensipleri",
-      "body": "Komut aktifken ekranın altındaki **Diyalog Satırını (Dialog Line)** takip edin. Sağ tık menüsünden **Nokta Yakalama Seçenekleri (Point Snap Options)** ile uç nokta, orta nokta, kesişim ve izleme çizgisi (Track tracing) hassasiyetini yönetin; komutu bitirmek için `Esc` tuşunu kullanın.",
+      "body": "Komut aktifken ekranın altındaki **Diyalog Satırını (Dialog Line)** takip edin. Sağ tık menüsünden **Nokta Yakalama Seçenekleri (Point Snap Options)** ile uç nokta, orta nokta, kesişim ve izleme çizgisi (Track tracing) hassasiyetini yönetin; komutu bitirmek için `Esc` tuşunu kullanın. Doğru yaptıysanız imleci bir çizgiye yaklaştırdığınızda uç, orta ve kesişim noktaları ekranda işaretlenir.",
       "figures": []
     }
   ],

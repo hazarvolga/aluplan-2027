@@ -3,7 +3,7 @@
   "slug": "mimari-lejanti-olusturma",
   "title": "Mimari Lejantı Oluşturma",
   "duration": "",
-  "sourceModule": "Proje 1 — Modül 4: Lejant Tanımlama (Define Legend / Legende definieren) ve Obje Filtreleri",
+  "sourceModule": "Proje 1 · Modül 4: Lejant Tanımlama (Define Legend / Legende definieren) ve Obje Filtreleri",
   "intro": "Hücreleri tanımladıktan sonra lejantı **paftaya veya plana yerleştirip oluşturursunuz**; asıl adım budur, çünkü lejant tablosu verisini tam bu anda modeldeki elemanlardan canlı olarak çeker. Obje filtresini ve bölge (üst bilgi, ana satır, toplam) sırasını doğru kurmazsanız tablo ya boş kalır ya da aynı elemanı iki kez sayar. Bu ders, tanımlı hücrelerden gerçek lejant tablosunu üretmeyi anlatır.",
   "objectives": [
     "Tasarlanan tablo çerçevesini ve hücreleri Lejant Tanımla (Define Legend / Legende definieren) komutuyla paketleyip kaydetmek.",
@@ -14,7 +14,7 @@
     {
       "time": "",
       "heading": "Lejant Tanımla Komutu ve Obje Filtresinin Seçilmesi",
-      "body": "**Lejant Tanımla (Define Legend / Legende definieren)** komutunu çalıştırın. Kayıt yeri olarak **Ofis (Office) -> Mimari** dizininde bir numara seçin ve **Filtre (Filter)** penceresinden taranacak yapı elemanını (örn. `Mimari -> Mahal (Room)` veya `Kapı (Door)`) tanımlayın.",
+      "body": "**Lejant Tanımla (Define Legend / Legende definieren)** komutunu çalıştırın. Kayıt yeri olarak **Ofis (Office) -> Mimari** dizininde bir numara seçin ve **Filtre (Filter)** penceresinden taranacak yapı elemanını (örn. `Mimari -> Mahal (Room)` veya `Kapı (Door)`) tanımlayın. Doğru yaptıysanız lejant seçtiğiniz Ofis numarasına kaydedilmeye hazır olur ve yalnızca filtreye uyan elemanları (örn. Mahal) işler.",
       "figures": [
         "/akademi/lejant/11050_0EM7U000001TdmG_8f39c27e.png"
       ]
@@ -30,7 +30,7 @@
     {
       "time": "",
       "heading": "Toplam Satırı, Alt Bilgi ve Başlangıç Tutma Noktasının Onaylanması",
-      "body": "**Toplam (Summary)** ve **Alt Bilgi (Footer)** elemanlarını seçin; son olarak lejant ekrana yerleştirilirken farenin ucunda tutulacak **Referans Noktasını (Anchor Point)** tıklayarak mimari lejant şablonunu kaydedin.",
+      "body": "**Toplam (Summary)** ve **Alt Bilgi (Footer)** elemanlarını seçin; son olarak lejant ekrana yerleştirilirken farenin ucunda tutulacak **Referans Noktasını (Anchor Point)** tıklayarak mimari lejant şablonunu kaydedin. Doğru yaptıysanız mimari lejant şablonu Ofis dizinine kaydedilir ve tutma noktasından yerleştirilmeye hazır olur.",
       "figures": [
         "/akademi/lejant/11050_0EM7U000001TdmL_68334f2f.png"
       ]

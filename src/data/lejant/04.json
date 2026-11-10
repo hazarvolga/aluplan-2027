@@ -3,7 +3,7 @@
   "slug": "mimari-lejant-hucresi-tanimlama",
   "title": "Mimari Lejant Hücresi Tanımlama",
   "duration": "",
-  "sourceModule": "Proje 1 — Modül 4: Hücre Tanımlama (Define Cell / Zelle definieren), Nitelikler ve Formüller",
+  "sourceModule": "Proje 1 · Modül 4: Hücre Tanımlama (Define Cell / Zelle definieren), Nitelikler ve Formüller",
   "intro": "Lejantın kalbi **hücre tanımıdır**: her hücreye hangi niteliğin (ör. mahal no, alan, kapı genişliği) veya hangi formülün yazılacağını belirlersiniz. Bu ders, mimari lejant hücresine nitelik ve formül bağlamayı anlatır. Hücreye yanlış niteliği bağlarsanız tablo yanlış değeri (örneğin alan yerine çevre) metrajlar; bu yüzden hücre tanımı, lejantın doğruluğunu belirleyen adımdır.",
   "objectives": [
     "Hücre Tanımla (Define Cell / Zelle definieren) komutuyla lejantın Ana Satır (Body) ve Toplam (Summary) hücrelerini oluşturmak.",
@@ -14,7 +14,7 @@
     {
       "time": "",
       "heading": "Hücre Tanımla (Define Cell / Zelle definieren) Diyaloğu",
-      "body": "**Hücre Tanımla (Define Cell)** komutunu açın. İlk sütun için **Nitelik (Attribute)** listesinden `Mahal No / Kat Kısa Adı` veya `Ad (Bezeichnung @507@)` niteliğini seçin.",
+      "body": "**Hücre Tanımla (Define Cell)** komutunu açın. İlk sütun için **Nitelik (Attribute)** listesinden `Mahal No / Kat Kısa Adı` veya `Ad (Bezeichnung @507@)` niteliğini seçin. Doğru yaptıysanız hücre seçtiğiniz niteliğe bağlanır ve o niteliğin değerini gösterecek biçimde tanımlanmış olur.",
       "figures": [
         "/akademi/lejant/11050_0EM7U000001TdmI_8be976c0.png"
       ]
@@ -22,13 +22,13 @@
     {
       "time": "",
       "heading": "Format (`A`, `F`, `I`), Ondalık Basamak ve Metin Hizalama",
-      "body": "Metin hücreleri için `A20` (sola hizalı), alan ve hacim hücreleri için `F8.2` (2 ondalık basamaklı, sağa veya ondalık noktaya hizalı) formatını seçin; birimi (`m²`, `m³`, `m`) otomatik veya sabit sütun olarak ayarlayın. Format seçimi önemlidir: metin (`A`) biçimindeki bir değer toplanamaz ve sayısal sütunda hizalanmaz; alan/hacim gibi toplanacak değerleri sayısal (`F`) formatta tanımlarsanız ondalık nokta hizası tutar ve toplam satırı doğru hesaplar.",
+      "body": "Metin hücreleri için `A20` (sola hizalı), alan ve hacim hücreleri için `F8.2` (2 ondalık basamaklı, sağa veya ondalık noktaya hizalı) formatını seçin; birimi (`m²`, `m³`, `m`) otomatik veya sabit sütun olarak ayarlayın. Format seçimi önemlidir: metin (`A`) biçimindeki bir değer toplanamaz ve sayısal sütunda hizalanmaz; alan/hacim gibi toplanacak değerleri sayısal (`F`) formatta tanımlarsanız ondalık nokta hizası tutar ve toplam satırı doğru hesaplar. Doğru yaptıysanız hücre değeri seçtiğiniz biçimde (A sola, F sağa/ondalık hizalı) ve doğru birimle görünür.",
       "figures": []
     },
     {
       "time": "",
       "heading": "Sıralama Kriteri ve Toplam Hücresi (`SUM`) Tanımlama",
-      "body": "Sıralama yapılacak hücrede (örn. Mahal No) **Sırala (Sort: Ascending)** seçeneğini işaretleyin. Toplam satırına geçip alan hücresinin altına **Toplam (Total / Summe)** tipinde yeni bir hücre yerleştirerek tüm mahallerin toplam `m²` değerini hesaplatın.",
+      "body": "Sıralama yapılacak hücrede (örn. Mahal No) **Sırala (Sort: Ascending)** seçeneğini işaretleyin. Toplam satırına geçip alan hücresinin altına **Toplam (Total / Summe)** tipinde yeni bir hücre yerleştirerek tüm mahallerin toplam `m²` değerini hesaplatın. Doğru yaptıysanız satırlar Mahal No'ya göre sıralanır ve toplam satırında tüm mahallerin m² toplamı görünür.",
       "figures": [
         "/akademi/lejant/11050_0EM7U000001TdmL_68334f2f.png"
       ]

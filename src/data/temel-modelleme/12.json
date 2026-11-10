@@ -3,7 +3,7 @@
   "slug": "doseme-olusturma",
   "title": "Döşeme Oluşturma",
   "duration": "02:30",
-  "sourceModule": "Proje 1 — Modül 3: Akıllı Parametrik Mimari Elemanlar ve Döşeme Boşlukları",
+  "sourceModule": "Proje 1 · Modül 3: Akıllı Parametrik Mimari Elemanlar ve Döşeme Boşlukları",
   "intro": "Döşeme, katı yatayda kapatan **betonarme plaktır**. Dış konturu elle çizmek yerine kat duvarlarının dış çizgisini **yakalayarak** oluşturursunuz; kalınlığını da kat düzlemine bağlarsınız. Merdiven kovası, asansör ve şaftlar için döşemede **boşluk** açmak, modelin doğru ve metrajın gerçekçi olması için şarttır. Bu eğitimde kurduğunuz binanın her katının döşemesini aynı yöntemle oluşturursunuz.",
   "objectives": [
     "Kat dış konturunu yakalayarak parametrik betonarme Döşeme (Slab / Decke) plağı oluşturmak.",
@@ -14,7 +14,7 @@
     {
       "time": "00:00 – 01:25",
       "heading": "Döşeme (Slab / Decke) Kalınlığı ve Poligon Girişi",
-      "body": "**Mimari (Architecture) -> Döşeme (Slab / Decke)** komutunu açın. **Yükseklik (Height)** penceresinden döşeme üst kotunu kat üst düzlemine (`OK = 0.00`), kalınlığını ise `15 cm` veya `20 cm` olarak tanımlayın. Dış duvar köşe noktalarını dönerek veya **Alan Tespiti (Area Detection)** ile dış sınırı tek tıkla yakalayarak döşemeyi oluşturun. Alan Tespiti'ni tercih edin; çünkü duvar konturu değiştiğinde döşeme sınırı, elle çizilen poligonun aksine onunla birlikte güncellenebilir.",
+      "body": "**Mimari (Architecture) -> Döşeme (Slab / Decke)** komutunu açın. **Yükseklik (Height)** penceresinden döşeme üst kotunu kat üst düzlemine (`OK = 0.00`), kalınlığını ise `15 cm` veya `20 cm` olarak tanımlayın. Dış duvar köşe noktalarını dönerek veya **Alan Tespiti (Area Detection)** ile dış sınırı tek tıkla yakalayarak döşemeyi oluşturun. Alan Tespiti'ni tercih edin; çünkü duvar konturu değiştiğinde döşeme sınırı, elle çizilen poligonun aksine onunla birlikte güncellenebilir. Doğru yaptıysanız dış duvar sınırları boyunca, tanımladığınız kalınlıkta bir döşeme oluşur.",
       "figures": [
         "/akademi/temel-modelleme/10602_0EM7U000001TdiZ_7f5d3c20.png"
       ]
@@ -22,7 +22,7 @@
     {
       "time": "01:25 – 02:30",
       "heading": "Döşeme Boşluğu (Slab Opening / Deckenöffnung) Açma",
-      "body": "**Döşeme Boşluğu, Girintisi (Recess, Opening in Slab / Deckenöffnung)** komutunu seçin, ilgili döşemeye tıklayın ve merdiven kovası ile şaft boşluklarını dikdörtgen veya serbest poligon olarak açın. Bu boşlukları açmak zorunludur; çünkü hem merdiven ile asansörün geçtiği gerçek deliği oluşturur hem de beton metrajının m³ olarak gereğinden fazla çıkmasını önler.",
+      "body": "**Döşeme Boşluğu, Girintisi (Recess, Opening in Slab / Deckenöffnung)** komutunu seçin, ilgili döşemeye tıklayın ve merdiven kovası ile şaft boşluklarını dikdörtgen veya serbest poligon olarak açın. Bu boşlukları açmak zorunludur; çünkü hem merdiven ile asansörün geçtiği gerçek deliği oluşturur hem de beton metrajının m³ olarak gereğinden fazla çıkmasını önler. Doğru yaptıysanız döşemede açtığınız boşluk, 3B görünüşte bir delik olarak görünür.",
       "figures": []
     }
   ],

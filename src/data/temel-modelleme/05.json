@@ -3,7 +3,7 @@
   "slug": "2d-olusturma-komutlari",
   "title": "2D Oluşturma Komutları (Standart CAD İşlemleri)",
   "duration": "16:13",
-  "sourceModule": "Proje 1 — Modül 1 & Modül 4: 2B Konstrüksiyon ve Teknik Dokümantasyon",
+  "sourceModule": "Proje 1 · Modül 1 & Modül 4: 2B Konstrüksiyon ve Teknik Dokümantasyon",
   "intro": "BIM'de çoğunlukla 3B modelleriz ama **2B çizim** hâlâ gereklidir: detaylar, taramalar, semboller ve altlıklar. Bu derste çizgiyi oluşturmadan önce onun **kalemini, çizgi tipini ve rengini** belirlemeyi, sonra temel komutlarla hassas geometri üretmeyi öğreneceksiniz. Kapalı bir alanı otomatik tanıtıp içine tarama veya dolgu uygulamak, elle poligon çizmekten çok daha hızlıdır.",
   "objectives": [
     "Kalem kalınlığı (Pen), çizgi tipi (Linetype), çizgi rengi (Color) ve Yardımcı Konstrüksiyon Çizgisi (Construction Line) kullanmak.",
@@ -14,7 +14,7 @@
     {
       "time": "00:00 – 02:42",
       "heading": "Biçim Özellikleri: Kalem, Çizgi Tipi ve Renk",
-      "body": "2B çizime başlamadan önce **Biçim (Format)** araç çubuğundan kalem kalınlığını (`0.13`, `0.25`, `0.35`, `0.50 mm`), çizgi tipini ve rengini seçin. Bunu çizmeden önce yaparsınız; çünkü kalem kalınlığı paftada çizginin ne kadar koyu basılacağını belirler ve sonradan tek tek düzeltmek yerine doğru biçimle çizmek en temiz yoldur.",
+      "body": "2B çizime başlamadan önce **Biçim (Format)** araç çubuğundan kalem kalınlığını (`0.13`, `0.25`, `0.35`, `0.50 mm`), çizgi tipini ve rengini seçin. Bunu çizmeden önce yaparsınız; çünkü kalem kalınlığı paftada çizginin ne kadar koyu basılacağını belirler ve sonradan tek tek düzeltmek yerine doğru biçimle çizmek en temiz yoldur. Doğru yaptıysanız bundan sonra çizdiğiniz çizgiler seçtiğiniz kalınlık, tip ve renkte oluşur.",
       "figures": []
     },
     {
@@ -26,13 +26,13 @@
     {
       "time": "05:24 – 08:06",
       "heading": "Temel Çizim: Çizgi, Poligon ve Dikdörtgen",
-      "body": "**Taslak (Draft)** görev alanından **Çizgi (Line)**, **Poligon Çizgisi (Polyline)** ve **Dikdörtgen (Rectangle)** komutlarıyla geometri üretin. Diyalog satırında `dX`, `dY`, `Uzunluk (Length)` ve `Açı (Angle)` alanları arasında `Tab` ile geçerek değer girin; çünkü ölçüyü klavyeden vermek, fareyle yaklaşık tıklamanın aksine tam ölçülü ve tekrarlanabilir çizim sağlar.",
+      "body": "**Taslak (Draft)** görev alanından **Çizgi (Line)**, **Poligon Çizgisi (Polyline)** ve **Dikdörtgen (Rectangle)** komutlarıyla geometri üretin. Diyalog satırında `dX`, `dY`, `Uzunluk (Length)` ve `Açı (Angle)` alanları arasında `Tab` ile geçerek değer girin; çünkü ölçüyü klavyeden vermek, fareyle yaklaşık tıklamanın aksine tam ölçülü ve tekrarlanabilir çizim sağlar. Doğru yaptıysanız girdiğiniz ölçülerde tam boyutlu geometri çizime yerleşir.",
       "figures": []
     },
     {
       "time": "08:06 – 10:48",
       "heading": "Daire, Yay ve Paralel Çizgi",
-      "body": "**Daire / Yay (Circle / Arc)** ile yuvarlak geometriyi, **Elemana Paralel (Parallel to Element)** ile mevcut bir çizgiden belirli mesafe ve adette ofset çizgileri üretin. Paralel komutunu kullanın; çünkü eşit aralıklı çizgileri (örneğin kaplama derzleri veya çoklu ofset) tek tek ölçüp çizmek yerine bir referanstan otomatik türetmek hem hızlı hem de hatasızdır.",
+      "body": "**Daire / Yay (Circle / Arc)** ile yuvarlak geometriyi, **Elemana Paralel (Parallel to Element)** ile mevcut bir çizgiden belirli mesafe ve adette ofset çizgileri üretin. Paralel komutunu kullanın; çünkü eşit aralıklı çizgileri (örneğin kaplama derzleri veya çoklu ofset) tek tek ölçüp çizmek yerine bir referanstan otomatik türetmek hem hızlı hem de hatasızdır. Doğru yaptıysanız belirttiğiniz mesafe ve adette paralel çizgiler referanstan türetilir.",
       "figures": []
     },
     {
@@ -44,7 +44,7 @@
     {
       "time": "13:30 – 16:13",
       "heading": "Tarama, Desen ve Dolgu (Hatching / Pattern / Fill)",
-      "body": "Kapalı bölgelere **Tarama (Hatching)**, **Desen (Pattern)** ve **Dolgu (Fill)** uygulayarak betonarme, tuğla, yalıtım ve zemin kaplamasını gösterin. Tarama sıklığının **ölçeğe göre ayarlanmasını (Scale-dependent)** açın; çünkü aynı tarama 1:50 ve 1:100 paftada farklı sıklıkta görünmeli, aksi halde ya çok sık ya da çok seyrek basılır.",
+      "body": "Kapalı bölgelere **Tarama (Hatching)**, **Desen (Pattern)** ve **Dolgu (Fill)** uygulayarak betonarme, tuğla, yalıtım ve zemin kaplamasını gösterin. Tarama sıklığının **ölçeğe göre ayarlanmasını (Scale-dependent)** açın; çünkü aynı tarama 1:50 ve 1:100 paftada farklı sıklıkta görünmeli, aksi halde ya çok sık ya da çok seyrek basılır. Doğru yaptıysanız kapalı bölgeler seçtiğiniz tarama veya dolguyla dolar.",
       "figures": []
     }
   ],

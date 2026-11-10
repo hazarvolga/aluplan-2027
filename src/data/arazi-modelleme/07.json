@@ -3,7 +3,7 @@
   "slug": "3b-maket-modelinin-olusturulmasi",
   "title": "3B Maket Modelinin Oluşturulması",
   "duration": "",
-  "sourceModule": "Proje 1 — Modül 3 & Modül 6: 3B Yüzeyden 3B Katı Maket (Extrude / 3D-Fläche zu 3D-Körper), Boolean Kesme ve Kademeli Maket",
+  "sourceModule": "Proje 1 · Modül 3 & Modül 6: 3B Yüzeyden 3B Katı Maket (Extrude / 3D-Fläche zu 3D-Körper), Boolean Kesme ve Kademeli Maket",
   "intro": "Sunum ve ışık-gölge çalışmaları için araziyi kalınlıklı bir **3B katı maket** haline getirebilirsiniz. Bu ders, 3B arazi yüzeyinden altı kapalı bir katı hacim üretmeyi ve maket görünümünü ayarlamayı anlatır. Önerilen yol, doğrudan bir taban kotuna kadar katıya dönüştüren **Yöntem A**'dır; özel bir kaide formu (dairesel, pahlı, sınırdan taşan) gerekmedikçe Boolean kesmeli **Yöntem B** ileri/opsiyonel bir alternatiftir. Örnek arsamızı (zemin kotu yaklaşık 100 m, en yüksek nokta yaklaşık 112 m) tabanı 95 m'de düz, üstü topoğrafik bir maket bloğuna çevireceğiz.",
   "objectives": [
     "Kağıt kalınlığındaki 3B Arazi Yüzeyini (`3D Surface`) mimari sunumlarda ve kesitlerde dolu görünecek bir **3B Katı Maket Modeline (3D Solid Terrain Block / 3D-Körper)** dönüştürmek.",
@@ -15,7 +15,7 @@
     {
       "time": "",
       "heading": "3B Arazi Yüzeyini Kopyalama ve Modelleme Rolüne Geçiş",
-      "body": "`103 - 3B Arazi Modeli` çizim dosyasındaki 3B arazi yüzeyinin bir kopyasını maket üretimi için koruyun. Actionbar üzerinde **Tasarım (Design) / Serbest Modelleme (Freeform Modeling / Modellieren)** görev alanına geçin.",
+      "body": "`103 - 3B Arazi Modeli` çizim dosyasındaki 3B arazi yüzeyinin bir kopyasını maket üretimi için koruyun. Actionbar üzerinde **Tasarım (Design) / Serbest Modelleme (Freeform Modeling / Modellieren)** görev alanına geçin. Doğru yaptıysanız 3B arazi yüzeyinin kopyası korunur ve Actionbar'da Serbest Modelleme görev alanı araçları etkinleşir.",
       "figures": [
         "/akademi/arazi-modelleme/9311_0EMVi000003tYCF_3a92348f.png"
       ]
@@ -35,7 +35,7 @@
     {
       "time": "",
       "heading": "Bina Oturum ve Bodrum Kazı Boşluklarının Maketten Çıkarılması",
-      "body": "Bina bodrum katlarının arazi maketi içine gömüleceği hacmi bir 3B Kutu olarak modelleyin ve **Birinden Çıkar ve Sil (Subtract and Remove Solids / Körper abziehen und löschen)** komutuyla 3B arazi maketinden çıkarın.",
+      "body": "Bina bodrum katlarının arazi maketi içine gömüleceği hacmi bir 3B Kutu olarak modelleyin ve **Birinden Çıkar ve Sil (Subtract and Remove Solids / Körper abziehen und löschen)** komutuyla 3B arazi maketinden çıkarın. Doğru yaptıysanız bina ve bodrum hacimleri maketten çıkarılır ve arazi maketinde bu hacme karşılık gelen boşluklar oluşur.",
       "figures": []
     }
   ],

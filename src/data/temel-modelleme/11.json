@@ -3,7 +3,7 @@
   "slug": "kolon-kiris",
   "title": "Kolon ve Kiriş Oluşturma",
   "duration": "05:49",
-  "sourceModule": "Proje 1 — Modül 3: Akıllı Parametrik Mimari ve Taşıyıcı Elemanlar",
+  "sourceModule": "Proje 1 · Modül 3: Akıllı Parametrik Mimari ve Taşıyıcı Elemanlar",
   "intro": "Kolon ve kiriş binanın **taşıyıcı iskeletidir**. ALLPLAN'da bunları aks kesişimlerine yerleştirir, kat üst düzlemine bağlarsınız; böylece kat yüksekliği değişince onlar da uyar. **Öncelik (Priority)** sayesinde bir kolon duvarla kesiştiğinde hacim iki kez sayılmaz (otomatik minha). Bu, ileride doğru metraj için kritiktir.",
   "objectives": [
     "Dikdörtgen, dairesel veya profil kesitli betonarme/çelik Kolon (Column / Stütze) elemanlarını aks kesişimlerine yerleştirmek.",
@@ -14,7 +14,7 @@
     {
       "time": "00:00 – 03:00",
       "heading": "Kolon (Column / Stütze) Parametreleri ve Yerleşimi",
-      "body": "**Mimari (Architecture) -> Kolon (Column / Stütze)** komutunu çalıştırın. Kesit tipini (Dikdörtgen `30/60 cm`, Dairesel `Ø40 cm`), malzeme (`C30/37`), öncelik (`300`) ve **Yükseklik (Height)** bağlantısını (`Alt Düzlem -> Üst Düzlem`) seçin. Tutma noktasını (merkez veya köşe) belirleyerek aks kesişimlerine yerleştirin.",
+      "body": "**Mimari (Architecture) -> Kolon (Column / Stütze)** komutunu çalıştırın. Kesit tipini (Dikdörtgen `30/60 cm`, Dairesel `Ø40 cm`), malzeme (`C30/37`), öncelik (`300`) ve **Yükseklik (Height)** bağlantısını (`Alt Düzlem -> Üst Düzlem`) seçin. Tutma noktasını (merkez veya köşe) belirleyerek aks kesişimlerine yerleştirin. Doğru yaptıysanız seçtiğiniz kesit ve malzemede kolonlar aks kesişimlerine yerleşir.",
       "figures": [
         "/akademi/temel-modelleme/11400_0EM7U000001Td8T_ff975fb9.png"
       ]
@@ -22,7 +22,7 @@
     {
       "time": "03:00 – 05:49",
       "heading": "Kiriş (Beam / Unterzug) Parametreleri ve Kot Bağlantısı",
-      "body": "**Kiriş (Beam / Unterzug - Überzug)** komutuna girin. Genişlik (`b = 30 cm`) ve yükseklik (`h = 50 cm`) değerlerini tanımlayın. **Yükseklik (Height)** ayarlarında kiriş üst kotunu **Kat Üst Düzlemine (`OK = 0.00`)**, alt kotunu ise üst kot referansından `50 cm` aşağıya (`Sabit Eleman Yüksekliği = 50 cm`) bağlayarak kolonlar arasına çizin. Kotu buradan vermeniz, kirişin döşemeye göre konumunu belirler: sarkık kiriş (Unterzug) döşemenin altına doğru iner, ters kiriş (Überzug) ise döşemenin üstüne çıkar.",
+      "body": "**Kiriş (Beam / Unterzug - Überzug)** komutuna girin. Genişlik (`b = 30 cm`) ve yükseklik (`h = 50 cm`) değerlerini tanımlayın. **Yükseklik (Height)** ayarlarında kiriş üst kotunu **Kat Üst Düzlemine (`OK = 0.00`)**, alt kotunu ise üst kot referansından `50 cm` aşağıya (`Sabit Eleman Yüksekliği = 50 cm`) bağlayarak kolonlar arasına çizin. Kotu buradan vermeniz, kirişin döşemeye göre konumunu belirler: sarkık kiriş (Unterzug) döşemenin altına doğru iner, ters kiriş (Überzug) ise döşemenin üstüne çıkar. Doğru yaptıysanız girdiğiniz en ve boy kesitinde kiriş kolonlar arasına yerleşir.",
       "figures": []
     }
   ],

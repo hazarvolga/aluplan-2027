@@ -3,7 +3,7 @@
   "slug": "arazi-nokta-kotlarinin-girilmesi",
   "title": "Arazi Nokta Kotlarının Girilmesi",
   "duration": "",
-  "sourceModule": "Proje 1 — Modül 3 & Modül 6: Arazi Noktası (Terrain Point / Geländepunkt), Z Kotu Girişi ve Sembol Noktaları",
+  "sourceModule": "Proje 1 · Modül 3 & Modül 6: Arazi Noktası (Terrain Point / Geländepunkt), Z Kotu Girişi ve Sembol Noktaları",
   "intro": "Sayısal arazi modeli, gerçek **3B kotlu noktalardan** üretilir. Bu derste ya haritadaki 2B kot yazılarını 3B arazi noktalarına dönüştürür ya da harita mühendisinden gelen koordinat dosyasını (.asc/.xyz) doğrudan okursunuz. Noktaların doğru Z değerine sahip olması, sonraki tüm aşamaların (üçgenleme, izohips, şev) doğruluğunu belirler.",
   "objectives": [
     "2B olarak içe aktarılmış halihazır harita altlığı üzerindeki kot noktalarını ve izohips kotlarını okuyarak 3B **Arazi Noktası (Terrain Point / Geländepunkt)** oluşturmak.",
@@ -15,13 +15,13 @@
     {
       "time": "",
       "heading": "Çizim Dosyası Kurulumu: Harita Altlığı Pasif, Arazi Noktaları Aktif",
-      "body": "**Yapı Strüktürü Aç** penceresinde `100 - Halihazır Harita Altlığı` çizim dosyasını **Sarı ( Arka Plan / Edit Mode )** veya **Gri ( Referans )** moduna alın; `101 - 3B Arazi Noktaları` çizim dosyasını ise **Kırmızı (Aktif / Current)** olarak açın. Böylece 2B altlıktaki noktalara kenetlenirken (`Snap`) ürettiğiniz 3B noktalar ayrı bir çizim dosyasında tutulur.",
+      "body": "**Yapı Strüktürü Aç** penceresinde `100 - Halihazır Harita Altlığı` çizim dosyasını **Sarı ( Arka Plan / Edit Mode )** veya **Gri ( Referans )** moduna alın; `101 - 3B Arazi Noktaları` çizim dosyasını ise **Kırmızı (Aktif / Current)** olarak açın. Böylece 2B altlıktaki noktalara kenetlenirken (`Snap`) ürettiğiniz 3B noktalar ayrı bir çizim dosyasında tutulur. Doğru yaptıysanız 100 numaralı altlık arka planda soluk/referans renkte, 101 numaralı arazi noktaları dosyası ise aktif (kırmızı) olarak görünür.",
       "figures": []
     },
     {
       "time": "",
       "heading": "Arazi Noktası (Terrain Point) Komutunu Başlatma ve Parametre Ayarları",
-      "body": "**Çevre -> Arazi -> Arazi Noktası (Terrain Point / Geländepunkt)** komutuna tıklayın. Açılan özellikler/diyalog penceresinde:\n- **Başlangıç Nokta Numarası (Initial Point Number):** `1` (her tıklamada otomatik artar: 1, 2, 3...)\n- **Sembol Tipi ve Boyutu:** Nokta sembolünü (örn. artı/daire) ve metin parametrelerini belirleyin.\n- **Z Kotu (Z Coordinate / Elevation):** Yerleştirilecek noktanın yüksekliğini metre cinsinden girin (örn. `102.50`, `103.00`, `104.25`).",
+      "body": "**Çevre -> Arazi -> Arazi Noktası (Terrain Point / Geländepunkt)** komutuna tıklayın. Açılan özellikler/diyalog penceresinde:\n- **Başlangıç Nokta Numarası (Initial Point Number):** `1` (her tıklamada otomatik artar: 1, 2, 3...)\n- **Sembol Tipi ve Boyutu:** Nokta sembolünü (örn. artı/daire) ve metin parametrelerini belirleyin.\n- **Z Kotu (Z Coordinate / Elevation):** Yerleştirilecek noktanın yüksekliğini metre cinsinden girin (örn. `102.50`, `103.00`, `104.25`). Doğru yaptıysanız imleç ucunda girdiğiniz Z kotuna sahip, numaralanmış bir arazi noktası sembolü yerleştirilmeye hazır belirir.",
       "figures": [
         "/akademi/arazi-modelleme/11239_0EM7U000001TdPL_1a451924.png"
       ]
@@ -29,7 +29,7 @@
     {
       "time": "",
       "heading": "Harita Üzerindeki Kot Noktalarının ve İzohipslerin İşaretlenmesi",
-      "body": "Harita altlığında aynı kota sahip noktaları (veya eş yükselti eğrisi üzerindeki kırık noktaları) hızlıca işaretlemek için önce Z yüksekliğini girin (örn. `105.00`), ardından 105.00 m eğrisi veya kot noktaları üzerindeki tüm konumlara ardışık olarak tıklayın. Sonraki kota (`106.00`) geçmek için diyalog satırından yalnızca Z değerini değiştirip tıklamaya devam edin. İpuçları:\n- Arazi sınır köşelerine mutlaka kot noktası yerleştirin.\n- Eğimin ani değiştiği şev tepesi ve şev dibi hatları boyunca daha sık nokta girin. Bunun nedeni, üçgenlemenin iki nokta arasını her zaman düz bir çizgiyle (doğrusal enterpolasyon) bağlamasıdır; şev tepesi ile dibine yalnızca birer nokta koyarsanız kırılma yuvarlanır ve model o noktada araziyi olduğundan yumuşak gösterir. Kırılma hatlarına sık nokta koymak bu keskin geçişi yakalar.",
+      "body": "Harita altlığında aynı kota sahip noktaları (veya eş yükselti eğrisi üzerindeki kırık noktaları) hızlıca işaretlemek için önce Z yüksekliğini girin (örn. `105.00`), ardından 105.00 m eğrisi veya kot noktaları üzerindeki tüm konumlara ardışık olarak tıklayın. Sonraki kota (`106.00`) geçmek için diyalog satırından yalnızca Z değerini değiştirip tıklamaya devam edin. İpuçları:\n- Arazi sınır köşelerine mutlaka kot noktası yerleştirin.\n- Eğimin ani değiştiği şev tepesi ve şev dibi hatları boyunca daha sık nokta girin. Bunun nedeni, üçgenlemenin iki nokta arasını her zaman düz bir çizgiyle (doğrusal enterpolasyon) bağlamasıdır; şev tepesi ile dibine yalnızca birer nokta koyarsanız kırılma yuvarlanır ve model o noktada araziyi olduğundan yumuşak gösterir. Kırılma hatlarına sık nokta koymak bu keskin geçişi yakalar. Doğru yaptıysanız her tıkladığınız yerde o kota ait numaralı arazi noktaları haritanın üzerine dizilir.",
       "figures": []
     },
     {

@@ -3,7 +3,7 @@
   "slug": "donati-lejantini-olusturma",
   "title": "Donatı Lejantını Oluşturma",
   "duration": "",
-  "sourceModule": "Proje 1 — Modül 5: Donatı Lejantı Paketleme, Filtreleme ve Alt Liste Kurulumu",
+  "sourceModule": "Proje 1 · Modül 5: Donatı Lejantı Paketleme, Filtreleme ve Alt Liste Kurulumu",
   "intro": "Tanımlı hücrelerden gerçek **donatı metraj tablosunu** üretirsiniz; bu adım kritiktir, çünkü tablo poz, çap ve boyları doğrudan modeldeki donatılardan okur ve imalatta kesilecek demir listesi buradan çıkar. Yanlış obje filtresi seçerseniz bazı donatılar tabloya hiç girmez. Bu ders, bir betonarme elemanın donatılarını yakalayıp lejant tablosunu oluşturmayı anlatır.",
   "objectives": [
     "Hazırlanan başlık, ana poz satırı, büküm şeması hücresi ve çap bazlı özet tablosunu Lejant Tanımla (Define Legend) ile birleştirmek.",
@@ -14,7 +14,7 @@
     {
       "time": "",
       "heading": "Donatı Obje Filtresi ve Kayıt Numarası Seçimi",
-      "body": "**Lejant Tanımla (Define Legend)** komutunu açın, **Ofis -> Mühendislik / Donatı** altında kayıt numarasını seçin ve **Filtre** olarak `Çubuk Donatı Yerleşimi (Bar Placement)` nesnesini tanımlayın.",
+      "body": "**Lejant Tanımla (Define Legend)** komutunu açın, **Ofis -> Mühendislik / Donatı** altında kayıt numarasını seçin ve **Filtre** olarak `Çubuk Donatı Yerleşimi (Bar Placement)` nesnesini tanımlayın. Doğru yaptıysanız lejant seçtiğiniz Ofis numarasına bağlanır ve yalnızca çubuk donatı yerleşimlerini işler.",
       "figures": [
         "/akademi/lejant/10594_0EM7U000001TdD0_d534cfc8.png"
       ]
@@ -22,7 +22,7 @@
     {
       "time": "",
       "heading": "Üst Bilgi, Ana Poz Satırı ve Satır Kaydırma Vektörü",
-      "body": "Tablo başlığını **Üst Bilgi (Header)** olarak, poz ve büküm şeması satırını **Ana Satır (Body)** olarak seçin; büküm şemasının yüksekliğine uygun satır aralığını (`dY`) tıklayın.",
+      "body": "Tablo başlığını **Üst Bilgi (Header)** olarak, poz ve büküm şeması satırını **Ana Satır (Body)** olarak seçin; büküm şemasının yüksekliğine uygun satır aralığını (`dY`) tıklayın. Doğru yaptıysanız poz ve büküm şeması satırı, tıkladığınız dY aralığıyla her poz için aşağı tekrarlanacak biçimde tanımlanır.",
       "figures": [
         "/akademi/lejant/11050_0EM7U000001Tdh6_051353ad.png"
       ]
@@ -30,7 +30,7 @@
     {
       "time": "",
       "heading": "Çap Özeti Alt Listesi, Toplam Satırı ve Referans Noktası",
-      "body": "Çap bazlı özet ve genel toplam ağırlık (`Toplam kg`) bölgesini **Toplam / Alt Liste** olarak bağlayın ve sağ üst veya sol üst köşeyi yerleştirme referans noktası olarak seçip donatı lejantını kaydedin. Ana poz tablosu ile çap özeti arasında ana-alt (Sublist) ilişkisi kurulur; çünkü aynı poz verisi hem poz poz listelenmeli hem de çaplara göre gruplanıp ağırlıkça toplanmalıdır. Alt liste bu ikinci okumayı aynı veriden türettiği için tutarlılığı garanti eder.",
+      "body": "Çap bazlı özet ve genel toplam ağırlık (`Toplam kg`) bölgesini **Toplam / Alt Liste** olarak bağlayın ve sağ üst veya sol üst köşeyi yerleştirme referans noktası olarak seçip donatı lejantını kaydedin. Ana poz tablosu ile çap özeti arasında ana-alt (Sublist) ilişkisi kurulur; çünkü aynı poz verisi hem poz poz listelenmeli hem de çaplara göre gruplanıp ağırlıkça toplanmalıdır. Alt liste bu ikinci okumayı aynı veriden türettiği için tutarlılığı garanti eder. Doğru yaptıysanız çap özeti ana poz tablosuna alt liste olarak bağlanır ve donatı lejantı Ofis dizinine kaydedilir.",
       "figures": []
     }
   ],

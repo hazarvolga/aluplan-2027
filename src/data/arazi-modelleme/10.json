@@ -3,7 +3,7 @@
   "slug": "binalarin-modellenmesi",
   "title": "Binaların Modellenmesi",
   "duration": "",
-  "sourceModule": "Proje 1 — Modül 3 & Modül 6: Eğimli Arazi Düzlemi Üzerinde Çevre Binalarının ve Mimari Kütlelerin Modellenmesi",
+  "sourceModule": "Proje 1 · Modül 3 & Modül 6: Eğimli Arazi Düzlemi Üzerinde Çevre Binalarının ve Mimari Kütlelerin Modellenmesi",
   "intro": "Son adımda bina(lar) araziye oturur. Bu derste, mimari bina modelinin ±0.00 kotunu arazi kotuyla ilişkilendirir, gerekirse kazı-dolgu (şev) ile binayı araziye kaynaştırırsınız; böylece vaziyet planı ve 3B çevre maketi tamamlanır.",
   "objectives": [
     "Halihazır harita altlığındaki çevre binalarını (komşu parsellerdeki mevcut yapıları) Ders 8'de oluşturduğumuz **Eğimli Arazi Düzlemi (Terrain Reference Plane)** üzerine oturtarak hızlıca 3B kütleye dönüştürmek.",
@@ -15,25 +15,25 @@
     {
       "time": "",
       "heading": "Çevre Binaları Çizim Dosyasını Aktif Etme ve Arazi Düzlemini Açma",
-      "body": "`105 - Çevre Binaları` çizim dosyasını aktif (`Kırmızı`) yapın. Arka planda `100 - Halihazır Harita Altlığı` ve Ders 8'de düzleme dönüştürdüğümüz `Arazi Düzlemi` çizim dosyasını açık tutun.",
+      "body": "`105 - Çevre Binaları` çizim dosyasını aktif (`Kırmızı`) yapın. Arka planda `100 - Halihazır Harita Altlığı` ve Ders 8'de düzleme dönüştürdüğümüz `Arazi Düzlemi` çizim dosyasını açık tutun. Doğru yaptıysanız 105 numaralı çevre binaları dosyası aktif (kırmızı), harita altlığı ve arazi düzlemi ise arka planda referans olarak görünür.",
       "figures": []
     },
     {
       "time": "",
       "heading": "Eğimli Arazi Düzlemine Oturan Çevre Binalarının Yükseklik Ayarı",
-      "body": "Harita üzerindeki mevcut komşu binaların kat adetleri yazılıdır (örn. `B+Z+3 = 4 Kat ≈ 12.00 m`). Bir binanın tabanının eğimli araziye tam oturması, çatısının ise yatay (terazide) bitmesi için:\n1. **Mimari -> Duvar (Wall)** veya **Kolon / Prizmatik Kütle** komutuna girin ve **Özellikler (Properties) -> Yükseklik (Height)** butonuna tıklayın.\n2. **Alt Seviye (Bottom Level):** `Alt Düzleme / Referans Yüzeye Bağlı (Relative to Lower Plane / Reference Surface)` seçin ve ofseti `0.00 m` (veya toprağa hafif gömülmesi için `-0.50 m`) yapın.\n3. **Üst Seviye (Top Level):** Binanın saçak kotunun eğimli değil **yatay** olması için `Sabit Eleman Yüksekliği / Maksimum Yükseklik` veya `Üst Düzleme Bağlı` seçeneğini kullanarak bina yüksekliğini (`12.00 m`) tanımlayın.",
+      "body": "Harita üzerindeki mevcut komşu binaların kat adetleri yazılıdır (örn. `B+Z+3 = 4 Kat ≈ 12.00 m`). Bir binanın tabanının eğimli araziye tam oturması, çatısının ise yatay (terazide) bitmesi için:\n1. **Mimari -> Duvar (Wall)** veya **Kolon / Prizmatik Kütle** komutuna girin ve **Özellikler (Properties) -> Yükseklik (Height)** butonuna tıklayın.\n2. **Alt Seviye (Bottom Level):** `Alt Düzleme / Referans Yüzeye Bağlı (Relative to Lower Plane / Reference Surface)` seçin ve ofseti `0.00 m` (veya toprağa hafif gömülmesi için `-0.50 m`) yapın.\n3. **Üst Seviye (Top Level):** Binanın saçak kotunun eğimli değil **yatay** olması için `Sabit Eleman Yüksekliği / Maksimum Yükseklik` veya `Üst Düzleme Bağlı` seçeneğini kullanarak bina yüksekliğini (`12.00 m`) tanımlayın. Doğru yaptıysanız binanın tabanı eğimli araziye oturur, saçak kotu ise yatay (terazide) hizalanır.",
       "figures": []
     },
     {
       "time": "",
       "heading": "Harita Üzerindeki Bina Konturlarının Hızlıca Modellenmesi",
-      "body": "**Dikdörtgen / Poligonal Giriş** modunu kullanarak harita üzerindeki bina oturum sınırlarını (`Footprints`) hızla dönün. Farklı kat yüksekliğine sahip binalara geçerken yalnızca yükseklik değerini (`9.00 m`, `15.00 m`, `18.00 m`) değiştirin. Çok sayıda çevre binası içeren kentsel modellerde kapalı 2B bina poligonlarını tek adımda 3B kütlelere dönüştürebilir veya `CityGML` verisi içe aktarabilirsiniz.",
+      "body": "**Dikdörtgen / Poligonal Giriş** modunu kullanarak harita üzerindeki bina oturum sınırlarını (`Footprints`) hızla dönün. Farklı kat yüksekliğine sahip binalara geçerken yalnızca yükseklik değerini (`9.00 m`, `15.00 m`, `18.00 m`) değiştirin. Çok sayıda çevre binası içeren kentsel modellerde kapalı 2B bina poligonlarını tek adımda 3B kütlelere dönüştürebilir veya `CityGML` verisi içe aktarabilirsiniz. Doğru yaptıysanız harita üzerindeki bina oturumları, girdiğiniz kat yüksekliklerine göre 3B kütleler olarak belirir.",
       "figures": []
     },
     {
       "time": "",
       "heading": "Çatı Kalıbı (Roof Frame), Vaziyet Kesiti ve Final Görselleştirme",
-      "body": "İstenen çevre binalarının üzerine **Çatı Kalıbı (Roof Frame / Dachebene)** komutuyla hızlı kırma/beşik çatılar ekleyin. Son olarak `102 (İzohipsler)`, `103 (3B Arazi Maketi)`, `104 (Yollar)` ve `105 (Binalar)` çizim dosyalarını birlikte açarak:\n- **Kesit Oluştur (Generate Section)** ile tüm araziyi, yolları ve binaları kesen genel **Vaziyet Kesitlerini (Site Sections)** alın.\n- **Animasyon (`F4`) / Görünüm Türü: RT_Render** penceresinde güneş/gölge analiziyle vaziyet maketi sunumunu tamamlayın.",
+      "body": "İstenen çevre binalarının üzerine **Çatı Kalıbı (Roof Frame / Dachebene)** komutuyla hızlı kırma/beşik çatılar ekleyin. Son olarak `102 (İzohipsler)`, `103 (3B Arazi Maketi)`, `104 (Yollar)` ve `105 (Binalar)` çizim dosyalarını birlikte açarak:\n- **Kesit Oluştur (Generate Section)** ile tüm araziyi, yolları ve binaları kesen genel **Vaziyet Kesitlerini (Site Sections)** alın.\n- **Animasyon (`F4`) / Görünüm Türü: RT_Render** penceresinde güneş/gölge analiziyle vaziyet maketi sunumunu tamamlayın. Doğru yaptıysanız binalarda çatılar görünür, vaziyet kesitinde arazi-yol-bina birlikte kesilir ve render penceresinde güneş/gölgeli maket sunumu oluşur.",
       "figures": []
     }
   ],

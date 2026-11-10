@@ -3,7 +3,7 @@
   "slug": "donati-lejanti-hucresini-tanimlama",
   "title": "Donatı Lejantı Hücresini Tanımlama",
   "duration": "",
-  "sourceModule": "Proje 1 — Modül 5: Donatı Nitelikleri, Büküm Şeması Grafik Hücresi ve Çap Bazlı Ağırlık Hesapları",
+  "sourceModule": "Proje 1 · Modül 5: Donatı Nitelikleri, Büküm Şeması Grafik Hücresi ve Çap Bazlı Ağırlık Hesapları",
   "intro": "Donatı lejantının hücreleri, donatı niteliklerine (poz, çap Ø, boy, adet, toplam boy, şekil) ve formüllere (ör. adet × birim boy = toplam boy) bağlanır. Bu ders, donatı lejant hücresini doğru tanımlamayı anlatır.",
   "objectives": [
     "Donatıya özel nitelikleri: Poz Numarası (Mark number), Adet (Number of pieces), Donatı Çapı (Diameter Ø), Kesim Boyu (Bar length), Toplam Boy, Çelik Kalitesi (B420C / B500C) ve Ağırlık (Weight kg) hücrelerini tanımlamak.",
@@ -14,7 +14,7 @@
     {
       "time": "",
       "heading": "Poz No, Adet, Çap ve Boy Hücrelerinin Tanımlanması",
-      "body": "**Hücre Tanımla (Define Cell)** komutuyla Ana Satır içine sırasıyla **Poz Numarası (Mark Number)** (Artan sıralama `Sort: Ascending` aktif), **Adet (Piece Count)**, **Çap (Bar Diameter)** ve **Kesim Boyu (Bar Length)** nitelik hücrelerini yerleştirin.",
+      "body": "**Hücre Tanımla (Define Cell)** komutuyla Ana Satır içine sırasıyla **Poz Numarası (Mark Number)** (Artan sıralama `Sort: Ascending` aktif), **Adet (Piece Count)**, **Çap (Bar Diameter)** ve **Kesim Boyu (Bar Length)** nitelik hücrelerini yerleştirin. Doğru yaptıysanız ana satırda poz, adet, çap ve kesim boyu hücreleri sırayla tanımlanmış olur ve poz numarası artan sıralanır.",
       "figures": [
         "/akademi/lejant/10594_0EM7U000001TdD0_d534cfc8.png",
         "/akademi/lejant/8713_0EM67000008DXkH_153b9716.png"
@@ -23,7 +23,7 @@
     {
       "time": "",
       "heading": "Büküm Şeması (Bending Shape / Biegeform) Hücresinin Ayarlanması",
-      "body": "Büküm şeması sütununa **Grafik Hücre -> Büküm Şeması (Biegeform)** tanımlayın; büküm kollarının ölçeklenebilir kutu sınırlarını, kanca/kıvrım boylarının ve açılarının şema üzerinde gösterilmesini aktif edin.",
+      "body": "Büküm şeması sütununa **Grafik Hücre -> Büküm Şeması (Biegeform)** tanımlayın; büküm kollarının ölçeklenebilir kutu sınırlarını, kanca/kıvrım boylarının ve açılarının şema üzerinde gösterilmesini aktif edin. Doğru yaptıysanız büküm şeması sütununda her pozun kıvrım ve kanca boylarıyla ölçekli büküm şekli görünür.",
       "figures": [
         "/akademi/lejant/8713_0EM67000008DTjo_4f27ff30.png"
       ]
@@ -31,7 +31,7 @@
     {
       "time": "",
       "heading": "Çap Bazlı Ağırlık Özeti ve Genel Tonaj Toplamı",
-      "body": "**Toplam/Özet (Summary)** bölgesinde her çap için toplam boy (m), birim ağırlık (`kg/m`) ve toplam ağırlık (`kg`) hücreleri ile tüm pozların **Genel Toplam Ağırlık (`kg` / `ton`)** hücresini oluşturun. Toplam boy (adet × birim boy) ve kg/m birim ağırlık mantığı hücrede formülle kurulur; çünkü ağırlık, çapa bağlı kesit alanından türeyen bir büyüklüktür ve her çap için doğru birim ağırlıkla çarpılmadan tonaj güvenilir çıkmaz.",
+      "body": "**Toplam/Özet (Summary)** bölgesinde her çap için toplam boy (m), birim ağırlık (`kg/m`) ve toplam ağırlık (`kg`) hücreleri ile tüm pozların **Genel Toplam Ağırlık (`kg` / `ton`)** hücresini oluşturun. Toplam boy (adet × birim boy) ve kg/m birim ağırlık mantığı hücrede formülle kurulur; çünkü ağırlık, çapa bağlı kesit alanından türeyen bir büyüklüktür ve her çap için doğru birim ağırlıkla çarpılmadan tonaj güvenilir çıkmaz. Doğru yaptıysanız özet bölgesinde her çapın toplam ağırlığı ve tüm pozların genel toplam tonajı formülle hesaplanıp görünür.",
       "figures": []
     }
   ],

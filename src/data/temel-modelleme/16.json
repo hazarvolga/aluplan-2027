@@ -3,7 +3,7 @@
   "slug": "cati-elemanlari",
   "title": "Çatı ve Çatı Elemanları Oluşturma",
   "duration": "07:48",
-  "sourceModule": "Proje 1 — Modül 3: Parametrik Çatı Düzlemi, Çatı Kaplaması ve Ahşap Karkas",
+  "sourceModule": "Proje 1 · Modül 3: Parametrik Çatı Düzlemi, Çatı Kaplaması ve Ahşap Karkas",
   "intro": "Çatı, eğimli yüzeyleriyle modelin en çok **üç boyutlu düşünmeyi** gerektiren parçasıdır. ALLPLAN'da önce bir **Çatı Düzlemi (Dachlandschaft)** tanımlarsınız; bu, görünmez eğimli bir yüzeydir. Sonra çatı katı duvar ve kolonlarının üst kotunu bu düzleme **bağlarsınız**, böylece hepsi eğime göre kesilir. Üstüne çatı kaplaması, güvercinlik, çatı penceresi ve ahşap karkas (mertek/aşık) gelir. Bu eğitimde kurduğunuz binanın çatısını bu adımlarla tamamlarsınız.",
   "objectives": [
     "Çatı Düzlemi (Roof Frame / Dachlandschaft) ile eğimli çatı zarfı (Beşik Çatı, Kırma Çatı) oluşturmak.",
@@ -14,7 +14,7 @@
     {
       "time": "00:00 – 02:30",
       "heading": "Çatı Düzlemi (Roof Frame / Dachlandschaft) ve Eğim Atama",
-      "body": "**Mimari (Architecture) -> Çatı Düzlemi (Roof Frame / Dachlandschaft)** komutunu açın. Bina dış konturundan saçak taşması (`örn. 60 cm`) vererek çatı sınırını çizin. Saçak kenarlarına tıklayarak çatı eğimini (`30°` veya `%33`) ve saçak kotunu uygulayın.",
+      "body": "**Mimari (Architecture) -> Çatı Düzlemi (Roof Frame / Dachlandschaft)** komutunu açın. Bina dış konturundan saçak taşması (`örn. 60 cm`) vererek çatı sınırını çizin. Saçak kenarlarına tıklayarak çatı eğimini (`30°` veya `%33`) ve saçak kotunu uygulayın. Doğru yaptıysanız saçak taşmasıyla, verdiğiniz eğimde bir çatı düzlemi oluşur.",
       "figures": [
         "/akademi/temel-modelleme/10933_0EMVi00000DRjb3_f368eed0.png"
       ]
@@ -31,13 +31,13 @@
     {
       "time": "04:30 – 06:15",
       "heading": "Çatı Kaplaması (Roof Covering), Güvercinlik ve Çatı Penceresi",
-      "body": "Temel çatı zarfını ve eğimini kurduktan sonra detay elemanlarına geçin. **Çatı Kaplaması (Roof Covering / Dachhaut)** komutuyla çok katmanlı çatı örtüsünü (kiremit + yalıtım + kaplama tahtası) oluşturun. **Güvercinlik (Dormer / Gaube)** ve **Çatı Penceresi SmartPart (Skylight)** komutlarıyla çatıya doğal aydınlatma elemanları ekleyin.",
+      "body": "Temel çatı zarfını ve eğimini kurduktan sonra detay elemanlarına geçin. **Çatı Kaplaması (Roof Covering / Dachhaut)** komutuyla çok katmanlı çatı örtüsünü (kiremit + yalıtım + kaplama tahtası) oluşturun. **Güvercinlik (Dormer / Gaube)** ve **Çatı Penceresi SmartPart (Skylight)** komutlarıyla çatıya doğal aydınlatma elemanları ekleyin. Doğru yaptıysanız çatıya çok katmanlı örtü, güvercinlik ve çatı pencereleri yerleşir.",
       "figures": []
     },
     {
       "time": "06:15 – 07:48",
       "heading": "Ahşap/Çelik Çatı Elemanları (Mertek, Aşık, Mahya)",
-      "body": "**Mertek (Rafters / Sparren)** ve **Aşık / Mahya Kirişi (Purlin, Ridge Beam / Pfette)** araçlarıyla çatı düzlemi altına taşıyıcı mertek dizilerini ve aşık kirişlerini otomatik yerleştirin. Mertek ile aşıklar çatı düzleminin altına gelir; çünkü bu ahşap veya çelik karkas, çatı kaplamasını alttan taşıyan taşıyıcı sistemdir.",
+      "body": "**Mertek (Rafters / Sparren)** ve **Aşık / Mahya Kirişi (Purlin, Ridge Beam / Pfette)** araçlarıyla çatı düzlemi altına taşıyıcı mertek dizilerini ve aşık kirişlerini otomatik yerleştirin. Mertek ile aşıklar çatı düzleminin altına gelir; çünkü bu ahşap veya çelik karkas, çatı kaplamasını alttan taşıyan taşıyıcı sistemdir. Doğru yaptıysanız çatı düzlemi altına mertek dizileri ve aşık kirişleri otomatik yerleşir.",
       "figures": []
     }
   ],

@@ -3,7 +3,7 @@
   "slug": "merdiven-olusturma",
   "title": "Merdiven Oluşturma",
   "duration": "03:55",
-  "sourceModule": "Proje 1 — Modül 3: Parametrik Merdiven Modelleyici ve Korkuluk Sistemleri",
+  "sourceModule": "Proje 1 · Modül 3: Parametrik Merdiven Modelleyici ve Korkuluk Sistemleri",
   "intro": "Merdiven, ALLPLAN'ın en **parametrik** elemanlarından biridir: tipini (düz, L, U), rıht yüksekliğini ve basamak genişliğini verirsiniz, program 3B merdiveni ve korkuluğu kurar. Kat düzlemleri arasına oturduğu için kat yüksekliği değişince **basamak sayısı kendini ayarlar**. 2B planda kesim çizgisi ve basamak numaralandırması da buradan gelir.",
   "objectives": [
     "Kat düzlemleri arasında 3B parametrik Merdiven (Stair / Treppe) (Düz, L, U sahanlıklı) modellemek.",
@@ -14,7 +14,7 @@
     {
       "time": "00:00 – 01:30",
       "heading": "Merdiven Tipi ve Kontur Girişi",
-      "body": "**Mimari (Architecture) -> Merdivenler (Stairs / Treppen)** grubundan **U Tipi Merdiven (U-Type Stair)** veya **Düz Merdiven (Straight Stair)** komutunu seçin. Merdiven boşluğu köşe noktalarını çıkış yönü sırasına göre tıklayarak dış konturu ve çıkış hattını tanımlayın.",
+      "body": "**Mimari (Architecture) -> Merdivenler (Stairs / Treppen)** grubundan **U Tipi Merdiven (U-Type Stair)** veya **Düz Merdiven (Straight Stair)** komutunu seçin. Merdiven boşluğu köşe noktalarını çıkış yönü sırasına göre tıklayarak dış konturu ve çıkış hattını tanımlayın. Doğru yaptıysanız tıkladığınız köşelerden merdivenin dış konturu ve çıkış hattı oluşur.",
       "figures": [
         "/akademi/temel-modelleme/11200_0EM7U000001TdQZ_309a6687.png"
       ]
@@ -22,7 +22,7 @@
     {
       "time": "01:30 – 02:45",
       "heading": "Yükseklik, Rıht/Basamak Geometrisi ve Bileşenler",
-      "body": "Alt kotu Zemin Kat bitmiş döşeme kotuna, üst kotu 1. Kat bitmiş döşeme kotuna bağlayın. Rıht sayısını (`örn. 18 rıht x 16.67 cm`) ve basamak genişliğini (`28–30 cm`, 2R+B ≈ 62 cm) ayarlayın; 2R+B (Blondel) kuralı, insanın doğal adım boyuna uyan konforlu ve güvenli bir çıkış için rıht ile basamağı dengeler. **Elemanlar (Stair Components)** sekmesinden betonarme plak kalınlığı, basamak kaplaması ve iç/dış korkulukları aktif edin.",
+      "body": "Alt kotu Zemin Kat bitmiş döşeme kotuna, üst kotu 1. Kat bitmiş döşeme kotuna bağlayın. Rıht sayısını (`örn. 18 rıht x 16.67 cm`) ve basamak genişliğini (`28–30 cm`, 2R+B ≈ 62 cm) ayarlayın; 2R+B (Blondel) kuralı, insanın doğal adım boyuna uyan konforlu ve güvenli bir çıkış için rıht ile basamağı dengeler. **Elemanlar (Stair Components)** sekmesinden betonarme plak kalınlığı, basamak kaplaması ve iç/dış korkulukları aktif edin. Doğru yaptıysanız belirttiğiniz rıht sayısı ve basamak genişliğiyle merdiven kat arasına oturur.",
       "figures": [
         "/akademi/temel-modelleme/10575_0EM7U000001Td8g_04ea00a5.png",
         "/akademi/temel-modelleme/11149_0EM7U000001TdWs_a6a93e5c.png"
@@ -31,7 +31,7 @@
     {
       "time": "02:45 – 03:55",
       "heading": "2B Plan Kesim Gösterimi ve Merdiven Altı Duvar",
-      "body": "**2B Kesit Gösterimi (2D Section)** sekmesinden kesim yüksekliğini (`1.50 m`), kesim altı sürekli çizgi ve kesim üstü kesikli çizgi stilini onaylayın; gerekirse merdiven altı duvarı eğimli üst düzleme bağlayın.",
+      "body": "**2B Kesit Gösterimi (2D Section)** sekmesinden kesim yüksekliğini (`1.50 m`), kesim altı sürekli çizgi ve kesim üstü kesikli çizgi stilini onaylayın; gerekirse merdiven altı duvarı eğimli üst düzleme bağlayın. Doğru yaptıysanız merdivenin kesim altı sürekli, kesim üstü kesikli çizgiyle gösterimi oluşur.",
       "figures": []
     }
   ],

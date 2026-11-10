@@ -3,7 +3,7 @@
   "slug": "mahaller",
   "title": "Mahal Tanımlama ve İnce Yapı Yüzeyleri",
   "duration": "",
-  "sourceModule": "Proje 1 — Modül 3: Akıllı Mahal (Room / Raum) Yönetimi, İnce Yapı Yüzeyleri ve Metraj",
+  "sourceModule": "Proje 1 · Modül 3: Akıllı Mahal (Room / Raum) Yönetimi, İnce Yapı Yüzeyleri ve Metraj",
   "intro": "Binanın kabuğunu kurduktan sonra sıra **mahalleri (Room / Raum)** tanımlamaya gelir. Mahal, duvarlarla çevrili bir hacmi ALLPLAN'ın tanıdığı **akıllı bir oda nesnesine** dönüştürür: net alan, hacim, kat kaplamaları ve oda etiketi hep bu nesneye bağlanır. Mahalleri doğru tanımlarsanız **metraj ve alan raporları** (DIN 277, konut alanı, yapı ruhsatı) modelden otomatik üretilir; elle alan hesaplamaktan kurtulursunuz. Bu adımda mahalleri, bu eğitim boyunca sıfırdan kurduğunuz iki katlı konutun zemin kat odalarına (salon, mutfak, banyo) tek tek uygulayacaksınız.",
   "objectives": [
     "Duvarlarla çevrili odaları otomatik algılatarak veya poligon çizerek Mahal (Room / Raum) tanımlamak.",
@@ -14,13 +14,13 @@
     {
       "time": "",
       "heading": "Mahal Tanımı ve Fonksiyon / İsim Girişi",
-      "body": "**Mimari (Architecture) -> Mahaller, Yüzeyler, Katlar -> Mahal (Room / Raum)** komutunu açın. **Mahal (Room)** sekmesinde Mahal No (`Z-01`), Fonksiyon (`Salon`, `Mutfak`, `Banyo`) ve kat yüksekliği bağlantısını (`Alt Düzlem -> Üst Düzlem`) tanımlayın. Fonksiyon ve numarayı baştan doğru girin; bu bilgiler sonradan raporlara ve etikete aynen taşınır.",
+      "body": "**Mimari (Architecture) -> Mahaller, Yüzeyler, Katlar -> Mahal (Room / Raum)** komutunu açın. **Mahal (Room)** sekmesinde Mahal No (`Z-01`), Fonksiyon (`Salon`, `Mutfak`, `Banyo`) ve kat yüksekliği bağlantısını (`Alt Düzlem -> Üst Düzlem`) tanımlayın. Fonksiyon ve numarayı baştan doğru girin; bu bilgiler sonradan raporlara ve etikete aynen taşınır. Doğru yaptıysanız girdiğiniz mahal numarası ve fonksiyonu mahal tanımına işlenir.",
       "figures": []
     },
     {
       "time": "",
       "heading": "İnce Yapı Kaplamaları (Tavan, Zemin, Duvar, Süpürgelik)",
-      "body": "**İnce Yapı (Finish / Ausbau)** sekmesine geçin ve yüzeyleri katman katman atayın: tavan (alçı sıva + boya), döşeme (`5 cm Şap + 2 cm Parke/Seramik`), düşey duvar yüzeyleri ve süpürgelik. Her katmana malzeme ve imalat kalemi verirseniz, kaba metrajın yanında **ince yapı metrajı** da modelden çıkar. Döşeme kaplamasını katmanlı girmeniz önemlidir; çünkü şap katmanı ısı ve ses yalıtımı ile zemin kaplamasını taşıyan ara tabakadır, bitmiş kat kotunu ve metrajı doğru kurmak için ayrı tanımlanır.",
+      "body": "**İnce Yapı (Finish / Ausbau)** sekmesine geçin ve yüzeyleri katman katman atayın: tavan (alçı sıva + boya), döşeme (`5 cm Şap + 2 cm Parke/Seramik`), düşey duvar yüzeyleri ve süpürgelik. Her katmana malzeme ve imalat kalemi verirseniz, kaba metrajın yanında **ince yapı metrajı** da modelden çıkar. Döşeme kaplamasını katmanlı girmeniz önemlidir; çünkü şap katmanı ısı ve ses yalıtımı ile zemin kaplamasını taşıyan ara tabakadır, bitmiş kat kotunu ve metrajı doğru kurmak için ayrı tanımlanır. Doğru yaptıysanız tavan, döşeme ve duvar yüzeyleri katman katman mahale atanır.",
       "figures": []
     },
     {

@@ -3,7 +3,7 @@
   "slug": "kesitler",
   "title": "Kesitler (İlişkisel Kesit)",
   "duration": "",
-  "sourceModule": "Proje 1 — Modül 4: İlişkisel Kesit Otomasyonu (Associative Sections / Schnitte)",
+  "sourceModule": "Proje 1 · Modül 4: İlişkisel Kesit Otomasyonu (Associative Sections / Schnitte)",
   "intro": "Kesit, binanın içini gösteren en önemli teknik çizimdir. ALLPLAN'da önce planda bir **kesit hattı (Schnittführung)** çizer, sonra ondan **ilişkisel kesit** türetirsiniz. Kesit modelle canlı bağlıdır: kat yüksekliğini veya bir duvarı değiştirdiğinizde kesit de güncellenir. Kesilen elemanlar kalın kontur ve malzeme taramasıyla ayrışır.",
   "objectives": [
     "Kat planları üzerinde düz veya kademeli Kesit Hattı (Section Path / Schnittführung) tanımlamak.",
@@ -14,7 +14,7 @@
     {
       "time": "",
       "heading": "Planda Kesit Hattının Çizilmesi",
-      "body": "**Kesit Hattı Tanımla (Define Section / Schnittführung)** komutuyla merdiven kovasından, pencerelerden ve çatıdan geçecek şekilde `A-A` ve `B-B` kesit hatlarını ve bakış derinliğini çizin. Bakış okunu doğru yöne verin; ters yön kesiti ters gösterir. Bu eğitim boyunca sıfırdan kurduğunuz iki katlı konutta `A-A` hattını merdiven kovasından geçirin; böylece kesit, kat bağlantısını ve basamak düzenini açıkça gösterir.",
+      "body": "**Kesit Hattı Tanımla (Define Section / Schnittführung)** komutuyla merdiven kovasından, pencerelerden ve çatıdan geçecek şekilde `A-A` ve `B-B` kesit hatlarını ve bakış derinliğini çizin. Bakış okunu doğru yöne verin; ters yön kesiti ters gösterir. Bu eğitim boyunca sıfırdan kurduğunuz iki katlı konutta `A-A` hattını merdiven kovasından geçirin; böylece kesit, kat bağlantısını ve basamak düzenini açıkça gösterir. Doğru yaptıysanız planda A-A ve B-B kesit hatları, bakış oklarıyla birlikte görünür.",
       "figures": [
         "/akademi/temel-modelleme/11178_0EM7U000001Tecw_e8923a7a.png"
       ]

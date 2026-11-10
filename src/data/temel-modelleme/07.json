@@ -3,7 +3,7 @@
   "slug": "olculendirme",
   "title": "Ölçülendirme",
   "duration": "03:21",
-  "sourceModule": "Proje 1 — Modül 4: 2B Teknik Dokümantasyon ve İlişkisel Ölçülendirme",
+  "sourceModule": "Proje 1 · Modül 4: 2B Teknik Dokümantasyon ve İlişkisel Ölçülendirme",
   "intro": "Ölçülendirme yalnızca sayı yazmak değildir. ALLPLAN'da **ilişkisel (associative)** ölçü çizgisi kullanırsanız, modeli değiştirdiğinizde ölçü değeri kendiliğinden güncellenir; bu, elle düzeltme hatalarını ortadan kaldırır. Bu derste doğrusal, açılı ve duvar ölçülendirmesini, ayrıca mevcut bir ölçü dizisine sonradan nokta ekleyip çıkarmayı öğreneceksiniz.",
   "objectives": [
     "Standart Ölçü Çizgisi (Dimension Line) ile İlişkisel Ölçülendirme (Associative Dimensioning) arasındaki farkı uygulamak.",
@@ -14,7 +14,7 @@
     {
       "time": "00:00 – 01:15",
       "heading": "Ölçü Çizgisi Stili ve İlişkisel Ölçülendirme Ayarları",
-      "body": "**Ölçü Çizgisi (Dimension Line / Maßlinie)** komutuna girin ve **Özellikler (Properties)** penceresinden yazı boyutu, ok/mimari tik sembolü, ölçü birimi (`m, cm`) ve **İlişkisel (Associative)** seçeneğini aktif edin. İlişkisel ölçüler, ölçülen duvar veya pencere taşındığında otomatik güncellenir.",
+      "body": "**Ölçü Çizgisi (Dimension Line / Maßlinie)** komutuna girin ve **Özellikler (Properties)** penceresinden yazı boyutu, ok/mimari tik sembolü, ölçü birimi (`m, cm`) ve **İlişkisel (Associative)** seçeneğini aktif edin. İlişkisel ölçüler, ölçülen duvar veya pencere taşındığında otomatik güncellenir. Doğru yaptıysanız yerleştirdiğiniz ölçü çizgisi gerçek uzunluğu plana yazar.",
       "figures": [
         "/akademi/temel-modelleme/10703_0EM7U000001TeKs_ba160568.png"
       ]
@@ -22,7 +22,7 @@
     {
       "time": "01:15 – 02:30",
       "heading": "Doğrusal Ölçülendirme ve Duvar Ölçülendirme (Wände bemaßen)",
-      "body": "Dış cephe boyunca toplam ölçü, aks ölçüsü ve dolu/boş (pencere-kapı) ölçü sıralarını tek seferde yerleştirin. **Duvarları Ölçülendir (Measure Walls / Wände bemaßen)** komutuyla seçilen duvarlardaki kapı/pencere genişliklerini ve parapet/lento yüksekliklerini otomatik yazdırın.",
+      "body": "Dış cephe boyunca toplam ölçü, aks ölçüsü ve dolu/boş (pencere-kapı) ölçü sıralarını tek seferde yerleştirin. **Duvarları Ölçülendir (Measure Walls / Wände bemaßen)** komutuyla seçilen duvarlardaki kapı/pencere genişliklerini ve parapet/lento yüksekliklerini otomatik yazdırın. Doğru yaptıysanız kapı ve pencere genişlikleri ile kat ölçüleri duvar boyunca otomatik yazılır.",
       "figures": [
         "/akademi/temel-modelleme/10703_0EM7U000001TeL2_61b946ce.png"
       ]
@@ -30,7 +30,7 @@
     {
       "time": "02:30 – 03:21",
       "heading": "Ölçü Noktası Ekle/Sil ve Kot Ölçülendirmesi",
-      "body": "**Ölçü Noktası Ekle (Add Dimension Line Point)** ve **Ölçü Noktası Sil (Del Dimension Line Point)** ile mevcut ölçü zincirini revize edin; **Kot Ölçülendirmesi (Elevation Point / Kotenbemaßung)** ile plan ve kesitlerde kot sembollerini yerleştirin.",
+      "body": "**Ölçü Noktası Ekle (Add Dimension Line Point)** ve **Ölçü Noktası Sil (Del Dimension Line Point)** ile mevcut ölçü zincirini revize edin; **Kot Ölçülendirmesi (Elevation Point / Kotenbemaßung)** ile plan ve kesitlerde kot sembollerini yerleştirin. Doğru yaptıysanız ölçü zinciri güncellenir ve kot sembolleri plana yerleşir.",
       "figures": [
         "/akademi/temel-modelleme/10703_0EM7U000001TeL1_e450547f.png"
       ]

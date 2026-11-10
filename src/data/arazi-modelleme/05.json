@@ -3,7 +3,7 @@
   "slug": "es-yukselti-egrilerinin-olusturulmasi",
   "title": "Eş Yükselti Eğrilerinin Oluşturulması",
   "duration": "",
-  "sourceModule": "Proje 1 — Modül 3 & Modül 6: Eş Yükselti Eğrileri (Contour Lines / Höhenlinien), İzohips Etiketleme ve Arazi Kesitleri",
+  "sourceModule": "Proje 1 · Modül 3 & Modül 6: Eş Yükselti Eğrileri (Contour Lines / Höhenlinien), İzohips Etiketleme ve Arazi Kesitleri",
   "intro": "**Eş yükselti eğrileri (izohips / Höhenlinien)**, aynı kottaki noktaları birleştiren çizgilerdir ve vaziyet planının okunabilirliğinin temelidir. Bu derste SAM'den izohipsleri üretir, ana/ara eğri ayrımını ve kot etiketlerini ayarlarsınız.",
   "objectives": [
     "Oluşturulan Sayısal Arazi Modeli (SAM / DTM) üzerinden **Eş Yükselti Eğrileri (Contour Lines / Höhenlinien)** komutuyla otomatik izohips eğrileri üretmek.",
@@ -15,7 +15,7 @@
     {
       "time": "",
       "heading": "Eş Yükselti Eğrileri (Contour Lines / Höhenlinien) Komutunu Başlatma",
-      "body": "**Çevre -> Sayısal Arazi Modeli -> Eş Yükselti Eğrileri (Contour Lines / Höhenlinien)** komutuna tıklayın ve çizim alanındaki Sayısal Arazi Modelini (`SAM / DTM`) seçin.",
+      "body": "**Çevre -> Sayısal Arazi Modeli -> Eş Yükselti Eğrileri (Contour Lines / Höhenlinien)** komutuna tıklayın ve çizim alanındaki Sayısal Arazi Modelini (`SAM / DTM`) seçin. Doğru yaptıysanız seçtiğiniz SAM vurgulanır ve eş yükselti eğrisi parametre penceresi açılır.",
       "figures": [
         "/akademi/arazi-modelleme/9311_0EMVi000003tfdV_4d3d07fa.png"
       ]
@@ -23,7 +23,7 @@
     {
       "time": "",
       "heading": "İzohips Başlangıç Kotu, Adım Aralığı ve Ana/Ara Eğri Ayarları",
-      "body": "Açılan özellikler penceresinde eş yükselti eğrisi parametrelerini projenin ölçeğine göre tanımlayın:\n- **Başlangıç Yüksekliği ve Bitiş Yüksekliği (Start / End Elevation):** Varsayılan olarak arazinin minimum ve maksimum kotlarını otomatik alır.\n- **Eğri Aralığı (Increment / Schrittweite):** Ara eğriler için `1.00 m` (veya detaylı vaziyet planlarında `0.50 m` / `0.25 m`) girin.\n- **Ana Eğri Aralığı (Index Contour / Haupthöhenlinie):** Her `5.` eğriyi (örn. `100.00 m`, `105.00 m`, `110.00 m`) ana izohips olarak kalın kalem (`0.35 mm`) ve farklı bir renkle vurgulanacak şekilde işaretleyin.\n\nEğri aralığı ölçeğe bağlı seçilir çünkü aralık ne kadar küçükse plandaki eğri çizgileri o kadar sıklaşır; küçük ölçekli (uzağa çıkan) bir paftada `0.25 m` aralık eğrileri üst üste bindirip okunmaz hale getirir, büyük ölçekli bir vaziyet planında ise `1.00 m` aralık eğimi yeterince ayrıntılı göstermez. Amaç, komşu eğriler arasında gözle ayırt edilebilir bir boşluk bırakmaktır.",
+      "body": "Açılan özellikler penceresinde eş yükselti eğrisi parametrelerini projenin ölçeğine göre tanımlayın:\n- **Başlangıç Yüksekliği ve Bitiş Yüksekliği (Start / End Elevation):** Varsayılan olarak arazinin minimum ve maksimum kotlarını otomatik alır.\n- **Eğri Aralığı (Increment / Schrittweite):** Ara eğriler için `1.00 m` (veya detaylı vaziyet planlarında `0.50 m` / `0.25 m`) girin.\n- **Ana Eğri Aralığı (Index Contour / Haupthöhenlinie):** Her `5.` eğriyi (örn. `100.00 m`, `105.00 m`, `110.00 m`) ana izohips olarak kalın kalem (`0.35 mm`) ve farklı bir renkle vurgulanacak şekilde işaretleyin.\n\nEğri aralığı ölçeğe bağlı seçilir çünkü aralık ne kadar küçükse plandaki eğri çizgileri o kadar sıklaşır; küçük ölçekli (uzağa çıkan) bir paftada `0.25 m` aralık eğrileri üst üste bindirip okunmaz hale getirir, büyük ölçekli bir vaziyet planında ise `1.00 m` aralık eğimi yeterince ayrıntılı göstermez. Amaç, komşu eğriler arasında gözle ayırt edilebilir bir boşluk bırakmaktır. Doğru yaptıysanız başlangıç/bitiş kotu, eğri aralığı ve ana eğri sıklığı projenin ölçeğine uygun değerlerle tanımlanmış olur.",
       "figures": []
     },
     {
@@ -35,7 +35,7 @@
     {
       "time": "",
       "heading": "Arazi Profil Kesiti (Terrain Profile) Çıkarma",
-      "body": "Arazinin eğimini kesitte görmek için **Profil Kesiti (Profile / Profilschnitt)** komutunu seçin, SAM modeline tıklayın ve planda kesit hattını işaretleyin. Ardından **Profil Şeması (Profile Diagram)** komutuyla mevcut arazi kesitini kot cetveliyle birlikte 2B çizim alanına yerleştirin.",
+      "body": "Arazinin eğimini kesitte görmek için **Profil Kesiti (Profile / Profilschnitt)** komutunu seçin, SAM modeline tıklayın ve planda kesit hattını işaretleyin. Ardından **Profil Şeması (Profile Diagram)** komutuyla mevcut arazi kesitini kot cetveliyle birlikte 2B çizim alanına yerleştirin. Doğru yaptıysanız arazinin seçtiğiniz hat boyunca eğim profili, kot cetveliyle birlikte 2B kesit şeması olarak çizim alanında belirir.",
       "figures": []
     }
   ],

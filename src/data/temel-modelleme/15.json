@@ -3,7 +3,7 @@
   "slug": "kat-kopyalama",
   "title": "Kat Kopyalama ve Düzenleme",
   "duration": "04:23",
-  "sourceModule": "Proje 1 — Modül 2 & Modül 3: Bina Strüktürü ve Parametrik Kat Yönetimi",
+  "sourceModule": "Proje 1 · Modül 2 & Modül 3: Bina Strüktürü ve Parametrik Kat Yönetimi",
   "intro": "Her katı sıfırdan çizmezsiniz. Zemin katı bitirince **Bina Strüktürü** üzerinden onu üst katlara **kopyalar**, sonra sadece farklılıkları (cephe, balkon, iç mekan) revize edersiniz. Elemanlar düzlemlere (OK/UK) bağlı olduğu için kopyalanan kat üst kat kotuna kendiliğinden uyar. Bu ders, tek kattan çok katlı binaya geçişin verimli yoludur.",
   "objectives": [
     "Tamamlanan Zemin Kat çizim dosyalarını Bina Strüktürü üzerinden üst katlara kopyalamak.",
@@ -23,13 +23,13 @@
     {
       "time": "02:00 – 03:15",
       "heading": "Normal Kat Mimari Revizyonları",
-      "body": "1. Normal Kat çizim dosyasını aktif ederek dış giriş kapısını silip pencereye dönüştürün, balkon döşeme çıkmasını ve korkuluklarını ekleyin. Zemin kattaki ana giriş yalnızca bu eğitim boyunca sıfırdan kurduğunuz iki katlı konutun giriş kotunda anlamlıdır; üst katta aynı yerde normalde balkon kapısı veya pencere bulunur, bu yüzden kopyalanan kapıyı revize edersiniz.",
+      "body": "1. Normal Kat çizim dosyasını aktif ederek dış giriş kapısını silip pencereye dönüştürün, balkon döşeme çıkmasını ve korkuluklarını ekleyin. Zemin kattaki ana giriş yalnızca bu eğitim boyunca sıfırdan kurduğunuz iki katlı konutun giriş kotunda anlamlıdır; üst katta aynı yerde normalde balkon kapısı veya pencere bulunur, bu yüzden kopyalanan kapıyı revize edersiniz. Doğru yaptıysanız üst katta giriş kapısı yerine pencere ve eklediğiniz balkon döşemesi görünür.",
       "figures": []
     },
     {
       "time": "03:15 – 04:23",
       "heading": "Düzlem Yöneticisi ile Çok Katlı Model Kontrolü",
-      "body": "Tüm katları **Referans Modunda** açarak 3B Animasyon penceresinde çok katlı bina modelini inceleyin; **Düzlemler Paleti (Planes Palette)** üzerinden kat yüksekliği değiştiğinde tüm katların birbirine kopmadan bağlı çalıştığını test edin.",
+      "body": "Tüm katları **Referans Modunda** açarak 3B Animasyon penceresinde çok katlı bina modelini inceleyin; **Düzlemler Paleti (Planes Palette)** üzerinden kat yüksekliği değiştiğinde tüm katların birbirine kopmadan bağlı çalıştığını test edin. Doğru yaptıysanız 3B Animasyon penceresinde çok katlı bina modeli bütün olarak görünür.",
       "figures": [
         "/akademi/temel-modelleme/11225_0EM7U000001TdPz_fc43c60e.png"
       ]

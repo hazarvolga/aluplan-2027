@@ -3,7 +3,7 @@
   "slug": "gorunusler",
   "title": "Görünüşler (İlişkisel Cephe Görünüşleri)",
   "duration": "",
-  "sourceModule": "Proje 1 — Modül 4: İlişkisel Görünüşler (Associative Views / Ansichten)",
+  "sourceModule": "Proje 1 · Modül 4: İlişkisel Görünüşler (Associative Views / Ansichten)",
   "intro": "Modeli kurdunuz; şimdi ondan **çizim üretme** zamanı. ALLPLAN'da cephe görünüşlerini elle çizmezsiniz: 3B modelden **ilişkisel görünüş (associative view)** türetirsiniz. Modelde bir pencere değişince cephe de kendiliğinden güncellenir; çizim ile model asla birbirinden kopmaz. Bu, BIM'in en büyük kazancıdır.",
   "objectives": [
     "Bina Strüktürünün türetilmiş bölmesinde 3B modelden ilişkisel cephe görünüşleri (Ön, Arka, Sağ, Sol) üretmek.",
@@ -14,7 +14,7 @@
     {
       "time": "",
       "heading": "Kaynak Model Çizim Dosyalarının Seçimi",
-      "body": "**Bina Strüktürü (Building Structure)** sağ bölmesinde **Görünüşler (Views)** altındaki hedef çizim dosyasını (örn. `1001 Ön Cephe`) aktif edin ve sol bölmeden **tüm katların** mimari çizim dosyalarını kaynak olarak seçin. Eksik kat seçerseniz cephede o kat görünmez.",
+      "body": "**Bina Strüktürü (Building Structure)** sağ bölmesinde **Görünüşler (Views)** altındaki hedef çizim dosyasını (örn. `1001 Ön Cephe`) aktif edin ve sol bölmeden **tüm katların** mimari çizim dosyalarını kaynak olarak seçin. Eksik kat seçerseniz cephede o kat görünmez. Doğru yaptıysanız seçtiğiniz tüm katlar görünüş kaynağı olarak tanımlanır.",
       "figures": [
         "/akademi/temel-modelleme/11423_0EM7U000001Td64_c05e5da2.png"
       ]
@@ -22,7 +22,7 @@
     {
       "time": "",
       "heading": "Görünüş Oluştur ve Bakış Yönü",
-      "body": "**Görünüş Oluştur (Create View / Ansicht erzeugen)** komutunu çalıştırın ve bakış yönünü (Güney/Kuzey/Doğu/Batı) tıklayarak cephe görünüşünü yerleştirin. Bina eğik (döndürülmüş) yerleşmişse **Serbest Projeksiyon (Free Projection)** ile göz/hedef noktasını binanın eksenine göre tanımlayıp düzgün (ortogonal) cephe elde edin.",
+      "body": "**Görünüş Oluştur (Create View / Ansicht erzeugen)** komutunu çalıştırın ve bakış yönünü (Güney/Kuzey/Doğu/Batı) tıklayarak cephe görünüşünü yerleştirin. Bina eğik (döndürülmüş) yerleşmişse **Serbest Projeksiyon (Free Projection)** ile göz/hedef noktasını binanın eksenine göre tanımlayıp düzgün (ortogonal) cephe elde edin. Doğru yaptıysanız seçtiğiniz bakış yönünde cephe görünüşü plana yerleşir.",
       "figures": [
         "/akademi/temel-modelleme/11377_0EM7U000001Td6P_8bcd9bae.png"
       ]

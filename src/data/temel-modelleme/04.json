@@ -3,7 +3,7 @@
   "slug": "cizim-dosyalari-yukseklik",
   "title": "Çizim Dosyaları ve Yükseklik İlişkileri",
   "duration": "11:10",
-  "sourceModule": "Proje 1 — Modül 2: Proje Yapılandırması, Hiyerarşik Bina Strüktürü ve Çizim Dosyaları",
+  "sourceModule": "Proje 1 · Modül 2: Proje Yapılandırması, Hiyerarşik Bina Strüktürü ve Çizim Dosyaları",
   "intro": "ALLPLAN'da çizimleriniz **çizim dosyalarında (Teilbild)** durur; bir dosyada çalışırken başka dosyaları referans olarak arkanızda görürsünüz, tıpkı şeffaf kağıtları üst üste koymak gibi. Bina Strüktürü bu dosyaları katlara bağlar ve her kata bir yükseklik verir. Yüksekliği elle yazmak yerine **düzlemlere (OK/UK)** bağlarsanız, kat kotunu değiştirdiğinizde elemanlar kendiliğinden uyar. Bu ders modelin iskeletini kurar; sonraki tüm elemanlar bu iskelete oturur.",
   "objectives": [
     "Çizim Dosyası (Drawing File / Teilbild) mantığını ve Aktif / Düzenleme / Referans modlarını doğru kullanmak.",
@@ -20,7 +20,7 @@
     {
       "time": "03:30 – 07:00",
       "heading": "Bina Strüktürü (Building Structure / Bauwerksstruktur) Kurulumu",
-      "body": "Sol üstte **Bina Strüktürü (Building Structure)** sekmesine geçin. **Bina (Building)** düğümü altında **Temel**, **Zemin Kat**, **1. Normal Kat** ve **Çatı Katı** strüktür seviyelerini oluşturun; her kata ilgili çizim dosyası aralıklarını (örn. Zemin Kat: `101 Aks`, `102 Mimari Duvar/Doğrama`, `103 Kolon/Kiriş`, `104 Döşeme`, `105 Merdiven`) atayın.",
+      "body": "Sol üstte **Bina Strüktürü (Building Structure)** sekmesine geçin. **Bina (Building)** düğümü altında **Temel**, **Zemin Kat**, **1. Normal Kat** ve **Çatı Katı** strüktür seviyelerini oluşturun; her kata ilgili çizim dosyası aralıklarını (örn. Zemin Kat: `101 Aks`, `102 Mimari Duvar/Doğrama`, `103 Kolon/Kiriş`, `104 Döşeme`, `105 Merdiven`) atayın. Doğru yaptıysanız Bina Strüktürü ağacında tanımladığınız katlar ve altlarına atanan çizim dosyaları görünür.",
       "figures": [
         "/akademi/temel-modelleme/11225_0EM7U000001TdQ0_f055afa6.png"
       ]

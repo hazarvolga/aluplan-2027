@@ -3,7 +3,7 @@
   "slug": "3b-arazi-modelinin-olusturulmasi",
   "title": "3B Arazi Modelinin Oluşturulması",
   "duration": "",
-  "sourceModule": "Proje 1 — Modül 3 & Modül 6: SAM Elemanlarını 3B Elemanlara Dönüştürme (Convert DTM Elements to 3D Surface / 3D Mesh)",
+  "sourceModule": "Proje 1 · Modül 3 & Modül 6: SAM Elemanlarını 3B Elemanlara Dönüştürme (Convert DTM Elements to 3D Surface / 3D Mesh)",
   "intro": "SAM, jeodezik bir veri tipidir; onu serbest 3B modelleme araçlarıyla (kesme, doku, Boolean) işlemek için **3B yüzeye** dönüştürmeniz gerekir. Bu ders, SAM'i kaybetmeden 3B arazi yüzeyi üretmeyi ve ona doku/ortofoto atamayı anlatır.",
   "objectives": [
     "Sayısal Arazi Modelinin (SAM / DTM) neden doğrudan serbest 3B Boolean işlemlerine veya referans düzlem dönüşümüne girmediğini; bunun için önce **3B Elemanlara Dönüştürülmesi (Convert DTM Elements)** gerektiğini anlamak.",
@@ -15,7 +15,7 @@
     {
       "time": "",
       "heading": "Orijinal SAM Modelini Koruma ve Hedef Çizim Dosyası Belirleme",
-      "body": "Sayısal Arazi Modeli (`SAM / DTM`), üzerinde izohips, şev ve kübaj hesabı yapılabilen özel bir jeodezik veri tipidir. Onu 3B serbest modelleme araçlarıyla işlemek için dönüştürürken orijinal SAM çizim dosyasını (`102`) kaybetmemek gerekir. Komut içindeki **Hedef Çizim Dosyası (Target Drawing File)** seçeneğine boş bir çizim dosyası numarası (örn. `103 - 3B Arazi Modeli`) girin.",
+      "body": "Sayısal Arazi Modeli (`SAM / DTM`), üzerinde izohips, şev ve kübaj hesabı yapılabilen özel bir jeodezik veri tipidir. Onu 3B serbest modelleme araçlarıyla işlemek için dönüştürürken orijinal SAM çizim dosyasını (`102`) kaybetmemek gerekir. Komut içindeki **Hedef Çizim Dosyası (Target Drawing File)** seçeneğine boş bir çizim dosyası numarası (örn. `103 - 3B Arazi Modeli`) girin. Doğru yaptıysanız orijinal SAM 102'de korunur ve dönüşüm çıktısı için boş 103 numaralı hedef çizim dosyası seçili olur.",
       "figures": []
     },
     {
@@ -33,7 +33,7 @@
     {
       "time": "",
       "heading": "3B Arazi Yüzeyine Yüzey Materyali veya Ortofoto Doku Atama",
-      "body": "3B arazi yüzeyini seçin, **Özellikler (Properties)** paletinden **Yüzey (Surface)** kutusuna tıklayın ve kütüphaneden doğal çim/toprak dokusu veya hava fotoğrafı (`Ortofoto`) atayın. Bir ortofotonun araziye doğru oturması için ön koşul, fotoğrafın coğrafi referanslı olması ve kapsadığı koordinat alanının arazi yüzeyinin koordinatlarıyla eşleşmesidir; aksi halde görüntü kayar, döner veya ölçeği tutmaz ve binalar/yollar fotoğraftaki yerlerine denk gelmez.",
+      "body": "3B arazi yüzeyini seçin, **Özellikler (Properties)** paletinden **Yüzey (Surface)** kutusuna tıklayın ve kütüphaneden doğal çim/toprak dokusu veya hava fotoğrafı (`Ortofoto`) atayın. Bir ortofotonun araziye doğru oturması için ön koşul, fotoğrafın coğrafi referanslı olması ve kapsadığı koordinat alanının arazi yüzeyinin koordinatlarıyla eşleşmesidir; aksi halde görüntü kayar, döner veya ölçeği tutmaz ve binalar/yollar fotoğraftaki yerlerine denk gelmez. Doğru yaptıysanız 3B arazi yüzeyi, atadığınız çim/toprak dokusu veya ortofotoyla kaplı olarak Animasyon penceresinde görünür.",
       "figures": [
         "/akademi/arazi-modelleme/9311_0EMVi000003tfgj_6714924e.png"
       ]

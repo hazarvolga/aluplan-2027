@@ -3,7 +3,7 @@
   "slug": "proje-olusturma",
   "title": "Allplan ile Proje Oluşturma ve Başlangıç Ayarları",
   "duration": "03:52",
-  "sourceModule": "Proje 1 — Modül 2: Proje Yapılandırması, Hiyerarşik Bina Strüktürü ve Çizim Dosyaları",
+  "sourceModule": "Proje 1 · Modül 2: Proje Yapılandırması, Hiyerarşik Bina Strüktürü ve Çizim Dosyaları",
   "intro": "ALLPLAN'da **Proje (Project)**, bir yapıya ait tüm çizimlerin, katmanların ve ayarların toplandığı en üst veri kabıdır; bilgisayarınızdaki bir klasör gibi düşünebilirsiniz. Çizimleri tek tek açmazsınız: önce bir proje oluşturur, sonra onun içindeki **çizim dosyalarında (Teilbilder)** çalışırsınız. Bu yüzden her işin ilk adımı, standartları doğru kurulmuş bir proje açmaktır. Bu derste oluşturduğunuz projeyi eğitim boyunca adım adım geliştireceğiz.",
   "objectives": [
     "Yeni Proje oluşturma sihirbazını kullanarak standartlara uygun bir proje açmak.",
@@ -14,13 +14,13 @@
     {
       "time": "",
       "heading": "Yeni Proje Sihirbazını Başlatma",
-      "body": "**Dosya (File) -> Yeni Proje, Proje Aç... (New Project, Open Project...)** (`Ctrl+O`) komutuna tıklayın. Açılan pencerede **Yeni Proje (New Project)** butonuna basarak proje adını ve kayıt konumunu (Yerel / Workgroup / Allplan Share) belirleyin. Proje adını baştan anlamlı verin; sonradan değiştirmek yerine doğru isimle başlamak en temizidir.",
+      "body": "**Dosya (File) -> Yeni Proje, Proje Aç... (New Project, Open Project...)** (`Ctrl+O`) komutuna tıklayın. Açılan pencerede **Yeni Proje (New Project)** butonuna basarak proje adını ve kayıt konumunu (Yerel / Workgroup / Allplan Share) belirleyin. Proje adını baştan anlamlı verin; sonradan değiştirmek yerine doğru isimle başlamak en temizidir. Doğru yaptıysanız yeni proje oluşturulup açılır ve adı başlık çubuğunda görünür.",
       "figures": []
     },
     {
       "time": "",
       "heading": "Şablon ve Kaynak Ayarları (Ofis vs. Proje)",
-      "body": "Ülke standardını ve varsa kurumsal **Proje Şablonunu (Project Template)** seçin. **Katman Yapıları (Layer structures)**, **Çizgi Tipleri (Line types)** ve **Yüzey Stilleri (Surface styles)** için **Proje (Project)** seçeneğini işaretleyin. Neden? Böylece ayarlar ofise değil projenin kendisine gömülür; projeyi başka bir bilgisayara taşıdığınızda standartlar da onunla birlikte gider ve çizimler bozulmaz.",
+      "body": "Ülke standardını ve varsa kurumsal **Proje Şablonunu (Project Template)** seçin. **Katman Yapıları (Layer structures)**, **Çizgi Tipleri (Line types)** ve **Yüzey Stilleri (Surface styles)** için **Proje (Project)** seçeneğini işaretleyin. Neden? Böylece ayarlar ofise değil projenin kendisine gömülür; projeyi başka bir bilgisayara taşıdığınızda standartlar da onunla birlikte gider ve çizimler bozulmaz. Doğru yaptıysanız seçtiğiniz şablonun katman, çizgi tipi ve yüzey stili ayarları projeye yüklenir.",
       "figures": []
     },
     {
@@ -32,13 +32,13 @@
     {
       "time": "",
       "heading": "Çalışma Birimi ve Referans Ölçeği",
-      "body": "**Durum çubuğundan (Status Bar)** uzunluk birimini (`cm` veya `m`) ve referans ölçeği (`1:100`) kontrol edin. Birim, modeli hangi gerçek ölçekte çizdiğinizi belirler; referans ölçek ise çizgi kalınlığı, tarama sıklığı ve yazı boyutlarının ekranda nasıl görüneceğini etkiler. Yanlış birimle başlanan bir model sonradan ölçek kaymalarına yol açar, bu yüzden daha ilk çizgiden önce doğrulayın.",
+      "body": "**Durum çubuğundan (Status Bar)** uzunluk birimini (`cm` veya `m`) ve referans ölçeği (`1:100`) kontrol edin. Birim, modeli hangi gerçek ölçekte çizdiğinizi belirler; referans ölçek ise çizgi kalınlığı, tarama sıklığı ve yazı boyutlarının ekranda nasıl görüneceğini etkiler. Yanlış birimle başlanan bir model sonradan ölçek kaymalarına yol açar, bu yüzden daha ilk çizgiden önce doğrulayın. Doğru yaptıysanız durum çubuğunda birim ve ölçek seçtiğiniz değerlerde görünür.",
       "figures": []
     },
     {
       "time": "",
       "heading": "Büyük Koordinatlarla Çalışma (Harita / Kadastro Altlığı)",
-      "body": "Harita veya kadastro altlığı (UTM / ITRF) kullanacaksanız, noktalar sıfır noktasından çok uzakta (örneğin x/y değeri 5000 m'den büyük) olur. ALLPLAN bu uzaklıkta çizimde grafik sapmaları, hatalı önizleme ve yanlış alan hesapları üretebilir. Bunu önlemek için **Araçlar (Tools) -> Seçenekler (Options) -> Çalışma Ortamı (Desktop Environment) -> Büyük Koordinatlarla Çalışmayı Optimize Et (Optimize working with large coordinates)** seçeneğini aktif edin; bu, bir merkez **ofseti** tanımlar. Sorunun var olup olmadığını **Araçlar -> Ölç (Measure) -> Koordinatlar** ile kontrol edebilirsiniz: aşağıdaki pencerede \"ofsetsiz (ohne Offset)\" koordinatlar çok büyük görünüyorsa ofset gerekir. Bu adım yalnızca harita veya kadastro altlığı kullananlar için gereklidir; sıfır noktası yakınında modellenen standart bir projede atlanabilir.",
+      "body": "Harita veya kadastro altlığı (UTM / ITRF) kullanacaksanız, noktalar sıfır noktasından çok uzakta (örneğin x/y değeri 5000 m'den büyük) olur. ALLPLAN bu uzaklıkta çizimde grafik sapmaları, hatalı önizleme ve yanlış alan hesapları üretebilir. Bunu önlemek için **Araçlar (Tools) -> Seçenekler (Options) -> Çalışma Ortamı (Desktop Environment) -> Büyük Koordinatlarla Çalışmayı Optimize Et (Optimize working with large coordinates)** seçeneğini aktif edin; bu, bir merkez **ofseti** tanımlar. Sorunun var olup olmadığını **Araçlar -> Ölç (Measure) -> Koordinatlar** ile kontrol edebilirsiniz: aşağıdaki pencerede \"ofsetsiz (ohne Offset)\" koordinatlar çok büyük görünüyorsa ofset gerekir. Bu adım yalnızca harita veya kadastro altlığı kullananlar için gereklidir; sıfır noktası yakınında modellenen standart bir projede atlanabilir. Doğru yaptıysanız bir merkez ofseti tanımlanır ve koordinatlar sıfır noktasına yakın, makul değerlerde ölçülür.",
       "figures": [
         "/akademi/temel-modelleme/10582_0EM7U000001TexS_7e443124.png",
         "/akademi/temel-modelleme/10582_0EM7U000001TexT_67477a1f.png"

@@ -3,7 +3,7 @@
   "slug": "donati-lejantini-test-etme-duzenleme",
   "title": "Donatı Lejantını Test Etme - Düzenleme",
   "duration": "",
-  "sourceModule": "Proje 1 — Modül 5: 3B Donatılı Model Üzerinde Lejant Testi, Pafta İlişkisi ve Revizyon",
+  "sourceModule": "Proje 1 · Modül 5: 3B Donatılı Model Üzerinde Lejant Testi, Pafta İlişkisi ve Revizyon",
   "intro": "Donatı lejantı metrajın temelidir; bu yüzden **test edip düzenlemek** kritiktir. Bir donatıyı değiştirip metrajın güncellendiğini, pozların doğru toplandığını ve tablonun okunaklı olduğunu kontrol edersiniz.",
   "objectives": [
     "3B donatısı modellenmiş bir kolon, kiriş, perde veya temel çizim dosyasında yeni Donatı Lejantını test etmek.",
@@ -14,7 +14,7 @@
     {
       "time": "",
       "heading": "Donatılı Çizim Dosyasında Lejantın Yerleştirilmesi",
-      "body": "Donatı detaylandırması yapılmış bir çizim dosyasını açın. **Donatı Lejantı (Reinforcement Legend)** komutuyla **Ofis (Office)** klasöründen yeni oluşturduğunuz lejantı seçin ve **İlişkisel (Associative)** olarak çalışma alanına yerleştirin.",
+      "body": "Donatı detaylandırması yapılmış bir çizim dosyasını açın. **Donatı Lejantı (Reinforcement Legend)** komutuyla **Ofis (Office)** klasöründen yeni oluşturduğunuz lejantı seçin ve **İlişkisel (Associative)** olarak çalışma alanına yerleştirin. Doğru yaptıysanız çalışma alanında, satırları modeldeki donatı pozlarından otomatik dolan bir donatı lejantı belirir.",
       "figures": []
     },
     {
@@ -28,7 +28,7 @@
     {
       "time": "",
       "heading": "İnce Ayar Düzenlemeleri ve Kurumsal Arşivleme",
-      "body": "Büküm şeması yazılarında üst üste binme veya sütun darlığı varsa **Lejant Değiştir (Modify Legend)** ile büküm şeması hücre kutusunu genişletin; son halini **Lejantları Yönet** üzerinden `.zip` / `.leg` olarak yedekleyin.",
+      "body": "Büküm şeması yazılarında üst üste binme veya sütun darlığı varsa **Lejant Değiştir (Modify Legend)** ile büküm şeması hücre kutusunu genişletin; son halini **Lejantları Yönet** üzerinden `.zip` / `.leg` olarak yedekleyin. Doğru yaptıysanız büküm şeması yazıları hücreye sığar, üst üste binme kalkar ve lejantın son hali yedeklenmiş olur.",
       "figures": [
         "/akademi/lejant/10888_0EM7U000001Te3b_f6366dcc.png"
       ]

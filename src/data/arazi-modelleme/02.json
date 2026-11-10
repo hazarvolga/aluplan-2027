@@ -3,7 +3,7 @@
   "slug": "arazi-dosyasini-alma",
   "title": "Arazi Dosyasını Alma",
   "duration": "",
-  "sourceModule": "Proje 1 — Modül 2 & Modül 6: DXF/DWG Halihazır Harita İçe Aktarma, Büyük Koordinatlar (Ofset) ve Nokta Dosyaları",
+  "sourceModule": "Proje 1 · Modül 2 & Modül 6: DXF/DWG Halihazır Harita İçe Aktarma, Büyük Koordinatlar (Ofset) ve Nokta Dosyaları",
   "intro": "Arazi modellemenin ilk adımı, harita mühendisinden gelen **halihazır haritayı** (DXF/DWG) projeye doğru almaktır. Burada en kritik konu birim ve koordinattır: haritalar çoğu zaman büyük ülke koordinatlarıyla (UTM/ITRF) gelir ve doğru ayarlanmazsa çizim orijinden çok uzakta açılıp grafik hatalarına yol açar. Örnek arsamız (zemin kotu yaklaşık 100 m, en yüksek nokta yaklaşık 112 m) de böyle bir halihazır pafta içinde gelecek; ilk işimiz onu doğru birim ve ofsetle içeri almak.",
   "objectives": [
     "Halihazır harita dosyalarını (`.dWG`, `.dxf`) doğru ölçü birimi (`m`, `cm`, `mm`), ölçek ve katman (layer) eşleştirmesiyle boş bir çizim dosyasına içe aktarmak (`Import`).",
@@ -15,7 +15,7 @@
     {
       "time": "",
       "heading": "Halihazır Harita İçin Boş Çizim Dosyası Seçimi ve Ölçek Ayarı",
-      "body": "**Yapı Strüktürü Aç (Open on a Project-Specific Basis)** penceresinden `100 - Halihazır Harita Altlığı` çizim dosyasını aktif hale getirin. Durum çubuğundan çalışma ölçeğini vaziyet planına uygun olarak `1:500` veya `1:200` ve ölçü birimini `m` (metre) olarak ayarlayın.",
+      "body": "**Yapı Strüktürü Aç (Open on a Project-Specific Basis)** penceresinden `100 - Halihazır Harita Altlığı` çizim dosyasını aktif hale getirin. Durum çubuğundan çalışma ölçeğini vaziyet planına uygun olarak `1:500` veya `1:200` ve ölçü birimini `m` (metre) olarak ayarlayın. Doğru yaptıysanız 100 numaralı çizim dosyası aktif olur ve durum çubuğunda ölçek 1:500 (veya 1:200) ile birim 'm' olarak görünür.",
       "figures": [
         "/akademi/arazi-modelleme/11158_0EM7U000001Tdbl_a464017e.png"
       ]
@@ -23,7 +23,7 @@
     {
       "time": "",
       "heading": "İçe Aktar (Import) Komutu ve DXF/DWG Seçenekleri",
-      "body": "**Dosya (File) -> İçe Aktar (Import) -> AutoCAD Verilerini İçe Aktar (Import AutoCAD Data)** komutunu çalıştırın (veya dosyayı doğrudan çalışma alanına sürükleyip bırakın). Dosya seçimi penceresinde sağ alttaki **Seçenekler... (Options...)** butonuna tıklayın:\n- **Genel Ayarlar (General Settings)** sekmesinde **Dosya Birimi (Unit in File)** değerini harita birimiyle (`Metre`) eşleştirin.\n- **Koordinatlar ve Uzunluk Parametreleri (Coordinate and Length Parameters)** bölümünde **Ağırlık merkezini ayarla: Ofset (Adjust center of gravity to: Offset)** seçeneğini işaretleyin. Bu seçenek, büyük UTM koordinatlarını otomatik olarak proje ofsetine kaydeder ve çizimi Allplan orijinine (`0,0,0`) taşır. Ofset gereklidir çünkü CAD motoru noktaları sınırlı ondalık basamakla tutar; model orijinden milyonlarca metre uzakta olursa bu basamaklar yüksekliğin ve açının küçük farklarını temsil edemez ve gölge, alan, kesit hesapları bozulur.",
+      "body": "**Dosya (File) -> İçe Aktar (Import) -> AutoCAD Verilerini İçe Aktar (Import AutoCAD Data)** komutunu çalıştırın (veya dosyayı doğrudan çalışma alanına sürükleyip bırakın). Dosya seçimi penceresinde sağ alttaki **Seçenekler... (Options...)** butonuna tıklayın:\n- **Genel Ayarlar (General Settings)** sekmesinde **Dosya Birimi (Unit in File)** değerini harita birimiyle (`Metre`) eşleştirin.\n- **Koordinatlar ve Uzunluk Parametreleri (Coordinate and Length Parameters)** bölümünde **Ağırlık merkezini ayarla: Ofset (Adjust center of gravity to: Offset)** seçeneğini işaretleyin. Bu seçenek, büyük UTM koordinatlarını otomatik olarak proje ofsetine kaydeder ve çizimi Allplan orijinine (`0,0,0`) taşır. Ofset gereklidir çünkü CAD motoru noktaları sınırlı ondalık basamakla tutar; model orijinden milyonlarca metre uzakta olursa bu basamaklar yüksekliğin ve açının küçük farklarını temsil edemez ve gölge, alan, kesit hesapları bozulur. Doğru yaptıysanız harita Allplan orijinine (0,0,0) yakın yerleşir ve büyük UTM koordinatları proje ofsetine kaydedilir.",
       "figures": [
         "/akademi/arazi-modelleme/11158_0EM7U000001Tdbf_4a5e9865.png"
       ]
@@ -31,7 +31,7 @@
     {
       "time": "",
       "heading": "Katman (Layer) ve Çizgi/Yazı Eşleştirmelerinin Kontrolü",
-      "body": "**Değiştir (Modify)** butonuyla Önizleme ve Eşleştirme (`Assignment`) penceresini açarak halihazır haritadaki eş yükselti eğrileri, ada/parsel sınırları, mevcut binalar, yollar ve kot noktası katmanlarının Allplan katmanlarına (`Layers`) aktarımını onaylayın.",
+      "body": "**Değiştir (Modify)** butonuyla Önizleme ve Eşleştirme (`Assignment`) penceresini açarak halihazır haritadaki eş yükselti eğrileri, ada/parsel sınırları, mevcut binalar, yollar ve kot noktası katmanlarının Allplan katmanlarına (`Layers`) aktarımını onaylayın. Doğru yaptıysanız eş yükselti, parsel, bina ve yol katmanları Allplan katmanlarına eşlenmiş olarak önizlemede görünür.",
       "figures": [
         "/akademi/arazi-modelleme/11158_0EM7U000001Tdbg_21b1b51d.png"
       ]
@@ -39,7 +39,7 @@
     {
       "time": "",
       "heading": "İçe Aktarılan Haritanın Ölçü Kontrolü ve Rölöve Nokta Dosyaları (.ASC / .XYZ)",
-      "body": "Harita ekrana geldikten sonra **Ölç (Measure -> Length)** aracıyla bilinen iki parsel köşesi veya karelaj ağı (`100 m` grid) arasındaki mesafeyi ölçerek ölçeğin `1:1` doğruluğunu teyit edin. Eğer elinizde DXF/DWG yerine harita mühendisinden gelen bir koordinat listesi (`.asc`, `.prn`, `.xyz`, `LandXML`) varsa **Arazi -> İçe/Dışa Aktar -> Noktaları İçe Aktar (Import Points)** komutuyla noktaları doğrudan 3B koordinatlarıyla sahneye okuyabilirsiniz.",
+      "body": "Harita ekrana geldikten sonra **Ölç (Measure -> Length)** aracıyla bilinen iki parsel köşesi veya karelaj ağı (`100 m` grid) arasındaki mesafeyi ölçerek ölçeğin `1:1` doğruluğunu teyit edin. Eğer elinizde DXF/DWG yerine harita mühendisinden gelen bir koordinat listesi (`.asc`, `.prn`, `.xyz`, `LandXML`) varsa **Arazi -> İçe/Dışa Aktar -> Noktaları İçe Aktar (Import Points)** komutuyla noktaları doğrudan 3B koordinatlarıyla sahneye okuyabilirsiniz. Doğru yaptıysanız ölçülen mesafe haritadaki gerçek değerle birebir çıkar; nokta dosyası aldıysanız noktalar 3B kotlarıyla sahnede belirir.",
       "figures": [
         "/akademi/arazi-modelleme/11158_0EM7U000001Tdbj_b69d5b05.png"
       ]

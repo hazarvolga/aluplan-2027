@@ -3,7 +3,7 @@
   "slug": "2d-duzenleme-komutlari",
   "title": "2D Düzenleme Komutları (Standart CAD İşlemleri)",
   "duration": "10:48",
-  "sourceModule": "Proje 1 — Modül 1 & Modül 4: Doğrudan Obje Modifikasyonu ve Düzenleme",
+  "sourceModule": "Proje 1 · Modül 1 & Modül 4: Doğrudan Obje Modifikasyonu ve Düzenleme",
   "intro": "Çizmek işin yarısıdır; asıl zaman **düzenlemede** geçer. ALLPLAN'da bir elemanı seçtiğinizde üzerinde beliren tutamaçlarla (**Direct Object Modification**) onu doğrudan taşır, kopyalar, döndürür ve aynalarsınız; ayrı komut aramazsınız. Kırpma, uzatma, pah ve köşe yuvarlatma da 2B geometriyi temizler. Bu araçlar sonraki tüm derslerdeki revizyonların temelidir.",
   "objectives": [
     "Doğrudan Obje Modifikasyonu (Direct Object Modification) tutamaçlarıyla hızlı taşıma, kopyalama, döndürme ve aynalama yapmak.",
@@ -20,31 +20,31 @@
     {
       "time": "01:48 – 03:36",
       "heading": "Taşı ve Kopyala (Move / Copy)",
-      "body": "Seçili elemanın bağlam menüsünden ya da tutamaçlarından **Taşı (Move)** ile elemanı bir referans noktasından yeni bir noktaya taşıyın, **Kopyala (Copy)** ile aslını yerinde bırakıp çoğaltın. Referans noktasını eleman üzerindeki anlamlı bir noktadan (köşe, orta veya uç) verin; çünkü taşıma ve kopyalama bu noktayı hedefe oturtur, rastgele bir yerden tutarsanız eleman kayar.",
+      "body": "Seçili elemanın bağlam menüsünden ya da tutamaçlarından **Taşı (Move)** ile elemanı bir referans noktasından yeni bir noktaya taşıyın, **Kopyala (Copy)** ile aslını yerinde bırakıp çoğaltın. Referans noktasını eleman üzerindeki anlamlı bir noktadan (köşe, orta veya uç) verin; çünkü taşıma ve kopyalama bu noktayı hedefe oturtur, rastgele bir yerden tutarsanız eleman kayar. Doğru yaptıysanız eleman referans noktasından hedefe taşınır veya kopyası yeni konumda oluşur.",
       "figures": []
     },
     {
       "time": "03:36 – 05:24",
       "heading": "Döndür ve Aynala (Rotate / Mirror)",
-      "body": "**Döndür (Rotate)** ile elemanı bir dönme merkezi ve açı vererek çevirin; **Kopyalayarak Aynala (Mirror and Copy)** ile bir eksene göre simetriğini üretin. Aynalamayı kopyalı kullanın; çünkü simetrik oda, kapı veya detayları sıfırdan çizmek yerine bir kez çizip eksene göre yansıtmak hem hızlıdır hem de simetriyi birebir korur.",
+      "body": "**Döndür (Rotate)** ile elemanı bir dönme merkezi ve açı vererek çevirin; **Kopyalayarak Aynala (Mirror and Copy)** ile bir eksene göre simetriğini üretin. Aynalamayı kopyalı kullanın; çünkü simetrik oda, kapı veya detayları sıfırdan çizmek yerine bir kez çizip eksene göre yansıtmak hem hızlıdır hem de simetriyi birebir korur. Doğru yaptıysanız eleman verdiğiniz açıyla döner veya eksene göre simetriği oluşur.",
       "figures": []
     },
     {
       "time": "05:24 – 07:12",
       "heading": "Kesiştir, Kırp ve Uzat",
-      "body": "**İki Elemanı Kesiştir (Intersect Two Entities)** ile açık kalan iki çizgiyi ortak köşede birleştirin. **Çizgileri Elemana Göre Kırp (Trim Lines to Element)** ile bir sınırın ötesine taşan fazlalıkları, **Eleman Parçasını Sil (Delete Segment)** ile iki nokta arasındaki parçayı temizleyin. Bu araçları kullanırsınız; çünkü elle silip yeniden çizmek yerine mevcut geometriyi sınırlara tam oturtmak hem hızlıdır hem de nokta kaçıklığı bırakmaz.",
+      "body": "**İki Elemanı Kesiştir (Intersect Two Entities)** ile açık kalan iki çizgiyi ortak köşede birleştirin. **Çizgileri Elemana Göre Kırp (Trim Lines to Element)** ile bir sınırın ötesine taşan fazlalıkları, **Eleman Parçasını Sil (Delete Segment)** ile iki nokta arasındaki parçayı temizleyin. Bu araçları kullanırsınız; çünkü elle silip yeniden çizmek yerine mevcut geometriyi sınırlara tam oturtmak hem hızlıdır hem de nokta kaçıklığı bırakmaz. Doğru yaptıysanız çizgiler ortak köşede birleşir ve taşan fazlalıklar sınırda temizlenir.",
       "figures": []
     },
     {
       "time": "07:12 – 09:00",
       "heading": "Pah Kır ve Köşe Yuvarlat (Chamfer / Fillet)",
-      "body": "**Pah Kır (Chamfer)** ile iki çizginin köşesini düz bir kırıkla, **Köşe Yuvarlat (Fillet)** ile belirli bir yarıçapta yay geçişiyle birleştirin. Pah ölçüsünü veya yarıçapı sayısal girerek çalışın; çünkü köşe geçişleri çoğu zaman imalat veya detay gereği belirli bir ölçüde olmalıdır, gözle yaklaştırmak yeterli değildir.",
+      "body": "**Pah Kır (Chamfer)** ile iki çizginin köşesini düz bir kırıkla, **Köşe Yuvarlat (Fillet)** ile belirli bir yarıçapta yay geçişiyle birleştirin. Pah ölçüsünü veya yarıçapı sayısal girerek çalışın; çünkü köşe geçişleri çoğu zaman imalat veya detay gereği belirli bir ölçüde olmalıdır, gözle yaklaştırmak yeterli değildir. Doğru yaptıysanız köşe, girdiğiniz ölçüde pah veya yarıçapta yay geçişiyle birleşir.",
       "figures": []
     },
     {
       "time": "09:00 – 10:48",
       "heading": "Noktaları Modifiye Et (Stretch) ve Biçim Aktar",
-      "body": "**Noktaları Modifiye Et (Stretch Entities)** ile bir aks veya oda kenarını seçip ona bağlı tüm çizgi ve taramalarla birlikte sündürün; tek tek taşımak yerine bunu kullanın, çünkü bağlı geometri birlikte hareket ettiğinde model tutarlı kalır. **Biçim Aktar (Match Properties)** ile bir elemanın kalem, çizgi tipi ve katman özelliklerini seçtiğiniz diğer elemanlara kopyalayın; böylece standardı tek tek ayarlamak yerine örnek bir elemandan hızla yayarsınız.",
+      "body": "**Noktaları Modifiye Et (Stretch Entities)** ile bir aks veya oda kenarını seçip ona bağlı tüm çizgi ve taramalarla birlikte sündürün; tek tek taşımak yerine bunu kullanın, çünkü bağlı geometri birlikte hareket ettiğinde model tutarlı kalır. **Biçim Aktar (Match Properties)** ile bir elemanın kalem, çizgi tipi ve katman özelliklerini seçtiğiniz diğer elemanlara kopyalayın; böylece standardı tek tek ayarlamak yerine örnek bir elemandan hızla yayarsınız. Doğru yaptıysanız seçtiğiniz kenar bağlı çizgi ve taramalarla birlikte uzar, aktardığınız biçim diğer elemanlara uygulanır.",
       "figures": []
     }
   ],

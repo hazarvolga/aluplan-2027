@@ -3,7 +3,7 @@
   "slug": "yollarin-modellenmesi",
   "title": "Yolların Modellenmesi",
   "duration": "",
-  "sourceModule": "Proje 1 — Modül 3 & Modül 6: Arazi Üzerinde Yol Modelleme (2B Yol İzini 3B Araziye İzdüşürme, Bölme ve Allplan Road)",
+  "sourceModule": "Proje 1 · Modül 3 & Modül 6: Arazi Üzerinde Yol Modelleme (2B Yol İzini 3B Araziye İzdüşürme, Bölme ve Allplan Road)",
   "intro": "Vaziyet planının önemli bir parçası **yollar ve kaldırımlardır**. Bu derste, 2B haritadaki yol sınırlarından yola çıkıp araziyi yol sınırları boyunca bölerek asfalt dokusu atar ve kaldırım kademesini modellersiniz. Mimari vaziyet maketi için Yöntem A ve B yeterlidir; parametrik yatay/düşey kurp ve dever gerektiren karayolu mühendisliği için **Allplan Road** (Yöntem C) ileri/opsiyonel bir araçtır. Örnek arsamızın (zemin kotu yaklaşık 100 m, en yüksek nokta yaklaşık 112 m) eğimine oturan bir giriş yolu ve kaldırım modelleyeceğiz.",
   "objectives": [
     "Halihazır haritadaki 2B yol, kaldırım ve parsel içi yürüme yolu sınırlarını eğimli 3B arazi yüzeyi üzerine izdüşürerek (`Project / İzdüşüm`) veya 3B kesme (`Split / Intersect`) ile modellemek.",
@@ -15,13 +15,13 @@
     {
       "time": "",
       "heading": "2B Haritadaki Yol Sınırlarını Kapalı Poligon / 3B Prizma Haline Getirme",
-      "body": "`104 - Yollar ve Kaldırımlar` çizim dosyasını aktif edin ve `100 - Halihazır Harita Altlığı` dosyasını arka planda açın. Haritadaki yol kenar çizgilerini takip ederek kapalı bir 2B poligon (veya 3B katı prizma) oluşturun.",
+      "body": "`104 - Yollar ve Kaldırımlar` çizim dosyasını aktif edin ve `100 - Halihazır Harita Altlığı` dosyasını arka planda açın. Haritadaki yol kenar çizgilerini takip ederek kapalı bir 2B poligon (veya 3B katı prizma) oluşturun. Doğru yaptıysanız yol kenarlarını izleyen kapalı bir 2B poligon (veya 3B prizma) 104 numaralı çizim dosyasında belirir.",
       "figures": []
     },
     {
       "time": "",
       "heading": "Yöntem A: 3B Arazi Yüzeyini Yol Sınırlarıyla Bölme ve Asfalt Dokusu Atama",
-      "body": "Mimari vaziyet maketlerinde yolu arazi eğimiyle birebir uyumlu modellemenin en temiz yolu:\n1. Yol sınır poligonundan arazinin tüm yüksekliğini kesen düşey bir 3B katı/yüzey üretin veya **3B Elemanları Çizgi/Poligon ile Böl (Split 3D Elements)** aracını kullanın.\n2. 3B arazi yüzeyini yol sınırları boyunca bölün (`Split`).\n3. Ayrılan yol yüzey parçasını seçip **Özellikler -> Yüzey (Surface)** kısmından `Asfalt / Parke Taşı` dokusu atayın.\n4. Kaldırım yüzeylerini seçip **Ekstrüzyon (Extrude)** ile Z yönünde `+0.15 m` (15 cm) yükselterek bordür ve yaya kaldırımı kademesini oluşturun. Kaldırımın taşıt yolundan yaklaşık `+0.15 m` yüksek olmasının nedeni işlevseldir: bu kot farkı (bordür), yaya alanını araç trafiğinden fiziksel olarak ayırır ve yol yüzeyindeki yağmur suyunun kaldırıma taşmadan kenardaki ızgaralara akmasını sağlar.",
+      "body": "Mimari vaziyet maketlerinde yolu arazi eğimiyle birebir uyumlu modellemenin en temiz yolu:\n1. Yol sınır poligonundan arazinin tüm yüksekliğini kesen düşey bir 3B katı/yüzey üretin veya **3B Elemanları Çizgi/Poligon ile Böl (Split 3D Elements)** aracını kullanın.\n2. 3B arazi yüzeyini yol sınırları boyunca bölün (`Split`).\n3. Ayrılan yol yüzey parçasını seçip **Özellikler -> Yüzey (Surface)** kısmından `Asfalt / Parke Taşı` dokusu atayın.\n4. Kaldırım yüzeylerini seçip **Ekstrüzyon (Extrude)** ile Z yönünde `+0.15 m` (15 cm) yükselterek bordür ve yaya kaldırımı kademesini oluşturun. Kaldırımın taşıt yolundan yaklaşık `+0.15 m` yüksek olmasının nedeni işlevseldir: bu kot farkı (bordür), yaya alanını araç trafiğinden fiziksel olarak ayırır ve yol yüzeyindeki yağmur suyunun kaldırıma taşmadan kenardaki ızgaralara akmasını sağlar. Doğru yaptıysanız yol yüzeyi araziden ayrılıp asfalt dokusuyla kaplanır ve kaldırımlar yaklaşık 15 cm yükselen bir bordür kademesiyle görünür.",
       "figures": []
     },
     {
@@ -33,7 +33,7 @@
     {
       "time": "",
       "heading": "Yöntem C: Allplan Road ile Parametrik Karayolu Güzergahı ve Şevler",
-      "body": "Mühendislik projelerinde yatay kurplar, boykesit eğimleri ve dever (enine eğim) gerektiğinde **Allplan Road** görev alanından:\n1. Arazi modelini (`Terrain`) tanımlayın.\n2. **Yatay Güzergah (Horizontal Alignment)** ve **Düşey Güzergah (Vertical Alignment)** eksenlerini oluşturun.\n3. Standart yol enkesit şablonunu (`Cross Section Template`) eksene atayarak 3B yol gövdesini ve yarma/dolgu şevlerini otomatik hesaplatın.",
+      "body": "Mühendislik projelerinde yatay kurplar, boykesit eğimleri ve dever (enine eğim) gerektiğinde **Allplan Road** görev alanından:\n1. Arazi modelini (`Terrain`) tanımlayın.\n2. **Yatay Güzergah (Horizontal Alignment)** ve **Düşey Güzergah (Vertical Alignment)** eksenlerini oluşturun.\n3. Standart yol enkesit şablonunu (`Cross Section Template`) eksene atayarak 3B yol gövdesini ve yarma/dolgu şevlerini otomatik hesaplatın. Doğru yaptıysanız tanımladığınız yatay ve düşey güzergah boyunca 3B yol gövdesi ile yarma/dolgu şevleri otomatik oluşur.",
       "figures": []
     }
   ],

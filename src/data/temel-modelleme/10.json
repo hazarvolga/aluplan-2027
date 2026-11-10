@@ -3,7 +3,7 @@
   "slug": "kapi-pencere",
   "title": "Kapı ve Pencere Oluşturma",
   "duration": "11:09",
-  "sourceModule": "Proje 1 — Modül 3: Akıllı Parametrik Mimari Elemanlar ve SmartParts",
+  "sourceModule": "Proje 1 · Modül 3: Akıllı Parametrik Mimari Elemanlar ve SmartParts",
   "intro": "Kapı ve pencereyi duvara elle boşluk açıp çizmezsiniz; ALLPLAN'da bunlar **parametrik nesnelerdir** ve duvarın içine yerleştiğinde boşluğu kendisi açar, duvarla birlikte hareket eder. Çok katmanlı duvarlarda diş/lamba (**reveal**) ve yalıtım dönüşü gibi detayları da bu nesneler yönetir. SmartParts ile kasa, kanat, cam ve denizliğe kadar 3B modelleyebilirsiniz.",
   "objectives": [
     "Duvarlara parametrik Kapı (Door / Tür) ve Pencere (Window / Fenster) boşlukları açmak.",
@@ -14,19 +14,19 @@
     {
       "time": "00:00 – 03:30",
       "heading": "Kapı (Door / Tür) Boşluğu ve Kanat Sembolü",
-      "body": "**Mimari (Architecture) -> Kapı (Door / Tür)** komutunu seçin. Kapı genişliği (`90 cm`, `100 cm`) ve yüksekliğini (`210 cm`), alt kot bağlantısını (bitmiş döşeme kotu) ve 2B açılış yönü sembolünü seçerek duvar üzerinde köşe referans mesafesiyle yerleştirin.",
+      "body": "**Mimari (Architecture) -> Kapı (Door / Tür)** komutunu seçin. Kapı genişliği (`90 cm`, `100 cm`) ve yüksekliğini (`210 cm`), alt kot bağlantısını (bitmiş döşeme kotu) ve 2B açılış yönü sembolünü seçerek duvar üzerinde köşe referans mesafesiyle yerleştirin. Doğru yaptıysanız duvarda belirttiğiniz ölçülerde bir kapı boşluğu ve açılış sembolü oluşur.",
       "figures": []
     },
     {
       "time": "03:30 – 07:00",
       "heading": "Pencere (Window / Fenster), Parapet Yüksekliği ve Diş (Reveal) Ayarları",
-      "body": "**Pencere (Window / Fenster)** komutuna girin; pencere genişliği, yüksekliği ve **Parapet Yüksekliğini (Sill Height / Brüstungshöhe)** ayarlayın. Çok katmanlı duvarlarda **Diş (Reveal / Anschlag)** sekmesinden dış yalıtım katmanının doğrama kasasına dönüş mesafesini tanımlayın. Bu yalıtım dönüşü (diş) tanımlanmazsa kasa kenarında yalıtım kesilir, ısı köprüsü oluşur ve kesit çiziminde boşluk hatalı görünür.",
+      "body": "**Pencere (Window / Fenster)** komutuna girin; pencere genişliği, yüksekliği ve **Parapet Yüksekliğini (Sill Height / Brüstungshöhe)** ayarlayın. Çok katmanlı duvarlarda **Diş (Reveal / Anschlag)** sekmesinden dış yalıtım katmanının doğrama kasasına dönüş mesafesini tanımlayın. Bu yalıtım dönüşü (diş) tanımlanmazsa kasa kenarında yalıtım kesilir, ısı köprüsü oluşur ve kesit çiziminde boşluk hatalı görünür. Doğru yaptıysanız duvarda parapet yüksekliğinde bir pencere boşluğu oluşur ve yalıtım kasaya düzgün döner.",
       "figures": []
     },
     {
       "time": "07:00 – 11:09",
       "heading": "Kapı ve Pencere SmartParts Modelleme",
-      "body": "**Kütüphane (Library)** veya boşluk özellikleri içinden **Pencere SmartPart / Kapı SmartPart** aracını açın. Kasa/kanat profillerini, çift açılım sembollerini, denizlik/parapet profillerini, panjur kutusunu (**Rollladenkasten**) ve 3B cam/doğrama materyallerini tanımlayıp boşluğa yerleştirin.",
+      "body": "**Kütüphane (Library)** veya boşluk özellikleri içinden **Pencere SmartPart / Kapı SmartPart** aracını açın. Kasa/kanat profillerini, çift açılım sembollerini, denizlik/parapet profillerini, panjur kutusunu (**Rollladenkasten**) ve 3B cam/doğrama materyallerini tanımlayıp boşluğa yerleştirin. Doğru yaptıysanız tanımladığınız profiller ve 3B doğrama, boşluğa SmartPart olarak yerleşir.",
       "figures": [
         "/akademi/temel-modelleme/8900_0EM7U000001Tdht_e7ce85f6.png"
       ]

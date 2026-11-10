@@ -3,7 +3,7 @@
   "slug": "duvar-olusturma",
   "title": "Duvar Oluşturma",
   "duration": "08:41",
-  "sourceModule": "Proje 1 — Modül 3: Akıllı Parametrik Mimari Elemanlar ve Hacim Yönetimi",
+  "sourceModule": "Proje 1 · Modül 3: Akıllı Parametrik Mimari Elemanlar ve Hacim Yönetimi",
   "intro": "Duvar, ALLPLAN'daki ilk gerçek **3B mimari elemanınızdır**. Bir çizgi değil; içinde katmanlar (taşıyıcı + yalıtım + kaplama), malzeme, imalat kalemi ve kot bağlantısı olan akıllı bir nesnedir. **Öncelik (Priority)** numarası sayesinde duvarlar birbirine ve diğer elemanlara doğru birleşir. Bu dersten sonra modeliniz artık 'çizim' değil, metrajı alınabilen bir yapı olmaya başlar.",
   "objectives": [
     "Tek katmanlı iç duvarlar ve çok katmanlı dış cephe duvarlarını (taşıyıcı + yalıtım + kaplama) tanımlamak.",
@@ -14,19 +14,19 @@
     {
       "time": "00:00 – 02:45",
       "heading": "Duvar (Wall / Wand) Özellikleri ve Çok Katmanlı Yapı",
-      "body": "**Mimari (Architecture) -> Duvar (Wall / Wand)** komutunu açın. Katman sayısını belirleyin (örn. Dış duvar için 3 katman: `20 cm Tuğla/Betonarme + 8 cm Isı Yalıtımı + 2 cm Dış Sıva`). Taşıyıcı katmana yüksek öncelik (`300`), yalıtım ve sıvaya daha düşük öncelik (`100`) vererek kesişimlerde taşıyıcı çekirdeğin kesintisiz devam etmesini sağlayın. İki katman kesiştiğinde Öncelik (Priority) sayısı yüksek olan kesintisiz geçer, düşük olan kesilir; bu eğitim boyunca sıfırdan kurduğunuz iki katlı konutta taşıyıcı tuğla/beton çekirdeğinin daima bütün kalması için en yüksek öncelik ona verilir.",
+      "body": "**Mimari (Architecture) -> Duvar (Wall / Wand)** komutunu açın. Katman sayısını belirleyin (örn. Dış duvar için 3 katman: `20 cm Tuğla/Betonarme + 8 cm Isı Yalıtımı + 2 cm Dış Sıva`). Taşıyıcı katmana yüksek öncelik (`300`), yalıtım ve sıvaya daha düşük öncelik (`100`) vererek kesişimlerde taşıyıcı çekirdeğin kesintisiz devam etmesini sağlayın. İki katman kesiştiğinde Öncelik (Priority) sayısı yüksek olan kesintisiz geçer, düşük olan kesilir; bu eğitim boyunca sıfırdan kurduğunuz iki katlı konutta taşıyıcı tuğla/beton çekirdeğinin daima bütün kalması için en yüksek öncelik ona verilir. Doğru yaptıysanız çok katmanlı duvar kesiti, çizime hazır biçimde tanımlanır.",
       "figures": []
     },
     {
       "time": "02:45 – 05:30",
       "heading": "Duvar Aksı, Çizim Yönü ve Kat Düzlemi Bağlantısı",
-      "body": "Duvar referans aksını (taşıyıcı katmanın dış kenarı veya merkezi) seçin; dış cephe yalıtımının dışarıya bakması için gerekirse **Ofset Yönünü Değiştir (Reverse Offset Direction)** (`Ctrl+R`) kullanın. **Yükseklik (Height)** butonundan alt kotu kat alt düzlemine (`UK = 0.00`), üst kotu kat üst düzlemine (`OK = 0.00`) bağlayın.",
+      "body": "Duvar referans aksını (taşıyıcı katmanın dış kenarı veya merkezi) seçin; dış cephe yalıtımının dışarıya bakması için gerekirse **Ofset Yönünü Değiştir (Reverse Offset Direction)** (`Ctrl+R`) kullanın. **Yükseklik (Height)** butonundan alt kotu kat alt düzlemine (`UK = 0.00`), üst kotu kat üst düzlemine (`OK = 0.00`) bağlayın. Doğru yaptıysanız duvar referans aksı ve alt/üst kotları seçtiğiniz düzlemlere bağlanır.",
       "figures": []
     },
     {
       "time": "05:30 – 08:41",
       "heading": "Dış ve İç Duvarların Çizimi ve Birleşim Kontrolleri",
-      "body": "Aks kesişimlerini yakalayarak dış cephe duvarlarını ve iç bölme duvarlarını çizin. **Duvarları Çizgiyle Birleştir (Join Linear Component to Line)** komutuyla T ve köşe birleşimlerini kontrol edin.",
+      "body": "Aks kesişimlerini yakalayarak dış cephe duvarlarını ve iç bölme duvarlarını çizin. **Duvarları Çizgiyle Birleştir (Join Linear Component to Line)** komutuyla T ve köşe birleşimlerini kontrol edin. Doğru yaptıysanız aks boyunca, tanımladığınız kalınlıkta duvarlar belirir ve köşe ile T birleşimleri temiz oturur.",
       "figures": [
         "/akademi/temel-modelleme/11384_0EM7U000001Td7Z_eca6d3ed.png"
       ]

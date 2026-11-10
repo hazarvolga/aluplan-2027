@@ -3,7 +3,7 @@
   "slug": "dijital-arazi-modelinin-olusturulmasi",
   "title": "Dijital Arazi Modelinin Oluşturulması",
   "duration": "",
-  "sourceModule": "Proje 1 — Modül 3 & Modül 6: Sayısal Arazi Modeli (SAM / DTM - DGM), Üçgenleme Ağı (TIN), Dış Sınır ve Kırık Hatlar",
+  "sourceModule": "Proje 1 · Modül 3 & Modül 6: Sayısal Arazi Modeli (SAM / DTM - DGM), Üçgenleme Ağı (TIN), Dış Sınır ve Kırık Hatlar",
   "intro": "**Sayısal Arazi Modeli (SAM / DTM)**, arazi noktalarını Delaunay üçgenlemesiyle birleştiren özel bir jeodezik yüzeydir; üzerinde izohips, şev ve kübaj (kazı-dolgu) hesabı yapabilirsiniz. Bu ders, noktalardan SAM üretmeyi ve onu gerçek arsa sınırına kırpmayı anlatır.",
   "objectives": [
     "Girilen 3B arazi noktalarını **Ağ Oluştur (Mesh / Triangulate / Vermaschen)** komutuyla üçgenleyerek **Dijital Arazi Modeli (SAM / DTM / DGM)** oluşturmak.",
@@ -29,13 +29,13 @@
     {
       "time": "",
       "heading": "Ağ Noktası Ekleme/Silme, Kırık Hat (Breakline) ve Boşluk (Cutout) Açma",
-      "body": "Arazi modelini hassaslaştırmak için:\n- **Ağ Noktası (Grid Point / Gitterpunkt):** Mevcut SAM ağına sonradan yeni kot noktaları ekler veya mevcut noktayı ağdan çıkarır.\n- **Kırık Hat / Kontur Ekle (Add Contour / Bruchkante):** Üçgen kenarlarının kesmemesi gereken şev üstü/altı ve yol kenarı çizgilerini ağa zorunlu kenar olarak işler.\n- **Boşluk (Cutout / Aussparung):** Bina oturum alanı veya iç avlu gibi bölgelerde arazi ağında boşluk açar.",
+      "body": "Arazi modelini hassaslaştırmak için:\n- **Ağ Noktası (Grid Point / Gitterpunkt):** Mevcut SAM ağına sonradan yeni kot noktaları ekler veya mevcut noktayı ağdan çıkarır.\n- **Kırık Hat / Kontur Ekle (Add Contour / Bruchkante):** Üçgen kenarlarının kesmemesi gereken şev üstü/altı ve yol kenarı çizgilerini ağa zorunlu kenar olarak işler.\n- **Boşluk (Cutout / Aussparung):** Bina oturum alanı veya iç avlu gibi bölgelerde arazi ağında boşluk açar. Doğru yaptıysanız SAM ağı; eklediğiniz noktalar, zorunlu işlenen kırık hatlar ve açtığınız boşluklara göre yeniden üçgenlenir.",
       "figures": []
     },
     {
       "time": "",
       "heading": "SAM Görünüm Ayarları ve Yükseklik Renk Analizi",
-      "body": "**SAM Görünümü (Modify DTM Representation)** aracına tıklayarak üçgenleme ağının (mesh triangles) çizgi rengini, nokta sembollerinin görünürlüğünü ve **Yükseklik Renk Dolgusu (Elevation Color Gradient)** gösterimini açıp kapatabilirsiniz. Animasyon penceresinde (`F4`) arazi yüzeyinin 3 boyutlu topoğrafyasını inceleyin.",
+      "body": "**SAM Görünümü (Modify DTM Representation)** aracına tıklayarak üçgenleme ağının (mesh triangles) çizgi rengini, nokta sembollerinin görünürlüğünü ve **Yükseklik Renk Dolgusu (Elevation Color Gradient)** gösterimini açıp kapatabilirsiniz. Animasyon penceresinde (`F4`) arazi yüzeyinin 3 boyutlu topoğrafyasını inceleyin. Doğru yaptıysanız SAM seçtiğiniz çizgi rengi ve yükseklik renk dolgusuyla gösterilir ve Animasyon penceresinde arazinin 3B topoğrafyası görünür.",
       "figures": []
     }
   ],

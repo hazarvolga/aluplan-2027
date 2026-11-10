@@ -3,7 +3,7 @@
   "slug": "aks-olusturma",
   "title": "Aks Oluşturma",
   "duration": "02:43",
-  "sourceModule": "Proje 1 — Modül 2 & Modül 3: Parametrik Aks Ağı (Axis Grid / Achsraster)",
+  "sourceModule": "Proje 1 · Modül 2 & Modül 3: Parametrik Aks Ağı (Axis Grid / Achsraster)",
   "intro": "Aks ağı binanın **omurgasıdır**: mimar da statikçi de kolonları, duvarları ve temelleri bu ortak çizgilere göre yerleştirir. Bu yüzden aksları **ayrı bir çizim dosyasında** kurar, sonra tüm katlarda referans olarak kullanırız. Bu derste X/Y açıklıklarını, A-B-C / 1-2-3 balon etiketlerini ve otomatik aks ölçülendirmesini tanımlayacaksınız; sonraki derslerde kolon ve duvarları tam bu akslara oturtacağız.",
   "objectives": [
     "Mimari ve statik elemanların ortak referansı olan Aks Ağını (Axis Grid / Achsraster) ayrı bir çizim dosyasında oluşturmak.",
@@ -14,25 +14,25 @@
     {
       "time": "00:00 – 00:33",
       "heading": "Aks Çizim Dosyasının Seçimi",
-      "body": "Bina strüktüründe, tüm katlarda altlık olarak referans alınacak **Aks Ağı Çizim Dosyasını** (örneğin `Çizim Dosyası 100`) aktif edin. Aksları ayrı bir dosyada tutarsınız; çünkü aks ağı tek bir kata değil binanın tamamına aittir ve her katta aynı omurgayı göstermek için ortak bir dosyada durması gerekir.",
+      "body": "Bina strüktüründe, tüm katlarda altlık olarak referans alınacak **Aks Ağı Çizim Dosyasını** (örneğin `Çizim Dosyası 100`) aktif edin. Aksları ayrı bir dosyada tutarsınız; çünkü aks ağı tek bir kata değil binanın tamamına aittir ve her katta aynı omurgayı göstermek için ortak bir dosyada durması gerekir. Doğru yaptıysanız aks ağı çizim dosyası aktif (kırmızı) duruma geçer.",
       "figures": []
     },
     {
       "time": "00:33 – 01:06",
       "heading": "Aks Ağı Komutu ve X/Y Açıklıkları",
-      "body": "**Taslak (Draft) / Mimari -> Aks Ağı (Axis Grid / Achsraster)** komutunu çalıştırın; `X` ve `Y` sekmelerinde bölge açıklıklarını girin (örneğin `5.00; 4.50; 6.00` tek tek, ya da eşit açıklıklar için `3*5.00`). Açıklıkları sayısal verirsiniz; çünkü aks aralıkları taşıyıcı sistemin ölçüsüdür ve kolon ile duvarlar sonradan tam bu değerlere oturacaktır.",
+      "body": "**Taslak (Draft) / Mimari -> Aks Ağı (Axis Grid / Achsraster)** komutunu çalıştırın; `X` ve `Y` sekmelerinde bölge açıklıklarını girin (örneğin `5.00; 4.50; 6.00` tek tek, ya da eşit açıklıklar için `3*5.00`). Açıklıkları sayısal verirsiniz; çünkü aks aralıkları taşıyıcı sistemin ölçüsüdür ve kolon ile duvarlar sonradan tam bu değerlere oturacaktır. Doğru yaptıysanız girdiğiniz açıklıklarda aks çizgileri ekranda oluşur.",
       "figures": []
     },
     {
       "time": "01:06 – 01:38",
       "heading": "Aks Etiketleri ve Çizgi Tipi",
-      "body": "Aks balon sembolünü ve etiket dizisini (bir yönde `A, B, C`, diğer yönde `1, 2, 3`) tanımlayın, aks çizgisine noktalı kesik çizgi tipini verin. Etiketleri standart harf ve rakam dizisiyle verirsiniz; çünkü tüm paftalar ve statik çizimler kolonları bu ortak aks adlarıyla anar, böylece disiplinler arasında karışıklık olmaz.",
+      "body": "Aks balon sembolünü ve etiket dizisini (bir yönde `A, B, C`, diğer yönde `1, 2, 3`) tanımlayın, aks çizgisine noktalı kesik çizgi tipini verin. Etiketleri standart harf ve rakam dizisiyle verirsiniz; çünkü tüm paftalar ve statik çizimler kolonları bu ortak aks adlarıyla anar, böylece disiplinler arasında karışıklık olmaz. Doğru yaptıysanız aks uçlarında balon sembolleri ve harf/rakam etiketleri görünür.",
       "figures": []
     },
     {
       "time": "01:38 – 02:10",
       "heading": "Otomatik Aks Ölçülendirmesi",
-      "body": "Komut içinde otomatik ölçü çizgisi seçeneğini işaretleyerek aks aralıklarının kendiliğinden ölçülendirilmesini sağlayın. Bunu açarsınız; çünkü aks aralığını sonradan değiştirdiğinizde ölçü de birlikte güncellenir ve ölçüyü elle yazmanın aksine model ile çizim her zaman tutarlı kalır.",
+      "body": "Komut içinde otomatik ölçü çizgisi seçeneğini işaretleyerek aks aralıklarının kendiliğinden ölçülendirilmesini sağlayın. Bunu açarsınız; çünkü aks aralığını sonradan değiştirdiğinizde ölçü de birlikte güncellenir ve ölçüyü elle yazmanın aksine model ile çizim her zaman tutarlı kalır. Doğru yaptıysanız aks aralıkları kendiliğinden ölçülendirilir.",
       "figures": []
     },
     {

@@ -244,5 +244,85 @@
         "text": "Kopyalanan listeyi Listeleri Değiştir (Listen modifizieren) ile açın. Ze-Lö komutuyla Müşteri Adı (Kundenname) satır 1 ve satır 2 hücrelerini silin; ardından Ze-Ins komutuyla (Liste bölgesi: Liste başlığı / Listenkopf; hücre tipi: Metinler / Texte) sabit büro adını metin olarak ekleyin."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "lj9-1",
+      "prompt": "Lejantı oluştururken donatıları/elemanı doğru seçmezseniz ne olur?",
+      "options": [
+        {
+          "text": "Tablo iki kez dolar",
+          "correct": false
+        },
+        {
+          "text": "Tablo boş veya eksik gelir",
+          "correct": true
+        },
+        {
+          "text": "Pafta büyür",
+          "correct": false
+        },
+        {
+          "text": "Mahal oluşur",
+          "correct": false
+        }
+      ],
+      "explanation": "Kapsam (hangi eleman/çizim dosyası) doğru seçilmezse lejant boş/eksik çıkar.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ9.1"
+    },
+    {
+      "id": "lj9-2",
+      "prompt": "Çap bazlı özet tablosunu ana poz tablosunun altına ne bağlar?",
+      "options": [
+        {
+          "text": "Pafta anteti",
+          "correct": false
+        },
+        {
+          "text": "Alt Liste (Sublist) mekanizması",
+          "correct": true
+        },
+        {
+          "text": "Aks ağı",
+          "correct": false
+        },
+        {
+          "text": "Mahal filtresi",
+          "correct": false
+        }
+      ],
+      "explanation": "Alt liste mekanizması ana poz tablosunun hemen altına çap bazlı özeti bağlar.",
+      "bloom": "Hatırlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ9.3"
+    },
+    {
+      "id": "lj9-3",
+      "prompt": "Lejantın yalnızca çubuk donatı okuması için ne ayarlanır?",
+      "options": [
+        {
+          "text": "Kalem kalınlığı",
+          "correct": false
+        },
+        {
+          "text": "Obje Filtresi: Çubuk Donatı (Rundstahl)",
+          "correct": true
+        },
+        {
+          "text": "Referans ölçek",
+          "correct": false
+        },
+        {
+          "text": "Pafta boyutu",
+          "correct": false
+        }
+      ],
+      "explanation": "Obje filtresi çubuk veya hasır donatı olarak ayarlanır; lejant yalnız o türü okur.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ9.2"
+    }
+  ]
 }

@@ -175,5 +175,85 @@
         "caption": "Kolon etiket stilinde kullanilabilen nitelikler ve formul referanslari."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "tm11-1",
+      "prompt": "Kolon ile kesiştiği duvara aynı öncelik verilirse ne olur?",
+      "options": [
+        {
+          "text": "Kolon görünmez olur",
+          "correct": false
+        },
+        {
+          "text": "Hacim iki kez sayılır ve beton metrajı şişer",
+          "correct": true
+        },
+        {
+          "text": "Aks ağı kayar",
+          "correct": false
+        },
+        {
+          "text": "Renk değişir",
+          "correct": false
+        }
+      ],
+      "explanation": "Aynı öncelikte kesişen elemanların hacmi çift sayılır. Taşıyıcı kolona duvardan yüksek öncelik verilerek minha doğru yapılır.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM11.3"
+    },
+    {
+      "id": "tm11-2",
+      "prompt": "Kirişler hangi düzleme bağlı modellenmelidir?",
+      "options": [
+        {
+          "text": "Pafta çerçevesine",
+          "correct": false
+        },
+        {
+          "text": "Kat üst düzlemine (OK)",
+          "correct": true
+        },
+        {
+          "text": "Aks balonuna",
+          "correct": false
+        },
+        {
+          "text": "Kalem kalınlığına",
+          "correct": false
+        }
+      ],
+      "explanation": "Sarkık/ters kirişler kat üst kotuna bağlanır; kat yüksekliği değişince doğru konumda kalırlar.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM11.2"
+    },
+    {
+      "id": "tm11-3",
+      "prompt": "Kolonları en tutarlı şekilde nereye yerleştirirsiniz?",
+      "options": [
+        {
+          "text": "Rastgele boş alanlara",
+          "correct": false
+        },
+        {
+          "text": "Aks kesişimlerine",
+          "correct": true
+        },
+        {
+          "text": "Pafta kenarına",
+          "correct": false
+        },
+        {
+          "text": "Mahal etiketinin üstüne",
+          "correct": false
+        }
+      ],
+      "explanation": "Kolonlar aks kesişimlerine oturtulur; bu, taşıyıcı sistemin düzenini ve statikle uyumu sağlar.",
+      "bloom": "Uygulama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-TM11.1"
+    }
+  ]
 }

@@ -84,5 +84,85 @@
     "pdfs": [],
     "samples": []
   },
-  "articles": []
+  "articles": [],
+  "quiz": [
+    {
+      "id": "tm18-1",
+      "prompt": "Halihazır haritayı içe aktarırken ofset seçeneği atlanırsa ne olur?",
+      "options": [
+        {
+          "text": "Harita otomatik silinir",
+          "correct": false
+        },
+        {
+          "text": "Büyük UTM koordinatları yüzünden çizim orijinden çok uzakta açılır",
+          "correct": true
+        },
+        {
+          "text": "Ölçek 1:1 olur",
+          "correct": false
+        },
+        {
+          "text": "Katmanlar birleşir",
+          "correct": false
+        }
+      ],
+      "explanation": "Ofset işaretlenmezse büyük koordinatlar çizimi orijinden uzağa taşır ve sorunlara yol açar. Ağırlık merkezini ofsetle ayarlamak gerekir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM18.1"
+    },
+    {
+      "id": "tm18-2",
+      "prompt": "Arazi noktalarından yüzey modeli hangi yöntemle üretilir?",
+      "options": [
+        {
+          "text": "Alan Tespitiyle",
+          "correct": false
+        },
+        {
+          "text": "Delaunay üçgenlemesiyle Sayısal Arazi Modeli (SAM)",
+          "correct": true
+        },
+        {
+          "text": "Biçim Aktar ile",
+          "correct": false
+        },
+        {
+          "text": "Pafta referansıyla",
+          "correct": false
+        }
+      ],
+      "explanation": "SAM, nokta bulutundan Delaunay üçgenlemesiyle oluşturulur; dış sınır arsaya kırpılır.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM18.2"
+    },
+    {
+      "id": "tm18-3",
+      "prompt": "Arazi modelini doğru kurduğunuzu gösteren işaret nedir?",
+      "options": [
+        {
+          "text": "Hiç katman olmaması",
+          "correct": false
+        },
+        {
+          "text": "SAM üçgenlenmiş, dış sınırı kırpılmış ve eş yükselti eğrileri etiketli",
+          "correct": true
+        },
+        {
+          "text": "Pafta antetinin dolu olması",
+          "correct": false
+        },
+        {
+          "text": "Aks ağının çizilmesi",
+          "correct": false
+        }
+      ],
+      "explanation": "Doğru arazide SAM üçgenlenir, sınırı arsaya kırpılır, eş yükselti eğrileri ana/ara ayrımıyla etiketlenir ve yüzeye doku atanır.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM18.3"
+    }
+  ]
 }

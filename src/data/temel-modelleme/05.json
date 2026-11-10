@@ -256,5 +256,85 @@
         "caption": "DWG dışa aktarımında dolgu renklerinin eşleştirilmesi."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "tm5-1",
+      "prompt": "Yardımcı konstrüksiyon (Construction Line) çizgisinin kalıcı geometriden farkı nedir?",
+      "options": [
+        {
+          "text": "Daha kalın basılır",
+          "correct": false
+        },
+        {
+          "text": "Yalnızca referanstır; çıktıya ve metraja girmez",
+          "correct": true
+        },
+        {
+          "text": "Otomatik ölçülendirilir",
+          "correct": false
+        },
+        {
+          "text": "3B hacim üretir",
+          "correct": false
+        }
+      ],
+      "explanation": "Yardımcı konstrüksiyon çizgileri referans amaçlıdır; çıktıya ve metraja girmez. Kalıcı geometri normal çizgiyle çizilir.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-TM5.1"
+    },
+    {
+      "id": "tm5-2",
+      "prompt": "Kapalı bir bölgeye tarama/dolgu uygularken hangi yöntem sınırı otomatik bulur?",
+      "options": [
+        {
+          "text": "Pah Kır (Chamfer)",
+          "correct": false
+        },
+        {
+          "text": "Alan Tespiti (Area Detection)",
+          "correct": true
+        },
+        {
+          "text": "Biçim Aktar",
+          "correct": false
+        },
+        {
+          "text": "Spline aracı",
+          "correct": false
+        }
+      ],
+      "explanation": "Alan Tespiti kapalı konturu otomatik algılar; içine Tarama, Desen veya Dolgu uygulanır.",
+      "bloom": "Uygulama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-TM5.3"
+    },
+    {
+      "id": "tm5-3",
+      "prompt": "Çizime başlamadan önce hangi üç özelliği belirlemek iyi bir alışkanlıktır?",
+      "options": [
+        {
+          "text": "Pafta boyutu, antet ve ölçek",
+          "correct": false
+        },
+        {
+          "text": "Kalem kalınlığı, çizgi tipi ve renk",
+          "correct": true
+        },
+        {
+          "text": "Rol, görev ve kat",
+          "correct": false
+        },
+        {
+          "text": "Malzeme, öncelik ve hacim",
+          "correct": false
+        }
+      ],
+      "explanation": "Geometri üretmeden önce kalem, çizgi tipi ve renk seçmek çizimin standartlara uygun ve okunur olmasını sağlar.",
+      "bloom": "Uygulama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-TM5.1"
+    }
+  ]
 }

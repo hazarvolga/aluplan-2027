@@ -303,5 +303,85 @@
         "text": "Not: Bazı durumlarda (örneğin girinti ve çıkıntıları olan döşemelerde), doğru kotlar ayarlandıktan sonra bile döşeme animasyonda görünmeyebilir; ancak kat planında, görünüşlerde ve izometrilerde yine de görünür. Böyle bir durumda **Değiştir (Ändern) -> Mimari (Architektur) -> Yüzey Elemanı, Mimari Yüzey, Alan Değiştir (Flächenelement, Ar-Fläche, Bereich modifizieren)** fonksiyonuyla taşan bölgeleri genişçe kesin, ardından **Noktaları Değiştir** ile döşemeyi yeniden genişletin."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "tm4-1",
+      "prompt": "Bir elemanı kat yüksekliği değişince yerinde tutan hata nedir?",
+      "options": [
+        {
+          "text": "Elemanı referans moduna almak",
+          "correct": false
+        },
+        {
+          "text": "Elemanı düzlem (OK/UK) yerine sabit kota bağlamak",
+          "correct": true
+        },
+        {
+          "text": "Elemana katman atamak",
+          "correct": false
+        },
+        {
+          "text": "Elemanı aks ağına yakalamak",
+          "correct": false
+        }
+      ],
+      "explanation": "Sabit kota bağlı eleman kat yüksekliği değişince yerinde kalır ve modelden kopar. Düzleme (OK/UK) bağlamak modeli parametrik tutar.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM4.3"
+    },
+    {
+      "id": "tm4-2",
+      "prompt": "Çizim dosyasının hangi modunda içeriği görünür ama düzenlenemez?",
+      "options": [
+        {
+          "text": "Aktif modu",
+          "correct": false
+        },
+        {
+          "text": "Referans modu",
+          "correct": true
+        },
+        {
+          "text": "Düzenleme modu",
+          "correct": false
+        },
+        {
+          "text": "Gizli modu",
+          "correct": false
+        }
+      ],
+      "explanation": "Aktif dosya çizilir, düzenleme modundakiler değiştirilebilir, referanstakiler yalnız görünür (altlık) olur.",
+      "bloom": "Hatırlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-TM4.1"
+    },
+    {
+      "id": "tm4-3",
+      "prompt": "Kat yüksekliklerini parametrik yönetmek için hangi araç kullanılır?",
+      "options": [
+        {
+          "text": "Kalem kalınlığı ayarı",
+          "correct": false
+        },
+        {
+          "text": "Düzlemler Paleti (Ebenenmanager) ile OK/UK düzlemleri",
+          "correct": true
+        },
+        {
+          "text": "Alan Tespiti",
+          "correct": false
+        },
+        {
+          "text": "Biçim Aktar",
+          "correct": false
+        }
+      ],
+      "explanation": "Düzlemler Paleti kat alt/üst kotlarını (UK/OK) tanımlar; elemanlar bu düzlemlere bağlanınca yükseklik merkezî olarak yönetilir.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM4.3"
+    }
+  ]
 }

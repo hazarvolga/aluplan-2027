@@ -340,5 +340,85 @@
         "caption": "Nesne biçimleri için eşleştirme (mapping) tanımı."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "ar2-1",
+      "prompt": "Büyük UTM/ITRF koordinatlı haritayı içe aktarırken hangi seçenek şarttır?",
+      "options": [
+        {
+          "text": "Blok çözmeyi kapatmak",
+          "correct": false
+        },
+        {
+          "text": "Ağırlık merkezini ayarla: Ofset",
+          "correct": true
+        },
+        {
+          "text": "Ölçeği 1:200 yapmak",
+          "correct": false
+        },
+        {
+          "text": "Tüm katmanları birleştirmek",
+          "correct": false
+        }
+      ],
+      "explanation": "Ofset işaretlenmezse büyük koordinatlar çizimi orijinden uzağa taşır ve bozulmalara yol açar. Ofset ile sorun önlenir.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR2.2"
+    },
+    {
+      "id": "ar2-2",
+      "prompt": "Harita içe aktarımında ilk doğrulanması gereken nedir?",
+      "options": [
+        {
+          "text": "Antetin doldurulması",
+          "correct": false
+        },
+        {
+          "text": "Doğru ölçü birimi (m) ve 1:1 ölçek",
+          "correct": true
+        },
+        {
+          "text": "Mahallerin oluşması",
+          "correct": false
+        },
+        {
+          "text": "Donatı pozları",
+          "correct": false
+        }
+      ],
+      "explanation": "Birim ve ölçek yanlışsa altlık hatalı boyutta gelir. Karelaj/parsel köşeleri Ölç ile doğrulanır.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-AR2.1"
+    },
+    {
+      "id": "ar2-3",
+      "prompt": "Sayısal koordinat dosyaları (.asc, .csv, .xyz, LandXML) nereye okutulur?",
+      "options": [
+        {
+          "text": "Pafta Düzenleyiciye",
+          "correct": false
+        },
+        {
+          "text": "Doğrudan Arazi Modülüne",
+          "correct": true
+        },
+        {
+          "text": "Mahal listesine",
+          "correct": false
+        },
+        {
+          "text": "Donatı lejantına",
+          "correct": false
+        }
+      ],
+      "explanation": "Harita altlığı dışındaki sayısal nokta/grid dosyaları doğrudan Arazi Modülüne okutulur.",
+      "bloom": "Hatırlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR2.4"
+    }
+  ]
 }

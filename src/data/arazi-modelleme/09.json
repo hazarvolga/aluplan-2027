@@ -173,5 +173,85 @@
       "body": "Bu eğitim videosu, eğimli bir yeraltı otoparkının oluşturulmasını kolaylaştırmak için üç boyutlu alanda 20 komut sunan Allplan **Geometri Araçları (Add-On Geometrie-Tool)** eklentisini tanıtmaktadır. Arazi noktası ve üçgen ağ (TIN) gibi fonksiyonların kullanımı sayesinde, farklı kotlara sahip noktalar düzenlenebilir ve üzerinde modellemeye devam edilebilen bütüncül bir üçgen ağ oluşturulabilir. Düzlem yönetimi, mimari yapı elemanları için referans yüzeylerinin atanmasına olanak tanıyarak hassas sonuçlar elde edilmesini sağlar.",
       "figures": []
     }
+  ],
+  "quiz": [
+    {
+      "id": "ar9-1",
+      "prompt": "Yolu araziden bağımsız düz plak olarak modellemenin sorunu nedir?",
+      "options": [
+        {
+          "text": "Yol iki kez sayılır",
+          "correct": false
+        },
+        {
+          "text": "Arazi eğimiyle çakışır; bir yerde gömülü, bir yerde havada kalır",
+          "correct": true
+        },
+        {
+          "text": "Asfalt dokusu atanamaz",
+          "correct": false
+        },
+        {
+          "text": "Pafta bozulur",
+          "correct": false
+        }
+      ],
+      "explanation": "Düz yol eğimli araziyle çakışır. Yol, 3B araziyi yol sınırlarından kesip ayırarak modellenir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR9.1"
+    },
+    {
+      "id": "ar9-2",
+      "prompt": "Kaldırım/bordür kot farkı nasıl oluşturulur?",
+      "options": [
+        {
+          "text": "Mahal etiketiyle",
+          "correct": false
+        },
+        {
+          "text": "Extrude/Offset ile yaklaşık +15 cm yükseltme",
+          "correct": true
+        },
+        {
+          "text": "Aks ekleyerek",
+          "correct": false
+        },
+        {
+          "text": "Ölçek değiştirerek",
+          "correct": false
+        }
+      ],
+      "explanation": "Kaldırım şeridi bordür kademesiyle (örn. +0,15 m) yükseltilir.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR9.2"
+    },
+    {
+      "id": "ar9-3",
+      "prompt": "Parametrik yatay/düşey güzergah ve enkesit şablonu hangi modülün işidir?",
+      "options": [
+        {
+          "text": "Mahal Modülü",
+          "correct": false
+        },
+        {
+          "text": "Allplan Road",
+          "correct": true
+        },
+        {
+          "text": "Pafta Düzenleyici",
+          "correct": false
+        },
+        {
+          "text": "Donatı Modülü",
+          "correct": false
+        }
+      ],
+      "explanation": "Karmaşık altyapı güzergahları Allplan Road ile (yatay/düşey güzergah + enkesit şablonu) tasarlanır.",
+      "bloom": "Hatırlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR9.4"
+    }
   ]
 }

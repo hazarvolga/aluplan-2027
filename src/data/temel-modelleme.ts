@@ -30,6 +30,7 @@ import l19 from './temel-modelleme/19.json';
 import l20 from './temel-modelleme/20.json';
 import l21 from './temel-modelleme/21.json';
 import l22 from './temel-modelleme/22.json';
+import type { QuizQuestion } from './akademi-content';
 
 export interface TmCommand {
   name: string;
@@ -114,6 +115,8 @@ export interface TmLesson {
   articles: readonly TmArticle[];
   /** Optional rewritten, image-interleaved deep-dive shown after the lesson. */
   deepDive?: TmDeepDive;
+  /** Optional self-assessment: outcome-linked multiple-choice questions. */
+  quiz?: readonly QuizQuestion[];
 }
 
 export const temelModellemeHero = {

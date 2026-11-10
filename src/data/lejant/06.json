@@ -265,5 +265,85 @@
         "caption": "Geri yükleme konumu ve dosya numarasını seçip Çalıştır."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "lj6-1",
+      "prompt": "Yeni eleman ekleyip lejantı güncellemezseniz ne olur?",
+      "options": [
+        {
+          "text": "Lejant otomatik silinir",
+          "correct": false
+        },
+        {
+          "text": "Eksik/yanlış tablo paftaya gider",
+          "correct": true
+        },
+        {
+          "text": "Model bozulur",
+          "correct": false
+        },
+        {
+          "text": "Antet büyür",
+          "correct": false
+        }
+      ],
+      "explanation": "Lejant bazı durumlarda otomatik tazelenmez; güncellenmezse eksik tablo paftaya çıkar. İlişkisel bağ kontrol edilir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ6.3"
+    },
+    {
+      "id": "lj6-2",
+      "prompt": "Mahal alanı değişince ilişkisel lejantta ne beklenir?",
+      "options": [
+        {
+          "text": "Hiç değişmemesi",
+          "correct": false
+        },
+        {
+          "text": "Değer ve toplamların anlık güncellenmesi",
+          "correct": true
+        },
+        {
+          "text": "Lejantın silinmesi",
+          "correct": false
+        },
+        {
+          "text": "Pafta ölçeğinin değişmesi",
+          "correct": false
+        }
+      ],
+      "explanation": "İlişkisel lejant modele bağlıdır; alan/doğrama değişince değerler ve toplamlar anlık güncellenir.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-LJ6.2"
+    },
+    {
+      "id": "lj6-3",
+      "prompt": "Sütun kayması veya başlık hatasını hangi komutla düzeltirsiniz?",
+      "options": [
+        {
+          "text": "Alan Tespiti",
+          "correct": false
+        },
+        {
+          "text": "Lejant Değiştir (Modify Legend)",
+          "correct": true
+        },
+        {
+          "text": "Mahal Etiketi",
+          "correct": false
+        },
+        {
+          "text": "Aks Oluştur",
+          "correct": false
+        }
+      ],
+      "explanation": "Lejant Değiştir ile sütun kayması, ondalık yuvarlama ve başlık hataları düzeltilir; dosya dışa aktarılabilir.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ6.3"
+    }
+  ]
 }

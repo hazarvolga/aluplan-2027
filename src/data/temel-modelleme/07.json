@@ -183,5 +183,85 @@
         "text": "İlişkili çizgide yapı elemanı yüksekliğini ve ek metni kapatabilir veya silebilirsiniz, ancak elle yükseklik ya da metin ekleyemezsiniz. Basit çizgide yapı elemanı yüksekliği giriş sırasında boşluktan (pencere/kapı boşluğundan) devralınır; çizgi 'Duvarları Ölçülendir (Wände bemaßen)' ile oluşturulduysa yükseklik yapı elemanıyla birlikte değişir, aksi halde eleman yüksekliği değişse de sabit kalır."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "tm7-1",
+      "prompt": "Model değişince kendini güncelleyen ölçülendirme türü hangisidir?",
+      "options": [
+        {
+          "text": "Standart ölçü çizgisi",
+          "correct": false
+        },
+        {
+          "text": "İlişkisel (Associative) ölçü çizgisi",
+          "correct": true
+        },
+        {
+          "text": "Elle yazılmış metin",
+          "correct": false
+        },
+        {
+          "text": "Yardımcı konstrüksiyon çizgisi",
+          "correct": false
+        }
+      ],
+      "explanation": "Standart ölçü değeri elle düzeltilir ve model değişince eskir; ilişkisel ölçü geometriye bağlı olduğundan otomatik güncellenir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM7.1"
+    },
+    {
+      "id": "tm7-2",
+      "prompt": "Standart ölçü çizgisini modelde değişen bir duvarda kullanmanın riski nedir?",
+      "options": [
+        {
+          "text": "Çizgi otomatik silinir",
+          "correct": false
+        },
+        {
+          "text": "Değer güncellenmez ve çıktıda yanlış ölçü kalır",
+          "correct": true
+        },
+        {
+          "text": "Katman değişir",
+          "correct": false
+        },
+        {
+          "text": "Ölçek bozulur",
+          "correct": false
+        }
+      ],
+      "explanation": "Standart ölçü ölçtüğü geometri değişince güncellenmez; elle düzeltilmezse çıktı yanlış ölçü gösterir.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM7.1"
+    },
+    {
+      "id": "tm7-3",
+      "prompt": "Mevcut bir ölçü dizisine sonradan bir nokta nasıl dahil edilir?",
+      "options": [
+        {
+          "text": "Çizgiyi silip yeniden çizerek (tek yol)",
+          "correct": false
+        },
+        {
+          "text": "Ölçü çizgisine nokta ekleme/çıkarma işleviyle",
+          "correct": true
+        },
+        {
+          "text": "Kalem kalınlığını değiştirerek",
+          "correct": false
+        },
+        {
+          "text": "Rolü değiştirerek",
+          "correct": false
+        }
+      ],
+      "explanation": "Ölçü çizgilerine sonradan nokta eklenip çıkarılabilir; diziyi silip yeniden çizmek gerekmez.",
+      "bloom": "Uygulama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-TM7.3"
+    }
+  ]
 }

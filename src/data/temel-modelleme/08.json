@@ -75,5 +75,85 @@
     "pdfs": [],
     "samples": []
   },
-  "articles": []
+  "articles": [],
+  "quiz": [
+    {
+      "id": "tm8-1",
+      "prompt": "Aks ağını neden ayrı bir çizim dosyasında oluşturmak gerekir?",
+      "options": [
+        {
+          "text": "Aks etiketleri daha büyük görünsün diye",
+          "correct": false
+        },
+        {
+          "text": "Her katta tekrar çizmemek ve aksların kaymasını önlemek için",
+          "correct": true
+        },
+        {
+          "text": "Metraj artsın diye",
+          "correct": false
+        },
+        {
+          "text": "Katman rengi değişsin diye",
+          "correct": false
+        }
+      ],
+      "explanation": "Aks ağı kat dosyasına çizilirse her katta tekrarlanır ve katlar arası kayar. Ayrı dosyada tutulup referans verilir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM8.1"
+    },
+    {
+      "id": "tm8-2",
+      "prompt": "Aks ağının taşıyıcı ve mimari elemanlar için işlevi nedir?",
+      "options": [
+        {
+          "text": "Beton metrajını hesaplamak",
+          "correct": false
+        },
+        {
+          "text": "Ortak referans (hizalama) ızgarası olmak",
+          "correct": true
+        },
+        {
+          "text": "Cephe görünüşü üretmek",
+          "correct": false
+        },
+        {
+          "text": "Pafta anteti doldurmak",
+          "correct": false
+        }
+      ],
+      "explanation": "Aks ağı mimari ve statik elemanların ortak referansıdır; kolonlar, duvarlar bu ızgaraya hizalanır.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-TM8.1"
+    },
+    {
+      "id": "tm8-3",
+      "prompt": "Bir aks aralığını değiştirdiğinizde ne olmasını beklersiniz?",
+      "options": [
+        {
+          "text": "Tüm model silinir",
+          "correct": false
+        },
+        {
+          "text": "Aks etiketleri ve ölçülendirme buna göre güncellenir",
+          "correct": true
+        },
+        {
+          "text": "Katman rengi değişir",
+          "correct": false
+        },
+        {
+          "text": "Pafta ölçeği değişir",
+          "correct": false
+        }
+      ],
+      "explanation": "Aks ağı parametriktir; aralık değişince etiketler (A,B,C / 1,2,3) ve otomatik aks ölçülendirmesi uyum sağlar.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM8.3"
+    }
+  ]
 }

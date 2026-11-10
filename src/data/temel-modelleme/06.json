@@ -216,5 +216,85 @@
         "text": "Mahaller etiket stilleriyle (değişken metin stilleriyle) etiketlendiyse, bu ayarlar etiket stillerini de aynı şekilde etkiler. **Etiketi Güncelle (Beschriftung aktualisieren)** sonrası değerler çizim dosyasında da güncellenir. Toplam değerlerin ondalık basamak sayısı, rapor şablonunda **Paftayı Modifiye Et (Layout modifizieren)** üzerinden, ilgili hücrelere **Özellikler (Eigenschaften)** paletinden istediğiniz biçim girilerek uyarlanabilir."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "tm6-1",
+      "prompt": "Yalnızca tamamen içine aldığı elemanları seçen pencere hangisidir?",
+      "options": [
+        {
+          "text": "Sağdan sola açılan pencere",
+          "correct": false
+        },
+        {
+          "text": "Soldan sağa açılan seçim penceresi",
+          "correct": true
+        },
+        {
+          "text": "Çift tıklamayla açılan pencere",
+          "correct": false
+        },
+        {
+          "text": "Sağ tık menüsü",
+          "correct": false
+        }
+      ],
+      "explanation": "Soldan sağa pencere yalnız tümüyle içine aldıklarını, sağdan sola pencere dokunduğu her elemanı seçer. Karıştırmak fazla eleman taşır.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM6.1"
+    },
+    {
+      "id": "tm6-2",
+      "prompt": "İki çizgiyi köşede birleştirip fazlalıkları temizlemek için hangi komut uygundur?",
+      "options": [
+        {
+          "text": "Alan Tespiti",
+          "correct": false
+        },
+        {
+          "text": "Çizgi Kırp/Uzat (Trim/Extend)",
+          "correct": true
+        },
+        {
+          "text": "Mahal Etiketi",
+          "correct": false
+        },
+        {
+          "text": "Kot Ölçülendirme",
+          "correct": false
+        }
+      ],
+      "explanation": "Trim/Extend çizgileri kesişime kadar kırpar veya uzatır; köşe temizliğinin temel aracıdır. Pah ve yuvarlatma köşeyi biçimlendirir.",
+      "bloom": "Uygulama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-TM6.2"
+    },
+    {
+      "id": "tm6-3",
+      "prompt": "Bir elemanın kalem/çizgi/renk özelliklerini başka bir elemana hızla taşımak için ne kullanılır?",
+      "options": [
+        {
+          "text": "Noktaları Modifiye Et",
+          "correct": false
+        },
+        {
+          "text": "Biçim Aktar (Match Properties)",
+          "correct": true
+        },
+        {
+          "text": "İki Elemanı Kesiştir",
+          "correct": false
+        },
+        {
+          "text": "Pah Kır",
+          "correct": false
+        }
+      ],
+      "explanation": "Biçim Aktar bir elemanın biçim özelliklerini diğerine kopyalar; tekrar eden elle ayarı önler.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM6.3"
+    }
+  ]
 }

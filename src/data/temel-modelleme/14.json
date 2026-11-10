@@ -96,5 +96,85 @@
       "body": "Yapı çukuru tasarımında yeni kazı düzlemleri eklenerek yapı çukurları detaylarla zenginleştirilebilir. 3B katı modellerin entegrasyonu sayesinde metraj hesaplamaları kolayca gerçekleştirilebilir. Elemanların eğimi, yönü ve yüksekliği üç nokta yardımıyla kolayca ayarlanabilir. Temeller özel olarak uyarlanabilir ve adlandırılabilir; böylece yapı çukurunun esnek bir şekilde şekillendirilmesi sağlanır.",
       "figures": []
     }
+  ],
+  "quiz": [
+    {
+      "id": "tm14-1",
+      "prompt": "Temeli sabit kota bağlamanın riski nedir?",
+      "options": [
+        {
+          "text": "Temel iki kez sayılır",
+          "correct": false
+        },
+        {
+          "text": "Zemin/kat kotu değişince temel yerinde kalıp taşıyıcılardan kopar",
+          "correct": true
+        },
+        {
+          "text": "Renk değişir",
+          "correct": false
+        },
+        {
+          "text": "Aks kayar",
+          "correct": false
+        }
+      ],
+      "explanation": "Temeli kot düzlemine bağlamak gerekir; sabit kot, kot değişince temeli yerinde bırakır ve taşıyıcı bağlantısı kopar.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM14.1"
+    },
+    {
+      "id": "tm14-2",
+      "prompt": "Taşıyıcı duvarların altına hangi temel tipi modellenir?",
+      "options": [
+        {
+          "text": "Tekil Temel",
+          "correct": false
+        },
+        {
+          "text": "Şerit Temel (Strip Foundation)",
+          "correct": true
+        },
+        {
+          "text": "Radye Temel",
+          "correct": false
+        },
+        {
+          "text": "Grobeton yok",
+          "correct": false
+        }
+      ],
+      "explanation": "Sürekli taşıyıcı duvar altına şerit temel gelir; tekil temel kolon altına, radye tüm oturuma gelir.",
+      "bloom": "Hatırlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-TM14.1"
+    },
+    {
+      "id": "tm14-3",
+      "prompt": "Tüm bina oturumu altına yayılı bir temel gerektiğinde hangisi kullanılır?",
+      "options": [
+        {
+          "text": "Şerit temel",
+          "correct": false
+        },
+        {
+          "text": "Radye Temel (Slab Foundation) ve grobeton katmanı",
+          "correct": true
+        },
+        {
+          "text": "Tekil temel",
+          "correct": false
+        },
+        {
+          "text": "Kademeli temel",
+          "correct": false
+        }
+      ],
+      "explanation": "Radye temel oturum alanının tamamına yayılır; altına grobeton katmanı eklenir.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM14.3"
+    }
   ]
 }

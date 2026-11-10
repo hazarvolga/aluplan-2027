@@ -212,5 +212,85 @@
         "text": "Allplan 2024 ile gelen nitelik setleri (Attribute sets), belirli nitelikleri bir arada tanımlamanıza ve bunları IFC ile ilişkilendirmenize olanak tanır. Böylece dışa aktarımda hangi niteliklerin hangi IFC yapısına bağlanacağını önceden belirleyebilirsiniz."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "tm1-1",
+      "prompt": "BIM anlayışında ALLPLAN'da bir duvar temelde nedir?",
+      "options": [
+        {
+          "text": "Yalnızca iki paralel çizgi",
+          "correct": false
+        },
+        {
+          "text": "İçinde malzeme, kalınlık ve yükseklik bilgisi taşıyan akıllı bir nesne",
+          "correct": true
+        },
+        {
+          "text": "Sadece bir tarama deseni",
+          "correct": false
+        },
+        {
+          "text": "Katmanı olmayan bir sembol",
+          "correct": false
+        }
+      ],
+      "explanation": "BIM'de duvar iki çizgi değil; malzeme, kalınlık ve yükseklik gibi bilgi taşıyan bir nesnedir. Bu sayede metrajı ve kesiti modelden türetilebilir.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-TM1.1"
+    },
+    {
+      "id": "tm1-2",
+      "prompt": "ALLPLAN'ın çalışma hiyerarşisi hangi sırayla ilerler?",
+      "options": [
+        {
+          "text": "Katman -> Çizim Dosyası -> Proje -> Bina Strüktürü",
+          "correct": false
+        },
+        {
+          "text": "Proje -> Bina Strüktürü -> Çizim Dosyası -> Katman",
+          "correct": true
+        },
+        {
+          "text": "Çizim Dosyası -> Katman -> Proje",
+          "correct": false
+        },
+        {
+          "text": "Proje -> Katman -> Bina Strüktürü",
+          "correct": false
+        }
+      ],
+      "explanation": "Veriler Proje altında Bina Strüktürü ile katlara, çizim dosyalarına ve en altta katmanlara ayrılır. Bu hiyerarşi modelin düzenini belirler.",
+      "bloom": "Hatırlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-TM1.2"
+    },
+    {
+      "id": "tm1-3",
+      "prompt": "2B CAD çizimi ile 3B parametrik model ALLPLAN'da nasıl bir arada tutulur?",
+      "options": [
+        {
+          "text": "İki ayrı dosyada, elle eşitlenerek",
+          "correct": false
+        },
+        {
+          "text": "Tek bir veri tabanında birleşik olarak",
+          "correct": true
+        },
+        {
+          "text": "Yalnızca dışa aktarımda birleştirilerek",
+          "correct": false
+        },
+        {
+          "text": "Sadece pafta aşamasında",
+          "correct": false
+        }
+      ],
+      "explanation": "ALLPLAN 2B ve 3B'yi tek veri tabanında birleştirir; aynı model hem çizim hem metraj kaynağıdır.",
+      "bloom": "Anlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM1.1"
+    }
+  ]
 }

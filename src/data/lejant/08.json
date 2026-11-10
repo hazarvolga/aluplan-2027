@@ -346,5 +346,85 @@
         "text": "Kopyalanan listeyi Listeleri Değiştir (Listen modifizieren) ile açın. Ze-Lö komutuyla Müşteri Adı (Kundenname) satır 1 ve satır 2 hücrelerini silin; ardından Ze-Ins komutuyla (Liste bölgesi: Liste başlığı / Listenkopf; hücre tipi: Metinler / Texte) sabit büro adını metin olarak ekleyin."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "lj8-1",
+      "prompt": "Çap/boy/adet/poz niteliğini yanlış sütuna bağlamanın sonucu nedir?",
+      "options": [
+        {
+          "text": "Lejant renk değiştirir",
+          "correct": false
+        },
+        {
+          "text": "Metraj yanlış demir miktarı verir; doğrudan maliyet hatası",
+          "correct": true
+        },
+        {
+          "text": "Pafta büyür",
+          "correct": false
+        },
+        {
+          "text": "Mahal oluşur",
+          "correct": false
+        }
+      ],
+      "explanation": "Yanlış nitelik eşlemesi yanlış metraj üretir; bu doğrudan maliyet ve imalat hatasıdır. Her sütun doğru niteliğe bağlanmalı.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ8.1"
+    },
+    {
+      "id": "lj8-2",
+      "prompt": "Çap bazlı özet bölgesinde ne hesaplanır?",
+      "options": [
+        {
+          "text": "Mahal alanları",
+          "correct": false
+        },
+        {
+          "text": "Her çap (Ø8, Ø10, Ø12...) için toplam boy ve toplam ağırlık (kg)",
+          "correct": true
+        },
+        {
+          "text": "Pafta sayısı",
+          "correct": false
+        },
+        {
+          "text": "Aks aralıkları",
+          "correct": false
+        }
+      ],
+      "explanation": "Özet (Summary) bölgesinde her donatı çapı için ayrı toplam boy ve ağırlık formülü kurulur.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ8.3"
+    },
+    {
+      "id": "lj8-3",
+      "prompt": "Büküm şeması hücresi nasıl yerleştirilir?",
+      "options": [
+        {
+          "text": "Düz metin olarak",
+          "correct": false
+        },
+        {
+          "text": "Grafik hücre olarak, kenar boyları ve büküm açılarıyla",
+          "correct": true
+        },
+        {
+          "text": "Mahal etiketi olarak",
+          "correct": false
+        },
+        {
+          "text": "Aks balonu olarak",
+          "correct": false
+        }
+      ],
+      "explanation": "Büküm şeması grafik bir hücredir; kenar parça boyları ve büküm açılarıyla boyutlandırılıp yerleştirilir.",
+      "bloom": "Uygulama",
+      "difficulty": "Zor",
+      "outcomeCode": "K-LJ8.2"
+    }
+  ]
 }

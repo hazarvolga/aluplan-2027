@@ -86,5 +86,85 @@
       "body": "Paftaya yerleştirdiğiniz bir çizimin yalnızca belirli **katmanlarını (Layer)** göstermek için **Pafta Penceresi**'nde katman görünürlüğünü ayarlayabilirsiniz. Böylece aynı çizim dosyasını farklı paftalarda farklı katman kümeleriyle gösterir, tek modelden mimari, statik ve tesisat paftalarını ayrı ayrı üretirsiniz.\nKaynak: ALLPLAN KB de_10603.",
       "figures": []
     }
+  ],
+  "quiz": [
+    {
+      "id": "tm22-1",
+      "prompt": "Çizimleri paftaya kopyalamak yerine ne yapılmalıdır?",
+      "options": [
+        {
+          "text": "Elemanları tek tek yeniden çizmek",
+          "correct": false
+        },
+        {
+          "text": "Çizim Dosyası Yerleştir ile referans vermek",
+          "correct": true
+        },
+        {
+          "text": "Tarama uygulamak",
+          "correct": false
+        },
+        {
+          "text": "Aks eklemek",
+          "correct": false
+        }
+      ],
+      "explanation": "Pafta elemanları çizimlerin referansıdır, kopyası değil. Çizim Dosyası Yerleştir ile konur; model değişince pafta güncellenir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM22.3"
+    },
+    {
+      "id": "tm22-2",
+      "prompt": "Proje bilgilerini otomatik okuyan pafta ögesi hangisidir?",
+      "options": [
+        {
+          "text": "Aks balonu",
+          "correct": false
+        },
+        {
+          "text": "Dinamik Antet (Title Block / Plankopf)",
+          "correct": true
+        },
+        {
+          "text": "Mahal etiketi",
+          "correct": false
+        },
+        {
+          "text": "Kot sembolü",
+          "correct": false
+        }
+      ],
+      "explanation": "Dinamik antet pafta çerçevesi ve proje niteliklerini otomatik okuyarak doldurur.",
+      "bloom": "Hatırlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-TM22.2"
+    },
+    {
+      "id": "tm22-3",
+      "prompt": "Pafta çıktısı için hangi biçim katmanlı ve vektörel olur?",
+      "options": [
+        {
+          "text": "Düz raster JPG",
+          "correct": false
+        },
+        {
+          "text": "Katmanlı vektörel PDF",
+          "correct": true
+        },
+        {
+          "text": "Yalnız DWG",
+          "correct": false
+        },
+        {
+          "text": "Ekran görüntüsü",
+          "correct": false
+        }
+      ],
+      "explanation": "Plan, görünüş ve kesitler paftaya dizilip katmanlı vektörel PDF olarak dışa aktarılır; baskı ve paylaşım için uygundur.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM22.3"
+    }
   ]
 }

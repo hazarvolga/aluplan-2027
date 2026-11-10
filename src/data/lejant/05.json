@@ -330,5 +330,85 @@
         "text": "Parantez içinde metinlerin 'toplamı' boş metinle karşılaştırılır; boşsa proje niteliği (@826@ / @460@), değilse pafta niteliği görünür. Aynı formüller hem pafta etiket stillerinde hem de pafta lejantlarında kullanılabilir. Alternatif olarak seçim listeli bir kontrol niteliğiyle (örn. BV-Plan + BH-Projekt) da filtre kurulabilir: _IF_(@12000@=\"*BV-Plan*\")@12001@_ELSE_@826@"
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "lj5-1",
+      "prompt": "Lejantı yanlış referans ölçeğe/çizim tipine yerleştirmenin sonucu nedir?",
+      "options": [
+        {
+          "text": "Lejant iki kez sayılır",
+          "correct": false
+        },
+        {
+          "text": "Yazılar okunmaz çıkar veya elemanlar yakalanmaz",
+          "correct": true
+        },
+        {
+          "text": "Mahal silinir",
+          "correct": false
+        },
+        {
+          "text": "Antet dolmaz",
+          "correct": false
+        }
+      ],
+      "explanation": "Yanlış ölçek/çizim tipi yazıları okunmaz yapar veya elemanları yakalamaz. Lejant ilgili planla aynı ölçek/tipe konur.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ5.3"
+    },
+    {
+      "id": "lj5-2",
+      "prompt": "Lejantın yalnızca kapıları okumasını ne sağlar?",
+      "options": [
+        {
+          "text": "Satır kaydırma vektörü",
+          "correct": false
+        },
+        {
+          "text": "Obje Seçim Filtresi (Filter)",
+          "correct": true
+        },
+        {
+          "text": "Pafta anteti",
+          "correct": false
+        },
+        {
+          "text": "Kalem rengi",
+          "correct": false
+        }
+      ],
+      "explanation": "Obje filtresi lejantın hangi eleman türünü (mahal, kapı, pencere, duvar) okuyacağını şartlandırır.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ5.2"
+    },
+    {
+      "id": "lj5-3",
+      "prompt": "Lejant bölgeleri hangi sırayla seçilir?",
+      "options": [
+        {
+          "text": "Toplam, Üst Bilgi, Ana Satır",
+          "correct": false
+        },
+        {
+          "text": "Üst Bilgi, Ana Satır, Alt Liste, Toplam, Alt Bilgi",
+          "correct": true
+        },
+        {
+          "text": "Alt Bilgi önce, sonra başlık",
+          "correct": false
+        },
+        {
+          "text": "Rastgele",
+          "correct": false
+        }
+      ],
+      "explanation": "Bölgeler üst bilgi, ana satır, alt liste, toplam ve alt bilgi sırasıyla seçilir; satır kaydırma vektörü (dY) belirlenir.",
+      "bloom": "Hatırlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ5.3"
+    }
+  ]
 }

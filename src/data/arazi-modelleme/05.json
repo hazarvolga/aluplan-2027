@@ -209,5 +209,85 @@
         "caption": "Kübajları Belirle (déterminer les cubages) ile kazı/dolgu hacimlerinin hesaplanması."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "ar5-1",
+      "prompt": "Eş yükselti eğrisi aralığını ölçekten bağımsız seçmenin riski nedir?",
+      "options": [
+        {
+          "text": "Eğriler silinir",
+          "correct": false
+        },
+        {
+          "text": "Plan okunmaz olur (çok sık veya çok seyrek eğri)",
+          "correct": true
+        },
+        {
+          "text": "SAM bozulur",
+          "correct": false
+        },
+        {
+          "text": "Pafta büyür",
+          "correct": false
+        }
+      ],
+      "explanation": "Aralık (Schrittweite) ölçeğe göre seçilmezse eğriler ya çok sık ya çok seyrek çıkar ve plan okunmaz olur.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR5.2"
+    },
+    {
+      "id": "ar5-2",
+      "prompt": "Eş yükselti eğrileri neyden üretilir?",
+      "options": [
+        {
+          "text": "2B haritadan doğrudan",
+          "correct": false
+        },
+        {
+          "text": "Sayısal Arazi Modeli (SAM / DTM) üzerinden",
+          "correct": true
+        },
+        {
+          "text": "Mahal listesinden",
+          "correct": false
+        },
+        {
+          "text": "Pafta antetinden",
+          "correct": false
+        }
+      ],
+      "explanation": "İzohips eğrileri SAM üzerinden otomatik üretilir; ana ve ara eğri ayrımı ayarlanır.",
+      "bloom": "Hatırlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-AR5.1"
+    },
+    {
+      "id": "ar5-3",
+      "prompt": "Ana eş yükselti eğrileri ara eğrilerden nasıl ayrılır?",
+      "options": [
+        {
+          "text": "Farklı mahal numarasıyla",
+          "correct": false
+        },
+        {
+          "text": "Daha kalın çizgi ve kot yazısıyla (örn. her 5 m'de)",
+          "correct": true
+        },
+        {
+          "text": "Pafta ölçeğiyle",
+          "correct": false
+        },
+        {
+          "text": "Nokta sembolüyle",
+          "correct": false
+        }
+      ],
+      "explanation": "Ana eğriler kalın çizgi ve kot etiketiyle vurgulanır (örn. her beşinci eğri); ara eğriler ince kalır.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR5.3"
+    }
+  ]
 }

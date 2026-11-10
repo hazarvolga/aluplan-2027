@@ -143,5 +143,85 @@
         "text": "Yeni girdiğiniz proje nitelikleri kaydedilmiyorsa, nedeni genellikle Windows yetki sorunları yüzünden **AllplanProjectDB.db3** dosyasına yazılamamasıdır. Proje nitelikleri hem kurulumun PRJ klasöründeki bu veritabanına hem de projedeki **PrjAtt.dat** dosyasına yazılır. db3 yoksa ama PrjAtt.dat projede duruyorsa, nitelikleri **Allmenu -> Servis (Service) -> Hotline Araçları (Hotlinetools) -> updprjattr** aracıyla geri getirebilirsiniz."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "tm2-1",
+      "prompt": "Yeni girdiğiniz proje nitelikleri kaydedilmiyorsa en olası neden nedir?",
+      "options": [
+        {
+          "text": "Yanlış referans ölçek seçimi",
+          "correct": false
+        },
+        {
+          "text": "AllplanProjectDB.db3 dosyasına Windows yazma izni sorunu",
+          "correct": true
+        },
+        {
+          "text": "Projenin birimi cm olması",
+          "correct": false
+        },
+        {
+          "text": "Aks ağının kurulmamış olması",
+          "correct": false
+        }
+      ],
+      "explanation": "Proje nitelikleri AllplanProjectDB.db3 dosyasına yazılır; Windows yazma izni yoksa kaydedilmez. Çözüm izinleri düzeltmektir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM2.2"
+    },
+    {
+      "id": "tm2-2",
+      "prompt": "Harita/kadastro altlıklı bir projede büyük koordinat sorunlarını önlemek için ne ayarlanır?",
+      "options": [
+        {
+          "text": "Daha büyük bir kalem kalınlığı",
+          "correct": false
+        },
+        {
+          "text": "Büyük Koordinatlar (Large Coordinates) için bir merkez ofseti",
+          "correct": true
+        },
+        {
+          "text": "Referans ölçeği 1:1 yapmak",
+          "correct": false
+        },
+        {
+          "text": "Katman sayısını azaltmak",
+          "correct": false
+        }
+      ],
+      "explanation": "Büyük koordinatlar hesap ve gösterim hatasına yol açar; bir merkez ofseti ile ALLPLAN dahili olarak küçük koordinatlarla çalışır.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM2.3"
+    },
+    {
+      "id": "tm2-3",
+      "prompt": "Projeyi doğru açtığınızı en iyi nasıl doğrularsınız?",
+      "options": [
+        {
+          "text": "Ekranda hiçbir palet açık değildir",
+          "correct": false
+        },
+        {
+          "text": "Başlık çubuğunda proje adı, durum çubuğunda ölçek ve birim görünür",
+          "correct": true
+        },
+        {
+          "text": "Katman listesi boştur",
+          "correct": false
+        },
+        {
+          "text": "Aks ağı otomatik çizilmiştir",
+          "correct": false
+        }
+      ],
+      "explanation": "Doğru kurulumda başlık çubuğunda proje adı, durum çubuğunda 1:100 ve doğru birim görünür; proje nitelikleri okunur.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-TM2.1"
+    }
+  ]
 }

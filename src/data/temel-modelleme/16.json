@@ -403,5 +403,85 @@
         "text": "Add-On Profilbauteile (Profil Yapı Elemanları Eklentisi) ile trapez saclar ve paneller, özellikle çatı panelleri yerleştirilir. Thierry Metzler'in eğitim videosunda profil sacların seçimi, eğimin belirlenmesi ve boşlukların eklenmesi gösterilir; ayrıca elemanların düzenlenmesi ve farklı eğimlere sahip çatı panellerinin oluşturulması uygulamalı anlatılır. Son olarak elemanların metrajında niteliklerin önemi vurgulanır."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "tm16-1",
+      "prompt": "Çatı katı duvarlarının eğimli kesilmesi için ne yapılmalıdır?",
+      "options": [
+        {
+          "text": "Duvara sabit yükseklik vermek",
+          "correct": false
+        },
+        {
+          "text": "Duvar üst kotunu çatı düzlemine bağlamak",
+          "correct": true
+        },
+        {
+          "text": "Duvarı gizlemek",
+          "correct": false
+        },
+        {
+          "text": "Aks eklemek",
+          "correct": false
+        }
+      ],
+      "explanation": "Üst kotu çatı düzlemine bağlanmayan duvarlar eğimli kesilmez ve çatıdan taşar. Önce çatı düzlemi kurulur, sonra bağlanır.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM16.2"
+    },
+    {
+      "id": "tm16-2",
+      "prompt": "Eğimli çatı zarfını (beşik/kırma) oluşturan eleman hangisidir?",
+      "options": [
+        {
+          "text": "Döşeme plağı",
+          "correct": false
+        },
+        {
+          "text": "Çatı Düzlemi (Roof Frame / Dachlandschaft)",
+          "correct": true
+        },
+        {
+          "text": "Mahal etiketi",
+          "correct": false
+        },
+        {
+          "text": "Kesit hattı",
+          "correct": false
+        }
+      ],
+      "explanation": "Çatı düzlemi eğimli çatı zarfını tanımlar; duvar ve kolonların üst kotu buna bağlanarak eğimli kesilir.",
+      "bloom": "Hatırlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-TM16.1"
+    },
+    {
+      "id": "tm16-3",
+      "prompt": "Çok katmanlı çatı kaplaması, güvercinlik ve mertek hangi aşamada eklenir?",
+      "options": [
+        {
+          "text": "Temel atılmadan önce",
+          "correct": false
+        },
+        {
+          "text": "Çatı düzlemi kurulup elemanlar bağlandıktan sonra",
+          "correct": true
+        },
+        {
+          "text": "Pafta aşamasında",
+          "correct": false
+        },
+        {
+          "text": "Aks ağından önce",
+          "correct": false
+        }
+      ],
+      "explanation": "Önce çatı düzlemi ve bağlantılar kurulur; ardından kaplama, güvercinlik, çatı penceresi ve mertek/aşık modellenir.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM16.3"
+    }
+  ]
 }

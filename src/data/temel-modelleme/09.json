@@ -215,5 +215,85 @@
         "caption": "Duvar katmaninin geometrik ve metraj niteliklerinin genel gorunumu."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "tm9-1",
+      "prompt": "Çok katmanlı bir dış duvarda taşıyıcı katmana hangi önceliği (Priority) verirsiniz?",
+      "options": [
+        {
+          "text": "En düşük önceliği (örn. 100)",
+          "correct": false
+        },
+        {
+          "text": "En yüksek önceliği (örn. 300)",
+          "correct": true
+        },
+        {
+          "text": "Yalıtımla aynı önceliği",
+          "correct": false
+        },
+        {
+          "text": "Önceliğin önemi yoktur",
+          "correct": false
+        }
+      ],
+      "explanation": "Kesişimlerde yüksek öncelikli katman kesintisiz geçer. Taşıyıcı çekirdeğin bütün kalması için ona en yüksek öncelik verilir.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM9.2"
+    },
+    {
+      "id": "tm9-2",
+      "prompt": "Katman önceliği yanlış verilirse ne olur?",
+      "options": [
+        {
+          "text": "Duvar otomatik silinir",
+          "correct": false
+        },
+        {
+          "text": "Birleşimler hatalı görünür ve hacimler yanlış düşülür (minha)",
+          "correct": true
+        },
+        {
+          "text": "Renkler değişir",
+          "correct": false
+        },
+        {
+          "text": "Ölçek bozulur",
+          "correct": false
+        }
+      ],
+      "explanation": "Yanlış öncelik kesişimlerde hatalı birleşime ve yanlış hacim düşümüne yol açar; metraj güvenilmez olur.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM9.2"
+    },
+    {
+      "id": "tm9-3",
+      "prompt": "Duvarın alt/üst kotunu kat düzlemlerine (UK/OK) bağlamak neden önemlidir?",
+      "options": [
+        {
+          "text": "Duvar daha kalın görünsün diye",
+          "correct": false
+        },
+        {
+          "text": "Kat yüksekliği değişince duvar otomatik uysun diye",
+          "correct": true
+        },
+        {
+          "text": "Metraj iki kez sayılsın diye",
+          "correct": false
+        },
+        {
+          "text": "Aks etiketi çıksın diye",
+          "correct": false
+        }
+      ],
+      "explanation": "Kota bağlı duvar kat yüksekliği değiştiğinde otomatik uyarlanır; sabit kot modelden kopmaya yol açar.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM9.2"
+    }
+  ]
 }

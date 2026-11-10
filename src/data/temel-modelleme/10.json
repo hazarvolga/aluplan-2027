@@ -355,5 +355,85 @@
         "caption": "Ayri Gunes Kirici SmartPart'i ile distan takma panjur; boskluga mesafe ayarlari."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "tm10-1",
+      "prompt": "Kapı/pencere yerleştirirken boşluğun açılması için önce ne yapılmalıdır?",
+      "options": [
+        {
+          "text": "Katmanı gizlemek",
+          "correct": false
+        },
+        {
+          "text": "Yerleştirmeden önce duvarı yakalamak (seçmek)",
+          "correct": true
+        },
+        {
+          "text": "Aks ağını silmek",
+          "correct": false
+        },
+        {
+          "text": "Ölçeği değiştirmek",
+          "correct": false
+        }
+      ],
+      "explanation": "Önce duvar yakalanmazsa eleman boşluk açmaz, duvarın üstünde serbest sembol kalır. Duvar seçilince boşluk otomatik açılır.",
+      "bloom": "Uygulama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-TM10.1"
+    },
+    {
+      "id": "tm10-2",
+      "prompt": "Çok katmanlı duvarda kapı/pencere kenarındaki hangi detay tanımlanır?",
+      "options": [
+        {
+          "text": "Mahya ve saçak",
+          "correct": false
+        },
+        {
+          "text": "Diş / Lamba (Reveal / Anschlag) ve yalıtım dönüşü",
+          "correct": true
+        },
+        {
+          "text": "Rıht ve basamak",
+          "correct": false
+        },
+        {
+          "text": "Antet ve çerçeve",
+          "correct": false
+        }
+      ],
+      "explanation": "Çok katmanlı duvarda açıklık kenarında diş/lamba ve yalıtım dönüşü tanımlanarak detay doğru modellenir.",
+      "bloom": "Anlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM10.2"
+    },
+    {
+      "id": "tm10-3",
+      "prompt": "3B kasa, kanat, cam ve panjur gibi ayrıntılar hangi nesneyle modellenir?",
+      "options": [
+        {
+          "text": "Standart ölçü çizgisi",
+          "correct": false
+        },
+        {
+          "text": "Pencere/Kapı SmartParts",
+          "correct": true
+        },
+        {
+          "text": "Mahal Etiketi",
+          "correct": false
+        },
+        {
+          "text": "Yardımcı konstrüksiyon",
+          "correct": false
+        }
+      ],
+      "explanation": "SmartParts parametrik olarak kasa, kanat, cam, pervaz, denizlik ve panjur üretir; detay seviyesini yükseltir.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM10.3"
+    }
+  ]
 }

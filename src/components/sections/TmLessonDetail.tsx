@@ -3,6 +3,7 @@ import { CompactPageHero } from './CompactPageHero';
 import { SectionHeader } from './SectionHeader';
 import { CommandTable, LessonImage, LessonToc, MetaRow, PrevNextNav } from '@/components/akademi/kit';
 import type { MetaItem } from '@/components/akademi/kit';
+import { AkademiQuiz } from '@/components/akademi/AkademiQuiz';
 import { temelModellemeLessons } from '@/data/temel-modelleme';
 import type { TmLesson } from '@/data/temel-modelleme';
 import styles from './TmLessonDetail.module.css';
@@ -140,6 +141,15 @@ export function TmLessonDetail({
                 </li>
               ))}
             </ul>
+          </div>
+        </section>
+      )}
+
+      {lesson.quiz && lesson.quiz.length > 0 && (
+        <section className={styles.band} aria-labelledby="tm-quiz">
+          <div className="alu-container">
+            <SectionHeader id="tm-quiz" kicker="ÖLÇME" title="Kendinizi sınayın" lead="Dersin kazanımlarını kısa bir testle yoklayın. Her soruda bir seçenek seçin; doğru cevabı ve açıklamasını hemen görürsünüz." />
+            <AkademiQuiz moduleCode={lesson.slug} questions={lesson.quiz} />
           </div>
         </section>
       )}

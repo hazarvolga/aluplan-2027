@@ -76,5 +76,85 @@
       "body": "Eğik yerleşmiş (döndürülmüş) bir binada cephe görünüşü üretirken, görünüş yönü binaya **dik** olmalıdır; yoksa cephe çarpık çıkar. **Serbest Projeksiyon (Free Projection)** ile göz noktası (Augpunkt) ve hedef noktasını (Zielpunkt) binanın eksenine göre tanımlayarak döndürülmüş binanın düzgün (ortogonal) cephesini elde edersiniz. İkiz/sıra evlerde her birimin görünüşü ayrı ayrı bu yolla üretilir.\nKaynak: ALLPLAN KB de_11377, de_11423.",
       "figures": []
     }
+  ],
+  "quiz": [
+    {
+      "id": "tm19-1",
+      "prompt": "İlişkisel cephe görünüşünün üzerindeki çizgileri elle silip düzeltmek neden sakıncalıdır?",
+      "options": [
+        {
+          "text": "Görünüş yazdırılamaz",
+          "correct": false
+        },
+        {
+          "text": "Görünüş modele canlı bağlıdır; ilk güncellemede değişiklik kaybolur",
+          "correct": true
+        },
+        {
+          "text": "Katman değişir",
+          "correct": false
+        },
+        {
+          "text": "Pafta ölçeği bozulur",
+          "correct": false
+        }
+      ],
+      "explanation": "İlişkisel görünüş modele bağlıdır; elle yapılan 2B düzeltmeler model güncellenince silinir. Değişiklik modelde yapılır.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM19.3"
+    },
+    {
+      "id": "tm19-2",
+      "prompt": "Cephe görünüşleri (ön/arka/yan) nereden türetilir?",
+      "options": [
+        {
+          "text": "Pafta Düzenleyiciden elle çizilerek",
+          "correct": false
+        },
+        {
+          "text": "Bina Strüktürünün türetilmiş bölmesinde 3B modelden",
+          "correct": true
+        },
+        {
+          "text": "Arazi modelinden",
+          "correct": false
+        },
+        {
+          "text": "Mahal etiketinden",
+          "correct": false
+        }
+      ],
+      "explanation": "İlişkisel görünüşler Bina Strüktürünün türetilmiş bölmesinde 3B modelden üretilir; modelle canlı bağlıdır.",
+      "bloom": "Hatırlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM19.1"
+    },
+    {
+      "id": "tm19-3",
+      "prompt": "Modelde bir pencere değişince cephe görünüşü ne yapar?",
+      "options": [
+        {
+          "text": "Değişmeden kalır",
+          "correct": false
+        },
+        {
+          "text": "Otomatik güncellenir",
+          "correct": true
+        },
+        {
+          "text": "Silinir",
+          "correct": false
+        },
+        {
+          "text": "Elle yeniden çizilmelidir",
+          "correct": false
+        }
+      ],
+      "explanation": "İlişkisel görünüş modele bağlı olduğundan, pencere değişince görünüş kendiliğinden güncellenir.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-TM19.3"
+    }
   ]
 }

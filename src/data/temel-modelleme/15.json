@@ -318,5 +318,85 @@
         "caption": "Dosyanın yeniden .xml olarak adlandırılması."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "tm15-1",
+      "prompt": "Katı üst katlara kopyalamadan önce hangi kontrol şarttır?",
+      "options": [
+        {
+          "text": "Pafta antetinin dolu olması",
+          "correct": false
+        },
+        {
+          "text": "Zemin kat elemanlarının OK/UK düzlemlerine bağlı olması",
+          "correct": true
+        },
+        {
+          "text": "Aks etiketlerinin gizlenmesi",
+          "correct": false
+        },
+        {
+          "text": "Renklerin siyah olması",
+          "correct": false
+        }
+      ],
+      "explanation": "Düzleme bağlı olmayan elemanlar kopyalandığında üst katta yanlış kota oturur. Önce düzlem bağları doğrulanır.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM15.1"
+    },
+    {
+      "id": "tm15-2",
+      "prompt": "Kat kopyalama hangi yapı üzerinden yapılır?",
+      "options": [
+        {
+          "text": "Pafta Düzenleyici",
+          "correct": false
+        },
+        {
+          "text": "Bina Strüktürü (Building Structure)",
+          "correct": true
+        },
+        {
+          "text": "Alan Tespiti",
+          "correct": false
+        },
+        {
+          "text": "Kalem paleti",
+          "correct": false
+        }
+      ],
+      "explanation": "Tamamlanan zemin kat çizim dosyaları Bina Strüktürü üzerinden üst katlara kopyalanır.",
+      "bloom": "Uygulama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-TM15.1"
+    },
+    {
+      "id": "tm15-3",
+      "prompt": "Düzleme bağlı elemanlar üst kata kopyalanınca kotları ne olur?",
+      "options": [
+        {
+          "text": "Zemin kat kotunda kalır",
+          "correct": false
+        },
+        {
+          "text": "Üst kat kotuna otomatik uyarlanır",
+          "correct": true
+        },
+        {
+          "text": "Sıfırlanır",
+          "correct": false
+        },
+        {
+          "text": "Elle girilmek zorundadır",
+          "correct": false
+        }
+      ],
+      "explanation": "Standart referans düzlemlerine bağlı elemanlar, kopyalandıkları katın OK/UK kotlarına otomatik uyar.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM15.2"
+    }
+  ]
 }

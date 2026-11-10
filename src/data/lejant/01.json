@@ -169,5 +169,85 @@
         "text": "Yöntem seçimi: ağırlıklı 2B çalışmada basit metin; ana elemanlarla 3B çalışmada Etiket Stilleri; metraj veya IFC/Bimplus aktarımı yapılan 3B çalışmada mümkün olduğunca çok elemanı kendi Etiket Stillerinizle etiketleyin. Eğimli alt/üst kenarlı elemanlarda noktasal kot gerekiyorsa Kot fonksiyonunu kullanın."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "lj1-1",
+      "prompt": "Lejantı düz çizgi ve metinle elle çizmenin sakıncası nedir?",
+      "options": [
+        {
+          "text": "Daha yavaş yazdırılır",
+          "correct": false
+        },
+        {
+          "text": "Model değişince güncellenmez, her projede yeniden çizilir",
+          "correct": true
+        },
+        {
+          "text": "Rengi değişir",
+          "correct": false
+        },
+        {
+          "text": "Mahal oluşturur",
+          "correct": false
+        }
+      ],
+      "explanation": "Elle çizilen tablo ilişkisel değildir; model değişince güncellenmez. Lejant hücre ve formülle, niteliklerden beslenen bir nesne olarak kurulur.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-LJ1.1"
+    },
+    {
+      "id": "lj1-2",
+      "prompt": "İlişkisel lejantın raftan farkı nedir?",
+      "options": [
+        {
+          "text": "Yalnız bir kez hesaplanır",
+          "correct": false
+        },
+        {
+          "text": "Çizime/paftaya yerleşir ve model değişince gerçek zamanlı güncellenir",
+          "correct": true
+        },
+        {
+          "text": "Yalnız donatı okur",
+          "correct": false
+        },
+        {
+          "text": "Sadece metin kutusudur",
+          "correct": false
+        }
+      ],
+      "explanation": "İlişkisel lejant modele bağlıdır; eleman değişince değerleri ve toplamları anlık güncellenir.",
+      "bloom": "Anlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ1.3"
+    },
+    {
+      "id": "lj1-3",
+      "prompt": "Mimari ve donatı lejantı neyle ayrılır?",
+      "options": [
+        {
+          "text": "Yalnız renkleriyle",
+          "correct": false
+        },
+        {
+          "text": "Besledikleri niteliklerle (mimari mahal/doğrama vs. donatı poz/çap)",
+          "correct": true
+        },
+        {
+          "text": "Pafta boyutuyla",
+          "correct": false
+        },
+        {
+          "text": "Kalem kalınlığıyla",
+          "correct": false
+        }
+      ],
+      "explanation": "Mimari lejant mahal/doğrama niteliklerini, donatı lejantı poz, çap, boy gibi donatı niteliklerini okur.",
+      "bloom": "Anlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ1.2"
+    }
+  ]
 }

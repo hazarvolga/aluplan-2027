@@ -92,5 +92,85 @@
         "caption": "DIN 277-1:2016'ya göre taban alanı ve mahal hacmi türleri."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "tm17-1",
+      "prompt": "Alan Tespiti ile tıkladığınızda mahal oluşmuyorsa en olası neden nedir?",
+      "options": [
+        {
+          "text": "Yanlış kalem rengi",
+          "correct": false
+        },
+        {
+          "text": "Oda sınırı tam kapalı değildir (duvarlar arasında boşluk var)",
+          "correct": true
+        },
+        {
+          "text": "Pafta ölçeği hatası",
+          "correct": false
+        },
+        {
+          "text": "Aks ağı eksikliği",
+          "correct": false
+        }
+      ],
+      "explanation": "Alan Tespiti kapalı kontur ister; kapı yerindeki veya iki duvar arasındaki küçük boşluk mahali oluşturmaz. Sınır kapatılır.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM17.1"
+    },
+    {
+      "id": "tm17-2",
+      "prompt": "Oda no, fonksiyon ve net alanı plana yazan öge hangisidir?",
+      "options": [
+        {
+          "text": "Antet (Title Block)",
+          "correct": false
+        },
+        {
+          "text": "Mahal Etiketi (Room Stamp / Raumstempel)",
+          "correct": true
+        },
+        {
+          "text": "Aks balonu",
+          "correct": false
+        },
+        {
+          "text": "Kot sembolü",
+          "correct": false
+        }
+      ],
+      "explanation": "Mahal etiketi odanın numarası, fonksiyonu, net alanı ve kaplama bilgilerini plana yazdırır.",
+      "bloom": "Hatırlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-TM17.3"
+    },
+    {
+      "id": "tm17-3",
+      "prompt": "Mahal içine atanan katmanlı ince yapı yüzeyleri neyi kapsar?",
+      "options": [
+        {
+          "text": "Yalnız aks ve kolon",
+          "correct": false
+        },
+        {
+          "text": "Tavan, döşeme kaplaması, yan yüzey ve süpürgelik",
+          "correct": true
+        },
+        {
+          "text": "Yalnız çatı kaplaması",
+          "correct": false
+        },
+        {
+          "text": "Yalnız pafta çerçevesi",
+          "correct": false
+        }
+      ],
+      "explanation": "Mahal yüzeyleri tavan, döşeme (şap + kaplama), yan yüzey (sıva + boya/fayans) ve süpürgelik katmanlarını tanımlar.",
+      "bloom": "Anlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM17.2"
+    }
+  ]
 }

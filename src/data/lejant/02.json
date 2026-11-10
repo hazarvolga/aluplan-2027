@@ -248,5 +248,85 @@
         "caption": "Nesne Etiketi veya Etiket Stilinde Info düğmesi, kullanılan nitelik ya da formülü açar."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "lj2-1",
+      "prompt": "Lejant gövdesi (çerçeve) ile hücre arasındaki fark nedir?",
+      "options": [
+        {
+          "text": "İkisi aynı nesnedir",
+          "correct": false
+        },
+        {
+          "text": "Hücre tek bir bilgi kutusudur; nitelikten o beslenir",
+          "correct": true
+        },
+        {
+          "text": "Gövde niteliği taşır, hücre taşımaz",
+          "correct": false
+        },
+        {
+          "text": "Hücre yalnız çizgidir",
+          "correct": false
+        }
+      ],
+      "explanation": "Gövde çerçevedir; asıl veri hücrelerden gelir. Tasarım hücre düzeyinde kurulmazsa bilgiler nitelikten beslenmez.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ2.2"
+    },
+    {
+      "id": "lj2-2",
+      "prompt": "Bir lejant şablonunun 5 temel bileşeni hangileridir?",
+      "options": [
+        {
+          "text": "Aks, kolon, duvar, döşeme, çatı",
+          "correct": false
+        },
+        {
+          "text": "Üst Bilgi, Ana Satır, Alt Liste, Toplam, Alt Bilgi",
+          "correct": true
+        },
+        {
+          "text": "Plan, kesit, görünüş, pafta, antet",
+          "correct": false
+        },
+        {
+          "text": "Nokta, çizgi, yay, daire, spline",
+          "correct": false
+        }
+      ],
+      "explanation": "Şablon üst bilgi, ana satır (body), alt liste, toplam/özet ve alt bilgi bölgelerinden oluşur.",
+      "bloom": "Hatırlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-LJ2.1"
+    },
+    {
+      "id": "lj2-3",
+      "prompt": "Sayfa kırılımı ve sıralama kuralları neyi düzenler?",
+      "options": [
+        {
+          "text": "Pafta antetini",
+          "correct": false
+        },
+        {
+          "text": "Satırların gruplanması, sıralanması ve sayfaya bölünmesini",
+          "correct": true
+        },
+        {
+          "text": "Mahal alanını",
+          "correct": false
+        },
+        {
+          "text": "Kalem rengini",
+          "correct": false
+        }
+      ],
+      "explanation": "Sıralama kriteri, gruplama ve sayfa kırılımı tablonun nasıl sıralanıp bölüneceğini belirler.",
+      "bloom": "Anlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ2.3"
+    }
+  ]
 }

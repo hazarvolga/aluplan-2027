@@ -286,5 +286,85 @@
         "text": "Önemli: **Rolleri Yönet** sekmesindeki **Yapılandırmayı Sıfırla (Konfiguration zurücksetzen)**, tüm değişiklikleri geri alır ve Allplan'ın fabrika çıkış durumunu geri yükler. Kendi oluşturduğunuz rolleri sonradan tekrar kullanmak istiyorsanız, sıfırlamadan önce bunları **Rollerim** alanında işaretleyip **Dışa Aktar** ile kaydedin."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "tm3-1",
+      "prompt": "Actionbar'da aradığınız bir komut görünmüyorsa ilk bakılacak şey nedir?",
+      "options": [
+        {
+          "text": "Fare tekerleği ayarı",
+          "correct": false
+        },
+        {
+          "text": "Seçili Rol (Role) — yanlış rol komutu gizler",
+          "correct": true
+        },
+        {
+          "text": "Ekran çözünürlüğü",
+          "correct": false
+        },
+        {
+          "text": "Katman rengi",
+          "correct": false
+        }
+      ],
+      "explanation": "Actionbar'daki görünür komutları seçili Rol belirler. Yanlış rolde komut 'yok' sanılır; doğru role geçince görünür.",
+      "bloom": "Analiz",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-TM3.1"
+    },
+    {
+      "id": "tm3-2",
+      "prompt": "Rol, Görev ve Görev Alanı hiyerarşisi ne işe yarar?",
+      "options": [
+        {
+          "text": "Katmanların rengini belirler",
+          "correct": false
+        },
+        {
+          "text": "Hangi komutların Actionbar'da görüneceğini düzenler",
+          "correct": true
+        },
+        {
+          "text": "Proje birimini ayarlar",
+          "correct": false
+        },
+        {
+          "text": "Pafta ölçeğini seçer",
+          "correct": false
+        }
+      ],
+      "explanation": "Rol -> Görev -> Görev Alanı, komutları bağlama göre süzer; böylece ekranda yalnız o işe ait araçlar görünür.",
+      "bloom": "Anlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM3.1"
+    },
+    {
+      "id": "tm3-3",
+      "prompt": "Aynı modeli plan, izometri ve animasyon pencerelerinde aynı anda görebilmek neyi sağlar?",
+      "options": [
+        {
+          "text": "Modelin kopyalanmasını",
+          "correct": false
+        },
+        {
+          "text": "Modeli farklı açılardan eşzamanlı denetlemeyi",
+          "correct": true
+        },
+        {
+          "text": "Her pencerede ayrı dosya tutmayı",
+          "correct": false
+        },
+        {
+          "text": "Metrajın otomatik artmasını",
+          "correct": false
+        }
+      ],
+      "explanation": "Çoklu pencere tek modeli farklı görünümlerde gösterir; bir pencerede yapılan değişiklik hepsinde görünür.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM3.3"
+    }
+  ]
 }

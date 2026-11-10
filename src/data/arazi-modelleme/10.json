@@ -240,5 +240,85 @@
         "caption": "Çatı penceresi (güvercinlik) formlarından genel görünüm."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "ar10-1",
+      "prompt": "Çevre binasını ±0.00'da bırakıp arazi kotuna oturtmazsanız ne olur?",
+      "options": [
+        {
+          "text": "Bina iki kez sayılır",
+          "correct": false
+        },
+        {
+          "text": "3B makette bina havada veya gömülü görünür",
+          "correct": true
+        },
+        {
+          "text": "Çatı silinir",
+          "correct": false
+        },
+        {
+          "text": "Pafta büyür",
+          "correct": false
+        }
+      ],
+      "explanation": "Bina arazi kotundan bağımsız kalırsa makette havada/gömülü görünür. ±0.00 arazi kotuyla ilişkilendirilir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR10.1"
+    },
+    {
+      "id": "ar10-2",
+      "prompt": "Çevre binalarının tabanı neye bağlanır?",
+      "options": [
+        {
+          "text": "Pafta çerçevesine",
+          "correct": false
+        },
+        {
+          "text": "Ders 8'de kurulan eğimli arazi (referans) düzlemine",
+          "correct": true
+        },
+        {
+          "text": "Mahal listesine",
+          "correct": false
+        },
+        {
+          "text": "Aks balonuna",
+          "correct": false
+        }
+      ],
+      "explanation": "Binaların Alt Seviyesi arazi referans düzlemine bağlanır; böylece eğimli araziye doğru oturur.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR10.1"
+    },
+    {
+      "id": "ar10-3",
+      "prompt": "Eğimli araziye oturan binanın üstü nasıl teraziye alınır?",
+      "options": [
+        {
+          "text": "Çatı kaldırılır",
+          "correct": false
+        },
+        {
+          "text": "Üst Seviye (Top Level) yatay bir düzleme ayarlanır",
+          "correct": true
+        },
+        {
+          "text": "Alt seviye silinir",
+          "correct": false
+        },
+        {
+          "text": "Ölçek büyütülür",
+          "correct": false
+        }
+      ],
+      "explanation": "Alt seviye araziye bağlıyken Üst Seviye yatay düzleme ayarlanır; bina üstü teraziye gelir.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR10.3"
+    }
+  ]
 }

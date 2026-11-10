@@ -257,5 +257,85 @@
         "caption": "Kübajları Belirle (déterminer les cubages) ile kazı/dolgu hacimlerinin hesaplanması."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "ar7-1",
+      "prompt": "3B arazi yüzeyini maket için neye dönüştürmek gerekir?",
+      "options": [
+        {
+          "text": "Daha ince bir zara",
+          "correct": false
+        },
+        {
+          "text": "Altı kapalı, kalınlıklı 3B katı hacme",
+          "correct": true
+        },
+        {
+          "text": "2B taramaya",
+          "correct": false
+        },
+        {
+          "text": "Mahal nesnesine",
+          "correct": false
+        }
+      ],
+      "explanation": "3B yüzey tek yönlü ince zardır; render/kesitte alttan boş görünür. Maket için taban kotuna kadar kapalı katıya dönüştürülür.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR7.1"
+    },
+    {
+      "id": "ar7-2",
+      "prompt": "Bina bodrum kazısı veya altgeçit boşluğu maket bloğunda nasıl açılır?",
+      "options": [
+        {
+          "text": "Alan Tespitiyle",
+          "correct": false
+        },
+        {
+          "text": "Birinden Çıkar (Subtract) Boolean komutuyla",
+          "correct": true
+        },
+        {
+          "text": "Mahal etiketiyle",
+          "correct": false
+        },
+        {
+          "text": "Aks eklemeyle",
+          "correct": false
+        }
+      ],
+      "explanation": "Katı arazi maketinde boşluklar Boolean çıkarma ile açılır.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR7.3"
+    },
+    {
+      "id": "ar7-3",
+      "prompt": "Tabanı düz, üstü topoğrafik eğimli blok hangi yöntemle üretilir?",
+      "options": [
+        {
+          "text": "Yalnız tarama ile",
+          "correct": false
+        },
+        {
+          "text": "Ekstrüzyon (yüzeyi katıya) + Boolean çıkarma/kesişim",
+          "correct": true
+        },
+        {
+          "text": "Yalnız izohips ile",
+          "correct": false
+        },
+        {
+          "text": "Pafta referansıyla",
+          "correct": false
+        }
+      ],
+      "explanation": "Yüzey bir taban kotuna ekstrüde edilip Boolean işlemlerle tabanı düz, üstü eğimli katı maket elde edilir.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Zor",
+      "outcomeCode": "K-AR7.2"
+    }
+  ]
 }

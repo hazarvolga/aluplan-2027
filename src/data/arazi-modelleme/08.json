@@ -261,5 +261,85 @@
         "text": "Not: Bir çizim dosyasına daha önce kendine özel bir düzlem ataması yapıldıysa, o dosya üst düğümün yükseklik atamasını kalıcı olarak kaybeder; duvarlarınız çatı peyzajına uymuyorsa çizim dosyasına sağ tıklayıp Düzlemleri ata ile çatı peyzajını ayrıca ekleyin. Çatı peyzajında geometri değişikliği yapmak için önce orijinal çatı düzlemini değiştirin, sonra Düzlem Yöneticisi'nde çatı peyzajı oluşturma işlemini tekrarlayın; böylece atanmış çatı peyzajları güncellenir."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "ar8-1",
+      "prompt": "Elemanları araziye sabit kotla oturtmanın sonucu nedir?",
+      "options": [
+        {
+          "text": "İki kez sayılırlar",
+          "correct": false
+        },
+        {
+          "text": "Arazi eğimini takip etmezler; havada veya gömülü kalırlar",
+          "correct": true
+        },
+        {
+          "text": "Otomatik silinirler",
+          "correct": false
+        },
+        {
+          "text": "Pafta büyür",
+          "correct": false
+        }
+      ],
+      "explanation": "Sabit kot arazi eğimini izlemez. Arazi referans yüzeye dönüştürülüp elemanlar bu düzleme bağlanır.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR8.1"
+    },
+    {
+      "id": "ar8-2",
+      "prompt": "Mimari elemanların eğimli araziyi sınır tanıması için ne gerekir?",
+      "options": [
+        {
+          "text": "Yüzeyi gizlemek",
+          "correct": false
+        },
+        {
+          "text": "3B yüzeyi Düzleme / Referans Yüzeye dönüştürmek",
+          "correct": true
+        },
+        {
+          "text": "Mahal tanımlamak",
+          "correct": false
+        },
+        {
+          "text": "Aks eklemek",
+          "correct": false
+        }
+      ],
+      "explanation": "Arazi yüzeyi Referans Yüzey (Bezugsfläche) yapılırsa duvar/döşeme onu alt/üst sınır olarak tanır.",
+      "bloom": "Anlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR8.1"
+    },
+    {
+      "id": "ar8-3",
+      "prompt": "Dönüşümü doğru yaptığınızı nasıl test edersiniz?",
+      "options": [
+        {
+          "text": "Antet dolar",
+          "correct": false
+        },
+        {
+          "text": "Üzerine koyduğunuz test döşemesi arazi eğimine uyar",
+          "correct": true
+        },
+        {
+          "text": "Mahal sayısı artar",
+          "correct": false
+        },
+        {
+          "text": "Kalem değişir",
+          "correct": false
+        }
+      ],
+      "explanation": "Referans yüzeye dönüşen arazide test bir döşeme eğime uyuyorsa dönüşüm doğrudur.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR8.3"
+    }
+  ]
 }

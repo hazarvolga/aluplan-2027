@@ -98,5 +98,85 @@
         "text": "Normal metindeki doğrudan biçim seçeneklerinin tamamı burada geçerli değildir; Kalın gibi bir efekt için ilgili niteliğin ya da yazı tipinin stil ayarını kullanın."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "tm21-1",
+      "prompt": "±0.00 referansını yanlış noktaya vermenin sonucu nedir?",
+      "options": [
+        {
+          "text": "Yalnız bir kot etkilenir",
+          "correct": false
+        },
+        {
+          "text": "Tüm kotlar sistematik olarak kayar",
+          "correct": true
+        },
+        {
+          "text": "Renkler değişir",
+          "correct": false
+        },
+        {
+          "text": "Pafta silinir",
+          "correct": false
+        }
+      ],
+      "explanation": "±0.00 baz noktasıdır; yanlış verilirse (örn. kaba yerine bitmiş döşeme) tüm kotlar sistematik kayar. Baz başta doğru seçilir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM21.1"
+    },
+    {
+      "id": "tm21-2",
+      "prompt": "İlişkisel kot ölçülendirmesi hangi görünümlerde yapılır?",
+      "options": [
+        {
+          "text": "Yalnız pafta antetinde",
+          "correct": false
+        },
+        {
+          "text": "Türetilen kesit ve görünüşlerde",
+          "correct": true
+        },
+        {
+          "text": "Yalnız arazi modelinde",
+          "correct": false
+        },
+        {
+          "text": "Yalnız aks dosyasında",
+          "correct": false
+        }
+      ],
+      "explanation": "Kot ölçülendirmesi türetilen kesit ve görünüşlerde ±0.00'a göre yapılır; döşeme, saçak, mahya, temel kotları işaretlenir.",
+      "bloom": "Hatırlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-TM21.1"
+    },
+    {
+      "id": "tm21-3",
+      "prompt": "Kat planında hangi iki kot sembolü yerleştirilir?",
+      "options": [
+        {
+          "text": "Mahya ve saçak",
+          "correct": false
+        },
+        {
+          "text": "Kaba ve bitmiş döşeme kotu",
+          "correct": true
+        },
+        {
+          "text": "Antet ve çerçeve",
+          "correct": false
+        },
+        {
+          "text": "Aks ve kolon",
+          "correct": false
+        }
+      ],
+      "explanation": "Kat planlarında kaba döşeme ve bitmiş döşeme kot sembolleri ayrı ayrı yerleştirilir.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM21.3"
+    }
+  ]
 }

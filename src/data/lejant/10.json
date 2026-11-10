@@ -307,5 +307,85 @@
         "caption": "Geri yükleme konumu ve dosya numarasını seçip Çalıştır."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "lj10-1",
+      "prompt": "Donatı değişince lejant metrajını yenilemeden paftaya alırsanız ne olur?",
+      "options": [
+        {
+          "text": "Lejant otomatik büyür",
+          "correct": false
+        },
+        {
+          "text": "Paftaya eski/yanlış demir miktarı gider, imalatta hata doğar",
+          "correct": true
+        },
+        {
+          "text": "Mahal silinir",
+          "correct": false
+        },
+        {
+          "text": "Pafta ölçeği değişir",
+          "correct": false
+        }
+      ],
+      "explanation": "Metraj yenilenmezse pafta eski değeri taşır; imalatta hataya yol açar. Her donatı değişiminde lejant güncellenir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ10.3"
+    },
+    {
+      "id": "lj10-2",
+      "prompt": "Aralık s=15 cm'den 10 cm'ye düşünce lejantta ne beklenir?",
+      "options": [
+        {
+          "text": "Hiçbir şey değişmez",
+          "correct": false
+        },
+        {
+          "text": "Büküm şeması ve toplam metraj (kg) otomatik güncellenir",
+          "correct": true
+        },
+        {
+          "text": "Lejant silinir",
+          "correct": false
+        },
+        {
+          "text": "Pafta büyür",
+          "correct": false
+        }
+      ],
+      "explanation": "İlişkisel donatı lejantı modele bağlıdır; adet/aralık/çap/pas payı değişince metraj otomatik güncellenir.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ10.2"
+    },
+    {
+      "id": "lj10-3",
+      "prompt": "Yalnızca paftadaki aktif donatı dosyalarını okuyan lejant nerede yerleştirilir?",
+      "options": [
+        {
+          "text": "Mahal listesinde",
+          "correct": false
+        },
+        {
+          "text": "Pafta Düzenleyici (Layout Editor) içinde, pafta bazlı olarak",
+          "correct": true
+        },
+        {
+          "text": "Aks dosyasında",
+          "correct": false
+        },
+        {
+          "text": "Arazi modülünde",
+          "correct": false
+        }
+      ],
+      "explanation": "Pafta bazlı donatı lejantı Pafta Düzenleyici'de yalnız paftadaki aktif donatı çizim dosyalarını okur.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ10.3"
+    }
+  ]
 }

@@ -314,5 +314,85 @@
         "text": "Not: Allplan 2023 ile birlikte yapı elemanı referansları için dilden bağımsız fonksiyon çağrıları geldi. MT_Raum(), MT_Wand() ve MT_Boden() yerine Obj_Room(), Obj_Wall() ve Obj_Floor() kullanılmalıdır. Eski verilerin 2023'e dönüştürülmesinde bu formüller otomatik uyarlanır; uluslararası veri alışverişini güvence altına almak için yeni etiket stillerinde ve raporlarda dilden bağımsız fonksiyonları tercih edin."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "ar3-1",
+      "prompt": "Arazi noktalarını Z kotu olmadan 2B girmenin sonucu nedir?",
+      "options": [
+        {
+          "text": "Noktalar otomatik silinir",
+          "correct": false
+        },
+        {
+          "text": "Üçgenleme düz yüzey üretir; izohips/şev anlamsız olur",
+          "correct": true
+        },
+        {
+          "text": "Harita büyür",
+          "correct": false
+        },
+        {
+          "text": "Pafta değişir",
+          "correct": false
+        }
+      ],
+      "explanation": "Z değeri olmayan noktalar düz bir yüzey verir; eğim, izohips ve şev hesapları geçersiz olur. Noktalar 3B (Z'li) girilmelidir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR3.1"
+    },
+    {
+      "id": "ar3-2",
+      "prompt": "Harita altlığını düzenlenebilir arka plan olarak hangi modda açarsınız?",
+      "options": [
+        {
+          "text": "Aktif modda",
+          "correct": false
+        },
+        {
+          "text": "Sarı (pasif / düzenlenebilir arka plan) modda",
+          "correct": true
+        },
+        {
+          "text": "Gizli modda",
+          "correct": false
+        },
+        {
+          "text": "Pafta modunda",
+          "correct": false
+        }
+      ],
+      "explanation": "Altlık sarı (pasif arka plan) modda açılır; yeni 3B noktalar temiz bir çizim dosyasına kaydedilir.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR3.3"
+    },
+    {
+      "id": "ar3-3",
+      "prompt": "Noktaları doğru girdiğinizi en iyi nasıl görürsünüz?",
+      "options": [
+        {
+          "text": "Antetin dolması",
+          "correct": false
+        },
+        {
+          "text": "İzometri görünümünde arazinin eğimini görmek",
+          "correct": true
+        },
+        {
+          "text": "Mahal sayısının artması",
+          "correct": false
+        },
+        {
+          "text": "Kalemin kalınlaşması",
+          "correct": false
+        }
+      ],
+      "explanation": "Noktalar gerçek Z yükseklikleriyle duruyorsa İzometride arazi eğimi görülür; bu 3B girişi doğrular.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-AR3.1"
+    }
+  ]
 }

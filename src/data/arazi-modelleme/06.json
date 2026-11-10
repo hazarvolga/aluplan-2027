@@ -243,5 +243,85 @@
         "text": "SAM doğru konumlanmış ama alanı ortofotonun alanından küçükse, önce mevcut dış sınırı bir çizgi nitelik dosyasına kaydedin: Oluştur (Create) -> Arazi (Terrain) -> Sayısal Arazi Modeli (Digital Terrain Model) -> Dosya Arayüzü (File Interface) altında D Tipi (F Type) = LinAtt ve G/Ç (I/O) = O file seçin. Ardından SAM alanını ortofotonun boyutuna gelecek şekilde büyütün."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "ar6-1",
+      "prompt": "SAM'i 3B yüzeye dönüştürürken hedef çizim dosyası vermezseniz ne risk doğar?",
+      "options": [
+        {
+          "text": "Yüzeyin iki kez sayılması",
+          "correct": false
+        },
+        {
+          "text": "Jeodezik SAM verisinin üstüne yazılıp kaybedilmesi",
+          "correct": true
+        },
+        {
+          "text": "Pafta ölçeğinin bozulması",
+          "correct": false
+        },
+        {
+          "text": "Mahal silinmesi",
+          "correct": false
+        }
+      ],
+      "explanation": "Dönüşüm ayrı hedef dosyaya yapılmalı; aksi halde kübaj/izohips üretebilen orijinal SAM kaybolur.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR6.3"
+    },
+    {
+      "id": "ar6-2",
+      "prompt": "SAM neden doğrudan Boolean/düzlem işlemlerine girmez?",
+      "options": [
+        {
+          "text": "Çünkü 2B bir nesnedir",
+          "correct": false
+        },
+        {
+          "text": "Önce 3B elemanlara (yüzey/ağ) dönüştürülmesi gerekir",
+          "correct": true
+        },
+        {
+          "text": "Çünkü pafta nesnesidir",
+          "correct": false
+        },
+        {
+          "text": "Çünkü mahaldir",
+          "correct": false
+        }
+      ],
+      "explanation": "SAM jeodezik bir veridir; serbest 3B işlemler için önce 3B yüzey/ağ'a dönüştürülür.",
+      "bloom": "Anlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR6.1"
+    },
+    {
+      "id": "ar6-3",
+      "prompt": "3B arazi yüzeyine gerçekçi görünüm nasıl verilir?",
+      "options": [
+        {
+          "text": "Kalem kalınlığını artırarak",
+          "correct": false
+        },
+        {
+          "text": "Çim/toprak/ortofoto doku atayıp Animasyonda bakmak",
+          "correct": true
+        },
+        {
+          "text": "Mahal etiketi koyarak",
+          "correct": false
+        },
+        {
+          "text": "Aks ekleyerek",
+          "correct": false
+        }
+      ],
+      "explanation": "3B yüzeye doku atanır ve Animasyon penceresinde (F4) gerçekçi arazi görselleştirmesi elde edilir.",
+      "bloom": "Uygulama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-AR6.4"
+    }
+  ]
 }

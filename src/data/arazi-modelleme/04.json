@@ -292,5 +292,85 @@
         "text": "Kazı ve Dolgu Hesapla (Compute Cut and Fill) fonksiyonunda VeriTp (DataTp): 22.014; Kıyas Düzlemi (Horiz): Evet; Analiz (Analyze): Kazı ve Dolgu (Cut and Fill) ayarlarını kullanın. Yükseklik (Height) kutusuna başlangıç değeri olarak SAM'ın ortalama yüksekliğini girin ve kıyas düzlemi yüksekliğini değiştirerek birkaç hesap yapıp kazı ile dolgu dengesini yakınsayın."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "ar4-1",
+      "prompt": "L şeklinde/girintili arsada üçgenlemenin dışarı taşmasını ne engeller?",
+      "options": [
+        {
+          "text": "Kırık hat eklemek",
+          "correct": false
+        },
+        {
+          "text": "Dış Sınır (Außengrenze) tanımlamak",
+          "correct": true
+        },
+        {
+          "text": "Ölçeği değiştirmek",
+          "correct": false
+        },
+        {
+          "text": "Nokta numarası vermek",
+          "correct": false
+        }
+      ],
+      "explanation": "Üçgenleme varsayılan olarak konveks zarf üretir; girintili arsada Dış Sınır ile gerçek köşelere kırpılır.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR4.2"
+    },
+    {
+      "id": "ar4-2",
+      "prompt": "Arazi noktalarından SAM hangi komutla oluşturulur?",
+      "options": [
+        {
+          "text": "Biçim Aktar",
+          "correct": false
+        },
+        {
+          "text": "Ağ Oluştur / Üçgenle (Vermaschen)",
+          "correct": true
+        },
+        {
+          "text": "Alan Tespiti",
+          "correct": false
+        },
+        {
+          "text": "Pafta Yerleştir",
+          "correct": false
+        }
+      ],
+      "explanation": "3B noktalar Ağ Oluştur (üçgenleme) ile birleştirilerek SAM/DTM üretilir.",
+      "bloom": "Hatırlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-AR4.1"
+    },
+    {
+      "id": "ar4-3",
+      "prompt": "İstinat duvarı veya şev tepesi gibi ani kot kırılması modele nasıl tanıtılır?",
+      "options": [
+        {
+          "text": "Eş yükselti eğrisi olarak",
+          "correct": false
+        },
+        {
+          "text": "Kırık Hat / Şev Çizgisi (Breakline) olarak",
+          "correct": true
+        },
+        {
+          "text": "Mahal olarak",
+          "correct": false
+        },
+        {
+          "text": "Aks olarak",
+          "correct": false
+        }
+      ],
+      "explanation": "Ani kot kırılmaları breakline ile tanımlanır; böylece üçgenleme bu çizgiyi korur.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR4.3"
+    }
+  ]
 }

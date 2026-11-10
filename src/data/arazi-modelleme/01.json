@@ -231,5 +231,85 @@
         "text": "Son olarak her doku için ilgili yüzey tanımına sahip bir döşeme oluşturun. Not: Coğrafi referanslı ortofotonun doku olarak kullanımına ilişkin ayrı bir ALLPLAN Connect kılavuzu bulunur."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "ar1-1",
+      "prompt": "Arazi verisini (noktalar, SAM, 3B arazi) nerede tutmak doğrudur?",
+      "options": [
+        {
+          "text": "Bina modeliyle aynı çizim dosyasında",
+          "correct": false
+        },
+        {
+          "text": "Bina modelinden ayrı çizim dosyalarında",
+          "correct": true
+        },
+        {
+          "text": "Pafta çerçevesinin içinde",
+          "correct": false
+        },
+        {
+          "text": "Mahal etiketinin altında",
+          "correct": false
+        }
+      ],
+      "explanation": "Arazi verisi bina modeliyle aynı dosyaya konursa karışır ve yönetilemez olur. Arazi kendi çizim dosyalarında tutulur.",
+      "bloom": "Anlama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-AR1.1"
+    },
+    {
+      "id": "ar1-2",
+      "prompt": "Arazi üretim zinciri temelde hangi sırayı izler?",
+      "options": [
+        {
+          "text": "3B arazi → SAM → harita → noktalar",
+          "correct": false
+        },
+        {
+          "text": "Harita → noktalar → SAM → izohips → 3B arazi",
+          "correct": true
+        },
+        {
+          "text": "İzohips → harita → SAM → noktalar",
+          "correct": false
+        },
+        {
+          "text": "Pafta → antet → SAM → yollar",
+          "correct": false
+        }
+      ],
+      "explanation": "Zincir 2B haritadan 3B noktalara, üçgenlemeyle SAM'e, oradan izohips ve 3B araziye ilerler.",
+      "bloom": "Hatırlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR1.3"
+    },
+    {
+      "id": "ar1-3",
+      "prompt": "Üzerinde kübaj/izohips hesabı yapılabilen jeodezik eleman hangisidir?",
+      "options": [
+        {
+          "text": "3B serbest yüzey",
+          "correct": false
+        },
+        {
+          "text": "Sayısal Arazi Modeli (SAM / DTM)",
+          "correct": true
+        },
+        {
+          "text": "Mahal etiketi",
+          "correct": false
+        },
+        {
+          "text": "Pafta anteti",
+          "correct": false
+        }
+      ],
+      "explanation": "SAM, üçgen ağ (TIN) tabanlı jeodezik veridir; izohips ve kübaj ondan üretilir. 3B yüzey/katı sunum içindir.",
+      "bloom": "Anlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-AR1.4"
+    }
+  ]
 }

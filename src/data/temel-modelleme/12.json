@@ -213,5 +213,85 @@
         "text": "Boşluk bilgileri CHILD(...): Boşluklar döşemenin alt öğesidir. Bir duvar katmanındaki boşluk sayısı gibi bilgileri okumak için CHILD() ile alt objeye bakılır. Bu yön çoğu kez birden fazla obje içerdiğinden tekil (benzersiz) değildir."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "tm12-1",
+      "prompt": "Merdiven kovası veya şaft için döşemede ne yapılmazsa metraj şişer?",
+      "options": [
+        {
+          "text": "Döşeme kalınlığını artırmak",
+          "correct": false
+        },
+        {
+          "text": "Döşeme Boşluğu (Slab Opening) açmak",
+          "correct": true
+        },
+        {
+          "text": "Aks eklemek",
+          "correct": false
+        },
+        {
+          "text": "Kalem rengini değiştirmek",
+          "correct": false
+        }
+      ],
+      "explanation": "Boşluk açılmazsa model yanlış olur ve beton metrajı fazla çıkar. Kova/şaft için döşeme boşluğu açılır.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM12.3"
+    },
+    {
+      "id": "tm12-2",
+      "prompt": "Döşeme plağını oluşturmak için en pratik yol nedir?",
+      "options": [
+        {
+          "text": "Her kenarı tek tek çizgiyle çizmek",
+          "correct": false
+        },
+        {
+          "text": "Kat dış konturunu yakalayarak parametrik plak üretmek",
+          "correct": true
+        },
+        {
+          "text": "Tarama uygulamak",
+          "correct": false
+        },
+        {
+          "text": "Aks balonu koymak",
+          "correct": false
+        }
+      ],
+      "explanation": "Kat dış konturu yakalanarak döşeme hızlı ve doğru üretilir; kalınlık kat üst düzlemine bağlanır.",
+      "bloom": "Uygulama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-TM12.1"
+    },
+    {
+      "id": "tm12-3",
+      "prompt": "Döşeme kalınlığı neye bağlanmalıdır?",
+      "options": [
+        {
+          "text": "Sabit bir kota",
+          "correct": false
+        },
+        {
+          "text": "Kat üst düzlemine",
+          "correct": true
+        },
+        {
+          "text": "Pafta ölçeğine",
+          "correct": false
+        },
+        {
+          "text": "Aks aralığına",
+          "correct": false
+        }
+      ],
+      "explanation": "Kalınlığı kat üst düzlemine bağlamak, kat yüksekliği değişince döşemenin uyumlu kalmasını sağlar.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM12.2"
+    }
+  ]
 }

@@ -212,5 +212,85 @@
         "text": "Kopyalanan listeyi Listeleri Değiştir (Listen modifizieren) ile açın. Ze-Lö komutuyla Müşteri Adı (Kundenname) satır 1 ve satır 2 hücrelerini silin; ardından Ze-Ins komutuyla (Liste bölgesi: Liste başlığı / Listenkopf; hücre tipi: Metinler / Texte) sabit büro adını metin olarak ekleyin."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "lj7-1",
+      "prompt": "Donatı lejantını mimari lejant şablonuyla kurmaya çalışmak neden yanlıştır?",
+      "options": [
+        {
+          "text": "Donatı lejantı renkli olamaz",
+          "correct": false
+        },
+        {
+          "text": "Donatı lejantı poz, çap, şekil kodu, toplam boy gibi donatıya özgü niteliklere dayanır",
+          "correct": true
+        },
+        {
+          "text": "Mimari lejant daha hızlıdır",
+          "correct": false
+        },
+        {
+          "text": "İkisi aynıdır",
+          "correct": false
+        }
+      ],
+      "explanation": "Donatı lejantı donatıya özgü nitelikler üzerine kuruludur; mimari şablonla çalışmaz.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ7.1"
+    },
+    {
+      "id": "lj7-2",
+      "prompt": "Büküm şekli gösteriminde hangi standart geçerlidir?",
+      "options": [
+        {
+          "text": "DIN 277",
+          "correct": false
+        },
+        {
+          "text": "ISO 3766 (çizim ve ölçülendirme)",
+          "correct": true
+        },
+        {
+          "text": "TS 825",
+          "correct": false
+        },
+        {
+          "text": "EN 1990",
+          "correct": false
+        }
+      ],
+      "explanation": "Donatı büküm şekli ISO 3766 çizim/ölçülendirme kuralına göre gösterilir.",
+      "bloom": "Hatırlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ7.3"
+    },
+    {
+      "id": "lj7-3",
+      "prompt": "Standart donatı lejantını özelleştirmeden önce ne yaparsınız?",
+      "options": [
+        {
+          "text": "Doğrudan standardı düzenlemek",
+          "correct": false
+        },
+        {
+          "text": "Lejantları Yönet ile Ofis klasörüne kopyalamak",
+          "correct": true
+        },
+        {
+          "text": "Pafta açmak",
+          "correct": false
+        },
+        {
+          "text": "Mahal tanımlamak",
+          "correct": false
+        }
+      ],
+      "explanation": "Standart donatı lejantı önce Ofis klasörüne kopyalanır; sütunlar kopya üzerinde düzenlenir.",
+      "bloom": "Uygulama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-LJ7.2"
+    }
+  ]
 }

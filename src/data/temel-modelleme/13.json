@@ -256,5 +256,85 @@
         "text": "Merdiveni rıht sayısı, rıht yüksekliği ve basamak genişliğiyle etiketlemek için: FORMAT(\"%.0f STG %.1f/%.1f\"; @88@; @89@; @90@). Burada @88@ rıht sayısı (Steigungsanzahl), @89@ rıht yüksekliği (Steigungshöhe), @90@ basamak genişliğidir (Auftrittsbreite). Merdivende bir değişiklik yapıldığında etiket stilinin yeniden yerleştirilmesi gerekir."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "tm13-1",
+      "prompt": "Merdiveni kat düzlemleri yerine sabit yüksekliğe bağlamanın sakıncası nedir?",
+      "options": [
+        {
+          "text": "Merdiven iki kez sayılır",
+          "correct": false
+        },
+        {
+          "text": "Kat yüksekliği değişince basamak sayısı uymaz",
+          "correct": true
+        },
+        {
+          "text": "Renk değişir",
+          "correct": false
+        },
+        {
+          "text": "Korkuluk otomatik silinir",
+          "correct": false
+        }
+      ],
+      "explanation": "Merdiven kat düzlemleri (OK/UK) arasına bağlanmalı; sabit yükseklik, kat değişince basamak/sahanlık uyumsuzluğuna yol açar.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM13.1"
+    },
+    {
+      "id": "tm13-2",
+      "prompt": "Bir merdivenin basamak sayısını temelde ne belirler?",
+      "options": [
+        {
+          "text": "Pafta boyutu",
+          "correct": false
+        },
+        {
+          "text": "Kat yüksekliği ile rıht yüksekliği",
+          "correct": true
+        },
+        {
+          "text": "Kalem kalınlığı",
+          "correct": false
+        },
+        {
+          "text": "Aks aralığı",
+          "correct": false
+        }
+      ],
+      "explanation": "Basamak sayısı kat yüksekliğinin rıht yüksekliğine bölümünden gelir; düzlemlere bağlı merdiven bunu otomatik korur.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM13.2"
+    },
+    {
+      "id": "tm13-3",
+      "prompt": "2B planda merdivenin okunması için ne ayarlanır?",
+      "options": [
+        {
+          "text": "Mahya ve saçak",
+          "correct": false
+        },
+        {
+          "text": "Kesim çizgisi (section display) ve basamak numaralandırması",
+          "correct": true
+        },
+        {
+          "text": "Antet ve çerçeve",
+          "correct": false
+        },
+        {
+          "text": "Ofset ve ölçek",
+          "correct": false
+        }
+      ],
+      "explanation": "2B planda kesim çizgisi ve basamak numaralandırması ayarlanarak merdiven standartlara uygun gösterilir.",
+      "bloom": "Uygulama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-TM13.3"
+    }
+  ]
 }

@@ -366,5 +366,85 @@
         "caption": "Sonuç: kullanım türü bilgisi eklenmiş ve ince yapı yüzeyleri hesaba katıldığı için biraz küçülmüş DIN277 alanları."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "lj3-1",
+      "prompt": "Kütüphanedeki/ofis standardı lejantı doğrudan düzenlemenin riski nedir?",
+      "options": [
+        {
+          "text": "Lejantın silinmesi",
+          "correct": false
+        },
+        {
+          "text": "Tüm projelerde kullanılan orijinali bozmak",
+          "correct": true
+        },
+        {
+          "text": "Pafta ölçeğinin değişmesi",
+          "correct": false
+        },
+        {
+          "text": "Mahal oluşması",
+          "correct": false
+        }
+      ],
+      "explanation": "Orijinali düzenlemek onu kullanan tüm projeleri etkiler. Önce lejant projeye kopyalanıp kopya üzerinde çalışılır.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ3.1"
+    },
+    {
+      "id": "lj3-2",
+      "prompt": "Varsayılan mimari lejantları bozmadan nasıl özelleştirirsiniz?",
+      "options": [
+        {
+          "text": "Doğrudan standart üzerinde çalışarak",
+          "correct": false
+        },
+        {
+          "text": "Ofis klasörüne kopyalayıp kopyayı düzenleyerek",
+          "correct": true
+        },
+        {
+          "text": "Yeni proje açarak",
+          "correct": false
+        },
+        {
+          "text": "Pafta değiştirerek",
+          "correct": false
+        }
+      ],
+      "explanation": "Standart lejant Ofis klasörüne kopyalanır; özelleştirme kopya üzerinde yapılır.",
+      "bloom": "Uygulama",
+      "difficulty": "Kolay",
+      "outcomeCode": "K-LJ3.1"
+    },
+    {
+      "id": "lj3-3",
+      "prompt": "Mevcut bir lejantı tasarım altlığı olarak çalışma alanına nasıl çağırırsınız?",
+      "options": [
+        {
+          "text": "Mahal Etiketiyle",
+          "correct": false
+        },
+        {
+          "text": "Lejant şablonunu patlatarak (Place Legend Template)",
+          "correct": true
+        },
+        {
+          "text": "Alan Tespitiyle",
+          "correct": false
+        },
+        {
+          "text": "Aks ekleyerek",
+          "correct": false
+        }
+      ],
+      "explanation": "Lejant Yerleştir/patlat ile şablon çalışma alanına açılır ve tasarım altlığı olur.",
+      "bloom": "Hatırlama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ3.3"
+    }
+  ]
 }

@@ -80,5 +80,85 @@
       "body": "Mevcut bir **görünüş veya kesit** üzerinden yeni bir kesit türetebilirsiniz. Örneğin bir cephe görünüşü ya da ana kesit üzerinde yatay/düşey yeni bir kesit hattı tanımlayarak ikincil (detay) kesitleri çıkarırsınız. Böylece ana çizimden detay kesitlerine hızlıca inersiniz; tüm bu kesitler modelle ilişkili kalır ve birlikte güncellenir.\nKaynak: ALLPLAN KB de_10813 (UVS - Yeni Görünüşler/Kesitler).",
       "figures": []
     }
+  ],
+  "quiz": [
+    {
+      "id": "tm20-1",
+      "prompt": "Kesit hattını silerseniz kesite ne olur?",
+      "options": [
+        {
+          "text": "Kesit daha net olur",
+          "correct": false
+        },
+        {
+          "text": "Kesit güncellenmez veya kaybolur",
+          "correct": true
+        },
+        {
+          "text": "Model silinir",
+          "correct": false
+        },
+        {
+          "text": "Pafta büyür",
+          "correct": false
+        }
+      ],
+      "explanation": "Kesit, kesit hattıyla ilişkilidir; hat silinirse kesit güncellenmez veya kaybolur. Ayrıca bakış yönü yanlışsa kesit ters alınır.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM20.1"
+    },
+    {
+      "id": "tm20-2",
+      "prompt": "Kesitte kesilen elemanların ayırt edilmesi için ne ayarlanır?",
+      "options": [
+        {
+          "text": "Aks balonu",
+          "correct": false
+        },
+        {
+          "text": "Kalın kontur ve malzeme taraması",
+          "correct": true
+        },
+        {
+          "text": "Mahal etiketi",
+          "correct": false
+        },
+        {
+          "text": "Ofset",
+          "correct": false
+        }
+      ],
+      "explanation": "Kesilen elemanlara kalın kontur ve malzeme taraması verilerek kesit okunur hale gelir.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM20.2"
+    },
+    {
+      "id": "tm20-3",
+      "prompt": "A-A ve B-B kesitleri neye göre ilişkiseldir?",
+      "options": [
+        {
+          "text": "Pafta antetine",
+          "correct": false
+        },
+        {
+          "text": "3B modele; model değişince kesit kendiliğinden güncellenir",
+          "correct": true
+        },
+        {
+          "text": "Kalem rengine",
+          "correct": false
+        },
+        {
+          "text": "Katman sırasına",
+          "correct": false
+        }
+      ],
+      "explanation": "İlişkisel kesitler 3B modelden türetilir; model değiştiğinde kesit otomatik güncellenir.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Orta",
+      "outcomeCode": "K-TM20.3"
+    }
   ]
 }

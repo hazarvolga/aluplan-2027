@@ -437,5 +437,85 @@
         "text": "Not: Mahallerin eğimli alt kotlarında DIN277 alan hesabında tutarsız sonuçlar oluşabilir."
       }
     ]
-  }
+  },
+  "quiz": [
+    {
+      "id": "lj4-1",
+      "prompt": "Bir hücreye yanlış veya var olmayan nitelik bağlarsanız ne olur?",
+      "options": [
+        {
+          "text": "Tüm lejant silinir",
+          "correct": false
+        },
+        {
+          "text": "O hücre çıktıda boş veya hatalı gelir",
+          "correct": true
+        },
+        {
+          "text": "Pafta büyür",
+          "correct": false
+        },
+        {
+          "text": "Mahal oluşur",
+          "correct": false
+        }
+      ],
+      "explanation": "Yanlış nitelik bağlı hücre boş/hatalı çıkar. Nitelik adı modeldeki gerçek nitelikle eşleşmelidir.",
+      "bloom": "Analiz",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ4.2"
+    },
+    {
+      "id": "lj4-2",
+      "prompt": "Ondalıklı bir alan değerini biçimlemek için hangi format uygundur?",
+      "options": [
+        {
+          "text": "A32 (metin)",
+          "correct": false
+        },
+        {
+          "text": "F8.2 (ondalıklı sayı)",
+          "correct": true
+        },
+        {
+          "text": "I4 (tam sayı)",
+          "correct": false
+        },
+        {
+          "text": "Ø (çap)",
+          "correct": false
+        }
+      ],
+      "explanation": "F8.2 ondalıklı sayıyı iki basamakla biçimler; A32 metin, I4 tam sayı içindir.",
+      "bloom": "Uygulama",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ4.3"
+    },
+    {
+      "id": "lj4-3",
+      "prompt": "Hücreleri doğru tanımladığınızı nasıl doğrularsınız?",
+      "options": [
+        {
+          "text": "Antet dolunca",
+          "correct": false
+        },
+        {
+          "text": "Örnek bir elemanda hücreler gerçek değerleri gösterir",
+          "correct": true
+        },
+        {
+          "text": "Pafta büyüyünce",
+          "correct": false
+        },
+        {
+          "text": "Aks çıkınca",
+          "correct": false
+        }
+      ],
+      "explanation": "Her hücre doğru niteliğe/formüle bağlıysa örnek elemanda alan, no, boyut gibi gerçek değerler görünür.",
+      "bloom": "Değerlendirme",
+      "difficulty": "Orta",
+      "outcomeCode": "K-LJ4.1"
+    }
+  ]
 }

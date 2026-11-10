@@ -1,7 +1,8 @@
 'use client';
 
-import { useEffect, useState, type ReactElement } from 'react';
+import { useEffect, useState, type MouseEvent, type ReactElement } from 'react';
 import type { OgrenmeYolu } from '@/data/akademi-mufredat-haritasi';
+import { AKADEMI_FILTRE_EVENT, type AkademiFiltrePatch } from './AkademiKatalogFiltre';
 import styles from './AkademiOgrenmeYollari.module.css';
 
 const DONE_PREFIX = 'akademi-lesson-done-';
@@ -35,6 +36,17 @@ export function AkademiOgrenmeYollari({
     setHydrated(true);
   }, [yollar]);
 
+  // Kartın bağlantısı JS yoksa yine çalışır (tam navigasyon). JS varsa süzgeci
+  // olayla sürüp tam sayfa yenilemeyi önler; liste yumuşakça süzülür.
+  function pickRole(role: string) {
+    return (event: MouseEvent<HTMLAnchorElement>): void => {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+      event.preventDefault();
+      const detail: AkademiFiltrePatch = { rol: role };
+      window.dispatchEvent(new CustomEvent(AKADEMI_FILTRE_EVENT, { detail }));
+    };
+  }
+
   return (
     <ul className={styles.paths}>
       {yollar.map((yol) => {
@@ -66,7 +78,7 @@ export function AkademiOgrenmeYollari({
               <span className={styles.pathPct}>
                 {hydrated ? `${completed}/${total} ders · %${pct}` : `${total} ders`}
               </span>
-              <a className={styles.pathCta} href={`${baseHref}?rol=${yol.role}#katalog`}>
+              <a className={styles.pathCta} href={`${baseHref}?rol=${yol.role}#katalog`} onClick={pickRole(yol.role)}>
                 Rolün modüllerini gör →
               </a>
             </div>

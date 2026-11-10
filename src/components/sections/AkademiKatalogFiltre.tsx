@@ -1,9 +1,20 @@
 'use client';
 
-import { useState, type MouseEvent, type ReactElement, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type MouseEvent, type ReactElement, type ReactNode } from 'react';
 import { SectionHeader } from './SectionHeader';
 import { ROL_ADLARI, type AkademiRol } from '@/data/akademi-mufredat-haritasi';
 import styles from './AkademiKatalog.module.css';
+
+/**
+ * Rol kartları gibi dışarıdaki bileşenler, süzgeci tam sayfa yenilemeden
+ * güncellemek için bu olayı tetikler. detail, mevcut süzgece birleştirilir.
+ */
+export const AKADEMI_FILTRE_EVENT = 'akademi:filtre';
+export interface AkademiFiltrePatch {
+  seviye?: string;
+  rol?: string;
+  sure?: string;
+}
 
 export interface KatalogKarti {
   code: string;
@@ -62,6 +73,29 @@ export function AkademiKatalogFiltre({
 }): ReactElement {
   const [filters, setFilters] = useState<Filters>(initial);
   const { seviye, rol, sure } = filters;
+  const filtersRef = useRef(filters);
+  filtersRef.current = filters;
+
+  // Rol kartları gibi dış bileşenler süzgeci olayla sürer: birleştir, URL'i
+  // güncelle, listeyi yumuşakça göster. Tam sayfa yenileme olmaz.
+  useEffect(() => {
+    function onFiltre(event: Event): void {
+      const detail = (event as CustomEvent<AkademiFiltrePatch>).detail;
+      if (!detail) return;
+      const next: Filters = { ...filtersRef.current, ...detail };
+      setFilters(next);
+      try {
+        window.history.replaceState(null, '', buildUrl(baseHref, next));
+      } catch {
+        // History yoksa süzme yine çalışır, yalnız adres güncellenmez.
+      }
+      document
+        .getElementById('katalog-modul')
+        ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    window.addEventListener(AKADEMI_FILTRE_EVENT, onFiltre);
+    return () => window.removeEventListener(AKADEMI_FILTRE_EVENT, onFiltre);
+  }, [baseHref]);
 
   function pick(key: keyof Filters, value?: string) {
     return (event: MouseEvent<HTMLAnchorElement>) => {

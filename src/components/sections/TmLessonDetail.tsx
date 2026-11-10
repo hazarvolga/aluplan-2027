@@ -1,7 +1,8 @@
 import type { ReactElement, ReactNode } from 'react';
 import { CompactPageHero } from './CompactPageHero';
 import { SectionHeader } from './SectionHeader';
-import { CommandTable, LessonImage, LessonToc, PrevNextNav } from '@/components/akademi/kit';
+import { CommandTable, LessonImage, LessonToc, MetaRow, PrevNextNav } from '@/components/akademi/kit';
+import type { MetaItem } from '@/components/akademi/kit';
 import { temelModellemeLessons } from '@/data/temel-modelleme';
 import type { TmLesson } from '@/data/temel-modelleme';
 import styles from './TmLessonDetail.module.css';
@@ -30,17 +31,29 @@ export function TmLessonDetail({
   allLessons = temelModellemeLessons,
   basePath = '/akademi/temel-modelleme',
   breadcrumbLabel = 'Temel Modelleme',
+  level = 'Temel',
+  allplanVersion = 'ALLPLAN 2022 ve üzeri',
 }: {
   lesson: TmLesson;
   allLessons?: readonly TmLesson[];
   basePath?: string;
   breadcrumbLabel?: string;
+  level?: string;
+  allplanVersion?: string;
 }): ReactElement {
   const embeddableVideos = lesson.media.videos.filter((v) => Boolean(v.youtubeId));
   const ordered = allLessons;
   const index = ordered.findIndex((l) => l.slug === lesson.slug);
   const previous = index > 0 ? ordered[index - 1] : undefined;
   const next = index >= 0 && index < ordered.length - 1 ? ordered[index + 1] : undefined;
+
+  const meta: readonly MetaItem[] = [
+    { k: 'Seviye', v: level },
+    { k: 'Süre', v: lesson.duration },
+    { k: 'Ön koşul', v: previous ? `${String(previous.no).padStart(2, '0')} · ${previous.title}` : 'İlk ders' },
+    { k: 'Başlangıç', v: previous ? 'Önceki dersin sonucu' : 'Yeni, boş proje' },
+    { k: 'ALLPLAN', v: allplanVersion },
+  ];
 
   return (
     <div className={styles.page}>
@@ -52,7 +65,11 @@ export function TmLessonDetail({
         <span aria-current="page">{lesson.title}</span>
       </nav>
 
-      <CompactPageHero title={lesson.title} lead={lesson.objectives[0]} />
+      <CompactPageHero title={lesson.title} lead={lesson.objectives[0]}>
+        <div className={styles.kunye}>
+          <MetaRow items={meta} />
+        </div>
+      </CompactPageHero>
 
       <LessonToc slug={lesson.slug} />
 

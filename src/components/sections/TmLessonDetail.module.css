@@ -7,6 +7,8 @@
 .band{padding-block:var(--space-stack-xl);border-bottom:var(--border-width-default) solid var(--border-default);scroll-margin-top:7.5rem}
 .lastBand{border-bottom:0}
 
+.kunye{margin-top:var(--space-stack-md);max-width:56rem}
+
 .intro{margin:0;max-width:46rem;font-size:var(--type-body-md-size);line-height:var(--line-height-relaxed,1.7);color:var(--text-secondary);padding-left:var(--space-inset-md);border-left:var(--border-width-accent,2px) solid var(--accent-border)}
 
 .checkpoint{max-width:52rem;border:var(--border-width-default) solid var(--accent-border);background:var(--surface-raised);padding:var(--space-inset-md);display:flex;flex-direction:column;gap:var(--space-stack-xs)}

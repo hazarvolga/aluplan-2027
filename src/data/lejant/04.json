@@ -171,7 +171,7 @@
       },
       {
         "type": "heading",
-        "text": "Oturma Alanı Yönetmeliğine göre metraj"
+        "text": "Nitelikler - Oturma alanı hesabı, kullanım alanları için genel bakış"
       },
       {
         "type": "text",
@@ -213,7 +213,7 @@
       },
       {
         "type": "heading",
-        "text": "Sıfırdan Yeni Bir Lejant Oluşturmak (Döşeme Yüzeyi Örneği)"
+        "text": "Lejantlar - Yeni bir lejant oluşturma (Örnek: Döşeme yüzeyi, en üst katman)"
       },
       {
         "type": "text",
@@ -292,7 +292,7 @@
       },
       {
         "type": "heading",
-        "text": "Bir Etiket Stilinde Hangi Nitelikler Kullanılıyor?"
+        "text": "Etiket Stilleri - Etiket stillerinin içeriği"
       },
       {
         "type": "text",
@@ -354,7 +354,7 @@
       },
       {
         "type": "heading",
-        "text": "Etiket Stillerinde Biçim Ayarları ve Kontrol Karakterleri"
+        "text": "Etiket Stilleri - Biçim ayarları"
       },
       {
         "type": "text",
@@ -406,7 +406,7 @@
       },
       {
         "type": "heading",
-        "text": "Kat (Geschoss) Nitelikleri: Metin, Geometri, DIN277 ve BauNVO"
+        "text": "Nitelikler - Kat için Genel Bakış (Metinler, Geometri, DIN277 ve BauNVO)"
       },
       {
         "type": "text",

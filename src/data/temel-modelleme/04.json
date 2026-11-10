@@ -171,11 +171,11 @@
       },
       {
         "type": "heading",
-        "text": "Örnek bina: iki katlı bir yapı"
+        "text": "Mahaller - Katlar ile DIN 277'ye göre brüt hacimlerin ve brüt taban alanlarının belirlenmesi"
       },
       {
         "type": "text",
-        "text": "Aşağıdaki örnek; bodrumsuz, kullanılmayan çatı katlı iki katlı bir binadır ve giriş bölgesinde iki katlı bir galeri boşluğu (Luftraum) vardır. Her katı, duvarların bulunduğu çizim dosyasında bir **Kat** elemanı olarak girersiniz."
+        "text": "**Örnek bina: iki katlı bir yapı.** Aşağıdaki örnek; bodrumsuz, kullanılmayan çatı katlı iki katlı bir binadır ve giriş bölgesinde iki katlı bir galeri boşluğu (Luftraum) vardır. Her katı, duvarların bulunduğu çizim dosyasında bir **Kat** elemanı olarak girersiniz."
       },
       {
         "type": "image",
@@ -183,12 +183,8 @@
         "caption": "Örnek bina: iki katlı yapı, girişte iki katlı galeri boşluğu."
       },
       {
-        "type": "heading",
-        "text": "Zemin kat: tek katlı alan"
-      },
-      {
         "type": "text",
-        "text": "Kat elemanını kat planının **dış kenarlarından** girin; sıvayı yapı elemanı içinde **Dış Yan Kaplamalar (Seitenbeläge außen)** ile mutlaka tanımlayın. Katın yüksekliğini, taban döşemesinin alt kenarından üstteki döşemenin üst kenarına kadar verin."
+        "text": "**Zemin kat: tek katlı alan.** Kat elemanını kat planının **dış kenarlarından** girin; sıvayı yapı elemanı içinde **Dış Yan Kaplamalar (Seitenbeläge außen)** ile mutlaka tanımlayın. Katın yüksekliğini, taban döşemesinin alt kenarından üstteki döşemenin üst kenarına kadar verin."
       },
       {
         "type": "image",
@@ -205,12 +201,8 @@
         "caption": "Kat elemanı ayarları; DIN 277 için kritik alanlar kırmızı çerçeveli."
       },
       {
-        "type": "heading",
-        "text": "İki katlı alan (galeri boşluğu)"
-      },
-      {
         "type": "text",
-        "text": "Kırmızı alan iki katlıdır ve iki şekilde girilebilir: ya tam yüksekliğiyle tek elemanda, ya da zemin kat ile normal kat olarak ikiye bölerek. İkiye bölerseniz üst kısım için **Alan Tipi (Flächenart) DIN277** değerini **M = çok katlı BRI, BGF yok** seçin. Ayırma çizgisini, sıva kalınlığı kadar mesafeyle duvarın önüne yerleştirin; böylece her iki alanın alanı ve hacmi doğru çıkar."
+        "text": "**İki katlı alan (galeri boşluğu).** Kırmızı alan iki katlıdır ve iki şekilde girilebilir: ya tam yüksekliğiyle tek elemanda, ya da zemin kat ile normal kat olarak ikiye bölerek. İkiye bölerseniz üst kısım için **Alan Tipi (Flächenart) DIN277** değerini **M = çok katlı BRI, BGF yok** seçin. Ayırma çizgisini, sıva kalınlığı kadar mesafeyle duvarın önüne yerleştirin; böylece her iki alanın alanı ve hacmi doğru çıkar."
       },
       {
         "type": "image",
@@ -218,12 +210,8 @@
         "caption": "İki katlı alanın ayrımı: ayırma çizgisi duvarın önünde, sıva kalınlığı kadar içeride."
       },
       {
-        "type": "heading",
-        "text": "Normal kat ve çatı katı"
-      },
-      {
         "type": "text",
-        "text": "Normal katın geometrisi zemin katı izler; yüksekliğini döşeme altından üst döşemenin üstüne tanımlarsınız. En üst (çatı) katta üst kenar, çatının veya çatı kaplamasının üstüdür. Kullanılmayan çatı arası için **Alan Tipi DIN277 = M** seçin; çünkü bu alan hacme (BRI) girer ama brüt taban alanına (BGF) girmez."
+        "text": "**Normal kat ve çatı katı.** Normal katın geometrisi zemin katı izler; yüksekliğini döşeme altından üst döşemenin üstüne tanımlarsınız. En üst (çatı) katta üst kenar, çatının veya çatı kaplamasının üstüdür. Kullanılmayan çatı arası için **Alan Tipi DIN277 = M** seçin; çünkü bu alan hacme (BRI) girer ama brüt taban alanına (BGF) girmez."
       },
       {
         "type": "image",
@@ -236,12 +224,8 @@
         "caption": "Çatı katı: üst kenar çatı kaplamasının üstünde, Alan Tipi M."
       },
       {
-        "type": "heading",
-        "text": "Etiketleme"
-      },
-      {
         "type": "text",
-        "text": "Oluşturduğunuz Kat elemanlarının her birini ayrı ayrı etiketleyebilirsiniz. 1:100 ölçeğindeki etiket stili, DIN 277'ye göre ilgili alan ve hacim bilgilerini gösterir."
+        "text": "**Etiketleme.** Oluşturduğunuz Kat elemanlarının her birini ayrı ayrı etiketleyebilirsiniz. 1:100 ölçeğindeki etiket stili, DIN 277'ye göre ilgili alan ve hacim bilgilerini gösterir."
       },
       {
         "type": "image",
@@ -250,7 +234,7 @@
       },
       {
         "type": "heading",
-        "text": "Kat (Geschoss) Elemanının Nitelikleri ve Etiketlenmesi"
+        "text": "Nitelikler - Kat için Genel Bakış (Metinler, Geometri, DIN277 ve BauNVO)"
       },
       {
         "type": "text",
@@ -267,7 +251,7 @@
       },
       {
         "type": "heading",
-        "text": "Çatı Katında Eğimli Çatıya Uyan Ara Döşeme Oluşturma"
+        "text": "Çatı - Kat - Ara döşeme oluşturma"
       },
       {
         "type": "text",

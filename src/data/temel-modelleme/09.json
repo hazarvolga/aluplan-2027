@@ -138,16 +138,16 @@
     "title": "Mevcut Duvara Isı Yalıtımı",
     "blocks": [
       {
+        "type": "heading",
+        "text": "Tadilat Planlaması - Mevcut Bir Duvar Üzerinde Isı Yalıtımı"
+      },
+      {
         "type": "text",
         "text": "Tadilat planlamasında mevcut bir duvara ısı yalıtımı eklemenin iki yolu vardır. Duvarda hiç boşluk yoksa veya az boşluk varsa, mevcut duvarın dışına **yeni bir duvar** çizip onu yalıtım katmanı yapmayı tercih edin. Ancak bu yolda, her boşluk için yeni duvarda da ayrı bir **yeni yapı boşluğu (Neubauöffnung)** açmanız gerekir. **Çok sayıda boşluk** içeren duvarlarda bundan kaçınmak için aşağıdaki yöntemi izleyin."
       },
       {
-        "type": "heading",
-        "text": "Adım 1: Duvarı iki katmana dönüştürün"
-      },
-      {
         "type": "text",
-        "text": "Tek katmanlı duvarınızı, duvar özellikleri üzerinden **iki katmanlı** bir duvara dönüştürün. Eklenen ikinci katmana yalıtım için gerekli **kalınlığı ve yüksekliği** verin."
+        "text": "**Adım 1: Duvarı iki katmana dönüştürün.** Tek katmanlı duvarınızı, duvar özellikleri üzerinden **iki katmanlı** bir duvara dönüştürün. Eklenen ikinci katmana yalıtım için gerekli **kalınlığı ve yüksekliği** verin."
       },
       {
         "type": "image",
@@ -155,12 +155,8 @@
         "caption": "Duvar özelliklerinde tek katmanlı duvarı iki katmana çevirme."
       },
       {
-        "type": "heading",
-        "text": "Adım 2: Yalıtım katmanını yeni yapıya dönüştürün"
-      },
-      {
         "type": "text",
-        "text": "Asistanda uygun bir yalıtım katmanı bulun ve bu katmana **sağ tıklayın**. Bağlam menüsünde **Tadilat Planlaması Dönüştürme (Umwandlung Umbauplanung)** fonksiyonunu seçin; ayarlar bu sırada devralınır."
+        "text": "**Adım 2: Yalıtım katmanını yeni yapıya dönüştürün.** Asistanda uygun bir yalıtım katmanı bulun ve bu katmana **sağ tıklayın**. Bağlam menüsünde **Tadilat Planlaması Dönüştürme (Umwandlung Umbauplanung)** fonksiyonunu seçin; ayarlar bu sırada devralınır."
       },
       {
         "type": "image",
@@ -168,12 +164,8 @@
         "caption": "Yalıtım katmanına sağ tık ile Tadilat Planlaması Dönüştürme fonksiyonu."
       },
       {
-        "type": "heading",
-        "text": "Adım 3: Dış katmanı işaretleyip uygulayın"
-      },
-      {
         "type": "text",
-        "text": "**Ne yeni yapıya dönüştürülecek? (Was soll in Neubau gewandelt werden?)** sorusunda, iki katmanlı duvarınızın yeni oluşturulan **dış katmanını** işaretleyin ve **Uygula (Anwenden)** ile onaylayın. Bu dönüşümü **Mimari Yapı Elemanı Özelliklerini Aktar (AR-Bauteileigenschaften übertragen)** fonksiyonuyla diğer dış duvarlara da uygulayabilirsiniz."
+        "text": "**Adım 3: Dış katmanı işaretleyip uygulayın.** **Ne yeni yapıya dönüştürülecek? (Was soll in Neubau gewandelt werden?)** sorusunda, iki katmanlı duvarınızın yeni oluşturulan **dış katmanını** işaretleyin ve **Uygula (Anwenden)** ile onaylayın. Bu dönüşümü **Mimari Yapı Elemanı Özelliklerini Aktar (AR-Bauteileigenschaften übertragen)** fonksiyonuyla diğer dış duvarlara da uygulayabilirsiniz."
       },
       {
         "type": "image",
@@ -181,12 +173,8 @@
         "caption": "Yeni yapıya dönüştürülecek dış katmanın seçimi."
       },
       {
-        "type": "heading",
-        "text": "Yıkım paftasına dikkat"
-      },
-      {
         "type": "text",
-        "text": "Seçtiğiniz yönteme bağlı olarak, dıştaki parapet çizgileri yıkım paftası (Abbruchplan) görünümünde **görünür kalabilir veya eksik olabilir**. Bunu ancak ilgili parapetleri devre dışı bırakarak ve gerekirse **2B çizgi** ile sonradan düzelterek yönetebilirsiniz."
+        "text": "**Yıkım paftasına dikkat.** Seçtiğiniz yönteme bağlı olarak, dıştaki parapet çizgileri yıkım paftası (Abbruchplan) görünümünde **görünür kalabilir veya eksik olabilir**. Bunu ancak ilgili parapetleri devre dışı bırakarak ve gerekirse **2B çizgi** ile sonradan düzelterek yönetebilirsiniz."
       },
       {
         "type": "image",
@@ -195,7 +183,7 @@
       },
       {
         "type": "heading",
-        "text": "Nitelik Referansi: Poligon Duvar"
+        "text": "Nitelikler - Poligon Duvar için Genel Bakış"
       },
       {
         "type": "text",
@@ -212,7 +200,7 @@
       },
       {
         "type": "heading",
-        "text": "Nitelik Referansi: Duvar ve Toplam Duvar (PARENT)"
+        "text": "Nitelikler - Duvar ve Toplam Duvar için genel bakış (PARENT() ile)"
       },
       {
         "type": "text",

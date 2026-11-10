@@ -204,6 +204,10 @@
     "title": "İki Katı Kapsayan Çatı Düzlemi",
     "blocks": [
       {
+        "type": "heading",
+        "text": "Çatı - İki kat boyunca devam eden çatı düzlemi"
+      },
+      {
         "type": "text",
         "text": "İçinde iki kat bulunan eğimli bir çatı için, Yapı Strüktürü (Bauwerkstruktur / BWS) ile Çatı Peyzajı'nı (Dachlandschaft) birlikte kullanırsınız. Önce çatı düzlemini oluşturur, ondan bir çatı peyzajı üretir ve bu peyzajı ilgili katlara atarsınız."
       },
@@ -222,20 +226,12 @@
         "caption": "Prosedürün genel akışı."
       },
       {
-        "type": "heading",
-        "text": "1. Çatı düzlemini oluşturun"
+        "type": "text",
+        "text": "**1. Çatı düzlemini oluşturun.** Yapı strüktürünüzde yalnızca çatı düzlemine ayrılmış bir çizim dosyası açın; adını örn. Orijinal Çatı Düzlemi koyun. Bu dosyayı katların içine değil, BWS'nin üst düzey bir alanına yerleştirin; çünkü tek bir kata ait değildir ve sonradan kolay bulunur. Dosyada çatı düzlemini, gerekli çatı pencereleri dahil, her zamanki gibi oluşturun."
       },
       {
         "type": "text",
-        "text": "Yapı strüktürünüzde yalnızca çatı düzlemine ayrılmış bir çizim dosyası açın; adını örn. Orijinal Çatı Düzlemi koyun. Bu dosyayı katların içine değil, BWS'nin üst düzey bir alanına yerleştirin; çünkü tek bir kata ait değildir ve sonradan kolay bulunur. Dosyada çatı düzlemini, gerekli çatı pencereleri dahil, her zamanki gibi oluşturun."
-      },
-      {
-        "type": "heading",
-        "text": "2. Çatı peyzajını üretin"
-      },
-      {
-        "type": "text",
-        "text": "Düzlem Yöneticisi'ne geçin. Çatı peyzajına ihtiyaç duyan alt katın adına sağ tıklayıp Çatı peyzajı ekle (Dachlandschaft einfügen) seçin. Açılan kutuda, çatı düzlemini oluşturduğunuz çizim dosyasını gösterin."
+        "text": "**2. Çatı peyzajını üretin.** Düzlem Yöneticisi'ne geçin. Çatı peyzajına ihtiyaç duyan alt katın adına sağ tıklayıp Çatı peyzajı ekle (Dachlandschaft einfügen) seçin. Açılan kutuda, çatı düzlemini oluşturduğunuz çizim dosyasını gösterin."
       },
       {
         "type": "image",
@@ -271,12 +267,8 @@
         "caption": "Düzlem Yöneticisi'nde alt ve üst kat peyzajları."
       },
       {
-        "type": "heading",
-        "text": "3. Peyzajı katlara atayın"
-      },
-      {
         "type": "text",
-        "text": "Düzlem Yöneticisi'nden çıkıp BWS'de peyzajları ihtiyaç duyan strüktür düğümlerine atarsınız. Strüktür düğümüne (örn. Çatı Katı) sağ tıklayıp Düzlemleri ata (Ebenen zuweisen) seçin ve istediğiniz çatı peyzajının önüne onay işareti koyun; kattaki diğer onay işaretleri korunur. Böylece bu düğümün tamamında ve içindeki tüm çizim dosyalarında peyzaj geçerli olur. Atamayı yalnızca seçili çizim dosyalarına da yapabilirsiniz."
+        "text": "**3. Peyzajı katlara atayın.** Düzlem Yöneticisi'nden çıkıp BWS'de peyzajları ihtiyaç duyan strüktür düğümlerine atarsınız. Strüktür düğümüne (örn. Çatı Katı) sağ tıklayıp Düzlemleri ata (Ebenen zuweisen) seçin ve istediğiniz çatı peyzajının önüne onay işareti koyun; kattaki diğer onay işaretleri korunur. Böylece bu düğümün tamamında ve içindeki tüm çizim dosyalarında peyzaj geçerli olur. Atamayı yalnızca seçili çizim dosyalarına da yapabilirsiniz."
       },
       {
         "type": "image",
@@ -293,7 +285,7 @@
       },
       {
         "type": "heading",
-        "text": "Çatı penceresi (güvercinlik) yan ve ön duvarlarını oluşturma"
+        "text": "Çatı Pencereleri (Güvercinlik) - Bir çatı penceresinin yan duvarlarını ve ön (alın) duvarını oluşturma"
       },
       {
         "type": "text",
@@ -347,7 +339,7 @@
       },
       {
         "type": "heading",
-        "text": "Çatı katı için detaylı kat planı gösterimi (mertek düzeni)"
+        "text": "Çatı - Kat - Mertek düzeni gösterimi"
       },
       {
         "type": "text",

@@ -180,11 +180,11 @@
       },
       {
         "type": "heading",
-        "text": "1. Dış sınır formunu hazırlayın"
+        "text": "Az sayıda köşe noktası (kot) kullanarak arazi oluşturma"
       },
       {
         "type": "text",
-        "text": "3B Çizgi (3D-Linie) fonksiyonunu açın ve giriş seçeneklerinden Poligon Çizgisi (Polygonzug) kipini seçin. Kat planında ilk köşe noktasını hedefleyin, diyalog satırına o noktanın Z koordinatını yazın ve <Enter> ile onaylayın. Diğer köşe noktalarını da kendi yükseklikleriyle (Z koordinatı) sırayla tanımlayın. Poligonu kapatmak için son nokta olarak ilk noktayı tekrar gösterin. Devam etmeden önce sonucu bir perspektif görünümde veya animasyonda kontrol edin."
+        "text": "**1. Dış sınır formunu hazırlayın.** 3B Çizgi (3D-Linie) fonksiyonunu açın ve giriş seçeneklerinden Poligon Çizgisi (Polygonzug) kipini seçin. Kat planında ilk köşe noktasını hedefleyin, diyalog satırına o noktanın Z koordinatını yazın ve <Enter> ile onaylayın. Diğer köşe noktalarını da kendi yükseklikleriyle (Z koordinatı) sırayla tanımlayın. Poligonu kapatmak için son nokta olarak ilk noktayı tekrar gösterin. Devam etmeden önce sonucu bir perspektif görünümde veya animasyonda kontrol edin."
       },
       {
         "type": "image",
@@ -192,12 +192,8 @@
         "caption": "Kapalı 3B poligon çizgisinin perspektifte kotlu köşelerle kontrolü."
       },
       {
-        "type": "heading",
-        "text": "2. Arazi yüzeyini oluşturun"
-      },
-      {
         "type": "text",
-        "text": "Yama (Patch) fonksiyonunu çalıştırın ve oluşturduğunuz 3B poligon çizgisini perspektifte veya kat planında seçin. Kapalı poligondan bir 3B yüzey biçimlenir. Yüzeyin eğriliği izokurb çizgileriyle (U eğrileri ve V eğrileri) gösterilir."
+        "text": "**2. Arazi yüzeyini oluşturun.** Yama (Patch) fonksiyonunu çalıştırın ve oluşturduğunuz 3B poligon çizgisini perspektifte veya kat planında seçin. Kapalı poligondan bir 3B yüzey biçimlenir. Yüzeyin eğriliği izokurb çizgileriyle (U eğrileri ve V eğrileri) gösterilir."
       },
       {
         "type": "image",
@@ -205,12 +201,8 @@
         "caption": "Yama ile kapalı poligondan biçimlenen 3B yüzey ve izokurb çizgileri."
       },
       {
-        "type": "heading",
-        "text": "3. 3B katı objeye dönüştürün"
-      },
-      {
         "type": "text",
-        "text": "3B Yüzey (3D-Fläche) komutuyla kat planında arsanın üzerinden düz bir 3B poligon yüzey geçirin. Ardından Ekstrüzyon (Extrudieren), Dış Yüzeyi Ekstrüde Et (Außenfläche extrudieren) ile bu yüzeyi seçin ve bir perspektifte en yüksek arazi noktasını yükseklik olarak verin. Böylece araziyi tümüyle kaplayan bir blok elde edersiniz."
+        "text": "**3. 3B katı objeye dönüştürün.** 3B Yüzey (3D-Fläche) komutuyla kat planında arsanın üzerinden düz bir 3B poligon yüzey geçirin. Ardından Ekstrüzyon (Extrudieren), Dış Yüzeyi Ekstrüde Et (Außenfläche extrudieren) ile bu yüzeyi seçin ve bir perspektifte en yüksek arazi noktasını yükseklik olarak verin. Böylece araziyi tümüyle kaplayan bir blok elde edersiniz."
       },
       {
         "type": "image",
@@ -232,7 +224,7 @@
       },
       {
         "type": "heading",
-        "text": "Excel Dosyasından Arazi Noktaları Okuma"
+        "text": "SAY (DGM) - Excel dosyalarından sembol noktalarının okunması"
       },
       {
         "type": "text",
@@ -263,7 +255,7 @@
       },
       {
         "type": "heading",
-        "text": "Metin (ASCII) Dosyasından Arazi Noktaları Okuma"
+        "text": "İçe Aktarma - Metin dosyalarından sembol noktalarının okunması"
       },
       {
         "type": "text",
@@ -298,7 +290,7 @@
       },
       {
         "type": "heading",
-        "text": "Kotları Deniz Seviyesine (NHN) Göre Etiketleme"
+        "text": "[a] Deniz Seviyesine (Normalhöhennull - NHN) Göre Kotların Etiketlenmesi - Projede Tek Referans - (Allplan 2022 Sürümüne Kadar)"
       },
       {
         "type": "text",

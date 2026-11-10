@@ -153,11 +153,11 @@
       },
       {
         "type": "heading",
-        "text": "Tanımlar penceresini açma"
+        "text": "Yüzey stillerini veya çizgi stillerini projeler arasında kopyalama"
       },
       {
         "type": "text",
-        "text": "**Araçlar (Extras) -> Tanımlar (Definitionen) -> Çizgi Stilleri, Yüzey Stilleri, Çizim Tipleri** bölümünü açın. Çizgi veya yüzey stilleri alanında, çizim tiplerinin üzerine sağ tıklayın ve kısayol menüsünden **Standart/Büro/Proje'den Ek Kaynaklar Ekle (Weitere Ressourcen aus Standard/Büro/Projekt hinzufügen)** seçeneğini seçin."
+        "text": "**Tanımlar penceresini açma.** **Araçlar (Extras) -> Tanımlar (Definitionen) -> Çizgi Stilleri, Yüzey Stilleri, Çizim Tipleri** bölümünü açın. Çizgi veya yüzey stilleri alanında, çizim tiplerinin üzerine sağ tıklayın ve kısayol menüsünden **Standart/Büro/Proje'den Ek Kaynaklar Ekle (Weitere Ressourcen aus Standard/Büro/Projekt hinzufügen)** seçeneğini seçin."
       },
       {
         "type": "image",
@@ -165,12 +165,8 @@
         "caption": "Sağ tık menüsünden ek kaynak ekleme seçeneği."
       },
       {
-        "type": "heading",
-        "text": "Kaynağı seçme ve aktarma"
-      },
-      {
         "type": "text",
-        "text": "Üstteki seçimi **Ek çizim tipleriyle genişlet (Um die zusätzlichen Zeichnungstypen erweitern)** olarak ayarlayın. **Değiştir (Ersetzen)** seçeneğini kullanırsanız stillerin içindeki mevcut çizim tipleri **silinir**. **Kaynak Klasör (Quellordner)** kısmında **Proje (Projekt)** seçin ve stilleri alacağınız projeyi işaretleyin. Alternatif olarak büro standardı için **Büro (Büro)** veya **Standart (Standard)** seçebilirsiniz. **CTRL+A** ile tüm stilleri veya seçmeli olarak istediklerinizi etkinleştirin ve **Tamam (OK)** ile onaylayın."
+        "text": "**Kaynağı seçme ve aktarma.** Üstteki seçimi **Ek çizim tipleriyle genişlet (Um die zusätzlichen Zeichnungstypen erweitern)** olarak ayarlayın. **Değiştir (Ersetzen)** seçeneğini kullanırsanız stillerin içindeki mevcut çizim tipleri **silinir**. **Kaynak Klasör (Quellordner)** kısmında **Proje (Projekt)** seçin ve stilleri alacağınız projeyi işaretleyin. Alternatif olarak büro standardı için **Büro (Büro)** veya **Standart (Standard)** seçebilirsiniz. **CTRL+A** ile tüm stilleri veya seçmeli olarak istediklerinizi etkinleştirin ve **Tamam (OK)** ile onaylayın."
       },
       {
         "type": "image",
@@ -196,7 +192,7 @@
       },
       {
         "type": "heading",
-        "text": "Simetriği Alınan Mahallerin Farklı Alan Vermesi"
+        "text": "Mahaller - Simetriği alınan (aynalanan) mahaller farklı alanlara sahip"
       },
       {
         "type": "text",

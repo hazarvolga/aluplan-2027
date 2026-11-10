@@ -198,11 +198,11 @@
       },
       {
         "type": "heading",
-        "text": "Kat elemanının DIN277 ayarları"
+        "text": "Mahaller - DIN 277-1:2016-1 standardına göre inşaat sektöründe taban alanları ve mahal hacimleri"
       },
       {
         "type": "text",
-        "text": "Kat elemanının DIN277, BauNVO sekmesinde, DIN277 Nitelikleri bölümündeki ayarlar değerlendirilir. Çevreleme Türü (Umschließungsart) sınıflandırmaya yarar: R standart durum, S özel durumdur. Alan Türü DIN277 (Flächenart) ise objenin nasıl metrajlanacağını belirler: B objeyi her zaman hesaba katar (standart durum), M çok katlı BRI için kullanılır ve taban alanında alan bilgisi olmadan listelenir (örneğin galeri boşlukları), U kısmen listelenir ve LGF (galeri boşluğu taban alanı) olarak adlandırılır, V ise DIN277 çıktısında dikkate alınmaz. Faktör DIN277 genellikle 1.0 bırakılır, çünkü standart bitmiş yüzeyleri esas alır."
+        "text": "**Kat elemanının DIN277 ayarları.** Kat elemanının DIN277, BauNVO sekmesinde, DIN277 Nitelikleri bölümündeki ayarlar değerlendirilir. Çevreleme Türü (Umschließungsart) sınıflandırmaya yarar: R standart durum, S özel durumdur. Alan Türü DIN277 (Flächenart) ise objenin nasıl metrajlanacağını belirler: B objeyi her zaman hesaba katar (standart durum), M çok katlı BRI için kullanılır ve taban alanında alan bilgisi olmadan listelenir (örneğin galeri boşlukları), U kısmen listelenir ve LGF (galeri boşluğu taban alanı) olarak adlandırılır, V ise DIN277 çıktısında dikkate alınmaz. Faktör DIN277 genellikle 1.0 bırakılır, çünkü standart bitmiş yüzeyleri esas alır."
       },
       {
         "type": "image",
@@ -210,12 +210,8 @@
         "caption": "Kat elemanı: DIN277, BauNVO sekmesindeki nitelik ayarları."
       },
       {
-        "type": "heading",
-        "text": "Mahal elemanının DIN277 ayarları"
-      },
-      {
         "type": "text",
-        "text": "Mahal elemanında da aynı sekme kullanılır. Çevreleme Türü yine R veya S olur. Kullanım Türü (Nutzungsart) alanın rolünü belirler: NUF kullanım alanı (ana grup veya NUF 1-7 alt grupları), TF teknik alan, VF sirkülasyon alanıdır. Alan Türü DIN277 için N net mahal alanı ve net hacmi (NRF ve NRI), M çok katlı NRI, L ise boş hacim anlamına gelir. Metrajda N objeyi her zaman hesaba katar, M mahal hacmi için kullanılır, L kısmen LGF olarak listelenir. Daha fazla bilgiyi her fonksiyonun F1 Yardım bölümünde bulabilirsiniz."
+        "text": "**Mahal elemanının DIN277 ayarları.** Mahal elemanında da aynı sekme kullanılır. Çevreleme Türü yine R veya S olur. Kullanım Türü (Nutzungsart) alanın rolünü belirler: NUF kullanım alanı (ana grup veya NUF 1-7 alt grupları), TF teknik alan, VF sirkülasyon alanıdır. Alan Türü DIN277 için N net mahal alanı ve net hacmi (NRF ve NRI), M çok katlı NRI, L ise boş hacim anlamına gelir. Metrajda N objeyi her zaman hesaba katar, M mahal hacmi için kullanılır, L kısmen LGF olarak listelenir. Daha fazla bilgiyi her fonksiyonun F1 Yardım bölümünde bulabilirsiniz."
       },
       {
         "type": "image",
@@ -224,7 +220,7 @@
       },
       {
         "type": "heading",
-        "text": "Çatı ve Güvercinlik Formları Genel Bakış"
+        "text": "Çatı - Çatı Formları ve Çatı Penceresi (Güvercinlik) Formları - Genel Bakış"
       },
       {
         "type": "text",

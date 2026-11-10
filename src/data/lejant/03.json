@@ -158,6 +158,10 @@
     "title": "Sıfırdan Yeni Bir Lejant Kurmak",
     "blocks": [
       {
+        "type": "heading",
+        "text": "Lejantlar - Yeni bir lejant oluşturma (Örnek: Döşeme yüzeyi, en üst katman)"
+      },
+      {
         "type": "text",
         "text": "Döşeme yüzeylerini malzemeye göre (VOB) metrajlayan kendi lejantınızı tanımlayabilirsiniz. Önce hazırlık yaparsınız. Lejantları her zaman 1:100 ölçekli çizim dosyasında oluşturun; başka ölçekte lejant metin boyutlarını kontrol etmek zorlaşır. Lejantla gösterilecek birkaç obje hazır olmalı, burada farklı büyüklükte döşeme ince yapılı mahaller. Gösterilecek veriyi de önceden belirlersiniz: en üst katmanın malzemesi için MT_Boden(@508@;0), en üst katmanın VOB alanı için MT_Boden(@81@;0) formülünü kullanırsınız."
       },
@@ -176,12 +180,8 @@
         "caption": "Başlık, satır ve toplam alanlarıyla lejantın ön çizimi."
       },
       {
-        "type": "heading",
-        "text": "Alanları çizin ve hücreleri tanımlayın"
-      },
-      {
         "type": "text",
-        "text": "Başlık, Satır ve Toplam alanlarını çizin. Münferit alanlar birbirinden bağımsız seçilebilmelidir: sol ve sağ kenar çizgilerini üç parçalı yapın, dolgu alanlarını tek tek oluşturun. Sabit metinleri normal metin olarak yazın. Ardından Actionbar üzerinde Kullanıcı Objeleri (Benutzerobjekte) görevini açıp Raporlar, Lejantlar bölümünü bulun ve Hücre Tanımla (Zelle definieren) fonksiyonunu seçin."
+        "text": "**Alanları çizin ve hücreleri tanımlayın.** Başlık, Satır ve Toplam alanlarını çizin. Münferit alanlar birbirinden bağımsız seçilebilmelidir: sol ve sağ kenar çizgilerini üç parçalı yapın, dolgu alanlarını tek tek oluşturun. Sabit metinleri normal metin olarak yazın. Ardından Actionbar üzerinde Kullanıcı Objeleri (Benutzerobjekte) görevini açıp Raporlar, Lejantlar bölümünü bulun ve Hücre Tanımla (Zelle definieren) fonksiyonunu seçin."
       },
       {
         "type": "image",
@@ -202,12 +202,8 @@
         "text": "Toplam satırını tüm Hücre 2'lerin toplamıyla tamamlayın; formül SUMME(SPALTE2) olur, format Hücre 2 ile aynıdır. Önemli: hücreler kesintisiz numaralandırılmalıdır. Sıralamada boşluk olursa kaydederken hata alırsınız; No-Değ (Nr-Mod) düğmesiyle numaraları düzeltebilirsiniz, ancak formüldeki sütun numaraları otomatik güncellenmez."
       },
       {
-        "type": "heading",
-        "text": "Lejantı tanımlayın ve kaydedin"
-      },
-      {
         "type": "text",
-        "text": "Lejant Tanımla (Legende definieren) fonksiyonunu açın. Lejant tipini Mimari (Archit) seçin. Select'i Döşeme Yüzeyi objesine ayarlamak için Select alanına tıklayın; Mimari Elemanlar Filtresi'nde Objekt= seçimiyle Bodenfläche'yi seçin. Onaydan sonra kriter Objekt=Bodenfläche olarak görünür."
+        "text": "**Lejantı tanımlayın ve kaydedin.** Lejant Tanımla (Legende definieren) fonksiyonunu açın. Lejant tipini Mimari (Archit) seçin. Select'i Döşeme Yüzeyi objesine ayarlamak için Select alanına tıklayın; Mimari Elemanlar Filtresi'nde Objekt= seçimiyle Bodenfläche'yi seçin. Onaydan sonra kriter Objekt=Bodenfläche olarak görünür."
       },
       {
         "type": "image",
@@ -224,12 +220,8 @@
         "caption": "Başlık alanına girecek elemanların seçilmesi."
       },
       {
-        "type": "heading",
-        "text": "İlk test ve satırları toplatma"
-      },
-      {
         "type": "text",
-        "text": "Lejant fonksiyonunu seçip yeni lejantı çizim dosyasına yerleştirin. İlk testte lejant her döşeme yüzeyini tek tek gösterir. Allplan satırda tüm döşeme katmanlarını metrajlayabildiği için, tekil sonuçları toplatırken yalnızca en üst katmanın VOB alanını hesaplayan ek bir filtre gerekir."
+        "text": "**İlk test ve satırları toplatma.** Lejant fonksiyonunu seçip yeni lejantı çizim dosyasına yerleştirin. İlk testte lejant her döşeme yüzeyini tek tek gösterir. Allplan satırda tüm döşeme katmanlarını metrajlayabildiği için, tekil sonuçları toplatırken yalnızca en üst katmanın VOB alanını hesaplayan ek bir filtre gerekir."
       },
       {
         "type": "image",
@@ -247,7 +239,7 @@
       },
       {
         "type": "heading",
-        "text": "Lejant / Etiket Stili Yedekleme ve Geri Yükleme"
+        "text": "Etiket Stilleri / Lejantlar - Yedekleme ve Geri Yükleme"
       },
       {
         "type": "text",
@@ -305,7 +297,7 @@
       },
       {
         "type": "heading",
-        "text": "Taban Alanı Lejantını DIN277'ye Uyarlamak"
+        "text": "Lejantlar - \"Taban Alanı\" (Grundfläche) lejantının DIN277 standardına uyarlanması"
       },
       {
         "type": "text",

@@ -146,7 +146,7 @@
     },
     {
       "id": "de_10967",
-      "title": "DGM - Ortho-Foto als Textur für eine Gelände-Animation",
+      "title": "SAM (DGM) - Arazi Animasyonu İçin Doku Olarak Ortofoto",
       "body": "- **Kaynak URL (Alındığı Adres):** https://learnnow.allplan.com/totara/engage/resources/howto/index.php?id=10967&source=howto\n- **Kaynak ID (`resource_id`):** `10967`\n- **Resmi Salesforce / Allplan KB No:** `000007278-de`\n- **İçerik Tipi:** `knowledge_article`\n- **Dil:** `de`\n- **Kategori Ağacı:** `ALLPLAN > Umgebung > Gelände`\n- **Geçerli Allplan Sürümleri:** `ALLPLAN, ALLPLAN 2025, ALLPLAN 2024, ALLPLAN 2023, ALLPLAN 2022, ALLPLAN 2014, ALLPLAN 2013, ALLPLAN 2012, ALLPLAN 2009`\n- **Yazar & Tarih:** Erstellt am 17. Juli 2022, 18:03. Zuletzt aktualisiert am 7. Juli 2025, 15:32. | Owner: Salesforce Integration\n- **Doğrudan PDF Kılavuz URL:** -\n- **Eğitim Videosu / Webinar URL:** -\n- **İndirilen PDF, Örnek Dosya ve Ekran Görüntüleri (0 Adet):**\n - *(Ek Dosya / Görsel Yok)*\n\n\n\n**Frage:** \n \nWie kann für ein Gelände in der Animation das dazugehörige Landschaftsfoto als Textur eingepasst hinterlegt werden \n \n \n \n**Antwort:** \n \nDamit ein Landschaftsfoto in der Animation als Textur lagerichtig auf ein Digitales Geländemodell (DGM) gemappt werden kann, muss dieses als Geo-referenziertes Orthofoto vorliegen. Zudem müssen die Geländekoordinaten des DGM mit denen des Orthofotos übereinstimmen. \n \nAktivieren Sie in Allplan für das verwendete DGM die Option \"T-Grnd\" (**Ändern->Gelände->Digitales Geländemodell->DGM modifizieren-> T-Grnd**). \nIn den Oberflächeneinstellungen der Animation aktivieren Sie bei der Texturbelegung die Option \"Metrisch\" sowie die Option \"Textur aktiviert\". \nDesweiteren ist erforderlich, dass Sie in den Oberflächeneinstellungen bei der Option \"Skalierung\" die Ausdehnung des Bildes für die X - und Y- Richtung eingeben. \nUm die Ausdehnung des Bildes richtig erfassen zu können kann es notwendig sein das Bild zuvor in einem Teilbild georeferenziert als Pixelfläche zu importieren und die Bildabmaße über die Messfunktion zu ermitteln. \nWählen Sie im letzten Schritt in den Oberflächeneinstellungen der Animation das Orthofoto als Textur für das darzustellende Gelände. \n \nZusätzlicher Aufwand wird nötig, wenn das verwendete DGM zwar lagerichtig ist, aber eine geringere Flächenausdehnung als das verwendete Orthofoto hat. \nHierbei gilt, dass die Fläche des DGM …",
       "figures": []
     },
@@ -162,7 +162,7 @@
     "blocks": [
       {
         "type": "heading",
-        "text": "Arazi Modülüne Kuşbakışı (Fransızca Arayüz)"
+        "text": "Arazi modelleyici"
       },
       {
         "type": "text",
@@ -229,7 +229,7 @@
       },
       {
         "type": "heading",
-        "text": "Arazi Animasyonu İçin Ortofotoyu Doku Olarak Kullanmak"
+        "text": "Arazi animasyonu için doku (texture) olarak ortofoto kullanma"
       },
       {
         "type": "text",

@@ -180,11 +180,11 @@
       },
       {
         "type": "heading",
-        "text": "Adım 1: Çizim dosyasını asistan olarak kaydetme"
+        "text": "Asistan oluşturma ve ofiste kullanıma sunma"
       },
       {
         "type": "text",
-        "text": "Hazırladığınız çizim dosyasını açın. **Dosya (Datei) -> Kopyayı Asistan Olarak Kaydet (Kopie speichern als Assistent...)** yolunu izleyin. Kayıt konumu olarak kullandığınız Allplan sürümünün düğümünü, örneğin **Allplan 2025 -> Assistent-STD** seçin. Dosya adını girin (çizim dosyası adı önerilir), dosya tipini **Asistan (*.nas)** olarak seçin ve **Kaydet (Speichern)** deyin."
+        "text": "**Adım 1: Çizim dosyasını asistan olarak kaydetme.** Hazırladığınız çizim dosyasını açın. **Dosya (Datei) -> Kopyayı Asistan Olarak Kaydet (Kopie speichern als Assistent...)** yolunu izleyin. Kayıt konumu olarak kullandığınız Allplan sürümünün düğümünü, örneğin **Allplan 2025 -> Assistent-STD** seçin. Dosya adını girin (çizim dosyası adı önerilir), dosya tipini **Asistan (*.nas)** olarak seçin ve **Kaydet (Speichern)** deyin."
       },
       {
         "type": "image",
@@ -201,12 +201,8 @@
         "caption": "Kayıttan sonra çıkan asistan grubu sorgusunu iptal edin."
       },
       {
-        "type": "heading",
-        "text": "Adım 2: Grup oluşturma ve asistan ekleme"
-      },
-      {
         "type": "text",
-        "text": "**Asistanlar (Assistenten)** paletini açın. Grup satırında sağ tık ile kısayol menüsünü açın ve **Yeni Grup (Neue Gruppe...)** seçin. Kayıt konumu olarak yine ilgili sürüm düğümünü (**Allplan 2025 -> Assistent-STD**) seçin, grup için bir dosya adı girin ve **Kaydet (Speichern)** deyin. Yeni grup palette görünür."
+        "text": "**Adım 2: Grup oluşturma ve asistan ekleme.** **Asistanlar (Assistenten)** paletini açın. Grup satırında sağ tık ile kısayol menüsünü açın ve **Yeni Grup (Neue Gruppe...)** seçin. Kayıt konumu olarak yine ilgili sürüm düğümünü (**Allplan 2025 -> Assistent-STD**) seçin, grup için bir dosya adı girin ve **Kaydet (Speichern)** deyin. Yeni grup palette görünür."
       },
       {
         "type": "image",
@@ -223,12 +219,8 @@
         "caption": "Sekme alanından Asistan Aç ile hazır asistanı gruba ekleme."
       },
       {
-        "type": "heading",
-        "text": "Adım 3: Asistanları diğer bilgisayarlara sunma"
-      },
-      {
         "type": "text",
-        "text": "**Asistanlar (Assistenten)** paletini açın, grup satırında sağ tık ile **Grup Ekle (Gruppe hinzufügen...)** seçin. Böylece oluşturduğunuz grubu başka iş istasyonlarında da kullanıma açarsınız."
+        "text": "**Adım 3: Asistanları diğer bilgisayarlara sunma.** **Asistanlar (Assistenten)** paletini açın, grup satırında sağ tık ile **Grup Ekle (Gruppe hinzufügen...)** seçin. Böylece oluşturduğunuz grubu başka iş istasyonlarında da kullanıma açarsınız."
       },
       {
         "type": "image",
@@ -245,7 +237,7 @@
       },
       {
         "type": "heading",
-        "text": "Actionbar (Aksiyon Çubuğu) ile İlk Adımlar"
+        "text": "[a] Actionbar (Aksiyon Çubuğu) İçin İlk Adımlar"
       },
       {
         "type": "text",
@@ -271,7 +263,7 @@
       },
       {
         "type": "heading",
-        "text": "Actionbar Yapılandırmasını Taşıma ve Rolleri Yönetme"
+        "text": "[a] Actionbar (Aksiyon Çubuğu) 2018-1-1"
       },
       {
         "type": "text",

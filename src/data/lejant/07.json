@@ -71,7 +71,7 @@
     },
     {
       "id": "de_10869",
-      "title": "Legenden - Stahlliste mit festem Büronamen erstellen",
+      "title": "Lejantlar - Sabit Büro Adıyla Çelik Listesi (Stahlliste) Oluşturma",
       "body": "- **Kaynak URL (Alındığı Adres):** https://learnnow.allplan.com/totara/engage/resources/howto/index.php?id=10869&source=howto\n- **Kaynak ID (`resource_id`):** `10869`\n- **Resmi Salesforce / Allplan KB No:** `000007475-de`\n- **İçerik Tipi:** `knowledge_article`\n- **Dil:** `de`\n- **Kategori Ağacı:** `ALLPLAN > Allgemein > Auswertungen`\n- **Geçerli Allplan Sürümleri:** `ALLPLAN, ALLPLAN 2012, ALLPLAN 2009`\n- **Yazar & Tarih:** Erstellt am 17. Juli 2022, 18:05. Zuletzt aktualisiert am 25. Juni 2025, 09:41. | Owner: Salesforce Integration\n- **Doğrudan PDF Kılavuz URL:** -\n- **Eğitim Videosu / Webinar URL:** -\n- **İndirilen PDF, Örnek Dosya ve Ekran Görüntüleri (0 Adet):**\n - *(Ek Dosya / Görsel Yok)*\n\n\n\n**Frage:** \n \nWie kann eine Stahlliste mit einem festgelegten Büronamen erstellt werden? \n \n \n \n**Antwort**: \n \nAktivieren Sie ein neues Teilbild und wechseln Sie im CAD Navigator in das Listenmodul \n(Zusätzliche Module -> Listenerstellung). \nKopieren Sie die gewünschte Stahlliste mit der Listenverwaltung (Erzeugen -> Zusätzliche Module -> Listenerstellung -> Listenverwaltung) vom Verzeichnis **Standard** in das Verzeichnis **Büro**. Dabei muss die Dateinummer beibehalten werden, z.B. Standard - Datei 18 Stahllisten - Liste Rundstl L 1 nach Büro - Datei 18 Stahllisten - Musterfirma kopieren. Diese kopierte Liste wird mit **Listen modifizieren** geöffnet (Ändern -> Zusätzliche Module ->Listenerstellung -> Listen modifizieren). \nMit dem Befehl **Ze-Lö** werden die Zellen Kundenname Zeile 1 und Kundenname Zeile 2 in der Liste gelöscht. Jetzt erstellen Sie den gewünschten Text mit dem Befehl **Ze-Ins** (Listenbereich: Listenkopf und Zellentyp: Texte ).",
       "figures": []
     },
@@ -102,7 +102,7 @@
     "blocks": [
       {
         "type": "heading",
-        "text": "Formül Koleksiyonu: Koşullara Bağlı Gösterim Örnekleri"
+        "text": "Etiket Stilleri - Formül Koleksiyonu - Koşullar için örnekler (mantıksal uygunluk kontrolleri ve benzerleri)"
       },
       {
         "type": "text",
@@ -144,7 +144,7 @@
       },
       {
         "type": "heading",
-        "text": "Lejant / Etiket Stili Yedekleme ve Geri Yükleme"
+        "text": "Etiket Stilleri / Lejantlar - Yedekleme ve Geri Yükleme"
       },
       {
         "type": "text",
@@ -202,7 +202,7 @@
       },
       {
         "type": "heading",
-        "text": "Sabit Büro Adıyla Çelik Listesi (Stahlliste) Oluşturmak"
+        "text": "Lejantlar - Sabit Büro Adıyla Çelik Listesi (Stahlliste) Oluşturma"
       },
       {
         "type": "text",

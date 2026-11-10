@@ -149,11 +149,11 @@
       },
       {
         "type": "heading",
-        "text": "Seçenek 1: Daire Bölüntüsü (Kreisteilung)"
+        "text": "Dolgu Alanları - Poligonlaştırma türleri"
       },
       {
         "type": "text",
-        "text": "Burada eğrinin yaklaştırılacağı **doğru sayısını** girersiniz; değer her zaman tam daireyi referans alır ve 8 ile 360 arasında olur. Değer yükseldikçe poligonlaştırma hassaslaşır. Daire bölüntüsü özellikle **küçük yuvarlatmalar ve çaplar** için uygundur. Büyük yuvarlatmalarda ise yuvarlatma ile poligon arasında çoğunlukla gözle görülür fark kalır."
+        "text": "**Seçenek 1: Daire Bölüntüsü (Kreisteilung).** Burada eğrinin yaklaştırılacağı **doğru sayısını** girersiniz; değer her zaman tam daireyi referans alır ve 8 ile 360 arasında olur. Değer yükseldikçe poligonlaştırma hassaslaşır. Daire bölüntüsü özellikle **küçük yuvarlatmalar ve çaplar** için uygundur. Büyük yuvarlatmalarda ise yuvarlatma ile poligon arasında çoğunlukla gözle görülür fark kalır."
       },
       {
         "type": "image",
@@ -166,12 +166,8 @@
         "caption": "Daire Bölüntüsü (Kreisteilung) 120: eğriye çok yakın sonuç."
       },
       {
-        "type": "heading",
-        "text": "Seçenek 2: Kiriş Yüksekliği / Sehim (Stichmaß)"
-      },
-      {
         "type": "text",
-        "text": "Burada kesenin (sekant) yaya olan **maksimum kiriş yüksekliğini** girersiniz. Eğri, poligon kenarının eğriye mesafesi girdiğiniz değerden küçük veya ona eşit olacak şekilde bölünür. Değer 0,005 ile 1 000 000 arasındadır ve **küçüldükçe** sonuç hassaslaşır. Maksimum alt bölünme sayısı öngörülmediği için bu yöntem **büyük eğriler** için daha uygundur ve daire bölüntüsüne göre daha hassas sonuç verir."
+        "text": "**Seçenek 2: Kiriş Yüksekliği / Sehim (Stichmaß).** Burada kesenin (sekant) yaya olan **maksimum kiriş yüksekliğini** girersiniz. Eğri, poligon kenarının eğriye mesafesi girdiğiniz değerden küçük veya ona eşit olacak şekilde bölünür. Değer 0,005 ile 1 000 000 arasındadır ve **küçüldükçe** sonuç hassaslaşır. Maksimum alt bölünme sayısı öngörülmediği için bu yöntem **büyük eğriler** için daha uygundur ve daire bölüntüsüne göre daha hassas sonuç verir."
       },
       {
         "type": "image",
@@ -193,7 +189,7 @@
       },
       {
         "type": "heading",
-        "text": "Desen ve Taramalarda Biçim Özelliklerini Değiştirme"
+        "text": "Desenler ve Taramalar - Biçim özelliklerini değiştirme"
       },
       {
         "type": "text",
@@ -214,7 +210,7 @@
       },
       {
         "type": "heading",
-        "text": "Çizgi Montaj Parçasını (Linieneinbauteil) Desen Çizgisi Olarak Gösterme"
+        "text": "Gömülü Parçalar - Çizgisel gömülü parçayı desen çizgisi olarak gösterme"
       },
       {
         "type": "text",
@@ -245,7 +241,7 @@
       },
       {
         "type": "heading",
-        "text": "Beyaz Dolgu Alanını DWG'ye Aktarmak"
+        "text": "Dışa Aktarma - DWG/DXF - Beyaz dolgu alanlarını dışa aktarma"
       },
       {
         "type": "text",

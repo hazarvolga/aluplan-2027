@@ -113,6 +113,10 @@
     "title": "Çatı Eğimine Uyan Ara Döşeme",
     "blocks": [
       {
+        "type": "heading",
+        "text": "Çatı - Kat - Ara döşeme oluşturma"
+      },
+      {
         "type": "text",
         "text": "Çatı katında, eğimli çatı düzlemine ya da çatı yüzeyine (Dachlandschaft) temiz uyan bir ara döşeme oluşturmak istersiniz. Bunu üç aşamada yaparsınız: önce döşemeyi serbestçe çizersiniz, sonra doğru kot bağlantısını verirsiniz, en sonunda yayılım alanını çatı eğimine göre kesersiniz."
       },
@@ -122,12 +126,8 @@
         "caption": "Hedef: çatı eğimine temiz uyan ara döşeme."
       },
       {
-        "type": "heading",
-        "text": "Döşemeyi çizin"
-      },
-      {
         "type": "text",
-        "text": "Önce tüm kat planının üzerine bir döşeme çizin. Kot bağlantısı ve doğru yayılım alanıyla sonraki adımlarda ilgileneceksiniz; bu aşamada döşeme bilinçli olarak gereğinden büyüktür."
+        "text": "**Döşemeyi çizin.** Önce tüm kat planının üzerine bir döşeme çizin. Kot bağlantısı ve doğru yayılım alanıyla sonraki adımlarda ilgileneceksiniz; bu aşamada döşeme bilinçli olarak gereğinden büyüktür."
       },
       {
         "type": "image",
@@ -135,12 +135,8 @@
         "caption": "Döşeme tüm kat planının üzerine çizili."
       },
       {
-        "type": "heading",
-        "text": "Kot bağlantısını ayarlayın"
-      },
-      {
         "type": "text",
-        "text": "Döşemenin üzerine çift tıklayıp Yükseklik (Höhe) yolunu izleyin. Üç değeri girersiniz: (1) çatı düzleminin alt kotu ile döşeme alt kotu arasındaki mesafe, (2) istediğiniz döşeme kalınlığı, (3) kenar bölgesinin, yani döşeme alın yüzeyinin, eğimli çatı düzlemine hangi mesafeyle uyacağı. Bu örnekte üçüncü değer 0,00 olduğundan döşeme üstteki eğimli düzleme sıfır mesafeyle birleşir."
+        "text": "**Kot bağlantısını ayarlayın.** Döşemenin üzerine çift tıklayıp Yükseklik (Höhe) yolunu izleyin. Üç değeri girersiniz: (1) çatı düzleminin alt kotu ile döşeme alt kotu arasındaki mesafe, (2) istediğiniz döşeme kalınlığı, (3) kenar bölgesinin, yani döşeme alın yüzeyinin, eğimli çatı düzlemine hangi mesafeyle uyacağı. Bu örnekte üçüncü değer 0,00 olduğundan döşeme üstteki eğimli düzleme sıfır mesafeyle birleşir."
       },
       {
         "type": "image",
@@ -148,12 +144,8 @@
         "caption": "Yükseklik diyaloğunda üç kritik değer."
       },
       {
-        "type": "heading",
-        "text": "Uyarıyı anlayın"
-      },
-      {
         "type": "text",
-        "text": "Doğru kot girildikten sonra büyük olasılıkla bir uyarı görürsünüz. Nedeni, bu ara adımda henüz negatife doğru gelişen, geometrik olarak mümkün olmayan bir 3B yapı elemanı üretmiş olmanızdır. Yayılım alanını düzelttiğinizde bu sorun ortadan kalkar."
+        "text": "**Uyarıyı anlayın.** Doğru kot girildikten sonra büyük olasılıkla bir uyarı görürsünüz. Nedeni, bu ara adımda henüz negatife doğru gelişen, geometrik olarak mümkün olmayan bir 3B yapı elemanı üretmiş olmanızdır. Yayılım alanını düzelttiğinizde bu sorun ortadan kalkar."
       },
       {
         "type": "image",
@@ -166,12 +158,8 @@
         "caption": "Negatife gelişen, geometrik olarak imkansız ara yapı."
       },
       {
-        "type": "heading",
-        "text": "Yayılım alanını kesin"
-      },
-      {
         "type": "text",
-        "text": "Son adımda döşemenin kat planındaki yayılımını düzenlersiniz. Döşeme yalnızca çatı eğimine kadar uzanmalı, onu aşmamalıdır. Kat planından bir kalkan duvar (alın) görünüşüne geçin ve Düzen (Bearbeiten) menüsünden Noktaları Değiştir (Punkte modifizieren) komutunu seçin."
+        "text": "**Yayılım alanını kesin.** Son adımda döşemenin kat planındaki yayılımını düzenlersiniz. Döşeme yalnızca çatı eğimine kadar uzanmalı, onu aşmamalıdır. Kat planından bir kalkan duvar (alın) görünüşüne geçin ve Düzen (Bearbeiten) menüsünden Noktaları Değiştir (Punkte modifizieren) komutunu seçin."
       },
       {
         "type": "image",
@@ -188,12 +176,8 @@
         "caption": "Noktaları çatı eğimiyle kesişim noktasına taşıma."
       },
       {
-        "type": "heading",
-        "text": "Sonuç"
-      },
-      {
         "type": "text",
-        "text": "Döşeme artık çatı eğimine temiz uyar. Not: Girinti çıkıntılı bazı döşemeler kot doğru olsa bile animasyonda görünmeyebilir. Böyle bir durumda Değiştir -> Mimari -> Yüzey Elemanı, Mimari Yüzey, Alan Değiştir fonksiyonuyla taşan bölgeleri genişçe kesip atın, sonra Noktaları Değiştir ile döşemeyi istediğiniz ölçüye yeniden genişletin."
+        "text": "**Sonuç.** Döşeme artık çatı eğimine temiz uyar. Not: Girinti çıkıntılı bazı döşemeler kot doğru olsa bile animasyonda görünmeyebilir. Böyle bir durumda Değiştir -> Mimari -> Yüzey Elemanı, Mimari Yüzey, Alan Değiştir fonksiyonuyla taşan bölgeleri genişçe kesip atın, sonra Noktaları Değiştir ile döşemeyi istediğiniz ölçüye yeniden genişletin."
       },
       {
         "type": "image",
@@ -202,7 +186,7 @@
       },
       {
         "type": "heading",
-        "text": "Döşeme nitelikleri - metraj ve etiketleme referansı"
+        "text": "Nitelikler - Döşeme için genel bakış"
       },
       {
         "type": "text",

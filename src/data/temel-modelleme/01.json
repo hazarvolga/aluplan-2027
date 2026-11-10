@@ -131,7 +131,7 @@
     "blocks": [
       {
         "type": "heading",
-        "text": "Bimplus'ta Doğru Proje Başlangıcı"
+        "text": "Bimplus'ta doğru proje başlangıcı"
       },
       {
         "type": "text",
@@ -162,7 +162,7 @@
       },
       {
         "type": "heading",
-        "text": "IFC Dışa Aktarımında Nitelik Eşleme (Attribute-Mapping)"
+        "text": "Dışa Aktarma - IFC - Nitelik Eşleme (Attribute-Mapping)"
       },
       {
         "type": "text",

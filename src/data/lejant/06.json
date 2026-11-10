@@ -138,7 +138,7 @@
     "blocks": [
       {
         "type": "heading",
-        "text": "Taban Alanı Lejantını DIN277'ye Uyarlamak"
+        "text": "Lejantlar - \"Taban Alanı\" (Grundfläche) lejantının DIN277 standardına uyarlanması"
       },
       {
         "type": "text",
@@ -209,7 +209,7 @@
       },
       {
         "type": "heading",
-        "text": "Lejant / Etiket Stili Yedekleme ve Geri Yükleme"
+        "text": "Etiket Stilleri / Lejantlar - Yedekleme ve Geri Yükleme"
       },
       {
         "type": "text",

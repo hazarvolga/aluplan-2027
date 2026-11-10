@@ -47,7 +47,7 @@
       "name": "U Tipi / Düz / Serbest Merdiven",
       "menu": "Mimari (Architecture) -> Merdivenler (Stairs / Treppen) -> U Tipi Merdiven (U-Type Stair)",
       "shortcut": "Merdiven Grubu",
-      "desc": "Kat kotları arasında Blondel kuralına ($2R+B$) uygun parametrik 3B merdiven ve sahanlık üretir."
+      "desc": "Kat kotları arasında Blondel kuralına (2R+B) uygun parametrik 3B merdiven ve sahanlık üretir."
     },
     {
       "name": "Korkuluk (Handrail / Geländer)",
@@ -136,6 +136,10 @@
     "title": "Korkuluk Modelleyici ile Korkuluk",
     "blocks": [
       {
+        "type": "heading",
+        "text": "Korkuluk oluşturma"
+      },
+      {
         "type": "text",
         "text": "Korkuluk Modelleyici'de (Geländermodellierer) parametre girişini kolaylaştıran ön koşul, korkuluğun görünüş ve kesitte tam ölçülendirilmiş bir detay çizimidir. Tüm ölçüler döşeme ön kenarına referans almalıdır."
       },
@@ -153,12 +157,8 @@
         "text": "Korkuluk Modelleyici'yi başlatıp Özellikler (Eigenschaften) penceresini açın. Önce tüm kategorilerdeki (Küpeşte/Dikme/Alan) mevcut elemanları, listeden seçip Elemanı Sil (Element löschen) ile tek tek silin; pencere tümüyle boşalsın. Her yeni elemanda önce hangi kategoriye ait olduğuna karar verip o kategoriye tıklarsınız."
       },
       {
-        "type": "heading",
-        "text": "Küpeşte (Handlauf)"
-      },
-      {
         "type": "text",
-        "text": "Artı butonuyla yeni eleman oluşturup adını Handlauf yapın. Eleman yatay olmalıdır. Genişlik ve yükseklik için örn. 40 mm girin. Kesit tipini belirleyin: dairesel bir kesit için Köşeli Poligon (Polygon mit Ecken) alanına örn. 12 yazın. Ofsetleri verin: OffsetY=48, OffsetZ=980, OffsetX=0. Bölümleme (Teilung) boş kalır, çünkü bu sürekli devam eden yatay bir elemandır. Renk (örn. 26) ve 2B görünürlüğü ayarlayın."
+        "text": "**Küpeşte (Handlauf).** Artı butonuyla yeni eleman oluşturup adını Handlauf yapın. Eleman yatay olmalıdır. Genişlik ve yükseklik için örn. 40 mm girin. Kesit tipini belirleyin: dairesel bir kesit için Köşeli Poligon (Polygon mit Ecken) alanına örn. 12 yazın. Ofsetleri verin: OffsetY=48, OffsetZ=980, OffsetX=0. Bölümleme (Teilung) boş kalır, çünkü bu sürekli devam eden yatay bir elemandır. Renk (örn. 26) ve 2B görünürlüğü ayarlayın."
       },
       {
         "type": "image",
@@ -166,12 +166,8 @@
         "caption": "Tamamlanmış küpeşte."
       },
       {
-        "type": "heading",
-        "text": "Dikme (Pfosten)"
-      },
-      {
         "type": "text",
-        "text": "Kategoriyi Dikme yapıp artı ile yeni eleman açın ve Düşey (Vertikal) olarak ayarlayın. Önceden çizdiğiniz obje geometrisini çift ok butonuyla alın; dikme hazırda dik durmalı, tek bir 3B katı obje olmalı ve X ekseni taban kenarına (döşeme ön kenarına) hizalı olmalıdır. Ofsetleri girin: OffsetZ=-296, OffsetY=60. Uzunluk, genişlik ve yükseklik 3B objeden belirlenir. Renk (örn. 18) ve 2B görünürlüğü ayarlayın."
+        "text": "**Dikme (Pfosten).** Kategoriyi Dikme yapıp artı ile yeni eleman açın ve Düşey (Vertikal) olarak ayarlayın. Önceden çizdiğiniz obje geometrisini çift ok butonuyla alın; dikme hazırda dik durmalı, tek bir 3B katı obje olmalı ve X ekseni taban kenarına (döşeme ön kenarına) hizalı olmalıdır. Ofsetleri girin: OffsetZ=-296, OffsetY=60. Uzunluk, genişlik ve yükseklik 3B objeden belirlenir. Renk (örn. 18) ve 2B görünürlüğü ayarlayın."
       },
       {
         "type": "image",
@@ -179,12 +175,8 @@
         "caption": "Tamamlanmış dikme."
       },
       {
-        "type": "heading",
-        "text": "Yanal levhalar ve başlık plakası"
-      },
-      {
         "type": "text",
-        "text": "Yine Dikme kategorisinde yanal tespit levhalarını kurun. Düşey olarak ayarlayın; Genişlik=10, Yükseklik=105 (burada yükseklik levhanın derinliğidir) ve Uzunluk=40 girin. Ofsetler: OffsetX=-10, OffsetY=64, OffsetZ=-220. İkinci levha için elemanı kopyalayıp yalnızca OffsetX'i -10'dan 10'a çevirin; böylece levha dikme eksenine göre simetrik olur."
+        "text": "**Yanal levhalar ve başlık plakası.** Yine Dikme kategorisinde yanal tespit levhalarını kurun. Düşey olarak ayarlayın; Genişlik=10, Yükseklik=105 (burada yükseklik levhanın derinliğidir) ve Uzunluk=40 girin. Ofsetler: OffsetX=-10, OffsetY=64, OffsetZ=-220. İkinci levha için elemanı kopyalayıp yalnızca OffsetX'i -10'dan 10'a çevirin; böylece levha dikme eksenine göre simetrik olur."
       },
       {
         "type": "image",
@@ -201,12 +193,8 @@
         "caption": "Başlık plakasıyla tamamlanan dikme."
       },
       {
-        "type": "heading",
-        "text": "Halatlar (Alan / Feld)"
-      },
-      {
         "type": "text",
-        "text": "Halatları Alan (Feld) kategorisinde kurarsınız. Artı ile eleman açıp adını Seil1 yapın, Yatay olarak ayarlayın, Genişlik/Yükseklik=10 mm, kesit tipini yuvarlak (örn. 12 köşe) seçin. OffsetZ=85, OffsetY=60 ve OffsetXStart=OffsetXEnd=5 (dikme kalınlığının yarısı) girin. Sonraki halatlar için elemanı kopyalayıp yalnızca OffsetZ'yi değiştirin: Seil2 için 195, diğerleri için benzer şekilde. Böylece korkuluk stiliniz hazır olur."
+        "text": "**Halatlar (Alan / Feld).** Halatları Alan (Feld) kategorisinde kurarsınız. Artı ile eleman açıp adını Seil1 yapın, Yatay olarak ayarlayın, Genişlik/Yükseklik=10 mm, kesit tipini yuvarlak (örn. 12 köşe) seçin. OffsetZ=85, OffsetY=60 ve OffsetXStart=OffsetXEnd=5 (dikme kalınlığının yarısı) girin. Sonraki halatlar için elemanı kopyalayıp yalnızca OffsetZ'yi değiştirin: Seil2 için 195, diğerleri için benzer şekilde. Böylece korkuluk stiliniz hazır olur."
       },
       {
         "type": "image",
@@ -215,7 +203,7 @@
       },
       {
         "type": "heading",
-        "text": "Merdiven altında kademeli duvar oluşturma"
+        "text": "Merdiven altında duvar oluşturma (kademeli duvar)"
       },
       {
         "type": "text",
@@ -249,7 +237,7 @@
       },
       {
         "type": "heading",
-        "text": "Merdiven bileşenlerini niteliklerle etiketleme"
+        "text": "Nitelikler - Merdiven için genel bakış"
       },
       {
         "type": "text",

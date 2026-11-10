@@ -139,6 +139,10 @@
     "title": "Etiket Stillerinde Biçimlendirme",
     "blocks": [
       {
+        "type": "heading",
+        "text": "Etiket Stilleri - Biçim ayarları"
+      },
+      {
         "type": "text",
         "text": "Etiket stillerinde (Beschriftungsbild) normal metne göre sınırlı biçimlendirme kullanabilirsiniz. Bir niteliği veya formülü yerleştirirken ya da değiştirirken metin yüksekliği, metin genişliği, yazı tipi ve sütun açısını ayarlayabilirsiniz. Nitelik çizim dosyasına yerleştirildikten sonra Özellikler (Eigenschaften) paleti daha fazlasını sunar."
       },
@@ -148,12 +152,8 @@
         "caption": "Niteliği yerleştirirken metin yüksekliği, genişliği ve yazı tipi ayarları."
       },
       {
-        "type": "heading",
-        "text": "Özellikler paletindeki olanaklar"
-      },
-      {
         "type": "text",
-        "text": "Özellikler paletinde tekil nitelik için metinlerdeki ayarların aynısını yaparsınız. Biçim (Format) tarafında kalem kalınlığı (yalnızca Allplan standart yazı tiplerinde etkilidir, TrueType veya OpenType'ta değil), çizgi rengi, katman ve bu özelliklerin katmana bağlanması bulunur. Eleman (Element) tarafında metin bloğu etrafına çerçeve, arka plan dolgusu ve Kalın (Fett), İtalik (Kursiv), Altı çizili, Üstü çizili gibi vurgular vardır. Bu yöntemin avantajı kolay uygulanmasıdır; her zaman niteliğin veya formülün tüm ifadesi dikkate alınır. Dezavantajı ise biçimi değere bağlı değiştirememeniz ve ifadenin yalnızca bir kısmını ayrı biçimlendirememenizdir."
+        "text": "**Özellikler paletindeki olanaklar.** Özellikler paletinde tekil nitelik için metinlerdeki ayarların aynısını yaparsınız. Biçim (Format) tarafında kalem kalınlığı (yalnızca Allplan standart yazı tiplerinde etkilidir, TrueType veya OpenType'ta değil), çizgi rengi, katman ve bu özelliklerin katmana bağlanması bulunur. Eleman (Element) tarafında metin bloğu etrafına çerçeve, arka plan dolgusu ve Kalın (Fett), İtalik (Kursiv), Altı çizili, Üstü çizili gibi vurgular vardır. Bu yöntemin avantajı kolay uygulanmasıdır; her zaman niteliğin veya formülün tüm ifadesi dikkate alınır. Dezavantajı ise biçimi değere bağlı değiştirememeniz ve ifadenin yalnızca bir kısmını ayrı biçimlendirememenizdir."
       },
       {
         "type": "image",
@@ -161,24 +161,16 @@
         "caption": "Özellikler paleti: çerçeve, arka plan ve yazı vurguları."
       },
       {
-        "type": "heading",
-        "text": "Formüllerde kontrol karakterleri"
-      },
-      {
         "type": "text",
-        "text": "Bir metni çıktılayan formülün içinde (örneğin A50 formatında) kontrol karakterleriyle biçimlendirme yaparsınız. Her biçim bir başlangıç ve bir bitiş karakter çiftiyle tanımlanır; ikisi arasındaki metin o biçimle gösterilir. İlk grup karakterler metin düzenleyicide de eklenir ve orada yalnızca etkisiyle görünür: %B{ ... %B} kalın, %I{ ... %I} italik, %U{ ... %U} altı çizili, %D{ ... %D} üstü çizili, %^{ ... %^} üst simge, %v{ ... %v} alt simge, %C{109| ... %C} ise metin rengi (0-255 arası 256 standart renk) verir."
+        "text": "**Formüllerde kontrol karakterleri.** Bir metni çıktılayan formülün içinde (örneğin A50 formatında) kontrol karakterleriyle biçimlendirme yaparsınız. Her biçim bir başlangıç ve bir bitiş karakter çiftiyle tanımlanır; ikisi arasındaki metin o biçimle gösterilir. İlk grup karakterler metin düzenleyicide de eklenir ve orada yalnızca etkisiyle görünür: %B{ ... %B} kalın, %I{ ... %I} italik, %U{ ... %U} altı çizili, %D{ ... %D} üstü çizili, %^{ ... %^} üst simge, %v{ ... %v} alt simge, %C{109| ... %C} ise metin rengi (0-255 arası 256 standart renk) verir."
       },
       {
         "type": "text",
         "text": "İkinci grup biçimlendirmelerde kontrol karakterleri metin düzenleyicide görünür kalır, etkisi yalnızca çizim dosyasında görüntülenir ve satır sonuna kadar sürer. Örnekler: %+ ... %- boyut değişmeden üst simge, %< ... %> büyütme, %C4 tek haneli renk, %EA ... %EE köşeli çerçeve, %RA ... %RE yuvarlak çerçeve, %K0-9 daire, %N0-9 sekizgen, %V0-9 eşkenar dörtgen içine alma."
       },
       {
-        "type": "heading",
-        "text": "Koşula bağlı renk örneği"
-      },
-      {
         "type": "text",
-        "text": "Metinleri parçalardan birleştirip her parçayı bir koşula bağlayabilirsiniz. Örneğin 20 m² üzerindeki mahal adını kırmızı, küçük mahalleri mavi yazmak için şu formülü kurarsınız: _IF_(Grundfläche_DIN277>20)\"%C{109|\"_ELSE_\"%C{122|\")+Bezeichnung+\"%C}\". Koşul mahalin taban alanını 20 ile karşılaştırır; büyükse kırmızı renk kodu, değilse mavi renk kodu kullanılır. Ardından Tanım (Bezeichnung) niteliği eklenir ve biçim bitiş dizisiyle kapatılır."
+        "text": "**Koşula bağlı renk örneği.** Metinleri parçalardan birleştirip her parçayı bir koşula bağlayabilirsiniz. Örneğin 20 m² üzerindeki mahal adını kırmızı, küçük mahalleri mavi yazmak için şu formülü kurarsınız: _IF_(Grundfläche_DIN277>20)\"%C{109|\"_ELSE_\"%C{122|\")+Bezeichnung+\"%C}\". Koşul mahalin taban alanını 20 ile karşılaştırır; büyükse kırmızı renk kodu, değilse mavi renk kodu kullanılır. Ardından Tanım (Bezeichnung) niteliği eklenir ve biçim bitiş dizisiyle kapatılır."
       },
       {
         "type": "image",
@@ -186,12 +178,8 @@
         "caption": "20 m² eşiğine göre kırmızı ve mavi renklenen mahal adları."
       },
       {
-        "type": "heading",
-        "text": "Kademeli renk örneği"
-      },
-      {
         "type": "text",
-        "text": "Rengi alan büyüklüğüne göre sürekli değiştirebilirsiniz. Örneğin metin renginin 64'ten 79'a kadar yeşil tonlarında değişmesini ve 50 m²'den itibaren en açık tonun geçerli olmasını isterseniz: \"%C{\"+(_IF_(Grundfläche_DIN277<50)(64+(Grundfläche_DIN277*15/50))_ELSE_\"79\")+\"|\"+Bezeichnung+\"%C}\". Burada \"%C{\" renk başlangıcı, orta kısım 64 ile 79 arası renk hesabı, \"|\" ayırıcı çizgi, Bezeichnung çıktılanacak ifade ve \"%C}\" biçim sonudur. Örnek temsilidir; uygulamada örneğin net kapı yüksekliğini incelemek daha anlamlı olabilir."
+        "text": "**Kademeli renk örneği.** Rengi alan büyüklüğüne göre sürekli değiştirebilirsiniz. Örneğin metin renginin 64'ten 79'a kadar yeşil tonlarında değişmesini ve 50 m²'den itibaren en açık tonun geçerli olmasını isterseniz: \"%C{\"+(_IF_(Grundfläche_DIN277<50)(64+(Grundfläche_DIN277*15/50))_ELSE_\"79\")+\"|\"+Bezeichnung+\"%C}\". Burada \"%C{\" renk başlangıcı, orta kısım 64 ile 79 arası renk hesabı, \"|\" ayırıcı çizgi, Bezeichnung çıktılanacak ifade ve \"%C}\" biçim sonudur. Örnek temsilidir; uygulamada örneğin net kapı yüksekliğini incelemek daha anlamlı olabilir."
       },
       {
         "type": "image",
@@ -200,7 +188,7 @@
       },
       {
         "type": "heading",
-        "text": "Bir Etiket Stilinde Hangi Nitelikler Kullanılıyor?"
+        "text": "Etiket Stilleri - Etiket stillerinin içeriği"
       },
       {
         "type": "text",

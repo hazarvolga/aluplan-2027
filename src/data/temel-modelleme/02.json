@@ -93,7 +93,7 @@
         "sizeMB": 39.08
       },
       {
-        "title": "Ofsetin temelleri — UTM / Gauß-Krüger koordinatlı altlıkların içe aktarılması",
+        "title": "Ofsetin temelleri - UTM / Gauß-Krüger koordinatlı altlıkların içe aktarılması",
         "file": "10582_youtube_e-3QJ0HTPrA_873d3a39.mp4",
         "vimeoId": "",
         "youtubeId": "e-3QJ0HTPrA",
@@ -115,7 +115,7 @@
     },
     {
       "id": "proje-nitelikleri-kaydedilmiyor",
-      "title": "Nitelikler — Proje nitelikleri kaydedilmiyor",
+      "title": "Nitelikler - Proje nitelikleri kaydedilmiyor",
       "body": "**Soru:** Yeni oluşturulan proje nitelikleri neden kaydedilmiyor?\n**Neden:** Windows yetki sorunları nedeniyle **AllplanProjectDB.db3** dosyasına yazılamaz; bu, yeni girilen proje niteliklerinin kaydedilmemesine yol açar.\n**Not:** Proje nitelikleri önce kurulumun PRJ klasöründeki (Workgroup'ta Net klasörü) AllplanProjectDB.db3 dosyasına, ayrıca ilgili projedeki **PrjAtt.dat** dosyasına yazılır. PrjAtt.dat yoksa bilgiler db3'ten okunur. db3 yoksa ama PrjAtt.dat projede hâlâ varsa, nitelikler **Allmenu -> Servis (Service) -> Hotline Araçları (Hotlinetools) -> updprjattr** aracıyla geri getirilebilir.",
       "figures": []
     }
@@ -137,7 +137,7 @@
       },
       {
         "type": "heading",
-        "text": "Proje Nitelikleri Kaydedilmiyor"
+        "text": "Nitelikler - Proje nitelikleri kaydedilmiyor"
       },
       {
         "type": "text",

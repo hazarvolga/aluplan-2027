@@ -231,11 +231,11 @@
       },
       {
         "type": "heading",
-        "text": "Önce koordinatı öğrenin"
+        "text": "İçe Aktarma - DXF \"alkisvektordaten_utm32.dxf\" dosyası"
       },
       {
         "type": "text",
-        "text": "Dosyanın gerçek koordinatını bir DXF görüntüleyici ile öğrenebilirsiniz. Örneğin ücretsiz TrueView'i açar, ortadaki herhangi bir noktayı ölçersiniz (\"Measure\" alanında \"Locate Point\" düğmesiyle). Ölçtüğünüz değeri yuvarlayıp proje ofseti olarak girersiniz. Projeyi işaretleyin, kısayol menüsünden Özellikler (Eigenschaften) seçin ve ofseti yazın. Görüntüleyicide X: 735531 ve Y: 5353041 ölçtüyseniz, ofset olarak X: 735000 ve Y: 5353000 girmeniz yeterlidir."
+        "text": "**Önce koordinatı öğrenin.** Dosyanın gerçek koordinatını bir DXF görüntüleyici ile öğrenebilirsiniz. Örneğin ücretsiz TrueView'i açar, ortadaki herhangi bir noktayı ölçersiniz (\"Measure\" alanında \"Locate Point\" düğmesiyle). Ölçtüğünüz değeri yuvarlayıp proje ofseti olarak girersiniz. Projeyi işaretleyin, kısayol menüsünden Özellikler (Eigenschaften) seçin ve ofseti yazın. Görüntüleyicide X: 735531 ve Y: 5353041 ölçtüyseniz, ofset olarak X: 735000 ve Y: 5353000 girmeniz yeterlidir."
       },
       {
         "type": "image",
@@ -243,12 +243,8 @@
         "caption": "Proje özelliklerinde ofset koordinatlarının yuvarlanmış olarak girilmesi."
       },
       {
-        "type": "heading",
-        "text": "İçe aktarma seçenekleri"
-      },
-      {
         "type": "text",
-        "text": "Boş bir çizim dosyasını çift tıklayıp tek başına etkinleştirin. Dosya (Datei) -> İçe Aktar (Importieren) -> AutoCAD Verilerini İçe Aktar yolunu açın ve dişli simgeli Seçenekler (Optionen) düğmesine basın. Önce Sıfırla (Reset) ile ayarları Allplan'ın önerdiği standartlara döndürün. 3B veriye ihtiyacınız yoksa Genel Ayarlar sekmesinde aktarım türünü 2D seçin, birimi Metre yapın ve ağırlık merkezi ayarını Kapalı (Aus) bırakın."
+        "text": "**İçe aktarma seçenekleri.** Boş bir çizim dosyasını çift tıklayıp tek başına etkinleştirin. Dosya (Datei) -> İçe Aktar (Importieren) -> AutoCAD Verilerini İçe Aktar yolunu açın ve dişli simgeli Seçenekler (Optionen) düğmesine basın. Önce Sıfırla (Reset) ile ayarları Allplan'ın önerdiği standartlara döndürün. 3B veriye ihtiyacınız yoksa Genel Ayarlar sekmesinde aktarım türünü 2D seçin, birimi Metre yapın ve ağırlık merkezi ayarını Kapalı (Aus) bırakın."
       },
       {
         "type": "image",
@@ -265,12 +261,8 @@
         "caption": "Genel Ayarlar: aktarım türü 2D, birim Metre."
       },
       {
-        "type": "heading",
-        "text": "Koordinat uyarlamasına dikkat"
-      },
-      {
         "type": "text",
-        "text": "Yapılandırmada \"Koordinat uyarlaması olmadan (Ohne Koordinatenanpassung)\" seçeneğinin işaretli olduğundan ve öyle kaldığından emin olun. İçe aktarmadan sonra Makroyu Parçala (Makro auflösen) fonksiyonunu \"Yerleşim Katmanı\" atamasıyla seçin ve Ctrl + A ile tüm objelere uygulayın."
+        "text": "**Koordinat uyarlamasına dikkat.** Yapılandırmada \"Koordinat uyarlaması olmadan (Ohne Koordinatenanpassung)\" seçeneğinin işaretli olduğundan ve öyle kaldığından emin olun. İçe aktarmadan sonra Makroyu Parçala (Makro auflösen) fonksiyonunu \"Yerleşim Katmanı\" atamasıyla seçin ve Ctrl + A ile tüm objelere uygulayın."
       },
       {
         "type": "image",
@@ -278,12 +270,8 @@
         "caption": "Koordinat uyarlaması olmadan seçeneği işaretli kalmalı."
       },
       {
-        "type": "heading",
-        "text": "Ofset mi, sıfır noktası mı?"
-      },
-      {
         "type": "text",
-        "text": "CAD sistemleri çok büyük koordinatlarda hesaplama sorunu yaşar; uzak bir noktada ne kadar çok veri olursa sorun o kadar büyür. Bu yüzden veriler global orijinin yakınında tutulur. Sıfır Noktası (Nullpunkt) seçeneği veriyi orijine taşır ama kaydırma vektörünü saklamaz; coğrafi koordinata ihtiyacınız yoksa bunu kullanırsınız. Ofset (Offset) seçeneği ise veriyi orijine taşır ve kaydırma vektörünü projeye kaydeder; böylece ölçüm yaptığınızda gerçek koordinatlar yine de görünür. Görüntüleyici kullanmak istemiyorsanız, dosyayı bir kez kaydırmadan (birim Metre) açıp bir nokta ölçer, sonra veriyi silebilirsiniz."
+        "text": "**Ofset mi, sıfır noktası mı?** CAD sistemleri çok büyük koordinatlarda hesaplama sorunu yaşar; uzak bir noktada ne kadar çok veri olursa sorun o kadar büyür. Bu yüzden veriler global orijinin yakınında tutulur. Sıfır Noktası (Nullpunkt) seçeneği veriyi orijine taşır ama kaydırma vektörünü saklamaz; coğrafi koordinata ihtiyacınız yoksa bunu kullanırsınız. Ofset (Offset) seçeneği ise veriyi orijine taşır ve kaydırma vektörünü projeye kaydeder; böylece ölçüm yaptığınızda gerçek koordinatlar yine de görünür. Görüntüleyici kullanmak istemiyorsanız, dosyayı bir kez kaydırmadan (birim Metre) açıp bir nokta ölçer, sonra veriyi silebilirsiniz."
       },
       {
         "type": "image",
@@ -292,7 +280,7 @@
       },
       {
         "type": "heading",
-        "text": "DWG/DXF İçe Aktarma ve Büyük Koordinatlar (Fransızca Arayüz)"
+        "text": "DWG İçe Aktarma - Model Alanı - Büyük Koordinatlar"
       },
       {
         "type": "text",

@@ -168,11 +168,11 @@
       },
       {
         "type": "heading",
-        "text": "Temel hazırlık"
+        "text": "SmartParts - Kutu pencere (çift katlı pencere) oluşturma (Allplan 2024'e kadar)"
       },
       {
         "type": "text",
-        "text": "Uygun kalınlıkta bir duvar ve bir pencere boşluğu gerekir. Boşluğun Diş (Anschlag) sekmesinde pencere derinliğini (Fenstertiefe) 28 cm, dış söve derinliğini (Leibung außen) 0,10 cm olarak ayarlayın. 28 cm, kutu pencerenin toplam derinliğine karşılık gelir."
+        "text": "**Temel hazırlık.** Uygun kalınlıkta bir duvar ve bir pencere boşluğu gerekir. Boşluğun Diş (Anschlag) sekmesinde pencere derinliğini (Fenstertiefe) 28 cm, dış söve derinliğini (Leibung außen) 0,10 cm olarak ayarlayın. 28 cm, kutu pencerenin toplam derinliğine karşılık gelir."
       },
       {
         "type": "image",
@@ -180,12 +180,8 @@
         "caption": "Diş (Anschlag) sekmesi: pencere derinliği 28 cm, dış söve derinliği 0,10 cm."
       },
       {
-        "type": "heading",
-        "text": "Dış pencere ve kutu"
-      },
-      {
         "type": "text",
-        "text": "Kutunun kendisini dış pencerede oluşturursunuz. Önce kasa elemanını kalınlığı olmayan bir taşıyıcı kasa olarak kurun; böylece diğer profilleri derinlik yönünde tam konumlandırabilirsiniz. Bunu tüm söve derinliğine sahip bir blok kasa (Blockrahmen) olarak girin. Kasa grafikte görünmez, ama objelerin açılır menüsünden (Pulldownmenü) her zaman seçilebilir kalır."
+        "text": "**Dış pencere ve kutu.** Kutunun kendisini dış pencerede oluşturursunuz. Önce kasa elemanını kalınlığı olmayan bir taşıyıcı kasa olarak kurun; böylece diğer profilleri derinlik yönünde tam konumlandırabilirsiniz. Bunu tüm söve derinliğine sahip bir blok kasa (Blockrahmen) olarak girin. Kasa grafikte görünmez, ama objelerin açılır menüsünden (Pulldownmenü) her zaman seçilebilir kalır."
       },
       {
         "type": "image",
@@ -216,12 +212,8 @@
         "caption": "Orta ve yatay kayıtlarla bölünmüş dış pencere."
       },
       {
-        "type": "heading",
-        "text": "İç pencere"
-      },
-      {
         "type": "text",
-        "text": "İç pencere de bir taşıyıcı kasaya ihtiyaç duyar; ancak ikinci kasaya (kutuya) gerek yoktur. Taşıyıcı kasayı yine görünmez blok kasa olarak kurun. Sonra asıl kasayı oluşturun, kasa genişliği ile derinliğini ayarlayın ve hizalamada bu kez üçüncü seçeneği içe hemzemin (innen bündig) olarak seçin. Pencereyi orta ve yatay kayıtlarla bölerek tamamlayın."
+        "text": "**İç pencere.** İç pencere de bir taşıyıcı kasaya ihtiyaç duyar; ancak ikinci kasaya (kutuya) gerek yoktur. Taşıyıcı kasayı yine görünmez blok kasa olarak kurun. Sonra asıl kasayı oluşturun, kasa genişliği ile derinliğini ayarlayın ve hizalamada bu kez üçüncü seçeneği içe hemzemin (innen bündig) olarak seçin. Pencereyi orta ve yatay kayıtlarla bölerek tamamlayın."
       },
       {
         "type": "image",
@@ -229,12 +221,8 @@
         "caption": "İç pencere kasası, içe hemzemin hizalamayla."
       },
       {
-        "type": "heading",
-        "text": "Sonuç"
-      },
-      {
         "type": "text",
-        "text": "İki pencere arasındaki yaklaşık 28 cm derinlik kutuyu oluşturur ve tarihi ya da modern bir kutu pencere elde edersiniz."
+        "text": "**Sonuç.** İki pencere arasındaki yaklaşık 28 cm derinlik kutuyu oluşturur ve tarihi ya da modern bir kutu pencere elde edersiniz."
       },
       {
         "type": "image",
@@ -243,7 +231,7 @@
       },
       {
         "type": "heading",
-        "text": "Kapilar (Nitelikli) Raporunu Kullanmak"
+        "text": "Raporlar - ARCH - Kapılar (Nitelikli) - Raporun kullanımı"
       },
       {
         "type": "text",
@@ -306,7 +294,7 @@
       },
       {
         "type": "heading",
-        "text": "Pencere/Kapi Acilis Yonunu Metinle Etiketlemek"
+        "text": "SmartParts - Pencere / Kapı - Açılış yönü ve metin"
       },
       {
         "type": "text",
@@ -347,7 +335,7 @@
       },
       {
         "type": "heading",
-        "text": "Panjur Kutusu (Rollladenkasten) Olusturma Yontemleri"
+        "text": "SmartParts - Pencereler - Panjur Kutusu, Dıştan Takma Panjur ve Benzerlerinin Karşılaştırılması"
       },
       {
         "type": "text",

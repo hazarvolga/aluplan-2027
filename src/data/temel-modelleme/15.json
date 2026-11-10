@@ -138,7 +138,7 @@
     "blocks": [
       {
         "type": "heading",
-        "text": "Bina strüktürü düğümlerine nitelik ekleme"
+        "text": "Nitelikler - Bina Strüktürü için genel bakış"
       },
       {
         "type": "text",
@@ -173,7 +173,7 @@
       },
       {
         "type": "heading",
-        "text": "DIN 277'ye göre brüt taban alanı ve brüt hacim"
+        "text": "Mahaller - Katlar ile DIN 277'ye göre brüt hacimlerin ve brüt taban alanlarının belirlenmesi"
       },
       {
         "type": "text",
@@ -235,7 +235,7 @@
       },
       {
         "type": "heading",
-        "text": "Çatı katında ara döşeme oluşturma"
+        "text": "Çatı - Kat - Ara döşeme oluşturma"
       },
       {
         "type": "text",
@@ -289,7 +289,7 @@
       },
       {
         "type": "heading",
-        "text": "bak dosyalarıyla Bina Strüktürünü onarma ve geri getirme"
+        "text": "bak dosyalarıyla çalışma - Yapı strüktürünü onarma ve geri getirme"
       },
       {
         "type": "text",

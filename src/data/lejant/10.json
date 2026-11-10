@@ -91,7 +91,7 @@
     },
     {
       "id": "de_8713",
-      "title": "Bewehrung - Schnelle Erzeugung von speziellen Biegeformen",
+      "title": "Donatı - Özel Büküm Formlarının Hızlı Üretimi",
       "body": "- **Kaynak URL (Alındığı Adres):** https://learnnow.allplan.com/totara/engage/resources/howto/index.php?id=8713&source=howto\n- **Kaynak ID (`resource_id`):** `8713`\n- **Resmi Salesforce / Allplan KB No:** `000008523-de`\n- **İçerik Tipi:** `knowledge_article`\n- **Dil:** `de`\n- **Kategori Ağacı:** `ALLPLAN > Ingenieurbau > Bewehrung > Rundstahl`\n- **Geçerli Allplan Sürümleri:** `ALLPLAN 2025, ALLPLAN 2024, ALLPLAN 2023, ALLPLAN 2022`\n- **Yazar & Tarih:** Erstellt am 13. Oktober 2023, 17:59. Zuletzt aktualisiert am 23. Juli 2025, 22:21. | Owner: Salesforce Integration\n- **Doğrudan PDF Kılavuz URL:** -\n- **Eğitim Videosu / Webinar URL:** -\n- **İndirilen PDF, Örnek Dosya ve Ekran Görüntüleri (7 Adet):**\n - [SCREENSHOT] `8713_0EM67000008DTQ4_d5f2622b.png` (14.94 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/8713/0EM67000008DTQ4.png | SHA-256: `d5f2622b319b8d5f...`)\n - [SCREENSHOT] `8713_0EM67000008DTkD_61d50645.png` (12.33 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/8713/0EM67000008DTkD.png | SHA-256: `61d506450808daaf...`)\n - [SCREENSHOT] `8713_0EM67000008DXkH_153b9716.png` (18.69 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/8713/0EM67000008DXkH.png | SHA-256: `153b97167d469a45...`)\n - [SCREENSHOT] `8713_0EM67000008DTjo_4f27ff30.png` (114.22 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/8713/0EM67000008DTjo.png | SHA-256: `4f27ff30c2820a0a...`)\n - [SCREENSHOT] `8713_0EM67000008DTnH_dcf2e41b.png` (82.89 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/8713/0EM67000008DTnH.png | SHA-256: `dcf2e41be8641876...`)\n - [SCREENSHOT] `8713_0EM67000008DTmO_2d08672b.png` (120.51 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/8713/0EM67000008DTmO.png | SHA-256: `2d08672b640ccdac...`)\n - [SCREENSHOT] `8713_0EM67000008DTlQ_8fc16201.png` (149.57 KB | Orjinal URL: https://learnnow.allplan.com/pluginfile.php/5/engage_howto/salesforce_content/8713/0EM67000008DTlQ.png | SHA-256: `8fc162011ac7b …",
       "figures": [
         "/akademi/lejant/8713_0EM67000008DTkD_61d50645.png",
@@ -142,7 +142,7 @@
     "blocks": [
       {
         "type": "heading",
-        "text": "Formül Koleksiyonu: Koşullara Bağlı Gösterim Örnekleri"
+        "text": "Etiket Stilleri - Formül Koleksiyonu - Koşullar için örnekler (mantıksal uygunluk kontrolleri ve benzerleri)"
       },
       {
         "type": "text",
@@ -184,7 +184,7 @@
       },
       {
         "type": "heading",
-        "text": "Özel Büküm Formlarını Hızlı Üretmek"
+        "text": "Donatı - Özel Büküm Formlarının Hızlı Üretimi"
       },
       {
         "type": "text",
@@ -251,7 +251,7 @@
       },
       {
         "type": "heading",
-        "text": "Lejant / Etiket Stili Yedekleme ve Geri Yükleme"
+        "text": "Etiket Stilleri / Lejantlar - Yedekleme ve Geri Yükleme"
       },
       {
         "type": "text",

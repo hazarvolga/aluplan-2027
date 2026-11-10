@@ -15,4 +15,7 @@
    çubuk mobil ekranı yemesin). Yatay kaydırma yok; satırlara sarar. */
 @media (max-width:47.9rem){
   .toc{position:static;top:auto}
+  /* Dokunma hedeflerini en az 44px yap (WCAG 2.2 AA) */
+  .link{padding:12px 0}
+  .done{padding:12px var(--space-inline-sm)}
 }

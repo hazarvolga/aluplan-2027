@@ -24,7 +24,25 @@ Veri modeli: `TmLesson.deepDive = { title, blocks: [{type:'heading'|'text'|'imag
   commit'leri YEREL — git log'a bak, gerekirse push kullanıcı onayıyla). **Canlıya ALINMADI**
   (akademi `isAkademiEnabled()` flag + noindex arkasında).
 
-## 🔴 AÇIK SORUN #1 (kullanıcının aktif şikayeti — ÖNCE BUNU ÇÖZ)
+## ✅ AÇIK SORUN #1 — ÇÖZÜLDÜ (teşhis netleşti, 2026-11-10)
+Kök neden bulundu: **içerik YEDİRİLMİŞ ve sadık** (canlı render teyit: arazi 04 = 6 alt-bölüm/8
+görsel; de_11379 tam — koşullar+menü yolu+hata mesajları; TM 04 = de_10602 ara döşeme "Çatı
+Katında Eğimli Çatıya Uyan Ara Döşeme Oluşturma" başlığıyla görselleriyle var). Kullanıcının
+"eksik/yedirilmemiş/sadece bir tane" algısının gerçek sebebi: **Derinlemesine alt-bölüm
+BAŞLIKLARINI yeniden yazdım, kart makale başlıklarıyla birebir aynı değil** (ör. kart "Çatı -
+Kat - Ara döşeme oluşturma" → Derinlemesine "Çatı Katında Eğimli Çatıya Uyan Ara Döşeme
+Oluşturma"). Kullanıcı kart ↔ Derinlemesine'yi karşılaştırınca eşleşmeyi bulamıyor + iki bölüm
+de görünür olduğu için "yok" sanıyor. Dün "stale render" diye yazılan not YANLIŞTI; sorun render
+değil, başlık-eşleşmesi/UX.
+
+**ÇÖZÜM SEÇENEKLERİ (kullanıcı seçecek, limit açılınca ilk iş bunu sor):**
+- (a) Migrate edilen dersin "Derinleşmek için" kartını GİZLE → çift içerik kalmaz, kafa karışmaz.
+- (b) Derinlemesine alt-bölüm başlıklarını kart makale başlıklarıyla EŞLE (birebir aynı yap).
+- (c) Her Derinlemesine alt-bölümünün altına küçük "Kaynak: <kart başlığı>" satırı ekle.
+Öneri: (a) + (b) birlikte (kartı gizle, başlıkları da netleştir). Kullanıcı "bu noktada duralım"
+dedi (2026-11-10); yeni oturumda bu seçimle başla.
+
+## 🟡 (ESKİ) AÇIK SORUN #1 notu (artık çözüldü, referans için)
 Kullanıcı `arazi-modelleme/04` (dijital-arazi) sayfasında "Derinleşmek için kartındaki Soru/Cevap
 bölümleri **derse yedirilmemiş / sadece bir tanesi var**" diyor. AMA JSON'da **6 Derinlemesine
 alt-bölümü VAR**: fr_9311 (Arazi Modülüne Kuşbakışı), de_11379 (Dış Sınır), de_11316, en_11159,

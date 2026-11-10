@@ -10,7 +10,13 @@ const DONE_PREFIX = 'akademi-lesson-done-';
  * Rol bazlı sıralı öğrenme yolları. İlerleme bu tarayıcının localStorage'ındaki
  * ders tamamlama işaretlerinden (akademi-lesson-done-<slug>) hesaplanır; backend yok.
  */
-export function AkademiOgrenmeYollari({ yollar }: { yollar: readonly OgrenmeYolu[] }): ReactElement {
+export function AkademiOgrenmeYollari({
+  yollar,
+  baseHref = '/akademi',
+}: {
+  yollar: readonly OgrenmeYolu[];
+  baseHref?: string;
+}): ReactElement {
   const [done, setDone] = useState<Record<string, boolean>>({});
   const [hydrated, setHydrated] = useState(false);
 
@@ -35,8 +41,6 @@ export function AkademiOgrenmeYollari({ yollar }: { yollar: readonly OgrenmeYolu
         const total = yol.lessons.length;
         const completed = yol.lessons.filter((lesson) => done[lesson.slug]).length;
         const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
-        const nextLesson = yol.lessons.find((lesson) => !done[lesson.slug]) ?? yol.lessons[0];
-        const started = completed > 0;
         return (
           <li key={yol.role} className={styles.path}>
             <div className={styles.pathHead}>
@@ -62,11 +66,9 @@ export function AkademiOgrenmeYollari({ yollar }: { yollar: readonly OgrenmeYolu
               <span className={styles.pathPct}>
                 {hydrated ? `${completed}/${total} ders · %${pct}` : `${total} ders`}
               </span>
-              {nextLesson && (
-                <a className={styles.pathCta} href={nextLesson.href}>
-                  {hydrated && started ? 'Devam et →' : 'Yola başla →'}
-                </a>
-              )}
+              <a className={styles.pathCta} href={`${baseHref}?rol=${yol.role}#katalog`}>
+                Rolün modüllerini gör →
+              </a>
             </div>
           </li>
         );

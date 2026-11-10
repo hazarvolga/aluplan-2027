@@ -65,11 +65,11 @@ export function AkademiKatalogBolumu({ seviye, rol, sure, baseHref }: Props): Re
         <div className="alu-container">
           <SectionHeader
             id="katalog-yollar"
-            kicker="ÖĞRENME YOLLARI"
-            title="Rol bazlı sıralı yollar"
-            lead="Her yol, ilgili disiplinin izlemesi gereken sıralı modülleri gösterir. İlerleme bu tarayıcıda kaydedilir."
+            kicker="MESLEKİ ROL"
+            title="Rolünüze göre müfredat"
+            lead="Herkes Temel'de ortak başlar; rolünüz ileri modüllerde ayrışır (çoğu yakında). Rolünüzü seçin, size uygun modülleri görün. İlerleme bu tarayıcıda kaydedilir."
           />
-          <AkademiOgrenmeYollari yollar={ogrenmeYollari()} />
+          <AkademiOgrenmeYollari yollar={ogrenmeYollari()} baseHref={baseHref} />
         </div>
       </section>
 

@@ -1,0 +1,26 @@
+.page{padding-bottom:var(--space-stack-xl)}
+.band{padding-block:var(--space-stack-xl);border-bottom:var(--border-width-default) solid var(--border-default)}
+
+.filterRow{display:grid;grid-template-columns:7rem 1fr;gap:var(--space-inline-md);align-items:baseline;padding:var(--space-stack-sm) 0;border-top:var(--border-width-default) solid var(--border-subtle)}
+.filterRow:first-of-type{border-top:0}
+.filterLabel{font-family:var(--font-mono);font-size:var(--type-body-sm-size);letter-spacing:.08em;text-transform:uppercase;color:var(--text-secondary)}
+.chips{display:flex;flex-wrap:wrap;gap:var(--space-inline-xs) var(--space-inline-sm)}
+.chip{display:inline-block;white-space:nowrap;font-size:var(--type-body-sm-size);color:var(--text-secondary);text-decoration:none;padding:2px var(--space-inline-sm);border:var(--border-width-default) solid var(--border-default);background:var(--surface-raised)}
+.chip:hover{color:var(--accent-akademi);border-color:var(--accent-border)}
+.chip[data-active="true"]{color:var(--accent-akademi);border-color:var(--accent-akademi)}
+.chip:focus-visible{outline:var(--border-width-accent,2px) solid var(--accent-akademi);outline-offset:2px}
+
+.grid{list-style:none;margin:var(--space-stack-lg) 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,18rem),1fr));gap:var(--space-stack-sm)}
+.card{margin:0}
+.cardLink{display:flex;flex-direction:column;gap:var(--space-stack-xs);height:100%;padding:var(--space-inset-md);border:var(--border-width-default) solid var(--border-default);background:var(--surface-raised);text-decoration:none;color:var(--text-primary)}
+.cardLink:hover{border-color:var(--accent-akademi)}
+.cardLink:hover .cardTitle{color:var(--accent-akademi)}
+.cardLink:focus-visible{outline:var(--border-width-accent,2px) solid var(--accent-akademi);outline-offset:2px}
+.cardTop{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-inline-sm)}
+.cardCode{font-family:var(--font-mono);font-size:var(--type-body-sm-size);color:var(--accent-akademi)}
+.cardHours{font-family:var(--font-mono);font-size:var(--type-body-sm-size);color:var(--text-muted)}
+.cardTitle{font-family:var(--font-heading);font-size:var(--type-body-md-size);line-height:var(--line-height-snug,1.3);color:var(--text-primary)}
+.cardRoles{margin-top:auto;font-size:var(--type-body-sm-size);color:var(--text-secondary)}
+
+.empty{margin:var(--space-stack-lg) 0 0;color:var(--text-secondary);font-size:var(--type-body-md-size)}
+.clear{color:var(--accent-akademi)}

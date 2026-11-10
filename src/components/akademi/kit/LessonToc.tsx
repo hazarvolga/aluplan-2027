@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, type ReactElement } from 'react';
+import { useEffect, useRef, useState, type ReactElement } from 'react';
 import styles from './LessonToc.module.css';
 
 interface TocEntry {
@@ -10,23 +10,41 @@ interface TocEntry {
 
 const DONE_PREFIX = 'akademi-lesson-done-';
 
+/** Short, bar-friendly labels per section id; falls back to the heading text. */
+const SHORT_LABELS: Record<string, string> = {
+  'tm-hedef': 'Hedefler',
+  'tm-adimlar': 'Adımlar',
+  'tm-kontrol': 'Kontrol',
+  'tm-dikkat': 'Dikkat',
+  'tm-uygulama': 'Uygulama',
+  'tm-quiz': 'Quiz',
+  'tm-video': 'Video',
+  'tm-komut': 'Komutlar',
+  'tm-derin': 'Derinlemesine',
+  'tm-makale': 'Kaynaklar',
+  'tm-indir': 'Dosyalar',
+};
+
 /**
  * In-lesson table of contents: a sticky bar listing the lesson's own sections
  * with a scroll-spy "where am I" marker, plus a per-lesson "completed" toggle
  * kept in this browser's localStorage. Sections are read from the page's own
- * `section[aria-labelledby]` headings, so the bar adapts to each lesson.
+ * `section[aria-labelledby]` headings, so the bar adapts to each lesson. The
+ * bar wraps to two lines instead of scrolling sideways, and anchor clicks
+ * scroll smoothly, offset below the sticky header + bar.
  */
 export function LessonToc({ slug }: { slug: string }): ReactElement | null {
   const [entries, setEntries] = useState<readonly TocEntry[]>([]);
   const [active, setActive] = useState('');
   const [done, setDone] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const sections = Array.from(document.querySelectorAll<HTMLElement>('section[aria-labelledby]'));
     const list = sections
       .map((section) => {
         const id = section.getAttribute('aria-labelledby') ?? '';
-        const label = document.getElementById(id)?.textContent?.trim() ?? '';
+        const label = SHORT_LABELS[id] ?? document.getElementById(id)?.textContent?.trim() ?? '';
         return { id, label };
       })
       .filter((entry) => entry.id !== '' && entry.label !== '');
@@ -67,10 +85,30 @@ export function LessonToc({ slug }: { slug: string }): ReactElement | null {
     });
   }
 
+  function goTo(event: React.MouseEvent<HTMLAnchorElement>, id: string): void {
+    const target = document.getElementById(id);
+    if (!target) return;
+    event.preventDefault();
+    const headerHeight = document.querySelector('header')?.getBoundingClientRect().height ?? 60;
+    const bar = navRef.current;
+    const barSticky = bar !== null && window.getComputedStyle(bar).position === 'sticky';
+    const barHeight = barSticky ? bar.getBoundingClientRect().height : 0;
+    const offset = headerHeight + barHeight + 12;
+    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top, behavior: reduced ? 'auto' : 'smooth' });
+    try {
+      window.history.replaceState(null, '', `#${id}`);
+    } catch {
+      // ignore: hash update is cosmetic
+    }
+    setActive(id);
+  }
+
   if (entries.length < 2) return null;
 
   return (
-    <nav className={styles.toc} aria-label="Ders içi gezinme">
+    <nav ref={navRef} className={styles.toc} aria-label="Ders içi gezinme">
       <ul className={styles.list}>
         {entries.map((entry) => (
           <li key={entry.id} className={styles.item}>
@@ -78,6 +116,7 @@ export function LessonToc({ slug }: { slug: string }): ReactElement | null {
               href={`#${entry.id}`}
               className={styles.link}
               aria-current={active === entry.id ? 'true' : undefined}
+              onClick={(event) => goTo(event, entry.id)}
             >
               {entry.label}
             </a>

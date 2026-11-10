@@ -1,5 +1,5 @@
-.toc{position:sticky;top:3.8rem;z-index:15;display:flex;flex-wrap:nowrap;align-items:center;gap:var(--space-inline-md);padding:var(--space-inline-sm) 32px;background:var(--surface-default);border-bottom:var(--border-width-default) solid var(--border-default);overflow-x:auto}
-.list{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:var(--space-inline-md);min-width:0}
+.toc{position:sticky;top:3.8rem;z-index:15;display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-inline-xs) var(--space-inline-md);padding:var(--space-inline-sm) 32px;background:var(--surface-default);border-bottom:var(--border-width-default) solid var(--border-default)}
+.list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-inline-xs) var(--space-inline-md);min-width:0}
 .item{margin:0}
 .link{display:inline-block;white-space:nowrap;font-size:var(--type-body-sm-size);color:var(--text-secondary);text-decoration:none;padding:2px 0;border-bottom:2px solid transparent}
 .link:hover{color:var(--accent-akademi)}
@@ -10,3 +10,9 @@
 .done[data-done="true"]{color:var(--accent-akademi);border-color:var(--accent-akademi)}
 .done:focus-visible{outline:var(--border-width-accent,2px) solid var(--accent-akademi);outline-offset:2px}
 .check{font-size:var(--type-body-sm-size)}
+
+/* Dar ekran: çubuğu yapışkanlıktan çıkar, sayfa başında kalsın (yüksek yapışkan
+   çubuk mobil ekranı yemesin). Yatay kaydırma yok; satırlara sarar. */
+@media (max-width:47.9rem){
+  .toc{position:static;top:auto}
+}

@@ -4,6 +4,8 @@
 .logo{height:var(--type-h4-size);width:auto}
 .wordmark{font-family:var(--font-heading);font-size:var(--type-body-sm-size);font-weight:var(--font-weight-strong);letter-spacing:.14em;text-transform:uppercase;color:var(--text-secondary)}
 .nav{display:flex;align-items:center;gap:var(--space-stack-sm)}
+.navLink{text-decoration:none;color:var(--text-secondary);font-size:var(--type-body-sm-size)}
+.navLink:hover{color:var(--accent-fg)}
 .explore{display:inline-flex;align-items:center;gap:var(--space-stack-xs);text-decoration:none;color:var(--text-primary);font-size:var(--type-body-sm-size);font-weight:var(--font-weight-strong)}
 .explore:hover{color:var(--accent-fg)}
 .toggle{display:inline-flex;align-items:center;justify-content:center;min-width:var(--target-min);min-height:var(--target-min);background:transparent;border:var(--border-width-default) solid var(--border-default);color:var(--text-primary);cursor:pointer}

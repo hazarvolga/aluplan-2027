@@ -8,7 +8,16 @@ import { AkademiLessonJsonLd } from '@/components/akademi/AkademiLessonJsonLd';
 import { getAkademiPage } from '@/lib/akademi-pages';
 import { temelModellemeLessons } from '@/data/temel-modelleme';
 import type { TmLesson } from '@/data/temel-modelleme';
+import imageSizes from '@/data/akademi-image-sizes.json';
 import styles from './TmLessonDetail.module.css';
+
+const IMAGE_SIZES: Record<string, readonly number[] | undefined> = imageSizes;
+
+/** width/height props for a lesson screenshot (from the generated size map), if known. */
+function sizeOf(src: string): { width?: number; height?: number } {
+  const size = IMAGE_SIZES[src];
+  return size ? { width: size[0], height: size[1] } : {};
+}
 
 /** Render **bold** spans and strip `code` backticks from source text (injection-safe). */
 function withEmphasis(text: string): ReactNode[] {
@@ -23,7 +32,7 @@ function TmImages({ srcs, label }: { srcs: readonly string[]; label: string }): 
   return (
     <div className={styles.shots}>
       {srcs.map((src) => (
-        <LessonImage key={src} src={src} alt={`${label} — ekran görüntüsü`} className={styles.shot} />
+        <LessonImage key={src} src={src} alt={`${label} — ekran görüntüsü`} className={styles.shot} {...sizeOf(src)} />
       ))}
     </div>
   );
@@ -59,7 +68,20 @@ export function TmLessonDetail({
 
       <CompactPageHero title={lesson.title} lead={lesson.objectives[0]} />
 
-      <LessonToc slug={lesson.slug} />
+      <LessonToc
+        slug={lesson.slug}
+        sectionIds={[
+          lesson.objectives.length > 0 && 'tm-hedef',
+          lesson.steps.length > 0 && 'tm-adimlar',
+          lesson.checkpoint && 'tm-kontrol',
+          lesson.pitfalls && lesson.pitfalls.length > 0 && 'tm-dikkat',
+          lesson.exercise && 'tm-uygulama',
+          lesson.quiz && lesson.quiz.length > 0 && 'tm-quiz',
+          embeddableVideos.length > 0 && 'tm-video',
+          lesson.commands.length > 0 && 'tm-komut',
+          lesson.deepDive && 'tm-derin',
+        ].filter((id): id is string => typeof id === 'string')}
+      />
 
       {lesson.intro && (
         <section className={styles.band}>
@@ -212,7 +234,7 @@ export function TmLessonDetail({
                 if (b.type === 'image') {
                   return (
                     <figure key={i} className={styles.deepFigure}>
-                      <LessonImage src={b.src} alt={b.caption ?? 'Ekran görüntüsü'} caption={b.caption} className={styles.deepImg} />
+                      <LessonImage src={b.src} alt={b.caption ?? 'Ekran görüntüsü'} caption={b.caption} className={styles.deepImg} {...sizeOf(b.src)} />
                       {b.caption ? <figcaption className={styles.deepCaption}>{b.caption}</figcaption> : null}
                     </figure>
                   );

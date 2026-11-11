@@ -32,3 +32,12 @@ public/assets/**/icons/*
 
 # Local-only design exploration
 /architectural-sheet-concept/
+
+# Local working files kept out of version control (screenshots, palettes, audits, tool folders)
+.tmp-*
+*.ase
+premium-audit.json
+.worktrees/
+.qoder/
+.agents/
+.superpowers/

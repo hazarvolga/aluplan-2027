@@ -90,6 +90,47 @@ class AkademiLaunchBuildTests(unittest.TestCase):
         self.assertIn('name="twitter:card" content="summary_large_image"', html)
         self.assertRegex(html, r'"@type":"LearningResource"')
 
+    def test_lesson_images_reserve_their_space(self):
+        # Unsized screenshots pushed the page down as they loaded (CLS 0.124 on kapi-pencere).
+        html = (BUILD_APP / "akademi/temel-modelleme/kapi-pencere.html")
+        if not html.exists():
+            self.skipTest("build output missing")
+        imgs = re.findall(r'<img [^>]*src="/akademi/[^"]+"[^>]*>', html.read_text(encoding="utf-8"))
+        self.assertGreater(len(imgs), 10)
+        unsized = [i for i in imgs if 'width="' not in i or 'height="' not in i]
+        self.assertEqual(unsized, [])
+
+    def test_image_size_map_is_current(self):
+        import subprocess
+        result = subprocess.run(["node", "scripts/build_akademi_image_sizes.mjs", "--check"], cwd=ROOT)
+        self.assertEqual(result.returncode, 0)
+
+    def test_lesson_toc_is_server_rendered_so_it_does_not_shift_the_page(self):
+        # The in-lesson bar used to appear only after hydration and push the content down.
+        html = (BUILD_APP / "akademi/temel-modelleme/kapi-pencere.html")
+        if not html.exists():
+            self.skipTest("build output missing")
+        text = html.read_text(encoding="utf-8")
+        self.assertIn('aria-label="Ders içi gezinme"', text)
+        self.assertIn('href="#tm-adimlar"', text)
+
+    def test_akademi_titles_are_unique_short_and_descriptions_fit(self):
+        import html as htmllib
+        pages = sorted((BUILD_APP / "akademi").rglob("*.html"))
+        if not pages:
+            self.skipTest("build output missing")
+        titles = {}
+        for page in pages:
+            text = page.read_text(encoding="utf-8")
+            title = htmllib.unescape(re.search(r"<title>([^<]*)</title>", text).group(1))
+            desc = htmllib.unescape(re.search(r'<meta name="description" content="([^"]*)"', text).group(1))
+            with self.subTest(page=page.name):
+                if title.endswith("| Aluplan Akademi"):
+                    self.assertLessEqual(len(title), 60, title)
+                self.assertLessEqual(len(desc), 160, desc)
+            titles.setdefault(title, []).append(page.name)
+        self.assertEqual({t: p for t, p in titles.items() if len(p) > 1}, {})
+
 
 if __name__ == "__main__":
     unittest.main()

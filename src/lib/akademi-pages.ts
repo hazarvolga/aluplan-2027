@@ -19,6 +19,8 @@ export interface AkademiPageInfo {
   description: string;
   /** Short label shown above the title on the share image (series, level, …). */
   kicker: string;
+  /** Lessons only: the series title, used to tell apart lessons that share a name ("Giriş"). */
+  seriesTitle?: string;
 }
 
 interface SeriesSource {
@@ -73,9 +75,19 @@ function buildPages(): AkademiPageInfo[] {
       title: lesson.title,
       description: plain(lesson.objectives[0] ?? lesson.title),
       kicker: `${source.hero.title} · Ders ${String(lesson.no).padStart(2, '0')}`,
+      seriesTitle: source.hero.title,
     })),
   ]);
-  return [overview, ...levels, ...series];
+  return disambiguate([overview, ...levels, ...series]);
+}
+
+/** Lessons sharing a title (e.g. two "Giriş" lessons) get their series name appended. */
+function disambiguate(pages: AkademiPageInfo[]): AkademiPageInfo[] {
+  const counts = new Map<string, number>();
+  for (const page of pages) counts.set(page.title, (counts.get(page.title) ?? 0) + 1);
+  return pages.map((page) =>
+    (counts.get(page.title) ?? 0) > 1 && page.seriesTitle ? { ...page, title: `${page.title}: ${page.seriesTitle}` } : page,
+  );
 }
 
 const PAGES: readonly AkademiPageInfo[] = buildPages();

@@ -31,8 +31,11 @@ const SHORT_LABELS: Record<string, string> = {
  * bar wraps to two lines instead of scrolling sideways, and anchor clicks
  * scroll smoothly, offset below the sticky header + bar.
  */
-export function LessonToc({ slug }: { slug: string }): ReactElement | null {
-  const [entries, setEntries] = useState<readonly TocEntry[]>([]);
+export function LessonToc({ slug, sectionIds = [] }: { slug: string; sectionIds?: readonly string[] }): ReactElement | null {
+  // Server-known sections render the bar in the first paint, so it does not push the page down later.
+  const [entries, setEntries] = useState<readonly TocEntry[]>(() =>
+    sectionIds.filter((id) => SHORT_LABELS[id]).map((id) => ({ id, label: SHORT_LABELS[id] })),
+  );
   const [active, setActive] = useState('');
   const [done, setDone] = useState(false);
   const navRef = useRef<HTMLElement>(null);

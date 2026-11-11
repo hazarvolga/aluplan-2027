@@ -138,5 +138,15 @@ class HomeSlideTests(unittest.TestCase):
         self.assertIn(".preview-bimflex__head{display:flex;align-items:center;justify-content:space-between", css)
 
 
+    def test_role_workflow_ctas_open_the_solution_workflow_section(self):
+        # "Bu Akışı Detaylı İncele" goes to the discipline's workflow section, not a product page.
+        roles = {r["id"]: r["href"] for r in json.loads((ROOT / "src/data/homepage.json").read_text(encoding="utf-8"))["roles"]}
+        self.assertEqual(roles["architect"], "/solutions/architecture#is-akislari")
+        self.assertEqual(roles["engineer"], "/solutions/structural#is-akislari")
+        self.assertEqual(roles["fabricator"], "/solutions/precast")
+        workflow = (ROOT / "src/components/sections/WorkflowSection.tsx").read_text(encoding="utf-8")
+        self.assertIn('id="is-akislari"', workflow)
+
+
 if __name__ == "__main__":
     unittest.main()

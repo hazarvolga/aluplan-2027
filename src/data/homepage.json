@@ -5,7 +5,7 @@
       "label": "MİMAR",
       "title": "Özgür Tasarım",
       "description": "Sınırsız modelleme yetenekleri ve entegre görselleştirme ile tasarım vizyonunuzu kısıtlamadan gerçeğe dönüştürün.",
-      "href": "/products/architecture",
+      "href": "/solutions/architecture#is-akislari",
       "features": [
         "Parametrik Modelleme",
         "Entegre Rendering",
@@ -20,7 +20,7 @@
       "label": "MÜHENDİS",
       "title": "Hassas Analiz",
       "description": "Tek model üzerinden yapısal analiz, donatı detaylandırma ve metraj. Hatasız projeler, optimize edilmiş maliyetler.",
-      "href": "/products/allplan-aec",
+      "href": "/solutions/structural#is-akislari",
       "features": [
         "Otomatik Donatı",
         "FEM Analizi",
@@ -35,7 +35,7 @@
       "label": "PREKAST",
       "title": "Akıllı Üretim",
       "description": "Modelden doğrudan fabrikaya veri aktarımı. Prekast ve çelik üretiminde maksimum verimlilik ve sıfır hata.",
-      "href": "/products/precast",
+      "href": "/solutions/precast",
       "features": [
         "CAM Veri Çıktısı",
         "Lojistik Planlama",

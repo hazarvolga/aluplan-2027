@@ -11,7 +11,7 @@ export function WorkflowSection({ content, onVideo, onImage }: {
 }) {
   if (content.categories.length === 0) return null;
   return (
-    <section className="preview-section preview-section--subtle" aria-label={content.title}>
+    <section id="is-akislari" className="preview-section preview-section--subtle" aria-label={content.title} style={{ scrollMarginTop: 'var(--space-stack-xl)' }}>
       <div className="alu-container alu-stack" style={{ gap: 'var(--space-stack-xl)' }}>
         <SectionHeader kicker={content.kicker} title={content.title} lead={content.subtitle} />
         <WorkFlowTabs content={content} onVideo={onVideo} onImage={onImage} />

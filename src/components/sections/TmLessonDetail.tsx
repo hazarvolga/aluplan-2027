@@ -4,6 +4,8 @@ import { SectionHeader } from './SectionHeader';
 import { CommandTable, LessonImage, LessonToc, PrevNextNav } from '@/components/akademi/kit';
 import { AkademiQuiz } from '@/components/akademi/AkademiQuiz';
 import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
+import { AkademiLessonJsonLd } from '@/components/akademi/AkademiLessonJsonLd';
+import { getAkademiPage } from '@/lib/akademi-pages';
 import { temelModellemeLessons } from '@/data/temel-modelleme';
 import type { TmLesson } from '@/data/temel-modelleme';
 import styles from './TmLessonDetail.module.css';
@@ -46,6 +48,7 @@ export function TmLessonDetail({
 
   return (
     <div className={styles.page}>
+      <AkademiLessonJsonLd series={{ title: getAkademiPage(basePath)?.title ?? breadcrumbLabel, path: basePath }} lesson={lesson} />
       <nav className={styles.breadcrumb} aria-label="Konum">
         <a href="/akademi">Akademi</a>
         <span aria-hidden="true" className={styles.sep}>/</span>

@@ -1,17 +1,10 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { AkademiOverview } from '@/components/sections/AkademiOverview';
-import { akademiProgram } from '@/data/akademi-content';
 import { isAkademiEnabled } from '@/lib/release-flags';
+import { akademiMetadata } from '@/lib/akademi-metadata';
 
-const { hero: akademiHero } = akademiProgram;
-
-/** Draft section: never indexed until the curriculum and content are approved. */
-export const metadata: Metadata = {
-  title: 'Aluplan Akademi | ALLPLAN Türkçe Eğitim Programı',
-  description: akademiHero.lead,
-  robots: { index: false, follow: false },
-};
+export const metadata: Metadata = akademiMetadata('/akademi');
 
 export default async function AkademiPage({
   searchParams,

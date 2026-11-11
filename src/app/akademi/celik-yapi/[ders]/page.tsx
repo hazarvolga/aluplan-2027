@@ -7,10 +7,12 @@ import {
   getCelikYapiLesson,
 } from '@/data/celik-yapi';
 import { isAkademiEnabled } from '@/lib/release-flags';
+import { akademiMetadata } from '@/lib/akademi-metadata';
 
-export const metadata: Metadata = {
-  robots: { index: false, follow: false },
-};
+export async function generateMetadata({ params }: { params: Promise<{ ders: string }> }): Promise<Metadata> {
+  const { ders } = await params;
+  return akademiMetadata(`/akademi/celik-yapi/${ders}`);
+}
 
 export const dynamicParams = false;
 

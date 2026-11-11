@@ -77,7 +77,8 @@ function MobileMenuGroup({ title, href, sections, onNavigate }: {
   );
 }
 
-export function SiteShell({ children }: { children: React.ReactNode }) {
+/** showAkademi comes from the server (launch flag ALLPLAN_SHOW_AKADEMI); the client cannot read it. */
+export function SiteShell({ children, showAkademi = false }: { children: React.ReactNode; showAkademi?: boolean }) {
   const { mode, toggleMode } = useThemeMode();
   const pathname = usePathname();
   const [openMenu, setOpenMenu] = useState<'products' | 'solutions' | null>(null);
@@ -182,6 +183,11 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <Link className="alu-site-nav__link" href={isReleaseContentEnabled() ? '/kaynaklar' : '/#professional-services'}>
               Kaynaklar
             </Link>
+            {showAkademi && (
+              <Link className="alu-site-nav__link" href="/akademi">
+                Akademi
+              </Link>
+            )}
             <Link className="alu-site-nav__link" href="/references">
               Referanslar
             </Link>
@@ -280,6 +286,11 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 <Link className="alu-mobile-drawer__link" href={isReleaseContentEnabled() ? '/kaynaklar' : '/#professional-services'} onClick={() => setMobileMenuOpen(false)}>
                   Kaynaklar
                 </Link>
+                {showAkademi && (
+                  <Link className="alu-mobile-drawer__link" href="/akademi" onClick={() => setMobileMenuOpen(false)}>
+                    Akademi
+                  </Link>
+                )}
                 <Link className="alu-mobile-drawer__link" href="/references" onClick={() => setMobileMenuOpen(false)}>
                   Referanslar
                 </Link>
@@ -369,6 +380,13 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                   </Link>
                 </li>
               ))}
+              {showAkademi && (
+                <li>
+                  <Link className="alu-site-footer__link" href="/akademi">
+                    <span>ALUPLAN AKADEMİ</span>
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
 

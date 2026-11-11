@@ -20,16 +20,6 @@ class AkademiDraftTests(unittest.TestCase):
         flags = read("src/lib/release-flags.ts")
         self.assertIn("process.env.ALUPLAN_SHOW_AKADEMI === '1'", flags)
 
-    def test_page_is_never_indexed(self):
-        page = read("src/app/akademi/page.tsx")
-        self.assertIn("robots: { index: false, follow: false }", page)
-
-    def test_draft_is_not_linked_from_sitemap_search_menu_or_llms(self):
-        for path in ("src/app/sitemap.ts", "src/app/llms.txt/route.ts", "src/data/navigation.json",
-                     "src/data/search-index.json", "src/data/search-extra-index.json"):
-            with self.subTest(file=path):
-                self.assertNotIn("/akademi", read(path))
-
     def test_production_deploy_does_not_enable_the_draft(self):
         for path in ("Dockerfile", ".github/workflows/ci.yml"):
             with self.subTest(file=path):
@@ -53,10 +43,9 @@ class AkademiDraftTests(unittest.TestCase):
 
 
 class AkademiLevelPageTests(unittest.TestCase):
-    def test_level_route_is_flag_gated_and_never_indexed(self):
+    def test_level_route_is_flag_gated(self):
         page = read("src/app/akademi/[seviye]/page.tsx")
         self.assertIn("if (!isAkademiEnabled()) notFound();", page)
-        self.assertIn("robots: { index: false, follow: false }", page)
         self.assertNotIn("isReleaseContentEnabled", page)
 
     def test_level_route_builds_no_pages_in_production(self):
@@ -81,18 +70,11 @@ class AkademiLevelPageTests(unittest.TestCase):
                      "src/components/sections/AkademiLevelDetail.tsx",
                      "src/components/akademi/AkademiJsonLd.tsx",
                      "src/components/akademi/sidebar-nav.ts",
-                     "src/app/akademi/page.tsx",
                      "src/app/akademi/[seviye]/page.tsx"):
             with self.subTest(file=path):
                 src = read(path)
                 self.assertIn("@/data/akademi-content", src)
                 self.assertNotRegex(src, r"@/data/akademi'")
-
-    def test_level_pages_are_not_linked_from_sitemap_or_search(self):
-        for path in ("src/app/sitemap.ts", "src/data/navigation.json",
-                     "src/data/search-index.json", "src/data/search-extra-index.json"):
-            with self.subTest(file=path):
-                self.assertNotIn("/akademi", read(path))
 
 
 class AkademiOverviewRedesignTests(unittest.TestCase):

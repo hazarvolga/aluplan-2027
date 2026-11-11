@@ -30,7 +30,7 @@ export default function RootLayout({
       <body>
         <ThemeModeProvider>
           <DebugOverlayController />
-          <SearchIndexProvider showRelease={isReleaseContentEnabled()} showAkademi={isAkademiEnabled()}><SiteShell>{children}</SiteShell></SearchIndexProvider>
+          <SearchIndexProvider showRelease={isReleaseContentEnabled()} showAkademi={isAkademiEnabled()}><SiteShell showAkademi={isAkademiEnabled()}>{children}</SiteShell></SearchIndexProvider>
           <ConsentBanner />
           <ConsentScripts />
         </ThemeModeProvider>

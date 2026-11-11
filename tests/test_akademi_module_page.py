@@ -15,10 +15,9 @@ def read(path: str) -> str:
 
 
 class AkademiModuleRouteTests(unittest.TestCase):
-    def test_route_is_flag_gated_and_never_indexed(self):
+    def test_route_is_flag_gated(self):
         page = read(PAGE)
         self.assertIn("if (!isAkademiEnabled()) notFound();", page)
-        self.assertIn("robots: { index: false, follow: false }", page)
         self.assertNotIn("isReleaseContentEnabled", page)
 
     def test_route_builds_no_pages_in_production(self):
@@ -31,12 +30,6 @@ class AkademiModuleRouteTests(unittest.TestCase):
         page = read(PAGE)
         self.assertIn("getModuleBySlug", page)
         self.assertIn("notFound()", page)
-
-    def test_route_is_not_linked_from_sitemap_or_search(self):
-        for path in ("src/app/sitemap.ts", "src/data/navigation.json",
-                     "src/data/search-index.json", "src/data/search-extra-index.json"):
-            with self.subTest(file=path):
-                self.assertNotIn("/akademi", read(path))
 
 
 class AkademiModuleDetailTests(unittest.TestCase):

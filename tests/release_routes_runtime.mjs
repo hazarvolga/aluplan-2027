@@ -38,6 +38,7 @@ const sitemap = evaluate('src/app/sitemap.ts', (request) => {
   if (request === '@/lib/site-data') return siteData;
   if (request === '@/lib/release-flags') return flags;
   if (request === '@/lib/release-2027-routes') return routes;
+  if (request === '@/lib/akademi-pages') return { listAkademiPages: () => [{ path: '/akademi', kind: 'overview' }, { path: '/akademi/lejant', kind: 'series' }] };
   throw new Error(`Unsupported sitemap import: ${request}`);
 });
 
@@ -57,10 +58,16 @@ const review = withEnv('1', '1', () => ({
   robots: routes.buildRelease2027Metadata('/products/allplan-max').robots,
 }));
 const rollback = withEnv('0', '0', () => ({ sitemap: sitemap.default().map((entry) => entry.url) }));
+process.env.ALUPLAN_SHOW_AKADEMI = '1';
+const akademiOn = withEnv('1', '0', () => sitemap.default().map((entry) => entry.url));
+process.env.ALUPLAN_SHOW_AKADEMI = '0';
+const akademiOff = withEnv('1', '0', () => sitemap.default().map((entry) => entry.url));
 
 process.stdout.write(JSON.stringify({
   live,
   review,
   rollback,
+  akademiOn,
+  akademiOff,
   escaped: schema.serializeJsonLd({ value: '</script><script>' }),
 }));

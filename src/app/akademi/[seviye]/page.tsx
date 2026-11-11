@@ -3,11 +3,12 @@ import { notFound } from 'next/navigation';
 import { AkademiLevelDetail } from '@/components/sections/AkademiLevelDetail';
 import { levelSlugs, getLevelBySlug } from '@/data/akademi-content';
 import { isAkademiEnabled } from '@/lib/release-flags';
+import { akademiMetadata } from '@/lib/akademi-metadata';
 
-/** Draft section: the whole /akademi area is never indexed until content is approved. */
-export const metadata: Metadata = {
-  robots: { index: false, follow: false },
-};
+export async function generateMetadata({ params }: { params: Promise<{ seviye: string }> }): Promise<Metadata> {
+  const { seviye } = await params;
+  return akademiMetadata(`/akademi/${seviye}`);
+}
 
 export const dynamicParams = false;
 

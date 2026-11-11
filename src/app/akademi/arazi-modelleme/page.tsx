@@ -3,10 +3,9 @@ import { notFound } from 'next/navigation';
 import { TmOverview } from '@/components/sections/TmOverview';
 import { araziModellemeHero, araziModellemeLessons } from '@/data/arazi-modelleme';
 import { isAkademiEnabled } from '@/lib/release-flags';
+import { akademiMetadata } from '@/lib/akademi-metadata';
 
-export const metadata: Metadata = {
-  robots: { index: false, follow: false },
-};
+export const metadata: Metadata = akademiMetadata('/akademi/arazi-modelleme');
 
 export default function AraziModellemePage() {
   if (!isAkademiEnabled()) notFound();

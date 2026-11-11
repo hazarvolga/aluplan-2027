@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { getHomepageData, SITE_ORIGIN } from '@/lib/site-data';
-import { isReleaseContentEnabled } from '@/lib/release-flags';
+import { isAkademiEnabled, isReleaseContentEnabled } from '@/lib/release-flags';
+import { listAkademiPages } from '@/lib/akademi-pages';
 import { PUBLISHED_RELEASE_2027_ROUTES } from '@/lib/release-2027-routes';
 
 const homepageData = getHomepageData();
@@ -8,6 +9,16 @@ const release2027Section = isReleaseContentEnabled()
   ? `
 ## 2027 Sürümleri (/2027)
 ${PUBLISHED_RELEASE_2027_ROUTES.map((route) => `- [${route.name}](${SITE_ORIGIN}${route.path}): ${route.description}`).join('\n')}
+`
+  : '';
+// Akademi: overview, levels and series (lessons are reachable from the series pages).
+const akademiSection = isAkademiEnabled()
+  ? `
+## Aluplan Akademi (/akademi): ücretsiz ALLPLAN Türkçe eğitim programı
+${listAkademiPages()
+    .filter((page) => page.kind === 'overview' || page.kind === 'level' || page.kind === 'series')
+    .map((page) => `- [${page.title}](${SITE_ORIGIN}${page.path}): ${page.description}`)
+    .join('\n')}
 `
   : '';
 const packageMatrixPeriod = homepageData.packageMatrixLabel.replace(' MATRİSİ', '');
@@ -59,7 +70,7 @@ ${packageComparisonLine}
 - [Video Kütüphanesi (14 Seri / 216 Video)](https://aluplan.com.tr/video-kutuphanesi): Hello ALLPLAN 2024, Otomatik Donatı, Köprü İş Akışları, Yol Tasarımı, AX3000, Prekast ve SDS2 eğitim videoları.
 - [Sıkça Sorulan Sorular (SSS)](https://aluplan.com.tr/faq): Lisans, kurulum, sistem gereksinimleri ve OpenBIM veri değişimi.
 - [Referanslar](https://aluplan.com.tr/references): Kamu kurumları, belediyeler, üniversiteler ve mühendislik/mimarlık ofisleri.
-${release2027Section}`;
+${akademiSection}${release2027Section}`;
 
 export async function GET() {
   return new NextResponse(LLMS_TXT_CONTENT, {

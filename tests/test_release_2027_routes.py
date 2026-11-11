@@ -135,6 +135,10 @@ class ReleaseRouteRuntimeTests(unittest.TestCase):
             else:
                 self.assertIn(ORIGIN + route, self.data["live"]["sitemap"])
 
+    def test_sitemap_lists_akademi_only_behind_its_flag(self):
+        self.assertIn(ORIGIN + "/akademi/lejant", self.data["akademiOn"])
+        self.assertFalse([url for url in self.data["akademiOff"] if "/akademi" in url])
+
     def test_sitemap_omits_release_routes_on_rollback(self):
         self.assertFalse([url for url in self.data["rollback"]["sitemap"] if "/2027/" in url])
         for route in ("/products/allplan-rebar", "/products/allplan-parametric", "/products/allplan-max", "/products/frilo", "/products/scia"):

@@ -3,10 +3,9 @@ import { notFound } from 'next/navigation';
 import { TmOverview } from '@/components/sections/TmOverview';
 import { lejantHero, lejantLessons } from '@/data/lejant';
 import { isAkademiEnabled } from '@/lib/release-flags';
+import { akademiMetadata } from '@/lib/akademi-metadata';
 
-export const metadata: Metadata = {
-  robots: { index: false, follow: false },
-};
+export const metadata: Metadata = akademiMetadata('/akademi/lejant');
 
 export default function LejantPage() {
   if (!isAkademiEnabled()) notFound();

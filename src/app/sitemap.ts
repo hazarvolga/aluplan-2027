@@ -1,11 +1,14 @@
 import type { MetadataRoute } from 'next';
 import { getAllPages, SITE_ORIGIN } from '@/lib/site-data';
-import { isReleaseContentEnabled } from '@/lib/release-flags';
+import { isAkademiEnabled, isReleaseContentEnabled } from '@/lib/release-flags';
+import { listAkademiPages, type AkademiPageKind } from '@/lib/akademi-pages';
 import { PUBLISHED_RELEASE_2027_ROUTES } from '@/lib/release-2027-routes';
 
 const NON_INDEXABLE_PATHS = new Set(['/health', '/search', '/hero-3d', '/test-webgl', '/package-overview']);
 const LAST_MODIFIED = new Date('2026-10-25T00:00:00.000Z');
 const RELEASE_LAST_MODIFIED = new Date('2026-11-02T00:00:00.000Z');
+const AKADEMI_LAST_MODIFIED = new Date('2026-11-11T00:00:00.000Z');
+const AKADEMI_PRIORITY: Record<AkademiPageKind, number> = { overview: 0.8, level: 0.7, series: 0.7, module: 0.6, lesson: 0.6 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // A release route that reuses a page-data path (the package comparison) is listed once, from the release entry.
@@ -35,5 +38,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }))
     : [];
 
-  return [...pageEntries, ...releaseEntries];
+  // Akademi pages are listed only while the launch flag is on (they 404 otherwise).
+  const akademiEntries: MetadataRoute.Sitemap = isAkademiEnabled()
+    ? listAkademiPages().map((page) => ({
+        url: `${SITE_ORIGIN}${page.path}`,
+        lastModified: AKADEMI_LAST_MODIFIED,
+        changeFrequency: 'monthly',
+        priority: AKADEMI_PRIORITY[page.kind]
+      }))
+    : [];
+
+  return [...pageEntries, ...releaseEntries, ...akademiEntries];
 }

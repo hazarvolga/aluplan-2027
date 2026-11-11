@@ -1,5 +1,5 @@
 """Akademi ships Course/ItemList structured data (ready for launch) while the pages
-stay noindex until the content is approved."""
+are indexable whenever the Akademi is enabled (see test_akademi_launch.py)."""
 
 from pathlib import Path
 import unittest
@@ -24,9 +24,7 @@ class AkademiSeoTests(unittest.TestCase):
         self.assertIn("AkademiJsonLd", read("src/components/sections/AkademiOverview.tsx"))
         self.assertIn("AkademiJsonLd", read("src/components/sections/AkademiLevelDetail.tsx"))
 
-    def test_pages_stay_noindex(self):
-        self.assertIn("index: false", read("src/app/akademi/page.tsx"))
-        self.assertIn("index: false", read("src/app/akademi/[seviye]/page.tsx"))
+    # Indexing is now governed by the launch flag: see tests/test_akademi_launch.py.
 
 
 if __name__ == "__main__":

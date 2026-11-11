@@ -3,10 +3,9 @@ import { notFound } from 'next/navigation';
 import { TmOverview } from '@/components/sections/TmOverview';
 import { donatiDetaylandirmaHero, donatiDetaylandirmaLessons } from '@/data/donati-detaylandirma';
 import { isAkademiEnabled } from '@/lib/release-flags';
+import { akademiMetadata } from '@/lib/akademi-metadata';
 
-export const metadata: Metadata = {
-  robots: { index: false, follow: false },
-};
+export const metadata: Metadata = akademiMetadata('/akademi/donati-detaylandirma');
 
 export default function DonatiDetaylandirmaPage() {
   if (!isAkademiEnabled()) notFound();

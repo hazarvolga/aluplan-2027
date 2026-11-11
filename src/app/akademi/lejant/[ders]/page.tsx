@@ -3,10 +3,12 @@ import { notFound } from 'next/navigation';
 import { TmLessonDetail } from '@/components/sections/TmLessonDetail';
 import { getLejantLesson, lejantLessons, lejantRouteParams } from '@/data/lejant';
 import { isAkademiEnabled } from '@/lib/release-flags';
+import { akademiMetadata } from '@/lib/akademi-metadata';
 
-export const metadata: Metadata = {
-  robots: { index: false, follow: false },
-};
+export async function generateMetadata({ params }: { params: Promise<{ ders: string }> }): Promise<Metadata> {
+  const { ders } = await params;
+  return akademiMetadata(`/akademi/lejant/${ders}`);
+}
 
 export const dynamicParams = false;
 

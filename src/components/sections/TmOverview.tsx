@@ -4,6 +4,7 @@ import { SectionHeader } from './SectionHeader';
 import { temelModellemeHero, temelModellemeLessons } from '@/data/temel-modelleme';
 import type { TmLesson } from '@/data/temel-modelleme';
 import styles from './TmOverview.module.css';
+import { AkademiSeriesJsonLd } from '@/components/akademi/AkademiLessonJsonLd';
 
 interface SeriesHero {
   title: string;
@@ -25,6 +26,7 @@ export function TmOverview({
 } = {}): ReactElement {
   return (
     <div className={styles.page}>
+      <AkademiSeriesJsonLd series={{ title: hero.title, path: basePath }} description={hero.lead} lessons={lessons} />
       <nav className={styles.breadcrumb} aria-label="Konum">
         <a href="/akademi">Akademi</a>
         <span aria-hidden="true" className={styles.sep}>/</span>

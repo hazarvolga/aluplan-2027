@@ -115,6 +115,14 @@ class AkademiLessonMediaTests(unittest.TestCase):
         # Common mistakes are an accordion (details/summary).
         self.assertIn("<details", src)
 
+    def test_series_lesson_has_no_source_article_cards(self):
+        # Card articles were rewritten into the lesson's Derinlemesine section (see
+        # docs/ders-tasarimi/derinlemesine-kararlari.md); the raw cards are no longer shown.
+        src = read("src/components/sections/TmLessonDetail.tsx")
+        self.assertNotIn("tm-makale", src)
+        self.assertNotIn("Derinleşmek için", src)
+        self.assertNotIn("lesson.articles", src)
+
     def test_series_lesson_has_no_meta_strip(self):
         # Level, roles, prerequisite, start file and version are shown elsewhere (sidebar,
         # breadcrumb, exercise, series page); the lesson hero carries no meta strip.

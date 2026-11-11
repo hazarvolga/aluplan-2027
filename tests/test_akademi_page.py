@@ -96,6 +96,11 @@ class AkademiLevelPageTests(unittest.TestCase):
 
 
 class AkademiOverviewRedesignTests(unittest.TestCase):
+    def test_overview_has_no_knowledge_base_promise(self):
+        # Support articles now live inside the lessons (Derinlemesine); no "coming soon" card.
+        self.assertNotIn("knowledgeBase", read("src/components/sections/AkademiOverview.tsx"))
+        self.assertNotIn("Bilgi Bankası", read("src/data/akademi-content.ts"))
+
     def test_overview_uses_the_shared_kit(self):
         src = read("src/components/sections/AkademiOverview.tsx")
         self.assertIn("@/components/akademi/kit", src)

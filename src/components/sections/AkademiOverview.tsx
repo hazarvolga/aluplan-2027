@@ -18,7 +18,6 @@ export function AkademiOverview({ seviye, rol, sure }: { seviye?: string; rol?: 
     lessonParts: akademiLessonParts,
     progressNote: akademiProgressNote,
     certificate: akademiCertificate,
-    knowledgeBase: akademiKnowledgeBase,
   } = akademiProgram;
 
   return (
@@ -90,18 +89,13 @@ export function AkademiOverview({ seviye, rol, sure }: { seviye?: string; rol?: 
       <DebugComponentLabel name="AkademiNextSteps (özel)">
         <section className={`${styles.band} ${styles.lastBand}`} aria-labelledby="akademi-sonraki">
           <div className="alu-container">
-            <SectionHeader id="akademi-sonraki" kicker="SONRAKI ADIM" title="Sertifika ve bilgi bankası" />
+            <SectionHeader id="akademi-sonraki" kicker="SONRAKI ADIM" title="Sertifika" />
             <div className={styles.split}>
               <article className={styles.panel}>
                 <span className={styles.icon} aria-hidden="true"><AluIcon name="award" size="md" /></span>
                 <h3 className={styles.cardTitle}>{akademiCertificate.title}</h3>
                 <p className={styles.text}>{akademiCertificate.text}</p>
                 <a className="alu-button alu-button--primary alu-button--md" href={akademiCertificate.action.href}>{akademiCertificate.action.label}</a>
-              </article>
-              <article className={styles.panel}>
-                <span className={styles.icon} aria-hidden="true"><AluIcon name="file-text" size="md" /></span>
-                <h3 className={styles.cardTitle}>{akademiKnowledgeBase.title}</h3>
-                <p className={styles.text}>{akademiKnowledgeBase.text}</p>
               </article>
             </div>
           </div>

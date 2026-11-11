@@ -216,7 +216,6 @@ export interface AkademiProgram {
   runningProject: typeof runningProject;
   lessonParts: typeof lessonParts;
   certificate: typeof certificate;
-  knowledgeBase: typeof knowledgeBase;
   progressNote: string;
   levels: readonly ContentLevel[];
 }
@@ -264,11 +263,6 @@ const certificate = {
   title: 'Sertifika için eğitmenli eğitimler',
   text: 'Akademi programı Aluplan’ın eğitmenli eğitimleriyle aynı müfredatı kullanır. Sertifika, eğitmen eşliğinde yapılan pratik sınav ve bitirme projesiyle verilir.',
   action: { label: 'Eğitim merkezlerimiz', href: '/egitim-merkezlerimiz' },
-} as const;
-
-const knowledgeBase = {
-  title: 'Bilgi Bankası (yakında)',
-  text: 'ALLPLAN destek makalelerinin Türkçe karşılıkları; lisanslama, modelleme ve sık karşılaşılan sorunlar için adım adım çözümler. Makaleler ilgili derslere bağlanacak.',
 } as const;
 
 const progressNote =
@@ -369,7 +363,6 @@ export const akademiProgram: AkademiProgram = {
   runningProject,
   lessonParts,
   certificate,
-  knowledgeBase,
   progressNote,
   levels,
 };

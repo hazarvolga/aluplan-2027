@@ -221,29 +221,6 @@ export function TmLessonDetail({
         </section>
       ) : null}
 
-      {lesson.articles.length > 0 ? (
-        <section className={styles.band} aria-labelledby="tm-makale">
-          <div className="alu-container">
-            <SectionHeader id="tm-makale" kicker="KAYNAK MAKALELER" title="Derinleşmek için" lead="ALLPLAN Türkçe destek içeriğinden ilgili makaleler. Başlığa tıklayınca açılır." />
-            <ul className={styles.articleList}>
-              {lesson.articles.map((a) => (
-                <li key={a.id} className={styles.articleItem}>
-                  <details className={styles.article}>
-                    <summary className={styles.articleHead}>{a.title}</summary>
-                    <div className={styles.articleBody}>
-                      {a.body.split('\n').filter(Boolean).map((p, i) => (
-                        <p key={i} className={styles.articleP}>{withEmphasis(p)}</p>
-                      ))}
-                      <TmImages srcs={a.figures} label={a.title} />
-                    </div>
-                  </details>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      ) : null}
-
       {(lesson.media.pdfs.length > 0 || lesson.media.samples.length > 0) && (
         <section className={styles.band} aria-labelledby="tm-indir">
           <div className="alu-container">

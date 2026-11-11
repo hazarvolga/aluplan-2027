@@ -21,7 +21,6 @@ const SHORT_LABELS: Record<string, string> = {
   'tm-video': 'Video',
   'tm-komut': 'Komutlar',
   'tm-derin': 'Derinlemesine',
-  'tm-makale': 'Kaynaklar',
   'tm-indir': 'Dosyalar',
 };
 

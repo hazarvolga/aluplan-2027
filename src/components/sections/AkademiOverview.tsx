@@ -54,12 +54,16 @@ export function AkademiOverview({ seviye, rol, sure }: { seviye?: string; rol?: 
             <SectionHeader id="akademi-proje" kicker="UYGULAMA" title={akademiRunningProject.title} lead={akademiRunningProject.lead} />
             <ol className={styles.projectSteps}>
               {akademiRunningProject.steps.map((step) => (
-                <li key={step.level} className={styles.projectStep}>
-                  <span className={styles.projectLevel}>{step.level}</span>
+                <li key={step.label} className={styles.projectStep}>
+                  <span className={styles.projectRange}>{step.label}</span>
+                  <span className={styles.projectLevel}>{step.title}</span>
                   <span className={styles.text}>{step.text}</span>
                 </li>
               ))}
             </ol>
+            <a className={styles.projectAction} href={akademiRunningProject.action.href}>
+              {akademiRunningProject.action.label} →
+            </a>
           </div>
         </section>
       </DebugComponentLabel>

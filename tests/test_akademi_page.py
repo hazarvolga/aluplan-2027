@@ -109,6 +109,14 @@ class AkademiOverviewRedesignTests(unittest.TestCase):
         self.assertNotIn("TASLAK", read("src/data/akademi-content.ts"))
         self.assertNotIn("kicker={akademiHero.kicker}", read("src/components/sections/AkademiOverview.tsx"))
 
+    def test_running_project_describes_the_real_temel_house(self):
+        # Only the Temel Modelleme series carries one continuous project (a two-storey house).
+        src = read("src/data/akademi-content.ts")
+        self.assertIn("iki katlı konut", src)
+        self.assertIn("href: '/akademi/temel-modelleme'", src)
+        for claim in ("4-5 katlı", "karma kullanımlı", "köprü modellenir"):
+            self.assertNotIn(claim, src)
+
     def test_overview_uses_the_shared_kit(self):
         src = read("src/components/sections/AkademiOverview.tsx")
         self.assertIn("@/components/akademi/kit", src)

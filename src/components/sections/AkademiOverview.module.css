@@ -43,6 +43,10 @@
 .projectSteps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr));gap:var(--space-stack-sm);margin-top:var(--space-stack-lg);counter-reset:none}
 .projectStep{border-top:var(--border-width-default) solid var(--accent-fg);padding-top:var(--space-stack-sm);display:grid;gap:var(--space-stack-xs)}
 .projectLevel{font-weight:var(--font-weight-strong);color:var(--accent-fg);font-size:var(--type-body-sm-size)}
+.projectRange{font-family:var(--font-mono);font-size:var(--type-body-sm-size);letter-spacing:.08em;color:var(--text-muted)}
+.projectAction{display:inline-block;margin-top:var(--space-stack-md);font-weight:var(--font-weight-strong);color:var(--accent-fg);text-decoration:none}
+.projectAction:hover{text-decoration:underline}
+.projectAction:focus-visible{outline:var(--border-width-accent,2px) solid var(--focus-ring,var(--accent-fg));outline-offset:2px}
 
 .partGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr));gap:var(--space-stack-md);margin-top:var(--space-stack-lg)}
 .note{display:flex;gap:var(--space-stack-xs);align-items:flex-start;margin:var(--space-stack-md) 0 0;color:var(--text-secondary);font-size:var(--type-body-sm-size)}

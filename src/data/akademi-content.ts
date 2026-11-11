@@ -241,14 +241,15 @@ const entryPaths: readonly AkademiEntryPath[] = [
 ];
 
 const runningProject = {
-  title: 'Tek proje, baştan sona',
-  lead: 'Program boyunca 4-5 katlı, betonarme, karma kullanımlı bir bina geliştirilir. Her ders projeye bir katman ekler; altyapı kolunda ayrıca prekast kirişli küçük bir köprü modellenir.',
+  title: 'Tek proje: iki katlı konut',
+  lead: 'Temel Modelleme serisinin 22 dersi boyunca aynı iki katlı konutu kurarsınız: boş bir projeyle başlar, her derste modele bir katman ekler ve DIN A1 bir paftayla bitirirsiniz. Diğer seriler (Lejant, Donatı, Çelik, Prekast, Otomasyon, OpenBIM) kendi konularına uygun örneklerle çalışır.',
   steps: [
-    { level: 'Temeller', text: 'Akslar, katlar ve temel mimari model' },
-    { level: 'Üretim ve Dokümantasyon', text: 'Kesitler, görünüşler, paftalar ve metraj' },
-    { level: 'Disiplin Uzmanlığı', text: 'Kolunuza göre mimari detay, donatı, prekast veya köprü' },
-    { level: 'BIM Yönetimi ve Otomasyon', text: 'IFC teslimi, kural denetimi ve otomasyon' },
+    { label: 'Dersler 01–04', title: 'Proje ve yapı', text: 'Boş proje, Bina Strüktürü, zemin ve 1. kat düzeyleri' },
+    { label: 'Dersler 08–14', title: 'Zemin kat', text: 'Aks ağı, çok katmanlı duvarlar, kapı-pencere, kolon-kiriş, döşeme, merdiven, temel' },
+    { label: 'Dersler 15–17', title: 'Üst kat ve çatı', text: 'Kat kopyalama, çatı düzlemi, mahaller ve ince yapı yüzeyleri' },
+    { label: 'Dersler 19–22', title: 'Dokümantasyon', text: 'Görünüş, kesit, kot ve etiket; DIN A1 pafta ve PDF çıktı' },
   ],
+  action: { label: 'Seriye başla', href: '/akademi/temel-modelleme' },
 } as const;
 
 const lessonParts = [

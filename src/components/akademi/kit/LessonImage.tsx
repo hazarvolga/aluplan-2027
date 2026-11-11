@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, type ReactElement } from 'react';
+import { useState, type ReactElement, type SyntheticEvent } from 'react';
 import { MediaDialog } from '@/components/ui/MediaDialog';
 import styles from './LessonImage.module.css';
 
@@ -22,6 +22,9 @@ interface LessonImageProps {
  * lightbox lets the student inspect the full-resolution capture. Reuses the
  * shared image dialog (MediaDialog + alu-video-modal image classes).
  */
+/** Light deterrent on lesson screenshots only: no drag-out and no "save image" context menu. Text stays selectable. */
+const blockSave = (event: SyntheticEvent): void => event.preventDefault();
+
 export function LessonImage({ src, alt, caption, className, width, height }: LessonImageProps): ReactElement {
   const [open, setOpen] = useState(false);
   const title = caption ?? alt;
@@ -29,7 +32,7 @@ export function LessonImage({ src, alt, caption, className, width, height }: Les
     <>
       <button type="button" className={styles.button} onClick={() => setOpen(true)} aria-label={`${title} — büyüt`}>
         {/* eslint-disable-next-line @next/next/no-img-element -- static /public asset */}
-        <img className={className} src={src} alt={alt} width={width} height={height} loading="lazy" decoding="async" />
+        <img className={className} src={src} alt={alt} width={width} height={height} loading="lazy" decoding="async" draggable={false} onContextMenu={blockSave} />
         <span className={styles.hint} aria-hidden="true">Büyüt</span>
       </button>
       {open && (
@@ -49,7 +52,7 @@ export function LessonImage({ src, alt, caption, className, width, height }: Les
             </div>
             <div className="alu-video-modal__image-viewport">
               {/* eslint-disable-next-line @next/next/no-img-element -- static /public asset */}
-              <img src={src} alt={alt} />
+              <img src={src} alt={alt} draggable={false} onContextMenu={blockSave} />
             </div>
           </div>
         </MediaDialog>

@@ -32,7 +32,11 @@ export function SearchDialog({ defaultScope, trigger }: SearchDialogProps): Reac
   const [query, setQuery] = useState('');
   const [scope, setScope] = useState<SearchScope>(defaultScope);
 
-  useEffect(() => { if (open) load(); }, [open, load]);
+  useEffect(() => {
+    if (!open) return;
+    setScope(defaultScope);
+    load();
+  }, [open, load, defaultScope]);
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
@@ -98,7 +102,9 @@ export function SearchDialog({ defaultScope, trigger }: SearchDialogProps): Reac
               {loading && <p role="status">Arama hazırlanıyor…</p>}
               {error && <button type="button" onClick={load}>Arama yüklenemedi. Tekrar dene</button>}
               {videoPartial && <p role="status">Bazı güncel video başlıkları şu anda aranamayabilir. <button type="button" onClick={retryVideos}>Tekrar dene</button></p>}
-              {!loading && !error && query.trim() && results.length === 0 && <p role="status">Sonuç bulunamadı.</p>}
+              <p className="alu-caption" aria-live="polite" style={{ margin: 0 }}>
+                {!loading && !error && query.trim() ? (results.length ? `${results.length} sonuç` : 'Sonuç bulunamadı.') : ''}
+              </p>
               {results.map((item) => (
                 <Link
                   key={item.path}

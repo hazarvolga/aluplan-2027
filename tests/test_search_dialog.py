@@ -31,6 +31,13 @@ class SearchDialogTests(unittest.TestCase):
         self.assertIn("e.metaKey || e.ctrlKey", src)
         self.assertIn("Ürün, Çözüm ve Eğitim Arama", src)
 
+    def test_dialog_resets_scope_on_open_and_announces_results(self):
+        src = read("src/components/shell/SearchDialog.tsx")
+        # Reopening starts from the default scope, not the last one picked.
+        self.assertIn("setScope(defaultScope)", src)
+        # Result count (also after a scope change) is announced to screen readers.
+        self.assertIn('aria-live="polite"', src)
+
     def test_search_page_uses_ranking(self):
         self.assertIn("rankSearchEntries(", read("src/components/sections/SearchPageSection.tsx"))
 

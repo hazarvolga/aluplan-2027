@@ -20,10 +20,13 @@ class AkademiDraftTests(unittest.TestCase):
         flags = read("src/lib/release-flags.ts")
         self.assertIn("process.env.ALUPLAN_SHOW_AKADEMI === '1'", flags)
 
-    def test_production_deploy_does_not_enable_the_draft(self):
-        for path in ("Dockerfile", ".github/workflows/ci.yml"):
-            with self.subTest(file=path):
-                self.assertNotIn("ALUPLAN_SHOW_AKADEMI", read(path))
+    def test_deploy_passes_the_launch_flag_to_build_and_runtime_but_defaults_off(self):
+        # Akademi routes, share images, sitemap and llms.txt are prerendered, so the flag must
+        # reach the build stage; it stays off unless Coolify sets ALUPLAN_SHOW_AKADEMI=1.
+        docker = read("Dockerfile")
+        self.assertEqual(docker.count("ARG ALUPLAN_SHOW_AKADEMI=0"), 2)
+        self.assertEqual(docker.count("ALUPLAN_SHOW_AKADEMI=$ALUPLAN_SHOW_AKADEMI"), 2)
+        self.assertNotIn("ALUPLAN_SHOW_AKADEMI=1", read(".github/workflows/ci.yml"))
 
     def test_level_three_tracks_have_equal_hours(self):
         # İleri (ileri) modules carry their track in trackTitle; each track's total must match.

@@ -5,7 +5,7 @@ Tarih: 2026-11-11 · Kullanıcı onayı: "Evet, böyle yap" (üç karar aşağı
 ## Amaç
 
 Akademi canlıya alındığında tüm içeriği dizine eklenebilir, paylaşıldığında düzgün kart gösterir ve
-ana siteden ulaşılabilir olsun. Yayın tek anahtarla (Coolify'da `ALLPLAN_SHOW_AKADEMI=1`) açılıp kapanır.
+ana siteden ulaşılabilir olsun. Yayın tek anahtarla (Coolify'da `ALUPLAN_SHOW_AKADEMI=1`) açılıp kapanır.
 
 ## Kararlar (kullanıcı onaylı)
 

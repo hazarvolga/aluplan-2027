@@ -15,10 +15,16 @@ const PAPER = '#f5f7fa';
 const MUTED = '#9aa3b2';
 const ACCENT = '#d4693a';
 
+let logoCache: string | undefined;
+
+/** White Aluplan logo as a data URI, read once (the C2PA metadata block is stripped). */
 function logoDataUri(): string {
-  const svg = fs.readFileSync(path.join(process.cwd(), 'public/assets/logo/aluplan-logo-white-filled.svg'), 'utf8')
-    .replace(/<metadata>[\s\S]*?<\/metadata>/, '');
-  return `data:image/svg+xml;base64,${Buffer.from(svg).toString('base64')}`;
+  if (!logoCache) {
+    const svg = fs.readFileSync(path.join(process.cwd(), 'public/assets/logo/aluplan-logo-white-filled.svg'), 'utf8')
+      .replace(/<metadata>[\s\S]*?<\/metadata>/, '');
+    logoCache = `data:image/svg+xml;base64,${Buffer.from(svg).toString('base64')}`;
+  }
+  return logoCache;
 }
 
 export function generateStaticParams(): Array<{ path: string[] }> {
@@ -49,6 +55,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ pat
         </div>
       </div>
     ),
-    { ...SIZE, headers: { 'Cache-Control': 'public, max-age=86400, immutable' } },
+    // Not content-hashed: a renamed lesson must refresh within a day, so no `immutable`.
+    { ...SIZE, headers: { 'Cache-Control': 'public, max-age=86400' } },
   );
 }

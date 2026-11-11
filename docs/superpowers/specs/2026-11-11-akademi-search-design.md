@@ -27,7 +27,7 @@ kalktı; yapay zekâ motorları site aramasını kullanmaz). Değeri kullanıcı
 
 ## Kaçınılacaklar (iş "çalışsa" bile başarısızlık sayılır)
 
-- Akademi kayıtlarının, Akademi kapalıyken (`ALLPLAN_SHOW_AKADEMI` yok) canlı site aramasına sızması.
+- Akademi kayıtlarının, Akademi kapalıyken (`ALUPLAN_SHOW_AKADEMI` yok) canlı site aramasına sızması.
 - Ana sitenin arama açılışını yavaşlatmak: Akademi dizini yalnız ihtiyaç olunca yüklenir.
 - İki ayrı arama penceresi kodu: tek bileşen, iki yerde kullanım.
 
@@ -66,7 +66,7 @@ Kullanıcı A'yı seçti.
 
 ### 2. Yükleme ve bayrak
 
-- `SearchIndexProvider`'a `showAkademi` bayrağı (kök layout'ta `ALLPLAN_SHOW_AKADEMI`'den) eklenir.
+- `SearchIndexProvider`'a `showAkademi` bayrağı (kök layout'ta `ALUPLAN_SHOW_AKADEMI`'den) eklenir.
 - Bayrak açıksa `search-akademi-index.json` dinamik import ile, arama ilk açıldığında yüklenir; kapalıysa hiç yüklenmez.
 
 ### 3. Sıralama ve kapsam (`src/lib/search.ts`)

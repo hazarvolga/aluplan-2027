@@ -77,7 +77,7 @@ function MobileMenuGroup({ title, href, sections, onNavigate }: {
   );
 }
 
-/** showAkademi comes from the server (launch flag ALLPLAN_SHOW_AKADEMI); the client cannot read it. */
+/** showAkademi comes from the server (launch flag ALUPLAN_SHOW_AKADEMI); the client cannot read it. */
 export function SiteShell({ children, showAkademi = false }: { children: React.ReactNode; showAkademi?: boolean }) {
   const { mode, toggleMode } = useThemeMode();
   const pathname = usePathname();

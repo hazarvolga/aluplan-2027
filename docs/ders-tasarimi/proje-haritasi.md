@@ -4,7 +4,7 @@ Son güncelleme: 2026-11-10. Bu harita `allplan-ders-tasarimi` skill'i için ort
 
 ## Ne tür platform
 Next.js 16 (App Router, Turbopack, pnpm) tabanlı ALLPLAN Türkçe eğitim sitesi. Akademi bölümü
-`ALLPLAN_SHOW_AKADEMI` bayrağı (`isAkademiEnabled()`, `src/lib/release-flags.ts`) arkasında,
+`ALUPLAN_SHOW_AKADEMI` bayrağı (`isAkademiEnabled()`, `src/lib/release-flags.ts`) arkasında,
 `noindex`. Hedef: eğitmensiz, kendi kendine ilerlenen **öğrenci dersi** modeli; dil resmî "siz".
 
 ## Ders içeriği nerede, hangi biçimde

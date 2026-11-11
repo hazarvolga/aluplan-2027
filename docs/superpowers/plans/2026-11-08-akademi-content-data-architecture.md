@@ -16,7 +16,7 @@
 - Yalnız CSS token'ları (`check_component_colors.py`); aksan `var(--accent-akademi)`.
 - Akademi tüm sayfaları `isAkademiEnabled()` arkasında; `robots noindex`; sitemap/navigation.json/search-index/llms.txt dışında.
 - Modül detay rotası: `generateStaticParams` üretimde `[]` (flag kapalı), `export const dynamicParams = false`.
-- `ALUPLAN_SHOW_AKADEMI` Dockerfile ve ci.yml'de TANIMLANMAZ.
+- `ALUPLAN_SHOW_AKADEMI` Dockerfile ve ci.yml'de TANIMLANMAZ. (2026-11-11 güncellemesi: yayına hazırlıkla Dockerfile'a varsayılanı kapalı `ARG ALUPLAN_SHOW_AKADEMI=0` eklendi; Coolify 1 verince yayınlanır.)
 - Her sayfa tam **bir** `<main>` (shell sağlar; akademi shell'i).
 - URL: tam semantik — seviye `temel/orta/ileri/uzman`; modül slug açıklayıcı (başlıktan, seviye içinde benzersiz); `/allplan` prefix YOK.
 - Türkçe içerik; anti-slop; kod `--font-mono`.

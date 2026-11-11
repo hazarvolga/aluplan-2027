@@ -1,4 +1,4 @@
-"""Akademi launch readiness: one switch (ALLPLAN_SHOW_AKADEMI) makes every Akademi page
+"""Akademi launch readiness: one switch (ALUPLAN_SHOW_AKADEMI) makes every Akademi page
 indexable, shareable (OG/X card + image), listed in sitemap/llms.txt and linked from the site."""
 
 from pathlib import Path
@@ -74,7 +74,7 @@ class AkademiLaunchSourceTests(unittest.TestCase):
 
 
 class AkademiLaunchBuildTests(unittest.TestCase):
-    """Checks the production build output (run after an ALLPLAN_SHOW_AKADEMI=1 build)."""
+    """Checks the production build output (run after an ALUPLAN_SHOW_AKADEMI=1 build)."""
 
     def lesson_html(self):
         html_file = BUILD_APP / "akademi/lejant/mimari-lejant-hucresi-tanimlama.html"

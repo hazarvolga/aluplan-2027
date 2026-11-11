@@ -8,7 +8,7 @@ const SHARE_IMAGE_SIZE = { width: 1200, height: 630 } as const;
 /**
  * Metadata for an Akademi page from the shared page catalog: title, description, canonical,
  * Open Graph + X card with a generated share image (/og/akademi/…). Indexing follows the
- * launch flag (ALLPLAN_SHOW_AKADEMI) and the review switch (ALUPLAN_BLOCK_INDEXING); when the
+ * launch flag (ALUPLAN_SHOW_AKADEMI) and the review switch (ALUPLAN_BLOCK_INDEXING); when the
  * Akademi is disabled the pages 404 anyway, and robots says noindex as a second guard.
  */
 export function akademiMetadata(path: string): Metadata {

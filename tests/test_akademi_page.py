@@ -101,6 +101,14 @@ class AkademiOverviewRedesignTests(unittest.TestCase):
         self.assertNotIn("knowledgeBase", read("src/components/sections/AkademiOverview.tsx"))
         self.assertNotIn("Bilgi Bankası", read("src/data/akademi-content.ts"))
 
+    def test_level_cards_sit_in_a_two_by_two_grid(self):
+        css = read("src/components/sections/AkademiOverview.module.css")
+        self.assertIn(".levelGrid{list-style:none;margin:var(--space-stack-lg) 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))", css)
+
+    def test_overview_hero_has_no_draft_badge(self):
+        self.assertNotIn("TASLAK", read("src/data/akademi-content.ts"))
+        self.assertNotIn("kicker={akademiHero.kicker}", read("src/components/sections/AkademiOverview.tsx"))
+
     def test_overview_uses_the_shared_kit(self):
         src = read("src/components/sections/AkademiOverview.tsx")
         self.assertIn("@/components/akademi/kit", src)

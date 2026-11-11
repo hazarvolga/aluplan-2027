@@ -46,9 +46,6 @@
 .videoNote{color:var(--text-muted)}
 
 
-.files{list-style:none;margin:var(--space-stack-lg) 0 0;padding:0;display:flex;flex-direction:column;gap:var(--space-stack-xs);max-width:52rem}
-.file{font-size:var(--type-body-sm-size);color:var(--text-secondary);display:flex;gap:var(--space-inline-sm);align-items:baseline;word-break:break-all}
-.fileKind{flex:none;font-family:var(--font-mono);font-size:var(--type-body-sm-size);color:var(--accent-akademi);border:var(--border-width-default) solid var(--accent-border);padding:0 var(--space-inline-xs)}
 
 .lessonNav{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-stack-md)}
 .navLink{display:flex;flex-direction:column;gap:var(--space-stack-xs);text-decoration:none;color:var(--text-primary)}

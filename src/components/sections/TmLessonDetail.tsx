@@ -221,22 +221,6 @@ export function TmLessonDetail({
         </section>
       ) : null}
 
-      {(lesson.media.pdfs.length > 0 || lesson.media.samples.length > 0) && (
-        <section className={styles.band} aria-labelledby="tm-indir">
-          <div className="alu-container">
-            <SectionHeader id="tm-indir" kicker="DOSYALAR" title="PDF ve örnek dosyalar" lead="İlgili kaynak dosyalar (bağlantılar hazırlanınca eklenecek)." />
-            <ul className={styles.files}>
-              {lesson.media.pdfs.map((f) => (
-                <li key={f} className={styles.file}><span className={styles.fileKind}>PDF</span> {f}</li>
-              ))}
-              {lesson.media.samples.map((f) => (
-                <li key={f} className={styles.file}><span className={styles.fileKind}>CAD</span> {f}</li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      )}
-
       <PrevNextNav
         label="Dersler arası gezinme"
         previous={previous ? { href: `${basePath}/${previous.slug}`, title: previous.title } : undefined}

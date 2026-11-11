@@ -24,7 +24,7 @@ export function AkademiOverview({ seviye, rol, sure }: { seviye?: string; rol?: 
     <div className={styles.page}>
       <AkademiJsonLd />
       <DebugComponentLabel name="CompactPageHero">
-        <CompactPageHero kicker={akademiHero.kicker} title={akademiHero.title} lead={akademiHero.lead}>
+        <CompactPageHero title={akademiHero.title} lead={akademiHero.lead}>
           <div className={styles.heroActions}>
             <a className="alu-button alu-button--primary alu-button--md" href="#katalog">Katalog ve yolları gör</a>
           </div>

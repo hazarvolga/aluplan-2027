@@ -221,7 +221,6 @@ export interface AkademiProgram {
 }
 
 const hero = {
-  kicker: 'ALUPLAN AKADEMİ · TASLAK',
   title: 'ALLPLAN’ı Türkçe, seviye seviye öğrenin',
   lead: 'Üniversite öğrencileri ve çalışan mühendis ve mimarlar için ücretsiz, herkese açık bir ALLPLAN eğitim programı. Her ders kısa anlatım, adım adım uygulama ve öz değerlendirme quiziyle ilerler.',
 } as const;
@@ -256,7 +255,6 @@ const lessonParts = [
   { icon: 'book-open', title: 'Kısa anlatım', text: 'Dersin neden önemli olduğu ve temel kavramlar.' },
   { icon: 'circle-play', title: 'Video ve adımlar', text: 'Her adımın yanında “neden?” notuyla uygulama.' },
   { icon: 'circle-help', title: 'Öz değerlendirme', text: 'Ders sonu quizi; açıklamalı cevaplarla.' },
-  { icon: 'download', title: 'Ders dosyaları', text: 'Başlangıç ve tamamlanmış proje dosyaları.' },
 ] as const;
 
 const certificate = {

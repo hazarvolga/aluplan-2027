@@ -30,6 +30,11 @@ class AkademiShellTests(unittest.TestCase):
         self.assertIn("width={166}", src)
         self.assertIn("height={32}", src)
 
+    def test_akademi_is_not_labelled_draft(self):
+        for path in ("src/components/akademi/AkademiFooter.tsx", "src/components/sections/AkademiOverview.tsx"):
+            with self.subTest(file=path):
+                self.assertNotIn("taslak", read(path).lower())
+
     def test_footer_has_legal_and_back_to_site(self):
         src = read("src/components/akademi/AkademiFooter.tsx")
         self.assertIn("/kvkk", src)

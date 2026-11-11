@@ -36,7 +36,7 @@ export function AkademiOverview({ seviye, rol, sure }: { seviye?: string; rol?: 
       <DebugComponentLabel name="AkademiLevels (kit)">
         <section id="seviyeler" className={styles.band} aria-labelledby="akademi-seviyeler">
           <div className="alu-container">
-            <SectionHeader id="akademi-seviyeler" kicker="PROGRAM" title="Dört seviye, dört disiplin kolu" lead="Seviye 1, 2 ve 4 herkes için ortaktır. Seviye 3’te mimari, betonarme, prekast ve çelik ya da altyapı kollarından birini seçersiniz; kolların süreleri eşittir. Süreler taslaktır." />
+            <SectionHeader id="akademi-seviyeler" kicker="PROGRAM" title="Dört seviye, dört disiplin kolu" lead="Seviye 1, 2 ve 4 herkes için ortaktır. Seviye 3’te mimari, betonarme, prekast ve çelik ya da altyapı kollarından birini seçersiniz; kolların süreleri eşittir." />
             <RevealList className={styles.levelGrid}>
               {akademiLevels.map((level) => (
                 <li key={level.number} className={styles.levelGridItem}>

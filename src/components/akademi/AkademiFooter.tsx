@@ -6,7 +6,7 @@ export function AkademiFooter() {
   return (
     <footer className={styles.footer}>
       <div className={`alu-container ${styles.inner}`}>
-        <span className={styles.copy}>Aluplan Akademi · ALLPLAN Türkçe eğitim programı (taslak)</span>
+        <span className={styles.copy}>Aluplan Akademi · ALLPLAN Türkçe eğitim programı</span>
         <nav className={styles.legal} aria-label="Yasal ve site bağlantıları">
           <Link href="/kvkk" className={styles.link}>KVKK</Link>
           <Link href="/gizlilik-politikasi" className={styles.link}>Gizlilik</Link>

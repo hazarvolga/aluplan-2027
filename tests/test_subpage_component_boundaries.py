@@ -537,7 +537,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
         self.assertEqual(len(subpages), 100)  # /products/architecture removed 2026-11-11
         self.assertEqual(len(hero_image_routes), 67)
         self.assertEqual(no_cta_routes, ["/about", "/gizlilik-politikasi", "/kullanim-sartlari", "/kvkk"])
-        self.assertEqual(len(product_routes), 18)
+        self.assertEqual(len(product_routes), 17)
         self.assertTrue(
             (ROOT / "public/docs/V2026_paket-karsilastirme-Q3-2026_R01.pdf").is_file()
         )

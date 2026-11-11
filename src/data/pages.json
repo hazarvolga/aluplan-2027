@@ -664,7 +664,7 @@
         "external": false
       },
       {
-        "href": "/products/architecture",
+        "href": "/solutions/architecture#is-akislari",
         "text": "Bu Akışı Detaylı İncele",
         "external": false
       },
@@ -11063,115 +11063,6 @@
         ]
       }
     }
-  },
-  "/products/architecture": {
-    "path": "/products/architecture",
-    "section": "products",
-    "title": "ALLPLAN Architecture — Mimari BIM Tasarım Yazılımı | Aluplan",
-    "description": "Mimari projeler için kapsamlı BIM çözümü",
-    "canonical": "https://aluplan.com.tr/products/architecture",
-    "h1": "Allplan Architecture",
-    "eyebrow": "PRODUCTS",
-    "breadcrumbs": [
-      {
-        "label": "Ana Sayfa",
-        "href": "/"
-      },
-      {
-        "label": "Ürünler",
-        "href": "/products"
-      },
-      {
-        "label": "ALLPLAN Architecture",
-        "href": "/products/architecture"
-      }
-    ],
-    "headings": [
-      {
-        "level": 2,
-        "text": "Öne Çıkan Özellikler"
-      }
-    ],
-    "bodyNodes": [
-      "Mimari",
-      "BİNA TASARIMI",
-      "Allplan Architecture",
-      "Mimari projeler için kapsamlı BIM çözümü. Tasarımdan dokümantasyona kadar tüm süreçlerde yüksek üretkenlik ve kalite.",
-      "Ücretsiz Dene",
-      "Teklif Talep Formu",
-      "Abonelik SSS",
-      "Öne Çıkan Özellikler",
-      "İhtiyacınız olan temel yetenekleri tek platformda toplayın.",
-      "3D modelleme ve detay dokümantasyon",
-      "Esnek 2D/2.5D/3D iş akışları",
-      "Gelişmiş görselleştirme ve render",
-      "Güvenilir metraj ve erken maliyet tahmini",
-      "OPEN BIM ve IFC4 veri alışverişi",
-      "Bulut tabanlı ekip çalışması (Allplan Cloud)"
-    ],
-    "sections": [
-      {
-        "heading": "Allplan Architecture",
-        "level": 2,
-        "items": [
-          "Mimari",
-          "BİNA TASARIMI",
-          "Mimari projeler için kapsamlı BIM çözümü. Tasarımdan dokümantasyona kadar tüm süreçlerde yüksek üretkenlik ve kalite.",
-          "Ücretsiz Dene",
-          "Teklif Talep Formu",
-          "Abonelik SSS"
-        ]
-      },
-      {
-        "heading": "Öne Çıkan Özellikler",
-        "level": 2,
-        "items": [
-          "İhtiyacınız olan temel yetenekleri tek platformda toplayın.",
-          "3D modelleme ve detay dokümantasyon",
-          "Esnek 2D/2.5D/3D iş akışları",
-          "Gelişmiş görselleştirme ve render",
-          "Güvenilir metraj ve erken maliyet tahmini",
-          "OPEN BIM ve IFC4 veri alışverişi",
-          "Bulut tabanlı ekip çalışması (Allplan Cloud)"
-        ]
-      }
-    ],
-    "contentLinks": [
-      {
-        "href": "https://www.allplan.com/trial-or-subscription/",
-        "text": "Ücretsiz Dene",
-        "external": true
-      },
-      {
-        "href": "https://forms.office.com/r/hXhnKAG912",
-        "text": "Teklif Talep Formu",
-        "external": true
-      },
-      {
-        "href": "/faq",
-        "text": "Abonelik SSS",
-        "external": false
-      },
-      {
-        "href": "https://www.allplan.com/trial-or-subscription/",
-        "text": "Şimdi İndir",
-        "external": true
-      }
-    ],
-    "buttons": [],
-    "images": [
-      {
-        "src": "/assets/product-architecture.jpg",
-        "alt": "Allplan Architecture",
-        "isIcon": false
-      }
-    ],
-    "videos": [],
-    "embeds": [],
-    "playlistId": null,
-    "interactiveStates": [],
-    "schemaType": "SoftwareApplication",
-    "structuredLayout": null
   },
   "/products/ax3000": {
     "path": "/products/ax3000",

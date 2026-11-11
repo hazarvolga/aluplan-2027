@@ -92,6 +92,8 @@ const nextConfig = {
       { source: '/solutions-v2/construction', destination: '/cozumler/insaat-planlamasi', statusCode: 301 },
       { source: '/solutions-v2/addons', destination: '/eklentiler', statusCode: 301 },
       { source: '/solutions-v2/other', destination: '/cozumler/diger-urunler', statusCode: 301 },
+      // Not an ALLPLAN product (2026-11-11): the page is removed, its URL keeps working.
+      { source: '/products/architecture', destination: '/solutions/architecture', statusCode: 301 },
       {
         source: '/solutions/PlanliAlanlar',
         destination: '/solutions/imar-yonetmeligi-bim-eklentisi',

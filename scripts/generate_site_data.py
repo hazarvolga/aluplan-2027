@@ -584,7 +584,6 @@ ROUTE_LABELS = {
     "/products/allplan-concept": "ALLPLAN Concept — 3B Modelleme, Dokümantasyon ve Metraj",
     "/products/allplan-professional": "ALLPLAN Professional — Profesyonel BIM, Donatı ve Detaylandırma",
     "/products/allplan-ultimate": "ALLPLAN Ultimate — Kapsamlı Çok Disiplinli BIM ve Mühendislik",
-    "/products/architecture": "ALLPLAN Architecture — Mimari BIM Tasarım Yazılımı",
     "/products/ax3000": "AX3000 MEP & Enerji Simülasyonu Ürün Ailesi",
     "/products/ax3000/dokumanlar": "AX3000 Teknik Broşürler ve Fonksiyon Dokümanları",
     "/products/civil": "ALLPLAN Civil — Altyapı, Yol ve Köprü Mühendisliği Paketi",
@@ -1209,8 +1208,24 @@ REMOVED_ROUTES = (
     "/solutions-v2/training/individual",
     "/solutions-v2/training/e-learning",
     "/solutions-v2/training/quick-start",
+    # Not an ALLPLAN product, removed 2026-11-11; redirects to /solutions/architecture.
+    "/products/architecture",
 )
 pages_data = {path: page for path, page in pages_data.items() if path not in REMOVED_ROUTES}
+
+# Links inside other pages that pointed at a removed page go to where its URL now redirects.
+REMOVED_LINK_TARGETS = {"/products/architecture": "/solutions/architecture#is-akislari"}
+
+
+def retarget_links(node):
+    if isinstance(node, dict):
+        return {key: (REMOVED_LINK_TARGETS.get(value, value) if key == "href" else retarget_links(value)) for key, value in node.items()}
+    if isinstance(node, list):
+        return [retarget_links(item) for item in node]
+    return node
+
+
+pages_data = retarget_links(pages_data)
 
 data_dir = ROOT / "src/data"
 data_dir.mkdir(parents=True, exist_ok=True)
@@ -1390,7 +1405,15 @@ ROLE_ENRICH = {
     "engineer": {"icon": "ruler", "image": "/assets/product-engineering.jpg"},
     "precast": {"icon": "boxes", "image": "/assets/solutions/precast-hero.jpg"},
 }
+# "Bu Akışı Detaylı İncele" opens the discipline's workflow section on its solution page
+# (the source pointed at product pages; /products/architecture is not a product).
+ROLE_HREFS = {
+    "architect": "/solutions/architecture#is-akislari",
+    "engineer": "/solutions/structural#is-akislari",
+    "fabricator": "/solutions/precast",
+}
 for r in homepage_data.get("roles", []):
+    r["href"] = ROLE_HREFS.get(r["id"], r.get("href"))
     extra = ROLE_ENRICH.get(r["id"], {})
     r["icon"] = extra.get("icon", "layers")
     r["image"] = extra.get("image", "/assets/solutions/architecture-hero.jpg")

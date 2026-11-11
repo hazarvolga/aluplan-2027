@@ -14,7 +14,6 @@ const PRODUCT_NAMES: Readonly<Record<string, string>> = {
   '/products/allplan-concept': 'ALLPLAN Concept',
   '/products/allplan-professional': 'ALLPLAN Professional',
   '/products/allplan-ultimate': 'ALLPLAN Ultimate',
-  '/products/architecture': 'ALLPLAN Architecture',
   '/products/ax3000': 'AX3000',
   '/products/civil': 'ALLPLAN Civil',
   '/products/precast': 'ALLPLAN Precast',

@@ -1,7 +1,7 @@
 .header{position:sticky;top:0;z-index:20;background:var(--surface-page);border-bottom:var(--border-width-default) solid var(--border-default)}
 .inner{display:flex;align-items:center;justify-content:space-between;gap:var(--space-stack-md);padding-block:var(--space-stack-sm)}
 .brand{display:inline-flex;align-items:center;text-decoration:none;color:var(--text-primary)}
-.logo{display:block;height:2rem;width:auto}
+.logo{display:block;height:2rem;width:auto;flex:none}
 .nav{display:flex;align-items:center;gap:var(--space-stack-sm)}
 .navLink{text-decoration:none;color:var(--text-secondary);font-size:var(--type-body-sm-size)}
 .navLink:hover{color:var(--accent-fg)}
@@ -9,3 +9,9 @@
 .explore:hover{color:var(--accent-fg)}
 .toggle{display:inline-flex;align-items:center;justify-content:center;min-width:var(--target-min);min-height:var(--target-min);background:transparent;border:var(--border-width-default) solid var(--border-default);color:var(--text-primary);cursor:pointer}
 .toggle:hover{border-color:var(--accent-fg);color:var(--accent-fg)}
+.search{display:inline-flex;align-items:center;gap:var(--space-stack-xs);min-height:var(--target-min);padding-inline:var(--space-inset-sm);background:transparent;border:var(--border-width-default) solid var(--border-default);color:var(--text-secondary);font-size:var(--type-body-sm-size);cursor:pointer}
+.search:hover{border-color:var(--accent-fg);color:var(--accent-fg)}
+.search:focus-visible,.toggle:focus-visible{outline:var(--border-width-accent,2px) solid var(--focus-ring,var(--accent-fg));outline-offset:2px}
+/* Phone: keep the logo full size; Katalog lives in the curriculum drawer, explore keeps its icon */
+.navLink,.explore{white-space:nowrap}
+@media (max-width:640px){.searchLabel,.navLink,.exploreLabel{display:none}.explore{min-width:var(--target-min);min-height:var(--target-min);justify-content:center}}

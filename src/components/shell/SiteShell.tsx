@@ -5,10 +5,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { hasOwnChrome } from '@/lib/chrome-routes';
 import { getNavigationData, MAIN_QUOTE_FORM_URL } from '@/lib/site-shared';
-import { useSearchIndex } from './SearchIndexProvider';
-import { searchEntries } from '@/lib/search';
+import { SearchDialog } from './SearchDialog';
 import { AluIcon, AluIconName } from '@/components/ui/AluIcon';
-import { MediaDialog } from '@/components/ui/MediaDialog';
 import { clearConsent } from '@/lib/consent';
 import { isReleaseContentEnabled } from '@/lib/release-flags';
 import { DebugComponentLabel } from '@/components/sections/DebugComponentLabel';
@@ -80,27 +78,16 @@ function MobileMenuGroup({ title, href, sections, onNavigate }: {
 }
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
-  const { entries: searchIndex, loading: searchLoading, error: searchError, videoPartial, load: loadSearch, retryVideos } = useSearchIndex();
   const { mode, toggleMode } = useThemeMode();
   const pathname = usePathname();
   const [openMenu, setOpenMenu] = useState<'products' | 'solutions' | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-
-  useEffect(() => { if (searchOpen) loadSearch(); }, [searchOpen, loadSearch]);
-
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
-        e.preventDefault();
-        // Keep a single modal owner for focus and body scroll restoration.
-        if (document.querySelector('dialog.alu-video-modal:modal')) return;
-        setSearchOpen((prev) => !prev);
-      } else if (e.key === 'Escape') {
+      // Search (Ctrl/Cmd+K) lives in SearchDialog; Escape here closes the menus.
+      if (e.key === 'Escape') {
         setOpenMenu(null);
         setMobileMenuOpen(false);
-        setSearchOpen(false);
       }
     };
     window.addEventListener('keydown', onKeyDown);
@@ -111,8 +98,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   if (hasOwnChrome(pathname ?? '')) {
     return <>{children}</>;
   }
-
-  const filteredSearch = searchQuery.trim() ? searchEntries(searchIndex, searchQuery) : searchIndex.slice(0, 8);
 
   const logoSrc = mode === 'dark' ? '/assets/logo/aluplan-logo-white-filled.svg' : '/assets/logo/aluplan-logo-black.svg';
 
@@ -212,14 +197,19 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           </nav>
 
           <div className="alu-cluster" style={{ gap: 'var(--space-application-jsx-regular)' }}>
-            <button
-              type="button"
-              className="alu-button alu-button--ghost alu-button--sm"
-              aria-label="Site içi arama (Ctrl+K)"
-              onClick={() => setSearchOpen(true)}
-            >
-              <AluIcon name="search" size="sm" />
-            </button>
+            <SearchDialog
+              defaultScope="all"
+              trigger={(openSearch) => (
+                <button
+                  type="button"
+                  className="alu-button alu-button--ghost alu-button--sm"
+                  aria-label="Site içi arama (Ctrl+K)"
+                  onClick={openSearch}
+                >
+                  <AluIcon name="search" size="sm" />
+                </button>
+              )}
+            />
             <button
               type="button"
               className="alu-button alu-button--secondary alu-button--sm"
@@ -430,58 +420,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         </div>
       </footer></DebugComponentLabel>
 
-      {/* Search Command Modal */}
-      {searchOpen && (
-        <MediaDialog className="alu-modal-backdrop" label="Site içi arama" onClose={() => setSearchOpen(false)}>
-          <div className="alu-modal alu-stack">
-            <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
-              <h2 className="alu-h3" style={{ margin: 0 }}>
-                Ürün, Çözüm ve Eğitim Arama
-              </h2>
-              <button
-                type="button"
-                className="alu-button alu-button--ghost alu-button--sm"
-                onClick={() => setSearchOpen(false)}
-              >
-                <AluIcon name="x" size="sm" />
-                <span>Kapat (ESC)</span>
-              </button>
-            </div>
-            <input
-              type="search"
-              className="alu-input"
-              placeholder="ALLPLAN, AX3000, BIMFlex, Köprü, Prekast, Video ara..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              aria-label="Site içinde ara"
-              data-media-dialog-initial-focus
-            />
-            <div className="alu-stack" style={{ gap: 'var(--space-application-jsx-regular)', maxHeight: 'var(--layout-application-utility-panel-max-height)', overflowY: 'auto' }}>
-              {searchLoading && <p role="status">Arama hazırlanıyor…</p>}
-              {searchError && <button type="button" onClick={loadSearch}>Arama yüklenemedi. Tekrar dene</button>}
-              {videoPartial && <p role="status">Bazı güncel video başlıkları şu anda aranamayabilir. <button type="button" onClick={retryVideos}>Tekrar dene</button></p>}
-              {!searchLoading && !searchError && searchQuery.trim() && filteredSearch.length === 0 && <p role="status">Sonuç bulunamadı.</p>}
-              {filteredSearch.map((item) => (
-                <Link
-                  key={item.path}
-                  href={item.path}
-                  className="alu-card"
-                  style={{ padding: 'var(--space-application-jsx-comfortable) var(--space-application-jsx-section)', textDecoration: 'none' }}
-                  onClick={() => setSearchOpen(false)}
-                >
-                  <div className="alu-cluster" style={{ justifyContent: 'space-between' }}>
-                    <strong style={{ color: 'var(--text-primary)' }}>{item.title}</strong>
-                    <span className="alu-badge">{item.section.toUpperCase()}</span>
-                  </div>
-                  <p className="alu-caption" style={{ margin: 'var(--space-application-jsx-tight) 0 0 0' }}>
-                    {item.description}
-                  </p>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </MediaDialog>
-      )}
 
     </div>
   );

@@ -86,11 +86,12 @@ class TabAccessibilityContractTests(unittest.TestCase):
     def test_search_inputs_have_programmatic_names(self):
         search_page = read("src/components/sections/SearchPageSection.tsx")
         references = read("src/components/sections/ReferencesDirectorySection.tsx")
-        site_shell = read("src/components/shell/SiteShell.tsx")
+        # The header search dialog moved from SiteShell into the shared SearchDialog.
+        search_dialog = read("src/components/shell/SearchDialog.tsx")
 
         self.assertIn('aria-label="Site içeriğinde ara"', search_page)
         self.assertIn('aria-label="Referans kurum ara"', references)
-        self.assertIn('aria-label="Site içinde ara"', site_shell)
+        self.assertIn('aria-label="Site içinde ara"', search_dialog)
         self.assertEqual(references.count('id="references-panel"'), 2)
 
     def test_social_links_are_icon_only_but_keep_accessible_names(self):

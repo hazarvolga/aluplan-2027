@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useEffect, type ReactElement } from 'react';
 import { getHomepageData } from '@/lib/site-shared';
 import { useSearchIndex } from '@/components/shell/SearchIndexProvider';
-import { searchEntries } from '@/lib/search';
+import { rankSearchEntries } from '@/lib/search';
 import { AluIcon } from '@/components/ui/AluIcon';
 
 const homepageData = getHomepageData();
@@ -20,7 +20,7 @@ export function SearchPageSection({
 }: SearchPageSectionProps): ReactElement {
   const { entries: searchIndex, loading, error, videoPartial, load, retryVideos } = useSearchIndex();
   useEffect(() => { load(); }, [load]);
-  const filteredResults = searchEntries(searchIndex, query);
+  const filteredResults = rankSearchEntries(searchIndex, query);
 
   return (
     <section className="preview-section" aria-labelledby="search-page-heading">

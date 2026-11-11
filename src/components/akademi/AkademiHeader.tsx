@@ -3,9 +3,10 @@
 import Link from 'next/link';
 import { AluIcon } from '@/components/ui/AluIcon';
 import { useThemeMode } from '@/components/theme/ThemeModeProvider';
+import { SearchDialog } from '@/components/shell/SearchDialog';
 import styles from './AkademiHeader.module.css';
 
-/** Slim academy top bar: brand -> home, one quiet "explore ALLPLAN" link, theme toggle. */
+/** Slim academy top bar: brand -> home, lesson search, one quiet "explore ALLPLAN" link, theme toggle. */
 export function AkademiHeader() {
   const { mode, toggleMode } = useThemeMode();
   const logoSrc = mode === 'dark'
@@ -19,9 +20,23 @@ export function AkademiHeader() {
           <img src={logoSrc} alt="Aluplan" width={166} height={32} className={styles.logo} />
         </Link>
         <nav className={styles.nav} aria-label="Akademi üst gezinme">
+          <SearchDialog
+            defaultScope="akademi"
+            trigger={(openSearch) => (
+              <button
+                type="button"
+                className={styles.search}
+                aria-label="Akademi'de ara (Ctrl+K)"
+                onClick={openSearch}
+              >
+                <AluIcon name="search" size="sm" />
+                <span className={styles.searchLabel}>Ara</span>
+              </button>
+            )}
+          />
           <Link href="/akademi#katalog" className={styles.navLink}>Katalog &amp; Yollar</Link>
-          <Link href="/products" className={styles.explore}>
-            <span>ALLPLAN’ı keşfet</span>
+          <Link href="/products" className={styles.explore} aria-label="ALLPLAN’ı keşfet">
+            <span className={styles.exploreLabel}>ALLPLAN’ı keşfet</span>
             <AluIcon name="arrow-up-right" size="sm" />
           </Link>
           <button

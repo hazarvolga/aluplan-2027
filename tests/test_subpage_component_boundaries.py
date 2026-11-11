@@ -275,7 +275,7 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
             "query: string",
             "onQueryChange: (query: string) => void",
             "entries: searchIndex, loading, error, videoPartial, load, retryVideos",
-            "searchEntries(searchIndex, query)",
+            "rankSearchEntries(searchIndex, query)",
             "Tüm Sayfa, Ürün ve Çözümlerde Ara",
             "filteredResults.map",
             "item.section.toUpperCase()",

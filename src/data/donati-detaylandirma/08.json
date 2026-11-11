@@ -165,5 +165,147 @@
     "task": "Bir beton bileşene Craft, Material, Concrete type ve Degree of reinforcement özniteliklerini ekleyin, ardından Standard\\Gewerke\\Betonarbeiten altından 'Übersicht Beton und Bewehrung' raporunu üretmeyi deneyin.",
     "expected": "Raporun bileşeni doğru malzeme, tür ve donatı içeriğiyle listelemesi.",
     "hint": "Donatma sırasında kesit serisi hatası çıkarsa Extras > Definitionen > Querschnittsreihen üzerinden seriyi kontrol edin ve proje ayarını önce 'Projekt' konumuna alın."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "NPK 241 Ortbetonbau'ya Göre Metraj (Mengenermittlung)"
+      },
+      {
+        "type": "text",
+        "text": "Donatı metrajının doğru çıkması, yapı elemanlarının doğru niteliklerle işaretlenmesine bağlıdır. Bu makale İsviçre NPK 241 Yerinde Dökme Beton (Ortbetonbau) bölümüne göre metraj için gereken nitelikleri ve raporları verir. Mümkün olduğunca mimari yapı elemanlarını kullanın."
+      },
+      {
+        "type": "text",
+        "text": "**İş kolu (Gewerk, Craft):** Değeri Beton İşleri (Betonarbeiten); bu iş kolundaki tüm yapı elemanları değerlendirilir. **Nesne adı (Object name):** Örneğin döşeme plağı, duvar, tavan; yapı elemanı adlarını belirler. **Malzeme (Material):** Örneğin beton; beton raporundaki malzemeyi belirler. **Beton tipi (Concrete type):** Örneğin NPK C; beton raporundaki sıralamayı belirler. **Kalıp tipi (Formwork type):** Örneğin Tip 2; kalıp alanı raporundaki kalıp tipini belirler. **Donatı oranı (Degree of reinforcement):** Örneğin 100 (kg/m³); m³ başına donatı miktarını verir."
+      },
+      {
+        "type": "text",
+        "text": "**Taşıyıcı yapı elemanı (Load-bearing component):** Kâgir duvarlarda bu yüzeyin döşeme kalıbından düşülüp düşülmeyeceğini belirler. Değeri bir onay kutusudur: işaretsiz ya da işaretli."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11537_0EMVi000002R1YN_b5e53bec.png",
+        "caption": "Taşıyıcı niteliğinin değeri: işaretsiz onay kutusu"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11537_0EMVi000002R1YM_1fc94396.png",
+        "caption": "Taşıyıcı niteliğinin değeri: işaretli onay kutusu"
+      },
+      {
+        "type": "text",
+        "text": "**Notlar:** Malzeme ataması yalnız **Malzeme** niteliğinde de yapılabilir (örneğin beton NPK C). Duvarlarda nitelikler objenin tamamına değil, duvar katmanına verilmelidir. **Nesne adı** niteliğiyle yapı elemanları ayrılabilir: örneğin standart duvarları asansör duvarlarından ayırmak için nesne adına \"Duvar\" yerine \"Duvar Asansör\" yazın."
+      },
+      {
+        "type": "text",
+        "text": "**Raporlar** (**Standard\\Gewerke\\Betonarbeiten** klasöründe): **Betonarbeiten Schweiz_2019** (beton işleri), **Schalflächen Schweiz_2019** (kalıp alanları), **Randschalung Decken Schweiz** (döşeme kenar kalıbı), **Übersicht Beton und Bewehrung** (beton ve donatı özeti) ve isteğe bağlı olarak, planlama paketindeki asistanla birlikte **Sichtschalungen und Arbeitsfugen Schweiz_2019** (brüt beton kalıpları ve çalışma derzleri)."
+      },
+      {
+        "type": "heading",
+        "text": "Mesaj: 'Exception ist not handled !!!' (Donatma Sırasında)"
+      },
+      {
+        "type": "text",
+        "text": "Donatı yerleştirirken ALLPLAN **\"Exception is not handled !!!\"** mesajını verebilir. Mesaj, kalite raporu gönderip göndermeyeceğinizi sorar: **Evet (Ja)** derseniz ALLPLAN kapanır, **Hayır (Nein)** derseniz sorun yok sayılır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/8902_0EMVi00000DaqIM_c4118da7.png",
+        "caption": "Mesaj: Exception is not handled !!! Do you want to send Quality report? (Ja / Nein)"
+      },
+      {
+        "type": "text",
+        "text": "**Neden:** Mesajın kaynağı büyük olasılıkla kesit serinizdeki bir sorundur. Bunu **Ekstralar -> Tanımlar -> Kesit Serileri (Extras -> Definitionen -> Querschnittsreihen)** diyaloğunu açarak kontrol edin. Orada kesit serisi yoksa aşağıdaki adımları izleyin."
+      },
+      {
+        "type": "text",
+        "text": "**1. Kesit serisini geri yükleyin:** **Proje ve kaynak yönetimi (Projektübersicht)** üzerinden **Proje Ayarları (Projekteinstellungen)** diyaloğunu açın. **Çubuk ve hasır kesit serileri (Rundstahl- und Mattenquerschnittsreihen)** ayarını **Büro** yapın. Böylece projede bulunmayan kesit serilerinin yerine büro dizinindeki mevcut kesit serileri yazılır. Proje zaten Büro'ya ayarlıysa doğrudan 3. adıma (ülkeye özgü kesit serisini okuma) geçin."
+      },
+      {
+        "type": "text",
+        "text": "**Büro:** Kesit serilerindeki değişiklik, kesit serisi Büro'ya ayarlı tüm mevcut projeleri etkiler. **Proje:** Değişiklik yalnız açık projeyi etkiler."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/8902_0EMVi00000DaziD_b33db441.png",
+        "caption": "Projekteinstellungen: Rundstahl- und Mattenquerschnittsreihen ayarı Büro"
+      },
+      {
+        "type": "text",
+        "text": "Görünen mesajı **Tamam (OK)** ile onaylayın. Mesaj, projeye özgü verilerin silineceğini bildirir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/8902_0EMVi00000DazlR_e72815d3.png",
+        "caption": "Mesaj: Die projektspezifischen Daten werden gelöscht! (OK / Abbrechen)"
+      },
+      {
+        "type": "text",
+        "text": "Ardından çubuk ve hasır kesit serilerini yeniden **Proje** ayarına getirin. Bunu öneriyoruz, çünkü böylece kesit serisindeki değişiklikler yalnız bu projeyi etkiler."
+      },
+      {
+        "type": "text",
+        "text": "**2. Kesit serisini tamamlayın:** **2.1** Kesit serilerini elle tamamlayabilirsiniz. Kesit Serileri diyaloğunun **İşlevler (Funktionen)** bölümündeki **Yeni (Neu)**, **Düzenle (Bearbeiten)**, **Sil (Löschen)** ve **Çıktı (Ausgabe)** düğmelerini kullanın; ayrıntılar ALLPLAN Yardım'dadır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/8902_0EMVi00000C6pov_55c6f511.png",
+        "caption": "Querschnittsreihen diyaloğu: Funktionen bölümünde Neu, Bearbeiten, Löschen, Ausgabe"
+      },
+      {
+        "type": "text",
+        "text": "**2.2** Kesit serilerini bir planlama partnerinden içe aktarabilir ya da bir partnere verebilirsiniz; bunun için diyaloğun sol altındaki iki simgeyi kullanın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/8902_0EMVi00000C6qhl_d3d02fd0.png",
+        "caption": "Querschnittsreihen diyaloğunun sol altında içe ve dışa aktarma simgeleri"
+      },
+      {
+        "type": "text",
+        "text": "**3. Ülkeye özgü kesit serisini okuyun:** Ülkeye özgü kesit serileri program klasöründe saklanır ve favori fonksiyonlarıyla (sol alttaki klasör simgesi) içe aktarılabilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/8902_0EMVi00000C6szh_6751277e.png",
+        "caption": "Querschnittsreihen diyaloğunda kesit serisi içe aktarma (klasör) simgesi"
+      },
+      {
+        "type": "text",
+        "text": "Dosyalara ulaşmak için **Allmenu -> Servis -> Windows Gezgini -> CAD program klasörü -> New -> Ing** yolunu açın. Dosya adlarındaki (**axyzqusr.txt**) kısaltmalar: **aut** Avusturya, **bel** Belçika, **bra** Brezilya, **bul** Bulgaristan, **deu** Almanya, **eng** İngiltere, **fra** Fransa, **hol** Hollanda, **hrv** Hırvatistan, **ita** İtalya, **kor** Kore, **pol** Polonya, **rum** Romanya, **rus** Rusya, **slk** Slovakya, **svn** Slovenya, **swi** İsviçre, **tch** Çekya, **ung** Macaristan, **usa** ABD."
+      },
+      {
+        "type": "heading",
+        "text": "Mesaj: 'Mevcut çelik sınıflarının tümü kesit serilerinde tanımlı değil'"
+      },
+      {
+        "type": "text",
+        "text": "ALLPLAN **\"Nicht alle vorhandenen Stahlgüten sind in den Querschnittsreihen definiert.\"** (Mevcut çelik sınıflarının tümü kesit serilerinde tanımlı değil) mesajını verirse kesit serileri eksiktir; bu yüzden çizim dosyasında çizilen donatı hesaplanamaz. Mesaj, sorunlu poz numarasını ve çelik sınıfını da gösterir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/10514_0EMVi00000C6VIL_c94022db.png",
+        "caption": "Mesaj: Nicht alle vorhandenen Stahlgüten ...; Positionsnummer 10, Stahlgüte 5"
+      },
+      {
+        "type": "text",
+        "text": "**Kesit serisini tamamlayın ya da güncelleyin. Adım 1:** Kesit serilerindeki değişiklikler mevcut donatıyı da etkilediği için, değiştirmeden önce Proje Ayarları'nda kesit serisi ayarını **Proje** yapmanızı öneririz. **Büro** ayarında değişiklik, kesit serisi Büro'ya ayarlı tüm projeleri; **Proje** ayarında yalnız açık projeyi etkiler."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/10514_0EMVi00000C6n7B_4900b959.png",
+        "caption": "Projekteinstellungen: Rundstahl- und Mattenquerschnittsreihen ayarı Projekt"
+      },
+      {
+        "type": "text",
+        "text": "**Adım 2:** ALLPLAN'da **Ekstralar -> Tanımlar -> Kesit Serileri (Extras -> Definitionen -> Querschnittsreihen)** diyaloğunu açın."
+      },
+      {
+        "type": "text",
+        "text": "**Adım 3 ve 4:** Eksik çelik sınıfını kesit serisine elle ekleyin, kesit serisini bir planlama partnerinden içe aktarın ya da program klasöründeki ülkeye özgü kesit serisini okuyun. Bu üç yol, görselleriyle birlikte bir önceki bölümde (\"Exception is not handled\" mesajı, 2. ve 3. adımlar) anlatıldığı gibidir."
+      }
+    ]
   }
 }

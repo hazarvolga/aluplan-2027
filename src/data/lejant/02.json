@@ -139,113 +139,77 @@
     "blocks": [
       {
         "type": "heading",
-        "text": "Etiket Stilleri - Biçim ayarları"
-      },
-      {
-        "type": "text",
-        "text": "Etiket stillerinde (Beschriftungsbild) normal metne göre sınırlı biçimlendirme kullanabilirsiniz. Bir niteliği veya formülü yerleştirirken ya da değiştirirken metin yüksekliği, metin genişliği, yazı tipi ve sütun açısını ayarlayabilirsiniz. Nitelik çizim dosyasına yerleştirildikten sonra Özellikler (Eigenschaften) paleti daha fazlasını sunar."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/10641_0EM7U000001TdUV_37baaa34.png",
-        "caption": "Niteliği yerleştirirken metin yüksekliği, genişliği ve yazı tipi ayarları."
-      },
-      {
-        "type": "text",
-        "text": "**Özellikler paletindeki olanaklar.** Özellikler paletinde tekil nitelik için metinlerdeki ayarların aynısını yaparsınız. Biçim (Format) tarafında kalem kalınlığı (yalnızca Allplan standart yazı tiplerinde etkilidir, TrueType veya OpenType'ta değil), çizgi rengi, katman ve bu özelliklerin katmana bağlanması bulunur. Eleman (Element) tarafında metin bloğu etrafına çerçeve, arka plan dolgusu ve Kalın (Fett), İtalik (Kursiv), Altı çizili, Üstü çizili gibi vurgular vardır. Bu yöntemin avantajı kolay uygulanmasıdır; her zaman niteliğin veya formülün tüm ifadesi dikkate alınır. Dezavantajı ise biçimi değere bağlı değiştirememeniz ve ifadenin yalnızca bir kısmını ayrı biçimlendirememenizdir."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/10641_0EM7U000001TdUW_3ec07482.png",
-        "caption": "Özellikler paleti: çerçeve, arka plan ve yazı vurguları."
-      },
-      {
-        "type": "text",
-        "text": "**Formüllerde kontrol karakterleri.** Bir metni çıktılayan formülün içinde (örneğin A50 formatında) kontrol karakterleriyle biçimlendirme yaparsınız. Her biçim bir başlangıç ve bir bitiş karakter çiftiyle tanımlanır; ikisi arasındaki metin o biçimle gösterilir. İlk grup karakterler metin düzenleyicide de eklenir ve orada yalnızca etkisiyle görünür: %B{ ... %B} kalın, %I{ ... %I} italik, %U{ ... %U} altı çizili, %D{ ... %D} üstü çizili, %^{ ... %^} üst simge, %v{ ... %v} alt simge, %C{109| ... %C} ise metin rengi (0-255 arası 256 standart renk) verir."
-      },
-      {
-        "type": "text",
-        "text": "İkinci grup biçimlendirmelerde kontrol karakterleri metin düzenleyicide görünür kalır, etkisi yalnızca çizim dosyasında görüntülenir ve satır sonuna kadar sürer. Örnekler: %+ ... %- boyut değişmeden üst simge, %< ... %> büyütme, %C4 tek haneli renk, %EA ... %EE köşeli çerçeve, %RA ... %RE yuvarlak çerçeve, %K0-9 daire, %N0-9 sekizgen, %V0-9 eşkenar dörtgen içine alma."
-      },
-      {
-        "type": "text",
-        "text": "**Koşula bağlı renk örneği.** Metinleri parçalardan birleştirip her parçayı bir koşula bağlayabilirsiniz. Örneğin 20 m² üzerindeki mahal adını kırmızı, küçük mahalleri mavi yazmak için şu formülü kurarsınız: _IF_(Grundfläche_DIN277>20)\"%C{109|\"_ELSE_\"%C{122|\")+Bezeichnung+\"%C}\". Koşul mahalin taban alanını 20 ile karşılaştırır; büyükse kırmızı renk kodu, değilse mavi renk kodu kullanılır. Ardından Tanım (Bezeichnung) niteliği eklenir ve biçim bitiş dizisiyle kapatılır."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/10641_0EM7U000001TdUr_8a5e26d6.png",
-        "caption": "20 m² eşiğine göre kırmızı ve mavi renklenen mahal adları."
-      },
-      {
-        "type": "text",
-        "text": "**Kademeli renk örneği.** Rengi alan büyüklüğüne göre sürekli değiştirebilirsiniz. Örneğin metin renginin 64'ten 79'a kadar yeşil tonlarında değişmesini ve 50 m²'den itibaren en açık tonun geçerli olmasını isterseniz: \"%C{\"+(_IF_(Grundfläche_DIN277<50)(64+(Grundfläche_DIN277*15/50))_ELSE_\"79\")+\"|\"+Bezeichnung+\"%C}\". Burada \"%C{\" renk başlangıcı, orta kısım 64 ile 79 arası renk hesabı, \"|\" ayırıcı çizgi, Bezeichnung çıktılanacak ifade ve \"%C}\" biçim sonudur. Örnek temsilidir; uygulamada örneğin net kapı yüksekliğini incelemek daha anlamlı olabilir."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/10641_0EM7U000001TdUt_33c72e0a.png",
-        "caption": "Alan büyüklüğüne göre yeşil tonları arasında kademelenen renk."
-      },
-      {
-        "type": "heading",
         "text": "Etiket Stilleri - Etiket stillerinin içeriği"
       },
       {
         "type": "text",
-        "text": "Etiketlenmiş veriniz var ama orijinal etiket stilini bulamıyorsanız, ya da bir etiketin neyi değerlendirdiğini ve metrajla aynı değerleri almak için hangi niteliği değiştirmeniz gerektiğini bilmek istiyorsanız, kullanılan nitelikleri doğrudan çizim dosyasından okuyabilirsiniz."
+        "text": "Bir lejantın ya da etiket stilinin parçalarını tanımanın en iyi yolu, hazır bir stilin içine bakmaktır. Bu bölümde bir etiket stilinde hangi niteliklerin kullanıldığını adım adım okuyorsunuz. Bu beceri şu durumlarda işe yarar: etiketlenmiş veri var ama orijinal stil bulunamıyor; standart etiketlerin neyi değerlendirdiğini öğrenmek istiyorsunuz; bir iş arkadaşınızın verisinde etiketin doğru değişmesi için hangi niteliği değiştireceğinizi bilmiyorsunuz; ya da metrajınızın çizimdeki etiketle aynı değerleri vermesini istiyorsunuz."
       },
       {
         "type": "text",
-        "text": "Durum 1 - Bir etiket stilinin içeriğini incelemek: Etiket Stili (Beschriftungsbild) fonksiyonunu çağırın, Giriş Seçenekleri (Eingabeoptionen) altından Oku (Lesen) seçeneğini seçin, incelenecek stili seçip çizim dosyasına yerleştirin. Etiket stiline göre birden fazla folyo (Folie) oluşur; tekil folyoların hangi ölçek/çizim tipiyle kaydedildiği okunamaz."
+        "text": "Kendi stilinizi ya da standart bir stili incelemek için önce **Etiket Stili (Beschriftungsbild)** fonksiyonunu açın (Actionbar'da **Kullanıcı Objeleri (Benutzerobjekte)** görevi)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11307_0EM7U000001TdDA_09a214c9.png",
+        "caption": "Kullanıcı Objeleri görevinde Etiket Stili (Beschriftungsbild) simgesi"
+      },
+      {
+        "type": "text",
+        "text": "Giriş Seçenekleri (Eingabeoptionen) araç çubuğunda **Oku (Lesen)** düğmesini seçin."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/11307_0EM7U000001TdDB_0ed94683.png",
-        "caption": "Giriş Seçenekleri -> Oku (Lesen) ile mevcut bir etiket stilini çizime okutun."
+        "caption": "Etiket Stili araç çubuğu ve Giriş Seçenekleri'nde Oku (Lesen)"
       },
       {
         "type": "text",
-        "text": "Ardından Giriş Seçenekleri -> Modi altından bir metni (örneğin İşlev / Funktion) seçin. Etiket Stili araç çubuğu açılır ve temel ayarları gösterir."
+        "text": "İncelemek istediğiniz etiket stilini seçin ve çizim dosyasına yerleştirin. Stile bağlı olarak birden fazla folyo (Folie) ortaya çıkar; tek tek folyoların hangi ölçek veya çizim tipi ayarıyla kaydedildiği buradan okunamaz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11307_0EM7U000001TdDC_70179970.png",
+        "caption": "Etiket stili seçimi: Standart, 1 Raumstempel, 2 Raum - inkl. Raumhöhe"
+      },
+      {
+        "type": "text",
+        "text": "Giriş Seçenekleri'nde **Modi** düğmesini seçin ve incelemek istediğiniz metne, örneğin İşlev (Funktion) metnine (1) tıklayın. Görseldeki 1 (İşlev), 2 (Alan) ve 3 (Grup) numaralı alanlar bir etiket stilinin tipik parçalarıdır: bir nitelik, bir formül ve üst nesneye bağlı bir formül. Bunların ayarlarını hücre tanımlama dersinde ayrıntılı göreceksiniz."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/11307_0EM7U000001TdDD_11dc365c.png",
-        "caption": "Modi ile incelenecek satırı (burada İşlev / Funktion) seçin."
+        "caption": "Modi ile folyolar ve numaralı alanlar: 1 İşlev, 2 Alan, 3 Grup"
       },
       {
-        "type": "image",
-        "src": "/akademi/lejant/11307_0EM7U000001TdDE_6b6ec24d.png",
-        "caption": "Araç çubuğu: Format (çıktı biçimi, örn. A10 metin, F8.3 sayı, K15.3 kot), Anpass (ölçeğe uyum), DIM (birim) ve Info (nitelik/formül)."
-      },
-      {
-        "type": "text",
-        "text": "Info düğmesi neyin etiketlendiğini açar. Doğrudan bir nitelik tanımlıysa nitelik seçimi, bir formül tanımlıysa formül açılır. Örneğin bir Alan hücresinde şu formül bulunabilir:"
+        "type": "heading",
+        "text": "Etiket Stilleri - Biçim ayarları"
       },
       {
         "type": "text",
-        "text": "_IF_(@233@=3)@93@_ELSE_(_IF_(@264@=1)@197@_ELSE_@197@/@264@)"
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11307_0EM7U000001TdDF_abd8da22.png",
-        "caption": "Alan_m² hücresinde koşul formülü; Flächenart_Wohnfläche KW (=3) ise Grundfläche_DIN277, değilse katsayısı çıkarılmış Wohnfläche_Ausbau değeri. Biçim F8.1."
+        "text": "Bir etiket stilindeki metnin görünümünü (örneğin kalın yazı) nasıl değiştirirsiniz? Etiket stillerinde normal metne kıyasla doğrudan yalnız sınırlı biçimlendirme yapılabilir."
       },
       {
         "type": "text",
-        "text": "Üst nesneye erişim için PARENT() kullanılır. Bir mahal etiket stilinde PARENT(@507@) formülü, mahalin bağlı olduğu mahal grubunun adını (Bezeichnung) döndürür. Biçim A6 olduğundan uzun grup adları kesilir."
+        "text": "**Etiket Stili (Beschriftungsbild)** fonksiyonunda bir niteliği (ya da yerleştirilmiş bir formülü) yerleştirirken veya değiştirirken metin yüksekliğini, metin genişliğini, yazı tipini ve sütun açısını ayarlayabilirsiniz."
       },
       {
         "type": "image",
-        "src": "/akademi/lejant/11307_0EM7U000001TdDG_77797bbc.png",
-        "caption": "Grup hücresi: PARENT(@507@) ile üst nesnenin (mahal grubu) adı okunur."
+        "src": "/akademi/lejant/10641_0EM7U000001TdUV_37baaa34.png",
+        "caption": "Etiket Stili araç çubuğunda metin yüksekliği, genişlik, yazı tipi ve açı alanları"
       },
       {
         "type": "text",
-        "text": "Durum 2 - İçeriği bilinmeyen etiketli bir nesne: Standart Etiket kullanıldıysa nesneyi aynı türle yeniden etiketlemeyi deneyip alan adlarından atamayı bulun. Nesne Etiketi veya Etiket Stili kullanıldıysa, Etiket Stili fonksiyonu + Modi + Info ile içeriği Durum 1'deki gibi okuyun."
+        "text": "Nitelik çizim dosyasına yerleştirildikten sonra **Özellikler (Eigenschaften)** paleti, tek bir nitelik için metinlerdekiyle aynı ek ayarları sunar. **Biçim (Format)** bölümünde kalem kalınlığı (yalnız ALLPLAN standart yazı tiplerinde etkilidir, TrueType veya OpenType yazı tiplerinde etkisizdir), çizgi rengi, katman ve kalem, çizgi tipi ile rengin katmana bağlanması bulunur. **Eleman (Element)** bölümünde metin bloğu çevresinde ayarlı bir çerçeve, pencere arka plan rengi ya da seçilebilir başka bir renkle arka plan dolgusu ve kalın (Fett), italik (Kursiv), altı çizili (Unterstrichen), üstü çizili (Durchgestrichen) gibi vurgular vardır."
       },
       {
         "type": "image",
-        "src": "/akademi/lejant/11307_0EM7U000001TdDM_28e37380.png",
-        "caption": "Nesne Etiketi veya Etiket Stilinde Info düğmesi, kullanılan nitelik ya da formülü açar."
+        "src": "/akademi/lejant/10641_0EM7U000001TdUW_3ec07482.png",
+        "caption": "Özellikler paleti: Biçim ve Eleman ayarları; çerçeveli, arka planlı, kalın kırmızı Bezeichnung"
+      },
+      {
+        "type": "text",
+        "text": "Bu biçimlendirmelerin avantajı uygulamasının kolay olmasıdır; her zaman niteliğin veya formülün tüm ifadesine uygulanır. Dezavantajı da buradan gelir: biçimi niteliğin değerine ya da başka bir niteliğe bağlı olarak değiştiremezsiniz ve bir ifadenin yalnız bir kısmını farklı biçimlendiremezsiniz. Bunun için formüllerdeki kontrol karakterlerini kullanırsınız; bunları hücre tanımlama dersinde göreceksiniz."
       }
     ]
   },

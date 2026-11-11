@@ -145,5 +145,57 @@
     "task": "ALLPLAN Mühendislik rolünde kütüphaneyi açın, Nemetschek Profiles Catalog komutuyla bir I profili seçip seçim listesine aktarın ve kütüphaneye kopyalayın.",
     "expected": "Seçtiğiniz profil taşıyıcı yapı eleman modülünde kullanılabilir hale gelir.",
     "hint": "İş akışı sırayla profil seç, biçim seç, listeye aktar, öge seç, kopyala adımlarını izler."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "SDS2 bağlantısı ve profil kataloğu: eksik ikon"
+      },
+      {
+        "type": "text",
+        "text": "Taşıyıcı Yapı (Supporting structure) modülünde otomatik çelik bağlantıları kurabilmek için kiriş ve kolonların doğru katalogdaki profillerle modellenmiş olması gerekir. Bu bölüm profil kataloğu tarafını anlatır; bağlantıları bir sonraki derste kuracaksınız."
+      },
+      {
+        "type": "text",
+        "text": "**Uyarı:** Otomatik bağlantılar yalnız elemanları (taşıyıcı yapının kirişleri ve kolonları) **Nemetschek kataloğundaki profillerle** oluşturduysanız çalışır; aksi halde bağlantılar oluşturulamaz. Taşıyıcı yapı oluştururken profil seçiminde bu nedenle bir uyarı alabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "Nemetschek profillerini edinmek için kütüphaneyi açın ve **Nemetschek Profil Kataloğu (Nemetschek Profiles Catalog)** komutuna tıklayın. Ardından sırasıyla: (1) profilleri seçin, (2) profil şekillerini seçin, (3) seçim listesine aktarın, (4) liste öğelerini seçin, (5) öğeleri kopyalayın."
+      },
+      {
+        "type": "text",
+        "text": "Öğeler kütüphaneye eklenir ve taşıyıcı yapı eleman modülünde kullanılabilir hale gelir."
+      },
+      {
+        "type": "heading",
+        "text": "Variantenprofil eklentisi: işlev özeti"
+      },
+      {
+        "type": "text",
+        "text": "Katalogda olmayan serbest kesitler için ALLPLAN'ın eklenti (Add-on) yolu vardır."
+      },
+      {
+        "type": "text",
+        "text": "**Varyant Profil (Variantenprofil)** eklentisi 1 Temmuz 2026'da yayımlanmıştır ve son derece esnek, parametrik profillerin ve yapı elemanlarının verimli modellenmesini sağlar. Temelinde özel bir profil editörü vardır: serbest kesitler oluşturur, ardından bunları yapı elemanı, kolon ya da kiriş olarak yerleştirirsiniz. Oluşan tüm elemanlar tamamen parametriktir; ölçüler, şekiller ve malzemeler istendiğinde hızla değiştirilebilir."
+      },
+      {
+        "type": "text",
+        "text": "Eklenti profiller arası doğrusal geçişi (lineare Profil-Interpolation), boşlukları (Aussparungen), malzeme atamalarını ve doğru plan ve kesit gösterimini destekler. Bu nedenle özellikle endüstri, ahşap ve çelik yapılardaki karmaşık uygulamalara ve organik, kendine özgü eleman geometrilerine uygundur."
+      },
+      {
+        "type": "heading",
+        "text": "Profilbauteil eklentisi: serbest dikdörtgen ve yuvarlak profiller"
+      },
+      {
+        "type": "text",
+        "text": "Basit serbest kesitler için ikinci bir eklenti seçeneği **Profil Eleman (Profilbauteil)** eklentisidir. 1.0.0.13 sürümüyle serbest dikdörtgen ve yuvarlak profiller oluşturabilirsiniz; bu profiller ahşap, beton ve çelik gibi farklı malzemelerde kullanılabilir."
+      },
+      {
+        "type": "text",
+        "text": "Eklentide profilin tutma noktasını (Festhaltepunkt) ve ağırlık merkezini (Schwerpunkt) tanımlayabilirsiniz; böylece profilleri tasarımın gerektirdiği konuma göre yerleştirirsiniz."
+      }
+    ]
   }
 }

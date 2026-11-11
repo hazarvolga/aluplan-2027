@@ -181,5 +181,25 @@
     "task": "Taşıyıcı duvarların altına şerit temel, kolonların altına tekil temel yerleştirin; isterseniz oturum alanına radye temeli deneyin. Temelleri kot düzlemine bağlayın.",
     "expected": "Şerit, tekil (ve varsa radye) temeller doğru kotta ve taşıyıcılara bağlıysa temel elemanlarını kavramışsınız.",
     "hint": "Temeli sabit kota değil kot düzlemine bağlayın; yoksa zemin kotu değişince kopar."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Add-On Baugrube (Yapı Çukuru Eklentisi) - Eğimli Temel Plağı ile Kazı"
+      },
+      {
+        "type": "text",
+        "text": "**Yapı Çukuru (Baugrube)** eklentisiyle farklı eğimlere sahip kazı yüzeylerini bir araziye yerleştirebilirsiniz; 3B yüzeyler ve çeşitli ayarlar sayesinde arazi modeli hassas biçimde uyarlanır ve görselleştirilir."
+      },
+      {
+        "type": "heading",
+        "text": "Add-On Baugrube (Yapı Çukuru Eklentisi) - Eğimde Temel Kazısı"
+      },
+      {
+        "type": "text",
+        "text": "Yapı çukuru tasarımında yeni kazı düzlemleri ekleyerek çukuru ayrıntılandırırsınız. 3B katı modeller sayesinde metraj kolayca hesaplanır. Elemanların eğimini, yönünü ve yüksekliğini üç nokta yardımıyla ayarlarsınız; temelleri ayrıca uyarlayıp adlandırabilirsiniz."
+      }
+    ]
   }
 }

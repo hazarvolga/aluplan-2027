@@ -162,5 +162,135 @@
     "task": "Üç kişilik bir ekip için rol planı yazın: takımı kuran kişi, tüm projeleri yöneten kişi ve yalnızca tek projede çalışacak kişi hangi rolü almalı? Projektbearbeiter için hangi ek adım gerekir?",
     "expected": "Team-Owner, Team-Administrator ve Projekt-Administrator/Projektbearbeiter eşleşmesi; son kişi için Layerset/Druckset hakkı notu.",
     "hint": "En az yetki ilkesini uygulayın: kimseye gerekenden fazla hak vermeyin."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Bimplus'ta Doğru Proje Başlangıcı"
+      },
+      {
+        "type": "text",
+        "text": "Bimplus'ta bir projeyi doğru başlatmak, sonradan düzeltmesi zor olan iki şeyi baştan sabitler: projenin bilgilerini ve modellerin konumlandığı sıfır noktasını. Bu bölümde projeyi Bimplus web portalında açıp sıfır noktasını ilk model yüklemesinden önce ayarlıyorsunuz."
+      },
+      {
+        "type": "text",
+        "text": "Bimplus'a, rolünde **Ekip Sahibi (Teaminhaber)** ya da **Ekip Yöneticisi (Teamadministrator)** bulunan bir hesapla giriş yapın. Panoda **Proje Aç (Projekt Öffnen)** kutucuğunu seçin (1); açılan proje listesinde yeni proje ekleme simgesine tıklayın (2)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8605_0EMVi00000F0rF1_35ceeb6d.png",
+        "caption": "Bimplus panosunda Proje Aç (1) ve proje listesinde yeni proje ekleme simgesi (2)"
+      },
+      {
+        "type": "text",
+        "text": "**Proje Ekle (Projekt Hinzufügen)** penceresinde proje adını girin (3). **Ayarları Şuradan Kopyala (Einstellungen Klonen Aus)** alanında var olan bir projeyi seçerseniz (4) üye grupları yapısı, hakları ve rolleriyle proje üyeleri, doküman klasörü yapısı, Multi Model Manager yapıları, nitelik seti şablonu, obje filtreleri ve çakışma tespiti filtreleri yeni projeye aktarılır. **Ekle (Hinzufügen)** ile projeyi oluşturun (5)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8605_0EMVi00000F0tqH_8adbb57e.png",
+        "caption": "Proje Ekle penceresi: proje adı (3), ayarları kopyalanacak proje (4) ve Ekle düğmesi (5)"
+      },
+      {
+        "type": "text",
+        "text": "Ardından sağdaki **Özellikler (Eigenschaften)** panelinde proje bilgilerini doldurun (6): proje numarası, proje tipi ve türü, durum, BCF için varsayılan dil ve adres bilgileri. **Kaydet (Speichern)** ile onaylayın (7)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8605_0EMVi00000F0trt_ecb785bb.png",
+        "caption": "Özellikler panelinde proje numarası, proje tipi, BCF dili ve adres alanları (6) ve Kaydet (7)"
+      },
+      {
+        "type": "text",
+        "text": "**Sıfır noktası:** Ulusal koordinat sisteminde (Landeskoordinaten) jeoreferanslı çalışılacaksa ALLPLAN projesinin sıfır noktasını kullanın. ALLPLAN'daki ofset koordinatları (X, Y, Z) Bimplus'a aynen girilecek değerlerdir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8605_0EMVi00000F0tn3_9cab8fe8.png",
+        "caption": "ALLPLAN ayarlarında Ofset Koordinatları (Offset-Koordinaten): X, Y ve Z değerleri"
+      },
+      {
+        "type": "text",
+        "text": "Yalnız Bimplus ile çalışılıyorsa, yani ALLPLAN'da model yoksa ve modeller başka kaynaklardan geliyorsa, modelin yakınında bir nokta seçin. BIM projelerinde bu sıfır noktasının BIM Uygulama Planında (BEP) belirtilmiş olması gerekir."
+      },
+      {
+        "type": "text",
+        "text": "Ofseti (sıfır noktasını) Bimplus'ta proje özelliklerinin **Proje Ofseti (Project offset)** grubunda girin (8) ve kaydedin (9). **Önemli:** Bu ayarı ilk model yüklenmeden önce yapın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8605_0EMVi00000F0tof_fe8045cd.png",
+        "caption": "Bimplus proje özelliklerinde Project offset X, Y, Z alanları (8) ve Kaydet (9)"
+      },
+      {
+        "type": "heading",
+        "text": "ALLPLAN Share: İlk Adımlar (proje oluşturma ve roller)"
+      },
+      {
+        "type": "text",
+        "text": "Share koşullarını bir önceki derste gördünüz. Şimdi bir Share projesini ALLPLAN içinden oluşturuyor, ekip rollerini ve proje üyelerini ayarlıyorsunuz."
+      },
+      {
+        "type": "text",
+        "text": "**Yeni proje:** Her zamanki gibi **Proje ve Kaynak Yönetimi (Projekt- und Ressourcenverwaltung)** penceresinden **Yeni Proje (Neues Projekt)** seçin. Kayıt konumu (Speicherort) olarak **BIMPLUS** seçin ve ekibinizi belirleyin. Proje adı ve Bimplus model adı önerilir, isterseniz değiştirebilirsiniz. Proje şablonları kullanılabilir ama zorunlu değildir. Proje oluşturmayı bitirdiğinizde proje otomatik olarak oluşturulur ve buluta yüklenir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8609_0EMVi00000GDlRK_1ec9703d.png",
+        "caption": "Yeni Proje penceresi: kayıt konumu BIMPLUS, ekip seçimi ve Bimplus model adı"
+      },
+      {
+        "type": "text",
+        "text": "**Var olan projeyi Bimplus'a kopyalama:** Proje ve Kaynak Yönetimi penceresinde projeyi işaretleyin, sağ tıklayıp **Şuraya Kopyala (Kopieren nach)** seçin. Kayıt konumu olarak **BIMPLUS** seçin, **Yeni Bimplus projesi oluştur (Neues Bimplus Projekt erzeugen)** kutusunu işaretleyin ve ekibinizi seçin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8609_0EM7U000001Td6n_94463446.png",
+        "caption": "Projeyi kopyalama penceresi: BIMPLUS kayıt konumu ve Yeni Bimplus projesi oluştur seçeneği"
+      },
+      {
+        "type": "text",
+        "text": "**Ekip üyeleri ve roller:** Ekip üyelerini ve rollerini Bimplus portalında (portal.bimplus.net) yönetirsiniz: oturum açın ve ana sayfada sol alttan **Ekip Üyeleri (Teammitglieder)** bölümüne gidin."
+      },
+      {
+        "type": "text",
+        "text": "**Ekip Sahibi (Team-Owner)** ekibi oluşturan kişidir ve sonradan değiştirilemez. **Ekip Yöneticileri (Team-Administratoren)** ekipte oluşturulan tüm projelere, tüm katman setlerine ve yazdırma setlerine erişebilir. **Proje Yöneticileri (Projekt-Administratoren)** yalnız kendi projelerinde yönetici haklarına sahiptir; onları Bimplus'taki proje kullanıcı yönetiminde atarsınız."
+      },
+      {
+        "type": "text",
+        "text": "**Önemli:** Yeni üyelere Ekip Yöneticisi rolünü yalnız bunu açıkça istiyorsanız verin; bu rol, Proje Yöneticisinden daha geniş ekip haklarına sahiptir. Yönetici haklarına sahip kullanıcıların (ekip ya da proje yöneticisi) projeleri silebileceğini de unutmayın."
+      },
+      {
+        "type": "text",
+        "text": "**Projeye kullanıcı ekleme:** Yeni bir proje oluşturduktan sonra ALLPLAN, Bimplus proje yönetimine yönlendirilmek isteyip istemediğinizi sorar. **Evet** derseniz Bimplus portalı açılır ve oturum açtıktan sonra projenin ayarlarını düzenleyebilirsiniz. Aksi halde projeyi Bimplus portalından açın ve **Üyeler (Mitglieder)** özetine gidin; artı simgesiyle yeni üye davet edersiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8609_0EMVi00000GEtcv_43cca8c1.png",
+        "caption": "Bimplus portalında projenin Üyeler (Mitglieder) kutucuğu"
+      },
+      {
+        "type": "text",
+        "text": "Davet ederken kullanıcının e-posta adresini girin ve bir üye rolü verin; en az **Proje Düzenleyicisi (Projektbearbeiter)** yetki düzeyi verilmelidir."
+      },
+      {
+        "type": "text",
+        "text": "**Önemli:** Bir kullanıcı yalnız Proje Düzenleyicisi grubundaysa, ona ALLPLAN içinde ilgili projede katman ve yazdırma seti hakları da atanmalıdır. Bunu **Yazdırma Seti Yönetimi (Druckset-Verwaltung)** ve katman haklarını taşıyan **Hak Seti Yönetimi (Rechteset-Verwaltung)** pencerelerindeki **Kullanıcı Ata (Benutzer zuordnen)** sekmesinde yaparsınız."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8609_0EM7U000001Td6r_cea517a8.png",
+        "caption": "Druckset-Verwaltung: ALLES yazdırma setine kullanıcının atanması"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8609_0EM7U000001Td6s_5ab489f6.png",
+        "caption": "Rechteset-Verwaltung: ALLPLAN hak setine kullanıcının atanması"
+      },
+      {
+        "type": "text",
+        "text": "**Değişikliklerin yüklenmesi:** Bir çizim dosyasında (Teilbild) ya da paftada yapılan tüm değişiklikler, o çizim dosyasından ya da paftadan çıkıldığında sunucuya yüklenir. Düzenlenmiş bir çizim dosyasını tamamen kapattığınızda yükleme başlar; düzenlenmiş bir paftayı kapatmak da paftanın yüklenmesini başlatır. Çalışırken yüklemeyi **Dosya -> Kaydet ve Yükle (Datei -> Speichern und Hochladen)** ile elle de başlatabilirsiniz. Senkronizasyonun hangi durumlarda çalıştığını 7. derste ayrıntılı göreceksiniz."
+      }
+    ]
   }
 }

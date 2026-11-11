@@ -136,69 +136,107 @@
     "blocks": [
       {
         "type": "heading",
+        "text": "Add-On 3D Bemassung (3B Ölçülendirme Eklentisi) - Merdiven"
+      },
+      {
+        "type": "text",
+        "text": "**3B Ölçülendirme (3D Bemassung)** eklentisiyle merdivenleri 3B modelde de ölçülendirebilirsiniz."
+      },
+      {
+        "type": "heading",
+        "text": "Add-On PatchWork - Yamaçta Merdiven"
+      },
+      {
+        "type": "text",
+        "text": "**PatchWork** eklentisiyle farklı merdivenler ve yollar içeren eğimli bir yamacı modelleyebilirsiniz. Bunun için yüzey parçaları (Patch) oluşturup uyarlarsınız, forma spline ve Bezier eğrileriyle yön verirsiniz ve malzeme katmanlaşmasını göstermek için kesitler üretirsiniz."
+      },
+      {
+        "type": "heading",
         "text": "Korkuluk oluşturma"
       },
       {
         "type": "text",
-        "text": "Korkuluk Modelleyici'de (Geländermodellierer) parametre girişini kolaylaştıran ön koşul, korkuluğun görünüş ve kesitte tam ölçülendirilmiş bir detay çizimidir. Tüm ölçüler döşeme ön kenarına referans almalıdır."
+        "text": "Merdiveninize korkuluk eklerken parametreleri kolay girebilmenin ön koşulu, korkuluğun görünüş ve kesitte tam ölçülendirilmiş bir detay çizimidir. Tüm ölçüler döşeme ön kenarına referans almalıdır."
       },
       {
         "type": "text",
-        "text": "Her eleman için genişlik, yükseklik ve gerekiyorsa derinlik ölçülüdür. Düşey elemanlarda eksenin döşeme ön kenarına yanal mesafesi (OffsetY), en alt noktanın döşeme üst kotuna mesafesi (OffsetZ), uzunluk ve dikme eksenine yanal mesafe (OffsetX) girilir. Yatay elemanlarda ise OffsetY, kesit merkezinin döşeme üst kotuna mesafesi (OffsetZ) ve OffsetX kullanılır."
+        "text": "Her elemanın genişliği, yüksekliği (ve gerekiyorsa derinliği) ölçülü olmalıdır. Düşey elemanlarda eksenin döşeme ön kenarına yanal mesafesi (OffsetY), en alt noktanın döşeme üst kotuna mesafesi (OffsetZ), uzunluk ve dikme eksenine yanal mesafe (OffsetX); yatay elemanlarda eksenin döşeme ön kenarına yanal mesafesi (OffsetY), kesit merkezinin döşeme üst kotuna mesafesi (OffsetZ) ve dikme eksenine yanal mesafe (OffsetX) ölçülür. Çizim sonra şöyle görünebilir:"
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11149_0EM7U000001TdWo_a1790092.png",
-        "caption": "Tam ölçülendirilmiş korkuluk detay çizimi."
+        "caption": "Korkuluğun ölçülendirilmiş detay çizimi: kesit ve görünüş"
       },
       {
         "type": "text",
-        "text": "Korkuluk Modelleyici'yi başlatıp Özellikler (Eigenschaften) penceresini açın. Önce tüm kategorilerdeki (Küpeşte/Dikme/Alan) mevcut elemanları, listeden seçip Elemanı Sil (Element löschen) ile tek tek silin; pencere tümüyle boşalsın. Her yeni elemanda önce hangi kategoriye ait olduğuna karar verip o kategoriye tıklarsınız."
+        "text": "Ardından elemanları korkuluk modelleyicisinde girersiniz: **Korkuluk Modelleyicisi (Geländermodellierer)**'ni başlatın ve **Özellikler (Eigenschaften)**'i açın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11149_0EM7U000001TdWp_5797a28d.png",
+        "caption": "Özellikler (Eigenschaften) düğmesi"
       },
       {
         "type": "text",
-        "text": "**Küpeşte (Handlauf).** Artı butonuyla yeni eleman oluşturup adını Handlauf yapın. Eleman yatay olmalıdır. Genişlik ve yükseklik için örn. 40 mm girin. Kesit tipini belirleyin: dairesel bir kesit için Köşeli Poligon (Polygon mit Ecken) alanına örn. 12 yazın. Ofsetleri verin: OffsetY=48, OffsetZ=980, OffsetX=0. Bölümleme (Teilung) boş kalır, çünkü bu sürekli devam eden yatay bir elemandır. Renk (örn. 26) ve 2B görünürlüğü ayarlayın."
+        "text": "Diyalogda önce tüm kategorilerdeki (**Küpeşte/Dikme/Alan (Handlauf/Pfosten/Feld)**) tüm elemanları silin: listede elemana tıklayın ve X düğmesine (**Elemanı Sil (Element löschen)**) basın; liste tamamen boşalana kadar sürdürün."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11149_0EM7U000001TdWq_24e139bf.png",
+        "caption": "Elemanı Sil (Element löschen) düğmesi"
+      },
+      {
+        "type": "text",
+        "text": "**Elemanları oluşturma:** Her eleman için önce küpeşteye mi, dikmeye mi yoksa alana mı ait olduğunu düşünün ve ilgili kategoriye tıklayın. Örnekte küpeşteyle başlanıyor."
+      },
+      {
+        "type": "text",
+        "text": "**Küpeşte:** + düğmesiyle yeni bir eleman oluşturun ve ona **Ad (Name)** olarak Handlauf verin; ilk eleman yatay olarak oluşur, gerekirse değiştirirsiniz. **Genişlik + Yükseklik (Breite + Höhe)** için örneğin her ikisine 40 mm girin. **Kesit Tipi (Querschnittstyp)** için dairesel bir kesit isteniyorsa **Köşeli Poligon (Polygon mit ... Ecken)** alanına örneğin 12 yazın. Ofsetleri verin: OffsetY=48, OffsetZ=980, OffsetX=0; böylece küpeşte başlangıç ya da bitiş kaçıklığı olmadan başlar. **Bölümleme (Teilung)** boş kalır, çünkü bu yol boyunca tekrarlanması gerekmeyen yatay, sürekli bir elemandır. **Renk (Farbe)** için örneğin 26, **2B Görünürlük (Zeige in 2D)** için evet seçin; küpeşte tamamlanır."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11149_0EM7U000001TdWr_9475c1ef.png",
-        "caption": "Tamamlanmış küpeşte."
+        "caption": "Küpeşte ayarları: 12 köşeli kesit, 40/40 mm, Offs.Y 48, Offs.Z 980, renk 26"
       },
       {
         "type": "text",
-        "text": "**Dikme (Pfosten).** Kategoriyi Dikme yapıp artı ile yeni eleman açın ve Düşey (Vertikal) olarak ayarlayın. Önceden çizdiğiniz obje geometrisini çift ok butonuyla alın; dikme hazırda dik durmalı, tek bir 3B katı obje olmalı ve X ekseni taban kenarına (döşeme ön kenarına) hizalı olmalıdır. Ofsetleri girin: OffsetZ=-296, OffsetY=60. Uzunluk, genişlik ve yükseklik 3B objeden belirlenir. Renk (örn. 18) ve 2B görünürlüğü ayarlayın."
+        "text": "**Dikmeler:** Kategoriyi **Dikme (Pfosten)** yapın, + ile yeni eleman oluşturun (gerekirse adını Pfosten yapın) ve **Düşey (Vertikal)** olarak ayarlayın. Önceden çizilmiş obje geometrisini >> düğmesiyle alın. **Dikkat:** Dikme zaten dik durmalı ve tek bir 3B katı obje olmalıdır; katı obje, X ekseni sonraki taban kenarı (döşeme ön kenarı) olacak şekilde hizalanmalıdır. Ofsetleri girin: OffsetZ=-296 ve OffsetY=60; uzunluk, genişlik ve yükseklik 3B objeden belirlenir. **Renk** için örneğin 18 girin ve 2B görünürlüğü ayarlayın; ilk dikme elemanı tamamlanır."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11149_0EM7U000001TdWs_a6a93e5c.png",
-        "caption": "Tamamlanmış dikme."
+        "caption": "Dikme ayarları: düşey, serbest form kesit, Offs.Y 60, Offs.Z -296, renk 18"
       },
       {
         "type": "text",
-        "text": "**Yanal levhalar ve başlık plakası.** Yine Dikme kategorisinde yanal tespit levhalarını kurun. Düşey olarak ayarlayın; Genişlik=10, Yükseklik=105 (burada yükseklik levhanın derinliğidir) ve Uzunluk=40 girin. Ofsetler: OffsetX=-10, OffsetY=64, OffsetZ=-220. İkinci levha için elemanı kopyalayıp yalnızca OffsetX'i -10'dan 10'a çevirin; böylece levha dikme eksenine göre simetrik olur."
+        "text": "**Yanal tespit levhaları:** Kategori yine **Dikme**; + ile eleman oluşturup adını örneğin Blech1 yapın. **Düşey** olarak ayarlayın (levhalar burada aslında yüksekliğe değil derinliğe doğru gitse de). **Genişlik (Breite)**=10, **Yükseklik (Höhe)**=107 girin; bu levhada yükseklik derinlik anlamına gelir. **Uzunluk (Länge)**=40 girin; düşey bir elemanda uzunluk düşey yöndeki boyuttur. Ofsetler: OffsetX=-10 (dikme eksenine yanal mesafe), OffsetY=64 (her zaman kesit ekseninden taban kenarına, yani döşeme ön kenarına mesafe), OffsetZ=-220 (düşey başlangıç noktası, alt kenarın döşeme üst kotuna mesafesi). Renk 18, görünürlük hayır. İkinci levha için elemanı listede etkinleştirin, **Elemanı Kopyala (Element kopieren)** ile kopyalayıp adını Blech2 yapın; tüm ayarlar aynı kalır, yalnız OffsetX'i -10'dan 10'a çevirin, çünkü levha dikme eksenine göre simetrik olmalıdır."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11149_0EM7U000001TdWt_d701c14c.png",
-        "caption": "Dikmeye eklenen yanal levhalar."
+        "caption": "Blech1 ayarları: 10/107 mm, uzunluk 40, Offs.Start X -10, Offs.Y 64, Offs.Z -220"
       },
       {
         "type": "text",
-        "text": "Ankraj başlık plakasını da Dikme kategorisinde ekleyin: Genişlik=80, Yükseklik=10, Uzunluk=100, OffsetZ=-250, OffsetY=5. Genişlik her zaman görünüş genişliğidir; yükseklik düşey elemanlarda derinliği ifade eder. Böylece dikme tamamlanır."
+        "text": "**Ankraj başlık plakası:** Kategori **Dikme**; + ile eleman ekleyip adını Kopfplatte yapın. Boyutlar: **Genişlik**=80, **Yükseklik**=10. Unutmayın: genişlik her zaman görünüş genişliğidir, yükseklik ise düşey elemanlarda derinliği, yatay elemanlarda yüksekliği ifade eder. **Uzunluk**=100 (z yönündeki boyut), OffsetZ=-250 (z yönündeki başlangıç noktası), OffsetY=5 (kesit ekseninin döşeme ön kenarına yanal mesafesi; eleman döşeme ön kenarına dayandığı için kesit derinliğinin yarısıdır). Renk ve görünürlük öncekiyle aynı; dikme tamamlanır."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11149_0EM7U000001TdWu_94d18776.png",
-        "caption": "Başlık plakasıyla tamamlanan dikme."
+        "caption": "Kopfplatte ayarları: 80/10 mm, uzunluk 100, Offs.Z -250 ve eleman listesi"
       },
       {
         "type": "text",
-        "text": "**Halatlar (Alan / Feld).** Halatları Alan (Feld) kategorisinde kurarsınız. Artı ile eleman açıp adını Seil1 yapın, Yatay olarak ayarlayın, Genişlik/Yükseklik=10 mm, kesit tipini yuvarlak (örn. 12 köşe) seçin. OffsetZ=85, OffsetY=60 ve OffsetXStart=OffsetXEnd=5 (dikme kalınlığının yarısı) girin. Sonraki halatlar için elemanı kopyalayıp yalnızca OffsetZ'yi değiştirin: Seil2 için 195, diğerleri için benzer şekilde. Böylece korkuluk stiliniz hazır olur."
+        "text": "**Halatlar:** Kategori olarak **Alan (Feld)** seçin; halatlar kesintisiz devam ettiği için **Küpeşte (Handlauf)** da seçilebilirdi. + ile eleman ekleyip adını Seil1 yapın ve **Yatay (Horizontal)** olarak ayarlayın. **Genişlik/Yükseklik**=10 mm, kesit tipi yuvarlak, örneğin 12 köşe. OffsetZ=85 (kesit ekseninin döşeme üst kotuna düşey mesafesi), OffsetY=60 (kesit ekseninin döşeme ön kenarına yanal mesafesi). **OffsetXStart** ve **OffsetXEnd** elemanın dikme eksenine göre nerede başlayıp biteceğini belirler; ikisine de 5 girin (dikme kalınlığının yarısı). Renk ve görünürlüğü ayarlayın; ilk halat tamamlanır."
+      },
+      {
+        "type": "text",
+        "text": "Diğer halatları kopyalayarak oluşturun: az önce oluşturduğunuz halatı etkinleştirin, **Elemanı Kopyala**'yı seçin, adını Seil2 yapın ve OffsetZ'yi 195 olarak değiştirin. Kalan halatları da aynı şekilde kopyalayın; korkuluk stiliniz hazırdır."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11149_0EM7U000001TdWv_7047286d.png",
-        "caption": "Tamamlanmış korkuluk."
+        "caption": "Seil1 ayarları ve Feld kategorisinde Seil1-Seil7 listesi"
       },
       {
         "type": "heading",
@@ -206,33 +244,41 @@
       },
       {
         "type": "text",
-        "text": "Üst kenarı merdiven gidişatına uyan bir duvar için önce yardımcı eleman olarak bir merdiven çizin: Oluştur (Erzeugen) > Mimari (Architektur) > Merdivenler (Treppen) > Düz Merdiven (Gerade Treppe) ile dış sınırı girip rıht yüksekliği, basamak genişliği ve basamak sayısını ayarlayın. Kademeli gidişat için en çok basamak (Trittstufe) önemlidir."
+        "text": "Bir merdivenin altına, üst kenarı merdivenin eğimini (kademeli gidişatını) izleyen bir duvar mı koymak istiyorsunuz? Önce sonra oluşturacağınız duvar için yardımcı yapı taşı olarak bir merdiven çizin: **Oluştur (Erzeugen) -> Mimari (Architektur) -> Merdivenler (Treppen) -> Düz Merdiven (Gerade Treppe)** (ya da istediğiniz başka bir merdiven) fonksiyonunu seçin. Merdivenin dış sınırını girin ve rıht yüksekliği, basamak genişliği, basamak sayısı gibi parametreleri ayarlayın; geometriyi **Yapı Elemanı Parametreleri ve Özellikleri (Bauteilparameter und Eigenschaften)** düğmesinden girebilirsiniz. Kademeli gidişata uymak için her şeyden önce basamak (Trittstufe) önemlidir. Zaten bir merdiveniniz varsa bir kopyasını oluşturup onunla devam edebilirsiniz."
       },
       {
         "type": "text",
-        "text": "Merdiveni düzlem modeline dönüştürün. Önce Oluştur > Mimari > Genel: Çatılar, Düzlemler, Kesitler > Elemanları Dönüştür > Mimariyi 3B Katı Objeye (Architektur in 3D-Körper) ile 3B eleman üretin. İsterseniz Ek Modüller > 3B Modelleme (Modellieren 3D) > Katıları Birleştir (Körper vereinigen) ile tekil katıları tek bir 3B elemanda birleştirin; bu modül yoksa adım atlanabilir. Ardından 3B Katı Objeleri Mimari Düzlemlere (3D-Körper in Architekturebenen) ile düzlem çiftlerini elde edin."
+        "text": "**Merdiveni 3B elemana dönüştürün:** Sonraki adımlar elemanı düzlem modeline dönüştürür. **Oluştur -> Mimari -> Genel: Çatılar, Düzlemler, Kesitler (Allgemein: Dächer, Ebenen, Schnitte) -> Elemanları Dönüştür (Elemente wandeln) -> Mimariyi 3B Katı Objeye (Architektur in 3D-Körper)** fonksiyonunu seçin ve merdiven elemanlarının üzerine bir seçim alanı çizin. Alışılmış merdiven grafiği 3B elemanların daha basit gösterimine dönüşür."
       },
       {
         "type": "text",
-        "text": "Duvarı düzlemlere bağlayın: Oluştur > Mimari > Temel: Duvarlar, Boşluklar, Yapı Elemanları > Duvar (Wand) ile bir duvar oluşturun. Özelliklerde Yükseklik (Höhe) butonundan üst kenarı düzlemin (merdiven basamaklarının) alt kenarına bağlayın (soldan ikinci buton); alt kenar için sabit bir kot verin (soldan üçüncü buton)."
+        "text": "**Katıları birleştirin:** Sonraki düzenlemeyi kolaylaştırmak için **Oluştur -> Ek Modüller (Zusätzliche Module) -> 3B Modelleme (Modellieren 3D) -> Katıları Birleştir (Körper vereinigen)** ile merdivenin tekil katılarını ortak bir 3B elemanda birleştirin. Tek işlemde olmazsa önce tekil basamakların katılarını, sonra basamakları birleştirin; ta ki tüm merdiven tek bir katı olana kadar. 3B Modelleme modülünüz yoksa bu adımı atlayabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Mimari düzlemlere dönüştürün:** **Oluştur -> Mimari -> Genel: Çatılar, Düzlemler, Kesitler -> 3B Katı Objeleri Mimari Düzlemlere (3D-Körper in Architekturebenen)** fonksiyonunu seçin ve dönüştürülecek katıya tıklayın (birleştirme yapmadıysanız her elemana tek tek tıklayın ya da alan seçimiyle tüm katıları etkinleştirin). Dönüşümden sonra düzlem çiftleri hazırdır; bunları merdivenin altında ya da üstünde bir duvarın yükseklik tanımında kullanırsınız."
+      },
+      {
+        "type": "text",
+        "text": "**Duvarı düzlemlere bağlayın:** **Oluştur -> Mimari -> Temel: Duvarlar, Boşluklar, Yapı Elemanları (Basis: Wände, Öffnungen, Bauteile) -> Duvar (Wand)** ile bir duvar oluşturun. Özelliklerde **Yükseklik (Höhe)** düğmesinden duvarın üst kenarını düzlemin (merdiven basamaklarının) alt kenarına bağlayın; alt kenar için sabit bir kot verin (örnekte -0,15)."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11200_0EM7U000001TdQY_c346f0e0.png",
-        "caption": "Duvarın üst kenarı merdiven düzlemine, alt kenarı sabit kota bağlanır."
+        "caption": "Duvar yükseklik diyaloğu: üst kenar düzleme bağlı, alt kenar sabit kot -0,15"
       },
       {
         "type": "text",
-        "text": "Böylece üst kenar merdiven gidişatını izlemek için düzlem çiftinin alt düzlemine (basamakların alt kenarına) bağlanır; alt kenar ise düzlem referansı olmadan mutlak kot olarak kalır."
+        "text": "Yani duvarın üst kenarı merdiven gidişatını izler; bu yüzden düzlem çiftinin alt düzlemine, merdiven düzlemleri bölgesinde basamakların alt kenarına bağlanır. Duvarın alt kenarı ise sabit yükseklikte kalmalıdır ve düzlem referansı olmadan mutlak kot olarak tanımlanır."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11200_0EM7U000001TdQZ_309a6687.png",
-        "caption": "Tamamlanan kademeli duvar."
+        "caption": "Sonuç: üst kenarı merdiven gidişatını izleyen kademeli duvar"
       },
       {
         "type": "text",
-        "text": "Not: Düzlem bölgesindeki diğer mimari elemanlar da bu düzlemlere bağlanabilir. İstenmeyen bağlanmayı önlemek için elemanları başka bir çizim dosyasına koyun veya onlara mutlak yükseklik verin."
+        "text": "**Not:** Düzlemlerin bulunduğu bölgedeki diğer mimari elemanlar da bu düzlemlere bağlanabilir. Bunu önlemek için elemanları başka bir çizim dosyasına koyun ya da onlara mutlak yükseklik verin. Elemanların düzlemlere bağlanması hakkında daha fazla bilgiyi ALLPLAN Yardım'da (F1) **Mimari Elemanların Yükseklik Tanımı (Höhendefinition von Architekturelementen)** başlığında bulursunuz. Actionbar kullanıyorsanız menü çubuğunu Alt tuşuyla geçici olarak gösterebilirsiniz."
       },
       {
         "type": "heading",
@@ -240,20 +286,32 @@
       },
       {
         "type": "text",
-        "text": "Merdiven, alt yapı elemanlarına sahip bir yapı elemanıdır. CHILD() formülüyle merdiven etiketlenirken bileşenlerine erişilir. Örn. CHILD(@508@) ile @508@ (Malzeme niteliği) tüm malzemeleri listeler; belirli bir bileşenin malzemesine erişmek için seçimi @18@ (bileşen adı, numarası) ile sınırlayın. Bileşenler 1-16 arası numaralıdır; 2 ve 11 numaraları kullanılmaz."
+        "text": "Merdiven Modelleyici ile oluşturulmamış bir merdivenin parçalarını malzeme ve benzeri bilgilerle nasıl etiketlersiniz? Merdiven, alt yapı elemanları olan bir yapı elemanı olarak oluşturulur. Merdivenin kendisini etiketlerken **CHILD()** formülüyle bileşenlerine erişirsiniz. Örneğin **CHILD(@508@)** (@508@ = Malzeme niteliği) tüm malzemeleri listeler. Belirli bir bileşenin malzemesine doğrudan erişmek için seçimi sınırlamanız gerekir; bunun için **@18@** (merdiven bileşeninin adı, numarası) niteliğini kullanırsınız."
+      },
+      {
+        "type": "text",
+        "text": "Merdivenin tekil bileşenleri 1 ile 16 arasında numaralıdır; 2 ve 11 numaraları kullanılmaz."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/10575_0EM7U000001Td8g_04ea00a5.png",
-        "caption": "Merdiven bileşenleri ve numaralandırması."
+        "caption": "Merdiven bileşenleri (Treppenbauteile) diyaloğu: Trittstufe'den Norm-Test Elem'e kadar"
       },
       {
         "type": "text",
-        "text": "Örnek malzeme formülleri: Basamak (Trittstufe, 1) için CHILD(_IF_(@18@=1)@508@_ELSE_\"\"); Rıht (Setzstufe, 3) için CHILD(_IF_(@18@=3)@508@_ELSE_\"\"); Limon kirişi iç (Wange innen, 7) için CHILD(_IF_(@18@=7)@508@_ELSE_\"\"); Küpeşte iç (Handlauf innen, 10) için CHILD(_IF_(@18@=10)@508@_ELSE_\"\")."
+        "text": "**Malzeme formülleri:** Her bileşen için formül aynı kalıptadır, yalnız numara değişir: **CHILD(_IF_(@18@=numara)@508@_ELSE_\"\")**. Numaralar: **Basamak (Trittstufe)** 1, **Rıht (Setzstufe)** 3, **Alt yapı iç (Unterbau innen)** 4, **Alt yapı orta (Unterbau mittig)** 5, **Alt yapı dış (Unterbau außen)** 6, **Limon iç (Wange innen)** 7, **Limon orta (Wange mittig)** 8, **Limon dış (Wange außen)** 9, **Küpeşte iç (Handlauf innen)** 10, **Küpeşte dış (Handlauf außen)** 12, **Serbest iç (Frei innen)** 13, **Serbest orta (Frei mittig)** 14, **Serbest dış (Frei außen)** 15, **Standart metin elemanı (Norm-Text Element)** 16. Örneğin rıhtın malzemesi için **CHILD(_IF_(@18@=3)@508@_ELSE_\"\")** yazarsınız."
       },
       {
         "type": "text",
-        "text": "Merdiveni rıht sayısı, rıht yüksekliği ve basamak genişliğiyle etiketlemek için: FORMAT(\"%.0f STG %.1f/%.1f\"; @88@; @89@; @90@). Burada @88@ rıht sayısı (Steigungsanzahl), @89@ rıht yüksekliği (Steigungshöhe), @90@ basamak genişliğidir (Auftrittsbreite). Merdivende bir değişiklik yapıldığında etiket stilinin yeniden yerleştirilmesi gerekir."
+        "text": "Malzeme yerine değerler dahil başka nitelikler de kullanılabilir. Ancak bileşene ve merdivene bağlı olarak tekil olmayan, bu yüzden kullanılamayacak içerikler görünebilir."
+      },
+      {
+        "type": "text",
+        "text": "**Rıht yüksekliği formülü:** Merdivenin kendisini rıht sayısı, rıht yüksekliği ve basamak genişliğiyle etiketlemek için olası bir formül: **FORMAT(\"%.0f STG %.1f/%.1f\"; @88@; @89@; @90@)**. Burada **@88@** rıht sayısı (Steigungsanzahl), **@89@** rıht yüksekliği (Steigungshöhe), **@90@** basamak genişliğidir (Auftrittsbreite)."
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Merdivende bir değişiklik yaptığınızda merdivenin etiket stilini yeniden yerleştirmeniz gerekir."
       }
     ]
   },

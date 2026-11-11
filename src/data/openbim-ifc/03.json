@@ -162,5 +162,97 @@
     "task": "Taşıyıcı sistemi olan bir çizim dosyasını önce bir favori profille (örn. Ifc_4_Tragwerk_export) dışa aktarın; ardından 'Erweiterte Optionen' altında geometri dönüşümünü BREP'e çevirip tekrar aktarın ve iki çıktının eleman geometrisini bir IFC görüntüleyicide karşılaştırın.",
     "expected": "Aynı modelin iki IFC çıktısı; birinde ekstrüzyon, diğerinde BREP geometri gözlemlenmesi.",
     "hint": "Dışa aktarmadan önce ilgili çizim dosyalarını seçmeyi unutmayın."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "IFC Dışa Aktarım: Komut ve Değişim Profilleri"
+      },
+      {
+        "type": "text",
+        "text": "Bu bölümde IFC dışa aktarım komutunu, değişim profillerini (Austauschprofile) ve önerilen geometri ayarlarını görüyorsunuz. Aynı makalenin öznitelik eşleme kısmı bir sonraki derstedir."
+      },
+      {
+        "type": "text",
+        "text": "**Amaç:** IFC dışa aktarmak ve öznitelikleri istenen ya da şart koşulan bir özellik kümesine (Pset, Property Set) eşleyip gerekirse yeniden adlandırmak."
+      },
+      {
+        "type": "text",
+        "text": "**Komut:** **Dosya -> Dışa Aktar (Datei, Exportieren)** altından **IFC Verilerini Dışa Aktar (IFC-Daten exportieren)** komutunu seçin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8645_0EMVi000002RAbd_2f9fdf11.png",
+        "caption": "Dışa aktarma menüsünde IFC Daten exportieren komutu"
+      },
+      {
+        "type": "text",
+        "text": "**İpucu:** Komutu çalıştırmadan önce çizim dosyalarını seçin; böylece o anda yüklü çizim dosyaları dışa aktarıma alınır. Açılan pencerede dosya adını ve değişim profilini belirleyin, ardından **Ayarlar (Einstellungen)** düğmesiyle seçeneklere geçin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8645_0EMVi000002R9xK_bf5274ba.png",
+        "caption": "IFC dışa aktarım ayarları: yüklü çizim dosyaları, dosya adı, IFC4 Standard Export profili ve Einstellungen düğmesi"
+      },
+      {
+        "type": "text",
+        "text": "**Değişim profilleri:** **Değişim Profilleri (Austauschprofile)** sekmesinde hazır dışa aktarım favorileri bulunur; örneğin İsviçre sürümünde temel kazısı (Baugrube), iksa (Baugrubensicherung), donatı (Bewehrung), gömülü parçalar (Einbauteile) ve taşıyıcı sistem uygulama (Tragwerk Ausführung) profilleri."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8645_0EMVi00000F0rYL_c118a4ef.png",
+        "caption": "Austauschprofile sekmesinde CH IFC 4 profilleri: Baugrube, Baugrubensicherung, Bewehrung, Einbauteile, Tragwerk Ausführung"
+      },
+      {
+        "type": "text",
+        "text": "**Önerilen ayarlar:** **Geometri (Geometrie)** sayfasında geometri dönüşümü olarak **Ekstrüde + BREP Geometri (Extrudierte + BREP Geometrie)** seçili, **Miktar verilerini aktar (Mengendaten übergeben)** işaretli ve ondalık basamak sayısı 3'tür. **Gelişmiş Seçenekler (Erweiterte Optionen)** sayfasında mimari için açıklık makrolarını birleştirme, çok katmanlı elemanları (duvar, ince yapı, çatı) ayırma ve gruplamayı bastırma; prekast için kalıba özel yüzeyler, pah ve yuvarlatmalar ile donatı ve gömülü parçaları prekast uyumlu aktarma işaretlidir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8645_0EMVi000002R9xL_cc25b108.png",
+        "caption": "Önerilen ayarlar: Geometrie sayfası (Extrudierte + BREP Geometrie, Mengendaten übergeben) ve Erweiterte Optionen sayfası"
+      },
+      {
+        "type": "heading",
+        "text": "IFC Favorileri ve Öznitelik Eşleme Dosyaları"
+      },
+      {
+        "type": "text",
+        "text": "Değişim profillerinin ve öznitelik eşleme dosyalarının nerede saklandığını bilirseniz büro standardını tüm projelere aynı şekilde dağıtabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**IFC dışa aktarım favorileri** **Std/Favoriten Büro/IFC** klasöründe saklanır (2024 sürümüne kadar **Etc/Favoriten Standard/IFC**). Hazır favoriler: Ifc_4_Tragwerk_export (taşıyıcı sistem), Ifc_4_Bewehrung_export (donatı), Ifc_4_Baugrube_export (temel kazısı), Ifc_4_Baugrube_Sicherung_export (iksa) ve Ifc_4_Einbauteile_export (gömülü parçalar)."
+      },
+      {
+        "type": "text",
+        "text": "**Öznitelik eşleme dosyaları** da **Std/Favoriten Büro/IFC** klasöründedir: Mapping_Tragwerk_Bauprojekt (taşıyıcı sistem, yapı projesi), Mapping_Tragwerk_Ausschreibung (taşıyıcı sistem, ihale), Mapping_Tragwerk_Ausführung (taşıyıcı sistem, uygulama), Mapping_UC Bewehrung (donatı), Mapping_Einbauteile_Ausführung (gömülü parçalar, uygulama), Mapping_Baugrube (temel kazısı) ve Mapping_Baugrubensicherung (iksa). Bu dosyalar ALLPLAN destek makalesinde bir zip arşivi olarak dağıtılır."
+      },
+      {
+        "type": "heading",
+        "text": "IFC Dışa Aktarımda BREP Geometri Kontrolü"
+      },
+      {
+        "type": "text",
+        "text": "Geometri ayarı, alıcının modeli nasıl kullanabileceğini belirler. Bu bölümde yalnız belirli mimari elemanları BREP olarak, diğerlerini ekstrüzyon gövdesi olarak dışa aktarmayı öğreniyorsunuz."
+      },
+      {
+        "type": "text",
+        "text": "IFC dışa aktarım ayarlarında **Geometri Dönüşümü (Geometrie Konvertierung nach IFC)** alanında **BREP Geometri (BREP Geometrie)** seçerseniz tüm mimari elemanlar BREP olarak yazılır. BREP (Boundary Representation), elemanı onu sınırlayan yüzeylerle tanımlar."
+      },
+      {
+        "type": "text",
+        "text": "Bunun yerine **Ekstrüde Geometri / BREP Geometri (Extrudierte Geometrie / BREP Geometrie)** seçer ve ALLPLAN desteğinin bu amaçla verdiği **ForceRetyping.nth** değişim profilini kullanırsanız, hangi mimari elemanların BREP, hangilerinin ekstrüzyon gövdesi (Hochzugskörper) olarak aktarılacağını kendiniz denetlersiniz. Bunun için dışa aktarımda **Değişim Profilleri** sayfasında **Ara (Suchen)** düğmesine basıp ForceRetyping.nth dosyasını seçin. Bu profille elemanın IFC obje tipi, dışa aktarılan geometriyi belirler."
+      },
+      {
+        "type": "text",
+        "text": "**IFC obje tipi boş ya da tanımsız (undefiniert):** Eleman mümkünse ekstrüzyon gövdesi olarak yazılır; duvarlarda Gesamtwand (tüm duvar) satırındaki değer geçerlidir. Mimari elemanlar dışa aktarımda yine doğru IFC sınıfını otomatik alır; örneğin ALLPLAN'da obje tipi girilmemiş bir kolon IFC'de IfcColumn olur."
+      },
+      {
+        "type": "text",
+        "text": "**IFC obje tipi tanımlı:** Örneğin bir döşemeye IFC obje tipi olarak IfcSlab verirseniz eleman BREP olarak dışa aktarılır."
+      }
+    ]
   }
 }

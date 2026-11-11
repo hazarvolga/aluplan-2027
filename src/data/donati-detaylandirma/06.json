@@ -150,5 +150,123 @@
     "task": "Eğik etriyeli bir kirişte açınımı inceleyin. Büküm rulosu kutusu işaretli olduğu hâlde çap görünmüyorsa 'Biegerolle modifizieren' ile değeri değiştirip gösterimi sağlayın.",
     "expected": "Büküm rulosu çapının açınımda görünür hâle gelmesi ve bunun çelik listesi/rapora yansıdığını görmeniz.",
     "hint": "Değeri Özellikler Paleti'nden değiştirmeyin; gösterim güncellenmez. 3B bükülmüş çubukta etiketlemenin mümkün olmadığını unutmayın."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Eğik Görünümde Çubuk Gösterimi"
+      },
+      {
+        "type": "text",
+        "text": "Kesme düzlemine dik olmayan bazı doğrultularda büküm şeklinin gösterimi doğru çıkmaz. Örnekte poz 20 bozuk, poz 10 ise köşeli bir kanca ile görünür. Bu durum büküm şekline ve kesitin kesme çizgisi tanımına bağlıdır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/9128_0EMVi000008h80v_d169f1fa.png",
+        "caption": "Eğik kesitte poz 10 (mor, köşeli kanca) ve poz 20 (kırmızı, bozuk etriye)"
+      },
+      {
+        "type": "text",
+        "text": "Aşağıdaki örnekte, bazı etriyeleri kiriş doğrultusuna eğik olan bir kiriş var; 1, 2 ve 3 numaralı kesitler farklı sonuç verir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/9128_0EMVi000008h87N_df2b7abc.png",
+        "caption": "Eğik etriyeli kiriş ve 1, 2, 3 numaralı kesitlerin sonuçları"
+      },
+      {
+        "type": "text",
+        "text": "**Durum 1:** Poz 10, standart ve en küçük büküm rulosuyla 180° kancalı bir çubuktur. Doğru gösterim için tek yol, 2 numaralı kesit gibi büküm şekline paralel kesmektir; diğer seçenek çubukları taşıyıp yerine bir şema koymaktır. ALLPLAN şekli büküm rulosu çapıyla yeniden kurmaya çalışır, ama tam daireyi gösterecek yer yoktur; bu yüzden 90° bir köşe görürsünüz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/9128_0EMVi000008h8FR_fd505107.png",
+        "caption": "Poz 10: 180° kanca yerine 90° köşe ile gösterim"
+      },
+      {
+        "type": "text",
+        "text": "**Durum 2:** Kesme yolunun tanımına bağlı olarak şekil garip görünebilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/9128_0EMVi000008h8Tx_ac7d9af8.png",
+        "caption": "Poz 20: etriyenin bir ucu köşeli ve bozuk gösterim"
+      },
+      {
+        "type": "text",
+        "text": "Bunun nedeni, kesitin bitiş sınırının başka çubukların kancalarını kısmen kesmesidir: aynı yerde birkaç poz bulunur ve ALLPLAN, kancasından kısmen kesilmiş bir çubuğu düzgün gösteremez."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/9128_0EMVi000008h8XB_a449c1a3.png",
+        "caption": "Kesit sınırı kancaları kısmen kesiyor: sorunlu bölge yeşil işaretli"
+      },
+      {
+        "type": "text",
+        "text": "Bunu düzeltmenin iki yolu vardır. **Yol 1:** Çubukların gösterimini, yalnız birini gösterecek şekilde değiştirin (Giriş Seçenekleri'nde tek çubuk gösterimi)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/9128_0EMVi000008h8aP_bc2d62b5.png",
+        "caption": "Giriş Seçenekleri (Input Options): tek çubuk gösterimi seçili"
+      },
+      {
+        "type": "text",
+        "text": "**Yol 2:** Kesit gövdesinin tanımını yalnız gerekeni alacak şekilde değiştirin. Bu örnekte 1 numaralı kesit, yalnız gövdenin içinde kalanı alan 3 numaralı kesite dönüştürülür."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/9128_0EMVi000008h8nJ_1d8269cf.png",
+        "caption": "Kiriş üzerinde 1, 2 ve 3 numaralı kesit gövdeleri; 3 numaralı gövde eğik etriyelere paralel"
+      },
+      {
+        "type": "text",
+        "text": "Sonuç:"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/9128_0EMVi000008h8qX_fcd3c5d5.png",
+        "caption": "3 numaralı kesitte poz 10 ve poz 20 düzgün gösteriliyor"
+      },
+      {
+        "type": "heading",
+        "text": "Donatı: Büküm Rulosu Çapını Gösterme"
+      },
+      {
+        "type": "text",
+        "text": "Kısmi açınımda (Teilauszug) ya da toplam açınımda (Gesamtauszug) büküm rulosu kutusunu işaretlediğiniz halde açınım büküm rulosu gösterilmeden çıkabilir. Makalenin Almanca sürümü aynı içeriği taşır; görseller ikisinde aynıdır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/9029_0EMVi00000BxMcT_10f287b8.png",
+        "caption": "Teilauszug araç çubuğu ve büküm rulosu çapı gösterilmeyen açınım: 7 15 ø 12 L=222cm"
+      },
+      {
+        "type": "text",
+        "text": "**Neden:** Standart bir büküm rulosu çapı söz konusuysa, kutu işaretli olsa bile büküm rulosu etiketlenmez."
+      },
+      {
+        "type": "text",
+        "text": "**Çözüm:** Etiketi, ilgili çaplarda **Büküm Rulosunu Değiştir (Biegerolle modifizieren)** fonksiyonunu kullanarak etkileyebilirsiniz. **Önemli:** Büküm rulosu değerini **Özellikler (Eigenschaften)** paletinden değiştirirseniz açınımın gösterimi güncellenmez."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/9029_0EMVi00000BxPLp_e0d78049.png",
+        "caption": "Donatı sekmesinde değiştirme menüsü: Biegerolle modifizieren"
+      },
+      {
+        "type": "text",
+        "text": "Değeri herhangi bir değere değiştirin; büküm rulosu çapı artık gösterilir. Bu, çelik listesini ve raporu da otomatik etkiler. Sonra büküm rulosunu ikinci kez özgün değerine geri alın: büküm rulosu çapı gösterilmeye devam eder."
+      },
+      {
+        "type": "text",
+        "text": "Standart değere ya da özgün gösterime geri dönmek mümkün değildir. Büküm rulosu çapını elle işaretleyip silebilirsiniz, ama bu lejantı ve raporu etkilemez."
+      },
+      {
+        "type": "text",
+        "text": "**İpucu:** Çubuk üç boyutlu bükülmüşse büküm rulosu genel olarak etiketlenemez."
+      }
+    ]
   }
 }

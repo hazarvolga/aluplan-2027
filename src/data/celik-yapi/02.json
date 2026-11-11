@@ -115,5 +115,29 @@
     "task": "Katalog profilleriyle oluşturulmuş bir kiriş ve kolonu seçip otomatik bağlantı komutunu çalıştırın, ardından oluşan birleşime çift tıklayıp düzenleme penceresini açın.",
     "expected": "Birleşim üretilir ve çift tıklamayla düzenlenebilir hale gelir.",
     "hint": "Komut çalışmıyorsa önce elemanların Nemetschek katalog profilinden olduğunu doğrulayın."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "SDS2 bağlantısı ve eksik ikon"
+      },
+      {
+        "type": "text",
+        "text": "Önceki derste profilleri Nemetschek kataloğundan aldınız. Bu profillerle modellenen kiriş ve kolonları artık otomatik bağlantılarla birleştirebilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "2024 sürümünde **Taşıyıcı Yapı (Supporting structure)** modülünü kullandığınızda bir **Otomatik Bağlantılar (Automated connections)** simgesine de erişiminiz olmalıdır. Bu komut elemanları arka planda SDS2 komutlarıyla otomatik olarak birleştirir. Yalnız Nemetschek kataloğu profilleriyle modellenmiş elemanlarda çalıştığını unutmayın."
+      },
+      {
+        "type": "text",
+        "text": "**Birleşimleri değiştirme:** Otomatik bağlantıları yerleştirdikten sonra her birleşime (assembly) çift tıklayarak onu değiştirebilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "Simge görünmüyorsa olası nedenleri 7. derste ele alınıyor."
+      }
+    ]
   }
 }

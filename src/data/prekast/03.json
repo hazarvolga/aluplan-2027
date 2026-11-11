@@ -190,5 +190,240 @@
     "task": "InitPrjAttr.EXT dosyasını standart liste klasöründen (\\ETC\\BFT\\_List) büro klasörüne (STD\\BFT\\_List) kopyalayıp düzenleyicide açın ve liste başlığındaki kat değişkenine bina strüktüründen gelen kat adını atayın.",
     "expected": "Dosya büro klasörüne kopyalanmış ve düzenlenmiştir; prekast liste başlığında proje özniteliği yerine strüktürden gelen kat adı görünür.",
     "hint": "Allplan özelleştirmelerinde standart alanı doğrudan değiştirmek yerine dosyayı önce büro (STD) alanına kopyalamak güvenli yoldur."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Prekast Liste Üreticisi: Başlık Değişkenlerini InitPrjAttr.EXT ile Uyarlama"
+      },
+      {
+        "type": "text",
+        "text": "Yapı Yapısı (Bauwerksstruktur) ile çalışıyorsanız prekast listelerinin başlığındaki Kat (Geschoss) niteliğinde kat adının yapı yapısından gelmesini isteyebilirsiniz. Prekast liste üreticisinin (Listengenerator Precast) listelerinin başlığında varsayılan olarak proje nitelikleri çıkar; başka değerler çıkarmak için **InitPrjAttr.EXT** dosyasını kullanırsınız."
+      },
+      {
+        "type": "text",
+        "text": "**Adım 1 - Dosyayı kopyalayın:** Liste üreticisinde **Standart listeler (Standardlisten)** ve **Büro listeleri (Listen auf Büro)** girişlerine sağ tıklayıp **Explorer** ile iki klasörü açın. **InitPrjAttr.EXT** dosyasını **\\ETC\\BFT_List** klasöründen **...STD\\BFT_List** klasörüne kopyalayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9110_0EMVi000009JNwb_5be785d1.png",
+        "caption": "Liste üreticisi ve iki Explorer penceresi: InitPrjAttr.EXT, Etc\\Bft_List klasöründen Std\\Bft_List klasörüne kopyalanıyor"
+      },
+      {
+        "type": "text",
+        "text": "**Adım 2 - Dosyayı düzenleyin:** Kopyaladığınız InitPrjAttr.EXT dosyasını bir metin düzenleyicide açıp ihtiyacınıza göre uyarlayın. Örnekte, başlığın kat satırına yazılan **DeckeUber** değişkenine yapı yapısındaki kat adı atanıyor. Başlıktaki diğer tüm değişkenleri de aynı yolla değiştirebilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9110_0EMVi000009JN8b_7684f6c0.png",
+        "caption": "InitPrjAttr.EXT metin düzenleyicide: BwsTyp 7 (Geschoss) bloğu etkin, STR DeckeUber = BwsName[AB]"
+      },
+      {
+        "type": "text",
+        "text": "Dosyanın içeriği şu mantıkla çalışır: yapı yapısında düzey varsa (**IFF ( BwsAnz > 0 )**) tüm düzeyler **FOR ( AB; 1; BwsAnz )** döngüsüyle taranır ve düzeyin tipine göre adı bir değişkene yazılır. Dosyanın başındaki açıklama satırları tip numaralarını verir: 4 Arsa (Liegenschaften), 5 Yapı (Bauwerk), 6 Bina (Gebäude), 7 Kat (Geschoss), 8 Kat bölümü (Geschossbereich), 9 Kullanıcı tanımlı düğüm (serbest yapı düzeyi)."
+      },
+      {
+        "type": "text",
+        "text": "Örnekte yalnız **IFF ( BwsTyp[AB] == 7 )** bloğu etkindir ve **STR DeckeUber = BwsName[AB];** satırıyla kat adını DeckeUber değişkenine yazar. Tip 5 (**Bauwerk**), 6 (**Building**) ve 8 (**SubStorey**) blokları satır başındaki **!** işaretiyle devre dışıdır; işareti kaldırarak bu değişkenleri de doldurabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Sonuç:** Listeyi oluşturduğunuzda başlığın Kat (Geschoß) satırında yapı yapısındaki kat adı, örnekte **Erdgeschoss** (zemin kat), görünür."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9110_0EMVi000009JLA2_243324a0.png",
+        "caption": "Aufmaßblatt Wand listesi: başlığın Geschoß satırında yapı yapısından gelen Erdgeschoss"
+      },
+      {
+        "type": "heading",
+        "text": "Prekast Liste Üreticisi: Başlığı HeaderData.ext ile Uyarlama"
+      },
+      {
+        "type": "text",
+        "text": "Prekast listelerinin başlığından bazı nitelikleri kaldırmak ya da ek nitelik çıkarmak istiyorsanız **HeaderData.Ext** dosyasını uyarlarsınız. Bu dosya liste üreticisinin genel başlık verilerini (Kopfdaten) içerir."
+      },
+      {
+        "type": "text",
+        "text": "**Adım 1 - Dosyayı kopyalayın:** InitPrjAttr.EXT'te olduğu gibi, liste üreticisinde **Standart listeler (Standardlisten)** ve **Büro listeleri (Listen auf Büro)** girişlerinde sağ tık -> **Explorer** ile klasörleri açın ve **HeaderData.Ext** dosyasını **\\ETC\\BFT_List** klasöründen **...STD\\BFT_List** klasörüne kopyalayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9108_0EMVi000009ZE1K_758da64d.png",
+        "caption": "Liste üreticisi ve iki Explorer penceresi: HeaderData.EXT, Etc\\Bft_List klasöründen Std\\Bft_List klasörüne kopyalanıyor"
+      },
+      {
+        "type": "text",
+        "text": "**Adım 2 - Dosyayı düzenleyin:** Kopyayı bir metin düzenleyicide açıp ihtiyacınıza göre uyarlayın. Satırdaki süslü parantez (**{**) ve **@xxxxx** biçimindeki sayı bir çeviriye ve dil dosyalarına işaret eder; düzenlediğiniz satırda ikisini de kaldırın. Bir satırın altı parçasıyla nasıl silineceğini Sık Hatalar dersinde göreceksiniz."
+      },
+      {
+        "type": "text",
+        "text": "Nitelikleri başka değerlerle doldurmak istiyorsanız (örneğin Kat satırına yapı yapısındaki kat adı) bir önceki bölümdeki InitPrjAttr.EXT yöntemini kullanın."
+      },
+      {
+        "type": "heading",
+        "text": "iWall Duvar Tipleri İçin Taşıma Ankrajı Genişliği Formülü"
+      },
+      {
+        "type": "text",
+        "text": "iWall duvar tiplerinde (masif duvar / Massivwand, çift duvar / Doppelwand, ısı yalıtımlı duvar / Thermowand) taşıma ankrajının (Transportanker) kalınlığını otomatik hesaplatabilirsiniz. Her duvar tipi için iki formül yazarsınız: biri kullanıcı tanımlı nitelik (Benutzerattribut) ya da etiket stili (Beschriftungsbild) için, biri taşıma ankrajının gömme parça kataloğundaki liste metni için. Formüllerin hangi koşulda doğru sonuç verdiğini ve üç tip için ortak formülü Sık Hatalar dersinde ele alacaksınız."
+      },
+      {
+        "type": "text",
+        "text": "**Masif duvar:** Kullanıcı tanımlı nitelik / etiket stili formülü **@36017@-(@36006[1]@*100)-(@36005[1]@*100)-(@18120@/10)-(@18120[1]@/10)**, taşıma ankrajının liste metni ise **<!PARENTPRECAST(@36017@-(@36006[1]@*100)-(@36005[1]@*100)-(@18120@/10)-(@18120[1]@/10))!>** olur."
+      },
+      {
+        "type": "text",
+        "text": "Formüldeki nitelikler: **@36017@** duvar kalınlığı (cm); **@36006[1]@** 1. kabuğun beton örtüsü, görünen yüz / S1 (m); **@36005[1]@** 1. kabuğun beton örtüsü, görünmeyen yüz / S1 (m); **@18120@** enine donatının en büyük çapı, görünen yüz (mm); **@18120[1]@** enine donatının en büyük çapı, görünmeyen yüz / S1 (mm). Metre cinsinden örtüler 100 ile çarpılır, milimetre cinsinden çaplar 10'a bölünür; böylece tüm terimler santimetreye çevrilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/8889_0EMVi00000DshRw_28e90fac.png",
+        "caption": "Masif duvar (S1): ölçülen 178 mm ile _Transportanker Dicke MW niteliğinin 17,8 değeri eşleşiyor"
+      },
+      {
+        "type": "text",
+        "text": "**Çift duvar:** Görünmeyen yüzün örtüsü 3. kabuktan alınır. Nitelik / etiket stili formülü **@36017@-(@36006[1]@*100)-(@36005[3]@*100)-(@18120@/10)-(@18120[1]@/10)**, liste metni **<!PARENTPRECAST(@36017@-(@36006[1]@*100)-(@36005[3]@*100)-(@18120@/10)-(@18120[1]@/10))!>**. Burada **@36005[3]@** 3. kabuğun beton örtüsüdür (görünmeyen yüz / S3, m); diğer nitelikler masif duvarla aynıdır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/8889_0EMVi00000DsuLt_359dfb71.png",
+        "caption": "Çift duvar (S1, S2, S3): ölçülen 168 mm ile _Transportanker Dicke DW niteliğinin 16,8 değeri eşleşiyor"
+      },
+      {
+        "type": "text",
+        "text": "**Isı yalıtımlı duvar:** Görünmeyen yüzün örtüsü 4. kabuktan alınır. Nitelik / etiket stili formülü **@36017@-(@36006[1]@*100)-(@36005[4]@*100)-(@18120@/10)-(@18120[1]@/10)**, liste metni **<!PARENTPRECAST(@36017@-(@36006[1]@*100)-(@36005[4]@*100)-(@18120@/10)-(@18120[1]@/10))!>**. Burada **@36005[4]@** 4. kabuğun beton örtüsüdür (görünmeyen yüz / S4, m)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/8889_0EMVi00000DsuQj_64569205.png",
+        "caption": "Isı yalıtımlı duvar (S1 ile S4 arası): ölçülen 278 mm ile _Transportanker Dicke TW niteliğinin 27,8 değeri eşleşiyor"
+      },
+      {
+        "type": "text",
+        "text": "**Biçim:** Etiket stilinde biçim olarak **F8.1**, birim olarak **cm** seçin."
+      },
+      {
+        "type": "heading",
+        "text": "TIM 2024 Yenilikleri (Prekast Üretim ve Lojistik)"
+      },
+      {
+        "type": "text",
+        "text": "Prekast modeliniz üretim ve sevkiyat için TIM'e aktarılır. TIM 2024 sürümünde bu akışa dokunan yenilikler aşağıdadır."
+      },
+      {
+        "type": "text",
+        "text": "**TIM bakım modu (Maintenance Mode):** TIM mevcut haliyle işletilmeye devam ediyor; odak performans ve kararlılıkta. Veri dışa aktarımlarının kalitesi korunuyor, arayüzler güncel tutuluyor, bildirilen sorunlar inceleniyor. 2024 sürümü kullanıcılar için bazı iyileştirmeler içeriyor; ancak bu platformda yeni fonksiyon ve genişletme geliştirilmesi planlanmıyor."
+      },
+      {
+        "type": "text",
+        "text": "**TIM Premium:** TIM kullanıcıları için ALLPLAN Softlock tabanlı yeni teklif. Önceden her TIM modülü için ayrı lisans gerekirken TIM Premium şu modülleri tek lisansta toplar (yıllık abonelikte geçerli): Collaboration Manager, Delivery Manager, Production Manager, MES-Connect, ERP-Connect ve MWS-Connect."
+      },
+      {
+        "type": "text",
+        "text": "**DatenExplorer, birden çok pencere ve eşitleme:** DatenExplorer'ın işlevselliği belirgin biçimde geliştirildi. **Eşitle (Synchronisieren mit)** ile birden fazla DatenExplorer penceresi arasında ilişki ve bağımlılık kurabilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9401_0EMVi000000OrCr_b4d246b4.png",
+        "caption": "Synchronisieren mit açılır listesi: Keine, Projekt-Navigator, DatenExplorer2-Element"
+      },
+      {
+        "type": "text",
+        "text": "Örneğin bir pencerede seçili projenin gruplanmış elemanlarını, ikinci bir pencerede ilk pencerede işaretlediğiniz prekast elemanın ayrıntılarını (gömme parçalar, donatı çubukları (Rundstahl) gibi) gösterebilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9401_0EMVi000000OrET_859a5bea.png",
+        "caption": "Proje Navigatörü (1), Proje Navigatörüyle eşitlenen DatenExplorer2-Element (2) ve ona eşitlenen DatenExplorer1-Rundstahl (3): seçili 83 numaralı elemanın donatı çubukları"
+      },
+      {
+        "type": "text",
+        "text": "**DatenExplorer, sonuç listesi:** DatenExplorer'daki bir başka değişiklik **En fazla sonuç sayısı (Maximale Ergebnisanzahl)** göstergesiyle ilgili."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9401_0EMVi000000OrRN_671b28d4.png",
+        "caption": "DatenExplorer1-Element penceresinde Maximale Ergebnisanzahl: 1000 alanı"
+      },
+      {
+        "type": "text",
+        "text": "Bu ayar DatenExplorer penceresinden, dişli simgesiyle açılan TIM menüsündeki **TIM Seçenekleri (TIM Optionen)** bölümüne taşındı."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9401_0EMVi000000Ondu_8df1e4b6.png",
+        "caption": "TIM menüsünü açan dişli simgesi"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9401_0EMVi000000OreH_f0852e6c.png",
+        "caption": "TIM seçenekleri, DatenExplorer sayfası: Maximale Anzahl von Ergebnissen 10000"
+      },
+      {
+        "type": "text",
+        "text": "**Özellikler penceresi, dış dosya ekleme:** Özellikler (Eigenschaften) penceresinde bir prekast elemana hangi belgelerin bağlı olduğunu görürsünüz; bunlar genellikle eleman planları, içe aktarılmış üretim verileri ve genel bakış planlarıdır. Artık buraya dış kaynaklardan elle belge de ekleyebilirsiniz. Bunun için Özellikler penceresinde üç noktalı simgeye tıklayarak bir diyalog açın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9401_0EMVi000000OqIQ_d4f96b60.png",
+        "caption": "Özellikler penceresi, Dokumente bölümü: AddFiles satırındaki ... (Hinzufügen) düğmesi"
+      },
+      {
+        "type": "text",
+        "text": "Diyalogda dosya sisteminizden ya da ağdan istediğiniz dosyayı seçin. Eklediğiniz dosyalar Belgeler (Dokumente) bölümünde **Dış Dosyalar (Externe Dateien)** olarak listelenir."
+      },
+      {
+        "type": "text",
+        "text": "Sağdaki üç simgeyle **Sil (Löschen)**, **Yeniden Adlandır (Umbenennen)** ve **Ekle (Hinzufügen)** fonksiyonlarını çağırırsınız. Yeniden adlandırma kutusunda (Rename Box) eklenen belgenin görünen adını istediğiniz gibi değiştirebilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9401_0EMVi000000OlsE_007aefa4.png",
+        "caption": "Externe Dateien altında eklenen PDF, sağda üç simge ve Rename Box: Anmerkungen für AV adı Anweisung AV olarak değiştiriliyor"
+      },
+      {
+        "type": "text",
+        "text": "**Delivery Manager, kısayollarla eleman taşıma:** Klavye kısayolları Delivery Manager modülünde işinizi kolaylaştırır; örneğin yeni bir istif (Stapel) için konteyner tipini seçerken ya da istifteki elemanları istif alanında kaydırırken. Bu ayarlara TIM menüsünden **TIM Seçenekleri (TIM Optionen)** ile ulaşırsınız."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9401_0EMVi000000OsP3_20f22e15.png",
+        "caption": "TIM menüsü: TIM Optionen girişi"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9401_0EMVi000000OsSH_56bd94e8.png",
+        "caption": "TIM seçenekleri, Shortcuts sayfası: Modul listesinde Delivery Manager"
+      },
+      {
+        "type": "text",
+        "text": "Burada TIM Delivery Manager'ın çeşitli düğme ve fonksiyonlarına ihtiyacınıza göre kısayol atarsınız. Sol alttaki **Yeni Kısayol (Neuer Shortcut)** alanına bir tuş bileşimi yazarak yeni bir kısayol tanımlar ya da mevcut kısayolun üzerine yazarsınız."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9401_0EMVi000000OtBR_a1b02ade.png",
+        "caption": "Shortcuts anpassen: Delivery Manager seçili, Neuer Shortcut alanında Strg+Alt+A ve Zuordnen düğmesi"
+      },
+      {
+        "type": "text",
+        "text": "**Delivery Manager, A3 biçiminde kat planı raporu:** Delivery Manager raporlarına A3 biçiminde bir kat planı (Grundrissplan) eklendi. Raporda hangi çizim dosyalarının (Teilbild) görüneceğini siz belirlersiniz. İstiflenmiş elemanlar kat planında, istife atanmış renkle görünür. Yazı boyutu ayrıca ayarlanabilir; böylece çizimin kapsamına göre okunaklı bir sonuç alırsınız."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9401_0EMVi000000OtY1_7705dac5.png",
+        "caption": "A3 kat planı raporundan kesit: istif rengiyle gösterilen duvar elemanları ve 22-S13, 21-S14 gibi etiketler"
+      },
+      {
+        "type": "text",
+        "text": "**ALLPLAN -> TIM dışa aktarımı, şantiye donatısı (Bewehrung bauseits):** TIM 2024 sürümünden itibaren bir elemana atanmamış serbest donatı (lose Eisen) da dışa aktarımla TIM'e aktarılabilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9401_0EMVi000000Othh_fd8ed9d2.png",
+        "caption": "TIM Özellikler penceresi: elemana atanmamış 1: 35xd6,0/100-2810 donatısı, Eisenart unbestimmt"
+      }
+    ]
   }
 }

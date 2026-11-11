@@ -145,5 +145,85 @@
     "task": "Bir 2B eskiz (çokgen çizgi) çizin ve 'Element wandeln, übernehmen' işleviyle çap atayarak gerçek bir çubuğa dönüştürün. Üretim sonrası Mark Position özelliğini kontrol edin.",
     "expected": "Eskizin gerçek bir çubuk tanımına dönüşmesi, köşelerin büküm rulosu çapıyla bağlanması ve Mark Position'ın diğer çubuklarla tutarlı olması.",
     "hint": "Çubuğu doğrudan kopyalamaya çalışmak yerine aynı işlevle başka görünüme aktarabileceğinizi deneyin."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Donatı: Özel Büküm Şekillerinin Hızlı Üretimi"
+      },
+      {
+        "type": "text",
+        "text": "Özel büküm şekillerini her seferinde **Çubuk Şekli (Stabform)** ile tanımlamak zaman alır; özellikle benzer çubukları plandaki başka bir doğrultuda yeniden üretmek gerektiğinde. Bu derste **Eleman Dönüştür, Devral (Element wandeln, übernehmen)** fonksiyonuyla bu işi iki yoldan kısaltıyorsunuz. Makalenin İngilizce sürümü (fonksiyonun adı orada Convert, Match Element) aynı içeriği anlatır; iki sürümün görselleri birlikte kullanıldı."
+      },
+      {
+        "type": "text",
+        "text": "**1. Eleman Dönüştür, Devral ile çubuk oluşturma:** Normalde etriye ya da serbest büküm şekli için Çubuk Şekli aracını kullanırsınız. Bazı durumlarda önce büküm tanımını tasarlamanız gerekir ve benzer çubukları başka bir doğrultuda yeniden üretmek zaman alır. Eleman Dönüştür, Devral fonksiyonu bu adımı kısaltır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/8713_0EM67000008DTkD_61d50645.png",
+        "caption": "Serbest Şekil (Freeform) grubunda Eleman Dönüştür, Devral simgesi (ok ile gösterilen)"
+      },
+      {
+        "type": "text",
+        "text": "Fonksiyon, 2B veya 3B eskizleri gerçek büküm şekillerine (çubuk tanımına) dönüştürmek için geliştirilmiştir. Eskiz bir çizgi, bir poligon (Polylinie), 3B bir çizgi ya da U ve kapalı etriye biçiminde olabilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/8713_0EM67000008DTjo_4f27ff30.png",
+        "caption": "Dönüştürülebilecek eskizler: çizgi, poligon, 3B çizgi, U ve kapalı etriye"
+      },
+      {
+        "type": "text",
+        "text": "Fonksiyonu başlatın ve eskizleri işaretleyin. **Eleman Dönüştür, Devral** penceresi açılır; burada poz numarası, çap, çelik sınıfı ve teslim biçimi (Lieferung, örneğin bükülmüş) gibi çubuk özelliklerini tanımlarsınız."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/8713_0EM67000008DXkH_153b9716.png",
+        "caption": "Element wandeln, übernehmen penceresi: poz 1, çap 10 mm, B500B, Lagerlänge 14.000, Lieferung gebogen"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/8711_0EM67000008DTDA_0a4842de.png",
+        "caption": "Aynı pencere İngilizce arayüzde (Convert, Match Elements): poz 50, 10 mm, HA, Delivery bent"
+      },
+      {
+        "type": "text",
+        "text": "**Tamam (OK)** ile onayladığınızda çubuk oluşturulur ve etiketi yerleştirebilirsiniz. ALLPLAN köşelerde her çapa ait büküm rulosu çapını kullanır; ardından çubuğu her zamanki gibi tekli ya da doğrusal yerleştirebilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/8713_0EM67000008DTQ4_d5f2622b.png",
+        "caption": "Oluşturulan çubuk ve etiketi: 50 HA 10, köşeler büküm rulosu çapıyla yuvarlatılmış"
+      },
+      {
+        "type": "text",
+        "text": "**2. Devral (Übernehmen) fonksiyonu:** Bir poligondan oluşturduğunuz çubuğu başka bir elemana (başka bir görünüme) kopyalayamazsınız."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/8711_0EM67000008DTlQ_8fc16201.png",
+        "caption": "Poligondan oluşturulan çubuk başka bir elemana kopyalanamıyor (Unable to copy)"
+      },
+      {
+        "type": "text",
+        "text": "Ama çubuğu yine **Eleman Dönüştür, Devral** fonksiyonuyla iki tıklamada yeni elemana aktarabilirsiniz. Bu sırada yeni bir çubuk pozu verilebilir; yine de mevcut büküm şeklini aktarmanın hızlı ve güvenli bir yoludur."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/8713_0EM67000008DTmO_2d08672b.png",
+        "caption": "Çubuk iki tıklamayla yeni elemana aktarıldı: yeni poz 52 HA 10"
+      },
+      {
+        "type": "text",
+        "text": "**Dikkat:** Çubukları oluşturduktan sonra tanımlarının doğru olup olmadığını **Poz Değiştir (Modify Mark)** ile kontrol edin. Fonksiyon genel ön ayarları dikkate almaz ve büküm şeklini verilen eksene (poligon ya da çizgi) göre hesaplar. Kontrol etmezseniz donatı açınımında (Rundstahl-Auszug) diğer çubuklara göre farklar ve hakedişe giren uzunluklarda sapmalar oluşabilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/8713_0EM67000008DTnH_dcf2e41b.png",
+        "caption": "Modify Mark diyaloğu: poz 52, 10 mm, uzunluk 3.900; ok çubuk tanım seçeneklerini gösteriyor"
+      }
+    ]
   }
 }

@@ -128,5 +128,37 @@
     "task": "Bir mimari ve bir statik modeli Bimplus'ta üst üste bindirin, gözle bir çakışma noktası belirleyin ve buna bir Issue oluşturup BCF olarak dışa aktarın.",
     "expected": "Üst üste bindirilmiş iki model, işaretlenmiş bir çakışma ve dışa aktarılmış bir BCF dosyası.",
     "hint": "Çakışmayı gördükten sonra onu bir göreve/Issue'a bağlamayı unutmayın."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Bimplus ile Koordinasyon ve Çakışma Tespiti"
+      },
+      {
+        "type": "text",
+        "text": "Bimplus'un koordinasyondaki rolü, disiplin modellerini tek bir ortamda buluşturup hataları görünür kılmaktır."
+      },
+      {
+        "type": "text",
+        "text": "ALLPLAN Bimplus yardımı şu iş akışını adım adım anlatır: planlama verilerinizi ALLPLAN'dan ya da başka uygulamalardan Bimplus'a yükler ve orada projenin diğer disiplin modelleriyle üst üste bindirirsiniz. Diğer proje paydaşları bu modelleri Bimplus web portalında inceler, düzenler ya da tamamlar. Planlama hatalarını ve çakışmaları (Kollisionen) tespit eder, çözüm için gereken görevleri ilgili kişilere dağıtırsınız."
+      },
+      {
+        "type": "heading",
+        "text": "BIMPLUS'ta Issue'ları BCF Olarak Dışa Aktarma"
+      },
+      {
+        "type": "text",
+        "text": "Koordinasyonda bulunan sorunlar Bimplus'ta Issue olarak tutulur. Bunları projenin dışına taşımanın açık biçimi BCF'dir."
+      },
+      {
+        "type": "text",
+        "text": "Sorunlar (Issues) BCF dosyası olarak dışa aktarılabilir; bunu yaparken birden fazla sorunu birlikte seçebilirsiniz. Slayt gösterileri (Folienshows) ise PDF olarak dışa aktarılır."
+      },
+      {
+        "type": "text",
+        "text": "**Dikkat:** Modele, objelere, sorunlara ya da yapılara doğrudan bağlanmış (bağlantı olarak, LINK ile eklenmemiş) dosyalar yalnız tek tek indirilebilir. Bunun için dosyanın hangi objeye bağlı olduğunu bilmeniz gerekir."
+      }
+    ]
   }
 }

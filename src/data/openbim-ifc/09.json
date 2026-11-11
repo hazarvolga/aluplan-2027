@@ -143,5 +143,65 @@
     "task": "EPYS_IDS_2026-11-06.ids dosyasını bir metin editöründe açın. İçinden bir disiplin seçin (ör. 'Hava Terminal Kutusu') ve o specification'ın applicability bölümündeki IFC sınıfını, requirements bölümündeki Name desenini ve varsa Pset özelliğini kâğıda yazın.",
     "expected": "Seçtiğiniz specification için: uygulandığı IFC sınıfı (ör. IfcAirTerminalBox), zorunlu Name deseni (ör. MK-HTK-...) ve varsa istenen Pset özelliği (ör. Pset_AirTerminalTypeCommon / AirFlowRateRange) açıkça ayrıştırılmış olmalı.",
     "hint": "Her specification bir <ids:applicability> ve bir <ids:requirements> bloğu içerir; Name kısıtı <xs:pattern value=\"...\"> içinde, Pset özelliği <ids:property> içindedir."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "EPYS_IDS (buildingSMART IDS 1.0, IFC4X3_ADD2)"
+      },
+      {
+        "type": "text",
+        "text": "Ders adımlarında IDS'in yapısını ve EPYS_IDS'in künyesini gördünüz. Bu bölümde dosyanın kendisini açıp 161 kuralın hangi yönetmelik eklerine göre nasıl gruplandığına bakıyorsunuz. İncelenen dosya: EPYS_IDS_2026-11-06.ids (buildingSMART IDS 1.0 şeması)."
+      },
+      {
+        "type": "text",
+        "text": "**Dosya bilgisi (info):** Başlık EPYS_IDS, amaç E-PYS, aşama Ruhsat. Açıklama alanı dosyayı e-PYS sisteminde tanımlanan EK-3, EK-5, EK-6 ve EK-7 gerekliliklerinin tanımlandığı doküman olarak tarif eder. Sürüm alanında 0.1.3-allplan-test1 yazar; bu bir test sürümüdür, teslimde kurumun yayımladığı güncel dosyayı kullandığınızdan emin olun."
+      },
+      {
+        "type": "text",
+        "text": "**EK-5 Tablo 5.2 bölümü (67 kural):** İsteğe bağlı IFC sınıfları için kategori kodu listesi. Bu kuralların hepsi yalnız adı denetler: örneğin IfcActuator için Name değeri EE-AKT- ile, IfcAirTerminalBox için MK-HTK- ile başlamalıdır. Uygulanabilirlik en az sıfır nesne (minOccurs 0) olarak tanımlıdır; modelde bu sınıftan nesne yoksa kural sorun çıkarmaz, varsa adı desene uymak zorundadır."
+      },
+      {
+        "type": "text",
+        "text": "**EK-6 bölümü (84 kural):** EK-6 proje gereklilikleri ile EK-3 mahal adı ve EK-5 Tablo 5.1 kategori kodu gereklilikleri. Bu bölüm adın yanında özellikleri (Pset), malzemeyi ve ilişkileri de denetler. Kiriş, kolon, döşeme, duvar, merdiven, rampa ve kaplama (IfcPavement) gibi hem mimari hem taşıyıcı olabilen sınıflar üç ayrı kurala bölünür: **Ad Kontrol** kuralı adın altı disiplin kodundan biriyle (MM, IM, PY, AL, ST, ZE) başlamasını ister; **Yapısal Olmayan** kuralı MM, IM ya da PY kodlu elemanlara, **Yapısal** kuralı ise AL, ST ya da ZE kodlu elemanlara ayrı gereklilikler uygular. Pompa, fan, vana ve menfez gibi tesisat sınıflarının çoğunda ayrıca elemanın bir IfcSystem'e atanmış olması (partOf ilişkisi) istenir."
+      },
+      {
+        "type": "text",
+        "text": "**EK-7 bölümü (10 kural):** Proje düzeyindeki sınıflar: IfcProject, IfcPerson, IfcPersonAndOrganization, IfcOrganization, IfcActorRole, IfcProjectedCRS, IfcMapConversion, IfcGeometricRepresentationContext ve IfcAnnotation. Bu kuralların uygulanabilirliği en az bir nesne (minOccurs 1) olarak tanımlıdır; yani bu sınıflar modelde hiç yoksa model kuralı geçemez. IfcProject adı iki harf, PRJ ve altı karakterlik bir koddan oluşan desene uymalı, Pset_ProjectCommon içinde ProjectType bulunmalıdır. IfcPerson için kimlik (Identification) alanına oda sicil numarası, ayrıca soyadı, ad ve roller zorunludur."
+      },
+      {
+        "type": "text",
+        "text": "**Jeoreferans:** IfcProjectedCRS için ad, açıklama, jeodezik datum, düşey datum, harita projeksiyonu, harita dilimi ve harita birimi; IfcMapConversion için doğu ve kuzey değerleri, ortogonal yükseklik, X ekseni bileşenleri (XAxisAbscissa, XAxisOrdinate) ve ölçek zorunludur. Bu iki sınıf modelin harita koordinatlarındaki yerini taşır; 2. derste Bimplus için ayarladığınız sıfır noktasının teslim dosyasındaki karşılığıdır."
+      },
+      {
+        "type": "heading",
+        "text": "e-PYS Yönetmeliği ve Ekleri (EK-3, EK-5, EK-6, EK-7)"
+      },
+      {
+        "type": "text",
+        "text": "IDS kurallarının dayanağı e-PYS yönetmelik ekleridir. Bu bölüm, yönetmeliğin yayımlanmış ek metninde IFC modelini ilgilendiren dört eki kendi maddeleriyle özetler."
+      },
+      {
+        "type": "text",
+        "text": "**EK-3 Mahal İsimlendirme Esasları:** Mahal numarasının ve mahal isminin nasıl yazılacağını belirler; ayrıntısını 10. derste göreceksiniz."
+      },
+      {
+        "type": "text",
+        "text": "**EK-5 BIM Modelindeki IFC Sınıfları ve Varlık İsimlendirme Esasları:** Tasarımda bulunması durumunda modelde tanımlanması zorunlu sınıfları Tablo 5.1'de, modelde yer alması isteğe bağlı sınıfları Tablo 5.2'de verir. İki tablo da IFC 4.3 sürümü esas alınarak düzenlenmiştir; varlıklar IFC'ye dönüştürüldüğünde bu tablolardaki sınıflarla temsil edilir. Varlık isimlendirme şablonu da bu ektedir (10. ders)."
+      },
+      {
+        "type": "text",
+        "text": "**EK-6 IFC Sınıflarının Öznitelik ile Özellik Tanımları:** Zorunlu sınıflarda bulunması gereken zorunlu öznitelik ve özellikler Tablo 6.1 ile 6.68 arasında, zorunlu sınıflarda isteğe bağlı olanlar Tablo 6.69 ile 6.135 arasında verilir; isteğe bağlı olanlar ilgili idare talep ederse modelde yer alır. Ekin üç maddesi modelleme pratiğini doğrudan etkiler: alt sınıfı bulunan bir üst sınıf kullanılmaz, yalnızca alt sınıf modele alınır (madde 6.1.2); IfcProxy ya da IfcBuildingElementProxy gibi genel vekil varlıklara yer verilmez (madde 6.1.3); TREpys_ ile başlayan tüm özellik setleri ve özellikleri modelde kullanıcı tarafından oluşturulur, diğerleri IFC veri şemasındaki özelliklerdir (madde 6.5)."
+      },
+      {
+        "type": "text",
+        "text": "**EK-7 Proje ile İlgili IFC Sınıflarının Öznitelik Tanımları:** Projeye ait bilgilerin taşındığı zorunlu sınıflar Tablo 7.1 ile 7.12 arasındadır. Projenin temel bilgileri IfcProject sınıfında tanımlanır ve her disiplin modelinde IfcProject'in ortak öznitelikleri aynı olmalıdır (madde 7.2.1). Kişi, kuruluş ve rol bilgileri IfcPerson, IfcPersonAndOrganization, IfcOrganization ve IfcActorRole sınıflarında; IfcProjectedCRS, IfcMapConversion, IfcGeometricRepresentationContext ve IfcAnnotation için zorunlu öznitelikler Tablo 7.6 ile 7.9 arasında verilir."
+      },
+      {
+        "type": "text",
+        "text": "Yönetmelik ekleri ayrıca EK-8'de BIM modeli gelişim seviyesini, EK-9'da model kalite kontrol formunu tanımlar; bunlar EPYS_IDS'in kapsamında değildir."
+      }
+    ]
   }
 }

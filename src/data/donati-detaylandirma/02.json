@@ -149,5 +149,41 @@
     "task": "Extras > Definitionen > Querschnittsreihen diyalogunu açın ve klasör ile disket simgelerini bulun. Ardından Extras > Optionen > Bewehrung altında Norm parametresini inceleyin.",
     "expected": "Kesit serisi kurma/kaydetme simgelerini ve Norm parametresinin BS EN gibi değerler alabildiğini görmeniz.",
     "hint": "Kurulumsuz ülke serisi için Allplan kurulum yolundaki New\\Ing klasörüne bakın."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Yabancı Norm Kullanarak Donatı Planları"
+      },
+      {
+        "type": "text",
+        "text": "Bir donatı planını yabancı bir norma göre, örneğin İngiliz Standardına (BS EN) göre hazırlamak için üç adım gerekir: ülkeye özgü kesit serisini kurmak, normu ve birimleri ayarlamak, uygun raporu seçmek. Aynı makalenin İngilizce sürümü İngiliz Standardı örneğini anlatır; ikisi burada birlikte veriliyor."
+      },
+      {
+        "type": "text",
+        "text": "**1. Ülkeye özgü kesit serisini kurun:** Kesit serilerini kurma ve yedekleme **Ekstralar -> Tanımlar -> Kesit Serileri (Extras -> Definitionen -> Querschnittsreihen)** altındadır. Bu diyaloğun sol alt köşesinde bir klasör ve bir disket simgesi bulunur."
+      },
+      {
+        "type": "text",
+        "text": "Kesit serisi dosyası kurmak için klasör simgesini seçin; açılan gezginde kurulacak dosyayı seçip **Aç (Öffnen)** ile onaylayın. Kesit serisi kurulur ve ALLPLAN'da kullanılabilir. Kendi tanımladığınız kesit serisini yedeklemek için disket simgesini seçin ve ALLPLAN'da o anda kullanılan kesit serilerini kaydetmek için herhangi bir klasör belirleyin."
+      },
+      {
+        "type": "text",
+        "text": "Ülkeye özgü kesit serileri, ALLPLAN kurulumunda oluşturulan **New** klasörünün altındaki **Ing** klasöründe bulunur; örneğin **C:\\Programme\\Nemetschek\\Allplan\\New\\Ing**. Kurulum yolunu Allmenu'de **Servis -> Windows Gezgini -> CAD program klasörü (Service -> Windows-Explorer -> CAD Programmordner)** altında görürsünüz."
+      },
+      {
+        "type": "text",
+        "text": "Dosya adlarında (**axyzqusr.txt**) xyz yerindeki kısaltma ülkeyi gösterir: **aus** Avustralya, **aut** Avusturya, **bel** Belçika, **bra** Brezilya, **bul** Bulgaristan, **can** Kanada, **chn** Çin, **deu** Almanya, **eng** İngiltere, **fra** Fransa, **hol** Hollanda, **hrv** Hırvatistan, **ind** Hindistan, **ita** İtalya, **kor** Kore, **nor** Norveç, **pol** Polonya, **rum** Romanya, **rus** Rusya, **slk** Slovakya, **svn** Slovenya, **swi** İsviçre, **tch** Çekya, **trk** Türkiye, **ung** Macaristan, **usa** ABD, **zaf** Güney Afrika. Bu liste tam değildir ve sürekli genişletilir."
+      },
+      {
+        "type": "text",
+        "text": "**2. Normu ve birimleri ayarlayın:** Normu **Ekstralar -> Seçenekler -> Donatı (Extras -> Optionen -> Bewehrung)** altında, **Norm** parametresini **BS EN** (İngiliz Standardına göre Eurocode) yaparak ayarlayın. Normların ülkelere atanmasını ALLPLAN Yardım'da bulursunuz. Birimleri **Ekstralar -> Seçenekler -> Çalışma Ortamı (Arbeitsumgebung)** altında, **Uzunluk girişi (Längeneingaben in)** parametresini istenen uzunluk birimine getirerek ayarlayın."
+      },
+      {
+        "type": "text",
+        "text": "**3. İngiliz Standardına göre raporlar:** İngiliz Standardı raporu, ALLPLAN standart raporları arasında **Stabliste British Standard.rdlc** adıyla bulunur. Standart rapor seçim menüsünde **Bir üst düzey (Ebene nach oben)** klasörüne iki kez tıklayın ve İngilizce donatı raporları için **ENG -> Reinforcement** klasörünü seçin."
+      }
+    ]
   }
 }

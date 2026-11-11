@@ -174,6 +174,66 @@
       "figures": []
     }
   ],
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Allplan Road - Yeni Proje ve Arazi Tasarımı"
+      },
+      {
+        "type": "text",
+        "text": "**Allplan Road** ile yol tasarımı yeni bir ALLPLAN projesi oluşturmakla başlar; ardından yeni bir SAM (DTM) yüzeyi oluşturulur ve yüzey verileri uygulanır."
+      },
+      {
+        "type": "heading",
+        "text": "Allplan Road - Kırık çizgilerle (break lines) Arazi Tasarımı"
+      },
+      {
+        "type": "text",
+        "text": "Allplan Road'da SAM yüzeyi DWG/DXF verisinden devralınabilir: kırık hatlarla (breaklines) ağ oluşturulur, yüzeye görsel stiller uygulanır ve SAM'ın boyutu küçültülebilir."
+      },
+      {
+        "type": "heading",
+        "text": "Allplan Road - Aks tasarımı: Yatay güzergah (Horizontal alignment)"
+      },
+      {
+        "type": "text",
+        "text": "Yol aksı yeni bir aks olarak oluşturulur ve yatay güzergahı (Horizontal alignment) farklı düzenleyicilerle tanımlanır."
+      },
+      {
+        "type": "heading",
+        "text": "Allplan Road - Aks tasarımı: Düşey güzergah (Vertical alignment)"
+      },
+      {
+        "type": "text",
+        "text": "Aksın düşey güzergahı (Vertical alignment), yani boykesiti ayrıca tanımlanır."
+      },
+      {
+        "type": "heading",
+        "text": "Allplan Road - Diğer güzergah (alignment) fonksiyonları"
+      },
+      {
+        "type": "text",
+        "text": "Diğer güzergah fonksiyonlarıyla önceden tanımlanmış akslar içe aktarılır, poligon çizgilerinden (polyline) aks devralınır ve aks tipleri birbirine dönüştürülür."
+      },
+      {
+        "type": "heading",
+        "text": "Add-On Baugrube (Yapı Çukuru Eklentisi) - Altyapı/Boru Hendekli Arazi"
+      },
+      {
+        "type": "text",
+        "text": "**Yapı Çukuru (Add-On Baugrube)** eklentisiyle arazi tasarımı üzerinden bir altyapı ya da boru hendeği (Leitungsgraben) oluşturulur: kat planında bir hat boyunca poligon çizgisi çizilir ve dinamik uyarlanabilen şev objeli bir kazı üretilir. Yükseklik, eğim ve kaçıklık (ofset) gibi parametreler esnekçe değiştirilir."
+      },
+      {
+        "type": "heading",
+        "text": "Add-On Geometry Tools (Geometri Araçları Eklentisi) - Eğim Tasarımı"
+      },
+      {
+        "type": "text",
+        "text": "**Geometri Araçları (Add-On Geometrie-Tools)** eklentisi üç boyutlu alanda 20 komut sunar. Eğimli bir yeraltı otoparkı örneğinde farklı kotlu arazi noktalarından, üzerinde modellemeye devam edilebilen bütünleşik bir üçgen ağ (TIN) kurulur; düzlem yönetimiyle de mimari yapı elemanlarına referans yüzeyler atanır."
+      }
+    ]
+  },
   "quiz": [
     {
       "id": "ar9-1",

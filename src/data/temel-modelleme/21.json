@@ -91,11 +91,262 @@
       },
       {
         "type": "text",
-        "text": "Etiket stillerinde biçimlendirme sınırlıdır. Bir niteliği ya da formülü yerleştirirken veya değiştirirken metin yüksekliği, metin genişliği, yazı tipi ve açısı üzerinde değişiklik yapabilirsiniz."
+        "text": "Bir etiket stilindeki (Beschriftungsbild) metni, örneğin kalın göstermek için ne yaparsınız? Etiket stillerinde normal metne göre doğrudan yalnız sınırlı biçimlendirme vardır. **Etiket Stili (Beschriftungsbild)** fonksiyonunda bir niteliği (ya da yerleştirilmiş bir formülü) yerleştirirken veya değiştirirken metin yüksekliğini, metin genişliğini, yazı tipini ve sütun açısını ayarlarsınız."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUV_37baaa34.png",
+        "caption": "Etiket Stili araç çubuğu: metin yüksekliği, genişlik, yazı tipi ve açı alanları"
       },
       {
         "type": "text",
-        "text": "Normal metindeki doğrudan biçim seçeneklerinin tamamı burada geçerli değildir; Kalın gibi bir efekt için ilgili niteliğin ya da yazı tipinin stil ayarını kullanın."
+        "text": "Nitelik çizim dosyasına yerleştirildikten sonra **Özellikler (Eigenschaften)** paleti, tek bir nitelik için metinlerdekiyle aynı ek ayarları sunar. **Biçim (Format)** bölümünde kalem kalınlığı (yalnız ALLPLAN standart yazı tiplerinde etkilidir, TrueType ya da OpenType yazı tiplerinde etkisizdir), çizgi rengi, katman ve kalem, çizgi tipi ile rengin katmana bağlanması bulunur. **Eleman (Element)** bölümünde metin bloğu çevresinde ayarlı bir çerçeve, pencere arka plan rengi ya da seçilebilir başka bir renkle arka plan dolgusu ve kalın (Fett), italik (Kursiv), altı çizili (Unterstrichen), üstü çizili (Durchgestrichen) gibi vurgular vardır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUW_3ec07482.png",
+        "caption": "Özellikler paleti: Biçim ve Eleman ayarları; çerçeveli, arka planlı, kalın kırmızı Bezeichnung"
+      },
+      {
+        "type": "text",
+        "text": "Bu biçimlendirmelerin avantajı kolay uygulanmalarıdır; her zaman niteliğin ya da formülün tüm ifadesine uygulanır. Dezavantajı da buradan gelir: biçimi niteliğin değerine ya da başka niteliklere bağlı olarak değiştiremezsiniz ve bir ifadenin yalnız bir kısmını farklı biçimlendiremezsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Formüllerde biçimlendirme:** Metin çıktısı veren bir formülün (örneğin **A50** biçimi) içinde kontrol karakterleriyle biçimlendirme yaparsınız. Her biçimlendirme bir başlangıç ve bir bitiş karakter dizisi ister; ikisinin arasındaki metin o biçimde gösterilir."
+      },
+      {
+        "type": "text",
+        "text": "**Birinci grup:** Bu biçimlendirmeleri metin düzenleyicide de ekleyebilirsiniz; orada kontrol karakterleri gizlenir ve yalnız etkileri görünür."
+      },
+      {
+        "type": "text",
+        "text": "**%B{ ... %B}** metni kalın yapar. Örnek: **%B{Fett (Bold)%B}**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUX_a910d704.png",
+        "caption": "%B sonucu: kalın metin"
+      },
+      {
+        "type": "text",
+        "text": "**%I{ ... %I}** metni italik yapar. Örnek: **%I{Kursiv (Italic)%I}**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUY_4ba206e3.png",
+        "caption": "%I sonucu: italik metin"
+      },
+      {
+        "type": "text",
+        "text": "**%U{ ... %U}** metnin altını çizer. Örnek: **%U{Unterstrichen%U}**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUZ_8382c1af.png",
+        "caption": "%U sonucu: altı çizili metin"
+      },
+      {
+        "type": "text",
+        "text": "**%D{ ... %D}** metnin üstünü çizer. Örnek: **%D{Durchgestrichen%D}**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUa_35eb9ab8.png",
+        "caption": "%D sonucu: üstü çizili metin"
+      },
+      {
+        "type": "text",
+        "text": "**%^{ ... %^}** metni üst simge yapar ve küçültür. Örnek: **%^{hochgestellt%^}**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUb_2eb8aec6.png",
+        "caption": "%^ sonucu: küçültülmüş üst simge"
+      },
+      {
+        "type": "text",
+        "text": "**%v{ ... %v}** metni alt simge yapar ve küçültür. Örnek: **%v{tiefgestellt%v}**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUc_54725791.png",
+        "caption": "%v sonucu: küçültülmüş alt simge"
+      },
+      {
+        "type": "text",
+        "text": "**%C{renk| ... %C}** metne renk verir; 0 ile 255 arası sayılarla ALLPLAN'ın 256 standart rengini kullanırsınız. Örnek: **%C{109|Textfarbe helles rot%C}** açık kırmızı yazar."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUd_d3cf7e59.png",
+        "caption": "%C{109| sonucu: açık kırmızı metin"
+      },
+      {
+        "type": "text",
+        "text": "**İkinci grup:** Bu biçimlendirmeleri metin düzenleyicide de kullanırsınız, ama orada kontrol karakterleri görünür kalır; etkisini yalnız çizim dosyasında görürsünüz. Hepsi satır sonuna kadar etkilidir ya da karşıt kodla sıfırlanmalıdır."
+      },
+      {
+        "type": "text",
+        "text": "**%+ ... %-** metni yukarı kaydırır, metin boyutu aynı kalır. Örnek: **%+stellt den Text hoch%-**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUe_c03297d4.png",
+        "caption": "%+ sonucu: yukarı kaydırılmış metin"
+      },
+      {
+        "type": "text",
+        "text": "**%- ... %+** metni aşağı kaydırır, metin boyutu aynı kalır. Örnek: **%-stellt den Text tief%+**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUf_58fe86c4.png",
+        "caption": "%- sonucu: aşağı kaydırılmış metin"
+      },
+      {
+        "type": "text",
+        "text": "**%< ... %>** metni büyütür. Örnek: **%<vergrößert den Text%>**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUg_a2554d5e.png",
+        "caption": "%< sonucu: büyütülmüş metin"
+      },
+      {
+        "type": "text",
+        "text": "**%> ... %<** metni küçültür. Örnek: **%>verkleinert den Text%<**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUh_a658d614.png",
+        "caption": "%> sonucu: küçültülmüş metin"
+      },
+      {
+        "type": "text",
+        "text": "**%C** ve tek haneli bir renk numarası metne renk verir; yalnız 0-9 renkleri kullanılabilir. Örnek: **%C4Textfarbe0-9**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUi_6e04d44d.png",
+        "caption": "%C4 sonucu: tek haneli renk numarasıyla yeşil metin"
+      },
+      {
+        "type": "text",
+        "text": "**Çerçeve ve şekil kodları:** **%UA ... %UE** metnin altını çizer ve metin düzenleyicide de kullanılır. Örnek: **%UAUnterstrichen (auch im Texteditor verwendbar)%UE**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUj_398de32d.png",
+        "caption": "%UA sonucu: altı çizili metin"
+      },
+      {
+        "type": "text",
+        "text": "**%EA ... %EE** metni köşeli bir çerçeveye alır. Örnek: **%EARahmen Eckig%EE**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUk_d6a90fde.png",
+        "caption": "%EA sonucu: köşeli çerçeveli metin"
+      },
+      {
+        "type": "text",
+        "text": "**%ET** köşeli çerçevede ayırma çizgisi oluşturur. Örnek: **Trennstrich für eckig%ET**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUl_9a528c79.png",
+        "caption": "%ET sonucu: metnin sonunda köşeli ayırma çizgisi"
+      },
+      {
+        "type": "text",
+        "text": "**%RA ... %RE** metni yuvarlak bir çerçeveye alır. Örnek: **%RARahmenrund%RE**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUm_b2051e64.png",
+        "caption": "%RA sonucu: yuvarlak çerçeveli metin"
+      },
+      {
+        "type": "text",
+        "text": "**%RT** yuvarlak çerçevede ayırma çizgisi oluşturur. Örnek: **Trennstrich für rund%RT**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUn_e9831538.png",
+        "caption": "%RT sonucu: metnin sonunda yuvarlak ayırma çizgisi"
+      },
+      {
+        "type": "text",
+        "text": "**%K** ve 0-9 arası bir sayı (bitiş **%KE**) daire çizer; sayı dairenin çapını belirler. 0 ayarında daire, satır sonuna ya da %KE ile belirlenen bitişe kadarki metni çevreleyecek büyüklükte oluşur. Örnek: **%K3Kreis**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUo_5fff0ce3.png",
+        "caption": "%K3 sonucu: daire içinde Kreis"
+      },
+      {
+        "type": "text",
+        "text": "**%N** ve 0-9 arası bir sayı (bitiş **%NE**) sekizgen çizer; sayı anahtar ağzı genişliğini belirler, 0 ayarında metni çevreleyecek büyüklükte oluşur. Örnek: **%N4Achteck**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUp_1225f5a8.png",
+        "caption": "%N4 sonucu: sekizgen içinde Achteck"
+      },
+      {
+        "type": "text",
+        "text": "**%V** ve 0-9 arası bir sayı (bitiş **%VE**) eşkenar dörtgen çizer; sayı genişliği belirler, 0 ayarında metni çevreleyecek büyüklükte oluşur. Örnek: **%V3Raute**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUq_c497072a.png",
+        "caption": "%V3 sonucu: eşkenar dörtgen içinde Raute"
+      },
+      {
+        "type": "text",
+        "text": "**Koşullu biçimlendirme örnekleri:** Biçimlendirmelerle etiketlerde çok çeşitli gösterimler elde edersiniz. Temel fikir, metni birden fazla parçadan birleştirmek ve her parçayı bir koşulla belirlemektir. İlk örnek, 20 m²'den büyük mahallerin adını kırmızı, küçüklerini mavi yazar: **(_IF_(@93@>20)\"%C{109|\"_ELSE_\"%C{122|\")+@507@+\"%C}\"**, nitelik adlarıyla **(_IF_(Grundfläche_DIN277>20)\"%C{109|\"_ELSE_\"%C{122|\")+Bezeichnung+\"%C}\"**."
+      },
+      {
+        "type": "text",
+        "text": "Koşul (_IF_/_ELSE_) mahalin taban alanını kontrol eder: alan 20'den büyükse birinci renk, değilse ikinci renk kullanılır. Ardından Ad (Bezeichnung) niteliği eklenir ve son olarak bitiş dizisi yerleştirilir. Sonuç:"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUr_8a5e26d6.png",
+        "caption": "35 m² mahal: adı açık kırmızı"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUs_6bc57392.png",
+        "caption": "12,61 m² mahal: adı mavi"
+      },
+      {
+        "type": "text",
+        "text": "İkinci örnekte mahal adının rengi alana göre yeşilin 64 ile 79 arasındaki tonlarında değişir ve 50 m²'den itibaren en açık ton kullanılır: **\"%C{\"+(_IF_(@93@<50)(64+(@93@*15/50))_ELSE_\"79\")+\"|\"+@507@+\"%C}\"**, nitelik adlarıyla **\"%C{\"+(_IF_(Grundfläche_DIN277<50)(64+(Grundfläche_DIN277*15/50))_ELSE_\"79\")+\"|\"+Bezeichnung+\"%C}\"**."
+      },
+      {
+        "type": "text",
+        "text": "Parçalar şöyle çalışır: **\"%C{\"+** renk biçimlendirmesini başlatır; **(_IF_(@93@<50)(64+(@93@*15/50))_ELSE_\"79\")** 64 ile 79 arasındaki rengi hesaplar; **+\"|\"+** biçimlendirmenin gerektirdiği ayırma çizgisidir; **@507@** gösterilecek ifadedir; **+\"%C}\"** biçimlendirmeyi kapatır. Zor kısım rengin hesaplanmasıdır: **_IF_(@93@<50)** taban alanını 50 ile karşılaştırır, alan 50 m²'den büyükse _ELSE_ devreye girer ve renk 79 olur; **(64+(@93@*15/50))** ilk yeşil ton olan 64'e, alanın 15 kademe ve en büyük alana oranlanmış değerini ekler. Sonuç:"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUt_33c72e0a.png",
+        "caption": "35 m² mahal: orta yeşil ton"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUu_52a880f7.png",
+        "caption": "44,42 m² mahal: açık yeşil ton"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10641_0EM7U000001TdUv_029f8502.png",
+        "caption": "6,31 m² mahal: koyu yeşil ton"
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Örnek temsili seçilmiştir; uygulamaya daha yakın bir örnek, net kapı yüksekliği gibi bir değerin kontrol edilmesidir."
       }
     ]
   },

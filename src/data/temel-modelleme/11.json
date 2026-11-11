@@ -128,38 +128,114 @@
       },
       {
         "type": "text",
-        "text": "Kolonun kendi nitelikleri dogrudan etiketleme ve metraj icin kullanilabilir; bagli bosluklarin ve bitisik elemanlarin nitelikleri formullerle kismen elde edilir. `Uzunluk (Lange)` ilk tanimli kenar yonundeki en buyuk uzanimi, `Kalinlik (Dicke)` bu kenara dik ortalama uzanimi, `Yukseklik (Hohe)` ortalama yuksekligi verir; dairesel kolonlarda `Uzunluk` ve `Kalinlik` icin deger uretilmez. `Yaricap (Radius)` yalnizca dairesel kolonda verilir, aksi halde 0.00'dir."
+        "text": "Bu derste yerleştirdiğiniz kolonların kendi nitelikleri etiket stilleri ve metraj için doğrudan kullanılabilir. Kolona bağlı alt elemanların (pencere, kapı-pencere, kapı, niş, rezervasyon gibi boşluklar) ve kolona bitişen diğer elemanların nitelikleri, yapı elemanı ilişkilerini değerlendiren formüllerle kısmen etiketlenebilir."
       },
       {
         "type": "text",
-        "text": "Alan nitelikleri kolonun kabugunu farkli tanimlar: `Taban Alani (Grundflache)` bosluklari minha etmeden konstruksiyon alanini, `Zemin Alani (Bodenflache)` zemine inen bosluklari dusurerek alt yuzeyi, `Tavan Alani (Deckenflache)` uste ulasan bosluklari dusurerek ust yuzeyi, `Yan Yuzey Alani (Seitenflache)` kalip alanini verir. `Minha Hacmi (Abzugsvolumen)` tum bosluklarin toplamini (negatif), `Net Hacim (Netto-Volumen)` bosluklar dusulmus hacmi, `Hacim (Volumen)` brut hacmi verir."
+        "text": "**OK ve Üst Kenar (Oberkante) (@98@, @113@):** Kolonun 0.00 üzerindeki ortalama üst kenarı. **UK ve Alt Kenar (Unterkante) (@97@, @112@):** Kolonun 0.00 üzerindeki ortalama alt kenarı."
+      },
+      {
+        "type": "text",
+        "text": "**Uzunluk (Länge, @220@), Kalınlık (Dicke, @221@), Yükseklik (Höhe, @222@):** Kolonun ilk noktasından yola çıkılarak Uzunluk, kolonda tanımlanan ilk kenar yönündeki (poligonal kolonlarda ilk noktadan sonraki kenar) en büyük uzanımdır. Yükseklik ortalama yüksekliktir; Kalınlık, ilk kenara dik ortalama uzanımdır. **Mutlak_Yükseklik (Höhe_absolut, @204@)** kolonun en büyük yüksekliğini verir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11400_0EM7U000001Td8J_9480b8ac.png",
+        "caption": "Kolon görünüşü: Höhe 2,96, Höhe_absolut 3,61; planda poligonal kolon kesiti"
+      },
+      {
+        "type": "text",
+        "text": "**Mutlak_Uzunluk (Länge_absolut, @198@)** ve **Mutlak_Kalınlık (Dicke_absolut, @199@)** Uzunluk ve Kalınlık ile aynı değerleri verir. Kolonun biçimine göre, örneğin dairesel kolonlarda, Uzunluk ve Kalınlık için değer verilmez. Nemetschek profil kataloğundan alınan kesitlerde Kalınlık, Mutlak_Kalınlık'tan farklı bir değer taşır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11400_0EM7U000001Td8K_ccb4c51c.png",
+        "caption": "Poligonal kolon kesiti: ilk kenar 1,62, en büyük uzunluk 2,02, kalınlık 36,5, eğik kenar 54"
+      },
+      {
+        "type": "text",
+        "text": "**Çevre (Umfang, @228@)** kolonun tüm kenar uzunluklarının toplamıdır. **Yarıçap (Radius, @107@)** yalnız dairesel kolonda verilir, diğerlerinde her zaman 0.00'dır."
+      },
+      {
+        "type": "text",
+        "text": "**Alan nitelikleri:** Kolonun kabuğunu farklı biçimlerde tanımlar. **Taban Alanı (Grundfläche, @224@)** tüm taban alanıdır; tabana kadar inen boşluklar düşülmez: örnekte 2,00 x 0,365 = 0,730 m². **Zemin Alanı (Bodenfläche, @293@)** tabana kadar inen boşlukları düşer: 2,00 x 0,365 - 0,20 x 0,125 = 0,705 m². **Tavan Alanı (Deckenfläche, @294@)** en üst yüzeydir; üst kenara kadar uzanan boşluklar düşülür: 2,00 x 0,365 - 2 x (0,20 x 0,125) = 0,680 m². **Alan (Fläche, @229@)** ortalama uzanımla düşey alandır, boşluklar düşülmez. **Yan Yüzey Alanı (Seitenfläche, @295@)** kalıp alanıdır, tüm boşluklar dikkate alınır. Taban, tavan ve zemin alanı üst ve alt bitişi, alan ve yan yüzey alanı düşey yüzeyi tanımlar."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11400_0EM7U000001Td8L_eea189e7.png",
+        "caption": "Alan örneği: dikdörtgen, yuvarlatılmış, pahlı, dairesel ve altıgen kolonlar ile 2,00 m uzunlukta, nişli ve bitişik elemanlı (kırmızı) kolon"
+      },
+      {
+        "type": "text",
+        "text": "**Hacimler:** **Minha Hacmi (Abzugsvolumen, @227@)** kolondaki tüm boşlukların toplamıdır, değer **negatiftir**. **Net Hacim (Netto-Volumen, @226@)** Hacim ile Minha Hacminin toplamıdır, yani tüm boşluklar düşülmüştür. **Hacim (Volumen, @223@)** kesintisiz (brüt) hacimdir."
+      },
+      {
+        "type": "text",
+        "text": "**Birim ve miktarlar:** **Birim (Einheit, @202@)** kolonun özelliklerinde ayarlı birimi ya da hakediş birimini verir. **Miktar (Menge, @201@)** ayarlı birime göre hacmi (m³), zemin alanını (m²), adedi ya da yüksekliği (m) verir; imalat kalemi ayarı değerleri etkiler. **Net Miktar (Nettomenge, @99@)** net hacmi, zemin alanını, adedi ya da yüksekliği verir; tüm boşluklar dikkate alınır. **VOB_Miktarı (VOB_Menge, @100@)** aynı büyüklükleri verir, ama boşlukları ayarlı imalat kaleminin kurallarına göre dikkate alır; kalem ya da hakediş kuralı yoksa tüm boşluklar dikkate alınır. **İmalat Kalemi (Gewerk, @209@)** metin biçiminde kalemi, sayı biçiminde (örneğin I10, F8.2) kalem numarasını verir. **VOB_Alanı (@81@), VOB_Hacmi (@82@) ve VOB_Uzunluğu (@80@)** alanı, hacmi ve uzunluğu varsa VOB kurallarına göre verir; birim sırasıyla m², m³ ve m olduğunda VOB_Miktarı'na eşittir."
+      },
+      {
+        "type": "text",
+        "text": "**İç ve dış köşeler:** **İç_Köşe_Sayısı (Anzahl_Innenecken, @91@)** ve **Dış_Köşe_Sayısı (Anzahl_Außenecken, @92@)** yapı elemanının köşelerini sayar; iç köşeler daha dar, dış köşeler daha geniş açılıdır. Sınır açı 180° - 360° / 19 = 161,0526316° olarak hesaplanır. Çokgen bir kolonda en fazla 19 köşe tanınır; 19'dan fazla köşeli kolon dairesel sayılır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11400_0EM7U000001Td8M_eca6d3ed.png",
+        "caption": "Köşe sayımı örneği: İç köşe 4, dış köşe 1"
+      },
+      {
+        "type": "text",
+        "text": "**Yalnız Nemetschek Profil Kataloğu'ndan profil alan kolonlarda:** **Profil Adı (Profilname, @1426@)** katalogdan gelen profilin adını taşır; böyle bir profil devralındığında elemana ek nitelikler otomatik eklenir. **Yanal Yüzey Alanı/mtül (Mantelfläche/lfm, @1440@)** profil uzunluğunun metresi başına yüzey alanıdır. **Kesit Alanı (Querschnittsfläche, @1446@)** profilin kesit alanıdır."
+      },
+      {
+        "type": "text",
+        "text": "Zemin Alanı, Tavan Alanı, Yan Yüzey Alanı, Orta Alan, Miktar, Net Miktar, VOB_Miktarı, VOB_Alanı, VOB_Uzunluğu ve VOB_Hacmi en fazla **Seçenekler (Optionen) -> İzlenebilir Metraj Yaklaşımları (Nachvollziehbare Mengenansätze) -> Alt alanların ondalık basamak sayısı (Anzahl der Nachkommastellen der Teilflächen)** altında ayarlı basamak sayısını gösterir."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11400_0EM7U000001Td8N_b5050b7a.png",
-        "caption": "Kolonun geometrik ve metraj niteliklerinin ekranda listelenmesi."
+        "caption": "İzlenebilir Metraj Yaklaşımları: Alt alanların ondalık basamak sayısı 4"
       },
       {
         "type": "text",
-        "text": "Nemetschek Profil Katalogu'ndan (Nemetschek Profilkatalog) profil devralinan kolonlarda `Profil Adi (Profilname)`, `Yanal Yuzey Alani/mtul (Mantelflache/lfm)` ve `Kesit Alani (Querschnittsflache)` gibi ek nitelikler otomatik eklenir. Ic/dis kose sayiminda sinir aci 180 - 360 / 19 = 161,0526316 derece olarak hesaplanir; cokgen kolonda en cok 19 kose taninir, fazlasi dairesel sayilir."
+        "text": "**Farklı geometrilerde sonuçlar:** Etiketlemenizi nerede kullanacağınıza göre karşılaşacağınız temel biçimleri kontrol edin; düzensiz bir biçim etiket sonuçlarını belirgin biçimde değiştirebilir. Örneklerde dairesel ve altıgen kolonda Uzunluk ve Kalınlık 0 çıkarken mutlak değerler dolu gelir; yuvarlatılmış köşeli kolonda köşe sayılmaz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11400_0EM7U000001Td8O_dcd9f63a.png",
+        "caption": "Dikdörtgen kolon 49 x 36,5: İç köşe 4, Länge 0,490, Dicke 0,365, Umfang 1,710, Radius 0"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11400_0EM7U000001Td8P_54816fa9.png",
+        "caption": "Dairesel kolon, çap 36,5: Länge ve Dicke 0, Länge_absolut ve Dicke_absolut 0,365, Umfang 1,148, Radius 0,183"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11400_0EM7U000001Td8Q_9d593dda.png",
+        "caption": "Altıgen kolon: İç köşe 6, Länge ve Dicke 0, Länge_absolut 0,365, Dicke_absolut 0,316, Umfang 1,095"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11400_0EM7U000001Td8R_5a9eaccd.png",
+        "caption": "Pahlı köşeli kolon 49 x 36,5: İç köşe 8, Länge 0,490, Dicke 0,365, Umfang 1,476"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11400_0EM7U000001Td8S_59fb3c34.png",
+        "caption": "Yuvarlatılmış köşeli kolon 49 x 36,5: İç köşe 0, Länge 0,490, Dicke 0,365, Umfang 1,538"
+      },
+      {
+        "type": "text",
+        "text": "**Nemetschek profilleriyle sonuçlar:** Profil kolonlarda Uzunluk, Kalınlık ve mutlak değerler profil biçimine göre farklılaşır."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11400_0EM7U000001Td8T_ff975fb9.png",
-        "caption": "Nemetschek profilli kolonlarda nitelik sonuc ornekleri."
-      },
-      {
-        "type": "heading",
-        "text": "Nitelikler - Sarkık Kiriş (Unterzug) İçin Genel Bakış"
+        "caption": "Profil örnekleri (T 140, HEM 360, I 360, HSS 355.6X355.6X15.9, CFCHS 355.6X12.5, U 350): köşe sayıları, Länge, Dicke, mutlak değerler, çevre ve yarıçap"
       },
       {
         "type": "text",
-        "text": "Sarkik kirisin kendi nitelikleri dogrudan metraj ve etiketleme icin kullanilabilir. Sarkik kirislere pencere, kapi veya Fransiz balkon kapisi (Fenstertur) yerlestirilemez. `Uzunluk (Lange)` ve `Mutlak_Uzunluk (Lange_absolut)` aks yonunde, `Yukseklik (Hohe)` Z yonunde olculur; `Kalinlik (Dicke)` kirisin genisligini verir. `Yaricap (Radius)` duvardan farkli olarak dairesel kiriste bile degerlendirilmez, her zaman 0.00'dir. `Minha Hacmi (Abzugsvolumen)` sarkik kiriste kullanilmaz; bosluk farki, `Net Hacim (Netto-Volumen)` ile brut `Hacim (Volumen)` arasindan hesaplanir. Alt/ust objelere `PARENT()` ve `CHILD()` formulleriyle erisilir (orn. `CHILD(@215@)`)."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/9163_0EM7U000001Td8p_b5050b7a.png",
-        "caption": "Sarkik kirisin geometrik ve metraj niteliklerinin genel gorunumu."
+        "text": "**Boşluk bilgileri - CHILD(...):** Boşluklar kolonun alt öğeleridir. Örneğin bir kolondaki boşlukların sayısını bulmak için CHILD() ile aşağıya, alt objeye bakarsınız; bu yön çoğunlukla birden fazla obje içerdiğinden tekil değildir. **CHILD(@215@)** doğrudan kolona bağlı alt objelerin sayısını verir. **CHILD(_IF_(@OBJ@=22)@215@_ELSE_0)** bir _IF_ _ELSE_ sorgusuyla alt objeleri bir özelliğe (örneğin @OBJ@ obje numarası) göre süzer ve yalnız belirli bir türün sayısını verir."
       },
       {
         "type": "heading",
@@ -167,12 +243,85 @@
       },
       {
         "type": "text",
-        "text": "Kolon etiketlemede, kolonun dogrudan nitelikleri bir etiket stili (Beschriftungsbild) veya obje etiketi ile cikti olarak verilir. Toplam duvara veya ust objeye `PARENT(@XYZ@)` ile erisilir (orn. `PARENT(@220@)` toplam kalinlik, `PARENT(@107@)` daire yaricapi); bu yon tekil ve net deger uretir. Alt objelere (bosluklar) `CHILD()` ile bakilir: `CHILD(@215@)` dogrudan bagli alt obje sayisini verir (yapi elemani aksi dahil, en az 1,00); `CHILD(_IF_(@OBJ@=22)@215@_ELSE_0)` ise belirli bir obje turunun adedini verir. `Zemin Alani (Bodenflache)`, `Tavan Alani`, `Yan Yuzey Alani`, `Miktar (Menge)`, `Net Miktar (Nettomenge)` ve `VOB_...` nitelikleri, Secenekler - Izlenebilir Metraj Hesaplari altinda ayarlanan ondalik basamak sayisini gosterir."
+        "text": "Kolonu bir etiket stiliyle (Beschriftungsbild) ya da obje etiketiyle etiketlediğinizde yukarıdaki genel bakıştaki kolon nitelikleri doğrudan yazdırılır; bağlı boşlukların ve bitişen elemanların nitelikleri formüllerle kısmen etiketlenir."
+      },
+      {
+        "type": "text",
+        "text": "Etiketteki alan ve miktar değerlerinin kaç ondalıkla görüneceğini de aynı ayar belirler: Zemin Alanı, Tavan Alanı, Yan Yüzey Alanı, Orta Alan, Miktar, Net Miktar ve VOB nitelikleri en fazla **İzlenebilir Metraj Yaklaşımları (Nachvollziehbare Mengenansätze)** altında ayarlı alt alan ondalık sayısını gösterir. Etiketiniz beklediğinizden az basamak gösteriyorsa önce bu ayarı kontrol edin."
+      },
+      {
+        "type": "heading",
+        "text": "Nitelikler - Sarkık Kiriş (Unterzug) İçin Genel Bakış"
+      },
+      {
+        "type": "text",
+        "text": "Bu derste oluşturduğunuz sarkık kirişlerin (Unterzug) kendi nitelikleri doğrudan metraj ve etiketleme için kullanılabilir. Kirişe bağlı alt elemanların (niş, rezervasyon gibi boşluklar) ve kirişe birleşen diğer elemanların nitelikleri formüllerle kısmen etiketlenebilir. **Not:** Sarkık kirişlere pencere, kapı ya da kapı-pencere (Fenstertür) yerleştirilemez."
+      },
+      {
+        "type": "text",
+        "text": "**OK ve Üst Kenar (Oberkante) (@98@, @113@), UK ve Alt Kenar (Unterkante) (@97@, @112@):** Kirişin 0.00 kotuna göre ortalama üst ve alt kenar kotları."
+      },
+      {
+        "type": "text",
+        "text": "**Uzunluk (@220@), Kalınlık (@221@), Yükseklik (@222@) ve mutlak değerler (@198@, @199@, @204@):** Kalınlık ve Yükseklik geometriyi ortalama değerlerle verir. Uzunluk, Mutlak_Uzunluk, Mutlak_Kalınlık ve Mutlak_Yükseklik en büyük değerleri verir. Uzunluk her zaman aks yönünde, Yükseklik Z yönünde ölçülür; Kalınlık kirişin genişliğidir. Yönler tek kiriş parçasının uzunluğundan bağımsızdır. Mutlak_Kalınlık konik kirişlerde en büyük kalınlığı verir. Nemetschek profil kataloğundan gelen kesitlerde Kalınlık, Mutlak_Kalınlık'tan farklı bir değer taşır."
       },
       {
         "type": "image",
-        "src": "/akademi/temel-modelleme/11311_0EM7U000001TdDa_b5050b7a.png",
-        "caption": "Kolon etiket stilinde kullanilabilen nitelikler ve formul referanslari."
+        "src": "/akademi/temel-modelleme/9163_0EM7U000001Td8l_46000e65.png",
+        "caption": "Kiriş görünüşü: Höhe 2,96, Höhe_absolut 3,61; planda konik kiriş, Länge_absolut/Länge 3,365"
+      },
+      {
+        "type": "text",
+        "text": "**Çevre (Umfang, @228@)** tüm kenar uzunluklarının toplamıdır. **Yarıçap (Radius, @107@)** duvarın aksine dairesel kirişlerde bile değerlendirilmez ve her zaman 0.00'dır."
+      },
+      {
+        "type": "text",
+        "text": "**Alan nitelikleri:** **Taban Alanı (Grundfläche, @224@)** kirişin tüm taban izdüşüm alanıdır; tabana inen boşluklar düşülmez: örnekte 5,55 x 0,365 = 2,026 m². **Zemin Alanı (Bodenfläche, @293@)** kiriş alt kenarına kadar inen boşlukları düşer: 5,55 x 0,365 - 0,365 x 1,01 = 1,657 m². **Tavan Alanı (Deckenfläche, @294@)** en üst yüzeydir; üst kenara kadar uzanan boşluklar düşülür: 5,55 x 0,365 - (0,20 x 1,01) = 1,824 m². **Alan (Fläche, @229@)** düşey kabuk alanıdır, boşluklar düşülmez. **Yan Yüzey Alanı (Seitenfläche, @295@)** kalıp alanıdır; tüm boşluklar dikkate alınır, birleşen elemanlar düşülür. Taban, tavan ve zemin alanı üst ve alt sınır yüzeylerini, alan ve yan yüzey alanı düşey yüzeyleri verir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9163_0EM7U000001Td8n_c8568f86.png",
+        "caption": "Alan örneği: 5,55 m kiriş; Grundfläche rezervasyon dahil, Bodenfläche rezervasyon hariç, Deckenfläche niş hariç; birleşen eleman gri"
+      },
+      {
+        "type": "text",
+        "text": "**Hacimler:** **Minha Hacmi (Abzugsvolumen, @227@)** sarkık kirişte kullanılmaz. **Net Hacim (Netto-Volumen, @226@)** boşluklar düşüldükten sonraki hacimdir; minha hacmini net hacim ile brüt hacim arasındaki farktan hesaplarsınız. **Hacim (Volumen, @223@)** boşluksuz (brüt) hacimdir."
+      },
+      {
+        "type": "text",
+        "text": "**Birim ve miktarlar:** **Birim (@202@)** özelliklerde ayarlı birimi ya da hakediş birimini verir. **Miktar (@201@)** ayarlı birime göre hacmi (m³), zemin alanını (m²), adedi ya da uzunluğu (m) verir; imalat kalemi ayarı değerleri etkiler. **Net Miktar (@99@)** net hacmi, zemin alanını, adedi ya da yüksekliği verir; tüm boşluklar dikkate alınır. **VOB_Miktarı (@100@)** hacmi, zemin alanını, adedi ya da uzunluğu verir; boşluklar ayarlı imalat kaleminin kurallarına göre, kalem ya da kural yoksa tümüyle dikkate alınır. **İmalat Kalemi (@209@)** metin biçiminde kalemi, sayı biçiminde numarasını verir. **VOB_Alanı (@81@)** zemin alanını, **VOB_Hacmi (@82@)** hacmi, **VOB_Uzunluğu (@80@)** uzunluğu varsa VOB kurallarına göre verir; birim sırasıyla m², m³ ve m olduğunda VOB_Miktarı'na eşittir."
+      },
+      {
+        "type": "text",
+        "text": "**İç ve dış köşeler (@91@, @92@):** İç köşeler daha dar, dış köşeler daha geniş açılıdır; sınır açı 180° - 360° / 19 = 161,0526316°. Kat planındaki köşeler değerlendirilir ve yalnız elemanın kendi köşeleri sayılır; çizgisel girişle art arda oluşturulan kirişlerin birleşiminden doğan köşeler sayılmaz."
+      },
+      {
+        "type": "text",
+        "text": "**Yalnız Nemetschek profil kataloğundan profil alan kirişlerde:** **Profil Adı (@1426@)**, **Yanal Yüzey Alanı/mtül (Mantelfläche/lfm, @1440@)** ve **Kesit Alanı (Querschnittsfläche, @1446@)** nitelikleri kolondaki gibi eklenir."
+      },
+      {
+        "type": "text",
+        "text": "Alan ve miktar nitelikleri en fazla **Seçenekler (Optionen) -> İzlenebilir Metraj Yaklaşımları (Nachvollziehbare Mengenansätze) -> Alt alanların ondalık basamak sayısı (Anzahl der Nachkommastellen der Teilflächen)** altında ayarlı basamak sayısını gösterir."
+      },
+      {
+        "type": "text",
+        "text": "**Boşluk bilgileri - CHILD(...):** Boşluklar kirişin alt öğeleridir. **CHILD(@215@)** kirişe doğrudan bağlı alt objelerin sayısını, **CHILD(_IF_(@OBJ@=22)@215@_ELSE_0)** yalnız belirli bir obje türünün sayısını verir. Bu yön birden fazla obje içerebileceğinden tekil değildir."
+      },
+      {
+        "type": "heading",
+        "text": "YENİLİK 2024 - Eğimli Taşıyıcı Sistem Kolonu"
+      },
+      {
+        "type": "text",
+        "text": "ALLPLAN 2024 sürümüyle **eğimli taşıyıcı sistem kolonu (Geneigte Tragwerksstütze)** geldi."
+      },
+      {
+        "type": "heading",
+        "text": "PythonParts - Genişleyen Kolon (Stütze expandierend)"
+      },
+      {
+        "type": "text",
+        "text": "Kolonları PythonParts içindeki **Genişleyen Kolon (Stütze expandierend)** parametrik nesnesiyle de modelleyebilirsiniz."
       }
     ]
   },

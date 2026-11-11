@@ -132,144 +132,33 @@
   "deepDive": {
     "blocks": [
       {
-        "type": "text",
-        "text": "Bükülmüş yuvarlak çelikleri (etriye veya serbest büküm formları) tanımlamak için genellikle Çubuk Formu (Stabform) aracını kullanırsınız. Ancak büküm tanımını önce sıfırdan çizmeniz gerektiğinde ve benzer çubukları plan üzerinde başka bir yönde yeniden üretmek istediğinizde bu yol zaman alır. Allplan'da bu işi kolaylaştıran özel bir komut vardır: Elemanı Dönüştür, Devral (Element wandeln, übernehmen)."
-      },
-      {
-        "type": "heading",
-        "text": "Donatı - Özel Büküm Formlarının Hızlı Üretimi"
-      },
-      {
-        "type": "text",
-        "text": "**1. Elemanı Dönüştür, Devral ile üretim.** Bu fonksiyon 2B ve 3B eskizleri büküm formlarına dönüştürmek için geliştirilmiştir. Önce büküm eksenini basit bir çizgi veya poligon çizgisiyle çizer, sonra bu eskizi gerçek bir donatı çubuğuna çevirirsiniz."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/8713_0EM67000008DTjo_4f27ff30.png",
-        "caption": "Büküm formuna dönüştürülecek 2B/3B eskiz."
-      },
-      {
-        "type": "text",
-        "text": "Fonksiyonu başlatın ve eskizleri işaretleyin. Açılan Elemanı Dönüştür, Devral (Element wandeln, übernehmen) penceresinde çubuk özelliklerini (çap, çelik kalitesi, poz ve benzeri) tanımlayabilirsiniz."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/8713_0EM67000008DXkH_153b9716.png",
-        "caption": "Çubuk özelliklerinin tanımlandığı Elemanı Dönüştür, Devral penceresi."
-      },
-      {
-        "type": "text",
-        "text": "OK ile çubuk oluşturulur ve etiketini (Beschriftung) yerleştirebilirsiniz. Allplan köşelerde çapa karşılık gelen büküm rulosu çapını (Biegerollendurchmesser) otomatik kullanır. Ardından çubuğu her zamanki gibi döşeyebilirsiniz."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/8713_0EM67000008DTQ4_d5f2622b.png",
-        "caption": "Oluşturulan çubuk ve yerleştirilen poz etiketi."
-      },
-      {
-        "type": "text",
-        "text": "**2. Devral ile mevcut formu kopyalama.** Bir çubuğu poligon çizgisinden ürettiyseniz, bu çubuğu doğrudan başka bir elemana kopyalayamazsınız."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/8713_0EM67000008DTlQ_8fc16201.png",
-        "caption": "Poligon çizgisinden üretilmiş, doğrudan kopyalanamayan çubuk."
-      },
-      {
-        "type": "text",
-        "text": "Bunun yerine aynı Elemanı Dönüştür, Devral (Element wandeln, übernehmen) fonksiyonuyla çubuğu iki tıklamada yeni elemana devredebilirsiniz. Bu sırada yeni bir poz numarası atanabilir, ancak mevcut büküm formunu aktarmanın hızlı ve güvenli yolu budur."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/8713_0EM67000008DTmO_2d08672b.png",
-        "caption": "Mevcut büküm formunun iki tıklamada yeni elemana devredilmesi."
-      },
-      {
-        "type": "text",
-        "text": "**Kontrol notu.** Çubukları ürettikten sonra tanımlarının doğru olduğunu mutlaka kontrol edin. Fonksiyon genel ön ayarları dikkate almaz ve büküm formunu yalnızca verdiğiniz eksene (poligon çizgisi veya çizgi) göre hesaplar. Bu kontrolü yapmazsanız yuvarlak çelik cetvelindeki (Rundstahl-Auszug) diğer çubuklarla ve hesaplanan boylarla farklar oluşabilir."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/8713_0EM67000008DTnH_dcf2e41b.png",
-        "caption": "Üretilen çubuğun büküm tanımının doğrulanması."
-      },
-      {
         "type": "heading",
         "text": "Etiket Stilleri - Formül Koleksiyonu - Koşullar için örnekler (mantıksal uygunluk kontrolleri ve benzerleri)"
       },
       {
         "type": "text",
-        "text": "Durum 1 - Poz numarasını koşula göre çerçeveleme: Yapı elemanlarına genellikle daire (%K0) içinde poz numarası verilir; bir değişiklikte bazı elemanlar yeniden numaralanıp ilave/revizyon pozu (Nachtragsposition) alır. Poz numarası için Positionsnummer (@194@), ilave poz işareti için TextPos (@1311@) niteliği kullanılır. %K0 metni çevreleyen daire, %N0 sekizgen oluşturur."
+        "text": "Donatı lejantlarında ve etiketlerinde poz numaralarının çerçevesini bir koşula bağlayabilirsiniz. Yapı elemanlarının poz numaraları genellikle bir daire (%K0) içinde gösterilir. Bir değişiklikte elemanların bir kısmı yeniden numaralanır ve ilave (revizyon) pozu (Nachtragsposition) olarak işaretlenir."
       },
       {
         "type": "text",
-        "text": "Formül (biçim örn. A30): _IF_(@1311@=\"N*\")\"%N0\"+@194@+\" \"+@1311@_ELSE_\"%K0\"+@194@"
+        "text": "Örnekte poz numarası için **Positionsnummer (@194@)**, ilave pozu işaretlemek için **TextPos (@1311@)** niteliği kullanılıyor. **%K0** ardından gelen metne bağlı çapta bir daire, **%N0** ardından gelen metne bağlı büyüklükte bir sekizgen oluşturur."
       },
       {
         "type": "text",
-        "text": "TextPos içeriği 'N' ile başlıyorsa poz sekizgenle, aksi halde daireyle gösterilir. Örneğin TextPos'a N1 girilince o poz sekizgenle işaretlenir."
+        "text": "İstenen değişikliği TextPos niteliğine bağlı olarak üreten formül: **_IF_(@1311@=\"N*\")\"%N0\"+@194@+\" \"+@1311@_ELSE_\"%K0\"+@194@**. Biçim olarak örneğin **A30** kullanın; isterseniz bir ön metin (örneğin pos.) ekleyebilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "Formül şöyle okunur: **_IF_(Kontrol)Çıktı1_ELSE_Çıktı2** kontrol doğruysa Çıktı1'i, değilse Çıktı2'yi verir. **_IF_(@1311@=\"N*\")** TextPos içeriği \"N\" ile başlıyorsa doğrudur. Bu durumda **\"%N0\"+@194@+\" \"+@1311@** sekizgen kontrol karakterini, poz numarasını, bir boşluğu ve TextPos'u birleştirir. Aksi hâlde **_ELSE_ \"%K0\"+@194@** daire kontrol karakteriyle poz numarasını verir."
+      },
+      {
+        "type": "text",
+        "text": "Bu etiket stiliyle etiketlenen bir elemanın poz numarası normalde daire içinde görünür. TextPos niteliğine örneğin **N1** (İlave 1, Nachtrag 1) girerseniz aynı poz sekizgen içinde, ilave işaretiyle görünür."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/10594_0EM7U000001TdD0_d534cfc8.png",
-        "caption": "Poz numarası normalde daire içinde; TextPos 'N' ile başlayınca sekizgen."
-      },
-      {
-        "type": "text",
-        "text": "Durum 2 - Kapı net geçiş yüksekliğini kontrol etme: Net geçiş yüksekliği (bitmiş döşeme üst kotundan kaba lento alt kotuna) hedefin altına düşerse bir uyarı, aksi halde hiçbir şey yazdırılmalıdır. Kapı yüksekliği Höhe (@222@, m) niteliğinden alınır. Belirleyici mahalin döşeme katman yapısı PARENT(Obj_Floor(@211@;1;2;3;4;5;6;7;8;9;10)) ile mm cinsinden hesaplanır (@211@ katman kalınlığı / Schichtdicke)."
-      },
-      {
-        "type": "text",
-        "text": "Yükseklik m, döşeme yapısı mm olduğundan 1000'e bölme gerekir. Hedef değerle karşılaştırma (biçim örn. A25):"
-      },
-      {
-        "type": "text",
-        "text": "_IF_((@222@-PARENT(Obj_Floor(@211@;1;2;3;4;5;6;7;8;9;10)/1000))<2,01)\"Türhöhe zu gering!\"_ELSE_\"\""
-      },
-      {
-        "type": "text",
-        "text": "Kontrol doğruysa (2,01 ile karşılaştırma) 'Türhöhe zu gering!' (Kapı yüksekliği çok düşük!) yazısı, aksi halde boş döner. Etiket stili oluşturmanın temellerini diğer SSS makalelerinde veya connect.allplan.com'da bulabilirsiniz."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/10594_0EM7U000001TdD1_295af95b.png",
-        "caption": "Net kapı yüksekliği 2,01 m'nin altına düşünce uyarı metni görünür."
-      },
-      {
-        "type": "heading",
-        "text": "Donatı - ISO 3766'ya Göre Açılım Ölçülendirmeli R-Donatısı Oluşturma"
-      },
-      {
-        "type": "text",
-        "text": "Soru: Dik açılı bükülmemiş bir donatıda açılımın (Auszug) kol uzunlukları ve büküm ölçüleri nasıl belirlenir? Kol uzunlukları ve ölçü çizgileri ISO 3766 (03.2004) standardına göre hesaplanır; ISO 3766, önceki ISO 4066 sürümünün yerini almıştır. Küçük farklar (Şekil 1'e göre en çok 2 mm) yuvarlama toleranslarından kaynaklanır."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/10887_0EM7U000001Te59_e98d7d43.png",
-        "caption": "Şekil 1: Dik açılı olmayan kolların ISO 3766'ya göre ölçülendirilmesi, gerçek demir gösterimiyle."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/10887_0EM7U000001Te5A_af8ec9ad.png",
-        "caption": "Şekil 2: Paftada açılım gösterimi (çubuk ekseni / Stabachse)."
-      },
-      {
-        "type": "text",
-        "text": "Kröpflü (gekröpftes Eisen) durumunda kröpf ölçüsü, düşey kolların her iki dış kenarı üzerinden alınır."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/10887_0EM7U000001Te5B_663aadc1.png",
-        "caption": "Şekil 3: Kröpflü (dirsekli) demirin ISO 3766'ya göre açılımı, gerçek demir gösterimiyle; kröpf ölçüsü düşey kolların dış kenarlarından."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/10887_0EM7U000001Te5C_3566f624.png",
-        "caption": "Şekil 4: Paftada açılım gösterimi (çubuk ekseni / Stabachse)."
-      },
-      {
-        "type": "text",
-        "text": "Not: Yanlış anlaşılmaları önlemek için büküm damgasına (Biegestempel) buna ilişkin bir bilgi eklemenizi öneririz."
+        "caption": "Poz numarası: normalde daire içinde (pos. 123), ilave pozda sekizgen içinde (pos. 123 N1)"
       },
       {
         "type": "heading",
@@ -277,73 +166,153 @@
       },
       {
         "type": "text",
-        "text": "Etiketlenmiş veriniz var ama orijinal etiket stilini bulamıyorsanız, ya da bir etiketin neyi değerlendirdiğini ve metrajla aynı değerleri almak için hangi niteliği değiştirmeniz gerektiğini bilmek istiyorsanız, kullanılan nitelikleri doğrudan çizim dosyasından okuyabilirsiniz."
+        "text": "Elinizde içeriği bilinmeyen, etiketlenmiş bir nesne varsa (örneğin donatı etiketleri olan bir iş arkadaşınızın çizimi) önce nasıl etiketlendiğini ayırt edin. **Etiket (Beschriften)** fonksiyonunda üç etiketleme türü vardır."
       },
       {
         "type": "text",
-        "text": "Durum 1 - Bir etiket stilinin içeriğini incelemek: Etiket Stili (Beschriftungsbild) fonksiyonunu çağırın, Giriş Seçenekleri (Eingabeoptionen) altından Oku (Lesen) seçeneğini seçin, incelenecek stili seçip çizim dosyasına yerleştirin. Etiket stiline göre birden fazla folyo (Folie) oluşur; tekil folyoların hangi ölçek/çizim tipiyle kaydedildiği okunamaz."
+        "text": "**Standart Etiket (Standardbeschriftung)** kullanıldıysa nesneyi aynı türle yeniden etiketlemeyi deneyin ve alan adlarından atamayı bulun."
       },
       {
         "type": "image",
-        "src": "/akademi/lejant/11307_0EM7U000001TdDB_0ed94683.png",
-        "caption": "Giriş Seçenekleri -> Oku (Lesen) ile mevcut bir etiket stilini çizime okutun."
+        "src": "/akademi/lejant/11307_0EM7U000001TdDH_88fa68de.png",
+        "caption": "Etiket araç çubuğunda Standart Etiket (Abc) simgesi"
       },
       {
         "type": "text",
-        "text": "Ardından Giriş Seçenekleri -> Modi altından bir metni (örneğin İşlev / Funktion) seçin. Etiket Stili araç çubuğu açılır ve temel ayarları gösterir."
+        "text": "**Etiket Stili (Beschriftungsbild)** ya da **Nesne Etiketi (Objektbeschriftung)** kullanıldıysa, hangisi olursa olsun içeriği şu adımlarla belirleyebilirsiniz."
       },
       {
         "type": "image",
-        "src": "/akademi/lejant/11307_0EM7U000001TdDD_11dc365c.png",
-        "caption": "Modi ile incelenecek satırı (burada İşlev / Funktion) seçin."
+        "src": "/akademi/lejant/11307_0EM7U000001TdDI_871593a3.png",
+        "caption": "Etiket Stili ve Nesne Etiketi simgeleri"
+      },
+      {
+        "type": "text",
+        "text": "**Etiket Stili (Beschriftungsbild)** fonksiyonunu açın."
       },
       {
         "type": "image",
-        "src": "/akademi/lejant/11307_0EM7U000001TdDE_6b6ec24d.png",
-        "caption": "Araç çubuğu: Format (çıktı biçimi, örn. A10 metin, F8.3 sayı, K15.3 kot), Anpass (ölçeğe uyum), DIM (birim) ve Info (nitelik/formül)."
+        "src": "/akademi/lejant/11307_0EM7U000001TdDJ_09a214c9.png",
+        "caption": "Kullanıcı Objeleri görevinde Etiket Stili simgesi"
       },
       {
         "type": "text",
-        "text": "Info düğmesi neyin etiketlendiğini açar. Doğrudan bir nitelik tanımlıysa nitelik seçimi, bir formül tanımlıysa formül açılır. Örneğin bir Alan hücresinde şu formül bulunabilir:"
-      },
-      {
-        "type": "text",
-        "text": "_IF_(@233@=3)@93@_ELSE_(_IF_(@264@=1)@197@_ELSE_@197@/@264@)"
+        "text": "Giriş Seçenekleri'nde **Modi**'yi seçin ve bir etiket stilinin ya da nesne etiketinin içinden herhangi bir metne tıklayın."
       },
       {
         "type": "image",
-        "src": "/akademi/lejant/11307_0EM7U000001TdDF_abd8da22.png",
-        "caption": "Alan_m² hücresinde koşul formülü; Flächenart_Wohnfläche KW (=3) ise Grundfläche_DIN277, değilse katsayısı çıkarılmış Wohnfläche_Ausbau değeri. Biçim F8.1."
-      },
-      {
-        "type": "text",
-        "text": "Üst nesneye erişim için PARENT() kullanılır. Bir mahal etiket stilinde PARENT(@507@) formülü, mahalin bağlı olduğu mahal grubunun adını (Bezeichnung) döndürür. Biçim A6 olduğundan uzun grup adları kesilir."
+        "src": "/akademi/lejant/11307_0EM7U000001TdDK_db937216.png",
+        "caption": "Giriş Seçenekleri'nde Modi"
       },
       {
         "type": "image",
-        "src": "/akademi/lejant/11307_0EM7U000001TdDG_77797bbc.png",
-        "caption": "Grup hücresi: PARENT(@507@) ile üst nesnenin (mahal grubu) adı okunur."
+        "src": "/akademi/lejant/11307_0EM7U000001TdDL_ba46191d.png",
+        "caption": "İçeriği incelenecek etiketli mahal: 00_01 Wohnraum"
       },
       {
         "type": "text",
-        "text": "Durum 2 - İçeriği bilinmeyen etiketli bir nesne: Standart Etiket kullanıldıysa nesneyi aynı türle yeniden etiketlemeyi deneyip alan adlarından atamayı bulun. Nesne Etiketi veya Etiket Stili kullanıldıysa, Etiket Stili fonksiyonu + Modi + Info ile içeriği Durum 1'deki gibi okuyun."
+        "text": "**Etiket Stili (Beschriftungsbild)** araç çubuğu açılır; istediğiniz bilgiyi **Info** düğmesiyle çağırırsınız. Nesne etiketi mi, etiket stilinde doğrudan bir nitelik mi, yoksa bir formül mü kullanıldığına göre ilgili diyalog açılır; içeriği Parçalar ve Hücre Tanımlama derslerinde gördüğünüz gibi incelersiniz."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/11307_0EM7U000001TdDM_28e37380.png",
-        "caption": "Nesne Etiketi veya Etiket Stilinde Info düğmesi, kullanılan nitelik ya da formülü açar."
+        "caption": "Etiket Stili araç çubuğunda Info düğmesi"
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Burada mahal etiketleri gösterildi; aynı yöntem tüm etiketlerde kullanılabilir. Raporların içeriğini belirlemek için ayrı bir SSS makalesi vardır."
       },
       {
         "type": "heading",
-        "text": "Lejantlar - Sabit Büro Adıyla Çelik Listesi (Stahlliste) Oluşturma"
+        "text": "Donatı - Özel Büküm Formlarının Hızlı Üretimi"
       },
       {
         "type": "text",
-        "text": "Yeni bir çizim dosyasını (Teilbild) etkinleştirin ve CAD Navigator'dan Liste modülüne geçin (Ek Modüller -> Liste Oluşturma / Zusätzliche Module -> Listenerstellung). Liste Yönetimi (Listenverwaltung) ile istediğiniz çelik listesini (Stahlliste) Standart (Standard) dizininden Büro (Büro) dizinine, dosya numarasını koruyarak kopyalayın; örneğin Standart - Dosya 18 Çelik Listeleri - Liste Rundstl L 1'i Büro - Dosya 18 Çelik Listeleri - Musterfirma olarak kopyalayın."
+        "text": "Donatı lejantında listelenen çubukların büküm şeklinin (Biegeform) nasıl oluştuğunu bilmek işinize yarar. Etriye ya da serbest büküm şekli oluşturmak için genellikle **Çubuk Şekli (Stabform)** aracını kullanırsınız. Ama bazen önce büküm tanımını tasarlamanız gerekir ve benzer çubukları planda başka bir yönde yeniden üretmek zaman alır."
       },
       {
         "type": "text",
-        "text": "Kopyalanan listeyi Listeleri Değiştir (Listen modifizieren) ile açın. Ze-Lö komutuyla Müşteri Adı (Kundenname) satır 1 ve satır 2 hücrelerini silin; ardından Ze-Ins komutuyla (Liste bölgesi: Liste başlığı / Listenkopf; hücre tipi: Metinler / Texte) sabit büro adını metin olarak ekleyin."
+        "text": "ALLPLAN'da büküm şekillerini kolaylaştıran özel bir komut vardır: **Eleman Dönüştür, Devral (Element wandeln, übernehmen)**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/8713_0EM67000008DTkD_61d50645.png",
+        "caption": "Freeform bölümünde Eleman Dönüştür, Devral (Element wandeln, übernehmen) simgesi"
+      },
+      {
+        "type": "text",
+        "text": "Bu fonksiyon 2B ve 3B eskizleri (çizgi, poligon, 3B çizgi, U ya da kapalı etriye) büküm şekillerine dönüştürmek için geliştirildi."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/8713_0EM67000008DTjo_4f27ff30.png",
+        "caption": "Dönüştürülecek eskizler: çizgi, poligon, 3B çizgi, U ve kapalı etriye"
+      },
+      {
+        "type": "text",
+        "text": "Fonksiyonu başlatın ve eskizleri işaretleyin. **Eleman Dönüştür, Devral** penceresi açılır; burada çubuk özelliklerini (çap, çelik sınıfı, stok boyu gibi) tanımlarsınız."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/8713_0EM67000008DXkH_153b9716.png",
+        "caption": "Element wandeln, übernehmen diyaloğu: çap 10 mm, B500B, stok boyu 14.000"
+      },
+      {
+        "type": "text",
+        "text": "**Tamam (OK)** ile çubuk oluşur ve etiketini yerleştirebilirsiniz. ALLPLAN köşelerde her çapa ait büküm rulosu çapını kullanır. Ardından çubuğu her zamanki gibi döşersiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/8713_0EM67000008DTQ4_d5f2622b.png",
+        "caption": "Oluşan çubuk ve etiketi: 50 HA 10"
+      },
+      {
+        "type": "heading",
+        "text": "Donatı - ISO 3766'ya Göre Açılım Ölçülendirmeli R-Donatısı Oluşturma"
+      },
+      {
+        "type": "text",
+        "text": "Dik açılı olmayan büküm şekillerinde açınımdaki (Auszug) kol uzunlukları ve büküm ölçüleri nasıl belirlenir? Kol uzunlukları ve ölçü çizgileri **ISO 3766 (03.2004)**'e göre hesaplanır; ISO 3766, önceki sürüm olan ISO 4066'nın yerini almıştır. Küçük farklar (birinci görselde en fazla 2 mm) yuvarlama toleranslarından kaynaklanır."
+      },
+      {
+        "type": "text",
+        "text": "Önce dik açılı olmayan kolların ISO 3766'ya göre, gerçek çubuk gösterimiyle ölçülendirilmesine bakın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10887_0EM7U000001Te59_e98d7d43.png",
+        "caption": "ISO 3766'ya göre dik açılı olmayan kolların gerçek çubukla ölçülendirilmesi"
+      },
+      {
+        "type": "text",
+        "text": "Aynı çubuk planda açınım olarak çubuk ekseni üzerinden gösterilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10887_0EM7U000001Te5A_af8ec9ad.png",
+        "caption": "Plandaki açınım gösterimi (çubuk ekseni)"
+      },
+      {
+        "type": "text",
+        "text": "Bindirmeli (gekröpft) bir çubukta da ISO 3766'ya göre gerçek çubuk gösterimi kullanılır; bindirme ölçüsü düşey kolların iki dış kenarından alınır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10887_0EM7U000001Te5B_663aadc1.png",
+        "caption": "Bindirmeli çubuğun ISO 3766'ya göre gösterimi: bindirme ölçüsü dış kenarlardan"
+      },
+      {
+        "type": "text",
+        "text": "Bindirmeli çubuk da planda açınım olarak çubuk ekseni üzerinden gösterilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10887_0EM7U000001Te5C_3566f624.png",
+        "caption": "Bindirmeli çubuğun plandaki açınım gösterimi (çubuk ekseni)"
+      },
+      {
+        "type": "text",
+        "text": "**Öneri:** Yanlış anlamaları önlemek için bu bilgiyi büküm damgasına (Biegestempel) eklemenizi öneririz."
       }
     ]
   },

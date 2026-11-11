@@ -160,5 +160,113 @@
     "task": "Proje özniteliklerinde bir sistem ve bir grup tanımlayın; birkaç elemana 'Bauliches System' ve 'Gruppe' özniteliklerini atayıp doldurun. IFC olarak aktarıp çıktıda sistem ve grubun yansıdığını kontrol edin.",
     "expected": "IFC içinde elemanların tanımlı sisteme ve gruba bağlı görünmesi.",
     "hint": "Önce tanım (proje öznitelikleri), sonra atama (eleman özniteliği) sırasını izleyin."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Allplan'da IfcSystem (IFC Dışa Aktarım)"
+      },
+      {
+        "type": "text",
+        "text": "Taşıyıcı ya da tesisat sistemlerini IFC'de IfcSystem olarak göstermek, alıcının modeli sisteme göre süzmesini sağlar. ALLPLAN'da bunu iki adımda kurarsınız: sistemleri proje niteliklerinde tanımlar, sonra elemanlara atarsınız."
+      },
+      {
+        "type": "text",
+        "text": "**Sistemleri tanımlayın:** **Proje Nitelikleri (Projektattribute)** penceresinde **Yapısal Sistem Tanımı (Definition Bauliches System)** satırına sistem adlarını noktalı virgülle ayırarak yazın. Örnekte Fahrleitung (katener hattı), Trassee (güzergah) ve Perron (peron) tanımlı. Bir sisteme **Reference** değeri de verirseniz (örnekte Fahrleitung için Reference: fahrleitung) bu değer ayrıca Pset_BuildingSystemCommon içine Reference özelliği olarak yazılır; bu isteğe bağlıdır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/11578_0EMVi00000HzmZ0_cd57b884.png",
+        "caption": "Proje Nitelikleri: Definition Bauliches System satırında Fahrleitung, Trassee ve Perron sistemleri"
+      },
+      {
+        "type": "text",
+        "text": "**Elemanlara atayın:** Elemanlara **Yapısal Sistem (Bauliches System)** niteliğini ekleyin ve değerine ilgili sistemin adını yazın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/11578_0EMVi00000I02nR_e31be947.png",
+        "caption": "Eleman niteliklerinde Bauliches System = Fahrleitung"
+      },
+      {
+        "type": "text",
+        "text": "IFC'de sonuç şöyle görünür: tanımlı her sistem bir IfcBuildingSystem olarak **Sistemler (Systeme)** grubunda yer alır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/11578_0EMVi00000I03A1_e63081f1.png",
+        "caption": "IFC gruplar görünümünde Systeme altında üç IfcBuildingSystem: Perron, Trassee, Fahrleitung"
+      },
+      {
+        "type": "text",
+        "text": "**e-PYS notu:** Örnekteki elemanın IFC sınıfı IfcBuildingElementProxy'dir. e-PYS teslimlerinde tanımı belirsiz genel vekil sınıflar (IfcProxy, IfcBuildingElementProxy) kullanılamaz (Yönetmelik EK-6 madde 6.1.3); kendi modelinizde elemana doğru IFC sınıfını verin."
+      },
+      {
+        "type": "heading",
+        "text": "Allplan'da IfcGroup (IFC Dışa Aktarım)"
+      },
+      {
+        "type": "text",
+        "text": "Sistemle aynı yöntemle, işlevsel bir sistem oluşturmayan eleman topluluklarını IfcGroup olarak dışa aktarabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Grupları tanımlayın:** Proje Nitelikleri penceresinde **Grup Tanımı (Definition Gruppe)** satırına grup adlarını noktalı virgülle ayırarak yazın; örnekte Bahnhof (istasyon) ve Gleis (hat)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/11577_0EMVi00000I03jV_6de94ae2.png",
+        "caption": "Proje Nitelikleri: Definition Gruppe satırında Bahnhof ve Gleis grupları"
+      },
+      {
+        "type": "text",
+        "text": "**Elemanlara atayın:** Elemanlara **Grup (Gruppe)** niteliğini ekleyin ve değerine grup adını yazın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/11577_0EMVi00000I03mj_f3daa5c2.png",
+        "caption": "Eleman niteliklerinde Gruppe = Gleis"
+      },
+      {
+        "type": "text",
+        "text": "IFC'de gruplar, sistemlerden ayrı olarak **Diğer Gruplar (Andere Gruppen)** altında IfcGroup olarak görünür."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/11577_0EMVi00000I03rZ_760678ab.png",
+        "caption": "IFC gruplar görünümünde Andere Gruppen altında IfcGroup: Gleis ve Bahnhof"
+      },
+      {
+        "type": "heading",
+        "text": "Gömülü Parçalar için IfcObjectType (Mühendislik)"
+      },
+      {
+        "type": "text",
+        "text": "Gömülü parçaların (Einbauteile) IFC'de doğru tipte görünmesi için onlara IFC obje tipini siz verirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "Gömülü parçanın niteliklerini tek tek düzenleyerek **IFC obje tipi (IFC Object type)** değerini girin; örnekte bir küresel başlı taşıma ankrajı (Kugelkopftransportanker) için IfcMechanicalFastener."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8912_0EM67000007o2ao_7d39958d.png",
+        "caption": "Modify Attributes: Symbol Fixture için IFC Object type = IfcMechanicalFastener"
+      },
+      {
+        "type": "text",
+        "text": "Ya da **Nitelikler -> Nitelik Ata (Attribute -> Attribute zuweisen)** komutunu kullanın: IFC Object type niteliğini işaretleyip değerini girin ve **Uygula (Apply)** ile istediğiniz parçalara aktarın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8912_0EM67000007o2bD_ad16b677.png",
+        "caption": "Assign Attributes: IFC Object type = IfcMechanicalFastener ve Apply düğmesi"
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Bu yol **yalnız** prekast fonksiyonları olmadan çalışan kullanıcılar içindir. Prekast fonksiyonlarına sahip kullanıcılar IFC obje tipini gömülü parça kataloğunda **Sınıflandırma (Klassifizierung)** altında atayabilir."
+      }
+    ]
   }
 }

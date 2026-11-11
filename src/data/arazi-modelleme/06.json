@@ -165,82 +165,88 @@
       },
       {
         "type": "text",
-        "text": "Arazi modülü, Allplan'da çoğu kullanıcının az tanıdığı ama güçlü bir modüldür. Bu Derinlemesine bölüm, modülün temel araçlarını tek bir akış halinde özetler. Ekran görüntüleri Fransızca bir Allplan arayüzünden alınmıştır; komut adlarının Türkçesini parantez içindeki Fransızca karşılıklarıyla birlikte bulacaksınız. Modüle girmek için önce rolünüzü Çevre / Arazi (Environnement) rolüne değiştirin."
+        "text": "Bir 3B arazi ağını (MT3D) 3B yüzeye ya da 3B hacme dönüştürebilir, gerekirse tersini de yapabilirsiniz. Böylece ALLPLAN'ın serbest modelleme modülüne geçer ve Boolean operatörlerini kullanırsınız. Aşağıdaki örnekte MT3D arazisi 3B elemana dönüştürülmüş ve mimari modelle ilişkili olarak yeniden konumlandırılmıştır."
       },
       {
         "type": "image",
-        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tfSD_8e03becf.png",
-        "caption": "Çevre / Arazi (Environnement) rolüne geçiş. Arayüz Fransızcadır."
-      },
-      {
-        "type": "text",
-        "text": "Modül içinde arazi noktası dosyalarını içe veya dışa aktarabilirsiniz. .re1, .re2, .reb ve .asc biçimleri Allplan'a doğrudan içe aktarılır; diğer biçimler için Scalypso eklentisiyle önce dönüştürüp sonra içe aktarın. Noktaları doğrudan Allplan içinde 3B olarak da oluşturabilirsiniz. İçe aktarılan veya elle yerleştirilen 3B noktaları üçgenleyerek (ağ oluşturarak) bir Sayısal Arazi Modeli (MT3D) elde edersiniz."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tfdV_4d3d07fa.png",
-        "caption": "3B arazi noktalarının üçgenlenmesiyle oluşan Sayısal Arazi Modeli (MT3D) ağı."
-      },
-      {
-        "type": "text",
-        "text": "Arazinin gösterimini yönetebilir, topoğrafyayı renk geçişli (gradyan) bir dolgu biçiminde geçici olarak görüntüleyebilirsiniz."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tfgj_6714924e.png",
-        "caption": "Topoğrafyanın renk geçişli (gradyan) dolgu ile geçici gösterimi."
-      },
-      {
-        "type": "text",
-        "text": "Eşyükselti eğrilerini (courbes de niveaux) çok kolay üretebilirsiniz. Dış Sınır (contour extérieur) aracıyla ağın dış sınırını oluşturur veya yeniden sınırlandırır; Ağ Noktası (Point de maillage) aracıyla ağ noktalarını ekler, değiştirir veya silersiniz. MT3D ağına nokta, çizgi, poligon çizgisi veya spline gibi elemanlar ekleyebilir, Boşluk Açma (évidement) fonksiyonuyla arazinin bir kısmında boşluk oluşturabilirsiniz."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tfon_fe2a6cb2.png",
-        "caption": "Eşyükselti eğrilerinin (courbes de niveaux) otomatik oluşturulması."
-      },
-      {
-        "type": "text",
-        "text": "Bir profil kesiti çizip 2B profil şeması çıkarabilirsiniz. Belirli bir kesit için (örneğin bir yol ekseni) mevcut bir 2B çizgiyi veya spline'ı referans alabilirsiniz. Önce bir profil kesiti tanımlayın, ardından bu kesitten profil şemasını üretin."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tg6X_3809d03c.png",
-        "caption": "Adım 1: profil kesitinin tanımlanması. Ardından bu kesitten 2B profil şeması çıkarılır."
-      },
-      {
-        "type": "text",
-        "text": "İlk araziyi şev (talus) fonksiyonlarıyla değiştirerek dolgu (remblai) veya kazı (déblai) yapabilirsiniz. Genel Şev (talus général) aracı bir platformun oturma alanını ve şev eğimini tanımlar; Serbest Şev (talus quelconque) aracı platform çizimini ve şevlerin oturma alanını tümüyle grafiksel belirlemenizi sağlar."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/arazi-modelleme/9311_0EMVi000003teER_e58f33f8.png",
-        "caption": "Şev (talus) fonksiyonlarıyla dolgu/kazı ve platform oluşturma."
-      },
-      {
-        "type": "text",
-        "text": "İki araziyi karşılaştırabilmek için bu değişiklikleri ilk arazinin bir kopyası üzerinde ayrı bir çizim dosyasında yapın. Sonra Kübajları Belirle (déterminer les cubages) aracıyla kazı/dolgu hacimlerini hesaplayıp bir rapor üretebilirsiniz. Son olarak bir 3B arazi ağını 3B yüzeye veya hacme (ya da tersine) dönüştürerek Allplan'ın serbest modelleme modülüne geçebilir ve Boolean operatörlerini kullanabilirsiniz."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tg89_41f80b82.png",
-        "caption": "Kübajları Belirle (déterminer les cubages) ile kazı/dolgu hacimlerinin hesaplanması."
+        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tYCF_3a92348f.png",
+        "caption": "MT3D arazisinden dönüştürülen 3B eleman, bina modeliyle birlikte perspektifte"
       },
       {
         "type": "heading",
-        "text": "Arazi animasyonu için doku (texture) olarak ortofoto kullanma"
+        "text": "Add-On Baugrube (Yapı Çukuru Eklentisi) - Arazi 2B ve 3B Türetme"
       },
       {
         "type": "text",
-        "text": "Bir arazi fotoğrafının animasyonda doku (texture) olarak SAM'a (DTM) doğru kaplanabilmesi için fotoğrafın coğrafi referanslı bir ortofoto olması ve SAM'ın koordinatlarının ortofotonun koordinatlarıyla eşleşmesi gerekir."
+        "text": "**Yapı Çukuru (Add-On Baugrube)** eklentisinde bir paletle sayısal bir yapı çukurundan 2B ya da 3B görünümler türetirsiniz. 2B elemanlar istenen konuma yerleştirilip ALLPLAN komutlarıyla düzenlenebilir; 3B gösterimde ise malzeme özellikli, kolayca görünür ya da gizli yapılabilen katı modeller dışa aktarılır."
+      },
+      {
+        "type": "heading",
+        "text": "Allplan Kazı Çukuru - 3B Yüzeyleri devralma"
       },
       {
         "type": "text",
-        "text": "Kullanılan SAM için Modifikasyon (Modify) -> Arazi (Terrain) -> Sayısal Arazi Modeli (Digital Terrain Model) -> SAM Değiştir (Modify DTM) -> T Plan seçeneğini belirleyin. Animasyonun yüzey ayarlarında 'Doku uygula (Apply texture)' alanında 'Metrik (Metric)' ve 'Doku etkin (Texture activated)' seçeneklerini işaretleyin ve 'Yeniden Boyutlandır (Resize)' alanında görüntünün X ve Y boyutunu girin. Doğru boyut için ortofotoyu önce coğrafi referanslı bir bitmap olarak içe aktarıp Ölç (Measure) ile ölçebilirsiniz."
+        "text": "Kazı Çukuru (Baugrube) fonksiyonunda bir kazı oluşturmak için mevcut bir 3B yüzeyi de kullanabilirsiniz; 3B arazi yüzeyi böylece kazının başlangıç geometrisi olur."
+      },
+      {
+        "type": "heading",
+        "text": "SAM (DGM) - Sayısal Arazi Modelinin Animasyonu"
       },
       {
         "type": "text",
-        "text": "SAM doğru konumlanmış ama alanı ortofotonun alanından küçükse, önce mevcut dış sınırı bir çizgi nitelik dosyasına kaydedin: Oluştur (Create) -> Arazi (Terrain) -> Sayısal Arazi Modeli (Digital Terrain Model) -> Dosya Arayüzü (File Interface) altında D Tipi (F Type) = LinAtt ve G/Ç (I/O) = O file seçin. Ardından SAM alanını ortofotonun boyutuna gelecek şekilde büyütün."
+        "text": "Sayısal arazi modelini (örneğin bir arazi kullanım planı için) farklı dokularla (Texturen) kaplayıp animasyonda göstermek istiyorsanız şunu bilin: SAM'ın kendisi doğrudan dokuyla kaplanamaz; tek istisna, bir sonraki bölümde anlatılan coğrafi referanslı ortofotodur. Dokulu bir animasyon için SAM'ı 3B katılara ya da mimari objelere (döşemelere) dönüştürürsünüz."
+      },
+      {
+        "type": "text",
+        "text": "**1.** SAM'ın çizim dosyasını etkinleştirin ve **Oluştur (Erzeugen) -> Arazi (Gelände) -> Sayısal Arazi Modeli (Digitales Geländemodell) -> SAM Objesini 3B Objeye (DGM Element in 3D Element)** ile SAM'ı ikinci bir çizim dosyasına 3B katı olarak türetin."
+      },
+      {
+        "type": "text",
+        "text": "**2.** Türetilen katının çizim dosyasını etkinleştirin ve **Oluştur -> Mimari (Architektur) -> Genel: Çatılar, Düzlemler, Kesitler (Allgemein: Dächer, Ebenen, Schnitte) -> 3B Katıları Mimari Düzlemlere (3D Körper in Architekturebenen)** ile katıyı mimari düzlemlere dönüştürün."
+      },
+      {
+        "type": "text",
+        "text": "**3.** Her doku için ilgili yüzey tanımına sahip bir döşeme oluşturun."
+      },
+      {
+        "type": "heading",
+        "text": "SAM (DGM) - Arazi Animasyonu İçin Doku Olarak Ortofoto"
+      },
+      {
+        "type": "text",
+        "text": "Bir arazi fotoğrafının animasyonda bir SAM'a doku olarak doğru konumda kaplanabilmesi için fotoğraf coğrafi referanslı bir ortofoto olmalı ve SAM'ın arazi koordinatları ortofotonun koordinatlarıyla örtüşmelidir."
+      },
+      {
+        "type": "text",
+        "text": "Kullandığınız SAM için **Değiştir (Ändern) -> Arazi (Gelände) -> Sayısal Arazi Modeli (Digitales Geländemodell) -> SAM'ı Değiştir (DGM modifizieren)** altında **T-Grnd** seçeneğini etkinleştirin. Animasyonun yüzey ayarlarında doku ataması için **Metrik (Metrisch)** ve **Doku etkin (Textur aktiviert)** seçeneklerini işaretleyin. **Ölçekleme (Skalierung)** seçeneğinde görüntünün X ve Y yönündeki boyutunu da girmeniz gerekir. Boyutu doğru almak için görüntüyü önce bir çizim dosyasına coğrafi referanslı piksel yüzeyi (Pixelfläche) olarak aktarıp ölçme fonksiyonuyla boyutlarını belirlemeniz gerekebilir. Son adımda animasyonun yüzey ayarlarında ortofotoyu gösterilecek arazinin dokusu olarak seçin."
+      },
+      {
+        "type": "text",
+        "text": "SAM doğru konumda ama alanı ortofotonunkinden küçükse ek iş gerekir (SAM alanının şimdiye dek **Dış Sınır (Außengrenze)** ile küçültülmediği varsayılır). Ortofotonun doku olarak doğru oturması için SAM'ın boyutu fotoğrafın boyutuna eşit olmalı, yani SAM yüzeyi büyütülmelidir. Ama önce mevcut SAM dış konturunu kaydedin, çünkü dokulu animasyon için bu kontur önemlidir. Bunu arazi verilerini bir çizgi nitelik dosyasına (Linienattributdatei) kaydederek yaparsınız."
+      },
+      {
+        "type": "text",
+        "text": "**Oluştur (Erzeugen) -> Arazi -> Sayısal Arazi Modeli -> Nokta dosyası içe aktar, dışa aktar (Punktdatei importieren, exportieren)** altında **Da-Typ** = Linatt ve **Imp/Exp** = Export seçin, **Uygula (Anwenden)** ile onaylayın. Açılan diyalogda bir dosya adı girip **Tamam (OK)** deyin."
+      },
+      {
+        "type": "text",
+        "text": "ASCII biçiminde oluşan çizgi nitelik dosyası SAM'ın kırık hatları, şev kenarları ve dış sınırları hakkındaki tüm bilgiyi içerir ve sonradan düzenlenmelidir; bunu Excel'de ya da bir metin düzenleyicide yapabilirsiniz. Dosya sütun yapılıdır ve her çizgi için bir satır içerir: Sütun 1 başlangıç noktası (nokta numarası), Sütun 2 bitiş noktası (nokta numarası), Sütun 3 çizginin niteliğini gösteren kod numarasıdır."
+      },
+      {
+        "type": "text",
+        "text": "**Kod numaraları:** **1** = SAM'da **Dış Sınır (Außengrenze)** fonksiyonuyla tanımlanmış dış sınır. **2** = **Boşluk (Aussparung)** fonksiyonuyla oluşturulmuş boşluk. **3** = **Kırık hat (Bruchkante)** fonksiyonuyla oluşturulmuş kırık hat. **4** = SAM ağ haline getirildikten sonra oluşan alan sınırı kenarları."
+      },
+      {
+        "type": "text",
+        "text": "Yalnız dış sınırları tanımlayan satırlar gerekir; bunlar ilgili sütunda 4 kodunu taşır. Kodu 4 olmayan tüm satırları dosyadan silin. SAM alanı değiştikten sonra dış sınırlar yeniden içe aktarılabilsin diye 4 değerlerini 1 ile değiştirin."
+      },
+      {
+        "type": "text",
+        "text": "SAM alanını ortofotonun alanına uyarlamak için ortofotoyu bir çizim dosyasına doğru konumda piksel yüzeyi olarak yerleştirin ve bu çizim dosyasını arka planda etkin yapın. SAM'ın çizim dosyasını ön planda etkin yapın. Görüntünün tüm köşe noktalarında herhangi bir yükseklikte sembol noktaları oluşturun ve bunları **Değiştir (Ändern) -> Arazi -> Sayısal Arazi Modeli -> Ağ Noktası (Netzpunkt) -> Yeni (Neu)** ile SAM'a katın."
+      },
+      {
+        "type": "text",
+        "text": "Ardından düzenlediğiniz çizgi nitelik dosyasını yeniden içe aktarın: aynı fonksiyonda **Da-Typ** = Linatt ve **Imp/Exp** = Import seçin, **Uygula** deyin, SAM'a tıklayın, dosyayı seçip **Tamam** ile onaylayın. SAM yeniden istenen dış sınırlarla gösterilir, sonradan eklenen alan gizlenir. Animasyonda ortofoto artık dış sınırın gösterdiği alanda doğru konumda görünür."
       }
     ]
   },

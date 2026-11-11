@@ -121,5 +121,33 @@
     "task": "Bir donatı çizim dosyasını etkin hale getirip 'Bending machine' işleviyle bir .abs dosyası üretin ve dosyayı Windows metin düzenleyicisinde açarak çap ve kol uzunluğu bilgilerini bulun.",
     "expected": "BVBS kısaltmalarıyla donatı bilgilerini içeren okunabilir bir .abs dosyası elde edersiniz.",
     "hint": "Beklenen donatılar eksikse çizim dosyasının etkin olduğunu ve katman seçimini kontrol edin."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Donatı ve bükme bilgisinin çelik/bükme firmasına aktarımı"
+      },
+      {
+        "type": "text",
+        "text": "Bükme firması klasik büküm ve çelik listeleri yerine BVBS biçiminde dosya isteyebilir. ALLPLAN bu dosyayı doğrudan üretir."
+      },
+      {
+        "type": "text",
+        "text": "ALLPLAN'da Mühendislik (Engineering) modülündeki **Bükme Makinesi (Bending machine)** fonksiyonunu kullanın. Fonksiyon .abs uzantılı bir dosya oluşturur. ALLPLAN'ın bu dosyaya yazdığı bilgiler BVBS'nin (Bundesverband Bausoftware e.V., Alman yapı yazılımları birliği) ilgili yönergesine uygundur: donatı çubuğu, büküm şekli, kol uzunlukları, çap ve benzeri bilgiler yönergede kararlaştırılmış kısaltmalarla yazılır."
+      },
+      {
+        "type": "text",
+        "text": "Gerekirse oluşan dosyayı Windows Not Defteri ile açıp içeriğini kontrol edebilirsiniz. Bilgileri çözümleyebilmek için birliğin yönergesine ihtiyacınız vardır; yönergeyi birlikten temin edebilirsiniz, telif nedeniyle ALLPLAN tarafından yayımlanamaz."
+      },
+      {
+        "type": "heading",
+        "text": "SDS2 Power User: imalat için CNC dışa aktarımı"
+      },
+      {
+        "type": "text",
+        "text": "SDS2 tarafında imalat verisinin makineye gitmesi CNC yapılandırmasıyla olur. **SDS2 Power User** sertifikasının kazanımlarından biri, model verisini imalat için dışa aktarmak üzere **CNC yapılandırmalarını değiştirmektir**. Sertifikanın diğer kazanımları 3. derstedir."
+      }
+    ]
   }
 }

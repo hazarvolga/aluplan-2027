@@ -143,48 +143,48 @@
   "deepDive": {
     "blocks": [
       {
-        "type": "text",
-        "text": "Bir eğri, örneğin bir daire içinde yüzey elemanı (Dolgu Alanı / Füllfläche) oluştururken düz kenarlara yaklaştırılır. Bu yaklaştırmanın inceliğini iki seçenek belirler: **Daire Bölüntüsü (Kreisteilung)** ve **Kiriş Yüksekliği / Sehim (Stichmaß)**. İkisi arasındaki geçişi, fonksiyonu çağırdığınızda doğrudan giriş seçeneklerinde (veya Dinamik Araç Çubuğunda) bulursunuz."
-      },
-      {
         "type": "heading",
         "text": "Dolgu Alanları - Poligonlaştırma türleri"
       },
       {
         "type": "text",
-        "text": "**Seçenek 1: Daire Bölüntüsü (Kreisteilung).** Burada eğrinin yaklaştırılacağı **doğru sayısını** girersiniz; değer her zaman tam daireyi referans alır ve 8 ile 360 arasında olur. Değer yükseldikçe poligonlaştırma hassaslaşır. Daire bölüntüsü özellikle **küçük yuvarlatmalar ve çaplar** için uygundur. Büyük yuvarlatmalarda ise yuvarlatma ile poligon arasında çoğunlukla gözle görülür fark kalır."
+        "text": "Bu derste çizdiğiniz daire ve yay gibi eğrilerin içine bir yüzey elemanı, örneğin dolgu alanı (Füllfläche) yerleştirdiğinizde ALLPLAN eğriyi düz kenarlarla yaklaşık olarak gösterir (poligonlaştırır). Bu yaklaştırmanın inceliğini siz belirlersiniz. İki seçenek, **Daire Bölüntüsü (Kreisteilung)** ve **Kiriş Yüksekliği / Sehim (Stichmaß)**, arasındaki geçişi fonksiyonu çağırdığınızda doğrudan giriş seçeneklerinde bulursunuz."
+      },
+      {
+        "type": "text",
+        "text": "**Seçenek 1 - Daire Bölüntüsü:** Eğrinin yaklaştırılacağı doğru sayısını belirten bir değer girersiniz; sayı her zaman tam daireyi referans alır. Değer 8 ile 360 arasındadır ve yükseldikçe poligonlaştırma hassaslaşır. Daire bölüntüsü özellikle küçük yuvarlatmalar ve çaplar için uygundur; büyük yuvarlatmalarda yay ile poligon arasında çoğunlukla fark görülür."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/10972_0EM7U000001Te15_724a4cc5.png",
-        "caption": "Daire Bölüntüsü (Kreisteilung) 8: kaba, köşeli yaklaşım."
+        "caption": "Daire bölüntüsü 8: dolgu alanı daireye sekiz kenarlı poligonla yaklaşıyor"
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/10972_0EM7U000001Te16_37e3fb19.png",
-        "caption": "Daire Bölüntüsü (Kreisteilung) 120: eğriye çok yakın sonuç."
+        "caption": "Daire bölüntüsü 120: dolgu alanı daireyle neredeyse çakışıyor"
       },
       {
         "type": "text",
-        "text": "**Seçenek 2: Kiriş Yüksekliği / Sehim (Stichmaß).** Burada kesenin (sekant) yaya olan **maksimum kiriş yüksekliğini** girersiniz. Eğri, poligon kenarının eğriye mesafesi girdiğiniz değerden küçük veya ona eşit olacak şekilde bölünür. Değer 0,005 ile 1 000 000 arasındadır ve **küçüldükçe** sonuç hassaslaşır. Maksimum alt bölünme sayısı öngörülmediği için bu yöntem **büyük eğriler** için daha uygundur ve daire bölüntüsüne göre daha hassas sonuç verir."
+        "text": "**Seçenek 2 - Kiriş Yüksekliği (Sehim):** Dolgu alanı oluşturulurken kesenin (sekantın) yaya olan en büyük mesafesi, yani kiriş yüksekliği kullanılır. Eğri, poligon kenarının eğriye en büyük mesafesi girilen değere eşit ya da ondan küçük olacak şekilde poligonlaştırılır; sonuç daire bölüntüsüne göre daha hassastır. Değer 0,005 ile 1 000 000 arasındadır ve küçüldükçe poligonlaştırma hassaslaşır. Bir üst bölüntü sınırı olmadığından bu yöntem özellikle büyük eğriler için uygundur."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/10972_0EM7U000001Te17_25ceaae5.png",
-        "caption": "Kiriş yüksekliği (Stichmaß) 500 mm: büyük sehim, köşeli sonuç."
+        "caption": "Kiriş yüksekliği 500 mm: dolgu alanı beş kenarlı kaba bir poligon"
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/10972_0EM7U000001Te18_2f00894d.png",
-        "caption": "Kiriş yüksekliği (Stichmaß) 5 mm: küçük sehim, pürüzsüz eğri."
-      },
-      {
-        "type": "heading",
-        "text": "Uygulama ve ipucu"
+        "caption": "Kiriş yüksekliği 5 mm: dolgu alanı daireyle çakışıyor"
       },
       {
         "type": "text",
-        "text": "Her iki değeri de yüzey elemanı oluştururken uyarlayabilirsiniz: fonksiyonu etkinleştirin, artı kıl imleciyle eğriye tıklayın ve giriş seçeneklerinden değeri değiştirin. Poligonlaştırmada **Otomatik Geometri Algılama (Automatische Geometrieermittlung)** özelliğini de kullanın. Gelişmiş nokta girişinde bunu fonksiyon etkinken bağlam menüsünden veya diyalog satırından, eski nokta girişinde ise **Görünüm (Ansicht) -> Nokta Asistanı (Punktassistent)** altından açıp kapatırsınız."
+        "text": "Her iki değeri de yüzey elemanını oluştururken uyarlayabilirsiniz: yüzey elemanı fonksiyonunu (örneğin **Dolgu Alanı (Füllfläche)**) etkinleştirin, artı kıl imleciyle eğriye tıklayın ve değerleri giriş seçeneklerinde (ya da Dinamik Araç Çubuğu'nda) değiştirin."
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Poligonlaştırmada **Otomatik Geometri Algılama (Automatische Geometrieermittlung)** özelliğinden de yararlanın. Gelişmiş nokta girişinde bunu fonksiyon etkinken bağlam menüsünden ya da diyalog satırından, eski nokta girişinde **Görünüm (Ansicht) -> Nokta Asistanı (Punktassistent) -> Otomatik geometri algılama açık/kapalı** üzerinden açıp kapatırsınız."
       },
       {
         "type": "heading",
@@ -192,20 +192,42 @@
       },
       {
         "type": "text",
-        "text": "Bir desenin (Muster) veya taramanın (Schraffur) kalemi ve renginin neden değişmediğinin yanıtı, tanımdaki bir ayarda gizlidir. **Araçlar (Extras) -> Tanımlar (Definitionen) -> Desen (Muster)** yolunu seçin. Ekranda bir desen görünür ve **Değiştir (Ändern)** araç çubuğunda ilgili fonksiyonlar açılır."
+        "text": "Bu derste kullandığınız bir desenin (Muster) ya da taramanın (Schraffur) kalemini veya rengini biçim özelliklerinden değiştiremiyorsanız, nedeni tanımdaki bir ayardır."
+      },
+      {
+        "type": "text",
+        "text": "**Araçlar (Extras) -> Tanımlar (Definitionen) -> Desen (Muster)** yolunu seçin. Ekranda bir desen görünür ve **Değiştir (Ändern)** araç çubuğunda desen tanımı fonksiyonları kullanıma sunulur."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/10961_0EM7U000001TdvE_0c31399b.png",
-        "caption": "Tanımlar altında desen düzenleme araçları."
+        "caption": "Desen tanımında Değiştir (Ändern) araç çubuğu"
       },
       {
         "type": "text",
-        "text": "İlgili deseni seçin ve \"**Desenin gösterimi için tanımdaki kalem, renk geçerli (Stift, Farbe aus Definition...)**\" fonksiyonuna dikkat edin. Bu fonksiyon kapalıysa desen, biçim özelliklerinde belirlenen kalem ve renkle gösterilir. Açıksa desen her zaman kendi tanımındaki biçimlerle gösterilir ve biçim özellikleri dikkate alınmaz. Taramalar için de **Araçlar (Extras) -> Tanımlar (Definitionen) -> Taramalar (Schraffuren)** yolunda aynı seçeneği ayarlarsınız."
+        "text": "İlgili deseni seçin ve **Desenin gösterimi için tanımdaki kalem, renk geçerli açık/kapalı (Stift, Farbe aus Definition für Darstellung des Musters maßgeblich ein/aus)** fonksiyonuna bakın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10961_0EM7U000001TdvF_87603976.png",
+        "caption": "Stift, Farbe aus Definition fonksiyonunun simgesi"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10961_0EM7U000001TdvG_b5636cb1.png",
+        "caption": "Araç çubuğunda fonksiyonun ipucu: Stift, Farbe aus Definition für Darstellung des Musters maßgeblich ein/aus"
       },
       {
         "type": "text",
-        "text": "Not: Desen ve tarama kaynaklarının **Büro** mu yoksa **Proje** mi olarak ayarlı olduğuna göre, tanımdaki değişiklik yalnızca güncel projeyi veya büro ayarını kullanan tüm projeleri etkiler. Büro klasöründeki tanımları değiştirmek için yönetici yetkisi gerekir; projedeki tanımları ise proje sahibi de değiştirebilir."
+        "text": "Fonksiyon **kapalıysa** desen ya da desen çizgisi her zaman biçim özelliklerinde belirlenen biçimle gösterilir. **Açıksa** her zaman desenin tanımındaki biçimle gösterilir; biçim özellikleri dikkate alınmaz."
+      },
+      {
+        "type": "text",
+        "text": "Taramalar için de **Araçlar (Extras) -> Tanımlar (Definitionen) -> Taramalar (Schraffuren)** yolunu seçin ve ilgili taramada **Gösterim için tanımdaki kalem ve renk geçerli (Stift und Farbe aus Definition für Darstellung maßgeblich)** seçeneğini istediğiniz gibi ayarlayın."
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Desen ve tarama kaynaklarının Büro ya da Proje olarak ayarlanmasına göre tanımdaki değişiklik yalnız güncel projeyi ya da büro ayarlarını kullanan tüm projeleri etkiler. Büro klasöründeki tanımları değiştirmek için yönetici yetkisi gerekir; projedeki tanımları proje sahibi de değiştirebilir. Büro klasöründeki tanımları değiştirirken fonksiyon çağrıldığında Büro yolundaki desenleri/taramaları değiştiriyorsunuz! (Sie modifizieren die Muster/Schraffuren im Büropfad!) mesajı çıkar; bunu **Tamam (OK)** ile onaylayabilirsiniz. Ayrıntılar çevrimiçi Yardım'da yer alır."
       },
       {
         "type": "heading",
@@ -213,30 +235,43 @@
       },
       {
         "type": "text",
-        "text": "Çizgisel bir montaj parçasını (Linieneinbauteil) desen çizgisi (Musterlinie) olarak tanımladığınızda, seçtiğiniz desen görünmeyebilir. 266'dan küçük tüm desen numaraları kullanılabilir. Tanım sırasında hata mesajı çıkmaz; ancak kaydettikten sonra desenin gösterilmediğini önizleme penceresinde görürsünüz."
+        "text": "Desenler yalnız 2B çizimde değil, gömülü parçalarda da kullanılır. Çizgisel bir gömülü parçayı (Linien-Einbauteil) desen çizgisi (Musterlinie) olarak tanımlarken üç soru sık sorulur: seçilen desen neden görünmüyor, hangi ölçüler girilmeli ve bazı desenlerde renk neden değiştirilemiyor?"
+      },
+      {
+        "type": "text",
+        "text": "**Hangi desenler kullanılabilir:** 266'dan küçük tüm desen numaraları kullanılabilir. Tanımda hata mesajı çıkmaz; ama kaydettikten sonra istediğiniz desenin gösterilmediğini kendiniz görürsünüz: önizleme penceresinde çizgisel gömülü parça desensiz görünür."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/9769_0EM67000007oD0c_d9829294.png",
-        "caption": "Önizlemede desensiz görünen çizgi montaj parçası."
+        "caption": "Önizleme penceresinde desensiz görünen çizgisel gömülü parça (7 LEBT-TEST)"
       },
       {
         "type": "text",
-        "text": "Girilecek ölçüler, **ölçek 1:1'de (MST. 1:1)** ayarlı uzunluk birimine karşılık gelir. Örneğin desen çizgisini 10 cm genişlikte isterseniz ve uzunluk birimi olarak m ayarlıysa, 0,1 girmeniz gerekir."
+        "text": "**Ölçüler:** Girilen ölçüler **ölçek 1:1'de (MST. 1:1)** ayarlı uzunluk birimine karşılık gelir. Yani desen çizgisi 10 cm genişlikte olsun istiyorsanız ve uzunluk birimi m ise 0,1 girmeniz gerekir."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/9769_0EM67000007oD0h_20daae00.png",
-        "caption": "Uzunluk birimine göre ölçü girişi (0,1 m = 10 cm)."
+        "caption": "Desen 42 için Ölçüler (Abmessungen): Yükseklik 0,1000, Genişlik 0,0500"
       },
       {
         "type": "text",
-        "text": "Bazı desenlerin kendi renk tanımı vardır; bu, desenin tanımı sırasında belirlenmiştir. Deseni seçerken, belirlenmiş renk tanımının devralınıp devralınmayacağını önizlemede açıkça görebilirsiniz."
+        "text": "**Renk:** Bazı desenlerin kendi renk tanımı vardır; bu, desen tanımlanırken desen tanımındaki **Stift, Farbe aus Definition für Darstellung des Musters maßgeblich** ayarıyla belirlenmiştir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9769_0EM67000007oD0m_81898c65.png",
+        "caption": "Desen tanımı Değiştir araç çubuğunda işaretli Stift, Farbe aus Definition fonksiyonu"
+      },
+      {
+        "type": "text",
+        "text": "Deseni seçerken belirlenmiş renk tanımının devralınıp devralınmadığını önizlemede iyi görürsünüz. Desen 42'de çizgi rengini yalnız referans çizgisi alır; desen 8'de hem referans çizgisi hem desen rengi alır."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/9769_0EM67000007oD0w_bf8a94f7.png",
-        "caption": "Desen seçiminde renk tanımının önizlemesi."
+        "caption": "Çizgisel gömülü parça tanımı: desen 42'de yalnız referans çizgisi, desen 8'de ikisi birden çizgi rengini alıyor"
       },
       {
         "type": "heading",
@@ -244,16 +279,20 @@
       },
       {
         "type": "text",
-        "text": "AutoCAD, Allplan'daki beyaz dolgu alanını (Füllfläche) tanımaz; bu yüzden DWG/DXF dışa aktarımında beyazı ya başka açık bir renge eşleştirir ya da hiç aktarmazsınız. Dışa aktarma sırasında yapılandırma penceresinde **Değiştir (Verändern)** düğmesine basıp **Dolgu Renkleri (Füllfarben)** sekmesine geçin; kaynak sistemde **Beyaz (Weiß)** ve **Beyaz/Siyah** girdilerini seçip bağlam menüsünden başka bir açık renge ya da **Kullanma (Nicht verwenden)** değerine eşleyin."
+        "text": "Bu derste oluşturduğunuz beyaz dolgu alanlarını (Füllfläche) DWG ya da DXF olarak dışa aktaracaksanız bir ayar yapmanız gerekir; ALLPLAN'da kullandığınız şekliyle beyaz dolgu alanlarını AutoCAD tanımaz."
       },
       {
         "type": "text",
-        "text": "Alternatif olarak Allplan'da serbest bir açık RGB rengi (örneğin 253,253,253) tanımlayıp beyaz dolgular için bunu kullanın; bu renk AutoCAD'e beyaz olarak aktarılır, böylece paftadaki beyaz dolgular DWG'de de doğru görünür."
+        "text": "Dışa aktarma sırasında beyaz dolgu alanınıza başka bir açık AutoCAD rengi eşleyebilir ya da onu hiç aktarmayabilirsiniz. Bunun için dışa aktarmanın devamında yapılandırma penceresinde **Değiştir (Verändern)** düğmesine basın ve **Dolgu Renkleri (Füllfarben)** sekmesine geçin. Kaynak sistemde **Beyaz (Weiß)**, hedef sistemde **Beyaz/Siyah (Weiß/Schwarz)** değerine sahip girdileri işaretleyin ve bağlam menüsünden başka bir açık renk atayın; DWG'de beyaz dolgu rengi gerekmiyorsa **Kullanma (Nicht verwenden)** girdisini seçin."
+      },
+      {
+        "type": "text",
+        "text": "Alternatif olarak ALLPLAN'da kendinize bir beyaz renk tanımlayın, örneğin AutoCAD'e beyaz olarak aktarılan serbest RGB rengi 253,253,253, ve beyaz dolgu alanlarında bu rengi kullanın."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/10634_0EM7U000001TeNT_d6bfa607.png",
-        "caption": "DWG dışa aktarımında dolgu renklerinin eşleştirilmesi."
+        "caption": "RGB renk seçimi (RGB-Farbanwahl): serbest RGB paleti, kırmızı, yeşil ve mavi 253"
       }
     ]
   },

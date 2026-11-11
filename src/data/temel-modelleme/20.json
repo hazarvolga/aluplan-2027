@@ -165,5 +165,57 @@
     "task": "Kat planı üzerinde düz veya kademeli bir kesit hattı tanımlayıp A-A kesitini üretin; kesit derinliği ve kesilen elemanların kalın kontur + malzeme taramasını ayarlayın; modeli değiştirip kesitin güncellendiğini görün.",
     "expected": "A-A (ve B-B) kesiti kesilen elemanlarda kalın kontur ve taramayla görünüyor ve model değişince güncelleniyorsa kesitleri kavramışsınız.",
     "hint": "Kesit hattını silmeyin ve bakış okunu doğru yöne verin."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Bir Görünüş veya Kesitten Yeni Kesit Oluşturma (UVS)"
+      },
+      {
+        "type": "text",
+        "text": "Oluşturduğunuz bir kesitten ya da görünüşten yola çıkarak başka bir kesit oluşturabilirsiniz. Ön koşul: mevcut görünüş düzenlenebilir olarak yüklenmiş bir çizim dosyasında olmalıdır; tüm adımlar doğrudan çizim dosyaları üzerinde yapılır. Kesit sonucunu etkin çizim dosyasına yerleştirebilir ya da başka bir çizim dosyasına kaydedebilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Kesit Oluştur (Schnitt generieren)** fonksiyonunu çağırın (örneğin **Mimari (Architektur)** rolü, **Kaba Yapı (Rohbau)** görevi, **Kesitler (Schnitte)** bölümü) ve mevcut görünüşe ya da kesite tıklayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10813_0EM7U000001TeCb_bd014b32.png",
+        "caption": "Mevcut görünüşe (Ansicht) tıklama"
+      },
+      {
+        "type": "text",
+        "text": "Görünüşün (ya da kesitin) içine kesit çizgisini girin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10813_0EM7U000001TeCc_2d631f25.png",
+        "caption": "Görünüş içinde girilen düşey kesit çizgisi"
+      },
+      {
+        "type": "text",
+        "text": "Kesiti çizim dosyasına yerleştirin ya da **Sonuç (Ergebnis)** bölümündeki **Çizim Dosyaları (Teilbilder)** düğmesiyle istediğiniz bir sonuç çizim dosyasına kaydedin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10813_0EM7U000001TeCd_38c5e824.png",
+        "caption": "Görünüşten oluşturulan kesit"
+      },
+      {
+        "type": "text",
+        "text": "Kesit çizgisi giriş düzleminde her yönde tanımlanabilir ve örneğin yükseklikte kademe yapabilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10813_0EM7U000001TeCe_a66ccb3c.png",
+        "caption": "Görünüşte yükseklikte kademeli kesit çizgisi"
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Oluşturulan kesit çizgisi kesitlerde gizlenebilir. Bir görünüşten kesit oluşturduğunuzda tüm model kullanılır; mevcut bir kesitten kesit oluşturduğunuzda ise yeni kesit, ilk kesitin kesit hacmi (Schnittkörper) temel alınarak oluşur."
+      }
+    ]
   }
 }

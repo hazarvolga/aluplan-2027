@@ -147,5 +147,91 @@
     "task": "Birkaç farklı çapta çubuk yerleştirin ve üç ayarı (Animation, Format, ekran gösterimi) yaparak planda renkli donatı elde edin. Etiket renginin çubukla uyuşup uyuşmadığını kontrol edin.",
     "expected": "Çubukların çapa göre renklenmesi; etiket uyuşmazsa 'Color from element' ile düzeltebilmeniz.",
     "hint": "Etiket rengi kalıcı olmayabilir; uyumsuzluk tekrar oluşursa aynı kutuyu yeniden işaretleyin."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "REINF: Çubuk Renklerinin Ayarlanması ve Değiştirilmesi"
+      },
+      {
+        "type": "text",
+        "text": "Çubuk ve hasırları çapa ya da hasır tipine göre renklendirmek için üç ayar gerekir; sonra etiketin (Verlegetext) rengini de ayrıca güncellemeniz gerekebilir. Makalenin Almanca sürümü (Format özelliklerini değiştirme) aynı adımları Almanca arayüzle anlatır; iki sürümün ekran görüntüleri her adımda birlikte veriliyor. Sorunun çıkış noktası şudur: çubuklar renkli, ama etiketlerin rengi farklı."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/9361_0EMVi000002WfYL_46b60fe6.png",
+        "caption": "Çıkış durumu: sarı çubuklar, sarı çerçeveli 3 2 HA 10 e=4 ve mor çerçeveli 1 7 HA 8 e=25 etiketleri"
+      },
+      {
+        "type": "text",
+        "text": "**1. Rengi çaptan alın:** **Ekstralar > Seçenekler > Animasyon (Extras > Optionen > Animation)** altında **Mühendislik elemanlarının gösterimi (Darstellung Ingenieurbau-Elemente)** bölümünde **Çubuk donatı (Rundstahl)** için **Yüzey renkleri çaptan (Oberflächenfarben aus Durchmessern)**, **Hasırlar (Matten)** için **Yüzey renkleri hasır adından (Oberflächenfarben aus Mattenbezeichnung)** seçin. **Renk ata (Farben zuweisen)** düğmesiyle çaplara renk atanır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/9360_0EMVi000002WckA_88c79a0c.png",
+        "caption": "Optionen, Animation: Rundstahl için Oberflächenfarben aus Durchmessern, Matten için Oberflächenfarben aus Mattenbezeichnung"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/9361_0EMVi000002WfJp_7e8eea9e.png",
+        "caption": "Aynı ayar İngilizce arayüzde: Bar reinforcement için Surface colors from diameters"
+      },
+      {
+        "type": "text",
+        "text": "**2. Format'ta eleman rengini etkinleştirin:** **Ekstralar > Seçenekler > Donatı > Format (Extras > Optionen > Bewehrung > Format)** altında **Poz çerçevesi çizgi rengi (Linienfarbe Positionsumrandung)** için **elemandan (aus Element)** kutusunu işaretleyin; bu kutu çubuk donatı, yerleşim ve hasır bölümlerinin her birinde bulunur."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/9360_0EMVi000002Wcp0_07bfe42f.png",
+        "caption": "Optionen, Bewehrung, Format: Linienfarbe Positionsumrandung aus Element kutuları işaretli"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/9361_0EMVi000002WdLG_1eed2be2.png",
+        "caption": "Aynı ayar İngilizce arayüzde: Line color for mark border From element"
+      },
+      {
+        "type": "text",
+        "text": "**3. Ekran gösteriminde renkli donatıyı açın:** **Ekran Gösterimi (Bildschirmdarstellung)** ayarında **Planda renkli donatı (Farbige Bewehrung im Grundriss)** seçeneğini etkinleştirin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/9360_0EMVi000002WgXd_ef71a2b8.png",
+        "caption": "Bildschirmdarstellung: Farbige Bewehrung im Grundriss işaretli"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/9361_0EMVi000002WZvy_f8e1b391.png",
+        "caption": "Aynı ayar İngilizce arayüzde: Show/Hide, Colored reinforcement in plan view (1, 2)"
+      },
+      {
+        "type": "text",
+        "text": "**Sonuç ve sorun:** Bundan sonra donatı renkli gösterilir; ancak çaplara atanan renkleri sonradan değiştirirseniz etiket eski ayarda kalır. Örnekte etriyeler mavi, ama etiketin (poz çerçevesinin) rengi hâlâ mor."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/9361_0EMVi000002WfgP_c9c7b4ce.png",
+        "caption": "Mavi etriyeler, mor kalan etiket: 1 7 HA 6 e=25"
+      },
+      {
+        "type": "text",
+        "text": "**Düzeltme:** Etiketin özelliklerini açın ve metin seçeneklerine gidin (**Metin seçenekleri, Optionen Text**, yanındaki düğme). **Poz çerçevesi çizgi rengi elemandan (Linienfarbe Umrandung aus Element)** kutusunu işaretleyip çıkın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/9360_0EMVi000002Wg30_ae7e402e.png",
+        "caption": "Verlegetext özellikleri: Optionen Text (1) ve Linienfarbe Umrandung aus Element kutusu (2)"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/9361_0EMVi000002Wfi1_e4d2578b.png",
+        "caption": "Aynı adım İngilizce arayüzde: Options for text (1) ve Line color of border from element (2)"
+      },
+      {
+        "type": "text",
+        "text": "**Dikkat:** Renk bu işlemle yeniden eşleşir, ancak ayar kalıcı olarak saklanmaz."
+      }
+    ]
   }
 }

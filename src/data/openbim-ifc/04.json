@@ -154,5 +154,68 @@
     "task": "Bir hacim özniteliği için eşleme satırı oluşturun, hedef Pset adını belirleyin ve IFC Property Type'ı IfcVolumeMeasure yapın. Dışa aktardıktan sonra IFC'yi metin düzenleyiciyle açıp değerin m3 biriminde yazıldığını doğrulayın.",
     "expected": "IFC içinde ilgili özniteliğin IfcVolumeMeasure ile ve m3 değeriyle görünmesi.",
     "hint": "Görüntüleyicide farklı birim görürseniz önce görüntüleyicinin birim seçeneğine bakın."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "IFC Öznitelik Eşleme Maskesi ve Birimler"
+      },
+      {
+        "type": "text",
+        "text": "Önceki derste dışa aktarım komutunu ve profilleri gördünüz. Şimdi aynı ayarlar penceresinde ALLPLAN özniteliklerini istediğiniz Pset'e ve IFC özellik adına eşleyen dosyayı kuruyorsunuz."
+      },
+      {
+        "type": "text",
+        "text": "**Eşleme dosyası:** **Öznitelik Ataması (Attributzuordnung)** alanında **Yeni (Neu)** ile yeni bir eşleme dosyası oluşturup .cfg olarak kaydedin ya da **Ara (Suchen)** ile var olan bir eşleme dosyasını yükleyin (1). **Düzenle (Bearbeiten)** ile var olan bir eşleme dosyasını uyarlarsınız (2)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8645_0EMVi000002R9xM_29f8e5f0.png",
+        "caption": "IFC dışa aktarım ayarlarında Attributzuordnung: Suchen ve Neu (1), Bearbeiten (2)"
+      },
+      {
+        "type": "text",
+        "text": "**Eşleme maskesi:** Düzenle ile açılan **ALLPLAN'dan IFC'ye dönüşüm yönü (Konvertierungsrichtung Allplan nach IFC)** penceresinde her satır bir eşlemedir. (1) Yeni bir öznitelik satırı ekleyin. (2) Eşlenecek ALLPLAN özniteliğini nitelik maskesinden seçin ya da metin olarak yazın; ad birebir aynı olmalıdır. (3) Hedef özellik kümesinin (Pset) adını girin. (4) Özniteliğin IFC'deki adını girin; IFC'de ALLPLAN'dakinden farklı bir ad verebilirsiniz. (5) Özniteliğin IFC'deki biçimini (IFC Property Type) girin; bu genellikle doğrudan doğru gelir. (6) **Özel Atamalar (Spezifische Zuordnungen)** altında eşlemeyi belirli bir eleman tipi (IFC sınıfı) için ayrıca tanımlayabilirsiniz; örnekte Column."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8645_0EMVi000002R9xN_c8fbe5ef.png",
+        "caption": "Eşleme maskesi: yeni satır (1), ALLPLAN niteliği (2), Property Set (3), IFC Property (4), IFC Property Type (5), sınıfa özel atama Column (6)"
+      },
+      {
+        "type": "text",
+        "text": "Birimli özniteliklerin doğru aktarılması beşinci sütundaki tipe bağlıdır; bunu aşağıdaki bölümde görüyorsunuz."
+      },
+      {
+        "type": "heading",
+        "text": "Birimli Kullanıcı Tanımlı Özniteliklerin Eşlenmesi"
+      },
+      {
+        "type": "text",
+        "text": "Eşleme maskesinin beşinci sütunu olan IFC Property Type, sayısal değerlerin IFC'ye birimiyle mi yoksa çıplak sayı olarak mı gideceğini belirler."
+      },
+      {
+        "type": "text",
+        "text": "Dışa aktarımda kendi öznitelik eşlemenizi kullanıyor ve birimlerin de IFC'ye yazılmasını istiyorsanız her özniteliğin **IFC Property Type** (veri tipi) değeri uygun girilmelidir. Doğru tipi bulmak için kendi eşlemeniz olmadan dışa aktardığınız bir IFC dosyasını bir metin düzenleyicide açıp ilgili kullanıcı tanımlı öznitelikleri arayabilirsiniz; orada yazan tipi eşlemenize aynen girersiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8899_0EM670000075i7H_b048d9d1.png",
+        "caption": "IFC metninde IFCLENGTHMEASURE, IFCAREAMEASURE, IFCVOLUMEMEASURE; eşlemede aynı tipler ve görüntüleyicide birimli değerler (m, m2, m3)"
+      },
+      {
+        "type": "text",
+        "text": "Uzunluklar için **IfcLengthMeasure**, alanlar için **IfcAreaMeasure**, hacimler için **IfcVolumeMeasure** kullanırsanız değerler m, m² ve m³ olarak aktarılır."
+      },
+      {
+        "type": "text",
+        "text": "**Dikkat:** IFC dosyasını bir görüntüleyicide açtığınızda gösterim, görüntüleyicinin seçeneklerinde ayarlı birimlere göre yapılır. Örneğin orada birim milimetre ise kullanıcı tanımlı özniteliklerin değerleri milimetreye çevrilip mm birimiyle gösterilir."
+      },
+      {
+        "type": "text",
+        "text": "Ölçü tiplerinin (measure) tam listesi buildingSMART'ın IFC4 şema belgelerinde, ifcmeasureresource bölümünde bulunur."
+      }
+    ]
   }
 }

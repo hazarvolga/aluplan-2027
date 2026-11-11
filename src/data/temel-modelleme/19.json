@@ -161,5 +161,92 @@
     "task": "Bina Strüktürünün türetilmiş bölmesinde konutunuzun ön, arka ve yan cephe görünüşlerini üretin; bakış yönü, doku/tarama ve kalem ayarlarını yapın; modelde bir pencereyi değiştirip görünüşün güncellendiğini görün.",
     "expected": "Dört cephe türetilmiş bölmede duruyor ve modelde bir değişiklik görünüşe otomatik yansıyorsa ilişkisel görünüşleri kavramışsınız.",
     "hint": "Görünüş üzerindeki çizgileri elle silmeyin; değişikliği modelde yapın."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Döndürülmüş (Eğik) Bir Binanın Görünümleri"
+      },
+      {
+        "type": "text",
+        "text": "Bir bina vaziyet planına uygun olarak kuzeye göre yönlendirilip çizildiyse dış cepheler X ve Y eksenine paralel değildir; döndürülmüş kat planında görünüşler ise ana yönlere göre oluşturulur. Eksenlere göre döndürülmüş çizilmiş bir binanın görünüşlerini yine de iki yolla oluşturabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Yöntem 1, Görünüşler (Ansichten) üzerinden. Adım 1, yön çizgisi:** Kat planında dış duvara dik bir çizgi (2B ya da 3B çizgi) çizin. Birinci nokta örneğin dış duvarın orta noktası, ikinci nokta 20 m daha dışarıdadır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11377_0EM7U000001Td6M_a4e45ad5.png",
+        "caption": "Döndürülmüş binada dış duvara dik, 20 m uzunluğunda yön çizgileri"
+      },
+      {
+        "type": "text",
+        "text": "**Adım 2, perspektif ayarını kaydetme:** Tel kafes (Draht) görünümünde en az iki pencereye ihtiyacınız var. **(1)** Pencerelerden birinde (örneğin soldakinde) **Serbest Projeksiyon (Freie Projektion)** fonksiyonunu çağırın. **(2)** **Bakış Noktası (Augpunkt) -> Seç (Auswählen)** ile kat planındaki bir çizginin dış noktasını seçin; sol penceredeki gösterim değişir. **(3)** **Hedef Noktası (Zielpunkt) -> Seç (Auswählen)** ile aynı çizginin iç (hedef) noktasını seçin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11377_0EM7U000001Td6N_88d3cc79.png",
+        "caption": "Serbest Projeksiyon: Augpunkt (2) ve Zielpunkt (3) seçimi, kaydetme düğmesi (4)"
+      },
+      {
+        "type": "text",
+        "text": "**(4)** Ayarı istediğiniz bir adla favori olarak kaydedin. Gerekirse diğer cepheleri de aynı şekilde hazırlayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11377_0EM7U000001Td6O_55f6ceb7.png",
+        "caption": "Bildausschnitt speichern, laden: Ansicht Südwest kaydı"
+      },
+      {
+        "type": "text",
+        "text": "**Adım 3, görünüşleri oluşturma:** Görünüşleri doğrudan etkin çizim dosyalarından ya da Bina Strüktürü (Bauwerksstruktur) türetmelerinden oluşturabilirsiniz; ayarlar iki durumda da aynıdır. **Görünüşler (Ansichten)** bölümünde **Projeksiyon (Projektion)** düğmesini seçin ve kaydettiğiniz favoriyi (örneğin Güneybatı Görünüşü) yükleyin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11377_0EM7U000001Td6P_8bcd9bae.png",
+        "caption": "Ansicht generieren: Projektion Freie, kayıtlı Ansicht Südwest favorisinin yüklenmesi"
+      },
+      {
+        "type": "text",
+        "text": "Görünüş özelliklerini her zamanki gibi ayarlayın ve görünüşü bir çizim dosyasına kaydedin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11377_0EM7U000001Td6Q_477db994.png",
+        "caption": "Döndürülmüş kat planı (solda) ve ondan oluşan iki dik cephe görünüşü (sağda)"
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Perspektif için kaydedilen ayarlar tüm çizim pencerelerinde ve görünüşlerde kullanılabilir. Bu yolla oluşan görünüşler Bina Strüktürü türetmelerinde **Görünüşler (Ansichten)** altına yerleştirilebilir."
+      },
+      {
+        "type": "text",
+        "text": "**Yöntem 2, Kesitler (Schnitte) üzerinden. Adım 1, kesit çizgileri:** Kat planında her görünüş için bir kesit çizgisi oluşturun. Bunları ayrı bir çizim dosyasına koyun (örneğin görünüşler için özel kesit çizgileri)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11377_0EM7U000001Td6R_a20b1e52.png",
+        "caption": "Bina çevresinde dört yön için kesit çizgileri (Nordost, Nordwest, Südost, Südwest)"
+      },
+      {
+        "type": "text",
+        "text": "**Adım 2, kesit (görünüş) oluşturma:** **Kesit Oluştur (Schnitt generieren)** fonksiyonunu çağırın; burada da etkin çizim dosyalarından ya da Bina Strüktürü türetmelerinden çalışabilirsiniz. **Filtre (Filter)** bölümünde hesaplamaya girecek çizim dosyalarını ayarlayın ve bir kesit hattı (Schnittführung) seçin. Görünüm özelliklerini her zamanki gibi ayarlayıp sonucu bir çizim dosyasına kaydedin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11377_0EM7U000001Td6S_124e8c7a.png",
+        "caption": "Schnitt generieren: Teilbilder, Schnittführung Südwest ve Layer filtreleri"
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Kesit çizgilerinin bulunduğu çizim dosyası birlikte yüklendiğinde kesit çizgileri tüm çizim pencerelerinde ve görünüşlerde kullanılabilir. Kesitlerden oluşan görünüşler Bina Strüktürü türetmelerinde yalnız **Kesitler (Schnitte)** altına yerleştirilebilir."
+      },
+      {
+        "type": "text",
+        "text": "**Avantajlar ve dezavantajlar:** Yöntem 1'in avantajı, görünüşlerin türetmelerde Görünüşler altına yerleştirilebilmesidir; dezavantajı, binaya her zaman dışarıdan bakılmasıdır, bu yüzden bir garaj ya da yükselen arazi görünüşü kapatabilir. Yöntem 2'nin avantajı, kesit çizgisinin konumunun, kademeli kırılmalarla bile, planda tam tanımlanabilmesidir; örneğin yükselen arazide saçak çıkmasının hemen önünde ya da bina gruplarında binaların arasında. Dezavantajı, kesitten oluşan görünüşün Bina Strüktürü'nde Kesitler altına yerleştirilmesi gerekmesidir."
+      }
+    ]
   }
 }

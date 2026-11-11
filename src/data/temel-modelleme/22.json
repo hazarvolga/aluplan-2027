@@ -171,5 +171,64 @@
     "task": "Pafta Düzenleyici'de DIN A1 bir pafta açın; dinamik antet yerleştirip proje bilgilerini otomatik okutun; plan, kesit ve görünüşleri doğru ölçeklerde Çizim Dosyası Yerleştir ile dizip katmanlı vektörel PDF üretin.",
     "expected": "Antet proje bilgilerini otomatik yazıyor, çizimler doğru ölçekte dizili ve katmanlı vektörel PDF üretildiyse paftayı kavramışsınız.",
     "hint": "Çizimleri paftaya kopyalamayın; referans (Çizim Dosyası Yerleştir) ile koyun."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Pafta Penceresinde Katman Görünürlüğü"
+      },
+      {
+        "type": "text",
+        "text": "Çizim dosyasında bazı katmanları görünmez yaptınız, ama çizim dosyasını paftaya yerleştirdiğinizde tüm katmanlar görünüyor. Ayarladığınız görünürlüğü paftada korumanın iki yolu vardır."
+      },
+      {
+        "type": "text",
+        "text": "**Yol 1, pafta elemanını yerleştirirken:** Bir çizim dosyasını pafta elemanı olarak yerleştirirken katmanların görünürlüğünü ayrı ayarlayabilirsiniz; bu ayar sonradan da değiştirilebilir. **Oluştur (Erzeugen) -> Pafta Düzenleyici (Planlayout) -> Çizim Dosyası Yerleştir (Planelement)** ile yerleştirirken **Katman/Çizim Seti (Layer/Druckset)** alanında varsayılan olarak **Tümü (Alles)** girdisi vardır; yani katman strüktüründeki tüm katmanlar görünür. Bunu değiştirmek için **Tümü (Alles)** girdisine tıklayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10603_0EM7U000001Tdk8_c4c675e0.png",
+        "caption": "Pafta elemanı araç çubuğunda Layer/Druckset alanı: Alles"
+      },
+      {
+        "type": "text",
+        "text": "**Katmanlardan paftadaki eleman görünürlüğü (Elementsichtbarkeit im Plan aus Layern)** penceresi açılır. Örneğin **Görünürlük, Kayıt Modu, Davranış (Sichtbarkeit, Speichermodus, Verhalten)** alanında **Güncel, her zaman güncel katman ayarını kullan (dinamik) (Aktuell, immer die aktuelle Layereinstellung verwenden (dynamisch))** girdisini etkinleştirirseniz çizim dosyasında o anda ayarlı görünürlük kullanılır. **Tamam (OK)** ile onaylayıp çizim dosyasını paftaya yerleştirin."
+      },
+      {
+        "type": "text",
+        "text": "**Yol 2, görünürlüğü sonradan değiştirmek:** Çizim dosyalarını zaten pafta elemanı olarak yerleştirdiyseniz **Değiştir (Ändern) -> Pafta Düzenleyici (Planlayout) -> Pafta Elemanlarını Listele (Planelemente listen)** ile katman görünürlüğünü sonradan değiştirirsiniz. Listede **Katman (Layer)** sütunu o anki ayarı gösterir; ilgili pafta elemanının girdisine tıkladığınızda aynı pencereye ulaşır ve görünürlüğü aşağıda anlatıldığı gibi ayarlarsınız."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10603_0EM7U000001Tdk9_d60a9601.png",
+        "caption": "Pafta elemanları listesinde Layer sütunu: Alles"
+      },
+      {
+        "type": "text",
+        "text": "**Pencerenin ayar seçenekleri:** Bu pencerede **Çizim Dosyası Yerleştir (Planelement)** ya da **NDW Dosyası Yerleştir (NDW-Planelement)** ile yerleştirdiğiniz pafta elemanlarının görünürlüğünü katmanlara göre belirlersiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10603_0EM7U000001TdkA_285e8d1c.png",
+        "caption": "Sichtbarkeit, Speichermodus, Verhalten: dört seçenek"
+      },
+      {
+        "type": "text",
+        "text": "**a) Tümü görünür, pafta elemanındaki katmanları genel olarak yoksay (Alles sichtbar, Layer im Planelement generell ignorieren):** Katman strüktürünün tüm katmanları her zaman gösterilir ve çizdirilir; çizim dosyasındaki görünür ya da görünmez ayarı dikkate alınmaz."
+      },
+      {
+        "type": "text",
+        "text": "**b) Çizim seti, seçilen çizim setinin güncel ayarı (dinamik) (Plotset, aktuelle Einstellung des gewählten Plotsets (dynamisch)):** Yalnız tanımlı bir çizim seti (Plotset) varsa seçilebilir; yoksa girdi gri (pasif) görünür. Çizim setlerinde hangi katmanların paftada ya da ekranda görüneceği önceden tanımlanır; bu ayarda yalnız seçilen çizim setinde görünür olan katmanlar gösterilir ve çizdirilir."
+      },
+      {
+        "type": "text",
+        "text": "**c) Güncel, her zaman güncel katman ayarını kullan (dinamik) (Aktuell, immer die aktuelle Layereinstellung verwenden (dynamisch)):** Katman ayarında (**Biçim (Format) -> Katman Seç, Ayarla (Layer auswählen, einstellen)**) o anda görünür olan tüm katmanlar gösterilir ve çizdirilir. Bu ayarı seçerseniz çizdirmeden önce tüm katmanların istenen görünürlükte olup olmadığını kontrol edin."
+      },
+      {
+        "type": "text",
+        "text": "**d) Sabitlenmiş, katman ayarı pafta elemanında sabit olarak kayıtlı (Fixiert, Layereinstellung fest im Planelement gespeichert):** Hangi katmanların görüneceğini doğrudan bu pencerede ayarlarsınız: ilgili katmanları işaretleyin ve **Durum (Status)** alanında istediğiniz durumu verin."
+      }
+    ]
   }
 }

@@ -120,5 +120,49 @@
     "task": "Profilbauteil ile bir çelik profil elemanı oluşturup malzeme ve ağırlığını tanımlayın, ardından bu eleman için bir rapor üretin.",
     "expected": "Elemanın malzeme ve ağırlık bilgisini içeren bir metraj raporu elde edersiniz.",
     "hint": "Rapor beklediğinizden farklıysa önce elemanın malzeme ve ağırlık tanımını kontrol edin."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Profilbauteil: eleman raporları ve özellik uyarlama"
+      },
+      {
+        "type": "text",
+        "text": "Profil Eleman (Profilbauteil) eklentisiyle oluşturduğunuz elemanlar listelere ve raporlara da veri sağlar."
+      },
+      {
+        "type": "text",
+        "text": "Eklentinin 1.0.0.13 sürümünde oluşturulan elemanlar hakkında raporlar üretebilirsiniz. Profilleri ağırlık, malzeme ve stil bakımından da uyarlayabilirsiniz."
+      },
+      {
+        "type": "heading",
+        "text": "ALLPLAN yapısal mühendislik: bağlı çelik ve bükme listeleri"
+      },
+      {
+        "type": "text",
+        "text": "ALLPLAN yapısal mühendislik kursu, 3B modelden belgeye bağlı çıktıya kadar iş akışını anlatır."
+      },
+      {
+        "type": "text",
+        "text": "Kurs 3B yapı modeli oluşturmayı, değişiklikleri, kesit ve görünüş üretmeyi ve otomatik 3B donatıyı BIM uyumluluğunu koruyarak işler. Çelik ve büküm listeleri gibi modele bağlı belgeler sayesinde değişiklikler bu belgelere anında yansır."
+      },
+      {
+        "type": "text",
+        "text": "Kursun modülleri: başlangıç (It's that simple!), 3B yapı modelini oluşturma, değişiklik, 3B yapı modelini tamamlama, değerlendirme, paftayı derleme ve çıktı alma, donatı ve proje yedekleme. Kazanımlar: kat planları, yapı elemanları, açıklık elemanları, merdivenler ve döşeme oluşturmak."
+      },
+      {
+        "type": "heading",
+        "text": "Listeler yerine BVBS: aynı verinin makine biçimi"
+      },
+      {
+        "type": "text",
+        "text": "BVBS dosyası, büküm ve çelik listelerinin taşıdığı bilginin makinenin okuyacağı biçimidir; içeriği de listeler gibi o anki seçime göre oluşur."
+      },
+      {
+        "type": "text",
+        "text": "**Bükme Makinesi (Bending machine)** fonksiyonunu başlattığınızda etkin çizim dosyalarındaki tüm donatı çubukları ve hasır donatılar hesaba katılır. O anki katman seçimi de dikkate alınır; dosyayı üretmeden önce çizim dosyası ve katman seçiminizi kontrol edin."
+      }
+    ]
   }
 }

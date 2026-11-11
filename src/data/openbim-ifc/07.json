@@ -168,5 +168,122 @@
     "task": "Bir Share projesinde bir çizim dosyasını değiştirip griye alın ve senkronizasyonu tetikleyin. Ardından portalde bir yedekleme döngüsü kurun ve oluşan yedeği Dokumente > Backups altından indirin.",
     "expected": "Senkronize edilmiş çizim dosyası ve bulut üzerinden indirilmiş bir yedek dosyası.",
     "hint": "Senkronizasyonun üç koşulunu birlikte sağladığınızdan emin olun."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "ALLPLAN Share: Bulutla Senkronizasyon"
+      },
+      {
+        "type": "text",
+        "text": "Share projesinde ALLPLAN'ın çizim dosyalarını ve paftaları Bimplus bulutuyla hangi anlarda eşitlediğini bilirseniz, ekip arkadaşlarınızın değişikliğinizi ne zaman göreceğini de bilirsiniz. Çizim dosyaları için dört durum vardır."
+      },
+      {
+        "type": "text",
+        "text": "**Durum 1:** Bir Share projesindeki çizim dosyaları şu üç koşulun üçü birden sağlandığında buluta yüklenir: çizim dosyasında bir değişiklik yapılmıştır; çizim dosyası griye (pasif) alınmış ya da seçimi kaldırılmıştır; **Proje Bazlı Aç (Projektbezogen öffnen)** penceresi kapatılmıştır."
+      },
+      {
+        "type": "text",
+        "text": "Bu noktada şunu bilmek yararlı: Aynı çizim dosyasını gri (pasif, arka planda) açmış diğer kullanıcılara, ilk kullanıcı bu üç adımı tamamladıktan sonra arka plandaki çizim dosyasında değişiklik olduğunu bildiren bir mesaj otomatik gelir; değişikliği görüntüleyebilir ya da reddedebilirler. Diğer kullanıcılar bu mesajı görmüyorsa ALLPLAN'ın en güncel sürümünü kullandıklarından ve **Seçenekler -> Çalışma Ortamı -> Kaydet/Yükle (Optionen -> Arbeitsumgebung -> Speichern/Laden)** altında **Değişen pasif çizim dosyalarında mesaj göster (Bei geänderten passiven Teilbildern Meldung anzeigen)** kutusunun işaretli olduğundan emin olmalıdır. İşaret yoksa koyun ve ALLPLAN'ı yeniden başlatın."
+      },
+      {
+        "type": "text",
+        "text": "**Durum 2:** ALLPLAN'da sol üstteki **ALLPLAN A** düğmesine tıklayıp **Tümünü Kaydet (Alles speichern)** seçtiğinizde değişiklik içeren tüm çizim dosyaları eşitlenir. Bu durumda da Durum 1'deki gibi, çizim dosyasını pasif açmış tüm kullanıcılara mesaj gider."
+      },
+      {
+        "type": "text",
+        "text": "**Durum 3:** Yalnızca **Proje Yeni, Aç (Projekt neu, öffnen)** fonksiyonunu açmak da değişiklik içeren tüm çizim dosyalarını eşitler."
+      },
+      {
+        "type": "text",
+        "text": "**Durum 4:** **Pafta Düzeni (Planlayout)** çağrıldığında da değişiklik içeren tüm çizim dosyaları eşitlenir."
+      },
+      {
+        "type": "text",
+        "text": "**Paftalar için:** Paftadaki çizim dosyası içerikleri değiştiğinde pafta yüklenmez, buna gerek yoktur. Paftalar yalnız pafta düzeninde bir şey değiştiğinde (pafta elemanını taşımak ya da silmek gibi) ya da örneğin bir pafta elemanının ölçeği veya çizim tipi değiştirildiğinde yüklenir. Yükleme bu durumda pafta değiştirilirken ya da pafta düzeninden çıkılırken otomatik yapılır."
+      },
+      {
+        "type": "text",
+        "text": "**Not:** ALLPLAN 2018 sürümünde de bu kurallar geçerlidir; yalnız çizim dosyalarındaki Durum 2 o sürümde çalışmaz."
+      },
+      {
+        "type": "heading",
+        "text": "ALLPLAN Share Projelerinin BIMPLUS'ta Yedeklenmesi"
+      },
+      {
+        "type": "text",
+        "text": "Share projeleri bulutta yaşar; yedeklerini de doğrudan Bimplus web portalında, projeyle birlikte yönetirsiniz. Yedeklemeyi portal.bimplus.net üzerinde ayarlar ve oluşan yedekleri yine oradan indirirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Yedekleme döngüsünü ayarlayın:** Proje yöneticisi olarak Bimplus web portalında ilgili projenin ayarlarına (dişli simgesi) girin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8696_0EMVi00000Etjyv_8bd64f29.png",
+        "caption": "Bimplus portalında projenin ayarlar (dişli) simgesi"
+      },
+      {
+        "type": "text",
+        "text": "**Allplan Share Proje Yedeklemesi (Allplan Share Projektsicherung)** bölümünde yedeklemeyi etkinleştirin, başlangıç tarihini ve saatini ve kaç günde bir tekrarlanacağını girin, sonra kaydedin. Böylece bulutta ne sıklıkla otomatik yedek alınacağını belirlersiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8696_0EMVi00000EtkIH_13e49767.png",
+        "caption": "Projekteinstellungen: Allplan Share Projektsicherung, Aktivieren, başlangıç 28.07.2025 23:00, her 7 günde bir"
+      },
+      {
+        "type": "text",
+        "text": "**Yedekleri indirin:** Yedekler yerel olarak değil doğrudan bulutta saklanır. Onları ilgili projenin içinde **Dokümanlar -> Yedekler (Dokumente -> Backups)** altında bulursunuz; her yedeği satır menüsündeki **İndir (Herunterladen)** ile istediğiniz yerel klasöre kaydedebilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8696_0EMVi00000Eu23u_701fd0e6.png",
+        "caption": "Dokumente altında BACKUPS klasörü ve yedek satırının menüsünde Herunterladen"
+      },
+      {
+        "type": "text",
+        "text": "**Geri yükleme:** Bu yedekleri ALLPLAN'da **Proje Yeni, Aç -> Proje İçe Aktar (Projekte neu, öffnen -> Projekt importieren)** ile doğrudan okuyabilir ya da teslim ve arşiv için kullanabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Koşullar ve notlar:** Bu yedeklemeyi proje yöneticileri ya da gerekli haklara sahip üyeler ayarlayabilir. Buluttaki veri miktarını makul tutmak için artık gerekmeyen yedekleri oradan silmeniz önerilir."
+      },
+      {
+        "type": "heading",
+        "text": "BIMPLUS Projelerinin Verilerini Güvene Alma"
+      },
+      {
+        "type": "text",
+        "text": "Share yedeğinin yanında Bimplus projesindeki modelleri, dokümanları ve diğer verileri de ayrı ayrı güvene alabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Modeller:** Projeye yüklenmiş model dosyalarını (.ifc, .landxml, .skp ve benzerleri) indirebilirsiniz: **Modeller** sekmesinde modelin satır menüsünden **İndir (Herunterladen)**. Doğrudan ALLPLAN'dan ya da başka bir uygulamadan gelen model dışa aktarılabilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8604_0EMVi00000DLzk9_2995a5c0.png",
+        "caption": "Bimplus Modeller sekmesinde modelin menüsünde Herunterladen"
+      },
+      {
+        "type": "text",
+        "text": "Share projeleri ayrıca yedeklenebilir: projenin **Ayarlar (Einstellungen)** sayfasındaki **Allplan Share Proje Yedeklemesi** bölümünde **İndir (Herunterladen)** düğmesi bulunur."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8604_0EMVi00000DM0rV_a3ed6b54.png",
+        "caption": "Share projesinde Einstellungen sayfası: Allplan Share Projektsicherung ve Herunterladen düğmesi"
+      },
+      {
+        "type": "text",
+        "text": "**Dokümanlar:** Dosyalar zip olarak indirilebilir; birden fazla dosya seçebilirsiniz. Dosya revizyonları da gerekiyorsa onları tek tek seçip indirin. **MY DOCUMENTS** klasöründeki dosyalar diğer kullanıcılara görünmediği için her kullanıcı kendi dosyalarını ayrıca yedeklemelidir."
+      },
+      {
+        "type": "text",
+        "text": "**Diğer veriler:** Kullanıcı tanımlı bina yapıları model verileriyle birlikte IFC olarak dışa aktarılabilir. Sorunların (Issues) BCF olarak dışa aktarılmasını 8. derste göreceksiniz."
+      }
+    ]
   }
 }

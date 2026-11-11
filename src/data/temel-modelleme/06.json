@@ -147,47 +147,47 @@
   "deepDive": {
     "blocks": [
       {
-        "type": "text",
-        "text": "Çizgi stilleri (Linienstile), yüzey stilleri (Flächenstile) ve çizim tipleri (Zeichnungstypen), tanımlar üzerinden **ek kaynak** olarak başka projelere taşınabilir. Böylece bir projede kurduğunuz standardı yeniden kurmak zorunda kalmazsınız."
-      },
-      {
         "type": "heading",
         "text": "Yüzey stillerini veya çizgi stillerini projeler arasında kopyalama"
       },
       {
         "type": "text",
-        "text": "**Tanımlar penceresini açma.** **Araçlar (Extras) -> Tanımlar (Definitionen) -> Çizgi Stilleri, Yüzey Stilleri, Çizim Tipleri** bölümünü açın. Çizgi veya yüzey stilleri alanında, çizim tiplerinin üzerine sağ tıklayın ve kısayol menüsünden **Standart/Büro/Proje'den Ek Kaynaklar Ekle (Weitere Ressourcen aus Standard/Büro/Projekt hinzufügen)** seçeneğini seçin."
+        "text": "Bu derste düzenlediğiniz çizimlerin görünümünü çizgi stilleri (Linienstile), yüzey stilleri (Flächenstile) ve çizim tipleri (Zeichnungstypen) belirler. Bunları bir projede kurduysanız başka projelerde yeniden tanımlamanız gerekmez: tanımlar üzerinden ek kaynak olarak eklersiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Araçlar (Extras) -> Tanımlar (Definitionen) -> Çizgi Stilleri, Yüzey Stilleri, Çizim Tipleri (Linienstile, Flächenstile, Zeichnungstypen)** bölümünü açın. Çizgi ya da yüzey stilleri alanında çizim tiplerinin üzerine sağ tıklayın ve kısayol menüsünden **Standart/Büro/Proje'den Ek Kaynaklar Ekle (Weitere Ressourcen aus Standard/Büro/Projekt einfügen)** seçin."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11227_0EM7U000001TdUQ_a29bbe1c.png",
-        "caption": "Sağ tık menüsünden ek kaynak ekleme seçeneği."
+        "caption": "Çizim tipi listesinde kısayol menüsü: Weitere Ressourcen aus Standard/Büro/Projekt einfügen"
       },
       {
         "type": "text",
-        "text": "**Kaynağı seçme ve aktarma.** Üstteki seçimi **Ek çizim tipleriyle genişlet (Um die zusätzlichen Zeichnungstypen erweitern)** olarak ayarlayın. **Değiştir (Ersetzen)** seçeneğini kullanırsanız stillerin içindeki mevcut çizim tipleri **silinir**. **Kaynak Klasör (Quellordner)** kısmında **Proje (Projekt)** seçin ve stilleri alacağınız projeyi işaretleyin. Alternatif olarak büro standardı için **Büro (Büro)** veya **Standart (Standard)** seçebilirsiniz. **CTRL+A** ile tüm stilleri veya seçmeli olarak istediklerinizi etkinleştirin ve **Tamam (OK)** ile onaylayın."
+        "text": "Üstteki seçimi **Ek çizim tipleriyle genişlet (Um die zusätzlichen Zeichnungstypen erweitert)** yapın; **Tamamen değiştir (Komplett ersetzt)** seçerseniz stillerin içindeki mevcut çizim tipleri silinir. **Kaynak Klasör (Quellordner)** alanında **Proje (Projekt)** seçin ve stilleri almak istediğiniz projeyi işaretleyin; büro ya da standart tanımlarını yüklemek için **Büro** ya da **Standart** seçin. **Ctrl+A (Strg+A)** ile tüm stilleri ya da seçerek istediklerinizi etkinleştirin ve **Tamam (OK)** ile onaylayın. Çizgi stillerinde pencere şöyle görünür:"
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11227_0EM7U000001TdUR_70671060.png",
-        "caption": "Çizgi stilleri (Linienstile) seçim listesi."
+        "caption": "Linienstile im Büro/Projekt einfügen: ek çizim tipleriyle genişlet seçili, kaynak klasör Projekt ve proje yolu"
+      },
+      {
+        "type": "text",
+        "text": "Yüzey stillerinde aynı pencere:"
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11227_0EM7U000001TdUS_faefb095.png",
-        "caption": "Yüzey stilleri (Flächenstile) seçim listesi."
+        "caption": "Flächenstile im Büro/Projekt einfügen: ek çizim tipleriyle genişlet seçili, yeni ve genişletilecek stiller, kaynak klasör Projekt"
       },
       {
         "type": "text",
-        "text": "Tüm yeni çizgi ve yüzey stilleri, kullandıkları çizim tipleriyle birlikte oluşturulur. Hali hazırda var olan stiller ise olası ek çizim tipleriyle tamamlanır. Bir stilde mevcut çizim tiplerinin tümü için tanım yoksa, bu durum **tanımsız (undefiniert)** olarak işaretlenir."
-      },
-      {
-        "type": "heading",
-        "text": "Dikkat edilecek noktalar"
+        "text": "Tüm yeni çizgi ve yüzey stilleri kullandıkları çizim tipleriyle birlikte oluşturulur; var olan stiller olası ek çizim tipleriyle tamamlanır. Ardından bir stilde mevcut çizim tiplerinin tümü için tanım yoksa bu durum **tanımsız (undefiniert)** olarak işaretlenir."
       },
       {
         "type": "text",
-        "text": "Yapı elemanları yalnızca belirli bir **ID numarasına aidiyeti** hafızada tutar. Bu numara değişirse yapı elemanı yüzey stilini kaybeder veya ona başka bir stil atanır. Ayrıca kaynakları ve tanımları değiştirebilmek için **proje sahibi veya yönetici (Administrator)** yetkisine sahip olmanız gerekir."
+        "text": "**Not:** Yapı elemanları yalnız belirli bir ID numarasına aidiyeti hafızada tutar. Bu numara değişirse yapı elemanı yüzey stilini kaybeder ya da ona başka bir yüzey stili atanır. Kaynakları ve tanımları değiştirebilmek için proje sahibi ya da yönetici (Administrator) yetkisine sahip olmanız gerekir."
       },
       {
         "type": "heading",
@@ -195,25 +195,37 @@
       },
       {
         "type": "text",
-        "text": "Birbirinin aynı olan, ancak simetriği alınmış (aynalanmış) iki mahal için farklı alan hesaplanmasının nedeni, Allplan'ın toplam alanı hangi alt alanlara böldüğüne bağlıdır. Ondalık basamak sayısının sınırlı olması, hesaplama sırasında yuvarlama farkları doğurabilir."
+        "text": "Aynalama (Spiegeln) ile ürettiğiniz birbirinin aynı iki mahal için farklı alan hesaplanabilir. Neden, ALLPLAN'ın alan hesabına nereden başladığına bağlı olarak toplam alanı farklı alt alanlara bölmesidir. Bu durum grafik gösterimli bir çıktıda somut olarak görülür."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11197_0EM7U000001TdNJ_52cd0054.png",
-        "caption": "Alt alanlara bölünmenin grafik gösterimli çıktısı."
+        "caption": "İki ayna mahalin alan çıktısı: alt alanlar farklı bölünmüş, toplamlar 31,10 ve 31,14 m²"
       },
       {
         "type": "text",
-        "text": "Bu yuvarlama sapmalarını önlemek için alan çıktısı alırken şu ayarlara dikkat edin: **Oluştur (Erzeugen) -> Mimari (Architektur) -> Mahaller, Alanlar, Katlar (Räume, Flächen, Geschosse) -> Konut Alanı, DIN277, Yapı Ruhsatı (Wohnfläche, DIN277, Bauantrag)** fonksiyonunu başlatın; iletişim kutusunda **Seçenekler (Optionen)** butonuna tıklayın; açılan \"**İzlenebilir Miktar Hesapları (Nachvollziehbare Mengenansätze)**\" kutusunda \"**Alt alan sonuçlarını tam (kesin) değerlerden belirle**\" seçeneğini işaretleyin ve gerekirse **Alt Boyutlar** ile **Alt Alan Sonuçları** için ondalık basamak sayısını artırın."
+        "text": "Ondalık basamak sayısının sınırlı olması hesapta fark doğurur. Bu yuvarlama sapmalarını önlemek için alan çıktısı alırken şu ayarlara dikkat edin: **Oluştur (Erzeugen) -> Mimari (Architektur) -> Mahaller, Alanlar, Katlar (Räume, Flächen, Geschosse) -> Konut Alanı, DIN277, Yapı Ruhsatı (Wohnfläche, DIN277, Bauantrag)** fonksiyonunu başlatın ve iletişim kutusunda **Seçenekler (Optionen)** düğmesine tıklayın. Açılan **İzlenebilir Metraj Yaklaşımları (Nachvollziehbare Mengenansätze)** kutusunda **Alt alan sonuçlarını tam değerlerden belirle (Teilflächenergebnisse aus exakten Werten ermitteln)** seçeneğini seçin ve gerekirse **Alt Boyutlar (Teilabmessungen)** ile **Alt Alan Sonuçları (Teilflächenergebnisse)** için ondalık basamak sayısını artırın."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11197_0EM7U000001TdNK_570eeced.png",
-        "caption": "İzlenebilir miktar hesapları seçenekleri."
+        "caption": "Aynı çıktı tam değerlerle ve üç ondalıkla: iki mahalin toplamı da 31,106 m²"
       },
       {
         "type": "text",
-        "text": "Mahaller etiket stilleriyle (değişken metin stilleriyle) etiketlendiyse, bu ayarlar etiket stillerini de aynı şekilde etkiler. **Etiketi Güncelle (Beschriftung aktualisieren)** sonrası değerler çizim dosyasında da güncellenir. Toplam değerlerin ondalık basamak sayısı, rapor şablonunda **Paftayı Modifiye Et (Layout modifizieren)** üzerinden, ilgili hücrelere **Özellikler (Eigenschaften)** paletinden istediğiniz biçim girilerek uyarlanabilir."
+        "text": "Mahaller etiket stilleriyle (değişken metin stilleriyle) etiketlendiyse bu ayarlar etiket stillerini de aynı şekilde etkiler. Etiketi güncelledikten sonra (**Değiştir (Ändern) -> Mimari (Architektur) -> Mahaller, Alanlar, Katlar -> Etiketi Güncelle (Beschriftung aktualisieren)**) değerler çizim dosyasında da buna uygun görünür."
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Toplam değerlerin ondalık basamak sayısını rapor şablonunda **Düzeni Değiştir (Layout modifizieren)** ile uyarlarsınız: ilgili hücrelere **Özellikler (Eigenschaften)** paletinden istediğiniz biçimi girin. Değişken metin stillerinin kullanımı için ALLPLAN Yardım'da (F1) **Değişken Metin Stili (Variables Textbild)** başlığına bakın."
+      },
+      {
+        "type": "heading",
+        "text": "Add-On Geometry Tools (Geometri Araçları Eklentisi) - 3B Yüzey Değiştirme"
+      },
+      {
+        "type": "text",
+        "text": "Bu derste düzenleme komutlarını 2B elemanlarda kullanıyorsunuz. Eğimli temel plakları ve döşemeler için **Geometri Araçları (Geometrie Tools)** eklentisi **3B Yüzey Değiştir (3D-Flächen modifizieren)** fonksiyonunu sunar: bir düzlem içindeki tek tek yüzeyleri değiştirerek eğimleri, yönleri ve kot noktalarını uyarlar, karmaşık eğimleri düzenlersiniz."
       }
     ]
   },

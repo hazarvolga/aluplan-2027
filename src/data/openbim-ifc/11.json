@@ -155,5 +155,129 @@
     "task": "Bu dört belirti için kısa bir tanı tablosu hazırlayın: pencere hemen kapanıyor, Share donuyor, 'zaten açık' mesajı, görünüm uzağa kayıyor. Her biri için kaynaktaki çözümü tek cümleyle yazın.",
     "expected": "Belirti-çözüm eşleşmesini doğru veren bir tablo.",
     "hint": "Çözümlerden ikisi dosya/klasör yeniden adlandırma, biri yazılım kaldırma, biri fare sürücüsü ayarıdır."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Opsiyon/IFC Penceresi Hemen Kapanıyor"
+      },
+      {
+        "type": "text",
+        "text": "IFC ile çalışırken seçenekler penceresi ya da IFC içe/dışa aktarım penceresi açılır açılmaz kapanıyorsa sorun çoğu zaman ALLPLAN'da değil, bilgisayar üreticisinin güvenlik araçlarındadır."
+      },
+      {
+        "type": "text",
+        "text": "**1. HP bilgisayar:** Bilgisayar HP (Hewlett-Packard) üretimiyse aşağıdaki gibi ilerleyin; değilse 2. adıma geçin. HP ProtectTools güvenlik araçlarının kurulu olup olmadığını kontrol edin; kuruluysa kaldırın. Paket birden fazla ayrı programdan oluşur; genellikle HP ProtectTools Device Access Manager, Embedded Security for HP, Face Recognition for HP ProtectTools, File Sanitizer For HP ProtectTools, Privacy Manager for HP ProtectTools, Theft Recovery, Drive Encryption for HP ProtectTools, HP ProtectTools Security Manager ve HP Sure Sense bulunur."
+      },
+      {
+        "type": "text",
+        "text": "Listedekinden daha fazla ya da daha az HP programı kurulu olabilir. Belirleyici olan şudur: asıl güvenlik programı olan HP ProtectTools Security Manager'ı kaldırırken kaldırma işlemi başka bağımlı program bildirmemelidir. Bağımlı programlar listelenirse önce onları kaldırın, HP ProtectTools Security Manager'ı en son kaldırın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8819_0EM7U000001TemT_1c4e972f.png",
+        "caption": "HP ProtectTools Security Manager uyarısı: önce kaldırılması gereken bağımlı ürünlerin listesi"
+      },
+      {
+        "type": "text",
+        "text": "**Önemli:** Kaldırmayı tamamlamak için bilgisayarı yeniden başlatın."
+      },
+      {
+        "type": "text",
+        "text": "**2. Dell bilgisayar:** Bilgisayar Dell üretimiyse aşağıdaki gibi ilerleyin; değilse ALLPLAN desteğine başvurun. Dell Data Protection güvenlik araçlarının kurulu olup olmadığını kontrol edin; kuruluysa kaldırın. Paket genellikle Dell Data Protection | Security Tools Authentication ve Dell Data Protection | Security Tools programlarından oluşur."
+      },
+      {
+        "type": "text",
+        "text": "Burada da asıl güvenlik programını (Dell Data Protection | Security Tools) kaldırırken başka bağımlı program bildirilmemelidir. Bildirilirse önce onları kaldırın, Security Tools'u en son kaldırın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8819_0EM7U000001TemU_6c9136a6.png",
+        "caption": "Dell Data Protection uyarısı: önce bağlı bileşenleri kaldırın, kaldırma iptal edildi"
+      },
+      {
+        "type": "text",
+        "text": "**Önemli:** Kaldırmayı tamamlamak için bilgisayarı yeniden başlatın."
+      },
+      {
+        "type": "text",
+        "text": "**Arka plan:** McAfee'nin HP ile birlikte geliştirdiği HP ProtectTools güvenlik paketi çoğu kurumsal HP dizüstü bilgisayarda ve bazı HP masaüstü bilgisayarlarda standart olarak kuruludur. Paket, güvenlik bileşenlerinin çekirdeğinde McAfee SafeBoot'un tam birim şifrelemesini (Full Volume Encryption, FVE) kullanır; bu, Win32 API davranışını değiştirir ve ALLPLAN'da sorunlara yol açar. Dell Data Protection paketi de benzer mekanizmalarla aynı etkiyi yaratır. Bu programlar, ilk bakışta belli olmasa da (örneğin başka bir ALLPLAN sürümünde pencereler düzgün açılsa bile) ALLPLAN'ın kararlılığını ve işleyişini her durumda etkiler."
+      },
+      {
+        "type": "heading",
+        "text": "ALLPLAN Share: Proje Açılışında Donma"
+      },
+      {
+        "type": "text",
+        "text": "Bir Share projesi açılırken ALLPLAN donuyorsa, Bimplus oturum bilgisini tutan yerel dosyayı yeniden adlandırarak projeyi tekrar açılabilir hale getirebilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "Windows Gezgini'ni başlatın ve adres satırına **%LocalAppData%\\Nemetschek\\bim+** yazın."
+      },
+      {
+        "type": "text",
+        "text": "Bu klasördeki Bimplus oturum dosyasını yeniden adlandırın; dosya adı ALLPLAN sürümüne göre değişir. ALLPLAN 2020'de **Bimplus Login b214ba5e-3166-eaad-25df-2f93f9fac28a.xml**, ALLPLAN 2021'de **Bimplus Login ea0e0474-f648-4454-8ed9-e89c35332523.xml**, ALLPLAN 2022'de **Bimplus Login f3bff2ed-5fe1-4b8c-9f6c-426d6e5a5421.xml**. Yeni ad olarak sonuna örneğin .alt ekleyin."
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Sorunun nedeni düzgün tamamlanmamış bir Windows güncellemesi olabilir."
+      },
+      {
+        "type": "heading",
+        "text": "Meldung: Proje Aynı Bimplus Login ile Zaten Açık"
+      },
+      {
+        "type": "text",
+        "text": "Bir Share projesi, aynı Bimplus hesabıyla başka hiçbir bilgisayarda açık olmadığı halde açılmıyorsa sebep çoğu zaman yerel önbellekte kalmış bir kullanım kaydıdır."
+      },
+      {
+        "type": "text",
+        "text": "Projeyi açarken örneğin şu mesaj görünür: proje aynı Bimplus oturum verileriyle başka bir bilgisayarda zaten açık olduğu için açılamaz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/9658_0EM7U000001TelL_275b5f02.png",
+        "caption": "Hata mesajı: Share projesi aynı Bimplus oturumuyla ws-z2-18 bilgisayarında açık olduğu için açılamıyor"
+      },
+      {
+        "type": "text",
+        "text": "**Çözüm:** Mesajın işaret ettiği bilgisayarda ilgili Share projesinin önbellek (Cache) klasörünü yeniden adlandırın. Klasörü bulmak için ALLPLAN'da **Proje Yeni, Aç -> Share -> Login** ile Share'e giriş yapın. Açılan pencerede projeyi işaretleyin, pencerenin sol altında görünen proje yoluna sağ tıklayıp **Gezginde Aç (Im Explorer öffnen)** seçin. Gezgin proje verileriyle açılır; adres satırında bir düzey geri çıkın. Önbellek klasörü artık mavi işaretlidir ve yeniden adlandırılabilir."
+      },
+      {
+        "type": "text",
+        "text": "Aynı işlemi, projeyi şimdi kullanmak istediğiniz bilgisayarda da yapın. Ardından proje yeniden kullanılabilir olmalıdır."
+      },
+      {
+        "type": "text",
+        "text": "**Arka plan:** ALLPLAN Share, tüm bilgisayarlardaki yerel önbellekte ve projenin Share proje yönetiminde kimin hangi bilgisayardan projeye eriştiğini kaydeder; projeye bir bilgisayardan zaten bağlı olan çalışan aynı projeyi ikinci bir bilgisayarda açmaya çalışırsa erişimi engeller. Bu kayıt, projenin önbelleğinde ve Share proje yönetiminde **Projektname+Rechnername.inuse** (proje adı ve bilgisayar adı) biçiminde bir dosya oluşturularak tutulur."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/9658_0EM7U000001TelM_6573d367.png",
+        "caption": "Önbellek klasöründe .inuse uzantılı kullanım kaydı dosyaları"
+      },
+      {
+        "type": "text",
+        "text": "Bu dosya normalde projeden çıkıldığında her yerden silinir. Bu sorunda dosya önbellekte silinmemiş, ama Share proje yönetiminde bulunmuyordur."
+      },
+      {
+        "type": "heading",
+        "text": "BIMPLUS Görünümü Fare Tekerleğiyle Uzağa Kayıyor"
+      },
+      {
+        "type": "text",
+        "text": "Bimplus'ta fare tekerleğiyle yakınlaştırırken görünüm modelden çok uzağa kaçıyorsa sorun Bimplus'ta değil, fare sürücüsünün ayarındadır."
+      },
+      {
+        "type": "text",
+        "text": "Bu davranış Bimplus ya da SDS2 hatası değildir. Logitech farelerde (örneğin M510) **Yumuşak Kaydırma (Smooth Scrolling)** seçeneği kaydırma ve yakınlaştırma darbelerini aşırı güçlendirebilir; görünüm de tekerlekle yakınlaştırırken modelden uzağa sıçrar."
+      },
+      {
+        "type": "text",
+        "text": "Logitech yazılımını (Logi Options ya da Options+) açın ve kaydırma tekerleği (Scroll wheel) ayarlarında Smooth Scrolling'i kapatın. Kapattıktan sonra Bimplus tekerlekle yakınlaştırmada yeniden normal adımlarla çalışır ve görünüm kontrolsüz biçimde kaçmaz."
+      }
+    ]
   }
 }

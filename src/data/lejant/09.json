@@ -112,136 +112,27 @@
     "blocks": [
       {
         "type": "heading",
-        "text": "Etiket Stilleri - Formül Koleksiyonu - Koşullar için örnekler (mantıksal uygunluk kontrolleri ve benzerleri)"
-      },
-      {
-        "type": "text",
-        "text": "Durum 1 - Poz numarasını koşula göre çerçeveleme: Yapı elemanlarına genellikle daire (%K0) içinde poz numarası verilir; bir değişiklikte bazı elemanlar yeniden numaralanıp ilave/revizyon pozu (Nachtragsposition) alır. Poz numarası için Positionsnummer (@194@), ilave poz işareti için TextPos (@1311@) niteliği kullanılır. %K0 metni çevreleyen daire, %N0 sekizgen oluşturur."
-      },
-      {
-        "type": "text",
-        "text": "Formül (biçim örn. A30): _IF_(@1311@=\"N*\")\"%N0\"+@194@+\" \"+@1311@_ELSE_\"%K0\"+@194@"
-      },
-      {
-        "type": "text",
-        "text": "TextPos içeriği 'N' ile başlıyorsa poz sekizgenle, aksi halde daireyle gösterilir. Örneğin TextPos'a N1 girilince o poz sekizgenle işaretlenir."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/10594_0EM7U000001TdD0_d534cfc8.png",
-        "caption": "Poz numarası normalde daire içinde; TextPos 'N' ile başlayınca sekizgen."
-      },
-      {
-        "type": "text",
-        "text": "Durum 2 - Kapı net geçiş yüksekliğini kontrol etme: Net geçiş yüksekliği (bitmiş döşeme üst kotundan kaba lento alt kotuna) hedefin altına düşerse bir uyarı, aksi halde hiçbir şey yazdırılmalıdır. Kapı yüksekliği Höhe (@222@, m) niteliğinden alınır. Belirleyici mahalin döşeme katman yapısı PARENT(Obj_Floor(@211@;1;2;3;4;5;6;7;8;9;10)) ile mm cinsinden hesaplanır (@211@ katman kalınlığı / Schichtdicke)."
-      },
-      {
-        "type": "text",
-        "text": "Yükseklik m, döşeme yapısı mm olduğundan 1000'e bölme gerekir. Hedef değerle karşılaştırma (biçim örn. A25):"
-      },
-      {
-        "type": "text",
-        "text": "_IF_((@222@-PARENT(Obj_Floor(@211@;1;2;3;4;5;6;7;8;9;10)/1000))<2,01)\"Türhöhe zu gering!\"_ELSE_\"\""
-      },
-      {
-        "type": "text",
-        "text": "Kontrol doğruysa (2,01 ile karşılaştırma) 'Türhöhe zu gering!' (Kapı yüksekliği çok düşük!) yazısı, aksi halde boş döner. Etiket stili oluşturmanın temellerini diğer SSS makalelerinde veya connect.allplan.com'da bulabilirsiniz."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/10594_0EM7U000001TdD1_295af95b.png",
-        "caption": "Net kapı yüksekliği 2,01 m'nin altına düşünce uyarı metni görünür."
-      },
-      {
-        "type": "heading",
-        "text": "Lejantlar - Yeni bir lejant oluşturma (Örnek: Döşeme yüzeyi, en üst katman)"
-      },
-      {
-        "type": "text",
-        "text": "Kendi lejantınızı oluşturmadan önce birkaç hazırlık gerekir. Lejantlar her zaman 1:100 ölçekli çizim dosyalarında oluşturulmalıdır; başka ölçekte metin boyutlarını kontrol etmek zordur. Lejantla gösterilecek birden fazla örnek obje (burada döşeme ince yapılı mahaller) bulunmalı ve gösterilecek veriler önceden planlanmalıdır."
-      },
-      {
-        "type": "text",
-        "text": "Örnek istek: döşeme yüzeylerinin en üst katmanın (kaplamanın) malzemesine göre metrajı. En üst katmanın malzemesi MT_Boden(@508@;0), en üst katmanın VOB alanı ise MT_Boden(@81@;0) ile elde edilir. VOB_Fläche (@81@) her zaman VOB alanını, VOB_Menge (@100@) seçilen hakediş birimine göre miktarı verir."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11050_0EM7U000001Tdh6_051353ad.png",
-        "caption": "Lejantın ön çizimi: Başlık (Kopf), Satır (Zeile) ve Toplam (Summe) alanları ayrı ayrı seçilebilir olmalıdır."
-      },
-      {
-        "type": "text",
-        "text": "Adım 1-2: Başlık, Satır ve Toplam alanlarını çizin; sol ve sağ kenar çizgilerini üç parçalı, dolgu alanlarını tek tek oluşturun. Lejantın sabit (statik) metinlerini normal metin olarak yazın."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11050_0EM7U000001TdmF_1593f5f6.png",
-        "caption": "Lejantın sabit metinlerini normal metin olarak oluşturma."
-      },
-      {
-        "type": "text",
-        "text": "Adım 3 - Hücreler: Actionbar'da Kullanıcı Objeleri (Benutzerobjekte) -> Raporlar, Lejantlar bölümünden Hücre Tanımla (Zelle definieren) fonksiyonunu kullanın. 1 numaralı hücreye Formül (Formel) butonuyla MT_Boden(@508@;0) girin, biçim A16. 2 numaralı hücreye MT_Boden(@81@;0) girin, biçim F8.2, birim m², sağa dayalı."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11050_0EM7U000001TdmI_8be976c0.png",
-        "caption": "Dinamik araç çubuğunda Formül (Formel) butonuyla hücre formülünü girme."
-      },
-      {
-        "type": "text",
-        "text": "Toplam satırına SUMME(SPALTE2) formüllü bir hücre ekleyin (biçim Hücre 2 ile aynı). Önemli: hücreler kesintisiz numaralandırılmalıdır; boşluk varsa kayıtta hata çıkar. Nr-Mod butonuyla numaraları düzeltebilirsiniz, ancak formüldeki sütun numaraları otomatik güncellenmez."
-      },
-      {
-        "type": "text",
-        "text": "Adım 4 - Lejant Tanımla (Legende definieren): Tip Mimari (Architektur). Select (1) alanına tıklayıp Mimari Elemanlar Filtresi'nde Objekt= (2) -> Bodenfläche (3) seçin; kriter Objekt=Bodenfläche olarak görünür."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11050_0EM7U000001TdmO_6b0f4339.png",
-        "caption": "Select ile filtreyi Objekt=Bodenfläche olarak ayarlama."
-      },
-      {
-        "type": "text",
-        "text": "Başlık (Kopf), Satır (Zeile) ve Toplam (Summe) butonlarıyla ilgili elemanları seçin. Yatay çizgiler satıra değil başlık/altbilgi kenarına aittir. Satır için bir satır aralığı (Zeilenvorschub) gerekir; örnekte 30 ölçülen yükseklikten 3,0 mm giriş çıkar. Sonra Fix ile bir dosya numarasına kaydedin."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11050_0EM7U000001TdmP_e32d7c30.png",
-        "caption": "Kopf (başlık) alanına yerleşecek elemanları toplu seçme."
-      },
-      {
-        "type": "text",
-        "text": "Adım 5-6 - Test ve toplama: Lejantı çizime yerleştirin; başlangıçta her döşeme yüzeyi tek tek görünür. Lejant Değiştir (Legende modifizieren) ile Bilgi (Info) -> Hücre 2'ye tıklayın, Tekil sonuçları topla (Einzelergebnisse aufsummieren) seçeneğini açın ve formülü şöyle değiştirin:"
-      },
-      {
-        "type": "text",
-        "text": "_IF_(MT_Boden(@210@;0)=@210@)@81@_ELSE_0"
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11050_0EM7U000001TdmX_93bd6a29.png",
-        "caption": "Lejant Değiştir modunda Info ile Hücre 2'yi düzenleme."
-      },
-      {
-        "type": "text",
-        "text": "Formül, döşeme yüzeyinin en üst katman numarasını o an değerlendirilen katman numarasıyla karşılaştırır; eşitse VOB alanını, değilse 0 verir. Böylece toplatmada yalnızca en üst katman sayılır. ESC ile çıkıp Kaydet deyin."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11050_0EM7U000001Tdma_fe9b964a.png",
-        "caption": "Son test: toplam, tekil değerlerin toplamıyla aynıdır."
-      },
-      {
-        "type": "heading",
         "text": "Lejantlar - Sabit Büro Adıyla Çelik Listesi (Stahlliste) Oluşturma"
       },
       {
         "type": "text",
-        "text": "Yeni bir çizim dosyasını (Teilbild) etkinleştirin ve CAD Navigator'dan Liste modülüne geçin (Ek Modüller -> Liste Oluşturma / Zusätzliche Module -> Listenerstellung). Liste Yönetimi (Listenverwaltung) ile istediğiniz çelik listesini (Stahlliste) Standart (Standard) dizininden Büro (Büro) dizinine, dosya numarasını koruyarak kopyalayın; örneğin Standart - Dosya 18 Çelik Listeleri - Liste Rundstl L 1'i Büro - Dosya 18 Çelik Listeleri - Musterfirma olarak kopyalayın."
+        "text": "Donatı listeniz (çelik listesi) her zaman sabit bir büro adı göstersin istiyorsanız standart çelik listesini büroya kopyalayıp başlığındaki müşteri adı hücrelerini kendi metninizle değiştirirsiniz. Böylece bir donatı lejantını oluşturmanın kopyalama, hücre değiştirme ve yeni hücre ekleme adımlarını tek bir örnekte uygularsınız."
       },
       {
         "type": "text",
-        "text": "Kopyalanan listeyi Listeleri Değiştir (Listen modifizieren) ile açın. Ze-Lö komutuyla Müşteri Adı (Kundenname) satır 1 ve satır 2 hücrelerini silin; ardından Ze-Ins komutuyla (Liste bölgesi: Liste başlığı / Listenkopf; hücre tipi: Metinler / Texte) sabit büro adını metin olarak ekleyin."
+        "text": "Yeni bir çizim dosyası (Teilbild) etkinleştirin ve CAD Navigator'da liste modülüne geçin (**Ek Modüller (Zusätzliche Module)** -> **Liste Oluşturma (Listenerstellung)**)."
+      },
+      {
+        "type": "text",
+        "text": "İstediğiniz çelik listesini **Liste Yönetimi (Listenverwaltung)** ile (**Oluştur (Erzeugen)** -> **Ek Modüller** -> **Liste Oluşturma** -> **Liste Yönetimi**) **Standart (Standard)** dizininden **Büro** dizinine kopyalayın. Dosya numarası korunmalıdır; örneğin Standart, Dosya 18 Stahllisten içindeki Rundstl L 1 listesini Büro, Dosya 18 Stahllisten içine Musterfirma adıyla kopyalayın."
+      },
+      {
+        "type": "text",
+        "text": "Kopyaladığınız listeyi **Listeleri Değiştir (Listen modifizieren)** ile açın (**Değiştir (Ändern)** -> **Ek Modüller** -> **Liste Oluşturma** -> **Listeleri Değiştir**)."
+      },
+      {
+        "type": "text",
+        "text": "**Ze-Lö** (hücre sil) komutuyla listedeki müşteri adı hücrelerini (Kundenname Zeile 1 ve Kundenname Zeile 2) silin. Ardından **Ze-Ins** (hücre ekle) komutuyla istediğiniz büro adı metnini oluşturun: liste alanı **Liste başlığı (Listenkopf)**, hücre tipi **Metinler (Texte)**."
       }
     ]
   },

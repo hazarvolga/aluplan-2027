@@ -174,91 +174,46 @@
   "deepDive": {
     "blocks": [
       {
-        "type": "text",
-        "text": "Asistanlar (Assistenten), sağ tık ile hazır yapı elemanı alıp çizmenizi sağlayan paletlerdir. Kendi asistanlarınızı oluşturmadan önce ofis genelinde **ortak standartlar** tanımlayın. Hangi asistanın herkese hemen katkı sağlayacağını tartın ve asistana koyacağınız objeleri temiz tanımlayın. Henüz kullanmıyor olsanız bile katman (Layer) kullanmak ileride işinizi kolaylaştırır. Sık kullanılan asistanlar ekranın sağ veya sol kenarına rahat sabitlensin diye **dikey** formatta hazırlanır."
-      },
-      {
-        "type": "heading",
-        "text": "Asistan oluşturma ve ofiste kullanıma sunma"
-      },
-      {
-        "type": "text",
-        "text": "**Adım 1: Çizim dosyasını asistan olarak kaydetme.** Hazırladığınız çizim dosyasını açın. **Dosya (Datei) -> Kopyayı Asistan Olarak Kaydet (Kopie speichern als Assistent...)** yolunu izleyin. Kayıt konumu olarak kullandığınız Allplan sürümünün düğümünü, örneğin **Allplan 2025 -> Assistent-STD** seçin. Dosya adını girin (çizim dosyası adı önerilir), dosya tipini **Asistan (*.nas)** olarak seçin ve **Kaydet (Speichern)** deyin."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/8758_0EMVi00000ENjZ3_0940c6fd.png",
-        "caption": "Çizim dosyasını Asistan (*.nas) dosya tipiyle kaydetme penceresi."
-      },
-      {
-        "type": "text",
-        "text": "Asistanı görüntüleme veya yeni asistan grubu oluşturma sorgusunu bu adımda **iptal edin**. Grup, asistanlarla aynı dizinde sonraki adımda oluşturulacaktır."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/8758_0EMVi00000ENlNx_5b8763ca.png",
-        "caption": "Kayıttan sonra çıkan asistan grubu sorgusunu iptal edin."
-      },
-      {
-        "type": "text",
-        "text": "**Adım 2: Grup oluşturma ve asistan ekleme.** **Asistanlar (Assistenten)** paletini açın. Grup satırında sağ tık ile kısayol menüsünü açın ve **Yeni Grup (Neue Gruppe...)** seçin. Kayıt konumu olarak yine ilgili sürüm düğümünü (**Allplan 2025 -> Assistent-STD**) seçin, grup için bir dosya adı girin ve **Kaydet (Speichern)** deyin. Yeni grup palette görünür."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/8758_0EM7U000001Td7D_320d0dcf.png",
-        "caption": "Grup satırında sağ tık menüsünden Yeni Grup oluşturma."
-      },
-      {
-        "type": "text",
-        "text": "Sekmeler alanında sağ tık ile **Asistan Aç (Assistent öffnen...)** seçin, kayıt konumunu belirleyip ilk asistanı işaretleyin. Aynı yöntemle diğer asistanları da gruba ekleyin. Her sekmenin görünen adını sağ tık menüsünden değiştirebilirsiniz; bu adların dosya adıyla aynı olması gerekmez."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/8758_0EM7U000001Td7E_7244d9ea.png",
-        "caption": "Sekme alanından Asistan Aç ile hazır asistanı gruba ekleme."
-      },
-      {
-        "type": "text",
-        "text": "**Adım 3: Asistanları diğer bilgisayarlara sunma.** **Asistanlar (Assistenten)** paletini açın, grup satırında sağ tık ile **Grup Ekle (Gruppe hinzufügen...)** seçin. Böylece oluşturduğunuz grubu başka iş istasyonlarında da kullanıma açarsınız."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/8758_0EM7U000001Td7F_780f1849.png",
-        "caption": "Grup Ekle ile asistan grubunu başka bilgisayarlarda kullanıma sunma."
-      },
-      {
-        "type": "heading",
-        "text": "Güncellenme mantığı"
-      },
-      {
-        "type": "text",
-        "text": "Asistanlar her çağrıldığında yeniden yüklenir; mevcut verinin üzerine yeni içerik yazarsanız **anında** kullanıma hazır olur. Asistan grubu ise her program başlangıcında okunur. Bu yüzden gruba yeni asistan eklediğinizde, bunların her yerde görünmesi için Allplan'ı **yeniden başlatın**."
-      },
-      {
         "type": "heading",
         "text": "[a] Actionbar (Aksiyon Çubuğu) İçin İlk Adımlar"
       },
       {
         "type": "text",
-        "text": "Actionbar (Aksiyon Çubuğu); rol, görev ve bağlam odaklı bir çalışma biçimi sunar. Komutlar, Allplan açısından mantıksal olarak bir arada bulunması gereken şekilde gruplanır; böylece uzun fare hareketleri ve bir görev içinde modüller arasında sürekli geçiş ihtiyacı belirgin biçimde azalır. Örneğin **Kaba Yapı (Rohbau)** görevinde gereken tüm komutlar yer alır, modül değiştirmeniz gerekmez. İlk bilgilere **Başlangıç Rehberi (Onboarding)** üzerinden ulaşırsınız: **ALT -> ? -> Onboarding**."
+        "text": "Bu derste arayüzün merkezindeki Actionbar'ı (Aksiyon Çubuğu) tanıyorsunuz. Arkasındaki temel düşünce rol, görev ve bağlam odaklı çalışmadır."
+      },
+      {
+        "type": "text",
+        "text": "Komutlar ALLPLAN açısından mantıksal olarak bir arada bulunması gereken şekilde gruplanmıştır. Böylece uzun fare hareketleri ve bir görev içinde modüller arasında sürekli geçiş ihtiyacı belirgin biçimde azalır. Örneğin **Kaba Yapı (Rohbau)** görevinde gereken tüm komutlar yer alır, modül değiştirmeniz gerekmez. Rol (Rolle) solda, görevler (Aufgaben) üst sekmelerde, görev alanları (Aufgabenbereiche) komut gruplarının altındadır."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/8843_0EM7U000001TdOd_c5bf5d8c.png",
-        "caption": "Onboarding üzerinden Actionbar tanıtımı."
+        "caption": "Actionbar yapısı: rol (Rolle), görevler (Aufgaben: Rohbau, Ausbau, ...) ve görev alanları (Aufgabenbereiche: Bauteile, Öffnungselemente, Treppe, Dach, Umbau)"
       },
       {
         "type": "text",
-        "text": "İlk açılışta tüm görev alanları daraltılmıştır; bir alana çift tıklayınca içerik bölümlere ayrılır. Bir görev alanı genellikle şu mantıkla yapılanır: **Oluştur (Erzeugen) -> Bağlamda Oluştur (Erzeugen im Kontext) -> Bağlamda Değiştir (Modifizieren im Kontext)**."
+        "text": "İlk açılışta tüm görev alanları daraltılmıştır. Bir görev alanına çift tıkladığınızda içerik bölümlere ayrılmış olarak açılır. Bir görev alanı içindeki bölümleme genellikle şu sırayı izler: **Oluştur (Erzeugen) -> Bağlamda Oluştur (Erzeugen im Kontext) -> Bağlamda Değiştir (Modifizieren im Kontext)**."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/8843_0EM7U000001TdOe_78c90f57.png",
-        "caption": "Görev alanlarının renkle ayrılması."
+        "caption": "Açılmış (aufgeklappt) Bauteile görev alanı ve daraltılmış (zugeklappt) Öffnungselemente, Treppe, Dach alanları"
       },
       {
         "type": "text",
-        "text": "Görev alanları renklerle ayrılır: mavi, o görevin kendi fonksiyonlarını içerir; açık mavi, diğer görevlerden derlenmiş **Hızlı Erişim (Schnellzugriff)** alanıdır; gri ise her yerde kullanılabilen sabit, genel alanlardır. Eksik veya fazla komut varsa, sağ üstteki dişli çark sembolünden **Actionbar Yapılandırıcı (Actionbar-Konfigurator)** aracını açar; görev alanlarını ve fonksiyonları Sürükle-Bırak ile ekleyip çıkarır, kaydettikten sonra **Favori Yükle (Favorit laden)** ile geri çağırırsınız. Daha önce **Biçim (Format)** araç çubuğundan yapılan ayarlar artık **Özellikler (Eigenschaften)** paletinden değiştirilir."
+        "text": "Görev alanları renkle de ayrılır: mavi, o görevin kendi fonksiyonlarını içerir; açık mavi, başka görevlerden sık kullanılan komutların toplandığı **Hızlı Erişim (Schnellzugriff)** alanıdır; gri ise her yerde kullanılabilen sabit, genel görev alanlarıdır. Doğrudan bir objeye uygulanacak komutları objenin kısayol menüsünden çağırırsınız."
+      },
+      {
+        "type": "text",
+        "text": "Actionbar'da eksik ya da fazla komut varsa bunu **Actionbar Yapılandırıcı (Actionbar-Konfigurator)** ile kendiniz değiştirirsiniz. Aracı Actionbar'ın sağ üstündeki dişli çark simgesiyle başlatın, bir şablon seçin (önerilen: **Şablon [Standart] (Vorlage [Standard])**) ve **Oluştur (Erstellen)** düğmesine basın. Görev alanlarını ya da tek fonksiyonları Sürükle-Bırak ile önizlemeye ekler ya da önizlemeden kaldırırsınız. Kaydettiğiniz yapılandırmayı Actionbar'da **Favori Yükle (Favorit laden)** ile yüklersiniz; 2018-1-1 sürümüyle bu akış rollere dönüştü (bir sonraki bölüm)."
+      },
+      {
+        "type": "text",
+        "text": "Daha önce **Biçim (Format)** araç çubuğundan yapılan ayarları artık **Özellikler (Eigenschaften)** paletinden değiştirirsiniz. Palet Actionbar yapılandırmasında iki görev üstlenir: Biçim araç çubuğunun yerini alır ve obje bilgilerini görüntüleme ve değiştirme işlevini korur."
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Bildiğiniz menü çubuğunu (Dosya, Düzen, Görünüm; Datei, Bearbeiten, Ansicht) Actionbar yapılandırmasında Alt tuşuna basarak geçici olarak görünür yaparsınız. İlk bilgilere **Başlangıç Rehberi (Onboarding)** üzerinden (**Alt -> ? -> Onboarding**), yapının ayrıntısına **Bu Sürümdeki Yenilikler (Neues in dieser Version) -> Kullanılabilirlik (Usability)** üzerinden ve Yardım'dan (F1) ulaşırsınız."
       },
       {
         "type": "heading",
@@ -266,24 +221,152 @@
       },
       {
         "type": "text",
-        "text": "Kendi oluşturduğunuz Actionbar şablonları ve rolleri, sürüm güncellemesinden sonra da taşınabilir. Güncelleme sırasında yüklü olan şablon kural olarak korunur ve hem değişken hem sabit alan devralınır. Güncelleme sırasında yüklü değilse, kendi şablonlarınız kullanıcı klasörünüzde (...\\Actionbar) XML biçiminde saklanır ve Actionbar Yapılandırıcı üzerinden içe aktarılır."
+        "text": "Actionbar'ı kendinize göre yapılandırdıysanız bu yapılandırmayı güncellemelerde ve başka bilgisayarlarda korumayı da bilmeniz gerekir. Bu bölüm ALLPLAN 2018-1-1 düzeltme paketiyle (Hotfix) Actionbar'da yapılan değişiklikleri anlatır: yapılandırıcı yeniden tasarlanıp genişletildi, yapılandırma rol temelli oldu."
       },
       {
         "type": "text",
-        "text": "**Rolleri Yönet (Rollen verwalten)** sekmesinde, **Rolleri İçe Aktar (Rollen importieren)** alanından **Dosya Aç (Datei öffnen)** ile bir yapılandırma dosyasını (*.ACTB veya Actionbar_*.XML) yükler; istediğiniz rolleri Sürükle-Bırak ile **Rollerim (Meine Rollen)** alanına çekersiniz. Bu içe aktarımda yalnızca değişken alanlar dikkate alınır. **Dışa Aktar (Exportieren)** ile seçili rolleri *.ACTB biçiminde kaydedersiniz."
+        "text": "**1. Kendi Actionbar şablonlarınızı kullanmak (ALLPLAN 2018-1 ve öncesi):** Güncelleme sırasında yüklü olan kendi şablonunuz kural olarak güncellemeden sonra da görünür; hem değişken hem sabit alan devralınır."
+      },
+      {
+        "type": "text",
+        "text": "Güncelleme sırasında yüklü olmayan şablonlarınız ALLPLAN kullanıcı klasöründe (**Allmenu -> Servis (Service) -> Windows Gezgini (Windows Explorer) -> Kendi CAD Belgelerim (USR)**) Actionbar klasörü altında XML biçiminde kayıtlıdır. Bunları **Actionbar Yapılandırıcı (Actionbar-Konfigurator)** içinde **Rolleri Yönet (Rollen verwalten)** sekmesinin **Rolleri İçe Aktar (Rollen importieren)** alanından **Dosya Aç (Datei öffnen)** ile yüklersiniz. Yapılandırıcıyı dişli çark simgesiyle açarsınız."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8872_0EM7U000001Td2I_eefd0423.png",
+        "caption": "Actionbar Yapılandırıcı'yı açan dişli çark simgesi"
+      },
+      {
+        "type": "text",
+        "text": "İstediğiniz rolleri Sürükle-Bırak ile **Rollerim (Meine Rollen)** alanına çekerek içe aktarın. Bu yolda yalnız değişken alanlar dikkate alınır."
+      },
+      {
+        "type": "text",
+        "text": "Hem değişken hem sabit alanları almak istiyorsanız XML favorisini kullanıcı klasöründen kopyalayın, adını **configuration.actb** yapın ve Usr\\Local\\Actionbar klasörüne (Workgroup kurulumunda kullanıcıya ait Usr\\<Kullanıcı adı>\\Actionbar klasörüne) kopyalayın; ardından ALLPLAN'ı yeniden başlatın. Hâlâ eski yapılandırma görünüyorsa yapılandırıcıyı bir kez açın ve **Kaydet (Speichern)** yerine **İptal (Abbrechen)** deyin; böylece yapılandırma yeniden yüklenir."
+      },
+      {
+        "type": "text",
+        "text": "**2. 2018-1-1'de Favori Yükle:** Bir Actionbar yapılandırmasını favori olarak seçme kaldırıldı; **Favori Yükle (Favorit laden)** simgesi artık yoktur."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8872_0EM7U000001Td2J_68274a6d.png",
+        "caption": "Kaldırılan Favori Yükle (Favorit laden) simgesi"
+      },
+      {
+        "type": "text",
+        "text": "Bunun yerine dosyayı **Actionbar Yapılandırıcı** içinde yükler, ardından tüm rolleri ya da yalnız bazılarını ALLPLAN'a alırsınız. Artık bütün bir Actionbar tasarlayıp kaydetmek yerine roller oluşturup düzenlersiniz."
+      },
+      {
+        "type": "text",
+        "text": "Eski XML dosyanızı yüklemek için Actionbar Yapılandırıcı'yı açın. Kayıtlı XML dosyalarını **Rolleri Yönet** sekmesinin **Rolleri İçe Aktar** alanından **Dosya Aç** ile yüklersiniz; bu yolda değişken alan dikkate alınır."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/8872_0EM7U000001Td2M_d52e00cb.png",
-        "caption": "Actionbar Yapılandırıcı'da rollerin içe aktarılması."
+        "caption": "Dişli çark -> Rollen verwalten sekmesi -> Rollen importieren alanında Datei öffnen"
       },
       {
         "type": "text",
-        "text": "**Yapılandır (Konfigurieren)** sekmesinde görev alanlarını, fonksiyon gruplarını ve tek fonksiyonları Sürükle-Bırak ile önizlemeye ekler veya önizlemeden kaldırırsınız. Sabit (gri) alanlardaki değişiklik tüm rolleri, değişken (mavi) alanlardaki değişiklik ise yalnızca o an seçili rolü etkiler. Değişikliklerinizi **Kaydet (Speichern)** ile güvenceye alın."
+        "text": "Ardından dosyadaki tüm rolleri ya da tek tek rolleri **Rolleri İçe Aktar** alanından Sürükle-Bırak ile soldaki **Rollerim** alanına çekin. Solda gereksiz ya da yinelenen rolleri bağlam menüsünden silebilir, Rollerim altındaki sırayı Sürükle-Bırak ile değiştirebilirsiniz."
       },
       {
         "type": "text",
-        "text": "Önemli: **Rolleri Yönet** sekmesindeki **Yapılandırmayı Sıfırla (Konfiguration zurücksetzen)**, tüm değişiklikleri geri alır ve Allplan'ın fabrika çıkış durumunu geri yükler. Kendi oluşturduğunuz rolleri sonradan tekrar kullanmak istiyorsanız, sıfırlamadan önce bunları **Rollerim** alanında işaretleyip **Dışa Aktar** ile kaydedin."
+        "text": "**3. Yapılandır (Konfigurieren) sekmesi:** **Görevleri Yapılandır (Aufgaben konfigurieren)** alanında önizleme görünür. **Görev Alanları (Aufgabenbereiche)** alanında tüm görev alanlarını alfabetik sırayla bulursunuz; eklentiler (Plugins) de seçilebilir. İşaretlediğiniz görev alanının tüm fonksiyon grupları ve fonksiyonları **Fonksiyonlar (Funktionen)** alanında görünür. Görev alanlarını, fonksiyon gruplarını ya da tek fonksiyonları Sürükle-Bırak ile önizlemeye eklersiniz."
+      },
+      {
+        "type": "text",
+        "text": "Bir öğeyi rolden kaldırmak için onu önizlemeden Sürükle-Bırak ile iletişim kutusunun içine çekin; silme işareti olarak bir çöp kutusu simgesi görünür. Sabit (gri) alanlardaki değişiklikler tüm rolleri, değişken (mavi) alanlardaki değişiklikler yalnız seçili rolü etkiler. Sağ tıkla ayırıcı çizgi ekler, bir ada çift tıklayarak yeniden adlandırırsınız. Değişiklikleri **Kaydet (Speichern)** ile güvenceye alın; yeni yapılandırılan rolü artık Actionbar'da seçebilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Rolleri Yönet sekmesi:** **Dışa Aktar (Exportieren)** ile Rollerim alanında işaretli bir ya da birden çok rolü ACTB uzantılı yapılandırma dosyası olarak kaydedersiniz. **Sil (Löschen)** işaretli rolü kaldırır. **Dosya Aç (Datei öffnen)** bir yapılandırma dosyasını (ACTB ya da Actionbar_ ile başlayan XML) içindeki tüm rollerle içe aktarır. Bir rolü Rollerim ya da Rolleri İçe Aktar alanında işaretlediğinizde üstteki önizlemede gösterilir. İçe aktarılan rolü kullanmak için onu Rollerim alanına çekin, **Kaydet** deyin, yapılandırıcıyı kapatın ve rolü Actionbar'da seçin. Kaydetmek yerine **Yapılandır** sekmesine geçerseniz içe aktarılan rolü değiştirebilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Önemli:** **Rolleri Yönet** sekmesindeki **Yapılandırmayı Sıfırla (Konfiguration zurücksetzen)** tüm değişiklikleri geri alır ve ALLPLAN'ın fabrika durumunu yükler. Kendi rollerinizi sıfırlamadan sonra da kullanmak istiyorsanız sıfırlamadan önce onları Rollerim alanında işaretleyip **Dışa Aktar** ile kaydedin; yeniden içe aktardıktan sonra kullanabilirsiniz."
+      },
+      {
+        "type": "heading",
+        "text": "Asistan oluşturma ve ofiste kullanıma sunma"
+      },
+      {
+        "type": "text",
+        "text": "Bu derste tanıdığınız Asistanlar (Assistenten) paleti, hazır yapı elemanlarını sağ tık ile alıp çizmenizi sağlar. Büronuzun standart elemanlarıyla kendi asistanlarınızı oluşturup herkesin kullanımına sunabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Temel esaslar:** ALLPLAN ile çalışan tüm personel için ortak standartlar tanımlayın. Asistan oluşturmadan önce hangi asistanların herkese hemen katkı sağlayacağını tartın. Asistana koyacağınız objeleri çok temiz tanımlayın ve bunu anlık ihtiyacın ötesinde düşünün; örneğin büroda henüz kullanılmıyor olsa bile katman (Layer) kullanmak faydalıdır. Sık kullanılan asistanlar ekranın sağ ya da sol kenarına rahatça sabitlenebilsin diye dikey formattadır."
+      },
+      {
+        "type": "text",
+        "text": "**Adım 1 - Çizim dosyasını Büro dizininde asistan olarak kaydedin:** Hazırladığınız çizim dosyasını açın. **Dosya (Datei) -> Kopyayı Asistan Olarak Kaydet (Kopie speichern als Assistent...)** yolunu seçin (ALLPLAN 2023'e kadar: **Kopyayı Asistan Olarak Kaydet ve Göster (Kopie speichern als Assistent und anzeigen...)**). Kayıt konumu olarak sürümünüzün düğümünü, örneğin **Allplan 2025 -> Assistent-STD** seçin (2023'e kadar: **Büro Asistanları (Büro Assistenten)**). Dosya adını girin (çizim dosyasının adı önerilir), dosya tipi olarak **Asistan (.nas)** seçin ve **Kaydet (Speichern)** deyin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8758_0EMVi00000ENjZ3_0940c6fd.png",
+        "caption": "Kopie speichern als Assistent: Allplan 2025 -> Assistent - STD konumu, dosya adı 02_2D_Masslinien.nas, Kaydet"
+      },
+      {
+        "type": "text",
+        "text": "Asistanın görüntülenmesini isteyen soruyu **Hayır (Nein)** ile yanıtlayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8758_0EMVi00000ENlNx_5b8763ca.png",
+        "caption": "Asistan gösterilsin mi sorusu: Hayır (Nein)"
+      },
+      {
+        "type": "text",
+        "text": "Bir asistan grubu oluşturma sorgusunu da **İptal (Abbrechen)** ile kapatın. Grubu bir sonraki adımda asistanlarla aynı dizinde yeni oluşturacaksınız."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8758_0EMVi00000ENlXd_6052292f.png",
+        "caption": "Asistan grubu (Assistentengruppe) penceresi: İptal (Abbrechen)"
+      },
+      {
+        "type": "text",
+        "text": "**Adım 2 - Yeni grup oluşturun, asistanları ekleyin ve adlandırın:** **Asistanlar (Assistenten)** paletini açın. Grup satırında sağ tıkla kısayol menüsünü açın ve **Yeni Grup (Neue Gruppe...)** seçin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8758_0EM7U000001Td7D_320d0dcf.png",
+        "caption": "Asistanlar paletinde grup satırı menüsü: Neue Gruppe"
+      },
+      {
+        "type": "text",
+        "text": "Kayıt konumu olarak Adım 1'deki gibi sürüm düğümünü (örneğin **Allplan 2025 -> Assistent-STD**) seçin, bir dosya adı girin (örneğin Büroassistenten) ve **Kaydet** deyin. Yeni grup Asistanlar paletinde görünür. Ardından sekmeler alanında sağ tıkla kısayol menüsünü açın ve **Asistan Aç (Assistent öffnen...)** seçin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8758_0EM7U000001Td7E_7244d9ea.png",
+        "caption": "Boş Büroassistenten grubunda sağ tık menüsü: Assistent öffnen"
+      },
+      {
+        "type": "text",
+        "text": "Kayıt konumunu seçin ve ilk asistanı işaretleyin. Aynı yolla diğer asistanları da gruba ekleyin. **Not:** Her sekmenin görünen adını sekmenin kısayol menüsünden değiştirebilirsiniz; bu adların dosya adıyla aynı olması gerekmez. Grup adı da grubun dosya adından farklı olabilir."
+      },
+      {
+        "type": "text",
+        "text": "**Adım 3 - Asistanları diğer bilgisayarlarda kullanıma sunun:** Asistanlar paletini açın ve grup satırında sağ tıkla **Grup Ekle (Gruppe hinzufügen...)** seçin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8758_0EM7U000001Td7F_780f1849.png",
+        "caption": "Asistanlar paletinde grup satırı menüsü: Gruppe hinzufügen"
+      },
+      {
+        "type": "text",
+        "text": "**Notlar:** Asistanlar her çağrıldığında yeniden yüklenir; mevcut verilerin üzerine yeni içerik yazarsanız hemen kullanıma hazır olur. Asistan grubu ise her program başlangıcında okunur; gruba yeni asistan eklediyseniz bunlar ALLPLAN yeniden başlatıldıktan sonra her yerde kullanılabilir."
+      },
+      {
+        "type": "heading",
+        "text": "Tool-Hub Temel Fonksiyonları Bölüm 1"
+      },
+      {
+        "type": "text",
+        "text": "Tool-Hub'ın temel fonksiyonları iki eğitim videosunda anlatılır: birinci bölüm model navigasyon fonksiyonlarını, ölçülendirme türlerini ve metin notlarını, ikinci bölüm 3B model kesitlerini, obje fonksiyonlarını ve navigasyon haritasını ele alır."
       }
     ]
   },

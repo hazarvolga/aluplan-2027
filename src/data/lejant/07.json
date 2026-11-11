@@ -101,115 +101,82 @@
     "blocks": [
       {
         "type": "heading",
-        "text": "Etiket Stilleri - Formül Koleksiyonu - Koşullar için örnekler (mantıksal uygunluk kontrolleri ve benzerleri)"
-      },
-      {
-        "type": "text",
-        "text": "Durum 1 - Poz numarasını koşula göre çerçeveleme: Yapı elemanlarına genellikle daire (%K0) içinde poz numarası verilir; bir değişiklikte bazı elemanlar yeniden numaralanıp ilave/revizyon pozu (Nachtragsposition) alır. Poz numarası için Positionsnummer (@194@), ilave poz işareti için TextPos (@1311@) niteliği kullanılır. %K0 metni çevreleyen daire, %N0 sekizgen oluşturur."
-      },
-      {
-        "type": "text",
-        "text": "Formül (biçim örn. A30): _IF_(@1311@=\"N*\")\"%N0\"+@194@+\" \"+@1311@_ELSE_\"%K0\"+@194@"
-      },
-      {
-        "type": "text",
-        "text": "TextPos içeriği 'N' ile başlıyorsa poz sekizgenle, aksi halde daireyle gösterilir. Örneğin TextPos'a N1 girilince o poz sekizgenle işaretlenir."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/10594_0EM7U000001TdD0_d534cfc8.png",
-        "caption": "Poz numarası normalde daire içinde; TextPos 'N' ile başlayınca sekizgen."
-      },
-      {
-        "type": "text",
-        "text": "Durum 2 - Kapı net geçiş yüksekliğini kontrol etme: Net geçiş yüksekliği (bitmiş döşeme üst kotundan kaba lento alt kotuna) hedefin altına düşerse bir uyarı, aksi halde hiçbir şey yazdırılmalıdır. Kapı yüksekliği Höhe (@222@, m) niteliğinden alınır. Belirleyici mahalin döşeme katman yapısı PARENT(Obj_Floor(@211@;1;2;3;4;5;6;7;8;9;10)) ile mm cinsinden hesaplanır (@211@ katman kalınlığı / Schichtdicke)."
-      },
-      {
-        "type": "text",
-        "text": "Yükseklik m, döşeme yapısı mm olduğundan 1000'e bölme gerekir. Hedef değerle karşılaştırma (biçim örn. A25):"
-      },
-      {
-        "type": "text",
-        "text": "_IF_((@222@-PARENT(Obj_Floor(@211@;1;2;3;4;5;6;7;8;9;10)/1000))<2,01)\"Türhöhe zu gering!\"_ELSE_\"\""
-      },
-      {
-        "type": "text",
-        "text": "Kontrol doğruysa (2,01 ile karşılaştırma) 'Türhöhe zu gering!' (Kapı yüksekliği çok düşük!) yazısı, aksi halde boş döner. Etiket stili oluşturmanın temellerini diğer SSS makalelerinde veya connect.allplan.com'da bulabilirsiniz."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/10594_0EM7U000001TdD1_295af95b.png",
-        "caption": "Net kapı yüksekliği 2,01 m'nin altına düşünce uyarı metni görünür."
-      },
-      {
-        "type": "heading",
         "text": "Etiket Stilleri / Lejantlar - Yedekleme ve Geri Yükleme"
       },
       {
         "type": "text",
-        "text": "Bir lejant her zaman zle00x.deu lejant dosyalarından ve ek bir zle000.deu yönetim dosyasından oluşur. Pafta lejantları (antetler) her zaman 7 veya 8 numaralı dosyada bulunmalıdır (zle007.deu, zle008.deu). Bir etiket stili ise zdo00x.deu dosyalarından ve zdo000.deu yönetim dosyasından oluşur."
+        "text": "Donatı listelerini ve pafta lejantlarını (antetleri) başka bir bilgisayara taşımak ya da güvenceye almak için lejantları yedekler, gerektiğinde geri yüklersiniz; bu, kopyalama işinin ileri adımıdır. Önce dosya yapısını tanıyın."
       },
       {
         "type": "text",
-        "text": "Yedekleme - önce bir harici yol tanımlayın: Dosya (Datei) -> ProjectPilot'u açın, 'Harici Yol (Externer Pfad)' düğümüne sağ tıklayıp Harici yol seç (Externen Pfad auswählen) ile bir yedekleme klasörü ayarlayın."
+        "text": "Bir lejant her zaman **zle00x.deu** lejant dosyalarından (x, dosya numarasıdır) ve ek bir yönetim dosyası olan **zle000.deu** dosyasından oluşur. Pafta lejantları (antetler) her zaman 7 veya 8 numaralı dosyada bulunmalıdır (**zle007.deu**, **zle008.deu**)."
+      },
+      {
+        "type": "text",
+        "text": "Bir etiket stili de aynı mantıkla **zdo00x.deu** etiket stili dosyalarından ve **zdo000.deu** yönetim dosyasından oluşur."
+      },
+      {
+        "type": "text",
+        "text": "**a) Yedekleme:** Önce yedeğin kaydedileceği klasörü tanımlayın. **Dosya (Datei)** menüsünden **ProjectPilot**'u açın, **Harici Yol (Externer Pfad)** düğümüne sağ tıklayın ve bağlam menüsünden **Harici yol seç... (Externen Pfad auswählen...)** seçeneğini seçin. Ardından yedekleme klasörünü ayarlayın."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/10888_0EM7U000001Te3a_a3b840c5.png",
-        "caption": "ProjectPilot'ta harici yolu (yedekleme klasörünü) tanımlama."
+        "caption": "ProjectPilot'ta Harici Yol için Externen Pfad auswählen komutu"
       },
       {
         "type": "text",
-        "text": "ProjectPilot'u kapatın; Oluştur (Erzeugen) -> Ek Modüller -> Şablonlar: Raporlar, Lejantlar, Etiketler -> Etiket Stillerini, Lejantları Yönet yolunu açın. Sol tarafta kaynak dizini (örn. Büro) ve klasörü seçip kaydedilecek lejantları işaretleyin, Kopyala (Kopieren) deyin."
+        "text": "ProjectPilot'u kapatın ve **Oluştur (Erzeugen)** -> **Ek Modüller (zusätzliche Module)** -> **Şablonlar: Raporlar, Lejantlar, Etiketler** -> **Etiket Stillerini, Lejantları Yönet (Beschriftungsbilder, Legenden verwalten)** yolunu izleyip **Lejantlar (Legenden)** veya **Etiket Stilleri (Beschriftungsbilder)** seçin. Açılan diyalogda solda kaynak dizini (örneğin **Büro**), ortada klasörü (örneğin **Planlegenden_Büroeigene**) seçin, kaydedilecek lejantları işaretleyin ve **Kopyala (Kopieren)** düğmesine tıklayın."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/10888_0EM7U000001Te3b_f6366dcc.png",
-        "caption": "Kaynak dizinden kaydedilecek lejantları işaretleyip Kopyala."
+        "caption": "Kaynak dizin Büro, dosya 7 ve işaretli lejantlarla Kopyala"
       },
       {
         "type": "text",
-        "text": "Kayıt konumu olarak Harici Yol'u seçin, dosya numarasını (örn. 7) seçin, numaraları işaretleyip Çalıştır (Ausführen) deyin. Harici klasörde zle00x.deu (veya zle007.deu) ve zle000.deu dosyaları oluşur."
+        "text": "Hedef olarak baştan tanımladığınız **Harici Yol (Externer Pfad)** dizinini seçin, dosya numarasını (örneğin 7) ve kaydedilecek numaraları işaretleyin, sonra **Çalıştır (Ausführen)** deyin."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/10888_0EM7U000001TeD1_8ee7091b.png",
-        "caption": "Hedef olarak Harici Yol ve dosya numarasını seçip Çalıştır."
+        "caption": "Hedef dizin Harici Yol, dosya 7 ve Çalıştır (Ausführen)"
+      },
+      {
+        "type": "text",
+        "text": "Harici yol klasöründe artık lejant dosyasını (örneğin **zle007.deu**) ve yönetim dosyası **zle000.deu**'yu bulursunuz. Etiket stili yedeklediyseniz klasörde **zdo00x.deu** ve **zdo000.deu** dosyaları olur."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/10888_0EM7U000001TeD2_1c01ef32.png",
-        "caption": "Harici klasörde oluşan zle00x.deu lejant dosyası ve zle000.deu yönetim dosyası."
+        "caption": "Yedek klasöründe lejant dosyaları: zle000.deu ve zle007.deu"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/10888_0EM7U000001TeD3_3d46f97e.png",
+        "caption": "Etiket stili yedeğinde zdo000.deu ve zdo001.deu dosyaları"
       },
       {
         "type": "text",
-        "text": "Geri yükleme (içe aktarma) - harici yolu, lejantınızın bulunduğu klasöre ayarlayın. Yine Etiket Stillerini, Lejantları Yönet'i açın; bu kez kaynak dizin olarak Harici Yol'u, klasörü ve geri yüklenecek lejantları seçip Kopyala deyin."
+        "text": "**b) Geri yükleme (içe aktarma):** Önce yedeğin bulunduğu klasörü tanımlayın: **ProjectPilot**'ta **Harici Yol (Externer Pfad)** düğümüne sağ tıklayıp **Harici yol seç...** ile yedek klasörünü seçin."
+      },
+      {
+        "type": "text",
+        "text": "ProjectPilot'u kapatıp aynı yoldan **Etiket Stillerini, Lejantları Yönet** diyaloğunu açın. Bu kez kaynak dizin olarak **Harici Yol (Externer Pfad)**'u, ardından klasörü (örneğin **Planlegenden_Büroeigene**) seçin, geri yüklenecek lejantları işaretleyin ve **Kopyala (Kopieren)** deyin."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/10888_0EM7U000001TeD5_7fcdb21f.png",
-        "caption": "Geri yüklemede kaynak Harici Yol; geri yüklenecek lejantları işaretleyip Kopyala."
+        "caption": "Kaynak dizin Harici Yol, işaretli lejantlarla Kopyala"
       },
       {
         "type": "text",
-        "text": "Son olarak geri yükleme konumunu (örn. Büro), dosya numarasını (pafta lejantları için 7) ve numaraları seçip Çalıştır deyin. Lejantlar seçtiğiniz dizinde hazır olur. Pafta lejantları mutlaka 7 veya 8 numaralı dosyada bulunmalıdır."
+        "text": "Hedef olarak geri yükleme konumunu (örneğin **Büro**), dosya numarasını (pafta lejantları için 7) ve numaraları seçip **Çalıştır (Ausführen)** deyin. Doğru yaptıysanız geri yüklenen lejantlar seçtiğiniz dizinde görünür."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/10888_0EM7U000001TeD6_14f716d6.png",
-        "caption": "Geri yükleme konumu ve dosya numarasını seçip Çalıştır."
-      },
-      {
-        "type": "heading",
-        "text": "Lejantlar - Sabit Büro Adıyla Çelik Listesi (Stahlliste) Oluşturma"
-      },
-      {
-        "type": "text",
-        "text": "Yeni bir çizim dosyasını (Teilbild) etkinleştirin ve CAD Navigator'dan Liste modülüne geçin (Ek Modüller -> Liste Oluşturma / Zusätzliche Module -> Listenerstellung). Liste Yönetimi (Listenverwaltung) ile istediğiniz çelik listesini (Stahlliste) Standart (Standard) dizininden Büro (Büro) dizinine, dosya numarasını koruyarak kopyalayın; örneğin Standart - Dosya 18 Çelik Listeleri - Liste Rundstl L 1'i Büro - Dosya 18 Çelik Listeleri - Musterfirma olarak kopyalayın."
-      },
-      {
-        "type": "text",
-        "text": "Kopyalanan listeyi Listeleri Değiştir (Listen modifizieren) ile açın. Ze-Lö komutuyla Müşteri Adı (Kundenname) satır 1 ve satır 2 hücrelerini silin; ardından Ze-Ins komutuyla (Liste bölgesi: Liste başlığı / Listenkopf; hücre tipi: Metinler / Texte) sabit büro adını metin olarak ekleyin."
+        "caption": "Hedef dizin Büro, dosya 7 ve Çalıştır (Ausführen)"
       }
     ]
   },

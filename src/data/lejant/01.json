@@ -116,57 +116,117 @@
       },
       {
         "type": "text",
-        "text": "Allplan, yapı elemanlarını etiketlemek için birkaç farklı fonksiyon sunar ve her birinin kullanım koşulları biraz farklıdır: Metin (Text), Etiket (Beschriften), İlişkili Etiket (Assoziativ beschriften), Kot (Höhenkote) ve yalnızca boşluklar için Parapet Yüksekliği (Brüstungshöhe)."
+        "text": "Yapı elemanlarını etiketlemek için ALLPLAN birden fazla fonksiyon sunar ve her birinin kullanımında biraz farklı koşullar geçerlidir. Lejant ve etiket stillerine geçmeden önce bu fonksiyonları ve hangisini ne zaman seçeceğinizi tanıyın: **Metin (Text)**, **Etiket (Beschriften)**, **İlişkili Etiket (Assoziativ beschriften)**, **Kot (Höhenkote)** ve yalnız boşluklar için **Parapet Yüksekliği (Brüstungshöhe)**."
       },
       {
         "type": "text",
-        "text": "Metin (Text) fonksiyonları (Yatay, Düşey, Açılı) yapı elemanına bağlı olmayan serbest metin blokları oluşturur. Esnektir, ancak metin elemanın 'yanında' durur; raporlara ve metraja zorunlu olarak yansımaz ve eleman değişince güncellenmez. Basit notlar ve açıklamalar için uygundur."
+        "text": "**Metin (Text) fonksiyonları:** **Yatay Metin (Text horizontal)**, **Düşey Metin (Text vertikal)** ve **Açılı Metin (Text unter Winkel)** ile yapı elemanlarına bağlı olmayan basit metin blokları oluşturursunuz; yazı tipi, renk ve boyut gibi özellikleri ayarlayabilirsiniz, metin bloğunun uzunluğu sınırsızdır. Kat planında yapı elemanına bağlı olmayan basit etiketler, uzun açıklamalar ve lejantlar için uygundur ve esnek kullanılır."
       },
       {
         "type": "text",
-        "text": "Etiket (Beschriften) fonksiyonu duvar, kolon, mahal, boşluk gibi nesneleri etiketler ve her zaman elemanın tamamını dikkate alır. Üç alt türü vardır: Standart Etiket, Nesne Etiketi ve Etiket Stili."
+        "text": "Dezavantajı: metin yapı elemanının yalnızca \"yanında\" durur. Raporlara, metraj listelerine ve veri aktarımlarına yapı elemanının özelliklerini taşımaz; yapı elemanı değiştiğinde de metin değişmez."
+      },
+      {
+        "type": "text",
+        "text": "**Etiket (Beschriften) fonksiyonu:** Mimari yapı elemanlarını (duvar, kolon, mahal, boşluk), 2B elemanları (çizgi, daire, poligon, yüzey), 3B nesneleri, makroları ve SmartPart'ları etiketler. Bu fonksiyon her zaman yapı elemanının tamamını dikkate alır; bu yüzden eğimli alt veya üst kenarlı bir elemanda ve farklı yükseklikli mahallerde yalnız tek bir yükseklik verir. Üç alt türü vardır."
+      },
+      {
+        "type": "text",
+        "text": "**Standart Etiket (Standardbeschriftung):** Nesneye göre önceden tanımlanmış, sayısı ve seçimi değiştirilemeyen özellikleri etiketler. Tüm satırların görünümünü **Parametreler (Parameter)** düğmesiyle tek tip ayarlarsınız; alana göre çerçeve ve ondalık basamak gibi ek ayarlar yapılabilir."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/11321_0EM7U000001TdDn_17ca65ea.png",
-        "caption": "Standart Etiket (Standardbeschriftung): önceden tanımlı, sayısı değiştirilemeyen özellikler. Hızlı ve basittir, ama tüm ölçeklerde aynı içeriği verir."
+        "caption": "Etiket araç çubuğunda Standart Etiket: duvar için malzeme ve hacim alanları"
+      },
+      {
+        "type": "text",
+        "text": "Bir nesnenin temel özelliklerini hızlıca ve nadir durumlarda etiketlemek için kullanılır. Ölçek değişince satırlar tek blok halinde kalır, kullanımı kolaydır ve yerleştirirken metin boyutu değiştirilebilir. Dezavantajları: özellik seçimi kısıtlıdır (örneğin mahallerde yalnız kaba yapı taban alanı vardır, oturma veya kullanım alanı yoktur), etiket otomatik güncellenmez ve her ölçekte aynı içeriği gösterir."
+      },
+      {
+        "type": "text",
+        "text": "**Nesne Etiketi (Objektbeschriftung):** Bir nitelik listesinden seçim yaparsınız ve başka özellikler de ekleyebilirsiniz. Görünüm yine **Parametreler (Parameter)** ile tek tip ayarlanır; satır sırası seçim diyaloğundaki sırayı izler."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/11321_0EM7U000001TdDo_5de901e1.png",
-        "caption": "Nesne Etiketi (Objektbeschriftung): bir nitelik listesinden seçim yapabilirsiniz; Etiket Stilini Değiştir ile sonradan değiştirilebilir."
+        "caption": "Etiket araç çubuğunda Nesne Etiketi: duvar için nitelik seçimi"
+      },
+      {
+        "type": "text",
+        "text": "Nesnede doğrudan bulunan bilgileri hızlıca etiketlemek için uygundur. Özellik seçiminde esnektir, ölçek değişince blok halinde kalır ve **Etiket Stilini Değiştir (Beschriftungsbild tauschen)** fonksiyonuyla değiştirilebilir. Yine de seçim kısıtlıdır ve her ölçekte aynı içeriği gösterir."
+      },
+      {
+        "type": "text",
+        "text": "**Etiket Stili (Beschriftungsbild):** Önceden tanımlanmış ya da kendi tanımladığınız çok sayıda etiket stili arasından seçersiniz. Yerleştirirken özelliklerin sayısına, yazı tipine veya diğer ayarlara erişemezsiniz; bunlar stilin içinde tanımlıdır."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/11321_0EM7U000001TdDp_a8bf7625.png",
-        "caption": "Etiket Stili (Beschriftungsbild): elemanın TÜM nitelikleri, formüller ve üst/alt elemana erişim; ölçeğe ve çizim tipine göre farklı folyolar."
+        "caption": "Etiket araç çubuğunda Etiket Stili seçimi"
       },
       {
         "type": "text",
-        "text": "İlişkili Etiket (Assoziativ beschriften), Etiket fonksiyonuna çok benzer; Görünüş Oluştur ve Kesit Oluştur ile üretilmiş görünüş ve kesitleri, elemanlar o çizim dosyasında bulunmasa bile etiketlemek için kullanılır."
+        "text": "Mahalleri, boşlukları ve diğer yapı elemanlarını, özellikle orta ve çok büyük sayıda elemanı aynı biçimde etiketlemek; farklı ölçeklerde ya da çizim tiplerinde farklı içerik göstermek; doğrudan bulunmayan özellikleri ve yapı elemanı referanslarını birlikte etiketlemek için kullanılır."
       },
       {
         "type": "text",
-        "text": "Kot (Höhenkote) fonksiyonu, seçtiğiniz noktada elemanın üst kotunu (Ü.K.) ve alt kotunu (A.K.) okur; düzlem ve referans yüzeyle biçimlenen tüm mimari elemanlarda çalışır."
+        "text": "Etiket stilinin avantajları belirgindir: yapı elemanının tüm özelliklerini (niteliklerde görünmeyenleri bile) kullanabilir, formüllerle özellikleri koşula bağlayabilir, üst ve alt yapı elemanlarına erişebilir (örneğin tek bir mahalin etiketinde mahal grubunun adı), her ölçek veya çizim tipi için ayrı folyo (Folie) tanımlayabilir ve **Etiket Stilini Değiştir** ile değiştirebilirsiniz. Böylece aynı stille etiketlenen tüm elemanlarda tutarlı içerik elde edersiniz. Dezavantajları: yazı tipi gibi değişiklikler yapılamaz, stiller önceden tanımlanmalıdır ve çoğunlukla her yapı elemanı türü için en az bir stil gerekir."
+      },
+      {
+        "type": "text",
+        "text": "**İlişkili Etiket (Assoziativ beschriften) fonksiyonu:** Çoğu noktada **Etiket (Beschriften)** fonksiyonu gibi çalışır ve **Görünüş Oluştur (Ansicht generieren)** ile **Kesit Oluştur (Schnitt generieren)** fonksiyonlarıyla üretilen görünüş ve kesitlerde etiketleme için tasarlanmıştır. Böylece yapı elemanları, görünüşün veya kesitin çizim dosyasında doğrudan bulunmasalar bile etiketlenebilir. Üç alt tür aynıdır; tek fark **Etiketi Değiştir (Beschriftung tauschen)** fonksiyonunun bağlam menüsünde bulunmamasıdır."
+      },
+      {
+        "type": "text",
+        "text": "**Kot (Höhenkote) fonksiyonu:** Bir yapı elemanının seçtiğiniz noktasındaki üst ve alt kotu doğrudan okur. Formu düzlemler ve referans yüzeylerle belirlenen tüm mimari yapı elemanlarında çalışır. Kat planında seçilen noktada yardımcı konstrüksiyon renginde bir çift daire oluşur; bu daireyi eleman içinde taşıdığınızda değerler de değişir. Etiketleme için iki alt tür vardır: Standart Etiket ve Etiket Stili."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/11321_0EM7U000001TdDq_c17dc94f.png",
-        "caption": "Kot fonksiyonu seçilen noktada yardımcı konstrüksiyon renginde çift daire bırakır; daire eleman içinde taşınınca değerler güncellenir."
+        "caption": "Kot fonksiyonunun yerleştirdiği çift daire (yardımcı konstrüksiyon rengi)"
+      },
+      {
+        "type": "text",
+        "text": "**Kot için Standart Etiket:** Üst kot ve alt kot için birer sembol seçebilir, **Biçim (Format)** ile ondalık basamak sayısını belirleyebilir, **Parametreler (Parameter)** ile metin özelliklerini tek tip ayarlayabilirsiniz. **deltaOK** ve **deltaUK** ile örneğin mahallerdeki ince yapı katmanlarını \"benzetebilirsiniz\"."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/11321_0EM7U000001TdDr_42d7e352.png",
-        "caption": "Kot - Standart Etiket: Ü.K./A.K. sembolleri, Biçim üzerinden ondalık basamak ve deltaOK / deltaUK ile ince yapı katmanlarının simülasyonu. Değerler sıfır noktasına göre delta verir."
+        "caption": "Kot araç çubuğu: sembol (Sym-OK/UK), deltaOK/UK ve biçim alanları"
+      },
+      {
+        "type": "text",
+        "text": "Standart etiketteki üst ve alt kot değerleri her zaman sıfır noktasına göre farkı gösterir. Elemanların üst ve alt kotlarını geçici etiketle kontrol etmek ve özellikle boşlukları basitçe etiketlemek için kullanılır. Kotları hızlı değerlendirir, sembol ve metin ayarları serbesttir, üst kot (OK) ve alt kot (UK) için delta verilebilir. Ancak etiket otomatik güncellenmez ve ek bilgi yazdırılamaz."
+      },
+      {
+        "type": "text",
+        "text": "**Kot için Etiket Stili:** Bir etiket stilinin avantajlarını, yapı elemanının seçilebilir bir noktasındaki tam kotları etiketleme olanağıyla birleştirir; gösterilen veriler stilde kullanılan niteliklere bağlıdır."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/11321_0EM7U000001TdDs_5d15db3f.png",
-        "caption": "Kot - Etiket Stili: bir etiket stilinin avantajlarını, elemanın seçili noktasındaki tam kot ile birleştirir."
+        "caption": "Kot için Etiket Stili alt türünün seçimi"
       },
       {
         "type": "text",
-        "text": "Yöntem seçimi: ağırlıklı 2B çalışmada basit metin; ana elemanlarla 3B çalışmada Etiket Stilleri; metraj veya IFC/Bimplus aktarımı yapılan 3B çalışmada mümkün olduğunca çok elemanı kendi Etiket Stillerinizle etiketleyin. Eğimli alt/üst kenarlı elemanlarda noktasal kot gerekiyorsa Kot fonksiyonunu kullanın."
+        "text": "Farklı yükseklik ve kalınlıktaki elemanları noktasal hassasiyetle etiketlemek ve kot bilgisini istediğiniz diğer niteliklerle tek adımda birleştirmek için uygundur. Dezavantajları: etiket otomatik güncellenmez ve Kot'un standart etiketindeki delta değerleri burada kullanılamaz."
+      },
+      {
+        "type": "text",
+        "text": "**Parapet Yüksekliği (Brüstungshöhe) fonksiyonu:** Boşlukların alt kotu için özelleştirilmiştir ve Kot fonksiyonuna benzer olanaklar sunar. Standart etikette sembol yerine ön metin (Vortext) ve son metin (Nachtext) verilebilir; diğer noktalar Kot ile aynıdır."
+      },
+      {
+        "type": "text",
+        "text": "**Hangisini seçmeli?** Hepsi kullanım alanınıza ve çalışma yönteminize göre doğru seçenek olabilir. Ağırlıklı 2B çalışıyorsanız ve yapı elemanı yoksa basit metinler, gerekiyorsa alan için Etiket fonksiyonu yeterlidir. Ana elemanlarla 3B çalışıyorsanız temel elemanları (örneğin mahalleri) **Etiket Stilleri** ile etiketleyin. Metraj ya da Bimplus veya IFC ile model aktarımı içeren 3B çalışmada mümkün olduğunca çok elemanı kendi tanımladığınız **Etiket Stilleri** ile etiketleyin. Eğimli alt veya üst kenarlı elemanlarda noktasal kot gerekiyorsa Etiket yerine **Kot** fonksiyonunu kullanın."
+      },
+      {
+        "type": "heading",
+        "text": "YENİLİK 2024 - İlişkisel Mimari Lejantlar"
+      },
+      {
+        "type": "text",
+        "text": "ALLPLAN 2024 sürümüyle **ilişkisel mimari lejantlar** geldi."
       }
     ]
   },

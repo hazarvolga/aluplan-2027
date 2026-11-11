@@ -205,5 +205,82 @@
     "task": "Kendi ALLPLAN kurulumunuzda STD klasörünün yolunu bulun ve içinde bir 'Library' klasörü olup olmadığını kontrol edin. Bir PythonPart'ı Actionbar'a eklemek için gereken dosya ön koşullarını (Library klasörü + 24 ve 128 çözünürlükte ikon) bir kontrol listesi olarak yazın.",
     "expected": "STD yolu ve 'Library' klasörünün varlığına dair bir doğrulama, ayrıca iki maddelik (Library klasörü, 24/128 ikonlar) hazırlık kontrol listesi.",
     "hint": "Prosedür ancak dosyalar STD içinde doğru yerdeyse başlıyor; önce bu ön koşulu doğrulamak zaman kazandırır."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "PythonPart'ı (SmartStairConverter) Actionbar'a Ekleme"
+      },
+      {
+        "type": "text",
+        "text": "Hazır bir PythonPart'ı, örneğin SmartStairConverter'ı, Actionbar'a (Aksiyon Çubuğu) ekleyebilmek için önce iki ön koşulu sağlayın. **a)** İstenen PythonPart'ı içeren **Library** klasörü STD klasöründe olmalı. **b)** PythonPart'ın 24 ve 128 piksel çözünürlüklü iki simgesi de STD klasöründe uygun yerde kayıtlı olmalı."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/otomasyon-scripting/9338_0EMVi000003EwTq_52924b75.png",
+        "caption": "Explorer: Allplan 2024\\Std\\Library\\PythonParts\\Fertigteile klasöründe SmartStairConverter.pyp, _24.png ve _128.png"
+      },
+      {
+        "type": "text",
+        "text": "SmartStairConverter'ı eklemek istiyorsanız gereken iki simge dosyası LearnNow'daki makalenin Dosyalar (Files) bölümünde indirilebilir; aşağıdaki iki görsel bu dosyalardır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/otomasyon-scripting/9338_SmartStairConverter_24_6f7df79e.png",
+        "caption": "SmartStairConverter menü simgesi, 24x24 piksel"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/otomasyon-scripting/9338_SmartStairConverter_128_6b10f424.png",
+        "caption": "SmartStairConverter menü simgesi, 128x128 piksel"
+      },
+      {
+        "type": "text",
+        "text": "**Tanımlama:** Actionbar'daki yapılandırma düğmesiyle (1) **Actionbar Yapılandırması (Actionbar Konfiguration)** penceresini açın ve **Python/SmartPart ekle (Python/SmartPart hinzufügen)** (2) ile PythonPart'ı ekleyin. Açılan diyalogda (3) PythonPart'ı **Gözat (Browse)** ile STD yolunda seçin, gereken dil ya da diller için PythonPart'a bir ad girin, iki simgeyi de STD yolunda seçin ve **OK** ile onaylayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/otomasyon-scripting/9338_0EMVi000003F8oL_81689a0b.png",
+        "caption": "Actionbar Konfiguration: yapılandırma düğmesi (1), Python/SmartPart hinzufügen (2) ve SmartStairConverter.pyp ile iki simgenin seçildiği diyalog (3)"
+      },
+      {
+        "type": "text",
+        "text": "Ardından ALLPLAN'ı yeniden başlatmanız gerekir."
+      },
+      {
+        "type": "text",
+        "text": "**Actionbar'a yerleştirme:** Yeniden Actionbar yapılandırmasına geçin ve oluşturduğunuz PythonPart'ı Actionbar'a ekleyin. Ya solda **Plug-ins** girişine geçip (1) girişi sağda **Add-On Module - PythonParts** altında bulun, ya da **Fonksiyonlar (Funktionen)** alanına tanımladığınız adı yazın (2). Ardından simgeyi (3) sürükle-bırak ile Actionbar'da istediğiniz konuma taşıyın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/otomasyon-scripting/9338_0EMVi000003F35W_693e13cf.png",
+        "caption": "Actionbar Konfiguration: Plug-ins (1), Funktionen arama alanında SmartStairConverter (2) ve Add-On Module - PythonParts altındaki giriş (3)"
+      },
+      {
+        "type": "heading",
+        "text": "İlk PythonPart'ınızı Oluşturma (Çerçeve Temelleri)"
+      },
+      {
+        "type": "text",
+        "text": "İngilizce kurs ilk PythonPart'ınızı oluştururken size eşlik eder ve PythonPart çerçevesinin (framework) nasıl çalıştığını anlatır. Bölümler halinde standart bir PythonPart oluşturmayı, parametrik donatılı elemanlar kurmayı ve kurumunuzun ihtiyaçlarına özel fonksiyonlar tasarlamayı öğretir."
+      },
+      {
+        "type": "heading",
+        "text": "Standart Dışı Merdiven Donatısı: İki Yaklaşım"
+      },
+      {
+        "type": "text",
+        "text": "Bu İtalyanca teknik webinar kaydı, standart dışı bir merdivenin tasarımına iki yaklaşımı karşılaştırır. Birincisinde bir PythonPart kullanılır: merdivenin interaktif parametrik donatısını sağlayan, sonradan değiştirildiğinde tüm donatıyı otomatik uyarlayan akıllı bir nesne. İkincisinde binanın kendine özgü ihtiyaçlarına göre mimari olarak tasarlanmış bir merdivenin donatısı, çubuk yerleşimine daha kişisel ve özel bir yaklaşımla ele alınır."
+      },
+      {
+        "type": "heading",
+        "text": "Parametrik Donatı Modellemesi ve PythonPart"
+      },
+      {
+        "type": "text",
+        "text": "İtalyanca kurs, ALLPLAN'da donatının parametrik BIM modellemesine yönelik fonksiyonları tanıtır: ALLPLAN Civil'in parametrik modelleyicisi ile ALLPLAN kütüphanesinin parametrik nesneleri (PythonPart) birlikte kullanılır. Farklı donatı biçimleri 3B modellemeden proje çizimlerinin üretimine kadar bu yolla tanımlanabilir."
+      }
+    ]
   }
 }

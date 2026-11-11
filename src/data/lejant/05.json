@@ -139,149 +139,149 @@
     "blocks": [
       {
         "type": "heading",
-        "text": "Lejantlar - \"Taban Alanı\" (Grundfläche) lejantının DIN277 standardına uyarlanması"
-      },
-      {
-        "type": "text",
-        "text": "Standart lejantlar, tıpkı raporlar gibi, doğrudan değiştirilemez. Önce büro standardına veya bir projeye kopyalanır, orada uyarlanır. Burada Mahal_Taban Alanları (Raum_Grundflächen) lejantını (Standart dizini, 1 Mimari dosyası) örnek alır ve taban alanı yerine DIN277 net alanlarını metrajlar hale getiririz."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11051_0EM7U000001Tdn0_ee80ee73.png",
-        "caption": "Başlangıç: standart Mahal_Taban Alanları lejantı."
-      },
-      {
-        "type": "text",
-        "text": "**Lejantı kopyalayın.** Etiket Stillerini, Lejantları Yönet (Beschriftungsbilder, Legenden verwalten) fonksiyonunu açın (Actionbar -> Mimari -> Kullanıcı Objeleri). Lejantlar seçimini onaylayın. Kaynak dizin Standart, dosya Mimari, lejant 3 Mahal_Taban Alanları seçip Kopyala (Kopieren) deyin. Hedef olarak mevcut projeyi, Dosya 1, Lejant 3 seçip Çalıştır (Ausführen) ile başlatın. Hedef gerektiğinde büro dizini de olabilir; tek lejant yerine tüm dosyayı da kopyalayabilirsiniz."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11051_0EM7U000001Tdn3_d237e54b.png",
-        "caption": "Kaynak lejantın seçilip Kopyala ile projeye alınması."
-      },
-      {
-        "type": "text",
-        "text": "**Lejantın yapısını tanıyın.** Lejantı Lejantları Modifiye Et (Legenden modifizieren) fonksiyonuyla açın. İki çizim penceresi görünür: Pencere 1 filtre bilgisini ve tek satırlı başlığı taşır, Pencere 2 bir satır ve bir toplamdan oluşan alt lejantı (alt liste) barındırır. Ana lejantta mahaller için bir filtre (@OBJ@=61) tanımlıdır. Sarı dolgu liste başlığına atanmış sabit metni, yeşil dolgu ana listenin satırını (mahal grubunun adı, PARENT(@507@) formülüyle), kırmızı dolgu alt listenin satırını, mor dolgu ise alt listenin toplamını gösterir."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11051_0EM7U000001Tdn8_6134ce67.png",
-        "caption": "Lejant şablonu: başlık penceresi ve alt liste penceresi."
-      },
-      {
-        "type": "text",
-        "text": "**Başlığı ve filtreyi değiştirin.** Ana listedeki başlığı amaca uygun olarak Netto-Raumflächen DIN277 yapın. Metin Modifiye Et (Text modifizieren) fonksiyonuyla sabit \"Grundfläche\" metnine tıklayıp içeriği değiştirin. Sonra Seç (Select) fonksiyonunu açın, ana liste penceresinin beyaz alanına tıklayın ve filtre kriterine ..&Flächenart_DIN277=\"N\" ifadesini ekleyin. Böylece yalnızca net mahal alanı oluşturan mahaller listelenir; galeri boşlukları ve boş hacimler dışarıda kalır. Girişte mümkün olduğunca ekrandaki düğmeleri kullanın."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11051_0EM7U000001TdnF_469d40ea.png",
-        "caption": "Filtreye Flächenart_DIN277=\"N\" kriterinin eklenmesi."
-      },
-      {
-        "type": "text",
-        "text": "**Metrajlanan içeriği değiştirin.** Alt listeyi öne getirin. Bilgi (Info) fonksiyonuyla Hücre/Sütun 5'e (Alan) tıklayın. Hücre bir Nitelik Girişi olarak tanımlıdır. Taban Alanı (Grundfläche) yazan büyük düğmeye basıp Mimari Miktarlar grubundan Grundfläche_DIN277 niteliğini seçin ve onaylayın. Hücre 10'un (Toplam) değişmesine gerek yoktur; orada SUMME(SPALTE5) formülü Hücre 5'i toplar, yani toplam da artık doğru içeriği taşır."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11051_0EM7U000001TdnH_ca59d02b.png",
-        "caption": "Alan hücresine Grundfläche_DIN277 niteliğinin atanması."
-      },
-      {
-        "type": "text",
-        "text": "**Satıra kullanım türünü ekleyin.** Son olarak satıra Nutzungsart_DIN277 (Kullanım Türü) bilgisini ekleyin. Yer açmak için Metin Parametrelerini Modifiye Et ile karakter genişliğini (Laufweite) 2.2'den 1,6'ya düşürün ve Fonksiyon hücresini sola kaydırın. Hü-Ekle (Zelle einfügen) fonksiyonunu seçip hücreyi Satır olarak, tip olarak Nitelik tanımlayın. DIN 277, Konut Alanı BauNVO grubundan Nutzungsart_DIN277 kaydını seçin. Metin yüksekliğini 2.200, formatı A5 yapın (DIN içerikleri sınırlı olduğu için yeterlidir) ve hücreyi Fonksiyon hücresinin arkasına yerleştirin."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11051_0EM7U000001TdnK_5bc561c3.png",
-        "caption": "Nutzungsart_DIN277 niteliğinin satıra eklenmek üzere seçilmesi."
-      },
-      {
-        "type": "text",
-        "text": "**Kaydedin ve karşılaştırın.** ESC (İptal) ile Lejantı Modifiye Et fonksiyonundan çıkın ve Kaydet (speichern) seçin; değişiklikler seçtiğiniz lejantın üzerine yazılır ve lejant projede kullanıma hazır olur. Orijinal ile uyarlanmış lejantı karşılaştırdığınızda kullanım türü bilgisini ve biraz daha küçük alanları görürsünüz. Alanların küçülmesi, DIN277'de mahalin ince yapı yüzeylerinin (yan yüzey, sıva) hesaba katılmasından kaynaklanır. Not: lejant fonksiyonlarındaki Liste kavramı, Lejant kavramıyla aynıdır."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11051_0EM7U000001TdnN_fbdfeac9.png",
-        "caption": "Orijinal ve DIN277'ye uyarlanmış lejantın karşılaştırması."
-      },
-      {
-        "type": "heading",
         "text": "Lejantlar - Yeni bir lejant oluşturma (Örnek: Döşeme yüzeyi, en üst katman)"
       },
       {
         "type": "text",
-        "text": "Kendi lejantınızı oluşturmadan önce birkaç hazırlık gerekir. Lejantlar her zaman 1:100 ölçekli çizim dosyalarında oluşturulmalıdır; başka ölçekte metin boyutlarını kontrol etmek zordur. Lejantla gösterilecek birden fazla örnek obje (burada döşeme ince yapılı mahaller) bulunmalı ve gösterilecek veriler önceden planlanmalıdır."
+        "text": "Hücreleri tanımlanmış döşeme yüzeyi lejantını şimdi **Lejant Tanımla (Legende definieren)** ile tanımlayıp ilk sürüm olarak kaydediyorsunuz."
       },
       {
         "type": "text",
-        "text": "Örnek istek: döşeme yüzeylerinin en üst katmanın (kaplamanın) malzemesine göre metrajı. En üst katmanın malzemesi MT_Boden(@508@;0), en üst katmanın VOB alanı ise MT_Boden(@81@;0) ile elde edilir. VOB_Fläche (@81@) her zaman VOB alanını, VOB_Menge (@100@) seçilen hakediş birimine göre miktarı verir."
+        "text": "**Adım 4 - Lejantı tanımlayın:** Kullanıcı Objeleri görevinin Raporlar, Lejantlar bölümünden **Lejant Tanımla (Legende definieren)** fonksiyonunu seçin."
       },
       {
         "type": "image",
-        "src": "/akademi/lejant/11050_0EM7U000001Tdh6_051353ad.png",
-        "caption": "Lejantın ön çizimi: Başlık (Kopf), Satır (Zeile) ve Toplam (Summe) alanları ayrı ayrı seçilebilir olmalıdır."
+        "src": "/akademi/lejant/11050_0EM7U000001TdmN_bd435891.png",
+        "caption": "Lejant Tanımla (Legende definieren) simgesi"
       },
       {
         "type": "text",
-        "text": "Adım 1-2: Başlık, Satır ve Toplam alanlarını çizin; sol ve sağ kenar çizgilerini üç parçalı, dolgu alanlarını tek tek oluşturun. Lejantın sabit (statik) metinlerini normal metin olarak yazın."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11050_0EM7U000001TdmF_1593f5f6.png",
-        "caption": "Lejantın sabit metinlerini normal metin olarak oluşturma."
-      },
-      {
-        "type": "text",
-        "text": "Adım 3 - Hücreler: Actionbar'da Kullanıcı Objeleri (Benutzerobjekte) -> Raporlar, Lejantlar bölümünden Hücre Tanımla (Zelle definieren) fonksiyonunu kullanın. 1 numaralı hücreye Formül (Formel) butonuyla MT_Boden(@508@;0) girin, biçim A16. 2 numaralı hücreye MT_Boden(@81@;0) girin, biçim F8.2, birim m², sağa dayalı."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11050_0EM7U000001TdmI_8be976c0.png",
-        "caption": "Dinamik araç çubuğunda Formül (Formel) butonuyla hücre formülünü girme."
-      },
-      {
-        "type": "text",
-        "text": "Toplam satırına SUMME(SPALTE2) formüllü bir hücre ekleyin (biçim Hücre 2 ile aynı). Önemli: hücreler kesintisiz numaralandırılmalıdır; boşluk varsa kayıtta hata çıkar. Nr-Mod butonuyla numaraları düzeltebilirsiniz, ancak formüldeki sütun numaraları otomatik güncellenmez."
-      },
-      {
-        "type": "text",
-        "text": "Adım 4 - Lejant Tanımla (Legende definieren): Tip Mimari (Architektur). Select (1) alanına tıklayıp Mimari Elemanlar Filtresi'nde Objekt= (2) -> Bodenfläche (3) seçin; kriter Objekt=Bodenfläche olarak görünür."
+        "text": "**Adım 4.1 - Temel ayar:** Lejant tipini **Mimari (Architektur)** (kısaca **Archit**) yapın. Ardından Select'i Döşeme Yüzeyi (Bodenfläche) objesine ayarlayın: **Select** alanına tıklayın (1), Mimari Elemanları Filtrele (Architekturelemente filtern) diyaloğunda **Objekt=** (2) ve **Döşeme Yüzeyi (Bodenfläche)** (3) seçin. Onayladığınızda kriter olarak **Objekt=Bodenfläche** görünür."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/11050_0EM7U000001TdmO_6b0f4339.png",
-        "caption": "Select ile filtreyi Objekt=Bodenfläche olarak ayarlama."
+        "caption": "Select ile Objekt=Bodenfläche filtresinin ayarlanması (1, 2, 3)"
       },
       {
         "type": "text",
-        "text": "Başlık (Kopf), Satır (Zeile) ve Toplam (Summe) butonlarıyla ilgili elemanları seçin. Yatay çizgiler satıra değil başlık/altbilgi kenarına aittir. Satır için bir satır aralığı (Zeilenvorschub) gerekir; örnekte 30 ölçülen yükseklikten 3,0 mm giriş çıkar. Sonra Fix ile bir dosya numarasına kaydedin."
+        "text": "**Adım 4.2 - Başlık (Kopf):** **Başlık (Kopf)** düğmesini seçin ve lejantın başlığına girecek tüm elemanları birlikte seçin. Bunu soldan sağa bir seçim çerçevesiyle ya da toplu seçimle (Summenaktivierung) yapabilirsiniz."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/11050_0EM7U000001TdmP_e32d7c30.png",
-        "caption": "Kopf (başlık) alanına yerleşecek elemanları toplu seçme."
+        "caption": "Başlık (Kopf) alanının seçilmesi"
       },
       {
         "type": "text",
-        "text": "Adım 5-6 - Test ve toplama: Lejantı çizime yerleştirin; başlangıçta her döşeme yüzeyi tek tek görünür. Lejant Değiştir (Legende modifizieren) ile Bilgi (Info) -> Hücre 2'ye tıklayın, Tekil sonuçları topla (Einzelergebnisse aufsummieren) seçeneğini açın ve formülü şöyle değiştirin:"
-      },
-      {
-        "type": "text",
-        "text": "_IF_(MT_Boden(@210@;0)=@210@)@81@_ELSE_0"
+        "text": "**Adım 4.3 - Satır (Zeile):** **Hücre / Satır (Zeile)** düğmesini seçin ve satıra girecek tüm elemanları birlikte seçin (sağdan sola seçim çerçevesi ya da toplu seçim). Bu örnekte yatay çizgiler satıra dahil edilmez; onlar başlığın ve altbilginin kenarını oluşturur."
       },
       {
         "type": "image",
-        "src": "/akademi/lejant/11050_0EM7U000001TdmX_93bd6a29.png",
-        "caption": "Lejant Değiştir modunda Info ile Hücre 2'yi düzenleme."
+        "src": "/akademi/lejant/11050_0EM7U000001TdmQ_37eb1981.png",
+        "caption": "Satır (Zeile) alanının seçilmesi"
       },
       {
         "type": "text",
-        "text": "Formül, döşeme yüzeyinin en üst katman numarasını o an değerlendirilen katman numarasıyla karşılaştırır; eşitse VOB alanını, değilse 0 verir. Böylece toplatmada yalnızca en üst katman sayılır. ESC ile çıkıp Kaydet deyin."
+        "text": "Satır için bir satır aralığı (Zeilenvorschub) da gerekir; bunu çizimde göstererek ya da diyalog satırına yazarak verirsiniz. Örnekte satır yüksekliği 30 olarak ölçülendirildiği için giriş değeri **3,0 mm** olur."
       },
       {
         "type": "image",
-        "src": "/akademi/lejant/11050_0EM7U000001Tdma_fe9b964a.png",
-        "caption": "Son test: toplam, tekil değerlerin toplamıyla aynıdır."
+        "src": "/akademi/lejant/11050_0EM7U000001TdmR_ee96d2c6.png",
+        "caption": "Satır aralığı (Zeilenvorschub) girişi: 3,0 mm"
+      },
+      {
+        "type": "text",
+        "text": "**Adım 4.4 - Toplam (Altbilgi / Fuß):** **Toplam (Summe)** düğmesini seçin ve altbilgiye girecek tüm elemanları birlikte seçin (soldan sağa seçim çerçevesi ya da toplu seçim)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11050_0EM7U000001TdmS_bd6213b8.png",
+        "caption": "Toplam (Summe) alanının seçilmesi"
+      },
+      {
+        "type": "text",
+        "text": "**Adım 4.5 - Kaydetme (Fix):** Tanımladığınız lejantı kaydetmek için **Fix** düğmesini seçin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11050_0EM7U000001TdmT_a3048946.png",
+        "caption": "Lejant Tanımla araç çubuğunda Fix düğmesi"
+      },
+      {
+        "type": "text",
+        "text": "Seçtiğiniz kayıt konumundaki (dizindeki) lejant dosyaları listelenir. Listede tıklayarak lejantın kaydedileceği numarayı belirleyin; boş bir numara seçebilir ya da mevcut bir lejantın üzerine yazabilirsiniz. Yeni (boş) bir dosya seçerseniz ona bir ad vermeniz gerekir. Lejantı test edip düzenlemeyi bir sonraki derste yapacaksınız."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11050_0EM7U000001TdmU_9f695b7f.png",
+        "caption": "Kayıt dizini, dosya ve lejant numarasının seçimi"
+      },
+      {
+        "type": "heading",
+        "text": "Lejantlar - \"Taban Alanı\" (Grundfläche) lejantının DIN277 standardına uyarlanması"
+      },
+      {
+        "type": "text",
+        "text": "Önceki derste kopyaladığınız Mahal_Taban Alanları lejantını şimdi açıp yapısını okuyorsunuz; böylece bir ana lejant ve bir alt lejanttan oluşan lejantın nasıl kurulduğunu görürsünüz. Uyarlamayı test ve düzenleme dersinde yapacaksınız."
+      },
+      {
+        "type": "text",
+        "text": "**Adım 2 - Lejantı açın:** Lejantı **Lejantları Modifiye Et (Legenden modifizieren)** fonksiyonuyla açın (Actionbar -> **Mimari (Architektur)** rolü -> **Kullanıcı Objeleri (Benutzerobjekte)** görevi)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11051_0EM7U000001Tdn6_f01d95f1.png",
+        "caption": "Lejantları Modifiye Et (Legenden modifizieren) simgesi"
+      },
+      {
+        "type": "text",
+        "text": "Açılan diyaloglarda yolu (örneğin **Proje**), dosyayı ve lejantı (burada 3 Nettoraumflächen_Gruppen) seçin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11051_0EM7U000001Tdn7_c1111a85.png",
+        "caption": "Yol (Projekt), dosya (1 Architektur) ve lejant (3 Nettoraumflächen_Gruppen) seçimi"
+      },
+      {
+        "type": "text",
+        "text": "Lejant şablonu açılır ve iki çizim penceresi görünür: filtre bilgisini taşıyan Pencere 1'de tek satırlı lejant başlığı, Pencere 2'de ise bir satır ve bir toplamdan oluşan alt lejant (alt liste) bulunur."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11051_0EM7U000001Tdn8_6134ce67.png",
+        "caption": "Değiştirme modunda lejant şablonu: filtre (1) ve Legenden modifizieren penceresi (2)"
+      },
+      {
+        "type": "text",
+        "text": "**Adım 3 - Lejantın yapısını okuyun:** Pencerenin başlık satırında filtre bilgisi görünür. Liste başlığı olan ana lejantta mahaller için bir filtre (@OBJ@=61) tanımlıdır; alt listenin filtresi yoktur. Alt listede ek filtre genellikle yalnız bir alt bölümleme daha varsa gerekir."
+      },
+      {
+        "type": "text",
+        "text": "**Ana lejant (ana liste):** Sarı alan, liste başlığına atanmış basit metindir; liste başlığındaki içerik bir kez oluşturulur. Yeşil alan ana listenin satırıdır: burada yalnız mahal grubunun adı, mahal üzerinden **PARENT(@507@)** formülüyle belirlenir. Bir gruba atanmamış mahaller, diğer atanmamışlarla birlikte adsız bir grupta listelenir. Satır, bulunan her mahal grubu için bir kez görünür."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11051_0EM7U000001Tdn9_c9dae112.png",
+        "caption": "Ana lejant: sarı liste başlığı, yeşil ana liste satırı ve @OBJ@=61 filtresi"
+      },
+      {
+        "type": "text",
+        "text": "**Alt lejant (alt liste):** Kırmızı alan alt listenin satırıdır ve bulunan her obje için tüm verileriyle görünür. Sıralama ve filtreleme ilk sütuna (burada mahalin Ad (Bezeichnung) niteliği) göre yapılır; ilk iki sütundaki Ad ve Fonksiyon (Funktion) aynıysa mahaller otomatik toplanır. Üçüncü içerik metrajlanacak alanı gösterir: burada Sütun 5, Taban Alanı (Grundfläche). Mor alan alt listenin toplamıdır; Sütun 5'teki tüm değerlerin toplamını taşır ve her liste için bir kez görünür."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11051_0EM7U000001TdnA_d4d6e55f.png",
+        "caption": "Alt lejant: kırmızı satır ve mor toplam"
+      },
+      {
+        "type": "text",
+        "text": "Çizim dosyasındaki metrajda bu örnek aşağıdaki gibi görünür; renkler yukarıdaki açıklamayla aynıdır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11051_0EM7U000001TdnB_e155ab65.png",
+        "caption": "Çizimdeki metraj: GE01 grubu, mahaller ve alt toplam"
       },
       {
         "type": "heading",
@@ -289,45 +289,53 @@
       },
       {
         "type": "text",
-        "text": "Proje nitelikleri her nitelik için tek bir değer tutar; bu yüzden tek işveren (Bauherr) ve yapı projesi (Bauvorhaben) pafta antetlerinde kolayca gösterilir. Bir projede birden fazla işveren veya yapı projesi (kısmi yapı ruhsatları, ikiz ev başvuruları gibi) gerektiğinde paftalar için kullanıcı tanımlı nitelikler kullanılır."
+        "text": "Bir projede birden fazla yapı sahibi (işveren) ya da yapı projesi metni (kısmi ruhsatlar) gerekiyorsa pafta lejantlarınız doğru bilgiyi nasıl gösterir? Proje nitelikleri her nitelik için tek bir değer tutar; bu, yapı sahibini ve projeyi pafta antetlerinde göstermek için yeterlidir. Ama kısmi ruhsat başvuruları, tabela başvuruları ya da ikiz evlerde ayrı başvurular gibi farklı içerikler gerekiyorsa paftalar için kullanıcı tanımlı nitelikler kullanırsınız."
       },
       {
         "type": "text",
-        "text": "Hazırlık - pafta kullanıcı niteliklerini yeniden adlandırma: Pafta Düzenleyici (Planlayout) -> Pafta ve Proje Nitelikleri (Plan- und Projektattribute). Başlık satırının bağlam menüsü -> Daha fazla (Mehr)."
+        "text": "**Hazırlık, pafta kullanıcı niteliklerini yeniden adlandırın:** **Pafta Düzenleyici (Planlayout)** görevinde **Pafta ve Proje Nitelikleri (Plan- und Projektattribute)** fonksiyonunu açın; başlık satırının bağlam menüsünü (1) açıp **Daha fazla... (Mehr...)** (2) seçin."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/10952_0EM7U000001Te0a_58d31aa3.png",
-        "caption": "Pafta ve Proje Nitelikleri: başlık satırı bağlam menüsünden Daha fazla (Mehr)."
+        "caption": "Pafta nitelikleri: başlık satırının bağlam menüsü (1) ve Mehr (2)"
       },
       {
         "type": "text",
-        "text": "Kullanıcı nitelikleri Nitelikleri düzenle (Attribute bearbeiten) tablosunun altında yer alır ve adları doğrudan değiştirilebilir. İlgili proje niteliğine benzeyen ama paftaya ait olduğunu belli eden bir ad verin (örn. 'Bauvorhaben (Plan)'). Dahili numara değişmez (pafta kullanıcı nitelikleri 12000'den başlar; Allplan 2020'den itibaren 100 adet)."
+        "text": "Pafta kullanıcı niteliklerinin adlarını **Nitelikleri düzenle (Attribute bearbeiten)** tablosunun en altında doğrudan değiştirebilirsiniz. Karşılık geldiği proje niteliğine benzeyen ama pafta niteliği olduğu anlaşılan bir ad seçmek pratiktir (örneğin \"Bauherr Plz/Ort (Plan)\"). İşaretlediğiniz nitelikler genel bakışta doğrudan veri girişi için görünür."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/10952_0EM7U000001Te0b_6b1d67da.png",
-        "caption": "Pafta kullanıcı niteliklerini Nitelikleri düzenle tablosunda yeniden adlandırma."
+        "caption": "Nitelikleri düzenle: pafta kullanıcı niteliği Bauherr Plz/Ort (Plan) olarak adlandırılmış"
       },
       {
         "type": "text",
-        "text": "Formül mantığı: yapı projesi (veya işveren) pafta niteliklerinden birinde içerik varsa pafta niteliği, yoksa proje niteliği gösterilir. Örnek (Bauvorhaben 1. satır):"
+        "text": "Nitelikler genel bakışta ve pafta lejantları ile etiket stillerinin nitelik listelerinde yeni adlarıyla görünür; dahili numaraları değişmez."
       },
       {
         "type": "text",
-        "text": "_IF_((@12001@+@12002@+@12003@+@12004@)=\"\")@826@_ELSE_@12001@"
+        "text": "**Pafta lejantı için formül:** Mantık şu olmalı: yapı projesi (ya da yapı sahibi) pafta niteliklerinden birinde içerik varsa pafta niteliği, yoksa proje niteliği gösterilsin. Eşleşmeler: Bauvorhaben (826) ile Bauvorhaben (Plan) (12001); Bauvorhaben Name (1093) ile 12002; Bauvorhaben Allgemeines (1091) ile 12003; Bauvorhaben Adresse (1094) ile 12004; Bauherr (460) ile Bauherr (Plan) (12005); Bauherr Straße (840) ile 12006; Bauherr Plz/Ort (841) ile 12007."
       },
       {
         "type": "text",
-        "text": "İşveren (Bauherr) 1. satır için örnek:"
+        "text": "**Yapı projesi satırları:** 1. satır **_IF_((@12001@+@12002@+@12003@+@12004@)=\"\")@826@_ELSE_@12001@**; 2. satır aynı koşulla **@1093@** ya da **@12002@**; 3. satır **@1091@** ya da **@12003@**; 4. satır **@1094@** ya da **@12004@**."
       },
       {
         "type": "text",
-        "text": "_IF_((@12005@+@12006@+@12007@)=\"\")@460@_ELSE_@12005@"
+        "text": "**Yapı sahibi satırları:** 1. satır **_IF_((@12005@+@12006@+@12007@)=\"\")@460@_ELSE_@12005@**; 2. satır aynı koşulla **@840@** ya da **@12006@**; 3. satır **@841@** ya da **@12007@**."
       },
       {
         "type": "text",
-        "text": "Parantez içinde metinlerin 'toplamı' boş metinle karşılaştırılır; boşsa proje niteliği (@826@ / @460@), değilse pafta niteliği görünür. Aynı formüller hem pafta etiket stillerinde hem de pafta lejantlarında kullanılabilir. Alternatif olarak seçim listeli bir kontrol niteliğiyle (örn. BV-Plan + BH-Projekt) da filtre kurulabilir: _IF_(@12000@=\"*BV-Plan*\")@12001@_ELSE_@826@"
+        "text": "Formül şöyle okunur: _IF_ parantezindeki ifade **((@12005@+@12006@+@12007@)=\"\")** doğruysa, yani pafta niteliklerinin metinlerinin \"toplamı\" boşsa, proje niteliği **@460@** görünür; değilse _ELSE_'ten sonraki pafta niteliği **@12005@** görünür. Bu formülleri hem pafta etiket stillerinde hem pafta lejantlarında kullanabilirsiniz. Böylece ayrı pafta antetleri tutmadan ya da düz metne başvurmadan her pafta kendi yapı sahibini ve proje metnini gösterir."
+      },
+      {
+        "type": "text",
+        "text": "**Alternatif kontrol:** Seçim listeli ek bir nitelik (örneğin \"Steuerung Bauherr/Bauvorhaben\") tanımlayıp şu değerleri verebilirsiniz: BV-Plan + BH-Plan, BV-Plan + BH-Projekt, BV-Projekt + BH-Plan, BV-Projekt + BH-Projekt. O zaman içerik aramak yerine bu seçime göre filtrelersiniz; pafta kullanıcı niteliği 1 kullanılırsa yapı projesinin ilk satırı yaklaşık **_IF_(@12000@=\"*BV-Plan*\")@12001@_ELSE_@826@** olur."
+      },
+      {
+        "type": "text",
+        "text": "**Arka plan:** Pafta kullanıcı nitelikleri doğrudan paftalara eklenen ve pek çok amaçla hazır tutulan niteliklerdir: 20 adet, ALLPLAN 2020'den itibaren 100 adet. 12000 dahili numarasından başlayıp artarak numaralanırlar ve adları değiştirilebilir."
       }
     ]
   },

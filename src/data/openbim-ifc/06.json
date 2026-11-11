@@ -138,5 +138,95 @@
     "task": "Bir disiplin modelini IFC olarak alın ve XREF olarak bağlayın; bir referans noktasına tutunup bir mesafe ölçün. Ardından aynı IFC'nin güncel bir sürümünü çift tıkla referansa yükleyip değişimi gözlemleyin.",
     "expected": "XREF bağlı model üzerinde snap ile ölçüm ve çift tıkla güncelleme.",
     "hint": "Nesneyi düzenlemeniz gerekirse XREF değil içe aktarım gerektiğini unutmayın."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "IFC Dosyasını XREF Olarak İçe Aktarma"
+      },
+      {
+        "type": "text",
+        "text": "Bir IFC dosyasını XREF (dış referans) olarak bağlarsanız modeli görür ve noktalarını yakalarsınız; dosya güncellendiğinde de referansı kolayca yenilersiniz. Kaynak, adımları Fransızca arayüzle anlatır."
+      },
+      {
+        "type": "text",
+        "text": "**Adım 1 - Menü çubuğunu açın:** Hızlı erişim araç çubuğunun açılır listesinden **Menü çubuğunu göster (Dérouler la barre des menus)** seçin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/9144_0EMVi000004Y4Jp_19d18c62.png",
+        "caption": "Hızlı erişim listesinde Dérouler la barre des menus komutu"
+      },
+      {
+        "type": "text",
+        "text": "**Adım 2 - IFC dosyasını XREF olarak ekleyin:** **Ekle (Insertion)** menüsünden **Özel XRef (XRef personnalisée)** seçin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/9144_0EMVi000004Y4LR_14c0010a.png",
+        "caption": "Insertion menüsünde XRef personnalisée"
+      },
+      {
+        "type": "text",
+        "text": "**Adım 3 - IFC dosyasını seçin:** Dosya açma penceresinde dosya türünü **IFC Dosyaları (Fichiers IFC)** yapın ve dosyayı seçin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/9144_0EMVi000004XxyI_9840ee15.png",
+        "caption": "Dosya açma penceresinde Fichiers IFC (.ifc) dosya türü ve TEST.ifc"
+      },
+      {
+        "type": "text",
+        "text": "**Adım 4 - Yerleştirme biçimini seçin:** Dinamik araç çubuğunda konumu (örneğin **Başlangıç Konumu (Position initiale)**), ölçeği ve açıyı ayarlayın ve XREF'i plan görünüşüne yerleştirin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/9144_0EMVi000004Y4lF_e907210f.png",
+        "caption": "Özel XRef ekleme araç çubuğu: Position initiale, ölçek 1, açı 0.000"
+      },
+      {
+        "type": "text",
+        "text": "**Adım 5 - Onaylayın:** XREF'in başlangıç konumuna yerleştirildiğini bildiren mesajı onaylayın. Artık IFC modelini görebilir ve noktalarını yakalayabilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/9144_0EMVi000004Xwvm_51294168.png",
+        "caption": "Mesaj: La XRef est placée à la position initiale"
+      },
+      {
+        "type": "text",
+        "text": "**Adım 6 - Güncelleyin ya da referansı değiştirin:** Eklenen XREF'e çift tıklayın; **XRef Özellikleri (Propriétés de la XRef)** penceresinde belge adının yanındaki düğmeyle dosyayı yenileyebilir ya da başka bir IFC dosyası seçebilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/9144_0EMVi000004Y4oT_fd42b553.png",
+        "caption": "Propriétés de la XRef: belge adı alanı ve dosya seçme düğmesi"
+      },
+      {
+        "type": "text",
+        "text": "**Not:** IFC dosyasındaki objeleri değiştirmeniz gerekiyorsa dosyayı XREF olarak bağlamadan ALLPLAN'a içe aktarın."
+      },
+      {
+        "type": "heading",
+        "text": "STEP (.stp) Dosyalarının İçe/Dışa Aktarımı"
+      },
+      {
+        "type": "text",
+        "text": "Makine ve ürün tasarımında yaygın olan STEP (.stp) dosyalarını ALLPLAN'a doğrudan aktaramazsınız; IFC'yi ara biçim olarak kullanırsınız."
+      },
+      {
+        "type": "text",
+        "text": "ALLPLAN şu anda STEP dosyalarının doğrudan içe aktarımını desteklemiyor; bu işlev geliştirme ekibinin istek listesindedir ve ileriki sürümlerde gelebilir."
+      },
+      {
+        "type": "text",
+        "text": "**STEP'e dışa aktarım:** Karlsruhe Araştırma Merkezi'nin (KIT) ücretsiz görüntüleyicisiyle IFC dosyaları STEP biçimine dönüştürülebilir."
+      },
+      {
+        "type": "text",
+        "text": "**STEP'ten içe aktarım:** Ücretsiz ve açık kaynaklı FreeCAD ile STEP dosyasını açıp IFC olarak kaydedin; ardından IFC dosyasını ALLPLAN'a içe aktarın."
+      }
+    ]
   }
 }

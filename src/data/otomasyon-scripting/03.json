@@ -186,5 +186,41 @@
     "task": "Bir malzeme özniteliğinin 1, 2 veya 3 değerlerine göre sırasıyla 'AB', 'CD', 'EF' metnini; bunların dışında ise 'Notdefined' metnini üretecek bir SWITCH formülü kâğıt üzerinde yazın. Ardından aynı sonucu CHOOSE ile yazmayı deneyin ve iki komutun eşleşme yoksa nasıl davrandığını karşılaştırın.",
     "expected": "VALUE(@508@) kullanan geçerli bir SWITCH formülü ve bir CHOOSE formülü; eşleşme olmayan durumda her ikisinin de son sonucu döndürdüğünün fark edilmesi.",
     "hint": "Öznitelik değerini sayı olarak ele almak için VALUE(@508@) kullanın; açık bir son değer ('Notdefined') yanlış eşleşmeleri görünür kılar."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Etiket/Lejant - Excel Komutu Sözdizimi"
+      },
+      {
+        "type": "text",
+        "text": "Etiket stili, lejant ya da rapor tanımlarken bir değeri bir sorguyla seçmek istediğinizde formülü Formül Düzenleyicide (Formeleditor) kurarsınız. Formül Düzenleyici 2023 sürümünden beri genişletildi; artık **SWITCH()** ya da **CHOOSE()** gibi Excel komutlarını kullanabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Örnek:** Bir objede önceden tanımlı bir malzeme niteliği (@508@) var. Değer şöyle çıksın: **1** için metin **AB**, değer **10**; **2** için metin **CD**, değer **20**; **3** için metin **EF**, değer **30**; eşleşmeyen her değer için metin ve değer **Not Defined** (tanımsız)."
+      },
+      {
+        "type": "text",
+        "text": "**CHOOSE():** **CHOOSE(@508@;\"AB\";\"CD\";\"EF\")** @508@ niteliğinin değerini denetler ve karşılık gelen satırın metnini döndürür: 1 için AB, 2 için CD. Değer eşleşmezse her zaman son sonucu, bu örnekte EF'yi gösterir."
+      },
+      {
+        "type": "text",
+        "text": "**SWITCH():** Birkaç yazım biçimi var. **SWITCH(@508@;\"1\";\"AB\";\"2\";\"CD\";\"3\";\"EF\";\"Notdefined\")** niteliği metin olarak karşılaştırır. **SWITCH(VALUE(@508@);1;\"AB\";2;\"CD\";3;\"EF\";\"Notdefined\")** niteliği sayı olarak karşılaştırıp metin döndürür. **SWITCH(VALUE(@508@);1;10;2;20;3;30;\"Notdefined\")** ise sayı döndürür."
+      },
+      {
+        "type": "text",
+        "text": "SWITCH, @508@ niteliğinin değerini metin ya da sayı olarak denetler ve karşılık gelen satırın metnini ya da değerini döndürür: 1 için AB, 2 için CD. Değer eşleşmezse her zaman tanımlayabildiğiniz son sonucu, bu örnekte \"Notdefined\" metnini gösterir. CHOOSE'dan farkı budur: eşleşmeyen değer için ayrı bir sonuç tanımlayabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**İpucu 1, betik türü ön ekleri:** ALLPLAN Formül Düzenleyicisi formülü belirli bir sırayla denetler; çünkü doğrudan ALLPLAN komutları yazabilir, PythonParts betiklerinden, VisualBasic betiklerinden ve Excel'den de komut çağırabilirsiniz. Sistemi doğrudan ilgili kapsayıcıyı kullanmaya zorlamak için komutun önüne betik türüne ait harfi yazın: **p:** Python, **v:** VisualBasic, **x:** Excel. Örneğin **x:SWITCH()** komutun Excel sözdizimini kullandığını belirtir."
+      },
+      {
+        "type": "text",
+        "text": "**İpucu 2, Excel komutu çalışmazsa:** Bazı durumlarda Excel komutu çalışmaz. Bu, bilgisayarınızdaki Excel sürümüne ve diline bağlıdır. En kolay kontrol, **LEFT()** ya da **RIGHT()** gibi basit bir komutu kendi dilinizde denemektir. Excel yerine OpenOffice kullanıyorsanız bu fonksiyonlar kullanılamaz."
+      }
+    ]
   }
 }

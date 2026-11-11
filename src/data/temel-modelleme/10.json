@@ -162,8 +162,12 @@
   "deepDive": {
     "blocks": [
       {
+        "type": "heading",
+        "text": "Pencere: İki duvar katmanlı diş/binili söve (Verblendung)"
+      },
+      {
         "type": "text",
-        "text": "Kutu pencere (Kastenfenster), dışta ve içte benzer bölümlemeye sahip, yaklaşık 20 cm derinlikte çift katlı bir penceredir. Bunu Pencere SmartPart elemanlarıyla modellersiniz. İki ayrı pencere kurarsınız: biri dış, biri iç. İkisinin arasındaki boşluk kutuyu oluşturur."
+        "text": "Çok katmanlı, kaplamalı (Verblendung) bir duvarda pencere iki durumda yer alır: pencere tamamen tek bir duvar katmanının içinde kalır ya da iki duvar katmanının arasında durur. Pencereyi yerleştirirken hangi durumda olduğunuzu belirleyin."
       },
       {
         "type": "heading",
@@ -171,166 +175,88 @@
       },
       {
         "type": "text",
-        "text": "**Temel hazırlık.** Uygun kalınlıkta bir duvar ve bir pencere boşluğu gerekir. Boşluğun Diş (Anschlag) sekmesinde pencere derinliğini (Fenstertiefe) 28 cm, dış söve derinliğini (Leibung außen) 0,10 cm olarak ayarlayın. 28 cm, kutu pencerenin toplam derinliğine karşılık gelir."
+        "text": "Bu derste kullandığınız Pencere SmartPart'larıyla tarihi ya da modern bir kutu pencere (Kastenfenster) de kurabilirsiniz. Hedef, toplam derinliği yaklaşık 20 cm olan, dışta ve içte benzer bölümlemeye sahip bir kutu penceredir. Yöntem ALLPLAN 2024'e kadarki sürümler içindir."
+      },
+      {
+        "type": "text",
+        "text": "**Temel hazırlık:** Uygun kalınlıkta bir duvar ve **Diş (Anschlag)** sekmesinde şu ayarlara sahip bir pencere gerekir: **Pencere derinliği (Fenstertiefe)** 0,28 (28 cm, kutu pencerenin toplam derinliği) ve **Dış söve (Leibung außen)** 0,10 (10 cm)."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/8900_0EM7U000001Tdhj_2a704a29.png",
-        "caption": "Diş (Anschlag) sekmesi: pencere derinliği 28 cm, dış söve derinliği 0,10 cm."
+        "caption": "Diş parametreleri: Fenstertiefe 0,2800, Leibung außen 0,100, Leibung innen 0,390"
       },
       {
         "type": "text",
-        "text": "**Dış pencere ve kutu.** Kutunun kendisini dış pencerede oluşturursunuz. Önce kasa elemanını kalınlığı olmayan bir taşıyıcı kasa olarak kurun; böylece diğer profilleri derinlik yönünde tam konumlandırabilirsiniz. Bunu tüm söve derinliğine sahip bir blok kasa (Blockrahmen) olarak girin. Kasa grafikte görünmez, ama objelerin açılır menüsünden (Pulldownmenü) her zaman seçilebilir kalır."
+        "text": "**Dış pencere:** Kutu (Kasten) dış pencereyle birlikte oluşturulur. **1.** Kasa elemanını kalınlığı olmayan bir taşıyıcı kasa (Trägerrahmen) olarak oluşturun; böylece diğer elemanları derinlik yönünde tam konumlandırırsınız. Burada tüm söve derinliğine sahip bir blok kasa (Blockrahmen) oluşturulabilir. Kasa grafikte görünmez, ama elemanların açılır menüsünden seçilebilir kalır."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/8900_0EM7U000001Tdhk_3547a95d.png",
-        "caption": "Taşıyıcı kasa, tüm söve derinliğinde görünmez blok kasa olarak."
+        "caption": "Taşıyıcı kasa (Rahmen): genişlikler 0, kasa konumu (Lage Zarge) söve elemanı (Leibungselement)"
       },
       {
         "type": "text",
-        "text": "Ardından çepeçevre 3 cm genişlikte, 21 cm derinlikte bir kasa (Stockrahmen) ekleyin. Kutuyu bu kasa temsil eder. Hizalama (Ausrichtung) kısmında üçüncü seçeneği, yani dışa hemzemini (außen bündig) seçin."
+        "text": "**2.** Pencerenin kasasını çepeçevre 3 cm genişlikte ve 21 cm derinlikte bir kasa (Stockrahmen) olarak ayarlayın. Bu kasa kutuyu temsil eder. **Hizalama (Ausrichtung)** alanında üçüncü seçeneği (dışa hemzemin, außen bündig) seçin."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/8900_0EM7U000001Tdhl_becfb919.png",
-        "caption": "Kutuyu temsil eden kasa: 3 cm genişlik, 21 cm derinlik, dışa hemzemin."
+        "caption": "Kutu kasası: genişlikler 0,03, derinlik (Tiefe) 0,21, hizalamada üçüncü seçenek"
       },
       {
         "type": "text",
-        "text": "Grafikte alana tıklayıp bir kasa daha oluşturun; kasa genişliği ile derinliğini ayarlayın ve yine dışa hemzemini seçin. Pencereyi istediğiniz gibi orta kayıt (Pfosten) ve yatay kayıt (Riegel) elemanlarıyla bölün. Bu elemanların hizalaması da dışa hemzemindir."
+        "text": "**3.** Grafikte alana tıklayıp bir kasa daha oluşturun. Kasa genişliğini ve kasa derinliğini ayarlayın; hizalamada yine üçüncü seçeneği (dışa hemzemin) seçin."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/8900_0EM7U000001Tdhm_8055419a.png",
-        "caption": "İkinci kasa eklenmiş hali."
+        "caption": "Dış pencere kasası: genişlikler 0,07, derinlik 0,07, hizalamada üçüncü seçenek"
+      },
+      {
+        "type": "text",
+        "text": "**4.** Pencereyi istediğiniz gibi bölmeye devam edin. Orta kayıt (Pfosten) ve yatay kayıtta (Riegel) hizalamaya dikkat edin: bu hizalama dışa hemzemindir."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/8900_0EM7U000001Tdhn_923538c6.png",
-        "caption": "Orta ve yatay kayıtlarla bölünmüş dış pencere."
-      },
-      {
-        "type": "text",
-        "text": "**İç pencere.** İç pencere de bir taşıyıcı kasaya ihtiyaç duyar; ancak ikinci kasaya (kutuya) gerek yoktur. Taşıyıcı kasayı yine görünmez blok kasa olarak kurun. Sonra asıl kasayı oluşturun, kasa genişliği ile derinliğini ayarlayın ve hizalamada bu kez üçüncü seçeneği içe hemzemin (innen bündig) olarak seçin. Pencereyi orta ve yatay kayıtlarla bölerek tamamlayın."
+        "caption": "Pencere önizlemesinde bölünmüş dış pencere, seçili kanat kırmızı"
       },
       {
         "type": "image",
-        "src": "/akademi/temel-modelleme/8900_0EM7U000001Tdhr_8055419a.png",
-        "caption": "İç pencere kasası, içe hemzemin hizalamayla."
+        "src": "/akademi/temel-modelleme/8900_0EM7U000001Tdho_1715362b.png",
+        "caption": "Dış pencerenin perspektif görünüşü (Zentralperspektive)"
       },
       {
         "type": "text",
-        "text": "**Sonuç.** İki pencere arasındaki yaklaşık 28 cm derinlik kutuyu oluşturur ve tarihi ya da modern bir kutu pencere elde edersiniz."
+        "text": "**İç pencere:** İç pencere de bir taşıyıcı kasaya ihtiyaç duyar; ikinci kasa (kutu) burada gerekmez. **1.** Kasa elemanını dış penceredeki gibi kalınlığı olmayan, tüm söve derinliğinde bir blok kasa olarak oluşturun; grafikte görünmez, açılır menüden seçilebilir kalır."
+      },
+      {
+        "type": "text",
+        "text": "**2.** Kasayı oluşturun, kasa genişliğini ve kasa derinliğini ayarlayın. Kaynak, hizalamada üçüncü seçeneğin (içe hemzemin, innen bündig) seçilmesini söyler; ancak iç pencere kasasının ekran görüntüsünde ortadaki seçenek işaretlidir ve kaynakta bu adıma konan ekran dış pencere kasasının görüntüsüyle aynıdır. Hizalamayı önizlemede kasanın içe yaslandığını görerek kontrol edin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8900_0EM7U000001Tdhq_cd2349e0.png",
+        "caption": "İç pencere kasası: genişlikler 0,07, derinlik 0,07, hizalamada ortadaki seçenek işaretli"
+      },
+      {
+        "type": "text",
+        "text": "**3.** Pencereyi istediğiniz gibi bölmeye devam edin; orta ve yatay kayıtlarda hizalama yine dışa hemzemindir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/8900_0EM7U000001Tdhs_39ccabbc.png",
+        "caption": "İç pencere önizlemesi: iki kanat, seçili orta kayıt kırmızı"
+      },
+      {
+        "type": "text",
+        "text": "**Sonuç:** İki pencere ve aralarındaki kutu perspektifte ve kat planında birlikte görünür."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/8900_0EM7U000001Tdht_e7ce85f6.png",
-        "caption": "Tamamlanmış kutu pencere."
-      },
-      {
-        "type": "heading",
-        "text": "Raporlar - ARCH - Kapılar (Nitelikli) - Raporun kullanımı"
-      },
-      {
-        "type": "text",
-        "text": "`Turen (mit Qualitaten).rdlc` raporu (Standart - Ince Isler - Pencereler, Kapilar dizini) bir kapi listesi uretir. Bilgiler kapidan (kapi, Buyuk Kapi SmartPart veya kapi makrosu), bitisik mahalden ve kat strruktur kademesinden cekilir. Raporun tum sutunlarini doldurabilmek icin bosluktaki SmartPart objesine yaklasik 60 niteligin atanmasi gerekir (Nitelikleri Degistir - Yeni nitelik ata)."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8d_13d4990d.png",
-        "caption": "Bos niteliklere sahip ornek bir kapi; bu nitelikler raporun temelini olusturur."
-      },
-      {
-        "type": "text",
-        "text": "Kapi numarasi otomatik turetilebilir. `Lage_Ebene_automatisch`, `Lage_Raumnr_automatisch` ve `Lage_Raumfunktion_automatisch` nitelikleri bos veya `auto` iken, kapi icine acildigi mahalin numarasini alir (Durum 1)."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8e_d00176d2.png",
-        "caption": "Durum 1: Nitelikler 'auto' iken kapi, icine acildigi mahalin numarasini alir."
-      },
-      {
-        "type": "text",
-        "text": "Teknik hacimlerde veya kacis yonu koridora olan kapilarda bu nitelikler bitisik mahalin bilgileriyle elle doldurulur (Durum 2). Bir mahale birden cok kapi dusuyorsa, `Tur_Nr_Zusatz` niteligine bir harf veya ek sayi girilerek ayristirma yapilir (Durum 3)."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8f_1d52c819.png",
-        "caption": "Durum 2: Nitelikler elle doldurularak kapiya bitisik mahalin numarasi verilir."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8g_8a988a8a.png",
-        "caption": "Durum 3: `Tur_Nr_Zusatz` eki ile ayni mahaldeki kapilar ayristirilir."
-      },
-      {
-        "type": "text",
-        "text": "Genislik ve yukseklik bosluktan (kaba yapi olcusu), doseme yuksekligi mahalden, duvar kalinligi duvardan (tum katmanlar) otomatik alinir. Duvar malzemesi icin `Wand_Material_automatisch` niteligi `auto` ise once toplam duvarin `Tanim (Bezeichnung)` niteligi, bossa duvar katmaninin `Malzeme (Material)` niteligi kullanilir."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8j_81f82937.png",
-        "caption": "Bosluk ve duvar bilgileri; kaplama malzeme ve kalinlik olarak nitelikte tanimlanir (sari), otomatik alinan alanlar kirmizi isaretli."
-      },
-      {
-        "type": "text",
-        "text": "Kapi acilis yonu (sol veya sag) otomatik belirlenir; `Tur_DIN_automatisch` niteligi `auto`/bos ise otomatik deger, aksi halde girilen deger yazdirilir. Kasa (Zarge) genisligi (Maulweite), `Zarge_Maulweite_automatisch` 0.00 ise duvar kalinligina `Wand_Bekleidung_Bandseite` ve `Wand_Bekleidung_Bandgegenseite` kalinliklari eklenerek bulunur."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8m_bff51807.png",
-        "caption": "Kapi acilis yonu ve `Tur_DIN_automatisch` niteligi."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8p_b53b3bef.png",
-        "caption": "Kasa (Zarge) ayarlari; kasa genisligi otomatik ya da elle tanimlanabilir."
-      },
-      {
-        "type": "text",
-        "text": "Raporda `Raumbezug_Spezial`, `Wandmaterial_Spezial`, `Anschlag_Spezial` ve `Maulweite_Spezial` ayarlari standarttan sapan kapilari renkli isaretler; `Gliederung_Geschoss` ile kat gruplandirmasi acilip kapatilir. Onizlemede bir hucreye tiklamak ilgili yapi elemanini grafik penceresinde isaretleyip yakinlastirir."
-      },
-      {
-        "type": "heading",
-        "text": "SmartParts - Pencere / Kapı - Açılış yönü ve metin"
-      },
-      {
-        "type": "text",
-        "text": "Pencere veya kapinin acilis yonunun (Aufschlagsrichtung) otomatik etiketlenmesi icin acilis, boslukta elle girilip yerlestirilmelidir (abgesetzt)."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/9617_0EM67000007oVV9_9b85a4b2.png",
-        "caption": "Acilis yonunun paftada etiketlenmis gosterimi."
-      },
-      {
-        "type": "text",
-        "text": "Kapinin icinde bir makro (Makro) bulunmali ve bu makro, Montaj Parcalari Katalogu'nda (Einbauteilekatalog) birebir ayni adla ve ilgili nitelikle tanimlanmalidir."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/9617_0EM67000007oVVi_6d2c612e.png",
-        "caption": "Montaj parcasi katalogunda makro icin tanimlanan nitelik (1/2)."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/9617_0EM67000007oVVn_e2d0b600.png",
-        "caption": "Montaj parcasi katalogunda makro icin tanimlanan nitelik (2/2)."
-      },
-      {
-        "type": "text",
-        "text": "Cikti, eleman paftasinda (Elementplan) ve Liste Ureteci'nden (Listengenerator) alinan listelerde gorunur."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/9617_0EM67000007oVUl_ea72cac8.png",
-        "caption": "Eleman paftasindaki cikti."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/9617_0EM67000007oVVx_e4713e96.png",
-        "caption": "Liste uretecinden alinan liste."
+        "caption": "Sonuç: kutu pencerenin perspektif görünüşü ve kat planı"
       },
       {
         "type": "heading",
@@ -338,21 +264,323 @@
       },
       {
         "type": "text",
-        "text": "Bir panjur kutusu uc yolla olusturulabilir. 1) Panjur Kutusu mimari yapi elemani (Mimari rolu - Yapi Elemanlari): bosluk uzerine A/B mesnetli, yuksekligi ve derinligi tanimlanabilen ayri bir yapi elemani kurar; Kaba Yapi (Rohbau) raporuyla tekil metraji alinir, duvarin VOB metrajinda dogru islenir ve tek basina etiketlenebilir. Panjur rayi gostermez."
+        "text": "Bu derste yerleştirdiğiniz pencerelerin üzerine panjur kutusu (Rollladenkasten) eklemenin üç yolu vardır. Seçtiğiniz yol metrajı ve etiketlemeyi etkiler; avantaj ve dezavantajları kendi ihtiyacınıza göre değerlendirin."
+      },
+      {
+        "type": "text",
+        "text": "**Olanak 1 - Panjur Kutusu mimari yapı elemanı:** **Panjur Kutusu (Rollladenkasten)** yapı elemanı (Actionbar: **Mimari (Architektur)** rolü -> **Yapı Elemanları (Bauteile)**) bir boşluğun üzerinde, sol ve sağ mesnetleri ayarlanabilen, yapı elemanı yüksekliği ve kat planında tanımlanan derinliği olan bir dikdörtgen prizma oluşturur. Kesit için doğrudan bir tarama, desen ya da dolgu alanı ayarlanabilir."
+      },
+      {
+        "type": "text",
+        "text": "**Oluşturma** (pencere SmartPart'lı ya da SmartPart'sız bir pencere boşluğu varken): **Panjur Kutusu** fonksiyonunu çağırın. Boşluğu gösterin; kural olarak boşluğun dış tarafına tıklayın. Özelliklerde A ve B mesnetlerini, yapı elemanı yüksekliğini ve diğer özellikleri tanımlayın. Malzemeyi girin ve imalat kalemini (Gewerk) seçin; mümkünse duvarın imalat kalemini seçin. Panjur kutusunun derinliğini kat planında ya da sayısal girişle tanımlayın."
+      },
+      {
+        "type": "text",
+        "text": "**Kesit gösterimi için not:** Kesitte bir yüzey stili ya da arka planında dolgu alanı olan bir tarama veya desen istiyorsanız bunu **Genel Mimari Özellikleri Değiştir (Allgemeine AR-Eigenschaften modifizieren)** fonksiyonuyla ayarlayın."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/10809_0EM7U000001Te57_e4aea706.png",
-        "caption": "Panjur Kutusu mimari yapi elemani ve kat plani gosterim secenekleri."
+        "caption": "Panjur kutusu yapı elemanı: görünüşte boşluğun üstünde kesikli çizgili kutu, kesitte taranmış duvar içinde kutu"
       },
       {
         "type": "text",
-        "text": "2) Pencere SmartPart'i icinde ayarlanan pencere ustu (Aufsatzrolladen) veya distan takma (Vorbaurolladen) panjur: bosluk komple degerlendirilir, kutu tekil olarak listelenemez ve ayri etiketlenemez. 3) Ayri bir Gunes Kirici SmartPart'i (Sonnenschutz-SmartPart): en esnek yontemdir; ray ve kilavuzlari gosterir, tekil metraj ve ayri etiketleme saglar. Distan takma panjurda Pencere SmartPart'inda ust kasa genisletilir; pencere ustu panjurda boskluga ust mesafe ayarlanir."
+        "text": "**Ayarlar ve gösterim:** Kat planı gösterimini seçeneklerde (Optionen) tanımlarsınız. Ayardaki bir değişiklik ancak bir 3B güncellemeden (3D-Aktualisieren) ya da yapı elemanlarında bir değişiklikten sonra uygulanır. Birinci ayar **Tüm yapı elemanını göster (Ganzes Bauteil darstellen)**: panjur kutusu ya da lento kat planında bütün olarak gösterilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10809_0EM7U000001Te58_91489cff.png",
+        "caption": "Kat planı gösterimi 1: tüm yapı elemanı"
+      },
+      {
+        "type": "text",
+        "text": "İkinci ayar **Yalnız boşluk alanında göster (Nur im Bereich der Öffnung darstellen)**: panjur kutusu ve lento kenarları yalnız boşluk bulunan alanda görünür. Böylece kat planında örneğin noktalı çizgili bir lento da oluşturabilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10809_0EM7U000001Te9j_1507d130.png",
+        "caption": "Kat planı gösterimi 2: kenarlar yalnız boşluk alanında"
+      },
+      {
+        "type": "text",
+        "text": "Üçüncü ayar **Görünmez, duvar kesişim çizgileri olarak (Nicht sichtbar (als Wandverschneidungslinien))**: yapı elemanları kat planında gösterilmez."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10809_0EM7U000001Te9k_a5f4b41e.png",
+        "caption": "Kat planı gösterimi 3: panjur kutusu görünmüyor"
+      },
+      {
+        "type": "text",
+        "text": "**Metraj:** Panjur kutusu yapı elemanı Kaba Yapı (Rohbau) klasöründeki aynı adlı raporla değerlendirilir; miktar özetlerinde tek eleman olarak görünür. Duvarın VOB kurallarına göre metrajında panjur kutusu doğru işlenir."
+      },
+      {
+        "type": "text",
+        "text": "**Avantaj ve dezavantajlar:** Yapı elemanı duvarla birlikte örülen bir panjur kutusu gibi mesnetli oluşturulabilir. Pencere boşluğu, panjur kutusu ve pencere ayrı ayrı metrajlanır; tekil metraj mümkündür. Panjur rayı, halat kılavuzu ve benzerleri gösterilmez; bunları ek olarak bir Güneş Kırıcı SmartPart'ı (Sonnenschutz-SmartPart, Panjur) ile oluşturabilirsiniz. Eleman görünüş ve kesitlerde doğru (kısmen basitleştirilmiş) gösterilir. Çift sağ tıkla yeni elemanlar için devralınabilir; devralınan elemanın girişi boşluk modelleyici (Öffnungsmodellierer) üzerinden yürür. Ayrı bir yapı elemanı olduğu için tek başına etiketlenebilir."
+      },
+      {
+        "type": "text",
+        "text": "**Olanak 2 - Pencere SmartPart'ı içinde ayarlanan panjur:** Bir Pencere SmartPart'ının (Fenster-SmartPart) ayarlarında pencere üstü (Aufsatzrollladen) ya da dıştan takma (Vorbaurollladen) panjur kutusu ayarlanabilir. Ayarlara göre, ön kenar duvar kenarıyla tam örtüşüyorsa kutu bir sıva yüzeyi alabilir."
+      },
+      {
+        "type": "text",
+        "text": "**Metraj:** Boşluk bütün olarak değerlendirilir. Pencere SmartPart'ının metrajında tüm eleman kendi boyutlarıyla, yani panjurla birlikte değerlendirilir; panjur kutularını tek tek listelemek mümkün değildir."
+      },
+      {
+        "type": "text",
+        "text": "**Avantaj ve dezavantajlar:** Kutu yan mesnetlerle oluşturulamaz. Pencere boşluğu ve pencere (kutu dahil) metrajlanır; tekil metraj mümkün değildir. SmartPart ayarlarına göre panjur rayı, halat kılavuzu ve benzerleri gösterilebilir. Eleman görünüş ve kesitlerde doğru (kısmen basitleştirilmiş) gösterilir. Kutunun ve rayın yan ve üst mesafesi için ayar olanakları kısıtlıdır. Yeni bir eleman için özellikler devralındığında kutusuz bir pencereye göre değişiklik olmaz. Kutu tek başına etiketlenemez."
+      },
+      {
+        "type": "text",
+        "text": "**Olanak 3 - Ayrı bir SmartPart olarak panjur:** En çok olanak sunan yol, boşluğa ayrı bir **Güneş Kırıcı SmartPart'ı (Sonnenschutz-SmartPart)** yerleştirmektir."
+      },
+      {
+        "type": "text",
+        "text": "**Dıştan takma panjur (Vorsatzrollladen, sıvasız):** Pencere SmartPart'ında üst kasayı uygun biçimde genişletin, örneğin 20 cm. **Güneş Kırıcı SmartPart'ı** fonksiyonunu çağırıp **Panjur (Rollladen)** seçin. Boşluğu gösterin; kat planında doğru konumu belirleyebileceğiniz bir önizleme görünür. **Boşluğa Mesafe (Abstand zur Öffnung)** ayarlarıyla rayların (oluşturulduysa) ve kutunun sıva yüzeylerinin içinde kalmasını tanımlayın."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/10809_0EM7U000001Te9l_2b85ee07.png",
-        "caption": "Ayri Gunes Kirici SmartPart'i ile distan takma panjur; boskluga mesafe ayarlari."
+        "caption": "Ayrı SmartPart olarak panjur: görünüşte panjur kanatları, kesitte pencere üstündeki kutu"
+      },
+      {
+        "type": "text",
+        "text": "**Pencere üstü panjur (Aufsatzrollladen, sıvalı kutu):** Pencere SmartPart'ında boşluğa olan üst mesafeyi kutunun istenen yüksekliğine göre uyarlayın: pencere SmartPart'ı özelliklerinde **Ayarlar (Einstellungen)** sekmesinde **Boşluğa Mesafe (Abstand zur Öffnung)** altında üst için örneğin 20 cm girin. **Güneş Kırıcı SmartPart'ı** fonksiyonunu çağırıp **Panjur** seçin ve boşluğu gösterin; kat planında bir önizleme görünür. Kutu boyutlarını girin: kutunun pencere SmartPart'ının üzerine uzanması için mesafe olarak negatif bir değer girebilirsiniz. Kutu derinliği için dış diş derinliğini ve mesafeyi kullanın. Raylarda mesafe arka kutu kenarından hesaplanır."
+      },
+      {
+        "type": "text",
+        "text": "**Metraj:** Panjur SmartPart'ı **İnce Yapı (Ausbau) -> Pencereler, Kapılar (Fenster, Türen)** klasöründeki **Panjur (Rollladen)** raporuyla değerlendirilir; miktar özetlerinde tek eleman olarak görünür. Duvardaki pencere boşluğu kutu dahil değerlendirilir."
+      },
+      {
+        "type": "text",
+        "text": "**Avantaj ve dezavantajlar:** Kutu yan mesnetlerle oluşturulamaz. Pencere boşluğu, panjur kutusu ve pencere metrajlanır; pencere SmartPart'ının metrajında rapora göre boşluk boyutu görünür. Tekil metraj mümkündür. SmartPart ayarlarına göre ray, halat kılavuzu ve benzerleri gösterilebilir. Eleman görünüş ve kesitlerde doğru (kısmen basitleştirilmiş) gösterilir. Kutunun ve rayın yan ve üst mesafesi için ayar olanakları kısıtlıdır. Özellikler devralındığında kutusuz pencereye göre değişiklik olmaz. Kutu ayrı bir eleman olduğu için tek başına etiketlenebilir."
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Avantaj ve dezavantajlar kullanım durumuna göre farklı değerlendirilmelidir."
+      },
+      {
+        "type": "heading",
+        "text": "SmartParts - Pencere / Kapı - Açılış yönü ve metin"
+      },
+      {
+        "type": "text",
+        "text": "Kapı ve pencerelerde açılış yönünü (Aufschlagsrichtung) bir metinle otomatik etiketleyip listelerde gösterebilirsiniz. Kaynak makale prekast (Precast) eleman paftaları bağlamındadır."
+      },
+      {
+        "type": "text",
+        "text": "**Açılış:** Etiketin üretilebilmesi için açılış (kapı kanadı) boşlukta girilmiş ve yerleştirilmiş olmalıdır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9617_0EM67000007oVV9_9b85a4b2.png",
+        "caption": "Planda girilmiş kapı açılışı (kırmızı ok) ve Zarge etiketi"
+      },
+      {
+        "type": "text",
+        "text": "**Makro:** Kapının içinde bir makro bulunmalıdır. Bu makro gömülü parça kataloğunda (Einbauteilekatalog) birebir aynı adla tanımlanmalı ve şu niteliği taşımalıdır: **Liste metni (List text)** alanında örneğin **Zarge $A**; buradaki **A** kodu akıllı sembolün açılış konumunu (Stop position of smart symbol) verir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9617_0EM67000007oVVi_6d2c612e.png",
+        "caption": "Makronun Logging sekmesinde List text: Zarge $A ve kod listesinde A (Stop position of smart symbol)"
+      },
+      {
+        "type": "text",
+        "text": "Aynı makronun **Eleman paftası 1 (Element plan 1)** sekmesinde **Tabloda etiket (Label in table)** seçeneğini işaretleyin ve değerini **Liste metni (List text)** yapın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9617_0EM67000007oVVn_e2d0b600.png",
+        "caption": "Element plan 1 sekmesi: Label in table işaretli, değer List text"
+      },
+      {
+        "type": "text",
+        "text": "**Eleman paftasında çıktı:** Kapı paftanın tablosunda açılış yönüyle birlikte listelenir. Örnekte açılış sağa (re, rechts) olduğu için metin Zarge re 100/201/30 olur."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9617_0EM67000007oVUl_ea72cac8.png",
+        "caption": "Eleman paftası tablosunda 1x Zarge re 100/201/30 satırı"
+      },
+      {
+        "type": "text",
+        "text": "**Liste Üreteci'nden (Listengenerator) alınan listelerde** de aynı metin görünür."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9617_0EM67000007oVVx_e4713e96.png",
+        "caption": "Liste Üreteci listesinde 7 Zarge re 100/201/30 satırı"
+      },
+      {
+        "type": "heading",
+        "text": "Raporlar - ARCH - Kapılar (Nitelikli) - Raporun kullanımı"
+      },
+      {
+        "type": "text",
+        "text": "Yerleştirdiğiniz kapılardan nitelikli bir kapı listesi almak için **Kapılar (Nitelikli) (Türen (mit Qualitäten))** raporunu kullanırsınız. Bunun için hangi niteliklerin gerektiğini ve çıktının nasıl denetlendiğini bilmeniz gerekir."
+      },
+      {
+        "type": "text",
+        "text": "**Standart (Standard) -> İnce Yapı (Ausbau) -> Pencereler, Kapılar (Fenster, Türen)** dizinindeki Türen (mit Qualitäten).rdlc raporu bir kapı listesi olarak hazırlanmıştır. Bilgiler kapıdan (Kapı, Büyük Kapı SmartPart'ı ya da kapı makrosu), bitişik mahalden ve kat yapı kademesinden çekilip yazdırılır. Aşağıdaki açıklama makaleye ekli, iyileştirilmiş rapora dayanır; niteliklerin seçimi ve temel fonksiyonlar standarttaki raporla (ALLPLAN 2020-1-2) aynıdır. Örnek veriler bina yapısında iki çizim dosyasında durur; her ikisinde aynı kullanım durumları vardır. Tür mit Attributen çizim dosyasında temel olarak kullanılabilecek, nitelikleri boş bir kapı bulunur."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8d_13d4990d.png",
+        "caption": "Bina yapısı: Erdgeschoss altında 916 EG - Anwendungsfälle Türen, Dachgeschoss altında 917 DG - Anwendungsfälle Türen"
+      },
+      {
+        "type": "text",
+        "text": "**Kapı ya da Büyük Kapı SmartPart'ına nitelik ekleme:** Raporda yazdırılabilen tüm özellikleri doldurmak için boşluklardaki SmartPart'lara (ya da makrolara) yaklaşık 60 nitelik eklenmelidir. Bunları **Nitelikleri Değiştir (Attribute modifizieren) -> Yeni nitelik ata (Neues Attribut zuweisen)** ya da serbest **Herhangi bir elemana nitelik ata (Attributzuweisung an beliebiges Element) -> Yeni nitelik ata** fonksiyonuyla eklersiniz. Gerekli nitelikler **Kapılar, Pencereler (Türen, Fenster)** grubundadır; tam liste ayrı bir SSS makalesinde (Rapor: Kapılar (Nitelikli) - Kapı SmartPart'ları için nitelik listesi) yer alır. Özellikleri ve nitelikleri var olan bir kapıdan da devralabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Kapı numarası ve mahal bilgisi, Durum 1:** Kapı mahalin içine açılıyor ve mahal numarasını alacak. Kapılar (Kapı, Büyük Kapı SmartPart'ları ve kapı makroları) her zaman içine açıldıkları mahale aittir; böylece raporda kapı numarası mahal numarasından otomatik üretilir. Kırmızıyla işaretli **Lage_Ebene_automatisch**, **Lage_Raumnr_automatisch** ve **Lage_Raumfunktion_automatisch** nitelikleri boş bırakılır ya da auto metnini taşır. Görseldeki üst kapı ofisten 00_02, alttaki koridordan 00_01 numarasını alır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8e_d00176d2.png",
+        "caption": "Durum 1: Lage_..._automatisch nitelikleri auto; üst kapı Büro 01'e (00_02) açılıyor"
+      },
+      {
+        "type": "text",
+        "text": "**Durum 2:** Kapı koridora açılıyor ama bitişik mahalin numarasını alacak. Teknik hacimlerde ve içinden kaçış yapılması gereken mahallerde otomatik numarayı kullanmayıp bilgileri elle girmeniz gerekebilir. Kırmızı işaretli üç Lage niteliğini istenen mahal bilgileriyle doldurun."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8f_1d52c819.png",
+        "caption": "Durum 2: Lage nitelikleri elle dolduruldu (00, 00_05, Besprechung)"
+      },
+      {
+        "type": "text",
+        "text": "**Durum 3:** Bir mahale birden çok kapı ait. Bu durumda mahal numarası tanımlama için yetmez; yeşil işaretli **Tür_Nr_Zusatz** niteliğine örneğin bir harf ya da ek bir sayı girin. Görselde üstteki kapı a ekini ve mahal bilgilerini alır; alttaki kapı b ekine sahiptir ve numarayı mahalden alır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8g_8a988a8a.png",
+        "caption": "Durum 3: Tür_Nr_Zusatz = a ve elle girilmiş mahal bilgileri (00_07, Besprechung)"
+      },
+      {
+        "type": "text",
+        "text": "**Rapordaki sonuç:** Bilgiler ilk sütunlarda (Lage) gösterilir. Soldaki kullanıcı etkileşimi alanında **Raumbezug_Spezial** işaretlendiğinde standarttan farklı ayarlı kapılar kırmızıyla işaretlenir; yalnız standarttan sapan hücreler işaretlenir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8h_eb0a24e7.png",
+        "caption": "Rapor önizlemesi: Raumbezug_Spezial kapalı"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8i_2b4ca1f4.png",
+        "caption": "Raumbezug_Spezial açık: 00_05 ve 00_07 satırlarında sapan hücreler kırmızı"
+      },
+      {
+        "type": "text",
+        "text": "**Boşluk ve duvar bilgileri:** Genişlik ve yükseklik boşluktan (duvardaki kaba yapı ölçüsü) gelir. Döşeme yüksekliği otomatik belirlenen mahalden, duvar kalınlığı duvardan (tüm katmanlar) otomatik alınır (kırmızı işaret). Kaplamayı nitelikler üzerinden malzeme ve kalınlık olarak tanımlarsınız (sarı işaret). Duvar malzemesi duvardan devralınabilir: **Wand_Material_automatisch** niteliğine auto yazın ya da boş bırakın. Otomatik devralmada önce toplam duvarın (Gesamtwand) **Tanım (Bezeichnung)** niteliği kullanılır; boşsa duvar katmanının (Wandschicht) **Malzeme (Material)** niteliği kullanılır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8j_81f82937.png",
+        "caption": "Kaplama nitelikleri (sarı: Wand_Bekleidung_..., IPZ, 15) ve Wand_Material_automatisch = MW"
+      },
+      {
+        "type": "text",
+        "text": "**Rapordaki sonuç:** Bilgiler Duvar (Wand) bölümünde gösterilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8k_f640edbb.png",
+        "caption": "Rapor: Wand bölümü, Wandmaterial_Spezial kapalı"
+      },
+      {
+        "type": "text",
+        "text": "Soldaki **Wandmaterial_Spezial** ayarıyla standarttan farklı ayarlı kapılar yeşil işaretlenir; yalnız sapan hücre işaretlenir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8l_deee8d99.png",
+        "caption": "Wandmaterial_Spezial açık: MW ve GK malzeme hücreleri yeşil"
+      },
+      {
+        "type": "text",
+        "text": "**Kapı açılış yönü ve kapı bilgileri:** Kapı bilgilerinin çoğu doğrudan niteliklerde ayarlanır. Açılış yönü (sol ya da sağ) otomatik belirlenebilir. Çok kanatlı kapılarda ya da özel bir bilgi istendiğinde **Tür_DIN_automatisch** niteliğiyle müdahale edersiniz: değer auto ise ya da boşsa otomatik belirlenen değer, değilse girilen değer yazdırılır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8m_bff51807.png",
+        "caption": "Tür_DIN_automatisch = L (leicht) olarak elle girilmiş kapı"
+      },
+      {
+        "type": "text",
+        "text": "**Rapordaki sonuç:** Bilgiler Kapı (Tür) bölümünde gösterilir. Soldaki **Anschlag_Spezial** ayarıyla standarttan farklı ayarlı kapılar yeşil işaretlenir; yalnız sapan hücre işaretlenir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8n_d4de31c5.png",
+        "caption": "Rapor: Tür bölümü, Anschlag_Spezial kapalı"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8o_eec378e5.png",
+        "caption": "Anschlag_Spezial açık: L (leicht) değerli hücreler yeşil"
+      },
+      {
+        "type": "text",
+        "text": "**Kasa (Zarge):** Kasa bilgilerinin çoğu doğrudan niteliklerde ayarlanır. **Zarge_Maulweite_automatisch** niteliği 0.00 ise kasa genişliği (Maulweite), duvar kalınlığına (tüm katmanlar) **Wand_Bekleidung_Bandseite** ve **Wand_Bekleidung_Bandgegenseite** niteliklerindeki kalınlıklar eklenerek bulunur. Kullanıcı tanımlı bir değer girerseniz istenen kasa genişliğini eksiksiz yazmalısınız."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8p_b53b3bef.png",
+        "caption": "Zarge_Maulweite_automatisch = 270 olarak elle girilmiş kapı"
+      },
+      {
+        "type": "text",
+        "text": "**Rapordaki sonuç:** Bilgiler Kasa (Zarge) bölümünde gösterilir. Soldaki **Maulweite_Spezial** ayarıyla standarttan farklı ayarlı kapılar yeşil işaretlenir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8q_445603e9.png",
+        "caption": "Rapor: Zarge bölümü, Maulweite_Spezial kapalı"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8r_f0565942.png",
+        "caption": "Maulweite_Spezial açık: 270 ve 200 değerli hücreler yeşil"
+      },
+      {
+        "type": "text",
+        "text": "**Kapı kanadı, aksesuarlar ve genel bilgiler (Türblatt, Beschläge und Allgemein):** Kalan tüm bilgiler kapıda ayarlanır. Niteliğe göre değerler seçilebilir ya da elle girilmelidir."
+      },
+      {
+        "type": "text",
+        "text": "**Gruplandırma (Gliederung):** Rapor kat gruplandırmasıyla ya da gruplandırmasız görüntülenebilir; bunu soldaki **Gliederung_Geschoss** ayarı yönetir. Gruplandırma bina yapısındaki katların adlarından oluşur. Birden fazla kat bulunduysa **Katlar (Geschosse)** açılır listesiyle görünümü daraltabilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8s_a5a45120.png",
+        "caption": "Kullanıcı etkileşimi: Geschosse listesinde Dachgeschoss, Erdgeschoss; Gliederung_Geschoss işaretli"
+      },
+      {
+        "type": "text",
+        "text": "**Yapı elemanlarını işaretleme:** Rapor önizlemede açıkken fare imlecini hücrelerin üzerine getirdiğinizde imleç el biçimine döner. Hücreye tıklarsanız etkin grafik penceresinde ilgili yapı elemanı işaretlenir ve yakınlaştırılır; böylece büyük binalarda bile sorunlu elemanları kolayca bulursunuz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8t_e5ef4788.png",
+        "caption": "Rapor hücresi üzerinde el biçimli imleç"
+      },
+      {
+        "type": "text",
+        "text": "**Tür-Nr** ve **Aufs.** alanları (Tür bölümü) Kapı, Büyük Kapı SmartPart'ını ya da kapı makrosunu doğrudan işaretler. **Raum-Nr** ve **Raum-Bez.** alanları (Lage bölümü) otomatik belirlenen mahali işaretler. **Stärke** ve **Material** alanları (Wand bölümü) kapının bulunduğu duvarı işaretler."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10616_0EM7U000001Te8u_3b947104.png",
+        "caption": "Rapor hücrelerinden plana: kapı numarası kapıyı, mahal hücreleri mahali, duvar hücreleri duvarı işaretliyor"
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Raporlarda değişiklik ve genişletmeler için her biri ayrı bir konuyu anlatan başka SSS makaleleri vardır. Örnek çizim dosyaları 2020 sürümünden itibaren kullanılabilir; rapor daha eski sürümlerde de çalışır."
       }
     ]
   },

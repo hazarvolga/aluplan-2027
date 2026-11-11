@@ -128,11 +128,41 @@
       },
       {
         "type": "text",
-        "text": "Harita veya kadastro altlıklı projelerde **büyük koordinatlar** sinsi sorunlara yol açar: elemanlar oluşturulamaz veya hatalı oluşur, çizim taşınamaz, kadastro DXF'i içe aktarılırken program çöker, alan ve gölge hesapları çalışmaz, ekran aniden döner. Bunların kök nedeni tektir: sistem, sıfır noktasından çok uzaktaki (ofsetsiz koordinatı yaklaşık 5.000 m'den büyük) verileri tam hesaplayamaz ve ekranda doğru gösteremez."
+        "text": "Proje başlangıcında ofseti doğru kurmazsanız, harita ya da kadastro altlıklı projelerde çok büyük koordinatlar sinsi hatalar üretir."
       },
       {
         "type": "text",
-        "text": "Kontrol için **Araçlar (Extras) -> Ölç (Messen) -> Koordinatlar** komutunu seçip çizimin ortasına tıklayın; **Ofsetsiz (ohne Offset)** X/Y/Z değerleri çok büyükse bir ofset tanımlamanız gerekir. Çözüm, **Büyük Koordinatlarla Çalışmayı Optimize Et** seçeneğiyle bir merkez ofseti kullanmaktır; böylece ALLPLAN dahili olarak küçük koordinatlarla çalışır ve bu sorunlar ortadan kalkar."
+        "text": "**Belirtiler:** Elemanlar oluşturulamaz ya da hatalı oluşturulur; çizim taşınamaz; kadastrodan gelen bir DXF dosyası içe aktarılırken program çöker; çevrelenen bir alanın konturu doğru tanınmaz; gölge hesabı çalışmaz ya da çöker; elemanlar animasyonda doğru görünmez; ölçü değerlerinin bir kısmı eksik çıkar; ekran görüntüsü aniden döner; taşıma ya da kopyalamada önizleme görünmez; alan hesapları doğru yapılmaz."
+      },
+      {
+        "type": "text",
+        "text": "**Neden:** Sistem çok büyük koordinatlarda verileri kısmen doğru hesaplayamaz ya da gösteremez. Bu kadar uzak bir noktada ne kadar çok veri üretilirse etki o kadar artar."
+      },
+      {
+        "type": "text",
+        "text": "**Kontrol:** **Araçlar (Extras) -> Ölç (Messen) -> Koordinatlar (Koordinaten)** fonksiyonunu seçin ve kat planında ilgili çizimin ortasına tıklayın. Ofsetsiz koordinatlarda (ohne Offset) çok büyük değerler görünüyorsa (örneğin x, y ya da z 5000 m'den büyükse) yukarıdaki belirtiler ortaya çıkabilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10582_0EM7U000001TexS_7e443124.png",
+        "caption": "Ölçüm değerleri (Messwerte): ofsetsiz X ve Y koordinatları 4.657534e+07 m ve 3.656326e+07 m gibi çok büyük"
+      },
+      {
+        "type": "text",
+        "text": "**Çözüm 1:** Proje çok ilerlemişse **Araçlar (Extras) -> Seçenekler (Optionen) -> Çalışma Ortamı (Arbeitsumgebung) -> Genel (Allgemein)** altında **Büyük koordinatlarla çalışmayı optimize et (Arbeiten mit großen Koordinaten optimieren)** seçeneğini etkinleştirmeyi deneyin ve seçeneğin devreye girmesi için ALLPLAN'ı yeniden başlatın. Bu bir kullanıcı ayarıdır, gerekirse her kullanıcı için ayrı yapılmalıdır. Tam bir çözüm değildir, yalnız olası bir grafik iyileştirmedir."
+      },
+      {
+        "type": "text",
+        "text": "**Çözüm 2 (daha iyi):** Verileri ALLPLAN sıfır noktasının yakınına taşıyın ve **Büyük koordinatlarla çalışmayı optimize et** seçeneğini işaretlemeyin. Önlem olarak önce bir proje kopyası alın. **Düzenle (Bearbeiten) -> Taşı (Verschieben)** fonksiyonunu seçin ve tüm verileri işaretleyin. **Başlangıç noktası (von Punkt)** sorusunda modelinizin örneğin ortasına tıklayın. **Hedef noktası (nach Punkt)** sorusunda diyalog satırındaki **Global Nokta (Globalpunkt)** fonksiyonunu seçin (Alt+G) ve büyük x ve y değerleri yerine ikisine de **0** girin. Ayrıntı için ALLPLAN Yardım'da Globalpunkt terimini arayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10582_0EM7U000001TexT_67477a1f.png",
+        "caption": "Taşı fonksiyonunda nach Punkt girişi ve diyalog satırındaki Globalpunkt (Alt+G) düğmesi"
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Veriler hâlâ yanlış görünüyorsa ALLPLAN'ı kapatın, **Allmenu -> Servis (Service) -> Hotline Araçları (Hotlinetools) -> cleanup** aracını çalıştırın ve ALLPLAN'ı yeniden başlatın. Actionbar kullanıyorsanız menü çubuğunu Alt tuşuyla geçici olarak görünür yaparsınız."
       },
       {
         "type": "heading",
@@ -140,7 +170,19 @@
       },
       {
         "type": "text",
-        "text": "Yeni girdiğiniz proje nitelikleri kaydedilmiyorsa, nedeni genellikle Windows yetki sorunları yüzünden **AllplanProjectDB.db3** dosyasına yazılamamasıdır. Proje nitelikleri hem kurulumun PRJ klasöründeki bu veritabanına hem de projedeki **PrjAtt.dat** dosyasına yazılır. db3 yoksa ama PrjAtt.dat projede duruyorsa, nitelikleri **Allmenu -> Servis (Service) -> Hotline Araçları (Hotlinetools) -> updprjattr** aracıyla geri getirebilirsiniz."
+        "text": "Proje oluştururken girdiğiniz proje nitelikleri kaydedilmiyorsa sorun genellikle veritabanı dosyasının yazma yetkisindedir."
+      },
+      {
+        "type": "text",
+        "text": "**Neden:** Windows yetki sorunları nedeniyle **AllplanProjectDB.db3** dosyasına yazılamaz; bu yüzden yeni girilen proje nitelikleri kaydedilmez."
+      },
+      {
+        "type": "text",
+        "text": "**Arka plan:** Proje niteliklerinin kayıtları önce ALLPLAN kurulumunun PRJ klasöründe ya da (Workgroupmanager kullanılıyorsa) Net klasöründe bulunan AllplanProjectDB.db3 dosyasına, ayrıca ilgili projedeki **PrjAtt.dat** dosyasına yazılır; PrjAtt.dat bilgileri db3 dosyasından alır. Bir projede PrjAtt.dat artık yoksa ALLPLAN bilgileri her durumda db3 dosyasından okur. Proje niteliklerinin projeye özel mi büroya özel mi ayarlandığı burada fark etmez."
+      },
+      {
+        "type": "text",
+        "text": "**Geri getirme:** AllplanProjectDB.db3 artık yoksa ama PrjAtt.dat projede hâlâ duruyorsa, projenin nitelikleri **Allmenu -> Servis (Service) -> Hotline Araçları (Hotlinetools) -> updprjattr** aracıyla yeniden kullanılabilir hale getirilir."
       }
     ]
   },

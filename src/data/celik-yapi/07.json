@@ -139,5 +139,78 @@
     "task": "Bir çelik iş akışı sorununu (örneğin bağlantı üretilememesi) ele alıp lisans, rol/eylem çubuğu ve profil kaynağı önkoşullarını sırayla denetleyen kısa bir kontrol listesi yazın.",
     "expected": "Üç önkoşulu (lisans, eylem çubuğu/rol, Nemetschek katalog profili) kapsayan bir sorun giderme listesi.",
     "hint": "Stabilite doğrulaması gerekiyorsa bunun detaylandırmadan ayrı bir araç (RSX-ST veya BTII+) işi olduğunu not edin."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Eksik ikon: lisans ve eylem çubuğu kontrolü"
+      },
+      {
+        "type": "text",
+        "text": "Otomatik Bağlantılar (Automated Connections) simgesini bulamıyorsanız iki nedeni kontrol edin."
+      },
+      {
+        "type": "text",
+        "text": "**Lisans:** Simge lisansınıza bağlıdır; mühendislik (Engineering) sürümünden itibaren kullanılabilir."
+      },
+      {
+        "type": "text",
+        "text": "**Kişiselleştirilmiş eylem çubuğu:** Lisansınız uygunsa neden kişiselleştirdiğiniz eylem çubuğu (Actionbar) olabilir. Eylem çubuğunu başlangıç durumuna getirin; simgeyi mühendislik rolünde bulursunuz."
+      },
+      {
+        "type": "text",
+        "text": "Simge görünse de bağlantı oluşmuyorsa elemanların Nemetschek kataloğu profilleriyle modellendiğini kontrol edin (1. ders)."
+      },
+      {
+        "type": "heading",
+        "text": "Uzaktan erişimde önerilen yaklaşımlar"
+      },
+      {
+        "type": "text",
+        "text": "Uzaktan erişim seçeneklerini 4. derste gördünüz. Hangisini seçerseniz seçin, kurmadan önce yapılacak kontrol aynıdır."
+      },
+      {
+        "type": "text",
+        "text": "Her uzaktan çalışma senaryosunda bant genişliği, gecikme ve güvenlik gereksinimleri kontrol edilmelidir. Sanal çalışma alanı (VDI) ya da bulut masaüstü yaklaşımı, proje klasörlerine doğrudan VPN üzerinden erişmekten genellikle daha sağlam ve ölçeklenebilirdir."
+      },
+      {
+        "type": "heading",
+        "text": "RSX - Çelik: stabilite doğrulaması seçenekleri"
+      },
+      {
+        "type": "text",
+        "text": "Çubuk sistem hesabında (Stabwerk) çelik stabilite doğrulaması için üç yol vardır; hangisinin yeterli olduğu kesitinize ve mesnetlenme koşullarınıza bağlıdır."
+      },
+      {
+        "type": "text",
+        "text": "**1. RSX-ST ek modülüyle basitleştirilmiş doğrulama:** Ek modülle tekil çubukları ve çubuk dizilerini, iki uçta da yer değiştirmeyen çatal mesnet (Gabellagerung) varsayımıyla burkulma (Knicken) ve yanal burulmalı burkulma (Biegedrillknicken) açısından incelersiniz. Yük her zaman kesit ağırlık merkezine etkir ve bu değiştirilemez; mesnetler de her zaman kesit ağırlık merkezindedir."
+      },
+      {
+        "type": "text",
+        "text": "Doğrulama bu durumda eşdeğer çubuk yöntemine (Ersatzstabverfahren) göre yapılır ve şu sınırları vardır: yalnız çift T profiller; burulma yüklemesi yok; mesnetlenme kesit ağırlık merkezinde; yük etkime noktası kesit ağırlık merkezinde; çubukta ya da çubuk dizisinde ara mesnet yalnız sınırlı olarak mümkün."
+      },
+      {
+        "type": "text",
+        "text": "**2. BTII+ programıyla kesin doğrulama:** Stabilitenin kesin analizi BTII+ (yanal burulmalı burkulma) programıyla yapılır. BTII+'da mesnetlenmenin tüm ayrıntılarını (örneğin üst başlığın tutulu olması, ek mesnetler, elastik mesnetler) ve yükleri ayarlayabilirsiniz. Eşdeğer çubuk yöntemiyle mümkün olmayan profiller de tanımlanabilir."
+      },
+      {
+        "type": "text",
+        "text": "Lisansınız varsa BTII+'ı RSX'ten çubuğun bağlam menüsüyle çağırabilir ve tüm belirleyici yükleri ve yük kombinasyonlarını otomatik olarak aktarabilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/celik-yapi/11758_0EMRD00000OFYMw_18538d20.png",
+        "caption": "RSX'te IPE 140 çubuğunun bağlam menüsü: Übergabe Stab 4 nach BTII (çubuğu BTII'ye aktar)"
+      },
+      {
+        "type": "text",
+        "text": "**3. RSX-ST ya da BTII+ olmadan ikinci mertebe teorisiyle doğrulama:** Sistem için gerekli ön deformasyonlar (Vorverformungen) tanımlanmışsa sistem, ikinci mertebe teorisine göre hesapla burkulmaya karşı doğrulanabilir. Düzlem çubuk sistemde düzlem dışı burkulma bu yolla doğrulanmış olmaz. Yanal burulmalı burkulma doğrulaması RSX'te ek modül ya da BTII+ olmadan esas olarak mümkün değildir."
+      },
+      {
+        "type": "text",
+        "text": "**Not:** BTII+ programını satın aldıysanız RSX-ST ek modülü otomatik olarak dahildir."
+      }
+    ]
   }
 }

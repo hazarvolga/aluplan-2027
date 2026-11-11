@@ -121,5 +121,58 @@
     "task": "Kendi disiplininizi (örneğin mimari) merkeze alarak, bir OpenBIM döngüsünün beş halkasını (modelleme, yükleme/dışa aktarım, koordinasyon, çakışma/sorun, düzeltme) birer cümleyle yazın.",
     "expected": "Her halkanın ne yaptığını ve bir sonrakine nasıl bağlandığını açıklayan kısa bir akış metni.",
     "hint": "Modelin ALLPLAN'dan çıkıp Bimplus'ta diğer modellerle buluştuğu an koordinasyonun başladığı andır."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "ALLPLAN Bimplus: İlk Adımlar"
+      },
+      {
+        "type": "text",
+        "text": "Bimplus, ALLPLAN'ın openBIM ortak veri ortamıdır (CDE). Kavramı tanırken, Bimplus ile çalışmaya başlamadan önce bilmeniz gereken lisans ve ekip koşullarını da görün."
+      },
+      {
+        "type": "text",
+        "text": "**Bulut lisansına geçiş:** Eylül 2025 ortasında ALLPLAN bulut lisanslamasına geçişle ilgili bir e-posta gönderildi. Bu geçiş **yalnızca** daha önce bulut ürünleriyle çalışmış kullanıcıları ilgilendirir. Etkilenen ürünler ALLPLAN Bimplus, ALLPLAN Share, ALLPLAN COR ve ALLPLAN Exchange'dir; ayrıntılar ALLPLAN destek sayfasındaki geçiş SSS'sinde anlatılır."
+      },
+      {
+        "type": "text",
+        "text": "Henüz bir Bimplus ekibiniz (Team) yoksa ilk iş onu kurmaktır. Ekibin kurulması, verilerin yüklenmesi ve projelerin açılması ALLPLAN Bimplus yardımında adım adım anlatılır. Bimplus ile koordinasyonun nasıl yürüdüğünü 8. derste göreceksiniz."
+      },
+      {
+        "type": "heading",
+        "text": "ALLPLAN Share: İlk Adımlar"
+      },
+      {
+        "type": "text",
+        "text": "ALLPLAN Share, ALLPLAN projelerini Bimplus bulutu üzerinden ekipçe paylaşmanızı sağlar. Bu bölüm, Share ile çalışmaya başlamadan önce sağlanması gereken koşulları anlatır; projeyi oluşturmayı ve rolleri bir sonraki derste göreceksiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Sistem gereksinimi:** En az 20 Mbit/s indirme ve yükleme hızında bir internet hattı ve 50 ms altında gecikme gerekir. Önerilen değer 50 Mbit/s ve üzeri hız ile 10 ms altında gecikmedir."
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Tam kararlılık, işlev kapsamı ve performans için Allplan Bimplus bulutuna giden bağlantılar kısıtsız çalışmalıdır. **bimplus.net** ve **api.bimplus.net** alan adlarına 443 numaralı port üzerinden giden bağlantılar VPN üzerinden yönlendirilmemelidir; doğrudan bağlantı gerekir. VPN ayarlarını sistem yöneticiniz yapabilir."
+      },
+      {
+        "type": "text",
+        "text": "**Bimplus hesabı ve ekibi:** Share için bir Bimplus hesabına ve bir Bimplus ekibine ihtiyacınız vardır; ekip koşulu yukarıdaki Bimplus ilk adımlar bölümünde anlatıldı."
+      },
+      {
+        "type": "text",
+        "text": "**Share lisansı:** Lisanslar ALLPLAN Connect'teki lisans yönetiminden (Lizenzverwaltung) atanır. Abonelik lisanslarında her çalışana bir **ALLPLAN Cloud Service** lisansı atanmalıdır. Satın alınmış lisanslarda her çalışanın hem bir **ALLPLAN Share** hem de bir **ALLPLAN Bimplus** lisansına ihtiyacı vardır. ALLPLAN Share'i Workgroup kurulumuyla da, Workgroup kurulumu olmadan da kullanabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Bimplus oturumu:** ALLPLAN 2024-2 ve 2025 sürümlerinden itibaren Bimplus oturumu doğrudan ALLPLAN oturumuyla birlikte açılır. Önceki sürümlerde ALLPLAN penceresinin sağ üst köşesinden ayrıca Bimplus'a giriş yapmanız gerekir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/openbim-ifc/8609_0EMVi00000GE1Sr_b9b96c2b.png",
+        "caption": "Önceki sürümlerde sağ üstteki Login düğmesi: Login to Allplan Webservices"
+      }
+    ]
   }
 }

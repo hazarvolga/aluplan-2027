@@ -168,5 +168,146 @@
     "task": "Dört belirtiyi (erişilemeyen yapılandırma, gelmeyen yeni palet, yanlış ankraj genişliği, bozuk liste başlığı) alıp her biri için tek cümlelik kök neden ve çözüm eşleştirmesi yazın.",
     "expected": "Erişim = eksik 'Precast elements' kurulumu; palet = cleanstd; ankraj = enine donatı konumu/If-Else formülü; başlık = çeviri yer tutucusunun temizlenmesi ve büro klasöründe düzenleme.",
     "hint": "Her belirtide önce 'bu projede mi yoksa kurulum/ayar dosyasında mı?' diye sorun; çoğu prekast sorunu ikincisidir."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Prekast Yapılandırması Kullanılamıyor (Planbar 2022)"
+      },
+      {
+        "type": "text",
+        "text": "**Belirti:** ALLPLAN Planbar 2022 kurulduktan sonra yapılandırma menüsüne doğru erişilemiyor; girişler kırmızı soru işaretli ve seçilemiyor."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9251_0EM670000075eJT_161f18bc.png",
+        "caption": "İngilizce arayüzde Configuration Menu: General altındaki girişler kırmızı soru işaretli (Configuration file does not exist)"
+      },
+      {
+        "type": "text",
+        "text": "**Çözüm:** Planbar 2022'de prekast modüllerini kullanmak için kurulumda **Prekast elemanlar (Precast elements)** seçeneğini etkinleştirin. Seçenek kurulum programının **Seçenekler (Options)** sekmesinde, **Genişletilmiş araçlar (Extended tools)** altındadır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9251_0EM670000075eJn_b714c8c2.png",
+        "caption": "Kurulum programı, Options sekmesi: Extended tools altında Precast elements işaretli (Fixtures da işaretli)"
+      },
+      {
+        "type": "text",
+        "text": "**İpucu:** **Gömme parçalar (Fixtures)** seçeneğini yalnız yeni bir kurulumda işaretleyin. Etkinleştirildiğinde standart gömme parçalar büro klasörüne (STD) kopyalanır ve mevcut gömme parçaların üzerine yazılır. Var olan bir kurulumu onarırken bu seçeneği açık bırakırsanız kendi gömme parçalarınızı kaybedersiniz."
+      },
+      {
+        "type": "heading",
+        "text": "Prekast Liste Başlığı Değişkenlerini InitPrjAttr.EXT ile Uyarlama"
+      },
+      {
+        "type": "text",
+        "text": "Liste başlığının kat satırına yapı yapısındaki kat adı gelmiyorsa InitPrjAttr.EXT uyarlamasında üç noktayı kontrol edin. Yöntemin tamamını Prekast Listeleri dersinde gördünüz; burada kontrol noktalarını İngilizce arayüzdeki karşılıklarıyla görüyorsunuz."
+      },
+      {
+        "type": "text",
+        "text": "**1. Dosya doğru klasörde mi:** Liste üreticisinde **Lists and schedules in default folder** (Standart listeler) ve **Lists and schedules in office folder** (Büro listeleri) girişlerinde sağ tık -> Explorer ile klasörleri açın. InitPrjAttr.EXT dosyası **\\ETC\\BFT_List** klasöründen **...STD\\BFT_List** klasörüne kopyalanmış olmalı ve düzenlemeyi bu kopyada yapmalısınız."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9111_0EMVi000009JMin_fa4137e8.png",
+        "caption": "İngilizce liste üreticisi: InitPrjAttr.EXT, ETC\\BFT_List klasöründen STD\\BFT_List klasörüne kopyalanıyor"
+      },
+      {
+        "type": "text",
+        "text": "**2. Doğru blok etkin mi:** Kopyalanan dosyada, başlığın kat satırına yazılan **DeckeUber** değişkenine kat adını atayan **IFF ( BwsTyp[AB] == 7 )** bloğu etkin olmalıdır; satır başında **!** işareti bulunmamalıdır. Başlıktaki diğer değişkenleri de ihtiyacınıza göre değiştirebilirsiniz. Değişken adını dosyadaki gibi, **DeckeUber** olarak yazın."
+      },
+      {
+        "type": "text",
+        "text": "**3. Sonuç doğru mu:** Listeyi oluşturduğunuzda başlığın Story satırında yapı yapısındaki kat adı (örnekte Erdgeschoss) görünmelidir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9111_0EMVi000009JNDR_96cace15.png",
+        "caption": "Wall measurement sheet listesi: Story satırında yapı yapısından gelen Erdgeschoss"
+      },
+      {
+        "type": "heading",
+        "text": "Prekast Liste Başlığını HeaderData.ext ile Uyarlama"
+      },
+      {
+        "type": "text",
+        "text": "Liste başlığından bir satırı kaldırdıktan sonra başlık bozuk görünüyorsa satırda büyük olasılıkla çeviri işaretlerinden biri kalmıştır. HeaderData.Ext dosyası liste üreticisinin genel başlık verilerini içerir; doğru düzenleme şöyle yapılır."
+      },
+      {
+        "type": "text",
+        "text": "Önce dosyanın büro klasöründeki kopyasıyla çalıştığınızdan emin olun: liste üreticisinde **Lists and schedules in default folder** ve **Lists and schedules in office folder** girişlerinde sağ tık -> Explorer ile klasörleri açın ve HeaderData.ext dosyasını **\\ETC\\BFT_List** klasöründen **...STD\\BFT_List** klasörüne kopyalayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9109_0EMVi000009ZCtx_aa0274c3.png",
+        "caption": "İngilizce liste üreticisi: HeaderData.EXT, Etc\\Bft_List klasöründen Std\\Bft_List klasörüne kopyalanıyor"
+      },
+      {
+        "type": "text",
+        "text": "Kopyayı bir metin düzenleyicide açın. Süslü parantez (**{**) ve **@xxxxx** biçimindeki sayı bir çeviriye ve dil dosyalarına işaret eder; düzenlediğiniz satırda ikisini de kaldırın."
+      },
+      {
+        "type": "text",
+        "text": "Örneğin Bauteil (yapı elemanı) satırını kaldırmak için altı parçayı silin: parantez (1), Bauteil metni (2), değişkenin yer tutucusu (3), ikinci parantez (4), değişken (5) ve çeviri metin numarası (6). Görselin altındaki düzenlenmiş **SUB Kopfdaten** bloğu sonucu gösterir: Bauteil kalkmış, aynı satırdaki Plannummer yerinde kalmıştır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9109_0EMVi000009ZDEv_fe14a9f6.png",
+        "caption": "HeaderData.EXT: Bauteil satırında silinecek altı parça (1-6) ve altta düzenlenmiş Kopfdaten bloğu"
+      },
+      {
+        "type": "text",
+        "text": "Bir niteliği başka bir değerle doldurmak istiyorsanız (örneğin Kat satırına yapı yapısındaki kat adı) InitPrjAttr.EXT yöntemini kullanın; kontrol noktalarını bir önceki bölümde gördünüz."
+      },
+      {
+        "type": "heading",
+        "text": "iWall Taşıma Ankrajı Genişliği Formülü (Kısıtlar)"
+      },
+      {
+        "type": "text",
+        "text": "Taşıma ankrajı genişliği formülü yanlış sonuç veriyorsa önce formülün kısıtlarına bakın. Duvar tiplerine göre formülleri Prekast Listeleri dersinde kurdunuz; burada hangi koşulda çalıştıklarını ve üç duvar tipi için ortak formülü görüyorsunuz."
+      },
+      {
+        "type": "text",
+        "text": "**Kısıt:** Formüller taşıma ankrajı kalınlığını yalnız enine donatı dışta olduğunda doğru hesaplar. Enine donatı içteyse taşıma ankrajı genişliğinden ayrıca boyuna donatının en büyük çapı da düşülmelidir; donatının konumu ise bir formülle değerlendirilemez."
+      },
+      {
+        "type": "text",
+        "text": "**Ayrı mı, ortak mı:** Her duvar tipi için ayrı gömme parçalar (gömme parça kataloğunda kendi katalog referansıyla) kullanıyorsanız her tipe ayrı formül yazabilirsiniz. Tüm duvar tiplerinde aynı katalog referanslı aynı gömme parçaları kullanıyorsanız ortak bir formül gerekir: bu formül bir Eğer/Değilse yapısıyla (**_IF_** ... **_ELSE_**) duvar tipini sorgular ve o tipe ait formülü değerlendirir."
+      },
+      {
+        "type": "text",
+        "text": "**Ortak formül (kullanıcı tanımlı nitelik / etiket stili):** **_IF_(@36094@=1)(@36017@-(@36006[1]@*100)-(@36005[1]@*100)-(@18120@/10)-(@18120[1]@/10))_ELSE__IF_(@36094@=2)(@36017@-(@36006[1]@*100)-(@36005[3]@*100)-(@18120@/10)-(@18120[1]@/10))_ELSE__IF_(@36094@=6)(@36017@-(@36006[1]@*100)-(@36005[4]@*100)-(@18120@/10)-(@18120[1]@/10))_ELSE_\"\"**. Burada **@36094@** prekast eleman tipidir: 1 masif duvar, 2 çift duvar, 6 ısı yalıtımlı duvar."
+      },
+      {
+        "type": "text",
+        "text": "**Liste metni sınırı:** Ortak formül, liste metninin en fazla karakter sayısını aşar. Bu yüzden ortak formülle ayrı bir kullanıcı tanımlı nitelik oluşturun ve liste metninde yalnız bu niteliği değerlendirin, örneğin **Ankerdicke <!PARENTPRECAST(@xxxx@)!> cm**. Örnekteki nitelik numarası @5028@'dir; çizimde görünmeyen kabuk için \"2x Ankerdicke 16.8 cm\" çıkar."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/8890_0EMVi00000DsuFS_cbee05a4.png",
+        "caption": "Einbauteilekatalog, Erfassung sekmesi: Gemeinsamer Transportanker Dicke liste metni Ankerdicke <!PARENTPRECAST(@5028@)!> cm ve çizimde 2x Ankerdicke 16.8 cm"
+      },
+      {
+        "type": "text",
+        "text": "Üç duvar tipinde de ortak nitelik, tipe özel nitelikle aynı değeri verir: masif duvarda 17,8, çift duvarda 16,8, ısı yalıtımlı duvarda 27,8 cm."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/8890_0EMVi00000Dsutl_7fdfb311.png",
+        "caption": "Massivwand, Doppelwand ve Thermowand mit Ortbetonkern nitelikleri: _Transportanker Dicke MW & DW & TW tipe özel değerle aynı"
+      },
+      {
+        "type": "text",
+        "text": "**Biçim:** Etiket stilinde biçim **F8.1**, birim **cm**. Kullanıcı tanımlı nitelikte denetim öğesi **Formül (Formula)**, veri tipi **Kayan noktalı sayı (Floating-point number)**, birim **cm**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/8890_0EMVi00000DspZ8_c16ebe80.png",
+        "caption": "Modify attribute diyaloğu: _Transportanker Dicke MW & DW & TW, Control element Formula, Data type Floating-point number ve ortak _IF_ formülü"
+      }
+    ]
   }
 }

@@ -168,5 +168,122 @@
     "task": "Bir gömme parça (örneğin taşıma ankrajı) için liste metninde, üst prekast elemanın bir özniteliğini gösteren basit bir formül kurgulayın: önce doğrudan özniteliği yazmayı, sonra PARENTPRECAST() ile sarmalamayı deneyin.",
     "expected": "Doğrudan yazım sonuç vermez; PARENTPRECAST(...) ile sarmalanmış ve <! ... !> arasına alınmış formül üst elemanın değerini liste metninde gösterir.",
     "hint": "Formül Düzenleyici'de 'Function' bölümünden PARENTPRECAST'e çift tıklayın, sonra özniteliği seçip parantezi kapatın."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Gömme Parçalar İçin IfcObjectType (Mühendislik)"
+      },
+      {
+        "type": "text",
+        "text": "Gömme parçanızın IFC dışa aktarımında doğru sınıfla çıkması için IfcObjectType değerini kendiniz verirsiniz. Bunun iki yolu var."
+      },
+      {
+        "type": "text",
+        "text": "**Tek tek:** Gömme parçanın niteliklerini doğrudan düzenleyin. **Nitelikleri Değiştir (Modify Attributes)** diyaloğunda Sınıflandırma (Classification) altındaki **IFC Object type** niteliğine uygun değeri yazın; örnekteki taşıma ankrajı için bu değer **IfcMechanicalFastener**'dır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/8914_0EM67000007o2ao_7d39958d.png",
+        "caption": "Modify Attributes diyaloğu: Symbol Fixture (Kugelkopftransportanker 2,5t 120mm) için IFC Object type = IfcMechanicalFastener"
+      },
+      {
+        "type": "text",
+        "text": "**Toplu:** Aynı değeri birden fazla gömme parçaya vermek için **Nitelikler (Attributes)** -> **Nitelik Ata (Assign Attributes)** komutunu kullanın: IFC Object type niteliğini işaretleyip değeri girin, **OK** ile kapatın ve küçük Nitelik Ata paletindeki **Uygula (Apply)** ile gömme parçalara atayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/8914_0EM67000007o2bD_ad16b677.png",
+        "caption": "Assign Attributes diyaloğu: IFC Object type işaretli, değer IfcMechanicalFastener; solda Apply düğmeli küçük palet"
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Kaynak bu yolun yalnız prekast olmayan (non-precast) elemanlar için geçerli olduğunu vurgular."
+      },
+      {
+        "type": "heading",
+        "text": "Gömme Parçalar: Liste Metninde Formül Kurgusu"
+      },
+      {
+        "type": "text",
+        "text": "Gömme parça kataloğundaki liste metnine (Listentext / List text) bir formül yazarak, gömme parçanın içinde durduğu prekast elemandan bilgi taşıyabilirsiniz. Formül Düzenleyiciye (Formeleditor / Formula editor) gömme parça kataloğunun farklı yerlerinden erişilir."
+      },
+      {
+        "type": "text",
+        "text": "**Adım 1:** **Gömme Parça Kataloğu (Einbauteilekatalog / Fixture Catalog)** içinde gömme parçayı seçin. **Kayıt (Erfassung / Logging)** sekmesinde **Liste metni (List text)** alanının yanındaki **...** düğmesine tıklayın; açılan **Formül değişkenleri (Variables for formulas)** listesinin altındaki düğmeyle Formül Düzenleyiciyi açın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9609_0EM67000007oVXA_d45f9a51.png",
+        "caption": "Fixture Catalog, Logging sekmesi: List text alanındaki ... düğmesi ve Variables for formulas listesinin altındaki formül düzenleyici düğmesi"
+      },
+      {
+        "type": "text",
+        "text": "**Adım 2:** **Fonksiyon (Function)** listesini açın ve **PARENTPRECAST** girişine çift tıklayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9609_0EM67000007oVXZ_26b7bcfc.png",
+        "caption": "Formula editor: Function düğmesi (1) ve listenin sonundaki PARENTPRECAST"
+      },
+      {
+        "type": "text",
+        "text": "**Adım 3:** **Nitelik (Attribute)** düğmesiyle değerlendirmek istediğiniz niteliği seçin. Örnekte arama alanına \"thic\" yazılıp **Slab thickness** (döşeme kalınlığı) seçiliyor. Bu noktada formülde yalnız bir açık parantez bulunmalıdır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9609_0EM67000007oVY3_1236f69c.png",
+        "caption": "Formula editor: PARENTPRECAST( yazılı, Attribute (2) listesinde Slab thickness seçimi; yalnız bir açık parantez notu"
+      },
+      {
+        "type": "text",
+        "text": "**Adım 4:** Formülü bir kapanış paranteziyle kapatıp **OK** ile onaylayın, ardından liste metni satırını onay işaretiyle kabul edin. Liste metni artık **Elektrodosen<!PARENTPRECAST(@36040@)!>** biçimini alır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9609_0EM67000007oVYX_9b42a7dd.png",
+        "caption": "Formula editor: PARENTPRECAST(@Slab thickness~@) kapatıldı (@36040@); OK ve onay işaretiyle liste metnine aktarılıyor"
+      },
+      {
+        "type": "text",
+        "text": "Liste metnine **yalnız bir** formül ekleyebilirsiniz ve bu formül **<!** ile **!>** özel karakterleri arasında durur."
+      },
+      {
+        "type": "text",
+        "text": "Bunun değeri şudur: gömme parçanın liste metnine, gömme parçanın dışından gelen bilgiyi ekleyebilirsiniz. Bu bir proje bilgisi ya da prekast eleman bilgisi olabilir. Projenin ALLPLAN niteliklerini doğrudan ifade olarak kullanabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "Prekast eleman bilgisi göstermek istediğinizde ise **PARENTPRECAST()** komutu gerekir. Gömme parça prekast elemanın alt nesnesidir; niteliği doğrudan kullanamazsınız, önce üst (parent) prekast elemanı bulmanız gerekir."
+      },
+      {
+        "type": "text",
+        "text": "**Örnek:** Bir döşemenin kalınlığını gömme parçanın liste metnine eklemek istiyorsunuz. Formülü doğrudan nitelikle, **<!@36040@!>** olarak yazarsanız çalışmaz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9609_0EM67000007oVYr_1f0f895b.png",
+        "caption": "List text: Elektrodosen<!@36040@!>, PARENTPRECAST olmadan yazılmış ve çalışmayan formül"
+      },
+      {
+        "type": "text",
+        "text": "Bunun yerine üst prekast elemanı kullanın: **<!PARENTPRECAST(@36040@)*100!>cm**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9609_0EM67000007oVYw_59fcfc19.png",
+        "caption": "List text: Elektrodosen<!PARENTPRECAST(@36040@)*100!>cm, çalışan formül"
+      },
+      {
+        "type": "text",
+        "text": "Gördüğünüz gibi formülle değeri metreden santimetreye de çevirebilirsiniz: değeri 100 ile çarpar, ifadenin arkasına **cm** birimini yazarsınız."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9609_0EM67000007oVYc_2219a607.png",
+        "caption": "Fixture Catalog: List text alanında vurgulanan *100!>cm eki, çıktı santimetre (output in cm)"
+      }
+    ]
   }
 }

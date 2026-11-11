@@ -76,20 +76,86 @@
       },
       {
         "type": "text",
-        "text": "DIN 277-1:2016 standardına göre taban alanları ve mahal hacimleri belirlenir. Alan türleri: BGF (Brüt Taban Alanı), NRF (Net Mahal Alanı), NUF (Kullanım Alanı), TF (Teknik Alan), VF (Sirkülasyon Alanı); hacimler ise BRI (Brüt Hacim) ve NRI (Net Mahal Hacmi) olarak ayrılır."
+        "text": "Bu dersteki Mahal (Raum) ve Kat (Geschoss) elemanlarıyla, yapım süreci için gereken taban alanlarını ve mahal hacimlerini DIN 277-1:2016-01'e göre belirlersiniz. DIN 277-1 değerlerinin yanında elemanlara başka bilgiler de ekleyip metrajını alabilirsiniz; doğru DIN değerleri için bazı girişler ek bilgileri zorunlu kılar."
       },
       {
         "type": "text",
-        "text": "Alanları ve hacimleri Kat (Geschoss) ve Mahal (Raum) yapı elemanlarıyla modellersiniz; sayısal çıktıyı Raporlar (Reports) üzerinden alırsınız."
+        "text": "**Temel bilgiler:** Yapının taban alanları ve mahal hacimleri **Kat (Geschoss)** ve **Mahal (Raum)** elemanlarıyla modellenir. Tekil elemanları doğrudan etiketler (örneğin **Mahal Etiketi (Raumbeschriftung)**) ve gruplarda birleştirirsiniz (kullanım birimleri için **Mahal Grubu (Raumgruppe)**, kullanım ilişkileri için **Kat Grupları (Geschossgruppen)**). Anlaşılır çıktıyı çeşitli **Raporlar (Reports)** üzerinden alırsınız. DIN277-1:2016-01'e yeni eklenen arsa alanları şu anda ideal biçimde modellenemez ve metrajı alınamaz."
       },
       {
         "type": "text",
-        "text": "DIN 277 değerleri için yalnızca DIN277 Nitelikleri (DIN277-Attribute) bölümündeki ayarlar değerlendirilir: Çevreleme Türü R (standart) veya S (özel); Alan Türü B (brüt alan ve hacim), M (çok katlı), U (boş hacim) veya V (kullanılmayan); Faktör genellikle 1,0 bırakılır."
+        "text": "**Fonksiyonlar:** Yapı elemanı olarak **Kat (Geschoss)**, **Mahal (Raum)** ve **Mahal, Kat Grubu (Raum-, Geschossgruppe)** kullanılır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11198_0EM7U000001TdYD_7918729c.png",
+        "caption": "Kat (Geschoss) simgesi"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11198_0EM7U000001TdYE_82944b1d.png",
+        "caption": "Mahal (Raum) simgesi"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11198_0EM7U000001TdYF_fac0d1a4.png",
+        "caption": "Mahal, Kat Grubu (Raum-, Geschossgruppe) simgesi"
+      },
+      {
+        "type": "text",
+        "text": "Metraj için **Konut Alanı, DIN277, Yapı Ruhsatı (Wohnfläche, DIN277, Bauantrag)** ve **Raporlar (Reports)** fonksiyonları vardır. İlki istenen alana ait raporların alt klasörüne doğrudan erişim verir; Raporlar ile her zaman tüm raporları seçebilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11198_0EM7U000001TdYG_46a9a9d3.png",
+        "caption": "Konut Alanı, DIN277, Yapı Ruhsatı simgesi"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11198_0EM7U000001TdYH_aeb5a169.png",
+        "caption": "Raporlar (Reports) simgesi"
+      },
+      {
+        "type": "text",
+        "text": "**Taban alanları:** **BGF, Brüt Taban Alanı (Brutto-Grundfläche):** yapının tüm kat planı düzlemlerinin toplam alanı; rapor **Geschoss Brutto-Grundflächen Abmessungen.rdlc**. **KGF, Konstrüksiyon Taban Alanı (Konstruktions-Grundfläche):** BGF'nin yükselen tüm konstrüksiyonları kapsayan alt alanı; ALLPLAN'da doğrudan alınamaz, BGF'den NRF çıkarılarak bulunur. **NRF, Net Mahal Alanı (Netto-Raumfläche):** BGF'nin tüm kat planı düzlemlerindeki kullanılabilir mahallerin taban alanlarını kapsayan alt alanı, yani NUF, TF ve VF'nin toplamı; raporlar **Raum Netto-Raumflächen Abmessungen.rdlc**, **Netto-Raumflächen.rdlc** ve **Übersicht Netto-Raumflächen.rdlc**. **NUF, Kullanım Alanı (Nutzungsfläche):** NRF'nin yapının esas kullanım amacına hizmet eden kısmı. **TF, Teknik Alan (Technikfläche):** besleme amaçlı teknik tesisatlar için ayrılan kısmı. **VF, Sirkülasyon Alanı (Verkehrsfläche):** yatay ve düşey sirkülasyon için ayrılan kısmı. NUF, TF ve VF için NRF ile aynı raporlar kullanılır."
+      },
+      {
+        "type": "text",
+        "text": "**Mahal hacimleri:** **BRI, Brüt Mahal Hacmi (Brutto-Rauminhalt):** yapının toplam hacmi; rapor **Geschoss Brutto-Rauminhalte Abmessungen.rdlc**. **KRI, Konstrüksiyon Mahal Hacmi (Konstruktions-Rauminhalt):** BRI'nin konstrüksiyon hacmini içeren kısmı; doğrudan alınamaz, BRI'den NRI çıkarılarak bulunur. **NRI, Net Mahal Hacmi (Netto-Rauminhalt):** BRI'nin tüm kullanılabilir mahalleri kapsayan kısmı; rapor **Raum Netto-Rauminhalt Abmessungen.rdlc**."
+      },
+      {
+        "type": "text",
+        "text": "**Elemanların temel ayarları:** Her iki elemanda da Ad (Bezeichnung) ve Fonksiyon (Funktion) gibi niteliklerin (raporlarda görünür) yanında metraj ayarlarını yaparsınız. Temel kural: DIN277'ye göre alan ve hacim atamasında **yalnız** **DIN277 Nitelikleri (DIN277-Attribute)** bölümündeki ayarlar değerlendirilir; diğer ayarlar alternatif metrajlar içindir."
+      },
+      {
+        "type": "text",
+        "text": "**Kat (Geschoss):** **DIN277, BauNVO** sekmesinde **DIN277 Nitelikleri** bölümü. **Çevreleme Türü (Umschließungsart)**, yani mahal çevrelemesi: standardın 5.6 bölümüne göre alan ve hacimler mahal çevrelemesine göre ayrı belirlenir; **R** standart durum (Regelfall), **S** özel durum (Sonderfall)."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11198_0EM7U000001TdYS_cd3234a5.png",
-        "caption": "DIN 277-1:2016'ya göre taban alanı ve mahal hacmi türleri."
+        "caption": "Kat diyaloğu, DIN277,BauNVO sekmesi: DIN277 Nitelikleri (Umschließungsart R, Flächenart B, Faktor 1.000)"
+      },
+      {
+        "type": "text",
+        "text": "**Alan Türü DIN277 (Flächenart DIN277)** katta şu değerleri alır: **B** brüt taban alanı ve brüt mahal hacmi (BGF ve BRI); **M** çok katlı BRI, BGF yok; **U** boş hacim (Leerraum), ne BGF ne BRI; **V** kullanılmayan, boş hacim değil. **Faktör DIN277 (Faktor DIN277)** alan ve hacim belirlemede hesaba katılır; standart bitmiş yüzeyleri şart koştuğu için (DIN277-1:2016-01, 6.2.2) genellikle 1.0 bırakılır."
+      },
+      {
+        "type": "text",
+        "text": "Çevreleme Türü standarda göre sınıflandırmaya hizmet eder; Alan Türü DIN277 ise objenin metrajının yapılıp yapılmayacağını ve nasıl yapılacağını belirler. **B:** obje DIN277 çıktılarında her zaman hesaba katılır (standart durum). **M:** obje mahal hacmi için kullanılır, taban alanlarında alan bilgisi olmadan listelenir (örneğin giriş hollerinin üstündeki galeri boşlukları). **U:** obje kısmen listelenir ve LGF (galeri boşluğu taban alanı, Luftgrundfläche) olarak adlandırılır; örneğin yalnız ince yapı yüzeyleri için gereklidir. **V:** obje DIN 277 çıktısında dikkate alınmaz; yine örneğin yalnız ince yapı yüzeyleri için gereklidir."
+      },
+      {
+        "type": "text",
+        "text": "**Mahal (Raum):** **DIN277, Wohnfl.** sekmesinde **DIN277 Nitelikleri** bölümü. **Çevreleme Türü** katla aynıdır (R ya da S). **Kullanım Türü (Nutzungsart):** **NUF** kullanım alanı (doğrudan NUF ana grubuyla ya da NUF 1 ile NUF 7 arasındaki yedi alt grupla atanır), **TF** teknik alan, **VF** sirkülasyon alanı."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11198_0EM7U000001TdYT_a9e99019.png",
+        "caption": "Mahal diyaloğu, DIN277,Wohnfl. sekmesi: Umschließungsart R, Nutzungsart NUF, Flächenart N"
+      },
+      {
+        "type": "text",
+        "text": "**Alan Türü DIN277** mahalde şu değerleri alır: **N** net mahal alanı ve net mahal hacmi (NRF ve NRI), normal durumda çıktılarda her zaman hesaba katılır; **M** çok katlı NRI, NRF yok, mahal hacmi için kullanılır ve taban alanlarında alan bilgisi olmadan listelenir (örneğin galeri boşlukları); **L** boş hacim (Leerraum), ne NGF ne NRI, kısmen listelenir ve LGF olarak adlandırılır, örneğin yalnız ince yapı yüzeyleri için gereklidir. **Faktör DIN277** burada da genellikle 1.0 bırakılır. Daha fazla bilgiyi ilgili fonksiyonların Yardım'ında (F1) bulursunuz."
       }
     ]
   },

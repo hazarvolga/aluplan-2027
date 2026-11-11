@@ -145,5 +145,99 @@
     "task": "Planda dairesel bir kolon oluşturun, yan görünümünü türetin, 3B donatı modunu etkinleştirin ve Circular reinforcement ile bir helis oluşturmayı deneyin.",
     "expected": "Helisin 3B model olarak oluşup kolonun görünümüne entegre olması; sarım yüksekliği ve pas payını palette ayarlayabilmeniz.",
     "hint": "Helisi 2B çubuk olarak çizmeye çalışmayın; önce 2D/3D reinforcement mode kutusunu işaretleyin."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Yeni 3B Helis Donatıyı (Allplan 2009'dan) 2B Donatıda Oluşturma"
+      },
+      {
+        "type": "text",
+        "text": "Dairesel kolonlardaki helis (spiral) sargı düz köşeli bir çubuk değildir. ALLPLAN 2009'dan beri bulunan 3B helis donatı, herhangi bir kontur boyunca farklı adım yükseklikleriyle oluşturulabilir. Helis 2B çubuk olarak oluşturulamaz; ama bu 3B donatıyı 2B donatının içine şöyle entegre edersiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Adım 1:** Planda dairesel bir kolon oluşturun: **Oluştur -> Mimari -> Temel: Duvarlar, Boşluklar, Yapı Elemanları (Create -> Architecture -> Base: Walls, Openings, Components)**."
+      },
+      {
+        "type": "text",
+        "text": "**Adım 2:** Kolonun yan görünüşünü ya da kesitini oluşturun: **Oluştur -> Görünüşler, Kesitler, Detaylar -> Görünüşler ve Kesitler -> Görünüş Oluştur / Kesit Oluştur (Generate view / Generate section)**."
+      },
+      {
+        "type": "text",
+        "text": "**Adım 3:** 3B donatı modunu etkinleştirin: **Ekstralar -> Seçenekler -> Donatı -> Genel (Tools -> Options -> Reinforcement -> General)** altında **2B/3B donatı modu (2D/3D reinforcement mode)** için **3B modelle donat (Reinforce with 3D model)** seçeneğini işaretleyin."
+      },
+      {
+        "type": "text",
+        "text": "**Adım 4:** **Oluştur -> Mühendislik -> Çubuk Donatı -> Dairesel Donatı (Circular reinforcement)** fonksiyonunu başlatın ve helis donatıyı seçin."
+      },
+      {
+        "type": "text",
+        "text": "**Adım 5:** Palette adım yüksekliği, beton örtüsü gibi parametreleri ayarlayın ve helisi oluşturmak için istemleri izleyin: önce dönme ekseni (Rotationsachse) ve onun plandaki konumu, ardından helisin izleyeceği kontur (Kontur) gösterilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11282_0EM7U000001Teur_c8bc01ff.png",
+        "caption": "Helis girişi: kolon kesitinde dönme ekseni (Rotationsachse), plandaki eksen konumu ve kontur"
+      },
+      {
+        "type": "text",
+        "text": "Sonuçta helis, kolonun görünüşünde kontur boyunca sargı olarak oluşur."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11282_0EM7U000001Teus_0d563abb.png",
+        "caption": "Kolon görünüşünde oluşturulmuş helis donatı (ok ile gösterilen)"
+      },
+      {
+        "type": "heading",
+        "text": "ISO 3766'ya Göre Açınım Boyutlu Donatı Oluşturma"
+      },
+      {
+        "type": "text",
+        "text": "Dik açıyla bükülmemiş bir çubukta açınımdaki (Auszug) kol uzunlukları ve büküm ölçüleri nasıl belirlenir? Kol uzunlukları ve ölçü çizgileri **ISO 3766 (03.2004)**'e göre hesaplanır; ISO 3766, önceki sürüm olan ISO 4066'nın yerini almıştır. Küçük farklar (birinci görselde en fazla 2 mm) yuvarlama toleranslarından kaynaklanır."
+      },
+      {
+        "type": "text",
+        "text": "Önce dik açılı olmayan kolların ISO 3766'ya göre, gerçek çubuk gösterimiyle ölçülendirilmesine bakın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/10864_0EM7U000001Te59_e98d7d43.png",
+        "caption": "ISO 3766'ya göre dik açılı olmayan kolların gerçek çubuk gösterimiyle ölçülendirilmesi"
+      },
+      {
+        "type": "text",
+        "text": "Aynı çubuk planda açınım olarak çubuk ekseni üzerinden gösterilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/10864_0EM7U000001Te5A_af8ec9ad.png",
+        "caption": "Plandaki açınım gösterimi (çubuk ekseni): 382, 524, 448, 404, 392"
+      },
+      {
+        "type": "text",
+        "text": "Bindirmeli (gekröpft, cranked) bir çubukta da ISO 3766'ya göre gerçek çubuk gösterimi kullanılır; bindirme ölçüsü düşey kolların iki dış kenarından alınır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/10864_0EM7U000001Te5B_663aadc1.png",
+        "caption": "Bindirmeli çubuğun ISO 3766'ya göre gösterimi: bindirme ölçüsü dış kenarlardan"
+      },
+      {
+        "type": "text",
+        "text": "Bindirmeli çubuk da planda açınım olarak çubuk ekseni üzerinden gösterilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/10864_0EM7U000001Te5C_3566f624.png",
+        "caption": "Bindirmeli çubuğun plandaki açınım gösterimi (çubuk ekseni)"
+      },
+      {
+        "type": "text",
+        "text": "**Öneri:** Yanlış anlamaları önlemek için bu bilgiyi büküm damgasına (Biegestempel, bending stamp) eklemenizi öneririz."
+      }
+    ]
   }
 }

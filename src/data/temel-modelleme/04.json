@@ -157,16 +157,12 @@
   "deepDive": {
     "blocks": [
       {
-        "type": "text",
-        "text": "Bir binanın brüt taban alanını (BGF) ve brüt hacmini (BRI) **DIN 277-1:2016** standardına uygun hesaplamak için katları doğru bölümlemeniz gerekir. Allplan'da bunu **Kat (Geschoss)** yapı elemanlarıyla yaparsınız: her kat planı düzlemi için ayrı bir Kat elemanı girersiniz, böylece standardın \"kat bazında ayrı hesaplama\" şartını karşılarsınız."
-      },
-      {
         "type": "heading",
-        "text": "Hassasiyet, proje aşamasına bağlıdır"
+        "text": "Proje Navigasyonu"
       },
       {
         "type": "text",
-        "text": "Standart, ondalık hassasiyetini kesin sabitlemez; hassasiyeti proje aşamasına göre seçersiniz. İhtiyaç ve ön projede ondalık kullanmazsınız (örneğin 206 m², 1.203 m³), avan projede bir ondalık (206,4 m²), uygulama ve ruhsat projesinde iki ondalık yeterlidir (206,44 m²; 1.202,78 m³). Çıktıda hassasiyeti rapor alırken **Seçenekler (Optionen)** penceresinden ayarlarsınız."
+        "text": "Bir Bimplus projesinin içeriğinde **Proje Gezgini (Projekt Navigator)** ile gezinirsiniz."
       },
       {
         "type": "heading",
@@ -174,62 +170,91 @@
       },
       {
         "type": "text",
-        "text": "**Örnek bina: iki katlı bir yapı.** Aşağıdaki örnek; bodrumsuz, kullanılmayan çatı katlı iki katlı bir binadır ve giriş bölgesinde iki katlı bir galeri boşluğu (Luftraum) vardır. Her katı, duvarların bulunduğu çizim dosyasında bir **Kat** elemanı olarak girersiniz."
+        "text": "Kat (Geschoss) elemanlarının alt ve üst kenarlarını düzlemlere nasıl bağladığınız, DIN 277-1:2016-01'e göre **brüt hacmin (BRI, Brutto-Rauminhalt)** doğru çıkıp çıkmayacağını belirler. Bu derste makalenin yükseklik kısmını ve örnek binayı görüyorsunuz; katların bina strüktüründe bölümlenmesini, hassasiyeti ve taban alanı kurallarını Kat Kopyalama ve Düzenleme dersinde bulacaksınız."
+      },
+      {
+        "type": "text",
+        "text": "**Hacimler, üst ve alt sınır:** Standardın 7.1.2 Hesaplama Kuralları'na göre brüt hacim, belirlenen **brüt taban alanları (BGF, Brutto-Grundfläche)** ve her birine ait yükseklik üzerinden hesaplanır. Yükseklik, kat planı düzlemlerinin döşeme kaplaması üst yüzeyleri arasındaki, çatılarda ise çatı kaplaması üst yüzeyine kadarki düşey mesafedir. En alt katta, temel plağı olarak teşkil edilmemişse taban döşemesinin alt kenarı esas alınır. Yatay olmayan bitişlerde hacim geometrik formüllerle bulunur."
+      },
+      {
+        "type": "text",
+        "text": "ALLPLAN'da bunu şöyle uygularsınız: normal katlarda alt kenarı alt düzleme sıfır mesafeyle, üst kenarı üst düzleme döşeme kalınlığı kadar mesafeyle bağlarsınız. En alt katta alt kenarı alt düzleme negatif mesafeyle (taban döşemesinin kalınlığı kadar) bağlarsınız. En üst katta üst kenarı üst düzleme, konstrüksiyon dahil tüm çatı katmanlarının kalınlığı kadar mesafeyle bağlarsınız."
+      },
+      {
+        "type": "text",
+        "text": "**Örnek bina:** Bodrumsuz ve kullanılmayan bir çatı katı olan iki katlı bir yapı; giriş bölgesinde iki katlı bir galeri boşluğu (Luftraum) var. Kat elemanlarını genellikle duvarların ve diğer konstrüksiyonun bulunduğu çizim dosyalarında oluşturursunuz."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11225_0EM7U000001TdPx_e26af978.png",
-        "caption": "Örnek bina: iki katlı yapı, girişte iki katlı galeri boşluğu."
+        "caption": "Örnek bina: iki katlı, bodrumsuz yapı gövdesi (3B görünüş)"
       },
       {
         "type": "text",
-        "text": "**Zemin kat: tek katlı alan.** Kat elemanını kat planının **dış kenarlarından** girin; sıvayı yapı elemanı içinde **Dış Yan Kaplamalar (Seitenbeläge außen)** ile mutlaka tanımlayın. Katın yüksekliğini, taban döşemesinin alt kenarından üstteki döşemenin üst kenarına kadar verin."
+        "text": "**Zemin kat, tek katlı alan:** Kat planındaki giriş (iki katlı kırmızı alan hariç) dış kenarları izler. Sıvayı yapı elemanının içinde **Dış Yan Kaplamalar (Seitenbeläge außen)** ile mutlaka tanımlayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11225_0EM7U000001TdPy_08a9767f.png",
+        "caption": "Zemin kat planında Kat elemanı (sarı) ve iki katlı alan (kırmızı)"
+      },
+      {
+        "type": "text",
+        "text": "Katın yüksekliği, taban döşemesinin alt kenarından katın üstündeki döşemenin üst kenarına kadar tanımlanır. Örnekte **Yükseklik (Höhe)** diyaloğunda üst kenar üst düzleme 0,20 mesafeyle, alt kenar alt düzleme -0,20 mesafeyle bağlıdır."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11225_0EM7U000001TdPz_fc43c60e.png",
-        "caption": "Zemin kat yükseklik tanımı: alt döşemenin altından üst döşemenin üstüne."
+        "caption": "Zemin kat yükseklik tanımı: üst kenar 0,20, alt kenar -0,20 mesafeyle düzlemlere bağlı"
       },
       {
         "type": "text",
-        "text": "Ayarlarda DIN 277 için önemli alanlar kırmızı çerçeveyle işaretlidir. **Çarpan (Faktor)** 0.000 girilse bile tüm yan kaplamalar kendi kalınlıklarıyla hesaba katılır; kat yüksekliği ise yalnızca brüt hacmi etkiler."
+        "text": "Kat diyaloğunun iki sekmesindeki ayarlar örneğin şöyledir; kırmızı çerçeveli alanlar DIN 277-1:2016-01'e göre metraj için önemlidir. **Dikkat:** **Çarpan (Faktor)** 0.000 girilse bile **tüm** yan kaplamalar kendi kalınlıklarıyla hesaba katılır. Kat yüksekliği yalnız brüt hacmi etkiler."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11225_0EM7U000001TdQ0_f055afa6.png",
-        "caption": "Kat elemanı ayarları; DIN 277 için kritik alanlar kırmızı çerçeveli."
+        "caption": "Kat diyaloğu: Geschoss ve DIN277,BauNVO sekmeleri, önemli alanlar kırmızı çerçeveli"
       },
       {
         "type": "text",
-        "text": "**İki katlı alan (galeri boşluğu).** Kırmızı alan iki katlıdır ve iki şekilde girilebilir: ya tam yüksekliğiyle tek elemanda, ya da zemin kat ile normal kat olarak ikiye bölerek. İkiye bölerseniz üst kısım için **Alan Tipi (Flächenart) DIN277** değerini **M = çok katlı BRI, BGF yok** seçin. Ayırma çizgisini, sıva kalınlığı kadar mesafeyle duvarın önüne yerleştirin; böylece her iki alanın alanı ve hacmi doğru çıkar."
+        "text": "**Zemin kat, iki katlı alan:** Kırmızı boyalı alan iki katlıdır ve iki yolla girilebilir: ya alanın tam yüksekliğiyle tek bir elemanda, ya da kat bazında bir zemin kat ve bir normal kat elemanına bölünerek. İkiye bölerseniz üst kısım için **Alan Tipi DIN277 (Flächenart DIN277)** değerini **M = çok katlı BRI, BGF yok (M=mehrgeschossiger BRI, keine BGF)** yapın. Kat planında doğru geometri için iç taraftaki sıvayı hesaba katın: tek katlı eleman ile iki katlı alan arasındaki ayırma çizgisini duvarın önüne, sıva kalınlığı kadar mesafeyle yerleştirin. Diğer özellikleri geri kalan alandaki gibi seçin."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11225_0EM7U000001TdQ1_afb7d5cb.png",
-        "caption": "İki katlı alanın ayrımı: ayırma çizgisi duvarın önünde, sıva kalınlığı kadar içeride."
+        "caption": "Ayırma çizgisi duvarın önünde, sıva kalınlığı kadar içeride (mavi ve kırmızı ok)"
       },
       {
         "type": "text",
-        "text": "**Normal kat ve çatı katı.** Normal katın geometrisi zemin katı izler; yüksekliğini döşeme altından üst döşemenin üstüne tanımlarsınız. En üst (çatı) katta üst kenar, çatının veya çatı kaplamasının üstüdür. Kullanılmayan çatı arası için **Alan Tipi DIN277 = M** seçin; çünkü bu alan hacme (BRI) girer ama brüt taban alanına (BGF) girmez."
+        "text": "**Normal kat, tek katlı alan:** Normal kattaki kat planı geometrisi zemin katı izler; bu yükseklik tanımı normal katlar için standart durumdur. Çok katlı alanları nasıl ele aldığınıza göre bunları yapı elemanı olarak oluşturur ya da boş bırakırsınız. Katın yüksekliği döşemenin alt kenarından katın üstündeki döşemenin üst kenarına kadar tanımlanır; örnekte alt kenar alt düzleme sıfır mesafeyle bağlıdır."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11225_0EM7U000001TdQ2_50f4a5d2.png",
-        "caption": "Normal kat yükseklik tanımı."
+        "caption": "Normal kat yükseklik tanımı: üst kenar 0,20, alt kenar 0,00 mesafeyle düzlemlere bağlı"
+      },
+      {
+        "type": "text",
+        "text": "**Çatı katı:** En üst katı değiştirilmiş bir üst kenarla oluşturursunuz; hacmin üst kenarı çatının ya da çatı kaplamasının üst kenarıdır. Parapetli (Attika) teras çatılarda parapetin üst kenarı belirleyicidir. Eğimli çatılarda mesafeyi yüzeye dik seçin; böylece hesap yapmadan çatı örtüsüyle aynı hizaya gelirsiniz. Burada **Alan Tipi DIN277** için **M** girin: bu alan BRI olarak sayılır, ama kullanılmayan çatı arası olduğu için brüt taban alanı (BGF) yoktur."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11225_0EM7U000001TdQ3_a628ec51.png",
-        "caption": "Çatı katı: üst kenar çatı kaplamasının üstünde, Alan Tipi M."
+        "caption": "Çatı katı: üst kenar çatı düzlemine 0,25 dik mesafeyle bağlı"
       },
       {
         "type": "text",
-        "text": "**Etiketleme.** Oluşturduğunuz Kat elemanlarının her birini ayrı ayrı etiketleyebilirsiniz. 1:100 ölçeğindeki etiket stili, DIN 277'ye göre ilgili alan ve hacim bilgilerini gösterir."
+        "text": "**Balkon:** Balkonlar, çevreleme türü **S - Özel Durum (S - Sonderfall)** olan ayrı bir kat elemanı alır. Alt kenar kaba döşemenin üst kenarıdır. Balkonun üstünde başka bir balkon varsa üst kenar bir sonraki kaba döşemenin üst kenarıdır; yoksa sınırlayan konstrüksiyonun (korkuluk, parapet, çatı parapeti) üst kenarı esas alınır. Kısmi örtüşmelerde elemanı bölün ya da serbest düzlemlerle bir yükseklik kademesi oluşturun."
+      },
+      {
+        "type": "text",
+        "text": "**Etiket stilleri:** Oluşturulan beş elemanın her birini ayrı ayrı etiketleyebilirsiniz. Kullanılan etiket stili 1:100 ölçeğinde DIN 277-1:2016-01'e göre ilgili bilgileri gösterir. Alan tipi ayarı etiket stilinde görünmez, çünkü yalnız sonucu önemlidir."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11225_0EM7U000001TdQ4_3a82eb17.png",
-        "caption": "DIN 277 etiket stiliyle sonuç."
+        "caption": "Beş Kat elemanının etiketleri: taban alanı, kat alanı, çevreleme türü, BRI ve BGF"
       },
       {
         "type": "heading",
@@ -237,16 +262,72 @@
       },
       {
         "type": "text",
-        "text": "Kat (Geschoss) elemanı iki işe yarar: bir yandan DIN 277'ye göre brüt taban alanı ile brüt hacmin ve imar yönetmeliğine (BauNVO) göre taban alanlarının hesaplanacağı bölgeleri tanımlar; diğer yandan dış sıva gibi cephe ince yapı imalatları için yan yüzeyli bir taşıyıcı bileşen görevi görür."
+        "text": "Bu derste oluşturduğunuz Kat (Geschoss) elemanlarını etiketlemek ya da raporlarda değerlendirmek için hangi nitelikleri kullanabilirsiniz, DIN277'ye göre brüt taban alanı ile brüt hacmi nasıl etiketlersiniz? Katlar iki amaca hizmet eder: DIN277 alan hesabına göre brüt taban alanı ile brüt hacmin ve Alman İmar Kullanım Yönetmeliği'ne (Baunutzungsverordnung, BauNVO) göre taban alanlarının belirleneceği bölgeleri tanımlamak; ve yan yüzeyli cephelerde (örneğin dış sıva) standart ince yapı imalatları için taşıyıcı bileşen olmak."
       },
       {
         "type": "text",
-        "text": "Katları paftada etiketlemek veya raporlarda değerlendirmek için niteliklerini kullanırsınız. En sık kullanılanlar: **Kat Kısa Adı (Geschoss Kurzbezeichnung)** (örneğin zemin kat için EG, normal kat için OG gibi kısa kod), **Bezeichnung** (kat adı) ve DIN 277'ye göre brüt taban alanı ile brüt hacim değerleridir. Bu niteliklere bağlı etiket stilleriyle her katı standart biçimde etiketlersiniz."
+        "text": "**Metin nitelikleri:** **Ortscode_Geschossbezeichnung (246)** en fazla 32 karakterlik (A32) metindir; Kat sekmesinde Kat Nitelikleri bölümündeki **Kat Kısa Adı (Geschoss Kurzbezeichnung)** alanından girilir, genellikle EG, OG ya da düzlem için bir numara yazılır. **Bezeichnung (507)** A32 metindir ve **Ad/Nitelikler (Bezeichnung/Qualitäten)** alanından girilir; Katalog ataması altında seçim kataloğu yerine ++ seçilirse art arda oluşturulan katlarda numara otomatik artar. **Funktion (506)** A80 metindir, **Fonksiyon (Funktion)** alanından girilir. **Text1-Text5 (501-505)** A80 serbest metinlerdir ve Metinler (Texte) altından girilir. Bunların yanında Tadilat Kategorisi (Umbaukategorie) gibi nitelikleri Ad/Nitelikler ya da kullanıcı nitelikleri (Benutzerattribute) üzerinden kullanabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Uzunluk ve kalınlık:** **Länge (220)** ve **Dicke (221)** katta değer vermez. **Länge_absolut (198)** ve **Dicke_absolut (199)** ise Min-Max Kutusu denen sınır kutusunun boyutlarını verir. Kutu, ilk poligon noktasından başlayarak izleyen çizgi (eskizdeki sarı çizgi) yönünde kurulur ve mahali çevreleyen en küçük dikdörtgendir. Örnekte Länge_absolut (1,66) referans çizgisi yönündeki, Dicke_absolut (2,62) ona dik yöndeki uzanımı verir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11382_0EM7U000001Td7s_a1cf2a14.png",
+        "caption": "Min-Max Kutusu: 1. noktadan başlayan referans çizgisi (sarı), 1,66 ve 2,62 uzanımları"
+      },
+      {
+        "type": "text",
+        "text": "**Yükseklik:** **Höhe (222)** katın ortalama yüksekliğini verir; alt ve üst sınırlar (örneğin düzlemler) değerlendirilir. Benzer nitelik **Höhe_absolut (204)** katta boştur ve değer vermez."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11382_0EM7U000001Td7t_2cf00294.png",
+        "caption": "Eğimli üst sınırlı katta ortalama yükseklik (Höhe 2,96) ve en yüksek noktaya kadar ölçü (3,61)"
+      },
+      {
+        "type": "text",
+        "text": "**Alanlar ve hacim:** **Umfang (228)** kat poligonunun toplam uzunluğudur; bitişik katlar ya da diğer elemanlar düşülmez. **Grundfläche (224)** ve **Fläche (229)** aynı değeri, sınır poligonunun belirlediği yatay alanı verir. **Bodenfläche (293)** alt sınırlama yüzeyinin, **Deckenfläche (294)** üst sınırlama yüzeyinin gerçek büyüklüğüdür; bunları taban alanıyla karşılaştırarak alt ya da üst kotun eğimli veya serbest biçimli olup olmadığını anlarsınız. **Seitenfläche (295)** düşey yüzeyleri verir; mahallerin aksine diğer katlara doğrudan bitişik yan yüzeyler düşülmez. **Faktor (230)** Mahal sekmesindeki çarpandır ve çevre, alan, zemin, tavan ve yan yüzey metrajlarına uygulanır; genellikle 1.00 kalmalıdır ve DIN277 hesaplarına **hiçbir** etkisi yoktur. **Volumen (223)** ince yapı yüzeylerini dikkate almadan katın kaba hacmini verir. **OK (98)** ve **Oberkante (113)** katın 0.00'a göre ortalama üst kotunu, **UK (97)** ve **Unterkante (112)** ortalama alt kotunu verir. Bu nitelikler katın kendi (kaba yapı) geometrisini değerlendirir; ince yapı yüzeyleri hiçbir durumda dikkate alınmaz."
+      },
+      {
+        "type": "text",
+        "text": "**DIN277 nitelikleri:** **Raumumschließung (231)** DIN277-1 2016-01'e göre çevreleme türünü (R ya da S) taşır. **Flächenart_DIN277 (232)** alanın ya da hacmin nasıl değerlendirileceğini belirler: **B** brüt taban alanı ve brüt hacim, **M** kendi brüt taban alanı olmayan çok katlı brüt hacim, **U** ne BGF ne BRI veren boşluk, **V** tamamen kullanılmayan bölge. Normal katlar B, galeri boşlukları (Lufträume) M, yalnız metraj için gerekli olup DIN277'de sayılmayacak erişilemeyen katlar ya da kat bölgeleri U veya V ile tanımlanır. **Faktor_DIN277 (266)** yalnız DIN277 brüt taban alanı ve brüt hacimde dikkate alınır; standartta çarpan olmadığı için 1.00 kalmalıdır."
+      },
+      {
+        "type": "text",
+        "text": "**Grundfläche_DIN277 (93)** katta brüt taban alanını verir. İnce yapı yüzeyleri şöyle hesaba katılır: kat alt kotuna mesafesiz tanımlanmışsa Kat Yan Yüzeyleri (Seitenflächen Geschoss), mahalle aynı alt kota sahipse (Özel) Yan Yüzeyler ((Sonder-) Seitenflächen). Böylece standardın bitmiş döşeme kaplaması üst kotundaki bitmiş ölçüler şartı yaklaşık olarak karşılanır; hesap bitmiş kaplama kotu yerine kaba döşeme kotu üzerinden yapılır. **Rauminhalt_DIN277 (86)** katta brüt hacmi verir ve standartta tanımlandığı gibi esas olarak brüt taban alanını kullanır."
+      },
+      {
+        "type": "text",
+        "text": "**BauNVO nitelikleri:** **BauNVO_Anrechnung_auf_GR (234)** arayüzde bir onay kutusudur: işaretli değilse 0, işaretliyse 1 değerini alır. İlgili raporlarda seçilen yaklaşıma göre kat, bina taban alanına (Gebäudegrundfläche) dahil edilir ya da edilmez."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11382_0EM7U000001Td7u_06e84398.png",
+        "caption": "Bina taban alanına dahil etme (Anrechnung auf Gebäudegrundfläche) onay kutusu: 0 ya da 1"
+      },
+      {
+        "type": "text",
+        "text": "**BauNVO_Anrechnung_auf_GF (250)** bir seçim alanıdır: **Kat alanına dahil edilmez (Keine Anrechnung auf Geschossfläche)** 0, **Tam kat olmayan kattaki yaşam mahallinin kat alanına dahil edilmesi (Aufenthaltsraum in Nicht-Vollgeschoss mit Anrechnung auf GF)** 1, **Kat alanına tam dahil edilme (Volle Anrechnung auf Geschossfläche (Vollgeschoss))** 2 değerini verir. İlgili raporlarda seçilen yaklaşıma göre kat, toplam kat alanına dahil edilir ya da edilmez."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11382_0EM7U000001Td7v_05354bd9.png",
+        "caption": "Kat alanına dahil etme seçenekleri ve değerleri: 2, 1, 0"
+      },
+      {
+        "type": "text",
+        "text": "**Standart etiket stili:** **Standart (Standard)** dizininde, **Dosya 1 Mahal Etiketi (Raumstempel)** içinde Nr. 10 **Kat (Geschoss)** etiket stili bulunur. Taban alanı, kat alanı ve BRI/BGF göstergeleri ilgili ayarların sonuçlarını gösterir."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11382_0EM7U000001Td7w_cf0339a3.png",
-        "caption": "Kat elemanının nitelik ve geometri değerlerinin genel görünümü."
+        "caption": "Etiket stili seçimi: Standart, 1 Raumstempel, 10 Geschoss önizlemesi"
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Mahallerin eğimli alt kotlarında DIN277 alanının hesaplanmasında tutarsız sonuçlar oluşabilir."
       },
       {
         "type": "heading",
@@ -254,53 +335,44 @@
       },
       {
         "type": "text",
-        "text": "Çatı katında, çatı düzlemine (çatı yüzeyine, Dachlandschaft) temiz biçimde uyan bir ara döşeme (Decke) oluşturmak için, önce tüm kat planının üzerine bir döşeme çizin. Kot bağlantısını ve doğru yayılım alanını sonraki adımlarda düzenleyeceksiniz."
+        "text": "Çatı katında, çatı düzlemine ya da çatı yüzeyine (Dachlandschaft) temiz uyan bir ara döşeme oluşturacaksınız. Bu derste işin yükseklik kısmını yapıyorsunuz: döşemenin kot bağlantısını düzlemlere göre ayarlamak. Döşemeyi çizip yayılım alanını çatı eğimine göre kesmeyi Döşeme Oluşturma dersinde, animasyonda görünmeyen döşemenin düzeltilmesini Kat Kopyalama ve Düzenleme dersinde göreceksiniz."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiQ_3445deeb.png",
-        "caption": "Hedef: çatı eğimine uyan ara döşeme."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiR_9caad228.png",
-        "caption": "Döşemeyi önce tüm kat planının üzerine çizin."
+        "caption": "Hedef: kesitte çatı eğimine uyan ara döşeme (kırmızı ok)"
       },
       {
         "type": "text",
-        "text": "Döşemenin doğru kot bağlantısını ayarlamak için döşemeye sol çift tıklayıp **Yükseklik (Höhe)** yolunu izleyin ve şu değerleri girin: (1) çatı düzleminin alt kotu ile döşemenin alt kotu arasındaki mesafe; (2) istediğiniz döşeme kalınlığı; (3) kenar bölgesinin (döşemenin alın yüzeyinin) eğimli çatı düzlemine hangi mesafeyle uyacağı. Bu örnekte bu mesafe 0,00'dır ve üstteki eğimli düzleme 0,00 mesafeyle birleşen eğimli bir döşeme bitişi oluşur."
+        "text": "Döşeme önce tüm kat planının üzerine çizilir. Doğru kot bağlantısını vermek için döşemeye sol çift tıklayın ve **Yükseklik (Höhe)** yolunu izleyin. Diyalogda üç değer önemlidir. **1:** Alt kenar mesafesi (Abstand): alt düzlem ile döşemenin alt kotu arasındaki mesafe, örnekte 2,50. **2:** **Bileşen alt kenarından en büyük yükseklik (maximale Höhe ab Bauteilunterkante):** istediğiniz döşeme kalınlığı, örnekte 0,20. **3:** Üst kenar mesafesi: döşemenin kenar bölgesinin (alın yüzeyinin) eğimli çatı düzlemine hangi mesafeyle uyacağı. Örnekte bu mesafe 0,00'dır; üstteki eğimli düzleme sıfır mesafeyle birleşen eğimli bir döşeme bitişi oluşur."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiS_c1a4a6cb.png",
+        "caption": "Yükseklik diyaloğu: 1 alt kenar mesafesi 2,50, 2 en büyük yükseklik 0,20, 3 üst kenar mesafesi 0,00"
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiT_a37e9532.png",
-        "caption": "Yükseklik iletişim kutusunda kot değerlerinin girilmesi."
+        "caption": "Kesitte üç değerin karşılığı (1, 2, 3)"
       },
       {
         "type": "text",
-        "text": "Dikkat: Döşeme doğru kot bağlantısıyla çizim dosyasında oluştuğunda bir uyarı mesajı görünebilir. Bunun nedeni, bu ara adımda negatife doğru gelişen ve geometrik olarak mümkün olmayan bir 3B yapı elemanının üretilmesidir."
+        "text": "**Dikkat:** Döşeme bu kot bağlantısıyla çizim dosyasında oluştuğunda büyük olasılıkla bir uyarı görürsünüz: çizim dosyasındaki 3B verinin hatalı olduğu ve bunun gösterimde sonraki hatalara yol açabileceği bildirilir."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiU_c72c8b84.png",
-        "caption": "Geometrik olarak mümkün olmayan eleman uyarısı."
+        "caption": "Uyarı: Teilbild 10'daki 3B veriler hatalı"
       },
       {
         "type": "text",
-        "text": "Son adımda döşemenin yayılım alanını düzenleyin: döşeme yalnızca çatı eğimine kadar uzanmalı, ötesine geçmemelidir. Kat planı görünümünden bir kalkan duvar (alın) görünüşüne geçin ve **Düzen (Bearbeiten) -> Noktaları Değiştir (Punkte modifizieren)** komutunu seçin. Yalnızca döşemeyi güvenle değiştirebilmek için **Filtre Sihirbazı (Filter-Assistent)** araç çubuğundan **Mimari Filtre (Architekturfilter)** ile **Döşeme (Decke)** öğesini seçin. Döşemenin değiştirilecek kenar bölgesinin etrafına bir seçim penceresi çizin ve seçilen noktaları, döşeme alt kotunun eğimli çatı düzlemiyle kesiştiği noktaya kadar taşıyın. Aynı adımı diğer tarafta da tekrarlayın."
+        "text": "Mesajın nedeni, şimdilik yalnız bir ara adım kurmuş olmanızdır. Döşeme tüm kat planına yayıldığı için çatı düzleminin dışında kalan kısmı negatife doğru gelişir ve geometrik olarak mümkün olmayan bir 3B eleman oluşur. Bu kısım, Döşeme Oluşturma dersinde yayılım alanını kestiğinizde ortadan kalkar."
       },
       {
         "type": "image",
-        "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiW_71755a0a.png",
-        "caption": "Döşemenin yayılım alanının eğime göre düzenlenmesi."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiZ_7f5d3c20.png",
-        "caption": "İstenen sonuç: eğime temiz uyan ara döşeme."
-      },
-      {
-        "type": "text",
-        "text": "Not: Bazı durumlarda (örneğin girinti ve çıkıntıları olan döşemelerde), doğru kotlar ayarlandıktan sonra bile döşeme animasyonda görünmeyebilir; ancak kat planında, görünüşlerde ve izometrilerde yine de görünür. Böyle bir durumda **Değiştir (Ändern) -> Mimari (Architektur) -> Yüzey Elemanı, Mimari Yüzey, Alan Değiştir (Flächenelement, Ar-Fläche, Bereich modifizieren)** fonksiyonuyla taşan bölgeleri genişçe kesin, ardından **Noktaları Değiştir** ile döşemeyi yeniden genişletin."
+        "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiV_43e9e984.png",
+        "caption": "Döşemenin çatı düzlemi dışındaki, geometrik olarak mümkün olmayan kısmı (yeşil oklar)"
       }
     ]
   },

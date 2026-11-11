@@ -137,5 +137,61 @@
     "task": "Projenizden bir eleman seçin (ör. bir duvar veya bir mekanik eleman). EPYS_IDS'teki ilgili desene uygun bir Name verin, öznitelik eşlemesini ayarlayın, modeli IFC4.3 (ADD2) dışa aktarın ve bir IDS doğrulayıcıda EPYS_IDS ile denetleyin.",
     "expected": "Doğrulama raporunda seçtiğiniz nesnenin ilgili specification için 'pass' görünmesi; varsa fail satırlarını (yanlış ad deseni, eksik/yanlış Pset özelliği) okuyup düzeltmiş olmanız.",
     "hint": "Önce nesnenin doğru IFC sınıfına gittiğini doğrulayın; yanlış sınıf, kuralın nesnenizi hiç görmemesine yol açar. Sonra Name desenini ve istenen Pset özelliğini eşlemede tutturun."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "EPYS_IDS: Adlandırma ve özellik gereklilikleri"
+      },
+      {
+        "type": "text",
+        "text": "Ders adımlarında ad desenlerini ve Pset gerekliliklerinin mantığını gördünüz. Bu bölümde dosyadaki dört kuralı satır satır okuyarak modelinizde neyi sağlamanız gerektiğini somutlaştırıyorsunuz."
+      },
+      {
+        "type": "text",
+        "text": "**Taşıyıcı kolon (IfcColumn, Yapısal kuralı):** Bu kural yalnız adı AL, ST ya da ZE disiplin koduyla ve KLN kategori koduyla başlayan kolonlara uygulanır; yani uygulanabilirlik sınıfla birlikte ad desenine de bakar. Bu kolonlarda önceden tanımlı tip (PredefinedType) ve etiket (Tag) öznitelikleri, Pset_ColumnCommon içinde yangın dayanım sınıfı (FireRating, IfcLabel) ve taşıyıcılık (LoadBearing, IfcBoolean) zorunludur. Malzeme de zorunludur ve **Malzeme İsmi_Dayanım** biçiminde yazılmalıdır, örneğin Çelik_S355 ya da Beton_C25. FireRating değerinin Binaların Yangından Korunması Hakkında Yönetmeliğe göre verilmesi istenir."
+      },
+      {
+        "type": "text",
+        "text": "**Mahal (IfcSpace):** Adı kat kodu, üç karakterli bölüm/fonksiyon kodu ve üç haneli sıra numarasından oluşan, alanları alt tireyle ayrılmış desene uymalıdır; kat kodu K ya da B harfi ve iki rakamdır (K01, B01 gibi). Pset_SpaceCoveringRequirements içinde döşeme kaplaması (FloorCovering), döşeme kaplaması kalınlığı (FloorCoveringThickness, pozitif uzunluk ölçüsü) ve duvar kaplaması (WallCovering) zorunludur. Kuralın açıklamasına göre bu bilgiler, kendi geometrisi ve malzemesi olan bir kaplama (IfcCovering) nesnesi yoksa mahalde verilir; ikisi çelişirse kaplama nesnesindeki bilgi esas alınır. Bu kural modelde en az bir mahal olmasını da şart koşar."
+      },
+      {
+        "type": "text",
+        "text": "**Emsal zonu (IfcSpatialZone):** Mekânsal zonlarda kullanıcı tanımlı TREpys_EmsalOzellikSeti kümesinde EmsalDurumu özelliği zorunludur ve yalnız üç değerden birini alabilir: emsale dahil alan için DAHIL, emsal dışı alan için HARIC, idarenin özel imar düzenlemesine bağlı emsal artışı alanı için DIGER. DIGER girilirse açıklama zonun Description özniteliğine yazılır. Değerler Türkçe karakterli yazımla (DAHİL, HARİÇ, DİĞER) da kabul edilir. DAHIL ya da HARIC zonların adı MZN kategori koduyla kurulmalıdır. Bu küme IFC şemasında yoktur; EK-6 madde 6.5 gereği siz oluşturursunuz."
+      },
+      {
+        "type": "text",
+        "text": "**Hava menfezi (IfcAirTerminal):** Adı MK-HVM- ile başlamalı (kategori kodu EK-5 Tablo 5.1'den), PredefinedType ve Tag dolu olmalı, Pset_AirTerminalTypeCommon içinde AirFlowRateRange hacimsel debi ölçüsü (IfcVolumetricFlowRateMeasure) tipinde bulunmalıdır. Ayrıca menfez, gruba atama ilişkisiyle (IfcRelAssignsToGroup) bir IfcSystem'in parçası olmalıdır. Sistem tanımının ALLPLAN'daki mantığını 5. derste IfcSystem bölümünde gördünüz."
+      },
+      {
+        "type": "text",
+        "text": "**Okuma ipucu:** Bir kural beklediğiniz gibi çalışmıyorsa önce uygulanabilirliğe bakın. Ad desenine bağlı kurallarda (Yapısal ve Yapısal Olmayan) yanlış disiplin kodu, nesneyi beklediğiniz kuralın dışına düşürür; nesne bu kez yalnız Ad Kontrol kuralına takılır ve Pset ile malzeme eksikleri raporda görünmez."
+      },
+      {
+        "type": "heading",
+        "text": "e-PYS Yönetmeliği EK-3 / EK-5 (kategori kodları ve mahal adları)"
+      },
+      {
+        "type": "text",
+        "text": "EPYS_IDS'teki ad desenleri yönetmeliğin iki şablonundan gelir: EK-5'teki varlık isimlendirme şablonu ve EK-3'teki mahal numarası şablonu."
+      },
+      {
+        "type": "text",
+        "text": "**Varlık adı (EK-5 madde 5.5):** Modeldeki varlıklar Disiplin, Kategori Kodu ve Açıklama alanlarından oluşan şablona göre adlandırılır; alanlar orta tire (-) ile ayrılır. **Disiplin** iki harfli alfabetik kısaltmadır; disiplin adları ve kısaltmaları EK-2 Tablo 2.2'de verilir. **Kategori Kodu** varlığın IFC sınıfının Türkçe karşılığını temsil eden üç harfli kısaltmadır ve Tablo 5.1 ile 5.2'de verilir; örneğin Tablo 5.1'de IfcAirTerminal için HVM (havalandırma menfezi), IfcAudioVisualAppliance için GVS (görsel ve ses cihazı), IfcBeam için KRS (kiriş). **Açıklama** alanında karakter sınırı yoktur; alt kategori, fonksiyon, ölçü, malzeme gibi bilgiler yazılır ve her yeni bilgi alanı boşluksuz alt tire (_) ile ayrılır. Açıklamada orta tire kullanılmaz; IDS desenlerinde son parçanın tire içerememesi bu kuraldan gelir."
+      },
+      {
+        "type": "text",
+        "text": "Bazı IFC sınıflarının önceden tanımlı tipleri çok sayıda varlık içerdiği için bu tiplerin Türkçe karşılıkları verilmez; gerekirse bu bilgi Açıklama alanına yazılır. Modelde mahal adlandırırken Açıklama bölümünde EK-3'teki mahal numarası ve mahal ismi ayrı ayrı ya da birlikte kullanılabilir (madde 5.5.4)."
+      },
+      {
+        "type": "text",
+        "text": "**Mahal numarası (EK-3):** Mahal numarasını oluşturan bilgi alanları boşluk bırakılmadan alt tire (_) ile ayrılır ve Tablo 3.1'deki şablona uyar. **Kat** üç karakterli alfanümerik kısaltmadır; kat isimleri ve kısaltmaları EK-2 Tablo 2.14'te verilir. **Bölüm/Fonksiyon** mahalin kullanım amacını (dükkan, depo, lobi, daire gibi) temsil eden üç karakterli kısaltmadır ve proje müellifi tarafından belirlenir. **Sıra Numarası** üç haneli sayıdır; her kat ve bölüm/fonksiyon birleşimi için 001'den başlar ve saat yönünde artar."
+      },
+      {
+        "type": "text",
+        "text": "**Mahal ismi (EK-3 Tablo 3.2):** Mahal isimleri ve üç harfli kısaltmaları tabloda verilir; örneğin Antre ANT, Arşiv ARS, Asansör ASN, Balkon BLK, Banyo BAN. Tabloda olmayan mahaller de tanımlanabilir; kısaltması üç harfli olmalı ve tablodakilerle çakışmamalıdır."
+      }
+    ]
   }
 }

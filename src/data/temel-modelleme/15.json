@@ -141,34 +141,54 @@
       },
       {
         "type": "text",
-        "text": "Allplan 2022'den itibaren önceden tanımlı Arsa (Liegenschaft), Yapı (Bauwerk), Bina (Gebäude) ve Kat (Geschoss) strüktür kademelerine ek nitelikler eklenebilir. Türetme kademelerine (Görünüşler, Kesitler, Raporlar) ve Kat Alanı (Geschossbereich) ile Serbest Strüktür Kademesine nitelik eklenemez. Tanım (Bezeichnung, @507@) niteliği tüm kademelerde bulunur."
+        "text": "Kopyaladığınız ve düzenlediğiniz katlar bina strüktüründe birer düğümdür. Bu düğümlere nitelikler üzerinden ek bilgi ekleyebilir, strüktür kademelerinin adlarını ve eklenen bilgileri etiket stillerinde ya da raporlarda kullanabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "ALLPLAN 2022'den itibaren önceden tanımlı **Arsa (Liegenschaft)**, **Yapı (Bauwerk)**, **Bina (Gebäude)** ve **Kat (Geschoss)** strüktür kademelerine ek nitelikler eklenebilir. Türetme kademelerine (**Görünüşler (Ansichten)**, **Kesitler (Schnitte)**, **Raporlar (Reports)**), **Kat Alanı (Geschossbereich)** kademesine ve **Serbest Strüktür Kademesi (beliebige Strukturstufe)**'ne nitelik eklenemez."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/10589_0EM7U000002DAA5_60328eab.png",
-        "caption": "Nitelik eklenebilen ve eklenemeyen strüktür kademeleri."
+        "caption": "Önceden tanımlı strüktür kademeleri: Liegenschaft, Bauwerk, Gebäude, Geschoss (yeşil) ve Geschossbereich (kırmızı)"
       },
       {
         "type": "text",
-        "text": "Nitelikler genellikle Proje (Projekt) olarak, nitelik seti şablonu ise IFC Common olarak ön ayarlıdır. IFC Common kullanıldığında Arsa kademesinde Grundflächenzahl (taban alanı oranı, ID 18254), Geschossflächenzahl (kat alanı oranı, ID 466), Maximale Gebäudehöhe (ID 549); Bina kademesinde Gebäudeklasse Brandschutz (ID 18251), Nutzungsart (ID 1101); Kat kademesinde Deckentragfähigkeit (ID 18082) gibi nitelikler bulunur."
+        "text": "**Tanım (Bezeichnung, @507@)** niteliği tüm kademelerde vardır; diğerleri projenin nitelik setleriyle oluşturulup oluşturulmadığına bağlıdır. Aşağıdaki açıklama, ALLPLAN 2023'te şablon proje kullanılmadan açılan yeni projelerin standart ayarına dayanır: **Nitelikler (Attribute)** genellikle **Proje (Projekt)**, **Nitelik seti şablonu (Attributsetvorlage)** ise **IFC Common** olarak ön ayarlıdır."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/10589_0EM7U000002DAAK_08e67980.png",
-        "caption": "Nitelik ve nitelik seti şablonu ön ayarı (IFC Common)."
+        "caption": "Proje ayarı: Attribute = Projekt, Attributsetvorlage = IFC Common"
       },
       {
         "type": "text",
-        "text": "İçerik atama: strüktür kademesinin bağlam menüsündeki Nitelikleri Değiştir (Attribute modifizieren) ile Bina Strüktürü Nitelikleri (BWS-Attribute) iletişim kutusu açılır; bu fonksiyonla her seferinde yalnızca tek bir kademe düzenlenir. Alternatif olarak proje özelliklerinden nitelik seti kopyalanıp uyarlanır; bu değişiklik aynı türdeki tüm kademeleri etkiler."
+        "text": "**IFC Common ile kademelerdeki nitelikler:** **Arsa** kademesinde Reference (18222), Bebaubare Fläche (548), Grundflächenzahl (18254), Geschossflächenzahl (466), Maximale Gebäudehöhe (549), Bruttogrundstücksfläche (550), adres alanları (Abteilung 18257, Adresszeile 1 18258, Adresszeile 2 18259, Postfach 18260, Stadt 18261, Region 18262, Postleitzahl 18263), Land (289) ve Bezeichnung (507) bulunur. **Yapı** kademesinde yalnız Bezeichnung (507) vardır."
+      },
+      {
+        "type": "text",
+        "text": "**Bina** kademesinde Reference (18222), Gebäudekennzeichnung (696), Gebäudekennzeichen permanent (18249), Art der Ausführung (18250), Gebäudeklasse Brandschutz (18251), Sprinklerschutz (1399), Sprinklerschutz automatisch (18079), Nutzungsart (1101), Bruttofläche nach Raumprogramm (1959), Nettofläche nach Raumprogramm (1960), Geschossanzahl (468), Baujahr (Fertigstellung) (473), letztes Renovierungsjahr (18252), Denkmalschutz (18253), aynı adres alanları, Land (289) ve Bezeichnung (507) bulunur. **Kat** kademesinde Reference (18222), Eingangsebenen (18075), Oberirdisches Geschoss (18078), Sprinklerschutz (1399), Sprinklerschutz automatisch (18079), Deckentragfähigkeit (18082), Bruttofläche ve Nettofläche nach Raumprogramm (1959, 1960) ve Bezeichnung (507) bulunur."
+      },
+      {
+        "type": "text",
+        "text": "**Niteliklere içerik atama:** Strüktür kademesinin bağlam menüsündeki **Nitelikleri Değiştir (Attribute modifizieren)** ile seçilen kademe için **Bina Strüktürü Nitelikleri (BWS-Attribute)** diyaloğunu açarsınız."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/10589_0EM7U000002DAD4_05970c99.png",
-        "caption": "BWS-Attribute iletişim kutusu."
+        "caption": "Gebäude kademesinin bağlam menüsünde Attribute modifizieren"
       },
       {
         "type": "text",
-        "text": "Etiketleme ve raporlarda kullanım: strüktür kademesi adları Topologie nitelikleriyle okunur, örn. Topologie_Liegenschaft (486), Topologie_Gebäude (451), Topologie_Geschoss (452). Formülle okumak için TOPOLOGY(\"XYZ\"; @Attribut@) kullanılır; XYZ, düğümün İngilizce adıdır. Örn. TOPOLOGY(\"Story\"; @507@) Kat kademesinin tanımını verir; \"Building\" ve \"Site\" diğer kademeler içindir."
+        "text": "**Başka nitelikler ekleme:** Kendi nitelikleriniz dahil başka nitelikleri iki yolla eklersiniz. Aynı türdeki tüm kademelerde bulunması gerekmeyen tekil, özel nitelikler için **Nitelikleri Değiştir**'i kullanın; BWS-Attribute diyaloğunun sağ üstünde, yapı elemanlarındaki gibi nitelik ekleme olanağı vardır. Bu fonksiyonla her zaman yalnız **tek bir** ya da seçili kademe düzenlenir. Alternatif olarak proje özelliklerinden nitelik setini kopyalayıp uyarlarsınız; nitelik setindeki değişiklikler tüm kademeleri ve yapı elemanlarını etkiler. Temel kural olarak içeriği olmayan nitelikler gizlenir, kademede zaten doldurulmuş nitelikler korunur."
+      },
+      {
+        "type": "text",
+        "text": "**Etiketlemede ve raporlarda kullanım:** Bina strüktüründe görünen kademe adlarını doğrudan nitelikler üzerinden okursunuz. Referans her zaman tekildir: Kat kademesinin altındaki bir çizim dosyasında duran bir eleman etiketlendiğinde, çizim dosyasının atandığı Kat kademesinin adı görünür. Nitelikler: **Topologie_Liegenschaft (486)**, **Topologie_Bauwerk (450)**, **Topologie_Gebäude (451)**, **Topologie_Geschoss (452)**, **Topologie_Geschossbereich (587)** ilgili kademeyi, **Topologie_Hierarchie_gesamt (589)** serbest kademeler dahil tam hiyerarşiyi, **Topologie_beliebige_Strukturstufe (588)** serbest strüktür kademesini değerlendirir. Sonuç her seferinde kademenin bina strüktüründe görünen adıdır. Raporlarda Topologie_Geschoss (452) için Text/String yerine ya da ek alan olarak Integer da kullanılabilir; bu alanla tablodaki grupları bina strüktüründeki sıraya göre dizersiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Kademelere eklenen içerikleri formülle okuma:** **TOPOLOGY(\"XYZ\";@Nitelik@)** fonksiyonu, bir sonraki strüktür düğümünden sorgulanan niteliğin değerini okur; XYZ yerine düğümün İngilizce adını yazarsınız. **TOPOLOGY(\"Site\";@507@)** Arsa, **TOPOLOGY(\"Building\";@507@)** Bina, **TOPOLOGY(\"Story\";@507@)** Kat kademesinin Tanım niteliğini verir. Yapı (Bauwerk / Structure) kademesi şu anda bu yolla değerlendirilemez. Çağrıları üç kademeye uyarlayıp istediğiniz nitelikleri yerleştirerek bina strüktüründeki ek bilgileri etiket stillerinde, lejantlarda ve raporlarda kullanırsınız."
       },
       {
         "type": "heading",
@@ -176,61 +196,112 @@
       },
       {
         "type": "text",
-        "text": "DIN 277-1:2016-01 standardına göre BGF (Brüt Taban Alanı / Brutto-Grundfläche) ve BRI (Brüt Hacim / Brutto-Rauminhalt) değerlerini tutarlı elde etmek için bina en azından kat bazında kısmi hacimlere ayrılmalıdır. Kat (Geschoss) ve Mahal/Kat Grubu (Raum-, Geschossgruppe) yapı elemanları, DIN277 metrajı ve Raporlar (Reports) ile birlikte kullanılır."
+        "text": "Katları kopyalayıp düzenlerken DIN 277-1:2016-01'e göre tutarlı alan ve hacim elde etmek istiyorsanız katları standardın bölümleme kurallarına göre kurmanız gerekir. **BGF (Brüt Taban Alanı, Brutto-Grundfläche)** ve **BRI (Brüt Hacim, Brutto-Rauminhalt)** için kısmi alanları ve kısmi hacimleri standarttaki kurallara göre bölümleyerek girersiniz; örneğin istenen \"kat planı düzlemlerine göre ayrı hesaplama\" şartı için bina en azından kat bazında kısmi hacimlere ayrılmalıdır. Bu derste bölümleme, hassasiyet ve taban alanı kurallarını görüyorsunuz; Kat elemanının yükseklik bağlantılarını ve örnek binayı Çizim Dosyaları ve Yükseklik İlişkileri dersinde bulursunuz."
       },
       {
         "type": "text",
-        "text": "Ölçü birimleri ve hassasiyet: taban alanları m2, hacimler m3 cinsinden verilir. Hassasiyet planlama aşamasına göre seçilir: ön proje ondalıksız (örn. 206 m2, 1.203 m3); avan proje bir ondalık (206,4 m2; 1.202,8 m3); uygulama ve ruhsat projesi iki ondalık (206,44 m2; 1.202,78 m3). Rapor çıktısından önce Seçenekler (Optionen) ile istenen hassasiyet ayarlanır."
+        "text": "**Fonksiyonlar:** Yapı elemanı olarak **Kat (Geschoss)** ile **Mahal, Kat Grubu (Raum-, Geschossgruppe)** kullanılır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11225_0EM7U000001TdPo_7918729c.png",
+        "caption": "Kat (Geschoss) simgesi"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11225_0EM7U000001TdPp_fac0d1a4.png",
+        "caption": "Mahal, Kat Grubu (Raum-, Geschossgruppe) simgesi"
+      },
+      {
+        "type": "text",
+        "text": "Metraj ve etiket için **Konut Alanı, DIN277, Yapı Ruhsatı (Wohnfläche, DIN277, Bauantrag)**, **Raporlar (Reports)** ve **Etiketle (Beschriften)** fonksiyonlarını kullanırsınız."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11225_0EM7U000001TdPq_46a9a9d3.png",
+        "caption": "Konut Alanı, DIN277, Yapı Ruhsatı simgesi"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11225_0EM7U000001TdPr_aeb5a169.png",
+        "caption": "Raporlar (Reports) simgesi"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11225_0EM7U000001TdPs_926f8b45.png",
+        "caption": "Etiketle (Beschriften) simgesi"
+      },
+      {
+        "type": "text",
+        "text": "Ayarlar için **Seçenekler (Optionen)** kullanılır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11225_0EM7U000001TdPt_d2e11e0f.png",
+        "caption": "Seçenekler (Optionen) simgesi"
+      },
+      {
+        "type": "text",
+        "text": "**Ölçü birimleri ve hassasiyet:** Standardın 5.5 Ölçü Birimleri başlığına göre taban alanları m², hacimler m³ ile verilir. 5.1 Hesaplama Hassasiyeti başlığı kesin bir ondalık sayısı koymaz; hassasiyetin planlama aşamasına ve mevcut plan belgelerine göre belirlenmesini ister. Buna göre şu yaklaşım uygulanır:"
+      },
+      {
+        "type": "text",
+        "text": "**İhtiyaç planlaması, ön proje (Bedarfsplanung, Vorplanung):** Bina tasarlanıyor, geometri henüz yok ya da kaba; belirsizlikler büyük. Taban alanları ve hacimler ondalıksız, örneğin 206 m² ve 1.203 m³."
+      },
+      {
+        "type": "text",
+        "text": "**Avan proje (Entwurfsplanung):** Bina esas olarak kaydedilmiş, yalnız küçük belirsizlikler kalmış. Bir ondalık, örneğin 206,4 m² ve 1.202,8 m³."
+      },
+      {
+        "type": "text",
+        "text": "**Uygulama projesi, ruhsat projesi dahil (Ausführungsplanung, auch Bauvorlage):** Bina modeli uygulama için öngörülmüş ve gereksinimlere uygun. İki ondalık, örneğin 206,44 m² ve 1.202,78 m³."
+      },
+      {
+        "type": "text",
+        "text": "**Dokümantasyon (Dokumentation):** Model kısmen şantiyedeki değişikliklere göre güncellenmiş, gerekirse kısmi alanlarda rölöve hazırlanmış. İki ya da üç ondalık, örneğin 206,44 m² veya 206,437 m², 1.202,78 m³ veya 1.202,784 m³."
+      },
+      {
+        "type": "text",
+        "text": "Raporla çıktı alırken hassasiyeti şöyle kontrol edersiniz: raporun çıktısında doğrudan **Seçenekler (Optionen)** penceresini açın ya da fonksiyonu çağırmadan önce (örneğin **Bina Strüktürü (Bauwerksstruktur)** türetmeleri üzerinden metraj alırken) hassasiyeti Seçenekler'de ayarlayın. **Brutto-Grundflächen Abmessungen.rdlc** ve **Brutto-Rauminhalte Abmessungen.rdlc** raporlarında kısmi alan sonuçlarının ondalıkları (kırmızı) ile izlenebilir metraj yaklaşımındaki kısmi ölçülerin ondalıkları (mavi) birbirinden bağımsız ayarlanır."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11225_0EM7U000001TdPu_ef782b30.png",
-        "caption": "Rapor ölçülerinde kısmi alan ve kısmi ölçü ondalık basamaklarının ayrı kontrolü."
+        "caption": "Seçenekler, Reports und Mengenansätze: kısmi ölçü (mavi) ve kısmi alan sonucu (kırmızı) ondalıkları"
       },
       {
         "type": "text",
-        "text": "Bina ve yapı bölümlendirmesi: en üst bölümlendirme kademesi Bina Strüktürü (Bauwerksstruktur) içinde Yapı (Bauwerk) ve Bina (Gebäude) kademeleriyle kurulur; raporlar Bina Strüktürü türetmeleri altında tekrarlanabilir metraj verir ve ilgili çizim dosyaları her binaya atanır."
+        "text": "Paftadaki elemanları etiketlemek için, referans ölçeğe ya da çizim tipine bağlı olarak istenen hassasiyette özel **Etiket Stilleri (Beschriftungsbilder)** oluşturabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Bina ve yapı bölümlemesi:** Standardın 5.2 Birden Fazla Yapıda Hesaplama başlığına göre taban alanları ve hacimler her yapı etabı ve her yapı için ayrı hesaplanır. Bu en üst bölümleme kademesini **Bina Strüktürü (Bauwerksstruktur)** içinde **Yapı (Bauwerk)** ve **Bina (Gebäude)** kademeleriyle kurarsınız; raporlarda tekrarlanabilir metraj için bunu Bina Strüktürü türetmelerine yansıtırsınız. Raporlara her seferinde binaların ilgili çizim dosyaları atanır."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11225_0EM7U000001TdPv_4a90c932.png",
-        "caption": "Yapı ve Bina kademeleriyle üst düzey bölümlendirme."
+        "caption": "Gebäude Bestand ve Gebäude Neubau kademeleri ve türetmelerdeki DIN277 raporları"
       },
       {
         "type": "text",
-        "text": "Kat bölümlendirmesi: kat planı düzlemlerine göre ayrı hesaplama Kat (Geschoss) strüktür kademesiyle oluşturulur; raporlar yapı elemanlarını çizim dosyalarının Kat kademesine atamasına göre gruplandırarak çıktı verir."
+        "text": "**Kat bölümlemesi (strüktür):** 5.3 Kat Planı Düzlemlerine ve Kat Yüksekliğine Göre Ayrı Hesaplama başlığının istediği alt bölümleme, kat planı düzlemleri için **Kat (Geschoss)** strüktür kademesiyle kurulur. Raporlar, elemanları çizim dosyalarının Kat kademelerine atanmasına göre gruplandırarak verir."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/11225_0EM7U000001TdPw_23da24fe.png",
-        "caption": "Kat kademesine göre gruplandırılmış rapor."
+        "caption": "Kat kademeleri (Ebene 00, 01, 02) ve DIN 277'ye göre brüt taban alanı raporundaki grupları"
       },
       {
         "type": "text",
-        "text": "Hesaplama kuralları: BGF için yapı konstrüksiyonunun kaplamalar dahil dış ölçüleri esas alınır; ölçüm yüksekliği döşeme kaplamasının üst yüzeyidir. Kat yapı elemanı kaba yapının dış kenarlarından girilir, sıva Dış Yan Kaplamalar (Seitenbeläge außen) ile tanımlanır ve Yan Yüzey (Seitenfläche) BGF'ye katılmaz. BRI, BGF ile yüksekliğin çarpımıdır; yükseklik kat planı düzlemlerinin döşeme üst yüzeyleri arasındaki düşey mesafedir. En alt katta temel plağı teşkil edilmemişse taban döşemesinin alt kenarı esas alınır."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/11225_0EM7U000001TdPx_e26af978.png",
-        "caption": "Örnek bina: bodrumsuz, iki katlı, galeri boşluklu yapı gövdesi."
+        "text": "**Kat bölümlemesi (yapı elemanları):** 5.3 ve 5.6 Mahal Çevrelemesine Göre Ayrı Hesaplama başlıklarının istediği daha ayrıntılı bölümleme, her biri kendi ayarına sahip birden fazla yapı elemanıyla karşılanır. Yani kat yüksekliğine göre (standart farklılık için bir ölçü öngörmez) ve farklı mahal çevrelemelerinde (**R** ya da **S**) ilgili çizim dosyasında her biri için ayrı bir **Kat (Geschoss)** elemanı oluşturursunuz. Yüksekliğe göre bölmek yalnız belirgin farklarda (örneğin iki ya da daha çok katlı alanlarda) anlamlıdır; küçük farkları hacim hesabı için serbest düzlemlerle ya da çatı düzlemleriyle kolayca karşılarsınız."
       },
       {
         "type": "text",
-        "text": "Zemin kat girişi: kat planı dış kenarları takip eder; sıva yapı elemanı içinde Dış Yan Kaplamalar ile mutlaka tanımlanmalıdır. Çarpan (Faktor) 0,000 girilse bile tüm yan kaplamalar kendi kalınlıklarıyla dikkate alınır. Kat yüksekliği yalnızca brüt hacmi etkiler."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/11225_0EM7U000001TdPy_08a9767f.png",
-        "caption": "Zemin kat kat planı girişi ve yan kaplama ayarı."
+        "text": "**Ölçüm yöntemi:** Standardın 5.4 Ölçüm Yöntemi başlığına göre her durumda yatay zemin alanı, eğimli konstrüksiyonlarda düşey izdüşüm belirlenir. ALLPLAN bunu otomatik olarak doğru hesaplar."
       },
       {
         "type": "text",
-        "text": "Çatı katı: en üst kat değiştirilmiş bir üst kenarla oluşturulur; hacmin üst kenarı çatının veya çatı kaplamasının üst kenarıdır. Eğimli çatıda mesafe yüzeye dik seçilmelidir. Alan Tipi (Flächenart) DIN277 için M=çok katlı BRI, BGF yok (M=mehrgeschossiger BRI, keine BGF) belirtilir; çünkü kullanılmayan çatı arası BRI olarak sayılır ancak Brüt Taban Alanına sahip değildir."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/11225_0EM7U000001TdQ3_a628ec51.png",
-        "caption": "Çatı katı: M=çok katlı BRI, BGF yok ayarı."
+        "text": "**Taban alanları, kat planında sınırlama:** 6.1.2 Hesaplama Kuralları'na göre BGF için kaplamalar dahil konstrüksiyonların dış ölçüleri esas alınır; ölçüm yüksekliği döşeme kaplamalarının üst yüzeyidir. ALLPLAN'da bunu şöyle uygularsınız: **Kat (Geschoss)** elemanını tam olarak kaba yapının dış kenarlarından girin, yan yüzeyleri (sıva, kaplama) Kat elemanının içinde istenen kalınlıkta tanımlayın. **Yan Yüzey (Seitenfläche)** elemanıyla oluşturulan yan yüzeyler brüt taban alanında dikkate alınmaz."
       },
       {
         "type": "heading",
@@ -238,53 +309,25 @@
       },
       {
         "type": "text",
-        "text": "Çatı düzlemine veya çatı peyzajına (Dachlandschaft) temiz uyan bir ara döşeme için önce tüm kat planının üzerine bir döşeme çizin; kot bağlantısı ve yayılım alanını sonraki adımlarda düzeltirsiniz."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiQ_3445deeb.png",
-        "caption": "Hedef: çatı eğimine temiz uyan ara döşeme."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiR_9caad228.png",
-        "caption": "Döşeme önce tüm kat planının üzerine çizilir."
+        "text": "Çatı katındaki ara döşemeyi (kot bağlantısı Çizim Dosyaları ve Yükseklik İlişkileri dersinde, kesme Döşeme Oluşturma dersinde) düzenlerken şu durumla karşılaşabilirsiniz: girinti ve çıkıntıları olan bazı döşemeler, doğru kotlar ayarlandıktan sonra bile animasyonda görünmez; kat planında, görünüşlerde ve izometrilerde ise görünür."
       },
       {
         "type": "text",
-        "text": "Döşemeye çift tıklayıp Yükseklik (Höhe) altında şu değerleri ayarlayın: (1) çatı düzleminin alt kotu ile döşeme alt kotu arasındaki mesafe; (2) istenen döşeme kalınlığı; (3) kenar bölgesinin (döşemenin alın yüzeyinin) eğimli çatı düzlemine uyum mesafesi. Bu örnekte bu mesafe 0,00'dır ve üstteki eğimli düzleme sıfır mesafeyle birleşen eğimli döşeme bitişini verir."
+        "text": "Böyle bir durumda **Değiştir (Ändern) -> Mimari (Architektur) -> Temel (Basis) -> Yüzey Elemanı, Mimari Yüzey, Alan Değiştir (Flächenelement, Ar-Fläche, Bereich modifizieren)** fonksiyonunu seçin ve kat planında taşan bölgeleri genişçe kesip atın."
       },
       {
         "type": "image",
-        "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiS_c1a4a6cb.png",
-        "caption": "Yükseklik iletişim kutusundaki üç değer."
+        "src": "/akademi/temel-modelleme/10602_0EM7U000001Tdia_3a754729.png",
+        "caption": "Kat planında kesilip atılacak taşan döşeme bölgeleri ve bırakılacak orta bölge"
       },
       {
         "type": "text",
-        "text": "Dikkat: doğru kot bağlantısı girildiğinde ara adım negatife doğru geliştiği için geometrik olarak mümkün olmayan bir 3B eleman oluşur ve bir uyarı mesajı görünebilir."
+        "text": "Kalan döşeme parçası artık animasyonda da görünür. Ardından **Noktaları Değiştir (Punkte modifizieren)** ile döşemeyi kesitte çatı eğimiyle kesişim noktalarına kadar yeniden genişletin."
       },
       {
         "type": "image",
-        "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiU_c72c8b84.png",
-        "caption": "Oluşabilecek uyarı mesajı."
-      },
-      {
-        "type": "text",
-        "text": "Son adımda döşemenin yayılım alanını düzenleyin; döşeme yalnızca çatı eğimine kadar uzanmalı, ötesine geçmemelidir. Kalkan duvar görünüşüne geçip Düzen (Bearbeiten) > Noktaları Değiştir (Punkte modifizieren) komutunu seçin; yalnızca döşemeyi değiştirmek için Mimari Filtresi (Architekturfilter) ile Döşeme (Decke) öğesini seçin. Değiştirilecek kenar bölgesinin noktalarını, döşeme alt kotunun eğimli çatı düzlemiyle kesişimine kadar taşıyın ve aynı işlemi diğer tarafta tekrarlayın."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiW_71755a0a.png",
-        "caption": "Döşeme çatı eğimine kadar sınırlandırılır."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiZ_7f5d3c20.png",
-        "caption": "İstenen sonuç."
-      },
-      {
-        "type": "text",
-        "text": "Not: bazı girinti-çıkıntılı döşemelerde doğru kotlara rağmen döşeme animasyonda görünmeyebilir (kat planı, görünüş ve izometrilerde görünür). Bu durumda Değiştir > Mimari > Temel > Yüzey Elemanı, Mimari Yüzey, Alan Değiştir ile taşan bölgeleri genişçe kesip atın, sonra Noktaları Değiştir ile döşemeyi yeniden genişletin."
+        "src": "/akademi/temel-modelleme/10602_0EM7U000001Tdib_5ef44f7c.png",
+        "caption": "Döşemenin Noktaları Değiştir ile çatı eğimine kadar genişletilmesi"
       },
       {
         "type": "heading",
@@ -292,30 +335,30 @@
       },
       {
         "type": "text",
-        "text": "Bina strüktürünüz bozulduysa veya değişmiş görünüyorsa bir yedekten geri getirebilirsiniz. Önce Allplan'ı kapatın. Ardından Allmenü > Service > Windows-Explorer > Eigene CAD-Projekte (STD) yolunu açın."
+        "text": "Kat kopyalama ve düzenleme sırasında bina strüktürünüz bozulduysa ya da değişmiş görünüyorsa, bir yedekten geri getirebilirsiniz. Önce ALLPLAN'ı kapatın. Ardından **Allmenü -> Service -> Windows Explorer -> Eigene CAD Projekte (PRJ)** yolunu açın."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/9962_0EMVi000004ooH3_512bfd7e.png",
-        "caption": "Allmenü üzerinden proje klasörüne erişim."
+        "caption": "Allmenü 2024: Service, Windows Explorer, Eigene CAD Projekte (PRJ)"
       },
       {
         "type": "text",
-        "text": "Eigene CAD Projekte/BIM klasörüne gidin. Sorun, bozulmuş Allplan_BIM_BuildingStructure.xml dosyasıdır. Bu dosyayı örn. Allplan_BIM_BuildingStructure.xml.old olarak yeniden adlandırın. Sonra Projekt/BIM/Backup klasörüne gidip en yeni Allplan_BIM_BuildingStructure.xml....................bak dosyasını kopyalayın."
+        "text": "Projenizin BIM klasörüne gidin. Sorunun kaynağı bozulmuş **Allplan_BIM_BuildingStructure.xml** dosyasıdır. Bu dosyayı yeniden adlandırın, örneğin **Allplan_BIM_BuildingStructure.xml.old**. Sonra Proje/BIM/Backup klasörüne gidin ve en yeni **Allplan_BIM_BuildingStructure.xml....bak** dosyasını kopyalayın."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/9962_0EM67000007nqvp_b557dc0d.png",
-        "caption": "Backup klasöründeki en yeni .bak dosyası."
+        "caption": "BIM/Backup klasöründe en yeni .bak dosyasının kopyalanması"
       },
       {
         "type": "text",
-        "text": "Kopyaladığınız dosyayı Projekt/BIM klasörüne yapıştırın ve adını yeniden Allplan_BIM_BuildingStructure.xml yapın. Ardından Allplan'ı yeniden başlatın."
+        "text": "Bu dosyayı Proje/BIM klasörüne yapıştırın ve adını yeniden **Allplan_BIM_BuildingStructure.xml** yapın. Son olarak ALLPLAN'ı yeniden başlatın."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/9962_0EM67000007nqvV_69459624.png",
-        "caption": "Dosyanın yeniden .xml olarak adlandırılması."
+        "caption": "BIM klasöründe geri yüklenen .xml ve yeniden adlandırılan .xml.old dosyası"
       }
     ]
   },

@@ -161,66 +161,65 @@
       },
       {
         "type": "text",
-        "text": "Arazi modülü, Allplan'da çoğu kullanıcının az tanıdığı ama güçlü bir modüldür. Bu Derinlemesine bölüm, modülün temel araçlarını tek bir akış halinde özetler. Ekran görüntüleri Fransızca bir Allplan arayüzünden alınmıştır; komut adlarının Türkçesini parantez içindeki Fransızca karşılıklarıyla birlikte bulacaksınız. Modüle girmek için önce rolünüzü Çevre / Arazi (Environnement) rolüne değiştirin."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tfSD_8e03becf.png",
-        "caption": "Çevre / Arazi (Environnement) rolüne geçiş. Arayüz Fransızcadır."
-      },
-      {
-        "type": "text",
-        "text": "Modül içinde arazi noktası dosyalarını içe veya dışa aktarabilirsiniz. .re1, .re2, .reb ve .asc biçimleri Allplan'a doğrudan içe aktarılır; diğer biçimler için Scalypso eklentisiyle önce dönüştürüp sonra içe aktarın. Noktaları doğrudan Allplan içinde 3B olarak da oluşturabilirsiniz. İçe aktarılan veya elle yerleştirilen 3B noktaları üçgenleyerek (ağ oluşturarak) bir Sayısal Arazi Modeli (MT3D) elde edersiniz."
+        "text": "3. derste içe aktardığınız ya da elle yerleştirdiğiniz 3B arazi noktalarından bir Sayısal Arazi Modeli (SAM, Fransızca arayüzde MT3D) oluşturmak için noktaları üçgenlemeniz (ağ oluşturmanız) yeterlidir: **Ağ oluştur, üçgen ağını optimize et (Mailler, optimiser maillage triangulaire)** aracını seçin."
       },
       {
         "type": "image",
         "src": "/akademi/arazi-modelleme/9311_0EMVi000003tfdV_4d3d07fa.png",
-        "caption": "3B arazi noktalarının üçgenlenmesiyle oluşan Sayısal Arazi Modeli (MT3D) ağı."
+        "caption": "Mailler, optimiser maillage triangulaire aracı (Nou/Opt seçenekleri) ve noktalardan oluşan üçgen ağı"
       },
       {
         "type": "text",
-        "text": "Arazinin gösterimini yönetebilir, topoğrafyayı renk geçişli (gradyan) bir dolgu biçiminde geçici olarak görüntüleyebilirsiniz."
+        "text": "Arazinin gösterimini yönetebilir, topoğrafyayı renk geçişli (gradyan) bir dolguyla geçici olarak gösterebilirsiniz: **Gösterim (Représentation)** altındaki **SAM'ı renklendir (Colorier MT3D)** komutu."
       },
       {
         "type": "image",
         "src": "/akademi/arazi-modelleme/9311_0EMVi000003tfgj_6714924e.png",
-        "caption": "Topoğrafyanın renk geçişli (gradyan) dolgu ile geçici gösterimi."
+        "caption": "Colorier MT3D: topoğrafyanın kahverengi tonlarında gradyan dolguyla gösterimi"
       },
       {
         "type": "text",
-        "text": "Eşyükselti eğrilerini (courbes de niveaux) çok kolay üretebilirsiniz. Dış Sınır (contour extérieur) aracıyla ağın dış sınırını oluşturur veya yeniden sınırlandırır; Ağ Noktası (Point de maillage) aracıyla ağ noktalarını ekler, değiştirir veya silersiniz. MT3D ağına nokta, çizgi, poligon çizgisi veya spline gibi elemanlar ekleyebilir, Boşluk Açma (évidement) fonksiyonuyla arazinin bir kısmında boşluk oluşturabilirsiniz."
+        "text": "**Dış sınır (Contour extérieur)** aracıyla ağın dış sınırını oluşturur ya da ağı yeniden sınırlarsınız."
       },
       {
         "type": "image",
-        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tfon_fe2a6cb2.png",
-        "caption": "Eşyükselti eğrilerinin (courbes de niveaux) otomatik oluşturulması."
+        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tfjx_391a5b44.png",
+        "caption": "Contour extérieur: ağ, sarı dış sınırla yeniden sınırlandırıldı"
       },
       {
         "type": "text",
-        "text": "Bir profil kesiti çizip 2B profil şeması çıkarabilirsiniz. Belirli bir kesit için (örneğin bir yol ekseni) mevcut bir 2B çizgiyi veya spline'ı referans alabilirsiniz. Önce bir profil kesiti tanımlayın, ardından bu kesitten profil şemasını üretin."
+        "text": "**Ağ noktası (Point de maillage)** aracıyla ağa yeni nokta ekler, mevcut bir ağ noktasını değiştirir ya da silersiniz (Nou, Mod, Suppr seçenekleri)."
       },
       {
         "type": "image",
-        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tg6X_3809d03c.png",
-        "caption": "Adım 1: profil kesitinin tanımlanması. Ardından bu kesitten 2B profil şeması çıkarılır."
+        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tfvF_05064fc0.png",
+        "caption": "Point de maillage: ağa yeni nokta ekleme, mevcut noktayı değiştirme ya da silme"
       },
       {
         "type": "text",
-        "text": "İlk araziyi şev (talus) fonksiyonlarıyla değiştirerek dolgu (remblai) veya kazı (déblai) yapabilirsiniz. Genel Şev (talus général) aracı bir platformun oturma alanını ve şev eğimini tanımlar; Serbest Şev (talus quelconque) aracı platform çizimini ve şevlerin oturma alanını tümüyle grafiksel belirlemenizi sağlar."
+        "text": "**MT3D ağına eleman ekle (Ajouter élément au maillage MT3D)** aracıyla mevcut ağa nokta, çizgi, poligon çizgisi ya da spline gibi elemanları katarsınız. Eklenen elemanın plandaki konumuna göre ağa ek kot noktaları yerleştirilir."
       },
       {
         "type": "image",
-        "src": "/akademi/arazi-modelleme/9311_0EMVi000003teER_e58f33f8.png",
-        "caption": "Şev (talus) fonksiyonlarıyla dolgu/kazı ve platform oluşturma."
+        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tg05_ec995132.png",
+        "caption": "Ajouter élément au maillage MT3D: yeşil spline boyunca ağa yeni noktalar eklendi"
       },
       {
         "type": "text",
-        "text": "İki araziyi karşılaştırabilmek için bu değişiklikleri ilk arazinin bir kopyası üzerinde ayrı bir çizim dosyasında yapın. Sonra Kübajları Belirle (déterminer les cubages) aracıyla kazı/dolgu hacimlerini hesaplayıp bir rapor üretebilirsiniz. Son olarak bir 3B arazi ağını 3B yüzeye veya hacme (ya da tersine) dönüştürerek Allplan'ın serbest modelleme modülüne geçebilir ve Boolean operatörlerini kullanabilirsiniz."
+        "text": "**Boşluk açma (Évidement)** fonksiyonuyla arazinin bir bölümünde ağı boşaltırsınız."
       },
       {
         "type": "image",
-        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tg89_41f80b82.png",
-        "caption": "Kübajları Belirle (déterminer les cubages) ile kazı/dolgu hacimlerinin hesaplanması."
+        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tWsN_e1032fe7.png",
+        "caption": "Évidement: ağ, tanımlanan mavi bölge boyunca boşaltıldı"
+      },
+      {
+        "type": "heading",
+        "text": "Add-On Baugrube (Yapı Çukuru Eklentisi) - Arazi Oluşturma"
+      },
+      {
+        "type": "text",
+        "text": "**Yapı Çukuru (Add-On Baugrube)** eklentisi araziyi farklı kaynaklardan aynı üçgenleme (triangülasyon) komutuyla üretir: 3B tekil noktalar, 3B poligon çizgileri, 3B yüzeyler ve 3B katılar. **Yapı Çukuru (Baugrube)** fonksiyonu ayrıca farklı görünüm varyantlarına sahip etkileşimli araziler oluşturur."
       },
       {
         "type": "heading",
@@ -228,20 +227,48 @@
       },
       {
         "type": "text",
-        "text": "Bazen bir Sayısal Arazi Modeli'nin (SAM / DGM) dış sınırını, Dış Sınır (Außengrenze) fonksiyonuyla elle girmek yerine mevcut 3B çizgilerden üretmek daha mantıklıdır. Özel çizgi (Şev Çizgisi / Bruchkante, Dış Sınır / Außengrenze, Boşluk / Aussparung) olarak okunan bir 3B çizgi, başlangıç ve bitiş noktalarıyla aynı koordinatlardaki sembol noktaları üzerinde yer almalıdır. Tüm SAM noktaları birbirinden farklı numaralara sahip olmalı ve hiçbir noktanın numarası 0 olmamalıdır."
+        "text": "Bazen SAM'ın dış sınırını **Dış Sınır (Außengrenze)** fonksiyonuyla elle girmek yerine mevcut kapalı bir 2B ya da 3B çoklu çizgiden (poligon dizisi) üretmek daha mantıklıdır. Çizgiler ve noktalar için şu koşullar geçerlidir."
       },
       {
         "type": "text",
-        "text": "Mevcut bir SAM'dan, SAM Objelerini Çizim Objelerine (DGM Elemente in Konstruktionselemente) fonksiyonuyla 3B çizgiler üretebilirsiniz. Çizgileri Vaziyet Planı (Lageplan) modülünden bir .lin dosyası olarak dışa yazın; Çizgi Nitelikleri (Linienattribute) arayüzünde başlangıç sütunu, tam sayı ve ondalık basamak değerlerini önceden ayarlamak işlemleri kolaylaştırır. Dosyayı Not Defteri'nde açıp çizgi kodu 3 (SAM şev çizgisi) veya 5 (vaziyet planından çizgi) değerini CTRL + H ile çizgi kodu 1 olarak değiştirin ve kaydedin."
+        "text": "**1.1** Bir çizgi dosyasıyla özel çizgi (**Kırık hat (Bruchkante)**, **Dış Sınır (Außengrenze)**, **Boşluk (Aussparung)**) olarak okunan bir 3B çizgi, başlangıç ve bitiş noktalarıyla aynı koordinatlardaki sembol noktaları üzerinde durmalıdır. **1.2** Gereken tüm SAM noktalarının yüksekliği sıfırsa 2B çoklu çizgi de kullanılabilir (gerekirse SAM'ı başka bir çizim dosyasına kopyalayıp nokta yüksekliklerini sıfıra çekin). **1.3** Her iki durumda sembol noktaları doğru numaralanmış olmalıdır: SAM'ın tüm noktaları birbirinden farklı numara taşımalı ve hiçbir noktanın numarası 0 olmamalıdır."
       },
       {
         "type": "text",
-        "text": "Değiştirilen çizgi dosyasını dış sınır olarak okutun. Dış sınır okunamıyor ve 'Sınır zaten mevcut, izin verilmiyor' (Grenze bereits vorhanden) veya 'Çizgi özel çizgiyi kesiyor' (Linie schneidet Sonderlinie) mesajı alınıyorsa, dosyada kapalı poligona ek başka çizgiler olabilir. Sorunlu bölgeyi bulmak için dış sınırın bir kısmını kestirme 3B çizgilerle değiştirip farklı renkle dışa yazarak yalıtın. Dış sınırı bu sorunlu bölge olmadan okuyup bölgeyi Dış Sınırı Değiştir (Außengrenze modifizieren) ile sonradan uyarlayabilirsiniz."
+        "text": "**2.** Mevcut bir SAM'dan 3B çoklu çizgi üretebilirsiniz: **Oluştur (Erzeugen) -> Arazi (Gelände) -> Sayısal Arazi Modeli (Digitales Geländemodell) -> SAM Objelerini Çizim Objelerine (DGM Elemente in Konstruktionselemente)** ile SAM'ı 3B çizgilere dönüştürün (Allplan 2013 öncesinde menü adı **Jeodezi (Geo)**). Hedef çizim dosyasını açın ve önce sembol noktalarını bir obje filtresiyle silin. Dış sınırın planlanan güzergahını silme fonksiyonuyla \"açığa çıkarın\". 2B çoklu çizgi ise SAM'ın 2B izdüşümünden elde edilebilir ya da çizgiler için alışılmış giriş yollarıyla çizilebilir."
+      },
+      {
+        "type": "text",
+        "text": "**3.1** Mevcut çizgileri **Vaziyet Planı (Lageplan)** modülünden bir Lin dosyası olarak dışa yazın: çizgilerin çizim dosyası etkin, sembol noktalarını içeren SAM çizim dosyası kısmi etkin (teilaktiv) olsun. Lin dosyası sonra düzenleneceği için ilk kaydetmeden önce **Çizgi Nitelikleri... (Linienattribute...)** arayüzünü şöyle ayarlamak işinizi kolaylaştırır. **Başlangıç nokta numarası (von Punktnummer):** başlangıç sütunu 3, tam sayı basamağı 10, ondalık basamak 0. **Bitiş nokta numarası (bis Punktnummer):** başlangıç sütunu 15, tam sayı basamağı 10, ondalık basamak 0. **Çizgi kodu (Liniencode):** başlangıç sütunu 2, tam sayı basamağı 1."
+      },
+      {
+        "type": "text",
+        "text": "**3.2** Çizgi dosyasını **Oluştur (Erzeugen) -> Arazi (Gelände) -> Vaziyet Planı (Lageplan) -> Nokta Dosyası İçe Aktar, Dışa Aktar (Punktdatei importieren, exportieren)** ile oluşturun (2013 öncesi **Dosya Arayüzü (Dateischnittstelle)**). Ayarlar: **Da-Typ** Linatt, **Da-Ext** \"lin\", **Imp/Ex** Export (2013 öncesi E/A Adatei), **F-Text** View, **Dop-Pn** Nein, iki **Cod-Zu** alanı Nein ve Def, **Filter** Nein. Dosya **...\\NEM\\ALLPLAN\\USR\\LOCAL\\I_O** klasörüne kaydedilir. Bu dosya **Sayısal Arazi Modeli** modülünde aynı fonksiyonla (bu kez **Imp/Ex** Import, 2013 öncesi Edatei) kırık hat olarak okunabilir."
+      },
+      {
+        "type": "text",
+        "text": "**3.3** Dış sınırı kırık hat olarak okumadan önce SAM'da var olabilecek kırık hatları ayrı bir çizgi dosyasına kaydedin; çünkü dosya arayüzüyle dışa yazarken her zaman tüm çizgi seti yazılır. Kırık hatları silmek için SAM'ı çözüp yeniden ağ oluşturun."
+      },
+      {
+        "type": "text",
+        "text": "**3.4** Kırık hatlar yardımıyla çoklu çizgide boşluk olup olmadığını kontrol edin; olası boşlukları kırık hatlarla kapatın. Düzenlenen çizgi setini SAM modülünde yeniden çizgi dosyası olarak dışa yazın."
+      },
+      {
+        "type": "text",
+        "text": "**3.5** Kırık hat dosyasını dış sınır dosyasına çevirmek için dosyayı metin düzenleyicide açın ve çizgi kodu 3'ü (SAM kırık hattı) ya da 5'i (vaziyet planından çizgi) 1 yapın. Yukarıdaki Çizgi Nitelikleri ayarlarıyla bunu **Ctrl + H** ile yaparsınız: aranan değer boşluk-3-boşluk ya da boşluk-5-boşluk, yeni değer boşluk-1-boşluk, ardından tümünü değiştir. Dosyayı kaydedin."
+      },
+      {
+        "type": "text",
+        "text": "**3.6** Dış sınırı okuyun. Okunamıyor ve **Sınır zaten mevcut, izin verilmiyor (Grenze bereits vorhanden, nicht zulässig)** ya da **Çizgi özel çizgiyi kesiyor (Linie schneidet Sonderlinie)** mesajı geliyorsa, dosyada kapalı poligona ek başka çizgiler olabilir. Sorunlu bölgeyi bulmak için dış sınırın bazı kesimlerini kestirme 3B çizgilerle değiştirin ve bu çizgilerin rengini değiştirin; böylece indirgenmiş dış sınırı bir renk filtresiyle dışa yazar, yalnız istediğiniz kısmı alırsınız. Çizgi dosyasını 3.1 ve 3.2'ye göre dışa yazıp kodlarını 3.5'e göre düzenleyin; böylece sorunlu bölge bulunur. Dış sınırı bu bölge olmadan okuyup bölgeyi sonradan **Dış Sınırı Değiştir (Außengrenze modifizieren)** ile (**Değiştir (Ändern) -> Arazi (Gelände) -> Sayısal Arazi Modeli -> Dış Sınır (Außengrenze) -> Mod**) uyarlamak da mantıklı olabilir."
       },
       {
         "type": "image",
         "src": "/akademi/arazi-modelleme/11379_0EM7U000001TdAg_b7bf5faf.png",
-        "caption": "İndirgenmiş dış sınır: sorunlu bölgeyi yalıtmak için bazı kesimler kestirme çizgilerle değiştirilir."
+        "caption": "İndirgenmiş dış sınır (reduzierte Außengrenze, mor) ve orijinal dış sınırlı SAM (gri)"
+      },
+      {
+        "type": "text",
+        "text": "**3.7** Dış sınır okunduktan sonra 3.3'te kaydettiğiniz kırık hatları yeniden okuyun; dış sınırın dışında kalan kırık hatlar atlanır."
       },
       {
         "type": "heading",
@@ -249,11 +276,31 @@
       },
       {
         "type": "text",
-        "text": "Nokta dosyasındaki noktaları Oluştur (Erzeugen) -> Arazi (Gelände) -> Vaziyet Planı (Lageplan) -> Nokta Dosyası İçe/Dışa Aktar (Punktdatei importieren, exportieren; eski adıyla Dosya Arayüzü / Dateischnittstelle) ile Çizim Dosyası 1'e aktarın ve bir Çizim Dosyası 2'ye kopyalayın. Dosya 2'deki tüm noktaları Arazi Noktasını Değiştir (Geländepunkt modifizieren) ile 0 kotuna indirin ve DXF verisini 3B çizgi olarak Dosya 2'ye aktarın."
+        "text": "Bir nokta dosyanız ve kırık hatları (Bruchkanten) içeren bir 2B DXF dosyanız varsa, kırık hatlı bir SAM şöyle kurulur."
       },
       {
         "type": "text",
-        "text": "Yalnızca Dosya 2 etkinken bir çizgi nitelik dosyası (ör. Linien.lin) oluşturun; dosyayı metin düzenleyicide açıp çizgi kodunu 5'ten 3'e (kırık hat kodu) değiştirin. Sonra yalnızca Dosya 1 etkinken Oluştur -> Arazi -> Sayısal Arazi Modeli -> Üçgen Ağı Oluştur/Optimize Et (Dreiecksnetz vermaschen/optimieren) ile noktaları ağa dönüştürüp SAY'ı oluşturun ve kırık hatları bu nitelik dosyasıyla ekleyin."
+        "text": "**1.** Nokta dosyasındaki noktaları **Oluştur (Erzeugen) -> Arazi (Gelände) -> Vaziyet Planı (Lageplan) -> Nokta dosyası içe aktar, dışa aktar (Punktdatei importieren, exportieren)** ile (2013 öncesi **Dosya Arayüzü (Dateischnittstelle)**) Çizim Dosyası 1'e aktarın ve bu çizim dosyasını yeni bir Çizim Dosyası 2'ye kopyalayın."
+      },
+      {
+        "type": "text",
+        "text": "**2.** Çizim Dosyası 2'deki tüm noktaları **Değiştir (Ändern) -> Arazi -> Vaziyet Planı -> Arazi Noktasını Değiştir (Geländepunkt modifizieren)** ile 0 kotuna çekin. DXF verisini 3B çizgiler olarak Çizim Dosyası 2'ye aktarın."
+      },
+      {
+        "type": "text",
+        "text": "**3.** Yalnız Çizim Dosyası 2'yi etkinleştirin ve aynı nokta dosyası fonksiyonuyla örneğin **Linien.lin** adlı bir çizgi nitelik dosyası oluşturun."
+      },
+      {
+        "type": "text",
+        "text": "**4.** **Linien.lin** dosyasını Not Defteri'nde açın ve çizgi kodunu 5'ten 3'e (kırık hat) değiştirin. Dosya önceden boşluk, çizgi kodu, boşluk ve ardından nokta numaraları biçiminde kaydedildiyse düzenleme kolaydır; bu biçimi **Araçlar (Extras) -> Seçenekler (Optionen) -> Arazi (Gelände) -> Dosya arayüzü üzerinden İçe/Dışa Aktar (Import/Export über Dateischnittstelle) -> Çizgi Nitelikleri... (Linienattribute...)** altında ayarlarsınız. Böylece boşluk-5-boşluk aranıp boşluk-3-boşluk ile değiştirilir."
+      },
+      {
+        "type": "text",
+        "text": "**5.** Yalnız Çizim Dosyası 1'i etkinleştirin. **Oluştur -> Arazi -> Sayısal Arazi Modeli (Digitales Geländemodell) -> Üçgen Ağı Oluştur / Optimize Et (Dreiecksnetz vermaschen/optimieren)** ile noktaları ağa dönüştürüp SAM'ı oluşturun. Ardından **Linien.lin** dosyasını aynı nokta dosyası fonksiyonuyla okuyun."
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Okunan kırık hatlar mevcut dış sınırlar üzerindeyse bir hata mesajı gelir; onaylayıp yok sayabilirsiniz. En iyisi, kırık hatların ayrı bir renkte durduğu bir DXF dosyasıdır; okunacak çizgileri böylece renk filtresiyle seçersiniz."
       },
       {
         "type": "heading",
@@ -261,11 +308,31 @@
       },
       {
         "type": "text",
-        "text": "Kırık hatların uç noktaları SAM'daki (DTM) noktalarla kısmen örtüşür; bazı uçlar SAM'da henüz nokta olarak bulunmaz. Dosya 2'deki 3B çizgileri 3B Objeleri SAM'a Dönüştür (Convert 3D Entities to DTM) ile Dosya 3'te bir SAM'a çevirin ve Dosya Arayüzü (File Interface) ile noktalarını bir *.asc dosyasına dışa aktarın."
+        "text": "Kırık hatları (breaklines) bir DXF dosyasından mevcut bir SAM'a aktarmak istiyorsunuz, ama hatların uç noktalarının bir kısmı SAM'da henüz nokta olarak yok. Başlangıç durumu: Çizim dosyası 1'de mevcut SAM, Çizim dosyası 2'de 3B çizgi olarak kırık hatlar var; uç noktaların bir kısmı SAM noktalarıyla çakışıyor, bir kısmı çakışmıyor."
       },
       {
         "type": "text",
-        "text": "Bu *.asc noktalarını mevcut SAM'ın bulunduğu Dosya 1'e aktarın, SAM Bağlantısını Çöz (Unlink DTM) ile bağlantıyı çözüp Ağı Oluştur/Optimize Et (Mesh/Optimize Grid) ile yeniden üçgenleyin; böylece eksik uç noktalar SAM'a eklenir. Mükerrer kalan noktaları 'nokta sembolü' filtresiyle temizleyip Arazi Noktasını Değiştir ile yeniden numaralandırabilirsiniz."
+        "text": "**1.** Çizim dosyası 2'deki 3B çizgileri **Oluştur (Create) -> Arazi (Terrain) -> Sayısal Arazi Modeli (Digital Terrain Model) -> 3B Objeleri SAM'a Dönüştür (Convert 3D Entities to DTM)** ile hedef Çizim dosyası 3'te bir SAM'a dönüştürün."
+      },
+      {
+        "type": "text",
+        "text": "**2.** Yalnız Çizim dosyası 3 açıkken **Dosya Arayüzü (File Interface)** ile bu \"kırık hat SAM'ının\" noktalarını içeren bir .asc dosyası oluşturun."
+      },
+      {
+        "type": "text",
+        "text": "**3.** Yalnız Çizim dosyası 1 açıkken .asc dosyasının noktalarını yine **Dosya Arayüzü** ile içe aktarın. **Değiştir (Modify) -> Arazi -> Sayısal Arazi Modeli -> SAM Bağlantısını Çöz (Unlink DTM)** ile SAM'ı çözün ve **Oluştur -> Arazi -> Sayısal Arazi Modeli -> Ağı Oluştur/Optimize Et (Mesh/Optimize Grid)** ile tüm noktalardan yeniden SAM oluşturun. Ardından SAM'daki noktaları (arazi noktaları hariç) **Sil (Delete)** aracı ve **nokta sembolü (point symbol)** eleman filtresiyle silin; böylece aynı koordinatlı, farklı numaralı mükerrer noktalar da silinir, SAM'ın arazi noktaları (nokta sembolleri) korunur. Numaralandırmanın doğruluğundan emin olmak için SAM'ı yeniden çözebilir, noktaları **Arazi Noktasını Değiştir (Modify Terrain Point)** ile numaralandırıp tekrar ağa dönüştürebilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**4.** 3B çizgilerin bulunduğu Çizim dosyası 2 etkin, noktaları içeren Çizim dosyası 1 düzenleme kipinde açıkken **Vaziyet Planı (Site Plan)** modülüne geçin ve **Dosya Arayüzü** ile .lin çizgi dosyasını oluşturun."
+      },
+      {
+        "type": "text",
+        "text": "**5.** Yalnız Çizim dosyası 1 açıkken **Sayısal Arazi Modeli** modülüne dönün ve .lin dosyasını **Dosya Arayüzü** ile içe aktarın."
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Bu durumda kırık hatlar hem çizgi kodu 3 (kırık hat) hem çizgi kodu 5 (vaziyet planı) ile içe aktarılabildiği için çizgileri düzenlemeniz gerekmez."
       },
       {
         "type": "heading",
@@ -273,11 +340,31 @@
       },
       {
         "type": "text",
-        "text": "Protokollü kübaj hesabında (Veri tipi 22.013) 'Geçerli nokta numaralarına sahip nokta yok (Keine Punkte mit gültigen Punktnummern vorhanden)' uyarısının nedeni, SAM içindeki numarasız noktalar veya mükerrer (çift) nokta numaralarıdır."
+        "text": "Protokollü bir kübaj hesabı (veri tipi 22.013) oluştururken **Geçerli nokta numaralarına sahip nokta yok (Keine Punkte mit gültigen Punktnummern vorhanden)** uyarısını alıyorsanız nedeni, SAM içindeki numarasız noktalar ya da mükerrer (çift) nokta numaralarıdır. SAM'da kullanılan noktaların numaraları sonradan değiştirilemediği için SAM'ı, özel çizgileri (dış sınırlar, kırık hatlar, boşluklar) dahil, yeni nokta numaralarıyla yeniden kurarsınız."
       },
       {
         "type": "text",
-        "text": "Çözüm için SAM'ı özel çizgileriyle (dış sınırlar, şev kırık hatları ve boşluklar) yeni nokta numaralarıyla geri yükleyin: SAM Elemanlarını Konstrüksiyon Elemanlarına Dönüştür (DGM Elemente in Konstruktionselemente wandeln) ile çizgileri ayrı bir dosyaya alıp renk filtresiyle yalnızca özel çizgileri bırakın; noktaları Sembol Noktası Değiştir (Symbolpunkt modifizieren) ile yeniden numaralandırın; ardından noktaları yeniden üçgenleyip dış sınır, boşluk ve kırık hatları nitelik dosyasıyla (kod 1 dış sınır, 2 boşluk, 3 kırık hat) yeniden ekleyin."
+        "text": "**1.** Çizim dosyası 1'de kırık hatlı (Bruchkanten) ve dış sınırlı (Außengrenzen) SAM vardır. **SAM Elemanlarını Konstrüksiyon Elemanlarına Dönüştür (DGM Elemente in Konstruktionselemente wandeln)** ile SAM'ı Çizim dosyası 2'de konstrüksiyon çizgilerine dönüştürün. Renk filtresiyle normal ağ çizgilerini silin; geriye yalnız kırık hatlar, dış sınırlar ve boşluklar kalsın."
+      },
+      {
+        "type": "text",
+        "text": "**2.** Önlem olarak SAM'ı Çizim dosyası 1'den Çizim dosyası 3'e kopyalayın. Burada normal silme fonksiyonuyla SAM'a ait olmayan her şeyi (mevcut sembol noktaları dahil) silin, ardından SAM'ı çözün."
+      },
+      {
+        "type": "text",
+        "text": "**3.** Noktaları **Sembol Noktası Değiştir (Symbolpunkt modifizieren)** ile yeniden numaralandırın."
+      },
+      {
+        "type": "text",
+        "text": "**4.** Noktaların bulunduğu Çizim dosyası 3'ü etkin, 3B çizgilerin bulunduğu Çizim dosyası 2'yi kısmi etkin (sarı) açın. **Vaziyet Planı (Lageplan)** modülündeki **Nokta Dosyası İçe Aktar, Dışa Aktar (Punktdatei importieren, exportieren)** (2013 öncesi **Dosya Arayüzü (Dateischnittstelle)**) ile kırık hatlar için ve dış sınırlarla boşluklar için ayrı ayrı birer **Nitelikli Çizgi Dosyası (Linien mit Attribut Datei)** oluşturun."
+      },
+      {
+        "type": "text",
+        "text": "**5.** İki .lin dosyasını Not Defteri'nde açın ve 3. sütundaki kod numaralarını dış sınırlar için 1, boşluklar için 2, kırık hatlar için 3 yapın."
+      },
+      {
+        "type": "text",
+        "text": "**6.** Çizim dosyası 3'teki noktaları ağa dönüştürün (üçgenleyin) ve kırık hatlarla dış sınırları SAM modülündeki dosya arayüzüyle **Nitelikli Çizgi Dosyası** olarak yeniden içe aktarın."
       },
       {
         "type": "heading",
@@ -285,11 +372,19 @@
       },
       {
         "type": "text",
-        "text": "SAM'ı planlanan binanın alanına indirgeyin. Binanın dış sınır çizgilerini Modifikasyon (Modify) -> Arazi (Terrain) -> Sayısal Arazi Modeli (Digital Terrain Model) -> Elemanı SAM ile Ağa Dönüştür (Mesh Element with DTM) ile ağa katın; bu çizgilerin uç noktalarında yükseklik SAM temel alınarak enterpolasyonla hesaplanır. Sonra Dış Sınır (Exterior Boundary) girin."
+        "text": "Eğimli bir arazide kazı ve dolgu miktarları yaklaşık eşit olan bir yapı çukuru planlamak istiyorsanız SAM'ı planlanan binanın alanına indirgersiniz. Kazı ve dolgu hesabında veri tipini **22.014**, kıyas düzlemini (Horiz) **Evet (Yes)** yaptığınızda kıyas düzlemi çukurun tabanını temsil eder. Kıyas düzlemi için farklı yüksekliklerle ardışık hesaplar yaparak tabanın doğru yüksekliğine hızla yaklaşırsınız."
       },
       {
         "type": "text",
-        "text": "Kazı ve Dolgu Hesapla (Compute Cut and Fill) fonksiyonunda VeriTp (DataTp): 22.014; Kıyas Düzlemi (Horiz): Evet; Analiz (Analyze): Kazı ve Dolgu (Cut and Fill) ayarlarını kullanın. Yükseklik (Height) kutusuna başlangıç değeri olarak SAM'ın ortalama yüksekliğini girin ve kıyas düzlemi yüksekliğini değiştirerek birkaç hesap yapıp kazı ile dolgu dengesini yakınsayın."
+        "text": "**1.** Orijinal SAM içinde binanın dış sınırını çizgilerle çizin. Bu çizgileri **Değiştir (Modify) -> Arazi (Terrain) -> Sayısal Arazi Modeli (Digital Terrain Model) -> Elemanı SAM ile Ağa Dönüştür (Mesh Element with DTM)** ile ağa katın; SAM'a çizgilerin uç noktalarında yeni noktalar eklenir ve bunların yüksekliği SAM'dan enterpolasyonla hesaplanır."
+      },
+      {
+        "type": "text",
+        "text": "**2.** Binanın dış sınırı olacak bir dış sınır girin (**Değiştir -> Arazi -> Sayısal Arazi Modeli -> Dış Sınır (Exterior Boundary)**). Gereken noktalar bir önceki adımda oluştu."
+      },
+      {
+        "type": "text",
+        "text": "**3.** **Oluştur (Create) -> Arazi -> Sayısal Arazi Modeli -> Kazı ve Dolgu Hesapla (Compute Cut and Fill)** ile hesabı yapın. Ayarlar: **VeriTp (DataTp)** 22.014, **Kıyas Düzlemi (Horiz)** Evet, **Analiz (Analyze)** Kazı ve Dolgu (Cut and Fill). **Yükseklik (Height)** kutusuna başlangıç değeri olarak SAM'ın ortalama yüksekliğini girin ve kıyas düzleminin doğru yüksekliğini bulmak için birkaç hesap yapın."
       }
     ]
   },

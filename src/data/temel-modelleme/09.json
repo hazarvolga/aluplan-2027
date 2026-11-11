@@ -138,47 +138,92 @@
     "blocks": [
       {
         "type": "heading",
-        "text": "Tadilat Planlaması - Mevcut Bir Duvar Üzerinde Isı Yalıtımı"
+        "text": "Nitelikler - Duvar ve Toplam Duvar için genel bakış (PARENT() ile)"
       },
       {
         "type": "text",
-        "text": "Tadilat planlamasında mevcut bir duvara ısı yalıtımı eklemenin iki yolu vardır. Duvarda hiç boşluk yoksa veya az boşluk varsa, mevcut duvarın dışına **yeni bir duvar** çizip onu yalıtım katmanı yapmayı tercih edin. Ancak bu yolda, her boşluk için yeni duvarda da ayrı bir **yeni yapı boşluğu (Neubauöffnung)** açmanız gerekir. **Çok sayıda boşluk** içeren duvarlarda bundan kaçınmak için aşağıdaki yöntemi izleyin."
+        "text": "Bu derste çizdiğiniz tek ve çok katmanlı duvarların niteliklerini etiket stilleri ve metraj için okuyabilirsiniz. Duvarda yalnız doğrudan seçilen katman (Wandschicht) ve ona bağlı nitelikler doğrudan etiketlenir. Diğer katmanların, toplam duvarın (Gesamtwand), boşlukların (pencere, kapı-pencere, kapı, niş, rezervasyon gibi) ve duvara bitişen diğer yapı elemanlarının nitelikleri, yapı elemanı ilişkilerini değerlendiren formüllerle kısmen etiketlenebilir."
       },
       {
         "type": "text",
-        "text": "**Adım 1: Duvarı iki katmana dönüştürün.** Tek katmanlı duvarınızı, duvar özellikleri üzerinden **iki katmanlı** bir duvara dönüştürün. Eklenen ikinci katmana yalıtım için gerekli **kalınlığı ve yüksekliği** verin."
+        "text": "**Uygulama alanı:** Tek ve çok katmanlı duvarlar; poligon ve profil duvarlar bu kapsamda değildir (poligon duvar için bir sonraki bölüme bakın). Aşağıdaki nitelikler bir duvar katmanının etiketlenmesinden yola çıkar; nitelikler hangi katmana ya da objeye bağlıysa aynı ilişkilerle değerlendirilir. Doğrudan duvar katmanına bağlı tüm nitelikler bir etiket stiliyle (Beschriftungsbild) ya da obje etiketiyle yazdırılabilir."
+      },
+      {
+        "type": "text",
+        "text": "**OK ve Üst Kenar (Oberkante) (@98@, @113@):** Duvarın 0.00 üzerindeki ortalama üst kenarı. **UK ve Alt Kenar (Unterkante) (@97@, @112@):** Duvarın 0.00 üzerindeki ortalama alt kenarı."
+      },
+      {
+        "type": "text",
+        "text": "**Uzunluk (Länge, @220@), Kalınlık (Dicke, @221@), Yükseklik (Höhe, @222@):** Geometriyi ortalama değerlerle tanımlar. **Mutlak_Uzunluk (Länge_absolut, @198@), Mutlak_Kalınlık (Dicke_absolut, @199@), Mutlak_Yükseklik (Höhe_absolut, @204@)** en büyük değerleri verir. Uzunluk ve Mutlak_Uzunluk her zaman aks yönünde, Yükseklik ve Mutlak_Yükseklik Z yönünde ölçülür. Kalınlık, duvar katmanının katman kalınlığıdır. Yönler tek tek duvar parçasının uzunluğundan bağımsızdır. Mutlak_Kalınlık konik duvarlarda en büyük kalınlığı verir."
       },
       {
         "type": "image",
-        "src": "/akademi/temel-modelleme/10798_0EM7U000001TeNI_692acc50.png",
-        "caption": "Duvar özelliklerinde tek katmanlı duvarı iki katmana çevirme."
+        "src": "/akademi/temel-modelleme/9161_0EM7U000001TeWT_629c9209.png",
+        "caption": "Eğik tepeli duvar: Höhe 2,96, Höhe_absolut 3,61; planda Länge 3,205 ve Länge_absolut 3,365"
       },
       {
         "type": "text",
-        "text": "**Adım 2: Yalıtım katmanını yeni yapıya dönüştürün.** Asistanda uygun bir yalıtım katmanı bulun ve bu katmana **sağ tıklayın**. Bağlam menüsünde **Tadilat Planlaması Dönüştürme (Umwandlung Umbauplanung)** fonksiyonunu seçin; ayarlar bu sırada devralınır."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/10798_0EM7U000001TeNJ_ca67f81b.png",
-        "caption": "Yalıtım katmanına sağ tık ile Tadilat Planlaması Dönüştürme fonksiyonu."
+        "text": "**Çevre (Umfang, @228@):** Duvar katmanının kenar uzunluklarının toplamıdır; çok katmanlı yapıda da katmanın tüm kenarları dikkate alınır."
       },
       {
         "type": "text",
-        "text": "**Adım 3: Dış katmanı işaretleyip uygulayın.** **Ne yeni yapıya dönüştürülecek? (Was soll in Neubau gewandelt werden?)** sorusunda, iki katmanlı duvarınızın yeni oluşturulan **dış katmanını** işaretleyin ve **Uygula (Anwenden)** ile onaylayın. Bu dönüşümü **Mimari Yapı Elemanı Özelliklerini Aktar (AR-Bauteileigenschaften übertragen)** fonksiyonuyla diğer dış duvarlara da uygulayabilirsiniz."
+        "text": "**Yarıçap (Radius, @107@):** Merkez noktasından duvar aksına olan uzaklıktır; aksın etiketlenen katmanda bulunup bulunmamasından bağımsızdır. Yarıçap 0.00 ise duvar dairesel değildir (örneğin düz ya da spline biçimlidir)."
       },
       {
         "type": "image",
-        "src": "/akademi/temel-modelleme/10798_0EM7U000001TeNK_4e4ac506.png",
-        "caption": "Yeni yapıya dönüştürülecek dış katmanın seçimi."
+        "src": "/akademi/temel-modelleme/9161_0EM7U000001TeWV_39944801.png",
+        "caption": "Dairesel duvar: aks yarıçapı 1,01 (Radius)"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9161_0EM7U000001TeWW_aa750e31.png",
+        "caption": "İki katmanlı dairesel duvar: yarıçap yine aksa ölçülüyor (1,01)"
       },
       {
         "type": "text",
-        "text": "**Yıkım paftasına dikkat.** Seçtiğiniz yönteme bağlı olarak, dıştaki parapet çizgileri yıkım paftası (Abbruchplan) görünümünde **görünür kalabilir veya eksik olabilir**. Bunu ancak ilgili parapetleri devre dışı bırakarak ve gerekirse **2B çizgi** ile sonradan düzelterek yönetebilirsiniz."
+        "text": "**Alan nitelikleri:** Duvarın kabuğunu farklı biçimlerde tanımlar. **Taban Alanı (Grundfläche, @224@)** duvarın tüm taban alanını verir; tabana kadar inen boşluklar düşülmez, böylece duvar katmanının konstrüksiyon alanı elde edilir. Örnekte 6,06 x 0,365 = 2,212 m². **Zemin Alanı (Bodenfläche, @293@)** taban alanından tabana kadar inen boşlukları düşer: 6,06 x 0,365 - 1,26 x 0,365 = 1,752 m². **Tavan Alanı (Deckenfläche, @294@)** en üst yüzeyi benzer biçimde verir; duvarın üst kenarına kadar uzanan boşluklar düşülür: 6,06 x 0,365 - 1,01 x 0,240 = 1,970 m²."
+      },
+      {
+        "type": "text",
+        "text": "**Alan (Fläche, @229@)** duvar katmanının ortalama uzanımla alanıdır; boşluklar düşülmez. **Yan Yüzey Alanı (Seitenfläche, @295@)** duvarın kalıp alanıdır; tüm boşluklar ve bitişen duvar ve kolonlar dikkate alınır. **Orta Alan (Mittelfläche, @296@)** alan gibi ortalama uzanımla hesaplanır, ama duvar ortasını aşan tüm boşlukları dikkate alır. Taban, tavan ve zemin alanı üst ve alt bitişi; alan, yan yüzey alanı ve orta alan düşey yüzeyi tanımlar."
       },
       {
         "type": "image",
-        "src": "/akademi/temel-modelleme/10798_0EM7U000001TeNM_27652d2c.png",
-        "caption": "Yıkım paftası görünümünde parapet çizgilerinin durumu."
+        "src": "/akademi/temel-modelleme/9161_0EM7U000001TeWX_9493659f.png",
+        "caption": "Alan örneği: 6,06 m uzunluk, 36,5 cm kalınlık, kapı, pencere, niş ve bitişen kolon (kırmızı); Deckenfläche niş hariç, Grundfläche kapı dahil, Bodenfläche kapı hariç"
+      },
+      {
+        "type": "text",
+        "text": "**Hacimler:** **Minha Hacmi (Abzugsvolumen, @227@)** duvar katmanındaki tüm boşlukların toplamıdır; katmanda boşluk açan tüm elemanlar sayılır ve değer **negatiftir**. **Net Hacim (Netto-Volumen, @226@)** Hacim ile Minha Hacminin toplamıdır, yani tüm boşluklar düşülmüştür. **Hacim (Volumen, @223@)** duvarın kesintisiz hacmidir, hiçbir boşluk düşülmez; örnekte 6,06 x 2,91 x 0,365 = 6,437 m³."
+      },
+      {
+        "type": "text",
+        "text": "**Birim ve miktarlar:** **Birim (Einheit, @202@)** duvar katmanının özelliklerinde ayarlı birimi ya da hakediş birimini verir ve Miktar, Net Miktar ile VOB_Miktarı çıktısını yönetir. **Miktar (Menge, @201@)** ayarlı birime göre hacmi, alanı ya da uzunluğu verir. **Net Miktar (Nettomenge, @99@)** net hacmi, orta alanı ya da uzunluğu verir; tüm boşluklar dikkate alınır. **VOB_Miktarı (VOB_Menge, @100@)** hacmi, alanı ya da uzunluğu verir; boşluklar ayarlı imalat kaleminin (Gewerk) kurallarına göre dikkate alınır, imalat kalemi yoksa ya da o kalem (veya birim) için hakediş kuralı tanımlı değilse tüm boşluklar dikkate alınır."
+      },
+      {
+        "type": "text",
+        "text": "**İmalat Kalemi (Gewerk, @209@)** çıktı için metin biçimi seçildiğinde ayarlı imalat kalemini, sayı biçimi (örneğin I10, F8.2) seçildiğinde imalat kalemi numarasını verir. **Katman No (Schicht-Nr, @210@)** katmanın numarasıdır ve formüllerde kullanılabilir. **VOB_Alanı (VOB_Fläche, @81@), VOB_Hacmi (VOB_Volumen, @82@) ve VOB_Uzunluğu (VOB_Länge, @80@)** katmanın alanını, hacmini ve uzunluğunu varsa VOB kurallarıyla verir; değerler birim sırasıyla m², m³ ve m ayarlandığında VOB_Miktarı'na eşittir."
+      },
+      {
+        "type": "text",
+        "text": "Zemin Alanı, Tavan Alanı, Yan Yüzey Alanı, Orta Alan, Miktar, Net Miktar, VOB_Miktarı, VOB_Alanı, VOB_Uzunluğu ve VOB_Hacmi en fazla **Seçenekler (Optionen) -> İzlenebilir Metraj Yaklaşımları (Nachvollziehbare Mengenansätze) -> Alt alanların ondalık basamak sayısı (Anzahl der Nachkommastellen der Teilflächen)** altında ayarlı basamak sayısını gösterir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9161_0EM7U000001TeWY_b5050b7a.png",
+        "caption": "İzlenebilir Metraj Yaklaşımları: Alt alanların ondalık basamak sayısı 4"
+      },
+      {
+        "type": "text",
+        "text": "**Toplam duvar - PARENT(...):** Toplam duvarın kalınlık ve yarıçap dışında değerlendirilebilir geometri bilgisi yoktur. **PARENT(@220@)** duvar katmanlarının tek tek kalınlıklarının toplamını verir; duvarın toplam kalınlığını bu formülle etiketlersiniz. **PARENT(@107@)** dairesel duvarlarda duvar aksının yarıçapını verir."
+      },
+      {
+        "type": "text",
+        "text": "Bir duvar katmanını etiketlerken **PARENT(@XYZ@)** formül referansıyla doğrudan toplam duvara bağlanmış tüm bilgilere erişirsiniz. Bunun için özellikle kuru yapıdaki duvar tipi, yangın koruması ya da toplam duvarın ses yalıtımı bilgileri uygundur. PARENT() ile yukarıya, üst (ebeveyn) objeye bakılır; bu yön her zaman tekil değer verir."
+      },
+      {
+        "type": "text",
+        "text": "**Boşluk bilgileri - CHILD(...):** Boşluklar duvar katmanlarının alt öğeleridir. Örneğin bir duvar katmanındaki boşlukların sayısını bulmak için CHILD() ile aşağıya, alt (çocuk) objeye bakarsınız; bu yön çoğunlukla birden fazla obje içerdiğinden tekil değildir. **CHILD(@215@)** doğrudan duvar katmanına bağlı alt objelerin sayısını verir; her duvar katmanı yapı elemanı aksına bağlı olduğundan aks da alt objelerden biridir ve en küçük değer 1,00 olur. **CHILD(_IF_(@OBJ@=22)@215@_ELSE_0)** bir _IF_ _ELSE_ sorgusuyla alt objeleri bir özelliğe (örneğin @OBJ@ obje numarası) göre süzer ve yalnız belirli bir türün sayısını verir."
       },
       {
         "type": "heading",
@@ -186,33 +231,140 @@
       },
       {
         "type": "text",
-        "text": "Poligon duvarin kendi nitelikleri dogrudan etiketleme ve metraj icin kullanilabilir. Ust eleman olan toplam duvara (Gesamtwand) `PARENT()` referansiyla erisilir, ancak toplam duvar kendine ait geometri bilgisi tasimaz; poligon duvarda ayrica katman (Schicht) bulunmaz."
+        "text": "Poligon duvar da bu derste kullanabileceğiniz duvar türlerinden biridir, ama nitelikleri tek ve çok katmanlı duvarlardan farklı davranır."
       },
       {
         "type": "text",
-        "text": "Metrajda yalnizca `Hacim (Volumen)` (m3) biriminde verilen degerler cizim sirasindan bagimsiz ve izlenebilirdir. `Uzunluk (Lange)`, `Kalinlik (Dicke)`, `Alan (Flache)`, `Orta Alan (Mittelflache)` ve `VOB_...` nitelikleri ilk cizilen kenara bagli oldugundan tarafsiz metraj icin uygun degildir. `Taban Alani (Grundflache)` bosluklari minha etmeden konstruksiyon alanini; `Zemin Alani (Bodenflache)` ve `Tavan Alani (Deckenflache)` zemine/uste kadar inen bosluklari dusurerek gercek alt/ust yuzeyi verir."
+        "text": "**Arka plan:** Poligon duvarın kendi nitelikleri doğrudan kullanılabilir. Üst yapı elemanı olan toplam duvar (Gesamtwand) PARENT() ile değerlendirilebilir, ama kendine ait geometri bilgisi taşımaz. Poligon duvarda başka katman (Schicht) yoktur. Poligon duvara bağlı alt yapı elemanlarının (örneğin niş ve rezervasyon gibi boşlukların) ve poligon duvara bitişen diğer elemanların nitelikleri, yapı elemanı ilişkilerini değerlendiren formüllerle kısmen etiketlenebilir. Duvarlar için uygun tüm boşluk türleri poligon duvarlara da yerleştirilebilir."
+      },
+      {
+        "type": "text",
+        "text": "**Uygulama alanı:** Yalnız poligon duvarlar; tek ve çok katmanlı duvarlar için geçerli değildir. **OK ve Üst Kenar (Oberkante) (@98@, @113@)** poligon duvarın 0.00 üzerindeki ortalama üst kenarını, **UK ve Alt Kenar (Unterkante) (@97@, @112@)** ortalama alt kenarını verir."
+      },
+      {
+        "type": "text",
+        "text": "**Yükseklik (Höhe, @222@)** ortalama yapı elemanı yüksekliğini, **Mutlak_Yükseklik (Höhe_absolut, @204@)** en büyük değeri verir."
       },
       {
         "type": "image",
-        "src": "/akademi/temel-modelleme/11384_0EM7U000001Td7a_b5050b7a.png",
-        "caption": "Poligon duvarin geometrik ve metraj niteliklerinin ekranda listelenmesi."
+        "src": "/akademi/temel-modelleme/11384_0EM7U000001Td7W_fe54a8e9.png",
+        "caption": "Poligon duvar görünüşü: Höhe 2,96 (ortalama), Höhe_absolut 3,61 (en büyük); altta kırık planlı duvar"
+      },
+      {
+        "type": "text",
+        "text": "Başka elemanlarda rahatça kullanılan **Uzunluk (Länge)**, **Mutlak_Uzunluk (Länge_absolut)**, **Kalınlık (Dicke)** ve **Mutlak_Kalınlık (Dicke_absolut)** poligon duvarda geometriyi ilk çizilen kenardan yola çıkarak verir; bu yüzden tarafsız bir metraj için kullanılamaz. Nedeni, poligon duvarın kiriş ya da çok katmanlı duvar gibi önceden tanımlı bir yönünün (aksının) olmamasıdır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11384_0EM7U000001Td7X_14d28b02.png",
+        "caption": "Eğik uçlu plan: ilk kenar 1,62, karşı kenar 2,02, eğik kenar 54, kalınlık 36,5"
+      },
+      {
+        "type": "text",
+        "text": "**Çevre (Umfang, @228@)** kenar uzunluklarının toplamıdır; tüm kenarlar dikkate alınır."
+      },
+      {
+        "type": "text",
+        "text": "**Alan nitelikleri:** **Taban Alanı (Grundfläche, @224@)** poligon duvarın tüm taban alanıdır; tabana kadar inen boşluklar düşülmez, konstrüksiyon alanı elde edilir. **Zemin Alanı (Bodenfläche, @293@)** taban alanından poligon duvarın alt kenarına kadar inen boşlukları düşer; örneğin alt kenarı poligon duvarla aynı olan bir kapının alanı düşülür. **Tavan Alanı (Deckenfläche, @294@)** benzer biçimde en üst yüzeyi verir; üst kenara kadar uzanan boşluklar düşülür. Zemin ve tavan alanı iki tarafın gerçek yüzeyini verir ve eleman biçimini izler. **Yan Yüzey Alanı (Seitenfläche, @295@)** kalıp alanıdır; tüm boşluklar dikkate alınır, bitişen elemanlar düşülür. Taban, tavan ve zemin alanı üst ve alt bitişi, yan yüzey alanı düşey yüzeyi tanımlar. **Alan (Fläche)** ve **Orta Alan (Mittelfläche)** çizim sırasına bağlı değerler verir ve metraj için uygun değildir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11384_0EM7U000001Td7Y_dc3e3db3.png",
+        "caption": "Poligon duvarda alanlar: Deckenfläche niş hariç, Grundfläche kapı dahil, Bodenfläche kapı hariç; kırmızı bitişen kolon"
+      },
+      {
+        "type": "text",
+        "text": "**Hacimler:** **Minha Hacmi (Abzugsvolumen, @227@)** tüm boşlukların toplamıdır. **Net Hacim (Netto-Volumen, @226@)** boşluklar düşülmüş hacimdir. **Hacim (Volumen, @223@)** poligon duvarın kesintisiz (brüt) hacmidir, hiçbir boşluk düşülmez."
+      },
+      {
+        "type": "text",
+        "text": "**Birim ve miktarlar:** **Birim (Einheit, @202@)** özelliklerde ayarlı birimi ya da hakediş birimini verir ve Miktar, Net Miktar ile VOB_Miktarı çıktısını yönetir. Çizim sırasından bağımsız, izlenebilir metraj yalnız **m³ (Hacim)** biriminde elde edilir. **Miktar (Menge, @201@)** ayarlı birime göre hacmi (m³), zemin alanını (m²), adedi ya da uzunluğu (m) verir; imalat kalemi ayarı değerleri etkiler. **Net Miktar (Nettomenge, @99@)** net hacmi, zemin alanını, adedi ya da yüksekliği verir; tüm boşluklar dikkate alınır. **VOB_Miktarı (VOB_Menge, @100@)** hacmi, zemin alanını, adedi ya da uzunluğu verir; boşluklar ayarlı imalat kaleminin kurallarına göre, kalem ya da hakediş kuralı yoksa tümüyle dikkate alınır. m³ dışındaki birimlerde değer çizim sırasına bağlıdır ve tarafsız metraj için ancak sınırlı ölçüde uygundur."
+      },
+      {
+        "type": "text",
+        "text": "**İmalat Kalemi (Gewerk, @209@)** metin biçiminde kalemin adını, sayı biçiminde (örneğin I10, F8.2) numarasını verir. **VOB_Alanı (VOB_Fläche, @81@)** ve **VOB_Uzunluğu (VOB_Länge, @80@)** çizim sırasına bağlıdır, tarafsız metraj için ancak sınırlı ölçüde uygundur. **VOB_Hacmi (VOB_Volumen, @82@)** hacmi varsa VOB kurallarına göre verir; m³ birimiyle VOB_Miktarı'na eşittir."
+      },
+      {
+        "type": "text",
+        "text": "**İç ve dış köşeler:** **İç_Köşe_Sayısı (Anzahl_Innenecken, @91@)** ve **Dış_Köşe_Sayısı (Anzahl_Außenecken, @92@)** yapı elemanının köşelerini sayar; iç köşeler daha dar, dış köşeler daha geniş açılıdır. Sınır açı 180° - 360° / 19 = 161,0526316° olarak hesaplanır. Kat planındaki köşeler değerlendirilir ve yalnız yapı elemanının kendi köşeleri sayılır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/11384_0EM7U000001Td7Z_eca6d3ed.png",
+        "caption": "Köşe sayımı örneği: İç köşe 4, dış köşe 1"
+      },
+      {
+        "type": "text",
+        "text": "Zemin Alanı, Tavan Alanı, Yan Yüzey Alanı, Orta Alan, Miktar, Net Miktar, VOB_Miktarı, VOB_Alanı, VOB_Uzunluğu ve VOB_Hacmi en fazla **Seçenekler (Optionen) -> İzlenebilir Metraj Yaklaşımları (Nachvollziehbare Mengenansätze) -> Alt alanların ondalık basamak sayısı (Anzahl der Nachkommastellen der Teilflächen)** altında ayarlı basamak sayısını gösterir."
+      },
+      {
+        "type": "text",
+        "text": "**Toplam duvar ve boşluklar:** Toplam duvar kalınlık dışında değerlendirilebilir geometri bilgisi taşımaz; toplam kalınlığı **PARENT(@220@)** formülü verir ve değer çizim sırasına bağlıdır. PARENT(@XYZ@) ile toplam duvara bağlanmış bilgilere (kuru yapı duvar tipi, yangın koruması, ses yalıtımı) erişilir; bu yön her zaman tekil değer verir. Boşluklar poligon duvarın alt öğeleridir ve CHILD() ile aşağıya bakılır; bu yön çoğunlukla birden fazla obje içerdiğinden tekil değildir."
       },
       {
         "type": "heading",
-        "text": "Nitelikler - Duvar ve Toplam Duvar için genel bakış (PARENT() ile)"
+        "text": "Tadilat Planlaması - Mevcut Bir Duvar Üzerinde Isı Yalıtımı"
       },
       {
         "type": "text",
-        "text": "Tek ve cok katmanli duvarlarda yalnizca dogrudan secilen katmanin (Wandschicht) nitelikleri etiketlenir (poligon ve profil duvarlar bu kapsamda degildir). Diger katmanlarin, toplam duvarin (Gesamtwand) ve bosluklarin nitelikleri formullerle elde edilir."
+        "text": "Bu dersteki çok katmanlı duvar bilgisi tadilat planlamasında da işe yarar: mevcut bir duvara ısı yalıtımı eklemenin iki yolu vardır."
       },
       {
         "type": "text",
-        "text": "`PARENT(@XYZ@)` formuluyle bir duvar katmanindan yukari bakilarak toplam duvara atanmis bilgilere (orn. duvar tipi, yangin dayanimi, ses yalitimi) erisilir; bu yon her zaman tekil ve net deger verir. `CHILD()` ile asagi, alt objelere (orn. bosluklar) bakilir; bu yon cogunlukla birden fazla obje icerdiginden tekil degildir. Orn. `CHILD(@215@)` bir katmanin alt obje sayisini verir (en az 1,00); `CHILD(_IF_(@OBJ@=22)@215@_ELSE_0)` ise yalnizca belirli bir obje turunu sayar."
+        "text": "İlgili alanda hiç boşluk yoksa ya da yalnız birkaç boşluk varsa mevcut duvarın dışına yalıtım katmanı olarak **yeni bir duvar** çizmeyi tercih edin. Boşlukların bulunduğu alanlarda bu yöntem, her boşluk için yeni duvarda da bir **yeni yapı boşluğu (Neubauöffnung)** (makro ve diş elemanı olmadan) oluşturmanız gerektiği anlamına gelir. Çok sayıda boşluk içeren duvarlarda bundan kaçınmak için şu adımları izleyin."
+      },
+      {
+        "type": "text",
+        "text": "**Adım 1:** Tek katmanlı duvarınızı duvar özelliklerinden iki katmanlı bir duvara dönüştürün. İkinci katmana gereken kalınlığı ve yüksekliği verin."
       },
       {
         "type": "image",
-        "src": "/akademi/temel-modelleme/9161_0EM7U000001TeWY_b5050b7a.png",
-        "caption": "Duvar katmaninin geometrik ve metraj niteliklerinin genel gorunumu."
+        "src": "/akademi/temel-modelleme/10798_0EM7U000001TeNI_692acc50.png",
+        "caption": "Solda tek katmanlı mevcut duvar, sağda dışına ikinci katman eklenmiş duvar (kat planı)"
+      },
+      {
+        "type": "text",
+        "text": "**Adım 2:** Asistanda uygun bir yalıtım katmanı bulun ve bu duvar katmanına sağ tıklayın. Bağlam menüsünde **Tadilat Planlaması Dönüştürme (Umwandlung Umbauplanung)** fonksiyonunu seçin; ayarlar bu sırada devralınır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10798_0EM7U000001TeNJ_ca67f81b.png",
+        "caption": "Asistanda duvar katmanının bağlam menüsü: Umwandlung Umbauplanung"
+      },
+      {
+        "type": "text",
+        "text": "**Adım 3:** **Ne yeni yapıya dönüştürülsün? (Was soll in Neubau gewandelt werden?)** sorusunda iki katmanlı duvarınızın yeni eklenen dış katmanını işaretleyin ve **Uygula (Anwenden)** ile onaylayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10798_0EM7U000001TeNK_4e4ac506.png",
+        "caption": "Dış katman işaretlenip uygulandıktan sonra yeni yapı taramasıyla gösterilen yalıtım katmanı"
+      },
+      {
+        "type": "text",
+        "text": "**Adım 4:** Bunu **Mimari Yapı Elemanı Özelliklerini Aktar (AR-Bauteileigenschaften übertragen)** fonksiyonuyla diğer dış duvarlara da uygulayabilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10798_0EM7U000001TeNL_b33c6eb2.png",
+        "caption": "AR-Bauteileigenschaften übertragen fonksiyonunun simgesi"
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Seçtiğiniz yönteme göre dıştaki parapet çizgilerinin yıkım paftası (Abbruchplan) görünümünde görünür kalacağını ya da eksik olacağını unutmayın. Bunun önüne ancak ilgili parapetleri devre dışı bırakarak ve gerekirse sonradan 2B çizgiyle düzelterek geçebilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10798_0EM7U000001TeNM_27652d2c.png",
+        "caption": "Tadilat planı (Umbauplan) ve yıkım planı (Abbruchplan): iki katmanlı duvar örneği ve yeni duvar örneği; kırmızı oklar parapet çizgilerindeki farkı gösteriyor"
+      },
+      {
+        "type": "heading",
+        "text": "YENİLİK 2024 - Otomatik Duvar Birleşim Donatısı"
+      },
+      {
+        "type": "text",
+        "text": "ALLPLAN 2024 sürümüyle duvar birleşimleri için **otomatik duvar birleşim donatısı (Automatische Wandanschlussbewehrung)** geldi."
       }
     ]
   },

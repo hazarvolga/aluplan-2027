@@ -145,5 +145,61 @@
     "task": "SDS2 Operator ve Power User sertifikalarının kazanımlarını karşılaştırıp, bir detaylandırma bürosunda hangi görevler için hangi seviyenin gerektiğini iki cümleyle yazın.",
     "expected": "Operator temel modelleme ve içe/dışa aktarmayı; Power User bağımsız proje teslimi, kullanıcı tanımlı bağlantılar ve CNC dışa aktarmayı kapsar.",
     "hint": "CNC yapılandırması ve kullanıcı tanımlı bağlantı anahtar ayırt edici kazanımlardır."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "SDS2 Temel Seviye (Level 1) kursu"
+      },
+      {
+        "type": "text",
+        "text": "SDS2 eğitim yolu bir temel kursla başlar ve üç sertifika düzeyiyle ilerler. Bu bölümler her basamağın neyi kapsadığını gösterir."
+      },
+      {
+        "type": "text",
+        "text": "**Temel Seviye (Fundamentals, Level 1)** kursu SDS2 deneyimi olmayanlar için tasarlanmıştır; biraz deneyiminiz varsa temel konuları tazelemek için de uygundur. SDS2 deneyimi şart değildir, ama çelik detaylandırma deneyimi güçlü biçimde önerilir."
+      },
+      {
+        "type": "text",
+        "text": "Kursu tamamladığınızda SDS2'de bir işi tamamlamanın temel sürecini anlatabilir; SDS2 Ana Ekranı (Home Screen), Modelleme (Modeling) ve Çizim Düzenleyici (Drawing Editor) arayüzlerinde gezinebilir; kiriş, kolon, düşey ve yatay çaprazlar gibi temel elemanları (Members) modelleyebilir; paftaları (Sheets) oluşturup açıklama ekleyebilir ve yazdırabilirsiniz."
+      },
+      {
+        "type": "heading",
+        "text": "SDS2 Operator (Operatör) sertifikası"
+      },
+      {
+        "type": "text",
+        "text": "**SDS2 Operatör (Operator)** sertifikası, SDS2'nin süreçlerini ve yeteneklerini temel düzeyde anladığınızı gösterir. Bu giriş sertifikası, sahibinin SDS2'de günlük çalışmaya başlayabilecek durumda olduğunu belgeler."
+      },
+      {
+        "type": "text",
+        "text": "Kazanımlar Temel Seviye kursunun kazanımlarını kapsar ve bir madde ekler: SDS2'ye bilgi içe aktarma ve SDS2'den bilgi dışa aktarma."
+      },
+      {
+        "type": "heading",
+        "text": "SDS2 Power User sertifikası"
+      },
+      {
+        "type": "text",
+        "text": "**SDS2 Power User** sertifikası, SDS2 ile çelik detaylandırma projelerini teslim etme yetkinliğinizi gösterir. Sahibi, bir çelik detaylandırma projesinin tipik tüm işlerini yapabilir: veri içe aktarma, eleman ve bağlantı modelleme, çizim ve veri dışa aktarma. Bu düzeydeki kullanıcılar bağımsız, karmaşık projelerde ise sınırlı gözetimle çalışabilir; kuruluş genelinde paylaşılan standartların uyarlanması ve yönetimi için daha deneyimli SDS2 kullanıcılarının gözetimi gerekebilir."
+      },
+      {
+        "type": "text",
+        "text": "Kazanımlar: SDS2'deki tüm yerel eleman tiplerini modellemek; eleman ve malzeme ayrıntılarını Proje Ayarları (Project Settings) ile yapılandırmak; sistemin ürettiği bağlantıları yapılandırmak ve kullanıcı tanımlı bağlantılar oluşturmak; SDS2 Lisans Portalında (SDS2 Licensing Portal) lisansları yönetmek. İmalat için CNC dışa aktarımı kazanımını 5. derste göreceksiniz."
+      },
+      {
+        "type": "heading",
+        "text": "SDS2 Instructor (Eğitmen) sertifikası"
+      },
+      {
+        "type": "text",
+        "text": "**SDS2 Eğitmen (Instructor)** sertifikası ileri düzey teknik SDS2 bilgisini gösterir: sahibi projeleri tamamlayacak özellik ve süreç bilgisinin yanında bunu daha az deneyimli kullanıcılara öğretebilecek düzeydedir. Sertifika sahipleri SDS2 kullanıcılarına eğitim ve rehberlik sağlar; Bilgi Düzeyi 3'e kadar, yani Power User sertifikası için gereken becerileri öğreten programlar dahil, eğitim verebilir."
+      },
+      {
+        "type": "text",
+        "text": "Sertifika, özel kullanım alanlarına yönelik ileri iş akışlarını (örneğin çelik imalatçılarının şirket içi detaylandırıcıları ya da çeşitli metal işleri detaylandırıcıları) değerlendirmez. Sınav yalnız teknik bilgiyi ölçer; öğretme, eğitim verme ya da eğitim içeriği tasarlama becerisini değerlendirmez."
+      }
+    ]
   }
 }

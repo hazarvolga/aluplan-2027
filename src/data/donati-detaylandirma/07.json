@@ -150,5 +150,153 @@
     "task": "Donatı görünümleri olan bir çizim dosyasını seçip Ctrl+C ile panoya alın ve boş bir hedef çizim dosyasına Ctrl+V ile yapıştırın. Hedefin hangi model çizim dosyalarına bağlandığını kontrol edin.",
     "expected": "Hedef çizim dosyasının model çizim dosyalarına bağlanması ve kesme (Ctrl+X) denendiğinde uyarı mesajı almanız.",
     "hint": "Projeler arası kopyalama için panoyu değil ProjectPilot'u kullanın ve bağ koruma seçeneğine dikkat edin."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Donatı Görünümlerini Kopyalama"
+      },
+      {
+        "type": "text",
+        "text": "Donatı görünümleri (Bewehrungsansichten; Almanca arayüzde ilişkisel görünümler, Assoziative Ansichten) model verisine bağlı ayrı çizim dosyalarında tutulur. Bu bölümde onları aynı çizim dosyası içinde, başka bir çizim dosyasına ve projeler arasında kopyalamayı görüyorsunuz. **Not:** Kopyalamadan önce mutlaka bir proje kopyası oluşturun."
+      },
+      {
+        "type": "text",
+        "text": "**Aynı çizim dosyası içinde kopyalama, çıkış durumu:** Model verisi bir ya da birkaç çizim dosyasındadır (örneğin TB 1-3), donatı görünümleri ayrı bir çizim dosyasındadır (örneğin TB 11)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11119_0EM7U000001TdWm_a4653333.png",
+        "caption": "Projeye göre aç: model verisi TB 1, 2, 3 (EG Gründung, Wände, Decke), görünümler TB 11 (EG Ansichten/Schnitte)"
+      },
+      {
+        "type": "text",
+        "text": "**Kopyala (Kopieren) fonksiyonu:** Kopyalanacak kesitin kesit gövdesini (Schnittkörper) gösterin (burada TB 11'de). Bunun için kesit özelliklerinde **Kesit gövdesini göster (yardımcı konstrüksiyon gibi)** seçeneğini işaretleyin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11119_0EM7U000001TdWn_2ba596bb.png",
+        "caption": "Kesit özellikleri: Schnittkörper darstellen (wie Hilfskonstruktion) işaretli"
+      },
+      {
+        "type": "text",
+        "text": "Bu kesit gövdesi daha sonra **taşınabilir** ya da **kopyalanabilir**. Kopyalanan kesiti gerekirse taşıyın ve kesit özelliklerinde kesit adını (Schnittbezeichnung) uyarlayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11119_0EM7U000001Tdiy_6f6c8611.png",
+        "caption": "Kesit özelliklerinde Beschriftung bölümü: Schnittbezeichnung 1"
+      },
+      {
+        "type": "text",
+        "text": "Diğer bir yol: önce kesitin kendisini kesit gövdesi gösterilmeden kopyalayın, sonra kesit gövdesini gösterip uygun yere taşıyın ve kesit adını uyarlayın."
+      },
+      {
+        "type": "text",
+        "text": "**Başka bir çizim dosyasına kopyalama, çıkış durumu:** Model verisi bir ya da birkaç çizim dosyasındadır (örneğin TB 101-103), donatı görünümleri ayrı bir çizim dosyasındadır (örneğin TB 111)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11119_0EM7U000001Tdiz_19c1e611.png",
+        "caption": "Projeye göre aç: model verisi TB 101-103, görünümler TB 111"
+      },
+      {
+        "type": "text",
+        "text": "**Pano üzerinden:** Bağlı bir çizim dosyasının (burada 111) donatı görünümleri pano ile başka bir çizim dosyasına (örneğin TB 112) şu akışla kopyalanabilir. TB 111'deki tüm donatı görünümlerini seçip panoya alın (**Ctrl+C**). **Dikkat:** Burada yalnız kopyalama çalışır; **kesme (Ctrl+X) çalışmaz** ve şu mesaj görünür:"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11119_0EM7U000001Tdj0_e63e82c7.png",
+        "caption": "Mesaj: Elemente aus assoziativen Ansichten werden nicht kopiert"
+      },
+      {
+        "type": "text",
+        "text": "Hedef çizim dosyasını (burada TB 112) etkin yapın. Model çizim dosyası arka planda etkin ya da pasif olmalıdır; kaynak çizim dosyası (burada TB 111) tamamen kapatılabilir. Görseldeki örnekte model verisi TB 1-3, kaynak TB 11, hedef TB 12'dir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11119_0EM7U000001Tdj1_7b443c6f.png",
+        "caption": "Hedef çizim dosyası TB 12 (Kopie) etkin, model TB 1-3 arka planda"
+      },
+      {
+        "type": "text",
+        "text": "**Yapıştır (Ctrl+V)** ya da **Özgün konuma yapıştır (Ctrl+Alt+V)** deyin. Şu mesaj görünür: hedef çizim dosyasındaki görünümler model çizim dosyalarına bağlanır. Yani bu çizim dosyası (burada TB 112) artık model çizim dosyalarına (burada TB 101-103) bağlıdır, ama TB 111'e değil."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11119_0EM7U000001Tdj2_c4ecb083.png",
+        "caption": "Mesaj: yeni çizim dosyası bağlantıları oluşturuluyor; TB 12'deki görünümler TB 1, 2, 3'e bağlanıyor"
+      },
+      {
+        "type": "text",
+        "text": "Tek tek donatı görünümlerini de pano ile başka çizim dosyalarına kopyalayabilirsiniz. Örneğin bir kalıp planının tüm donatı görünümlerini başka bir çizim dosyasına kopyalayıp orada düzenleyebilir, yeni görünümlerle tamamlayarak bir **donatı planı** için kullanabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Belgeler Arası Kopyala, Taşı (Dokumentübergreifend kopieren, verschieben) ile:** Donatı görünümleri bu fonksiyonla da başka bir çizim dosyasına kopyalanabilir. Ancak diyalogda **Hedef çizim dosyasının gösterimi (Darstellung des Zielteilbilds)** kutusu işaretli olmamalıdır; işaretliyse aşağıdaki mesaj görünür."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11119_0EM7U000001Tdj3_8a9e4ad9.png",
+        "caption": "Dokumentübergreifend diyaloğu: Kopieren seçili, Darstellung des Zielteilbilds işaretli"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11119_0EM7U000001Tdj4_fd81dcb5.png",
+        "caption": "Mesaj: Befehl funktioniert nicht in Teilbildern mit Assoziativen Ansichten"
+      },
+      {
+        "type": "text",
+        "text": "Kutu işaretli değilse hem taşıyabilir hem kopyalayabilirsiniz; model çizim dosyalarına yeni bağlantılar oluşur. Bu fonksiyonla yalnız boş çizim dosyalarına kopyalayabileceğinizi unutmayın; seçilen hedef çizim dosyası doluysa şu mesaj görünür:"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11119_0EM7U000001Tdj5_c5d1a193.png",
+        "caption": "Mesaj: Bereits gewähltes Teilbild nicht zulässig!"
+      },
+      {
+        "type": "text",
+        "text": "**Projeler arası kopyalama:** Donatı görünümlerini pano ile bir projeden başka bir projeye kopyalamak mümkün değildir. Donatı görünümlü çizim dosyalarını **ProjectPilot** ile başka bir projeye kopyalarken (**Kopyala (Kopieren nach...)**) iki seçenek sunulur."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11119_0EM7U000001Tdj6_c947ade6.png",
+        "caption": "ProjectPilot: EG Ansichten/Schnitte (11) için Kopieren nach... komutu"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11119_0EM7U000001Tdj7_d9678e00.png",
+        "caption": "ProjectPilot mesajı: TB 11, TB 1, 2, 3 ile bağlı; Ja, Nein, Abbrechen"
+      },
+      {
+        "type": "text",
+        "text": "**Evet (Ja):** Bağlantılar korunur. Model çizim dosyaları da hedef projeye kopyalanır ve çizim dosyası numaralarının yapısı korunur. Örneğin TB 211, model çizim dosyaları 201-203 ile birlikte hedef projede TB 11'e kopyalanır; model çizim dosyaları hedef projede otomatik olarak TB 1, 2, 3'e kopyalanır. Bu numaralar doluysa üzerine yazma sorulur."
+      },
+      {
+        "type": "text",
+        "text": "**Hayır (Nein):** Bağlantılar kaybolur. Yalnız donatı görünümlü TB 211 kopyalanır. Bu çizim dosyasının başka çizim dosyalarıyla bağlantısı yoktur; temelde yalnız \"boş\" donatı görünümleri (ve elbette kesit adları vb.) içerir. Boş görünümlü bu çizim dosyasını daha sonra **Görünüme Ekle (Paste into view)** ile istediğiniz model çizim dosyalarına yeniden bağlayabilirsiniz."
+      },
+      {
+        "type": "heading",
+        "text": "Donatı Görünümleri Modülünün Allplan 2023'te Kaldırılması"
+      },
+      {
+        "type": "text",
+        "text": "Allplan 2023'ten itibaren eski donatı görünümleri (Bewehrungsansichten) modülü yoktur. Bu modülle çizdiğiniz verileri bu sürümden sonra nasıl kullanmaya devam edeceğinizi bilmeniz gerekir."
+      },
+      {
+        "type": "text",
+        "text": "**Donatı görünümleriyle çizdiğiniz veriler otomatik olarak 2B elemanlara dönüştürülür.** Bu yüzden ya bu projeleri bitirene kadar 2023 kurulumunu bekleyin ya da yükseltmeyi kurmadan önce eski sürümde projelerinizin, büro ve kullanıcı verilerinizin yedeğini mutlaka alın. Devam eden bir projenin Allplan 2023 veya üstünde mi sürdürüleceğine, yoksa bu nedenlerle Allplan 2022'de mi tamamlanacağına dikkatle karar verin."
+      },
+      {
+        "type": "text",
+        "text": "**2023 ve sonrasında dönüştürme:** 2022'ye kadarki sürümlerden gelen donatı görünümlü veriler, proje ilk açıldığında ya da .ndw uzantılı dosyalar ilk açıldığında otomatik dönüştürülür. Kalıp ya da donatı planlarının **pafta düzeni (Planlayout)** korunur. Donatının **3B modeli** korunur. **Donatı görünümleri** (ve içlerinde gösterilen donatı) **2B konstrüksiyon ve metinlere** dönüştürülür."
+      },
+      {
+        "type": "text",
+        "text": "**Verilerle çalışmaya devam:** Donatı **3B model** olarak kaldığı için çizim dosyası dönüştürüldükten sonra bu model verisinden yeniden **yeni görünüş ve kesitler** türetebilirsiniz. Donatı yerleştirilmeye, değiştirilmeye ve etiketlenmeye devam edilebilir; **şemalar**, **lejantlar** ve **raporlar** eskisi gibi oluşturulur."
+      }
+    ]
   }
 }

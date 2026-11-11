@@ -195,66 +195,78 @@
       },
       {
         "type": "text",
-        "text": "Arazi modülü, Allplan'da çoğu kullanıcının az tanıdığı ama güçlü bir modüldür. Bu Derinlemesine bölüm, modülün temel araçlarını tek bir akış halinde özetler. Ekran görüntüleri Fransızca bir Allplan arayüzünden alınmıştır; komut adlarının Türkçesini parantez içindeki Fransızca karşılıklarıyla birlikte bulacaksınız. Modüle girmek için önce rolünüzü Çevre / Arazi (Environnement) rolüne değiştirin."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tfSD_8e03becf.png",
-        "caption": "Çevre / Arazi (Environnement) rolüne geçiş. Arayüz Fransızcadır."
-      },
-      {
-        "type": "text",
-        "text": "Modül içinde arazi noktası dosyalarını içe veya dışa aktarabilirsiniz. .re1, .re2, .reb ve .asc biçimleri Allplan'a doğrudan içe aktarılır; diğer biçimler için Scalypso eklentisiyle önce dönüştürüp sonra içe aktarın. Noktaları doğrudan Allplan içinde 3B olarak da oluşturabilirsiniz. İçe aktarılan veya elle yerleştirilen 3B noktaları üçgenleyerek (ağ oluşturarak) bir Sayısal Arazi Modeli (MT3D) elde edersiniz."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tfdV_4d3d07fa.png",
-        "caption": "3B arazi noktalarının üçgenlenmesiyle oluşan Sayısal Arazi Modeli (MT3D) ağı."
-      },
-      {
-        "type": "text",
-        "text": "Arazinin gösterimini yönetebilir, topoğrafyayı renk geçişli (gradyan) bir dolgu biçiminde geçici olarak görüntüleyebilirsiniz."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tfgj_6714924e.png",
-        "caption": "Topoğrafyanın renk geçişli (gradyan) dolgu ile geçici gösterimi."
-      },
-      {
-        "type": "text",
-        "text": "Eşyükselti eğrilerini (courbes de niveaux) çok kolay üretebilirsiniz. Dış Sınır (contour extérieur) aracıyla ağın dış sınırını oluşturur veya yeniden sınırlandırır; Ağ Noktası (Point de maillage) aracıyla ağ noktalarını ekler, değiştirir veya silersiniz. MT3D ağına nokta, çizgi, poligon çizgisi veya spline gibi elemanlar ekleyebilir, Boşluk Açma (évidement) fonksiyonuyla arazinin bir kısmında boşluk oluşturabilirsiniz."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tfon_fe2a6cb2.png",
-        "caption": "Eşyükselti eğrilerinin (courbes de niveaux) otomatik oluşturulması."
-      },
-      {
-        "type": "text",
-        "text": "Bir profil kesiti çizip 2B profil şeması çıkarabilirsiniz. Belirli bir kesit için (örneğin bir yol ekseni) mevcut bir 2B çizgiyi veya spline'ı referans alabilirsiniz. Önce bir profil kesiti tanımlayın, ardından bu kesitten profil şemasını üretin."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tg6X_3809d03c.png",
-        "caption": "Adım 1: profil kesitinin tanımlanması. Ardından bu kesitten 2B profil şeması çıkarılır."
-      },
-      {
-        "type": "text",
-        "text": "İlk araziyi şev (talus) fonksiyonlarıyla değiştirerek dolgu (remblai) veya kazı (déblai) yapabilirsiniz. Genel Şev (talus général) aracı bir platformun oturma alanını ve şev eğimini tanımlar; Serbest Şev (talus quelconque) aracı platform çizimini ve şevlerin oturma alanını tümüyle grafiksel belirlemenizi sağlar."
+        "text": "Maket öncesinde bina oturumu için ilk araziyi şev (Talus) fonksiyonlarıyla değiştirip dolgu (Remblai) ya da kazı (Déblai) yapabilirsiniz. **Genel şev (Talus général)** aracı bir platformun oturma alanını ve şevlerin eğimini tanımlamanızı sağlar; **Serbest şev (Talus quelconque)** aracı ise platformun çizimini ve şevlerin oturma alanını tümüyle grafik olarak belirlemeyi kolaylaştırır."
       },
       {
         "type": "image",
         "src": "/akademi/arazi-modelleme/9311_0EMVi000003teER_e58f33f8.png",
-        "caption": "Şev (talus) fonksiyonlarıyla dolgu/kazı ve platform oluşturma."
+        "caption": "Talus général: kazı ve dolgu şevleri otomatik oluşturulan bir platform"
       },
       {
         "type": "text",
-        "text": "İki araziyi karşılaştırabilmek için bu değişiklikleri ilk arazinin bir kopyası üzerinde ayrı bir çizim dosyasında yapın. Sonra Kübajları Belirle (déterminer les cubages) aracıyla kazı/dolgu hacimlerini hesaplayıp bir rapor üretebilirsiniz. Son olarak bir 3B arazi ağını 3B yüzeye veya hacme (ya da tersine) dönüştürerek Allplan'ın serbest modelleme modülüne geçebilir ve Boolean operatörlerini kullanabilirsiniz."
+        "text": "Bu değişiklikleri ilk arazinin bir kopyası üzerinde, ayrı bir çizim dosyasında yapmayı unutmayın; ancak böylece iki araziyi **Kübajları belirle (Déterminer les cubages)** aracıyla karşılaştırabilirsiniz. Araç, özellik kutusundaki ayarlarla (örneğin veri tipi 22.013) kazı ve dolgu bölgelerini planda renkli olarak gösterir."
       },
       {
         "type": "image",
         "src": "/akademi/arazi-modelleme/9311_0EMVi000003tg89_41f80b82.png",
-        "caption": "Kübajları Belirle (déterminer les cubages) ile kazı/dolgu hacimlerinin hesaplanması."
+        "caption": "Déterminer les cubages: özellik kutusu (Typ-Do 22.013, kazı ve dolgu renkleri) ve grafik sonuç"
+      },
+      {
+        "type": "text",
+        "text": "Ardından bir rapor oluşturabilirsiniz: rapor kazı (Déblai) ve dolgu (Remblai) için ilk SAM'ı, değiştirilmiş SAM'ı ve aradaki farkı taban alanı, yüzey ve hacim olarak listeler."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tgGD_0e5359fe.png",
+        "caption": "Kübaj raporu: Déblai ve Remblai için MT3D, MT3D modifié ve fark (taban alanı, yüzey, hacim)"
+      },
+      {
+        "type": "heading",
+        "text": "Add-On PatchWork - Kristallblick Yerleşkesi"
+      },
+      {
+        "type": "text",
+        "text": "**PatchWork (Add-On PatchWork)** eklentisi, eski SAM (DGM) modülüne göre karmaşık arazileri daha verimli modellemeyi amaçlar; Kristallblick yerleşkesi örneğinde eğimli bir arazide yollar, rampalar ve teras yüzeyleri modellenip araziye uyarlanıyor."
+      },
+      {
+        "type": "heading",
+        "text": "Add-On Baugrube (Yapı Çukuru Eklentisi) - Altgeçit SAY (DGM) Modelleme"
+      },
+      {
+        "type": "text",
+        "text": "**Yapı Çukuru (Add-On Baugrube)** ile sayısal arazi, 3B modelleme ve yapı çukurları birleştirilebilir: alt geçit örneğinde 3B yüzeyler oluşturulur, bölgeler modellenir, yapı çukurları üretilir ve karmaşık geometriler kesilip birleştirilir."
+      },
+      {
+        "type": "heading",
+        "text": "Add-On Baugrube (Yapı Çukuru Eklentisi) - 3B Elemanları Kırpma/Kesme"
+      },
+      {
+        "type": "text",
+        "text": "Yapı Çukuru eklentisinin 3.008 sürümündeki **3B Elemanları Kırp (3D-Elemente zuschneiden)** komutu katıları, yüzeyleri ve çizgileri hassas biçimde keser ve bu sırada dış kenarı kaldırır; arazi ve bina verilerini maket için düzenlerken zaman kazandırır."
+      },
+      {
+        "type": "heading",
+        "text": "Add-On Geometry Tools (Geometri Araçları Eklentisi) - Üçgen Ağı Basitleştirme"
+      },
+      {
+        "type": "text",
+        "text": "**Geometri Araçları (Add-On Geometrie Tools)** eklentisinin 2. sürümündeki **Üçgen Ağ Basitleştirme (3eck-Netz-Vereinfachung)** fonksiyonu, basit figürlerden ayrıntılı 3B modellere ve sayısal arazi modellerine kadar poligon sayısını azaltır; ağır bir arazi maketini hafifletmek için kullanışlıdır."
+      },
+      {
+        "type": "heading",
+        "text": "Add-On Element Converter (Eleman Dönüştürücü Eklentisi) - 3B Katı Modeller ve Yapı Elemanları"
+      },
+      {
+        "type": "text",
+        "text": "**Eleman Dönüştürücü (Add-On ElementConverter)** eklentisi 3B katı modelleri duvar, pencere, kapı, kolon ve döşeme gibi mimari yapı elemanlarına dönüştürür; poligonal elemanlar basit komutlarla yorumlanıp dönüştürülür."
+      },
+      {
+        "type": "heading",
+        "text": "Allplan Kazı Çukuru - Bir 3B Hacmin Alt Yüzünü devralma"
+      },
+      {
+        "type": "text",
+        "text": "Kazı Çukuru (Baugrube) fonksiyonunda kazı oluşturmak için bir 3B hacmin alt yüzünü de kullanabilirsiniz; örneğin bodrum hacminin alt yüzü kazı tabanı olur."
       }
     ]
   },

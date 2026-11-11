@@ -113,75 +113,64 @@
     "blocks": [
       {
         "type": "heading",
+        "text": "YENİLİK 2024 - Masif Döşeme"
+      },
+      {
+        "type": "text",
+        "text": "ALLPLAN 2024 yenilikleri arasında masif döşemelerin prekast döşeme elemanlarına ayrılması (Deckenelementierung) da yer alır."
+      },
+      {
+        "type": "heading",
         "text": "Çatı - Kat - Ara döşeme oluşturma"
       },
       {
         "type": "text",
-        "text": "Çatı katında, eğimli çatı düzlemine ya da çatı yüzeyine (Dachlandschaft) temiz uyan bir ara döşeme oluşturmak istersiniz. Bunu üç aşamada yaparsınız: önce döşemeyi serbestçe çizersiniz, sonra doğru kot bağlantısını verirsiniz, en sonunda yayılım alanını çatı eğimine göre kesersiniz."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiQ_3445deeb.png",
-        "caption": "Hedef: çatı eğimine temiz uyan ara döşeme."
+        "text": "Çatı katındaki ara döşemenin kot bağlantısını Çizim Dosyaları ve Yükseklik İlişkileri dersinde ayarladınız. Bu derste döşemenin kendisini çiziyor ve yayılım alanını çatı eğimine göre kesiyorsunuz."
       },
       {
         "type": "text",
-        "text": "**Döşemeyi çizin.** Önce tüm kat planının üzerine bir döşeme çizin. Kot bağlantısı ve doğru yayılım alanıyla sonraki adımlarda ilgileneceksiniz; bu aşamada döşeme bilinçli olarak gereğinden büyüktür."
+        "text": "**Döşemeyi çizin:** Önce döşemeyi tüm kat planının üzerine çizin; kot bağlantısıyla ve doğru yayılım alanıyla sonraki adımlarda ilgilenirsiniz. Bu aşamada döşeme bilerek çatı eğiminin dışına taşar."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiR_9caad228.png",
-        "caption": "Döşeme tüm kat planının üzerine çizili."
+        "caption": "Tüm kat planı üzerine çizilmiş, çatı eğiminin dışına taşan döşeme"
       },
       {
         "type": "text",
-        "text": "**Kot bağlantısını ayarlayın.** Döşemenin üzerine çift tıklayıp Yükseklik (Höhe) yolunu izleyin. Üç değeri girersiniz: (1) çatı düzleminin alt kotu ile döşeme alt kotu arasındaki mesafe, (2) istediğiniz döşeme kalınlığı, (3) kenar bölgesinin, yani döşeme alın yüzeyinin, eğimli çatı düzlemine hangi mesafeyle uyacağı. Bu örnekte üçüncü değer 0,00 olduğundan döşeme üstteki eğimli düzleme sıfır mesafeyle birleşir."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiS_c1a4a6cb.png",
-        "caption": "Yükseklik diyaloğunda üç kritik değer."
-      },
-      {
-        "type": "text",
-        "text": "**Uyarıyı anlayın.** Doğru kot girildikten sonra büyük olasılıkla bir uyarı görürsünüz. Nedeni, bu ara adımda henüz negatife doğru gelişen, geometrik olarak mümkün olmayan bir 3B yapı elemanı üretmiş olmanızdır. Yayılım alanını düzelttiğinizde bu sorun ortadan kalkar."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiU_c72c8b84.png",
-        "caption": "Kot bağlantısı sonrası görünen uyarı mesajı."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiV_43e9e984.png",
-        "caption": "Negatife gelişen, geometrik olarak imkansız ara yapı."
-      },
-      {
-        "type": "text",
-        "text": "**Yayılım alanını kesin.** Son adımda döşemenin kat planındaki yayılımını düzenlersiniz. Döşeme yalnızca çatı eğimine kadar uzanmalı, onu aşmamalıdır. Kat planından bir kalkan duvar (alın) görünüşüne geçin ve Düzen (Bearbeiten) menüsünden Noktaları Değiştir (Punkte modifizieren) komutunu seçin."
+        "text": "**Yayılım alanını düzenleyin:** Kot bağlantısını ayarladıktan sonra son adımda döşemenin kat planındaki yayılım alanını düzeltmeniz gerekir. Döşeme yalnız çatı eğimine kadar uzanmalı, onu aşmamalıdır."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiW_71755a0a.png",
-        "caption": "Döşeme yalnızca çatı eğimine kadar uzanmalı."
+        "caption": "Çatı eğiminin dışına taşan döşeme uçları (kırmızı çarpılar)"
       },
       {
         "type": "text",
-        "text": "Yalnızca döşemeyi değiştirdiğinizden emin olmak için Filtre Sihirbazı'ndan (Filter-Assistent) Mimari Filtresi'ni (Architekturfilter) açıp Döşeme (Decke) öğesini seçin. Döşemenin değiştirilecek kenar bölgesinin etrafına bir seçim penceresi çizin ve seçili noktaları, döşeme alt kotunun eğimli çatı düzlemiyle kesiştiği noktaya taşıyın. Aynı adımı diğer tarafta da tekrarlayın."
+        "text": "Kat planı görünümünden bir kalkan duvar (alın) görünüşüne geçin ve **Düzen (Bearbeiten) -> Noktaları Değiştir (Punkte modifizieren)** komutunu seçin. Yalnız döşemeyi değiştirdiğinizden emin olmak için **Filtre Sihirbazı (Filter-Assistent)** araç çubuğundaki **Mimari Filtresi (Architekturfilter)** düğmesine tıklayın ve **Döşeme (Decke)** öğesini seçin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiX_6218db6e.png",
+        "caption": "Mimari Filtresi (Architekturfilter) simgesi"
+      },
+      {
+        "type": "text",
+        "text": "Bir tarafta döşemenin değiştirilecek kenar bölgesinin çevresine bir seçim penceresi çizin ve seçilen noktaları kenar bölgesinden, döşeme alt kotunun eğimli çatı düzlemiyle kesiştiği noktaya taşıyın."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiY_91aae5ca.png",
-        "caption": "Noktaları çatı eğimiyle kesişim noktasına taşıma."
+        "caption": "Seçim penceresindeki noktaların kesişim noktasına taşınması (von Punkt, nach Punkt)"
       },
       {
         "type": "text",
-        "text": "**Sonuç.** Döşeme artık çatı eğimine temiz uyar. Not: Girinti çıkıntılı bazı döşemeler kot doğru olsa bile animasyonda görünmeyebilir. Böyle bir durumda Değiştir -> Mimari -> Yüzey Elemanı, Mimari Yüzey, Alan Değiştir fonksiyonuyla taşan bölgeleri genişçe kesip atın, sonra Noktaları Değiştir ile döşemeyi istediğiniz ölçüye yeniden genişletin."
+        "text": "Aynı adımı diğer tarafta tekrarlayın. Sonuç istediğiniz gibi görünür."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/10602_0EM7U000001TdiZ_7f5d3c20.png",
-        "caption": "Tamamlanmış ara döşeme."
+        "caption": "Sonuç: eğimli kenarlı ara döşeme 3B, kesit ve kat planında"
       },
       {
         "type": "heading",
@@ -189,28 +178,67 @@
       },
       {
         "type": "text",
-        "text": "Döşemelerin etiketlenmesi ve metraj değerlendirmesi için döşemenin kendi nitelikleri doğrudan kullanılabilir. Boşlukların (delik, girinti) nitelikleri ise CHILD() çağrısıyla alt objeden okunur."
+        "text": "Çizdiğiniz döşemeleri etiketlemek ve metrajını almak için döşemenin kendi nitelikleri doğrudan kullanılabilir. Döşemeye bağlı alt elemanların, yani boşlukların (delik, girinti) nitelikleri ise ek bir çağrıyla, **CHILD()** üzerinden değerlendirilir."
       },
       {
         "type": "text",
-        "text": "Geometrik nitelikler: Üst kot (OK, ID 98/113) ve Alt kot (UK, ID 97/112) döşemede 0,00 üzerindeki ortalama kotları verir. Yükseklik (Höhe, ID 222) ortalama eleman yüksekliğini, Mutlak yükseklik (Höhe_absolut, ID 224) alt kottan en yüksek noktaya kadarki maksimumu verir. Uzunluk ve Kalınlık nitelikleri ilk çizilen kenardan türediği için döşemede tarafsız metrajda kullanılamaz; çünkü döşemenin kiriş veya çok katmanlı duvar gibi önceden tanımlı bir ekseni yoktur."
+        "text": "**Kotlar:** **OK (98)** ve **Oberkante (113)** döşemenin 0.00'a göre ortalama üst kotunu, **UK (97)** ve **Unterkante (112)** ortalama alt kotunu verir."
       },
       {
         "type": "text",
-        "text": "Alan nitelikleri: Taban alanı (Grundfläche, ID 224) yatay izdüşümü boşluklar dolu sayılarak verir. Zemin alanı (Bodenfläche, ID 293) ve Tavan/döşeme alanı (Deckenfläche, ID 294) boşluklar düşülmüş gerçek alt/üst yüzeyi verir ve eleman formunu izler. Yan alan (Seitenfläche, ID 295) yanal kalıp yüzeyidir. Kalıp alanı (Schalungsfläche, ID 78) komşu duvar ve kolonlar düşüldükten sonra kalan alandır; bir imalat kalemi (Gewerk) tanımlıysa alan VOB kurallarına göre boşlukları dikkate alır."
+        "text": "**Yükseklik:** **Höhe (222)** düşey ölçülen **ortalama** eleman yüksekliğini, **Höhe_absolut (204)** eleman alt kotundan en yüksek noktasına kadarki **en büyük** değeri verir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9164_0EM7U000001Td7L_d8867246.png",
+        "caption": "Eğimli döşemede ortalama üst kot +3,13, alt kot +2,97 ve Höhe_absolut 1,61"
       },
       {
         "type": "text",
-        "text": "Hacim ve miktar: Hacim (Volumen, ID 223) brüt hacimdir, hiçbir boşluk düşülmez. Net hacim (Netto-Volumen, ID 226) boşluklar düşülmüş halidir; Minha hacmi (Abzugsvolumen, ID 227) boşlukların toplamıdır. Miktar (Menge, ID 201), Net miktar (Nettomenge, ID 99) ve VOB_Miktarı (VOB_Menge, ID 100), ayarlanan birim ve imalat kalemine göre hacim (m3), alan (m2), adet (St) veya uzunluk (m) yazdırır."
+        "text": "Başka elemanlarda rahatça kullanılan **Länge**, **Länge_absolut**, **Dicke** ve **Dicke_absolut** nitelikleri döşemede geometriyi ilk oluşturulan kenardan itibaren yansıtır; bu yüzden tarafsız bir değerlendirmede kullanılamaz. Nedeni, döşemenin kiriş ya da çok katmanlı duvar gibi önceden tanımlı bir yönü (ekseni) olmamasıdır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9164_0EM7U000001Td7M_14d28b02.png",
+        "caption": "Döşeme kenar ölçüleri: uzunluk ve kalınlık ilk çizilen kenara göre değişir"
+      },
+      {
+        "type": "text",
+        "text": "**Çevre ve alanlar:** **Umfang (228)** tüm kenar uzunluklarının toplamıdır. Alan nitelikleri elemanın kabuğunu farklı biçimlerde tanımlar. **Grundfläche (224)** döşemenin tüm alanını yatay izdüşüm olarak verir; boşluklar düşülmeden (dolu sayılarak) ölçülür. **Bodenfläche (293)** döşemenin alt kotuna kadar uzanan boşluklar, **Deckenfläche (294)** üst kotuna kadar uzanan boşluklar düşüldükten sonraki alanı verir; ikisi de alt ve üst sınırın gerçek yüzeyini verir ve eleman formunu izler. **Seitenfläche (295)** döşemenin yanal kalıp yüzeyidir; tüm boşluklar dikkate alınır. Grundfläche, Deckenfläche ve Bodenfläche üst ve alt bitişi, Seitenfläche düşey alanı tanımlar. **Schalungsfläche (78)** döşemenin zemin alanından duvar ve kolon gibi bitişik elemanlar düşüldükten sonra kalan alandır; döşeme için bir imalat kalemi (Gewerk) tanımlıysa alan VOB metraj kurallarına göre boşlukları dikkate alır."
+      },
+      {
+        "type": "text",
+        "text": "**Hacimler:** **Volumen (223)** döşemenin kesintisiz (brüt) hacmidir, hiçbir boşluk düşülmez. **Netto-Volumen (226)** boşluklar düşülmüş hacimdir, **Abzugsvolumen (227)** tüm boşlukların toplamıdır."
+      },
+      {
+        "type": "text",
+        "text": "**Birim ve miktar:** **Einheit (202)** özelliklerde ayarlanan birimi ya da hakediş birimini yazar ve **Menge**, **Nettomenge** ile **VOB_Menge** çıktısını yönetir. **Menge (201)** ayarlı birime göre hacmi (m³), zemin alanını (m²), adedi (St) ya da uzunluğu (m) verir; imalat kalemi ayarı yazılan değeri etkiler. **Nettomenge (99)** aynı mantıkla net hacmi (m³), zemin alanını (m²), adedi (St) ya da yüksekliği (m) verir ve tüm boşlukları dikkate alır. **VOB_Menge (100)** hacmi, zemin alanını, adedi ya da uzunluğu yazar; boşluklar ayarlı imalat kaleminin kurallarına göre dikkate alınır, imalat kalemi yoksa ya da o kalem (veya birim) için metraj kuralı yoksa tüm boşluklar dikkate alınır. **Gewerk (209)** metin biçiminde imalat kaleminin adını, I10 ya da F8.2 gibi sayı biçiminde numarasını yazar."
+      },
+      {
+        "type": "text",
+        "text": "**VOB nitelikleri:** **VOB_Fläche (81)** ve **VOB_Länge (80)** çizim sırasına bağlı değerler verdiği için tarafsız, izlenebilir metrajlarda sınırlı ölçüde uygundur. **VOB_Volumen (82)** varsa VOB kurallarıyla hacmi yazar; değer, birimi m³ olan VOB_Menge ile aynıdır."
+      },
+      {
+        "type": "text",
+        "text": "**Köşe sayıları:** **Anzahl_Innenecken (91)** iç köşeleri (dar açılı), **Anzahl_Außenecke (92)** dış köşeleri (geniş açılı) sayar. İç ve dış köşe için sınır açı 180° - 360° / 19 = 161,0526316° olarak hesaplanır. Kat planındaki köşeler değerlendirilir; yalnız elemanın kendi köşeleri sayılır, çizgi girişiyle oluşan bir dizi elemanın köşeleri sayılmaz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/temel-modelleme/9164_0EM7U000001Td7N_eca6d3ed.png",
+        "caption": "Örnek döşemede 4 iç köşe (sarı) ve 1 dış köşe (turkuaz)"
+      },
+      {
+        "type": "text",
+        "text": "**Ondalık basamaklar:** Bodenfläche, Deckenfläche, Seitenfläche, Mittelfläche, Menge, Nettomenge, VOB_Menge, VOB_Fläche, VOB_Länge ve VOB_Volumen en fazla, **Seçenekler (Optionen) -> İzlenebilir metraj yaklaşımları (Nachvollziehbare Mengenansätze) -> Kısmi alanların ondalık basamak sayısı (Anzahl der Nachkommastellen der Teilflächen)** altında ayarlanan kadar ondalık gösterir."
       },
       {
         "type": "image",
         "src": "/akademi/temel-modelleme/9164_0EM7U000001Td7O_b5050b7a.png",
-        "caption": "Döşeme niteliklerinin genel görünümü ve kısmi alanların ondalık basamak ayarı."
+        "caption": "Seçenekler: kısmi alanların ondalık basamak sayısı 4"
       },
       {
         "type": "text",
-        "text": "Boşluk bilgileri CHILD(...): Boşluklar döşemenin alt öğesidir. Bir duvar katmanındaki boşluk sayısı gibi bilgileri okumak için CHILD() ile alt objeye bakılır. Bu yön çoğu kez birden fazla obje içerdiğinden tekil (benzersiz) değildir."
+        "text": "**Boşluk bilgileri, CHILD(...):** Boşluklar döşemenin alt öğeleridir. Örneğin bir elemandaki boşluk sayısını öğrenmek istiyorsanız **CHILD()** ile aşağıya, alt objeye bakarsınız. Bu yön çoğunlukla birden fazla obje içerdiği için tekil (benzersiz) değildir."
       }
     ]
   },

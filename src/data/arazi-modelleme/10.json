@@ -176,46 +176,123 @@
   "deepDive": {
     "blocks": [
       {
-        "type": "text",
-        "text": "DIN 277-1:2016-1 standardı, yapının taban alanlarını ve mahal hacimlerini belirlemenin kurallarını verir. Allplan bu belirlemeyi iki yapı elemanıyla yapar: Kat (Geschoss) ve Mahal (Raum). Tekil elemanları doğrudan etiketleyebilir (örneğin Mahal Etiketi), kullanım birimleri için Mahal Grubu, kullanım ilişkileri için Kat Grupları halinde birleştirebilirsiniz. Çıktıyı Raporlar (Reports) üzerinden alırsınız. Not: DIN değerlerinin yanında yapı elemanlarına başka bilgiler de ekleyip metrajlayabilirsiniz; ancak doğru DIN değeri için bazı girişler zorunludur. Standarda yeni eklenen arsa alanları şu an ideal modellenememektedir."
-      },
-      {
-        "type": "heading",
-        "text": "Taban alanı terimleri"
-      },
-      {
-        "type": "text",
-        "text": "BGF (Brüt Taban Alanı), yapının tüm kat planı düzlemlerinin toplam alanıdır. KGF (Konstrüksiyon Taban Alanı), BGF'nin yükselen yapı konstrüksiyonlarını kapsayan alt alanıdır ve Allplan'da doğrudan metrajlanamaz; BGF'den net mahal alanını çıkararak elde edersiniz. NRF (Net Mahal Alanı), kullanılabilir mahallerin taban alanlarının toplamıdır, yani kullanım alanı (NUF), teknik alan (TF) ve sirkülasyon alanının (VF) toplamıdır."
-      },
-      {
-        "type": "heading",
-        "text": "Mahal hacmi terimleri"
-      },
-      {
-        "type": "text",
-        "text": "BRI (Brüt Mahal Hacmi) yapının toplam hacmidir. KRI (Konstrüksiyon Mahal Hacmi) doğrudan metrajlanamaz; BRI'den net mahal hacmini çıkararak bulursunuz. NRI (Net Mahal Hacmi), tüm kullanılabilir mahalleri kapsayan alt hacimdir."
-      },
-      {
         "type": "heading",
         "text": "Mahaller - DIN 277-1:2016-1 standardına göre inşaat sektöründe taban alanları ve mahal hacimleri"
       },
       {
         "type": "text",
-        "text": "**Kat elemanının DIN277 ayarları.** Kat elemanının DIN277, BauNVO sekmesinde, DIN277 Nitelikleri bölümündeki ayarlar değerlendirilir. Çevreleme Türü (Umschließungsart) sınıflandırmaya yarar: R standart durum, S özel durumdur. Alan Türü DIN277 (Flächenart) ise objenin nasıl metrajlanacağını belirler: B objeyi her zaman hesaba katar (standart durum), M çok katlı BRI için kullanılır ve taban alanında alan bilgisi olmadan listelenir (örneğin galeri boşlukları), U kısmen listelenir ve LGF (galeri boşluğu taban alanı) olarak adlandırılır, V ise DIN277 çıktısında dikkate alınmaz. Faktör DIN277 genellikle 1.0 bırakılır, çünkü standart bitmiş yüzeyleri esas alır."
+        "text": "Arazinin üzerindeki binaları modellerken taban alanlarını ve mahal hacimlerini DIN 277-1:2016-01'e göre belirlemek için ALLPLAN birden fazla fonksiyon sunar. DIN değerlerinin yanında yapı elemanlarına başka bilgiler de ekleyip metrajlayabilirsiniz; doğru DIN değerleri için ise kısmen zorunlu girişler gerekir. Standarda yeni eklenen arsa alanları şu an ideal biçimde modellenemiyor ve metrajlanamıyor."
+      },
+      {
+        "type": "text",
+        "text": "Taban alanları ve mahal hacimleri temel olarak **Kat (Geschoss)** ve **Mahal (Raum)** yapı elemanlarıyla modellenir. Tekil elemanlar doğrudan etiketlenebilir (örneğin **Mahal Etiketi (Raumbeschriftung)**) ve gruplanabilir: kullanım birimleri için **Mahal Grubu (Raumgruppe)**, kullanım ilişkileri için **Kat Grupları (Geschossgruppen)**. Okunaklı çıktıyı çeşitli **Raporlar (Reports)** ile alırsınız. Kullanacağınız fonksiyonlar şunlardır."
+      },
+      {
+        "type": "text",
+        "text": "**Kat (Geschoss):** katları modelleyen yapı elemanı."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11198_0EM7U000001TdYD_7918729c.png",
+        "caption": "Kat (Geschoss) fonksiyonunun simgesi"
+      },
+      {
+        "type": "text",
+        "text": "**Mahal (Raum):** mahalleri modelleyen yapı elemanı."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11198_0EM7U000001TdYE_82944b1d.png",
+        "caption": "Mahal (Raum) fonksiyonunun simgesi"
+      },
+      {
+        "type": "text",
+        "text": "**Mahal, Kat Grubu (Raum-, Geschossgruppe):** mahalleri kullanım birimlerine, katları kullanım ilişkilerine göre gruplar."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11198_0EM7U000001TdYF_fac0d1a4.png",
+        "caption": "Mahal, Kat Grubu (Raum-, Geschossgruppe) fonksiyonunun simgesi"
+      },
+      {
+        "type": "text",
+        "text": "**Konut Alanı, DIN277, Yapı Ruhsatı (Wohnfläche, DIN277, Bauantrag):** istenen alana ait raporların alt klasörüne doğrudan erişim sunar."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11198_0EM7U000001TdYG_46a9a9d3.png",
+        "caption": "Konut Alanı, DIN277, Yapı Ruhsatı fonksiyonunun simgesi"
+      },
+      {
+        "type": "text",
+        "text": "**Raporlar (Reports):** buradan her zaman tüm raporları seçebilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11198_0EM7U000001TdYH_aeb5a169.png",
+        "caption": "Raporlar (Reports) fonksiyonunun simgesi"
+      },
+      {
+        "type": "text",
+        "text": "**Taban alanları.** **BGF, Brüt Taban Alanı (Brutto-Grundfläche):** yapının tüm kat planı düzlemlerinin toplam alanı. **Kat** elemanından metrajlanır; rapor: **Geschoss Brutto-Grundflächen Abmessungen.rdlc**."
+      },
+      {
+        "type": "text",
+        "text": "**KGF, Konstrüksiyon Taban Alanı (Konstruktions-Grundfläche):** BGF'nin yükselen tüm yapı konstrüksiyonlarını kapsayan alt alanı. ALLPLAN'da şu an doğrudan metrajlanamaz; BGF'den net mahal alanı çıkarılarak elde edilir."
+      },
+      {
+        "type": "text",
+        "text": "**NRF, Net Mahal Alanı (Netto-Raumfläche):** BGF'nin, tüm kat planı düzlemlerindeki kullanılabilir mahallerin taban alanlarını kapsayan alt alanı; başka bir deyişle kullanım alanı, teknik alan ve sirkülasyon alanının toplamı. **Mahal** elemanından metrajlanır; raporlar: **Raum Netto-Raumflächen Abmessungen.rdlc**, **Netto-Raumflächen.rdlc** ve **Übersicht Netto-Raumflächen.rdlc**."
+      },
+      {
+        "type": "text",
+        "text": "**NUF, Kullanım Alanı (Nutzungsfläche):** NRF'nin yapının esas kullanım amacına hizmet eden alt alanı. **TF, Teknik Alan (Technikfläche):** besleme amaçlı teknik tesisata ayrılan NRF alt alanı. **VF, Sirkülasyon Alanı (Verkehrsfläche):** yatay ve düşey sirkülasyona ayrılan NRF alt alanı. Üçü de NRF ile aynı raporlarla alınır."
+      },
+      {
+        "type": "text",
+        "text": "**Mahal hacimleri.** **BRI, Brüt Mahal Hacmi (Brutto-Rauminhalt):** yapının toplam hacmi. **Kat** elemanından metrajlanır; rapor: **Geschoss Brutto-Rauminhalte Abmessungen.rdlc**."
+      },
+      {
+        "type": "text",
+        "text": "**KRI, Konstrüksiyon Mahal Hacmi (Konstruktions-Rauminhalt):** BRI'nin yapı konstrüksiyonu hacmini içeren alt hacmi; şu an doğrudan metrajlanamaz, BRI'den net mahal hacmi çıkarılarak bulunur. **NRI, Net Mahal Hacmi (Netto-Rauminhalt):** BRI'nin tüm kullanılabilir mahalleri kapsayan alt hacmi. **Mahal** elemanından metrajlanır; rapor: **Raum Netto-Rauminhalt Abmessungen.rdlc**."
+      },
+      {
+        "type": "text",
+        "text": "**Yapı elemanlarının temel ayarları:** Her iki elemanda da raporlarda görünen **Ad (Bezeichnung)** ve **Fonksiyon (Funktion)** gibi niteliklerin yanında metraj ayarları yapılır. Temel kural: DIN277'ye göre alanların ve hacimlerin atanmasında YALNIZCA **DIN277 Nitelikleri (DIN277-Attribute)** bölümündeki ayarlar değerlendirilir; diğer ayarlar alternatif metrajlar içindir."
+      },
+      {
+        "type": "text",
+        "text": "**Kat (Geschoss):** **DIN277, BauNVO** sekmesi, **DIN277 Nitelikleri** bölümü."
       },
       {
         "type": "image",
         "src": "/akademi/arazi-modelleme/11198_0EM7U000001TdYS_cd3234a5.png",
-        "caption": "Kat elemanı: DIN277, BauNVO sekmesindeki nitelik ayarları."
+        "caption": "Kat diyaloğu, DIN277,BauNVO sekmesi: Umschließungsart R, Flächenart DIN277 B, Faktor DIN277 1.000"
       },
       {
         "type": "text",
-        "text": "**Mahal elemanının DIN277 ayarları.** Mahal elemanında da aynı sekme kullanılır. Çevreleme Türü yine R veya S olur. Kullanım Türü (Nutzungsart) alanın rolünü belirler: NUF kullanım alanı (ana grup veya NUF 1-7 alt grupları), TF teknik alan, VF sirkülasyon alanıdır. Alan Türü DIN277 için N net mahal alanı ve net hacmi (NRF ve NRI), M çok katlı NRI, L ise boş hacim anlamına gelir. Metrajda N objeyi her zaman hesaba katar, M mahal hacmi için kullanılır, L kısmen LGF olarak listelenir. Daha fazla bilgiyi her fonksiyonun F1 Yardım bölümünde bulabilirsiniz."
+        "text": "**a) Çevreleme Türü (Umschließungsart):** DIN277-1:2016-01 (Bölüm 5.6) uyarınca alanlar ve hacimler mahal çevrelemesine göre ayrı belirlenir: **R** standart durum (Regelfall), **S** özel durum (Sonderfall). **b) Alan Türü DIN277 (Flächenart DIN277):** **B** brüt taban alanı ve brüt hacim (BGF ve BRI); **M** çok katlı BRI, BGF yok; **U** boş hacim (Leerraum), ne BGF ne BRI; **V** kullanılmayan, boş hacim değil. **c) Faktör DIN277 (Faktor DIN277):** alan ve hacim hesabına girer; standart bitmiş yüzeyleri esas aldığı için (DIN277-1:2016-01, 6.2.2 Belirleme kuralları) genellikle 1.0 bırakılır."
+      },
+      {
+        "type": "text",
+        "text": "Çevreleme Türü DIN'e göre sınıflandırmaya hizmet eder; Alan Türü ise objenin metrajlanıp metrajlanmayacağını ve nasıl metrajlanacağını belirler. Metrajdaki etkisi: **B** obje DIN277 çıktılarında her zaman hesaba katılır (standart durum). **M** obje mahal hacminde kullanılır, taban alanlarında alan bilgisi olmadan listelenir (örneğin giriş holleri üzerindeki galeri boşlukları). **U** obje kısmen listelenir ve LGF (galeri boşluğu taban alanı, Luftgrundfläche) olarak adlandırılır. **V** obje DIN277 çıktısında dikkate alınmaz. U ve V objeleri örneğin yalnız ince yapı yüzeylerinin belirlenmesi için gerekir."
+      },
+      {
+        "type": "text",
+        "text": "**Mahal (Raum):** **DIN277,Wohnfl.** sekmesi, **DIN277 Nitelikleri** bölümü."
       },
       {
         "type": "image",
         "src": "/akademi/arazi-modelleme/11198_0EM7U000001TdYT_a9e99019.png",
-        "caption": "Mahal elemanı: Kullanım Türü ve Alan Türü DIN277 ayarları."
+        "caption": "Mahal diyaloğu, DIN277,Wohnfl. sekmesi: Umschließungsart R, Nutzungsart NUF, Flächenart DIN277 N, Faktor DIN277 1.000"
+      },
+      {
+        "type": "text",
+        "text": "**a) Çevreleme Türü:** R ya da S, kattaki gibi. **b) Kullanım Türü (Nutzungsart):** **NUF** kullanım alanı (doğrudan NUF ana grubuyla ya da NUF 1 ile NUF 7 arasındaki yedi alt grupla atanır), **TF** teknik alan, **VF** sirkülasyon alanı. **c) Alan Türü DIN277:** **N** net mahal alanı ve net hacim (NRF ve NRI); **M** çok katlı NRI, NRF yok; **L** boş hacim (Leerraum), ne NRF ne NRI. **d) Faktör DIN277:** kattaki gibi, genellikle 1.0."
+      },
+      {
+        "type": "text",
+        "text": "Metrajdaki etkisi: **N** obje DIN277 çıktılarında her zaman hesaba katılır (normal durum). **M** obje mahal hacminde kullanılır, taban alanlarında alan bilgisi olmadan listelenir (örneğin galeri boşlukları). **L** obje kısmen listelenir ve LGF olarak adlandırılır; örneğin yalnız ince yapı yüzeylerini belirlemek için gerekir. Ayrıntılar her fonksiyonun **F1** Yardım'ındadır."
       },
       {
         "type": "heading",
@@ -223,21 +300,53 @@
       },
       {
         "type": "text",
-        "text": "Allplan'da çok çeşitli çatı ve çatı penceresi (güvercinlik / Gaube) formu oluşturulabilir. Başlıca çatı formları şunlardır: Beşik Çatı (Satteldach), Tek Eğimli / Sundurma Çatı (Pultdach), Sundurma / Uzatma Çatı (Schleppdach), Testere Dişi / Şed Çatı (Sheddach), Mansard Çatı (Mansarddach), Kırma Çatı (Walmdach), Yarım Kırma Çatı (Krüppelwalmdach), Dairesel Saçaklı Çatı (Dach mit kreisförmiger Traufe), Kubbe Çatı (Kuppeldach), Haç Çatı (Kreuzdach), Elmas / Eşkenar Dörtgen Çatı (Rautendach), Çadır veya Kule Çatı (Zeltdach oder Turmdach), Soğan Kubbe veya Çan Çatı (Zwiebeldach oder Glockendach), Tonoz veya Kemer Çatı (Tonnendach oder Bogendach) ve değişken mahya yüksekliğine sahip Çarpık Yüzeyli Çatı (windschiefes Dach)."
+        "text": "Binaları modellerken çatı formu seçimi sık karşınıza çıkar. ALLPLAN'da çok çeşitli çatı ve çatı penceresi (güvercinlik, Gaube) formları oluşturulabilir; her form için adım adım kılavuzlar ALLPLAN SSS veritabanında, genel anlatım da \"Düzlemler ve Çatı Yüzeyleri (Ebenen und Dachlandschaften)\" ve \"Yeni Çatı Yüzeyi (Die neue Dachfläche)\" web seminerlerinde yer alır. Kılavuzların ilk formu **Beşik Çatı (Satteldach)**'dır."
       },
       {
         "type": "image",
         "src": "/akademi/arazi-modelleme/10933_0EMVi00000DRdsE_f82fcdfc.png",
-        "caption": "Allplan'da oluşturulabilen çatı formlarından genel görünüm."
+        "caption": "Beşik çatı (Satteldach) örneği"
       },
       {
         "type": "text",
-        "text": "Güvercinlik (Gaube) formları arasında Yarasa Gözü / Kemer Güvercinlik (Fledermausgaube), Sundurma Çatılı Güvercinlik (Schleppdachgaube) ve Yamuk / Trapez Güvercinlik (Trapezgaube) bulunur. Ayrıca bir güvercinliğin yan duvarlarını ve ön duvarını oluşturabilir, güvercinliklerde saçak çıkması (Dachüberstand) tanımlayabilirsiniz. Her form için adım adım kılavuzlar Allplan Connect SSS veritabanında ve 'Düzlemler ve Çatı Yüzeyleri' ile 'Yeni Çatı Yüzeyi' web seminerlerinde yer alır."
+        "text": "Beşik çatının bir yüzü daha düşük eğimle uzatılarak **Uzatma Çatı (Schleppdach)** elde edilir."
       },
       {
         "type": "image",
         "src": "/akademi/arazi-modelleme/10933_0EMVi00000DRjb3_f368eed0.png",
-        "caption": "Çatı penceresi (güvercinlik) formlarından genel görünüm."
+        "caption": "Beşik çatıya bağlanan uzatma çatı (Schleppdach) örneği"
+      },
+      {
+        "type": "text",
+        "text": "**Diğer çatı formları:** Tek Eğimli Çatı (Pultdach), Testere Dişi / Şed Çatı (Sheddach), Mansard Çatı (Mansarddach), Kırma Çatı (Walmdach), Yarım Kırma Çatı (Krüppelwalmdach), Havalandırma Boşluklu Yarım Kırma Çatı (Krüppelwalmdach mit Eulenloch), Dairesel Saçaklı Çatı (Dach mit kreisförmiger Traufe), Kubbe Çatı (Kuppeldach), Haç Çatı (Kreuzdach), Eşkenar Dörtgen Çatı (Rautendach), Çadır ya da Kule Çatı (Zeltdach oder Turmdach), Soğan Kubbe ya da Çan Çatı (Zwiebeldach oder Glockendach), Tonoz ya da Kemer Çatı (Tonnendach oder Bogendach), ters Tonoz Çatı (umgekehrtes Tonnendach) ve değişken mahya yükseklikli Çarpık Yüzeyli Çatı (windschiefes Dach)."
+      },
+      {
+        "type": "text",
+        "text": "**Çatı penceresi (güvercinlik) formları:** Yarasa Gözü / Kemer Güvercinlik (Fledermausgaube), Uzatma Çatılı Güvercinlik (Schleppdachgaube) ve Yamuk Güvercinlik (Trapezgaube). Ayrıca bir güvercinliğin yan duvarlarını ve ön duvarını oluşturmak (Seitenwände und Stirnwand einer Gaube erzeugen) ve güvercinliklerde saçak çıkması tanımlamak (Dachüberstand bei Gauben) için ayrı kılavuzlar vardır."
+      },
+      {
+        "type": "heading",
+        "text": "Add-On CityGML - İçe Aktarma (Import)"
+      },
+      {
+        "type": "text",
+        "text": "Çevre binalarını tek tek modellemek yerine hazır şehir modellerini de kullanabilirsiniz: **CityGML (Add-On CityGML)** eklentisiyle arazi ve şehir modellerini ALLPLAN'a hızla içe aktarırsınız. CityGML, şehir ve peyzaj objelerinin (arazi, binalar, su ve ulaşım alanları, bitki örtüsü, arazi kullanımı) 3B geometrisini, topolojisini, semantiğini ve görünümünü tanımlayan açık ve yazılımdan bağımsız bir bilgi modelidir."
+      },
+      {
+        "type": "heading",
+        "text": "Add-On Modell Inspector (Model Denetleyicisi Eklentisi) - Mahalleri İçe Aktarma"
+      },
+      {
+        "type": "text",
+        "text": "**Model Denetleyicisi (Add-On Modellinspektor)** eklentisinin **Mahalleri İçe Aktar (Räume importieren)** fonksiyonu, mahal niteliklerini içeren bir Excel listesini okuyarak mahalleri ilgili özellikleriyle otomatik oluşturur; böylece bir projeye hızlı başlanır."
+      },
+      {
+        "type": "heading",
+        "text": "Add-On 3D Bemassung (3B Ölçülendirme Eklentisi) - Pafta İçin Perspektif"
+      },
+      {
+        "type": "text",
+        "text": "**3B Ölçülendirme (Add-On 3D-Bemassung)** eklentisinde perspektif ve görünümlerde olağan dışı çizgilere yol açan bir hata için bir güncellemeyle pratik bir çözüm getirildi; istenmeyen çizgiler kaldırılır ve 3B ölçüler paftada, şantiye ve işverenle iletişimde daha rahat kullanılır."
       }
     ]
   },

@@ -134,5 +134,33 @@
     "task": "Kendi işinizde sürekli aynı ölçülerle tekrarladığınız bir nesneyi (örn. standart bir konsol kolonu ya da tekrarlı bir detay) düşünün. Bu nesnenin kullanıcının değiştirmek isteyeceği 3 parametresini (örn. yükseklik, genişlik, derinlik) kâğıt üzerinde listeleyin.",
     "expected": "Bir nesne adı ve bu nesne için Özellikler Paleti'nde açılması mantıklı olacak en az 3 değişken parametre listesi.",
     "hint": "Her kullanışta elle düzelttiğiniz değerler, aslında betikte dışarıya açmanız gereken parametrelerdir."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Visual Scripting'e Giriş: Konsol Kolonu Örneği"
+      },
+      {
+        "type": "text",
+        "text": "LearnNow'daki bu Almanca giriş kursu, konuya giriş, kullanıcı arayüzü ve genel iş akışının ardından bir konsol kolonu (Konsolenstütze) örneğinde parametrik nesne oluşturmanın ilk adımlarını ayrıntılı gösterir. Kazanımları bu dersin konularıyla örtüşür: görsel programlamanın temel kavramı (ALLPLAN Visual Scripting), kullanıcı arayüzü ve genel iş akışı, dosya yönetimi, node'ların parçaları ve wire'larla bağlanması, Özellikler paletinin uyarlanması, betiğin kaydedilip çalıştırılması."
+      },
+      {
+        "type": "heading",
+        "text": "Visual Scripting ile Otomasyon Kursu"
+      },
+      {
+        "type": "text",
+        "text": "Fransızca kurs Visual Scripting'i adım adım tanıtır: programlama bilgisi olmadan kişiye özel nesneler tasarlamak, işleri otomatikleştirmek ve modelleme süreçlerini iyileştirmek. Kazanımları: parametrik nesne oluşturma ve değiştirme, ALLPLAN'da tekrar eden işleri otomatikleştirme, nitelikleri yönetme ve kullanma, dosya içe ve dışa aktarımlarını iyileştirme, projelerinizin özel ihtiyaçları için kendi çözümlerinizi devreye alma."
+      },
+      {
+        "type": "heading",
+        "text": "Modellemeden Programlamaya: Visual Scripting"
+      },
+      {
+        "type": "text",
+        "text": "İtalyanca kurs modellemeyi kavramsal eskizden uygulama projesine kadar ele alır: basit modelleme, 3B modelleme, parametrik modelleme ve son aşamada Visual Scripting ile gerçek programlama. Böylece Visual Scripting'in parametrik modellemenin bir sonraki adımı olduğunu görürsünüz."
+      }
+    ]
   }
 }

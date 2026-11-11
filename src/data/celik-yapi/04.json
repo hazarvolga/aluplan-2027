@@ -145,5 +145,97 @@
     "task": "Üç kişilik bir detaylandırma ekibinin evden SDS2 kullanacağı bir kurulum için VPN, Remote Desktop ve SDS2 Edge seçeneklerini artı/eksileriyle kısa bir tabloya dökün.",
     "expected": "Remote Desktop ve SDS2 Edge'in VPN'e göre daha kararlı olduğu, verinin merkezde kaldığı sonucuna varmalısınız.",
     "hint": "Anahtar ölçüt: çok sayıda küçük okuma/yazma işleminin ağ üzerinden mi yoksa yerelde mi yapıldığı."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "SDS2 için asgari donanım gereksinimleri"
+      },
+      {
+        "type": "text",
+        "text": "SDS2'yi kurmadan önce işletim sistemi ve donanımın asgari gereksinimleri karşıladığını kontrol edin."
+      },
+      {
+        "type": "text",
+        "text": "**İşletim sistemi:** SDS2 2025 ve sonrası yalnız 64 bit işletim sisteminde çalışır: Windows 11 Pro ya da Enterprise, Windows 10 Pro ya da Enterprise. SDS2 2020 ve sonrası da yalnız 64 bittir ve bunlara ek olarak Windows 8 ya da 8.1 Professional ve Windows Server 2012 ya da daha yenisini destekler. SDS2 2018 ve öncesi 32 ya da 64 bit Windows 10 Pro ya da Enterprise, Windows 8 ya da 8.1 Professional ve Windows Server 2012 ya da daha yenisinde çalışır."
+      },
+      {
+        "type": "text",
+        "text": "**İşlemci:** İşletim sisteminin gereksinimlerini karşılamalıdır. **Bellek (RAM):** 8 GB ve üzeri. **Fare:** 3 ya da 4 düğmeli. **Disk:** SSD ya da benzer hızda bir disk. **Ekran kartı:** Güncel bir Nvidia GeForce ya da AMD kart, 6 GB ve üzeri bellekli; Nvidia Quadro kartlar da kullanılmaktadır."
+      },
+      {
+        "type": "text",
+        "text": "**Ekran çözünürlüğü:** SDS2 2020 ve sonrasında en az 1920 x 1080, SDS2 2018 ve öncesinde en az 1280 x 1024."
+      },
+      {
+        "type": "text",
+        "text": "**Ağ kartı:** Çoğu kablolu ağ kartı uygundur. SDS2'yi istemci/sunucu ortamında kullanıyorsanız gigabit ağ güçlü biçimde önerilir. **Sanallaştırma:** VMware ESXi Server önerilir."
+      },
+      {
+        "type": "text",
+        "text": "**Önerilen diğer donanım:** SDS2 verilerinizi birden fazla konuma yedekleyen bir yedekleme sistemi güçlü biçimde önerilir. Hub ve ağ kartı yalnız birden fazla bilgisayarı sunucu/istemci düzeninde bağlayacaksanız gerekir."
+      },
+      {
+        "type": "heading",
+        "text": "SDS2 uzaktan erişimi destekler mi?"
+      },
+      {
+        "type": "text",
+        "text": "Ana ofis dışından SDS2 verileriyle çalışmanın birkaç yolu vardır; hepsi aynı derecede güvenilir değildir."
+      },
+      {
+        "type": "text",
+        "text": "VPN, Uzak Masaüstü ya da sanal makine üzerinden uzaktan erişim mümkündür. Ancak SDS2 verilerine yavaş ya da yoğun yüklü VPN bağlantıları üzerinden doğrudan erişmek teknik olarak mümkün olsa da önerilmez: çok sayıda okuma ve yazma işlemi ile dosya kilitleri düşük performansa ve kararsızlığa yol açabilir. SDS2 bunun yerine ana ofisteki bir bilgisayara uzak masaüstüyle bağlanmayı ya da SDS2 Edge gibi bulut ve sanal çalışma alanı çözümlerini tercih eder."
+      },
+      {
+        "type": "text",
+        "text": "**VPN ile eşlenmiş ağ sürücüsü:** İstemci bilgisayar SDS2 verilerini WAN üzerinden doğrudan okuyup yazarsa internet üzerinden çok sayıda küçük veri işlemi gider; bu genellikle gecikme, yavaşlık ve olası erişim çakışmaları demektir."
+      },
+      {
+        "type": "text",
+        "text": "**Klasik Uzak Masaüstü:** Kullanıcı RDP ya da benzeri bir yazılımla (LogMeIn, GoToMyPC gibi) ana ofiste SDS2'nin kurulu olduğu bir bilgisayara bağlanır. SDS2 verileri o bilgisayarda yerel olarak durur; uzak bağlantı esas olarak masaüstünün sıkıştırılmış görüntüsünü taşır. Bu daha iyi bir yaklaşımdır."
+      },
+      {
+        "type": "text",
+        "text": "**Çok kullanıcılı düzenli erişim:** SDS2, SDS2 Edge ya da benzeri bulut kurulumlarını önerir. SDS2 internet üzerinden erişilen merkezi bir ortamda çalışır; veriler veri merkezinde kalır, kullanıcılar yalnız oturumu akış olarak alır."
+      },
+      {
+        "type": "heading",
+        "text": "SDS2 lisanslama ve Organization Admin"
+      },
+      {
+        "type": "text",
+        "text": "SDS2 lisanslarını kuruluş düzeyinde yönetmek için web tabanlı **Organization Admin** portalı kullanılır. Bu kurs SDS2 lisanslamasının temellerini ve portalı tanıtır."
+      },
+      {
+        "type": "text",
+        "text": "Kazanımlar: grup oluşturma ve yönetme, kullanıcıları yönetme, davetleri yönetme, lisansları yönetme ve bir kullanıcının e-posta adresini değiştirme."
+      },
+      {
+        "type": "heading",
+        "text": "Virtual Workspace (bulut çalışma alanı) tanıtımı"
+      },
+      {
+        "type": "text",
+        "text": "**Virtual Workspace**, Cloud Synergistics tarafından sunulan bulut çalışma alanıdır (önceki adı SDS2 Cloud); bu kurs ona başlangıç eğitimi olarak hazırlanmıştır. Uzaktan erişim seçenekleri arasında veriyi merkezde tutan bulut yaklaşımına karşılık gelir."
+      },
+      {
+        "type": "text",
+        "text": "Kazanımlar: Virtual Workspace'in temel düzeyde nasıl çalıştığını anlatmak, ona nasıl bağlanılacağını hatırlamak, temel ayarlarını yapılandırmak ve günlük kullanım için önerilen uygulamaları uygulamak."
+      },
+      {
+        "type": "heading",
+        "text": "SDS2'yi en son sürüme güncelleme"
+      },
+      {
+        "type": "text",
+        "text": "SDS2'yi en son sürüme güncellerken kurulum dosyalarına nereden erişeceğinizi ve ayarları ve tercihleri sürümler arasında nasıl taşıyacağınızı bu kurs anlatır."
+      },
+      {
+        "type": "text",
+        "text": "Kazanımlar: en son sürüme ne zaman güncelleneceğine karar vermek; tek başına (standalone) ve sunucu kurulum seçeneklerini karşılaştırmak; farklı sürümler arasında kopyalanabilecek içerik ve tercih türlerini tanımak; SDS2 güncelleme sürecinizi planlamak."
+      }
+    ]
   }
 }

@@ -170,87 +170,26 @@
   "deepDive": {
     "blocks": [
       {
-        "type": "text",
-        "text": "Her zaman tam bir yüzey rölövesine ihtiyacınız yoktur. Arsanın yalnızca sınır köşelerinin kotlarını biliyorsanız, bu birkaç noktadan basitleştirilmiş bir arazi modeli üretebilirsiniz. Ön koşul şudur: arsa 2B çizgiler veya noktalar halinde bulunur ve her köşe noktasının yüksekliği (kotu) bellidir. Amacınız araziyi birebir modellemek değil, sınır kotlarına oturan sade bir hacim elde etmektir."
-      },
-      {
-        "type": "text",
-        "text": "Kullanacağınız fonksiyonlar Serbest Modelleme (Freies Modellieren) görevindeki 3B Çizgi (3D-Linie), Yama (Patch) ve 3B Yüzey (3D-Fläche) komutlarıdır. Aksiyon Çubuğunu (Actionbar) kullanmıyorsanız aynı komutlara Oluştur (Erzeugen), Ek Modüller (Zusätzliche Module), 3B Modelleme (Modellieren 3D) altından ulaşırsınız."
-      },
-      {
         "type": "heading",
-        "text": "Az sayıda köşe noktası (kot) kullanarak arazi oluşturma"
+        "text": "Arazi modelleyici"
       },
       {
         "type": "text",
-        "text": "**1. Dış sınır formunu hazırlayın.** 3B Çizgi (3D-Linie) fonksiyonunu açın ve giriş seçeneklerinden Poligon Çizgisi (Polygonzug) kipini seçin. Kat planında ilk köşe noktasını hedefleyin, diyalog satırına o noktanın Z koordinatını yazın ve <Enter> ile onaylayın. Diğer köşe noktalarını da kendi yükseklikleriyle (Z koordinatı) sırayla tanımlayın. Poligonu kapatmak için son nokta olarak ilk noktayı tekrar gösterin. Devam etmeden önce sonucu bir perspektif görünümde veya animasyonda kontrol edin."
+        "text": "Arazi (Terrain) modülünde arazi noktalarını iki yoldan elde edersiniz. Birincisi nokta dosyalarıdır: **Nokta dosyalarını içe/dışa aktar (Importer, exporter des fichiers de points)** fonksiyonuyla .re1, .re2, .reb ve .asc biçimlerini doğrudan içe aktarırsınız. Başka biçimdeki nokta dosyalarını önce Scalypso eklentisiyle dönüştürüp sonra içe aktarın."
       },
       {
         "type": "image",
-        "src": "/akademi/arazi-modelleme/11148_0EM7U000001TdWd_53ce1071.png",
-        "caption": "Kapalı 3B poligon çizgisinin perspektifte kotlu köşelerle kontrolü."
+        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tfX3_f59b4909.png",
+        "caption": "Nokta dosyalarını içe/dışa aktar diyaloğu: dosya tipi F Coor, uzantı .re1, Imp/Ex alanı"
       },
       {
         "type": "text",
-        "text": "**2. Arazi yüzeyini oluşturun.** Yama (Patch) fonksiyonunu çalıştırın ve oluşturduğunuz 3B poligon çizgisini perspektifte veya kat planında seçin. Kapalı poligondan bir 3B yüzey biçimlenir. Yüzeyin eğriliği izokurb çizgileriyle (U eğrileri ve V eğrileri) gösterilir."
+        "text": "İkincisi, noktaları doğrudan ALLPLAN'da oluşturmaktır: **Arazi noktası (Point de terrain)** aracını seçin, özellik kutusunda nokta numarası, sembol ve yükseklik (Haut) gibi değerleri verin ve noktayı planda konumlandırın. İçe aktardığınız ya da elle yerleştirdiğiniz bu 3B noktalardan 4. derste üçgen ağı (SAM) oluşturacaksınız."
       },
       {
         "type": "image",
-        "src": "/akademi/arazi-modelleme/11148_0EM7U000001TdWe_806c4160.png",
-        "caption": "Yama ile kapalı poligondan biçimlenen 3B yüzey ve izokurb çizgileri."
-      },
-      {
-        "type": "text",
-        "text": "**3. 3B katı objeye dönüştürün.** 3B Yüzey (3D-Fläche) komutuyla kat planında arsanın üzerinden düz bir 3B poligon yüzey geçirin. Ardından Ekstrüzyon (Extrudieren), Dış Yüzeyi Ekstrüde Et (Außenfläche extrudieren) ile bu yüzeyi seçin ve bir perspektifte en yüksek arazi noktasını yükseklik olarak verin. Böylece araziyi tümüyle kaplayan bir blok elde edersiniz."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/arazi-modelleme/11148_0EM7U000001TdWf_896128ba.png",
-        "caption": "Düz poligon yüzeyin en yüksek kota kadar ekstrüde edilmesi."
-      },
-      {
-        "type": "text",
-        "text": "Şimdi bloğun üstünü eğimli yüzeyle kesin. K1 eksi K2, K2'yi sil (K1 minus K2, K2 löschen) veya eğrisel yüzeyi saklamak istiyorsanız K1 eksi K2, K2'yi koru (K1 minus K2, K2 erhalten) fonksiyonunu seçin. Önce 3B katı objeyi (Katı 1 / Körper 1), sonra diğer katı olarak 3B yüzeyi seçin, seçimi sağ fare tuşuyla onaylayın ve üstte kalan parçayı silin. Geriye sınır kotlarına oturan arazi hacmi kalır."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/arazi-modelleme/11148_0EM7U000001TdWg_2198286e.png",
-        "caption": "Blok ile eğrisel yüzeyin farkı alınarak elde edilen arazi hacmi."
-      },
-      {
-        "type": "text",
-        "text": "İpucu: Yama (Patch) ile oluşturduğunuz 3B yüzey, Allplan 2019 sürümünden itibaren mimari yapı elemanlarının bağlanacağı referans yüzey (düzlem modeli) olarak da kullanılabilir. Aksiyon Çubuğu yapılandırmasında menü çubuğunu geçici görmek isterseniz Alt tuşunu kullanın."
-      },
-      {
-        "type": "heading",
-        "text": "SAY (DGM) - Excel dosyalarından sembol noktalarının okunması"
-      },
-      {
-        "type": "text",
-        "text": "Nokta bilgileri bir Excel tablosunda duruyorsa bunları Allplan'a aktarabilirsiniz. Tabloda noktaların X, Y ve Z değerleri ayrı sütunlarda olmalıdır; isteğe bağlı olarak nokta numarası ve kod numarası için de birer sütun kullanılabilir. Önce ilgili hücreleri tüm değerler aynı sayıda ondalık basamak gösterecek şekilde biçimlendirin."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/arazi-modelleme/11273_0EM7U000001TdPF_9a2512a7.png",
-        "caption": "Excel'de X, Y, Z değerlerinin ayrı sütunlar halinde ve eşit ondalık basamakla biçimlendirilmesi."
-      },
-      {
-        "type": "text",
-        "text": "Excel dosyasını Dosyayı farklı kaydet (Datei speichern unter) ile Biçimlendirilmiş Metin, Boşlukla ayrılmış (*.prn) türünde kaydedin. Ardından dosyayı Windows Gezgini'nde Punkte01.prn adından Punkte01.asc olarak yeniden adlandırın."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/arazi-modelleme/11273_0EM7U000001TdPG_77ae9333.png",
-        "caption": "Dosyanın *.prn (boşlukla ayrılmış biçimlendirilmiş metin) olarak kaydedilmesi."
-      },
-      {
-        "type": "text",
-        "text": "Windows'un bölge ayarlarına göre oluşan .asc dosyası ondalık ayırıcı olarak virgül içerebilir. Allplan'da .asc içe aktarımında yalnızca nokta kabul edilir; bu nedenle dosyayı Not Defteri ile açıp Düzen (Bearbeiten), Değiştir (Ersetzen) altından virgülü nokta ile değiştirin. İlgili sütunlardaki ondalık ayırıcılar alt alta hizalanmış olmalıdır. Dosyayı sonra Oluştur (Erzeugen), Arazi (Gelände), Vaziyet Planı (Lageplan), Nokta dosyası içe aktar, dışa aktar (Punktdatei importieren, exportieren) menüsünden okutun."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/arazi-modelleme/11273_0EM7U000001TdPH_dc1f6d35.png",
-        "caption": "Not Defteri'nde ondalık ayırıcıların alt alta hizalanmış kontrolü."
+        "src": "/akademi/arazi-modelleme/9311_0EMVi000003tdrq_677ea60d.png",
+        "caption": "Arazi noktası aracı: özellik kutusu (Haut 205,000) ve planda yerleştirilen noktalar"
       },
       {
         "type": "heading",
@@ -258,34 +197,159 @@
       },
       {
         "type": "text",
-        "text": "Herhangi bir metin dosyasındaki vaziyet planı koordinatlarını da okuyabilirsiniz. Koşullar şunlardır: nokta numarası, X, Y, Z koordinatları ve kod numarası bir ASCII dosyasında sütunlar halinde ve yalnızca boşluklarla ayrılmış olmalı; Sekme (Tabulator) veya Noktalı Virgül (Semikolon) gibi ayırıcılar boşluk karakteriyle değiştirilmelidir. Ondalık ayırıcı nokta olmalı, virgül varsa nokta ile değiştirilmelidir."
+        "text": "Vaziyet planı koordinatlarını herhangi bir metin dosyasından okuyabilirsiniz. Koşullar: nokta numarası, X, Y, Z koordinatları ve kod numarası bir ASCII dosyasında sütunlar halinde, yalnızca boşlukla ayrılmış olarak alt alta durmalı (koordinat dosyalarının çoğu böyledir). Sayılar **Sekme (Tabulator)** ya da **Noktalı Virgül (Semikolon)** gibi başka karakterlerle ayrılmışsa bunları boşlukla değiştirin. 2011 sürümüne kadar dosya adı en fazla 8 karakter olmalı, özel karakter içermemeli ve uzantısı **.asc** olmalıdır."
       },
       {
         "type": "text",
-        "text": "Dosyayı Not Defteri ile açın, Görünüm (Ansicht) altından Durum Çubuğu'nu (Statusleiste) görünür yapın ve her parametrenin ilk rakamının bulunduğu başlangıç sütununu okuyun. Örnekte X koordinatı 20. sütunda başlamaktadır."
+        "text": "Dosyayı Windows Not Defteri ile açın (Windows Gezgini'nde sağ tık -> **Birlikte aç (Öffnen mit) -> Not Defteri (Editor)**). **Görünüm (Ansicht)** menüsünden **Durum Çubuğu (Statusleiste)** görünür yapın ve her parametrenin ilk rakamının başlangıç sütununu okuyun; örnekte X koordinatı 20. sütunda başlıyor."
       },
       {
         "type": "image",
         "src": "/akademi/arazi-modelleme/11239_0EM7U000001TdPK_d8c8dff8.png",
-        "caption": "Not Defteri durum çubuğunda koordinatların başlangıç sütunlarının okunması."
+        "caption": "Not Defteri'nde punkte.asc: X koordinatının ilk rakamında durum çubuğu Satır 1, Sütun 20 gösteriyor"
       },
       {
         "type": "text",
-        "text": "Allplan'da Araçlar (Extras), Seçenekler (Optionen), Arazi (Gelände), Dosya arayüzü üzerinden İçe/Dışa Aktar, Nokta koordinatlarını yapılandır (Punktkoordinaten konfigurieren) altında her parametrenin başlangıç sütununu, tam sayı ve ondalık basamak sayısını girin. Ondalık noktası bu sayılara dahil edilmez. Dosyada nokta numarası veya kod numarası yoksa rastgele boş bir sütun numarası girin; kod numarası en fazla iki basamaklı sayı olabilir."
+        "text": "ALLPLAN'da **Araçlar (Extras) -> Seçenekler (Optionen) -> Arazi (Gelände) -> Dosya arayüzü üzerinden İçe/Dışa Aktar (Import/Export über Dateischnittstelle) -> Nokta koordinatlarını yapılandır (Punktkoordinaten konfigurieren)** altında başlangıç sütunlarını, tam sayı ve ondalık basamak sayılarını girin. Ondalık noktası bu sayılara dahil değildir. Ondalık ayırıcı nokta olmalıdır; virgül varsa nokta ile değiştirin. Dosyada negatif koordinat varsa (vaziyet planında alışılmadık) eksi işaretini de hesaba katın. Dosyada nokta numarası ya da kod numarası yoksa rastgele boş bir sütun numarası girin. Kod numarası en fazla iki basamaklı bir sayı olabilir; başka karakterler tanımlamada atlanmalıdır."
       },
       {
         "type": "image",
         "src": "/akademi/arazi-modelleme/11239_0EM7U000001TdPL_1a451924.png",
-        "caption": "Başlangıç sütunu, tam sayı ve ondalık basamak sayılarının yapılandırılması."
+        "caption": "Nokta koordinatları yapılandırması: başlangıç sütunu, tam sayı ve ondalık basamakları (No. 2, X 20, Y 32, Z 44, Kod 59)"
       },
       {
         "type": "text",
-        "text": "X ve Y koordinatları virgülden önce 3'ten fazla basamak içeriyorsa (genellikle 7 basamak), okuma işleminden önce mutlaka bir Ofset (Offset) ayarlayın. Vaziyet planlarında ofset, DXF/DWG içe aktarmanın aksine elle ayarlanmalıdır. Ardından Oluştur (Erzeugen), Arazi (Gelände), Vaziyet Planı (Lageplan), Nokta dosyası içe aktar, dışa aktar menüsünden okuma parametrelerini girip noktaları okutun."
+        "text": "X ve Y koordinatlarında virgülden önce 3'ten fazla basamak varsa (genellikle 7 basamak) okumadan **önce** bir **Ofset (Offset)** ayarlayın; projeye uygun bir ofset önemle önerilir (Yardım'da anahtar kelimeler: Proje özellikleri, Ofset). Vaziyet planlarında ofset, DXF/DWG içe aktarmasından farklı olarak elle ayarlanır."
+      },
+      {
+        "type": "text",
+        "text": "Okuma parametrelerini **Oluştur (Erzeugen) -> Arazi (Gelände) -> Vaziyet Planı (Lageplan) -> Nokta dosyası içe aktar, dışa aktar (Punktdatei importieren, exportieren)** altında ayarlayın (Allplan 2013 öncesinde adı **Dosya Arayüzü (Dateischnittstelle)**): dosya tipi **Koor-F**, uzantı **\"asc\"**, G/Ç **Edatei**. 2013'ten itibaren G/Ç alanının adı **İçe/Dışa Aktar (Imp/Ex)**, değeri **İçe Aktar (Import)** olur."
       },
       {
         "type": "image",
         "src": "/akademi/arazi-modelleme/11239_0EM7U000001TdPM_db647be2.png",
-        "caption": "Nokta dosyası okuma parametrelerinin ayarlanması."
+        "caption": "Dosya arayüzü: Da-Typ Koor-F, Da-Ext \"asc\", E/A Edatei (kırmızı işaretli)"
+      },
+      {
+        "type": "text",
+        "text": "Eski sürümlerde **İçe Aktar (Import)** düğmesi dosyayı kullanıcı alışveriş dizinine kopyalar, noktalar **Uygula (Anwenden)** ile okunur. V2014'ten itibaren bu düğme kaldırıldı; içe/dışa aktarma dizinini **Araçlar (Extras) -> Seçenekler (Optionen) -> Çalışma Ortamı (Arbeitsumgebung) -> Konumlar (Speicherorte)** altında seçersiniz."
+      },
+      {
+        "type": "heading",
+        "text": "SAY (DGM) - Excel dosyalarından sembol noktalarının okunması"
+      },
+      {
+        "type": "text",
+        "text": "Nokta bilgileri bir Excel tablosundaysa bunları da aynı nokta dosyası yoluyla ALLPLAN'a aktarırsınız. Tabloda X, Y ve Z değerleri ayrı sütunlarda olmalı; isteğe bağlı olarak nokta numarası ve kod numarası için de birer sütun kullanılabilir. **1.** Dosyayı Excel'de açın ve ilgili hücreleri tüm değerler aynı sayıda ondalık basamak gösterecek şekilde biçimlendirin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11273_0EM7U000001TdPF_9a2512a7.png",
+        "caption": "Excel'de üç koordinat sütunu: tüm değerler üç ondalık basamakla biçimlendirilmiş"
+      },
+      {
+        "type": "text",
+        "text": "**2.** Dosyayı ASCII olarak kaydedin: **Farklı kaydet (Datei speichern unter)** ile kayıt türü olarak **Biçimlendirilmiş Metin, Boşlukla ayrılmış (Formatierter Text, Leerzeichen getrennt)** (.prn) seçin. Ardından dosyayı Windows Gezgini'nde **Punkte01.prn** adından **Punkte01.asc** olarak yeniden adlandırın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11273_0EM7U000001TdPG_77ae9333.png",
+        "caption": "Excel kayıt türü listesi: Formatierter Text (Leerzeichen getrennt) (.prn) seçili"
+      },
+      {
+        "type": "text",
+        "text": "Windows'ta **Bölge ve Dil (Region und Sprache) -> Biçimler (Formate) -> Ek Ayarlar (weitere Einstellungen) -> Sayılar (Zahlen) -> Ondalık Ayırıcı (Dezimaltrennzeichen)** ayarına bağlı olarak oluşan ASCII dosyası ondalık ayırıcı olarak virgül içerebilir. ALLPLAN .asc içe aktarımında yalnızca noktayı kabul eder. Dosyayı Not Defteri'nde kontrol edin: ilgili sütunlardaki ondalık ayırıcılar alt alta hizalı olmalıdır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11273_0EM7U000001TdPH_dc1f6d35.png",
+        "caption": "Not Defteri'nde punkte01.asc: ondalık ayırıcılar alt alta hizalı, ama henüz virgül"
+      },
+      {
+        "type": "text",
+        "text": "Virgül kullanılmışsa Not Defteri'nde **Düzen (Bearbeiten) -> Değiştir (Ersetzen)** ile nokta ile değiştirin. Nokta dosyasını sonra **Oluştur (Erzeugen) -> Arazi (Gelände) -> Vaziyet Planı (Lageplan) -> Nokta dosyası içe aktar, dışa aktar (Punktdatei importieren, exportieren)** ile ya da **Oluştur -> Gelişmiş Konstrüksiyon (Erweiterte Konstruktion) -> Nokta dosyası içe aktar, dışa aktar** ile okuyun (Allplan 2012'ye kadar **Oluştur -> Jeodezi (Geo) -> Vaziyet Planı -> Dosya Arayüzü (Dateischnittstelle)**). Sütun yapılandırması bir önceki bölümde anlatıldı."
+      },
+      {
+        "type": "heading",
+        "text": "Az sayıda köşe noktası (kot) kullanarak arazi oluşturma"
+      },
+      {
+        "type": "text",
+        "text": "Her zaman tam bir yüzey rölövesine ihtiyacınız yoktur. Arsa 2B çizgi ya da nokta olarak elinizdeyse ve her köşe noktasının kotunu biliyorsanız, sınır kotlarına uyan basitleştirilmiş bir arazi modeli üretebilirsiniz. Kullanacağınız fonksiyonlar Actionbar'da **Serbest Modelleme (Freies Modellieren)** görevindeki **3B Çizgi (3D-Linie)**, **Yama (Patch)** ve **3B Yüzey (3D-Fläche)** gibi fonksiyonlardır; Actionbar olmadan **Oluştur (Erzeugen) -> Ek Modüller (Zusätzliche Module) -> 3B Modelleme (Modellieren 3D)** altında bulunurlar. 2018 sürümünden itibaren Actionbar yapılandırmasında menü çubuğunu **Alt** tuşuyla geçici olarak gösterebilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**1. Dış sınır formunu hazırlayın.** **3B Çizgi (3D-Linie)** fonksiyonunu açın ve giriş seçeneklerinden **Poligon Çizgisi (Polygonzug)** seçin. Kat planında ilk noktayı hedefleyin, diyalog satırına istenen Z koordinatını yazın ve **Enter** ile onaylayın. Diğer köşe noktalarını kendi yükseklikleriyle tanımlayın; kapalı bir poligon için son nokta olarak ilk noktayı gösterin. Sonraki adıma geçmeden sonucu bir perspektif görünümde ya da animasyonda kontrol edin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11148_0EM7U000001TdWd_53ce1071.png",
+        "caption": "Kapalı 3B poligon çizgisi: önden görünüş (Ansicht von vorne) ve merkezi perspektif"
+      },
+      {
+        "type": "text",
+        "text": "**2. Eğrisel yüzeyi (arazi yüzeyi) oluşturun.** **Yama (Patch)** fonksiyonunu seçin ve 3B poligon çizgisini perspektifte (ya da kat planında) seçin. Kapalı poligondan bir 3B yüzey biçimlenir; yüzeyin eğriliği izokurb çizgileriyle (U ve V eğrileri) gösterilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11148_0EM7U000001TdWe_806c4160.png",
+        "caption": "Yama ile oluşan eğrisel 3B yüzey: önden görünüşte izokurb çizgileri ve perspektif"
+      },
+      {
+        "type": "text",
+        "text": "**3. 3B katı obje oluşturun.** **3B Yüzey (3D-Fläche)** ile kat planında arsanın üzerinden düz bir 3B poligon yüzey geçirin. **Ekstrüzyon (Extrudieren) -> Dış Yüzeyi Ekstrüde Et (Außenfläche extrudieren)** ile bu yüzeyi seçin ve perspektifte en yüksek arazi noktasını yükseklik olarak gösterin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11148_0EM7U000001TdWf_896128ba.png",
+        "caption": "Extrudieren araç çubuğu: düz yüzeyin en yüksek arazi noktasına kadar ekstrüzyonu (izometri)"
+      },
+      {
+        "type": "text",
+        "text": "Sonra eğrisel yüzeyi korumak isteyip istemediğinize göre **K1 eksi K2, K2'yi sil (K1 minus K2, K2 löschen)** ya da **K1 eksi K2, K2'yi koru (K1 minus K2, K2 erhalten)** fonksiyonunu seçin. Önce 3B katıyı (Katı 1, Körper 1), sonra diğer katı olarak 3B yüzeyi seçin, seçimi sağ fare tuşuyla onaylayın ve üstte kalan parçayı silin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/11148_0EM7U000001TdWg_2198286e.png",
+        "caption": "Sonuç: üst yüzeyi sınır kotlarını izleyen arazi hacmi, izometri ve perspektif"
+      },
+      {
+        "type": "text",
+        "text": "**İpucu:** **Yama (Patch)** ile oluşturduğunuz 3B yüzey, Allplan 2019'dan itibaren mimari yapı elemanlarını bağlamak için referans yüzey (düzlem modeli) olarak da kullanılabilir; bunun bir uygulamasını 8. dersteki su yalıtımı örneğinde göreceksiniz."
+      },
+      {
+        "type": "heading",
+        "text": "Etiket Stilleri - Deniz seviyesine (NHN) göre kotlar - projede tek bir referans (Allplan 2023'ten itibaren)"
+      },
+      {
+        "type": "text",
+        "text": "Projede tek bir referans kotuyla ve bir ±0,00 kotuyla çalışıyor, yani \"gerçek\" mutlak kotlarda çalışamıyorsunuz; yine de etiket stillerinde kotları deniz seviyesine göre (NN ya da NHN, Normalhöhennull) göstermek istiyorsunuz. Bunun için referans kotu bir proje niteliği olarak tanımlarsınız. Proje nitelikleri, **Yeni Proje, Aç (Projekt neu, öffnen)** diyaloğunda projenin bağlam menüsünden **Özellikler (Eigenschaften)** ile açılan proje ayarlarında **Nitelikleri Ata (Attribute belegen)** düğmesinin arkasındadır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/10591_0EM7U000001Tczd_5ce3beab.png",
+        "caption": "Proje ayarları (Projekteinstellungen): Nitelikleri Ata (Attribute belegen) düğmesi"
+      },
+      {
+        "type": "text",
+        "text": "Bu nitelikler arasında, tüm proje nitelikleri gibi metin türünde olan **Normalhöhennull (@585@)** niteliği bulunur. Değerde ondalık ayırıcı olarak nokta kullanın; örneğin **356.12 m ü. NHN**."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/arazi-modelleme/10591_0EM7U000001Tcze_066afc62.png",
+        "caption": "Proje nitelikleri, Bina bilgileri (Gebäudeinformation) grubu: Normalhöhennull = 356.12 m ü. NHN"
+      },
+      {
+        "type": "text",
+        "text": "Nitelik metin olduğu için onunla doğrudan hesap yapılamaz. **VALUE(string;index)** formülü metinden bir sayı ayıklar: **string**, bir ya da birden çok sayı içeren metin ya da metin niteliğidir (sayılar arasındaki noktalar ondalık ayırıcı sayılır); **index** ise kaçıncı sayının verileceğidir (1 ilk bulunan sayı, 2 ikinci sayı ve böyle devam eder). Böylece etiket stillerindeki kot çıktılarında **VALUE(Normalhöhennull;1)** ya da **VALUE(@585@;1)** kullanırsınız."
+      },
+      {
+        "type": "text",
+        "text": "**Mahallerde kaba ve bitmiş döşeme için örnek formüller:** Kaba döşeme (Rohfußboden): **VALUE(@585@;1)+ROUND(@112@/1000;3;5)**. Bitmiş döşeme (Fertigfußboden): **VALUE(@585@;1)+ROUND((Obj_Floor(@211@;1;2;3;4;5;6;7;8;9;10)+@112@)/1000;3;5)**. Biçim olarak örneğin **K12.3** (üç ondalık basamaklı kot biçimi) kullanın ve **DIM** altında birimi m yapıp gizleyin."
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Allplan 2023 ile yapı elemanı başvuruları için dilden bağımsız fonksiyon çağrıları geldi: **MT_Raum()**, **MT_Wand()** ve **MT_Boden()** yerine **Obj_Room()**, **Obj_Wall()** ve **Obj_Floor()** kullanılır. Bu fonksiyonları içeren eski etiket stili formülleri 2023'e dönüştürmede otomatik uyarlandı. Uluslararası veri alışverişini güvenceye almak için yeni etiket stillerinde ve raporlarda dilden bağımsız fonksiyonları kullanın."
       },
       {
         "type": "heading",
@@ -293,25 +357,31 @@
       },
       {
         "type": "text",
-        "text": "Projede tek bir referans kotuyla ve bir ±0,00 ile çalışıyor, ancak kotları gerçek deniz seviyesine (NN veya NHN, Normalhöhennull) göre etiketlemek istiyorsanız: önce referans kotu bir proje niteliği olarak tanımlanır. Yeni Proje, Aç (Projekt neu, öffnen), Özellikler (Eigenschaften), Proje (Projekt), Nitelikleri Ata (Attribute belegen) altında metin türünde olan Normalhöhennull (@585@) niteliğini bulun."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/arazi-modelleme/8854_0EM7U000001Tczd_5ce3beab.png",
-        "caption": "Proje nitelikleri altındaki Normalhöhennull (@585@) metin niteliği."
+        "text": "Allplan 2022 ve önceki sürümlerde yöntem aynıdır: referans kotu yine proje ayarlarındaki **Nitelikleri Ata (Attribute belegen)** düğmesiyle tanımlarsınız."
       },
       {
         "type": "text",
-        "text": "Niteliğe girilecek değer ondalık ayırıcı olarak nokta içermeli ve örneğin şu biçimde olmalıdır: 356.12 m ü. NHN. Nitelik metin olduğundan doğrudan hesaplamada kullanılamaz; VALUE(string;index) formülüyle metinden bir sayı ayıklanır. Burada string sayı içeren metin niteliği, index ise kaçıncı sayının alınacağıdır. Böylece kot çıktılarında VALUE(Normalhöhennull;1) veya VALUE(@585@;1) formülünü kullanırsınız. Mahallerde kaba ve bitmiş döşeme için örnek formüller: Kaba döşeme VALUE(@585@;1) +ROUND(@112@/1000;3;5); Bitmiş döşeme VALUE(@585@;1) +ROUND((Obj_Floor(@211@;1;2;3;4;5;6;7;8;9;10)+@112@)/1000;3;5). Biçim olarak K12.3 kullanıp DIM altında birimi m yapıp gizleyin."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/arazi-modelleme/8854_0EM7U000001Tcze_066afc62.png",
-        "caption": "Referans kotunun bir metin değeri (356.12 m ü. NHN) olarak girilmesi."
+        "text": "Değeri yine metin türündeki **Normalhöhennull (@585@)** niteliğine noktalı ondalıkla girer ve **VALUE(@585@;1)** ile sayıya çevirirsiniz."
       },
       {
         "type": "text",
-        "text": "Not: Allplan 2023 ile birlikte yapı elemanı referansları için dilden bağımsız fonksiyon çağrıları geldi. MT_Raum(), MT_Wand() ve MT_Boden() yerine Obj_Room(), Obj_Wall() ve Obj_Floor() kullanılmalıdır. Eski verilerin 2023'e dönüştürülmesinde bu formüller otomatik uyarlanır; uluslararası veri alışverişini güvence altına almak için yeni etiket stillerinde ve raporlarda dilden bağımsız fonksiyonları tercih edin."
+        "text": "Tek fark bitmiş döşeme formülündedir; bu sürümlerde dile bağlı **MT_Boden()** çağrısı kullanılır: **VALUE(@585@;1)+ROUND((MT_Boden(@211@;1;2;3;4;5;6;7;8;9;10)+@112@)/1000;3;5)**. Kaba döşeme formülü ve **K12.3** biçimi aynıdır. Kaynak makalenin ekindeki NDW dosyaları etiketlenmiş bir mahal ile **Standart (Standard) -> Dosya 1 Mahal Damgası (Raumstempel)** içindeki 1 ve 2 numaralı iki mahal etiket stili şablonunu içerir."
+      },
+      {
+        "type": "heading",
+        "text": "Add-On Baugrube (Yapı Çukuru Eklentisi) - Kot Noktalarından Arazi"
+      },
+      {
+        "type": "text",
+        "text": "Nokta kotlarınız bir GPS cihazından geliyorsa **Yapı Çukuru (Add-On Baugrube)** eklentisiyle bu noktalardan arazi kurabilirsiniz: üçgen ağlar üretilir, 3B katı model değiştirilir, kenar üçgenleri gizlenir, noktalar sonradan düzenlenir ve dinamik bir arazi katısı elde edilir. Eşyükselti eğrileri ve katman modelleri gibi görünümler, render ve dışa aktarma da desteklenir."
+      },
+      {
+        "type": "heading",
+        "text": "Add-On Baugrube (Yapı Çukuru Eklentisi) - 3B Çizgiler ve Noktalardan Arazi"
+      },
+      {
+        "type": "text",
+        "text": "Aynı eklentiyle 2B ve 3B veri içeren bir DWG dosyasından da arazi kurulur: dosya boş bir çizim dosyasına içe aktarılır, hassas bir üçgenleme için kırık hatlar (Bruchkanten) elle ya da 3B çizgilerden otomatik tanımlanır. Oluşan arazi yüzeyi düzenlenebilir ve dinamik bir araziye dönüştürülebilir."
       }
     ]
   },

@@ -151,5 +151,77 @@
     "task": "Allplan kurulumunuzda prekast araçlarına erişip erişemediğinizi kontrol edin: yapılandırma menüsünü açın ve girişlerin kırmızı soru işareti içerip içermediğine bakın.",
     "expected": "Girişler normal (seçilebilir) görünüyorsa 'Precast elements' seçeneği etkin demektir. Kırmızı soru işareti varsa kurulumun bu seçenekle tamamlanması gerekir.",
     "hint": "Erişim sorunu neredeyse her zaman projede değil, kurulumda etkinleştirilen modül seçeneklerindedir."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Prekast Yapılandırması Kullanılamıyor"
+      },
+      {
+        "type": "text",
+        "text": "Prekast ortamını kurduktan sonra ilk bakacağınız yer **Yapılandırma Menüsü (Konfigurationsmenü)** olur. Kaynaktaki durum şu: ALLPLAN Planbar yeniden kuruldu, ama yapılandırma menüsüne doğru erişilemiyor; girişlerin önünde kırmızı soru işareti var ve seçilemiyorlar."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9252_0EM670000075eK7_9e3adb74.png",
+        "caption": "Yapılandırma Menüsü: Genel (Allgemeines) altındaki Programmablauf, Listengenerator gibi girişler kırmızı soru işaretli"
+      },
+      {
+        "type": "text",
+        "text": "Menünün sağındaki açıklamaya bakın: kırmızı soru işareti **yapılandırma dosyası yok (Konfigurationsdatei nicht vorhanden)**, sarı soru işareti **katalog verisi yok (Katalogdaten nicht vorhanden)** anlamına gelir. Yani sorun bir ayarda değil, kurulmamış dosyalardadır."
+      },
+      {
+        "type": "text",
+        "text": "**Çözüm:** Prekast modüllerini kullanmak için kurulum sırasında **Prekast Elemanlar (Betonfertigteile)** seçeneğini etkinleştirmeniz gerekir. Seçenek, kurulum programında **Ayarlar (Einstellungen)** -> **Seçenekler (Optionen)** sekmesinde, **Genişletilmiş Fonksiyonlar (Erweiterte Funktionen)** altındadır. Kurulum ekranındaki açıklamaya göre prekast elemanlar ALLPLAN Planbar'a özel bir genişletmedir ve başka ALLPLAN lisanslarıyla kullanılamaz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9252_0EM670000075eKM_e250a04e.png",
+        "caption": "Kurulum programı, Optionen sekmesi: Erweiterte Funktionen altında Betonfertigteile işaretli, Einbauteile işaretsiz"
+      },
+      {
+        "type": "text",
+        "text": "**Not:** **Gömme Parçalar (Einbauteile)** seçeneğini yalnız yeni bir kurulumda işaretleyin. Bu seçenek etkinse standart gömme parçalar büro klasörüne kopyalanır ve orada bulunan gömme parçaların üzerine yazılır; kendi düzenlediğiniz gömme parçaları kaybedebilirsiniz."
+      },
+      {
+        "type": "heading",
+        "text": "Yeni Prekast Eleman Paleti Görünmüyor"
+      },
+      {
+        "type": "text",
+        "text": "Prekast ortamı kurulu olsa bile yeni arayüz gelmeyebilir. Soru şu: Prekast Elemanlar (Precast Elements) için yeni kullanıcı arayüzüne nasıl geçilir; ekranda hâlâ eski arayüz duruyor."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9467_0EM67000009HCtO_16aee165.png",
+        "caption": "ALLPLAN 2024, eski Prekast Eleman arayüzü: Özellikler paletinde Element type, layers, Attributes ve Invoicing bölümleri"
+      },
+      {
+        "type": "text",
+        "text": "**Neden:** Önceki sürümlerden kullanıcı arayüzünü ve kullanıcı kısayollarını içeren UBX dosyasını içe aktardıysanız bu durum ortaya çıkabilir."
+      },
+      {
+        "type": "text",
+        "text": "**Çözüm:** **Servis (Service)** -> **Hotline araçları (Hotline tools)** -> **cleanstd** ile standart ayarları sıfırlayın ve ALLPLAN'ı yeniden başlatın."
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Kaydettiğiniz kısayolları yine de içe aktarmak istiyorsanız UBX dosyasını seçtikten sonra, ayarları içe aktarmadan önce **Kullanıcı arayüzü yapılandırması (User interface configuration)** onay kutusunu kaldırın. Yalnız **Kısayollar (Shortcuts)** işaretli kalırsa eski arayüz geri gelmez."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/prekast/9467_0EM67000009HCvY_8059adf6.png",
+        "caption": "İçe aktarma diyaloğu: User interface configuration işaretsiz, Shortcuts işaretli"
+      },
+      {
+        "type": "heading",
+        "text": "Allplan Prekast (Fertigteilbau) Kurs Çerçevesi"
+      },
+      {
+        "type": "text",
+        "text": "LearnNow'daki bu Almanca kurs, ALLPLAN 2025 sürümünün yeniliklerini videolarla tanıtır. Konular Genel, Mimari, Mühendislik Yapıları (Ingenieurbau), Konstrüksiyon ve Prekast (Fertigteilbau) başlıklarına ayrılır. Prekast başlığındaki videolar, bu derste kurduğunuz ortamın sürüme özgü yeniliklerini görmek için bir sonraki adımdır."
+      }
+    ]
   }
 }

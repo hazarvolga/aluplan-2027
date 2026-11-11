@@ -160,5 +160,193 @@
     "task": "Yeni bir deneme projesi oluşturun ve donatı seçeneklerini açarak aktif normu ve uzunluk birimini not edin. Durum çubuğunda projenin ülkesini bulun.",
     "expected": "Aktif ulusal normu (ör. EC2 / DIN EN 1992) ve birimi tanımlayabilmeniz, ülkenin durum çubuğunda göründüğünü ve proje bazlı olduğunu görmeniz.",
     "hint": "Birimler ve donatı ayarları proje bazlıdır; farklı bir ülkeyle oluşturulmuş projede bunların değiştiğini gözlemleyin."
+  },
+  "deepDive": {
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Donatı için Ulusal Normu Değiştirme / Tanımlama"
+      },
+      {
+        "type": "text",
+        "text": "Bu derste donatının hangi ulusal normla çalıştığını öğreniyorsunuz. Mühendislik (Engineering) modülünde büküm rulosu çapını ya da kanca boyunu sürekli elle uyarlıyorsanız normun kendisini uyarlayabilirsiniz. ALLPLAN donatısı, **Seçenekler (Options)** içindeki ulusal norma (**Nat_Code**) bağlıdır; bu seçenekler üzerinde çalıştığınız projeye aittir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/10490_0EM67000007nXzx_d673730a.png",
+        "caption": "Seçenekler, Donatı, Genel: Standart (Standard) listesinde EC 2 seçili; listede DIN EN, SIA, OENorm, NF, BS EN, BS 8666, EC 2, EHE"
+      },
+      {
+        "type": "text",
+        "text": "Tüm normlar varsayılan olarak yerel **ETC/Nat_Code** klasöründe saklanır. Bu klasörde değişiklik yapmayın: her güncellemede üzerine yazılır. Bunun yerine bir normun kopyasını ya da kendi normunuzu **STD/Nat_Code** klasöründe oluşturabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "ETC/Nat_Code içinde her norm için bir klasör vardır. Klasör adındaki sayı normun dahili numarasıdır (00 ile 99 arası): makaleye ekli **Readme.txt** dosyasına göre örneğin **Norm006** EC2, **Norm018** TS 500 normudur. Readme.txt dosyası her dosyanın ne işe yaradığını açıklar."
+      },
+      {
+        "type": "text",
+        "text": "**Norm klasöründeki dosyalar:** **Settings.txt** paletin genel kullanım koşullarını (kullanılan beton sınıfları, büküm çapları, özel koşullar) taşır. **SteelStrength.txt** çelik dayanımını hesaplar; yalnız dayanım çubuk çapına bağlıysa kullanılır, değilse değer kesit kataloğundan okunur. **BendingRollerDiameter.txt** büküm rulosu çapını, **HookLength.txt** kanca boyunu, **Lengths.txt** kenetlenme ve bindirme boylarını, **Offset.txt** kaydırma ölçüsünü (Versatzmaß) hesaplar."
+      },
+      {
+        "type": "text",
+        "text": "**Yeni norm tanımlama:** Mevcut bir klasörü, örneğin **ETC/Nat_Code/Norm003**, **STD/Nat_Code/UserNorm101** klasörüne kopyalayın. Ardından **STD/Nat_Code/Nat_Code.ini** dosyasında normunuza bir bölüm açıp adını verin: bölüm adı **[UserNorm101]**, altında **Name=SPECIAL** gibi bir satır. Her kullanıcı normu kendi **[UserNorm1nn]** bölümünü alır; **Name** satırı zorunludur ve alt klasörün adı bölüm adıyla aynı olmalıdır."
+      },
+      {
+        "type": "text",
+        "text": "Yerleşik bir normu listeden kaldırmak için Nat_Code.ini dosyasına o normun bölümünü (örneğin **[Norm099]**) ekleyip **NotUsed=1** yazın. Geriye dönük uyumluluk nedeniyle Norm000 ve Norm004 için bu değer 1'den büyük olmalıdır (**NotUsed=2**)."
+      },
+      {
+        "type": "text",
+        "text": "**Örnek değişiklik 1, en küçük kanca boyu:** Kanca boyunun en az 150 olmasını istiyorsanız bu bilgi **HookLength.txt** dosyasında tanımlıdır. Düz kısım 150'den kısaysa onu 150'ye eşitleyen bir koşul ekleyin: **IF StraightPart < 150** satırının altına **StraightPart = 150**, ardından **ENDIF**."
+      },
+      {
+        "type": "text",
+        "text": "**Örnek değişiklik 2, büküm rulosu çapını gösterme:** Paletin görünümünü **Settings.txt** dosyasıyla değiştirebilirsiniz. **[Conditions]** bölümündeki **InputBendingRollerDiameterAsValue=0** satırını **1** yaparsanız palette büküm rulosu çapı gerçek değer olarak gösterilir. Önce palet büküm merdanesi için bir çarpan gösterir:"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/10490_0EM67000007nXsD_7b3d1195.png",
+        "caption": "Değişiklikten önce: Geometri bölümünde büküm merdanesi çarpanı (Bending pin factor) 4"
+      },
+      {
+        "type": "text",
+        "text": "Değişiklikten sonra büküm rulosu çapı (merdane) gerçek değeriyle girilir:"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/10490_0EM67000007nXsr_f16b8f3d.png",
+        "caption": "Değişiklikten sonra: Geometri bölümünde büküm merdanesi (Bending pin) 0.03 değeriyle"
+      },
+      {
+        "type": "text",
+        "text": "**İpucu:** Değişiklikler çoğunlukla norm değiştirildikten sonra devreye girer; en güvenli yol, değişikliği görmek için ALLPLAN'ı yeniden başlatmaktır."
+      },
+      {
+        "type": "heading",
+        "text": "Ülkeye Özgü Projeler: Farklı Ülkelerdeki Partnerlerle Çalışma"
+      },
+      {
+        "type": "text",
+        "text": "Donatı seçenekleri ve normlar projeye bağlı olduğu için yurt dışındaki bir partnerle çalışırken projenin ülke ayarı belirleyicidir. Bu makalenin Almanca sürümü, farklı ülke ayarlı bir proje açılınca görünen **\"Dieses Projekt wurde erzeugt mit der Landeseinstellung XX.\"** (Bu proje XX ülke ayarıyla oluşturuldu) mesajını başlık alır; iki sürüm aşağıda birlikte anlatılıyor."
+      },
+      {
+        "type": "text",
+        "text": "ALLPLAN 2019'dan itibaren projeler ülkeye özgü tanımlanabilir: proje, belirli bir ülkenin kaynaklarını (tarama, desen, katman vb.) ve donatı ayarlarını alır. Lisansınıza bağlı olarak bir ya da daha fazla ek ülke paketi kurup örneğin bir projeyi Almanya, bir diğerini Avusturya ya da Birleşik Krallık kaynak ve ayarlarıyla oluşturabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Ön koşul, lisans:** Ülke paketlerini kullanıp kullanamayacağınız ALLPLAN lisansınıza bağlıdır. Almanca kaynağa göre yalnız **Version** lisans tipi (örneğin Allplan 2021) ülke paketlerini içerir; İngilizce kaynak bunu **Cubed** ve **Exponential** lisans tipleri olarak adlandırır. Bu lisanslarda ülke sayısı sınırsızdır, istediğiniz ülke koduyla proje oluşturup açabilirsiniz. **Lineared** ve **Squared** ile Mimari (Architektur) ve Mühendislik (Engineering) gibi geleneksel lisans tiplerinde varsayılan olarak yalnız kendi ülke paketiniz vardır; yalnız bu ülke koduyla oluşturulmuş projeleri oluşturup açabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Ülke paketlerini kurma:** Ek ülke paketleri yeni kurulumda ve sürüm yükseltmede açıkça seçilmelidir. Standart kurulum **yalnız** kendi ülkenizin paketini kurar. Birden fazla ülke paketi için **özel kurulum (Benutzerdefiniert / Custom)** yapmanız gerekir; ülke seçimi yalnız orada sunulur. Bunu ilk kurulumda, yükseltmede ya da sonradan bir güncellemeyle yapabilirsiniz."
+      },
+      {
+        "type": "text",
+        "text": "**Allplan 2021'e kadar:** Kurulumu (Setup) başlatın, kurulum tipinde **Benutzerdefiniert** seçin. **Özellikleri seç (Features wählen)** penceresinde lisansınızdaki dil paketlerini seçebilirsiniz. Program verilerinden sonra ülke seçimi (Landesauswahl) gelir: istediğiniz ülkeleri işaretleyin, diğer pencereleri **İleri (Weiter)** ile onaylayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11122_0EM7U000001TehE_8d0593a8.png",
+        "caption": "Allplan 2019 kurulumu, Landesauswahl: Österreich ve Deutschland işaretli ülke listesi"
+      },
+      {
+        "type": "text",
+        "text": "**Allplan 2022'den itibaren:** Windows düğmesine sağ tıklayıp **Uygulamalar ve Özellikler (Apps und Features)** açın, listede ALLPLAN sürümünüzü bulun ve **Değiştir (Ändern)** deyin. Kurulumda yeniden **Ändern** seçin; üstteki **Seçenekler (Optionen)** sekmesinde **Ülkeler (Länder)** altından istediğiniz ülkeleri işaretleyip **Yükle (Installieren)** deyin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11066_0EM7U000001TeiR_1a61c477.png",
+        "caption": "Allplan 2022 kurulumu: Einstellungen, Optionen sekmesinde Länder listesi"
+      },
+      {
+        "type": "text",
+        "text": "**Not:** Seçtiğiniz ülke paketi sayısı arttıkça kurulum süresi ve disk alanı ihtiyacı belirgin biçimde artar."
+      },
+      {
+        "type": "text",
+        "text": "**ALLPLAN'da kullanım:** Ülke, proje oluşturulurken tanımlanır ve **sonradan değiştirilemez**. Yeni proje oluştururken **Ülkeye özgü şablonlar (Länderspezifische Vorlagen)** altında kurulu ülkenizi seçin; sunuluyorsa ülkeye özgü bir proje şablonu da seçebilirsiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11122_0EM7U000001TehF_ccbee07d.png",
+        "caption": "Yeni proje: Länderspezifische Vorlagen listesinde Deutschland ve proje şablonları"
+      },
+      {
+        "type": "text",
+        "text": "Proje şablonu seçmezseniz istenen ülkeyi sonraki pencerede **Ülke (Land)** altında seçmeniz gerekir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11122_0EM7U000001TeiF_8aead013.png",
+        "caption": "Land bölümünde Landeseinstellungen listesi: Deutschland, Italien, Schweiz, Österreich"
+      },
+      {
+        "type": "text",
+        "text": "**Projede:** Projenin ülke ayarı durum çubuğunda görünür. Seçeneklerdeki uzunluk girişi ve donatı birimleri projeye bağlıdır ve ayarlanan ülkeye göre otomatik ön ayarlanır."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11122_0EM7U000001TeiG_1ce96708.png",
+        "caption": "Durum çubuğunda Land: Deutschland bilgisi"
+      },
+      {
+        "type": "text",
+        "text": "**Ek bilgiler:** Bir projeyi Workgroup Manager'dan teslim alırken (auschecken) hangi ülkeye özgü büro standardının alınacağını seçebilirsiniz. Lisans Ayarları'nda (Lizenzeinstellungen) kaynakta simgeyle gösterilen düğmeye tıkladığınızda lisansınızın hangi ülkeleri desteklediği gösterilir. Kaynak bu adım için iki küçük simge verir:"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11122_0EM7U000001TeiH_d669288a.png",
+        "caption": "Araçlar simgesi (çapraz anahtar ve tornavida)"
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/11122_0EM7U000001TeiI_60e8c9d4.png",
+        "caption": "Bilgi (i) simgesi"
+      },
+      {
+        "type": "text",
+        "text": "Bir varsayılan ülke vardır; genellikle lisansınızda kayıtlı ülkedir ve verileri **STD** ile **ETC** klasörlerine kurulur. Ek kurulan her ülke paketi için **STD.???** ve **ETC.???** klasörleri oluşturulur (??? ülke kısaltmasıdır). Büro yolu ve standart yol her zaman açık projenin ülke ayarına göre belirlenir: bir projede büro ya da standart yola kaydettiğiniz favori veya kütüphane elemanı yalnız aynı ülke ayarlı projelerde kullanılabilir. ProjectPilot bunun istisnasıdır; orada büro ve standart yol her zaman STD ve ETC klasörlerini gösterir."
+      },
+      {
+        "type": "heading",
+        "text": "Donatı Seçenekleri Kaydedilmiyor"
+      },
+      {
+        "type": "text",
+        "text": "Donatı seçenekleri projeye bağlı olduğu için ALLPLAN 2019'dan itibaren her proje değişikliğinde ve program yeniden başlatıldığında standart değerlere dönebilir. Bu bölümde seçenekleri kalıcı ve tüm kullanıcılar için aynı olacak biçimde nasıl kaydedeceğinizi görüyorsunuz."
+      },
+      {
+        "type": "text",
+        "text": "ALLPLAN 2019 ile donatı elemanlarının (çubuk donatı ve hasır donatı) seçenekleri ülkeye özgü normlarla ayarlanabilir hale geldi. Bu nedenle seçenekler artık önceki sürümlerdeki gibi **kullanıcıya bağlı** değil, **projeye bağlı** tutulur; büroda farklı ülke ayarları ve normlarla rahatça çalışılabilir."
+      },
+      {
+        "type": "text",
+        "text": "İstenmeyen değişiklikleri önlemek için, proje sahibi ya da yönetici hakları olmayan bir kullanıcının donatı seçeneklerinde yaptığı değişiklikler, proje değiştirildiğinde ve program kapatıldığında otomatik olarak standart ayarlara döndürülür."
+      },
+      {
+        "type": "text",
+        "text": "**Değişiklikleri kalıcı yapmak için:** Önce ilgili projede başka hiçbir kullanıcının çalışmadığından emin olun. ALLPLAN yönetici hakları olan bir kullanıcı ya da proje sahibi ALLPLAN'ı başlatıp projeyi açar. Projedeyken istenen donatı seçeneklerini önceki sürümlerdeki gibi **Seçenekler > Donatı (Optionen > Bewehrung)** altında değiştirir. Tüm değişiklikler bitince proje **Proje Yeni, Aç (Projekt neu, öffnen)** ile değiştirilir ya da ALLPLAN kapatılır; ayarlar ancak bu adımla kalıcı olarak sabitlenir. Diğer kullanıcılar projeye ancak bundan sonra geçebilir."
+      },
+      {
+        "type": "text",
+        "text": "**İpucu, şablon proje:** Seçenekleri her yeni projede yeniden ayarlamamak için şablon projeler kullanın. Yeni ve boş bir projede istediğiniz ayarları yukarıdaki gibi yapın ve ayarları sabitlemek için projeden çıkın. Sonra **Proje Yeni, Aç** fonksiyonunu yeniden açın, bu projeye sağ tıklayın ve bağlam menüsünden **Proje Şablonlarına Kopyala (Nach Projektvorlagen kopieren)** seçeneğini seçin."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/10987_0EM7U000001TdzO_3e555529.png",
+        "caption": "Proje bağlam menüsünde Nach Projektvorlagen kopieren komutu"
+      },
+      {
+        "type": "text",
+        "text": "Artık bu proje, yeni proje oluştururken **proje şablonu** olarak seçilebilir."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/donati-detaylandirma/10987_0EM7U000001TdzP_4de3d310.png",
+        "caption": "Yeni proje diyaloğunda proje şablonları listesi (Allplan 2019 IBD VORLAUF INGENIEURBAU dahil)"
+      }
+    ]
   }
 }

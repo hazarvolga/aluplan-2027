@@ -162,137 +162,58 @@
       },
       {
         "type": "text",
-        "text": "Döşeme yüzeylerini malzemeye göre (VOB) metrajlayan kendi lejantınızı tanımlayabilirsiniz. Önce hazırlık yaparsınız. Lejantları her zaman 1:100 ölçekli çizim dosyasında oluşturun; başka ölçekte lejant metin boyutlarını kontrol etmek zorlaşır. Lejantla gösterilecek birkaç obje hazır olmalı, burada farklı büyüklükte döşeme ince yapılı mahaller. Gösterilecek veriyi de önceden belirlersiniz: en üst katmanın malzemesi için MT_Boden(@508@;0), en üst katmanın VOB alanı için MT_Boden(@81@;0) formülünü kullanırsınız."
+        "text": "Döşeme yüzeylerini malzemeye göre (VOB) metrajlayan kendi lejantınızı baştan kuracaksınız. Bu derste işin tasarım kısmını yapıyorsunuz: hazırlık, alanların çizilmesi ve statik metinler. Hücreleri bir sonraki derste, lejantı tanımlayıp kaydetmeyi de ondan sonraki derste tamamlayacaksınız. Bu örnekte alt lejantı olmayan basit bir lejant kuruluyor."
+      },
+      {
+        "type": "text",
+        "text": "Lejantları her zaman **1:100** ölçekli çizim dosyalarında oluşturun. Çizim dosyası başka bir ölçekteyse lejanttaki metin boyutlarını kontrol etmek zorlaşır."
+      },
+      {
+        "type": "text",
+        "text": "Lejantla gösterilecek birden fazla obje oluşturun. Bu örnekte farklı büyüklükte, döşeme ince yapısı olan mahaller kullanılıyor."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/11050_0EM7U000001Tdh5_4c0afca1.png",
-        "caption": "Lejantla metrajlanacak farklı büyüklükte döşeme yüzeyleri."
+        "caption": "Örnekte kullanılan, farklı kaplama malzemeli döşeme yüzeyleri (3B görünüş)"
       },
       {
         "type": "text",
-        "text": "Lejantın görünümünü önceden çizin. Bir lejant için en az bir satır gerekir; çoğunlukla bir Başlık (Kopf) ve genel toplam için bir Toplam (Fuß) satırı mantıklıdır. Filtrelemeyi, yani hangi objeye bakılacağını da planlarsınız; burada Döşeme Yüzeyi (Bodenfläche) objesi SELECT alanında ayarlanır."
+        "text": "Gösterilecek verileri belirleyin; gereken nitelikleri ve formülleri önceden listeleyin. Bu örnekte istek şu: mahallerin döşeme yüzeyleri tek tek metrajlanacak, sıralama en üst katmanın (üst kaplamanın) malzemesine göre yapılacak, VOB alanı malzemeye göre toplanacak ve tüm kaplamaların genel toplamı alınacak."
+      },
+      {
+        "type": "text",
+        "text": "**En üst katmanın malzemesi:** Malzeme niteliği (@508@) malzemeyi taşır; ince yapı yüzeylerinde her katmanın niteliği özel bir çağrıyla okunur. **MT_Boden(@508@;0)** en üst katmanın malzemesini verir."
+      },
+      {
+        "type": "text",
+        "text": "**En üst katmanın VOB alanı:** VOB_Alanı (VOB_Fläche, @81@) niteliği her zaman VOB alanını gösterir. VOB_Miktarı (VOB_Menge, @100@) ise seçilen hakediş birimine göre değişir ve yalnız ALLPLAN standardında hakediş kuralı tanımlı bir imalat kalemi seçildiğinde VOB'a uygun miktar verir. **MT_Boden(@81@;0)** en üst katmanın VOB alanını verir; çoğu durumda doğrudan nitelik de kullanılabilir."
+      },
+      {
+        "type": "text",
+        "text": "Hangi objelere göre filtreleme yapacağınızı planlayın. Burada döşeme yüzeyi objesine göre filtrelenecek; bu filtre lejantı tanımlarken **SELECT** kısmında ayarlanır."
+      },
+      {
+        "type": "text",
+        "text": "Son olarak lejantın görünümünü önceden çizin. Bir lejant için en az bir satır gerekir; çoğunlukla bir başlık (Kopf) ve genel toplam alınacaksa bir toplam satırı (Altbilgi / Fuß) da mantıklıdır."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/11050_0EM7U000001Tdh6_051353ad.png",
-        "caption": "Başlık, satır ve toplam alanlarıyla lejantın ön çizimi."
+        "caption": "Lejant taslağı: Başlık (Kopf), Satır (Zeile) ve Toplam (Summe) alanları ve ölçüleri"
       },
       {
         "type": "text",
-        "text": "**Alanları çizin ve hücreleri tanımlayın.** Başlık, Satır ve Toplam alanlarını çizin. Münferit alanlar birbirinden bağımsız seçilebilmelidir: sol ve sağ kenar çizgilerini üç parçalı yapın, dolgu alanlarını tek tek oluşturun. Sabit metinleri normal metin olarak yazın. Ardından Actionbar üzerinde Kullanıcı Objeleri (Benutzerobjekte) görevini açıp Raporlar, Lejantlar bölümünü bulun ve Hücre Tanımla (Zelle definieren) fonksiyonunu seçin."
+        "text": "**Adım 1 - Alanları çizin:** Lejantın Başlık (Kopf), Satır (Zeile) ve Toplam (Summe) alanlarını yukarıdaki taslaktaki gibi çizin. Alanların **birbirinden bağımsız** seçilebilmesi gerekir: sol ve sağ kenar çizgilerini üç parça halinde oluşturun, dolgu alanlarını da tek tek çizin."
+      },
+      {
+        "type": "text",
+        "text": "**Adım 2 - Statik metinler:** Lejantın sabit metinlerini normal metin olarak yazın."
       },
       {
         "type": "image",
-        "src": "/akademi/lejant/11050_0EM7U000001TdmG_8f39c27e.png",
-        "caption": "Kullanıcı Objeleri görevinde Raporlar, Lejantlar bölümü."
-      },
-      {
-        "type": "text",
-        "text": "İlk hücre (Hücre 1 / Sütun 1) en üst katmanın malzemesini verir. Dinamik araç çubuğunda Formül düğmesine basıp MT_Boden(@508@;0) formülünü girin. Yerleştirmeden önce formatı kontrol edin, örneğin A16 (16 karakterlik metin). Formülü soldaki satıra yerleştirin. İkinci hücre için alanı verecek MT_Boden(@81@;0) formülünü F8.2 formatı, m² birimi ve sağa dayalı hizalamayla oluşturun; bu hücre 2 numarasını alır."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11050_0EM7U000001TdmJ_3f5c6749.png",
-        "caption": "Hücre Tanımla: formül ve A16 metin formatı."
-      },
-      {
-        "type": "text",
-        "text": "Toplam satırını tüm Hücre 2'lerin toplamıyla tamamlayın; formül SUMME(SPALTE2) olur, format Hücre 2 ile aynıdır. Önemli: hücreler kesintisiz numaralandırılmalıdır. Sıralamada boşluk olursa kaydederken hata alırsınız; No-Değ (Nr-Mod) düğmesiyle numaraları düzeltebilirsiniz, ancak formüldeki sütun numaraları otomatik güncellenmez."
-      },
-      {
-        "type": "text",
-        "text": "**Lejantı tanımlayın ve kaydedin.** Lejant Tanımla (Legende definieren) fonksiyonunu açın. Lejant tipini Mimari (Archit) seçin. Select'i Döşeme Yüzeyi objesine ayarlamak için Select alanına tıklayın; Mimari Elemanlar Filtresi'nde Objekt= seçimiyle Bodenfläche'yi seçin. Onaydan sonra kriter Objekt=Bodenfläche olarak görünür."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11050_0EM7U000001TdmO_6b0f4339.png",
-        "caption": "Select: obje filtresi olarak Döşeme Yüzeyi (Bodenfläche)."
-      },
-      {
-        "type": "text",
-        "text": "Başlık (Kopf) düğmesine basıp başlığa girecek tüm elemanları seçin. Hücre / Satır (Zeile) düğmesiyle satıra girecek elemanları seçin; yatay çizgiler satırda görünmemeli, başlık ve altbilginin kenarını oluşturmalıdır. Satır bir satır aralığı (Zeilenvorschub) ister; örnekte yükseklik 30 ölçüldüğü için giriş 3,0 mm olur. Toplam (Summe) düğmesiyle toplam alanını tanımlayın. Son olarak Fix düğmesiyle lejantı boş bir numaraya kaydedip ad verin."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11050_0EM7U000001TdmP_e32d7c30.png",
-        "caption": "Başlık alanına girecek elemanların seçilmesi."
-      },
-      {
-        "type": "text",
-        "text": "**İlk test ve satırları toplatma.** Lejant fonksiyonunu seçip yeni lejantı çizim dosyasına yerleştirin. İlk testte lejant her döşeme yüzeyini tek tek gösterir. Allplan satırda tüm döşeme katmanlarını metrajlayabildiği için, tekil sonuçları toplatırken yalnızca en üst katmanın VOB alanını hesaplayan ek bir filtre gerekir."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11050_0EM7U000001TdmV_59601d7b.png",
-        "caption": "İlk test: lejant her döşeme yüzeyini ayrı satırda gösteriyor."
-      },
-      {
-        "type": "text",
-        "text": "Lejant Değiştir (Legende modifizieren) fonksiyonunu açıp lejantı seçin. Bilgi (Info) düğmesiyle Hücre 2 üzerine tıklayın. Tekil sonuçları topla (Einzelergebnisse aufsummieren) seçeneğini etkinleştirin ve formülü şöyle değiştirin: _IF_(MT_Boden(@210@;0)=@210@)@81@_ELSE_0. Formül en üst katmanın katman numarasını o an değerlendirilen numarayla karşılaştırır; eşitse VOB alanını verir, değilse 0 olur. Böylece yalnızca en üst katman sayılır. Tamam ile kapatın, ESC ile moddan çıkın ve kaydet (speichern) seçin. Son test, tekil değerlerle aynı toplamı göstermelidir."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11050_0EM7U000001TdmY_8abccb12.png",
-        "caption": "En üst katmanı bulan toplama formülünün girilmesi."
-      },
-      {
-        "type": "heading",
-        "text": "Etiket Stilleri / Lejantlar - Yedekleme ve Geri Yükleme"
-      },
-      {
-        "type": "text",
-        "text": "Bir lejant her zaman zle00x.deu lejant dosyalarından ve ek bir zle000.deu yönetim dosyasından oluşur. Pafta lejantları (antetler) her zaman 7 veya 8 numaralı dosyada bulunmalıdır (zle007.deu, zle008.deu). Bir etiket stili ise zdo00x.deu dosyalarından ve zdo000.deu yönetim dosyasından oluşur."
-      },
-      {
-        "type": "text",
-        "text": "Yedekleme - önce bir harici yol tanımlayın: Dosya (Datei) -> ProjectPilot'u açın, 'Harici Yol (Externer Pfad)' düğümüne sağ tıklayıp Harici yol seç (Externen Pfad auswählen) ile bir yedekleme klasörü ayarlayın."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/10888_0EM7U000001Te3a_a3b840c5.png",
-        "caption": "ProjectPilot'ta harici yolu (yedekleme klasörünü) tanımlama."
-      },
-      {
-        "type": "text",
-        "text": "ProjectPilot'u kapatın; Oluştur (Erzeugen) -> Ek Modüller -> Şablonlar: Raporlar, Lejantlar, Etiketler -> Etiket Stillerini, Lejantları Yönet yolunu açın. Sol tarafta kaynak dizini (örn. Büro) ve klasörü seçip kaydedilecek lejantları işaretleyin, Kopyala (Kopieren) deyin."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/10888_0EM7U000001Te3b_f6366dcc.png",
-        "caption": "Kaynak dizinden kaydedilecek lejantları işaretleyip Kopyala."
-      },
-      {
-        "type": "text",
-        "text": "Kayıt konumu olarak Harici Yol'u seçin, dosya numarasını (örn. 7) seçin, numaraları işaretleyip Çalıştır (Ausführen) deyin. Harici klasörde zle00x.deu (veya zle007.deu) ve zle000.deu dosyaları oluşur."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/10888_0EM7U000001TeD1_8ee7091b.png",
-        "caption": "Hedef olarak Harici Yol ve dosya numarasını seçip Çalıştır."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/10888_0EM7U000001TeD2_1c01ef32.png",
-        "caption": "Harici klasörde oluşan zle00x.deu lejant dosyası ve zle000.deu yönetim dosyası."
-      },
-      {
-        "type": "text",
-        "text": "Geri yükleme (içe aktarma) - harici yolu, lejantınızın bulunduğu klasöre ayarlayın. Yine Etiket Stillerini, Lejantları Yönet'i açın; bu kez kaynak dizin olarak Harici Yol'u, klasörü ve geri yüklenecek lejantları seçip Kopyala deyin."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/10888_0EM7U000001TeD5_7fcdb21f.png",
-        "caption": "Geri yüklemede kaynak Harici Yol; geri yüklenecek lejantları işaretleyip Kopyala."
-      },
-      {
-        "type": "text",
-        "text": "Son olarak geri yükleme konumunu (örn. Büro), dosya numarasını (pafta lejantları için 7) ve numaraları seçip Çalıştır deyin. Lejantlar seçtiğiniz dizinde hazır olur. Pafta lejantları mutlaka 7 veya 8 numaralı dosyada bulunmalıdır."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/10888_0EM7U000001TeD6_14f716d6.png",
-        "caption": "Geri yükleme konumu ve dosya numarasını seçip Çalıştır."
+        "src": "/akademi/lejant/11050_0EM7U000001TdmF_1593f5f6.png",
+        "caption": "Statik metinleri yerleştirilmiş lejant taslağı"
       },
       {
         "type": "heading",
@@ -300,70 +221,61 @@
       },
       {
         "type": "text",
-        "text": "Standart lejantlar, tıpkı raporlar gibi doğrudan değiştirilemez; önce büro standardına veya bir projeye kopyalanmalı, sonra orada uyarlanmalıdır. Örnek olarak Mahal_Taban Alanları (Raum_Grundflächen) lejantı (Standart dizini, 1 Mimari dosyası) kullanılacaktır."
+        "text": "Kendi lejantınızı sıfırdan çizmek yerine bir standart lejantı kopyalayıp uyarlayabilirsiniz. Ancak standart lejantlar, raporlar gibi doğrudan değiştirilemez: önce büro standardına ya da bir projeye kopyalanır, uyarlama orada yapılır. Bu derste kopyalamayı yapıyorsunuz. Örnek, **Mahal_Taban Alanları (Raum_Grundflächen)** lejantı (**Standart (Standard)** dizini, **1 Mimari (1 Architektur)** dosyası); lejantı açıp yapısını okumayı ve DIN277'ye uyarlamayı sonraki derslerde göreceksiniz."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11051_0EM7U000001Tdn0_ee80ee73.png",
+        "caption": "Örnek lejant: Standart dizin, 1 Architektur dosyası, 3 Raum_Grundflächen"
       },
       {
         "type": "text",
-        "text": "Adım 1 - Kopyalama: Etiket Stillerini, Lejantları Yönet fonksiyonunu açın, Lejantlar'ı onaylayın. Kaynak dizin Standart -> Dosya Mimari -> Lejant 3 Raum_Grundflächen seçip Kopyala; hedef dizini (proje) -> Dosya 1 -> Lejant 3 seçip Çalıştır (Ausführen)."
+        "text": "**Adım 1 - Lejantı kopyalayın:** Lejantlar, lejant ve etiket stili yönetimi üzerinden kopyalanır, taşınır veya yeniden adlandırılır. Standarttan bir projeye kopyalamak için önce **Etiket Stillerini, Lejantları Yönet (Beschriftungsbilder, Legenden verwalten)** fonksiyonunu açın (Actionbar -> **Mimari (Architektur)** rolü -> **Kullanıcı Objeleri (Benutzerobjekte)** görevi)."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11051_0EM7U000001Tdn1_af43f7c2.png",
+        "caption": "Kullanıcı Objeleri görevinde Etiket Stillerini, Lejantları Yönet simgesi"
+      },
+      {
+        "type": "text",
+        "text": "Açılan seçimde **Lejantlar (Legenden)** seçeneğini onaylayın."
+      },
+      {
+        "type": "image",
+        "src": "/akademi/lejant/11051_0EM7U000001Tdn2_fc2e5eac.png",
+        "caption": "Lejantlar (Legenden) seçimi"
+      },
+      {
+        "type": "text",
+        "text": "Kopyalanacak lejantı seçin: kaynak dizin **Standart (Standard)** -> dosya **Mimari (Architektur)** -> lejant **3 Mahal_Taban Alanları (3 Raum_Grundflächen)**. Ardından **Kopyala (Kopieren)** fonksiyonunu seçin."
       },
       {
         "type": "image",
         "src": "/akademi/lejant/11051_0EM7U000001Tdn3_d237e54b.png",
-        "caption": "Kaynak Standart dizininden 3 Raum_Grundflächen lejantını seçip Kopyala."
+        "caption": "Kaynak: Standart, 1 Architektur, 3 Raum_Grundflächen ve Kopyala"
       },
       {
         "type": "text",
-        "text": "Adım 2 - Açma: Lejantı Modifiye Et (Legenden modifizieren) fonksiyonuyla açın. Bu örnekte iki çizim penceresi görünür: Pencere 1 filtreli ana lejant başlığı, Pencere 2 bir satır ve bir toplam içeren alt lejanttır (alt liste)."
+        "text": "Hedef dizini (burada mevcut proje), **Dosya 1 (Datei 1)** ve **Lejant 3 (Legende 3)** seçin ve işlemi **Çalıştır (Ausführen)** ile başlatın. Dosyanın adı olup olmamasına, bir lejantın üzerine yazılıp yazılmayacağına ya da aynı adlı bir lejant bulunmasına göre ek diyaloglar açılabilir."
       },
       {
         "type": "image",
-        "src": "/akademi/lejant/11051_0EM7U000001Tdn8_6134ce67.png",
-        "caption": "Lejant şablonu iki pencere halinde açılır: ana liste ve alt liste."
+        "src": "/akademi/lejant/11051_0EM7U000001Tdn4_ecff4b6b.png",
+        "caption": "Hedef: proje dizini, Dosya 1, Lejant 3 ve Çalıştır"
       },
       {
         "type": "text",
-        "text": "Adım 3 - Yapı: Ana lejantta mahaller için bir filtre (@OBJ@=61) tanımlıdır. Sarı alan liste başlığı metni, yeşil alan ana liste satırıdır (burada PARENT(@507@) ile mahal grubunun adı), kırmızı alan alt liste satırı, mor alan alt liste toplamıdır."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11051_0EM7U000001Tdn9_c9dae112.png",
-        "caption": "Renklerle lejant yapısı: başlık, ana satır, alt satır ve toplam."
+        "text": "Hedef, ihtiyaca göre büro dizini de olabilir. Tek bir lejant yerine bütün bir dosyayı da kopyalayabilirsiniz; bunun için diyaloğun üstünde **Dosya (Datei)** seçeneğine geçin, akış aynıdır."
       },
       {
         "type": "text",
-        "text": "Adım 4 - Başlık ve filtre: Metin Modifiye Et (Text modifizieren) ile statik 'Grundfläche' metnini 'Netto-Raumflächen DIN277' ile değiştirin. Ardından Select (Seç) ile filtreye ..&Flächenart_DIN277=\"N\" kriterini ekleyin; böylece yalnızca net alan oluşturan mahaller (galeri boşlukları ve boş hacimler hariç) listelenir."
+        "text": "Kopyayı yeniden adlandırmak için ilk diyalogda projeyi ve kopyaladığınız lejantı seçin, **Yeniden adlandır (Umbenennen)** ile yeni adı girin."
       },
       {
         "type": "image",
-        "src": "/akademi/lejant/11051_0EM7U000001TdnC_5caa2bb8.png",
-        "caption": "Metin Modifiye Et ile başlığı Netto-Raumflächen DIN277 olarak değiştirme."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11051_0EM7U000001TdnF_469d40ea.png",
-        "caption": "Select ile filtreye &Flächenart_DIN277=\"N\" kriterini ekleme."
-      },
-      {
-        "type": "text",
-        "text": "Adım 5 - İçeriği değiştirme: Alt listeyi öne getirin, Bilgi (Info) ile Hücre/Sütun 5'e (Alan) tıklayın, büyük butondan Mimari Miktarlar grubunda Grundfläche_DIN277 niteliğini seçin. Toplam hücresi (SUMME(SPALTE5)) otomatik olarak doğru kalır."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11051_0EM7U000001TdnH_ca59d02b.png",
-        "caption": "Hücre 5 niteliğini Grundfläche_DIN277 olarak değiştirme."
-      },
-      {
-        "type": "text",
-        "text": "Adım 6 - Satıra bilgi ekleme: Karakter genişliğini (Laufweite) 2.2'den 1,6'ya düşürüp Fonksiyon hücresini sola kaydırarak yer açın. Hü-Ekle (Zelle einfügen) ile Satır tipinde bir Nitelik hücresi ekleyin ve DIN 277, Konut Alanı BauNVO grubundan Nutzungsart_DIN277 niteliğini seçin; metin yüksekliğini 2.200, biçimi A5 yapın."
-      },
-      {
-        "type": "text",
-        "text": "Adım 7 - Kaydetme: ESC ile Lejantı Modifiye Et fonksiyonundan çıkıp Kaydet (speichern) deyin. Değişiklikler seçili lejantın üzerine yazılır ve lejant projede kullanıma hazır olur."
-      },
-      {
-        "type": "image",
-        "src": "/akademi/lejant/11051_0EM7U000001TdnN_fbdfeac9.png",
-        "caption": "Sonuç: kullanım türü bilgisi eklenmiş ve ince yapı yüzeyleri hesaba katıldığı için biraz küçülmüş DIN277 alanları."
+        "src": "/akademi/lejant/11051_0EM7U000001Tdn5_8dde7a6e.png",
+        "caption": "Kopyalanan lejantın yeniden adlandırılması (Nettoraumflächen_Gruppen)"
       }
     ]
   },

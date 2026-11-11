@@ -8,7 +8,7 @@ import { mergeSearchIndex, type SearchExtra } from '@/lib/search';
 interface SearchIndexState { entries: SearchEntry[]; loading: boolean; error: boolean; videoPartial: boolean; load: () => void; retryVideos: () => void }
 const SearchIndexContext = createContext<SearchIndexState>({ entries: [], loading: false, error: false, videoPartial: false, load: () => {}, retryVideos: () => {} });
 
-export function SearchIndexProvider({ children, showRelease }: { children: ReactNode; showRelease: boolean }) {
+export function SearchIndexProvider({ children, showRelease, showAkademi }: { children: ReactNode; showRelease: boolean; showAkademi: boolean }) {
   const [entries, setEntries] = useState<SearchEntry[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -32,8 +32,10 @@ export function SearchIndexProvider({ children, showRelease }: { children: React
     Promise.all([
       import('@/data/search-index.json'),
       showRelease ? import('@/data/search-release-index.json') : Promise.resolve(null),
-      import('@/data/search-extra-index.json')
-    ]).then(([baseModule, releaseModule, extraModule]) => {
+      import('@/data/search-extra-index.json'),
+      // Akademi lessons join the index only while the Akademi is enabled (never leaks when off).
+      showAkademi ? import('@/data/search-akademi-index.json') : Promise.resolve(null)
+    ]).then(([baseModule, releaseModule, extraModule, akademiModule]) => {
       const videoSources = Object.entries(VIDEO_SOURCES).map(([slug, source]) => ({
         path: `/video-kutuphanesi/kaynak/${slug}`, title: source.title,
         seoTitle: `${source.title} | Video Kütüphanesi | Aluplan`, section: 'Video',
@@ -43,13 +45,14 @@ export function SearchIndexProvider({ children, showRelease }: { children: React
       const release = (releaseModule?.default ?? []) as SearchEntry[];
       const extras = extraModule.default as SearchExtra[];
       const enriched = mergeSearchIndex(base, release, extras, showRelease);
-      setEntries([...enriched, ...videoSources]);
+      const akademi = (akademiModule?.default ?? []) as SearchEntry[];
+      setEntries([...enriched, ...videoSources, ...akademi]);
       retryVideos();
     }).catch(() => setError(true)).finally(() => {
       pending.current = false;
       setLoading(false);
     });
-  }, [entries.length, showRelease, retryVideos]);
+  }, [entries.length, showRelease, showAkademi, retryVideos]);
   return <SearchIndexContext.Provider value={{ entries, loading, error, videoPartial, load, retryVideos }}>{children}</SearchIndexContext.Provider>;
 }
 

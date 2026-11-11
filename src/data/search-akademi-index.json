@@ -1,0 +1,802 @@
+[
+  {
+    "path": "/akademi",
+    "title": "Aluplan Akademi",
+    "seoTitle": "Aluplan Akademi | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "ALLPLAN’ı Türkçe, seviye seviye öğrenin: ücretsiz, herkese açık eğitim programı.",
+    "keywords": "ALLPLAN eğitim Türkçe ders BIM eğitimi katalog"
+  },
+  {
+    "path": "/akademi/temel",
+    "title": "Seviye 1 · Temeller",
+    "seoTitle": "Seviye 1 · Temeller | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Arayüz, proje yapısı ve parametrik mimari elemanlarla ilk modelinizi kurarsınız.",
+    "keywords": "Temeller"
+  },
+  {
+    "path": "/akademi/orta",
+    "title": "Seviye 2 · Üretim ve Dokümantasyon",
+    "seoTitle": "Seviye 2 · Üretim ve Dokümantasyon | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Modelden kesit, görünüş, pafta ve metraj üretirsiniz.",
+    "keywords": "Üretim ve Dokümantasyon"
+  },
+  {
+    "path": "/akademi/ileri",
+    "title": "Seviye 3 · Disiplin Uzmanlığı",
+    "seoTitle": "Seviye 3 · Disiplin Uzmanlığı | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Dört eşit süreli koldan birini seçip mesleğinize göre derinleşirsiniz.",
+    "keywords": "Disiplin Uzmanlığı"
+  },
+  {
+    "path": "/akademi/uzman",
+    "title": "Seviye 4 · BIM Yönetimi ve Otomasyon",
+    "seoTitle": "Seviye 4 · BIM Yönetimi ve Otomasyon | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "openBIM ile disiplinler arası çalışır, tekrar eden işleri otomatikleştirirsiniz.",
+    "keywords": "BIM Yönetimi ve Otomasyon"
+  },
+  {
+    "path": "/akademi/temel/arayuz-ve-temel-gezinme",
+    "title": "Arayüz ve Temel Gezinme",
+    "seoTitle": "Arayüz ve Temel Gezinme | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Bu derste ALLPLAN arayüzünün bölümlerini tanıyacak, temel gezinme ve görünüm araçlarını kullanacak, CAD ile BIM arasındaki farkı kavrayacaksınız.",
+    "keywords": "M1 Temeller ALLPLAN arayüzünün ana bölümlerini (Actionbar, paletler, çizim alanı, durum çubuğu) tanımlar Temel gezinme ve görünüm araçlarını kullanır CAD ile BIM arasındaki farkı ve nesne tabanlı, parametrik modelleme mantığını açıklar CAD'den BIM'e: neden bir duvar çizgiden fazlasıdır ALLPLAN'ı açtığınızda ne görürsünüz Gezinme: yakınlaştırma, kaydırma ve \"tümünü sığdır\" Aynı modeli birden çok pencereden görmek: viewport"
+  },
+  {
+    "path": "/akademi/uzman/openbim-ifc-koordinasyon",
+    "title": "openBIM, IFC 4.3, IDS ve CDE Koordinasyonu",
+    "seoTitle": "openBIM, IFC 4.3, IDS ve CDE Koordinasyonu | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Bu derste sürekli projenizi IFC olarak teslim eder, dışa aktarımda veri kaybını denetler, bir referans modelle çakışmaları gözler, sorunları BCF ile paylaşır ve IDS/CDE/ISO 19650 mantığıyla teslim paketini düzenlersiniz. Modeliniz markadan bağımsız biçimde iş birliğine açılır.",
+    "keywords": "M10 BIM Yönetimi ve Otomasyon IFC dışa/içe aktarımını yapar ve veri kaybını denetler BCF ile sorun yönetimini ve referans model koordinasyonunu yürütür IDS, CDE ve ISO 19650 temel kavramlarını teslim akışına uygular IFC ile teslim ve veri kaybı Referans model ve BCF ile koordinasyon IDS, CDE ve ISO 19650"
+  },
+  {
+    "path": "/akademi/temel/proje-yapisi",
+    "title": "Proje Yapısı, Yapı Yapısı ve Çizim Dosyaları",
+    "seoTitle": "Proje Yapısı, Yapı Yapısı ve Çizim Dosyaları | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Bu derste projenizi kurar, binanın yapı yapısını (kat ve bölümler) ve aks sistemini oluşturur, çizim dosyalarını katman mantığına göre düzenlersiniz. Yani modellemeye başlamadan önce projenin iskeletini hazırlarsınız.",
+    "keywords": "M2 Temeller Proje, yapı yapısı (building structure) ve çizim dosyası (document) ilişkisini açıklar. Kat/seviye ve aks sistemini kurar. Çizim dosyalarını katman/yapı mantığına göre düzenler. Proje: tüm işin tek çatısı Yapı yapısı: binanın dijital iskeleti Aks sistemi: her şeyin hizalandığı ızgara Çizim dosyaları ve katmanlar"
+  },
+  {
+    "path": "/akademi/temel/parametrik-mimari-elemanlar",
+    "title": "Parametrik Mimari Elemanlar ve Hacimler",
+    "seoTitle": "Parametrik Mimari Elemanlar ve Hacimler | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Bu derste duvar, döşeme, kolon ve kiriş gibi parametrik elemanları doğru parametrelerle yerleştirir, kapı ve pencere açıklıklarını eklersiniz; elemanlar birbirine değdiğinde hangisinin diğerini kestiğini belirleyen birleşim önceliklerini uygularsınız. Artık gerçekten modelliyorsunuz.",
+    "keywords": "M3 Temeller Duvar, döşeme, kolon, kiriş gibi parametrik elemanları doğru parametrelerle yerleştirir. Kapı/pencere açıklıklarını ve merdiven/korkuluk elemanlarını oluşturur. Elemanlar arası birleşim ve öncelik kurallarını uygular. Çizmiyoruz, yerleştiriyoruz Duvar: ilk taşıyıcı eleman Döşeme, kolon ve kiriş Açıklıklar: kapı ve pencere Birleşimler ve öncelik"
+  },
+  {
+    "path": "/akademi/ileri/ileri-mimari-modelleme",
+    "title": "İleri Mimari Modelleme ve Sunum",
+    "seoTitle": "İleri Mimari Modelleme ve Sunum | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Bu derste karmaşık geometriyle cephe ve giydirme cephe sistemlerini modeller, yüzeylere malzeme atar, tasarım varyantları türetir ve ortak kamera/ışık ile görselleştirme çıktısı alırsınız. Mimari fikrinizi hem modelleyip hem sunabilir hâle gelirsiniz.",
+    "keywords": "M3B Disiplin Uzmanlığı Mimari Karmaşık geometri ile cephe ve giydirme cephe (curtain wall) sistemlerini modeller Tasarım varyantlarını (design variants) ve görselleştirme çıktısını oluşturur Cephe ve giydirme cephe Serbest geometri: standart elemanın sınırı Malzeme ve görselleştirme Tasarım varyantları"
+  },
+  {
+    "path": "/akademi/orta/dokumantasyon-ve-pafta",
+    "title": "2B Dokümantasyon, Kesitler ve Pafta Düzeni",
+    "seoTitle": "2B Dokümantasyon, Kesitler ve Pafta Düzeni | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Bu derste modelinizden kesit ve görünüş üretir, görünüm ayarlarını düzenlersiniz; bir pafta kurup plan, kesit ve görünüşleri ölçekli yerleştirir, ölçülendirme, metin ve tarama ile tamamlar ve PDF/DWG olarak çıktı alırsınız. Modeliniz artık teslim edilebilir bir belgeye dönüşür.",
+    "keywords": "M4 Üretim ve Dokümantasyon Modelden kesit ve görünüş üretir ve görünüm ayarlarını düzenler. Pafta düzenini (layout) kurar ve PDF/DWG olarak çıktı alır. Ölçülendirme, metin ve tarama ile paftayı tamamlar. Modelden çizime: kesit ve görünüş Görünüm ayarları: ölçek ve okunabilirlik Pafta: çıktının sayfası Paftayı tamamlamak: ölçülendirme, metin, tarama Çıktı: PDF ve DWG"
+  },
+  {
+    "path": "/akademi/orta/kutuphane-ozellik-metraj",
+    "title": "Kütüphane, Özellikler ve Metraj Listeleri",
+    "seoTitle": "Kütüphane, Özellikler ve Metraj Listeleri | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Bu derste kütüphane objelerini ve parametrik elemanları modele yerleştirir, elemanlara özellik (attribute) atayıp sınıflandırırsınız; sonra modelden metraj, kapı/pencere çizelgesi ve mahal listesi üretirsiniz. Modeldeki veri, elle sayım yapmadan listelere dönüşür.",
+    "keywords": "M4B Üretim ve Dokümantasyon Kütüphane elemanlarını ve özel parametrik objeleri yönetir Elemanlara özellik (attribute) atar ve sınıflandırma mantığını uygular Metraj, kapı/pencere çizelgesi ve mahal listesi üretir Kütüphane ve parametrik objeler Özellik (attribute): elemana iliştirilen veri Sınıflandırma: ortak koda göre gruplamak Listeler: metraj, çizelge ve mahal listesi"
+  },
+  {
+    "path": "/akademi/ileri/betonarme-3b-donati",
+    "title": "Betonarme Yapılarda 3B Donatı",
+    "seoTitle": "Betonarme Yapılarda 3B Donatı | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Bu derste betonarme elemanlara 3B donatı yerleştirir: pas payını tanımlar, boyuna donatı ve etriyeleri koyar, çakışmaları 3B'de denetlersiniz; sonra modelden büküm şeması ve donatı listesi üretirsiniz. Donatı artık çizim değil, modelin bir parçasıdır.",
+    "keywords": "M5 Disiplin Uzmanlığı Betonarme ve 3B donatı Betonarme elemanlarda 3B donatıyı detaylandırır Büküm şemaları (bending schedule) ve donatı listelerini üretir Pas payı: donatının sınırı Boyuna donatı ve etriye Çakışma denetimi: 3B'nin asıl faydası Büküm şeması ve donatı listesi"
+  },
+  {
+    "path": "/akademi/ileri/celik-yapi-sds2",
+    "title": "Çelik Yapı Tasarımı ve SDS2",
+    "seoTitle": "Çelik Yapı Tasarımı ve SDS2 | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Bu derste çelik profilleri doğru kesit ve kalite ile modeller, kolon ve kirişleri akslara yerleştirir, kolon-kiriş birleşimlerini levha ve bulonla oluşturur ve modeli SDS2 üretim/detay aktarımı için hazırlarsınız. Çelik modeliniz imalata gidebilir hâle gelir.",
+    "keywords": "M6 Disiplin Uzmanlığı Prekast ve çelik Çelik yapı elemanlarını (profil, kolon, kiriş) doğru kesit ve kalite ile modeller. Çelik bağlantıları (birleşim, levha, bulon) oluşturur ve detaylandırır. SDS2 entegrasyonu ile üretim/detay aktarım akışını tanımlar. Profil ve kalite Kolon ve kiriş: iskeleti kurmak Birleşimler: çeliğin kalbi SDS2 aktarımı: modelden imalata"
+  },
+  {
+    "path": "/akademi/ileri/prefabrik-elemanlar",
+    "title": "Prefabrik Elemanlar ve Üretim Verisi",
+    "seoTitle": "Prefabrik Elemanlar ve Üretim Verisi | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Bu derste bir elemanı prefabrik elemana dönüştürür, üretim ve taşıma sınırlarına göre segmentlere ayırır, her parçaya benzersiz kod verir, gömülü parçaları ekler ve üretim verisi ile eleman listesini hazırlarsınız. Model, fabrikaya gidebilecek bir imalat verisine dönüşür.",
+    "keywords": "M7 Disiplin Uzmanlığı Prekast ve çelik Prefabrik (precast) elemanları (panel, kiriş, döşeme plağı) doğru parametrelerle oluşturur. Elemanları üretim mantığına göre parçalara (segment) ayırır ve kodlar. Üretim verisini (production data) ve eleman listelerini hazırlar. Prefabrik eleman ve panel Segment ve kod Gömülü parçalar ve üretim verisi"
+  },
+  {
+    "path": "/akademi/ileri/civil-ve-bridge",
+    "title": "ALLPLAN Civil ve Bridge ile Altyapı",
+    "seoTitle": "ALLPLAN Civil ve Bridge ile Altyapı | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Bu derste bir yol güzergâhı ve enkesitiyle parametrik altyapı modeli oluşturur, prefabrik kirişli bir köprüyü (tabliye, kiriş, mesnet) modeller ve altyapı ile köprüyü sürekli proje koordinatına hizalarsınız. Bina ölçeğinden altyapı ölçeğine geçersiniz.",
+    "keywords": "M8 Disiplin Uzmanlığı Altyapı ve köprü Parametrik yol/altyapı modelini (güzergâh, enkesit, kazı/dolgu) oluşturur. Prefabrik kirişli bir köprüyü (tabliye, kiriş, mesnet) modeller. Altyapı ve köprü modelini sürekli proje koordinatlarına hizalar. Güzergâh ve enkesit Köprü: tabliye, kiriş, mesnet Koordinat ve metraj"
+  },
+  {
+    "path": "/akademi/uzman/otomasyon-visual-scripting",
+    "title": "Otomasyon, Visual Scripting ve PythonParts",
+    "seoTitle": "Otomasyon, Visual Scripting ve PythonParts | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Bu derste tekrar eden bir işi görsel programlama ile otomatikleştirir, düğümleri bağlayarak parametrik bir akış kurar ve PythonParts ile kendi parametrik objenizi geliştirirsiniz. Elle yaptığınız tekrarları tek komuta indirgersiniz.",
+    "keywords": "M9 BIM Yönetimi ve Otomasyon Görsel programlama (visual scripting) ile parametrik bir iş akışını kurgular PythonParts ile özel bir parametrik obje/otomasyon geliştirir Görsel programlama: kod yazmadan otomasyon Düğümleri bağlamak PythonParts: kendi parametrik objen"
+  },
+  {
+    "path": "/akademi/temel-modelleme",
+    "title": "Temel Modelleme Eğitimi",
+    "seoTitle": "Temel Modelleme Eğitimi | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "22 uygulamalı ders · Temeller",
+    "keywords": "Temeller ALLPLAN BIM Felsefesi ve Modelleme İş Akışı Allplan ile Proje Oluşturma ve Başlangıç Ayarları Allplan Arayüz İncelemesi ve Çalışma Prensipleri Çizim Dosyaları ve Yükseklik İlişkileri 2D Oluşturma Komutları (Standart CAD İşlemleri) 2D Düzenleme Komutları (Standart CAD İşlemleri) Ölçülendirme Aks Oluşturma Duvar Oluşturma Kapı ve Pencere Oluşturma Kolon ve Kiriş Oluşturma Döşeme Oluşturma Merdiven Oluşturma Temel Oluşturma Kat Kopyalama ve Düzenleme Çatı ve Çatı Elemanları Oluşturma Mahal Tanımlama ve İnce Yapı Yüzeyleri Çevre ve Arazi Düzenleme Görünüşler (İlişkisel Cephe Görünüşleri) Kesitler (İlişkisel Kesit) Kot Ölçülendirme, Etiket ve Metin Pafta Düzenleme ve PDF Çıktı"
+  },
+  {
+    "path": "/akademi/temel-modelleme/giris-bim-felsefesi",
+    "title": "ALLPLAN BIM Felsefesi ve Modelleme İş Akışı",
+    "seoTitle": "ALLPLAN BIM Felsefesi ve Modelleme İş Akışı | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Allplan'da 2B CAD çizimi ile 3B parametrik BIM modellemenin tek veri tabanında nasıl birleştiğini kavramak.",
+    "keywords": "Temel Modelleme Eğitimi Temeller Proje -> Bina Strüktürü (Building Structure / Bauwerksstruktur) -> Çizim Dosyası (Drawing File / Teilbild) -> Katman (Layer) çalışma hiyerarşisini öğrenmek. Eğitim boyunca sıfırdan modellenecek örnek binanın (Aks, Duvar, Kapı/Pencere, Kolon/Kiriş, Döşeme, Merdiven, Temel, Kat Kopyalama ve Çatı) iş akışını tanımak. Proje (Project) Dosya (File) -> Yeni Proje, Proje Aç... (New Project, Open Project...) Bina Strüktürü (Building Structure) Proje Bazında Aç (Open on a Project-Specific Basis) -> Bina Strüktürü (Building Structure) Çizim Dosyası (Drawing File / Teilbild) Proje Bazında Aç (Open on a Project-Specific Basis) Katman (Layer) Biçim (Format) -> Katman Seç, Ayarla (Select, Set Layers) 01. CAD'den BIM'e Geçiş ve Akıllı Yapı Elemanları 02. Dört Katmanlı Veri Organizasyonu 03. Modelden Otomatik Kesit, Görünüş ve Metraj Üretimi Bimplus'ta doğru proje başlangıcı Dışa Aktarma - IFC - Nitelik Eşleme (Attribute-Mapping) Allplan 2024'teki yeni özellikler - Nitelik setleri (Attribute sets)"
+  },
+  {
+    "path": "/akademi/temel-modelleme/proje-olusturma",
+    "title": "Allplan ile Proje Oluşturma ve Başlangıç Ayarları",
+    "seoTitle": "Allplan ile Proje Oluşturma ve Başlangıç Ayarları | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Yeni Proje oluşturma sihirbazını kullanarak standartlara uygun bir proje açmak.",
+    "keywords": "Temel Modelleme Eğitimi Temeller Ofis (Office) ve Proje (Project) standartlarını (Katman, Çizgi Tipi, Tarama, Nitelik Setleri) yapılandırmak. Çalışma birimi, referans ölçek ve Büyük Koordinatlar (Large Coordinates / Große Koordinaten) ofset ayarlarını yapmak. Yeni Proje, Proje Aç Dosya (File) -> Yeni Proje, Proje Aç... (New Project, Open Project...) Proje Ayarları / Nitelikleri Proje Yöneticisi -> Sağ Tık -> Özellikler (Properties) -> Proje Nitelikleri (Project Attributes) Büyük Koordinat Optimizasyonu Araçlar (Tools) -> Seçenekler (Options) -> Çalışma Ortamı (Desktop Environment) Ölçek ve Uzunluk Birimi Durum Çubuğu (Status Bar) -> Ölçek (Scale) / Uzunluk (Length) Yeni Proje Sihirbazını Başlatma Şablon ve Kaynak Ayarları (Ofis vs. Proje) Proje Niteliklerini Doldurma Çalışma Birimi ve Referans Ölçeği Büyük Koordinatlarla Çalışma (Harita / Kadastro Altlığı) Büyük Koordinatlarla Çalışma (Offset) Nitelikler - Proje nitelikleri kaydedilmiyor"
+  },
+  {
+    "path": "/akademi/temel-modelleme/arayuz-incelemesi",
+    "title": "Allplan Arayüz İncelemesi ve Çalışma Prensipleri",
+    "seoTitle": "Allplan Arayüz İncelemesi ve Çalışma Prensipleri | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Actionbar (Aksiyon Çubuğu) üzerindeki Rol (Role), Görev (Task) ve Görev Alanı (Task Area) hiyerarşisini kullanmak.",
+    "keywords": "Temel Modelleme Eğitimi Temeller Özellikler (Properties), Sihirbazlar (Wizards), Kütüphane (Library), Objeler (Objects) ve Katmanlar (Layers) paletlerini yönetmek. Çoklu çalışma penceresi (Plan + İzometrik + Animasyon), fare kombinasyonları ve nokta yakalama (Snap) ilkelerini uygulamak. Actionbar (Aksiyon Çubuğu) Üst Şerit Menü -> Rol Seçimi (Mimari, Mühendislik, Taslak) Özellikler Paleti (Properties Palette) Paletler -> Özellikler (Properties) Sihirbazlar Paleti (Wizards Palette) Paletler -> Sihirbazlar (Wizards / Assistenten) Objeler Paleti (Objects Palette) Paletler -> Objeler (Objects / Objektepalette) Çoklu Çalışma Penceresi Pencere (Window) -> 2+1 Animasyon Penceresi Actionbar (Aksiyon Çubuğu) ve Rol Seçimi Palet Mimarisi (Özellikler, Sihirbazlar, Objeler, Kütüphane) Çoklu Görünüm Pencereleri ve Görünüm Türleri Diyalog Satırı, Nokta Yakalama ve Fare/Klavye Prensipleri [a] Actionbar (Aksiyon Çubuğu) İçin İlk Adımlar [a] Actionbar (Aksiyon Çubuğu) 2018-1-1 Asistan oluşturma ve ofiste kullanıma sunma Tool-Hub Temel Fonksiyonları Bölüm 1"
+  },
+  {
+    "path": "/akademi/temel-modelleme/cizim-dosyalari-yukseklik",
+    "title": "Çizim Dosyaları ve Yükseklik İlişkileri",
+    "seoTitle": "Çizim Dosyaları ve Yükseklik İlişkileri | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Çizim Dosyası (Drawing File / Teilbild) mantığını ve Aktif / Düzenleme / Referans modlarını doğru kullanmak.",
+    "keywords": "Temel Modelleme Eğitimi Temeller Bina Strüktürü (Building Structure / Bauwerksstruktur) oluşturarak katları ve çizim dosyalarını organize etmek. Düzlemler Paleti (Planes Palette / Ebenenmanager) ile kat yüksekliklerini ve Standart Referans Düzlemlerini (Alt Kot UK / Üst Kot OK) parametrik yönetmek. Proje Bazında Aç Dosya (File) -> Proje Bazında Aç: Çizim Dosyaları (Open on a Project-Specific Basis) Düzlemler Paleti (Planes Palette) Paletler -> Düzlemler (Planes / Ebenenpalette) Kat Modeli / Kat Yöneticisi Bina Strüktürü -> Kat Modeli Oluştur / Değiştir (Floor Manager) Yükseklik (Height / Höhe) Eleman Özellikleri -> Yükseklik (Height) Butonu Çizim Dosyası (Drawing File / Teilbild) Durumları Bina Strüktürü (Building Structure / Bauwerksstruktur) Kurulumu Düzlem Yöneticisi ve Yükseklik İlişkileri (OK / UK) Proje Navigasyonu Mahaller - Katlar ile DIN 277'ye göre brüt hacimlerin ve brüt taban alanlarının belirlenmesi Nitelikler - Kat için Genel Bakış (Metinler, Geometri, DIN277 ve BauNVO) Çatı - Kat - Ara döşeme oluşturma"
+  },
+  {
+    "path": "/akademi/temel-modelleme/2d-olusturma-komutlari",
+    "title": "2D Oluşturma Komutları (Standart CAD İşlemleri)",
+    "seoTitle": "2D Oluşturma Komutları (Standart CAD İşlemleri) | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Kalem kalınlığı (Pen), çizgi tipi (Linetype), çizgi rengi (Color) ve Yardımcı Konstrüksiyon Çizgisi (Construction Line) kullanmak.",
+    "keywords": "Temel Modelleme Eğitimi Temeller Çizgi, Poligon Çizgisi, Dikdörtgen, Daire, Yay, Spline ve Paralel Çizgi araçlarıyla hassas 2B geometri üretmek. Alan Tespiti (Area Detection) kullanarak kapalı bölgelere Tarama (Hatching), Desen (Pattern) ve Dolgu (Fill) uygulamak. Çizgi (Line / Linie) Taslak (Draft) -> Oluştur (Create) -> Çizgi (Line) Dikdörtgen (Rectangle / Rechteck) Taslak (Draft) -> Oluştur (Create) -> Dikdörtgen (Rectangle) Daire / Yay (Circle / Arc) Taslak (Draft) -> Oluştur (Create) -> Daire (Circle) Elemana Paralel (Parallel Lines) Taslak (Draft) -> Oluştur (Create) -> Paralel Çizgi (Parallel to Element) Yardımcı Konstrüksiyon (Construction Line) Biçim (Format) -> Yardımcı Konstrüksiyon Formatı (Construction Line) Tarama / Desen / Dolgu Taslak (Draft) -> Yüzey Elemanları -> Tarama (Hatching) / Dolgu (Fill) Biçim Özellikleri: Kalem, Çizgi Tipi ve Renk Yardımcı Konstrüksiyon Modu (Construction Line) Temel Çizim: Çizgi, Poligon ve Dikdörtgen Daire, Yay ve Paralel Çizgi Alan Tespiti ile Poligonlaştırma Tarama, Desen ve Dolgu (Hatching / Pattern / Fill) Dolgu Alanları - Poligonlaştırma türleri Desenler ve Taramalar - Biçim özelliklerini değiştirme Gömülü Parçalar - Çizgisel gömülü parçayı desen çizgisi olarak gösterme Dışa Aktarma - DWG/DXF - Beyaz dolgu alanlarını dışa aktarma"
+  },
+  {
+    "path": "/akademi/temel-modelleme/2d-duzenleme-komutlari",
+    "title": "2D Düzenleme Komutları (Standart CAD İşlemleri)",
+    "seoTitle": "2D Düzenleme Komutları (Standart CAD İşlemleri) | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Doğrudan Obje Modifikasyonu (Direct Object Modification) tutamaçlarıyla hızlı taşıma, kopyalama, döndürme ve aynalama yapmak.",
+    "keywords": "Temel Modelleme Eğitimi Temeller İki Elemanı Kesiştir (Intersect), Çizgi Kırp/Uzat (Trim/Extend), İki Nokta Arasını Sil, Pah Kır (Chamfer) ve Yuvarlat (Fillet) komutlarını kullanmak. Noktaları Modifiye Et (Stretch Entities / Punkte modifizieren) ve Biçim Aktar (Match Properties) ile revizyon yapmak. Taşı / Kopyala (Move / Copy) Modifikasyon (Modify) -> Taşı (Move) / Kopyala (Copy) Döndür / Aynala (Rotate / Mirror) Modifikasyon (Modify) -> Döndür (Rotate) / Aynala (Mirror) İki Elemanı Kesiştir (Intersect) Taslak (Draft) -> Modifikasyon -> İki Elemanı Kesiştir (2 Elemente verschneiden) Çizgileri Elemana Göre Kırp Taslak (Draft) -> Modifikasyon -> Çizgileri Elemana Göre Kırp (Trim Lines) Noktaları Modifiye Et (Stretch) Modifikasyon (Modify) -> Noktaları Modifiye Et (Stretch Entities / Punkte modifizieren) Biçim Özelliklerini Aktar Modifikasyon (Modify) -> Biçim Aktar (Match Properties / Format übertragen) Seçim Yöntemleri ve Doğrudan Tutamaçlar Taşı ve Kopyala (Move / Copy) Döndür ve Aynala (Rotate / Mirror) Kesiştir, Kırp ve Uzat Pah Kır ve Köşe Yuvarlat (Chamfer / Fillet) Noktaları Modifiye Et (Stretch) ve Biçim Aktar Yüzey stillerini veya çizgi stillerini projeler arasında kopyalama Mahaller - Simetriği alınan (aynalanan) mahaller farklı alanlara sahip Add-On Geometry Tools (Geometri Araçları Eklentisi) - 3B Yüzey Değiştirme"
+  },
+  {
+    "path": "/akademi/temel-modelleme/olculendirme",
+    "title": "Ölçülendirme",
+    "seoTitle": "Ölçülendirme | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Standart Ölçü Çizgisi (Dimension Line) ile İlişkisel Ölçülendirme (Associative Dimensioning) arasındaki farkı uygulamak.",
+    "keywords": "Temel Modelleme Eğitimi Temeller Yatay, dikey, açılı ölçü dizileri, Duvar Ölçülendirme (Measure Walls) ve Kot Ölçülendirmesi (Elevation Point) oluşturmak. Mevcut ölçü çizgilerine sonradan nokta eklemek ve çıkarmak. Ölçü Çizgisi (Dimension Line) Hızlı Erişim / Ölçülendirme -> Ölçü Çizgisi (Dimension Line / Maßlinie) Duvarları Ölçülendir (Measure Walls) Mimari (Architecture) -> Duvarları Ölçülendir (Measure Walls / Wände bemaßen) Ölçü Noktası Ekle / Sil Ölçülendirme -> Ölçü Noktası Ekle / Sil (Add / Del Dimension Line Point) Kot Ölçülendirmesi (Elevation Point) Ölçülendirme -> Kot Ölçülendirmesi (Elevation Point / Kotenbemaßung) Ölçü Çizgisi Stili ve İlişkisel Ölçülendirme Ayarları Doğrusal Ölçülendirme ve Duvar Ölçülendirme (Wände bemaßen) Ölçü Noktası Ekle/Sil ve Kot Ölçülendirmesi Ölçü Çizgileri ve İlişkili (Assoziativ) Ölçü Çizgilerinin Karşılaştırılması Add-On 3D Bemassung (3B Ölçülendirme Eklentisi) - İlişkisel (Assoziativ) Merdiven Donatı - ISO 3766'ya Göre Açılım Ölçülendirmeli R-Donatısı Oluşturma"
+  },
+  {
+    "path": "/akademi/temel-modelleme/aks-olusturma",
+    "title": "Aks Oluşturma",
+    "seoTitle": "Aks Oluşturma | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Mimari ve statik elemanların ortak referansı olan Aks Ağını (Axis Grid / Achsraster) ayrı bir çizim dosyasında oluşturmak.",
+    "keywords": "Temel Modelleme Eğitimi Temeller X ve Y yönü aks açıklıklarını, aks balon etiketlerini (A, B, C / 1, 2, 3) ve otomatik aks ölçülendirmesini tanımlamak. Mevcut aks ağında aks aralığı değiştirme ve aks ekleme/silme işlemlerini yapmak. Aks Ağı (Axis Grid / Achsraster) Taslak (Draft) / Mimari -> Oluştur -> Aks Ağı (Axis Grid / Achsraster) Aks Ağını Değiştir Aks Ağı Üzerine Çift Sol Tık -> Özellikler Paleti (Properties Palette) Aks Çizim Dosyasının Seçimi Aks Ağı Komutu ve X/Y Açıklıkları Aks Etiketleri ve Çizgi Tipi Otomatik Aks Ölçülendirmesi Aks Ağını Düzenleme"
+  },
+  {
+    "path": "/akademi/temel-modelleme/duvar-olusturma",
+    "title": "Duvar Oluşturma",
+    "seoTitle": "Duvar Oluşturma | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Tek katmanlı iç duvarlar ve çok katmanlı dış cephe duvarlarını (taşıyıcı + yalıtım + kaplama) tanımlamak.",
+    "keywords": "Temel Modelleme Eğitimi Temeller Duvar katmanlarına malzeme, imalat kalemi (Trade / Gewerk), öncelik numarası (Priority / Priorität) ve kat düzlemi kot bağlantısı (OK/UK) atamak. Doğrusal, dikdörtgen, dairesel ve Poligon Duvar (Polygonal Wall) çizimi ile T/L duvar birleşimlerini uygulamak. Duvar (Wall / Wand) Mimari (Architecture) -> Elemanlar -> Duvar (Wall / Wand) Ofset Yönünü Değiştir Duvar Diyalog Çubuğu -> Ofset Yönünü Değiştir (Reverse Offset Direction) Duvarları Çizgiyle Birleştir Mimari (Architecture) -> Modifikasyon -> Çizgi Elemanı Çizgiyle Birleştir Poligon Duvar (Polygonal Wall) Mimari (Architecture) -> Elemanlar -> Poligon Duvar (Polygonal Wall / Polygonwand) Duvar (Wall / Wand) Özellikleri ve Çok Katmanlı Yapı Duvar Aksı, Çizim Yönü ve Kat Düzlemi Bağlantısı Dış ve İç Duvarların Çizimi ve Birleşim Kontrolleri Nitelikler - Duvar ve Toplam Duvar için genel bakış (PARENT() ile) Nitelikler - Poligon Duvar için Genel Bakış Tadilat Planlaması - Mevcut Bir Duvar Üzerinde Isı Yalıtımı YENİLİK 2024 - Otomatik Duvar Birleşim Donatısı"
+  },
+  {
+    "path": "/akademi/temel-modelleme/kapi-pencere",
+    "title": "Kapı ve Pencere Oluşturma",
+    "seoTitle": "Kapı ve Pencere Oluşturma | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Duvarlara parametrik Kapı (Door / Tür) ve Pencere (Window / Fenster) boşlukları açmak.",
+    "keywords": "Temel Modelleme Eğitimi Temeller Çok katmanlı duvarlarda Diş / Lamba (Reveal / Anschlag) ve yalıtım dönüşü detaylarını tanımlamak. Pencere ve Kapı SmartParts nesneleriyle 3B kasa, kanat, cam, pervaz, denizlik ve panjur modellemek. Kapı (Door / Tür) Mimari (Architecture) -> Elemanlar -> Kapı (Door / Tür) Pencere (Window / Fenster) Mimari (Architecture) -> Elemanlar -> Pencere (Window / Fenster) Pencere/Kapı SmartPart Mimari -> Oluştur -> Pencere SmartPart / Kapı SmartPart (Modelleme) Niş, Boşluk (Niche, Recess) Mimari -> Elemanlar -> Duvar Nişi / Boşluğu (Niche, Recess, Slit) Kapı (Door / Tür) Boşluğu ve Kanat Sembolü Pencere (Window / Fenster), Parapet Yüksekliği ve Diş (Reveal) Ayarları Kapı ve Pencere SmartParts Modelleme Pencere: İki duvar katmanlı diş/binili söve (Verblendung) SmartParts - Kutu pencere (çift katlı pencere) oluşturma (Allplan 2024'e kadar) SmartParts - Pencereler - Panjur Kutusu, Dıştan Takma Panjur ve Benzerlerinin Karşılaştırılması SmartParts - Pencere / Kapı - Açılış yönü ve metin Raporlar - ARCH - Kapılar (Nitelikli) - Raporun kullanımı"
+  },
+  {
+    "path": "/akademi/temel-modelleme/kolon-kiris",
+    "title": "Kolon ve Kiriş Oluşturma",
+    "seoTitle": "Kolon ve Kiriş Oluşturma | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Dikdörtgen, dairesel veya profil kesitli betonarme/çelik Kolon (Column / Stütze) elemanlarını aks kesişimlerine yerleştirmek.",
+    "keywords": "Temel Modelleme Eğitimi Temeller Sarkık Kiriş (Downstand Beam / Unterzug) ve Ters Kiriş (Upstand Beam / Überzug) elemanlarını kat üst düzlemine bağlı modellemek. Kolon ve kirişlerin duvarlarla kesişiminde Öncelik (Priority) sayesinde otomatik hacim düşümü (Minha) yapılmasını doğrulamak. Kolon (Column / Stütze) Mimari (Architecture) -> Elemanlar -> Kolon (Column / Stütze) Kiriş (Beam / Unterzug - Überzug) Mimari (Architecture) -> Elemanlar -> Kiriş (Downstand Beam, Upstand Beam) Eğimli Taşıyıcı Kolon Mimari / Mühendislik -> Taşıyıcı Kolon (Structural Column / Tragwerksstütze) Kolon (Column / Stütze) Parametreleri ve Yerleşimi Kiriş (Beam / Unterzug) Parametreleri ve Kot Bağlantısı Nitelikler - Kolon için Genel Bakış Etiket Stilleri - Kolon Nitelikler - Sarkık Kiriş (Unterzug) İçin Genel Bakış YENİLİK 2024 - Eğimli Taşıyıcı Sistem Kolonu PythonParts - Genişleyen Kolon (Stütze expandierend)"
+  },
+  {
+    "path": "/akademi/temel-modelleme/doseme-olusturma",
+    "title": "Döşeme Oluşturma",
+    "seoTitle": "Döşeme Oluşturma | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Kat dış konturunu yakalayarak parametrik betonarme Döşeme (Slab / Decke) plağı oluşturmak.",
+    "keywords": "Temel Modelleme Eğitimi Temeller Döşeme kalınlığını kat üst düzlemine bağlamak. Merdiven kovası, asansör ve tesisat şaftları için Döşeme Boşluğu (Slab Opening / Deckenöffnung) açmak. Döşeme (Slab / Decke) Mimari (Architecture) -> Elemanlar -> Döşeme (Slab / Decke) Döşeme Boşluğu, Girintisi Mimari (Architecture) -> Elemanlar -> Döşeme Boşluğu (Recess, Opening in Slab / Deckenöffnung) Döşeme (Slab / Decke) Kalınlığı ve Poligon Girişi Döşeme Boşluğu (Slab Opening / Deckenöffnung) Açma YENİLİK 2024 - Masif Döşeme Çatı - Kat - Ara döşeme oluşturma Nitelikler - Döşeme için genel bakış"
+  },
+  {
+    "path": "/akademi/temel-modelleme/merdiven-olusturma",
+    "title": "Merdiven Oluşturma",
+    "seoTitle": "Merdiven Oluşturma | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Kat düzlemleri arasında 3B parametrik Merdiven (Stair / Treppe) (Düz, L, U sahanlıklı) modellemek.",
+    "keywords": "Temel Modelleme Eğitimi Temeller Rıht yüksekliği, basamak genişliği, merdiven plağı, kaplama ve Korkuluk (Handrail / Geländer) elemanlarını yapılandırmak. 2B planda merdiven kesim çizgisi (Section display) ve basamak numaralandırmasını ayarlamak. U Tipi / Düz / Serbest Merdiven Mimari (Architecture) -> Merdivenler (Stairs / Treppen) -> U Tipi Merdiven (U-Type Stair) Korkuluk (Handrail / Geländer) Mimari (Architecture) -> Elemanlar -> Korkuluk (Handrail / Geländer) Merdiven Kesit Gösterimi (2D) Merdiven Özellikleri -> 2B Kesit (2D Section) Merdiven Tipi ve Kontur Girişi Yükseklik, Rıht/Basamak Geometrisi ve Bileşenler 2B Plan Kesim Gösterimi ve Merdiven Altı Duvar Add-On 3D Bemassung (3B Ölçülendirme Eklentisi) - Merdiven Add-On PatchWork - Yamaçta Merdiven Korkuluk oluşturma Merdiven altında duvar oluşturma (kademeli duvar) Nitelikler - Merdiven için genel bakış"
+  },
+  {
+    "path": "/akademi/temel-modelleme/temel-olusturma",
+    "title": "Temel Oluşturma",
+    "seoTitle": "Temel Oluşturma | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Taşıyıcı duvarların altına Şerit Temel (Strip Foundation / Streifenfundament) modellemek.",
+    "keywords": "Temel Modelleme Eğitimi Temeller Kolonların altına Tekil / Kademeli Temel (Isolated / Block Foundation / Einzelfundament) yerleştirmek. Bina oturum alanı altına ampatmanlı Radye Temel (Slab Foundation / Bodenplatte) ve grobeton katmanı oluşturmak. Şerit Temel (Strip Foundation) Mimari (Architecture) -> Temeller (Foundations) -> Şerit Temel (Strip Foundation / Streifenfundament) Tekil Temel (Isolated Foundation) Mimari (Architecture) -> Temeller (Foundations) -> Tekil Temel (Isolated Foundation / Einzelfundament) Radye Temel (Slab Foundation) Mimari (Architecture) -> Temeller (Foundations) -> Radye Temel (Slab Foundation / Bodenplatte) Temel Çizim Dosyası ve Kot Düzlemi Şerit Temel (Strip Foundation): Duvar ve Perde Altı Tekil Temel (Isolated Foundation): Kolon Altı Radye Temel (Slab Foundation / Bodenplatte) Oluşturma Add-On Baugrube (Yapı Çukuru Eklentisi) - Eğimli Temel Plağı ile Kazı Add-On Baugrube (Yapı Çukuru Eklentisi) - Eğimde Temel Kazısı"
+  },
+  {
+    "path": "/akademi/temel-modelleme/kat-kopyalama",
+    "title": "Kat Kopyalama ve Düzenleme",
+    "seoTitle": "Kat Kopyalama ve Düzenleme | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Tamamlanan Zemin Kat çizim dosyalarını Bina Strüktürü üzerinden üst katlara kopyalamak.",
+    "keywords": "Temel Modelleme Eğitimi Temeller Standart Referans Düzlemlerine (OK/UK) bağlı elemanların üst kat kotlarına otomatik uyarlandığını doğrulamak. Kopyalanan normal katlarda cephe, balkon ve iç mekan revizyonlarını uygulamak. Çizim Dosyası İçeriğini Kopyala Bina Strüktürü -> Çizim Dosyası Sağ Tık -> Kopyala / Yapıştır (Copy / Paste) Çizim Dosyaları Arası Kopyala Dosya (File) -> Çizim Dosyaları Arası Kopyala / Taşı (Copy, Move Elements between Documents) Kat Yüksekliğini Güncelle Düzlemler Paleti (Planes Palette) -> Kat Yüksekliği Değiştir -> Diğer Katları Kaydır Bina Strüktüründe Kat ve Çizim Dosyası Kopyalama Normal Kat Mimari Revizyonları Düzlem Yöneticisi ile Çok Katlı Model Kontrolü Nitelikler - Bina Strüktürü için genel bakış Mahaller - Katlar ile DIN 277'ye göre brüt hacimlerin ve brüt taban alanlarının belirlenmesi Çatı - Kat - Ara döşeme oluşturma bak dosyalarıyla çalışma - Yapı strüktürünü onarma ve geri getirme"
+  },
+  {
+    "path": "/akademi/temel-modelleme/cati-elemanlari",
+    "title": "Çatı ve Çatı Elemanları Oluşturma",
+    "seoTitle": "Çatı ve Çatı Elemanları Oluşturma | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Çatı Düzlemi (Roof Frame / Dachlandschaft) ile eğimli çatı zarfı (Beşik Çatı, Kırma Çatı) oluşturmak.",
+    "keywords": "Temel Modelleme Eğitimi Temeller Çatı katı duvar ve kolonlarının üst kotunu çatı düzlemine bağlayarak eğimli kesilmesini sağlamak. Çok katmanlı Çatı Kaplaması (Roof Covering / Dachhaut), Güvercinlik (Dormer / Gaube), Çatı Penceresi ve Mertek/Aşık (Rafters/Purlins) elemanlarını modellemek. Çatı Düzlemi (Roof Frame) Mimari (Architecture) -> Düzlemler -> Çatı Düzlemi (Roof Frame / Dachlandschaft) Güvercinlik (Dormer / Gaube) Mimari (Architecture) -> Düzlemler -> Güvercinlik (Dormer / Gaube) Çatı Kaplaması (Roof Covering) Mimari (Architecture) -> Elemanlar -> Çatı Kaplaması (Roof Covering / Dachhaut) Mertek / Aşık / Mahya Kirişi Mimari (Architecture) -> Ahşap Çatı Karkası -> Mertek (Rafters / Sparren) / Aşık (Purlin / Pfette) Çatı Düzlemi (Roof Frame / Dachlandschaft) ve Eğim Atama Duvar ve Kolonların Çatı Eğimine Bağlanması Çatı Kaplaması (Roof Covering), Güvercinlik ve Çatı Penceresi Ahşap/Çelik Çatı Elemanları (Mertek, Aşık, Mahya) Çatı - Çatı Formları ve Çatı Penceresi (Güvercinlik) Formları - Genel Bakış Çatı - İki kat boyunca devam eden çatı düzlemi Çatı Pencereleri (Güvercinlik) - Bir çatı penceresinin yan duvarlarını ve ön (alın) duvarını oluşturma Çatı - Kat - Mertek düzeni gösterimi Add-On Varianten-Profil (Varyant Profil Eklentisi) - Lamine Ahşap Kirişli Özel Çatı Add-On Profilbauteile (Profil Yapı Elemanları Eklentisi) - Trapez Saclar ve Çatı Panelleri"
+  },
+  {
+    "path": "/akademi/temel-modelleme/mahaller",
+    "title": "Mahal Tanımlama ve İnce Yapı Yüzeyleri",
+    "seoTitle": "Mahal Tanımlama ve İnce Yapı Yüzeyleri | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Duvarlarla çevrili odaları otomatik algılatarak veya poligon çizerek Mahal (Room / Raum) tanımlamak.",
+    "keywords": "Temel Modelleme Eğitimi Temeller Mahal içine katmanlı ince yapı yüzeyleri (Finish / Ausbau) atamak: tavan kaplaması, döşeme kaplaması (şap + seramik/parke), yan yüzey (sıva + boya/fayans) ve süpürgelik. Mahal Etiketi (Room Stamp / Raumstempel) ile oda no, fonksiyon, net alan ve kaplama bilgilerini plana yazdırmak. Mahal (Room / Raum) Mimari (Architecture) -> Mahaller, Yüzeyler, Katlar -> Mahal (Room / Raum) Otomatik Mahal Oluştur Mimari (Architecture) -> Otomatik Mahal (Auto-Room) Mahal Tanımı ve Fonksiyon / İsim Girişi İnce Yapı Kaplamaları (Tavan, Zemin, Duvar, Süpürgelik) Alan Tespiti ile Yerleşim ve Mahal Etiketi (Raumstempel) DIN 277'ye göre mahal alanları ve hacimleri"
+  },
+  {
+    "path": "/akademi/temel-modelleme/cevre-arazi",
+    "title": "Çevre ve Arazi Düzenleme",
+    "seoTitle": "Çevre ve Arazi Düzenleme | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Halihazır haritayı (DXF/DWG) doğru birim ve ofsetle içe aktarmak ve ölçeğini doğrulamak.",
+    "keywords": "Temel Modelleme Eğitimi Temeller Arazi noktalarından Delaunay üçgenlemesiyle Sayısal Arazi Modeli (SAM / DTM) üretip dış sınırını arsaya kırpmak. Eş yükselti eğrileri oluşturmak, araziyi 3B yüzeye dönüştürüp doku atamak ve yolları modellemek. AutoCAD Verilerini İçe Aktar Dosya (File) -> İçe Aktar (Import) -> AutoCAD Verilerini İçe Aktar (Import AutoCAD Data) Ağ Oluştur (Mesh) Çevre (Terrain) -> Sayısal Arazi Modeli -> Ağ Oluştur (Mesh / Vermaschen) Eş Yükselti Eğrileri Çevre -> Sayısal Arazi Modeli -> Eş Yükselti Eğrileri (Contour Lines / Höhenlinien) SAM Elemanlarını Dönüştür Çevre -> Sayısal Arazi Modeli -> SAM Elemanlarını Dönüştür (Convert DTM Elements) Halihazır Haritayı İçe Aktarma ve Ofset Sayısal Arazi Modeli (SAM) Oluşturma ve Dış Sınır Eş Yükselti Eğrileri (İzohips) 3B Arazi Yüzeyine Dönüştürme ve Doku Yollar ve Kaldırımlar"
+  },
+  {
+    "path": "/akademi/temel-modelleme/gorunusler",
+    "title": "Görünüşler (İlişkisel Cephe Görünüşleri)",
+    "seoTitle": "Görünüşler (İlişkisel Cephe Görünüşleri) | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Bina Strüktürünün türetilmiş bölmesinde 3B modelden ilişkisel cephe görünüşleri (Ön, Arka, Sağ, Sol) üretmek.",
+    "keywords": "Temel Modelleme Eğitimi Temeller Görünüş bakış yönü, yüzey doku/tarama, gölge ve kalem kalınlığı ayarlarını yapılandırmak. Modelde bir eleman değiştiğinde cephe görünüşünün otomatik güncellendiğini doğrulamak. Görünüş Oluştur (Create View) Görünüşler ve Kesitler -> Görünüş Oluştur (Create View / Ansicht erzeugen) Görünüşü Değiştir Görünüş Çerçevesi Çift Sol Tık -> Görünüş Özellikleri Kaynak Model Çizim Dosyalarının Seçimi Görünüş Oluştur ve Bakış Yönü Yüzey, Gölge Ayarları ve Otomatik Güncellemenin Doğrulanması Döndürülmüş (Eğik) Bir Binanın Görünümleri"
+  },
+  {
+    "path": "/akademi/temel-modelleme/kesitler",
+    "title": "Kesitler (İlişkisel Kesit)",
+    "seoTitle": "Kesitler (İlişkisel Kesit) | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Kat planları üzerinde düz veya kademeli Kesit Hattı (Section Path / Schnittführung) tanımlamak.",
+    "keywords": "Temel Modelleme Eğitimi Temeller Kesit derinliği, alt/üst kot sınırları ve kesilen elemanların kalın kontur + malzeme taraması ayarlarını yapmak. 3B modelden türetilen A-A ve B-B ilişkisel kesitlerini oluşturup merdiven/çatı detaylarını incelemek. Kesit Hattı Tanımla Görünüşler ve Kesitler -> Kesit Hattı Tanımla (Define Section / Schnittführung) Kesit Oluştur (Create Section) Görünüşler ve Kesitler -> Kesit Oluştur (Create Section / Schnitt erzeugen) Planda Kesit Hattının Çizilmesi İlişkisel Kesitin Türetilmesi ve Yüzey Ayarları Kademeli (Şaşırtmalı) Kesit ve Detay İnceleme Bir Görünüş veya Kesitten Yeni Kesit Oluşturma (UVS)"
+  },
+  {
+    "path": "/akademi/temel-modelleme/kot-etiket",
+    "title": "Kot Ölçülendirme, Etiket ve Metin",
+    "seoTitle": "Kot Ölçülendirme, Etiket ve Metin | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Türetilen kesit ve görünüşlerde ±0.00 referans kotunu tanımlayarak ilişkisel Kot Ölçülendirmesi yapmak.",
+    "keywords": "Temel Modelleme Eğitimi Temeller Döşeme üst/alt, saçak, mahya, temel alt ve parapet/lento kotlarını standart sembollerle ölçülendirmek. Kat planlarında kaba ve bitmiş döşeme kot sembollerini yerleştirmek. Kot Ölçülendirmesi Ölçülendirme -> Kot Ölçülendirmesi (Elevation Point / Kotenbemaßung) Etiketle (Label) Eleman Sağ Tık -> Etiketle (Label / Beschriften) Etiket Stili (Label Style) Mimari / Metin -> Etiket Stili (Label Style / Beschriftungsbild) ±0.00 Referans Kotunun Belirlenmesi Kat, Saçak, Mahya ve Temel Kotlarının Yerleştirilmesi Etiket ve Metin ile Nitelikleri Plana Yazdırma Etiket Stillerinde Biçim Ayarları"
+  },
+  {
+    "path": "/akademi/temel-modelleme/pafta",
+    "title": "Pafta Düzenleme ve PDF Çıktı",
+    "seoTitle": "Pafta Düzenleme ve PDF Çıktı | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Pafta Düzenleyici (Layout Editor / Planlayout) ortamında standart veya özel boyutlu pafta sayfası oluşturmak.",
+    "keywords": "Temel Modelleme Eğitimi Temeller Pafta çerçevesi ve proje niteliklerini otomatik okuyan dinamik Antet (Title Block / Plankopf) yerleştirmek. Plan, görünüş ve kesitleri farklı ölçeklerde paftaya dizmek, kırpmak ve katmanlı vektörel PDF olarak dışa aktarmak. Sayfa Ayarı (Page Set Up) Pafta Düzenleyici -> Sayfa Ayarı (Page Set Up / Seite einrichten) Çerçeve ve Antet Pafta Düzenleyici -> Çerçeve Gösterimi (Layout Border) / Lejant - Başlık Bloğu Çizim Dosyası Yerleştir Pafta Düzenleyici -> Çizim Dosyası Yerleştir (Layout Element / Planelement) Pafta Penceresi (Layout Window) Pafta Düzenleyici -> Pafta Penceresi (Layout Window / Planfenster) PDF Dosyası Gönder Pafta Düzenleyici -> PDF Dosyası Gönder (Export PDF Data / PDF-Daten exportieren) Pafta Düzenleyiciye Geçiş, Sayfa Ayarı, Çerçeve ve Antet Plan, Kesit ve Görünüşlerin Yerleştirilmesi ve Katman Filtresi Yazdırma ve Katmanlı Vektörel PDF Çıktısı Pafta Penceresinde Katman Görünürlüğü"
+  },
+  {
+    "path": "/akademi/arazi-modelleme",
+    "title": "Arazi Modelleme Eğitimi",
+    "seoTitle": "Arazi Modelleme Eğitimi | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "10 uygulamalı ders · Temeller",
+    "keywords": "Temeller Giriş Arazi Dosyasını Alma Arazi Nokta Kotlarının Girilmesi Dijital Arazi Modelinin Oluşturulması Eş Yükselti Eğrilerinin Oluşturulması 3B Arazi Modelinin Oluşturulması 3B Maket Modelinin Oluşturulması 3B Arazinin Düzleme Dönüştürülmesi Yolların Modellenmesi Binaların Modellenmesi"
+  },
+  {
+    "path": "/akademi/arazi-modelleme/giris",
+    "title": "Giriş",
+    "seoTitle": "Giriş | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Allplan'da Arazi Modelleme (Terrain Modeling / Geländemodell) iş akışının mimari vaziyet planı, altyapı, kazı-dolgu ve 3B çevre maketi üretimindeki rolünü kavramak.",
+    "keywords": "Arazi Modelleme Eğitimi Temeller Actionbar üzerinde Çevre (Surroundings / Umgebung) rolü altındaki Arazi (Terrain / Gelände) ve Sayısal Arazi Modeli (Digital Terrain Model - DTM / DGM) görev alanlarını tanımak. 2B harita/kadastro altlığından 3B arazi noktalarına, üçgenleme ağından (TIN - Triangulated Irregular Network) eş yükselti eğrilerine, 3B katı maket modelinden referans düzlemlere, yollara ve çevre binalarına uzanan 10 adımlı üretim zincirini anlamak. Sayısal Arazi Modeli (SAM / DGM) elemanı ile 3B Yüzey / 3B Katı (3D Surface / 3D Solid) ve Referans Yüzey (Reference Surface / Bezugsfläche) arasındaki veri yapısı farklarını öğrenmek. Çevre Rolü (Surroundings Role) Actionbar -> Rol: Çevre (Surroundings / Umgebung) Arazi Noktası (Terrain Point) Çevre -> Arazi -> Arazi Noktası (Geländepunkt) Ağ Oluştur (Mesh / Triangulate) Çevre -> Sayısal Arazi Modeli -> Ağ Oluştur (Vermaschen) Eş Yükselti Eğrileri (Contour Lines) Çevre -> Sayısal Arazi Modeli -> Eş Yükselti Eğrileri (Höhenlinien) SAM Elemanlarını Dönüştür (Convert DTM Elements) Çevre -> Sayısal Arazi Modeli -> SAM Elemanlarını Dönüştür (DGM-Elemente wandeln) Actionbar'da Çevre (Surroundings) Rolü ve Arazi Görev Alanı Arazi Modelleme İçin Bina Strüktürü ve Çizim Dosyası (Drawing File) Kurulumu 10 Adımlı Arazi ve Çevre Modelleme İş Akışı Özeti Küresel (UTM / ITRF) Koordinatlar ve Proje Ofseti Prensibi Arazi modelleyici Add-On Baugrube (Yapı Çukuru Eklentisi) - Mimarlar İçin Arazi Tasarımı"
+  },
+  {
+    "path": "/akademi/arazi-modelleme/arazi-dosyasini-alma",
+    "title": "Arazi Dosyasını Alma",
+    "seoTitle": "Arazi Dosyasını Alma | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Halihazır harita dosyalarını (.dWG, .dxf) doğru ölçü birimi (m, cm, mm), ölçek ve katman (layer) eşleştirmesiyle boş bir çizim dosyasına içe aktarmak (Import).",
+    "keywords": "Arazi Modelleme Eğitimi Temeller Büyük ülke koordinatlarına (UTM, ITRF, ED50) sahip harita dosyalarını içe aktarırken karşılaşılan görüntü bozulmalarını önlemek için Ağırlık Merkezini Ayarla: Ofset (Adjust center of gravity to: Offset) seçeneğini kullanmak. DXF/DWG içe aktarma Seçenekleri (Options -> General Settings) altında 2B/3B eleman aktarımı, blok çözme ve yazı karakter seti ayarlarını yapılandırmak. Harita altlığı dışındaki sayısal koordinat dosyalarının (.asc, .csv, .xyz, LandXML, ESRI-Grid) doğrudan Arazi Modülüne nasıl okutulduğunu kavramak. AutoCAD Verilerini İçe Aktar Dosya -> İçe Aktar -> AutoCAD Verilerini İçe Aktar (AutoCAD Daten importieren) İçe Aktarma Seçenekleri (Options) İçe Aktar Diyaloğu -> Seçenekler (Optionen) -> Genel Ayarlar Ağırlık Merkezini Ofsete Ayarla Seçenekler -> Genel Ayarlar -> Ağırlık merkezini ayarla: Ofset Noktaları İçe Aktar (Import Points) Çevre -> Arazi -> Noktaları İçe Aktar (Punkte importieren) Ölç (Measure) Hızlı Erişim / Araçlar -> Ölç (Messen) Halihazır Harita İçin Boş Çizim Dosyası Seçimi ve Ölçek Ayarı İçe Aktar (Import) Komutu ve DXF/DWG Seçenekleri Katman (Layer) ve Çizgi/Yazı Eşleştirmelerinin Kontrolü İçe Aktarılan Haritanın Ölçü Kontrolü ve Rölöve Nokta Dosyaları (.ASC / .XYZ) İçe Aktarma - DXF \"alkisvektordaten_utm32.dxf\" dosyası DWG İçe Aktarma - Model Alanı - Büyük Koordinatlar Büyük koordinatlar Add-On Baugrube (Yapı Çukuru Eklentisi) - Nokta Dosyasından Arazi"
+  },
+  {
+    "path": "/akademi/arazi-modelleme/arazi-nokta-kotlarinin-girilmesi",
+    "title": "Arazi Nokta Kotlarının Girilmesi",
+    "seoTitle": "Arazi Nokta Kotlarının Girilmesi | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "2B olarak içe aktarılmış halihazır harita altlığı üzerindeki kot noktalarını ve izohips kotlarını okuyarak 3B Arazi Noktası (Terrain Point / Geländepunkt) oluşturmak.",
+    "keywords": "Arazi Modelleme Eğitimi Temeller Arazi Noktası özellikler paletinde Nokta Numarası (Point Number), Nokta Sembolü, Etiketleme (Z Kotu Yazısı) ve Z Yüksekliği (Height Z) parametrelerini doğru ayarlamak. Harita altlığını arka planda Sarı (Pasif / Düzenlenebilir Arka Plan) modda açıp, yeni 3B arazi noktalarını temiz bir çizim dosyasına (101 - 3B Arazi Noktaları) kaydetmek. Mevcut arazi noktalarının Z kotlarını Arazi Noktalarını Değiştir (Modify Terrain Points) komutuyla tekil veya toplu olarak güncellemeyi öğrenmek. Arazi Noktası (Terrain Point) Çevre -> Arazi -> Arazi Noktası (Geländepunkt) Noktaları Değiştir (Modify Points) Çevre -> Arazi -> Noktaları Değiştir (Punkte modifizieren) Sembol Noktası (Symbol Point) Oluştur -> Konum Planı (Site Plan / Lageplan) -> Sembol Noktası Excel/ASCII Nokta Okuma Dosya -> İçe Aktar -> Noktaları İçe Aktar (.asc / .prn) Çizim Dosyası Kurulumu: Harita Altlığı Pasif, Arazi Noktaları Aktif Arazi Noktası (Terrain Point) Komutunu Başlatma ve Parametre Ayarları Harita Üzerindeki Kot Noktalarının ve İzohipslerin İşaretlenmesi İzometrik Görünüşte 3B Nokta Kotlarının Kontrolü Arazi modelleyici İçe Aktarma - Metin dosyalarından sembol noktalarının okunması SAY (DGM) - Excel dosyalarından sembol noktalarının okunması Az sayıda köşe noktası (kot) kullanarak arazi oluşturma Etiket Stilleri - Deniz seviyesine (NHN) göre kotlar - projede tek bir referans (Allplan 2023'ten itibaren)"
+  },
+  {
+    "path": "/akademi/arazi-modelleme/dijital-arazi-modelinin-olusturulmasi",
+    "title": "Dijital Arazi Modelinin Oluşturulması",
+    "seoTitle": "Dijital Arazi Modelinin Oluşturulması | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Girilen 3B arazi noktalarını Ağ Oluştur (Mesh / Triangulate / Vermaschen) komutuyla üçgenleyerek Dijital Arazi Modeli (SAM / DTM / DGM) oluşturmak.",
+    "keywords": "Arazi Modelleme Eğitimi Temeller Konkav (içbükey) arsa sınırlarında oluşan istenmeyen dış üçgenleri Dış Sınır (Outer Boundary / Außengrenze) komutuyla temizlemek. İstinat duvarı, yol kenarı veya şev tepesi gibi ani kot kırılmalarını Kırık Hat / Şev Çizgisi (Breakline / Bruchkante) olarak modele tanıtmak. Sayısal Arazi Modelinin görünüm ayarlarını (Ağ Çizgileri, Nokta Numaraları, Yükseklik Renk Gradyanı) SAM Görünümü (DTM Representation) ile yönetmek. Ağ Oluştur (Mesh / Triangulate) Çevre -> Sayısal Arazi Modeli -> Ağ Oluştur (Vermaschen) Dış Sınır (Outer Boundary) Çevre -> Sayısal Arazi Modeli -> Dış Sınır (Außengrenze) Ağ Noktası (Grid Point) Çevre -> Sayısal Arazi Modeli -> Ağ Noktası (Gitterpunkt) SAM Ağına Eleman Ekle (Add to DTM) Çevre -> Sayısal Arazi Modeli -> SAM'a Eleman Ekle (Kante/Linie in DGM) Boşluk (Cutout) Çevre -> Sayısal Arazi Modeli -> Boşluk (Aussparung) Ağ Oluştur (Mesh / Triangulate) Komutu ile İlk SAM Modelinin Üretimi Dış Sınır (Outer Boundary / Außengrenze) Tanımlama ve Düzenleme Ağ Noktası Ekleme/Silme, Kırık Hat (Breakline) ve Boşluk (Cutout) Açma SAM Görünüm Ayarları ve Yükseklik Renk Analizi Arazi modelleyici Add-On Baugrube (Yapı Çukuru Eklentisi) - Arazi Oluşturma SAM (DGM) - 3B / 2B Çizgilerden Sayısal Arazi Modeli (DGM) İçin Dış Sınır Oluşturma SAY (DGM) - Nokta dosyasından ve 2B DXF'ten şev/kırık hatları oluşturma. Arazi - 3B DXF dosyasından ek şev/kırık çizgileri (breaklines) oluşturma"
+  },
+  {
+    "path": "/akademi/arazi-modelleme/es-yukselti-egrilerinin-olusturulmasi",
+    "title": "Eş Yükselti Eğrilerinin Oluşturulması",
+    "seoTitle": "Eş Yükselti Eğrilerinin Oluşturulması | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Oluşturulan Sayısal Arazi Modeli (SAM / DTM) üzerinden Eş Yükselti Eğrileri (Contour Lines / Höhenlinien) komutuyla otomatik izohips eğrileri üretmek.",
+    "keywords": "Arazi Modelleme Eğitimi Temeller Ana eş yükselti eğrileri (örn. her 5.00 m'de bir kalın çizgi ve kot yazılı) ile ara eş yükselti eğrilerinin (örn. her 1.00 m veya 0.50 m'de bir ince çizgi) aralık, kalem kalınlığı, çizgi tipi ve renk ayarlarını yapılandırmak. Eş yükselti eğrileri üzerindeki otomatik kot yazılarının (Contour Line Labeling) yazı boyutu, ondalık basamak sayısı ve eğri yönüne hizalanmasını ayarlamak. Arazi üzerinden Profil Kesiti (Profile Section) alarak 2B boykesit/enkesit diyagramı çıkarmayı öğrenmek. Eş Yükselti Eğrileri (Contour Lines) Çevre -> Sayısal Arazi Modeli -> Eş Yükselti Eğrileri (Höhenlinien) Eğri Etiketleme (Contour Labeling) Eş Yükselti Eğrileri Diyaloğu -> Etiket (Beschriftung) Profil Kesiti (Profile Section) Çevre -> Sayısal Arazi Modeli -> Profil Kesiti (Profilschnitt) Profil Şeması (Profile Diagram) Çevre -> Sayısal Arazi Modeli -> Profil Şeması (Profildiagramm) Eş Yükselti Eğrileri (Contour Lines / Höhenlinien) Komutunu Başlatma İzohips Başlangıç Kotu, Adım Aralığı ve Ana/Ara Eğri Ayarları İzohips Kot Etiketlerinin (Labeling) ve Eğri Yumuşatmanın Ayarlanması Arazi Profil Kesiti (Terrain Profile) Çıkarma Arazi modelleyici Add-On Baugrube (Yapı Çukuru Eklentisi) - Eşyükselti Eğrilerinden Araziye Add-On PatchWork - Eşyükselti Eğrileri (Münhaniler) Add-On Oberflächengrafik (Yüzey Grafiği Eklentisi) - Yükseklik Modeli Oluşturma"
+  },
+  {
+    "path": "/akademi/arazi-modelleme/3b-arazi-modelinin-olusturulmasi",
+    "title": "3B Arazi Modelinin Oluşturulması",
+    "seoTitle": "3B Arazi Modelinin Oluşturulması | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Sayısal Arazi Modelinin (SAM / DTM) neden doğrudan serbest 3B Boolean işlemlerine veya referans düzlem dönüşümüne girmediğini; bunun için önce 3B Elemanlara Dönüştürülmesi (Convert DTM Elements) gerektiğini anlamak.",
+    "keywords": "Arazi Modelleme Eğitimi Temeller SAM Elemanlarını Dönüştür (Convert DTM Elements / DGM-Elemente wandeln) komutuyla SAM modelini başka bir çizim dosyasına 3B Çokgen Yüzey (3D Surface / 3D-Fläche) veya 3B Ağ (3D Mesh) olarak aktarmak. Orijinal SAM modelini bozmadan korumak için dönüşüm işlemini hedef çizim dosyası (103 - 3B Arazi Yüzeyi) seçerek yürütmek. 3B arazi yüzeyine doku (Çim / Toprak / Uydu Ortofoto) atayarak Animasyon penceresinde (F4) gerçekçi arazi görselleştirmesi elde etmek. SAM Elemanlarını Dönüştür Çevre -> Sayısal Arazi Modeli -> SAM Elemanlarını Dönüştür (DGM-Elemente wandeln) Hedef Tip: 3B Yüzey (3D Surface) SAM Elemanlarını Dönüştür Araç Çubuğu -> 3B-Yüzey (3D-Fläche) Elemanları Dönüştür (Convert Elements) Değiştir -> Ek Modüller -> 3B Modelleme -> Elemanları Dönüştür Özel Yüzey Ata (Assign Custom Surface) 3B Yüzey Sağ Tık -> Özel Yüzey Ata (Oberfläche zuweisen) Orijinal SAM Modelini Koruma ve Hedef Çizim Dosyası Belirleme SAM Elemanlarını Dönüştür (Convert DTM Elements) Komutunun Uygulanması 103 Numaralı Çizim Dosyasına Geçiş ve 3B Arazi Yüzeyinin Kontrolü 3B Arazi Yüzeyine Yüzey Materyali veya Ortofoto Doku Atama Arazi modelleyici Add-On Baugrube (Yapı Çukuru Eklentisi) - Arazi 2B ve 3B Türetme Allplan Kazı Çukuru - 3B Yüzeyleri devralma SAM (DGM) - Sayısal Arazi Modelinin Animasyonu SAM (DGM) - Arazi Animasyonu İçin Doku Olarak Ortofoto"
+  },
+  {
+    "path": "/akademi/arazi-modelleme/3b-maket-modelinin-olusturulmasi",
+    "title": "3B Maket Modelinin Oluşturulması",
+    "seoTitle": "3B Maket Modelinin Oluşturulması | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Kağıt kalınlığındaki 3B Arazi Yüzeyini (3D Surface) mimari sunumlarda ve kesitlerde dolu görünecek bir 3B Katı Maket Modeline (3D Solid Terrain Block / 3D-Körper) dönüştürmek.",
+    "keywords": "Arazi Modelleme Eğitimi Temeller Yüzeyi Katıya Dönüştür / Ekstrüzyon (Extrude / 3D Surface to 3D Solid) ve Boolean Çıkarma / Kesişim (Subtract / Intersect) yöntemleriyle tabanı düz, üstü topoğrafik eğimli 3B arazi bloğu üretmek. 3B katı arazi maketinde bina bodrum kazısı, gömülü otopark veya altgeçit boşluklarını Birinden Çıkar (Subtract and Remove Solids) komutuyla açmak. Sunum estetiği için maket yan yüzeylerine ve kesit yüzeylerine toprak/kaya taraması veya ahşap/beyaz maket dokusu atamak. Yüzey ile Katıyı Böl (Split Solid with Surface) Serbest Modelleme -> 3B Katıyı Yüzey ile Böl (3D-Körper mit Ebene/Fläche trennen) Ekstrüzyon (Extrude) Serbest Modelleme -> Ekstrüzyon (Extrudieren) Birinden Çıkar ve Sil (Subtract Solids) Serbest Modelleme -> Birinden Çıkar ve Sil (Körper abziehen und löschen) 3B Kutu / Poligon Katı (Box) Serbest Modelleme -> Kutu (Quader) 3B Arazi Yüzeyini Kopyalama ve Modelleme Rolüne Geçiş Yöntem A: 3B Yüzeyi Belirli Bir Taban Düzlemine Kadar Katıya Dönüştürme Yöntem B: 3B Kutu (Box) ve Arazi Yüzeyi ile Boolean Kesme İşlemi Bina Oturum ve Bodrum Kazı Boşluklarının Maketten Çıkarılması Arazi modelleyici Add-On PatchWork - Kristallblick Yerleşkesi Add-On Baugrube (Yapı Çukuru Eklentisi) - Altgeçit SAY (DGM) Modelleme Add-On Baugrube (Yapı Çukuru Eklentisi) - 3B Elemanları Kırpma/Kesme Add-On Geometry Tools (Geometri Araçları Eklentisi) - Üçgen Ağı Basitleştirme Add-On Element Converter (Eleman Dönüştürücü Eklentisi) - 3B Katı Modeller ve Yapı Elemanları"
+  },
+  {
+    "path": "/akademi/arazi-modelleme/3b-arazinin-duzleme-donusturulmesi",
+    "title": "3B Arazinin Düzleme Dönüştürülmesi",
+    "seoTitle": "3B Arazinin Düzleme Dönüştürülmesi | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Mimari yapı elemanlarının (duvar, kolon, bahçe duvarı, bina kütlesi, çatı/döşeme) eğimli arazi yüzeyini alt veya üst sınır olarak tanıyabilmesi için 3B Yüzeyi Düzleme Dönüştür (Convert 3D Surface to Plane / 3D-Fläche in Ebene) ve Referans Yüzey (Reference Surface / Bezugsfläche) kavramlarını öğrenmek.",
+    "keywords": "Arazi Modelleme Eğitimi Temeller 3B arazi yüzeyini Serbest Düzlemler (Custom Planes / Freie Ebenen) veya Düzlemler Paleti (Planes Palette) içine yerel referans yüzeyi olarak kaydetmek. Düzleme dönüştürülen arazi yüzeyinin kat/çizim dosyası içindeki davranışını ve kesitlerdeki görünürlüğünü kontrol etmek. Bahçe duvarlarının, istinat duvarlarının ve çevre binalarının taban kotunu bu eğimli arazi düzlemine (Alt Seviye = Özel Düzlem / Referans Yüzey) nasıl kilitleyeceğimizi hazırlamak. 3B Yüzeyi Düzleme Dönüştür Mimari -> Düzlemler -> 3B Yüzeyi Düzleme Dönüştür (3D-Fläche in Ebene) Referans Yüzey (Reference Surface) Düzlemler Paleti (Planes Palette) -> Referans Yüzey Ekle (Bezugsfläche) Serbest Düzlem (Custom Plane) Mimari -> Düzlemler -> Serbest Düzlem (Freie Ebene) Düzlemi 3B Yüzeye Dönüştür Serbest Modelleme -> Elemanları Dönüştür -> Düzlemi 3B Yüzeye Neden 3B Araziyi Düzleme (Plane / Reference Surface) Dönüştürüyoruz? 3B Yüzeyi Düzleme Dönüştür (3D Surface to Reference Plane) İşlemi Dönüştürülen Arazi Düzleminin Kontrolü ve Kenar Görünümü Mimari Elemanların Yükseklik Diyaloğunda Arazi Düzlemini Seçme Testi Referans Yüzey - Zemin içinde su yalıtımı uygulaması (Yan Yüzey) Çatı - İki kat boyunca devam eden çatı düzlemi Add-On Geometry Tools (Geometri Araçları Eklentisi) - 3B ve Referans Yüzeyleri Add-On Baugrube (Yapı Çukuru Eklentisi) - Referans Yüzeyleriyle Yeni İş Akışı ALLPLAN Add-On PatchWork - 3B Yüzey Devralma Add-On PatchWork - Düzlem ve Eğimli Yüzey"
+  },
+  {
+    "path": "/akademi/arazi-modelleme/yollarin-modellenmesi",
+    "title": "Yolların Modellenmesi",
+    "seoTitle": "Yolların Modellenmesi | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Halihazır haritadaki 2B yol, kaldırım ve parsel içi yürüme yolu sınırlarını eğimli 3B arazi yüzeyi üzerine izdüşürerek (Project / İzdüşüm) veya 3B kesme (Split / Intersect) ile modellemek.",
+    "keywords": "Arazi Modelleme Eğitimi Temeller 3B arazi yüzeyinden kesilerek ayrılan yol şeritlerine asfalt/taş kaplama materyali atamak ve kaldırım/bordür kot farkını (Extrude / Offset ile +15 cm) oluşturmak. Sayısal Arazi Modeli (SAM / DTM) üzerinde Yol / Şev (Road / Slope / Böschung) araçlarıyla kazı ve dolgu şevlerini oluşturmayı kavramak. Parametrik güzergah tasarımı gerektiren altyapı projelerinde Allplan Road modülünün Yatay Güzergah (Horizontal Alignment), Düşey Kurp (Vertical Alignment) ve Enkesit Şablonu iş akışını tanımak. 3B Elemanları Böl (Split 3D Elements) Serbest Modelleme -> 3B Katıyı/Yüzeyi Böl (3D-Körper trennen) Eğri/Nokta İzdüşümü (Project Curve/Point) Serbest Modelleme / Kazı Çukuru -> Eğriyi Yüzeye İzdüşür Döşeme (Arazi Düzlemine Bağlı) Mimari -> Döşeme (Decke) -> Yükseklik: Serbest Düzleme Bağlı Allplan Road — Arazi ve Eksen Tasarımı Road -> Terrain Design / Horizontal & Vertical Alignment 2B Haritadaki Yol Sınırlarını Kapalı Poligon / 3B Prizma Haline Getirme Yöntem A: 3B Arazi Yüzeyini Yol Sınırlarıyla Bölme ve Asfalt Dokusu Atama Yöntem B: Arazi Düzlemine Bağlı Döşeme / Duvar ile Yol ve Kaldırım Modelleme Yöntem C: Allplan Road ile Parametrik Karayolu Güzergahı ve Şevler Allplan Road - Yeni Proje ve Arazi Tasarımı Allplan Road - Kırık çizgilerle (break lines) Arazi Tasarımı Allplan Road - Aks tasarımı: Yatay güzergah (Horizontal alignment) Allplan Road - Aks tasarımı: Düşey güzergah (Vertical alignment) Allplan Road - Diğer güzergah (alignment) fonksiyonları"
+  },
+  {
+    "path": "/akademi/arazi-modelleme/binalarin-modellenmesi",
+    "title": "Binaların Modellenmesi",
+    "seoTitle": "Binaların Modellenmesi | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Halihazır harita altlığındaki çevre binalarını (komşu parsellerdeki mevcut yapıları) Ders 8'de oluşturduğumuz Eğimli Arazi Düzlemi (Terrain Reference Plane) üzerine oturtarak hızlıca 3B kütleye dönüştürmek.",
+    "keywords": "Arazi Modelleme Eğitimi Temeller Duvar (Wall), Kolon (Column) veya Mahal / Kütle (Room / 3D Solid) komutlarında Alt Seviye (Bottom Level) değerini arazi düzlemine bağlayıp, bina kat adetlerine göre (3 Kat = 9.00 m, 5 Kat = 15.00 m) yükseklik vermek. Eğimli araziye oturan binaların üst bitişlerinin teraziye alınmış yatay bir düzlemde bitmesini sağlamak için Üst Seviye (Top Level) ayarını yapılandırmak. Çevre binalarına kırma/beşik çatı (Roof Frame) eklemek ve 3B arazi, yollar ve binalardan oluşan vaziyet maketini Animasyon/Render penceresinde sunuma hazırlamak. Duvar / Kütle (Araziye Bağlı Yükseklik) Mimari -> Duvar (Wand) -> Yükseklik: Alt Seviye = Özel Düzlem Döşeme / Kütle Modelleme Mimari -> Döşeme (Decke) / 3B Katı Ekstrüzyon Çatı Kalıbı (Roof Frame) Mimari -> Çatı Kalıbı (Dachebene) Kesit Oluştur (Vaziyet Kesiti) Kesitler -> Kesit Oluştur (Schnitt erzeugen) Çevre Binaları Çizim Dosyasını Aktif Etme ve Arazi Düzlemini Açma Eğimli Arazi Düzlemine Oturan Çevre Binalarının Yükseklik Ayarı Harita Üzerindeki Bina Konturlarının Hızlıca Modellenmesi Çatı Kalıbı (Roof Frame), Vaziyet Kesiti ve Final Görselleştirme Mahaller - DIN 277-1:2016-1 standardına göre inşaat sektöründe taban alanları ve mahal hacimleri Çatı - Çatı Formları ve Çatı Penceresi (Güvercinlik) Formları - Genel Bakış Add-On CityGML - İçe Aktarma (Import) Add-On Modell Inspector (Model Denetleyicisi Eklentisi) - Mahalleri İçe Aktarma Add-On 3D Bemassung (3B Ölçülendirme Eklentisi) - Pafta İçin Perspektif"
+  },
+  {
+    "path": "/akademi/lejant",
+    "title": "Lejant Oluşturma Eğitimi",
+    "seoTitle": "Lejant Oluşturma Eğitimi | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "10 uygulamalı ders · Üretim ve Dokümantasyon",
+    "keywords": "Üretim ve Dokümantasyon Giriş Bir Lejantın Parçaları Mimari Lejant Tasarımı - Lejant Kopyalama Mimari Lejant Hücresi Tanımlama Mimari Lejantı Oluşturma Mimari Lejantı Test Etme - Düzenleme Donatı Lejantı Tasarımı - Lejant Kopyalama Donatı Lejantı Hücresini Tanımlama Donatı Lejantını Oluşturma Donatı Lejantını Test Etme - Düzenleme"
+  },
+  {
+    "path": "/akademi/lejant/giris",
+    "title": "Giriş",
+    "seoTitle": "Giriş | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Allplan'da İlişkisel Lejant (Associative Legend / Legende) ile Rapor (Report) ve Etiket Stili (Label Style / Beschriftungsbild) arasındaki farkı kavramak.",
+    "keywords": "Lejant Oluşturma Eğitimi Üretim ve Dokümantasyon Mimari Lejantların (Mahal listesi, Kapı/Pencere metraj tablosu, Kat alan özeti) ve Mühendislik Donatı Lejantlarının (Stabstahllegende / Mattenlegende, Çubuk ve Hasır Donatı Metraj Cetveli) çalışma mantığını öğrenmek. Çizim dosyasına veya doğrudan paftaya yerleştirilen ilişkisel lejantların model değiştiğinde gerçek zamanlı nasıl güncellendiğini tanımak. Lejant Oluştur (Create Legend) Araçlar / Mimari / Mühendislik -> Lejant Oluştur (Create Legend / Legende) Lejantları Yönet (Manage Legends) Kullanıcı Tanımlı Objeler -> Lejantlar -> Lejantları Yönet (Legenden verwalten) Lejant - Başlık Bloğu (Title Block) Pafta Düzenleyici (Layout Editor) -> Lejant - Başlık Bloğu (Plankopf) Allplan'da Lejant (Legend / Legende) Nedir? İlişkisel (Associative) ve Statik Lejant Farkı Eğitim Kapsamı: Mimari Lejant ve Donatı Lejantı Etiket Stilleri - Benzer sonuç veren farklı fonksiyonların karşılaştırılması YENİLİK 2024 - İlişkisel Mimari Lejantlar"
+  },
+  {
+    "path": "/akademi/lejant/bir-lejantin-parcalari",
+    "title": "Bir Lejantın Parçaları",
+    "seoTitle": "Bir Lejantın Parçaları | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Bir Allplan lejant şablonunu oluşturan 5 temel bileşeni (Üst Bilgi, Ana Satır, Alt Liste, Toplam/Özet Satırı, Alt Bilgi) tanımak.",
+    "keywords": "Lejant Oluşturma Eğitimi Üretim ve Dokümantasyon Sabit metinler, 2B tablo çerçeve çizgileri ve dinamik Hücre (Cell / Zelle) elemanlarının görev dağılımını öğrenmek. Sıralama kriteri (Sort sequence), gruplama ve sayfa kırılımı (Page break) kurallarını anlamak. Üst Bilgi (Header / Kopfzeile) Lejant Değiştir -> Üst Bilgi (Header / Kopfzeile) Ana Satır (Body / Hauptzeile) Lejant Değiştir -> Ana Satır (Body / Hauptzeile) Alt Liste (Sublist / Unterliste) Lejant Değiştir -> Alt Liste (Sublist / Unterliste) Toplam Satırı (Summary / Summenzeile) Lejant Değiştir -> Toplam/Özet (Summary / Summenzeile) Alt Bilgi (Footer / Fußzeile) Lejant Değiştir -> Alt Bilgi (Footer / Fußzeile) Üst Bilgi (Header / Kopfzeile) ve Sütun Başlıkları Ana Satır (Body / Hauptzeile) ve Tekrarlama Mantığı Toplam/Özet Satırı (Summary / Summenzeile) ve Alt Bilgi (Footer) Etiket Stilleri - Etiket stillerinin içeriği Etiket Stilleri - Biçim ayarları"
+  },
+  {
+    "path": "/akademi/lejant/mimari-lejant-tasarimi-lejant-kopyalama",
+    "title": "Mimari Lejant Tasarımı - Lejant Kopyalama",
+    "seoTitle": "Mimari Lejant Tasarımı - Lejant Kopyalama | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Allplan'ın Varsayılan (Default / Standard) mimari lejantlarını bozmadan Ofis (Office / Büro) klasörüne kopyalamak.",
+    "keywords": "Lejant Oluşturma Eğitimi Üretim ve Dokümantasyon Lejantları Yönet (Manage Legends / Legenden verwalten) aracında dosya ve grup numaralarını düzenlemek. Mevcut bir mimari lejantı çalışma alanına patlatarak (Place Legend Template) tasarım altlığı olarak çağırmak. Lejantları Yönet (Manage Legends) Kullanıcı Tanımlı Objeler -> Lejantlar -> Lejantları Yönet (Legenden verwalten) Lejant Değiştir (Modify Legend) Kullanıcı Tanımlı Objeler -> Lejantlar -> Lejant Değiştir (Legende modifizieren) Standart Lejantların Neden Doğrudan Değiştirilmemesi Gerektiği Lejantları Yönet (Manage Legends) ile Kopyalama Şablonu Çalışma Alanına Çağırma ve Çerçeve Tasarımı Lejantlar - Yeni bir lejant oluşturma (Örnek: Döşeme yüzeyi, en üst katman) Lejantlar - \"Taban Alanı\" (Grundfläche) lejantının DIN277 standardına uyarlanması"
+  },
+  {
+    "path": "/akademi/lejant/mimari-lejant-hucresi-tanimlama",
+    "title": "Mimari Lejant Hücresi Tanımlama",
+    "seoTitle": "Mimari Lejant Hücresi Tanımlama | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Hücre Tanımla (Define Cell / Zelle definieren) komutuyla lejantın Ana Satır (Body) ve Toplam (Summary) hücrelerini oluşturmak.",
+    "keywords": "Lejant Oluşturma Eğitimi Üretim ve Dokümantasyon Mimari nitelikleri (Mahal No @246@, Mahal Adı @507@, Fonksiyon @506@, Kat Adı, Taban Alanı @224@, Çevre @228@, Hacim @223@) hücrelere bağlamak. Hücre veri formatlarını (A32 metin, F8.2 ondalıklı sayı, I4 tam sayı), hizalamayı, sütun genişliği sınırını ve matematiksel formülleri (@224@*1.10, _IF_) tanımlamak. Hücre Tanımla (Define Cell) Kullanıcı Tanımlı Objeler -> Lejantlar -> Hücre Tanımla (Define Cell / Zelle definieren) Nitelik Seçimi (Attribute Selection) Hücre Tanımla Diyaloğu -> Nitelik (Attribute) Butonu Formül Düzenleyici (Formula) Hücre Tanımla Diyaloğu -> Formül (Formula / Formel) Hücre Tanımla (Define Cell / Zelle definieren) Diyaloğu Format (A, F, I), Ondalık Basamak ve Metin Hizalama Sıralama Kriteri ve Toplam Hücresi (SUM) Tanımlama Lejantlar - Yeni bir lejant oluşturma (Örnek: Döşeme yüzeyi, en üst katman) Etiket Stilleri - Etiket stillerinin içeriği Etiket Stilleri - Biçim ayarları Nitelikler - Kat için Genel Bakış (Metinler, Geometri, DIN277 ve BauNVO) Nitelikler - Oturma alanı hesabı, kullanım alanları için genel bakış"
+  },
+  {
+    "path": "/akademi/lejant/mimari-lejanti-olusturma",
+    "title": "Mimari Lejantı Oluşturma",
+    "seoTitle": "Mimari Lejantı Oluşturma | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Tasarlanan tablo çerçevesini ve hücreleri Lejant Tanımla (Define Legend / Legende definieren) komutuyla paketleyip kaydetmek.",
+    "keywords": "Lejant Oluşturma Eğitimi Üretim ve Dokümantasyon Obje Seçim Filtresi (Filter): Lejantın yalnızca Mahalleri, yalnızca Kapıları, yalnızca Pencereleri veya yalnızca Duvarları okumasını şartlandırmak. Üst Bilgi (Header), Ana Satır (Body), Alt Liste (Sublist), Toplam (Summary) ve Alt Bilgi (Footer) bölgelerini sırasıyla seçip satır kaydırma vektörünü (dY) belirlemek. Lejant Tanımla (Define Legend) Kullanıcı Tanımlı Objeler -> Lejantlar -> Lejant Tanımla (Define Legend / Legende definieren) Obje Filtresi (Condition / Filter) Lejant Tanımla -> Koşul / Filtre (Filter) Lejant Tanımla Komutu ve Obje Filtresinin Seçilmesi Lejant Bölgelerinin (Üst Bilgi, Ana Satır, Toplam) Seçimi Toplam Satırı, Alt Bilgi ve Başlangıç Tutma Noktasının Onaylanması Lejantlar - Yeni bir lejant oluşturma (Örnek: Döşeme yüzeyi, en üst katman) Lejantlar - \"Taban Alanı\" (Grundfläche) lejantının DIN277 standardına uyarlanması Lejantlar - Pafta Lejantları - Paftaya özel yapı sahibi (işveren) ve/veya yapı projesi ile"
+  },
+  {
+    "path": "/akademi/lejant/mimari-lejanti-test-etme-duzenleme",
+    "title": "Mimari Lejantı Test Etme - Düzenleme",
+    "seoTitle": "Mimari Lejantı Test Etme - Düzenleme | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Oluşturulan mimari lejantı gerçek bir kat planı üzerinde İlişkisel (Associative) olarak test etmek.",
+    "keywords": "Lejant Oluşturma Eğitimi Üretim ve Dokümantasyon Mahal alanı veya doğrama boyutu değiştirildiğinde lejant değerlerinin ve toplamlarının anlık güncellendiğini doğrulamak. Lejant Değiştir (Modify Legend) ile sütun kayması, ondalık yuvarlama veya başlık hatalarını düzeltmek ve lejant dosyasını (.leg / .zip) dışa aktarmak. Lejant Oluştur (Create Legend) Mimari / Etiketleme -> Lejant Oluştur (Create Legend) Lejant Değiştir (Modify Legend) Kullanıcı Tanımlı Objeler -> Lejantlar -> Lejant Değiştir Kat Planında Canlı Test Model Değişikliği ile İlişkisel Güncelleme Kontrolü Lejant Şablonunu Düzenleme ve Yedekleme Lejantlar - Yeni bir lejant oluşturma (Örnek: Döşeme yüzeyi, en üst katman) Lejantlar - \"Taban Alanı\" (Grundfläche) lejantının DIN277 standardına uyarlanması"
+  },
+  {
+    "path": "/akademi/lejant/donati-lejanti-tasarimi-lejant-kopyalama",
+    "title": "Donatı Lejantı Tasarımı - Lejant Kopyalama",
+    "seoTitle": "Donatı Lejantı Tasarımı - Lejant Kopyalama | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Mühendislik (Engineering) rolünde kullanılan Çubuk Donatı Lejantı (Reinforcing Bar Legend / Stabstahllegende) ve Hasır Donatı Lejantı (Mesh Legend / Mattenlegende) standartlarını tanımak.",
+    "keywords": "Lejant Oluşturma Eğitimi Üretim ve Dokümantasyon Standart bir donatı metraj/büküm lejantını Lejantları Yönet ile Ofis (Office) klasörüne kopyalamak. Donatı metraj tablosu sütun yapısını (Poz No, Adet, Çap Ø, Tek Boy, Toplam Boy, Büküm Şeması, Çap Bazlı Ağırlık Özeti) Türkiye mühendislik pratiğine göre düzenlemek; büküm şekli gösteriminde ISO 3766 çizim ve ölçülendirme kuralını tanımak. Donatı Lejantı (Reinforcement Legend) Mühendislik (Engineering) -> Donatı -> Donatı Lejantı (Stabstahllegende) Lejantları Yönet (Manage Legends) Kullanıcı Tanımlı Objeler -> Lejantlar -> Lejantları Yönet Standart Donatı Lejantını Ofis Klasörüne Kopyalama Türkiye Uygulama Standardına Göre Tablo Başlığı ve Sütun Düzeni Etiket Stilleri / Lejantlar - Yedekleme ve Geri Yükleme"
+  },
+  {
+    "path": "/akademi/lejant/donati-lejanti-hucresini-tanimlama",
+    "title": "Donatı Lejantı Hücresini Tanımlama",
+    "seoTitle": "Donatı Lejantı Hücresini Tanımlama | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Donatıya özel nitelikleri: Poz Numarası (Mark number), Adet (Number of pieces), Donatı Çapı (Diameter Ø), Kesim Boyu (Bar length), Toplam Boy, Çelik Kalitesi (B420C / B500C) ve Ağırlık (Weight kg) hücrelerini tanımlamak.",
+    "keywords": "Lejant Oluşturma Eğitimi Üretim ve Dokümantasyon Büküm Şeması (Bending Shape / Biegeform) grafik hücresini boyutlandırıp kenar parça boyları ve büküm açılarıyla birlikte hücreye yerleştirmek. Alt toplam / Özet (Summary) bölgesinde her donatı çapı (Ø8, Ø10, Ø12, Ø14, Ø16, Ø20...) için ayrı toplam boy ve toplam ağırlık (kg) formüllerini kurmak. Donatı Nitelik Hücresi Hücre Tanımla (Define Cell) -> Nitelik -> Mühendislik / Donatı (Reinforcement) Büküm Şeması Grafik Hücresi Hücre Tanımla -> Grafik / Özel -> Büküm Şeması (Bending Shape / Biegeform) Çap Bazlı Koşullu Toplam Hücre Tanımla -> Formül (_IF_(@Çap@=12)...) Poz No, Adet, Çap ve Boy Hücrelerinin Tanımlanması Büküm Şeması (Bending Shape / Biegeform) Hücresinin Ayarlanması Çap Bazlı Ağırlık Özeti ve Genel Tonaj Toplamı Etiket Stilleri - Formül Koleksiyonu - Koşullar için örnekler (mantıksal uygunluk kontrolleri ve benzerleri) Etiket Stilleri - Etiket stillerinin içeriği Donatı - Özel Büküm Formlarının Hızlı Üretimi Donatı - ISO 3766'ya Göre Açılım Ölçülendirmeli R-Donatısı Oluşturma"
+  },
+  {
+    "path": "/akademi/lejant/donati-lejantini-olusturma",
+    "title": "Donatı Lejantını Oluşturma",
+    "seoTitle": "Donatı Lejantını Oluşturma | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Hazırlanan başlık, ana poz satırı, büküm şeması hücresi ve çap bazlı özet tablosunu Lejant Tanımla (Define Legend) ile birleştirmek.",
+    "keywords": "Lejant Oluşturma Eğitimi Üretim ve Dokümantasyon Obje Filtresini Çubuk Donatı (Bar Reinforcement / Rundstahl) veya Hasır Donatı (Mesh Reinforcement) olarak ayarlamak. Alt Liste (Sublist) mekanizmasıyla ana poz tablosunun hemen altına Çap Bazlı Özet Tablosunu (Cross-diameter summary) bağlamak. Lejant Tanımla (Define Legend) Kullanıcı Tanımlı Objeler -> Lejantlar -> Lejant Tanımla Alt Liste Ata (Assign Sublist) Lejant Tanımla -> Alt Liste (Sublist / Unterliste) Donatı Obje Filtresi ve Kayıt Numarası Seçimi Üst Bilgi, Ana Poz Satırı ve Satır Kaydırma Vektörü Çap Özeti Alt Listesi, Toplam Satırı ve Referans Noktası Lejantlar - Sabit Büro Adıyla Çelik Listesi (Stahlliste) Oluşturma"
+  },
+  {
+    "path": "/akademi/lejant/donati-lejantini-test-etme-duzenleme",
+    "title": "Donatı Lejantını Test Etme - Düzenleme",
+    "seoTitle": "Donatı Lejantını Test Etme - Düzenleme | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "3B donatısı modellenmiş bir kolon, kiriş, perde veya temel çizim dosyasında yeni Donatı Lejantını test etmek.",
+    "keywords": "Lejant Oluşturma Eğitimi Üretim ve Dokümantasyon Poz adedi, aralık (s = 15 cm -> 10 cm), çap veya pas payı değiştiğinde büküm şemasının ve toplam demir metrajının (kg) otomatik güncellendiğini doğrulamak. Pafta Düzenleyici (Layout Editor) içinde yalnızca paftadaki aktif donatı çizim dosyalarını okuyan pafta bazlı donatı lejantı yerleştirmek ve şablonu yedeklemek. Donatı Lejantı Oluştur Mühendislik (Engineering) -> Donatı Lejantı (Reinforcement Legend) Pozlandırma / Yeniden Pozla Mühendislik -> Pozlandırma (Mark Numbering / Verlegenummerierung) Donatılı Çizim Dosyasında Lejantın Yerleştirilmesi Donatı Revizyonu ve Otomatik Tonaj Güncelleme Testi İnce Ayar Düzenlemeleri ve Kurumsal Arşivleme Etiket Stilleri - Formül Koleksiyonu - Koşullar için örnekler (mantıksal uygunluk kontrolleri ve benzerleri) Donatı - Özel Büküm Formlarının Hızlı Üretimi YENİLİK 2024 - Otomatik Kolon Donatısı"
+  },
+  {
+    "path": "/akademi/donati-detaylandirma",
+    "title": "Donatı Detaylandırma",
+    "seoTitle": "Donatı Detaylandırma | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "8 uygulamalı ders · Disiplin Uzmanlığı",
+    "keywords": "Disiplin Uzmanlığı Donatı Ortamına Giriş ve Ulusal Norm (Nat_Code) Ayarı Yabancı Norma Göre Donatı Planı: Kesit Serileri ve Raporlar Özel Büküm Şekillerini Hızlı Üretme: Eleman Dönüştürme 3B Helis Donatı ve Dik Olmayan Büküm Açınımı (ISO 3766) Donatı Gösterimi: Çapa Göre Renk ve Format Ayarları Eğik Görünümde Çubuk Gösterimi ve Büküm Rulosu Çapı Donatı Görünümleri (Bewehrungsansichten): Kopyalama ve 2023 Değişikliği Donatı Metrajı ve Sık Karşılaşılan Hata Mesajları (Meldung)"
+  },
+  {
+    "path": "/akademi/donati-detaylandirma/donati-ortami-ve-ulusal-norm",
+    "title": "Donatı Ortamına Giriş ve Ulusal Norm (Nat_Code) Ayarı",
+    "seoTitle": "Donatı Ortamına Giriş ve Ulusal Norm (Nat_Code) Ayarı | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Donatı seçeneklerinin bağlı olduğu ulusal normu (Nat_Code) tanımlamak ve bu ayarın proje bazlı olduğunu açıklamak.",
+    "keywords": "Donatı Detaylandırma Disiplin Uzmanlığı Büküm rulosu çapı (bending roller diameter) ve kanca boyu (hook length) gibi değerlerin norm dosyalarından geldiğini kavramak. Ülke paketlerinin (country packages) lisansa bağlı olduğunu ve proje oluştururken ülkenin seçildiğini ayırt etmek. Donatı seçeneklerinin kalıcı kaydedilmesi için gereken yetki ve iş akışını açıklamak. Nat_Code (ulusal norm) Donatı aracı seçenekleri (tool Option) Optionen > Bewehrung Seçenekler (Options) · Donatı Norm nerede saklanır Normu tanımlayan dosyalar Ülke (ülke paketi) ayarı proje oluştururken yapılır Donatı için Ulusal Normu Değiştirme / Tanımlama Ülkeye Özgü Projeler: Farklı Ülkelerdeki Partnerlerle Çalışma Donatı Seçenekleri Kaydedilmiyor"
+  },
+  {
+    "path": "/akademi/donati-detaylandirma/yabanci-norma-gore-donati-plani",
+    "title": "Yabancı Norma Göre Donatı Planı: Kesit Serileri ve Raporlar",
+    "seoTitle": "Yabancı Norma Göre Donatı Planı: Kesit Serileri ve Raporlar | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Ülkeye özgü kesit serisini (Querschnittsreihe) kurmayı ve kaydetmeyi tanımlamak.",
+    "keywords": "Donatı Detaylandırma Disiplin Uzmanlığı Donatı normunu (ör. BS EN) ve uzunluk birimini ayarlamayı uygulamak. Hedef ülkeye uygun donatı raporunu (ör. British Standard) bulup seçmeyi ayırt etmek. Kesit serisi dosyalarının ülke kısaltmalarını (ör. eng, trk, deu) okuyabilmek. Querschnittsreihen (Cross-section series) Extras > Definitionen > Querschnittsreihen Norm (Standard) Extras > Optionen > Bewehrung Längeneingaben (Length input) Extras > Optionen > Arbeitsumgebung Stabliste British Standard.rdlc Standart raporlar > ENG > Reinforcement 1. Ülkeye özgü kesit serisinin kurulması Kesit serisi dosyaları nerede 2. Norm ve birimlerin ayarlanması 3. British Standard'a göre raporlar Yabancı Norm Kullanarak Donatı Planları"
+  },
+  {
+    "path": "/akademi/donati-detaylandirma/ozel-bukum-sekillerini-hizli-uretme",
+    "title": "Özel Büküm Şekillerini Hızlı Üretme: Eleman Dönüştürme",
+    "seoTitle": "Özel Büküm Şekillerini Hızlı Üretme: Eleman Dönüştürme | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Eskizden çubuk üretimi için 'Element wandeln, übernehmen' (Convert, Match Element) işlevinin amacını tanımlamak.",
+    "keywords": "Donatı Detaylandırma Disiplin Uzmanlığı Bir 2B/3B eskizi çap atayarak gerçek bir çubuk tanımına (bar definition) dönüştürmeyi uygulamak. Mevcut bir büküm şeklini başka bir görünüme/konuma aktarmayı ayırt etmek. Üretim sonrası çubuk tanımının (Mark Position) doğruluğunu neden kontrol etmek gerektiğini açıklamak. Element wandeln, übernehmen (Convert, Match Element) Mühendislik rolü · Donatı Stabform (FormShape) Neden bu işlev Eskizi gerçek çubuğa dönüştürme Mevcut formu başka bir görünüme aktarma Donatı: Özel Büküm Şekillerinin Hızlı Üretimi"
+  },
+  {
+    "path": "/akademi/donati-detaylandirma/helis-donati-ve-dik-olmayan-bukum-acinim",
+    "title": "3B Helis Donatı ve Dik Olmayan Büküm Açınımı (ISO 3766)",
+    "seoTitle": "3B Helis Donatı ve Dik Olmayan Büküm Açınımı (ISO 3766) | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "3B helis (spiral) donatının 2B donatı içine nasıl entegre edildiğini tanımlamak.",
+    "keywords": "Donatı Detaylandırma Disiplin Uzmanlığı 3B donatı modunun (2D/3D reinforcement mode) nerede etkinleştirildiğini açıklamak. Dik açıyla bükülmemiş çubukların açınım ve boyut hesabının ISO 3766 (03.2004) ile yapıldığını kavramak. Açınım boyutlarındaki küçük farkların (en çok 2 mm) yuvarlama toleransından geldiğini ayırt etmek. Circular reinforcement (helical reinforcement) Mühendislik rolü · Donatı (Engineering · Reinforcement) 2D/3D reinforcement mode (Reinforce with 3D model) Tools > Options > Reinforcement > General Generate view / Generate section Create > Views, sections, details > Views and sections Helisin durumu Helis donatıyı 2B donatıya entegre etme Dik olmayan kolların açınımı (ISO 3766) Yeni 3B Helis Donatıyı (Allplan 2009'dan) 2B Donatıda Oluşturma ISO 3766'ya Göre Açınım Boyutlu Donatı Oluşturma"
+  },
+  {
+    "path": "/akademi/donati-detaylandirma/donati-gosterimi-renk-ve-format",
+    "title": "Donatı Gösterimi: Çapa Göre Renk ve Format Ayarları",
+    "seoTitle": "Donatı Gösterimi: Çapa Göre Renk ve Format Ayarları | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Çubuk/hasır rengini çapa (veya hasır tipine) göre türetmek için gereken üç ayarı tanımlamak.",
+    "keywords": "Donatı Detaylandırma Disiplin Uzmanlığı 'Element rengini kullan' (Color from element / Farbe aus Element) seçeneğinin rolünü açıklamak. Renklendirmeyi grundrisste (planda) görünür kılan ekran ayarını ayırt etmek. Etiket renginin çubuk rengiyle uyuşmadığı durumu tanıyıp düzeltmek. Oberflächenfarbe aus Durchmesser (color per diameter) Extras > Optionen > Animation aus Element / Color from element Extras > Optionen > Bewehrung > Format Farbige Bewehrung im Grundriss (color for bars) Bildschirmdarstellung / Show-Hide 1. Rengi çaptan türet 2. Format'ta 'element rengini kullan' 3. Ekran gösteriminde renkli donatı REINF: Çubuk Renklerinin Ayarlanması ve Değiştirilmesi"
+  },
+  {
+    "path": "/akademi/donati-detaylandirma/egik-gorunum-ve-bukum-rulosu-cap-gosterimi",
+    "title": "Eğik Görünümde Çubuk Gösterimi ve Büküm Rulosu Çapı",
+    "seoTitle": "Eğik Görünümde Çubuk Gösterimi ve Büküm Rulosu Çapı | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Eğik (dik olmayan) görünümde büküm gösteriminin neden bozulabileceğini tanımlamak.",
+    "keywords": "Donatı Detaylandırma Disiplin Uzmanlığı Gösterimi düzeltmenin iki yolunu (çubuk gösterimini değiştirme, kesit hacmini değiştirme) ayırt etmek. Standart büküm rulosu çapının açınımda neden etiketlenmediğini açıklamak. 'Biegerolle modifizieren' (Modify Bending Roll) ile büküm rulosu çapını görünür kılmayı uygulamak. Biegerolle modifizieren (Modify Bending Roll) Mühendislik rolü · Donatı Teil-/Gesamtauszug (partial/full extract) Donatı · Açınım (extract) Eğik görünümde bozuk büküm İki düzeltme yolu Büküm rulosu çapını görünür kılma Eğik Görünümde Çubuk Gösterimi Donatı: Büküm Rulosu Çapını Gösterme"
+  },
+  {
+    "path": "/akademi/donati-detaylandirma/donati-gorunumleri-kopyalama-ve-2023-degisikligi",
+    "title": "Donatı Görünümleri (Bewehrungsansichten): Kopyalama ve 2023 Değişikliği",
+    "seoTitle": "Donatı Görünümleri (Bewehrungsansichten): Kopyalama ve 2023 Değişikliği | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Donatı görünümlerini aynı çizim dosyası içinde kopyalamayı/taşımayı tanımlamak.",
+    "keywords": "Donatı Detaylandırma Disiplin Uzmanlığı Pano (Ctrl+C/Ctrl+V) ile başka bir çizim dosyasına kopyalarken kesmenin (Ctrl+X) neden çalışmadığını açıklamak. Projeler arası kopyalamanın yalnızca ProjectPilot ile mümkün olduğunu ve bağların korunma/kaybolma seçeneklerini ayırt etmek. Allplan 2023'ten itibaren donatı görünümleri modülünün kalkmasının veri üzerindeki etkisini kavramak. Kopieren (Copy) Düzenle (Edit) Einfügen (Paste) ProjectPilot Proje yönetimi Aynı çizim dosyası içinde kopyalama Başka bir çizim dosyasına pano ile kopyalama Projeler arası kopyalama Allplan 2023 değişikliği Donatı Görünümlerini Kopyalama Donatı Görünümleri Modülünün Allplan 2023'te Kaldırılması"
+  },
+  {
+    "path": "/akademi/donati-detaylandirma/donati-metraji-ve-sik-hata-mesajlari",
+    "title": "Donatı Metrajı ve Sık Karşılaşılan Hata Mesajları (Meldung)",
+    "seoTitle": "Donatı Metrajı ve Sık Karşılaşılan Hata Mesajları (Meldung) | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Yerinde beton metrajı için bileşenlere eklenmesi gereken öznitelikleri (attributes) tanımlamak.",
+    "keywords": "Donatı Detaylandırma Disiplin Uzmanlığı Metrajın hangi rapor klasöründen (Standard\\Gewerke\\Betonarbeiten) üretildiğini açıklamak. 'Exception ist not handled' hatasının kesit serisiyle ilişkisini ve çözüm adımlarını ayırt etmek. 'Nicht alle vorhandenen Stahlgüten...' mesajının eksik kesit serisi anlamına geldiğini ve nasıl tamamlanacağını kavramak. Querschnittsreihen (Cross-section series) Extras > Definitionen > Querschnittsreihen Rundstahl- und Mattenquerschnittsreihen (Büro / Projekt) Projektübersicht > Projekteinstellungen Betonarbeiten raporları Standard\\Gewerke\\Betonarbeiten Metraj için gereken öznitelikler (NPK 241) Metraj raporları Hata 1: 'Exception ist not handled' (donatma sırasında) Hata 2: 'Nicht alle vorhandenen Stahlgüten...' NPK 241 Ortbetonbau'ya Göre Metraj (Mengenermittlung) Mesaj: 'Exception ist not handled !!!' (Donatma Sırasında) Mesaj: 'Mevcut çelik sınıflarının tümü kesit serilerinde tanımlı değil'"
+  },
+  {
+    "path": "/akademi/celik-yapi",
+    "title": "Çelik Yapı ve SDS2",
+    "seoTitle": "Çelik Yapı ve SDS2 | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "7 uygulamalı ders · Disiplin Uzmanlığı",
+    "keywords": "Disiplin Uzmanlığı Çelik Yapı Ortamı ve Profiller: Taşıyıcı Yapı Modülü ve Profil Kataloğu Otomatik Çelik Bağlantıları: SDS2 Tabanlı Birleşim Üretimi ve Düzenleme SDS2 Nedir? Çelik Detaylandırma İş Akışı ve Sertifikasyon Seviyeleri SDS2 Ortamı: Donanım, Lisans, Uzaktan Erişim ve Bulut Çalışma Alanı NC İmalat ve Üretim Verisi Çıktısı: CNC Yapılandırması ve BVBS Aktarımı Çelik Metraj, Listeler ve Raporlar: Elemandan Belgeye Bağlı Çıktı Sık Hatalar, Stabilite Eklentileri ve Pratik İpuçları"
+  },
+  {
+    "path": "/akademi/celik-yapi/celik-yapi-ortami-ve-profiller",
+    "title": "Çelik Yapı Ortamı ve Profiller: Taşıyıcı Yapı Modülü ve Profil Kataloğu",
+    "seoTitle": "Çelik Yapı Ortamı ve Profiller: Taşıyıcı Yapı Modülü ve Profil Kataloğu | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "ALLPLAN Mühendislik (Engineering) rolü altındaki taşıyıcı yapı (Supporting structure) ortamını tanımak.",
+    "keywords": "Çelik Yapı ve SDS2 Disiplin Uzmanlığı Nemetschek Profil Kataloğu (Nemetschek Profiles Catalog) üzerinden standart çelik profilleri kütüphaneye aktarmayı öğrenmek. Parametrik profil eklentilerinin (Variantenprofil, Profilbauteil) hangi durumda serbest kesit üretmek için kullanıldığını ayırt etmek. Profil seçiminin, sonraki bağlantı ve imalat adımlarının önkoşulu olduğunu kavramak. Supporting structure ALLPLAN · Mühendislik (Engineering) rolü Nemetschek Profiles Catalog Kütüphane (library) Variantenprofil Add-On (eklenti) Profilbauteil Taşıyıcı yapı ortamı ve profil kaynağı Nemetschek profillerini kütüphaneye alma Parametrik ve serbest profiller SDS2 bağlantısı ve profil kataloğu: eksik ikon Variantenprofil eklentisi: işlev özeti Profilbauteil eklentisi: serbest dikdörtgen ve yuvarlak profiller"
+  },
+  {
+    "path": "/akademi/celik-yapi/otomatik-celik-baglantilari",
+    "title": "Otomatik Çelik Bağlantıları: SDS2 Tabanlı Birleşim Üretimi ve Düzenleme",
+    "seoTitle": "Otomatik Çelik Bağlantıları: SDS2 Tabanlı Birleşim Üretimi ve Düzenleme | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Otomatik bağlantılar (Automated Connections) komutunun arka planda SDS2 ile elemanları bağladığını kavramak.",
+    "keywords": "Çelik Yapı ve SDS2 Disiplin Uzmanlığı Bağlantı üretiminin, elemanların Nemetschek kataloğu profillerinden oluşturulmuş olmasına bağlı olduğunu açıklamak. Yerleştirilen bir birleşimi (assembly) çift tıklayarak düzenlemeyi öğrenmek. Bağlantı ikonuna erişimin lisans ve rol ayarına bağlı olduğunu ayırt etmek. Automated Connections ALLPLAN · Mühendislik (Engineering) rolü · Supporting structure Otomatik bağlantı ikonu Çalışma koşulu: katalog profilleri Birleşimleri düzenleme SDS2 bağlantısı ve eksik ikon"
+  },
+  {
+    "path": "/akademi/celik-yapi/sds2-nedir-detaylandirma-is-akisi",
+    "title": "SDS2 Nedir? Çelik Detaylandırma İş Akışı ve Sertifikasyon Seviyeleri",
+    "seoTitle": "SDS2 Nedir? Çelik Detaylandırma İş Akışı ve Sertifikasyon Seviyeleri | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "SDS2'de bir detaylandırma işinin temel sürecini tarif etmek.",
+    "keywords": "Çelik Yapı ve SDS2 Disiplin Uzmanlığı SDS2 Home Screen, Modeling ve Drawing Editor arayüzlerinin işlevini ayırt etmek. Kiriş, kolon, düşey ve yatay çaprazlar gibi temel elemanların (Members) modellendiğini açıklamak. Operatör, Power User ve Instructor sertifikasyon seviyelerinin kapsamını karşılaştırmak. Home Screen SDS2 Modeling Drawing Editor SDS2'nin temel süreci Arayüz alanları Sertifikasyon seviyeleri SDS2 Temel Seviye (Level 1) kursu SDS2 Operator (Operatör) sertifikası SDS2 Power User sertifikası SDS2 Instructor (Eğitmen) sertifikası"
+  },
+  {
+    "path": "/akademi/celik-yapi/sds2-ortami-donanim-lisans-uzaktan-erisim",
+    "title": "SDS2 Ortamı: Donanım, Lisans, Uzaktan Erişim ve Bulut Çalışma Alanı",
+    "seoTitle": "SDS2 Ortamı: Donanım, Lisans, Uzaktan Erişim ve Bulut Çalışma Alanı | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "SDS2 için asgari işletim sistemi ve donanım gereksinimlerini (RAM, ekran kartı, çözünürlük) sıralamak.",
+    "keywords": "Çelik Yapı ve SDS2 Disiplin Uzmanlığı Lisansların Organization Admin portalıyla yönetildiğini açıklamak. VPN ile doğrudan erişim yerine Remote Desktop veya bulut yaklaşımının neden önerildiğini kavramak. Sürüm güncelleme ve eğitim lisansı edinme yollarını ayırt etmek. Organization Admin SDS2 Lisanslama Portalı (web) SDS2 Edge SDS2 bulut dağıtımı Asgari donanım ve işletim sistemi Lisans yönetimi Uzaktan erişim ve bulut SDS2 için asgari donanım gereksinimleri SDS2 uzaktan erişimi destekler mi? SDS2 lisanslama ve Organization Admin Virtual Workspace (bulut çalışma alanı) tanıtımı SDS2'yi en son sürüme güncelleme"
+  },
+  {
+    "path": "/akademi/celik-yapi/nc-imalat-ve-uretim-verisi-cikti",
+    "title": "NC İmalat ve Üretim Verisi Çıktısı: CNC Yapılandırması ve BVBS Aktarımı",
+    "seoTitle": "NC İmalat ve Üretim Verisi Çıktısı: CNC Yapılandırması ve BVBS Aktarımı | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "SDS2'de model verisinin imalat için CNC yapılandırmalarıyla dışa aktarıldığını açıklamak.",
+    "keywords": "Çelik Yapı ve SDS2 Disiplin Uzmanlığı ALLPLAN'da 'Bending machine' işleviyle .abs uzantılı BVBS dosyası üretmeyi öğrenmek. BVBS dosyasının klasik bükme ve çelik listelerinin yerini tuttuğunu kavramak. Üretim verisine hangi çizim dosyası ve katman seçiminin dahil olduğunu ayırt etmek. Bending machine ALLPLAN · Mühendislik (Engineering) modülü SDS2'de CNC yapılandırması ALLPLAN'da BVBS (.abs) üretimi Hangi veriler dahil olur Donatı ve bükme bilgisinin çelik/bükme firmasına aktarımı SDS2 Power User: imalat için CNC dışa aktarımı"
+  },
+  {
+    "path": "/akademi/celik-yapi/celik-metraj-listeler-ve-raporlar",
+    "title": "Çelik Metraj, Listeler ve Raporlar: Elemandan Belgeye Bağlı Çıktı",
+    "seoTitle": "Çelik Metraj, Listeler ve Raporlar: Elemandan Belgeye Bağlı Çıktı | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Profil eklentileriyle oluşturulan elemanlardan rapor üretilebildiğini açıklamak.",
+    "keywords": "Çelik Yapı ve SDS2 Disiplin Uzmanlığı Çelik ve bükme listelerinin bağlı belgeler olarak gerçek zamanlı güncellendiğini kavramak. Liste ve rapor içeriğinin ağırlık, malzeme gibi eleman özelliklerinden türediğini ayırt etmek. Listelerin BVBS bükme verisiyle ilişkisini kurmak. Elemandan rapor üretme Bağlı listeler ve gerçek zamanlı güncelleme Listelerden imalat verisine Profilbauteil: eleman raporları ve özellik uyarlama ALLPLAN yapısal mühendislik: bağlı çelik ve bükme listeleri Listeler yerine BVBS: aynı verinin makine biçimi"
+  },
+  {
+    "path": "/akademi/celik-yapi/sik-hatalar-stabilite-add-onlari-ve-pratik",
+    "title": "Sık Hatalar, Stabilite Eklentileri ve Pratik İpuçları",
+    "seoTitle": "Sık Hatalar, Stabilite Eklentileri ve Pratik İpuçları | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Otomatik bağlantı ikonunun görünmeme nedenlerini ve çözümünü uygulamak.",
+    "keywords": "Çelik Yapı ve SDS2 Disiplin Uzmanlığı VPN üzerinden uzaktan erişimin tipik sorunlarından kaçınmak. ALLPLAN'da çelik stabilite doğrulamasının ayrı eklentilerle (RSX-ST, BTII+) yapıldığını, bu modülün ise detaylandırma/imalata odaklandığını ayırt etmek. Sorun giderirken lisans, rol ve profil kaynağı gibi önkoşulları sistematik kontrol etmek. RSX-ST ALLPLAN Stabwerk · ek modül BTII+ ALLPLAN · ayrı program (RSX bağlam menüsünden çağrılır) Otomatik bağlantı ikonu görünmüyor Uzaktan erişimde performans sorunları Stabilite doğrulaması detaylandırmadan ayrıdır Eksik ikon: lisans ve eylem çubuğu kontrolü Uzaktan erişimde önerilen yaklaşımlar RSX - Çelik: stabilite doğrulaması seçenekleri"
+  },
+  {
+    "path": "/akademi/prekast",
+    "title": "Prekast Yapı Elemanları",
+    "seoTitle": "Prekast Yapı Elemanları | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "4 uygulamalı ders · Disiplin Uzmanlığı",
+    "keywords": "Disiplin Uzmanlığı Prekast Ortamı: Kurulum, Yapılandırma ve Eleman Paleti Gömme Parçalar (Einbauteile): IFC Tipi ve Liste Metni Formülleri Prekast Listeleri ve Üretim Çıktısı Otomasyonu Prekast Akışında Sık Hatalar ve Pratik Çözümler"
+  },
+  {
+    "path": "/akademi/prekast/prekast-ortami-kurulum-eleman-paleti",
+    "title": "Prekast Ortamı: Kurulum, Yapılandırma ve Eleman Paleti",
+    "seoTitle": "Prekast Ortamı: Kurulum, Yapılandırma ve Eleman Paleti | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Prekast yapı elemanı (precast / Fertigteil) ortamının Allplan içinde hangi kurulum seçenekleriyle etkinleştiğini açıklamak.",
+    "keywords": "Prekast Yapı Elemanları Disiplin Uzmanlığı Prekast modüllerini kullanmak için kurulumda etkinleştirilmesi gereken 'Precast elements' (Betonfertigteile) seçeneğini tanımlamak. Yapılandırma menüsündeki kırmızı soru işareti belirtisinin nedenini ve çözümünü ayırt etmek. Yeni Prekast Eleman Paleti (Precast Element Pallet) görünmediğinde standart ayarların nasıl sıfırlandığını kavramak. Precast elements (Betonfertigteile) Allplan kurulum seçeneği Fixtures (Einbauteile) cleanstd Service > Hotline tools Prekast modülü nedir, ortam nasıl hazırlanır Kurulumda 'Precast elements' seçeneğini etkinleştirmek Yeni Prekast Eleman Paleti görünmüyorsa Prekast Yapılandırması Kullanılamıyor Yeni Prekast Eleman Paleti Görünmüyor Allplan Prekast (Fertigteilbau) Kurs Çerçevesi"
+  },
+  {
+    "path": "/akademi/prekast/einbauteile-ifc-tipi-ve-formul",
+    "title": "Gömme Parçalar (Einbauteile): IFC Tipi ve Liste Metni Formülleri",
+    "seoTitle": "Gömme Parçalar (Einbauteile): IFC Tipi ve Liste Metni Formülleri | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Gömme parçanın (fixture / Einbauteil) prekast elemanın bir alt nesnesi (sub-object) olduğunu açıklamak.",
+    "keywords": "Prekast Yapı Elemanları Disiplin Uzmanlığı Bir gömme parçaya IfcObjectType değerini öznitelik üzerinden veya 'Attributes > Assign Attributes' komutuyla atamayı tanımlamak. Gömme parça kataloğunun liste metninde (List text) Formül Düzenleyici (Formula Editor) ile formül oluşturmayı öğrenmek. PARENTPRECAST() komutunun neden gerektiğini, yani alt nesnenin üst prekast elemanın özniteliğine nasıl eriştiğini ayırt etmek. Attributes > Assign Attributes Öznitelik atama komutu Formula Editor (Formel-Editor) Einbauteilekatalog (gömme parça kataloğu) PARENTPRECAST() Formül fonksiyonu IfcObjectType Öznitelik Gömme parça prekastın alt nesnesidir Gömme parçaya IFC tipi atamak Liste metnine formül yazmak ve PARENTPRECAST() Gömme Parçalar İçin IfcObjectType (Mühendislik) Gömme Parçalar: Liste Metninde Formül Kurgusu"
+  },
+  {
+    "path": "/akademi/prekast/listeler-uretim-ciktisi-otomasyonu",
+    "title": "Prekast Listeleri ve Üretim Çıktısı Otomasyonu",
+    "seoTitle": "Prekast Listeleri ve Üretim Çıktısı Otomasyonu | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Prekast liste üreticisinin (List generator Precast) başlık (header) değişkenlerini InitPrjAttr.EXT ve HeaderData.ext dosyalarıyla özelleştirmeyi tanımlamak.",
+    "keywords": "Prekast Yapı Elemanları Disiplin Uzmanlığı Standart liste dosyalarını \\ETC\\BFT\\_List klasöründen büro (STD) klasörüne kopyalama mantığını açıklamak. Taşıma ankrajı (transport anchor / Transportanker) genişliğini öznitelik tabanlı formülle hesaplatmayı kavramak. Üretim ve lojistik verisinin TIM ortamına (DatenExplorer, Delivery Manager) aktarıldığı akışı ayırt etmek. List generator Precast (Listengenerator Precast) Prekast liste üreticisi InitPrjAttr.EXT \\ETC\\BFT\\_List ve STD\\BFT\\_List klasörleri HeaderData.ext DatenExplorer TIM Delivery Manager Liste başlığındaki değişkenleri özelleştirmek Başlıktan öznitelik kaldırmak: HeaderData.ext Taşıma ankrajı genişliğini formülle hesaplamak Üretim verisini TIM'e aktarmak Prekast Liste Üreticisi: Başlık Değişkenlerini InitPrjAttr.EXT ile Uyarlama Prekast Liste Üreticisi: Başlığı HeaderData.ext ile Uyarlama iWall Duvar Tipleri İçin Taşıma Ankrajı Genişliği Formülü TIM 2024 Yenilikleri (Prekast Üretim ve Lojistik)"
+  },
+  {
+    "path": "/akademi/prekast/prekast-sik-hatalar-pratik",
+    "title": "Prekast Akışında Sık Hatalar ve Pratik Çözümler",
+    "seoTitle": "Prekast Akışında Sık Hatalar ve Pratik Çözümler | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Prekast yapılandırmasına erişilememe ve eski arayüz sorunlarının kök nedenini ve çözümünü ayırt etmek.",
+    "keywords": "Prekast Yapı Elemanları Disiplin Uzmanlığı Taşıma ankrajı formülünün geçerli olduğu koşulu (enine donatının konumu) doğrulamak. Liste başlığı dosyalarında çeviri yer tutucusunu doğru temizlemeyi uygulamak. Bir belirtiden yola çıkarak doğru düzeltme adımını seçme alışkanlığı kazanmak. cleanstd Service > Hotline tools List generator Precast (Listengenerator Precast) Prekast liste üreticisi Belirti 1: Prekast araçlarına erişilemiyor Belirti 2: Yeni eleman paleti gelmiyor Belirti 3: Taşıma ankrajı genişliği yanlış çıkıyor Belirti 4: Liste başlığı bozuk görünüyor Prekast Yapılandırması Kullanılamıyor (Planbar 2022) Prekast Liste Başlığı Değişkenlerini InitPrjAttr.EXT ile Uyarlama Prekast Liste Başlığını HeaderData.ext ile Uyarlama iWall Taşıma Ankrajı Genişliği Formülü (Kısıtlar)"
+  },
+  {
+    "path": "/akademi/otomasyon-scripting",
+    "title": "Otomasyon ve Visual Scripting",
+    "seoTitle": "Otomasyon ve Visual Scripting | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "3 uygulamalı ders · BIM Yönetimi ve Otomasyon",
+    "keywords": "BIM Yönetimi ve Otomasyon Visual Scripting'e Giriş ve Node Mantığı PythonParts Temelleri ve Actionbar'a Ekleme Formül Editöründe Betik Komutları ve Excel Sözdizimi"
+  },
+  {
+    "path": "/akademi/otomasyon-scripting/visual-scripting-giris-node-kurulumu",
+    "title": "Visual Scripting'e Giriş ve Node Mantığı",
+    "seoTitle": "Visual Scripting'e Giriş ve Node Mantığı | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Visual Scripting'in ne olduğunu ve neden kullanıldığını açıklamak.",
+    "keywords": "Otomasyon ve Visual Scripting BIM Yönetimi ve Otomasyon Node (işlem kutusu) ve wire (bağlantı teli) kavramlarını ayırt etmek. Bir Visual Scripting betiğinin genel iş akışını (oluşturma, bağlama, çalıştırma) tanımlamak. Özellikler Paleti (Properties palette) üzerinden parametrelerin nasıl dışarıya açıldığını kavramak. Programlama bilgisi olmadan hangi tür görevlerin otomatikleştirilebileceğini örnekleyebilmek. Visual Scripting Visual Scripting nedir Node ve wire: temel yapı taşları Genel iş akışı ve dosya yönetimi Özellikler Paleti ile parametreleri dışarıya açmak Visual Scripting'e Giriş: Konsol Kolonu Örneği Visual Scripting ile Otomasyon Kursu Modellemeden Programlamaya: Visual Scripting"
+  },
+  {
+    "path": "/akademi/otomasyon-scripting/pythonparts-temelleri-ve-actionbar",
+    "title": "PythonParts Temelleri ve Actionbar'a Ekleme",
+    "seoTitle": "PythonParts Temelleri ve Actionbar'a Ekleme | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "PythonParts'in ne olduğunu ve parametrik akıllı nesne mantığını açıklamak.",
+    "keywords": "Otomasyon ve Visual Scripting BIM Yönetimi ve Otomasyon SmartStairConverter örneği üzerinden bir PythonPart'ın ne işe yaradığını örnekleyebilmek. Bir PythonPart'ı Actionbar'a eklemek için gereken dosya ön koşullarını (Library klasörü ve ikonlar) tanımlamak. Actionbar yapılandırması üzerinden PythonPart ekleme adımlarını sırayla uygulamak. Oluşturulan PythonPart'ın Actionbar'a sürükle-bırak ile yerleştirilmesini gerçekleştirmek. Actionbar (Aksiyon Çubuğu) Browse Actionbar yapılandırması Plug-ins / Add-On Module - PythonParts Actionbar yapılandırması · sol panel PythonParts nedir Örnek: SmartStairConverter Ön koşullar: Library klasörü ve ikonlar PythonPart'ı Actionbar yapılandırmasına tanımlama Sürükle-bırak ile Actionbar'a yerleştirme PythonPart'ı (SmartStairConverter) Actionbar'a Ekleme İlk PythonPart'ınızı Oluşturma (Çerçeve Temelleri) Standart Dışı Merdiven Donatısı: İki Yaklaşım Parametrik Donatı Modellemesi ve PythonPart"
+  },
+  {
+    "path": "/akademi/otomasyon-scripting/formul-editoru-betik-komutlari-ve-excel-sozdizimi",
+    "title": "Formül Editöründe Betik Komutları ve Excel Sözdizimi",
+    "seoTitle": "Formül Editöründe Betik Komutları ve Excel Sözdizimi | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Formül Editöründe bir öznitelik değerine (örn. @508@) göre koşullu çıktı üretme mantığını açıklamak.",
+    "keywords": "Otomasyon ve Visual Scripting BIM Yönetimi ve Otomasyon CHOOSE() ve SWITCH() Excel komutlarının sözdizimini ve davranış farkını ayırt etmek. Betik türünü belirlemek için p:, v: ve x: ön eklerinin ne işe yaradığını tanımlamak. Excel komutunun çalışmadığı durumlarda olası nedenleri (Excel sürümü, dil, OpenOffice) teşhis etmek. SWITCH() Formül Editörü (Formeleditor) CHOOSE() VALUE() p: / v: / x: Neden formül editörü CHOOSE(): sıra numarasına göre seçim SWITCH(): değer-sonuç eşleşmesi Betik türü ön ekleri: p:, v:, x: Excel komutu çalışmazsa Etiket/Lejant - Excel Komutu Sözdizimi"
+  },
+  {
+    "path": "/akademi/openbim-ifc",
+    "title": "OpenBIM ve IFC",
+    "seoTitle": "OpenBIM ve IFC | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "11 uygulamalı ders · BIM Yönetimi ve Otomasyon",
+    "keywords": "BIM Yönetimi ve Otomasyon OpenBIM, IFC ve Bimplus Kavramına Giriş Bimplus/Share ile Proje Başlatma ve CDE Rolleri IFC Dışa Aktarım: Komut, Favoriler ve Değişim Profilleri Öznitelik Eşleme (Attribute-Mapping) ve Pset'ler IFC'de Sistem, Grup ve Nesne Tipi: IfcSystem, IfcGroup, IfcObjectType IFC İçe Aktarım ve Referans Model (XREF) Bimplus CDE: Senkronizasyon ve Yedekleme Koordinasyon: Çakışma Kontrolü ve BCF ile Sorun Yönetimi IDS ile Teslim Doğrulama ve e-PYS IDS'inin Yapısı e-PYS Adlandırma ve Öznitelik Kurallarını Modelde Sağlama ve Doğrulama Sık Hatalar ve Çözümleri: IFC Penceresi, Donma ve Kilitli Proje"
+  },
+  {
+    "path": "/akademi/openbim-ifc/openbim-ifc-ve-bimplus-kavrami",
+    "title": "OpenBIM, IFC ve Bimplus Kavramına Giriş",
+    "seoTitle": "OpenBIM, IFC ve Bimplus Kavramına Giriş | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "OpenBIM ve kapalı (closed) BIM arasındaki farkı, açık IFC formatının rolü üzerinden açıklamak.",
+    "keywords": "OpenBIM ve IFC BIM Yönetimi ve Otomasyon IFC (Industry Foundation Classes) ve IFC4 kavramını, üreticiden bağımsız veri alışverişi standardı olarak tanımlamak. Bimplus bulut ortamında fakülte modellerinin (Fachmodelle) üst üste bindirilmesi, çakışma tespiti ve görev dağıtımı akışını kavramak. Bir ALLPLAN modelinin OpenBIM iş akışındaki yerini (dışa aktarım, koordinasyon, sorun geri bildirimi) sıralamak. OpenBIM neden açık format ister Bimplus: fakülte modellerinin buluştuğu yer Uçtan uca akış ALLPLAN Bimplus: İlk Adımlar ALLPLAN Share: İlk Adımlar"
+  },
+  {
+    "path": "/akademi/openbim-ifc/bimplus-share-proje-baslatma-ve-cde",
+    "title": "Bimplus/Share ile Proje Başlatma ve CDE Rolleri",
+    "seoTitle": "Bimplus/Share ile Proje Başlatma ve CDE Rolleri | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Bir projeyi 'Projekt- und Ressourcenverwaltung' üzerinden 'BIMPLUS' depolama konumuyla oluşturmayı tanımlamak.",
+    "keywords": "OpenBIM ve IFC BIM Yönetimi ve Otomasyon Georeferanslı çalışmada proje sıfır noktasının (Nullpunkt) ilk yüklemeden önce neden ayarlanması gerektiğini açıklamak. Team-Owner, Team-Administrator, Projekt-Administrator ve Projektbearbeiter rolleri arasındaki yetki farkını ayırt etmek. Mevcut bir projeyi 'Kopieren nach' ile Bimplus'a kopyalamayı sıralamak. Projekt- und Ressourcenverwaltung / Neues Projekt ALLPLAN · Proje ve Kaynak Yönetimi Kopieren nach Projekt- und Ressourcenverwaltung · sağ tık portal.bimplus.net Web portalı Giriş ve takım gereksinimi Yeni proje oluşturma Sıfır noktası (Nullpunkt) ve offset Mevcut projeyi Bimplus'a kopyalama Rol ve yetki yönetimi Bimplus'ta Doğru Proje Başlangıcı ALLPLAN Share: İlk Adımlar (proje oluşturma ve roller)"
+  },
+  {
+    "path": "/akademi/openbim-ifc/ifc-disa-aktarim-favoriler-ve-degisim-profilleri",
+    "title": "IFC Dışa Aktarım: Komut, Favoriler ve Değişim Profilleri",
+    "seoTitle": "IFC Dışa Aktarım: Komut, Favoriler ve Değişim Profilleri | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "'IFC-Daten exportieren' komutunu Datei > Exportieren altından çağırmayı tanımlamak.",
+    "keywords": "OpenBIM ve IFC BIM Yönetimi ve Otomasyon Austauschprofile sekmesindeki hazır IFC4 dışa aktarım favorilerini (örn. Ifc_4_Tragwerk_export) seçmeyi öğrenmek. Geometrinin BREP mi yoksa ekstrüzyon olarak mı yazılacağını 'Erweiterte Optionen' ve IFC Objekttyp üzerinden kontrol etmek. Dışa aktarmadan önce ilgili Çizim Dosyalarını seçmenin aktarılan içeriği belirlediğini açıklamak. IFC-Daten exportieren Datei · Exportieren Austauschprofile IFC dışa aktarım diyaloğu · sekme Erweiterte Optionen / Geometrie Konvertierung nach IFC IFC dışa aktarım · gelişmiş seçenekler ForceRetyping.nth Austauschprofile · Suchen Dışa aktarım komutu Austauschprofile (değişim profilleri / favoriler) Geometri: BREP mi, ekstrüzyon mu Objekttyp ve otomatik atama IFC Dışa Aktarım: Komut ve Değişim Profilleri IFC Favorileri ve Öznitelik Eşleme Dosyaları IFC Dışa Aktarımda BREP Geometri Kontrolü"
+  },
+  {
+    "path": "/akademi/openbim-ifc/oznitelik-esleme-attribute-mapping-ve-pset",
+    "title": "Öznitelik Eşleme (Attribute-Mapping) ve Pset'ler",
+    "seoTitle": "Öznitelik Eşleme (Attribute-Mapping) ve Pset'ler | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Attribute-Mapping diyaloğunda yeni bir eşleme dosyası (.cfg) oluşturmayı ve mevcut dosyayı 'Suchen'/'Bearbeiten' ile kullanmayı tanımlamak.",
+    "keywords": "OpenBIM ve IFC BIM Yönetimi ve Otomasyon Bir özniteliğin hedef Pset adını ve IFC içindeki yeni adını belirlemeyi öğrenmek. Birimli öznitelikler için IfcLengthMeasure, IfcAreaMeasure ve IfcVolumeMeasure Property Type'larının doğru seçilmesini açıklamak. Bir IFC görüntüleyicide birimin görüntü ayarına göre dönüştürülebileceğini ayırt etmek. Attribute-Mapping IFC dışa aktarım diyaloğu Neu / Suchen / Bearbeiten Attribute-Mapping · dosya işlemleri Eşleme dosyası oluşturma veya yükleme Eşleme maskesinin alanları Birimli öznitelikler (miktarlar) Görüntüleyici birimi dönüştürür IFC Öznitelik Eşleme Maskesi ve Birimler Birimli Kullanıcı Tanımlı Özniteliklerin Eşlenmesi"
+  },
+  {
+    "path": "/akademi/openbim-ifc/ifc-sistem-grup-ve-objekttyp-yapilari",
+    "title": "IFC'de Sistem, Grup ve Nesne Tipi: IfcSystem, IfcGroup, IfcObjectType",
+    "seoTitle": "IFC'de Sistem, Grup ve Nesne Tipi: IfcSystem, IfcGroup, IfcObjectType | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "IfcSystem kavramını, proje özniteliklerinde tanımlanan 'Bauliches System' üzerinden açıklamak.",
+    "keywords": "OpenBIM ve IFC BIM Yönetimi ve Otomasyon IfcGroup kavramını, 'Gruppe' özniteliğiyle eleman gruplama olarak tanımlamak. Gömülü parçalara (Einbauteile) doğru IfcObjectType atamak için öznitelik düzenleme yollarını sıralamak. Sistem/grup/nesne tipi atamalarının IFC çıktısındaki yapısal karşılığını ayırt etmek. Projektattribute ALLPLAN · proje öznitelikleri Bauliches System Öznitelik Gruppe Attribute / Attribute zuweisen ALLPLAN · öznitelik IfcSystem: bauliches System IfcGroup: eleman gruplama IfcObjectType: gömülü parçalar Allplan'da IfcSystem (IFC Dışa Aktarım) Allplan'da IfcGroup (IFC Dışa Aktarım) Gömülü Parçalar için IfcObjectType (Mühendislik)"
+  },
+  {
+    "path": "/akademi/openbim-ifc/ifc-ice-aktarim-ve-referans-model-xref",
+    "title": "IFC İçe Aktarım ve Referans Model (XREF)",
+    "seoTitle": "IFC İçe Aktarım ve Referans Model (XREF) | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Bir IFC dosyasını XREF olarak bağlamayı ve çift tıkla güncellemeyi tanımlamak.",
+    "keywords": "OpenBIM ve IFC BIM Yönetimi ve Otomasyon XREF ile bağlı bir IFC'yi değiştirmek (içindeki nesneleri düzenlemek) istendiğinde neden içe aktarım gerektiğini açıklamak. XREF referansına tutunarak (snap) koordinasyon ölçümü yapmayı sıralamak. STEP (.stp) dosyalarının doğrudan desteklenmediğini ve IFC'ye dönüştürülerek içe aktarıldığını ayırt etmek. XREF ALLPLAN · referans olarak ekleme IFC'yi XREF olarak bağlama Referansı güncelleme veya değiştirme Ne zaman içe aktarım gerekir STEP (.stp) dosyaları IFC Dosyasını XREF Olarak İçe Aktarma STEP (.stp) Dosyalarının İçe/Dışa Aktarımı"
+  },
+  {
+    "path": "/akademi/openbim-ifc/bimplus-cde-senkronizasyon-ve-yedekleme",
+    "title": "Bimplus CDE: Senkronizasyon ve Yedekleme",
+    "seoTitle": "Bimplus CDE: Senkronizasyon ve Yedekleme | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Çizim Dosyalarının buluta hangi koşullarda yüklendiğini (senkronize edildiğini) sıralamak.",
+    "keywords": "OpenBIM ve IFC BIM Yönetimi ve Otomasyon Planların yalnızca plan düzeni değiştiğinde yüklendiğini çizim dosyalarından ayırt etmek. Bimplus portalında yedekleme döngüsü (Sicherungszyklus) kurup Dokumente > Backups altından yedek indirmeyi tanımlamak. Model, doküman ve yapı yapılarının (IFC olarak) nasıl güvene alınacağını açıklamak. Alles speichern ALLPLAN A (sol üst) Optionen > Arbeitsumgebung > Speichern/Laden ALLPLAN · Seçenekler Dokumente > Backups portal.bimplus.net · proje Projekte neu, öffnen > Projekt importieren ALLPLAN Çizim dosyaları ne zaman senkronize olur Pasif çizim dosyası uyarısı Planlar farklı davranır Bulut tabanlı yedekleme Model ve dokümanları güvene alma ALLPLAN Share: Bulutla Senkronizasyon ALLPLAN Share Projelerinin BIMPLUS'ta Yedeklenmesi BIMPLUS Projelerinin Verilerini Güvene Alma"
+  },
+  {
+    "path": "/akademi/openbim-ifc/koordinasyon-cakisma-ve-bcf-sorun-yonetimi",
+    "title": "Koordinasyon: Çakışma Kontrolü ve BCF ile Sorun Yönetimi",
+    "seoTitle": "Koordinasyon: Çakışma Kontrolü ve BCF ile Sorun Yönetimi | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "Fakülte modellerinin üst üste bindirilmesiyle planlama hatalarının ve çakışmaların görünür hale geldiğini açıklamak.",
+    "keywords": "OpenBIM ve IFC BIM Yönetimi ve Otomasyon Koordinasyonda tespit edilen sorunların (Issues) görev olarak proje katılımcılarına dağıtıldığını tanımlamak. Bimplus Issue'larının BCF dosyaları olarak dışa aktarılabildiğini ve BCF'nin açık bir koordinasyon biçimi olduğunu ayırt etmek. Koordinasyon çıktılarının (Folienshow PDF, BCF) nerede üretildiğini sıralamak. BCF Bimplus · Issues dışa aktarım Modelleri üst üste bindirme Çakışmadan göreve Issue'ları BCF olarak paylaşma Bimplus ile Koordinasyon ve Çakışma Tespiti BIMPLUS'ta Issue'ları BCF Olarak Dışa Aktarma"
+  },
+  {
+    "path": "/akademi/openbim-ifc/ids-ile-teslim-dogrulama-ve-epys-ids-yapisi",
+    "title": "IDS ile Teslim Doğrulama ve e-PYS IDS'inin Yapısı",
+    "seoTitle": "IDS ile Teslim Doğrulama ve e-PYS IDS'inin Yapısı | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "IDS'in (Information Delivery Specification) ne olduğunu ve BIM teslimini nasıl makine okunur bir kurala bağladığını açıklamak.",
+    "keywords": "OpenBIM ve IFC BIM Yönetimi ve Otomasyon Bir IDS specification'ının iki parçasını (applicability ve requirements) ve facet türlerini (entity, attribute, property, classification, material, partOf) ayırt etmek. e-PYS EPYS_IDS dosyasının kapsamını (161 specification, IFC4X3_ADD2, EK-3/EK-5/EK-6/EK-7, Ruhsat aşaması) okuyabilmek. ALLPLAN'ın öznitelik eşleme (Attribute-Mapping) ve dışa aktarım gücünün IDS gerekliliklerini karşılamadaki rolünü kavramak. IFC-Daten exportieren (IFC Verisi Dışa Aktar) Datei / Export Attribute-Mapping (Öznitelik Eşleme) IFC dışa aktarım ayarları IDS nedir ve neden gerekir Bir specification'ın iki parçası: applicability ve requirements Facet türleri: kuralın hangi bilgiyi denetlediği e-PYS'in resmî IDS'i: EPYS_IDS künyesi ALLPLAN'ın bu konudaki gücü EPYS_IDS (buildingSMART IDS 1.0, IFC4X3_ADD2) e-PYS Yönetmeliği ve Ekleri (EK-3, EK-5, EK-6, EK-7)"
+  },
+  {
+    "path": "/akademi/openbim-ifc/epys-adlandirma-oznitelik-kurallarini-saglamak-ve-dogrulama",
+    "title": "e-PYS Adlandırma ve Öznitelik Kurallarını Modelde Sağlama ve Doğrulama",
+    "seoTitle": "e-PYS Adlandırma ve Öznitelik Kurallarını Modelde Sağlama ve Doğrulama | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "EPYS_IDS'in disiplin kodlu Name (ad) desenlerini ve bunların EK-5 kategori kodlarıyla ilişkisini okumak.",
+    "keywords": "OpenBIM ve IFC BIM Yönetimi ve Otomasyon Zorunlu özellik (Pset) ve veri tipi gerekliliklerinin modelde ne anlama geldiğini açıklamak. ALLPLAN'da öznitelik eşleme ve doğru IFC sınıfı atamayla bu gereklilikleri tekrarlanabilir biçimde sağlamak. IFC modelini bir IDS doğrulayıcıyla denetleyip fail sonuçlarını okuyup düzeltme döngüsünü kurmak. Attribute-Mapping (Öznitelik Eşleme) IFC dışa aktarım ayarları Austauschprofil (Değişim Profili) Disiplin kodlu adlandırma kuralları (Name deseni) Zorunlu özellikler (Pset) ve veri tipleri ALLPLAN'da sağlama: eşleme ve doğru sınıf (ALLPLAN'ın gücü) Doğrulama döngüsü: dışa aktar, denetle, düzelt EPYS_IDS: Adlandırma ve özellik gereklilikleri e-PYS Yönetmeliği EK-3 / EK-5 (kategori kodları ve mahal adları)"
+  },
+  {
+    "path": "/akademi/openbim-ifc/sik-hatalar-ve-cozumleri-ifc-ve-share",
+    "title": "Sık Hatalar ve Çözümleri: IFC Penceresi, Donma ve Kilitli Proje",
+    "seoTitle": "Sık Hatalar ve Çözümleri: IFC Penceresi, Donma ve Kilitli Proje | Aluplan Akademi",
+    "section": "Akademi",
+    "description": "IFC/Opsiyon penceresinin hemen kapanmasının bazı HP/Dell güvenlik araçlarından kaynaklandığını ve çözümünü açıklamak.",
+    "keywords": "OpenBIM ve IFC BIM Yönetimi ve Otomasyon Share projesinin açılışta donmasını, ilgili Bimplus Login dosyasını yeniden adlandırarak gidermeyi tanımlamak. 'Proje zaten aynı Bimplus Login ile açık' mesajını, cache klasörünü yeniden adlandırarak çözmeyi sıralamak. Bimplus görünümünün fare tekerleğiyle 'uzağa kayması' sorununu fare sürücüsü ayarıyla ilişkilendirmek. %LocalAppData%\\Nemetschek\\bim+ Windows Explorer · yol Projekt neu, öffnen > Share > Login ALLPLAN IFC/Opsiyon penceresi hemen kapanıyor Share projesi açılışta donuyor 'Proje zaten açık' mesajı Bimplus görünümü 'uzağa kayıyor' Opsiyon/IFC Penceresi Hemen Kapanıyor ALLPLAN Share: Proje Açılışında Donma Meldung: Proje Aynı Bimplus Login ile Zaten Açık BIMPLUS Görünümü Fare Tekerleğiyle Uzağa Kayıyor"
+  }
+]

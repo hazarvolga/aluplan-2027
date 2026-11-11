@@ -7,7 +7,7 @@ import { ConsentBanner } from '@/components/shell/ConsentBanner';
 import { ConsentScripts } from '@/components/shell/ConsentScripts';
 import { DebugOverlayController } from '@/components/sections/DebugComponentLabel';
 import { SITE_ORIGIN } from '@/lib/site-data';
-import { isReleaseContentEnabled } from '@/lib/release-flags';
+import { isAkademiEnabled, isReleaseContentEnabled } from '@/lib/release-flags';
 import { SearchIndexProvider } from '@/components/shell/SearchIndexProvider';
 
 export const metadata: Metadata = {
@@ -30,7 +30,7 @@ export default function RootLayout({
       <body>
         <ThemeModeProvider>
           <DebugOverlayController />
-          <SearchIndexProvider showRelease={isReleaseContentEnabled()}><SiteShell>{children}</SiteShell></SearchIndexProvider>
+          <SearchIndexProvider showRelease={isReleaseContentEnabled()} showAkademi={isAkademiEnabled()}><SiteShell>{children}</SiteShell></SearchIndexProvider>
           <ConsentBanner />
           <ConsentScripts />
         </ThemeModeProvider>

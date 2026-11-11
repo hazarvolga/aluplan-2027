@@ -24,3 +24,43 @@ export function searchEntries(entries: SearchEntry[], query: string): SearchEntr
     return words.every((word) => content.includes(word));
   });
 }
+
+export type SearchScope = 'all' | 'akademi' | 'site';
+
+const AKADEMI_SECTION = 'Akademi';
+const TITLE_WEIGHT = 3;
+const DESCRIPTION_WEIGHT = 2;
+const OTHER_WEIGHT = 1;
+
+function inScope(entry: SearchEntry, scope: SearchScope): boolean {
+  if (scope === 'all') return true;
+  const isAkademi = entry.section === AKADEMI_SECTION;
+  return scope === 'akademi' ? isAkademi : !isAkademi;
+}
+
+/**
+ * Every query word must match (as in searchEntries); each word scores by where it
+ * matches: title > description > other fields. Ties keep the input order.
+ */
+export function rankSearchEntries(entries: SearchEntry[], query: string, scope: SearchScope = 'all'): SearchEntry[] {
+  const scoped = entries.filter((entry) => inScope(entry, scope));
+  const words = normalize(query).trim().split(/\s+/).filter(Boolean);
+  if (!words.length) return scoped;
+  const scored = scoped.map((entry, index) => {
+    const title = normalize(entry.title);
+    const description = normalize(entry.description);
+    const other = normalize([entry.seoTitle, entry.path, entry.keywords].join(' '));
+    let score = 0;
+    for (const word of words) {
+      if (title.includes(word)) score += TITLE_WEIGHT;
+      else if (description.includes(word)) score += DESCRIPTION_WEIGHT;
+      else if (other.includes(word)) score += OTHER_WEIGHT;
+      else return null;
+    }
+    return { entry, index, score };
+  });
+  return scored
+    .filter((item): item is { entry: SearchEntry; index: number; score: number } => item !== null)
+    .sort((a, b) => b.score - a.score || a.index - b.index)
+    .map((item) => item.entry);
+}

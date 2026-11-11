@@ -286,19 +286,21 @@ export function HomepageView({ previewMaxHero = false }: { previewMaxHero?: bool
         <div className="alu-container">
           <div className="preview-bimflex">
             <div className="alu-stack preview-bimflex__content" style={{ gap: 'var(--space-stack-lg)' }}>
-              <div className="alu-cluster">
-                <span className="alu-badge alu-badge--accent">{data.bimflex.eyebrow}</span>
-                <span className="alu-badge">{data.bimflex.label}</span>
+              <div className="preview-bimflex__head">
+                <div className="alu-cluster">
+                  <span className="alu-badge alu-badge--accent">{data.bimflex.eyebrow}</span>
+                  <span className="alu-badge">{data.bimflex.label}</span>
+                </div>
+                <img
+                  className="preview-bimflex__logo"
+                  {...homepageImage(data.bimflex.logo.src)}
+                  sizes="80px"
+                  alt={data.bimflex.logo.alt}
+                  loading="lazy"
+                  width={512}
+                  height={512}
+                />
               </div>
-              <img
-                className="preview-bimflex__logo"
-                {...homepageImage(data.bimflex.logo.src)}
-                sizes="80px"
-                alt={data.bimflex.logo.alt}
-                loading="lazy"
-                width={512}
-                height={512}
-              />
               <h2 id="bimflex-heading" className="alu-h1">
                 {data.bimflex.title}
               </h2>

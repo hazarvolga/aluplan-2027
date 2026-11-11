@@ -6561,6 +6561,9 @@ dialog.alu-modal-backdrop::backdrop { background: transparent; }
 .preview-bimflex__content { row-gap: var(--space-stack-sm) !important; }
 .preview-bimflex__content h2 { font-size: var(--type-h2-size); line-height: var(--type-h2-line-height); }
 .preview-bimflex__logo { width: min(5rem, 35%); }
+/* Logo sits at the right end of the badge row instead of on its own line */
+.preview-bimflex__head{display:flex;align-items:center;justify-content:space-between;gap:var(--space-stack-sm);flex-wrap:wrap}
+.preview-bimflex__head .preview-bimflex__logo{flex:none;width:5rem;object-position:right center}
 .preview-bimflex__media {
   width: 100%;
   max-width: var(--size-preview-bimflex-compact-width);

@@ -131,5 +131,12 @@ class HomeSlideTests(unittest.TestCase):
         self.assertIn('/products/allplan-2026', (ROOT / 'src/data/pages.json').read_text(encoding='utf-8'))
 
 
+    def test_bimflex_logo_sits_right_of_the_badges(self):
+        home = (ROOT / "src/components/sections/HomepageView.tsx").read_text(encoding="utf-8")
+        self.assertIn('className="preview-bimflex__head"', home)
+        css = (ROOT / "src/styles/application.css").read_text(encoding="utf-8")
+        self.assertIn(".preview-bimflex__head{display:flex;align-items:center;justify-content:space-between", css)
+
+
 if __name__ == "__main__":
     unittest.main()

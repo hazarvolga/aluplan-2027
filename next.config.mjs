@@ -94,6 +94,19 @@ const nextConfig = {
       { source: '/solutions-v2/other', destination: '/cozumler/diger-urunler', statusCode: 301 },
       // Not an ALLPLAN product (2026-11-11): the page is removed, its URL keeps working.
       { source: '/products/architecture', destination: '/solutions/architecture', statusCode: 301 },
+      // Old WordPress-era URLs Search Console still reports as 404 (2026-11-11).
+      { source: '/add/allplan-lisans-server', destination: '/solutions-v2/connect-license', statusCode: 301 },
+      { source: '/download_center/:path*', destination: '/kaynaklar', statusCode: 301 },
+      { source: '/index.php', destination: '/', statusCode: 301 },
+      { source: '/allplan-ogrenci-versiyonu', destination: '/akademi', statusCode: 301 },
+      { source: '/allplan-aec-2024-features', destination: '/products/allplan-2026-yenilikler', statusCode: 301 },
+      { source: '/allplan-egitim-videolari-oynatma-listeleri', destination: '/video-kutuphanesi', statusCode: 301 },
+      { source: '/wp-sitemap.xml', destination: '/sitemap.xml', statusCode: 301 },
+      { source: '/user', destination: '/', statusCode: 301 },
+      { source: '/user/:path*', destination: '/', statusCode: 301 },
+      { source: '/buildability-2', destination: '/cozumler/insaat-planlamasi', statusCode: 301 },
+      { source: '/allplan-structural-engineering-2022', destination: '/solutions/structural', statusCode: 301 },
+      { source: '/allplan-bimplus-open-bim-paketler-fiyatlar', destination: '/products/allplan-bimplus', statusCode: 301 },
       {
         source: '/solutions/PlanliAlanlar',
         destination: '/solutions/imar-yonetmeligi-bim-eklentisi',

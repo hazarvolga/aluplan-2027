@@ -534,8 +534,8 @@ class SubpageComponentBoundaryTests(unittest.TestCase):
         ]
         product_routes = [page["path"] for page in subpages if page["path"].startswith("/products")]
 
-        self.assertEqual(len(subpages), 101)
-        self.assertEqual(len(hero_image_routes), 68)
+        self.assertEqual(len(subpages), 100)  # /products/architecture removed 2026-11-11
+        self.assertEqual(len(hero_image_routes), 67)
         self.assertEqual(no_cta_routes, ["/about", "/gizlilik-politikasi", "/kullanim-sartlari", "/kvkk"])
         self.assertEqual(len(product_routes), 18)
         self.assertTrue(

@@ -183,10 +183,11 @@ class SitewideSourceParityIntegrationTests(unittest.TestCase):
                 policy=load_policy(POLICY),
                 output_dir=Path(temp_dir),
             )
-        self.assertEqual(report["summary"]["sourceRoutes"], 102)
-        self.assertEqual(report["summary"]["generatedRoutes"], 102)
+        # 102 source routes minus /products/architecture (removed 2026-11-11, see removedRoutes).
+        self.assertEqual(report["summary"]["sourceRoutes"], 101)
+        self.assertEqual(report["summary"]["generatedRoutes"], 101)
         self.assertEqual(report["summary"]["failures"], 0, report["findings"][:10])
-        self.assertEqual(len(report["routeResults"]), 102)
+        self.assertEqual(len(report["routeResults"]), 101)
         self.assertTrue(
             all(item["status"] in {"pass", "approved_difference"} for item in report["routeResults"])
         )

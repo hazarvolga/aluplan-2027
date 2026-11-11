@@ -2,7 +2,8 @@
   "defaultEvidence": "docs/00-inventory/user-decisions.md and committed 2026 live inventory/source evidence",
   "routeRenames": {"/solutions-v2/faq": "/faq", "/solutions-v2/building-design": "/cozumler/bina-tasarimi", "/solutions-v2/infrastructure": "/cozumler/altyapi-tasarimi", "/solutions-v2/construction": "/cozumler/insaat-planlamasi", "/solutions-v2/addons": "/eklentiler", "/solutions-v2/other": "/cozumler/diger-urunler"},
   "routePrefixRenames": {"/solutions-v2/training/video-library": "/video-kutuphanesi"},
-  "removedRoutes": {"/solutions-v2/training": "/kaynaklar", "/solutions-v2/training/webinar": "/kaydedilmis-webinarlar", "/solutions-v2/training/online": "/kaynaklar", "/solutions-v2/training/classroom": "/kaynaklar", "/solutions-v2/training/events": "/kaynaklar", "/solutions-v2/training/individual": "/kaynaklar", "/solutions-v2/training/e-learning": "/kaynaklar", "/solutions-v2/training/quick-start": "/kaynaklar"},
+  "removedRoutes": {"/solutions-v2/training": "/kaynaklar", "/solutions-v2/training/webinar": "/kaydedilmis-webinarlar", "/solutions-v2/training/online": "/kaynaklar", "/solutions-v2/training/classroom": "/kaynaklar", "/solutions-v2/training/events": "/kaynaklar", "/solutions-v2/training/individual": "/kaynaklar", "/solutions-v2/training/e-learning": "/kaynaklar", "/solutions-v2/training/quick-start": "/kaynaklar",
+    "/products/architecture": "/solutions/architecture"},
   "excludedRoutes": [
     {
       "route": "/hero-3d",
@@ -16,6 +17,7 @@
     }
   ],
   "linkReplacements": [
+    {"source": "/products/architecture", "generated": "/solutions/architecture#is-akislari", "reason": "Removed non-product page (2026-11-11); architect workflow CTA opens the solution workflow section"},
     {
       "source": "https://aluplan.net.tr",
       "generated": "https://allplan.net.tr/tr",

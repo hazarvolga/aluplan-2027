@@ -24,6 +24,12 @@ class AkademiShellTests(unittest.TestCase):
         self.assertIn('href="/"', src)
         self.assertIn("useThemeMode(", src)
 
+    def test_header_brand_is_the_logo_alone_at_site_size(self):
+        src = read("src/components/akademi/AkademiHeader.tsx")
+        self.assertNotIn("wordmark", src)
+        self.assertIn("width={166}", src)
+        self.assertIn("height={32}", src)
+
     def test_footer_has_legal_and_back_to_site(self):
         src = read("src/components/akademi/AkademiFooter.tsx")
         self.assertIn("/kvkk", src)

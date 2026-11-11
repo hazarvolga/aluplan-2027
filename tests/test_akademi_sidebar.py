@@ -44,6 +44,47 @@ class AkademiSidebarTests(unittest.TestCase):
         # Focus is moved (into the drawer on open, back to the toggle on close).
         self.assertIn(".focus()", src)
 
+    def test_temel_groups_cover_every_lesson_once_in_order(self):
+        import json
+        index = json.loads(read("src/data/temel-modelleme/_index.json"))
+        groups = json.loads(read("src/data/temel-modelleme/_groups.json"))
+        self.assertGreaterEqual(len(groups), 2)
+        for group in groups:
+            self.assertTrue(group["title"].strip())
+            self.assertTrue(group["lessons"])
+        flat = [no for group in groups for no in group["lessons"]]
+        self.assertEqual(flat, [lesson["no"] for lesson in index])
+
+    def test_series_lessons_render_in_collapsible_groups(self):
+        src = read("src/components/akademi/AkademiSidebar.tsx")
+        self.assertIn("temel-modelleme/_groups.json", src)
+        self.assertIn("<details", src)
+        self.assertIn("<summary", src)
+        # The group holding the current lesson starts open.
+        self.assertRegex(src, r"open=\{")
+
+    def test_levels_carry_competency_names(self):
+        src = read("src/data/akademi-content.ts")
+        for title in ("Temeller", "Üretim ve Dokümantasyon", "Disiplin Uzmanlığı", "BIM Yönetimi ve Otomasyon"):
+            with self.subTest(title=title):
+                self.assertIn(f"title: '{title}'", src)
+        for old in ("title: 'Temel',", "title: 'Orta',", "title: 'İleri',", "title: 'Uzman',"):
+            self.assertNotIn(old, src)
+        # No component hard-codes an old level name as a label.
+        self.assertNotIn("levelTitle: 'Temel'", read("src/components/sections/AkademiKatalogBolumu.tsx"))
+
+    def test_curriculum_levels_render_as_collapsible_groups(self):
+        src = read("src/components/akademi/AkademiSidebar.tsx")
+        # Each level is a details/summary group, open when the path is inside that level.
+        self.assertIn("className={styles.levelGroup}", src)
+        self.assertIn("isInsideLevel", src)
+        # The level page stays reachable from inside the group.
+        self.assertIn("Seviyeye genel bakış", src)
+
+    def test_inside_level_predicate_is_pure_and_exported(self):
+        src = read("src/components/akademi/sidebar-nav.ts")
+        self.assertIn("export function isInsideLevel", src)
+
     def test_sidebar_css_uses_tokens_not_literal_colors(self):
         css = read("src/components/akademi/AkademiSidebar.module.css")
         self.assertNotRegex(css, r"#[0-9a-fA-F]{3,8}\b")

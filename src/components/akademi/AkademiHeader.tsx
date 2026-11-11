@@ -16,8 +16,7 @@ export function AkademiHeader() {
     <header className={styles.header}>
       <div className={`alu-container ${styles.inner}`}>
         <Link href="/" className={styles.brand} aria-label="Aluplan ana sayfa">
-          <img src={logoSrc} alt="Aluplan" width={120} height={23} className={styles.logo} />
-          <span className={styles.wordmark}>Akademi</span>
+          <img src={logoSrc} alt="Aluplan" width={166} height={32} className={styles.logo} />
         </Link>
         <nav className={styles.nav} aria-label="Akademi üst gezinme">
           <Link href="/akademi#katalog" className={styles.navLink}>Katalog &amp; Yollar</Link>

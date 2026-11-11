@@ -34,7 +34,6 @@ export default async function PrekastLessonPage({
       allLessons={prekastLessons}
       basePath="/akademi/prekast"
       breadcrumbLabel="Prekast"
-      level="İleri"
     />
   );
 }

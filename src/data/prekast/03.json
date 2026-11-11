@@ -81,7 +81,24 @@
     }
   ],
   "media": {
-    "videos": [],
+    "videos": [
+      {
+        "title": "Hello Allplan! 2024 - Otomatik Prekast Duvar Tasarımı",
+        "file": "",
+        "vimeoId": "",
+        "youtubeId": "Oi1K8XXSO3U",
+        "note": "Türkçe anlatım · Allplan Turkey (Aluplan) resmî kanalı",
+        "sizeMB": 0
+      },
+      {
+        "title": "Hello Allplan! 2024 - Otomatik Prekast Döşeme Tasarımı",
+        "file": "",
+        "vimeoId": "",
+        "youtubeId": "DY3uXUa1B4o",
+        "note": "Türkçe anlatım · Allplan Turkey (Aluplan) resmî kanalı",
+        "sizeMB": 0
+      }
+    ],
     "pdfs": [],
     "samples": []
   },

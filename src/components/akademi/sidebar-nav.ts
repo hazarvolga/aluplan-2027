@@ -41,3 +41,13 @@ export function isAkademiModuleActive(pathname: string, module: SidebarModule): 
 export function isAkademiLevelActive(pathname: string, slug: string): boolean {
   return pathname === `/akademi/${slug}`;
 }
+
+/**
+ * Pure wayfinding predicate: is the current path anywhere inside this level — its page,
+ * one of its module pages, or a lesson series filed under it (seriesPaths)?
+ */
+export function isInsideLevel(pathname: string, slug: string, seriesPaths: readonly string[] = []): boolean {
+  const levelPath = `/akademi/${slug}`;
+  if (pathname === levelPath || pathname.startsWith(`${levelPath}/`)) return true;
+  return seriesPaths.some((path) => pathname === path || pathname.startsWith(`${path}/`));
+}

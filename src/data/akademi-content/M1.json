@@ -64,9 +64,9 @@
         ],
         "tryIt": "Şimdi sen dene: Yakınlaştır, sonra orta tuşla kaydır ve modeli bilerek kaybet. Ardından \"tümünü sığdır\" ile geri getir.",
         "video": {
-          "title": "Arayüz ve temel gezinme (ör. Object palette tanıtımı)",
-          "source": "vimeo",
-          "placeholder": true
+          "url": "https://www.youtube-nocookie.com/embed/oPceAhBaKYs",
+          "title": "Hello Allplan! 2024 - Kullanıcı Arayüzü",
+          "source": "YouTube · Türkçe"
         }
       },
       {

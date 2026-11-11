@@ -57,7 +57,24 @@
     }
   ],
   "media": {
-    "videos": [],
+    "videos": [
+      {
+        "title": "Hello Allplan! 2024 - Donatı Detaylandırması",
+        "file": "",
+        "vimeoId": "",
+        "youtubeId": "2bIfafW5Qqs",
+        "note": "Türkçe anlatım · Allplan Turkey (Aluplan) resmî kanalı",
+        "sizeMB": 0
+      },
+      {
+        "title": "Hello Allplan! 2024 - Otomatik Donatılandırma",
+        "file": "",
+        "vimeoId": "",
+        "youtubeId": "hkuDaHO4GZg",
+        "note": "Türkçe anlatım · Allplan Turkey (Aluplan) resmî kanalı",
+        "sizeMB": 0
+      }
+    ],
     "pdfs": [],
     "samples": []
   },

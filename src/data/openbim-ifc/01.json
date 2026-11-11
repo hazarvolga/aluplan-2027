@@ -40,7 +40,16 @@
   "checkpoint": "Bir projenin neden IFC ile dışa aktarıldığını ve Bimplus'ın koordinasyonda ne işe yaradığını kendi cümlelerinizle açıklayabiliyorsanız bu derse hazırsınız.",
   "commands": [],
   "media": {
-    "videos": [],
+    "videos": [
+      {
+        "title": "Hello Allplan! 2024 - Bimplus I",
+        "file": "",
+        "vimeoId": "",
+        "youtubeId": "LBSKoJFoYsA",
+        "note": "Türkçe anlatım · Allplan Turkey (Aluplan) resmî kanalı",
+        "sizeMB": 0
+      }
+    ],
     "pdfs": [],
     "samples": []
   },

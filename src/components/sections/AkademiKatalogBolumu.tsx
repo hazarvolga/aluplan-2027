@@ -44,7 +44,7 @@ function buildCards(): readonly KatalogKarti[] {
       code: 'Arazi',
       title: 'Arazi Modelleme',
       levelSlug: 'temel',
-      levelTitle: 'Temel',
+      levelTitle: akademiProgram.levels.find((level) => level.slug === 'temel')?.title ?? '',
       hours: 12,
       href: '/akademi/arazi-modelleme',
       dersSayisi: araziDers,
@@ -67,7 +67,7 @@ export function AkademiKatalogBolumu({ seviye, rol, sure, baseHref }: Props): Re
             id="katalog-yollar"
             kicker="MESLEKİ ROL"
             title="Rolünüze göre müfredat"
-            lead="Herkes Temel'de ortak başlar; rolünüz ileri modüllerde ayrışır (çoğu yakında). Rolünüzü seçin, size uygun modülleri görün. İlerleme bu tarayıcıda kaydedilir."
+            lead="Herkes Temeller seviyesinde ortak başlar; rolünüz ileri modüllerde ayrışır (çoğu yakında). Rolünüzü seçin, size uygun modülleri görün. İlerleme bu tarayıcıda kaydedilir."
           />
           <AkademiOgrenmeYollari yollar={ogrenmeYollari()} baseHref={baseHref} />
         </div>

@@ -47,7 +47,24 @@
     }
   ],
   "media": {
-    "videos": [],
+    "videos": [
+      {
+        "title": "Hello Allplan! 2024 - Çelik Bağlantılar",
+        "file": "",
+        "vimeoId": "",
+        "youtubeId": "ak-LqGfUezQ",
+        "note": "Türkçe anlatım · Allplan Turkey (Aluplan) resmî kanalı",
+        "sizeMB": 0
+      },
+      {
+        "title": "Hello Allplan! 2024 - Çelik - Otomatik Bağlantılar",
+        "file": "",
+        "vimeoId": "",
+        "youtubeId": "_lGIn4L1tI0",
+        "note": "Türkçe anlatım · Allplan Turkey (Aluplan) resmî kanalı",
+        "sizeMB": 0
+      }
+    ],
     "pdfs": [],
     "samples": []
   },

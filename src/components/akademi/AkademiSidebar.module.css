@@ -23,7 +23,9 @@
 
 @media (max-width:959px){
   .toggle{display:inline-flex;position:fixed;top:calc(var(--target-min) + var(--space-stack-sm));inset-inline-start:var(--space-stack-md);z-index:45}
-  .sidebar{position:fixed;inset-block:0;inset-inline-start:0;width:17rem;max-width:85vw;max-height:none;z-index:40;background:var(--surface-page);border-right:var(--border-width-default) solid var(--border-default);padding:var(--space-inset-md);transform:translateX(-100%);transition:transform var(--motion-duration-panel) ease;overflow-y:auto}
+  /* align-self:stretch: the desktop flex-start would stop the fixed drawer from filling the viewport height.
+     Top padding clears the fixed "Müfredat" toggle that stays above the open drawer as its close button. */
+  .sidebar{position:fixed;inset-block:0;inset-inline-start:0;align-self:stretch;width:17rem;max-width:85vw;max-height:none;z-index:40;background:var(--surface-page);border-right:var(--border-width-default) solid var(--border-default);padding:var(--space-inset-md);padding-block-start:calc(var(--target-min) * 2 + var(--space-stack-sm) * 2);transform:translateX(-100%);transition:transform var(--motion-duration-panel) ease;overflow-y:auto}
   .open{transform:translateX(0)}
   .scrim{display:block;position:fixed;inset:0;z-index:30;background:color-mix(in srgb, var(--text-primary) 45%, transparent)}
 }
@@ -41,3 +43,32 @@
 .backLink:hover{color:var(--accent-fg)}
 .backLink:focus-visible{outline:var(--border-width-accent,2px) solid var(--focus-ring,var(--accent-akademi));outline-offset:2px}
 .focusLessons{margin-left:0;padding-left:0;border-left:0}
+
+/* Focus mode, grouped series: topic groups collapse; the current lesson's group opens */
+.groups{display:flex;flex-direction:column;gap:var(--space-stack-xs)}
+.group{border-top:var(--border-width-default) solid var(--border-subtle);padding-top:var(--space-stack-xs)}
+.group:first-child{border-top:0;padding-top:0}
+.groupSummary{display:grid;grid-template-columns:1fr auto;align-items:baseline;column-gap:var(--space-inline-xs);cursor:pointer;list-style:none;padding:4px 0;color:var(--text-primary);transition:color var(--motion-duration-fast,150ms) ease}
+.groupSummary::-webkit-details-marker{display:none}
+.groupSummary::after{content:"";grid-column:2;grid-row:1;justify-self:end;width:.45em;height:.45em;margin-left:var(--space-inline-xs);border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(-45deg);transition:transform var(--motion-duration-fast,150ms) ease}
+.group[open]>.groupSummary::after{transform:rotate(45deg)}
+.groupSummary:hover{color:var(--accent-fg)}
+.groupSummary:focus-visible{outline:var(--border-width-accent,2px) solid var(--focus-ring,var(--accent-akademi));outline-offset:2px}
+.groupCurrent{color:var(--accent-akademi)}
+.groupTitle{font-size:var(--type-body-sm-size);font-weight:var(--font-weight-strong);line-height:var(--line-height-snug,1.35)}
+.groupMeta{grid-column:1;font-family:var(--font-mono);font-size:var(--type-body-sm-size);color:var(--text-muted)}
+.group .focusLessons{margin-top:var(--space-stack-xs)}
+@media (prefers-reduced-motion:reduce){.groupSummary::after{transition:none}}
+
+/* Curriculum view: each level collapses; the level holding the current page opens */
+.levelGroup{margin:0}
+.levelSummary{display:grid;grid-template-columns:auto 1fr auto;align-items:baseline;column-gap:var(--space-stack-xs);cursor:pointer;list-style:none;padding:2px 0;color:var(--text-primary);transition:color var(--motion-duration-fast,150ms) ease}
+.levelSummary::-webkit-details-marker{display:none}
+.levelSummary::after{content:"";grid-column:3;grid-row:1;width:.45em;height:.45em;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(-45deg);transition:transform var(--motion-duration-fast,150ms) ease}
+.levelGroup[open]>.levelSummary::after{transform:rotate(45deg)}
+.levelSummary:hover{color:var(--accent-fg)}
+.levelSummary:focus-visible{outline:var(--border-width-accent,2px) solid var(--focus-ring,var(--accent-akademi));outline-offset:2px}
+.active .levelSummary{color:var(--accent-akademi)}
+.levelMeta{grid-column:2;grid-row:2;font-family:var(--font-mono);font-size:var(--type-body-sm-size);color:var(--text-muted)}
+.overviewLink{color:var(--text-muted)}
+@media (prefers-reduced-motion:reduce){.levelSummary::after{transition:none}}

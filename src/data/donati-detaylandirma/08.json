@@ -69,7 +69,16 @@
     }
   ],
   "media": {
-    "videos": [],
+    "videos": [
+      {
+        "title": "Hello Allplan! 2024 - Donatı Raporları",
+        "file": "",
+        "vimeoId": "",
+        "youtubeId": "t-qfxpp4nqE",
+        "note": "Türkçe anlatım · Allplan Turkey (Aluplan) resmî kanalı",
+        "sizeMB": 0
+      }
+    ],
     "pdfs": [],
     "samples": []
   },

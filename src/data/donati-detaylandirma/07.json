@@ -69,7 +69,24 @@
     }
   ],
   "media": {
-    "videos": [],
+    "videos": [
+      {
+        "title": "Hello Allplan! 2024 - Donatı Paftası",
+        "file": "",
+        "vimeoId": "",
+        "youtubeId": "xzt2nXW7blo",
+        "note": "Türkçe anlatım · Allplan Turkey (Aluplan) resmî kanalı",
+        "sizeMB": 0
+      },
+      {
+        "title": "Hello Allplan! 2024 - İnşaat Mühendisliğinde Görünümler ve Kesitler",
+        "file": "",
+        "vimeoId": "",
+        "youtubeId": "-WYkVxDlFTA",
+        "note": "Türkçe anlatım · Allplan Turkey (Aluplan) resmî kanalı",
+        "sizeMB": 0
+      }
+    ],
     "pdfs": [],
     "samples": []
   },

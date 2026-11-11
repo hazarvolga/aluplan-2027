@@ -34,7 +34,6 @@ export default async function CelikYapiLessonPage({
       allLessons={celikYapiLessons}
       basePath="/akademi/celik-yapi"
       breadcrumbLabel="Çelik Yapı"
-      level="İleri"
     />
   );
 }

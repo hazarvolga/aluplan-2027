@@ -38,9 +38,9 @@
         ],
         "tryIt": "Kendi denemen: Modelinde bir kesit çizgisi tanımla ve kesiti üret; sonra bir duvarın yüksekliğini değiştir ve kesitin güncellendiğini gör.",
         "video": {
-          "title": "Modelden kesit ve görünüş üretimi",
-          "source": "vimeo",
-          "placeholder": true
+          "url": "https://www.youtube-nocookie.com/embed/Ls7vsGJKcbw",
+          "title": "Hello Allplan! 2024 - Görünümler ve Kesitler",
+          "source": "YouTube · Türkçe"
         }
       },
       {

@@ -1,0 +1,7 @@
+[
+  { "title": "Başlangıç ve Arayüz", "lessons": [1, 2, 3, 4] },
+  { "title": "2D Çizim ve Ölçülendirme", "lessons": [5, 6, 7] },
+  { "title": "Yapı Elemanları", "lessons": [8, 9, 10, 11, 12, 13, 14] },
+  { "title": "Kat, Çatı ve Mahal", "lessons": [15, 16, 17, 18] },
+  { "title": "Görünüş, Kesit ve Pafta", "lessons": [19, 20, 21, 22] }
+]

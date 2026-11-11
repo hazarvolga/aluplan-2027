@@ -1,11 +1,13 @@
 import type { ReactElement } from 'react';
 import type { LessonVideo as LessonVideoData } from '@/data/akademi-content';
+import { ConsentEmbed } from '@/components/ui/ConsentEmbed';
 import styles from './LessonVideo.module.css';
 
 /**
  * Embedded tutorial video in a responsive 16:9 frame, or a labelled placeholder
  * slot when no url is set yet. The placeholder names the video topic so the
- * right clip can be sourced and dropped in later; the iframe is lazy-loaded.
+ * right clip can be sourced and dropped in later. The player loads only after
+ * cookie consent (or the visitor's click), through the shared ConsentEmbed.
  */
 export function LessonVideo({ video }: { video: LessonVideoData }): ReactElement {
   const { url, title, source, placeholder } = video;
@@ -26,14 +28,7 @@ export function LessonVideo({ video }: { video: LessonVideoData }): ReactElement
   return (
     <figure className={styles.video}>
       <div className={styles.frame}>
-        <iframe
-          className={styles.iframe}
-          src={url}
-          title={title ?? 'ALLPLAN eğitim videosu'}
-          loading="lazy"
-          allow="fullscreen; picture-in-picture"
-          allowFullScreen
-        />
+        <ConsentEmbed src={url} title={title ?? 'ALLPLAN eğitim videosu'} className={styles.iframe} fill />
       </div>
       {(title || source) && (
         <figcaption className={styles.caption}>

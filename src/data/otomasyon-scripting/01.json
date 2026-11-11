@@ -54,7 +54,16 @@
     }
   ],
   "media": {
-    "videos": [],
+    "videos": [
+      {
+        "title": "Hello Allplan! 2024 - Visual Scripting",
+        "file": "",
+        "vimeoId": "",
+        "youtubeId": "F7Vw1UHKc-M",
+        "note": "Türkçe anlatım · Allplan Turkey (Aluplan) resmî kanalı",
+        "sizeMB": 0
+      }
+    ],
     "pdfs": [],
     "samples": []
   },

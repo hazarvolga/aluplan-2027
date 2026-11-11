@@ -4,10 +4,11 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { AluIcon } from '@/components/ui/AluIcon';
-import { buildSidebarLevels, isAkademiLevelActive, isAkademiModuleActive } from './sidebar-nav';
+import { buildSidebarLevels, isAkademiLevelActive, isAkademiModuleActive, isInsideLevel } from './sidebar-nav';
 // Sidebar yalnızca no/slug/title kullanır; tam ders verisini (gövde, adım, makale,
 // figür) tarayıcıya taşımamak için hafif _index.json dosyalarını import eder.
 import temelIdx from '@/data/temel-modelleme/_index.json';
+import temelGroups from '@/data/temel-modelleme/_groups.json';
 import araziIdx from '@/data/arazi-modelleme/_index.json';
 import lejantIdx from '@/data/lejant/_index.json';
 import donatiIdx from '@/data/donati-detaylandirma/_index.json';
@@ -25,16 +26,23 @@ interface SidebarLesson {
   title: string;
 }
 
+/** Topic group of a series' lessons, shown as a collapsible block in focus mode. */
+interface SidebarLessonGroup {
+  title: string;
+  lessons: readonly number[];
+}
+
 interface AkademiSeriesNav {
   levelSlug: string;
   basePath: string;
   title: string;
   lessons: readonly SidebarLesson[];
+  groups?: readonly SidebarLessonGroup[];
 }
 
 /** Lesson series nested under a level in the sidebar. */
 const AKADEMI_SERIES: readonly AkademiSeriesNav[] = [
-  { levelSlug: 'temel', basePath: '/akademi/temel-modelleme', title: 'Temel Modelleme Eğitimi', lessons: temelIdx },
+  { levelSlug: 'temel', basePath: '/akademi/temel-modelleme', title: 'Temel Modelleme Eğitimi', lessons: temelIdx, groups: temelGroups },
   { levelSlug: 'temel', basePath: '/akademi/arazi-modelleme', title: 'Arazi Modelleme Eğitimi', lessons: araziIdx },
   { levelSlug: 'orta', basePath: '/akademi/lejant', title: 'Lejant Oluşturma Eğitimi', lessons: lejantIdx },
   { levelSlug: 'ileri', basePath: '/akademi/donati-detaylandirma', title: 'Donatı Detaylandırma', lessons: donatiIdx },
@@ -44,14 +52,71 @@ const AKADEMI_SERIES: readonly AkademiSeriesNav[] = [
   { levelSlug: 'uzman', basePath: '/akademi/openbim-ifc', title: 'OpenBIM ve IFC', lessons: openbimIdx },
 ];
 
+const pad = (no: number) => String(no).padStart(2, '0');
+
+function SeriesLessonList({ series, pathname, className }: {
+  series: AkademiSeriesNav;
+  pathname: string;
+  className: string;
+}) {
+  const lessonsByNo = new Map(series.lessons.map((lsn) => [lsn.no, lsn]));
+  const renderLesson = (lsn: SidebarLesson) => {
+    const lessonActive = pathname === `${series.basePath}/${lsn.slug}`;
+    return (
+      <li key={lsn.slug}>
+        <Link
+          href={`${series.basePath}/${lsn.slug}`}
+          className={`${styles.tmLessonLink} ${lessonActive ? styles.moduleActive : ''}`}
+          aria-current={lessonActive ? 'page' : undefined}
+        >
+          <span className={styles.tmLessonNo}>{pad(lsn.no)}</span>
+          <span className={styles.tmLessonTitle}>{lsn.title}</span>
+        </Link>
+      </li>
+    );
+  };
+
+  if (!series.groups) {
+    return <ul className={className}>{series.lessons.map(renderLesson)}</ul>;
+  }
+
+  return (
+    <div className={styles.groups}>
+      {series.groups.map((group) => {
+        const lessons = group.lessons
+          .map((no) => lessonsByNo.get(no))
+          .filter((lsn): lsn is SidebarLesson => lsn !== undefined);
+        if (lessons.length === 0) return null;
+        const holdsCurrent = lessons.some((lsn) => pathname === `${series.basePath}/${lsn.slug}`);
+        const first = lessons[0].no;
+        const last = lessons[lessons.length - 1].no;
+        return (
+          <details key={group.title} className={styles.group} open={holdsCurrent}>
+            <summary className={`${styles.groupSummary} ${holdsCurrent ? styles.groupCurrent : ''}`}>
+              <span className={styles.groupTitle}>{group.title}</span>
+              <span className={styles.groupMeta}>
+                {pad(first)}–{pad(last)} · {lessons.length} ders
+              </span>
+            </summary>
+            <ul className={className}>{lessons.map(renderLesson)}</ul>
+          </details>
+        );
+      })}
+    </div>
+  );
+}
+
 /** Program-wide curriculum nav: sticky rail on desktop, off-canvas drawer on mobile. */
 export function AkademiSidebar() {
   const pathname = usePathname() ?? '';
   // Focus mode: inside a lesson series, show only that series' lessons + a back link.
   const activeSeries = AKADEMI_SERIES.find((series) => pathname.startsWith(series.basePath));
-  const activeSeriesLevelTitle = activeSeries
-    ? sidebarLevels.find((level) => level.slug === activeSeries.levelSlug)?.title ?? 'Akademi'
-    : '';
+  const activeSeriesLevel = activeSeries
+    ? sidebarLevels.find((level) => level.slug === activeSeries.levelSlug)
+    : undefined;
+  const activeSeriesLevelLabel = activeSeriesLevel
+    ? `${pad(activeSeriesLevel.number)} · ${activeSeriesLevel.title}`
+    : 'Akademi';
   const [open, setOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const navRef = useRef<HTMLElement>(null);
@@ -124,92 +189,65 @@ export function AkademiSidebar() {
           <div>
             <Link href={`/akademi/${activeSeries.levelSlug}`} className={styles.backLink}>
               <span aria-hidden="true">←</span>
-              <span>{activeSeriesLevelTitle} seviyesi</span>
+              <span>{activeSeriesLevelLabel}</span>
             </Link>
             <p className={styles.heading}>{activeSeries.title}</p>
-            <ul className={`${styles.tmLessons} ${styles.focusLessons}`}>
-              {activeSeries.lessons.map((lsn) => {
-                const lessonActive = pathname === `${activeSeries.basePath}/${lsn.slug}`;
-                return (
-                  <li key={lsn.slug}>
-                    <Link
-                      href={`${activeSeries.basePath}/${lsn.slug}`}
-                      className={`${styles.tmLessonLink} ${lessonActive ? styles.moduleActive : ''}`}
-                      aria-current={lessonActive ? 'page' : undefined}
-                    >
-                      <span className={styles.tmLessonNo}>{String(lsn.no).padStart(2, '0')}</span>
-                      <span className={styles.tmLessonTitle}>{lsn.title}</span>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
+            <SeriesLessonList
+              series={activeSeries}
+              pathname={pathname}
+              className={`${styles.tmLessons} ${styles.focusLessons}`}
+            />
           </div>
         ) : (
           <>
         <p className={styles.heading}>Müfredat</p>
         <ol className={styles.levels}>
           {sidebarLevels.map((level) => {
-            const active = isAkademiLevelActive(pathname, level.slug);
+            const levelSeries = AKADEMI_SERIES.filter((series) => series.levelSlug === level.slug);
+            const inside = isInsideLevel(pathname, level.slug, levelSeries.map((series) => series.basePath));
+            const overviewActive = isAkademiLevelActive(pathname, level.slug);
+            const count = level.modules.length + levelSeries.length;
             return (
-              <li key={level.slug} className={`${styles.level} ${active ? styles.active : ''}`}>
-                <Link
-                  href={`/akademi/${level.slug}`}
-                  className={styles.levelLink}
-                  aria-current={active ? 'page' : undefined}
-                >
-                  <span className={styles.levelNo}>{String(level.number).padStart(2, '0')}</span>
-                  <span className={styles.levelTitle}>{level.title}</span>
-                </Link>
-                <ul className={styles.modules}>
-                  {level.modules.map((module) => {
-                    const moduleActive = isAkademiModuleActive(pathname, module);
-                    return (
-                      <li key={module.code} className={styles.moduleItem}>
-                        <Link
-                          href={`/akademi/${module.levelSlug}/${module.slug}`}
-                          className={`${styles.moduleLink} ${moduleActive ? styles.moduleActive : ''}`}
-                          aria-current={moduleActive ? 'page' : undefined}
-                        >
-                          <span className={styles.moduleTitle}>{module.title}</span>
-                        </Link>
-                      </li>
-                    );
-                  })}
-                  {AKADEMI_SERIES.filter((series) => series.levelSlug === level.slug).map((series) => {
-                    const onSeries = pathname.startsWith(series.basePath);
-                    return (
+              <li key={level.slug} className={`${styles.level} ${inside ? styles.active : ''}`}>
+                <details className={styles.levelGroup} open={inside}>
+                  <summary className={styles.levelSummary}>
+                    <span className={styles.levelNo}>{pad(level.number)}</span>
+                    <span className={styles.levelTitle}>{level.title}</span>
+                    <span className={styles.levelMeta}>{count} içerik</span>
+                  </summary>
+                  <ul className={styles.modules}>
+                    <li className={styles.moduleItem}>
+                      <Link
+                        href={`/akademi/${level.slug}`}
+                        className={`${styles.moduleLink} ${styles.overviewLink} ${overviewActive ? styles.moduleActive : ''}`}
+                        aria-current={overviewActive ? 'page' : undefined}
+                      >
+                        <span className={styles.moduleTitle}>Seviyeye genel bakış</span>
+                      </Link>
+                    </li>
+                    {level.modules.map((module) => {
+                      const moduleActive = isAkademiModuleActive(pathname, module);
+                      return (
+                        <li key={module.code} className={styles.moduleItem}>
+                          <Link
+                            href={`/akademi/${module.levelSlug}/${module.slug}`}
+                            className={`${styles.moduleLink} ${moduleActive ? styles.moduleActive : ''}`}
+                            aria-current={moduleActive ? 'page' : undefined}
+                          >
+                            <span className={styles.moduleTitle}>{module.title}</span>
+                          </Link>
+                        </li>
+                      );
+                    })}
+                    {levelSeries.map((series) => (
                       <li key={series.basePath} className={styles.moduleItem}>
-                        <Link
-                          href={series.basePath}
-                          className={`${styles.moduleLink} ${pathname === series.basePath ? styles.moduleActive : ''}`}
-                          aria-current={pathname === series.basePath ? 'page' : undefined}
-                        >
+                        <Link href={series.basePath} className={styles.moduleLink}>
                           <span className={styles.moduleTitle}>{series.title}</span>
                         </Link>
-                        {onSeries && (
-                          <ul className={styles.tmLessons}>
-                            {series.lessons.map((lsn) => {
-                              const active = pathname === `${series.basePath}/${lsn.slug}`;
-                              return (
-                                <li key={lsn.slug}>
-                                  <Link
-                                    href={`${series.basePath}/${lsn.slug}`}
-                                    className={`${styles.tmLessonLink} ${active ? styles.moduleActive : ''}`}
-                                    aria-current={active ? 'page' : undefined}
-                                  >
-                                    <span className={styles.tmLessonNo}>{String(lsn.no).padStart(2, '0')}</span>
-                                    <span className={styles.tmLessonTitle}>{lsn.title}</span>
-                                  </Link>
-                                </li>
-                              );
-                            })}
-                          </ul>
-                        )}
                       </li>
-                    );
-                  })}
-                </ul>
+                    ))}
+                  </ul>
+                </details>
               </li>
             );
           })}

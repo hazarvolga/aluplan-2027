@@ -30,7 +30,6 @@ export default async function LejantLessonPage({
       allLessons={lejantLessons}
       basePath="/akademi/lejant"
       breadcrumbLabel="Lejant Oluşturma"
-      level="Orta"
     />
   );
 }

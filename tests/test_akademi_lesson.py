@@ -115,6 +115,14 @@ class AkademiLessonMediaTests(unittest.TestCase):
         # Common mistakes are an accordion (details/summary).
         self.assertIn("<details", src)
 
+    def test_series_lesson_has_no_meta_strip(self):
+        # Level, roles, prerequisite, start file and version are shown elsewhere (sidebar,
+        # breadcrumb, exercise, series page); the lesson hero carries no meta strip.
+        src = read("src/components/sections/TmLessonDetail.tsx")
+        self.assertNotIn("MetaRow", src)
+        self.assertNotIn("'Süre'", src)
+        self.assertNotIn("kunye", read("src/components/sections/TmLessonDetail.module.css"))
+
     def test_lesson_component_renders_prose_figure_and_tryit(self):
         src = read("src/components/akademi/kit/Lesson.tsx")
         self.assertIn("section.body", src)
@@ -164,7 +172,8 @@ class AkademiLessonVideoTests(unittest.TestCase):
         src = read("src/components/akademi/kit/LessonVideo.tsx")
         self.assertIn("isPlaceholder", src)
         self.assertIn("placeholder", src)
-        self.assertIn("<iframe", src)
+        # Real videos load through the consent-aware embed, never a bare iframe.
+        self.assertIn("<ConsentEmbed", src)
 
     def test_every_module_has_a_video_slot_with_topic(self):
         for path in sorted(CONTENT_DIR.glob("*.json")):

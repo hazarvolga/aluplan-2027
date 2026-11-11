@@ -151,7 +151,7 @@ export interface ContentModule {
   title: string;
   /** Semantic level slug: temel | orta | ileri | uzman. */
   levelSlug: string;
-  /** Set only for track-based levels (İleri); groups modules into a track. */
+  /** Set only for track-based levels (Disiplin Uzmanlığı); groups modules into a track. */
   trackTitle?: string | null;
   hours: number;
   format: string;
@@ -232,7 +232,7 @@ const entryPaths: readonly AkademiEntryPath[] = [
     icon: 'graduation-cap',
     title: 'ALLPLAN’a yeni başlıyorum',
     audience: 'Öğrenciler ve BIM’e yeni başlayanlar',
-    steps: ['Temel seviye ile başlayın', 'Ortak çekirdeği tamamlayın', 'İleri seviyede disiplin kolunuzu seçin'],
+    steps: ['Temeller seviyesiyle başlayın', 'Ortak çekirdeği tamamlayın', 'Disiplin Uzmanlığı seviyesinde kolunuzu seçin'],
   },
   {
     icon: 'layers',
@@ -246,10 +246,10 @@ const runningProject = {
   title: 'Tek proje, baştan sona',
   lead: 'Program boyunca 4-5 katlı, betonarme, karma kullanımlı bir bina geliştirilir. Her ders projeye bir katman ekler; altyapı kolunda ayrıca prekast kirişli küçük bir köprü modellenir.',
   steps: [
-    { level: 'Temel', text: 'Akslar, katlar ve temel mimari model' },
-    { level: 'Orta', text: 'Kesitler, görünüşler, paftalar ve metraj' },
-    { level: 'İleri', text: 'Kolunuza göre mimari detay, donatı, prekast veya köprü' },
-    { level: 'Uzman', text: 'IFC teslimi, kural denetimi ve otomasyon' },
+    { level: 'Temeller', text: 'Akslar, katlar ve temel mimari model' },
+    { level: 'Üretim ve Dokümantasyon', text: 'Kesitler, görünüşler, paftalar ve metraj' },
+    { level: 'Disiplin Uzmanlığı', text: 'Kolunuza göre mimari detay, donatı, prekast veya köprü' },
+    { level: 'BIM Yönetimi ve Otomasyon', text: 'IFC teslimi, kural denetimi ve otomasyon' },
   ],
 } as const;
 
@@ -277,7 +277,7 @@ const progressNote =
 /** Display order of module codes within a level. */
 const MODULE_ORDER = ['M1', 'M2', 'M3', 'M4', 'M4B', 'M3B', 'M5', 'M6', 'M7', 'M8', 'M9', 'M10'] as const;
 
-/** Display order of tracks within the İleri level. */
+/** Display order of tracks within the Disiplin Uzmanlığı level. */
 const TRACK_ORDER = ['Mimari', 'Betonarme ve 3B donatı', 'Prekast ve çelik', 'Altyapı ve köprü'] as const;
 
 const TRACK_SUMMARIES: Record<string, string> = {
@@ -328,7 +328,7 @@ const levels: readonly ContentLevel[] = [
   {
     number: 1,
     slug: 'temel',
-    title: 'Temel',
+    title: 'Temeller',
     role: 'BIM Uygulayıcısı',
     shared: true,
     summary: 'Arayüz, proje yapısı ve parametrik mimari elemanlarla ilk modelinizi kurarsınız.',
@@ -337,7 +337,7 @@ const levels: readonly ContentLevel[] = [
   {
     number: 2,
     slug: 'orta',
-    title: 'Orta',
+    title: 'Üretim ve Dokümantasyon',
     role: 'BIM Uzmanı',
     shared: true,
     summary: 'Modelden kesit, görünüş, pafta ve metraj üretirsiniz.',
@@ -346,7 +346,7 @@ const levels: readonly ContentLevel[] = [
   {
     number: 3,
     slug: 'ileri',
-    title: 'İleri',
+    title: 'Disiplin Uzmanlığı',
     role: 'Disiplin uzmanı',
     shared: false,
     summary: 'Dört eşit süreli koldan birini seçip mesleğinize göre derinleşirsiniz.',
@@ -355,7 +355,7 @@ const levels: readonly ContentLevel[] = [
   {
     number: 4,
     slug: 'uzman',
-    title: 'Uzman',
+    title: 'BIM Yönetimi ve Otomasyon',
     role: 'BIM Yöneticisi ve Geliştirici',
     shared: true,
     summary: 'openBIM ile disiplinler arası çalışır, tekrar eden işleri otomatikleştirirsiniz.',

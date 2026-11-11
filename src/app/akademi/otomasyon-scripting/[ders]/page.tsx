@@ -34,7 +34,6 @@ export default async function OtomasyonScriptingLessonPage({
       allLessons={otomasyonScriptingLessons}
       basePath="/akademi/otomasyon-scripting"
       breadcrumbLabel="Otomasyon"
-      level="Uzman"
     />
   );
 }

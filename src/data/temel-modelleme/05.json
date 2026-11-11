@@ -94,7 +94,16 @@
     }
   ],
   "media": {
-    "videos": [],
+    "videos": [
+      {
+        "title": "Hello Allplan! 2024 - 2B Tasarım",
+        "file": "",
+        "vimeoId": "",
+        "youtubeId": "WQwlWS6vSwU",
+        "note": "Türkçe anlatım · Allplan Turkey (Aluplan) resmî kanalı",
+        "sizeMB": 0
+      }
+    ],
     "pdfs": [],
     "samples": []
   },

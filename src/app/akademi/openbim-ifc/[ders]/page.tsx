@@ -34,7 +34,6 @@ export default async function OpenbimIfcLessonPage({
       allLessons={openbimIfcLessons}
       basePath="/akademi/openbim-ifc"
       breadcrumbLabel="OpenBIM"
-      level="Uzman"
     />
   );
 }

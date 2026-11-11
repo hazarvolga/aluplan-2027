@@ -34,7 +34,6 @@ export default async function DonatiDetaylandirmaLessonPage({
       allLessons={donatiDetaylandirmaLessons}
       basePath="/akademi/donati-detaylandirma"
       breadcrumbLabel="Donatı"
-      level="İleri"
     />
   );
 }

@@ -52,7 +52,16 @@
     }
   ],
   "media": {
-    "videos": [],
+    "videos": [
+      {
+        "title": "Hello Allplan! 2024 - Odalar ve Mahaller",
+        "file": "",
+        "vimeoId": "",
+        "youtubeId": "x2_akoOqJfE",
+        "note": "Türkçe anlatım · Allplan Turkey (Aluplan) resmî kanalı",
+        "sizeMB": 0
+      }
+    ],
     "pdfs": [],
     "samples": [
       "10638_20190513105903_DE_1_5ab251d4.ndw"

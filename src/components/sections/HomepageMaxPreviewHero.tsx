@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { MAIN_QUOTE_FORM_URL } from '@/lib/site-shared';
 import { AluIcon } from '@/components/ui/AluIcon';
 import styles from './HomepageMaxPreviewHero.module.css';
@@ -23,6 +24,9 @@ export function HomepageMaxPreviewHero() {
             <a className="alu-button alu-button--secondary alu-button--md" href="#products">
               <span>Ürünleri keşfedin</span><AluIcon name="arrow-right" size="sm" />
             </a>
+            <Link className="alu-button alu-button--secondary alu-button--md" href="/paket-karsilastirma">
+              <span>Paket Karşılaştırın</span><AluIcon name="arrow-right" size="sm" />
+            </Link>
             <a className="alu-button alu-button--secondary alu-button--md" href={MAIN_QUOTE_FORM_URL} target="_blank" rel="noopener noreferrer">
               <span>Teklif İste</span><AluIcon name="external-link" size="sm" />
             </a>

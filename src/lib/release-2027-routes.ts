@@ -24,6 +24,20 @@ export const RELEASE_2027_ROUTES: readonly Release2027Route[] = [
     ogImage: DEFAULT_OG_IMAGE
   },
   {
+    path: '/2027/surum-notlari',
+    name: 'ALLPLAN 2027 Sürüm Notları',
+    description: 'Allplan 2027 sürüm ailesindeki tüm teknik yenilikleri, geliştirmeleri ve güncellemeleri sürüm bazında takip edin.',
+    productName: 'ALLPLAN 2027',
+    ogImage: DEFAULT_OG_IMAGE
+  },
+  {
+    path: '/2027/surum-notlari/2027-0-0',
+    name: 'Allplan 2027-0-0 Sürüm Notları',
+    description: 'Allplan 2027 (28.10.2026) sürüm notları: Allplan AI MAX, dijital modelleme, donatı detaylandırma, yapım, altyapı, Python API ve bulut yenilikleri.',
+    productName: 'ALLPLAN 2027',
+    ogImage: DEFAULT_OG_IMAGE
+  },
+  {
     path: '/products/allplan-max',
     name: 'Allplan Max',
     description: 'Allplan Max, güçlü yapay zekâ araçlarını sizin kontrolünüze verir. Bir eklenti ya da ayrı bir paket değildir. Her 2027 ürününe dahildir.',

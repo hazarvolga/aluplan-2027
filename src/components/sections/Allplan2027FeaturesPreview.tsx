@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { DebugComponentLabel } from './DebugComponentLabel';
 import { handleStructuredTabKey } from './structured-tab-key';
 import { featureGroups } from '@/data/allplan-2027-features-preview';
@@ -15,7 +16,7 @@ export function Allplan2027FeaturesPreview() {
   return <div className={styles.page}>
     <DebugComponentLabel name="CompactPageHero"><CompactPageHero title="2027 yenilikleri: Allplan, Allplan Civil, FRILO, SCIA, SDS2" lead="Her mühendislik iş akışı için kapsamlı çözümler">
       <p className={styles.heroText}>Allplan, Allplan Civil, FRILO, SCIA ve SDS2’nin 2027 sürümlerini keşfedin. İş akışı ne olursa olsun mühendisler için çözümler sunuyoruz. Kontrolü sizin elinizde tutan yapay zekâ araçları, yapı analizi için modern araçlar, daha hızlı çizim ve detaylandırma ve altyapı için güçlü parametrik modeller.</p>
-      <div className={styles.actions}><a className="alu-button alu-button--primary alu-button--md" href={MAIN_QUOTE_FORM_URL}>Demo talep edin ↗</a><a className="alu-button alu-button--secondary alu-button--md" href={TRIAL_CTA_URL}>Ücretsiz deneme ↗</a></div>
+      <div className={styles.actions}><Link className="alu-button alu-button--primary alu-button--md" href="/2027/surum-notlari/2027-0-0">Allplan 2027-0-0 Yenilikler →</Link><a className="alu-button alu-button--secondary alu-button--md" href={TRIAL_CTA_URL}>Ücretsiz deneme ↗</a></div>
     </CompactPageHero></DebugComponentLabel>
     <DebugComponentLabel name="featuresTabs (özel)"><section className={`alu-container ${styles.section}`} aria-labelledby="features-2027-title">
       <h2 id="features-2027-title">2027 yeniliklerini keşfedin</h2>

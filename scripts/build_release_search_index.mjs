@@ -7,6 +7,8 @@ const root = process.cwd();
 const output = 'src/data/search-release-index.json';
 const pageSources = {
   '/2027/features': ['src/components/sections/Allplan2027FeaturesPreview.tsx', 'src/data/allplan-2027-features-preview.ts', 'src/data/allplan-2027-improvements.ts'],
+  '/2027/surum-notlari': ['src/components/sections/ReleaseNotes2027View.tsx', 'src/data/release-notes-2027.ts'],
+  '/2027/surum-notlari/2027-0-0': ['src/components/sections/ReleaseNotes2027View.tsx', 'src/data/release-notes-2027.ts'],
   '/products/allplan-max': ['src/components/sections/AllplanMaxPreviewPage.tsx', 'src/data/allplan-max-preview.json'],
   '/2027/civil': ['src/components/sections/CivilNewsView.tsx', 'src/data/allplan-civil-2027-news.ts'],
   '/products/frilo': ['src/app/products/frilo/page.tsx', 'src/app/products/frilo/content.ts', 'src/data/frilo-editions-2027.ts', 'src/data/frilo-geotechnics-2027.ts'],

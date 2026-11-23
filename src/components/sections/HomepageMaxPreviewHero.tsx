@@ -17,8 +17,16 @@ export function HomepageMaxPreviewHero() {
           <p className="alu-max-preview-hero__eyebrow"><span className="alu-max-preview-hero__eyebrow-line">2027 ÇIKTI</span><br /><span>ALLPLAN'IN EN GÜÇLÜ SÜRÜMÜ</span></p>
           <h1 id="hero-title" className="alu-h2 alu-hero-stage__title alu-max-preview-hero__title">Mühendislik yeniden tanımlanıyor</h1>
           <p className="alu-body-lg alu-hero-stage__lead">Yapay zekâ, parametrik tasarım ve çoklu disiplin desteğiyle donatılmış ALLPLAN 2027 artık kullanıma hazır. Yeni dönemi başlatın.</p>
+          <div className="alu-cluster" role="group" aria-label="ALLPLAN 2027 yenilikleri">
+            <Link className="alu-button alu-button--primary alu-button--md" href="/2027/features">
+              <span>ALLPLAN 2027 Yenilikleri</span><AluIcon name="arrow-right" size="sm" />
+            </Link>
+            <Link className="alu-button alu-button--secondary alu-button--md" href="/2027/surum-notlari/2027-0-0">
+              <span>Allplan 2027-0-0 Yenilikler</span><AluIcon name="arrow-right" size="sm" />
+            </Link>
+          </div>
           <div className="alu-cluster" role="group" aria-label="Ana eylemler">
-            <a className="alu-button alu-button--primary alu-button--md" href="#solutions">
+            <a className="alu-button alu-button--secondary alu-button--md" href="#solutions">
               <span>Çözümleri keşfedin</span><AluIcon name="arrow-right" size="sm" />
             </a>
             <a className="alu-button alu-button--secondary alu-button--md" href="#products">

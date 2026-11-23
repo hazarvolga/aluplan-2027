@@ -67,6 +67,9 @@ const nextConfig = {
     ALUPLAN_VERCEL_INSIGHTS: process.env.VERCEL === '1' ? '1' : '0'
   },
   reactStrictMode: true,
+  experimental: {
+    agentUpgrade: 'security'
+  },
   // AVIF first (smaller hero/LCP images), WebP for browsers without AVIF support.
   images: {
     formats: ['image/avif', 'image/webp']

@@ -1,7 +1,7 @@
 """Mails built from a quote request: one for the sales team, one for the requester."""
 
 from pathlib import Path
-import html
+import base64
 import json
 import re
 import subprocess
@@ -9,7 +9,7 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA_BLOCK = re.compile(r"\[\[ALUPLAN-TALEP\]\](.*?)\[\[/ALUPLAN-TALEP\]\]", re.S)
+DATA_BLOCK = re.compile(r"\[\[ALUPLAN-TALEP\]\]([A-Za-z0-9+/=]+)\[\[/ALUPLAN-TALEP\]\]")
 
 
 def run_runtime():
@@ -55,15 +55,40 @@ class QuoteMailTest(unittest.TestCase):
         ):
             self.assertIn(expected, body)
 
-    def test_staff_mail_carries_a_machine_readable_row(self):
+    def read_row(self, name, part):
+        match = DATA_BLOCK.search(self.mails[name]["staff"][part])
+        self.assertIsNotNone(match, part)
+        return json.loads(base64.b64decode(match.group(1)).decode("utf-8"))
+
+    def test_staff_mail_carries_a_spreadsheet_row_keyed_by_column_header(self):
         for part in ("html", "text"):
-            match = DATA_BLOCK.search(self.mails["allplan"]["staff"][part])
-            self.assertIsNotNone(match, part)
-            row = json.loads(html.unescape(match.group(1)))
-            self.assertEqual(row["urunAilesi"], "ALLPLAN")
-            self.assertEqual(row["urunler"], "ALLPLAN Max, ALLPLAN Civil")
-            self.assertEqual(row["eposta"], "deneme@example.com")
-            self.assertEqual(row["tarih"], "2026-11-28T09:30:00.000Z")
+            data = self.read_row("allplan", part)
+            self.assertEqual(data["tablo"], "Talepler")
+            row = data["satir"]
+            self.assertEqual(
+                list(row),
+                ["Tarih", "Ürün Ailesi", "Ürünler", "Talep Türü", "Ad Soyad", "Firma", "E-posta", "GSM", "Şehir",
+                 "Çalışma Alanı", "Nereden Duydu", "Scalypso", "İş Tanımı", "Müşteri No", "Notlar", "Kaynak Sayfa"],
+            )
+            self.assertEqual(row["Ürün Ailesi"], "ALLPLAN")
+            self.assertEqual(row["Ürünler"], "ALLPLAN Max, ALLPLAN Civil")
+            self.assertEqual(row["E-posta"], "deneme@example.com")
+
+    def test_spreadsheet_row_date_is_turkish_local_time(self):
+        # 09:30 UTC is 12:30 in Istanbul; the sortable form keeps month counting simple in the workbook.
+        self.assertEqual(self.read_row("allplan", "html")["satir"]["Tarih"], "2026-11-28 12:30")
+
+    def test_student_row_goes_to_the_student_table(self):
+        data = self.read_row("student", "html")
+        self.assertEqual(data["tablo"], "Ogrenci")
+        self.assertEqual(
+            list(data["satir"]),
+            ["Tarih", "Ad Soyad", "Üniversite", "Bölüm", "E-posta", "GSM", "Şehir", "Nereden Duydu", "Notlar"],
+        )
+        self.assertEqual(data["satir"]["Bölüm"], "Mimarlık")
+
+    def test_spreadsheet_row_survives_markup_in_user_text(self):
+        self.assertEqual(self.read_row("hostile", "html")["satir"]["Firma"], "A & B <b>Yapı</b>")
 
     def test_user_text_is_escaped_in_html(self):
         for kind in ("staff", "customer"):

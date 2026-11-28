@@ -69,6 +69,12 @@ function formatDate(iso: string): string {
   if (Number.isNaN(date.getTime())) return iso;
   return new Intl.DateTimeFormat('tr-TR', { dateStyle: 'long', timeStyle: 'short', timeZone: 'Europe/Istanbul' }).format(date);
 }
+// Sortable Istanbul local time for the spreadsheet, e.g. "2026-11-28 12:30".
+function sheetDate(iso: string): string {
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return iso;
+  return new Intl.DateTimeFormat('sv-SE', { dateStyle: 'short', timeStyle: 'short', timeZone: 'Europe/Istanbul' }).format(date);
+}
 const filled = (rows: readonly Row[]): Row[] => rows.filter(([, value]) => value !== '');
 
 function describe(request: QuoteRequest) {
@@ -168,26 +174,47 @@ export function buildStaffMail(request: QuoteRequest, meta: QuoteMailMeta): Mail
     ['Tarih', formatDate(meta.receivedAt)],
     ['Kaynak sayfa', meta.sourcePath ?? ''],
   ]);
-  // One flat row for the spreadsheet flow; keys are the spreadsheet column names.
-  const dataRow = JSON.stringify({
-    tarih: meta.receivedAt,
-    kaynak: meta.sourcePath ?? '',
-    urunAilesi: info.lineLabel,
-    urunler: info.products,
-    talepTuru: info.requestTypes,
-    scalypso: info.scalypsoMode,
-    isTanimi: info.jobTitle,
-    musteriNo: request.customerNumber,
-    bolum: info.department,
-    adSoyad: request.fullName,
-    firma: request.company,
-    eposta: request.email,
-    gsm: request.phone,
-    sehir: request.city,
-    calismaAlani: info.workArea,
-    neredenDuydu: info.heardFrom,
-    notlar: request.notes,
-  });
+  // The spreadsheet flow appends "satir" to the table named in "tablo" as it is, so the keys
+  // must stay identical to the column headers in scripts/build_quote_workbook.py.
+  const localDate = sheetDate(meta.receivedAt);
+  const sheetRow = info.isStudent
+    ? {
+        tablo: 'Ogrenci',
+        satir: {
+          Tarih: localDate,
+          'Ad Soyad': request.fullName,
+          Üniversite: request.company,
+          Bölüm: info.department,
+          'E-posta': request.email,
+          GSM: request.phone,
+          Şehir: request.city,
+          'Nereden Duydu': info.heardFrom,
+          Notlar: request.notes,
+        },
+      }
+    : {
+        tablo: 'Talepler',
+        satir: {
+          Tarih: localDate,
+          'Ürün Ailesi': info.lineLabel,
+          Ürünler: info.products,
+          'Talep Türü': info.requestTypes,
+          'Ad Soyad': request.fullName,
+          Firma: request.company,
+          'E-posta': request.email,
+          GSM: request.phone,
+          Şehir: request.city,
+          'Çalışma Alanı': info.workArea,
+          'Nereden Duydu': info.heardFrom,
+          Scalypso: info.scalypsoMode,
+          'İş Tanımı': info.jobTitle,
+          'Müşteri No': request.customerNumber,
+          Notlar: request.notes,
+          'Kaynak Sayfa': meta.sourcePath ?? '',
+        },
+      };
+  // Base64 keeps the block intact through HTML escaping and mail clients that rewrite markup.
+  const dataRow = Buffer.from(JSON.stringify(sheetRow), 'utf8').toString('base64');
 
   const title = info.isStudent ? 'Yeni öğrenci indirme başvurusu' : 'Yeni teklif talebi';
   // Requested by the sales team: who is asking, then what for, readable in the inbox list.

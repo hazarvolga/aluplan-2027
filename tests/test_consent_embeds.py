@@ -19,7 +19,10 @@ def ui_sources():
 
 class EmbedSourceTests(unittest.TestCase):
     def test_iframes_only_in_consent_embed(self):
-        offenders = [str(p.relative_to(ROOT)) for p in ui_sources() if "<iframe" in p.read_text(encoding="utf-8") and p != EMBED_COMPONENT]
+        # The mail preview is local-only and frames its own generated HTML (srcDoc, sandboxed):
+        # no third-party content loads, so there is nothing to ask consent for.
+        local_only = {EMBED_COMPONENT, ROOT / "src/app/preview/teklif-mail/page.tsx"}
+        offenders = [str(p.relative_to(ROOT)) for p in ui_sources() if "<iframe" in p.read_text(encoding="utf-8") and p not in local_only]
         self.assertEqual(offenders, [])
 
     def test_no_cookie_setting_youtube_domain(self):

@@ -14,10 +14,14 @@ ARG ALUPLAN_BLOCK_INDEXING=1
 # Akademi launch switch: off by default; Coolify sets ALUPLAN_SHOW_AKADEMI=1 to publish.
 # Needed at build time: Akademi pages, share images, sitemap and llms.txt are prerendered.
 ARG ALUPLAN_SHOW_AKADEMI=0
+# On-site quote form switch: off by default; set ALUPLAN_SHOW_TEKLIF_FORM=1 to publish.
+# Needed at build time because /teklif is prerendered as 404 while the switch is off.
+ARG ALUPLAN_SHOW_TEKLIF_FORM=0
 ARG NEXT_PUBLIC_CLOUDFLARE_ANALYTICS_TOKEN
 ENV ALUPLAN_SHOW_2027=$ALUPLAN_SHOW_2027 \
     ALUPLAN_BLOCK_INDEXING=$ALUPLAN_BLOCK_INDEXING \
     ALUPLAN_SHOW_AKADEMI=$ALUPLAN_SHOW_AKADEMI \
+    ALUPLAN_SHOW_TEKLIF_FORM=$ALUPLAN_SHOW_TEKLIF_FORM \
     NEXT_PUBLIC_CLOUDFLARE_ANALYTICS_TOKEN=$NEXT_PUBLIC_CLOUDFLARE_ANALYTICS_TOKEN
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
@@ -28,16 +32,20 @@ WORKDIR /app
 ARG ALUPLAN_SHOW_2027=1
 ARG ALUPLAN_BLOCK_INDEXING=1
 ARG ALUPLAN_SHOW_AKADEMI=0
+ARG ALUPLAN_SHOW_TEKLIF_FORM=0
 ENV NODE_ENV=production \
     NEXT_TELEMETRY_DISABLED=1 \
     ALUPLAN_SHOW_2027=$ALUPLAN_SHOW_2027 \
     ALUPLAN_BLOCK_INDEXING=$ALUPLAN_BLOCK_INDEXING \
     ALUPLAN_SHOW_AKADEMI=$ALUPLAN_SHOW_AKADEMI \
+    ALUPLAN_SHOW_TEKLIF_FORM=$ALUPLAN_SHOW_TEKLIF_FORM \
     HOSTNAME=0.0.0.0 \
     PORT=3000
 COPY --from=builder --chown=node:node /app/public ./public
 COPY --from=builder --chown=node:node /app/.next/standalone ./
 COPY --from=builder --chown=node:node /app/.next/static ./.next/static
+# Quote requests wait here until the mail server accepts them; mount a persistent volume on it.
+RUN mkdir -p /data/quote-journal && chown node:node /data/quote-journal
 USER node
 EXPOSE 3000
 CMD ["node", "server.js"]

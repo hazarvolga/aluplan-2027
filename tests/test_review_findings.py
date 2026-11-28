@@ -67,6 +67,7 @@ class LandmarkTests(unittest.TestCase):
                     "products/allplan-rebar.html",
                     "products/allplan-parametric.html",
                     "akademi.html",  # draft; hidden in production via ALUPLAN_SHOW_AKADEMI
+                    "teklif.html",  # on-site quote form; hidden in production until ALUPLAN_SHOW_TEKLIF_FORM=1
                 )
                 if name.endswith(".html") and "/_" not in str(path) and not held and not relative.startswith(("preview/", "archive/")):
                     count = len(re.findall(r"<main[ >]", path.read_text(encoding="utf-8")))

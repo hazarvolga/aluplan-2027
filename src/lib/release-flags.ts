@@ -14,6 +14,14 @@ export function isAkademiEnabled(): boolean {
   return !isProduction() || process.env.ALUPLAN_SHOW_AKADEMI === '1';
 }
 
+/**
+ * The on-site quote form replaces the Microsoft Forms links only after it is switched on.
+ * Visible in local development; hidden in production unless ALUPLAN_SHOW_TEKLIF_FORM=1.
+ */
+export function isQuoteFormEnabled(): boolean {
+  return !isProduction() || process.env.ALUPLAN_SHOW_TEKLIF_FORM === '1';
+}
+
 export function isIndexingBlocked(): boolean {
   return process.env.ALUPLAN_BLOCK_INDEXING === '1';
 }

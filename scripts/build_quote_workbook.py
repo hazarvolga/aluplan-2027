@@ -263,6 +263,7 @@ def build_calc_sheet(wb, t, campaign_names: list[str], event_names: list[str]):
         ("Öğrenci bu ay", f"=D{6 + MONTHS_SHOWN}"),
         ("Kampanya talebi", '=COUNTIF(Kampanya[Ad Soyad],"?*")'),
         ("Etkinlik kaydı", '=COUNTIF(Etkinlik[Ad Soyad],"?*")'),
+        ("Lisans yöneticisi", '=COUNTIF(LisansYoneticisi[Lisans Yöneticisi],"?*")'),
     ]
     for i, (label, formula) in enumerate(measures):
         ws.cell(7 + i, 15, label)
@@ -278,7 +279,7 @@ def build_dashboard(wb, t, campaign_count: int, event_count: int):
     ws.title = "Pano"
     calc = wb["Hesap"]
     xk.izgara(ws, 23)
-    xk.zemin(ws, t, "A1:Z70")
+    xk.zemin(ws, t, "A1:Z74")
     xk.sayfa_basligi(ws, t, "Web Talepleri Panosu",
                      "aluplan.com.tr teklif formu · tüm değerler Talepler sayfasından formülle gelir", hucre="B2", genislik=23)
     ws["B6"].value = "Son güncelleme"
@@ -287,21 +288,6 @@ def build_dashboard(wb, t, campaign_count: int, event_count: int):
     ws["E6"].value = "=" + xk.turkce_bugun()
     ws["E6"].font = xk.yazi(t, 10)
     ws["E6"].alignment = Alignment(horizontal="left", vertical="center")
-    ws["N6"].value = "Kampanya talebi"
-    ws["N6"].font = xk.yazi(t, 9, kalin=True, renk=t.ara)
-    ws.merge_cells("Q6:R6")
-    ws["Q6"].value = "=Hesap!P13"
-    ws["Q6"].number_format = xk.BICIM["sayi"]
-    ws["Q6"].font = xk.yazi(t, 11, kalin=True)
-    ws["Q6"].alignment = Alignment(horizontal="left", vertical="center")
-    ws["T6"].value = "Etkinlik kaydı"
-    ws["T6"].font = xk.yazi(t, 9, kalin=True, renk=t.ara)
-    ws.merge_cells("W6:X6")
-    ws["W6"].value = "=Hesap!P14"
-    ws["W6"].number_format = xk.BICIM["sayi"]
-    ws["W6"].font = xk.yazi(t, 11, kalin=True)
-    ws["W6"].alignment = Alignment(horizontal="left", vertical="center")
-
     cards = [
         ("Toplam talep", "=Hesap!P7", "sayi", None, "form üzerinden gelen"),
         ("Bu ay", "=Hesap!P8", "sayi", "=IFERROR(Hesap!P8/Hesap!P9-1,0)", "geçen aya göre"),
@@ -312,43 +298,52 @@ def build_dashboard(wb, t, campaign_count: int, event_count: int):
         xk.kpi_karti(ws, t, f"{get_column_letter(2 + i * 6)}8", 5, label, formula, number_format,
                      alt_formul=delta, alt_metin=note)
 
+    # Second card row: records that are not product requests, each from its own sheet.
+    other_cards = [
+        ("Kampanya talebi", "=Hesap!P13", "kampanya formlarından"),
+        ("Etkinlik kaydı", "=Hesap!P14", "webinar ve etkinlik kayıtları"),
+        ("Lisans yöneticisi bildirimi", "=Hesap!P15", "lisans yöneticisi bilgi formu"),
+    ]
+    for i, (label, formula, note) in enumerate(other_cards):
+        xk.kpi_karti(ws, t, f"{get_column_letter(2 + i * 8)}12", 7, label, formula, "sayi", alt_metin=note)
+
     trend = LineChart()
     trend.add_data(Reference(calc, min_col=3, max_col=4, min_row=6, max_row=6 + MONTHS_SHOWN), titles_from_data=True)
     trend.set_categories(Reference(calc, min_col=2, min_row=7, max_row=6 + MONTHS_SHOWN))
     xk.grafik_stili(trend, t, "Aylık talep sayısı: son 12 ay", deger="sayi", ay_ekseni=True)
-    xk.yerlestir(ws, trend, xk.hucre_araligi(2, 12, 15, 18))
+    xk.yerlestir(ws, trend, xk.hucre_araligi(2, 16, 15, 18))
 
     areas = DoughnutChart(holeSize=55)
     areas.add_data(Reference(calc, min_col=13, min_row=6, max_row=6 + len(WORK_AREAS)), titles_from_data=True)
     areas.set_categories(Reference(calc, min_col=12, min_row=7, max_row=6 + len(WORK_AREAS)))
     xk.grafik_stili(areas, t, "Çalışma alanına göre talepler")
-    xk.yerlestir(ws, areas, xk.hucre_araligi(18, 12, 7, 18))
+    xk.yerlestir(ws, areas, xk.hucre_araligi(18, 16, 7, 18))
 
     families = BarChart()
     families.add_data(Reference(calc, min_col=7, min_row=6, max_row=6 + len(FAMILIES)), titles_from_data=True)
     families.set_categories(Reference(calc, min_col=6, min_row=7, max_row=6 + len(FAMILIES)))
     xk.grafik_stili(families, t, "Ürün ailesine göre talep sayısı", deger="sayi", yatay=True)
-    xk.yerlestir(ws, families, xk.hucre_araligi(2, 31, 11, 18))
+    xk.yerlestir(ws, families, xk.hucre_araligi(2, 35, 11, 18))
 
     sources = BarChart()
     sources.add_data(Reference(calc, min_col=10, min_row=6, max_row=6 + len(SOURCES)), titles_from_data=True)
     sources.set_categories(Reference(calc, min_col=9, min_row=7, max_row=6 + len(SOURCES)))
     xk.grafik_stili(sources, t, "Bizi nereden duydular", deger="sayi", yatay=True)
-    xk.yerlestir(ws, sources, xk.hucre_araligi(14, 31, 11, 18))
+    xk.yerlestir(ws, sources, xk.hucre_araligi(14, 35, 11, 18))
 
     campaigns = BarChart()
     campaigns.add_data(Reference(calc, min_col=CAMPAIGN_BLOCK_COL + 2, min_row=6, max_row=6 + campaign_count), titles_from_data=True)
     campaigns.set_categories(Reference(calc, min_col=CAMPAIGN_BLOCK_COL + 1, min_row=7, max_row=6 + campaign_count))
     xk.grafik_stili(campaigns, t, "Kampanyalara göre talep sayısı", deger="sayi", yatay=True)
-    xk.yerlestir(ws, campaigns, xk.hucre_araligi(2, 50, 11, 14))
+    xk.yerlestir(ws, campaigns, xk.hucre_araligi(2, 54, 11, 14))
 
     events = BarChart()
     events.add_data(Reference(calc, min_col=EVENT_BLOCK_COL + 2, min_row=6, max_row=6 + event_count), titles_from_data=True)
     events.set_categories(Reference(calc, min_col=EVENT_BLOCK_COL + 1, min_row=7, max_row=6 + event_count))
     xk.grafik_stili(events, t, "Etkinliklere göre kayıt sayısı", deger="sayi", yatay=True)
-    xk.yerlestir(ws, events, xk.hucre_araligi(14, 50, 11, 14))
+    xk.yerlestir(ws, events, xk.hucre_araligi(14, 54, 11, 14))
 
-    xk.baski(ws, t, alt_metin="Aluplan web talepleri", alan="A1:Y64", tek_sayfa=True)
+    xk.baski(ws, t, alt_metin="Aluplan web talepleri", alan="A1:Y68", tek_sayfa=True)
     return ws
 
 

@@ -111,6 +111,10 @@ EVENT_COLUMNS = [
 # Stored as text so Excel keeps leading zeros and does not reinterpret dates; rows the flow
 # appends inherit the format of the row above.
 TEXT_KEYS = ("tarih", "gsm", "musteriNo")
+NO_RECORDS = "Henüz kayıt yok"
+LABEL_LENGTH = 34
+CAMPAIGN_BLOCK_COL = 18
+EVENT_BLOCK_COL = 22
 HEADER_ROW = 6
 FIRST_ROW = HEADER_ROW + 1
 FAMILY_SHEET_ROWS = 300  # rows prepared on each family sheet; older requests stay in "Talepler"
@@ -201,7 +205,26 @@ def build_data_sheet(wb, t, title: str, table_name: str, columns, rows: list[dic
     return ws
 
 
-def build_calc_sheet(wb, t):
+def distinct(rows: list[dict], key: str) -> list[str]:
+    """Names in first-seen order. A campaign or event added later needs the workbook rebuilt to get its own bar."""
+    return list(dict.fromkeys(row[key] for row in rows if row.get(key))) or [NO_RECORDS]
+
+
+def short_label(name: str) -> str:
+    return name if len(name) <= LABEL_LENGTH else name[: LABEL_LENGTH - 1].rstrip() + "…"
+
+
+def group_block(ws, t, first_col: int, title: str, names: list[str], table_column: str, count_title: str):
+    """Three columns for one chart: full name (what COUNTIF matches), short chart label, count."""
+    xk.tablo_basligi(ws, t, 6, first_col, [(title, 40), ("Etiket", 30), (count_title, 10)])
+    for i, name in enumerate(names):
+        row = 7 + i
+        ws.cell(row, first_col, name)
+        ws.cell(row, first_col + 1, short_label(name))
+        ws.cell(row, first_col + 2, f"=COUNTIF({table_column},{get_column_letter(first_col)}{row})").number_format = xk.BICIM["etiket_sayi"]
+
+
+def build_calc_sheet(wb, t, campaign_names: list[str], event_names: list[str]):
     """Small summary blocks the dashboard charts read. Counts only: no personal data."""
     ws = wb.create_sheet("Hesap")
     xk.zemin(ws, t)
@@ -239,20 +262,23 @@ def build_calc_sheet(wb, t):
         ("Öğrenci indirmesi", '=COUNTIF(Ogrenci[Ad Soyad],"?*")'),
         ("Öğrenci bu ay", f"=D{6 + MONTHS_SHOWN}"),
         ("Kampanya talebi", '=COUNTIF(Kampanya[Ad Soyad],"?*")'),
+        ("Etkinlik kaydı", '=COUNTIF(Etkinlik[Ad Soyad],"?*")'),
     ]
     for i, (label, formula) in enumerate(measures):
         ws.cell(7 + i, 15, label)
         ws.cell(7 + i, 16, formula).number_format = integer
+    group_block(ws, t, CAMPAIGN_BLOCK_COL, "Kampanya", campaign_names, "Kampanya[Kampanya]", "Talep")
+    group_block(ws, t, EVENT_BLOCK_COL, "Etkinlik", event_names, "Etkinlik[Etkinlik]", "Kayıt")
     xk.baski(ws, t, alt_metin="Aluplan web talepleri")
     return ws
 
 
-def build_dashboard(wb, t):
+def build_dashboard(wb, t, campaign_count: int, event_count: int):
     ws = wb.active
     ws.title = "Pano"
     calc = wb["Hesap"]
     xk.izgara(ws, 23)
-    xk.zemin(ws, t, "A1:Z60")
+    xk.zemin(ws, t, "A1:Z70")
     xk.sayfa_basligi(ws, t, "Web Talepleri Panosu",
                      "aluplan.com.tr teklif formu · tüm değerler Talepler sayfasından formülle gelir", hucre="B2", genislik=23)
     ws["B6"].value = "Son güncelleme"
@@ -268,8 +294,13 @@ def build_dashboard(wb, t):
     ws["Q6"].number_format = xk.BICIM["sayi"]
     ws["Q6"].font = xk.yazi(t, 11, kalin=True)
     ws["Q6"].alignment = Alignment(horizontal="left", vertical="center")
-    ws["T6"].value = "ayrı sayfada, toplam talebe dahil değil"
-    ws["T6"].font = xk.yazi(t, 9, renk=t.ara)
+    ws["T6"].value = "Etkinlik kaydı"
+    ws["T6"].font = xk.yazi(t, 9, kalin=True, renk=t.ara)
+    ws.merge_cells("W6:X6")
+    ws["W6"].value = "=Hesap!P14"
+    ws["W6"].number_format = xk.BICIM["sayi"]
+    ws["W6"].font = xk.yazi(t, 11, kalin=True)
+    ws["W6"].alignment = Alignment(horizontal="left", vertical="center")
 
     cards = [
         ("Toplam talep", "=Hesap!P7", "sayi", None, "form üzerinden gelen"),
@@ -305,7 +336,19 @@ def build_dashboard(wb, t):
     xk.grafik_stili(sources, t, "Bizi nereden duydular", deger="sayi", yatay=True)
     xk.yerlestir(ws, sources, xk.hucre_araligi(14, 31, 11, 18))
 
-    xk.baski(ws, t, alt_metin="Aluplan web talepleri", alan="A1:Y49", tek_sayfa=True)
+    campaigns = BarChart()
+    campaigns.add_data(Reference(calc, min_col=CAMPAIGN_BLOCK_COL + 2, min_row=6, max_row=6 + campaign_count), titles_from_data=True)
+    campaigns.set_categories(Reference(calc, min_col=CAMPAIGN_BLOCK_COL + 1, min_row=7, max_row=6 + campaign_count))
+    xk.grafik_stili(campaigns, t, "Kampanyalara göre talep sayısı", deger="sayi", yatay=True)
+    xk.yerlestir(ws, campaigns, xk.hucre_araligi(2, 50, 11, 14))
+
+    events = BarChart()
+    events.add_data(Reference(calc, min_col=EVENT_BLOCK_COL + 2, min_row=6, max_row=6 + event_count), titles_from_data=True)
+    events.set_categories(Reference(calc, min_col=EVENT_BLOCK_COL + 1, min_row=7, max_row=6 + event_count))
+    xk.grafik_stili(events, t, "Etkinliklere göre kayıt sayısı", deger="sayi", yatay=True)
+    xk.yerlestir(ws, events, xk.hucre_araligi(14, 50, 11, 14))
+
+    xk.baski(ws, t, alt_metin="Aluplan web talepleri", alan="A1:Y64", tek_sayfa=True)
     return ws
 
 
@@ -364,8 +407,9 @@ def main() -> None:
                      "Lisans yöneticisi bilgi formundan gelen bildirimler. Satış taleplerinden ayrı bir süreçtir.")
     build_data_sheet(wb, t, "Etkinlik Kayıtları", "Etkinlik", EVENT_COLUMNS, events,
                      "Webinar ve etkinlik kayıt formlarından gelen katılımcı kayıtları.")
-    build_calc_sheet(wb, t)
-    dashboard = build_dashboard(wb, t)
+    campaign_names, event_names = distinct(campaigns, "kampanya"), distinct(events, "etkinlik")
+    build_calc_sheet(wb, t, campaign_names, event_names)
+    dashboard = build_dashboard(wb, t, len(campaign_names), len(event_names))
     family_sheets = [build_family_sheet(wb, t, family) for family in FAMILIES]
 
     xk.sekme(dashboard, t.vurgu)
